@@ -7,7 +7,7 @@
       items:
         - name: デザイン
           href: accessibility/design.md
-        - name: Build
+        - name: ビルド
           href: accessibility/build.md
           items:
             - name: ARIA および UI の自動化
@@ -486,25 +486,5 @@
     - name: WebVR 開発者ガイド
       href: 'https://docs.microsoft.com/microsoft-edge/webvr/'
     - name: Windows ランタイム (WinRT)
-      href: windows-runtime.md
-      items:
-        - name: JavaScript での Windows ランタイムの使用
-          href: windows-runtime/using-the-windows-runtime-in-javascript.md
-          items:
-            - name: Windows ランタイム API を使用する場合の考慮事項
-              href: windows-runtime/considerations-when-using-the-windows-runtime-api.md
-            - name: Windows ランタイム非同期メソッドの使用
-              href: windows-runtime/using-windows-runtime-asynchronous-methods.md
-              items:
-                - name: 非同期 Windows ランタイムメソッドからの特別なエラープロパティ
-                  href: windows-runtime/special-error-properties-from-asynchronous-windows-runtime-methods.md
-            - name: JavaScript での Windows ランタイムイベントの処理
-              href: windows-runtime/handling-windows-runtime-events-in-javascript.md
-            - name: Windows ランタイム型の JavaScript 表現
-              href: windows-runtime/javascript-representation-of-windows-runtime-types.md
-            - name: Windows ランタイムの DateTime および TimeSpan 表現
-              href: windows-runtime/windows-runtime-datetime-and-timespan-representations.md
-            - name: JavaScript を使用した Windows ランタイムアプリのエラーコード
-              href: windows-runtime/error-codes-for-windows-runtime-apps-using-javascript.md
-        - name: Reference
-          href: windows-runtime/reference/toc.md
+      href: windows-runtime/toc.yml
+      topicHref: windows-runtime/index.md
