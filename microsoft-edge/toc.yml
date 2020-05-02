@@ -100,7 +100,7 @@
               href: devtools-guide-chromium/console/log.md
             - name: JavaScript の実行
               href: devtools-guide-chromium/console/javascript.md
-            - name: Reference
+            - name: リファレンス
               href: devtools-guide-chromium/console/reference.md
             - name: API リファレンス
               href: devtools-guide-chromium/console/api.md
@@ -114,7 +114,7 @@
               href: devtools-guide-chromium/network/index.md
             - name: ネットワーク問題ガイド
               href: devtools-guide-chromium/network/issues.md
-            - name: Reference
+            - name: リファレンス
               href: devtools-guide-chromium/network/reference.md
         - name: ストレージ
           items:
@@ -192,7 +192,7 @@
               href: devtools-guide-chromium/rendering-tools/js-runtime.md
         - name: アクセシビリティ
           items:
-            - name: Reference
+            - name: リファレンス
               href: devtools-guide-chromium/accessibility/reference.md
             - name: DevTools を支援技術で操作する
               href: devtools-guide-chromium/accessibility/navigation.md
@@ -206,6 +206,8 @@
               href: devtools-guide-chromium/remote-debugging/index.md
             - name: ローカルサーバーへのアクセス
               href: devtools-guide-chromium/remote-debugging/local-server.md
+            - name: Surface Duo エミュレーター
+              href: devtools-guide-chromium/remote-debugging/surface-duo-emulator.md
             - name: Windows 10 デバイス
               href: devtools-guide-chromium/remote-debugging/windows.md
         - name: メモリ
