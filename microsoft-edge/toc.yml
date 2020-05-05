@@ -228,7 +228,7 @@
           href: devtools-guide-chromium/security/index.md
         - name: キーボード ショートカット
           href: devtools-guide-chromium/shortcuts.md
-        - name: リソース
+        - name: 関連情報
           href: devtools-guide-chromium/resources/index.md
         - name: Customize
           items:
@@ -488,7 +488,7 @@
         - name: Microsoft Edge ユーザーエージェント文字列
           href: web-platform/user-agent-string.md
     - name: WebVR 開発者ガイド
-      href: 'https://docs.microsoft.com/microsoft-edge/webvr/'
+      href: /microsoft-edge/webvr/index
     - name: Windows ランタイム (WinRT)
       href: windows-runtime/toc.yml
       topicHref: windows-runtime/index.md
