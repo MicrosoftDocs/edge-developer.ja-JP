@@ -3,7 +3,7 @@ description: Microsoft Edge (EdgeHTML) 開発者ツールについて理解す�
 title: Microsoft Edge (EdgeHTML) 開発者ツール
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 04/03/2020
+ms.date: 05/05/2020
 ms.topic: article
 ms.prod: microsoft-edge
 ms.technology: devtools
@@ -11,12 +11,12 @@ keywords: microsoft edge、web 開発、f12 ツール、devtools
 experimental: true
 experiment_id: 51fe4b97-3e55-41
 localization_priority: Priority
-ms.openlocfilehash: 1abc01af5c1b058687d9ba1402911d4367b6e2b3
-ms.sourcegitcommit: 6860234c25a8be863b7f29a54838e78e120dbb62
+ms.openlocfilehash: 56edfa3aa39fc20d37d95fb8fde029a702732336
+ms.sourcegitcommit: 985cfb79a64951afd5beb7981b26afbed30a8972
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "10569720"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "10629505"
 ---
 # Microsoft Edge (EdgeHTML) 開発者ツール  
 
@@ -28,7 +28,11 @@ Microsoft Edge \ (EdgeHTML \) DevTools は、新しいフロントエンドワ�
 
 ## コアツール  
 
-![Microsoft Edge \ (EdgeHTML) DevTools][ImageDevtoolsEdgehtml]  
+:::image type="complex" source="./devtools-guide/media/devtools.png" alt-text="Microsoft Edge (EdgeHTML) DevTools":::
+   Microsoft Edge (EdgeHTML) DevTools
+:::image-end:::
+
+<!--![Microsoft Edge \(EdgeHTML\) DevTools][ImageDevtoolsEdgehtml]  -->  
 
 Microsoft Edge \ (EdgeHTML \) DevTools には以下のものがあります。  
 
@@ -45,8 +49,8 @@ Microsoft Edge \ (EdgeHTML \) DevTools には以下のものがあります。
 [フィードバックと機能のリクエストを](#feedback)送信してください。  
 
 > [!TIP]
-> [Microsoft Edge \ (EdgeHTML \) で、どのブラウザーからでも無料でテスト][BrowserstackEdgehtml]できます。  
-> Office は[Browserstack][BrowserstackEdgehtml]と提携して、Microsoft Edge \ (EdgeHTML \) での無料のライブテストと自動テストを提供しています。  
+> [Microsoft Edge \ (EdgeHTML \) で任意のブラウザーから無料でテスト][BrowserstackEdgehtml]します。  
+> Microsoft Edge チームは、 [Browserstack][BrowserstackEdgehtml]と提携して、microsoft edge \ (EdgeHTML \) での無料のライブテストと自動テストを提供します。  
 
 ## Microsoft ストア アプリ  
 
@@ -54,9 +58,13 @@ Microsoft Edge \ (EdgeHTML \) DevTools には以下のものがあります。
 
 ### ローカルデバッグ  
 
-ページをローカルでデバッグするには、Microsoft Edge DevTools アプリを起動するだけです。  Chooser の**ローカル**パネルには、オープンエッジブラウザーのタブ、 [pwas][PwasEdgehtmlIndex] \ (`WWAHost.exe`プロセス \)、 [webview][HostingWebview]コントロールなど、アクティブな EdgeHTML コンテンツプロセスがすべて表示されます。  目的のターゲットをクリックして、DevTools の新しいタブインスタンスを添付して開きます。  
+ページをローカルでデバッグするには、Microsoft Edge DevTools アプリを起動するだけです。  セレクターの**ローカル**パネルには、開いている [Edge browser] タブ、 [pwas][PwasEdgehtmlIndex] \ (`WWAHost.exe`プロセス \)、 [webview][HostingWebview]コントロールなど、すべてのアクティブな EdgeHTML コンテンツプロセスが表示されます。  目的のターゲットを選択して、DevTools の新しいタブインスタンスを添付して開きます。  
 
-![DevTools アプリのローカルパネル][ImageDevtoolsGuideEdgehtmlChooselocal]  
+:::image type="complex" source="./devtools-guide/media/chooser_local.png" alt-text="DevTools アプリのローカルパネル":::
+   DevTools アプリのローカルパネル
+:::image-end:::
+
+<!--![DevTools app Local panel][ImageDevtoolsGuideEdgehtmlChooselocal]  -->  
 
 ### リモートデバッグ  
 
@@ -64,15 +72,17 @@ Microsoft Edge DevTools アプリは、新しくリリースされた[Devtools �
 
 はじめに、 [Devtools プロトコル][DevtoolsProtocolEdgehtmlIndex]ドキュメントの[*Microsoft Edge devtools*][DevtoolsProtocolEdgehtmlClientsEdgePreview]セクションを確認してください。  
 
-![DevTools アプリのリモートパネル][DevtoolsGuideEdgehtmlRemote]  
+:::image type="complex" source="./devtools-guide/media/chooser_remote.png" alt-text="DevTools アプリのリモートパネル":::
+   DevTools アプリのリモートパネル
+:::image-end:::
 
-## フィードバック  
-
-Microsoft Edge \ (EdgeHTML \) DevTools の改善を続けるため、フィードバックを送信してください。  「ツール」 ()`F12`を開き、「[フィードバックを送信](#microsoft-edge-edgehtml-developer-tools)」ボタンをクリックします。  
-
-[Windows Insider][WindowsInsiderProgram]になると、 [devtools の最新機能][DevtoolsGuideEdgehtmlWhatsnew]をプレビューできます。  Windows フィードバック Hub アプリを使用して、Windows の一般的な提案と問題の投稿、事後投票、追跡、サポートを行います。  
+<!--![DevTools app Remote panel][ImageDevtoolsGuideEdgehtmlRemote]  -->  
 
 ## 一般的なショートカットキー  
+
+> [!IMPORTANT]
+> 最新バージョンの Windows では、すべてのショートカットが確認されています。  
+> ショートカットを使用できない場合は、Windows のコピーを更新してください。  
 
 これらのショートカットは、主要な DevTools ウィンドウを制御し、すべてのツールで動作する必要があります。  
 
@@ -105,13 +115,19 @@ Microsoft Edge \ (EdgeHTML \) DevTools の改善を続けるため、フィー�
 | ページを最新の情報に更新する | `Ctrl`+`Shift`+`F5`, `Ctrl`+`R` |  
 
 > [!NOTE]
-> デバッグしてブレークポイントで一時停止している場合、"**ページを更新**する" アクションによってランタイムが最初に再開されます。
+> デバッグしてブレークポイントで一時停止している場合、"**ページを更新**する" アクションでは最初にランタイムが再開されます。  
+
+## フィードバック  
+
+Microsoft Edge \ (EdgeHTML \) DevTools の向上に役立てるため、フィードバックを送信してください。  ツール \ (`F12`\) を開いて、[[フィードバックの送信](#microsoft-edge-edgehtml-developer-tools)] ボタンを選択します。  
+
+[Windows Insider][WindowsInsiderProgram]になると、 [devtools の最新機能][DevtoolsGuideEdgehtmlWhatsnew]をプレビューできます。  Windows フィードバック Hub アプリを使用して、Windows の一般的な提案と問題の投稿、事後投票、追跡、サポートを行います。  
 
 <!-- image links  -->  
 
-[ImageDevtoolsEdgehtml]: /microsoft-edge/devtools-guide/media/devtools.png "Microsoft Edge (EdgeHTML) DevTools"  
-[ImageDevtoolsGuideEdgehtmlChooselocal]: /microsoft-edge/devtools-guide/media/chooser_local.png "DevTools アプリのローカルパネル"  
-[DevtoolsGuideEdgehtmlRemote]: /microsoft-edge/devtools-guide/media/chooser_remote.png "DevTools アプリのリモートパネル"  
+<!--[ImageDevtoolsEdgehtml]: /microsoft-edge/devtools-guide/media/devtools.png "Microsoft Edge (EdgeHTML) DevTools"  -->  
+<!--[ImageDevtoolsGuideEdgehtmlChooselocal]: /microsoft-edge/devtools-guide/media/chooser_local.png "DevTools app Local panel"  -->  
+<!--[ImageDevtoolsGuideEdgehtmlRemote]: /microsoft-edge/devtools-guide/media/chooser_remote.png "DevTools app Remote panel"  -->  
 
 <!-- links  -->  
 
