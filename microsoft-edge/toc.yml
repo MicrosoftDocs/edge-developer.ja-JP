@@ -100,7 +100,7 @@
               href: devtools-guide-chromium/console/log.md
             - name: JavaScript の実行
               href: devtools-guide-chromium/console/javascript.md
-            - name: リファレンス
+            - name: Reference
               href: devtools-guide-chromium/console/reference.md
             - name: API リファレンス
               href: devtools-guide-chromium/console/api.md
@@ -114,7 +114,7 @@
               href: devtools-guide-chromium/network/index.md
             - name: ネットワーク問題ガイド
               href: devtools-guide-chromium/network/issues.md
-            - name: リファレンス
+            - name: Reference
               href: devtools-guide-chromium/network/reference.md
         - name: ストレージ
           items:
@@ -192,7 +192,7 @@
               href: devtools-guide-chromium/rendering-tools/js-runtime.md
         - name: アクセシビリティ
           items:
-            - name: リファレンス
+            - name: Reference
               href: devtools-guide-chromium/accessibility/reference.md
             - name: DevTools を支援技術で操作する
               href: devtools-guide-chromium/accessibility/navigation.md
@@ -228,7 +228,7 @@
           href: devtools-guide-chromium/security/index.md
         - name: キーボード ショートカット
           href: devtools-guide-chromium/shortcuts.md
-        - name: 関連情報
+        - name: リソース
           href: devtools-guide-chromium/resources/index.md
         - name: Customize
           items:
@@ -487,6 +487,8 @@
           href: web-platform/tracking-prevention.md
         - name: Microsoft Edge ユーザーエージェント文字列
           href: web-platform/user-agent-string.md
+    - name: WebView2 (Chromium) (プレビュー)
+      href: webview2/toc.yml
     - name: WebVR 開発者ガイド
       href: /microsoft-edge/webvr/index
     - name: Windows ランタイム (WinRT)
