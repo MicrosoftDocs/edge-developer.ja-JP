@@ -450,6 +450,9 @@
       href: privacy-whitepaper.md
     - name: プログレッシブ Web アプリ (Chromium)
       href: progressive-web-apps-chromium/index.md
+      items:
+        - name: PWAs を使い始める (Chromium)
+          href: progressive-web-apps-chromium/get-started.md
     - name: プログレッシブ Web アプリ (EdgeHTML)
       href: progressive-web-apps-edgehtml/index.md
       items:
