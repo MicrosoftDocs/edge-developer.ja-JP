@@ -3,17 +3,17 @@ description: Microsoft Edge WebView 2 コントロールを使用して Win32 �
 title: Win32、WPF、および WinForms の Microsoft Edge WebView2 のリリースノート
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 05/14/2020
+ms.date: 05/19/2020
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Controller、browser control、edge html
-ms.openlocfilehash: 14030d3dde8c4e68c0790073dc38e5c856e2a091
-ms.sourcegitcommit: 07cda56425e5fdf90eeb3972e17041261bf720cd
+ms.openlocfilehash: 255f8d56ae1a4b77a87697b9cd3814380dd06994
+ms.sourcegitcommit: 5bdffe91a6594f77eeffa4e864fda90a02784771
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "10654562"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "10659665"
 ---
 # WebView2 SDK のリリースノート  
 
@@ -39,8 +39,8 @@ ms.locfileid: "10654562"
 
 **NuGet パッケージの更新後に、アプリを再コンパイルします。**
 
-* **お知らせ:** 今後の Microsoft Edge バージョン83では、evergreen WebView は安定したブラウザーチャネルをターゲットとしていません。 代わりに、現在開発中のインストーラーを使用してチェーンインストールできる、別の一連のバイナリ (ブランドの[Microsoft Edge WebView2 Runtime](./index.md#microsoft-edge-webview2-runtime)) をターゲットとします。 詳細については[、「アプリの配布](./index.md#app-distribution)」をご覧ください。
-* **お知らせ:** 次に、2つのパッケージをリリースします。プレリリースパッケージ (試用版) と、安定性の高い Api を備えた安定したリリースパッケージ (使用可能)。 [Microsoft Edge WEBVIEW2 SDK](./index.md#microsoft-edge-webview2-sdk)をチェックアウトして、相違点について確認してください。
+* **お知らせ:** 今後の Microsoft Edge バージョン83では、evergreen WebView は安定したブラウザーチャネルをターゲットとしていません。 代わりに、現在開発中のインストーラーを使用してチェーンインストールできる、別の一連のバイナリ (ブランドの[Microsoft Edge WebView2 Runtime](./concepts/distribution.md#microsoft-edge-webview2-runtime)) をターゲットとします。 詳細については[、「アプリの配布](./concepts/distribution.md)」をご覧ください。
+* **お知らせ:** 次に、2つのパッケージをリリースします。プレリリースパッケージ (試用版) と、安定性の高い Api を備えた安定したリリースパッケージ (使用可能)。 [Microsoft Edge WEBVIEW2 SDK](./concepts/versioning.md)をチェックアウトして、相違点について確認してください。
 * **変更の中断:** API が Windows API の名前付け規則に合わせて調整されるようにするために、次のインターフェイスの名前を更新しました。
   * CORE_WEBVIEW2_ * 接頭文字が * COREWEBVIEW2_ ました。
   * [GetCoreWebView2BrowserVersionInfo](reference/win32/0-9-430/webview2-idl.md#getcorewebview2browserversioninfo)は[GetAvailableCoreWebView2BrowserVersionString](reference/win32/0-9-488/webview2-idl.md#getavailablecorewebview2browserversionstring)になりました
