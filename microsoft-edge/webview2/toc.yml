@@ -10,14 +10,20 @@
       href: gettingstarted/winforms.md
 - name: 概念
   items:
+    - name: アプリの配布
+      href: concepts/distribution.md
     - name: バージョン管理
       href: concepts/versioning.md
 - name: リリース ノート
   href: releasenotes.md
-- name: ツーリング
+- name: ロードマップ
+  href: roadmap.md
+- name: 方法
   items:
-    - name: WebDriver
-      href: tooling/webdriver.md
+    - name: デバッグ WebView2
+      href: howto/Debug.md
+    - name: エッジドライバーを自動化する
+      href: howto/webdriver.md
 - name: Reference
   href: webview2-api-reference.md
   items:
