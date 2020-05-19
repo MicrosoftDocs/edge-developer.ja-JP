@@ -8,6 +8,10 @@
       href: gettingstarted/wpf.md
     - name: Windows フォーム
       href: gettingstarted/winforms.md
+- name: 概念
+  items:
+    - name: バージョン管理
+      href: concepts/versioning.md
 - name: リリース ノート
   href: releasenotes.md
 - name: ツーリング
