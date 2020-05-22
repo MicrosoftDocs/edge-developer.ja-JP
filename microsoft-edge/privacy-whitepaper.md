@@ -3,18 +3,18 @@ description: Microsoft Edge プライバシー ホワイトペーパー
 title: Microsoft Edge プライバシー ホワイトペーパー
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 05/14/2020
+ms.date: 05/21/2020
 ms.topic: article
 ms.prod: microsoft-edge
 ms.technology: browser
 keywords: microsoft edge、プライバシー、ホワイトペーパー、信頼
 localization_priority: Priority
-ms.openlocfilehash: 0849d51c14be78a9e261ea0fad426e126a1eea93
-ms.sourcegitcommit: c5f98907ccff78e0c615f6d664febce74cda8b68
+ms.openlocfilehash: 02b2dc0e65211224e8bf75568b7c81d5becd1006
+ms.sourcegitcommit: f79387aa9b4c382b3d6637dfa8fc96bcc34fdbf3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "10658817"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "10673780"
 ---
 # Microsoft Edge プライバシー ホワイトペーパー  
 
@@ -70,9 +70,7 @@ Web 上のサイト、テキスト、画像を収集し、Microsoft Edge でコ�
 
 デバイスに保存されているテンプレートは、の [ **Clear data** ] 設定でキャッシュデータをクリアすることによって削除されることがあり `edge://settings/privacy` ます。
 
-<!--  
-If you turn on **Show suggestions from Pinterest in Collections**, Collections perform a Microsoft Bing search using the title of your collection to find relevant Pinterest Topic pages.  Microsoft Edge does not send data about your collections to Pinterest.  You may remove the suggestions and stop searches for Pinterest Topic pages by going to `edge://settings/privacy` and turning off **Show suggestions from Pinterest in Collections**.  
--->  
+[**コレクション] で [おすすめ候補の表示]** をオンにすると、コレクションのタイトルを使用して Microsoft Bing 検索が実行され、関連する Pinterest のトピックページが検索されます。  Microsoft Edge では、コレクションに関するデータは Pinterest に送信されません。  [ `edge://settings/privacy` **コレクションでのおすすめ候補を表示する]** に移動して、関心のあるトピックページの検索を終了することができます。  
 
 InPrivate ブラウズまたはゲストモードを使用している場合、コレクションは使用できません。  
 
@@ -187,9 +185,9 @@ Microsoft Edge は、[位置情報 API](https://w3.org/TR/geolocation-api)をサ
 
 アドレスバーの右側に、お客様の所在地が共有されているかどうかが示されます。  
 
-![位置情報](./media/whitepaper-media/geolocation2.png)  
+![Location](./media/whitepaper-media/geolocation2.png)  
 
-サイトで自分の場所の共有を許可している場合、Microsoft Edge は、IP アドレスや近くの Wi-fi アクセスポイントなどのローカルネットワーク情報を Microsoft の位置情報サービスに送信します。  Microsoft サービスは、情報を使用して位置情報の座標を推定します。  この位置情報の推定は、現在の場所を共有することに同意したサイトと共有されます。  Windows 10 では、 [windows の場所の設定](https://support.microsoft.com/help/4468240/windows-10-location-service-and-privacy)を有効にした場合にのみ、microsoft Edge で microsoft の位置情報サービスが使用されます。  
+サイトで自分の場所の共有を許可している場合、Microsoft Edge は、IP アドレスや近くの Wi-fi アクセスポイントなどのローカルネットワーク情報を Microsoft の位置情報サービスに送信します。  Microsoft サービスは、情報を使用して位置情報の座標を推定します。  位置情報の推定は、現在の場所を共有することに同意したサイトと共有されます。  Windows 10 では、[**このデバイス上の場所へのアクセスを許可**する] をオンにして、 **windows**設定の [**場所**] 設定で**アプリが位置情報にアクセスすることを許可**している場合、Microsoft Edge により正確な場所でサイトが提供されます。  **[このデバイス上の場所へのアクセスを許可**する] をオフにして、**アプリが位置情報にアクセスすることを許可**した場合、サイトにはおおよその場所が提供されます。  この情報は、以前に自分の場所を表示することを許可したサイトに対してのみ共有されます。  [Windows の場所の設定](https://support.microsoft.com/help/4468240/windows-10-location-service-and-privacy)。  
 
 Microsoft 位置情報サービスへの要求を作成するときに、ランダムに生成された新しい ID が使用されます。  Microsoft Edge の位置情報サービスでは、位置情報の座標をいつでも保存することはできません。  
 
@@ -219,7 +217,7 @@ Microsoft Edge は、インストールと更新のステージに関する Micr
 
 Microsoft Edge では、Internet Explorer \ (IE \) との統合によって簡素化されたエクスペリエンスを提供します。  Microsoft Edge は、IE 11 と IE モードのみをサポートしており、Windows でのみ使用できます。  この機能は、グループポリシーを通じて組織で利用できます。  管理者は、Microsoft Edge の IE モードでサイトの一覧を開くことを選択します。  
 
-![位置情報](./media/whitepaper-media/ie-mode.png)  
+![Location](./media/whitepaper-media/ie-mode.png)  
 
 Microsoft Edge では、管理者によって定義された場所からポリシーを使ってサイトの一覧をダウンロードし、IE モードで開く必要があるサイトを特定するためにファイルをキャッシュします。  Microsoft Edge は、Windows や IE 11 の設定に応じて、ユーザーがどのサイトに移動したか、パフォーマンスデータ、信頼性データ、機能の使用状況データなどの IE モードの使用に関する診断データを収集します。  Windows 10 では、診断データは Windows 診断データの設定に従って収集されます。  Windows 8.1 の場合、web サイトの情報は、ユーザーが IE で [今後フリップ] または [おすすめサイト] 機能をオンにした場合に収集されます。  IE モードは、Microsoft Edge のプライバシーとサービスの設定では、同じデータ収集の切り替えには適用されない可能性があります。  
 
