@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、CoreWebView2、ICoreWebView2Host、browser control、edge html、Windows フォーム、WinForms、WPF、.NET
-ms.openlocfilehash: 4f28ef64bb2936bc6c9a089ea2574070738fc79d
-ms.sourcegitcommit: 8f5c9255dadc2a9bb22c3201d15b57d84851fe64
+ms.openlocfilehash: f17de3bcb7459375617f00aec0cd2897f0859c1d
+ms.sourcegitcommit: c579181af051e2855b785263faa4001c672a929b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "10671639"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "10673855"
 ---
 # Microsoft Edge WebView2 の概要 (プレビュー)  
 
@@ -104,11 +104,20 @@ WebView2 コントロールを使用してアプリケーションをビルド�
 *   .NET Core 3.0 以降  
 *   [WinUI 3.0](/uwp/toolkits/winui3/)  
 
-Windows 10、Windows 8.1、Windows 8、windows 7、windows server 2016、windows server 2012/2012R2、または Windows Server 2008 R2 を実行している必要があります。   
+WebView2 アプリケーションは、次のバージョンの Windows で実行できます。  
+
+*   Windows 10  
+*   Windows 8.1  
+*   Windows 8  
+*   Windows 7  
+*   Windows Server 2016  
+*   Windows Server 2012  
+*   Windows Server 2012R2  
+*   Windows Server 2008 R2  
 
 ## 次のステップ  
 
-WebView2 アプリケーションを作成して展開する方法の詳細については、コンセプトのドキュメントをチェックアウトする<!-- and how-to guides-->.  
+WebView2 アプリケーションを作成して展開する方法の詳細については、概念的なドキュメントと使い方ガイドを参照してください。  
 
 #### 概念  
 
