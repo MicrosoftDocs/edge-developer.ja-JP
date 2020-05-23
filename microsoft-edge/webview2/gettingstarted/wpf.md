@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: WebView2、WebView2、WebView、webview、wpf アプリ、wpf、edge、CoreWebView2、browser control、edge html、はじめに、作業の開始、.NET
-ms.openlocfilehash: 01d92322a85e38dab3c502e8dd76729fef8400b1
-ms.sourcegitcommit: 07cda56425e5fdf90eeb3972e17041261bf720cd
+ms.openlocfilehash: 6e66d90c3b821ee3656466ccaf3c9a079dda5030
+ms.sourcegitcommit: e00e783926877090116e650da25242498173a7fc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "10654274"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "10673953"
 ---
 # WPF での WebView2 の概要 (プレビュー)  
 
@@ -23,7 +23,7 @@ ms.locfileid: "10654274"
 
 続行する前に、次の前提条件の一覧をインストールしていることを確認します。  
 
-* [Microsoft Edge (Chromium)](https://www.microsoftedgeinsider.com/download/)は、windows 10、windows 8.1、または windows 7 にインストールされています。  Microsoft Edge WebView チームは、カナリアチャネルの使用をお勧めします。  
+* [Microsoft Edge (Chromium) カナリアチャネル](https://www.microsoftedgeinsider.com/download/)は、windows 10、windows 8.1、または windows 7 にインストールされています。 
 * [Visual Studio](https://visualstudio.microsoft.com/) 2015 以降。  
 
 ## 手順 1-1 つのウィンドウアプリケーションを作成する
