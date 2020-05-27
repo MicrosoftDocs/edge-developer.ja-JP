@@ -3,18 +3,18 @@ description: Microsoft Edge プライバシー ホワイトペーパー
 title: Microsoft Edge プライバシー ホワイトペーパー
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 05/21/2020
+ms.date: 05/26/2020
 ms.topic: article
 ms.prod: microsoft-edge
 ms.technology: browser
 keywords: microsoft edge、プライバシー、ホワイトペーパー、信頼
 localization_priority: Priority
-ms.openlocfilehash: 02b2dc0e65211224e8bf75568b7c81d5becd1006
-ms.sourcegitcommit: f79387aa9b4c382b3d6637dfa8fc96bcc34fdbf3
+ms.openlocfilehash: 6aba8f6c1ae7212d5af702bcf13ff9dde6b8659b
+ms.sourcegitcommit: 3f625231067df343d5afbb3f47c1063982067bcb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "10673780"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "10678226"
 ---
 # Microsoft Edge プライバシー ホワイトペーパー  
 
@@ -86,7 +86,7 @@ InPrivate ブラウズまたはゲストモードを使用している場合、�
 
 デバイス上にローカルに保存されているクラッシュ診断データは、のファイルシステムからクリアされることがあり `edge://crashes` ます。  
 
-Windows 10 のクラッシュ診断データ収集をオフにするには、「Windows & 診断ツールでの**診断 \ &** のフィードバック設定」を参照してください。  他のすべてのプラットフォームの Microsoft Edge のバージョンについては、「 `edge://settings/privacy` **クラッシュレポートを送信して microsoft 製品を改善**する」と「ブラウザーの設定の使い方についてのデータ」を参照してください。  この診断データ収集は[、組織で管理](/deployedge/microsoft-edge-privacy-policy)されているグループポリシーによって企業によって無効にされることもあります。  
+Windows 10 のクラッシュ診断データ収集をオフにするには、「Windows & 診断ツールでの**診断 \ &** のフィードバック設定」を参照してください。  他のすべてのプラットフォームの Microsoft Edge のバージョンについては、「 `edge://settings/privacy` **クラッシュレポートを送信して microsoft 製品を改善**する」と「ブラウザーの設定の使い方についてのデータ」を参照してください。  この診断データ収集は[、組織で管理](/deployedge/microsoft-edge-enterprise-privacy-settings)されているグループポリシーによって企業によって無効にされることもあります。  
 
 ## ブラウザーの使い方に関する診断データ  
 
