@@ -54,11 +54,11 @@ Microsoft Edge \ (EdgeHTML \) DevTools には以下のものがあります。
 
 ## Microsoft ストア アプリ  
 
-**Microsoft Edge \ (EdgeHTML \) DevTools**は、ブラウザー内 \`F12`(\) のツールエクスペリエンスに加えて、 [microsoft ストアからスタンドアロンの Windows 10 アプリ][MicrosoftStoreEdgeDevtoolsPreview]として[利用できるようになりました][DevtoolsGuideEdgehtmlWhatsnew]。  ストアバージョンでは、ローカルとリモートのページターゲットを開くための**セレクター**パネルが用意されています。これには、devtools インスタンス間で簡単に切り替えるためのタブ付きレイアウトが用意されています。  
+**Microsoft Edge \ (EdgeHTML \) DevTools**は、ブラウザー内 \ (\) のツールエクスペリエンスに加えて、 [microsoft ストアからスタンドアロンの Windows 10 アプリ][MicrosoftStoreEdgeDevtoolsPreview]として[利用できるようになりました][DevtoolsGuideEdgehtmlWhatsnew] `F12` 。  ストアバージョンでは、ローカルとリモートのページターゲットを開くための**セレクター**パネルが用意されています。これには、devtools インスタンス間で簡単に切り替えるためのタブ付きレイアウトが用意されています。  
 
 ### ローカルデバッグ  
 
-ページをローカルでデバッグするには、Microsoft Edge DevTools アプリを起動するだけです。  セレクターの**ローカル**パネルには、開いている [Edge browser] タブ、 [pwas][PwasEdgehtmlIndex] \ (`WWAHost.exe`プロセス \)、 [webview][HostingWebview]コントロールなど、すべてのアクティブな EdgeHTML コンテンツプロセスが表示されます。  目的のターゲットを選択して、DevTools の新しいタブインスタンスを添付して開きます。  
+ページをローカルでデバッグするには、Microsoft Edge DevTools アプリを起動するだけです。  セレクターの**ローカル**パネルには、開いている [Edge browser] タブ、 [pwas][PwasEdgehtmlIndex] \ ( `WWAHost.exe` プロセス \)、 [webview][HostingWebview]コントロールなど、すべてのアクティブな EdgeHTML コンテンツプロセスが表示されます。  目的のターゲットを選択して、DevTools の新しいタブインスタンスを添付して開きます。  
 
 :::image type="complex" source="./devtools-guide/media/chooser_local.png" alt-text="DevTools アプリのローカルパネル":::
    DevTools アプリのローカルパネル
@@ -119,7 +119,7 @@ Microsoft Edge DevTools アプリは、新しくリリースされた[Devtools �
 
 ## フィードバック  
 
-Microsoft Edge \ (EdgeHTML \) DevTools の向上に役立てるため、フィードバックを送信してください。  ツール \ (`F12`\) を開いて、[[フィードバックの送信](#microsoft-edge-edgehtml-developer-tools)] ボタンを選択します。  
+Microsoft Edge \ (EdgeHTML \) DevTools の向上に役立てるため、フィードバックを送信してください。  ツール \ ( `F12` \) を開いて、[[フィードバックの送信](#microsoft-edge-edgehtml-developer-tools)] ボタンを選択します。  
 
 [Windows Insider][WindowsInsiderProgram]になると、 [devtools の最新機能][DevtoolsGuideEdgehtmlWhatsnew]をプレビューできます。  Windows フィードバック Hub アプリを使用して、Windows の一般的な提案と問題の投稿、事後投票、追跡、サポートを行います。  
 
