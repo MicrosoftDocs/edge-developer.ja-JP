@@ -40,7 +40,7 @@ WebDriver では、ブラウザー固有のドライバーを各ブラウザー�
 1.  ビルドの適切なバージョンの WebDriver を確認して、適切に動作するようにします。  
 
 :::image type="complex" source="./media/webdriver-chromium/edge-version.png" alt-text="2020年1月14日の Microsoft Edge カナリアのビルド番号":::
-   図 1.  2020年1月14日の Microsoft Edge カナリアのビルド番号  
+   図 1.   2020年1月14日の Microsoft Edge カナリアのビルド番号  
 :::image-end:::  
 
 次に、[対応するバージョンの Microsoft Edge ドライバーをダウンロード][MicrosoftDeveloperEdgeToolsWebdriverDownloads]します。  
