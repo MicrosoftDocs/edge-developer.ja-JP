@@ -3,17 +3,17 @@ description: Microsoft Edge WebView2 コントロールを使用して Win32 ア
 title: Win32 アプリ用 Microsoft Edge WebView2
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 05/12/2020
+ms.date: 05/27/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Controller、browser control、edge html
-ms.openlocfilehash: 25ea8367aa9d64d0a1066cf8c1564f4d9c9f05ed
-ms.sourcegitcommit: 07cda56425e5fdf90eeb3972e17041261bf720cd
+ms.openlocfilehash: 532c898845125564ad5af6460dc8d1ff6464abfb
+ms.sourcegitcommit: 83efa259be89cc773a82751242495a0a919d54cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "10654168"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "10687805"
 ---
 # WebView2 クラス WinForms クラスの WebView2 
 
@@ -50,9 +50,6 @@ WebView2 を WinForms に埋め込むためのコントロールです。
 [再](#reload) | WebView2 のトップレベルの文書を再度読み込みます。
 [Stop](#stop) | WebView2 で進行中のナビゲーションを停止します。
 [WebView2](#webview2) | 新しい WebView2 WinForms コントロールを作成します。
-[OnEnter](#onenter) | 保護されたフォーカスハンドラー。
-[OnSizeChanged](#onsizechanged) | 保護された SizeChanged ハンドラー。
-[OnVisibleChanged](#onvisiblechanged) | Protected VisibilityChanged handler。
 
 ## Members
 
@@ -216,22 +213,4 @@ WebView2 で進行中のナビゲーションを停止します。
 > パブリック[WebView2](#webview2)()
 
 構築後、CoreWebView2 プロパティは null になります。 [EnsureCoreWebView2Async](#ensurecorewebview2async)を呼び出して、基になる CoreWebView2 を初期化します。
-
-#### OnEnter 
-
-保護されたフォーカスハンドラー。
-
-> protected override void [OnEnter](#onenter)(EventArgs e)
-
-#### OnSizeChanged 
-
-保護された SizeChanged ハンドラー。
-
-> protected override void [Onsizechanged](#onsizechanged)(EventArgs e)
-
-#### OnVisibleChanged 
-
-Protected VisibilityChanged handler。
-
-> protected override void [OnVisibleChanged](#onvisiblechanged)(EventArgs e)
 

@@ -3,17 +3,17 @@ description: Microsoft Edge WebView2 コントロールを使用して Win32 ア
 title: Win32 アプリ用 Microsoft Edge WebView2
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 05/13/2020
+ms.date: 05/27/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Controller、browser control、edge html
-ms.openlocfilehash: f2c3bcb5334abc907a838971ebc1773b6485194f
-ms.sourcegitcommit: 07cda56425e5fdf90eeb3972e17041261bf720cd
+ms.openlocfilehash: a0030e1a2a77d65963bd8333f2071485ab2fe308
+ms.sourcegitcommit: 83efa259be89cc773a82751242495a0a919d54cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "10654241"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "10687798"
 ---
 # WebView2 クラスを WebView2 します。 
 
@@ -50,16 +50,6 @@ WPF アプリケーションに web コンテンツを埋め込むためのコ�
 [再](#reload) | 現在のページを再読み込みします。
 [Stop](#stop) | すべてのナビゲーションと保留中のリソースフェッチを停止します。
 [WebView2](#webview2) | WebView2 コントロールの新しいインスタンスを作成します。
-[BuildWindowCore](#buildwindowcore) | これは HwndHost からオーバーライドされ、HWND の作成を指示するために呼び出されます。
-[DestroyWindowCore](#destroywindowcore) | これは HwndHost からオーバーライドされ、HWND の破棄を指示するために呼び出されます。
-[破棄](#dispose) | これは、IDispose パターンの一般的な実装に従って、基本クラスによって呼び出されます。
-[HasFocusWithinCore](#hasfocuswithincore) | これは、HwndHost からオーバーライドされ、フォーカスがコントロールとウィンドウのどちらにあるかを WPF が認識する必要があるときに呼び出されます。
-[OnKeyDown](#onkeydown) | これは UIElement から呼び出され、キー入力の入力を処理できるようにするために呼び出されます。
-[OnKeyUp](#onkeyup) | 「Control.onkeydown」をご覧ください。
-[Onpreview Keydown](#onpreviewkeydown) | これは "プレビュー" です (例:
-[Onpreview Keyup](#onpreviewkeyup) | 詳しくは、「Onpreview Keydown」をご覧ください。
-[OnWindowPositionChanged](#onwindowpositionchanged) | これは、コントロールの位置が変わったときに HwndHost によってオーバーライドされて呼び出されます。
-[タブの基本](#tabintocore) | これは、HwndHost によって上書きされ、tab キーを使ってコントロール/ウィンドウにフォーカスが移動したことを通知します。
 
 このコントロールは、実質的には WebView2 COM API を囲むラッパーであり、次のようなドキュメントを見つけることができます。 [https://aka.ms/webview2](https://aka.ms/webview2) CoreWebView2 プロパティにアクセスすると、基になる ICoreWebView2 インターフェイスとそのすべての機能に直接アクセスできます。 最も一般的な COM 機能の一部は、ラッパーメソッド、コントロールのプロパティ、イベントを使って直接アクセスすることもできます。
 
@@ -288,97 +278,4 @@ WebView2 コントロールの新しいインスタンスを作成します。
 > パブリック[WebView2](#webview2)()
 
 コントロールの CoreWebView2 は、初期化されるまで null になります。 初期化の概要については、WebView2 クラスのドキュメントを参照してください。
-
-#### BuildWindowCore 
-
-これは HwndHost からオーバーライドされ、HWND の作成を指示するために呼び出されます。
-
-> protected override HandleRef [Buildwindowcore](#buildwindowcore)(HandleRef hwndParent)
-
-##### パラメーター
-* `hwndParent` 作成したものの親として使用する HWND。
-
-##### 返し
-作成した HWND。
-
-#### DestroyWindowCore 
-
-これは HwndHost からオーバーライドされ、HWND の破棄を指示するために呼び出されます。
-
-> protected override void [Destroywindowcore](#destroywindowcore)(HandleRef hwnd)
-
-##### パラメーター
-* `hwnd` 破棄する必要がある HWND。
-
-#### 破棄 
-
-これは、IDispose パターンの一般的な実装に従って、基本クラスによって呼び出されます。
-
-> protected override void [Dispose](#dispose)(bool disposing)
-
-これは、CoreWebView2 を含む、基盤となるすべての COM リソースを解放することで実装されています。
-
-##### パラメーター
-* `disposing` 呼び出し元が明示的に Dispose を呼び出している場合は True、完了している場合は false。
-
-#### HasFocusWithinCore 
-
-これは、HwndHost からオーバーライドされ、フォーカスがコントロールとウィンドウのどちらにあるかを WPF が認識する必要があるときに呼び出されます。
-
-> protected override bool [HasFocusWithinCore](#hasfocuswithincore)()
-
-Wpf は非 WPF ウィンドウをホストしているため、WPF がそれ自体を認識することはできません。そのため、代わりにこれを呼び出すように求められます。 応答するには、CoreWebView2 イベントに基づいて状態を追跡します。これにより、フォーカスが獲得または切断されたときに発生します。
-
-##### 返し
-フォーカスがコントロール/ウィンドウにある場合は True、そうでない場合は false。
-
-#### OnKeyDown 
-
-これは UIElement から呼び出され、キー入力の入力を処理できるようにするために呼び出されます。
-
-> protected override void [control.onkeydown](#onkeydown)(KeyEventArgs e)
-
-Wpf では、WPF 以外のウィンドウをホストしているため、キーボードイベントに対して実際に呼び出すことはできません。 ウィンドウにフォーカスがある場合、入力は、WPF の最上位ウィンドウと入力システムではなく、Windows に直接送信されます。 このオーバーライドは、CoreWebView2 から WPF へのアクセラレータキー入力の明示的な転送 (CoreWebView2Controller_AcceleratorKeyPressed) でのみ呼び出す必要があります。 その場合でも、この KeyDownEvent は、PreviewKeyDownEvent の実装によって明示的にトリガーされ、WPF の通常のシステムと一致するために発生します。 そのため、プロセスは次のようになります。 CoreWebView2Controller_AcceleratorKeyPressed-> は、PreviewKeyDownEvent > Onpreview Keydown-> KeyDownEvent > Control.onkeydown を発生させます。
-
-#### OnKeyUp 
-
-「Control.onkeydown」をご覧ください。
-
-> protected override void [OnKeyUp](#onkeyup)(KeyEventArgs e)
-
-#### Onpreview Keydown 
-
-これは "プレビュー" です (例:
-
-> protected override void [Onpreview keydown](#onpreviewkeydown)(KeyEventArgs e)
-
-トンネリング) バージョンの Control.onkeydown では、実際に最初に発生します。 Control.onkeydown と同じように、CoreWebView2 から明示的にキーの押下を転送している場合にのみ呼び出されます。 WPF の標準の入力処理を模倣するために、これを受け取ったときに、標準のバブルの KeyDownEvent を回避して、発生させることができます。 これにより、WPF ツリー内の他のユーザーは、キー入力を処理している場合に WPF 自体がトリガーする同じ標準ペアの入力イベントを表示できます。
-
-#### Onpreview Keyup 
-
-詳しくは、「Onpreview Keydown」をご覧ください。
-
-> protected override void [Onpreview keyup](#onpreviewkeyup)(KeyEventArgs e)
-
-#### OnWindowPositionChanged 
-
-これは、コントロールの位置が変わったときに HwndHost によってオーバーライドされて呼び出されます。
-
-> protected override void [Onwindowpositionchanged](#onwindowpositionchanged)(Rect rcBoundingBox)
-
-HwndHost は、作成した HWND の更新を行います。 必要な作業は、CoreWebView2 を新しい場所に合わせて移動することです。
-
-#### タブの基本 
-
-これは、HwndHost によって上書きされ、tab キーを使ってコントロール/ウィンドウにフォーカスが移動したことを通知します。
-
-> protected [override ブール値](#tabintocore)のブール値 (TraversalRequest 要求)
-
-WPF では、非 WPF HWND へのフォーカスの切り替えを管理することはできないため、ここに切り替えを委任します。 このため、私たちの仕事は、外部の HWND にフォーカスを置くだけです。
-
-##### パラメーター
-* `request` フォーカスの移動方法に関する情報。
-
-##### 返し
-ナビゲーションを処理したことを示す場合は True、そうしない場合は false を指定します。
 

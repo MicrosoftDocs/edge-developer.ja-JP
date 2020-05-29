@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Controller、browser control、edge html
-ms.openlocfilehash: f62fa25dab7ee1e89f268e4b77a9c0612cac665f
-ms.sourcegitcommit: 07cda56425e5fdf90eeb3972e17041261bf720cd
+ms.openlocfilehash: 0ab152e52b5e5d89cf493ff525ce53d9ab174e6d
+ms.sourcegitcommit: 799fe63d961a37ada455bb36ef3ef0d8076e70bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "10654581"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "10685681"
 ---
 # WebView2 の概要 (開発者用プレビュー)
 
@@ -219,9 +219,9 @@ F5 キーを押して、アプリをビルドし、実行します。 これで�
 
 詳細は次のページをご覧ください。
 
-* Sdk 機能の包括的な例については、「チェックアウト[WEBVIEW2 API のサンプル](https://github.com/MicrosoftEdge/WebView2Samples/tree/master/WebView2APISample)」をご覧ください。
+* WebView2's 機能の包括的な例については、「チェックアウト[WEBVIEW2 API のサンプル](https://github.com/MicrosoftEdge/WebView2Samples/tree/master/WebView2APISample)」をお探しください。
 * WebView2 を使って構築されたアプリケーションをチェックアウト[WebView2Browser](https://github.com/MicrosoftEdge/WebView2Browser)します。
-* Out API に関する詳細については、 [api リファレンスを参照](../reference/win32/0-9-488-reference-webview2.md)してください。  
+* Api に関する詳細については、api[リファレンスを参照](../reference/win32/0-9-488-reference-webview2.md)してください。  
 
 ## WebView2 チームと連絡を取り合う  
 

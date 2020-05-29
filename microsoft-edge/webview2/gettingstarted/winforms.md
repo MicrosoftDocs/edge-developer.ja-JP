@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: WebView2、WebView2、WebView、webview、winforms アプリ、winforms、edge、CoreWebView2、browser control、edge html、はじめに、作業の開始、.NET、windows フォーム
-ms.openlocfilehash: e17139d9d2b556d8048fb0043b88b56430c93091
-ms.sourcegitcommit: e00e783926877090116e650da25242498173a7fc
+ms.openlocfilehash: 6c53b66dd9f849384f24c2ae879f28231a25f481
+ms.sourcegitcommit: 799fe63d961a37ada455bb36ef3ef0d8076e70bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "10673946"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "10685688"
 ---
 # Windows Forms アプリでの WebView2 の概要 (プレビュー)  
 
@@ -24,7 +24,7 @@ ms.locfileid: "10673946"
 続行する前に、次の前提条件の一覧をインストールしていることを確認します。  
 
 * [Microsoft Edge (Chromium) カナリアチャネル](https://www.microsoftedgeinsider.com/download/)は、windows 10、windows 8.1、または windows 7 にインストールされています。 
-* [Visual Studio](https://visualstudio.microsoft.com/) 2015 以降。
+* [Visual Studio](https://visualstudio.microsoft.com/) 2017 以降。
 
 > [!NOTE]
 > **Windows Forms .Net Core 3.0 または .net 5**で開発している場合は、 [Visual Studio (Preview)](https://visualstudio.microsoft.com/vs/preview/)をダウンロードします。
@@ -290,9 +290,12 @@ async void InitializeAsync()
 
 おめでとうございます。最初の WebView2 アプリを作成しました。  
 
-## 次のステップ  
+## 次のステップ 
 
-このチュートリアルで取り上げていない WebView2 機能の詳細については、 [API リファレンス](../reference/dotnet/0-9-515-reference-webview2.md)を参照してください。
+* WebView2's 機能の包括的な例については、 [WebView2Samples リポジトリ](https://github.com/MicrosoftEdge/WebView2Samples)をチェックアウトする
+* Api についての詳細情報を参照するための[api 参照](../reference/winforms/0-9-515/microsoft-web-webview2-winforms-webview2.md)
+* WebView2 の詳細については、 [WebView2 のリソース](../index.md#next-steps)の一覧をチェックアウトする
+
 
 ## Microsoft Edge WebView チームと連絡を取り合う  
 

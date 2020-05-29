@@ -3,17 +3,17 @@ description: Microsoft Edge (Chromium) 開発者ツールについて理解す�
 title: Microsoft Edge (Chromium) 開発者ツール
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 05/11/2019
+ms.date: 05/28/2020
 ms.topic: article
 ms.prod: microsoft-edge
 ms.technology: devtools
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 178f72fbc47f712882de6f9564478953f4834890
-ms.sourcegitcommit: 24430258f363b7dd85f7067afd4565bf102b4a1f
+ms.openlocfilehash: 0034e23885020aae5047c69219bd51235a5882b0
+ms.sourcegitcommit: a5392ab44133d742c0e1fa500ad9a872989b7c3f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "10645309"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "10684686"
 ---
 # Microsoft Edge (Chromium) 開発者ツール  
 
@@ -26,8 +26,6 @@ Microsoft Edge をチェックしていて、Chromium ベースのブラウザ�
 :::image type="complex" source="./devtools-guide-chromium/media/devtools.png" alt-text="Microsoft Edge (Chromium) DevTools":::
    Microsoft Edge (Chromium) DevTools
 :::image-end:::
-
-<!--![Microsoft Edge (Chromium) DevTools](./devtools-guide-chromium/media/devtools.png)  -->  
 
 Microsoft edge の次のバージョンを確認していて、以前に Microsoft edge \ (EdgeHTML \) で開発したことがある場合は、Microsoft Edge で web サイトを簡単かつ迅速に構築およびテストするための新しいツールが追加されました。  
 
@@ -54,8 +52,6 @@ DevTools を開くには
 :::image type="complex" source="./devtools-guide-chromium/media/devtools-core-tools.png" alt-text="Microsoft Edge (Chromium) DevTools コアツール":::
    Microsoft Edge (Chromium) DevTools コアツール
 :::image-end:::
-
-<!--![Microsoft Edge \(Chromium\) DevTools core tools](./devtools-guide-chromium/media/devtools-core-tools.png)  -->  
 
 Microsoft Edge \ (Chromium \) DevTools には、次のパネルが含まれています。  
 *   HTML と CSS の編集、アクセシビリティプロパティの検査、イベントリスナーの表示、DOM 変異のブレークポイントの設定を行うための**要素**パネル  
@@ -85,8 +81,6 @@ Web サイトやアプリの構築時に発生する問題の診断とデバッ�
    Microsoft Edge の Chrome Web ストア
 :::image-end:::
 
-<!--![Chrome Web Store in Microsoft Edge](./devtools-guide-chromium/media/allow-extensions-from-stores.png)  -->
-
 上部で、[**他のストアの拡張機能を許可する**] を選択し、表示されるダイアログボックスで [**許可**] を選びます。  
 
 > [!NOTE]
@@ -97,8 +91,6 @@ Web サイトやアプリの構築時に発生する問題の診断とデバッ�
 :::image type="complex" source="./devtools-guide-chromium/media/install-extension-from-chrome-store.png" alt-text="Chrome Web ストアから Microsoft Edge に拡張機能を追加する":::
    Chrome Web ストアから Microsoft Edge に拡張機能を追加する
 :::image-end:::
-
-<!--![Adding extension from Chrome Web Store to Microsoft Edge](./devtools-guide-chromium/media/install-extension-from-chrome-store.png)  -->  
 
 ## ショートカット  
 
@@ -144,8 +136,6 @@ Web サイトやアプリの構築時に発生する問題の診断とデバッ�
    Microsoft Edge についてフィードバックを送信する
 :::image-end:::
 
-<!--![Give feedback on Microsoft Edge](./devtools-guide-chromium/media/devtools-feedback.png)  -->  
-
 [DevTools の最新機能][DevtoolsGuideChromiumWhatsNewIndex]をプレビューする場合は、夜間にビルドされた[Microsoft Edge カナリア][MicrosoftedgeinsiderDownload]をダウンロードしてください。  
 
 <!-- image links -->  
@@ -153,7 +143,7 @@ Web サイトやアプリの構築時に発生する問題の診断とデバッ�
 <!-- links -->  
 
 [DevtoolsGuideChromiumBeginnersHtml]: /microsoft-edge/devtools-guide-chromium/beginners/html "初心者向けの DevTools: HTML と DOM の使用を開始する |Microsoft ドキュメント"  
-[DevtoolsGuideChromiumWhatsNewIndex]: ./devtools-guide-chromium/whats-new.md "Microsoft Edge (Chromium) DevTools の新機能 |Microsoft ドキュメント"  
+[DevtoolsGuideChromiumWhatsNewIndex]: /microsoft-edge/devtools-guide-chromium/whats-new/2020/05/devtools "Microsoft Edge (Chromium) DevTools の新機能 |Microsoft ドキュメント"  
 [DevtoolsProtocolChromiumIndex]: /microsoft-edge/devtools-protocol-chromium "Microsoft Edge (Chromium) DevTools Protocol |Microsoft ドキュメント"  
 
 [MicrosoftEdgeAddonsExtensions]: https://microsoftedge.microsoft.com/addons/category/Edge-Extensions "Microsoft Edge アドオン"  
