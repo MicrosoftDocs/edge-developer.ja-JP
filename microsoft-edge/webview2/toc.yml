@@ -1,6 +1,6 @@
 - name: WebView2 (Chromium) (プレビュー)
   href: index.md
-- name: はじめに
+- name: 作業の開始
   items:
     - name: Win32
       href: gettingstarted/win32.md
@@ -12,19 +12,19 @@
   items:
     - name: アプリの配布
       href: concepts/distribution.md
-    - name: バージョン管理
+    - name: バージョン
       href: concepts/versioning.md
 - name: リリース ノート
   href: releasenotes.md
 - name: ロードマップ
   href: roadmap.md
-- name: 方法
+- name: 操作方法
   items:
-    - name: デバッグ WebView2
+    - name: Debug WebView2
       href: howto/Debug.md
-    - name: エッジドライバーを自動化する
+    - name: エッジ ドライバーで自動化
       href: howto/webdriver.md
-- name: Reference
+- name: リファレンス
   href: webview2-api-reference.md
   items:
     - name: Win32 C++
@@ -54,7 +54,7 @@
           href: reference/win32/0-9-488/icorewebview2webresourcerequest.md
         - name: ICoreWebView2WebResourceResponse
           href: reference/win32/0-9-488/icorewebview2webresourceresponse.md
-        - name: Globals
+        - name: グローバル
           href: reference/win32/0-9-488/webview2-idl.md
         - name: イベント引数
           items:
@@ -138,7 +138,7 @@
               href: reference/win32/0-9-488/icorewebview2windowcloserequestedeventhandler.md
             - name: ICoreWebView2ZoomFactorChangedEventHandler
               href: reference/win32/0-9-488/icorewebview2zoomfactorchangedeventhandler.md
-        - name: 版
+        - name: 試験的な
           items:
             - name: ICoreWebView2ExperimentalCompositionController
               href: reference/win32/0-9-488/icorewebview2experimentalcompositioncontroller.md
@@ -150,9 +150,9 @@
               href: reference/win32/0-9-488/icorewebview2experimentalenvironment.md
             - name: ICoreWebView2ExperimentalPointerInfo
               href: reference/win32/0-9-488/icorewebview2experimentalpointerinfo.md
-        - name: 達成
+        - name: アーカイブされた記事
           items:
-            - name: 0.9.430 (WebView2)
+            - name: 0.9.430 基準 (WebView2)
               href: reference/win32/0-9-430-reference-webview2.md
               items:
                 - name: ICoreWebView2
@@ -177,7 +177,7 @@
                   href: reference/win32/0-9-430/icorewebview2webresourcerequest.md
                 - name: ICoreWebView2WebResourceResponse
                   href: reference/win32/0-9-430/icorewebview2webresourceresponse.md
-                - name: Globals
+                - name: グローバル
                   href: reference/win32/0-9-430/webview2-idl.md
                 - name: イベント引数
                   items:
@@ -263,7 +263,7 @@
                       href: reference/win32/0-9-430/icorewebview2windowcloserequestedeventhandler.md
                     - name: ICoreWebView2ZoomFactorChangedEventHandler
                       href: reference/win32/0-9-430/icorewebview2zoomfactorchangedeventhandler.md
-            - name: 0.8.190 (WebView2)
+            - name: 0.8.190 基準 (WebView2)
               href: reference/win32/0-8-190-reference-webview2.md
               items:
                 - name: IWebView2Deferral
@@ -300,7 +300,7 @@
                   href: reference/win32/0-8-190/iwebview2webview4.md
                 - name: IWebView2WebView5
                   href: reference/win32/0-8-190/iwebview2webview5.md
-                - name: Globals
+                - name: グローバル
                   href: reference/win32/0-8-190/webview2-idl.md
                 - name: イベント引数
                   items:
@@ -380,10 +380,10 @@
                       href: reference/win32/0-8-190/iwebview2zoomfactorchangedeventhandler.md
     - name: .NET
       items:
-        - name: コア
+        - name: Core
           href: reference/dotnet/0-9-515-reference-webview2.md
           items:
-            - name: WebView2 の名前空間
+            - name: WebView2 の Core 名前空間
               href: reference/dotnet/0-9-515/namespace-microsoft-web-webview2-core.md
             - name: CoreWebView2
               href: reference/dotnet/0-9-515/microsoft-web-webview2-core-corewebview2.md
