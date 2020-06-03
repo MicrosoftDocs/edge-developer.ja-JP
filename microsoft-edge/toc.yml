@@ -5,19 +5,19 @@
     - name: アクセシビリティ
       href: accessibility.md
       items:
-        - name: デザイン
+        - name: 設計
           href: accessibility/design.md
         - name: ビルド
           href: accessibility/build.md
           items:
-            - name: ARIA および UI の自動化
+            - name: ARIA および UI オートメーション
               href: accessibility/build/ARIA-and-UI-Automation.md
         - name: テスト
           href: accessibility/test.md
     - name: 開発ガイド
       href: dev-guide.md
       items:
-        - name: EdgeHTML の新機能
+        - name: EdgeHTML の新着情報
           href: dev-guide/whats-new.md
           items:
             - name: EdgeHTML 17
@@ -33,20 +33,20 @@
             - name: EdgeHTML 12
               href: dev-guide/whats-new/edgeHTML-12.md
               items:
-                - name: JavaScript バージョン情報
+                - name: JavaScript のバージョン情報
                   href: dev-guide/whats-new/javascript-version-information.md
         - name: ブラウザーの機能
           href: dev-guide/browser-features.md
           items:
-            - name: 自動再生ポリシー
+            - name: 自動再生のポリシー
               href: dev-guide/browser-features/autoplay-policies.md
-            - name: 瞬間的
+            - name: Flash
               href: dev-guide/browser-features/flash.md
-            - name: 閲覧ビュー
+            - name: 読み取りビュー
               href: dev-guide/browser-features/reading-view.md
             - name: 検索プロバイダーの検出
               href: dev-guide/browser-features/search-provider-discovery.md
-        - name: Windows 統合の機能
+        - name: Windows 統合機能
           href: dev-guide/windows-integration.md
           items:
             - name: 支払い要求 API
@@ -60,7 +60,7 @@
       items:
         - name: DevTools を開く
           href: devtools-guide-chromium/open.md
-        - name: 新機能
+        - name: 新着情報
           items:
             - name: Microsoft Edge 80
               href: devtools-guide-chromium/whats-new/2019/12/devtools.md
@@ -72,11 +72,11 @@
               href: devtools-guide-chromium/whats-new/2020/05/devtools.md
         - name: IE モード
           href: devtools-guide-chromium/ie-mode.md
-        - name: 3-D 表示
+        - name: 3D View (3D ビュー)
           href: devtools-guide-chromium/3D-view.md
-        - name: 初心者向けの DevTools
+        - name: 初心者向け DevTools
           items:
-            - name: HTML と DOM
+            - name: HTML および DOM
               href: devtools-guide-chromium/beginners/html.md
             - name: CSS
               href: devtools-guide-chromium/beginners/css.md
@@ -84,31 +84,31 @@
           items:
             - name: CSS の表示と変更の概要
               href: devtools-guide-chromium/css/index.md
-            - name: CSS リファレンス
+            - name: CCS リファレンス
               href: devtools-guide-chromium/css/reference.md
-            - name: 使用されていない CSS を検索する
+            - name: 未使用 CSS の検索
               href: devtools-guide-chromium/coverage/index.md
-            - name: アニメーションを調べる
+            - name: アニメーションの検査
               href: devtools-guide-chromium/inspect-styles/animations.md
-            - name: Guides
+            - name: ガイド
               items:
-                - name: DevTools を印刷プレビューモードに強制する
+                - name: DevTools を強制的に印刷プレビュー モードにする
                   href: devtools-guide-chromium/css/print-preview.md
-        - name: コンソール
+        - name: Console
           items:
             - name: 概要
               href: devtools-guide-chromium/console/index.md
-            - name: ログメッセージ
+            - name: ログ メッセージ
               href: devtools-guide-chromium/console/log.md
             - name: JavaScript の実行
               href: devtools-guide-chromium/console/javascript.md
-            - name: Reference
+            - name: リファレンス
               href: devtools-guide-chromium/console/reference.md
             - name: API リファレンス
               href: devtools-guide-chromium/console/api.md
             - name: ユーティリティ API リファレンス
               href: devtools-guide-chromium/console/utilities.md
-            - name: ライブ式
+            - name: ライブ表現
               href: devtools-guide-chromium/console/live-expressions.md
         - name: ネットワーク
           items:
@@ -116,9 +116,9 @@
               href: devtools-guide-chromium/network/index.md
             - name: ネットワーク問題ガイド
               href: devtools-guide-chromium/network/issues.md
-            - name: Reference
+            - name: リファレンス
               href: devtools-guide-chromium/network/reference.md
-        - name: ストレージ
+        - name: 記憶域
           items:
             - name: Cookie
               href: devtools-guide-chromium/storage/cookies.md
@@ -128,7 +128,7 @@
               href: devtools-guide-chromium/storage/indexeddb.md
             - name: セッション ストレージ
               href: devtools-guide-chromium/storage/sessionstorage.md
-            - name: アプリケーションキャッシュ
+            - name: アプリケーション キャッシュ
               href: devtools-guide-chromium/storage/applicationcache.md
             - name: WebSQL
               href: devtools-guide-chromium/storage/websql.md
@@ -136,19 +136,19 @@
               href: devtools-guide-chromium/storage/cache.md
         - name: 問題
           href: devtools-guide-chromium/issues/index.md
-        - name: コマンドメニュー
+        - name: コマンド メニュー
           href: devtools-guide-chromium/command-menu/index.md
-        - name: モバイルシミュレーション
+        - name: モバイル シミュレーション
           items:
             - name: 概要
               href: devtools-guide-chromium/device-mode/index.md
             - name: 他のブラウザーをエミュレートしてテストする
               href: devtools-guide-chromium/device-mode/testing-other-browsers.md
-            - name: Guides
+            - name: ガイド
               items:
-                - name: ユーザーエージェント文字列を上書きする
+                - name: ユーザー エージェント文字列の上書き
                   href: devtools-guide-chromium/device-mode/override-user-agent.md
-                - name: 地理位置情報の上書き
+                - name: 位置情報の上書き
                   href: devtools-guide-chromium/device-mode/geolocation.md
                 - name: デバイスの向きをシミュレートする
                   href: devtools-guide-chromium/device-mode/orientation.md
@@ -162,21 +162,21 @@
               href: devtools-guide-chromium/javascript/index.md
             - name: ブレークポイントを使用してコードを一時停止する
               href: devtools-guide-chromium/javascript/breakpoints.md
-            - name: 使用されていない JavaScript を検索する
+            - name: 未使用 JavaScript の検索
               href: devtools-guide-chromium/coverage/index.md
-            - name: プリプロセスされるコードをソースコードにマップする
+            - name: ソース コードに前処理コードをマッピングする
               href: devtools-guide-chromium/javascript/source-maps.md
-            - name: JavaScript デバッグリファレンス
+            - name: JavaScript デバッグ リファレンス
               href: devtools-guide-chromium/javascript/reference.md
             - name: スニペット
               href: devtools-guide-chromium/javascript/snippets.md
-            - name: ソースパネルの概要
+            - name: ソース パネルの概要
               href: devtools-guide-chromium/sources.md
-            - name: デバッグバックグラウンドサービス
+            - name: デバッグ バックグラウンド サービス
               href: devtools-guide-chromium/javascript/background-services.md
-            - name: Guides
+            - name: ガイド
               items:
-                - name: コンテンツスクリプトをライブラリコードとしてマークする
+                - name: コンテンツ スクリプトをライブラリ コードとしてマークする
                   href: devtools-guide-chromium/javascript/guides/mark-content-scripts-library-code.md
                 - name: JavaScript を無効にする
                   href: devtools-guide-chromium/javascript/disable.md
@@ -190,25 +190,25 @@
               href: devtools-guide-chromium/rendering-tools/index.md
             - name: パフォーマンス分析リファレンス
               href: devtools-guide-chromium/evaluate-performance/reference.md
-            - name: タイムラインイベントリファレンス
+            - name: タイムライン イベント リファレンス
               href: devtools-guide-chromium/evaluate-performance/performance-reference.md
             - name: JavaScript ランタイムを高速化する
               href: devtools-guide-chromium/rendering-tools/js-runtime.md
         - name: アクセシビリティ
           items:
-            - name: Reference
+            - name: リファレンス
               href: devtools-guide-chromium/accessibility/reference.md
-            - name: DevTools を支援技術で操作する
+            - name: 支援技術を使用して DevTools に移動する
               href: devtools-guide-chromium/accessibility/navigation.md
-            - name: Guides
+            - name: ガイド
               items:
-                - name: フォーカスがある要素を追跡する
+                - name: フォーカスされている要素を追跡する
                   href: devtools-guide-chromium/accessibility/focus.md
-        - name: リモートデバッグ
+        - name: リモート デバッグ
           items:
             - name: Android デバイス
               href: devtools-guide-chromium/remote-debugging/index.md
-            - name: ローカルサーバーへのアクセス
+            - name: ローカル サーバーにアクセスする
               href: devtools-guide-chromium/remote-debugging/local-server.md
             - name: Surface Duo エミュレーター
               href: devtools-guide-chromium/remote-debugging/surface-duo-emulator.md
@@ -220,11 +220,11 @@
               href: devtools-guide-chromium/memory-problems/index.md
             - name: メモリの用語を理解する
               href: devtools-guide-chromium/memory-problems/memory-101.md
-            - name: レコードヒープスナップショット
+            - name: ヒープ スナップショットを記録する
               href: devtools-guide-chromium/memory-problems/heap-snapshots.md
-            - name: タイムラインでの割り当てのインストルメンテーションの使用
+            - name: タイムラインでアロケーション インストルメンテーションを使用する
               href: devtools-guide-chromium/memory-problems/allocation-profiler.md
-        - name: Workspaces
+        - name: ワークスペース
           href: devtools-guide-chromium/workspaces/index.md
         - name: プログレッシブ Web アプリ
           href: devtools-guide-chromium/progressive-web-apps.md
@@ -234,7 +234,7 @@
           href: devtools-guide-chromium/shortcuts.md
         - name: リソース
           href: devtools-guide-chromium/resources/index.md
-        - name: Customize
+        - name: カスタマイズ
           items:
             - name: 概要
               href: devtools-guide-chromium/customize/index.md
@@ -242,12 +242,12 @@
               href: devtools-guide-chromium/customize/dark-theme.md
             - name: 配置の変更
               href: devtools-guide-chromium/customize/placement.md
-            - name: ブラウザーの言語を一致させる
+            - name: ブラウザー言語の一致
               href: devtools-guide-chromium/customize/localization.md
     - name: DevTools (EdgeHTML)
       href: devtools-guide.md
       items:
-        - name: 新機能
+        - name: 新着情報
           href: devtools-guide/whats-new.md
           items:
             - name: EdgeHTML 17
@@ -259,7 +259,7 @@
           items:
             - name: スタイル
               href: devtools-guide/elements/styles.md
-            - name: L0
+            - name: 計算済み
               href: devtools-guide/elements/computed.md
             - name: イベント
               href: devtools-guide/elements/events.md
@@ -269,14 +269,14 @@
               href: devtools-guide/elements/fonts.md
             - name: アクセシビリティ
               href: devtools-guide/elements/accessibility.md
-            - name: 変更内容
+            - name: 変更
               href: devtools-guide/elements/changes.md
-        - name: コンソール
+        - name: Console
           href: devtools-guide/console.md
           items:
             - name: コンソール API
               href: devtools-guide/console/console-api.md
-            - name: Command Line/コマンド ライン
+            - name: コマンド ライン
               href: devtools-guide/console/command-line.md
             - name: エラーと状態コード
               href: devtools-guide/console/error-and-status-codes.md
@@ -288,9 +288,9 @@
           href: devtools-guide/performance.md
         - name: メモリ
           href: devtools-guide/memory.md
-        - name: ストレージ
+        - name: 記憶域
           href: devtools-guide/storage.md
-        - name: サービスワーカー
+        - name: サービス ワーカー
           href: devtools-guide/service-workers.md
         - name: エミュレーション
           href: devtools-guide/emulation.md
@@ -306,7 +306,7 @@
               href: devtools-protocol/0.1/clients.md
             - name: HTTP エンドポイント
               href: devtools-protocol/0.1/http.md
-            - name: ドメイン
+            - name: ［ドメイン］
               href: devtools-protocol/0.1/domains/index.md
               items:
                 - name: デバッガー
@@ -324,7 +324,7 @@
               href: devtools-protocol/0.2/clients.md
             - name: HTTP エンドポイント
               href: devtools-protocol/0.2/http.md
-            - name: ドメイン
+            - name: ［ドメイン］
               href: devtools-protocol/0.2/domains/index.md
               items:
                 - name: CSS
@@ -346,24 +346,24 @@
     - name: 拡張機能 (Chromium)
       href: extensions-chromium/index.md
       items:
-        - name: 概要チュートリアル
+        - name: ファースト ステップ チュートリアル
           href: extensions-chromium/getting-started/index.md
           items:
-            - name: 簡単な拡張機能を作成する-パート I
+            - name: 簡単な拡張機能を作成する - パート I
               href: extensions-chromium/getting-started/part1-simple-extension.md
-            - name: 簡単な拡張機能を作成する-パート II
+            - name: 簡単な拡張機能を作成する - パート II
               href: extensions-chromium/getting-started/part2-content-scripts.md
-        - name: 開発者ガイド
+        - name: 開発者向けガイド
           items:
-            - name: Microsoft Edge のポート Chromium 拡張機能
+            - name: Microsoft Edge のポート Chromium の拡張機能
               href: extensions-chromium/developer-guide/port-chrome-extension.md
             - name: 拡張機能を配布するための代替方法
               href: extensions-chromium/developer-guide/alternate-distribution-options.md
-            - name: ネイティブメッセージング
+            - name: ネイティブ メッセージング
               href: extensions-chromium/developer-guide/native-messaging.md
-        - name: Microsoft ストアに発行する
+        - name: Microsoft Store に公開する
           items:
-            - name: 手順ごとの公開プロセス
+            - name: 段階的公開プロセス
               href: extensions-chromium/publish/publish-extension.md
             - name: 開発者アカウントを開く
               href: extensions-chromium/publish/create-dev-account.md
@@ -371,82 +371,82 @@
               href: extensions-chromium/publish/upload-video.md
             - name: 拡張機能の一覧を更新する
               href: extensions-chromium/publish/update.md
-            - name: 送信状態
+            - name: 申請の状態
               href: extensions-chromium/publish/submission-states.md
-            - name: アカウント設定を管理する
+            - name: アカウント設定の管理
               href: extensions-chromium/publish/manage-settings.md
-        - name: Microsoft Edge アドオンポリシー
+        - name: Microsoft Edge のアドオン ポリシー
           items:
-            - name: コンテンツセキュリティポリシー
+            - name: コンテンツ セキュリティ ポリシー
               href: extensions-chromium/store-policies/csp.md
-            - name: エッジ開発者の ADA 補遺
+            - name: Microsoft Edge 開発者向け ADA の補遺
               href: extensions-chromium/store-policies/ada-addendum.md
-            - name: Microsoft Edge アドオンカタログ開発者ポリシー
+            - name: Microsoft Edge アドオン カタログ開発者ポリシー
               href: extensions-chromium/store-policies/developer-policies.md
-        - name: エンタープライズ向けの拡張機能
+        - name: エンタープライズ向け拡張機能
           items:
             - name: 一致パターン
               href: extensions-chromium/enterprise/match-patterns.md
-            - name: ホストと更新
+            - name: ホスティングと更新
               href: extensions-chromium/enterprise/hosting-and-updating.md
     - name: 拡張機能 (EdgeHTML)
       href: extensions/index.md
       items:
-        - name: API のサポート
+        - name: API サポート
           href: extensions/API-support.md
           items:
             - name: 拡張 API のロードマップ
               href: extensions/API-support/extension-API-roadmap.md
-            - name: サポートされる Api
+            - name: サポートされる API
               href: extensions/API-support/supported-APIs.md
-            - name: サポートされているマニフェストキー
+            - name: サポートされるマニフェスト キー
               href: extensions/API-support/supported-manifest-keys.md
               items:
                 - name: JSON マニフェストの例
                   href: extensions/API-support/supported-manifest-keys/json-manifest-example.md
-        - name: エンタープライズ向けの拡張機能
+        - name: エンタープライズ向け拡張機能
           href: extensions/extensions-for-enterprise.md
-        - name: はじめに
+        - name: 開始するには
           href: extensions/getting-started.md
-        - name: Guides
+        - name: ガイド
           href: extensions/guides.md
           items:
             - name: アクセシビリティ
               href: extensions/guides/accessibility.md
             - name: 拡張機能の追加と削除
               href: extensions/guides/adding-and-removing-extensions.md
-            - name: 拡張機能を作成する
+            - name: 拡張機能の作成
               href: extensions/guides/creating-an-extension.md
             - name: 拡張機能のデバッグ
               href: extensions/guides/debugging-extensions.md
-            - name: デザイン
+            - name: 設計
               href: extensions/guides/design.md
-            - name: プロパティー
+            - name: 国際化
               href: extensions/guides/internationalization.md
-            - name: ネイティブメッセージング
+            - name: ネイティブ メッセージング
               href: extensions/guides/native-messaging.md
-            - name: パッケージ
+            - name: パッケージ化
               href: extensions/guides/packaging.md
               items:
-                - name: 拡張パッケージの作成とテスト
+                - name: 拡張機能パッケージの作成とテスト
                   href: extensions/guides/packaging/creating-and-testing-extension-packages.md
-                - name: Windows デベロッパーセンターの拡張機能
+                - name: Windows デベロッパー センターの拡張機能
                   href: extensions/guides/packaging/extensions-in-the-windows-dev-center.md
                 - name: 拡張機能パッケージのローカライズ
                   href: extensions/guides/packaging/localizing-extension-packages.md
-                - name: ManifoldJS を使用して拡張機能をパッケージ化する
+                - name: 拡張機能をパッケージ化するために ManifoldJS を使用する
                   href: extensions/guides/packaging/using-ManifoldJS-to-package-extensions.md
-                - name: Windows アプリ認定キットを実行する
+                - name: Windows アプリ認定キットの実行
                   href: extensions/guides/packaging/running-the-windows-app-certification-kit.md
             - name: Chrome 拡張機能の移植
               href: extensions/guides/porting-Chrome-extensions.md
-        - name: Microsoft ブラウザー拡張ポリシー
+        - name: Microsoft のブラウザー拡張機能に関するポリシー
           href: extensions/microsoft-browser-extension-policy.md
-        - name: ヒント
+        - name: ヒントとテクニック
           href: extensions/tips-and-tricks.md
         - name: トラブルシューティング
           href: extensions/troubleshooting.md
-    - name: 自動
+    - name: ホスティング
       href: hosting/toc.md
     - name: パフォーマンス分析
       href: performance-analysis.md
@@ -455,25 +455,25 @@
     - name: プログレッシブ Web アプリ (Chromium)
       href: progressive-web-apps-chromium/index.md
       items:
-        - name: PWAs を使い始める (Chromium)
+        - name: PWA の概要 (Chromium)
           href: progressive-web-apps-chromium/get-started.md
-        - name: オフラインのシナリオ
+        - name: オフライン シナリオ
           href: progressive-web-apps-chromium/offline.md
-        - name: サービスワーカー
+        - name: サービス ワーカー
           href: progressive-web-apps-chromium/serviceworker.md
-        - name: Web アプリのマニフェスト
+        - name: Web アプリ マニフェスト
           href: progressive-web-apps-chromium/webappmanifests.md
     - name: プログレッシブ Web アプリ (EdgeHTML)
       href: progressive-web-apps-edgehtml/index.md
       items:
-        - name: PWAs を使い始める (EdgeHTML)
+        - name: PWA の概要 (EdgeHTML)
           href: progressive-web-apps-edgehtml/get-started.md
-        - name: Windows 用に PWA を調整する
+        - name: Windows 用に PWA をカスタマイズ
           href: progressive-web-apps-edgehtml/windows-features.md
           items:
-            - name: Xbox 用の PWAs
+            - name: Xbox 用 PWA
               href: progressive-web-apps-edgehtml/xbox-considerations.md
-        - name: Microsoft ストアに PWAs があります。
+        - name: Microsoft Store のPWA
           href: progressive-web-apps-edgehtml/microsoft-store.md
     - name: Puppeteer
       href: puppeteer.md
@@ -482,27 +482,27 @@
     - name: Visual Studio Code
       href: visual-studio-code/index.md
       items:
-        - name: エッジのデバッガー
+        - name: Microsoft Edge 用デバッガー
           href: visual-studio-code/debugger-for-edge.md
-        - name: エッジの要素
+        - name: Microsoft Edge 用要素
           href: visual-studio-code/elements-for-edge.md
-        - name: webhint
+        - name: Webhint
           href: visual-studio-code/webhint.md
     - name: WebDriver (Chromium)
       href: webdriver-chromium.md
     - name: WebDriver (EdgeHTML)
       href: webdriver.md
-    - name: Web Platform (Chromium)
+    - name: Web プラットフォーム (Chromium)
       items:
-        - name: Microsoft Edge に送られるサイト互換性に影響する変更
+        - name: Microsoft Edge 向けのサイトの互換性に影響する変更点
           href: web-platform/site-impacting-changes.md
-        - name: Microsoft Edge での追跡の防止
+        - name: Microsoft Edge でのトラッキング防止
           href: web-platform/tracking-prevention.md
-        - name: Microsoft Edge ユーザーエージェント文字列
+        - name: Microsoft Edge ユーザー エージェント文字列
           href: web-platform/user-agent-string.md
     - name: WebView2 (Chromium) (プレビュー)
       href: webview2/toc.yml
-    - name: WebVR 開発者ガイド
+    - name: WebVR 開発者向けガイド
       href: /microsoft-edge/webvr/index
     - name: Windows ランタイム (WinRT)
       href: windows-runtime/toc.yml
