@@ -1,34 +1,38 @@
 ---
 description: VS コードから Microsoft Edge (Chromium) の要素を使う方法
 title: VS コードからの Microsoft Edge (Chromium) の要素
-author: erdraud
-ms.author: erdraud
-ms.date: 08/08/2019
+author: MSEdgeTeam
+ms.author: msedgedevrel
+ms.date: 05/07/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools、vs コード、visual studio コード、要素
-ms.openlocfilehash: 4875a4665fe1561ecf587a050bbd44e116d9ce5e
-ms.sourcegitcommit: 6860234c25a8be863b7f29a54838e78e120dbb62
+ms.openlocfilehash: ef516d8364c68b550f889bcad0fe762a73ce5f99
+ms.sourcegitcommit: 652009c5cea9e75c22b077f0cbcdc0d96bd337ac
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "10570741"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "10694863"
 ---
-# Microsoft Edge VS コード拡張の要素
+# Microsoft Edge VS コード拡張の要素  
 
-Microsoft Edge VS コード拡張[用の要素](https://marketplace.visualstudio.com/items?itemName=ms-edgedevtools.vscode-edge-devtools)を追加することで、ブラウザーの要素ツールを[Visual Studio コード](https://code.visualstudio.com/)内から使うことができます。 起動またはアタッチのどちらの場合も、要素ツールは Microsoft Edge のインスタンスに接続され、ランタイム HTML 構造を表示し、レイアウトを変更したり、スタイル設定の問題を修正したりすることができます。
+Microsoft Edge VS コード拡張[の要素][VisualstudioMarketplaceElementsMicrosoftEdgeChromium]を使って、 [Visual Studio コード][VisualstudioCode]内から Microsoft edge ブラウザーの要素ツールを使用します。  起動またはアタッチのどちらでも、要素ツールは Microsoft Edge のインスタンスに接続され、ランタイム HTML 構造が表示され、レイアウトの変更やスタイルの問題の修正を行うことができます。  
 
-![勤務先の Edge VS コード拡張の要素の GIF](./media/elements-for-edge.gif)
+:::image type="complex" source="./media/elements-for-edge.gif" alt-text="エッジと作業でのコード拡張の要素":::
+   エッジと作業でのコード拡張の要素  
+:::image-end:::
 
-## 要素の拡張機能から Microsoft Edge を起動する 
+<!--![Elements for Edge VS Code extension at work][ImageGifElementsEdge]  -->  
 
-**アクティビティバー**の要素に移動します。 [Microsoft Edge: ターゲットの要素] と表示されている場所の横に、アプリのブラウザーを開くためのプラス記号が付いています。 [*バージョン情報:* ] オプションを選んだ場合は、ブラウザーで web アプリに移動して、VS コードの要素パネルに表示されるようにする必要があります。
+## 要素の拡張機能から Microsoft Edge を起動する  
 
-## デバッグビューから Microsoft Edge を起動する
+**アクティビティバー**の要素に移動します。  [ **Microsoft Edge: ターゲット] の要素**が表示される場所の横に、アプリのブラウザーを開くプラス記号が付いています。  [**バージョン情報:** ] オプションを選んだ場合は、ブラウザーで web アプリに移動して、VS コードの要素パネルに表示されるようにする必要があります。  
 
-Visual Studio コードでデバッグビューを使うことに慣れている場合は、そのツールから要素にアクセスできます。 ( `Ctrl`  +  `Shift`  +  `D` Windows または Mac 上の) [デバッグ] ビューに移動 `Command`  +  `Shift`  +  `D` します。 
+## デバッグビューから Microsoft Edge を起動する  
 
-VS コードにまだ構成がない場合 `F5` は、Windows または Mac を押すか、緑色の**再生**ボタンをクリックします。 ドロップダウンで [Edge] を選びます。 これで、次のように構成された**launch**ファイルが表示されます。
+Visual Studio コードでデバッグビューを使うことに慣れている場合は、そのツールの要素にアクセスします。  ( `Ctrl` + `Shift` + `D` Windows または macOS 上の) デバッグビューに移動 `Command` + `Shift` + `D` します。  
+
+VS コードにまだ構成がない場合 `F5` は、Windows または macOS を押すか、緑色の**再生**ボタンを選択します。 ドロップダウンで [**エッジ**] を選択します。 `launch.json`次の構成のファイルが表示されます。  
 
 ```json
 {
@@ -44,16 +48,17 @@ VS コードにまだ構成がない場合 `F5` は、Windows または Mac を�
         }
     ]
 }
-```
+```  
 
-これで正しい構成が読み込まれたので、 `F5` Windows または Mac を押すか、緑色の**再生**ボタンをクリックします。 Microsoft Edge ブラウザーで使い慣れた要素ツールが VS コードで起動し、ブラウザーの screencast にアクセスして、ページのコンポーネントを調べることができるようになりました。
+これで正しい構成が読み込まれたので、 `F5` Windows または macOS を押すか、緑色の**再生**ボタンを選択します。 Microsoft Edge ブラウザーでは、ユーザーにとって使い慣れた要素ツールが VS コードで起動し、ブラウザーの screencast にアクセスして、ページのコンポーネントを調べることができます。  
 
-## Microsoft Edge へのアタッチ
-Microsoft Edge (Chromium) のインスタンスに VS コードをアタッチする場合は、teminal から次のコマンドを実行して、ブラウザーを起動する必要があります。
+## Microsoft Edge へのアタッチ  
 
-`start msedge --remote-debugging-port=9222`
+Microsoft Edge \ (Chromium \) のインスタンスに VS コードをアタッチするには、ターミナルから次のコマンドを実行して、ブラウザーを起動する必要があります。  
 
-アプリが起動したら、次の構成を起動の**json**ファイルに追加します。
+`start msedge --remote-debugging-port=9222`  
+
+アプリが起動したら、次の構成を起動の**json**ファイルに追加します。  
 
 ```json
 {
@@ -64,11 +69,29 @@ Microsoft Edge (Chromium) のインスタンスに VS コードをアタッチ�
     "webRoot": "${workspaceFolder}/out",
     "port": 9222
 }
-```
+```  
 
-[Microsoft Edge にアタッチして、デバッガー] ドロップダウンメニューから [要素ツール] を開きます。 次に、 `F5` Windows または Mac を押すか、緑色の**再生**ボタンをクリックします。 VS コードによって要素ツールが起動し、ブラウザーの screencast にアクセスしたり、DOM を検査したり、ページ上のコンポーネントのスタイルを確認したりすることができます。
+[ **Microsoft Edge に添付**] を選択し、[デバッガー] ドロップダウンメニューから [要素] ツールを開きます。  次に、 `F5` Windows または macOS を押すか、緑色の「**再生**」ボタンを選択します。  VS コード要素ツールを起動して、ブラウザーの screencast にアクセスしたり、DOM を検査したり、ページ上のコンポーネントのスタイルを確認したりします。  
 
-## フィードバック
-この拡張機能の[GitHub リポジトリ](https://github.com/microsoft/vscode-edge-devtools)に[関する問題を提出](https://github.com/microsoft/vscode-edge-devtools/issues/new)して、フィードバックをお送りください。 
+## Microsoft Edge VS コード拡張チームの要素に連絡する  
 
-この延長を改善したい場合は、ご協力をお寄せください。 [GitHub リポジトリ](https://github.com/microsoft/vscode-edge-devtools)での作業を開始するために必要なすべての情報を確認できます。
+拡張機能の[GitHub リポジトリ][GithubMicrosoftVscodeEdgeDevtools]に[関する問題を整理][GithubMicrosoftVscodeEdgeDevtoolsNewIssue]して、フィードバックを送信します。  
+
+Microsoft Edge VS のコード拡張の要素を改善したい場合は、ご協力をお待ちください。  拡張機能の[GitHub リポジトリ][GithubMicrosoftVscodeEdgeDevtools]を使い始めるのに必要なものをすべて見つけます。  
+
+<!-- image links -->  
+
+<!--[ImageGifElementsEdge]: ./media/elements-for-edge.gif "Elements for Edge VS Code extension in action"  -->  
+[ImagePngElementsEdge]:/media/elements-for-edge.png "Edge VS Code extension の要素  
+
+<!--links -->  
+
+[VscodeElementsEdge]: ./elements-for-edge.md "Microsoft Edge VS コード拡張の要素 |Microsoft ドキュメント"  
+
+[VisualstudioCode]: https://code.visualstudio.com "Visual Studio コード"  
+[VisualStudioCodeDocs]: https://code.visualstudio.com/Docs "ドキュメント |Visual Studio コード"   
+
+[GithubMicrosoftVscodeEdgeDevtools]: https://github.com/Microsoft/vscode-edge-devtools "microsoft/vscode-edge-devtools |GitHub"  
+[GithubMicrosoftVscodeEdgeDevtoolsNewIssue]: https://github.com/Microsoft/vscode-edge-devtools/issues/new "新しい問題-microsoft/vscode-edge tools |GitHub"
+
+[VisualstudioMarketplaceElementsMicrosoftEdgeChromium]: https://marketplace.visualstudio.com/items?itemName=ms-edgedevtools.vscode-edge-devtools "Microsoft Edge の要素 (Chromium) |Visual Studio Marketplace"  
