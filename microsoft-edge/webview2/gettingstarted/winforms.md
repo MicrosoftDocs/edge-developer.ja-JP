@@ -3,17 +3,17 @@ description: Microsoft Edge WebView 2 コントロールを使用して、Window
 title: Microsoft Edge WebView 2 Windows フォームアプリ
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 05/12/2020
+ms.date: 06/04/2020
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: WebView2、WebView2、WebView、webview、winforms アプリ、winforms、edge、CoreWebView2、browser control、edge html、はじめに、作業の開始、.NET、windows フォーム
-ms.openlocfilehash: 6c53b66dd9f849384f24c2ae879f28231a25f481
-ms.sourcegitcommit: 799fe63d961a37ada455bb36ef3ef0d8076e70bb
+ms.openlocfilehash: 1e23c96cee1e577560c2d26b96a53454533867dd
+ms.sourcegitcommit: c1b5fdd48d39d874a76c9b8f68309eb1b507fd0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "10685688"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "10695895"
 ---
 # Windows Forms アプリでの WebView2 の概要 (プレビュー)  
 
@@ -27,7 +27,7 @@ ms.locfileid: "10685688"
 * [Visual Studio](https://visualstudio.microsoft.com/) 2017 以降。
 
 > [!NOTE]
-> **Windows Forms .Net Core 3.0 または .net 5**で開発している場合は、 [Visual Studio (Preview)](https://visualstudio.microsoft.com/vs/preview/)をダウンロードします。
+> 現時点では、WebView2 は .NET Core 3.0 の[デザイナー (preview)](https://visualstudio.microsoft.com/vs/preview/)をサポートしていません。
 
 ## 手順 1-1 つのウィンドウアプリケーションを作成する
 
@@ -35,11 +35,11 @@ ms.locfileid: "10685688"
 
 1. **Visual Studio を開きます。**
 
-2. **Windows forms .Net Framework アプリ**または**Windows Forms .net Core アプリ**を選択し、[**次へ**] を選択します。
+2. [ **Windows Forms .Net Framework アプリ**] を選び、[**次へ**] を選びます。
 
     ![newproject](./media/winforms-newproject.png)
 
-3. **プロジェクト名**と**場所**の値を入力します。  **.Net Framework 4.6.2**以降、または **.net Core 3.0**以降を選択します。  
+3. **プロジェクト名**と**場所**の値を入力します。  **.Net Framework 4.6.2**以降を選択します。  
 
     ![project の startproject](./media/winforms-startproj.png)
 
