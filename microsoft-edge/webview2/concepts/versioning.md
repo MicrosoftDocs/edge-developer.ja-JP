@@ -3,17 +3,17 @@ description: Microsoft Edge WebView2 で使用されるバージョン管理モ�
 title: Microsoft Edge WebView2 のバージョン管理
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 05/19/2020
+ms.date: 06/08/2020
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、wpf アプリ、wpf、edge、ICoreWebView2、ICoreWebView2Host、browser control、edge html
-ms.openlocfilehash: 78184d3c670aa39e0a7f4a31e1216b5bc730c16e
-ms.sourcegitcommit: 5bdffe91a6594f77eeffa4e864fda90a02784771
+ms.openlocfilehash: cc924a146057a3c8c578ccea187e1dd63dedcbe6
+ms.sourcegitcommit: 8dca1c1367853e45a0a975bc89b1818adb117bd4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "10659672"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "10697218"
 ---
 # ブラウザーのバージョンと WebView2 について  
 
@@ -26,7 +26,7 @@ WebView2 は Microsoft Edge によって異なります。  各 WebView2 SDK で
 
 ## 試験的な API  
 
-WebView2 はプレビューですが、SDK の Api は GA 時に同じであると想定されています。  SDK には[実験的な api][Webview2ReferenceWin3209488Experimental]が含まれています。  試用版 Api を評価し、 [WebView フィードバックリポジトリ][GithubMicrosoftedgeWebviewfeedback]を使ってフィードバックを送信してください。  
+WebView2 はプレビューですが、SDK の Api は GA 時に同じであると想定されています。  SDK には[実験的な api][Webview2ReferenceWin3209538Experimental]が含まれています。  試用版 Api を評価し、 [WebView フィードバックリポジトリ][GithubMicrosoftedgeWebviewfeedback]を使ってフィードバックを送信してください。  
 
 ### ロードマップ  
 
@@ -36,7 +36,7 @@ WebView2 が安定した一般的な状態に到達して、1.0.0 SDK を解放�
 
 [Webview2Distibution]: ./distribution.md "WebView2 を使用したアプリケーションの配布 |Microsoft ドキュメント"  
 [Webview2IndexEdgeRuntime]: ./distribution.md#microsoft-edge-webview2-runtime "Microsoft Edge WebView2 Runtime-WebView2 を使用したアプリケーションの配布 |Microsoft ドキュメント"  
-[Webview2ReferenceWin3209488Experimental]: ../reference/win32/0-9-488-reference-webview2.md#experimental "実験的な参照 (WebView2) |Microsoft ドキュメント"  
+[Webview2ReferenceWin3209538Experimental]: ../reference/win32/0-9-538-reference-webview2.md#experimental "実験的な参照 (WebView2) |Microsoft ドキュメント"  
 [Webview2Releasenotes]: ../releasenotes.md "WebView2 SDK のリリースノート |Microsoft ドキュメント"  
 
 [DeployedgeChannels]: /deployedge/microsoft-edge-channels "Microsoft Edge チャネルの概要 |Microsoft ドキュメント"  

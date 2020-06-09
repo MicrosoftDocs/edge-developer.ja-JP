@@ -8,20 +8,23 @@ ms.topic: reference
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Controller、browser control、edge html
-ms.openlocfilehash: d7e38f25a3e58d21744c8631319f553f2b0962fb
-ms.sourcegitcommit: 07cda56425e5fdf90eeb3972e17041261bf720cd
+ms.openlocfilehash: 8c0511dc0e7327ebc2f6ee3bac34f62716dff472
+ms.sourcegitcommit: 8dca1c1367853e45a0a975bc89b1818adb117bd4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "10654518"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "10697883"
 ---
-# Reference (WebView2)  
+# 0.9.515-参照 (WebView2)  
+
+> [!NOTE]
+> この参照は、SDK バージョン0.9.515 後のリリースで変更される可能性があります。 最新 API リファレンスについては、 [WEBVIEW2 api リファレンス](../../webview2-api-reference.md)を参照してください。
 
 Microsoft Edge WebView2 コントロールを使用すると、 [Microsoft edge \ (Chromium \)](https://www.microsoftedgeinsider.com)を使ってアプリケーションの web コンテンツをレンダリングエンジンとしてホストすることができます。  詳細については、「 [Microsoft Edge WebView2 の概要](../../index.md)」および「 [WebView2 の使用を開始](../../gettingstarted/win32.md)する」を参照してください。  [ICoreWebView2](0-9-488/ICoreWebView2.md)は、API の詳細を理解するのに最適な場所です。  
 
-## 関数  
+## グローバル  
 
-*   [関数](0-9-430/webview2-idl.md)  
+*   [グローバル](0-9-488/webview2-idl.md)  
 
 ## インターフェイス  
 *   [ICoreWebView2](0-9-488/icorewebview2.md)
@@ -82,7 +85,7 @@ Microsoft Edge WebView2 コントロールを使用すると、 [Microsoft edge 
 *   [ICoreWebView2WindowCloseRequestedEventHandler](0-9-488/icorewebview2windowcloserequestedeventhandler.md)
 *   [ICoreWebView2ZoomFactorChangedEventHandler](0-9-488/icorewebview2zoomfactorchangedeventhandler.md)
 
-### 的
+### 試験的な
 
 *   [ICoreWebView2ExperimentalCompositionController](0-9-488/icorewebview2experimentalcompositioncontroller.md)
 *   [ICoreWebView2ExperimentalCreateCoreWebView2CompositionControllerCompletedHandler](0-9-488/icorewebview2experimentalcreatecorewebview2compositioncontrollercompletedhandler.md)

@@ -3,27 +3,52 @@ description: Microsoft Edge WebView 2 コントロールを使用して Win32 �
 title: Win32、WPF、および WinForms の Microsoft Edge WebView2 のリリースノート
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 05/19/2020
+ms.date: 06/08/2020
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Controller、browser control、edge html
-ms.openlocfilehash: 255f8d56ae1a4b77a87697b9cd3814380dd06994
-ms.sourcegitcommit: 5bdffe91a6594f77eeffa4e864fda90a02784771
+ms.openlocfilehash: 4a1eb48270e062838fee9223d0a6e0e59505278e
+ms.sourcegitcommit: 8dca1c1367853e45a0a975bc89b1818adb117bd4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "10659665"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "10697323"
 ---
 # WebView2 SDK のリリースノート  
 
-[WEBVIEW2 SDK][WebView2NuGetGallery]のリリースノート。  
+WebView2 チームは、 [WEBVIEW2 SDK][WebView2NuGetGallery]の更新プログラムを6週間のリズムで配信します。 このページでは、製品のお知らせ、API サーフェスの追加と変更、および変更の反映について、最新の状態に維持します。
+
+> [!IMPORTANT]
+> NuGet パッケージの更新後に、アプリを再コンパイルします。
+
+## 0.9.538
+
+[NuGet パッケージ][WebView2NuGetGallery0.9.538]|Microsoft Edge の最小バージョン85.0.538.0。
+
+#### 全般
+
+* SDK バージョン[0.8.149](#08149)のサポートを削除しています。 最新バージョンの WebView2 では、最新の状態を維持することをお勧めします。
+* Microsoft Edge ブラウザーのプロファイルパスが変更されたときにアカウントが更新されたグループポリシー ([#179](https://github.com/MicrosoftEdge/WebViewFeedback/issues/179))
+
+#### Win32 C/c + +
+
+* ICoreWebView2ExperimentalNewWindowRequestedEventArgs () が呼び出され、 [ICoreWebView2ExperimentalWindowFeatures](reference/win32/0-9-538/icorewebview2experimentalwindowfeatures.md)に関連付けられたときに発生する[: get_WindowFeatures:](reference/win32/0-9-538/icorewebview2experimentalnewwindowrequestedeventargs.md#get_windowfeatures)が追加されました。 ([#70](https://github.com/MicrosoftEdge/WebViewFeedback/issues/70))
+* **変更の中断:** [CreateCoreWebView2EnvironmentWithDetails](reference/win32/0-9-488/webview2-idl.md#createcorewebview2environmentwithdetails)は廃止され、 [CreateCoreWebView2EnvironmentWithOptions](reference/win32/0-9-538/webview2-idl.md#createcorewebview2environmentwithoptions)に置き換えられました
+* **変更の中断:** API が Windows API の名前付け規則に合わせて調整されるようにするために、次の名前を更新しました。
+  * [AreRemoteObjectsAllowed](reference/win32/0-9-488/icorewebview2settings.md#get_areremoteobjectsallowed)は、現在は[arehostオブジェクトを許可](reference/win32/0-9-538/icorewebview2settings.md#get_arehostobjectsallowed)しています
+* [Addhostobjecttoscript](reference/win32/0-9-538/icorewebview2.md#addhostobjecttoscript)が更新され、元のホストオブジェクトシリアライザーのマーカーがプロキシオブジェクトに設定され、JavaScript コールバックのパラメーターとしてシリアル化された後で、ホストオブジェクトとしてシリアル化されます。 ([#148](https://github.com/MicrosoftEdge/WebViewFeedback/issues/148))
+
+#### .NET
+
+* SDK の包括的なガイドである、WinForms と WPF WebView2API のサンプルをリリースしました。 [WebView2 サンプルのリポジトリ](https://github.com/MicrosoftEdge/WebView2Samples)を確認します。
+* ビジュアルホスト機能と window 機能の[実験的な api](./concepts/versioning.md#experimental-apis)のサポートが追加されました
+* **変更の中断:** 次の保留は、IDisposable: [script のオープン](./reference/dotnet/0-9-538/microsoft-web-webview2-core-corewebview2.md#scriptdialogopening)、 [newwindowrequested](./reference/dotnet/0-9-538/microsoft-web-webview2-core-corewebview2.md#newwindowrequested)、 [WebResourceRequested](./reference/dotnet/0-9-538/microsoft-web-webview2-core-corewebview2.md#webresourcerequested)、および[permissionrequested](./reference/dotnet/0-9-538/microsoft-web-webview2-core-corewebview2.md#permissionrequested)実装しています。
+* [GetCompareBrowserVersions の文字列](reference/dotnet/0-9-538/microsoft-web-webview2-core-corewebview2environment.md#getavailablebrowserversionstring)と[CompareBrowserVersions](reference/dotnet/0-9-538/microsoft-web-webview2-core-corewebview2environment.md#comparebrowserversions)を[CoreWebView2Environment](reference/dotnet/0-9-538/microsoft-web-webview2-core-corewebview2environment.md)の静的として追加しました。
 
 ## 0.9.515-プレリリース
 
 [NuGet パッケージ][WebView2NuGetGallery0.9.515-prerelease]|Microsoft Edge の最小バージョン84.0.515.0。
-
-**NuGet パッケージの更新後に、アプリを再コンパイルします。**
 
 * **お知らせ:** WebView2 では、.NET Framework 4.6.2 以降および .NET Core 3.0 以降の Windows フォームと WPF が**プレリリースパッケージ**でサポートされるようになりました
 * Wpf の概要[ガイド](./gettingstarted/wpf.md)をチェックアウトして、wpf アプリケーションの構築を開始する (wpf 固有の api 向けの[wpf リファレンス](./reference/wpf/0-9-515-reference-webview2.md))
@@ -36,8 +61,6 @@ ms.locfileid: "10659665"
 ## 0.9.488
 
 [NuGet パッケージ][WebView2NuGetGallery0.9.488]|Microsoft Edge の最小バージョン84.0.488.0。
-
-**NuGet パッケージの更新後に、アプリを再コンパイルします。**
 
 * **お知らせ:** 今後の Microsoft Edge バージョン83では、evergreen WebView は安定したブラウザーチャネルをターゲットとしていません。 代わりに、現在開発中のインストーラーを使用してチェーンインストールできる、別の一連のバイナリ (ブランドの[Microsoft Edge WebView2 Runtime](./concepts/distribution.md#microsoft-edge-webview2-runtime)) をターゲットとします。 詳細については[、「アプリの配布](./concepts/distribution.md)」をご覧ください。
 * **お知らせ:** 次に、2つのパッケージをリリースします。プレリリースパッケージ (試用版) と、安定性の高い Api を備えた安定したリリースパッケージ (使用可能)。 [Microsoft Edge WEBVIEW2 SDK](./concepts/versioning.md)をチェックアウトして、相違点について確認してください。
@@ -69,8 +92,6 @@ ms.locfileid: "10659665"
 
 [NuGet パッケージ][WebView2NuGetGallery0.9.430]|Microsoft Edge の最小バージョン82.0.430.0。
 
-**NuGet パッケージの更新後に、アプリを再コンパイルします。**
-
 この SDK は、受け取ったいくつかの機能要求が組み込まれた、Win32 の公式バージョンのベータ版です。 変更によってリリースの数を制限しようとしましたが、一般的な利用可能状況については、ベータ版を使用して、いくつかの重要な変更を1つの方法でまとめています。
 
 * **変更の中断:** 今回のリリースでは、API が Windows API の名前付け規則に合わせて調整されるように、プレフィックス*IWebView2WebView*を*ICoreWebView2*に変更します。 さらに、SDK を UI フレームワークによって使用できるようにするために、ICoreWebView2 を[ICoreWebView2](reference/win32/0-9-430/icorewebview2.md)と[ICoreWebView2Host](reference/win32/0-9-430/icorewebview2host.md)に分割しました。 ICoreWebView2Host は、ウィンドウ化やコンポジションに関連する、サイズ変更、表示、非表示、焦点などの機能をサポートしています。 ICoreWebView2 は、その他のすべての WebView2 機能をサポートしています。 これらの変更の反映の詳細については、 [WebView2APISample](https://github.com/MicrosoftEdge/WebView2Samples)プロジェクトで自分の[プル要求](https://github.com/MicrosoftEdge/WebView2Samples/pull/17)をチェックアウトしてください。
@@ -95,8 +116,6 @@ ms.locfileid: "10659665"
 
 [NuGet パッケージ][WebView2NuGetGallery0.8.355]|Microsoft Edge の最小バージョン80.0.355.0。
 
-**NuGet パッケージの更新後に、アプリを再コンパイルします。**
-
 * WebView2API のリリースのサンプル-SDK の包括的なガイドです。 [ここで](https://github.com/MicrosoftEdge/WebView2Samples/tree/master/WebView2APISample)確認してください。
 * 英語以外のすべての言語で IME のサポートが追加されました。 ([#30](https://github.com/MicrosoftEdge/WebViewFeedback/issues/30))
 * バグレポートに対応して WebResourceRequested イベントの API サーフェスを更新しました。  作成時にフィルターとイベントを同時に指定することは推奨されなくなりました。  Web リソース要求イベントを作成するには、 [add_WebResourceRequested](reference/win32/0-8-190/iwebview2webview5.md#add_webresourcerequested)を使ってイベントと[AddWebResourceRequestedFilter](reference/win32/0-8-190/iwebview2webview5.md#addwebresourcerequestedfilter)を追加し、フィルターを追加します。  [RemoveWebResourceRequestedFilter](reference/win32/0-8-190/iwebview2webview5.md#removewebresourcerequestedfilter)がフィルターを削除します。  ([#36](https://github.com/MicrosoftEdge/WebViewFeedback/issues/36))([#74](https://github.com/MicrosoftEdge/WebViewFeedback/issues/74))  
@@ -105,8 +124,6 @@ ms.locfileid: "10659665"
 ## 0.8.314
 
 [NuGet パッケージ][WebView2NuGetGallery0.8.314]|Microsoft Edge の最小バージョン80.0.314.0。
-
-**NuGet パッケージの更新後に、アプリを再コンパイルします。**
 
 * Windows 7、Windows 8/8.1 のサポートが追加されました。
 * Visual Studio と Visual Studio のコードデバッグサポートを WebView2 に追加しました。 これで、IDE から直接 WebView2 のスクリプトをデバッグできます。 詳細について[は、ここ](/microsoft-edge/hosting/webview2#debugging-webview2)をクリックしてください。  
@@ -119,8 +136,6 @@ ms.locfileid: "10659665"
 ## 0.8.270  
 
 [NuGet パッケージ][WebView2NuGetGallery0.8.270]|Microsoft Edge の最小バージョン78.0.270.0。  
-
-**NuGet パッケージの更新後に、アプリを再コンパイルします。**
 
 * `DocumentTitleChanged`ドキュメントタイトルの変更 \ ([\ #27][MicrosoftEdgeWebViewFeedbackIssue27]\) を示すイベントが追加されました。  
 * `GetWebView2BrowserVersionInfo`API \ ([\ #18][MicrosoftEdgeWebViewFeedbackIssue18]\) を追加しました。  
@@ -135,8 +150,6 @@ ms.locfileid: "10659665"
 
 [NuGet パッケージ][WebView2NuGetGallery0.8.230]|Microsoft Edge の最小バージョン77.0.230.0。  
 
-**NuGet パッケージの更新後に、アプリを再コンパイルします。**
-
 * `Stop`すべてのナビゲーションおよび保留中のリソースフェッチを停止するための API を追加しました \ ([\ #28][MicrosoftEdgeWebViewFeedbackIssue28]\)。  
 * Nuget パッケージ \ ([\ #22][MicrosoftEdgeWebViewFeedbackIssue22]\) に .tlb ファイルが追加されました。  
 * NuGet パッケージ \ ([\ #32][MicrosoftEdgeWebViewFeedbackIssue32]\) のインストーラリストに .net プロジェクトが追加されました。  
@@ -144,8 +157,6 @@ ms.locfileid: "10659665"
 ## 0.8.190  
 
 [NuGet パッケージ][WebView2NuGetGallery0.8.190]|Microsoft Edge の最小バージョン77.0.190.0。  
-
-**NuGet パッケージの更新後に、アプリを再コンパイルします。**
 
 * `get_AreDevToolsEnabled` / `put_AreDevToolsEnabled` ユーザーが devtools \ ([\ #16][MicrosoftEdgeWebViewFeedbackIssue16]\) を開くことができる場合は、コントロールに追加されます。  
 * `get_IsStatusBarEnabled` / `put_IsStatusBarEnabled` ステータスバーが表示されている場合は、コントロールに追加されます (\[#19][MicrosoftEdgeWebViewFeedbackIssue19]\)。  
@@ -187,5 +198,6 @@ ms.locfileid: "10659665"
 [WebView2NuGetGallery0.9.430]: https://www.nuget.org/packages/Microsoft.Web.WebView2/0.9.430 "NuGet ギャラリー |WebView2 v 0.9.430"
 [WebView2NuGetGallery0.9.488]: https://www.nuget.org/packages/Microsoft.Web.WebView2/0.9.488 "NuGet ギャラリー |WebView2 v 0.9.488"
 [WebView2NuGetGallery0.9.515-prerelease]: https://www.nuget.org/packages/Microsoft.Web.WebView2/0.9.515-prerelease "NuGet ギャラリー |WebView2 v 0.9.515 プレリリース"
+[WebView2NuGetGallery0.9.538]: https://www.nuget.org/packages/Microsoft.Web.WebView2/0.9.538 "NuGet ギャラリー |WebView2 v 0.9.538"
 
 [WebViewsGlobalsCreateWebView2EnvironmentWithDetails]: reference/win32/0-8-190/webview2-idl.md#createwebview2environmentwithdetails "WebView Globals-CreateWebView2EnvironmentWithDetails 関数"  

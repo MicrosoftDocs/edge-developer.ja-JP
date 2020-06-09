@@ -3,19 +3,22 @@ description: Microsoft Edge WebView2 コントロールを使用して Win32 ア
 title: Win32 アプリ用 Microsoft Edge WebView2
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 05/12/2020
+ms.date: 06/05/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Controller、browser control、edge html
-ms.openlocfilehash: 519ef71db87d49aaf5a8a80970ff0cda61dfebbf
-ms.sourcegitcommit: 07cda56425e5fdf90eeb3972e17041261bf720cd
+ms.openlocfilehash: f0ac0bf7ae3b237bca45b22ed97ec16513666922
+ms.sourcegitcommit: 8dca1c1367853e45a0a975bc89b1818adb117bd4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "10654257"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "10697554"
 ---
 # WebView2 クラス (CoreWebView2Settings クラス) 
+
+> [!NOTE]
+> この参照は、SDK バージョン0.9.515 後のリリースで変更される可能性があります。 最新 API リファレンスについては、 [WEBVIEW2 api リファレンス](../../../webview2-api-reference.md)を参照してください。
 
 名前空間: WebView2 () \
 "WebView2" アセンブリを実行します。
@@ -29,7 +32,7 @@ WebView 機能を有効、無効、または変更するプロパティを定義
 [AreDefaultContextMenusEnabled](#aredefaultcontextmenusenabled) | AreDefaultContextMenusEnabled プロパティは、既定のコンテキストメニューが webview でユーザーに表示されないようにするために使われます。
 [Aredefaultscriptて Enabled](#aredefaultscriptdialogsenabled) | Aredefaultscriptた Enabled は、新しい HTML ドキュメントを読み込むときに使用されます。
 [Aredev| Enabled](#aredevtoolsenabled) | Aredevtools Enabled は、ユーザーがコンテキストメニューまたはキーボードショートカットを使用して DevTools ウィンドウを開くことができるかどうかを制御します。
-[AreRemoteObjectsAllowed](#areremoteobjectsallowed) | AreRemoteObjectsAllowed プロパティは、リモートオブジェクトが webview のページからアクセスできるかどうかを制御するために使用されます。
+[Arehostオブジェクトが許可されています](#arehostobjectsallowed) | Arehostobjects Allowed プロパティは、webview 内のページからホストオブジェクトにアクセスできるかどうかを制御するために使用されます。
 [IsBuiltInErrorPageEnabled](#isbuiltinerrorpageenabled) | IsBuiltInErrorPageEnabled プロパティを使って、ナビゲーションエラーとレンダープロセスエラーについて、組み込みのエラーページを無効にします。
 [IsScriptEnabled](#isscriptenabled) | WebView で今後のすべてのナビゲーションで JavaScript の実行が有効になっているかどうかを制御します。
 [IsStatusBarEnabled](#isstatusbarenabled) | IsStatusBarEnabled は、ステータスバーを表示するかどうかを制御します。
@@ -64,11 +67,11 @@ Aredevtools Enabled は、ユーザーがコンテキストメニューまたは
 
 既定では true です。
 
-#### AreRemoteObjectsAllowed 
+#### Arehostオブジェクトが許可されています 
 
-AreRemoteObjectsAllowed プロパティは、リモートオブジェクトが webview のページからアクセスできるかどうかを制御するために使用されます。
+Arehostobjects Allowed プロパティは、webview 内のページからホストオブジェクトにアクセスできるかどうかを制御するために使用されます。
 
-> public bool [AreRemoteObjectsAllowed](#areremoteobjectsallowed)
+> public bool は[hostオブジェクトを許可](#arehostobjectsallowed)
 
 既定値は TRUE です。
 

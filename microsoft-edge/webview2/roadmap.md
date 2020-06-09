@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Host、browser control、edge html
-ms.openlocfilehash: bc55c5a731ab6cba8f9be15208029aad0ad5357a
-ms.sourcegitcommit: a75e062b71831ea850c85287a8d7d7ce3b55ec84
+ms.openlocfilehash: dcc9a92ee4db4c41a024aee565dfafe22b185e2a
+ms.sourcegitcommit: 8dca1c1367853e45a0a975bc89b1818adb117bd4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "10659745"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "10698177"
 ---
 # Microsoft Edge WebView2 のロードマップ
 

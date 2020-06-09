@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、CoreWebView2、ICoreWebView2Host、browser control、edge html、Windows フォーム、WinForms、WPF、.NET
-ms.openlocfilehash: f17de3bcb7459375617f00aec0cd2897f0859c1d
-ms.sourcegitcommit: c579181af051e2855b785263faa4001c672a929b
+ms.openlocfilehash: 1b140d9f644c7a864cac4966bb4cfdd400feeb0d
+ms.sourcegitcommit: 8dca1c1367853e45a0a975bc89b1818adb117bd4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "10673855"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "10697743"
 ---
 # Microsoft Edge WebView2 の概要 (プレビュー)  
 
@@ -83,9 +83,9 @@ Microsoft Edge WebView2 コントロールを使うと、ネイティブアプ�
       **段階的導入**  
       アプリケーションに web コンポーネントを追加します。  
    :::column-end:::
-:::row-end:::  
+:::row-end:::
 
-## 作業の開始  
+## 開始するには  
 
 WebView2 コントロールを使用してアプリケーションをビルドしてテストするには、 [Microsoft Edge (Chromium)](https://www.microsoftedgeinsider.com/download)と[WebView2 SDK](https://aka.ms/webviewnuget)の両方をインストールする必要があります。  開始するには、次のいずれかのオプションを選択します。  
 

@@ -3,19 +3,22 @@ description: Microsoft Edge WebView 2 コントロールを使用して Win32 �
 title: Win32 アプリの Microsoft Edge WebView 2
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 05/11/2020
+ms.date: 06/08/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Controller、browser control、edge html
-ms.openlocfilehash: 0dc99911323cb4fe90231ae0b90e2e93fc678a16
-ms.sourcegitcommit: 07cda56425e5fdf90eeb3972e17041261bf720cd
+ms.openlocfilehash: b6131245a550da54545478c9c19e0e9e45d7f7d3
+ms.sourcegitcommit: 8dca1c1367853e45a0a975bc89b1818adb117bd4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "10654309"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "10697246"
 ---
-# Reference (WebView2)  
+# 0-9-515-参照 (WebView2)  
+
+> [!NOTE]
+> この参照は、SDK バージョン0.9.515 後のリリースで変更される可能性があります。 最新 API リファレンスについては、 [WEBVIEW2 api リファレンス](../../webview2-api-reference.md)を参照してください。
 
 Microsoft Edge WebView2 コントロールを使用すると、 [Microsoft edge \ (Chromium \)](https://www.microsoftedgeinsider.com)を使ってアプリケーションの web コンテンツをレンダリングエンジンとしてホストすることができます。  詳細については、「 [Microsoft Edge WebView2 の概要](../../index.md)」および「 [WebView2 の使用を開始](../../gettingstarted/win32.md)する」を参照してください。  [WebView2](0-9-515/microsoft-web-webview2-core-corewebview2.md)は、API の詳細を理解するのに最適な場所です。 CoreWebView2  
 

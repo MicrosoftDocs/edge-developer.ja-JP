@@ -3,21 +3,21 @@ description: Microsoft Edge WebView 2 コントロールを使用して Win32 �
 title: Win32 アプリの Microsoft Edge WebView 2
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 05/11/2020
+ms.date: 06/08/2020
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Controller、browser control、edge html
-ms.openlocfilehash: 0ab152e52b5e5d89cf493ff525ce53d9ab174e6d
-ms.sourcegitcommit: 799fe63d961a37ada455bb36ef3ef0d8076e70bb
+ms.openlocfilehash: 460364b0c93e80c0e3868c3b69e20ea9dcf6c129
+ms.sourcegitcommit: 8dca1c1367853e45a0a975bc89b1818adb117bd4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "10685681"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "10697197"
 ---
 # WebView2 の概要 (開発者用プレビュー)
 
-このチュートリアルでは、 [WebView2](https://aka.ms/webview)のよく使われる機能について説明します。ここでは、最初の WebView2 アプリの作成について説明します。 個々の Api について詳しくは、 [api リファレンス](../reference/win32/0-9-488-reference-webview2.md)をご覧ください。  
+このチュートリアルでは、 [WebView2](https://aka.ms/webview)のよく使われる機能について説明します。ここでは、最初の WebView2 アプリの作成について説明します。 個々の Api について詳しくは、 [api リファレンス](../reference/win32/0-9-538-reference-webview2.md)をご覧ください。  
 
 ## 前提条件
 
@@ -124,7 +124,7 @@ F5 キーを押して、アプリをビルドし、実行します。 これで�
 
 ## ステップ 4-ナビゲーションイベント
 
-最後の手順では、URL への移動について説明しまし `ICoreWebView2::Navigate` た。 ナビゲーション中に、WebView は、、、、、の順にホストがリッスンできる一連のイベントを起動し `NavigationStarting` `SourceChanged` `ContentLoading` `HistoryChanged` `NavigationCompleted` ます。 詳細について[は、ここ](../reference/win32/0-9-488/ICoreWebView2.md#navigation-events)をクリックしてください。
+最後の手順では、URL への移動について説明しまし `ICoreWebView2::Navigate` た。 ナビゲーション中に、WebView は、、、、、の順にホストがリッスンできる一連のイベントを起動し `NavigationStarting` `SourceChanged` `ContentLoading` `HistoryChanged` `NavigationCompleted` ます。 詳細について[は、ここ](../reference/win32/0-9-538/ICoreWebView2.md#navigation-events)をクリックしてください。
 
 ![ナビゲーション-イベント](../media/navigation-events.png)
 
@@ -221,7 +221,7 @@ F5 キーを押して、アプリをビルドし、実行します。 これで�
 
 * WebView2's 機能の包括的な例については、「チェックアウト[WEBVIEW2 API のサンプル](https://github.com/MicrosoftEdge/WebView2Samples/tree/master/WebView2APISample)」をお探しください。
 * WebView2 を使って構築されたアプリケーションをチェックアウト[WebView2Browser](https://github.com/MicrosoftEdge/WebView2Browser)します。
-* Api に関する詳細については、api[リファレンスを参照](../reference/win32/0-9-488-reference-webview2.md)してください。  
+* Api に関する詳細については、api[リファレンスを参照](../reference/win32/0-9-538-reference-webview2.md)してください。  
 
 ## WebView2 チームと連絡を取り合う  
 

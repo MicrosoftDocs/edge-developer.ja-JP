@@ -8,14 +8,17 @@ ms.topic: reference
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Controller、browser control、edge html
-ms.openlocfilehash: 49b2baf825d65b97b4b1fa62d06b2f6d6b7bd26d
-ms.sourcegitcommit: 07cda56425e5fdf90eeb3972e17041261bf720cd
+ms.openlocfilehash: 0fb633a45df15c5b5116d69f74f6d12894bc91c1
+ms.sourcegitcommit: 8dca1c1367853e45a0a975bc89b1818adb117bd4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "10654443"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "10698093"
 ---
 # インターフェイス ICoreWebView2CreateCoreWebView2ControllerCompletedHandler 
+
+> [!NOTE]
+> この参照は、SDK バージョン0.9.515 後のリリースで変更される可能性があります。 最新 API リファレンスについては、 [WEBVIEW2 api リファレンス](../../../webview2-api-reference.md)を参照してください。
 
 ```
 interface ICoreWebView2CreateCoreWebView2ControllerCompletedHandler

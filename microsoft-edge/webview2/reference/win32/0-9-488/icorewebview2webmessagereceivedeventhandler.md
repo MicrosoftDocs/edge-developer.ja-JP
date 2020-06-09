@@ -8,14 +8,17 @@ ms.topic: reference
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Controller、browser control、edge html
-ms.openlocfilehash: 73af2e217ca645536623eca18ceafad3270529cd
-ms.sourcegitcommit: 07cda56425e5fdf90eeb3972e17041261bf720cd
+ms.openlocfilehash: 99a6df2d0959b1bebe728b089a05d86efc4df2f5
+ms.sourcegitcommit: 8dca1c1367853e45a0a975bc89b1818adb117bd4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "10654457"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "10698121"
 ---
 # インターフェイス ICoreWebView2WebMessageReceivedEventHandler 
+
+> [!NOTE]
+> この参照は、SDK バージョン0.9.515 後のリリースで変更される可能性があります。 最新 API リファレンスについては、 [WEBVIEW2 api リファレンス](../../../webview2-api-reference.md)を参照してください。
 
 ```
 interface ICoreWebView2WebMessageReceivedEventHandler
