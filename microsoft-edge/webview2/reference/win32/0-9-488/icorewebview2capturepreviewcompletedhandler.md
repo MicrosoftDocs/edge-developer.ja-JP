@@ -8,35 +8,38 @@ ms.topic: reference
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Controller、browser control、edge html
-ms.openlocfilehash: 793dbde462e25ae0bfe0dc0bc475cc49e7237fb2
-ms.sourcegitcommit: 07cda56425e5fdf90eeb3972e17041261bf720cd
+ms.openlocfilehash: 6aaac0d062d0e97d3ec0c87bec243c5cf682ad6f
+ms.sourcegitcommit: 8dca1c1367853e45a0a975bc89b1818adb117bd4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "10654460"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "10697050"
 ---
-# <span data-ttu-id="06fd4-104">インターフェイス ICoreWebView2CapturePreviewCompletedHandler</span><span class="sxs-lookup"><span data-stu-id="06fd4-104">interface ICoreWebView2CapturePreviewCompletedHandler</span></span> 
+# <span data-ttu-id="18300-104">インターフェイス ICoreWebView2CapturePreviewCompletedHandler</span><span class="sxs-lookup"><span data-stu-id="18300-104">interface ICoreWebView2CapturePreviewCompletedHandler</span></span> 
+
+> [!NOTE]
+> <span data-ttu-id="18300-105">この参照は、SDK バージョン0.9.515 後のリリースで変更される可能性があります。</span><span class="sxs-lookup"><span data-stu-id="18300-105">This reference may be altered or unavailable for releases after SDK version 0.9.515.</span></span> <span data-ttu-id="18300-106">最新 API リファレンスについては、 [WEBVIEW2 api リファレンス](../../../webview2-api-reference.md)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="18300-106">Please refer to [WebView2 API reference](../../../webview2-api-reference.md) for the latest API reference.</span></span>
 
 ```
 interface ICoreWebView2CapturePreviewCompletedHandler
   : public IUnknown
 ```
 
-<span data-ttu-id="06fd4-105">呼び出し元は、このメソッドを実装して CapturePreview メソッドの結果を受け取ります。</span><span class="sxs-lookup"><span data-stu-id="06fd4-105">The caller implements this method to receive the result of the CapturePreview method.</span></span>
+<span data-ttu-id="18300-107">呼び出し元は、このメソッドを実装して CapturePreview メソッドの結果を受け取ります。</span><span class="sxs-lookup"><span data-stu-id="18300-107">The caller implements this method to receive the result of the CapturePreview method.</span></span>
 
-## <span data-ttu-id="06fd4-106">まとめ</span><span class="sxs-lookup"><span data-stu-id="06fd4-106">Summary</span></span>
+## <span data-ttu-id="18300-108">まとめ</span><span class="sxs-lookup"><span data-stu-id="18300-108">Summary</span></span>
 
- <span data-ttu-id="06fd4-107">Members</span><span class="sxs-lookup"><span data-stu-id="06fd4-107">Members</span></span>                        | <span data-ttu-id="06fd4-108">説明</span><span class="sxs-lookup"><span data-stu-id="06fd4-108">Descriptions</span></span>
+ <span data-ttu-id="18300-109">Members</span><span class="sxs-lookup"><span data-stu-id="18300-109">Members</span></span>                        | <span data-ttu-id="18300-110">説明</span><span class="sxs-lookup"><span data-stu-id="18300-110">Descriptions</span></span>
 --------------------------------|---------------------------------------------
-[<span data-ttu-id="06fd4-109">Invoke</span><span class="sxs-lookup"><span data-stu-id="06fd4-109">Invoke</span></span>](#invoke) | <span data-ttu-id="06fd4-110">対応する非同期メソッド呼び出しの完了状態を実装側に提供するために呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="06fd4-110">Called to provide the implementer with the completion status of the corresponding asynchronous method call.</span></span>
+[<span data-ttu-id="18300-111">Invoke</span><span class="sxs-lookup"><span data-stu-id="18300-111">Invoke</span></span>](#invoke) | <span data-ttu-id="18300-112">対応する非同期メソッド呼び出しの完了状態を実装側に提供するために呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="18300-112">Called to provide the implementer with the completion status of the corresponding asynchronous method call.</span></span>
 
-<span data-ttu-id="06fd4-111">結果は、CapturePreview メソッド呼び出しで提供されたストリームに書き込まれます。</span><span class="sxs-lookup"><span data-stu-id="06fd4-111">The result is written to the stream provided in the CapturePreview method call.</span></span>
+<span data-ttu-id="18300-113">結果は、CapturePreview メソッド呼び出しで提供されたストリームに書き込まれます。</span><span class="sxs-lookup"><span data-stu-id="18300-113">The result is written to the stream provided in the CapturePreview method call.</span></span>
 
-## <span data-ttu-id="06fd4-112">Members</span><span class="sxs-lookup"><span data-stu-id="06fd4-112">Members</span></span>
+## <span data-ttu-id="18300-114">Members</span><span class="sxs-lookup"><span data-stu-id="18300-114">Members</span></span>
 
-#### <span data-ttu-id="06fd4-113">Invoke</span><span class="sxs-lookup"><span data-stu-id="06fd4-113">Invoke</span></span> 
+#### <span data-ttu-id="18300-115">Invoke</span><span class="sxs-lookup"><span data-stu-id="18300-115">Invoke</span></span> 
 
-<span data-ttu-id="06fd4-114">対応する非同期メソッド呼び出しの完了状態を実装側に提供するために呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="06fd4-114">Called to provide the implementer with the completion status of the corresponding asynchronous method call.</span></span>
+<span data-ttu-id="18300-116">対応する非同期メソッド呼び出しの完了状態を実装側に提供するために呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="18300-116">Called to provide the implementer with the completion status of the corresponding asynchronous method call.</span></span>
 
-> <span data-ttu-id="06fd4-115">パブリック HRESULT[呼び出し](#invoke)(hresult 結果)</span><span class="sxs-lookup"><span data-stu-id="06fd4-115">public HRESULT [Invoke](#invoke)(HRESULT result)</span></span>
+> <span data-ttu-id="18300-117">パブリック HRESULT[呼び出し](#invoke)(hresult 結果)</span><span class="sxs-lookup"><span data-stu-id="18300-117">public HRESULT [Invoke](#invoke)(HRESULT result)</span></span>
 

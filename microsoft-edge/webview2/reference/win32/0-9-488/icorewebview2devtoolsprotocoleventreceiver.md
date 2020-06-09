@@ -8,40 +8,43 @@ ms.topic: reference
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Controller、browser control、edge html
-ms.openlocfilehash: c83123876747cb085efd65ff013db87a501b189c
-ms.sourcegitcommit: 07cda56425e5fdf90eeb3972e17041261bf720cd
+ms.openlocfilehash: 760919ba215f725cac10ad03d278d0a3e994286e
+ms.sourcegitcommit: 8dca1c1367853e45a0a975bc89b1818adb117bd4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "10654432"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "10698058"
 ---
-# <span data-ttu-id="c65f2-104">インターフェイス ICoreWebView2DevToolsProtocolEventReceiver</span><span class="sxs-lookup"><span data-stu-id="c65f2-104">interface ICoreWebView2DevToolsProtocolEventReceiver</span></span> 
+# <span data-ttu-id="a7577-104">インターフェイス ICoreWebView2DevToolsProtocolEventReceiver</span><span class="sxs-lookup"><span data-stu-id="a7577-104">interface ICoreWebView2DevToolsProtocolEventReceiver</span></span> 
+
+> [!NOTE]
+> <span data-ttu-id="a7577-105">この参照は、SDK バージョン0.9.515 後のリリースで変更される可能性があります。</span><span class="sxs-lookup"><span data-stu-id="a7577-105">This reference may be altered or unavailable for releases after SDK version 0.9.515.</span></span> <span data-ttu-id="a7577-106">最新 API リファレンスについては、 [WEBVIEW2 api リファレンス](../../../webview2-api-reference.md)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="a7577-106">Please refer to [WebView2 API reference](../../../webview2-api-reference.md) for the latest API reference.</span></span>
 
 ```
 interface ICoreWebView2DevToolsProtocolEventReceiver
   : public IUnknown
 ```
 
-<span data-ttu-id="c65f2-105">特定の DevTools プロトコルイベント用に受信者が作成され、そのイベントのサブスクライブとサブスクライブ解除を行うことができます。</span><span class="sxs-lookup"><span data-stu-id="c65f2-105">A Receiver is created for a particular DevTools Protocol event and allows you to subscribe and unsubscribe from that event.</span></span>
+<span data-ttu-id="a7577-107">特定の DevTools プロトコルイベント用に受信者が作成され、そのイベントのサブスクライブとサブスクライブ解除を行うことができます。</span><span class="sxs-lookup"><span data-stu-id="a7577-107">A Receiver is created for a particular DevTools Protocol event and allows you to subscribe and unsubscribe from that event.</span></span>
 
-## <span data-ttu-id="c65f2-106">まとめ</span><span class="sxs-lookup"><span data-stu-id="c65f2-106">Summary</span></span>
+## <span data-ttu-id="a7577-108">まとめ</span><span class="sxs-lookup"><span data-stu-id="a7577-108">Summary</span></span>
 
- <span data-ttu-id="c65f2-107">Members</span><span class="sxs-lookup"><span data-stu-id="c65f2-107">Members</span></span>                        | <span data-ttu-id="c65f2-108">説明</span><span class="sxs-lookup"><span data-stu-id="c65f2-108">Descriptions</span></span>
+ <span data-ttu-id="a7577-109">Members</span><span class="sxs-lookup"><span data-stu-id="a7577-109">Members</span></span>                        | <span data-ttu-id="a7577-110">説明</span><span class="sxs-lookup"><span data-stu-id="a7577-110">Descriptions</span></span>
 --------------------------------|---------------------------------------------
-[<span data-ttu-id="c65f2-109">add_DevToolsProtocolEventReceived</span><span class="sxs-lookup"><span data-stu-id="c65f2-109">add_DevToolsProtocolEventReceived</span></span>](#add_devtoolsprotocoleventreceived) | <span data-ttu-id="c65f2-110">Devツールプロトコルイベントをサブスクライブします。</span><span class="sxs-lookup"><span data-stu-id="c65f2-110">Subscribe to a DevToolsProtocol event.</span></span>
-[<span data-ttu-id="c65f2-111">remove_DevToolsProtocolEventReceived</span><span class="sxs-lookup"><span data-stu-id="c65f2-111">remove_DevToolsProtocolEventReceived</span></span>](#remove_devtoolsprotocoleventreceived) | <span data-ttu-id="c65f2-112">Add_DevToolsProtocolEventReceived で以前に追加されたイベントハンドラーを削除します。</span><span class="sxs-lookup"><span data-stu-id="c65f2-112">Remove an event handler previously added with add_DevToolsProtocolEventReceived.</span></span>
+[<span data-ttu-id="a7577-111">add_DevToolsProtocolEventReceived</span><span class="sxs-lookup"><span data-stu-id="a7577-111">add_DevToolsProtocolEventReceived</span></span>](#add_devtoolsprotocoleventreceived) | <span data-ttu-id="a7577-112">Devツールプロトコルイベントをサブスクライブします。</span><span class="sxs-lookup"><span data-stu-id="a7577-112">Subscribe to a DevToolsProtocol event.</span></span>
+[<span data-ttu-id="a7577-113">remove_DevToolsProtocolEventReceived</span><span class="sxs-lookup"><span data-stu-id="a7577-113">remove_DevToolsProtocolEventReceived</span></span>](#remove_devtoolsprotocoleventreceived) | <span data-ttu-id="a7577-114">Add_DevToolsProtocolEventReceived で以前に追加されたイベントハンドラーを削除します。</span><span class="sxs-lookup"><span data-stu-id="a7577-114">Remove an event handler previously added with add_DevToolsProtocolEventReceived.</span></span>
 
-<span data-ttu-id="c65f2-113">GetDevToolsProtocolEventReceiver 経由で WebView オブジェクトから取得されます。</span><span class="sxs-lookup"><span data-stu-id="c65f2-113">Obtained from the WebView object via GetDevToolsProtocolEventReceiver.</span></span>
+<span data-ttu-id="a7577-115">GetDevToolsProtocolEventReceiver 経由で WebView オブジェクトから取得されます。</span><span class="sxs-lookup"><span data-stu-id="a7577-115">Obtained from the WebView object via GetDevToolsProtocolEventReceiver.</span></span>
 
-## <span data-ttu-id="c65f2-114">Members</span><span class="sxs-lookup"><span data-stu-id="c65f2-114">Members</span></span>
+## <span data-ttu-id="a7577-116">Members</span><span class="sxs-lookup"><span data-stu-id="a7577-116">Members</span></span>
 
-#### <span data-ttu-id="c65f2-115">add_DevToolsProtocolEventReceived</span><span class="sxs-lookup"><span data-stu-id="c65f2-115">add_DevToolsProtocolEventReceived</span></span> 
+#### <span data-ttu-id="a7577-117">add_DevToolsProtocolEventReceived</span><span class="sxs-lookup"><span data-stu-id="a7577-117">add_DevToolsProtocolEventReceived</span></span> 
 
-<span data-ttu-id="c65f2-116">Devツールプロトコルイベントをサブスクライブします。</span><span class="sxs-lookup"><span data-stu-id="c65f2-116">Subscribe to a DevToolsProtocol event.</span></span>
+<span data-ttu-id="a7577-118">Devツールプロトコルイベントをサブスクライブします。</span><span class="sxs-lookup"><span data-stu-id="a7577-118">Subscribe to a DevToolsProtocol event.</span></span>
 
-> <span data-ttu-id="c65f2-117">パブリック HRESULT [add_DevToolsProtocolEventReceived](#add_devtoolsprotocoleventreceived)([ICoreWebView2DevToolsProtocolEventReceivedEventHandler](icorewebview2devtoolsprotocoleventreceivedeventhandler.md) \* handler、EventRegistrationToken \* token)</span><span class="sxs-lookup"><span data-stu-id="c65f2-117">public HRESULT [add_DevToolsProtocolEventReceived](#add_devtoolsprotocoleventreceived)([ICoreWebView2DevToolsProtocolEventReceivedEventHandler](icorewebview2devtoolsprotocoleventreceivedeventhandler.md) \* handler, EventRegistrationToken \* token)</span></span>
+> <span data-ttu-id="a7577-119">パブリック HRESULT [add_DevToolsProtocolEventReceived](#add_devtoolsprotocoleventreceived)([ICoreWebView2DevToolsProtocolEventReceivedEventHandler](icorewebview2devtoolsprotocoleventreceivedeventhandler.md) \* handler、EventRegistrationToken \* token)</span><span class="sxs-lookup"><span data-stu-id="a7577-119">public HRESULT [add_DevToolsProtocolEventReceived](#add_devtoolsprotocoleventreceived)([ICoreWebView2DevToolsProtocolEventReceivedEventHandler](icorewebview2devtoolsprotocoleventreceivedeventhandler.md) \* handler, EventRegistrationToken \* token)</span></span>
 
-<span data-ttu-id="c65f2-118">ハンドラーの Invoke メソッドは、対応する Devて Protocol イベントが発生するたびに呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="c65f2-118">The handler's Invoke method will be called whenever the corresponding DevToolsProtocol event fires.</span></span> <span data-ttu-id="c65f2-119">Invoke は、DevTools プロトコルイベントのパラメーターオブジェクトを JSON 文字列として含むイベント引数オブジェクトで呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="c65f2-119">Invoke will be called with the an event args object containing the DevTools Protocol event's parameter object as a JSON string.</span></span>
+<span data-ttu-id="a7577-120">ハンドラーの Invoke メソッドは、対応する Devて Protocol イベントが発生するたびに呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="a7577-120">The handler's Invoke method will be called whenever the corresponding DevToolsProtocol event fires.</span></span> <span data-ttu-id="a7577-121">Invoke は、DevTools プロトコルイベントのパラメーターオブジェクトを JSON 文字列として含むイベント引数オブジェクトで呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="a7577-121">Invoke will be called with the an event args object containing the DevTools Protocol event's parameter object as a JSON string.</span></span>
 
 ```cpp
 // Prompt the user to name a CDP event, and then subscribe to that event.
@@ -88,9 +91,9 @@ void ScriptComponent::SubscribeToCdpEvent()
 }
 ```
 
-#### <span data-ttu-id="c65f2-120">remove_DevToolsProtocolEventReceived</span><span class="sxs-lookup"><span data-stu-id="c65f2-120">remove_DevToolsProtocolEventReceived</span></span> 
+#### <span data-ttu-id="a7577-122">remove_DevToolsProtocolEventReceived</span><span class="sxs-lookup"><span data-stu-id="a7577-122">remove_DevToolsProtocolEventReceived</span></span> 
 
-<span data-ttu-id="c65f2-121">Add_DevToolsProtocolEventReceived で以前に追加されたイベントハンドラーを削除します。</span><span class="sxs-lookup"><span data-stu-id="c65f2-121">Remove an event handler previously added with add_DevToolsProtocolEventReceived.</span></span>
+<span data-ttu-id="a7577-123">Add_DevToolsProtocolEventReceived で以前に追加されたイベントハンドラーを削除します。</span><span class="sxs-lookup"><span data-stu-id="a7577-123">Remove an event handler previously added with add_DevToolsProtocolEventReceived.</span></span>
 
-> <span data-ttu-id="c65f2-122">パブリック HRESULT [remove_DevToolsProtocolEventReceived](#remove_devtoolsprotocoleventreceived)(EventRegistrationToken token)</span><span class="sxs-lookup"><span data-stu-id="c65f2-122">public HRESULT [remove_DevToolsProtocolEventReceived](#remove_devtoolsprotocoleventreceived)(EventRegistrationToken token)</span></span>
+> <span data-ttu-id="a7577-124">パブリック HRESULT [remove_DevToolsProtocolEventReceived](#remove_devtoolsprotocoleventreceived)(EventRegistrationToken token)</span><span class="sxs-lookup"><span data-stu-id="a7577-124">public HRESULT [remove_DevToolsProtocolEventReceived](#remove_devtoolsprotocoleventreceived)(EventRegistrationToken token)</span></span>
 

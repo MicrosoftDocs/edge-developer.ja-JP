@@ -8,31 +8,34 @@ ms.topic: reference
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Controller、browser control、edge html
-ms.openlocfilehash: cc3cf67a03f81acc546ab17fded5d7430496033f
-ms.sourcegitcommit: 07cda56425e5fdf90eeb3972e17041261bf720cd
+ms.openlocfilehash: 2f0a41c72c6ac6f7bcfbf7a5cbd5eef61ffa3a68
+ms.sourcegitcommit: 8dca1c1367853e45a0a975bc89b1818adb117bd4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "10654303"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "10697267"
 ---
-# <span data-ttu-id="40f78-104">インターフェイス ICoreWebView2HttpHeadersCollectionIterator</span><span class="sxs-lookup"><span data-stu-id="40f78-104">interface ICoreWebView2HttpHeadersCollectionIterator</span></span> 
+# <span data-ttu-id="d48d6-104">インターフェイス ICoreWebView2HttpHeadersCollectionIterator</span><span class="sxs-lookup"><span data-stu-id="d48d6-104">interface ICoreWebView2HttpHeadersCollectionIterator</span></span> 
+
+> [!NOTE]
+> <span data-ttu-id="d48d6-105">この参照は、SDK バージョン0.9.515 後のリリースで変更される可能性があります。</span><span class="sxs-lookup"><span data-stu-id="d48d6-105">This reference may be altered or unavailable for releases after SDK version 0.9.515.</span></span> <span data-ttu-id="d48d6-106">最新 API リファレンスについては、 [WEBVIEW2 api リファレンス](../../../webview2-api-reference.md)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="d48d6-106">Please refer to [WebView2 API reference](../../../webview2-api-reference.md) for the latest API reference.</span></span>
 
 ```
 interface ICoreWebView2HttpHeadersCollectionIterator
   : public IUnknown
 ```
 
-<span data-ttu-id="40f78-105">HTTP ヘッダーのコレクションの Iterator。</span><span class="sxs-lookup"><span data-stu-id="40f78-105">Iterator for a collection of HTTP headers.</span></span>
+<span data-ttu-id="d48d6-107">HTTP ヘッダーのコレクションの Iterator。</span><span class="sxs-lookup"><span data-stu-id="d48d6-107">Iterator for a collection of HTTP headers.</span></span>
 
-## <span data-ttu-id="40f78-106">まとめ</span><span class="sxs-lookup"><span data-stu-id="40f78-106">Summary</span></span>
+## <span data-ttu-id="d48d6-108">まとめ</span><span class="sxs-lookup"><span data-stu-id="d48d6-108">Summary</span></span>
 
- <span data-ttu-id="40f78-107">Members</span><span class="sxs-lookup"><span data-stu-id="40f78-107">Members</span></span>                        | <span data-ttu-id="40f78-108">説明</span><span class="sxs-lookup"><span data-stu-id="40f78-108">Descriptions</span></span>
+ <span data-ttu-id="d48d6-109">Members</span><span class="sxs-lookup"><span data-stu-id="d48d6-109">Members</span></span>                        | <span data-ttu-id="d48d6-110">説明</span><span class="sxs-lookup"><span data-stu-id="d48d6-110">Descriptions</span></span>
 --------------------------------|---------------------------------------------
-[<span data-ttu-id="40f78-109">get_HasCurrentHeader</span><span class="sxs-lookup"><span data-stu-id="40f78-109">get_HasCurrentHeader</span></span>](#get_hascurrentheader) | <span data-ttu-id="40f78-110">反復子でヘッダーが不足していない場合は True です。</span><span class="sxs-lookup"><span data-stu-id="40f78-110">True when the iterator hasn't run out of headers.</span></span>
-[<span data-ttu-id="40f78-111">GetCurrentHeader</span><span class="sxs-lookup"><span data-stu-id="40f78-111">GetCurrentHeader</span></span>](#getcurrentheader) | <span data-ttu-id="40f78-112">イテレータの現在の HTTP ヘッダーの名前と値を取得します。</span><span class="sxs-lookup"><span data-stu-id="40f78-112">Get the name and value of the current HTTP header of the iterator.</span></span>
-[<span data-ttu-id="40f78-113">MoveNext</span><span class="sxs-lookup"><span data-stu-id="40f78-113">MoveNext</span></span>](#movenext) | <span data-ttu-id="40f78-114">反復子をコレクション内の次の HTTP ヘッダーに移動します。</span><span class="sxs-lookup"><span data-stu-id="40f78-114">Move the iterator to the next HTTP header in the collection.</span></span>
+[<span data-ttu-id="d48d6-111">get_HasCurrentHeader</span><span class="sxs-lookup"><span data-stu-id="d48d6-111">get_HasCurrentHeader</span></span>](#get_hascurrentheader) | <span data-ttu-id="d48d6-112">反復子でヘッダーが不足していない場合は True です。</span><span class="sxs-lookup"><span data-stu-id="d48d6-112">True when the iterator hasn't run out of headers.</span></span>
+[<span data-ttu-id="d48d6-113">GetCurrentHeader</span><span class="sxs-lookup"><span data-stu-id="d48d6-113">GetCurrentHeader</span></span>](#getcurrentheader) | <span data-ttu-id="d48d6-114">イテレータの現在の HTTP ヘッダーの名前と値を取得します。</span><span class="sxs-lookup"><span data-stu-id="d48d6-114">Get the name and value of the current HTTP header of the iterator.</span></span>
+[<span data-ttu-id="d48d6-115">MoveNext</span><span class="sxs-lookup"><span data-stu-id="d48d6-115">MoveNext</span></span>](#movenext) | <span data-ttu-id="d48d6-116">反復子をコレクション内の次の HTTP ヘッダーに移動します。</span><span class="sxs-lookup"><span data-stu-id="d48d6-116">Move the iterator to the next HTTP header in the collection.</span></span>
 
-<span data-ttu-id="40f78-115">[ICoreWebView2HttpRequestHeaders](icorewebview2httprequestheaders.md)と[ICoreWebView2HttpResponseHeaders](icorewebview2httpresponseheaders.md)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="40f78-115">See [ICoreWebView2HttpRequestHeaders](icorewebview2httprequestheaders.md) and [ICoreWebView2HttpResponseHeaders](icorewebview2httpresponseheaders.md).</span></span> 
+<span data-ttu-id="d48d6-117">[ICoreWebView2HttpRequestHeaders](icorewebview2httprequestheaders.md)と[ICoreWebView2HttpResponseHeaders](icorewebview2httpresponseheaders.md)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="d48d6-117">See [ICoreWebView2HttpRequestHeaders](icorewebview2httprequestheaders.md) and [ICoreWebView2HttpResponseHeaders](icorewebview2httpresponseheaders.md).</span></span> 
 ```cpp
 std::wstring RequestHeadersToJsonString(ICoreWebView2HttpRequestHeaders* requestHeaders)
 {
@@ -62,29 +65,29 @@ std::wstring RequestHeadersToJsonString(ICoreWebView2HttpRequestHeaders* request
 }
 ```
 
-## <span data-ttu-id="40f78-116">Members</span><span class="sxs-lookup"><span data-stu-id="40f78-116">Members</span></span>
+## <span data-ttu-id="d48d6-118">Members</span><span class="sxs-lookup"><span data-stu-id="d48d6-118">Members</span></span>
 
-#### <span data-ttu-id="40f78-117">get_HasCurrentHeader</span><span class="sxs-lookup"><span data-stu-id="40f78-117">get_HasCurrentHeader</span></span> 
+#### <span data-ttu-id="d48d6-119">get_HasCurrentHeader</span><span class="sxs-lookup"><span data-stu-id="d48d6-119">get_HasCurrentHeader</span></span> 
 
-<span data-ttu-id="40f78-118">反復子でヘッダーが不足していない場合は True です。</span><span class="sxs-lookup"><span data-stu-id="40f78-118">True when the iterator hasn't run out of headers.</span></span>
+<span data-ttu-id="d48d6-120">反復子でヘッダーが不足していない場合は True です。</span><span class="sxs-lookup"><span data-stu-id="d48d6-120">True when the iterator hasn't run out of headers.</span></span>
 
-> <span data-ttu-id="40f78-119">パブリック HRESULT [get_HasCurrentHeader](#get_hascurrentheader)(ブール \* hascurrent)</span><span class="sxs-lookup"><span data-stu-id="40f78-119">public HRESULT [get_HasCurrentHeader](#get_hascurrentheader)(BOOL \* hasCurrent)</span></span>
+> <span data-ttu-id="d48d6-121">パブリック HRESULT [get_HasCurrentHeader](#get_hascurrentheader)(ブール \* hascurrent)</span><span class="sxs-lookup"><span data-stu-id="d48d6-121">public HRESULT [get_HasCurrentHeader](#get_hascurrentheader)(BOOL \* hasCurrent)</span></span>
 
-<span data-ttu-id="40f78-120">反復子が反復処理を行っているコレクションが空である場合、または反復子がコレクションの末尾を超えている場合、この値は false になります。</span><span class="sxs-lookup"><span data-stu-id="40f78-120">If the collection over which the iterator is iterating is empty or if the iterator has gone past the end of the collection then this is false.</span></span>
+<span data-ttu-id="d48d6-122">反復子が反復処理を行っているコレクションが空である場合、または反復子がコレクションの末尾を超えている場合、この値は false になります。</span><span class="sxs-lookup"><span data-stu-id="d48d6-122">If the collection over which the iterator is iterating is empty or if the iterator has gone past the end of the collection then this is false.</span></span>
 
-#### <span data-ttu-id="40f78-121">GetCurrentHeader</span><span class="sxs-lookup"><span data-stu-id="40f78-121">GetCurrentHeader</span></span> 
+#### <span data-ttu-id="d48d6-123">GetCurrentHeader</span><span class="sxs-lookup"><span data-stu-id="d48d6-123">GetCurrentHeader</span></span> 
 
-<span data-ttu-id="40f78-122">イテレータの現在の HTTP ヘッダーの名前と値を取得します。</span><span class="sxs-lookup"><span data-stu-id="40f78-122">Get the name and value of the current HTTP header of the iterator.</span></span>
+<span data-ttu-id="d48d6-124">イテレータの現在の HTTP ヘッダーの名前と値を取得します。</span><span class="sxs-lookup"><span data-stu-id="d48d6-124">Get the name and value of the current HTTP header of the iterator.</span></span>
 
-> <span data-ttu-id="40f78-123">パブリック HRESULT [GetCurrentHeader](#getcurrentheader)(LPWSTR \* NAME, LPWSTR \* value)</span><span class="sxs-lookup"><span data-stu-id="40f78-123">public HRESULT [GetCurrentHeader](#getcurrentheader)(LPWSTR \* name, LPWSTR \* value)</span></span>
+> <span data-ttu-id="d48d6-125">パブリック HRESULT [GetCurrentHeader](#getcurrentheader)(LPWSTR \* NAME, LPWSTR \* value)</span><span class="sxs-lookup"><span data-stu-id="d48d6-125">public HRESULT [GetCurrentHeader](#getcurrentheader)(LPWSTR \* name, LPWSTR \* value)</span></span>
 
-<span data-ttu-id="40f78-124">このメソッドは、MoveNext セットへの最後の呼び出し has_next が FALSE になった場合に失敗します。</span><span class="sxs-lookup"><span data-stu-id="40f78-124">This method will fail if the last call to MoveNext set has_next to FALSE.</span></span>
+<span data-ttu-id="d48d6-126">このメソッドは、MoveNext セットへの最後の呼び出し has_next が FALSE になった場合に失敗します。</span><span class="sxs-lookup"><span data-stu-id="d48d6-126">This method will fail if the last call to MoveNext set has_next to FALSE.</span></span>
 
-#### <span data-ttu-id="40f78-125">MoveNext</span><span class="sxs-lookup"><span data-stu-id="40f78-125">MoveNext</span></span> 
+#### <span data-ttu-id="d48d6-127">MoveNext</span><span class="sxs-lookup"><span data-stu-id="d48d6-127">MoveNext</span></span> 
 
-<span data-ttu-id="40f78-126">反復子をコレクション内の次の HTTP ヘッダーに移動します。</span><span class="sxs-lookup"><span data-stu-id="40f78-126">Move the iterator to the next HTTP header in the collection.</span></span>
+<span data-ttu-id="d48d6-128">反復子をコレクション内の次の HTTP ヘッダーに移動します。</span><span class="sxs-lookup"><span data-stu-id="d48d6-128">Move the iterator to the next HTTP header in the collection.</span></span>
 
-> <span data-ttu-id="40f78-127">パブリック HRESULT [MoveNext](#movenext)(BOOL \* hasnext)</span><span class="sxs-lookup"><span data-stu-id="40f78-127">public HRESULT [MoveNext](#movenext)(BOOL \* hasNext)</span></span>
+> <span data-ttu-id="d48d6-129">パブリック HRESULT [MoveNext](#movenext)(BOOL \* hasnext)</span><span class="sxs-lookup"><span data-stu-id="d48d6-129">public HRESULT [MoveNext](#movenext)(BOOL \* hasNext)</span></span>
 
-<span data-ttu-id="40f78-128">他の HTTP ヘッダーがない場合は、hasNext パラメーターが FALSE に設定されます。</span><span class="sxs-lookup"><span data-stu-id="40f78-128">The hasNext parameter will be set to FALSE if there are no more HTTP headers.</span></span> <span data-ttu-id="40f78-129">この処理を実行すると、GetCurrentHeader メソッドは呼び出されたときに失敗します。</span><span class="sxs-lookup"><span data-stu-id="40f78-129">After this occurs the GetCurrentHeader method will fail if called.</span></span>
+<span data-ttu-id="d48d6-130">他の HTTP ヘッダーがない場合は、hasNext パラメーターが FALSE に設定されます。</span><span class="sxs-lookup"><span data-stu-id="d48d6-130">The hasNext parameter will be set to FALSE if there are no more HTTP headers.</span></span> <span data-ttu-id="d48d6-131">この処理を実行すると、GetCurrentHeader メソッドは呼び出されたときに失敗します。</span><span class="sxs-lookup"><span data-stu-id="d48d6-131">After this occurs the GetCurrentHeader method will fail if called.</span></span>
 

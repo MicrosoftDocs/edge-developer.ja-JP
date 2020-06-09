@@ -8,63 +8,66 @@ ms.topic: reference
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Controller、browser control、edge html
-ms.openlocfilehash: 8cdedd8051f52b7f6ad187ec948eabef96c6670b
-ms.sourcegitcommit: 07cda56425e5fdf90eeb3972e17041261bf720cd
+ms.openlocfilehash: 85954a3f866ed9fd778af93fc27872af2d20eb2e
+ms.sourcegitcommit: 8dca1c1367853e45a0a975bc89b1818adb117bd4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "10654215"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "10697946"
 ---
-# <span data-ttu-id="8d5f0-104">インターフェイス ICoreWebView2WebResourceRequestedEventArgs</span><span class="sxs-lookup"><span data-stu-id="8d5f0-104">interface ICoreWebView2WebResourceRequestedEventArgs</span></span> 
+# <span data-ttu-id="94586-104">インターフェイス ICoreWebView2WebResourceRequestedEventArgs</span><span class="sxs-lookup"><span data-stu-id="94586-104">interface ICoreWebView2WebResourceRequestedEventArgs</span></span> 
+
+> [!NOTE]
+> <span data-ttu-id="94586-105">この参照は、SDK バージョン0.9.515 後のリリースで変更される可能性があります。</span><span class="sxs-lookup"><span data-stu-id="94586-105">This reference may be altered or unavailable for releases after SDK version 0.9.515.</span></span> <span data-ttu-id="94586-106">最新 API リファレンスについては、 [WEBVIEW2 api リファレンス](../../../webview2-api-reference.md)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="94586-106">Please refer to [WebView2 API reference](../../../webview2-api-reference.md) for the latest API reference.</span></span>
 
 ```
 interface ICoreWebView2WebResourceRequestedEventArgs
   : public IUnknown
 ```
 
-<span data-ttu-id="8d5f0-105">WebResourceRequested イベントのイベント引数。</span><span class="sxs-lookup"><span data-stu-id="8d5f0-105">Event args for the WebResourceRequested event.</span></span>
+<span data-ttu-id="94586-107">WebResourceRequested イベントのイベント引数。</span><span class="sxs-lookup"><span data-stu-id="94586-107">Event args for the WebResourceRequested event.</span></span>
 
-## <span data-ttu-id="8d5f0-106">まとめ</span><span class="sxs-lookup"><span data-stu-id="8d5f0-106">Summary</span></span>
+## <span data-ttu-id="94586-108">まとめ</span><span class="sxs-lookup"><span data-stu-id="94586-108">Summary</span></span>
 
- <span data-ttu-id="8d5f0-107">Members</span><span class="sxs-lookup"><span data-stu-id="8d5f0-107">Members</span></span>                        | <span data-ttu-id="8d5f0-108">説明</span><span class="sxs-lookup"><span data-stu-id="8d5f0-108">Descriptions</span></span>
+ <span data-ttu-id="94586-109">Members</span><span class="sxs-lookup"><span data-stu-id="94586-109">Members</span></span>                        | <span data-ttu-id="94586-110">説明</span><span class="sxs-lookup"><span data-stu-id="94586-110">Descriptions</span></span>
 --------------------------------|---------------------------------------------
-[<span data-ttu-id="8d5f0-109">get_Request</span><span class="sxs-lookup"><span data-stu-id="8d5f0-109">get_Request</span></span>](#get_request) | <span data-ttu-id="8d5f0-110">HTTP 要求。</span><span class="sxs-lookup"><span data-stu-id="8d5f0-110">The HTTP request.</span></span>
-[<span data-ttu-id="8d5f0-111">get_ResourceContext</span><span class="sxs-lookup"><span data-stu-id="8d5f0-111">get_ResourceContext</span></span>](#get_resourcecontext) | <span data-ttu-id="8d5f0-112">Web リソース要求のコンテキスト。</span><span class="sxs-lookup"><span data-stu-id="8d5f0-112">The web resource request contexts.</span></span>
-[<span data-ttu-id="8d5f0-113">get_Response</span><span class="sxs-lookup"><span data-stu-id="8d5f0-113">get_Response</span></span>](#get_response) | <span data-ttu-id="8d5f0-114">HTTP 応答。</span><span class="sxs-lookup"><span data-stu-id="8d5f0-114">The HTTP response.</span></span>
-[<span data-ttu-id="8d5f0-115">GetDeferral</span><span class="sxs-lookup"><span data-stu-id="8d5f0-115">GetDeferral</span></span>](#getdeferral) | <span data-ttu-id="8d5f0-116">[ICoreWebView2Deferral](icorewebview2deferral.md)オブジェクトを取得し、イベントを遅延状態にします。</span><span class="sxs-lookup"><span data-stu-id="8d5f0-116">Obtain an [ICoreWebView2Deferral](icorewebview2deferral.md) object and put the event into a deferred state.</span></span>
-[<span data-ttu-id="8d5f0-117">put_Response</span><span class="sxs-lookup"><span data-stu-id="8d5f0-117">put_Response</span></span>](#put_response) | <span data-ttu-id="8d5f0-118">Response プロパティを設定します。</span><span class="sxs-lookup"><span data-stu-id="8d5f0-118">Set the Response property.</span></span>
+[<span data-ttu-id="94586-111">get_Request</span><span class="sxs-lookup"><span data-stu-id="94586-111">get_Request</span></span>](#get_request) | <span data-ttu-id="94586-112">HTTP 要求。</span><span class="sxs-lookup"><span data-stu-id="94586-112">The HTTP request.</span></span>
+[<span data-ttu-id="94586-113">get_ResourceContext</span><span class="sxs-lookup"><span data-stu-id="94586-113">get_ResourceContext</span></span>](#get_resourcecontext) | <span data-ttu-id="94586-114">Web リソース要求のコンテキスト。</span><span class="sxs-lookup"><span data-stu-id="94586-114">The web resource request contexts.</span></span>
+[<span data-ttu-id="94586-115">get_Response</span><span class="sxs-lookup"><span data-stu-id="94586-115">get_Response</span></span>](#get_response) | <span data-ttu-id="94586-116">HTTP 応答。</span><span class="sxs-lookup"><span data-stu-id="94586-116">The HTTP response.</span></span>
+[<span data-ttu-id="94586-117">GetDeferral</span><span class="sxs-lookup"><span data-stu-id="94586-117">GetDeferral</span></span>](#getdeferral) | <span data-ttu-id="94586-118">[ICoreWebView2Deferral](icorewebview2deferral.md)オブジェクトを取得し、イベントを遅延状態にします。</span><span class="sxs-lookup"><span data-stu-id="94586-118">Obtain an [ICoreWebView2Deferral](icorewebview2deferral.md) object and put the event into a deferred state.</span></span>
+[<span data-ttu-id="94586-119">put_Response</span><span class="sxs-lookup"><span data-stu-id="94586-119">put_Response</span></span>](#put_response) | <span data-ttu-id="94586-120">Response プロパティを設定します。</span><span class="sxs-lookup"><span data-stu-id="94586-120">Set the Response property.</span></span>
 
-## <span data-ttu-id="8d5f0-119">Members</span><span class="sxs-lookup"><span data-stu-id="8d5f0-119">Members</span></span>
+## <span data-ttu-id="94586-121">Members</span><span class="sxs-lookup"><span data-stu-id="94586-121">Members</span></span>
 
-#### <span data-ttu-id="8d5f0-120">get_Request</span><span class="sxs-lookup"><span data-stu-id="8d5f0-120">get_Request</span></span> 
+#### <span data-ttu-id="94586-122">get_Request</span><span class="sxs-lookup"><span data-stu-id="94586-122">get_Request</span></span> 
 
-<span data-ttu-id="8d5f0-121">HTTP 要求。</span><span class="sxs-lookup"><span data-stu-id="8d5f0-121">The HTTP request.</span></span>
+<span data-ttu-id="94586-123">HTTP 要求。</span><span class="sxs-lookup"><span data-stu-id="94586-123">The HTTP request.</span></span>
 
-> <span data-ttu-id="8d5f0-122">パブリック HRESULT [get_Request](#get_request)([ICoreWebView2WebResourceRequest](icorewebview2webresourcerequest.md) \* \* Request)</span><span class="sxs-lookup"><span data-stu-id="8d5f0-122">public HRESULT [get_Request](#get_request)([ICoreWebView2WebResourceRequest](icorewebview2webresourcerequest.md) \*\* request)</span></span>
+> <span data-ttu-id="94586-124">パブリック HRESULT [get_Request](#get_request)([ICoreWebView2WebResourceRequest](icorewebview2webresourcerequest.md) \* \* Request)</span><span class="sxs-lookup"><span data-stu-id="94586-124">public HRESULT [get_Request](#get_request)([ICoreWebView2WebResourceRequest](icorewebview2webresourcerequest.md) \*\* request)</span></span>
 
-#### <span data-ttu-id="8d5f0-123">get_ResourceContext</span><span class="sxs-lookup"><span data-stu-id="8d5f0-123">get_ResourceContext</span></span> 
+#### <span data-ttu-id="94586-125">get_ResourceContext</span><span class="sxs-lookup"><span data-stu-id="94586-125">get_ResourceContext</span></span> 
 
-<span data-ttu-id="8d5f0-124">Web リソース要求のコンテキスト。</span><span class="sxs-lookup"><span data-stu-id="8d5f0-124">The web resource request contexts.</span></span>
+<span data-ttu-id="94586-126">Web リソース要求のコンテキスト。</span><span class="sxs-lookup"><span data-stu-id="94586-126">The web resource request contexts.</span></span>
 
-> <span data-ttu-id="8d5f0-125">パブリック HRESULT [get_ResourceContext](#get_resourcecontext)(COREWEBVIEW2_WEB_RESOURCE_CONTEXT \* コンテキスト)</span><span class="sxs-lookup"><span data-stu-id="8d5f0-125">public HRESULT [get_ResourceContext](#get_resourcecontext)(COREWEBVIEW2_WEB_RESOURCE_CONTEXT \* context)</span></span>
+> <span data-ttu-id="94586-127">パブリック HRESULT [get_ResourceContext](#get_resourcecontext)(COREWEBVIEW2_WEB_RESOURCE_CONTEXT \* コンテキスト)</span><span class="sxs-lookup"><span data-stu-id="94586-127">public HRESULT [get_ResourceContext](#get_resourcecontext)(COREWEBVIEW2_WEB_RESOURCE_CONTEXT \* context)</span></span>
 
-#### <span data-ttu-id="8d5f0-126">get_Response</span><span class="sxs-lookup"><span data-stu-id="8d5f0-126">get_Response</span></span> 
+#### <span data-ttu-id="94586-128">get_Response</span><span class="sxs-lookup"><span data-stu-id="94586-128">get_Response</span></span> 
 
-<span data-ttu-id="8d5f0-127">HTTP 応答。</span><span class="sxs-lookup"><span data-stu-id="8d5f0-127">The HTTP response.</span></span>
+<span data-ttu-id="94586-129">HTTP 応答。</span><span class="sxs-lookup"><span data-stu-id="94586-129">The HTTP response.</span></span>
 
-> <span data-ttu-id="8d5f0-128">パブリック HRESULT [get_Response](#get_response)([ICoreWebView2WebResourceResponse](icorewebview2webresourceresponse.md) \* \* 応答)</span><span class="sxs-lookup"><span data-stu-id="8d5f0-128">public HRESULT [get_Response](#get_response)([ICoreWebView2WebResourceResponse](icorewebview2webresourceresponse.md) \*\* response)</span></span>
+> <span data-ttu-id="94586-130">パブリック HRESULT [get_Response](#get_response)([ICoreWebView2WebResourceResponse](icorewebview2webresourceresponse.md) \* \* 応答)</span><span class="sxs-lookup"><span data-stu-id="94586-130">public HRESULT [get_Response](#get_response)([ICoreWebView2WebResourceResponse](icorewebview2webresourceresponse.md) \*\* response)</span></span>
 
-#### <span data-ttu-id="8d5f0-129">GetDeferral</span><span class="sxs-lookup"><span data-stu-id="8d5f0-129">GetDeferral</span></span> 
+#### <span data-ttu-id="94586-131">GetDeferral</span><span class="sxs-lookup"><span data-stu-id="94586-131">GetDeferral</span></span> 
 
-<span data-ttu-id="8d5f0-130">[ICoreWebView2Deferral](icorewebview2deferral.md)オブジェクトを取得し、イベントを遅延状態にします。</span><span class="sxs-lookup"><span data-stu-id="8d5f0-130">Obtain an [ICoreWebView2Deferral](icorewebview2deferral.md) object and put the event into a deferred state.</span></span>
+<span data-ttu-id="94586-132">[ICoreWebView2Deferral](icorewebview2deferral.md)オブジェクトを取得し、イベントを遅延状態にします。</span><span class="sxs-lookup"><span data-stu-id="94586-132">Obtain an [ICoreWebView2Deferral](icorewebview2deferral.md) object and put the event into a deferred state.</span></span>
 
-> <span data-ttu-id="8d5f0-131">パブリック HRESULT [Getdeferral](#getdeferral)([ICoreWebView2Deferral](icorewebview2deferral.md) \* \* 延期)</span><span class="sxs-lookup"><span data-stu-id="8d5f0-131">public HRESULT [GetDeferral](#getdeferral)([ICoreWebView2Deferral](icorewebview2deferral.md) \*\* deferral)</span></span>
+> <span data-ttu-id="94586-133">パブリック HRESULT [Getdeferral](#getdeferral)([ICoreWebView2Deferral](icorewebview2deferral.md) \* \* 延期)</span><span class="sxs-lookup"><span data-stu-id="94586-133">public HRESULT [GetDeferral](#getdeferral)([ICoreWebView2Deferral](icorewebview2deferral.md) \*\* deferral)</span></span>
 
-<span data-ttu-id="8d5f0-132">[ICoreWebView2Deferral](icorewebview2deferral.md)オブジェクトを使って、後でネットワーク要求を完了することができます。</span><span class="sxs-lookup"><span data-stu-id="8d5f0-132">You can use the [ICoreWebView2Deferral](icorewebview2deferral.md) object to complete the network request at a later time.</span></span>
+<span data-ttu-id="94586-134">[ICoreWebView2Deferral](icorewebview2deferral.md)オブジェクトを使って、後でネットワーク要求を完了することができます。</span><span class="sxs-lookup"><span data-stu-id="94586-134">You can use the [ICoreWebView2Deferral](icorewebview2deferral.md) object to complete the network request at a later time.</span></span>
 
-#### <span data-ttu-id="8d5f0-133">put_Response</span><span class="sxs-lookup"><span data-stu-id="8d5f0-133">put_Response</span></span> 
+#### <span data-ttu-id="94586-135">put_Response</span><span class="sxs-lookup"><span data-stu-id="94586-135">put_Response</span></span> 
 
-<span data-ttu-id="8d5f0-134">Response プロパティを設定します。</span><span class="sxs-lookup"><span data-stu-id="8d5f0-134">Set the Response property.</span></span>
+<span data-ttu-id="94586-136">Response プロパティを設定します。</span><span class="sxs-lookup"><span data-stu-id="94586-136">Set the Response property.</span></span>
 
-> <span data-ttu-id="8d5f0-135">パブリック HRESULT [put_Response](#put_response)([ICoreWebView2WebResourceResponse](icorewebview2webresourceresponse.md) \* Response)</span><span class="sxs-lookup"><span data-stu-id="8d5f0-135">public HRESULT [put_Response](#put_response)([ICoreWebView2WebResourceResponse](icorewebview2webresourceresponse.md) \* response)</span></span>
+> <span data-ttu-id="94586-137">パブリック HRESULT [put_Response](#put_response)([ICoreWebView2WebResourceResponse](icorewebview2webresourceresponse.md) \* Response)</span><span class="sxs-lookup"><span data-stu-id="94586-137">public HRESULT [put_Response](#put_response)([ICoreWebView2WebResourceResponse](icorewebview2webresourceresponse.md) \* response)</span></span>
 
