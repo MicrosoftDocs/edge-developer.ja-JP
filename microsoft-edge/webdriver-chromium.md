@@ -3,75 +3,67 @@ description: Microsoft Edge で web サイトまたはアプリをテストす�
 title: WebDriver (Chromium)
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 06/01/2020
+ms.date: 06/08/2020
 ms.topic: article
 ms.prod: microsoft-edge
 ms.technology: devtools
 keywords: microsoft edge、web 開発、html、css、javascript、開発者、webdriver、selenium、テスト、ツール、オートメーション、テスト
-ms.openlocfilehash: 52d1a92df1a0faa21a1f8caa780fe203ad27856e
-ms.sourcegitcommit: d39c64e0d439eb0643950248cdf2282383779225
+ms.openlocfilehash: 14537943351db144bb4839d6befbfaa62894cd85
+ms.sourcegitcommit: 3f8c8a5643e416b0851254833f9771192883ec45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "10689676"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "10699508"
 ---
-# WebDriver (Chromium)  
+# テストオートメーションに WebDriver (Chromium) を使用する  
 
-W3C [Webdriver][W3CWebdriver] API は、プラットフォームと言語に依存しないインターフェイスとワイヤプロトコルであり、Microsoft Edge \ (Chromium \) などの web ブラウザーの動作をプログラムまたはスクリプトで制御できます。  
+WebDriver を使うと、開発者は、ユーザーの操作をシミュレートする自動テストを作成できます。  WebDriver のテストとシミュレーションは、次の理由から、JavaScript 単体テストとは異なります。 
+*   ブラウザーで実行されている JavaScript では利用できない機能と情報にアクセスします。  
+*   ユーザーイベントや OS レベルのイベントをより正確にシミュレートします。  
+*   単一のテストセッションで複数のウィンドウ、タブ、web ページ間のテストを管理します。  
+*   特定のコンピューターで Microsoft Edge の複数のセッションを実行します。  
 
-WebDriver を使うと、開発者は、ユーザーの操作をシミュレートする自動テストを作成できます。  Webdriver のテストとシミュレーションは JavaScript 単体テストとは異なります。 WebDriver はブラウザーで実行されている JavaScript の機能と情報にアクセスできないため、Webdriver はユーザーイベントや OS レベルのイベントをより正確にシミュレートすることができます。  WebDriver は、1つのテストセッションで複数のウィンドウ、タブ、web ページにわたるテストを管理できます。  
-
-ここでは、Microsoft Edge \ (Chromium) の WebDriver の使用を開始する方法について説明します。  
+次のセクションでは、Microsoft Edge \ (Chromium \) の WebDriver の使用を開始する方法について説明します。  
 
 ## Microsoft Edge をインストールする (Chromium)  
 
-まだインストールしていない場合は、 [Microsoft Edge (Chromium) をインストール][MicrosoftEdge]してください。  コンピューターにプレインストールされているバージョンの Microsoft Edge を使用している場合は、microsoft edge \ (Chromium \) と Microsoft Edge \ (EdgeHTML \) がインストールされていることを確認してください。  簡単に確認するには、 `edge://settings/help` ブラウザーに読み込み、バージョン番号が v75 以降であることを確認します。  
+[Microsoft Edge (Chromium)][MicrosoftEdge]をインストールしていることを確認します。  Microsoft Edge (Chromium) がインストールされていることを確認するには、ブラウザーでに移動して、 `edge://settings/help` バージョン番号がバージョン75以降であることを確認します。  
 
 ## Microsoft Edge ドライバーをダウンロードする  
 
-WebDriver では、ブラウザー固有のドライバーを各ブラウザーで自動化する必要があります。  Microsoft Edge \ (Chromium \) については、WebDriver には、テストまたは自動化する Microsoft Edge のビルド用の適切な[Microsoft Edge ドライバー][MicrosoftDeveloperEdgeToolsWebdriver]が必要です。  
+テストの自動化を開始するには、次の手順を使用して、インストールした WebDriver のバージョンがお使いのブラウザーのバージョンと一致していることを確認します。  
 
-適切なビルド番号を確認するには、次の手順を使用します。  
-
-1.  Microsoft Edge を起動する 
-1.  Microsoft Edge \ (Chromium \) バージョンを表示します。  
-    *   次に移動します:  `edge://settings/help`  
-    *   `...`  >  **Settings**  >   **Microsoft Edge に関する**設定を選択する  
-1.  ビルドの適切なバージョンの WebDriver を確認して、適切に動作するようにします。  
-
-:::image type="complex" source="./media/webdriver-chromium/edge-version.png" alt-text="2020年1月14日の Microsoft Edge カナリアのビルド番号":::
-   図 1.   2020年1月14日の Microsoft Edge カナリアのビルド番号  
-:::image-end:::  
-
-次に、[対応するバージョンの Microsoft Edge ドライバーをダウンロード][MicrosoftDeveloperEdgeToolsWebdriverDownloads]します。  
-
-:::image type="complex" source="./media/webdriver-chromium/edge-driver-install.png" alt-text="Microsoft Edge ドライバーページのダウンロードセクション":::
-   図 2.   [Microsoft Edge ドライバー][MicrosoftDeveloperEdgeToolsWebdriverDownloads]ページのダウンロードセクション  
-:::image-end:::  
-
-> [!NOTE]
-> Microsoft edge \ (EdgeHTML \) は[Microsoft Edge ドライバー][MicrosoftDeveloperEdgeToolsWebdriverDownloads]では動作しません。  Microsoft Edge \ (EdgeHTML \) を自動化するには、microsoft [WebDriver For Microsoft edge \ (EdgeHTML \)][Webdriver]をダウンロードする必要があります。  
+1.  「 `edge://settings/help` Edge のバージョンを取得する」に移動します。  
+    
+    :::image type="complex" source="./media/webdriver-chromium/edge-version.png" alt-text="2020年1月14日の Microsoft Edge カナリアのビルド番号":::
+       図 1.   2020年1月14日の Microsoft Edge カナリアのビルド番号
+    :::image-end:::  
+    
+1.  [Microsoft Edge ドライバーのダウンロード][MicrosoftDeveloperEdgeToolsWebdriverDownloads]ページに移動して、Edge のバージョン番号と一致するドライバーをダウンロードします。  
+    
+    :::image type="complex" source="./media/webdriver-chromium/edge-driver-install.png" alt-text="Microsoft Edge ドライバーページのダウンロードセクション":::
+       図 2.   [Microsoft Edge ドライバー][MicrosoftDeveloperEdgeToolsWebdriver]ページのダウンロードセクション
+    :::image-end:::  
+    
+    > [!NOTE] 
+    > Microsoft Edge (EdgeHTML) を使用したテストオートメーションの詳細については、「microsoft [edge 用 Microsoft WebDriver (EdgeHTML)][Webdriver]」を参照してください。  
 
 ## WebDriver 言語バインドの選択  
 
-ダウンロードする必要がある最後のコンポーネントは、言語固有のクライアントドライバーです。  言語バインディングは、Python、Java、C \ #、ルビ、JavaScript で記述したコードを、[前のセクションでダウンロード](#download-microsoft-edge-driver)した Microsoft edge ドライバーが microsoft edge \ (Chromium \) で実行できるように変換します。  
+ダウンロードする必要がある最後のコンポーネントは、コード \ (Python、Java、C \ #、ルビ、JavaScript \ #、ルビ、JavaScript \ #、ルビ、JavaScript \) をコマンドに変換するための言語固有のクライアントドライバーです。 microsoft edge ドライバーは Microsoft Edge \ (Chromium \) で実行されます。  
 
-[選択した WebDriver 言語バインドをダウンロード][SeleniumDownloads]します。  Microsoft Edge チームでは、Microsoft Edge \ (Chromium \) の組み込みサポートが[4.00 Selenium][NugetPackagesSeleniumWebdriver400alpha05]れているため、alpha05 以降を強くお勧めします。  ただし、現在の厩舎 Selenium 3 リリースを含む、Selenium のすべての旧バージョンで Microsoft Edge \ (Chromium \) を使用することができます。  
+[選択した WebDriver 言語バインドをダウンロード][SeleniumDownloads]します。  Microsoft edge チームは、Microsoft Edge \ (Chromium \) をサポートしているため、 [Selenium 4.00 alpha05][NugetPackagesSeleniumWebdriver400alpha05]以降をお勧めします。  ただし、現在の厩舎 Selenium 3 リリースを含む、Selenium のすべての旧バージョンで Microsoft Edge \ (Chromium \) を制御することができます。  
 
 > [!IMPORTANT]
-> を使用して Microsoft Edge \ (Chromium \) を以前に自動化またはテストしている場合 `ChromeDriver` `ChromeOptions` 、webdriver コードは Microsoft Edge v80 以降で正常に動作しません。  この変更は中断されています。 Microsoft Edge \ (Chromium \) では、このコマンドは受け入れられなくなりました。  `EdgeOptions`クラスと[Microsoft Edge ドライバー][MicrosoftDeveloperEdgeToolsWebdriver]を使うようにテストを変更する必要があります。  
+> 以前に Microsoft Edge \ (Chromium \) とクラスを使って自動化またはテストしている場合 `ChromeDriver` `ChromeOptions` 、webdriver コードは Microsoft Edge バージョン80以降では実行されません。  この問題を解決するには、クラスを使用するようにテストを更新 `EdgeOptions` し、 [Microsoft Edge ドライバー][MicrosoftDeveloperEdgeToolsWebdriver]をインストールします。  
 
-### Selenium 3 の使用  
+### Selenium 3 を使用する  
 
-[Selenium 3][|::ref1::|]は最新の安定した Selenium リリースです。  既定では、Selenium 3 は古い Microsoft Edge \ (EdgeHTML \) を駆動しており、Microsoft Edge \ (Chromium \) の組み込みサポートはありません。  Selenium 3 を Microsoft Edge \ (Chromium \) で使用するには、 [Microsoft edge パッケージ用の Selenium Tools][GithubMicrosoftEdgeSeleniumTools]をインストールします。  Microsoft Edge 用 Selenium Tools は、更新されたドライバーを使用して Selenium 3 を拡張し、Microsoft Edge \ (EdgeHTML \) と新しい Microsoft Edge \ (Chromium \) のブラウザーの両方の自動テストを作成するのに役立ちます。  
-
-Microsoft Edge 用 Selenium Tools は、Selenium 3 と、既存のブラウザーテストを行っていて、Selenium バージョンを変更せずに新しい Microsoft Edge \ (Chromium \) ブラウザーを追加する必要がある開発者向けのソリューションです。  `EdgeDriver` `EdgeDriverService` ツールに含まれているクラスとクラスは、Selenium の組み込みの同等の機能と完全に互換性があり、Microsoft Edge \ (EdgeHTML \) を既定で実行できます。このため、ツールは Selenium 内の既存の Edge クラスに対してシームレスなドロップイン置換として使うことができます。  
-
-[Microsoft edge の Selenium ツールをインストール][GithubMicrosoftEdgeSeleniumTools]して、Selenium 3 プロジェクトで microsoft edge \ (Chromium) を使い始めることができます。  
+既に[Selenium 3][|::ref1::|]を使用している場合は、既存のブラウザーのテストが完了している可能性があります。また、Selenium のバージョンを変更せずに Microsoft Edge \ (Chromium \) のカバレッジを追加することもできます。  [Selenium 3][|::ref2::|]を使用して microsoft edge \ (EdgeHTML \) と microsoft edge \ (Chromium \) の自動テストを作成するには、更新されたドライバーを使用するために、 [microsoft Edge パッケージの Selenium Tools][GithubMicrosoftEdgeSeleniumTools]をインストールします。  `EdgeDriver` `EdgeDriverService` ツールに含まれているクラスとクラスは、Selenium 4 の組み込みの対応物と完全に互換性があります。  
 
 ## WebDriver で Microsoft Edge (Chromium) を使用する
 
-次の例は、Selenium 3 または4のいずれかを使って実行できます。  Selenium 3 で使用するには、 [Microsoft Edge 用の Selenium Tools][GithubMicrosoftEdgeSeleniumTools]がインストールされている必要があります。  
+Selenium 3 または4のいずれかを使用して、次の例を実行できます。  Selenium 3 で使用するには、 [Microsoft Edge パッケージの Selenium ツール][GithubMicrosoftEdgeSeleniumTools]をインストールする必要があります。  
 
 ### 基本的な使用方法  
 
@@ -105,7 +97,7 @@ let driver = edge.Driver.createSession();
 
 ### Microsoft Edge の推進 (Chromium)  
 
-代わりに Microsoft Edge \ (Chromium \) で使用するには、新しいクラスを作成し、プロパティがに設定された `EdgeDriver` `EdgeOptions` オブジェクトを渡し `UseChromium` `true` ます。  
+Microsoft Edge \ (Chromium \) で使用するには、新しい `EdgeDriver` クラスを作成し、 `EdgeOptions` プロパティが set に設定されたオブジェクトを渡し `UseChromium` `true` ます。  
 
 #### [C#](#tab/c-sharp/)  
 
@@ -142,9 +134,12 @@ let driver = edge.Driver.createSession(options);
 
 * * *  
 
+> [!NOTE]
+> [DeveloperToolsAvailability][DeployedgePoliciesDevelopertoolsavailability]ポリシーがに設定されている場合 `2` 、ドライバーは[microsoft edge devtools][DevToolsMain]を使用しているため、Microsoft edge[ドライバー][MicrosoftDeveloperEdgeToolsWebdriver]は[microsoft edge (Chromium)][MicrosoftEdge]を実行できません。  [DeveloperToolsAvailability][DeployedgePoliciesDevelopertoolsavailability] `0` `1` [Microsoft Edge (Chromium)][MicrosoftEdge]に DeveloperToolsAvailability ポリシーを設定していることを確認します。  
+
 ### 特定のブラウザーのバイナリを選択する (Chromium のみ)  
 
-特定の `EdgeOptions` バイナリを選択するには、クラスを使います。  Microsoft edge ベータ版などの[Microsoft edge preview チャネル][MicrosoftedgeinsiderDownload]をテストする場合に便利です。  
+このクラスは、 `EdgeOptions` Microsoft Edge (Chromium) の特定のバイナリで使うことができます。  たとえば、microsoft Edge ベータ版などの[Microsoft edge preview チャネル][MicrosoftedgeinsiderDownload]を使用してテストを実行できます。  
 
 #### [C#](#tab/c-sharp/)  
 
@@ -190,7 +185,7 @@ let driver = edge.Driver.createSession(options);
 
 <a id="customizing-microsoft-edge-driver-services-code"></a>  
 
-クラスを `EdgeDriver` 使ってクラスのインスタンスを作成すると `EdgeOptions` 、 `EdgeDriverService` microsoft Edge \ (EdgeHTML \) または microsoft Edge \ (Chromium \) の適切なクラスが自動的に作成され、起動されます。  
+クラス `EdgeDriver` インスタンスがクラスを使用して作成されると `EdgeOptions` 、 `EdgeDriverService` microsoft Edge \ (EdgeHTML \) または microsoft Edge \ (Chromium \) のいずれかに適切なクラスが作成されて起動します。  
 
 を作成する場合は `EdgeDriverService` 、メソッドを使用して Microsoft Edge \ (Chromium \) 用に構成されたものを作成し `CreateChromiumService()` ます。  以下のコードでは、冗長ログ出力を有効にするなど、追加のカスタマイズに役立つ場合があります。  
 
@@ -203,16 +198,15 @@ using (var service = EdgeDriverService.CreateChromiumService())
 }
 ```  
 
-> [!NOTE]
-> クラスのインスタンスを渡すときに、オブジェクトを指定する必要はありません `EdgeOptions` `EdgeDriver` `EdgeDriverService` 。  この `EdgeDriver` クラスは、提供するサービスの種類に応じて、Microsoft edge \ (EdgeHTML \) または Microsoft edge \ (Chromium) のいずれかの既定のオプションを使用します。  
-> 
-> ただし、クラスとクラスの両方を提供する場合は、 `EdgeDriverService` `EdgeOptions` 両方が同じバージョンの Microsoft Edge で構成されていることを確認する必要があります。  たとえば、既定の Microsoft Edge \ (EdgeHTML \) `EdgeDriverService` クラスと Chromium プロパティをクラスで使うことはできません `EdgeOptions` 。  この `EdgeDriver` クラスは、異なるバージョンの使用を防ぐためにエラーをスローします。  
+> [!NOTE] 
+>`EdgeOptions`インスタンスに渡すときに、オブジェクトを指定する必要はありません `EdgeDriverService` `EdgeDriver` 。 この `EdgeDriver` クラスは、提供するサービスに応じて、Microsoft edge \ (EdgeHTML \) または Microsoft edge \ (Chromium) のいずれかの既定のオプションを使用します。  
+> ただし、両方のクラスを提供する場合は、 `EdgeDriverService` `EdgeOptions` 両方が同じバージョンの Microsoft Edge に対して構成されていることを確認します。  たとえば、既定の Microsoft Edge (EdgeHTML) `EdgeDriverService` クラスと Chromium プロパティをクラスで使うことはできません `EdgeOptions` 。  この `EdgeDriver` クラスは、異なるバージョンの使用を防ぐためにエラーをスローします。  
 
 #### [Python](#tab/python/)  
 
 <a id="customizing-microsoft-edge-driver-services-code"></a>  
 
-Python を使っている場合、オブジェクトはを `Edge` 作成して管理し `EdgeService` ます。  を構成するには `EdgeService` 、オブジェクトに追加の引数を渡し `Edge` ます。
+Python を使っている場合、オブジェクトはを `Edge` 作成して管理し `EdgeService` ます。  を構成するには `EdgeService` 、 `Edge` 次のコードで示されているように、追加の引数をオブジェクトに渡します。  
 
 ```python
 service_args = ['--verbose']
@@ -224,19 +218,18 @@ driver = Edge(service_args = service_args)
 <a id="customizing-microsoft-edge-driver-services-code"></a>  
 
 JavaScript を使っている場合は、クラスでを作成して構成し `Service` `ServiceBuilder` ます。  必要に応じて、 `Service` `Driver` サービスを開始して停止するオブジェクトにオブジェクトを渡すことができます。  
-
-を構成するには、 `Service` メソッドを使う前にクラスで追加のメソッドを実行して `ServiceBuilder` `build()` から、 `service` メソッドのパラメーターとしてを渡し `Driver.createSession()` ます。  
+を構成するには `Service` 、 `ServiceBuilder` メソッドを使用する前に、クラスの追加のメソッドを実行し `build()` ます。  次に、 `service` メソッドのパラメーターとしてを渡し `Driver.createSession()` ます。  
 
 ```javascript
 let service = new edge.ServiceBuilder().enableVerboseLogging().build();
 let driver = edge.Driver.createSession(options, service);
 ```  
 
-* * *  
+* * * 
 
 ### Chromium 固有のオプションを使用する  
 
-プロパティとして設定されたクラスを使用 `EdgeOptions` `UseChromium` すると `true` 、Selenium の[ChromeOptions][SeleniumWebDriverChromeoptionsClass]クラスで利用できるものと同じすべてのメソッドとプロパティにアクセスすることができます。  たとえば、他の Chromium ブラウザーの場合と同様に、メソッドを使用して、 `EdgeOptions.AddArguments()` 次のコードの[ヘッドレスモード][WikiHeadlessBrowser]で Microsoft Edge \ (Chromium) を実行します。  
+`UseChromium`プロパティをに設定すると `true` 、 `EdgeOptions` 他の Chromium ブラウザーを自動化したときと同じ[Chromium 固有のプロパティやメソッド][SeleniumWebDriverChromeoptionsClass]に、このクラスを使ってアクセスできます。  
 
 #### [C#](#tab/c-sharp/)  
 
@@ -270,12 +263,12 @@ options.setEdgeChromium(true);
 options.addArguments("headless");
 options.addArguments("disable-gpu");
 ```
+
 * * *  
-
 > [!NOTE]
-> [Chromium 固有のプロパティとメソッド][SeleniumWebDriverChromeoptionsClass]は常に使用できますが、 `UseChromium` プロパティがに設定されていない場合は効果がありません `true` 。  同様に、 `UseChromium` プロパティがに設定されている場合は、Microsoft Edge \ (EdgeHTML \) 用の既存のプロパティとメソッドは効果がありません `true` 。  
+> `UseChromium`プロパティがに設定されている場合 `true` は、Microsoft Edge \ (EdgeHTML \) のプロパティとメソッドは使用できません。  
 
-## Web ドライバーを設定するその他の方法  
+## その他の WebDriver のインストールオプション  
 
 ### Chocolatey  
 
@@ -289,7 +282,7 @@ choco install selenium-chromium-edge-driver
 
 ### Docker  
 
-[Docker][DockerHub]を使用している場合は、次のコマンドを実行して、microsoft edge \ (Chromium \) および[microsoft edge ドライバー][MicrosoftDeveloperEdgeToolsWebdriver]で事前に構成された画像をダウンロードしてください。  
+[Docker][DockerHub]を使用している場合は、次のコマンドを実行して、microsoft edge \ (Chromium \) と[microsoft edge ドライバー][MicrosoftDeveloperEdgeToolsWebdriver]がプレインストールされている事前構成済みイメージをダウンロードします。  
 
 ```console
 docker run -d -p 9515:9515 mcr.microsoft.com/msedge/msedgedriver
@@ -297,7 +290,7 @@ docker run -d -p 9515:9515 mcr.microsoft.com/msedge/msedgedriver
 
 詳細については、「 [Docker Hub のコンテナー][DockerHubMsedgedriver]」を参照してください。  
 
-## Microsoft Edge DevTools チームと連絡を取り合う    
+## Microsoft Edge DevTools チームと連絡を取り合う  
 
 Microsoft Edge チームは、WebDriver、Selenium、Microsoft Edge の使用に関するフィードバックをお寄せください。  Microsoft Edge DevTools またはツイート[@EdgeDevTools][TwitterTweetEdgeDevTools]の**フィードバック**アイコンを使用して、チームに自分の意見を伝えます。  
 
@@ -310,7 +303,10 @@ Microsoft Edge チームは、WebDriver、Selenium、Microsoft Edge の使用に
 
 <!-- links -->  
 
+[DevToolsMain]: ./devtools-guide-chromium.md "Microsoft Edge (Chromium) 開発者ツール |Microsoft ドキュメント"
 [Webdriver]: ./webdriver.md "WebDriver (EdgeHTML) |Microsoft ドキュメント"  
+
+[DeployedgePoliciesDevelopertoolsavailability]: /deployedge/microsoft-edge-policies#developertoolsavailability "DeveloperToolsAvailability-Microsoft Edge-ポリシー |Microsoft ドキュメント"  
 
 [Chocolatey]: https://chocolatey.org "Chocolatey |Chocolatey ソフトウェア"  
 [ChocolateyPackagesSeleniumChromiumEdgeDriver]: https://chocolatey.org/packages/selenium-chromium-edge-driver "Selenium Chromium Edge Driver |Chocolatey"  
