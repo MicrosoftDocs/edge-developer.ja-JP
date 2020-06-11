@@ -2,16 +2,16 @@
 title: Microsoft Edge DevTools を使った Cookie の表示、編集、削除
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 04/30/2020
+ms.date: 06/10/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 084c4116cd4c9c5e70b2fe341257fa68ba2c8ae7
-ms.sourcegitcommit: ad68bfbb355f6cfdaaf6612b77ea3985d4d6a58b
+ms.openlocfilehash: 4bfd99a36a6a3f8fdf8dbd7787bd54cde87d79da
+ms.sourcegitcommit: f010f43604bd4363af6827f79dbc071b9afcb667
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "10612069"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "10708948"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -27,32 +27,26 @@ ms.locfileid: "10612069"
    See the License for the specific language governing permissions and
    limitations under the License.  -->
 
+# Microsoft Edge DevTools を使った cookie の表示、編集、削除  
 
+[HTTP cookie][MDNHTTPCookies]は主に、ユーザーセッションを管理するために使用され、ユーザーの個人設定の設定を保存し、ユーザーの動作を追跡するために使用されます。  Cookie は、web 上で表示される、"このページに cookie が使用されています" という承諾フォームもあります。  次のガイドでは、 [Microsoft Edge DevTools][MicrosoftEdgeDevTools]を使って、ページの HTTP cookie の表示、編集、削除を行う方法について説明します。  
 
-
-
-# Microsoft Edge DevTools を使った Cookie の表示、編集、削除   
-
-  
-
-[HTTP cookie][MDNHTTPCookies]は主に、ユーザーセッションを管理するために使用され、ユーザーの個人設定の設定を保存し、ユーザーの動作を追跡するために使用されます。  また、これらのページは、web 上で表示される cookie の承認フォームを使用していることもあります。  このガイドでは、 [Microsoft Edge DevTools][MicrosoftEdgeDevTools]を使って、ページの HTTP cookie を表示、編集、削除する方法について説明します。  
-
-## [Cookies] ウィンドウを開く   
+## [Cookies] ウィンドウを開く  
 
 1.  [DevTools を開き][DevToolsOpen]ます。  
 1.  [**アプリケーション**] タブを選択して、[**アプリケーション**] パネルを開きます。  **マニフェスト**ウィンドウが開きます。  
     
-    > ##### 図 1  
-    > マニフェストウィンドウ  
-    > ![マニフェストウィンドウ][ImageManifest]  
+    :::image type="complex" source="../media/storage-application-manifest-empty.msft.png" alt-text="マニフェストウィンドウ" lightbox="../media/storage-application-manifest-empty.msft.png":::
+       図 1: [マニフェスト] ウィンドウ  
+    :::image-end:::  
 
 1.  [**記憶域**] で [ **cookie**] を展開し、[起点] を選択します。  
     
-    > ##### 図 2  
-    > [Cookie] ウィンドウ  
-    > ![[Cookie] ウィンドウ][ImageCookies]  
+    :::image type="complex" source="../media/storage-application-storage-cookies-selected.msft.png" alt-text="[Cookie] ウィンドウ" lightbox="../media/storage-application-storage-cookies-selected.msft.png":::
+       図 2: [Cookie] ウィンドウ  
+    :::image-end:::  
 
-## フィールド   
+## フィールド  
 
 **Cookies**テーブルには、次のフィールドが含まれています。  
 
@@ -65,58 +59,50 @@ ms.locfileid: "10612069"
 *   **HTTP**。  True の場合、このフィールドは、cookie が HTTP 経由でのみ使用され、JavaScript の変更が許可されていないことを示します。  「 [Httponly cookie][MDNHTTPCookiesSecure]」を参照してください。  
 *   **セキュリティ保護さ**れます。  True の場合、このフィールドは、cookie がセキュリティで保護された HTTPS 接続を介してのみサーバーに送信される必要があることを示します。  「[安全な cookie][MDNHTTPCookiesSecure]」をご覧ください。  
 *   **SameSite**。  `strict` `lax` Cookie が実験的な[Samesite][MDNHTTPCookiesSamesite]属性を使用しているかどうかを示します。  
+*   **優先度**。  含ま `low` れる `medium` 場合は、\ (既定値 \)、または `high` cookie が "減価償却[cookie の優先順位][ChromiumIssue232693]" 属性を使っているかどうかを示します。
 
-## Cookie をフィルター処理する   
+## Cookie をフィルター処理する  
 
 **名前**または**値**で cookie をフィルター処理するには、[**フィルター** ] テキストボックスを使用します。  他のフィールドによるフィルター処理はサポートされていません。  
 
-> ##### 図 3  
-> テキストが含まれていないすべての cookie をフィルターで除外する `ID`  
-> ![テキスト ID が含まれていないすべての cookie をフィルターで除外する][ImageCookiesFilter]  
+:::image type="complex" source="../media/storage-application-storage-cookies-filter-id.msft.png" alt-text="テキスト ID が含まれていないすべての cookie をフィルターで除外する" lightbox="../media/storage-application-storage-cookies-filter-id.msft.png":::
+   図 3: テキストが含まれていないすべての cookie をフィルター処理する `ID`  
+:::image-end:::  
 
-## Cookie を編集する   
+## Cookie を編集する  
 
 [**名前**]、[**値**]、[**ドメイン**]、[**パス**]、[**有効期限**]、[最大有効期限] の各フィールドは編集できます。  
 フィールドをダブルクリックして編集します。  
 
-> ##### 図 4  
-> クッキーの名前の設定 `DEVTOOLS!`  
-> ![DEVTOOLS に cookie の名前を設定します。][ImageEditCookie]  
+:::image type="complex" source="../media/storage-application-storage-cookies-rename.msft.png" alt-text="DEVTOOLS に cookie の名前を設定します。" lightbox="../media/storage-application-storage-cookies-rename.msft.png":::
+   図 4: クッキーの名前を設定する `DEVTOOLS!`  
+:::image-end:::  
 
-## Cookie を削除する   
+## Cookie を削除する  
 
-Cookie を選択し、[**選択し**た削除の削除] をクリックし ![ て、 ][ImageDeleteIcon] 1 つの cookie を削除します。  
+Cookie を選択して、[選択した削除の**削除] を**選択し ![ ][ImageDeleteIcon] 、特定の cookie を削除します。  
 
-> ##### 図 5  
-> 特定の cookie を削除する  
-> ![特定の cookie を削除する][ImageDeleteCookie]  
+:::image type="complex" source="../media/storage-application-storage-cookies-delete-selected.msft.png" alt-text="特定の cookie を削除する" lightbox="../media/storage-application-storage-cookies-delete-selected.msft.png":::
+   図 5: 特定の cookie を削除する  
+:::image-end:::  
 
 すべて**Clear All**の ![ ][ImageClearIcon] cookie を削除するには、[すべてクリア] を選択します。  
 
-> ##### 図 6  
-> すべての cookie をクリアする  
-> ![すべての cookie をクリアする][ImageClearAllCookies]  
-
-<!--    -->  
-
-  
+:::image type="complex" source="../media/storage-application-storage-cookies-clear-all.msft.png" alt-text="すべての cookie をクリアする" lightbox="../media/storage-application-storage-cookies-clear-all.msft.png":::
+   図 6: すべての cookie をクリアする  
+:::image-end:::  
 
 <!-- image links -->  
 
-[ImageClearIcon]: /microsoft-edge/devtools-guide-chromium/media/clear-icon.msft.png  
-[ImageDeleteIcon]: /microsoft-edge/devtools-guide-chromium/media/delete-icon.msft.png  
-
-[ImageManifest]: /microsoft-edge/devtools-guide-chromium/media/storage-application-manifest-empty.msft.png "図 1: [マニフェスト] ウィンドウ"  
-[ImageCookies]: /microsoft-edge/devtools-guide-chromium/media/storage-application-storage-cookies-selected.msft.png "図 2: [Cookie] ウィンドウ"  
-[ImageCookiesFilter]: /microsoft-edge/devtools-guide-chromium/media/storage-application-storage-cookies-filter-id.msft.png "図 3: テキスト ID が含まれていない cookie をフィルター処理する"  
-[ImageEditCookie]: /microsoft-edge/devtools-guide-chromium/media/storage-application-storage-cookies-rename.msft.png "図 4: DEVTOOLS に cookie の名前を設定する"  
-[ImageDeleteCookie]: /microsoft-edge/devtools-guide-chromium/media/storage-application-storage-cookies-delete-selected.msft.png "図 5: 特定の cookie を削除する"  
-[ImageClearAllCookies]: /microsoft-edge/devtools-guide-chromium/media/storage-application-storage-cookies-clear-all.msft.png "図 6: すべての cookie をクリアする"  
+[ImageClearIcon]: ../media/clear-icon.msft.png  
+[ImageDeleteIcon]: ../media/delete-icon.msft.png  
 
 <!-- links -->  
 
 [MicrosoftEdgeDevTools]: /microsoft-edge/devtools-guide-chromium "Microsoft Edge (Chromium) 開発者ツール"  
 [DevToolsOpen]: /microsoft-edge/devtools-guide-chromium/open "Microsoft Edge DevTools を開く"  
+
+[ChromiumIssue232693]: https://bugs.chromium.org/p/chromium/issues/detail?id=232693 "Chromium の問題 232693: Cookie の優先度フィールドの実装 |Chromium のバグ"  
 
 [MDNHTTPCookies]: https://developer.mozilla.org/docs/Web/HTTP/Cookies "HTTP クッキー |MDN"  
 [MDNHTTPCookiesPermanent]: https://developer.mozilla.org/docs/Web/HTTP/Cookies#Permanent_cookies "HTTP クッキー-永続的な cookie |MDN"  

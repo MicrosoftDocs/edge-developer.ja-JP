@@ -2,16 +2,16 @@
 title: Android デバイスのリモートデバッグの概要
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 05/28/2020
+ms.date: 06/05/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: fc7450ba2b088eee8f4005216374980096cbb067
-ms.sourcegitcommit: ba9f0ed77e84174b03262b17e62c6a7e26cfeb3d
+ms.openlocfilehash: c77633c4844f0e576b7dff6574000a78c8c083da
+ms.sourcegitcommit: f010f43604bd4363af6827f79dbc071b9afcb667
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "10688160"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "10708537"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -29,7 +29,7 @@ ms.locfileid: "10688160"
 
 # Android デバイスのリモートデバッグの概要  
 
-Windows または macOS コンピューターから Android デバイス上のリモートデバッグライブコンテンツ。  このチュートリアルページでは、次の操作を実行する方法について説明します。  
+Windows または macOS コンピューターから Android デバイス上のリモートデバッグライブコンテンツ。  次のチュートリアルページでは、次の操作を実行する方法について説明します。  
 
 *   リモートデバッグ用に Android デバイスをセットアップし、開発用コンピューターから検出します。  
 *   開発用コンピューターから Android デバイスのライブコンテンツを検査およびデバッグします。  
@@ -41,11 +41,15 @@ Windows または macOS コンピューターから Android デバイス上の�
 :::image-end:::  
 -->  
 
+> [!NOTE]
+> IOS デバイスでの Microsoft Edge アプリのリモートデバッグは、現在サポートされていません。  次のガイドでは、特に Android デバイスでの Microsoft Edge のリモートデバッグに重点を置いています。
+> MacOS デバイスをお使いの場合は、 [Brightcove のデバッグガイド][BrightcoveSupportDebuggingMobileDevices]に従って、Safari を使用して iOS デバイスで Microsoft Edge をリモートでデバッグしてください。  Safari の Web 検査ツールの詳細については、「 [Safari Web 開発ツール][AppleDeveloperSafariTools]」を参照してください。  
+
 ## 手順 1: Android デバイスを見つける  
 
-以下のワークフローは、ほとんどのユーザーに適しています。  詳細について[は、「開発ツールで Android デバイスが検出されない](#troubleshooting-devtools-is-not-detecting-the-android-device)」を参照してください。  
+以下のワークフローは、ほとんどのユーザーに適しています。  詳細については、「開発[ツールで Android デバイスが検出されていない場合のトラブルシューティング](#troubleshooting-devtools-is-not-detecting-the-android-device)」を参照してください。  
 
-1.  Android で [**開発者向けオプション**] 画面を開きます。  詳細については、「[デバイスの開発者向けオプションを構成する](https://developer.android.com/studio/debug/dev-options.html)」を参照してください。  
+1.  Android で [**開発者向けオプション**] 画面を開きます。  詳細については、「[デバイスの開発者向けオプションを構成する][AndroidDeveloperStudioDevOptions]」を参照してください。  
 1.  [ **USB デバッグを有効にする**] を選びます。  
 1.  開発用コンピューターで、Microsoft Edge を開きます。  
 1.  `edge://inspect`Microsoft Edge でページに移動します。  
@@ -60,7 +64,7 @@ Windows または macOS コンピューターから Android デバイス上の�
        図 2.   Android デバイスでの**USB デバッグ**の許可プロンプト  
     :::image-end:::  
     
-1.  Android デバイスのモデル名が表示される場合は、Microsoft Edge でデバイスへの接続が正常に確立されていることを確認します。  [手順 2](#step-2-debug-content-on-your-android-device-from-your-development-machine)に進みます。  
+1.  Android デバイスのモデル名が表示される場合は、Microsoft Edge でデバイスへの接続が正常に確立されていることを確認します。  [手順 2](#step-2-debug-content-on-your-android-device-from-your-development-machine)のセクションに進みます。  
     
     <!--  
     :::image type="complex" source="../media/remote-debugging--unknown-device.msft.png" alt-text="The Remote Devices tab has successfully detected an unknown device that is pending authorization" lightbox="../media/remote-debugging--unknown-device.msft.png":::
@@ -78,8 +82,8 @@ Windows または macOS コンピューターから Android デバイス上の�
 
 ソフトウェアが正しく設定されているかどうかを確認するには、次のヒントを参考にしてください。  
 
-*   開発用コンピューターで Windows を実行している場合は、Android デバイスの USB ドライバーを手動でインストールしてみてください。  詳細については、「 [OEM USB ドライバーをインストール][AndroidUSBDrivers]する」を参照してください。  
-*   Windows と Android デバイスの組み合わせ (特に Samsung \) には、追加の設定が必要です。  詳細については、「[デバイスが接続されるときにデバイスが検出されない] [StackOverflowDevicesNotDetected]」を参照してください。  
+*   開発用コンピューターで Windows を実行している場合は、Android デバイスの USB ドライバーを手動でインストールしてみてください。  詳細については、「 [OEM USB ドライバーをインストール][AndroidDeveloperToolsOemUsb]する」を参照してください。  
+*   Windows と Android デバイスの組み合わせ (特に Samsung \) には、追加の設定が必要です。  詳細については、「[デバイスに接続してもデバイスが検出されない][Stackoverflow21925992]」を参照してください。  
 
 Android デバイスで**USB デバッグを許可**するかどうかを確認するには、次のヒントを参照してください。  
 
@@ -89,10 +93,10 @@ Android デバイスで**USB デバッグを許可**するかどうかを確認�
     > Android または開発用コンピューターの画面がロックされている場合、このプロンプトが表示されないことがあります。  
 
 *   Android デバイスと開発用コンピューターの表示設定を更新して、それぞれがスリープ状態にならないようにします。  
-*   Android の USB モードを PTP に設定します。  詳細については、「 [Galaxy S4 で [USB デバッグの承認] ダイアログボックスが表示されない][StackExchangeGalaxyS4DoesNotShowDialogBox]」を参照してください。  
+*   Android の USB モードを PTP に設定します。  詳細については、「 [Galaxy S4 で [USB デバッグの承認] ダイアログボックスが表示されない][StackexchangeAndroid101933]」を参照してください。  
 *   Android デバイスの [**開発者オプション**] 画面で [ **USB デバッグ承認の取り消し**] を選択して、新しい状態にリセットします。  
 
-このページに記載されていない解決策を見つけた場合、または [DevTools デバイスで、スタックオーバーフロー時にデバイスが接続されています] [StackOverflowDevicesNotDetected] が検出されない場合は、スタックオーバーフローの質問にソリューションを追加してください。<!--, or [open an issue in the webfundamentals repository][GitHubWebFundamentalsNewIssue]-->!  
+このページに記載されていない解決策を見つけた場合や、Devtools デバイスでスタックオーバーフローに接続しても[デバイスが検出][Stackoverflow21925992]されない場合は、スタックオーバーフローの質問にソリューションを追加してください。<!--, or [open an issue in the webfundamentals repository][GitHubWebFundamentalsNewIssue]-->!  
 
 ## 手順 2: 開発用コンピューターから Android デバイスのコンテンツをデバッグする  
 
@@ -149,21 +153,20 @@ Screencast は次の方法で操作できます。
 [ImageSelectElementIcon]: /microsoft-edge/devtools-guide-chromium/media/select-element-icon.msft.png  
 [ImageToggleScreencastIcon]: /microsoft-edge/devtools-guide-chromium/media/toggle-screencast-icon.msft.png  
 
-<!--[ImageRemoteDebugging]: /microsoft-edge/devtools-guide-chromium/media/remote-debugging--remote-debugging.msft.png "old Figure 1:  Remote Debugging lets you inspect a page running on an Android device from your development machine"  -->  
-<!--[ImageEdgeInspect]: /microsoft-edge/devtools-guide-chromium/media/remote-debugging-edge-inspect-no-targets.msft.png "Figure 1: The edge://inspect page in Microsoft Edge"  -->  
-<!--[ImageAndroidPermissionPrompt]: /microsoft-edge/devtools-guide-chromium/media/remote-debugging-android-permissions-prompt.msft.png "Figure 2: The Allow USB Debugging permission prompt on an Android device"  -->  
-<!--[ImageConnectedRemoteDevice]: /microsoft-edge/devtools-guide-chromium/media/remote-debugging-edge-inspect-with-targets.msft.png "Figure 3: A connected remote device"  -->  
-<!-- [ImageReload]:  /microsoft-edge/devtools-guide-chromium/media/remote-debugging-edge-inspect-with-targets-buttons.msft.png "Figure 4: The buttons for focusing, reloading, or closing a tab"  -->  
-<!--[ImageUnknownDevice]: /microsoft-edge/devtools-guide-chromium/media/remote-debugging--unknown-device.msft.png "old Figure 4:  The Remote Devices tab has successfully detected an unknown device that is pending authorization"  -->  
-
 <!-- links -->  
 
-[AndroidUSBDrivers]: https://developer.android.com/tools/extras/oem-usb.html "OEM USB ドライバーをインストールする |Android 開発者"  
+[AndroidDeveloperStudioDevOptions]: https://developer.android.com/studio/debug/dev-options "デバイス開発者向けオプションを構成する |Android 開発者"  
+[AndroidDeveloperToolsOemUsb]: https://developer.android.com/tools/extras/oem-usb.html "OEM USB ドライバーをインストールする |Android 開発者"  
+
+[AppleDeveloperSafariTools]: https://developer.apple.com/safari/tools "Safari Web 開発ツール |Apple 開発者"  
+
+[BrightcoveSupportDebuggingMobileDevices]: https://support.brightcove.com/debugging-mobile-devices "モバイルデバイスでのデバッグ |Brightcove サポート"  
 
 <!-- [GitHubWebFundamentalsNewIssue]: https://github.com/Alphabet/webfundamentals/issues/new?title=[Remote%20Debugging] "GitHub - Web Fundamentals - New Issue"  -->  
-[StackOverflowDevicesNotDetected]: https://stackoverflow.com/questions/21925992 "devtools デバイスで、電源に接続されているときにデバイスが検出されません"-スタックオーバーフロー "  
 
-[StackExchangeGalaxyS4DoesNotShowDialogBox]: https://android.stackexchange.com/questions/101933 "adb-Android ファンスタック交換"  
+[StackexchangeAndroid101933]: https://android.stackexchange.com/questions/101933 "adb-Android ファンスタック交換"  
+
+[Stackoverflow21925992]: https://stackoverflow.com/questions/21925992 "デバイスが電源に接続されているときにデバイスが検出されない"  
 
 > [!NOTE]
 > このページの一部は、 [Google によっ][GoogleSitePolicies]て作成および共有され、[クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  

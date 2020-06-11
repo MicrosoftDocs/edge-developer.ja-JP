@@ -2,16 +2,16 @@
 title: コンソールユーティリティ API リファレンス
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 04/24/2020
+ms.date: 06/10/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 28b40f3f79928725d3d49418e01cf02247224370
-ms.sourcegitcommit: 5cdc1626d5581b79c0f2ac4ea62e7f1974ebfa57
+ms.openlocfilehash: efa03e02813d718514f73445bc0dceb3a1a83f39
+ms.sourcegitcommit: f010f43604bd4363af6827f79dbc071b9afcb667
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "10601797"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "10708853"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -27,13 +27,7 @@ ms.locfileid: "10601797"
    See the License for the specific language governing permissions and
    limitations under the License.  -->
 
-
-
-
-
-# コンソールユーティリティ API リファレンス   
-
-
+# コンソールユーティリティ API リファレンス  
 
 コンソールユーティリティ API には、一般的なタスク (DOM 要素の選択と検査、読み取り可能な形式でのデータの表示、プロファイラーの停止と開始、DOM イベントの監視) を実行するための便利なコマンドのコレクションが含まれています。  
 
@@ -50,17 +44,17 @@ $_
 
 直近に評価された式の値を返します。  
 
-[図 1](#figure-1)では、単純な式 \ ( `2 + 2` \) が評価されます。  `$_`プロパティが評価され、同じ値が含まれます。  
+次の図では、単純な式 \ (\ `2 + 2` ) が評価されています。  `$_`プロパティが評価され、同じ値が含まれます。  
 
-> ##### 図 1  
-> `$_` は、最後に評価された式です。  
-> ![$ _ は、最近評価された式です。][ImageRecentExpression]  
+:::image type="complex" source="../media/console-arithmatic.msft.png" alt-text="$ _ は、最近評価された式です。" lightbox="../media/console-arithmatic.msft.png":::
+   図 1: `$_` 前回評価された式  
+:::image-end:::  
 
-[図 2](#figure-2)では、最初に評価式に名前の配列が含まれています。  評価して `$_.length` 配列の長さを確認します。変更された値は、 `$_` 最新の評価済みの式になり `4` ます。  
+次の図では、評価式には最初に名前の配列が含まれています。  評価して `$_.length` 配列の長さを確認します。変更された値は、 `$_` 最新の評価済みの式になり `4` ます。  
 
-> ##### 図 2  
-> `$_` 新しいコマンドの評価時の変更点  
-> ![新しいコマンドが評価されたときの $ _ 変更][ImageChangedRecentExpression]  
+:::image type="complex" source="../media/console-array-length.msft.png" alt-text="新しいコマンドが評価されたときの $ _ 変更" lightbox="../media/console-array-length.msft.png":::
+   図 2: `$_` 新しいコマンドの評価時の変更点  
+:::image-end:::  
 
 ## 最近選んだ要素または JavaScript オブジェクト  
 
@@ -70,33 +64,49 @@ $0
 
 最後に選択された要素または JavaScript オブジェクトを返します。  `$1` 最後に選択された2番目の値を返します。  、、、、 `$0` `$1` およびコマンドは、 `$2` `$3` `$4` **要素**パネル内で検査された最後の5つの DOM 要素、または**メモリ**パネルで選択された最後の5つの JavaScript ヒープオブジェクトへの履歴参照として機能します。  
 
-```console
-$1
-```  
+:::row:::
+   :::column span="1":::
+      ```console
+      $0
+      ```  
+   :::column-end:::
+   :::column span="1":::
+      ```console
+      $1
+      ```  
+   :::column-end:::
+   :::column span="1":::
+      ```console
+      $2
+      ```  
+   :::column-end:::
+:::row-end:::  
+:::row:::
+   :::column span="1":::
+      ```console
+      $3
+      ```  
+   :::column-end:::
+   :::column span="1":::
+      ```console
+      $4
+      ```  
+   :::column-end:::
+   :::column span="1":::
+   :::column-end:::
+:::row-end:::  
 
-```console
-$2
-```  
+次の図では、[ `img` **要素**] パネルで要素が選択されています。  **本体**のドロアーで、 `$0` 評価が完了し、同じ要素が表示されます。  
 
-```console
-$3
-```  
+:::image type="complex" source="../media/console-image-highlighted-$0.msft.png" alt-text="$0" lightbox="../media/console-image-highlighted-$0.msft.png":::
+   図 3: `$0`  
+:::image-end:::  
 
-```console
-$4
-```  
+次の図では、同じページで選択された別の要素が画像に表示されています。  現在選択されている `$0` 要素を参照して `$1` いますが、以前に選択されていた要素を返します。  
 
-[図 3](#figure-3)では、[ `img` **要素**] パネルで要素が選択されています。  **本体**のドロアーで、 `$0` 評価が完了し、同じ要素が表示されます。  
-
-> ##### 図 3  
-> 、 `$0`  
-> ![$0][ImageElement0]  
-
-[図 4](#figure-4)では、同じページで選択された別の要素が画像に表示されています。  現在選択されている `$0` 要素を参照して `$1` いますが、以前に選択されていた要素を返します。  
-
-> ##### 図 4  
-> 、 `$1`  
-> ![$1][ImageElement1]  
+:::image type="complex" source="../media/console-image-highlighted-$1.msft.png" alt-text="$1" lightbox="../media/console-image-highlighted-$1.msft.png":::
+   図 4: `$1`  
+:::image-end:::  
 
 ## クエリセレクター  
 
@@ -106,30 +116,30 @@ $(selector, [startNode])
 
 指定された CSS セレクターで最初の DOM 要素への参照を返します。  このメソッドは、[ドキュメントの querySelector ()][MDNDocumentQuerySelector]メソッドのエイリアスです。  
 
-[図 5](#figure-5)では、文書内の最初の要素への参照 `<img>` が返されます。  
+次の図では、文書内の最初の要素への参照 `<img>` が返されます。  
 
-> ##### 図 5  
-> 、 `$('img')`  
-> ![$ (' Img ')][ImageElementImg]  
+:::image type="complex" source="../media/console-element-selector-image.msft.png" alt-text="$ (' Img ')" lightbox="../media/console-element-selector-image.msft.png":::
+   図 5: `$('img')`  
+:::image-end:::  
 
-返された結果を右クリックし、[**要素パネルで**表示] を選択して DOM で見つけます。または、[表示] に**スクロール**して、ページに表示します。  
+返された結果にポインターを置いて、コンテキストメニュー \ (右クリック \) を開き、[**要素パネルで**表示] を選択して DOM で見つけるか、表示されたらページ上に**スクロール**して表示します。  
 
-[図 6](#figure-6)では、現在選択されている要素への参照が返され、src プロパティが表示されます。  
+次の図では、現在選択されている要素への参照が返され、src プロパティが表示されます。  
 
-> ##### 図 6  
-> 、 `$('img').src`  
-> ![$ (' Img ') src][ImageElementImgSource]  
+:::image type="complex" source="../media/console-element-selector-image-source.msft.png" alt-text="$ (' Img ') src" lightbox="../media/console-element-selector-image-source.msft.png":::
+   図 6: `$('img').src`  
+:::image-end:::  
 
-このメソッドは、要素を検索する "element" またはノードを指定する2番目のパラメーター startNode もサポートしています。  このパラメーターの既定値は `document` です。  
+このメソッドは、要素を検索する "element" またはノードを指定する2番目のパラメーター startNode もサポートしています。  パラメーターの既定値は `document` です。  
 
-[図 7](#figure-7)では、最初 `img` の要素がであり、 `title--image` 正しく表示され `src` ます。  
+次の図では、最初 `img` の要素がであり、 `title--image` 正しく表示され `src` ます。  
 
-> ##### 図 7  
-> $ (' Img '、ドキュメントの querySelector (' タイトル--image ')) src  
-> ![$ (' Img '、ドキュメントの querySelector (' タイトル--image ')) src][ImageElementImgNodeSource]  
+:::image type="complex" source="../media/console-element-selector-image-filter-source.msft.png" alt-text="$ (' Img '、ドキュメントの querySelector (' タイトル--image ')) src" lightbox="../media/console-element-selector-image-filter-source.msft.png":::
+   図 7: `$('img', document.querySelector('title--image')).src`  
+:::image-end:::  
 
 > [!NOTE]
-> 使用する jQuery などのライブラリを使用している場合 `$` 、この機能は上書きされ、 `$` そのライブラリの実装に対応します。  
+> 使用している jQuery などのライブラリを使用している場合、 `$` 機能は上書きされ、 `$` そのライブラリの実装に対応します。  
 
 ## すべてのクエリセレクター  
 
@@ -139,7 +149,7 @@ $$(selector, [startNode])
 
 指定された CSS セレクターに一致する要素の配列を返します。  このメソッドは、 [querySelectorAll ()][MDNDocumentQuerySelectorAll]メソッドを呼び出すことと同じです。  
 
-[図 8](#figure-8)では、を使用して、 `$$()` 現在のドキュメント内のすべての要素の配列を作成 `<img>` し、各要素のプロパティの値を表示し `src` ます。  
+次のコードサンプルと図では、を使用して、 `$$()` 現在のドキュメント内のすべての要素の配列を作成 `<img>` し、各要素のプロパティの値を表示し `src` ます。  
 
 ```console
 var images = $$('img');
@@ -148,13 +158,13 @@ for (each in images) {
 }
 ```  
 
-> ##### 図 8  
-> `$$()`ドキュメント内のすべての画像を選択してソースを表示するために使用する  
-> ![$ $ () を使用して、ドキュメント内のすべての画像を選択し、ソースを表示する][ImageArrayElementImgSource]  
+:::image type="complex" source="../media/console-element-selector-image-all.msft.png" alt-text="$ $ () を使用して、ドキュメント内のすべての画像を選択し、ソースを表示する" lightbox="../media/console-element-selector-image-all.msft.png":::
+   図 8: `$$()` ドキュメント内のすべての画像を選択してソースを表示するために使用する  
+:::image-end:::  
 
-このメソッドは、要素を検索する要素またはノードを指定する2番目の parameter startNode もサポートしています。  このパラメーターの既定値は `document` です。  
+このメソッドは、要素を検索する要素またはノードを指定する2番目の parameter startNode もサポートしています。  パラメーターの既定値は `document` です。  
 
-[図 9](#figure-9)では、変更されたバージョンの[図 8](#figure-8)を使用して、 `$$()` `<img>` 選択したノードの後に現在の文書内に出現するすべての要素の配列を作成します。  
+次のコードサンプルと図では、前のコードサンプルと図を変更したバージョンを使って、選択した `$$()` `<img>` ノードの後に現在の文書内に出現するすべての要素の配列を作成します。  
 
 ```console
 var images = $$('img', document.querySelector(`title--image`));
@@ -163,9 +173,9 @@ for (each in images) {
 }
 ```  
 
-> ##### 図 9  
-> `$$()`文書内の指定された要素の後に表示されるすべての画像を選択してソースを表示するために使用する `<div>`  
-> ![$ $ () を使用して、文書内の指定された <div> 要素の後に表示されるすべての画像を選択して、ソースを表示する][ImageArrayElementImgNodeSource]  
+:::image type="complex" source="../media/console-element-selector-image-filter-all.msft.png" alt-text="$ $ () を使用して、文書内の指定された <div> 要素の後に表示されるすべての画像を選択して、ソースを表示する" lightbox="../media/console-element-selector-image-filter-all.msft.png":::
+   図 9: `$$()` 文書内の指定された要素の後に表示されるすべての画像を選択して `<div>` ソースを表示する  
+:::image-end:::  
 
 > [!NOTE]
 > コンソールを押して、 `Shift` + `Enter` スクリプトを実行せずに、新しい行を開始します。  
@@ -178,31 +188,31 @@ $x(path, [startNode])
 
 指定された XPath 式と一致する DOM 要素の配列を返します。  
 
-[図 10](#figure-10)では、ページ上のすべての `<p>` 要素が返されます。  
+次のコードサンプルと図では、ページ上のすべての `<p>` 要素が返されます。  
 
 ```console
 $x("//p")
 ```  
 
-> ##### 図 10  
-> XPath セレクターを使用する  
-> ![XPath セレクターを使用する][ImageArrayXpath]  
+:::image type="complex" source="../media/console-array-xpath.msft.png" alt-text="XPath セレクターを使用する" lightbox="../media/console-array-xpath.msft.png":::
+   図 10: XPath セレクターを使用する  
+:::image-end:::  
 
-[図 11](#figure-11)で `<p>` は、要素を含むすべての要素 `<a>` が返されます。  
+次のコードサンプルと図では、要素を `<p>` 含むすべての要素 `<a>` が返されます。  
 
 ```console
 $x("//p[a]")
 ```  
 
-> ##### 図 11  
-> より複雑な XPath セレクターを使用する  
-> ![より複雑な XPath セレクターを使用する][ImageArrayXpathChild]  
+:::image type="complex" source="../media/console-array-xpath-sub-element.msft.png" alt-text="より複雑な XPath セレクターを使用する" lightbox="../media/console-array-xpath-sub-element.msft.png":::
+   図 11: より複雑な XPath セレクターを使用する  
+:::image-end:::  
 
 他のセレクターコマンドと同様に、 `$x(path)` `startNode` 要素を検索する要素またはノードを指定する、オプションの2番目のパラメーターを持ちます。  
 
-> ##### 図 12  
-> XPath セレクターの使い方 `startNode`  
-> ![StartNode で XPath セレクターを使用する][ImageArrayXpathNode]  
+:::image type="complex" source="../media/console-array-xpath-startnode.msft.png" alt-text="StartNode で XPath セレクターを使用する" lightbox="../media/console-array-xpath-startnode.msft.png":::
+   図 12: で XPath セレクターを使用する `startNode`  
+:::image-end:::  
 
 ## clear  
 
@@ -243,9 +253,9 @@ debug(method)
 debug("debug");
 ```  
 
-> ##### 図 13  
-> メソッド内での区切り `debug()`  
-> ![Debug () を使用したメソッド内の中断][ImageDebugMethod]  
+:::image type="complex" source="../media/console-debug-text.msft.png" alt-text="Debug () を使用したメソッド内の中断" lightbox="../media/console-debug-text.msft.png":::
+   図 13: メソッド内での区切り `debug()`  
+:::image-end:::  
 
 `undebug(method)`メソッドの中断を停止するには、または UI を使ってすべてのブレークポイントを無効にする場合に使用します。  
 
@@ -259,16 +269,16 @@ dir(object)
 
 指定したオブジェクトのすべてのプロパティのオブジェクトスタイルの一覧を表示します。  このメソッドは、 [console. dir ()][MDNConsoleDir]メソッドのエイリアスです。  
 
-本体でを評価して、 `document.head` タグとタグの間に HTML を表示し `<head>` `</head>` ます。  [図 14](#figure-14)では、コンソールで使用した後にオブジェクトスタイルの一覧が表示され `console.dir()` ます。  
+本体でを評価して、 `document.head` タグとタグの間に HTML を表示し `<head>` `</head>` ます。  次のコードサンプルと図では、コンソールで使用した後にオブジェクトスタイルの一覧が表示され `console.dir()` ます。  
 
 ```console
 document.head;
 dir(document.head);
 ```  
 
-> ##### 図 14  
-> ログ `document.head` 記録 `dir()` メソッド  
-> ![Dir () メソッドを使ってドキュメントをログに記録します。][ImageLogObject]  
+:::image type="complex" source="../media/console-dir-document-head-expanded.msft.png" alt-text="Dir () メソッドを使ってドキュメントをログに記録します。" lightbox="../media/console-dir-document-head-expanded.msft.png":::
+   図 14: `document.head` メソッドを使用してログを記録する `dir()`  
+:::image-end:::  
 
 詳細については、 [`console.dir()`][DevToolsConsoleApiConsoleDirObject] 本体 API のエントリを参照してください。  
 
@@ -288,15 +298,15 @@ inspect(object/method)
 
 適切なパネル (DOM 要素の場合は**要素**パネル、JavaScript ヒープオブジェクトの場合は**メモリ**パネル) で、指定された要素またはオブジェクトを開き、選択します。  
 
-[図 15](#figure-15)では、[ `document.body` **要素**] パネルが開きます。  
+次のコードサンプルと図は、[ `document.body` **要素**] パネルで開きます。  
 
 ```console
 inspect(document.body);
 ```  
 
-> ##### 図 15  
-> 要素の検査 `inspect()`  
-> ![検査 () での要素の検査][ImageInspectElement]  
+:::image type="complex" source="../media/console-inspect-document-body.msft.png" alt-text="検査 () での要素の検査" lightbox="../media/console-inspect-document-body.msft.png":::
+   図 15: の要素を調べる `inspect()`  
+:::image-end:::  
 
 検査するメソッドを渡すとき、メソッドは**ソース**パネルでドキュメントを開き、調べることができます。  
 
@@ -306,27 +316,27 @@ inspect(document.body);
 getEventListeners(object)
 ```  
 
-指定したオブジェクトに登録されているイベントリスナーを返します。  戻り値は、登録されている各イベントの種類 (やなど) の配列を含むオブジェクトです `click` `keydown` 。  各配列のメンバーは、各型に登録されているリスナーを記述するオブジェクトです。  [図 16](#figure-16)では、ドキュメントオブジェクトに登録されているすべてのイベントリスナーが一覧表示されます。  
+指定したオブジェクトに登録されているイベントリスナーを返します。  戻り値は、登録されている各イベントの種類 (やなど) の配列を含むオブジェクトです `click` `keydown` 。  各配列のメンバーは、各型に登録されているリスナーを記述するオブジェクトです。  次のコードサンプルの図は、ドキュメントオブジェクトに登録されているすべてのイベントリスナーを示しています。  
 
 ```console
 getEventListeners(document);
 ```  
 
-> ##### 図 16  
-> を使用した出力 `getEventListeners(document)`  
-> ![GetEventListeners を使った出力 (ドキュメント)][ImageGetListeners]  
+:::image type="complex" source="../media/console-elements-event-listeners-console-get-event-listeners-document.msft.png" alt-text="GetEventListeners を使った出力 (ドキュメント)" lightbox="../media/console-elements-event-listeners-console-get-event-listeners-document.msft.png":::
+   図 16: を使用した場合の結果 `getEventListeners(document)`  
+:::image-end:::  
 
-指定したオブジェクトに複数のリスナーが登録されている場合、この配列には各リスナーのメンバーが含まれます。  [図 16](#figure-16)では、イベントのドキュメント要素に2つのイベントリスナーが登録されてい `click` ます。  
+指定したオブジェクトに複数のリスナーが登録されている場合、この配列には各リスナーのメンバーが含まれます。  次の図に、イベントのドキュメント要素に登録されている2つのイベントリスナーを示し `click` ます。  
 
-> ##### 図 17  
-> 複数のリスナー  
-> ![複数のリスナー][ImageMultipleListeners]  
+:::image type="complex" source="../media/console-elements-event-listeners-console-get-event-listeners-document-expanded-1.msft.png" alt-text="複数のリスナー" lightbox="../media/console-elements-event-listeners-console-get-event-listeners-document-expanded-1.msft.png":::
+   図 17: 複数のリスナー  
+:::image-end:::  
 
 次の各オブジェクトをさらに拡張して、プロパティを確認できます。  
 
-> ##### 図18  
-> リスナーオブジェクトの展開ビュー  
-> ![リスナーオブジェクトの展開ビュー][ImageListenersExpanded]  
+:::image type="complex" source="../media/console-elements-event-listeners-console-get-event-listeners-document-2.msft.png" alt-text="リスナーオブジェクトの展開ビュー" lightbox="../media/console-elements-event-listeners-console-get-event-listeners-document-2.msft.png":::
+   図 18: リスナーオブジェクトの展開ビュー  
+:::image-end:::  
 
 ## キー  
 
@@ -342,19 +352,17 @@ keys(object)
 var player1 = { "name":  "Ted", "level": 42 }
 ```  
 
-[図 19](#figure-19)では、 `player1` 入力と本体の入力前のグローバル名前空間 \ (簡潔さ) で結果が定義されていることを前提としてい `keys(player1)` `values(player1)` ます。  
+次のコードサンプルと図では、 `player1` 入力と本体への入力前に、その結果がグローバル名前空間 \ (簡潔さ) で定義されていることを前提としてい `keys(player1)` `values(player1)` ます。  
 
 ```console
 keys(player1)
-```  
 
-```console
 values(player1)
 ```  
 
-> ##### 図19  
-> `keys()`And `values()` コマンド  
-> ![Keys () コマンドと values () コマンド][ImageConsoleKeysValues]  
+:::image type="complex" source="../media/console-keys-values.msft.png" alt-text="Keys () コマンドと values () コマンド" lightbox="../media/console-keys-values.msft.png":::
+   図 19: `keys()` および `values()` コマンド  
+:::image-end:::  
 
 ## モニター  
 
@@ -371,9 +379,9 @@ function sum(x, y) {
 monitor(sum);
 ```  
 
-> ##### 図20  
-> `monitor()`メソッド  
-> ![Monitor () メソッド][ImageConsoleMonitorSum]  
+:::image type="complex" source="../media/console-function-monitor-sum.msft.png" alt-text="Monitor () メソッド" lightbox="../media/console-function-monitor-sum.msft.png":::
+   図 20: `monitor()` メソッド  
+:::image-end:::  
 
 `unmonitor(method)`監視を停止するために使用します。  
 
@@ -383,7 +391,7 @@ monitor(sum);
 monitorEvents(object[, events])
 ```  
 
-指定したイベントのいずれかが指定したオブジェクトで発生した場合、イベントオブジェクトは本体に記録されます。  監視する1つのイベント、一連のイベント、または定義済みのイベントコレクションにマップされる汎用イベント型のいずれかを指定できます。  [図 21](#figure-21)を参照してください。  
+指定したイベントのいずれかが指定したオブジェクトで発生した場合、イベントオブジェクトは本体に記録されます。  監視する1つのイベント、一連のイベント、または定義済みのイベントコレクションにマップされる汎用イベント型のいずれかを指定できます。  次のコードサンプルと図を参照してください。  
 
 次のモニターは、window オブジェクトのすべてのサイズ変更イベントを監視します。  
 
@@ -391,9 +399,9 @@ monitorEvents(object[, events])
 monitorEvents(window, "resize");
 ```  
 
-> ##### 図21  
-> モニタリングウィンドウのサイズ変更イベント  
-> ![モニタリングウィンドウのサイズ変更イベント][ImageMonitorResize]  
+:::image type="complex" source="../media/console-monitor-events-resize-window.msft.png" alt-text="モニタリングウィンドウのサイズ変更イベント" lightbox="../media/console-monitor-events-resize-window.msft.png":::
+   図 21: ウィンドウのサイズ変更イベントの監視  
+:::image-end:::  
 
 次の例では、window オブジェクトの両方のイベントとイベントを監視する配列を定義して `resize` `scroll` います。  
 
@@ -410,17 +418,17 @@ monitorEvents(window, ["resize", "scroll"]);
 | `touch` | "touchcancel", "touchend", "touchmove", "touchstart" |  
 | `control` | "ぼかし"、"変更"、"フォーカス"、"リセット"、"サイズ変更"、"スクロール"、"選択"、"送信"、"ズーム" |  
 
-[図 22](#figure-22)では、 `key` 入力テキストフィールドのイベントに対応するイベントの種類が、[ `key` **要素**] パネルで現在選択されています。  
+次のコードサンプルでは、 `key` 入力テキストフィールドのイベントに対応するイベントの種類が、[ `key` **要素**] パネルで現在選択されています。  
 
 ```console
 monitorEvents($0, "key");
 ```  
 
-[図 22](#figure-22)では、テキストフィールドに文字を入力した後のサンプル出力が表示されています。  
+次の図では、テキストフィールドに文字を入力した後のサンプル出力が表示されています。  
 
-> ##### 図22  
-> 主要イベントの監視  
-> ![主要イベントの監視][ImageMonitorKey]  
+:::image type="complex" source="../media/console-monitor-events-type-t-y.msft.png" alt-text="主要イベントの監視" lightbox="../media/console-monitor-events-type-t-y.msft.png":::
+   図 22: 主要イベントの監視  
+:::image-end:::  
 
 ## profile  
 
@@ -438,7 +446,7 @@ profile([name])
     
 1.  プロファイルを停止して、**メモリ**パネルに結果を表示するには、 [profileend ()](#profileend)メソッドを実行します。  
 
-プロファイルは入れ子にすることもできます。  [図 23](#figure-23)では、結果は順序に関係なく同じです。  
+プロファイルは入れ子にすることもできます。  次のコードサンプルと図では、注文に関係なく同じ結果が得られます。  
 
 ```console
 profile('A');
@@ -465,7 +473,7 @@ JavaScript CPU のプロファイリングセッションを完了し、**メモ
     profileEnd("My profile")
     ```  
 
-プロファイルは入れ子にすることもできます。  [図 23](#figure-23)では、結果は順序に関係なく同じです。  
+プロファイルは入れ子にすることもできます。  次のコードサンプルと図は、順序に関係なく同じ結果になります。  
 
 ```console
 profile('A');
@@ -476,12 +484,46 @@ profileEnd('B');
 
 結果は、**メモリ**パネルにヒープスナップショットとして表示されます。  
 
-> ##### 図23  
-> グループ化されたプロファイル  
-> ![グループ化されたプロファイル][ImageGroupedProfiles]  
+:::image type="complex" source="../media/console-memory-multiple-cpu-profiles.msft.png" alt-text="グループ化されたプロファイル" lightbox="../media/console-memory-multiple-cpu-profiles.msft.png":::
+   図 23: グループ化されたプロファイル  
+:::image-end:::  
 
 > [!NOTE]
 > 複数の CPU プロファイルを同時に操作することができます。また、複数の CPU プロファイルを作成順序で閉じる必要はありません。  
+
+## queryObjects  
+
+```console
+queryObjects(Constructor)
+```  
+
+指定したコンストラクターで作成されたオブジェクトの配列を返します。  のスコープ `queryObjects()` は、現在選択されているランタイムコンテキスト (本体) です。
+
+:::row:::
+   :::column span="1":::
+      ```console
+      queryObjects(promise)
+      ```  
+      
+      All を返し `Promises` ます。  
+   :::column-end:::
+   :::column span="1":::
+      ```console
+      queryObjects(HTMLElement)
+      ```  
+      
+      すべての HTML 要素を返します。  
+   :::column-end:::
+   :::column span="1":::
+      ```console
+      queryObjects(functionName)
+      ```  
+      
+      を使用してインスタンス化されたすべてのオブジェクトを返し `new functionName()` ます。  
+   :::column-end:::
+:::row-end:::  
+
+---  
 
 ## '95'5c  
 
@@ -489,7 +531,7 @@ profileEnd('B');
 table(data[, columns])
 ```  
 
-列見出しを省略できるデータオブジェクトに基づいて、テーブルの書式設定でオブジェクトデータをログに記録します。  [図 24](#figure-24)では、コンソールの表を使って名前のリストが表示されています。  
+列見出しを省略できるデータオブジェクトに基づいて、テーブルの書式設定でオブジェクトデータをログに記録します。  次のコードサンプルと図では、コンソールの表を使って名前のリストが表示されています。  
 
 ```console
 var names = {
@@ -505,9 +547,9 @@ var names = {
 table(names);
 ```  
 
-> ##### 図24  
-> `table()`メソッド  
-> ![Table () メソッド][ImageConsoleTable]  
+:::image type="complex" source="../media/console-table-display.msft.png" alt-text="Table () メソッドの結果" lightbox="../media/console-table-display.msft.png":::
+   図 24: メソッドの結果 `table()`  
+:::image-end:::  
 
 ## undebug  
 
@@ -527,7 +569,7 @@ undebug(getData);
 unmonitor(method)
 ```  
 
-指定したメソッドの監視を停止します。  これは、 [monitor ()](#monitor)メソッドと連携して使用されます。  
+指定したメソッドの監視を停止します。  このメソッドは、 [monitor ()](#monitor)メソッドと連携して使用されます。  
 
 ```console
 unmonitor(getData);
@@ -563,37 +605,6 @@ values(object)
 ```console
 values(object);
 ```  
-
-<!--   -->  
-
-
-
-<!-- image links -->  
-
-[ImageRecentExpression]: /microsoft-edge/devtools-guide-chromium/media/console-arithmatic.msft.png "図 1: $ _ は、最近評価された式です。"  
-[ImageChangedRecentExpression]: /microsoft-edge/devtools-guide-chromium/media/console-array-length.msft.png "図 2: 新しいコマンドが評価されたときの $ _ の変更"  
-[ImageElement0]: /microsoft-edge/devtools-guide-chromium/media/console-image-highlighted-$0.msft.png "図 3: $0"  
-[ImageElement1]: /microsoft-edge/devtools-guide-chromium/media/console-image-highlighted-$1.msft.png "図 4: $1"  
-[ImageElementImg]: /microsoft-edge/devtools-guide-chromium/media/console-element-selector-image.msft.png "図 5: $ (' img ')"  
-[ImageElementImgSource]: /microsoft-edge/devtools-guide-chromium/media/console-element-selector-image-source.msft.png "図 6: $ (' img ') src"  
-[ImageElementImgNodeSource]: /microsoft-edge/devtools-guide-chromium/media/console-element-selector-image-filter-source.msft.png "図 7: $ (' img '、ドキュメントの querySelector (' title--image '))。 src"  
-[ImageArrayElementImgSource]: /microsoft-edge/devtools-guide-chromium/media/console-element-selector-image-all.msft.png "図 8: $ $ () を使用してドキュメント内のすべての画像を選択し、ソースを表示する"  
-[ImageArrayElementImgNodeSource]: /microsoft-edge/devtools-guide-chromium/media/console-element-selector-image-filter-all.msft.png "図 9: $ $ () を使って、文書内の指定された <div> 要素の後に表示されるすべての画像を選択して、ソースを表示する"  
-[ImageArrayXpath]: /microsoft-edge/devtools-guide-chromium/media/console-array-xpath.msft.png "図 10: XPath セレクターを使用する"  
-[ImageArrayXpathChild]: /microsoft-edge/devtools-guide-chromium/media/console-array-xpath-sub-element.msft.png "図 11: より複雑な XPath セレクターを使用する"  
-[ImageArrayXpathNode]: /microsoft-edge/devtools-guide-chromium/media/console-array-xpath-startnode.msft.png "図 12: startNode で XPath セレクターを使用する"  
-[ImageDebugMethod]: /microsoft-edge/devtools-guide-chromium/media/console-debug-text.msft.png "図 13: debug () を使用したメソッド内の中断"  
-[ImageLogObject]: /microsoft-edge/devtools-guide-chromium/media/console-dir-document-head-expanded.msft.png "図 14: dir () メソッドを使った文書の記録"  
-[ImageInspectElement]: /microsoft-edge/devtools-guide-chromium/media/console-inspect-document-body.msft.png "図 15: 検査 () を使って要素を検査する"  
-[ImageGetListeners]: /microsoft-edge/devtools-guide-chromium/media/console-elements-event-listeners-console-get-event-listeners-document.msft.png "図 16: getEventListeners を使った出力 (ドキュメント)"  
-[ImageMultipleListeners]: /microsoft-edge/devtools-guide-chromium/media/console-elements-event-listeners-console-get-event-listeners-document-expanded-1.msft.png "図 17: 複数のリスナー"  
-[ImageListenersExpanded]: /microsoft-edge/devtools-guide-chromium/media/console-elements-event-listeners-console-get-event-listeners-document-2.msft.png "図 18: リスナーオブジェクトの展開ビュー"  
-[ImageConsoleKeysValues]: /microsoft-edge/devtools-guide-chromium/media/console-keys-values.msft.png "図 19: keys () および values () コマンド"  
-[ImageConsoleMonitorSum]: /microsoft-edge/devtools-guide-chromium/media/console-function-monitor-sum.msft.png "図 20: monitor () メソッド"  
-[ImageMonitorResize]: /microsoft-edge/devtools-guide-chromium/media/console-monitor-events-resize-window.msft.png "図 21: ウィンドウのサイズ変更イベントの監視"  
-[ImageMonitorKey]: /microsoft-edge/devtools-guide-chromium/media/console-monitor-events-type-t-y.msft.png "図 22: 主要イベントの監視"  
-[ImageGroupedProfiles]: /microsoft-edge/devtools-guide-chromium/media/console-memory-multiple-cpu-profiles.msft.png "図 23: グループ化されたプロファイル"  
-[ImageConsoleTable]: /microsoft-edge/devtools-guide-chromium/media/console-table-display.msft.png "図 24: table () メソッド"  
 
 <!-- links -->  
 
