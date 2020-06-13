@@ -2,16 +2,16 @@
 title: ネットワーク分析のリファレンス
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 06/10/2020
+ms.date: 06/11/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 7e7ac287e116e28773a42456c21ec4ba07647f04
-ms.sourcegitcommit: f010f43604bd4363af6827f79dbc071b9afcb667
+ms.openlocfilehash: c9d205fb2cc478e9c3f20458f461f004035e85e8
+ms.sourcegitcommit: a34858dd3260967ba9699842fa839c7a94775fe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "10709304"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "10710400"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -27,62 +27,62 @@ ms.locfileid: "10709304"
    See the License for the specific language governing permissions and
    limitations under the License.  -->  
 
-# <span data-ttu-id="1576d-103">ネットワーク分析のリファレンス</span><span class="sxs-lookup"><span data-stu-id="1576d-103">Network Analysis Reference</span></span>  
+# <span data-ttu-id="cd623-103">ネットワーク分析のリファレンス</span><span class="sxs-lookup"><span data-stu-id="cd623-103">Network Analysis Reference</span></span>  
 
-<span data-ttu-id="1576d-104">Microsoft Edge DevTools のネットワーク分析機能の包括的な参照でページがどのように読み込まれるかを分析するための新しい方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="1576d-104">Discover new ways to analyze how your page loads in this comprehensive reference of Microsoft Edge DevTools network analysis features.</span></span>  
+<span data-ttu-id="cd623-104">Microsoft Edge DevTools のネットワーク分析機能の包括的な参照でページがどのように読み込まれるかを分析するための新しい方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="cd623-104">Discover new ways to analyze how your page loads in this comprehensive reference of Microsoft Edge DevTools network analysis features.</span></span>  
 
 <!--
 > [!NOTE]
 > This reference is based on Microsoft Edge 58.  If you use another version of Microsoft Edge, the UI, and features of DevTools may be different.  Check `edge://help` to see what version of Microsoft Edge you are running.  
 -->
 
-## <span data-ttu-id="1576d-105">ネットワーク要求を記録する</span><span class="sxs-lookup"><span data-stu-id="1576d-105">Record network requests</span></span>  
+## <span data-ttu-id="cd623-105">ネットワーク要求を記録する</span><span class="sxs-lookup"><span data-stu-id="cd623-105">Record network requests</span></span>  
 
-<span data-ttu-id="1576d-106">既定では、devtools はネットワークパネルのすべてのネットワーク要求を記録します。これは、DevTools が開いている場合に限ります。</span><span class="sxs-lookup"><span data-stu-id="1576d-106">By default, DevTools records all network requests in the Network panel, so long as DevTools is open.</span></span>  
+<span data-ttu-id="cd623-106">既定では、devtools はネットワークパネルのすべてのネットワーク要求を記録します。これは、DevTools が開いている場合に限ります。</span><span class="sxs-lookup"><span data-stu-id="cd623-106">By default, DevTools records all network requests in the Network panel, so long as DevTools is open.</span></span>  
 
 :::image type="complex" source="../media/network-network-panel.msft.png" alt-text="[ネットワーク] パネル" lightbox="../media/network-network-panel.msft.png":::
-   <span data-ttu-id="1576d-108">図 1: [**ネットワーク**] パネル</span><span class="sxs-lookup"><span data-stu-id="1576d-108">Figure 1:  The **Network** panel</span></span>  
+   <span data-ttu-id="cd623-108">図 1: [**ネットワーク**] パネル</span><span class="sxs-lookup"><span data-stu-id="cd623-108">Figure 1:  The **Network** panel</span></span>  
 :::image-end:::  
 
-### <span data-ttu-id="1576d-109">ネットワーク要求の記録を停止する</span><span class="sxs-lookup"><span data-stu-id="1576d-109">Stop recording network requests</span></span>  
+### <span data-ttu-id="cd623-109">ネットワーク要求の記録を停止する</span><span class="sxs-lookup"><span data-stu-id="cd623-109">Stop recording network requests</span></span>  
 
-<span data-ttu-id="1576d-110">要求の記録を停止するには、次の手順を実行します。</span><span class="sxs-lookup"><span data-stu-id="1576d-110">To stop recording requests, complete the following steps.</span></span>  
+<span data-ttu-id="cd623-110">要求の記録を停止するには、次の手順を実行します。</span><span class="sxs-lookup"><span data-stu-id="cd623-110">To stop recording requests, complete the following steps.</span></span>  
 
-1.  <span data-ttu-id="1576d-111">[ **Stop recording network log** ![ ][ImageRecordOnIcon] **ネットワーク**] パネルで [ネットワークログの記録停止] を選択します。</span><span class="sxs-lookup"><span data-stu-id="1576d-111">Select **Stop recording network log** ![Stop recording network log][ImageRecordOnIcon] on the **Network** panel.</span></span>  <span data-ttu-id="1576d-112">灰色に変わり、DevTools が要求を記録しなくなったことを示します。</span><span class="sxs-lookup"><span data-stu-id="1576d-112">It turns grey to indicate that DevTools is no longer recording requests.</span></span>  
-1.  <span data-ttu-id="1576d-113">`Control` + `E` `Command` + `E` **ネットワーク**パネルがフォーカスされているときに、\ (Windows \) または \ (macOS \) を押します。</span><span class="sxs-lookup"><span data-stu-id="1576d-113">Press `Control`+`E` \(Windows\) or `Command`+`E` \(macOS\) while the **Network** panel is in focus.</span></span>  
+1.  <span data-ttu-id="cd623-111">[ **Stop recording network log** ![ ][ImageRecordOnIcon] **ネットワーク**] パネルで [ネットワークログの記録停止] を選択します。</span><span class="sxs-lookup"><span data-stu-id="cd623-111">Select **Stop recording network log** ![Stop recording network log][ImageRecordOnIcon] on the **Network** panel.</span></span>  <span data-ttu-id="cd623-112">灰色に変わり、DevTools が要求を記録しなくなったことを示します。</span><span class="sxs-lookup"><span data-stu-id="cd623-112">It turns grey to indicate that DevTools is no longer recording requests.</span></span>  
+1.  <span data-ttu-id="cd623-113">`Control` + `E` `Command` + `E` **ネットワーク**パネルがフォーカスされているときに、\ (Windows \) または \ (macOS \) を押します。</span><span class="sxs-lookup"><span data-stu-id="cd623-113">Press `Control`+`E` \(Windows\) or `Command`+`E` \(macOS\) while the **Network** panel is in focus.</span></span>  
 
-### <span data-ttu-id="1576d-114">要求をクリアする</span><span class="sxs-lookup"><span data-stu-id="1576d-114">Clear requests</span></span>  
+### <span data-ttu-id="cd623-114">要求をクリアする</span><span class="sxs-lookup"><span data-stu-id="cd623-114">Clear requests</span></span>  
 
-<span data-ttu-id="1576d-115">[ネットワーク] パネルの [**クリア] を**選ん ![ ][ImageClearIcon] で、要求テーブルからのすべての要求をクリアします。</span><span class="sxs-lookup"><span data-stu-id="1576d-115">Select **Clear** ![Clear][ImageClearIcon] on the Network panel to clear all requests from the Requests table.</span></span>  
+<span data-ttu-id="cd623-115">[ネットワーク] パネルの [**クリア] を**選ん ![ ][ImageClearIcon] で、要求テーブルからのすべての要求をクリアします。</span><span class="sxs-lookup"><span data-stu-id="cd623-115">Select **Clear** ![Clear][ImageClearIcon] on the Network panel to clear all requests from the Requests table.</span></span>  
 
 :::image type="complex" source="../media/network-network-clear-button.msft.png" alt-text="[クリア] ボタン" lightbox="../media/network-network-clear-button.msft.png":::
-   <span data-ttu-id="1576d-117">図 2: [**クリア**] ボタン</span><span class="sxs-lookup"><span data-stu-id="1576d-117">Figure 2:  The **Clear** button</span></span>  
+   <span data-ttu-id="cd623-117">図 2: [**クリア**] ボタン</span><span class="sxs-lookup"><span data-stu-id="cd623-117">Figure 2:  The **Clear** button</span></span>  
 :::image-end:::  
 
-### <span data-ttu-id="1576d-118">ページのロード間で要求を保存する</span><span class="sxs-lookup"><span data-stu-id="1576d-118">Save requests across page loads</span></span>  
+### <span data-ttu-id="cd623-118">ページのロード間で要求を保存する</span><span class="sxs-lookup"><span data-stu-id="cd623-118">Save requests across page loads</span></span>  
 
-<span data-ttu-id="1576d-119">ページの読み込み時に要求を保存するには、[ネットワーク] パネルの [**ログを保持**する] チェックボックスをオンにします。</span><span class="sxs-lookup"><span data-stu-id="1576d-119">To save requests across page loads, check the **Preserve log** checkbox on the Network panel.</span></span>  <span data-ttu-id="1576d-120">DevTools では、 **Preserve log**を無効にするまで、すべての要求が保存されます。</span><span class="sxs-lookup"><span data-stu-id="1576d-120">DevTools saves all requests until you disable **Preserve log**.</span></span>  
+<span data-ttu-id="cd623-119">ページの読み込み時に要求を保存するには、[ネットワーク] パネルの [**ログを保持**する] チェックボックスをオンにします。</span><span class="sxs-lookup"><span data-stu-id="cd623-119">To save requests across page loads, check the **Preserve log** checkbox on the Network panel.</span></span>  <span data-ttu-id="cd623-120">DevTools では、 **Preserve log**を無効にするまで、すべての要求が保存されます。</span><span class="sxs-lookup"><span data-stu-id="cd623-120">DevTools saves all requests until you disable **Preserve log**.</span></span>  
 
 :::image type="complex" source="../media/network-network-preserve-log.msft.png" alt-text="[ログの保存] チェックボックス" lightbox="../media/network-network-preserve-log.msft.png":::
-   <span data-ttu-id="1576d-122">図 3: [**ログの保存**] チェックボックス</span><span class="sxs-lookup"><span data-stu-id="1576d-122">Figure 3:  The **Preserve Log** checkbox</span></span>  
+   <span data-ttu-id="cd623-122">図 3: [**ログの保存**] チェックボックス</span><span class="sxs-lookup"><span data-stu-id="cd623-122">Figure 3:  The **Preserve Log** checkbox</span></span>  
 :::image-end:::  
 
-### <span data-ttu-id="1576d-123">ページの読み込み中にスクリーンショットをキャプチャする</span><span class="sxs-lookup"><span data-stu-id="1576d-123">Capture screenshots during page load</span></span>  
+### <span data-ttu-id="cd623-123">ページの読み込み中にスクリーンショットをキャプチャする</span><span class="sxs-lookup"><span data-stu-id="cd623-123">Capture screenshots during page load</span></span>  
 
-<span data-ttu-id="1576d-124">スクリーンショットをキャプチャして、ページの読み込みを待機しているユーザーに表示される内容を分析します。</span><span class="sxs-lookup"><span data-stu-id="1576d-124">Capture screenshots to analyze what users see as they wait for your page to load.</span></span>  
+<span data-ttu-id="cd623-124">スクリーンショットをキャプチャして、ページの読み込みを待機しているユーザーに表示される内容を分析します。</span><span class="sxs-lookup"><span data-stu-id="cd623-124">Capture screenshots to analyze what users see as they wait for your page to load.</span></span>  
 
-<span data-ttu-id="1576d-125">スクリーンショットを有効にするには、[**ネットワーク設定**] を選択し、[**ネットワーク**] パネルの [**スクリーンショットのキャプチャ**] チェックボックスを選択します。</span><span class="sxs-lookup"><span data-stu-id="1576d-125">To enable screenshots, select **Network settings** and select **Capture screenshots** checkbox on the **Network** panel.</span></span>  
+<span data-ttu-id="cd623-125">スクリーンショットを有効にするには、[**ネットワーク設定**] を選択し、[**ネットワーク**] パネルの [**スクリーンショットのキャプチャ**] チェックボックスを選択します。</span><span class="sxs-lookup"><span data-stu-id="cd623-125">To enable screenshots, select **Network settings** and select **Capture screenshots** checkbox on the **Network** panel.</span></span>  
 
-<span data-ttu-id="1576d-126">**ネットワーク**パネルがフォーカスされているときにページを再読み込みして、スクリーンショットをキャプチャします。</span><span class="sxs-lookup"><span data-stu-id="1576d-126">Reload the page while the **Network** panel is in focus to capture screenshots.</span></span>  
+<span data-ttu-id="cd623-126">**ネットワーク**パネルがフォーカスされているときにページを更新して、スクリーンショットをキャプチャします。</span><span class="sxs-lookup"><span data-stu-id="cd623-126">Refresh the page while the **Network** panel is in focus to capture screenshots.</span></span>  
 
-<span data-ttu-id="1576d-127">スクリーンショットをキャプチャした後、次のように操作します。</span><span class="sxs-lookup"><span data-stu-id="1576d-127">After capturing a screenshot, you interact with it in the following ways.</span></span>  
+<span data-ttu-id="cd623-127">スクリーンショットをキャプチャした後、次のように操作します。</span><span class="sxs-lookup"><span data-stu-id="cd623-127">After capturing a screenshot, you interact with it in the following ways.</span></span>  
 
-*   <span data-ttu-id="1576d-128">スクリーンショットにマウスポインターを置くと、そのスクリーンショットがキャプチャされた点が表示されます。</span><span class="sxs-lookup"><span data-stu-id="1576d-128">Hover over a screenshot to view the point at which that screenshot was captured.</span></span>  <span data-ttu-id="1576d-129">[**概要**] ウィンドウに黄色の線が表示されます。</span><span class="sxs-lookup"><span data-stu-id="1576d-129">A yellow line appears on the **Overview** pane.</span></span>  
-*   <span data-ttu-id="1576d-130">スクリーンショットがキャプチャされた後に発生した要求をすべて除外するには、画面のサムネイルを選択します。</span><span class="sxs-lookup"><span data-stu-id="1576d-130">Select the thumbnail of a screen to filter out any requests that occurred after the screenshot was captured.</span></span>  
-*   <span data-ttu-id="1576d-131">サムネイルをダブルクリックして拡大します。</span><span class="sxs-lookup"><span data-stu-id="1576d-131">Double-click a thumbnail to zoom into it.</span></span>  
+*   <span data-ttu-id="cd623-128">スクリーンショットにマウスポインターを置くと、そのスクリーンショットがキャプチャされた点が表示されます。</span><span class="sxs-lookup"><span data-stu-id="cd623-128">Hover over a screenshot to view the point at which that screenshot was captured.</span></span>  <span data-ttu-id="cd623-129">[**概要**] ウィンドウに黄色の線が表示されます。</span><span class="sxs-lookup"><span data-stu-id="cd623-129">A yellow line appears on the **Overview** pane.</span></span>  
+*   <span data-ttu-id="cd623-130">スクリーンショットがキャプチャされた後に発生した要求をすべて除外するには、画面のサムネイルを選択します。</span><span class="sxs-lookup"><span data-stu-id="cd623-130">Select the thumbnail of a screen to filter out any requests that occurred after the screenshot was captured.</span></span>  
+*   <span data-ttu-id="cd623-131">サムネイルをダブルクリックして拡大します。</span><span class="sxs-lookup"><span data-stu-id="cd623-131">Double-click a thumbnail to zoom into it.</span></span>  
 
 :::image type="complex" source="../media/network-network-screenshot-hover.msft.png" alt-text="スクリーンショット上のマウスポインター" lightbox="../media/network-network-screenshot-hover.msft.png":::
-   <span data-ttu-id="1576d-133">図 4: スクリーンショット上のマウスポインター</span><span class="sxs-lookup"><span data-stu-id="1576d-133">Figure 4:  Hovering over a screenshot</span></span>  
+   <span data-ttu-id="cd623-133">図 4: スクリーンショット上のマウスポインター</span><span class="sxs-lookup"><span data-stu-id="cd623-133">Figure 4:  Hovering over a screenshot</span></span>  
 :::image-end:::  
 
 <!--  ### Replay XHR request  -->
@@ -95,224 +95,224 @@ ms.locfileid: "10709304"
 :::image-end:::  
 -->  
 
-## <span data-ttu-id="1576d-134">読み込み動作を変更する</span><span class="sxs-lookup"><span data-stu-id="1576d-134">Change loading behavior</span></span>  
+## <span data-ttu-id="cd623-134">読み込み動作を変更する</span><span class="sxs-lookup"><span data-stu-id="cd623-134">Change loading behavior</span></span>  
 
-### <span data-ttu-id="1576d-135">ブラウザーのキャッシュを無効にして、初めてのユーザーをエミュレートする</span><span class="sxs-lookup"><span data-stu-id="1576d-135">Emulate a first-time visitor by disabling the browser cache</span></span>  
+### <span data-ttu-id="cd623-135">ブラウザーのキャッシュを無効にして、初めてのユーザーをエミュレートする</span><span class="sxs-lookup"><span data-stu-id="cd623-135">Emulate a first-time visitor by disabling the browser cache</span></span>  
 
-<span data-ttu-id="1576d-136">初めてのユーザーがサイトを体験した方法をエミュレートするには、[**キャッシュを無効**にする] チェックボックスをオンにします。</span><span class="sxs-lookup"><span data-stu-id="1576d-136">To emulate how a first-time user experiences your site, check the **Disable cache** checkbox.</span></span>  <span data-ttu-id="1576d-137">DevTools は、ブラウザーのキャッシュを無効にします。</span><span class="sxs-lookup"><span data-stu-id="1576d-137">DevTools disables the browser cache.</span></span>  <span data-ttu-id="1576d-138">これにより、初回のユーザーエクスペリエンスが正確にエミュレートされます。要求は、繰り返しアクセスの際にブラウザーのキャッシュから提供されるためです。</span><span class="sxs-lookup"><span data-stu-id="1576d-138">This more accurately emulates a first-time user's experience, because requests are served from the browser cache on repeat visits.</span></span>  
+<span data-ttu-id="cd623-136">初めてのユーザーがサイトを体験した方法をエミュレートするには、[**キャッシュを無効**にする] チェックボックスをオンにします。</span><span class="sxs-lookup"><span data-stu-id="cd623-136">To emulate how a first-time user experiences your site, check the **Disable cache** checkbox.</span></span>  <span data-ttu-id="cd623-137">DevTools は、ブラウザーのキャッシュを無効にします。</span><span class="sxs-lookup"><span data-stu-id="cd623-137">DevTools disables the browser cache.</span></span>  <span data-ttu-id="cd623-138">これにより、初回のユーザーエクスペリエンスが正確にエミュレートされます。要求は、繰り返しアクセスの際にブラウザーのキャッシュから提供されるためです。</span><span class="sxs-lookup"><span data-stu-id="cd623-138">This more accurately emulates a first-time user's experience, because requests are served from the browser cache on repeat visits.</span></span>  
 
 :::image type="complex" source="../media/network-network-disable-cache-checkbox.msft.png" alt-text="[キャッシュを無効にする] チェックボックス" lightbox="../media/network-network-disable-cache-checkbox.msft.png":::
-   <span data-ttu-id="1576d-140">図 5:**キャッシュを無効にする**チェックボックス</span><span class="sxs-lookup"><span data-stu-id="1576d-140">Figure 5:  The **Disable Cache** checkbox</span></span>  
+   <span data-ttu-id="cd623-140">図 5:**キャッシュを無効にする**チェックボックス</span><span class="sxs-lookup"><span data-stu-id="cd623-140">Figure 5:  The **Disable Cache** checkbox</span></span>  
 :::image-end:::  
 
-#### <span data-ttu-id="1576d-141">[ネットワーク条件] ドロアーからブラウザーキャッシュを無効にする</span><span class="sxs-lookup"><span data-stu-id="1576d-141">Disable the browser cache from the Network Conditions drawer</span></span>  
+#### <span data-ttu-id="cd623-141">[ネットワーク条件] ドロアーからブラウザーキャッシュを無効にする</span><span class="sxs-lookup"><span data-stu-id="cd623-141">Disable the browser cache from the Network Conditions drawer</span></span>  
 
-<span data-ttu-id="1576d-142">他の DevTools パネルを操作しているときに、キャッシュを無効にするには、[ネットワーク条件] ドローワを使用します。</span><span class="sxs-lookup"><span data-stu-id="1576d-142">If you want to disable the cache while working in other DevTools panels, use the Network Conditions drawer.</span></span>  
+<span data-ttu-id="cd623-142">他の DevTools パネルを操作しているときに、キャッシュを無効にするには、[ネットワーク条件] ドローワを使用します。</span><span class="sxs-lookup"><span data-stu-id="cd623-142">If you want to disable the cache while working in other DevTools panels, use the Network Conditions drawer.</span></span>  
 
-1.  <span data-ttu-id="1576d-143">[**ネットワーク条件**] ドローワを開きます。</span><span class="sxs-lookup"><span data-stu-id="1576d-143">Open the **Network Conditions** drawer.</span></span>  
-1.  <span data-ttu-id="1576d-144">[**キャッシュを無効にする**] チェックボックスをオンまたはオフにします。</span><span class="sxs-lookup"><span data-stu-id="1576d-144">Check or uncheck the **Disable cache** checkbox.</span></span>  
+1.  <span data-ttu-id="cd623-143">[**ネットワーク条件**] ドローワを開きます。</span><span class="sxs-lookup"><span data-stu-id="cd623-143">Open the **Network Conditions** drawer.</span></span>  
+1.  <span data-ttu-id="cd623-144">[**キャッシュを無効にする**] チェックボックスをオンまたはオフにします。</span><span class="sxs-lookup"><span data-stu-id="cd623-144">Check or uncheck the **Disable cache** checkbox.</span></span>  
 
 <!--todo: add network condition section when available -->  
 
-### <span data-ttu-id="1576d-145">ブラウザキャッシュを手動でクリアする</span><span class="sxs-lookup"><span data-stu-id="1576d-145">Manually clear the browser cache</span></span>  
+### <span data-ttu-id="cd623-145">ブラウザキャッシュを手動でクリアする</span><span class="sxs-lookup"><span data-stu-id="cd623-145">Manually clear the browser cache</span></span>  
 
-<span data-ttu-id="1576d-146">ブラウザーのキャッシュをいつでも手動でクリアするには、[要求] テーブルの任意の場所でコンテキストメニュー \ (右クリック \) を開き、[**ブラウザキャッシュのクリア**] を選びます。</span><span class="sxs-lookup"><span data-stu-id="1576d-146">To manually clear the browser cache at any time, open the contextual menu \(right-click\) anywhere in the Requests table and select **Clear Browser Cache**.</span></span>  
+<span data-ttu-id="cd623-146">ブラウザーのキャッシュをいつでも手動でクリアするには、[要求] テーブルの任意の場所でコンテキストメニュー \ (右クリック \) を開き、[**ブラウザキャッシュのクリア**] を選びます。</span><span class="sxs-lookup"><span data-stu-id="cd623-146">To manually clear the browser cache at any time, open the contextual menu \(right-click\) anywhere in the Requests table and select **Clear Browser Cache**.</span></span>  
 
 :::image type="complex" source="../media/network-network-clear-browser-cache.msft.png" alt-text="[ブラウザーキャッシュのクリア] を選ぶ" lightbox="../media/network-network-clear-browser-cache.msft.png":::
-   <span data-ttu-id="1576d-148">図 6: [**ブラウザキャッシュのクリア**] の選択</span><span class="sxs-lookup"><span data-stu-id="1576d-148">Figure 6:  Selecting **Clear Browser Cache**</span></span>  
+   <span data-ttu-id="cd623-148">図 6: [**ブラウザキャッシュのクリア**] の選択</span><span class="sxs-lookup"><span data-stu-id="cd623-148">Figure 6:  Selecting **Clear Browser Cache**</span></span>  
 :::image-end:::  
 
-### <span data-ttu-id="1576d-149">オフラインでエミュレートする</span><span class="sxs-lookup"><span data-stu-id="1576d-149">Emulate offline</span></span>  
+### <span data-ttu-id="cd623-149">オフラインでエミュレートする</span><span class="sxs-lookup"><span data-stu-id="cd623-149">Emulate offline</span></span>  
 
-<span data-ttu-id="1576d-150">[プログレッシブ Web アプリ][DevtoolsProgressiveWebApps]という名前の新しいクラスの web アプリでは、サービスの担当**者**のためにオフラインで機能します。</span><span class="sxs-lookup"><span data-stu-id="1576d-150">A new class of web apps, named [Progressive Web Apps][DevtoolsProgressiveWebApps], functions offline with the help of **service workers**.</span></span>  <span data-ttu-id="1576d-151">この種類のアプリを構築しているときに、データ接続がないデバイスをすばやくシミュレートすると便利です。</span><span class="sxs-lookup"><span data-stu-id="1576d-151">You may find it useful to quickly simulate a device that has no data connection when you are building this type of app.</span></span>  
+<span data-ttu-id="cd623-150">[プログレッシブ Web アプリ][DevtoolsProgressiveWebApps]という名前の新しいクラスの web アプリでは、サービスの担当**者**のためにオフラインで機能します。</span><span class="sxs-lookup"><span data-stu-id="cd623-150">A new class of web apps, named [Progressive Web Apps][DevtoolsProgressiveWebApps], functions offline with the help of **service workers**.</span></span>  <span data-ttu-id="cd623-151">この種類のアプリを構築しているときに、データ接続がないデバイスをすばやくシミュレートすると便利です。</span><span class="sxs-lookup"><span data-stu-id="cd623-151">You may find it useful to quickly simulate a device that has no data connection when you are building this type of app.</span></span>  
 
 <!--[ServiceWorkers]: /web/fundamentals/getting-started/primers/service-workers  -->
 
-<span data-ttu-id="1576d-152">[**オンライン**] ドロップダウンメニューを選択し、[**プリセット**] で検索し、[**オフライン**] を選択して、完全にオフラインのネットワークエクスペリエンスをシミュレートします。</span><span class="sxs-lookup"><span data-stu-id="1576d-152">Select the **Online** dropdown menu, search under **Presets**, and select **Offline** to simulate a completely offline network experience.</span></span>  
+<span data-ttu-id="cd623-152">[**オンライン**] ドロップダウンメニューを選択し、[**プリセット**] で検索し、[**オフライン**] を選択して、完全にオフラインのネットワークエクスペリエンスをシミュレートします。</span><span class="sxs-lookup"><span data-stu-id="cd623-152">Select the **Online** dropdown menu, search under **Presets**, and select **Offline** to simulate a completely offline network experience.</span></span>  
 
 :::image type="complex" source="../media/network-network-offline-dropdown.msft.png" alt-text="[オフライン] ドロップダウンメニュー" lightbox="../media/network-network-offline-dropdown.msft.png":::
-   <span data-ttu-id="1576d-154">図 7: [**オフライン**] ドロップダウンメニュー</span><span class="sxs-lookup"><span data-stu-id="1576d-154">Figure 7:  The **Offline** dropdown menu</span></span>  
+   <span data-ttu-id="cd623-154">図 7: [**オフライン**] ドロップダウンメニュー</span><span class="sxs-lookup"><span data-stu-id="cd623-154">Figure 7:  The **Offline** dropdown menu</span></span>  
 :::image-end:::  
 
-### <span data-ttu-id="1576d-155">低速ネットワーク接続のエミュレート</span><span class="sxs-lookup"><span data-stu-id="1576d-155">Emulate slow network connections</span></span>  
+### <span data-ttu-id="cd623-155">低速ネットワーク接続のエミュレート</span><span class="sxs-lookup"><span data-stu-id="cd623-155">Emulate slow network connections</span></span>  
 
-<span data-ttu-id="1576d-156">「**オンライン**」ドロップダウンメニューから、低速の3G、Fast 3g、その他の接続速度をエミュレートできます。</span><span class="sxs-lookup"><span data-stu-id="1576d-156">Emulate Slow 3G, Fast 3G, and other connection speeds from the **Online** dropdown menu.</span></span>  
+<span data-ttu-id="cd623-156">「**オンライン**」ドロップダウンメニューから、低速の3G、Fast 3g、その他の接続速度をエミュレートできます。</span><span class="sxs-lookup"><span data-stu-id="cd623-156">Emulate Slow 3G, Fast 3G, and other connection speeds from the **Online** dropdown menu.</span></span>  
 
 :::image type="complex" source="../media/network-network-throttling-menu.msft.png" alt-text="[調整] ドロップダウンメニュー" lightbox="../media/network-network-throttling-menu.msft.png":::
-   <span data-ttu-id="1576d-158">図 8: [**調整**] ドロップダウンメニュー</span><span class="sxs-lookup"><span data-stu-id="1576d-158">Figure 8:  The **Throttling** dropdown menu</span></span>  
+   <span data-ttu-id="cd623-158">図 8: [**調整**] ドロップダウンメニュー</span><span class="sxs-lookup"><span data-stu-id="cd623-158">Figure 8:  The **Throttling** dropdown menu</span></span>  
 :::image-end:::  
 
-<span data-ttu-id="1576d-159">低速の3G や Fast 3G など、さまざまなプリセットから選ぶことができます。</span><span class="sxs-lookup"><span data-stu-id="1576d-159">You may select from a variety of presets, such as Slow 3G or Fast 3G.</span></span>  <span data-ttu-id="1576d-160">また、[調整] メニューを開き、[**カスタム**追加] を選択して、独自のカスタムプリセットを追加することもでき  >  **Add**ます。</span><span class="sxs-lookup"><span data-stu-id="1576d-160">You may also add your own custom presets by opening the Throttling menu and selecting **Custom** > **Add**.</span></span>  
+<span data-ttu-id="cd623-159">低速の3G や Fast 3G など、さまざまなプリセットから選ぶことができます。</span><span class="sxs-lookup"><span data-stu-id="cd623-159">You may select from a variety of presets, such as Slow 3G or Fast 3G.</span></span>  <span data-ttu-id="cd623-160">また、[調整] メニューを開き、[**カスタム**追加] を選択して、独自のカスタムプリセットを追加することもでき  >  **Add**ます。</span><span class="sxs-lookup"><span data-stu-id="cd623-160">You may also add your own custom presets by opening the Throttling menu and selecting **Custom** > **Add**.</span></span>  
 
-<span data-ttu-id="1576d-161">DevTools は、調整が有効になっていることを通知するために、[**ネットワーク**] タブの横に警告アイコンを表示します。</span><span class="sxs-lookup"><span data-stu-id="1576d-161">DevTools displays a warning icon next to the **Network** tab to remind you that throttling is enabled.</span></span>  
+<span data-ttu-id="cd623-161">DevTools は、調整が有効になっていることを通知するために、[**ネットワーク**] タブの横に警告アイコンを表示します。</span><span class="sxs-lookup"><span data-stu-id="cd623-161">DevTools displays a warning icon next to the **Network** tab to remind you that throttling is enabled.</span></span>  
 
-#### <span data-ttu-id="1576d-162">ネットワークの状態のドロアーからの低速ネットワーク接続のエミュレート</span><span class="sxs-lookup"><span data-stu-id="1576d-162">Emulate slow network connections from the Network Conditions drawer</span></span>  
+#### <span data-ttu-id="cd623-162">ネットワークの状態のドロアーからの低速ネットワーク接続のエミュレート</span><span class="sxs-lookup"><span data-stu-id="cd623-162">Emulate slow network connections from the Network Conditions drawer</span></span>  
 
-<span data-ttu-id="1576d-163">他の DevTools パネルでの作業中にネットワーク接続を調整したい場合は、ネットワーク条件の引き出しを使用します。</span><span class="sxs-lookup"><span data-stu-id="1576d-163">If you want to throttle the network connection while working in other DevTools panels, use the Network Conditions drawer.</span></span>  
+<span data-ttu-id="cd623-163">他の DevTools パネルでの作業中にネットワーク接続を調整したい場合は、ネットワーク条件の引き出しを使用します。</span><span class="sxs-lookup"><span data-stu-id="cd623-163">If you want to throttle the network connection while working in other DevTools panels, use the Network Conditions drawer.</span></span>  
 
-1.  <span data-ttu-id="1576d-164">[**ネットワーク条件**] ドローワを開きます。</span><span class="sxs-lookup"><span data-stu-id="1576d-164">Open the **Network Conditions** drawer.</span></span>  
-1.  <span data-ttu-id="1576d-165">**調整**メニューから希望の接続速度を選択します。</span><span class="sxs-lookup"><span data-stu-id="1576d-165">Select your desired connection speed from the **Throttling** menu.</span></span>  
+1.  <span data-ttu-id="cd623-164">[**ネットワーク条件**] ドローワを開きます。</span><span class="sxs-lookup"><span data-stu-id="cd623-164">Open the **Network Conditions** drawer.</span></span>  
+1.  <span data-ttu-id="cd623-165">**調整**メニューから希望の接続速度を選択します。</span><span class="sxs-lookup"><span data-stu-id="cd623-165">Select your desired connection speed from the **Throttling** menu.</span></span>  
 
 <!--todo: add network condition section when available -->  
 
-### <span data-ttu-id="1576d-166">ブラウザーの cookie を手動でクリアする</span><span class="sxs-lookup"><span data-stu-id="1576d-166">Manually clear browser cookies</span></span>  
+### <span data-ttu-id="cd623-166">ブラウザーの cookie を手動でクリアする</span><span class="sxs-lookup"><span data-stu-id="cd623-166">Manually clear browser cookies</span></span>  
 
-<span data-ttu-id="1576d-167">ブラウザーの cookie をいつでも手動でクリアするには、[要求] テーブルの任意の場所でコンテキストメニュー \ (右クリック \) を開き、[**ブラウザ cookie のクリア**] を選びます。</span><span class="sxs-lookup"><span data-stu-id="1576d-167">To manually clear browser cookies at any time, open the contextual menu \(right-click\) anywhere in the Requests table and select **Clear Browser Cookies**.</span></span>  
+<span data-ttu-id="cd623-167">ブラウザーの cookie をいつでも手動でクリアするには、[要求] テーブルの任意の場所でコンテキストメニュー \ (右クリック \) を開き、[**ブラウザ cookie のクリア**] を選びます。</span><span class="sxs-lookup"><span data-stu-id="cd623-167">To manually clear browser cookies at any time, open the contextual menu \(right-click\) anywhere in the Requests table and select **Clear Browser Cookies**.</span></span>  
 
 :::image type="complex" source="../media/network-network-clear-browser-cookies.msft.png" alt-text="[ブラウザーのクリア Cookie の選択]" lightbox="../media/network-network-clear-browser-cookies.msft.png":::
-   <span data-ttu-id="1576d-169">図 9:**クリアブラウザーの cookie**の選択</span><span class="sxs-lookup"><span data-stu-id="1576d-169">Figure 9:  Selecting **Clear Browser Cookies**</span></span>  
+   <span data-ttu-id="cd623-169">図 9:**クリアブラウザーの cookie**の選択</span><span class="sxs-lookup"><span data-stu-id="cd623-169">Figure 9:  Selecting **Clear Browser Cookies**</span></span>  
 :::image-end:::  
 
-### <span data-ttu-id="1576d-170">ユーザーエージェントを上書きする</span><span class="sxs-lookup"><span data-stu-id="1576d-170">Override the user agent</span></span>  
+### <span data-ttu-id="cd623-170">ユーザーエージェントを上書きする</span><span class="sxs-lookup"><span data-stu-id="cd623-170">Override the user agent</span></span>  
 
-<span data-ttu-id="1576d-171">ユーザーエージェントを手動で上書きするには、次の操作を行います。</span><span class="sxs-lookup"><span data-stu-id="1576d-171">To manually override the user agent:</span></span>  
+<span data-ttu-id="cd623-171">ユーザーエージェントを手動で上書きするには、次の操作を行います。</span><span class="sxs-lookup"><span data-stu-id="cd623-171">To manually override the user agent:</span></span>  
 
-1.  <span data-ttu-id="1576d-172">[**ネットワーク条件**] ドローワを開きます。</span><span class="sxs-lookup"><span data-stu-id="1576d-172">Open the **Network Conditions** drawer.</span></span>  
-1.  <span data-ttu-id="1576d-173">**[自動] をオフに**します。</span><span class="sxs-lookup"><span data-stu-id="1576d-173">Uncheck **Select automatically**.</span></span>  
-1.  <span data-ttu-id="1576d-174">メニューからユーザーエージェントオプションを選択するか、テキストボックスにユーザー設定のオプションを入力します。</span><span class="sxs-lookup"><span data-stu-id="1576d-174">Choose a user agent option from the menu, or enter a custom one in the text box.</span></span>  
+1.  <span data-ttu-id="cd623-172">[**ネットワーク条件**] ドローワを開きます。</span><span class="sxs-lookup"><span data-stu-id="cd623-172">Open the **Network Conditions** drawer.</span></span>  
+1.  <span data-ttu-id="cd623-173">**[自動] をオフに**します。</span><span class="sxs-lookup"><span data-stu-id="cd623-173">Uncheck **Select automatically**.</span></span>  
+1.  <span data-ttu-id="cd623-174">メニューからユーザーエージェントオプションを選択するか、テキストボックスにユーザー設定のオプションを入力します。</span><span class="sxs-lookup"><span data-stu-id="cd623-174">Choose a user agent option from the menu, or enter a custom one in the text box.</span></span>  
 
 <!--todo: add network condition section when available -->  
 
-## <span data-ttu-id="1576d-175">フィルター要求</span><span class="sxs-lookup"><span data-stu-id="1576d-175">Filter requests</span></span>  
+## <span data-ttu-id="cd623-175">フィルター要求</span><span class="sxs-lookup"><span data-stu-id="cd623-175">Filter requests</span></span>  
 
-### <span data-ttu-id="1576d-176">プロパティによって要求をフィルター処理する</span><span class="sxs-lookup"><span data-stu-id="1576d-176">Filter requests by properties</span></span>  
+### <span data-ttu-id="cd623-176">プロパティによって要求をフィルター処理する</span><span class="sxs-lookup"><span data-stu-id="cd623-176">Filter requests by properties</span></span>  
 
-<span data-ttu-id="1576d-177">[**フィルター** ] テキストボックスを使用して、要求のドメインやサイズなどのプロパティによって要求をフィルター処理します。</span><span class="sxs-lookup"><span data-stu-id="1576d-177">Use the **Filter** text box to filter requests by properties, such as the domain or size of the request.</span></span>  
+<span data-ttu-id="cd623-177">[**フィルター** ] テキストボックスを使用して、要求のドメインやサイズなどのプロパティによって要求をフィルター処理します。</span><span class="sxs-lookup"><span data-stu-id="cd623-177">Use the **Filter** text box to filter requests by properties, such as the domain or size of the request.</span></span>  
 
-<span data-ttu-id="1576d-178">テキストボックスが表示されない場合は、[フィルター] ウィンドウが非表示になっている可能性があります。</span><span class="sxs-lookup"><span data-stu-id="1576d-178">If you do not see the text box, the Filters pane is probably hidden.</span></span>  
-<span data-ttu-id="1576d-179">「[フィルターウィンドウを非表示にする」を](#hide-the-filters-pane)参照してください。</span><span class="sxs-lookup"><span data-stu-id="1576d-179">See [Hide the Filters pane](#hide-the-filters-pane).</span></span>  
+<span data-ttu-id="cd623-178">テキストボックスが表示されない場合は、[フィルター] ウィンドウが非表示になっている可能性があります。</span><span class="sxs-lookup"><span data-stu-id="cd623-178">If you do not see the text box, the Filters pane is probably hidden.</span></span>  
+<span data-ttu-id="cd623-179">「[フィルターウィンドウを非表示にする」を](#hide-the-filters-pane)参照してください。</span><span class="sxs-lookup"><span data-stu-id="cd623-179">See [Hide the Filters pane](#hide-the-filters-pane).</span></span>  
 
 :::image type="complex" source="../media/network-network-filters-textbox.msft.png" alt-text="[フィルター] テキストボックス" lightbox="../media/network-network-filters-textbox.msft.png":::
-   <span data-ttu-id="1576d-181">図 10: [**フィルター** ] テキストボックス</span><span class="sxs-lookup"><span data-stu-id="1576d-181">Figure 10:  The **Filter** text box</span></span>  
+   <span data-ttu-id="cd623-181">図 10: [**フィルター** ] テキストボックス</span><span class="sxs-lookup"><span data-stu-id="cd623-181">Figure 10:  The **Filter** text box</span></span>  
 :::image-end:::  
 
-<span data-ttu-id="1576d-182">各プロパティをスペースで区切ることで、複数のプロパティを同時に使うことができます。</span><span class="sxs-lookup"><span data-stu-id="1576d-182">You may use multiple properties simultaneously by separating each property with a space.</span></span>  <span data-ttu-id="1576d-183">たとえば、 `mime-type:image/png larger-than:1K` 1 kb より大きいすべての PNGs を表示します。</span><span class="sxs-lookup"><span data-stu-id="1576d-183">For example, `mime-type:image/png larger-than:1K` displays all PNGs that are larger than one kilobyte.</span></span>  <span data-ttu-id="1576d-184">これらのマルチプロパティフィルターは、操作に相当 `AND` します。</span><span class="sxs-lookup"><span data-stu-id="1576d-184">These multi-property filters are equivalent to `AND` operations.</span></span>  `OR` <span data-ttu-id="1576d-185">操作は現在サポートされていません。</span><span class="sxs-lookup"><span data-stu-id="1576d-185">operations are currently not supported.</span></span>  
+<span data-ttu-id="cd623-182">各プロパティをスペースで区切ることで、複数のプロパティを同時に使うことができます。</span><span class="sxs-lookup"><span data-stu-id="cd623-182">You may use multiple properties simultaneously by separating each property with a space.</span></span>  <span data-ttu-id="cd623-183">たとえば、 `mime-type:image/png larger-than:1K` 1 kb より大きいすべての PNGs を表示します。</span><span class="sxs-lookup"><span data-stu-id="cd623-183">For example, `mime-type:image/png larger-than:1K` displays all PNGs that are larger than one kilobyte.</span></span>  <span data-ttu-id="cd623-184">これらのマルチプロパティフィルターは、操作に相当 `AND` します。</span><span class="sxs-lookup"><span data-stu-id="cd623-184">These multi-property filters are equivalent to `AND` operations.</span></span>  `OR` <span data-ttu-id="cd623-185">操作は現在サポートされていません。</span><span class="sxs-lookup"><span data-stu-id="cd623-185">operations are currently not supported.</span></span>  
 
-<span data-ttu-id="1576d-186">サポートされているプロパティの完全な一覧です。</span><span class="sxs-lookup"><span data-stu-id="1576d-186">The complete list of supported properties.</span></span>  
+<span data-ttu-id="cd623-186">サポートされているプロパティの完全な一覧です。</span><span class="sxs-lookup"><span data-stu-id="cd623-186">The complete list of supported properties.</span></span>  
 
-| <span data-ttu-id="1576d-187">プロパティ</span><span class="sxs-lookup"><span data-stu-id="1576d-187">Property</span></span> | <span data-ttu-id="1576d-188">詳細</span><span class="sxs-lookup"><span data-stu-id="1576d-188">Details</span></span> |  
+| <span data-ttu-id="cd623-187">プロパティ</span><span class="sxs-lookup"><span data-stu-id="cd623-187">Property</span></span> | <span data-ttu-id="cd623-188">詳細</span><span class="sxs-lookup"><span data-stu-id="cd623-188">Details</span></span> |  
 |:--- | :--- |  
-| `domain` | <span data-ttu-id="1576d-189">指定したドメインのリソースのみを表示します。</span><span class="sxs-lookup"><span data-stu-id="1576d-189">Only display resources from the specified domain.</span></span>  <span data-ttu-id="1576d-190">複数のドメインを含めるには、ワイルドカード文字 \ (\) を使用することができ `*` ます。</span><span class="sxs-lookup"><span data-stu-id="1576d-190">You may use a wildcard character \(`*`\) to include multiple domains.</span></span>  <span data-ttu-id="1576d-191">たとえば、 `*.com` で終わるすべてのドメイン名のリソースが表示され `.com` ます。</span><span class="sxs-lookup"><span data-stu-id="1576d-191">For example, `*.com` displays resources from all domain names ending in `.com`.</span></span>  <span data-ttu-id="1576d-192">DevTools は、オートコンプリートのドロップダウンメニューに、検出されたすべてのドメインを入力します。</span><span class="sxs-lookup"><span data-stu-id="1576d-192">DevTools populates the autocomplete dropdown menu with all of the domains it has encountered.</span></span> |  
-| `has-response-header` | <span data-ttu-id="1576d-193">指定した HTTP 応答ヘッダーを含むリソースを表示します。</span><span class="sxs-lookup"><span data-stu-id="1576d-193">Show the resources that contain the specified HTTP response header.</span></span>  <span data-ttu-id="1576d-194">DevTools は、オートコンプリートのドロップダウンリストに、検出されたすべての応答ヘッダーを入力します。</span><span class="sxs-lookup"><span data-stu-id="1576d-194">DevTools populates the autocomplete dropdown with all of the response headers that it has encountered.</span></span> |  
-| `is` | <span data-ttu-id="1576d-195">`is:running`リソースを検索するために使用 `WebSocket` します。</span><span class="sxs-lookup"><span data-stu-id="1576d-195">Use `is:running` to find `WebSocket` resources.</span></span> |  
-| `larger-than` | <span data-ttu-id="1576d-196">指定したサイズよりも大きいリソースをバイト単位で表示します。</span><span class="sxs-lookup"><span data-stu-id="1576d-196">Show resources that are larger than the specified size, in bytes.</span></span>  <span data-ttu-id="1576d-197">値の設定 `1000` は、の値の設定に相当 `1k` します。</span><span class="sxs-lookup"><span data-stu-id="1576d-197">Setting a value of `1000` is equivalent to setting a value of `1k`.</span></span> |  
-| `method` | <span data-ttu-id="1576d-198">指定した HTTP メソッドの種類によって取得されたリソースを表示します。</span><span class="sxs-lookup"><span data-stu-id="1576d-198">Show resources that were retrieved over a specified HTTP method type.</span></span>  <span data-ttu-id="1576d-199">DevTools は、検出されたすべての HTTP メソッドをドロップダウンに入力します。</span><span class="sxs-lookup"><span data-stu-id="1576d-199">DevTools populates the dropdown with all of the HTTP methods it has encountered.</span></span> |  
-| `mime-type` | <span data-ttu-id="1576d-200">指定した MIME の種類のリソースを表示します。</span><span class="sxs-lookup"><span data-stu-id="1576d-200">Show resources of a specified MIME type.</span></span>  <span data-ttu-id="1576d-201">DevTools は、検出されたすべての MIME の種類をドロップダウンに入力します。</span><span class="sxs-lookup"><span data-stu-id="1576d-201">DevTools populates the dropdown with all MIME types it has encountered.</span></span> |  
-| `mixed-content` | <span data-ttu-id="1576d-202">すべての混合コンテンツリソース \ ( `mixed-content:all` \) を表示するか、現在 \ (\) を表示しているものだけを表示し `mixed-content:displayed` ます。</span><span class="sxs-lookup"><span data-stu-id="1576d-202">Show all mixed content resources \(`mixed-content:all`\) or just the ones that are currently displayed \(`mixed-content:displayed`\).</span></span> |  
-| `scheme` | <span data-ttu-id="1576d-203">保護されていない HTTP \ ( `scheme:http` \) または保護された HTTPS \ (\) 経由で取得したリソースを表示 `scheme:https` します。</span><span class="sxs-lookup"><span data-stu-id="1576d-203">Show resources retrieved over unprotected HTTP \(`scheme:http`\) or protected HTTPS \(`scheme:https`\).</span></span> |  
-| `set-cookie-domain` | <span data-ttu-id="1576d-204">指定した `Set-Cookie` 値と一致する属性を持つヘッダーが含まれているリソースを表示し `Domain` ます。</span><span class="sxs-lookup"><span data-stu-id="1576d-204">Show the resources that have a `Set-Cookie` header with a `Domain` attribute that matches the specified value.</span></span>  <span data-ttu-id="1576d-205">DevTools は、検出されたすべての cookie ドメインにオートコンプリートを設定します。</span><span class="sxs-lookup"><span data-stu-id="1576d-205">DevTools populates the autocomplete with all of the cookie domains that it has encountered.</span></span> |  
-| `set-cookie-name` | <span data-ttu-id="1576d-206">指定した値と一致する名前のヘッダーが含まれているリソースを表示し `Set-Cookie` ます。</span><span class="sxs-lookup"><span data-stu-id="1576d-206">Show the resources that have a `Set-Cookie` header with a name that matches the specified value.</span></span>  <span data-ttu-id="1576d-207">DevTools は、検出されたすべての cookie 名でオートコンプリートを入力します。</span><span class="sxs-lookup"><span data-stu-id="1576d-207">DevTools populates the autocomplete with all of the cookie names that it has encountered.</span></span> |  
-| `set-cookie-value` | <span data-ttu-id="1576d-208">指定した `Set-Cookie` 値と一致する値を含むヘッダーが含まれているリソースを表示します。</span><span class="sxs-lookup"><span data-stu-id="1576d-208">Show the resources that have a `Set-Cookie` header with a value that matches the specified value.</span></span>  <span data-ttu-id="1576d-209">DevTools は、検出されたすべての cookie 値でオートコンプリートを設定します。</span><span class="sxs-lookup"><span data-stu-id="1576d-209">DevTools populates the autocomplete with all of the cookie values that it has encountered.</span></span> |  
-| `status-code` | <span data-ttu-id="1576d-210">HTTP ステータスコードが指定されたコードと一致するリソースのみを表示します。</span><span class="sxs-lookup"><span data-stu-id="1576d-210">Show only the resources for which the HTTP status code matches the specified code.</span></span>  <span data-ttu-id="1576d-211">DevTools は、オートコンプリートのドロップダウンメニューに、検出されたすべての状態コードを入力します。</span><span class="sxs-lookup"><span data-stu-id="1576d-211">DevTools populates the autocomplete dropdown menu with all of the status codes it has encountered.</span></span> |  
+| `domain` | <span data-ttu-id="cd623-189">指定したドメインのリソースのみを表示します。</span><span class="sxs-lookup"><span data-stu-id="cd623-189">Only display resources from the specified domain.</span></span>  <span data-ttu-id="cd623-190">複数のドメインを含めるには、ワイルドカード文字 \ (\) を使用することができ `*` ます。</span><span class="sxs-lookup"><span data-stu-id="cd623-190">You may use a wildcard character \(`*`\) to include multiple domains.</span></span>  <span data-ttu-id="cd623-191">たとえば、 `*.com` で終わるすべてのドメイン名のリソースが表示され `.com` ます。</span><span class="sxs-lookup"><span data-stu-id="cd623-191">For example, `*.com` displays resources from all domain names ending in `.com`.</span></span>  <span data-ttu-id="cd623-192">DevTools は、オートコンプリートのドロップダウンメニューに、検出されたすべてのドメインを入力します。</span><span class="sxs-lookup"><span data-stu-id="cd623-192">DevTools populates the autocomplete dropdown menu with all of the domains it has encountered.</span></span> |  
+| `has-response-header` | <span data-ttu-id="cd623-193">指定した HTTP 応答ヘッダーを含むリソースを表示します。</span><span class="sxs-lookup"><span data-stu-id="cd623-193">Show the resources that contain the specified HTTP response header.</span></span>  <span data-ttu-id="cd623-194">DevTools は、オートコンプリートのドロップダウンリストに、検出されたすべての応答ヘッダーを入力します。</span><span class="sxs-lookup"><span data-stu-id="cd623-194">DevTools populates the autocomplete dropdown with all of the response headers that it has encountered.</span></span> |  
+| `is` | <span data-ttu-id="cd623-195">`is:running`リソースを検索するために使用 `WebSocket` します。</span><span class="sxs-lookup"><span data-stu-id="cd623-195">Use `is:running` to find `WebSocket` resources.</span></span> |  
+| `larger-than` | <span data-ttu-id="cd623-196">指定したサイズよりも大きいリソースをバイト単位で表示します。</span><span class="sxs-lookup"><span data-stu-id="cd623-196">Show resources that are larger than the specified size, in bytes.</span></span>  <span data-ttu-id="cd623-197">値の設定 `1000` は、の値の設定に相当 `1k` します。</span><span class="sxs-lookup"><span data-stu-id="cd623-197">Setting a value of `1000` is equivalent to setting a value of `1k`.</span></span> |  
+| `method` | <span data-ttu-id="cd623-198">指定した HTTP メソッドの種類によって取得されたリソースを表示します。</span><span class="sxs-lookup"><span data-stu-id="cd623-198">Show resources that were retrieved over a specified HTTP method type.</span></span>  <span data-ttu-id="cd623-199">DevTools は、検出されたすべての HTTP メソッドをドロップダウンに入力します。</span><span class="sxs-lookup"><span data-stu-id="cd623-199">DevTools populates the dropdown with all of the HTTP methods it has encountered.</span></span> |  
+| `mime-type` | <span data-ttu-id="cd623-200">指定した MIME の種類のリソースを表示します。</span><span class="sxs-lookup"><span data-stu-id="cd623-200">Show resources of a specified MIME type.</span></span>  <span data-ttu-id="cd623-201">DevTools は、検出されたすべての MIME の種類をドロップダウンに入力します。</span><span class="sxs-lookup"><span data-stu-id="cd623-201">DevTools populates the dropdown with all MIME types it has encountered.</span></span> |  
+| `mixed-content` | <span data-ttu-id="cd623-202">すべての混合コンテンツリソース \ ( `mixed-content:all` \) を表示するか、現在 \ (\) を表示しているものだけを表示し `mixed-content:displayed` ます。</span><span class="sxs-lookup"><span data-stu-id="cd623-202">Show all mixed content resources \(`mixed-content:all`\) or just the ones that are currently displayed \(`mixed-content:displayed`\).</span></span> |  
+| `scheme` | <span data-ttu-id="cd623-203">保護されていない HTTP \ ( `scheme:http` \) または保護された HTTPS \ (\) 経由で取得したリソースを表示 `scheme:https` します。</span><span class="sxs-lookup"><span data-stu-id="cd623-203">Show resources retrieved over unprotected HTTP \(`scheme:http`\) or protected HTTPS \(`scheme:https`\).</span></span> |  
+| `set-cookie-domain` | <span data-ttu-id="cd623-204">指定した `Set-Cookie` 値と一致する属性を持つヘッダーが含まれているリソースを表示し `Domain` ます。</span><span class="sxs-lookup"><span data-stu-id="cd623-204">Show the resources that have a `Set-Cookie` header with a `Domain` attribute that matches the specified value.</span></span>  <span data-ttu-id="cd623-205">DevTools は、検出されたすべての cookie ドメインにオートコンプリートを設定します。</span><span class="sxs-lookup"><span data-stu-id="cd623-205">DevTools populates the autocomplete with all of the cookie domains that it has encountered.</span></span> |  
+| `set-cookie-name` | <span data-ttu-id="cd623-206">指定した値と一致する名前のヘッダーが含まれているリソースを表示し `Set-Cookie` ます。</span><span class="sxs-lookup"><span data-stu-id="cd623-206">Show the resources that have a `Set-Cookie` header with a name that matches the specified value.</span></span>  <span data-ttu-id="cd623-207">DevTools は、検出されたすべての cookie 名でオートコンプリートを入力します。</span><span class="sxs-lookup"><span data-stu-id="cd623-207">DevTools populates the autocomplete with all of the cookie names that it has encountered.</span></span> |  
+| `set-cookie-value` | <span data-ttu-id="cd623-208">指定した `Set-Cookie` 値と一致する値を含むヘッダーが含まれているリソースを表示します。</span><span class="sxs-lookup"><span data-stu-id="cd623-208">Show the resources that have a `Set-Cookie` header with a value that matches the specified value.</span></span>  <span data-ttu-id="cd623-209">DevTools は、検出されたすべての cookie 値でオートコンプリートを設定します。</span><span class="sxs-lookup"><span data-stu-id="cd623-209">DevTools populates the autocomplete with all of the cookie values that it has encountered.</span></span> |  
+| `status-code` | <span data-ttu-id="cd623-210">HTTP ステータスコードが指定されたコードと一致するリソースのみを表示します。</span><span class="sxs-lookup"><span data-stu-id="cd623-210">Show only the resources for which the HTTP status code matches the specified code.</span></span>  <span data-ttu-id="cd623-211">DevTools は、オートコンプリートのドロップダウンメニューに、検出されたすべての状態コードを入力します。</span><span class="sxs-lookup"><span data-stu-id="cd623-211">DevTools populates the autocomplete dropdown menu with all of the status codes it has encountered.</span></span> |  
 
-### <span data-ttu-id="1576d-212">種類別に要求をフィルター処理する</span><span class="sxs-lookup"><span data-stu-id="1576d-212">Filter requests by type</span></span>  
+### <span data-ttu-id="cd623-212">種類別に要求をフィルター処理する</span><span class="sxs-lookup"><span data-stu-id="cd623-212">Filter requests by type</span></span>  
 
-<span data-ttu-id="1576d-213">要求の種類によって要求をフィルター処理するには、[ネットワーク] パネルの**Xhr**、 **JS**、 **CSS**、 **Img**、 **Media**、 **Font**、 **Doc**、 **WS** \ (WebSocket \)、**マニフェスト**、**その他**\ (ここに一覧表示されていないその他の種類) ボタンを選択します。</span><span class="sxs-lookup"><span data-stu-id="1576d-213">To filter requests by request type, select the **XHR**, **JS**, **CSS**, **Img**, **Media**, **Font**, **Doc**, **WS** \(WebSocket\), **Manifest**, or **Other** \(any other type not listed here\) buttons on the Network panel.</span></span>  
+<span data-ttu-id="cd623-213">要求の種類によって要求をフィルター処理するには、[ネットワーク] パネルの**Xhr**、 **JS**、 **CSS**、 **Img**、 **Media**、 **Font**、 **Doc**、 **WS** \ (WebSocket \)、**マニフェスト**、**その他**\ (ここに一覧表示されていないその他の種類) ボタンを選択します。</span><span class="sxs-lookup"><span data-stu-id="cd623-213">To filter requests by request type, select the **XHR**, **JS**, **CSS**, **Img**, **Media**, **Font**, **Doc**, **WS** \(WebSocket\), **Manifest**, or **Other** \(any other type not listed here\) buttons on the Network panel.</span></span>  
 
-<span data-ttu-id="1576d-214">これらのボタンが表示されない場合は、[フィルター] ウィンドウが非表示になっている可能性があります。</span><span class="sxs-lookup"><span data-stu-id="1576d-214">If you do not see these buttons, the Filters pane is probably hidden.</span></span>  
-<span data-ttu-id="1576d-215">「[フィルターウィンドウを非表示にする」を](#hide-the-filters-pane)参照してください。</span><span class="sxs-lookup"><span data-stu-id="1576d-215">See [Hide the Filters pane](#hide-the-filters-pane).</span></span>  
+<span data-ttu-id="cd623-214">これらのボタンが表示されない場合は、[フィルター] ウィンドウが非表示になっている可能性があります。</span><span class="sxs-lookup"><span data-stu-id="cd623-214">If you do not see these buttons, the Filters pane is probably hidden.</span></span>  
+<span data-ttu-id="cd623-215">「[フィルターウィンドウを非表示にする」を](#hide-the-filters-pane)参照してください。</span><span class="sxs-lookup"><span data-stu-id="cd623-215">See [Hide the Filters pane](#hide-the-filters-pane).</span></span>  
 
-<span data-ttu-id="1576d-216">複数の種類のフィルターを同時に有効にするに `Control` は、\ (Windows \) または `Command` \ (macOS \) を保持し、を選択します。</span><span class="sxs-lookup"><span data-stu-id="1576d-216">To enable multiple type filters simultaneously, hold `Control` \(Windows\) or `Command` \(macOS\) and then select.</span></span>  
+<span data-ttu-id="cd623-216">複数の種類のフィルターを同時に有効にするに `Control` は、\ (Windows \) または `Command` \ (macOS \) を保持し、を選択します。</span><span class="sxs-lookup"><span data-stu-id="cd623-216">To enable multiple type filters simultaneously, hold `Control` \(Windows\) or `Command` \(macOS\) and then select.</span></span>  
 
 :::image type="complex" source="../media/network-network-type-filters.msft.png" alt-text="型フィルターを使用した JS、CSS、およびドキュメントのリソースの表示" lightbox="../media/network-network-type-filters.msft.png":::
-   <span data-ttu-id="1576d-218">図 11: 型フィルターを使用して JS、CSS、およびドキュメントのリソースを表示する</span><span class="sxs-lookup"><span data-stu-id="1576d-218">Figure 11:  Using the Type filters to display JS, CSS, and Document resources</span></span>  
+   <span data-ttu-id="cd623-218">図 11: 型フィルターを使用して JS、CSS、およびドキュメントのリソースを表示する</span><span class="sxs-lookup"><span data-stu-id="cd623-218">Figure 11:  Using the Type filters to display JS, CSS, and Document resources</span></span>  
 :::image-end:::  
 
-### <span data-ttu-id="1576d-219">時間に基づいて要求をフィルター処理する</span><span class="sxs-lookup"><span data-stu-id="1576d-219">Filter requests by time</span></span>  
+### <span data-ttu-id="cd623-219">時間に基づいて要求をフィルター処理する</span><span class="sxs-lookup"><span data-stu-id="cd623-219">Filter requests by time</span></span>  
 
-<span data-ttu-id="1576d-220">[概要] ウィンドウで左または右にドラッグすると、その期間中にアクティブだった要求のみが表示されます。</span><span class="sxs-lookup"><span data-stu-id="1576d-220">Select and drag left or right on the Overview pane to only display requests that were active during that time frame.</span></span>  <span data-ttu-id="1576d-221">フィルターは包含されています。</span><span class="sxs-lookup"><span data-stu-id="1576d-221">The filter is inclusive.</span></span>  <span data-ttu-id="1576d-222">強調表示された時間にアクティブだった要求が表示されます。</span><span class="sxs-lookup"><span data-stu-id="1576d-222">Any request that was active during the highlighted time is shown.</span></span>  
+<span data-ttu-id="cd623-220">[概要] ウィンドウで左または右にドラッグすると、その期間中にアクティブだった要求のみが表示されます。</span><span class="sxs-lookup"><span data-stu-id="cd623-220">Select and drag left or right on the Overview pane to only display requests that were active during that time frame.</span></span>  <span data-ttu-id="cd623-221">フィルターは包含されています。</span><span class="sxs-lookup"><span data-stu-id="cd623-221">The filter is inclusive.</span></span>  <span data-ttu-id="cd623-222">強調表示された時間にアクティブだった要求が表示されます。</span><span class="sxs-lookup"><span data-stu-id="cd623-222">Any request that was active during the highlighted time is shown.</span></span>  
 
 :::image type="complex" source="../media/network-network-overview-filter.msft.png" alt-text="300ms の非アクティブな要求をすべてフィルターで除外する" lightbox="../media/network-network-overview-filter.msft.png":::
-   <span data-ttu-id="1576d-224">図 12: 300ms を介して非アクティブになっていた要求をすべてフィルターで除外する</span><span class="sxs-lookup"><span data-stu-id="1576d-224">Figure 12:  Filtering out any requests that were inactive around 300ms</span></span>  
+   <span data-ttu-id="cd623-224">図 12: 300ms を介して非アクティブになっていた要求をすべてフィルターで除外する</span><span class="sxs-lookup"><span data-stu-id="cd623-224">Figure 12:  Filtering out any requests that were inactive around 300ms</span></span>  
 :::image-end:::  
 
-### <span data-ttu-id="1576d-225">データ Url を非表示にする</span><span class="sxs-lookup"><span data-stu-id="1576d-225">Hide data URLs</span></span>  
+### <span data-ttu-id="cd623-225">データ Url を非表示にする</span><span class="sxs-lookup"><span data-stu-id="cd623-225">Hide data URLs</span></span>  
 
-<span data-ttu-id="1576d-226">[データ url][MDNHTTPDataURIs]は、他のドキュメントに埋め込まれた小さなファイルです。</span><span class="sxs-lookup"><span data-stu-id="1576d-226">[Data URLs][MDNHTTPDataURIs] are small files embedded into other documents.</span></span>  <span data-ttu-id="1576d-227">が開始する要求テーブルに `data:` は、データの URL が表示されます。</span><span class="sxs-lookup"><span data-stu-id="1576d-227">Any request that you see in the Requests table that starts with `data:` is a data URL.</span></span>  
+<span data-ttu-id="cd623-226">[データ url][MDNHTTPDataURIs]は、他のドキュメントに埋め込まれた小さなファイルです。</span><span class="sxs-lookup"><span data-stu-id="cd623-226">[Data URLs][MDNHTTPDataURIs] are small files embedded into other documents.</span></span>  <span data-ttu-id="cd623-227">が開始する要求テーブルに `data:` は、データの URL が表示されます。</span><span class="sxs-lookup"><span data-stu-id="cd623-227">Any request that you see in the Requests table that starts with `data:` is a data URL.</span></span>  
 
-<span data-ttu-id="1576d-228">[**データ url を非表示**にする] チェックボックスをオンにして要求を非表示にします。</span><span class="sxs-lookup"><span data-stu-id="1576d-228">Check the **Hide data URLs** checkbox to hide the requests.</span></span>  
+<span data-ttu-id="cd623-228">[**データ url を非表示**にする] チェックボックスをオンにして要求を非表示にします。</span><span class="sxs-lookup"><span data-stu-id="cd623-228">Check the **Hide data URLs** checkbox to hide the requests.</span></span>  
 
 :::image type="complex" source="../media/network-network-hide-data-urls.msft.png" alt-text="[データ Url を非表示にする] チェックボックス" lightbox="../media/network-network-hide-data-urls.msft.png":::
-   <span data-ttu-id="1576d-230">図 13: [**データ Url を非表示**にする] チェックボックス</span><span class="sxs-lookup"><span data-stu-id="1576d-230">Figure 13:  The **Hide Data URLs** checkbox</span></span>  
+   <span data-ttu-id="cd623-230">図 13: [**データ Url を非表示**にする] チェックボックス</span><span class="sxs-lookup"><span data-stu-id="cd623-230">Figure 13:  The **Hide Data URLs** checkbox</span></span>  
 :::image-end:::  
 
-## <span data-ttu-id="1576d-231">並べ替え要求</span><span class="sxs-lookup"><span data-stu-id="1576d-231">Sort requests</span></span>  
+## <span data-ttu-id="cd623-231">並べ替え要求</span><span class="sxs-lookup"><span data-stu-id="cd623-231">Sort requests</span></span>  
 
-<span data-ttu-id="1576d-232">既定では、要求テーブルの要求は開始時刻によって並べ替えられますが、他の条件を使用してテーブルを並べ替えることができます。</span><span class="sxs-lookup"><span data-stu-id="1576d-232">By default, the requests in the Requests table are sorted by initiation time, but you may sort the table using other criteria.</span></span>  
+<span data-ttu-id="cd623-232">既定では、要求テーブルの要求は開始時刻によって並べ替えられますが、他の条件を使用してテーブルを並べ替えることができます。</span><span class="sxs-lookup"><span data-stu-id="cd623-232">By default, the requests in the Requests table are sorted by initiation time, but you may sort the table using other criteria.</span></span>  
 
-### <span data-ttu-id="1576d-233">列で並べ替え</span><span class="sxs-lookup"><span data-stu-id="1576d-233">Sort by column</span></span>  
+### <span data-ttu-id="cd623-233">列で並べ替え</span><span class="sxs-lookup"><span data-stu-id="cd623-233">Sort by column</span></span>  
 
-<span data-ttu-id="1576d-234">要求内の任意の列のヘッダーを選び、その列によって要求を並べ替えます。</span><span class="sxs-lookup"><span data-stu-id="1576d-234">Select the header of any column in the Requests to sort requests by that column.</span></span>  
+<span data-ttu-id="cd623-234">要求内の任意の列のヘッダーを選び、その列によって要求を並べ替えます。</span><span class="sxs-lookup"><span data-stu-id="cd623-234">Select the header of any column in the Requests to sort requests by that column.</span></span>  
 
-### <span data-ttu-id="1576d-235">アクティビティ別の並べ替えフェーズ</span><span class="sxs-lookup"><span data-stu-id="1576d-235">Sort by activity phase</span></span>  
+### <span data-ttu-id="cd623-235">アクティビティ別の並べ替えフェーズ</span><span class="sxs-lookup"><span data-stu-id="cd623-235">Sort by activity phase</span></span>  
 
-<span data-ttu-id="1576d-236">ウォーターフォールでのリクエストの並べ替え方法を変更するには、要求テーブルのヘッダーにカーソルを合わせて、コンテキストメニュー \ (右クリック \) を開き、**ウォーターフォール**をポイントして、次のいずれかのオプションを選択します。</span><span class="sxs-lookup"><span data-stu-id="1576d-236">To change how the Waterfall sorts requests, hover on the header of the Requests table, open the contextual menu \(right-click\), hover over **Waterfall**, and select one of the following options.</span></span>  
+<span data-ttu-id="cd623-236">ウォーターフォールでのリクエストの並べ替え方法を変更するには、要求テーブルのヘッダーにカーソルを合わせて、コンテキストメニュー \ (右クリック \) を開き、**ウォーターフォール**をポイントして、次のいずれかのオプションを選択します。</span><span class="sxs-lookup"><span data-stu-id="cd623-236">To change how the Waterfall sorts requests, hover on the header of the Requests table, open the contextual menu \(right-click\), hover over **Waterfall**, and select one of the following options.</span></span>  
 
-*   <span data-ttu-id="1576d-237">**開始時刻**。</span><span class="sxs-lookup"><span data-stu-id="1576d-237">**Start Time**.</span></span>  <span data-ttu-id="1576d-238">最初に開始された要求は一番上にあります。</span><span class="sxs-lookup"><span data-stu-id="1576d-238">The first request that was initiated is at the top.</span></span>  
-*   <span data-ttu-id="1576d-239">**応答時間**。</span><span class="sxs-lookup"><span data-stu-id="1576d-239">**Response Time**.</span></span>  <span data-ttu-id="1576d-240">ダウンロードを開始した最初の要求は上部にあります。</span><span class="sxs-lookup"><span data-stu-id="1576d-240">The first request that started downloading is at the top.</span></span>  
-*   <span data-ttu-id="1576d-241">**終了時刻**。</span><span class="sxs-lookup"><span data-stu-id="1576d-241">**End Time**.</span></span>  <span data-ttu-id="1576d-242">最初の要求が一番上にあります。</span><span class="sxs-lookup"><span data-stu-id="1576d-242">The first request that finished is at the top.</span></span>  
-*   <span data-ttu-id="1576d-243">**合計期間**。</span><span class="sxs-lookup"><span data-stu-id="1576d-243">**Total Duration**.</span></span>  <span data-ttu-id="1576d-244">最短接続の設定と要求/応答を含む要求が一番上にあります。</span><span class="sxs-lookup"><span data-stu-id="1576d-244">The request with the shortest connection setup and request / response is at the top.</span></span>  
-*   <span data-ttu-id="1576d-245">**待機時間**。</span><span class="sxs-lookup"><span data-stu-id="1576d-245">**Latency**.</span></span>  <span data-ttu-id="1576d-246">応答の最短時間を待っている要求が一番上にあります。</span><span class="sxs-lookup"><span data-stu-id="1576d-246">The request that waited the shortest time for a response is at the top.</span></span>  
+*   <span data-ttu-id="cd623-237">**開始時刻**。</span><span class="sxs-lookup"><span data-stu-id="cd623-237">**Start Time**.</span></span>  <span data-ttu-id="cd623-238">最初に開始された要求は一番上にあります。</span><span class="sxs-lookup"><span data-stu-id="cd623-238">The first request that was initiated is at the top.</span></span>  
+*   <span data-ttu-id="cd623-239">**応答時間**。</span><span class="sxs-lookup"><span data-stu-id="cd623-239">**Response Time**.</span></span>  <span data-ttu-id="cd623-240">ダウンロードを開始した最初の要求は上部にあります。</span><span class="sxs-lookup"><span data-stu-id="cd623-240">The first request that started downloading is at the top.</span></span>  
+*   <span data-ttu-id="cd623-241">**終了時刻**。</span><span class="sxs-lookup"><span data-stu-id="cd623-241">**End Time**.</span></span>  <span data-ttu-id="cd623-242">最初の要求が一番上にあります。</span><span class="sxs-lookup"><span data-stu-id="cd623-242">The first request that finished is at the top.</span></span>  
+*   <span data-ttu-id="cd623-243">**合計期間**。</span><span class="sxs-lookup"><span data-stu-id="cd623-243">**Total Duration**.</span></span>  <span data-ttu-id="cd623-244">最短接続の設定と要求/応答を含む要求が一番上にあります。</span><span class="sxs-lookup"><span data-stu-id="cd623-244">The request with the shortest connection setup and request / response is at the top.</span></span>  
+*   <span data-ttu-id="cd623-245">**待機時間**。</span><span class="sxs-lookup"><span data-stu-id="cd623-245">**Latency**.</span></span>  <span data-ttu-id="cd623-246">応答の最短時間を待っている要求が一番上にあります。</span><span class="sxs-lookup"><span data-stu-id="cd623-246">The request that waited the shortest time for a response is at the top.</span></span>  
 
-<span data-ttu-id="1576d-247">これらの説明は、それぞれのオプションが最短から最長の順にランク付けされていることを前提としています。</span><span class="sxs-lookup"><span data-stu-id="1576d-247">These descriptions assume that each respective option is ranked from shortest to longest.</span></span>  <span data-ttu-id="1576d-248">[**ウォーターフォール**] 列のヘッダーを選択すると、順序が逆になります。</span><span class="sxs-lookup"><span data-stu-id="1576d-248">Selecting the header of the **Waterfall** column reverses the order.</span></span>  
+<span data-ttu-id="cd623-247">これらの説明は、それぞれのオプションが最短から最長の順にランク付けされていることを前提としています。</span><span class="sxs-lookup"><span data-stu-id="cd623-247">These descriptions assume that each respective option is ranked from shortest to longest.</span></span>  <span data-ttu-id="cd623-248">[**ウォーターフォール**] 列のヘッダーを選択すると、順序が逆になります。</span><span class="sxs-lookup"><span data-stu-id="cd623-248">Selecting the header of the **Waterfall** column reverses the order.</span></span>  
 
 :::image type="complex" source="../media/network-network-waterfall-total-duration.msft.png" alt-text="ウォーターフォールを合計期間で並べ替える" lightbox="../media/network-network-waterfall-total-duration.msft.png":::
-   <span data-ttu-id="1576d-250">図 14: ウォーターフォールを合計期間で並べ替える (各バーの明るい部分は待機時間で、暗い部分はバイトのダウンロードにかかる時間です)。</span><span class="sxs-lookup"><span data-stu-id="1576d-250">Figure 14:  Sorting the Waterfall by total duration  \(The lighter portion of each bar is time spent waiting and the darker portion is time spent downloading bytes\)</span></span>  
+   <span data-ttu-id="cd623-250">図 14: ウォーターフォールを合計期間で並べ替える (各バーの明るい部分は待機時間で、暗い部分はバイトのダウンロードにかかる時間です)。</span><span class="sxs-lookup"><span data-stu-id="cd623-250">Figure 14:  Sorting the Waterfall by total duration  \(The lighter portion of each bar is time spent waiting and the darker portion is time spent downloading bytes\)</span></span>  
 :::image-end:::  
 
-## <span data-ttu-id="1576d-251">分析要求</span><span class="sxs-lookup"><span data-stu-id="1576d-251">Analyze requests</span></span>  
+## <span data-ttu-id="cd623-251">分析要求</span><span class="sxs-lookup"><span data-stu-id="cd623-251">Analyze requests</span></span>  
 
-<span data-ttu-id="1576d-252">DevTools が開いている限り、すべての要求がネットワークパネルに記録されます。</span><span class="sxs-lookup"><span data-stu-id="1576d-252">So long as DevTools is open, it logs all requests in the Network panel.</span></span>  
-<span data-ttu-id="1576d-253">[ネットワーク] パネルを使用して要求を分析します。</span><span class="sxs-lookup"><span data-stu-id="1576d-253">Use the Network panel to analyze requests.</span></span>  
+<span data-ttu-id="cd623-252">DevTools が開いている限り、すべての要求がネットワークパネルに記録されます。</span><span class="sxs-lookup"><span data-stu-id="cd623-252">So long as DevTools is open, it logs all requests in the Network panel.</span></span>  
+<span data-ttu-id="cd623-253">[ネットワーク] パネルを使用して要求を分析します。</span><span class="sxs-lookup"><span data-stu-id="cd623-253">Use the Network panel to analyze requests.</span></span>  
 
-### <span data-ttu-id="1576d-254">要求のログを表示する</span><span class="sxs-lookup"><span data-stu-id="1576d-254">View a log of requests</span></span>  
+### <span data-ttu-id="cd623-254">要求のログを表示する</span><span class="sxs-lookup"><span data-stu-id="cd623-254">View a log of requests</span></span>  
 
-<span data-ttu-id="1576d-255">[要求] テーブルを使って、DevTools が開いている間に行われたすべての要求のログを表示します。</span><span class="sxs-lookup"><span data-stu-id="1576d-255">Use the Requests table to view a log of all requests made while DevTools has been open.</span></span>  <span data-ttu-id="1576d-256">要求を選択またはマウスでポイントすると、各項目の詳細情報が示されます。</span><span class="sxs-lookup"><span data-stu-id="1576d-256">Selecting or hovering over requests reveals more information about each item.</span></span>  
+<span data-ttu-id="cd623-255">[要求] テーブルを使って、DevTools が開いている間に行われたすべての要求のログを表示します。</span><span class="sxs-lookup"><span data-stu-id="cd623-255">Use the Requests table to view a log of all requests made while DevTools has been open.</span></span>  <span data-ttu-id="cd623-256">要求を選択またはマウスでポイントすると、各項目の詳細情報が示されます。</span><span class="sxs-lookup"><span data-stu-id="cd623-256">Selecting or hovering over requests reveals more information about each item.</span></span>  
 
 :::image type="complex" source="../media/network-network-requests-table.msft.png" alt-text="要求テーブル" lightbox="../media/network-network-requests-table.msft.png":::
-   <span data-ttu-id="1576d-258">図 15: 要求テーブル</span><span class="sxs-lookup"><span data-stu-id="1576d-258">Figure 15:  The Requests table</span></span>  
+   <span data-ttu-id="cd623-258">図 15: 要求テーブル</span><span class="sxs-lookup"><span data-stu-id="cd623-258">Figure 15:  The Requests table</span></span>  
 :::image-end:::  
 
-<span data-ttu-id="1576d-259">要求テーブルには、既定で次の列が表示されます。</span><span class="sxs-lookup"><span data-stu-id="1576d-259">The Requests table displays the following columns by default.</span></span>  
+<span data-ttu-id="cd623-259">要求テーブルには、既定で次の列が表示されます。</span><span class="sxs-lookup"><span data-stu-id="cd623-259">The Requests table displays the following columns by default.</span></span>  
 
-*   <span data-ttu-id="1576d-260">**[名前]**。</span><span class="sxs-lookup"><span data-stu-id="1576d-260">**Name**.</span></span>  <span data-ttu-id="1576d-261">リソースのファイル名または識別子。</span><span class="sxs-lookup"><span data-stu-id="1576d-261">The filename of, or an identifier for, the resource.</span></span>  
-*   <span data-ttu-id="1576d-262">**状態**。</span><span class="sxs-lookup"><span data-stu-id="1576d-262">**Status**.</span></span>  <span data-ttu-id="1576d-263">HTTP 状態コード。</span><span class="sxs-lookup"><span data-stu-id="1576d-263">The HTTP status code.</span></span>  
-*   <span data-ttu-id="1576d-264">**[種類]**。</span><span class="sxs-lookup"><span data-stu-id="1576d-264">**Type**.</span></span>  <span data-ttu-id="1576d-265">要求されたリソースの MIME の種類。</span><span class="sxs-lookup"><span data-stu-id="1576d-265">The MIME type of the requested resource.</span></span>  
-*   <span data-ttu-id="1576d-266">**イニシエーター**。</span><span class="sxs-lookup"><span data-stu-id="1576d-266">**Initiator**.</span></span>  <span data-ttu-id="1576d-267">次のオブジェクトまたはプロセスで要求が開始されます。</span><span class="sxs-lookup"><span data-stu-id="1576d-267">The following objects or processes initiate requests:</span></span>  
-    *   <span data-ttu-id="1576d-268">**パーサー**。</span><span class="sxs-lookup"><span data-stu-id="1576d-268">**Parser**.</span></span>  <span data-ttu-id="1576d-269">Microsoft Edge の HTML パーサー。</span><span class="sxs-lookup"><span data-stu-id="1576d-269">The HTML parser for Microsoft Edge.</span></span>  
-    *   <span data-ttu-id="1576d-270">**リダイレクト**。</span><span class="sxs-lookup"><span data-stu-id="1576d-270">**Redirect**.</span></span>  <span data-ttu-id="1576d-271">HTTP リダイレクト。</span><span class="sxs-lookup"><span data-stu-id="1576d-271">An HTTP redirect.</span></span>  
-    *   <span data-ttu-id="1576d-272">**スクリプト**。</span><span class="sxs-lookup"><span data-stu-id="1576d-272">**Script**.</span></span>  <span data-ttu-id="1576d-273">JavaScript 関数。</span><span class="sxs-lookup"><span data-stu-id="1576d-273">A JavaScript function.</span></span>  
-    *   <span data-ttu-id="1576d-274">**その他**。</span><span class="sxs-lookup"><span data-stu-id="1576d-274">**Other**.</span></span>  <span data-ttu-id="1576d-275">リンクを介してページに移動したり、アドレスバーに URL を入力したりするなど、他のプロセスまたはアクション。</span><span class="sxs-lookup"><span data-stu-id="1576d-275">Some other process or action, such as navigating to a page via a link or entering a URL in the address bar.</span></span>  
-*   <span data-ttu-id="1576d-276">**サイズ**。</span><span class="sxs-lookup"><span data-stu-id="1576d-276">**Size**.</span></span>  <span data-ttu-id="1576d-277">サーバーによって配信された、返信ヘッダーと応答本文の合計サイズ。</span><span class="sxs-lookup"><span data-stu-id="1576d-277">The combined size of the response headers plus the response body, as delivered by the server.</span></span>  
-*   <span data-ttu-id="1576d-278">**時刻**。</span><span class="sxs-lookup"><span data-stu-id="1576d-278">**Time**.</span></span>  <span data-ttu-id="1576d-279">要求の開始から、応答の最後のバイトの受領までの合計時間。</span><span class="sxs-lookup"><span data-stu-id="1576d-279">The total duration, from the start of the request to the receipt of the final byte in the response.</span></span>  
-*   <span data-ttu-id="1576d-280">[**ウォーターフォール**](#view-the-timing-of-requests-in-relation-to-one-another)</span><span class="sxs-lookup"><span data-stu-id="1576d-280">[**Waterfall**](#view-the-timing-of-requests-in-relation-to-one-another).</span></span>  <span data-ttu-id="1576d-281">各要求のアクティビティの視覚的な分類。</span><span class="sxs-lookup"><span data-stu-id="1576d-281">A visual breakdown of the activity for each request.</span></span>  
+*   <span data-ttu-id="cd623-260">**[名前]**。</span><span class="sxs-lookup"><span data-stu-id="cd623-260">**Name**.</span></span>  <span data-ttu-id="cd623-261">リソースのファイル名または識別子。</span><span class="sxs-lookup"><span data-stu-id="cd623-261">The filename of, or an identifier for, the resource.</span></span>  
+*   <span data-ttu-id="cd623-262">**状態**。</span><span class="sxs-lookup"><span data-stu-id="cd623-262">**Status**.</span></span>  <span data-ttu-id="cd623-263">HTTP 状態コード。</span><span class="sxs-lookup"><span data-stu-id="cd623-263">The HTTP status code.</span></span>  
+*   <span data-ttu-id="cd623-264">**[種類]**。</span><span class="sxs-lookup"><span data-stu-id="cd623-264">**Type**.</span></span>  <span data-ttu-id="cd623-265">要求されたリソースの MIME の種類。</span><span class="sxs-lookup"><span data-stu-id="cd623-265">The MIME type of the requested resource.</span></span>  
+*   <span data-ttu-id="cd623-266">**イニシエーター**。</span><span class="sxs-lookup"><span data-stu-id="cd623-266">**Initiator**.</span></span>  <span data-ttu-id="cd623-267">次のオブジェクトまたはプロセスで要求が開始されます。</span><span class="sxs-lookup"><span data-stu-id="cd623-267">The following objects or processes initiate requests:</span></span>  
+    *   <span data-ttu-id="cd623-268">**パーサー**。</span><span class="sxs-lookup"><span data-stu-id="cd623-268">**Parser**.</span></span>  <span data-ttu-id="cd623-269">Microsoft Edge の HTML パーサー。</span><span class="sxs-lookup"><span data-stu-id="cd623-269">The HTML parser for Microsoft Edge.</span></span>  
+    *   <span data-ttu-id="cd623-270">**リダイレクト**。</span><span class="sxs-lookup"><span data-stu-id="cd623-270">**Redirect**.</span></span>  <span data-ttu-id="cd623-271">HTTP リダイレクト。</span><span class="sxs-lookup"><span data-stu-id="cd623-271">An HTTP redirect.</span></span>  
+    *   <span data-ttu-id="cd623-272">**スクリプト**。</span><span class="sxs-lookup"><span data-stu-id="cd623-272">**Script**.</span></span>  <span data-ttu-id="cd623-273">JavaScript 関数。</span><span class="sxs-lookup"><span data-stu-id="cd623-273">A JavaScript function.</span></span>  
+    *   <span data-ttu-id="cd623-274">**その他**。</span><span class="sxs-lookup"><span data-stu-id="cd623-274">**Other**.</span></span>  <span data-ttu-id="cd623-275">リンクを介してページに移動したり、アドレスバーに URL を入力したりするなど、他のプロセスまたはアクション。</span><span class="sxs-lookup"><span data-stu-id="cd623-275">Some other process or action, such as navigating to a page via a link or entering a URL in the address bar.</span></span>  
+*   <span data-ttu-id="cd623-276">**サイズ**。</span><span class="sxs-lookup"><span data-stu-id="cd623-276">**Size**.</span></span>  <span data-ttu-id="cd623-277">サーバーによって配信された、返信ヘッダーと応答本文の合計サイズ。</span><span class="sxs-lookup"><span data-stu-id="cd623-277">The combined size of the response headers plus the response body, as delivered by the server.</span></span>  
+*   <span data-ttu-id="cd623-278">**時刻**。</span><span class="sxs-lookup"><span data-stu-id="cd623-278">**Time**.</span></span>  <span data-ttu-id="cd623-279">要求の開始から、応答の最後のバイトの受領までの合計時間。</span><span class="sxs-lookup"><span data-stu-id="cd623-279">The total duration, from the start of the request to the receipt of the final byte in the response.</span></span>  
+*   <span data-ttu-id="cd623-280">[**ウォーターフォール**](#view-the-timing-of-requests-in-relation-to-one-another)</span><span class="sxs-lookup"><span data-stu-id="cd623-280">[**Waterfall**](#view-the-timing-of-requests-in-relation-to-one-another).</span></span>  <span data-ttu-id="cd623-281">各要求のアクティビティの視覚的な分類。</span><span class="sxs-lookup"><span data-stu-id="cd623-281">A visual breakdown of the activity for each request.</span></span>  
 
-#### <span data-ttu-id="1576d-282">列を追加または削除する</span><span class="sxs-lookup"><span data-stu-id="1576d-282">Add or remove columns</span></span>  
+#### <span data-ttu-id="cd623-282">列を追加または削除する</span><span class="sxs-lookup"><span data-stu-id="cd623-282">Add or remove columns</span></span>  
 
-<span data-ttu-id="1576d-283">要求テーブルのヘッダーにカーソルを置いて、コンテキストメニュー \ (右クリック \) を開き、表示または非表示にするオプションを選択します。</span><span class="sxs-lookup"><span data-stu-id="1576d-283">Hover on the header of the Requests table, open the contextual menu \(right-click\), and select an option to hide or show it.</span></span>  <span data-ttu-id="1576d-284">現在表示されているオプションは各項目の横にチェックマークが付いています。</span><span class="sxs-lookup"><span data-stu-id="1576d-284">Currently displayed options have checkmarks next to each item.</span></span>  
+<span data-ttu-id="cd623-283">要求テーブルのヘッダーにカーソルを置いて、コンテキストメニュー \ (右クリック \) を開き、表示または非表示にするオプションを選択します。</span><span class="sxs-lookup"><span data-stu-id="cd623-283">Hover on the header of the Requests table, open the contextual menu \(right-click\), and select an option to hide or show it.</span></span>  <span data-ttu-id="cd623-284">現在表示されているオプションは各項目の横にチェックマークが付いています。</span><span class="sxs-lookup"><span data-stu-id="cd623-284">Currently displayed options have checkmarks next to each item.</span></span>  
 
 :::image type="complex" source="../media/network-network-requests-add-column.msft.png" alt-text="要求テーブルへの列の追加" lightbox="../media/network-network-requests-add-column.msft.png":::
-   <span data-ttu-id="1576d-286">図 16: 要求テーブルに列を追加する</span><span class="sxs-lookup"><span data-stu-id="1576d-286">Figure 16:  Adding a column to the Requests table</span></span>  
+   <span data-ttu-id="cd623-286">図 16: 要求テーブルに列を追加する</span><span class="sxs-lookup"><span data-stu-id="cd623-286">Figure 16:  Adding a column to the Requests table</span></span>  
 :::image-end:::  
 
-#### <span data-ttu-id="1576d-287">カスタム列を追加する</span><span class="sxs-lookup"><span data-stu-id="1576d-287">Add custom columns</span></span>  
+#### <span data-ttu-id="cd623-287">カスタム列を追加する</span><span class="sxs-lookup"><span data-stu-id="cd623-287">Add custom columns</span></span>  
 
-<span data-ttu-id="1576d-288">要求テーブルにカスタム列を追加するには、要求テーブルのヘッダーにマウスポインターを合わせて、コンテキストメニューを開き (\ を右クリック \)、[**応答ヘッダー**で  >  **ヘッダー列を管理**する] を選択します。</span><span class="sxs-lookup"><span data-stu-id="1576d-288">To add a custom column to the Requests table, hover on the header of the Requests table, open the contextual menu \(right-click\), and select **Response Headers** > **Manage Header Columns**.</span></span>  
+<span data-ttu-id="cd623-288">要求テーブルにカスタム列を追加するには、要求テーブルのヘッダーにマウスポインターを合わせて、コンテキストメニューを開き (\ を右クリック \)、[**応答ヘッダー**で  >  **ヘッダー列を管理**する] を選択します。</span><span class="sxs-lookup"><span data-stu-id="cd623-288">To add a custom column to the Requests table, hover on the header of the Requests table, open the contextual menu \(right-click\), and select **Response Headers** > **Manage Header Columns**.</span></span>  
 
 :::image type="complex" source="../media/network-network-requests-add-custom.msft.png" alt-text="要求テーブルへのカスタム列の追加" lightbox="../media/network-network-requests-add-custom.msft.png":::
-   <span data-ttu-id="1576d-290">図 17: 要求テーブルにカスタム列を追加する</span><span class="sxs-lookup"><span data-stu-id="1576d-290">Figure 17:  Adding a custom column to the Requests table</span></span>  
+   <span data-ttu-id="cd623-290">図 17: 要求テーブルにカスタム列を追加する</span><span class="sxs-lookup"><span data-stu-id="cd623-290">Figure 17:  Adding a custom column to the Requests table</span></span>  
 :::image-end:::  
 
-### <span data-ttu-id="1576d-291">相互に関連した要求のタイミングを表示する</span><span class="sxs-lookup"><span data-stu-id="1576d-291">View the timing of requests in relation to one another</span></span>  
+### <span data-ttu-id="cd623-291">相互に関連した要求のタイミングを表示する</span><span class="sxs-lookup"><span data-stu-id="cd623-291">View the timing of requests in relation to one another</span></span>  
 
-<span data-ttu-id="1576d-292">ウォーターフォールを使用すると、要求のタイミングを相互に関連して表示できます。</span><span class="sxs-lookup"><span data-stu-id="1576d-292">Use the Waterfall to view the timing of requests in relation to one another.</span></span>  
-<span data-ttu-id="1576d-293">既定では、ウォーターフォールは要求の開始時刻によって構成されています。</span><span class="sxs-lookup"><span data-stu-id="1576d-293">By default, the Waterfall is organized by the start time of the requests.</span></span>  
-<span data-ttu-id="1576d-294">そのため、左から右に向けて開始された要求よりも早く開始されています。</span><span class="sxs-lookup"><span data-stu-id="1576d-294">So, requests that are farther to the left started earlier than those that are farther to the right.</span></span>  
+<span data-ttu-id="cd623-292">ウォーターフォールを使用すると、要求のタイミングを相互に関連して表示できます。</span><span class="sxs-lookup"><span data-stu-id="cd623-292">Use the Waterfall to view the timing of requests in relation to one another.</span></span>  
+<span data-ttu-id="cd623-293">既定では、ウォーターフォールは要求の開始時刻によって構成されています。</span><span class="sxs-lookup"><span data-stu-id="cd623-293">By default, the Waterfall is organized by the start time of the requests.</span></span>  
+<span data-ttu-id="cd623-294">そのため、左から右に向けて開始された要求よりも早く開始されています。</span><span class="sxs-lookup"><span data-stu-id="cd623-294">So, requests that are farther to the left started earlier than those that are farther to the right.</span></span>  
 
-<span data-ttu-id="1576d-295">ウォーターフォールのさまざまな並べ替え方法を確認するには、「[アクティビティ別に並べ替える](#sort-by-activity-phase)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="1576d-295">See [Sort by activity phase](#sort-by-activity-phase) to see the different ways that you may sort the Waterfall.</span></span>  
+<span data-ttu-id="cd623-295">ウォーターフォールのさまざまな並べ替え方法を確認するには、「[アクティビティ別に並べ替える](#sort-by-activity-phase)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="cd623-295">See [Sort by activity phase](#sort-by-activity-phase) to see the different ways that you may sort the Waterfall.</span></span>  
 
 :::image type="complex" source="../media/network-network-requests-waterfall.msft.png" alt-text="[要求] ウィンドウの [ウォーターフォール] 列" lightbox="../media/network-network-requests-waterfall.msft.png":::
-   <span data-ttu-id="1576d-297">図 18: [**要求**] ウィンドウの [ウォーターフォール] 列</span><span class="sxs-lookup"><span data-stu-id="1576d-297">Figure 18:  The Waterfall column of the **Requests** pane</span></span>  
+   <span data-ttu-id="cd623-297">図 18: [**要求**] ウィンドウの [ウォーターフォール] 列</span><span class="sxs-lookup"><span data-stu-id="cd623-297">Figure 18:  The Waterfall column of the **Requests** pane</span></span>  
 :::image-end:::  
 
 <!-- ### Analyze the frames of a WebSocket Connection  -->
@@ -343,79 +343,79 @@ To refresh the table, re-select the name of the WebSocket connection under the *
 *   WebSocket opcodes are light-yellow.  
 *   Errors are light-red.  -->
 
-### <span data-ttu-id="1576d-298">応答本文のプレビューを表示する</span><span class="sxs-lookup"><span data-stu-id="1576d-298">View a preview of a response body</span></span>  
+### <span data-ttu-id="cd623-298">応答本文のプレビューを表示する</span><span class="sxs-lookup"><span data-stu-id="cd623-298">View a preview of a response body</span></span>  
 
-<span data-ttu-id="1576d-299">応答本文のプレビューを表示するには、次の操作を行います。</span><span class="sxs-lookup"><span data-stu-id="1576d-299">To view a preview of a response body:</span></span>  
+<span data-ttu-id="cd623-299">応答本文のプレビューを表示するには、次の操作を行います。</span><span class="sxs-lookup"><span data-stu-id="cd623-299">To view a preview of a response body:</span></span>  
 
-1.  <span data-ttu-id="1576d-300">要求の URL を要求テーブルの [**名前**] 列で選びます。</span><span class="sxs-lookup"><span data-stu-id="1576d-300">Select the URL of the request, under the **Name** column of the Requests table.</span></span>  
-1.  <span data-ttu-id="1576d-301">[**プレビュー** ] タブを選択します。</span><span class="sxs-lookup"><span data-stu-id="1576d-301">Select the **Preview** tab.</span></span>  
+1.  <span data-ttu-id="cd623-300">要求の URL を要求テーブルの [**名前**] 列で選びます。</span><span class="sxs-lookup"><span data-stu-id="cd623-300">Select the URL of the request, under the **Name** column of the Requests table.</span></span>  
+1.  <span data-ttu-id="cd623-301">[**プレビュー** ] タブを選択します。</span><span class="sxs-lookup"><span data-stu-id="cd623-301">Select the **Preview** tab.</span></span>  
 
-<span data-ttu-id="1576d-302">このタブはほとんどの場合、画像を表示するのに役立ちます。</span><span class="sxs-lookup"><span data-stu-id="1576d-302">This tab is mostly useful for viewing images.</span></span>  
+<span data-ttu-id="cd623-302">このタブはほとんどの場合、画像を表示するのに役立ちます。</span><span class="sxs-lookup"><span data-stu-id="cd623-302">This tab is mostly useful for viewing images.</span></span>  
 
 :::image type="complex" source="../media/network-network-resources-preview.msft.png" alt-text="[プレビュー] タブ" lightbox="../media/network-network-resources-preview.msft.png":::
-   <span data-ttu-id="1576d-304">図 19: [**プレビュー** ] タブ</span><span class="sxs-lookup"><span data-stu-id="1576d-304">Figure 19:  The **Preview** tab</span></span>  
+   <span data-ttu-id="cd623-304">図 19: [**プレビュー** ] タブ</span><span class="sxs-lookup"><span data-stu-id="cd623-304">Figure 19:  The **Preview** tab</span></span>  
 :::image-end:::  
 
-### <span data-ttu-id="1576d-305">応答本文を表示する</span><span class="sxs-lookup"><span data-stu-id="1576d-305">View a response body</span></span>  
+### <span data-ttu-id="cd623-305">応答本文を表示する</span><span class="sxs-lookup"><span data-stu-id="cd623-305">View a response body</span></span>  
 
-<span data-ttu-id="1576d-306">要求に対する応答の本文を表示するには、次の操作を行います。</span><span class="sxs-lookup"><span data-stu-id="1576d-306">To view the response body to a request:</span></span>  
+<span data-ttu-id="cd623-306">要求に対する応答の本文を表示するには、次の操作を行います。</span><span class="sxs-lookup"><span data-stu-id="cd623-306">To view the response body to a request:</span></span>  
 
-1.  <span data-ttu-id="1576d-307">要求の URL を要求テーブルの [**名前**] 列で選びます。</span><span class="sxs-lookup"><span data-stu-id="1576d-307">Select the URL of the request, under the **Name** column of the Requests table.</span></span>  
-1.  <span data-ttu-id="1576d-308">[**応答**] タブを選択します。</span><span class="sxs-lookup"><span data-stu-id="1576d-308">Select the **Response** tab.</span></span>  
+1.  <span data-ttu-id="cd623-307">要求の URL を要求テーブルの [**名前**] 列で選びます。</span><span class="sxs-lookup"><span data-stu-id="cd623-307">Select the URL of the request, under the **Name** column of the Requests table.</span></span>  
+1.  <span data-ttu-id="cd623-308">[**応答**] タブを選択します。</span><span class="sxs-lookup"><span data-stu-id="cd623-308">Select the **Response** tab.</span></span>  
 
 :::image type="complex" source="../media/network-network-resources-response.msft.png" alt-text="[応答] タブ" lightbox="../media/network-network-resources-response.msft.png":::
-   <span data-ttu-id="1576d-310">図 20: [**応答**] タブ</span><span class="sxs-lookup"><span data-stu-id="1576d-310">Figure 20:  The **Response** tab</span></span>  
+   <span data-ttu-id="cd623-310">図 20: [**応答**] タブ</span><span class="sxs-lookup"><span data-stu-id="cd623-310">Figure 20:  The **Response** tab</span></span>  
 :::image-end:::  
 
-### <span data-ttu-id="1576d-311">HTTP ヘッダーの表示</span><span class="sxs-lookup"><span data-stu-id="1576d-311">View HTTP headers</span></span>  
+### <span data-ttu-id="cd623-311">HTTP ヘッダーの表示</span><span class="sxs-lookup"><span data-stu-id="cd623-311">View HTTP headers</span></span>  
 
-<span data-ttu-id="1576d-312">要求に関する HTTP ヘッダーデータを表示するには、次の操作を行います。</span><span class="sxs-lookup"><span data-stu-id="1576d-312">To view HTTP header data about a request:</span></span>  
+<span data-ttu-id="cd623-312">要求に関する HTTP ヘッダーデータを表示するには、次の操作を行います。</span><span class="sxs-lookup"><span data-stu-id="cd623-312">To view HTTP header data about a request:</span></span>  
 
-1.  <span data-ttu-id="1576d-313">要求の URL を要求テーブルの [**名前**] 列で選びます。</span><span class="sxs-lookup"><span data-stu-id="1576d-313">Select the URL of the request, under the **Name** column of the Requests table.</span></span>  
-1.  <span data-ttu-id="1576d-314">[**ヘッダー** ] タブを選択します。</span><span class="sxs-lookup"><span data-stu-id="1576d-314">Select the **Headers** tab.</span></span>  
+1.  <span data-ttu-id="cd623-313">要求の URL を要求テーブルの [**名前**] 列で選びます。</span><span class="sxs-lookup"><span data-stu-id="cd623-313">Select the URL of the request, under the **Name** column of the Requests table.</span></span>  
+1.  <span data-ttu-id="cd623-314">[**ヘッダー** ] タブを選択します。</span><span class="sxs-lookup"><span data-stu-id="cd623-314">Select the **Headers** tab.</span></span>  
 
 :::image type="complex" source="../media/network-resources-headers.msft.png" alt-text="[ヘッダー] タブ" lightbox="../media/network-resources-headers.msft.png":::
-   <span data-ttu-id="1576d-316">図 21: [**ヘッダー** ] タブ</span><span class="sxs-lookup"><span data-stu-id="1576d-316">Figure 21:  The **Headers** tab</span></span>  
+   <span data-ttu-id="cd623-316">図 21: [**ヘッダー** ] タブ</span><span class="sxs-lookup"><span data-stu-id="cd623-316">Figure 21:  The **Headers** tab</span></span>  
 :::image-end:::  
 
-#### <span data-ttu-id="1576d-317">HTTP ヘッダーソースの表示</span><span class="sxs-lookup"><span data-stu-id="1576d-317">View HTTP header source</span></span>  
+#### <span data-ttu-id="cd623-317">HTTP ヘッダーソースの表示</span><span class="sxs-lookup"><span data-stu-id="cd623-317">View HTTP header source</span></span>  
 
-<span data-ttu-id="1576d-318">既定では、[ヘッダー] タブにはヘッダーの名前がアルファベット順に表示されます。</span><span class="sxs-lookup"><span data-stu-id="1576d-318">By default, the Headers tab shows header names alphabetically.</span></span>  <span data-ttu-id="1576d-319">HTTP ヘッダーの名前を受け取った順序で表示するには、次の操作を行います。</span><span class="sxs-lookup"><span data-stu-id="1576d-319">To view the HTTP header names in the order they were received:</span></span>  
+<span data-ttu-id="cd623-318">既定では、[ヘッダー] タブにはヘッダーの名前がアルファベット順に表示されます。</span><span class="sxs-lookup"><span data-stu-id="cd623-318">By default, the Headers tab shows header names alphabetically.</span></span>  <span data-ttu-id="cd623-319">HTTP ヘッダーの名前を受け取った順序で表示するには、次の操作を行います。</span><span class="sxs-lookup"><span data-stu-id="cd623-319">To view the HTTP header names in the order they were received:</span></span>  
 
-1.  <span data-ttu-id="1576d-320">興味のある要求の [**ヘッダー** ] タブを開きます。</span><span class="sxs-lookup"><span data-stu-id="1576d-320">Open the **Headers** tab for the request that interests you.</span></span>  <span data-ttu-id="1576d-321">「 [HTTP ヘッダーの表示](#view-http-headers)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="1576d-321">See [View HTTP headers](#view-http-headers).</span></span>  
-1.  <span data-ttu-id="1576d-322">[**要求ヘッダー** ] または [**応答ヘッダー** ] セクションの横にある [**ソースの表示**] を選択します。</span><span class="sxs-lookup"><span data-stu-id="1576d-322">Select **view source**, next to the **Request Header** or **Response Header** section.</span></span>  
+1.  <span data-ttu-id="cd623-320">興味のある要求の [**ヘッダー** ] タブを開きます。</span><span class="sxs-lookup"><span data-stu-id="cd623-320">Open the **Headers** tab for the request that interests you.</span></span>  <span data-ttu-id="cd623-321">「 [HTTP ヘッダーの表示](#view-http-headers)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="cd623-321">See [View HTTP headers](#view-http-headers).</span></span>  
+1.  <span data-ttu-id="cd623-322">[**要求ヘッダー** ] または [**応答ヘッダー** ] セクションの横にある [**ソースの表示**] を選択します。</span><span class="sxs-lookup"><span data-stu-id="cd623-322">Select **view source**, next to the **Request Header** or **Response Header** section.</span></span>  
 
-### <span data-ttu-id="1576d-323">クエリ文字列パラメーターの表示</span><span class="sxs-lookup"><span data-stu-id="1576d-323">View query string parameters</span></span>  
+### <span data-ttu-id="cd623-323">クエリ文字列パラメーターの表示</span><span class="sxs-lookup"><span data-stu-id="cd623-323">View query string parameters</span></span>  
 
-<span data-ttu-id="1576d-324">わかりやすい形式で URL のクエリ文字列パラメーターを表示するには、次の操作を行います。</span><span class="sxs-lookup"><span data-stu-id="1576d-324">To view the query string parameters of a URL in a human-readable format:</span></span>  
+<span data-ttu-id="cd623-324">わかりやすい形式で URL のクエリ文字列パラメーターを表示するには、次の操作を行います。</span><span class="sxs-lookup"><span data-stu-id="cd623-324">To view the query string parameters of a URL in a human-readable format:</span></span>  
 
-1.  <span data-ttu-id="1576d-325">興味のある要求の [**ヘッダー** ] タブを開きます。</span><span class="sxs-lookup"><span data-stu-id="1576d-325">Open the **Headers** tab for the request that interests you.</span></span>  <span data-ttu-id="1576d-326">「 [HTTP ヘッダーの表示](#view-http-headers)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="1576d-326">See [View HTTP headers](#view-http-headers).</span></span>  
-1.  <span data-ttu-id="1576d-327">[**クエリ文字列パラメーター** ] セクションに移動します。</span><span class="sxs-lookup"><span data-stu-id="1576d-327">Go to the **Query String Parameters** section.</span></span>  
+1.  <span data-ttu-id="cd623-325">興味のある要求の [**ヘッダー** ] タブを開きます。</span><span class="sxs-lookup"><span data-stu-id="cd623-325">Open the **Headers** tab for the request that interests you.</span></span>  <span data-ttu-id="cd623-326">「 [HTTP ヘッダーの表示](#view-http-headers)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="cd623-326">See [View HTTP headers](#view-http-headers).</span></span>  
+1.  <span data-ttu-id="cd623-327">[**クエリ文字列パラメーター** ] セクションに移動します。</span><span class="sxs-lookup"><span data-stu-id="cd623-327">Go to the **Query String Parameters** section.</span></span>  
 
 :::image type="complex" source="../media/network-network-resources-headers-query-string-parameters.msft.png" alt-text="[クエリ文字列パラメーター] セクション" lightbox="../media/network-network-resources-headers-query-string-parameters.msft.png":::
-   <span data-ttu-id="1576d-329">図 22: [**クエリ文字列パラメーター** ] セクション</span><span class="sxs-lookup"><span data-stu-id="1576d-329">Figure 22:  The **Query String Parameters** section</span></span>  
+   <span data-ttu-id="cd623-329">図 22: [**クエリ文字列パラメーター** ] セクション</span><span class="sxs-lookup"><span data-stu-id="cd623-329">Figure 22:  The **Query String Parameters** section</span></span>  
 :::image-end:::  
 
-#### <span data-ttu-id="1576d-330">クエリ文字列パラメーターソースの表示</span><span class="sxs-lookup"><span data-stu-id="1576d-330">View query string parameters source</span></span>  
+#### <span data-ttu-id="cd623-330">クエリ文字列パラメーターソースの表示</span><span class="sxs-lookup"><span data-stu-id="cd623-330">View query string parameters source</span></span>  
 
-<span data-ttu-id="1576d-331">要求のクエリ文字列のパラメーターソースを表示するには、次の操作を行います。</span><span class="sxs-lookup"><span data-stu-id="1576d-331">To view the query string parameter source of a request:</span></span>  
+<span data-ttu-id="cd623-331">要求のクエリ文字列のパラメーターソースを表示するには、次の操作を行います。</span><span class="sxs-lookup"><span data-stu-id="cd623-331">To view the query string parameter source of a request:</span></span>  
 
-1.  <span data-ttu-id="1576d-332">[クエリ文字列パラメーター] セクションに移動します。</span><span class="sxs-lookup"><span data-stu-id="1576d-332">Go to the Query String Parameters section.</span></span>  <span data-ttu-id="1576d-333">「[クエリ文字列パラメーターの表示](#view-query-string-parameters)」をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="1576d-333">See [View query string parameters](#view-query-string-parameters).</span></span>  
-1.  <span data-ttu-id="1576d-334">[**ソースの表示**] を選択します。</span><span class="sxs-lookup"><span data-stu-id="1576d-334">Select **view source**.</span></span>  
+1.  <span data-ttu-id="cd623-332">[クエリ文字列パラメーター] セクションに移動します。</span><span class="sxs-lookup"><span data-stu-id="cd623-332">Go to the Query String Parameters section.</span></span>  <span data-ttu-id="cd623-333">「[クエリ文字列パラメーターの表示](#view-query-string-parameters)」をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="cd623-333">See [View query string parameters](#view-query-string-parameters).</span></span>  
+1.  <span data-ttu-id="cd623-334">[**ソースの表示**] を選択します。</span><span class="sxs-lookup"><span data-stu-id="cd623-334">Select **view source**.</span></span>  
 
-#### <span data-ttu-id="1576d-335">URL 形式でエンコードされたクエリ文字列パラメーターの表示</span><span class="sxs-lookup"><span data-stu-id="1576d-335">View URL-encoded query string parameters</span></span>  
+#### <span data-ttu-id="cd623-335">URL 形式でエンコードされたクエリ文字列パラメーターの表示</span><span class="sxs-lookup"><span data-stu-id="cd623-335">View URL-encoded query string parameters</span></span>  
 
-<span data-ttu-id="1576d-336">わかりやすい形式でクエリ文字列パラメーターを表示するには、次のようにエンコードを保持します。</span><span class="sxs-lookup"><span data-stu-id="1576d-336">To view query string parameters in a human-readable format, but with encodings preserved:</span></span>  
+<span data-ttu-id="cd623-336">わかりやすい形式でクエリ文字列パラメーターを表示するには、次のようにエンコードを保持します。</span><span class="sxs-lookup"><span data-stu-id="cd623-336">To view query string parameters in a human-readable format, but with encodings preserved:</span></span>  
 
-1.  <span data-ttu-id="1576d-337">[クエリ文字列パラメーター] セクションに移動します。</span><span class="sxs-lookup"><span data-stu-id="1576d-337">Go to the Query String Parameters section.</span></span>  <span data-ttu-id="1576d-338">「[クエリ文字列パラメーターの表示](#view-query-string-parameters)」をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="1576d-338">See [View query string parameters](#view-query-string-parameters).</span></span>  
-1.  <span data-ttu-id="1576d-339">[**表示 URL をエンコード**した] を選択します。</span><span class="sxs-lookup"><span data-stu-id="1576d-339">Select **view URL encoded**.</span></span>  
+1.  <span data-ttu-id="cd623-337">[クエリ文字列パラメーター] セクションに移動します。</span><span class="sxs-lookup"><span data-stu-id="cd623-337">Go to the Query String Parameters section.</span></span>  <span data-ttu-id="cd623-338">「[クエリ文字列パラメーターの表示](#view-query-string-parameters)」をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="cd623-338">See [View query string parameters](#view-query-string-parameters).</span></span>  
+1.  <span data-ttu-id="cd623-339">[**表示 URL をエンコード**した] を選択します。</span><span class="sxs-lookup"><span data-stu-id="cd623-339">Select **view URL encoded**.</span></span>  
 
-### <span data-ttu-id="1576d-340">Cookie の表示</span><span class="sxs-lookup"><span data-stu-id="1576d-340">View cookies</span></span>  
+### <span data-ttu-id="cd623-340">Cookie の表示</span><span class="sxs-lookup"><span data-stu-id="cd623-340">View cookies</span></span>  
 
-<span data-ttu-id="1576d-341">要求の HTTP ヘッダーで送信された cookie を表示するには、次の操作を行います。</span><span class="sxs-lookup"><span data-stu-id="1576d-341">To view the cookies sent in the HTTP header of a request:</span></span>  
+<span data-ttu-id="cd623-341">要求の HTTP ヘッダーで送信された cookie を表示するには、次の操作を行います。</span><span class="sxs-lookup"><span data-stu-id="cd623-341">To view the cookies sent in the HTTP header of a request:</span></span>  
 
-1.  <span data-ttu-id="1576d-342">要求の URL を要求テーブルの [**名前**] 列で選びます。</span><span class="sxs-lookup"><span data-stu-id="1576d-342">Select the URL of the request, under the **Name** column of the Requests table.</span></span>  
-1.  <span data-ttu-id="1576d-343">[ **Cookies** ] タブを選択します。</span><span class="sxs-lookup"><span data-stu-id="1576d-343">Select the **Cookies** tab.</span></span>  
+1.  <span data-ttu-id="cd623-342">要求の URL を要求テーブルの [**名前**] 列で選びます。</span><span class="sxs-lookup"><span data-stu-id="cd623-342">Select the URL of the request, under the **Name** column of the Requests table.</span></span>  
+1.  <span data-ttu-id="cd623-343">[ **Cookies** ] タブを選択します。</span><span class="sxs-lookup"><span data-stu-id="cd623-343">Select the **Cookies** tab.</span></span>  
 
 <!--See [Fields][ManageDataCookiesFields] for a description of each of the columns.  -->
 
@@ -423,103 +423,104 @@ To refresh the table, re-select the name of the WebSocket connection under the *
 <!--TODO: add link when section is available -->
 
 :::image type="complex" source="../media/network-network-resources-cookies.msft.png" alt-text="[Cookie] タブ" lightbox="../media/network-network-resources-cookies.msft.png":::
-   <span data-ttu-id="1576d-345">図 23: [Cookie] タブ</span><span class="sxs-lookup"><span data-stu-id="1576d-345">Figure 23:  The Cookies tab</span></span>  
+   <span data-ttu-id="cd623-345">図 23: [Cookie] タブ</span><span class="sxs-lookup"><span data-stu-id="cd623-345">Figure 23:  The Cookies tab</span></span>  
 :::image-end:::  
 
-### <span data-ttu-id="1576d-346">要求のタイミングのブレークダウンを表示する</span><span class="sxs-lookup"><span data-stu-id="1576d-346">View the timing breakdown of a request</span></span>  
+### <span data-ttu-id="cd623-346">要求のタイミングのブレークダウンを表示する</span><span class="sxs-lookup"><span data-stu-id="cd623-346">View the timing breakdown of a request</span></span>  
 
-<span data-ttu-id="1576d-347">要求のタイミングの詳細を表示するには、次の操作を行います。</span><span class="sxs-lookup"><span data-stu-id="1576d-347">To view the timing breakdown of a request:</span></span>  
+<span data-ttu-id="cd623-347">要求のタイミングの詳細を表示するには、次の操作を行います。</span><span class="sxs-lookup"><span data-stu-id="cd623-347">To view the timing breakdown of a request:</span></span>  
 
-1.  <span data-ttu-id="1576d-348">要求の URL を要求テーブルの [**名前**] 列で選びます。</span><span class="sxs-lookup"><span data-stu-id="1576d-348">Select the URL of the request, under the **Name** column of the Requests table.</span></span>  
-1.  <span data-ttu-id="1576d-349">[**タイミング**] タブを選択します。</span><span class="sxs-lookup"><span data-stu-id="1576d-349">Select the **Timing** tab.</span></span>  
+1.  <span data-ttu-id="cd623-348">要求の URL を要求テーブルの [**名前**] 列で選びます。</span><span class="sxs-lookup"><span data-stu-id="cd623-348">Select the URL of the request, under the **Name** column of the Requests table.</span></span>  
+1.  <span data-ttu-id="cd623-349">[**タイミング**] タブを選択します。</span><span class="sxs-lookup"><span data-stu-id="cd623-349">Select the **Timing** tab.</span></span>  
 
-<span data-ttu-id="1576d-350">このデータにすばやくアクセスする方法については、「[タイミングのブレークダウンをプレビュー](#preview-a-timing-breakdown)する」をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="1576d-350">See [Preview a timing breakdown](#preview-a-timing-breakdown) for a faster way to access this data.</span></span>  
+<span data-ttu-id="cd623-350">このデータにすばやくアクセスする方法については、「[タイミングのブレークダウンをプレビュー](#preview-a-timing-breakdown)する」をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="cd623-350">See [Preview a timing breakdown](#preview-a-timing-breakdown) for a faster way to access this data.</span></span>  
 
-<span data-ttu-id="1576d-351">「タイミング」タブに表示される各フェーズについて詳しくは、「[タイミングのブレークダウン](#timing-breakdown-phases-explained)」をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="1576d-351">See [Timing breakdown phases explained](#timing-breakdown-phases-explained) for more information about each of the phases that you may see in the Timing tab.</span></span>  
+<span data-ttu-id="cd623-351">「タイミング」タブに表示される各フェーズについて詳しくは、「[タイミングのブレークダウン](#timing-breakdown-phases-explained)」をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="cd623-351">See [Timing breakdown phases explained](#timing-breakdown-phases-explained) for more information about each of the phases that you may see in the Timing tab.</span></span>  
 
 :::image type="complex" source="../media/network-network-resources-timing.msft.png" alt-text="[タイミング] タブ" lightbox="../media/network-network-resources-timing.msft.png":::
-   <span data-ttu-id="1576d-353">図 24: [**タイミング**] タブ</span><span class="sxs-lookup"><span data-stu-id="1576d-353">Figure 24:  The **Timing** tab</span></span>  
+   <span data-ttu-id="cd623-353">図 24: [**タイミング**] タブ</span><span class="sxs-lookup"><span data-stu-id="cd623-353">Figure 24:  The **Timing** tab</span></span>  
 :::image-end:::  
 
-<span data-ttu-id="1576d-354">各フェーズに関する詳細情報。</span><span class="sxs-lookup"><span data-stu-id="1576d-354">More information about each of the phases.</span></span>  
+<span data-ttu-id="cd623-354">各フェーズに関する詳細情報。</span><span class="sxs-lookup"><span data-stu-id="cd623-354">More information about each of the phases.</span></span>  
 
-<span data-ttu-id="1576d-355">このビューにアクセスする別の方法については、「[タイミングの内訳を表示](#view-the-timing-breakdown-of-a-request)する」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="1576d-355">See [View timing breakdown](#view-the-timing-breakdown-of-a-request) for another way to access this view.</span></span>  
+<span data-ttu-id="cd623-355">このビューにアクセスする別の方法については、「[タイミングの内訳を表示](#view-the-timing-breakdown-of-a-request)する」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="cd623-355">See [View timing breakdown](#view-the-timing-breakdown-of-a-request) for another way to access this view.</span></span>  
 
-#### <span data-ttu-id="1576d-356">タイミングの内訳をプレビューする</span><span class="sxs-lookup"><span data-stu-id="1576d-356">Preview a timing breakdown</span></span>  
+#### <span data-ttu-id="cd623-356">タイミングの内訳をプレビューする</span><span class="sxs-lookup"><span data-stu-id="cd623-356">Preview a timing breakdown</span></span>  
 
-<span data-ttu-id="1576d-357">要求のタイミングの内訳のプレビューを表示するには、要求テーブルの [**ウォーターフォール**] 列で要求のエントリにマウスポインターを合わせます。</span><span class="sxs-lookup"><span data-stu-id="1576d-357">To view a preview of the timing breakdown of a request, hover over the entry for the request in the **Waterfall** column of the Requests table.</span></span>  
+<span data-ttu-id="cd623-357">要求のタイミングの内訳のプレビューを表示するには、要求テーブルの [**ウォーターフォール**] 列で要求のエントリにマウスポインターを合わせます。</span><span class="sxs-lookup"><span data-stu-id="cd623-357">To view a preview of the timing breakdown of a request, hover over the entry for the request in the **Waterfall** column of the Requests table.</span></span>  
 
-<span data-ttu-id="1576d-358">詳しくは[、「ホバーを必要](#view-the-timing-breakdown-of-a-request)としないデータにアクセスする方法」をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="1576d-358">See [View the timing breakdown of a request](#view-the-timing-breakdown-of-a-request) for a way to access this data that does not require hovering.</span></span>  
+<span data-ttu-id="cd623-358">詳しくは[、「ホバーを必要](#view-the-timing-breakdown-of-a-request)としないデータにアクセスする方法」をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="cd623-358">See [View the timing breakdown of a request](#view-the-timing-breakdown-of-a-request) for a way to access this data that does not require hovering.</span></span>  
 
 :::image type="complex" source="../media/network-network-resources-waterfall-hover.msft.png" alt-text="要求のタイミングのブレークダウンのプレビューを >" lightbox="../media/network-network-resources-waterfall-hover.msft.png":::
-   <span data-ttu-id="1576d-360">図 25: 要求のタイミングのブレークダウンのプレビュー</span><span class="sxs-lookup"><span data-stu-id="1576d-360">Figure 25:  Previewing the timing breakdown of a request</span></span>  
+   <span data-ttu-id="cd623-360">図 25: 要求のタイミングのブレークダウンのプレビュー</span><span class="sxs-lookup"><span data-stu-id="cd623-360">Figure 25:  Previewing the timing breakdown of a request</span></span>  
 :::image-end:::  
 
-#### <span data-ttu-id="1576d-361">タイミングのブレークフェーズについて</span><span class="sxs-lookup"><span data-stu-id="1576d-361">Timing breakdown phases explained</span></span>  
+#### <span data-ttu-id="cd623-361">タイミングのブレークフェーズについて</span><span class="sxs-lookup"><span data-stu-id="cd623-361">Timing breakdown phases explained</span></span>  
 
-<span data-ttu-id="1576d-362">[**タイミング**] タブに表示される各フェーズについて詳しく説明します。</span><span class="sxs-lookup"><span data-stu-id="1576d-362">More information about each of the phases you may see in the **Timing** tab.</span></span>  
+<span data-ttu-id="cd623-362">[**タイミング**] タブに表示される各フェーズについて詳しく説明します。</span><span class="sxs-lookup"><span data-stu-id="cd623-362">More information about each of the phases you may see in the **Timing** tab.</span></span>  
 
-*   <span data-ttu-id="1576d-363">**キューイング**。</span><span class="sxs-lookup"><span data-stu-id="1576d-363">**Queueing**.</span></span>  <span data-ttu-id="1576d-364">ブラウザーは、次の場合に要求をキューに表示します。</span><span class="sxs-lookup"><span data-stu-id="1576d-364">The browser queues requests when:</span></span>  
-    *   <span data-ttu-id="1576d-365">優先度の高い要求もあります。</span><span class="sxs-lookup"><span data-stu-id="1576d-365">There are higher priority requests.</span></span>  
-    *   <span data-ttu-id="1576d-366">この起点で既に6つの TCP 接続が開かれています。これは制限です。</span><span class="sxs-lookup"><span data-stu-id="1576d-366">There are already six TCP connections open for this origin, which is the limit.</span></span>  <span data-ttu-id="1576d-367">HTTP/1.0 および HTTP/1.1 にのみ適用されます。</span><span class="sxs-lookup"><span data-stu-id="1576d-367">Applies to HTTP/1.0 and HTTP/1.1 only.</span></span>  
-    *   <span data-ttu-id="1576d-368">ブラウザーは、ディスクキャッシュの領域を一時的に割り当てます。</span><span class="sxs-lookup"><span data-stu-id="1576d-368">The browser is briefly allocating space in the disk cache.</span></span>  
-*   <span data-ttu-id="1576d-369">**失速**します。</span><span class="sxs-lookup"><span data-stu-id="1576d-369">**Stalled**.</span></span>  <span data-ttu-id="1576d-370">**キュー**に記載されている理由のいずれかで、要求が停止する可能性があります。</span><span class="sxs-lookup"><span data-stu-id="1576d-370">The request could be stalled for any of the reasons described in **Queueing**.</span></span>  
-*   <span data-ttu-id="1576d-371">**DNS 検索**。</span><span class="sxs-lookup"><span data-stu-id="1576d-371">**DNS Lookup**.</span></span>  <span data-ttu-id="1576d-372">ブラウザーが要求の IP アドレスを解決しています。</span><span class="sxs-lookup"><span data-stu-id="1576d-372">The browser is resolving the IP address for the request.</span></span>  
-*   <span data-ttu-id="1576d-373">**初期接続**。</span><span class="sxs-lookup"><span data-stu-id="1576d-373">**Initial connection**.</span></span>  <span data-ttu-id="1576d-374">ブラウザーでは、TCP ハンドシェイク、TCP リトライ、SSL のネゴシエーションなどの接続が確立されます。</span><span class="sxs-lookup"><span data-stu-id="1576d-374">The browser is establishing a connection including TCP handshakes, TCP retries, and negotiating an SSL.</span></span>
-*   <span data-ttu-id="1576d-375">**プロキシネゴシエーション**。</span><span class="sxs-lookup"><span data-stu-id="1576d-375">**Proxy negotiation**.</span></span>  <span data-ttu-id="1576d-376">ブラウザーは、要求を[プロキシサーバー][WikiProxyServer]とネゴシエートしています。</span><span class="sxs-lookup"><span data-stu-id="1576d-376">The browser is negotiating the request with a [proxy server][WikiProxyServer].</span></span>  
-*   <span data-ttu-id="1576d-377">**リクエストを送信**しました。</span><span class="sxs-lookup"><span data-stu-id="1576d-377">**Request sent**.</span></span>  <span data-ttu-id="1576d-378">要求が送信されています。</span><span class="sxs-lookup"><span data-stu-id="1576d-378">The request is being sent.</span></span>  
-*   <span data-ttu-id="1576d-379">**Serviceworker の準備**。</span><span class="sxs-lookup"><span data-stu-id="1576d-379">**ServiceWorker Preparation**.</span></span>  <span data-ttu-id="1576d-380">ブラウザーがサービスワーカーを開始しています。</span><span class="sxs-lookup"><span data-stu-id="1576d-380">The browser is starting up the service worker.</span></span>  
-*   <span data-ttu-id="1576d-381">**ServiceWorker へのリクエスト**。</span><span class="sxs-lookup"><span data-stu-id="1576d-381">**Request to ServiceWorker**.</span></span>  <span data-ttu-id="1576d-382">要求がサービスワーカーに送信されます。</span><span class="sxs-lookup"><span data-stu-id="1576d-382">The request is being sent to the service worker.</span></span>  
-*   <span data-ttu-id="1576d-383">**\ (TTFB \) を待機**しています。</span><span class="sxs-lookup"><span data-stu-id="1576d-383">**Waiting \(TTFB\)**.</span></span>  <span data-ttu-id="1576d-384">ブラウザーは、応答の最初のバイトを待機しています。</span><span class="sxs-lookup"><span data-stu-id="1576d-384">The browser is waiting for the first byte of a response.</span></span>  <span data-ttu-id="1576d-385">TTFB は、最初のバイトまでの時間を表します。</span><span class="sxs-lookup"><span data-stu-id="1576d-385">TTFB stands for Time To First Byte.</span></span>  <span data-ttu-id="1576d-386">このタイミングには、待機時間が1往復、サーバーが応答の準備にかかった時間が含まれます。</span><span class="sxs-lookup"><span data-stu-id="1576d-386">This timing includes 1 round trip of latency and the time the server took to prepare the response.</span></span>  
-*   <span data-ttu-id="1576d-387">**コンテンツのダウンロード**。</span><span class="sxs-lookup"><span data-stu-id="1576d-387">**Content Download**.</span></span>  <span data-ttu-id="1576d-388">ブラウザーが応答を受信します。</span><span class="sxs-lookup"><span data-stu-id="1576d-388">The browser is receiving the response.</span></span>  
-*   <span data-ttu-id="1576d-389">**プッシュ配信**。</span><span class="sxs-lookup"><span data-stu-id="1576d-389">**Receiving Push**.</span></span>  <span data-ttu-id="1576d-390">ブラウザーが、HTTP/2 Server プッシュ経由でこの応答のデータを受信しています。</span><span class="sxs-lookup"><span data-stu-id="1576d-390">The browser is receiving data for this response via HTTP/2 Server Push.</span></span>  
-*   <span data-ttu-id="1576d-391">**プッシュ中**。</span><span class="sxs-lookup"><span data-stu-id="1576d-391">**Reading Push**.</span></span>  <span data-ttu-id="1576d-392">ブラウザーは、前に受信したローカルデータを読み取ります。</span><span class="sxs-lookup"><span data-stu-id="1576d-392">The browser is reading the local data previously received.</span></span>  
+*   <span data-ttu-id="cd623-363">**キューイング**。</span><span class="sxs-lookup"><span data-stu-id="cd623-363">**Queueing**.</span></span>  <span data-ttu-id="cd623-364">ブラウザーは、次の場合に要求をキューに表示します。</span><span class="sxs-lookup"><span data-stu-id="cd623-364">The browser queues requests when:</span></span>  
+    *   <span data-ttu-id="cd623-365">優先度の高い要求もあります。</span><span class="sxs-lookup"><span data-stu-id="cd623-365">There are higher priority requests.</span></span>  
+    *   <span data-ttu-id="cd623-366">この起点で既に6つの TCP 接続が開かれています。これは制限です。</span><span class="sxs-lookup"><span data-stu-id="cd623-366">There are already six TCP connections open for this origin, which is the limit.</span></span>  <span data-ttu-id="cd623-367">HTTP/1.0 および HTTP/1.1 にのみ適用されます。</span><span class="sxs-lookup"><span data-stu-id="cd623-367">Applies to HTTP/1.0 and HTTP/1.1 only.</span></span>  
+    *   <span data-ttu-id="cd623-368">ブラウザーは、ディスクキャッシュの領域を一時的に割り当てます。</span><span class="sxs-lookup"><span data-stu-id="cd623-368">The browser is briefly allocating space in the disk cache.</span></span>  
+*   <span data-ttu-id="cd623-369">**失速**します。</span><span class="sxs-lookup"><span data-stu-id="cd623-369">**Stalled**.</span></span>  <span data-ttu-id="cd623-370">**キュー**に記載されている理由のいずれかで、要求が停止する可能性があります。</span><span class="sxs-lookup"><span data-stu-id="cd623-370">The request could be stalled for any of the reasons described in **Queueing**.</span></span>  
+*   <span data-ttu-id="cd623-371">**DNS 検索**。</span><span class="sxs-lookup"><span data-stu-id="cd623-371">**DNS Lookup**.</span></span>  <span data-ttu-id="cd623-372">ブラウザーが要求の IP アドレスを解決しています。</span><span class="sxs-lookup"><span data-stu-id="cd623-372">The browser is resolving the IP address for the request.</span></span>  
+*   <span data-ttu-id="cd623-373">**初期接続**。</span><span class="sxs-lookup"><span data-stu-id="cd623-373">**Initial connection**.</span></span>  <span data-ttu-id="cd623-374">ブラウザーでは、TCP ハンドシェイク、TCP リトライ、SSL のネゴシエーションなどの接続が確立されます。</span><span class="sxs-lookup"><span data-stu-id="cd623-374">The browser is establishing a connection including TCP handshakes, TCP retries, and negotiating an SSL.</span></span>
+*   <span data-ttu-id="cd623-375">**プロキシネゴシエーション**。</span><span class="sxs-lookup"><span data-stu-id="cd623-375">**Proxy negotiation**.</span></span>  <span data-ttu-id="cd623-376">ブラウザーは、要求を[プロキシサーバー][WikiProxyServer]とネゴシエートしています。</span><span class="sxs-lookup"><span data-stu-id="cd623-376">The browser is negotiating the request with a [proxy server][WikiProxyServer].</span></span>  
+*   <span data-ttu-id="cd623-377">**リクエストを送信**しました。</span><span class="sxs-lookup"><span data-stu-id="cd623-377">**Request sent**.</span></span>  <span data-ttu-id="cd623-378">要求が送信されています。</span><span class="sxs-lookup"><span data-stu-id="cd623-378">The request is being sent.</span></span>  
+*   <span data-ttu-id="cd623-379">**Serviceworker の準備**。</span><span class="sxs-lookup"><span data-stu-id="cd623-379">**ServiceWorker Preparation**.</span></span>  <span data-ttu-id="cd623-380">ブラウザーがサービスワーカーを開始しています。</span><span class="sxs-lookup"><span data-stu-id="cd623-380">The browser is starting up the service worker.</span></span>  
+*   <span data-ttu-id="cd623-381">**ServiceWorker へのリクエスト**。</span><span class="sxs-lookup"><span data-stu-id="cd623-381">**Request to ServiceWorker**.</span></span>  <span data-ttu-id="cd623-382">要求がサービスワーカーに送信されます。</span><span class="sxs-lookup"><span data-stu-id="cd623-382">The request is being sent to the service worker.</span></span>  
+*   <span data-ttu-id="cd623-383">**\ (TTFB \) を待機**しています。</span><span class="sxs-lookup"><span data-stu-id="cd623-383">**Waiting \(TTFB\)**.</span></span>  <span data-ttu-id="cd623-384">ブラウザーは、応答の最初のバイトを待機しています。</span><span class="sxs-lookup"><span data-stu-id="cd623-384">The browser is waiting for the first byte of a response.</span></span>  
+  <span data-ttu-id="cd623-385">TTFB は、最初のバイトまでの時間を表します。</span><span class="sxs-lookup"><span data-stu-id="cd623-385">TTFB stands for Time To First Byte.</span></span>  <span data-ttu-id="cd623-386">このタイミングには、待機時間が1往復、サーバーが応答の準備にかかった時間が含まれます。</span><span class="sxs-lookup"><span data-stu-id="cd623-386">This timing includes 1 round trip of latency and the time the server took to prepare the response.</span></span>  
+*   <span data-ttu-id="cd623-387">**コンテンツのダウンロード**。</span><span class="sxs-lookup"><span data-stu-id="cd623-387">**Content Download**.</span></span>  <span data-ttu-id="cd623-388">ブラウザーが応答を受信します。</span><span class="sxs-lookup"><span data-stu-id="cd623-388">The browser is receiving the response.</span></span>  
+*   <span data-ttu-id="cd623-389">**プッシュ配信**。</span><span class="sxs-lookup"><span data-stu-id="cd623-389">**Receiving Push**.</span></span>  <span data-ttu-id="cd623-390">ブラウザーが、HTTP/2 Server プッシュ経由でこの応答のデータを受信しています。</span><span class="sxs-lookup"><span data-stu-id="cd623-390">The browser is receiving data for this response via HTTP/2 Server Push.</span></span>  
+*   <span data-ttu-id="cd623-391">**プッシュ中**。</span><span class="sxs-lookup"><span data-stu-id="cd623-391">**Reading Push**.</span></span>  <span data-ttu-id="cd623-392">ブラウザーは、前に受信したローカルデータを読み取ります。</span><span class="sxs-lookup"><span data-stu-id="cd623-392">The browser is reading the local data previously received.</span></span>  
 
-### <span data-ttu-id="1576d-393">イニシエーターと依存関係を表示する</span><span class="sxs-lookup"><span data-stu-id="1576d-393">View initiators and dependencies</span></span>  
+### <span data-ttu-id="cd623-393">イニシエーターと依存関係を表示する</span><span class="sxs-lookup"><span data-stu-id="cd623-393">View initiators and dependencies</span></span>  
 
-<span data-ttu-id="1576d-394">要求のイニシエーターと依存関係を表示するには、[ `Shift` 要求] テーブルの要求をポイントしたままにします。</span><span class="sxs-lookup"><span data-stu-id="1576d-394">To view the initiators and dependencies of a request, hold `Shift`and hover over the request in the Requests table.</span></span>  <span data-ttu-id="1576d-395">DevTools の色: イニシエーターは緑で表示され、依存関係は赤で示されます。</span><span class="sxs-lookup"><span data-stu-id="1576d-395">DevTools colors: initiators are shown in green and dependencies are shown in red.</span></span>  
+<span data-ttu-id="cd623-394">要求のイニシエーターと依存関係を表示するには、[ `Shift` 要求] テーブルの要求をポイントしたままにします。</span><span class="sxs-lookup"><span data-stu-id="cd623-394">To view the initiators and dependencies of a request, hold `Shift`and hover over the request in the Requests table.</span></span>  <span data-ttu-id="cd623-395">DevTools の色: イニシエーターは緑で表示され、依存関係は赤で示されます。</span><span class="sxs-lookup"><span data-stu-id="cd623-395">DevTools colors: initiators are shown in green and dependencies are shown in red.</span></span>  
 
 :::image type="complex" source="../media/network-network-resources-initiators-dependencies.msft.png" alt-text="要求のイニシエーターと依存関係の表示" lightbox="../media/network-network-resources-initiators-dependencies.msft.png":::
-   <span data-ttu-id="1576d-397">図 26: 要求のイニシエーターと依存関係を表示する</span><span class="sxs-lookup"><span data-stu-id="1576d-397">Figure 26:  Viewing the initiators and dependencies of a request</span></span>  
+   <span data-ttu-id="cd623-397">図 26: 要求のイニシエーターと依存関係を表示する</span><span class="sxs-lookup"><span data-stu-id="cd623-397">Figure 26:  Viewing the initiators and dependencies of a request</span></span>  
 :::image-end:::  
 
-<span data-ttu-id="1576d-398">要求テーブルが時系列順に並べ替えられている場合、ポイントしている1つ上の緑の要求が依存関係のイニシエーターになります。</span><span class="sxs-lookup"><span data-stu-id="1576d-398">When the Requests table is ordered chronologically, the first green request above the one you are hovering is the initiator of the dependency.</span></span>  <span data-ttu-id="1576d-399">別の緑の要求がその上に表示されている場合は、その上位の要求がイニシエーターのイニシエーターになります。</span><span class="sxs-lookup"><span data-stu-id="1576d-399">If another green request appears above that, that higher request is the initiator of the initiator.</span></span>  <span data-ttu-id="1576d-400">などなど。</span><span class="sxs-lookup"><span data-stu-id="1576d-400">And so on.</span></span>  
+<span data-ttu-id="cd623-398">要求テーブルが時系列順に並べ替えられている場合、ポイントしている1つ上の緑の要求が依存関係のイニシエーターになります。</span><span class="sxs-lookup"><span data-stu-id="cd623-398">When the Requests table is ordered chronologically, the first green request above the one you are hovering is the initiator of the dependency.</span></span>  <span data-ttu-id="cd623-399">別の緑の要求がその上に表示されている場合は、その上位の要求がイニシエーターのイニシエーターになります。</span><span class="sxs-lookup"><span data-stu-id="cd623-399">If another green request appears above that, that higher request is the initiator of the initiator.</span></span>  <span data-ttu-id="cd623-400">などなど。</span><span class="sxs-lookup"><span data-stu-id="cd623-400">And so on.</span></span>  
 
-### <span data-ttu-id="1576d-401">読み込みイベントを表示する</span><span class="sxs-lookup"><span data-stu-id="1576d-401">View load events</span></span>  
+### <span data-ttu-id="cd623-401">読み込みイベントを表示する</span><span class="sxs-lookup"><span data-stu-id="cd623-401">View load events</span></span>  
 
-<span data-ttu-id="1576d-402">DevTools は、 `DOMContentLoaded` [ `load` ネットワーク] パネル上の複数の場所にある [イベントのタイミング] を表示します。</span><span class="sxs-lookup"><span data-stu-id="1576d-402">DevTools displays the timing of the `DOMContentLoaded` and `load` events in multiple places on the Network panel.</span></span>  <span data-ttu-id="1576d-403">`DOMContentLoaded`イベントは青色で色分けされ、 `load` イベントは赤になります。</span><span class="sxs-lookup"><span data-stu-id="1576d-403">The `DOMContentLoaded` event is colored blue, and the `load` event is red.</span></span>  
+<span data-ttu-id="cd623-402">DevTools は、 `DOMContentLoaded` [ `load` ネットワーク] パネル上の複数の場所にある [イベントのタイミング] を表示します。</span><span class="sxs-lookup"><span data-stu-id="cd623-402">DevTools displays the timing of the `DOMContentLoaded` and `load` events in multiple places on the Network panel.</span></span>  <span data-ttu-id="cd623-403">`DOMContentLoaded`イベントは青色で色分けされ、 `load` イベントは赤になります。</span><span class="sxs-lookup"><span data-stu-id="cd623-403">The `DOMContentLoaded` event is colored blue, and the `load` event is red.</span></span>  
 
 :::image type="complex" source="../media/network-network-requests-load-events.msft.png" alt-text="[ネットワーク] パネルでの DOMContentLoaded と load イベントの場所" lightbox="../media/network-network-requests-load-events.msft.png":::
-   <span data-ttu-id="1576d-405">図 27: `DOMContentLoaded` `load` ネットワークパネル上のイベントとイベントの場所</span><span class="sxs-lookup"><span data-stu-id="1576d-405">Figure 27:  The locations of the `DOMContentLoaded` and `load` events on the Network panel</span></span>  
+   <span data-ttu-id="cd623-405">図 27: `DOMContentLoaded` `load` ネットワークパネル上のイベントとイベントの場所</span><span class="sxs-lookup"><span data-stu-id="cd623-405">Figure 27:  The locations of the `DOMContentLoaded` and `load` events on the Network panel</span></span>  
 :::image-end:::  
 
-### <span data-ttu-id="1576d-406">要求の合計数を表示する</span><span class="sxs-lookup"><span data-stu-id="1576d-406">View the total number of requests</span></span>  
+### <span data-ttu-id="cd623-406">要求の合計数を表示する</span><span class="sxs-lookup"><span data-stu-id="cd623-406">View the total number of requests</span></span>  
 
-<span data-ttu-id="1576d-407">[ネットワーク] パネルの下部にある [概要] ウィンドウに、要求の合計数が表示されます。</span><span class="sxs-lookup"><span data-stu-id="1576d-407">The total number of requests is listed in the Summary pane, at the bottom of the Network panel.</span></span>  
+<span data-ttu-id="cd623-407">[ネットワーク] パネルの下部にある [概要] ウィンドウに、要求の合計数が表示されます。</span><span class="sxs-lookup"><span data-stu-id="cd623-407">The total number of requests is listed in the Summary pane, at the bottom of the Network panel.</span></span>  
 
 > [!CAUTION]
-> <span data-ttu-id="1576d-408">この数値は、DevTools が開かれた後にログに記録された要求のみを追跡します。</span><span class="sxs-lookup"><span data-stu-id="1576d-408">This number only tracks requests that have been logged since DevTools was opened.</span></span>  <span data-ttu-id="1576d-409">DevTools が開かれる前に他の要求が発生した場合、これらの要求はカウントされません。</span><span class="sxs-lookup"><span data-stu-id="1576d-409">If other requests occurred before DevTools was opened, those requests are not counted.</span></span>  
+> <span data-ttu-id="cd623-408">この数値は、DevTools が開かれた後にログに記録された要求のみを追跡します。</span><span class="sxs-lookup"><span data-stu-id="cd623-408">This number only tracks requests that have been logged since DevTools was opened.</span></span>  <span data-ttu-id="cd623-409">DevTools が開かれる前に他の要求が発生した場合、これらの要求はカウントされません。</span><span class="sxs-lookup"><span data-stu-id="cd623-409">If other requests occurred before DevTools was opened, those requests are not counted.</span></span>  
 
 :::image type="complex" source="../media/network-network-total-requests.msft.png" alt-text="DevTools が開かれてからの要求の合計数です。" lightbox="../media/network-network-total-requests.msft.png":::
-   <span data-ttu-id="1576d-411">図 28: DevTools が開かれた後の要求の合計数</span><span class="sxs-lookup"><span data-stu-id="1576d-411">Figure 28:  The total number of requests since DevTools was opened</span></span>  
+   <span data-ttu-id="cd623-411">図 28: DevTools が開かれた後の要求の合計数</span><span class="sxs-lookup"><span data-stu-id="cd623-411">Figure 28:  The total number of requests since DevTools was opened</span></span>  
 :::image-end:::  
 
-### <span data-ttu-id="1576d-412">ダウンロードの合計サイズを表示する</span><span class="sxs-lookup"><span data-stu-id="1576d-412">View the total download size</span></span>  
+### <span data-ttu-id="cd623-412">ダウンロードの合計サイズを表示する</span><span class="sxs-lookup"><span data-stu-id="cd623-412">View the total download size</span></span>  
 
-<span data-ttu-id="1576d-413">要求の合計ダウンロードサイズが、[ネットワーク] パネルの下部にある [概要] ウィンドウに表示されます。</span><span class="sxs-lookup"><span data-stu-id="1576d-413">The total download size of requests is listed in the Summary pane, at the bottom of the Network panel.</span></span>  
+<span data-ttu-id="cd623-413">要求の合計ダウンロードサイズが、[ネットワーク] パネルの下部にある [概要] ウィンドウに表示されます。</span><span class="sxs-lookup"><span data-stu-id="cd623-413">The total download size of requests is listed in the Summary pane, at the bottom of the Network panel.</span></span>  
 
 > [!CAUTION]
-> <span data-ttu-id="1576d-414">この数値は、DevTools が開かれた後にログに記録された要求のみを追跡します。</span><span class="sxs-lookup"><span data-stu-id="1576d-414">This number only tracks requests that have been logged since DevTools was opened.</span></span>  <span data-ttu-id="1576d-415">DevTools が開かれる前に、他の要求が発生した場合、以前の要求はカウントされません。</span><span class="sxs-lookup"><span data-stu-id="1576d-415">If other requests occurred before DevTools was opened, the previous requests are not counted.</span></span>  
+> <span data-ttu-id="cd623-414">この数値は、DevTools が開かれた後にログに記録された要求のみを追跡します。</span><span class="sxs-lookup"><span data-stu-id="cd623-414">This number only tracks requests that have been logged since DevTools was opened.</span></span>  <span data-ttu-id="cd623-415">DevTools が開かれる前に、他の要求が発生した場合、以前の要求はカウントされません。</span><span class="sxs-lookup"><span data-stu-id="cd623-415">If other requests occurred before DevTools was opened, the previous requests are not counted.</span></span>  
 
 :::image type="complex" source="../media/network-network-total-download-size.msft.png" alt-text="リクエストのダウンロード合計サイズ" lightbox="../media/network-network-total-download-size.msft.png":::
-   <span data-ttu-id="1576d-417">図 29: 要求のダウンロード合計サイズ</span><span class="sxs-lookup"><span data-stu-id="1576d-417">Figure 29:  The total download size of requests</span></span>  
+   <span data-ttu-id="cd623-417">図 29: 要求のダウンロード合計サイズ</span><span class="sxs-lookup"><span data-stu-id="cd623-417">Figure 29:  The total download size of requests</span></span>  
 :::image-end:::  
 
-<span data-ttu-id="1576d-418">各項目を圧縮した後の大きなリソースについては[、「リソースの未圧縮サイズを表示](#view-the-uncompressed-size-of-a-resource)する」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="1576d-418">See [View the uncompressed size of a resource](#view-the-uncompressed-size-of-a-resource) to see how large resources are after the browser uncompresses each item.</span></span>  
+<span data-ttu-id="cd623-418">各項目を圧縮した後の大きなリソースについては[、「リソースの未圧縮サイズを表示](#view-the-uncompressed-size-of-a-resource)する」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="cd623-418">See [View the uncompressed size of a resource](#view-the-uncompressed-size-of-a-resource) to see how large resources are after the browser uncompresses each item.</span></span>  
 
-### <span data-ttu-id="1576d-419">要求の原因となったスタックトレースを表示する</span><span class="sxs-lookup"><span data-stu-id="1576d-419">View the stack trace that caused a request</span></span>  
+### <span data-ttu-id="cd623-419">要求の原因となったスタックトレースを表示する</span><span class="sxs-lookup"><span data-stu-id="cd623-419">View the stack trace that caused a request</span></span>  
 
-<span data-ttu-id="1576d-420">JavaScript ステートメントでリソースを要求した後、[**イニシエーター** ] 列をマウスでポイントすると、要求までのスタックトレースが表示されます。</span><span class="sxs-lookup"><span data-stu-id="1576d-420">After a JavaScript statement requests a resource, hover over the **Initiator** column to view the stack trace leading up to the request.</span></span>  
+<span data-ttu-id="cd623-420">JavaScript ステートメントでリソースを要求した後、[**イニシエーター** ] 列をマウスでポイントすると、要求までのスタックトレースが表示されます。</span><span class="sxs-lookup"><span data-stu-id="cd623-420">After a JavaScript statement requests a resource, hover over the **Initiator** column to view the stack trace leading up to the request.</span></span>  
 
 <!-- [codepen.io/contoso/pen/yLBrOWa?editors=0010#0](https://codepen.io/contoso/pen/yLBrOWa?editors=0010#0) -->  
 
@@ -538,85 +539,85 @@ init();
 -->  
 
 :::image type="complex" source="../media/network-network-requests-initiator-stack.msft.png" alt-text="リソース要求までのスタックトレース" lightbox="../media/network-network-requests-initiator-stack.msft.png":::
-   <span data-ttu-id="1576d-422">図 30: リソース要求までのスタックトレース</span><span class="sxs-lookup"><span data-stu-id="1576d-422">Figure 30:  The stack trace leading up to a resource request</span></span>  
+   <span data-ttu-id="cd623-422">図 30: リソース要求までのスタックトレース</span><span class="sxs-lookup"><span data-stu-id="cd623-422">Figure 30:  The stack trace leading up to a resource request</span></span>  
 :::image-end:::  
 
-### <span data-ttu-id="1576d-423">リソースの未圧縮サイズを表示する</span><span class="sxs-lookup"><span data-stu-id="1576d-423">View the uncompressed size of a resource</span></span>  
+### <span data-ttu-id="cd623-423">リソースの未圧縮サイズを表示する</span><span class="sxs-lookup"><span data-stu-id="cd623-423">View the uncompressed size of a resource</span></span>  
 
-<span data-ttu-id="1576d-424">[**大きな要求行を使用する**] チェックボックスをオンにして、[**サイズ**] 列の下の値を確認します。</span><span class="sxs-lookup"><span data-stu-id="1576d-424">Select the **Use large request rows** checkbox and then look at the bottom value of the **Size** column.</span></span>  
+<span data-ttu-id="cd623-424">[**大きな要求行を使用する**] チェックボックスをオンにして、[**サイズ**] 列の下の値を確認します。</span><span class="sxs-lookup"><span data-stu-id="cd623-424">Select the **Use large request rows** checkbox and then look at the bottom value of the **Size** column.</span></span>  
 
 :::image type="complex" source="../media/network-network-requests-uncompressed-compare.msft.png" alt-text="圧縮されていないリソースの例" lightbox="../media/network-network-requests-uncompressed-compare.msft.png":::
-   <span data-ttu-id="1576d-426">図 31: 圧縮されていないリソースの例 \ (ネットワーク経由で送信されたファイルの圧縮サイズ、圧縮されてい `jquery-3.3.1.min.js` ない `29.9 KB` サイズなど `84.9 KB` )</span><span class="sxs-lookup"><span data-stu-id="1576d-426">Figure 31:  An example of uncompressed resources  \(The compressed size of the `jquery-3.3.1.min.js` file that was sent over the network was `29.9 KB`, whereas the uncompressed size was `84.9 KB`\)</span></span>  
+   <span data-ttu-id="cd623-426">図 31: 圧縮されていないリソースの例 \ (ネットワーク経由で送信されたファイルの圧縮サイズ、圧縮されてい `jquery-3.3.1.min.js` ない `29.9 KB` サイズなど `84.9 KB` )</span><span class="sxs-lookup"><span data-stu-id="cd623-426">Figure 31:  An example of uncompressed resources  \(The compressed size of the `jquery-3.3.1.min.js` file that was sent over the network was `29.9 KB`, whereas the uncompressed size was `84.9 KB`\)</span></span>  
 :::image-end:::  
 
-## <span data-ttu-id="1576d-427">要求データをエクスポートする</span><span class="sxs-lookup"><span data-stu-id="1576d-427">Export requests data</span></span>  
+## <span data-ttu-id="cd623-427">要求データをエクスポートする</span><span class="sxs-lookup"><span data-stu-id="cd623-427">Export requests data</span></span>  
 
-### <span data-ttu-id="1576d-428">すべてのネットワーク要求を HAR ファイルに保存する</span><span class="sxs-lookup"><span data-stu-id="1576d-428">Save all network requests to a HAR file</span></span>  
+### <span data-ttu-id="cd623-428">すべてのネットワーク要求を HAR ファイルに保存する</span><span class="sxs-lookup"><span data-stu-id="cd623-428">Save all network requests to a HAR file</span></span>  
 
-<span data-ttu-id="1576d-429">すべてのネットワーク要求を HAR ファイルに保存するには、次の手順を実行します。</span><span class="sxs-lookup"><span data-stu-id="1576d-429">To save all network requests to a HAR file, complete the following steps.</span></span>  
+<span data-ttu-id="cd623-429">すべてのネットワーク要求を HAR ファイルに保存するには、次の手順を実行します。</span><span class="sxs-lookup"><span data-stu-id="cd623-429">To save all network requests to a HAR file, complete the following steps.</span></span>  
 
-1.  <span data-ttu-id="1576d-430">要求テーブル内の任意の要求にマウスポインターを合わせ、コンテキストメニューを開きます (\ を右クリックします)。</span><span class="sxs-lookup"><span data-stu-id="1576d-430">Hover on any request in the Requests table and open the contextual menu \(right-click\).</span></span>  
-1.  <span data-ttu-id="1576d-431">[**コンテンツを含む HAR として保存**] を選びます。</span><span class="sxs-lookup"><span data-stu-id="1576d-431">Select **Save as HAR with Content**.</span></span>  <span data-ttu-id="1576d-432">DevTools は、HAR ファイルに対して DevTools を開いた後に発生した要求をすべて保存します。</span><span class="sxs-lookup"><span data-stu-id="1576d-432">DevTools saves all requests that have occurred since you opened DevTools to the HAR file.</span></span>  <span data-ttu-id="1576d-433">要求をフィルター処理したり、1つの要求のみを保存したりする方法はありません。</span><span class="sxs-lookup"><span data-stu-id="1576d-433">There is no way to filter requests, or to save just a single request.</span></span>  
+1.  <span data-ttu-id="cd623-430">要求テーブル内の任意の要求にマウスポインターを合わせ、コンテキストメニューを開きます (\ を右クリックします)。</span><span class="sxs-lookup"><span data-stu-id="cd623-430">Hover on any request in the Requests table and open the contextual menu \(right-click\).</span></span>  
+1.  <span data-ttu-id="cd623-431">[**コンテンツを含む HAR として保存**] を選びます。</span><span class="sxs-lookup"><span data-stu-id="cd623-431">Select **Save as HAR with Content**.</span></span>  <span data-ttu-id="cd623-432">DevTools は、HAR ファイルに対して DevTools を開いた後に発生した要求をすべて保存します。</span><span class="sxs-lookup"><span data-stu-id="cd623-432">DevTools saves all requests that have occurred since you opened DevTools to the HAR file.</span></span>  <span data-ttu-id="cd623-433">要求をフィルター処理したり、1つの要求のみを保存したりする方法はありません。</span><span class="sxs-lookup"><span data-stu-id="cd623-433">There is no way to filter requests, or to save just a single request.</span></span>  
 
-<span data-ttu-id="1576d-434">HAR ファイルを保存すると、そのファイルを分析用の DevTools にインポートして戻すことができます。</span><span class="sxs-lookup"><span data-stu-id="1576d-434">Once you save a HAR file, you may import it back into DevTools for analysis.</span></span>  <span data-ttu-id="1576d-435">HAR ファイルを [要求] テーブルにドラッグアンドドロップするだけです。</span><span class="sxs-lookup"><span data-stu-id="1576d-435">Just drag-and-drop the HAR file into the Requests table.</span></span>  
+<span data-ttu-id="cd623-434">HAR ファイルを保存すると、そのファイルを分析用の DevTools にインポートして戻すことができます。</span><span class="sxs-lookup"><span data-stu-id="cd623-434">Once you save a HAR file, you may import it back into DevTools for analysis.</span></span>  <span data-ttu-id="cd623-435">HAR ファイルを [要求] テーブルにドラッグアンドドロップするだけです。</span><span class="sxs-lookup"><span data-stu-id="cd623-435">Just drag-and-drop the HAR file into the Requests table.</span></span>  
 <!--See also [HAR Analyzer][HARAnalyzer].  -->  
 
 <!--[HARAnalyzer]: https://toolbox.alphabetapps.com/apps/har_analyzer  -->  
 <!--Todo: add section link when content is available  -->  
 
 :::image type="complex" source="../media/network-network-requests-save-har-content.msft.png" alt-text="[コンテンツを含む HAR として保存] を選ぶ" lightbox="../media/network-network-requests-save-har-content.msft.png":::
-   <span data-ttu-id="1576d-437">図 32: [**コンテンツを含む HAR として保存] を**選ぶ</span><span class="sxs-lookup"><span data-stu-id="1576d-437">Figure 32:  Selecting **Save as HAR with Content**</span></span>  
+   <span data-ttu-id="cd623-437">図 32: [**コンテンツを含む HAR として保存] を**選ぶ</span><span class="sxs-lookup"><span data-stu-id="cd623-437">Figure 32:  Selecting **Save as HAR with Content**</span></span>  
 :::image-end:::  
 
-### <span data-ttu-id="1576d-438">1つ以上の要求をクリップボードにコピーする</span><span class="sxs-lookup"><span data-stu-id="1576d-438">Copy one or more requests to the clipboard</span></span>  
+### <span data-ttu-id="cd623-438">1つ以上の要求をクリップボードにコピーする</span><span class="sxs-lookup"><span data-stu-id="cd623-438">Copy one or more requests to the clipboard</span></span>  
 
-<span data-ttu-id="1576d-439">要求テーブルの [**名前**] 列で、要求をポイントし、コンテキストメニューを開きます。 \ (右クリック \)、[**コピー**] をポイントして、次のいずれかのオプションを選びます。</span><span class="sxs-lookup"><span data-stu-id="1576d-439">Under the **Name** column of the Requests table, hover on a request, open the contextual menu \(right-click\), hover over **Copy**, and select one of the following options.</span></span>  
+<span data-ttu-id="cd623-439">要求テーブルの [**名前**] 列で、要求をポイントし、コンテキストメニューを開きます。 \ (右クリック \)、[**コピー**] をポイントして、次のいずれかのオプションを選びます。</span><span class="sxs-lookup"><span data-stu-id="cd623-439">Under the **Name** column of the Requests table, hover on a request, open the contextual menu \(right-click\), hover over **Copy**, and select one of the following options.</span></span>  
 
-*   <span data-ttu-id="1576d-440">**リンクアドレスをコピー**します。</span><span class="sxs-lookup"><span data-stu-id="1576d-440">**Copy Link Address**.</span></span>  <span data-ttu-id="1576d-441">要求の URL をクリップボードにコピーします。</span><span class="sxs-lookup"><span data-stu-id="1576d-441">Copy the URL of the request to the clipboard.</span></span>  
-*   <span data-ttu-id="1576d-442">**回答をコピー**します。</span><span class="sxs-lookup"><span data-stu-id="1576d-442">**Copy Response**.</span></span>  <span data-ttu-id="1576d-443">応答本文をクリップボードにコピーします。</span><span class="sxs-lookup"><span data-stu-id="1576d-443">Copy the response body to the clipboard.</span></span>  
-*   <span data-ttu-id="1576d-444">**取り出しとしてコピー**します。</span><span class="sxs-lookup"><span data-stu-id="1576d-444">**Copy as Fetch**.</span></span>  
-*   <span data-ttu-id="1576d-445">**CURL としてコピー**します。</span><span class="sxs-lookup"><span data-stu-id="1576d-445">**Copy as cURL**.</span></span>  <span data-ttu-id="1576d-446">CURL コマンドとして要求をコピーします。</span><span class="sxs-lookup"><span data-stu-id="1576d-446">Copy the request as a cURL command.</span></span>  
-*   <span data-ttu-id="1576d-447">**すべてを Fetch としてコピー**します。</span><span class="sxs-lookup"><span data-stu-id="1576d-447">**Copy All as Fetch**.</span></span>  
-*   <span data-ttu-id="1576d-448">**CURL としてすべてコピー**します。</span><span class="sxs-lookup"><span data-stu-id="1576d-448">**Copy All as cURL**.</span></span>  <span data-ttu-id="1576d-449">すべての要求を cURL コマンドのチェーンとしてコピーします。</span><span class="sxs-lookup"><span data-stu-id="1576d-449">Copy all requests as a chain of cURL commands.</span></span>  
-*   <span data-ttu-id="1576d-450">**すべてを HAR としてコピー**します。</span><span class="sxs-lookup"><span data-stu-id="1576d-450">**Copy All as HAR**.</span></span>  <span data-ttu-id="1576d-451">すべての要求を HAR データとしてコピーします。</span><span class="sxs-lookup"><span data-stu-id="1576d-451">Copy all requests as HAR data.</span></span>  
+*   <span data-ttu-id="cd623-440">**リンクアドレスをコピー**します。</span><span class="sxs-lookup"><span data-stu-id="cd623-440">**Copy Link Address**.</span></span>  <span data-ttu-id="cd623-441">要求の URL をクリップボードにコピーします。</span><span class="sxs-lookup"><span data-stu-id="cd623-441">Copy the URL of the request to the clipboard.</span></span>  
+*   <span data-ttu-id="cd623-442">**回答をコピー**します。</span><span class="sxs-lookup"><span data-stu-id="cd623-442">**Copy Response**.</span></span>  <span data-ttu-id="cd623-443">応答本文をクリップボードにコピーします。</span><span class="sxs-lookup"><span data-stu-id="cd623-443">Copy the response body to the clipboard.</span></span>  
+*   <span data-ttu-id="cd623-444">**取り出しとしてコピー**します。</span><span class="sxs-lookup"><span data-stu-id="cd623-444">**Copy as Fetch**.</span></span>  
+*   <span data-ttu-id="cd623-445">**CURL としてコピー**します。</span><span class="sxs-lookup"><span data-stu-id="cd623-445">**Copy as cURL**.</span></span>  <span data-ttu-id="cd623-446">CURL コマンドとして要求をコピーします。</span><span class="sxs-lookup"><span data-stu-id="cd623-446">Copy the request as a cURL command.</span></span>  
+*   <span data-ttu-id="cd623-447">**すべてを Fetch としてコピー**します。</span><span class="sxs-lookup"><span data-stu-id="cd623-447">**Copy All as Fetch**.</span></span>  
+*   <span data-ttu-id="cd623-448">**CURL としてすべてコピー**します。</span><span class="sxs-lookup"><span data-stu-id="cd623-448">**Copy All as cURL**.</span></span>  <span data-ttu-id="cd623-449">すべての要求を cURL コマンドのチェーンとしてコピーします。</span><span class="sxs-lookup"><span data-stu-id="cd623-449">Copy all requests as a chain of cURL commands.</span></span>  
+*   <span data-ttu-id="cd623-450">**すべてを HAR としてコピー**します。</span><span class="sxs-lookup"><span data-stu-id="cd623-450">**Copy All as HAR**.</span></span>  <span data-ttu-id="cd623-451">すべての要求を HAR データとしてコピーします。</span><span class="sxs-lookup"><span data-stu-id="cd623-451">Copy all requests as HAR data.</span></span>  
 
 :::image type="complex" source="../media/network-network-requests-copy-response.msft.png" alt-text="[返信のコピー] の選択" lightbox="../media/network-network-requests-copy-response.msft.png":::
-   <span data-ttu-id="1576d-453">図 33: [**返信のコピー** ] の選択</span><span class="sxs-lookup"><span data-stu-id="1576d-453">Figure 33:  Selecting **Copy Response**</span></span>  
+   <span data-ttu-id="cd623-453">図 33: [**返信のコピー** ] の選択</span><span class="sxs-lookup"><span data-stu-id="cd623-453">Figure 33:  Selecting **Copy Response**</span></span>  
 :::image-end:::  
 
-## <span data-ttu-id="1576d-454">[ネットワーク] パネルのレイアウトを変更する</span><span class="sxs-lookup"><span data-stu-id="1576d-454">Change the layout of the Network panel</span></span>  
+## <span data-ttu-id="cd623-454">[ネットワーク] パネルのレイアウトを変更する</span><span class="sxs-lookup"><span data-stu-id="cd623-454">Change the layout of the Network panel</span></span>  
 
-<span data-ttu-id="1576d-455">ネットワークパネル UI のセクションを展開したり折りたたんだりして、重要な情報を強調することができます。</span><span class="sxs-lookup"><span data-stu-id="1576d-455">You may expand or collapse sections of the Network panel UI to focus important information.</span></span>  
+<span data-ttu-id="cd623-455">ネットワークパネル UI のセクションを展開したり折りたたんだりして、重要な情報を強調することができます。</span><span class="sxs-lookup"><span data-stu-id="cd623-455">You may expand or collapse sections of the Network panel UI to focus important information.</span></span>  
 
-### <span data-ttu-id="1576d-456">[フィルター] ウィンドウを非表示にする</span><span class="sxs-lookup"><span data-stu-id="1576d-456">Hide the Filters pane</span></span>  
+### <span data-ttu-id="cd623-456">[フィルター] ウィンドウを非表示にする</span><span class="sxs-lookup"><span data-stu-id="cd623-456">Hide the Filters pane</span></span>  
 
-<span data-ttu-id="1576d-457">既定では、DevTools によって [**フィルター] ウィンドウ**が表示されます。</span><span class="sxs-lookup"><span data-stu-id="1576d-457">By default, DevTools shows the **Filters pane**.</span></span>  
-<span data-ttu-id="1576d-458">[フィルターフィルター] を**選択し** ![ ][ImageFilterIcon] て非表示にします。</span><span class="sxs-lookup"><span data-stu-id="1576d-458">Select **Filter** ![Filter][ImageFilterIcon] to hide it.</span></span>  
+<span data-ttu-id="cd623-457">既定では、DevTools によって [**フィルター] ウィンドウ**が表示されます。</span><span class="sxs-lookup"><span data-stu-id="cd623-457">By default, DevTools shows the **Filters pane**.</span></span>  
+<span data-ttu-id="cd623-458">[フィルターフィルター] を**選択し** ![ ][ImageFilterIcon] て非表示にします。</span><span class="sxs-lookup"><span data-stu-id="cd623-458">Select **Filter** ![Filter][ImageFilterIcon] to hide it.</span></span>  
 
 :::image type="complex" source="../media/network-network-resources-hide-filters-button.msft.png" alt-text="[フィルターの非表示] ボタン" lightbox="../media/network-network-resources-hide-filters-button.msft.png":::
-   <span data-ttu-id="1576d-460">図 34: [フィルターの非表示] ボタン</span><span class="sxs-lookup"><span data-stu-id="1576d-460">Figure 34:  The Hide Filters button</span></span>  
+   <span data-ttu-id="cd623-460">図 34: [フィルターの非表示] ボタン</span><span class="sxs-lookup"><span data-stu-id="cd623-460">Figure 34:  The Hide Filters button</span></span>  
 :::image-end:::  
 
-### <span data-ttu-id="1576d-461">大きな要求行を使用する</span><span class="sxs-lookup"><span data-stu-id="1576d-461">Use large request rows</span></span>  
+### <span data-ttu-id="cd623-461">大きな要求行を使用する</span><span class="sxs-lookup"><span data-stu-id="cd623-461">Use large request rows</span></span>  
 
-<span data-ttu-id="1576d-462">ネットワーク要求テーブルにより多くの空白が必要な場合は、大きな行を使用します。</span><span class="sxs-lookup"><span data-stu-id="1576d-462">Use large rows when you want more whitespace in your network requests table.</span></span>  <span data-ttu-id="1576d-463">列によっては、大きな行を使用するときに、さらに多くの情報が表示される場合もあります。</span><span class="sxs-lookup"><span data-stu-id="1576d-463">Some columns also provide a little more information when using large rows.</span></span>  <span data-ttu-id="1576d-464">たとえば、 **Size**列の下の値は、要求の非圧縮サイズです。</span><span class="sxs-lookup"><span data-stu-id="1576d-464">For example, the bottom value of the **Size** column is the uncompressed size of a request.</span></span>  
+<span data-ttu-id="cd623-462">ネットワーク要求テーブルにより多くの空白が必要な場合は、大きな行を使用します。</span><span class="sxs-lookup"><span data-stu-id="cd623-462">Use large rows when you want more whitespace in your network requests table.</span></span>  <span data-ttu-id="cd623-463">列によっては、大きな行を使用するときに、さらに多くの情報が表示される場合もあります。</span><span class="sxs-lookup"><span data-stu-id="cd623-463">Some columns also provide a little more information when using large rows.</span></span>  <span data-ttu-id="cd623-464">たとえば、 **Size**列の下の値は、要求の非圧縮サイズです。</span><span class="sxs-lookup"><span data-stu-id="cd623-464">For example, the bottom value of the **Size** column is the uncompressed size of a request.</span></span>  
 
 :::image type="complex" source="../media/network-network-requests-large-request-rows.msft.png" alt-text="要求ウィンドウの大きな要求行の例" lightbox="../media/network-network-requests-large-request-rows.msft.png":::
-   <span data-ttu-id="1576d-466">図 35: [**要求**] ウィンドウの大きな要求行の例</span><span class="sxs-lookup"><span data-stu-id="1576d-466">Figure 35:  An example of large request rows in the **Requests** pane</span></span>  
+   <span data-ttu-id="cd623-466">図 35: [**要求**] ウィンドウの大きな要求行の例</span><span class="sxs-lookup"><span data-stu-id="cd623-466">Figure 35:  An example of large request rows in the **Requests** pane</span></span>  
 :::image-end:::  
 
-<span data-ttu-id="1576d-467">大きな行を有効にするには、[**大きな要求行を使用**する] チェックボックスをオンにします。</span><span class="sxs-lookup"><span data-stu-id="1576d-467">Select the **Use large request rows** checkbox to enable large rows.</span></span>  
+<span data-ttu-id="cd623-467">大きな行を有効にするには、[**大きな要求行を使用**する] チェックボックスをオンにします。</span><span class="sxs-lookup"><span data-stu-id="cd623-467">Select the **Use large request rows** checkbox to enable large rows.</span></span>  
 
 :::image type="complex" source="../media/network-network-requests-use-large-request-rows-on.msft.png" alt-text="[大きな要求行の使用] チェックボックス" lightbox="../media/network-network-requests-use-large-request-rows-on.msft.png":::
-   <span data-ttu-id="1576d-469">図 36: [**大きな要求行の使用**] チェックボックス</span><span class="sxs-lookup"><span data-stu-id="1576d-469">Figure 36:  The **Use large request rows** checkbox</span></span>  
+   <span data-ttu-id="cd623-469">図 36: [**大きな要求行の使用**] チェックボックス</span><span class="sxs-lookup"><span data-stu-id="cd623-469">Figure 36:  The **Use large request rows** checkbox</span></span>  
 :::image-end:::  
 
-### <span data-ttu-id="1576d-470">[概要] ウィンドウを非表示にする</span><span class="sxs-lookup"><span data-stu-id="1576d-470">Hide the Overview pane</span></span>  
+### <span data-ttu-id="cd623-470">[概要] ウィンドウを非表示にする</span><span class="sxs-lookup"><span data-stu-id="cd623-470">Hide the Overview pane</span></span>  
 
-<span data-ttu-id="1576d-471">既定では、DevTools によって [**概要] ウィンドウ**が表示されます。</span><span class="sxs-lookup"><span data-stu-id="1576d-471">By default, DevTools shows the **Overview pane**.</span></span>  <span data-ttu-id="1576d-472">[**概要の表示**] チェックボックスをオフにして非表示にします。</span><span class="sxs-lookup"><span data-stu-id="1576d-472">Deselect the **Show Overview** checkbox to hide it.</span></span>  
+<span data-ttu-id="cd623-471">既定では、DevTools によって [**概要] ウィンドウ**が表示されます。</span><span class="sxs-lookup"><span data-stu-id="cd623-471">By default, DevTools shows the **Overview pane**.</span></span>  <span data-ttu-id="cd623-472">[**概要の表示**] チェックボックスをオフにして非表示にします。</span><span class="sxs-lookup"><span data-stu-id="cd623-472">Deselect the **Show Overview** checkbox to hide it.</span></span>  
 
 :::image type="complex" source="../media/network-network-requests-show-overview-off.msft.png" alt-text="[概要の表示] チェックボックス" lightbox="../media/network-network-requests-show-overview-off.msft.png":::
-   <span data-ttu-id="1576d-474">図 37: [**概要の表示**] チェックボックス</span><span class="sxs-lookup"><span data-stu-id="1576d-474">Figure 37:  The **Show Overview** checkbox</span></span>  
+   <span data-ttu-id="cd623-474">図 37: [**概要の表示**] チェックボックス</span><span class="sxs-lookup"><span data-stu-id="cd623-474">Figure 37:  The **Show Overview** checkbox</span></span>  
 :::image-end:::  
 
 <!-- image links -->  
@@ -639,11 +640,11 @@ init();
 [WikiProxyServer]: https://en.wikipedia.org/wiki/Proxy_server "プロキシサーバー-Wikipedia"  
 
 > [!NOTE]
-> <span data-ttu-id="1576d-478">このページの一部は、 [Google によっ][GoogleSitePolicies]て作成および共有され、[クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。</span><span class="sxs-lookup"><span data-stu-id="1576d-478">Portions of this page are modifications based on work created and [shared by Google][GoogleSitePolicies] and used according to terms described in the [Creative Commons Attribution 4.0 International License][CCA4IL].</span></span>  
-> <span data-ttu-id="1576d-479">元のページは[ここ](https://developers.google.com/web/tools/chrome-devtools/network/reference)にあり、 [Kayce Basques][KayceBasques]テクニカルライター、Chrome Devtools \ & Lighthouse \) で作成されています。</span><span class="sxs-lookup"><span data-stu-id="1576d-479">The original page is found [here](https://developers.google.com/web/tools/chrome-devtools/network/reference) and is authored by [Kayce Basques][KayceBasques] \(Technical Writer, Chrome DevTools \& Lighthouse\).</span></span>  
+> <span data-ttu-id="cd623-478">このページの一部は、 [Google によっ][GoogleSitePolicies]て作成および共有され、[クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。</span><span class="sxs-lookup"><span data-stu-id="cd623-478">Portions of this page are modifications based on work created and [shared by Google][GoogleSitePolicies] and used according to terms described in the [Creative Commons Attribution 4.0 International License][CCA4IL].</span></span>  
+> <span data-ttu-id="cd623-479">元のページは[ここ](https://developers.google.com/web/tools/chrome-devtools/network/reference)にあり、 [Kayce Basques][KayceBasques]テクニカルライター、Chrome Devtools \ & Lighthouse \) で作成されています。</span><span class="sxs-lookup"><span data-stu-id="cd623-479">The original page is found [here](https://developers.google.com/web/tools/chrome-devtools/network/reference) and is authored by [Kayce Basques][KayceBasques] \(Technical Writer, Chrome DevTools \& Lighthouse\).</span></span>  
 
 [![クリエイティブコモンズライセンス][CCby4Image]][CCA4IL]  
-<span data-ttu-id="1576d-481">この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。</span><span class="sxs-lookup"><span data-stu-id="1576d-481">This work is licensed under a [Creative Commons Attribution 4.0 International License][CCA4IL].</span></span>  
+<span data-ttu-id="cd623-481">この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。</span><span class="sxs-lookup"><span data-stu-id="cd623-481">This work is licensed under a [Creative Commons Attribution 4.0 International License][CCA4IL].</span></span>  
 
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
