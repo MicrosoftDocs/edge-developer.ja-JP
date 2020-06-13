@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: WebView2、WebView2、WebView、webview、wpf アプリ、wpf、edge、CoreWebView2、browser control、edge html、はじめに、作業の開始、.NET
-ms.openlocfilehash: 30736106906abe818ccec32e2935798d12ced0be
-ms.sourcegitcommit: 4f8613ed7a33e3cbf822b6315d427af14774cd68
+ms.openlocfilehash: fad5e7ce7be58ea9992dffee75da0d59aed471e7
+ms.sourcegitcommit: a34858dd3260967ba9699842fa839c7a94775fe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "10709895"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "10710393"
 ---
 # WPF での WebView2 の概要 (プレビュー)  
 
@@ -103,7 +103,7 @@ ms.locfileid: "10709895"
             Title="MainWindow"
             Height="450"
             Width="800"
-    />
+    >
         <Grid>
         
         </Grid>

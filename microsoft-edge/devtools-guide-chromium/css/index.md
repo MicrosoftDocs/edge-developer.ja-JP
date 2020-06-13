@@ -2,16 +2,16 @@
 title: CSS の表示と変更の概要
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 06/10/2020
+ms.date: 06/11/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 1780e80259d3ed28f6735e11099ad5796c381a95
-ms.sourcegitcommit: f010f43604bd4363af6827f79dbc071b9afcb667
+ms.openlocfilehash: 346145a7deb9e8ac951ed0578a5060da72817463
+ms.sourcegitcommit: a34858dd3260967ba9699842fa839c7a94775fe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "10708595"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "10710386"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -38,7 +38,7 @@ Microsoft Edge DevTools を使用して、ページの CSS を表示して変更
     [CSS の例][GlitchDevToolsCssExamples]  
     
     > [!NOTE]
-    > [Devtools ウィンドウ][DevToolsCustomizePlacement]をビューポートの右側 (次の図のように表示) にドッキングする場合は、[ **Devtools のカスタマイズと制御**] を選び `...` ます。  [ **DevTools のカスタマイズと制御**] ドロップダウンメニューの [ **dock** ] セクションで、[ **dock to right**] を選びます。  
+    > [Devtools ウィンドウ][DevToolsCustomizePlacement]をビューポート \ (次の図のように表示) の右側にドッキングする場合は、[ **Devtools のカスタマイズと制御**] を選び `...` ます。  [ **DevTools のカスタマイズと制御**] ドロップダウンメニューの [ **dock** ] セクションで、[ **dock to right**] を選びます。  
     
 ## 要素の CSS を表示する  
 

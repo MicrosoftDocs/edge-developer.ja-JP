@@ -2,16 +2,16 @@
 title: Microsoft Edge DevTools を使った Cookie の表示、編集、削除
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 06/10/2020
+ms.date: 06/11/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 4bfd99a36a6a3f8fdf8dbd7787bd54cde87d79da
-ms.sourcegitcommit: f010f43604bd4363af6827f79dbc071b9afcb667
+ms.openlocfilehash: ecd8df7058bca4535d1f7da15ce1d500ef85aefe
+ms.sourcegitcommit: a34858dd3260967ba9699842fa839c7a94775fe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "10708948"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "10710372"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -59,7 +59,7 @@ ms.locfileid: "10708948"
 *   **HTTP**。  True の場合、このフィールドは、cookie が HTTP 経由でのみ使用され、JavaScript の変更が許可されていないことを示します。  「 [Httponly cookie][MDNHTTPCookiesSecure]」を参照してください。  
 *   **セキュリティ保護さ**れます。  True の場合、このフィールドは、cookie がセキュリティで保護された HTTPS 接続を介してのみサーバーに送信される必要があることを示します。  「[安全な cookie][MDNHTTPCookiesSecure]」をご覧ください。  
 *   **SameSite**。  `strict` `lax` Cookie が実験的な[Samesite][MDNHTTPCookiesSamesite]属性を使用しているかどうかを示します。  
-*   **優先度**。  含ま `low` れる `medium` 場合は、\ (既定値 \)、または `high` cookie が "減価償却[cookie の優先順位][ChromiumIssue232693]" 属性を使っているかどうかを示します。
+*   **優先度**。  含ま `low` れる `medium` 場合は、\ (既定値 \)、または `high` cookie で廃止された[cookie 優先順位][ChromiumIssue232693]の属性が使用されているかどうかが表示されます。
 
 ## Cookie をフィルター処理する  
 

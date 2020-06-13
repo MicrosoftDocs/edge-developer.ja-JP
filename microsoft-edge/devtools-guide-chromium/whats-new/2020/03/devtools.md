@@ -2,16 +2,16 @@
 title: DevTools の新機能 (Microsoft Edge 83)
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 06/10/2020
+ms.date: 06/11/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 7651430c581346d1f140f0a5974b8aa9bb809204
-ms.sourcegitcommit: f010f43604bd4363af6827f79dbc071b9afcb667
+ms.openlocfilehash: ab3df52708febd4928c7e4ac41a77713370b9fa1
+ms.sourcegitcommit: a34858dd3260967ba9699842fa839c7a94775fe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "10709043"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "10710379"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -157,7 +157,7 @@ Chromium の問題[#1003700][crbug1003700]
 *   [`Accept-Language`][MDNAcceptLanguage]HTTP 要求のヘッダー  
 
 > [!NOTE]
-> 更新は `navigator.language` `navigator.languages` すぐには表示されませんが、次のナビゲーションまたはページの再読み込み後にのみ更新されます。  HTTP ヘッダーへの変更 `Accept-Language` は、以降の要求に対してのみ反映されます。  
+> の更新はすぐには `navigator.language` `navigator.languages` 表示されませんが、次のナビゲーションまたはページの更新後にのみ行われます。  HTTP ヘッダーへの変更 `Accept-Language` は、以降の要求に対してのみ反映されます。  
 
 :::image type="complex" source="../../media/2020/03/locale.msft.png" alt-text="ロケールのエミュレート" lightbox="../../media/2020/03/locale.msft.png":::
    図 10: ロケールのエミュレート  
