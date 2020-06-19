@@ -3,17 +3,17 @@ description: Microsoft Edge WebView2 コントロールを使用して Win32 ア
 title: Win32 アプリ用 Microsoft Edge WebView2
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 06/05/2020
+ms.date: 06/16/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Controller、browser control、edge html
-ms.openlocfilehash: af8df8ff67a0fbe7fd4ec9308b1562b9ef987933
-ms.sourcegitcommit: 8dca1c1367853e45a0a975bc89b1818adb117bd4
+ms.openlocfilehash: 03c943c87f07344ab4e3d1a7c707a993a795cdba
+ms.sourcegitcommit: 037a2d62333691104c9accb4862968f80a3465a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "10699108"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "10751850"
 ---
 # インターフェイス ICoreWebView2NewWindowRequestedEventArgs 
 
@@ -52,6 +52,8 @@ IsUserInitiated は、新しいウィンドウ要求が、ターゲットを含�
 
 > パブリック HRESULT [get_IsUserInitiated](#get_isuserinitiated)(ブール * isUserInitiated)
 
+ポップアップブロックがオフになっているため、WebView2 コントロールでポップアップウィンドウが表示されることがあります。 ユーザーが起動しないポップアップウィンドウが表示されないようにするには、を使用 `get_IsUserInitiated` します。
+
 #### get_NewWindow 
 
 新しいウィンドウを取得します。
@@ -87,4 +89,3 @@ NewWindowRequest の結果として WebView を設定します。
 > パブリック HRESULT [put_NewWindow](#put_newwindow)([ICoreWebView2](icorewebview2.md) * NewWindow)
 
 ターゲット webview に移動しないようにします。 NewWindow が設定されている場合は、トップレベルのウィンドウが開いている WindowProxy として返されます。
-

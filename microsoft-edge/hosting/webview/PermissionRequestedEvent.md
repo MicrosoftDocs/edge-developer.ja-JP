@@ -3,22 +3,24 @@ description: 現在の権限要求に関するイベント情報を提供しま�
 title: PermissionRequestedEvent オブジェクト
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 06/04/2018
+ms.date: 06/10/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 keywords: webview、windows 10 アプリ、uwp、edge
-ms.openlocfilehash: 07fccebc9e061d4ee7a85e48271aaf9c0574e1ef
-ms.sourcegitcommit: 6860234c25a8be863b7f29a54838e78e120dbb62
+ms.openlocfilehash: 9bb6cfdbe3cc430f109ea3a258b6c1a176b05da3
+ms.sourcegitcommit: 037a2d62333691104c9accb4862968f80a3465a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "10570660"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "10752021"
 ---
-# PermissionRequestedEvent オブジェクト
+# PermissionRequestedEvent オブジェクト  
 
-現在のアクセス許可要求に関するイベント情報を提供します。
+[!INCLUDE [deprecation-note](../includes/deprecation-note.md)]  
 
-```js
+現在のアクセス許可要求に関するイベント情報を提供します。  
+
+```javascript
 webview.addEventListener("MSWebViewPermissionRequested", permissionRequestedEventArgs => {
     const permissionRequest = permissionRequestedEventArgs.permissionRequest;
     switch (permissionRequest.type) {
@@ -54,12 +56,12 @@ webview.addEventListener("MSWebViewPermissionRequested", permissionRequestedEven
             break;
     }
 });
-```
+```  
 
-## プロパティ
+## プロパティ  
 
-### permissionRequest
+### permissionRequest  
 
-[Webview](../webview.md)のコンテンツによって行われたエンドユーザーのアクセス許可要求を表す**[permissionrequest](permissionrequest.md)** オブジェクトを返します。
+[Webview](../webview.md)のコンテンツによって行われたエンドユーザーのアクセス許可要求を表す**[permissionrequest](permissionrequest.md)** オブジェクトを返します。  
 
-このプロパティは読み取り専用です。
+このプロパティは読み取り専用です。  

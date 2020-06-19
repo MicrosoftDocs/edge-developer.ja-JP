@@ -3,22 +3,22 @@ description: Microsoft Edge WebView2 コントロールを使用して Win32 ア
 title: Win32 アプリ用 Microsoft Edge WebView2
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 06/05/2020
+ms.date: 06/16/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Controller、browser control、edge html
-ms.openlocfilehash: 4512c382afaa1bd5e44489f9512e94b5db1de82a
-ms.sourcegitcommit: 8dca1c1367853e45a0a975bc89b1818adb117bd4
+ms.openlocfilehash: 7d3c568c62475adb42589100c3fb6ccec6fecd49
+ms.sourcegitcommit: 037a2d62333691104c9accb4862968f80a3465a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "10699089"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "10751878"
 ---
 # WebView2 クラス (CoreWebView2 クラス) 
 
 名前空間: WebView2 () \
-"WebView2" アセンブリを実行します。
+アセンブリ: Microsoft.Web.WebView2.Core.dll
 
 WebView2 では、最新の Edge web ブラウザー技術を使用して、web コンテンツをホストすることができます。
 
@@ -65,7 +65,7 @@ WebView2 では、最新の Edge web ブラウザー技術を使用して、web 
 [PostWebMessageAsString](#postwebmessageasstring) | これは、JavaScript オブジェクトの JSON 文字列表現ではなく、単純な文字列のメッセージを投稿するためのヘルパーです。
 [再](#reload) | 現在のページを再読み込みします。
 [RemoveHostObjectFromScript](#removehostobjectfromscript) | 名前で指定されたホストオブジェクトを削除して、WebView の JavaScript コードからアクセスできなくなるようにします。
-[RemoveScriptToExecuteOnDocumentCreated](#removescripttoexecuteondocumentcreated) | AddScriptToExecuteOnDocumentCreated によって追加された、対応する JavaScript を削除します。
+[RemoveScriptToExecuteOnDocumentCreated](#removescripttoexecuteondocumentcreated) | 指定したスクリプト id を使用して、AddScriptToExecuteOnDocumentCreated で追加された対応する JavaScript を削除します。
 [RemoveWebResourceRequestedFilter](#removewebresourcerequestedfilter) | 以前に WebResourceRequested イベントに追加された、一致する WebResource フィルターを削除します。
 [Stop](#stop) | すべてのナビゲーションと保留中のリソースフェッチを停止します。
 
@@ -285,6 +285,9 @@ JavaScript はネイティブコードへの同期呼び出しでブロックさ
 
 > パブリック async タスク< 文字列 > [AddScriptToExecuteOnDocumentCreatedAsync](#addscripttoexecuteondocumentcreatedasync)(文字列 javaScript)
 
+##### 返し
+[RemoveScriptToExecuteOnDocumentCreated](#removescripttoexecuteondocumentcreated)を呼び出したときに渡すことができるスクリプト id を返します。 
+
 挿入されたスクリプトは、RemoveScriptToExecuteOnDocumentCreated で削除されるまで、将来のすべての上位レベルのドキュメントと子フレームのナビゲーションに適用されます。 これは非同期的に適用されるため、今後のナビゲーションでスクリプトを実行する準備ができていることを確認する前に、完了ハンドラーが実行されるまで待機する必要があります。
 
 [サンドボックス](https://developer.mozilla.org/docs/Web/HTML/Element/iframe#attr-sandbox)のプロパティまたは[コンテンツセキュリティポリシーの HTTP ヘッダー](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Security-Policy)によって、HTML ドキュメントに何らかのサンドボックスが含まれている場合は、このスクリプトの実行に影響します。 たとえば、' allow als ' キーワードが設定されていない場合、関数への呼び出し `alert` は無視されます。
@@ -303,6 +306,9 @@ URI パラメーターは、ワイルドカード文字列 (0 以上、"?": 完�
 
 > パブリック async タスク< 文字列 > [CalldevparametersAsJson Protocolmethodasync](#calldevtoolsprotocolmethodasync)(文字列 methodName, string)
 
+##### 返し
+メソッドの戻りオブジェクトを表す JSON 文字列。
+
 使用できるメソッドの一覧と説明については、「 [Devtools プロトコルビューアー](https://aka.ms/DevToolsProtocolDocs) 」をご覧ください。 MethodName パラメーターは、書式のメソッドの完全な名前です `{domain}.{method}` 。 ParametersAsJson パラメーターは、対応するメソッドのパラメーターを含む JSON 形式の文字列です。 メソッドが非同期的に完了すると、ハンドラーの Invoke メソッドが呼び出されます。 Invoke は、JSON 文字列としてメソッドの戻りオブジェクトを使って呼び出されます。
 
 #### CapturePreviewAsync 
@@ -319,7 +325,10 @@ WebView でレンダリングされた現在のトップレベルドキュメン
 
 > パブリック async タスク< 文字列 > [Executesの](#executescriptasync)テキスト (文字列 javaScript)
 
-これは非同期的に実行されます。完了すると、ExecuteScriptCompletedHandler パラメーターでハンドラーが指定されると、指定された JavaScript を評価した結果を使って Invoke メソッドが呼び出されます。 結果値は、JSON でエンコードされた文字列です。 結果が定義されていない場合、参照循環が含まれている場合、または JSON にエンコードできない場合は、JSON null 値が文字列 ' null ' として返されます。 明示的な戻り値のない関数は undefined を返します。 実行されたスクリプトが未処理の例外をスローした場合、結果は ' null ' にもなります。 このメソッドは非同期的に適用されます。 ナビゲーション中に、メソッドが NavigationStarting イベントの後で呼び出される場合、スクリプトは、コンテンツの読み込み時に新しいドキュメントで実行されます。これは、ContentLoading が呼び出されたときに発生します。 実行方法 IsScriptEnabled が FALSE に設定されている場合でも、スクリプトは機能します。
+##### 返し
+指定された JavaScript を実行した結果を表す JSON エンコードされた文字列を返します。 
+
+このメソッドは、指定された JavaScript を非同期的に実行し、指定された JavaScript の結果を返します。 提供された JavaScript の結果が `undefined` 、参照循環を含んでいる場合、または JSON にエンコードできない場合は、文字列 ' null ' が返されます。 指定した JavaScript で呼び出される関数に明示的な戻り値がない場合 `undefined` は、が返されます。 指定した JavaScript が処理されない例外をスローすると、' null ' が返されます。 イベント後にこのメソッドが呼び出された場合 `NavigationStarting` 、指定された JavaScript は、読み込み時に新しいドキュメントで実行され、トリガーされたときと同じタイミングで実行され `ContentLoading` ます。 `ExecuteScript` がに設定されていても動作 `IsScriptEnabled` `FALSE` します。
 
 #### GetDevToolsProtocolEventReceiver 
 
@@ -406,7 +415,7 @@ window.chrome.webview.removeEventListener('message', handler)
 
 #### RemoveScriptToExecuteOnDocumentCreated 
 
-AddScriptToExecuteOnDocumentCreated によって追加された、対応する JavaScript を削除します。
+指定したスクリプト id を使用して、AddScriptToExecuteOnDocumentCreated で追加された対応する JavaScript を削除します。
 
 > パブリック void [RemoveScriptToExecuteOnDocumentCreated](#removescripttoexecuteondocumentcreated)(文字列 id)
 
@@ -425,4 +434,3 @@ AddScriptToExecuteOnDocumentCreated によって追加された、対応する J
 > パブリック void [Stop](#stop)()
 
 スクリプトは停止されません。
-

@@ -7,18 +7,18 @@ ms.prod: microsoft-edge
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 ms.assetid: 0608d778-f65b-4dc5-a745-364aac57ef59
 caps.latest.revision: 4
 author: MSEdgeTeam
 ms.author: msedgedevrel
 manager: ''
-ms.openlocfilehash: 31669615d5e00cb2dbe3730ed20e24d904161f8b
-ms.sourcegitcommit: 6860234c25a8be863b7f29a54838e78e120dbb62
+ms.openlocfilehash: 84a74d3c1aa68469dfe2fe42fdee685faa4c358c
+ms.sourcegitcommit: 037a2d62333691104c9accb4862968f80a3465a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "10570398"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "10752221"
 ---
 # JsRunSerializedScriptWithCallback 関数
 シリアル化されたスクリプトを実行します。 必要な場合にのみ、スクリプトソースの遅延読み込み機能を提供します。  
@@ -72,4 +72,4 @@ STDAPI_(JsErrorCode) JsRunSerializedScriptWithCallback(
  **ヘッダー:** jsrt  
   
 ## 関連項目  
- [リファレンス (JavaScript Runtime)](../chakra-hosting/reference-javascript-runtime.md)
+ [リファレンス (JavaScript ランタイム)](../chakra-hosting/reference-javascript-runtime.md)

@@ -3,17 +3,17 @@ description: Microsoft Edge WebView2 コントロールを使用して Win32 ア
 title: Win32 アプリ用 Microsoft Edge WebView2
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 06/05/2020
+ms.date: 06/16/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Controller、browser control、edge html
-ms.openlocfilehash: 4f920b5faf79532e81728675bf56218549914e3d
-ms.sourcegitcommit: 8dca1c1367853e45a0a975bc89b1818adb117bd4
+ms.openlocfilehash: 2fdd047068ec761e1fcd3d3031d4c6c911a5b1ef
+ms.sourcegitcommit: 037a2d62333691104c9accb4862968f80a3465a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "10699112"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "10752256"
 ---
 # グローバル 
 
@@ -50,7 +50,7 @@ Webview2 または特定の機能ベースをバージョンで使うかどう�
 
 [DLL エクスポート] を使用して、カスタムバージョンの Edge、ユーザーデータディレクトリ、または追加オプションを使って WebView2 環境を作成します。
 
-browserExecutableFolder は、埋め込まれた端を含むフォルダーへの相対パスです。 埋め込まれたエッジを取得するには、インストールされている Edge のフォルダーという名前のバージョン (インストールされている 73.0.52.0 Edge の 73.0.52.0 sub フォルダーなど) をコピーします。 このフォルダーには、msedge、msedge などが必要です。 BrowserExecutableFolder に null または空の文字列を使用してコンピューターにインストールされている Edge を使用して、コンピューターにインストールされている microsoft Edge の互換性のあるバージョンを検索します。この場合は、ユーザーごとに最初にインストールしてから、コンピューターごとにインストールします。
+`browserExecutableFolder`WebView2 コントロールが埋め込みバージョンの edge を使うか、インストールされている edge のバージョンがクライアントコンピューターに存在するかを指定するために使います。 埋め込みバージョンの edge を使用するには、Edge の埋め込みバージョンが含まれているフォルダーの相対パスを渡し `browserExecutableFolder` ます。 埋め込みバージョンの Edge を取得するには、クライアントコンピューターにインストールされているバージョンの Edge からバージョン管理されたフォルダー名をコピーします。 たとえば、 `73.0.52.0` Edge バージョン73.0.52.0 がインストールされているフォルダーからフォルダーをコピーします。 フォルダーに**msedgewebview2.exe**と**msedge.dll**の両方のファイルが含まれていることを確認します。 クライアントコンピューターに存在する、インストールされているバージョンの Edge を使用する WebView2 コントロールを作成するには、null または空の文字列をに渡し `browserExecutableFolder` ます。 このシナリオでは、API は、選択されたチャネルの優先順位を使って、クライアントコンピューターにインストールされている、互換性のあるバージョンの Edge (コンピューターレベルでは最初に、次にユーザー単位) を検出しようとします。 
 
 既定のチャネル検索順序は、安定、ベータ、dev、カナリアです。 WEBVIEW2_RELEASE_CHANNEL_PREFERENCE 環境変数または該当する releaseChannelPreference レジストリ値に1を指定すると、チャネルの検索順序が逆になります。
 
@@ -87,7 +87,7 @@ WEBVIEW2_PIPE_FOR_SCRIPT_DEBUGGER
 
 空でない値が含まれる場合は、複数の WebViews を使うホストアプリケーションもサポートするスクリプトデバッガーで WebView が起動されていることを示します。 この値は、ホストアプリケーションによって新しい WebView が作成されるときに、開かれて書き込まれる名前付きパイプの識別子として使われます。 このペイロードは、リモートデバッグポートの JSON ターゲットと一致し、外部デバッガーが特定の WebView インスタンスにアタッチするために使うことができます。 デバッガーによって作成されるパイプの形式は、次のようになり `\\.\pipe\WebView2\Debugger\{app_name}\{pipe_name}` ます。
 
-* `{app_name}` は、ホストアプリケーションの exe ファイル名です。例 WebView2Example
+* `{app_name}` は、ホストアプリケーションの exe ファイル名 (WebView2Example.exe など) です。
 
 * `{pipe_name}` は WEBVIEW2_PIPE_FOR_SCRIPT_DEBUGGER の値に設定されています。
 
@@ -138,4 +138,3 @@ ERROR_PRODUCT_UNINSTALLED
 安定したチャネルまたは埋め込みエッジでない場合は、チャネル名などのブラウザーのバージョン情報を取得します。
 
 チャネル名は、β、dev、カナリアです。 BrowserExecutableFolder またはチャネルの優先順位に対して上書きが存在する場合、override が使用されます。 Override がない場合は、GetAvailableCoreWebView2BrowserVersionString に渡されたパラメーターが使われます。
-

@@ -3,22 +3,24 @@ description: デバイス機能にアクセスするためのユーザーアク�
 title: DeferredPermissionRequest オブジェクト
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 06/15/2018
+ms.date: 06/10/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 keywords: webview、windows 10 アプリ、uwp、edge
-ms.openlocfilehash: 6013f20195fc0f5d4f33b871a9c1b01392bf023e
-ms.sourcegitcommit: 6860234c25a8be863b7f29a54838e78e120dbb62
+ms.openlocfilehash: dc1f0753f879f511fdc380c806eb88b6be358016
+ms.sourcegitcommit: 037a2d62333691104c9accb4862968f80a3465a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "10569246"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "10752143"
 ---
-# DeferredPermissionRequest オブジェクト
+# DeferredPermissionRequest オブジェクト  
 
-特殊なデバイス機能 (地理位置情報、ポインターロックなど) にアクセスするために、 [webview](../webview.md)のコンテンツによるエンドユーザーアクセス許可の遅延要求を表します。
+[!INCLUDE [deprecation-note](../includes/deprecation-note.md)]  
 
-```js
+特殊なデバイス機能 (地理位置情報、ポインターロックなど) にアクセスするために、 [webview](../webview.md)のコンテンツによるエンドユーザーアクセス許可の遅延要求を表します。  
+
+```javascript
 // In this sample, when we receive a permission request we construct some basic UI to ask the
 // user if they want to give permission.
 webview.addEventListener("MSWebViewPermissionRequested", permissionRequestedEventArgs => {
@@ -58,98 +60,98 @@ webview.addEventListener("MSWebViewPermissionRequested", permissionRequestedEven
 
     permissionRequest.defer();
 });
-```
+```  
 
-## メソッド
+## メソッド  
 
-### 許可
+### 許可  
 
-許可の要求を許可します。
+許可の要求を許可します。  
 
-```js
+```javascript
 deferredPermissionRequest.allow();
-```
+```  
 
-#### パラメーター
+#### パラメーター  
 
-このメソッドにはパラメーターはありません。
+このメソッドにはパラメーターはありません。  
 
-#### 戻り値
+#### 戻り値  
 
-このメソッドに戻り値はありません。
+このメソッドに戻り値はありません。  
 
-### 拒否
+### 拒否  
 
-権限のリクエストを拒否します。
+権限のリクエストを拒否します。  
 
-```js
+```javascript
 deferredPermissionRequest.deny();
-```
+```  
 
-#### パラメーター
+#### パラメーター  
 
-このメソッドにはパラメーターはありません。
+このメソッドにはパラメーターはありません。  
 
-#### 戻り値
+#### 戻り値  
 
-このメソッドに戻り値はありません。
+このメソッドに戻り値はありません。  
 
-## プロパティ
+## プロパティ  
 
-### id
+### id  
 
-以前の MSWebViewPermissionRequested されたイベントの PermissionRequest オブジェクトと現在の DeferredPermissionRequest を関連付けるために使用できる一意の ID。 **Permissionrequested さ**れた defer メソッドを参照してください。
+以前の MSWebViewPermissionRequested されたイベントの PermissionRequest オブジェクトと現在の DeferredPermissionRequest を関連付けるために使用できる一意の ID。 **Permissionrequested さ**れた defer メソッドを参照してください。  
 
-このプロパティは読み取り専用です。
+このプロパティは読み取り専用です。  
 
-```js
+```javascript
 var id = deferredPermissionRequest.id;
-```
+```  
 
-##### プロパティ値
+##### プロパティ値  
 
-種類:**符号なし長**
+種類:**符号なし長**  
 
-### 型
+### 型  
 
-要求されるアクセス許可の種類。 これは、次のいずれかの文字列値になります。
+要求されるアクセス許可の種類。 これは、次のいずれかの文字列値になります。  
 
-- **位置**情報: ナビゲータ経由で位置情報にアクセスします。
-- **unlimitedIndexedDBQuota**: IndexedDB api が、保存されている通常のデータサイズの制限を無視することを許可します。
-- **メディア**: ナビゲータメディアからのマイクとカメラへのアクセス。
-- **pointerlock**ロック: 要素の requestPointerLock ロックを使って、マウスポインターのロックと制御を行うことができます。
-- **webnotifications**: window 経由でデスクトップ通知を表示することができます。知ら.
-- **画面**: メディアキャプチャ API を使ってスクリーンショットを撮ることができます。
-- **immersiveview**: VR ディスプレイを制御できます。
+*   **位置**情報: ナビゲータ経由で位置情報にアクセスします。  
+*   **unlimitedIndexedDBQuota**: IndexedDB api が、保存されている通常のデータサイズの制限を無視することを許可します。  
+*   **メディア**: ナビゲータメディアからのマイクとカメラへのアクセス。  
+*   **pointerlock**ロック: 要素の requestPointerLock ロックを使って、マウスポインターのロックと制御を行うことができます。  
+*   **webnotifications**: window 経由でデスクトップ通知を表示することができます。知ら.  
+*   **画面**: メディアキャプチャ API を使ってスクリーンショットを撮ることができます。  
+*   **immersiveview**: VR ディスプレイを制御できます。  
 
-このプロパティは読み取り専用です。
+このプロパティは読み取り専用です。  
 
-```js
+```javascript
 var type = deferredPermissionRequest.type;
-```
+```  
 
-#### プロパティ値
+#### プロパティ値  
 
-種類:**文字列**
+種類:**文字列**  
 
-### uri
+### uri  
 
-アクセス許可を要求するドキュメントの Uniform Resource Identifier (URI)。
+アクセス許可を要求するドキュメントの Uniform Resource Identifier (URI)。  
 
-このプロパティは読み取り専用です。
+このプロパティは読み取り専用です。  
 
-```js
+```javascript
 var uri = deferredPermissionRequest.uri;
-```
+```  
 
-##### プロパティ値
+##### プロパティ値  
 
-種類:**文字列**
+種類:**文字列**  
 
-## 要件
+## 要件  
 
-|                                           |                                      |
-|-------------------------------------------|--------------------------------------|
-| <strong>サポートされている最小クライアント数</strong> | Windows 10 [Windows ストアアプリのみ] |
-| <strong>サポートされている最小のサーバー</strong> |            サポートされていないアプリ             |
-| <strong>サポートされている最小電話</strong>  |            サポートされていないアプリ             |
+|  |  |  
+|:--- |:--- |  
+| **サポートされている最小クライアント数** | Windows 10 [Windows ストアアプリのみ] |  
+| **サポートされている最小のサーバー** | サポートされていないアプリ |  
+| **サポートされている最小電話** | サポートされていないアプリ |  

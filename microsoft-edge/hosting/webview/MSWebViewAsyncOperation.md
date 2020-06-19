@@ -3,170 +3,177 @@ description: 操作が正常に完了したか失敗したかを公開します
 title: MSWebViewAsyncOperation オブジェクト
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/12/2018
+ms.date: 06/10/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 keywords: webview、windows 10 アプリ、uwp、edge
-ms.openlocfilehash: ebb89c0fc645ebcd97357af10af2be650d8218b9
-ms.sourcegitcommit: 6860234c25a8be863b7f29a54838e78e120dbb62
+ms.openlocfilehash: d6e03af2a0205938f19120076aa0ad622539d7e5
+ms.sourcegitcommit: 037a2d62333691104c9accb4862968f80a3465a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "10569237"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "10752126"
 ---
-# MSWebViewAsyncOperation オブジェクト
+# MSWebViewAsyncOperation オブジェクト  
 
-操作が正常に完了したか失敗したかを公開します。 
+[!INCLUDE [deprecation-note](../includes/deprecation-note.md)]  
 
-## イベント
+操作が正常に完了したか失敗したかを公開します。  
 
-### 完了
+## イベント  
 
-操作が完了したことを示します。 
+### 完了  
 
-```js
+操作が完了したことを示します。  
+
+```javascript
 function handler(eventInfo) { /* Your code */ }
  
 // addEventListener syntax
 MSWebViewAsyncOperation.addEventListener("complete", handler);
 MSWebViewAsyncOperation.removeEventListener("complete", handler);
-```
+```  
 
-#### イベント情報
+#### イベント情報  
 
-|            |      |
-|------------|------|
-|**インターフェイス** | **イベント**
-|**同期** |はい |    
-|**バブル**     |なし |   
-|**取り消し可能な**  |なし |        
+|  |  |  
+|:--- |:--- |  
+| **インターフェイス** | **イベント** |  
+| **同期** |はい |  
+| **バブル** |なし |   
+| **取り消し可能な** |なし |  
 
+### error (エラー)  
 
-### error (エラー)
+操作でエラーがあったことを示します。  
 
-操作でエラーがあったことを示します。
-
-```js
+```javascript
 function handler(eventInfo) { /* Your code */ }
  
 // addEventListener syntax
 MSWebViewAsyncOperation.addEventListener("error", handler);
 MSWebViewAsyncOperation.removeEventListener("error", handler);
-```
+```  
 
-#### イベント情報
+#### イベント情報  
 
-|            |      |
-|------------|------|
-|**インターフェイス** | **イベント**
-|**同期** |はい |    
-|**バブル**     |なし |   
-|**取り消し可能な**  |なし |            
+|  |  |  
+|:--- |:--- |  
+| **インターフェイス** | **イベント** |  
+| **同期** | はい |  
+| **バブル** | なし |  
+| **取り消し可能な** | なし |  
 
+## メソッド  
 
-## メソッド
+### start  
 
-### start
+非同期タスクを開始するために呼び出されます。  
 
-非同期タスクを開始するために呼び出されます。 
-
-```js
+```javascript
 MSWebViewAsyncOperation.start();
-```
+```  
 
-### パラメーター
+### パラメーター  
 
-このメソッドにはパラメーターはありません。
+このメソッドにはパラメーターはありません。  
 
-### 戻り値
+### 戻り値  
 
-このメソッドに戻り値はありません。
+このメソッドに戻り値はありません。  
 
-## プロパティ
+## プロパティ  
 
-### error (エラー)
+### error (エラー)  
 
-発生したエラー。
+発生したエラー。  
 
-このプロパティは読み取り専用です。
+このプロパティは読み取り専用です。  
 
-```js
+```javascript
 var error = MSWebViewAsyncOperation.error;
-```
+```  
 
-#### プロパティ値
-種類: **Domerror**
+#### プロパティ値  
 
-### oncomplete
+種類: **Domerror**  
 
-**Complete**イベントハンドラー。 
+### oncomplete  
 
-```js
+**Complete**イベントハンドラー。  
+
+```javascript
 var oncomplete = MSWebViewAsyncOperation.oncomplete;
-```
+```  
 
-#### プロパティ値
-種類: **EventHandler**
+#### プロパティ値  
 
-### 時
+種類: **EventHandler**  
 
-**エラー**イベントハンドラー。 
+### 時  
 
-```js
+**エラー**イベントハンドラー。  
+
+```javascript
 var onerror = MSWebViewAsyncOperation.onerror;
-```
+```  
 
-#### プロパティ値
-種類: **EventHandler**
+#### プロパティ値  
 
-### readyState
+種類: **EventHandler**  
 
-オブジェクトのレディ状態を記述します。
+### readyState  
 
-このプロパティは読み取り専用です。
+オブジェクトのレディ状態を記述します。  
 
-```js
+このプロパティは読み取り専用です。  
+
+```javascript
 var readyState = MSWebViewAsyncOperation.readyState;
-```
+```  
 
-#### プロパティ値
-種類:**符号なし短い**
+#### プロパティ値  
 
-### より
+種類:**符号なし短い**  
 
-操作の結果。
+### より  
 
-このプロパティは読み取り専用です。
+操作の結果。  
 
-```js
+このプロパティは読み取り専用です。  
+
+```javascript
 var result = MSWebViewAsyncOperation.result;
-```
+```  
 
-#### プロパティ値
-種類: any
+#### プロパティ値  
 
-### ターゲット
+種類: any  
 
-操作のターゲット。 
+### ターゲット  
 
-このプロパティは読み取り専用です。
+操作のターゲット。  
 
-```js
+このプロパティは読み取り専用です。  
+
+```javascript
 var target = MSWebViewAsyncOperation.target;
-```
+```  
 
-#### プロパティ値
-Type: [ **MSHTMLWebViewElement**](../webview.md)
+#### プロパティ値  
 
-### 型
+Type: [ **MSHTMLWebViewElement**](../webview.md)  
 
-操作の型。
+### 型  
 
-このプロパティは読み取り専用です。
+操作の型。  
 
-```js
+このプロパティは読み取り専用です。  
+
+```javascript
 var type = MSWebViewAsyncOperation.type;
-```
+```  
 
-#### プロパティ値
-種類:**符号なし短い**
+#### プロパティ値  
+
+種類:**符号なし短い**  

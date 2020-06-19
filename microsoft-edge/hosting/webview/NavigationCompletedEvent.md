@@ -3,58 +3,63 @@ description: 完成した webview ナビゲーションに関する情報が含�
 title: NavigationCompletedEvent オブジェクト
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 05/26/2018
+ms.date: 06/10/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 keywords: webview、windows 10 アプリ、uwp、edge
-ms.openlocfilehash: 11974f0c66d48569ee63c592bdd3b0153db075b1
-ms.sourcegitcommit: 6860234c25a8be863b7f29a54838e78e120dbb62
+ms.openlocfilehash: eb5727ab59dbaf056f05ab4b19450c70f85d595f
+ms.sourcegitcommit: 037a2d62333691104c9accb4862968f80a3465a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "10569233"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "10752140"
 ---
-# NavigationCompletedEvent オブジェクト
+# NavigationCompletedEvent オブジェクト  
 
-[Webview](../webview.md)が現在のコンテンツの読み込みを完了したとき、またはナビゲーションに失敗した場合に発生するイベントを表すオブジェクト。
+[!INCLUDE [deprecation-note](../includes/deprecation-note.md)]  
 
-## プロパティ
-    
-### uri
+[Webview](../webview.md)が現在のコンテンツの読み込みを完了したとき、またはナビゲーションに失敗した場合に発生するイベントを表すオブジェクト。  
 
-ナビゲーションの Uniform Resource Identifier (URI)。
+## プロパティ  
 
-このプロパティは読み取り専用です。
+### uri  
 
-```js
+ナビゲーションの Uniform Resource Identifier (URI)。  
+
+このプロパティは読み取り専用です。  
+
+```javascript
 var uri = NavigationCompletedEvent.uri;
-```
+```  
 
-#### プロパティ値
-Type: **Domstring**
+#### プロパティ値  
 
-### isSuccess
+Type: **Domstring**  
 
-ナビゲーションが正常に完了したかどうかを示す値を取得します。
+### isSuccess  
 
-このプロパティは読み取り専用です。
+ナビゲーションが正常に完了したかどうかを示す値を取得します。  
 
-```js
+このプロパティは読み取り専用です。  
+
+```javascript
 var isSuccess = NavigationCompletedEvent.isSuccess;
-```
+```  
 
-#### プロパティ値
-種類:**ブール**型
+#### プロパティ値  
 
-### webErrorStatus
+種類:**ブール**型  
 
-ナビゲーションに失敗した場合は、理由を示す値を取得します。
+### webErrorStatus  
 
-このプロパティは読み取り専用です。
+ナビゲーションに失敗した場合は、理由を示す値を取得します。  
 
-```js
+このプロパティは読み取り専用です。  
+
+```javascript
 var webErrorStatus = NavigationCompletedEvent.webErrorStatus;
-```
+```  
 
-#### プロパティ値
-種類:**符号なし長**
+#### プロパティ値  
+
+種類:**符号なし長**  

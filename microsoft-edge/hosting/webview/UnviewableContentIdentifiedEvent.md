@@ -3,59 +3,63 @@ description: Webview がサポートされていないファイルをダウン�
 title: UnviewableContentIdentifiedEvent オブジェクト
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 05/25/2018
+ms.date: 06/10/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 keywords: webview、windows 10 アプリ、uwp、edge
-ms.openlocfilehash: cec85ca2d5458a05cfd88210907523f25fb4af95
-ms.sourcegitcommit: 6860234c25a8be863b7f29a54838e78e120dbb62
+ms.openlocfilehash: 0179522f3eaf0813531084eb996ee9d392e8249d
+ms.sourcegitcommit: 037a2d62333691104c9accb4862968f80a3465a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "10568759"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "10752014"
 ---
-# UnviewableContentIdentifiedEvent オブジェクト
+# UnviewableContentIdentifiedEvent オブジェクト  
 
-[Webview](../webview.md)が、サポートされていないコンテンツタイプのファイルに移動しようとしていることを示します。 
+[!INCLUDE [deprecation-note](../includes/deprecation-note.md)]  
 
-## プロパティ
+[Webview](../webview.md)が、サポートされていないコンテンツタイプのファイルに移動しようとしていることを示します。  
 
-### メディア
+## プロパティ  
 
-Unviewable コンテンツのコンテンツタイプを取得します。
+### メディア  
 
-このプロパティは読み取り専用です。
+Unviewable コンテンツのコンテンツタイプを取得します。  
 
-```js
+このプロパティは読み取り専用です。  
+
+```javascript
 var mediaType = UnviewableContentIdentifiedEvent.mediaType;
-```
+```  
 
-#### プロパティ値
-Type: **Domstring**
+#### プロパティ値  
 
-### referer
+Type: **Domstring**  
 
-ナビゲーションを要求している[webview](../webview.md)のページの Uniform resource IDENTIFIER (URI) です。
+### referer  
 
-このプロパティは読み取り専用です。
+ナビゲーションを要求している[webview](../webview.md)のページの Uniform resource IDENTIFIER (URI) です。  
 
+このプロパティは読み取り専用です。  
 
-```js
+```javascript
 var referer = NavigationEventWithReferrer.referer;
-```
+```  
 
-#### プロパティ値
-Type: **Domstring**
+#### プロパティ値  
 
-### uri
+Type: **Domstring**  
 
-ナビゲーションの送信先の Uniform Resource Identifier (URI)。
+### uri  
 
-このプロパティは読み取り専用です。
+ナビゲーションの送信先の Uniform Resource Identifier (URI)。  
 
-```js
+このプロパティは読み取り専用です。  
+
+```javascript
 var uri = NavigationEventWithReferrer.uri;
-```
+```  
 
-#### プロパティ値
-Type: **Domstring**
+#### プロパティ値  
+
+Type: **Domstring**  

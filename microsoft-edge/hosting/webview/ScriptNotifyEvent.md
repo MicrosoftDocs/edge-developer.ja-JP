@@ -3,45 +3,49 @@ description: Webview コンテンツからアプリケーションに渡され�
 title: ScriptNotifyEvent オブジェクト
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/12/2018
+ms.date: 06/10/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 keywords: webview、windows 10 アプリ、uwp、edge
-ms.openlocfilehash: 22313f2d96ca2c5d4d3554ca40589b9a583c89cd
-ms.sourcegitcommit: 6860234c25a8be863b7f29a54838e78e120dbb62
+ms.openlocfilehash: 164bfa7228b1f4ccf9817e4b7231361d090f1394
+ms.sourcegitcommit: 037a2d62333691104c9accb4862968f80a3465a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "10568760"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "10752025"
 ---
-# ScriptNotifyEvent オブジェクト
+# ScriptNotifyEvent オブジェクト  
 
-[Webview](../webview.md)に含まれるコンテンツが JavaScript を使って文字列をアプリケーションに渡すときに発生するイベントを表すオブジェクト。
+[!INCLUDE [deprecation-note](../includes/deprecation-note.md)]  
 
-## プロパティ
-    
-### callingUri
+[Webview](../webview.md)に含まれるコンテンツが JavaScript を使って文字列をアプリケーションに渡すときに発生するイベントを表すオブジェクト。  
 
-**Scriptnotifyevent**を発生させたスクリプトが含まれているページの Uniform resource IDENTIFIER (URI) を取得します。
+## プロパティ  
 
-このプロパティは読み取り専用です。
+### callingUri  
 
-```js
+**Scriptnotifyevent**を発生させたスクリプトが含まれているページの Uniform resource IDENTIFIER (URI) を取得します。  
+
+このプロパティは読み取り専用です。  
+
+```javascript
 var callingUri = ScriptNotifyEvent.callingUri;
-```
+```  
 
-#### プロパティ値
-Type: **Domstring**
+#### プロパティ値  
 
-### value
+Type: **Domstring**  
 
-アプリケーションに渡されるメソッド名。
+### value  
 
-このプロパティは読み取り専用です。
+アプリケーションに渡されるメソッド名。  
 
-```js
+このプロパティは読み取り専用です。  
+
+```javascript
 var value = ScriptNotifyEvent.value;
-```
+```  
 
-#### プロパティ値
-Type: **Domstring**
+#### プロパティ値  
+
+Type: **Domstring**  

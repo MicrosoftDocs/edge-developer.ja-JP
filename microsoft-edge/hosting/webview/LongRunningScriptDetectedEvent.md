@@ -3,40 +3,45 @@ description: ''
 title: LongRunningScriptDetectedEvent オブジェクト
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 04/10/2018
+ms.date: 06/10/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 keywords: webview、windows 10 アプリ、uwp、edge
-ms.openlocfilehash: 6cf7af656531eea5046f7af44d4d43ff224d0f08
-ms.sourcegitcommit: 6860234c25a8be863b7f29a54838e78e120dbb62
+ms.openlocfilehash: 5fe90495b83ab8f95ee594d3400c8c1a26f0547e
+ms.sourcegitcommit: 037a2d62333691104c9accb4862968f80a3465a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "10569243"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "10752152"
 ---
-# LongRunningScriptDetectedEvent オブジェクト
+# LongRunningScriptDetectedEvent オブジェクト  
 
-[MSWebViewLongRunningScriptDetected](../webview.md#mswebviewlongrunningscriptdetected)に関する情報を提供します。
+[!INCLUDE [deprecation-note](../includes/deprecation-note.md)]  
 
-## プロパティ
+[MSWebViewLongRunningScriptDetected](../webview.md#mswebviewlongrunningscriptdetected)に関する情報を提供します。  
 
-### executionTime
+## プロパティ  
 
-[Webview](../webview.md)要素が長時間実行されているスクリプトを実行しているミリ秒数を取得します。
+### executionTime  
 
-```js
+[Webview](../webview.md)要素が長時間実行されているスクリプトを実行しているミリ秒数を取得します。  
+
+```javascript
 var executionTime = LongRunningScriptDetectedEvent.executionTime;
-```
+```  
 
-#### プロパティ値
-種類: **long**
+#### プロパティ値  
 
-### stopPageScriptExecution
-[Webview](../webview.md)要素で実行されている長時間実行されるスクリプトを停止します。
+種類: **long**  
 
-```js
+### stopPageScriptExecution  
+
+[Webview](../webview.md)要素で実行されている長時間実行されるスクリプトを停止します。  
+
+```javascript
 var stopPageScriptExecution = LongRunningScriptDetectedEvent.stopPageScriptExecution;
-```
+```  
 
-#### プロパティ値
-種類:**ブール**型
+#### プロパティ値  
+
+種類:**ブール**型  

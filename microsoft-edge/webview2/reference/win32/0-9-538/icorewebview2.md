@@ -3,17 +3,17 @@ description: Microsoft Edge WebView2 コントロールを使用して Win32 ア
 title: Win32 アプリ用 Microsoft Edge WebView2
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 06/05/2020
+ms.date: 06/16/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Controller、browser control、edge html
-ms.openlocfilehash: 1824c0f626f77e1fb566a361eac6f0358e6a754c
-ms.sourcegitcommit: 8dca1c1367853e45a0a975bc89b1818adb117bd4
+ms.openlocfilehash: c69e9cb725bc96115d323770e3803599eee1de91
+ms.sourcegitcommit: 037a2d62333691104c9accb4862968f80a3465a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "10699050"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "10751948"
 ---
 # インターフェイス ICoreWebView2 
 
@@ -101,7 +101,7 @@ WebView2 では、最新の Edge web ブラウザー技術を使用して、web 
 
 ナビゲーションイベントの通常のシーケンスは、NavigationStarting、SourceChanged、ContentLoading、Navigationstarting です。 次のイベントは、各ナビゲーション中の WebView の状態を示しています。 NavigationStarting: WebView はナビゲートを開始し、ナビゲーションはネットワーク要求になります。 この時点では、ホストは要求を許可することはできません。 SourceChanged: WebView のソースが新しい URL に変更されます。 これは、フラグメントナビゲーションなどのネットワーク要求が発生しないナビゲーションが原因である場合もあります。 履歴が変更されました: WebView の履歴はナビゲーションの結果として更新されています。 ContentLoading: WebView が新しいコンテンツの読み込みを開始しました。 NavigationCompleted: WebView は、新しいページのコンテンツの読み込みを完了しました。 開発者はナビゲーション ID を使用して、新しいドキュメントごとにナビゲーションを追跡できます。 新しいドキュメントへのナビゲーションが正常に完了するたびに、WebView のナビゲーション ID が変更されます。
 
-![dot-inline-dotgraph-1](media/dot-inline-dotgraph-1.png)
+![dot-inline-dotgraph-1.png](media/dot-inline-dotgraph-1.png)
 
 これは、同じ NavigationId イベント arg を持つナビゲーションイベント用であることに注意してください。 異なる NavigationId イベント引数を持つナビゲーションイベントは、重複する可能性があります。 たとえば、ナビゲーションを開始したときに NavigationStarting イベントが発生してから別のナビゲーションを開始した場合は、最初のナビで開始される navigationstarting 後に、2番目のナビゲーションのナビゲートが続いて、2番目のナビゲーションについて、該当するすべてのナビゲーションイベントが表示されます。 エラーが発生した場合は、ナビゲーションがエラーページに続いているかどうかによって、ContentLoading イベントになることもあります。 HTTP リダイレクトの場合、1つの行に複数の NavigationStarting イベントが存在します。最初の列の後には IsRedirect フラグが設定されますが、ナビゲーション ID は変わりません。 同じドキュメントナビゲーションでは、NavigationStarting イベントは発生せず、ナビゲーション ID もインクリメントされません。
 
@@ -111,11 +111,11 @@ WebView でサブフレーム内のナビゲーションを監視またはキャ
 
 WebView2 は、Edge web ブラウザーと同じプロセスモデルを使用します。 ユーザーデータディレクトリを指定する WebView2 の呼び出しプロセスを提供するユーザーセッションの指定したユーザーデータディレクトリごとに、1つの Edge ブラウザープロセスが存在します。 つまり、1つの Edge ブラウザープロセスが複数の通話プロセスを処理している可能性があり、1つの呼び出しプロセスが複数の Edge ブラウザープロセスを使用している可能性があります。
 
-![dot-inline-dotgraph-2](media/dot-inline-dotgraph-2.png)
+![dot-inline-dotgraph-2.png](media/dot-inline-dotgraph-2.png)
 
 ブラウザープロセスが表示されない場合は、いくつかのレンダラープロセスが存在します。 これらは、さまざまな WebViews で複数のフレームを処理するために必要に応じて作成されます。 レンダラープロセスの数は、サイト分離ブラウザー機能と、関連付けられている WebViews でレンダリングされた個別の切断元の数によって異なります。
 
-![dot-inline-dotgraph-3](media/dot-inline-dotgraph-3.png)
+![dot-inline-dotgraph-3.png](media/dot-inline-dotgraph-3.png)
 
 クラッシュとハングに対処するには、これらのブラウザーと ProcessFailure イベントを使ってプロセスをレンダリングします。
 
@@ -974,7 +974,7 @@ JavaScript はネイティブコードへの同期呼び出しでブロックさ
 
 > パブリック HRESULT [AddScriptToExecuteOnDocumentCreated](#addscripttoexecuteondocumentcreated)(LPCWSTR JavaScript、 [ICoreWebView2AddScriptToExecuteOnDocumentCreatedCompletedHandler](icorewebview2addscripttoexecuteondocumentcreatedcompletedhandler.md) * handler)
 
-挿入されたスクリプトは、RemoveScriptToExecuteOnDocumentCreated で削除されるまで、将来のすべての上位レベルのドキュメントと子フレームのナビゲーションに適用されます。 これは非同期的に適用されるため、今後のナビゲーションでスクリプトを実行する準備ができていることを確認する前に、完了ハンドラーが実行されるまで待機する必要があります。
+このメソッドは、すべてのトップレベルのドキュメントと子フレームのページナビゲーションで実行されるスクリプトを挿入します。 このメソッドは非同期的に実行されるため、挿入されたスクリプトを実行できるようになるには、完了ハンドラーが終了するまで待機する必要があります。 このメソッドが完了すると、ハンドラーの `Invoke` メソッドが、挿入されたスクリプトので呼び出され `id` ます。 `id` は文字列です。 挿入されたスクリプトを削除するには、を使用 `RemoveScriptToExecuteOnDocumentCreated` します。
 
 [サンドボックス](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#attr-sandbox)のプロパティまたは[コンテンツセキュリティポリシーの HTTP ヘッダー](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy)によって、HTML ドキュメントに何らかのサンドボックスが含まれている場合は、このスクリプトの実行に影響します。 たとえば、' allow als ' キーワードが設定されていない場合、関数への呼び出し `alert` は無視されます。
 
@@ -1514,7 +1514,7 @@ Add_WindowCloseRequested で以前に追加されたイベントハンドラー�
 
 #### RemoveScriptToExecuteOnDocumentCreated 
 
-AddScriptToExecuteOnDocumentCreated によって追加された、対応する JavaScript を削除します。
+指定したスクリプト id で、によって追加された対応する JavaScript を削除し `AddScriptToExecuteOnDocumentCreated` ます。
 
 > パブリック HRESULT [RemoveScriptToExecuteOnDocumentCreated](#removescripttoexecuteondocumentcreated)(LPCWSTR id)
 
@@ -1682,4 +1682,3 @@ COREWEBVIEW2_WEB_RESOURCE_CONTEXT_SIGNED_EXCHANGE            | 署名された H
 COREWEBVIEW2_WEB_RESOURCE_CONTEXT_PING            | Ping 要求。
 COREWEBVIEW2_WEB_RESOURCE_CONTEXT_CSP_VIOLATION_REPORT            | CSP 違反レポート。
 COREWEBVIEW2_WEB_RESOURCE_CONTEXT_OTHER            | その他のリソース。
-

@@ -3,83 +3,87 @@ description: Webview プロセスを表します。
 title: MSWebViewProcess オブジェクト
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 01/15/2020
+ms.date: 06/10/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 keywords: webview、windows 10 アプリ、uwp、edge
-ms.openlocfilehash: 7581f6da3a23295180c50f6d41cc282ce998b64e
-ms.sourcegitcommit: 6860234c25a8be863b7f29a54838e78e120dbb62
+ms.openlocfilehash: bb70b0e8eb12c7a7c23d71f01ea24e9084caa156
+ms.sourcegitcommit: 037a2d62333691104c9accb4862968f80a3465a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "10569236"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "10752157"
 ---
-# MSWebViewProcess オブジェクト
+# MSWebViewProcess オブジェクト  
 
-[Webview](../webview.md)プロセスを表します。
+[!INCLUDE [deprecation-note](../includes/deprecation-note.md)]  
 
-```js
+[Webview](../webview.md)プロセスを表します。  
+
+```javascript
 var wvprocess = new MSWebViewProcess();
-```
+```  
 
-## プロパティ
+## プロパティ  
 
-### enterpriseId
+### enterpriseId  
 
-プロセスのエンタープライズ ID です。
+プロセスのエンタープライズ ID です。  
 
 ```js
 var enterpriseId = wvprocess.enterpriseId;
-```
+```  
 
-このプロパティは読み取り専用です。
+このプロパティは読み取り専用です。  
 
-#### プロパティ値
-Type: **Domstring**
+#### プロパティ値  
 
-### isPrivateNetworkClientServerCapabilityEnabled
+Type: **Domstring**  
 
-[Webview](../webview.md)プロセスの*プライベートネットワーク (クライアント & Server)* ユニバーサル Windows[アプリ機能の宣言](/windows/uwp/packaging/app-capability-declarations)がアプリマニフェストで有効になっているかどうかを示す値を取得します。
+### isPrivateNetworkClientServerCapabilityEnabled  
 
-```js
+[Webview](../webview.md)プロセスの*プライベートネットワーク (クライアント & Server)* ユニバーサル Windows[アプリ機能の宣言](/windows/uwp/packaging/app-capability-declarations)がアプリマニフェストで有効になっているかどうかを示す値を取得します。  
+
+```javascript
 var privateNetwork = wvprocess.isPrivateNetworkClientServerCapabilityEnabled;
-```
+```  
 
-このプロパティは読み取り専用です。
+このプロパティは読み取り専用です。  
 
-#### プロパティ値
-種類:**ブール**型
+#### プロパティ値  
 
-## メソッド
+種類:**ブール**型  
 
-### CreateWebViewAsync
+## メソッド  
 
-特定のプロセスで[webview](../webview.md)を作成します。
+### CreateWebViewAsync  
 
-```js
+特定のプロセスで[webview](../webview.md)を作成します。  
+
+```javascript
 wvprocess.createWebviewAsync();
-```
+```  
 
-#### 戻り値
+#### 戻り値  
 
-種類**`Promise<MSHTMLWebViewElement>`**
+種類**`Promise<MSHTMLWebViewElement>`**  
 
-### GetWebViews
+### GetWebViews  
 
-プロセス内でホストされている**Mswebviewprocess**オブジェクトのシーケンスを返します。
+プロセス内でホストされている**Mswebviewprocess**オブジェクトのシーケンスを返します。  
 
-#### 戻り値
+#### 戻り値  
 
-種類**`sequence<MSHTMLWebViewElement>`**
+種類**`sequence<MSHTMLWebViewElement>`**  
 
-### Terminate
+### Terminate  
 
-プロセスを終了します。
+プロセスを終了します。  
 
-```js
+```javascript
 wvprocess.terminate();
-```
+```  
 
-#### 戻り値
+#### 戻り値  
 
-このメソッドに戻り値はありません。
+このメソッドに戻り値はありません。  

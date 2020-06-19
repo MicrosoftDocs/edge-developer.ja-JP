@@ -3,61 +3,66 @@ description: Webview 機能を有効または無効にするプロパティを�
 title: MSWebViewSettings オブジェクト
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 04/10/2018
+ms.date: 06/10/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 keywords: webview、windows 10 アプリ、uwp、edge
-ms.openlocfilehash: 0e164e7eb44edc636201f283ec4bbe866a122b8e
-ms.sourcegitcommit: 6860234c25a8be863b7f29a54838e78e120dbb62
+ms.openlocfilehash: 147f852f8fbcb2a748c00b472814e9cc45b9c9da
+ms.sourcegitcommit: 037a2d62333691104c9accb4862968f80a3465a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "10569234"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "10752179"
 ---
-# MSWebViewSettings オブジェクト
+# MSWebViewSettings オブジェクト  
 
-[Webview](../webview.md)機能を有効または無効にするプロパティを定義します。
+[!INCLUDE [deprecation-note](../includes/deprecation-note.md)]  
 
-## プロパティ
+[Webview](../webview.md)機能を有効または無効にするプロパティを定義します。  
 
-### isIndexedDBEnabled
+## プロパティ  
 
-[Webview](../webview.md)での IndexedDB の使用が許可されているかどうかを示す値を取得または設定します。
+### isIndexedDBEnabled  
 
-```js
+[Webview](../webview.md)での IndexedDB の使用が許可されているかどうかを示す値を取得または設定します。  
+
+```javascript
 var isIndexedDBEnabled = MSWebViewSettings.isIndexedDBEnabled;
 MSWebViewSettings.isIndexedDBEnabled = isIndexedDBEnabled;
-```
+```  
 
-#### プロパティ値
-種類:**ブール**型
+#### プロパティ値  
 
-**Webview**で IndexedDB が許可されている場合は**True** 。それ以外の場合は**false**です。 
+種類:**ブール**型  
 
-### isJavaScriptEnabled
+**Webview**で IndexedDB が許可されている場合は**True** 。それ以外の場合は**false**です。  
 
-[Webview](../webview.md)で JavaScript の使用が許可されているかどうかを示す値を取得または設定します。
+### isJavaScriptEnabled  
 
-```js
+[Webview](../webview.md)で JavaScript の使用が許可されているかどうかを示す値を取得または設定します。  
+
+```javascript
 var isJavaScriptEnabled = MSWebViewSettings.isJavaScriptEnabled;
 MSWebViewSettings.isJavaScriptEnabled = isJavaScriptEnabled;
-```
+```  
 
-#### プロパティ値
-種類:**ブール**型
+#### プロパティ値  
 
-**True**[Webview](../webview.md)では JavaScript が許可されています。それ以外の場合は**false**です。 
+種類:**ブール**型  
 
-### isScriptNotifyAllowed
+**True**[Webview](../webview.md)では JavaScript が許可されています。それ以外の場合は**false**です。  
 
-[Webview](../webview.md)で[scriptnotifyevent](ScriptNotifyEvent.md)の使用が許可されているかどうかを示す値を取得または設定します。
+### isScriptNotifyAllowed  
 
-```js
+[Webview](../webview.md)で[scriptnotifyevent](ScriptNotifyEvent.md)の使用が許可されているかどうかを示す値を取得または設定します。  
+
+```javascript
 var isScriptNotifyAllowed = MSWebViewSettings.isScriptNotifyAllowed;
 MSWebViewSettings.isScriptNotifyAllowed = isScriptNotifyAllowed;
-```
+```  
 
-#### プロパティ値
-種類:**ブール**型
+#### プロパティ値  
 
-[Webview](../webview.md)では、 **True** [scriptnotifyevent](ScriptNotifyEvent.md)が許可されています。それ以外の場合は**false**です。 
+種類:**ブール**型  
+
+[Webview](../webview.md)では、 **True** [scriptnotifyevent](ScriptNotifyEvent.md)が許可されています。それ以外の場合は**false**です。  

@@ -6,12 +6,12 @@ ms.date: 06/10/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 87fee5484bbd535ee5692acfce273ed6edff5da2
-ms.sourcegitcommit: f010f43604bd4363af6827f79dbc071b9afcb667
+ms.openlocfilehash: b9e6e2af333257f0cbe0a4a354dcd1d7b862af9c
+ms.sourcegitcommit: 037a2d62333691104c9accb4862968f80a3465a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "10708698"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "10751990"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -163,7 +163,7 @@ Carats を展開して、デタッチされたツリーを調査します。
 
 <!--Nodes highlighted yellow have direct references to them from the JavaScript code.  Nodes highlighted red do not have direct references.  They are only alive because they are part of the tree for the yellow node.  In general, you want to focus on the yellow nodes.  Fix your code so that the yellow node is not alive for longer than it needs to be, and you also get rid of the red nodes that are part of the tree for the yellow node.  -->
 
-ノードを選択して、さらに詳しく調べます。  [**オブジェクト**] ウィンドウには、参照しているコードに関する詳細情報が表示されます。  たとえば、次の図では、変数がそのノードを参照していることを確認でき `detachedNodes` ます。  この特定のメモリリークを解決するには、変数を使うコードを調べて、不要 `detachedUNode` になったときにノードへの参照が削除されるようにする必要があります。  
+ノードを選択して、さらに詳しく調べます。  [**オブジェクト**] ウィンドウには、参照しているコードに関する詳細情報が表示されます。  たとえば、次の図では、変数がそのノードを参照していることを確認でき `detachedNodes` ます。  この特定のメモリリークを解決するには、変数を使うコードを調べて、不要 `detachedNodes` になったときにノードへの参照が削除されるようにする必要があります。  
 
 :::image type="complex" source="../media/memory-problems-glitch-example-12-memory-heap-snapshot-filter-detached-expanded-selected.msft.png" alt-text="ノードの調査" lightbox="../media/memory-problems-glitch-example-12-memory-heap-snapshot-filter-detached-expanded-selected.msft.png":::
    図 7: ノードの調査  

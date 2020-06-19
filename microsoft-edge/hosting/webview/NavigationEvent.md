@@ -3,32 +3,35 @@ description: Webview ナビゲーションに関する情報が含まれてい�
 title: NavigationEvent オブジェクト
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/12/2018
+ms.date: 06/10/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 keywords: webview、windows 10 アプリ、uwp、edge
-ms.openlocfilehash: 1b3c9bd8f10c1f35a5ac518a54dd78ce96e201b5
-ms.sourcegitcommit: 6860234c25a8be863b7f29a54838e78e120dbb62
+ms.openlocfilehash: 785e9646ff400e7ad229046c7030b51420b1d9ad
+ms.sourcegitcommit: 037a2d62333691104c9accb4862968f80a3465a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "10569228"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "10752172"
 ---
-# NavigationEvent オブジェクト
+# NavigationEvent オブジェクト  
 
-ナビゲーションが開始されたときに発生するイベントを表すオブジェクト。
+[!INCLUDE [deprecation-note](../includes/deprecation-note.md)]  
 
-## プロパティ
-    
-### uri
+ナビゲーションが開始されたときに発生するイベントを表すオブジェクト。  
 
-ターゲットの Uniform Resource Identifier (URI)。
+## プロパティ  
 
-このプロパティは読み取り専用です。
+### uri  
 
-```js
+ターゲットの Uniform Resource Identifier (URI)。  
+
+このプロパティは読み取り専用です。  
+
+```javascript
 var uri = NavigationEvent.uri;
-```
+```  
 
-#### プロパティ値
-Type: **Domstring**
+#### プロパティ値  
+
+Type: **Domstring**  

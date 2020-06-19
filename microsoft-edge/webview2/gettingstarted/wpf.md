@@ -8,14 +8,14 @@ ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: WebView2、WebView2、WebView、webview、wpf アプリ、wpf、edge、CoreWebView2、browser control、edge html、はじめに、作業の開始、.NET
-ms.openlocfilehash: fad5e7ce7be58ea9992dffee75da0d59aed471e7
-ms.sourcegitcommit: a34858dd3260967ba9699842fa839c7a94775fe4
+ms.openlocfilehash: 0dd4b5b0d336f4107352754e0c23e74bc83e8a5f
+ms.sourcegitcommit: 037a2d62333691104c9accb4862968f80a3465a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "10710393"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "10752235"
 ---
-# WPF での WebView2 の概要 (プレビュー)  
+# WPF での WebView2 の概要 (プレビュー)
 
 この記事では、初めての WebView2 アプリの作成を開始し、 [WebView2 (preview)](../index.md)の主な機能について説明します。  個々の Api について詳しくは、 [api リファレンス](../reference/dotnet/0-9-515-reference-webview2.md)をご覧ください。  
 

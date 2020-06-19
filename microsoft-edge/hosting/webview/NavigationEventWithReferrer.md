@@ -3,46 +3,49 @@ description: ナビゲーションに関する参照情報が含まれていま�
 title: NavigationEventWithReferrer 元オブジェクト
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 05/22/2018
+ms.date: 06/10/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 keywords: webview、windows 10 アプリ、uwp、edge
-ms.openlocfilehash: b11f60724387d996d0a730965602b5ead6a84145
-ms.sourcegitcommit: 6860234c25a8be863b7f29a54838e78e120dbb62
+ms.openlocfilehash: 72c8a213f632e9e74145de9c34b949adf074cd22
+ms.sourcegitcommit: 037a2d62333691104c9accb4862968f80a3465a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "10569227"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "10752129"
 ---
-# NavigationEventWithReferrer 元オブジェクト
+# NavigationEventWithReferrer 元オブジェクト  
 
-ナビゲーションが開始され、ナビゲーションに referer が含まれているときに発生するイベントを表すオブジェクト。
+[!INCLUDE [deprecation-note](../includes/deprecation-note.md)]  
 
-## プロパティ
+ナビゲーションが開始され、ナビゲーションに referer が含まれているときに発生するイベントを表すオブジェクト。  
+
+## プロパティ  
 
 ### referer
 
-ナビゲーションを要求している[webview](../webview.md)のページの Uniform resource IDENTIFIER (URI) です。
+ナビゲーションを要求している[webview](../webview.md)のページの Uniform resource IDENTIFIER (URI) です。  
 
-このプロパティは読み取り専用です。
+このプロパティは読み取り専用です。  
 
-#### プロパティ値
-Type: **Domstring**
+#### プロパティ値  
 
+Type: **Domstring**  
 
-```js
+```javascript
 var referer = NavigationEventWithReferrer.referer;
-```
+```  
 
-### uri
+### uri  
 
-ナビゲーションの送信先の Uniform Resource Identifier (URI)。
+ナビゲーションの送信先の Uniform Resource Identifier (URI)。  
 
-このプロパティは読み取り専用です。
+このプロパティは読み取り専用です。  
 
-```js
+```javascript
 var uri = NavigationEventWithReferrer.uri;
-```
+```  
 
-#### プロパティ値
-Type: **Domstring**
+#### プロパティ値  
+
+Type: **Domstring**  
