@@ -3,59 +3,63 @@ description: Webview がサポートされていないファイルをダウン�
 title: UnviewableContentIdentifiedEvent オブジェクト
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 05/25/2018
+ms.date: 06/10/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 keywords: webview、windows 10 アプリ、uwp、edge
-ms.openlocfilehash: cec85ca2d5458a05cfd88210907523f25fb4af95
-ms.sourcegitcommit: 6860234c25a8be863b7f29a54838e78e120dbb62
+ms.openlocfilehash: 0179522f3eaf0813531084eb996ee9d392e8249d
+ms.sourcegitcommit: 037a2d62333691104c9accb4862968f80a3465a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "10568759"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "10752014"
 ---
-# <span data-ttu-id="35f4e-104">UnviewableContentIdentifiedEvent オブジェクト</span><span class="sxs-lookup"><span data-stu-id="35f4e-104">UnviewableContentIdentifiedEvent object</span></span>
+# <span data-ttu-id="78397-104">UnviewableContentIdentifiedEvent オブジェクト</span><span class="sxs-lookup"><span data-stu-id="78397-104">UnviewableContentIdentifiedEvent object</span></span>  
 
-<span data-ttu-id="35f4e-105">[Webview](../webview.md)が、サポートされていないコンテンツタイプのファイルに移動しようとしていることを示します。</span><span class="sxs-lookup"><span data-stu-id="35f4e-105">Indicates the [webview](../webview.md) is attempting to navigate to a file of an unsupported content type.</span></span> 
+[!INCLUDE [deprecation-note](../includes/deprecation-note.md)]  
 
-## <span data-ttu-id="35f4e-106">プロパティ</span><span class="sxs-lookup"><span data-stu-id="35f4e-106">Properties</span></span>
+<span data-ttu-id="78397-105">[Webview](../webview.md)が、サポートされていないコンテンツタイプのファイルに移動しようとしていることを示します。</span><span class="sxs-lookup"><span data-stu-id="78397-105">Indicates the [webview](../webview.md) is attempting to navigate to a file of an unsupported content type.</span></span>  
 
-### <span data-ttu-id="35f4e-107">メディア</span><span class="sxs-lookup"><span data-stu-id="35f4e-107">mediaType</span></span>
+## <span data-ttu-id="78397-106">プロパティ</span><span class="sxs-lookup"><span data-stu-id="78397-106">Properties</span></span>  
 
-<span data-ttu-id="35f4e-108">Unviewable コンテンツのコンテンツタイプを取得します。</span><span class="sxs-lookup"><span data-stu-id="35f4e-108">Gets the content type of the unviewable content.</span></span>
+### <span data-ttu-id="78397-107">メディア</span><span class="sxs-lookup"><span data-stu-id="78397-107">mediaType</span></span>  
 
-<span data-ttu-id="35f4e-109">このプロパティは読み取り専用です。</span><span class="sxs-lookup"><span data-stu-id="35f4e-109">This property is read-only</span></span>
+<span data-ttu-id="78397-108">Unviewable コンテンツのコンテンツタイプを取得します。</span><span class="sxs-lookup"><span data-stu-id="78397-108">Gets the content type of the unviewable content.</span></span>  
 
-```js
+<span data-ttu-id="78397-109">このプロパティは読み取り専用です。</span><span class="sxs-lookup"><span data-stu-id="78397-109">This property is read-only</span></span>  
+
+```javascript
 var mediaType = UnviewableContentIdentifiedEvent.mediaType;
-```
+```  
 
-#### <span data-ttu-id="35f4e-110">プロパティ値</span><span class="sxs-lookup"><span data-stu-id="35f4e-110">Property value</span></span>
-<span data-ttu-id="35f4e-111">Type: **Domstring**</span><span class="sxs-lookup"><span data-stu-id="35f4e-111">Type: **DOMString**</span></span>
+#### <span data-ttu-id="78397-110">プロパティ値</span><span class="sxs-lookup"><span data-stu-id="78397-110">Property value</span></span>  
 
-### <span data-ttu-id="35f4e-112">referer</span><span class="sxs-lookup"><span data-stu-id="35f4e-112">referer</span></span>
+<span data-ttu-id="78397-111">Type: **Domstring**</span><span class="sxs-lookup"><span data-stu-id="78397-111">Type: **DOMString**</span></span>  
 
-<span data-ttu-id="35f4e-113">ナビゲーションを要求している[webview](../webview.md)のページの Uniform resource IDENTIFIER (URI) です。</span><span class="sxs-lookup"><span data-stu-id="35f4e-113">The Uniform Resource Identifier (URI) of the page in the [webview](../webview.md) requesting navigation.</span></span>
+### <span data-ttu-id="78397-112">referer</span><span class="sxs-lookup"><span data-stu-id="78397-112">referer</span></span>  
 
-<span data-ttu-id="35f4e-114">このプロパティは読み取り専用です。</span><span class="sxs-lookup"><span data-stu-id="35f4e-114">This property is read-only.</span></span>
+<span data-ttu-id="78397-113">ナビゲーションを要求している[webview](../webview.md)のページの Uniform resource IDENTIFIER (URI) です。</span><span class="sxs-lookup"><span data-stu-id="78397-113">The Uniform Resource Identifier (URI) of the page in the [webview](../webview.md) requesting navigation.</span></span>  
 
+<span data-ttu-id="78397-114">このプロパティは読み取り専用です。</span><span class="sxs-lookup"><span data-stu-id="78397-114">This property is read-only.</span></span>  
 
-```js
+```javascript
 var referer = NavigationEventWithReferrer.referer;
-```
+```  
 
-#### <span data-ttu-id="35f4e-115">プロパティ値</span><span class="sxs-lookup"><span data-stu-id="35f4e-115">Property value</span></span>
-<span data-ttu-id="35f4e-116">Type: **Domstring**</span><span class="sxs-lookup"><span data-stu-id="35f4e-116">Type: **DOMString**</span></span>
+#### <span data-ttu-id="78397-115">プロパティ値</span><span class="sxs-lookup"><span data-stu-id="78397-115">Property value</span></span>  
 
-### <span data-ttu-id="35f4e-117">uri</span><span class="sxs-lookup"><span data-stu-id="35f4e-117">uri</span></span>
+<span data-ttu-id="78397-116">Type: **Domstring**</span><span class="sxs-lookup"><span data-stu-id="78397-116">Type: **DOMString**</span></span>  
 
-<span data-ttu-id="35f4e-118">ナビゲーションの送信先の Uniform Resource Identifier (URI)。</span><span class="sxs-lookup"><span data-stu-id="35f4e-118">The Uniform Resource Identifier (URI) of the destination of the navigation.</span></span>
+### <span data-ttu-id="78397-117">uri</span><span class="sxs-lookup"><span data-stu-id="78397-117">uri</span></span>  
 
-<span data-ttu-id="35f4e-119">このプロパティは読み取り専用です。</span><span class="sxs-lookup"><span data-stu-id="35f4e-119">This property is read-only.</span></span>
+<span data-ttu-id="78397-118">ナビゲーションの送信先の Uniform Resource Identifier (URI)。</span><span class="sxs-lookup"><span data-stu-id="78397-118">The Uniform Resource Identifier (URI) of the destination of the navigation.</span></span>  
 
-```js
+<span data-ttu-id="78397-119">このプロパティは読み取り専用です。</span><span class="sxs-lookup"><span data-stu-id="78397-119">This property is read-only.</span></span>  
+
+```javascript
 var uri = NavigationEventWithReferrer.uri;
-```
+```  
 
-#### <span data-ttu-id="35f4e-120">プロパティ値</span><span class="sxs-lookup"><span data-stu-id="35f4e-120">Property value</span></span>
-<span data-ttu-id="35f4e-121">Type: **Domstring**</span><span class="sxs-lookup"><span data-stu-id="35f4e-121">Type: **DOMString**</span></span>
+#### <span data-ttu-id="78397-120">プロパティ値</span><span class="sxs-lookup"><span data-stu-id="78397-120">Property value</span></span>  
+
+<span data-ttu-id="78397-121">Type: **Domstring**</span><span class="sxs-lookup"><span data-stu-id="78397-121">Type: **DOMString**</span></span>  

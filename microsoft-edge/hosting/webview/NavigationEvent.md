@@ -3,32 +3,35 @@ description: Webview ナビゲーションに関する情報が含まれてい�
 title: NavigationEvent オブジェクト
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/12/2018
+ms.date: 06/10/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 keywords: webview、windows 10 アプリ、uwp、edge
-ms.openlocfilehash: 1b3c9bd8f10c1f35a5ac518a54dd78ce96e201b5
-ms.sourcegitcommit: 6860234c25a8be863b7f29a54838e78e120dbb62
+ms.openlocfilehash: 785e9646ff400e7ad229046c7030b51420b1d9ad
+ms.sourcegitcommit: 037a2d62333691104c9accb4862968f80a3465a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "10569228"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "10752172"
 ---
-# <span data-ttu-id="a16a1-104">NavigationEvent オブジェクト</span><span class="sxs-lookup"><span data-stu-id="a16a1-104">NavigationEvent object</span></span>
+# <span data-ttu-id="ed8ef-104">NavigationEvent オブジェクト</span><span class="sxs-lookup"><span data-stu-id="ed8ef-104">NavigationEvent object</span></span>  
 
-<span data-ttu-id="a16a1-105">ナビゲーションが開始されたときに発生するイベントを表すオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="a16a1-105">An object that represents an event fired when navigation is initiated.</span></span>
+[!INCLUDE [deprecation-note](../includes/deprecation-note.md)]  
 
-## <span data-ttu-id="a16a1-106">プロパティ</span><span class="sxs-lookup"><span data-stu-id="a16a1-106">Properties</span></span>
-    
-### <span data-ttu-id="a16a1-107">uri</span><span class="sxs-lookup"><span data-stu-id="a16a1-107">uri</span></span>
+<span data-ttu-id="ed8ef-105">ナビゲーションが開始されたときに発生するイベントを表すオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="ed8ef-105">An object that represents an event fired when navigation is initiated.</span></span>  
 
-<span data-ttu-id="a16a1-108">ターゲットの Uniform Resource Identifier (URI)。</span><span class="sxs-lookup"><span data-stu-id="a16a1-108">The Uniform Resource Identifier (URI) of the target.</span></span>
+## <span data-ttu-id="ed8ef-106">プロパティ</span><span class="sxs-lookup"><span data-stu-id="ed8ef-106">Properties</span></span>  
 
-<span data-ttu-id="a16a1-109">このプロパティは読み取り専用です。</span><span class="sxs-lookup"><span data-stu-id="a16a1-109">This property is read-only.</span></span>
+### <span data-ttu-id="ed8ef-107">uri</span><span class="sxs-lookup"><span data-stu-id="ed8ef-107">uri</span></span>  
 
-```js
+<span data-ttu-id="ed8ef-108">ターゲットの Uniform Resource Identifier (URI)。</span><span class="sxs-lookup"><span data-stu-id="ed8ef-108">The Uniform Resource Identifier (URI) of the target.</span></span>  
+
+<span data-ttu-id="ed8ef-109">このプロパティは読み取り専用です。</span><span class="sxs-lookup"><span data-stu-id="ed8ef-109">This property is read-only.</span></span>  
+
+```javascript
 var uri = NavigationEvent.uri;
-```
+```  
 
-#### <span data-ttu-id="a16a1-110">プロパティ値</span><span class="sxs-lookup"><span data-stu-id="a16a1-110">Property value</span></span>
-<span data-ttu-id="a16a1-111">Type: **Domstring**</span><span class="sxs-lookup"><span data-stu-id="a16a1-111">Type: **DOMString**</span></span>
+#### <span data-ttu-id="ed8ef-110">プロパティ値</span><span class="sxs-lookup"><span data-stu-id="ed8ef-110">Property value</span></span>  
+
+<span data-ttu-id="ed8ef-111">Type: **Domstring**</span><span class="sxs-lookup"><span data-stu-id="ed8ef-111">Type: **DOMString**</span></span>  
