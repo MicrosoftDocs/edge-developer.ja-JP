@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、CoreWebView2、ICoreWebView2Host、browser control、edge html、Windows フォーム、WinForms、WPF、.NET
-ms.openlocfilehash: 1b140d9f644c7a864cac4966bb4cfdd400feeb0d
-ms.sourcegitcommit: 8dca1c1367853e45a0a975bc89b1818adb117bd4
+ms.openlocfilehash: 9356da17f2db9456a9a309bc9ef06c74fbb50779
+ms.sourcegitcommit: e49b86082da884299fdd485d3311d63a7688c0d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "10697743"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "10754546"
 ---
 # Microsoft Edge WebView2 の概要 (プレビュー)  
 
@@ -122,14 +122,14 @@ WebView2 アプリケーションを作成して展開する方法の詳細に�
 #### 概念  
 
 *   [WebView2 SDK と Microsoft Edge のバージョン管理](./concepts/versioning.md)
-*   [WebView2 アプリケーションの配布](./concepts/distribution.md)  
+*   [WebView2 アプリケーションを配布する](./concepts/distribution.md)  
+*   [WebView2 アプリケーションのセキュリティのベストプラクティス](./concepts/security.md)
+*   [WebView2 アプリケーションでユーザーデータフォルダーを管理する](./concepts/userdatafolder.md)
  
 #### 使い方ガイド  
 
 *   [DevTools と Visual Studio スクリプトのデバッグによる WebView2 のデバッグ](./howto/debug.md)  
 *   [Microsoft EdgeDriver での WebView2 の自動化とデバッグ](./howto/webdriver.md)  
-
-<!--todo: add how-tos when available  -->  
 
 ## WebView2 チームと連絡を取り合う  
 
