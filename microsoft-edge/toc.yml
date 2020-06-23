@@ -204,6 +204,12 @@
               items:
                 - name: フォーカスされている要素を追跡する
                   href: devtools-guide-chromium/accessibility/focus.md
+                - name: 淡色/濃色カラーのスキームシミュレーション
+                  href: devtools-guide-chromium/accessibility/preferred-color-scheme-simulation.md
+                - name: モーション削減をシミュレーションする
+                  href: devtools-guide-chromium/accessibility/reduced-motion-simulation.md
+                - name: 視覚欠陥をエミュレートする
+                  href: devtools-guide-chromium/accessibility/emulate-vision-deficiencies.md
         - name: リモート デバッグ
           items:
             - name: Android デバイス

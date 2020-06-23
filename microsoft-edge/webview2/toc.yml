@@ -12,6 +12,10 @@
   items:
     - name: アプリの配布
       href: concepts/distribution.md
+    - name: ユーザーデータフォルダーの管理
+      href: concepts/userdatafolder.md
+    - name: 推奨するセキュリティ運用方法
+      href: concepts/security.md
     - name: バージョン
       href: concepts/versioning.md
 - name: リリース ノート
