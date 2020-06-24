@@ -8,19 +8,22 @@ ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Controller、browser control、edge html
-ms.openlocfilehash: 4a1eb48270e062838fee9223d0a6e0e59505278e
-ms.sourcegitcommit: 8dca1c1367853e45a0a975bc89b1818adb117bd4
+ms.openlocfilehash: 68a32b8e7175f2e52960e7c3a7fe16b66e5a043d
+ms.sourcegitcommit: de171a8e7ccd9f23846f3cd06519e4a0104f1c52
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "10697323"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "10757614"
 ---
 # WebView2 SDK のリリースノート  
 
 WebView2 チームは、 [WEBVIEW2 SDK][WebView2NuGetGallery]の更新プログラムを6週間のリズムで配信します。 このページでは、製品のお知らせ、API サーフェスの追加と変更、および変更の反映について、最新の状態に維持します。
 
-> [!IMPORTANT]
+> [!NOTE]
 > NuGet パッケージの更新後に、アプリを再コンパイルします。
+
+> [!IMPORTANT]
+> WebView2 がプレビューされている間、.NET Api は**プレリリースパッケージ**に含まれます。
 
 ## 0.9.538
 
@@ -39,7 +42,7 @@ WebView2 チームは、 [WEBVIEW2 SDK][WebView2NuGetGallery]の更新プログ�
   * [AreRemoteObjectsAllowed](reference/win32/0-9-488/icorewebview2settings.md#get_areremoteobjectsallowed)は、現在は[arehostオブジェクトを許可](reference/win32/0-9-538/icorewebview2settings.md#get_arehostobjectsallowed)しています
 * [Addhostobjecttoscript](reference/win32/0-9-538/icorewebview2.md#addhostobjecttoscript)が更新され、元のホストオブジェクトシリアライザーのマーカーがプロキシオブジェクトに設定され、JavaScript コールバックのパラメーターとしてシリアル化された後で、ホストオブジェクトとしてシリアル化されます。 ([#148](https://github.com/MicrosoftEdge/WebViewFeedback/issues/148))
 
-#### .NET
+#### .NET (0.9.538 プレリリース版)
 
 * SDK の包括的なガイドである、WinForms と WPF WebView2API のサンプルをリリースしました。 [WebView2 サンプルのリポジトリ](https://github.com/MicrosoftEdge/WebView2Samples)を確認します。
 * ビジュアルホスト機能と window 機能の[実験的な api](./concepts/versioning.md#experimental-apis)のサポートが追加されました
