@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: WebView2、WebView2、WebView、webview、winforms アプリ、winforms、edge、CoreWebView2、browser control、edge html、はじめに、作業の開始、.NET、windows フォーム
-ms.openlocfilehash: 20e3d152c8384e33551d75b5baa265fa7cb7f1ec
-ms.sourcegitcommit: 8dca1c1367853e45a0a975bc89b1818adb117bd4
+ms.openlocfilehash: 85b114e7eb1e567bd5188353af2826a56b01ad4e
+ms.sourcegitcommit: 8f2badc98ea7b7d1861dabfaf0e4dd8677e89bea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "10698226"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "10767024"
 ---
 # Windows Forms アプリでの WebView2 の概要 (プレビュー)  
 
@@ -54,7 +54,9 @@ ms.locfileid: "10698226"
     :::image type="complex" source="./media/wpf-gettingstarted-mngnuget.png" alt-text="Nuget.exe":::
        Nuget.exe :::image-end:::
 
-2. `Microsoft.Web.WebView2`検索バーに入力します。  検索結果から**WebView2**を選びます。  パッケージバージョンを**プレリリース**に設定して、[**インストール**] を選択します。  
+2. `Microsoft.Web.WebView2`検索バーに入力します。  検索結果から**WebView2**を選びます。  
+
+3. [**プレリリースを含める**] をオンにし、**プレリリース**パッケージバージョンを選択して、[**インストール**] を選択します。  
 
     ![nuget.exe](./media/installnuget.png)
 

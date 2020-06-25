@@ -3,18 +3,18 @@ description: Microsoft Edge プライバシー ホワイトペーパー
 title: Microsoft Edge プライバシー ホワイトペーパー
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 06/05/2020
+ms.date: 06/22/2020
 ms.topic: article
 ms.prod: microsoft-edge
 ms.technology: browser
 keywords: microsoft edge、プライバシー、ホワイトペーパー、信頼
 localization_priority: Priority
-ms.openlocfilehash: 2fee66a81309ee61d41959ae6992e2fe991ca649
-ms.sourcegitcommit: ffc0eb7bedf6e79326103a78c003f1cb2a2f70b2
+ms.openlocfilehash: 26267f471bbbfdf078beb5d9a51b8e0dfa09a416
+ms.sourcegitcommit: a886f0b1aa558435353649515588756fe82e252a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "10696737"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "10758873"
 ---
 # Microsoft Edge プライバシー ホワイトペーパー  
 
@@ -62,7 +62,9 @@ Web ページにアクセスしてフォームを送信すると、Microsoft Edg
 
 ## キャスト  
 
-Microsoft Edge の Cast では、Google Cast を使ってメディアを別の画面に表示することができます。  この機能は、 **[設定] やその他のオプション (...)**  >  からアクセスできます。**その他のツール**  > **メディアをデバイスにキャスト**します。  Cast では、Microsoft または Google サービスは使用されません。 
+Microsoft Edge の Cast では、Google Cast を使ってメディアを別の画面に表示することができます。  この機能は、 **[設定] やその他のオプション (...)**  >  からアクセスできます。**その他のツール**  > **メディアをデバイスにキャスト**します。  キャストは、既定で Microsoft Edge に含まれていないメディアルーター拡張機能に依存します。  初めて Cast を使用すると、Microsoft Edge でメディアルーター拡張機能をインストールする許可を求めるメッセージが表示されます。  
+
+[**再起動**] を選択して、Chrome Web ストアからメディアルーターの拡張機能をインストールします。  Microsoft edge でメディアルーターの拡張機能を最新の状態に維持するために、microsoft edge は、microsoft edge のバージョンに関する基本的なデータを含む、Chrome Web ストアに更新要求を送信します。  Google は、メディアルーター拡張機能に関連付けられているデータを収集することがあります。  メディアルーター拡張機能をアンインストールするには、 `edge://flags` エッジオンデマンド**メディアルーター**に移動して無効にします。  これにより、Chrome Web ストアからの更新も停止されます。  拡張機能が非表示になり、**インストールされている拡張機能**の一覧に表示されません。  [**インストールされている拡張子**] の一覧で、に移動 `edge://extensions` します。  
 
 ## コレクション  
 

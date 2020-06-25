@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: WebView2、WebView2、WebView、webview、wpf アプリ、wpf、edge、CoreWebView2、browser control、edge html、はじめに、作業の開始、.NET
-ms.openlocfilehash: 0dd4b5b0d336f4107352754e0c23e74bc83e8a5f
-ms.sourcegitcommit: 037a2d62333691104c9accb4862968f80a3465a2
+ms.openlocfilehash: 9ecb80050d52d1d3b888027a728456a881d8c5ad
+ms.sourcegitcommit: 8f2badc98ea7b7d1861dabfaf0e4dd8677e89bea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "10752235"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "10767017"
 ---
 # WPF での WebView2 の概要 (プレビュー)
 
@@ -69,15 +69,16 @@ ms.locfileid: "10752235"
        Nuget.exe
     :::image-end:::
     
-1.  `Microsoft.Web.WebView2`検索バーに入力します。  検索結果から [ **WebView2** ] を選びます。  パッケージバージョンを**プレリリース**に設定して、[**インストール**] を選択します。  
-    
+2.  `Microsoft.Web.WebView2`検索バーに入力します。  検索結果から [ **WebView2** ] を選びます。  
+
+3. [**プレリリースを含める**] をオンにし、**プレリリース**パッケージバージョンを選択して、[**インストール**] を選択します。  
+  
      ![nuget.exe](./media/installnuget.PNG)
     
     WebView2 API を使用したアプリケーションの開発を開始するように設定されています。  を押して `F5` 、プロジェクトをビルドして実行します。  実行中のプロジェクトに空のウィンドウが表示されます。  
     
     :::image type="complex" source="./media/wpf-gettingstarted-blank.png" alt-text="空のアプリ":::
-       空のアプリ
-    :::image-end:::  
+       空のアプリ :::image-end:::  
     
 ## 手順 3-MainWindow で1つの WebView を作成する  
 
