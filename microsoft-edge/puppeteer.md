@@ -8,12 +8,12 @@ ms.topic: article
 ms.prod: microsoft-edge
 ms.technology: devtools
 keywords: microsoft edge、web 開発、開発、ツール、オートメーション、テスト
-ms.openlocfilehash: a78bdc0eb96db018818ef122c772bc9023adac46
-ms.sourcegitcommit: 4187d4c3fbf4ef99a3b8a63db8a182355c84c1f9
+ms.openlocfilehash: ccca46426a006651a417a22e54c8b528834b5f81
+ms.sourcegitcommit: 0048eb692d49eab4755c0c3ef6866e6a9122d579
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "10601938"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "10844013"
 ---
 # Puppeteer  
 
@@ -36,7 +36,7 @@ yarn add puppeteer-core
 ## Puppeteer core で Microsoft Edge を起動する  
 
 > [!NOTE]
-> `puppeteer-core` Node v 8.9.0 以降に依存します。  次の例では、 `async` / `await` Node v 7.6.0 以降でのみサポートされています。  `node -v`コマンドラインから実行して、互換性のあるバージョンの node.js を持っていることを確認します。  
+> `puppeteer-core` Node v 8.9.0 以降に依存します。  次の例では、 `async` / `await` Node v 7.6.0 以降でのみサポートされています。  `node -v`コマンドラインから実行し、互換性のあるバージョンの Node.js があることを確認します。  
 
 `puppeteer-core` web[ドライバー][WebDriverEdgehtmlMain]など、他のブラウザーのテストフレームワークのユーザーに慣れている必要があります。  ブラウザーのインスタンスを作成し、ページを開き、Puppeteer API で操作します。  次のコードサンプルでは、 `puppeteer-core` Microsoft Edge \ (Chromium \) を起動し、に移動し `https://www.microsoftedgeinsider.com` て、スクリーンショットをとして保存し `example.png` ます。  
 
@@ -57,7 +57,25 @@ const puppeteer = require('puppeteer-core');
 })();
 ```  
 
-`executablePath`Microsoft Edge \ (Chromium \) のインストールをポイントします。  たとえば、macOS では、 `executablePath` Microsoft Edge カナリアをに設定する必要があり `/Applications/Microsoft\ Edge\ Canary.app/` ます。  を見つけるには `executablePath` 、に移動 `edge://version` します。  変更内容を保存するには、[保存] をクリックします。  
+`executablePath`Microsoft Edge \ (Chromium \) のインストールをポイントします。  たとえば、macOS では、 `executablePath` Microsoft Edge カナリアをに設定する必要があり `/Applications/Microsoft\ Edge\ Canary.app/` ます。  を見つけるに `executablePath` `edge://version` は、そのページの**実行可能ファイルのパス**に移動してコピーするか、次のいずれかのコマンドを使用して[エッジパス][npmEdgePaths]パッケージをインストールします。  
+
+```shell
+npm i edge-paths
+```  
+
+```shell
+yarn add edge-paths
+```  
+ 
+次のコードサンプルでは、 [edge パス][npmEdgePaths]パッケージを使用して、オペレーティングシステムの Microsoft edge \ (Chromium) へのパスがプログラムによって検出されます。
+
+```javascript
+const edgePaths = require("edge-paths");
+
+const EDGE_PATH = edgePaths.getEdgePath();
+```
+
+最後に、を設定 `executablePath: EDGE_PATH` `example.js` します。  変更内容を保存するには、[保存] をクリックします。  
 
 > [!NOTE]
 > Microsoft Edge \ (EdgeHTML \) は、では使用できません `puppeteer-core` 。  この例の後で続行するには、 [Microsoft Edge Insider チャネル][MicrosoftedgeinsiderDownload]をインストールする必要があります。  
@@ -70,7 +88,7 @@ node example.js
 
 `puppeteer-core` Microsoft Edge を起動し、 `https://www.microsoftedgeinsider.com` ページの 800px x 600px のスクリーンショットに移動して保存します。  ページサイズは、 [page のビューポート ()][PuppeteerApipagesetviewport]でカスタマイズできます。  
 
-:::image type="complex" source="./media/puppeteer-example.png" alt-text="例として生成される .png ファイルの例":::
+:::image type="complex" source="./media/puppeteer-example.png" alt-text="example.js によって生成された example.png ファイル":::
    図 1: 次の方法で作成された `example.png` ファイル `example.js`  
 :::image-end:::  
 
@@ -127,6 +145,8 @@ node example.js
 [ChromiumHome]: https://www.chromium.org/Home "Chromium |Chromium プロジェクト"  
 
 [NodejsMain]: https://nodejs.org "Node.js"  
+
+[npmEdgePaths]: https://www.npmjs.com/package/edge-paths "npm |エッジパス"
 
 [PuppeteerMain]: https://pptr.dev "Puppeteer"  
 [PuppeteerApivscore]: https://pptr.dev/#?product=Puppeteer&version=v2.0.0&show=api-puppeteer-vs-puppeteer-core "puppeteer と puppeteer-core |Puppeteer"  

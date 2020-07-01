@@ -2,32 +2,32 @@
 title: Microsoft Edge DevTools でビジョンの不備をエミュレートする (色覚障碍)
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 06/22/2020
+ms.date: 06/29/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 0b608f5fe67724eee81aeb993577ee9b45cbca09
-ms.sourcegitcommit: d7fdb67df0fe73fa5ae96e5a69a847d07941d0a7
+ms.openlocfilehash: b70499fa189d162fa7589966bab183f4c12f68f7
+ms.sourcegitcommit: 0048eb692d49eab4755c0c3ef6866e6a9122d579
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "10758122"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "10843922"
 ---
 # ビジョンの欠陥のエミュレート
 
-世界中の約8% の男性と0.5% は、"色覚障碍" と呼ばれる、一般的に[色ビジョンの欠陥][ColorblindawarenessMain]になっています。  [Microsoft Edge DevTools][MicrosoftEdgeDevTools]を使うと、さまざまな既知の欠陥をエミュレートし、製品のプレビューを表示して確認することができます。  
+[カラービジョンの欠陥][ColorblindawarenessMain]を持つユーザーのニーズをより適切に満たすために、 [Microsoft Edge devtools][MicrosoftEdgeDevTools]を使用すると、特定の色ビジョンの不備をシミュレートすることができます。  **ビジョンのエミュレート**ツールでは、次のカテゴリがシミュレートされます。  
 
-| 色の欠陥 | 詳細 |  
+| カラービジョンの欠陥 | 詳細 |  
 |:--- |:--- |  
-| ぼやけたビジョン |  |   
-| Protanopia | 赤の光を感じることはできません。 |  
-| Deuteranopia | 緑の光を感じることはできません。 |  
-| Tritanopia | 青い光を感じることはできません。 |  
-| Achroopsia | 灰色の階調を除き、どの色もまったく感じられません。 |  
+| ぼやけたビジョン | ユーザーは、細かい詳細を重視しています。 |   
+| Protanopia | ユーザーは赤のライトを認識できません。 |  
+| Deuteranopia | ユーザーは、緑色の光を認識することはできません。 |  
+| Tritanopia | ユーザーは青色の光を認識できません。 |  
+| Achroopsia | ユーザーは色を認識することはできません。これにより、すべての色が灰色の階調に縮小されます。 |  
 
 ## レンダリングツールに移動する  
 
-現在の web 製品で色の欠陥をテストするには、[レンダリングツール][RenderingTools]を開きます。  
+Web 製品に対してビジョンの欠陥が適用されていることをシミュレートするには、[レンダリングツール][RenderingTools]を開きます。  
 
 1.  `...`ツールバーのメニュー項目を選択して、レンダリングツールを開く  
 1.  選択する `More tools`  
@@ -37,37 +37,37 @@ ms.locfileid: "10758122"
        **レンダリングツール**を開く  
     :::image-end:::  
 
-**レンダリング**メニューは、devtools の下半分に表示されます。  
+[**レンダリング**] メニューが [ドロアー] に表示されます。  
 
-1.  メニュー項目まで下にスクロール `Emulate Vision deficiencies` して、オプションから選びます。  
+1.  メニュー項目まで下にスクロール `Emulate vision deficiencies` し、ドロップダウンメニューを選択してオプションを表示します。  
     
-    :::image type="complex" source="../media/accessibility-emulate-vision-menu.msft.png" alt-text="レンダリングツールの [ビジョンの欠陥のエミュレート] メニュー" lightbox="../media/accessibility-emulate-vision-menu.msft.png":::
-       **レンダリング**ツールの [**ビジョンの欠陥のエミュレート**] メニュー  
+    :::image type="complex" source="../media/accessibility-emulate-vision-menu.msft.png" alt-text="レンダードロアーの [ビジョンの欠陥のエミュレート] メニュー" lightbox="../media/accessibility-emulate-vision-menu.msft.png":::
+       **レンダー**ドロアーの [**ビジョンの欠陥のエミュレート**] メニュー  
     :::image-end:::  
     
-1.  いずれかのオプションを選びます。  
+1.  オプションを選択します。  
     
     :::image type="complex" source="../media/accessibility-emulate-vision-menu-options.msft.png" alt-text="[視覚障碍のエミュレート] メニューのオプション" lightbox="../media/accessibility-emulate-vision-menu-options.msft.png":::
        [**視覚障碍のエミュレート**] メニューのオプション  
     :::image-end:::  
     
-1.  現在のページは、選択した欠陥によってユーザーにどのように表示されるかをシミュレートして表示されます。  
-
+1.  メインウィンドウには、現在のページに適用されているオプションのシミュレーションが表示されます。  
+    
     :::row:::
        :::column span="":::
-          :::image type="complex" source="../media/accessibility-blurred-vision-emulation.msft.png" alt-text="Microsoft Edge 開発者ツールのドキュメント (ぼやけたビジョンエミュレーション)" lightbox="../media/accessibility-blurred-vision-emulation.msft.png":::
-             ぼやけた**ビジョン**エミュレーションを使用して表示される  
+          :::image type="complex" source="../media/accessibility-blurred-vision-emulation.msft.png" alt-text="ディスプレイの使用 * * ぼやけたビジョン * * シミュレーション" lightbox="../media/accessibility-blurred-vision-emulation.msft.png":::
+             ぼやけた**ビジョン**シミュレーションを使って表示する  
           :::image-end:::  
        :::column-end:::
        :::column span="":::
-          :::image type="complex" source="../media/accessibility-achromatopsia-emulation.msft.png" alt-text="Achroopsia のビジョンエミュレーションの Microsoft Edge 開発者ツールのドキュメント" lightbox="../media/accessibility-achromatopsia-emulation.msft.png":::
-             **Achromatopsia のビジョン**エミュレーションを使用して表示する :::image-end:::  
+          :::image type="complex" source="../media/accessibility-achromatopsia-emulation.msft.png" alt-text="* * Achromatopsia * * シミュレーションを使用して表示" lightbox="../media/accessibility-achromatopsia-emulation.msft.png":::
+             **Achromatopsia**シミュレーションを使った表示 :::image-end:::  
        :::column-end:::
     :::row-end:::
     
 ## コマンドメニューを使用する  
 
-また、**コマンドメニュー**を使用してさまざまなメニューを表示することなく、さまざまなエミュレーションにアクセスできます。  
+**コマンドメニュー**を使用して、さまざまなシミュレーションにアクセスすることもできます。  
 
 1.  `Control` + `Shift` + `P` コマンドメニューを開くには、\ (Windows \) または `Command` + `Shift` + `P` \ **Command Menu**(macOS \) を押します。  
     
@@ -77,12 +77,12 @@ ms.locfileid: "10758122"
     
 1.  「」と入力し `emulate` 、シミュレートするものを選択して、キーを押し `Enter` ます。  
     
-    :::image type="complex" source="../media/accessibility-emulation-command-menu-results.msft.png" alt-text="コマンドメニューで使用できるさまざまなエミュレーションオプション" lightbox="../media/accessibility-emulation-command-menu-results.msft.png":::
-       **コマンドメニュー**で使用できるさまざまなエミュレーションオプション  
+    :::image type="complex" source="../media/accessibility-emulation-command-menu-results.msft.png" alt-text="コマンドメニューで使用できるさまざまなシミュレーションオプション" lightbox="../media/accessibility-emulation-command-menu-results.msft.png":::
+       **コマンドメニュー**で使用できるさまざまなシミュレーションオプション  
     :::image-end:::  
     
 > [!IMPORTANT]
-> エミュレーションツールは、各不具合のあるユーザーが製品をどのように表示するかを概算したものです。  各ユーザーは異なるため、視覚障碍はユーザーによって深刻されます。  ユーザーのニーズをより適切に満たすために、問題が発生する可能性のある色の組み合わせは避けてください。  エミュレーションツールは製品のアクセシビリティを完全に評価するわけではありませんが、最大の欠点を回避するための第一歩として最適です。  
+> **ビジョンのエミュレート**ツールでは、各欠陥のあるユーザーが製品をどのように表示するかの概算をシミュレートします。  各ユーザーは異なるため、視覚障碍はユーザーによって深刻されます。  ユーザーのニーズをより適切に満たすために、問題が発生する可能性のある色の組み合わせは避けてください。  **ビジョンのエミュレート**ツールは、製品の完全なアクセシビリティ評価ではありません。  代わりに、**ビジョンの欠陥**ツールをエミュレートすることで、問題を回避するための最初の手順を行う必要があります。  
 
 <!-- links -->  
 

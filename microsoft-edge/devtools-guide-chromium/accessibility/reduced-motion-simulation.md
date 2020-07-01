@@ -1,17 +1,17 @@
 ---
-title: Microsoft Edge DevTools を配色のプレビューモードに強制する (CSS は配色パターンを優先)
+title: 開発者ツールを使用して、軽減される動きをシミュレートする (CSS 優先運動の減少)
 author: MSEdgeTeam
 ms.author: msedgedevrel
 ms.date: 06/18/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 94c5369f0eb35059933be7f6202a4f64450629cd
-ms.sourcegitcommit: d7fdb67df0fe73fa5ae96e5a69a847d07941d0a7
+ms.openlocfilehash: f1bf90de4ac1832fff07e9ac963c26f92adeea2c
+ms.sourcegitcommit: 0048eb692d49eab4755c0c3ef6866e6a9122d579
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "10758111"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "10843985"
 ---
 # モーションシミュレーションの減少  
 
@@ -21,7 +21,7 @@ Web 製品のアニメーションには、アクセシビリティの問題が�
 @media (prefers-reduced-motion: reduce) {
   /* in case the .header element has an animation, turn it off */
   .header {
-  animation: none;
+    animation: none;
   }
 }
 ```  

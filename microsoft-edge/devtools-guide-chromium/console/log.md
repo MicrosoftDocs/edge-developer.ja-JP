@@ -6,12 +6,12 @@ ms.date: 03/24/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: d3dbec41bc1e53b5e9001551c796e5a495dd331e
-ms.sourcegitcommit: 5cdc1626d5581b79c0f2ac4ea62e7f1974ebfa57
+ms.openlocfilehash: 4c930caf60af2b5e276e003378546e147c249548
+ms.sourcegitcommit: 0048eb692d49eab4755c0c3ef6866e6a9122d579
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "10601734"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "10843968"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -89,11 +89,11 @@ ms.locfileid: "10601734"
     > **ログ情報**をクリックした後の本体  
     > ![Log Info] をクリックした後のコンソール[ImageLogInfo]  
     
-1.  コンソールのメッセージの横にある `Hello, Console!` **「.log: 2**」をクリックします。  [ソース] パネルが開き、メッセージがコンソールに記録される原因となったコード行が強調表示されます。  ページの JavaScript の実行時にメッセージが記録されました `console.log('Hello, Console!')` 。
+1.  コンソールのメッセージの横にある `Hello, Console!` [ **log.js: 2**] をクリックします。  [ソース] パネルが開き、メッセージがコンソールに記録される原因となったコード行が強調表示されます。  ページの JavaScript の実行時にメッセージが記録されました `console.log('Hello, Console!')` 。
     
     > ##### 図 7  
-    > [DevTools] をクリックすると、[ソース] パネルが開きます **。 .js: 2**  
-    > ![DevTools] をクリックすると、[ソース] パネルが開きます。 [2][ImageSourceLog]  
+    > [log.js] をクリックすると、[ソース] パネルが開き**ます。 2**  
+    > ![log.js: 2] をクリックした後に [ソース] パネルが開きます。[ImageSourceLog]  
     
 1.  次のいずれかのワークフローを使用して、コンソールに移動します。  
     
@@ -166,6 +166,7 @@ ms.locfileid: "10601734"
     > !(コンソールの TypeError)[Imageconelogtypeerror]  
     
 1.  [**ログレベル**] ドロップダウンをクリックし、[**詳細**] オプションが無効になっている場合はそれを有効にします。  フィルター処理の詳細については、次のセクションを参照してください。  次のメッセージが表示されるようにするには、これを行う必要があります。  
+    **注:**[既定のレベル] ドロップダウンが無効になっている場合は、コンソールサイドバーを閉じる必要がある場合があります。 コンソールサイドバーの詳細については、以下の「メッセージソースでフィルター処理する」を参照してください。
     
     > ##### 図 16  
     > **詳細**ログレベルを有効にする  
@@ -277,26 +278,26 @@ ms.locfileid: "10601734"
 [Imagedevtools Right]:/microsoft-edge/devtools-guide-chromium/media/console-example-devtools-right-console.msft.png "図 2: DevTools がデモの右側に表示されます"  
 [Imagedevtools Bottom]:/microsoft-edge/devtools-guide-chromium/media/console-example-devtools-bottom-console.msft.png "図 3: デモツールの下部にドッキングされた DevTools」  
 [ImageDevToolsSeparateBrowse]:/microsoft-edge/devtools-guide-chromium/media/console-example-devtools-separate-console-browse.msft.png "図 4: 別のウィンドウに表示されるブラウザー"  
-[ImageDevToolsSeparateDevTools]:/microsoft-edge/devtools-guide-chromium/media/console-example-devtools-separate-console-devtools.msft.png "図 5: DevTools が別のウィンドウでアンドックされる  
+[ImageDevToolsSeparateDevTools]:/microsoft-edge/devtools-guide-chromium/media/console-example-devtools-separate-console-devtools.msft.png "図 5: 別のウィンドウにドッキングされる DevTools" が表示される  
 [ImageLogInfo]:/microsoft-edge/devtools-guide-chromium/media/console-log-info.msft.png "図 6: ログ情報をクリックした後のコンソール  
-[ImageSourceLog]:/microsoft-edge/devtools-guide-chromium/media/console-sources-logjs.msft.png "図 7: DevTools [ソース] パネルを開くには、[ログの作成] をクリックします。 2"  
-[Imageconの Elogwarning]:/microsoft-edge/devtools-guide-chromium/media/console-log-warning.msft.png "図 8: ログ警告のクリック後のコンソール  
+[ImageSourceLog]:/microsoft-edge/devtools-guide-chromium/media/console-sources-logjs.msft.png "図 7: DevTools は、[log.js: 2] をクリックした後にソースパネルを開きます。  
+[ImageConsoleLogWarning]:/microsoft-edge/devtools-guide-chromium/media/console-log-warning.msft.png "図 8: ログの警告をクリックした後のコンソール)"  
 [ImageStackTrace]:/microsoft-edge/devtools-guide-chromium/media/console-log-warning-expanded.msft.png "図 9: スタックトレース"  
 [ImageLogError]:/microsoft-edge/devtools-guide-chromium/media/console-log-error.msft.png "図 10: エラーメッセージ"  
 [ImageConsoleTable]:/microsoft-edge/devtools-guide-chromium/media/console-log-table.msft.png "図 11: 本体の表"  
-[ImageConsoleLogGroup]:/microsoft-edge/devtools-guide-chromium/media/console-log-group.msft.png "図 12: 本体のメッセージのグループ"  
-[Imagecon/microsoft-edge/devtools-guide-chromium/media/console-log-custom.msft.png Elogcustomcustom書式]: "図 13: 本体にユーザー設定の書式設定が表示されたメッセージ"  
-[Imagecon/microsoft-edge/devtools-guide-chromium/media/console-cause-404.msft.png Elogerror]: "図 14: 本体の404エラー  
-[Imagecon/microsoft-edge/devtools-guide-chromium/media/console-cause-error.msft.png Elogtypeerror]: "Figure 15: 本体の TypeError"  
-[ImageVerboseLogLevel]:/microsoft-edge/devtools-guide-chromium/media/console-cause-error-log-levels.msft.png "図 16: 詳細ログレベルを有効にする"  
-[Imagecon/microsoft-edge/devtools-guide-chromium/media/console-cause-violation.msft.png Elog違反]: "Figure 17: 本体の違反"  
-[Imagecon/microsoft-edge/devtools-guide-chromium/media/console-cause-violation-log-levels.msft.png Edisabeconlogerror]: "図 18: 本体のエラーレベルのメッセージを無効にする"  
+[ImageConsoleLogGroup]:/microsoft-edge/devtools-guide-chromium/media/console-log-group.msft.png "図 12: 本体のメッセージのグループ」  
+[Imagecon/microsoft-edge/devtools-guide-chromium/media/Elogcustomcustom書式]: console-log-custom.msft.png "図 13: 本体にユーザー設定の書式設定が含まれるメッセージ]  
+[Imagecon/microsoft-edge/devtools-guide-chromium/media/Elogerror]: console-cause-404.msft.png "図 14: 本体の404エラー  
+[Imagecon/microsoft-edge/devtools-guide-chromium/media/Elogtypeerror]: console-cause-error.msft.png "図 15: 本体の TypeError"  
+[ImageVerboseLogLevel]:/microsoft-edge/devtools-guide-chromium/media/console-cause-error-log-levels.msft.png "図 16: 詳細なログレベルを有効にする"  
+[Imagecon/microsoft-edge/devtools-guide-chromium/media/Elog違反]: console-cause-violation.msft.png "図 17: 本体の違反です"  
+[Imagecon/microsoft-edge/devtools-guide-chromium/media/Edisabeconlogerror]: console-cause-violation-log-levels.msft.png "図 18: 本体のエラーレベルのメッセージを無効にする"  
 [ImageLogTextFiltering]:/microsoft-edge/devtools-guide-chromium/media/console-all-messages-text-filter.msft.png "図 19: Dave" が含まれていないメッセージをフィルターで除外する  
 [ImageLogRegExFiltering]:/microsoft-edge/devtools-guide-chromium/media/console-all-messages-regex-filter.msft.png "図 20: パターンに一致しないメッセージをフィルターで除外する"  
 [Imagecones$ Ide バー]:/microsoft-edge/devtools-guide-chromium/media/console-sidebar-all-messages.msft.png "図 21: サイドバー"  
-[Imagecones$ Ide Barlogsource]:/microsoft-edge/devtools-guide-chromium/media/console-sidebar-expanded-all-messages.msft.png "図 22: サイドバーにメッセージのソースを表示します。  
-[Imagecon/microsoft-edge/devtools-guide-chromium/media/console-sidebar-user-messages.msft.png Elogbrowserfiltering]: "図 23: ブラウザーメッセージをフィルター処理する"  
-[ImageDrawerConsole]:/microsoft-edge/devtools-guide-chromium/media/console-elements-drawer-console-sidebar-all-messages.msft.png "Figure 24: ドローワの [コンソール] タブ  
+[Imagecones$ Ide Barlogsource]:/microsoft-edge/devtools-guide-chromium/media/console-sidebar-expanded-all-messages.msft.png "図 22: メッセージのソースをサイドバーに表示する"  
+[Imagecon/microsoft-edge/devtools-guide-chromium/media/Elogbrowserfiltering]: console-sidebar-user-messages.msft.png "図 23: ブラウザーのメッセージをフィルター処理する"  
+[ImageDrawerConsole]:/microsoft-edge/devtools-guide-chromium/media/console-elements-drawer-console-sidebar-all-messages.msft.png "図 24: ドローワの [コンソール] タブ  
 
 <!-- links -->  
 

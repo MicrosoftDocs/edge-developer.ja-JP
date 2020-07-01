@@ -6,12 +6,12 @@ ms.date: 06/11/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: c9d205fb2cc478e9c3f20458f461f004035e85e8
-ms.sourcegitcommit: a34858dd3260967ba9699842fa839c7a94775fe4
+ms.openlocfilehash: ec8969fbf7b54512f00120ac4a253b952c55768f
+ms.sourcegitcommit: 0048eb692d49eab4755c0c3ef6866e6a9122d579
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "10710400"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "10844020"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -470,8 +470,7 @@ To refresh the table, re-select the name of the WebSocket connection under the *
 *   **リクエストを送信**しました。  要求が送信されています。  
 *   **Serviceworker の準備**。  ブラウザーがサービスワーカーを開始しています。  
 *   **ServiceWorker へのリクエスト**。  要求がサービスワーカーに送信されます。  
-*   **\ (TTFB \) を待機**しています。  ブラウザーは、応答の最初のバイトを待機しています。  
-  TTFB は、最初のバイトまでの時間を表します。  このタイミングには、待機時間が1往復、サーバーが応答の準備にかかった時間が含まれます。  
+*   **\ (TTFB \) を待機**しています。  ブラウザーは、応答の最初のバイトを待機しています。  TTFB は、最初のバイトまでの時間を表します。  このタイミングには、待機時間が1往復、サーバーが応答の準備にかかった時間が含まれます。  
 *   **コンテンツのダウンロード**。  ブラウザーが応答を受信します。  
 *   **プッシュ配信**。  ブラウザーが、HTTP/2 Server プッシュ経由でこの応答のデータを受信しています。  
 *   **プッシュ中**。  ブラウザーは、前に受信したローカルデータを読み取ります。  
