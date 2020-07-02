@@ -1,17 +1,17 @@
 ---
-title: CSS リファレンス
+title: CCS リファレンス
 author: MSEdgeTeam
 ms.author: msedgedevrel
 ms.date: 04/27/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 005d2650a1633d49a8c6c2550c4b2c0c2e3f3be6
-ms.sourcegitcommit: 5cdc1626d5581b79c0f2ac4ea62e7f1974ebfa57
+ms.openlocfilehash: 4f0370b83d8c939476a1ed378dbdf750101c9527
+ms.sourcegitcommit: 0048eb692d49eab4755c0c3ef6866e6a9122d579
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "10601847"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "10843971"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -33,7 +33,7 @@ ms.locfileid: "10601847"
 
 
 
-# CSS リファレンス   
+# CCS リファレンス   
 
 
 
@@ -155,7 +155,6 @@ DevTools の**要素**パネルでは、一度に1つの要素の CSS を表示�
 ### 印刷モードでページを表示する   
 
 印刷モードでページを表示するには、次の操作を行います。  
-
 1.  [コマンドメニューを開き][DevToolsCommandMenu]ます。  
 1.  入力を開始し `Rendering` 、を選択し `Show Rendering` ます。  
 1.  [ **CSS メディアのエミュレート**] ドロップダウンで、[**印刷**] を選びます。  
