@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、wpf アプリ、wpf、edge、ICoreWebView2、ICoreWebView2Host、browser control、edge html
-ms.openlocfilehash: 370b5da2d42412a08a5c7f8a7401496fa70e3065
-ms.sourcegitcommit: 288bd2a1bec418a84d1f0bda013c1913886bd269
+ms.openlocfilehash: b76ebcd4ebc30e30083e742a5e84075a5c6ef779
+ms.sourcegitcommit: bb62099215e4f610f8561250fa943f58a0f836b0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "10844405"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "10846018"
 ---
 # WebView2 を使用したアプリケーションの配布  
 
@@ -50,11 +50,11 @@ Evergreen 配布モードでは、アプリが最新の機能とセキュリテ�
 > [!IMPORTANT]
 > プレビュー中に WebView2 アプリケーションを運用環境に出荷しないでください。  
 
-Evergreen WebView2 ランタイムが利用可能であることを確認するには、次のワークフローを使用してください。  
+アプリケーションが起動する前に、Evergreen WebView2 Runtime がインストールされていることを確認することをお勧めします。 ワークフローの例を次に示します。  
 
 1.  最新の[Evergreen WebView2 ランタイムインストーラー][Webview2Installer]をダウンロードします。  
 1.  アプリケーションのインストーラーまたはアップデーターにインストーラーを含めます。  
-1.  アプリケーションのインストールまたは更新時に、ユーザーのコンピューターに Evergreen WebView2 ランタイムが既にインストールされているかどうかを確認します。  見つからない場合、アプリケーションはインストーラーを起動してランタイムをインストールします。  
+1.  アプリケーションのインストールまたは更新時に、 [GetAvailableCoreWebView2BrowserVersionString](https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/0-9-538/webview2-idl#getavailablecorewebview2browserversionstring) API を使って、ユーザーのコンピューターに Evergreen WebView2 Runtime が既にインストールされているかどうかを確認し、VERSIONINFO が NULL であるかどうかを確認します。 インストールされていない場合は、アプリケーションのインストーラー/アップデーターによって、昇格したプロセスまたはコマンドプロンプトからランタイムインストーラーを自動的に呼び出すことができ `MicrosoftEdgeWebView2RuntimeInstallerX64.exe /silent /install` ます。 
 
 シナリオによっては、上記のワークフローを変更する必要がある場合があります。  たとえば、アプリケーションのインストーラーでは、アプリケーションパッケージに Evergreen WebView2 Runtime Installer を含める代わりに、インストーラーをダウンロードすることができます。  
 

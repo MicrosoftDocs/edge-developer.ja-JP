@@ -1,76 +1,112 @@
 ---
 description: Microsoft Edge WebView 2 コントロールを使用して Win32 アプリの web コンテンツをホストする
-title: Win32 アプリの Microsoft Edge WebView 2
+title: Win32 アプリの WebView2 の概要
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 06/08/2020
+ms.date: 06/15/2020
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Controller、browser control、edge html
-ms.openlocfilehash: 460364b0c93e80c0e3868c3b69e20ea9dcf6c129
-ms.sourcegitcommit: 8dca1c1367853e45a0a975bc89b1818adb117bd4
+ms.openlocfilehash: e184eaeb28a1e6e7aacf2917094149092d2fb6ee
+ms.sourcegitcommit: ae0257f8fb9832296ee6a196ded7bad2aacd3208
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "10697197"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "10846550"
 ---
-# WebView2 の概要 (開発者用プレビュー)
+# WebView2 の概要 (開発者用プレビュー)  
 
-このチュートリアルでは、 [WebView2](https://aka.ms/webview)のよく使われる機能について説明します。ここでは、最初の WebView2 アプリの作成について説明します。 個々の Api について詳しくは、 [api リファレンス](../reference/win32/0-9-538-reference-webview2.md)をご覧ください。  
+次のコンテンツでは、 [WebView2 (開発者向けプレビュー)][Webview2Index]の一般的な使用方法について説明し、最初の WebView2 アプリを作成するための開始点を示しています。  個々の WebView2 Api について詳しくは、 [api リファレンス][Webview2ReferenceWin3209538]をご覧ください。  
 
-## 前提条件
+## 前提条件  
 
-* サポートされている OS (現在 Windows 10、Windows 8.1、Windows 7) には、 [Microsoft Edge (Chromium)](https://www.microsoftedgeinsider.com/download/)がインストールされています。 **カナリアチャネルを使うことをお勧めします。最低限必要なバージョンは 82.0.488.0**です。
-* [Visual Studio](https://visualstudio.microsoft.com/) 2015 以降、C++ サポートがインストールされています。
+*   [Microsoft Edge (Chromium)][MicrosoftedgeinsiderDownload]は、サポートされている OS \ (現在 windows 10、windows 8.1、windows 7 \) にインストールされています。  
+    
+    > [!NOTE]
+    > WebView チームは、カナリアチャネルの使用を推奨し、最低限必要なバージョンは82.0.488.0 です。  
+    
+*   [Visual Studio][MicrosoftVisualstudioMain] 2015 以降、C++ サポートがインストールされています。  
 
-## 手順 1-単一ウィンドウの win32 アプリを作成する
+## 手順 1-単一ウィンドウの win32 アプリを作成する  
 
-最初に、1つのメインウィンドウを含む基本的なデスクトッププロジェクトを開始します。 これは、このチュートリアルの主な焦点ではないため、 [「チュートリアル: 従来の Windows デスクトップアプリケーションを作成する (C++)](/cpp/windows/walkthrough-creating-windows-desktop-applications-cpp?view=vs-2019)」で説明した変更されたサンプルコードを使います。 更新されたサンプルを[ダウンロード](https://aka.ms/HelloWebView)して使い始めることができます。
+1つのメインウィンドウを含む基本的なデスクトッププロジェクトから始めます。  チュートリアルに焦点を合わせるために、サンプルアプリ用の[従来の Windows デスクトップアプリケーション (C++) を作成][CppWindowsWalkthroughCreatingDesktopApplication]して、チュートリアルから変更されたサンプルコードを使用しています。  更新されたサンプルをダウンロードして始めるには、「 [WebView2 のサンプル][GithubMicrosoftedgeWebview2samplesGettingStartedGuide]」をご覧ください。  
 
-Visual Studio で**WebView2GettingStarted**を開きます。 以前のバージョンの Visual Studio を使っている場合は、 **WebView2GettingStarted**プロジェクトを右クリックして、[**プロパティ**] をクリックします。 [**構成プロパティ**  >  の**全般**] で、 **Windows sdk のバージョン**とプラットフォームの**ツールセット**を変更して、Win10 SDK と VS ツールセットを使用できるようにします。
+Visual Studio で、を開き `WebView2GettingStarted.sln` ます。  以前のバージョンの Visual Studio を使っている場合は、 **WebView2GettingStarted**プロジェクトにカーソルを置いて、コンテキストメニュー \ (右クリック \) を開き、[**プロパティ**] を選びます。  [**構成プロパティ**の  >  **全般**] で、 **Windows sdk のバージョン**と**プラットフォームのツールセット**を変更して、Win10 SDK と Visual Studio のツールセット (VS ツールセット \) を使用できるようにします。  
 
-![ツールバージョン](../media/tool-version.png)
+:::image type="complex" source="../media/tool-version.png" alt-text="ツールバージョン":::
+   ツールバージョン  
+:::image-end:::  
 
-Visual Studio では、WebView2 header ファイルが見つからないことが原因でいくつかのエラーが表示されることがあります。これは、ステップ2が完了した後に発生します。
+Visual Studio では、WebView2 ヘッダーファイルが見つからないことが原因でいくつかのエラーが表示されることがあります。これは、手順2が完了した後に発生します。  
 
-## 手順 2-WebView2 SDK をインストールする
+## 手順 2-WebView2 SDK をインストールする  
 
-次に、WebView2 SDK をプロジェクトに追加してみましょう。 開発者向けプレビューでは、Nuget を使って Win32 SDK をインストールできます。
+プロジェクトに WebView2 SDK を追加します。  開発者用プレビューでは、Nuget を使って Win32 SDK をインストールできます。  
 
-1. プロジェクトを右クリックし、[ **Nuget パッケージの管理**] をクリックします。
+1.  プロジェクトにマウスポインターを合わせて、コンテキストメニュー \ (右クリック \) を開き、[ **Nuget パッケージの管理**] を選択します。  
+    
+    :::image type="complex" source="../media/manage-nuget-packages.png" alt-text="Nuget パッケージを管理する":::
+       Nuget パッケージを管理する  
+    :::image-end:::  
+    
+1.  Windows 実装ライブラリをインストールします。  
+    1.  `Microsoft.Windows.ImplementationLibrary`検索バーに入力し、結果から [ **ImplementationLibrary** ] を選択して、右側のウィンドウで [**インストール**] を選択します。  Nuget によって SDK がコンピューターにダウンロードされます。  
+        
+        > [!NOTE] 
+        > [Windows 実装ライブラリ][GithubMicrosoftWilMain]と[Windows ランタイム C++ テンプレートライブラリ][CppCxWrlTemplateLibraryVS2019]は省略可能であり、この例で COM を簡単に操作できるように追加されています。  
+        
+        :::image type="complex" source="../media/wil.png" alt-text="Windows 実装ライブラリ":::
+           Windows 実装ライブラリ  
+        :::image-end:::  
+        
+1.  WebView2 SDK をインストールします。  
+    1.  `Microsoft.Web.WebView2`検索バーに入力し、結果から [ **WebView2** ] を選択して、右側のウィンドウで [**インストール**] を選択します。  Nuget によって SDK がコンピューターにダウンロードされます。  
+        
+        :::image type="complex" source="../media/nuget.png" alt-text="Nuget.exe":::
+           Nuget.exe
+        :::image-end:::  
+        
+1.  プロジェクトに WebView2 ヘッダーを追加します。  
+    :::row:::
+       :::column span="1":::
+          `HelloWebView.cpp`を開き、次のコードスニペットをコピーして、最後の行の後ろに貼り付け `HelloWebView.cpp` `#include` ます。  
+          
+          ```cpp
+          // include WebView2 header
+          #include "WebView2.h"
+          ```  
+       :::column-end:::
+       :::column span="1":::
+          Include セクションは、次のコードスニペットのようになります。  
+          
+          ```cpp
+          ...
+          #include <wrl.h>
+          #include <wil/com.h>
+          // include WebView2 header
+          #include "WebView2.h"
+          ```  
+       :::column-end:::
+    :::row-end:::
+    
+WebView2 API に対して使用およびビルドするように設定されています。  
 
-    ![管理-nuget-パッケージ](../media/manage-nuget-packages.png)
+### 空のサンプルアプリを作成する  
 
-2. 検索バーに「 **ImplementationLibrary** 」と入力し、結果から**ImplementationLibrary**をクリックし、右側のウィンドウで [**インストール**] をクリックして、最新の SDK をインストールします。 Nuget は、お使いのコンピューターに SDK をダウンロードします。 このチュートリアルでは、 [Windows 実装ライブラリ](https://github.com/Microsoft/wil)と[Windows ランタイム C++ テンプレートライブラリ](/cpp/cppcx/wrl/windows-runtime-cpp-template-library-wrl?view=vs-2019)を使って COM を簡単に操作できるようになっていますが、これらは完全にオプションです。
+を押して `F5` 、サンプルアプリをビルドして実行します。  空のウィンドウが表示されたアプリが表示されます。  
 
-    ![wil](../media/wil.png)
+:::image type="complex" source="../media/empty-app.png" alt-text="空のアプリ":::
+   空のアプリ  
+:::image-end:::  
 
-3. 検索バーに「 **WebView2** 」と入力し、結果から**WebView2**をクリックし、右側のウィンドウで [**インストール**] をクリックして、最新の SDK をインストールします。 Nuget は、お使いのコンピューターに SDK をダウンロードします。
+## 手順 3-親ウィンドウ内に1つの WebView を作成する  
 
-    ![nuget.exe](../media/nuget.png)
+メインウィンドウに WebView を追加します。  メソッドを使用して `CreateCoreWebView2Environment` 環境を設定し、コントロールの電源を入れて Microsoft Edge \ (Chromium) ブラウザーを見つけます。  また、 `CreateCoreWebView2EnvironmentWithOptions` 既定の設定を使用する代わりに、ブラウザーの場所、ユーザーフォルダー、ブラウザーのフラグなどを指定する場合にも、このメソッドを使うことができます。  メソッドが完了する `CreateCoreWebView2Environment` `ICoreWebView2Environment::CreateCoreWebView2Controller` と、コールバック内でメソッドを実行 `ICoreWebView2CreateCoreWebView2EnvironmentCompletedHandler` し、メソッドを実行して、 `ICoreWebView2Controller::get_CoreWebView2` 関連付けられている WebView を取得できます。  
 
-4. WebView2 ヘッダーを含めます。 「**形式**」の .cpp で、s 行の下に追加し `#include "WebView2.h"` `#include` ます。
+コールバックでいくつかの追加設定を行い、WebView のサイズを変更して親ウィンドウの100% を取得し、Bing に移動します。  
 
-    ```cpp
-    ...
-    #include <wrl.h>
-    #include <wil/com.h>
-    // include WebView2 header
-    #include "WebView2.h"
-    ```
-
-WebView2 API に対して使用およびビルドするように設定されています。 F5 キーを押して、サンプルアプリをビルドして実行します。 空のウィンドウが表示されたアプリが表示されます。
-
-![空-アプリ](../media/empty-app.png)
-
-## 手順 3-親ウィンドウ内に1つの WebView を作成する
-
-次に、メインウィンドウに WebView を追加してみましょう。 ここでは、環境を設定して、コントロールを電源投入している `CreateCoreWebView2Environment` Microsoft Edge (Chromium) ブラウザーについて説明します。 `CreateCoreWebView2EnvironmentWithOptions`既定の設定を使用する代わりに、ブラウザーの場所、ユーザーフォルダー、ブラウザーのフラグなどを指定する場合にも使用できます。 が完了する `CreateCoreWebView2Environment` `ICoreWebView2Environment::CreateCoreWebView2Controller` と、コールバックと呼び出しの内部で呼び出し `ICoreWebView2CreateCoreWebView2EnvironmentCompletedHandler` て、 `ICoreWebView2Controller::get_CoreWebView2` 関連付けられた WebView を取得できるようになります。
-
-コールバックでは、いくつかの設定も設定して、WebView のサイズを変更して親ウィンドウの100% を取得し、Bing に移動します。
-
-以下のコードをとの間にある**形式の .cpp**にコピーし `// <-- WebView2 sample code starts here -->` `// <-- WebView2 sample code ends here -->` ます。
+次のコードスニペットをコピーし、 `HelloWebView.cpp` メモの後 `// <-- WebView2 sample code starts here -->` とメモの前に貼り付け `// <-- WebView2 sample code ends here -->` ます。  
 
 ```cpp
 // Step 3 - Create a single WebView within the parent window
@@ -78,7 +114,7 @@ WebView2 API に対して使用およびビルドするように設定されて�
 CreateCoreWebView2EnvironmentWithOptions(nullptr, nullptr, nullptr,
     Callback<ICoreWebView2CreateCoreWebView2EnvironmentCompletedHandler>(
         [hWnd](HRESULT result, ICoreWebView2Environment* env) -> HRESULT {
-
+        
             // Create a CoreWebView2Controller and get the associated CoreWebView2 whose parent is the main window hWnd
             env->CreateCoreWebView2Controller(hWnd, Callback<ICoreWebView2CreateCoreWebView2ControllerCompletedHandler>(
                 [hWnd](HRESULT result, ICoreWebView2Controller* controller) -> HRESULT {
@@ -86,51 +122,69 @@ CreateCoreWebView2EnvironmentWithOptions(nullptr, nullptr, nullptr,
                     webviewController = controller;
                     webviewController->get_CoreWebView2(&webviewWindow);
                 }
-
+                
                 // Add a few settings for the webview
-                // this is a redundant demo step as they are the default settings values
+                // this is a redundant demo step as the values are the default settings
                 ICoreWebView2Settings* Settings;
                 webviewWindow->get_Settings(&Settings);
                 Settings->put_IsScriptEnabled(TRUE);
                 Settings->put_AreDefaultScriptDialogsEnabled(TRUE);
                 Settings->put_IsWebMessageEnabled(TRUE);
-
+                
                 // Resize WebView to fit the bounds of the parent window
                 RECT bounds;
                 GetClientRect(hWnd, &bounds);
                 webviewController->put_Bounds(bounds);
-
+                
                 // Schedule an async task to navigate to Bing
                 webviewWindow->Navigate(L"https://www.bing.com/");
-
+                
                 // Step 4 - Navigation events
-
-
+                
                 // Step 5 - Scripting
-
-
+                
                 // Step 6 - Communication between host and web content
-
-
+                
                 return S_OK;
             }).Get());
         return S_OK;
     }).Get());
-```
+```  
 
-F5 キーを押して、アプリをビルドし、実行します。 これで、Bing と表示された WebView ウィンドウができます。
 
-![bing-ウィンドウ](../media/bing-window.png)
+### Bing サンプルアプリを構築する  
 
-## ステップ 4-ナビゲーションイベント
+を押して `F5` アプリをビルドして実行します。  これで、[WebView] ウィンドウに Bing ページが表示されます。  
 
-最後の手順では、URL への移動について説明しまし `ICoreWebView2::Navigate` た。 ナビゲーション中に、WebView は、、、、、の順にホストがリッスンできる一連のイベントを起動し `NavigationStarting` `SourceChanged` `ContentLoading` `HistoryChanged` `NavigationCompleted` ます。 詳細について[は、ここ](../reference/win32/0-9-538/ICoreWebView2.md#navigation-events)をクリックしてください。
+:::image type="complex" source="../media/bing-window.png" alt-text="Bing ウィンドウ":::
+   Bing ウィンドウ  
+:::image-end:::  
 
-![ナビゲーション-イベント](../media/navigation-events.png)
+## ステップ 4-ナビゲーションイベント  
 
-エラーが発生した場合は、 `SourceChanged` `ContentLoading` `HistoryChanged` ナビゲーションがエラーページに続いているかどうかによって、、またはイベントが発生する可能性があります。 HTTP リダイレクトの場合、 `NavigationStarting` 1 つの行に複数のイベントが存在します。
+既に紹介している WebView チームについては、最後の手順のメソッドを使用して URL に移動し `ICoreWebView2::Navigate` ます。  ナビゲーション中に、WebView は、ホストがリッスンできる一連のイベントを発生させます。  
 
-これらのイベントを利用する例として、 `NavigationStarting` https 以外の要求をキャンセルするためのハンドラーを登録してください。 以下のコードを次の**形式**でコピーします。 `// Step 4 - Navigation events`
+1.  `NavigationStarting`  
+1.  `SourceChanged`  
+1.  `ContentLoading`  
+1.  `HistoryChanged`   
+1.  `NavigationCompleted`   
+
+詳細については、「[ナビゲーションイベント][Webview2ReferenceWin3209538Icorewebview2NavigationEvents]」を参照してください。  
+
+:::image type="complex" source="../media/navigation-events.png" alt-text="ナビゲーションイベント":::
+   ナビゲーションイベント  
+:::image-end:::  
+
+エラーが発生した場合は、ナビゲーションがエラーページに続いているかどうかによって、次のいずれかのイベントが発生することがあります。  
+
+*   `SourceChanged`  
+*   `ContentLoading`  
+*   `HistoryChanged`
+
+HTTP リダイレクトの場合、 `NavigationStarting` 1 つの行に複数のイベントがあります。  
+
+イベントを利用する例として、イベントのハンドラーを登録して `NavigationStarting` https 以外の要求をキャンセルします。  次のコードスニペットをコピーして貼り付け `HelloWebView.cpp` ます。  
 
 ```cpp
 // register an ICoreWebView2NavigationStartingEventHandler to cancel any non-https navigation
@@ -146,15 +200,15 @@ webviewWindow->add_NavigationStarting(Callback<ICoreWebView2NavigationStartingEv
         CoTaskMemFree(uri);
         return S_OK;
     }).Get(), &token);
-```
+```  
 
-これで、アプリは https 以外のサイトに移動しません。 同様のメカニズムを使って、独自のドメイン内でのナビゲーションの制限など、他のタスクを実行することができます。
+これで、アプリは https 以外のサイトに移動しません。  同様のメカニズムを使って、独自のドメイン内でのナビゲーションの制限など、他のタスクを実行することができます。  
 
-## 手順 5-スクリプト
+## 手順 5-スクリプト  
 
-ホストアプリでは、JavaScript を WebView に挿入することもできます。 タスク WebView は、任意の JavaScript の実行や初期化スクリプトの追加を行うことができます。 追加された初期化スクリプトは、削除されるまでのすべての上位レベルのドキュメントと子フレームのナビゲーションに適用され、グローバルオブジェクトが作成された後で、その HTML ドキュメントに含まれている他のスクリプトが実行される前に実行されます。
+ホストアプリでは、JavaScript を WebView に挿入することもできます。  タスク WebView で任意の JavaScript を実行したり、初期化スクリプトを追加したりすることができます。  追加された初期化スクリプトは、削除されるまでのすべての上位レベルのドキュメントと子フレームのナビゲーションに適用され、グローバルオブジェクトが作成された後で、その HTML ドキュメントに含まれている他のスクリプトが実行される前に実行されます。  
 
-以下のコードをコピー `// Step 5 - Scripting` します。
+次のコードスニペットをコピーして貼り付け `HelloWebView.cpp` ます。  
 
 ```cpp
 // Schedule an async task to add initialization script that freezes the Object object
@@ -166,25 +220,26 @@ webviewWindow->ExecuteScript(L"window.document.URL;", Callback<ICoreWebView2Exec
         //doSomethingWithURL(URL);
         return S_OK;
     }).Get());
-```
+```  
 
-これで、WebView は常にオブジェクトオブジェクトを固定し、ページドキュメントを1回返します。
+WebView では常にオブジェクトがフリーズされ、 `Object` ページドキュメントが1回返されます。  
 
-**これらのスクリプトインジェクション Api (およびその他のいくつかの WebView2 Api) は非同期であることに注意してください。特定の順序でコードを実行する場合は、コールバックを使う必要があります。**
+> [!NOTE] 
+> スクリプトインジェクション Api \ (および他のいくつかの WebView2 Api \) は非同期です。特定の順序でコードを実行する必要がある場合は、コールバックを使う必要があります。  
 
-## ステップ 6-ホストと web コンテンツ間の通信
+## ステップ 6-ホストと web コンテンツ間の通信  
 
-ホストと web コンテンツも相互に通信でき `postMessage` ます。 WebView 内で実行されている web コンテンツは、ホストに送信でき `window.chrome.webview.postMessage` ます。また、メッセージはホストに登録されているすべてのメッセージによって処理され `ICoreWebView2WebMessageReceivedEventHandler` ます。 同様に、またはを通じて web コンテンツにメッセージを送信することもでき `ICoreWebView2::PostWebMessageAsString` `ICoreWebView2::PostWebMessageAsJSON` ます。これは、から追加されたハンドラーによって検出され `window.chrome.webview.addEventListener` ます。 通信メカニズムにより、web コンテンツは、ネイティブ Api を呼び出すように指示するメッセージを渡すことによってネイティブ機能を利用できます。
+この方法では、ホストと web コンテンツもメソッドを通じて相互に通信することができ `postMessage` ます。  WebView 内で実行されている web コンテンツは、メソッドによってホストに投稿される可能性があり `window.chrome.webview.postMessage` ます。メッセージは、 `ICoreWebView2WebMessageReceivedEventHandler` ホスト上のイベントハンドラーによって処理されます。  同様に、ホストで `ICoreWebView2::PostWebMessageAsString` は、 `ICoreWebView2::PostWebMessageAsJSON` リスナーから追加されたハンドラーによって検出された web コンテンツを経由して、またはメソッドでメッセージを送信することがあり `window.chrome.webview.addEventListener` ます。  通信メカニズムにより、web コンテンツは、ネイティブ Api を呼び出すように指示するメッセージを渡すことによってネイティブ機能を利用できます。  
 
-このメカニズムを理解するための例として、WebView でドキュメントの URL を少し detour で印刷してみましょう。
+このメカニズムを理解するための例として、WebView でドキュメントの URL を印刷しようとすると、次の手順が発生します。  
 
-1. ホストは、受信したメッセージを web コンテンツに戻すためのハンドラーを登録します。
-2. ホストは、ホストからメッセージを印刷するためのハンドラーを登録する web コンテンツにスクリプトを挿入します。
-3. ホストは、URL をホストにポストする web コンテンツにスクリプトを挿入します。
-4. ホストのハンドラーがトリガーされ、web コンテンツへのメッセージ (URL) が返されます。
-5. web コンテンツのハンドラーがトリガーされ、ホストのメッセージ (URL) が出力されます。
+1.  ホストは、受信したメッセージを web コンテンツに戻すためのハンドラーを登録します。  
+1.  ホストは、ホストからメッセージを印刷するためのハンドラーを登録する web コンテンツにスクリプトを挿入します。  
+1.  ホストは、URL をホストにポストする web コンテンツにスクリプトを挿入します。  
+1.  ホストのハンドラーがトリガーされ、web コンテンツへのメッセージ \ (URL) が返されます。  
+1.  Web コンテンツのハンドラーがトリガーされ、ホスト \ (URL \) からメッセージが出力されます。  
 
-以下のコードをコピーします。 `// Step 6 - Communication between host and web content`
+次のコードスニペットをコピーして貼り付け `HelloWebView.cpp` ます。    
 
 ```cpp
 // Set an event handler for the host to return received message back to the web content
@@ -205,24 +260,50 @@ webviewWindow->AddScriptToExecuteOnDocumentCreated(
     L"window.chrome.webview.addEventListener(\'message\', event => alert(event.data));" \
     L"window.chrome.webview.postMessage(window.document.URL);",
 nullptr);
-```
+```  
 
-F5 キーを押して、アプリをビルドし、実行します。 これで、ページに移動する前に Url が表示されるようになりました。
+### Show URL サンプルアプリを作成する  
 
-![表示-url](../media/show-url.png)
+を押して `F5` アプリをビルドして実行します。  ページに移動する前に、ポップアップウィンドウに URL が表示されている必要があります。  
 
-おめでとうございます。最初の WebView2 アプリを作成しました。
+:::image type="complex" source="../media/show-url.png" alt-text="Url の表示":::
+   Url の表示  
+:::image-end:::  
 
-## 次のステップ
+おめでとうございます。最初の WebView2 アプリを作成しました。  
 
-このチュートリアルではカバーされていない WebView2 の機能が多数あります。
+## 次のステップ  
 
-詳細は次のページをご覧ください。
+このページで取り上げていない WebView2 の機能の多くは、次のセクションで追加のリソースを提供しています。  
 
-* WebView2's 機能の包括的な例については、「チェックアウト[WEBVIEW2 API のサンプル](https://github.com/MicrosoftEdge/WebView2Samples/tree/master/WebView2APISample)」をお探しください。
-* WebView2 を使って構築されたアプリケーションをチェックアウト[WebView2Browser](https://github.com/MicrosoftEdge/WebView2Browser)します。
-* Api に関する詳細については、api[リファレンスを参照](../reference/win32/0-9-538-reference-webview2.md)してください。  
+### 関連項目  
+
+*   WebView2 機能の包括的な例については、「 [WEBVIEW2 API のサンプル][GithubMicrosoftedgeWebview2samplesApisample]」をご覧ください。  
+*   WebView2 を使って構築されたサンプルアプリケーションについては、「 [WebView2Browser][GithubMicrosoftedgeWebview2browser]」を参照してください。  
+*   WebView2 API の詳細については、 [api リファレンス][Webview2ReferenceWin3209538]を参照してください。  
 
 ## WebView2 チームと連絡を取り合う  
 
-フィードバックを共有することで、より充実した WebView2 エクスペリエンスを構築できます。 [フィードバックリポジトリ](https://aka.ms/webviewfeedback)にアクセスして、機能要求またはバグレポートを送信するか、既知の問題を検索します。
+フィードバックを共有して、より充実した WebView2 エクスペリエンスを構築できます。  GitHub の[フィードバックリポジトリ][GithubMicrosoftedgeWebviewfeedback]にアクセスして、機能要求またはバグレポートを送信するか、既知の問題を検索します。  
+
+<!-- links -->  
+
+[Webview2Index]: ../index.md "Microsoft Edge WebView2 の概要 (プレビュー) |Microsoft ドキュメント"  
+[Webview2ReferenceWin3209538]: ../reference/win32/0-9-538-reference-webview2.md "Reference (WebView2) |Microsoft ドキュメント"  
+[Webview2ReferenceWin3209538Icorewebview2NavigationEvents]: ../reference/win32/0-9-538/ICoreWebView2.md#navigation-events "ナビゲーションイベント-インターフェイス ICoreWebView2 |Microsoft ドキュメント"  
+
+[CppCxWrlTemplateLibraryVS2019]: /cpp/cppcx/wrl/windows-runtime-cpp-template-library-wrl?view=vs-2019 "Windows ランタイム C++ テンプレートライブラリ (WRL) |Microsoft ドキュメント"  
+[CppWindowsWalkthroughCreatingDesktopApplication]: /cpp/windows/walkthrough-creating-windows-desktop-applications-cpp?view=vs-2019 "チュートリアル: 従来の Windows デスクトップアプリケーションの作成 (C++) |Microsoft ドキュメント"  
+
+[GithubMicrosoftedgeWebview2browser]: https://github.com/MicrosoftEdge/WebView2Browser "WebView2Browser-MicrosoftEdge/WebView2Browser |GitHub"  
+
+[GithubMicrosoftedgeWebviewfeedback]: https://github.com/MicrosoftEdge/WebViewFeedback "WebView フィードバック-MicrosoftEdge/WebViewFeedback |GitHub"  
+
+[GithubMicrosoftedgeWebview2samplesApisample]: https://github.com/MicrosoftEdge/WebView2Samples/tree/master/WebView2APISample "WebView2 API のサンプル-MicrosoftEdge/WebView2Samples |GitHub"  
+[GithubMicrosoftedgeWebview2samplesGettingStartedGuide]: https://github.com/MicrosoftEdge/WebView2Samples#1-getting-started-guide "WebView2 サンプル-MicrosoftEdge/WebView2Samples |GitHub"  
+
+[GithubMicrosoftWilMain]: https://github.com/Microsoft/wil "Windows 実装ライブラリ (WIL)-microsoft/WIL |GitHub"  
+
+[MicrosoftedgeinsiderDownload]: https://www.microsoftedgeinsider.com/download "Microsoft Edge Insider チャネルをダウンロードする"  
+
+[MicrosoftVisualstudioMain]: https://visualstudio.microsoft.com "Visual Studio"  
