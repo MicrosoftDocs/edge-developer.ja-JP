@@ -456,6 +456,8 @@
           href: extensions/troubleshooting.md
     - name: ホスティング
       href: hosting/toc.md
+    - name: 元の試用版
+      href: origin-trials/index.md
     - name: パフォーマンス分析
       href: performance-analysis.md
     - name: プライバシーに関するホワイトペーパー
