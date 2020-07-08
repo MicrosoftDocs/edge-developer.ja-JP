@@ -1,20 +1,19 @@
 ---
 description: Microsoft Edge DevTools の最新の実験的な機能
-title: 実験的な機能
+title: 試験的機能
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 06/26/2020
+ms.date: 07/07/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools、実験
-ms.openlocfilehash: 731a289f555870eeff9cdc160965b59925b70c4d
-ms.sourcegitcommit: 0048eb692d49eab4755c0c3ef6866e6a9122d579
-ms.translationtype: MT
+ms.openlocfilehash: 19fd59c5dd9f18a681c69250fdcddb22e2796565
+ms.sourcegitcommit: f92bf0b50812b43228990b794611daa2144e431c
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "10843951"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "10858055"
 ---
-# 実験的な機能  
+# 試験的機能  
 
 Microsoft Edge DevTools でまだ開発中の実験的な機能を使って、各リリース前に[フィードバック](#providing-feedback-on-experimental-features)をテストして提供することができます。  
 
@@ -26,7 +25,7 @@ Microsoft Edge での試験的な機能 (またはオフ) を有効にするに�
 
 1.  [DevTools を開き][DevtoolsOpen]ます。  
      *   `Control` + `Shift` + `I` \ (Windows \) または `Command` + `Option` + `I` \ (macOS \) を押します。  詳細については、「 [Microsoft Edge DevTools のキーボードショートカット][DevToolsShortcuts]」を参照してください。  
-1.  [**設定**] ウィンドウを開きます。  
+1.  [[設定][DevToolsCustomizeSettings]] ウィンドウを開きます。  
     *   キーを押し `Shift` + `?` ます。  詳細については、「 [Microsoft Edge DevTools のキーボードショートカット][DevToolsShortcuts]」を参照してください。  
 1.  [**設定**] ウィンドウの左側で、[**実験**] セクションを選択します。  
     
@@ -46,9 +45,22 @@ Microsoft Edge での試験的な機能 (またはオフ) を有効にするに�
 
 | 実験的機能 | Microsoft Edge バージョン |  
 |:--- |:--- |  
+| [カスタムキーボードショートカットの [設定] タブを有効にする](#enable-custom-keyboard-shortcuts-settings-tab) | 84以降 |
 | [新しい CSS グリッドのデバッグ機能を有効にする](#enable-new-css-grid-debugging-features) | 85以降 |  
 | [パネル間でタブを移動できるようにサポートを有効にする](#enable-support-to-move-tabs-between-panels) | 85以降 |  
 | [Web ヒントを有効にする](#enable-webhint) | 85以降 |  
+
+### カスタムキーボードショートカットの [設定] タブを有効にする
+
+Devtools での開発ツールでの[キーボードショートカット][DevToolsShortcuts]の[一致を有効][VisualstudioCode]にするための新しい**ショートカット**ページが用意さ[れてい][DevToolsCustomizeSettings]ます。  
+
+この実験を有効にしたら、を押して、[ [Devtools][DevToolsCustomizeSettings] ] の設定をもう一度開き `Shift` + `?` ます。  [新しい**ショートカット**] ページに移動します。  [**標準のショートカットキー**の選択] ドロップダウンで [ **Devtools (既定値)** ] を選び、[ **Visual Studio コード**] を選びます。  DevTools のキーボードショートカットは、VS コードで同等のアクションのショートカットと一致するようになりました。  
+
+:::image type="complex" source="./media/experiments-keyboard-shortcut.png" alt-text="開発ツールのキーボードショートカットを VS コードに一致させる" lightbox="./media/experiments-keyboard-shortcut.png":::
+   開発ツールのキーボードショートカットを VS コードに一致させる
+:::image-end:::  
+
+たとえば、Windows では、 [VS コード][VisualstudioCodeShortcutsKeyboardWindows]でスクリプトを一時停止または実行し続けるためのキーボードショートカットが `F5` あります。  **Devtools (既定)** の事前設定を使用すると、devtools の同じショートカットが `F8` **Visual Studio のコード**プリセットでも使用できるようになりました `F5` 。  
 
 ### 新しい CSS グリッドのデバッグ機能を有効にする  
 
@@ -82,11 +94,11 @@ CSS グリッドレイアウトを含む web サイトをデバッグすると�
 
 ## 以前の実験的な機能  
 
-*   Microsoft Edge バージョン83以降では、 [3D ビュー][Devtools3DView]を使用できるようになり、既定でオンになっています。  
+*   Microsoft Edge バージョン83以降では、 [3D ビュー][Devtools3dViewIndex]を使用できるようになり、既定でオンになっています。  
 
 ## 実験的な機能についてフィードバックを提供する  
 
-Microsoft Edge DevTools のテスト、または DevTools に関連するその他の機能に関するフィードバックを提供するには、次の操作を行います。  
+Microsoft Edge DevTools のテスト、または DevTools に関連するその他の機能についてのフィードバックを提供します。  
 
 *   DevTools のフィードバックアイコンを使ってフィードバックを送信する  
 *   [@EdgeDevTools][TwitterEdgedevtools]ツイート  
@@ -97,11 +109,15 @@ Microsoft Edge DevTools のテスト、または DevTools に関連するその�
 
 <!-- links -->  
 
-[Devtools3DView]: ./3D-view.md "3D ビュー |Microsoft ドキュメント"  
+[Devtools3dViewIndex]: ./3d-view/index.md "3D ビュー |Microsoft ドキュメント"  
 [DevtoolsIssues]: ./issues/index.md "Microsoft Edge DevTools の問題を見つけて解決するツール |Microsoft ドキュメント"  
-[DevToolsShortcuts]: ./shortcuts.md "Microsoft Edge DevTools のキーボードショートカット-Microsoft ドキュメント"  
+[DevToolsCustomizeSettings]: ./customize/index.md#settings "設定-Microsoft Edge DevTools のカスタマイズ |Microsoft ドキュメント"  
+[DevToolsShortcuts]: ./shortcuts.md "Microsoft Edge DevTools のキーボードショートカット |Microsoft ドキュメント"  
 [DevtoolsOpen]: ./open.md "Microsoft Edge DevTools を開く |Microsoft ドキュメント"  
 
 [TwitterEdgedevtools]: https://www.twitter.com/EdgeDevTools "Microsoft Edge DevTools |Twitter"  
+
+[VisualstudioCode]: https://code.visualstudio.com "Visual Studio コード"  
+[VisualstudioCodeShortcutsKeyboardWindows]: https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf "Visual Studio のコードのキーボードショートカット (Windows |) |Visual Studio コード"  
 
 [WebhintMain]: https://webhint.io "web ヒント" 
