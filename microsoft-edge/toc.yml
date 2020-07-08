@@ -75,7 +75,7 @@
         - name: IE モード
           href: devtools-guide-chromium/ie-mode.md
         - name: 3D View (3D ビュー)
-          href: devtools-guide-chromium/3D-view.md
+          href: devtools-guide-chromium/3d-view/index.md
         - name: 初心者向け DevTools
           items:
             - name: HTML および DOM
