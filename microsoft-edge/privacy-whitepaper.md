@@ -3,18 +3,21 @@ description: Microsoft Edge プライバシー ホワイトペーパー
 title: Microsoft Edge プライバシー ホワイトペーパー
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 06/22/2020
+ms.date: 07/02/2020
 ms.topic: article
 ms.prod: microsoft-edge
 ms.technology: browser
 keywords: microsoft edge、プライバシー、ホワイトペーパー、信頼
 localization_priority: Priority
-ms.openlocfilehash: 26267f471bbbfdf078beb5d9a51b8e0dfa09a416
-ms.sourcegitcommit: a886f0b1aa558435353649515588756fe82e252a
+no-loc:
+- Cast
+- Google Cast
+ms.openlocfilehash: 4dc6b21a885438e8ddc0b2164386ec8d819b14af
+ms.sourcegitcommit: ec1d73e3addc47ed28ac5f9d61e4e1ee26b9e40d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "10758873"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "10860431"
 ---
 # Microsoft Edge プライバシー ホワイトペーパー  
 
@@ -60,9 +63,9 @@ Web ページにアクセスしてフォームを送信すると、Microsoft Edg
 
 ゲストモードを使用している場合、オートフィルは利用できません。新しいオートフィルエントリは追加されません。  InPrivate ブラウズでは、Microsoft Edge でオートフィルエントリが提供されますが、新しいオートフィルエントリは追加されません。  
 
-## キャスト  
+## Cast  
 
-Microsoft Edge の Cast では、Google Cast を使ってメディアを別の画面に表示することができます。  この機能は、 **[設定] やその他のオプション (...)**  >  からアクセスできます。**その他のツール**  > **メディアをデバイスにキャスト**します。  キャストは、既定で Microsoft Edge に含まれていないメディアルーター拡張機能に依存します。  初めて Cast を使用すると、Microsoft Edge でメディアルーター拡張機能をインストールする許可を求めるメッセージが表示されます。  
+Cast Microsoft Edge では、を使ってメディアを別の画面に表示することができ Google Cast ます。  この機能は、 **[設定] やその他のオプション (...)**  >  からアクセスできます。**その他のツール**  > ** Cast メディアをデバイスに**。  Cast 既定では、Microsoft Edge に含まれていないメディアルーター拡張機能に依存しています。  初めて使用する場合 Cast 、Microsoft Edge でメディアルーター拡張機能をインストールする許可を求めるメッセージが表示されます。  
 
 [**再起動**] を選択して、Chrome Web ストアからメディアルーターの拡張機能をインストールします。  Microsoft edge でメディアルーターの拡張機能を最新の状態に維持するために、microsoft edge は、microsoft edge のバージョンに関する基本的なデータを含む、Chrome Web ストアに更新要求を送信します。  Google は、メディアルーター拡張機能に関連付けられているデータを収集することがあります。  メディアルーター拡張機能をアンインストールするには、 `edge://flags` エッジオンデマンド**メディアルーター**に移動して無効にします。  これにより、Chrome Web ストアからの更新も停止されます。  拡張機能が非表示になり、**インストールされている拡張機能**の一覧に表示されません。  [**インストールされている拡張子**] の一覧で、に移動 `edge://extensions` します。  
 
@@ -193,8 +196,8 @@ Microsoft Edge は、[位置情報 API][W3cGeolocationApiMain]をサポートし
 
 アドレスバーの右側に、お客様の所在地が共有されているかどうかが示されます。  
 
-:::image type="complex" source="./media/whitepaper-media/geolocation2.png" alt-text="位置情報" lightbox="./media/whitepaper-media/geolocation2.png":::
-   位置情報  
+:::image type="complex" source="./media/whitepaper-media/geolocation2.png" alt-text="Location" lightbox="./media/whitepaper-media/geolocation2.png":::
+   Location  
 :::image-end:::  
 
 サイトで自分の場所の共有を許可している場合、Microsoft Edge は、IP アドレスや近くの Wi-fi アクセスポイントなどのローカルネットワーク情報を Microsoft の位置情報サービスに送信します。  Microsoft サービスは、情報を使用して位置情報の調整を行います。  位置情報の推定は、現在の場所を共有することに同意したサイトと共有されます。  Microsoft Edge で、要求元のサイトに Windows 10 のより正確な場所を提供するように指定するには、[**設定**プライバシーの場所] に移動し、[  >  **Privacy**  >  **Location** **このデバイス上の場所へのアクセスを許可**する] をオンにして、[**アプリが位置情報にアクセスすることを許可**します] を選びます。  [**このデバイスの位置情報へのアクセスを許可**する] をオフにして、**アプリが位置情報**の設定にアクセスすることを許可した場合、Microsoft Edge は、要求元のサイトに近い場所を提供します。  この情報は、以前に自分の位置情報を表示することを許可している場合にのみ、要求元のサイトで共有されます。  Windows の場所の設定の詳細については、「 [windows 10 の位置情報サービスとプライバシー][MicrosoftSupport4468240]」を参照してください。  
