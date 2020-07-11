@@ -14,11 +14,11 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/09/2020
 ms.locfileid: "10569531"
 ---
-# サポートされているマニフェストキー  
+# サポートされるマニフェスト キー  
 
 [!INCLUDE [deprecation-note](../includes/deprecation-note.md)]  
 
-すべての拡張機能には、manifest という名前の JSON 形式のマニフェストファイルがあります。 このファイルは、拡張子の名前からアクセス許可までの重要な情報を提供します。 以下のメモで指定されていない限り、Microsoft Edge のマニフェストプロパティは Chrome と同じ実装に従います。
+すべての拡張機能には、manifest.jsという名前の JSON 形式のマニフェストファイルがあります。 このファイルは、拡張子の名前からアクセス許可までの重要な情報を提供します。 以下のメモで指定されていない限り、Microsoft Edge のマニフェストプロパティは Chrome と同じ実装に従います。
 
 [Microsoft Edge の JSON マニフェストファイル](./supported-manifest-keys/json-manifest-example.md)の例を次に示します。
 
