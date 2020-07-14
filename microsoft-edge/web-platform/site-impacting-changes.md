@@ -7,12 +7,12 @@ ms.date: 06/29/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、互換性、web プラットフォーム
-ms.openlocfilehash: f6c19258c1e82e1ce90a21f6efc04496100c3401
-ms.sourcegitcommit: 0048eb692d49eab4755c0c3ef6866e6a9122d579
+ms.openlocfilehash: 7a443b36c554439c70017aeee52c92f591c566b8
+ms.sourcegitcommit: 1e33cd41e5afb2e6dbdc19353011ff6c2b019f9c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "10843978"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "10866051"
 ---
 # Microsoft Edge 向けのサイトの互換性に影響する変更点  
 
@@ -25,7 +25,7 @@ Web は、ユーザーエクスペリエンス、セキュリティ、プライ�
 | ページを離れる際の同期 XmlHttpRequest の禁止 | [Chrome + 1](#release-comments) \ (Edge v83 \) |  | この変更は、Microsoft Edge が基づく Chromium プロジェクトで行われています。  Chrome では、Microsoft Edge には、Edge 88 までこの変更を無効にするグループポリシーが用意されています。  この変更に関する Google の計画されたタイムラインを含む詳細については、 [Chrome Platform Status エントリ][ChromePlatformStatus4664843055398912]を確認してください。  |  
 | 通知のアクセス許可要求に関する微妙なプロンプトを表示する |  | カナリア v83、Dev v83 | ユーザーは、の通知要求を Quiet 状態にすることができるようになりました `edge://settings/content/notifications` 。  この設定を有効にすると、Microsoft Edge に、または API を使って今後の通知をユーザーに送信するよう要求する、サイトのアドレスバーに微妙な要求アイコンが表示され `Notifications` `Push` ます。  この微妙なアイコンは、ポップアップアクセス許可のプロンプトに代わるものです。  この動作は、通知のアクセス許可を要求するすべてのサイトの一部のユーザーに対して、カナリアと Dev では既定でオンになっています。  ユーザーはを無効にすることがあり `edge://settings/content/notifications` ます。  今後、Microsoft edge チームは、ユーザーの動作やその他の入力に基づいて、特定の状況でポップアップのプロンプトを表示することができます。  |  
 | TLS/1.0 と TLS/1.1 を既定で無効にする | Edge v84 |  | 影響を受けるサイトを見つけるために、フラグを設定することで、 `edge://flags/#display-legacy-tls-warnings` Microsoft Edge で従来の TLS プロトコルを必要とするページを読み込むときに、ブロックしない "セキュリティで保護されていない" という通知を表示することができます。  [Sslminversion][DeployedEdgePoliciesSSLMinVersion]グループポリシーでは、tls/1.0 および tls/1.1 の再有効化が許可されています。ポリシーは、Edge 88 まで利用できます。  |  
-| 混在したコンテンツのダウンロードをブロックする | [Chrome + 1](#release-comments) \ (Edge v85 \)  |  | この変更は、Microsoft Edge が基づく Chromium プロジェクトで行われています。  この変更に関する Google の計画されたタイムラインを含む詳細については、 [google セキュリティのブログエントリ][GoogleBlogSecurity20200206]を確認してください。  注意またはブロックするファイルの種類に関する Microsoft ロールアウトのスケジュールは、Chrome 後の1回のリリースで計画されています。  |  
+| 混在したコンテンツのダウンロードをブロックする | [Chrome + 1](#release-comments) \ (Edge v86 \)  |  | この変更は、Microsoft Edge が基づく Chromium プロジェクトで行われています。  この変更に関する Google の計画されたタイムラインを含む詳細については、 [google セキュリティのブログエントリ][GoogleBlogSecurity20200206]を確認してください。  注意またはブロックするファイルの種類に関する Microsoft ロールアウトのスケジュールは、Chrome 後の1回のリリースで計画されています。  |  
 | AppCache の廃止 | [Chrome + 1](#release-comments) \ (Edge v86 \)  |  | この変更は、Microsoft Edge が基づく Chromium プロジェクトで行われています。  詳細については、 [Web dev のドキュメント][WebDevAppCacheRemoval]を参照してください。  廃止の Microsoft ロールアウトスケジュールは、Chrome 以降のリリース1回で計画されています。  [Appcache OriginTrial Token][AppCacheOriginTrial]を要求すると、サイトはエッジ v90 まで廃止された API を引き続き使うことができます。 |  
 | Adobe Flash の削除 | Edge v88  |  | この変更は、Microsoft Edge が基づく Chromium プロジェクトで行われています。  詳細については、[アドビ Flash Chromium のロードマップ][ChromiumFlashRoadmapSupportRemoved]を確認してください。  | 
 ##### リリースコメント  

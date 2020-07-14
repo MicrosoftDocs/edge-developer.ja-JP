@@ -7,11 +7,12 @@ ms.date: 07/07/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools、実験
-ms.openlocfilehash: 19fd59c5dd9f18a681c69250fdcddb22e2796565
-ms.sourcegitcommit: f92bf0b50812b43228990b794611daa2144e431c
+ms.openlocfilehash: 6824b09ffc3c1f00c4a2f3000d84bf2c1be743d0
+ms.sourcegitcommit: 1e33cd41e5afb2e6dbdc19353011ff6c2b019f9c
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "10858055"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "10866044"
 ---
 # 試験的機能  
 
@@ -48,7 +49,7 @@ Microsoft Edge での試験的な機能 (またはオフ) を有効にするに�
 | [カスタムキーボードショートカットの [設定] タブを有効にする](#enable-custom-keyboard-shortcuts-settings-tab) | 84以降 |
 | [新しい CSS グリッドのデバッグ機能を有効にする](#enable-new-css-grid-debugging-features) | 85以降 |  
 | [パネル間でタブを移動できるようにサポートを有効にする](#enable-support-to-move-tabs-between-panels) | 85以降 |  
-| [Web ヒントを有効にする](#enable-webhint) | 85以降 |  
+| [Web ヒントを有効にする](#enable-webhint) | 85以降 | 
 
 ### カスタムキーボードショートカットの [設定] タブを有効にする
 

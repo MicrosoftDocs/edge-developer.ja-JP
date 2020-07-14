@@ -8,14 +8,14 @@ metadata:
   ms.topic: hub-page
   author: MSEdgeTeam
   ms.author: msedgedevrel
-  ms.date: 04/23/2020
-  localization_priority: Priority
-  ms.openlocfilehash: 52f768582f25f35f8b0b188cfc1a38edc7aac6c8
-  ms.sourcegitcommit: 3f625231067df343d5afbb3f47c1063982067bcb
+  ms.date: 07/10/2020
+  ms.localizationpriority: high
+  ms.openlocfilehash: 979a1a67291e7d0859b8978f32bdbe1e17bf27f6
+  ms.sourcegitcommit: 1e33cd41e5afb2e6dbdc19353011ff6c2b019f9c
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/26/2020
-  ms.locfileid: "10678219"
+  ms.lasthandoff: 07/13/2020
+  ms.locfileid: "10866058"
 highlightedContent:
   items:
   - title: Microsoft Edge をダウンロードする (正式な厩舎チャネル)
@@ -72,11 +72,11 @@ productDirectory:
     links:
     - url: https://techcommunity.microsoft.com/t5/Enterprise/bd-p/EdgeInsiderEnterprise
       text: エンタープライズ技術コミュニティ (Insider 優先)
-  - title: エンタープライズ向けの拡張機能
+  - title: エンタープライズ向け拡張機能
     imageSrc: /media/common/i_extensions.svg
     links:
     - url: /microsoft-edge/extensions-chromium/enterprise/match-patterns
-      text: マッチパターン
+      text: 一致パターン
     - url: /microsoft-edge/extensions-chromium/enterprise/hosting-and-updating
       text: ホスティングと更新
 conceptualContent:
@@ -96,7 +96,7 @@ conceptualContent:
       text: DevTools を開く
     - url: /microsoft-edge/devtools-guide-chromium/beginners/html
       itemType: reference
-      text: 初心者向けの DevTools
+      text: 初心者向け DevTools
     - url: /microsoft-edge/devtools-guide-chromium/css/index
       itemType: reference
       text: CSS
@@ -119,7 +119,7 @@ conceptualContent:
       text: 記憶域
     - url: /microsoft-edge/devtools-guide-chromium/command-menu/index
       itemType: reference
-      text: コマンドメニュー
+      text: コマンド メニュー
     - url: /microsoft-edge/devtools-guide-chromium/javascript/index
       itemType: reference
       text: JavaScript
@@ -142,7 +142,7 @@ conceptualContent:
       text: 濃色テーマ
     - url: /microsoft-edge/devtools-guide-chromium/workspaces/index
       itemType: reference
-      text: 作業
+      text: ワークスペース
     - url: /microsoft-edge/devtools-guide-chromium/shortcuts
       itemType: reference
       text: キーボード ショートカット
@@ -151,7 +151,7 @@ conceptualContent:
     - text: アクセシビリティ
       itemType: reference
       url: /microsoft-edge/accessibility
-    - text: DevTools Protocol (Chromium)
+    - text: DevTools プロトコル (Chromium)
       itemType: reference
       url: /microsoft-edge/devtools-protocol-chromium
     - text: WebDriver (Chromium)
@@ -163,10 +163,10 @@ conceptualContent:
     - text: 相互運用機能 (サイトの互換性)
       itemType: reference
       url: /microsoft-edge/web-platform/site-impacting-changes
-    - text: web ヒント
+    - text: Webhint
       itemType: reference
       url: https://webhint.io/docs/user-guide
-    - text: パフォーマンスの分析
+    - text: パフォーマンス分析
       itemType: reference
       url: /microsoft-edge/performance-analysis
   - title: 拡張機能の概要
@@ -195,7 +195,7 @@ conceptualContent:
       text: 拡張子配布の別の方法
     - url: /microsoft-edge/extensions-chromium/developer-guide/native-messaging
       itemType: reference
-      text: ネイティブメッセージ
+      text: ネイティブ メッセージング
   - title: '拡張機能: Microsoft ストアに公開する'
     links:
     - url: /microsoft-edge/extensions-chromium/publish/publish-extension
@@ -206,7 +206,7 @@ conceptualContent:
       text: 開発者アカウントを開く
     - url: /microsoft-edge/extensions-chromium/publish/upload-video
       itemType: reference
-      text: YouTube のビデオをアップロードする
+      text: YouTube ビデオをアップロードする
     - url: /microsoft-edge/extensions-chromium/publish/update
       itemType: reference
       text: 拡張機能の一覧を更新する
@@ -217,10 +217,10 @@ conceptualContent:
     links:
     - url: /microsoft-edge/extensions-chromium/store-policies/csp
       itemType: reference
-      text: コンテンツセキュリティポリシー
+      text: コンテンツ セキュリティ ポリシー
     - url: /microsoft-edge/extensions-chromium/store-policies/developer-policies
       itemType: reference
-      text: Microsoft Edge のアドオンカタログ開発者ポリシー
+      text: Microsoft Edge アドオン カタログ開発者ポリシー
   - title: プログレッシブ Web アプリ
     links:
     - url: /microsoft-edge/progressive-web-apps-chromium/index
@@ -245,27 +245,27 @@ additionalContent:
   - items:
     - title: リファレンス
       links:
-      - text: Microsoft Edge ユーザーエージェント文字列
+      - text: Microsoft Edge ユーザー エージェント文字列
         url: /microsoft-edge/web-platform/user-agent-string
       - text: プラットフォームの状態
         url: https://developer.microsoft.com/microsoft-edge/platform/status
       - text: Visual Studio Code
         url: /microsoft-edge/visual-studio-code/index
       - url: /microsoft-edge/privacy-whitepaper
-        text: プライバシーに関する白書
+        text: プライバシーに関するホワイトペーパー
     - title: Microsoft Edge のレガシードキュメント
       links:
       - text: 開発ガイド (EdgeHTML)
         url: /microsoft-edge/dev-guide
       - text: DevTools (EdgeHTML)
         url: /microsoft-edge/devtools-guide
-      - text: DevTools Protocol (EdgeHTML)
+      - text: DevTools プロトコル (EdgeHTML)
         url: /microsoft-edge/devtools-protocol/index
       - text: 拡張機能 (EdgeHTML)
         url: /microsoft-edge/extensions/index
       - text: PWAs の概要 (EdgeHTML)
         url: /microsoft-edge/progressive-web-apps-edgehtml/get-started
-      - text: JavaScript ランタイムホスティング
+      - text: JavaScript ランタイムのホスティング
         url: /microsoft-edge/hosting/javascript-runtime-hosting
       - text: WebVR 開発者向けガイド
         url: /microsoft-edge/webvr/index
