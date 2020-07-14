@@ -7,11 +7,12 @@ ms.date: 07/07/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools、実験
-ms.openlocfilehash: 19fd59c5dd9f18a681c69250fdcddb22e2796565
-ms.sourcegitcommit: f92bf0b50812b43228990b794611daa2144e431c
+ms.openlocfilehash: 6824b09ffc3c1f00c4a2f3000d84bf2c1be743d0
+ms.sourcegitcommit: 1e33cd41e5afb2e6dbdc19353011ff6c2b019f9c
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "10858055"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "10866044"
 ---
 # <span data-ttu-id="47e25-104">試験的機能</span><span class="sxs-lookup"><span data-stu-id="47e25-104">Experimental features</span></span>  
 
@@ -48,7 +49,7 @@ ms.locfileid: "10858055"
 | [<span data-ttu-id="47e25-126">カスタムキーボードショートカットの [設定] タブを有効にする</span><span class="sxs-lookup"><span data-stu-id="47e25-126">Enable custom keyboard shortcuts settings tab</span></span>](#enable-custom-keyboard-shortcuts-settings-tab) | <span data-ttu-id="47e25-127">84以降</span><span class="sxs-lookup"><span data-stu-id="47e25-127">84 or later</span></span> |
 | [<span data-ttu-id="47e25-128">新しい CSS グリッドのデバッグ機能を有効にする</span><span class="sxs-lookup"><span data-stu-id="47e25-128">Enable new CSS grid debugging features</span></span>](#enable-new-css-grid-debugging-features) | <span data-ttu-id="47e25-129">85以降</span><span class="sxs-lookup"><span data-stu-id="47e25-129">85 or later</span></span> |  
 | [<span data-ttu-id="47e25-130">パネル間でタブを移動できるようにサポートを有効にする</span><span class="sxs-lookup"><span data-stu-id="47e25-130">Enable support to move tabs between panels</span></span>](#enable-support-to-move-tabs-between-panels) | <span data-ttu-id="47e25-131">85以降</span><span class="sxs-lookup"><span data-stu-id="47e25-131">85 or later</span></span> |  
-| [<span data-ttu-id="47e25-132">Web ヒントを有効にする</span><span class="sxs-lookup"><span data-stu-id="47e25-132">Enable webhint</span></span>](#enable-webhint) | <span data-ttu-id="47e25-133">85以降</span><span class="sxs-lookup"><span data-stu-id="47e25-133">85 or later</span></span> |  
+| [<span data-ttu-id="47e25-132">Web ヒントを有効にする</span><span class="sxs-lookup"><span data-stu-id="47e25-132">Enable webhint</span></span>](#enable-webhint) | <span data-ttu-id="47e25-133">85以降</span><span class="sxs-lookup"><span data-stu-id="47e25-133">85 or later</span></span> | 
 
 ### <span data-ttu-id="47e25-134">カスタムキーボードショートカットの [設定] タブを有効にする</span><span class="sxs-lookup"><span data-stu-id="47e25-134">Enable custom keyboard shortcuts settings tab</span></span>
 
