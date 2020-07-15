@@ -1,40 +1,40 @@
 ---
-description: Microsoft Edge WebView2 コントロールを使用して Win32 アプリの web コンテンツをホストする
-title: Win32 アプリ用 Microsoft Edge WebView2
+description: Microsoft Edge WebView2 コントロールを使用してネイティブアプリケーションに web 技術 (HTML、CSS、JavaScript) を埋め込む
+title: WebView2 について CoreWebView2Deferral
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 06/05/2020
+ms.date: 07/08/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.technology: webview
-keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Controller、browser control、edge html
-ms.openlocfilehash: 935e8edb4db54e7bbb707cb2dc704ba312ed3196
-ms.sourcegitcommit: 8dca1c1367853e45a0a975bc89b1818adb117bd4
+keywords: WebView2、Core、WebView2、webview、.net、wpf、winforms、アプリ、edge、CoreWebView2、CoreWebView2Controller、browser control、edge html、Microsoft の WebView2。 CoreWebView2Deferral。
+ms.openlocfilehash: 77a3540a64c9894f10cb0c03998dafda90e4f15b
+ms.sourcegitcommit: f6764f57aed9ab7229e4eb6cc8851d0cea667403
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "10698967"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "10878933"
 ---
-# <span data-ttu-id="a79b9-104">WebView2 クラス (CoreWebView2Deferral クラス)</span><span class="sxs-lookup"><span data-stu-id="a79b9-104">Microsoft.Web.WebView2.Core.CoreWebView2Deferral class</span></span> 
+# <span data-ttu-id="1ef4c-104">WebView2 クラス (CoreWebView2Deferral クラス)</span><span class="sxs-lookup"><span data-stu-id="1ef4c-104">Microsoft.Web.WebView2.Core.CoreWebView2Deferral class</span></span> 
 
-<span data-ttu-id="a79b9-105">名前空間: WebView2 () </span><span class="sxs-lookup"><span data-stu-id="a79b9-105">Namespace: Microsoft.Web.WebView2.Core</span></span>\
-<span data-ttu-id="a79b9-106">"WebView2" アセンブリを実行します。</span><span class="sxs-lookup"><span data-stu-id="a79b9-106">Assembly: Microsoft.Web.WebView2.Core.dll</span></span>
+<span data-ttu-id="1ef4c-105">名前空間: WebView2 () </span><span class="sxs-lookup"><span data-stu-id="1ef4c-105">Namespace: Microsoft.Web.WebView2.Core</span></span>\
+<span data-ttu-id="1ef4c-106">アセンブリ: Microsoft.Web.WebView2.Core.dll</span><span class="sxs-lookup"><span data-stu-id="1ef4c-106">Assembly: Microsoft.Web.WebView2.Core.dll</span></span>
 
-<span data-ttu-id="a79b9-107">このクラスは、GetDeferral メソッドによる保留の取得をサポートするイベント引数で保留を完了するために使われます。</span><span class="sxs-lookup"><span data-stu-id="a79b9-107">This class is used to complete deferrals on event args that support getting deferrals via their GetDeferral method.</span></span>
+<span data-ttu-id="1ef4c-107">このクラスは、GetDeferral メソッドによる保留の取得をサポートするイベント引数で保留を完了するために使われます。</span><span class="sxs-lookup"><span data-stu-id="1ef4c-107">This class is used to complete deferrals on event args that support getting deferrals via their GetDeferral method.</span></span>
 
-## <span data-ttu-id="a79b9-108">まとめ</span><span class="sxs-lookup"><span data-stu-id="a79b9-108">Summary</span></span>
+## <span data-ttu-id="1ef4c-108">まとめ</span><span class="sxs-lookup"><span data-stu-id="1ef4c-108">Summary</span></span>
 
- <span data-ttu-id="a79b9-109">Members</span><span class="sxs-lookup"><span data-stu-id="a79b9-109">Members</span></span>                        | <span data-ttu-id="a79b9-110">説明</span><span class="sxs-lookup"><span data-stu-id="a79b9-110">Descriptions</span></span>
+ <span data-ttu-id="1ef4c-109">Members</span><span class="sxs-lookup"><span data-stu-id="1ef4c-109">Members</span></span>                        | <span data-ttu-id="1ef4c-110">説明</span><span class="sxs-lookup"><span data-stu-id="1ef4c-110">Descriptions</span></span>
 --------------------------------|---------------------------------------------
-[<span data-ttu-id="a79b9-111">Complete</span><span class="sxs-lookup"><span data-stu-id="a79b9-111">Complete</span></span>](#complete) | <span data-ttu-id="a79b9-112">関連付けられている遅延イベントを完了します。</span><span class="sxs-lookup"><span data-stu-id="a79b9-112">Completes the associated deferred event.</span></span>
+[<span data-ttu-id="1ef4c-111">Complete</span><span class="sxs-lookup"><span data-stu-id="1ef4c-111">Complete</span></span>](#complete) | <span data-ttu-id="1ef4c-112">関連付けられている遅延イベントを完了します。</span><span class="sxs-lookup"><span data-stu-id="1ef4c-112">Completes the associated deferred event.</span></span>
 
-## <span data-ttu-id="a79b9-113">Members</span><span class="sxs-lookup"><span data-stu-id="a79b9-113">Members</span></span>
+## <span data-ttu-id="1ef4c-113">Members</span><span class="sxs-lookup"><span data-stu-id="1ef4c-113">Members</span></span>
 
-#### <span data-ttu-id="a79b9-114">Complete</span><span class="sxs-lookup"><span data-stu-id="a79b9-114">Complete</span></span> 
+#### <span data-ttu-id="1ef4c-114">Complete</span><span class="sxs-lookup"><span data-stu-id="1ef4c-114">Complete</span></span> 
 
-<span data-ttu-id="a79b9-115">関連付けられている遅延イベントを完了します。</span><span class="sxs-lookup"><span data-stu-id="a79b9-115">Completes the associated deferred event.</span></span>
+<span data-ttu-id="1ef4c-115">関連付けられている遅延イベントを完了します。</span><span class="sxs-lookup"><span data-stu-id="1ef4c-115">Completes the associated deferred event.</span></span>
 
-> <span data-ttu-id="a79b9-116">パブリックの void[完了](#complete)()</span><span class="sxs-lookup"><span data-stu-id="a79b9-116">public void [Complete](#complete)()</span></span>
+> <span data-ttu-id="1ef4c-116">パブリックの void[完了](#complete)()</span><span class="sxs-lookup"><span data-stu-id="1ef4c-116">public void [Complete](#complete)()</span></span>
 
-<span data-ttu-id="a79b9-117">完了は、各繰延が行われるたびに1回のみ呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="a79b9-117">Complete should only be called once for each deferral taken.</span></span>
+<span data-ttu-id="1ef4c-117">完了は、各繰延が行われるたびに1回のみ呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="1ef4c-117">Complete should only be called once for each deferral taken.</span></span>
 
