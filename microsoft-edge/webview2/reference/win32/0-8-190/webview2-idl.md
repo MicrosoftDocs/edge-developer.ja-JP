@@ -1,21 +1,21 @@
 ---
 description: Microsoft Edge WebView2 コントロールを使用して Win32 アプリの web コンテンツをホストする
-title: Win32 アプリ用 Microsoft Edge WebView2
+title: 0.8.355-WebView2 Win32 C++ グローバル
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 12/09/2019
+ms.date: 07/14/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge
-ms.openlocfilehash: 58b32c1fe46183e55b8ac0bb4f4264b1f38e6eeb
-ms.sourcegitcommit: 07cda56425e5fdf90eeb3972e17041261bf720cd
+ms.openlocfilehash: 5ee2461ca1b0aeb0a5f0d23f0918561065570523
+ms.sourcegitcommit: f6764f57aed9ab7229e4eb6cc8851d0cea667403
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "10654165"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "10877988"
 ---
-# 関数 
+# 0.8.355-グローバル 
 
 > [!NOTE]
 > このインターフェイスは、SDK バージョン0.8.355 後のリリースで変更される可能性があります。 最新 API リファレンスについては、[リファレンス](../../../webview2-api-reference.md)を参照してください。
@@ -37,7 +37,7 @@ ms.locfileid: "10654165"
 
 [DLL エクスポート] を使用して、カスタムバージョンの Edge、ユーザーデータディレクトリ、ブラウザーの追加スイッチを使って WebView2 環境を作成します。
 
-browserExecutableFolder は、埋め込まれた端を含むフォルダーへの相対パスです。 埋め込まれたエッジを取得するには、インストールされている Edge のフォルダーという名前のバージョン (インストールされている 73.0.52.0 Edge の 73.0.52.0 sub フォルダーなど) をコピーします。 このフォルダーには、msedge、msedge などが含まれている必要があります。BrowserExecutableFolder に null または空の文字列を使用してコンピューターにインストールされている Edge を使用して、コンピューターにインストールされている microsoft Edge の互換性のあるバージョンを検索します。この場合は、ユーザーごとに最初にインストールしてから、コンピューターごとにインストールします。
+browserExecutableFolder は、埋め込まれた端を含むフォルダーへの相対パスです。 埋め込まれたエッジを取得するには、インストールされている Edge のフォルダーという名前のバージョン (インストールされている 73.0.52.0 Edge の 73.0.52.0 sub フォルダーなど) をコピーします。 このフォルダーには、msedge.exe、msedge.dll などを設定する必要があります。BrowserExecutableFolder に null または空の文字列を使用してコンピューターにインストールされている Edge を使用して、コンピューターにインストールされている microsoft Edge の互換性のあるバージョンを検索します。この場合は、ユーザーごとに最初にインストールしてから、コンピューターごとにインストールします。
 
 既定のチャネル検索順序は、安定、ベータ、dev、カナリアです。 WEBVIEW2_RELEASE_CHANNEL_PREFERENCE 環境変数または該当する releaseChannelPreference レジストリ値に1を指定すると、チャネルの検索順序が逆になります。
 
@@ -74,7 +74,7 @@ WEBVIEW2_PIPE_FOR_SCRIPT_DEBUGGER
 
 空でない値が含まれる場合は、複数の WebViews を使うホストアプリケーションもサポートするスクリプトデバッガーで WebView が起動されていることを示します。 この値は、ホストアプリケーションによって新しい WebView が作成されるときに、開かれて書き込まれる名前付きパイプの識別子として使われます。 このペイロードは、リモートデバッグポートの JSON ターゲットと一致し、外部デバッガーが特定の WebView インスタンスにアタッチするために使うことができます。 デバッガーによって作成されるパイプの形式は、次のようになり `\\.\pipe\WebView2\Debugger\{app_name}\{pipe_name}` ます。
 
-* `{app_name}` は、ホストアプリケーションの exe ファイル名です。例 WebView2Example
+* `{app_name}` は、ホストアプリケーションの exe ファイル名 (WebView2Example.exe など) です。
 
 * `{pipe_name}` は WEBVIEW2_PIPE_FOR_SCRIPT_DEBUGGER の値に設定されています。
 

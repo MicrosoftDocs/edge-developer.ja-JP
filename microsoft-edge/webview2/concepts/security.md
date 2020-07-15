@@ -3,17 +3,17 @@ description: セキュリティで保護された WebView2 アプリケーショ
 title: セキュリティで保護された WebView2 アプリケーションを開発するためのベストプラクティス
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 05/21/2020
+ms.date: 07/14/2020
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Host、browser control、edge html、security
-ms.openlocfilehash: e71dbe9ad98b7156d8888da074e30a96683469d5
-ms.sourcegitcommit: e49b86082da884299fdd485d3311d63a7688c0d0
+ms.openlocfilehash: 998bcf056e6350efc66880a9ad520f6d969af2f1
+ms.sourcegitcommit: f6764f57aed9ab7229e4eb6cc8851d0cea667403
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "10755403"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "10879145"
 ---
 # セキュリティで保護された WebView2 アプリケーションを開発するためのベストプラクティス
 
@@ -25,14 +25,14 @@ ms.locfileid: "10755403"
 
 2. 汎用プロキシを使う代わりに、特定の web メッセージとホストオブジェクトの操作を設計します。
 
-3. 次のように[ICoreWebView2Settings](../reference/win32/0-9-538/icorewebview2settings) (Win32) または[CoreWebView2Settings](../reference/dotnet/0-9-538/microsoft-web-webview2-core-corewebview2settings) (.net) を変更して、web コンテンツの機能を制限します。
+3. 次のように[ICoreWebView2Settings](../reference/win32/0-9-538/icorewebview2settings.md) (Win32) または[CoreWebView2Settings](../reference/dotnet/0-9-538/microsoft-web-webview2-core-corewebview2settings.md) (.net) を変更して、web コンテンツの機能を制限します。
     - `AreHostObjectsAllowed` `false` Web コンテンツがホストオブジェクトにアクセスすることを想定していない場合は、をに設定します。
     - `IsWebMessageEnabled` `false` Web コンテンツがネイティブアプリケーションに web メッセージを投稿しない場合は、をに設定します。 
     - `IsScriptEnabled` `false` Web コンテンツによってスクリプトが実行されない場合 (静的 html コンテンツを表示する場合など) に設定します。
     - `AreDefaultScriptDialogsEnabled` `false` Web コンテンツが表示されない場合、またはダイアログボックスが表示されない場合は、をに設定 `alert` `prompt` します。
 
-4.  `NavigationStarting` `FrameNavigationStarting` 次に示すように、イベントを使用して、新しいページの原点に基づいて設定を更新します。
-    1.  アプリケーションが特定のページに移動できないようにするには、これらのイベントを使用して、ページまたはフレームのナビゲーションを確認してからブロックします。 
-    2.  新しいページに移動するときは、上で説明したように、 [ICoreWebView2Settings](../reference/win32/0-9-538/icorewebview2settings) (Win32) または[CoreWebView2Settings](../reference/dotnet/0-9-538/microsoft-web-webview2-core-corewebview2settings) (.net) のプロパティ値の調整が必要になることがあります。
+4. `NavigationStarting` `FrameNavigationStarting` 次に示すように、イベントを使用して、新しいページの原点に基づいて設定を更新します。
+    1. アプリケーションが特定のページに移動できないようにするには、これらのイベントを使用して、ページまたはフレームのナビゲーションを確認してからブロックします。 
+    2. 新しいページに移動するときは、上で説明したように、 [ICoreWebView2Settings](../reference/win32/0-9-538/icorewebview2settings.md) (Win32) または[CoreWebView2Settings](../reference/dotnet/0-9-538/microsoft-web-webview2-core-corewebview2settings.md) (.net) のプロパティ値の調整が必要になることがあります。
 
 5. 新しいドキュメントに移動するときは、 `ContentLoading` を使用して、公開されているホストオブジェクトを削除し `RemoveHostObjectFromScript` ます。 

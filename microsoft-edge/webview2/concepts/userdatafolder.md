@@ -3,17 +3,17 @@ description: WebView2 アプリケーションでユーザーデータフォル�
 title: WebView2 アプリケーションでユーザーデータフォルダーを管理します。
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 06/02/2020
+ms.date: 07/14/2020
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Host、browser control、edge html、ユーザーデータフォルダー
-ms.openlocfilehash: a7a6fd620cfb417e349a03159204ceb68998745e
-ms.sourcegitcommit: e49b86082da884299fdd485d3311d63a7688c0d0
+ms.openlocfilehash: 870361e5f3edaea776538216c05e4114dc614342
+ms.sourcegitcommit: f6764f57aed9ab7229e4eb6cc8851d0cea667403
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "10755408"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "10879157"
 ---
 # ユーザーデータフォルダーの管理
 
@@ -28,7 +28,7 @@ WebView2 アプリケーションは、cookie、アクセス許可、キャッ�
 
 ## ユーザーデータフォルダーを作成する
 
-ユーザーデータフォルダーの場所を指定するには、 `userDataFolder` [ICoreWebView2Environment](../reference/win32/0-9-538/icorewebview2environment) (Win32) または[CoreWebView2Environment](../reference/dotnet/0-9-538/microsoft-web-webview2-core-corewebview2environment) (.net) を呼び出すときにパラメーターを含めます。 作成後、WebView2 コントロールからのブラウザーデータは、のサブフォルダーに保存され `userDataFolder` ます。 `userDataFolder`指定しない場合、WebView2 は次のように既定の場所にユーザーデータフォルダーを作成します。
+ユーザーデータフォルダーの場所を指定するには、 `userDataFolder` [ICoreWebView2Environment](../reference/win32/0-9-538/icorewebview2environment.md) (Win32) または[CoreWebView2Environment](../reference/dotnet/0-9-538/microsoft-web-webview2-core-corewebview2environment.md) (.net) を呼び出すときにパラメーターを含めます。 作成後、WebView2 コントロールからのブラウザーデータは、のサブフォルダーに保存され `userDataFolder` ます。 `userDataFolder`指定しない場合、WebView2 は次のように既定の場所にユーザーデータフォルダーを作成します。
 
 * パッケージ化された Windows ストアアプリの場合、既定のユーザーフォルダーは `ApplicationData\LocalFolder` パッケージのフォルダー内のサブフォルダーです。
 * 既存のデスクトップアプリの場合、既定のユーザーデータフォルダーは、アプリケーションの exe パスになり `.WebView2` ます。 既定の代わりに、ユーザーデータフォルダーを指定して、他のすべてのアプリデータが保存されているフォルダーと同じフォルダーに作成することをお勧めします。
@@ -50,14 +50,14 @@ WebView2 アプリケーションは、cookie、アクセス許可、キャッ�
 
 WebView2 コントロールでは、同じユーザーデータフォルダーを共有することができます。
 
-* 1つのブラウザープロセスで実行して、[システムリソースを最適化](https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/0-9-538/icorewebview2#process-model)します。
+* 1つのブラウザープロセスで実行して、[システムリソースを最適化](../reference/win32/0-9-538/icorewebview2.md#process-model)します。
 * ブラウザー履歴とキャッシュリソースを共有します。 
 
 ユーザーデータフォルダーを共有する場合は、次の点を考慮してください。 
 
-1. [Add_NewBrowserVersionAvailable](../reference/win32/0-9-538/icorewebview2environment#add_newbrowserversionavailable) (Win32) または[NewexitserverWebView2 available](../reference/dotnet/0-9-538/microsoft-web-webview2-core-corewebview2environment#newbrowserversionavailable) (.net) イベントを使用してブラウザーのバージョンを更新するために、コントロールを再作成する場合は、ブラウザープロセスが終了して、同じユーザーデータフォルダーを共有する WebView2 コントロールを閉じることを確認します。 ブラウザープロセスのプロセス id を取得するには、 `BrowserProcessId` WebView2 コントロールのプロパティを使います。
+1. [Add_NewBrowserVersionAvailable](../reference/win32/0-9-538/icorewebview2environment.md#add_newbrowserversionavailable) (Win32) または[NewexitserverWebView2 available](../reference/dotnet/0-9-538/microsoft-web-webview2-core-corewebview2environment.md#newbrowserversionavailable) (.net) イベントを使用してブラウザーのバージョンを更新するために、コントロールを再作成する場合は、ブラウザープロセスが終了して、同じユーザーデータフォルダーを共有する WebView2 コントロールを閉じることを確認します。 ブラウザープロセスのプロセス id を取得するには、 `BrowserProcessId` WebView2 コントロールのプロパティを使います。
 
-2. 同じユーザーデータフォルダーを共有する WebView2 コントロールでは、 [ICoreWebView2Environment](../reference/win32/0-9-538/icorewebview2environment) (Win32) または[CoreWebView2Environment](../reference/dotnet/0-9-538/microsoft-web-webview2-core-corewebview2environment) (.net) に同じオプションを使用する必要があります。 満たされていない場合、WebView2 の作成は失敗 `HRESULT_FROM_WIN32(ERROR_INVALID_STATE)` します。 
+2. 同じユーザーデータフォルダーを共有する WebView2 コントロールでは、 [ICoreWebView2Environment](../reference/win32/0-9-538/icorewebview2environment.md) (Win32) または[CoreWebView2Environment](../reference/dotnet/0-9-538/microsoft-web-webview2-core-corewebview2environment.md) (.net) に同じオプションを使用する必要があります。 満たされていない場合、WebView2 の作成は失敗 `HRESULT_FROM_WIN32(ERROR_INVALID_STATE)` します。 
 
 アプリケーションのさまざまな部分を分離したり、WebView2 コントロール間でデータを共有したりする必要がない場合は、別のユーザーデータフォルダーを使用することができます。 たとえば、アプリケーションは2つの WebView2 コントロールで構成されています。1つはアドバタイズを表示し、もう一方はアプリケーションのコンテンツを表示することです。 このシナリオでは、開発者は、WebView2 コントロールごとに異なるユーザーデータフォルダーを使うことができます。 
 

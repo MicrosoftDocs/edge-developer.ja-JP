@@ -1,27 +1,27 @@
 ---
 description: Microsoft Edge WebView2 コントロールを使用して Win32 アプリの web コンテンツをホストする
-title: Win32 アプリ用 Microsoft Edge WebView2
+title: 0.9.515-WebView2 (CoreWebView2Environment の場合)
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 06/05/2020
+ms.date: 07/14/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Controller、browser control、edge html
-ms.openlocfilehash: 986b1dc2870375243a0ee664262216105edd95a8
-ms.sourcegitcommit: 3f8c8a5643e416b0851254833f9771192883ec45
+ms.openlocfilehash: a3e8a958a70820bf32bd3a76acc9ee503f568438
+ms.sourcegitcommit: f6764f57aed9ab7229e4eb6cc8851d0cea667403
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "10699501"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "10877757"
 ---
-# WebView2 クラス (CoreWebView2Environment クラス) 
+# 0.9.515 クラスの WebView2 クラス (CoreWebView2Environment) 
 
 > [!NOTE]
 > この参照は、SDK バージョン0.9.515 後のリリースで変更される可能性があります。 最新 API リファレンスについては、 [WEBVIEW2 api リファレンス](../../../webview2-api-reference.md)を参照してください。
 
 名前空間: WebView2 () \
-"WebView2" アセンブリを実行します。
+アセンブリ: Microsoft.Web.WebView2.Core.dll
 
 これは、WebView2 環境を表します。
 

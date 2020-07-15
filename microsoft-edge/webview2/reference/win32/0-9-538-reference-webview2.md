@@ -1,21 +1,21 @@
 ---
-description: Microsoft Edge WebView 2 コントロールを使用して Win32 アプリの web コンテンツをホストする
-title: Win32 アプリの Microsoft Edge WebView 2
+description: Microsoft Edge WebView2 コントロールを使用してネイティブアプリケーションに web 技術 (HTML、CSS、JavaScript) を埋め込む
+title: WebView2 Win32 C++ リファレンス
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 06/08/2020
+ms.date: 07/14/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Controller、browser control、edge html
-ms.openlocfilehash: f2f379b5c30d1e0cfbdeccdcbf495728febc6902
-ms.sourcegitcommit: 8dca1c1367853e45a0a975bc89b1818adb117bd4
+ms.openlocfilehash: 59302f8a1c6f38f2e5688b05faa79d97d51b5409
+ms.sourcegitcommit: f6764f57aed9ab7229e4eb6cc8851d0cea667403
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "10699103"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "10879152"
 ---
-# Reference (WebView2)  
+# Reference (WebView2 Win32 C++)  
 
 Microsoft Edge WebView2 コントロールを使用すると、 [Microsoft edge \ (Chromium \)](https://www.microsoftedgeinsider.com)を使ってアプリケーションの web コンテンツをレンダリングエンジンとしてホストすることができます。  詳細については、「 [Microsoft Edge WebView2 の概要](../../index.md)」および「 [WebView2 の使用を開始](../../gettingstarted/win32.md)する」を参照してください。  [ICoreWebView2](0-9-538/ICoreWebView2.md)は、API の詳細を理解するのに最適な場所です。  
 
