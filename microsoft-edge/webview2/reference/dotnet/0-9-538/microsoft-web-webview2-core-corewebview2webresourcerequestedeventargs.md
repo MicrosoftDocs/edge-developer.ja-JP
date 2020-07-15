@@ -1,24 +1,24 @@
 ---
-description: Microsoft Edge WebView2 コントロールを使用して Win32 アプリの web コンテンツをホストする
-title: Win32 アプリ用 Microsoft Edge WebView2
+description: Microsoft Edge WebView2 コントロールを使用してネイティブアプリケーションに web 技術 (HTML、CSS、JavaScript) を埋め込む
+title: WebView2 について CoreWebView2WebResourceRequestedEventArgs
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 06/05/2020
+ms.date: 07/08/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.technology: webview
-keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Controller、browser control、edge html
-ms.openlocfilehash: 3d85b1116a3f75058bda59f1c374700555b42a5e
-ms.sourcegitcommit: 8dca1c1367853e45a0a975bc89b1818adb117bd4
+keywords: WebView2、Core、WebView2、webview、.net、wpf、winforms、アプリ、edge、CoreWebView2、CoreWebView2Controller、browser control、edge html、Microsoft の WebView2。 CoreWebView2WebResourceRequestedEventArgs。
+ms.openlocfilehash: 53cc31bc714417ab902fa8fdef9fd83f80871f10
+ms.sourcegitcommit: f6764f57aed9ab7229e4eb6cc8851d0cea667403
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "10699084"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "10879668"
 ---
 # WebView2 クラス (CoreWebView2WebResourceRequestedEventArgs クラス) 
 
 名前空間: WebView2 () \
-"WebView2" アセンブリを実行します。
+アセンブリ: Microsoft.Web.WebView2.Core.dll
 
 WebResourceRequested イベントのイベント引数。
 

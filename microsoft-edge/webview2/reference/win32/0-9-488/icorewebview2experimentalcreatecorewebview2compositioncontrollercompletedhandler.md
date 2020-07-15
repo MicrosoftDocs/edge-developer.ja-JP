@@ -1,21 +1,21 @@
 ---
 description: Microsoft Edge WebView2 コントロールを使用して Win32 アプリの web コンテンツをホストする
-title: Win32 アプリ用 Microsoft Edge WebView2
+title: 0.9.515-WebView2 Win32 C++ ICoreWebView2ExperimentalCreateCoreWebView2CompositionControllerCompletedHandler
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 05/07/2020
+ms.date: 07/14/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Controller、browser control、edge html
-ms.openlocfilehash: 91c4e7885526def5de6fd1910a4a6f06c6a6953a
-ms.sourcegitcommit: 07cda56425e5fdf90eeb3972e17041261bf720cd
+ms.openlocfilehash: 9aa9a18701621ca78b74b12340ef5132953fbd2b
+ms.sourcegitcommit: f6764f57aed9ab7229e4eb6cc8851d0cea667403
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "10654258"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "10880669"
 ---
-# インターフェイス ICoreWebView2ExperimentalCreateCoreWebView2CompositionControllerCompletedHandler 
+# 0.9.515-インターフェイス ICoreWebView2ExperimentalCreateCoreWebView2CompositionControllerCompletedHandler 
 
 > [!NOTE]
 > これは、プレリリース SDK バージョン0.9.488 に同梱されている実験的な API です。

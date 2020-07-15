@@ -1,21 +1,21 @@
 ---
 description: Microsoft Edge WebView2 コントロールを使用して Win32 アプリの web コンテンツをホストする
-title: Win32 アプリ用 Microsoft Edge WebView2
+title: 0.9.515-WebView2 Win32 C++ ICoreWebView2NavigationCompletedEventArgs
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 04/28/2020
+ms.date: 07/14/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Controller、browser control、edge html
-ms.openlocfilehash: 83f55e19c8c8c0f2fb075ff47e95e34be27c6602
-ms.sourcegitcommit: 8dca1c1367853e45a0a975bc89b1818adb117bd4
+ms.openlocfilehash: c13d0625669d6303c115c3d415d12278cfbe8320
+ms.sourcegitcommit: f6764f57aed9ab7229e4eb6cc8851d0cea667403
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "10697337"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "10880501"
 ---
-# インターフェイス ICoreWebView2NavigationCompletedEventArgs 
+# 0.9.515-インターフェイス ICoreWebView2NavigationCompletedEventArgs 
 
 > [!NOTE]
 > この参照は、SDK バージョン0.9.515 後のリリースで変更される可能性があります。 最新 API リファレンスについては、 [WEBVIEW2 api リファレンス](../../../webview2-api-reference.md)を参照してください。

@@ -1,24 +1,24 @@
 ---
-description: Microsoft Edge WebView2 コントロールを使用して Win32 アプリの web コンテンツをホストする
-title: Win32 アプリ用 Microsoft Edge WebView2
+description: Microsoft Edge WebView2 コントロールを使用してネイティブアプリケーションに web 技術 (HTML、CSS、JavaScript) を埋め込む
+title: WebView2 を WebView2 します。
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 05/27/2020
+ms.date: 07/08/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.technology: webview
-keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Controller、browser control、edge html
-ms.openlocfilehash: a0030e1a2a77d65963bd8333f2071485ab2fe308
-ms.sourcegitcommit: 83efa259be89cc773a82751242495a0a919d54cd
+keywords: WebView2、Core、WebView2、webview、.net、wpf、winforms、アプリ、edge、CoreWebView2、CoreWebView2Controller、browser control、edge html、Microsoft のように指定します。
+ms.openlocfilehash: 2dd7bf1035cf5254f4668070d56d2bd2405f1276
+ms.sourcegitcommit: f6764f57aed9ab7229e4eb6cc8851d0cea667403
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "10687798"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "10880263"
 ---
 # WebView2 クラスを WebView2 します。 
 
 名前空間: Microsoft WebView2 \
-"WebView2" というアセンブリ。
+アセンブリ: Microsoft.Web.WebView2.Wpf.dll
 
 ```
 class Microsoft.Web.WebView2.Wpf.WebView2
@@ -194,7 +194,7 @@ WebView でレンダリングされた現在のトップレベルドキュメン
 
 > パブリック async タスク< 文字列 > [Executesの](#executescriptasync)テキスト (文字列 javaScript)
 
-CoreWebView2 で CoreWebView2 を呼び出す場合と同じです。
+CoreWebView2 の CoreWebView2.ExecuteScriptAsync の呼び出しに相当します。
 
 ##### 例外
 * `InvalidOperationException` CoreWebView2 がまだ初期化されていない場合にスローされます。
