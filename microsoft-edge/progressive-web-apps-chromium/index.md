@@ -8,12 +8,12 @@ ms.topic: article
 ms.prod: microsoft-edge
 ms.technology: pwa
 keywords: プログレッシブ web アプリ、PWA、エッジ、JavaScript、Windows、UWP、Microsoft ストア
-ms.openlocfilehash: 482f498e246ee265424f7b80ff3cd67f78501ee2
-ms.sourcegitcommit: 9169d784485e3cb0b1987a8f395c4bb688bd9b2e
+ms.openlocfilehash: 90740bac07ebfd74f89e2524e6955621e1b09b05
+ms.sourcegitcommit: a06c86ef7c69e1e400a0be5938449f3c4ba6ec72
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "10583036"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "10882808"
 ---
 # Windows のプログレッシブ Web アプリ  
 
@@ -86,33 +86,31 @@ Web 標準 Api をターゲットとするプログレッシブ Web アプリを
 > [!IMPORTANT]
 > 特に、JavaScript を使って WinRT API 要求を行う Windows 10 用に PWAs をカスタマイズする方法については、「 [EDGEHTML PWA 機能に固有のドキュメント][PwaEdgehtmlIndex]」を参照してください。  Windows 10 での PWA のテストと Microsoft Store での配布について説明します。  
 
+> [!NOTE]
+> PWA 特典、今後の機能、簡単なデモの概要については、[ビルド 2020 pwa セッション][BuildVideo]を確認してください。 
+
 ## 要件  
 
 PWA として実行するには、サーバーでホストされる web アプリに次の最小要件が含まれている必要があります。  
 
-|  | 要件 | 詳細 | 
-|:--- |:--- |:--- |  
-| ○ | [HTTPS][WikiHttps] | サーバーまたはアプリの通信にセキュリティで保護された接続を提供して、ユーザーを保護します。  サービス作業者やその他の PWA テクノロジは、セキュリティで保護された接続を経由して提供される web リソース (または `localhost` デバッグ目的でのみ) と動作します。  |  
-| ○ | [サービス員][MDNServiceWorkerApi] | サービスワーカースレッドを使って、オフラインサポート、リソースキャッシュ、プッシュ通知、バックグラウンドデータ同期、ページ読み込みパフォーマンス最適化を提供するために、サーバーとクライアントアプリの間でネットワークプロキシとして機能します。  |  
-| ○ | [Web アプリマニフェスト][MDNWebAppManifest] | Windows 10 やその他のホストプラットフォームが、インストール可能なネイティブアプリのようなエクスペリエンスを備えた PWA ユーザーを提供できるように、Windows 10 とその他のホストプラットフォームが、自分の web アプリについての重要な情報を記述した JSON ベースのメタデータファイルを提供します。  |  
+| 要件 | 詳細 | 
+|:--- |:--- |  
+| [HTTPS][WikiHttps] | サーバーまたはアプリの通信にセキュリティで保護された接続を提供して、ユーザーを保護します。  サービス作業者やその他の PWA テクノロジは、セキュリティで保護された接続を経由して提供される web リソース (または `localhost` デバッグ目的でのみ) と動作します。  |  
+| [サービス ワーカー][MDNServiceWorkerApi] | サービスワーカースレッドを使って、オフラインサポート、リソースキャッシュ、プッシュ通知、バックグラウンドデータ同期、ページ読み込みパフォーマンス最適化を提供するために、サーバーとクライアントアプリの間でネットワークプロキシとして機能します。  |  
+| [Web アプリマニフェスト][MDNWebAppManifest] | Windows 10 やその他のホストプラットフォームが、インストール可能なネイティブアプリのようなエクスペリエンスを備えた PWA ユーザーを提供できるように、Windows 10 とその他のホストプラットフォームが、自分の web アプリについての重要な情報を記述した JSON ベースのメタデータファイルを提供します。  |  
 
 また、アプリは次の要件を満たしている必要があります。  
 
-|  | 要件 | 詳細 | 
-|:--- |:--- |:--- |  
-| ○ | [ブラウザー間の互換性][MDNCrossBrowserTesting] | さまざまなブラウザーと環境で[テスト][MicrosoftDeveloperEdgeToolsRemote]して、PWA が動作することを確認します。  |  
-| ○ | [レスポンシブ デザイン][WikiResponsiveWebDesign] | CSS [grid][MDNCssGridLayout]、 [flexbox][MDNCssFlexibleBoxLayout]、css [grid][MDNCssGridLayout]と[flexbox][MDNCssFlexibleBoxLayout] 、[メディアクエリ][MDNMediaQueries]、[応答性][MDNResponsiveImages]の高い画像を使用して、ユーザーのデバイスに合わせて UX を調整します。  ブラウザーの[デバイスエミュレーションツール][DevToolsGuide|::ref1::|]を使ってローカルでテストするか、[リモートデバッグセッション][DevToolsProtocolClientsEdgeDevToolsPreview]をセットアップしてターゲットデバイスで直接テストします。  |  
-| ○ | [ディープリンク][WikiDeepLinking] | サイトの各ページを一意の URL にルーティングして、既存のユーザーがソーシャルメディア共有を通じてさらに多くのユーザーとの共同作業を行うことができるようにします。  |  
-| ○ | [ベスト プラクティス][Webhint] | アプリの効率、堅牢性、安全性、アクセシビリティを最適化するには、 [Webhint][Webhint]のようなコード品質ツールを使用します。  |  
-| ○ | [Chromium PWA チェックリスト][WebDevGoodPwaChecklist] | Google ベースラインの PWA チェックリストに対して PWA のチェックボックスをオンにします。  |  
+| 要件 | 詳細 | 
+|:--- |:--- |  
+| [ブラウザー間の互換性][MDNCrossBrowserTesting] | さまざまなブラウザーと環境で[テスト][MicrosoftDeveloperEdgeToolsRemote]して、PWA が動作することを確認します。  |  
+| [レスポンシブ デザイン][WikiResponsiveWebDesign] | CSS [grid][MDNCssGridLayout]、 [flexbox][MDNCssFlexibleBoxLayout]、css [grid][MDNCssGridLayout]と[flexbox][MDNCssFlexibleBoxLayout] 、[メディアクエリ][MDNMediaQueries]、[応答性][MDNResponsiveImages]の高い画像を使用して、ユーザーのデバイスに合わせて UX を調整します。  ブラウザーの[デバイスエミュレーションツール][DevToolsGuide|::ref1::|]を使ってローカルでテストするか、[リモートデバッグセッション][DevToolsProtocolClientsEdgeDevToolsPreview]をセットアップしてターゲットデバイスで直接テストします。  |  
+| [ディープリンク][WikiDeepLinking] | サイトの各ページを一意の URL にルーティングして、既存のユーザーがソーシャルメディア共有を通じてさらに多くのユーザーとの共同作業を行うことができるようにします。  |  
+| [ベスト プラクティス][Webhint] | アプリの効率、堅牢性、安全性、アクセシビリティを最適化するには、 [Webhint][Webhint]のようなコード品質ツールを使用します。  |  
+| [Chromium PWA チェックリスト][WebDevGoodPwaChecklist] | Google ベースラインの PWA チェックリストに対して PWA のチェックボックスをオンにします。  |  
 
 [Microsoft Store][MicrosoftDeveloperStore]アプリケーションとして PWA を有効にする場合は、「[プログレッシブ Web Apps (EdgeHTML)][PwaEdgehtmlMicrosoftStore] 」のドキュメントを参照してください。  
-
-## 現在の可用性  
-
-ブラウザーエンジンのサポート多くのアーキテクチャコンポーネントに対する Web アプリのプログレッシブ要求に対応していますが、最も重要なのは、 [FETCH API][MDNFetchApi]の基礎となるネットワークインフラストラクチャです。  
-
-Microsoft Edge \ (Chromium \) については、ブラウザープラットフォームには、Microsoft Edge \ (Chromium \) がサポートされているデバイス間で動作するこれらの機能の完全なサポートが含まれています。  
+  
 
 <!-- image links -->  
 
@@ -130,7 +128,7 @@ Microsoft Edge \ (Chromium \) については、ブラウザープラットフ�
 
 <!-- links -->  
 
-[DevToolsProtocolClientsEdgeDevToolsPreview]: ../devtools-protocol/0.1/clients.md#microsoft-edge-devtools-preview "Microsoft Edge DevTools のプレビュー-DevTools プロトコルクライアント"  
+[DevToolsProtocolClientsEdgeDevToolsPreview]: ../devtools-protocol/0.1/clients.md#microsoft-edge-devtools-preview "Microsoft Edge の DevTools プレビュー - DevTools プロトコル クライアント"  
 [DevToolsGuideEmulation]: ../devtools-guide/emulation.md "エミュレーション"  
 [DevtoolsProgressiveWebApps]: ../devtools-guide-chromium/progressive-web-apps.md "プログレッシブ Web アプリをデバッグする"  
 [DevGuideWhatsNewEdgeHtml17]: ../dev-guide/whats-new/edgehtml-17.md "EdgeHTML 17 の新機能"  
@@ -181,6 +179,8 @@ Microsoft Edge \ (Chromium \) については、ブラウザープラットフ�
 [MDNServiceWorkerApi]: https://developer.mozilla.org/docs/Web/API/Service_Worker_API "Service Worker API |MDN"  
 [MDNSyncManager]: https://developer.mozilla.org/docs/Web/API/SyncManager "SyncManager |MDN"  
 [MDNWebAppManifest]: https://developer.mozilla.org/docs/Web/Manifest "Web アプリマニフェスト |MDN"  
+
+[BuildVideo]: https://www.youtube.com/watch?v=y4p_QHZtMKM "PWA ビデオ"
 
 [PWABuilder]: https://www.pwabuilder.com "PWABuilder"  
 

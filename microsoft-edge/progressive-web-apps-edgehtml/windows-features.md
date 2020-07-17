@@ -1,18 +1,18 @@
 ---
 description: ネイティブアプリ機能により、Windows 版の PWA を段階的に強化
-title: Windows 用の PWA をカスタマイズする
+title: Windows の PWA (EdgeHTML) をカスタマイズする
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 04/22/2020
+ms.date: 07/16/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: プログレッシブ web アプリ、PWA、Edge、Windows、WinRT、UWP、EdgeHTML
-ms.openlocfilehash: 5bad708db5b13517fd1887214a5e1d5457796ee2
-ms.sourcegitcommit: e07de36ee9fbe20422ffc2c62b98839851e1b02b
+ms.openlocfilehash: 8ba682b03182194a773568254b66c3616bf4c3e2
+ms.sourcegitcommit: a06c86ef7c69e1e400a0be5938449f3c4ba6ec72
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "10604012"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "10882787"
 ---
 # Windows の PWA (EdgeHTML) をカスタマイズする  
 
@@ -47,7 +47,7 @@ Visual Studio で Windows アプリ開発環境をセットアップします。
     ![UWP プロジェクトターゲットビルドの Visual Studio 選択ダイアログ](media/vs-target-min-version.png)  
 
     新しいプロジェクトが package.appxmanifest デザイナーを開き、読み込まれます。  ここでは、パッケージ id、パッケージの依存関係、必要な機能、ビジュアル要素、拡張性ポイントなど、アプリの詳細を構成します。  これは、アプリの開発中に使用される、簡単に構成可能な一時バージョンのアプリパッケージマニフェストです。  
-    アプリプロジェクトをビルドすると、 [Visual Studio][UwpSchemasAppxpackageUapmanifestschemaGeneratePackageManifest]によって、このメタデータから package.appxmanifest ファイルが生成されます。これは、アプリをインストールして実行するために使用されます。  ファイルを更新するたびに、 `package.appxmanifest` 必ずプロジェクトを再ビルドして、実行時に両方が反映されるようにしてください `AppxManifest.xml` 。  
+    アプリプロジェクトをビルドすると、 [Visual Studio][UwpSchemasAppxpackageUapmanifestschemaGeneratePackageManifest]によって、このメタデータから AppxManifest.xmlファイルが生成されます。これは、アプリをインストールして実行するために使われます。  ファイルを更新するたびに、 `package.appxmanifest` 必ずプロジェクトを再ビルドして、実行時に両方が反映されるようにしてください `AppxManifest.xml` 。  
 
 1.  マニフェストデザイナーの [**アプリケーション**] パネルで、PWA の URL をとして入力し `Start page` ます。
 
@@ -69,7 +69,7 @@ Visual Studio で Windows アプリ開発環境をセットアップします。
     Windows 10 アプリとして PWA を実行してデバッグする準備ができました。  このガイドの手順に localhost サイトを使用している場合は、実行されていることを確認します。  そうしたら  
 1.  ビルド \ ( `Ctrl` + `Shift` + `F5` \) を実行し、 `F5` 自分の PWA プロジェクトを \ (\) 実行します。  これで web サイトがスタンドアロンアプリウィンドウで起動します。  ホストされた web アプリだけでなく、Windows 10 にインストールされているプログレッシブ Web アプリとして実行されています。  
 
-    ![WWAHost ウィンドウで実行されている PWA](media/wwahost.png)  
+    ![WWAHost.exe ウィンドウで実行されている PWA](media/wwahost.png)  
 
 ## Windows アプリとして PWA \ (EdgeHTML \) をデバッグする  
 
@@ -306,8 +306,8 @@ if(window.Windows && Windows.Media.SpeechRecognition){
 [PwaIndexWindows10]: ./index.md#pwas-on-windows-10-edgehtml "PWAs は Windows 10 (EdgeHTML) にあります。 Windows のプログレッシブ Web アプリ"  
 [DevToolsGuide]: ../devtools-guide.md "Microsoft Edge (EdgeHTML) 開発者ツール"  
 [DevToolsGuideMicrosoftStoreApp]: ../devtools-guide.md#microsoft-store-app "Microsoft ストアアプリ-Microsoft Edge (EdgeHTML) 開発者ツール"  
-[DevToolsGuideServiceWorkers]: ../devtools-guide/service-workers.md "サービス員"  
-[DevToolsProtocol01ClientsEdgePreview]: ../devtools-protocol/0.1/clients.md#microsoft-edge-devtools-preview "Microsoft Edge DevTools のプレビュー-DevTools プロトコルクライアント"  
+[DevToolsGuideServiceWorkers]: ../devtools-guide/service-workers.md "サービス ワーカー"  
+[DevToolsProtocol01ClientsEdgePreview]: ../devtools-protocol/0.1/clients.md#microsoft-edge-devtools-preview "Microsoft Edge の DevTools プレビュー - DevTools プロトコル クライアント"  
 [DevGuideWhatsNew]: ../dev-guide/whats-new.md "EdgeHTML の新機能"  
 [WindowsRuntime]: ../windows-runtime/index.md "JavaScript の Windows ランタイム (WinRT)"  
 [WindowRuntimeUsingJavascript]: ../windows-runtime/using-the-windows-runtime-in-javascript.md "JavaScript での Windows ランタイムの使用"  

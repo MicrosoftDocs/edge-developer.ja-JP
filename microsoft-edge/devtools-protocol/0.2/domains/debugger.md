@@ -1,20 +1,21 @@
 ---
 description: デバッガードメインの参照。 デバッガードメインは、JavaScript のデバッグ機能を公開します。 これにより、ブレークポイントの設定と削除、実行のステップ実行、スタックトレースの調査などを行うことができます。
-title: デバッガドメイン-DevTools プロトコルバージョン0.2
-author: pelavall
-ms.author: pelavall
-ms.date: 03/05/2020
+title: デバッガドメイン-DevTools プロトコルバージョン 0.2 (EdgeHTML)
+author: MSEdgeTeam
+ms.author: msedgedevrel
+ms.date: 07/16/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.custom: seodec18
-ms.openlocfilehash: de967b0e067bf43ea07f8975eac7ee7c5a4dfd83
-ms.sourcegitcommit: 6860234c25a8be863b7f29a54838e78e120dbb62
+ms.openlocfilehash: 3dae7e569db31cf2cff3cbb6d2a83cbead7ba22c
+ms.sourcegitcommit: a06c86ef7c69e1e400a0be5938449f3c4ba6ec72
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "10569611"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "10882689"
 ---
-# ブレーク
+# デバッガドメイン-DevTools プロトコルバージョン 0.2 (EdgeHTML)  
+
 デバッガードメインは、JavaScript のデバッグ機能を公開します。 これにより、ブレークポイントの設定と削除、実行のステップ実行、スタックトレースの調査などを行うことができます。
 
 | | |
@@ -22,7 +23,7 @@ ms.locfileid: "10569611"
 | [**メソッド**](#methods) | [有効化](#enable)、[無効化](#disable)、 [getstepOut ブレークポイント](#getpossiblebreakpoints)、 [setbreakpointsactive](#setbreakpointsactive)、 [setbreakpointsactive](#setbreakpointbyurl)、 [setブレークポイント](#setbreakpoint)、 [removebreakpoint](#pause) [、curve、](#stepover) [stepinto](#stepinto)、 [removebreakpoint ポイント](#removebreakpoint)、[履歴書](#resume)、 [getpossiblebreakpoints](#getscriptsource)、 [setPauseOnExceptions](#setpauseonexceptions)、 [evalu](#evaluateoncallframe) [、](#stepout) [setblackboxpatterns](#setblackboxpatterns) [、](#setvariablevalue) [mssetデバッガ propertyvalue](#mssetdebuggerpropertyvalue) |
 | [**イベント**](#events) | [Scriptparsed 解析](#scriptparsed)、 [breakpointresolved 解決](#breakpointresolved)、[一時停止](#paused)、[再開](#resumed) |
 | [**型**](#types) | [Breakpointid](#breakpointid)、[呼び出しフレーム id](#callframeid)、[位置](#location)、 [breaklocation](#breaklocation)、 [callframe](#callframe)、[スコープ](#scope) |
-| [**依存関係**](#dependencies) | [言語](runtime.md) |
+| [**依存関係**](#dependencies) | [ランタイム](runtime.md) |
 ## メソッド
 
 ### [有効]
@@ -658,7 +659,7 @@ Callframe の変数の値を変更します。 オブジェクトベースのス
 
 ---
 
-### <a name="location"></a> Location `object`
+### <a name="location"></a> 位置情報 `object`
 
 ソースコード内の場所。
 
@@ -846,4 +847,4 @@ JavaScript 呼び出しフレーム。 コールスタックは、呼び出し�
 
 ## 依存関係
 
-[言語](runtime.md)
+[ランタイム](runtime.md)

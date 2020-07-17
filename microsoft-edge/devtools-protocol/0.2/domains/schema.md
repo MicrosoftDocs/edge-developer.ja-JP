@@ -1,19 +1,20 @@
 ---
 description: スキーマドメインの参照。 プロトコルスキーマに関する情報を提供します。
-title: スキーマドメイン-DevTools プロトコルバージョン0.2
-author: pelavall
-ms.author: pelavall
-ms.date: 8/17/2018
+title: スキーマドメイン-DevTools プロトコルバージョン 0.2 (EdgeHTML)
+author: MSEdgeTeam
+ms.author: msedgedevrel
+ms.date: 07/16/2020
 ms.topic: reference
 ms.prod: microsoft-edge
-ms.openlocfilehash: df86e6669956c14b7c905514fc44376f71eaa993
-ms.sourcegitcommit: 6860234c25a8be863b7f29a54838e78e120dbb62
+ms.openlocfilehash: d0fbe9cde742d255797a2460b940732ffa5b8f27
+ms.sourcegitcommit: a06c86ef7c69e1e400a0be5938449f3c4ba6ec72
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "10569594"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "10882878"
 ---
-# スキーマ
+# スキーマドメイン-DevTools プロトコルバージョン 0.2 (EdgeHTML)  
+
 プロトコルスキーマに関する情報を提供します。
 
 | | |

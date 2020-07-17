@@ -1,17 +1,17 @@
 ---
-title: 初心者向けの DevTools
+title: '初心者向けの DevTools: CSS の使用を開始する'
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 03/18/2020
+ms.date: 07/16/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 0064f0427b6bd5689e888cccfe2c650492898bb2
-ms.sourcegitcommit: 8bfa239274e7a4856b961b9cf163b08d96463c10
+ms.openlocfilehash: fba049a20a7b5f981130b4d9e60c37b07dc7e092
+ms.sourcegitcommit: a06c86ef7c69e1e400a0be5938449f3c4ba6ec72
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "10581595"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "10882738"
 ---
 <!-- Copyright Katherine Jackson 
 
@@ -390,7 +390,7 @@ DevTools で新しいルールセットを追加することもできます。  
     
     > ##### 図26  
     > `contact.html`  
-    > ![連絡先 .html][ImageCssExternal02]  
+    > ![contact.html][ImageCssExternal02]  
     
 1.  およびを `<style>` `</style>` 含む、and を含むすべてのデータを削除し `<style>` `</style>` ます。  
     
@@ -458,7 +458,7 @@ DevTools で新しいルールセットを追加することもできます。  
     
     > ##### 図33  
     > リンク先 `style.css` `contact.html`  
-    > ![.Html でスタイル .css へのリンク][ImageCssExternal09]  
+    > ![contact.html のスタイル .css へのリンク][ImageCssExternal09]  
 
 1.  [**ライブ] タブ**に移動します。 これで、ホームページの最後のセクションと青色のナビゲーションセクションのフォントが変わりました。  
     
@@ -486,13 +486,13 @@ DevTools で新しいルールセットを追加することもできます。  
     
     > ##### 図36  
     > フレームワークへのリンク `contact.html`  
-    > ![.Html でのフレームワークへのリンク][ImageCssFramework1]  
+    > ![contact.html でのフレームワークへのリンク][ImageCssFramework1]  
     
 1.  同様にコードを貼り付け `index.html` ます。  
     
     > ##### 図37  
     > フレームワークへのリンク `index.html`  
-    > ![Html のフレームワークへのリンク][ImageCssFramework2]  
+    > ![index.html でのフレームワークへのリンク][ImageCssFramework2]  
     
 1.  [ライブ] タブに戻り、変更内容を確認します。  要素の背景色とフォントが同じであるのに、 `<nav>` `li a` 他の要素のフォントが変更されています。  
     
@@ -514,13 +514,13 @@ DevTools で新しいルールセットを追加することもできます。  
     
     > ##### 図39  
     > クラスの追加 `index.html`  
-    > ![Html にクラスを追加する][ImageCssJumbotron1]  
+    > ![index.html でのクラスの追加][ImageCssJumbotron1]  
     
 1.  コードを `<header>` タグに `contact.html` も追加します。  
     
     > ##### 図40  
     > クラスの追加 `contact.html`  
-    > ![連絡先 .html にクラスを追加する][ImageCssJumbotron2]  
+    > ![contact.html でのクラスの追加][ImageCssJumbotron2]  
     
 1.  [ライブ] タブで変更内容を表示します。 ここでは、ヘッダーの周りに大きな灰色のボックスが表示されています。  
     
@@ -611,7 +611,7 @@ DevTools で新しいルールセットを追加することもできます。  
 [ImageCssSetup2]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-setup2.msft.png "図 4: [プロジェクトのオプション] メニュー"  
 [ImageCssSetup3]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-setup3.msft.png "図 5: [ライブ] タブ"  
 [ImageCssStyled]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-red_paragraph.msft.png "図 6: CSS でスタイルが適用されている"  
-[ImageCssInline1]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-inline1.msft.png "図 7: .html"  
+[ImageCssInline1]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-inline1.msft.png "図 7: index.html"  
 [ImageCssInline2]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-inline2.msft.png "図 8: ホームと連絡先のリンクの背景色が青になりました"  
 [ImageCssInternal1]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-internal1.msft.png "図 9: 連絡先ページ"  
 [ImageCssInternal2]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-internal2.msft.png "図 10: ホームと連絡先のリンクのフォントが変更されている"  
@@ -630,21 +630,21 @@ DevTools で新しいルールセットを追加することもできます。  
 [ImageCssRule4]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-rule4.msft.png "図 23: 緑で入力する"  
 [ImageCssRule5]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-rule5.msft.png "図 24: ホームリンクをポイントして、緑色の背景を表示する"  
 [ImageCssExternal01]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-external1.msft.png "図 25: ページを再読み込みした後に、DevTools で行った変更が廃止される"  
-[ImageCssExternal02]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-external2.msft.png "図 26: 連絡先 .html"  
+[ImageCssExternal02]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-external2.msft.png "図 26: contact.html"  
 [ImageCssExternal03]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-external3.msft.png "図 27: スタイルタグが削除されている"  
 [ImageCssExternal04]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-external4.msft.png "図 28: インラインスタイルが nav 要素から削除されている"  
 [ImageCssExternal05]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-external5.msft.png "図 29: [新しいファイル] ダイアログボックス"  
 [ImageCssExternal06]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-external6.msft.png "図 30: css の入力"  
 [ImageCssExternal07]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-external7.msft.png "図 31: スタイルにコードを追加する"  
 [ImageCssExternal08]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-external8.msft.png "図 32: スタイル .css へのリンク"  
-[ImageCssExternal09]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-external9.msft.png "図 33: .html でのスタイル .css へのリンク"  
+[ImageCssExternal09]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-external9.msft.png "図 33: contact.html のスタイル .css へのリンク"  
 [ImageCssExternal10]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-external10.msft.png "図 34: ホームページ"  
 [ImageCssExternal11]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-external11.msft.png "図 35: 連絡先ページ"  
-[ImageCssFramework1]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-framework1.msft.png "図 36: 「.html でのフレームワークへのリンク」"  
-[ImageCssFramework2]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-framework2.msft.png "図 37: html のフレームワークへのリンク"  
+[ImageCssFramework1]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-framework1.msft.png "図 36: contact.html でのフレームワークへのリンク"  
+[ImageCssFramework2]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-framework2.msft.png "図 37: index.html でのフレームワークへのリンク"  
 [ImageCssFramework3]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-framework3.msft.png "図 38: フレームワークによってホームページの一部のフォントが変更されている"  
-[ImageCssJumbotron1]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-jumbotron1.msft.png "図 39: .html にクラスを追加する"  
-[ImageCssJumbotron2]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-jumbotron2.msft.png "図 40: .html にクラスを追加する"  
+[ImageCssJumbotron1]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-jumbotron1.msft.png "図 39: index.html でのクラスの追加"  
+[ImageCssJumbotron2]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-jumbotron2.msft.png "図 40: contact.html でのクラスの追加"  
 [ImageCssJumbotron3]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-jumbotron3.msft.png "図 41: ヘッダーの周りに大きな灰色のボックスがある"  
 [ImageCssAlign1]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-align1.msft.png "図 42: コンテナーの流体クラスを追加する"  
 [ImageCssAlign2]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-align2.msft.png "図 43: 行を追加する"  
@@ -658,7 +658,7 @@ DevTools で新しいルールセットを追加することもできます。  
 
 [MicrosoftEdgeInsider]: https://www.microsoftedgeinsider.com "Microsoft Edge Insider"  
 
-[GlitchCookedAmphibianIndex]: https://glitch.com/edit/#!/cooked-amphibian?path=index.html "html: 作成済み-水陸両用機 |故障"  
+[GlitchCookedAmphibianIndex]: https://glitch.com/edit/#!/cooked-amphibian?path=index.html "index.html-クック-水陸両用機 |故障"  
 
 [MDNCssFirstSteps]: https://developer.mozilla.org/docs/Learn/CSS/Introduction_to_CSS "CSS の最初のステップ |MDN"  
 

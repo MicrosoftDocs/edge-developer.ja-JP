@@ -1,20 +1,20 @@
 ---
 description: Microsoft Edge DevTools プロトコルバージョン0.1 では、次のツールクライアントがサポートされています。
-title: DevTools プロトコルバージョン0.1 クライアント
+title: DevTools プロトコルバージョン0.1 クライアント (EdgeHTML)
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 03/05/2020
+ms.date: 07/16/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.custom: seodec18
-ms.openlocfilehash: a537102bab7b5d914fd721aeca8bed57817e9216
-ms.sourcegitcommit: 6860234c25a8be863b7f29a54838e78e120dbb62
+ms.openlocfilehash: 5fdf375634bb63c944b3fe09d1c0cbd5a935dcd7
+ms.sourcegitcommit: a06c86ef7c69e1e400a0be5938449f3c4ba6ec72
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "10569638"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "10882766"
 ---
-# DevTools プロトコルクライアント
+# DevTools プロトコルバージョン0.1 クライアント (EdgeHTML)  
 
 > [!NOTE]
 > Microsoft Edge の DevTools プロトコルは、 [windows 10 年4月の2018更新プログラム](https://blogs.windows.com/windowsexperience/2018/04/30/how-to-get-the-windows-10-april-2018-update/#5VXkQMU41CJzZPER.97)以降の[windows Insider Preview](https://insider.windows.com/en-us/getting-started/)ビルドでのみ動作します。

@@ -1,19 +1,19 @@
 ---
 description: Microsoft Edge DevTools プロトコルバージョン0.2 では、次の HTTP エンドポイントがサポートされています。
-title: Microsoft Edge DevTools プロトコルバージョン 0.2 HTTP エンドポイント
+title: Microsoft Edge DevTools プロトコルバージョン 0.2 HTTP エンドポイント (EdgeHTML)
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 03/05/2020
+ms.date: 07/16/2020
 ms.topic: reference
 ms.prod: microsoft-edge
-ms.openlocfilehash: cc3d0156d92ab479168e0b588ae2b7c9faa7e58f
-ms.sourcegitcommit: 6860234c25a8be863b7f29a54838e78e120dbb62
+ms.openlocfilehash: eb5b29e4d8149f511d8a7cbca3da72391a13e449
+ms.sourcegitcommit: a06c86ef7c69e1e400a0be5938449f3c4ba6ec72
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "10569590"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "10882859"
 ---
-# DevTools プロトコルの HTTP エンドポイント
+# Microsoft Edge DevTools プロトコルバージョン 0.2 HTTP エンドポイント (EdgeHTML)  
 
 > [!NOTE]
 > Microsoft Edge DevTools プロトコルのバージョン0.2 は、 [windows 10 年 2018 10 月の更新プログラム]()以降の[windows Insider Preview](https://insider.windows.com/en-us/getting-started/)ビルドでのみ動作します。

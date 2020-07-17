@@ -1,19 +1,20 @@
 ---
 description: Runtime ドメインの参照。 ランタイムドメインは、リモートの評価とミラーオブジェクトによって JavaScript ランタイムを公開します。 評価結果は、オブジェクトの型、文字列表現、およびさらにオブジェクト参照に使用できる一意の識別子を公開するミラーオブジェクトとして返されます。 元のオブジェクトは、明示的に解放されない限り、メモリ内に保持されます。
-title: ランタイムドメイン-DevTools プロトコルバージョン0.2
-author: pelavall
-ms.author: pelavall
-ms.date: 8/17/2018
+title: ランタイムドメイン-DevTools Protocol バージョン 0.2 (EdgeHTML)
+author: MSEdgeTeam
+ms.author: msedgedevrel
+ms.date: 07/16/2020
 ms.topic: reference
 ms.prod: microsoft-edge
-ms.openlocfilehash: 504f944f7a8389450685b40cdd010b54c3a7ba4e
-ms.sourcegitcommit: 6860234c25a8be863b7f29a54838e78e120dbb62
+ms.openlocfilehash: 710b3b3e0383f1f6feb7947e0468730d2e0b0e66
+ms.sourcegitcommit: a06c86ef7c69e1e400a0be5938449f3c4ba6ec72
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "10569596"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "10882864"
 ---
-# 言語
+# ランタイムドメイン-DevTools Protocol バージョン 0.2 (EdgeHTML)  
+
 ランタイムドメインは、リモートの評価とミラーオブジェクトによって JavaScript ランタイムを公開します。 評価結果は、オブジェクトの型、文字列表現、およびさらにオブジェクト参照に使用できる一意の識別子を公開するミラーオブジェクトとして返されます。 元のオブジェクトは、明示的に解放されない限り、メモリ内に保持されます。
 
 | | |

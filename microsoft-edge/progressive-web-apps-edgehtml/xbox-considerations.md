@@ -1,20 +1,20 @@
 ---
 description: PWA が Xbox の優れたエクスペリエンスを提供することを確認する
-title: Windows 用の PWA をカスタマイズする
+title: Xbox One 向けのプログレッシブ Web アプリ
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 03/05/2020
+ms.date: 07/16/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: プログレッシブ web アプリ、PWA、Edge、Windows、UWP、Xbox、Xbox One、TVJS
-ms.openlocfilehash: 8c2660c8821826660d2030f832ae449ff4a061ad
-ms.sourcegitcommit: 6860234c25a8be863b7f29a54838e78e120dbb62
+ms.openlocfilehash: dfa2b2d252bb788c0010017de57ab147d407c5f7
+ms.sourcegitcommit: a06c86ef7c69e1e400a0be5938449f3c4ba6ec72
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "10570764"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "10882854"
 ---
-# Xbox One 向けのプログレッシブ Web アプリ
+# Xbox One 向けのプログレッシブ Web アプリ  
 
 既存のフレームワーク、CDN、サーバーバックエンドの使用を継続しながら、web アプリケーションを拡張し、Microsoft Store 経由で Xbox One アプリとして利用できるようにすることができます。  また、すべてのユニバーサル Windows プラットフォーム (UWP) アプリと同様に、Xbox One で実行されているプログレッシブ Web アプリ (PWAs) は、ネイティブ Windows 10 Api を呼び出すこともできます。  Xbox One では、特に[メディア再生アプリ](#media-pwas-on-xbox)のカテゴリにいくつかの pwas が用意されています。  
 
@@ -28,7 +28,7 @@ ms.locfileid: "10570764"
 
 ### オプション 1: PWA ビルダー
 
-[PWA ビルダー](https://www.pwabuilder.com/)は、ノードパッケージマネージャー (npm) からインストールできる node.js アプリです。 Android、iOS、Windows でネイティブにホストされるアプリを生成するために、web サイトのメタデータを使用します。 サイトに既に[web アプリマニフェスト](https://developer.mozilla.org/docs/Web/Manifest)が含まれている場合、PWA ビルダーは、プラットフォーム固有のインストールパッケージを生成するためにそれを使います。 そうしないと、PWA ビルダーは、サイトの特性に基づいて基本的な*manifest.xml*ファイルを生成します。
+[PWA ビルダー](https://www.pwabuilder.com/)は、ノードパッケージマネージャー (npm) からインストールできる Node.js アプリです。 Android、iOS、Windows でネイティブにホストされるアプリを生成するために、web サイトのメタデータを使用します。 サイトに既に[web アプリマニフェスト](https://developer.mozilla.org/docs/Web/Manifest)が含まれている場合、PWA ビルダーは、プラットフォーム固有のインストールパッケージを生成するためにそれを使います。 そうしないと、PWA ビルダーは、サイトの特性に基づいて、ファイルに基本的な*manifest.js*を生成します。
 
 #### 要件
  - [Node.js](https://nodejs.org/en/)。 npm が含まれます。
@@ -154,7 +154,7 @@ Xbox One の Microsoft Edge ブラウザーは、[暗号化されたメディア
 
 
 ## 関連項目
-[サウス Ridge video](https://github.com/Microsoft/uwp-experiences/tree/master/apps/video): web サーバー上で動作する .js でホストされている Xbox 用のサンプルビデオアプリ。
+[サウス Ridge video](https://github.com/Microsoft/uwp-experiences/tree/master/apps/video): web サーバーで React.js とホストされている Xbox 用のサンプルビデオアプリ。
 
 [Xbox およびテレビ向け設計](/windows/uwp/design/devices/designing-for-tv): xbox One とテレビ画面で適切に動作するように、ユニバーサル Windows プラットフォーム (UWP) アプリを設計します。
 

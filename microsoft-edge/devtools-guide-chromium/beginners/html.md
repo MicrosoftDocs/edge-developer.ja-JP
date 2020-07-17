@@ -1,17 +1,17 @@
 ---
-title: 初心者向けの DevTools
+title: '初心者向けの DevTools: HTML と DOM の使用を開始する'
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 04/16/2020
+ms.date: 07/16/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 8695fe1b2c5d78bd074447acd26a1f01a5833b2d
-ms.sourcegitcommit: 8bfa239274e7a4856b961b9cf163b08d96463c10
+ms.openlocfilehash: d992a6ca68de07c879ca8e319ee6c22782924a6b
+ms.sourcegitcommit: a06c86ef7c69e1e400a0be5938449f3c4ba6ec72
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "10581588"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "10882731"
 ---
 <!-- Copyright Katherine Jackson 
 
@@ -180,7 +180,7 @@ Microsoft Edge DevTools からコンテンツの編集を開始する前に、HT
     
     > ##### 図 12  
     > 謎のテキスト `A new element!?!` が見つからない `index.html`  
-    > ![新しい要素の謎のテキスト!?! は .html で見つからない][ImageHtmlDom2]  
+    > ![新しい要素の謎のテキスト!?! index.html で見つからない][ImageHtmlDom2]  
     
 1.  [**ライブ] タブ**に戻り、右クリックし `A new element!?!` て [**検査**] を選択します。  
     
@@ -318,7 +318,7 @@ DOM ツリーからノードを削除することもできます。
     
     > ##### 図24  
     > ファイルの `index.html` 外観  
-    > ![Index ファイルの外観][ImageHtmlCopy2]  
+    > ![index.html ファイルの外観][ImageHtmlCopy2]  
     
 ## 次のステップ   
 
@@ -339,7 +339,7 @@ DOM ツリーからノードを削除することもできます。
 [ImageHtmlAdd4]: /microsoft-edge/devtools-guide-chromium/media/beginners-html-add4.msft.png "図 9: 新しいコードが [エディター] タブで強調表示されている"  
 [ImageHtmlAdd5]: /microsoft-edge/devtools-guide-chromium/media/beginners-html-add5.msft.png "図 10: 新しいリストが [ライブ] タブに表示される"  
 [ImageHtmlDom1]: /microsoft-edge/devtools-guide-chromium/media/beginners-html-dom1.msft.png "図 11: ページの下部に新しい要素としてテキストを入力!?!表示可能"  
-[ImageHtmlDom2]: /microsoft-edge/devtools-guide-chromium/media/beginners-html-dom2.msft.png "図 12: 新しい要素である謎のテキスト!?!は .html で見つからない"  
+[ImageHtmlDom2]: /microsoft-edge/devtools-guide-chromium/media/beginners-html-dom2.msft.png "図 12: 新しい要素である謎のテキスト!?!index.html で見つからない"  
 [ImageHtmlDom3]: /microsoft-edge/devtools-guide-chromium/media/beginners-html-dom3.msft.png "図 13: 一部のテキストを検査する"  
 [ImageHtmlDom4]: /microsoft-edge/devtools-guide-chromium/media/beginners-html-dom4.msft.png "図 14: DevTools がページと共に開かれている"  
 [ImageHtmlEdit1]: /microsoft-edge/devtools-guide-chromium/media/beginners-html-edit1.msft.png "図 15: HTML としてノードを編集する"  
@@ -351,7 +351,7 @@ DOM ツリーからノードを削除することもできます。
 [ImageHtmlDelete1]: /microsoft-edge/devtools-guide-chromium/media/beginners-html-delete1.msft.png "図 21: 削除するノードの選択"  
 [ImageHtmlDelete2]: /microsoft-edge/devtools-guide-chromium/media/beginners-html-delete2.msft.png "図 22: ノードが削除されている"  
 [ImageHtmlCopy1]: /microsoft-edge/devtools-guide-chromium/media/beginners-html-copy1.msft.png "図 23: 行った変更内容が失われる"  
-[ImageHtmlCopy2]: /microsoft-edge/devtools-guide-chromium/media/beginners-html-copy2.msft.png "図 24: html ファイルがどのように表示されるようにするか"  
+[ImageHtmlCopy2]: /microsoft-edge/devtools-guide-chromium/media/beginners-html-copy2.msft.png "図 24: index.html ファイルがどのように表示されるか"  
 
 <!--- links --->  
 
@@ -361,7 +361,7 @@ DOM ツリーからノードを削除することもできます。
 
 [CourseraIntroductionToWebDevelopment]: https://www.coursera.org/learn/web-development "Web 開発の概要 |Coursera"  
 
-[GlitchAlluringShockIndex]: https://glitch.com/edit/#!/alluring-shock?path=index.html "alluring-ショック |故障"  
+[GlitchAlluringShockIndex]: https://glitch.com/edit/#!/alluring-shock?path=index.html "index.html-alluring-ショック |故障"  
 
 [MDNGettingStartedHtml]: https://developer.mozilla.org/docs/Learn/HTML/Introduction_to_HTML/Getting_started "HTML の概要 |MDN"  
 [MDNIntroductionDom]: https://developer.mozilla.org/docs/Web/API/Document_Object_Model/Introduction "DOM の概要 |MDN"  
