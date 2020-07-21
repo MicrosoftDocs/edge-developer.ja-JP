@@ -3,53 +3,52 @@ description: Microsoft Edge WebView2 コントロールを使用して Win32 ア
 title: 0.9.515-WebView2 Win32 C++ ICoreWebView2ExperimentalEnvironment
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 07/14/2020
+ms.date: 07/20/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Controller、browser control、edge html
-ms.openlocfilehash: d5b41334ad3c46e1a3d2e8642479555f2062c1c2
-ms.sourcegitcommit: f6764f57aed9ab7229e4eb6cc8851d0cea667403
+ms.openlocfilehash: 0b1fe99b26637588e169816e9a9f1af9eedd065c
+ms.sourcegitcommit: e0cb9e6f59f222fade6afa4829c59524a9a9b9ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "10880620"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "10886473"
 ---
-# <span data-ttu-id="46851-104">0.9.515-インターフェイス ICoreWebView2ExperimentalEnvironment</span><span class="sxs-lookup"><span data-stu-id="46851-104">0.9.515 - interface ICoreWebView2ExperimentalEnvironment</span></span> 
+# <span data-ttu-id="e894c-104">0.9.515-インターフェイス ICoreWebView2ExperimentalEnvironment</span><span class="sxs-lookup"><span data-stu-id="e894c-104">0.9.515 - interface ICoreWebView2ExperimentalEnvironment</span></span> 
 
-> [!NOTE]
-> <span data-ttu-id="46851-105">これは、プレリリース SDK バージョン0.9.488 に同梱されている実験的な API です。</span><span class="sxs-lookup"><span data-stu-id="46851-105">This an experimental API that is shipped with our prerelease SDK version 0.9.488.</span></span>
+[!INCLUDE [prerelease-note](../../includes/prerelease-note.md)]
 
 ```
 interface ICoreWebView2ExperimentalEnvironment
   : public IUnknown
 ```
 
-<span data-ttu-id="46851-106">このインターフェイスは、 [ICoreWebView2Environment](icorewebview2environment.md)の拡張機能です。</span><span class="sxs-lookup"><span data-stu-id="46851-106">This interface is an extension of the [ICoreWebView2Environment](icorewebview2environment.md).</span></span>
+<span data-ttu-id="e894c-105">このインターフェイスは、 [ICoreWebView2Environment](icorewebview2environment.md)の拡張機能です。</span><span class="sxs-lookup"><span data-stu-id="e894c-105">This interface is an extension of the [ICoreWebView2Environment](icorewebview2environment.md).</span></span>
 
-## <span data-ttu-id="46851-107">まとめ</span><span class="sxs-lookup"><span data-stu-id="46851-107">Summary</span></span>
+## <span data-ttu-id="e894c-106">まとめ</span><span class="sxs-lookup"><span data-stu-id="e894c-106">Summary</span></span>
 
- <span data-ttu-id="46851-108">Members</span><span class="sxs-lookup"><span data-stu-id="46851-108">Members</span></span>                        | <span data-ttu-id="46851-109">説明</span><span class="sxs-lookup"><span data-stu-id="46851-109">Descriptions</span></span>
+ <span data-ttu-id="e894c-107">Members</span><span class="sxs-lookup"><span data-stu-id="e894c-107">Members</span></span>                        | <span data-ttu-id="e894c-108">説明</span><span class="sxs-lookup"><span data-stu-id="e894c-108">Descriptions</span></span>
 --------------------------------|---------------------------------------------
-[<span data-ttu-id="46851-110">CreateCoreWebView2CompositionController</span><span class="sxs-lookup"><span data-stu-id="46851-110">CreateCoreWebView2CompositionController</span></span>](#createcorewebview2compositioncontroller) | <span data-ttu-id="46851-111">ビジュアルホスティングで使用する新しい WebView を非同期的に作成します。</span><span class="sxs-lookup"><span data-stu-id="46851-111">Asynchronously create a new WebView for use with visual hosting.</span></span>
-[<span data-ttu-id="46851-112">CreateCoreWebView2PointerInfo</span><span class="sxs-lookup"><span data-stu-id="46851-112">CreateCoreWebView2PointerInfo</span></span>](#createcorewebview2pointerinfo) | <span data-ttu-id="46851-113">空の[ICoreWebView2ExperimentalPointerInfo](icorewebview2experimentalpointerinfo.md)を作成します。</span><span class="sxs-lookup"><span data-stu-id="46851-113">Create an empty [ICoreWebView2ExperimentalPointerInfo](icorewebview2experimentalpointerinfo.md).</span></span>
-[<span data-ttu-id="46851-114">GetProviderForHwnd</span><span class="sxs-lookup"><span data-stu-id="46851-114">GetProviderForHwnd</span></span>](#getproviderforhwnd) | <span data-ttu-id="46851-115">指定された HWND に対応する ICoreWebView2CompositionController の UI オートメーションプロバイダーを返します。</span><span class="sxs-lookup"><span data-stu-id="46851-115">Returns the UI Automation Provider for the ICoreWebView2CompositionController that corresponds with the given HWND.</span></span>
+[<span data-ttu-id="e894c-109">CreateCoreWebView2CompositionController</span><span class="sxs-lookup"><span data-stu-id="e894c-109">CreateCoreWebView2CompositionController</span></span>](#createcorewebview2compositioncontroller) | <span data-ttu-id="e894c-110">ビジュアルホスティングで使用する新しい WebView を非同期的に作成します。</span><span class="sxs-lookup"><span data-stu-id="e894c-110">Asynchronously create a new WebView for use with visual hosting.</span></span>
+[<span data-ttu-id="e894c-111">CreateCoreWebView2PointerInfo</span><span class="sxs-lookup"><span data-stu-id="e894c-111">CreateCoreWebView2PointerInfo</span></span>](#createcorewebview2pointerinfo) | <span data-ttu-id="e894c-112">空の[ICoreWebView2ExperimentalPointerInfo](icorewebview2experimentalpointerinfo.md)を作成します。</span><span class="sxs-lookup"><span data-stu-id="e894c-112">Create an empty [ICoreWebView2ExperimentalPointerInfo](icorewebview2experimentalpointerinfo.md).</span></span>
+[<span data-ttu-id="e894c-113">GetProviderForHwnd</span><span class="sxs-lookup"><span data-stu-id="e894c-113">GetProviderForHwnd</span></span>](#getproviderforhwnd) | <span data-ttu-id="e894c-114">指定された HWND に対応する ICoreWebView2CompositionController の UI オートメーションプロバイダーを返します。</span><span class="sxs-lookup"><span data-stu-id="e894c-114">Returns the UI Automation Provider for the ICoreWebView2CompositionController that corresponds with the given HWND.</span></span>
 
-<span data-ttu-id="46851-116">[ICoreWebView2ExperimentalEnvironment]()インターフェイスを実装するオブジェクトも[ICoreWebView2Environment](icorewebview2environment.md)を実装します。</span><span class="sxs-lookup"><span data-stu-id="46851-116">An object implementing the [ICoreWebView2ExperimentalEnvironment]() interface will also implement [ICoreWebView2Environment](icorewebview2environment.md).</span></span>
+<span data-ttu-id="e894c-115">[ICoreWebView2ExperimentalEnvironment]()インターフェイスを実装するオブジェクトも[ICoreWebView2Environment](icorewebview2environment.md)を実装します。</span><span class="sxs-lookup"><span data-stu-id="e894c-115">An object implementing the [ICoreWebView2ExperimentalEnvironment]() interface will also implement [ICoreWebView2Environment](icorewebview2environment.md).</span></span>
 
-## <span data-ttu-id="46851-117">Members</span><span class="sxs-lookup"><span data-stu-id="46851-117">Members</span></span>
+## <span data-ttu-id="e894c-116">Members</span><span class="sxs-lookup"><span data-stu-id="e894c-116">Members</span></span>
 
-#### <span data-ttu-id="46851-118">CreateCoreWebView2CompositionController</span><span class="sxs-lookup"><span data-stu-id="46851-118">CreateCoreWebView2CompositionController</span></span> 
+#### <span data-ttu-id="e894c-117">CreateCoreWebView2CompositionController</span><span class="sxs-lookup"><span data-stu-id="e894c-117">CreateCoreWebView2CompositionController</span></span> 
 
-<span data-ttu-id="46851-119">ビジュアルホスティングで使用する新しい WebView を非同期的に作成します。</span><span class="sxs-lookup"><span data-stu-id="46851-119">Asynchronously create a new WebView for use with visual hosting.</span></span>
+<span data-ttu-id="e894c-118">ビジュアルホスティングで使用する新しい WebView を非同期的に作成します。</span><span class="sxs-lookup"><span data-stu-id="e894c-118">Asynchronously create a new WebView for use with visual hosting.</span></span>
 
-> <span data-ttu-id="46851-120">パブリック HRESULT [CreateCoreWebView2CompositionController](#createcorewebview2compositioncontroller)(HWND parentwindow、 [ICoreWebView2ExperimentalCreateCoreWebView2CompositionControllerCompletedHandler](icorewebview2experimentalcreatecorewebview2compositioncontrollercompletedhandler.md) \* handler)</span><span class="sxs-lookup"><span data-stu-id="46851-120">public HRESULT [CreateCoreWebView2CompositionController](#createcorewebview2compositioncontroller)(HWND parentWindow, [ICoreWebView2ExperimentalCreateCoreWebView2CompositionControllerCompletedHandler](icorewebview2experimentalcreatecorewebview2compositioncontrollercompletedhandler.md) \* handler)</span></span>
+> <span data-ttu-id="e894c-119">パブリック HRESULT [CreateCoreWebView2CompositionController](#createcorewebview2compositioncontroller)(HWND parentwindow、 [ICoreWebView2ExperimentalCreateCoreWebView2CompositionControllerCompletedHandler](icorewebview2experimentalcreatecorewebview2compositioncontrollercompletedhandler.md) \* handler)</span><span class="sxs-lookup"><span data-stu-id="e894c-119">public HRESULT [CreateCoreWebView2CompositionController](#createcorewebview2compositioncontroller)(HWND parentWindow, [ICoreWebView2ExperimentalCreateCoreWebView2CompositionControllerCompletedHandler](icorewebview2experimentalcreatecorewebview2compositioncontrollercompletedhandler.md) \* handler)</span></span>
 
-<span data-ttu-id="46851-121">parentWindow は、アプリが WebView のビジュアルツリーを接続する HWND です。</span><span class="sxs-lookup"><span data-stu-id="46851-121">parentWindow is the HWND in which the app will connect the visual tree of the WebView.</span></span> <span data-ttu-id="46851-122">これは、WebView に対応するポインターまたはマウスの入力をアプリが受け取るようにする HWND です (そして、SendMouseInput/Sendpointer 入力を使って転送する必要があります)。</span><span class="sxs-lookup"><span data-stu-id="46851-122">This will be the HWND that the app will receive pointer/ mouse input meant for the WebView (and will need to use SendMouseInput/ SendPointerInput to forward).</span></span> <span data-ttu-id="46851-123">アプリが WebView ビジュアルツリーを別のウィンドウの下に移動する場合、ビジュアルツリーの新しい親 HWND を更新するために put_ParentWindow を呼び出す必要があります。</span><span class="sxs-lookup"><span data-stu-id="46851-123">If the app moves the WebView visual tree to underneath a different window, then it needs to call put_ParentWindow to update the new parent HWND of the visual tree.</span></span>
+<span data-ttu-id="e894c-120">parentWindow は、アプリが WebView のビジュアルツリーを接続する HWND です。</span><span class="sxs-lookup"><span data-stu-id="e894c-120">parentWindow is the HWND in which the app will connect the visual tree of the WebView.</span></span> <span data-ttu-id="e894c-121">これは、WebView に対応するポインターまたはマウスの入力をアプリが受け取るようにする HWND です (そして、SendMouseInput/Sendpointer 入力を使って転送する必要があります)。</span><span class="sxs-lookup"><span data-stu-id="e894c-121">This will be the HWND that the app will receive pointer/ mouse input meant for the WebView (and will need to use SendMouseInput/ SendPointerInput to forward).</span></span> <span data-ttu-id="e894c-122">アプリが WebView ビジュアルツリーを別のウィンドウの下に移動する場合、ビジュアルツリーの新しい親 HWND を更新するために put_ParentWindow を呼び出す必要があります。</span><span class="sxs-lookup"><span data-stu-id="e894c-122">If the app moves the WebView visual tree to underneath a different window, then it needs to call put_ParentWindow to update the new parent HWND of the visual tree.</span></span>
 
-<span data-ttu-id="46851-124">作成した CoreWebView2CompositionController の put_RootVisualTarget を使って、ブラウザーのビジュアルツリーをホストするためのビジュアルを提供します。</span><span class="sxs-lookup"><span data-stu-id="46851-124">Use put_RootVisualTarget on the created CoreWebView2CompositionController to provide a visual to host the browser's visual tree.</span></span>
+<span data-ttu-id="e894c-123">作成した CoreWebView2CompositionController の put_RootVisualTarget を使って、ブラウザーのビジュアルツリーをホストするためのビジュアルを提供します。</span><span class="sxs-lookup"><span data-stu-id="e894c-123">Use put_RootVisualTarget on the created CoreWebView2CompositionController to provide a visual to host the browser's visual tree.</span></span>
 
-<span data-ttu-id="46851-125">アプリケーションは、プロセスまたはアプリケーションウィンドウのアプリケーションユーザーモデル ID を設定することをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="46851-125">It is recommended that the application set Application User Model ID for the process or the application window.</span></span> <span data-ttu-id="46851-126">何も設定されていない場合は、WebView の作成中に、生成されたアプリケーションユーザーモデル ID が parentWindow のルートウィンドウに設定されます。</span><span class="sxs-lookup"><span data-stu-id="46851-126">If none is set, during WebView creation a generated Application User Model ID is set to root window of parentWindow.</span></span> 
+<span data-ttu-id="e894c-124">アプリケーションは、プロセスまたはアプリケーションウィンドウのアプリケーションユーザーモデル ID を設定することをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="e894c-124">It is recommended that the application set Application User Model ID for the process or the application window.</span></span> <span data-ttu-id="e894c-125">何も設定されていない場合は、WebView の作成中に、生成されたアプリケーションユーザーモデル ID が parentWindow のルートウィンドウに設定されます。</span><span class="sxs-lookup"><span data-stu-id="e894c-125">If none is set, during WebView creation a generated Application User Model ID is set to root window of parentWindow.</span></span> 
 ```cpp
 // Create or recreate the WebView and its environment.
 void AppWindow::InitializeWebView()
@@ -155,7 +154,7 @@ HRESULT AppWindow::OnCreateEnvironmentCompleted(
     return S_OK;
 }
 ```
- <span data-ttu-id="46851-127">アプリが特定のインストールから webview のエッジを使用していて、インストールがアンインストールされている場合に、アプリが再起動マネージャーのメッセージを処理して、アプリが、適切に再起動できるようにすることをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="46851-127">It is recommended that the application handles restart manager messages so that it can be restarted gracefully in the case when the app is using Edge for webview from a certain installation and that installation is being uninstalled.</span></span> <span data-ttu-id="46851-128">たとえば、ユーザーが Dev channel から Edge をインストールし、そのチャネルの端を使ってアプリをテストしている場合は、アプリを終了せずにそのチャネルから edge をアンインストールすると、アプリは再起動され、開発者チャネルのアンインストールが成功します。</span><span class="sxs-lookup"><span data-stu-id="46851-128">For example, if a user installs Edge from Dev channel and opts to use Edge from that channel for testing the app, and then uninstalls Edge from that channel without closing the app, the app will be restarted to allow uninstallation of the dev channel to succeed.</span></span> 
+ <span data-ttu-id="e894c-126">アプリが特定のインストールから webview のエッジを使用していて、インストールがアンインストールされている場合に、アプリが再起動マネージャーのメッセージを処理して、アプリが、適切に再起動できるようにすることをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="e894c-126">It is recommended that the application handles restart manager messages so that it can be restarted gracefully in the case when the app is using Edge for webview from a certain installation and that installation is being uninstalled.</span></span> <span data-ttu-id="e894c-127">たとえば、ユーザーが Dev channel から Edge をインストールし、そのチャネルの端を使ってアプリをテストしている場合は、アプリを終了せずにそのチャネルから edge をアンインストールすると、アプリは再起動され、開発者チャネルのアンインストールが成功します。</span><span class="sxs-lookup"><span data-stu-id="e894c-127">For example, if a user installs Edge from Dev channel and opts to use Edge from that channel for testing the app, and then uninstalls Edge from that channel without closing the app, the app will be restarted to allow uninstallation of the dev channel to succeed.</span></span> 
 ```cpp
     case WM_QUERYENDSESSION:
     {
@@ -178,17 +177,17 @@ HRESULT AppWindow::OnCreateEnvironmentCompleted(
     break;
 ```
 
-#### <span data-ttu-id="46851-129">CreateCoreWebView2PointerInfo</span><span class="sxs-lookup"><span data-stu-id="46851-129">CreateCoreWebView2PointerInfo</span></span> 
+#### <span data-ttu-id="e894c-128">CreateCoreWebView2PointerInfo</span><span class="sxs-lookup"><span data-stu-id="e894c-128">CreateCoreWebView2PointerInfo</span></span> 
 
-<span data-ttu-id="46851-130">空の[ICoreWebView2ExperimentalPointerInfo](icorewebview2experimentalpointerinfo.md)を作成します。</span><span class="sxs-lookup"><span data-stu-id="46851-130">Create an empty [ICoreWebView2ExperimentalPointerInfo](icorewebview2experimentalpointerinfo.md).</span></span>
+<span data-ttu-id="e894c-129">空の[ICoreWebView2ExperimentalPointerInfo](icorewebview2experimentalpointerinfo.md)を作成します。</span><span class="sxs-lookup"><span data-stu-id="e894c-129">Create an empty [ICoreWebView2ExperimentalPointerInfo](icorewebview2experimentalpointerinfo.md).</span></span>
 
-> <span data-ttu-id="46851-131">パブリック HRESULT [CreateCoreWebView2PointerInfo](#createcorewebview2pointerinfo)([ICoreWebView2ExperimentalPointerInfo](icorewebview2experimentalpointerinfo.md) \* \* ポインター情報)</span><span class="sxs-lookup"><span data-stu-id="46851-131">public HRESULT [CreateCoreWebView2PointerInfo](#createcorewebview2pointerinfo)([ICoreWebView2ExperimentalPointerInfo](icorewebview2experimentalpointerinfo.md) \*\* pointerInfo)</span></span>
+> <span data-ttu-id="e894c-130">パブリック HRESULT [CreateCoreWebView2PointerInfo](#createcorewebview2pointerinfo)([ICoreWebView2ExperimentalPointerInfo](icorewebview2experimentalpointerinfo.md) \* \* ポインター情報)</span><span class="sxs-lookup"><span data-stu-id="e894c-130">public HRESULT [CreateCoreWebView2PointerInfo](#createcorewebview2pointerinfo)([ICoreWebView2ExperimentalPointerInfo](icorewebview2experimentalpointerinfo.md) \*\* pointerInfo)</span></span>
 
-<span data-ttu-id="46851-132">返された[ICoreWebView2ExperimentalPointerInfo](icorewebview2experimentalpointerinfo.md)には、Sendポインタ入力を呼び出す前に、関連するすべての情報を設定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="46851-132">The returned [ICoreWebView2ExperimentalPointerInfo](icorewebview2experimentalpointerinfo.md) needs to be populated with all of the relevant info before calling SendPointerInput.</span></span>
+<span data-ttu-id="e894c-131">返された[ICoreWebView2ExperimentalPointerInfo](icorewebview2experimentalpointerinfo.md)には、Sendポインタ入力を呼び出す前に、関連するすべての情報を設定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="e894c-131">The returned [ICoreWebView2ExperimentalPointerInfo](icorewebview2experimentalpointerinfo.md) needs to be populated with all of the relevant info before calling SendPointerInput.</span></span>
 
-#### <span data-ttu-id="46851-133">GetProviderForHwnd</span><span class="sxs-lookup"><span data-stu-id="46851-133">GetProviderForHwnd</span></span> 
+#### <span data-ttu-id="e894c-132">GetProviderForHwnd</span><span class="sxs-lookup"><span data-stu-id="e894c-132">GetProviderForHwnd</span></span> 
 
-<span data-ttu-id="46851-134">指定された HWND に対応する ICoreWebView2CompositionController の UI オートメーションプロバイダーを返します。</span><span class="sxs-lookup"><span data-stu-id="46851-134">Returns the UI Automation Provider for the ICoreWebView2CompositionController that corresponds with the given HWND.</span></span>
+<span data-ttu-id="e894c-133">指定された HWND に対応する ICoreWebView2CompositionController の UI オートメーションプロバイダーを返します。</span><span class="sxs-lookup"><span data-stu-id="e894c-133">Returns the UI Automation Provider for the ICoreWebView2CompositionController that corresponds with the given HWND.</span></span>
 
-> <span data-ttu-id="46851-135">パブリック HRESULT [Getproviderforhwnd](#getproviderforhwnd)(hwnd Hwnd、IUnknown \* \* provider)</span><span class="sxs-lookup"><span data-stu-id="46851-135">public HRESULT [GetProviderForHwnd](#getproviderforhwnd)(HWND hwnd, IUnknown \*\* provider)</span></span>
+> <span data-ttu-id="e894c-134">パブリック HRESULT [Getproviderforhwnd](#getproviderforhwnd)(hwnd Hwnd、IUnknown \* \* provider)</span><span class="sxs-lookup"><span data-stu-id="e894c-134">public HRESULT [GetProviderForHwnd](#getproviderforhwnd)(HWND hwnd, IUnknown \*\* provider)</span></span>
 

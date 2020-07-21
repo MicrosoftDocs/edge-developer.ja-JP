@@ -3,41 +3,40 @@ description: Microsoft Edge WebView2 コントロールを使用して Win32 ア
 title: 0.9.515-WebView2 Win32 C++ ICoreWebView2NavigationCompletedEventHandler
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 07/14/2020
+ms.date: 07/20/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Controller、browser control、edge html
-ms.openlocfilehash: 1d9d6618d7720fe2d5b44cbeef22b2c2e526d3bc
-ms.sourcegitcommit: f6764f57aed9ab7229e4eb6cc8851d0cea667403
+ms.openlocfilehash: 30c39bf10c874c17787c235ebb1589de1c9449ff
+ms.sourcegitcommit: e0cb9e6f59f222fade6afa4829c59524a9a9b9ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "10880487"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "10885556"
 ---
-# <span data-ttu-id="7d7ec-104">0.9.515-インターフェイス ICoreWebView2NavigationCompletedEventHandler</span><span class="sxs-lookup"><span data-stu-id="7d7ec-104">0.9.515 - interface ICoreWebView2NavigationCompletedEventHandler</span></span> 
+# <span data-ttu-id="45f56-104">0.9.515-インターフェイス ICoreWebView2NavigationCompletedEventHandler</span><span class="sxs-lookup"><span data-stu-id="45f56-104">0.9.515 - interface ICoreWebView2NavigationCompletedEventHandler</span></span> 
 
-> [!NOTE]
-> <span data-ttu-id="7d7ec-105">この参照は、SDK バージョン0.9.515 後のリリースで変更される可能性があります。</span><span class="sxs-lookup"><span data-stu-id="7d7ec-105">This reference may be altered or unavailable for releases after SDK version 0.9.515.</span></span> <span data-ttu-id="7d7ec-106">最新 API リファレンスについては、 [WEBVIEW2 api リファレンス](../../../webview2-api-reference.md)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="7d7ec-106">Please refer to [WebView2 API reference](../../../webview2-api-reference.md) for the latest API reference.</span></span>
+[!INCLUDE [deprecation-note](../../includes/deprecation-note.md)]
 
 ```
 interface ICoreWebView2NavigationCompletedEventHandler
   : public IUnknown
 ```
 
-<span data-ttu-id="7d7ec-107">呼び出し元は、NavigationCompleted イベントを受け取るために、このインターフェイスを実装します。</span><span class="sxs-lookup"><span data-stu-id="7d7ec-107">The caller implements this interface to receive the NavigationCompleted event.</span></span>
+<span data-ttu-id="45f56-105">呼び出し元は、NavigationCompleted イベントを受け取るために、このインターフェイスを実装します。</span><span class="sxs-lookup"><span data-stu-id="45f56-105">The caller implements this interface to receive the NavigationCompleted event.</span></span>
 
-## <span data-ttu-id="7d7ec-108">まとめ</span><span class="sxs-lookup"><span data-stu-id="7d7ec-108">Summary</span></span>
+## <span data-ttu-id="45f56-106">まとめ</span><span class="sxs-lookup"><span data-stu-id="45f56-106">Summary</span></span>
 
- <span data-ttu-id="7d7ec-109">Members</span><span class="sxs-lookup"><span data-stu-id="7d7ec-109">Members</span></span>                        | <span data-ttu-id="7d7ec-110">説明</span><span class="sxs-lookup"><span data-stu-id="7d7ec-110">Descriptions</span></span>
+ <span data-ttu-id="45f56-107">Members</span><span class="sxs-lookup"><span data-stu-id="45f56-107">Members</span></span>                        | <span data-ttu-id="45f56-108">説明</span><span class="sxs-lookup"><span data-stu-id="45f56-108">Descriptions</span></span>
 --------------------------------|---------------------------------------------
-[<span data-ttu-id="7d7ec-111">Invoke</span><span class="sxs-lookup"><span data-stu-id="7d7ec-111">Invoke</span></span>](#invoke) | <span data-ttu-id="7d7ec-112">対応するイベントのイベント引数を実装側に提供するために呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="7d7ec-112">Called to provide the implementer with the event args for the corresponding event.</span></span>
+[<span data-ttu-id="45f56-109">Invoke</span><span class="sxs-lookup"><span data-stu-id="45f56-109">Invoke</span></span>](#invoke) | <span data-ttu-id="45f56-110">対応するイベントのイベント引数を実装側に提供するために呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="45f56-110">Called to provide the implementer with the event args for the corresponding event.</span></span>
 
-## <span data-ttu-id="7d7ec-113">Members</span><span class="sxs-lookup"><span data-stu-id="7d7ec-113">Members</span></span>
+## <span data-ttu-id="45f56-111">Members</span><span class="sxs-lookup"><span data-stu-id="45f56-111">Members</span></span>
 
-#### <span data-ttu-id="7d7ec-114">Invoke</span><span class="sxs-lookup"><span data-stu-id="7d7ec-114">Invoke</span></span> 
+#### <span data-ttu-id="45f56-112">Invoke</span><span class="sxs-lookup"><span data-stu-id="45f56-112">Invoke</span></span> 
 
-<span data-ttu-id="7d7ec-115">対応するイベントのイベント引数を実装側に提供するために呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="7d7ec-115">Called to provide the implementer with the event args for the corresponding event.</span></span>
+<span data-ttu-id="45f56-113">対応するイベントのイベント引数を実装側に提供するために呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="45f56-113">Called to provide the implementer with the event args for the corresponding event.</span></span>
 
-> <span data-ttu-id="7d7ec-116">パブリック HRESULT[呼び出し](#invoke)([ICoreWebView2](icorewebview2.md) \* sender, [ICoreWebView2NavigationCompletedEventArgs](icorewebview2navigationcompletedeventargs.md) \* args)</span><span class="sxs-lookup"><span data-stu-id="7d7ec-116">public HRESULT [Invoke](#invoke)([ICoreWebView2](icorewebview2.md) \* sender, [ICoreWebView2NavigationCompletedEventArgs](icorewebview2navigationcompletedeventargs.md) \* args)</span></span>
+> <span data-ttu-id="45f56-114">パブリック HRESULT[呼び出し](#invoke)([ICoreWebView2](icorewebview2.md) \* sender, [ICoreWebView2NavigationCompletedEventArgs](icorewebview2navigationcompletedeventargs.md) \* args)</span><span class="sxs-lookup"><span data-stu-id="45f56-114">public HRESULT [Invoke](#invoke)([ICoreWebView2](icorewebview2.md) \* sender, [ICoreWebView2NavigationCompletedEventArgs](icorewebview2navigationcompletedeventargs.md) \* args)</span></span>
 
