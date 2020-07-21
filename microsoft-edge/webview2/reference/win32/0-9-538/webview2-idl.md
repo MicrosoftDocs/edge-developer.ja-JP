@@ -3,17 +3,17 @@ description: Microsoft Edge WebView2 コントロールを使用してネイテ�
 title: グローバル
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 07/08/2020
+ms.date: 07/16/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Controller、browser control、edge html
-ms.openlocfilehash: d291a4973656d106f803382ee985f0006bf5d68d
-ms.sourcegitcommit: f6764f57aed9ab7229e4eb6cc8851d0cea667403
+ms.openlocfilehash: 12a730a07945d5f099cd2a0f45a9f2ec5ed02f8c
+ms.sourcegitcommit: e0cb9e6f59f222fade6afa4829c59524a9a9b9ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "10877624"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "10885549"
 ---
 # グローバル 
 
@@ -50,7 +50,7 @@ Webview2 または特定の機能ベースをバージョンで使うかどう�
 
 [DLL エクスポート] を使用して、カスタムバージョンの Edge、ユーザーデータディレクトリ、または追加オプションを使って WebView2 環境を作成します。
 
-`browserExecutableFolder`WebView2 コントロールが埋め込みバージョンの edge を使うか、インストールされている edge のバージョンがクライアントコンピューターに存在するかを指定するために使います。 埋め込みバージョンの edge を使用するには、Edge の埋め込みバージョンが含まれているフォルダーの相対パスを渡し `browserExecutableFolder` ます。 埋め込みバージョンの Edge を取得するには、クライアントコンピューターにインストールされているバージョンの Edge からバージョン管理されたフォルダー名をコピーします。 たとえば、 `73.0.52.0` Edge バージョン73.0.52.0 がインストールされているフォルダーからフォルダーをコピーします。 フォルダーに**msedgewebview2.exe**と**msedge.dll**の両方のファイルが含まれていることを確認します。 クライアントコンピューターに存在する、インストールされているバージョンの Edge を使用する WebView2 コントロールを作成するには、null または空の文字列をに渡し `browserExecutableFolder` ます。 このシナリオでは、API は、選択されたチャネルの優先順位を使って、クライアントコンピューターにインストールされている、互換性のあるバージョンの Edge (コンピューターレベルでは最初に、次にユーザー単位) を検出しようとします。 
+`browserExecutableFolder`WebView2 コントロールが埋め込みバージョンの edge を使うか、インストールされている edge のバージョンがクライアントコンピューターに存在するかを指定するために使います。 埋め込みバージョンの edge を使用するには、Edge の埋め込みバージョンが含まれているフォルダーの相対パスを渡し `browserExecutableFolder` ます。 埋め込みバージョンの Edge を取得するには、クライアントコンピューターにインストールされているバージョンの Edge からバージョン管理されたフォルダー名をコピーします。 たとえば、 `73.0.52.0` Edge バージョン73.0.52.0 がインストールされているフォルダーからフォルダーをコピーします。 フォルダーに**msedgewebview2.exe**と**msedge.dll**の両方のファイルが含まれていることを確認します。 クライアントコンピューターに存在する、インストールされているバージョンの Edge を使用する WebView2 コントロールを作成するには、null または空の文字列をに渡し `browserExecutableFolder` ます。 このシナリオでは、API は、選択されたチャネルの優先順位を使って、クライアントコンピューターにインストールされている、互換性のあるバージョンの Edge (コンピューターレベルでは最初に、次にユーザー単位) を検出しようとします。
 
 既定のチャネル検索順序は、安定、ベータ、dev、カナリアです。 WEBVIEW2_RELEASE_CHANNEL_PREFERENCE 環境変数または該当する releaseChannelPreference レジストリ値に1を指定すると、チャネルの検索順序が逆になります。
 
@@ -138,3 +138,4 @@ ERROR_PRODUCT_UNINSTALLED
 安定したチャネルまたは埋め込みエッジでない場合は、チャネル名などのブラウザーのバージョン情報を取得します。
 
 チャネル名は、β、dev、カナリアです。 BrowserExecutableFolder またはチャネルの優先順位に対して上書きが存在する場合、override が使用されます。 Override がない場合は、GetAvailableCoreWebView2BrowserVersionString に渡されたパラメーターが使われます。
+

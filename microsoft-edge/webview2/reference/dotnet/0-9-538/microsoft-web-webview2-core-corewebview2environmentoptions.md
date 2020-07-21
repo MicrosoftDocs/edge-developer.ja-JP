@@ -3,17 +3,17 @@ description: Microsoft Edge WebView2 コントロールを使用してネイテ�
 title: WebView2 について CoreWebView2EnvironmentOptions
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 07/08/2020
+ms.date: 07/20/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: WebView2、Core、WebView2、webview、.net、wpf、winforms、アプリ、edge、CoreWebView2、CoreWebView2Controller、browser control、edge html、Microsoft の WebView2。 CoreWebView2EnvironmentOptions。
-ms.openlocfilehash: e1ff99d7993aec875a5bf79b863f0824ca50d337
-ms.sourcegitcommit: f6764f57aed9ab7229e4eb6cc8851d0cea667403
+ms.openlocfilehash: 705e030caba03227749002bad8c9777197839a28
+ms.sourcegitcommit: e0cb9e6f59f222fade6afa4829c59524a9a9b9ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "10878905"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "10885563"
 ---
 # WebView2 クラス (CoreWebView2EnvironmentOptions クラス) 
 
@@ -27,6 +27,7 @@ WebView2 環境の作成に使用するオプション。
  Members                        | 説明
 --------------------------------|---------------------------------------------
 [AdditionalBrowserArguments](#additionalbrowserarguments) | WebView の動作を変更するには、AdditionalBrowserArguments を指定できます。
+[IsSingleSignOnUsingOSPrimaryAccountEnabled](#issinglesignonusingosprimaryaccountenabled) | IsSingleSignOnUsingOSPrimaryAccountEnabled プロパティは、Windows アカウントのログインに関連付けられている Microsoft アカウントを使用して、ログインしている Windows アカウントと web サイトでのシングルサインオンを使用して、WebView 内で Azure Active Directory (AAD) リソースとのシングルサインオンを有効にするために使用されます。
 [言語](#language) | WebView が実行される既定の言語。
 [Targetserversion](#targetcompatiblebrowserversion) | Edge WebView2 ランタイムバイナリのバージョンは、呼び出し元のアプリケーションと互換性がある必要があります。
 [CoreWebView2EnvironmentOptions](#corewebview2environmentoptions) | CoreWebView2EnvironmentOptions クラスの新しいインスタンスを初期化します。
@@ -42,6 +43,16 @@ WebView の動作を変更するには、AdditionalBrowserArguments を指定で
 > パブリック文字列の[Additionalbrowserarguments](#additionalbrowserarguments)
 
 これらは、コマンドラインの一部としてブラウザープロセスに渡されます。 ブラウザプロセスへのコマンドラインスイッチの詳細については、「[フラグを使って Chromium を実行](https://aka.ms/RunChromiumWithFlags)する」を参照してください。 コマンドラインスイッチを使用してアプリを起動すると、 `--edge-webview-switches=xxx` そのスイッチの値 (上の例では xxx) もブラウザープロセスのコマンドラインに追加されます。 次のような一部 `--user-data-dir` のスイッチは、WebView として内部的で重要です。 これらのスイッチは、指定した場合でも無視されます。 同じスイッチが複数回指定されている場合は、最後のスイッチが優先されます。 無効および有効な機能を除き、同じスイッチの異なる値をマージしようとすることはありません。 およびで指定された機能は、 `--enable-features` `--disable-features` 単純なロジックにマージされます。これらの機能は、指定された機能と組み込み機能の和集合であり、機能が無効になっている場合は、[有効な機能] の一覧から削除されます。 アプリプロセスのコマンドライン `--edge-webview-switches` 値は、additionalBrowserArguments パラメーターが処理された後に処理されます。 一部の機能は内部で無効にされているため、有効にすることはできません。 指定したスイッチの解析に失敗した場合、それらは無視されます。 既定では、追加のフラグなしでブラウザープロセスを実行します。
+
+#### IsSingleSignOnUsingOSPrimaryAccountEnabled 
+
+[!INCLUDE [prerelease-note](../../includes/prerelease-note.md)]
+
+IsSingleSignOnUsingOSPrimaryAccountEnabled プロパティは、Windows アカウントのログインに関連付けられている Microsoft アカウントを使用して、ログインしている Windows アカウントと web サイトでのシングルサインオンを使用して、WebView 内で Azure Active Directory (AAD) リソースとのシングルサインオンを有効にするために使用されます。
+
+> public bool [IsSingleSignOnUsingOSPrimaryAccountEnabled](#issinglesignonusingosprimaryaccountenabled)
+
+既定値は無効です。 ユニバーサル Windows プラットフォームアプリでは、シングルサインオンが機能するために enterpriseCloudSSO の制限された[機能](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations#restricted-capabilities)も宣言する必要があります。
 
 #### 言語 
 

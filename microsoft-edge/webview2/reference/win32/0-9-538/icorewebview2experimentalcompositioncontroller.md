@@ -3,29 +3,28 @@ description: Microsoft Edge WebView2 コントロールを使用してネイテ�
 title: WebView2 Win32 C++ ICoreWebView2ExperimentalCompositionController
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 07/08/2020
+ms.date: 07/20/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Controller、browser control、edge html、ICoreWebView2ExperimentalCompositionController
-ms.openlocfilehash: e2b16cfd9095d43eb01d7e6233da2857c12a04ad
-ms.sourcegitcommit: f6764f57aed9ab7229e4eb6cc8851d0cea667403
+ms.openlocfilehash: d651133162520e4a967d13de6f585fe3ac02e830
+ms.sourcegitcommit: e0cb9e6f59f222fade6afa4829c59524a9a9b9ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "10880032"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "10886466"
 ---
 # インターフェイス ICoreWebView2ExperimentalCompositionController 
 
-> [!NOTE]
-> これは、プレリリース SDK バージョン0.9.538 に同梱されている実験的な API です。
+[!INCLUDE [prerelease-note](../../includes/prerelease-note.md)]
 
 ```
 interface ICoreWebView2ExperimentalCompositionController
   : public IUnknown
 ```
 
-このインターフェイスは、ICoreWebView2Controller インターフェイスの拡張機能であり、ビジュアルホストをサポートします。
+このインターフェイスは、 [ICoreWebView2Controller](icorewebview2controller.md)インターフェイスの拡張機能であり、ビジュアルホストをサポートします。
 
 ## まとめ
 
@@ -45,7 +44,7 @@ interface ICoreWebView2ExperimentalCompositionController
 [COREWEBVIEW2_MOUSE_EVENT_VIRTUAL_KEYS](#corewebview2_mouse_event_virtual_keys) | SendMouseInput の COREWEBVIEW2_MOUSE_EVENT_KIND に関連付けられたマウスイベントの仮想キー。
 [COREWEBVIEW2_POINTER_EVENT_KIND](#corewebview2_pointer_event_kind) | WebView に送信されるポインターイベントの種類を伝えるために Sendpointer 入力で使われるポインターイベントの種類です。
 
-ICoreWebView2ExperimentalCompositionController インターフェイスを実装するオブジェクトも ICoreWebView2Controller を実装します。 呼び出し元は、サイズ変更、visibility、フォーカスなどのために ICoreWebView2Controller を使うことを前提としており、ICoreWebView2ExperimentalCompositionController を使ってコンポジションツリーに接続し、WebView 用の入力を提供します。
+ICoreWebView2ExperimentalCompositionController インターフェイスを実装するオブジェクトも[ICoreWebView2Controller](icorewebview2controller.md)を実装します。 呼び出し元は、サイズ変更、visibility、フォーカスなどのために[ICoreWebView2Controller](icorewebview2controller.md)を使うことを前提としており、ICoreWebView2ExperimentalCompositionController を使ってコンポジションツリーに接続し、WebView 用の入力を提供します。
 
 ## Members
 
@@ -57,19 +56,21 @@ ICoreWebView2ExperimentalCompositionController インターフェイスを実装
 
 WebView がカーソルの変更であると判断されたときに、イベントが発生します。 たとえば、マウスカーソルが現在既定のカーソルであり、テキストの上に移動した場合は、IBeam カーソルに変更しようとすることがあります。
 
+送信者は、SendMouseInput API を介して COREWEBVIEW2_MOUSE_EVENT_KIND_LEAVE メッセージ (COREWEBVIEW2_MOUSE_EVENT_KIND_MOVE メッセージに加えて) を送信することを前提としています。 これは、カーソルの変更されたイベントを送信する WebView 内に実際にマウスがあることを確認するためです。
+
 ```cpp
         // Register a handler for the CursorChanged event.
         CHECK_FAILURE(m_compositionController->add_CursorChanged(
             Callback<ICoreWebView2ExperimentalCursorChangedEventHandler>(
                 [this](ICoreWebView2ExperimentalCompositionController* sender,
-                       IUnknown* args) -> HRESULT {
-                    HCURSOR cursor;
-                    CHECK_FAILURE(sender->get_Cursor(&cursor));
-                    SetClassLongPtr(m_appWindow->GetMainWindow(), GCLP_HCURSOR, (LONG_PTR)cursor);
-                    return S_OK;
+                    IUnknown* args) -> HRESULT {
+                        HCURSOR cursor;
+                        CHECK_FAILURE(sender->get_Cursor(&cursor));
+                        SetClassLongPtr(m_appWindow->GetMainWindow(), GCLP_HCURSOR, (LONG_PTR)cursor);
+                        return S_OK;
                 })
-                .Get(),
-            &m_cursorChangedToken));
+            .Get(),
+                    &m_cursorChangedToken));
 ```
 
 #### CreateCoreWebView2PointerInfoFromPointerId 
@@ -79,7 +80,6 @@ WebView がカーソルの変更であると判断されたときに、イベン
 > パブリック HRESULT [CreateCoreWebView2PointerInfoFromPointerId](#createcorewebview2pointerinfofrompointerid)(UINT ポインター ID、HWND parentwindow、struct COREWEBVIEW2_MATRIX_4X4 Transform、 [ICoreWebView2ExperimentalPointerInfo](icorewebview2experimentalpointerinfo.md) * * ポインター情報)
 
 parentWindow は、webview を含む HWND です。 これは、webview を含む hwnd ツリー内の任意の HWND にすることができます。 COREWEBVIEW2_MATRIX_4X4 は、その HWND から webview への変換です。 返された[ICoreWebView2ExperimentalPointerInfo](icorewebview2experimentalpointerinfo.md)は、Sendポインタ info で使われます。 ポインターの型は、ペンまたはタッチである必要があります。または、関数は失敗します。
-
 
 
 #### get_Cursor 
@@ -151,7 +151,7 @@ EventKind が COREWEBVIEW2_MOUSE_EVENT_KIND_HORIZONTAL_WHEEL または COREWEBVI
 
 > パブリック HRESULT 送信[マウス入力](#sendmouseinput)([COREWEBVIEW2_MOUSE_EVENT_KIND](#corewebview2_mouse_event_kind) eventkind、 [COREWEBVIEW2_MOUSE_EVENT_VIRTUAL_KEYS](#corewebview2_mouse_event_virtual_keys) VIRTUALKEYS、UINT32 mousedata、ポイントポイント)
 
-正の値は、ホイールがユーザーによって前方に回転されたことを示します。負の値は、ホイールが背面に回転していることを示します。 ホイールクリックの1つは、120として定義されている WHEEL_DELTA として定義されています。 EventKind が COREWEBVIEW2_MOUSE_EVENT_KIND_X_BUTTON_DOUBLE_CLICK COREWEBVIEW2_MOUSE_EVENT_KIND_X_BUTTON_DOWN、または COREWEBVIEW2_MOUSE_EVENT_KIND_X_BUTTON_UP の場合、mouseData は、どの X ボタンが押されたか、離されたかを指定します。 この値は、最初の X ボタンが押されている場合は1、2番目の X ボタンが押されたとき、または離された場合は1になります。 EventKind が COREWEBVIEW2_MOUSE_EVENT_KIND_LEAVE の場合、virtualKeys、mouseData、point はすべてゼロである必要があります。 EventKind がその他の値である場合は、mouseData は0である必要があります。 Point は、WebView のクライアント座標空間に存在する必要があります。 WebView から始まり、WebView とホストアプリケーションの外側に移動する可能性のあるマウスイベントを追跡するには、SetCapture と ReleaseCapture の呼び出しをお勧めします。 ホバーポップアップを消すには、WM_MOUSELEAVE メッセージを送信することをお勧めします。 
+正の値は、ホイールがユーザーによって前方に回転されたことを示します。負の値は、ホイールが背面に回転していることを示します。 ホイールクリックの1つは、120として定義されている WHEEL_DELTA として定義されています。 EventKind が COREWEBVIEW2_MOUSE_EVENT_KIND_X_BUTTON_DOUBLE_CLICK COREWEBVIEW2_MOUSE_EVENT_KIND_X_BUTTON_DOWN、または COREWEBVIEW2_MOUSE_EVENT_KIND_X_BUTTON_UP の場合、mouseData は、どの X ボタンが押されたか、離されたかを指定します。 この値は、最初の X ボタンが押されている場合は1、2番目の X ボタンが押されたとき、または離された場合は1になります。 EventKind が COREWEBVIEW2_MOUSE_EVENT_KIND_LEAVE の場合、virtualKeys、mouseData、point はすべてゼロである必要があります。 EventKind がその他の値である場合は、mouseData は0である必要があります。 Point は、WebView のクライアント座標空間に存在する必要があります。 WebView から始まり、WebView とホストアプリケーションの外側に移動する可能性のあるマウスイベントを追跡するには、SetCapture と ReleaseCapture の呼び出しをお勧めします。 ホバーポップアップを消すには、COREWEBVIEW2_MOUSE_EVENT_KIND_LEAVE メッセージを送信することをお勧めします。 
 ```cpp
 bool ViewComponent::OnMouseMessage(UINT message, WPARAM wParam, LPARAM lParam)
 {

@@ -1,24 +1,23 @@
 ---
 description: Microsoft Edge WebView2 コントロールを使用して Win32 アプリの web コンテンツをホストする
-title: 0.9.430-WebView2 Win32 C++ ICoreWebView2PermissionRequestedEventHandler
+title: 0. 430-WebView2 Win32 C++ ICoreWebView2PermissionRequestedEventHandler
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 07/14/2020
+ms.date: 07/20/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Host、browser control、edge html
-ms.openlocfilehash: d8703ee6bd985d276688901534dadd836aa6c7fc
-ms.sourcegitcommit: f6764f57aed9ab7229e4eb6cc8851d0cea667403
+ms.openlocfilehash: 41fac4533a96e39da261516f91b96fbf00775af3
+ms.sourcegitcommit: e0cb9e6f59f222fade6afa4829c59524a9a9b9ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "10877787"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "10886424"
 ---
 # 0.9.430-インターフェイス ICoreWebView2PermissionRequestedEventHandler 
 
-> [!NOTE]
-> このインターフェイスは、SDK バージョン0.9.430 後のリリースで変更される可能性があります。 最新 API リファレンスについては、[リファレンス](../../../webview2-api-reference.md)を参照してください。
+[!INCLUDE [deprecation-note](../../includes/deprecation-note.md)]
 
 ```
 interface ICoreWebView2PermissionRequestedEventHandler
