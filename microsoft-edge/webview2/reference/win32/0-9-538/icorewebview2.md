@@ -3,17 +3,17 @@ description: Microsoft Edge WebView2 コントロールを使用してネイテ�
 title: WebView2 Win32 C++ ICoreWebView2
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 07/08/2020
+ms.date: 07/16/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Controller、browser control、edge html、ICoreWebView2
-ms.openlocfilehash: a482dd4e06e6899b7be64adc53e848ed6b7067d3
-ms.sourcegitcommit: f6764f57aed9ab7229e4eb6cc8851d0cea667403
+ms.openlocfilehash: 889924c996e030a0abe2a6a34036a881dcb26db5
+ms.sourcegitcommit: e0cb9e6f59f222fade6afa4829c59524a9a9b9ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "10877561"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "10884576"
 ---
 # インターフェイス ICoreWebView2 
 
@@ -83,7 +83,7 @@ WebView2 では、最新の Edge web ブラウザー技術を使用して、web 
 [remove_WebResourceRequested](#remove_webresourcerequested) | Add_WebResourceRequested で以前に追加されたイベントハンドラーを削除します。
 [remove_WindowCloseRequested](#remove_windowcloserequested) | Add_WindowCloseRequested で以前に追加されたイベントハンドラーを削除します。
 [RemoveHostObjectFromScript](#removehostobjectfromscript) | 名前で指定されたホストオブジェクトを削除して、WebView の JavaScript コードからアクセスできなくなるようにします。
-[RemoveScriptToExecuteOnDocumentCreated](#removescripttoexecuteondocumentcreated) | AddScriptToExecuteOnDocumentCreated によって追加された、対応する JavaScript を削除します。
+[RemoveScriptToExecuteOnDocumentCreated](#removescripttoexecuteondocumentcreated) | 指定したスクリプト id で、によって追加された対応する JavaScript を削除し `AddScriptToExecuteOnDocumentCreated` ます。
 [RemoveWebResourceRequestedFilter](#removewebresourcerequestedfilter) | 以前に WebResourceRequested イベントに追加された、一致する WebResource フィルターを削除します。
 [Stop](#stop) | すべてのナビゲーションと保留中のリソースフェッチを停止します。
 [COREWEBVIEW2_CAPTURE_PREVIEW_IMAGE_FORMAT](#corewebview2_capture_preview_image_format) | ICoreWebView2:: CapturePreview メソッドで使用されている画像形式。
@@ -311,8 +311,8 @@ FrameNavigationStarting は、WebView の子フレームが別の URI に移動�
                 BOOL canGoForward;
                 sender->get_CanGoBack(&canGoBack);
                 sender->get_CanGoForward(&canGoForward);
-                EnableWindow(m_toolbar->backWindow, canGoBack);
-                EnableWindow(m_toolbar->forwardWindow, canGoForward);
+                m_toolbar->SetItemEnabled(Toolbar::Item_BackButton, canGoBack);
+                m_toolbar->SetItemEnabled(Toolbar::Item_ForwardButton, canGoForward);
 
                 return S_OK;
             })
@@ -349,7 +349,8 @@ NavigationCompleted イベントは、WebView が完全に読み込まれたと�
                         // display its own error page automatically.
                     }
                 }
-                EnableWindow(m_toolbar->cancelWindow, FALSE);
+                m_toolbar->SetItemEnabled(Toolbar::Item_CancelButton, false);
+                m_toolbar->SetItemEnabled(Toolbar::Item_ReloadButton, true);
                 return S_OK;
             })
             .Get(),
@@ -457,9 +458,9 @@ NewWindowRequested イベントのイベントハンドラーを追加します�
                 CHECK_FAILURE(windowFeatures->get_Toolbar(&shouldHaveToolbar));
 
                 windowRect.left = left;
-                windowRect.right = left + (width < s_minNewWindowSize  s_minNewWindowSize : width);
+                windowRect.right = left + (width < s_minNewWindowSize ? s_minNewWindowSize : width);
                 windowRect.top = top;
-                windowRect.bottom = top + (height < s_minNewWindowSize  s_minNewWindowSize : height);
+                windowRect.bottom = top + (height < s_minNewWindowSize ? s_minNewWindowSize : height);
 
                 if (!useDefaultWindow)
                 {
@@ -513,15 +514,15 @@ WebView のコンテンツが権限のある一部のリソースにアクセス
         message += uri.get();
         message += L"?\n\n";
         message += (userInitiated
-             L"This request came from a user gesture."
+            ? L"This request came from a user gesture."
             : L"This request did not come from a user gesture.");
 
         int response = MessageBox(nullptr, message.c_str(), L"Permission Request",
                                    MB_YESNOCANCEL | MB_ICONWARNING);
 
         COREWEBVIEW2_PERMISSION_STATE state =
-              response == IDYES  COREWEBVIEW2_PERMISSION_STATE_ALLOW
-            : response == IDNO   COREWEBVIEW2_PERMISSION_STATE_DENY
+              response == IDYES ? COREWEBVIEW2_PERMISSION_STATE_ALLOW
+            : response == IDNO  ? COREWEBVIEW2_PERMISSION_STATE_DENY
             :                     COREWEBVIEW2_PERMISSION_STATE_DEFAULT;
         CHECK_FAILURE(args->put_State(state));
 
@@ -673,7 +674,7 @@ SourceChanged のサイトまたはフラグメントナビゲーションに移
                 {
                     uri = wil::make_cotaskmem_string(L"");
                 }
-                SetWindowText(m_toolbar->addressBarWindow, uri.get());
+                SetWindowText(GetAddressBar(), uri.get());
 
                 return S_OK;
             })
@@ -753,7 +754,7 @@ WebResourceRequested イベントのイベントハンドラーを追加しま�
 
 > パブリック HRESULT [add_WebResourceRequested](#add_webresourcerequested)([ICoreWebView2WebResourceRequestedEventHandler](icorewebview2webresourcerequestedeventhandler.md) * eventHandler、EventRegistrationToken * token)
 
-AddWebResourceRequestedFilter で追加された一致する URL とリソースコンテキストフィルターへの HTTP 要求を WebView が実行しているときに発生します。 イベントを発生させるには、少なくとも1つのフィルターを追加する必要があります。
+AddWebResourceRequestedFilter によって追加された一致する URL とリソースコンテキストフィルターへの URL 要求を WebView が実行しているときに発生します。 イベントを発生させるには、少なくとも1つのフィルターを追加する必要があります。
 
 ```cpp
         if (m_blockImages)
@@ -967,6 +968,7 @@ JavaScript はネイティブコードへの同期呼び出しでブロックさ
         });
         });
 ```
+スクリプトにホストオブジェクトを公開すると、セキュリティ上のリスクがあります。 [ベストプラクティス](https://docs.microsoft.com/microsoft-edge/webview2/concepts/security)に従ってください。
 
 #### AddScriptToExecuteOnDocumentCreated 
 
@@ -1043,7 +1045,7 @@ void ScriptComponent::CallCdpMethod()
         std::wstring methodName = dialog.input.substr(0, delimiterPos);
         std::wstring methodParams =
             (delimiterPos < dialog.input.size()
-                 dialog.input.substr(delimiterPos + 1)
+                ? dialog.input.substr(delimiterPos + 1)
                 : L"{}");
 
         m_webView->CallDevToolsProtocolMethod(
@@ -1203,7 +1205,7 @@ WebView にフルスクリーン HTML 要素が含まれているかどうかを
                 {
                     uri = wil::make_cotaskmem_string(L"");
                 }
-                SetWindowText(m_toolbar->addressBarWindow, uri.get());
+                SetWindowText(GetAddressBar(), uri.get());
 
                 return S_OK;
             })
@@ -1287,10 +1289,10 @@ WebView をナビゲーション履歴の次のページに移動します。
 ```cpp
 void ControlComponent::NavigateToAddressBar()
 {
-    int length = GetWindowTextLength(m_toolbar->addressBarWindow);
+    int length = GetWindowTextLength(GetAddressBar());
     std::wstring uri(length, 0);
     PWSTR buffer = const_cast<PWSTR>(uri.data());
-    GetWindowText(m_toolbar->addressBarWindow, buffer, length + 1);
+    GetWindowText(GetAddressBar(), buffer, length + 1);
 
     HRESULT hr = m_webView->Navigate(uri.c_str());
     if (hr == E_INVALIDARG)
@@ -1682,3 +1684,4 @@ COREWEBVIEW2_WEB_RESOURCE_CONTEXT_SIGNED_EXCHANGE            | 署名された H
 COREWEBVIEW2_WEB_RESOURCE_CONTEXT_PING            | Ping 要求。
 COREWEBVIEW2_WEB_RESOURCE_CONTEXT_CSP_VIOLATION_REPORT            | CSP 違反レポート。
 COREWEBVIEW2_WEB_RESOURCE_CONTEXT_OTHER            | その他のリソース。
+

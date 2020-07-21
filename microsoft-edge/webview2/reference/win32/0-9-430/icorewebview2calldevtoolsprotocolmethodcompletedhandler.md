@@ -3,22 +3,21 @@ description: Microsoft Edge WebView2 コントロールを使用して Win32 ア
 title: 0.9.430-WebView2 Win32 C++ ICoreWebView2CallDevToolsProtocolMethodCompletedHandler
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 07/14/2020
+ms.date: 07/20/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Host、browser control、edge html
-ms.openlocfilehash: b9eb90c0735f290305327b4397cf90d24c76abb5
-ms.sourcegitcommit: f6764f57aed9ab7229e4eb6cc8851d0cea667403
+ms.openlocfilehash: ed98aed25662a37a0cecf86eadec34361aa3efa8
+ms.sourcegitcommit: e0cb9e6f59f222fade6afa4829c59524a9a9b9ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "10881152"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "10884303"
 ---
 # 0.9.430-インターフェイス ICoreWebView2CallDevToolsProtocolMethodCompletedHandler 
 
-> [!NOTE]
-> このインターフェイスは、SDK バージョン0.9.430 後のリリースで変更される可能性があります。 最新 API リファレンスについては、[リファレンス](../../../webview2-api-reference.md)を参照してください。
+[!INCLUDE [deprecation-note](../../includes/deprecation-note.md)]
 
 ```
 interface ICoreWebView2CallDevToolsProtocolMethodCompletedHandler

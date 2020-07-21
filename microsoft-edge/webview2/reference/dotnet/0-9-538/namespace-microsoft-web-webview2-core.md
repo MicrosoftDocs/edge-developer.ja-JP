@@ -3,17 +3,17 @@ description: Microsoft Edge WebView2 コントロールを使用してネイテ�
 title: WebView2 の基本
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 07/08/2020
+ms.date: 07/20/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: WebView2、Core、WebView2、webview、.net、wpf、winforms、アプリ、edge、CoreWebView2、CoreWebView2Controller、browser control、edge html、Microsoft のようになります。
-ms.openlocfilehash: e45cb4c6a6fdd01680abc59691a0e0c34a64af15
-ms.sourcegitcommit: f6764f57aed9ab7229e4eb6cc8851d0cea667403
+ms.openlocfilehash: 121ca87d1cd444228aeba1328feb2d0633647d74
+ms.sourcegitcommit: e0cb9e6f59f222fade6afa4829c59524a9a9b9ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "10881194"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "10884030"
 ---
 # WebView2 の Core 名前空間 
 
@@ -55,6 +55,7 @@ CoreWebView2Settings | WebView 機能を有効、無効、または変更する�
 CoreWebView2SourceChangedEventArgs | SourceChanged イベントのイベント引数。
 CoreWebView2WebMessageReceivedEventArgs | WebMessageReceived イベントのイベント引数。
 CoreWebView2WebResourceRequestedEventArgs | WebResourceRequested イベントのイベント引数。
+CoreWebView2WebResourceResponseReceivedEventArgs | WebResourceResponseReceived イベントのイベント引数。
 CoreWebView2WindowFeatures | WebView ポップアップウィンドウのウィンドウ機能。
 EdgeNotFoundException | エッジのインストールが見つからない場合にスローされる例外。
 CoreWebView2Matrix4x4 | この変換は、CreateCoreWebView2PointerInfoFromPointerId を呼び出したときに適切な座標を計算するために使われます。
@@ -88,8 +89,7 @@ SystemKeyUp            | ウィンドウメッセージ WM_SYSKEYUP に対応し
 
 #### CoreWebView2MouseEventKind 
 
-> [!NOTE]
-> これは、SDK バージョン[0.9.538-プレリリース](../../../releasenotes.md#09538)で出荷される[実験的な API](../../../concepts/versioning.md#experimental-apis)です。
+[!INCLUDE [prerelease-note](../../includes/prerelease-note.md)]
 
 WebView に送信されるマウスイベントの種類を伝えるために、SendMouseInput で使われるマウスイベントの種類。
 
@@ -116,8 +116,7 @@ XButtonUp            | 最初または2番目の X ボタンのマウスイベ�
 
 #### CoreWebView2MouseEventVirtualKeys 
 
-> [!NOTE]
-> これは、SDK バージョン[0.9.538-プレリリース](../../../releasenotes.md#09538)で出荷される[実験的な API](../../../concepts/versioning.md#experimental-apis)です。
+[!INCLUDE [prerelease-note](../../includes/prerelease-note.md)]
 
 SendMouseInput の CoreWebView2MouseEventKind に関連付けられたマウスイベントの仮想キー。
 
@@ -176,8 +175,7 @@ UnknownPermission            | 不明な権限。
 
 #### CoreWebView2PointerEventKind 
 
-> [!NOTE]
-> これは、SDK バージョン[0.9.538-プレリリース](../../../releasenotes.md#09538)で出荷される[実験的な API](../../../concepts/versioning.md#experimental-apis)です。
+[!INCLUDE [prerelease-note](../../includes/prerelease-note.md)]
 
 WebView に送信されるポインターイベントの種類を伝えるために Sendpointer 入力で使われるポインターイベントの種類です。
 

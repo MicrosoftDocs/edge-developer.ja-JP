@@ -3,17 +3,17 @@ description: Microsoft Edge WebView2 コントロールを使用してネイテ�
 title: WebView2 について CoreWebView2Environment
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 07/08/2020
+ms.date: 07/20/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: WebView2、Core、WebView2、webview、.net、wpf、winforms、アプリ、edge、CoreWebView2、CoreWebView2Controller、browser control、edge html、Microsoft の WebView2。 CoreWebView2Environment。
-ms.openlocfilehash: 79bc9908d0fd12d4606311b959cbc6bc0c384c2d
-ms.sourcegitcommit: f6764f57aed9ab7229e4eb6cc8851d0cea667403
+ms.openlocfilehash: 6b03997c8bd76137b20bb71edfd0d57b3686914a
+ms.sourcegitcommit: e0cb9e6f59f222fade6afa4829c59524a9a9b9ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "10878919"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "10885290"
 ---
 # WebView2 クラス (CoreWebView2Environment クラス) 
 
@@ -32,7 +32,7 @@ ms.locfileid: "10878919"
 [CreateAsync](#createasync) | インストールされている Edge バージョンを使って、evergreen WebView2 環境を作成します。
 [CreateCoreWebView2CompositionControllerAsync](#createcorewebview2compositioncontrollerasync) | ビジュアルホスティングで使用する新しい WebView を非同期的に作成します。
 [CreateCoreWebView2ControllerAsync](#createcorewebview2controllerasync) | 新しい WebView を非同期的に作成します。
-[CreateCoreWebView2PointerInfo](#createcorewebview2pointerinfo) | 空の CoreWebView2ExperimentalPointerInfo を作成します。
+[CreateCoreWebView2PointerInfo](#createcorewebview2pointerinfo) | 空の CoreWebView2PointerInfo を作成します。
 [CreateWebResourceResponse](#createwebresourceresponse) | 新しい web リソース応答オブジェクトを作成します。
 [Getserverした文字列](#getavailablebrowserversionstring) | 安定したチャネルまたは埋め込みエッジでない場合は、チャネル名などのブラウザーのバージョン情報を取得します。
 [GetProviderForHwnd](#getproviderforhwnd) | 指定された HWND に対応する CoreWebView2CompositionController の UI オートメーションプロバイダーを返します。
@@ -87,8 +87,7 @@ Version1 が version2 よりも小さいか、等しいか、または大きい�
 
 #### CreateCoreWebView2CompositionControllerAsync 
 
-> [!NOTE]
-> これは、SDK バージョン[0.9.538-プレリリース](../../../releasenotes.md#09538)で出荷される[実験的な API](../../../concepts/versioning.md#experimental-apis)です。
+[!INCLUDE [prerelease-note](../../includes/prerelease-note.md)]
 
 ビジュアルホスティングで使用する新しい WebView を非同期的に作成します。
 
@@ -112,14 +111,13 @@ parentWindow は、WebView を表示して入力を受け取る HWND です。 W
 
 #### CreateCoreWebView2PointerInfo 
 
-> [!NOTE]
-> これは、SDK バージョン[0.9.538-プレリリース](../../../releasenotes.md#09538)で出荷される[実験的な API](../../../concepts/versioning.md#experimental-apis)です。
+[!INCLUDE [prerelease-note](../../includes/prerelease-note.md)]
 
-空の CoreWebView2ExperimentalPointerInfo を作成します。
+空の CoreWebView2PointerInfo を作成します。
 
 > パブリック[CoreWebView2PointerInfo](microsoft-web-webview2-core-corewebview2pointerinfo.md) [CreateCoreWebView2PointerInfo](#createcorewebview2pointerinfo)()
 
-返された CoreWebView2ExperimentalPointerInfo には、Sendポインタ入力を呼び出す前に、関連するすべての情報を設定する必要があります。
+返された CoreWebView2PointerInfo には、Sendポインタ入力を呼び出す前に、関連するすべての情報を設定する必要があります。
 
 #### CreateWebResourceResponse 
 
@@ -140,8 +138,7 @@ parentWindow は、WebView を表示して入力を受け取る HWND です。 W
 
 #### GetProviderForHwnd 
 
-> [!NOTE]
-> これは、SDK バージョン[0.9.538-プレリリース](../../../releasenotes.md#09538)で出荷される[実験的な API](../../../concepts/versioning.md#experimental-apis)です。
+[!INCLUDE [prerelease-note](../../includes/prerelease-note.md)]
 
 指定された HWND に対応する CoreWebView2CompositionController の UI オートメーションプロバイダーを返します。
 

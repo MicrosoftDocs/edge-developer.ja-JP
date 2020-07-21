@@ -3,17 +3,17 @@ description: Microsoft Edge WebView2 コントロールを使用してネイテ�
 title: WebView2 を WebView2 します。
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 07/08/2020
+ms.date: 07/17/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: WebView2、Core、WebView2、webview、.net、wpf、winforms、アプリ、edge、CoreWebView2、CoreWebView2Controller、browser control、edge html、Microsoft のように指定します。
-ms.openlocfilehash: 2dd7bf1035cf5254f4668070d56d2bd2405f1276
-ms.sourcegitcommit: f6764f57aed9ab7229e4eb6cc8851d0cea667403
+ms.openlocfilehash: e7f5d11b540d1d7ad9630aa674ef5bc0073195c2
+ms.sourcegitcommit: e0cb9e6f59f222fade6afa4829c59524a9a9b9ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "10880263"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "10885297"
 ---
 # WebView2 クラスを WebView2 します。 
 
@@ -37,11 +37,13 @@ WPF アプリケーションに web コンテンツを埋め込むためのコ�
 [NavigationStarting](#navigationstarting) | CoreWebView2 の CoreWebView2 開始イベントを囲むラッパー。
 [SourceChanged](#sourcechanged) | CoreWebView2 の CoreWebView2 Echanged イベントを囲むラッパー。
 [WebMessageReceived](#webmessagereceived) | CoreWebView2 の WebMessageReceived イベントを囲むラッパー。
+[ZoomFactorChanged](#zoomfactorchanged) | WebView の ZoomFactor プロパティが変更されると、イベントが発生します。
 [CanGoBack](#cangoback) | ナビゲーション履歴で前のページに移動できる場合は true を返します。
 [CanGoForward](#cangoforward) | ナビゲーション履歴の次のページに移動できる場合は true を返します。
 [CoreWebView2](#corewebview2) | CoreWebView2 の基になるコア COM API の完全な機能にアクセスします。
 [プロパティのプロパティ](#creationproperties) | コントロールの CoreWebView2 の初期化時に使用されるオプションのバッグを取得または設定します。
 [Source](#source) | WebView が現在表示されているトップレベルの Uri (または、CoreWebView2 の初期化が完了した後に表示されます)。
+[ZoomFactor](#zoomfactor) | WebView のズームファクター。
 [EnsureCoreWebView2Async](#ensurecorewebview2async) | コントロールの CoreWebView2 の初期化を明示的にトリガーします。
 [すべてのユーティリティ](#executescriptasync) | WebView でレンダリングされた現在のトップレベルドキュメントの javaScript パラメーターから JavaScript コードを実行します。
 [GoBack](#goback) | ナビゲーション履歴で、WebView を前のページに移動します。
@@ -119,6 +121,14 @@ CoreWebView2 の WebMessageReceived イベントを囲むラッパー。
 
 このイベントと CoreWebView2 の唯一の違いは、ハンドラーに渡される最初のパラメーターです。 このイベントのハンドラーは WebView2 コントロールを受け取りますが、CoreWebView2 のハンドラーは CoreWebView2 インスタンスを受け取ります。
 
+#### ZoomFactorChanged 
+
+WebView の ZoomFactor プロパティが変更されると、イベントが発生します。
+
+> パブリックイベント EventHandler< EventArgs > [ZoomFactorChanged](#zoomfactorchanged)
+
+このイベントは CoreWebView2Controller を直接公開します。詳細については、ZoomFactorChanged のドキュメントを参照してください。
+
 #### CanGoBack 
 
 ナビゲーション履歴で前のページに移動できる場合は true を返します。
@@ -162,10 +172,20 @@ WebView が現在表示されているトップレベルの Uri (または、Cor
 
 > パブリック Uri[ソース](#source)
 
-一般的に、このプロパティを取得することは、CoreWebView2 の CoreWebView2 プロパティを取得して、このプロパティを設定することと同じです。 CoreWebView2 で CoreWebView2 を呼び出すことと同じです。 CoreWebView2 が初期化される前にこのプロパティを取得すると、それに設定された最後の Uri が取得されます。 CoreWebView2 を初期化する前にこのプロパティを設定すると、初期化はバックグラウンドで開始されます (まだ進行中ではない場合)。その後、WebView2 は指定した Uri に移動します。 初期化の概要については、WebView2 クラスのドキュメントを参照してください。
+一般的に、このプロパティを取得することは、CoreWebView2 の CoreWebView2 プロパティを取得して、このプロパティを設定することと同じです (別の値)。 CoreWebView2 で CoreWebView2 の Navigate メソッドを呼び出すことと同じです。 Null の値の意味は、"about: blank" と同じです (詳しくは、「解説」をご覧ください)。 CoreWebView2 が初期化される前にこのプロパティを取得すると、それに設定された最後の Uri が取得されます。存在しない場合は null (既定値) となります。 CoreWebView2 を初期化する前にこのプロパティを設定すると、初期化はバックグラウンドで開始されます (まだ進行中ではない場合)。その後、WebView2 は指定した Uri に移動します。 初期化の概要については、WebView2 クラスのドキュメントを参照してください。
+
+このプロパティが null の場合は、CoreWebView2 に "about: blank" と表示されます (または null に設定されている場合、CoreWebView2 は "about: blank" に移動します)。 このプロパティには、明示的な値 "about: blank" を指定することもできます。これは、CoreWebView2 に対しても同じ効果があります。 つまり、CoreWebView2 に "about: blank" と表示されている場合は、このプロパティの値が null または "about: blank" のいずれかである可能性があります。 ただし、null と "about: blank" はこのプロパティの個別の値であり、等号として扱われることはありません。 コントロールの初期化で重要なのは、null (default) から "about: blank" に値を変更しても、暗黙的な初期化が行われることを意味します。 
 
 ##### 例外
 * `ObjectDisposedException` コントロールで Dispose が既に呼び出されている場合にスローされます。
+
+#### ZoomFactor 
+
+WebView のズームファクター。
+
+> パブリックダブル[ZoomFactor](#zoomfactor)
+
+このプロパティは CoreWebView2Controller を直接公開します。詳細については、ZoomFactor のドキュメントを参照してください。 CoreWebView2 が初期化される前にこのプロパティを取得すると、設定されていた最後の値が取得されます。存在しない場合は、1.0 (既定値) となります。 CoreWebView2 が初期化される前にこのプロパティに設定された最新の値は、初期化後に設定されます。
 
 #### EnsureCoreWebView2Async 
 

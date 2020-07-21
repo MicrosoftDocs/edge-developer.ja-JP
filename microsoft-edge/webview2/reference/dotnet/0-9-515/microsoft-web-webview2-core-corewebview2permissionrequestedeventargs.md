@@ -3,22 +3,21 @@ description: Microsoft Edge WebView2 コントロールを使用して Win32 ア
 title: 0.9.515-WebView2 (CoreWebView2PermissionRequestedEventArgs の場合)
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 07/14/2020
+ms.date: 07/20/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Controller、browser control、edge html
-ms.openlocfilehash: 22fc8ec74c8da0a0ff072cacf91a792b9246900f
-ms.sourcegitcommit: f6764f57aed9ab7229e4eb6cc8851d0cea667403
+ms.openlocfilehash: 2bfa4559824c9bb397648249ead8fa8cb60c281c
+ms.sourcegitcommit: e0cb9e6f59f222fade6afa4829c59524a9a9b9ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "10879801"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "10884632"
 ---
 # 0.9.515 クラスの WebView2 クラス (CoreWebView2PermissionRequestedEventArgs) 
 
-> [!NOTE]
-> この参照は、SDK バージョン0.9.515 後のリリースで変更される可能性があります。 最新 API リファレンスについては、 [WEBVIEW2 api リファレンス](../../../webview2-api-reference.md)を参照してください。
+[!INCLUDE [deprecation-note](../../includes/deprecation-note.md)]
 
 名前空間: WebView2 () \
 アセンブリ: Microsoft.Web.WebView2.Core.dll

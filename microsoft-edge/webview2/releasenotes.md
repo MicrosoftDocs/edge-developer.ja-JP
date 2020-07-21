@@ -3,17 +3,17 @@ description: Microsoft Edge WebView 2 コントロールを使用して Win32 �
 title: Win32、WPF、および WinForms の Microsoft Edge WebView2 のリリースノート
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 06/23/2020
+ms.date: 07/20/2020
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Controller、browser control、edge html
-ms.openlocfilehash: 1f229474d4de416f9f6516ce62ab88097f2bc1aa
-ms.sourcegitcommit: 288bd2a1bec418a84d1f0bda013c1913886bd269
+ms.openlocfilehash: cd83c502700c7d1f4864c9bd3d687faa1c65f264
+ms.sourcegitcommit: e0cb9e6f59f222fade6afa4829c59524a9a9b9ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "10844419"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "10885262"
 ---
 # WebView2 SDK のリリースノート  
 
@@ -25,13 +25,37 @@ WebView2 チームは、6週間のリズムで[WEBVIEW2 SDK][NuGetGallery]の更
 > [!IMPORTANT]
 > WebView2 はプレビューであり、.NET Api はに `pre-release package` あります。  
 
+## 0.9.579  
+リリース日: 07/20/2020
+
+[NuGet パッケージ][NuGetGallery0.9.579]\ |Microsoft Edge の最小バージョン86.0.579.0。  
+
+#### 全般的な情報  
+
+*   > [!IMPORTANT]
+    > **お知らせ**: Evergreen WebView2 Runtime と installer がプレビュー用にリリースされました。 詳細については、「 [WebView2 の配布](./concepts/distribution.md#understand-the-webview2-runtime-and-installer-preview)」を参照してください。 
+* > [!IMPORTANT]
+    > **お知らせ**: WebView2 sdk バージョンの[0.8.190](#08190)、 [0.8.230](#08230)、 [0.8.270](#08270)、 [0.8.314](#08314)、および[0.8.355](#08355)のサポートは、次の SDK リリース後に削除されます。 これらのバージョンは、nuget.org で廃止としてマークされています。WebView2 では、最新バージョンの WebView2 を使用して最新の状態を維持することをお勧めします。
+
+*   WebView worker のスレッドの改良が追加されました。  \ ([\ #318][GithubMicrosoftedgeWebviewfeedbackIssue318]\)
+*   WebView で無効にされたポップアップブロック。詳しくは、「NewWindowRequested イベントでの[Isuserinitiated][ReferenceWin3209538Icorewebview2newwindowrequestedeventargsGetIsuserinitiated]プロパティ」をご覧ください。
+*   次について、WebView ナビゲーションの開始イベントが発生していることを確認します。空白。 この時点で、すべてのナビゲーションについて NavigationStarting イベントが発生します。ただし、次のような場合は、空白または iframe srcdoc はサポートされず、無視されます。
+*   `edge:// URI`WebView でブロックされたスキーム。
+* WebView2 環境オプションに、WebView の条件付きアクセスを有効にする実験的な[IsSingleSignOnUsingOSPrimaryAccountEnabled][ReferenceWin3209538Icorewebview2experimentaloptionsGetIssinglesignonusingosprimaryaccountenabled]プロパティが追加されました。
+*   WebView が WebResource 要求に対する応答を受信して処理した後に発生する実験的な[WebResourceResponseReceived][ReferenceWin3209538Icorewebview2experimentalAddWebresourceresponsereceived]イベントが追加されました。 応答オブジェクトに認証ヘッダーが含まれている場合は、そのヘッダーが含まれます。
+
+#### .NET  
+
+*   WPF フォーカス処理が改善されました。  \ ([\ #185][GithubMicrosoftedgeWebviewfeedbackIssue185]\)
+*   WPF Webview2 コントローラーの ZoomFactor プロパティが追加されました。  
+
 ## 0.9.538  
 
 [NuGet パッケージ][NuGetGallery0.9.538]\ |Microsoft Edge の最小バージョン85.0.538.0。  
 
-#### 全般  
+#### 全般的な情報  
 
-*   WebView2 SDK バージョン[0.8.149](#08149)のサポートを削除しています。  WebView チームでは、最新バージョンの WebView2 を使用して最新の状態を維持することをお勧めします。  
+*   WebView2 SDK バージョン[0.8.149](#08149)のサポートを削除しています。  WebView2 では、最新バージョンの WebView2 を使用して最新の状態を維持することをお勧めします。  
 *   Microsoft Edge ブラウザーのプロファイルパスが変更された場合 ([#179][GithubMicrosoftedgeWebviewfeedbackIssue179])、グループポリシーが更新されました。  
 
 #### Win32 C/c + +  
@@ -46,7 +70,7 @@ WebView2 チームは、6週間のリズムで[WEBVIEW2 SDK][NuGetGallery]の更
 
 #### .NET (0.9.538 プレリリース版)  
 
-*   WinForms と WPF WebView2API のサンプルをリリースしました。これは WebView2 SDK の包括的なガイドです。  詳細については、「[サンプルリポジトリ][GithubMicrosoftedgeWebview2samplesMain]」を参照してください。  
+*   WinForms と WPF WebView2API のサンプルをリリースしました。これは WebView2 SDK の包括的なガイドです。 詳細については、「[サンプルリポジトリ][GithubMicrosoftedgeWebview2samplesMain]」を参照してください。  
 *   ビジュアルホスト機能と window 機能の[実験的な api][ConceptsVersioningExperimentalApis]のサポートが追加されました。  
 *   > [!IMPORTANT]
     > **変更の中断**: 次の保留は IDisposable: [scriptWebResourceRequested 始値][ReferenceDotnet09538MicrosoftWebWebview2CoreCorewebview2Scriptdialogopening]、 [newwindowrequested][ReferenceDotnet09538MicrosoftWebWebview2CoreCorewebview2Newwindowrequested]、 [WebResourceRequested][ReferenceDotnet09538MicrosoftWebWebview2CoreCorewebview2Webresourcerequested]、および[permissionrequested][ReferenceDotnet09538MicrosoftWebWebview2CoreCorewebview2Permissionrequested]実装するようになりました。  
@@ -274,8 +298,11 @@ WebView2 SDK は、フィードバックからいくつかの機能要求を取�
 [ReferenceDotnet09538MicrosoftWebWebview2CoreCorewebview2Scriptdialogopening]: ./reference/dotnet/0-9-538/microsoft-web-webview2-core-corewebview2.md#scriptdialogopening "WebView2 クラスの CoreWebView2 クラスのスクリプトの開始 |Microsoft ドキュメント"  
 [ReferenceDotnet09538MicrosoftWebWebview2CoreCorewebview2Webresourcerequested]: ./reference/dotnet/0-9-538/microsoft-web-webview2-core-corewebview2.md#webresourcerequested "WebResourceRequested クラス | WebView2 クラスをお選びください。 CoreWebView2Microsoft ドキュメント"  
 [ReferenceWin3209538Icorewebview2Addhostobjecttoscript]: ./reference/win32/0-9-538/icorewebview2.md#addhostobjecttoscript "AddHostObjectToScript-interface ICoreWebView2 |Microsoft ドキュメント"  
+[ReferenceWin3209538Icorewebview2experimentalAddWebresourceresponsereceived]: ./reference/win32/0-9-538/icorewebview2experimental.md#add_webresourceresponsereceived "add_WebResourceResponseReceived インターフェイス ICoreWebView2Experimental |Microsoft ドキュメント"  
+[ReferenceWin3209538Icorewebview2experimentaloptionsGetIssinglesignonusingosprimaryaccountenabled]: ./reference/win32/0-9-538/icorewebview2experimentalenvironmentoptions.md#get_issinglesignonusingosprimaryaccountenabled "get_IsSingleSignOnUsingOSPrimaryAccountEnabled インターフェイス ICoreWebView2ExperimentalEnvironmentOptions |Microsoft ドキュメント"  
 [ReferenceWin3209538Icorewebview2experimentalnewwindowrequestedeventargsGetWindowfeatures]: ./reference/win32/0-9-538/icorewebview2experimentalnewwindowrequestedeventargs.md#get_windowfeatures "get_WindowFeatures インターフェイス ICoreWebView2ExperimentalNewWindowRequestedEventArgs |Microsoft ドキュメント"  
 [ReferenceWin3209538Icorewebview2experimentalwindowfeatures]: ./reference/win32/0-9-538/icorewebview2experimentalwindowfeatures.md "インターフェイス ICoreWebView2ExperimentalWindowFeatures |Microsoft ドキュメント"  
+[ReferenceWin3209538Icorewebview2newwindowrequestedeventargsGetIsuserinitiated]: ./reference/win32/0-9-538/icorewebview2newwindowrequestedeventargs.md#get_isuserinitiated "get_IsUserInitiated インターフェイス ICoreWebView2NewWindowRequestedEventArgs |Microsoft ドキュメント"  
 [ReferenceWin3209538Icorewebview2settingsGetArehostobjectsallowed]: ./reference/win32/0-9-538/icorewebview2settings.md#get_arehostobjectsallowed "get_AreHostObjectsAllowed インターフェイス ICoreWebView2Settings |Microsoft ドキュメント"  
 [ReferenceWin3209538Webview2IdlCreatecorewebview2environmentwithoptions]: ./reference/win32/0-9-538/webview2-idl.md#createcorewebview2environmentwithoptions "CreateCoreWebView2EnvironmentWithOptions-Globals |Microsoft ドキュメント"  
 
@@ -302,10 +329,12 @@ WebView2 SDK は、フィードバックからいくつかの機能要求を取�
 [GithubMicrosoftedgeWebviewfeedbackIssue119]:  https://github.com/MicrosoftEdge/WebViewFeedback/issues/119 "MicrosoftEdge/WebViewFeedback の問題のフィードバックリポジトリ119" 
 [GithubMicrosoftedgeWebviewfeedbackIssue148]:  https://github.com/MicrosoftEdge/WebViewFeedback/issues/148 "MicrosoftEdge/WebViewFeedback の問題のフィードバックリポジトリ148"  
 [GithubMicrosoftedgeWebviewfeedbackIssue179]:  https://github.com/MicrosoftEdge/WebViewFeedback/issues/179 "MicrosoftEdge/WebViewFeedback の問題のフィードバックリポジトリ179"  
+[GithubMicrosoftedgeWebviewfeedbackIssue185]:  https://github.com/MicrosoftEdge/WebViewFeedback/issues/185 "MicrosoftEdge/WebViewFeedback の問題のフィードバックリポジトリ185"
+[GithubMicrosoftedgeWebviewfeedbackIssue318]:  https://github.com/MicrosoftEdge/WebViewFeedback/issues/318 "MicrosoftEdge/WebViewFeedback の問題のフィードバックリポジトリ318"  
 
 [GithubMicrosoftedgeWebview2samplesMain]: https://github.com/MicrosoftEdge/WebView2Samples "WebView2 サンプル-MicrosoftEdge/WebView2Samples |GitHub"  
 [GithubMicrosoftedgeWebview2samplesPr17]: https://github.com/MicrosoftEdge/WebView2Samples/pull/17 "最新の WebView2 SDK 0.9.430-MicrosoftEdge/WebView2Samples | を使用するようにプロジェクトを移動するGitHub"  
-[GithubMicrosoftedgeWebview2samplesApisample]: https://github.com/MicrosoftEdge/WebView2Samples/tree/master/WebView2APISample "WebView2 API のサンプル-MicrosoftEdge/WebView2Samples |GitHub"  
+[GithubMicrosoftedgeWebview2samplesApisample]: https://github.com/MicrosoftEdge/WebView2Samples/tree/master/SampleApps/WebView2APISample "WebView2 API のサンプル-MicrosoftEdge/WebView2Samples |GitHub"  
 
 [NuGetGallery]:  https://www.nuget.org/packages/Microsoft.Web.WebView2 "NuGet ギャラリー |WebView2"  
 [NuGetGallery0.8.149]:  https://www.nuget.org/packages/Microsoft.Web.WebView2/0.8.149 "NuGet ギャラリー |WebView2 v 0.8.149"  
@@ -318,3 +347,4 @@ WebView2 SDK は、フィードバックからいくつかの機能要求を取�
 [NuGetGallery0.9.488]:  https://www.nuget.org/packages/Microsoft.Web.WebView2/0.9.488 "NuGet ギャラリー |WebView2 v 0.9.488"  
 [NuGetGallery0.9.515-prerelease]:  https://www.nuget.org/packages/Microsoft.Web.WebView2/0.9.515-prerelease "NuGet ギャラリー |WebView2 v 0.9.515 プレリリース"  
 [NuGetGallery0.9.538]:  https://www.nuget.org/packages/Microsoft.Web.WebView2/0.9.538 "NuGet ギャラリー |WebView2 v 0.9.538"  
+[NuGetGallery0.9.579]:  https://www.nuget.org/packages/Microsoft.Web.WebView2/0.9.579 "NuGet ギャラリー |WebView2 v 0.9.579"

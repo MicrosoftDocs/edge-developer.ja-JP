@@ -3,22 +3,21 @@ description: Microsoft Edge WebView2 コントロールを使用して Win32 ア
 title: 0.9.430-WebView2 Win32 C++ ICoreWebView2Environment
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 07/14/2020
+ms.date: 07/20/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Host、browser control、edge html
-ms.openlocfilehash: 149a37dd2781b27522ec01b46a10efce943c71c8
-ms.sourcegitcommit: f6764f57aed9ab7229e4eb6cc8851d0cea667403
+ms.openlocfilehash: ea9234bf666840e6b87dd9827747d11ef74eb4c7
+ms.sourcegitcommit: e0cb9e6f59f222fade6afa4829c59524a9a9b9ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "10881110"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "10884205"
 ---
 # 0.9.430-インターフェイス ICoreWebView2Environment 
 
-> [!NOTE]
-> このインターフェイスは、SDK バージョン0.9.430 後のリリースで変更される可能性があります。 最新 API リファレンスについては、[リファレンス](../../../webview2-api-reference.md)を参照してください。
+[!INCLUDE [deprecation-note](../../includes/deprecation-note.md)]
 
 ```
 interface ICoreWebView2Environment

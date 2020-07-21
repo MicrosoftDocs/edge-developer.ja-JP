@@ -3,22 +3,21 @@ description: Microsoft Edge WebView2 コントロールを使用してネイテ�
 title: WebView2 について CoreWebView2Matrix4x4
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 07/08/2020
+ms.date: 07/20/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: WebView2、Core、WebView2、webview、.net、wpf、winforms、アプリ、edge、CoreWebView2、CoreWebView2Controller、browser control、edge html、Microsoft の WebView2。 CoreWebView2Matrix4x4。
-ms.openlocfilehash: bac470b29b08357d27ba77e986f19739acaaa05d
-ms.sourcegitcommit: f6764f57aed9ab7229e4eb6cc8851d0cea667403
+ms.openlocfilehash: b34dca29aca3d7f24e8f5fd99ab8b8515fcb4664
+ms.sourcegitcommit: e0cb9e6f59f222fade6afa4829c59524a9a9b9ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "10878877"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "10885528"
 ---
 # CoreWebView2Matrix4x4 構造体 (WebView2) 
 
-> [!NOTE]
-> これは、SDK バージョン[0.9.538-プレリリース](../../../releasenotes.md#09538)で出荷される[実験的な API](../../../concepts/versioning.md#experimental-apis)です。
+[!INCLUDE [prerelease-note](../../includes/prerelease-note.md)]
 
 名前空間: WebView2 () \
 アセンブリ: Microsoft.Web.WebView2.Core.dll

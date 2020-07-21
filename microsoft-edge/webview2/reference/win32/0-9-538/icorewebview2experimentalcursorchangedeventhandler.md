@@ -3,22 +3,21 @@ description: Microsoft Edge WebView2 コントロールを使用してネイテ�
 title: WebView2 Win32 C++ ICoreWebView2ExperimentalCursorChangedEventHandler
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 07/08/2020
+ms.date: 07/20/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Controller、browser control、edge html、ICoreWebView2ExperimentalCursorChangedEventHandler
-ms.openlocfilehash: f58279d1a3c404715be5aad8bf1be5ef120e1d94
-ms.sourcegitcommit: f6764f57aed9ab7229e4eb6cc8851d0cea667403
+ms.openlocfilehash: 67d0e6e05fb3640e141ec1ae7193746a1200bbd0
+ms.sourcegitcommit: e0cb9e6f59f222fade6afa4829c59524a9a9b9ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "10880004"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "10884884"
 ---
 # インターフェイス ICoreWebView2ExperimentalCursorChangedEventHandler 
 
-> [!NOTE]
-> これは、プレリリース SDK バージョン0.9.538 に同梱されている実験的な API です。
+[!INCLUDE [prerelease-note](../../includes/prerelease-note.md)]
 
 ```
 interface ICoreWebView2ExperimentalCursorChangedEventHandler

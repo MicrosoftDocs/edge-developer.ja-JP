@@ -3,22 +3,21 @@ description: Microsoft Edge WebView2 コントロールを使用してネイテ�
 title: WebView2 について CoreWebView2CompositionController
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 07/08/2020
+ms.date: 07/20/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: WebView2、Core、WebView2、webview、.net、wpf、winforms、アプリ、edge、CoreWebView2、CoreWebView2Controller、browser control、edge html、Microsoft の WebView2。 CoreWebView2CompositionController。
-ms.openlocfilehash: 45ac5406cea804aa5b5db748cecaae7104dccb00
-ms.sourcegitcommit: f6764f57aed9ab7229e4eb6cc8851d0cea667403
+ms.openlocfilehash: 1eb2498e05e2ec9fafa317f6108d022f7354c249
+ms.sourcegitcommit: e0cb9e6f59f222fade6afa4829c59524a9a9b9ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "10878989"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "10885283"
 ---
 # WebView2 クラス (CoreWebView2CompositionController クラス) 
 
-> [!NOTE]
-> これは、SDK バージョン[0.9.538-プレリリース](../../../releasenotes.md#09538)で出荷される[実験的な API](../../../concepts/versioning.md#experimental-apis)です。
+[!INCLUDE [prerelease-note](../../includes/prerelease-note.md)]
 
 名前空間: WebView2 () \
 アセンブリ: Microsoft.Web.WebView2.Core.dll
@@ -33,7 +32,7 @@ ms.locfileid: "10878989"
 [カーソルが変更されました](#cursorchanged) | WebView がカーソルの変更であると判断されたときに、イベントが発生します。
 [RootVisualTarget](#rootvisualtarget) | RootVisualTarget は、ホストアプリのビジュアルツリー内のビジュアルです。
 [UIAProvider](#uiaprovider) | WebView の UI オートメーションプロバイダーを返します。
-[CreateCoreWebView2PointerInfoFromPointerId](#createcorewebview2pointerinfofrompointerid) | システムから受け取ったポインター Id を CoreWebView2ExperimentalPointerInfo に変換するヘルパー関数。
+[CreateCoreWebView2PointerInfoFromPointerId](#createcorewebview2pointerinfofrompointerid) | システムから受け取ったポインター Id を CoreWebView2PointerInfo に変換するヘルパー関数。
 [SendMouseInput](#sendmouseinput) | EventKind が CoreWebView2MouseEventKind Wheel または CoreWebView2MouseEventKind の場合は、mouseData はホイールの動きの量を指定します。
 [Sendポインタ入力](#sendpointerinput) | Sendpointer Input は、CoreWebView2PointerEventKind で定義された型のタッチポインターまたはペンポインターの入力を受け入れます。
 
@@ -71,11 +70,11 @@ WebView の UI オートメーションプロバイダーを返します。
 
 #### CreateCoreWebView2PointerInfoFromPointerId 
 
-システムから受け取ったポインター Id を CoreWebView2ExperimentalPointerInfo に変換するヘルパー関数。
+システムから受け取ったポインター Id を CoreWebView2PointerInfo に変換するヘルパー関数。
 
 > パブリック[CoreWebView2PointerInfo](microsoft-web-webview2-core-corewebview2pointerinfo.md) [CreateCoreWebView2PointerInfoFromPointerId](#createcorewebview2pointerinfofrompointerid)(Uint ポインター Id、IntPtr parentwindow、Matrix4x4 transform)
 
-parentWindow は、webview を含む HWND です。 これは、webview を含む hwnd ツリー内の任意の HWND にすることができます。 CoreWebView2Matrix4x4 は、その HWND から webview への変換です。 返された CoreWebView2ExperimentalPointerInfo は、Sendポインタ Info で使われます。 ポインターの型は、ペンまたはタッチである必要があります。または、関数は失敗します。
+parentWindow は、webview を含む HWND です。 これは、webview を含む hwnd ツリー内の任意の HWND にすることができます。 CoreWebView2Matrix4x4 は、その HWND から webview への変換です。 返された CoreWebView2PointerInfo は、Sendポインタ Info で使われます。 ポインターの型は、ペンまたはタッチである必要があります。または、関数は失敗します。
 
 #### SendMouseInput 
 
@@ -91,5 +90,5 @@ Sendpointer Input は、CoreWebView2PointerEventKind で定義された型のタ
 
 > パブリック void [Sendポインタ入力](#sendpointerinput)([CoreWebView2PointerEventKind](./namespace-microsoft-web-webview2-core.md) eventType、 [CoreWebView2PointerInfo](microsoft-web-webview2-core-corewebview2pointerinfo.md)ポインター info)
 
-システムからのポインター入力は、最初に CoreWebView2ExperimentalPointerInfo に変換する必要があります。
+システムからのポインター入力は、最初に CoreWebView2PointerInfo に変換する必要があります。
 

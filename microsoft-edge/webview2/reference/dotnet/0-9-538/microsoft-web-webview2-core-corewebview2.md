@@ -3,17 +3,17 @@ description: Microsoft Edge WebView2 コントロールを使用してネイテ�
 title: WebView2 について CoreWebView2
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 07/08/2020
+ms.date: 07/20/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: WebView2、Core、WebView2、webview、.net、wpf、winforms、アプリ、edge、CoreWebView2、CoreWebView2Controller、browser control、edge html、Microsoft の WebView2。 CoreWebView2。
-ms.openlocfilehash: f8e0ebae683e1e68d12ce541fbec922ec9c05ef4
-ms.sourcegitcommit: f6764f57aed9ab7229e4eb6cc8851d0cea667403
+ms.openlocfilehash: 95ef347c8954dc67438a4d09825c11a64ad8872a
+ms.sourcegitcommit: e0cb9e6f59f222fade6afa4829c59524a9a9b9ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "10879010"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "10885276"
 ---
 # WebView2 クラス (CoreWebView2 クラス) 
 
@@ -48,6 +48,7 @@ WebView2 では、最新の Edge web ブラウザー技術を使用して、web 
 [SourceChanged](#sourcechanged) | SourceChanged Source プロパティが変更されたときに発生します。
 [WebMessageReceived](#webmessagereceived) | このイベントは、IsWebMessageEnabled 設定が設定され、webview 呼び出しの最上位のドキュメントになったときに発生 `window.chrome.webview.postMessage` します。
 [WebResourceRequested](#webresourcerequested) | AddWebResourceRequestedFilter で追加された一致する URL とリソースコンテキストフィルターへの HTTP 要求を WebView が実行しているときに発生します。
+[WebResourceResponseReceived](#webresourceresponsereceived) | WebResourceResponseReceived イベントは、WebView が WebResource 要求に対する応答を受信して処理した後に発生します。
 [WindowCloseRequested](#windowcloserequested) | ウィンドウを閉じるために、WebView 内のコンテンツが要求されたときに発生します。たとえば、close の後に呼び出されます。
 [AddHostObjectToScript](#addhostobjecttoscript) | 指定された名前を持つ WebView で実行されているスクリプトに、指定されたホストオブジェクトを追加します。
 [AddScriptToExecuteOnDocumentCreatedAsync](#addscripttoexecuteondocumentcreatedasync) | グローバルオブジェクトの作成後、HTML ドキュメントが解析されてから、HTML ドキュメントに含まれている他のスクリプトが実行される前に、指定された JavaScript を実行する必要があるスクリプトのリストに追加します。
@@ -231,6 +232,16 @@ AddWebResourceRequestedFilter で追加された一致する URL とリソース
 
 イベントを発生させるには、少なくとも1つのフィルターを追加する必要があります。
 
+#### WebResourceResponseReceived 
+
+[!INCLUDE [prerelease-note](../../includes/prerelease-note.md)]
+
+WebResourceResponseReceived イベントは、WebView が WebResource 要求に対する応答を受信して処理した後に発生します。
+
+> パブリックイベント EventHandler< [CoreWebView2WebResourceResponseReceivedEventArgs](microsoft-web-webview2-core-corewebview2webresourceresponsereceivedeventargs.md)  >  [WebResourceResponseReceived](#webresourceresponsereceived)
+
+イベント引数には、WebResourceResponse によって送信された WebResourceRequest が含まれています。これには、認証ヘッダーなど、関連付けられた WebResourceRequested イベントの一部として含まれていないネットワークスタックによって追加されたヘッダーも含まれています。
+
 #### WindowCloseRequested 
 
 ウィンドウを閉じるために、WebView 内のコンテンツが要求されたときに発生します。たとえば、close の後に呼び出されます。
@@ -307,7 +318,7 @@ URI パラメーターは、ワイルドカード文字列 (0 以上、"?": 完�
 > パブリック async タスク< 文字列 > [CalldevparametersAsJson Protocolmethodasync](#calldevtoolsprotocolmethodasync)(文字列 methodName, string)
 
 ##### 返し
-メソッドの戻りオブジェクトを表す JSON 文字列。
+メソッドの戻りオブジェクトを表す JSON 文字列。 
 
 使用できるメソッドの一覧と説明については、「 [Devtools プロトコルビューアー](https://aka.ms/DevToolsProtocolDocs) 」をご覧ください。 MethodName パラメーターは、書式のメソッドの完全な名前です `{domain}.{method}` 。 ParametersAsJson パラメーターは、対応するメソッドのパラメーターを含む JSON 形式の文字列です。 メソッドが非同期的に完了すると、ハンドラーの Invoke メソッドが呼び出されます。 Invoke は、JSON 文字列としてメソッドの戻りオブジェクトを使って呼び出されます。
 
@@ -328,7 +339,7 @@ WebView でレンダリングされた現在のトップレベルドキュメン
 ##### 返し
 指定された JavaScript を実行した結果を表す JSON エンコードされた文字列を返します。 
 
-このメソッドは、指定された JavaScript を非同期的に実行し、指定された JavaScript の結果を返します。 提供された JavaScript の結果が `undefined` 、参照循環を含んでいる場合、または JSON にエンコードできない場合は、文字列 ' null ' が返されます。 指定した JavaScript で呼び出される関数に明示的な戻り値がない場合 `undefined` は、が返されます。 指定した JavaScript が処理されない例外をスローすると、' null ' が返されます。 イベント後にこのメソッドが呼び出された場合 `NavigationStarting` 、指定された JavaScript は、読み込み時に新しいドキュメントで実行され、トリガーされたときと同じタイミングで実行され `ContentLoading` ます。 `ExecuteScript` がに設定されていても動作 `IsScriptEnabled` `FALSE` します。
+このメソッドは、指定された JavaScript を非同期的に実行し、指定された JavaScript の結果を返します。 提供された JavaScript の結果が `undefined` 、参照循環を含んでいる場合、または JSON にエンコードできない場合は、文字列 ' null ' が返されます。 指定した JavaScript で呼び出される関数に明示的な戻り値がない場合 `undefined` は、が返されます。 指定した JavaScript が処理されない例外をスローすると、' null ' が返されます。 NavigationStarting イベントの後にこのメソッドが呼び出されると、指定された JavaScript は、読み込み時に新しいドキュメントで実行されます。これは、ContentLoading がトリガーされたときと同じです。 実行可能なのは IsScriptEnabled がに設定されている場合でも動作 `FALSE` します。
 
 #### GetDevToolsProtocolEventReceiver 
 
@@ -434,3 +445,4 @@ window.chrome.webview.removeEventListener('message', handler)
 > パブリック void [Stop](#stop)()
 
 スクリプトは停止されません。
+
