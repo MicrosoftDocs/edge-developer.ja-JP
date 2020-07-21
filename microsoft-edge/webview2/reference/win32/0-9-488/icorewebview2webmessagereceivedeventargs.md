@@ -3,55 +3,54 @@ description: Microsoft Edge WebView2 コントロールを使用して Win32 ア
 title: 0.9.515-WebView2 Win32 C++ ICoreWebView2WebMessageReceivedEventArgs
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 07/14/2020
+ms.date: 07/20/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Controller、browser control、edge html
-ms.openlocfilehash: 40215d0c32b30000a93f59343547d60fc377ba03
-ms.sourcegitcommit: f6764f57aed9ab7229e4eb6cc8851d0cea667403
+ms.openlocfilehash: 730c992195d681ba183717ee2ed7aab99ea1ee23
+ms.sourcegitcommit: e0cb9e6f59f222fade6afa4829c59524a9a9b9ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "10877323"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "10883806"
 ---
-# <span data-ttu-id="e5716-104">0.9.515-インターフェイス ICoreWebView2WebMessageReceivedEventArgs</span><span class="sxs-lookup"><span data-stu-id="e5716-104">0.9.515 - interface ICoreWebView2WebMessageReceivedEventArgs</span></span> 
+# <span data-ttu-id="da5e5-104">0.9.515-インターフェイス ICoreWebView2WebMessageReceivedEventArgs</span><span class="sxs-lookup"><span data-stu-id="da5e5-104">0.9.515 - interface ICoreWebView2WebMessageReceivedEventArgs</span></span> 
 
-> [!NOTE]
-> <span data-ttu-id="e5716-105">この参照は、SDK バージョン0.9.515 後のリリースで変更される可能性があります。</span><span class="sxs-lookup"><span data-stu-id="e5716-105">This reference may be altered or unavailable for releases after SDK version 0.9.515.</span></span> <span data-ttu-id="e5716-106">最新 API リファレンスについては、 [WEBVIEW2 api リファレンス](../../../webview2-api-reference.md)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="e5716-106">Please refer to [WebView2 API reference](../../../webview2-api-reference.md) for the latest API reference.</span></span>
+[!INCLUDE [deprecation-note](../../includes/deprecation-note.md)]
 
 ```
 interface ICoreWebView2WebMessageReceivedEventArgs
   : public IUnknown
 ```
 
-<span data-ttu-id="e5716-107">WebMessageReceived イベントのイベント引数。</span><span class="sxs-lookup"><span data-stu-id="e5716-107">Event args for the WebMessageReceived event.</span></span>
+<span data-ttu-id="da5e5-105">WebMessageReceived イベントのイベント引数。</span><span class="sxs-lookup"><span data-stu-id="da5e5-105">Event args for the WebMessageReceived event.</span></span>
 
-## <span data-ttu-id="e5716-108">まとめ</span><span class="sxs-lookup"><span data-stu-id="e5716-108">Summary</span></span>
+## <span data-ttu-id="da5e5-106">まとめ</span><span class="sxs-lookup"><span data-stu-id="da5e5-106">Summary</span></span>
 
- <span data-ttu-id="e5716-109">Members</span><span class="sxs-lookup"><span data-stu-id="e5716-109">Members</span></span>                        | <span data-ttu-id="e5716-110">説明</span><span class="sxs-lookup"><span data-stu-id="e5716-110">Descriptions</span></span>
+ <span data-ttu-id="da5e5-107">Members</span><span class="sxs-lookup"><span data-stu-id="da5e5-107">Members</span></span>                        | <span data-ttu-id="da5e5-108">説明</span><span class="sxs-lookup"><span data-stu-id="da5e5-108">Descriptions</span></span>
 --------------------------------|---------------------------------------------
-[<span data-ttu-id="e5716-111">get_Source</span><span class="sxs-lookup"><span data-stu-id="e5716-111">get_Source</span></span>](#get_source) | <span data-ttu-id="e5716-112">この web メッセージを送信したドキュメントの URI です。</span><span class="sxs-lookup"><span data-stu-id="e5716-112">The URI of the document that sent this web message.</span></span>
-[<span data-ttu-id="e5716-113">get_WebMessageAsJson</span><span class="sxs-lookup"><span data-stu-id="e5716-113">get_WebMessageAsJson</span></span>](#get_webmessageasjson) | <span data-ttu-id="e5716-114">このメッセージは、webview コンテンツから、JSON 文字列に変換されたホストに送信されます。</span><span class="sxs-lookup"><span data-stu-id="e5716-114">The message posted from the webview content to the host converted to a JSON string.</span></span>
-[<span data-ttu-id="e5716-115">TryGetWebMessageAsString</span><span class="sxs-lookup"><span data-stu-id="e5716-115">TryGetWebMessageAsString</span></span>](#trygetwebmessageasstring) | <span data-ttu-id="e5716-116">Webview コンテンツからホストに投稿されたメッセージが文字列型の場合、このメソッドはその文字列の値を返します。</span><span class="sxs-lookup"><span data-stu-id="e5716-116">If the message posted from the webview content to the host is a string type, this method will return the value of that string.</span></span>
+[<span data-ttu-id="da5e5-109">get_Source</span><span class="sxs-lookup"><span data-stu-id="da5e5-109">get_Source</span></span>](#get_source) | <span data-ttu-id="da5e5-110">この web メッセージを送信したドキュメントの URI です。</span><span class="sxs-lookup"><span data-stu-id="da5e5-110">The URI of the document that sent this web message.</span></span>
+[<span data-ttu-id="da5e5-111">get_WebMessageAsJson</span><span class="sxs-lookup"><span data-stu-id="da5e5-111">get_WebMessageAsJson</span></span>](#get_webmessageasjson) | <span data-ttu-id="da5e5-112">このメッセージは、webview コンテンツから、JSON 文字列に変換されたホストに送信されます。</span><span class="sxs-lookup"><span data-stu-id="da5e5-112">The message posted from the webview content to the host converted to a JSON string.</span></span>
+[<span data-ttu-id="da5e5-113">TryGetWebMessageAsString</span><span class="sxs-lookup"><span data-stu-id="da5e5-113">TryGetWebMessageAsString</span></span>](#trygetwebmessageasstring) | <span data-ttu-id="da5e5-114">Webview コンテンツからホストに投稿されたメッセージが文字列型の場合、このメソッドはその文字列の値を返します。</span><span class="sxs-lookup"><span data-stu-id="da5e5-114">If the message posted from the webview content to the host is a string type, this method will return the value of that string.</span></span>
 
-## <span data-ttu-id="e5716-117">Members</span><span class="sxs-lookup"><span data-stu-id="e5716-117">Members</span></span>
+## <span data-ttu-id="da5e5-115">Members</span><span class="sxs-lookup"><span data-stu-id="da5e5-115">Members</span></span>
 
-#### <span data-ttu-id="e5716-118">get_Source</span><span class="sxs-lookup"><span data-stu-id="e5716-118">get_Source</span></span> 
+#### <span data-ttu-id="da5e5-116">get_Source</span><span class="sxs-lookup"><span data-stu-id="da5e5-116">get_Source</span></span> 
 
-<span data-ttu-id="e5716-119">この web メッセージを送信したドキュメントの URI です。</span><span class="sxs-lookup"><span data-stu-id="e5716-119">The URI of the document that sent this web message.</span></span>
+<span data-ttu-id="da5e5-117">この web メッセージを送信したドキュメントの URI です。</span><span class="sxs-lookup"><span data-stu-id="da5e5-117">The URI of the document that sent this web message.</span></span>
 
-> <span data-ttu-id="e5716-120">パブリック HRESULT [get_Source](#get_source)(LPWSTR \* Source)</span><span class="sxs-lookup"><span data-stu-id="e5716-120">public HRESULT [get_Source](#get_source)(LPWSTR \* source)</span></span>
+> <span data-ttu-id="da5e5-118">パブリック HRESULT [get_Source](#get_source)(LPWSTR \* Source)</span><span class="sxs-lookup"><span data-stu-id="da5e5-118">public HRESULT [get_Source](#get_source)(LPWSTR \* source)</span></span>
 
-#### <span data-ttu-id="e5716-121">get_WebMessageAsJson</span><span class="sxs-lookup"><span data-stu-id="e5716-121">get_WebMessageAsJson</span></span> 
+#### <span data-ttu-id="da5e5-119">get_WebMessageAsJson</span><span class="sxs-lookup"><span data-stu-id="da5e5-119">get_WebMessageAsJson</span></span> 
 
-<span data-ttu-id="e5716-122">このメッセージは、webview コンテンツから、JSON 文字列に変換されたホストに送信されます。</span><span class="sxs-lookup"><span data-stu-id="e5716-122">The message posted from the webview content to the host converted to a JSON string.</span></span>
+<span data-ttu-id="da5e5-120">このメッセージは、webview コンテンツから、JSON 文字列に変換されたホストに送信されます。</span><span class="sxs-lookup"><span data-stu-id="da5e5-120">The message posted from the webview content to the host converted to a JSON string.</span></span>
 
-> <span data-ttu-id="e5716-123">パブリック HRESULT [get_WebMessageAsJson](#get_webmessageasjson)(LPWSTR \* webMessageAsJson)</span><span class="sxs-lookup"><span data-stu-id="e5716-123">public HRESULT [get_WebMessageAsJson](#get_webmessageasjson)(LPWSTR \* webMessageAsJson)</span></span>
+> <span data-ttu-id="da5e5-121">パブリック HRESULT [get_WebMessageAsJson](#get_webmessageasjson)(LPWSTR \* webMessageAsJson)</span><span class="sxs-lookup"><span data-stu-id="da5e5-121">public HRESULT [get_WebMessageAsJson](#get_webmessageasjson)(LPWSTR \* webMessageAsJson)</span></span>
 
-<span data-ttu-id="e5716-124">JavaScript オブジェクトを使って通信する場合に使用します。</span><span class="sxs-lookup"><span data-stu-id="e5716-124">Use this to communicate via JavaScript objects.</span></span>
+<span data-ttu-id="da5e5-122">JavaScript オブジェクトを使って通信する場合に使用します。</span><span class="sxs-lookup"><span data-stu-id="da5e5-122">Use this to communicate via JavaScript objects.</span></span>
 
-<span data-ttu-id="e5716-125">たとえば、次の postMessage 呼び出しは、次の WebMessageAsJson 値になります。</span><span class="sxs-lookup"><span data-stu-id="e5716-125">For example the following postMessage calls result in the following WebMessageAsJson values:</span></span>
+<span data-ttu-id="da5e5-123">たとえば、次の postMessage 呼び出しは、次の WebMessageAsJson 値になります。</span><span class="sxs-lookup"><span data-stu-id="da5e5-123">For example the following postMessage calls result in the following WebMessageAsJson values:</span></span>
 
 ```
 postMessage({'a': 'b'})      L"{\"a\": \"b\"}"
@@ -59,15 +58,15 @@ postMessage(1.2)             L"1.2"
 postMessage('example')       L"\"example\""
 ```
 
-#### <span data-ttu-id="e5716-126">TryGetWebMessageAsString</span><span class="sxs-lookup"><span data-stu-id="e5716-126">TryGetWebMessageAsString</span></span> 
+#### <span data-ttu-id="da5e5-124">TryGetWebMessageAsString</span><span class="sxs-lookup"><span data-stu-id="da5e5-124">TryGetWebMessageAsString</span></span> 
 
-<span data-ttu-id="e5716-127">Webview コンテンツからホストに投稿されたメッセージが文字列型の場合、このメソッドはその文字列の値を返します。</span><span class="sxs-lookup"><span data-stu-id="e5716-127">If the message posted from the webview content to the host is a string type, this method will return the value of that string.</span></span>
+<span data-ttu-id="da5e5-125">Webview コンテンツからホストに投稿されたメッセージが文字列型の場合、このメソッドはその文字列の値を返します。</span><span class="sxs-lookup"><span data-stu-id="da5e5-125">If the message posted from the webview content to the host is a string type, this method will return the value of that string.</span></span>
 
-> <span data-ttu-id="e5716-128">パブリック HRESULT [Trygetwebmessageasstring](#trygetwebmessageasstring)(LPWSTR \* webmessageasstring)</span><span class="sxs-lookup"><span data-stu-id="e5716-128">public HRESULT [TryGetWebMessageAsString](#trygetwebmessageasstring)(LPWSTR \* webMessageAsString)</span></span>
+> <span data-ttu-id="da5e5-126">パブリック HRESULT [Trygetwebmessageasstring](#trygetwebmessageasstring)(LPWSTR \* webmessageasstring)</span><span class="sxs-lookup"><span data-stu-id="da5e5-126">public HRESULT [TryGetWebMessageAsString](#trygetwebmessageasstring)(LPWSTR \* webMessageAsString)</span></span>
 
-<span data-ttu-id="e5716-129">投稿されたメッセージが他の種類の JavaScript 型の場合は、このメソッドは E_INVALIDARG に失敗します。</span><span class="sxs-lookup"><span data-stu-id="e5716-129">If the message posted is some other kind of JavaScript type this method will fail with E_INVALIDARG.</span></span> <span data-ttu-id="e5716-130">これは、単純な文字列を使って通信する場合に使用します。</span><span class="sxs-lookup"><span data-stu-id="e5716-130">Use this to communicate via simple strings.</span></span>
+<span data-ttu-id="da5e5-127">投稿されたメッセージが他の種類の JavaScript 型の場合は、このメソッドは E_INVALIDARG に失敗します。</span><span class="sxs-lookup"><span data-stu-id="da5e5-127">If the message posted is some other kind of JavaScript type this method will fail with E_INVALIDARG.</span></span> <span data-ttu-id="da5e5-128">これは、単純な文字列を使って通信する場合に使用します。</span><span class="sxs-lookup"><span data-stu-id="da5e5-128">Use this to communicate via simple strings.</span></span>
 
-<span data-ttu-id="e5716-131">たとえば、次の postMessage の呼び出しは、次の WebMessageAsString 値になります。</span><span class="sxs-lookup"><span data-stu-id="e5716-131">For example the following postMessage calls result in the following WebMessageAsString values:</span></span>
+<span data-ttu-id="da5e5-129">たとえば、次の postMessage の呼び出しは、次の WebMessageAsString 値になります。</span><span class="sxs-lookup"><span data-stu-id="da5e5-129">For example the following postMessage calls result in the following WebMessageAsString values:</span></span>
 
 ```
 postMessage({'a': 'b'})      E_INVALIDARG

@@ -3,41 +3,40 @@ description: Microsoft Edge WebView2 コントロールを使用して Win32 ア
 title: 0.8.355-WebView2 Win32 C++ IWebView2PermissionRequestedEventHandler
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 07/14/2020
+ms.date: 07/20/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge
-ms.openlocfilehash: 3019f58ab1c0f01a63ddd906b6bd9e3137c0d0ee
-ms.sourcegitcommit: f6764f57aed9ab7229e4eb6cc8851d0cea667403
+ms.openlocfilehash: aeb6e2e25ca9f8c454f5dff891f2c488591d2a48
+ms.sourcegitcommit: e0cb9e6f59f222fade6afa4829c59524a9a9b9ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "10878338"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "10884933"
 ---
-# <span data-ttu-id="8cb4b-104">0.8.355-インターフェイス IWebView2PermissionRequestedEventHandler</span><span class="sxs-lookup"><span data-stu-id="8cb4b-104">0.8.355 - interface IWebView2PermissionRequestedEventHandler</span></span> 
+# <span data-ttu-id="4ae91-104">0.8.355-インターフェイス IWebView2PermissionRequestedEventHandler</span><span class="sxs-lookup"><span data-stu-id="4ae91-104">0.8.355 - interface IWebView2PermissionRequestedEventHandler</span></span> 
 
-> [!NOTE]
-> <span data-ttu-id="8cb4b-105">このインターフェイスは、SDK バージョン0.8.355 後のリリースで変更される可能性があります。</span><span class="sxs-lookup"><span data-stu-id="8cb4b-105">This interface may be altered or unavailable for releases after SDK version 0.8.355.</span></span> <span data-ttu-id="8cb4b-106">最新 API リファレンスについては、[リファレンス](../../../webview2-api-reference.md)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="8cb4b-106">Please refer to [Reference](../../../webview2-api-reference.md) for the latest API reference.</span></span>
+[!INCLUDE [deprecation-note](../../includes/deprecation-note.md)]
 
 ```
 interface IWebView2PermissionRequestedEventHandler
   : public IUnknown
 ```
 
-<span data-ttu-id="8cb4b-107">呼び出し元は、このインターフェイスを実装して、PermissionRequested されたイベントを受け取ります。</span><span class="sxs-lookup"><span data-stu-id="8cb4b-107">The caller implements this interface to receive the PermissionRequested event.</span></span>
+<span data-ttu-id="4ae91-105">呼び出し元は、このインターフェイスを実装して、PermissionRequested されたイベントを受け取ります。</span><span class="sxs-lookup"><span data-stu-id="4ae91-105">The caller implements this interface to receive the PermissionRequested event.</span></span>
 
-## <span data-ttu-id="8cb4b-108">まとめ</span><span class="sxs-lookup"><span data-stu-id="8cb4b-108">Summary</span></span>
+## <span data-ttu-id="4ae91-106">まとめ</span><span class="sxs-lookup"><span data-stu-id="4ae91-106">Summary</span></span>
 
- <span data-ttu-id="8cb4b-109">Members</span><span class="sxs-lookup"><span data-stu-id="8cb4b-109">Members</span></span>                        | <span data-ttu-id="8cb4b-110">説明</span><span class="sxs-lookup"><span data-stu-id="8cb4b-110">Descriptions</span></span>
+ <span data-ttu-id="4ae91-107">Members</span><span class="sxs-lookup"><span data-stu-id="4ae91-107">Members</span></span>                        | <span data-ttu-id="4ae91-108">説明</span><span class="sxs-lookup"><span data-stu-id="4ae91-108">Descriptions</span></span>
 --------------------------------|---------------------------------------------
-[<span data-ttu-id="8cb4b-111">Invoke</span><span class="sxs-lookup"><span data-stu-id="8cb4b-111">Invoke</span></span>](#invoke) | <span data-ttu-id="8cb4b-112">対応するイベントのイベント引数を実装側に提供するために呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="8cb4b-112">Called to provide the implementer with the event args for the corresponding event.</span></span>
+[<span data-ttu-id="4ae91-109">Invoke</span><span class="sxs-lookup"><span data-stu-id="4ae91-109">Invoke</span></span>](#invoke) | <span data-ttu-id="4ae91-110">対応するイベントのイベント引数を実装側に提供するために呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="4ae91-110">Called to provide the implementer with the event args for the corresponding event.</span></span>
 
-## <span data-ttu-id="8cb4b-113">Members</span><span class="sxs-lookup"><span data-stu-id="8cb4b-113">Members</span></span>
+## <span data-ttu-id="4ae91-111">Members</span><span class="sxs-lookup"><span data-stu-id="4ae91-111">Members</span></span>
 
-#### <span data-ttu-id="8cb4b-114">Invoke</span><span class="sxs-lookup"><span data-stu-id="8cb4b-114">Invoke</span></span> 
+#### <span data-ttu-id="4ae91-112">Invoke</span><span class="sxs-lookup"><span data-stu-id="4ae91-112">Invoke</span></span> 
 
-<span data-ttu-id="8cb4b-115">対応するイベントのイベント引数を実装側に提供するために呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="8cb4b-115">Called to provide the implementer with the event args for the corresponding event.</span></span>
+<span data-ttu-id="4ae91-113">対応するイベントのイベント引数を実装側に提供するために呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="4ae91-113">Called to provide the implementer with the event args for the corresponding event.</span></span>
 
-> <span data-ttu-id="8cb4b-116">パブリック HRESULT[呼び出し](#invoke)([IWebView2WebView](IWebView2WebView.md) \* webview、[IWebView2PermissionRequestedEventArgs](IWebView2PermissionRequestedEventArgs.md) \* args)</span><span class="sxs-lookup"><span data-stu-id="8cb4b-116">public HRESULT [Invoke](#invoke)([IWebView2WebView](IWebView2WebView.md) \* webview,[IWebView2PermissionRequestedEventArgs](IWebView2PermissionRequestedEventArgs.md) \* args)</span></span>
+> <span data-ttu-id="4ae91-114">パブリック HRESULT[呼び出し](#invoke)([IWebView2WebView](IWebView2WebView.md) \* webview、[IWebView2PermissionRequestedEventArgs](IWebView2PermissionRequestedEventArgs.md) \* args)</span><span class="sxs-lookup"><span data-stu-id="4ae91-114">public HRESULT [Invoke](#invoke)([IWebView2WebView](IWebView2WebView.md) \* webview,[IWebView2PermissionRequestedEventArgs](IWebView2PermissionRequestedEventArgs.md) \* args)</span></span>
 

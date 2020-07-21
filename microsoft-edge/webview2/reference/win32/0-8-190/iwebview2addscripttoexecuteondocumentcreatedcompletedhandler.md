@@ -3,41 +3,40 @@ description: Microsoft Edge WebView2 コントロールを使用して Win32 ア
 title: 0.8.355-WebView2 Win32 C++ IWebView2AddScriptToExecuteOnDocumentCreatedCompletedHandler
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 07/14/2020
+ms.date: 07/20/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge
-ms.openlocfilehash: 903574f0372e9d077907b9e9d538007cb71f830f
-ms.sourcegitcommit: f6764f57aed9ab7229e4eb6cc8851d0cea667403
+ms.openlocfilehash: 464192c119ddb7dd59ee7cb5981f172eb44dbb78
+ms.sourcegitcommit: e0cb9e6f59f222fade6afa4829c59524a9a9b9ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "10878674"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "10885017"
 ---
-# <span data-ttu-id="d9c92-104">0.8.355-インターフェイス IWebView2AddScriptToExecuteOnDocumentCreatedCompletedHandler</span><span class="sxs-lookup"><span data-stu-id="d9c92-104">0.8.355 - interface IWebView2AddScriptToExecuteOnDocumentCreatedCompletedHandler</span></span> 
+# <span data-ttu-id="a3701-104">0.8.355-インターフェイス IWebView2AddScriptToExecuteOnDocumentCreatedCompletedHandler</span><span class="sxs-lookup"><span data-stu-id="a3701-104">0.8.355 - interface IWebView2AddScriptToExecuteOnDocumentCreatedCompletedHandler</span></span> 
 
-> [!NOTE]
-> <span data-ttu-id="d9c92-105">このインターフェイスは、SDK バージョン0.8.355 後のリリースで変更される可能性があります。</span><span class="sxs-lookup"><span data-stu-id="d9c92-105">This interface may be altered or unavailable for releases after SDK version 0.8.355.</span></span> <span data-ttu-id="d9c92-106">最新 API リファレンスについては、[リファレンス](../../../webview2-api-reference.md)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="d9c92-106">Please refer to [Reference](../../../webview2-api-reference.md) for the latest API reference.</span></span>
+[!INCLUDE [deprecation-note](../../includes/deprecation-note.md)]
 
 ```
 interface IWebView2AddScriptToExecuteOnDocumentCreatedCompletedHandler
   : public IUnknown
 ```
 
-<span data-ttu-id="d9c92-107">呼び出し元は、このインターフェイスを実装して AddScriptToExecuteOnDocumentCreated メソッドの結果を受け取ります。</span><span class="sxs-lookup"><span data-stu-id="d9c92-107">The caller implements this interface to receive the result of the AddScriptToExecuteOnDocumentCreated method.</span></span>
+<span data-ttu-id="a3701-105">呼び出し元は、このインターフェイスを実装して AddScriptToExecuteOnDocumentCreated メソッドの結果を受け取ります。</span><span class="sxs-lookup"><span data-stu-id="a3701-105">The caller implements this interface to receive the result of the AddScriptToExecuteOnDocumentCreated method.</span></span>
 
-## <span data-ttu-id="d9c92-108">まとめ</span><span class="sxs-lookup"><span data-stu-id="d9c92-108">Summary</span></span>
+## <span data-ttu-id="a3701-106">まとめ</span><span class="sxs-lookup"><span data-stu-id="a3701-106">Summary</span></span>
 
- <span data-ttu-id="d9c92-109">Members</span><span class="sxs-lookup"><span data-stu-id="d9c92-109">Members</span></span>                        | <span data-ttu-id="d9c92-110">説明</span><span class="sxs-lookup"><span data-stu-id="d9c92-110">Descriptions</span></span>
+ <span data-ttu-id="a3701-107">Members</span><span class="sxs-lookup"><span data-stu-id="a3701-107">Members</span></span>                        | <span data-ttu-id="a3701-108">説明</span><span class="sxs-lookup"><span data-stu-id="a3701-108">Descriptions</span></span>
 --------------------------------|---------------------------------------------
-[<span data-ttu-id="d9c92-111">Invoke</span><span class="sxs-lookup"><span data-stu-id="d9c92-111">Invoke</span></span>](#invoke) | <span data-ttu-id="d9c92-112">呼び出し側に、対応する非同期メソッド呼び出しの完了状態と結果を提供するために呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="d9c92-112">Called to provide the implementer with the completion status and result of the corresponding asynchronous method call.</span></span>
+[<span data-ttu-id="a3701-109">Invoke</span><span class="sxs-lookup"><span data-stu-id="a3701-109">Invoke</span></span>](#invoke) | <span data-ttu-id="a3701-110">呼び出し側に、対応する非同期メソッド呼び出しの完了状態と結果を提供するために呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="a3701-110">Called to provide the implementer with the completion status and result of the corresponding asynchronous method call.</span></span>
 
-## <span data-ttu-id="d9c92-113">Members</span><span class="sxs-lookup"><span data-stu-id="d9c92-113">Members</span></span>
+## <span data-ttu-id="a3701-111">Members</span><span class="sxs-lookup"><span data-stu-id="a3701-111">Members</span></span>
 
-#### <span data-ttu-id="d9c92-114">Invoke</span><span class="sxs-lookup"><span data-stu-id="d9c92-114">Invoke</span></span> 
+#### <span data-ttu-id="a3701-112">Invoke</span><span class="sxs-lookup"><span data-stu-id="a3701-112">Invoke</span></span> 
 
-<span data-ttu-id="d9c92-115">呼び出し側に、対応する非同期メソッド呼び出しの完了状態と結果を提供するために呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="d9c92-115">Called to provide the implementer with the completion status and result of the corresponding asynchronous method call.</span></span>
+<span data-ttu-id="a3701-113">呼び出し側に、対応する非同期メソッド呼び出しの完了状態と結果を提供するために呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="a3701-113">Called to provide the implementer with the completion status and result of the corresponding asynchronous method call.</span></span>
 
-> <span data-ttu-id="d9c92-116">パブリック HRESULT[呼び出し](#invoke)(hresult ERRORCODE、LPCWSTR id)</span><span class="sxs-lookup"><span data-stu-id="d9c92-116">public HRESULT [Invoke](#invoke)(HRESULT errorCode,LPCWSTR id)</span></span>
+> <span data-ttu-id="a3701-114">パブリック HRESULT[呼び出し](#invoke)(hresult ERRORCODE、LPCWSTR id)</span><span class="sxs-lookup"><span data-stu-id="a3701-114">public HRESULT [Invoke](#invoke)(HRESULT errorCode,LPCWSTR id)</span></span>
 
