@@ -3,17 +3,17 @@ description: WebView2 コントロールをデバッグする方法について�
 title: デバッグ WebView2
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 07/20/2020
+ms.date: 07/22/2020
 ms.topic: how-to
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Host、browser control、edge html
-ms.openlocfilehash: 232104abc360cfa660d567ffb66535213fcb3ae0
-ms.sourcegitcommit: a82aa5fc1ada35cd8274490fbff3c0a850785835
+ms.openlocfilehash: ad6f334e5796d2f22146f2853ae1ef1d854e329c
+ms.sourcegitcommit: b3555043e9d5aefa5a9e36ba4d73934d41559f49
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "10888582"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "10894320"
 ---
 # WebView2 を使用してデバッグする方法  
 
@@ -21,51 +21,40 @@ Microsoft Edge WebView2 コントロールの目標は、web とネイティブ�
 
 ## Microsoft Edge DevTools  
 
-Microsoft edge [(Chromium) 開発者ツール][DevtoolsMain]を使用して、microsoft edge を使用している場合と同じように、WebView2 コントロールに表示される web コンテンツをデバッグします。  DevTools を開くには、[WebView] ウィンドウにフォーカスを設定し、次のいずれかの操作を実行します。  
-
+Microsoft edge [(Chromium) 開発者ツール][DevtoolsGuideChromiumMain]を使用して、microsoft edge と同じ方法で、WebView2 コントロールに表示される web コンテンツをデバッグします。  DevTools を開くには、[WebView] ウィンドウにフォーカスを設定し、次のいずれかの操作を実行します。  
 *   を選択し `F12` ます。  
 *   を選択し `Ctrl` + `Shift` + `I` ます。  
-*   コンテキストメニューを開き (\ を右クリックし)、を選択し `Inspect` ます。  
+*   コンテキストメニューを開く (\ 右クリック \) > 選択] をクリック `Inspect` します。  
 
 :::image type="complex" source="../media/f12.png" alt-text="Microsoft Edge DevTools" lightbox="../media/f12.png":::
    Microsoft Edge DevTools  
 :::image-end:::  
 
-> [!IMPORTANT]
-> ネイティブデバッガーがアタッチされている Visual Studio でアプリケーションをデバッグする場合、を選択すると、 `F12` 開発者ツールではなくネイティブデバッガーがトリガーされる可能性があります。  この `Ctrl` + `Shift` + `I` 問題を回避するには、コンテキストメニュー \ (右クリック \) を使用します。  
+> [!NOTE]
+> ネイティブデバッガーがアタッチされている Visual Studio でアプリケーションをデバッグするときに、を押すと、 `F12` 開発者ツールではなくネイティブデバッガーがトリガーされることがあります。  `Ctrl` + `Shift` + `I` または、コンテキストメニュー \ (右クリック \) を使用して、この問題を回避します。  
+
+> [!NOTE]
+> WebView を初めて `--auto-open-devtools-for-tabs` 作成するときに、コマンドライン引数を使って新しい DevTools ウィンドウを開くことができます。  <!--See `CreateCoreWebView2Controller` documentation for how to provide additional command-line arguments to the browser process.  See `LoaderOverride` registry key to examine different builds of WebView2 without modifying your application in the `CreateCoreWebView2Controller` documentation.  -->  
 
 ## Visual Studio  
 
-Visual Studio を使って、アプリケーションコードを開発したり、スクリプトをデバッグしたりすることができます。  
+Visual studio 2019 バージョン 16.4 Preview 2 以降のスクリプトデバッガーを使って、Visual Studio でスクリプトをデバッグします。  C++ のワークロードを使用して、**デスクトップ開発**の**JavaScript 診断**コンポーネントを確認します。  
 
-次の点にご注意ください。  
+:::image type="complex" source="../media/vs-js-diagnostics.jpg" alt-text="Visual Studio JavaScript 診断ツール":::
+   Visual Studio JavaScript 診断ツール  
+:::image-end:::  
 
-*   Visual Studio では、アプリが Visual Studio 内から起動された場合にのみデバッグスクリプトをサポートします。  \ (デバッグの実行プロセスをアタッチすることはサポートされていません)。  
-*   ターゲット WebView のデバッグシナリオはサポートされていません。  
+<!--todo: Please update the image to use a red rectangle to outline the portion of the screen to highlight  -->  
 
-Visual studio 2019 バージョン 16.4 Preview 2 以降のスクリプトデバッガーを使って、Visual Studio でスクリプトをデバッグします。  
+WebView2 スクリプトのデバッグを有効にするには、プロジェクトのコンテキストメニュー \ (右クリック \) を開いて、[**プロパティ**] > 選びます。  
 
-デバッガーを設定します。  
+*   [**構成プロパティ**] で、[**デバッグ**] を選択します。  
+*   [**デバッガーの種類**] プロパティで、オプションの一覧から [ **JavaScript (WebView2)** ] を選びます。 
 
-*   C++ のワークロードを使用して、**デスクトップ開発**の**JavaScript 診断**コンポーネントを確認します。  
-    
-    1.  Windows の [**アプリ & 機能**の設定] に移動します。  Windows タスクバーを使って検索します。  
-    1.  [ **Modify**] を選びます。  
-    1.  [ **C++** ] チェックボックスがオンになっていることを**確認します**。  
-        
-        :::image type="complex" source="../media/appsandfeatures.png" alt-text="アプリと機能" lightbox="../media/appsandfeatures.png":::
-           アプリと機能  
-        :::image-end:::  
-        
-*   WebView2 スクリプトのデバッグを有効にします。  
-    1.  プロジェクトにカーソルを置いて、コンテキストメニュー \ (右クリック \) を開き、[**プロパティ**] を選びます。  
-    1.  [**構成プロパティ**] で、[**デバッグ**] を選択します。  
-    1.  [**デバッガーの種類**] プロパティで、オプションの一覧を検索し、[ **JavaScript (WebView2)**] を選びます。  
-        
-        :::image type="complex" source="../media/enbjs.png" alt-text="Visual Studio JavaScript デバッガー" lightbox="../media/enbjs.png":::
-           Visual Studio JavaScript デバッガー  
-        :::image-end:::  
-        
+:::image type="complex" source="../media/vs-script-debugger.jpg" alt-text="Visual Studio JavaScript デバッガー":::
+   Visual Studio JavaScript デバッガー  
+:::image-end:::  
+
 <!--todo: Please update the image to use a red rectangle to outline the portion of the screen to highlight  -->  
 
 すべての設定が完了し、デバッグする準備ができました。  
@@ -88,18 +77,22 @@ Visual studio 2019 バージョン 16.4 Preview 2 以降のスクリプトデバ
         
 ## Visual Studio Code  
 
-Visual Studio コードを使って、WebView2 コントロールで実行されるスクリプトをデバッグすることができます。  詳細については、「 [Microsoft Edge (Chromium) WebView アプリケーション][GithubMicrosoftVscodeEdgeDebug2MainChromiumWebviewApplications]」を参照してください。  
+Visual Studio コードを使って、WebView2 コントロールで実行されるスクリプトをデバッグすることができます。  詳細については、「 [Microsoft Edge (Chromium) WebView アプリケーション][GithubMicrosoftVscodeEdgeDebug2ReadmeChromiumWebviewApplications]」を参照してください。  
 
 <!--todo:  add See also heading  -->  
 
 ## Microsoft Edge WebView チームと連絡を取り合う  
 
-フィードバックを共有して、より充実した WebView2 エクスペリエンスを構築できます。  [フィードバックリポジトリ][GithubMicrosoftedgeWebviewfeedback]にアクセスして、機能リクエストまたはバグレポートを送信します。  
+フィードバックを共有して、より充実した WebView2 エクスペリエンスを構築できます。  [フィードバックリポジトリ][GithubMicrosoftedgeWebviewfeedbackMain]にアクセスして、機能リクエストまたはバグレポートを送信します。  
+
+<!--## Debugging  
+
+Open DevTools with the normal shortcuts: `F12` or `Ctrl+Shift+I`. You can use the `--auto-open-devtools-for-tabs` command argument switch to have the DevTools window open immediately when first creating a WebView. See CreateCoreWebView2Controller documentation for how to provide additional command line arguments to the browser process. Check out the LoaderOverride registry key for trying out different builds of WebView2 without modifying your application in the CreateCoreWebView2Controller documentation.  -->  
 
 <!-- links -->  
 
-[DevtoolsMain]: /microsoft-edge/devtools-guide-chromium "Microsoft Edge (Chromium) 開発者ツール |Microsoft ドキュメント"  
+[DevtoolsGuideChromiumMain]: ../../devtools-guide-chromium.md "Microsoft Edge (Chromium) 開発者ツール"  
 
-[GithubMicrosoftVscodeEdgeDebug2MainChromiumWebviewApplications]: https://github.com/microsoft/vscode-edge-debug2/blob/master/README.md#microsoft-edge-chromium-webview-applications "Microsoft Edge (Chromium) WebView アプリケーション-VS コード-Microsoft Edge 用デバッガー |GitHub"  
+[GithubMicrosoftedgeWebviewfeedbackMain]: https://github.com/MicrosoftEdge/WebViewFeedback "WebView フィードバック-MicrosoftEdge/WebViewFeedback |GitHub"  
 
-[GithubMicrosoftedgeWebviewfeedback]: https://github.com/MicrosoftEdge/WebViewFeedback "WebView フィードバック-MicrosoftEdge/WebViewFeedback |GitHub"  
+[GithubMicrosoftVscodeEdgeDebug2ReadmeChromiumWebviewApplications]: https://github.com/microsoft/vscode-edge-debug2/blob/master/README.md#microsoft-edge-chromium-webview-applications "Microsoft Edge (Chromium) WebView アプリケーション-VS コード-Microsoft Edge 用デバッガー-microsoft/vscode-edge-debug2 |GitHub"  
