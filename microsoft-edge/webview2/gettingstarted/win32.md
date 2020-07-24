@@ -3,17 +3,17 @@ description: Microsoft Edge WebView 2 コントロールを使用して Win32 �
 title: Win32 アプリの WebView2 の概要
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 06/15/2020
+ms.date: 07/07/2020
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Controller、browser control、edge html
-ms.openlocfilehash: e184eaeb28a1e6e7aacf2917094149092d2fb6ee
-ms.sourcegitcommit: ae0257f8fb9832296ee6a196ded7bad2aacd3208
+ms.openlocfilehash: 7e35dc6ab84a32cfa7e020fa34ddfaa63818eda1
+ms.sourcegitcommit: 553957c101f83681b363103cb6af56bf20173f23
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "10846550"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "10895519"
 ---
 # WebView2 の概要 (開発者用プレビュー)  
 
@@ -124,7 +124,7 @@ CreateCoreWebView2EnvironmentWithOptions(nullptr, nullptr, nullptr,
                 }
                 
                 // Add a few settings for the webview
-                // this is a redundant demo step as the values are the default settings
+                // The demo step is redundant since the values are the default settings
                 ICoreWebView2Settings* Settings;
                 webviewWindow->get_Settings(&Settings);
                 Settings->put_IsScriptEnabled(TRUE);
@@ -170,7 +170,7 @@ CreateCoreWebView2EnvironmentWithOptions(nullptr, nullptr, nullptr,
 1.  `HistoryChanged`   
 1.  `NavigationCompleted`   
 
-詳細については、「[ナビゲーションイベント][Webview2ReferenceWin3209538Icorewebview2NavigationEvents]」を参照してください。  
+詳細については、「[ナビゲーションイベント][Webview2ConceptsNavigationEvents]」を参照してください。  
 
 :::image type="complex" source="../media/navigation-events.png" alt-text="ナビゲーションイベント":::
    ナビゲーションイベント  
@@ -290,7 +290,7 @@ nullptr);
 
 [Webview2Index]: ../index.md "Microsoft Edge WebView2 の概要 (プレビュー) |Microsoft ドキュメント"  
 [Webview2ReferenceWin3209538]: ../reference/win32/0-9-538-reference-webview2.md "Reference (WebView2) |Microsoft ドキュメント"  
-[Webview2ReferenceWin3209538Icorewebview2NavigationEvents]: ../reference/win32/0-9-538/ICoreWebView2.md#navigation-events "ナビゲーションイベント-インターフェイス ICoreWebView2 |Microsoft ドキュメント"  
+[Webview2ConceptsNavigationEvents]: ../concepts/navigation-events.md "ナビゲーションイベント |Microsoft ドキュメント"  
 
 [CppCxWrlTemplateLibraryVS2019]: /cpp/cppcx/wrl/windows-runtime-cpp-template-library-wrl?view=vs-2019 "Windows ランタイム C++ テンプレートライブラリ (WRL) |Microsoft ドキュメント"  
 [CppWindowsWalkthroughCreatingDesktopApplication]: /cpp/windows/walkthrough-creating-windows-desktop-applications-cpp?view=vs-2019 "チュートリアル: 従来の Windows デスクトップアプリケーションの作成 (C++) |Microsoft ドキュメント"  

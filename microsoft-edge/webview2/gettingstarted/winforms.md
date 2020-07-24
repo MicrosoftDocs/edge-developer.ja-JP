@@ -3,17 +3,17 @@ description: Microsoft Edge WebView 2 コントロールを使用して、Window
 title: Microsoft Edge WebView 2 Windows フォームアプリ
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 06/04/2020
+ms.date: 07/23/2020
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: WebView2、WebView2、WebView、webview、winforms アプリ、winforms、edge、CoreWebView2、browser control、edge html、はじめに、作業の開始、.NET、windows フォーム
-ms.openlocfilehash: 85b114e7eb1e567bd5188353af2826a56b01ad4e
-ms.sourcegitcommit: 8f2badc98ea7b7d1861dabfaf0e4dd8677e89bea
+ms.openlocfilehash: 634fbd74a94ea990bc3eb9c150760522a5c13ce1
+ms.sourcegitcommit: 553957c101f83681b363103cb6af56bf20173f23
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "10767024"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "10895526"
 ---
 # Windows Forms アプリでの WebView2 の概要 (プレビュー)  
 
@@ -23,11 +23,11 @@ ms.locfileid: "10767024"
 
 続行する前に、次の前提条件の一覧をインストールしていることを確認します。  
 
-* [Microsoft Edge (Chromium) カナリアチャネル](https://www.microsoftedgeinsider.com/download/)は、windows 10、windows 8.1、または windows 7 にインストールされています。 
-* [Visual Studio](https://visualstudio.microsoft.com/) 2017 以降。
+* [Microsoft Edge (Chromium) カナリアチャネル](https://www.microsoftedgeinsider.com/download)は、windows 10、windows 8.1、または windows 7 にインストールされています。 
+* [Visual Studio](https://visualstudio.microsoft.com) 2017 以降。
 
 > [!NOTE]
-> 現時点では、WebView2 は .NET Core 3.0 の[デザイナー (preview)](https://visualstudio.microsoft.com/vs/preview/)をサポートしていません。
+> 現時点では、WebView2 は .NET Core 3.0 の[デザイナー (preview)](https://visualstudio.microsoft.com/vs/preview)をサポートしていません。
 
 ## 手順 1-1 つのウィンドウアプリケーションを作成する
 
@@ -35,15 +35,15 @@ ms.locfileid: "10767024"
 
 1. **Visual Studio を開きます。**
 
-2. [ **Windows Forms .Net Framework アプリ**] を選び、[**次へ**] を選びます。
+1. [ **Windows Forms .Net Framework アプリ**] を選び、[**次へ**] を選びます。
 
     ![newproject](./media/winforms-newproject.png)
 
-3. **プロジェクト名**と**場所**の値を入力します。  **.Net Framework 4.6.2**以降を選択します。  
+1. **プロジェクト名**と**場所**の値を入力します。  **.Net Framework 4.6.2**以降を選択します。  
 
     ![project の startproject](./media/winforms-startproj.png)
 
-4. プロジェクトを作成するには、[**作成**] を選びます。
+1. プロジェクトを作成するには、[**作成**] を選びます。
 
 ## 手順 2-WebView2 SDK をインストールする
 
@@ -54,9 +54,10 @@ ms.locfileid: "10767024"
     :::image type="complex" source="./media/wpf-gettingstarted-mngnuget.png" alt-text="Nuget.exe":::
        Nuget.exe :::image-end:::
 
-2. `Microsoft.Web.WebView2`検索バーに入力します。  検索結果から**WebView2**を選びます。  
+1. `Microsoft.Web.WebView2`検索バーに入力します。  検索結果から**WebView2**を選びます。  
 
-3. [**プレリリースを含める**] をオンにし、**プレリリース**パッケージバージョンを選択して、[**インストール**] を選択します。  
+    > [!IMPORTANT]
+    > [**プレリリースを含める**] をオンにして、**バージョン**でプレリリースパッケージを選択し、[**インストール**] を選択します。  
 
     ![nuget.exe](./media/installnuget.png)
 
@@ -69,15 +70,15 @@ WebView2 API を使用したアプリケーションの開発を開始するよ�
 次に、アプリケーションに WebView を追加します。  
 
 1. **Windows フォームデザイナー**を開きます。  
-2. **ツールボックス**で**WebView2**を検索します。 **WebView2**コントロールを Windows フォームアプリにドラッグアンドドロップする
+1. **ツールボックス**で**WebView2**を検索します。 **WebView2**コントロールを Windows フォームアプリにドラッグアンドドロップする
 
     ![ツール](./media/winforms-toolbox.png)
 
-3. `Name`プロパティをに変更 `webView` します。
+1. `Name`プロパティをに変更 `webView` します。
 
     ![ツール](./media/winforms-properties.png)
 
-4. この `Source` プロパティは、WebView2 コントロールに表示される初期 URI を設定します。 Source プロパティをに設定します。 <https://www.microsoft.com>
+1. この `Source` プロパティは、WebView2 コントロールに表示される初期 URI を設定します。 Source プロパティをに設定します。 <https://www.microsoft.com>
 
     ![ツール](./media/winforms-source.png)
 
@@ -86,21 +87,21 @@ WebView2 API を使用したアプリケーションの開発を開始するよ�
 ![\ 低 ebビュー](./media/winforms-hellowebview.png)
 
 > [!NOTE]
-> 高 DPI モニターで作業している場合は、[高 dpi サポートのために Windows フォームアプリを構成](https://docs.microsoft.com/dotnet/framework/winforms/high-dpi-support-in-windows-forms#configuring-your-windows-forms-app-for-high-dpi-support)することが必要な場合があります。
+> 高 DPI モニターで作業している場合は、[高 dpi サポートのために Windows フォームアプリを構成](/dotnet/framework/winforms/high-dpi-support-in-windows-forms#configuring-your-windows-forms-app-for-high-dpi-support)することが必要な場合があります。
 
 ## 手順 4-ウィンドウのサイズ変更イベントを処理する
 
 ツールボックスからさらにいくつかのコントロールを追加し、ウィンドウのサイズ変更イベントを適切に処理します。
 
 1. **Windows フォームデザイナー**で、**ツールボックス**を開きます。
-2. **TextBox**を Windows フォームアプリにドラッグアンドドロップします。 [ **TextBox** `addressBar` **プロパティ] タブ**で、テキストボックスに名前を指定します。
-3. **ボタン**をドラッグして、Windows フォームアプリにドロップします。 [ **Button** `Go!` **Button** `goButton` **プロパティ] タブ**で、ボタンのテキストを変更し、ボタンに名前を指定します。
+1. **TextBox**を Windows フォームアプリにドラッグアンドドロップします。 [ **TextBox** `addressBar` **プロパティ] タブ**で、テキストボックスに名前を指定します。
+1. **ボタン**をドラッグして、Windows フォームアプリにドロップします。 [ **Button** `Go!` **Button** `goButton` **プロパティ] タブ**で、ボタンのテキストを変更し、ボタンに名前を指定します。
 
-このアプリは、デザイナーで次のようになります。
+    このアプリは、デザイナーで次のようになります。
+    
+    ![デザイナー](./media/winforms-designer.png)
 
-![デザイナー](./media/winforms-designer.png)
-
-4. **Form1.cs**では、 `Form_Resize` アプリのウィンドウのサイズが変更されたときに、コントロールを配置したままにします。
+1. **Form1.cs**では、 `Form_Resize` アプリのウィンドウのサイズが変更されたときに、コントロールを配置したままにします。
 
 ```csharp
 public Form1()
@@ -131,7 +132,7 @@ WebView2 コントロールに表示される URL をユーザーが変更でき
     using Microsoft.Web.WebView2.Core;
     ```
 
-2. **Windows Forms Designer**で、ボタンをダブルクリックして `Go!` メソッドを作成 `goButton_Click` `Form1.cs` します。 関数内で次のスニペットをコピーして貼り付けます。 これで、この関数は、 `goButton_Click` アドレスバーに入力された URL に WebView を移動します。
+1. **Windows Forms Designer**で、ボタンをダブルクリックして `Go!` メソッドを作成 `goButton_Click` `Form1.cs` します。 関数内で次のスニペットをコピーして貼り付けます。 これで、この関数は、 `goButton_Click` アドレスバーに入力された URL に WebView を移動します。
 
     ```csharp
     private void goButton_Click(object sender, EventArgs e)
@@ -160,7 +161,7 @@ WebView2 コントロールをホストするアプリケーションは、web �
 * `HistoryChanged`  
 * `NavigationCompleted`  
 
-詳細については、「[ナビゲーションイベント](../reference/win32/0-9-488/icorewebview2.md#navigation-events)」を参照してください。  
+詳細については、「[ナビゲーションイベント](../concepts/navigation-events.md)」を参照してください。  
 
 :::image type="complex" source="../media/navigation-events.png" alt-text="ナビゲーションイベント":::
    ナビゲーションイベント
@@ -251,7 +252,7 @@ void EnsureHttps(object sender, CoreWebView2NavigationStartingEventArgs args)
     }
     ```  
 
-2. **CoreWebView2**が初期化されたら、イベントハンドラーを登録して応答 `WebMessageReceived` します。  [ `Form1.cs` 更新] と [追加] で `InitializeAsync` `UpdateAddressBar` 、次のコードスニペットを使用します。  
+1. **CoreWebView2**が初期化されたら、イベントハンドラーを登録して応答 `WebMessageReceived` します。  [ `Form1.cs` 更新] と [追加] で `InitializeAsync` `UpdateAddressBar` 、次のコードスニペットを使用します。  
 
     ```csharp
     async void InitializeAsync()
@@ -268,10 +269,10 @@ void EnsureHttps(object sender, CoreWebView2NavigationStartingEventArgs args)
     }
     ```  
 
-3. WebView が web メッセージを送信して応答するためには、が初期化された後、 `CoreWebView2` 次のように、ホストが web コンテンツにスクリプトを挿入します。  
+1. WebView が web メッセージを送信して応答するためには、が初期化された後、 `CoreWebView2` 次のように、ホストが web コンテンツにスクリプトを挿入します。  
 
     1. を使って、ホストに URL を送信し `postMessage` ます。
-    2. イベントハンドラーを登録して、ホストから送信されたメッセージを出力します。  
+    1. イベントハンドラーを登録して、ホストから送信されたメッセージを出力します。  
 
 `Form1.cs` `InitializeAsync` 次のコードスニペットに示すように、を更新します。  
 

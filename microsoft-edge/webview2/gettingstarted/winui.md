@@ -3,17 +3,17 @@ description: Microsoft Edge WebView 2 コントロールを使用して、WinUI 
 title: WinUI アプリ用 Microsoft Edge WebView2
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 07/20/2020
+ms.date: 07/23/2020
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: WebView2、WebView2、WebView、webview、winui apps、winui、edge、CoreWebView2、browser control、edge html、はじめに、作業の開始、.NET
-ms.openlocfilehash: 76bf2e7dc0ef54da4203f186ce0356cfbcbc130d
-ms.sourcegitcommit: a82aa5fc1ada35cd8274490fbff3c0a850785835
+ms.openlocfilehash: 9960a4411e69f0232ae2d202a61a9beb01c0a631
+ms.sourcegitcommit: 553957c101f83681b363103cb6af56bf20173f23
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "10888619"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "10895512"
 ---
 # WinUI3 での WebView2 の概要 (プレビュー)  
 
@@ -192,7 +192,7 @@ WebView2 コントロールをホストするアプリケーションは、web �
 *   `NavigationCompleted`  
 > [!NOTE]
 > HTTP のリダイレクトでは `NavigationStarting` 、複数のイベントが発生します。  
-詳細については、「[ナビゲーションイベント][Webviews2ReferenceWin3209488Icorewebview2NavigationEvents]」を参照してください。  
+詳細については、「[ナビゲーションイベント][Webviews2ConceptsNavigationEvents]」を参照してください。  
 
 エラーが発生すると、次のイベントが発生し、エラーページに移動する可能性があります。  
 
@@ -274,7 +274,7 @@ WebView2 機能の詳細については、「 [WebView2 の概念と使い方の
 
 [Webview2Index]: ../index.md "Microsoft Edge WebView2 の概要 (プレビュー) |Microsoft ドキュメント"  
 [Webview2IndexNextSteps]: ../index.md#next-steps "次の手順-Microsoft Edge WebView2 の概要 (プレビュー) |Microsoft ドキュメント"  
-[Webviews2ReferenceWin3209488Icorewebview2NavigationEvents]: ../reference/win32/0-9-488/icorewebview2.md#navigation-events "ナビゲーションイベント-インターフェイス ICoreWebView2 |Microsoft ドキュメント"  
+[Webviews2ConceptsNavigationEvents]: ../concepts/navigation-events.md "ナビゲーションイベント |Microsoft ドキュメント"  
 [Webviews2ReferenceWpf09515MicrosoftWebExecutescriptasync]: ../reference/wpf/0-9-515/microsoft-web-webview2-wpf-webview2.md#executescriptasync "WebView2 クラス | WebView2 クラスの場合は、このサイトをお選びください。Microsoft ドキュメント"  
 
 [UwpSchemasAppxpackageUapmanifestRoot]: /uwp/schemas/appxpackage/uapmanifestschema/schema-root "Windows 10 のパッケージマニフェストスキーマリファレンス |Microsoft ドキュメント"  

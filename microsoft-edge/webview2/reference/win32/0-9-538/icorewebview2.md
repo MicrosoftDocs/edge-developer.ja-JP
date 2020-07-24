@@ -3,17 +3,17 @@ description: Microsoft Edge WebView2 コントロールを使用してネイテ�
 title: WebView2 Win32 C++ ICoreWebView2
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 07/16/2020
+ms.date: 07/23/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Controller、browser control、edge html、ICoreWebView2
-ms.openlocfilehash: 81bc222324db9649439afa2a7c3c84f715fa2ae3
-ms.sourcegitcommit: b3555043e9d5aefa5a9e36ba4d73934d41559f49
+ms.openlocfilehash: a1da6789027234130c58078871d7da23b4e285ba
+ms.sourcegitcommit: 553957c101f83681b363103cb6af56bf20173f23
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "10894327"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "10895498"
 ---
 # インターフェイス ICoreWebView2 
 
@@ -96,50 +96,6 @@ WebView2 では、最新の Edge web ブラウザー技術を使用して、web 
 [COREWEBVIEW2_SCRIPT_DIALOG_KIND](#corewebview2_script_dialog_kind) | ICoreWebView2ScriptDialogOpeningEventHandler インターフェイスで使用される JavaScript ダイアログの種類。
 [COREWEBVIEW2_WEB_ERROR_STATUS](#corewebview2_web_error_status) | Web ナビゲーションのエラー状態の値。
 [COREWEBVIEW2_WEB_RESOURCE_CONTEXT](#corewebview2_web_resource_context) | Web リソース要求コンテキストの列挙。
-
-## ナビゲーションイベント
-
-ナビゲーションイベントの通常のシーケンスは、NavigationStarting、SourceChanged、ContentLoading、Navigationstarting です。 次のイベントは、各ナビゲーション中の WebView の状態を示しています。 NavigationStarting: WebView はナビゲートを開始し、ナビゲーションはネットワーク要求になります。 この時点では、ホストは要求を許可することはできません。 SourceChanged: WebView のソースが新しい URL に変更されます。 これは、フラグメントナビゲーションなどのネットワーク要求が発生しないナビゲーションが原因である場合もあります。 履歴が変更されました: WebView の履歴はナビゲーションの結果として更新されています。 ContentLoading: WebView が新しいコンテンツの読み込みを開始しました。 NavigationCompleted: WebView は、新しいページのコンテンツの読み込みを完了しました。 開発者はナビゲーション ID を使用して、新しいドキュメントごとにナビゲーションを追跡できます。 新しいドキュメントへのナビゲーションが正常に完了するたびに、WebView のナビゲーション ID が変更されます。
-
-![dot-inline-dotgraph-1.png](media/dot-inline-dotgraph-1.png)
-
-これは、同じ NavigationId イベント arg を持つナビゲーションイベント用であることに注意してください。 異なる NavigationId イベント引数を持つナビゲーションイベントは、重複する可能性があります。 たとえば、ナビゲーションを開始したときに NavigationStarting イベントが発生してから別のナビゲーションを開始した場合は、最初のナビで開始される navigationstarting 後に、2番目のナビゲーションのナビゲートが続いて、2番目のナビゲーションについて、該当するすべてのナビゲーションイベントが表示されます。 エラーが発生した場合は、ナビゲーションがエラーページに続いているかどうかによって、ContentLoading イベントになることもあります。 HTTP リダイレクトの場合、1つの行に複数の NavigationStarting イベントが存在します。最初の列の後には IsRedirect フラグが設定されますが、ナビゲーション ID は変わりません。 同じドキュメントナビゲーションでは、NavigationStarting イベントは発生せず、ナビゲーション ID もインクリメントされません。
-
-WebView でサブフレーム内のナビゲーションを監視またはキャンセルするには、FrameNavigationStarting を使用します。
-
-## プロセスモデル
-
-WebView2 は、Edge web ブラウザーと同じプロセスモデルを使用します。 ユーザーデータディレクトリを指定する WebView2 の呼び出しプロセスを提供するユーザーセッションの指定したユーザーデータディレクトリごとに、1つの Edge ブラウザープロセスが存在します。 つまり、1つの Edge ブラウザープロセスが複数の通話プロセスを処理している可能性があり、1つの呼び出しプロセスが複数の Edge ブラウザープロセスを使用している可能性があります。
-
-![dot-inline-dotgraph-2.png](media/dot-inline-dotgraph-2.png)
-
-ブラウザープロセスが表示されない場合は、いくつかのレンダラープロセスが存在します。 これらは、さまざまな WebViews で複数のフレームを処理するために必要に応じて作成されます。 レンダラープロセスの数は、サイト分離ブラウザー機能と、関連付けられている WebViews でレンダリングされた個別の切断元の数によって異なります。
-
-![dot-inline-dotgraph-3.png](media/dot-inline-dotgraph-3.png)
-
-クラッシュとハングに対処するには、これらのブラウザーと ProcessFailure イベントを使ってプロセスをレンダリングします。
-
-Close メソッドを使用して、関連するブラウザーとレンダラープロセスを安全にシャットダウンできます。
-
-## スレッドモデル
-
-WebView2 は、UI スレッドで作成する必要があります。 特にメッセージポンプを持つスレッド。 すべてのコールバックがそのスレッドで発生し、WebView への呼び出しはそのスレッドで実行する必要があります。 他のスレッドから WebView を使うことは安全ではありません。
-
-イベントハンドラーと完了ハンドラーを含むコールバックは逐次実行されます。 つまり、イベントハンドラーを実行していて、メッセージループを開始した場合、他のイベントハンドラーまたは完了コールバックによって reentrantly の実行が開始されません。
-
-## 文字列型
-
-文字列 out パラメーターは、LPWSTR null で終了された文字列です。 呼び出し先は、、Cotaskmemalloc を使って文字列を割り当てます。 所有権は、呼び出し元に転送され、CoTaskMemFree を使ってメモリを解放することができます。
-
-パラメーター内の文字列は、LPCWSTR null で終了する文字列です。 呼び出し元は、同期関数呼び出しの間、文字列が有効であることを保証します。 呼び出し先がその値を関数呼び出しが完了した後のある時点まで保持する必要がある場合、呼び出し元は、その値の文字列値のコピーを割り当てる必要があります。
-
-## URI と JSON の解析
-
-さまざまなメソッドで Uri と JSON を文字列として指定または受け入れます。 これらの文字列の解析と生成には、独自の好みのライブラリを使用してください。
-
-アプリで WinRT が利用できる場合は `RuntimeClass_Windows_Data_Json_JsonObject` 、 `IJsonObjectStatics` JSON 文字列の解析または生成、 `RuntimeClass_Windows_Foundation_Uri` および uri の解析と生成を行うことができ `IUriRuntimeClassFactory` ます。 これらはどちらも Win32 アプリで動作します。
-
-IUri と CreateUri を使って Uri を解析する場合は、次の URI の作成フラグを使って、WebView の URI 解析とより厳密に一致するようにします。 `Uri_CREATE_ALLOW_IMPLICIT_FILE_SCHEME | Uri_CREATE_NO_DECODE_EXTRA_INFO`
 
 ## Members
 

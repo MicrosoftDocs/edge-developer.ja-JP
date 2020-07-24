@@ -3,17 +3,17 @@ description: Microsoft Edge WebView 2 コントロールを使用して、WPF �
 title: Microsoft Edge WebView 2 (WPF アプリ)
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 06/11/2020
+ms.date: 07/23/2020
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: WebView2、WebView2、WebView、webview、wpf アプリ、wpf、edge、CoreWebView2、browser control、edge html、はじめに、作業の開始、.NET
-ms.openlocfilehash: 9ecb80050d52d1d3b888027a728456a881d8c5ad
-ms.sourcegitcommit: 8f2badc98ea7b7d1861dabfaf0e4dd8677e89bea
+ms.openlocfilehash: 304d79640bdf789eb0b822dc7ab8f260df637624
+ms.sourcegitcommit: 553957c101f83681b363103cb6af56bf20173f23
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "10767017"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "10895491"
 ---
 # WPF での WebView2 の概要 (プレビュー)
 
@@ -24,7 +24,7 @@ ms.locfileid: "10767017"
 続行する前に、次の前提条件の一覧をインストールしていることを確認します。  
 
 * [Microsoft Edge (Chromium) カナリアチャネル](https://www.microsoftedgeinsider.com/download)は、windows 10、windows 8.1、または windows 7 にインストールされています。  
-* [Visual Studio](https://visualstudio.microsoft.com/) 2017 以降。  
+* [Visual Studio](https://visualstudio.microsoft.com) 2017 以降。  
 
 ## 手順 1-1 つのウィンドウアプリケーションを作成する  
 
@@ -69,16 +69,18 @@ ms.locfileid: "10767017"
        Nuget.exe
     :::image-end:::
     
-2.  `Microsoft.Web.WebView2`検索バーに入力します。  検索結果から [ **WebView2** ] を選びます。  
+1.  `Microsoft.Web.WebView2`検索バーに入力します。  検索結果から [ **WebView2** ] を選びます。  
 
-3. [**プレリリースを含める**] をオンにし、**プレリリース**パッケージバージョンを選択して、[**インストール**] を選択します。  
+    > [!IMPORTANT]
+    > [**プレリリースを含める**] をオンにして、**バージョン**でプレリリースパッケージを選択し、[**インストール**] を選択します。  
   
      ![nuget.exe](./media/installnuget.PNG)
     
-    WebView2 API を使用したアプリケーションの開発を開始するように設定されています。  を押して `F5` 、プロジェクトをビルドして実行します。  実行中のプロジェクトに空のウィンドウが表示されます。  
+    WebView2 API を使用したアプリケーションの開発を開始するように設定されています。  `F5`プロジェクトをビルドして実行する場合に選択します。  実行中のプロジェクトに空のウィンドウが表示されます。  
     
     :::image type="complex" source="./media/wpf-gettingstarted-blank.png" alt-text="空のアプリ":::
-       空のアプリ :::image-end:::  
+       空のアプリ
+    :::image-end:::  
     
 ## 手順 3-MainWindow で1つの WebView を作成する  
 
@@ -195,7 +197,7 @@ WebView2 コントロールをホストするアプリケーションは、web �
 *   `HistoryChanged`  
 *   `NavigationCompleted`  
 
-詳細については、「[ナビゲーションイベント](../reference/win32/0-9-488/icorewebview2.md#navigation-events)」を参照してください。  
+詳細については、「[ナビゲーションイベント](../concepts/navigation-events.md)」を参照してください。  
 
 :::image type="complex" source="../media/navigation-events.png" alt-text="ナビゲーションイベント":::
    ナビゲーションイベント

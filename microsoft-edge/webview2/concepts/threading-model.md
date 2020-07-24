@@ -1,0 +1,36 @@
+---
+description: スレッドモデル
+title: スレッドモデル
+author: MSEdgeTeam
+ms.author: msedgedevrel
+ms.date: 07/23/2020
+ms.topic: conceptual
+ms.prod: microsoft-edge
+ms.technology: webview
+keywords: IWebView2、IWebView2WebView、webview2、webview、wpf アプリ、wpf、edge、ICoreWebView2、ICoreWebView2Host、browser control、edge html
+ms.openlocfilehash: ad51afee97d3cc3e913ecdd73c4f0c2a99c70564
+ms.sourcegitcommit: 553957c101f83681b363103cb6af56bf20173f23
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "10895561"
+---
+# スレッドモデル  
+
+## スレッド セーフティ  
+
+WebView2 は、UI スレッドで作成する必要があります。  特にメッセージポンプを持つスレッド。  このスレッドですべてのコールバックが発生し、WebView2 への要求はそのスレッドで実行する必要があります。  別のスレッドから WebView2 を使うことは安全ではありません。  
+
+このプロパティの唯一の例外は `Content` `CoreWebView2WebResourceRequest` です。  `Content`プロパティストリームは、バックグラウンドスレッドから読み取ります。  UI スレッドへのパフォーマンスへの影響を防ぐために、ストリームは、バックグラウンド STA から作成するか、または作成してください。  
+
+## 再  
+
+イベントハンドラーと完了ハンドラーを含むコールバックは逐次実行されます。  イベントハンドラーを実行していて、メッセージループを開始した場合、他のイベントハンドラーまたは完了コールバックは再入可能な方法で開始できません。  
+
+## 保留  
+
+一部の WebView2 イベントは、イベント引数で設定された値を読み取ります。または、イベントハンドラーの完了後に何らかの操作を実行します。  また、イベントハンドラーなどの非同期操作も実行する必要がある場合は、 `GetDeferral` 関連付けられているイベントのイベント引数でメソッドを使うことができます。  返された繰延オブジェクトは、のメソッドが要求されるまで、イベントハンドラーが完了したと見なされないようにし `Complete` `Deferral` ます。  
+
+たとえば、イベントを使うと、 `NewWindowRequested` `CoreWebView2` イベントハンドラーが完了したときに、子ウィンドウとして接続することができます。  ただし、を非同期的に作成する必要がある場合は、 `CoreWebView2` `GetDeferral` のメソッドをに要求し `NewWindowRequestedEventArgs` ます。  非同期的にを作成 `CoreWebView2` してプロパティをに設定すると `NewWindow` 、その `NewWindowRequestedEventArgs` `Complete` `Deferral` メソッドを使ってオブジェクトの要求が返され `GetDeferral` ます。  
+
+<!-- links -->  

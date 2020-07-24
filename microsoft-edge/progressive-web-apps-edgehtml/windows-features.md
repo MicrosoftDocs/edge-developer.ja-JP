@@ -7,12 +7,12 @@ ms.date: 07/16/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: プログレッシブ web アプリ、PWA、Edge、Windows、WinRT、UWP、EdgeHTML
-ms.openlocfilehash: 8ba682b03182194a773568254b66c3616bf4c3e2
-ms.sourcegitcommit: a06c86ef7c69e1e400a0be5938449f3c4ba6ec72
+ms.openlocfilehash: 296ae0a65481edd312e06b83c1554813ec2bffae
+ms.sourcegitcommit: 515522959f517e194f93a27f5d360690600edd9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "10882787"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "10894718"
 ---
 # Windows の PWA (EdgeHTML) をカスタマイズする  
 
@@ -23,9 +23,13 @@ Windows 10 にインストールされた microsoft は、[ユニバーサル Wi
 *   Cortana の音声コマンドによるアプリの起動と移動  
 *   Windows OS との統合 (Windows アクションセンター、デスクトップタスクバー、およびコンテキストメニューを介して)  
 
-...これは、Windows の PWA \ (EdgeHTML \) に追加される可能性のほんの一部にすぎません。  
+これらは、Windows の PWA \ (EdgeHTML \) で追加される可能性のほんの一部にすぎません。  
 
-このガイドでは、Windows 10 アプリとして PWA \ (EdgeHTML) をインストール、実行、強化する方法について説明します。ただし、クロスブラウザーとクロスプラットフォームの互換性を確保します。  
+この記事では、Windows 10 アプリとして PWA \ (EdgeHTML) をインストール、実行、強化する方法について説明します。ただし、クロスブラウザーとクロスプラットフォームの互換性を確保します。  
+
+> [!IMPORTANT]
+> この記事の例と手順では、Visual Studio 2017 が必要です。 Visual Studio 2019 には、この記事で使用されているテンプレートは含まれていません。 Visual Studio 2017 をダウンロードするには、「 [Visual studio のダウンロード-2017、2015 & 以前のバージョン][PreviousVSDownloads]」を参照してください。  
+
 
 ## 前提条件  
 
@@ -342,3 +346,4 @@ if(window.Windows && Windows.Media.SpeechRecognition){
 [MicrosoftSupportWindowsAppPermissions]: https://support.microsoft.com/help/10557/windows-10-app-permissions "アプリのアクセス許可"  
 [MicrosoftVisualStudioDownloads]: https://visualstudio.microsoft.com/downloads "入手"  
 [MicrosoftVisualStudioPreview]: https://visualstudio.microsoft.com/vs/preview "Visual Studio Preview"  
+[PreviousVSDownloads]: https://visualstudio.microsoft.com/vs/older-downloads/ "Visual Studio のダウンロード"

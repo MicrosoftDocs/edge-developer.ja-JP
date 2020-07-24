@@ -3,16 +3,16 @@ description: このガイドでは、Windows でプログレッシブ web アプ
 title: プログレッシブ Web アプリ (Chromium) の使用を開始する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 05/15/2020
+ms.date: 07/23/2020
 ms.topic: conceptual
 ms.prod: microsoft-edge
 keywords: プログレッシブ web アプリ、PWA、Edge、Windows、PWABuilder、web マニフェスト、サービスワーカー、プッシュ
-ms.openlocfilehash: 6c5fa5d6af8494f33e11a545d5dde1264604c787
-ms.sourcegitcommit: 136642396bb8094a535e203067ee429e60d31d25
+ms.openlocfilehash: a9a0cad2d771e52b783053e36f0f23dec5d8e70c
+ms.sourcegitcommit: 515522959f517e194f93a27f5d360690600edd9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "10659210"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "10894711"
 ---
 # プログレッシブ Web アプリ (Chromium) の使用を開始する  
 
@@ -26,7 +26,7 @@ ms.locfileid: "10659210"
 ## 前提条件  
 
 *   PWA ソースコードを編集するには、 [VS コード][VisualstudioCodeMain]を使います。  
-*   ローカル web サーバーとして[node.js][NodejsMain]を使用します。  
+*   [Node.js][NodejsMain]をローカル web サーバーとして使用します。  
 
 ## 基本的な web アプリをセットアップする  
 
@@ -125,7 +125,7 @@ Web アプリにアプリマニフェストを追加するには、次の操作�
 1.  VS コードで、 `/public/index.html` 次のコードスニペットを開いて、タグ内に追加し `<head>` ます。  
     
     ```html
-    <script src="/pwabuilder-sw-register.js"></script>
+    <script type="module" src="/pwabuilder-sw-register.js"></script>
     ```  
     
 これで、web アプリには、最初にキャッシュからのリソース、JS、CSS、HTML などのリソースを取得し、必要に応じてネットワークにフォールバックする、キャッシュ方式を使うサービスワーカーが用意されました。  
@@ -319,7 +319,7 @@ PWA でプッシュ通知をテストするには、次の手順を実行しま�
 
 <!--[PwaEdgehtmlIndexRequirements]: ../progressive-web-apps-edgehtml/index.md#requirements "Requirements - Progressive Web Apps \(EdgeHTML\) on Windows | Microsoft Docs"  -->  
 
-[VisualStudioNodejsTutorialPublishAzureAppService]: /visualstudio/nodejs/tutorial-nodejs#optional-publish-to-azure-app-service "Azure App Service に発行する-Visual Studio でノード .js と Express アプリを作成する |Microsoft ドキュメント"  
+[VisualStudioNodejsTutorialPublishAzureAppService]: /azure/javascript/tutorial-vscode-azure-app-service-node-03 "Node.js アプリを VS コードで Azure に展開する |Microsoft ドキュメント"  
 
 [AzureCreateFreeAccount]: https://azure.microsoft.com/free "Azure 無料アカウントの作成 |Microsoft Azure"  
 [AzureWebApps]: https://azure.microsoft.com/services/app-service/web "Web アプリ |Microsoft Azure"  
