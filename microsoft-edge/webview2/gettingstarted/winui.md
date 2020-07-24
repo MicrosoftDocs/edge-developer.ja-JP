@@ -3,72 +3,72 @@ description: Microsoft Edge WebView 2 コントロールを使用して、WinUI 
 title: WinUI アプリ用 Microsoft Edge WebView2
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 07/20/2020
+ms.date: 07/23/2020
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: WebView2、WebView2、WebView、webview、winui apps、winui、edge、CoreWebView2、browser control、edge html、はじめに、作業の開始、.NET
-ms.openlocfilehash: 76bf2e7dc0ef54da4203f186ce0356cfbcbc130d
-ms.sourcegitcommit: a82aa5fc1ada35cd8274490fbff3c0a850785835
+ms.openlocfilehash: 9960a4411e69f0232ae2d202a61a9beb01c0a631
+ms.sourcegitcommit: 553957c101f83681b363103cb6af56bf20173f23
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "10888619"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "10895512"
 ---
-# <span data-ttu-id="4deb7-104">WinUI3 での WebView2 の概要 (プレビュー)</span><span class="sxs-lookup"><span data-stu-id="4deb7-104">Getting started with WebView2 in WinUI3 (Preview)</span></span>  
+# <span data-ttu-id="07692-104">WinUI3 での WebView2 の概要 (プレビュー)</span><span class="sxs-lookup"><span data-stu-id="07692-104">Getting started with WebView2 in WinUI3 (Preview)</span></span>  
 
-<span data-ttu-id="4deb7-105">この記事では、WinUI3 で初めて WebView2 アプリを作成する方法について説明します。 [Microsoft Edge WebView2 (Preview) の概要][Webview2Index]の主な機能について説明します。</span><span class="sxs-lookup"><span data-stu-id="4deb7-105">In this article, get started creating your first WebView2 app with WinUI3 and learn about the main features of [Introduction to Microsoft Edge WebView2 (Preview)][Webview2Index].</span></span>  <span data-ttu-id="4deb7-106">個々の Api について詳しくは、 [api リファレンス][GithubMicrosoftUiXamlSpecsWebview2]をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="4deb7-106">For more information on individual APIs, see [API reference][GithubMicrosoftUiXamlSpecsWebview2].</span></span>  
+<span data-ttu-id="07692-105">この記事では、WinUI3 で初めて WebView2 アプリを作成する方法について説明します。 [Microsoft Edge WebView2 (Preview) の概要][Webview2Index]の主な機能について説明します。</span><span class="sxs-lookup"><span data-stu-id="07692-105">In this article, get started creating your first WebView2 app with WinUI3 and learn about the main features of [Introduction to Microsoft Edge WebView2 (Preview)][Webview2Index].</span></span>  <span data-ttu-id="07692-106">個々の Api について詳しくは、 [api リファレンス][GithubMicrosoftUiXamlSpecsWebview2]をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="07692-106">For more information on individual APIs, see [API reference][GithubMicrosoftUiXamlSpecsWebview2].</span></span>  
 
-## <span data-ttu-id="4deb7-107">前提条件</span><span class="sxs-lookup"><span data-stu-id="4deb7-107">Prerequisites</span></span>  
+## <span data-ttu-id="07692-107">前提条件</span><span class="sxs-lookup"><span data-stu-id="07692-107">Prerequisites</span></span>  
 
-<span data-ttu-id="4deb7-108">次の記事を始める前に、次の前提条件の一覧をインストールしてください。</span><span class="sxs-lookup"><span data-stu-id="4deb7-108">Ensure you install the following list of pre-requisites before proceeding with the following article.</span></span>  
+<span data-ttu-id="07692-108">次の記事を始める前に、次の前提条件の一覧をインストールしてください。</span><span class="sxs-lookup"><span data-stu-id="07692-108">Ensure you install the following list of pre-requisites before proceeding with the following article.</span></span>  
 
-*   <span data-ttu-id="4deb7-109">Windows 10 バージョン 1803 \ (ビルド 17134 \) 以降。</span><span class="sxs-lookup"><span data-stu-id="4deb7-109">Windows 10 version 1803 \(build 17134\) or later.</span></span>  <span data-ttu-id="4deb7-110">詳細については、「 [Windows Update: FAQ][MicrosoftSupport12373]」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="4deb7-110">For more information, see [Windows Update: FAQ][MicrosoftSupport12373].</span></span>  
-*   <span data-ttu-id="4deb7-111">[Microsoft Edge (Chromium) カナリア Channel][MicrosoftedgeinsiderDownload] windows 10、windows 8.1、または windows 7。</span><span class="sxs-lookup"><span data-stu-id="4deb7-111">[Microsoft Edge (Chromium) Canary channel][MicrosoftedgeinsiderDownload] on Windows 10, Windows 8.1, or Windows 7.</span></span>  
-*   <span data-ttu-id="4deb7-112">Visual Studio 2019、バージョン 16.7 Preview 1。</span><span class="sxs-lookup"><span data-stu-id="4deb7-112">Visual Studio 2019, version 16.7 Preview 1.</span></span>  <span data-ttu-id="4deb7-113">詳細については、 [WINDOWS UI ライブラリ3プレビュー 2 (2020 年7月)][WindowsAppsWinui3ConfigureYourDevEnvironment]を参照してください。</span><span class="sxs-lookup"><span data-stu-id="4deb7-113">For more information, see [Windows UI Library 3 Preview 2 (July 2020)][WindowsAppsWinui3ConfigureYourDevEnvironment].</span></span>  
-*   <span data-ttu-id="4deb7-114">[X64][WindowsDotnetcliBlobCoreSdk50100Preview4202681X86]と[x86][WindowsDotnetcliBlobCoreSdk50100Preview4202681X64]の両方のバージョンの .net 5 Preview 4。</span><span class="sxs-lookup"><span data-stu-id="4deb7-114">Both the [x64][WindowsDotnetcliBlobCoreSdk50100Preview4202681X86] and [x86][WindowsDotnetcliBlobCoreSdk50100Preview4202681X64] versions of .NET 5 Preview 4.</span></span>  
-*   <span data-ttu-id="4deb7-115">[WinUI 3][VisualstudioMarketplaceWinUiprojecttemplates] Visual Studio 2019 用のプロジェクトテンプレートの拡張機能</span><span class="sxs-lookup"><span data-stu-id="4deb7-115">[WinUI 3 Project Templates][VisualstudioMarketplaceWinUiprojecttemplates] extension for Visual Studio 2019.</span></span>  
-<span data-ttu-id="4deb7-116">すべての Visual Studio 機能に確実にアクセスできるように、[開発者モードを有効][WindowsUwpGetStartedEnableYourDeviceForDevelopment]にしていることを確認します。</span><span class="sxs-lookup"><span data-stu-id="4deb7-116">Ensure you [Enable Developer Mode][WindowsUwpGetStartedEnableYourDeviceForDevelopment] to ensure you have access to all Visual Studio features.</span></span>  
+*   <span data-ttu-id="07692-109">Windows 10 バージョン 1803 \ (ビルド 17134 \) 以降。</span><span class="sxs-lookup"><span data-stu-id="07692-109">Windows 10 version 1803 \(build 17134\) or later.</span></span>  <span data-ttu-id="07692-110">詳細については、「 [Windows Update: FAQ][MicrosoftSupport12373]」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="07692-110">For more information, see [Windows Update: FAQ][MicrosoftSupport12373].</span></span>  
+*   <span data-ttu-id="07692-111">[Microsoft Edge (Chromium) カナリア Channel][MicrosoftedgeinsiderDownload] windows 10、windows 8.1、または windows 7。</span><span class="sxs-lookup"><span data-stu-id="07692-111">[Microsoft Edge (Chromium) Canary channel][MicrosoftedgeinsiderDownload] on Windows 10, Windows 8.1, or Windows 7.</span></span>  
+*   <span data-ttu-id="07692-112">Visual Studio 2019、バージョン 16.7 Preview 1。</span><span class="sxs-lookup"><span data-stu-id="07692-112">Visual Studio 2019, version 16.7 Preview 1.</span></span>  <span data-ttu-id="07692-113">詳細については、 [WINDOWS UI ライブラリ3プレビュー 2 (2020 年7月)][WindowsAppsWinui3ConfigureYourDevEnvironment]を参照してください。</span><span class="sxs-lookup"><span data-stu-id="07692-113">For more information, see [Windows UI Library 3 Preview 2 (July 2020)][WindowsAppsWinui3ConfigureYourDevEnvironment].</span></span>  
+*   <span data-ttu-id="07692-114">[X64][WindowsDotnetcliBlobCoreSdk50100Preview4202681X86]と[x86][WindowsDotnetcliBlobCoreSdk50100Preview4202681X64]の両方のバージョンの .net 5 Preview 4。</span><span class="sxs-lookup"><span data-stu-id="07692-114">Both the [x64][WindowsDotnetcliBlobCoreSdk50100Preview4202681X86] and [x86][WindowsDotnetcliBlobCoreSdk50100Preview4202681X64] versions of .NET 5 Preview 4.</span></span>  
+*   <span data-ttu-id="07692-115">[WinUI 3][VisualstudioMarketplaceWinUiprojecttemplates] Visual Studio 2019 用のプロジェクトテンプレートの拡張機能</span><span class="sxs-lookup"><span data-stu-id="07692-115">[WinUI 3 Project Templates][VisualstudioMarketplaceWinUiprojecttemplates] extension for Visual Studio 2019.</span></span>  
+<span data-ttu-id="07692-116">すべての Visual Studio 機能に確実にアクセスできるように、[開発者モードを有効][WindowsUwpGetStartedEnableYourDeviceForDevelopment]にしていることを確認します。</span><span class="sxs-lookup"><span data-stu-id="07692-116">Ensure you [Enable Developer Mode][WindowsUwpGetStartedEnableYourDeviceForDevelopment] to ensure you have access to all Visual Studio features.</span></span>  
 
-## <span data-ttu-id="4deb7-117">手順 1-プロジェクトを作成する</span><span class="sxs-lookup"><span data-stu-id="4deb7-117">Step 1 - Create Project</span></span>  
+## <span data-ttu-id="07692-117">手順 1-プロジェクトを作成する</span><span class="sxs-lookup"><span data-stu-id="07692-117">Step 1 - Create Project</span></span>  
 
-<span data-ttu-id="4deb7-118">1つのメインウィンドウを含む基本的なデスクトッププロジェクトから始めます。</span><span class="sxs-lookup"><span data-stu-id="4deb7-118">Start with a basic desktop project containing a single main window.</span></span>  
+<span data-ttu-id="07692-118">1つのメインウィンドウを含む基本的なデスクトッププロジェクトから始めます。</span><span class="sxs-lookup"><span data-stu-id="07692-118">Start with a basic desktop project containing a single main window.</span></span>  
 
-1.  <span data-ttu-id="4deb7-119">Visual Studio で、[**新しいプロジェクトの作成**] を選択します。</span><span class="sxs-lookup"><span data-stu-id="4deb7-119">In Visual Studio, select **Create a new project**.</span></span>  
-1.  <span data-ttu-id="4deb7-120">[プロジェクト] ドロップダウンで、[ **C#**]、[ **Windows**]、[ **WinUI** ] の順に選択します。</span><span class="sxs-lookup"><span data-stu-id="4deb7-120">In the project drop-down, select **C#**, **Windows**, and **WinUI** respectively.</span></span>  
+1.  <span data-ttu-id="07692-119">Visual Studio で、[**新しいプロジェクトの作成**] を選択します。</span><span class="sxs-lookup"><span data-stu-id="07692-119">In Visual Studio, select **Create a new project**.</span></span>  
+1.  <span data-ttu-id="07692-120">[プロジェクト] ドロップダウンで、[ **C#**]、[ **Windows**]、[ **WinUI** ] の順に選択します。</span><span class="sxs-lookup"><span data-stu-id="07692-120">In the project drop-down, select **C#**, **Windows**, and **WinUI** respectively.</span></span>  
     
     :::image type="complex" source="./media/winui-gettingstarted-selections.png" alt-text="WinUI の Visual studio プロジェクト作成ダイアログ" lightbox="./media/winui-gettingstarted-selections.png":::
-       <span data-ttu-id="4deb7-122">WinUI の Visual studio プロジェクト作成ダイアログ</span><span class="sxs-lookup"><span data-stu-id="4deb7-122">Visual studio project creation dialog for WinUI</span></span>  
+       <span data-ttu-id="07692-122">WinUI の Visual studio プロジェクト作成ダイアログ</span><span class="sxs-lookup"><span data-stu-id="07692-122">Visual studio project creation dialog for WinUI</span></span>  
     :::image-end:::  
     
-1.  <span data-ttu-id="4deb7-123">[**空のアプリ]、[パッケージ] (デスクトップの WinUI)** の順に選び、[**次へ**] を選びます。</span><span class="sxs-lookup"><span data-stu-id="4deb7-123">Choose **Blank App, Packaged (WinUI in Desktop)**, and then choose **Next**.</span></span>  
-1.  <span data-ttu-id="4deb7-124">プロジェクト名を入力し、必要に応じてその他のオプションを選択して、[**作成**] を選択します。</span><span class="sxs-lookup"><span data-stu-id="4deb7-124">Enter a project name, choose other options as needed, and then select **Create**.</span></span>  
-1.  <span data-ttu-id="4deb7-125">**新しいユニバーサル Windows プラットフォームプロジェクト**で、次の値を選択し、[ **OK]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="4deb7-125">In **New Universal Windows Platform Project**, select the following values, and then choose **OK**:</span></span>  
-    *   <span data-ttu-id="4deb7-126">ターゲットバージョン: **Windows 10、バージョン 1903 (ビルド 18362)** 以降。</span><span class="sxs-lookup"><span data-stu-id="4deb7-126">Target version: **Windows 10, version 1903 (build 18362)** or later.</span></span>  
-    *   <span data-ttu-id="4deb7-127">最小バージョン: **Windows 10、バージョン 1803 (ビルド 17134)**。</span><span class="sxs-lookup"><span data-stu-id="4deb7-127">Minimum version: **Windows 10, version 1803 (build 17134)**.</span></span>  
+1.  <span data-ttu-id="07692-123">[**空のアプリ]、[パッケージ] (デスクトップの WinUI)** の順に選び、[**次へ**] を選びます。</span><span class="sxs-lookup"><span data-stu-id="07692-123">Choose **Blank App, Packaged (WinUI in Desktop)**, and then choose **Next**.</span></span>  
+1.  <span data-ttu-id="07692-124">プロジェクト名を入力し、必要に応じてその他のオプションを選択して、[**作成**] を選択します。</span><span class="sxs-lookup"><span data-stu-id="07692-124">Enter a project name, choose other options as needed, and then select **Create**.</span></span>  
+1.  <span data-ttu-id="07692-125">**新しいユニバーサル Windows プラットフォームプロジェクト**で、次の値を選択し、[ **OK]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="07692-125">In **New Universal Windows Platform Project**, select the following values, and then choose **OK**:</span></span>  
+    *   <span data-ttu-id="07692-126">ターゲットバージョン: **Windows 10、バージョン 1903 (ビルド 18362)** 以降。</span><span class="sxs-lookup"><span data-stu-id="07692-126">Target version: **Windows 10, version 1903 (build 18362)** or later.</span></span>  
+    *   <span data-ttu-id="07692-127">最小バージョン: **Windows 10、バージョン 1803 (ビルド 17134)**。</span><span class="sxs-lookup"><span data-stu-id="07692-127">Minimum version: **Windows 10, version 1803 (build 17134)**.</span></span>  
     
     :::image type="complex" source="./media/winui-gettingstarted-projecttype.png" alt-text="[ターゲットバージョン] と [最小バージョン] の値が選択された新しいユニバーサル Windows プラットフォームプロジェクトダイアログ。" lightbox="./media/winui-gettingstarted-projecttype.png":::
-       <span data-ttu-id="4deb7-129">[ターゲットバージョン] と [最小バージョン] の値が選択された新しいユニバーサル Windows プラットフォームプロジェクトダイアログ。</span><span class="sxs-lookup"><span data-stu-id="4deb7-129">The New Universal Windows Platform Project dialog with selected values for Target version and Minimum version.</span></span>
+       <span data-ttu-id="07692-129">[ターゲットバージョン] と [最小バージョン] の値が選択された新しいユニバーサル Windows プラットフォームプロジェクトダイアログ。</span><span class="sxs-lookup"><span data-stu-id="07692-129">The New Universal Windows Platform Project dialog with selected values for Target version and Minimum version.</span></span>
     :::image-end:::  
     
-1.  <span data-ttu-id="4deb7-130">ソリューションエクスプローラーで、2つのプロジェクトが生成されます。</span><span class="sxs-lookup"><span data-stu-id="4deb7-130">In the Solution Explorer, two projects are generated.</span></span>  
-    *   <span data-ttu-id="4deb7-131">**プロジェクト名 (デスクトップ)**</span><span class="sxs-lookup"><span data-stu-id="4deb7-131">**Your project name(Desktop)**.</span></span> <span data-ttu-id="4deb7-132">このプロジェクトには、アプリのコードが含まれています。</span><span class="sxs-lookup"><span data-stu-id="4deb7-132">This project contains the code for your app.</span></span>  <span data-ttu-id="4deb7-133">**App.xaml.cs**は、 `Application` アプリインスタンスを表すクラスを定義します。</span><span class="sxs-lookup"><span data-stu-id="4deb7-133">**App.xaml.cs** defines an`Application`class that represents your app instance.</span></span> <span data-ttu-id="4deb7-134">**MainWindow.xaml.cs**は、 `MainWindow` アプリインスタンスによって表示されるメインウィンドウを表すクラスを定義します。</span><span class="sxs-lookup"><span data-stu-id="4deb7-134">**MainWindow.xaml.cs** defines a`MainWindow`class that represents the main window displayed by your app instance.</span></span>  <span data-ttu-id="4deb7-135">これらのクラスは、 `Microsoft.UI.Xaml` WinUI の名前空間の型から派生します。</span><span class="sxs-lookup"><span data-stu-id="4deb7-135">These classes derive from types in the`Microsoft.UI.Xaml`namespace of WinUI.</span></span>  
+1.  <span data-ttu-id="07692-130">ソリューションエクスプローラーで、2つのプロジェクトが生成されます。</span><span class="sxs-lookup"><span data-stu-id="07692-130">In the Solution Explorer, two projects are generated.</span></span>  
+    *   <span data-ttu-id="07692-131">**プロジェクト名 (デスクトップ)**</span><span class="sxs-lookup"><span data-stu-id="07692-131">**Your project name(Desktop)**.</span></span> <span data-ttu-id="07692-132">このプロジェクトには、アプリのコードが含まれています。</span><span class="sxs-lookup"><span data-stu-id="07692-132">This project contains the code for your app.</span></span>  <span data-ttu-id="07692-133">**App.xaml.cs**は、 `Application` アプリインスタンスを表すクラスを定義します。</span><span class="sxs-lookup"><span data-stu-id="07692-133">**App.xaml.cs** defines an`Application`class that represents your app instance.</span></span> <span data-ttu-id="07692-134">**MainWindow.xaml.cs**は、 `MainWindow` アプリインスタンスによって表示されるメインウィンドウを表すクラスを定義します。</span><span class="sxs-lookup"><span data-stu-id="07692-134">**MainWindow.xaml.cs** defines a`MainWindow`class that represents the main window displayed by your app instance.</span></span>  <span data-ttu-id="07692-135">これらのクラスは、 `Microsoft.UI.Xaml` WinUI の名前空間の型から派生します。</span><span class="sxs-lookup"><span data-stu-id="07692-135">These classes derive from types in the`Microsoft.UI.Xaml`namespace of WinUI.</span></span>  
     
-    *   <span data-ttu-id="4deb7-136">**プロジェクト名 (パッケージ)**。</span><span class="sxs-lookup"><span data-stu-id="4deb7-136">**Your project name(Package)**.</span></span>  <span data-ttu-id="4deb7-137">このプロジェクトは、アプリを展開用の MSIX パッケージにビルドするように構成されている、Windows アプリケーションパッケージプロジェクトです。</span><span class="sxs-lookup"><span data-stu-id="4deb7-137">This project is aWindows Application Packaging Projectthat is configured to build the app into an MSIX package for deployment.</span></span>  <span data-ttu-id="4deb7-138">プロジェクトには、アプリの thepackage manifestfor 含まれており、既定では、ソリューションのスタートアッププロジェクトになります。</span><span class="sxs-lookup"><span data-stu-id="4deb7-138">The project contains thepackage manifestfor your app, and it is the startup project for your solution by default.</span></span> <span data-ttu-id="4deb7-139">詳細については、「 [Windows 10 のパッケージマニフェストスキーマリファレンス][UwpSchemasAppxpackageUapmanifestRoot]」の「 [msix パッケージ用にデスクトップアプリケーションをセットアップ][WindowsMsixDesktopToUwpPackagingDotNet]する」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="4deb7-139">For more information, see [Set up your desktop application for MSIX packaging in Visual Studio][WindowsMsixDesktopToUwpPackagingDotNet] and [Package manifest schema reference for Windows 10][UwpSchemasAppxpackageUapmanifestRoot].</span></span>
+    *   <span data-ttu-id="07692-136">**プロジェクト名 (パッケージ)**。</span><span class="sxs-lookup"><span data-stu-id="07692-136">**Your project name(Package)**.</span></span>  <span data-ttu-id="07692-137">このプロジェクトは、アプリを展開用の MSIX パッケージにビルドするように構成されている、Windows アプリケーションパッケージプロジェクトです。</span><span class="sxs-lookup"><span data-stu-id="07692-137">This project is aWindows Application Packaging Projectthat is configured to build the app into an MSIX package for deployment.</span></span>  <span data-ttu-id="07692-138">プロジェクトには、アプリの thepackage manifestfor 含まれており、既定では、ソリューションのスタートアッププロジェクトになります。</span><span class="sxs-lookup"><span data-stu-id="07692-138">The project contains thepackage manifestfor your app, and it is the startup project for your solution by default.</span></span> <span data-ttu-id="07692-139">詳細については、「 [Windows 10 のパッケージマニフェストスキーマリファレンス][UwpSchemasAppxpackageUapmanifestRoot]」の「 [msix パッケージ用にデスクトップアプリケーションをセットアップ][WindowsMsixDesktopToUwpPackagingDotNet]する」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="07692-139">For more information, see [Set up your desktop application for MSIX packaging in Visual Studio][WindowsMsixDesktopToUwpPackagingDotNet] and [Package manifest schema reference for Windows 10][UwpSchemasAppxpackageUapmanifestRoot].</span></span>
     
-1.  <span data-ttu-id="4deb7-140">ソリューションエクスプローラーで**MainWindow**を開いて、コードを表示します。</span><span class="sxs-lookup"><span data-stu-id="4deb7-140">In the Solution Explorer, open **MainWindow.xaml** to display the code.</span></span>  <span data-ttu-id="4deb7-141">プロジェクトを実行し、 `F5` ボタンを含むウィンドウを表示するには、を選択します。</span><span class="sxs-lookup"><span data-stu-id="4deb7-141">Select `F5` to run your project and show a window with a button.</span></span>  
+1.  <span data-ttu-id="07692-140">ソリューションエクスプローラーで**MainWindow**を開いて、コードを表示します。</span><span class="sxs-lookup"><span data-stu-id="07692-140">In the Solution Explorer, open **MainWindow.xaml** to display the code.</span></span>  <span data-ttu-id="07692-141">プロジェクトを実行し、 `F5` ボタンを含むウィンドウを表示するには、を選択します。</span><span class="sxs-lookup"><span data-stu-id="07692-141">Select `F5` to run your project and show a window with a button.</span></span>  
     
-## <span data-ttu-id="4deb7-142">手順 2-WebView2 コントロールをプロジェクトに追加する</span><span class="sxs-lookup"><span data-stu-id="4deb7-142">Step 2 - Add a WebView2 control to your project</span></span>  
+## <span data-ttu-id="07692-142">手順 2-WebView2 コントロールをプロジェクトに追加する</span><span class="sxs-lookup"><span data-stu-id="07692-142">Step 2 - Add a WebView2 control to your project</span></span>  
 
-<span data-ttu-id="4deb7-143">次に、WebView2 コントロールをプロジェクトに追加します。</span><span class="sxs-lookup"><span data-stu-id="4deb7-143">Next add a WebView2 control to your project.</span></span>  
+<span data-ttu-id="07692-143">次に、WebView2 コントロールをプロジェクトに追加します。</span><span class="sxs-lookup"><span data-stu-id="07692-143">Next add a WebView2 control to your project.</span></span>  
 
-1.  <span data-ttu-id="4deb7-144">[開く] `MainWindow.xaml` を選びます。</span><span class="sxs-lookup"><span data-stu-id="4deb7-144">Open `MainWindow.xaml`.</span></span>  <span data-ttu-id="4deb7-145">タグ内に次の行を挿入して、WebView2 XAML 名前空間を追加し `<Window/>` ます。</span><span class="sxs-lookup"><span data-stu-id="4deb7-145">Add the WebView2 XAML namespace by inserting the following line inside the `<Window/>` tag.</span></span>  
+1.  <span data-ttu-id="07692-144">[開く] `MainWindow.xaml` を選びます。</span><span class="sxs-lookup"><span data-stu-id="07692-144">Open `MainWindow.xaml`.</span></span>  <span data-ttu-id="07692-145">タグ内に次の行を挿入して、WebView2 XAML 名前空間を追加し `<Window/>` ます。</span><span class="sxs-lookup"><span data-stu-id="07692-145">Add the WebView2 XAML namespace by inserting the following line inside the `<Window/>` tag.</span></span>  
     
     ```xml
     xmlns:controls="using:Microsoft.UI.Xaml.Controls"
     ```  
     
-    <span data-ttu-id="4deb7-146">次のコードスニペットのように、コードが次のようになっていることを確認 `MainWindow.xaml` します。</span><span class="sxs-lookup"><span data-stu-id="4deb7-146">Confirm that your code in `MainWindow.xaml` is similar to the following code snippet.</span></span>  
+    <span data-ttu-id="07692-146">次のコードスニペットのように、コードが次のようになっていることを確認 `MainWindow.xaml` します。</span><span class="sxs-lookup"><span data-stu-id="07692-146">Confirm that your code in `MainWindow.xaml` is similar to the following code snippet.</span></span>  
     
     ```xml
     <Window
@@ -89,7 +89,7 @@ ms.locfileid: "10888619"
     </Window>
     ```  
     
-1.  <span data-ttu-id="4deb7-147">WebView2 コントロールを追加するには、 `<StackPanel>` 次のコードスニペットでタグを置き換えます。</span><span class="sxs-lookup"><span data-stu-id="4deb7-147">To add the WebView2 control, replace the `<StackPanel>` tags with the following code snippet.</span></span>  <span data-ttu-id="4deb7-148">この `Source` プロパティは、WebView2 コントロールに表示される初期 URI を設定します。</span><span class="sxs-lookup"><span data-stu-id="4deb7-148">The `Source` property sets the initial URI displayed in the WebView2 control.</span></span>  
+1.  <span data-ttu-id="07692-147">WebView2 コントロールを追加するには、 `<StackPanel>` 次のコードスニペットでタグを置き換えます。</span><span class="sxs-lookup"><span data-stu-id="07692-147">To add the WebView2 control, replace the `<StackPanel>` tags with the following code snippet.</span></span>  <span data-ttu-id="07692-148">この `Source` プロパティは、WebView2 コントロールに表示される初期 URI を設定します。</span><span class="sxs-lookup"><span data-stu-id="07692-148">The `Source` property sets the initial URI displayed in the WebView2 control.</span></span>  
     
     ```xml  
     <Grid>
@@ -109,30 +109,30 @@ ms.locfileid: "10888619"
     </Grid>
     ```  
     
-1.  <span data-ttu-id="4deb7-149">`MainWindow.xaml.cs`次の行を開いてコメントアウトします。</span><span class="sxs-lookup"><span data-stu-id="4deb7-149">Open `MainWindow.xaml.cs` and comment out the following line.</span></span>
+1.  <span data-ttu-id="07692-149">`MainWindow.xaml.cs`次の行を開いてコメントアウトします。</span><span class="sxs-lookup"><span data-stu-id="07692-149">Open `MainWindow.xaml.cs` and comment out the following line.</span></span>
     
     ```xml
         // myButton.Content = "Clicked";     
     ```  
     
-1.  <span data-ttu-id="4deb7-150">`F5`プロジェクトをビルドして実行する場合に選択します。</span><span class="sxs-lookup"><span data-stu-id="4deb7-150">Select `F5` to build and run your project.</span></span>  <span data-ttu-id="4deb7-151">WebView2 コントロールが表示されていることを確認 [https://www.microsoft.com][|::ref1::|Main] します。</span><span class="sxs-lookup"><span data-stu-id="4deb7-151">Confirm that your WebView2 control displays [https://www.microsoft.com][|::ref1::|Main].</span></span>  
+1.  <span data-ttu-id="07692-150">`F5`プロジェクトをビルドして実行する場合に選択します。</span><span class="sxs-lookup"><span data-stu-id="07692-150">Select `F5` to build and run your project.</span></span>  <span data-ttu-id="07692-151">WebView2 コントロールが表示されていることを確認 [https://www.microsoft.com][|::ref1::|Main] します。</span><span class="sxs-lookup"><span data-stu-id="07692-151">Confirm that your WebView2 control displays [https://www.microsoft.com][|::ref1::|Main].</span></span>  
     
     :::image type="complex" source="./media/winui-gettingstarted-part3.png" alt-text="Microsoft.com サイトを表示する WebView2 コントロール" lightbox="./media/winui-gettingstarted-part3.png":::
-       <span data-ttu-id="4deb7-153">Microsoft.com サイトを表示する WebView2 コントロール。</span><span class="sxs-lookup"><span data-stu-id="4deb7-153">A WebView2 control displaying the microsoft.com site.</span></span>  
+       <span data-ttu-id="07692-153">Microsoft.com サイトを表示する WebView2 コントロール。</span><span class="sxs-lookup"><span data-stu-id="07692-153">A WebView2 control displaying the microsoft.com site.</span></span>  
     :::image-end:::  
     
-## <span data-ttu-id="4deb7-154">手順 3-ナビゲーションコントロールを追加する</span><span class="sxs-lookup"><span data-stu-id="4deb7-154">Step 3 - Add navigation controls</span></span>  
+## <span data-ttu-id="07692-154">手順 3-ナビゲーションコントロールを追加する</span><span class="sxs-lookup"><span data-stu-id="07692-154">Step 3 - Add navigation controls</span></span>  
 
-<span data-ttu-id="4deb7-155">WebView2 コントロールに表示される web ページをアプリに追加することにより、ユーザーがそのページをコントロールできるようにします。</span><span class="sxs-lookup"><span data-stu-id="4deb7-155">Allow users to control the web page that is displayed in your WebView2 control by adding an address bar to your app.</span></span> 
+<span data-ttu-id="07692-155">WebView2 コントロールに表示される web ページをアプリに追加することにより、ユーザーがそのページをコントロールできるようにします。</span><span class="sxs-lookup"><span data-stu-id="07692-155">Allow users to control the web page that is displayed in your WebView2 control by adding an address bar to your app.</span></span> 
 
-1.  <span data-ttu-id="4deb7-156">**MainWindow**で、次のコードスニペットを、要素を含む要素内にコピーして貼り付け `Grid` `WebView2` ます。</span><span class="sxs-lookup"><span data-stu-id="4deb7-156">In **MainWindow.xaml**, copy and paste the following code snippet inside the `Grid` element that contains the `WebView2` element.</span></span>  
+1.  <span data-ttu-id="07692-156">**MainWindow**で、次のコードスニペットを、要素を含む要素内にコピーして貼り付け `Grid` `WebView2` ます。</span><span class="sxs-lookup"><span data-stu-id="07692-156">In **MainWindow.xaml**, copy and paste the following code snippet inside the `Grid` element that contains the `WebView2` element.</span></span>  
     
     ```xml
         <TextBox Name="addressBar" Grid.Column="0"/>
         <Button x:Name="myButton" Grid.Column="1" Click="myButton_Click">Go</Button>
     ```  
     
-    <span data-ttu-id="4deb7-157">要素が次のコードスニペットのようになっていることを確認 `Grid` `MainWindow.xaml` します。</span><span class="sxs-lookup"><span data-stu-id="4deb7-157">Confirm that your `Grid` element of `MainWindow.xaml` is similar to the following code snippet.</span></span>  
+    <span data-ttu-id="07692-157">要素が次のコードスニペットのようになっていることを確認 `Grid` `MainWindow.xaml` します。</span><span class="sxs-lookup"><span data-stu-id="07692-157">Confirm that your `Grid` element of `MainWindow.xaml` is similar to the following code snippet.</span></span>  
     
     ```xml
     <Grid>
@@ -155,7 +155,7 @@ ms.locfileid: "10888619"
     </Grid>
     ```  
     
-1.  <span data-ttu-id="4deb7-158">**MainWindow.xaml.cs**で、次のコードスニペットをコピーして `myButton_Click` 、WebView2 コントロールをアドレスバーに入力した URL に移動します。</span><span class="sxs-lookup"><span data-stu-id="4deb7-158">In **MainWindow.xaml.cs**, copy the following code snippet to `myButton_Click`, which navigates the WebView2 control to the URL entered in the address bar.</span></span>  
+1.  <span data-ttu-id="07692-158">**MainWindow.xaml.cs**で、次のコードスニペットをコピーして `myButton_Click` 、WebView2 コントロールをアドレスバーに入力した URL に移動します。</span><span class="sxs-lookup"><span data-stu-id="07692-158">In **MainWindow.xaml.cs**, copy the following code snippet to `myButton_Click`, which navigates the WebView2 control to the URL entered in the address bar.</span></span>  
     
     ```csharp
     private void myButton_Click(object sender, RoutedEventArgs e)
@@ -172,18 +172,18 @@ ms.locfileid: "10888619"
     }
     ```  
     
-    <span data-ttu-id="4deb7-159">`F5`プロジェクトをビルドして実行する場合に選択します。</span><span class="sxs-lookup"><span data-stu-id="4deb7-159">Select `F5` to build and run your project.</span></span>  <span data-ttu-id="4deb7-160">アドレスバーに新しい URL を入力し、[**移動**] を選択します。</span><span class="sxs-lookup"><span data-stu-id="4deb7-160">Enter a new URL in the address bar, and then select **Go**.</span></span>  <span data-ttu-id="4deb7-161">たとえば、と入力 `https://www.bing.com` します。</span><span class="sxs-lookup"><span data-stu-id="4deb7-161">For example, enter `https://www.bing.com`.</span></span> 
+    <span data-ttu-id="07692-159">`F5`プロジェクトをビルドして実行する場合に選択します。</span><span class="sxs-lookup"><span data-stu-id="07692-159">Select `F5` to build and run your project.</span></span>  <span data-ttu-id="07692-160">アドレスバーに新しい URL を入力し、[**移動**] を選択します。</span><span class="sxs-lookup"><span data-stu-id="07692-160">Enter a new URL in the address bar, and then select **Go**.</span></span>  <span data-ttu-id="07692-161">たとえば、と入力 `https://www.bing.com` します。</span><span class="sxs-lookup"><span data-stu-id="07692-161">For example, enter `https://www.bing.com`.</span></span> 
     
     > [!NOTE]
-    > <span data-ttu-id="4deb7-162">アドレスバーに完全な Url を使用していることを確認します。</span><span class="sxs-lookup"><span data-stu-id="4deb7-162">Ensure you use complete URLs in the address bar.</span></span> `ArgumentException` <span data-ttu-id="4deb7-163">URL が、またはで始まらない場合は、例外がスローされ `http://` `https://` ます。</span><span class="sxs-lookup"><span data-stu-id="4deb7-163">exceptions are thrown if the URL does not start with `http://` or `https://`.</span></span>  
+    > <span data-ttu-id="07692-162">アドレスバーに完全な Url を使用していることを確認します。</span><span class="sxs-lookup"><span data-stu-id="07692-162">Ensure you use complete URLs in the address bar.</span></span> `ArgumentException` <span data-ttu-id="07692-163">URL が、またはで始まらない場合は、例外がスローされ `http://` `https://` ます。</span><span class="sxs-lookup"><span data-stu-id="07692-163">exceptions are thrown if the URL does not start with `http://` or `https://`.</span></span>  
     
     :::image type="complex" source="./media/winui-gettingstarted-bing.png" alt-text="Bing.com" lightbox="./media/winui-gettingstarted-bing.png":::
-       <span data-ttu-id="4deb7-165">Bing.com</span><span class="sxs-lookup"><span data-stu-id="4deb7-165">Bing.com</span></span>  
+       <span data-ttu-id="07692-165">Bing.com</span><span class="sxs-lookup"><span data-stu-id="07692-165">Bing.com</span></span>  
     :::image-end:::  
     
-## <span data-ttu-id="4deb7-166">ステップ 4-ナビゲーションイベント</span><span class="sxs-lookup"><span data-stu-id="4deb7-166">Step 4 - Navigation events</span></span>  
+## <span data-ttu-id="07692-166">ステップ 4-ナビゲーションイベント</span><span class="sxs-lookup"><span data-stu-id="07692-166">Step 4 - Navigation events</span></span>  
 
-<span data-ttu-id="4deb7-167">WebView2 コントロールをホストするアプリケーションは、web ページのナビゲーション中に WebView2 コントロールによって発生する次のイベントをリッスンします。</span><span class="sxs-lookup"><span data-stu-id="4deb7-167">Applications that host WebView2 controls listen for the following events that are raised by WebView2 controls during web page navigation.</span></span>  
+<span data-ttu-id="07692-167">WebView2 コントロールをホストするアプリケーションは、web ページのナビゲーション中に WebView2 コントロールによって発生する次のイベントをリッスンします。</span><span class="sxs-lookup"><span data-stu-id="07692-167">Applications that host WebView2 controls listen for the following events that are raised by WebView2 controls during web page navigation.</span></span>  
 
 *   `NavigationStarting`  
 *   `SourceChanged`  
@@ -191,17 +191,17 @@ ms.locfileid: "10888619"
 *   `HistoryChanged`  
 *   `NavigationCompleted`  
 > [!NOTE]
-> <span data-ttu-id="4deb7-168">HTTP のリダイレクトでは `NavigationStarting` 、複数のイベントが発生します。</span><span class="sxs-lookup"><span data-stu-id="4deb7-168">HTTP redirects raise multiple `NavigationStarting` events.</span></span>  
-<span data-ttu-id="4deb7-169">詳細については、「[ナビゲーションイベント][Webviews2ReferenceWin3209488Icorewebview2NavigationEvents]」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="4deb7-169">For more information, see [Navigation Events][Webviews2ReferenceWin3209488Icorewebview2NavigationEvents].</span></span>  
+> <span data-ttu-id="07692-168">HTTP のリダイレクトでは `NavigationStarting` 、複数のイベントが発生します。</span><span class="sxs-lookup"><span data-stu-id="07692-168">HTTP redirects raise multiple `NavigationStarting` events.</span></span>  
+<span data-ttu-id="07692-169">詳細については、「[ナビゲーションイベント][Webviews2ConceptsNavigationEvents]」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="07692-169">For more information, see [Navigation Events][Webviews2ConceptsNavigationEvents].</span></span>  
 
-<span data-ttu-id="4deb7-170">エラーが発生すると、次のイベントが発生し、エラーページに移動する可能性があります。</span><span class="sxs-lookup"><span data-stu-id="4deb7-170">When errors occur, the following events are raised and may navigate to an error page.</span></span>  
+<span data-ttu-id="07692-170">エラーが発生すると、次のイベントが発生し、エラーページに移動する可能性があります。</span><span class="sxs-lookup"><span data-stu-id="07692-170">When errors occur, the following events are raised and may navigate to an error page.</span></span>  
 
 *   `SourceChanged`  
 *   `ContentLoading`  
 *   `HistoryChanged`  
     
 
-<span data-ttu-id="4deb7-171">イベントの使い方の例として、 `NavigationStarting` HTTPS を使っていない要求をすべてキャンセルするためのハンドラーを登録します。</span><span class="sxs-lookup"><span data-stu-id="4deb7-171">As an example of how to use the events, register a handler for `NavigationStarting` that cancels any requests that don't use HTTPS.</span></span> <span data-ttu-id="4deb7-172">で `MainWindow.xaml.cs` 、登録するコンストラクターを変更 `EnsureHttps` し、 `EnsureHttps` 次のコードスニペットと一致するように関数を追加します。</span><span class="sxs-lookup"><span data-stu-id="4deb7-172">In `MainWindow.xaml.cs`, modify the constructor to register `EnsureHttps`, and add the `EnsureHttps` function so that it matches the following code snippet.</span></span>  
+<span data-ttu-id="07692-171">イベントの使い方の例として、 `NavigationStarting` HTTPS を使っていない要求をすべてキャンセルするためのハンドラーを登録します。</span><span class="sxs-lookup"><span data-stu-id="07692-171">As an example of how to use the events, register a handler for `NavigationStarting` that cancels any requests that don't use HTTPS.</span></span> <span data-ttu-id="07692-172">で `MainWindow.xaml.cs` 、登録するコンストラクターを変更 `EnsureHttps` し、 `EnsureHttps` 次のコードスニペットと一致するように関数を追加します。</span><span class="sxs-lookup"><span data-stu-id="07692-172">In `MainWindow.xaml.cs`, modify the constructor to register `EnsureHttps`, and add the `EnsureHttps` function so that it matches the following code snippet.</span></span>  
 
 
 ```csharp
@@ -225,13 +225,13 @@ private void EnsureHttps(WebView2 sender, WebView2NavigationStartingEventArgs ar
 }
 ```  
 
-<span data-ttu-id="4deb7-173">`F5`プロジェクトをビルドして実行する場合に選択します。</span><span class="sxs-lookup"><span data-stu-id="4deb7-173">Select `F5` to build and run your project.</span></span>  <span data-ttu-id="4deb7-174">HTTP サイトへのナビゲーションがブロックされ、HTTPS サイトで許可されていることを確認します。</span><span class="sxs-lookup"><span data-stu-id="4deb7-174">Confirm that navigation is blocked to HTTP sites, and allowed for HTTPS sites.</span></span>  
+<span data-ttu-id="07692-173">`F5`プロジェクトをビルドして実行する場合に選択します。</span><span class="sxs-lookup"><span data-stu-id="07692-173">Select `F5` to build and run your project.</span></span>  <span data-ttu-id="07692-174">HTTP サイトへのナビゲーションがブロックされ、HTTPS サイトで許可されていることを確認します。</span><span class="sxs-lookup"><span data-stu-id="07692-174">Confirm that navigation is blocked to HTTP sites, and allowed for HTTPS sites.</span></span>  
 
-## <span data-ttu-id="4deb7-175">手順 5-スクリプト</span><span class="sxs-lookup"><span data-stu-id="4deb7-175">Step 5 - Scripting</span></span>  
+## <span data-ttu-id="07692-175">手順 5-スクリプト</span><span class="sxs-lookup"><span data-stu-id="07692-175">Step 5 - Scripting</span></span>  
 
-<span data-ttu-id="4deb7-176">ホストアプリケーションは、実行時に WebView2 コントロールに JavaScript コードを挿入することがあります。</span><span class="sxs-lookup"><span data-stu-id="4deb7-176">Host applications may inject JavaScript code into WebView2 controls at runtime.</span></span>  <span data-ttu-id="4deb7-177">挿入された JavaScript は、JavaScript が削除されるまで、すべての新しい最上位レベルのドキュメントとすべての子フレームに適用されます。</span><span class="sxs-lookup"><span data-stu-id="4deb7-177">The injected JavaScript applies to all new top level documents and any child frames until the JavaScript is removed.</span></span>  <span data-ttu-id="4deb7-178">挿入された JavaScript は、グローバルオブジェクトの作成後、および HTML ドキュメントに含まれている他のスクリプトが実行される前に実行されます。</span><span class="sxs-lookup"><span data-stu-id="4deb7-178">The injected JavaScript is run after creation of the global object, and before any other script included in the HTML document is run.</span></span>  
+<span data-ttu-id="07692-176">ホストアプリケーションは、実行時に WebView2 コントロールに JavaScript コードを挿入することがあります。</span><span class="sxs-lookup"><span data-stu-id="07692-176">Host applications may inject JavaScript code into WebView2 controls at runtime.</span></span>  <span data-ttu-id="07692-177">挿入された JavaScript は、JavaScript が削除されるまで、すべての新しい最上位レベルのドキュメントとすべての子フレームに適用されます。</span><span class="sxs-lookup"><span data-stu-id="07692-177">The injected JavaScript applies to all new top level documents and any child frames until the JavaScript is removed.</span></span>  <span data-ttu-id="07692-178">挿入された JavaScript は、グローバルオブジェクトの作成後、および HTML ドキュメントに含まれている他のスクリプトが実行される前に実行されます。</span><span class="sxs-lookup"><span data-stu-id="07692-178">The injected JavaScript is run after creation of the global object, and before any other script included in the HTML document is run.</span></span>  
 
-<span data-ttu-id="4deb7-179">例として、ユーザーが HTTPS 以外のサイトに移動したときにアラートが送信されることがあります。</span><span class="sxs-lookup"><span data-stu-id="4deb7-179">As an example, add scripts send an alert when a user navigates to non-HTTPS sites.</span></span>  <span data-ttu-id="4deb7-180">この関数を変更し `EnsureHttps` て、 [executesを][Webviews2ReferenceWpf09515MicrosoftWebExecutescriptasync]使って web コンテンツにスクリプトを挿入します。</span><span class="sxs-lookup"><span data-stu-id="4deb7-180">Modify the `EnsureHttps` function to inject a script into the web content using [ExecuteScriptAsync][Webviews2ReferenceWpf09515MicrosoftWebExecutescriptasync].</span></span>  
+<span data-ttu-id="07692-179">例として、ユーザーが HTTPS 以外のサイトに移動したときにアラートが送信されることがあります。</span><span class="sxs-lookup"><span data-stu-id="07692-179">As an example, add scripts send an alert when a user navigates to non-HTTPS sites.</span></span>  <span data-ttu-id="07692-180">この関数を変更し `EnsureHttps` て、 [executesを][Webviews2ReferenceWpf09515MicrosoftWebExecutescriptasync]使って web コンテンツにスクリプトを挿入します。</span><span class="sxs-lookup"><span data-stu-id="07692-180">Modify the `EnsureHttps` function to inject a script into the web content using [ExecuteScriptAsync][Webviews2ReferenceWpf09515MicrosoftWebExecutescriptasync].</span></span>  
 
 ```csharp
 private void EnsureHttps(WebView2 sender, WebView2NavigationStartingEventArgs args)
@@ -249,32 +249,32 @@ private void EnsureHttps(WebView2 sender, WebView2NavigationStartingEventArgs ar
 }
 ```  
 
-<span data-ttu-id="4deb7-181">`F5`プロジェクトをビルドして実行する場合に選択します。</span><span class="sxs-lookup"><span data-stu-id="4deb7-181">Select `F5` to build and run your project.</span></span>  <span data-ttu-id="4deb7-182">HTTPS を使用していないサイトに移動したときに、アプリケーションにアラートが表示されることを確認します。</span><span class="sxs-lookup"><span data-stu-id="4deb7-182">Confirm that your application displays an alert when you navigate to a site that does not use HTTPS.</span></span>  
+<span data-ttu-id="07692-181">`F5`プロジェクトをビルドして実行する場合に選択します。</span><span class="sxs-lookup"><span data-stu-id="07692-181">Select `F5` to build and run your project.</span></span>  <span data-ttu-id="07692-182">HTTPS を使用していないサイトに移動したときに、アプリケーションにアラートが表示されることを確認します。</span><span class="sxs-lookup"><span data-stu-id="07692-182">Confirm that your application displays an alert when you navigate to a site that does not use HTTPS.</span></span>  
 
 :::image type="complex" source="./media/winui-gettingstarted-script.png" alt-text="通知ダイアログを表示する WebView2 コントロール" lightbox="./media/winui-gettingstarted-script.png":::
-   <span data-ttu-id="4deb7-184">通知ダイアログを表示する WebView2 コントロール</span><span class="sxs-lookup"><span data-stu-id="4deb7-184">WebView2 control showing an alert dialog</span></span>
+   <span data-ttu-id="07692-184">通知ダイアログを表示する WebView2 コントロール</span><span class="sxs-lookup"><span data-stu-id="07692-184">WebView2 control showing an alert dialog</span></span>
 :::image-end:::  
 
-<span data-ttu-id="4deb7-185">おめでとうございます。最初の WebView2 アプリを作成しました。</span><span class="sxs-lookup"><span data-stu-id="4deb7-185">Congratulations, you built your first WebView2 app.</span></span>  
+<span data-ttu-id="07692-185">おめでとうございます。最初の WebView2 アプリを作成しました。</span><span class="sxs-lookup"><span data-stu-id="07692-185">Congratulations, you built your first WebView2 app.</span></span>  
 
-## <span data-ttu-id="4deb7-186">次のステップ</span><span class="sxs-lookup"><span data-stu-id="4deb7-186">Next Steps</span></span>  
+## <span data-ttu-id="07692-186">次のステップ</span><span class="sxs-lookup"><span data-stu-id="07692-186">Next Steps</span></span>  
 
-<span data-ttu-id="4deb7-187">現在、チームは WebView2 の Api を構築しています。</span><span class="sxs-lookup"><span data-stu-id="4deb7-187">Our team is currently building more WebView2 APIs.</span></span>  <span data-ttu-id="4deb7-188">WebView2 Api の現在の状態について詳しくは、「 [WebView2 spec][GithubMicrosoftUiXamlSpecsWebview2]」をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="4deb7-188">For more information on the current state of WebView2 APIs, see the [WebView2 spec][GithubMicrosoftUiXamlSpecsWebview2].</span></span>  
+<span data-ttu-id="07692-187">現在、チームは WebView2 の Api を構築しています。</span><span class="sxs-lookup"><span data-stu-id="07692-187">Our team is currently building more WebView2 APIs.</span></span>  <span data-ttu-id="07692-188">WebView2 Api の現在の状態について詳しくは、「 [WebView2 spec][GithubMicrosoftUiXamlSpecsWebview2]」をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="07692-188">For more information on the current state of WebView2 APIs, see the [WebView2 spec][GithubMicrosoftUiXamlSpecsWebview2].</span></span>  
 
 > [!NOTE]
-> <span data-ttu-id="4deb7-189">WebView2 Api が出荷されている時点で、WinRT CoreWebView2 オブジェクトが利用できない場合があります。</span><span class="sxs-lookup"><span data-stu-id="4deb7-189">The WinRT CoreWebView2 object may not be available at the time the WebView2 APIs ship.</span></span> <span data-ttu-id="4deb7-190">WebView2 コントロールで利用できる Api を理解するには、利用可能な Api の一覧については、 [WebView2 Spec][GithubMicrosoftUiXamlSpecsWebview2]を参照してください。</span><span class="sxs-lookup"><span data-stu-id="4deb7-190">To understand which APIs are available to WebView2 controls, see [WebView2 Spec][GithubMicrosoftUiXamlSpecsWebview2] for a list of the APIs that are available.</span></span> 
+> <span data-ttu-id="07692-189">WebView2 Api が出荷されている時点で、WinRT CoreWebView2 オブジェクトが利用できない場合があります。</span><span class="sxs-lookup"><span data-stu-id="07692-189">The WinRT CoreWebView2 object may not be available at the time the WebView2 APIs ship.</span></span> <span data-ttu-id="07692-190">WebView2 コントロールで利用できる Api を理解するには、利用可能な Api の一覧については、 [WebView2 Spec][GithubMicrosoftUiXamlSpecsWebview2]を参照してください。</span><span class="sxs-lookup"><span data-stu-id="07692-190">To understand which APIs are available to WebView2 controls, see [WebView2 Spec][GithubMicrosoftUiXamlSpecsWebview2] for a list of the APIs that are available.</span></span> 
 
-<span data-ttu-id="4deb7-191">WebView2 機能の詳細については、「 [WebView2 の概念と使い方のガイド][Webview2IndexNextSteps]」と「 [WebView2 サンプルのリポジトリ][GithubMicrosoftedgeWebview2samplesMain]」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="4deb7-191">For more information about WebView2 capabilities, see [WebView2 Concepts and How-To guides][Webview2IndexNextSteps], and the [WebView2 samples repo][GithubMicrosoftedgeWebview2samplesMain].</span></span>  
+<span data-ttu-id="07692-191">WebView2 機能の詳細については、「 [WebView2 の概念と使い方のガイド][Webview2IndexNextSteps]」と「 [WebView2 サンプルのリポジトリ][GithubMicrosoftedgeWebview2samplesMain]」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="07692-191">For more information about WebView2 capabilities, see [WebView2 Concepts and How-To guides][Webview2IndexNextSteps], and the [WebView2 samples repo][GithubMicrosoftedgeWebview2samplesMain].</span></span>  
 
-## <span data-ttu-id="4deb7-192">Microsoft Edge WebView チームと連絡を取り合う</span><span class="sxs-lookup"><span data-stu-id="4deb7-192">Getting in touch with the Microsoft Edge WebView team</span></span>  
+## <span data-ttu-id="07692-192">Microsoft Edge WebView チームと連絡を取り合う</span><span class="sxs-lookup"><span data-stu-id="07692-192">Getting in touch with the Microsoft Edge WebView team</span></span>  
 
-<span data-ttu-id="4deb7-193">フィードバックを共有して、より充実した WebView2 エクスペリエンスを構築できます。</span><span class="sxs-lookup"><span data-stu-id="4deb7-193">Help build a richer WebView2 experience by sharing your feedback.</span></span>  <span data-ttu-id="4deb7-194">Microsoft Edge WebView[フィードバックリポジトリ][GithubMicrosoftedgeWebviewfeedback]にアクセスして、機能のリクエストまたはバグレポートを送信するか、既知の問題を検索します。</span><span class="sxs-lookup"><span data-stu-id="4deb7-194">Visit the Microsoft Edge WebView [feedback repo][GithubMicrosoftedgeWebviewfeedback] to submit feature requests or bug reports, or to search for known issues.</span></span>  
+<span data-ttu-id="07692-193">フィードバックを共有して、より充実した WebView2 エクスペリエンスを構築できます。</span><span class="sxs-lookup"><span data-stu-id="07692-193">Help build a richer WebView2 experience by sharing your feedback.</span></span>  <span data-ttu-id="07692-194">Microsoft Edge WebView[フィードバックリポジトリ][GithubMicrosoftedgeWebviewfeedback]にアクセスして、機能のリクエストまたはバグレポートを送信するか、既知の問題を検索します。</span><span class="sxs-lookup"><span data-stu-id="07692-194">Visit the Microsoft Edge WebView [feedback repo][GithubMicrosoftedgeWebviewfeedback] to submit feature requests or bug reports, or to search for known issues.</span></span>  
 
 <!-- links -->  
 
 [Webview2Index]: ../index.md "Microsoft Edge WebView2 の概要 (プレビュー) |Microsoft ドキュメント"  
 [Webview2IndexNextSteps]: ../index.md#next-steps "次の手順-Microsoft Edge WebView2 の概要 (プレビュー) |Microsoft ドキュメント"  
-[Webviews2ReferenceWin3209488Icorewebview2NavigationEvents]: ../reference/win32/0-9-488/icorewebview2.md#navigation-events "ナビゲーションイベント-インターフェイス ICoreWebView2 |Microsoft ドキュメント"  
+[Webviews2ConceptsNavigationEvents]: ../concepts/navigation-events.md "ナビゲーションイベント |Microsoft ドキュメント"  
 [Webviews2ReferenceWpf09515MicrosoftWebExecutescriptasync]: ../reference/wpf/0-9-515/microsoft-web-webview2-wpf-webview2.md#executescriptasync "WebView2 クラス | WebView2 クラスの場合は、このサイトをお選びください。Microsoft ドキュメント"  
 
 [UwpSchemasAppxpackageUapmanifestRoot]: /uwp/schemas/appxpackage/uapmanifestschema/schema-root "Windows 10 のパッケージマニフェストスキーマリファレンス |Microsoft ドキュメント"  
