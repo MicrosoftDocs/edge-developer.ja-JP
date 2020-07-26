@@ -16,10 +16,18 @@
       href: concepts/distribution.md
     - name: ユーザーデータフォルダーの管理
       href: concepts/userdatafolder.md
+    - name: ナビゲーションイベント
+      href: concepts/navigation-events.md
+    - name: プロセス モデル
+      href: concepts/process-model.md
     - name: 推奨するセキュリティ運用方法
       href: concepts/security.md
     - name: バージョン
       href: concepts/versioning.md
+    - name: スレッド化
+      href: concepts/threading-model.md
+    - name: Win32 API の規則
+      href: concepts/win32-api-conventions.md
 - name: リリース ノート
   href: releasenotes.md
 - name: ロードマップ
