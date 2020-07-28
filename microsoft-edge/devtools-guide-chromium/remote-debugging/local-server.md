@@ -1,17 +1,17 @@
 ---
-title: ローカルサーバーへのアクセス
+title: ローカル サーバーにアクセスする
 author: MSEdgeTeam
 ms.author: msedgedevrel
 ms.date: 04/30/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: c038e8b7f612f4c2185ae1c62a08d32b72f8aa0d
-ms.sourcegitcommit: 33663cd7838dddee86228dde469a5e9551bddb02
+ms.openlocfilehash: daa96b604d5ad48a9de49dd24dc38eab79de9c9b
+ms.sourcegitcommit: ad5eb43172280974b8c063867c2097f7c5c0e77d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "10611827"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "10898215"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -31,7 +31,7 @@ ms.locfileid: "10611827"
 
 
 
-# ローカルサーバーへのアクセス   
+# ローカル サーバーにアクセスする   
 
 
 

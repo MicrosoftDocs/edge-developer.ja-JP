@@ -1,76 +1,146 @@
 ---
-description: パートナーセンターで Microsoft Edge のアドオン開発者アカウントを作成する手順。
-title: 新しい開発者アカウントを開く
+description: Microsoft Edge のアドオンストアに拡張機能を公開するために、開発者アカウントに登録する方法について説明します。
+title: Microsoft Edge 拡張機能の開発者として登録して、拡張機能を公開する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 04/21/2020
-ms.topic: article
+ms.date: 07/15/2020
+ms.topic: conceptual
 ms.prod: microsoft-edge-chromium
-keywords: edge-chromium、拡張機能の開発、ブラウザーの拡張、アドオン、パートナーセンター、開発者
-ms.openlocfilehash: 2870e5e149630e9afa9824c927470a69b9c617ef
-ms.sourcegitcommit: 531ec8aa1f89b28bc4d271e8e995f846f2392bc3
+keywords: エッジ-chromium、拡張機能の開発、ブラウザーの拡張機能、アドオン、パートナーセンター、開発者
+ms.openlocfilehash: 55f3520526a97ebbd8eeacf1c46f801b94599694
+ms.sourcegitcommit: ad5eb43172280974b8c063867c2097f7c5c0e77d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "10607392"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "10898208"
 ---
-# 新しい開発者アカウントを開く  
+# Microsoft Edge 拡張機能の開発者として登録する  
 
-新しい Microsoft Edge 開発者アカウントを開きます。  内線番号を申請する前に、[パートナーセンター][MicrosoftPartnerCenter]で Microsoft Edge 開発者アカウントを設定する必要があります。  
+Microsoft Edge アドオンの web サイトに拡張機能を提出するには、[パートナーセンター][MicrosoftPartnerCenter]で microsoft edge プログラムを開発者として登録する必要があります。  Microsoft Edge プログラムへの拡張機能の送信には、登録料金は必要ありません。  
+
+## 始める前に  
+
+アカウントを持っていない場合、またはパートナーセンターで既存の商用アカウントがある場合は、Microsoft Edge プログラムに登録するための新しい[microsoft アカウント (MSA)][WindowsCommunityEverythingAboutMicrosoftAccounts]を作成する必要があります。  Microsoft アカウント (Outlook/live/Hotmail \) を作成するには、 [account.microsoft.com][MicrosoftAccount]にアクセスし、[ **Microsoft アカウントの作成**] を選択します。  開発者アカウントでパートナーセンターに登録されている場合は、対応する Microsoft アカウント \ (MSA \) を使ってサインインし、Microsoft Edge プログラムに登録します。  
 
 > [!NOTE]
-> Microsoft アカウントをお持ちですか?  Microsoft Edge の開発者アカウントを作成するには、Microsoft アカウントのメールが必要です (職場または学校のメールアドレスでサインアップすることはできません)。  Microsoft アカウントをお持ちでない場合は、 [account.microsoft.com][MicrosoftAccount]にアクセスし、[**サインイン**] を選択し、[**作成**] を選択します。  
+> 現在、Microsoft Edge extensions チームは、職場または学校のアカウントにサインアップすることをサポートしていません。  今後、Microsoft Edge extensions チームは、AAD の管理のための MSA アカウントへの AAD テナントのリンクをサポートする予定です。  
+
+## パートナーセンターで Microsoft Edge プログラムに登録する  
 
 1.  [[開発] ページ][MicrosoftPartnerCenter]に移動して、[**ダッシュボードに移動**] を選択します。  
 1.  **Microsoft アカウント**でまだサインインしていない場合は、今すぐサインインするか、新しい microsoft アカウントを作成します。  開発者アカウントにサインインするときに使用するのと同じ Microsoft アカウントを使用します。  サインインすると、この登録フォームが表示されます。  
     
-1.  次のフィールドに入力します。  
-    
-    | フィールド | 説明 | 使用可能な値 |  
-    |:--- |:--- |:--- |  
-    | 国/地域 | お住まいの国またはお客様のビジネス所在地。  この設定は後で変更できません。 |  |  
-    | 開発者アカウントの種類 | アカウントの種類。  この設定は後で変更できないため、適切な種類のアカウントを選択してください。  「[アカウントの種類](#account-types)」をご覧ください。 | `Individual` または `Company` |  
-    | 発行者の表示名 | \ (50 文字以下) を使用する名前。  このチェックボックスをオンにすると、ユーザーは拡張機能を参照するときにこの名前が表示されます。  会社のアカウントの場合は、必ず組織の登録会社名を使用してください。 |  |  
-    | 連絡情報 | 会社のアカウントの場合は、組織の登録済みメールアドレスを使用してください。 |  |  
-    
-    > [!NOTE]
-    > **発行者の表示名**には、使用可能であり、使用する権限がある場合にのみ名前を使用できます。  
-    
-    > [!NOTE]
-    > **お問い合わせの詳細**については、以下の情報をご利用ください。アカウント関連の問題についてお問い合わせください。  登録手続きを完了した後で、確認メールが送信されます。  その後、アカウントに問題がある場合は、メッセージが送信されます。  会社として登録する場合は、会社のアカウントを承認する担当者の**名前**、**メールアドレス**、**電話番号**も入力する必要があります。  
-    
-    アカウントの詳細を確認して、すべての情報が正しいことを確認します。  次に、 [Microsoft Edge 開発者契約][MicrosoftAppDeveloperAgreement]の条項と条件を読み、同意します。  
-    
-1.  **[完了]** をクリックして、登録を確認します。  
+    Microsoft Edge プログラムに登録するには、アカウントにサインインして、フォームに入力します。  
+    <!-- -->
+    :::row:::
+       :::column span="1":::
+          **取引先企業の国/地域**  
+       :::column-end:::
+       :::column span="2":::
+          このフィールドには、live またはビジネスの所在地が表示されます。  
+          
+          > [!IMPORTANT]
+          > 登録後、このフィールドの値を変更することはできません。  
+       :::column-end:::
+    :::row-end:::  
+    :::row:::
+       :::column span="1":::
+          **アカウントの種類**  
+       :::column-end:::
+       :::column span="2":::
+          [パートナーセンター][MicrosoftPartnerCenter]の Microsoft Edge プログラムでは、個人アカウントと会社のアカウントの両方が提供されます。詳細については、次の表を参照してください。  どちらのアカウントの種類を使用しても、Microsoft Edge のアドオンカタログに拡張機能を公開できます。  
+          
+          > [!IMPORTANT]
+          > 登録後、このフィールドの値を変更することはできません。  
+          
+          *   `Individual account`  
+              個人のアカウントは、会社に関連付けられていない開発者に適しています。  アカウントの確認プロセスは短く、発行元の表示名が利用可能であることを確認する必要があります。  
 
-## アカウントの種類  
+          *   `Company account`  
+              会社のアカウントは、組織またはビジネスと関連付けられています。  アカウントの確認プロセスが長く、会社のアカウントを作成する権限を持っていることを確認する必要があります。  プロセスの期間は数日から数週間までとなる場合があります。  会社では、Microsoft 確認パートナーから電話を受けることができます。  
+       :::column-end:::
+    :::row-end:::  
+    :::row:::
+       :::column span="1":::
+          **発行者の表示名**  
+       :::column-end:::
+       :::column span="2":::
+          このフィールドは、Microsoft Edge のアドオンカタログのユーザーに表示される名前です。  名前は利用可能であり、使用する権限がある場合にのみ使用できます。  会社のアカウントは、組織の登録会社名を使用している必要があります。  
+          
+          > [!NOTE]
+          > このフィールドの最大文字数は50文字です。  
+       :::column-end:::
+    :::row-end:::  
+    :::row:::
+       :::column span="1":::
+          **連絡情報**  
+       :::column-end:::
+       :::column span="2":::
+          このフィールドには、Microsoft がアカウントの問題に関して連絡するために使用する可能性がある連絡先情報が含まれています。  登録が完了すると、メールの確認メッセージが送信されます。  会社のアカウントの場合は、組織に関連付けられている登録済みのメールアドレスを使用する必要があります。  
+       :::column-end:::
+    :::row-end:::  
+    :::row:::
+       :::column span="1":::
+          **会社の承認者**  
+       :::column-end:::
+       :::column span="2":::
+          会社のアカウントの場合、会社の承認者の連絡先情報を入力する必要があります (名前、メールアドレス、電話番号)。  Microsoft は、認証プロセスの一部として指定された会社の承認者として、内線番号が組織に属することを確認します。  
+       :::column-end:::
+    :::row-end:::  
+    <!-- -->
+    <!--
+    1.  The **Account country/region** field  
+        
+        This field is where you either live or your business is located.  
+        
+        > [!IMPORTANT]
+        > After enrollment, you are not able to change the value of this field.  
+        
+    1.  The **Account type** field  
+        
+        The Microsoft Edge program in [Partner Center][MicrosoftPartnerCenter] offers both individual and company accounts, which are described in detail in the table that follows.  Both account types allow you to publish extensions to the Microsoft Edge add-ons catalog.  
+        
+        > [!IMPORTANT]
+        > After enrollment, you are not able to change the value of this field.  
+        
+        | Individual account | Company account |  
+        |:--- |:--- |  
+        | Individual accounts are appropriate for developers not associated with a company.  | Company accounts are associated with organizations and businesses.  |  
+        | The account verification process is shorter, and involves verifying that the publisher display name is available.  | The account verification process is longer, and involves confirmation that you are authorized to create the account for your company.  The duration of the process may range from a few days to a few weeks.  Your company may receive phone calls from Microsoft verification partners.  |  
+        
+    1.  The **Publisher display name** field  
+        
+        This field is the name shown to users in the Microsoft Edge add-ons catalog.  You may use a name only if it is available, and you have the rights to use it.  Company accounts must use the registered business name of your organization.  
+        
+        > [!NOTE]
+        > The maximum length for this field is 50 characters.  
+        
+    1.  The **Contact details** field  
+        
+        Any contact information that Microsoft may use to contact you regarding any account issues.  After registration is complete, an email confirmation is sent to you.  Company accounts must use the registered email address associated with your organization.  
+        
+    1.  The **Company approver** field  
+        
+        For company accounts, provide the contact information \(name, email address, and phone number\) of your company approver.  Microsoft contacts the company approver specified as a part of the verification process to ensure that the extensions belong to your organization.  
+        -->
+1. 登録フォームを送信する前に、 [Microsoft Edge 開発者契約][MicrosoftAppDeveloperAgreement]の条項と条件をお読みいただき、同意してください。  
+1. 登録手続きを完了するには、[**完了**] を選択します。  
 
-[パートナーセンター][MicrosoftPartnerCenter]の Microsoft Edge プログラムでは、個人アカウントと会社アカウントの両方が提供されます。  どちらの種類のアカウントを使用しても、Microsoft Edge のアドオンカタログ (Microsoft Edge のアドオン) に対する拡張機能を公開し、Microsoft プログラムに参加することができます。  
+## 次のステップ  
 
-会社のアカウントは、組織や企業向けです。  企業アカウントの場合は、企業のアカウントを設定する権限があることを確認するために、より詳細な確認が必要です。  通常、個人アカウントは、自分で作業する 1 人の開発者に適しています。  
+確認の状態は、パートナーセンターの [**アカウント設定**] ページで確認できます。  確認プロセスが完了するまで待ちます。引き続き申請の構築、テスト、準備を行うことができます。  
 
-> [!IMPORTANT]
-> 選択した後にアカウントの種類を変更することはできません。適切な種類を選択してください。  
-
-この 2 つのアカウントの種類には、次のような重要な違いがあります。  
-
-| 個人のアカウント | 会社のアカウント |  
-|:--- |:--- |  
-| 個々のアカウントは、個々の開発者に対してのみ適切に機能します。 | 会社のアカウントは組織およびビジネスを対象としています |  
-| 短いアカウント検証プロセス | 会社のアカウントをセットアップする権限を持っていることを確認するために、より多くのアカウントを確認する |  
-
-## アカウントの確認  
-
-登録プロセスが完了すると、アカウントが確認されます。  個々のアカウントの場合は、発行元の表示名が利用可能かどうかを確認します。  会社のアカウントについては、お客様が会社のアカウントを設定するための承認が必要であることも確認してください。  確認プロセスの期間は数日から数週間までとなり、お客様の会社は確認パートナーから電話を受けることがあります。  内線番号を申請する前に、会社のアカウントを確認する必要があります。  確認のためにしばらくお待ちください。引き続き申請の構築、テスト、準備を行う必要があります。  
-
-[**アカウント設定**] ページで確認状態を確認できます。  
-
-<!-- image links -->  
+詳細については、「[拡張機能を発行する][ExtensionsChromiumPublishExtension]」を参照してください。  拡張機能の使用を開始する方法については、「 [Microsoft Edge (Chromium) 拡張機能の][ExtensionsChromiumGettingStartedIndex]概要」を参照してください。  
 
 <!-- links -->  
 
-[MicrosoftAppDeveloperAgreement]: /legal/windows/agreements/app-developer-agreement "アプリ開発者契約 |Microsoft ドキュメント"  
+[ExtensionsChromiumGettingStartedIndex]: ../getting-started/index.md "Microsoft Edge (Chromium) extensions の概要 |Microsoft ドキュメント"  
+[ExtensionsChromiumPublishExtension]:  ./publish-extension.md "拡張子を公開する |Microsoft ドキュメント"  
 
-[MicrosoftAccount]: https://account.microsoft.com/account/Account "Microsoft アカウント"  
+[MicrosoftAppDeveloperAgreement]:  /legal/windows/agreements/app-developer-agreement "アプリ開発者契約 |Microsoft ドキュメント"  
 
-[MicrosoftPartnerCenter]: https://partner.microsoft.com/dashboard/microsoftedge/public/login?ref=dd "パートナーセンター"  
+[MicrosoftAccount]:  https://account.microsoft.com/account "Microsoft アカウント"  
+
+[MicrosoftPartnerCenter]:  https://partner.microsoft.com/dashboard/microsoftedge/public/login?ref=dd "パートナーセンター"  
+
+[WindowsCommunityEverythingAboutMicrosoftAccounts]:  https://community.windows.com/stories/everything-you-need-to-know-about-microsoft-accounts "Microsoft (または MSA)"  
