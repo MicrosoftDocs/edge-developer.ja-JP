@@ -3,19 +3,22 @@ description: 支払い要求の Api によって、クラウドに保存され�
 title: 開発ガイド-支払い要求 API
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 03/05/2020
+ms.date: 07/30/2020
 ms.topic: article
 ms.prod: microsoft-edge
 ms.technology: windows-integration
 keywords: edge、web 開発、html、css、javascript、開発者
-ms.openlocfilehash: 75c596570a222336a4ba0c371acb8770f97804ee
-ms.sourcegitcommit: e690bb4d1cb9e73c93b468c9f55d91ea6fb6c654
+ms.openlocfilehash: b082e311dcbe5cff3101f084e7ff2c145e6e83df
+ms.sourcegitcommit: 19ef1422733ef1fd051d2b4f0263ce191e8d67bc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/10/2020
-ms.locfileid: "10570812"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "10902865"
 ---
-# 支払い要求 API
+# 支払い要求 API (EdgeHTML)
+
+> [!NOTE]
+> この記事では、 [Microsoft Edge のレガシバージョン][MicrosoftSupport44533505]でサポートされているワークフローについて説明します。  Microsoft Edge \ (Chromium \) は、Chromium プロジェクトに基づく別の実装で支払い要求 API をサポートします。  
 
 E-コマース販売は急速に成長し続けています。 [EMarketer](https://www.emarketer.com/)によれば、2018のデジタル売上は2013で測定されたレベルから23% 増加します。  顧客や企業は e コマース販売の利便性を享受していますが、課題はありません。  現在、各 e コマースの web サイト所有者は、高品質支払いのチェックアウトフローと入力規則の開発に時間を投入する必要があります。  消費者は、さまざまな支払いのチェックアウトフローに移動して、ショッピングしているすべてのサイトに同じ支払いと配送情報を再入力する必要があります。  これには時間がかかり、消費者にとって不便な場合があります。これは、ショッピングカートの abandonment を高くして、商人の売り上げを減らします。 ショッピングカートの60% と70% の間の商人の[見積](http://baymard.com/lists/cart-abandonment-rate)は中止されます。      
 
@@ -209,3 +212,9 @@ var options = {
 
 ## キャスト
 [支払い要求 API](https://w3.org/TR/payment-request/)
+
+<!-- links -->  
+
+[DevtoolsGuideChromium]: /microsoft-edge/devtools-guide-chromium "Microsoft Edge (Chromium) 開発者ツール |Microsoft ドキュメント"  
+
+[MicrosoftSupport44533505]: https://support.microsoft.com/help/4533505 "Microsoft Edge Legacy とは何ですか?"  
