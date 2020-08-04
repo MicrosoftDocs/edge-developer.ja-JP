@@ -3,16 +3,16 @@ description: ネイティブアプリ機能により、Windows 版の PWA を段
 title: Windows の PWA (EdgeHTML) をカスタマイズする
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 07/16/2020
+ms.date: 08/03/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: プログレッシブ web アプリ、PWA、Edge、Windows、WinRT、UWP、EdgeHTML
-ms.openlocfilehash: 296ae0a65481edd312e06b83c1554813ec2bffae
-ms.sourcegitcommit: 515522959f517e194f93a27f5d360690600edd9d
+ms.openlocfilehash: 70a675b1a4057326463fb63c6a93abf8f428c677
+ms.sourcegitcommit: 8510fdaa72c8940440133e4c5b36349997d94127
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "10894718"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "10905574"
 ---
 # Windows の PWA (EdgeHTML) をカスタマイズする  
 
@@ -44,9 +44,9 @@ Windows 10 アプリとしてインストールされた PWA \ (EdgeHTML \) は�
 Visual Studio で Windows アプリ開発環境をセットアップします。  
 
 1.  Windows の [設定] で、[開発者モード][WindowsUWPGetStartedEnable]を有効にします。  \ ( `developer mode` Windows searchbar に入力して検索します。 \)  
-1.  Visual Studio を起動し、**新しいプロジェクトを作成し**ます。  
-1.  C# **Windows アプリケーションパッケージプロジェクト**テンプレートを選択します。  以前のバージョンの Visual Studio を使っている場合は、[ホストされている**Web アプリ (ユニバーサル windows)** ] または [**プログレッシブ Web アプリ (ユニバーサル windows)**] の下で相当するテンプレートを見つけます。  
-1.  既定の Windows 10 `Target version` \ (最新のリリース) と `Minimum version` \ (ビルド10586以降) を選び、[ **OK]** をクリックします。  
+1.  Visual Studio を起動し、[**新しいプロジェクトの作成**] を選択します。  
+1.  [ **Javascript**  >  **Windows universal** ] を選択し、Visual Studio 2017 のプロジェクトの種類の一覧から [**プログレッシブ Web アプリ (ユニバーサル Windows)** ] を選択します。  
+1.  既定の Windows 10 `Target version` \ (最新のリリース) と `Minimum version` \ (ビルド10586以降) を選択して、[ **OK]** を選択します。  
 
     ![UWP プロジェクトターゲットビルドの Visual Studio 選択ダイアログ](media/vs-target-min-version.png)  
 
@@ -99,7 +99,7 @@ Windows 10 アプリでクライアント側のデバッグを行うには、ア
     
     `Windows Runtime`すべての[トップレベルの WinRT 名前空間](#find-windows-runtime-winrt-apis)を含むグローバルオブジェクトを返します。  これは、PWA \ (EdgeHTML \) のエントリポイントであり、[ユニバーサル Windows プラットフォーム][WindowsUWPIndex]を対象としており、windows 10 アプリとして実行される (ブラウザーの外部で実行されている) web アプリにのみ公開され `WWAHost.exe` ます。  
     
-## Windows ランタイム (WinRT \) Api を検索する  
+## Windows ランタイム (WinRT) Api を見つける  
 
 インストール済みの Windows アプリとして、 [PWA \ (EdgeHTML \) には、ネイティブの Windows ランタイム api へのフルアクセスがあり][WindowsRuntime]ます。使用する必要があるものを特定し、必要なアクセス許可を取得し、機能検出を利用して、サポートされている環境でその API 要求を送信します。  このプロセスに従って、PWA の Windows デスクトップユーザーにプログレッシブエンハンスメントを追加します。  
 
