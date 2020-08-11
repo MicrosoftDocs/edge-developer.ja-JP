@@ -7,12 +7,12 @@ ms.date: 07/14/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、互換性、web プラットフォーム
-ms.openlocfilehash: 0785544d0245827f58f3f7c71edd5a18a3d12404
-ms.sourcegitcommit: d982699ee25e8704fcaad7a15b4d8d015aef2f12
+ms.openlocfilehash: 32b8d7ef4c34365a005fbcceec0097adbf08ea37
+ms.sourcegitcommit: aba52b35b832ba7a7dd6eb042807cd7c8e56e79f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "10868766"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "10920243"
 ---
 # Microsoft Edge 向けのサイトの互換性に影響する変更点  
 
@@ -20,8 +20,8 @@ Web は、ユーザーエクスペリエンス、セキュリティ、プライ�
 
 | 変更点 | Stable チャネル | Experimentation | 追加情報 |  
 |:--- |:--- |:--- |:--- |
-| Cookie の既定値 `SameSite=Lax` | [Chrome または Chrome + 1](#release-comments)  | カナリア v82、Dev v82 | この変更は、Microsoft Edge が基づく Chromium プロジェクトで行われています。  この変更に関する Google の計画されたタイムラインを含む詳細については、 [Chrome Platform Status エントリ][ChromePlatformStatus5088147346030592]を確認してください。  |  
-| 参照元ポリシー: 既定値 `strict-origin-when-cross-origin` | [Chrome または Chrome + 1](#release-comments)  | カナリア v79、Dev v79 | この変更は、Microsoft Edge が基づく Chromium プロジェクトで行われています。  この変更に関する Google の計画されたタイムラインを含む詳細については、 [Chrome Platform Status エントリ][ChromePlatformStatus6251880185331712]を確認してください。  |  
+| Cookie の既定値 `SameSite=Lax` と `SameSite=None-requires-Secure` | [Chrome + 1](#release-comments) \ (Edge v86 \)  | カナリア v82、Dev v82 | この変更は、Microsoft Edge が基づく Chromium プロジェクトで行われています。  この変更に関する Google の計画されたタイムラインを含む詳細については、 [Chrome Platform Status エントリ][ChromePlatformStatus5088147346030592]を確認してください。  |  
+| 参照元ポリシー: 既定値 `strict-origin-when-cross-origin` | [Chrome + 1](#release-comments) \ (Edge v86 \)  | カナリア v79、Dev v79 | この変更は、Microsoft Edge が基づく Chromium プロジェクトで行われています。  この変更に関する Google の計画されたタイムラインを含む詳細については、 [Chrome Platform Status エントリ][ChromePlatformStatus6251880185331712]を確認してください。  |  
 | ページを離れる際の同期 XmlHttpRequest の禁止 | [Chrome + 1](#release-comments) \ (Edge v83 \) |  | この変更は、Microsoft Edge が基づく Chromium プロジェクトで行われています。  Chrome の場合、Microsoft Edge には、Edge v88 までこの変更を無効にするグループポリシーが用意されています。  この変更に関する Google の計画されたタイムラインを含む詳細については、 [Chrome Platform Status エントリ][ChromePlatformStatus4664843055398912]を確認してください。  |  
 | 通知のアクセス許可要求に関する微妙なプロンプトを表示する | Edge v84 |  | Quiet 通知要求は、または API を使って要求されたサイト通知のアクセス許可のアドレスバーに微妙な要求のアイコンを表示し `Notifications` `Push` ます。フルまたは標準のアクセス許可ポップアッププロンプト UI を置き換えます。  この機能は、現在すべてのユーザーに対して有効になっています。  自動通知要求を無効にするには、にアクセス `edge://settings/content/notifications` します。  今後、Microsoft Edge チームは、いくつかのシナリオで、完全なポップアップ通知のプロンプトを再び有効にすることができます。  |  
 | TLS/1.0 と TLS/1.1 を既定で無効にする | Edge v84 |  | 影響を受けるサイトを見つけるために、フラグを設定することで、 `edge://flags/#display-legacy-tls-warnings` Microsoft Edge で従来の TLS プロトコルを必要とするページを読み込むときに、ブロックしない "セキュリティで保護されていない" という通知を表示することができます。  [Sslminversion][DeployedEdgePoliciesSSLMinVersion]グループポリシーでは、tls/1.0 および tls/1.1 の再有効化が許可されています。ポリシーは、Edge 88 まで利用できます。  |  
