@@ -3,17 +3,17 @@ description: Microsoft Edge WebView 2 コントロールを使用して、Window
 title: Microsoft Edge WebView 2 Windows フォームアプリ
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 07/23/2020
+ms.date: 08/10/2020
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: WebView2、WebView2、WebView、webview、winforms アプリ、winforms、edge、CoreWebView2、browser control、edge html、はじめに、作業の開始、.NET、windows フォーム
-ms.openlocfilehash: 634fbd74a94ea990bc3eb9c150760522a5c13ce1
-ms.sourcegitcommit: 553957c101f83681b363103cb6af56bf20173f23
+ms.openlocfilehash: 7d7ddf445adee7b3d20d268ab1d53c0999fd54ce
+ms.sourcegitcommit: 4bc904c5d54347185f275bd76441975be471c320
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "10895526"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "10926457"
 ---
 # Windows Forms アプリでの WebView2 の概要 (プレビュー)  
 
@@ -302,4 +302,4 @@ async void InitializeAsync()
 
 ## Microsoft Edge WebView チームと連絡を取り合う  
 
-フィードバックを共有して、より充実した WebView2 エクスペリエンスを構築できます。  Microsoft Edge WebView[フィードバックリポジトリ](https://aka.ms/webviewfeedback)にアクセスして、機能要求またはバグレポートを送信するか、既知の問題を検索します。  
+[!INCLUDE [contact WebView team note](../includes/contact-webview-team-note.md)]  

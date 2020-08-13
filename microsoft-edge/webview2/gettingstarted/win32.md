@@ -3,17 +3,17 @@ description: Microsoft Edge WebView 2 コントロールを使用して Win32 �
 title: Win32 アプリの WebView2 の概要
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 07/30/2020
+ms.date: 08/10/2020
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Controller、browser control、edge html
-ms.openlocfilehash: 03c6f20b59dd6de2aa95e402f82ac3e2a3940839
-ms.sourcegitcommit: 19ef1422733ef1fd051d2b4f0263ce191e8d67bc
+ms.openlocfilehash: ec5144f911d5bf00f141d1e8e53718154f1cbb24
+ms.sourcegitcommit: 4bc904c5d54347185f275bd76441975be471c320
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "10902844"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "10926485"
 ---
 # WebView2 の概要 (開発者用プレビュー)  
 
@@ -282,9 +282,9 @@ nullptr);
 *   WebView2 を使って構築されたサンプルアプリケーションについては、「 [WebView2Browser][GithubMicrosoftedgeWebview2browser]」を参照してください。  
 *   WebView2 API の詳細については、 [api リファレンス][Webview2ReferenceWin3209538]を参照してください。  
 
-## WebView2 チームと連絡を取り合う  
+## Microsoft Edge WebView チームと連絡を取り合う  
 
-フィードバックを共有して、より充実した WebView2 エクスペリエンスを構築できます。  GitHub の[フィードバックリポジトリ][GithubMicrosoftedgeWebviewfeedback]にアクセスして、機能要求またはバグレポートを送信するか、既知の問題を検索します。  
+[!INCLUDE [contact WebView team note](../includes/contact-webview-team-note.md)]  
 
 <!-- links -->  
 

@@ -3,17 +3,17 @@ description: Microsoft Edge WebView 2 コントロールを使用して、WinUI 
 title: WinUI アプリ用 Microsoft Edge WebView2
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 07/23/2020
+ms.date: 08/10/2020
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: WebView2、WebView2、WebView、webview、winui apps、winui、edge、CoreWebView2、browser control、edge html、はじめに、作業の開始、.NET
-ms.openlocfilehash: 9960a4411e69f0232ae2d202a61a9beb01c0a631
-ms.sourcegitcommit: 553957c101f83681b363103cb6af56bf20173f23
+ms.openlocfilehash: 5b9bbb4578fc580ddc77680a57b481501e48cda7
+ms.sourcegitcommit: 4bc904c5d54347185f275bd76441975be471c320
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "10895512"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "10926492"
 ---
 # WinUI3 での WebView2 の概要 (プレビュー)  
 
@@ -28,21 +28,21 @@ ms.locfileid: "10895512"
 *   Visual Studio 2019、バージョン 16.7 Preview 1。  詳細については、 [WINDOWS UI ライブラリ3プレビュー 2 (2020 年7月)][WindowsAppsWinui3ConfigureYourDevEnvironment]を参照してください。  
 *   [X64][WindowsDotnetcliBlobCoreSdk50100Preview4202681X86]と[x86][WindowsDotnetcliBlobCoreSdk50100Preview4202681X64]の両方のバージョンの .net 5 Preview 4。  
 *   [WinUI 3][VisualstudioMarketplaceWinUiprojecttemplates] Visual Studio 2019 用のプロジェクトテンプレートの拡張機能  
-すべての Visual Studio 機能に確実にアクセスできるように、[開発者モードを有効][WindowsUwpGetStartedEnableYourDeviceForDevelopment]にしていることを確認します。  
+すべての Visual Studio 機能に確実にアクセスできるように、 [開発者モードを有効][WindowsUwpGetStartedEnableYourDeviceForDevelopment] にしていることを確認します。  
 
 ## 手順 1-プロジェクトを作成する  
 
 1つのメインウィンドウを含む基本的なデスクトッププロジェクトから始めます。  
 
-1.  Visual Studio で、[**新しいプロジェクトの作成**] を選択します。  
+1.  Visual Studio で、[ **新しいプロジェクトの作成**] を選択します。  
 1.  [プロジェクト] ドロップダウンで、[ **C#**]、[ **Windows**]、[ **WinUI** ] の順に選択します。  
     
     :::image type="complex" source="./media/winui-gettingstarted-selections.png" alt-text="WinUI の Visual studio プロジェクト作成ダイアログ" lightbox="./media/winui-gettingstarted-selections.png":::
        WinUI の Visual studio プロジェクト作成ダイアログ  
     :::image-end:::  
     
-1.  [**空のアプリ]、[パッケージ] (デスクトップの WinUI)** の順に選び、[**次へ**] を選びます。  
-1.  プロジェクト名を入力し、必要に応じてその他のオプションを選択して、[**作成**] を選択します。  
+1.  [ **空のアプリ]、[パッケージ] (デスクトップの WinUI)** の順に選び、[ **次へ**] を選びます。  
+1.  プロジェクト名を入力し、必要に応じてその他のオプションを選択して、[ **作成**] を選択します。  
 1.  **新しいユニバーサル Windows プラットフォームプロジェクト**で、次の値を選択し、[ **OK]** を選択します。  
     *   ターゲットバージョン: **Windows 10、バージョン 1903 (ビルド 18362)** 以降。  
     *   最小バージョン: **Windows 10、バージョン 1803 (ビルド 17134)**。  
@@ -52,11 +52,11 @@ ms.locfileid: "10895512"
     :::image-end:::  
     
 1.  ソリューションエクスプローラーで、2つのプロジェクトが生成されます。  
-    *   **プロジェクト名 (デスクトップ)** このプロジェクトには、アプリのコードが含まれています。  **App.xaml.cs**は、 `Application` アプリインスタンスを表すクラスを定義します。 **MainWindow.xaml.cs**は、 `MainWindow` アプリインスタンスによって表示されるメインウィンドウを表すクラスを定義します。  これらのクラスは、 `Microsoft.UI.Xaml` WinUI の名前空間の型から派生します。  
+    *   **プロジェクト名 (デスクトップ)** このプロジェクトには、アプリのコードが含まれています。  **App.xaml.cs** は、 `Application` アプリインスタンスを表すクラスを定義します。 **MainWindow.xaml.cs** は、 `MainWindow` アプリインスタンスによって表示されるメインウィンドウを表すクラスを定義します。  これらのクラスは、 `Microsoft.UI.Xaml` WinUI の名前空間の型から派生します。  
     
     *   **プロジェクト名 (パッケージ)**。  このプロジェクトは、アプリを展開用の MSIX パッケージにビルドするように構成されている、Windows アプリケーションパッケージプロジェクトです。  プロジェクトには、アプリの thepackage manifestfor 含まれており、既定では、ソリューションのスタートアッププロジェクトになります。 詳細については、「 [Windows 10 のパッケージマニフェストスキーマリファレンス][UwpSchemasAppxpackageUapmanifestRoot]」の「 [msix パッケージ用にデスクトップアプリケーションをセットアップ][WindowsMsixDesktopToUwpPackagingDotNet]する」を参照してください。
     
-1.  ソリューションエクスプローラーで**MainWindow**を開いて、コードを表示します。  プロジェクトを実行し、 `F5` ボタンを含むウィンドウを表示するには、を選択します。  
+1.  ソリューションエクスプローラーで **MainWindow** を開いて、コードを表示します。  プロジェクトを実行し、 `F5` ボタンを含むウィンドウを表示するには、を選択します。  
     
 ## 手順 2-WebView2 コントロールをプロジェクトに追加する  
 
@@ -172,7 +172,7 @@ WebView2 コントロールに表示される web ページをアプリに追加
     }
     ```  
     
-    `F5`プロジェクトをビルドして実行する場合に選択します。  アドレスバーに新しい URL を入力し、[**移動**] を選択します。  たとえば、と入力 `https://www.bing.com` します。 
+    `F5`プロジェクトをビルドして実行する場合に選択します。  アドレスバーに新しい URL を入力し、[ **移動**] を選択します。  たとえば、と入力 `https://www.bing.com` します。 
     
     > [!NOTE]
     > アドレスバーに完全な Url を使用していることを確認します。 `ArgumentException` URL が、またはで始まらない場合は、例外がスローされ `http://` `https://` ます。  
@@ -192,7 +192,7 @@ WebView2 コントロールをホストするアプリケーションは、web �
 *   `NavigationCompleted`  
 > [!NOTE]
 > HTTP のリダイレクトでは `NavigationStarting` 、複数のイベントが発生します。  
-詳細については、「[ナビゲーションイベント][Webviews2ConceptsNavigationEvents]」を参照してください。  
+詳細については、「 [ナビゲーションイベント][Webviews2ConceptsNavigationEvents]」を参照してください。  
 
 エラーが発生すると、次のイベントが発生し、エラーページに移動する可能性があります。  
 
@@ -262,13 +262,13 @@ private void EnsureHttps(WebView2 sender, WebView2NavigationStartingEventArgs ar
 現在、チームは WebView2 の Api を構築しています。  WebView2 Api の現在の状態について詳しくは、「 [WebView2 spec][GithubMicrosoftUiXamlSpecsWebview2]」をご覧ください。  
 
 > [!NOTE]
-> WebView2 Api が出荷されている時点で、WinRT CoreWebView2 オブジェクトが利用できない場合があります。 WebView2 コントロールで利用できる Api を理解するには、利用可能な Api の一覧については、 [WebView2 Spec][GithubMicrosoftUiXamlSpecsWebview2]を参照してください。 
+> WebView2 Api が出荷されている時点で、WinRT CoreWebView2 オブジェクトが利用できない場合があります。 WebView2 コントロールで利用できる Api を理解するには、利用可能な Api の一覧については、 [WebView2 Spec][GithubMicrosoftUiXamlSpecsWebview2] を参照してください。 
 
 WebView2 機能の詳細については、「 [WebView2 の概念と使い方のガイド][Webview2IndexNextSteps]」と「 [WebView2 サンプルのリポジトリ][GithubMicrosoftedgeWebview2samplesMain]」を参照してください。  
 
 ## Microsoft Edge WebView チームと連絡を取り合う  
 
-フィードバックを共有して、より充実した WebView2 エクスペリエンスを構築できます。  Microsoft Edge WebView[フィードバックリポジトリ][GithubMicrosoftedgeWebviewfeedback]にアクセスして、機能のリクエストまたはバグレポートを送信するか、既知の問題を検索します。  
+[!INCLUDE [contact WebView team note](../includes/contact-webview-team-note.md)]  
 
 <!-- links -->  
 
@@ -294,8 +294,8 @@ WebView2 機能の詳細については、「 [WebView2 の概念と使い方の
 
 [MicrosoftedgeinsiderDownload]: https://www.microsoftedgeinsider.com/download "Microsoft Edge Insider チャネルをダウンロードする"  
 
-[WindowsDotnetcliBlobCoreSdk50100Preview4202681X86]: https://dotnetcli.blob.core.windows.net/dotnet/Sdk/5.0.100-preview.4.20268.1/dotnet-sdk-5.0.100-preview.4.20268.1-win-x86.exe "dotnet-sdk-5.0.100-preview.4.20268.1-win-x86.exeをダウンロードする"  
+[WindowsDotnetcliBlobCoreSdk50100Preview4202681X86]: https://dotnetcli.blob.core.windows.net/dotnet/Sdk/5.0.100-preview.4.20268.1/dotnet-sdk-5.0.100-preview.4.20268.1-win-x86.exe "dotnet-sdk-5.0.100-preview.4.20268.1-win-x86.exeをダウンロードする "  
 
-[WindowsDotnetcliBlobCoreSdk50100Preview4202681X64]: https://dotnetcli.blob.core.windows.net/dotnet/Sdk/5.0.100-preview.4.20268.1/dotnet-sdk-5.0.100-preview.4.20268.1-win-x64.exe "dotnet-sdk-5.0.100-preview.4.20268.1-win-x64.exe"  
+[WindowsDotnetcliBlobCoreSdk50100Preview4202681X64]: https://dotnetcli.blob.core.windows.net/dotnet/Sdk/5.0.100-preview.4.20268.1/dotnet-sdk-5.0.100-preview.4.20268.1-win-x64.exe " dotnet-sdk-5.0.100-preview.4.20268.1-win-x64.exe"  
 
 [VisualstudioMarketplaceWinUiprojecttemplates]: https://marketplace.visualstudio.com/items?itemName=Microsoft-WinUI.WinUIProjectTemplates "WinUI 3 プロジェクトテンプレート"  

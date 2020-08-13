@@ -3,17 +3,17 @@ description: Microsoft Edge WebView 2 コントロールを使用して Win32 �
 title: Microsoft Edge WebView2 コントロール
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 07/20/2020
+ms.date: 08/10/2020
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、CoreWebView2、ICoreWebView2Host、browser control、edge html、Windows フォーム、WinForms、WPF、.NET
-ms.openlocfilehash: ea3d25d16aa9e8c182d564c68615b9643c9993b4
-ms.sourcegitcommit: a82aa5fc1ada35cd8274490fbff3c0a850785835
+ms.openlocfilehash: bb2287ca854372d9592a3b90c7df6f9a8abf620e
+ms.sourcegitcommit: 4bc904c5d54347185f275bd76441975be471c320
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "10888599"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "10926471"
 ---
 # Microsoft Edge WebView2 の概要 (プレビュー)  
 
@@ -132,12 +132,12 @@ WebView2 アプリケーションを作成して展開する方法の詳細に�
 *   [WebView2 を使用してデバッグする方法][Webview2HowtoDebug]  
 *   [Microsoft Edge ドライバーを使用した WebView2 の自動化とテスト][Webview2HowtoWebdriver]  
 
-## WebView2 チームと連絡を取り合う  
+## Microsoft Edge WebView チームと連絡を取り合う  
 
-フィードバックを共有して、より充実した WebView2 エクスペリエンスを構築できます。  機能のリクエストまたはバグレポートを送信するには、「 [WebView フィードバックリポジトリ][GithubMicrosoftedgeWebviewfeddback]」を参照してください。  また、既知の問題を検索するのに適した場所です。  
+[!INCLUDE [contact WebView team note](./includes/contact-webview-team-note.md)]  
 
 > [!NOTE]
-> プレビューでは、より優れた製品の構築に役立つデータが収集されます。  WebView2 データの収集をオフにするには、ブラウザーデータの収集に移動してオフにし `edge://settings/privacy` ます。  
+> プレビュー中に収集されたデータにより、より良い製品を構築できます。  WebView2 データの収集をオフにするには、ブラウザーデータの収集に移動してオフにし `edge://settings/privacy` ます。  
 
 <!-- links -->  
 

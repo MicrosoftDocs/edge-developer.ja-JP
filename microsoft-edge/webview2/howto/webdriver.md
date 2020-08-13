@@ -3,17 +3,17 @@ description: Microsoft Edge ドライバーを使用して WebView2 コントロ
 title: Microsoft Edge ドライバーを使用した WebView2 の自動化とテスト
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 05/11/2020
+ms.date: 08/10/2020
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、edge、ICoreWebView2、ICoreWebView2Controller、Selenium、Microsoft Edge Driver
-ms.openlocfilehash: 15e9a0957047569a0832fbb6ea6e8bf280905b8d
-ms.sourcegitcommit: 8dca1c1367853e45a0a975bc89b1818adb117bd4
+ms.openlocfilehash: a91c01d1ad765dae45061e382daedc2295d70bb8
+ms.sourcegitcommit: 4bc904c5d54347185f275bd76441975be471c320
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "10697260"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "10926448"
 ---
 # Microsoft Edge ドライバーを使用した WebView2 の自動化とテスト
 
@@ -139,6 +139,6 @@ static void Main(string[] args)
 - [WebView2](https://docs.microsoft.com/microsoft-edge/hosting/webview2)コントロールの詳細と、ネイティブアプリに web コンテンツを埋め込むときの使い方について説明します。
 - Microsoft edge ドライバーの概要 (Chromium) の詳細については、 [Microsoft Edge ドライバーのドキュメント](https://docs.microsoft.com/microsoft-edge/webdriver-chromium)を参照してください。
 
-## WebView2 チームと連絡を取り合う  
+## Microsoft Edge WebView チームと連絡を取り合う  
 
-フィードバックを共有することで、より充実した WebView2 エクスペリエンスを構築できます。 [フィードバックリポジトリ](https://github.com/MicrosoftEdge/WebViewFeedback)にアクセスして、機能のリクエストやバグレポートを送信したり、既知の問題を検索したりします。
+[!INCLUDE [contact WebView team note](../includes/contact-webview-team-note.md)]  

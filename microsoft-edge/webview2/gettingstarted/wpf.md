@@ -3,17 +3,17 @@ description: Microsoft Edge WebView 2 コントロールを使用して、WPF �
 title: Microsoft Edge WebView 2 (WPF アプリ)
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 07/23/2020
+ms.date: 08/10/2020
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: WebView2、WebView2、WebView、webview、wpf アプリ、wpf、edge、CoreWebView2、browser control、edge html、はじめに、作業の開始、.NET
-ms.openlocfilehash: 304d79640bdf789eb0b822dc7ab8f260df637624
-ms.sourcegitcommit: 553957c101f83681b363103cb6af56bf20173f23
+ms.openlocfilehash: bfddfff03363b5149db3f7e9741730c8e8de2de0
+ms.sourcegitcommit: 4bc904c5d54347185f275bd76441975be471c320
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "10895491"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "10926583"
 ---
 # WPF での WebView2 の概要 (プレビュー)
 
@@ -338,4 +338,4 @@ void EnsureHttps(object sender, CoreWebView2NavigationStartingEventArgs args)
 
 ## Microsoft Edge WebView チームと連絡を取り合う  
 
-フィードバックを共有して、より充実した WebView2 エクスペリエンスを構築できます。  Microsoft Edge WebView[フィードバックリポジトリ](https://github.com/MicrosoftEdge/WebViewFeedback)にアクセスして、機能要求またはバグレポートを送信するか、既知の問題を検索します。  
+[!INCLUDE [contact WebView team note](../includes/contact-webview-team-note.md)]  

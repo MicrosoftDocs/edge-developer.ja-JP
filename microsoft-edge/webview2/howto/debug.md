@@ -3,17 +3,17 @@ description: WebView2 コントロールをデバッグする方法について�
 title: デバッグ WebView2
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 07/22/2020
+ms.date: 08/10/2020
 ms.topic: how-to
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Host、browser control、edge html
-ms.openlocfilehash: ad6f334e5796d2f22146f2853ae1ef1d854e329c
-ms.sourcegitcommit: b3555043e9d5aefa5a9e36ba4d73934d41559f49
+ms.openlocfilehash: 6b2cc65e5cb368c29efec2eb3638f0c1772000d9
+ms.sourcegitcommit: 4bc904c5d54347185f275bd76441975be471c320
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "10894320"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "10926478"
 ---
 # WebView2 を使用してデバッグする方法  
 
@@ -83,7 +83,7 @@ Visual Studio コードを使って、WebView2 コントロールで実行され
 
 ## Microsoft Edge WebView チームと連絡を取り合う  
 
-フィードバックを共有して、より充実した WebView2 エクスペリエンスを構築できます。  [フィードバックリポジトリ][GithubMicrosoftedgeWebviewfeedbackMain]にアクセスして、機能リクエストまたはバグレポートを送信します。  
+[!INCLUDE [contact WebView team note](../includes/contact-webview-team-note.md)]  
 
 <!--## Debugging  
 
