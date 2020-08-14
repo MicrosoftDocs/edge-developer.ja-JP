@@ -1,98 +1,127 @@
 ---
 description: WebView2 コントロールをデバッグする方法について説明します。
-title: デバッグ WebView2
+title: WebView2 アプリケーションのデバッグを開始する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 08/10/2020
+ms.date: 08/13/2020
 ms.topic: how-to
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Host、browser control、edge html
-ms.openlocfilehash: 6b2cc65e5cb368c29efec2eb3638f0c1772000d9
-ms.sourcegitcommit: 4bc904c5d54347185f275bd76441975be471c320
+ms.openlocfilehash: dcdeeadc2c25bcf50834176706b8d181f06f994a
+ms.sourcegitcommit: 6c7ededf8677fd7add5e4060e92f9ec4cfdb6952
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "10926478"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "10927917"
 ---
-# <span data-ttu-id="7a059-104">WebView2 を使用してデバッグする方法</span><span class="sxs-lookup"><span data-stu-id="7a059-104">How to Debug with WebView2</span></span>  
+# <span data-ttu-id="84f3e-104">WebView2 アプリケーションのデバッグを開始する</span><span class="sxs-lookup"><span data-stu-id="84f3e-104">Get started debugging WebView2 applications</span></span>  
 
-<span data-ttu-id="7a059-105">Microsoft Edge WebView2 コントロールの目標は、web とネイティブアプリケーションの開発機能と開発者ツールの両方の最良の組み合わせです。</span><span class="sxs-lookup"><span data-stu-id="7a059-105">The goal of the Microsoft Edge WebView2 control is combining the best of both the web and native application development features and developer tools.</span></span>  <span data-ttu-id="7a059-106">次のページでは、WebView2 コントロールを使用して開発するときに使用するさまざまなツールについて、その概要を示します。</span><span class="sxs-lookup"><span data-stu-id="7a059-106">The following page outlines the different tools to use when developing with WebView2 controls.</span></span>  
+<span data-ttu-id="84f3e-105">Microsoft Edge WebView2 コントロールの目標は、web とネイティブアプリケーションの両方の開発機能とツールの両方を組み合わせることです。</span><span class="sxs-lookup"><span data-stu-id="84f3e-105">The goal of the Microsoft Edge WebView2 control is to combine the best of both the web and native application development features and tools.</span></span>  <span data-ttu-id="84f3e-106">WebView2 アプリケーションを開発するときは、アプリケーションをデバッグする必要があります。</span><span class="sxs-lookup"><span data-stu-id="84f3e-106">When you develop your WebView2 application, you should debug your application.</span></span>  <span data-ttu-id="84f3e-107">この記事では、WebView2 アプリケーションで web とネイティブコードの両方をデバッグするために使用するさまざまなツールについて説明します。</span><span class="sxs-lookup"><span data-stu-id="84f3e-107">This article outlines the different tools to use to debug both your web and native code in your WebView2 application.</span></span>  
 
-## <span data-ttu-id="7a059-107">Microsoft Edge DevTools</span><span class="sxs-lookup"><span data-stu-id="7a059-107">Microsoft Edge DevTools</span></span>  
+## [<span data-ttu-id="84f3e-108">Microsoft Edge DevTools</span><span class="sxs-lookup"><span data-stu-id="84f3e-108">Microsoft Edge DevTools</span></span>](#tab/devtools)  
 
-<span data-ttu-id="7a059-108">Microsoft edge [(Chromium) 開発者ツール][DevtoolsGuideChromiumMain]を使用して、microsoft edge と同じ方法で、WebView2 コントロールに表示される web コンテンツをデバッグします。</span><span class="sxs-lookup"><span data-stu-id="7a059-108">Use [Microsoft Edge (Chromium) Developer Tools][DevtoolsGuideChromiumMain] to debug web content displayed in WebView2 controls, in the same way that you use Microsoft Edge.</span></span>  <span data-ttu-id="7a059-109">DevTools を開くには、[WebView] ウィンドウにフォーカスを設定し、次のいずれかの操作を実行します。</span><span class="sxs-lookup"><span data-stu-id="7a059-109">To open the DevTools, set focus on the WebView window and then use any of the following actions.</span></span>  
-*   <span data-ttu-id="7a059-110">を選択し `F12` ます。</span><span class="sxs-lookup"><span data-stu-id="7a059-110">Select `F12`.</span></span>  
-*   <span data-ttu-id="7a059-111">を選択し `Ctrl` + `Shift` + `I` ます。</span><span class="sxs-lookup"><span data-stu-id="7a059-111">Select `Ctrl`+`Shift`+`I`.</span></span>  
-*   <span data-ttu-id="7a059-112">コンテキストメニューを開く (\ 右クリック \) > 選択] をクリック `Inspect` します。</span><span class="sxs-lookup"><span data-stu-id="7a059-112">Open the context menu \(right-click\) > select `Inspect`.</span></span>  
+<span data-ttu-id="84f3e-109">Microsoft edge [(Chromium) 開発者ツール][DevtoolsGuideChromiumMain] を使用して、microsoft edge に表示されている別の web ページをデバッグする場合と同じ方法で、WebView2 コントロールに表示される web コンテンツをデバッグします。</span><span class="sxs-lookup"><span data-stu-id="84f3e-109">Use [Microsoft Edge (Chromium) Developer Tools][DevtoolsGuideChromiumMain] to debug web content displayed in WebView2 controls, in the same way that you may debug for another webpage displayed in Microsoft Edge.</span></span>  <span data-ttu-id="84f3e-110">DevTools を開くには、WebView コントロールにフォーカスを設定し、次のいずれかの操作を実行します。</span><span class="sxs-lookup"><span data-stu-id="84f3e-110">To open the DevTools, set focus on the WebView control and then use one of the following actions.</span></span>  
 
-:::image type="complex" source="../media/f12.png" alt-text="Microsoft Edge DevTools" lightbox="../media/f12.png":::
-   <span data-ttu-id="7a059-114">Microsoft Edge DevTools</span><span class="sxs-lookup"><span data-stu-id="7a059-114">Microsoft Edge DevTools</span></span>  
+*   <span data-ttu-id="84f3e-111">を選択し `F12` ます。</span><span class="sxs-lookup"><span data-stu-id="84f3e-111">Select `F12`.</span></span>  
+*   <span data-ttu-id="84f3e-112">を選択し `Ctrl` + `Shift` + `I` ます。</span><span class="sxs-lookup"><span data-stu-id="84f3e-112">Select `Ctrl`+`Shift`+`I`.</span></span>  
+*   <span data-ttu-id="84f3e-113">コンテキストメニューを開き (\ を右クリックし)、[] を選び `Inspect` ます。</span><span class="sxs-lookup"><span data-stu-id="84f3e-113">Open the context menu \(right-click\) and choose `Inspect`.</span></span>  
+
+<span data-ttu-id="84f3e-114">詳細については、「 [Devtools の概要][DevtoolsGuideChromiumMain]」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="84f3e-114">For more information, see [DevTools overview][DevtoolsGuideChromiumMain].</span></span>  
+
+:::image type="complex" source="./media/f12.png" alt-text="DevTools のデバッグ" lightbox="./media/f12.png":::
+   <span data-ttu-id="84f3e-116">DevTools のデバッグ</span><span class="sxs-lookup"><span data-stu-id="84f3e-116">DevTools debugging</span></span>  
 :::image-end:::  
 
-> [!NOTE]
-> <span data-ttu-id="7a059-115">ネイティブデバッガーがアタッチされている Visual Studio でアプリケーションをデバッグするときに、を押すと、 `F12` 開発者ツールではなくネイティブデバッガーがトリガーされることがあります。</span><span class="sxs-lookup"><span data-stu-id="7a059-115">When you debug your application in Visual Studio with the native debugger attached, pressing `F12` may trigger the native debugger instead of Developer Tools.</span></span>  <span data-ttu-id="7a059-116">`Ctrl` + `Shift` + `I` または、コンテキストメニュー \ (右クリック \) を使用して、この問題を回避します。</span><span class="sxs-lookup"><span data-stu-id="7a059-116">Press `Ctrl`+`Shift`+`I`, or use the context menu \(right-click\) to avoid the situation.</span></span>  
+## [<span data-ttu-id="84f3e-117">Visual Studio</span><span class="sxs-lookup"><span data-stu-id="84f3e-117">Visual Studio</span></span>](#tab/visualstudio)  
 
-> [!NOTE]
-> <span data-ttu-id="7a059-117">WebView を初めて `--auto-open-devtools-for-tabs` 作成するときに、コマンドライン引数を使って新しい DevTools ウィンドウを開くことができます。</span><span class="sxs-lookup"><span data-stu-id="7a059-117">You may use the `--auto-open-devtools-for-tabs` command-line argument to open a new DevTools window when you first create a WebView.</span></span>  <!--See `CreateCoreWebView2Controller` documentation for how to provide additional command-line arguments to the browser process.  See `LoaderOverride` registry key to examine different builds of WebView2 without modifying your application in the `CreateCoreWebView2Controller` documentation.  -->  
+<span data-ttu-id="84f3e-118">Visual Studio には、WebView2 アプリケーションの web とネイティブコード向けのさまざまなデバッグツールが用意されています。</span><span class="sxs-lookup"><span data-stu-id="84f3e-118">Visual Studio provides various debugging tools for web and native code in WebView2 applications.</span></span>  <span data-ttu-id="84f3e-119">Visual Studio のセクションでは、主に WebView コントロールのデバッグがフォーカスされますが、Visual Studio でのデバッグの他の方法は通常どおり利用できます。</span><span class="sxs-lookup"><span data-stu-id="84f3e-119">In the Visual Studio section, the primarily focus is debugging WebView controls, however the other methods of debugging in Visual Studio are available as usual.</span></span>  <span data-ttu-id="84f3e-120">Win32 アプリケーションまたは Office アドインでのみ、web とネイティブコードをデバッグするには、次のプロセスを使用します。</span><span class="sxs-lookup"><span data-stu-id="84f3e-120">Use the following process to debug web and native code in Win32 applications or Office add-ins only.</span></span>  
 
-## <span data-ttu-id="7a059-118">Visual Studio</span><span class="sxs-lookup"><span data-stu-id="7a059-118">Visual Studio</span></span>  
+> [!IMPORTANT]
+> <span data-ttu-id="84f3e-121">ネイティブデバッガーがアタッチされている Visual Studio でアプリケーションをデバッグする場合、を選択すると、 `F12` 開発者ツールではなくネイティブデバッガーがトリガーされる可能性があります。</span><span class="sxs-lookup"><span data-stu-id="84f3e-121">When you debug your application in Visual Studio with the native debugger attached, selecting `F12` may trigger the native debugger instead of Developer Tools.</span></span>  <span data-ttu-id="84f3e-122">`Ctrl` + `Shift` + `I` または、コンテキストメニュー \ (右クリック \) を使用して、この状況を回避します。</span><span class="sxs-lookup"><span data-stu-id="84f3e-122">Select `Ctrl`+`Shift`+`I`, or use the context menu \(right-click\) to avoid the situation.</span></span>  
 
-<span data-ttu-id="7a059-119">Visual studio 2019 バージョン 16.4 Preview 2 以降のスクリプトデバッガーを使って、Visual Studio でスクリプトをデバッグします。</span><span class="sxs-lookup"><span data-stu-id="7a059-119">Use the script debugger in Visual Studio 2019 version 16.4 Preview 2 or later to debug your script in Visual Studio.</span></span>  <span data-ttu-id="7a059-120">C++ のワークロードを使用して、**デスクトップ開発**の**JavaScript 診断**コンポーネントを確認します。</span><span class="sxs-lookup"><span data-stu-id="7a059-120">Verify the **JavaScript diagnostics** component in **Desktop development with C++** workload is installed.</span></span>  
+<span data-ttu-id="84f3e-123">作業を始める前に、次の要件が満たされていることを確認します。</span><span class="sxs-lookup"><span data-stu-id="84f3e-123">Before you begin, ensure the following requirements are met.</span></span>  
 
-:::image type="complex" source="../media/vs-js-diagnostics.jpg" alt-text="Visual Studio JavaScript 診断ツール":::
-   <span data-ttu-id="7a059-122">Visual Studio JavaScript 診断ツール</span><span class="sxs-lookup"><span data-stu-id="7a059-122">Visual Studio JavaScript diagnostics</span></span>  
-:::image-end:::  
+*   <span data-ttu-id="84f3e-124">スクリプトをデバッグするには、Visual Studio 内からアプリを起動する必要があります。</span><span class="sxs-lookup"><span data-stu-id="84f3e-124">To debug scripts, the app must be launched from within Visual Studio.</span></span>  
+*   <span data-ttu-id="84f3e-125">実行中の WebView2 プロセスにデバッガーをアタッチすることはできません。</span><span class="sxs-lookup"><span data-stu-id="84f3e-125">You cannot attach a debugger to a running WebView2 process.</span></span>  
+*   <span data-ttu-id="84f3e-126">Visual Studio 2019 バージョン 16.4 Preview 2 以降をインストールします。</span><span class="sxs-lookup"><span data-stu-id="84f3e-126">Install Visual Studio 2019 version 16.4 Preview 2 or later.</span></span>  
 
-<!--todo: Please update the image to use a red rectangle to outline the portion of the screen to highlight  -->  
+<span data-ttu-id="84f3e-127">Visual Studio でスクリプトデバッガーツールをインストールしてセットアップします。</span><span class="sxs-lookup"><span data-stu-id="84f3e-127">Install and set up the script debugger tools in Visual Studio.</span></span>  
 
-<span data-ttu-id="7a059-123">WebView2 スクリプトのデバッグを有効にするには、プロジェクトのコンテキストメニュー \ (右クリック \) を開いて、[**プロパティ**] > 選びます。</span><span class="sxs-lookup"><span data-stu-id="7a059-123">To enable WebView2 script debugging, open the context menu \(right-click\) on your project > select **Properties**.</span></span>  
+1.  <span data-ttu-id="84f3e-128">**C++ でデスクトップ開発**に**JavaScript 診断**コンポーネントをインストールするには、次の操作を実行します。</span><span class="sxs-lookup"><span data-stu-id="84f3e-128">Complete the following actions to install the **JavaScript diagnostics** component in **Desktop development with C++**.</span></span>  
 
-*   <span data-ttu-id="7a059-124">[**構成プロパティ**] で、[**デバッグ**] を選択します。</span><span class="sxs-lookup"><span data-stu-id="7a059-124">On **Configuration Properties**, select **Debugging**.</span></span>  
-*   <span data-ttu-id="7a059-125">[**デバッガーの種類**] プロパティで、オプションの一覧から [ **JavaScript (WebView2)** ] を選びます。</span><span class="sxs-lookup"><span data-stu-id="7a059-125">On the **Debugger Type** property, select **JavaScript (WebView2)** from the list of options.</span></span> 
-
-:::image type="complex" source="../media/vs-script-debugger.jpg" alt-text="Visual Studio JavaScript デバッガー":::
-   <span data-ttu-id="7a059-127">Visual Studio JavaScript デバッガー</span><span class="sxs-lookup"><span data-stu-id="7a059-127">Visual Studio JavaScript Debugger</span></span>  
-:::image-end:::  
-
-<!--todo: Please update the image to use a red rectangle to outline the portion of the screen to highlight  -->  
-
-<span data-ttu-id="7a059-128">すべての設定が完了し、デバッグする準備ができました。</span><span class="sxs-lookup"><span data-stu-id="7a059-128">You are all set up and ready to debug.</span></span>  
-
-<span data-ttu-id="7a059-129">デバッグするには、次の操作を実行します。</span><span class="sxs-lookup"><span data-stu-id="7a059-129">To Debug, complete the following actions.</span></span>  
-
-1.  <span data-ttu-id="7a059-130">ブレークポイントを設定する</span><span class="sxs-lookup"><span data-stu-id="7a059-130">Set Breakpoints</span></span>  
-    *   <span data-ttu-id="7a059-131">スクリプトファイルを開き、目的の場所にブレークポイントを設定します。</span><span class="sxs-lookup"><span data-stu-id="7a059-131">Open the script file and set the breakpoint where you want it.</span></span>  
+    1. <span data-ttu-id="84f3e-129">Windows エクスプローラーバーに「」と入力 `Visual Studio Installer` します。</span><span class="sxs-lookup"><span data-stu-id="84f3e-129">In the Windows Explorer bar, type `Visual Studio Installer`.</span></span>  
+    1. <span data-ttu-id="84f3e-130">[ **Visual Studio インストーラー** ] を選択して開きます。</span><span class="sxs-lookup"><span data-stu-id="84f3e-130">Choose **Visual Studio Installer** to open it.</span></span>  
+    1. <span data-ttu-id="84f3e-131">Visual Studio インストーラーのインストールされているバージョンで、[ **その他** ] ボタンを選択し、[ **変更**] を選択します。</span><span class="sxs-lookup"><span data-stu-id="84f3e-131">In the Visual Studio Installer, on the installed version, choose the **More** button, and then choose **Modify**.</span></span>  
+    1. <span data-ttu-id="84f3e-132">Visual Studio の [ **ワークロード**] で、[ **デスクトップ開発** ] の [C++] の設定を選択します。</span><span class="sxs-lookup"><span data-stu-id="84f3e-132">In Visual Studio, under **Workloads**, choose the **Desktop Development in C++** setting.</span></span>  
         
-        > [!NOTE]
-        > <span data-ttu-id="7a059-132">JS/TS デバッグアダプターはソースパスマッピングを行っていません。</span><span class="sxs-lookup"><span data-stu-id="7a059-132">The JS/TS debug adapter does not do source path mapping.</span></span><span data-ttu-id="7a059-133">WebView2 に関連付けられているのとまったく同じパスを開く必要があります。</span><span class="sxs-lookup"><span data-stu-id="7a059-133">  You must open the exact same path associated with your WebView2.</span></span>  
+        :::image type="complex" source="./media/workloads.png" alt-text="Visual Studio のワークロードの変更画面" lightbox="./media/workloads.png":::
+            <span data-ttu-id="84f3e-134">Visual Studio のワークロードの変更画面</span><span class="sxs-lookup"><span data-stu-id="84f3e-134">Visual Studio Modifying Workloads Screen</span></span> :::image-end:::  
         
-1.  <span data-ttu-id="7a059-134">コードを実行する</span><span class="sxs-lookup"><span data-stu-id="7a059-134">Run Code</span></span>  
-    *   <span data-ttu-id="7a059-135">適切なビルドのフレーバーとランタイム環境を選び、ローカル windows デバッガーを起動します。</span><span class="sxs-lookup"><span data-stu-id="7a059-135">Select your appropriate build flavor and runtime environment and then start the local windows debugger.</span></span>  
-1.  <span data-ttu-id="7a059-136">デバッグコンソールの表示</span><span class="sxs-lookup"><span data-stu-id="7a059-136">View Debug Console</span></span>  
-    *   <span data-ttu-id="7a059-137">アプリケーションが実行され、最初の webview2 を作成した後でデバッガーが接続されます。</span><span class="sxs-lookup"><span data-stu-id="7a059-137">You application runs and the debugger connects after the first webview2 is created.</span></span><span data-ttu-id="7a059-138">保留中のデバッグ出力が表示されます。</span><span class="sxs-lookup"><span data-stu-id="7a059-138">  Any pending debug output is displayed.</span></span>  
+    1.  <span data-ttu-id="84f3e-135">**個々のコンポーネント**を選択します。</span><span class="sxs-lookup"><span data-stu-id="84f3e-135">Choose **Individual components**.</span></span>  
+    1.  <span data-ttu-id="84f3e-136">検索ボックスに「」と入力し `JavaScript diagnostics` ます。</span><span class="sxs-lookup"><span data-stu-id="84f3e-136">In the search box, enter `JavaScript diagnostics`.</span></span>  
+    1.  <span data-ttu-id="84f3e-137">**JavaScript 診断**設定を選択します。</span><span class="sxs-lookup"><span data-stu-id="84f3e-137">Choose the **JavaScript diagnostics** setting.</span></span>  
+    1.  <span data-ttu-id="84f3e-138">[ **Modify**] を選びます。</span><span class="sxs-lookup"><span data-stu-id="84f3e-138">Choose **Modify**.</span></span> 
         
-        > [!NOTE]
-        > <span data-ttu-id="7a059-139">このデバッグ方法は、現在、Win32 アプリケーションと Office アドインに制限されています。</span><span class="sxs-lookup"><span data-stu-id="7a059-139">This method of debugging is currently restricted to Win32 applications and Office add-ins.</span></span>  
+        :::image type="complex" source="./media/indivcomp.png" alt-text="Visual Studio による個々のコンポーネントの変更のタブ" lightbox="./media/indivcomp.png":::
+           <span data-ttu-id="84f3e-140">Visual Studio による個々のコンポーネントの変更のタブ</span><span class="sxs-lookup"><span data-stu-id="84f3e-140">Visual Studio Modifying Individual Components Tab</span></span>  
+        :::image-end:::  
         
-## <span data-ttu-id="7a059-140">Visual Studio Code</span><span class="sxs-lookup"><span data-stu-id="7a059-140">Visual Studio Code</span></span>  
+1.  <span data-ttu-id="84f3e-141">WebView2 アプリケーションのスクリプトのデバッグを有効にします。</span><span class="sxs-lookup"><span data-stu-id="84f3e-141">Enable script debugging for WebView2 applications.</span></span>  
+    1.  <span data-ttu-id="84f3e-142">WebView2 プロジェクトで、コンテキストメニュー \ を右クリックし、[ **プロパティ**] を選びます。</span><span class="sxs-lookup"><span data-stu-id="84f3e-142">In your WebView2 project, open the context menu \(right-click\), and choose **Properties**.</span></span>  
+    1.  <span data-ttu-id="84f3e-143">[ **構成プロパティ**] で、[ **デバッグ**] を選びます。</span><span class="sxs-lookup"><span data-stu-id="84f3e-143">Under the **Configuration Properties**, choose **Debugging**.</span></span>  
+    1.  <span data-ttu-id="84f3e-144">[ **デバッガーの種類**] で、[ **JavaScript (WebView2)**] を選びます。</span><span class="sxs-lookup"><span data-stu-id="84f3e-144">Under the **Debugger Type**, choose **JavaScript (WebView2)**.</span></span>  
+        
+        :::image type="complex" source="./media/enbjs.png" alt-text="Visual Studio のデバッグ構成プロパティ" lightbox="./media/enbjs.png":::
+           <span data-ttu-id="84f3e-146">Visual Studio の **デバッグ** 構成プロパティ</span><span class="sxs-lookup"><span data-stu-id="84f3e-146">Visual Studio **Debugging** Configuration Property</span></span>  
+        :::image-end:::  
+        
+<span data-ttu-id="84f3e-147">WebView2 アプリケーションをデバッグするには、次の操作を実行します。</span><span class="sxs-lookup"><span data-stu-id="84f3e-147">Complete the following actions to debug your WebView2 application.</span></span>  
 
-<span data-ttu-id="7a059-141">Visual Studio コードを使って、WebView2 コントロールで実行されるスクリプトをデバッグすることができます。</span><span class="sxs-lookup"><span data-stu-id="7a059-141">You may use Visual Studio Code to debug scripts that run in WebView2 controls.</span></span>  <span data-ttu-id="7a059-142">詳細については、「 [Microsoft Edge (Chromium) WebView アプリケーション][GithubMicrosoftVscodeEdgeDebug2ReadmeChromiumWebviewApplications]」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="7a059-142">For more information, see [Microsoft Edge (Chromium) WebView Applications][GithubMicrosoftVscodeEdgeDebug2ReadmeChromiumWebviewApplications].</span></span>  
+1.  <span data-ttu-id="84f3e-148">ソースコードにブレークポイントを設定するには、行番号の左側にカーソルを置いて、[ブレークポイントの設定] を選択します。</span><span class="sxs-lookup"><span data-stu-id="84f3e-148">To set a breakpoint in your source code, hover to the left of the line number, and choose to set a breakpoint.</span></span>  <span data-ttu-id="84f3e-149">JS/TS デバッグアダプターはソースパスマッピングを実行しません。</span><span class="sxs-lookup"><span data-stu-id="84f3e-149">The JS/TS debug adapter does not perform source path mapping.</span></span>  <span data-ttu-id="84f3e-150">WebView2 に関連付けられているのとまったく同じパスを開く必要があります。</span><span class="sxs-lookup"><span data-stu-id="84f3e-150">You must open the exact same path associated with your WebView2.</span></span>  
+    
+    :::image type="complex" source="./media/breakpoint.png" alt-text="Visual Studio のブレークポイントの追加" lightbox="./media/breakpoint.png"::: 
+       <span data-ttu-id="84f3e-152">Visual Studio のブレークポイントの追加</span><span class="sxs-lookup"><span data-stu-id="84f3e-152">Visual Studio add breakpoint</span></span>  
+    :::image-end:::  
+    
+1.  <span data-ttu-id="84f3e-153">デバッガーを実行するには、プラットフォームのビットサイズを選択し、[ **ローカル Windows デバッガー**] の横にある緑色の [再生] ボタンを選択します。</span><span class="sxs-lookup"><span data-stu-id="84f3e-153">To run the debugger, choose the bit size of the platform, and then choose the green play button next to **Local Windows Debugger**.</span></span>  <span data-ttu-id="84f3e-154">アプリケーションが実行され、作成された最初の WebView2 プロセスにデバッガーが接続されます。</span><span class="sxs-lookup"><span data-stu-id="84f3e-154">The application runs and the debugger connects to the first WebView2 process that is created.</span></span>  
+    
+    :::image type="complex" source="./media/run.png" alt-text=" Visual Studio のローカル Windows デバッガー" lightbox="./media/run.png"::: 
+       <span data-ttu-id="84f3e-156">Visual Studio の **ローカル Windows デバッガー**</span><span class="sxs-lookup"><span data-stu-id="84f3e-156">Visual Studio **Local Windows Debugger**</span></span>  
+    :::image-end:::  
+    
+1.  <span data-ttu-id="84f3e-157">**デバッグコンソール**でデバッガーからの出力を見つけます。</span><span class="sxs-lookup"><span data-stu-id="84f3e-157">In the **Debug Console**, find the output from the debugger.</span></span>  
+    
+    :::image type="complex" source="./media/console.png" alt-text=" Visual Studio のデバッグコンソール" lightbox="./media/console.png"::: 
+       <span data-ttu-id="84f3e-159">Visual Studio の **デバッグコンソール**</span><span class="sxs-lookup"><span data-stu-id="84f3e-159">Visual Studio **Debug Console**</span></span>  
+    :::image-end:::  
+    
+* * *  
 
-<!--todo:  add See also heading  -->  
+## <span data-ttu-id="84f3e-160">関連項目</span><span class="sxs-lookup"><span data-stu-id="84f3e-160">See also</span></span>  
 
-## <span data-ttu-id="7a059-143">Microsoft Edge WebView チームと連絡を取り合う</span><span class="sxs-lookup"><span data-stu-id="7a059-143">Getting in touch with the Microsoft Edge WebView team</span></span>  
+*   <span data-ttu-id="84f3e-161">WebView2 の使用を開始するには、 [WebView2 の概要ガイド][Webview2MainGettingStarted]を参照してください。</span><span class="sxs-lookup"><span data-stu-id="84f3e-161">To get started using WebView2, see [WebView2 Getting Started Guides][Webview2MainGettingStarted].</span></span>  
+*   <span data-ttu-id="84f3e-162">WebView2 機能の包括的な例については、GitHub の [WebView2Samples][GithubMicrosoftedgeWebview2samples] リポジトリを参照してください。</span><span class="sxs-lookup"><span data-stu-id="84f3e-162">For a comprehensive example of WebView2 capabilities, see the [WebView2Samples][GithubMicrosoftedgeWebview2samples] repo on GitHub.</span></span>
+*   <span data-ttu-id="84f3e-163">WebView2 Api について詳しくは、 [api リファレンス][Webview2ApiReference]をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="84f3e-163">For more detailed information about WebView2 APIs, see [API reference][Webview2ApiReference].</span></span>
+*   <span data-ttu-id="84f3e-164">WebView2 の詳細については、「 [WebView2 のリソース][Webview2MainNextSteps]」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="84f3e-164">For more information about WebView2, see [WebView2 Resources][Webview2MainNextSteps].</span></span>
+
+## <span data-ttu-id="84f3e-165">Microsoft Edge WebView チームと連絡を取り合う</span><span class="sxs-lookup"><span data-stu-id="84f3e-165">Getting in touch with the Microsoft Edge WebView team</span></span>  
 
 [!INCLUDE [contact WebView team note](../includes/contact-webview-team-note.md)]  
-
-<!--## Debugging  
-
-Open DevTools with the normal shortcuts: `F12` or `Ctrl+Shift+I`. You can use the `--auto-open-devtools-for-tabs` command argument switch to have the DevTools window open immediately when first creating a WebView. See CreateCoreWebView2Controller documentation for how to provide additional command line arguments to the browser process. Check out the LoaderOverride registry key for trying out different builds of WebView2 without modifying your application in the CreateCoreWebView2Controller documentation.  -->  
 
 <!-- links -->  
 
 [DevtoolsGuideChromiumMain]: ../../devtools-guide-chromium.md "Microsoft Edge (Chromium) 開発者ツール"  
 
-[GithubMicrosoftedgeWebviewfeedbackMain]: https://github.com/MicrosoftEdge/WebViewFeedback "WebView フィードバック-MicrosoftEdge/WebViewFeedback |GitHub"  
+[Webview2ReferenceDotnet09515MicrosoftWebWebview2CoreCorewebview2environmentoptionsAdditionalbrowserarguments]: ../reference/dotnet/0-9-515/microsoft-web-webview2-core-corewebview2environmentoptions.md#additionalbrowserarguments "AdditionalBrowserArguments-0.9.515 クラス | WebView2 クラスの場合 |Microsoft ドキュメント"  
+[Webview2ReferenceWin3209538Webview2IdlParameters]: ../reference/win32/0-9-538/webview2-idl.md#createcorewebview2environment  "CreateCoreWebView2Environment-Globals |Microsoft ドキュメント"  
+[Webview2ApiReference]: ../webview2-api-reference.md "Microsoft Edge WebView2 API リファレンス |Microsoft ドキュメント"  
+[Webview2MainNextSteps]: ../index.md#next-steps "次の手順-Microsoft Edge WebView2 の概要 (プレビュー) |Microsoft ドキュメント"  
+[Webview2MainGettingStarted]: ../index.md#getting-started "はじめに-Microsoft Edge WebView2 の概要 (プレビュー) |Microsoft ドキュメント"  
 
-[GithubMicrosoftVscodeEdgeDebug2ReadmeChromiumWebviewApplications]: https://github.com/microsoft/vscode-edge-debug2/blob/master/README.md#microsoft-edge-chromium-webview-applications "Microsoft Edge (Chromium) WebView アプリケーション-VS コード-Microsoft Edge 用デバッガー-microsoft/vscode-edge-debug2 |GitHub"  
+[GithubMicrosoftedgeWebviewfeedbackMain]: https://github.com/MicrosoftEdge/WebViewFeedback "WebView フィードバック-MicrosoftEdge/WebViewFeedback |GitHub"  
+[GithubMicrosoftedgeWebview2samples]: https://github.com/MicrosoftEdge/WebView2Samples "WebView2 サンプル-MicrosoftEdge/WebView2Samples |GitHub"  
+
+[GithubMicrosoftVscodeJSDebugWhatsNew]: https://github.com/microsoft/vscode-js-debug#whats-new "新機能-Visual Studio コードの JavaScript デバッガー-microsoft/vscode-js-debug |GitHub"  
+
+[GithubMicrosoftVscodeEdgeDebug2ReadmeChromiumWebviewApplications]: https://github.com/microsoft/vscode-edge-debug2/blob/master/README.md#microsoft-edge-chromium-webview-applications "Microsoft Edge (Chromium) WebView アプリケーション-Visual Studio Code-Microsoft Edge 用デバッガー-microsoft/vscode-edge-debug2 |GitHub"  
