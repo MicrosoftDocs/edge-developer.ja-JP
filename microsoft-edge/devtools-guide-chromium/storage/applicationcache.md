@@ -2,16 +2,16 @@
 title: Microsoft Edge DevTools を使ってアプリケーションキャッシュデータを表示する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 04/30/2020
+ms.date: 08/14/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 6ce3087e9c719efbcf4d9ebceb860edd0ed0c3b6
-ms.sourcegitcommit: ad68bfbb355f6cfdaaf6612b77ea3985d4d6a58b
+ms.openlocfilehash: fc1800fc54e5fb0d7998c62ce163ece7a461dd82
+ms.sourcegitcommit: 054ad92f0b8f9a15da1e3aed32e8f4379b10860f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "10612096"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "10931214"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -27,45 +27,41 @@ ms.locfileid: "10612096"
    See the License for the specific language governing permissions and
    limitations under the License.  -->  
 
-
-
-
-
-# Microsoft Edge DevTools を使ってアプリケーションキャッシュデータを表示する   
-
-
+# Microsoft Edge DevTools を使ってアプリケーションキャッシュデータを表示する  
 
 > [!WARNING]
-> アプリケーションキャッシュ API が[web プラットフォームから削除されて][HTMLStandardOfflineWebApplications]います。  
+> アプリケーションキャッシュ API が [web プラットフォームから削除されて][HTMLStandardOfflineWebApplications]います。  
 
-このガイドでは、 [Microsoft Edge DevTools][MicrosoftEdgeDevTools]を使って[アプリケーションキャッシュ][MDNWebAPIsWindowApplicationCache]のリソースを検査する方法について説明します。  
+このガイドでは、 [Microsoft Edge DevTools][MicrosoftEdgeDevTools] を使って [アプリケーションキャッシュ][MDNWebAPIsWindowApplicationCache] のリソースを検査する方法について説明します。  
 
-## アプリケーションキャッシュデータの表示   
+## アプリケーションキャッシュデータの表示  
 
-1.  [**ソース**] タブを選択して、[**ソース**] パネルを開きます。  通常、**マニフェスト**ウィンドウは既定で開かれます。  
+1.  [ **ソース** ] タブを選択して、[ **ソース** ] パネルを開きます。  通常、 **マニフェスト** ウィンドウは既定で開かれます。  
     
-    > ##### 図 1  
-    > マニフェストウィンドウ  
-    > ![マニフェストウィンドウ][ImageManifestPane]  
+    :::image type="complex" source="../media/storage-application-manifest.msft.png" alt-text="マニフェストウィンドウ" lightbox="../media/storage-application-manifest.msft.png":::
+       **マニフェスト**ウィンドウ  
+    :::image-end:::  
 
-1.  [**アプリケーションキャッシュ**] セクションを展開して、リソースを表示するキャッシュをクリックします。  
+1.  [ **アプリケーションキャッシュ** ] セクションを展開し、リソースを表示するキャッシュを選択します。  
     
-    > ##### 図 2  
-    > [アプリケーションキャッシュ] ウィンドウ  
-    > ![[アプリケーションキャッシュ] ウィンドウ][ImageApplicationCachePane]  
+    :::image type="complex" source="../media/storage-cache-pane-cache-storage-resources.msft.png" alt-text="[アプリケーションキャッシュ] ウィンドウ" lightbox="../media/storage-cache-pane-cache-storage-resources.msft.png":::
+       [ **アプリケーションキャッシュ** ] ウィンドウ  
+    :::image-end:::  
 
 表の各行は、キャッシュされたリソースを表します。  
 
-[**種類**] 列は[リソースのカテゴリ][MDNHTMLResourcesInAnApplicationCache]を表します。  
+[ **種類** ] 列は [リソースのカテゴリ][MDNHTMLResourcesInAnApplicationCache]を表します。  
 
 | カテゴリ | 詳細 |  
 |:--- |:--- |  
 | `Explicit` | このリソースはマニフェストに明示的に含まれていました。 |  
 | `Fallback` | URL は、別のリソースのフォールバックです。  その他のリソースの URL は、DevTools には記載されていません。 |  
-| `Master` | リソースの属性によっ `manifest` て、このキャッシュがリソースの親であることが示されました。 |  
-| `Network` | このリソースがネットワークから取得する必要があることを指定するマニフェスト。 |  
+| `Master` | `manifest`リソースの属性は、キャッシュがリソースの親であることを示します。 |  
+| `Network` | リソースがネットワークから取得される必要があることを示すマニフェスト。 |  
 
-表の下部には、ネットワーク接続とアプリケーションキャッシュの状態を示す状態アイコンがあります。  アプリケーションキャッシュには、次のような状態があります。  
+<!--todo:  replace "Master" phrasing if possible.  -->  
+
+表の下部には、ネットワーク接続と **アプリケーションキャッシュ**の状態を示す状態アイコンがあります。  **アプリケーションキャッシュ**には、次のような状態があります。  
 
 | 状態 | 詳細 |  
 |:--- |:--- |  
@@ -75,18 +71,9 @@ ms.locfileid: "10612096"
 | `OBSOLETE` | キャッシュを削除しています。 |  
 | `UPDATEREADY` |  キャッシュの新しいバージョンが使用可能になります。 |  
 
-<!--   -->  
-
-
-
-<!-- image links -->  
-
-[ImageManifestPane]: /microsoft-edge/devtools-guide-chromium/media/storage-application-manifest.msft.png "図 1: [マニフェスト] ウィンドウ"  
-[ImageApplicationCachePane]: /microsoft-edge/devtools-guide-chromium/media/storage-cache-pane-cache-storage-resources.msft.png "図 2: アプリケーションキャッシュのウィンドウ"  
-
 <!-- links -->  
 
-[MicrosoftEdgeDevTools]: /microsoft-edge/devtools-guide-chromium "Microsoft Edge (Chromium) 開発者ツール"  
+[MicrosoftEdgeDevTools]: ../../devtools-guide-chromium.md "Microsoft Edge (Chromium) 開発者ツール |Microsoft ドキュメント"  
 
 [HTMLStandardOfflineWebApplications]: https://html.spec.whatwg.org/multipage/offline.html#offline "オフライン Web アプリケーション-HTML 標準"  
 
@@ -94,8 +81,8 @@ ms.locfileid: "10612096"
 [MDNWebAPIsWindowApplicationCache]: https://developer.mozilla.org/docs/Web/API/Window/applicationCache "Window. applicationCache-Web Api |MDN"  
 
 > [!NOTE]
-> このページの一部は、 [Google によっ][GoogleSitePolicies]て作成および共有され、[クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
-> 元のページは[ここ](https://developers.google.com/web/tools/chrome-devtools/storage/applicationcache)にあり、 [Kayce Basques][KayceBasques]テクニカルライター、Chrome Devtools \ & Lighthouse \) で作成されています。  
+> このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
+> 元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/storage/applicationcache) にあり、 [Kayce Basques][KayceBasques] テクニカルライター、Chrome Devtools \ & Lighthouse \) で作成されています。  
 
 [![クリエイティブコモンズライセンス][CCby4Image]][CCA4IL]  
 この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。  

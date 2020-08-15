@@ -2,16 +2,16 @@
 title: '初心者向けの DevTools: CSS の使用を開始する'
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 07/16/2020
+ms.date: 08/14/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: fba049a20a7b5f981130b4d9e60c37b07dc7e092
-ms.sourcegitcommit: a06c86ef7c69e1e400a0be5938449f3c4ba6ec72
+ms.openlocfilehash: 6e005f4107764a13934f0c8f3b3cde0ab9bf98c2
+ms.sourcegitcommit: 054ad92f0b8f9a15da1e3aed32e8f4379b10860f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "10882738"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "10931730"
 ---
 <!-- Copyright Katherine Jackson 
 
@@ -27,81 +27,83 @@ ms.locfileid: "10882738"
    See the License for the specific language governing permissions and
    limitations under the License.  -->
 
-# 初心者向けの DevTools: CSS の使用を開始する   
+# 初心者向けの DevTools: CSS の使用を開始する  
 
 このチュートリアルでは、CSS を使用して web ページのスタイルを作成する方法について説明します。  また、Microsoft Edge DevTools を使用して CSS の変更を試す方法についても説明します。  
 
-これは、web 開発と Microsoft Edge DevTools の基礎について説明する一連のチュートリアルの2番目のチュートリアルです。  実際に自分の web サイトを構築することで、実践的なエクスペリエンスを実現できます。  この操作を行う前に、最初のチュートリアルを完了する必要はありません。  ここから開始できます。  [コードを設定](#set-up-your-code)すると、セットアップ方法が表示されます。  
+次の記事は、web 開発と Microsoft Edge DevTools の基礎について説明している一連のチュートリアルの2番目のチュートリアルです。  実際に自分の web サイトを構築することで、実践的なエクスペリエンスを実現できます。  2番目のチュートリアルに従う前に、最初のチュートリアルを完了する必要はありません。  [コードを設定](#set-up-your-code) すると、セットアップ方法が表示されます。  
 
 > [!NOTE]
-> このチュートリアルは、基本的な初心者向けに設計されており、 **web 開発の基礎**と、開発者向けの基本的なツールを使用した CSS の基本的な使い方に重点を置いています。  開発ツールにのみ重点を置いたチュートリアルが必要な場合は、「 [CSS の表示と変更の概要][DevtoolsCssIndex]」を参照してください。  
+> このチュートリアルは、基本的な初心者向けに設計されており、 **web 開発の基礎** と、開発者向けの基本的なツールを使用した CSS の基本的な使い方に重点を置いています。  開発ツールにのみ重点を置いたチュートリアルが必要な場合は、「 [CSS の表示と変更の概要][DevtoolsCssIndex]」を参照してください。  
 
-現在、サイトは次のように表示されます。  
+チュートリアルの最初に、サイトは次の図のようになります。  
 
-> ##### 図 1  
-> 現在のサイトの外観  
-> ![現在のサイトの外観][ImageCssIntro1]  
+:::image type="complex" source="../media/beginners-css-intro1.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-intro1.msft.png":::
+   現在のサイトの外観  
+:::image-end:::  
 
-チュートリアルを完了すると、次のようになります。  
+チュートリアルを完了したら、サイトは次の図のようになります。  
 
-> ##### 図 2  
-> チュートリアルの最後にサイトがどのように表示されるか  
-> ![チュートリアルの最後にサイトがどのように表示されるか][ImageCssIntro2]  
+:::image type="complex" source="../media/beginners-css-intro2.msft.png" alt-text="チュートリアルの最後にサイトがどのように表示されるか" lightbox="../media/beginners-css-intro2.msft.png":::
+   チュートリアルの最後にサイトがどのように表示されるか  
+:::image-end:::  
 
-## 目標   
+## 目標  
 
-このチュートリアルを終了すると、次のことがわかります。  
+以下の概念とタスクについて詳しく理解するには、このチュートリアルに従ってください。  
 
 *   CSS を使用して web ページのスタイルを適用する方法について説明します。  
 *   Microsoft Edge DevTools を使って CSS を試す方法を説明します。  
 *   CSS と CSS フレームワークの違い。  
 
-実際の web サイトも用意されています。  
+実際の web サイトを作成しています。  
 
-## 前提条件   
+## 前提条件  
 
 このチュートリアルを実行する前に、次の前提条件を完了してください。  
 
-*   「 [Html と dom の概要][DevToolsBeginnersHtml]」をご覧になるか、このチュートリアルで説明していることと同じように HTML と dom を理解していることを確認してください。  
-*   [Microsoft Edge][MicrosoftEdgeInsider] web ブラウザーをダウンロードします。  このチュートリアルでは、microsoft edge DevTools と呼ばれる web 開発ツールのセットを使用して、Microsoft Edge に組み込まれています。  
+*   [[Html と dom の使用を開始][DevtoolsBeginnersHtml]する] または [dom] の概要については、このチュートリアルで説明するように、HTML と dom について理解していることを確認してください。  
+*   [Microsoft Edge][MicrosoftEdgeInsider] web ブラウザーをダウンロードします。  次のチュートリアルでは、microsoft edge DevTools と呼ばれる web 開発ツールのセットを使用して、Microsoft Edge に組み込まれています。  
 
-## コードを設定する   
+## コードを設定する  
 
-サイトの作成を開始するには、コードを設定する必要があります。  
+サイトを作成するには、最初に次の操作を実行してコードを設定する必要があります。  
 
-1.  **このシリーズの最初のチュートリアルを既に完了している場合は、このセクションをスキップしてください。  「 [HTML と DOM の使用を開始][DevToolsBeginnersHtml]する」のチュートリアルで説明したコードの使用を続けます。**  
-1.  [ソースコード][GlitchCookedAmphibianIndex]を開きます。  ブラウザーのこのタブは、[**編集] タブ**と呼ばれます。  
+> [!NOTE]
+> 一連の最初のチュートリアルを既に完了している場合は、次のセクションに進んでください。  「 [HTML と DOM の使用を開始][DevtoolsBeginnersHtml]する」のチュートリアルで説明したコードの使用を続けます。  
+
+1.  [ソースコード][GlitchCookedAmphibianIndex]を開きます。  ブラウザーの [フォーカス] タブは [ **編集] タブ**として参照されます。  
     
-    > ##### 図 3  
-    > [編集] タブ  
-    > ![[編集] タブ][ImageCssSetup1]  
+    :::image type="complex" source="../media/beginners-css-setup1.msft.png" alt-text="[編集] タブ" lightbox="../media/beginners-css-setup1.msft.png":::
+       [ **編集** ] タブ  
+    :::image-end:::  
     
-1.  [**クック-水陸両用] を**クリックします。  メニューがポップアップ表示されます。  
+1.  [ **クック-水陸両用機**] を選びます。  メニューがポップアップ表示されます。  
     
-    > ##### 図 4  
-    > [プロジェクトのオプション] メニュー  
-    > ![[プロジェクトのオプション] メニュー][ImageCssSetup2]  
+    :::image type="complex" source="../media/beginners-css-setup2.msft.png" alt-text="[プロジェクトのオプション] メニュー" lightbox="../media/beginners-css-setup2.msft.png":::
+       [プロジェクトのオプション] メニュー  
+    :::image-end:::  
 
-1.  [ **Remix Project**] をクリックします。  エラー編集可能なプロジェクトのコピーを作成します。  
+1.  [ **Remix Project**] を選びます。  エラー編集可能なプロジェクトのコピーを作成します。  
     
     > [!NOTE]
     > エラー新しいプロジェクトに対してランダムな名前を生成します。  
     
-1.  [**表示**] をクリックして、**新しいウィンドウで**を選択します。  サイトのライブビューで別のタブが開きます。  ブラウザのこのタブは、「**ライブ」タブ**と呼ばれます。  
+1.  [ **表示** ] を選択し、 **新しいウィンドウで**を選択します。  サイトのライブビューで別のタブが開きます。  ブラウザーの [フォーカス] タブは、[ **ライブ] タブ**として参照されます。  
     
-    > ##### 図 5  
-    > [ライブ] タブ  
-    > ![[ライブ] タブ][ImageCssSetup3]  
+    :::image type="complex" source="../media/beginners-css-setup3.msft.png" alt-text="[ライブ] タブ" lightbox="../media/beginners-css-setup3.msft.png":::
+       [ **ライブ] タブ**  
+    :::image-end:::  
 
-## CSS について   
+## CSS について  
 
-**CSS**は、web ページのレイアウトとスタイルを決定するコンピューターの言語です。  たとえば、次のように罫線が付いた段落を次に示します。  
+**CSS** は、web ページのレイアウトとスタイルを決定するコンピューターの言語です。  次の図は、罫線が付いた段落を示しています。  
 
-> ##### 図 6  
-> CSS でスタイルが設定されています  
-> ![CSS でスタイルが設定されています][ImageCssStyled]  
+:::image type="complex" source="../media/beginners-css-red_paragraph.msft.png" alt-text="テキストは CSS でスタイル設定されています" lightbox="../media/beginners-css-red_paragraph.msft.png":::
+   テキストは CSS でスタイル設定されています  
+:::image-end:::  
 
-この段落を作成するために使用される HTML と CSS のコードは次のとおりです。  
+次のコードスニペットは、前の図で段落を作成するために使用される HTML と CSS のコードです。  
 
 ```html
 <p style="border: 1px dashed red; padding: 5px;">
@@ -109,45 +111,41 @@ ms.locfileid: "10882738"
 </p>
 ```  
 
-`style="border: 1px dashed red; padding: 5px;"` おそらく、新しくなったようです。  その他の方法については、こちらをご覧ください。  表示されない場合は、このチュートリアルを実行する前に、「 [HTML と DOM での作業を開始][DevToolsBeginnersHtml]する」を完了してください。  
+`style="border: 1px dashed red; padding: 5px;"` おそらく、新しくなったようです。  その他の方法については、こちらをご覧ください。  表示されない場合は、次のセクションの手順を実行する前に、「 [HTML と DOM で作業を開始][DevtoolsBeginnersHtml] する」を完了してください。  
 
-## インラインスタイルを追加する   
+## インラインスタイルを追加する  
 
-1つの要素にスタイルを適用する場合は、**インラインスタイル**を使います。  今すぐお試しください:  
+**インラインスタイル**を使って1つの要素にスタイルを適用するには、次の操作を実行します。  
 
 1.  [編集] タブに戻り、[開く] をクリックし `index.html` ます。  
     
-    > ##### 図 7  
-    > `index.html`  
-    > ![index.html][ImageCssInline1]  
-
-1.  `style="background-color: aliceblue;"`にを追加 `<nav>` します。  以下のコードブロックでは、コードの4行目が変更する必要があるものです。  残りの部分は、新しいコードが適切な場所に配置されていることを確認できます。  
+    :::image type="complex" source="../media/beginners-css-inline1.msft.png" alt-text="index.html" lightbox="../media/beginners-css-inline1.msft.png":::
+       [ `index.html` 編集] タブで開く  
+    :::image-end:::  
+    
+1.  `style="background-color: aliceblue;"`にを追加 `<nav>` します。  以下のコードブロックでは、コードの4行目が変更する必要があるものです。  残りの部分はそのままで、新しいコードを適切な場所に配置することができます。  
     
     ```html
-    ...
-        ...
-            <header>
-                <p>Welcome to my site!</p>
-            </header>
-            <nav style="background-color: aliceblue;">
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    ...
-                ...
+    <header>
+        <p>Welcome to my site!</p>
+    </header>
+    <nav style="background-color: aliceblue;">
+        <ul>
+            <li><a href="/">Home</a></li>
             ...
         ...
     ...
     ```  
-
-1.  [**ライブ] タブ**に移動して変更を確認します。  セクションの背景 `<nav>` が青色になります。  
     
-    > ##### 図 8  
-    > ホームと連絡先のリンクの背景色が青になりました  
-    > ![ホームと連絡先のリンクの背景色が青になりました][ImageCssInline2]  
+1.  [ **ライブ] タブ** に移動して変更を確認します。  セクションの背景 `<nav>` が青色になります。  
+    
+    :::image type="complex" source="../media/beginners-css-inline2.msft.png" alt-text="ホームと連絡先のリンクの背景色が青になりました" lightbox="../media/beginners-css-inline2.msft.png":::
+       **ホーム**と**連絡先**のリンクの背景色が青になりました  
+    :::image-end:::  
+    
+## 内部のスタイルシートを使用して、1つのページでスタイルを再利用する  
 
-## 内部のスタイルシートを使用して、1つのページでスタイルを再利用する   
-
-以前は、次のような1つのタグにスタイルを適用したインラインスタイルが表示されていました `<p>` 。  
+前のコードスニペットでは、インラインスタイルは1つのタグにスタイルを適用していま `<p>` した。  
 
 ```html
 <p style="border: 1px dashed red; padding: 5px;">
@@ -155,15 +153,15 @@ ms.locfileid: "10882738"
 </p>
 ```  
 
-`<p>`Web ページ上のすべての要素に同じようなスタイルを適用する必要がある場合はどうすればよいですか?  サイトのすべてのタグにコードをコピーして貼り付ける必要があり `<p>` ます。  これは多くの時間と労力を備えています。  編集を行う必要がある場合は、すべてのタグをもう一度変更する必要があります。  **内部のスタイルシート**を使用すると、複数の要素に適用されるように CSS を1回作成できます。  今すぐお試しください:  
+`<p>`Web ページ上のすべての要素に同じようなスタイルを適用する必要がある場合はどうすればよいですか?  コードをコピーして、サイトのすべての1つのタグに貼り付ける必要があり `<p>` ます。  これは多くの時間と労力を備えています。  編集を行う必要がある場合は、すべてのタグをもう一度変更する必要があります。  複数の要素に適用されるように、 **内部のスタイルシート** を使用して CSS を1つ作成するには、次の操作を実行します。  
 
-1.  「ライブ」タブで「**コンタクト**」をクリックして、コンタクトページに移動します。  [**ホーム**] と [**連絡先**] のフォントを確認します。  
+1.  「ライブ」タブで、「 **コンタクト** 」を選択して、コンタクトページに移動します。  [ **ホーム** ] と [ **連絡先**] のフォントを確認します。  
     
-    > ##### 図 9  
-    > [連絡先] ページ  
-    > ![[連絡先] ページ][ImageCssInternal1]  
-
-1.  [**エディター] タブ**で、に移動 `contact.html` します。  
+    :::image type="complex" source="../media/beginners-css-internal1.msft.png" alt-text="[連絡先] ページ" lightbox="../media/beginners-css-internal1.msft.png":::
+       [連絡先] ページ  
+    :::image-end:::  
+    
+1.  [ **エディター] タブ**で、に移動 `contact.html` します。  
 1.  次のコードをに追加 `contact.html` します。  追加する必要があるのは、[で始まる] `<style>` と [末尾] の行 `</style>` だけです。  その他のコードは、新しいコードを配置する場所を知っているだけです。  
     
     ```html
@@ -182,52 +180,62 @@ ms.locfileid: "10882738"
     ...
     ```  
     
-1.  [**ライブ] タブ**に戻ります。  
-1.  [**連絡先**] をクリックして、連絡先ページに戻ります。  [**ホーム**] と [**連絡先**] のフォントが変更されました。  
+1.  [ **ライブ] タブ**に戻ります。  
+1.  [ **連絡先** ] を選択して、連絡先ページに戻ります。  [ **ホーム** ] と [ **連絡先** ] のフォントが変更されました。  
     
-    > ##### 図 10  
-    > 自宅と連絡先のリンクのフォントが変更されました  
-    > ![自宅と連絡先のリンクのフォントが変更されました][ImageCssInternal2]  
+    :::image type="complex" source="../media/beginners-css-internal2.msft.png" alt-text="自宅と連絡先のリンクのフォントが変更されました" lightbox="../media/beginners-css-internal2.msft.png":::
+       **自宅**と**連絡先**のリンクのフォントが変更されました  
+    :::image-end:::  
     
-### 内部のスタイルシートについて   
+### 内部のスタイルシートについて  
 
-内部スタイルシートは**セレクター**を使ってスタイルを適用します。  セレクターは、1つ以上の HTML 要素に適用される可能性があるパターンです。  たとえば、上記のコードでは、次のようにします。  
+内部スタイルシートは **セレクター**を使ってスタイルを適用します。  セレクターは、1つ以上の HTML 要素に適用される可能性があるパターンです。  前のコードスニペットでは、次のスタイルが追加されています。  
 
 ```html
-...
-    ...
-        ...
-        <style>
-            li a {
-              font-family: 'Courier New', Courier, Serif;
-            }
-        </style>
-        ...
-    ...
-...
+<style>
+    li a {
+      font-family: 'Courier New', Courier, Serif;
+    }
+</style>
 ```  
 
-`li a` は、"any を含む any" に変換するセレクターです `<li>` `<a>` 。  [**ホーム**] と [**連絡先**] のリンクは、このパターンと一致するため、ブラウザーによって変更されます。  
+`li a` は、"要素を含むすべての要素" に変換するセレクターです `<li>` `<a>` 。  各タググループはパターンと一致するため、ブラウザーは **ホーム** と **連絡先** のリンクのフォントを変更します。  
 
 ```html
-...
-    ...
-        ...
-            ...
-                <li><a href="/">Home</a></li>
-                <li><a href="/contact.html">Contact</a></li>
-                ...
-            ...
-        ...
-    ...
-...
+<li><a href="/">Home</a></li>
+<li><a href="/contact.html">Contact</a></li>
 ```  
 
-`font-family: 'Courier New', Courier, serif` は**宣言**です。  宣言は、**プロパティ**と**値**の2つの部分で構成されます。  `font-family` はプロパティであり、 `'Courier New', Courier, serif` そのプロパティの値です。  このプロパティでは、要素のスタイルを変更する一般的な方法について説明します。値は、どのように変化するかを示します。  たとえば、次のような指示が表示されます。 `font-family: 'Courier New', Courier, serif` "パターンと一致する要素のフォント `li a` を設定 `'Courier New'` します。  そのフォントが利用できない場合は、を使用 `Courier` します。  利用できない場合は、 `serif` 「」を使用してください。  
+`font-family: 'Courier New', Courier, serif` は **宣言**です。  宣言は、次の2つの部分で構成されます。  
 
-### 複数のセレクターをルールセットに追加する   
+:::row:::
+   :::column span="1":::
+      **プロパティー**  
+   :::column-end:::
+   :::column span="1":::
+      `font-family`  
+   :::column-end:::
+   :::column span="2":::
+      プロパティでは、要素のスタイルを変更できる一般的な方法について説明します。  
+   :::column-end:::
+:::row-end:::  
+:::row:::
+   :::column span="1":::
+      **value**  
+   :::column-end:::
+   :::column span="1":::
+      `'Courier New', Courier, serif`  
+   :::column-end:::
+   :::column span="2":::
+      この値は、要素のスタイルを変更する方法を正確に記述します。  
+   :::column-end:::
+:::row-end:::  
 
-以下に示すような CSS コードのブロックは、**ルールセット**と呼ばれています。  
+たとえば、次のような指示が表示されます。 `font-family: 'Courier New', Courier, serif` "パターンと一致する要素のフォント `li a` を設定 `'Courier New'` します。  そのフォントが利用できない場合は、を使用 `Courier` します。  利用できない場合は、 `serif` 「」を使用します。  
+
+### 複数のセレクターをルールセットに追加する  
+
+以下に示すような CSS コードのブロックは、 **ルールセット**と呼ばれています。  
 
 ```css
 li a {
@@ -235,134 +243,135 @@ li a {
 }
 ```  
 
-コンマを使用して、複数のセレクターをルールセットに追加します。  今すぐお試しください:  
+コンマを使用して複数のセレクターをルールセットに追加するには、次の操作を実行します。  
 
-1.  [**エディター] タブ**で、を開き `contact.html` ます。  
+1.  [ **エディター] タブ**で、を開き `contact.html` ます。  
 1.  `li a`種類 `, h1` の後。  
-
+    
     ```html
-    ...
-        ...
-            ...
-            <style>
-                li a, h1 {
-                  font-family: 'Courier New', Courier, Serif;
-                }
-            </style>
-            ...
-        ...
-    ...
+    <style>
+        li a, h1 {
+          font-family: 'Courier New', Courier, Serif;
+        }
+    </style>
     ```  
+    
+    前のコードスニペットは、パターンと一致する要素のスタイルを示すのと同じように、ブラウザーに対して要素のスタイルを `<h1>` 適用し `li a` ます。  
+    
+1.  [ **ライブ] タブ**に移動します。  
+1.  **連絡先のリンクを**選択して、連絡先ページに戻ります。  今すぐ **連絡してください。** ナビゲーションリンクと同じフォントに設定されています。  
+    
+    :::image type="complex" source="../media/beginners-css-multiple1.msft.png" alt-text="「連絡」というテキストが表示されます。  自宅と連絡先のリンクと同じフォントになりました" lightbox="../media/beginners-css-multiple1.msft.png":::
+       「連絡」というテキストが表示されます **。** **自宅**と**連絡先**のリンクと同じフォントになりました  
+    :::image-end:::  
+    
+## DevTools を使って実験する  
 
-    これにより、ブラウザーは、 `<h1>` パターンと一致する要素のスタイルを適用する場合と同じ方法で要素のスタイルを適用し `li a` ます。  
-    
-1.  [**ライブ] タブ**に移動します。  
-1.  **連絡先のリンクを**クリックして、連絡先ページに戻ります。  今すぐ**連絡してください。** ナビゲーションリンクと同じフォントに設定されています。  
-    
-    > ##### 図 11  
-    > 「連絡してください」というテキスト 自宅と連絡先のリンクと同じフォントになりました  
-    > ![「連絡」というテキストが表示されます。  自宅と連絡先のリンクと同じフォントになりました][ImageCssMultiple1]  
+今後、web 開発の専門家になるために、引き続き、CSS が複雑になることがあります。  CSS を作成して、1つの方法で表示することも考えられますが、ブラウザーはまったく異なるものになります。  Microsoft Edge DevTools を使うと、簡単に変更を試すことができ、変更内容がページにどのように影響するかをすぐに確認できます。  
 
-## DevTools を使って実験する   
+### DevTools で既存の rulest に宣言を追加する  
 
-引き続きマスタ web 開発に進んでいくと、CSS が複雑になる可能性があることがわかります。  CSS を作成し、1つの方法で表示することを想定していますが、ブラウザーではまったく異なるものがあります。  Microsoft Edge DevTools を使うと、簡単に変更を試すことができ、それらの変更がページにどのように影響するかをすぐに確認できます。  
+既存の要素のスタイルに対して反復処理を行うには、次の操作を実行し、既存のルールセットに宣言を追加します。  
 
-### DevTools で既存の rulest に宣言を追加する   
+1.  [ **ホーム** ] リンク上にマウスポインターを置いて、コンテキストメニュー \ (右クリック \) を開き、[ **検査**] を選びます。  
+    
+    :::image type="complex" source="../media/beginners-css-add1.msft.png" alt-text="[ホーム] リンクを検査する" lightbox="../media/beginners-css-add1.msft.png":::
+       [ホーム] リンクを検査する  
+    :::image-end:::  
+    
+    DevTools はページの横に表示されます。  [ホーム] リンクを表すコード `<a href="/">Home</a>` は、DOM ツリーで青色で強調表示されています。  コードスニペットとプレビューについては、「 [HTML と DOM の概要][DevtoolsBeginnersHtml]」をご覧ください。  
+    
+    :::row:::
+       :::column span="":::
+          次の図では、 `font-family: 'Courier New', Courier, serif` 以前に追加した宣言 `contact.html` が DOM ツリーの下にある [ **スタイル** ] タブに表示されています。  
+          
+          :::image type="complex" source="../media/beginners-css-add2.msft.png" alt-text="[スタイル] タブが DOM ツリーの下にある" lightbox="../media/beginners-css-add2.msft.png":::
+             [ **スタイル** ] タブが DOM ツリーの下にある  
+          :::image-end:::  
+       :::column-end:::
+       :::column span="":::
+          DevTools ウィンドウが広くなっている場合、[スタイル] タブは DOM ツリーの右側にあります。  
+          
+          :::image type="complex" source="../media/beginners-css-add3.msft.png" alt-text="[スタイル] タブは DOM ツリーの右側にあります。" lightbox="../media/beginners-css-add3.msft.png":::
+             [ **スタイル** ] タブは DOM ツリーの右側にあります。  
+          :::image-end:::  
+       :::column-end:::
+    :::row-end:::  
+    
+1.  新しい宣言を追加するには、下の空の行を選び `font-family: 'Courier New', Courier, Serif` ます。  
+    
+    :::image type="complex" source="../media/beginners-css-add4.msft.png" alt-text="新しい宣言を追加する" lightbox="../media/beginners-css-add4.msft.png":::
+       新しい宣言を追加する  
+    :::image-end:::  
+    
+1.  入力 `color` して、を選択し `Enter` ます。  入力時にオートコンプリート UI によってオプションが提示されます。  
+    
+    :::image type="complex" source="../media/beginners-css-add5.msft.png" alt-text="テキストの色" lightbox="../media/beginners-css-add5.msft.png":::
+       型 `color`  
+    :::image-end:::  
+    
+1.  入力 `magenta` して、を選択し `Enter` ます。  連絡先ページのすべてのテキストがマジェンタ色になりました。  
+    
+    :::image type="complex" source="../media/beginners-css-add6.msft.png" alt-text="「マゼンタ」と入力" lightbox="../media/beginners-css-add6.msft.png":::
+       型 `magenta`  
+    :::image-end:::  
+    
+### DevTools で宣言を編集する  
 
-既存の要素のスタイルに対して反復処理を行う場合は、既存のルールセットに宣言を追加します。  今すぐお試しください:  
+DevTools で既存の宣言を編集するには、次の操作を実行します。  
 
-1.  [**ホーム**] リンクを右クリックし、[**検査**] を選択します。  
+1.  の横にあるマゼンタの正方形を選び `magenta` ます。  カラーピッカーがポップアップ表示されます。  
     
-    > ##### 図 12  
-    > [ホーム] リンクを調べる  
-    > ![[ホーム] リンクを調べる][ImageCssAdd1]  
-    
-    DevTools はページの横に表示されます。  [ホーム] リンクを表すコード `<a href="/">Home</a>` は、DOM ツリーで青色で強調表示されています。  これは[、「HTML と DOM の使用を開始][DevToolsBeginnersHtml]する」に精通している必要があります。  DOM ツリーの下にある [**スタイル**] タブには、 `font-family: 'Courier New', Courier, serif` 前に追加した宣言が表示され `contact.html` ます。  
-    
-    > ##### 図 13  
-    > [スタイル] タブが DOM ツリーの下にある  
-    > ![[スタイル] タブが DOM ツリーの下にある][ImageCssAdd2]  
-    
-    DevTools ウィンドウが広くなっている場合、[スタイル] タブは DOM ツリーの右側にあります。  
-    
-    > ##### 図 14  
-    > [スタイル] タブは DOM ツリーの右側にあります。  
-    > ![[スタイル] タブは DOM ツリーの右側にあります。][ImageCssAdd3]  
-    
-1.  新しい宣言を追加するには、下の空白をクリックし `font-family: 'Courier New', Courier, Serif` ます。  
-    
-    > ##### 図 15  
-    > 新しい宣言を追加する  
-    > ![新しい宣言を追加する][ImageCssAdd4]  
-    
-1.  入力 `color` して、キーを押し `Enter` ます。  入力時にオートコンプリート UI によってオプションが提示されます。  
-    
-    > ##### 図 16  
-    > 入力 `color`  
-    > ![入力時の色][ImageCssAdd5]  
-
-1.  入力 `magenta` して、 `Enter` もう一度押します。  連絡先ページのすべてのテキストがマジェンタ色になりました。  
-    
-    > ##### 図 17  
-    > 入力 `magenta`  
-    > ![マゼンタの入力][ImageCssAdd6]  
-    
-### DevTools で宣言を編集する   
-
-また、DevTools で既存の宣言を編集することもできます。  今すぐお試しください:  
-
-1.  の横にあるマゼンタの正方形をクリックし `magenta` ます。  カラーピッカーがポップアップ表示されます。  
-    
-    > ##### 図18  
-    > 色のパレット  
-    > ![色のパレット][ImageCssEdit1]  
+    :::image type="complex" source="../media/beginners-css-edit1.msft.png" alt-text="色のパレット" lightbox="../media/beginners-css-edit1.msft.png":::
+       色のパレット  
+    :::image-end:::  
     
 1.  カラーピッカーを使用して、フォントのテキストを好みの色に変更します。  
     
-    > ##### 図19  
-    > カラーピッカーを使用してフォントの色を紫色に変更する  
-    > ![カラーピッカーを使用してフォントの色を紫色に変更する][ImageCssEdit2]  
-
-### DevTools で新しいルールセットを追加する   
-
-DevTools で新しいルールセットを追加することもできます。  今すぐお試しください:  
-
-1.  [**新しいスタイルルール**] をクリックし ![ ][ImageNewStyleRuleIcon] **ます。** これは、cls の横にあります。  空のルールセットが `a` セレクターとして表示されます。  
+    :::image type="complex" source="../media/beginners-css-edit2.msft.png" alt-text="カラーピッカーを使用してフォントの色を紫色に変更する" lightbox="../media/beginners-css-edit2.msft.png":::
+       カラーピッカーを使用してフォントの色を紫色に変更する  
+    :::image-end:::  
     
-    > ##### 図20  
-    > 新しいルールを追加する  
-    > ![新しいルールを追加する][ImageCssRule1]  
+### DevTools で新しいルールセットを追加する  
+
+DevTools で新しいルールセットを追加するには、次の操作を実行します。  
+
+1.  Cls の隣にある [**新しいスタイルルール**] \ ( ![ 新しいスタイルルール ][ImageNewStyleRuleIcon] ) **.cls**を選びます。  空のルールセットが `a` セレクターとして表示されます。  
+    
+    :::image type="complex" source="../media/beginners-css-rule1.msft.png" alt-text="新しいルールを追加する" lightbox="../media/beginners-css-rule1.msft.png":::
+       新しいルールを追加する  
+    :::image-end:::  
     
 1.  置換後 `a` の文字列 `a:hover`  
     
-    > ##### 図21  
-    > 置換 `a` `a:hover`  
-    > ![A を @ に置換する][ImageCssRule2]  
+    :::image type="complex" source="../media/beginners-css-rule2.msft.png" alt-text="を "a/a" に変更する" lightbox="../media/beginners-css-rule2.msft.png":::
+       置換後 `a` の文字列 `a:hover`  
+    :::image-end:::  
     
-    `:hover` は**擬似クラス**です。  疑似クラスを使って、特殊な状態を入力するときに要素のスタイルを指定します。  たとえば、スタイルは、 `a:hover` 要素の上にマウスポインターを置いた場合にのみ有効になり `<a>` ます。  
+    `:hover` は **擬似クラス**です。  特殊な状態を入力する可能性のあるスタイル要素には、擬似クラスを使います。  たとえば、スタイルは、 `a:hover` 要素の上にマウスポインターを置いた場合にのみ有効になり `<a>` ます。  
     
-1.  かっこの間をクリックして新しい宣言を追加します。  
-1.  `background-color`宣言の名前を入力し、enter キーを押し `Enter` ます。  
+1.  角かっこの間を選択して新しい宣言を追加します。  
+1.  `background-color`宣言の名前を入力して、を選択し `Enter` ます。  
     
-    > ##### 図22  
-    > 入力 `background-color`  
-    > ![背景色の入力][ImageCssRule3]  
+    :::image type="complex" source="../media/beginners-css-rule3.msft.png" alt-text="背景色を入力する" lightbox="../media/beginners-css-rule3.msft.png":::
+       型 `background-color`  
+    :::image-end:::  
     
-1.  `green`宣言の値を入力して、キーを押し `Enter` ます。  
+1.  `green`[宣言] の値を入力して、を選択し `Enter` ます。  
     
-    > ##### 図23  
-    > 入力 `green`  
-    > ![緑の入力][ImageCssRule4]  
+    :::image type="complex" source="../media/beginners-css-rule4.msft.png" alt-text="「緑」と入力" lightbox="../media/beginners-css-rule4.msft.png":::
+       型 `green`  
+    :::image-end:::  
     
-1.  [**ホーム**] リンクの上にマウスポインターを置きます。  リンクの背景が緑色になります。  
+1.  [ **ホーム** ] リンクの上にマウスポインターを置きます。  リンクの背景が緑色になります。  
     
-    > ##### 図24  
-    > ホームリンク上にマウスポインターを移動すると、緑色の背景が表示される  
-    > ![ホームリンク上にマウスポインターを移動すると、緑色の背景が表示される][ImageCssRule5]  
+    :::image type="complex" source="../media/beginners-css-rule5.msft.png" alt-text="[ホーム] リンクをポイントすると、緑色の背景が表示されます。" lightbox="../media/beginners-css-rule5.msft.png":::
+       [ホーム] リンクをポイントすると、緑色の背景が表示されます。  
+    :::image-end:::  
     
-## 外部のスタイルシートを含むページ間でスタイルを再利用する   
+## 外部のスタイルシートを含むページ間でスタイルを再利用する  
 
-以前のバージョンでは、次のような内部スタイルシートが追加されました `contact.html` 。  
+前の手順では、次のコードスニペットを内部のスタイルシートとして追加しました `contact.html` 。  
 
 ```html
 ...
@@ -378,45 +387,45 @@ DevTools で新しいルールセットを追加することもできます。  
 ...
 ```  
 
-同じ方法でスタイルを適用する場合は、どうすればよい `index.html` ですか。  *数千個*のページがあって、それらすべてにそれらのスタイルを適用したい場合はどうすればよいですか?  この内部スタイルシートをコピーして、サイトのすべての web ページに貼り付ける必要があります。  **外部のスタイルシート**を使用すると、CSS を複数のページに適用することができます。  今すぐお試しください:  
+同じ方法でスタイルを適用する場合は、どうすればよい `index.html` ですか。  スタイルを適用するには、多数のページが必要な場合はどうすればよいですか。  内部のスタイルシートをコピーして、サイトのすべての単一の web ページに貼り付ける必要があります。  CSS を一度作成して複数のページに適用できるように、 **外部のスタイルシート** を追加するには、次の操作を実行します。  
 
 1.  まず、[ライブ] タブをもう一度読み込んで、DevTools で行った変更を削除します。  
     
-    > ##### 図25  
-    >  ページを再読み込みした後、DevTools で行った変更は廃止されました  
-    > ![ ページを再読み込みした後、DevTools で行った変更は廃止されました][ImageCssExternal01]  
+    :::image type="complex" source="../media/beginners-css-external1.msft.png" alt-text=" ページを更新すると、DevTools で行った変更は廃止されます。" lightbox="../media/beginners-css-external1.msft.png":::
+        ページを更新すると、DevTools で行った変更は廃止されます。  
+    :::image-end:::  
     
-1.  [**エディター] タブ**に戻り、を開き `contact.html` ます。  
+1.  [ **エディター] タブ** に戻り、を開き `contact.html` ます。  
     
-    > ##### 図26  
-    > `contact.html`  
-    > ![contact.html][ImageCssExternal02]  
+    :::image type="complex" source="../media/beginners-css-external2.msft.png" alt-text="contact.html" lightbox="../media/beginners-css-external2.msft.png":::
+       contact.html  
+    :::image-end:::  
     
 1.  およびを `<style>` `</style>` 含む、and を含むすべてのデータを削除し `<style>` `</style>` ます。  
     
-    > ##### 図27  
-    > スタイルタグが削除されました  
-    > ![スタイルタグが削除されました][ImageCssExternal03]  
+    :::image type="complex" source="../media/beginners-css-external3.msft.png" alt-text="スタイルタグが削除されました" lightbox="../media/beginners-css-external3.msft.png":::
+       スタイルタグが削除されました  
+    :::image-end:::  
     
 1.  `index.html`タグから移動して削除し `style="background-color: aliceblue;"` `<nav>` ます。  これで、以前にサイトに追加した CSS がすべて削除されました。  
     
-    > ##### 図28  
-    > インラインスタイルが nav 要素から削除されている  
-    > ![インラインスタイルが nav 要素から削除されている][ImageCssExternal04]  
-
-1.  [**新しいファイル**] をクリックします。  
+    :::image type="complex" source="../media/beginners-css-external4.msft.png" alt-text="インラインスタイルが nav 要素から削除されている" lightbox="../media/beginners-css-external4.msft.png":::
+       インラインスタイルが nav 要素から削除されている  
+    :::image-end:::  
     
-    > ##### 図29  
-    > [新しいファイル] ダイアログ  
-    > ![[新しいファイル] ダイアログ][ImageCssExternal05]  
+1.  [ **新しいファイル**] を選びます。  
     
-1.  置換 `cool-file.js` `style.css` 後、[**ファイルの追加**] をクリックします。  
+    :::image type="complex" source="../media/beginners-css-external5.msft.png" alt-text="[新しいファイル] ダイアログ" lightbox="../media/beginners-css-external5.msft.png":::
+       [新しいファイル] ダイアログ  
+    :::image-end:::  
     
-    > ##### 図30  
-    > 入力 `style.css`  
-    > ![入力スタイル .css][ImageCssExternal06]  
+1.  [置換後 `cool-file.js` の文字列 `style.css` ] を選び、[ **ファイルの追加**] を選びます。  
     
-1.  次のコードに貼り付け `style.css` ます。  
+    :::image type="complex" source="../media/beginners-css-external6.msft.png" alt-text="「スタイル .css」と入力します。" lightbox="../media/beginners-css-external6.msft.png":::
+       型 `style.css`  
+    :::image-end:::  
+    
+1.  次のコードスニペットをファイルに追加し `style.css` ます。  
     
     ```css
     li a, h1 {
@@ -430,51 +439,48 @@ DevTools で新しいルールセットを追加することもできます。  
     }
     ```  
     
-    > ##### 図31  
-    > コードの追加 `style.css`  
-    > ![スタイル .css へのコードの追加][ImageCssExternal07]  
+    :::image type="complex" source="../media/beginners-css-external7.msft.png" alt-text=".Css にコードを追加する" lightbox="../media/beginners-css-external7.msft.png":::
+       コードを追加 `style.css`  
+    :::image-end:::  
     
-    この時点では、外部のスタイルシートを作成しましたが、HTML ではまだ存在していることがわかりません。  
+    外部のスタイルシートが作成されていることを確認します。 HTML では、存在することは認識されません。  
     
 1.  [開く] `index.html` を選びます。  
 1.  `<link rel="stylesheet" href="style.css">`HTML に追加します。  
     
     ```html
-    ...
-        <head>
-            ...
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-            <link rel="stylesheet" href="style.css">
-        </head>
+    <head>
         ...
-    ...
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
     ```  
+    
+    :::image type="complex" source="../media/beginners-css-external8.msft.png" alt-text="スタイル .css へのリンク" lightbox="../media/beginners-css-external8.msft.png":::
+       へのリンク `style.css`  
+    :::image-end:::  
+    
+1.  ファイルを開き、 `contact.html` そこにリンクを追加します。  
+    
+    :::image type="complex" source="../media/beginners-css-external9.msft.png" alt-text="contact.html のスタイル .css へのリンク" lightbox="../media/beginners-css-external9.msft.png":::
+       [リンク先] `style.css` `contact.html`  
+    :::image-end:::  
+    
+1.  [ **ライブ] タブ**に移動します。 これで、ホームページの最後のセクションと青色のナビゲーションセクションのフォントが変わりました。  
+    
+    :::image type="complex" source="../media/beginners-css-external10.msft.png" alt-text="ホームページ" lightbox="../media/beginners-css-external10.msft.png":::
+       ホームページ  
+    :::image-end:::  
+    
+1.  [ **連絡先** ] リンクを選択して、連絡先ページに移動します。  連絡先ページは、ホームページと同じ書式設定になっています。  
+    
+    :::image type="complex" source="../media/beginners-css-external11.msft.png" alt-text="[連絡先] ページ" lightbox="../media/beginners-css-external11.msft.png":::
+       [連絡先] ページ  
+    :::image-end:::  
+    
+## CSS フレームワークを使う  
 
-    > ##### 図32  
-    > リンク先 `style.css`  
-    > ![スタイル .css へのリンク][ImageCssExternal08]  
-
-1.  リンクも `contact.html` そこに移動して追加します。  
-    
-    > ##### 図33  
-    > リンク先 `style.css` `contact.html`  
-    > ![contact.html のスタイル .css へのリンク][ImageCssExternal09]  
-
-1.  [**ライブ] タブ**に移動します。 これで、ホームページの最後のセクションと青色のナビゲーションセクションのフォントが変わりました。  
-    
-    > ##### 図34  
-    > ホームページ  
-    > ![ホームページ][ImageCssExternal10]  
-    
-1.  **連絡先**のリンクをクリックして、連絡先ページに移動します。  連絡先ページは、ホームページと同じ書式設定になっています。  
-    
-    > ##### 図35  
-    > [連絡先] ページ  
-    > ![[連絡先] ページ][ImageCssExternal11]  
-    
-## CSS フレームワークを使う   
-
-**CSS フレームワーク**は、魅力的な web サイトを簡単に作成できる他の開発者によって構築されたスタイルのコレクションです。  独自のスタイルを定義する代わりに、フレームワークによって、ページ要素で使うことができるスタイルのコレクションを提供します。  
+**CSS フレームワーク** は、魅力的な web サイトを簡単に作成できる他の開発者によって構築されたスタイルのコレクションです。  独自のスタイルを定義する代わりに、フレームワークによって、ページ要素で使うことができるスタイルのコレクションが提供されます。  
 
 1.  次のコードをコピーします。  
     
@@ -484,53 +490,53 @@ DevTools で新しいルールセットを追加することもできます。  
     
 1.  [編集] タブに移動し、コードを貼り付け `contact.html` ます。  
     
-    > ##### 図36  
-    > フレームワークへのリンク `contact.html`  
-    > ![contact.html でのフレームワークへのリンク][ImageCssFramework1]  
+    :::image type="complex" source="../media/beginners-css-framework1.msft.png" alt-text="contact.html のフレームワークへのリンク" lightbox="../media/beginners-css-framework1.msft.png":::
+       フレームワークへのリンク `contact.html`  
+    :::image-end:::  
     
-1.  同様にコードを貼り付け `index.html` ます。  
+1.  ファイルを開き、 `index.html` そこにコードを追加します。  
     
-    > ##### 図37  
-    > フレームワークへのリンク `index.html`  
-    > ![index.html でのフレームワークへのリンク][ImageCssFramework2]  
+    :::image type="complex" source="../media/beginners-css-framework2.msft.png" alt-text="index.html のフレームワークへのリンク" lightbox="../media/beginners-css-framework2.msft.png":::
+       フレームワークへのリンク `index.html`  
+    :::image-end:::  
     
-1.  [ライブ] タブに戻り、変更内容を確認します。  要素の背景色とフォントが同じであるのに、 `<nav>` `li a` 他の要素のフォントが変更されています。  
+1.  [ライブ] タブに戻り、変更内容を確認します。  要素の背景色 `<nav>` と要素のフォントは同じであるのに、 `<li>` 他の `<a>` 要素のフォントが変更されています。  
     
-    > ##### 図38  
-    > フレームワークによってホームページの一部のフォントが変更されている  
-    > ![フレームワークによってホームページの一部のフォントが変更されている][ImageCssFramework3]  
+    :::image type="complex" source="../media/beginners-css-framework3.msft.png" alt-text="フレームワークによって変更されたホームページのフォントの一部" lightbox="../media/beginners-css-framework3.msft.png":::
+       フレームワークによって変更されたホームページのフォントの一部  
+    :::image-end:::  
+    
+### クラスを使用する  
 
-### クラスを使用する   
+最後のセクションでは、web ページにブートストラップを追加して、サイトの要素のフォントを変更しました。  CSS フレームワークを使うと、わずかなコードでページに大きな変更を加えることができます。  ヘッダーを変更するには、次の操作を実行します。  
 
-最後のセクションでは、web ページにブートストラップを追加して、サイトの要素のフォントを変更しました。  CSS フレームワークを使うと、非常にわずかなコードでページに大きな変更を加えることができます。  ヘッダーを変更して、今すぐ試してみてください。  
-
-1.  次のコードをコピーします。  
+1.  次のコードスニペットをコピーします。  
     
     ```html
     class="jumbotron jumbotron-fluid"  
     ```  
     
-1.  このコードを `<header>` のタグに追加 `index.html` します。  
+1.  前のコードスニペットをタグに追加 `<header>` `index.html` します。  
     
-    > ##### 図39  
-    > クラスの追加 `index.html`  
-    > ![index.html でのクラスの追加][ImageCssJumbotron1]  
+    :::image type="complex" source="../media/beginners-css-jumbotron1.msft.png" alt-text="index.html でクラスを追加する" lightbox="../media/beginners-css-jumbotron1.msft.png":::
+       クラスを追加する `index.html`  
+    :::image-end:::  
     
-1.  コードを `<header>` タグに `contact.html` も追加します。  
+1.  タグにコードを追加 `<header>` `contact.html` します。  
     
-    > ##### 図40  
-    > クラスの追加 `contact.html`  
-    > ![contact.html でのクラスの追加][ImageCssJumbotron2]  
+    :::image type="complex" source="../media/beginners-css-jumbotron2.msft.png" alt-text="contact.html でクラスを追加する" lightbox="../media/beginners-css-jumbotron2.msft.png":::
+       クラスを追加する `contact.html`  
+    :::image-end:::  
     
-1.  [ライブ] タブで変更内容を表示します。 ここでは、ヘッダーの周りに大きな灰色のボックスが表示されています。  
+1.  [ライブ] タブで変更内容を表示します。 ヘッダーの周りに大きな灰色のボックスがあります。  
     
-    > ##### 図41  
-    > ヘッダーの周りに大きな灰色のボックスがあるようになりました  
-    > ![ヘッダーの周りに大きな灰色のボックスがあるようになりました][ImageCssJumbotron3]  
+    :::image type="complex" source="../media/beginners-css-jumbotron3.msft.png" alt-text="ヘッダーの周りに大きな灰色のボックスがあるようになりました" lightbox="../media/beginners-css-jumbotron3.msft.png":::
+       ヘッダーの周りに大きな灰色のボックスがあるようになりました  
+    :::image-end:::  
     
-### クラスについて   
+### クラスについて  
 
-クラスを使うと、スタイルのコレクションを任意の要素に割り当てることができます。  たとえば、 `class` `<header>` 次の `jumbotron` スタイルが適用されるようにタグの属性を設定します。  
+クラスを使うと、スタイルのコレクションを任意の要素に割り当てることができます。  属性を設定した後で要素にいくつかのスタイルを適用するには、次のコードスニペットを使用し `<header>` `class` `jumbotron` ます。  
 
 ```css
 .jumbotron {
@@ -541,7 +547,7 @@ DevTools で新しいルールセットを追加することもできます。  
 }
 ```  
 
-クラスの利点の1つは、目的の要素にスタイルを適用できることです。  たとえば、*一部*の要素の背景色を紫色に設定し、そのすべてではない場合を考え `<p>` ます。 *all*  クラスでスタイルを定義することができます。  
+クラスの1つの利点は、目的の要素にスタイルを適用できることです。  たとえば、一部の要素の背景色を紫色に設定し、すべての要素では設定しないとし `<p>` `<p>` ます。  クラスでスタイルを定義するには、次のコードスニペットを使用します。  
 
 ```css
 .custom-background {
@@ -552,109 +558,57 @@ DevTools で新しいルールセットを追加することもできます。  
 次に、スタイルを適用する要素のみにクラスを適用し `<p>` ます。  
 
 ```html
-...
-    ...
-        ...
-        <p>This won't be purple.</p>
-        <p class="custom-background">This will be purple.</p>
-        <p>This won't be purple.</p>
-        <p class="custom-background">This will be purple.</p>
-        ...
-    ...
-...
+<p>The text is not purple.</p>
+<p class="custom-background">The text is purple.</p>
+<p>The text is not purple.</p>
+<p class="custom-background">The text is purple.</p>
 ```  
 
-### 要素の配置   
+### 要素の配置  
 
-また、ブートストラップには要素を配置するためのクラスも用意されています。  今すぐお試しください:  
+ブートストラップに対して次の操作を実行し、要素を配置するためのクラスを提供します。  
 
 1.  [エディター] タブに戻り、を開き `index.html` ます。  
 1.  `class="container-fluid"`タグに追加 `<body>` します。  
     
-    > ##### 図42  
-    > クラスの追加 `container-fluid`  
-    > ![コンテナー-流体クラスの追加][ImageCssAlign1]  
-
+    :::image type="complex" source="../media/beginners-css-align1.msft.png" alt-text="コンテナー-流体クラスを追加する" lightbox="../media/beginners-css-align1.msft.png":::
+       クラスを追加する `container-fluid`  
+    :::image-end:::  
+    
 1.  `<nav>`と `<main>` の要素を折り返し `<div class="row">` ます。  `</div>` `</main>` 新しいノートシールを正しく閉じるには、[指定の日時以降] をオンにしてください。  
     
-    > ##### 図43  
-    > 行の追加  
-    > ![行の追加][ImageCssAlign2]  
+    :::image type="complex" source="../media/beginners-css-align2.msft.png" alt-text="行を追加する" lightbox="../media/beginners-css-align2.msft.png":::
+       行を追加する  
+    :::image-end:::  
     
 1.  `class="col-3"` `<nav>` タグとタグに追加 `class="col-9"` `<main>` します。  
     
-    > ##### 図44  
-    > `col-3`クラスを追加 `col-9` する  
-    > ![列3と列9のクラスを追加する][ImageCssAlign3]  
+    :::image type="complex" source="../media/beginners-css-align3.msft.png" alt-text="列3と列9のクラスを追加する" lightbox="../media/beginners-css-align3.msft.png":::
+       `col-3`クラスとクラスを追加する `col-9`  
+    :::image-end:::  
     
 1.  [ライブ] タブで変更内容を表示します。  
     
-    > ##### 図45  
-    > これで、ナビゲーションコンテンツがメインコンテンツの左になりました  
-    > ![これで、ナビゲーションコンテンツがメインコンテンツの左になりました][ImageCssAlign4]  
+    :::image type="complex" source="../media/beginners-css-align4.msft.png" alt-text="これで、ナビゲーションコンテンツがメインコンテンツの左になりました" lightbox="../media/beginners-css-align4.msft.png":::
+       これで、ナビゲーションコンテンツがメインコンテンツの左になりました  
+    :::image-end:::  
     
-## 次のステップ   
+## 次のステップ  
 
-お疲れさまでした。  これで完了です。  
+おめでとうございます。これで完了です。  
 
-*   Web 開発に適した方法は、さらに多くのサイトを構築することです。  問題を壊す心配は無用です。  今まで以上に便利な機能をご利用いただけます。  
-*   Web ページのスタイル設定の詳細については、「 [CSS の概要][MDNCssFirstSteps]」をご覧ください。  
-*   「CSS の[表示と変更の概要」チュートリアルの概要][DevtoolsCssIndex]については、「devtools を使ってページの css を試す方法」を参照してください。  
+*   Web 開発に適した方法は、さらに多くのサイトを構築することです。  問題を壊す心配はありません。  今まで以上に楽しく、できる限り学習しましょう。  
+*   Web ページのスタイル設定の詳細については、「 [CSS の概要][MDNCssFirstSteps]」を参照してください。  
+*   DevTools を使ってページの CSS を試す方法の詳細については、「 [css の表示と変更の概要][DevtoolsCssIndex]」を参照してください。  
 
 <!--- image links --->  
 
-[ImageNewStyleRuleIcon]: /microsoft-edge/devtools-guide-chromium/media/new-style-rule-icon.msft.png  
-
-[ImageCssIntro1]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-intro1.msft.png "図 1: サイトが現在どのように見えるか"  
-[ImageCssIntro2]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-intro2.msft.png "図 2: チュートリアルの最後にサイトがどのように表示されるか"  
-[ImageCssSetup1]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-setup1.msft.png "図 3: [編集] タブ"  
-[ImageCssSetup2]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-setup2.msft.png "図 4: [プロジェクトのオプション] メニュー"  
-[ImageCssSetup3]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-setup3.msft.png "図 5: [ライブ] タブ"  
-[ImageCssStyled]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-red_paragraph.msft.png "図 6: CSS でスタイルが適用されている"  
-[ImageCssInline1]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-inline1.msft.png "図 7: index.html"  
-[ImageCssInline2]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-inline2.msft.png "図 8: ホームと連絡先のリンクの背景色が青になりました"  
-[ImageCssInternal1]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-internal1.msft.png "図 9: 連絡先ページ"  
-[ImageCssInternal2]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-internal2.msft.png "図 10: ホームと連絡先のリンクのフォントが変更されている"  
-[ImageCssMultiple1]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-multiple1.msft.png "図 11: "連絡先" というテキストは、[ホーム] と [連絡先] のリンクと同じフォントになりました"  
-[ImageCssAdd1]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-add1.msft.png "図 12: ホームリンクを調べる"  
-[ImageCssAdd2]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-add2.msft.png "図 13: [スタイル] タブが DOM ツリーの下にある"  
-[ImageCssAdd3]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-add3.msft.png "図 14: [スタイル] タブは DOM ツリーの右にあります。"  
-[ImageCssAdd4]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-add4.msft.png "図 15: 新しい宣言を追加する"
-[ImageCssAdd5]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-add5.msft.png "図 16: 色を入力する"  
-[ImageCssAdd6]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-add6.msft.png "図 17: マゼンタを入力する"  
-[ImageCssEdit1]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-edit1.msft.png "図 18: 色のパレット"  
-[ImageCssEdit2]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-edit2.msft.png "図 19: カラーピッカーを使用してフォントの色を紫色に変更する"  
-[ImageCssRule1]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-rule1.msft.png "図 20: 新しいルールを追加する"  
-[ImageCssRule2]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-rule2.msft.png "図 21: a を「a」に置き換える"  
-[ImageCssRule3]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-rule3.msft.png "図 22: 背景色を入力する"  
-[ImageCssRule4]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-rule4.msft.png "図 23: 緑で入力する"  
-[ImageCssRule5]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-rule5.msft.png "図 24: ホームリンクをポイントして、緑色の背景を表示する"  
-[ImageCssExternal01]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-external1.msft.png "図 25: ページを再読み込みした後に、DevTools で行った変更が廃止される"  
-[ImageCssExternal02]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-external2.msft.png "図 26: contact.html"  
-[ImageCssExternal03]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-external3.msft.png "図 27: スタイルタグが削除されている"  
-[ImageCssExternal04]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-external4.msft.png "図 28: インラインスタイルが nav 要素から削除されている"  
-[ImageCssExternal05]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-external5.msft.png "図 29: [新しいファイル] ダイアログボックス"  
-[ImageCssExternal06]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-external6.msft.png "図 30: css の入力"  
-[ImageCssExternal07]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-external7.msft.png "図 31: スタイルにコードを追加する"  
-[ImageCssExternal08]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-external8.msft.png "図 32: スタイル .css へのリンク"  
-[ImageCssExternal09]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-external9.msft.png "図 33: contact.html のスタイル .css へのリンク"  
-[ImageCssExternal10]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-external10.msft.png "図 34: ホームページ"  
-[ImageCssExternal11]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-external11.msft.png "図 35: 連絡先ページ"  
-[ImageCssFramework1]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-framework1.msft.png "図 36: contact.html でのフレームワークへのリンク"  
-[ImageCssFramework2]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-framework2.msft.png "図 37: index.html でのフレームワークへのリンク"  
-[ImageCssFramework3]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-framework3.msft.png "図 38: フレームワークによってホームページの一部のフォントが変更されている"  
-[ImageCssJumbotron1]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-jumbotron1.msft.png "図 39: index.html でのクラスの追加"  
-[ImageCssJumbotron2]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-jumbotron2.msft.png "図 40: contact.html でのクラスの追加"  
-[ImageCssJumbotron3]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-jumbotron3.msft.png "図 41: ヘッダーの周りに大きな灰色のボックスがある"  
-[ImageCssAlign1]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-align1.msft.png "図 42: コンテナーの流体クラスを追加する"  
-[ImageCssAlign2]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-align2.msft.png "図 43: 行を追加する"  
-[ImageCssAlign3]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-align3.msft.png "図 44: 列3と列9のクラスを追加する"  
-[ImageCssAlign4]: /microsoft-edge/devtools-guide-chromium/media/beginners-css-align4.msft.png "図 45: ナビゲーションコンテンツがメインコンテンツの左側にある"  
+[ImageNewStyleRuleIcon]: ../media/new-style-rule-icon.msft.png  
 
 <!--- links  --->  
 
-[DevToolsBeginnersHtml]: html.md "初心者向けの DevTools: HTML と DOM の使用を開始する"  
-[DevtoolsCssIndex]: ../css/index.md "CSS の表示と変更を始める"  
+[DevtoolsBeginnersHtml]: ./html.md "初心者向けの DevTools: HTML と DOM の使用を開始する |Microsoft ドキュメント"  
+[DevtoolsCssIndex]: ../css/index.md "CSS の表示と変更の概要 |Microsoft ドキュメント"  
 
 [MicrosoftEdgeInsider]: https://www.microsoftedgeinsider.com "Microsoft Edge Insider"  
 
@@ -663,8 +617,8 @@ DevTools で新しいルールセットを追加することもできます。  
 [MDNCssFirstSteps]: https://developer.mozilla.org/docs/Learn/CSS/Introduction_to_CSS "CSS の最初のステップ |MDN"  
 
 > [!NOTE]
-> このページの一部は、 [Google によっ][GoogleSitePolicies]て作成および共有され、[クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
-> 元のページは[ここ](https://developers.google.com/web/tools/chrome-devtools/beginners/css)にあり、 [Katherine Jackson][KatherineJackson] \ (テクニカルライターインターン、Chrome devtools) によって作成されています。  
+> このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
+> 元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/beginners/css) にあり、 [Katherine Jackson][KatherineJackson] \ (テクニカルライターインターン、Chrome devtools) によって作成されています。  
 
 [![クリエイティブコモンズライセンス][CCby4Image]][CCA4IL]  
 この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。  
