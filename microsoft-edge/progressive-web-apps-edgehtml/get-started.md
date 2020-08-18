@@ -3,20 +3,20 @@ description: このガイドでは、Windows でプログレッシブ web アプ
 title: プログレッシブ Web アプリの使用を開始する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 04/17/2020
+ms.date: 08/17/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: プログレッシブ web アプリ、PWA、Edge、Windows、PWABuilder、web マニフェスト、サービスワーカー、プッシュ
-ms.openlocfilehash: 4d7b571b83048f9ce271f451a7537027bb92eebc
-ms.sourcegitcommit: 9169d784485e3cb0b1987a8f395c4bb688bd9b2e
+ms.openlocfilehash: 84d7c753cfece1591348e06b6728939187e37482
+ms.sourcegitcommit: ef6d6adae1f4d18a219fa3e17f91b95b40367a40
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "10583785"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "10934906"
 ---
 # プログレッシブ Web アプリの使用を開始する  
 
-プログレッシブ Web アプリ \ (PWAs \) は、ホーム画面のインストール、オフラインサポート、プッシュ通知などのプラットフォームやブラウザーエンジンでのネイティブアプリのような機能によって[段階的に強化][WikiProgressiveEnhancement]された web アプリです。  Microsoft Edge \ (EdgeHTML \) エンジンを搭載した Windows 10 では、ブラウザーウィンドウを[ユニバーサル Windows プラットフォーム][WindowsUwpGetStartedWhat]アプリとして実行することによって、pwas の機能が追加されました。  
+プログレッシブ Web アプリ \ (PWAs \) は、ホーム画面のインストール、オフラインサポート、プッシュ通知などのプラットフォームやブラウザーエンジンでのネイティブアプリのような機能によって [段階的に強化][WikiProgressiveEnhancement] された web アプリです。  Microsoft Edge \ (EdgeHTML \) エンジンを搭載した Windows 10 では、ブラウザーウィンドウを [ユニバーサル Windows プラットフォーム][WindowsUwpGetStartedWhat] アプリとして実行することによって、pwas の機能が追加されました。  
 
 このガイドでは、 `localhost` Microsoft Visual Studio といくつかの Pwa ビルダーユーティリティを使って、pwa としてシンプルな web アプリを作成することによって、pwa の基本的な概要を説明します。  完成した製品は、PWAs をサポートするすべてのブラウザーで同様に動作します。  
 
@@ -27,21 +27,21 @@ ms.locfileid: "10583785"
 
 PWAs は、どの web 開発 IDE でも構築できます。  次に示すのは、Windows 開発者エコシステムでの PWA ツールのサポートについて説明する、このガイドの前提条件のみです。  
 
-*   \ (無料版) の[Visual Studio コミュニティ 2017][VisualStudioDownloads]をダウンロードします。  プロフェッショナル、エンタープライズ、または[プレビュー][VisualStudioPreview]の各エディションを使用することもできます。  Visual Studio インストーラーで、次のワークロードを選択します。  
+*   \ (無料版) の [Visual Studio コミュニティ 2017][VisualStudioDownloads]をダウンロードします。  プロフェッショナル、エンタープライズ、または [プレビュー][VisualStudioPreview] の各エディションを使用することもできます。  Visual Studio インストーラーで、次のワークロードを選択します。  
     
     *   **ユニバーサル Windows プラットフォーム開発**  
-    *   **Node.js の開発**  
+    *   **Node.js 開発**  
 
 ## 基本的な web アプリをセットアップする  
 
-わかりやすくするために、Visual Studio[ノード .js とエクスプレスアプリ][VisualStudioNodeJsTutorial]テンプレートを使用して、 `localhost` ページを構成する web アプリを作成 `index.html` します。  これは、PWA として開発する、魅力的で多機能なフル機能の web アプリのプレースホルダーとして考えることができます。  
+わかりやすくするために、Visual Studio [Node.js とエクスプレスアプリ][VisualStudioNodeJsTutorial] テンプレートを使用して、ページを構成する web アプリを作成し `localhost` `index.html` ます。  これは、PWA として開発する、魅力的で多機能なフル機能の web アプリのプレースホルダーとして考えることができます。  
 
 1.  Visual Studio を起動し、新しいプロジェクトを開始します。  
     *   **ファイル**  > **新規**  > **プロジェクト**  
     *   `Ctrl`+`Shift`+`N`  
-1.  [ **JavaScript**] で、[ **Basic Node .Js Express 4 アプリケーション**] を選びます。  名前と場所を設定して、 **[OK]** を選択します。  
+1.  [ **JavaScript**] で、[ **Basic Node.js Express 4 アプリケーション**] を選びます。  名前と場所を設定して、 **[OK]** を選択します。  
     
-    ![Visual Studio での node.js Express 4 プロジェクトテンプレートの選択][ImageVsNodejsExpressTemplate]  
+    ![Visual Studio で Node.js Express 4 プロジェクトテンプレートを選択する][ImageVsNodejsExpressTemplate]  
     
 1.  新しいプロジェクトが読み込まれたら、[**ビルド**\ (\)] を選択 `Ctrl` + `Shift` + `B` して、「(\) の**デバッグを開始**し `F5` ます。  参照するときにファイルが読み込まれることを確認し `index.html` `http://localhost:1337` ます。  
     
@@ -49,11 +49,11 @@ PWAs は、どの web 開発 IDE でも構築できます。  次に示すのは
 
 ## アプリを PWA にする  
 
-ここで、web アプリの基本的な[PWA 要件][PwaEdgehtmlIndexRequirements]( *web アプリマニフェスト*、 *HTTPS* 、*サービスワーカー*) を作成します。  
+ここで、web アプリの基本的な [PWA 要件][PwaEdgehtmlIndexRequirements] ( *web アプリマニフェスト*、 *HTTPS* 、 *サービスワーカー*) を作成します。  
 
 ### Web アプリマニフェスト  
 
-[Web アプリマニフェスト][MDNWebAppManifest]は、アプリについて説明する JSON メタデータファイルです。名前、作成者、エントリページの URL、1つまたは複数のアイコンが含まれます。  [標準ベースのスキーマ][W3cWebAppManifest]に従っているため、pcl がサポートされているプラットフォーム、OS、およびデバイスの組み合わせにインストールする1つの web アプリマニフェストのみを提供する必要があります。  Windows エコシステムでは、自分の PWA が[Microsoft Store][PwaEdgehtmlMicrosoftStore]に自動追加の候補として表示されるように、web アプリマニフェストが Bing web インデクサーに通知されます。ここでは、windows 10 アプリとして、約7億のアクティブなユーザーにアクセスできます。  
+[Web アプリマニフェスト][MDNWebAppManifest]は、アプリについて説明する JSON メタデータファイルです。名前、作成者、エントリページの URL、1つまたは複数のアイコンが含まれます。  [標準ベースのスキーマ][W3cWebAppManifest]に従っているため、pcl がサポートされているプラットフォーム、OS、およびデバイスの組み合わせにインストールする1つの web アプリマニフェストのみを提供する必要があります。  Windows エコシステムでは、自分の PWA が [Microsoft Store][PwaEdgehtmlMicrosoftStore]に自動追加の候補として表示されるように、web アプリマニフェストが Bing web インデクサーに通知されます。ここでは、windows 10 アプリとして、約7億のアクティブなユーザーにアクセスできます。  
 
 既存のライブサイトの場合は、 [PWA ビルダー][PwaBuilder]を使って web アプリマニフェストを生成できます。  まだ未公開のプロジェクトであるため、サンプルマニフェストをコピーしてください。  
 
@@ -79,20 +79,20 @@ PWAs は、どの web 開発 IDE でも構築できます。  次に示すのは
     }
     ```  
     
-    実際の PWA では、次の手順では、*名前*、 *start_url*、 *short_name*、*説明*、*アイコン*をカスタマイズします (アイコンについては、次の手順で説明します)。  
+    実際の PWA では、次の手順では、 *名前*、 *start_url*、 *short_name*、 *説明*、 *アイコン* をカスタマイズします (アイコンについては、次の手順で説明します)。  
     
-    さまざまなメンバー値と関連の目的について詳しくは、「 [Web アプリマニフェスト][MDNWebAppManifest]のリファレンス」をご覧ください。  
+    さまざまなメンバー値と関連の目的について詳しくは、「 [Web アプリマニフェスト][MDNWebAppManifest] のリファレンス」をご覧ください。  
     
 1.  次に、 `icons` PWA ビルダーアプリのイメージジェネレーターを使って、空の配列に実際の画像パスを入力します。  
     
-    1.  Web ブラウザーを使用して、次の[サンプル 512x512 PWA イメージ][ImagePwa]をダウンロードします。  
-    1.  PWA ビルダー[アプリのイメージジェネレーター][PwaBuilderAppImageGenerator]に移動し `pwa.png` て、**入力イメージ**として保存した画像を選択し、[**ダウンロード**] ボタンを選択します。  
+    1.  Web ブラウザーを使用して、次の [サンプル 512x512 PWA イメージ][ImagePwa]をダウンロードします。  
+    1.  PWA ビルダー [アプリのイメージジェネレーター][PwaBuilderAppImageGenerator]に移動し `pwa.png` て、 **入力イメージ** として保存した画像を選択し、[ **ダウンロード** ] ボタンを選択します。  
     1.  Zip ファイルを**開い**て**抽出**します。  
-    1.  Visual Studio ソリューションエクスプローラーで、フォルダーを右クリック `public` し、**エクスプローラーでフォルダーを開き**ます。  という名前の**新しいフォルダー**を作成 `images` します。  
+    1.  Visual Studio ソリューションエクスプローラーで、フォルダーを右クリック `public` し、 **エクスプローラーでフォルダーを開き**ます。  という名前の **新しいフォルダー** を作成 `images` します。  
     1.  抽出した zip からフォルダーにすべてのプラットフォームフォルダー \ (、など) をコピーして、[ `android` `chrome` `windows10` `images` ファイルエクスプローラー] ウィンドウを閉じます。  フォルダーを Visual Studio プロジェクトに追加します (ソリューションエクスプローラーで、フォルダーを右クリックし、 `images` [既存のフォルダーの**追加**] を選択します  >  **Existing folder...** )。  
     1.  抽出した zip からファイルを (Visual Studio または任意のエディターを使って) 開いて、 `icons.json` `"icons": [...]` プロジェクトのファイルに配列をコピーし `manifest.json` ます。  
 
-1.  これで、web アプリマニフェストをアプリに関連付ける必要があります。  `layout.pug`ファイル \ ( `views` フォルダー \) を編集用に開き、[スタイルシート] リンクの直後にこの行を追加します。  \ (単なるノード[pug][PugAttributes]テンプレート略記 `<link rel='manifest' href='/manifest.json'>` )。  
+1.  これで、web アプリマニフェストをアプリに関連付ける必要があります。  `layout.pug`ファイル \ ( `views` フォルダー \) を編集用に開き、[スタイルシート] リンクの直後にこの行を追加します。  \ (単なるノード [pug][PugAttributes] テンプレート略記 `<link rel='manifest' href='/manifest.json'>` )。  
     
     ```html
     link(rel='manifest', href='/manifest.json')
@@ -106,31 +106,31 @@ PWAs は、どの web 開発 IDE でも構築できます。  次に示すのは
 
 ![Localhost からの Square71x71Logo アプリロゴの読み込み][ImageVsNodejsExpressIcon]  
 
-(実際の \) アプリを公開している場合 `start_url` 、Bing 検索エンジンは、インストール可能な Windows 10 アプリとして[Microsoft Store への自動パッケージと申請][PwaEdgehtmlMicrosoftStore]の候補として識別されるようになりました。  マニフェストファイルには、次の項目を含む、Bing スキャン用の[プログレッシブ Web アプリの品質シグナル][WindowsBlogsPwaEdge]が含まれていることを確認します。   
+(実際の \) アプリを公開している場合 `start_url` 、Bing 検索エンジンは、インストール可能な Windows 10 アプリとして [Microsoft Store への自動パッケージと申請][PwaEdgehtmlMicrosoftStore] の候補として識別されるようになりました。  ファイルの manifest.jsには、次の項目を含む Bing スキャン用の [プログレッシブ Web アプリの品質シグナル][WindowsBlogsPwaEdge] が含まれていることを確認します。   
 
 *   `name`  
 *   `description`  
 *   少なくとも1つのアイコン (512 px 四方以上) \ (アプリのスプラッシュ画面を自動生成するための十分な解像度の画像ソース、ストア登録情報、タイル画像など)。  
 
-さらに、 [HTTPS](#https)、[サービス員](#service-workers)、 [Microsoft ストアのポリシー][LegalWindowsAgrementsMicrosoftStorePolicies]に準拠することもできます。  
+さらに、 [HTTPS](#https)、 [サービス員](#service-workers)、 [Microsoft ストアのポリシー][LegalWindowsAgrementsMicrosoftStorePolicies]に準拠することもできます。  
 
 ### HTTPS  
 
-[サービスワーカーと、][MDNServiceWorkerApi] service Worker ([キャッシュ][MDNCache]、[プッシュ][MDNPushApi]、[バックグラウンド同期][MDNSyncManager]api など) で動作する PWA テクノロジはセキュリティで保護された接続にのみ機能します。これは、ライブサイトまたはデバッグ目的で[HTTPS][WikiHttps]を意味 `localhost` します。  
+[サービスワーカーと、][MDNServiceWorkerApi] service Worker ( [キャッシュ][MDNCache]、 [プッシュ][MDNPushApi]、 [バックグラウンド同期][MDNSyncManager] api など) で動作する PWA テクノロジはセキュリティで保護された接続にのみ機能します。これは、ライブサイトまたはデバッグ目的で [HTTPS][WikiHttps] を意味 `localhost` します。  
 
 [この web アプリを実際のサイトとして発行][VisualStudioNodejsTutorialPublishAzureAppService]する場合 (たとえば、 [Azure free アカウント][AzureCreateFreeAccount]をセットアップした場合) は、サーバーが HTTPS 用に構成されていることを確認する必要があります。  [Microsoft Azure App Service][AzureWebApps]を使ってサイトをホストしている場合、既定では HTTPS 経由で提供されます。  
 
 このガイドでは、稼働中の `http://localhost` ライブサイトのプレースホルダーとして引き続き使用 `https://` します。  
 
-### サービス員  
+### サービス ワーカー  
 
 サービスワーカーは、PWAs の主要テクノロジです。 サービスワーカーは、PWA とネットワークの間のプロキシとして機能し、web サイトが、オフラインシナリオを処理し、サーバープッシュ通知に応答し、バックグラウンドタスクを実行するインストール済みのネイティブアプリとして機能することを可能にします。  サービス担当者には、新しいパフォーマンス戦略も開かれます。  Web サイトのページ読み込みパフォーマンスを微調整するために、サービスワーカーキャッシュを使用するために、完全な web アプリを実装する必要はありません。  
 
-サービスワーカーは、web アプリを起動する通常のスクリプトと共に対応する JavaScript ファイルから実行されるイベント駆動型のバックグラウンドスレッドです。  サービスワーカーはメイン UI スレッドでは実行されないため、 [ui スレッド][MDNWorkerPrototypePostMessage]と[ワーカースレッド][MDNDedicatedWorkerGlobalScopePostMessage]は、 `postMessage()` およびイベントハンドラーを使って通信できますが、その場合、サービスワーカーには DOM アクセスはありません `onmessage` 。  
+サービスワーカーは、web アプリを起動する通常のスクリプトと共に対応する JavaScript ファイルから実行されるイベント駆動型のバックグラウンドスレッドです。  サービスワーカーはメイン UI スレッドでは実行されないため、 [ui スレッド][MDNWorkerPrototypePostMessage] と [ワーカースレッド][MDNDedicatedWorkerGlobalScopePostMessage] は、 `postMessage()` およびイベントハンドラーを使って通信できますが、その場合、サービスワーカーには DOM アクセスはありません `onmessage` 。  
 
-サービスワーカーを、サイトの URL の起点 (またはその中の指定したパス) に登録することで、アプリに関連付けます。  登録が完了すると、service worker ファイルが、ユーザーのコンピューターにダウンロード、インストール、アクティブ化されます。  さらに、MDN web ドキュメントには、[サービスワーカー][MDNUsingServiceWorkers]と詳細な[service worker API][MDNServiceWorkerApi]リファレンスの包括的なガイドが含まれています。  
+サービスワーカーを、サイトの URL の起点 (またはその中の指定したパス) に登録することで、アプリに関連付けます。  登録が完了すると、service worker ファイルが、ユーザーのコンピューターにダウンロード、インストール、アクティブ化されます。  さらに、MDN web ドキュメントには、 [サービスワーカー][MDNUsingServiceWorkers] と詳細な [service worker API][MDNServiceWorkerApi] リファレンスの包括的なガイドが含まれています。  
 
-このチュートリアルでは、 [PWA ビルダー][PwaBuilderServiceWorker]でオフラインページサービスワーカースクリプトを使用します。  パフォーマンス要件、ネットワーク帯域幅などに応じて、より多くの機能を備えたスクリプトをカスタマイズします。  Mozilla が提供する[サービス][ServiceWorkerCookbook]の担当者を確認して、いくつかの便利なサービス作業者のキャッシュアイデアを確認してください。  
+このチュートリアルでは、 [PWA ビルダー][PwaBuilderServiceWorker]でオフラインページサービスワーカースクリプトを使用します。  パフォーマンス要件、ネットワーク帯域幅などに応じて、より多くの機能を備えたスクリプトをカスタマイズします。  Mozilla が提供する [サービス][ServiceWorkerCookbook]  の担当者を確認して、いくつかの便利なサービス作業者のキャッシュアイデアを確認してください。  
 
 1.  [https://www.pwabuilder.com/serviceworker][PwaBuilderServiceWorker]\ (既定の)**オフラインページ**サービスワーカーを開いて選択し、[**サービスワーカーのダウンロード**] ボタンをクリックします。  
 1.  [ダウンロード] フォルダーを開いて、次の2つのファイルをコピーします。  
@@ -140,12 +140,18 @@ PWAs は、どの web 開発 IDE でも構築できます。  次に示すのは
     
     `public`Visual Studio web app プロジェクトのフォルダーにファイルを保存します。  \ (Visual Studio から、エクスプローラーを使っ `Ctrl` + `O` てプロジェクトを開き、フォルダーに移動し `public` ます)。  
     
+    ソリューションエクスプローラーで、 `public/pwabuilder-sw.js` ファイルを開き、の値 `offlineFallbackPage` をに変更し `offline.html` ます。  
+    
+    ```javascript
+    const offlineFallbackPage = "offline.html";
+    ```
+    
     この2つのファイルの両方のコードを確認して、指定したページをキャッシュし、ネットワークの取得に失敗したときにそのサービスを提供するサービスワーカーを登録する方法について説明し `offline.html` ます。  次に、 `offline.html` アプリのオフライン機能のプレースホルダーとして簡単なページを作成します。  
     
 1.  ソリューションエクスプローラーで、 `views/layout.pug` ファイルを開き、リンクタグの下に次の行を追加します。  
     
     ```html
-    script(src='/pwabuilder-sw-register.js')
+    script(src='/pwabuilder-sw-register.js' type='module')
     ```  
     
     サイトがサービスワーカー登録スクリプトを読み込んで実行します。  
@@ -193,23 +199,23 @@ PWAs は、どの web 開発 IDE でも構築できます。  次に示すのは
         
 1.  PWA をオフラインアプリとして試す時間  Visual Studio で、web アプリの**デバッグを停止** `Shift` + `F5` して、Microsoft Edge \ (または [更新]) を web サイトの localhost アドレスに開きます。  これでページを読み込むことが `offline.html` できます (サービスワーカーとオフラインキャッシュに感謝します)。  
     
-    ![http://localhost:1337Microsoft Edge で読み込まれた .html][ImageOfflineHtml]  
+    ![http://localhost:1337Microsoft Edge で offline.html を読み込む][ImageOfflineHtml]  
 
 ## プッシュ通知を追加する  
 
-PWA をさらにアプリにするには、[プッシュ API][MDNPushApi]を使ってメッセージサービスをサブスクライブするプッシュ通知のクライアント側サポートを追加し、[通知 API][MDNNotificationsApi]を使ってメッセージの受信時にトーストメッセージを表示します。  サービスワーカーの場合と同様に、これらはブラウザー間で動作する標準ベースの Api であるため、コードを1回記述するだけで、すべての機能がサポートされます。  サーバー側で、 [Web プッシュ][NPMWebPush]ソースライブラリを使って、さまざまなブラウザーへのプッシュメッセージの配信に関連する違いを処理します。  
+PWA をさらにアプリにするには、 [プッシュ API][MDNPushApi] を使ってメッセージサービスをサブスクライブするプッシュ通知のクライアント側サポートを追加し、 [通知 API][MDNNotificationsApi] を使ってメッセージの受信時にトーストメッセージを表示します。  サービスワーカーの場合と同様に、これらはブラウザー間で動作する標準ベースの Api であるため、コードを1回記述するだけで、すべての機能がサポートされます。  サーバー側で、 [Web プッシュ][NPMWebPush] ソースライブラリを使って、さまざまなブラウザーへのプッシュメッセージの配信に関連する違いを処理します。  
 
-以下は、Mozilla が提供する[Service Worker][ServiceWorkerCookbookPushRichDemo]のレシピのプッシュリッチデモに適用されています。これは、その他多くの便利な Web プッシュとサービス worker のレシピを確認するのに役立ちます。  
+以下は、Mozilla が提供する [Service Worker][ServiceWorkerCookbookPushRichDemo] のレシピのプッシュリッチデモに適用されています。これは、その他多くの便利な Web プッシュとサービス worker のレシピを確認するのに役立ちます。  
 
 ### 手順 1-NPM web プッシュライブラリをインストールする  
 
-Visual Studio のソリューションエクスプローラーで、プロジェクトを右クリックし、[ **.Js 対話型] ウィンドウを開きます**。 次のコードを入力します。  
+Visual Studio ソリューションエクスプローラーで、プロジェクトを右クリックし **Node.js 対話型のウィンドウを開く]** をクリックします。 次のコードを入力します。  
 
 ```javascript
 .npm install web-push
 ```  
 
-これに[より、Web プッシュ][NPMWebPush]ライブラリがインストールされます。  次に、 `index.js` ファイルを開き、他の要件ステートメントの後に、ファイルの先頭に次の行を追加します。  
+これに [より、Web プッシュ][NPMWebPush] ライブラリがインストールされます。  次に、 `index.js` ファイルを開き、他の要件ステートメントの後に、ファイルの先頭に次の行を追加します。  
 
 ```javascript
 var webpush = require('web-push');
@@ -217,7 +223,7 @@ var webpush = require('web-push');
 
 ### 手順 2-サーバーの VAPID キーを生成する  
 
-次に、プッシュメッセージを PWA クライアントに送信するために、サーバーに対して VAPID を生成する必要があります。  この操作は1回だけ実行する必要があります (つまり、サーバーでは VAPID keys の1つのペアしか必要ありません)。  ノード .js 対話型ウィンドウで、次のコードを入力します。  
+次に、プッシュメッセージを PWA クライアントに送信するために、サーバーに対して VAPID を生成する必要があります。  この操作は1回だけ実行する必要があります (つまり、サーバーでは VAPID keys の1つのペアしか必要ありません)。  対話型の Node.js ウィンドウで、次のコードを入力します。  
 
 ```javascript
 var webpush = require('web-push');
@@ -249,7 +255,7 @@ webpush.setVapidDetails(
 
 それでは、VAPID 公開キーの提供、プッシュを受け取るクライアントの登録など、PWA クライアントからプッシュ関連の要求を処理するためのルートをセットアップします。  
 
-実際のシナリオでは、プッシュ通知はサーバーロジックのイベントから発生する可能性があります。  ここで簡単にするために、PWA のホームページに**プッシュ通知**ボタンを追加して、skype のサーバーからプッシュを生成したり、 `/sendNotification` これらの要求を処理するためのエンドポイント \ (サーバールート) を作成したりする必要があります。  
+実際のシナリオでは、プッシュ通知はサーバーロジックのイベントから発生する可能性があります。  ここで簡単にするために、PWA のホームページに **プッシュ通知** ボタンを追加して、skype のサーバーからプッシュを生成したり、 `/sendNotification` これらの要求を処理するためのエンドポイント \ (サーバールート) を作成したりする必要があります。  
 
 ファイル内に `index.js` 、追加した VAPID 初期化コードの直後に、[手順 2 #step] から [---の VAPID キーを生成します] の後に次のルートを追加します。  
 
@@ -404,7 +410,7 @@ self.addEventListener('notificationclick', function (event) {
 
 PWA でプッシュ通知をテストする時間  
 
-1.  `F5`ブラウザーで PWA (\) を実行します。  サービスワーカーコード \ (\) を変更したので `pwabuilder-sw.js` 、DevTools デバッガー \ ( `F12` \) を**サービスワーカーの概要**パネルに開いて、サービスワーカーの**登録を解除**し `F5` 、ページを再登録する必要があります (または、[**更新**] をクリックします)。  運用シナリオでは、ブラウザーは、service worker の更新プログラムが定期的にチェックされ、バックグラウンドで更新プログラムをインストールすることを確認します。  すぐに結果が得られるように、ここで強制する必要があります。  
+1.  `F5`ブラウザーで PWA (\) を実行します。  サービスワーカーコード \ (\) を変更したので `pwabuilder-sw.js` 、DevTools デバッガー \ ( `F12` \) を **サービスワーカーの概要** パネルに開いて、サービスワーカーの **登録を解除** し `F5` 、ページを再登録する必要があります (または、[ **更新**] をクリックします)。  運用シナリオでは、ブラウザーは、service worker の更新プログラムが定期的にチェックされ、バックグラウンドで更新プログラムをインストールすることを確認します。  すぐに結果が得られるように、ここで強制する必要があります。  
     
     サービスワーカーがアクティブ化して PWA のプッシュ通知をサブスクライブしようとすると、ページの下部に [アクセス許可] ダイアログが表示されます。  
     
@@ -412,11 +418,11 @@ PWA でプッシュ通知をテストする時間
     
     **[はい]** を選択して、PWA のトースト通知を有効にします。  
     
-1.  [Service Worker の概要] ウィンドウで、[**プッシュ**] ボタンを選択します。  \ (DevTools "\) ペイロードからのハードコード付きの" テストプッシュメッセージ "というトースト通知が表示されます。  
+1.  [Service Worker の概要] ウィンドウで、[  **プッシュ** ] ボタンを選択します。  \ (DevTools "\) ペイロードからのハードコード付きの" テストプッシュメッセージ "というトースト通知が表示されます。  
     
     ![DevTools から通知をプッシュする][ImageDevtoolsPush]  
     
-1.  次に、PWA のホームページで [**通知の送信**] ボタンを選択します。  今回は、サーバーからのペイロードを使ってトーストが表示されます。  
+1.  次に、PWA のホームページで [ **通知の送信** ] ボタンを選択します。  今回は、サーバーからのペイロードを使ってトーストが表示されます。  
     
     ![PWA サーバーから通知をプッシュする][ImagePwaPush]  
     
@@ -424,7 +430,7 @@ PWA でプッシュ通知をテストする時間
     
     ![Windows アクションセンターでの通知][ImageWindowsActionCenter]  
     
-    PWA プッシュ通知の基本的な機能があります。  実際のアプリでは、次の手順は、プッシュサブスクリプションを管理および保存し、ネットワーク経由で送信されるペイロードデータを適切に[暗号化][NPMWebPushEncrypt]する方法で実装されています。  
+    PWA プッシュ通知の基本的な機能があります。  実際のアプリでは、次の手順は、プッシュサブスクリプションを管理および保存し、ネットワーク経由で送信されるペイロードデータを適切に [暗号化][NPMWebPushEncrypt] する方法で実装されています。  
     
 ## 追加情報  
 
@@ -434,14 +440,14 @@ PWA でプッシュ通知をテストする時間
 
 他の PWA ガイドを確認して、カスタマーエンゲージメントを向上させ、OS に統合されたアプリのエクスペリエンスをさらに向上させる方法について説明します。  
 
-*   [Windows の調整][PwaEdgehtmlWindowsFeatures]。 簡単な機能の検出を使用すると、windows 10 ユーザー向けの PWA (Windows の [**スタート**] メニューのタイル通知とタスクバーの jumplists をカスタマイズするための方法、および \ (許可されている場合)、写真、音楽、予定表などのユーザーリソースの操作などの、windows 10 を実行しているユーザーを段階的に強化できます。  
+*   [Windows の調整][PwaEdgehtmlWindowsFeatures]。 簡単な機能の検出を使用すると、windows 10 ユーザー向けの PWA (Windows の [ **スタート** ] メニューのタイル通知とタスクバーの jumplists をカスタマイズするための方法、および \ (許可されている場合)、写真、音楽、予定表などのユーザーリソースの操作などの、windows 10 を実行しているユーザーを段階的に強化できます。  
 *   [Microsoft ストアで Pwas][PwaEdgehtmlMicrosoftStore]。  アプリストアの配布の利点と PWA の提出方法について説明します。  
 
 ## 関連項目  
 
-*   [MDN web ドキュメントのプログレッシブ Web アプリ][MDNProgressiveWebApps]-プログレッシブ web アプリに関する優れたガイドです。  
+*   [MDN web ドキュメントのプログレッシブ Web アプリ][MDNProgressiveWebApps] -プログレッシブ web アプリに関する優れたガイドです。  
 *   プログレッシブ web アプリ向けの[プログレッシブ][WebDevProgressiveWebApps]web アプリ。プログレッシブ web アプリでの優れたガイドです。  
-*   [プログレッシブ Web アプリ][ProgressiveWebApps]は、pwas の現実世界の例を示しています。  
+*   [プログレッシブ Web アプリ][ProgressiveWebApps] は、pwas の現実世界の例を示しています。  
 *   [[プログレッシブ Web アプリとしてのハッカーニュースリーダー][HackerNewsProgressiveWebApps] ]: サンプル \ (ハッカーたち News READER) PWA を実装するためのさまざまなフレームワークとパフォーマンスパターンを比較します。  
 
 <!-- image links -->  
@@ -468,8 +474,8 @@ PWA でプッシュ通知をテストする時間
 
 [LegalWindowsAgrementsMicrosoftStorePolicies]: /legal/windows/agreements/store-policies "Microsoft Store のポリシー |Microsoft ドキュメント"  
 
-[VisualStudioNodeJsTutorial]: /visualstudio/nodejs/tutorial-nodejs "チュートリアル: Visual Studio でノード .js と Express アプリを作成する |Microsoft ドキュメント"  
-[VisualStudioNodejsTutorialPublishAzureAppService]: /visualstudio/nodejs/tutorial-nodejs#optional-publish-to-azure-app-service "Azure App Service に発行する-Visual Studio でノード .js と Express アプリを作成する |Microsoft ドキュメント"  
+[VisualStudioNodeJsTutorial]: /visualstudio/nodejs/tutorial-nodejs "チュートリアル: Visual Studio で Node.js と Express アプリを作成する |Microsoft ドキュメント"  
+[VisualStudioNodejsTutorialPublishAzureAppService]: /visualstudio/nodejs/tutorial-nodejs#optional-publish-to-azure-app-service "Azure App Service に発行する-Visual Studio で Node.js と Express App を作成する |Microsoft ドキュメント"  
 
 [WindowsUwpGetStartedWhat]: /windows/uwp/get-started/whats-a-uwp "ユニバーサル Windows プラットフォーム (UWP) アプリとは何ですか? |Microsoft ドキュメント"  
 

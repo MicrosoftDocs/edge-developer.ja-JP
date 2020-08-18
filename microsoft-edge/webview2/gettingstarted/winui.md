@@ -3,17 +3,17 @@ description: Microsoft Edge WebView 2 コントロールを使用して、WinUI 
 title: WinUI アプリ用 Microsoft Edge WebView2
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 08/10/2020
+ms.date: 08/17/2020
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: WebView2、WebView2、WebView、webview、winui apps、winui、edge、CoreWebView2、browser control、edge html、はじめに、作業の開始、.NET
-ms.openlocfilehash: 5b9bbb4578fc580ddc77680a57b481501e48cda7
-ms.sourcegitcommit: 4bc904c5d54347185f275bd76441975be471c320
+ms.openlocfilehash: 805655fd27c0b654e1ccb41c615aa21797d6ddf7
+ms.sourcegitcommit: ef6d6adae1f4d18a219fa3e17f91b95b40367a40
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "10926492"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "10934899"
 ---
 # WinUI3 での WebView2 の概要 (プレビュー)  
 
@@ -26,7 +26,7 @@ ms.locfileid: "10926492"
 *   Windows 10 バージョン 1803 \ (ビルド 17134 \) 以降。  詳細については、「 [Windows Update: FAQ][MicrosoftSupport12373]」を参照してください。  
 *   [Microsoft Edge (Chromium) カナリア Channel][MicrosoftedgeinsiderDownload] windows 10、windows 8.1、または windows 7。  
 *   Visual Studio 2019、バージョン 16.7 Preview 1。  詳細については、 [WINDOWS UI ライブラリ3プレビュー 2 (2020 年7月)][WindowsAppsWinui3ConfigureYourDevEnvironment]を参照してください。  
-*   [X64][WindowsDotnetcliBlobCoreSdk50100Preview4202681X86]と[x86][WindowsDotnetcliBlobCoreSdk50100Preview4202681X64]の両方のバージョンの .net 5 Preview 4。  
+*   [X64][WindowsDotnetcliBlobCoreSdk50100Preview4202681X64]と[x86][WindowsDotnetcliBlobCoreSdk50100Preview4202681X86]の両方のバージョンの .net 5 Preview 4。  
 *   [WinUI 3][VisualstudioMarketplaceWinUiprojecttemplates] Visual Studio 2019 用のプロジェクトテンプレートの拡張機能  
 すべての Visual Studio 機能に確実にアクセスできるように、 [開発者モードを有効][WindowsUwpGetStartedEnableYourDeviceForDevelopment] にしていることを確認します。  
 
@@ -190,8 +190,10 @@ WebView2 コントロールをホストするアプリケーションは、web �
 *   `ContentLoading`  
 *   `HistoryChanged`  
 *   `NavigationCompleted`  
+
 > [!NOTE]
 > HTTP のリダイレクトでは `NavigationStarting` 、複数のイベントが発生します。  
+
 詳細については、「 [ナビゲーションイベント][Webviews2ConceptsNavigationEvents]」を参照してください。  
 
 エラーが発生すると、次のイベントが発生し、エラーページに移動する可能性があります。  
@@ -199,10 +201,8 @@ WebView2 コントロールをホストするアプリケーションは、web �
 *   `SourceChanged`  
 *   `ContentLoading`  
 *   `HistoryChanged`  
-    
-
+     
 イベントの使い方の例として、 `NavigationStarting` HTTPS を使っていない要求をすべてキャンセルするためのハンドラーを登録します。 で `MainWindow.xaml.cs` 、登録するコンストラクターを変更 `EnsureHttps` し、 `EnsureHttps` 次のコードスニペットと一致するように関数を追加します。  
-
 
 ```csharp
 public MainWindow()
