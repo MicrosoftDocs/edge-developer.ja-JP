@@ -3,18 +3,18 @@ description: 現在の Api および将来の Api に関する情報を検索し
 title: 拡張機能-サポートされている Api
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 03/05/2020
+ms.date: 08/18/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: edge、web 開発、html、css、javascript、開発者
-ms.openlocfilehash: b9f3764a65f2b27dc61e4e5ae8734820efb7fbd0
-ms.sourcegitcommit: 6860234c25a8be863b7f29a54838e78e120dbb62
+ms.openlocfilehash: fceba67f5fab1a223cfc94abf7f19a0a9d1bcdf0
+ms.sourcegitcommit: 0879b205aa88c6b73d84f106b4b435d5a0e8cadc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "10569534"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "10937183"
 ---
-# サポートされる Api  
+# サポートされる API  
 
 [!INCLUDE [deprecation-note](../includes/deprecation-note.md)]  
 
@@ -111,7 +111,7 @@ ms.locfileid: "10569534"
 [拡張子 getURL](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/extension/getURL) | | |
 [拡張機能の getViews](https://developer.mozilla.org/Add-ons/WebExtensions/API/extension/getViews) | | |
 [拡張子 isAllowedIncognitoAccess](https://developer.mozilla.org/Add-ons/WebExtensions/API/extension/isAllowedIncognitoAccess) | | | 
-[拡張子 inIncognitoContext](https://developer.mozilla.org/Add-ons/WebExtensions/API/extension/inIncognitoContext) | | | 
+[extension.inIncognitoContext](https://developer.mozilla.org/Add-ons/WebExtensions/API/extension/inIncognitoContext) | | | 
 
 
 
@@ -210,7 +210,7 @@ API | 既知の問題 | Chrome の非互換性
 [設定](https://developer.mozilla.org/Add-ons/WebExtensions/API/Storage/StorageArea/set)  | | |
 [.local。クリア](https://developer.mozilla.org/Add-ons/WebExtensions/API/Storage/StorageArea/clear) | | |
 [ローカルの getBytesInUse](https://developer.mozilla.org/Add-ons/WebExtensions/API/Storage/StorageArea/getBytesInUse) | | `storage.local` データは Chrome とは異なる形式で保持されるため、呼び出し時に別の値が返され `storage.local.getBytesInUse` ます。  <br/><br/>例: `storage.local.set({ "k": { "s": "âas" } }` Chrome と50で Microsoft Edge で13という値を返します。|
-[保存します。取得](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get) | | |
+[保存します。取得](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get) | "マニフェスト" フィールドと "マニフェスト" フィールドの合計文字数が `name` `author` 31 文字を超える場合、 `storage.sync` 名前空間は機能しないことがあります。 | |
 [ストレージ. 同期の削除](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/remove) | | |
 [設定します。](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/set) | | |
 [onChanged](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/storage/onChanged) | | |
@@ -225,10 +225,10 @@ API | 既知の問題 | Chrome の非互換性
 [captureVisibleTab](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/tabs/captureVisibleTab) | | |
 [タブ。作成](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/tabs/create) | | `selected`、 `pinned` 、および `openerTabId` はサポートされていません。 |
 [タブの言語](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/tabs/detectLanguage) | | |
-[タブのスクリプト](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript) | `runAt` は無視されますが、オンになっています。 特定のフレームでのスクリプトの実行は、まだサポートされていません。 | |
+[tabs.executeScript](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript) | `runAt` は無視されますが、オンになっています。 特定のフレームでのスクリプトの実行は、まだサポートされていません。 | |
 [タブ。 get](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/tabs/get) | [オプション] ページでは、タブが表示されない場合、この呼び出しは失敗します。 | |
 [tabs Current](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/tabs/getCurrent) | | |
-[tabs Css](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS) | `runAt` は無視されますが、オンになっています。 | |
+[tabs Css](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS) | `runAt` は無視されますが、オンになっています。 | `cssOrigin` はサポートされていません。 |
 [タブを有効にします。](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/tabs/onActivated) | | |
 [tabs 添付](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/tabs/onAttached) | | |
 [作成されたタブ](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/tabs/onCreated) | | |
