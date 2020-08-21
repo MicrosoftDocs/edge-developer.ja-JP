@@ -1,7 +1,7 @@
 ---
 title: Windows ランタイム非同期メソッドの使用
 ms.custom: ''
-ms.date: 04/01/2020
+ms.date: 07/29/2020
 ms.prod: microsoft-edge
 ms.reviewer: ''
 ms.suite: ''
@@ -15,23 +15,25 @@ caps.latest.revision: 15
 author: MSEdgeTeam
 ms.author: msedgedevrel
 manager: ''
-ms.openlocfilehash: 6d0f174d22d0d13571d78bc215356ad90a0ae7fa
-ms.sourcegitcommit: 6860234c25a8be863b7f29a54838e78e120dbb62
+ms.openlocfilehash: d9d59fb8b97e34feb002de1477dbe38709bde713
+ms.sourcegitcommit: 29cbe0f464ba0092e025f502833eb9cc3e02ee89
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "10570776"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "10942072"
 ---
-# Windows ランタイム非同期メソッドの使用  
+# Windows ランタイム非同期の方法を使用する  
 
-多くの Windows ランタイムメソッド (特に、完了までに長い時間がかかる可能性のあるメソッド) は非同期です。  通常、これらのメソッドは非同期のアクションまたは操作 (たとえば、、、、など) を返し `Windows.Foundation.IAsyncAction` `Windows.Foundation.IAsyncOperation` `Windows.Foundation.IAsyncActionWithProgress` `Windows.Foundation.IAsyncOperationWithProgress` ます。  これらのメソッドは、JavaScript で[commonjs promise、または pattern][CommonjsWikiPromises]によって表されます。  つまり、 [then 関数][PreviousVersionsWindowsAppsBr229728]を持つ Promise オブジェクトを返します。これは、 `completed` 操作が成功した場合に結果を処理する関数を提供する必要があるためです。  エラーハンドラーを指定しない場合は、関数の代わりに[done 関数][PreviousVersionsWindowsAppsHr701079]を使用する必要があり `then` ます。  
+[!INCLUDE [deprecation-note](../includes/legacy-edge-note.md)]  
+
+Windows ランタイムのメソッドの多くは、完了までに時間がかかる場合がある方法です。  これらのメソッドは通常、非同期のアクションまたは操作 \(たとえば `Windows.Foundation.IAsyncAction` `Windows.Foundation.IAsyncOperation` `Windows.Foundation.IAsyncActionWithProgress` 、\、\ など) を `Windows.Foundation.IAsyncOperationWithProgress` 返します。  これらのメソッドは [、CommonJS/Promises/A パターンによって表されます][CommonjsWikiPromises]。  つまり、その関数を含む Promise[then function][PreviousVersionsWindowsAppsBr229728]オブジェクトを返します。つまり、演算が成功した場合に結果を処理する関数を `completed` 指定する必要があります。  エラー ハンドラーを提供したくない場合は、関数ではなく [done 関数][PreviousVersionsWindowsAppsHr701079] を使用してください `then` 。  
 
 > [!IMPORTANT]
-> Windows ランタイム機能は、Internet Explorer で実行されるアプリでは使用できません。  
+> Internet Explorer で実行されているアプリでは、Windows ランタイム機能は使用できません。  
 
 ## 非同期メソッドの例  
 
-次の例では、 `then` 関数はメソッドの completed 値を表すパラメーターを受け取り `createResourceAsync` ます。  
+次の例では、この関数は、メソッドの完了した値を表すパラメー `then` ターを使用 `createResourceAsync` します。  
 
 ```javascript
 client.createResourceAsync(uri, description, item)
@@ -41,7 +43,7 @@ client.createResourceAsync(uri, description, item)
             });
 ```  
 
-この場合、メソッドが失敗すると、 `createResourceAsync` エラー状態の promise が返されますが、例外はスローされません。  エラーを処理するには、次のように関数を使用し `then` ます。  
+この場合、メソッドが失敗した場合、エラー状態の確率が返されますが、例外は `createResourceAsync` スローされません。  この関数を使用して、次の関数 `then` を使用してエラーを解決することができます。  
 
 ```javascript
 client.createResourceAsync(uri, description, item)
@@ -54,7 +56,7 @@ client.createResourceAsync(uri, description, item)
           });
 ```  
 
-エラーを明示的に処理せずに、例外をスローさせたい場合は、代わりに関数を使うことができ `done` ます。  
+エラーをそのものにのみ操作したくないが、例外をスローする場合は、代わりに `done` 代わりに関数を使用できます。  
 
 ```javascript
 client.createResourceAsync(uri, description, item)
@@ -64,7 +66,7 @@ client.createResourceAsync(uri, description, item)
             });
 ```  
 
-また、3番目の関数を使用して、完了までの進行状況を表示することもできます。  
+3 番目の関数を使用して完了に対する進捗状況を表示することもできます。  
 
 ```javascript
 client.createResourceAsync(uri, description, item)
@@ -82,20 +84,18 @@ client.createResourceAsync(uri, description, item)
             });
 ```  
 
-非同期プログラミングについて詳しくは、「 [JavaScript での非同期プログラミング][PreviousVersionsWindowsAppsHh700330]」をご覧ください。  
+非同期プログラミングの詳細については [、JavaScript の非同期プログラミングを参照してください][PreviousVersionsWindowsAppsHh700330]。  
 
 ## 関連項目  
 
 [JavaScript での Windows ランタイムの使用][WindowsRuntimeJavascript]  
 
-<!-- image links -->  
-
 <!-- links -->  
 
-[WindowsRuntimeJavascript]: /microsoft-edge/windows-runtime/using-the-windows-runtime-in-javascript "JavaScript での Windows ランタイムの使用"  
+[WindowsRuntimeJavascript]: ./using-the-windows-runtime-in-javascript.md "JavaScript で Windows ランタイムを使用する |Microsoft ドキュメント"  
 
-[PreviousVersionsWindowsAppsBr229728]: /previous-versions/windows/apps/br229728(v=win.10) "約束。 then メソッド"  
-[PreviousVersionsWindowsAppsHh700330]: /previous-versions/windows/apps/hh700330(v=win.10) "JavaScript での非同期プログラミング (HTML)"
-[PreviousVersionsWindowsAppsHr701079]: /previous-versions/windows/apps/hh701079(v=win.10) "Promise. done メソッド"  
+[PreviousVersionsWindowsAppsBr229728]: /previous-versions/windows/apps/br229728(v=win.10) "Promise.then メソッドMicrosoft ドキュメント"  
+[PreviousVersionsWindowsAppsHh700330]: /previous-versions/windows/apps/hh700330(v=win.10) "JavaScript (HTML) | の非同期プログラミング |Microsoft ドキュメント"
+[PreviousVersionsWindowsAppsHr701079]: /previous-versions/windows/apps/hh701079(v=win.10) "Promise.done メソッド |Microsoft ドキュメント"  
 
-[CommonjsWikiPromises]: http://wiki.commonjs.org/wiki/Promises "約束 |CommonJS スペック Wiki"  
+[CommonjsWikiPromises]: http://wiki.commonjs.org/wiki/Promises "代表的 |CommonJS Spec Wiki"  

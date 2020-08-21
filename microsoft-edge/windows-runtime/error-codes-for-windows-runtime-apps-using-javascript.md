@@ -1,7 +1,7 @@
 ---
-title: JavaScript を使った Windows ランタイムアプリのエラーコード
+title: JavaScript を使用して Windows ランタイム アプリのエラー コード
 ms.custom: ''
-ms.date: 04/01/2020
+ms.date: 07/29/2020
 ms.prod: microsoft-edge
 ms.reviewer: ''
 ms.suite: ''
@@ -36,66 +36,66 @@ caps.latest.revision: 1
 author: MSEdgeTeam
 ms.author: msedgedevrel
 manager: ''
-ms.openlocfilehash: 7aad8577d79bc5612f526e4e2bf1ceb0f2c2929a
-ms.sourcegitcommit: 6860234c25a8be863b7f29a54838e78e120dbb62
+ms.openlocfilehash: 7779da61da9f011e55eeb496c7332e5b7cd5a023
+ms.sourcegitcommit: 29cbe0f464ba0092e025f502833eb9cc3e02ee89
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "10570791"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "10942150"
 ---
-# JavaScript を使った Windows ランタイムアプリのエラーコード  
+# JavaScript を使用して Windows ランタイム アプリのエラー コード  
 
-JavaScript を使った Windows ランタイムアプリの開発時に Microsoft Visual Studio 本体によって表示されるエラーコードを以下に示します。  
+[!INCLUDE [deprecation-note](../includes/legacy-edge-note.md)]  
 
-| エラー | 注釈 |  
-|:--- |:--- |  
-| APPHOST9601: " *Remoteuri*を読み込むことができません。  アプリは、ローカルコンテキストのリモート web コンテンツを読み込めません。 " | Web コンテキストで許可される内容について詳しくは、「[コンテキストによる機能と制限][PreviousVersionsWindowsAppsHh465373]」をご覧ください。  |  
-| APPHOST9602: "' javascript: ' は無効な属性値であり、無視されます。  ローカルコンテキストで ' javascript: ' Uri を使わないでください。 | セキュリティ上の理由から、ローカルコンテキストで ' javascript: ' Uri を使用することはできません。  ローカルコンテキストで許可される内容について詳しくは、「[コンテキストによる機能と制限][PreviousVersionsWindowsAppsHh465373]」をご覧ください。  |  
-| APPHOST9603: "クラス ID *classID*を持つ ActiveX プラグインを読み込むことができません。  アプリは ActiveX コントロールを読み込めません。 " | JavaScript を使った Windows ランタイムアプリでは、カスタムの Microsoft ActiveXcontrols はサポートされていません。  UI コントロールが必要な場合は、標準の web コントロール、コントロールライブラリ、または独自のカスタムコントロールを作成します。  カスタムロジックを実行する必要がある場合は、代わりにカスタムの Windows ランタイムオブジェクトを作成します。  HTML、CSS、JavaScript のその他の相違点については、 [html、css、javascript の機能と相違点][PreviousVersionsWindowsAppsHh465380]について説明します。  |  
-| APPHOST9604: "無効な文字エンコードを使用しているため、 *uri*に移動できません。  アプリは、UTF8 でエンコードされたファイルにのみ移動できます。 " | Windows ランタイムによってアクセスされるすべての HTML、JavaScript、CSS は、8ビット Unicode 変換形式 (UTF-8) としてエンコードする必要があります。  HTML、CSS、JavaScript のその他の相違点については、 [html、css、javascript の機能と相違点][PreviousVersionsWindowsAppsHh465380]について説明します。  |  
-| APPHOST9605: 移動先の URI がセキュリティゾーンの上位にあるため、" *sourceuri*から*TargetURI*に移動できません。  Web コンテキストの URI からローカルコンテキストの URI に移動する場合や、ローカルコンテキストの URI を MSApp Localapplicationuri メソッドとして登録している場合を除き、セキュリティがより低いゾーンからゾーンに移動することはできません。 " | 詳しくは、 [Msapp Localapplicationuri][PreviousVersionsHh771917]に関する情報をご覧ください。  |  
-| APPHOST9606: "HTTP 接続を使用していて、ms-chap 接続のみの meta 要素が存在するため、 *uri*を読み込めません。  Https 接続のみの meta 要素を使う場合、HTTPS 接続のみが許可されます。  HTTPS 接続を使用するか、またはセキュリティで保護された接続が必要でない場合は、meta 要素を削除します。 | 詳細については、「 [HTTPS 接続を要求する方法][PreviousVersionsWindowsAppsHh452771]」を参照してください。  |  
-| APPHOST9607: "このエラー: *Failurecode*" のため、 *uri*で uri を起動できません。 " | このエラーの一般的な原因は、不足しているリソースまたは無効なファイルです。  |  
-| APPHOST9608: "このエラー: *errorCode*" のため、アプリは [バージョン情報] の空白のページに移動できませんでした。 " |  |  
+JavaScript を使用して Windows ランタイム アプリを開発するときに、Microsoft Visual Studio 本体によって表示されるエラー コードを以下に示します。  
 
 | エラー | 注釈 |  
 |:--- |:--- |  
-| APPHOST9610: "アプリは、カスタムエラーページへのナビゲートの準備中にエラーを検出しました: *errorCode*" |  |  
-| APPHOST9611: "エラー: *errorCode*" というエラーが発生したため、アプリはカスタムエラーページに移動できませんでした。 " |  |  
-| APPHOST9613: "このエラーのため、アプリは*uri*に移動できませんでした: *errorCode*" |  |  
-| APPHOST9614: "iframe 内のドキュメントで*Requesteddocmode* doc モードが要求されていますが、システムは現在のところ*docmode* doc モードを強制します。  Iframe では、 *Currentdocmode* doc モードが使用されます。 " | リモート web コンテンツの表示について詳しくは、「[外部の web ページへのリンクを設定する方法][PreviousVersionsWindowsAppsHh780594]」をご覧ください。  |  
-| APPHOST9615: "アプリは、ローカルコンテキストの外部でプログラムで呼び出されたため、 *uri*でファイルをダウンロードできません。" | Web コンテキストのコンテンツでファイルをプログラムによってダウンロードしようとしたときに発生します。  |  
-| APPHOST9616: "この URI は、位置情報 Api を使用できません。  位置情報 Api は、パッケージの一部である URI か、マニフェストの ApplicationContentUris 要素に含まれている URI からのみ呼び出すことができます。 " | Web コンテキストで許可される内容について詳しくは、「[コンテキストによる機能と制限][PreviousVersionsWindowsAppsHh465373]」をご覧ください。  |  
-| APPHOST9617: "この URI はクリップボード Api を使用できません。  クリップボード Api は、パッケージの一部である URI か、マニフェストの ApplicationContentUris 要素に含まれている URI からのみ呼び出すことができます。 " | Web コンテキストで許可される内容について詳しくは、「[コンテキストによる機能と制限][PreviousVersionsWindowsAppsHh465373]」をご覧ください。  |  
-| APPHOST9618: "この URI は window を使用できません。  Window close メソッドを呼び出すことができるのは、ms appx URI スキームを使って読み込まれたパッケージ化されたコンテンツからのみです。 " | Web コンテキストで許可される内容について詳しくは、「[コンテキストによる機能と制限][PreviousVersionsWindowsAppsHh465373]」をご覧ください。  |  
-| APPHOST9619: "web コンテキストのページをアプリの最上位レベルのドキュメントにすることができないため、アプリは*uri*に移動できません。  代わりに、iframe にページを読み込みます。 " | トップレベルのページをリモート web ページに移動することはできませんが、アプリで[iframe][MDNIframe]に web ページを表示することはできます。  リモート web コンテンツの表示について詳しくは、「[外部の web ページへのリンクを設定する方法][PreviousVersionsWindowsAppsHh780594]」をご覧ください。  |  
+| APPHOST9601: "リモートURIを読み *込むことができません*。  アプリはローカル コンテキストでリモート Web コンテンツを読み込むできません。" | Web コンテキストで許可される機能の詳細については、コンテキスト [による機能と制限を参照してください][PreviousVersionsWindowsAppsHh465373]。  |  
+| APPHOST9602: "'javascript:' は無効な属性値で、無視されます。  ローカル コンテキストでは 、"javascript:' の URIs を使用しないでください。 | セキュリティ上の理えから、ローカル コンテキストで 'javascript:' URIs を使用することができない。  ローカル コンテキストで許可される機能の詳細については、コンテキスト [による機能と制限を参照してください][PreviousVersionsWindowsAppsHh465373]。  |  
+| APPHOST9603:"class ID クラス ID を含む ActiveX プラグインを読み *込むことができません*。  アプリがコントロールを読み込ActiveXできない。 | JavaScript を使用する Windows ランタイム アプリでは、カスタム Microsoft ActiveX コントロールはサポートされません。  UI コントロールが必要な場合は、標準 Web コントロール、コントロール ライブラリを使用するか、独自のカスタム コントロールを作成します。  カスタム ロジックを実行する必要がある場合は、代わりにカスタム Windows ランタイム オブジェクトを作成します。  HTML、CSS、JavaScript のその他の違いについては [、HTML、CSS、JavaScript][PreviousVersionsWindowsAppsHh465380]の機能と違いを参照してください。  |  
+| APPHOST9604: "検索に移動できません。無効 *な文字エ* ンコードが使用されているためです。  アプリは UTF8 でエンコードされたファイルにのみ移動できます" というエラーが表示されます。 | Windows ランタイムによってアクセスされたすべての HTML、JavaScript、CSS は、8 ビット Unicode 変換形式 (UTF-8) としてエンコードする必要があります。  HTML、CSS、JavaScript のその他の違いについては [、HTML、CSS、JavaScript][PreviousVersionsWindowsAppsHh465380]の機能と違いを参照してください。  |  
+| APPHOST9605:"リンク先の URI がより高いセキュリティ ゾーンにある*ため、ソースURI*からター*ゲーURI*に移動できません。  Web コンテキスト URI からローカル コンテキスト URI に移動し、MSApp.addPublicLocalApplicationUri メソッドでローカル コンテキスト URI を登録している場合を含むゾーンを大きくなっています。 | 詳細については [、MSApp.addPublicLocalApplicationUri を参照してください][PreviousVersionsHh771917]。  |  
+| APPHOST9606:"HTTP 接続を使用*uri*し、ms-https-connections-only メタ要素が含まうため、読み込みできません。  ms-https 接続のみのメタ要素を使用する場合、HTTPS 接続のみが許可されます。  HTTPS 接続を使用するか、または、接続が不要な場合は、メタ要素を削除してください。" | 詳細については [、HTTPS 接続を要求する方法を参照してください][PreviousVersionsWindowsAppsHh452771]。  |  
+| APPHOST9607: "このエラーのため、アプリは*uri*URI を*起動できません*。" | このエラーが発生しなかったリソースや無効なファイルが一般的な原因です。  |  
+| APPHOST9608: "このエラーコードのため、アプリは about:blank ページに *移動*できませんでした。" |  |  
 
 | エラー | 注釈 |  
 |:--- |:--- |  
-| APPHOST9620: "このアプリは、HTTP 接続を使用していて、ms https-接続のみの meta 要素が存在するため、閉じられました。  Https 接続のみの meta 要素を使う場合、HTTPS 接続のみが許可されます。  HTTPS 接続を使うか、またはセキュリティで保護された接続を必要としない場合は、meta 要素を削除します。 " | 詳細については、「 [HTTPS 接続を要求する方法][PreviousVersionsWindowsAppsHh452771]」を参照してください。  |  
-| APPHOST9623: "このエラーのため、アプリは*Url*を解決できませんでした。" というエラーが表示*されます*。 | このエラーの一般的な原因として、ファイルが見つからないことが考えられます。  |  
-| APPHOST9624: url が別のアプリを起動するため、アプリはスクリプトを使用して*url* url を読み込めません。  直接ユーザー操作のみが別のアプリを起動できます。 " | アプリでは、他のアプリを直接起動することはできません。  アプリが特定のコントラクトを実装するときに、ユーザーが他のアプリを起動することができます。  詳しくは、[アプリ コントラクトと拡張機能][PreviousVersionsWindowsAppsHh464906]についてのページをご覧ください。  |  
-| APPHOST9626: "リソースファイルへの直接参照 `ms-appx://1d33240b-0b00-40e4-a416-a4750c48787f/ja-jp\images\logo.scale-140.png` が検出されました。  この参照では、デバッグ環境以外で使用するとエラーが発生します。」 | この PNG ファイルは、のファイルパスのために `logo.scale-140.png` ローカライズされたリソースとして扱われるため、ローカライズされたリソースのエラーは直接参照できません。  このファイルを言語リソースとして使用する場合は、「[アプリをグローバライズする (HTML)][PreviousVersionsWindowsAppsHh465006] 」をご覧ください。  それ以外の場合は、問題のあるディレクトリの名前を変更してみてください。  |  
+| APPHOST9610: "カスタム エラー ページへの移動の準備中にエラーが見つかりました: *errorCode."* |  |  
+| APPHOST9611: "このエラーコードのため、アプリはカスタム エラー ページに *移動*できませんでした。" |  |  
+| APPHOST9613: "このエラーのため、アプリが*検索**できませんでした*。" |  |  
+| APPHOST9614: "iframe 内のドキュメントは要求 *されたDocMode docMode docMode docMode* モードを要求しましたが、システムは *現在のDocMode docMode docMode* を適用します。  iframe では *、currentDocMode docMode doc モードを* 使用します" と読み上げられます。 | リモート Web コンテンツの表示の詳細については、「 [外部 Web ページへのリンク方法」を参照してください][PreviousVersionsWindowsAppsHh780594]。  |  
+| APPHOST9615: "アプリは、ローカル コンテキストの*uri*外部でプログラムによって呼び出されたため、URI 時にファイルをダウンロードできません。" | Web コンテキスト内のコンテンツがプログラムによってファイルをダウンロードしなくても発生します。  |  
+| APPHOST9616: "この URI は地名 API を使用できません。  ジオレンジ API は、パッケージの一部である URI またはマニフェストの ApplicationContentUris 要素に含まれている URI からのみ実行できます。 | Web コンテキストで許可される機能の詳細については、コンテキスト [による機能と制限を参照してください][PreviousVersionsWindowsAppsHh465373]。  |  
+| APPHOST9617: "この URI はクリップボード API を使用できません。  クリップボード API は、パッケージの一部である URI またはマニフェストの ApplicationContentUris 要素に含まれている URI からのみ実行できます。 | Web コンテキストで許可される機能の詳細については、コンテキスト [による機能と制限を参照してください][PreviousVersionsWindowsAppsHh465373]。  |  
+| APPHOST9618: "この URI はウィンドウ.閉じます。  window.close メソッドは、ms-appx URI スキームで読み込んでいたパッケージ コンテンツからのみ起動できます。 | Web コンテキストで許可される機能の詳細については、コンテキスト [による機能と制限を参照してください][PreviousVersionsWindowsAppsHh465373]。  |  
+| APPHOST9619: "Web コンテキスト内の*uri*ページをアプリのトップ レベルのドキュメントにできないため、アプリは検索に移動できません。  代わりに iframe でページを読み込みます。" | 最上位のページをリモート Web ページに移動できませんが、アプリでは iframe 内で Web ページを [表示できます][MDNIframe]。  リモート Web コンテンツの表示の詳細については、「 [外部 Web ページへのリンク方法」を参照してください][PreviousVersionsWindowsAppsHh780594]。  |  
+
+| エラー | 注釈 |  
+|:--- |:--- |  
+| APPHOST9620: "このアプリは HTTP 接続を使用し、ms-https 接続のみのメタ要素が含まったため、このアプリは閉じられました。  ms-https 接続のみのメタ要素を使用する場合、HTTPS 接続のみが許可されます。  HTTPS 接続を使用するか、または、接続を必要としない場合は、メタ要素を削除してください。" | 詳細については [、HTTPS 接続を要求する方法を参照してください][PreviousVersionsWindowsAppsHh452771]。  |  
+| APPHOST9623: "このエラーコードが原因で *、* アプリが URL を解決できません *でした*。" | このエラーの一般的な原因として、ファイルが見つからない可能性があります。  |  
+| APPHOST9624: "このアプリでは、別のアプリを起動するため、スクリプトを使用して *URL* を読み込めません。  直接ユーザー操作のみで別のアプリを起動できます。" | アプリは他のアプリを直接起動できません。  他のアプリは、アプリが特定のコントラクトを実装したときにユーザーが起動できます。  詳しくは、[アプリ コントラクトと拡張機能][PreviousVersionsWindowsAppsHh464906]についてのページをご覧ください。  |  
+| APPHOST9626: "リソース ファイルへの直接参照 `ms-appx://1d33240b-0b00-40e4-a416-a4750c48787f/ja-jp\images\logo.scale-140.png` が検出されました。  この参照によって、デバッグ環境の外で使用すると失敗します。" | ファイル パスのため、この PNG ファイルはローカライズされたリソースとして認識されるため、ローカライズされたリソースで直接参照できないエラーが `logo.scale-140.png` 発生しています。  この [ファイルを言語リソースとして使用する場合は、アプリ (HTML)][PreviousVersionsWindowsAppsHh465006] をグローバライズしておきます。  それ以外の場合は、問題のディレクトリ名を変更してみてください。  |  
 
 ## 関連項目  
 
 [JavaScript での Windows ランタイムの使用][WindowsRuntimeJavascript]  
 
-<!-- image links -->  
-
 <!-- links -->  
 
-[WindowsRuntimeJavascript]: /microsoft-edge/windows-runtime/using-the-windows-runtime-in-javascript "JavaScript での Windows ランタイムの使用"  
+[WindowsRuntimeJavascript]: ./using-the-windows-runtime-in-javascript.md "JavaScript で Windows ランタイムを使用する |Microsoft ドキュメント"  
 
-[UwpWindowsGeolocationGeolocatorDevicesPositionChanged]: /uwp/api/Windows.Devices.Geolocation.Geolocator#Windows_Devices_Geolocation_Geolocator_PositionChanged "Geolocator クラス"  
+[UwpWindowsGeolocationGeolocatorDevicesPositionChanged]: /uwp/api/Windows.Devices.Geolocation.Geolocator#Windows_Devices_Geolocation_Geolocator_PositionChanged "Geolocator Class |Microsoft ドキュメント"  
 
-[PreviousVersionsHh771917]: /previous-versions/hh771917(v=vs.85) "addPublicLocalApplicationUri メソッド"  
+[PreviousVersionsHh771917]: /previous-versions/hh771917(v=vs.85) "addPublicLocalApplicationUri メソッド |Microsoft ドキュメント"  
 
-[PreviousVersionsWindowsAppsHh452771]: /previous-versions/windows/apps/hh452771(v=win.10) "HTTPS 接続を要求する方法 (HTML)"  
-[PreviousVersionsWindowsAppsHh464906]: /previous-versions/windows/apps/hh464906(v=win.10) "アプリコントラクトと拡張機能 (Windows ランタイムアプリ)"  
-[PreviousVersionsWindowsAppsHh465006]: /previous-versions/windows/apps/hh465006(v=win.10) "アプリをグローバライズする (HTML)"  
-[PreviousVersionsWindowsAppsHh465373]: /previous-versions/windows/apps/hh465373(v=win.10) "コンテキストによる機能と制限 (HTML)"  
-[PreviousVersionsWindowsAppsHh465380]: /previous-versions/windows/apps/hh465380(v=win.10) "HTML、CSS、JavaScript の機能と相違点 (HTML)"  
-[PreviousVersionsWindowsAppsHh780594]: /previous-versions/windows/apps/hh780594(v=win.10) "外部 web ページへのリンクを設定する方法 (HTML)"  
+[PreviousVersionsWindowsAppsHh452771]: /previous-versions/windows/apps/hh452771(v=win.10) "HTTPS 接続 (HTML) を要求する方法 |Microsoft ドキュメント"  
+[PreviousVersionsWindowsAppsHh464906]: /previous-versions/windows/apps/hh464906(v=win.10) "アプリの終了と拡張 (Windows ランタイム アプリ) |Microsoft ドキュメント"  
+[PreviousVersionsWindowsAppsHh465006]: /previous-versions/windows/apps/hh465006(v=win.10) "アプリ (HTML) |Microsoft ドキュメント"  
+[PreviousVersionsWindowsAppsHh465373]: /previous-versions/windows/apps/hh465373(v=win.10) "コンテキスト (HTML) による機能と制限Microsoft ドキュメント"  
+[PreviousVersionsWindowsAppsHh465380]: /previous-versions/windows/apps/hh465380(v=win.10) "HTML、CSS、JavaScript の機能と違い (HTML) |Microsoft ドキュメント"  
+[PreviousVersionsWindowsAppsHh780594]: /previous-versions/windows/apps/hh780594(v=win.10) "外部 Web ページ (HTML) へのリンク方法 |Microsoft ドキュメント"  
 
-[MDNIframe]: https://developer.mozilla.org/docs/Web/HTML/Element/iframe "<iframe>: インラインフレームの要素 |MDN"  
+[MDNIframe]: https://developer.mozilla.org/docs/Web/HTML/Element/iframe "<iframe>: インライン フレーム要素 |MDN"  

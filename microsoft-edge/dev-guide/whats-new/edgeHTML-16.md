@@ -1,101 +1,111 @@
 ---
 ms.assetid: 476c4b7a-be24-434b-a051-83f19d741aaf
-description: このガイドでは、Microsoft Edge に含まれている開発者向けの機能と標準の概要について説明します。
-title: 開発ガイド
+description: このガイドでは、Microsoft Edge に含まれる開発者の機能と標準の概要を説明します。
+title: EdgeHTML 16 の新機能と API
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 03/05/2020
+ms.date: 07/28/2020
 ms.topic: article
 ms.prod: microsoft-edge
-keywords: edge、web 開発、html、css、javascript、開発者
-ms.openlocfilehash: 36c5e6530ff584a97e4b42910757495362a1960d
-ms.sourcegitcommit: 6860234c25a8be863b7f29a54838e78e120dbb62
+keywords: edge、Web 開発、html、cs、javascript、開発者
+ms.openlocfilehash: a15888bc8c1314d61d436759e5d63be942174ea4
+ms.sourcegitcommit: 29cbe0f464ba0092e025f502833eb9cc3e02ee89
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "10568849"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "10941937"
 ---
-# EdgeHTML 16 の新機能
+# Microsoft EdgeHTML 16 の新機能  
 
-次に、 [EdgeHTML 16](https://blogs.windows.com/msedgedev/2017/10/17/edgehtml-16-fall-creators-update/) web platform で出荷される新機能と更新された機能の一覧を示し[ます (10/2017](https://blogs.windows.com/windowsexperience/2017/10/17/whats-new-windows-10-fall-creators-update/) 、ビルド 16299)。 特定の Windows Insider Preview ビルドでの変更については、 [Microsoft Edge の Changelog](https://developer.microsoft.com/microsoft-edge/platform/changelog/)と[EdgeHTML の新機能](../whats-new.md)をご覧ください。
+[!INCLUDE [deprecation-note](../../includes/legacy-edge-note.md)]  
 
-次の変更の固定リンクを示し [https://aka.ms/devguide_edgehtml_16](https://aka.ms/devguide_edgehtml_16) ます。
+[Windows 10 Fall Creators Update](https://blogs.windows.com/windowsexperience/2017/10/17/whats-new-windows-10-fall-creators-update) \(10/2017, ビルド 16299\)[の一部として、EdgeHTML 16 Web](https://blogs.windows.com/msedgedev/2017/10/17)プラットフォームで出荷された新機能と更新された機能の一覧を示します。  特定の Windows Insider Preview ビルドの変更内容については [、Microsoft Edge の変更履歴と](https://developer.microsoft.com/microsoft-edge/platform/changelog) [EdgeHTML の新機能を参照してください](../whats-new.md)。  
 
-## 新機能と更新された機能
+次の一覧を行うと、この機能が利用できます  [https://aka.ms/devguide_edgehtml_16](./edgehtml-16.md) 。  
 
-### CSS グリッドのレイアウト
+## 新機能と更新された機能  
 
-Microsoft Edge で、 [CSS グリッドレイアウト](https://www.w3.org/TR/css-grid-1/)のプレフィックスのない実装がサポートされるようになりました。 [Grid レイアウト](https://developer.mozilla.org/docs/Web/CSS/CSS_Grid_Layout)では、2次元グリッドベースのレイアウトシステムが定義されています。これにより、フロートまたはスクリプトを使用した配置で、より多くのレイアウト適切な決まりが可能になります。 次の例では、CSS Grid レイアウトを使って、基本的な web ページの構造を作成しています。
+### CSS グリッド レイアウト  
 
+Microsoft Edge では、CSS グリッド レイアウトの先頭フィックスなし [の実装がサポートされるようになりました](https://www.w3.org/TR/css-grid-1)。  [グリッ](https://developer.mozilla.org/docs/Web/CSS/CSS_Grid_Layout) ド レイアウトは 2 次次のグリッドベース レイアウト システムを定義し、フロートやスクリプトを使用した位置よりもレイアウトのフラデリングが可能になります。  次の例では、CSS グリッド レイアウトを使用して、基本的な Web ページ用の構造を作成します。  
 
-<iframe height='303' scrolling='no' title='CSS グリッドのレイアウト' src='//codepen.io/MSEdgeDev/embed/mMQqZX/?height=303&theme-id=23761&default-tab=css,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true'><a href='https://codepen.io/MSEdgeDev/pen/mMQqZX/'> </a> CodePen の MSEdgeDev (@MSEdgeDev) でペン CSS グリッドレイアウトを参照してください <a href='https://codepen.io/MSEdgeDev'> </a> <a href='https://codepen.io'> </a> 。
-</iframe>
+<iframe height='303' scrolling='no' title='CSS グリッド レイアウト' src='//codepen.io/MSEdgeDev/embed/mMQqZX/?height=303&theme-id=23761&default-tab=css,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true'>CodePen の Pen <a href='https://codepen.io/MSEdgeDev/pen/mMQqZX/'> CSS </a> <a href='https://codepen.io/MSEdgeDev'> グリッド レイアウト </a> @MSEdgeDev) <a href='https://codepen.io'> を参照してください </a> 。</iframe>  
 
+### CSS オブジェクトに合うオブジェクト位置とオブジェクト位置  
 
-### CSS `object-fit` と `object-position`
+Microsoft EdgeHTML 16 では、CSS のプロパティとサポートが追加 [`object-fit`](https://developer.mozilla.org/docs/Web/CSS/object-fit) されました [`object-position`](https://developer.mozilla.org/docs/Web/CSS/object-position) 。  これらのプロパティは、置換されたコンテンツ ボックス内のコンテンツの位置とサイズを制御します。  
 
-EdgeHTML 16 では、CSS プロパティとのサポートが導入さ [`object-fit`](https://developer.mozilla.org/docs/Web/CSS/object-fit) [`object-position`](https://developer.mozilla.org/docs/Web/CSS/object-position) れています。  これらのプロパティは、コンテンツボックス内の置換されたコンテンツの位置とサイズを制御します。  
+### 開発者ツール  
 
-### 開発者ツール
+このリリースでは、強化された強力な機能とパフォーマンス向上のための主な Microsoft Edge DevTools の取り戻り機能を開始しました。 [また、Windows Insider ビルド](https://insider.windows.com) で今日の使用を開始できる新機能が数多く加えられました。  [変更内容の詳細については、Microsoft Edge DevTools](../whats-new.md)ガイドをご覧ください。  
 
-このリリースでは、優れた信頼性とパフォーマンスを向上させるための主要な Microsoft Edge DevTools リファクタリングの取り組みを開始しました。また、 [Windows Insider](https://insider.windows.com/)ビルドで今日使用できる新機能の多数を追加しました。  変更点については、 [Microsoft Edge DevTools のガイド](../../devtools-guide/whats-new.md)をご覧ください。
+### JavaScript  
 
-### JavaScript
+[EdgeHTML 16 は、以前のリリースの Javascript パ](https://blogs.windows.com/msedgedev/2017/10/31)フォーマンス最適化に基するビルドで、キャクラエンド関数を Defer/re dedefer 関数の使用し、ブロック付きの関数を最適化 `try` / `finally` します。  
 
-[EdgeHTML 16](https://blogs.windows.com/msedgedev/2017/10/31/optimizations-webassembly-sharedarraybuffer-atomics-edgehtml-16/#FodxEPHxR4WkbtyA.97)は、以前のリリースの Javascript パフォーマンスの最適化について、Chakra エンジンの機能を拡張して、関数の遅延/再遅延、ポリモーフィックなインラインキャッシュの使用、 *try/finally*ブロックでの関数の最適化を実現しています。
+さらに、Microsoft EdgeHTML 15 で最初にプレビューした機能が、既定で有効になり、既定で有効になりました。  
 
-さらに、EdgeHTML 15 で最初にプレビューされた機能は、既定で安定して有効になりました。
+#### 新機能  
 
-#### 新機能 (既定でオン)
+既定でオン  
 
-* [WebAssembly](https://developer.microsoft.com/microsoft-edge/platform/status/webassemblymvp/?q=WebAssembly)おMVP ([デモ](https://webassembly.org/demo/))
-* [共有メモリと Atomics](https://developer.microsoft.com/microsoft-edge/platform/status/sharedmemoryandatomics/?q=Atomics)
+*   [WebAssembly](https://developer.microsoft.com/microsoft-edge/platform/status/webassemblymvp/?q=WebAssembly) MVP \([デモ](https://webassembly.org/demo)\)  
+*   [共有メモリとアトミックス](https://developer.microsoft.com/microsoft-edge/platform/status/sharedmemoryandatomics/?q=Atomics)  
 
-### 支払い要求 API
+### 支払い要求 API  
 
-[支払い要求 API](../windows-integration/payment-request-api.md)は、ユーザーがクラウドに保存されている商人、消費者、支払方法 (クレジットカードなど) との仲介としてブラウザーが機能するようにする、オープンなクロスブラウザー標準です。  EdgeHTML 16 の API は、W3C の最新の[支払い要求 api](https://w3c.github.io/payment-request/)仕様と一致するように更新されました。 次のようなシナリオが考えられます。
-* メソッドのサポート `canMakePayment()`
-* プロパティのサポート `requestId`
-* プロパティのサポート `id`
-* `complete()`メソッドのパラメーターの既定値が `result` "" から "不明" に変更されました。
+[支払要求 API は開発者](../windows-integration/payment-request-api.md)がクラウドに保存されているメッカー、コンシューマー、支払方法 \(クレジット カード\) 間の中間として機能する開いています。  Microsoft EdgeHTML 16 の API が最新の W3C [Payment Request API の指定と一致するように更新](https://w3c.github.io/payment-request) されました。  次のようなシナリオが考えられます。  
 
-### サービス員
+*   方法の `canMakePayment()` サポート  
+*   プロパティの `requestId` サポート  
+*   プロパティの `id` サポート  
+*   メソッドのパラ `complete()` メーターの既定値 `result` は、"" から "不明" に変更されます。  
 
-[サービスワーカー](https://www.w3.org/TR/service-workers-1/)は、web ページのバックグラウンドで実行されるイベント駆動型のスクリプトです。 サービスワーカーは、以前は、ネットワークからの要求の傍受と処理、バックグラウンド同期の管理と処理、ローカルストレージ、プッシュ通知などのネイティブアプリでのみ利用できる機能を有効にします。 サービスワーカーのサポートはまだ開発段階ですが、Microsoft Edge で、サービスワーカー機能を [ **about: flags**] で有効にすることによって、実験的なサービスワーカーサポートで PWA をテストできます。
+### サービス ワーカー  
 
-### WebVR
-Microsoft Edge 用 WebVR では、[モーションコントローラー](https://developer.microsoft.com/windows/mixed-reality/motion_controllers)のサポートが追加されました。 これらのコントローラーは、空間内の正確な位置を持ち、仮想現実のデジタルオブジェクトのきめ細かな操作を実現します。
+[サービス ワーカーは](https://www.w3.org/TR/service-workers-1) 、Web ページのバックグラウンドで実行されるイベント ベースのスクリプトです。  サービスワーカーは、以前はネットワークから要求を取り消す、バックグラウンド同期の管理と取り付け、ローカル ストレージ、プッシュ通知など、以前はネイティブ アプリでのみ利用できます。  サービス ワーカーのサポートは現在開発中ですが、サービス ワーカー機能を有効にすることで、Microsoft Edge の実用サービス ワーカー サポートをテストすることができます `about:flags` 。  
 
-![モーションコントローラー](../media/MotionControllers.jpg)
+### WebVR  
 
-また、WebVR は、2種類のエクスペリエンスをサポートするように最適化されています。
+WebVR for Microsoft Edge では、モーション コントロー [ラーのサポートが追加されました](https://developer.microsoft.com/windows/mixed-reality/motion_controllers)。  これらのコントローラーはスペースで正確な位置であり、仮想リアルティでデジタル オブジェクトとのやり取りをきれいにすることができます。  
 
-**Windows Mixed Reality pc** -内蔵グラフィックス付きのデスクトップとノート pc。  これらのデバイスに接続すると、イマーシブヘッドセットは1秒あたり60フレームで動作します。  
-**Windows Mixed Reality ウルトラ pc** -個別のグラフィックスを備えたデスクトップとノート pc。 これらのデバイスに接続すると、イマーシブヘッドセットは1秒あたり90フレームで動作します。   
+:::image type="complex" source="../media/MotionControllers.jpg" alt-text="モーション コントローラー" lightbox="../media/MotionControllers.jpg":::
+   モーション コントローラー  
+:::image-end:::  
 
-どちらのセットアップでも、同じイマーシブビデオとゲームエクスペリエンスがサポートされます。 
+また、WebVR は、2 種類の異なるエクスペリエンスをサポートする最適化されています。  
 
-今後の Windows Mixed Reality の更新について詳しくは、「 [Windows Mixed reality](https://blogs.windows.com/windowsexperience/2017/08/28/windows-mixed-reality-holiday-update/)の更新」のブログ投稿をご覧ください。 
+**Windows Mixed Reality PC** - 統合グラフィック付きのデスクトップとノート PC。  これらのデバイスに接続すると、イマーシブ ヘッドセットは 1 秒あたり 60 フレームで実行されます。  
+**Windows Mixed Reality Ultra PC** - グラフィックとノート PC に、グラフィックが分けされたデスクトップやノート PC。  これらのデバイスに接続すると、イマーシブ ヘッドセットは 1 秒あたり 90 フレームで実行されます。  
 
-ガイドとデモについては、「 [Webvr 開発者向けガイド」](https://docs.microsoft.com/microsoft-edge/webvr/)を参照してください。
+どちらのセットアップも、同じイマーシブ ビデオとゲーム エクスペリエンスをサポートします。  
+
+以降の Windows Mixed Reality の更新プログラムの詳細については [、Windows Mixed Reality](https://blogs.windows.com/windowsexperience/2017/08/28/windows-mixed-reality-holiday-update) の祝日の更新プログラムのブログを参照してください。  
+
+ガイドやデモについては [、WebVR](/microsoft-edge/webvr)開発者ガイドを参照してください。  
 
  > [!NOTE] 
- > WebVR の仕様はまだ開発段階のため、Microsoft Edge の実装は後で変更される可能性があります。
+ > WebVR の速度は開発中であるため、Microsoft Edge の実装は後で行直す場合があります。  
 
-## EdgeHTML 16 の新しい Api
+## EdgeHTML 16 の新しい API  
 
-EdgeHTML 16 の新しい Api の一覧を次に示します。 [Interface name] の形式で一覧表示され**ます。 [api 名]**。
+EdgeHTML 16 の新しい API の完全な一覧を次に示します。  これらは形式で表示されます `[interface name].[api name]` 。
 
 > [!NOTE] 
-> 次の Api は DOM に公開されますが、一部のエンドツーエンドの動作はまだ開発中の可能性があります。 機能のサポートに関するオフィシャル単語については、 [Microsoft Edge プラットフォームの状態](https://developer.microsoft.com/microsoft-edge/platform/status/)を参照してください。
+> 次の API は DOM で予定されていますが、一部の開発中のエンドツーエンド動作がまだあります。  機能サポート  [のコーサル語については、Microsoft Edge](https://developer.microsoft.com/microsoft-edge/platform/status) プラットフォームの状態を参照してください。  
 
-<iframe height='559' scrolling='no' title='EdgeHTML 16 の新しい Api' src='//codepen.io/MSEdgeDev/embed/jLGZZY/?height=559&theme-id=23761&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true'><a href='https://codepen.io/MSEdgeDev/pen/jLGZZY/'>EdgeHTML 16 </a> x MSEdgeDev (@MSEdgeDev) の Pen 新しい api <a href='https://codepen.io/MSEdgeDev'> を </a> CodePen で <a href='https://codepen.io'> </a> 参照してください。</iframe></p>
+---  
 
-<h2 id="previous-edgehtml-releases">以前の EdgeHTML リリース</h2>
-<p><a href="https://aka.ms/devguide_edgehtml_12" data-raw-source="[EdgeHTML 12 / Windows build 10240 (7/2015)](https://aka.ms/devguide_edgehtml_12)">EdgeHTML 12/Windows ビルド 10240 (7/2015)</a>
+<iframe height='559' scrolling='no' title='EdgeHTML 16 の新しい API' src='//codepen.io/MSEdgeDev/embed/jLGZZY/?height=559&theme-id=23761&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true'><a href='https://codepen.io/MSEdgeDev/pen/jLGZZY/'>CodePen の EdgeHTML 16 の Pen New API </a> <a href='https://codepen.io/MSEdgeDev'> @MSEdgeDev </a> <a href='https://codepen.io'> 参照してください </a> 。</iframe>  
 
-[EdgeHTML 13/Windows ビルド 10586 (11/2015)](https://aka.ms/devguide_edgehtml_13)
+---  
 
-[EdgeHTML 14/Windows ビルド 14393 (8/2016)](https://aka.ms/devguide_edgehtml_14)
+## 以前の EdgeHTML リリース  
 
-[EdgeHTML 15/Windows ビルド 15063 (4/2017)](https://aka.ms/devguide_edgehtml_15)
+[Microsoft EdgeHTML 12 / Windows ビルド 10240 (7/2015)](./edgehtml-12.md)  
+
+[Microsoft EdgeHTML 13 / Windows ビルド 10586 (2015/11)](./edgehtml-13.md)  
+
+[EdgeHTML 14 / Windows ビルド 14393 (8/2016)](./edgehtml-14.md)  
+
+[Microsoft EdgeHTML 15 / Windows ビルド 15063 (4/2017)](./edgehtml-15.md)  

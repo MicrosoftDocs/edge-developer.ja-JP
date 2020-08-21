@@ -1,7 +1,7 @@
 ---
-title: JavaScript での Windows ランタイムイベントの処理
+title: JavaScript での Windows ランタイム イベントの処理
 ms.custom: ''
-ms.date: 04/01/2017
+ms.date: 07/29/2020
 ms.prod: microsoft-edge
 ms.reviewer: ''
 ms.suite: ''
@@ -16,16 +16,18 @@ caps.latest.revision: 6
 author: MSEdgeTeam
 ms.author: msedgedevrel
 manager: ''
-ms.openlocfilehash: c3db0116a3d464c75fe754e73e41ff1d154f928e
-ms.sourcegitcommit: 6860234c25a8be863b7f29a54838e78e120dbb62
+ms.openlocfilehash: fe44457206569c1e32c40514b4b186bec50d1e3c
+ms.sourcegitcommit: 29cbe0f464ba0092e025f502833eb9cc3e02ee89
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "10570790"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "10942158"
 ---
-# JavaScript での Windows ランタイムイベントの処理  
+# JavaScript での Windows ランタイム イベントの使用  
 
-Windows ランタイムイベントは、JavaScript で C++ または .NET Framework と同じようには表現されません。  これらはクラスのプロパティではなく、クラスとメソッドに渡される \ (小文字の \) 文字列識別子として表され `addEventListener` `removeEventListener` ます。  たとえば、次のようにメソッドに "positionchanged" という文字列を渡すことによって、 [Geolocator の PositionChanged][UwpWindowsGeolocationGeolocatorDevicesPositionChanged]イベントのイベントハンドラーを追加することができます。 `Geolocator.addEventListener`  
+[!INCLUDE [deprecation-note](../includes/legacy-edge-note.md)]  
+
+Windows ランタイム イベントは、C++ または .NET Framework と同じ方法で表されません。  クラスのプロパティであり、クラスのメソッドに合わされた \(lowercase\) の文字列識別子として `addEventListener` `removeEventListener` 表されます。  たとえば、文字列をメソッドに入力することで [、Geolocator.PositionChanged][UwpWindowsGeolocationGeolocatorDevicesPositionChanged] イベントのイベント ハンド `positionchanged` ラーを `Geolocator.addEventListener` 追加できます。  
 
 ```javascript  
 var locator = new Windows.Devices.Geolocation.Geolocator();
@@ -36,7 +38,7 @@ locator.addEventListener(
     });
 ```  
 
-プロパティを設定することもでき `locator.onpositionchanged` ます。  
+プロパティを設定 `locator.onpositionchanged` する方法:  
 
 ```javascript
 locator.onpositionchanged =
@@ -45,28 +47,26 @@ locator.onpositionchanged =
     };
 ```  
 
-.NET/C++ と JavaScript のもう1つの違いは、イベントハンドラーによって実行されるパラメーターの数です。  .NET/C++ では、ハンドラーはイベントの送信者とイベントデータの2つの処理を実行します。  JavaScript では、2つは1つのオブジェクトとしてバンドルされ `Event` ます。  次の例では、 `ev` パラメーター \ ( `target` property) と event data properties (\ i) の送信者の両方がパラメーターとして含まれてい `position` ます。  イベントデータプロパティは、各イベントについて記載されているものです。  
+.NET/C++ と JavaScript の別の違いは、イベント ハンドラーによって実行されるパラメーターの数です。  .NET/C++では、ハンドラーにはイベントの差出人とイベント データの 2 つがあります。  JavaScript では、2 つは 1 つのオブジェクトとしてバンド `Event` ルされます。  次の例では、パラメ `ev` ーターにはイベント \(プロパティ\) とイベント データ プロパティ `target` \(ここで \) の送信者の `position` 両方が含まれています。  イベント データ プロパティは、イベントごとに文書を作成するものです。  
 
 ```javascript
 function (ev) {
-    console.log("Sender:  " + ev.target);
-    console.log("Position:  " +
+    console.log("Sender: " + ev.target);
+    console.log("Position: " +
         ev.position.latitude + "," +
         ev.position.longitude);
 };
 ```  
 
 > [!IMPORTANT]
-> Windows ランタイム機能は、Internet Explorer で実行されるアプリでは使用できません。  
+> Internet Explorer で実行されているアプリでは、Windows ランタイム機能は使用できません。  
 
 ## 関連項目  
 
 [JavaScript での Windows ランタイムの使用][WindowsRuntimeJavascript]  
 
- <!-- image links -->  
-
  <!-- links -->  
 
-[WindowsRuntimeJavascript]: /microsoft-edge/windows-runtime/using-the-windows-runtime-in-javascript "JavaScript での Windows ランタイムの使用"  
+[WindowsRuntimeJavascript]: ./using-the-windows-runtime-in-javascript.md "JavaScript で Windows ランタイムを使用する |Microsoft ドキュメント"  
 
-[UwpWindowsGeolocationGeolocatorDevicesPositionChanged]: /uwp/api/Windows.Devices.Geolocation.Geolocator#Windows_Devices_Geolocation_Geolocator_PositionChanged "Geolocator クラス"  
+[UwpWindowsGeolocationGeolocatorDevicesPositionChanged]: /uwp/api/Windows.Devices.Geolocation.Geolocator#Windows_Devices_Geolocation_Geolocator_PositionChanged "Geolocator Class |Microsoft ドキュメント"  

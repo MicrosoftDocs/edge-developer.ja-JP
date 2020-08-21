@@ -1,27 +1,29 @@
 ---
-description: Adobe Flash が必要なサイトでシームレスなユーザーエクスペリエンスを提供します。
-title: 開発ガイド-Flash
+description: Adobe Flash を必要とするサイトでシームレスなユーザー エクスペリエンスを提供します。
+title: フラッシュ - 開発ガイド
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 03/05/2020
+ms.date: 07/28/2020
 ms.topic: article
 ms.prod: microsoft-edge
-keywords: edge、web 開発、flash
-ms.openlocfilehash: b3e2efe142142b7cdf233acfc4e915cd320b556d
-ms.sourcegitcommit: 6860234c25a8be863b7f29a54838e78e120dbb62
+keywords: Edge、Web 開発、フラッシュ
+ms.openlocfilehash: 33ee1c782fc969b2251ed075a59d8fa61bf61831
+ms.sourcegitcommit: 29cbe0f464ba0092e025f502833eb9cc3e02ee89
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "10568834"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "10942035"
 ---
-# フラッシュ
+# Flash  
 
-Adobe Flash は、数十年にわたり web の重要な部分であり、HTML5 が導入される前以降、ブラウザーでリッチコンテンツとアニメーションを実現しています。 最新のブラウザーでは、Microsoft、アドビ、Google、Apple、Mozilla などの web 標準 pioneered が、Flash を使用せずに、またパフォーマンスとセキュリティを向上させることができるようになりました。 他のブラウザーベンダーとアドビシステムズ社との連携により、開発者は、[暗号化されたメディア拡張](https://developer.microsoft.com/microsoft-edge/platform/status/encryptedmediaextensions)機能[、メディアソース拡張機能](https://developer.microsoft.com/microsoft-edge/platform/status/mediasourceextensions)、[キャンバス](https://developer.microsoft.com/microsoft-edge/platform/status/canvas)、 [Web オーディオ](https://developer.microsoft.com/microsoft-edge/platform/status/webaudioapi)、[リアルタイム通信](https://developer.microsoft.com/microsoft-edge/platform/status/webrtcobjectrtcapi)などの HTML5 標準に移行することを強くお勧めします。
+[!INCLUDE [deprecation-note](../../includes/legacy-edge-note.md)]  
 
-2018年10月の Windows 10 リリースでは、Microsoft Edge は、2021の後の[Adobe のサポート終了のお知らせ](https://theblog.adobe.com/adobe-flash-update/)の一部として[カバー](https://blogs.windows.com/msedgedev/2017/07/25/flash-on-windows-timeline/#9mCF959eQEK0poo5.97)されていた Flash の廃止の取り組みを継続しています。 10月の2018リリースでは、ユーザーはタブの有効期間中に、サイトでのフラッシュの実行を明示的に許可する必要があります。永続的な [常に許可] オプションは利用できなくなり、ユーザーはタブセッションにわたるサイト内のフラッシュアクセス許可を管理することができなくなります。
+Adobe Flash は Web の一部で整合性が高い一部で、HTML5 が導入される前にブラウザーでリッチ コンテンツとアニメーションを有効にしています。  最新のブラウザーでは、Microsoft、Adobe、Google、Apple、Mozilla、その他の多くの他の多くは、Flash およびパフォーマンスとセキュリティが向上したサイトを有効にしています。  他のブラウザー ベンダーや Adobe とのパートナーシップを使用して、暗号化された[メ](https://developer.microsoft.com/microsoft-edge/platform/status/encryptedmediaextensions)ディア拡張機能、[メ](https://developer.microsoft.com/microsoft-edge/platform/status/mediasourceextensions)ディア ソース拡張機能、キャンバス[、Web オーディオ、リ](https://developer.microsoft.com/microsoft-edge/platform/status/webaudioapi)アルタイム通信など、HTML5[Canvas](https://developer.microsoft.com/microsoft-edge/platform/status/canvas)標準に移行することを強くおす[すめします](https://developer.microsoft.com/microsoft-edge/platform/status/webrtcobjectrtcapi)。  
 
-HTML5 標準への移行に応じて、Windows 10 の作成者の更新プログラムで、Microsoft Edge を使用して web サイトにアクセスすることができるようにするための簡単な方法がいくつかあります。 
+Windows 10 Microsoft Edge の 2018 年 10 月リリースでは、2021 年[10 月以降にサポート](https://theblog.adobe.com/adobe-flash-update)終了の一部として取り上げている Flash Deprecation の取りを中止しています。 [covered](https://blogs.windows.com/msedgedev/2017/07/25)  2018 年 10 月リリースユーザーは、ポートの有効期限についてサイトで Flash を実行できるような必要があります。 [常に許可] オプションは使用できなくなり、ユーザーは、タブ セッションをまたいるサイト フラッシュ アクセス許可によって管理できなくなります。  
 
-ページで Flash が使用されていても、ユーザーが有効にしていない場合、Microsoft Edge では通常、[このブログ](https://blogs.windows.com/msedgedev/2016/12/14/edge-flash-click-run/#41svu6EMwKIAaigx.97)に示すように、アドレスバーにパズルピースアイコンが表示されます。 ページの読み込み後にフラッシュコントロールを動的に追加している場合は、このパズルのピースアイコンが表示されないことがあります。この場合は、Flash の存在をテストし、次に示すようにリンクを提供することをお勧めします。
+HTML5 標準に移行する場合、ユーザーが Windows 10 Creators Update の Microsoft Edge で Web サイトにアクセスした Web サイトを引き続き使用できるように、簡単な操作をいくつか実行できます。  
 
-すべてのユーザーが適切なエクスペリエンスを実現するには、標準のメカニズムを使用して、フラッシュの有無をテストしてください。 Microsoft Edge で Flash が使用できないという報告があった場合は、[フラッシュダウンロードリンク](http://get.adobe.com/flashplayer)と[フラッシュダウンロードイメージ](http://www.adobe.com/legal/permissions/icons-web-logos.html#flashplayer)をユーザーに提示します。 ユーザーがリンクをクリックすると、Microsoft Edge (およびその他のブラウザー) には、サイトの Flash Player を有効にするために必要なメッセージが表示されます。 Flash を有効にするプライマリドメインにリンクが表示されている必要があります。 他のドメインのページにユーザーをリダイレクトする場合は、この機能は使用できません。  ここでは、提案されたエクスペリエンスと対応する[サンプルコード](https://github.com/MicrosoftEdge/MicrosoftEdge-Documentation/tree/master/docs/flashclicktorun)の[デモを示し](https://microsoftedge.github.io/MicrosoftEdge-Documentation/flashclicktorun/)ます。
+ページで Flash を使用していて、ユーザーがフラッシュを有効にしていない場合、通常、Microsoft Edge では、通常、アドレス バーに puzzle piece [アイコンが表示されます](https://blogs.windows.com/msedgedev/2016/12/14)。このブログに示されます。  ページの読み込み後に Flash コントロールを動的に追加する場合は、このピズル 円のアイコンが表示されない場合があります。  この場合は、Flash のプレゼンスをテストし、以下で説明するリンクを提供するのが最も有効です。  
+
+すべてのユーザーが良いエクスペリエンスを得るために、標準的なメカニズムを使用してフラッシュのプレゼンスをテストします。  Microsoft Edge で Flash が利用できないことを報告する場合は [、Flash ダウンロード](http://get.adobe.com/flashplayer) リンクと [Flash ダウンロード画像を](http://www.adobe.com/legal/permissions/icons-web-logos.html#flashplayer) ユーザーに表示します。  ユーザーがリンクをクリックすると、Microsoft Edge \(および他のブラウザー\) がサイトで Flash Player を有効にするよう求められます。  Flash を有効にするプライマリ ドメインにリンクが表示されている必要があります。  ユーザーを他のドメインのページにリダイレクトしても、この機能は動作しません。  [推案されるエクスペリエ](https://microsoftedge.github.io/MicrosoftEdge-Documentation/flashclicktorun) ンスと対応するサンプル コードのデモ [を次に示します](https://github.com/MicrosoftEdge/MicrosoftEdge-Documentation/tree/master/docs/flashclicktorun)。  

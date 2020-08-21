@@ -1,27 +1,32 @@
 ---
-description: Microsoft Edge の Windows 統合機能のガイドです。
-title: 開発ガイド-Windows 統合機能
+description: Microsoft Edge の Windows 統合機能のガイド。
+title: Windows 統合機能 - デベロッパー ガイド
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 01/15/2020
+ms.date: 07/28/2020
 ms.topic: article
 ms.technology: windows-integration
 ms.prod: microsoft-edge
-keywords: edge、web 開発、html、css、javascript、開発者
-ms.openlocfilehash: b94f09e7161856acec9a55488c10e5fc6fd6fc4d
-ms.sourcegitcommit: 6860234c25a8be863b7f29a54838e78e120dbb62
+keywords: edge、Web 開発、html、cs、javascript、開発者
+ms.openlocfilehash: ba69d971c6a5006bc00f9e67517b40be1ab5692d
+ms.sourcegitcommit: 29cbe0f464ba0092e025f502833eb9cc3e02ee89
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "10569197"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "10941839"
 ---
-# Windows 統合機能
+# Windows 統合機能  
 
-## 支払い要求 API
-[支払い要求 API](./windows-integration/Payment-Request-API.md)は、ユーザーがクラウドに保存されているマーチャント、消費者、支払方法 (クレジットカードなど) との仲介としてブラウザーを有効にする、オープンなクロスブラウザー標準です。
+[!INCLUDE [deprecation-note](../includes/legacy-edge-note.md)]  
 
-## Web 認証と Windows Hello
-Microsoft Edge の[Web 認証 API](./windows-integration/web-authentication.md)では、web アプリケーションが[Windows Hello](https://go.microsoft.com/fwlink/p/?LinkID=624961)生体認証を使用してユーザー認証を行うことができます。
+## 支払い要求 API  
 
-## Web 通知 API
-[Web 通知 API](./windows-integration/web-Notifications-API.md)を使うと、web サイトは Microsoft Edge ブラウザーのコンテキスト外でユーザー通知を送信できます。
+[支払要求 API は開](./windows-integration/payment-request-api.md)いており、クロスブラウザー標準であり、ブラウザーで、コンシューマーがクラウドに保存されているメッセント、コンシューマー、支払方法 \(クレジット カード\など) 間の中間としてブラウザーを操作できます。  
+
+## Web 認証と Windows Hello  
+
+Microsoft Edge [の Web Authentication API](./windows-integration/web-authentication.md) を使用すると、Web アプリケーションが [ユーザー認証に Windows Hello](https://www.microsoft.com/windows/comprehensive-security) Biometrics を使用できます。  
+
+## Web 通知 API  
+
+[Web Notifications API](./windows-integration/web-notifications-api.md)を使用すると、Web サイトで Microsoft Edge ブラウザーのコンテキスト外でユーザー通知を送信できます。  

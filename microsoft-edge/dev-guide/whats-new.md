@@ -1,48 +1,54 @@
 ---
-description: このページでは、開発者向けの EdgeHTML preview ビルドの新機能の概要を説明します。
-title: EdgeHTML の開発者向けの新機能
+description: このページでは、開発者向けの EdgeHTML プレビュー ビルドの新機能の概要を示します。
+title: 開発者向け EdgeHTML の新機能 - 開発ガイド
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 11/07/2018
+ms.date: 07/28/2020
 ms.topic: article
 ms.prod: microsoft-edge
-keywords: edge、web 開発、html、css、javascript、開発者、edge の新機能、edge の新しい Api、edgehtml、edgehtml preview ビルド
-ms.openlocfilehash: d577634cfe7fc3fe591a793bd792fad9065c7d5e
-ms.sourcegitcommit: 6860234c25a8be863b7f29a54838e78e120dbb62
+keywords: Edge、Web 開発、html、cs、javascript、開発者、Edge、Edgehtml の新しい API、Edgehtml、Edgehtml プレビュー ビルド
+ms.openlocfilehash: 81973d12f6e66b5e6f1c3cd6a12fee196c4495d7
+ms.sourcegitcommit: 29cbe0f464ba0092e025f502833eb9cc3e02ee89
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "10568824"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "10941961"
 ---
-# EdgeHTML の新機能
+# EdgeHTML の新着情報  
 
-[Windows Insider](https://insider.windows.com/)になることで、最新の EdgeHTML 機能と api を入手できます。 [Windows Insider プログラム](https://insider.windows.com/)は、利用可能になったらすぐに最新の windows 10 ビルドを提供します。 
+[!INCLUDE [deprecation-note](../includes/legacy-edge-note.md)]  
 
-Microsoft Edge プラットフォーム EdgeHTML 18 (ビルド 17763) の現在のリリースで出荷されている新機能と Api については、[開発ガイド](../dev-guide.md)を参照してください。 
+Windows Insider になることで、最新の EdgeHTML の機能と API を [取得します](https://insider.windows.com)。  [Windows Insider Program には](https://insider.windows.com)、提供されたらす次に、最新の Windows 10 ビルドが提供されます。  
 
-次に示すのは、Windows 10 Preview ビルドの新規および更新された EdgeHTML Api です。 [Interface name] の形式で一覧表示され**ます。 [api 名]**。 最新の Microsoft Edge とプラットフォームの機能の完全な一覧については、「 [Changelog](https://developer.microsoft.com/microsoft-edge/platform/changelog/) (参照)」または「[開発ガイド](../dev-guide.md)」を参照して、microsoft edge プラットフォームの現在の安定したリリースで出荷されている新機能と api EdgeHTML 18 を参照してください。  
+Microsoft Edge プラットフォーム [の](../dev-guide.md) 現在のリリースで出荷された新機能と API を開発ガイドに進み、Microsoft Edge プラットフォーム、EdgeHTML 18 \(ビルド 17763\) に出荷された API を確認します。  
+
+以下は、Windows 10 Preview ビルドの新しい EdgeHTML API を提供して更新します。 これらは形式で表示されます `[interface name].[api name]` 。  Microsoft Edge およびプラットフォームの新機能の完全な一覧[Changelog](https://developer.microsoft.com/microsoft-edge/platform/changelog)については、変更ログまたは[デ](../dev-guide.md)ベロッパー ガイドに進み、Microsoft Edge プラットフォーム、EdgeHTML 18 の現在の中止済みリリースで API に出荷された API を確認してください。   
 
 > [!WARNING] 
-> 一部の情報はリリース前の製品に関する事項であり、正式版がリリースされるまでに大幅に変更される可能性があります。 ここに記載された情報について、Microsoft は明示または黙示を問わずいかなる保証をするものでもありません。
+> 一部の情報は、商用版のリリース前に大分に変更される可能性があります。  ここに記載された情報について、Microsoft は明示または黙示を問わずいかなる保証をするものでもありません。  
 
-## プレビュービルド18272
-API の変更はありません。
+## プレビュー ビルド 18272  
 
-## プレビュービルド18267
-API の変更はありません。
+API が変更される必要がありません。  
 
-## プレビュービルド18262
+## プレビュー ビルド 18267  
 
-新しい API のサポートが追加されました。
+API が変更される必要がありません。  
 
-<iframe height='341' scrolling='no' title='EdgeHTML Preview ビルド17682' src='//codepen.io/MSEdgeDev/embed/5a691c1840690352f409d3788b8167fa/?height=341&theme-id=23761&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'><a href='https://codepen.io/MSEdgeDev/pen/5a691c1840690352f409d3788b8167fa/'> </a> CodePen の MSEdgeDev (@MSEdgeDev) で、「Pen EdgeHTML Preview ビルド17682」を参照してください <a href='https://codepen.io/MSEdgeDev'> </a> <a href='https://codepen.io'> </a> 。
-</iframe>
+## プレビュー ビルド 18262  
 
-## プレビュービルド18252
-API の変更はありません。
+新しい API のサポートが追加されました。  
 
-## プレビュービルド18247
-API の変更はありません。
+<iframe height='341' scrolling='no' title='EdgeHTML Preview ビルド 17682' src='//codepen.io/MSEdgeDev/embed/5a691c1840690352f409d3788b8167fa/?height=341&theme-id=23761&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>CodePen で Pen <a href='https://codepen.io/MSEdgeDev/pen/5a691c1840690352f409d3788b8167fa/'> EdgeHTML Preview ビルド 17682 </a> by MSEdgeDev <a href='https://codepen.io/MSEdgeDev'> </a> (@MSEdgeDev) を <a href='https://codepen.io'> 参照してください </a> 。  </iframe>  
 
-## プレビュービルド18242
-API の変更はありません。
+## プレビュー ビルド 18252  
+
+API が変更される必要がありません。  
+
+## プレビュー ビルド 18247  
+
+API が変更される必要がありません。  
+
+## プレビュー ビルド 18242  
+
+API が変更される必要がありません。  

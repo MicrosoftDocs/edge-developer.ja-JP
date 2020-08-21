@@ -1,134 +1,159 @@
 ---
-title: EdgeHTML 17 の新機能と Api
-description: このガイドでは、EdgeHTML 17 に含まれている開発者向けの機能と標準の概要について説明します。
-author: mattwojo
-ms.author: mattwoj
-ms.date: 03/05/2020
+title: EdgeHTML 17 の新機能と API
+description: このガイドでは、EdgeHTML 17 に含まれる開発者の機能と標準の概要を示します。
+author: MSEdgeTeam
+ms.author: msedgedevrel
+ms.date: 07/28/2020
 ms.topic: article
 ms.prod: microsoft-edge
-keywords: edge、web 開発、html、css、javascript、開発者
-ms.openlocfilehash: 1359464bfb9ec6f2b84536a11b0fb4bfcce2fb1c
-ms.sourcegitcommit: 6860234c25a8be863b7f29a54838e78e120dbb62
+keywords: edge、Web 開発、html、cs、javascript、開発者
+ms.openlocfilehash: 0fc7dda532866e8970003bce2febb7e46fbbc459
+ms.sourcegitcommit: 29cbe0f464ba0092e025f502833eb9cc3e02ee89
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "10568845"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "10941945"
 ---
-# EdgeHTML 17 の新機能
+# Microsoft EdgeHTML 17 の新機能  
 
-[2018 年4月の更新プログラム](https://blogs.windows.com/windowsexperience/2018/04/27/make-the-most-of-your-time-with-the-new-windows-10-update/)(04/2018、ビルド 17134) の一部として、 [EdgeHTML 17](https://blogs.windows.com/msedgedev/2018/04/30/edgehtml-17-april-2018-update/) web プラットフォームで出荷される新機能と更新された機能の一覧を示します。 特定の[Windows Insider](https://insider.windows.com/) Preview ビルドでの変更については、 [Microsoft Edge の Changelog](https://developer.microsoft.com/microsoft-edge/platform/changelog/)と[EdgeHTML の新機能](../whats-new.md)をご覧ください。
+[!INCLUDE [deprecation-note](../../includes/legacy-edge-note.md)]  
 
-次の変更の固定リンクを示し [https://aka.ms/devguide_edgehtml_17](https://aka.ms/devguide_edgehtml_17) ます。
+[Windows 10 April 2018 Update](https://blogs.windows.com/windowsexperience/2018/04/27) \(04/2018, ビルド 17134\) の一部として[、EdgeHTML 17 Web](https://blogs.windows.com/msedgedev/2018/04/30)プラットフォームで出荷された新機能と更新された機能の一覧を示します。  特定の Windows Insider Preview ビルド [の変更内容](https://insider.windows.com) については [、Microsoft Edge の変更履歴と](https://developer.microsoft.com/microsoft-edge/platform/changelog) [EdgeHTML の新機能を参照してください](../whats-new.md)。  
 
-## 新機能と更新された機能 
+次の一覧を行うと、この機能が利用できます [https://aka.ms/devguide_edgehtml_17](./edgehtml-17.md) 。  
 
-### ARIA 1.1 の役割、状態、イベント
+## 新機能と更新された機能  
 
-EdgeHTML 17 では、[フィード](https://www.w3.org/TR/wai-aria-1.1/#feed)、[フォーム](https://www.w3.org/TR/wai-aria-1.1/#form)、 [aria-haspopup](https://w3.org/TR/wai-aria-1.1/#aria-haspopup)、 [aria、Placeholder](https://w3.org/TR/wai-aria-1.1/#aria-placeholder)など、アクセシビリティ性の高い[リッチインターネットアプリケーション (wai-aria 使った-ARIA) 1.1 仕様](https://w3.org/TR/wai-aria-1.1/)のさまざまな役割、状態、プロパティのサポートが追加されています。[changelog での ARIA の更新プログラムの完全な一覧](https://developer.microsoft.com/microsoft-edge/platform/changelog/desktop/17134/?compareWith=16299)を確認します。 この更新プログラムでは、EdgeHTML 17 は WAI-ARIA 使った-ARIA 1.1 で定義されたすべての役割と属性をサポートするようになりました。 Microsoft Edge でのアクセシビリティについて詳しくは、[アクセシビリティ](https://docs.microsoft.com/microsoft-edge/accessibility)に関するドキュメントをご覧ください。
+### ARIA 1.1 の役割、状態、イベント  
 
-### CSS マスク
+Microsoft EdgeHTML 17 では、アクセシビリティに対応したリッチな[インターネット アプリケーション (WAI-ARIA) 1.1 の指定](https://w3.org/TR/wai-aria-1.1)([フ](https://www.w3.org/TR/wai-aria-1.1#feed)ィード、[フォーム](https://www.w3.org/TR/wai-aria-1.1#form)[、aria-haspopup、aria-placeholder](https://w3.org/TR/wai-aria-1.1#aria-haspopup)[aria-placeholder](https://w3.org/TR/wai-aria-1.1#aria-placeholder)など) からさまざまな役割、状態、プロパティのサポートが追加されました。変更ログ[で ARIA の更新プログラムの完全なリストを検索します](https://developer.microsoft.com/microsoft-edge/platform/changelog/desktop/17134/?compareWith=16299)。  今回の更新プログラムでは、WAI-ARIA 1.1 で定義されたすべてのロールと属性がサポートされるようになりました。  Microsoft Edge [のアクセシビリティ](../../accessibility.md) に関する詳細については、アクセシビリティに関するドキュメントをご覧ください。  
 
-EdgeHTML 17 には、 [CSS マスク](https://developer.mozilla.org/docs/Web/CSS/CSS_Masking)の実験的なサポートが含まれています。 部分的な実装では、CSS[マスクと画像](https://developer.mozilla.org/docs/Web/CSS/mask-image)および[マスクサイズ](https://developer.mozilla.org/docs/Web/CSS/mask-size)のプロパティが導入されています。  「[CSS のマスキングを有効にする]」フラグを確認します。
+### CSS マスキング  
 
-### SVG 要素での CSS の変換
+EdgeHTML 17 では、CSS マスキングのためのサポート [が含まれており、サポートが含まれており、サポートが含まれており、サポートが含まれており、サポートされます](https://developer.mozilla.org/docs/Web/CSS/CSS_Masking)。  部分的な実装では、CSS [マスク](https://developer.mozilla.org/docs/Web/CSS/mask-image) イメージとマス [ク サイズのプロパティが](https://developer.mozilla.org/docs/Web/CSS/mask-size) 説明されています。  実用する場合は、「CSS Masking を有効にする」フラグを確認してください。  
 
-EdgeHTML 17 では、SVG 要素とプレゼンテーション属性での CSS 変換がサポートされるようになりました。 これにより、回転、拡大縮小、移動、傾斜、翻訳などの SVG 要素を視覚的に操作できます。 
+### SVG 要素での CSS 変換  
 
-### 拡張機能 
+Microsoft EdgeHTML 17 では、SVG 要素とプレゼンテーション属性の CSS 変換がサポートされるようになりました。  これにより、回転、スケーリング、移動、スケース、翻訳を含む、SVG 要素を視覚的に操作できます。  
 
-Microsoft Edge で、拡張機能からの通知を表示する[通知 API](https://developer.mozilla.org/Add-ons/WebExtensions/API/notifications)がサポートされるようになりました。 拡張機能の開発者は、完全なユーザー操作をサポートする、さまざまな種類の通知 (基本的、リスト、画像など) を作成できるようになりました。 通知は、アクションセンターにも自動的にログインされます。 この API を拡張機能で使用する方法については、[通知のサンプル](https://github.com/MicrosoftEdge/MicrosoftEdge-Extensions-Demos/tree/notifications/notifications)を参照してください。
+### 拡張機能  
 
-EdgeHTML 17 `Tabs.reload()` は、標準タブ API クラスの一部としてもメソッドをサポートするようになりました。 さらに、2018年4月の更新プログラムの新機能により、ユーザーは inPrivate ブラウズ中に拡張機能を実行できるようにすることを選択できるようになりました。
+Microsoft Edge では、 [拡張機能からの通知を表示する通知 API](https://developer.mozilla.org/Add-ons/WebExtensions/API/notifications) がサポートされるようになりました。  拡張機能開発者は、すべてのユーザーが操作をサポートするさまざまな種類の通知 \(基本、リスト、画像など) を作成できるようになりました。  通知は、アクション センターにも自動的にログインされます。  拡張機能で [この](https://github.com/MicrosoftEdge/MicrosoftEdge-Extensions-Demos/tree/notifications/notifications) API の使用方法についての通知サンプルにアクセスしてください。  
 
-このリリースでの拡張機能の更新について詳しくは、 [Windows 10 年 4 2018 月の更新プログラムで](https://blogs.windows.com/msedgedev/2018/05/24/new-extension-features-april-2018-update-notifications-inprivate/)、「拡張機能のブログの新機能」をご覧ください。
+また、Microsoft EdgeHTML 17 では、標準タブ API クラスの一部としてメソ `Tabs.reload()` ッドがサポートされるようになりました。  また、Windows 10 2018 年 4 月の更新プログラムの新機能を使用すると、ユーザーは、InPrivate ブラウジング中に拡張機能を実行できるようになりました。  
 
-### DevTools
-DevTools のこのリリースは、microsoft Edge 用の従来のブラウザー () ツールとして、 `F12` Microsoft Store からスタンドアロンの[Windows 10 アプリ](../../devtools-guide/whats-new/edgehtml-17.md#microsoft-edge-devtools-app-preview)としてプレビューする、2つの方法で提供されています。
+このリリースの拡張機能の更新について詳しくは [、Windows 10 April 2018 Update](https://blogs.windows.com/msedgedev/2018/05/24)の拡張機能のための新機能をブログ投稿に移動してください。  
 
-![Microsoft Edge DevTools アプリ](../../devtools-protocol/media/microsoft-edge-devtools.png) 
+### DevTools  
 
-また、このツールは、[リモートデバッグ](../../devtools-guide/whats-new/edgehtml-17.md#devtools-protocol)の基本的なサポート (新しい[devtools プロトコル](../../devtools-guide/whats-new/edgehtml-17.md#devtools-protocol)を使用)、 [PWA のデバッグ機能](../../devtools-guide/whats-new/edgehtml-17.md#pwa-debugging)、 [indexeddb キャッシュ管理](../../devtools-guide/whats-new/edgehtml-17.md#indexeddb-inspection)、[縦型のドッキング](../../devtools-guide/whats-new/edgehtml-17.md#docking-to-the-right-in-microsoft-edge)など、さまざまな主要機能によって更新されています。 また、パフォーマンスと信頼性への継続的な投資の一環として、最後のリリースで行われた全体的な[リファクタリングの取り組み](./edgehtml-16.md)を継続しました。
+このリリースでは、DevTools のリリースでは、従用ブラウザー \( \( \) ツールと Microsoft Store からスタンドア `F12` ロン [の Windows 10](../../devtools-guide/whats-new/edgehtml-17.md#microsoft-edge-devtools-app-preview) アプリとしてプレビューする方法の 2 つの方法があります。  
 
-詳細について[は、「Windows 10 の最新の更新プログラム (EdgeHTML 17) の Devtools」](../../devtools-guide/whats-new/edgehtml-17.md)を参照してください。
+:::image type="complex" source="../../devtools-protocol/media/microsoft-edge-devtools.png" alt-text="Microsoft Edge DevTools アプリ" lightbox="../../devtools-protocol/media/microsoft-edge-devtools.png":::
+   Microsoft Edge DevTools アプリ  
+:::image-end:::  
 
-### JavaScript
+また、ツールは、リモート デバッ [グのサポート](../../devtools-guide/whats-new/edgehtml-17.md#devtools-protocol) \(新 [しい DevTools プロトコ](../../devtools-guide/whats-new/edgehtml-17.md#devtools-protocol)ル \) を使用した [、PWA](../../devtools-guide/whats-new/edgehtml-17.md#pwa-debugging)デバッグ [管理、](../../devtools-guide/whats-new/edgehtml-17.md#indexeddb-inspection)インデックス作成、垂直ドッキングなど、多くの主要な機能 [で更新されています](../../devtools-guide/whats-new/edgehtml-17.md#docking-to-the-right-in-microsoft-edge) 。 また、パフォーマンスと確実性に関 [する](./edgehtml-16.md) 進行中の一部として、全体的な再現作業を継続していました。  
 
-EdgeHTML 17 では、次のようないくつかの主要領域で、Chakra JavaScript エンジンによってパフォーマンスが向上しています。
+詳細については [、最新の Windows 10 更新プログラム (EdgeHTML 17) の DevTools](../../devtools-guide/whats-new/edgehtml-17.md) にアクセスしてください。  
 
-**スリムなメモリ使用量**
+### JavaScript  
 
- - (再)[オブジェクトリテラル上](https://github.com/Microsoft/ChakraCore/pull/4136)の[矢印関数](https://github.com/Microsoft/ChakraCore/pull/4105)とメソッドの解析を延期します。
- - [RegExp バイトコードのリファクタリング](https://github.com/Microsoft/ChakraCore/pull/3915)
+Microsoft EdgeHTML 17 では、Chakra JavaScript エンジンでは、次の複数の主要領域でパフォーマンスが向上します。  
 
-**より高速な JavaScript の組み込み**
+:::row:::
+   :::column span="1":::
+      **Leaner メモリ フットプリント**  
+   :::column-end:::
+   :::column span="2":::
+      *   オブジェクト リテラルの矢印関数およびメソッ[arrow functions](https://github.com/Microsoft/ChakraCore/pull/4105)ドについて \(Re-\)[デファイナル](https://github.com/Microsoft/ChakraCore/pull/4136)  
+      *   [RegExp バイト コードのリファクター](https://github.com/Microsoft/ChakraCore/pull/3915)  
+   :::column-end:::
+:::row-end:::  
+:::row:::
+   :::column span="1":::
+      **JavaScript の組み込み関数のパフォーマンスを上下**
+   :::column-end:::
+   :::column span="2":::
+      *   [Object.create の共有の種類](https://github.com/Microsoft/ChakraCore/pull/3901)  
+      *   [Object.assign の Polymorphic インライン キャッシュ](https://github.com/Microsoft/ChakraCore/pull/3792)  
+      *   [JSON.parse/stringify の最適化](https://github.com/Microsoft/ChakraCore/pull/4077)  
+      *   [JavaScript で配列のイターターを書き換え、...が](https://github.com/Microsoft/ChakraCore/pull/4095)  
+   :::column-end:::
+:::row-end:::  
+:::row:::
+   :::column span="1":::
+      **Web アシンボリ**
+   :::column-end:::
+   :::column span="2":::
+      *   [Inling サポート](https://github.com/Microsoft/ChakraCore/pull/3681)  
+   :::column-end:::
+:::row-end:::  
 
- - [オブジェクトの共有を入力します。作成](https://github.com/Microsoft/ChakraCore/pull/3901)
- - [Object のポリモーフィックなインラインキャッシュ。](https://github.com/Microsoft/ChakraCore/pull/3792)
- - [JSON. parse/stringify の最適化](https://github.com/Microsoft/ChakraCore/pull/4077)
- - [JavaScript での配列反復子の再書き込みと高速化数](https://github.com/Microsoft/ChakraCore/pull/4095)
-
-**Web アセンブリ**
-
- - [サポート](https://github.com/Microsoft/ChakraCore/pull/3681) 
-
-詳細については、「 [*JavaScript と EdgeHTML 17 のパフォーマンスが改善*](https://blogs.windows.com/msedgedev/2018/06/19/improved-javascript-webassembly-performance-edgehtml-17/#I4vzUJK2va54kSWl.97)されました」をご覧ください。
+詳細については [、EdgeHTML 17 での JavaScript と WebAssembly](https://blogs.windows.com/msedgedev/2018/06/19) のパフォーマンスが改善されました。  
 
 ### メディア要素
 
-EdgeHTML 17 には、次のような[Htmlmediaelement](https://developer.mozilla.org/docs/Web/API/HTMLMediaElement)の更新が含まれています。
-* 要素の新しい属性は、 `preload` [`<media>`](https://developer.mozilla.org/docs/Web/API/HTMLMediaElement) 読み込むデータを示します。
-* [`setSinkId()`](https://developer.mozilla.org/docs/Web/API/HTMLMediaElement/setSinkId)メソッドとプロパティを追加すると、 [`sinkId`](https://developer.mozilla.org/docs/Web/API/HTMLMediaElement/sinkId) 開発者はオーディオ出力デバイスを選ぶことができます。 (**注**: これはまだ RTC で avaiable していません)
+EdgeHTML 17 には、次のような [HTMLMediaElement の更新が含](https://developer.mozilla.org/docs/Web/API/HTMLMediaElement) まれています。  
 
-### メディアキャプチャ API 
-Microsoft Edge では、[メディアキャプチャ API](https://w3c.github.io/mediacapture-screen-share/)を使用した RTC の画面キャプチャがサポートされるようになりました。 この機能により、web ページでユーザーの表示デバイスの出力をキャプチャできるようになります。通常は、プラグインなしの仮想会議やプレゼンテーション用のデスクトップをブロードキャストするために使用されます。
+*   要素の `preload` 新しい属性 [`<media>`](https://developer.mozilla.org/docs/Web/API/HTMLMediaElement) は、先頭にどのデータが事前に読み込むべきかを示します。
+*   メソッドとプロパティ [`setSinkId()`](https://developer.mozilla.org/docs/Web/API/HTMLMediaElement/setSinkId) が追加され、デベロッ [`sinkId`](https://developer.mozilla.org/docs/Web/API/HTMLMediaElement/sinkId) パーはオーディオ出力デバイスを選択できます。  
+    
+    > [!NOTE]
+    > これは RTC ではまだ利用できません。  
+    
+### メディア キャプチャ API  
 
-### プログレッシブ Web アプリ
-EdgeHTML 17 以降では、サービスワーカーとプッシュ通知は既定で有効になっています (この機能の詳細については、この[ページを](https://blogs.windows.com/msedgedev/2017/12/19/service-workers-going-beyond-page/)参照してください。 これにより、Windows 10 のプログレッシブ Web アプリ (PWAs) の技術基盤となる一連のテクノロジ (取得ネットワーク、プッシュとキャッシュ Api など) が完成します。
+Microsoft Edge では、メディア キャプチャ API を通して RTC で画面キ [ャプチャをサポートできるようになりました](https://w3c.github.io/mediacapture-screen-share)。  この機能を使用すると、Web ページでユーザーの表示デバイスの出力をキャプチャできます。一般的に、プラグインの仮想会議やプレゼンテーション用にデスクトップをブロードキャストするために使用されます。  
 
-PWAs は、単なる web アプリであり、インストール/ホーム画面の起動、オフラインサポート、プッシュ通知などのプラットフォームとブラウザーエンジンのサポートについて、アプリのようなネイティブ機能によって[段階的に強化](https://en.wikipedia.org/wiki/Progressive_enhancement)されています。 Microsoft Edge (EdgeHTML) エンジンを備えた Windows 10 では、ブラウザーウィンドウと[ユニバーサル Windows プラットフォーム](https://docs.microsoft.com/windows/uwp/get-started/whats-a-uwp)アプリとで独立して実行できる機能が追加されました。
+### プログレッシブ Web アプリ  
 
-PWAs 以外のサービスワーカーとキャッシュ API により、開発者は、ネットワーク要求を傍受してキャッシュから応答することができます。 Web サイトは、短時間でのページ読み込みのパフォーマンスと信頼性を実現するために、サービスワーカーキャッシュを利用したり、インターネットや音質の低い接続中にオフライン環境を提供したりするための完全な機能を備えた web アプリではありません。  
+Microsoft EdgeHTML 17 から、サービス ワーカーとプッシュ通知は既定で有効になっています (ブログ投稿サービス ワーカー[のこれらの機能の詳細については、ページをさらに発表するものです)。](https://blogs.windows.com/msedgedev/2017/12/19)  これにより、Windows 10 でプッシュネットワークの \(PWA\) を処理するテクノロジを示すテクノロジ (フェッチ ネットワーク、プッシュ/キャッシュ API を含む) が完了します。  
 
-[Windows ドキュメントのプログレッシブ Web アプリ](../../progressive-web-apps-edgehtml/index.md)にアクセスして、サービスの担当者と pwas の詳細情報については、windows 10 を参照してください。
+PWA は、インストール、ホーム画面起動、[progressively enhanced](https://en.wikipedia.org/wiki/Progressive_enhancement)オフライン サポート、プッシュ通知などのプラットフォームやブラウザー エンジンをサポートするネイティブ アプリのような機能で積み的に強化される Web アプリです。  PWA では、Microsoft Edge \(EdgeHTML\) エンジンを使用すると、ブラウザー ウィンドウをユニバーサル [Windows プ](/windows/uwp/get-started/whats-a-uwp) ラットフォーム アプリとしては別に実行する方法が楽になります。  
 
-### Web セキュリティ
-EdgeHTML 17 には、サブリソースの完全性 (スリランカ) のサポートが導入されています。 [サブリソースの整合性](https://developer.mozilla.org/docs/Web/Security/Subresource_Integrity)は、取得したリソース (画像、スクリプト、フォントなど) が、予期しない操作なしで配信されることをブラウザーが確認できるようにするセキュリティの機能です。 
+PWA、サービス ワーカー、キャッシュ API 以外では、ネットワーク要求をインタープライアンスし、キャッシュから応答できる機能をデベロッパーが許可します。  Web サイトは、インターネットや低品質のページ読み込みのパフォーマンスと信頼性を高めて、サービス ワーカー キャッシュを利用できるフル ブロー Web アプリでもかまいません。さらに、インターネットや低品質なしの間にオフライン エクスペリエンスを提供する機能も必要です。  
 
-`integrity` `<script>` 次の例のように、web ページに読み込まれる予定のリソースの暗号化ハッシュ表現を含む属性を追加し `<link>` ます。 次に、Microsoft Edge は、要求されたリソースと属性で定義されているハッシュを比較し `integrity` ます。 一致しない場合、Microsoft Edge はリソースを実行せず、ネットワークにエラーを返します。
+Windows 10 の Service Workers と PWA の詳細について説明するには [、Windows](../../progressive-web-apps-edgehtml/index.md) ドキュメントのプレイ状況に進みます。  
+
+### Web セキュリティ  
+
+Microsoft EdgeHTML 17 では、Subresource Integrity \(SRI\) のサポートが追加されました。  [サブリソース整合性は](https://developer.mozilla.org/docs/Web/Security/Subresource_Integrity) 、ブラウザーが予期しない操作を行わずに配信されることを確認できるセキュリティ機能です。  
+
+次の例のように、Web ページで読み込みる予算リソースのキャッシュ表現を含む `integrity` `<script>` `<link>` 属性を、要素に追加します。  その後、Microsoft Edge は要求されたリソースを、属性で定義されたハッシュと `integrity` 比較します。  一致しない場合、Microsoft Edge はリソースを実行しません。ネットワークにエラーが返されます。  
 
 ```html
 <script src="https://example.com/example-framework.js" 
         integrity="sha384-Li9vy3DqF8tnTXuiaAJuML3ky+er10rcgNR/VqsVpcw+ThHmYcwiB1pbOxEbzJr7" 
         crossorigin="anonymous"></script>
-```
+```  
 
-さらに、EdgeHTML 17 の新機能として、セキュリティで保護されていない[要求](https://developer.mozilla.org/docs/Web/HTTP/Headers/Upgrade-Insecure-Requests)のヘッダーを使用すると、ブラウザーで安全な参照エクスペリエンスを要求することができます。 このヘッダーは、ブラウザーがセキュリティで保護されていない要求のアップグレードをサポートしており、可能であれば、ユーザーがセキュリティで保護されたバージョンのサイトにリダイレクトされることをサーバーに通知します。
+また [、Upgrade-Insecure-Requests ヘッダー](https://developer.mozilla.org/docs/Web/HTTP/Headers/Upgrade-Insecure-Requests) を使用すると、ブラウザーでは、ブラウザーがスキューでの閲覧体験を要求することができます。  このヘッダーは、ブラウザーが不正な要求のアップグレードをサポートしているサーバーに示され、ユーザーは利用可能な場合は、サイトの保護されたバージョンにリダイレクトする必要があることをサーバーに示します。  
 
 ### 可変フォント
-EdgeHTML 17 では、可変フォント (CSS[フォントバリエーションの設定](https://developer.mozilla.org/docs/Web/CSS/font-variation-settings)や[フォント光のサイズ変更](https://developer.mozilla.org/docs/Web/CSS/font-variation-settings)など) を完全にサポートしています。 さまざまな軸を調整することで、開発者は可変書体の外観を1つのフォントで見られるようになり、複数のフォントファイルや bettering のパフォーマンスを向上させることができます。
+Variable Fonts \(CSS[フォント バリエーション設定および](https://developer.mozilla.org/docs/Web/CSS/font-variation-settings)[フォント-optical-sizing](https://developer.mozilla.org/docs/Web/CSS/font-variation-settings)\) の完全なサポートは、EdgeHTML 17 で入手できます。  さまざまな軸を調整することで、デベロッパーは、さまざまな軸を調整することで、1 つのフォントで異なる書スタイルの外観を実現できます。複数のフォント ファイルが必要なファイルやパフォーマンス向上のためのニーズを下げることができます。  
 
-Expedition に参加して、 [web 開発者とデザイナーが提供する可変フォント](https://developer.microsoft.com/microsoft-edge/testdrive/demos/variable-fonts/)と、それらをサイトで使用する方法について説明します。 また、さまざまなフォントを使用して、 [Microsoft Edge に、豊かでパフォーマンスの高いタイポグラフィをもたらす](https://blogs.windows.com/msedgedev/2018/03/13/bringing-expressive-performant-typography-to-microsoft-edge-with-variable-fonts/)ブログ投稿の可変フォントについて説明します。
+拡張機能に参加 [して、Web 開](https://developer.microsoft.com/microsoft-edge/testdrive/demos/variable-fonts)発者やデザイナーが提供する可変フォントとサイトでの使い分けについて学習します。  また、ブログ投稿に表示される可変フォントの詳細については、「もちのとも」を参照してください。可用なフォントを使用して Microsoft Edge に対する文字体裁を [実行する](https://blogs.windows.com/msedgedev/2018/03/13)。  
 
-<iframe height='456' scrolling='no' title='変数の Tides チケットの例' src='//codepen.io/MSEdgeDev/embed/dmYvWg/?height=456&theme-id=23761&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'><a href='https://codepen.io/MSEdgeDev/pen/dmYvWg/'> </a> CodePen の MSEdgeDev (@MSEdgeDev) で、Pen 変数の tides チケットの例を参照してください <a href='https://codepen.io/MSEdgeDev'> </a> <a href='https://codepen.io'> </a> 。</iframe>
+<iframe height='456' scrolling='no' title='可変チェットの例' src='//codepen.io/MSEdgeDev/embed/dmYvWg/?height=456&theme-id=23761&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'><a href='https://codepen.io/MSEdgeDev/pen/dmYvWg/'> </a> CodePen の MsEdgeDev <a href='https://codepen.io/MSEdgeDev'> (@MSEdgeDev) によるペン変数チ@MSEdgeDev </a> を <a href='https://codepen.io'> 確認できます </a> 。</iframe>  
 
-## EdgeHTML 17 の新しい Api
+## EdgeHTML 17 の新しい API  
 
-EdgeHTML 17 の新しい Api の一覧を次に示します。 [Interface name] の形式で一覧表示されます。[api name]。
+EdgeHTML 17 の新しい API の完全な一覧を次に示します。  これらは形式で表示されます `[interface name].[api name]` 。  
 
 > [!NOTE] 
-> 次の Api は DOM に公開されますが、一部のエンドツーエンドの動作はまだ開発中の可能性があります。 機能のサポートに関するオフィシャル単語については、 [Microsoft Edge プラットフォームの状態](https://developer.microsoft.com/microsoft-edge/platform/status/)を参照してください。
+> 次の API は DOM で予定されていますが、一部の開発中のエンドツーエンド動作がまだあります。  機能サポート  [のコーサル語については、Microsoft Edge](https://developer.microsoft.com/microsoft-edge/platform/status) プラットフォームの状態を参照してください。  
 
-<iframe height='580' scrolling='no' title='EdgeHTML 17 の新しい Api' src='//codepen.io/MSEdgeDev/embed/pLxgdj/?height=608&theme-id=23401&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'><a href='https://codepen.io/MSEdgeDev/pen/pLxgdj/'> </a> CodePen の EdgeHTML 17 by MSEdgeDev (@MSEdgeDev) の Pen 新しい api を参照してください <a href='https://codepen.io/MSEdgeDev'> </a> <a href='https://codepen.io'> </a> 。</iframe>
+<iframe height='580' scrolling='no' title='EdgeHTML 17 の新しい API' src='//codepen.io/MSEdgeDev/embed/pLxgdj/?height=608&theme-id=23401&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'><a href='https://codepen.io/MSEdgeDev/pen/pLxgdj/'>CodePen の EdgeHTML 17 の </a> 新しい <a href='https://codepen.io/MSEdgeDev'> API @MSEdgeDev </a> <a href='https://codepen.io'> を参照してください </a> 。</iframe>  
 
 > [!TIP]
-> Microsoft は、現在および最新の標準ベースの web テクノロジについて、理解されていないブラウザーを使用したドキュメントの明確な場所として、 [MDN Web ドキュメント](https://developer.mozilla.org/)を採用して、他のブラウザーや web コミュニティと[提携](https://blogs.windows.com/msedgedev/2017/10/18/documenting-web-together-mdn-web-docs/)しています。 EdgeHTML API のサポートについて詳しくは、 [MDN web リファレンスライブラリ](https://developer.mozilla.org/docs/Web)の各ページで直接参照できます。 Microsoft Edge でサポートされている最新機能については、Microsoft Edge の[プラットフォームの状態](https://developer.microsoft.com/microsoft-edge/platform/status/?q=edge%3AShipped%20edge%3APrefixed%20edge%3A'Preview%20Release)を参照してください。 
+> MDN [partnered](https://blogs.windows.com/msedgedev/2017/10/18) Web ドキュメントは、最新の、ブラウザーアジャイル、現在および拡大標準 Web テクノロジのための定義的な場所として[、MDN Web](https://developer.mozilla.org)ドキュメントを開発する場合の定義的な場所としてパートナー化しています。  Microsoft EdgeHTML API のサポートの詳細は、MDN Web リファレンス ライブラリの各 [ページに直接表示できます](https://developer.mozilla.org/docs/Web)。  Microsoft Edge でサポートされている最新機能については [、Microsoft](https://developer.microsoft.com/microsoft-edge/status) Edge のプラットフォームの状態にアクセスしてください。  
 
-## 以前の EdgeHTML リリース
+## 以前の EdgeHTML リリース  
 
-[EdgeHTML 13/Windows ビルド 10586 (11/2015)](https://aka.ms/devguide_edgehtml_13)
+[Microsoft EdgeHTML 13 / Windows ビルド 10586 (2015/11)](https://aka.ms/devguide_edgehtml_13)  
 
-[EdgeHTML 14/Windows ビルド 14393 (8/2016)](https://aka.ms/devguide_edgehtml_14)
+[EdgeHTML 14 / Windows ビルド 14393 (8/2016)](https://aka.ms/devguide_edgehtml_14)  
 
-[EdgeHTML 15/Windows ビルド 15063 (4/2017)](https://aka.ms/devguide_edgehtml_15)
+[Microsoft EdgeHTML 15 / Windows ビルド 15063 (4/2017)](https://aka.ms/devguide_edgehtml_15)  
 
-[EdgeHTML 16/Windows ビルド 16299 (10/2017)](https://aka.ms/devguide_edgehtml_16)
+[Microsoft EdgeHTML 16 / Windows ビルド 16299 (10/2017)](https://aka.ms/devguide_edgehtml_16)  
