@@ -1,48 +1,54 @@
 ---
-description: このページでは、開発者向けの EdgeHTML preview ビルドの新機能の概要を説明します。
-title: EdgeHTML の開発者向けの新機能
+description: このページでは、開発者向けの EdgeHTML プレビュー ビルドの新機能の概要を示します。
+title: 開発者向け EdgeHTML の新機能 - 開発ガイド
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 11/07/2018
+ms.date: 07/28/2020
 ms.topic: article
 ms.prod: microsoft-edge
-keywords: edge、web 開発、html、css、javascript、開発者、edge の新機能、edge の新しい Api、edgehtml、edgehtml preview ビルド
-ms.openlocfilehash: d577634cfe7fc3fe591a793bd792fad9065c7d5e
-ms.sourcegitcommit: 6860234c25a8be863b7f29a54838e78e120dbb62
+keywords: Edge、Web 開発、html、cs、javascript、開発者、Edge、Edgehtml の新しい API、Edgehtml、Edgehtml プレビュー ビルド
+ms.openlocfilehash: 81973d12f6e66b5e6f1c3cd6a12fee196c4495d7
+ms.sourcegitcommit: 29cbe0f464ba0092e025f502833eb9cc3e02ee89
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "10568824"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "10941961"
 ---
-# <span data-ttu-id="43f0f-104">EdgeHTML の新機能</span><span class="sxs-lookup"><span data-stu-id="43f0f-104">What's New in EdgeHTML</span></span>
+# <span data-ttu-id="8b595-104">EdgeHTML の新着情報</span><span class="sxs-lookup"><span data-stu-id="8b595-104">What's new in EdgeHTML</span></span>  
 
-<span data-ttu-id="43f0f-105">[Windows Insider](https://insider.windows.com/)になることで、最新の EdgeHTML 機能と api を入手できます。</span><span class="sxs-lookup"><span data-stu-id="43f0f-105">Get the latest EdgeHTML features and APIs by becoming a [Windows Insider](https://insider.windows.com/)!</span></span> <span data-ttu-id="43f0f-106">[Windows Insider プログラム](https://insider.windows.com/)は、利用可能になったらすぐに最新の windows 10 ビルドを提供します。</span><span class="sxs-lookup"><span data-stu-id="43f0f-106">The [Windows Insider Program](https://insider.windows.com/) provides the latest Windows 10 builds as soon as they're available.</span></span> 
+[!INCLUDE [deprecation-note](../includes/legacy-edge-note.md)]  
 
-<span data-ttu-id="43f0f-107">Microsoft Edge プラットフォーム EdgeHTML 18 (ビルド 17763) の現在のリリースで出荷されている新機能と Api については、[開発ガイド](../dev-guide.md)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="43f0f-107">Head over to the [Dev Guide](../dev-guide.md) to see the new features and APIs shipped in the current release of the Microsoft Edge platform, EdgeHTML 18 (Build 17763).</span></span> 
+<span data-ttu-id="8b595-105">Windows Insider になることで、最新の EdgeHTML の機能と API を [取得します](https://insider.windows.com)。</span><span class="sxs-lookup"><span data-stu-id="8b595-105">Get the latest EdgeHTML features and APIs by becoming a [Windows Insider](https://insider.windows.com)!</span></span>  <span data-ttu-id="8b595-106">[Windows Insider Program には](https://insider.windows.com)、提供されたらす次に、最新の Windows 10 ビルドが提供されます。</span><span class="sxs-lookup"><span data-stu-id="8b595-106">The [Windows Insider Program](https://insider.windows.com) provides the latest Windows 10 builds as soon as they're available.</span></span>  
 
-<span data-ttu-id="43f0f-108">次に示すのは、Windows 10 Preview ビルドの新規および更新された EdgeHTML Api です。</span><span class="sxs-lookup"><span data-stu-id="43f0f-108">Below are new and updated EdgeHTML APIs in Windows 10 Preview Builds.</span></span> <span data-ttu-id="43f0f-109">[Interface name] の形式で一覧表示され**ます。 [api 名]**。</span><span class="sxs-lookup"><span data-stu-id="43f0f-109">They are listed in the format of **[interface name].[api name]**.</span></span> <span data-ttu-id="43f0f-110">最新の Microsoft Edge とプラットフォームの機能の完全な一覧については、「 [Changelog](https://developer.microsoft.com/microsoft-edge/platform/changelog/) (参照)」または「[開発ガイド](../dev-guide.md)」を参照して、microsoft edge プラットフォームの現在の安定したリリースで出荷されている新機能と api EdgeHTML 18 を参照してください。</span><span class="sxs-lookup"><span data-stu-id="43f0f-110">For a full list of new Microsoft Edge and platform features, check out [Changelog](https://developer.microsoft.com/microsoft-edge/platform/changelog/) or head over to the [Dev Guide](../dev-guide.md) to see new features and APIs shipped in the current stable release of the Microsoft Edge platform, EdgeHTML 18.</span></span>  
+<span data-ttu-id="8b595-107">Microsoft Edge プラットフォーム [の](../dev-guide.md) 現在のリリースで出荷された新機能と API を開発ガイドに進み、Microsoft Edge プラットフォーム、EdgeHTML 18 \(ビルド 17763\) に出荷された API を確認します。</span><span class="sxs-lookup"><span data-stu-id="8b595-107">Head over to the [Dev Guide](../dev-guide.md) to see the new features and APIs shipped in the current release of the Microsoft Edge platform, EdgeHTML 18 \(Build 17763\).</span></span>  
+
+<span data-ttu-id="8b595-108">以下は、Windows 10 Preview ビルドの新しい EdgeHTML API を提供して更新します。</span><span class="sxs-lookup"><span data-stu-id="8b595-108">Below are new and updated EdgeHTML APIs in Windows 10 Preview Builds.</span></span> <span data-ttu-id="8b595-109">これらは形式で表示されます `[interface name].[api name]` 。</span><span class="sxs-lookup"><span data-stu-id="8b595-109">They are listed in the format of `[interface name].[api name]`.</span></span>  <span data-ttu-id="8b595-110">Microsoft Edge およびプラットフォームの新機能の完全な一覧[Changelog](https://developer.microsoft.com/microsoft-edge/platform/changelog)については、変更ログまたは[デ](../dev-guide.md)ベロッパー ガイドに進み、Microsoft Edge プラットフォーム、EdgeHTML 18 の現在の中止済みリリースで API に出荷された API を確認してください。</span><span class="sxs-lookup"><span data-stu-id="8b595-110">For a full list of new Microsoft Edge and platform features, check out [Changelog](https://developer.microsoft.com/microsoft-edge/platform/changelog) or head over to the [Dev Guide](../dev-guide.md) to see new features and APIs shipped in the current stable release of the Microsoft Edge platform, EdgeHTML 18.</span></span>   
 
 > [!WARNING] 
-> <span data-ttu-id="43f0f-111">一部の情報はリリース前の製品に関する事項であり、正式版がリリースされるまでに大幅に変更される可能性があります。</span><span class="sxs-lookup"><span data-stu-id="43f0f-111">Some information relates to pre-released product which may be substantially modified before it’s commercially released.</span></span> <span data-ttu-id="43f0f-112">ここに記載された情報について、Microsoft は明示または黙示を問わずいかなる保証をするものでもありません。</span><span class="sxs-lookup"><span data-stu-id="43f0f-112">Microsoft makes no warranties, express or implied, with respect to the information provided here.</span></span>
+> <span data-ttu-id="8b595-111">一部の情報は、商用版のリリース前に大分に変更される可能性があります。</span><span class="sxs-lookup"><span data-stu-id="8b595-111">Some information relates to pre-released product which may be substantially modified before it's commercially released.</span></span>  <span data-ttu-id="8b595-112">ここに記載された情報について、Microsoft は明示または黙示を問わずいかなる保証をするものでもありません。</span><span class="sxs-lookup"><span data-stu-id="8b595-112">Microsoft makes no warranties, express or implied, with respect to the information provided here.</span></span>  
 
-## <span data-ttu-id="43f0f-113">プレビュービルド18272</span><span class="sxs-lookup"><span data-stu-id="43f0f-113">Preview Build 18272</span></span>
-<span data-ttu-id="43f0f-114">API の変更はありません。</span><span class="sxs-lookup"><span data-stu-id="43f0f-114">No API changes.</span></span>
+## <span data-ttu-id="8b595-113">プレビュー ビルド 18272</span><span class="sxs-lookup"><span data-stu-id="8b595-113">Preview Build 18272</span></span>  
 
-## <span data-ttu-id="43f0f-115">プレビュービルド18267</span><span class="sxs-lookup"><span data-stu-id="43f0f-115">Preview Build 18267</span></span>
-<span data-ttu-id="43f0f-116">API の変更はありません。</span><span class="sxs-lookup"><span data-stu-id="43f0f-116">No API changes.</span></span>
+<span data-ttu-id="8b595-114">API が変更される必要がありません。</span><span class="sxs-lookup"><span data-stu-id="8b595-114">No API changes.</span></span>  
 
-## <span data-ttu-id="43f0f-117">プレビュービルド18262</span><span class="sxs-lookup"><span data-stu-id="43f0f-117">Preview Build 18262</span></span>
+## <span data-ttu-id="8b595-115">プレビュー ビルド 18267</span><span class="sxs-lookup"><span data-stu-id="8b595-115">Preview Build 18267</span></span>  
 
-<span data-ttu-id="43f0f-118">新しい API のサポートが追加されました。</span><span class="sxs-lookup"><span data-stu-id="43f0f-118">Added new API support:</span></span>
+<span data-ttu-id="8b595-116">API が変更される必要がありません。</span><span class="sxs-lookup"><span data-stu-id="8b595-116">No API changes.</span></span>  
 
-<iframe height='341' scrolling='no' title='<span data-ttu-id="43f0f-119">EdgeHTML Preview ビルド17682</span><span class="sxs-lookup"><span data-stu-id="43f0f-119">EdgeHTML Preview Build 17682</span></span>' src='//codepen.io/MSEdgeDev/embed/5a691c1840690352f409d3788b8167fa/?height=341&theme-id=23761&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'><span data-ttu-id="43f0f-120"><a href='https://codepen.io/MSEdgeDev/pen/5a691c1840690352f409d3788b8167fa/'> </a> CodePen の MSEdgeDev (@MSEdgeDev) で、「Pen EdgeHTML Preview ビルド17682」を参照してください <a href='https://codepen.io/MSEdgeDev'> </a> <a href='https://codepen.io'> </a> 。</span><span class="sxs-lookup"><span data-stu-id="43f0f-120">See the Pen <a href='https://codepen.io/MSEdgeDev/pen/5a691c1840690352f409d3788b8167fa/'>EdgeHTML Preview Build 17682</a> by MSEdgeDev (<a href='https://codepen.io/MSEdgeDev'>@MSEdgeDev</a>) on <a href='https://codepen.io'>CodePen</a>.</span></span>
-</iframe>
+## <span data-ttu-id="8b595-117">プレビュー ビルド 18262</span><span class="sxs-lookup"><span data-stu-id="8b595-117">Preview Build 18262</span></span>  
 
-## <span data-ttu-id="43f0f-121">プレビュービルド18252</span><span class="sxs-lookup"><span data-stu-id="43f0f-121">Preview Build 18252</span></span>
-<span data-ttu-id="43f0f-122">API の変更はありません。</span><span class="sxs-lookup"><span data-stu-id="43f0f-122">No API changes.</span></span>
+<span data-ttu-id="8b595-118">新しい API のサポートが追加されました。</span><span class="sxs-lookup"><span data-stu-id="8b595-118">Added new API support:</span></span>  
 
-## <span data-ttu-id="43f0f-123">プレビュービルド18247</span><span class="sxs-lookup"><span data-stu-id="43f0f-123">Preview Build 18247</span></span>
-<span data-ttu-id="43f0f-124">API の変更はありません。</span><span class="sxs-lookup"><span data-stu-id="43f0f-124">No API changes.</span></span>
+<iframe height='341' scrolling='no' title='<span data-ttu-id="8b595-119">EdgeHTML Preview ビルド 17682</span><span class="sxs-lookup"><span data-stu-id="8b595-119">EdgeHTML Preview Build 17682</span></span>' src='//codepen.io/MSEdgeDev/embed/5a691c1840690352f409d3788b8167fa/?height=341&theme-id=23761&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'><span data-ttu-id="8b595-120">CodePen で Pen <a href='https://codepen.io/MSEdgeDev/pen/5a691c1840690352f409d3788b8167fa/'> EdgeHTML Preview ビルド 17682 </a> by MSEdgeDev <a href='https://codepen.io/MSEdgeDev'> </a> (@MSEdgeDev) を <a href='https://codepen.io'> 参照してください </a> 。</span><span class="sxs-lookup"><span data-stu-id="8b595-120">See the Pen <a href='https://codepen.io/MSEdgeDev/pen/5a691c1840690352f409d3788b8167fa/'>EdgeHTML Preview Build 17682</a> by MSEdgeDev (<a href='https://codepen.io/MSEdgeDev'>@MSEdgeDev</a>) on <a href='https://codepen.io'>CodePen</a>.</span></span>  </iframe>  
 
-## <span data-ttu-id="43f0f-125">プレビュービルド18242</span><span class="sxs-lookup"><span data-stu-id="43f0f-125">Preview Build 18242</span></span>
-<span data-ttu-id="43f0f-126">API の変更はありません。</span><span class="sxs-lookup"><span data-stu-id="43f0f-126">No API changes.</span></span>
+## <span data-ttu-id="8b595-121">プレビュー ビルド 18252</span><span class="sxs-lookup"><span data-stu-id="8b595-121">Preview Build 18252</span></span>  
+
+<span data-ttu-id="8b595-122">API が変更される必要がありません。</span><span class="sxs-lookup"><span data-stu-id="8b595-122">No API changes.</span></span>  
+
+## <span data-ttu-id="8b595-123">プレビュー ビルド 18247</span><span class="sxs-lookup"><span data-stu-id="8b595-123">Preview Build 18247</span></span>  
+
+<span data-ttu-id="8b595-124">API が変更される必要がありません。</span><span class="sxs-lookup"><span data-stu-id="8b595-124">No API changes.</span></span>  
+
+## <span data-ttu-id="8b595-125">プレビュー ビルド 18242</span><span class="sxs-lookup"><span data-stu-id="8b595-125">Preview Build 18242</span></span>  
+
+<span data-ttu-id="8b595-126">API が変更される必要がありません。</span><span class="sxs-lookup"><span data-stu-id="8b595-126">No API changes.</span></span>  

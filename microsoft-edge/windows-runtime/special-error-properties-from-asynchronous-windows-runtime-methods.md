@@ -1,7 +1,7 @@
 ---
-title: 非同期 Windows ランタイムメソッドからの特殊なエラープロパティ
+title: 非同期 Windows ランタイム メソッドからの特殊なエラー プロパティ
 ms.custom: ''
-ms.date: 04/01/2020
+ms.date: 07/29/2020
 ms.prod: microsoft-edge
 ms.reviewer: ''
 ms.suite: ''
@@ -13,32 +13,32 @@ caps.latest.revision: 4
 author: MSEdgeTeam
 ms.author: msedgedevrel
 manager: ''
-ms.openlocfilehash: 5cf2604e26c84e769cf44e0879ee137cbfbe8b90
-ms.sourcegitcommit: 6860234c25a8be863b7f29a54838e78e120dbb62
+ms.openlocfilehash: a1fccf1cec811501b94e7da4aa20b69d93754f62
+ms.sourcegitcommit: 29cbe0f464ba0092e025f502833eb9cc3e02ee89
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "10570781"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "10942066"
 ---
-# <span data-ttu-id="ec974-102">非同期 Windows ランタイムメソッドからの特殊なエラープロパティ</span><span class="sxs-lookup"><span data-stu-id="ec974-102">Special Error Properties from Asynchronous Windows Runtime Methods</span></span>  
+# <span data-ttu-id="29d9d-102">非同期 Windows ランタイム方法からの特殊なエラー プロパティ</span><span class="sxs-lookup"><span data-stu-id="29d9d-102">Special error properties from asynchronous Windows Runtime methods</span></span>  
 
-<span data-ttu-id="ec974-103">JavaScript での非同期 Windows ランタイムメソッドのデバッグは困難である可能性があります。これは、コールスタック内の深い場所からエラーがスローされる可能性があるためです。</span><span class="sxs-lookup"><span data-stu-id="ec974-103">It can be difficult to debug asynchronous Windows Runtime methods in JavaScript, because the error may be thrown from somewhere deep in the call stack.</span></span> <span data-ttu-id="ec974-104">JavaScript `Error` オブジェクトには、アプリがデバッグモードで実行されているときに、非同期 Windows ランタイムメソッドからエラーがスローされた場合にのみ表示される追加のプロパティがあります。</span><span class="sxs-lookup"><span data-stu-id="ec974-104">The JavaScript `Error` object has extra properties that appear only when the error is thrown from an asynchronous Windows Runtime method when the app is running in debug mode.</span></span>  
+[!INCLUDE [deprecation-note](../includes/legacy-edge-note.md)]  
+
+<span data-ttu-id="29d9d-103">エラーが呼び出し先の場所からどこからでも発生する可能性があるため、JavaScript で非同期 Windows ランタイムメソッドをデバッグするのがわかりにくいことがあります。</span><span class="sxs-lookup"><span data-stu-id="29d9d-103">It can be difficult to debug asynchronous Windows Runtime methods in JavaScript, because the error may be thrown from somewhere deep in the call stack.</span></span>  <span data-ttu-id="29d9d-104">JavaScript オブジェクトには、デバッグ モードで実行されているときに非同期 Windows ランタイム メソッドからエラーが発生した場合にのみ表示される追加プロパティ `Error` があります。</span><span class="sxs-lookup"><span data-stu-id="29d9d-104">The JavaScript `Error` object has extra properties that appear only when the error is thrown from an asynchronous Windows Runtime method when the app is running in debug mode.</span></span>  
   
-## <span data-ttu-id="ec974-105">特別なエラープロパティ</span><span class="sxs-lookup"><span data-stu-id="ec974-105">Special Error Properties</span></span>  
+## <span data-ttu-id="29d9d-105">特殊なエラー プロパティ</span><span class="sxs-lookup"><span data-stu-id="29d9d-105">Special error properties</span></span>  
 
-<span data-ttu-id="ec974-106">デバッグモードでの Windows ランタイム非同期操作の失敗によるエラーオブジェクトには、次の特殊なプロパティがあります。</span><span class="sxs-lookup"><span data-stu-id="ec974-106">An error object that results from a failed Windows Runtime asynchronous operation in debug mode has the following special properties:</span></span>  
+<span data-ttu-id="29d9d-106">デバッグ モードでの非同期操作で発生するエラー オブジェクトには、次の特殊なプロパティがあります。</span><span class="sxs-lookup"><span data-stu-id="29d9d-106">An error object that results from a failed Windows Runtime asynchronous operation in debug mode has the following special properties:</span></span>  
 
-*   `asyncOpSource` <span data-ttu-id="ec974-107">\ (オブジェクト \) エラーが発生した元の場所に関する情報を取得します。</span><span class="sxs-lookup"><span data-stu-id="ec974-107">\(Object\) Gets information about the original location where the call that produced an error was made.</span></span> <span data-ttu-id="ec974-108">プロパティ `asyncOpSource.originatingCall` \ (文字列 \) には、非同期操作を生成したユーザーのコード内の場所が表示されます。</span><span class="sxs-lookup"><span data-stu-id="ec974-108">The property `asyncOpSource.originatingCall` \(String\) displays the location in the user's code that originated the asynchronous operation.</span></span>  
-*   <span data-ttu-id="ec974-109">asyncOpType \ (文字列 \) エラーを発生させた非同期操作の型の名前を取得します。</span><span class="sxs-lookup"><span data-stu-id="ec974-109">asyncOpType \(String\) Gets the name of the asynchronous operation type that raised the error.</span></span>  
+*   `asyncOpSource` <span data-ttu-id="29d9d-107">\(Object\) は、エラーを発生した元の場所に関する情報を取得します。</span><span class="sxs-lookup"><span data-stu-id="29d9d-107">\(Object\) Gets information about the original location where the call that produced an error was made.</span></span>  <span data-ttu-id="29d9d-108">プロパティ \(文字列\) は、非同期操作を元にしたユーザーのコード内の位置 `asyncOpSource.originatingCall` を表示します。</span><span class="sxs-lookup"><span data-stu-id="29d9d-108">The property `asyncOpSource.originatingCall` \(String\) displays the location in the user's code that originated the asynchronous operation.</span></span>  
+*   <span data-ttu-id="29d9d-109">asyncOpType \(文字列\) は、エラーを生じた非同期操作の種類の名前を取得します。</span><span class="sxs-lookup"><span data-stu-id="29d9d-109">asyncOpType \(String\) Gets the name of the asynchronous operation type that raised the error.</span></span>  
     
-<span data-ttu-id="ec974-110">非同期操作のエラーの詳細については、以下を参照してください。</span><span class="sxs-lookup"><span data-stu-id="ec974-110">For more information about errors with asynchronous operations, see:</span></span>  
+<span data-ttu-id="29d9d-110">非同期操作でのエラーの詳細については、次を参照してください。</span><span class="sxs-lookup"><span data-stu-id="29d9d-110">For more information about errors with asynchronous operations, see:</span></span>  
   
-*   [<span data-ttu-id="ec974-111">約束のエラーを処理する方法</span><span class="sxs-lookup"><span data-stu-id="ec974-111">How to handle errors with promises</span></span>][PreviousVersionsWindowsAppsHh700337]  
-*   [<span data-ttu-id="ec974-112">Windows ランタイムエラーのトラブルシューティング</span><span class="sxs-lookup"><span data-stu-id="ec974-112">Troubleshooting Windows Runtime errors</span></span>][PreviousVersionsWindowsAppsHh974350]  
-
-<!-- image links -->  
+*   [<span data-ttu-id="29d9d-111">エラーを誤りで処理する方法</span><span class="sxs-lookup"><span data-stu-id="29d9d-111">How to handle errors with promises</span></span>][PreviousVersionsWindowsAppsHh700337]  
+*   [<span data-ttu-id="29d9d-112">Windows ランタイム エラーのトラブルシューティング</span><span class="sxs-lookup"><span data-stu-id="29d9d-112">Troubleshooting Windows Runtime errors</span></span>][PreviousVersionsWindowsAppsHh974350]  
 
 <!-- links -->  
 
-[PreviousVersionsWindowsAppsHh700337]: /previous-versions/windows/apps/hh700337(v=win.10) "約束のエラーを処理する方法 (HTML)"  
-[PreviousVersionsWindowsAppsHh974350]: /previous-versions/windows/apps/hh974350(v=win.10) "Windows ランタイムエラー (HTML) のトラブルシューティング"  
+[PreviousVersionsWindowsAppsHh700337]: /previous-versions/windows/apps/hh700337(v=win.10) "エラーを誤って処理する方法 (HTML) |Microsoft ドキュメント"  
+[PreviousVersionsWindowsAppsHh974350]: /previous-versions/windows/apps/hh974350(v=win.10) "Windows ランタイム エラー (HTML) のトラブルシューティング |Microsoft ドキュメント"  
