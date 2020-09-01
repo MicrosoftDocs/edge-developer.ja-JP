@@ -1,17 +1,17 @@
 ---
-title: アニメーションを検査する
+title: アニメーションの検査
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 04/01/2020
+ms.date: 08/28/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 6466c7f0e1f8680a2429b565e8022d152d05d733
-ms.sourcegitcommit: 6860234c25a8be863b7f29a54838e78e120dbb62
+ms.openlocfilehash: a6970d76f4ff70031ef4cc8c6de119a41d1a5b80
+ms.sourcegitcommit: 1251c555c6b4db8ef8187ed94d8832fdb89d03b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "10570344"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "10983402"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -31,15 +31,15 @@ ms.locfileid: "10570344"
 
 
 
-# アニメーションを検査する   
+# アニメーションの検査   
 
 
 
 Microsoft Edge DevTools のアニメーションのインスペクターを使って、アニメーションの検査と変更を行います。  
 
-> ##### 図 1  
-> アニメーションの詳細設定  
-> ![アニメーションの詳細設定][ImageAnimationInspector]  
+:::image type="complex" source="../media/inspect-styles-elements-styles-drawer-animations-completed.msft.png" alt-text="アニメーションの詳細設定" lightbox="../media/inspect-styles-elements-styles-drawer-animations-completed.msft.png":::
+   アニメーションの詳細設定  
+:::image-end:::  
 
 ### まとめ  
 
@@ -65,35 +65,35 @@ Microsoft Edge DevTools アニメーションのインスペクターには、2�
 
 アニメーションインスペクターを開くには、次の2つの方法があります。  
 
-*   [**カスタマイズ] および [コントロールの DevTools** ] メニューを開く  
-    1.  [**その他のツール**] サブメニューに移動します。  
-    1.  [**アニメーション**] を選択します。  
+*   [ **カスタマイズ] および [コントロールの DevTools** ] メニューを開く  
+    1.  [ **その他のツール** ] サブメニューに移動します。  
+    1.  [ **アニメーション**] を選択します。  
         
-        > ##### 図 2  
-        > メインメニューを使ったアニメーション  
-        > ![メインメニューを使ったアニメーション][ImageAnimationsViaMainMenu]  
+        :::image type="complex" source="../media/inspect-styles-elements-styles-more-tools-animations.msft.png" alt-text="メインメニューを使用するアニメーション" lightbox="../media/inspect-styles-elements-styles-more-tools-animations.msft.png":::
+           メインメニューを使用する**アニメーション**  
+    :::image-end:::  
         
 *   **コマンドメニュー**を開く  
     1.  「`Drawer: Show Animations`」と入力します。  
 
 [アニメーションの設定] が、コンソールドロワーの横にタブとして開きます。  アニメーション検査は [引き出し] タブであるため、任意の DevTools パネルからアニメーションのインスペクターを使用できます。  
 
-> ##### 図 3  
-> 空のアニメーション検査  
-> ![空のアニメーション検査][ImageEmptyAnimationInspector]  
+:::image type="complex" source="../media/inspect-styles-elements-styles-drawer-animations.msft.png" alt-text="空のアニメーション検査" lightbox="../media/inspect-styles-elements-styles-drawer-animations.msft.png":::
+   空のアニメーション検査  
+:::image-end:::  
 
 アニメーションの検査は、4つのメインセクション \ (またはウィンドウ \) にグループ化されています。  このガイドでは、各ウィンドウについて次のことを示します。  
 
 | | ウィンドウ | 説明 |  
 | --- |:--- |:--- |  
 | 件 | **コントロール** | ここでは、現在キャプチャされているすべてのアニメーショングループをクリアするか、現在選択されているアニメーショングループの速度を変更することができます。 |  
-| 両面 | **概要** | ここでアニメーショングループを選択して、**詳細**ウィンドウで確認して変更します。 |  
+| 両面 | **概要** | ここでアニメーショングループを選択して、 **詳細** ウィンドウで確認して変更します。 |  
 | - | **タイムライン** | ここからアニメーションを一時停止して開始するか、アニメーション内の特定のポイントにジャンプします。 |  
 | 4d | **詳細** | 現在選択されているアニメーショングループを検査して変更します。 |  
 
-> ##### 図 4  
-> 注釈付きアニメーションのインスペクター  
-> ![注釈付きアニメーションのインスペクター][ImageAnnotatedAnimationInspector]  
+:::image type="complex" source="../media/inspect-styles-elements-styles-drawer-animations-selected-paused.msft.png" alt-text="注釈付きアニメーションのインスペクター" lightbox="../media/inspect-styles-elements-styles-drawer-animations-selected-paused.msft.png":::
+   注釈付きアニメーションのインスペクター  
+:::image-end:::  
 
 アニメーションをキャプチャするには、アニメーションのインスペクターが開いている状態でアニメーションをトリガーする操作を実行します。  ページの読み込みでアニメーションがトリガーされた場合は、アニメーションインスペクターが開いた状態でページを再読み込みして、アニメーションを検出します。  
 
@@ -103,99 +103,88 @@ Microsoft Edge DevTools アニメーションのインスペクターには、2�
 
 <!--  > [!VIDEO animations/capture-animations.mp4]  -->  
 
-## アニメーションを検査する   
+## アニメーションの検査   
 
 アニメーションをキャプチャした後は、いくつかの方法で再生できます。  
 
 *   **概要**ウィンドウのサムネイルにマウスポインターを置くと、プレビューが表示されます。  
-*   (**詳細**ウィンドウに表示されるように) [**概要**] ウィンドウで [アニメーション] グループを選び、 **[再生** ![ 再生] アイコンを押し ][ImageReplayButtonIcon] ます。  アニメーションはビューポートで再生されます。  アニメーション**速度**のアニメーション速度のアイコンをクリックして、 ![ ][ImageAnimationSpeedButtonsIcon] 現在選択されているアニメーショングループのプレビューの速度を変更します。  赤い垂直バーを使用して、現在の位置を変更することができます。  
+*   **概要**ウィンドウ (**詳細**ウィンドウに表示されるように) から [アニメーション] グループを選び、 **[再生**] ([ ![ 再生] アイコン ][ImageReplayButtonIcon] \) アイコンを押します。  アニメーションはビューポートで再生されます。  **animation speed** ![ ][ImageAnimationSpeedButtonsIcon] 現在選択されているアニメーショングループのプレビューの速度を変更するには、[アニメーションの速度] (アニメーションの速度のアイコン) アイコンをクリックします。  赤い垂直バーを使用して、現在の位置を変更することができます。  
 *   赤い垂直バーをクリックしてドラッグすると、ビューポートのアニメーションがスクラブされます。  
-
+    
 ### アニメーションの詳細の表示  
 
-アニメーショングループをキャプチャしたら、[**概要**] ウィンドウでクリックして詳細を表示します。  **詳細**ウィンドウには、個々のアニメーションに1行が割り当てられます。  
+アニメーショングループをキャプチャしたら、[ **概要** ] ウィンドウでクリックして詳細を表示します。  **詳細**ウィンドウには、個々のアニメーションに1行が割り当てられます。  
 
-> ##### 図 5  
-> アニメーショングループの詳細  
-> ![アニメーショングループの詳細][ImageAnimationGroupDetails]  
+:::image type="complex" source="../media/inspect-styles-elements-styles-drawer-animations-selected-completed.msft.png" alt-text="アニメーショングループの詳細" lightbox="../media/inspect-styles-elements-styles-drawer-animations-selected-completed.msft.png":::
+   アニメーショングループの詳細  
+:::image-end:::  
 
-アニメーションの上にマウスポインターを移動すると、ビューポート内で強調表示されます。  アニメーションをクリックして、[**要素**] パネルで選択します。  
+アニメーションの上にマウスポインターを移動すると、ビューポート内で強調表示されます。  アニメーションをクリックして、[ **要素** ] パネルで選択します。  
 
-> ##### 図 6  
-> ビューポートでアニメーションをポイントして強調表示する  
-> ![ビューポートでアニメーションをポイントして強調表示する][ImageHoverOverAnimationHighlightViewport]  
+:::image type="complex" source="../media/inspect-styles-split-elements-styles-drawer-animations-selected-completed.msft.png" alt-text="ビューポートでアニメーションをポイントして強調表示する" lightbox="../media/inspect-styles-split-elements-styles-drawer-animations-selected-completed.msft.png":::
+   ビューポートでアニメーションをポイントして強調表示する  
+:::image-end:::  
 
-アニメーションの左端、濃い色の部分が定義です。  右側の [薄い色] セクションは、反復計算を表します。  たとえば、[図 7](#figure-7)では、セクション2と3はセクション1のイテレーションを表します。  
+アニメーションの左端、濃い色の部分が定義です。  右側の [薄い色] セクションは、反復計算を表します。  たとえば、次の図では、セクション2と3はセクション1のイテレーションを表しています。  
 
-> ##### 図 7  
-> アニメーションの反復計算の図  
-> ![アニメーションの反復計算の図][ImageDiagramAnimationIterations]  
+:::image type="complex" source="../media/inspect-styles-glitch-display-animations-highlight.msft.png" alt-text="アニメーションの反復計算の図" lightbox="../media/inspect-styles-glitch-display-animations-highlight.msft.png":::
+   アニメーションの反復計算の図  
+:::image-end:::  
 
-2つの要素に同じアニメーションが適用されている場合、アニメーションのインスペクターでは要素に同じ色が割り当てられます。  色はランダムであり、意味はありません。  たとえば、[図 8](#figure-8)の2つの要素 `div.cwccw.earlier` と、要素との間に `div.cwccw.later` 同じアニメーション \ ( `spinrightleft` \) が適用されてい `div.ccwcw.earlier` `div.ccwcw.later` ます。  
+2つの要素に同じアニメーションが適用されている場合、アニメーションのインスペクターでは要素に同じ色が割り当てられます。  色はランダムであり、意味はありません。  たとえば、次の図では、要素と要素と同様に、2つの要素 `div.cwccw.earlier` と、 `div.cwccw.later` 同じアニメーション \ ( `spinrightleft` \) が適用されてい `div.ccwcw.earlier` `div.ccwcw.later` ます。  
 
-> ##### 図 8  
-> 色分けされたアニメーション  
-> ![色分けされたアニメーション][ImageColorCodedAnimations]  
+:::image type="complex" source="../media/inspect-styles-glitch-display-animations.msft.png" alt-text="色分けされたアニメーション" lightbox="../media/inspect-styles-glitch-display-animations.msft.png":::
+   色分けされたアニメーション  
+:::image-end:::  
 
 ## アニメーションの変更   
 
-アニメーションインスペクターでアニメーションを変更するには、次の3つの方法があります。  
+アニメーションインスペクターでアニメーションを変更するには、3つの方法があります。  
 
 *   アニメーションの継続時間。  
 *   キーフレームのタイミング。  
 *   開始タイミングの遅延。  
+    
+次の図では、元のアニメーションが表示されています。  
 
-このセクションでは、[図 9](#figure-9)は元のアニメーションを表していることを想定しています。  
-
-> ##### 図 9  
-> 変更前の元のアニメーション  
-> ![変更前の元のアニメーション][ImageOriginalAnimationBeforeModification]  
+:::image type="complex" source="../media/inspect-styles-glitch-spin-animations-console-animations.msft.png" alt-text="変更前の元のアニメーション" lightbox="../media/inspect-styles-glitch-spin-animations-console-animations.msft.png":::
+   変更前の元のアニメーション  
+:::image-end:::  
 
 アニメーションの継続時間を変更するには、最初または最後の円をクリックしてドラッグします。  
 
-> ##### 図 10  
-> 変更された期間  
-> ![変更された期間][ImageModifiedDuration]  
+:::image type="complex" source="../media/inspect-styles-glitch-spin-animations-console-animations-shorter.msft.png" alt-text="変更された期間" lightbox="../media/inspect-styles-glitch-spin-animations-console-animations-shorter.msft.png":::
+   変更された期間  
+:::image-end:::  
 
 アニメーションでキーフレームルールが定義されている場合は、それらは白色の内側の円として表されます。  いずれかをクリックしてドラッグし、キーフレームのタイミングを変更します。  
 
-> ##### 図 11  
-> 変更されたキーフレーム  
-> ![変更されたキーフレーム][ImageModifiedKeyframe]  
+:::image type="complex" source="../media/inspect-styles-glitch-spin-animations-console-animations-keyframe-modification.msft.png" alt-text="変更されたキーフレーム" lightbox="../media/inspect-styles-glitch-spin-animations-console-animations-keyframe-modification.msft.png":::
+   変更されたキーフレーム  
+:::image-end:::  
 
 アニメーションに遅延を追加するには、円以外の任意の場所でクリックしてドラッグします。  
 
-> ##### 図 12  
-> 変更遅延  
-> ![変更遅延][ImageModifiedDelay]  
+:::image type="complex" source="../media/inspect-styles-glitch-spin-animations-console-animations-delay.msft.png" alt-text="変更遅延" lightbox="../media/inspect-styles-glitch-spin-animations-console-animations-delay.msft.png":::
+   変更遅延  
+:::image-end:::  
 
-<!--   -->  
+<!--  
+  
 
 
+-->  
 
 <!-- image links -->  
 
-[ImageAnimationSpeedButtonsIcon]: /microsoft-edge/devtools-guide-chromium/media/animation-speed-buttons-icon.msft.png  
-[ImageReplayButtonIcon]: /microsoft-edge/devtools-guide-chromium/media/replay-button-icon.msft.png  
-
-[ImageAnimationInspector]: /microsoft-edge/devtools-guide-chromium/media/inspect-styles-elements-styles-drawer-animations-completed.msft.png "図 1: アニメーションインスペクター"  
-[ImageAnimationsViaMainMenu]: /microsoft-edge/devtools-guide-chromium/media/inspect-styles-elements-styles-more-tools-animations.msft.png "図 2: メインメニューを使ったアニメーション"  
-[ImageEmptyAnimationInspector]: /microsoft-edge/devtools-guide-chromium/media/inspect-styles-elements-styles-drawer-animations.msft.png "図 3: 空のアニメーションインスペクター"  
-[ImageAnnotatedAnimationInspector]: /microsoft-edge/devtools-guide-chromium/media/inspect-styles-elements-styles-drawer-animations-selected-paused.msft.png "図 4: 注釈付きアニメーションのインスペクター"  
-[ImageAnimationGroupDetails]: /microsoft-edge/devtools-guide-chromium/media/inspect-styles-elements-styles-drawer-animations-selected-completed.msft.png "図 5: アニメーショングループの詳細"  
-[ImageHoverOverAnimationHighlightViewport]: /microsoft-edge/devtools-guide-chromium/media/inspect-styles-split-elements-styles-drawer-animations-selected-completed.msft.png "図 6: ビューポートでアニメーションをポイントして強調表示する"  
-[ImageDiagramAnimationIterations]: /microsoft-edge/devtools-guide-chromium/media/inspect-styles-glitch-display-animations-highlight.msft.png "図 7: アニメーションの反復の図"  
-[ImageColorCodedAnimations]: /microsoft-edge/devtools-guide-chromium/media/inspect-styles-glitch-display-animations.msft.png "図 8: 色分けされたアニメーション"  
-[ImageOriginalAnimationBeforeModification]: /microsoft-edge/devtools-guide-chromium/media/inspect-styles-glitch-spin-animations-console-animations.msft.png "図 9: 変更前の元のアニメーション"  
-[ImageModifiedDuration]: /microsoft-edge/devtools-guide-chromium/media/inspect-styles-glitch-spin-animations-console-animations-shorter.msft.png "図 10: 変更された期間"  
-[ImageModifiedKeyframe]: /microsoft-edge/devtools-guide-chromium/media/inspect-styles-glitch-spin-animations-console-animations-keyframe-modification.msft.png "図 11: 変更されたキーフレーム"  
-[ImageModifiedDelay]: /microsoft-edge/devtools-guide-chromium/media/inspect-styles-glitch-spin-animations-console-animations-delay.msft.png "図 12: 変更の遅延"  
+[ImageAnimationSpeedButtonsIcon]: ../media/animation-speed-buttons-icon.msft.png  
+[ImageReplayButtonIcon]: ../media/replay-button-icon.msft.png  
 
 <!-- links -->  
 
 > [!NOTE]
-> このページの一部は、 [Google によっ][GoogleSitePolicies]て作成および共有され、[クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
-> 元のページは[ここ](https://developers.google.com/web/tools/chrome-devtools/inspect-styles/animations)にあり、 [Kayce Basques][KayceBasques]テクニカルライター、Chrome Devtools \ & Lighthouse \) で作成されています。  
+> このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
+> 元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/inspect-styles/animations) にあり、 [Kayce Basques][KayceBasques] テクニカルライター、Chrome Devtools \ & Lighthouse \) で作成されています。  
 
 [![クリエイティブコモンズライセンス][CCby4Image]][CCA4IL]  
 この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。  

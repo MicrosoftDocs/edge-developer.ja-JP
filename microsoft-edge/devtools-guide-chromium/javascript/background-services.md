@@ -2,16 +2,16 @@
 title: Microsoft Edge DevTools によるバックグラウンドサービスのデバッグ
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 03/18/2020
+ms.date: 08/28/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 0ac2a057307a939069cbb3b48ecd38c9de71e5db
-ms.sourcegitcommit: ecdc4287fa25a18cb4ddcaf43fcce3b396c3314c
+ms.openlocfilehash: 1fecd6f9c1dceb39482bf8c4ade71918e32dec00
+ms.sourcegitcommit: 1251c555c6b4db8ef8187ed94d8832fdb89d03b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "10581832"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "10983301"
 ---
 <!-- Copyright Kayce Basques 
    Licensed under the Apache License, Version 2.0 (the "License");
@@ -34,7 +34,7 @@ ms.locfileid: "10581832"
 
 
 
-Microsoft Edge DevTools の [**バックグラウンドサービス**] セクションは、ユーザーが web サイトを開いていない場合でも web サイトが更新を送受信できるようにする JavaScript api 用のツールのコレクションです。  
+Microsoft Edge DevTools の [ **バックグラウンドサービス** ] セクションは、ユーザーが web サイトを開いていない場合でも web サイトが更新を送受信できるようにする JavaScript api 用のツールのコレクションです。  
 バックグラウンドサービスは、機能的には [バックグラウンドプロセス] [WikiBackgroundProcess] と似ています。  
 Microsoft Edge DevTools は、次の各 Api をバックグラウンドサービスと見なします。  
 
@@ -42,13 +42,13 @@ Microsoft Edge DevTools は、次の各 Api をバックグラウンドサービ
 *   [バックグラウンド同期](#background-sync)  
 *   [通知](#notifications)  
 *   [メッセージをプッシュする](#push-messages)  
-
+    
 Microsoft Edge DevTools では、DevTools が開いていない場合でも、3日間はバックグラウンドサービスイベントをログに記録できます。  
 これは、イベントが予期したとおりに送受信されるようにするのに役立ちます。  各イベントの詳細も調べることができます。  
 
-> ##### 図 1  
-> プッシュメッセージングウィンドウのイベントの詳細の表示  
-> ![プッシュメッセージングウィンドウのイベントの詳細の表示][PushDetails]  
+:::image type="complex" source="../media/javascript-application-background-services-push-messaging.msft.png" alt-text="プッシュメッセージングウィンドウのイベントの詳細を表示する" lightbox="../media/javascript-application-background-services-push-messaging.msft.png":::
+   **プッシュメッセージング**ウィンドウのイベントの詳細を表示する  
+:::image-end:::  
 
 ## バックグラウンドでの取得   
 
@@ -58,25 +58,25 @@ Microsoft Edge DevTools では、DevTools が開いていない場合でも、3�
 
 1.  [DevTools を開き][OpenDevTools]ます。  
 1.  **アプリケーション**パネルを開きます。  
-1.  [バックグラウンドでの**取得**] ウィンドウを開く。  
+1.  [バックグラウンドでの **取得** ] ウィンドウを開く。  
     
-    > ##### 図 2  
-    > [バックグラウンドでの取り出し] ウィンドウ  
-    > ![[バックグラウンドでの取り出し] ウィンドウ][FetchEmpty]  
+    :::image type="complex" source="../media/javascript-application-background-services-background-fetch-empty.msft.png" alt-text="[バックグラウンドでの取り出し] ウィンドウ" lightbox="../media/javascript-application-background-services-background-fetch-empty.msft.png":::
+       [ **バックグラウンド** での取り出し] ウィンドウ  
+    :::image-end:::  
     
-1.  [**レコードの記録**] をクリックし ![ ][ImageRecordIcon] ます。  
+1.  [ **レコーディング** \ ( ![ レコード ][ImageRecordIcon] \)] をクリックします。  
    一部のバックグラウンドフェッチアクティビティがトリガーされると、DevTools によってイベントがテーブルに記録されます。  
     
-    > ##### 図 3  
-    > [バックグラウンドでの取得] ウィンドウのイベントのログ  
-    > ![[バックグラウンドでの取得] ウィンドウのイベントのログ][FetchLog]  
+    :::image type="complex" source="../media/javascript-application-background-services-background-fetch.msft.png" alt-text="[バックグラウンドでの取得] ウィンドウのイベントのログ" lightbox="../media/javascript-application-background-services-background-fetch.msft.png":::
+       [バックグラウンドでの **取得** ] ウィンドウのイベントのログ  
+    :::image-end:::  
     
 1.  イベントをクリックすると、テーブルの下の領域に詳細が表示されます。  
     
-    > ##### 図 4  
-    > [バックグラウンドでの取得] ウィンドウのイベントの詳細の表示  
-    > ![[バックグラウンドでの取得] ウィンドウのイベントの詳細の表示][FetchDetails]  
-
+    :::image type="complex" source="../media/javascript-application-background-services-background-fetch-details.msft.png" alt-text="[バックグラウンドでの取得] ウィンドウのイベントの詳細を表示する" lightbox="../media/javascript-application-background-services-background-fetch-details.msft.png":::
+       [バックグラウンドでの **取得** ] ウィンドウのイベントの詳細を表示する  
+    :::image-end:::  
+    
 ## バックグラウンド同期   
 
 **バックグラウンド同期 API**では、信頼性の高いインターネット接続を再確立した後、オフライン**サービスワーカー**がサーバーにデータを送信できるようにします。  DevTools が開いていない場合でも、3日間のバックグラウンド同期イベントをログに記録するには、次の操作を行います。  
@@ -85,24 +85,24 @@ Microsoft Edge DevTools では、DevTools が開いていない場合でも、3�
 
 1.  [DevTools を開き][OpenDevTools]ます。  
 1.  **アプリケーション**パネルを開きます。  
-1.  [**バックグラウンドの同期**] ウィンドウを開く。  
+1.  [ **バックグラウンドの同期** ] ウィンドウを開く。  
     
-    > ##### 図 5  
-    > [バックグラウンドの同期] ウィンドウ  
-    > ![[バックグラウンドの同期] ウィンドウ][SyncEmpty]  
+    :::image type="complex" source="../media/javascript-application-background-services-background-sync-empty.msft.png" alt-text="[バックグラウンドの同期] ウィンドウ" lightbox="../media/javascript-application-background-services-background-sync-empty.msft.png":::
+       [ **バックグラウンドの同期** ] ウィンドウ  
+    :::image-end:::  
     
-1.  [**レコードの記録**] をクリックし ![ ][ImageRecordIcon] ます。  
+1.  [ **レコーディング** \ ( ![ レコード ][ImageRecordIcon] \)] をクリックします。  
    一部のバックグラウンド同期アクティビティをトリガーした後、DevTools はイベントをテーブルに記録します。  
     
-    > ##### 図 6  
-    > [バックグラウンド同期] ウィンドウのイベントのログ  
-    > ![[バックグラウンド同期] ウィンドウのイベントのログ][SyncLog]  
+    :::image type="complex" source="../media/javascript-application-background-services-background-sync.msft.png" alt-text="[バックグラウンド同期] ウィンドウのイベントのログ" lightbox="../media/javascript-application-background-services-background-sync.msft.png":::
+       [ **バックグラウンド同期** ] ウィンドウのイベントのログ  
+    :::image-end:::  
     
 1.  イベントをクリックすると、テーブルの下の領域に詳細が表示されます。  
     
-    > ##### 図 7  
-    > [バックグラウンド同期] ウィンドウのイベントの詳細を表示する  
-    > ![[バックグラウンド同期] ウィンドウのイベントの詳細を表示する][SyncDetails]  
+    :::image type="complex" source="../media/javascript-application-background-services-background-sync-details.msft.png" alt-text="バックグラウンドの同期ウィンドウのイベントの詳細を表示する" lightbox="../media/javascript-application-background-services-background-sync-details.msft.png":::
+       **バックグラウンドの同期**ウィンドウのイベントの詳細を表示する  
+    :::image-end:::  
     
 ## 通知 
 
@@ -110,78 +110,66 @@ Microsoft Edge DevTools では、DevTools が開いていない場合でも、3�
 
 1.  [DevTools を開き][OpenDevTools]ます。  
 1.  **アプリケーション**パネルを開きます。  
-1.  [**通知**] ウィンドウを開く。  
+1.  [ **通知** ] ウィンドウを開く。  
     
-    > ##### 図 8  
-    > [通知] ウィンドウ  
-    > ![[通知] ウィンドウ][NotificationsEmpty]  
+    :::image type="complex" source="../media/javascript-application-background-services-notifications-empty.msft.png" alt-text="[通知] ウィンドウ" lightbox="../media/javascript-application-background-services-notifications-empty.msft.png":::
+       [ **通知** ] ウィンドウ  
+    :::image-end:::  
     
-1.  [**レコードの記録**] をクリックし ![ ][ImageRecordIcon] ます。  
+1.  [ **レコーディング** \ ( ![ レコード ][ImageRecordIcon] \)] をクリックします。  
    一部の通知アクティビティをトリガーすると、DevTools によってイベントがテーブルに記録されます。  
     
-    > ##### 図 9  
-    > 通知ウィンドウのイベントのログ  
-    > ![通知ウィンドウのイベントのログ][NotificationsLog]  
+    :::image type="complex" source="../media/javascript-application-background-services-notifications.msft.png" alt-text="通知ウィンドウのイベントのログ" lightbox="../media/javascript-application-background-services-notifications.msft.png":::
+       **通知**ウィンドウのイベントのログ  
+    :::image-end:::  
     
 1.  イベントをクリックすると、テーブルの下の領域に詳細が表示されます。  
     
-    > ##### 図 10  
-    > [通知] ウィンドウのイベントの詳細を表示する  
-    > ![[通知] ウィンドウのイベントの詳細を表示する][NotificationsDetails]  
+    :::image type="complex" source="../media/javascript-application-background-services-notifications-details.msft.png" alt-text="[通知] ウィンドウのイベントの詳細を表示する" lightbox="../media/javascript-application-background-services-notifications-details.msft.png":::
+       [ **通知** ] ウィンドウのイベントの詳細を表示する  
+    :::image-end:::  
     
 ## メッセージをプッシュする 
 
-ユーザーにプッシュ通知を表示するには、**サービスワーカー**はまず、[プッシュメッセージ API][MDNPush]を使ってサーバーからデータを受信する必要があります。  サービスワーカーが通知を表示する準備ができたら、[通知 API][MDNNotifications]を使います。  DevTools が開いていない場合でも、3日間、プッシュメッセージをログに記録するには、次の操作を行います。  
+ユーザーにプッシュ通知を表示するには、 **サービスワーカー** はまず、 [プッシュメッセージ API][MDNPush] を使ってサーバーからデータを受信する必要があります。  サービスワーカーが通知を表示する準備ができたら、 [通知 API][MDNNotifications]を使います。  DevTools が開いていない場合でも、3日間、プッシュメッセージをログに記録するには、次の操作を行います。  
 
 1.  [DevTools を開き][OpenDevTools]ます。  
 1.  **アプリケーション**パネルを開きます。  
-1.  [**プッシュメッセージング**] ウィンドウを開きます。  
+1.  [ **プッシュメッセージング** ] ウィンドウを開きます。  
     
-    > ##### 図 11  
-    > [プッシュメッセージング] ウィンドウ  
-    > ![[プッシュメッセージング] ウィンドウ][PushEmpty]  
-
-1.  [**レコードの記録**] をクリックし ![ ][ImageRecordIcon] ます。  
+    :::image type="complex" source="../media/javascript-application-background-services-push-messaging-empty.msft.png" alt-text="[プッシュメッセージング] ウィンドウ" lightbox="../media/javascript-application-background-services-push-messaging-empty.msft.png":::
+       [ **プッシュメッセージング** ] ウィンドウ  
+    :::image-end:::  
+    
+1.  [ **レコーディング** \ ( ![ レコード ][ImageRecordIcon] \)] をクリックします。  
     一部のプッシュメッセージのアクティビティがトリガーされた後、DevTools ではイベントがテーブルに記録されます。  
     
-    > ##### 図 12  
-    > [プッシュメッセージング] ウィンドウのイベントのログ  
-    > ![[プッシュメッセージング] ウィンドウのイベントのログ][PushLog]  
-
+    :::image type="complex" source="../media/javascript-application-background-services-push-messaging.msft.png" alt-text="[プッシュメッセージング] ウィンドウのイベントのログ" lightbox="../media/javascript-application-background-services-push-messaging.msft.png":::
+       [ **プッシュメッセージング** ] ウィンドウのイベントのログ  
+    :::image-end:::  
+    
 1.  イベントをクリックすると、テーブルの下の領域に詳細が表示されます。  
     
-    > ##### 図 13  
-    > プッシュメッセージングウィンドウのイベントの詳細の表示  
-    > ![プッシュメッセージングウィンドウのイベントの詳細の表示][PushDetails2]  
+    :::image type="complex" source="../media/javascript-application-background-services-push-messaging-details.msft.png" alt-text="プッシュメッセージングウィンドウのイベントの詳細を表示する" lightbox="../media/javascript-application-background-services-push-messaging-details.msft.png":::
+       **プッシュメッセージング**ウィンドウのイベントの詳細を表示する  
+    :::image-end:::  
     
+<!--  
  
 
 
+-->  
 
 <!-- image links -->  
 
-[ImageRecordIcon]: /microsoft-edge/devtools-guide-chromium/media/record-icon.msft.png  
-
-[PushDetails]: /microsoft-edge/devtools-guide-chromium/media/javascript-application-background-services-push-messaging.msft.png "図 1: プッシュメッセージウィンドウのイベントの詳細の表示"  
-[FetchEmpty]: /microsoft-edge/devtools-guide-chromium/media/javascript-application-background-services-background-fetch-empty.msft.png "図 2: [バックグラウンドでの取り出し] ウィンドウ"  
-[FetchLog]: /microsoft-edge/devtools-guide-chromium/media/javascript-application-background-services-background-fetch.msft.png "図 3: [バックグラウンドでの取り出し] ウィンドウに表示されたイベントのログ"  
-[FetchDetails]: /microsoft-edge/devtools-guide-chromium/media/javascript-application-background-services-background-fetch-details.msft.png "図 4: [バックグラウンドでの取得] ウィンドウに表示されたイベントの詳細の表示"  
-[SyncEmpty]: /microsoft-edge/devtools-guide-chromium/media/javascript-application-background-services-background-sync-empty.msft.png "図 5: [バックグラウンド同期] ウィンドウ"  
-[SyncLog]: /microsoft-edge/devtools-guide-chromium/media/javascript-application-background-services-background-sync.msft.png "図 6: [バックグラウンド同期] ウィンドウのイベントのログ"  
-[SyncDetails]: /microsoft-edge/devtools-guide-chromium/media/javascript-application-background-services-background-sync-details.msft.png "図 7: バックグラウンドの同期ウィンドウのイベントの詳細を表示する"  
-[NotificationsEmpty]: /microsoft-edge/devtools-guide-chromium/media/javascript-application-background-services-notifications-empty.msft.png "図 8: [通知] ウィンドウ"  
-[NotificationsLog]: /microsoft-edge/devtools-guide-chromium/media/javascript-application-background-services-notifications.msft.png "図 9: 通知ウィンドウのイベントのログ"  
-[NotificationsDetails]: /microsoft-edge/devtools-guide-chromium/media/javascript-application-background-services-notifications-details.msft.png "図 10: [通知] ウィンドウのイベントの詳細を表示する"  
-[PushEmpty]: /microsoft-edge/devtools-guide-chromium/media/javascript-application-background-services-push-messaging-empty.msft.png "図 11: [プッシュメッセージング] ウィンドウ"  
-[PushLog]: /microsoft-edge/devtools-guide-chromium/media/javascript-application-background-services-push-messaging.msft.png "図 12: プッシュメッセージングウィンドウのイベントのログ"  
-[PushDetails2]: /microsoft-edge/devtools-guide-chromium/media/javascript-application-background-services-push-messaging-details.msft.png "図 13: プッシュメッセージングウィンドウのイベントの詳細の表示"  
+[ImageRecordIcon]: ../media/record-icon.msft.png  
 
 <!-- links -->  
 
 <!--[BackgroundFetchAPI]: ../../../microsoft-edge/devtools-guide-chromium/whats-new/2018/12/background-fetch.md "Background Fetch API"  -->  
 <!--[BackgroundSyncAPI]: ../../../microsoft-edge/devtools-guide-chromium/whats-new/2015/12/background-sync.md  "Background Sync API"  -->
 
-[OpenDevTools]: ../open.md "Microsoft Edge (Chromium) 開発者ツールを開く"  
+[OpenDevTools]: ../open.md "Microsoft Edge (Chromium) 開発者ツールを開く |Microsoft ドキュメント"  
 
 [MDNNotifications]: https://developer.mozilla.org/docs/Web/API/Notifications_API "通知 API |MDN"  
 [MDNPush]: https://developer.mozilla.org/docs/Web/API/Push_API "プッシュ API |MDN"  
@@ -189,8 +177,8 @@ Microsoft Edge DevTools では、DevTools が開いていない場合でも、3�
 [WikiBackgroundProcess]: https://en.wikipedia.org/wiki/Background_process "バックグラウンドプロセス-Wikipedia"  
 
 > [!NOTE]
-> このページの一部は、 [Google によっ][GoogleSitePolicies]て作成および共有され、[クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
-> 元のページは[ここ](https://developers.google.com/web/tools/chrome-devtools/javascript/background-services)にあり、 [Kayce Basques][KayceBasques]テクニカルライター、Chrome Devtools \ & Lighthouse \) で作成されています。  
+> このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
+> 元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/javascript/background-services) にあり、 [Kayce Basques][KayceBasques] テクニカルライター、Chrome Devtools \ & Lighthouse \) で作成されています。  
 [![クリエイティブコモンズライセンス][CCby4Image]][CCA4IL]  
 この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。  
 

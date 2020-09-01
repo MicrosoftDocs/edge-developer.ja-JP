@@ -2,16 +2,16 @@
 title: 本体の JavaScript の実行を開始する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 03/24/2020
+ms.date: 08/28/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 724d0e3c7c8439551538383e68a5fc4465eade94
-ms.sourcegitcommit: 5cdc1626d5581b79c0f2ac4ea62e7f1974ebfa57
+ms.openlocfilehash: 7e91d9844b2926bc8302331c6b9d971922d27ea3
+ms.sourcegitcommit: 1251c555c6b4db8ef8187ed94d8832fdb89d03b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "10601727"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "10982262"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -37,15 +37,15 @@ ms.locfileid: "10601727"
 
 
 
-この対話形式のチュートリアルでは、Microsoft Edge DevTools コンソールで JavaScript を実行する方法について説明します。  メッセージをコンソールに記録する方法については、「[ログメッセージの概要][DevToolsConsoleLoggingMessages]」を参照してください。  JavaScript コードを一時停止して、一度に1行ずつ手順を実行する方法については、「 [Javascript のデバッグを開始][DevToolsJavascriptIndex]する」を参照してください。  
+この対話形式のチュートリアルでは、Microsoft Edge DevTools **コンソール**で JavaScript を実行する方法について説明します。  **コンソール**へのメッセージのログの記録方法の詳細については、「[ログメッセージの使用を開始][DevToolsConsoleLoggingMessages]する」を参照してください。  JavaScript コードを一時停止して一度に1行ずつ手順を実行する方法の詳細については、「 [Javascript のデバッグの概要][DevToolsJavascriptIndex]」を参照してください。  
 
-> ##### 図 1  
-> **本体**  
-> ![本体][ImageConsole]  
+:::image type="complex" source="../media/console-javascript-example-console-playground.msft.png" alt-text="本体" lightbox="../media/console-javascript-example-console-playground.msft.png":::
+   **本体**  
+:::image-end:::  
 
 ## 概要   
 
-**本体**は[REPL][WikiReadEvalPrintLoop]であり、読み取り、評価、印刷、ループを意味します。  これは、入力した JavaScript を読み上げてコードを評価し、[式][2alityExpressionsVersusStatements]の結果を出力した後、最初の手順にループします。  
+**本体**は[REPL][WikiReadEvalPrintLoop]であり、読み取り、評価、印刷、ループを意味します。  これは、入力した JavaScript を読み上げてコードを評価し、 [式][2alityExpressionsVersusStatements]の結果を出力した後、最初の手順にループします。  
 
 ## DevTools のセットアップ   
 
@@ -54,22 +54,22 @@ ms.locfileid: "10601727"
 1.  `Control` + `Shift` + `J` 本体を開くには、\ (Windows \) または `Command` + `Option` + `J` \ ( **Console**macOS \) を押します。  
 1.  `Control`[\ (Windows \)] または `Command` [\ (macOS \)] をクリックし、[**コンソール Javascript の例**] をクリックして新しいウィンドウで開きます。  
     
-    [本体の Javascript の例][GlitchConsoleJavascriptExample]  
+    *   [本体の Javascript の例][GlitchConsoleJavascriptExample]  
     
-    > ##### 図 2  
-    > 左側の本体の JavaScript のサンプルページと右側の DevTools  
-    > ![左側の本体の JavaScript のサンプルページと右側の DevTools][ImageTutorialDevToolsJs]  
-
+    :::image type="complex" source="../media/console-javascript-example-console-empty.msft.png" alt-text="左側の本体の JavaScript のサンプルページと右側の DevTools" lightbox="../media/console-javascript-example-console-empty.msft.png":::
+       左側の本体の JavaScript のサンプルページと右側の DevTools  
+    :::image-end:::  
+    
 ## ページの JavaScript または DOM を表示して変更する   
 
-ページの作成またはデバッグ時には、ページの外観や実行方法を変更するために、**コンソール**でステートメントを実行すると便利なことがあります。  
+ページの作成またはデバッグ時には、ページの外観や実行方法を変更するために、 **コンソール** でステートメントを実行すると便利なことがあります。  
     
 1.  ボタンのテキストに注目してください。  
 1.  コンソールに入力し、を `document.getElementById('hello').textContent = 'Hello, Console!'` 押して式を評価し**Console** `Enter` ます。  ボタン内のテキストがどのように変化するかに注目してください。  
     
-    > ##### 図 3  
-    > 式を評価した後の本体の外観  
-    > ![式を評価した後の本体の外観][ImageConsoleAfterEvaluating]  
+    :::image type="complex" source="../media/console-javascript-example-console-change-button-text.msft.png" alt-text="式を評価した後の本体の外観" lightbox="../media/console-javascript-example-console-change-button-text.msft.png":::
+       式を評価した後の **本体** の外観  
+    :::image-end:::  
     
     評価したコードの下に表示さ `"Hello, Console!"` れます。  REPL: read、evaluate、print、loop の4つの手順を取り消します。  コードを評価した後、REPL は式の結果を出力します。  そのため `"Hello, Console!"` 、評価の結果である必要があり `document.getElementById('hello').textContent = 'Hello, Console!'` ます。  
     
@@ -77,27 +77,30 @@ ms.locfileid: "10601727"
 
 場合によっては、コードをテストできる場所でコードプレイグラウンドを使用したり、使い慣れていない新しい JavaScript 機能を試したりすることができます。  このような種類の実験では、コンソールは最適な場所です。  
 
-1.  `5 + 15`本体に入力し、を押して `Enter` 式を評価します。 本体によって、コードの下に式の結果が出力されます。  **図 4**は、この式を評価した後の本体の表示方法を示しています。  
+1.  `5 + 15`本体に入力し、を押して `Enter` 式を評価します。 本体によって、コードの下に式の結果が出力されます。  次の図では、式を評価した後に **コンソール** に結果が表示されます。  
 
 1.  **コンソール**に次のコードを入力します。  テキストをコピーして貼り付けるのではなく、文字で入力してみてください。  
     
     ```javascript
-    function add(a, b=20) {
-        return a + b;
-    }
+    function add(a, b=20) { return a + b; }
     ```  
     
-    構文に慣れていない場合は、「[関数引数の既定値を定義][Esma6DefaultParameterValues]する」を参照してください `b=20` 。  
+    構文に慣れていない場合は `b=20` 、「 [関数の引数に既定値を定義][Esma6DefaultParameterValues]する」を参照してください。  
     
-1.  次に、定義した関数を呼び出します。  
+1.  次に、定義した関数を実行します。  
     
-    ```javascript
-    add(25);
-    ```  
-    
-    > ##### 図 4  
-    > 上の式を評価した後の本体の外観  
-    > ![上の式を評価した後の本体の外観][ImagePlayground]  
+    :::row:::
+       :::column span="":::
+          ```javascript
+          add(25);
+          ```  
+       :::column-end:::
+       :::column span="":::
+          :::image type="complex" source="../media/console-javascript-example-console-playground.msft.png" alt-text="コードスニペットで式を評価した後にコンソールが表示される" lightbox="../media/console-javascript-example-console-playground.msft.png":::
+             コードスニペットで式を評価した後に **コンソール** が表示される  
+          :::image-end:::  
+       :::column-end:::
+    :::row-end:::
     
     `add(25)` `45` `add` 2 番目の引数を指定せずに関数を呼び出した場合は、として評価され `b` ます。既定は、 `20` です。  
 
@@ -107,7 +110,7 @@ ms.locfileid: "10601727"
 
 <!--todo: add console reference (run javascript) section when available  -->  
 
-DevTools では、実行中にスクリプトを一時停止できます。  一時停止中は、**本体**を使ってその時点でのページの表示や変更を行うことができ `window` `DOM` ます。  これにより、強力なデバッグワークフローが実現します。  「対話型チュートリアルの[デバッグ JavaScript の概要][DevToolsJavascriptIndex]」を参照してください。  
+DevTools では、実行中にスクリプトを一時停止できます。  一時停止中は、 **本体** を使ってその時点でのページの表示や変更を行うことができ `window` `DOM` ます。  ワークフローによって、強力なデバッグワークフローが実現されます。  インタラクティブなチュートリアルについては、「 [JavaScript のデバッグを開始][DevToolsJavascriptIndex]する」を参照してください。  
 
 **コンソール**には、ページを操作しやすくするための便利な機能も用意されています。  次に、例を示します。  
 
@@ -123,20 +126,12 @@ DevTools では、実行中にスクリプトを一時停止できます。  一
 
 
 
-<!-- image links -->  
-
-[ImageConsole]: /microsoft-edge/devtools-guide-chromium/media/console-javascript-example-console-playground.msft.png "図 1: 本体"  
-[ImageTutorialDevToolsJs]: /microsoft-edge/devtools-guide-chromium/media/console-javascript-example-console-empty.msft.png "図 2: 左側の本体の JavaScript のサンプルページと右側の DevTools"  
-[ImageConsoleAfterEvaluating]: /microsoft-edge/devtools-guide-chromium/media/console-javascript-example-console-change-button-text.msft.png "図 3: 式を評価した後の本体の外観"  
-[ImagePlayground]: /microsoft-edge/devtools-guide-chromium/media/console-javascript-example-console-playground.msft.png "図 4: 上の式を評価した後の本体の外観"  
-
 <!-- links -->  
 
-[DevToolsConsoleLoggingMessages]: /microsoft-edge/devtools-guide-chromium/console/log "コンソールでのメッセージの記録を開始する"  
-[DevToolsConsoleReference]: /microsoft-edge/devtools-guide-chromium/console/reference#run-javascript "本体のリファレンス"  
-[DevToolsConsoleUtilities]: /microsoft-edge/devtools-guide-chromium//console/utilities "コンソールユーティリティ API リファレンス"  
-
-[DevToolsJavascriptIndex]: /microsoft-edge/devtools-guide-chromium/javascript/index "Microsoft Edge DevTools のデバッグ JavaScript の概要"  
+[DevToolsConsoleLoggingMessages]: ./log.md "コンソールでのメッセージの記録を開始する |Microsoft ドキュメント"  
+[DevToolsConsoleReference]: ./reference.md#run-javascript "コンソールリファレンス |Microsoft ドキュメント"  
+[DevToolsConsoleUtilities]: ./utilities.md "コンソールユーティリティ API リファレンス |Microsoft ドキュメント"  
+[DevToolsJavascriptIndex]: ../javascript/index.md "Microsoft Edge DevTools のデバッグ JavaScript の概要"  
 
 [2alityExpressionsVersusStatements]: https://2ality.com/2012/09/expressions-vs-statements.html "JavaScript の式とステートメント"  
 
@@ -147,8 +142,8 @@ DevTools では、実行中にスクリプトを一時停止できます。  一
 [WikiReadEvalPrintLoop]: https://en.wikipedia.org/wiki/Read–eval–print_loop "読み取り– eval – print loop-Wikipedia"  
 
 > [!NOTE]
-> このページの一部は、 [Google によっ][GoogleSitePolicies]て作成および共有され、[クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
-> 元のページは[ここ](https://developers.google.com/web/tools/chrome-devtools/console/javascript)にあり、 [Kayce Basques][KayceBasques]テクニカルライター、Chrome Devtools \ & Lighthouse \) で作成されています。  
+> このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
+> 元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/console/javascript) にあり、 [Kayce Basques][KayceBasques] テクニカルライター、Chrome Devtools \ & Lighthouse \) で作成されています。  
 
 [![クリエイティブコモンズライセンス][CCby4Image]][CCA4IL]  
 この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。  

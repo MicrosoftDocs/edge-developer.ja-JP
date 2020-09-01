@@ -2,16 +2,16 @@
 title: Microsoft Edge DevTools で Web SQL データを表示する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 04/30/2019
+ms.date: 08/28/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 7a1e3e47f6761cfdb23488683107ed0df6a8f4e2
-ms.sourcegitcommit: ad68bfbb355f6cfdaaf6612b77ea3985d4d6a58b
+ms.openlocfilehash: 8b2e6d1a117e401f9e579cb28f81da9676eea979
+ms.sourcegitcommit: 1251c555c6b4db8ef8187ed94d8832fdb89d03b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "10612061"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "10983467"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -36,100 +36,93 @@ ms.locfileid: "10612061"
 
 
 > [!WARNING]
-> Web SQL 仕様は[管理されていません][W3CWebSQLStatus]。  
+> Web SQL 仕様は [管理されていません][W3CWebSQLStatus]。  
 
-このガイドでは、 [Microsoft Edge DevTools][MicrosoftEdgeDevTools]を使って Web SQL データを検査する方法について説明します。  
+このガイドでは、 [Microsoft Edge DevTools][MicrosoftEdgeDevTools] を使って Web SQL データを検査する方法について説明します。  
 
 ## Web SQL データの表示   
 
-1.  [**ソース**] タブを選択して、[**ソース**] パネルを開きます。  通常、**マニフェスト**ウィンドウは既定で開かれます。  
+1.  [ **ソース** ] タブを選択して、[ **ソース** ] パネルを開きます。  通常、 **マニフェスト** ウィンドウは既定で開かれます。  
     
-    > ##### 図 1  
-    > マニフェストウィンドウ  
-    > ![マニフェストウィンドウ][ImageManifestPane]  
+    :::image type="complex" source="../media/storage-application-manifest.msft.png" alt-text="マニフェストウィンドウ" lightbox="../media/storage-application-manifest.msft.png":::
+       **マニフェスト**ウィンドウ  
+    :::image-end:::  
     
-1.  [ **WEB SQL** ] セクションを展開して、データベースとテーブルを表示します。  **Html5meetup**の下の[図 2](#figure-2)にはデータベースがあり、**会議室**は表です。  
+1.  [ **WEB SQL** ] セクションを展開して、データベースとテーブルを表示します。  次の図では、 **html5meetup** はデータベースの下にあり、 **会議室** は表です。  
     
-    > ##### 図 2  
-    > Web SQL ウィンドウ  
-    > ![Web SQL ウィンドウ][ImageWebSQLPane]  
-
+    :::image type="complex" source="../media/storage-application-storage-web-sql.msft.png" alt-text="Web SQL ウィンドウ" lightbox="../media/storage-application-storage-web-sql.msft.png":::
+       **WEB SQL**ウィンドウ  
+    :::image-end:::  
+    
 1.  テーブルを選択して、そのテーブルのデータを表示します。  
     
-    > ##### 図 3  
-    > **会議室**Web SQL テーブルのデータの表示  
-    > ![Web SQL テーブルのデータを表示する][ImageWebSQLTable]  
-
+    :::image type="complex" source="../media/storage-application-storage-web-sql-html5meetup-rooms-1.msft.png" alt-text="Web SQL テーブルのデータを表示する" lightbox="../media/storage-application-storage-web-sql-html5meetup-rooms-1.msft.png":::
+       Web SQL テーブルのデータを表示する  
+    :::image-end:::  
+    
 ## Web SQL データを編集する   
 
-上記の**図 3**のように、web sql テーブルを表示するときに、web sql データを編集することはできません。  ただし、テーブルを編集または削除する Web SQL 本体のステートメントを実行することができます。  「 [Web クエリを実行](#run-web-sql-queries)する」を参照してください。  
+上記の **図 3** のように、web sql テーブルを表示するときに、web sql データを編集することはできません。  ただし、テーブルを編集または削除する Web SQL 本体のステートメントを実行することができます。  「 [Web クエリを実行](#run-web-sql-queries)する」を参照してください。  
 
 ## Web SQL クエリを実行する   
 
 1.  データベースを選択して、そのデータベースのコンソールを開きます。  
-
 1.  Web SQL ステートメントを入力し、を押して `Enter` 実行します。  
     
-    > ##### 図 4  
-    > Web SQL コンソールを使用して、**会議室**テーブルから行を削除する  
-    > ![Web SQL 本体を使用してテーブルから行を削除する][ImageWebSQLEdit]  
-
+    :::image type="complex" source="../media/storage-application-storage-web-sql-html5meetup-commands.msft.png" alt-text="Web SQL コンソールを使用してテーブルから行を削除する" lightbox="../media/storage-application-storage-web-sql-html5meetup-commands.msft.png":::
+       Web SQL コンソールを使用してテーブルから行を削除する  
+    :::image-end:::  
+    
 ## Web SQL テーブルを更新する   
 
 DevTools では、表がリアルタイムで更新されることはありません。  表のデータを更新するには、次の操作を行います。  
 
 1.  [WEB SQL テーブルのデータを表示](#view-web-sql-data)する。  
-1.  [**更新の更新]** を選び ![ ][ImageRefreshIcon] ます。  
-
+1.  [ **Refresh** (更新)] を選び ![ ][ImageRefreshIcon] ます。  
+    
 ## Web SQL テーブルの列をフィルター処理する   
 
 1.  [WEB SQL テーブルのデータを表示](#view-web-sql-data)する。  
-1.  [**表示列**] ボックスを使用して、表示する列を指定します。  列名を CSV リストとして指定します。  
+1.  [ **表示列** ] ボックスを使用して、表示する列を指定します。  列名を CSV リストとして指定します。  
     
-    > ##### 図 5  
-    > [**可視列**] ボックスを使用して、 `room_name` および列のみを表示する `last_updated`  
-    > ![表示される列の数を減らすには、[表示列] ボックスを使用します。][ImageWebSQLFilter]  
-
+    :::image type="complex" source="../media/storage-application-storage-web-sql-html5meetup-rooms-2.msft.png" alt-text="表示される列の数を減らすには、[可視列] ボックスを使用します。" lightbox="../media/storage-application-storage-web-sql-html5meetup-rooms-2.msft.png":::
+       表示される列の数を減らすには、[ **可視列** ] ボックスを使用します。  
+    :::image-end:::  
+    
 ## すべての Web SQL データを削除する   
 
-1.  [**記憶域のクリア**] ウィンドウを開く。  
+1.  [ **記憶域のクリア** ] ウィンドウを開く。  
 1.  [ **WEB SQL** ] チェックボックスがオンになっていることを確認します。  
     
-    > ##### 図 6  
-    > **WEB SQL**チェックボックス  
-    > ![Web SQL チェックボックス][ImageWebSQLCheckbox]  
-
-1.  [**サイトデータのクリア**] を選びます。  
+    :::image type="complex" source="../media/storage-application-clear-storage-web-sql.msft.png" alt-text="Web SQL チェックボックス" lightbox="../media/storage-application-clear-storage-web-sql.msft.png":::
+       **WEB SQL**チェックボックス  
+    :::image-end:::  
     
-    > ##### 図 7  
-    > [**サイトデータのクリア**] ボタン  
-    > ![[サイトデータのクリア] ボタン][ImageClearWebSQL]  
-
+1.  [ **サイトデータのクリア**] を選びます。  
+    
+    :::image type="complex" source="../media/storage-application-clear-storage-clear-site-data-button.msft.png" alt-text="[サイトデータのクリア] ボタン" lightbox="../media/storage-application-clear-storage-clear-site-data-button.msft.png":::
+       [ **サイトデータのクリア** ] ボタン  
+    :::image-end:::  
+    
+<!--  
  
 
 
+-->  
 
 <!-- image links -->  
 
-[ImageRefreshIcon]: /microsoft-edge/devtools-guide-chromium/media/refresh-icon.msft.png  
-
-[ImageManifestPane]: /microsoft-edge/devtools-guide-chromium/media/storage-application-manifest.msft.png "図 1: [マニフェスト] ウィンドウ"  
-[ImageWebSQLPane]: /microsoft-edge/devtools-guide-chromium/media/storage-application-storage-web-sql.msft.png "図 2: [Web SQL] ウィンドウ"  
-[ImageWebSQLTable]: /microsoft-edge/devtools-guide-chromium/media/storage-application-storage-web-sql-html5meetup-rooms-1.msft.png "図 3: Web SQL テーブルのデータの表示"  
-[ImageWebSQLEdit]: /microsoft-edge/devtools-guide-chromium/media/storage-application-storage-web-sql-html5meetup-commands.msft.png "図 4: Web SQL 本体を使ってテーブルから行を削除する"  
-[ImageWebSQLFilter]: /microsoft-edge/devtools-guide-chromium/media/storage-application-storage-web-sql-html5meetup-rooms-2.msft.png "図 5: 表示される列の数を減らすために [表示列] テキストボックスを使用する"  
-[ImageWebSQLCheckbox]: /microsoft-edge/devtools-guide-chromium/media/storage-application-clear-storage-web-sql.msft.png "図 6: [Web SQL] チェックボックス"  
-[ImageClearWebSQL]: /microsoft-edge/devtools-guide-chromium/media/storage-application-clear-storage-clear-site-data-button.msft.png "図 7: [サイトデータのクリア] ボタン"  
+[ImageRefreshIcon]: ../media/refresh-icon.msft.png  
 
 <!-- links -->  
 
-[MicrosoftEdgeDevTools]: /microsoft-edge/devtools-guide-chromium "Microsoft Edge (Chromium) 開発者ツール"  
+[MicrosoftEdgeDevTools]: ../../devtools-guide-chromium.md "Microsoft Edge (Chromium) 開発者ツール |Microsoft ドキュメント"  
 
 [W3CWebSQLStatus]: https://w3.org/TR/webdatabase/#status-of-this-document "Web SQL データベース |勧告"  
 
 > [!NOTE]
-> このページの一部は、 [Google によっ][GoogleSitePolicies]て作成および共有され、[クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
-> 元のページは[ここ](https://developers.google.com/web/tools/chrome-devtools/storage/websql)にあり、 [Kayce Basques][KayceBasques]テクニカルライター、Chrome Devtools \ & Lighthouse \) で作成されています。  
+> このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
+> 元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/storage/websql) にあり、 [Kayce Basques][KayceBasques] テクニカルライター、Chrome Devtools \ & Lighthouse \) で作成されています。  
 
 [![クリエイティブコモンズライセンス][CCby4Image]][CCA4IL]  
 この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。  

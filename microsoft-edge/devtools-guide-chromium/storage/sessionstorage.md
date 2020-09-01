@@ -2,16 +2,16 @@
 title: Microsoft Edge DevTools を使ってセッションストレージを表示および編集する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 04/30/2020
+ms.date: 08/28/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: d90d4bd7ec9b8927b713a744fb067cc5e96a1fe6
-ms.sourcegitcommit: ad68bfbb355f6cfdaaf6612b77ea3985d4d6a58b
+ms.openlocfilehash: d0631f69a082a2a73c51e4359c21cf94636d665e
+ms.sourcegitcommit: 1251c555c6b4db8ef8187ed94d8832fdb89d03b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "10612082"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "10983577"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -35,108 +35,99 @@ ms.locfileid: "10612082"
 
   
 
-このガイドでは、 [Microsoft Edge DevTools][MicrosoftEdgeDevTools]を使って、キーと値のペアを表示、編集、削除する方法について説明し [`sessionStorage`][MDNSessionStorage] ます。  
+このガイドでは、 [Microsoft Edge DevTools][MicrosoftEdgeDevTools] を使って、キーと値のペアを表示、編集、削除する方法について説明し [`sessionStorage`][MDNSessionStorage] ます。  
 
 ## SessionStorage のキーと値の表示   
 
-1.  [**アプリケーション**] タブを選択して、[**アプリケーション**] パネルを開きます。  **マニフェスト**ウィンドウは既定で表示されます。  
+1.  [ **アプリケーション** ] タブを選択して、[ **アプリケーション** ] パネルを開きます。  **マニフェスト**ウィンドウは既定で表示されます。  
     
-    > ##### 図 1  
-    > マニフェストウィンドウ  
-    > ![マニフェストウィンドウ][ImageManifest]  
-
-1.  [**セッションストレージ**] メニューを展開します。  
+    :::image type="complex" source="../media/storage-application-manifest.msft.png" alt-text="マニフェストウィンドウ" lightbox="../media/storage-application-manifest.msft.png":::
+       **マニフェスト**ウィンドウ  
+    :::image-end:::  
     
-    > ##### 図 2  
-    > [**セッション記憶域**] メニュー  
-    > ![[セッション記憶域] メニュー][ImageSessionStorageMenu]  
-
+1.  [ **セッションストレージ** ] メニューを展開します。  
+    
+    :::image type="complex" source="../media/storage-application-storage-session-storage.msft.png" alt-text="[セッション記憶域] メニュー" lightbox="../media/storage-application-storage-session-storage.msft.png":::
+       [ **セッション記憶域** ] メニュー  
+    :::image-end:::  
+    
 1.  ドメインを選択して、キーと値のペアを表示します。  
     
-    > ##### 図 3  
-    > セッションストレージのキーと値のペア  
-    > !["SessionStorage" キーと値のペア][ImageSessionStorage]  
-
+    :::image type="complex" source="../media/storage-application-storage-session-storage-domain.msft.png" alt-text=""SessionStorage" キーと値のペア" lightbox="../media/storage-application-storage-session-storage-domain.msft.png":::
+       `sessionStorage`キーと値のペア  
+    :::image-end:::  
+    
 1.  テーブルの行を選択して、テーブルの下に表示されているビューアーの値を確認します。  
     
-    > ##### 図 4  
-    > キーの値を表示する `x-sid`  
-    > ![X sid キーの値を表示する][ImageSessionStorageViewer]  
-
+    :::image type="complex" source="../media/storage-application-storage-session-storage-domain-key-value-selected.msft.png" alt-text="X sid キーの値を表示する" lightbox="../media/storage-application-storage-session-storage-domain-key-value-selected.msft.png":::
+       キーの値を表示する `x-sid`  
+    :::image-end:::  
+    
 ## 新しい sessionStorage のキーと値のペアを作成する   
 
 1.  [ `sessionStorage` ドメインのキーと値のペアを表示](#view-sessionstorage-keys-and-values)します。  
-1.  表の空の部分をダブルクリックします。  DevTools で新しい行を作成し、**キー**列にカーソルをフォーカスします。  
+1.  表の空の部分をダブルクリックします。  DevTools で新しい行を作成し、 **キー** 列にカーソルをフォーカスします。  
     
-    > ##### 図 5  
-    > 新しいキーと値のペアを作成するためにダブルクリックするテーブルの空の部分  
-    > ![新しいキーと値のペアを作成するためにダブルクリックするテーブルの空の部分][ImageSessionStorageCreate]  
-
+    :::image type="complex" source="../media/storage-application-storage-session-storage-domain-key-value-new.msft.png" alt-text="新しいキーと値のペアを作成するためにダブルクリックするテーブルの空の部分" lightbox="../media/storage-application-storage-session-storage-domain-key-value-new.msft.png":::
+       新しいキーと値のペアを作成するためにダブルクリックするテーブルの空の部分  
+    :::image-end:::  
+    
 ## SessionStorage のキーまたは値を編集する   
 
 1.  [ `sessionStorage` ドメインのキーと値のペアを表示](#view-sessionstorage-keys-and-values)します。  
 1.  キーまた**は値の列の**セルをダブルクリックし**て、その**キーまたは値を編集します。  
     
-    > ##### 図 6  
-    > キーを編集する `sessionStorage`  
-    > ![セッションストレージキーを編集する][ImageSessionStorageEdit]  
-
+    :::image type="complex" source="../media/storage-application-storage-session-storage-domain-key-value-edit.msft.png" alt-text="セッションストレージキーを編集する" lightbox="../media/storage-application-storage-session-storage-domain-key-value-edit.msft.png":::
+       キーを編集する `sessionStorage`  
+    :::image-end:::  
+    
 ## セッションストレージのキーと値のペアを削除する   
 
 1.  [ `sessionStorage` ドメインのキーと値のペアを表示](#view-sessionstorage-keys-and-values)します。  
 1.  削除するキーと値のペアを選択します。  DevTools は、青色を強調表示して、選択されていることを示します。  
-
-1.  キーを押すか、[選択した `Delete` 削除の削除] をクリックし**Delete Selected** ![ ][ImageDeleteIcon] ます。  
-
+1.  キーを押す `Delete` か、[ **選択した** ものを削除] をクリックし ![ ます (選択した \ を削除 ][ImageDeleteIcon] )。  
+    
 ## ドメインのすべてのセッション記憶域のキーと値のペアを削除する   
 
 1.  [ `sessionStorage` ドメインのキーと値のペアを表示](#view-sessionstorage-keys-and-values)します。  
-
-1.  [**すべて**クリア] を選択し ![ ][ImageClearIcon] ます。  
-
+1.  [ **すべてクリア** ] を選択し ![ ][ImageClearIcon] ます。  
+    
 ## コンソールからセッションストレージを操作する   
 
 JavaScript は**本体**で実行できるため、**本体**はページの javascript コンテキストにアクセスできるため、コンソールから操作することができ `sessionStorage` ます。 **Console**  
 
-1.  使用しているページ以外のドメインのキーと値のペアにアクセスする場合は、 **javascript のコンテキスト**メニューを使って**本体**の javascript コンテキストを変更し `sessionStorage` ます。  
+1.  使用しているページ以外のドメインのキーと値のペアにアクセスする場合は、 **javascript のコンテキスト** メニューを使って **本体** の javascript コンテキストを変更し `sessionStorage` ます。  
     
-    > ##### 図 7  
-    > **本体**の JavaScript コンテキストの変更  
-    > ![本体の JavaScript コンテキストの変更][ImageJSContext]  
-
+    :::image type="complex" source="../media/storage-console-domain-selection.msft.png" alt-text="本体の JavaScript のコンテキストを変更する" lightbox="../media/storage-console-domain-selection.msft.png":::
+       本体の JavaScript のコンテキストを変更する  
+    :::image-end:::  
+    
 1.  `sessionStorage`JavaScript と同じように、コンソールで式を実行します。  
     
-    > ##### 図 8  
-    > `sessionStorage`**コンソール**からの操作  
-    > ![セッションストレージと本体との対話][ImageSessionStorageConsole]  
-
+    :::image type="complex" source="../media/storage-console-session-storage-keys.msft.png" alt-text="コンソールからセッションストレージを操作する" lightbox="../media/storage-console-session-storage-keys.msft.png":::
+       `sessionStorage`**コンソール**から操作する  
+    :::image-end:::  
+    
+<!--  
    
 
   
+-->  
 
 <!-- image links -->  
 
-[ImageClearIcon]: /microsoft-edge/devtools-guide-chromium/media/clear-icon.msft.png  
-[ImageDeleteIcon]: /microsoft-edge/devtools-guide-chromium/media/delete-icon.msft.png  
-
-[ImageManifest]: /microsoft-edge/devtools-guide-chromium/media/storage-application-manifest.msft.png "図 1: [マニフェスト] ウィンドウ"  
-[ImageSessionStorageMenu]: /microsoft-edge/devtools-guide-chromium/media/storage-application-storage-session-storage.msft.png "図 2: [セッションストレージ] メニュー"  
-[ImageSessionStorage]: /microsoft-edge/devtools-guide-chromium/media/storage-application-storage-session-storage-domain.msft.png "図 3: セッションストレージのキーと値のペア"  
-[ImageSessionStorageViewer]: /microsoft-edge/devtools-guide-chromium/media/storage-application-storage-session-storage-domain-key-value-selected.msft.png "図 4: x sid キーの値を表示する"  
-[ImageSessionStorageCreate]: /microsoft-edge/devtools-guide-chromium/media/storage-application-storage-session-storage-domain-key-value-new.msft.png "図 5: 新しいキーと値のペアを作成するために、表の空の部分をダブルクリックする"  
-[ImageSessionStorageEdit]: /microsoft-edge/devtools-guide-chromium/media/storage-application-storage-session-storage-domain-key-value-edit.msft.png "図 6: セッションストレージキーを編集する"  
-[ImageJSContext]: /microsoft-edge/devtools-guide-chromium/media/storage-console-domain-selection.msft.png "図 7: 本体の JavaScript コンテキストの変更"  
-[ImageSessionStorageConsole]: /microsoft-edge/devtools-guide-chromium/media/storage-console-session-storage-keys.msft.png "図 8: コンソールからのセッションストレージとの相互作用"  
+[ImageClearIcon]: ../media/clear-icon.msft.png  
+[ImageDeleteIcon]: ../media/delete-icon.msft.png  
 
 <!-- links -->  
 
-[MicrosoftEdgeDevTools]: /microsoft-edge/devtools-guide-chromium "Microsoft Edge (Chromium) 開発者ツール"  
+[MicrosoftEdgeDevTools]: ../../devtools-guide-chromium.md "Microsoft Edge (Chromium) 開発者ツール |Microsoft ドキュメント"  
 
 [MDNSessionStorage]: https://developer.mozilla.org/docs/Web/API/Window/sessionStorage "セッションストレージ |MDN"  
 
 > [!NOTE]
-> このページの一部は、 [Google によっ][GoogleSitePolicies]て作成および共有され、[クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
-> 元のページは[ここ](https://developers.google.com/web/tools/chrome-devtools/storage/sessionstorage)にあり、 [Kayce Basques][KayceBasques]テクニカルライター、Chrome Devtools \ & Lighthouse \) で作成されています。  
+> このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
+> 元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/storage/sessionstorage) にあり、 [Kayce Basques][KayceBasques] テクニカルライター、Chrome Devtools \ & Lighthouse \) で作成されています。  
 
 [![クリエイティブコモンズライセンス][CCby4Image]][CCA4IL]  
 この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。  

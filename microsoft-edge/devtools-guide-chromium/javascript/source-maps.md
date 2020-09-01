@@ -1,17 +1,17 @@
 ---
-title: 前処理したコードをソースコードにマップする
+title: ソース コードに前処理コードをマッピングする
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 03/18/2020
+ms.date: 08/28/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: b48c67584b3f3253ada99e32c5dabfdccb2fa4de
-ms.sourcegitcommit: ecdc4287fa25a18cb4ddcaf43fcce3b396c3314c
+ms.openlocfilehash: c791a4af4446a1209d6db77ca4787fee80d45e5c
+ms.sourcegitcommit: 1251c555c6b4db8ef8187ed94d8832fdb89d03b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "10581797"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "10981774"
 ---
 <!-- Copyright Meggin Kearney and Paul Bakaus
 
@@ -41,9 +41,9 @@ ms.locfileid: "10581797"
 ### まとめ  
 
 *   ソースマップを使用して、minified コードをソースコードにマップします。 これで、元のソースでコンパイルされたコードの読み取りとデバッグを行うことができます。  
-*   ソースマップを生成できるのはプリプロセッサだけです。  
+*   ソースマップを生成できるプリプロセッサのみを使用します。  
 *   Web サーバーがソースマップを提供できることを確認します。  
-
+    
 <!--todo: add link to preprocessors capable of producing Source Maps when section is available -->  
 <!--[]: /web/tools/setup/setup-preprocessors?#supported_preprocessors ""  -->  
 
@@ -56,7 +56,7 @@ ms.locfileid: "10581797"
 
 ## サポートされているプリプロセッサを使用する  
 
-ソースマップを作成できるミニ識別子を使う必要があります。  <!--For the most popular options, see the preprocessor support section.  -->  拡張ビューの場合は、「[ソースマップ: 言語、ツール、その他の情報][GitHubWikiSourceMapsLanguagesTools]wiki」ページを参照してください。  
+ソースマップを作成できるミニ識別子を使う必要があります。  <!--For the most popular options, see the preprocessor support section.  -->  拡張ビューの場合は、「 [ソースマップ: 言語、ツール、その他の情報][GitHubWikiSourceMapsLanguagesTools] wiki」ページを参照してください。  
 
 <!--todo: add link to see the preprocessor support section when section is available -->  
 <!--[]: /web/tools/setup/setup-preprocessors?#supported_preprocessors ""  -->  
@@ -66,7 +66,7 @@ ms.locfileid: "10581797"
 *   Transpilers \ ([Babel][BabelJS]、 [traceur][GitHubWikiGoogleTraceurCompiler]\)  
 *   コンパイラ \ ([閉鎖コンパイラ][GitHubGoogleClosureCompiler]、 [TypeScript][|::ref1::|Main]、 [CoffeeScript][|::ref2::|Main]、 [Dart][DartMain]\)  
 *   Minifiers \ ([UglifyJS][GitHubMishooUglifyJS]\)  
-
+    
 ## DevTools ソースパネルのソースマップ  
 
 プリプロセッサからソースマップを使用すると、既存のファイルに加えて、展開されたファイルを読み込むことができます。  次に、元のコードを使って、ブレークポイントとステップのコードを設定します。  一方、Microsoft Edge では、実際にはミニバーコードが実行されています。 これにより、開発サイトが運用環境で実行されるようになります。  
@@ -75,11 +75,11 @@ DevTools でソースマップを実行する場合は、JavaScript がコンパ
 
 ### [設定] でソースマップを有効にする  
 
-ソースマップは既定で有効になっています <!--\(as of Microsoft Edge 39\)-->でも、これをダブルチェックまたは有効にする必要がある場合は、まず、DevTools の**カスタマイズと制御**のボタンをクリックし、[ `...` **設定**] を選択します。  [**環境設定**] ウィンドウの [**ソース**] で、[ **JavaScript ソースマップを有効にする**] をオンにします。  また、「 **CSS ソースマップを有効に**する」をオンにすることもできます。  
+ソースマップは既定で有効になっています <!--\(as of Microsoft Edge 39\)-->でも、これをダブルチェックまたは有効にする必要がある場合は、まず、DevTools の **カスタマイズと制御** をクリックして、[ `...` **設定**] を選びます。  [ **環境設定** ] ウィンドウの [ **ソース**] で、[ **JavaScript ソースマップを有効にする**] をオンにします。  また、「 **CSS ソースマップを有効に**する」をオンにすることもできます。  
 
-> ##### 図 1  
-> ソースマップを有効にする  
-> ![ソースマップを有効にする][ImageSourceMaps]  
+:::image type="complex" source="../media/javascript-settings-preferences-sources-enable-javascript-source-maps.msft.png" alt-text="ソースマップを有効にする" lightbox="../media/javascript-settings-preferences-sources-enable-javascript-source-maps.msft.png":::
+   ソースマップを有効にする  
+:::image-end:::  
 
 ### ソースマップを使ったデバッグ  
 
@@ -87,7 +87,7 @@ DevTools でソースマップを実行する場合は、JavaScript がコンパ
 
 1.  コンソールで \ (ソースへのリンクは元のファイルであり、生成されたものではありません)  
 1.  コードをステップ実行している場合 (通話スタック内のリンクは元のソースファイルを開く必要があります)。  
-
+    
 <!--todo: add link to debugging your code when section is available -->  
 <!--[DebugBreakpointsStepCode]: https://docs.microsoft.com/microsoft-edge/devtools-guide-chromium/debug/breakpoints/step-code ""  -->  
 
@@ -104,28 +104,25 @@ DevTools でソースマップを実行する場合は、JavaScript がコンパ
 次のページに移動します。  
 
 *   [デモ][CssNinjaDemoSourceMapping]
-
+    
 次の手順を実行します。  
 
-1.  DevTools を開き、[**ソース**] パネルに移動します。  
-1.  [ **_Code:_** input] フィールドにファイル名を入力します。  
-1.  [**コンパイル**] ボタンをクリックします。  
+1.  DevTools を開き、[ **ソース** ] パネルに移動します。  
+1.  [ **Code:** input] フィールドにファイル名を入力します。  
+1.  [ **コンパイル** ] ボタンをクリックします。  
 1.  警告が表示され、CoffeeScript ソースから評価された合計が示されます。  
+    
+[ **ソース** ] サブパネルを展開すると、前に入力したカスタムファイル名を含む新しいファイルが表示されるようになります。  このファイルをダブルクリックして表示すると、元のソースのコンパイル済み JavaScript が含まれます。  ただし、最後の行には、 `// @sourceURL` 元のソースファイルを示すコメントがあります。  これは、言語の抽象化を操作しているときに、デバッグに役立つ場合があります。  
 
-[**_ソース_**] サブパネルを展開すると、前に入力したカスタムファイル名を含む新しいファイルが表示されるようになります。  このファイルをダブルクリックして表示すると、元のソースのコンパイル済み JavaScript が含まれます。  ただし、最後の行には、 `// @sourceURL` 元のソースファイルを示すコメントがあります。  これは、言語の抽象化を操作しているときに、デバッグに役立つ場合があります。  
+:::image type="complex" source="../media/javascript-sources-page-coffeeeeeeee.msft.png" alt-text="SourceURL を使用する" lightbox="../media/javascript-sources-page-coffeeeeeeee.msft.png":::
+   SourceURL を使用する  
+:::image-end:::  
 
-> ##### 図 2
-> SourceURL を使用する  
-> ![SourceURL を使用する][ImageCoffeeScript]  
-
-<!--## Feedback   -->  
-
+<!--  
+## Feedback   
 
 
-<!-- image links -->  
-
-[ImageSourceMaps]: /microsoft-edge/devtools-guide-chromium/media/javascript-settings-preferences-sources-enable-javascript-source-maps.msft.png "図 1: ソースマップを有効にする"  
-[ImageCoffeeScript]: /microsoft-edge/devtools-guide-chromium/media/javascript-sources-page-coffeeeeeeee.msft.png "図 2: sourceURL を使用する"  
+-->  
 
 <!-- links -->  
 
@@ -140,8 +137,8 @@ DevTools でソースマップを実行する場合は、JavaScript がコンパ
 [TypeScriptMain]: https://www.typescriptlang.org "TypeScript"  
 
 > [!NOTE]
-> このページの一部は、 [Google によっ][GoogleSitePolicies]て作成および共有され、[クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
-> 元のページは[ここ](https://developers.google.com/web/tools/chrome-devtools/javascript/source-maps)にあり、 [Meggin Kearney][MegginKearney] \ (Tech Writer \) と[Paul Bakaus][PaulBakaus] \ (Open Web 開発者の立場、Google: ツール、パフォーマンス、アニメーション、UX) によって作成されています。  
+> このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
+> 元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/javascript/source-maps) にあり、 [Meggin Kearney][MegginKearney] \ (Tech Writer \) と [Paul Bakaus][PaulBakaus] \ (Open Web 開発者の立場、Google: ツール、パフォーマンス、アニメーション、UX) によって作成されています。  
 
 [![クリエイティブコモンズライセンス][CCby4Image]][CCA4IL]  
 この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。  

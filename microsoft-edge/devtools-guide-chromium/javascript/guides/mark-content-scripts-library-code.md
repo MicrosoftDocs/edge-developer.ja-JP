@@ -1,17 +1,17 @@
 ---
-title: コンテンツスクリプトをライブラリコードとしてマークする
+title: コンテンツ スクリプトをライブラリ コードとしてマークする
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 03/18/2020
+ms.date: 08/28/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: fe34d8f2fb656283b1821441162b93d47d51d24e
-ms.sourcegitcommit: ecdc4287fa25a18cb4ddcaf43fcce3b396c3314c
+ms.openlocfilehash: 410a74b906e3b1ff7ff98b6d1791e057e4fa89c4
+ms.sourcegitcommit: 1251c555c6b4db8ef8187ed94d8832fdb89d03b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "10581790"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "10982805"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -35,32 +35,30 @@ ms.locfileid: "10581790"
 
 
 
-Microsoft Edge DevTools の**ソース**パネルを使用して[コードをステップ実行][DevToolsJavascriptStepThroughCode]するときに、認識できないコードを一時停止することがあります。  インストールした Microsoft Edge 拡張機能のいずれかのコードで一時停止している可能性があります。  次の手順を実行して、拡張コードに一時停止しないようにします。  
+Microsoft Edge DevTools の **ソース** パネルを使用して [コードをステップ実行][DevToolsJavascriptStepThroughCode]するときに、認識できないコードを一時停止することがあります。  インストールした Microsoft Edge 拡張機能のいずれかのコードで一時停止している可能性があります。  次の手順を実行して、拡張コードに一時停止しないようにします。  
 
-1.  DevTools を開き、[ **devtools のカスタマイズと制御**] を選択し `...` て、[**設定**] をクリックします。  または、を押して**設定**を開くこともでき `F1` ます。  
+1.  DevTools を開くには、「 **devtools のカスタマイズと制御**」を選択して、「設定」を `...` クリックします。 **Settings**  または、を押して **設定** を開くこともでき `F1` ます。  
 
 1.  [**ライブラリコード**] タブを選択すると、[**設定**] の**フレームワークライブラリコード**セクションが開きます。  
-1.  [**コンテンツスクリプトをライブラリコードとしてマーク**する] チェックボックスをオンにします。  
+1.  [ **コンテンツスクリプトをライブラリコードとしてマーク** する] チェックボックスをオンにします。  
     
-    > ##### 図 1  
-    > [**コンテンツスクリプトをライブラリコードとしてマーク**する] チェックボックスを有効にする  
-    > ![[コンテンツスクリプトをライブラリコードとしてマークする] チェックボックスを有効にする][ImageMarkContentScriptsLibraryCode]  
+    :::image type="complex" source="../../media/javascript-settings-library-code-mark-content-scripts-library-code.msft.png" alt-text="[コンテンツスクリプトをライブラリコードとしてマークする] チェックボックスを有効にする" lightbox="../../media/javascript-settings-library-code-mark-content-scripts-library-code.msft.png":::
+       [ **コンテンツスクリプトをライブラリコードとしてマーク** する] チェックボックスを有効にする  
+    :::image-end:::  
+    
+<!--  
+## Feedback   
 
-<!--## Feedback   -->  
 
-
-
-<!-- image links -->  
-
-[ImageMarkContentScriptsLibraryCode]: /microsoft-edge/devtools-guide-chromium/media/javascript-settings-library-code-mark-content-scripts-library-code.msft.png "図 1: [コンテンツスクリプトをライブラリコードとしてマークする] チェックボックスを有効にする"  
+-->  
 
 <!-- links -->  
 
-[DevToolsJavascriptStepThroughCode]: ../index.md#step-4-step-through-the-code "手順 4: コードをステップ実行する-「Microsoft Edge DevTools で JavaScript のデバッグを開始する」をご覧ください。"  
+[DevToolsJavascriptStepThroughCode]: ../index.md#step-4-step-through-the-code "手順 4: 「Microsoft Edge DevTools で JavaScript のデバッグを開始する」をご覧ください。Microsoft ドキュメント"  
 
 > [!NOTE]
-> このページの一部は、 [Google によっ][GoogleSitePolicies]て作成および共有され、[クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
-> 元のページは[ここ](https://developers.google.com/web/tools/chrome-devtools/javascript/guides/blackbox-chrome-extension-scripts)にあり、 [Kayce Basques][KayceBasques]テクニカルライター、Chrome devtools & Lighthouse \) で作成されています。  
+> このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
+> 元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/javascript/guides/blackbox-chrome-extension-scripts) にあり、 [Kayce Basques][KayceBasques] テクニカルライター、Chrome devtools & Lighthouse \) で作成されています。  
 
 [![クリエイティブコモンズライセンス][CCby4Image]][CCA4IL]  
 この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。  
