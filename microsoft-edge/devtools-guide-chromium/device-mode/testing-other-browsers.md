@@ -2,16 +2,16 @@
 title: 他のブラウザーをエミュレートしてテストする
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 03/26/2020
+ms.date: 08/28/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 65ad10ff89d3e4c27abc97cea0eb18b15853dd2e
-ms.sourcegitcommit: 531ec8aa1f89b28bc4d271e8e995f846f2392bc3
+ms.openlocfilehash: d5eb33ea4cd1224930e91898d2c711310202cfc0
+ms.sourcegitcommit: 1251c555c6b4db8ef8187ed94d8832fdb89d03b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "10607314"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "10984982"
 ---
 <!-- Copyright Meggin Kearney and Paul Bakaus
 
@@ -50,13 +50,13 @@ Microsoft Edge と Android でサイトが適切に動作するように、ジ�
 
 ### Firefox の応答性の高いデザインビュー  
 
-Firefox には、特定のデバイスについて検討することをお勧めする、[応答性の高いデザインビュー][MDNResponsiveDesignMode]が用意されています。また、端をドラッグすることで、一般的な画面サイズまたは独自のサイズでデザインがどのように変化するかを調べることができます。  
+Firefox には、特定のデバイスについて検討することをお勧めする、 [応答性の高いデザインビュー][MDNResponsiveDesignMode] が用意されています。また、端をドラッグすることで、一般的な画面サイズまたは独自のサイズでデザインがどのように変化するかを調べることができます。  
 
 ### EdgeHTML エミュレーション  
 
-Windows Phone をエミュレートするには、Microsoft Edge \ (EdgeHTML \)[ビルトインエミュレーション][DevToolsEdgeHtmlEmulation]を使用します。  
+Windows Phone をエミュレートするには、Microsoft Edge \ (EdgeHTML \) [ビルトインエミュレーション][DevToolsEdgeHtmlEmulation]を使用します。  
 
-Internet Explorer の以前のバージョンでページがどのように表示されるかをシミュレートするには、 [IE 11 エミュレーション][Ie11DevToolsEmulation]を使用します。  
+Internet Explorer の以前のバージョンでページがどのように表示されるかをシミュレートするには、 [IE 11 エミュレーション][Ie11DevToolsEmulation] を使用します。  
 
 ## デバイスエミュレーターとシミュレータ  
 
@@ -64,26 +64,26 @@ Internet Explorer の以前のバージョンでページがどのように表�
 
 ### Android エミュレーター  
 
-<!--
-> ##### Figure old 1  
-> Stock Browser in Android Emulator  
-> ![Stock Browser in Android Emulator][ImageAndroidEmulatorStockBrowser]  
--->
+<!--  
+:::image type="complex" source="../media/device-mode-android-emulator-stock-browser.msft.png" alt-text="Stock Browser in Android Emulator" lightbox="../media/device-mode-android-emulator-stock-browser.msft.png":::
+   Stock Browser in Android Emulator  
+:::image-end:::  
+-->  
 
 現時点では、Android エミュレーターに Microsoft Edge をインストールする方法はありません。  ただし、Android ブラウザー、Chromium Content Shell、Android 用 Firefox は、このガイドの後半で確認することができます。  Chromium Content Shell は Microsoft Edge と同じ Chromium レンダリングエンジンを実行しますが、ブラウザー固有の機能はありません。  
 
-Android エミュレーターには、android [Studio][AndroidStudioDownload]の一部としてダウンロードする必要がある android SDK が付属しています。  次に、指示に従って[仮想デバイス][AndroidStudioCreateManageVirtualDevices]をセットアップし、[エミュレーターを開始][AndroidStudioRunAppsAndroidEmulator]します。  
+Android エミュレーターには、android [Studio][AndroidStudioDownload]の一部としてダウンロードする必要がある android SDK が付属しています。  次に、指示に従って [仮想デバイス][AndroidStudioCreateManageVirtualDevices] をセットアップし、 [エミュレーターを開始][AndroidStudioRunAppsAndroidEmulator]します。  
 エミュレーターが起動したら、ブラウザーアイコンをクリックして、Android 用の古いストックブラウザーでサイトをテストします。  
 
 #### Android での Chromium コンテンツシェル  
 
-<!--
-> ##### Figure old 2  
-> Android Emulator Content Shell  
-> ![Android Emulator Content Shell][ImageAndroidEmulatorContentShell]  
--->
+<!--  
+:::image type="complex" source="../media/device-mode-android-avd-contentshell.msft.png" alt-text="Android Emulator Content Shell" lightbox="../media/device-mode-android-avd-contentshell.msft.png":::
+   Android Emulator Content Shell  
+:::image-end:::  
+-->  
 
-Android 用の Chromium Content Shell をインストールするには、エミュレーターを実行したまま、コマンドプロンプトで次のコマンドを実行します。  
+Android 用の Chromium Content Shell をインストールするには、エミュレーターを実行したままにして、次のコマンドを実行します。  
 
 ```shell
 git clone https://github.com/PaulKinlan/chromium-android-installer.git
@@ -95,17 +95,17 @@ chmod u+x ./chromium-android-installer/*.sh
 
 #### Android の Firefox  
 
-<!--
-> ##### Figure old 3  
-> Firefox Icon on Android Emulator  
-> ![Firefox Icon on Android Emulator][ImageAndroidEmulatorFirefoxBrowser]  
--->
+<!--  
+:::image type="complex" source="../media/device-mode-ff-on-android-emulator.msft.png" alt-text="Firefox Icon on Android Emulator" lightbox="../media/device-mode-ff-on-android-emulator.msft.png":::
+   Firefox Icon on Android Emulator  
+:::image-end:::  
+-->  
 
 Chromium Content Shell と同様に、Firefox をエミュレーターにインストールするための APK を取得できます。  
 
 [適切な apk ファイルをダウンロード][MozillaFirefoxDownload]します。  
 
-ここでは、次のコマンドを使用して、開いているエミュレーターまたは接続されている Android デバイスにファイルをインストールできます。  
+ファイルを開いているエミュレーターまたは接続されている Android デバイスにインストールするには、次のコマンドを実行します。  
 
 ```shell
 adb install <path_to_APK>/fennec-XX.X.XX.android-arm.apk
@@ -122,9 +122,9 @@ IOS シミュレータ for Mac OS X には Xcode が付属しています。こ�
 
 ###  Microsoft Edge (EdgeHTML)  
 
-> ##### 図 1  
-> モダン IE VM  
-> ![モダン IE VM][ImageVMModernIe]  
+:::image type="complex" source="../media/device-mode-modern-ie-vm.msft.png" alt-text="モダン IE VM" lightbox="../media/device-mode-modern-ie-vm.msft.png":::
+   モダン IE VM  
+:::image-end:::  
 
 Microsoft Edge \ (EdgeHTML \) 仮想マシン \ (Vm \) を使用すると、VirtualBox \ (または VMWare \) を介してコンピューター上のさまざまなバージョンの EdgeHTML と IE にアクセスできます。  [ダウンロードページで仮想マシン][MicrosoftDeveloperEdgeVms]を選択します。  
 
@@ -132,26 +132,21 @@ Microsoft Edge \ (EdgeHTML \) 仮想マシン \ (Vm \) を使用すると、Virt
 
 エミュレーターを使うことができず、実際のデバイスにアクセスできない場合は、クラウドベースのエミュレーターを使用するのが最適です。  実際のデバイスとローカルエミュレーターによるクラウドベースのエミュレーターの大きな利点は、さまざまなプラットフォームでサイトの単体テストを自動化できることです。  
 
-*   [Browserstack (商用)][|::ref1::|]は、手動テストで最も簡単に使用できます。  オペレーティングシステムを選択して、使用しているブラウザーのバージョンとデバイスの種類を選択します。参照する URL を選択すると、対話できるホストされた仮想マシンが回転します。  また、同じ画面で複数のエミュレーターを実行できるため、複数のデバイスで同時にアプリの外観をテストすることができます。  
-*   [SauceLabs (商用)][SauceLabs]では、エミュレーターの内部で単体テストを実行できます。この機能は、サイト内でのフローのスクリプトを作成し、後でさまざまなデバイスでその後のビデオ録画を監視する場合に特に便利です。  サイトで手動テストを行うこともできます。  
-*   [任意のデバイス (商用)][AppExperience]では、リモートで制御できるエミュレーターである実際のデバイスは使用されません。  これは、特定のデバイスで問題を再現する必要があり、前のガイドに記載されているオプションを使用してもバグを確認できないというイベントで非常に便利です。  
+*   [Browserstack (商用)][|::ref1::|] は、手動テストで最も簡単に使用できます。  オペレーティングシステムを選択して、使用しているブラウザーのバージョンとデバイスの種類を選択します。参照する URL を選択すると、対話できるホストされた仮想マシンが回転します。  また、同じ画面で複数のエミュレーターを実行できるため、複数のデバイスで同時にアプリの外観をテストすることができます。  
+*   [SauceLabs (商用)][SauceLabs] では、エミュレーターの内部で単体テストを実行できます。この機能は、サイト内でのフローのスクリプトを作成し、後でさまざまなデバイスでその後のビデオ録画を監視する場合に特に便利です。  サイトで手動テストを行うこともできます。  
+*   [任意のデバイス (商用)][AppExperience] では、リモートで制御できるエミュレーターである実際のデバイスは使用されません。  これは、特定のデバイスで問題を再現する必要があり、前のガイドに記載されているオプションを使用してもバグを確認できないというイベントで非常に便利です。  
 
+<!--  
  
 
 
-
-<!-- image links -->  
-
-<!--[ImageAndroidEmulatorStockBrowser]: /microsoft-edge/devtools-guide-chromium/media/device-mode-android-emulator-stock-browser.msft.png "Figure old 1: Stock Browser in Android Emulator"  -->  
-<!--[ImageAndroidEmulatorContentShell]: /microsoft-edge/devtools-guide-chromium/media/device-mode-android-avd-contentshell.msft.png "Figure old 2: Android Emulator Content Shell"  -->  
-<!--[ImageAndroidEmulatorFirefoxBrowser]: /microsoft-edge/devtools-guide-chromium/media/device-mode-ff-on-android-emulator.msft.png "Figure old 3: Firefox Icon on Android Emulator"  -->  
-[ImageVMModernIe]:/microsoft-edge/devtools-guide-chromium/media/device-mode-modern-ie-vm.msft.png "図 1: モダン IE VM"  
+-->  
 
 <!-- links -->  
 
-[DevToolsEdgeHtmlEmulation]: /microsoft-edge/devtools-guide/emulation "DevTools (EdgeHTML)-エミュレーション"  
+[DevToolsEdgeHtmlEmulation]: /microsoft-edge/devtools-guide/emulation "DevTools (EdgeHTML)-エミュレーション |Microsoft ドキュメント"  
 
-[Ie11DevToolsEmulation]: /previous-versions/windows/internet-explorer/ie-developer/samples/dn255001(v=vs.85) "ブラウザー、画面サイズ、GPS 位置をエミュレートする"  
+[Ie11DevToolsEmulation]: /previous-versions/windows/internet-explorer/ie-developer/samples/dn255001(v=vs.85) "ブラウザー、画面サイズ、GPS 位置をエミュレートするMicrosoft ドキュメント"  
 
 [MicrosoftDeveloperEdgeVms]: https://developer.microsoft.com/microsoft-edge/tools/vms "仮想マシンをダウンロードする"  
 
@@ -168,8 +163,8 @@ Microsoft Edge \ (EdgeHTML \) 仮想マシン \ (Vm \) を使用すると、Virt
 [SauceLabs]: https://saucelabs.com "ソースラボ"  
 
 > [!NOTE]
-> このページの一部は、 [Google によっ][GoogleSitePolicies]て作成および共有され、[クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
-> 元のページは[ここ](https://developers.google.com/web/tools/chrome-devtools/device-mode/testing-other-browsers)にあり、 [Meggin Kearney][MegginKearney] \ (Tech Writer \) と[Paul Bakaus][PaulBakaus] \ (開いている Web 開発者が Google で支持しています) によって作成されています。ツール、パフォーマンス、アニメーション、UX \)。  
+> このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
+> 元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/device-mode/testing-other-browsers) にあり、 [Meggin Kearney][MegginKearney] \ (Tech Writer \) と [Paul Bakaus][PaulBakaus] \ (開いている Web 開発者が Google で支持しています) によって作成されています。ツール、パフォーマンス、アニメーション、UX \)。  
 
 [![クリエイティブコモンズライセンス][CCby4Image]][CCA4IL]  
 この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。  

@@ -2,16 +2,16 @@
 title: ローカル サーバーにアクセスする
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 04/30/2020
+ms.date: 08/28/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: daa96b604d5ad48a9de49dd24dc38eab79de9c9b
-ms.sourcegitcommit: ad5eb43172280974b8c063867c2097f7c5c0e77d
+ms.openlocfilehash: fb8f8aabaf426685417f90e25295f3e8e7b08994
+ms.sourcegitcommit: 1251c555c6b4db8ef8187ed94d8832fdb89d03b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "10898215"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "10984910"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -31,7 +31,7 @@ ms.locfileid: "10898215"
 
 
 
-# ローカル サーバーにアクセスする   
+# ローカルサーバーへのアクセス   
 
 
 
@@ -51,25 +51,25 @@ USB ケーブルと Microsoft Edge DevTools を使用して、開発用コンピ
 
 ポート転送を有効にするには:  
 
-1.  開発用コンピューターと Android デバイスの間で[リモートデバッグ][RemoteDebuggingGettingStarted]をセットアップします。  完了すると、[**デバイスの検査**] ダイアログボックスと [**接続**状態] インジケーターの左側のメニューに Android デバイスが表示されます。  
-1.  DevTools の [**デバイスの検査**] ダイアログで、**ポート転送**を有効にします。  
-1.  [**ルールの追加**] を選びます。  
+1.  開発用コンピューターと Android デバイスの間で [リモートデバッグ][RemoteDebuggingGettingStarted] をセットアップします。  完了すると、[ **デバイスの検査** ] ダイアログボックスと [ **接続** 状態] インジケーターの左側のメニューに Android デバイスが表示されます。  
+1.  DevTools の [ **デバイスの検査** ] ダイアログで、 **ポート転送**を有効にします。  
+1.  [ **ルールの追加**] を選びます。  
     
-    > ##### 図 1  
-    > ポート転送ルールを追加する  
-    > ![ポート転送ルールを追加する][ImageAddRule]  
+    :::image type="complex" source="../media/remote-debugging-remote-devices-devices-port-forwarding-add-rule.msft.png" alt-text="ポート転送ルールを追加する" lightbox="../media/remote-debugging-remote-devices-devices-port-forwarding-add-rule.msft.png":::
+       ポート転送ルールを追加する  
+    :::image-end:::  
     
-1.  左側の [**デバイスポート**] ボックスに、 `localhost` Android デバイスでサイトにアクセスできるようにするポート番号を入力します。  たとえば、enter からサイトにアクセスする必要があるとし `localhost:5000` `5000` ます。  
-1.  右側の [**ローカルアドレス**] ボックスに、開発用コンピューターで実行されている web サーバーでサイトがホストされる IP アドレスまたはホスト名を入力し、その後にポート番号を入力します。  たとえば、サイトが enter で実行されている場合です `localhost:7331` `localhost:7331` 。  
+1.  左側の [ **デバイスポート** ] ボックスに、 `localhost` Android デバイスでサイトにアクセスできるようにするポート番号を入力します。  たとえば、enter からサイトにアクセスする必要があるとし `localhost:5000` `5000` ます。  
+1.  右側の [ **ローカルアドレス** ] ボックスに、開発用コンピューターで実行されている web サーバーでサイトがホストされる IP アドレスまたはホスト名を入力し、その後にポート番号を入力します。  たとえば、サイトが enter で実行されている場合です `localhost:7331` `localhost:7331` 。  
 1.  **[追加]** をクリックします。  
+    
+ポート転送が設定されました。  [ **デバイスの検査** ] ダイアログボックスで、デバイスのタブの [ポートフォワード] のステータスインジケーターを確認します。  
 
-ポート転送が設定されました。  [**デバイスの検査**] ダイアログボックスで、デバイスのタブの [ポートフォワード] のステータスインジケーターを確認します。  
+:::image type="complex" source="../media/remote-debugging-remote-devices-devices-port-forwarding-5000-edge-user-agent.msft.png" alt-text="ポート転送の状態" lightbox="../media/remote-debugging-remote-devices-devices-port-forwarding-5000-edge-user-agent.msft.png":::
+   ポート転送の状態  
+:::image-end:::  
 
-> ##### 図 2  
-> ポート転送の状態  
-> ![ポート転送の状態][ImagePortForwardingStatus]  
-
-コンテンツを表示するには、Android デバイスで Microsoft Edge を開き、[ `localhost` **デバイスポート**] フィールドに指定したポートに移動します。  たとえば、フィールドに入力した場合は、に `5000` アクセス `localhost:5000` します。  
+コンテンツを表示するには、Android デバイスで Microsoft Edge を開き、[ `localhost` **デバイスポート** ] フィールドに指定したポートに移動します。  たとえば、フィールドに入力した場合は、に `5000` アクセス `localhost:5000` します。  
 
 ## カスタムのローカルドメインにマップする   
 
@@ -79,7 +79,7 @@ USB ケーブルと Microsoft Edge DevTools を使用して、開発用コンピ
 
 ### プロキシサーバーへのポート転送を設定する  
 
-カスタムドメインを対応付けるには、開発用コンピューターでプロキシサーバーを実行する必要があります。  プロキシサーバーの例としては、[チャールズ][CharlesWebDebuggingProxy]、 [Squid][SquidOptimisingWebDelivery]、 [Fiddler][FiddlerWebDebuggingProxy]があります。  
+カスタムドメインを対応付けるには、開発用コンピューターでプロキシサーバーを実行する必要があります。  プロキシサーバーの例としては、 [チャールズ][CharlesWebDebuggingProxy]、 [Squid][SquidOptimisingWebDelivery]、 [Fiddler][FiddlerWebDebuggingProxy]があります。  
 
 プロキシへのポート転送を設定するには、次の操作を行います。  
 
@@ -88,8 +88,8 @@ USB ケーブルと Microsoft Edge DevTools を使用して、開発用コンピ
     > [!NOTE]
     > プロキシサーバーと web サーバーは、異なるポートで実行されている必要があります。  
     
-1.  Android デバイスへの[ポート転送](#set-up-port-forwarding)を設定します。  [**ローカルアドレス**] フィールドに「」と入力し、 `localhost:` その後にプロキシサーバーが実行されているポートを入力します。  たとえば、ポートで実行されている場合は、に `8000` アクセス `localhost:8000` します。  [**デバイスポート**] フィールドに、Android デバイスでリッスンする番号 (など) を入力し `3333` ます。  
-
+1.  Android デバイスへの [ポート転送](#set-up-port-forwarding) を設定します。  [ **ローカルアドレス** ] フィールドに「」と入力し、 `localhost:` その後にプロキシサーバーが実行されているポートを入力します。  たとえば、ポートで実行されている場合は、に `8000` アクセス `localhost:8000` します。  [ **デバイスポート** ] フィールドに、Android デバイスでリッスンする番号 (など) を入力し `3333` ます。  
+    
 ### デバイスのプロキシ設定を構成する  
 
 次に、プロキシサーバーと通信するために Android デバイスを構成する必要があります。  
@@ -100,13 +100,13 @@ USB ケーブルと Microsoft Edge DevTools を使用して、開発用コンピ
     > [!NOTE]
     > プロキシ設定はネットワークごとに適用されます。  
     
-1.  [**ネットワークの変更**] を選びます。  
-1.  [**詳細オプション**] を選択します。  プロキシ設定が表示されます。  
-1.  [**プロキシ**] メニューを選択し、[**手動**] を選択します。  
+1.  [ **ネットワークの変更**] を選びます。  
+1.  [ **詳細オプション**] を選択します。  プロキシ設定が表示されます。  
+1.  [ **プロキシ** ] メニューを選択し、[ **手動**] を選択します。  
 1.  [ **Proxy hostname** ] フィールドに、「」と入力し `localhost` ます。  
-1.  [**プロキシポート**] フィールドに、前のセクションの「**デバイスポート**」に入力したポート番号を入力します。  
+1.  [ **プロキシポート** ] フィールドに、前のセクションの「 **デバイスポート** 」に入力したポート番号を入力します。  
 1.  **[保存]** を選びます。  
-
+    
 これらの設定を使用すると、デバイスは、開発用コンピューター上のプロキシにすべての要求を転送します。  プロキシによってデバイスの代わりに要求が行われるため、カスタマイズしたローカルドメインへの要求が適切に解決されます。  
 
 開発用コンピューターの場合と同様に、Android デバイスでカスタムドメインにアクセスできるようになりました。  
@@ -116,18 +116,14 @@ Web サーバーが標準以外のポートを使用している場合は、Andr
 > [!TIP]
 > 通常の閲覧を再開するには、開発用コンピューターから切断した後で、Android デバイスのプロキシ設定を元に戻してください。  
 
-<!--  -->  
+<!--  
+  
 
 
-
-<!-- image links -->  
-
-[ImageAddRule]: /microsoft-edge/devtools-guide-chromium/media/remote-debugging-remote-devices-devices-port-forwarding-add-rule.msft.png "図 1: ポート転送ルールを追加する"  
-[ImagePortForwardingStatus]: /microsoft-edge/devtools-guide-chromium/media/remote-debugging-remote-devices-devices-port-forwarding-5000-edge-user-agent.msft.png "図 2: ポート転送の状態"  
-
+-->  
 <!-- links -->  
 
-[RemoteDebuggingGettingStarted]: /microsoft-edge/devtools-guide-chromium/remote-debugging/index "Android デバイスのリモートデバッグの概要"  
+[RemoteDebuggingGettingStarted]: ./index.md "Android デバイスのリモートデバッグの概要 |Microsoft ドキュメント"  
 
 [CharlesWebDebuggingProxy]: https://www.charlesproxy.com "チャールズ Web デバッグプロキシ"  
 
@@ -136,8 +132,8 @@ Web サーバーが標準以外のポートを使用している場合は、Andr
 [FiddlerWebDebuggingProxy]: https://www.telerik.com/fiddler "Fiddler Free Web デバッギングプロキシ"  
 
 > [!NOTE]
-> このページの一部は、 [Google によっ][GoogleSitePolicies]て作成および共有され、[クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
-> 元のページは[ここ](https://developers.google.com/web/tools/chrome-devtools/remote-debugging/local-server)にあり、 [Kayce basques][KayceBasques]テクニカルライター、Chrome Devtools \ & Lighthouse \) および[Meggin Kearney][MegginKearney] \ (Tech writer \) で作成されています。  
+> このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
+> 元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/remote-debugging/local-server) にあり、 [Kayce basques][KayceBasques] テクニカルライター、Chrome Devtools \ & Lighthouse \) および [Meggin Kearney][MegginKearney] \ (Tech writer \) で作成されています。  
 
 [![クリエイティブコモンズライセンス][CCby4Image]][CCA4IL]  
 この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。  

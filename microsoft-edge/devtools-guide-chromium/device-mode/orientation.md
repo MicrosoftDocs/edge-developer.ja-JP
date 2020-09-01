@@ -2,16 +2,16 @@
 title: Microsoft Edge DevTools を使ってデバイスの向きをシミュレートする
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 03/26/2020
+ms.date: 08/28/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 9e8115819fa6c3209a6c82940e033113783ece0c
-ms.sourcegitcommit: 531ec8aa1f89b28bc4d271e8e995f846f2392bc3
+ms.openlocfilehash: c9a2aecfff1101de532eb59f73da21a32d62c791
+ms.sourcegitcommit: 1251c555c6b4db8ef8187ed94d8832fdb89d03b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "10607321"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "10985015"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -41,35 +41,36 @@ Microsoft Edge DevTools からさまざまなデバイスの向きをシミュ�
 
 1.  `Control` + `Shift` + `P` コマンドメニューを開くには、\ (Windows \) または `Command` + `Shift` + `P` \ **Command Menu**(macOS \) を押します。  
     
-    > ##### 図 1  
-    > コマンドメニュー  
-    > ![コマンドメニュー][ImageCommandMenu]  
+    :::image type="complex" source="../media/device-mode-console-command-menu.msft.png" alt-text="コマンドメニュー" lightbox="../media/device-mode-console-command-menu.msft.png":::
+       **コマンドメニュー**  
+    :::image-end:::  
     
-1.  「」と入力して、「 `sensors` **センサーを表示**」を選択し、を押し `Enter` ます。  [**センサー** ] タブが、[devtools] ウィンドウの下部に表示されます。  
+1.  「」と入力して、「 `sensors` **センサーを表示**」を選択し、を押し `Enter` ます。  [ **センサー** ] タブが、[devtools] ウィンドウの下部に表示されます。  
 1.  [**印刷の向き**] ボックスの一覧で、[などの事前設定の向き] のいずれかを選択するか、独自の向きを選択して、 `Portrait upside down` 正確な向きを指定します。 **Custom orientation**  
     
-    > ##### 図 2  
-    > [ `Portrait upside down` 印刷の**向き**] の一覧から選択する  
-    > ![[方向] ボックスの一覧から縦逆さまを選択][ImageOrientationPortraitUpsideDown]  
+    :::row:::
+       :::column span="":::
+          :::image type="complex" source="../media/device-mode-console-sensors-orientation-portrait-upside-down.msft.png" alt-text="[向き] の一覧から [縦] を上下に反転する" lightbox="../media/device-mode-console-sensors-orientation-portrait-upside-down.msft.png":::
+             [ `Portrait upside down` 印刷の **向き** ] の一覧から選択する  
+          :::image-end:::  
+       :::column-end:::
+       :::column span="":::
+          [ **ユーザー設定の向き**] を選択すると、、、 `alpha` `beta` および `gamma` フィールドが有効になります。  
+          <!--See [Alpha][alpha], [Beta][beta], and [Gamma][gamma] to understand how these axes work.  -->  
+          <!--todo: update links to alpha, beta, and gamma section when available -->  
+          **向きのモデル**をドラッグして、独自の向きを設定することもできます。  `Shift`ドラッグして軸に沿って回転させ `alpha` ます。  
+          
+          :::image type="complex" source="../media/device-mode-console-sensors-orientation-custom.msft.png" alt-text="向きのモデル" lightbox="../media/device-mode-console-sensors-orientation-custom.msft.png":::
+             **向きのモデル**  
+          :::image-end:::  
+       :::column-end:::
+    :::row-end:::
     
-    [**ユーザー設定の向き**] を選択すると、、、 `alpha` `beta` および `gamma` フィールドが有効になります。  
-    <!--See [Alpha][alpha], [Beta][beta], and [Gamma][gamma] to understand how these axes work.  -->  
-    <!--todo: update links to alpha, beta, and gamma section when available -->  
-    **向きのモデル**をドラッグして、独自の向きを設定することもできます。  `Shift`ドラッグして軸に沿って回転させ `alpha` ます。  
-    
-    > ##### 図 3  
-    > **向きのモデル**  
-    > ![向きのモデル][ImageOrientationModel]  
-
-<!--## Feedback   -->  
+<!--  
+## Feedback 
 
 
-
-<!-- image links -->  
-
-[ImageCommandMenu]: /microsoft-edge/devtools-guide-chromium/media/device-mode-console-command-menu.msft.png "図 1: コマンドメニュー"  
-[ImageOrientationPortraitUpsideDown]: /microsoft-edge/devtools-guide-chromium/media/device-mode-console-sensors-orientation-portrait-upside-down.msft.png "図 2: [向き] の一覧から縦逆さまを選択"  
-[ImageOrientationModel]: /microsoft-edge/devtools-guide-chromium/media/device-mode-console-sensors-orientation-custom.msft.png "図 3: 向きのモデル"  
+-->  
 
 <!-- links -->  
 
@@ -79,8 +80,8 @@ Microsoft Edge DevTools からさまざまなデバイスの向きをシミュ�
 <!--[WebFundamentasNativeHardwareDeviceOrientationIndexGamma]: /web/fundamentals/native-hardware/device-orientation/index#gamma "Gamma - Device Orientation \& Motion"  -->  
 
 > [!NOTE]
-> このページの一部は、 [Google によっ][GoogleSitePolicies]て作成および共有され、[クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
-> 元のページは[ここ](https://developers.google.com/web/tools/chrome-devtools/device-mode/orientation)にあり、 [Kayce Basques][KayceBasques]テクニカルライター、Chrome Devtools \ & Lighthouse \) で作成されています。  
+> このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
+> 元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/device-mode/orientation) にあり、 [Kayce Basques][KayceBasques] テクニカルライター、Chrome Devtools \ & Lighthouse \) で作成されています。  
 
 [![クリエイティブコモンズライセンス][CCby4Image]][CCA4IL]  
 この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。  

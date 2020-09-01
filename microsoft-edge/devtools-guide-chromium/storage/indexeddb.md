@@ -2,16 +2,16 @@
 title: Microsoft Edge DevTools を使用して IndexedDB データを表示および変更する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 04/30/2020
+ms.date: 08/28/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 4eca78dcd92048d75f8488fddc7b210da68690df
-ms.sourcegitcommit: ad68bfbb355f6cfdaaf6612b77ea3985d4d6a58b
+ms.openlocfilehash: 890e20f65c3b70193a38783f3c9ca5d879d5ac48
+ms.sourcegitcommit: 1251c555c6b4db8ef8187ed94d8832fdb89d03b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "10612089"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "10983773"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -35,78 +35,78 @@ ms.locfileid: "10612089"
 
   
 
-このガイドでは、 [Microsoft Edge DevTools][MicrosoftEdgeDevTools]を使って[インデックス eddb][MDNIndexedDBAPI]データを表示および変更する方法について説明します。  これは、DevTools に精通していることを前提としています。  また、IndexedDB に精通していることを前提としています。  表示されない場合は、「 [IndexedDB を使用する][MDNUsingIndexedDB]」を参照してください。  
+このガイドでは、 [Microsoft Edge DevTools][MicrosoftEdgeDevTools] を使って [インデックス eddb][MDNIndexedDBAPI] データを表示および変更する方法について説明します。  これは、DevTools に精通していることを前提としています。  また、IndexedDB に精通していることを前提としています。  表示されない場合は、「 [IndexedDB を使用する][MDNUsingIndexedDB]」を参照してください。  
 
 ## IndexedDB データの表示   
 
-1.  [**アプリケーション**] タブを選択して、[**アプリケーション**] パネルを開きます。  通常、**マニフェスト**ウィンドウは既定で開かれます。  
+1.  [ **アプリケーション** ] タブを選択して、[ **アプリケーション** ] パネルを開きます。  通常、 **マニフェスト** ウィンドウは既定で開かれます。  
     
-    > ##### 図 1  
-    > マニフェストウィンドウ  
-    > ![マニフェストウィンドウ][ImageManifest]  
-
+    :::image type="complex" source="../media/storage-application-manifest-empty.msft.png" alt-text="マニフェストウィンドウ" lightbox="../media/storage-application-manifest-empty.msft.png":::
+       **マニフェスト**ウィンドウ  
+    :::image-end:::  
+    
 1.  [ **Indexeddb** ] メニューを展開して、利用可能なデータベースを確認します。  
     
-    > ##### 図 2  
-    > **Indexeddb**メニュー  
-    > ![IndexedDB メニュー][ImageIndexedDBMenu]  
+    :::image type="complex" source="../media/storage-application-storage-indexeddb.msft.png" alt-text="IndexedDB メニュー" lightbox="../media/storage-application-storage-indexeddb.msft.png":::
+       **Indexeddb**メニュー  
+    :::image-end:::  
     
-    *   ![データベースアイコンは、データベース ][ImageDatabaseIcon] `notes - https://mdn.github.io` の名前を表し、データベースに `notes` `https://mdn.github.io` アクセスする元の場所です。  
-    *   ![オブジェクトストアアイコン ][ImageObjectStoreIcon] `notes` はオブジェクトストアです。  
-    *   **タイトル**と**本文**は[インデックス][MDNUsingIndexedDBUsingIndex]です。  
+    *   \ ( ![ データベースアイコン \) は、データベースの名前であり、 ][ImageDatabaseIcon] `notes - https://mdn.github.io` `notes` `https://mdn.github.io` データベースにアクセスする元のデータベースを表します。  
+    *   \ ( ![ オブジェクトストアアイコン ][ImageObjectStoreIcon] \) `notes` はオブジェクトストアです。  
+    *   **タイトル** と **本文** は [インデックス][MDNUsingIndexedDBUsingIndex]です。  
     
     > [!NOTE]
-    > **既知の制限** サードパーティデータベースは表示されません。  たとえば、 `<iframe>` を使って広告をページに埋め込む場合、広告ネットワークで IndexedDB を使用している場合、広告ネットワークの indexeddb データは表示されません。  [#943770 問題][ChromiumIssue943770]を参照してください。  
+    > **既知の制限**  サードパーティデータベースは表示されません。  たとえば、 `<iframe>` を使って広告をページに埋め込む場合、広告ネットワークで IndexedDB を使用している場合、広告ネットワークの indexeddb データは表示されません。  [#943770 問題][ChromiumIssue943770]を参照してください。  
     
 1.  起点とバージョン番号を確認するには、データベースを選択します。  
     
-    > ##### 図 3  
-    > **ノーツ**データベース  
-    > ![ノーツデータベース][ImageIndexedDBDatabase]  
+    :::image type="complex" source="../media/storage-application-storage-indexeddb-notes_db.msft.png" alt-text="ノーツデータベース" lightbox="../media/storage-application-storage-indexeddb-notes_db.msft.png":::
+       **ノーツ**データベース  
+    :::image-end:::  
     
 1.  キーと値のペアを表示するオブジェクトストアを選択します。  
     
     > [!NOTE]
     > IndexedDB データは、リアルタイムでは更新されません。  「 [IndexedDB データを更新](#refresh-indexeddb-data)する」をご覧ください。  
     
-    > ##### 図 4  
-    > **ノーツ**オブジェクトストア  
-    > ![ノーツオブジェクトストア][ImageIndexedDBObjectStore]  
-
-    *   **Total entries**は、オブジェクトストアのキーと値のペアの合計数です。  
-    *   **キージェネレーターの値**は、次に使用可能なキーです。  このフィールドは、[キージェネレーター][MDNBasicConceptsKeyGenerator]を使用している場合にのみ表示されます。  
-
-1.  [**値**] 列のセルを選択して、その値を展開します。  
+    :::image type="complex" source="../media/storage-application-storage-indexeddb-notes_db-notes_os.msft.png" alt-text="ノーツオブジェクトストア" lightbox="../media/storage-application-storage-indexeddb-notes_db-notes_os.msft.png":::
+       **ノーツ**オブジェクトストア  
+    :::image-end:::  
     
-    > ##### 図 5  
-    > IndexedDB 値の表示  
-    > ![IndexedDB 値の表示][ImageIndexedBDValue]  
+    *   **Total entries** は、オブジェクトストアのキーと値のペアの合計数です。  
+    *   **キージェネレーターの値** は、次に使用可能なキーです。  このフィールドは、 [キージェネレーター][MDNBasicConceptsKeyGenerator]を使用している場合にのみ表示されます。  
     
-1.  [図 6](#figure-6)の [**タイトル**] や [**本文**] などのインデックスを選択し、そのインデックスの値に従ってオブジェクトストアを並べ替えます。  
+1.  [ **値** ] 列のセルを選択して、その値を展開します。  
+    
+    :::image type="complex" source="../media/storage-application-storage-indexeddb-notes_db-notes_os-edge-chromium.msft.png" alt-text="IndexedDB 値の表示" lightbox="../media/storage-application-storage-indexeddb-notes_db-notes_os-edge-chromium.msft.png":::
+       **Indexeddb**値の表示  
+    :::image-end:::  
+    
+1.  次の図の [ **タイトル** ] や [ **本文** ] などのインデックスを選択し、そのインデックスの値に従ってオブジェクトストアを並べ替えます。  
    
-    > ##### 図 6  
-    > **タイトル**キーに従ってアルファベット順に並べ替えられたオブジェクトストア  
-    > ![インデックスによるオブジェクトストアの並べ替え][ImageIndexedDBIndex]  
-
+    :::image type="complex" source="../media/storage-application-storage-indexeddb-notes_db-notes_os-title.msft.png" alt-text="インデックスによるオブジェクトストアの並べ替え" lightbox="../media/storage-application-storage-indexeddb-notes_db-notes_os-title.msft.png":::
+       インデックスによるオブジェクトストアの並べ替え  
+    :::image-end:::  
+    
 ## IndexedDB データを更新する   
 
-**アプリケーション**パネルの IndexedDB 値は、リアルタイムでは更新されません。  **Refresh** ![ オブジェクトストアを表示してデータを ][ImageReloadIcon] 更新するか、データベースを表示し、[**データベースの更新**] をクリックしてすべてのデータを更新するには、[更新更新] を選択します。  
+**アプリケーション**パネルの IndexedDB 値は、リアルタイムでは更新されません。  オブジェクト**Refresh**ストアを表示して ![ データを ][ImageReloadIcon] 更新するか、データベースを表示し、[**データベースの更新**] をクリックしてすべてのデータを更新するには、[更新] を選択します。  
 
-> ##### 図 7  
-> データベースの表示  
-> ![データベースの表示][ImageIndexedDBDatabase2]  
+:::image type="complex" source="../media/storage-application-storage-indexeddb-notes_db-notes_os-refresh-database.msft.png" alt-text="データベースの表示" lightbox="../media/storage-application-storage-indexeddb-notes_db-notes_os-refresh-database.msft.png":::
+   データベースの表示  
+:::image-end:::  
 
 ## IndexedDB データを編集する   
 
-IndexedDB キーと値は、**アプリケーション**パネルから編集できません。  DevTools にはページのコンテキストへのアクセスがあります。ただし、DevTools 内では、IndexedDB データを編集するための JavaScript コードを実行することができます。  
+IndexedDB キーと値は、 **アプリケーション** パネルから編集できません。  DevTools にはページのコンテキストへのアクセスがあります。ただし、DevTools 内では、IndexedDB データを編集するための JavaScript コードを実行することができます。  
 
 ### スニペットを使用して IndexedDB データを編集する   
 
-[スニペット][DevtoolsJavascriptSnippets]は、devtools 内に JavaScript コードのブロックを保存して実行するための手段です。  スニペットを実行すると、結果が**コンソール**に記録されます。  スニペットを使って、IndexedDB データベースを編集する JavaScript コードを実行することができます。  
+[スニペット][DevtoolsJavascriptSnippets] は、devtools 内に JavaScript コードのブロックを保存して実行するための手段です。  スニペットを実行すると、結果が **コンソール**に記録されます。  スニペットを使って、IndexedDB データベースを編集する JavaScript コードを実行することができます。  
 
-> ##### 図 8  
-> スニペットを使った IndexedDB の操作  
-> ![スニペットを使った IndexedDB の操作][ImageIndexedDBSnippet]  
+:::image type="complex" source="../media/storage-sources-snippets-indexeddb-output.msft.png" alt-text="スニペットを使って IndexedDB を操作する" lightbox="../media/storage-sources-snippets-indexeddb-output.msft.png":::
+   スニペットを使って IndexedDB を操作する  
+:::image-end:::  
 
 ## IndexedDB データを削除する   
 
@@ -115,76 +115,63 @@ IndexedDB キーと値は、**アプリケーション**パネルから編集で
 1.  [IndexedDB オブジェクトストアを表示](#view-indexeddb-data)します。  
 1.  削除するキーと値のペアを選択します。  DevTools では、選択されていることを示すように強調表示されます。  
     
-    > ##### 図 9  
-    > キーと値のペアを選択して削除する  
-    > ![キーと値のペアを選択して削除する][ImageIndexedDBKeyValuePair]  
-
-1.  キーを押すか、[選択した `Delete` 削除の削除] をクリックし**Delete Selected** ![ ][ImageDeleteIcon] ます。  
+    :::image type="complex" source="../media/storage-application-storage-indexeddb-notes_db-notes_os2.msft.png" alt-text="キーと値のペアを選択して削除する" lightbox="../media/storage-application-storage-indexeddb-notes_db-notes_os2.msft.png":::
+       キーと値のペアを選択して削除する  
+    :::image-end:::  
     
-    > ##### 図 10  
-    > キーと値のペアが削除された後のオブジェクトストアの外観  
-    > ![キーと値のペアが削除された後のオブジェクトストアの外観][ImageIndexedDBKeyValuePairDeleted]  
-
+1.  キーを押す `Delete` か、[ **選択した** ものを削除] をクリックし ![ ます (選択した \ を削除 ][ImageDeleteIcon] )。  
+    
+    :::image type="complex" source="../media/storage-application-storage-indexeddb-notes_db-notes_os-delete-selected.msft.png" alt-text="キーと値のペアが削除された後のオブジェクトストアの外観" lightbox="../media/storage-application-storage-indexeddb-notes_db-notes_os-delete-selected.msft.png":::
+       キーと値のペアが削除された後のオブジェクトストアの外観  
+    :::image-end:::  
+    
 ### オブジェクトストア内のすべてのキーと値のペアを削除する   
 
 1.  [IndexedDB オブジェクトストアを表示](#view-indexeddb-data)します。  
     
-    > ##### 図 11  
-    > オブジェクトストアの表示  
-    > ![オブジェクトストアの表示][ImageIndexedDBObjectStore]  
-
-1.  [ **Clear object store** clear object store] を選び ![ ][ImageClearIcon] ます。  
-
+    :::image type="complex" source="../media/storage-application-storage-indexeddb-notes_db-notes_os-clear-object-store.msft.png" alt-text="オブジェクトストアの表示" lightbox="../media/storage-application-storage-indexeddb-notes_db-notes_os-clear-object-store.msft.png":::
+       オブジェクトストアの表示  
+    :::image-end:::  
+    
+1.  [ **Clear object store** (オブジェクトストアをクリア)] を選び ![ ][ImageClearIcon] ます。  
+    
 ### IndexedDB データベースを削除する   
 
 1.  削除する[IndexedDB データベースを表示](#view-indexeddb-data)します。  
-1.  [**データベースの削除**] を選びます。  
+1.  [ **データベースの削除**] を選びます。  
     
-    > ##### 図 12  
-    > [**データベースの削除**] ボタン  
-    > ![[データベースの削除] ボタン][ImageIndexedDBDatabase]  
-
+    :::image type="complex" source="../media/storage-application-storage-indexeddb-notes_db-delete-database.msft.png" alt-text="[データベースの削除] ボタン" lightbox="../media/storage-application-storage-indexeddb-notes_db-delete-database.msft.png":::
+       [ **データベースの削除** ] ボタン  
+    :::image-end:::  
+    
 ### すべての IndexedDB ストレージを削除します   
 
-1.  [**記憶域のクリア**] ウィンドウを開く。  
-
+1.  [ **記憶域のクリア** ] ウィンドウを開く。  
 1.  [ **Indexeddb** ] チェックボックスがオンになっていることを確認します。  
-
-1.  [**サイトデータのクリア**] を選びます。  
+1.  [ **サイトデータのクリア**] を選びます。  
     
-    > ##### 図 13  
-    > [**記憶域**のクリア] ウィンドウ ![][ImageIndexedDBClearStorage]  
-
+    :::image type="complex" source="../media/storage-application-clear-storage-indexeddb-clear-site-data.msft.png" alt-text="[記憶域のクリア] ウィンドウ" lightbox="../media/storage-application-clear-storage-indexeddb-clear-site-data.msft.png":::
+       [ **記憶域のクリア** ] ウィンドウ  
+    :::image-end:::  
+    
+<!--  
  
 
 
+-->  
 
 <!-- image links -->  
 
-[ImageClearIcon]: /microsoft-edge/devtools-guide-chromium/media/clear-icon.msft.png  
-[ImageDatabaseIcon]: /microsoft-edge/devtools-guide-chromium/media/database-icon.msft.png  
-[ImageDeleteIcon]: /microsoft-edge/devtools-guide-chromium/media/delete-icon.msft.png  
-[ImageObjectStoreIcon]: /microsoft-edge/devtools-guide-chromium/media/object-store-icon.msft.png  
-[ImageReloadIcon]: /microsoft-edge/devtools-guide-chromium/media/reload-icon.msft.png  
-
-[ImageManifest]: /microsoft-edge/devtools-guide-chromium/media/storage-application-manifest-empty.msft.png "図 1: [マニフェスト] ウィンドウ"  
-[ImageIndexedDBMenu]: /microsoft-edge/devtools-guide-chromium/media/storage-application-storage-indexeddb.msft.png "図 2: IndexedDB メニュー"  
-[ImageIndexedDBDatabase]: /microsoft-edge/devtools-guide-chromium/media/storage-application-storage-indexeddb-notes_db.msft.png "図 3: notes_db データベース"  
-[ImageIndexedDBObjectStore]: /microsoft-edge/devtools-guide-chromium/media/storage-application-storage-indexeddb-notes_db-notes_os.msft.png "図 4: notes_os オブジェクトストア"  
-[ImageIndexedBDValue]: /microsoft-edge/devtools-guide-chromium/media/storage-application-storage-indexeddb-notes_db-notes_os-edge-chromium.msft.png "図 5: IndexedDB 値の表示"  
-[ImageIndexedDBIndex]: /microsoft-edge/devtools-guide-chromium/media/storage-application-storage-indexeddb-notes_db-notes_os-title.msft.png "図 6: インデックスによるオブジェクトストアの並べ替え"  
-[ImageIndexedDBDatabase2]: /microsoft-edge/devtools-guide-chromium/media/storage-application-storage-indexeddb-notes_db-notes_os-refresh-database.msft.png "図 7: データベースの表示"  
-[ImageIndexedDBSnippet]: /microsoft-edge/devtools-guide-chromium/media/storage-sources-snippets-indexeddb-output.msft.png "図 8: スニペットを使った IndexedDB の操作"  
-[ImageIndexedDBKeyValuePair]: /microsoft-edge/devtools-guide-chromium/media/storage-application-storage-indexeddb-notes_db-notes_os2.msft.png "図 9: キーと値のペアを選択して削除する"  
-[ImageIndexedDBKeyValuePairDeleted]: /microsoft-edge/devtools-guide-chromium/media/storage-application-storage-indexeddb-notes_db-notes_os-delete-selected.msft.png "図 10: キーと値のペアが削除された後のオブジェクトストアの外観"  
-[ImageIndexedDBObjectStore]: /microsoft-edge/devtools-guide-chromium/media/storage-application-storage-indexeddb-notes_db-notes_os-clear-object-store.msft.png "図 11: オブジェクトストアの表示"  
-[ImageIndexedDBDatabase]: /microsoft-edge/devtools-guide-chromium/media/storage-application-storage-indexeddb-notes_db-delete-database.msft.png "図 12: [データベースの削除] ボタン"  
-[ImageIndexedDBClearStorage]: /microsoft-edge/devtools-guide-chromium/media/storage-application-clear-storage-indexeddb-clear-site-data.msft.png "図 13: [記憶域のクリア] ウィンドウ"  
+[ImageClearIcon]: ../media/clear-icon.msft.png  
+[ImageDatabaseIcon]: ../media/database-icon.msft.png  
+[ImageDeleteIcon]: ../media/delete-icon.msft.png  
+[ImageObjectStoreIcon]: ../media/object-store-icon.msft.png  
+[ImageReloadIcon]: ../media/reload-icon.msft.png  
 
 <!-- links -->  
 
-[MicrosoftEdgeDevTools]: /microsoft-edge/devtools-guide-chromium "Microsoft Edge (Chromium) 開発者ツール"  
-[DevtoolsJavascriptSnippets]: /microsoft-edge/devtools-guide-chromium/javascript/snippets "Microsoft Edge DevTools を使用して、任意のページで JavaScript のスニペットを実行します。"  
+[MicrosoftEdgeDevTools]: ../../devtools-guide-chromium.md "Microsoft Edge (Chromium) 開発者ツール |Microsoft ドキュメント"  
+[DevtoolsJavascriptSnippets]: ../javascript/snippets.md "Microsoft Edge DevTools を使用して、任意のページで JavaScript のスニペットを実行します。Microsoft ドキュメント"  
 
 [ChromiumIssue943770]: https://crbug.com/943770 "943770-DevTools: iframe Indexindexeddb データベースの表示-chromium-Monorail"  
 
@@ -194,8 +181,8 @@ IndexedDB キーと値は、**アプリケーション**パネルから編集で
 [MDNUsingIndexedDBUsingIndex]: https://developer.mozilla.org/docs/Web/API/IndexedDB_API/Using_IndexedDB#Using_an_index "インデックスの使用-IndexedDB を使っています。 |MDN"  
 
 > [!NOTE]
-> このページの一部は、 [Google によっ][GoogleSitePolicies]て作成および共有され、[クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
-> 元のページは[ここ](https://developers.google.com/web/tools/chrome-devtools/storage/indexeddb)にあり、 [Kayce Basques][KayceBasques]テクニカルライター、Chrome Devtools \ & Lighthouse \) で作成されています。  
+> このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
+> 元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/storage/indexeddb) にあり、 [Kayce Basques][KayceBasques] テクニカルライター、Chrome Devtools \ & Lighthouse \) で作成されています。  
 
 [![クリエイティブコモンズライセンス][CCby4Image]][CCA4IL]  
 この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。  

@@ -2,16 +2,16 @@
 title: Microsoft Edge DevTools を使ってキャッシュデータを表示する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 04/30/2020
+ms.date: 08/28/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 82356777f209b86f88de1ee53b212947d969ff8a
-ms.sourcegitcommit: ad68bfbb355f6cfdaaf6612b77ea3985d4d6a58b
+ms.openlocfilehash: 7e7b4326204ce10732972c89b70c966e4bb665fb
+ms.sourcegitcommit: 1251c555c6b4db8ef8187ed94d8832fdb89d03b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "10612075"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "10983860"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -35,120 +35,110 @@ ms.locfileid: "10612075"
 
 
 
-このガイドでは、 [Microsoft Edge DevTools][MicrosoftEdgeDevTools]を使って[キャッシュ][MDNCache]データを検査する方法について説明します。  
+このガイドでは、 [Microsoft Edge DevTools][MicrosoftEdgeDevTools] を使って [キャッシュ][MDNCache] データを検査する方法について説明します。  
 
-[HTTP キャッシュ][MDNHTTPCaching]データを検査しようとしている場合、これは目的のガイドではありません。  
-**ネットワークログ**の**Size**列で情報を探します。  「[ネットワークアクティビティのログ記録][DevtoolsNetworkLogActivity]」を参照してください。  
+[HTTP キャッシュ][MDNHTTPCaching]データを検査しようとしている場合、これは目的のガイドではありません。  **ネットワークログ**の**Size**列で情報を探します。  「 [ネットワークアクティビティのログ記録][DevtoolsNetworkLogActivity]」を参照してください。  
 
 ## キャッシュデータを表示する   
 
-1.  [**アプリケーション**] タブを選択して、[**アプリケーション**] パネルを開きます。  通常、**マニフェスト**ウィンドウは既定で開かれます。  
+1.  [ **アプリケーション** ] タブを選択して、[ **アプリケーション** ] パネルを開きます。  通常、 **マニフェスト** ウィンドウは既定で開かれます。  
     
-    > ##### 図 1  
-    > マニフェストウィンドウ  
-    > ![マニフェストウィンドウ][ImageManifestPane]  
-
-1.  [**キャッシュ記憶域**] セクションを展開して、利用可能なキャッシュを表示します。  
+    :::image type="complex" source="../media/storage-application-manifest.msft.png" alt-text="マニフェストウィンドウ" lightbox="../media/storage-application-manifest.msft.png":::
+       **マニフェスト**ウィンドウ  
+    :::image-end:::  
     
-    > ##### 図 2  
-    > 利用可能なキャッシュ  
-    > ![利用可能なキャッシュ][ImageCache]  
-
+1.  [ **キャッシュ記憶域** ] セクションを展開して、利用可能なキャッシュを表示します。  
+    
+    :::image type="complex" source="../media/storage-application-cache-storage.msft.png" alt-text="利用可能なキャッシュ" lightbox="../media/storage-application-cache-storage.msft.png":::
+       利用可能なキャッシュ  
+    :::image-end:::  
+    
 1.  コンテンツを表示するキャッシュを選択します。  
     
-    > ##### 図 3  
-    > キャッシュの内容を表示する  
-    > ![キャッシュの内容を表示する][ImageCacheView]  
-
+    :::image type="complex" source="../media/storage-application-cache-storage-domain-root-headers.msft.png" alt-text="キャッシュの内容を表示する" lightbox="../media/storage-application-cache-storage-domain-root-headers.msft.png":::
+       キャッシュの内容を表示する  
+    :::image-end:::  
+    
 1.  リソースを選択して、表の下のセクションに HTTP ヘッダーを表示します。  
     
-    > ##### 図 4  
-    > リソースの HTTP ヘッダーの表示  
-    > ![リソースの HTTP ヘッダーの表示][ImageViewCacheResource]  
-
-1.  [**プレビュー** ] を選択して、リソースのコンテンツを表示します。  
+    :::image type="complex" source="../media/storage-application-cache-storage-index-headers.msft.png" alt-text="リソースの HTTP ヘッダーを表示する" lightbox="../media/storage-application-cache-storage-index-headers.msft.png":::
+       リソースの HTTP ヘッダーを表示する  
+    :::image-end:::  
     
-    > ##### 図 5  
-    > リソースの内容を表示する  
-    > ![リソースの内容を表示する][ImageCacheContent]  
-
+1.  [ **プレビュー** ] を選択して、リソースのコンテンツを表示します。  
+    
+    :::image type="complex" source="../media/storage-application-cache-storage-domain-js-preview.msft.png" alt-text="リソースのコンテンツを表示する" lightbox="../media/storage-application-cache-storage-domain-js-preview.msft.png":::
+       リソースのコンテンツを表示する  
+    :::image-end:::  
+    
 ## リソースを更新する   
 
 1.  [キャッシュのデータを表示](#view-cache-data)する。  
 1.  更新するリソースを選びます。  DevTools では、選択されていることを示すように強調表示されます。  
     
-    > ##### 図 6  
-    > リソースの選択  
-    > ![リソースの選択][ImageCacheSelected]  
-
-1.  [**更新の更新]** を選び ![ ][ImageRefreshIcon] ます。  
-
+    :::image type="complex" source="../media/storage-application-cache-storage-domain-refresh.msft.png" alt-text="リソースを選択する" lightbox="../media/storage-application-cache-storage-domain-refresh.msft.png":::
+       リソースを選択する  
+    :::image-end:::  
+    
+1.  [ **Refresh** (更新)] を選び ![ ][ImageRefreshIcon] ます。  
+    
 ## リソースをフィルター処理する   
 
 1.  [キャッシュのデータを表示](#view-cache-data)する。  
-1.  [**パスを指定してフィルター** ] テキストボックスを使用して、指定したパスと一致しないリソースをフィルター処理します。  
+1.  [ **パスを指定してフィルター** ] テキストボックスを使用して、指定したパスと一致しないリソースをフィルター処理します。  
     
-    > ##### 図 7  
-    > 指定したパスと一致しないリソースをフィルター処理する  
-    > ![指定したパスと一致しないリソースをフィルター処理する][ImageCacheFilter]  
-
+    :::image type="complex" source="../media/storage-application-cache-storage-filter.msft.png" alt-text="指定したパスと一致しないリソースをフィルターで除外する" lightbox="../media/storage-application-cache-storage-filter.msft.png":::
+       指定したパスと一致しないリソースをフィルターで除外する  
+    :::image-end:::  
+    
 ## リソースの削除   
 
 1.  [キャッシュのデータを表示](#view-cache-data)する。  
 1.  削除するリソースを選びます。  DevTools では、選択されていることを示すように強調表示されます。  
     
-    > ##### 図 8  
-    > リソースの選択  
-    > ![リソースの選択][ImageCacheSelected2]  
-
-1.  [選択した削除の**削除**] を選択し ![ ][ImageDeleteIcon] ます。  
-
+    :::image type="complex" source="../media/storage-application-cache-storage-delete-selected.msft.png" alt-text="リソースを選択する" lightbox="../media/storage-application-cache-storage-delete-selected.msft.png":::
+       リソースを選択する  
+    :::image-end:::  
+    
+1.  [ **選択した** \ を削除] ( ![ 選択した \ を削除) を選択し ][ImageDeleteIcon] ます。  
+    
 ## すべてのキャッシュデータを削除する   
 
 1.  **アプリケーション**  >  の**クリアストレージ**を開きます。  
-1.  [**キャッシュストレージ**] チェックボックスがオンになっていることを確認します。  
+1.  [ **キャッシュストレージ** ] チェックボックスがオンになっていることを確認します。  
     
-    > ##### 図 9  
-    > [**キャッシュストレージ**] チェックボックス  
-    > ![[キャッシュストレージ] チェックボックス][ImageCacheCheckbox]  
-
-1.  [**サイトデータのクリア**] を選びます。  
+    :::image type="complex" source="../media/storage-application-clear-storage-cache-storage-checkbox.msft.png" alt-text="[キャッシュストレージ] チェックボックス" lightbox="../media/storage-application-clear-storage-cache-storage-checkbox.msft.png":::
+       [ **キャッシュストレージ** ] チェックボックス  
+    :::image-end:::  
     
-    > ##### 図 10  
-    > [**サイトデータのクリア**] ボタン  
-    > ![[サイトデータのクリア] ボタン][ImageCacheClearSite]  
+1.  [ **サイトデータのクリア**] を選びます。  
+    
+    :::image type="complex" source="../media/storage-application-clear-storage-cache-storage-checkbox-clear-site-data-button.msft.png" alt-text="[サイトデータのクリア] ボタン" lightbox="../media/storage-application-clear-storage-cache-storage-checkbox-clear-site-data-button.msft.png":::
+       [ **サイトデータのクリア** ] ボタン  
+    :::image-end:::  
+    
+<!--  
+  
 
-<!--  -->  
 
-
+-->  
 
 <!-- image links -->  
 
-[ImageDeleteIcon]: /microsoft-edge/devtools-guide-chromium/media/delete-icon.msft.png  
-[ImageRefreshIcon]: /microsoft-edge/devtools-guide-chromium/media/refresh-icon.msft.png  
-
-[ImageManifestPane]: /microsoft-edge/devtools-guide-chromium/media/storage-application-manifest.msft.png "図 1: [マニフェスト] ウィンドウ"  
-[ImageCache]: /microsoft-edge/devtools-guide-chromium/media/storage-application-cache-storage.msft.png "図 2: 使用できるキャッシュ"  
-[ImageCacheView]: /microsoft-edge/devtools-guide-chromium/media/storage-application-cache-storage-domain-root-headers.msft.png "図 3: キャッシュの内容を表示する"  
-[ImageViewCacheResource]: /microsoft-edge/devtools-guide-chromium/media/storage-application-cache-storage-index-headers.msft.png "図 4: リソースの HTTP ヘッダーの表示"  
-[ImageCacheContent]: /microsoft-edge/devtools-guide-chromium/media/storage-application-cache-storage-domain-js-preview.msft.png "図 5: リソースの内容を表示する"  
-[ImageCacheSelected]: /microsoft-edge/devtools-guide-chromium/media/storage-application-cache-storage-domain-refresh.msft.png "図 6: リソースの選択"  
-[ImageCacheFilter]: /microsoft-edge/devtools-guide-chromium/media/storage-application-cache-storage-filter.msft.png "図 7: 指定したパスと一致しないリソースのフィルター処理"  
-[ImageCacheSelected2]: /microsoft-edge/devtools-guide-chromium/media/storage-application-cache-storage-delete-selected.msft.png "図 8: リソースの選択"  
-[ImageCacheCheckbox]: /microsoft-edge/devtools-guide-chromium/media/storage-application-clear-storage-cache-storage-checkbox.msft.png "図 9: キャッシュ記憶域のチェックボックス"  
-[ImageCacheClearSite]: /microsoft-edge/devtools-guide-chromium/media/storage-application-clear-storage-cache-storage-checkbox-clear-site-data-button.msft.png "図 10: [サイトデータのクリア] ボタン"  
+[ImageDeleteIcon]: ../media/delete-icon.msft.png  
+[ImageRefreshIcon]: ../media/refresh-icon.msft.png  
 
 <!-- links -->  
 
-[MicrosoftEdgeDevTools]: /microsoft-edge/devtools-guide-chromium "Microsoft Edge (Chromium) 開発者ツール"  
-[DevtoolsNetworkLogActivity]: /microsoft-edge/network/index#log-network-activity  "ネットワークアクティビティをログに記録する"  
+[MicrosoftEdgeDevTools]: ../../devtools-guide-chromium.md "Microsoft Edge (Chromium) 開発者ツール |Microsoft ドキュメント"  
+[DevtoolsNetworkLogActivity]: ../network/index.md#log-network-activity  "ネットワークアクティビティのログ |Microsoft ドキュメント"  
 
 [MDNCache]: https://developer.mozilla.org/docs/Web/API/Cache "キャッシュ |MDN"  
 [MDNHTTPCaching]: https://developer.mozilla.org/docs/Web/HTTP/Caching "HTTP キャッシュMDN"  
 
 > [!NOTE]
-> このページの一部は、 [Google によっ][GoogleSitePolicies]て作成および共有され、[クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
-> 元のページは[ここ](https://developers.google.com/web/tools/chrome-devtools/storage/cache)にあり、 [Kayce Basques][KayceBasques]テクニカルライター、Chrome Devtools \ & Lighthouse \) で作成されています。  
+> このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
+> 元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/storage/cache) にあり、 [Kayce Basques][KayceBasques] テクニカルライター、Chrome Devtools \ & Lighthouse \) で作成されています。  
 
 [![クリエイティブコモンズライセンス][CCby4Image]][CCA4IL]  
 この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。  

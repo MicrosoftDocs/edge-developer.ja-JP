@@ -2,16 +2,16 @@
 title: 実行時のパフォーマンスを分析する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 04/30/2020
+ms.date: 08/28/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 7705428dba2ca368eb8f61b13bb96901756b081f
-ms.sourcegitcommit: 0342d99bf8d3212068890bab0e1e960afa507c02
+ms.openlocfilehash: 5f1a4125cfea1c582a76469ae7c9cd1ca75f0b00
+ms.sourcegitcommit: 1251c555c6b4db8ef8187ed94d8832fdb89d03b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "10611865"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "10984931"
 ---
 <!-- Copyright Kayce Basques and Meggin Kearney
 
@@ -44,14 +44,14 @@ ms.locfileid: "10611865"
 *   CSS の複雑さを超えないようにします。  Css セレクターをシンプルにしてください。  
 *   可能な限りレイアウトを避けます。  レイアウトをトリガーしない CSS を選択します。  
 *   塗装は、他のレンダリングアクティビティよりも時間がかかることがあります。  ペイントのボトルネックに注意してください。  
-
+    
 ## JavaScript  
 
 JavaScript の計算、特に広範な視覚的な変更をトリガーする場合は、アプリケーションのパフォーマンスが低下することがあります。  不適切なタイミングを設定したり、長時間の JavaScript を使用してユーザーの操作に干渉しないようにします。  
 
 ### JavaScript: ツール  
 
-[**パフォーマンス**] パネルでレコーディングを実行して、suspiciously の長いイベントを探し `Evaluate Script` ます。  <!--If you find any, you are able to enable the **JS Profiler** and re-do your recording to get more detailed information about exactly which JavaScript functions were used and how long each took.  -->  
+[ **パフォーマンス** ] パネルでレコーディングを実行して、suspiciously の長いイベントを探し `Evaluate Script` ます。  <!--If you find any, you are able to enable the **JS Profiler** and re-do your recording to get more detailed information about exactly which JavaScript functions were used and how long each took.  -->  
 
 <!--todo: add Recording section when available  -->  
 <!--todo: add Profile JavaScript (JS Profiler) section when available  -->  
@@ -66,7 +66,7 @@ JavaScript で非常に多くの jank が見られた場合は、分析を次の
 |:--- |:--- |:--- |  
 | 応答またはアニメーションに影響する負荷の高い入力ハンドラー。  | タッチ、視差効果のスクロール。  | ブラウザーでタッチを処理してスクロールするか、またはリスナーをできるだけ遅くバインドします。  [Paul ルイスの実行時パフォーマンスチェックリストで負荷の高い入力ハンドラーを][WebPerformanceCalendarRuntimeChecklist]参照してください。  |  
 | 応答、アニメーション、読み込みに影響を与える、時間がかかる JavaScript。  | ユーザーは、ページの読み込み、setTimeout、setInterval の後で右にスクロールします。  | JavaScript の実行時の最適化: 使用 `requestAnimationFrame` 、フレーム上の DOM の操作、 [Web ワーカー][MDNUsingWebWorkers]の使用などを行います。  |  
-| 応答に影響を与える長時間の JavaScript。  | [Domcontentloaded イベント][MDNUsingWebWorkers]は、JS の作業をさばきするため、ストールします。  | 純粋な計算作業を[Web ワーカー][MDNUsingWebWorkers]に移動します。  DOM へのアクセスが必要な場合は、を使用 `requestAnimationFrame` します。  <!--See also [Optimize JavaScript Execution][WebFundamentalsPerformanceRenderingOptimizeJavascriptRuntime].  -->  |  
+| 応答に影響を与える長時間の JavaScript。  | [Domcontentloaded イベント][MDNUsingWebWorkers]は、JS の作業をさばきするため、ストールします。  | 純粋な計算作業を [Web ワーカー][MDNUsingWebWorkers]に移動します。  DOM へのアクセスが必要な場合は、を使用 `requestAnimationFrame` します。  <!--See also [Optimize JavaScript Execution][WebFundamentalsPerformanceRenderingOptimizeJavascriptRuntime].  -->  |  
 | 応答またはアニメーションに影響を与えるガーベジスクリプト。  | ガベージコレクションがどこでも発生する可能性があります。  | 書き込みが少ないガベージ y スクリプト。  「 [Paul ルイスのランタイムパフォーマンスチェックリスト」の「アニメーションのガベージコレクション][WebPerformanceCalendarRuntimeChecklist]」を参照してください。  |  
 
 <!--todo: add Optimize JavaScript runtime section when available  -->  
@@ -84,21 +84,21 @@ JavaScript で非常に多くの jank が見られた場合は、分析を次の
 
 ### スタイル: ツール  
 
-[**パフォーマンス**] パネルでレコーディングを実行します。  大きい `Recalculate Style` イベント (紫 \) の記録を確認します。  
+[ **パフォーマンス** ] パネルでレコーディングを実行します。  大きい `Recalculate Style` イベント (紫 \) の記録を確認します。  
 
 <!--todo: add Recording section when available  -->  
 
-イベントをクリック `Recalculate Style` すると、**詳細**ウィンドウにイベントの詳細情報が表示されます。  スタイルの変更に時間がかかる場合は、パフォーマンスに影響します。  スタイルの計算が多くの要素に影響を与えている場合は、さらに改善の余地がある別の領域です。  
+イベントをクリック `Recalculate Style` すると、 **詳細** ウィンドウにイベントの詳細情報が表示されます。  スタイルの変更に時間がかかる場合は、パフォーマンスに影響します。  スタイルの計算が多くの要素に影響を与えている場合は、さらに改善の余地がある別の領域です。  
 
-> ##### 図 1  
-> 長い再計算のスタイル  
-> ![長い再計算のスタイル][ImageLongRecalculateStyle]
+:::image type="complex" source="../media/rendering-tools-performance-recalculate-style-summary.msft.png" alt-text="長い再計算のスタイル" lightbox="../media/rendering-tools-performance-recalculate-style-summary.msft.png":::
+   長い再計算のスタイル  
+:::image-end:::  
 
 イベントの影響を軽減するには、 `Recalculate Style` 次の操作を行います。  
 
 *   [Css トリガー][CssTriggers]を使って、レイアウト、ペイント、コンポジットをトリガーする css プロパティについて説明します。  これらのプロパティは、レンダリングのパフォーマンスに影響を及ぼすことはほとんどありません。  
 *   影響の少ないプロパティに切り替える。  <!--See [Stick to compositor-only properties and manage layer count][WebFundamentalsPerformanceRenderingCompositorOnlyProperties] for more guidance.  -->  
-
+    
 <!--todo: add Stick to compositor-only properties and manage layer count section when available -->  
 
 ### スタイル: 問題  
@@ -135,13 +135,13 @@ JavaScript で非常に多くの jank が見られた場合は、分析を次の
 
 ### レイアウト: ツール  
 
-[**パフォーマンス**] ウィンドウは、ページで強制的な同期レイアウトが行われるタイミングを示します。  これらの `Layout` イベントは赤いバーでマークされます。  
+[ **パフォーマンス** ] ウィンドウは、ページで強制的な同期レイアウトが行われるタイミングを示します。  これらの `Layout` イベントは赤いバーでマークされます。  
 
-> ##### 図 2  
-> 強制同期レイアウト  
-> ![強制同期レイアウト][ImageForcedSynchronousLayout]  
+:::image type="complex" source="../media/rendering-tools-jank-performance-recalculate-style-summary.msft.png" alt-text="強制同期レイアウト" lightbox="../media/rendering-tools-jank-performance-recalculate-style-summary.msft.png":::
+   強制同期レイアウト  
+:::image-end:::  
 
-"レイアウトのスラッシング" は、強制的な同期レイアウト条件を繰り返します。  これは、JavaScript が DOM を繰り返し読み書きするときに発生します。これにより、ブラウザーでは、レイアウトの再計算が強制的に行われます。  レイアウトのスラッシングを特定するには、複数の強制同期レイアウトの警告パターンを探します。  [図 2](#figure-2)を参照してください。  
+"レイアウトのスラッシング" は、強制的な同期レイアウト条件を繰り返します。  これは、JavaScript が DOM を繰り返し読み書きするときに発生します。これにより、ブラウザーでは、レイアウトの再計算が強制的に行われます。  レイアウトのスラッシングを特定するには、複数の強制同期レイアウトの警告パターンを探します。  前の図を参照してください。  
 
 ### レイアウト: 問題  
 
@@ -167,9 +167,9 @@ JavaScript で非常に多くの jank が見られた場合は、分析を次の
 ペイントにかかる時間や、ペイントの頻度を知りたい場合  [**パフォーマンス**] パネルの [[高度な描画インストルメンテーションを有効にする][DevtoolsChromiumEvaluatePerformanceReferenceEnableadvancedpaintinstrumentation]] 設定を確認して、記録を撮ります。  レンダリング時間の大半がペイントに費やされている場合は、ペイントの問題が発生します。  
 
 <!--
-> ##### Old Figure 3  
-> Long paint times in timeline recording  
-> ![Long paint times in timeline recording][ImageLongPaintTimes]  
+:::image type="complex" source="../media/rendering-tools-jank-performance-advanced-paint-instrumentation-summary.msft.png" alt-text="Long paint times in timeline recording" lightbox="../media/rendering-tools-jank-performance-advanced-paint-instrumentation-summary.msft.png":::
+   Long paint times in timeline recording  
+:::image-end:::  
 -->  
 
 <!--
@@ -189,29 +189,25 @@ Check out the **Rendering** panel for further configurations that are able to he
 <!--todo: add Simplify paint complexity and reduce paint areas section when available  -->  
 <!--todo: add Stick to compositor-only properties and manage layer count section when available  -->  
 
-<!--## Feedback   -->  
+<!--  
+## Feedback   
 
 
-
-<!-- image links -->  
-
-[ImageLongRecalculateStyle]: /microsoft-edge/devtools-guide-chromium/media/rendering-tools-performance-recalculate-style-summary.msft.png "図 1: 長い再計算のスタイル"  
-[ImageForcedSynchronousLayout]: /microsoft-edge/devtools-guide-chromium/media/rendering-tools-jank-performance-recalculate-style-summary.msft.png "図 2: 強制同期レイアウト"  
-<!--[ImageLongPaintTimes]: /microsoft-edge/devtools-guide-chromium/media/rendering-tools-jank-performance-advanced-paint-instrumentation-summary.msft.png "Old Figure 3: Long paint times in timeline recording"  -->  
+-->  
 
 <!-- links -->  
 
-[DevtoolsRenderingToolsJavascriptRuntime]: /microsoft-edge/devtools-guide-chromium/rendering-tools/js-runtime "JavaScript の実行時間を短縮する"  
+[DevtoolsRenderingToolsJavascriptRuntime]: ./js-runtime.md "JavaScript の実行時間を短縮する |Microsoft ドキュメント"  
 
-[DevtoolsChromiumEvaluatePerformanceReferenceEnableadvancedpaintinstrumentation]: /microsoft-edge/devtools-guide-chromium/evaluate-performance/reference#enable-advanced-paint-instrumentation "高度な描画インストルメンテーションを有効にする-パフォーマンス分析リファレンス"
+[DevtoolsChromiumEvaluatePerformanceReferenceEnableadvancedpaintinstrumentation]: ../evaluate-performance/reference.md#enable-advanced-paint-instrumentation "高度な描画のインストルメンテーションを有効にする-パフォーマンス分析リファレンス |Microsoft ドキュメント"
 
-<!--[DevtoolsRenderingToolsForcedSynchronousLayouts]: /microsoft-edge/devtools-guide-chromium/rendering-tools/forced-synchronous-layouts "Diagnose Forced Synchronous Layouts"  -->  
+<!--[DevtoolsRenderingToolsForcedSynchronousLayouts]: ./forced-synchronous-layouts.md "Diagnose Forced Synchronous Layouts | Microsoft Docs"  -->  
 
 <!-- The Timeline Tool page is deprecated  -->  
-<!--[DevtoolsEvaluatePerformanceTimelineToolProfileJavascript]: /microsoft-edge/devtools-guide-chromium/evaluate-performance/timeline-tool#profile-javascript "Profile JavaScript - How to Use the Timeline Tool"  -->  
-<!--[DevtoolsEvaluatePerformanceTimelineToolProfilePainting]: /microsoft-edge/devtools-guide-chromium/evaluate-performance/timeline-tool#profile-painting "Profile painting - How to Use the Timeline Tool"  -->  
-<!--[DevtoolsEvaluatePerformanceTimelineToolRecording]: /microsoft-edge/devtools-guide-chromium/evaluate-performance/timeline-tool#make-a-recording "Make a recording - How to Use the Timeline Tool"  -->  
-<!--[DevtoolsEvaluatePerformanceTimelineToolRenderingSettings]: /microsoft-edge/devtools-guide-chromium/evaluate-performance/timeline-tool#rendering-settings "Rendering settings - How to Use the Timeline Tool"  -->  
+<!--[DevtoolsEvaluatePerformanceTimelineToolProfileJavascript]: ../evaluate-performance/timeline-tool.md#profile-javascript "Profile JavaScript - How to Use the Timeline Tool | Microsoft Docs"  -->  
+<!--[DevtoolsEvaluatePerformanceTimelineToolProfilePainting]: ../evaluate-performance/timeline-tool.md#profile-painting "Profile painting - How to Use the Timeline Tool | Microsoft Docs"  -->  
+<!--[DevtoolsEvaluatePerformanceTimelineToolRecording]: ../evaluate-performance/timeline-tool.md#make-a-recording "Make a recording - How to Use the Timeline Tool | Microsoft Docs"  -->  
+<!--[DevtoolsEvaluatePerformanceTimelineToolRenderingSettings]: ../evaluate-performance/timeline-tool.md#rendering-settings "Rendering settings - How to Use the Timeline Tool | Microsoft Docs"  -->  
 
 <!--[WebFundamentalsPerformanceRenderingAvoidLargeComplexLayouts]: /web/fundamentals/performance/rendering/avoid-large-complex-layouts-and-layout-thrashing "Avoid Large, Complex Layouts, and Layout Thrashing"  -->  
 <!--[WebFundamentalsPerformanceRenderingOptimizeJavascriptRuntime]: /web/fundamentals/performance/rendering/optimize-javascript-execution "Optimize JavaScript Runtime"  -->  
@@ -228,8 +224,8 @@ Check out the **Rendering** panel for further configurations that are able to he
 [GitHubWilsonpageFastdom]: https://github.com/wilsonpage/fastdom "このページ/fastdom |GitHub"  
 
 > [!NOTE]
-> このページの一部は、 [Google によっ][GoogleSitePolicies]て作成および共有され、[クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
-> 元のページは[ここ](https://developers.google.com/web/tools/chrome-devtools/rendering-tools/index)にあり、 [Kayce basques][KayceBasques]テクニカルライター、Chrome Devtools \ & Lighthouse \) および[Meggin Kearney][MegginKearney] \ (Tech writer \) で作成されています。  
+> このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
+> 元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/rendering-tools/index) にあり、 [Kayce basques][KayceBasques] テクニカルライター、Chrome Devtools \ & Lighthouse \) および [Meggin Kearney][MegginKearney] \ (Tech writer \) で作成されています。  
 
 [![クリエイティブコモンズライセンス][CCby4Image]][CCA4IL]  
 この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。  

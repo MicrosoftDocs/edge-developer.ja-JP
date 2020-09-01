@@ -2,16 +2,16 @@
 title: Microsoft Edge DevTools からユーザーエージェント文字列を上書きする
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 03/26/2020
+ms.date: 08/28/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 376e1550d0dc31f3b47b6badd6970076a8c13f91
-ms.sourcegitcommit: 531ec8aa1f89b28bc4d271e8e995f846f2392bc3
+ms.openlocfilehash: 0ffea8f515a2d4ba0fa16b447a7d204c335dc7bb
+ms.sourcegitcommit: 1251c555c6b4db8ef8187ed94d8832fdb89d03b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "10607308"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "10984996"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -35,39 +35,36 @@ ms.locfileid: "10607308"
 
 
 
-Microsoft Edge DevTools から[ユーザーエージェント][MDNUserAgent]文字列を上書きするには、次の操作を行います。  
+Microsoft Edge DevTools から [ユーザーエージェント][MDNUserAgent] 文字列を上書きするには、次の操作を行います。  
 
 1.  `Control` + `Shift` + `P` コマンドメニューを開くには、\ (Windows \) または `Command` + `Shift` + `P` \ **Command Menu**(macOS \) を押します。  
     
-    > ##### 図 1  
-    > コマンドメニュー  
-    > ![コマンドメニュー][ImageCommandMenu]  
+    :::image type="complex" source="../media/device-mode-console-command-menu.msft.png" alt-text="コマンドメニュー" lightbox="../media/device-mode-console-command-menu.msft.png":::
+       **コマンドメニュー**  
+    :::image-end:::  
     
-1.  「 `network conditions` **ネットワーク**条件の表示」を選択し、を押して [ネットワークの `Enter` **条件**] タブを開きます。  
-1.  [**ユーザーエージェント**] セクションで、 **[自動的に選択**する] チェックボックスをオフにします。  
+1.  「 `network conditions` **ネットワーク**条件の表示」を選択し、を押して [ネットワークの `Enter` **条件** ] タブを開きます。  
+1.  [ **ユーザーエージェント** ] セクションで、 **[自動的に選択** する] チェックボックスをオフにします。  
     
-    > ##### 図 2  
-    > **選択を自動的に無効に**する  
-    > ![選択を自動的に無効にする][ImageUserAgentDisableSelectAutomatically]  
+    :::image type="complex" source="../media/device-mode-console-network-conditions-user-agent-select-automatically-deselected.msft.png" alt-text="自動選択を無効にする" lightbox="../media/device-mode-console-network-conditions-user-agent-select-automatically-deselected.msft.png":::
+       **自動選択**を無効にする  
+    :::image-end:::  
     
 1.  リストからユーザーエージェント文字列を選択するか、独自のカスタム文字列を入力します。  
+    
+<!--  
+## Feedback   
 
-<!--## Feedback   -->  
 
-
-
-<!-- image links -->  
-
-[ImageCommandMenu]: /microsoft-edge/devtools-guide-chromium/media/device-mode-console-command-menu.msft.png "図 1: コマンドメニュー"  
-[ImageUserAgentDisableSelectAutomatically]: /microsoft-edge/devtools-guide-chromium/media/device-mode-console-network-conditions-user-agent-select-automatically-deselected.msft.png "図 2: [選択を自動的に無効にする]"  
+-->  
 
 <!-- links -->  
 
 [MDNUserAgent]: https://developer.mozilla.org/docs/Glossary/User_agent "ユーザーエージェント |MDN"  
 
 > [!NOTE]
-> このページの一部は、 [Google によっ][GoogleSitePolicies]て作成および共有され、[クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
-> 元のページは[ここ](https://developers.google.com/web/tools/chrome-devtools/device-mode/override-user-agent)にあり、 [Kayce Basques][KayceBasques]テクニカルライター、Chrome Devtools \ & Lighthouse \) で作成されています。  
+> このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
+> 元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/device-mode/override-user-agent) にあり、 [Kayce Basques][KayceBasques] テクニカルライター、Chrome Devtools \ & Lighthouse \) で作成されています。  
 
 [![クリエイティブコモンズライセンス][CCby4Image]][CCA4IL]  
 この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。  
