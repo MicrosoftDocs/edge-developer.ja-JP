@@ -2,16 +2,16 @@
 title: 本体の概要
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 04/24/2020
+ms.date: 08/28/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 6062afb929a5d763c095d4915a2960993bc5ab4c
-ms.sourcegitcommit: 5cdc1626d5581b79c0f2ac4ea62e7f1974ebfa57
+ms.openlocfilehash: 45e2eb9d66fa284b1326e7554b6897a1e1747561
+ms.sourcegitcommit: 1251c555c6b4db8ef8187ed94d8832fdb89d03b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "10601788"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "10982290"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -31,101 +31,104 @@ ms.locfileid: "10601788"
 
 
 
-# <span data-ttu-id="da2e1-103">本体の概要</span><span class="sxs-lookup"><span data-stu-id="da2e1-103">Console Overview</span></span>   
+# <span data-ttu-id="e73f5-103">本体の概要</span><span class="sxs-lookup"><span data-stu-id="e73f5-103">Console Overview</span></span>   
 
   
 
-<span data-ttu-id="da2e1-104">このページでは、Microsoft Edge DevTools コンソールを使用して web ページを簡単に開発する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="da2e1-104">This page explains how the Microsoft Edge DevTools Console makes it easier to develop web pages.</span></span>  <span data-ttu-id="da2e1-105">本体には2つの主な用途があります。ログに記録された[メッセージを表示](#viewing-logged-messages)し、JavaScript を[実行](#running-javascript)します。</span><span class="sxs-lookup"><span data-stu-id="da2e1-105">The Console has 2 main uses: [viewing logged messages](#viewing-logged-messages) and [running JavaScript](#running-javascript).</span></span>  
+<span data-ttu-id="e73f5-104">このページでは、Microsoft Edge DevTools コンソールを使用して web ページを簡単に開発する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="e73f5-104">This page explains how the Microsoft Edge DevTools Console makes it easier to develop web pages.</span></span>  <span data-ttu-id="e73f5-105">本体には2つの主な用途があります。ログに記録された [メッセージを表示](#viewing-logged-messages) し、JavaScript を [実行](#running-javascript)します。</span><span class="sxs-lookup"><span data-stu-id="e73f5-105">The Console has 2 main uses: [viewing logged messages](#viewing-logged-messages) and [running JavaScript](#running-javascript).</span></span>  
 
-## <span data-ttu-id="da2e1-106">ログメッセージの表示</span><span class="sxs-lookup"><span data-stu-id="da2e1-106">Viewing logged messages</span></span>   
+## <span data-ttu-id="e73f5-106">ログメッセージの表示</span><span class="sxs-lookup"><span data-stu-id="e73f5-106">Viewing logged messages</span></span>   
 
-<span data-ttu-id="da2e1-107">Web 開発者は、JavaScript が予期したとおりに動作することを確認するために、コンソールにメッセージを記録することがよくあります。</span><span class="sxs-lookup"><span data-stu-id="da2e1-107">Web developers often log messages to the Console to make sure that their JavaScript is working as expected.</span></span>  <span data-ttu-id="da2e1-108">メッセージを記録するには、JavaScript に like として式を挿入し `console.log('Hello, Console!')` ます。</span><span class="sxs-lookup"><span data-stu-id="da2e1-108">To log a message, you insert an expression like `console.log('Hello, Console!')` into your JavaScript.</span></span>  <span data-ttu-id="da2e1-109">ブラウザーで JavaScript が実行され、そのような式が表示されたら、コンソールにメッセージが記録されます。</span><span class="sxs-lookup"><span data-stu-id="da2e1-109">When the browser runs your JavaScript and sees an expression like that, it logs the message to the Console.</span></span>  <span data-ttu-id="da2e1-110">たとえば、ページの HTML と JavaScript を作成しているとします。</span><span class="sxs-lookup"><span data-stu-id="da2e1-110">For example, suppose that you are writing the HTML and JavaScript for a page:</span></span>  
+<span data-ttu-id="e73f5-107">Web 開発者は、JavaScript が予期したとおりに動作することを確認するために、コンソールにメッセージを記録することがよくあります。</span><span class="sxs-lookup"><span data-stu-id="e73f5-107">Web developers often log messages to the Console to make sure that their JavaScript is working as expected.</span></span>  <span data-ttu-id="e73f5-108">メッセージを記録するには、JavaScript に like として式を挿入し `console.log('Hello, Console!')` ます。</span><span class="sxs-lookup"><span data-stu-id="e73f5-108">To log a message, you insert an expression like `console.log('Hello, Console!')` into your JavaScript.</span></span>  <span data-ttu-id="e73f5-109">ブラウザーで JavaScript が実行され、そのような式が表示されたら、コンソールにメッセージが記録されます。</span><span class="sxs-lookup"><span data-stu-id="e73f5-109">When the browser runs your JavaScript and sees an expression like that, it logs the message to the Console.</span></span>  
 
-```html
-<!doctype html>
-<html>
-  <head>
-    <title>Console Demo</title>
-  </head>
-  <body>
-    <h1>Hello, World!</h1>
-    <script>
-      console.log('Loading!');
-      const h1 = document.querySelector('h1');
-      console.log(h1.textContent);
-      console.assert(document.querySelector('h2'), 'h2 not found!');
-      const artists = [
-        {
-          first: 'René',
-          last: 'Magritte'
-        },
-        {
-          first: 'Chaim',
-          last: 'Soutine'
-        },
-        {
-          first: 'Henri',
-          last: 'Matisse'
-        }
-      ];
-      console.table(artists);
-      setTimeout(() => {
-        h1.textContent = 'Hello, Console!';
-        console.log(h1.textContent);
-      }, 3000);
-    </script>
-  </body>
-</html>
-```  
+:::row:::
+   :::column span="":::
+      <span data-ttu-id="e73f5-110">ページの HTML と JavaScript。</span><span class="sxs-lookup"><span data-stu-id="e73f5-110">The HTML and JavaScript for the page.</span></span>  
+      
+      ```html
+      <!doctype html>
+      <html>
+          <head>
+              <title>Console Demo</title>
+          </head>
+          <body>
+              <h1>Hello, World!</h1>
+              <script>
+                  console.log('Loading!');
+                  const h1 = document.querySelector('h1');
+                  console.log(h1.textContent);
+                  console.assert(document.querySelector('h2'), 'h2 not found!');
+                  const artists = [
+                      { first: 'René', last: 'Magritte' },
+                      { first: 'Chaim', last: 'Soutine' },
+                      { first: 'Henri', last: 'Matisse' }
+                  ];
+                  console.table(artists);
+                  setTimeout(() => {
+                      h1.textContent = 'Hello, Console!';
+                      console.log(h1.textContent);
+                  }, 3000);
+              </script>
+          </body>
+      </html>
+      ```  
+   :::column-end:::
+   :::column span="":::
+      <span data-ttu-id="e73f5-111">次の図に、ページの読み込みの結果と3秒間の待機の結果 **が表示されてい** ます。</span><span class="sxs-lookup"><span data-stu-id="e73f5-111">In the following figure, the **Console** displays the results of loading the page and waiting 3 seconds.</span></span>  
+      
+      :::image type="complex" source="../media/console-console-demo.msft.png" alt-text="コンソールパネル" lightbox="../media/console-console-demo.msft.png":::
+         <span data-ttu-id="e73f5-113">**コンソール**パネル</span><span class="sxs-lookup"><span data-stu-id="e73f5-113">The **Console** panel</span></span>  
+      :::image-end:::  
+      
+      <span data-ttu-id="e73f5-114">ブラウザーがメッセージをログに記録したコード行を特定してみてください。</span><span class="sxs-lookup"><span data-stu-id="e73f5-114">Try to determine which lines of code caused the browser to log the messages.</span></span>  
+   :::column-end:::
+:::row-end:::  
 
-<span data-ttu-id="da2e1-111">[図 1](#figure-1)では、ページの読み込み後、3秒待っても本体がどのように見えるかを示しています。</span><span class="sxs-lookup"><span data-stu-id="da2e1-111">[Figure 1](#figure-1) shows what the Console looks like after loading the page and waiting 3 seconds.</span></span>  <span data-ttu-id="da2e1-112">ブラウザーがメッセージをログに記録したコード行を確認してみてください。</span><span class="sxs-lookup"><span data-stu-id="da2e1-112">Try to figure out which lines of code caused the browser to log the messages.</span></span>  
+<span data-ttu-id="e73f5-115">次の2つの一般的な理由により、Web 開発者はメッセージをログに記録します。</span><span class="sxs-lookup"><span data-stu-id="e73f5-115">Web developers log messages for the following 2 general reasons.</span></span>  
 
-> ##### <span data-ttu-id="da2e1-113">図 1</span><span class="sxs-lookup"><span data-stu-id="da2e1-113">Figure 1</span></span>  
-> <span data-ttu-id="da2e1-114">コンソールパネル</span><span class="sxs-lookup"><span data-stu-id="da2e1-114">The Console panel</span></span>  
-> ![コンソールパネル][ImageConsole]  
+*   <span data-ttu-id="e73f5-116">コードが正しい順序で実行されていることを確認します。</span><span class="sxs-lookup"><span data-stu-id="e73f5-116">Making sure that code is running in the right order.</span></span>  
+*   <span data-ttu-id="e73f5-117">ある時点での変数の値を調べます。</span><span class="sxs-lookup"><span data-stu-id="e73f5-117">Inspecting the values of variables at a certain moment in time.</span></span>  
 
-<span data-ttu-id="da2e1-116">Web 開発者は2つの一般的な理由のためにメッセージをログに記録します。</span><span class="sxs-lookup"><span data-stu-id="da2e1-116">Web developers log messages for 2 general reasons:</span></span>  
+<span data-ttu-id="e73f5-118">詳細については、「ログ [メッセージの概要][DevtoolsConsoleLoggingMessages] 」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="e73f5-118">See [Get Started With Logging Messages][DevtoolsConsoleLoggingMessages] to get hands-on experience with logging.</span></span>  <span data-ttu-id="e73f5-119">メソッドの完全な一覧を参照するには、 [CONSOLE API リファレンス][DevToolsConsoleAPI] を参照してください `console` 。</span><span class="sxs-lookup"><span data-stu-id="e73f5-119">See the [Console API Reference][DevToolsConsoleAPI] to browse the full list of `console` methods.</span></span>  <span data-ttu-id="e73f5-120">メソッドの主な違いは、ログに記録されるデータがどのように表示されるかです。</span><span class="sxs-lookup"><span data-stu-id="e73f5-120">The main difference between the methods is how the data being logged is displayed.</span></span>  
 
-*   <span data-ttu-id="da2e1-117">コードが正しい順序で実行されていることを確認します。</span><span class="sxs-lookup"><span data-stu-id="da2e1-117">Making sure that code is running in the right order.</span></span>  
-*   <span data-ttu-id="da2e1-118">ある時点での変数の値を調べます。</span><span class="sxs-lookup"><span data-stu-id="da2e1-118">Inspecting the values of variables at a certain moment in time.</span></span>  
+## <span data-ttu-id="e73f5-121">JavaScript の実行</span><span class="sxs-lookup"><span data-stu-id="e73f5-121">Running JavaScript</span></span>   
 
-<span data-ttu-id="da2e1-119">詳細については、「ログ[メッセージの概要][DevtoolsConsoleLoggingMessages]」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="da2e1-119">See [Get Started With Logging Messages][DevtoolsConsoleLoggingMessages] to get hands-on experience with logging.</span></span>  <span data-ttu-id="da2e1-120">メソッドの完全な一覧を参照するには、 [CONSOLE API リファレンス][DevToolsConsoleAPI]を参照してください `console` 。</span><span class="sxs-lookup"><span data-stu-id="da2e1-120">See the [Console API Reference][DevToolsConsoleAPI] to browse the full list of `console` methods.</span></span>  <span data-ttu-id="da2e1-121">メソッドの主な違いは、ログに記録されるデータがどのように表示されるかです。</span><span class="sxs-lookup"><span data-stu-id="da2e1-121">The main difference between the methods is how the data being logged is displayed.</span></span>  
+<span data-ttu-id="e73f5-122">**本体**も[REPL][WikiREPLoop]です。</span><span class="sxs-lookup"><span data-stu-id="e73f5-122">The **Console** is also a [REPL][WikiREPLoop].</span></span>  <span data-ttu-id="e73f5-123">**コンソール**で JavaScript を実行して、検査対象のページを操作することができます。</span><span class="sxs-lookup"><span data-stu-id="e73f5-123">You may run JavaScript in the **Console** to interact with the page being inspected.</span></span>   
 
-## <span data-ttu-id="da2e1-122">JavaScript の実行</span><span class="sxs-lookup"><span data-stu-id="da2e1-122">Running JavaScript</span></span>   
+:::row:::
+   :::column span="":::
+      <span data-ttu-id="e73f5-124">次の図では、DevTools のホームページの横に **コンソール** が表示されています。</span><span class="sxs-lookup"><span data-stu-id="e73f5-124">In the following figure, the **Console** is shown next to the DevTools homepage.</span></span>  
+      
+      :::image type="complex" source="../media/devtools-console-empty.msft.png" alt-text="DevTools ホームページの横にあるコンソールパネル" lightbox="../media/devtools-console-empty.msft.png":::
+         <span data-ttu-id="e73f5-126">DevTools ホームページの横にある **コンソール** パネル</span><span class="sxs-lookup"><span data-stu-id="e73f5-126">The **Console** panel next to the DevTools homepage</span></span>  
+      :::image-end:::  
+   :::column-end:::
+   :::column span="":::
+      <span data-ttu-id="e73f5-127">次の図では、 **本体** を使ってページの先頭見出しを変更した後に、同じページが表示されています。</span><span class="sxs-lookup"><span data-stu-id="e73f5-127">In the following figure, the same page is shown after using the **Console** to change the top heading of the page.</span></span>
+      
+      :::image type="complex" source="../media/devtools-console-h1-changed.msft.png" alt-text="コンソールを使用してページの先頭見出しを変更する" lightbox="../media/devtools-console-h1-changed.msft.png":::
+         <span data-ttu-id="e73f5-129">**コンソール**を使用してページの先頭見出しを変更する</span><span class="sxs-lookup"><span data-stu-id="e73f5-129">Use the **Console** to change the top heading of the page</span></span>  
+      :::image-end:::  
+   :::column-end:::
+:::row-end:::
 
-<span data-ttu-id="da2e1-123">本体も[REPL][WikiREPLoop]です。</span><span class="sxs-lookup"><span data-stu-id="da2e1-123">The Console is also a [REPL][WikiREPLoop].</span></span>  <span data-ttu-id="da2e1-124">コンソールで JavaScript を実行して、検査対象のページを操作することができます。</span><span class="sxs-lookup"><span data-stu-id="da2e1-124">You may run JavaScript in the Console to interact with the page being inspected.</span></span>  <span data-ttu-id="da2e1-125">たとえば、[図 2](#figure-2)は、devtools ホームページの横にある本体を示しています。[図 3](#figure-3)は、本体を使ってページの上部の見出しを変更した後の同じページを示しています。</span><span class="sxs-lookup"><span data-stu-id="da2e1-125">For example, [Figure 2](#figure-2) shows the Console next to the DevTools homepage, and [Figure 3](#figure-3) shows that same page after using the Console to change the top heading of the page.</span></span>  
+<span data-ttu-id="e73f5-130">本体からページを変更する **ことができる** のは、 **コンソール** の [ウィンドウ][MDNWindow] に対して完全にアクセスできるためです。</span><span class="sxs-lookup"><span data-stu-id="e73f5-130">Modifying the page from the **Console** is possible because the **Console** has full access to the [window][MDNWindow] of the page.</span></span>  <span data-ttu-id="e73f5-131">DevTools には、ページを簡単に調べるための便利な機能がいくつか用意されています。</span><span class="sxs-lookup"><span data-stu-id="e73f5-131">DevTools has a few convenience functions that make it easier to inspect a page.</span></span>  <span data-ttu-id="e73f5-132">たとえば、JavaScript にはという関数が含まれていると `hideModal` します。</span><span class="sxs-lookup"><span data-stu-id="e73f5-132">For example, suppose that your JavaScript contains a function called `hideModal`.</span></span>  <span data-ttu-id="e73f5-133">Running を実行すると `debug(hideModal)` 、次回の実行時の最初の行にコードが一時停止し `hideModal` ます。</span><span class="sxs-lookup"><span data-stu-id="e73f5-133">Running `debug(hideModal)` pauses your code on the first line of `hideModal` the next time that you run it.</span></span>  <span data-ttu-id="e73f5-134">ユーティリティ関数の完全な一覧について詳しくは、「 [コンソールユーティリティ API リファレンス][DevtoolsConsoleUtilitiesDebug]」をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="e73f5-134">For more information about the full list of utility functions, see [Console Utilities API Reference][DevtoolsConsoleUtilitiesDebug].</span></span>  
 
-> ##### <span data-ttu-id="da2e1-126">図 2</span><span class="sxs-lookup"><span data-stu-id="da2e1-126">Figure 2</span></span>  
-> <span data-ttu-id="da2e1-127">DevTools ホームページの横にあるコンソールパネル</span><span class="sxs-lookup"><span data-stu-id="da2e1-127">The Console panel next to the DevTools homepage</span></span>  
-> ![DevTools ホームページの横にあるコンソールパネル][ImageConsoleOverview]  
+<span data-ttu-id="e73f5-135">JavaScript を実行しても、ページを操作する必要はありません。</span><span class="sxs-lookup"><span data-stu-id="e73f5-135">When you run JavaScript you do not have to interact with the page.</span></span>  <span data-ttu-id="e73f5-136">この **本体** を使うと、ページに関係のない新しいコードを試すことができます。</span><span class="sxs-lookup"><span data-stu-id="e73f5-136">You may use the **Console** to try out new code unrelated to the page.</span></span>  <span data-ttu-id="e73f5-137">たとえば、組み込みの JavaScript 配列 [map ()][MDNMap] メソッドについて学習し、その方法を試してみるとします。</span><span class="sxs-lookup"><span data-stu-id="e73f5-137">For example, suppose you just learned about the built-in JavaScript Array [map()][MDNMap] method, and you want to experiment with it.</span></span>  
+<span data-ttu-id="e73f5-138">この機能を試すには、 **コンソール** が適切な場所です。</span><span class="sxs-lookup"><span data-stu-id="e73f5-138">The **Console** is a good place to try out the function.</span></span>  
 
-> ##### <span data-ttu-id="da2e1-129">図 3</span><span class="sxs-lookup"><span data-stu-id="da2e1-129">Figure 3</span></span>  
-> <span data-ttu-id="da2e1-130">本体を使ってページの先頭見出しを変更する</span><span class="sxs-lookup"><span data-stu-id="da2e1-130">Using the Console to change the top heading of the page</span></span>  
-> ![本体を使ってページの先頭見出しを変更する][ImageConsoleChangeTitle]  
-
-<span data-ttu-id="da2e1-132">本体からページを変更することができるのは、コンソールの[ウィンドウ][MDNWindow]に対して完全にアクセスできるためです。</span><span class="sxs-lookup"><span data-stu-id="da2e1-132">Modifying the page from the Console is possible because the Console has full access to the [window][MDNWindow] of the page.</span></span>  <span data-ttu-id="da2e1-133">DevTools には、ページを簡単に調べるための便利な機能がいくつか用意されています。</span><span class="sxs-lookup"><span data-stu-id="da2e1-133">DevTools has a few convenience functions that make it easier to inspect a page.</span></span>  <span data-ttu-id="da2e1-134">たとえば、JavaScript にはという関数が含まれていると `hideModal` します。</span><span class="sxs-lookup"><span data-stu-id="da2e1-134">For example, suppose that your JavaScript contains a function called `hideModal`.</span></span>  <span data-ttu-id="da2e1-135">Running を実行すると `debug(hideModal)` 、次回の実行時の最初の行にコードが一時停止し `hideModal` ます。</span><span class="sxs-lookup"><span data-stu-id="da2e1-135">Running `debug(hideModal)` pauses your code on the first line of `hideModal` the next time that you run it.</span></span>  <span data-ttu-id="da2e1-136">ユーティリティ関数の完全な一覧については、「[コンソールユーティリティ API リファレンス][DevtoolsConsoleUtilitiesDebug]」をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="da2e1-136">See [Console Utilities API Reference][DevtoolsConsoleUtilitiesDebug] to see the full list of utility functions.</span></span>  
-
-<span data-ttu-id="da2e1-137">JavaScript を実行しても、ページを操作する必要はありません。</span><span class="sxs-lookup"><span data-stu-id="da2e1-137">When you run JavaScript you do not have to interact with the page.</span></span>  <span data-ttu-id="da2e1-138">この本体を使うと、ページに関係のない新しいコードを試すことができます。</span><span class="sxs-lookup"><span data-stu-id="da2e1-138">You may use the Console to try out new code unrelated to the page.</span></span>  <span data-ttu-id="da2e1-139">たとえば、組み込みの JavaScript 配列[map ()][MDNMap]メソッドについて学習し、その方法を試してみるとします。</span><span class="sxs-lookup"><span data-stu-id="da2e1-139">For example, suppose you just learned about the built-in JavaScript Array [map()][MDNMap] method, and you want to experiment with it.</span></span>  
-<span data-ttu-id="da2e1-140">この機能を試すには、**コンソール**が適切な場所です。</span><span class="sxs-lookup"><span data-stu-id="da2e1-140">The **Console** is a good place to try out the function.</span></span>  
-
-<span data-ttu-id="da2e1-141">本体で JavaScript を実行する方法については、「 [Javascript の実行を開始][ImageConsoleChangeTitle]する」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="da2e1-141">See [Get Started With Running JavaScript][ImageConsoleChangeTitle] to get hands-on experience with running JavaScript in the Console.</span></span>  
+<span data-ttu-id="e73f5-139">**コンソール**での javascript の実行に関する実践的な操作方法については、「[実行中の javascript の使用を開始][DevtoolsConsoleRunningJavascript]する」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="e73f5-139">For more hands-on experience with running JavaScript in the **Console**, see [Get Started With Running JavaScript][DevtoolsConsoleRunningJavascript].</span></span>  
 
    
 
   
 
-<!-- image links -->  
-
-[ImageConsole]: /microsoft-edge/devtools-guide-chromium/media/console-console-demo.msft.png "図 1: コンソールパネル"  
-[ImageConsoleChangeTitle]: /microsoft-edge/devtools-guide-chromium/media/devtools-console-h1-changed.msft.png "図 3: 本体を使ってページの先頭の見出しを変更する"  
-[ImageConsoleOverview]: /microsoft-edge/devtools-guide-chromium/media/devtools-console-empty.msft.png "図 2: DevTools ホームページの横にあるコンソールパネル"  
-
 <!-- links -->  
 
-[DevToolsConsoleAPI]: /microsoft-edge/devtools-guide-chromium/console/api "本体の API リファレンス"  
-[DevtoolsConsoleLoggingMessages]: /microsoft-edge/devtools-guide-chromium/console/log "コンソールでのメッセージの記録を開始する"  
-[DevtoolsConsoleRunningJavascript]: /microsoft-edge/devtools-guide-chromium/console/javascript "本体の JavaScript の実行を開始する"  
-[DevtoolsConsoleUtilitiesDebug]: /microsoft-edge/devtools-guide-chromium/console/utilities#debug "デバッグ-コンソールユーティリティ API リファレンス"  
+[DevToolsConsoleAPI]: ./api.md "コンソール API リファレンス |Microsoft ドキュメント"  
+[DevtoolsConsoleLoggingMessages]: ./log.md "コンソールでのメッセージの記録を開始する |Microsoft ドキュメント"  
+[DevtoolsConsoleRunningJavascript]: ./javascript.md "本体の JavaScript の実行を開始する |Microsoft ドキュメント"  
+[DevtoolsConsoleUtilitiesDebug]: ./utilities.md#debug "デバッグ-本体ユーティリティー API リファレンス |Microsoft ドキュメント"  
 
 [MDNMap]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map "配列. .map () |MDN"  
 [MDNWindow]: https://developer.mozilla.org/docs/Web/API/Window "Window |MDN"  
@@ -133,11 +136,11 @@ ms.locfileid: "10601788"
 [WikiREPLoop]: https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop "読み取り– eval – print loop-Wikipedia"  
 
 > [!NOTE]
-> <span data-ttu-id="da2e1-152">このページの一部は、 [Google によっ][GoogleSitePolicies]て作成および共有され、[クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。</span><span class="sxs-lookup"><span data-stu-id="da2e1-152">Portions of this page are modifications based on work created and [shared by Google][GoogleSitePolicies] and used according to terms described in the [Creative Commons Attribution 4.0 International License][CCA4IL].</span></span>  
-> <span data-ttu-id="da2e1-153">元のページは[ここ](https://developers.google.com/web/tools/chrome-devtools/console/index)にあり、 [Kayce Basques][KayceBasques]テクニカルライター、Chrome Devtools \ & Lighthouse \) で作成されています。</span><span class="sxs-lookup"><span data-stu-id="da2e1-153">The original page is found [here](https://developers.google.com/web/tools/chrome-devtools/console/index) and is authored by [Kayce Basques][KayceBasques] \(Technical Writer, Chrome DevTools \& Lighthouse\).</span></span>  
+> <span data-ttu-id="e73f5-147">このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。</span><span class="sxs-lookup"><span data-stu-id="e73f5-147">Portions of this page are modifications based on work created and [shared by Google][GoogleSitePolicies] and used according to terms described in the [Creative Commons Attribution 4.0 International License][CCA4IL].</span></span>  
+> <span data-ttu-id="e73f5-148">元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/console/index) にあり、 [Kayce Basques][KayceBasques] テクニカルライター、Chrome Devtools \ & Lighthouse \) で作成されています。</span><span class="sxs-lookup"><span data-stu-id="e73f5-148">The original page is found [here](https://developers.google.com/web/tools/chrome-devtools/console/index) and is authored by [Kayce Basques][KayceBasques] \(Technical Writer, Chrome DevTools \& Lighthouse\).</span></span>  
 
 [![クリエイティブコモンズライセンス][CCby4Image]][CCA4IL]  
-<span data-ttu-id="da2e1-155">この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。</span><span class="sxs-lookup"><span data-stu-id="da2e1-155">This work is licensed under a [Creative Commons Attribution 4.0 International License][CCA4IL].</span></span>  
+<span data-ttu-id="e73f5-150">この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。</span><span class="sxs-lookup"><span data-stu-id="e73f5-150">This work is licensed under a [Creative Commons Attribution 4.0 International License][CCA4IL].</span></span>  
 
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
