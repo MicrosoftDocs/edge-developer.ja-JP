@@ -2,16 +2,16 @@
 title: 他のブラウザーをエミュレートしてテストする
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 03/26/2020
+ms.date: 08/28/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 65ad10ff89d3e4c27abc97cea0eb18b15853dd2e
-ms.sourcegitcommit: 531ec8aa1f89b28bc4d271e8e995f846f2392bc3
+ms.openlocfilehash: d5eb33ea4cd1224930e91898d2c711310202cfc0
+ms.sourcegitcommit: 1251c555c6b4db8ef8187ed94d8832fdb89d03b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "10607314"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "10984982"
 ---
 <!-- Copyright Meggin Kearney and Paul Bakaus
 
@@ -31,59 +31,59 @@ ms.locfileid: "10607314"
 
 
 
-# <span data-ttu-id="758a1-103">他のブラウザーをエミュレートしてテストする</span><span class="sxs-lookup"><span data-stu-id="758a1-103">Emulate and Test Other Browsers</span></span>   
+# <span data-ttu-id="55afb-103">他のブラウザーをエミュレートしてテストする</span><span class="sxs-lookup"><span data-stu-id="55afb-103">Emulate and test other browsers</span></span>   
 
 
 
 
-<span data-ttu-id="758a1-104">Microsoft Edge と Android でサイトが適切に動作するように、ジョブが終了することはありません。</span><span class="sxs-lookup"><span data-stu-id="758a1-104">Your job does not end with ensuring your site runs great across Microsoft Edge and Android.</span></span>  <span data-ttu-id="758a1-105">デバイスモードでは、iPhones などのさまざまなデバイスをシミュレートできますが、他のブラウザーで提供されているエミュレーションのためのソリューションを確認することをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="758a1-105">Even though Device Mode is able to simulate a range of other devices like iPhones, we encourage you to check out solutions for emulation provided by other browsers.</span></span>  
+<span data-ttu-id="55afb-104">Microsoft Edge と Android でサイトが適切に動作するように、ジョブが終了することはありません。</span><span class="sxs-lookup"><span data-stu-id="55afb-104">Your job does not end with ensuring your site runs great across Microsoft Edge and Android.</span></span>  <span data-ttu-id="55afb-105">デバイスモードでは、iPhones などのさまざまなデバイスをシミュレートできますが、他のブラウザーで提供されているエミュレーションのためのソリューションを確認することをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="55afb-105">Even though Device Mode is able to simulate a range of other devices like iPhones, we encourage you to check out solutions for emulation provided by other browsers.</span></span>  
 
-### <span data-ttu-id="758a1-106">まとめ</span><span class="sxs-lookup"><span data-stu-id="758a1-106">Summary</span></span>  
+### <span data-ttu-id="55afb-106">まとめ</span><span class="sxs-lookup"><span data-stu-id="55afb-106">Summary</span></span>  
 
-*   <span data-ttu-id="758a1-107">特定のデバイスを持っていない場合、または何らかの点でスポットチェックを実行する場合は、ブラウザー内でデバイスをエミュレートすることをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="758a1-107">When you do not have a particular device, or want to do a spot check on something, the best option is to emulate the device right inside your browser.</span></span>  
-*   <span data-ttu-id="758a1-108">デバイスエミュレーターとシミュレータを使用すると、開発者向けサイトをワークステーションのさまざまなデバイスで模倣できます。</span><span class="sxs-lookup"><span data-stu-id="758a1-108">Device emulators and simulators enable you to mimic your development site on a range of devices from your workstation.</span></span>  
-*   <span data-ttu-id="758a1-109">クラウドベースのエミュレーターを使用すると、さまざまなプラットフォームでサイトの単体テストを自動化できます。</span><span class="sxs-lookup"><span data-stu-id="758a1-109">Cloud-based emulators enable you to automate unit tests for your site across different platforms.</span></span>  
+*   <span data-ttu-id="55afb-107">特定のデバイスを持っていない場合、または何らかの点でスポットチェックを実行する場合は、ブラウザー内でデバイスをエミュレートすることをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="55afb-107">When you do not have a particular device, or want to do a spot check on something, the best option is to emulate the device right inside your browser.</span></span>  
+*   <span data-ttu-id="55afb-108">デバイスエミュレーターとシミュレータを使用すると、開発者向けサイトをワークステーションのさまざまなデバイスで模倣できます。</span><span class="sxs-lookup"><span data-stu-id="55afb-108">Device emulators and simulators enable you to mimic your development site on a range of devices from your workstation.</span></span>  
+*   <span data-ttu-id="55afb-109">クラウドベースのエミュレーターを使用すると、さまざまなプラットフォームでサイトの単体テストを自動化できます。</span><span class="sxs-lookup"><span data-stu-id="55afb-109">Cloud-based emulators enable you to automate unit tests for your site across different platforms.</span></span>  
 
-## <span data-ttu-id="758a1-110">ブラウザーエミュレーター</span><span class="sxs-lookup"><span data-stu-id="758a1-110">Browser emulators</span></span>  
+## <span data-ttu-id="55afb-110">ブラウザーエミュレーター</span><span class="sxs-lookup"><span data-stu-id="55afb-110">Browser emulators</span></span>  
 
-<span data-ttu-id="758a1-111">ブラウザーエミュレーターは、サイトの応答性をテストするのに適していますが、API、CSS のサポート、モバイルブラウザーで表示される特定の動作の違いをエミュレートすることはありません。</span><span class="sxs-lookup"><span data-stu-id="758a1-111">Browser emulators are great for testing the responsiveness of a site, but each does not emulate differences in API, CSS support, and certain behaviors that you see on a mobile browser.</span></span>  <span data-ttu-id="758a1-112">実際のデバイスで実行されているブラウザーでサイトをテストして、すべてが予期したとおりに動作することを確認します。</span><span class="sxs-lookup"><span data-stu-id="758a1-112">Test your site on browsers running on real devices to be certain everything behaves as expected.</span></span>  
+<span data-ttu-id="55afb-111">ブラウザーエミュレーターは、サイトの応答性をテストするのに適していますが、API、CSS のサポート、モバイルブラウザーで表示される特定の動作の違いをエミュレートすることはありません。</span><span class="sxs-lookup"><span data-stu-id="55afb-111">Browser emulators are great for testing the responsiveness of a site, but each does not emulate differences in API, CSS support, and certain behaviors that you see on a mobile browser.</span></span>  <span data-ttu-id="55afb-112">実際のデバイスで実行されているブラウザーでサイトをテストして、すべてが予期したとおりに動作することを確認します。</span><span class="sxs-lookup"><span data-stu-id="55afb-112">Test your site on browsers running on real devices to be certain everything behaves as expected.</span></span>  
 
-### <span data-ttu-id="758a1-113">Firefox の応答性の高いデザインビュー</span><span class="sxs-lookup"><span data-stu-id="758a1-113">Firefox Responsive Design View</span></span>  
+### <span data-ttu-id="55afb-113">Firefox の応答性の高いデザインビュー</span><span class="sxs-lookup"><span data-stu-id="55afb-113">Firefox Responsive Design View</span></span>  
 
-<span data-ttu-id="758a1-114">Firefox には、特定のデバイスについて検討することをお勧めする、[応答性の高いデザインビュー][MDNResponsiveDesignMode]が用意されています。また、端をドラッグすることで、一般的な画面サイズまたは独自のサイズでデザインがどのように変化するかを調べることができます。</span><span class="sxs-lookup"><span data-stu-id="758a1-114">Firefox has a [responsive design view][MDNResponsiveDesignMode] that encourages you to stop thinking in terms of specific devices and instead explore how your design changes at common screen sizes or your own size by dragging the edges.</span></span>  
+<span data-ttu-id="55afb-114">Firefox には、特定のデバイスについて検討することをお勧めする、 [応答性の高いデザインビュー][MDNResponsiveDesignMode] が用意されています。また、端をドラッグすることで、一般的な画面サイズまたは独自のサイズでデザインがどのように変化するかを調べることができます。</span><span class="sxs-lookup"><span data-stu-id="55afb-114">Firefox has a [responsive design view][MDNResponsiveDesignMode] that encourages you to stop thinking in terms of specific devices and instead explore how your design changes at common screen sizes or your own size by dragging the edges.</span></span>  
 
-### <span data-ttu-id="758a1-115">EdgeHTML エミュレーション</span><span class="sxs-lookup"><span data-stu-id="758a1-115">EdgeHTML Emulation</span></span>  
+### <span data-ttu-id="55afb-115">EdgeHTML エミュレーション</span><span class="sxs-lookup"><span data-stu-id="55afb-115">EdgeHTML emulation</span></span>  
 
-<span data-ttu-id="758a1-116">Windows Phone をエミュレートするには、Microsoft Edge \ (EdgeHTML \)[ビルトインエミュレーション][DevToolsEdgeHtmlEmulation]を使用します。</span><span class="sxs-lookup"><span data-stu-id="758a1-116">To emulate Windows Phones, use the Microsoft Edge \(EdgeHTML\) [built-in emulation][DevToolsEdgeHtmlEmulation].</span></span>  
+<span data-ttu-id="55afb-116">Windows Phone をエミュレートするには、Microsoft Edge \ (EdgeHTML \) [ビルトインエミュレーション][DevToolsEdgeHtmlEmulation]を使用します。</span><span class="sxs-lookup"><span data-stu-id="55afb-116">To emulate Windows Phones, use the Microsoft Edge \(EdgeHTML\) [built-in emulation][DevToolsEdgeHtmlEmulation].</span></span>  
 
-<span data-ttu-id="758a1-117">Internet Explorer の以前のバージョンでページがどのように表示されるかをシミュレートするには、 [IE 11 エミュレーション][Ie11DevToolsEmulation]を使用します。</span><span class="sxs-lookup"><span data-stu-id="758a1-117">Use [IE 11 Emulation][Ie11DevToolsEmulation] to simulate how your page may look in older versions of Internet Explorer.</span></span>  
+<span data-ttu-id="55afb-117">Internet Explorer の以前のバージョンでページがどのように表示されるかをシミュレートするには、 [IE 11 エミュレーション][Ie11DevToolsEmulation] を使用します。</span><span class="sxs-lookup"><span data-stu-id="55afb-117">Use [IE 11 Emulation][Ie11DevToolsEmulation] to simulate how your page may look in older versions of Internet Explorer.</span></span>  
 
-## <span data-ttu-id="758a1-118">デバイスエミュレーターとシミュレータ</span><span class="sxs-lookup"><span data-stu-id="758a1-118">Device emulators and simulators</span></span>  
+## <span data-ttu-id="55afb-118">デバイスエミュレーターとシミュレータ</span><span class="sxs-lookup"><span data-stu-id="55afb-118">Device emulators and simulators</span></span>  
 
-<span data-ttu-id="758a1-119">デバイスシミュレータとエミュレーターは、ブラウザー環境だけでなく、デバイス全体をシミュレートします。</span><span class="sxs-lookup"><span data-stu-id="758a1-119">Device simulators and emulators simulate not just the browser environment but the entire device.</span></span>  <span data-ttu-id="758a1-120">各機能は、OS の統合を必要とするものをテストするのに役立ちます。たとえば、仮想キーボードを使用したフォーム入力です。</span><span class="sxs-lookup"><span data-stu-id="758a1-120">Each are useful to test things that require OS integration, for example form input with virtual keyboards.</span></span>  
+<span data-ttu-id="55afb-119">デバイスシミュレータとエミュレーターは、ブラウザー環境だけでなく、デバイス全体をシミュレートします。</span><span class="sxs-lookup"><span data-stu-id="55afb-119">Device simulators and emulators simulate not just the browser environment but the entire device.</span></span>  <span data-ttu-id="55afb-120">各機能は、OS の統合を必要とするものをテストするのに役立ちます。たとえば、仮想キーボードを使用したフォーム入力です。</span><span class="sxs-lookup"><span data-stu-id="55afb-120">Each are useful to test things that require OS integration, for example form input with virtual keyboards.</span></span>  
 
-### <span data-ttu-id="758a1-121">Android エミュレーター</span><span class="sxs-lookup"><span data-stu-id="758a1-121">Android Emulator</span></span>  
+### <span data-ttu-id="55afb-121">Android エミュレーター</span><span class="sxs-lookup"><span data-stu-id="55afb-121">Android emulator</span></span>  
 
-<!--
-> ##### Figure old 1  
-> Stock Browser in Android Emulator  
-> ![Stock Browser in Android Emulator][ImageAndroidEmulatorStockBrowser]  
--->
+<!--  
+:::image type="complex" source="../media/device-mode-android-emulator-stock-browser.msft.png" alt-text="Stock Browser in Android Emulator" lightbox="../media/device-mode-android-emulator-stock-browser.msft.png":::
+   Stock Browser in Android Emulator  
+:::image-end:::  
+-->  
 
-<span data-ttu-id="758a1-122">現時点では、Android エミュレーターに Microsoft Edge をインストールする方法はありません。</span><span class="sxs-lookup"><span data-stu-id="758a1-122">At the moment, there is no way to install Microsoft Edge on an Android emulator.</span></span>  <span data-ttu-id="758a1-123">ただし、Android ブラウザー、Chromium Content Shell、Android 用 Firefox は、このガイドの後半で確認することができます。</span><span class="sxs-lookup"><span data-stu-id="758a1-123">However, you may use the Android Browser, the Chromium Content Shell, and Firefox for Android which we review later in this guide.</span></span>  <span data-ttu-id="758a1-124">Chromium Content Shell は Microsoft Edge と同じ Chromium レンダリングエンジンを実行しますが、ブラウザー固有の機能はありません。</span><span class="sxs-lookup"><span data-stu-id="758a1-124">Chromium Content Shell runs the same Chromium rendering engine as Microsoft Edge, but comes without any of the browser specific features.</span></span>  
+<span data-ttu-id="55afb-122">現時点では、Android エミュレーターに Microsoft Edge をインストールする方法はありません。</span><span class="sxs-lookup"><span data-stu-id="55afb-122">At the moment, there is no way to install Microsoft Edge on an Android emulator.</span></span>  <span data-ttu-id="55afb-123">ただし、Android ブラウザー、Chromium Content Shell、Android 用 Firefox は、このガイドの後半で確認することができます。</span><span class="sxs-lookup"><span data-stu-id="55afb-123">However, you may use the Android Browser, the Chromium Content Shell, and Firefox for Android which we review later in this guide.</span></span>  <span data-ttu-id="55afb-124">Chromium Content Shell は Microsoft Edge と同じ Chromium レンダリングエンジンを実行しますが、ブラウザー固有の機能はありません。</span><span class="sxs-lookup"><span data-stu-id="55afb-124">Chromium Content Shell runs the same Chromium rendering engine as Microsoft Edge, but comes without any of the browser specific features.</span></span>  
 
-<span data-ttu-id="758a1-125">Android エミュレーターには、android [Studio][AndroidStudioDownload]の一部としてダウンロードする必要がある android SDK が付属しています。</span><span class="sxs-lookup"><span data-stu-id="758a1-125">The Android emulator comes with the Android SDK which you need to download as part of [Android Studio][AndroidStudioDownload].</span></span>  <span data-ttu-id="758a1-126">次に、指示に従って[仮想デバイス][AndroidStudioCreateManageVirtualDevices]をセットアップし、[エミュレーターを開始][AndroidStudioRunAppsAndroidEmulator]します。</span><span class="sxs-lookup"><span data-stu-id="758a1-126">Then follow the instructions to [set up a virtual device][AndroidStudioCreateManageVirtualDevices] and [start the emulator][AndroidStudioRunAppsAndroidEmulator].</span></span>  
-<span data-ttu-id="758a1-127">エミュレーターが起動したら、ブラウザーアイコンをクリックして、Android 用の古いストックブラウザーでサイトをテストします。</span><span class="sxs-lookup"><span data-stu-id="758a1-127">Once your emulator is booted, click on the Browser icon, and test your site on the old Stock Browser for Android.</span></span>  
+<span data-ttu-id="55afb-125">Android エミュレーターには、android [Studio][AndroidStudioDownload]の一部としてダウンロードする必要がある android SDK が付属しています。</span><span class="sxs-lookup"><span data-stu-id="55afb-125">The Android emulator comes with the Android SDK which you need to download as part of [Android Studio][AndroidStudioDownload].</span></span>  <span data-ttu-id="55afb-126">次に、指示に従って [仮想デバイス][AndroidStudioCreateManageVirtualDevices] をセットアップし、 [エミュレーターを開始][AndroidStudioRunAppsAndroidEmulator]します。</span><span class="sxs-lookup"><span data-stu-id="55afb-126">Then follow the instructions to [set up a virtual device][AndroidStudioCreateManageVirtualDevices] and [start the emulator][AndroidStudioRunAppsAndroidEmulator].</span></span>  
+<span data-ttu-id="55afb-127">エミュレーターが起動したら、ブラウザーアイコンをクリックして、Android 用の古いストックブラウザーでサイトをテストします。</span><span class="sxs-lookup"><span data-stu-id="55afb-127">Once your emulator is booted, click on the Browser icon, and test your site on the old Stock Browser for Android.</span></span>  
 
-#### <span data-ttu-id="758a1-128">Android での Chromium コンテンツシェル</span><span class="sxs-lookup"><span data-stu-id="758a1-128">Chromium Content Shell on Android</span></span>  
+#### <span data-ttu-id="55afb-128">Android での Chromium コンテンツシェル</span><span class="sxs-lookup"><span data-stu-id="55afb-128">Chromium content shell on Android</span></span>  
 
-<!--
-> ##### Figure old 2  
-> Android Emulator Content Shell  
-> ![Android Emulator Content Shell][ImageAndroidEmulatorContentShell]  
--->
+<!--  
+:::image type="complex" source="../media/device-mode-android-avd-contentshell.msft.png" alt-text="Android Emulator Content Shell" lightbox="../media/device-mode-android-avd-contentshell.msft.png":::
+   Android Emulator Content Shell  
+:::image-end:::  
+-->  
 
-<span data-ttu-id="758a1-129">Android 用の Chromium Content Shell をインストールするには、エミュレーターを実行したまま、コマンドプロンプトで次のコマンドを実行します。</span><span class="sxs-lookup"><span data-stu-id="758a1-129">To install the Chromium Content Shell for Android, leave your emulator running and run the following commands at a command prompt:</span></span>  
+<span data-ttu-id="55afb-129">Android 用の Chromium Content Shell をインストールするには、エミュレーターを実行したままにして、次のコマンドを実行します。</span><span class="sxs-lookup"><span data-stu-id="55afb-129">To install the Chromium Content Shell for Android, leave your emulator running and run the following command.</span></span>  
 
 ```shell
 git clone https://github.com/PaulKinlan/chromium-android-installer.git
@@ -91,67 +91,62 @@ chmod u+x ./chromium-android-installer/*.sh
 ./chromium-android-installer/install-chromeandroid.sh
 ```  
 
-<span data-ttu-id="758a1-130">これで、Chromium Content Shell を使ってサイトをテストできるようになりました。</span><span class="sxs-lookup"><span data-stu-id="758a1-130">Now you are able to test your site with the Chromium Content Shell.</span></span>  
+<span data-ttu-id="55afb-130">これで、Chromium Content Shell を使ってサイトをテストできるようになりました。</span><span class="sxs-lookup"><span data-stu-id="55afb-130">Now you are able to test your site with the Chromium Content Shell.</span></span>  
 
-#### <span data-ttu-id="758a1-131">Android の Firefox</span><span class="sxs-lookup"><span data-stu-id="758a1-131">Firefox on Android</span></span>  
+#### <span data-ttu-id="55afb-131">Android の Firefox</span><span class="sxs-lookup"><span data-stu-id="55afb-131">Firefox on Android</span></span>  
 
-<!--
-> ##### Figure old 3  
-> Firefox Icon on Android Emulator  
-> ![Firefox Icon on Android Emulator][ImageAndroidEmulatorFirefoxBrowser]  
--->
+<!--  
+:::image type="complex" source="../media/device-mode-ff-on-android-emulator.msft.png" alt-text="Firefox Icon on Android Emulator" lightbox="../media/device-mode-ff-on-android-emulator.msft.png":::
+   Firefox Icon on Android Emulator  
+:::image-end:::  
+-->  
 
-<span data-ttu-id="758a1-132">Chromium Content Shell と同様に、Firefox をエミュレーターにインストールするための APK を取得できます。</span><span class="sxs-lookup"><span data-stu-id="758a1-132">Similar to the Chromium Content Shell, you are able to get an APK to install Firefox onto the emulator.</span></span>  
+<span data-ttu-id="55afb-132">Chromium Content Shell と同様に、Firefox をエミュレーターにインストールするための APK を取得できます。</span><span class="sxs-lookup"><span data-stu-id="55afb-132">Similar to the Chromium Content Shell, you are able to get an APK to install Firefox onto the emulator.</span></span>  
 
-<span data-ttu-id="758a1-133">[適切な apk ファイルをダウンロード][MozillaFirefoxDownload]します。</span><span class="sxs-lookup"><span data-stu-id="758a1-133">[Download the correct .apk file][MozillaFirefoxDownload].</span></span>  
+<span data-ttu-id="55afb-133">[適切な apk ファイルをダウンロード][MozillaFirefoxDownload]します。</span><span class="sxs-lookup"><span data-stu-id="55afb-133">[Download the correct .apk file][MozillaFirefoxDownload].</span></span>  
 
-<span data-ttu-id="758a1-134">ここでは、次のコマンドを使用して、開いているエミュレーターまたは接続されている Android デバイスにファイルをインストールできます。</span><span class="sxs-lookup"><span data-stu-id="758a1-134">From here, you are able to install the file onto an open emulator or connected Android device with the following command:</span></span>  
+<span data-ttu-id="55afb-134">ファイルを開いているエミュレーターまたは接続されている Android デバイスにインストールするには、次のコマンドを実行します。</span><span class="sxs-lookup"><span data-stu-id="55afb-134">To install the file onto an open emulator or connected Android device, run the following command.</span></span>  
 
 ```shell
 adb install <path_to_APK>/fennec-XX.X.XX.android-arm.apk
 ```  
 
-### <span data-ttu-id="758a1-135">iOS シミュレータ</span><span class="sxs-lookup"><span data-stu-id="758a1-135">iOS Simulator</span></span>  
+### <span data-ttu-id="55afb-135">iOS シミュレータ</span><span class="sxs-lookup"><span data-stu-id="55afb-135">iOS simulator</span></span>  
 
-<span data-ttu-id="758a1-136">IOS シミュレータ for Mac OS X には Xcode が付属しています。このアプリは、 [App Store からインストール][MacAppStoreXcode]します。</span><span class="sxs-lookup"><span data-stu-id="758a1-136">The iOS simulator for Mac OS X comes with Xcode, which you [install from the App Store][MacAppStoreXcode].</span></span>  
+<span data-ttu-id="55afb-136">IOS シミュレータ for Mac OS X には Xcode が付属しています。このアプリは、 [App Store からインストール][MacAppStoreXcode]します。</span><span class="sxs-lookup"><span data-stu-id="55afb-136">The iOS simulator for Mac OS X comes with Xcode, which you [install from the App Store][MacAppStoreXcode].</span></span>  
 
-<span data-ttu-id="758a1-137">完了したら、 [Apple 開発者向けドキュメント][AppleSimulatorHelp]でシミュレータを操作する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="758a1-137">When you are done, learn how to work with the simulator through [Apple Developer documentation][AppleSimulatorHelp].</span></span>  
+<span data-ttu-id="55afb-137">完了したら、 [Apple 開発者向けドキュメント][AppleSimulatorHelp]でシミュレータを操作する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="55afb-137">When you are done, learn how to work with the simulator through [Apple Developer documentation][AppleSimulatorHelp].</span></span>  
 
 > [!NOTE]
-> <span data-ttu-id="758a1-138">IOS シミュレータを使用するたびに Xcode を開く必要がないようにするには、そのまま開き、dock の iOS シミュレータアイコンを右クリックして、[ **dock に保持**] を選びます。</span><span class="sxs-lookup"><span data-stu-id="758a1-138">To avoid having to open Xcode every time you want to use the iOS Simulator, open it, then right-click the iOS Simulator icon in your dock and select **Keep in Dock**.</span></span>  <span data-ttu-id="758a1-139">次に、必要なときにこのアイコンをクリックするだけです。</span><span class="sxs-lookup"><span data-stu-id="758a1-139">Now just click this icon whenever you need it.</span></span>  
+> <span data-ttu-id="55afb-138">IOS シミュレータを使用するたびに Xcode を開く必要がないようにするには、そのまま開き、dock の iOS シミュレータアイコンを右クリックして、[ **dock に保持**] を選びます。</span><span class="sxs-lookup"><span data-stu-id="55afb-138">To avoid having to open Xcode every time you want to use the iOS Simulator, open it, then right-click the iOS Simulator icon in your dock and select **Keep in Dock**.</span></span>  <span data-ttu-id="55afb-139">次に、必要なときにこのアイコンをクリックするだけです。</span><span class="sxs-lookup"><span data-stu-id="55afb-139">Now just click this icon whenever you need it.</span></span>  
 
-###  <span data-ttu-id="758a1-140">Microsoft Edge (EdgeHTML)</span><span class="sxs-lookup"><span data-stu-id="758a1-140">Microsoft Edge (EdgeHTML)</span></span>  
+###  <span data-ttu-id="55afb-140">Microsoft Edge (EdgeHTML)</span><span class="sxs-lookup"><span data-stu-id="55afb-140">Microsoft Edge (EdgeHTML)</span></span>  
 
-> ##### <span data-ttu-id="758a1-141">図 1</span><span class="sxs-lookup"><span data-stu-id="758a1-141">Figure 1</span></span>  
-> <span data-ttu-id="758a1-142">モダン IE VM</span><span class="sxs-lookup"><span data-stu-id="758a1-142">Modern IE VM</span></span>  
-> <span data-ttu-id="758a1-143">![モダン IE VM][ImageVMModernIe]</span><span class="sxs-lookup"><span data-stu-id="758a1-143">![Modern IE VM][ImageVMModernIe]</span></span>  
+:::image type="complex" source="../media/device-mode-modern-ie-vm.msft.png" alt-text="モダン IE VM" lightbox="../media/device-mode-modern-ie-vm.msft.png":::
+   <span data-ttu-id="55afb-142">モダン IE VM</span><span class="sxs-lookup"><span data-stu-id="55afb-142">Modern IE VM</span></span>  
+:::image-end:::  
 
-<span data-ttu-id="758a1-144">Microsoft Edge \ (EdgeHTML \) 仮想マシン \ (Vm \) を使用すると、VirtualBox \ (または VMWare \) を介してコンピューター上のさまざまなバージョンの EdgeHTML と IE にアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="758a1-144">Microsoft Edge \(EdgeHTML\) Virtual Machines \(VMs\) enable you to access different versions of EdgeHTML and IE on your computer via VirtualBox \(or VMWare\).</span></span>  <span data-ttu-id="758a1-145">[ダウンロードページで仮想マシン][MicrosoftDeveloperEdgeVms]を選択します。</span><span class="sxs-lookup"><span data-stu-id="758a1-145">Choose a [virtual machine on the download page][MicrosoftDeveloperEdgeVms].</span></span>  
+<span data-ttu-id="55afb-143">Microsoft Edge \ (EdgeHTML \) 仮想マシン \ (Vm \) を使用すると、VirtualBox \ (または VMWare \) を介してコンピューター上のさまざまなバージョンの EdgeHTML と IE にアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="55afb-143">Microsoft Edge \(EdgeHTML\) Virtual Machines \(VMs\) enable you to access different versions of EdgeHTML and IE on your computer via VirtualBox \(or VMWare\).</span></span>  <span data-ttu-id="55afb-144">[ダウンロードページで仮想マシン][MicrosoftDeveloperEdgeVms]を選択します。</span><span class="sxs-lookup"><span data-stu-id="55afb-144">Choose a [virtual machine on the download page][MicrosoftDeveloperEdgeVms].</span></span>  
 
-## <span data-ttu-id="758a1-146">クラウドベースのエミュレーターとシミュレータ</span><span class="sxs-lookup"><span data-stu-id="758a1-146">Cloud-based emulators and simulators</span></span>  
+## <span data-ttu-id="55afb-145">クラウドベースのエミュレーターとシミュレータ</span><span class="sxs-lookup"><span data-stu-id="55afb-145">Cloud-based emulators and simulators</span></span>  
 
-<span data-ttu-id="758a1-147">エミュレーターを使うことができず、実際のデバイスにアクセスできない場合は、クラウドベースのエミュレーターを使用するのが最適です。</span><span class="sxs-lookup"><span data-stu-id="758a1-147">If you are not able to use the emulators and do not have access to real devices, then cloud-based emulators are the next best thing.</span></span>  <span data-ttu-id="758a1-148">実際のデバイスとローカルエミュレーターによるクラウドベースのエミュレーターの大きな利点は、さまざまなプラットフォームでサイトの単体テストを自動化できることです。</span><span class="sxs-lookup"><span data-stu-id="758a1-148">A big advantage of cloud-based emulators over real devices and local emulators is that you are able to automate unit tests for your site across different platforms.</span></span>  
+<span data-ttu-id="55afb-146">エミュレーターを使うことができず、実際のデバイスにアクセスできない場合は、クラウドベースのエミュレーターを使用するのが最適です。</span><span class="sxs-lookup"><span data-stu-id="55afb-146">If you are not able to use the emulators and do not have access to real devices, then cloud-based emulators are the next best thing.</span></span>  <span data-ttu-id="55afb-147">実際のデバイスとローカルエミュレーターによるクラウドベースのエミュレーターの大きな利点は、さまざまなプラットフォームでサイトの単体テストを自動化できることです。</span><span class="sxs-lookup"><span data-stu-id="55afb-147">A big advantage of cloud-based emulators over real devices and local emulators is that you are able to automate unit tests for your site across different platforms.</span></span>  
 
-*   <span data-ttu-id="758a1-149">[Browserstack (商用)][|::ref1::|]は、手動テストで最も簡単に使用できます。</span><span class="sxs-lookup"><span data-stu-id="758a1-149">[BrowserStack (commercial)][|::ref1::|] is the easiest to use for manual testing.</span></span>  <span data-ttu-id="758a1-150">オペレーティングシステムを選択して、使用しているブラウザーのバージョンとデバイスの種類を選択します。参照する URL を選択すると、対話できるホストされた仮想マシンが回転します。</span><span class="sxs-lookup"><span data-stu-id="758a1-150">You select an operating system, select your browser version and device type, select a URL to browse, and it spins up a hosted virtual machine with which you may interact.</span></span>  <span data-ttu-id="758a1-151">また、同じ画面で複数のエミュレーターを実行できるため、複数のデバイスで同時にアプリの外観をテストすることができます。</span><span class="sxs-lookup"><span data-stu-id="758a1-151">You are able to also run multiple emulators in the same screen, enabling you to test the look and feel of your app across multiple devices at the same time.</span></span>  
-*   <span data-ttu-id="758a1-152">[SauceLabs (商用)][SauceLabs]では、エミュレーターの内部で単体テストを実行できます。この機能は、サイト内でのフローのスクリプトを作成し、後でさまざまなデバイスでその後のビデオ録画を監視する場合に特に便利です。</span><span class="sxs-lookup"><span data-stu-id="758a1-152">[SauceLabs (commercial)][SauceLabs] enables you to run unit tests inside of an emulator, which may be really useful for scripting a flow through your site and watching the video recording of this afterwards on various devices.</span></span>  <span data-ttu-id="758a1-153">サイトで手動テストを行うこともできます。</span><span class="sxs-lookup"><span data-stu-id="758a1-153">You are also able to do manual testing with your site.</span></span>  
-*   <span data-ttu-id="758a1-154">[任意のデバイス (商用)][AppExperience]では、リモートで制御できるエミュレーターである実際のデバイスは使用されません。</span><span class="sxs-lookup"><span data-stu-id="758a1-154">[Device Anywhere (commercial)][AppExperience] does not use emulators but real devices which you are able to control remotely.</span></span>  <span data-ttu-id="758a1-155">これは、特定のデバイスで問題を再現する必要があり、前のガイドに記載されているオプションを使用してもバグを確認できないというイベントで非常に便利です。</span><span class="sxs-lookup"><span data-stu-id="758a1-155">This is very useful in the event where you need to reproduce a problem on a specific device and are not able to see the bug using any of the options in the previous guides.</span></span>  
+*   <span data-ttu-id="55afb-148">[Browserstack (商用)][|::ref1::|] は、手動テストで最も簡単に使用できます。</span><span class="sxs-lookup"><span data-stu-id="55afb-148">[BrowserStack (commercial)][|::ref1::|] is the easiest to use for manual testing.</span></span>  <span data-ttu-id="55afb-149">オペレーティングシステムを選択して、使用しているブラウザーのバージョンとデバイスの種類を選択します。参照する URL を選択すると、対話できるホストされた仮想マシンが回転します。</span><span class="sxs-lookup"><span data-stu-id="55afb-149">You select an operating system, select your browser version and device type, select a URL to browse, and it spins up a hosted virtual machine with which you may interact.</span></span>  <span data-ttu-id="55afb-150">また、同じ画面で複数のエミュレーターを実行できるため、複数のデバイスで同時にアプリの外観をテストすることができます。</span><span class="sxs-lookup"><span data-stu-id="55afb-150">You are able to also run multiple emulators in the same screen, enabling you to test the look and feel of your app across multiple devices at the same time.</span></span>  
+*   <span data-ttu-id="55afb-151">[SauceLabs (商用)][SauceLabs] では、エミュレーターの内部で単体テストを実行できます。この機能は、サイト内でのフローのスクリプトを作成し、後でさまざまなデバイスでその後のビデオ録画を監視する場合に特に便利です。</span><span class="sxs-lookup"><span data-stu-id="55afb-151">[SauceLabs (commercial)][SauceLabs] enables you to run unit tests inside of an emulator, which may be really useful for scripting a flow through your site and watching the video recording of this afterwards on various devices.</span></span>  <span data-ttu-id="55afb-152">サイトで手動テストを行うこともできます。</span><span class="sxs-lookup"><span data-stu-id="55afb-152">You are also able to do manual testing with your site.</span></span>  
+*   <span data-ttu-id="55afb-153">[任意のデバイス (商用)][AppExperience] では、リモートで制御できるエミュレーターである実際のデバイスは使用されません。</span><span class="sxs-lookup"><span data-stu-id="55afb-153">[Device Anywhere (commercial)][AppExperience] does not use emulators but real devices which you are able to control remotely.</span></span>  <span data-ttu-id="55afb-154">これは、特定のデバイスで問題を再現する必要があり、前のガイドに記載されているオプションを使用してもバグを確認できないというイベントで非常に便利です。</span><span class="sxs-lookup"><span data-stu-id="55afb-154">This is very useful in the event where you need to reproduce a problem on a specific device and are not able to see the bug using any of the options in the previous guides.</span></span>  
 
+<!--  
  
 
 
-
-<!-- image links -->  
-
-<!--[ImageAndroidEmulatorStockBrowser]: /microsoft-edge/devtools-guide-chromium/media/device-mode-android-emulator-stock-browser.msft.png "Figure old 1: Stock Browser in Android Emulator"  -->  
-<!--[ImageAndroidEmulatorContentShell]: /microsoft-edge/devtools-guide-chromium/media/device-mode-android-avd-contentshell.msft.png "Figure old 2: Android Emulator Content Shell"  -->  
-<!--[ImageAndroidEmulatorFirefoxBrowser]: /microsoft-edge/devtools-guide-chromium/media/device-mode-ff-on-android-emulator.msft.png "Figure old 3: Firefox Icon on Android Emulator"  -->  
-[ImageVMModernIe]:/microsoft-edge/devtools-guide-chromium/media/device-mode-modern-ie-vm.msft.png "図 1: モダン IE VM"  
+-->  
 
 <!-- links -->  
 
-[DevToolsEdgeHtmlEmulation]: /microsoft-edge/devtools-guide/emulation "DevTools (EdgeHTML)-エミュレーション"  
+[DevToolsEdgeHtmlEmulation]: /microsoft-edge/devtools-guide/emulation "DevTools (EdgeHTML)-エミュレーション |Microsoft ドキュメント"  
 
-[Ie11DevToolsEmulation]: /previous-versions/windows/internet-explorer/ie-developer/samples/dn255001(v=vs.85) "ブラウザー、画面サイズ、GPS 位置をエミュレートする"  
+[Ie11DevToolsEmulation]: /previous-versions/windows/internet-explorer/ie-developer/samples/dn255001(v=vs.85) "ブラウザー、画面サイズ、GPS 位置をエミュレートするMicrosoft ドキュメント"  
 
 [MicrosoftDeveloperEdgeVms]: https://developer.microsoft.com/microsoft-edge/tools/vms "仮想マシンをダウンロードする"  
 
@@ -168,11 +163,11 @@ adb install <path_to_APK>/fennec-XX.X.XX.android-arm.apk
 [SauceLabs]: https://saucelabs.com "ソースラボ"  
 
 > [!NOTE]
-> <span data-ttu-id="758a1-170">このページの一部は、 [Google によっ][GoogleSitePolicies]て作成および共有され、[クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。</span><span class="sxs-lookup"><span data-stu-id="758a1-170">Portions of this page are modifications based on work created and [shared by Google][GoogleSitePolicies] and used according to terms described in the [Creative Commons Attribution 4.0 International License][CCA4IL].</span></span>  
-> <span data-ttu-id="758a1-171">元のページは[ここ](https://developers.google.com/web/tools/chrome-devtools/device-mode/testing-other-browsers)にあり、 [Meggin Kearney][MegginKearney] \ (Tech Writer \) と[Paul Bakaus][PaulBakaus] \ (開いている Web 開発者が Google で支持しています) によって作成されています。ツール、パフォーマンス、アニメーション、UX \)。</span><span class="sxs-lookup"><span data-stu-id="758a1-171">The original page is found [here](https://developers.google.com/web/tools/chrome-devtools/device-mode/testing-other-browsers) and is authored by [Meggin Kearney][MegginKearney] \(Tech Writer\) and [Paul Bakaus][PaulBakaus] \(Open Web Developer Advocate at Google | Tools, Performance, Animation, UX\).</span></span>  
+> <span data-ttu-id="55afb-168">このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。</span><span class="sxs-lookup"><span data-stu-id="55afb-168">Portions of this page are modifications based on work created and [shared by Google][GoogleSitePolicies] and used according to terms described in the [Creative Commons Attribution 4.0 International License][CCA4IL].</span></span>  
+> <span data-ttu-id="55afb-169">元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/device-mode/testing-other-browsers) にあり、 [Meggin Kearney][MegginKearney] \ (Tech Writer \) と [Paul Bakaus][PaulBakaus] \ (開いている Web 開発者が Google で支持しています) によって作成されています。ツール、パフォーマンス、アニメーション、UX \)。</span><span class="sxs-lookup"><span data-stu-id="55afb-169">The original page is found [here](https://developers.google.com/web/tools/chrome-devtools/device-mode/testing-other-browsers) and is authored by [Meggin Kearney][MegginKearney] \(Tech Writer\) and [Paul Bakaus][PaulBakaus] \(Open Web Developer Advocate at Google | Tools, Performance, Animation, UX\).</span></span>  
 
 [![クリエイティブコモンズライセンス][CCby4Image]][CCA4IL]  
-<span data-ttu-id="758a1-173">この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。</span><span class="sxs-lookup"><span data-stu-id="758a1-173">This work is licensed under a [Creative Commons Attribution 4.0 International License][CCA4IL].</span></span>  
+<span data-ttu-id="55afb-171">この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。</span><span class="sxs-lookup"><span data-stu-id="55afb-171">This work is licensed under a [Creative Commons Attribution 4.0 International License][CCA4IL].</span></span>  
 
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
