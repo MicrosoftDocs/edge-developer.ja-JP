@@ -6,12 +6,12 @@ ms.date: 08/28/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 0ffea8f515a2d4ba0fa16b447a7d204c335dc7bb
-ms.sourcegitcommit: 1251c555c6b4db8ef8187ed94d8832fdb89d03b8
+ms.openlocfilehash: 0dedfcd8d00035ed1c4c02ef8a2ec0f1643d0687
+ms.sourcegitcommit: 2fa65cca74c5214601900579c0ce9f946ad8a27e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10984996"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "10991165"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -27,47 +27,39 @@ ms.locfileid: "10984996"
    See the License for the specific language governing permissions and
    limitations under the License.  -->
 
+# <span data-ttu-id="01575-103">Microsoft Edge DevTools からユーザーエージェント文字列を上書きする</span><span class="sxs-lookup"><span data-stu-id="01575-103">Override the user agent string from Microsoft Edge DevTools</span></span>  
 
+<span data-ttu-id="01575-104">Microsoft Edge DevTools から [ユーザーエージェント][MDNUserAgent] 文字列を上書きするには、次の操作を行います。</span><span class="sxs-lookup"><span data-stu-id="01575-104">To override the [user agent][MDNUserAgent] string from Microsoft Edge DevTools:</span></span>  
 
-
-
-# <span data-ttu-id="37be0-103">Microsoft Edge DevTools からユーザーエージェント文字列を上書きする</span><span class="sxs-lookup"><span data-stu-id="37be0-103">Override the user agent string from Microsoft Edge DevTools</span></span>   
-
-
-
-<span data-ttu-id="37be0-104">Microsoft Edge DevTools から [ユーザーエージェント][MDNUserAgent] 文字列を上書きするには、次の操作を行います。</span><span class="sxs-lookup"><span data-stu-id="37be0-104">To override the [user agent][MDNUserAgent] string from Microsoft Edge DevTools:</span></span>  
-
-1.  <span data-ttu-id="37be0-105">`Control` + `Shift` + `P` コマンドメニューを開くには、\ (Windows \) または `Command` + `Shift` + `P` \ **Command Menu**(macOS \) を押します。</span><span class="sxs-lookup"><span data-stu-id="37be0-105">Press `Control`+`Shift`+`P` \(Windows\) or `Command`+`Shift`+`P` \(macOS\) to open the **Command Menu**.</span></span>  
+1.  <span data-ttu-id="01575-105">`Control` + `Shift` + `P` コマンドメニューを開くには、\ (Windows \) または `Command` + `Shift` + `P` \ **Command Menu**(macOS \) を押します。</span><span class="sxs-lookup"><span data-stu-id="01575-105">Press `Control`+`Shift`+`P` \(Windows\) or `Command`+`Shift`+`P` \(macOS\) to open the **Command Menu**.</span></span>  
     
     :::image type="complex" source="../media/device-mode-console-command-menu.msft.png" alt-text="コマンドメニュー" lightbox="../media/device-mode-console-command-menu.msft.png":::
-       <span data-ttu-id="37be0-107">**コマンドメニュー**</span><span class="sxs-lookup"><span data-stu-id="37be0-107">The **Command Menu**</span></span>  
+       <span data-ttu-id="01575-107">**コマンドメニュー**</span><span class="sxs-lookup"><span data-stu-id="01575-107">The **Command Menu**</span></span>  
     :::image-end:::  
     
-1.  <span data-ttu-id="37be0-108">「 `network conditions` **ネットワーク**条件の表示」を選択し、を押して [ネットワークの `Enter` **条件** ] タブを開きます。</span><span class="sxs-lookup"><span data-stu-id="37be0-108">Type `network conditions`, select **Show Network conditions**, and press `Enter` to open the **Network conditions** tab.</span></span>  
-1.  <span data-ttu-id="37be0-109">[ **ユーザーエージェント** ] セクションで、 **[自動的に選択** する] チェックボックスをオフにします。</span><span class="sxs-lookup"><span data-stu-id="37be0-109">In the **User agent** section, disable the **Select automatically** checkbox.</span></span>  
+1.  <span data-ttu-id="01575-108">「 `network conditions` **ネットワーク**条件の表示」を選択し、を押して [ネットワークの `Enter` **条件** ] タブを開きます。</span><span class="sxs-lookup"><span data-stu-id="01575-108">Type `network conditions`, select **Show Network conditions**, and press `Enter` to open the **Network conditions** tab.</span></span>  
+1.  <span data-ttu-id="01575-109">[ **ユーザーエージェント** ] セクションで、 **[自動的に選択** する] チェックボックスをオフにします。</span><span class="sxs-lookup"><span data-stu-id="01575-109">In the **User agent** section, disable the **Select automatically** checkbox.</span></span>  
     
     :::image type="complex" source="../media/device-mode-console-network-conditions-user-agent-select-automatically-deselected.msft.png" alt-text="自動選択を無効にする" lightbox="../media/device-mode-console-network-conditions-user-agent-select-automatically-deselected.msft.png":::
-       <span data-ttu-id="37be0-111">**自動選択**を無効にする</span><span class="sxs-lookup"><span data-stu-id="37be0-111">Disable **Select automatically**</span></span>  
+       <span data-ttu-id="01575-111">**自動選択**を無効にする</span><span class="sxs-lookup"><span data-stu-id="01575-111">Disable **Select automatically**</span></span>  
     :::image-end:::  
     
-1.  <span data-ttu-id="37be0-112">リストからユーザーエージェント文字列を選択するか、独自のカスタム文字列を入力します。</span><span class="sxs-lookup"><span data-stu-id="37be0-112">Select a user agent string from the list, or enter your own custom string.</span></span>  
-    
-<!--  
-## Feedback   
+1.  <span data-ttu-id="01575-112">リストからユーザーエージェント文字列を選択するか、独自のカスタム文字列を入力します。</span><span class="sxs-lookup"><span data-stu-id="01575-112">Select a user agent string from the list, or enter your own custom string.</span></span>  
 
+## <span data-ttu-id="01575-113">Microsoft Edge DevTools チームと連絡を取り合う</span><span class="sxs-lookup"><span data-stu-id="01575-113">Getting in touch with the Microsoft Edge DevTools team</span></span>  
 
--->  
+[!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
 <!-- links -->  
 
 [MDNUserAgent]: https://developer.mozilla.org/docs/Glossary/User_agent "ユーザーエージェント |MDN"  
 
 > [!NOTE]
-> <span data-ttu-id="37be0-114">このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。</span><span class="sxs-lookup"><span data-stu-id="37be0-114">Portions of this page are modifications based on work created and [shared by Google][GoogleSitePolicies] and used according to terms described in the [Creative Commons Attribution 4.0 International License][CCA4IL].</span></span>  
-> <span data-ttu-id="37be0-115">元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/device-mode/override-user-agent) にあり、 [Kayce Basques][KayceBasques] テクニカルライター、Chrome Devtools \ & Lighthouse \) で作成されています。</span><span class="sxs-lookup"><span data-stu-id="37be0-115">The original page is found [here](https://developers.google.com/web/tools/chrome-devtools/device-mode/override-user-agent) and is authored by [Kayce Basques][KayceBasques] \(Technical Writer, Chrome DevTools \& Lighthouse\).</span></span>  
+> <span data-ttu-id="01575-115">このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。</span><span class="sxs-lookup"><span data-stu-id="01575-115">Portions of this page are modifications based on work created and [shared by Google][GoogleSitePolicies] and used according to terms described in the [Creative Commons Attribution 4.0 International License][CCA4IL].</span></span>  
+> <span data-ttu-id="01575-116">元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/device-mode/override-user-agent) にあり、 [Kayce Basques][KayceBasques] テクニカルライター、Chrome Devtools \ & Lighthouse \) で作成されています。</span><span class="sxs-lookup"><span data-stu-id="01575-116">The original page is found [here](https://developers.google.com/web/tools/chrome-devtools/device-mode/override-user-agent) and is authored by [Kayce Basques][KayceBasques] \(Technical Writer, Chrome DevTools \& Lighthouse\).</span></span>  
 
 [![クリエイティブコモンズライセンス][CCby4Image]][CCA4IL]  
-<span data-ttu-id="37be0-117">この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。</span><span class="sxs-lookup"><span data-stu-id="37be0-117">This work is licensed under a [Creative Commons Attribution 4.0 International License][CCA4IL].</span></span>  
+<span data-ttu-id="01575-118">この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。</span><span class="sxs-lookup"><span data-stu-id="01575-118">This work is licensed under a [Creative Commons Attribution 4.0 International License][CCA4IL].</span></span>  
 
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
