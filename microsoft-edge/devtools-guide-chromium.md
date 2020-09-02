@@ -3,17 +3,17 @@ description: Microsoft Edge (Chromium) 開発者ツールについて理解す�
 title: Microsoft Edge (Chromium) 開発者ツール
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 08/14/2020
+ms.date: 09/01/2020
 ms.topic: article
 ms.prod: microsoft-edge
 ms.technology: devtools
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: cb51e16083e4798478817910e54c571721d094f8
-ms.sourcegitcommit: 054ad92f0b8f9a15da1e3aed32e8f4379b10860f
+ms.openlocfilehash: c1168e25c99302a9d195c756c6049881b5dfe91f
+ms.sourcegitcommit: 2fa65cca74c5214601900579c0ce9f946ad8a27e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "10931225"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "10991178"
 ---
 # Microsoft Edge (Chromium) 開発者ツール  
 
@@ -133,15 +133,9 @@ Web サイトやアプリの構築時に発生する問題の診断とデバッ�
 
 ## Microsoft Edge DevTools チームと連絡を取り合う  
 
-フィードバックを送信してください。 Microsoft Edge チームは、Microsoft Edge DevTools の改善に進みます。  Devtools の**フィードバック**アイコンを選択するか、または `Alt` + `Shift` + `I` (macOS の場合は) Windows を押して、 `Option` + `Shift` + `I` devtools のフィードバックまたは機能のリクエストを入力します。  
-
-:::image type="complex" source="./devtools-guide-chromium/media/devtools-feedback.png" alt-text="Microsoft Edge についてフィードバックを送信する":::
-   Microsoft Edge についてフィードバックを送信する  
-:::image-end:::  
+[!INCLUDE [contact DevTools team note](./devtools-guide-chromium/includes/contact-devtools-team-note.md)]  
 
 [DevTools の最新機能][DevtoolsGuideChromiumWhatsNewIndex]をプレビューする場合は、夜間にビルドされた[Microsoft Edge カナリア][MicrosoftedgeinsiderDownload]をダウンロードしてください。  
-
-<!-- image links -->  
 
 <!-- links -->  
 

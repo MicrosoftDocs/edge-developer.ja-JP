@@ -6,12 +6,12 @@ ms.date: 08/28/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: d0a7a66a9f061d1a5d98e57269ffbcc0a0afefa4
-ms.sourcegitcommit: 1251c555c6b4db8ef8187ed94d8832fdb89d03b8
+ms.openlocfilehash: 4dd4d5eefd91e07ccd578547210b53c37386178f
+ms.sourcegitcommit: b88d2a55a59db8373ff2bac275d3730977bf19c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10985753"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "10986165"
 ---
 <!-- Copyright Meggin Kearney 
 
@@ -27,13 +27,7 @@ ms.locfileid: "10985753"
    See the License for the specific language governing permissions and
    limitations under the License. -->
 
-
-
-
-
 # タイムラインでの割り当てインストルメンテーションの使い方  
-
-
 
 **タイムライン上で割り当てインストルメンテーション**を使用して、適切なガベージコレクションが実行されていないオブジェクトを探し、引き続きメモリを保持します。  
 
@@ -44,7 +38,7 @@ ms.locfileid: "10985753"
 <!--todo: add profile memory problems (heap profiler) section when available  -->  
 <!--todo: add profile evaluate performance (Performance panel) section when available  -->  
 
-**タイムラインの割り当てインストルメンテーション** は、記録中の (50 ミリ秒間のすべての頻度で) ヒープスナップショットと、記録の最後に1つの最終スナップショットを受け取ります。  
+**タイムライン上の割り当てインストルメンテーションで** は、記録中の (50 ミリ秒ごとに) ヒープスナップショットが定期的に、記録の最後に1つの最終スナップショットが行われます。  
 
 :::image type="complex" source="../media/memory-problems-memory-allocation-timeline-snapshot-highlighted.msft.png" alt-text="タイムライン上の割り当てインストルメンテーション" lightbox="../media/memory-problems-memory-allocation-timeline-snapshot-highlighted.msft.png":::
    **タイムライン上の割り当てインストルメンテーション**  
@@ -55,7 +49,7 @@ ms.locfileid: "10985753"
 
 ## タイムラインでの割り当てインストルメンテーションの有効化  
 
-**タイムラインでの割り当てインストルメンテーションの**使用を開始するには、次の手順に従います。  
+**タイムラインでの割り当てインストルメンテーション**の使用を開始するには、次の操作を実行します。  
 
 1.  [DevTools を開き][DevtoolsOpenIndex]ます。  
 1.  [ **メモリ** ] パネルを開き、[ **タイムライン上の割り当てインストルメンテーション** ] を選択します。  
@@ -86,15 +80,13 @@ ms.locfileid: "10985753"
 
 ヒープ内の特定のオブジェクトをクリックすると、ヒープスナップショットの下の部分に保持ツリーが表示されます。  オブジェクトへの保持パスを調べることで、オブジェクトが収集されなかった理由を理解するために十分な情報を得ることができます。また、不要な参照を削除するために必要なコードの変更を行う必要があります。  
 
-## 関数によるメモリ割り当てを表示する   
+## 関数によるメモリ割り当てを表示する  
 
-JavaScript 関数によるメモリ割り当てを表示できます。  詳細については、「 [関数によるメモリ割り当てを調査][DevtoolsMemoryProblemsIndexInvestigateMemoryAllocationFunction] する」を参照してください。  
+JavaScript 関数によるメモリ割り当てを表示できます。  詳細については、「 [関数によるメモリ割り当ての調査][DevtoolsMemoryProblemsIndexInvestigateMemoryAllocationFunction]」を参照してください。  
 
-<!--
-## Feedback   
+## Microsoft Edge DevTools チームと連絡を取り合う  
 
-
--->  
+[!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
 <!-- links -->  
 

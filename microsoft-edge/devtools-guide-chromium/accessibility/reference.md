@@ -6,12 +6,12 @@ ms.date: 08/28/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 190890b43cff97ae0f379426b68a688534ebda95
-ms.sourcegitcommit: 1251c555c6b4db8ef8187ed94d8832fdb89d03b8
+ms.openlocfilehash: a338e78957d664a4552e5882f1ae7882f0eee89a
+ms.sourcegitcommit: b88d2a55a59db8373ff2bac275d3730977bf19c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10983663"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "10986088"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -27,13 +27,7 @@ ms.locfileid: "10983663"
    See the License for the specific language governing permissions and
    limitations under the License.  -->  
 
-
-
-
-
-# アクセシビリティリファレンス   
-
-
+# アクセシビリティリファレンス  
 
 このページでは、Microsoft Edge DevTools のアクセシビリティ機能の包括的な参照を示します。  これは、次のような web 開発者を対象としています。  
 
@@ -44,7 +38,7 @@ ms.locfileid: "10983663"
 
 スクリーンリーダーなどの支援技術を利用して DevTools を操作する方法については、「 [Microsoft Edge DevTools を支援技術でナビゲート][DevtoolsAccessibilityNavigation] する」を参照してください。  
 
-## Microsoft Edge DevTools のアクセシビリティ機能の概要   
+## Microsoft Edge DevTools のアクセシビリティ機能の概要  
 
 このセクションでは、DevTools が全体的なアクセシビリティツールキットにどのように適合するかについて説明します。  
 
@@ -57,7 +51,7 @@ ms.locfileid: "10983663"
 
 <!--[AccessibilityReview]: /web/fundamentals/accessibility/how-to-review  -->  
 
-## ページのアクセシビリティを監査する   
+## ページのアクセシビリティを監査する  
 
 > [!NOTE]
 > **監査**パネルは、サードパーティの web サイトでホストされているコンテンツへのリンクを提供します。  Microsoft は、これらのサイトのコンテンツおよび収集される可能性のあるデータを管理する責任を負いません。  
@@ -65,8 +59,8 @@ ms.locfileid: "10983663"
 一般的に、監査パネルを使用して、次のことを確認します。  
 
 *   ページには、スクリーンリーダーのマークが正しく設定されています。  
-*   ページ上のテキスト要素には、十分なコントラスト率があります。 「 [カラーピッカーのテキスト要素のコントラスト比](#view-the-contrast-ratio-of-a-text-element-in-the-color-picker)を確認する」もご覧ください。  
-    
+*   ページ上のテキスト要素には、十分なコントラスト率があります。  「 [カラーピッカーのテキスト要素のコントラスト比を表示する](#view-the-contrast-ratio-of-a-text-element-in-the-color-picker)」を参照してください。  
+
 ページを監査するには、次の操作を行います。  
 
 1.  監査する URL に移動します。  
@@ -95,13 +89,13 @@ ms.locfileid: "10983663"
        監査に関するその他の情報  
     :::image-end:::  
     
-1.  [ **詳細情報** ] をクリックして、その監査のドキュメントを表示します。
+1.  [ **詳細情報** ] をクリックして、その監査のドキュメントを表示します。  
     
     :::image type="complex" source="../media/accessibility-web-dev-accessibility-audits-learn-more.msft.png" alt-text="監査のドキュメントを表示する" lightbox="../media/accessibility-web-dev-accessibility-audits-learn-more.msft.png":::
        監査のドキュメントを表示する  
     :::image-end:::  
     
-### 「アックス extension」もご覧ください。   
+### 「アックス extension」もご覧ください。  
 
 **監査**パネルではなく、[アックスの拡張機能][ChromeWebStoreAxe]を使用することをお勧めします。  
 通常、アックス extension は、監査パネルを累乗する基になるエンジンであるため、同じ情報を提供します。  アックス extension にはさまざまな UI があり、監査の方法は少し異なります。  
@@ -111,7 +105,7 @@ ms.locfileid: "10983663"
    アックス extension  
 :::image-end:::  
 
-## [アクセシビリティ] ウィンドウ   
+## [アクセシビリティ] ウィンドウ  
 
 [ **アクセシビリティ** ] ウィンドウは、DOM ノードのアクセシビリティツリー、ARIA 属性、および計算されたアクセシビリティプロパティを表示する場所です。  
 
@@ -119,13 +113,13 @@ ms.locfileid: "10983663"
 
 1.  [ **要素** ] タブをクリックします。  
 1.  **DOM ツリー**で、検査する要素を選択します。  
-1.  [ **アクセシビリティ** ] タブをクリックします。 このタブは、[その他 **] タブの** ![ [その他] タブの下に隠れている可能性があり ][ImageMoreTabsIcon] ます。  
+1.  [ **アクセシビリティ** ] タブをクリックします。 このタブは、[ **その他** のタブ \ ( ![ その他のタブ)] ボタンの背後に隠れている可能性があり ][ImageMoreTabsIcon] ます。  
 
 :::image type="complex" source="../media/accessibility-elements-accessibility.msft.png" alt-text="[アクセシビリティ] ウィンドウで DevTools ホームページの h1 要素を検査する" lightbox="../media/accessibility-elements-accessibility.msft.png":::
    [ `h1` **アクセシビリティ** ] ウィンドウで devtools ホームページの要素を検査する  
 :::image-end:::  
 
-### アクセシビリティツリーの要素の位置を表示する   
+### アクセシビリティツリーの要素の位置を表示する  
 
 [アクセシビリティツリー][MDNAccessibilityTree]は DOM ツリーのサブセットです。  DOM ツリーの要素のみが含まれます。これには、スクリーンリーダーでページのコンテンツを表示するために役立つ、関連する有用な要素が含まれています。  
 
@@ -135,7 +129,7 @@ ms.locfileid: "10983663"
    [ **アクセシビリティツリー** ] セクション  
 :::image-end:::  
 
-### 要素の ARIA 属性を表示する   
+### 要素の ARIA 属性を表示する  
 
 ARIA 属性によって、ページのコンテンツを適切に表すために必要なすべての情報をスクリーンリーダーに確実に含めることができます。  
 
@@ -145,7 +139,7 @@ ARIA 属性によって、ページのコンテンツを適切に表すために
    [ **ARIA 属性** ] セクション  
 :::image-end:::  
 
-### 要素の計算されたアクセシビリティプロパティを表示する   
+### 要素の計算されたアクセシビリティプロパティを表示する  
 
 > [!NOTE]
 > 計算された CSS プロパティを検索する場合は、[ [計算] タブ][DevtoolsCssReferenceViewActuallyAppliedElements]を参照してください。  
@@ -158,9 +152,10 @@ ARIA 属性によって、ページのコンテンツを適切に表すために
    [**アクセシビリティ**] ウィンドウの [計算された**プロパティ**] セクション  
 :::image-end:::  
 
-## カラーピッカーでのテキスト要素のコントラスト比の表示   
+## カラーピッカーでのテキスト要素のコントラスト比の表示  
 
 視覚障碍のあるユーザーは、領域を非常に明るく、または非常に暗くします。  すべての機能が同じ輝度で表示される傾向があります。これにより、アウトラインとエッジを区別しにくくなります。  
+
 コントラスト比は、テキストの前景と背景の間の輝度の差を測定します。  テキストのコントラスト比が低い場合、これらの視覚に障碍があるユーザーは、文字どおり空の画面としてサイトを表示する可能性があります。  
 
 カラーピッカーは、テキストが推奨されるコントラスト比レベルを満たしているかどうかを確認するのに役立ちます。  
@@ -168,8 +163,8 @@ ARIA 属性によって、ページのコンテンツを適切に表すために
 1.  [ **要素** ] タブをクリックします。  
 1.  **DOM ツリー**で、検査するテキスト要素を選択します。  
     
-    :::image type="complex" source="../media/accessibility-elements-paragraph-highlight.msft.png" alt-text="DOM ツリーの段落の検査" lightbox="../media/accessibility-elements-paragraph-highlight.msft.png":::
-       DOM ツリーの段落の検査  
+    :::image type="complex" source="../media/accessibility-elements-paragraph-highlight.msft.png" alt-text="DOM ツリーの段落を検査する" lightbox="../media/accessibility-elements-paragraph-highlight.msft.png":::
+       **DOM ツリー**の段落を検査する  
     :::image-end:::  
     
 1.  [ **スタイル** ] ウィンドウで、要素の値の横にある色の四角をクリックし `color` ます。  
@@ -178,7 +173,7 @@ ARIA 属性によって、ページのコンテンツを適切に表すために
        `color`要素のプロパティ  
     :::image-end:::  
     
-1.  カラーピッカーの [ **コントラスト比** ] のチェックボックスをオンにします。  1つのチェックマークは、要素が [最小要件][W3CContrastMinimum]を満たしていることを意味します。  2つのチェックマークは、強化された [推奨事項][W3CContrastEnhanced]を満たしていることを意味します。
+1.  カラーピッカーの [ **コントラスト比** ] のチェックボックスをオンにします。  1つのチェックマークは、要素が [最小要件][W3CContrastMinimum]を満たしていることを意味します。  2つのチェックマークは、強化された [推奨事項][W3CContrastEnhanced]を満たしていることを意味します。  
     
     :::image type="complex" source="../media/accessibility-elements-styles-paragraph-highlight-color-picker.msft.png" alt-text="カラーピッカーの [コントラスト比] セクションには、2つのチェックマークと値13.97 が表示されます。" lightbox="../media/accessibility-elements-styles-paragraph-highlight-color-picker.msft.png":::
        カラーピッカーの [ **コントラスト比** ] セクションには、2つのチェックマークと値が表示されます。 `13.97`  
@@ -187,12 +182,12 @@ ARIA 属性によって、ページのコンテンツを適切に表すために
 1.  [ **コントラスト比** ] セクションをクリックして、詳細情報を表示します。  カラーピッカーの上部にあるビジュアルピッカーに線が表示されます。  現在の色が推奨事項を満たしている場合は、その行の同じ側にあるものも、推奨事項を満たしているものとします。  現在の色が推奨事項を満たしていない場合は、同じ側にあるものも、推奨されません。  
     
     :::image type="complex" source="../media/accessibility-elements-styles-paragraph-highlight-color-picker-contrast-ratio-details.msft.png" alt-text="ビジュアルピッカーのコントラスト比線" lightbox="../media/accessibility-elements-styles-paragraph-highlight-color-picker-contrast-ratio-details.msft.png":::
-       ビジュアルピッカーのコントラスト比線  
+       ビジュアルピッカーの **コントラスト比** 線  
     :::image-end:::  
     
 <!--## Feedback   -->  
 
-
+[!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
 <!-- image links -->  
 
@@ -200,7 +195,7 @@ ARIA 属性によって、ページのコンテンツを適切に表すために
 
 <!-- links -->  
 
-[DevtoolsAccessibilityNavigation]: ./navigation.md "支援技術を使用して Microsoft Edge DevTools を操作する |Microsft のドキュメント"  
+[DevtoolsAccessibilityNavigation]: ./navigation.md "支援技術を使用して Microsoft Edge DevTools を操作する |Microsoft ドキュメント"  
 [DevtoolsCssReferenceViewActuallyAppliedElements]: ../css/reference.md#view-only-the-css-that-is-actually-applied-to-an-element "要素の CSS 参照に実際に適用されている CSS のみを表示します。 |Microsoft ドキュメント"  
 
 [ChromeWebStoreAxe]: https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd?hl=en-US "アックス-Web アクセシビリティテスト-Chrome Web ストア"  

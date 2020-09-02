@@ -7,12 +7,12 @@ ms.date: 08/25/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools、実験
-ms.openlocfilehash: 4c2541615700f2c637f293ee6a3fbacd9ccbc43a
-ms.sourcegitcommit: 5ed791ed5423a3a4b03e8a1c7927f026307a6673
+ms.openlocfilehash: 4915c909921bb4c5eaa8d727ab7a08493b941445
+ms.sourcegitcommit: b88d2a55a59db8373ff2bac275d3730977bf19c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "10960721"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "10986123"
 ---
 # 試験的機能  
 
@@ -139,10 +139,10 @@ CSS グリッドレイアウトを含む web サイトをデバッグすると�
 Microsoft Edge DevTools のテスト、または DevTools に関連するその他の機能についてのフィードバックを提供します。  
 
 *   DevTools のフィードバックの **送信** アイコンを使ってフィードバックを送信する  
-*   [@EdgeDevTools][TwitterEdgedevtools]ツイート  
+*   [@EdgeDevTools][TwitterEdgedevtools]ツイート   
 
-:::image type="complex" source="./media/devtools-feedback.png" alt-text="Microsoft Edge DevTools の [フィードバックの送信] アイコン" lightbox="./media/devtools-feedback.png":::
-   Microsoft Edge DevTools の [**フィードバックの送信**] アイコン  
+:::image type="complex" source="./media/bing-devtools-send-feedback.msft.png" alt-text="Microsoft Edge DevTools の [フィードバックの送信] アイコン" lightbox="./media/bing-devtools-send-feedback.msft.png":::
+   Microsoft Edge DevTools の [ **フィードバックの送信** ] アイコン  
 :::image-end:::  
 
 <!-- links -->  

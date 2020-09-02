@@ -2,16 +2,16 @@
 title: Microsoft Edge DevTools のブレークポイントでコードを一時停止する方法
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 08/28/2020
+ms.date: 09/01/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 804e864ee3029a49ba1ef2ac1f2deb61c3ba5ec3
-ms.sourcegitcommit: 1251c555c6b4db8ef8187ed94d8832fdb89d03b8
+ms.openlocfilehash: 8eefea3fad894af6b66a6d7f595c5b663c03a0dc
+ms.sourcegitcommit: 2fa65cca74c5214601900579c0ce9f946ad8a27e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10983207"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "10991186"
 ---
 <!-- Copyright Kayce Basques 
    Licensed under the Apache License, Version 2.0 (the "License");
@@ -236,7 +236,7 @@ DevTools コンソールからメソッドを実行している場合は、タ�
 
 > [!NOTE]
 > このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
-> 元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/javascript/breakpoints) にあり、 [Kayce Basques][KayceBasques] テクニカルライター、Chrome devtools & Lighthouse \) で作成されています。  
+> 元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/javascript/breakpoints) にあり、 [Kayce Basques][KayceBasques] テクニカルライター、Chrome Devtools \ & Lighthouse \) で作成されています。  
 
 [![クリエイティブコモンズライセンス][CCby4Image]][CCA4IL]  
 この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。  

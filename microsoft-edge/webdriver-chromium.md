@@ -3,17 +3,17 @@ description: Microsoft Edge で web サイトまたはアプリをテストす�
 title: WebDriver (Chromium)
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 06/08/2020
+ms.date: 09/01/2020
 ms.topic: article
 ms.prod: microsoft-edge
 ms.technology: devtools
 keywords: microsoft edge、web 開発、html、css、javascript、開発者、webdriver、selenium、テスト、ツール、オートメーション、テスト
-ms.openlocfilehash: c60095373be337307225f28d320cae19174531a7
-ms.sourcegitcommit: 1b5dfc5a2c7130b3abc6b4545fcaaae0b0897148
+ms.openlocfilehash: 8170820d7809f7c4c07f21c815f17a9438016305
+ms.sourcegitcommit: b88d2a55a59db8373ff2bac275d3730977bf19c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "10757581"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "10986214"
 ---
 # テストオートメーションに WebDriver (Chromium) を使用する  
 
@@ -52,14 +52,14 @@ WebDriver を使うと、開発者は、ユーザーの操作をシミュレー�
 
 ダウンロードする必要がある最後のコンポーネントは、コード \ (Python、Java、C \ #、ルビ、JavaScript \ #、ルビ、JavaScript \ #、ルビ、JavaScript \) をコマンドに変換するための言語固有のクライアントドライバーです。 microsoft edge ドライバーは Microsoft Edge \ (Chromium \) で実行されます。  
 
-[選択した WebDriver 言語バインドをダウンロード][SeleniumDownloads]します。  Microsoft edge チームは、Microsoft Edge \ (Chromium \) をサポートしているため、 [Selenium 4.00 alpha05][NugetPackagesSeleniumWebdriver400alpha05]以降をお勧めします。  ただし、現在の厩舎 Selenium 3 リリースを含む、Selenium のすべての旧バージョンで Microsoft Edge \ (Chromium \) を制御することができます。  
+[選択した WebDriver 言語バインドをダウンロード][SeleniumDownloads]します。  Microsoft edge チームは、Microsoft Edge \ (Chromium \) をサポートしているため、 [Selenium 4.00 alpha05][NugetPackagesSeleniumWebdriver400alpha05] 以降をお勧めします。  ただし、現在の厩舎 Selenium 3 リリースを含む、Selenium のすべての旧バージョンで Microsoft Edge \ (Chromium \) を制御することができます。  
 
 > [!IMPORTANT]
 > 以前に Microsoft Edge \ (Chromium \) とクラスを使って自動化またはテストしている場合 `ChromeDriver` `ChromeOptions` 、webdriver コードは Microsoft Edge バージョン80以降では実行されません。  この問題を解決するには、クラスを使用するようにテストを更新 `EdgeOptions` し、 [Microsoft Edge ドライバー][MicrosoftDeveloperEdgeToolsWebdriver]をインストールします。  
 
 ### Selenium 3 を使用する  
 
-既に[Selenium 3][|::ref1::|]を使用している場合は、既存のブラウザーのテストが完了している可能性があります。また、Selenium のバージョンを変更せずに Microsoft Edge \ (Chromium \) のカバレッジを追加することもできます。  [Selenium 3][|::ref2::|]を使用して microsoft edge \ (EdgeHTML \) と microsoft edge \ (Chromium \) の自動テストを作成するには、更新されたドライバーを使用するために、 [microsoft Edge パッケージの Selenium Tools][GithubMicrosoftEdgeSeleniumTools]をインストールします。  `EdgeDriver` `EdgeDriverService` ツールに含まれているクラスとクラスは、Selenium 4 の組み込みの対応物と完全に互換性があります。  
+既に [Selenium 3][|::ref1::|]を使用している場合は、既存のブラウザーのテストが完了している可能性があります。また、Selenium のバージョンを変更せずに Microsoft Edge \ (Chromium \) のカバレッジを追加することもできます。  [Selenium 3][|::ref2::|]を使用して microsoft edge \ (EdgeHTML \) と microsoft edge \ (Chromium \) の自動テストを作成するには、更新されたドライバーを使用するために、 [microsoft Edge パッケージの Selenium Tools][GithubMicrosoftEdgeSeleniumTools]をインストールします。  `EdgeDriver` `EdgeDriverService` ツールに含まれているクラスとクラスは、Selenium 4 の組み込みの対応物と完全に互換性があります。  
 
 次の手順を使用して、Microsoft Edge と[Selenium 3][|::ref3::|] [用の Selenium Tools][GithubMicrosoftEdgeSeleniumTools]をプロジェクトに追加します。
 
@@ -93,7 +93,7 @@ npm install @microsoft/edge-selenium-tools selenium-webdriver
 
 ## WebDriver で Microsoft Edge (Chromium) を使用する
 
-Selenium 3 または4のいずれかを使用して、次の例を実行できます。  Selenium 3 で使用するには、 [Microsoft Edge パッケージの Selenium ツール][GithubMicrosoftEdgeSeleniumTools]をインストールする必要があります。  
+Selenium 3 または4のいずれかを使用して、次の例を実行できます。  Selenium 3 で使用するには、 [Microsoft Edge パッケージの Selenium ツール][GithubMicrosoftEdgeSeleniumTools] をインストールする必要があります。  
 
 ### 基本的な使用方法  
 
@@ -169,7 +169,7 @@ let driver = edge.Driver.createSession(options);
 
 ### 特定のブラウザーのバイナリを選択する (Chromium のみ)  
 
-このクラスは、 `EdgeOptions` Microsoft Edge (Chromium) の特定のバイナリで使うことができます。  たとえば、microsoft Edge ベータ版などの[Microsoft edge preview チャネル][MicrosoftedgeinsiderDownload]を使用してテストを実行できます。  
+このクラスは、 `EdgeOptions` Microsoft Edge (Chromium) の特定のバイナリで使うことができます。  たとえば、microsoft Edge ベータ版などの [Microsoft edge preview チャネル][MicrosoftedgeinsiderDownload] を使用してテストを実行できます。  
 
 #### [C#](#tab/c-sharp/)  
 
@@ -302,7 +302,7 @@ options.addArguments("disable-gpu");
 
 ### Chocolatey  
 
-パッケージマネージャーとして[Chocolatey][Chocolatey]を使用している場合は、次のコマンドを実行して Microsoft Edge ドライバーをインストールします。  
+パッケージマネージャーとして [Chocolatey][Chocolatey] を使用している場合は、次のコマンドを実行して Microsoft Edge ドライバーをインストールします。  
 
 ```console
 choco install selenium-chromium-edge-driver
@@ -325,8 +325,8 @@ docker run -d -p 9515:9515 mcr.microsoft.com/msedge/msedgedriver
 Microsoft Edge チームは、WebDriver、Selenium、Microsoft Edge の使用に関するフィードバックをお寄せください。  Microsoft Edge DevTools またはツイート[@EdgeDevTools][TwitterTweetEdgeDevTools]の**フィードバック**アイコンを使用して、チームに自分の意見を伝えます。  
 
 
-:::image type="complex" source="./devtools-guide-chromium/media/devtools-feedback.png" alt-text="Microsoft Edge DevTools のフィードバックアイコン":::
-   Microsoft Edge DevTools の**フィードバック**アイコン  
+:::image type="complex" source="./devtools-guide-chromium/media/bing-devtools-send-feedback.msft.png" alt-text="Microsoft Edge DevTools の [フィードバックの送信] アイコン":::
+   Microsoft Edge DevTools の [ **フィードバックの送信** ] アイコン  
 :::image-end:::  
 
 <!-- image links -->  

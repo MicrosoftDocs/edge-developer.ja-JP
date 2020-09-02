@@ -6,12 +6,12 @@ ms.date: 08/28/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 0ffea8f515a2d4ba0fa16b447a7d204c335dc7bb
-ms.sourcegitcommit: 1251c555c6b4db8ef8187ed94d8832fdb89d03b8
+ms.openlocfilehash: 0dedfcd8d00035ed1c4c02ef8a2ec0f1643d0687
+ms.sourcegitcommit: 2fa65cca74c5214601900579c0ce9f946ad8a27e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10984996"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "10991165"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -27,13 +27,7 @@ ms.locfileid: "10984996"
    See the License for the specific language governing permissions and
    limitations under the License.  -->
 
-
-
-
-
-# Microsoft Edge DevTools からユーザーエージェント文字列を上書きする   
-
-
+# Microsoft Edge DevTools からユーザーエージェント文字列を上書きする  
 
 Microsoft Edge DevTools から [ユーザーエージェント][MDNUserAgent] 文字列を上書きするには、次の操作を行います。  
 
@@ -51,12 +45,10 @@ Microsoft Edge DevTools から [ユーザーエージェント][MDNUserAgent] �
     :::image-end:::  
     
 1.  リストからユーザーエージェント文字列を選択するか、独自のカスタム文字列を入力します。  
-    
-<!--  
-## Feedback   
 
+## Microsoft Edge DevTools チームと連絡を取り合う  
 
--->  
+[!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
 <!-- links -->  
 

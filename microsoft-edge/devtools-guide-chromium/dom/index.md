@@ -2,16 +2,16 @@
 title: DOM の表示と変更を開始する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 08/28/2020
+ms.date: 09/01/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: c1cf84a9b3f5ce2363372e405071c2dfe1a19519
-ms.sourcegitcommit: 1251c555c6b4db8ef8187ed94d8832fdb89d03b8
+ms.openlocfilehash: 6d41b072a8bd19ae728cc02b43eb2f843d91b332
+ms.sourcegitcommit: 2fa65cca74c5214601900579c0ce9f946ad8a27e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10985136"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "10991203"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -439,7 +439,7 @@ This is a continuation of the [Scroll into view](#scroll-into-view) section.  Fo
 
 > [!NOTE]
 > このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
-> 元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/dom/index) にあり、 [Kayce Basques][KayceBasques] テクニカルライター、Chrome devtools & Lighthouse \) で作成されています。  
+> 元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/dom/index) にあり、 [Kayce Basques][KayceBasques] テクニカルライター、Chrome Devtools \ & Lighthouse \) で作成されています。  
 
 [![クリエイティブコモンズライセンス][CCby4Image]][CCA4IL]  
 この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。  

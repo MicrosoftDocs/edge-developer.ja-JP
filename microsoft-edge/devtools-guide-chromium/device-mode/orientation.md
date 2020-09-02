@@ -6,12 +6,12 @@ ms.date: 08/28/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: c9a2aecfff1101de532eb59f73da21a32d62c791
-ms.sourcegitcommit: 1251c555c6b4db8ef8187ed94d8832fdb89d03b8
+ms.openlocfilehash: e11af27681f3aa1aaeefb62505908fdc6cd7a0e9
+ms.sourcegitcommit: b88d2a55a59db8373ff2bac275d3730977bf19c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10985015"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "10986151"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -27,15 +27,9 @@ ms.locfileid: "10985015"
    See the License for the specific language governing permissions and
    limitations under the License.  -->
 
+# Microsoft Edge DevTools を使ってデバイスの向きをシミュレートする  
 
-
-
-
-# Microsoft Edge DevTools を使ってデバイスの向きをシミュレートする   
-
-
-
-Microsoft Edge DevTools からさまざまなデバイスの向きをシミュレートするには、次の操作を行います。  
+Microsoft Edge DevTools からさまざまなデバイスの向きをシミュレートするには、次の操作を実行します。  
 
 <!--todo: update device orientation section when available -->  
 
@@ -56,7 +50,7 @@ Microsoft Edge DevTools からさまざまなデバイスの向きをシミュ�
        :::column-end:::
        :::column span="":::
           [ **ユーザー設定の向き**] を選択すると、、、 `alpha` `beta` および `gamma` フィールドが有効になります。  
-          <!--See [Alpha][alpha], [Beta][beta], and [Gamma][gamma] to understand how these axes work.  -->  
+          <!--See [Alpha][alpha], [Beta][beta], and [Gamma][gamma] to understand how each axis works.  -->  
           <!--todo: update links to alpha, beta, and gamma section when available -->  
           **向きのモデル**をドラッグして、独自の向きを設定することもできます。  `Shift`ドラッグして軸に沿って回転させ `alpha` ます。  
           
@@ -66,18 +60,16 @@ Microsoft Edge DevTools からさまざまなデバイスの向きをシミュ�
        :::column-end:::
     :::row-end:::
     
-<!--  
-## Feedback 
+## Microsoft Edge DevTools チームと連絡を取り合う  
 
-
--->  
+[!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
 <!-- links -->  
 
-<!--[WebFundamentasNativeHardwareDeviceOrientationIndex]: /web/fundamentals/native-hardware/device-orientation/index "Device Orientation \& Motion"  -->  
-<!--[WebFundamentasNativeHardwareDeviceOrientationIndexAlpha]: /web/fundamentals/native-hardware/device-orientation/index#alpha "Alpha - Device Orientation \& Motion"  -->  
-<!--[WebFundamentasNativeHardwareDeviceOrientationIndexBeta]: /web/fundamentals/native-hardware/device-orientation/index#beta "Beta - Device Orientation \& Motion"  -->  
-<!--[WebFundamentasNativeHardwareDeviceOrientationIndexGamma]: /web/fundamentals/native-hardware/device-orientation/index#gamma "Gamma - Device Orientation \& Motion"  -->  
+<!--[WebFundamentasNativeHardwareDeviceOrientationIndex]: /web/fundamentals/native-hardware/device-orientation/index "Device Orientation & Motion"  -->  
+<!--[WebFundamentasNativeHardwareDeviceOrientationIndexAlpha]: /web/fundamentals/native-hardware/device-orientation/index#alpha "Alpha - Device Orientation & Motion"  -->  
+<!--[WebFundamentasNativeHardwareDeviceOrientationIndexBeta]: /web/fundamentals/native-hardware/device-orientation/index#beta "Beta - Device Orientation & Motion"  -->  
+<!--[WebFundamentasNativeHardwareDeviceOrientationIndexGamma]: /web/fundamentals/native-hardware/device-orientation/index#gamma "Gamma - Device Orientation & Motion"  -->  
 
 > [!NOTE]
 > このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  

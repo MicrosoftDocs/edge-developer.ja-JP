@@ -6,12 +6,12 @@ ms.date: 08/28/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: bd46489d8a8a3fddbff60618b4997784294cccff
-ms.sourcegitcommit: 1251c555c6b4db8ef8187ed94d8832fdb89d03b8
+ms.openlocfilehash: 183482660ed5fc50862dfd2cce7209384fee93e3
+ms.sourcegitcommit: b88d2a55a59db8373ff2bac275d3730977bf19c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10985449"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "10986172"
 ---
 <!-- Copyright Meggin Kearney 
 
@@ -27,13 +27,7 @@ ms.locfileid: "10985449"
    See the License for the specific language governing permissions and
    limitations under the License.  -->
 
-
-
-
-
-# ヒープスナップショットの記録方法   
-
-
+# ヒープスナップショットの記録方法  
 
 Microsoft Edge DevTools ヒーププロファイラーを使用してヒープスナップショットを記録し、メモリリークを検出する方法について説明します。  
 
@@ -97,7 +91,7 @@ DevTools ウィンドウを閉じると、レンダラープロセスに関連�
 最初に、スナップショットが [概要] ビューで開き、次のようにオブジェクトの合計が表示されます。これは、インスタンスを表示するために展開することができます。  
 
 :::image type="complex" source="../media/memory-problems-gh-nodejs-benchmarks-run-memory-heap-snapshots-constructor-retainers.msft.png" alt-text="サマリービュー" lightbox="../media/memory-problems-gh-nodejs-benchmarks-run-memory-heap-snapshots-constructor-retainers.msft.png":::
-   サマリービュー  
+   **サマリー** ビュー  
 :::image-end:::  
 
 トップレベルのエントリは、"合計" 行です。  
@@ -118,7 +112,7 @@ DevTools ウィンドウを閉じると、レンダラープロセスに関連�
 **ヒーププロファイラーのさまざまなコンストラクター \ (グループ \) エントリに対応するものは何ですか?**  
 
 :::image type="complex" source="../media/memory-problems-gh-nodejs-benchmarks-run-memory-heap-snapshots-constructor-highlight.msft.png" alt-text="コンストラクターグループ" lightbox="../media/memory-problems-gh-nodejs-benchmarks-run-memory-heap-snapshots-constructor-highlight.msft.png":::
-   コンストラクターグループ  
+   **コンストラクター** グループ  
 :::image-end:::  
 
 | コンストラクター \ (グループ \) エントリ | 説明 |  
@@ -256,11 +250,9 @@ DOM のリークとメモリ分析の基礎の詳細については、「 [Micro
 
 <!--todo: add heap profiling dom leaks section when available  -->  
 
-<!--  
-## Feedback   
+## Microsoft Edge DevTools チームと連絡を取り合う  
 
-
--->  
+[!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
 <!-- links -->  
 

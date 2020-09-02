@@ -6,12 +6,12 @@ ms.date: 08/28/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 587f4780432b1b2b964462d2d7f5779f447f1313
-ms.sourcegitcommit: 1251c555c6b4db8ef8187ed94d8832fdb89d03b8
+ms.openlocfilehash: 829902ddd76800bb8d36268cb07a61361aa1a159
+ms.sourcegitcommit: b88d2a55a59db8373ff2bac275d3730977bf19c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10982920"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "10986116"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -27,15 +27,9 @@ ms.locfileid: "10982920"
    See the License for the specific language governing permissions and
    limitations under the License.  -->
 
+# Microsoft Edge DevTools で JavaScript を無効にする  
 
-
-
-
-# Microsoft Edge DevTools で JavaScript を無効にする   
-
-
-
-JavaScript が無効になっている場合に、web ページの外観と動作を確認するには、次の操作を行います。  
+JavaScript が無効になっている場合に、web ページの外観と動作を確認するには、次の操作を実行します。  
 
 1.  [Microsoft Edge DevTools を開き][DevToolsOpen]ます。  
 1.  `Control` + `Shift` + `P` コマンドメニューを開くには、\ (Windows \) または `Command` + `Shift` + `P` \ **Command Menu**(macOS \) を押します。  
@@ -56,7 +50,7 @@ JavaScript が無効になっている場合に、web ページの外観と動�
        **ソース**の横にある警告アイコン  
     :::image-end:::  
     
-DevTools が開いている限り、JavaScript はこのタブでは無効のままです。  
+DevTools が開いている限り、タブ内の JavaScript は無効のままです。  
 
 読み込み中にページが JavaScript に依存するかどうかとその方法を確認するには、ページの再読み込みが必要になることがあります。  
 
@@ -65,11 +59,9 @@ JavaScript を再び有効にするには、次の操作を実行します。
 *   もう一度 **コマンドメニュー** を開き、コマンドを実行し `Enable JavaScript` ます。  
 *   DevTools を閉じます。  
 
-<!--  
-## Feedback   
+## Microsoft Edge DevTools チームと連絡を取り合う  
 
-
--->  
+[!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
 <!-- links -->  
 

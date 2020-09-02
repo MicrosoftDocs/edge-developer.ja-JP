@@ -2,16 +2,16 @@
 title: Microsoft Edge の DevTools を支援技術でナビゲートする
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 08/14/2020
+ms.date: 08/20/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 4bd910fabaab02a632bdc51ade29c5ad6502432a
-ms.sourcegitcommit: 054ad92f0b8f9a15da1e3aed32e8f4379b10860f
+ms.openlocfilehash: 544d6a6ecb8dabe262e7c28aa7fc072610604be0
+ms.sourcegitcommit: b88d2a55a59db8373ff2bac275d3730977bf19c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "10931197"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "10986062"
 ---
 <!-- Copyright Rob Dodson 
 
@@ -235,11 +235,14 @@ DevTools のアクセシビリティは、進行中の作業です。  一部の
 
 新しい監査を実行するには、を使用して `Shift` + `Tab` レポートを終了し、[**監査の実行**] ボタンを探します。  
 
+## Microsoft Edge DevTools チームと連絡を取り合う
+
+[!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
+
 <!-- links -->  
 
 [DevtoolsAccessibilityReference]: ./reference.md "アクセシビリティリファレンス |Microsoft ドキュメント"  
-<!--[DevtoolsAccessibilityReferencePane]: reference.md#the-accessibility-pane "The Accessibility pane - Accessibility Reference | Microsoft Docs"  -->  
-
+[DevtoolsAccessibilityReferencePane]: reference.md#the-accessibility-pane "アクセシビリティウィンドウ-アクセシビリティリファレンス |Microsoft ドキュメント"  
 [MicrosoftEdgeDevtoolsMain]: ../../devtools-guide-chromium.md "Microsoft Edge (Chromium) 開発者ツール |Microsoft ドキュメント"  
 [DevtoolsCommandMenuIndex]: ../command-menu/index.md "Microsoft Edge DevTools コマンドメニューを使用してコマンドを実行する |Microsoft ドキュメント"  
 [DevtoolsConsoleIndex]: ../console/index.md "本体の概要 |Microsoft ドキュメント"  

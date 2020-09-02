@@ -6,12 +6,12 @@ ms.date: 08/28/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: c791a4af4446a1209d6db77ca4787fee80d45e5c
-ms.sourcegitcommit: 1251c555c6b4db8ef8187ed94d8832fdb89d03b8
+ms.openlocfilehash: 35aa864c20def5f5cd11979d6239e8316c1acbca
+ms.sourcegitcommit: b88d2a55a59db8373ff2bac275d3730977bf19c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10981774"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "10986144"
 ---
 <!-- Copyright Meggin Kearney and Paul Bakaus
 
@@ -27,14 +27,7 @@ ms.locfileid: "10981774"
    See the License for the specific language governing permissions and
    limitations under the License.  -->  
 
-
-
-
-
-# 前処理したコードをソースコードにマップする   
-
-
-
+# 前処理したコードをソースコードにマップする  
 
 クライアント側のコードは、結合、ミニ方法、またはコンパイルした後でも、読みやすく、デバッグ可能な状態にしておきます。  ソースマップを使って、ソースコードをコンパイル済みのコードにマップします。  
 
@@ -78,7 +71,7 @@ DevTools でソースマップを実行する場合は、JavaScript がコンパ
 ソースマップは既定で有効になっています <!--\(as of Microsoft Edge 39\)-->でも、これをダブルチェックまたは有効にする必要がある場合は、まず、DevTools の **カスタマイズと制御** をクリックして、[ `...` **設定**] を選びます。  [ **環境設定** ] ウィンドウの [ **ソース**] で、[ **JavaScript ソースマップを有効にする**] をオンにします。  また、「 **CSS ソースマップを有効に**する」をオンにすることもできます。  
 
 :::image type="complex" source="../media/javascript-settings-preferences-sources-enable-javascript-source-maps.msft.png" alt-text="ソースマップを有効にする" lightbox="../media/javascript-settings-preferences-sources-enable-javascript-source-maps.msft.png":::
-   ソースマップを有効にする  
+   **JavaScript ソースマップを有効にする**  
 :::image-end:::  
 
 ### ソースマップを使ったデバッグ  
@@ -89,7 +82,7 @@ DevTools でソースマップを実行する場合は、JavaScript がコンパ
 1.  コードをステップ実行している場合 (通話スタック内のリンクは元のソースファイルを開く必要があります)。  
     
 <!--todo: add link to debugging your code when section is available -->  
-<!--[DebugBreakpointsStepCode]: https://docs.microsoft.com/microsoft-edge/devtools-guide-chromium/debug/breakpoints/step-code ""  -->  
+<!--[DebugBreakpointsStepCode]: ../debug/breakpoints/step-code.md ""  -->  
 
 ## @sourceURL and displayName  
 
@@ -104,8 +97,8 @@ DevTools でソースマップを実行する場合は、JavaScript がコンパ
 次のページに移動します。  
 
 *   [デモ][CssNinjaDemoSourceMapping]
-    
-次の手順を実行します。  
+
+次の操作を実行します。  
 
 1.  DevTools を開き、[ **ソース** ] パネルに移動します。  
 1.  [ **Code:** input] フィールドにファイル名を入力します。  
@@ -115,25 +108,31 @@ DevTools でソースマップを実行する場合は、JavaScript がコンパ
 [ **ソース** ] サブパネルを展開すると、前に入力したカスタムファイル名を含む新しいファイルが表示されるようになります。  このファイルをダブルクリックして表示すると、元のソースのコンパイル済み JavaScript が含まれます。  ただし、最後の行には、 `// @sourceURL` 元のソースファイルを示すコメントがあります。  これは、言語の抽象化を操作しているときに、デバッグに役立つ場合があります。  
 
 :::image type="complex" source="../media/javascript-sources-page-coffeeeeeeee.msft.png" alt-text="SourceURL を使用する" lightbox="../media/javascript-sources-page-coffeeeeeeee.msft.png":::
-   SourceURL を使用する  
+   共同作業 `sourceURL`  
 :::image-end:::  
 
-<!--  
-## Feedback   
+## Microsoft Edge DevTools チームと連絡を取り合う
 
-
--->  
+[!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
 <!-- links -->  
 
 [BabelJS]: https://babeljs.io "Babel は JavaScript コンパイラです"  
+
 [CoffeeScriptMain]: https://coffeescript.org "CoffeeScript"  
+
 [CssNinjaDemoSourceMapping]: https://www.thecssninja.com/demo/source_mapping/compile.html "# SourceURL eval の簡単な例"  
+
 [DartMain]: https://www.dartlang.org "Dart プログラミング言語"  
+
 [GitHubGoogleClosureCompiler]: https://github.com/google/closure-compiler "google/クロージャ-コンパイラ |GitHub"  
+
 [GitHubMishooUglifyJS]: https://github.com/mishoo/UglifyJS "mishoo/UglifyJS |GitHub"  
+
 [GitHubWikiSourceMapsLanguagesTools]: https://github.com/ryanseddon/source-map/wiki/Source-maps:-languages,-tools-and-other-info "ソースマップ: 言語、ツール、その他の情報 |GitHub wiki"  
+
 [GitHubWikiGoogleTraceurCompiler]: https://github.com/google/traceur-compiler/wiki/Getting-Started "はじめに-google/traceur-compiler |GitHub wiki"  
+
 [TypeScriptMain]: https://www.typescriptlang.org "TypeScript"  
 
 > [!NOTE]
