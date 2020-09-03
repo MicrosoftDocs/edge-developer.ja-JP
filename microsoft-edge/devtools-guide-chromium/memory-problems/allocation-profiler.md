@@ -1,17 +1,18 @@
 ---
+description: タイムライン上で割り当てインストルメンテーションを使用して、適切なガベージコレクションが実行されていないオブジェクトを探し、引き続きメモリを保持します。
 title: タイムラインでの割り当てインストルメンテーションの使い方
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 08/28/2020
+ms.date: 09/01/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 4dd4d5eefd91e07ccd578547210b53c37386178f
-ms.sourcegitcommit: b88d2a55a59db8373ff2bac275d3730977bf19c9
+ms.openlocfilehash: 58a951c4241ae0fe7dce70f523a701694b8254f9
+ms.sourcegitcommit: 63e6d34ff483f3b419a0e271a3513874e6ce6c79
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "10986165"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "10993507"
 ---
 <!-- Copyright Meggin Kearney 
 
@@ -27,64 +28,64 @@ ms.locfileid: "10986165"
    See the License for the specific language governing permissions and
    limitations under the License. -->
 
-# <span data-ttu-id="c5896-103">タイムラインでの割り当てインストルメンテーションの使い方</span><span class="sxs-lookup"><span data-stu-id="c5896-103">How to use Allocation instrumentation on Timeline</span></span>  
+# <span data-ttu-id="657c9-104">タイムラインでの割り当てインストルメンテーションの使い方</span><span class="sxs-lookup"><span data-stu-id="657c9-104">How to use Allocation instrumentation on Timeline</span></span>  
 
-<span data-ttu-id="c5896-104">**タイムライン上で割り当てインストルメンテーション**を使用して、適切なガベージコレクションが実行されていないオブジェクトを探し、引き続きメモリを保持します。</span><span class="sxs-lookup"><span data-stu-id="c5896-104">Use **Allocation instrumentation on timeline** to find objects that are not being properly garbage collected, and continue to retain memory.</span></span>  
+<span data-ttu-id="657c9-105">**タイムライン上で割り当てインストルメンテーション**を使用して、適切なガベージコレクションが実行されていないオブジェクトを探し、引き続きメモリを保持します。</span><span class="sxs-lookup"><span data-stu-id="657c9-105">Use **Allocation instrumentation on timeline** to find objects that are not being properly garbage collected, and continue to retain memory.</span></span>  
 
-## <span data-ttu-id="c5896-105">タイムラインの割り当てインストルメンテーションのしくみ</span><span class="sxs-lookup"><span data-stu-id="c5896-105">How Allocation instrumentation on timeline works</span></span>  
+## <span data-ttu-id="657c9-106">タイムラインの割り当てインストルメンテーションのしくみ</span><span class="sxs-lookup"><span data-stu-id="657c9-106">How Allocation instrumentation on timeline works</span></span>  
 
-<span data-ttu-id="c5896-106">**タイムライン上の割り当てインストルメンテーション** は、 **ヒーププロファイラー** の詳細なスナップショット情報を、 **パフォーマンス** パネルの段階的な更新と追跡と組み合わせたものです。</span><span class="sxs-lookup"><span data-stu-id="c5896-106">**Allocation instrumentation on timeline** combines the detailed snapshot information of the **heap profiler** with the incremental updating and tracking of the **Performance** panel.</span></span>  <span data-ttu-id="c5896-107">同様に、オブジェクトのヒープ割り当てのトラッキングでは、記録の開始、一連の操作の実行、分析のための記録の停止などを行います。</span><span class="sxs-lookup"><span data-stu-id="c5896-107">Similarly, tracking heap allocation for objects involves starting a recording, performing a sequence of actions, and stopping the recording for analysis.</span></span>  
+<span data-ttu-id="657c9-107">**タイムライン上の割り当てインストルメンテーション** は、 **ヒーププロファイラー** の詳細なスナップショット情報を、 **パフォーマンス** パネルの段階的な更新と追跡と組み合わせたものです。</span><span class="sxs-lookup"><span data-stu-id="657c9-107">**Allocation instrumentation on timeline** combines the detailed snapshot information of the **heap profiler** with the incremental updating and tracking of the **Performance** panel.</span></span>  <span data-ttu-id="657c9-108">同様に、オブジェクトのヒープ割り当てのトラッキングでは、記録の開始、一連の操作の実行、分析のための記録の停止などを行います。</span><span class="sxs-lookup"><span data-stu-id="657c9-108">Similarly, tracking heap allocation for objects involves starting a recording, performing a sequence of actions, and stopping the recording for analysis.</span></span>  
 
 <!--todo: add profile memory problems (heap profiler) section when available  -->  
 <!--todo: add profile evaluate performance (Performance panel) section when available  -->  
 
-<span data-ttu-id="c5896-108">**タイムライン上の割り当てインストルメンテーションで** は、記録中の (50 ミリ秒ごとに) ヒープスナップショットが定期的に、記録の最後に1つの最終スナップショットが行われます。</span><span class="sxs-lookup"><span data-stu-id="c5896-108">**Allocation instrumentation on timeline** takes heap snapshots periodically throughout the recording \(as frequently as every 50 ms\) and one final snapshot at the end of the recording.</span></span>  
+<span data-ttu-id="657c9-109">**タイムライン上の割り当てインストルメンテーションで** は、記録中の (50 ミリ秒ごとに) ヒープスナップショットが定期的に、記録の最後に1つの最終スナップショットが行われます。</span><span class="sxs-lookup"><span data-stu-id="657c9-109">**Allocation instrumentation on timeline** takes heap snapshots periodically throughout the recording \(as frequently as every 50 ms\) and one final snapshot at the end of the recording.</span></span>  
 
 :::image type="complex" source="../media/memory-problems-memory-allocation-timeline-snapshot-highlighted.msft.png" alt-text="タイムライン上の割り当てインストルメンテーション" lightbox="../media/memory-problems-memory-allocation-timeline-snapshot-highlighted.msft.png":::
-   **<span data-ttu-id="c5896-110">タイムライン上の割り当てインストルメンテーション</span><span class="sxs-lookup"><span data-stu-id="c5896-110">Allocation instrumentation on timeline</span></span>**  
+   **<span data-ttu-id="657c9-111">タイムライン上の割り当てインストルメンテーション</span><span class="sxs-lookup"><span data-stu-id="657c9-111">Allocation instrumentation on timeline</span></span>**  
 :::image-end:::  
 
 > [!NOTE]
-> <span data-ttu-id="c5896-111">の後の番号は、 `@` 記録セッション中に作成された複数のスナップショット間で保持されるオブジェクト ID です。</span><span class="sxs-lookup"><span data-stu-id="c5896-111">The number after the `@` is an object ID that persists across the multiple snapshots taken during the recording session.</span></span>  <span data-ttu-id="c5896-112">永続的なオブジェクト ID によって、ヒープの状態を正確に比較できます。</span><span class="sxs-lookup"><span data-stu-id="c5896-112">The persistent object ID enables precise comparison between heap states.</span></span>  <span data-ttu-id="c5896-113">オブジェクトはガベージコレクション中に移動されるため、オブジェクトのアドレスを表示すると意味がありません。</span><span class="sxs-lookup"><span data-stu-id="c5896-113">Objects are moved during garbage collections, so displaying the address of an object makes no sense.</span></span>  
+> <span data-ttu-id="657c9-112">の後の番号は、 `@` 記録セッション中に作成された複数のスナップショット間で保持されるオブジェクト ID です。</span><span class="sxs-lookup"><span data-stu-id="657c9-112">The number after the `@` is an object ID that persists across the multiple snapshots taken during the recording session.</span></span>  <span data-ttu-id="657c9-113">永続的なオブジェクト ID によって、ヒープの状態を正確に比較できます。</span><span class="sxs-lookup"><span data-stu-id="657c9-113">The persistent object ID enables precise comparison between heap states.</span></span>  <span data-ttu-id="657c9-114">オブジェクトはガベージコレクション中に移動されるため、オブジェクトのアドレスを表示すると意味がありません。</span><span class="sxs-lookup"><span data-stu-id="657c9-114">Objects are moved during garbage collections, so displaying the address of an object makes no sense.</span></span>  
 
-## <span data-ttu-id="c5896-114">タイムラインでの割り当てインストルメンテーションの有効化</span><span class="sxs-lookup"><span data-stu-id="c5896-114">Enable Allocation Instrumentation on Timeline</span></span>  
+## <span data-ttu-id="657c9-115">タイムラインでの割り当てインストルメンテーションの有効化</span><span class="sxs-lookup"><span data-stu-id="657c9-115">Enable Allocation Instrumentation on Timeline</span></span>  
 
-<span data-ttu-id="c5896-115">**タイムラインでの割り当てインストルメンテーション**の使用を開始するには、次の操作を実行します。</span><span class="sxs-lookup"><span data-stu-id="c5896-115">Complete the following actions to begin using **Allocation instrumentation on timeline**.</span></span>  
+<span data-ttu-id="657c9-116">**タイムラインでの割り当てインストルメンテーション**の使用を開始するには、次の操作を実行します。</span><span class="sxs-lookup"><span data-stu-id="657c9-116">Complete the following actions to begin using **Allocation instrumentation on timeline**.</span></span>  
 
-1.  <span data-ttu-id="c5896-116">[DevTools を開き][DevtoolsOpenIndex]ます。</span><span class="sxs-lookup"><span data-stu-id="c5896-116">[Open the DevTools][DevtoolsOpenIndex].</span></span>  
-1.  <span data-ttu-id="c5896-117">[ **メモリ** ] パネルを開き、[ **タイムライン上の割り当てインストルメンテーション** ] を選択します。</span><span class="sxs-lookup"><span data-stu-id="c5896-117">Open the **Memory** panel, select the **Allocation instrumentation on timeline** radio button.</span></span>  
-1.  <span data-ttu-id="c5896-118">Start recording (録画開始) </span><span class="sxs-lookup"><span data-stu-id="c5896-118">Start recording.</span></span>  
+1.  <span data-ttu-id="657c9-117">[DevTools を開き][DevtoolsOpenIndex]ます。</span><span class="sxs-lookup"><span data-stu-id="657c9-117">[Open the DevTools][DevtoolsOpenIndex].</span></span>  
+1.  <span data-ttu-id="657c9-118">[ **メモリ** ] パネルを開き、[ **タイムライン上の割り当てインストルメンテーション** ] を選択します。</span><span class="sxs-lookup"><span data-stu-id="657c9-118">Open the **Memory** panel, select the **Allocation instrumentation on timeline** radio button.</span></span>  
+1.  <span data-ttu-id="657c9-119">Start recording (録画開始) </span><span class="sxs-lookup"><span data-stu-id="657c9-119">Start recording.</span></span>  
     
     :::image type="complex" source="../media/memory-problems-memory-allocation-instrumentation-on-timeline-selected.msft.png" alt-text="ヒープ割り当てプロファイラーの記録" lightbox="../media/memory-problems-memory-allocation-instrumentation-on-timeline-selected.msft.png":::
-       <span data-ttu-id="c5896-120">ヒープ割り当てプロファイラーの記録</span><span class="sxs-lookup"><span data-stu-id="c5896-120">Record heap allocations profiler</span></span>  
+       <span data-ttu-id="657c9-121">ヒープ割り当てプロファイラーの記録</span><span class="sxs-lookup"><span data-stu-id="657c9-121">Record heap allocations profiler</span></span>  
     :::image-end:::  
     
-## <span data-ttu-id="c5896-121">ヒープ割り当てタイムラインの読み取り</span><span class="sxs-lookup"><span data-stu-id="c5896-121">Read a heap allocation timeline</span></span>  
+## <span data-ttu-id="657c9-122">ヒープ割り当てタイムラインの読み取り</span><span class="sxs-lookup"><span data-stu-id="657c9-122">Read a heap allocation timeline</span></span>  
 
-<span data-ttu-id="c5896-122">ヒープ割り当てのタイムラインには、オブジェクトが作成されている場所と保持パスが示されます。</span><span class="sxs-lookup"><span data-stu-id="c5896-122">The heap allocation timeline shows where objects are being created and identifies the retaining path.</span></span>  <span data-ttu-id="c5896-123">次の図では、上部のバーは、新しいオブジェクトがヒープで見つかったことを示します。</span><span class="sxs-lookup"><span data-stu-id="c5896-123">In the following figure, the bars at the top indicate when new objects are found in the heap.</span></span>  
+<span data-ttu-id="657c9-123">ヒープ割り当てのタイムラインには、オブジェクトが作成されている場所と保持パスが示されます。</span><span class="sxs-lookup"><span data-stu-id="657c9-123">The heap allocation timeline shows where objects are being created and identifies the retaining path.</span></span>  <span data-ttu-id="657c9-124">次の図では、上部のバーは、新しいオブジェクトがヒープで見つかったことを示します。</span><span class="sxs-lookup"><span data-stu-id="657c9-124">In the following figure, the bars at the top indicate when new objects are found in the heap.</span></span>  
 
-<span data-ttu-id="c5896-124">各バーの高さは、最近割り当てられたオブジェクトのサイズに対応し、バーの色は、それらのオブジェクトが最終的なヒープスナップショットでまだ存在するかどうかを示します。</span><span class="sxs-lookup"><span data-stu-id="c5896-124">The height of each bar corresponds to the size of the recently allocated objects, and the color of the bars indicate whether or not those objects are still live in the final heap snapshot.</span></span>  <span data-ttu-id="c5896-125">青いバーは、タイムラインの最後にあるオブジェクトを示します。灰色のバーは、タイムラインで割り当てられたが、ガベージコレクションされているオブジェクトを示します。</span><span class="sxs-lookup"><span data-stu-id="c5896-125">Blue bars indicate objects that are still live at the end of the timeline, Gray bars indicate objects that were allocated during the timeline, but have since been garbage collected.</span></span>  
+<span data-ttu-id="657c9-125">各バーの高さは、最近割り当てられたオブジェクトのサイズに対応し、バーの色は、それらのオブジェクトが最終的なヒープスナップショットでまだ存在するかどうかを示します。</span><span class="sxs-lookup"><span data-stu-id="657c9-125">The height of each bar corresponds to the size of the recently allocated objects, and the color of the bars indicate whether or not those objects are still live in the final heap snapshot.</span></span>  <span data-ttu-id="657c9-126">青いバーは、タイムラインの最後にあるオブジェクトを示します。灰色のバーは、タイムラインで割り当てられたが、ガベージコレクションされているオブジェクトを示します。</span><span class="sxs-lookup"><span data-stu-id="657c9-126">Blue bars indicate objects that are still live at the end of the timeline, Gray bars indicate objects that were allocated during the timeline, but have since been garbage collected.</span></span>  
 
 :::image type="complex" source="../media/memory-problems-memory-allocation-timelines-snapshot.msft.png" alt-text="タイムラインスナップショットの割り当てインストルメンテーション" lightbox="../media/memory-problems-memory-allocation-timelines-snapshot.msft.png":::
-   <span data-ttu-id="c5896-127">**タイムラインスナップショットの割り当てインストルメンテーション**</span><span class="sxs-lookup"><span data-stu-id="c5896-127">**Allocation instrumentation on timeline** snapshot</span></span>  
+   <span data-ttu-id="657c9-128">**タイムラインスナップショットの割り当てインストルメンテーション**</span><span class="sxs-lookup"><span data-stu-id="657c9-128">**Allocation instrumentation on timeline** snapshot</span></span>  
 :::image-end:::  
 
 <!--In the following figure, an action was performed 3 times.  The sample program caches five objects, so the last five blue bars are expected.  But the left-most blue bar indicates a potential problem.  -->  
 <!--todo: redo figure 4 with multiple click actions  -->  
 
-<span data-ttu-id="c5896-128">上のタイムラインのスライダーを使用して、特定のスナップショットを拡大し、その時点で最近割り当てられたオブジェクトを確認することができます。</span><span class="sxs-lookup"><span data-stu-id="c5896-128">You are able to use the sliders in the timeline above to zoom into that particular snapshot and see the objects that were recently allocated at that point:</span></span>  
+<span data-ttu-id="657c9-129">上のタイムラインのスライダーを使用して、特定のスナップショットを拡大し、その時点で最近割り当てられたオブジェクトを確認することができます。</span><span class="sxs-lookup"><span data-stu-id="657c9-129">You are able to use the sliders in the timeline above to zoom into that particular snapshot and see the objects that were recently allocated at that point:</span></span>  
 
 :::image type="complex" source="../media/memory-problems-memory-allocation-timeline-snapshot-highlighted-annotated.msft.png" alt-text="スナップショットの拡大" lightbox="../media/memory-problems-memory-allocation-timeline-snapshot-highlighted-annotated.msft.png":::
-   <span data-ttu-id="c5896-130">スナップショットの拡大</span><span class="sxs-lookup"><span data-stu-id="c5896-130">Zoom into snapshot</span></span>  
+   <span data-ttu-id="657c9-131">スナップショットの拡大</span><span class="sxs-lookup"><span data-stu-id="657c9-131">Zoom into snapshot</span></span>  
 :::image-end:::  
 
-<span data-ttu-id="c5896-131">ヒープ内の特定のオブジェクトをクリックすると、ヒープスナップショットの下の部分に保持ツリーが表示されます。</span><span class="sxs-lookup"><span data-stu-id="c5896-131">Clicking on a specific object in the heap shows the retaining tree in the bottom portion of the heap snapshot.</span></span>  <span data-ttu-id="c5896-132">オブジェクトへの保持パスを調べることで、オブジェクトが収集されなかった理由を理解するために十分な情報を得ることができます。また、不要な参照を削除するために必要なコードの変更を行う必要があります。</span><span class="sxs-lookup"><span data-stu-id="c5896-132">Examining the retaining path to the object should give you enough information to understand why the object was not collected, and you should make the necessary code changes to remove the unnecessary reference.</span></span>  
+<span data-ttu-id="657c9-132">ヒープ内の特定のオブジェクトをクリックすると、ヒープスナップショットの下の部分に保持ツリーが表示されます。</span><span class="sxs-lookup"><span data-stu-id="657c9-132">Clicking on a specific object in the heap shows the retaining tree in the bottom portion of the heap snapshot.</span></span>  <span data-ttu-id="657c9-133">オブジェクトへの保持パスを調べることで、オブジェクトが収集されなかった理由を理解するために十分な情報を得ることができます。また、不要な参照を削除するために必要なコードの変更を行う必要があります。</span><span class="sxs-lookup"><span data-stu-id="657c9-133">Examining the retaining path to the object should give you enough information to understand why the object was not collected, and you should make the necessary code changes to remove the unnecessary reference.</span></span>  
 
-## <span data-ttu-id="c5896-133">関数によるメモリ割り当てを表示する</span><span class="sxs-lookup"><span data-stu-id="c5896-133">View memory allocation by function</span></span>  
+## <span data-ttu-id="657c9-134">関数によるメモリ割り当てを表示する</span><span class="sxs-lookup"><span data-stu-id="657c9-134">View memory allocation by function</span></span>  
 
-<span data-ttu-id="c5896-134">JavaScript 関数によるメモリ割り当てを表示できます。</span><span class="sxs-lookup"><span data-stu-id="c5896-134">You are able to view memory allocation by JavaScript function.</span></span>  <span data-ttu-id="c5896-135">詳細については、「 [関数によるメモリ割り当ての調査][DevtoolsMemoryProblemsIndexInvestigateMemoryAllocationFunction]」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="c5896-135">For more information, see [Investigate memory allocation by function][DevtoolsMemoryProblemsIndexInvestigateMemoryAllocationFunction].</span></span>  
+<span data-ttu-id="657c9-135">JavaScript 関数によるメモリ割り当てを表示できます。</span><span class="sxs-lookup"><span data-stu-id="657c9-135">You are able to view memory allocation by JavaScript function.</span></span>  <span data-ttu-id="657c9-136">詳細については、「 [関数によるメモリ割り当ての調査][DevtoolsMemoryProblemsIndexInvestigateMemoryAllocationFunction]」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="657c9-136">For more information, see [Investigate memory allocation by function][DevtoolsMemoryProblemsIndexInvestigateMemoryAllocationFunction].</span></span>  
 
-## <span data-ttu-id="c5896-136">Microsoft Edge DevTools チームと連絡を取り合う</span><span class="sxs-lookup"><span data-stu-id="c5896-136">Getting in touch with the Microsoft Edge DevTools team</span></span>  
+## <span data-ttu-id="657c9-137">Microsoft Edge DevTools チームと連絡を取り合う</span><span class="sxs-lookup"><span data-stu-id="657c9-137">Getting in touch with the Microsoft Edge DevTools team</span></span>  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
@@ -99,11 +100,11 @@ ms.locfileid: "10986165"
 [MicrosoftEdgeChannel]: https://www.microsoftedgeinsider.com/download "Microsoft Edge チャネルをダウンロードする"  
 
 > [!NOTE]
-> <span data-ttu-id="c5896-140">このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。</span><span class="sxs-lookup"><span data-stu-id="c5896-140">Portions of this page are modifications based on work created and [shared by Google][GoogleSitePolicies] and used according to terms described in the [Creative Commons Attribution 4.0 International License][CCA4IL].</span></span>  
-> <span data-ttu-id="c5896-141">元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/memory-problems/allocation-profiler) にあり、 [Meggin Kearney][MegginKearney] \ (テクニカルライター \) によって作成されています。</span><span class="sxs-lookup"><span data-stu-id="c5896-141">The original page is found [here](https://developers.google.com/web/tools/chrome-devtools/memory-problems/allocation-profiler) and is authored by [Meggin Kearney][MegginKearney] \(Technical Writer\).</span></span>  
+> <span data-ttu-id="657c9-141">このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。</span><span class="sxs-lookup"><span data-stu-id="657c9-141">Portions of this page are modifications based on work created and [shared by Google][GoogleSitePolicies] and used according to terms described in the [Creative Commons Attribution 4.0 International License][CCA4IL].</span></span>  
+> <span data-ttu-id="657c9-142">元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/memory-problems/allocation-profiler) にあり、 [Meggin Kearney][MegginKearney] \ (テクニカルライター \) によって作成されています。</span><span class="sxs-lookup"><span data-stu-id="657c9-142">The original page is found [here](https://developers.google.com/web/tools/chrome-devtools/memory-problems/allocation-profiler) and is authored by [Meggin Kearney][MegginKearney] \(Technical Writer\).</span></span>  
 
 [![クリエイティブコモンズライセンス][CCby4Image]][CCA4IL]  
-<span data-ttu-id="c5896-143">この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。</span><span class="sxs-lookup"><span data-stu-id="c5896-143">This work is licensed under a [Creative Commons Attribution 4.0 International License][CCA4IL].</span></span>  
+<span data-ttu-id="657c9-144">この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。</span><span class="sxs-lookup"><span data-stu-id="657c9-144">This work is licensed under a [Creative Commons Attribution 4.0 International License][CCA4IL].</span></span>  
 
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  

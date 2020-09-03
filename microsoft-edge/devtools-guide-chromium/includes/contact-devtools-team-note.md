@@ -3,13 +3,13 @@ author: MSEdgeTeam
 ms.author: msedgedevrel
 ms.prod: microsoft-edge
 ms.topic: include
-ms.date: 08/20/2020
-ms.openlocfilehash: a21b4b12473bc192ba82b118f1a17d69ab4259aa
-ms.sourcegitcommit: b88d2a55a59db8373ff2bac275d3730977bf19c9
+ms.date: 09/01/2020
+ms.openlocfilehash: 52fab56b92ffd19d4db1968e337ab2c5f93f6ae7
+ms.sourcegitcommit: 63e6d34ff483f3b419a0e271a3513874e6ce6c79
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "10986061"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "10992706"
 ---
 <span data-ttu-id="4eda9-101">次のオプションを使用して、投稿の新機能や変更点、または DevTools に関連するその他の機能について説明します。</span><span class="sxs-lookup"><span data-stu-id="4eda9-101">Use the following options to discuss the new features and changes in the post, or anything else related to DevTools.</span></span>  
 
