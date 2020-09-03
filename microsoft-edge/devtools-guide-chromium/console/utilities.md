@@ -1,17 +1,18 @@
 ---
+description: Microsoft Edge DevTools コンソールで利用できる便利なコマンドの参照。
 title: コンソールユーティリティ API リファレンス
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 06/10/2020
+ms.date: 09/01/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: efa03e02813d718514f73445bc0dceb3a1a83f39
-ms.sourcegitcommit: f010f43604bd4363af6827f79dbc071b9afcb667
+ms.openlocfilehash: 2882d980e6da45072cab4b028ceb1838a9078064
+ms.sourcegitcommit: 63e6d34ff483f3b419a0e271a3513874e6ce6c79
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "10708853"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "10993108"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -34,7 +35,7 @@ ms.locfileid: "10708853"
 > [!WARNING]
 > 次のコマンドは、Microsoft Edge DevTools コンソールでのみ動作します。  スクリプトから実行した場合、コマンドは機能しません。  
 
-およびその他のメソッドを探してい `console.log()` `console.error()` `console.*` ますか?  「[コンソール API リファレンス][DevToolsConsoleApi]」をご覧ください。  
+およびその他のメソッドを探してい `console.log()` `console.error()` `console.*` ますか?  「 [コンソール API リファレンス][DevToolsConsoleApi]」をご覧ください。  
 
 ## 最近評価された式  
 
@@ -47,13 +48,13 @@ $_
 次の図では、単純な式 \ (\ `2 + 2` ) が評価されています。  `$_`プロパティが評価され、同じ値が含まれます。  
 
 :::image type="complex" source="../media/console-arithmatic.msft.png" alt-text="$ _ は、最近評価された式です。" lightbox="../media/console-arithmatic.msft.png":::
-   図 1: `$_` 前回評価された式  
+   図 1:  `$_` 前回評価された式  
 :::image-end:::  
 
 次の図では、評価式には最初に名前の配列が含まれています。  評価して `$_.length` 配列の長さを確認します。変更された値は、 `$_` 最新の評価済みの式になり `4` ます。  
 
 :::image type="complex" source="../media/console-array-length.msft.png" alt-text="新しいコマンドが評価されたときの $ _ 変更" lightbox="../media/console-array-length.msft.png":::
-   図 2: `$_` 新しいコマンドの評価時の変更点  
+   図 2:  `$_` 新しいコマンドの評価時の変更点  
 :::image-end:::  
 
 ## 最近選んだ要素または JavaScript オブジェクト  
@@ -62,7 +63,7 @@ $_
 $0
 ```  
 
-最後に選択された要素または JavaScript オブジェクトを返します。  `$1` 最後に選択された2番目の値を返します。  、、、、 `$0` `$1` およびコマンドは、 `$2` `$3` `$4` **要素**パネル内で検査された最後の5つの DOM 要素、または**メモリ**パネルで選択された最後の5つの JavaScript ヒープオブジェクトへの履歴参照として機能します。  
+最後に選択された要素または JavaScript オブジェクトを返します。  `$1` 最後に選択された2番目の値を返します。  、、、、 `$0` `$1` およびコマンドは、 `$2` `$3` `$4` **要素** パネル内で検査された最後の5つの DOM 要素、または **メモリ** パネルで選択された最後の5つの JavaScript ヒープオブジェクトへの履歴参照として機能します。  
 
 :::row:::
    :::column span="1":::
@@ -96,7 +97,7 @@ $0
    :::column-end:::
 :::row-end:::  
 
-次の図では、[ `img` **要素**] パネルで要素が選択されています。  **本体**のドロアーで、 `$0` 評価が完了し、同じ要素が表示されます。  
+次の図では、[ `img` **要素** ] パネルで要素が選択されています。  **本体**のドロアーで、 `$0` 評価が完了し、同じ要素が表示されます。  
 
 :::image type="complex" source="../media/console-image-highlighted-$0.msft.png" alt-text="$0" lightbox="../media/console-image-highlighted-$0.msft.png":::
    図 3: `$0`  
@@ -114,7 +115,7 @@ $0
 $(selector, [startNode])
 ```  
 
-指定された CSS セレクターで最初の DOM 要素への参照を返します。  このメソッドは、[ドキュメントの querySelector ()][MDNDocumentQuerySelector]メソッドのエイリアスです。  
+指定された CSS セレクターで最初の DOM 要素への参照を返します。  このメソッドは、 [ドキュメントの querySelector ()][MDNDocumentQuerySelector] メソッドのエイリアスです。  
 
 次の図では、文書内の最初の要素への参照 `<img>` が返されます。  
 
@@ -122,7 +123,7 @@ $(selector, [startNode])
    図 5: `$('img')`  
 :::image-end:::  
 
-返された結果にポインターを置いて、コンテキストメニュー \ (右クリック \) を開き、[**要素パネルで**表示] を選択して DOM で見つけるか、表示されたらページ上に**スクロール**して表示します。  
+返された結果にポインターを置いて、コンテキストメニュー \ (右クリック \) を開き、[ **要素パネルで** 表示] を選択して DOM で見つけるか、表示されたらページ上に **スクロール** して表示します。  
 
 次の図では、現在選択されている要素への参照が返され、src プロパティが表示されます。  
 
@@ -147,7 +148,7 @@ $(selector, [startNode])
 $$(selector, [startNode])
 ```  
 
-指定された CSS セレクターに一致する要素の配列を返します。  このメソッドは、 [querySelectorAll ()][MDNDocumentQuerySelectorAll]メソッドを呼び出すことと同じです。  
+指定された CSS セレクターに一致する要素の配列を返します。  このメソッドは、 [querySelectorAll ()][MDNDocumentQuerySelectorAll] メソッドを呼び出すことと同じです。  
 
 次のコードサンプルと図では、を使用して、 `$$()` 現在のドキュメント内のすべての要素の配列を作成 `<img>` し、各要素のプロパティの値を表示し `src` ます。  
 
@@ -245,9 +246,9 @@ debug(method)
 ```  
 
 >[!NOTE]
-> [Chromium 問題 #1050237][MonorailIssue1050237]は、関数のバグを追跡 `debug()` しています。  この問題が発生した場合は、代わりに[ブレークポイントを使用][DevtoolsJavascriptBreakpoints]してみてください。  
+> [Chromium 問題 #1050237][MonorailIssue1050237]は、関数のバグを追跡 `debug()` しています。  この問題が発生した場合は、代わりに [ブレークポイントを使用][DevtoolsJavascriptBreakpoints] してみてください。  
 
-指定したメソッドを要求すると、デバッガーが呼び出され、**ソース**パネルのメソッド内で中断されます。これにより、コードをステップ実行してデバッグすることができます。  
+指定したメソッドを要求すると、デバッガーが呼び出され、 **ソース** パネルのメソッド内で中断されます。これにより、コードをステップ実行してデバッグすることができます。  
 
 ```console
 debug("debug");
@@ -259,7 +260,7 @@ debug("debug");
 
 `undebug(method)`メソッドの中断を停止するには、または UI を使ってすべてのブレークポイントを無効にする場合に使用します。  
 
-ブレークポイントの詳細については、「[ブレークポイントでコードを一時停止][DevToolsJavascriptBreakpoints]する」を参照してください。  
+ブレークポイントの詳細については、「 [ブレークポイントでコードを一時停止][DevToolsJavascriptBreakpoints]する」を参照してください。  
 
 ## dir  
 
@@ -267,7 +268,7 @@ debug("debug");
 dir(object)
 ```  
 
-指定したオブジェクトのすべてのプロパティのオブジェクトスタイルの一覧を表示します。  このメソッドは、 [console. dir ()][MDNConsoleDir]メソッドのエイリアスです。  
+指定したオブジェクトのすべてのプロパティのオブジェクトスタイルの一覧を表示します。  このメソッドは、 [console. dir ()][MDNConsoleDir] メソッドのエイリアスです。  
 
 本体でを評価して、 `document.head` タグとタグの間に HTML を表示し `<head>` `</head>` ます。  次のコードサンプルと図では、コンソールで使用した後にオブジェクトスタイルの一覧が表示され `console.dir()` ます。  
 
@@ -288,7 +289,7 @@ dir(document.head);
 dirxml(object)
 ```  
 
-[**要素**] タブに表示されるように、指定したオブジェクトの XML 表現を印刷します。 このメソッドは、console の[dirxml ()][MDNConsoleDirxml]メソッドと同じです。  
+[ **要素** ] タブに表示されるように、指定したオブジェクトの XML 表現を印刷します。 このメソッドは、console の [dirxml ()][MDNConsoleDirxml] メソッドと同じです。  
 
 ## 検査  
 
@@ -296,9 +297,9 @@ dirxml(object)
 inspect(object/method)
 ```  
 
-適切なパネル (DOM 要素の場合は**要素**パネル、JavaScript ヒープオブジェクトの場合は**メモリ**パネル) で、指定された要素またはオブジェクトを開き、選択します。  
+適切なパネル (DOM 要素の場合は **要素** パネル、JavaScript ヒープオブジェクトの場合は **メモリ** パネル) で、指定された要素またはオブジェクトを開き、選択します。  
 
-次のコードサンプルと図は、[ `document.body` **要素**] パネルで開きます。  
+次のコードサンプルと図は、[ `document.body` **要素** ] パネルで開きます。  
 
 ```console
 inspect(document.body);
@@ -308,7 +309,7 @@ inspect(document.body);
    図 15: の要素を調べる `inspect()`  
 :::image-end:::  
 
-検査するメソッドを渡すとき、メソッドは**ソース**パネルでドキュメントを開き、調べることができます。  
+検査するメソッドを渡すとき、メソッドは **ソース** パネルでドキュメントを開き、調べることができます。  
 
 ## getEventListeners  
 
@@ -418,7 +419,7 @@ monitorEvents(window, ["resize", "scroll"]);
 | `touch` | "touchcancel", "touchend", "touchmove", "touchstart" |  
 | `control` | "ぼかし"、"変更"、"フォーカス"、"リセット"、"サイズ変更"、"スクロール"、"選択"、"送信"、"ズーム" |  
 
-次のコードサンプルでは、 `key` 入力テキストフィールドのイベントに対応するイベントの種類が、[ `key` **要素**] パネルで現在選択されています。  
+次のコードサンプルでは、 `key` 入力テキストフィールドのイベントに対応するイベントの種類が、[ `key` **要素** ] パネルで現在選択されています。  
 
 ```console
 monitorEvents($0, "key");
@@ -436,7 +437,7 @@ monitorEvents($0, "key");
 profile([name])
 ```  
 
-省略可能な名前で JavaScript CPU プロファイリングセッションを開始します。  Profile [end ()](#profileend)メソッドは、プロファイルを完了し、**メモリ**パネルに結果を表示します。  <!--See also [Speed Up JavaScript Runtime][DevToolsRenderingToolsJSRuntime].  -->  
+省略可能な名前で JavaScript CPU プロファイリングセッションを開始します。  Profile [end ()](#profileend) メソッドは、プロファイルを完了し、 **メモリ** パネルに結果を表示します。  <!--See also [Speed Up JavaScript Runtime][DevToolsRenderingToolsJSRuntime].  -->  
 
 1.  メソッドを実行して `profile()` プロファイリングを開始します。  
     
@@ -464,10 +465,10 @@ profileEnd('B');
 profileEnd([name])
 ```  
 
-JavaScript CPU のプロファイリングセッションを完了し、**メモリ**パネルに結果を表示します。  [Profile ()](#profile)メソッドを実行している必要があります。  <!--See also [Speed Up JavaScript Runtime][DevToolsRenderingToolsJSRuntime].  -->  
+JavaScript CPU のプロファイリングセッションを完了し、 **メモリ** パネルに結果を表示します。  [Profile ()](#profile)メソッドを実行している必要があります。  <!--See also [Speed Up JavaScript Runtime][DevToolsRenderingToolsJSRuntime].  -->  
 
 1.  [Profile ()](#profile)メソッドを実行してプロファイリングを開始します。  
-1.  メソッドを実行して `profileEnd()` プロファイリングを停止し、**メモリ**パネルに結果を表示します。  
+1.  メソッドを実行して `profileEnd()` プロファイリングを停止し、 **メモリ** パネルに結果を表示します。  
     
     ```console
     profileEnd("My profile")
@@ -482,7 +483,7 @@ profileEnd('A');
 profileEnd('B');
 ```  
 
-結果は、**メモリ**パネルにヒープスナップショットとして表示されます。  
+結果は、 **メモリ** パネルにヒープスナップショットとして表示されます。  
 
 :::image type="complex" source="../media/console-memory-multiple-cpu-profiles.msft.png" alt-text="グループ化されたプロファイル" lightbox="../media/console-memory-multiple-cpu-profiles.msft.png":::
    図 23: グループ化されたプロファイル  
@@ -569,7 +570,7 @@ undebug(getData);
 unmonitor(method)
 ```  
 
-指定したメソッドの監視を停止します。  このメソッドは、 [monitor ()](#monitor)メソッドと連携して使用されます。  
+指定したメソッドの監視を停止します。  このメソッドは、 [monitor ()](#monitor) メソッドと連携して使用されます。  
 
 ```console
 unmonitor(getData);
@@ -621,8 +622,8 @@ values(object);
 [MonorailIssue1050237]: https://bugs.chromium.org/p/chromium/issues/detail?id=1050237 "問題 1050237: debug (関数) が機能しません |Monorail アウト"  
 
 > [!NOTE]
-> このページの一部は、 [Google によっ][GoogleSitePolicies]て作成および共有され、[クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
-> 元のページは[ここ](https://developers.google.com/web/tools/chrome-devtools/console/utilities)にあり、 [Kayce Basques][KayceBasques]テクニカルライター、Chrome Devtools \ & Lighthouse \) で作成されています。  
+> このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
+> 元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/console/utilities) にあり、 [Kayce Basques][KayceBasques] テクニカルライター、Chrome Devtools \ & Lighthouse \) で作成されています。  
 
 [![クリエイティブコモンズライセンス][CCby4Image]][CCA4IL]  
 この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。  

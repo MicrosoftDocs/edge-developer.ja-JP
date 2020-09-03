@@ -1,17 +1,18 @@
 ---
+description: Microsoft Edge DevTools で使用されていない JavaScript と CSS コードを検索して分析する方法について説明します。
 title: Microsoft Edge DevTools の [カバレッジ] タブで使用されていない JavaScript と CSS コードを見つける
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 08/28/2020
+ms.date: 09/01/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 1c03140199b26bca39e69cdfbe33cd1c524257fe
-ms.sourcegitcommit: 1251c555c6b4db8ef8187ed94d8832fdb89d03b8
+ms.openlocfilehash: 19bc15578e00e5a9f3389529f589e9790280a0e4
+ms.sourcegitcommit: 63e6d34ff483f3b419a0e271a3513874e6ce6c79
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10981871"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "10993094"
 ---
 <!-- Copyright Kayce Basques 
 

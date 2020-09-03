@@ -1,17 +1,18 @@
 ---
+description: Microsoft Edge DevTools を開くすべての方法。
 title: Microsoft Edge DevTools を開く
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 06/26/2020
+ms.date: 09/01/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 06e547d2d413535a6f14d829d30dc4d7b11ac92b
-ms.sourcegitcommit: 0048eb692d49eab4755c0c3ef6866e6a9122d579
+ms.openlocfilehash: ffc05a1eff2cdb7f3020a7dbb853a7520a0502dd
+ms.sourcegitcommit: 63e6d34ff483f3b419a0e271a3513874e6ce6c79
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "10844006"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "10993598"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -35,23 +36,23 @@ ms.locfileid: "10844006"
 
 次の各タスクによって、DOM ノードのスタイルまたは属性を調べることができます。
 
-*   要素にマウスポインターを合わせて、コンテキストメニュー \ (右クリック \) を開き、[**検査**] を選びます。  
+*   要素にマウスポインターを合わせて、コンテキストメニュー \ (右クリック \) を開き、[ **検査**] を選びます。  
 *   `Control` + `Shift` + `C` \ (Windows \) または `Command` + `Option` + `C` \ (macOS \) を押します。  詳細については、「 [Microsoft Edge DevTools のキーボードショートカット][DevToolsShortcuts]」を参照してください。  
 
 :::image type="complex" source="./media/bing-right-click-inspect.msft.png" alt-text="* * 検査 * * オプション" lightbox="./media/bing-right-click-inspect.msft.png":::
-   [**検査**] オプション  
+   [ **検査** ] オプション  
 :::image-end:::  
 
 <!--See [Get Started With Viewing And Changing CSS][GetStartedCSS].  -->  
 
 ## コンソールパネルを開く  
 
-次の各タスクを使用すると、[コンソール][DevToolsConsoleIndex]ウィンドウを開いて、ログに記録されたメッセージを表示したり、JavaScript を実行したりすることができます。  
+次の各タスクを使用すると、 [コンソール][DevToolsConsoleIndex] ウィンドウを開いて、ログに記録されたメッセージを表示したり、JavaScript を実行したりすることができます。  
 
 *   [コンソール][DevToolsConsoleIndex]ウィンドウを開くには、次の手順を実行します。  
     
     1.  [DevTools を開き](#open-microsoft-edge-devtools)ます。  
-    1.  [[コンソール][DevToolsConsoleIndex]] ウィンドウを選択します。  
+    1.  [ [コンソール][DevToolsConsoleIndex] ] ウィンドウを選択します。  
 
 *   [コンソール][DevToolsConsoleIndex]ウィンドウに直接ジャンプするには、 `Control` + `Shift` + `J` \ (Windows \) または `Command` + `Option` + `J` \ (macOS \) を押します。  詳細については、「 [Microsoft Edge DevTools のキーボードショートカット][DevToolsShortcuts]」を参照してください。  
 
@@ -68,8 +69,8 @@ ms.locfileid: "10844006"
 *   Microsoft Edge DevTools を開くには、次の手順を使用します。  
     
     1.  `...`アイコン (**設定など**のアイコン) を選びます。  
-    1.  [**その他のツール**] を選びます。  
-    1.  [**開発者ツール**] を選択します。  
+    1.  [ **その他のツール**] を選びます。  
+    1.  [ **開発者ツール**] を選択します。  
     
 *   Microsoft Edge devtools を開くに `F12` は、または `Control` + `Shift` + `I` \ (Windows \) または `Command` + `Option` + `I` \ (macOS \) を押します。  詳細については、「 [Microsoft Edge DevTools のキーボードショートカット][DevToolsShortcuts]」を参照してください。  
 
@@ -116,8 +117,8 @@ Start-Process -FilePath "msedge" -ArgumentList "--auto-open-devtools-for-tabs"
 <!--[GetStartedCSS]: /microsoft-edge/devtools-guide-chromium/css "CSS"  -->
 
 > [!NOTE]
-> このページの一部は、 [Google によっ][GoogleSitePolicies]て作成および共有され、[クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
-> 元のページは[ここ](https://developers.google.com/web/tools/chrome-devtools/open)にあり、 [Kayce Basques][KayceBasques]テクニカルライター、Chrome Devtools \ & Lighthouse \) で作成されています。  
+> このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
+> 元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/open) にあり、 [Kayce Basques][KayceBasques] テクニカルライター、Chrome Devtools \ & Lighthouse \) で作成されています。  
 
 [![クリエイティブコモンズライセンス][CCby4Image]][CCA4IL]  
 この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。  

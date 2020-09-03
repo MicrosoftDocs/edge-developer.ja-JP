@@ -1,17 +1,18 @@
 ---
+description: コマンドメニューを開く方法、コマンドを実行する方法、その他の操作を表示する方法に関するガイド。
 title: Microsoft Edge DevTools コマンドメニューを使用してコマンドを実行する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 08/28/2020
+ms.date: 09/01/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 09adaadd6f62710b219911f69fbe39ba8edfb61a
-ms.sourcegitcommit: 1251c555c6b4db8ef8187ed94d8832fdb89d03b8
+ms.openlocfilehash: 54dead492e7d58053efab77c82a10e7e3c912460
+ms.sourcegitcommit: 63e6d34ff483f3b419a0e271a3513874e6ce6c79
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10982554"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "10993199"
 ---
 <!-- Copyright Kayce Basques 
 

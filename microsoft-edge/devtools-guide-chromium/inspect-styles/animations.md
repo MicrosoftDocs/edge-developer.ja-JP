@@ -1,17 +1,18 @@
 ---
+description: Microsoft Edge DevTools のアニメーションのインスペクターを使って、アニメーションの検査と変更を行います。
 title: アニメーションの検査
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 08/28/2020
+ms.date: 09/01/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: a6970d76f4ff70031ef4cc8c6de119a41d1a5b80
-ms.sourcegitcommit: 1251c555c6b4db8ef8187ed94d8832fdb89d03b8
+ms.openlocfilehash: a74a401edf5331f2dd3c1bf574110241f616d9f6
+ms.sourcegitcommit: 63e6d34ff483f3b419a0e271a3513874e6ce6c79
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10983402"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "10992828"
 ---
 <!-- Copyright Kayce Basques 
 

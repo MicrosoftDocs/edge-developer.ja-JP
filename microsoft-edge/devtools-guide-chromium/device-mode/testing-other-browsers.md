@@ -1,17 +1,18 @@
 ---
+description: Microsoft Edge と Android でサイトが適切に動作するように、ジョブが終了することはありません。  デバイスモードでは、iPhones などのさまざまなデバイスをシミュレートできますが、他のブラウザーで提供されているエミュレーションのためのソリューションを確認することをお勧めします。
 title: 他のブラウザーをエミュレートしてテストする
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 08/28/2020
+ms.date: 09/01/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: d5eb33ea4cd1224930e91898d2c711310202cfc0
-ms.sourcegitcommit: 1251c555c6b4db8ef8187ed94d8832fdb89d03b8
+ms.openlocfilehash: 1b76447aa86837abac88bc4727eb7f4ee082342a
+ms.sourcegitcommit: 63e6d34ff483f3b419a0e271a3513874e6ce6c79
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10984982"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "10992912"
 ---
 <!-- Copyright Meggin Kearney and Paul Bakaus
 

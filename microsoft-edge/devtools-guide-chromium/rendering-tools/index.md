@@ -1,17 +1,18 @@
 ---
+description: ユーザーは対話的なページとスムーズなページを期待します。  ピクセルパイプラインの各ステージは、jank を導入する機会を表します。  実行時のパフォーマンスを低下させる一般的な問題を特定して修正するためのツールと戦略について説明します。
 title: 実行時のパフォーマンスを分析する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 08/28/2020
+ms.date: 09/01/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 0fc576703a9760a3306e74da3521f93bf2d5d9cd
-ms.sourcegitcommit: b88d2a55a59db8373ff2bac275d3730977bf19c9
+ms.openlocfilehash: f7ca848712268110700fac2c5fb75fe1751812bf
+ms.sourcegitcommit: 63e6d34ff483f3b419a0e271a3513874e6ce6c79
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "10986179"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "10992707"
 ---
 <!-- Copyright Kayce Basques and Meggin Kearney
 

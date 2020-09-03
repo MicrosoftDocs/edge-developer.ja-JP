@@ -1,17 +1,18 @@
 ---
+description: '[ネットワークの条件] タブを開き、[自動的に選択しない] を無効にして、一覧から選ぶか、カスタム文字列を入力します。'
 title: Microsoft Edge DevTools からユーザーエージェント文字列を上書きする
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 08/28/2020
+ms.date: 09/01/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 0dedfcd8d00035ed1c4c02ef8a2ec0f1643d0687
-ms.sourcegitcommit: 2fa65cca74c5214601900579c0ce9f946ad8a27e
+ms.openlocfilehash: ecaa1247824e5c3acb07a2c631feab30d25aba8d
+ms.sourcegitcommit: 63e6d34ff483f3b419a0e271a3513874e6ce6c79
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "10991165"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "10992926"
 ---
 <!-- Copyright Kayce Basques 
 

@@ -1,17 +1,18 @@
 ---
+description: コンソール API を使って、コンソールにメッセージを書き込みます。
 title: 本体の API リファレンス
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 06/09/2020
+ms.date: 09/01/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 19545759ede4252f2e7ba21329d482f4eb96f0c6
-ms.sourcegitcommit: f010f43604bd4363af6827f79dbc071b9afcb667
+ms.openlocfilehash: 684c0a1e42357ceca0a0295859e64447251f191a
+ms.sourcegitcommit: 63e6d34ff483f3b419a0e271a3513874e6ce6c79
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "10708504"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "10993255"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -29,7 +30,7 @@ ms.locfileid: "10708504"
 
 # 本体の API リファレンス  
 
-コンソール API メソッドを使って、JavaScript からコンソールにメッセージを書き込みます。  このトピックの対話的な紹介については、「[コンソールへのメッセージのログ記録の][DevtoolsConsoleLog]概要」を参照してください。  このような便利なメソッド、 `debug()` または `monitorEvents()` **コンソール**ウィンドウからのみ利用できる便利なメソッドについては、「[コンソールユーティリティ API リファレンス][DevtoolConsoleUtilities]」をご覧ください。  
+コンソール API メソッドを使って、JavaScript からコンソールにメッセージを書き込みます。  このトピックの対話的な紹介については、「 [コンソールへのメッセージのログ記録の][DevtoolsConsoleLog]概要」を参照してください。  このような便利なメソッド、 `debug()` または `monitorEvents()` **コンソール** ウィンドウからのみ利用できる便利なメソッドについては、「 [コンソールユーティリティ API リファレンス][DevtoolConsoleUtilities]」をご覧ください。  
 
 ---  
 
@@ -43,7 +44,7 @@ console.assert(expression, object)
 
 <!--todo: add reference level (reference#persist-messages-across-page-loads) when available -->  
 
-評価されたときに、本体に[エラー](#error)を書き込み `expression` `false` ます。  
+評価されたときに、本体に [エラー](#error) を書き込み `expression` `false` ます。  
 
 ```javascript
 const x = 5;
@@ -70,7 +71,7 @@ console.clear()
 console.clear();  
 ```  
 
-[[ログの保持][DevtoolsConsoleReferenceLevel]] が有効になっている場合、 [clear](#clear)メソッドは無効になります。  
+[ [ログの保持][DevtoolsConsoleReferenceLevel] ] が有効になっている場合、 [clear](#clear) メソッドは無効になります。  
 
 ### 関連項目  
 
@@ -124,7 +125,7 @@ console.debug(object [, object, ...])
 
 [ログレベル][DevtoolsConsoleReferencePersist]: `Verbose`
 
-異なるログレベルを除いて、[ログ](#log)と同じです。  
+異なるログレベルを除いて、 [ログ](#log) と同じです。  
 
 ```javascript
 console.debug('debug');  
@@ -202,7 +203,7 @@ console.error("I'm sorry, Dave.  I'm afraid I can't do that.");
 console.group(label)
 ```  
 
-[Groupend](#groupend)メソッドが使われるまで、メッセージを視覚的にグループ化します。  グループが最初にコンソールにログインしたときに、グループを折りたたむには、 [Groupcollapsed](#groupcollapsed)れたメソッドを使います。  
+[Groupend](#groupend)メソッドが使われるまで、メッセージを視覚的にグループ化します。  グループが最初にコンソールにログインしたときに、グループを折りたたむには、 [Groupcollapsed](#groupcollapsed) れたメソッドを使います。  
 
 ```javascript
 const label = 'Adolescent Irradiated Espionage Tortoises';
@@ -401,8 +402,8 @@ console.warn('warn');
 [MicrosoftEdgeDevTools]: /microsoft-edge/devtools-guide-chromium "Microsoft Edge (Chromium) 開発者ツール"  
 
 > [!NOTE]
-> このページの一部は、 [Google によっ][GoogleSitePolicies]て作成および共有され、[クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
-> 元のページは[ここ](https://developers.google.com/web/tools/chrome-devtools/console/api)にあり、 [Kayce Basques][KayceBasques]テクニカルライター、Chrome Devtools \ & Lighthouse \) で作成されています。  
+> このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
+> 元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/console/api) にあり、 [Kayce Basques][KayceBasques] テクニカルライター、Chrome Devtools \ & Lighthouse \) で作成されています。  
 
 [![クリエイティブコモンズライセンス][CCby4Image]][CCA4IL]  
 この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。  

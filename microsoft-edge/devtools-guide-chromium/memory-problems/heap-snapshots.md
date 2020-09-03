@@ -1,17 +1,18 @@
 ---
+description: Microsoft Edge DevTools ヒーププロファイラーを使用してヒープスナップショットを記録し、メモリリークを検出する方法について説明します。
 title: ヒープスナップショットの記録方法
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 08/28/2020
+ms.date: 09/01/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 183482660ed5fc50862dfd2cce7209384fee93e3
-ms.sourcegitcommit: b88d2a55a59db8373ff2bac275d3730977bf19c9
+ms.openlocfilehash: 15692b0258de6db66c0b58a2659348a6e849aaca
+ms.sourcegitcommit: 63e6d34ff483f3b419a0e271a3513874e6ce6c79
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "10986172"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "10993472"
 ---
 <!-- Copyright Meggin Kearney 
 

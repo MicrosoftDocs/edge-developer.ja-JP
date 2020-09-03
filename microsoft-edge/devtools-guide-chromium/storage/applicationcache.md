@@ -1,17 +1,18 @@
 ---
+description: Microsoft Edge DevTools のアプリケーションパネルからアプリケーションキャッシュデータを表示する方法について説明します。
 title: Microsoft Edge DevTools を使ってアプリケーションキャッシュデータを表示する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 08/14/2020
+ms.date: 09/01/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: fc1800fc54e5fb0d7998c62ce163ece7a461dd82
-ms.sourcegitcommit: 054ad92f0b8f9a15da1e3aed32e8f4379b10860f
+ms.openlocfilehash: ed742f24900786c3c5b31ec2a026ddbf9d16ccb6
+ms.sourcegitcommit: 63e6d34ff483f3b419a0e271a3513874e6ce6c79
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "10931214"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "10993325"
 ---
 <!-- Copyright Kayce Basques 
 

@@ -1,17 +1,18 @@
 ---
+description: '[センサー] タブを開き、[印刷の向き] セクションに移動します。'
 title: Microsoft Edge DevTools を使ってデバイスの向きをシミュレートする
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 08/28/2020
+ms.date: 09/01/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: e11af27681f3aa1aaeefb62505908fdc6cd7a0e9
-ms.sourcegitcommit: b88d2a55a59db8373ff2bac275d3730977bf19c9
+ms.openlocfilehash: 42b58ef2d4b132eedad2663287894e25e72b2572
+ms.sourcegitcommit: 63e6d34ff483f3b419a0e271a3513874e6ce6c79
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "10986151"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "10992933"
 ---
 <!-- Copyright Kayce Basques 
 

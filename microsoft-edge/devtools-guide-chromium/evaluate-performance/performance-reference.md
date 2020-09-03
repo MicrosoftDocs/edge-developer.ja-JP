@@ -1,17 +1,18 @@
 ---
-title: タイムラインイベントのリファレンス
+description: タイムラインイベントモードでは、記録を作成するときにトリガーされるすべてのイベントが表示されます。  タイムラインイベントのリファレンスを使って、各タイムラインイベントの種類について詳しく知ることができます。
+title: タイムライン イベント リファレンス
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 04/29/2020
+ms.date: 09/01/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: e5f0807204877ce034fd52ea4535795ea80ba394
-ms.sourcegitcommit: 50991a04c18283a8890ae33fcc3491c0476c7684
+ms.openlocfilehash: 624035636e2231cf1f3cd1e2ba0fdda7e2e4fa00
+ms.sourcegitcommit: 63e6d34ff483f3b419a0e271a3513874e6ce6c79
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "10611721"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "10992849"
 ---
 <!-- Copyright Meggin Kearney and Flavio Copes
 
@@ -31,7 +32,7 @@ ms.locfileid: "10611721"
 
 
 
-# タイムラインイベントのリファレンス   
+# タイムライン イベント リファレンス   
 
 
 
@@ -90,10 +91,10 @@ ms.locfileid: "10611721"
 | スクリプトの評価 | スクリプトが評価されました。 |  
 | イベント | JavaScript イベント ( `mousedown` 、、など `key` )。 |  
 | 関数呼び出し | 最上位レベルの JavaScript 関数の呼び出しが行われました (ブラウザーが JavaScript エンジン \ に入力した場合にのみ表示されます)。 |  
-| インストールタイマー | タイマーは[Setinterval ()][MDNWindowOrWorkerGlobalScopeSetInterval]または[setTimeout ()][MDNWindowOrWorkerGlobalScopeSetTimeout]を使って作成されました。 |  
+| インストールタイマー | タイマーは [Setinterval ()][MDNWindowOrWorkerGlobalScopeSetInterval] または [setTimeout ()][MDNWindowOrWorkerGlobalScopeSetTimeout]を使って作成されました。 |  
 | アニメーションフレームを要求する | 通話によって `requestAnimationFrame()` 新しいフレームがスケジュールされました。 |  
 | タイマーを削除する | 以前に作成したタイマーが消去されました。 |  
-| Time |  " [Console. time ()][ConsoleApiTime]" というスクリプト。 |  
+| 時間 |  " [Console. time ()][ConsoleApiTime]" というスクリプト。 |  
 | 終了時刻 | " [Console. timeEnd ()][ConsoleApiTimeEnd]" というスクリプト。 |  
 | タイマーが発生した | またはでスケジュールされていたタイマーが起動しました `setInterval()` `setTimeout()` 。 |  
 | XHR のレディ状態の変更 | XMLHTTPRequest のレディ状態が変更されました。 |  
@@ -165,8 +166,8 @@ ms.locfileid: "10611721"
 [MDNWindowOrWorkerGlobalScopeSetTimeout]: https://developer.mozilla.org/docs/Web/API/WindowTimers/setTimeout "WindowOrWorkerGlobalScope () |MDN"  
 
 > [!NOTE]
-> このページの一部は、 [Google によっ][GoogleSitePolicies]て作成および共有され、[クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
-> 元のページは[ここ](https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/performance-reference)にあり、 [Meggin Kearney][MegginKearney] \ (Tech Writer \) と[Flavio Copes][FlavioCopes] \ (完全なスタック開発者) で作成されています。  
+> このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
+> 元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/performance-reference) にあり、 [Meggin Kearney][MegginKearney] \ (Tech Writer \) と [Flavio Copes][FlavioCopes] \ (完全なスタック開発者) で作成されています。  
 
 [![クリエイティブコモンズライセンス][CCby4Image]][CCA4IL]  
 この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。  

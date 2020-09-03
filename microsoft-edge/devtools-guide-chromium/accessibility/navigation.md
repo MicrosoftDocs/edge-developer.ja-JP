@@ -1,17 +1,18 @@
 ---
+description: スクリーンリーダーなどの支援技術を利用して、Microsoft Edge の DevTools に移動するためのガイドです。
 title: Microsoft Edge の DevTools を支援技術でナビゲートする
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 08/20/2020
+ms.date: 09/01/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 544d6a6ecb8dabe262e7c28aa7fc072610604be0
-ms.sourcegitcommit: b88d2a55a59db8373ff2bac275d3730977bf19c9
+ms.openlocfilehash: 9a9accd043d05d1c55b1e79ce580f7b45711118f
+ms.sourcegitcommit: 63e6d34ff483f3b419a0e271a3513874e6ce6c79
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "10986062"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "10993192"
 ---
 <!-- Copyright Rob Dodson 
 

@@ -1,17 +1,18 @@
 ---
+description: Microsoft Edge と DevTools を使って、ページのパフォーマンスに影響するメモリの問題を見つける方法について説明します。これには、メモリリーク、メモリの膨張、ガベージコレクションの頻度などがあります。
 title: メモリの問題を解決する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 06/10/2020
+ms.date: 09/01/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: b9e6e2af333257f0cbe0a4a354dcd1d7b862af9c
-ms.sourcegitcommit: 037a2d62333691104c9accb4862968f80a3465a2
+ms.openlocfilehash: ef820353f81eb3fd791433e9c53434dff3b10a60
+ms.sourcegitcommit: 63e6d34ff483f3b419a0e271a3513874e6ce6c79
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "10751990"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "10992779"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -34,9 +35,9 @@ Microsoft Edge と DevTools を使って、ページのパフォーマンスに�
 ### まとめ  
 
 *   Microsoft Edge Browser のタスクマネージャーで現在ページで使用されているメモリの量を確認します。  
-*   メモリ使用量を時間の経過と共に**メモリ**パネルでビジュアル化します。  
+*   メモリ使用量を時間の経過と共に **メモリ** パネルでビジュアル化します。  
 *   **ヒープスナップショット**を使用して、デタッチされた DOM ツリー (メモリリークの一般的な原因) を特定します。  
-*   新しいメモリが JavaScript ヒープ \ (JS ヒープ) に割り当てられている場合は、**タイムラインの割り当てインストルメンテーション**で確認できます。  
+*   新しいメモリが JavaScript ヒープ \ (JS ヒープ) に割り当てられている場合は、 **タイムラインの割り当てインストルメンテーション**で確認できます。  
 
 ## 概要  
 
@@ -85,8 +86,8 @@ Microsoft Edge ブラウザーのタスクマネージャーを使用して、�
 
 また、パフォーマンスパネルを調査の開始点として使用することもできます。  パフォーマンスパネルを使用すると、時間の経過に伴うページのメモリ使用量をビジュアル化することができます。  
 
-1.  DevTools で [**パフォーマンス**] パネルを開きます。  
-1.  [**メモリ**] チェックボックスをオンにします。  
+1.  DevTools で [ **パフォーマンス** ] パネルを開きます。  
+1.  [ **メモリ** ] チェックボックスをオンにします。  
 1.  [レコーディングを作成][DevtoolsEvaluatePerformanceReferenceRecord]します。  
 
 > [!TIP]
@@ -105,15 +106,15 @@ function grow() {
 document.getElementById('grow').addEventListener('click', grow);
 ```  
 
-コードで参照されているボタンが押されるたびに、1万 `div` ノードがドキュメントの本文に追加され、100万 `x` 文字の文字列が配列にプッシュされ `x` ます。  前のコードサンプルを実行すると、次の図のような [**パフォーマンス**] パネルに記録が生成されます。  
+コードで参照されているボタンが押されるたびに、1万 `div` ノードがドキュメントの本文に追加され、100万 `x` 文字の文字列が配列にプッシュされ `x` ます。  前のコードサンプルを実行すると、次の図のような [ **パフォーマンス** ] パネルに記録が生成されます。  
 
 :::image type="complex" source="../media/memory-problems-glitch-example-1-performance-memory.msft.png" alt-text="単純な成長" lightbox="../media/memory-problems-glitch-example-1-performance-memory.msft.png":::
    図 3: 単純な成長  
 :::image-end:::  
 
-まず、ユーザーインターフェイスについて説明します。  **概要**ウィンドウの**ヒープ**グラフ \ ( **NET**\) は、JS ヒープを表します。  [**概要**] ウィンドウの下には、[**カウンター** ] ウィンドウがあります。  ここでは、JS ヒープ (**概要**ウィンドウの**ヒープ**グラフと同じ)、ドキュメント、DOM ノード、リスナー、および GPU メモリの使用状況を確認できます。  チェックボックスを無効にすると、グラフから非表示になります。  
+まず、ユーザーインターフェイスについて説明します。  **概要**ウィンドウの**ヒープ**グラフ \ ( **NET**\) は、JS ヒープを表します。  [ **概要** ] ウィンドウの下には、[ **カウンター** ] ウィンドウがあります。  ここでは、JS ヒープ (**概要**ウィンドウの**ヒープ**グラフと同じ)、ドキュメント、DOM ノード、リスナー、および GPU メモリの使用状況を確認できます。  チェックボックスを無効にすると、グラフから非表示になります。  
 
-これで、前の図と比較したコードの分析が実行されました。  Node カウンター (緑のグラフ \) を見ると、コードに一致していることを確認できます。  個別の手順でノードカウントが増加します。  ノード数が増加すると、がに `grow()` なります。  JS ヒープグラフ \ (青色のグラフ \) は、それほど簡単ではありません。  ベストプラクティスに従うと、最初の dip は、実際には強制的なガベージコレクションです。 (**ガベージ**コレクションの強制ガベージコレクションボタンを押すと実現 ![ ][ImageForceGarbageCollectionIcon] できます)。  レコーディングの進行に応じて、JS ヒープサイズのスパイクを確認できます。  これは自然であり、予想される結果です。 JavaScript コードは、ボタンを押すたびに DOM ノードを作成し、100万文字の文字列を作成するときに多くの作業を実行します。  ここでの重要なポイントは、JS ヒープの終了日が開始日よりも大きくなります (ここでは、"先頭" は強制ガベージコレクションの後にあります)。  実際の環境では、JS ヒープサイズまたはノードサイズが増加するというパターンが表示された場合、メモリリークが発生する可能性があります。  
+これで、前の図と比較したコードの分析が実行されました。  Node カウンター (緑のグラフ \) を見ると、コードに一致していることを確認できます。  個別の手順でノードカウントが増加します。  ノード数が増加すると、がに `grow()` なります。  JS ヒープグラフ \ (青色のグラフ \) は、それほど簡単ではありません。  ベストプラクティスに従うと、最初の dip は、実際には強制的なガベージコレクションです。 (  **ガベージ**コレクションの強制ガベージコレクションボタンを押すと実現 ![ ][ImageForceGarbageCollectionIcon] できます)。  レコーディングの進行に応じて、JS ヒープサイズのスパイクを確認できます。  これは自然であり、予想される結果です。 JavaScript コードは、ボタンを押すたびに DOM ノードを作成し、100万文字の文字列を作成するときに多くの作業を実行します。  ここでの重要なポイントは、JS ヒープの終了日が開始日よりも大きくなります (ここでは、"先頭" は強制ガベージコレクションの後にあります)。  実際の環境では、JS ヒープサイズまたはノードサイズが増加するというパターンが表示された場合、メモリリークが発生する可能性があります。  
 
 <!--todo: the Heap snapshots and Profiles panel are not found in Edge  -->  
 
@@ -141,13 +142,13 @@ document.getElementById('create').addEventListener('click', create);
 
 ヒープスナップショットは、デタッチされたノードを特定する方法の1つです。  名前として、ヒープスナップショットは、スナップショットの時点で、ページの JS オブジェクトと DOM ノードの間でメモリがどのように配分されるかを示しています。  
 
-スナップショットを作成するには、DevTools を開き、[**メモリ**] パネルに移動して、[**ヒープスナップショット**] ラジオボタンを選択し、[**スナップショットを撮る**] ボタンを押します。  
+スナップショットを作成するには、DevTools を開き、[ **メモリ** ] パネルに移動して、[ **ヒープスナップショット** ] ラジオボタンを選択し、[ **スナップショットを撮る** ] ボタンを押します。  
 
 :::image type="complex" source="../media/memory-problems-glitch-example-12-memory-heap-snapshot.msft.png" alt-text="ヒープスナップショットの取得" lightbox="../media/memory-problems-glitch-example-12-memory-heap-snapshot.msft.png":::
    図 4: ヒープスナップショットを撮る  
 :::image-end:::  
 
-スナップショットの処理と読み込みに時間がかかる場合があります。  完了したら、左側のパネル \ (名前付き**ヒープスナップショット**) から選択します。  
+スナップショットの処理と読み込みに時間がかかる場合があります。  完了したら、左側のパネル \ (名前付き **ヒープスナップショット**) から選択します。  
 
 `Detached`デタッチされた DOM ツリーを検索するには、**クラスフィルター**のテキストボックスに入力します。  
 
@@ -163,7 +164,7 @@ Carats を展開して、デタッチされたツリーを調査します。
 
 <!--Nodes highlighted yellow have direct references to them from the JavaScript code.  Nodes highlighted red do not have direct references.  They are only alive because they are part of the tree for the yellow node.  In general, you want to focus on the yellow nodes.  Fix your code so that the yellow node is not alive for longer than it needs to be, and you also get rid of the red nodes that are part of the tree for the yellow node.  -->
 
-ノードを選択して、さらに詳しく調べます。  [**オブジェクト**] ウィンドウには、参照しているコードに関する詳細情報が表示されます。  たとえば、次の図では、変数がそのノードを参照していることを確認でき `detachedNodes` ます。  この特定のメモリリークを解決するには、変数を使うコードを調べて、不要 `detachedNodes` になったときにノードへの参照が削除されるようにする必要があります。  
+ノードを選択して、さらに詳しく調べます。  [ **オブジェクト** ] ウィンドウには、参照しているコードに関する詳細情報が表示されます。  たとえば、次の図では、変数がそのノードを参照していることを確認でき `detachedNodes` ます。  この特定のメモリリークを解決するには、変数を使うコードを調べて、不要 `detachedUNode` になったときにノードへの参照が削除されるようにする必要があります。  
 
 :::image type="complex" source="../media/memory-problems-glitch-example-12-memory-heap-snapshot-filter-detached-expanded-selected.msft.png" alt-text="ノードの調査" lightbox="../media/memory-problems-glitch-example-12-memory-heap-snapshot-filter-detached-expanded-selected.msft.png":::
    図 7: ノードの調査  
@@ -173,9 +174,9 @@ Carats を展開して、デタッチされたツリーを調査します。
 
 ## タイムライン上の割り当てインストルメンテーションを使用して JS ヒープメモリリークを特定する  
 
-**タイムライン上の割り当てインストルメンテーション**は、JS ヒープのメモリリークを追跡するのに役立つ別のツールです。  
+**タイムライン上の割り当てインストルメンテーション** は、JS ヒープのメモリリークを追跡するのに役立つ別のツールです。  
 
-次のコードを使用して、**タイムラインの割り当てインストルメンテーション**を示します。  
+次のコードを使用して、 **タイムラインの割り当てインストルメンテーション**  を示します。  
 
 ```javascript
 var x = [];
@@ -187,7 +188,7 @@ document.getElementById('grow').addEventListener('click', grow);
 
 コードで参照されているボタンが押されるたびに、配列に100万文字の文字列が追加され `x` ます。  
 
-タイムライン上に割り当てインストルメンテーションを記録するには、[DevTools] を開き、[**メモリ**] パネルに移動して、[**タイムライン上の割り当てインストルメンテーション**] を選びます。次に、[**スタート**] ボタンを押して、メモリリークの原因であると思われる操作を実行し、完了したら [**記録**終了] をクリックし ![ ][ImageStopRecordingIcon] ます。  
+タイムライン上に割り当てインストルメンテーションを記録するには、[DevTools] を開き、[ **メモリ** ] パネルに移動して、[ **タイムライン上の割り当てインストルメンテーション** ] を選びます。次に、[ **スタート** ] ボタンを押して、メモリリークの原因であると思われる操作を実行し、完了したら [ **記録**終了] をクリックし ![ ][ImageStopRecordingIcon] ます。  
 
 記録中に、次の図のように、タイムライン上の割り当てインストルメンテーションで青色のバーが表示されているかどうかを確認します。  
 
@@ -195,13 +196,13 @@ document.getElementById('grow').addEventListener('click', grow);
    図 8: 新しい割り当て  
 :::image-end:::  
 
-これらの青いバーは、新しいメモリ割り当てを表します。  これらの新しいメモリ割り当ては、メモリリークの候補です。  バーを拡大して、指定した期間内に割り当てられたオブジェクトのみを表示するように、**コンストラクター**ウィンドウをフィルター処理することができます。  
+これらの青いバーは、新しいメモリ割り当てを表します。  これらの新しいメモリ割り当ては、メモリリークの候補です。  バーを拡大して、指定した期間内に割り当てられたオブジェクトのみを表示するように、 **コンストラクター** ウィンドウをフィルター処理することができます。  
 
 :::image type="complex" source="../media/memory-problems-glitch-example-13-allocation-timeline-snapshot-focused.msft.png" alt-text="拡大された割り当てタイムライン" lightbox="../media/memory-problems-glitch-example-13-allocation-timeline-snapshot-focused.msft.png":::
    図 9: 割り当てのタイムラインを拡大する  
 :::image-end:::  
 
-オブジェクトを展開し、[**オブジェクト**] ウィンドウで値を選択して詳細を表示します。  たとえば、次の図では、新しく割り当てられたオブジェクトの詳細を表示することで、スコープ内の変数に割り当てられていることを確認でき `x` `Window` ます。  
+オブジェクトを展開し、[ **オブジェクト** ] ウィンドウで値を選択して詳細を表示します。  たとえば、次の図では、新しく割り当てられたオブジェクトの詳細を表示することで、スコープ内の変数に割り当てられていることを確認でき `x` `Window` ます。  
 
 :::image type="complex" source="../media/memory-problems-glitch-example-13-allocation-timeline-snapshot-focused-constructor-expanded.msft.png" alt-text="オブジェクトの詳細" lightbox="../media/memory-problems-glitch-example-13-allocation-timeline-snapshot-focused-constructor-expanded.msft.png":::
    図 10: オブジェクトの詳細  
@@ -215,12 +216,12 @@ document.getElementById('grow').addEventListener('click', grow);
    図 11: 割り当てのサンプリングの記録  
 :::image-end:::  
 
-1.  [**割り当てのサンプリング**] ラジオボタンを選択します。  ページに作業者がいる場合、[**スタート**] ボタンの横にあるドロップダウンメニューを使用して、そのユーザーをプロファイリングターゲットとして選ぶことができます。  
-1.  [**スタート**] ボタンを押します。  
+1.  [ **割り当てのサンプリング** ] ラジオボタンを選択します。  ページに作業者がいる場合、[ **スタート** ] ボタンの横にあるドロップダウンメニューを使用して、そのユーザーをプロファイリングターゲットとして選ぶことができます。  
+1.  [ **スタート** ] ボタンを押します。  
 1.  調査するページに対して操作を実行します。  
-1.  すべての操作が完了したら、[**停止**] ボタンを押します。  
+1.  すべての操作が完了したら、[ **停止** ] ボタンを押します。  
 
-DevTools には、関数によるメモリ割り当ての内訳が表示されます。  既定のビューは**ヘビー (ボトムアップ)** で、最も多くのメモリを割り当てた関数が表示されます。  
+DevTools には、関数によるメモリ割り当ての内訳が表示されます。  既定のビューは **ヘビー (ボトムアップ)** で、最も多くのメモリを割り当てた関数が表示されます。  
 
 :::image type="complex" source="../media/memory-problems-glitch-example-05-memory-allocation-sampling-heavy-bottom-up.msft.png" alt-text="割り当てのサンプリング" lightbox="../media/memory-problems-glitch-example-05-memory-allocation-sampling-heavy-bottom-up.msft.png":::
    図 12: 割り当てのサンプリング  
@@ -230,9 +231,9 @@ DevTools には、関数によるメモリ割り当ての内訳が表示され�
 
 ページが頻繁に一時停止するように見える場合は、ガベージコレクションの問題が発生する可能性があります。  
 
-Microsoft Edge Browser タスクマネージャーまたはパフォーマンスメモリ記録を使って、頻繁にガベージコレクションを見つけることができます。  Microsoft Edge ブラウザータスクマネージャーでは、頻繁に増加している**メモリ**または**JavaScript メモリ**値がガベージコレクションの頻度を頻繁に表しています。  パフォーマンスの記録では、頻繁な変更 (上昇と下降) から JS ヒープまたはノードカウントグラフは、頻繁なガベージコレクションを示しています。  
+Microsoft Edge Browser タスクマネージャーまたはパフォーマンスメモリ記録を使って、頻繁にガベージコレクションを見つけることができます。  Microsoft Edge ブラウザータスクマネージャーでは、頻繁に増加している **メモリ** または **JavaScript メモリ** 値がガベージコレクションの頻度を頻繁に表しています。  パフォーマンスの記録では、頻繁な変更 (上昇と下降) から JS ヒープまたはノードカウントグラフは、頻繁なガベージコレクションを示しています。  
 
-問題を特定した後は、**タイムライン記録での割り当てインストルメンテーション**を使って、メモリが割り当てられている場所と割り当ての原因となっている関数を確認できます。  
+問題を特定した後は、 **タイムライン記録での割り当てインストルメンテーション** を使って、メモリが割り当てられている場所と割り当ての原因となっている関数を確認できます。  
 
 <!-- image links -->  
 
@@ -249,8 +250,8 @@ Microsoft Edge Browser タスクマネージャーまたはパフォーマンス
 <!--[hngd]: https://jsfiddle.net/kaycebasques/tmtbw8ef/  -->  
 
 > [!NOTE]
-> このページの一部は、 [Google によっ][GoogleSitePolicies]て作成および共有され、[クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
-> 元のページは[ここ](https://developers.google.com/web/tools/chrome-devtools/memory-problems/index)にあり、 [Kayce Basques][KayceBasques]テクニカルライター、Chrome Devtools \ & Lighthouse \) で作成されています。  
+> このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
+> 元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/memory-problems/index) にあり、 [Kayce Basques][KayceBasques] テクニカルライター、Chrome Devtools \ & Lighthouse \) で作成されています。  
 
 [![クリエイティブコモンズライセンス][CCby4Image]][CCA4IL]  
 この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。  

@@ -1,17 +1,18 @@
 ---
+description: スニペットは、Microsoft Edge DevTools のソースパネル内で作成および実行できる小さなスクリプトです。  どのページからでもアクセスして実行できます。  スニペットを実行すると、現在開いているページのコンテキストから実行されます。
 title: Microsoft Edge DevTools を使用して、任意のページで JavaScript のスニペットを実行します。
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 08/28/2020
+ms.date: 09/01/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 3a5ae986e3080a0b6a8b1bf34b0e0efc44c90303
-ms.sourcegitcommit: 1251c555c6b4db8ef8187ed94d8832fdb89d03b8
+ms.openlocfilehash: 5f6284179aacb471116a2d732507b010c37ef235
+ms.sourcegitcommit: 63e6d34ff483f3b419a0e271a3513874e6ce6c79
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10982020"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "10993388"
 ---
 <!-- Copyright Kayce Basques 
 

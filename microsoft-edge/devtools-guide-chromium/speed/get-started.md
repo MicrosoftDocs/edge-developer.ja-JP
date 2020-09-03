@@ -1,17 +1,18 @@
 ---
+description: Microsoft Edge DevTools を使用して、web サイトの読み込みを高速化する方法について説明します。
 title: Microsoft Edge DevTools を使用して Web サイトの速度を最適化する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 08/28/2020
+ms.date: 09/01/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 42b742316ccaa64aa35fc1d21c5277e448b2d5b7
-ms.sourcegitcommit: 1251c555c6b4db8ef8187ed94d8832fdb89d03b8
+ms.openlocfilehash: dafcb9c4d1194239baed7507e505d74d2b4ce1c8
+ms.sourcegitcommit: 63e6d34ff483f3b419a0e271a3513874e6ce6c79
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10984717"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "10993442"
 ---
 <!-- Copyright Kayce Basques 
 

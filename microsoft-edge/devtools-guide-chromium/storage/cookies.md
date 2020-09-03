@@ -1,17 +1,18 @@
 ---
+description: Microsoft Edge DevTools を使用して、ページの HTTP cookie の表示、編集、削除を行う方法について説明します。
 title: Microsoft Edge DevTools を使った Cookie の表示、編集、削除
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 06/11/2020
+ms.date: 09/01/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: ecd8df7058bca4535d1f7da15ce1d500ef85aefe
-ms.sourcegitcommit: a34858dd3260967ba9699842fa839c7a94775fe4
+ms.openlocfilehash: eaaf4663504fc674fd70dc1ca9e0357febb529e0
+ms.sourcegitcommit: 63e6d34ff483f3b419a0e271a3513874e6ce6c79
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "10710372"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "10993241"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -29,18 +30,18 @@ ms.locfileid: "10710372"
 
 # Microsoft Edge DevTools を使った cookie の表示、編集、削除  
 
-[HTTP cookie][MDNHTTPCookies]は主に、ユーザーセッションを管理するために使用され、ユーザーの個人設定の設定を保存し、ユーザーの動作を追跡するために使用されます。  Cookie は、web 上で表示される、"このページに cookie が使用されています" という承諾フォームもあります。  次のガイドでは、 [Microsoft Edge DevTools][MicrosoftEdgeDevTools]を使って、ページの HTTP cookie の表示、編集、削除を行う方法について説明します。  
+[HTTP cookie][MDNHTTPCookies] は主に、ユーザーセッションを管理するために使用され、ユーザーの個人設定の設定を保存し、ユーザーの動作を追跡するために使用されます。  Cookie は、web 上で表示される、"このページに cookie が使用されています" という承諾フォームもあります。  次のガイドでは、 [Microsoft Edge DevTools][MicrosoftEdgeDevTools]を使って、ページの HTTP cookie の表示、編集、削除を行う方法について説明します。  
 
 ## [Cookies] ウィンドウを開く  
 
 1.  [DevTools を開き][DevToolsOpen]ます。  
-1.  [**アプリケーション**] タブを選択して、[**アプリケーション**] パネルを開きます。  **マニフェスト**ウィンドウが開きます。  
+1.  [ **アプリケーション** ] タブを選択して、[ **アプリケーション** ] パネルを開きます。  **マニフェスト**ウィンドウが開きます。  
     
     :::image type="complex" source="../media/storage-application-manifest-empty.msft.png" alt-text="マニフェストウィンドウ" lightbox="../media/storage-application-manifest-empty.msft.png":::
        図 1: [マニフェスト] ウィンドウ  
     :::image-end:::  
 
-1.  [**記憶域**] で [ **cookie**] を展開し、[起点] を選択します。  
+1.  [ **記憶域** ] で [ **cookie**] を展開し、[起点] を選択します。  
     
     :::image type="complex" source="../media/storage-application-storage-cookies-selected.msft.png" alt-text="[Cookie] ウィンドウ" lightbox="../media/storage-application-storage-cookies-selected.msft.png":::
        図 2: [Cookie] ウィンドウ  
@@ -54,12 +55,12 @@ ms.locfileid: "10710372"
 *   **値**。  Cookie の値。  
 *   **ドメイン**。  Cookie の受信を許可されているホスト。  「 [Cookie のスコープ][MDNHTTPCookiesScope]」をご覧ください。  
 *   **Path**。  ヘッダーを送信するために要求された URL 内に存在する必要がある URL `Cookie` 。  「 [Cookie のスコープ][MDNHTTPCookiesScope]」をご覧ください。  
-*   **有効期限/最長年齢**。  Cookie の有効期限日または最大年齢。  「[永続的な cookie][MDNHTTPCookiesPermanent]」を参照してください。  [セッション cookie][MDNHTTPCookiesSession]の場合、この値は常に使用され `Session` ます。  
+*   **有効期限/最長年齢**。  Cookie の有効期限日または最大年齢。  「 [永続的な cookie][MDNHTTPCookiesPermanent]」を参照してください。  [セッション cookie][MDNHTTPCookiesSession]の場合、この値は常に使用され `Session` ます。  
 *   **サイズ**。  Cookie のサイズ (バイト単位) です。  
 *   **HTTP**。  True の場合、このフィールドは、cookie が HTTP 経由でのみ使用され、JavaScript の変更が許可されていないことを示します。  「 [Httponly cookie][MDNHTTPCookiesSecure]」を参照してください。  
-*   **セキュリティ保護さ**れます。  True の場合、このフィールドは、cookie がセキュリティで保護された HTTPS 接続を介してのみサーバーに送信される必要があることを示します。  「[安全な cookie][MDNHTTPCookiesSecure]」をご覧ください。  
+*   **セキュリティ保護さ**れます。  True の場合、このフィールドは、cookie がセキュリティで保護された HTTPS 接続を介してのみサーバーに送信される必要があることを示します。  「 [安全な cookie][MDNHTTPCookiesSecure]」をご覧ください。  
 *   **SameSite**。  `strict` `lax` Cookie が実験的な[Samesite][MDNHTTPCookiesSamesite]属性を使用しているかどうかを示します。  
-*   **優先度**。  含ま `low` れる `medium` 場合は、\ (既定値 \)、または `high` cookie で廃止された[cookie 優先順位][ChromiumIssue232693]の属性が使用されているかどうかが表示されます。
+*   **優先度**。  含ま `low` れる `medium` 場合は、\ (既定値 \)、または `high` cookie で廃止された [cookie 優先順位][ChromiumIssue232693] の属性が使用されているかどうかが表示されます。
 
 ## Cookie をフィルター処理する  
 
@@ -71,7 +72,7 @@ ms.locfileid: "10710372"
 
 ## Cookie を編集する  
 
-[**名前**]、[**値**]、[**ドメイン**]、[**パス**]、[**有効期限**]、[最大有効期限] の各フィールドは編集できます。  
+[ **名前**]、[ **値**]、[ **ドメイン**]、[ **パス**]、[ **有効期限** ]、[最大有効期限] の各フィールドは編集できます。  
 フィールドをダブルクリックして編集します。  
 
 :::image type="complex" source="../media/storage-application-storage-cookies-rename.msft.png" alt-text="DEVTOOLS に cookie の名前を設定します。" lightbox="../media/storage-application-storage-cookies-rename.msft.png":::
@@ -80,7 +81,7 @@ ms.locfileid: "10710372"
 
 ## Cookie を削除する  
 
-Cookie を選択して、[選択した削除の**削除] を**選択し ![ ][ImageDeleteIcon] 、特定の cookie を削除します。  
+Cookie を選択して、[選択した削除の **削除] を**選択し ![ ][ImageDeleteIcon]  、特定の cookie を削除します。  
 
 :::image type="complex" source="../media/storage-application-storage-cookies-delete-selected.msft.png" alt-text="特定の cookie を削除する" lightbox="../media/storage-application-storage-cookies-delete-selected.msft.png":::
    図 5: 特定の cookie を削除する  
@@ -112,8 +113,8 @@ Cookie を選択して、[選択した削除の**削除] を**選択し ![ ][Ima
 [MDNHTTPCookiesSession]: https://developer.mozilla.org/docs/Web/HTTP/Cookies#Session_cookies "HTTP クッキー-セッションクッキー |MDN"  
 
 > [!NOTE]
-> このページの一部は、 [Google によっ][GoogleSitePolicies]て作成および共有され、[クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
-> 元のページは[ここ](https://developers.google.com/web/tools/chrome-devtools/storage/cookies)にあり、 [Kayce Basques][KayceBasques]テクニカルライター、Chrome Devtools \ & Lighthouse \) で作成されています。  
+> このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
+> 元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/storage/cookies) にあり、 [Kayce Basques][KayceBasques] テクニカルライター、Chrome Devtools \ & Lighthouse \) で作成されています。  
 
 [![クリエイティブコモンズライセンス][CCby4Image]][CCA4IL]  
 この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。  
