@@ -3,7 +3,7 @@ description: Microsoft Edge (EdgeHTML) 開発者ツールを理解する
 title: Microsoft Edge (EdgeHTML) 開発者ツール
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 07/10/2020
+ms.date: 09/01/2020
 ms.topic: article
 ms.prod: microsoft-edge
 ms.technology: devtools
@@ -11,12 +11,12 @@ keywords: microsoft edge、web 開発、f12 ツール、devtools
 experimental: true
 experiment_id: 51fe4b97-3e55-41
 ms.localizationpriority: high
-ms.openlocfilehash: cba59764805c0be0e9d2c57c1a3d87ca4d14943e
-ms.sourcegitcommit: 1e33cd41e5afb2e6dbdc19353011ff6c2b019f9c
+ms.openlocfilehash: 0c01b761d1aa1fb645b15b0be5d5d6e4265e646e
+ms.sourcegitcommit: b88d2a55a59db8373ff2bac275d3730977bf19c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "10866072"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "10985969"
 ---
 # Microsoft Edge (EdgeHTML) 開発者ツール  
 
@@ -46,7 +46,7 @@ Microsoft Edge \ (EdgeHTML \) DevTools には、以下のものがあります�
 *   [サービス ワーカー][DevtoolsGuideEdgehtmlServiceworkers] パネルは、サービス ワーカーを管理およびデバッグします。  
 *   [エミュレーション][DevtoolsGuideEdgehtml|::ref9::|] パネルは、異なるブラウザー プロファイル、画面解像度、GPS の位置座標でサイトをテストします。  
 
-[フィードバックと機能のリクエスト](#feedback) をどんどん送ってください!  
+[フィードバックと機能のリクエスト](#getting-in-touch-with-the-microsoft-edge-devtools-team) をどんどん送ってください!  
 
 > [!TIP]
 > [Microsoft Edge \(EdgeHTML\) は、どのブラウザーからでも無料でお試しいただけます][BrowserstackEdgehtml]。  
@@ -117,7 +117,7 @@ Microsoft Edge DevTools アプリは、新しくリリースされた [DevTools 
 > [!NOTE]
 > デバッグ中にブレークポイントで一時停止している場合、**ページを更新** アクションが最初にランタイムを再開します。  
 
-## フィードバック  
+## Microsoft Edge DevTools チームと連絡を取る  
 
 フィードバックをお送りください。 Microsoft Edge \ (EdgeHTML \) DevTools の改善にご協力ください。  ツール \ (`F12` \) を開き、[[フィードバック の送信](#microsoft-edge-edgehtml-developer-tools)] ボタンを選択します。  
 
