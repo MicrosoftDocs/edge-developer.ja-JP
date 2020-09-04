@@ -3,7 +3,7 @@ description: Microsoft Edge (EdgeHTML) 開発者ツールを理解する
 title: Microsoft Edge (EdgeHTML) 開発者ツール
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 07/10/2020
+ms.date: 09/01/2020
 ms.topic: article
 ms.prod: microsoft-edge
 ms.technology: devtools
@@ -11,117 +11,117 @@ keywords: microsoft edge、web 開発、f12 ツール、devtools
 experimental: true
 experiment_id: 51fe4b97-3e55-41
 ms.localizationpriority: high
-ms.openlocfilehash: cba59764805c0be0e9d2c57c1a3d87ca4d14943e
-ms.sourcegitcommit: 1e33cd41e5afb2e6dbdc19353011ff6c2b019f9c
+ms.openlocfilehash: 0c01b761d1aa1fb645b15b0be5d5d6e4265e646e
+ms.sourcegitcommit: b88d2a55a59db8373ff2bac275d3730977bf19c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "10866072"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "10985969"
 ---
-# <span data-ttu-id="1998e-104">Microsoft Edge (EdgeHTML) 開発者ツール</span><span class="sxs-lookup"><span data-stu-id="1998e-104">Microsoft Edge (EdgeHTML) Developer Tools</span></span>  
+# <span data-ttu-id="8ff32-104">Microsoft Edge (EdgeHTML) 開発者ツール</span><span class="sxs-lookup"><span data-stu-id="8ff32-104">Microsoft Edge (EdgeHTML) Developer Tools</span></span>  
 
 [!INCLUDE [new-devtools-version-note](includes/new-devtools-version-note.md)]  
 
-<span data-ttu-id="1998e-105">Microsoft Edge \ (EdgeHTML \) DevTools は、[TypeScript][|::ref1::|Index] で構築され、[オープン ソース][GithubMicrosoftChakracore] で動作し、最新のフロントエンド ワークフローを対象として最適化された [スタンドアロン Windows 10 アプリ][MicrosoftStoreEdgeDevtoolsPreview] として Microsoft Store で利用できます。</span><span class="sxs-lookup"><span data-stu-id="1998e-105">The Microsoft Edge \(EdgeHTML\) DevTools are built with [TypeScript][|::ref1::|Index], powered by [open source][GithubMicrosoftChakracore], optimized for modern front-end workflows, and now available as a [standalone Windows 10 app][MicrosoftStoreEdgeDevtoolsPreview] in the Microsoft Store!</span></span>  
+<span data-ttu-id="8ff32-105">Microsoft Edge \ (EdgeHTML \) DevTools は、[TypeScript][|::ref1::|Index] で構築され、[オープン ソース][GithubMicrosoftChakracore] で動作し、最新のフロントエンド ワークフローを対象として最適化された [スタンドアロン Windows 10 アプリ][MicrosoftStoreEdgeDevtoolsPreview] として Microsoft Store で利用できます。</span><span class="sxs-lookup"><span data-stu-id="8ff32-105">The Microsoft Edge \(EdgeHTML\) DevTools are built with [TypeScript][|::ref1::|Index], powered by [open source][GithubMicrosoftChakracore], optimized for modern front-end workflows, and now available as a [standalone Windows 10 app][MicrosoftStoreEdgeDevtoolsPreview] in the Microsoft Store!</span></span>  
 
-<span data-ttu-id="1998e-106">最新の機能の詳細については、「[Windows 10 の最新の更新プログラムの DevTools (EdgeHTML 18)][DevtoolsGuideEdgehtmlWhatsnew]」 を参照してください。</span><span class="sxs-lookup"><span data-stu-id="1998e-106">For more on the latest features, check out [DevTools in the latest update of Windows 10 (EdgeHTML 18)][DevtoolsGuideEdgehtmlWhatsnew].</span></span>  
+<span data-ttu-id="8ff32-106">最新の機能の詳細については、「[Windows 10 の最新の更新プログラムの DevTools (EdgeHTML 18)][DevtoolsGuideEdgehtmlWhatsnew]」 を参照してください。</span><span class="sxs-lookup"><span data-stu-id="8ff32-106">For more on the latest features, check out [DevTools in the latest update of Windows 10 (EdgeHTML 18)][DevtoolsGuideEdgehtmlWhatsnew].</span></span>  
 
-## <span data-ttu-id="1998e-107">コア ツール</span><span class="sxs-lookup"><span data-stu-id="1998e-107">Core tools</span></span>  
+## <span data-ttu-id="8ff32-107">コア ツール</span><span class="sxs-lookup"><span data-stu-id="8ff32-107">Core tools</span></span>  
 
 :::image type="complex" source="./devtools-guide/media/devtools.png" alt-text="Microsoft Edge (EdgeHTML) DevTools":::
-   <span data-ttu-id="1998e-109">Microsoft Edge (EdgeHTML) DevTools</span><span class="sxs-lookup"><span data-stu-id="1998e-109">Microsoft Edge (EdgeHTML) DevTools</span></span>
+   <span data-ttu-id="8ff32-109">Microsoft Edge (EdgeHTML) DevTools</span><span class="sxs-lookup"><span data-stu-id="8ff32-109">Microsoft Edge (EdgeHTML) DevTools</span></span>
 :::image-end:::
 
 <!--![Microsoft Edge \(EdgeHTML\) DevTools][ImageDevtoolsEdgehtml]  -->  
 
-<span data-ttu-id="1998e-110">Microsoft Edge \ (EdgeHTML \) DevTools には、以下のものがあります。</span><span class="sxs-lookup"><span data-stu-id="1998e-110">The Microsoft Edge \(EdgeHTML\) DevTools include:</span></span>  
+<span data-ttu-id="8ff32-110">Microsoft Edge \ (EdgeHTML \) DevTools には、以下のものがあります。</span><span class="sxs-lookup"><span data-stu-id="8ff32-110">The Microsoft Edge \(EdgeHTML\) DevTools include:</span></span>  
 
-*   <span data-ttu-id="1998e-111">[要素][DevtoolsGuideEdgehtml|::ref2::|] は、パネルHTML および CSS の編集、アクセシビリティのプロパティの検査、イベント リスナーの表示、DOM 変異のブレークポイントの設定を行います。</span><span class="sxs-lookup"><span data-stu-id="1998e-111">An [Elements][DevtoolsGuideEdgehtml|::ref2::|] panel to edit HTML and CSS, inspect accessibility properties, view event listeners, and set DOM mutation breakpoints</span></span>  
-*   <span data-ttu-id="1998e-112">[コンソール][DevtoolsGuideEdgehtml|::ref3::|] は、ログ メッセージを表示およびフィルタリングし、JavaScript オブジェクトと DOM ノードを検査し、選択したウィンドウやフレームのコンテキストでの JavaScript を実行します。</span><span class="sxs-lookup"><span data-stu-id="1998e-112">A [Console][DevtoolsGuideEdgehtml|::ref3::|] to view and filter log messages, inspect JavaScript objects and DOM nodes, and run JavaScript in the context of the selected window or frame</span></span>  
-*   <span data-ttu-id="1998e-113">[デバッガー][DevtoolsGuideEdgehtml|::ref4::|] は、コードのステップ実行、ウォッチポイントとブレークポイントの設定、コードのライブ編集、Web ストレージおよび cookie キャッシュの検査を行います。</span><span class="sxs-lookup"><span data-stu-id="1998e-113">A [Debugger][DevtoolsGuideEdgehtml|::ref4::|] to step through code, set watches and breakpoints, live edit your code, and inspect your web storage and cookie caches</span></span>  
-*   <span data-ttu-id="1998e-114">[ネットワーク][DevtoolsGuideEdgehtml|::ref5::|] パネルは、ネットワークとブラウザーのキャッシュからの要求や応答を監視および検査します。</span><span class="sxs-lookup"><span data-stu-id="1998e-114">A [Network][DevtoolsGuideEdgehtml|::ref5::|] panel to monitor and inspect requests and responses from the network and browser cache</span></span>  
-*   <span data-ttu-id="1998e-115">[パフォーマンス][DevtoolsGuideEdgehtml|::ref6::|] パネルは、サイトに必要な時間とシステム リソースをプロファイルします。</span><span class="sxs-lookup"><span data-stu-id="1998e-115">A [Performance][DevtoolsGuideEdgehtml|::ref6::|] panel to profile the time and system resources required by your site</span></span>  
-*   <span data-ttu-id="1998e-116">[メモリ][DevtoolsGuideEdgehtml|::ref7::|] パネルは、メモリ リソースの使用状況を測定し、コード ランタイムの異なる状態でヒープ スナップショットを比較します。</span><span class="sxs-lookup"><span data-stu-id="1998e-116">A [Memory][DevtoolsGuideEdgehtml|::ref7::|] panel to measure your use of memory resources and compare heap snapshots at different states of code runtime</span></span>  
-*   <span data-ttu-id="1998e-117">[ストレージ][DevtoolsGuideEdgehtml|::ref8::|] パネルは、Web ストレージ、IndexedDB、cookie、および キャッシュ データを検査および管理します。</span><span class="sxs-lookup"><span data-stu-id="1998e-117">A [Storage][DevtoolsGuideEdgehtml|::ref8::|] panel for inspecting and managing your web storage, IndexedDB, cookies and cache data</span></span>  
-*   <span data-ttu-id="1998e-118">[サービス ワーカー][DevtoolsGuideEdgehtmlServiceworkers] パネルは、サービス ワーカーを管理およびデバッグします。</span><span class="sxs-lookup"><span data-stu-id="1998e-118">A [Service Workers][DevtoolsGuideEdgehtmlServiceworkers] panel for managing and debugging your service workers</span></span>  
-*   <span data-ttu-id="1998e-119">[エミュレーション][DevtoolsGuideEdgehtml|::ref9::|] パネルは、異なるブラウザー プロファイル、画面解像度、GPS の位置座標でサイトをテストします。</span><span class="sxs-lookup"><span data-stu-id="1998e-119">An [Emulation][DevtoolsGuideEdgehtml|::ref9::|] panel to test your site with different browser profiles, screen resolutions, and GPS location coordinates</span></span>  
+*   <span data-ttu-id="8ff32-111">[要素][DevtoolsGuideEdgehtml|::ref2::|] は、パネルHTML および CSS の編集、アクセシビリティのプロパティの検査、イベント リスナーの表示、DOM 変異のブレークポイントの設定を行います。</span><span class="sxs-lookup"><span data-stu-id="8ff32-111">An [Elements][DevtoolsGuideEdgehtml|::ref2::|] panel to edit HTML and CSS, inspect accessibility properties, view event listeners, and set DOM mutation breakpoints</span></span>  
+*   <span data-ttu-id="8ff32-112">[コンソール][DevtoolsGuideEdgehtml|::ref3::|] は、ログ メッセージを表示およびフィルタリングし、JavaScript オブジェクトと DOM ノードを検査し、選択したウィンドウやフレームのコンテキストでの JavaScript を実行します。</span><span class="sxs-lookup"><span data-stu-id="8ff32-112">A [Console][DevtoolsGuideEdgehtml|::ref3::|] to view and filter log messages, inspect JavaScript objects and DOM nodes, and run JavaScript in the context of the selected window or frame</span></span>  
+*   <span data-ttu-id="8ff32-113">[デバッガー][DevtoolsGuideEdgehtml|::ref4::|] は、コードのステップ実行、ウォッチポイントとブレークポイントの設定、コードのライブ編集、Web ストレージおよび cookie キャッシュの検査を行います。</span><span class="sxs-lookup"><span data-stu-id="8ff32-113">A [Debugger][DevtoolsGuideEdgehtml|::ref4::|] to step through code, set watches and breakpoints, live edit your code, and inspect your web storage and cookie caches</span></span>  
+*   <span data-ttu-id="8ff32-114">[ネットワーク][DevtoolsGuideEdgehtml|::ref5::|] パネルは、ネットワークとブラウザーのキャッシュからの要求や応答を監視および検査します。</span><span class="sxs-lookup"><span data-stu-id="8ff32-114">A [Network][DevtoolsGuideEdgehtml|::ref5::|] panel to monitor and inspect requests and responses from the network and browser cache</span></span>  
+*   <span data-ttu-id="8ff32-115">[パフォーマンス][DevtoolsGuideEdgehtml|::ref6::|] パネルは、サイトに必要な時間とシステム リソースをプロファイルします。</span><span class="sxs-lookup"><span data-stu-id="8ff32-115">A [Performance][DevtoolsGuideEdgehtml|::ref6::|] panel to profile the time and system resources required by your site</span></span>  
+*   <span data-ttu-id="8ff32-116">[メモリ][DevtoolsGuideEdgehtml|::ref7::|] パネルは、メモリ リソースの使用状況を測定し、コード ランタイムの異なる状態でヒープ スナップショットを比較します。</span><span class="sxs-lookup"><span data-stu-id="8ff32-116">A [Memory][DevtoolsGuideEdgehtml|::ref7::|] panel to measure your use of memory resources and compare heap snapshots at different states of code runtime</span></span>  
+*   <span data-ttu-id="8ff32-117">[ストレージ][DevtoolsGuideEdgehtml|::ref8::|] パネルは、Web ストレージ、IndexedDB、cookie、および キャッシュ データを検査および管理します。</span><span class="sxs-lookup"><span data-stu-id="8ff32-117">A [Storage][DevtoolsGuideEdgehtml|::ref8::|] panel for inspecting and managing your web storage, IndexedDB, cookies and cache data</span></span>  
+*   <span data-ttu-id="8ff32-118">[サービス ワーカー][DevtoolsGuideEdgehtmlServiceworkers] パネルは、サービス ワーカーを管理およびデバッグします。</span><span class="sxs-lookup"><span data-stu-id="8ff32-118">A [Service Workers][DevtoolsGuideEdgehtmlServiceworkers] panel for managing and debugging your service workers</span></span>  
+*   <span data-ttu-id="8ff32-119">[エミュレーション][DevtoolsGuideEdgehtml|::ref9::|] パネルは、異なるブラウザー プロファイル、画面解像度、GPS の位置座標でサイトをテストします。</span><span class="sxs-lookup"><span data-stu-id="8ff32-119">An [Emulation][DevtoolsGuideEdgehtml|::ref9::|] panel to test your site with different browser profiles, screen resolutions, and GPS location coordinates</span></span>  
 
-<span data-ttu-id="1998e-120">[フィードバックと機能のリクエスト](#feedback) をどんどん送ってください!</span><span class="sxs-lookup"><span data-stu-id="1998e-120">Please keep sending your [feedback and feature requests](#feedback)!</span></span>  
+<span data-ttu-id="8ff32-120">[フィードバックと機能のリクエスト](#getting-in-touch-with-the-microsoft-edge-devtools-team) をどんどん送ってください!</span><span class="sxs-lookup"><span data-stu-id="8ff32-120">Please keep sending your [feedback and feature requests](#getting-in-touch-with-the-microsoft-edge-devtools-team)!</span></span>  
 
 > [!TIP]
-> <span data-ttu-id="1998e-121">[Microsoft Edge \(EdgeHTML\) は、どのブラウザーからでも無料でお試しいただけます][BrowserstackEdgehtml]。</span><span class="sxs-lookup"><span data-stu-id="1998e-121">[Test on Microsoft Edge \(EdgeHTML\) free from any browser][BrowserstackEdgehtml].</span></span>  
-> <span data-ttu-id="1998e-122">Microsoft Edge は [BrowserStack][BrowserstackEdgehtml] と提携して、Microsoft Edge \ (EdgeHTML) のライブ テストおよび自動テストを無料で提供しています。</span><span class="sxs-lookup"><span data-stu-id="1998e-122">The Microsoft Edge team partnered with [BrowserStack][BrowserstackEdgehtml] to provide free live and automated testing on Microsoft Edge \(EdgeHTML\).</span></span>  
+> <span data-ttu-id="8ff32-121">[Microsoft Edge \(EdgeHTML\) は、どのブラウザーからでも無料でお試しいただけます][BrowserstackEdgehtml]。</span><span class="sxs-lookup"><span data-stu-id="8ff32-121">[Test on Microsoft Edge \(EdgeHTML\) free from any browser][BrowserstackEdgehtml].</span></span>  
+> <span data-ttu-id="8ff32-122">Microsoft Edge は [BrowserStack][BrowserstackEdgehtml] と提携して、Microsoft Edge \ (EdgeHTML) のライブ テストおよび自動テストを無料で提供しています。</span><span class="sxs-lookup"><span data-stu-id="8ff32-122">The Microsoft Edge team partnered with [BrowserStack][BrowserstackEdgehtml] to provide free live and automated testing on Microsoft Edge \(EdgeHTML\).</span></span>  
 
-## <span data-ttu-id="1998e-123">Microsoft ストア アプリ</span><span class="sxs-lookup"><span data-stu-id="1998e-123">Microsoft Store app</span></span>  
+## <span data-ttu-id="8ff32-123">Microsoft ストア アプリ</span><span class="sxs-lookup"><span data-stu-id="8ff32-123">Microsoft Store app</span></span>  
 
-<span data-ttu-id="1998e-124">**Microsoft Edge \ (EdgeHTML \) DevTools** は、ブラウザー内での \(`F12`\) のツール環境に加えて、[Microsoft Store から Windows 10 アプリ][MicrosoftStoreEdgeDevtoolsPreview] スタンドアロン版として [現在使用可能][DevtoolsGuideEdgehtmlWhatsnew] です。</span><span class="sxs-lookup"><span data-stu-id="1998e-124">The **Microsoft Edge \(EdgeHTML\) DevTools** are [now available][DevtoolsGuideEdgehtmlWhatsnew] as a standalone [Windows 10 app from the Microsoft Store][MicrosoftStoreEdgeDevtoolsPreview], in addition to the in-browser \(`F12`\) tooling experience.</span></span>  <span data-ttu-id="1998e-125">ストア バージョンでは、ローカルとリモートのページ　ターゲットを開くために [**セレクター**] パネルが表示されます。これには、DevTools インスタンス間で簡単に切り替えられるようにタブ レイアウトが用意されています。</span><span class="sxs-lookup"><span data-stu-id="1998e-125">With the store version comes a **chooser** panel for attaching to open local and remote page targets and a tabbed layout for easy switching between DevTools instances.</span></span>  
+<span data-ttu-id="8ff32-124">**Microsoft Edge \ (EdgeHTML \) DevTools** は、ブラウザー内での \(`F12`\) のツール環境に加えて、[Microsoft Store から Windows 10 アプリ][MicrosoftStoreEdgeDevtoolsPreview] スタンドアロン版として [現在使用可能][DevtoolsGuideEdgehtmlWhatsnew] です。</span><span class="sxs-lookup"><span data-stu-id="8ff32-124">The **Microsoft Edge \(EdgeHTML\) DevTools** are [now available][DevtoolsGuideEdgehtmlWhatsnew] as a standalone [Windows 10 app from the Microsoft Store][MicrosoftStoreEdgeDevtoolsPreview], in addition to the in-browser \(`F12`\) tooling experience.</span></span>  <span data-ttu-id="8ff32-125">ストア バージョンでは、ローカルとリモートのページ　ターゲットを開くために [**セレクター**] パネルが表示されます。これには、DevTools インスタンス間で簡単に切り替えられるようにタブ レイアウトが用意されています。</span><span class="sxs-lookup"><span data-stu-id="8ff32-125">With the store version comes a **chooser** panel for attaching to open local and remote page targets and a tabbed layout for easy switching between DevTools instances.</span></span>  
 
-### <span data-ttu-id="1998e-126">ローカル デバッグ</span><span class="sxs-lookup"><span data-stu-id="1998e-126">Local debugging</span></span>  
+### <span data-ttu-id="8ff32-126">ローカル デバッグ</span><span class="sxs-lookup"><span data-stu-id="8ff32-126">Local debugging</span></span>  
 
-<span data-ttu-id="1998e-127">ページをローカルでデバッグするのは、Microsoft Edge DevTools アプリを起動するだけでできます。</span><span class="sxs-lookup"><span data-stu-id="1998e-127">To debug a page locally, simply launch the Microsoft Edge DevTools app.</span></span>  <span data-ttu-id="1998e-128">セレクターの [**ローカル**] パネルには、[Edge ブラウザーを開く] タブを含むすべてのアクティブな EdgeHTML コンテンツのプロセスが表示されます。これには、[PWA][PwasEdgehtmlIndex] \ (`WWAHost.exe`プロセス \)、および [webview][HostingWebview] コントロールなどが含まれます。</span><span class="sxs-lookup"><span data-stu-id="1998e-128">The **Local** panel of the chooser displays all of the active EdgeHTML content processes, including open Edge browser tabs, running [PWAs][PwasEdgehtmlIndex] \(`WWAHost.exe` processes\), and [webview][HostingWebview] controls.</span></span>  <span data-ttu-id="1998e-129">目的のターゲットを選択して、DevTools の新しいタブ インスタンスをアタッチして開きます。</span><span class="sxs-lookup"><span data-stu-id="1998e-129">Select your desired target to attach and open a new tab instance of the DevTools.</span></span>  
+<span data-ttu-id="8ff32-127">ページをローカルでデバッグするのは、Microsoft Edge DevTools アプリを起動するだけでできます。</span><span class="sxs-lookup"><span data-stu-id="8ff32-127">To debug a page locally, simply launch the Microsoft Edge DevTools app.</span></span>  <span data-ttu-id="8ff32-128">セレクターの [**ローカル**] パネルには、[Edge ブラウザーを開く] タブを含むすべてのアクティブな EdgeHTML コンテンツのプロセスが表示されます。これには、[PWA][PwasEdgehtmlIndex] \ (`WWAHost.exe`プロセス \)、および [webview][HostingWebview] コントロールなどが含まれます。</span><span class="sxs-lookup"><span data-stu-id="8ff32-128">The **Local** panel of the chooser displays all of the active EdgeHTML content processes, including open Edge browser tabs, running [PWAs][PwasEdgehtmlIndex] \(`WWAHost.exe` processes\), and [webview][HostingWebview] controls.</span></span>  <span data-ttu-id="8ff32-129">目的のターゲットを選択して、DevTools の新しいタブ インスタンスをアタッチして開きます。</span><span class="sxs-lookup"><span data-stu-id="8ff32-129">Select your desired target to attach and open a new tab instance of the DevTools.</span></span>  
 
 :::image type="complex" source="./devtools-guide/media/chooser_local.png" alt-text="DevTools アプリ ローカル パネル":::
-   <span data-ttu-id="1998e-131">DevTools アプリ ローカル パネル</span><span class="sxs-lookup"><span data-stu-id="1998e-131">DevTools app Local panel</span></span>
+   <span data-ttu-id="8ff32-131">DevTools アプリ ローカル パネル</span><span class="sxs-lookup"><span data-stu-id="8ff32-131">DevTools app Local panel</span></span>
 :::image-end:::
 
 <!--![DevTools app Local panel][ImageDevtoolsGuideEdgehtmlChooselocal]  -->  
 
-### <span data-ttu-id="1998e-132">リモート デバッグ</span><span class="sxs-lookup"><span data-stu-id="1998e-132">Remote debugging</span></span>  
+### <span data-ttu-id="8ff32-132">リモート デバッグ</span><span class="sxs-lookup"><span data-stu-id="8ff32-132">Remote debugging</span></span>  
 
-<span data-ttu-id="1998e-133">Microsoft Edge DevTools アプリは、新しくリリースされた [DevTools プロトコル][DevtoolsProtocolEdgehtmlIndex] を介して、リモート コンピューター上のページをデバッグするための基本的なサポートを導入しています。</span><span class="sxs-lookup"><span data-stu-id="1998e-133">The Microsoft Edge DevTools app introduces basic support for debugging pages on a remote machine via our newly released [DevTools Protocol][DevtoolsProtocolEdgehtmlIndex].</span></span>  <span data-ttu-id="1998e-134">最新のリリースでは、[デバッガー][DevtoolsGuideEdgehtml|::ref10::|]、[要素][DevtoolsGuideEdgehtml|::ref11::|] (読み取り専用操作の場合)、および [コンソール][DevtoolsGuideEdgehtml|::ref12::|] パネルの主な機能にリモート アクセスできます。</span><span class="sxs-lookup"><span data-stu-id="1998e-134">With the latest release comes remote access to core functionality in the [Debugger][DevtoolsGuideEdgehtml|::ref10::|], [Elements][DevtoolsGuideEdgehtml|::ref11::|] \(for read-only operations\), and [Console][DevtoolsGuideEdgehtml|::ref12::|] panels.</span></span>  <span data-ttu-id="1998e-135">リモート デバッグは、Microsoft Edge \ (EdgeHTML \) が動作しているデスクトップ ホストに限定されており、他の EdgeHTML ホストと Windows 10デバイスについては、将来のリリースでサポートされる予定です。</span><span class="sxs-lookup"><span data-stu-id="1998e-135">Remote debugging is limited to Microsoft Edge \(EdgeHTML\) running desktop hosts, with support for other EdgeHTML hosts and Windows 10 devices coming in future releases.</span></span>  
+<span data-ttu-id="8ff32-133">Microsoft Edge DevTools アプリは、新しくリリースされた [DevTools プロトコル][DevtoolsProtocolEdgehtmlIndex] を介して、リモート コンピューター上のページをデバッグするための基本的なサポートを導入しています。</span><span class="sxs-lookup"><span data-stu-id="8ff32-133">The Microsoft Edge DevTools app introduces basic support for debugging pages on a remote machine via our newly released [DevTools Protocol][DevtoolsProtocolEdgehtmlIndex].</span></span>  <span data-ttu-id="8ff32-134">最新のリリースでは、[デバッガー][DevtoolsGuideEdgehtml|::ref10::|]、[要素][DevtoolsGuideEdgehtml|::ref11::|] (読み取り専用操作の場合)、および [コンソール][DevtoolsGuideEdgehtml|::ref12::|] パネルの主な機能にリモート アクセスできます。</span><span class="sxs-lookup"><span data-stu-id="8ff32-134">With the latest release comes remote access to core functionality in the [Debugger][DevtoolsGuideEdgehtml|::ref10::|], [Elements][DevtoolsGuideEdgehtml|::ref11::|] \(for read-only operations\), and [Console][DevtoolsGuideEdgehtml|::ref12::|] panels.</span></span>  <span data-ttu-id="8ff32-135">リモート デバッグは、Microsoft Edge \ (EdgeHTML \) が動作しているデスクトップ ホストに限定されており、他の EdgeHTML ホストと Windows 10デバイスについては、将来のリリースでサポートされる予定です。</span><span class="sxs-lookup"><span data-stu-id="8ff32-135">Remote debugging is limited to Microsoft Edge \(EdgeHTML\) running desktop hosts, with support for other EdgeHTML hosts and Windows 10 devices coming in future releases.</span></span>  
 
-<span data-ttu-id="1998e-136">始めるには、[*Microsoft Edge DevTools*][DevtoolsProtocolEdgehtmlClientsEdgePreview] の [DevTools プロトコル][DevtoolsProtocolEdgehtmlIndex] ドキュメントにあるセクションを確認してください。</span><span class="sxs-lookup"><span data-stu-id="1998e-136">To get started, check out the [*Microsoft Edge DevTools*][DevtoolsProtocolEdgehtmlClientsEdgePreview] section of the [DevTools Protocol][DevtoolsProtocolEdgehtmlIndex] docs.</span></span>  
+<span data-ttu-id="8ff32-136">始めるには、[*Microsoft Edge DevTools*][DevtoolsProtocolEdgehtmlClientsEdgePreview] の [DevTools プロトコル][DevtoolsProtocolEdgehtmlIndex] ドキュメントにあるセクションを確認してください。</span><span class="sxs-lookup"><span data-stu-id="8ff32-136">To get started, check out the [*Microsoft Edge DevTools*][DevtoolsProtocolEdgehtmlClientsEdgePreview] section of the [DevTools Protocol][DevtoolsProtocolEdgehtmlIndex] docs.</span></span>  
 
 :::image type="complex" source="./devtools-guide/media/chooser_remote.png" alt-text="DevTools アプリのリモート パネル":::
-   <span data-ttu-id="1998e-138">DevTools アプリのリモート パネル</span><span class="sxs-lookup"><span data-stu-id="1998e-138">DevTools app Remote panel</span></span>
+   <span data-ttu-id="8ff32-138">DevTools アプリのリモート パネル</span><span class="sxs-lookup"><span data-stu-id="8ff32-138">DevTools app Remote panel</span></span>
 :::image-end:::
 
 <!--![DevTools app Remote panel][ImageDevtoolsGuideEdgehtmlRemote]  -->  
 
-## <span data-ttu-id="1998e-139">一般的なショートカット</span><span class="sxs-lookup"><span data-stu-id="1998e-139">General Shortcuts</span></span>  
+## <span data-ttu-id="8ff32-139">一般的なショートカット</span><span class="sxs-lookup"><span data-stu-id="8ff32-139">General Shortcuts</span></span>  
 
 > [!IMPORTANT]
-> <span data-ttu-id="1998e-140">すべてのショートカットは、最新バージョンの Windows で確認されています。</span><span class="sxs-lookup"><span data-stu-id="1998e-140">All shortcuts have been verified in the most recent version of Windows.</span></span>  
-> <span data-ttu-id="1998e-141">ショートカットを使用できない場合は、Windows のコピーを更新してください。</span><span class="sxs-lookup"><span data-stu-id="1998e-141">If you are unable to use a shortcut, please update your copy of Windows.</span></span>  
+> <span data-ttu-id="8ff32-140">すべてのショートカットは、最新バージョンの Windows で確認されています。</span><span class="sxs-lookup"><span data-stu-id="8ff32-140">All shortcuts have been verified in the most recent version of Windows.</span></span>  
+> <span data-ttu-id="8ff32-141">ショートカットを使用できない場合は、Windows のコピーを更新してください。</span><span class="sxs-lookup"><span data-stu-id="8ff32-141">If you are unable to use a shortcut, please update your copy of Windows.</span></span>  
 
-<span data-ttu-id="1998e-142">これらのショートカットは、DevTools のメイン ウィンドウを制御し、すべてのツールで動作します。</span><span class="sxs-lookup"><span data-stu-id="1998e-142">These shortcuts control the main DevTools window and should work across all tools.</span></span>  
+<span data-ttu-id="8ff32-142">これらのショートカットは、DevTools のメイン ウィンドウを制御し、すべてのツールで動作します。</span><span class="sxs-lookup"><span data-stu-id="8ff32-142">These shortcuts control the main DevTools window and should work across all tools.</span></span>  
 
-| <span data-ttu-id="1998e-143">操作</span><span class="sxs-lookup"><span data-stu-id="1998e-143">Action</span></span> | <span data-ttu-id="1998e-144">ショートカット</span><span class="sxs-lookup"><span data-stu-id="1998e-144">Shortcut</span></span> |  
+| <span data-ttu-id="8ff32-143">操作</span><span class="sxs-lookup"><span data-stu-id="8ff32-143">Action</span></span> | <span data-ttu-id="8ff32-144">ショートカット</span><span class="sxs-lookup"><span data-stu-id="8ff32-144">Shortcut</span></span> |  
 |:--- |:--- |  
-| <span data-ttu-id="1998e-145">DevTools の表示/非表示 \ (最後に表示されたパネルに表示される \)</span><span class="sxs-lookup"><span data-stu-id="1998e-145">Show/Hide DevTools \(opens to last viewed panel\)</span></span> | `F12`<span data-ttu-id="1998e-146">, `Ctrl`+`Shift`+</span><span class="sxs-lookup"><span data-stu-id="1998e-146">, `Ctrl`+`Shift`+</span></span>`I` |  
-| <span data-ttu-id="1998e-147">ドッキングの切り替え \ （ドッキングなし / 一番下/右 \）</span><span class="sxs-lookup"><span data-stu-id="1998e-147">Toggle docking \(Undock/Bottom/Right\)</span></span> | `Ctrl`+`Shift`+`D` |  
-| <span data-ttu-id="1998e-148">ファイルを開く</span><span class="sxs-lookup"><span data-stu-id="1998e-148">Open file</span></span> | `Ctrl`<span data-ttu-id="1998e-149">+`P`, `Ctrl`+</span><span class="sxs-lookup"><span data-stu-id="1998e-149">+`P`, `Ctrl`+</span></span>`O` |  
-| <span data-ttu-id="1998e-150">デバッガーで編集不可の HTML ソース コードを表示する</span><span class="sxs-lookup"><span data-stu-id="1998e-150">Show non-editable HTML source code in Debugger</span></span> | `Ctrl`+`U` |  
-| <span data-ttu-id="1998e-151">他のツールの下部にあるコンソールの表示/非表示</span><span class="sxs-lookup"><span data-stu-id="1998e-151">Show/hide Console at the bottom of any other tool</span></span>  | `Ctrl`+`` ` `` |  
-| <span data-ttu-id="1998e-152">要素に切り替える \ (DOM Explorer \)</span><span class="sxs-lookup"><span data-stu-id="1998e-152">Switch to Elements \(DOM Explorer\)</span></span> | `Ctrl`+`1` |  
-| <span data-ttu-id="1998e-153">コンソールに切り替える</span><span class="sxs-lookup"><span data-stu-id="1998e-153">Switch to Console</span></span> |  `Ctrl`+`2` |  
-| <span data-ttu-id="1998e-154">デバッガーに切り替える</span><span class="sxs-lookup"><span data-stu-id="1998e-154">Switch to Debugger</span></span> | `Ctrl`+`3` |  
-| <span data-ttu-id="1998e-155">ネットワークに切り替える</span><span class="sxs-lookup"><span data-stu-id="1998e-155">Switch to Network</span></span> | `Ctrl`+`4` |  
-| <span data-ttu-id="1998e-156">パフォーマンスに切り替える</span><span class="sxs-lookup"><span data-stu-id="1998e-156">Switch to Performance</span></span> | `Ctrl`+`5` |  
-| <span data-ttu-id="1998e-157">メモリに切り替える</span><span class="sxs-lookup"><span data-stu-id="1998e-157">Switch to Memory</span></span> | `Ctrl`+`6` |  
-| <span data-ttu-id="1998e-158">エミュレーションに切り替える</span><span class="sxs-lookup"><span data-stu-id="1998e-158">Switch to Emulation</span></span> | `Ctrl`+`7` |  
-| <span data-ttu-id="1998e-159">ヘルプ ドキュメント</span><span class="sxs-lookup"><span data-stu-id="1998e-159">Help Document</span></span> | `F1` |  
-| <span data-ttu-id="1998e-160">次のツール</span><span class="sxs-lookup"><span data-stu-id="1998e-160">Next tool</span></span> | `Ctrl`+`F6` |  
-| <span data-ttu-id="1998e-161">前のツール</span><span class="sxs-lookup"><span data-stu-id="1998e-161">Previous tool</span></span> | `Ctrl`+`Shift`+`F6` |  
-| <span data-ttu-id="1998e-162">前のツール \ (履歴から \)</span><span class="sxs-lookup"><span data-stu-id="1998e-162">Previous tool \(from history\)</span></span> | `Ctrl`+`Shift`+`[` |  
-| <span data-ttu-id="1998e-163">次のツール \ (履歴から \)</span><span class="sxs-lookup"><span data-stu-id="1998e-163">Next tool \(from history\)</span></span> | `Ctrl`+`Shift`+`]` |  
-| <span data-ttu-id="1998e-164">次のサブフレーム</span><span class="sxs-lookup"><span data-stu-id="1998e-164">Next Subframe</span></span> | `F6` |  
-| <span data-ttu-id="1998e-165">前のサブフレーム</span><span class="sxs-lookup"><span data-stu-id="1998e-165">Previous Subframe</span></span> | `Shift`+`F6` |  
-| <span data-ttu-id="1998e-166">[検索] ボックス内の次の一致</span><span class="sxs-lookup"><span data-stu-id="1998e-166">Next match in Search box</span></span> | `F3` |  
-| <span data-ttu-id="1998e-167">[検索] ボックス内の前の一致</span><span class="sxs-lookup"><span data-stu-id="1998e-167">Previous match in Search box</span></span> | `Shift`+`F3` |  
-| <span data-ttu-id="1998e-168">[検索] ボックス内の検索</span><span class="sxs-lookup"><span data-stu-id="1998e-168">Find in search box</span></span> | `Ctrl`+`F` |  
-| <span data-ttu-id="1998e-169">一番下にある [コンソール] にフォーカスを移動する</span><span class="sxs-lookup"><span data-stu-id="1998e-169">Give focus to console at the bottom</span></span> | `Alt`+`Shift`+`I` |  
-| <span data-ttu-id="1998e-170">コンソールに DevTools を起動する</span><span class="sxs-lookup"><span data-stu-id="1998e-170">Launch DevTools to Console</span></span> | `Ctrl`+`Shift`+`J` |  
-| <span data-ttu-id="1998e-171">ページを更新する</span><span class="sxs-lookup"><span data-stu-id="1998e-171">Refresh the page</span></span> | `Ctrl`<span data-ttu-id="1998e-172">+`Shift`+`F5`, `Ctrl`+</span><span class="sxs-lookup"><span data-stu-id="1998e-172">+`Shift`+`F5`, `Ctrl`+</span></span>`R` |  
+| <span data-ttu-id="8ff32-145">DevTools の表示/非表示 \ (最後に表示されたパネルに表示される \)</span><span class="sxs-lookup"><span data-stu-id="8ff32-145">Show/Hide DevTools \(opens to last viewed panel\)</span></span> | `F12`<span data-ttu-id="8ff32-146">, `Ctrl`+`Shift`+</span><span class="sxs-lookup"><span data-stu-id="8ff32-146">, `Ctrl`+`Shift`+</span></span>`I` |  
+| <span data-ttu-id="8ff32-147">ドッキングの切り替え \ （ドッキングなし / 一番下/右 \）</span><span class="sxs-lookup"><span data-stu-id="8ff32-147">Toggle docking \(Undock/Bottom/Right\)</span></span> | `Ctrl`+`Shift`+`D` |  
+| <span data-ttu-id="8ff32-148">ファイルを開く</span><span class="sxs-lookup"><span data-stu-id="8ff32-148">Open file</span></span> | `Ctrl`<span data-ttu-id="8ff32-149">+`P`, `Ctrl`+</span><span class="sxs-lookup"><span data-stu-id="8ff32-149">+`P`, `Ctrl`+</span></span>`O` |  
+| <span data-ttu-id="8ff32-150">デバッガーで編集不可の HTML ソース コードを表示する</span><span class="sxs-lookup"><span data-stu-id="8ff32-150">Show non-editable HTML source code in Debugger</span></span> | `Ctrl`+`U` |  
+| <span data-ttu-id="8ff32-151">他のツールの下部にあるコンソールの表示/非表示</span><span class="sxs-lookup"><span data-stu-id="8ff32-151">Show/hide Console at the bottom of any other tool</span></span>  | `Ctrl`+`` ` `` |  
+| <span data-ttu-id="8ff32-152">要素に切り替える \ (DOM Explorer \)</span><span class="sxs-lookup"><span data-stu-id="8ff32-152">Switch to Elements \(DOM Explorer\)</span></span> | `Ctrl`+`1` |  
+| <span data-ttu-id="8ff32-153">コンソールに切り替える</span><span class="sxs-lookup"><span data-stu-id="8ff32-153">Switch to Console</span></span> |  `Ctrl`+`2` |  
+| <span data-ttu-id="8ff32-154">デバッガーに切り替える</span><span class="sxs-lookup"><span data-stu-id="8ff32-154">Switch to Debugger</span></span> | `Ctrl`+`3` |  
+| <span data-ttu-id="8ff32-155">ネットワークに切り替える</span><span class="sxs-lookup"><span data-stu-id="8ff32-155">Switch to Network</span></span> | `Ctrl`+`4` |  
+| <span data-ttu-id="8ff32-156">パフォーマンスに切り替える</span><span class="sxs-lookup"><span data-stu-id="8ff32-156">Switch to Performance</span></span> | `Ctrl`+`5` |  
+| <span data-ttu-id="8ff32-157">メモリに切り替える</span><span class="sxs-lookup"><span data-stu-id="8ff32-157">Switch to Memory</span></span> | `Ctrl`+`6` |  
+| <span data-ttu-id="8ff32-158">エミュレーションに切り替える</span><span class="sxs-lookup"><span data-stu-id="8ff32-158">Switch to Emulation</span></span> | `Ctrl`+`7` |  
+| <span data-ttu-id="8ff32-159">ヘルプ ドキュメント</span><span class="sxs-lookup"><span data-stu-id="8ff32-159">Help Document</span></span> | `F1` |  
+| <span data-ttu-id="8ff32-160">次のツール</span><span class="sxs-lookup"><span data-stu-id="8ff32-160">Next tool</span></span> | `Ctrl`+`F6` |  
+| <span data-ttu-id="8ff32-161">前のツール</span><span class="sxs-lookup"><span data-stu-id="8ff32-161">Previous tool</span></span> | `Ctrl`+`Shift`+`F6` |  
+| <span data-ttu-id="8ff32-162">前のツール \ (履歴から \)</span><span class="sxs-lookup"><span data-stu-id="8ff32-162">Previous tool \(from history\)</span></span> | `Ctrl`+`Shift`+`[` |  
+| <span data-ttu-id="8ff32-163">次のツール \ (履歴から \)</span><span class="sxs-lookup"><span data-stu-id="8ff32-163">Next tool \(from history\)</span></span> | `Ctrl`+`Shift`+`]` |  
+| <span data-ttu-id="8ff32-164">次のサブフレーム</span><span class="sxs-lookup"><span data-stu-id="8ff32-164">Next Subframe</span></span> | `F6` |  
+| <span data-ttu-id="8ff32-165">前のサブフレーム</span><span class="sxs-lookup"><span data-stu-id="8ff32-165">Previous Subframe</span></span> | `Shift`+`F6` |  
+| <span data-ttu-id="8ff32-166">[検索] ボックス内の次の一致</span><span class="sxs-lookup"><span data-stu-id="8ff32-166">Next match in Search box</span></span> | `F3` |  
+| <span data-ttu-id="8ff32-167">[検索] ボックス内の前の一致</span><span class="sxs-lookup"><span data-stu-id="8ff32-167">Previous match in Search box</span></span> | `Shift`+`F3` |  
+| <span data-ttu-id="8ff32-168">[検索] ボックス内の検索</span><span class="sxs-lookup"><span data-stu-id="8ff32-168">Find in search box</span></span> | `Ctrl`+`F` |  
+| <span data-ttu-id="8ff32-169">一番下にある [コンソール] にフォーカスを移動する</span><span class="sxs-lookup"><span data-stu-id="8ff32-169">Give focus to console at the bottom</span></span> | `Alt`+`Shift`+`I` |  
+| <span data-ttu-id="8ff32-170">コンソールに DevTools を起動する</span><span class="sxs-lookup"><span data-stu-id="8ff32-170">Launch DevTools to Console</span></span> | `Ctrl`+`Shift`+`J` |  
+| <span data-ttu-id="8ff32-171">ページを更新する</span><span class="sxs-lookup"><span data-stu-id="8ff32-171">Refresh the page</span></span> | `Ctrl`<span data-ttu-id="8ff32-172">+`Shift`+`F5`, `Ctrl`+</span><span class="sxs-lookup"><span data-stu-id="8ff32-172">+`Shift`+`F5`, `Ctrl`+</span></span>`R` |  
 
 > [!NOTE]
-> <span data-ttu-id="1998e-173">デバッグ中にブレークポイントで一時停止している場合、**ページを更新** アクションが最初にランタイムを再開します。</span><span class="sxs-lookup"><span data-stu-id="1998e-173">If you are debugging and paused at a breakpoint, the **Refresh the page** action resumes the runtime first.</span></span>  
+> <span data-ttu-id="8ff32-173">デバッグ中にブレークポイントで一時停止している場合、**ページを更新** アクションが最初にランタイムを再開します。</span><span class="sxs-lookup"><span data-stu-id="8ff32-173">If you are debugging and paused at a breakpoint, the **Refresh the page** action resumes the runtime first.</span></span>  
 
-## <span data-ttu-id="1998e-174">フィードバック</span><span class="sxs-lookup"><span data-stu-id="1998e-174">Feedback</span></span>  
+## <span data-ttu-id="8ff32-174">Microsoft Edge DevTools チームと連絡を取る</span><span class="sxs-lookup"><span data-stu-id="8ff32-174">Getting in touch with the Microsoft Edge DevTools team</span></span>  
 
-<span data-ttu-id="1998e-175">フィードバックをお送りください。 Microsoft Edge \ (EdgeHTML \) DevTools の改善にご協力ください。</span><span class="sxs-lookup"><span data-stu-id="1998e-175">Please send your feedback to help improve the Microsoft Edge \(EdgeHTML\) DevTools for you!</span></span>  <span data-ttu-id="1998e-176">ツール \ (`F12` \) を開き、[[フィードバック の送信](#microsoft-edge-edgehtml-developer-tools)] ボタンを選択します。</span><span class="sxs-lookup"><span data-stu-id="1998e-176">Simply open the tools \(`F12`\) and select the [Send feedback](#microsoft-edge-edgehtml-developer-tools) button.</span></span>  
+<span data-ttu-id="8ff32-175">フィードバックをお送りください。 Microsoft Edge \ (EdgeHTML \) DevTools の改善にご協力ください。</span><span class="sxs-lookup"><span data-stu-id="8ff32-175">Please send your feedback to help improve the Microsoft Edge \(EdgeHTML\) DevTools for you!</span></span>  <span data-ttu-id="8ff32-176">ツール \ (`F12` \) を開き、[[フィードバック の送信](#microsoft-edge-edgehtml-developer-tools)] ボタンを選択します。</span><span class="sxs-lookup"><span data-stu-id="8ff32-176">Simply open the tools \(`F12`\) and select the [Send feedback](#microsoft-edge-edgehtml-developer-tools) button.</span></span>  
 
-<span data-ttu-id="1998e-177">[Windows Insider][WindowsInsiderProgram] に加入して、[DevTools に搭載される最新機能][DevtoolsGuideEdgehtmlWhatsnew] をプレビューしてください。</span><span class="sxs-lookup"><span data-stu-id="1998e-177">Become a [Windows Insider][WindowsInsiderProgram] to preview the [latest features coming to the DevTools][DevtoolsGuideEdgehtmlWhatsnew].</span></span>  <span data-ttu-id="1998e-178">Windows フィードバック Hub アプリを使用して、一般的な Windows の提案や問題に関する情報を投稿、記録、追跡して、サポートを受けることができます。</span><span class="sxs-lookup"><span data-stu-id="1998e-178">Use the Windows Feedback Hub app to post, up-vote, track and get support for general Windows suggestions and problems.</span></span>  
+<span data-ttu-id="8ff32-177">[Windows Insider][WindowsInsiderProgram] に加入して、[DevTools に搭載される最新機能][DevtoolsGuideEdgehtmlWhatsnew] をプレビューしてください。</span><span class="sxs-lookup"><span data-stu-id="8ff32-177">Become a [Windows Insider][WindowsInsiderProgram] to preview the [latest features coming to the DevTools][DevtoolsGuideEdgehtmlWhatsnew].</span></span>  <span data-ttu-id="8ff32-178">Windows フィードバック Hub アプリを使用して、一般的な Windows の提案や問題に関する情報を投稿、記録、追跡して、サポートを受けることができます。</span><span class="sxs-lookup"><span data-stu-id="8ff32-178">Use the Windows Feedback Hub app to post, up-vote, track and get support for general Windows suggestions and problems.</span></span>  
 
 <!-- image links  -->  
 
