@@ -7,12 +7,12 @@ ms.date: 08/25/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools、実験
-ms.openlocfilehash: 4915c909921bb4c5eaa8d727ab7a08493b941445
-ms.sourcegitcommit: b88d2a55a59db8373ff2bac275d3730977bf19c9
+ms.openlocfilehash: a5793b6f4b67add313958ad4b8cee01cb7b09dbf
+ms.sourcegitcommit: 7e3644e6b1d568ab795168e421c013814efa0073
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "10986123"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "10996160"
 ---
 # 試験的機能  
 
@@ -46,24 +46,11 @@ Microsoft Edge での試験的な機能 (またはオフ) を有効にするに�
 
 | 実験的機能 | Microsoft Edge バージョン |  
 |:--- |:--- |  
-| [カスタムキーボードショートカットの [設定] タブを有効にする](#enable-custom-keyboard-shortcuts-settings-tab) | 84以降 |
 | [新しい CSS グリッドのデバッグ機能を有効にする](#enable-new-css-grid-debugging-features) | 85以降 |  
 | [パネル間でタブを移動できるようにサポートを有効にする](#enable-support-to-move-tabs-between-panels) | 85以降 |  
 | [Web ヒントを有効にする](#enable-webhint) | 85以降 |  
 | [ネットワーク本体を有効にする](#enable-network-console) | 85以降 |  
 | [ソースオーダービューアーを有効にする](#enable-source-order-viewer) | 86以降 |  
-
-### カスタムキーボードショートカットの [設定] タブを有効にする  
-
-Devtools の [[設定][DevToolsCustomizeSettings]] で新しい [**ショートカット**] ページが用意されています。これにより、devtools での[キーボードショートカット][DevToolsShortcuts]を[Microsoft Visual Studio コード][VisualstudioCode]に対応付けることができます。  
-
-実験を有効にしたら、[選択] を使用して[Devtools の設定][DevToolsCustomizeSettings]をもう一度開き `Shift` + `?` ます。  [新しい **ショートカット** ] ページに移動します。  [**標準のショートカットキー**の選択] ドロップダウンで [ **Devtools (既定値)** ] を選び、[ **Visual Studio コード**] を選びます。  DevTools のキーボードショートカットは、Visual Studio コードで同等のアクションのショートカットと一致するようになりました。  
-
-:::image type="complex" source="./media/experiments-keyboard-shortcut.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる" lightbox="./media/experiments-keyboard-shortcut.png":::
-   DevTools for Visual Studio コードのキーボードショートカットを一致させる  
-:::image-end:::  
-
-たとえば、Windows では、 [Visual Studio コード][VisualstudioCodeShortcutsKeyboardWindows] でスクリプトを一時停止または実行し続けるためのキーボードショートカットは `F5` です。  **Devtools (既定)** の事前設定を使用すると、devtools の同じショートカットを使うことが `F8` できます。  **Visual Studio コード**の事前設定を使用すると、ショートカットも表示され `F5` ます。  
 
 ### 新しい CSS グリッドのデバッグ機能を有効にする  
 
@@ -133,7 +120,7 @@ CSS グリッドレイアウトを含む web サイトをデバッグすると�
 ## 以前の実験的な機能  
 
 *   Microsoft Edge バージョン83以降では、 [3D ビュー][Devtools3dViewIndex]を使用できるようになり、既定でオンになっています。  
-
+*   Microsoft Edge バージョン86以降では、[ショートカット][DevtoolsCustomKeyboardShortcuts]キーをカスタマイズできるようになりました。
 ## 実験的な機能についてフィードバックを提供する  
 
 Microsoft Edge DevTools のテスト、または DevTools に関連するその他の機能についてのフィードバックを提供します。  
@@ -152,10 +139,8 @@ Microsoft Edge DevTools のテスト、または DevTools に関連するその�
 [DevToolsCustomizeSettings]: ./customize/index.md#settings "設定-Microsoft Edge DevTools のカスタマイズ |Microsoft ドキュメント"  
 [DevToolsShortcuts]: ./shortcuts.md "Microsoft Edge DevTools のキーボードショートカット |Microsoft ドキュメント"  
 [DevtoolsOpen]: ./open.md "Microsoft Edge DevTools を開く |Microsoft ドキュメント"  
+[DevtoolsCustomKeyboardShortcuts]: ./customize/shortcuts.md "Microsoft Edge DevTools でキーボードショートカットをカスタマイズする |Microsoft ドキュメント"
 
 [TwitterEdgedevtools]: https://www.twitter.com/EdgeDevTools "Microsoft Edge DevTools |Twitter"  
-
-[VisualstudioCode]: https://code.visualstudio.com "Microsoft Visual Studio コード"  
-[VisualstudioCodeShortcutsKeyboardWindows]: https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf "Visual Studio のコードのキーボードショートカット (Windows |) |Microsoft Visual Studio コード"  
 
 [WebhintMain]: https://webhint.io "web ヒント" 
