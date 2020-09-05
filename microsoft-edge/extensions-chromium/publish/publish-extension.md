@@ -1,302 +1,175 @@
 ---
-description: Microsoft Store にエッジ (Chromium) の拡張機能を公開する手順を説明します。
-title: 内線番号を発行する
+description: Microsoft edge (Chromium) の拡張機能を Microsoft Edge のアドオンストアに公開します。
+title: 拡張機能の公開
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 04/21/2020
+ms.date: 09/04/2020
 ms.topic: article
 ms.prod: microsoft-edge-chromium
 keywords: edge-chromium、拡張機能の開発、ブラウザーの拡張、アドオン、パートナーセンター、開発者
-ms.openlocfilehash: 7b5be511af1e81efd5da4fc4bc0691f317437f94
-ms.sourcegitcommit: 531ec8aa1f89b28bc4d271e8e995f846f2392bc3
+ms.openlocfilehash: 47e6a96ec2fcd3d2ad8fb3edad702abfc91ab57d
+ms.sourcegitcommit: 7e3644e6b1d568ab795168e421c013814efa0073
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "10607379"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "10996216"
 ---
-# <span data-ttu-id="d8b80-104">内線番号を発行する</span><span class="sxs-lookup"><span data-stu-id="d8b80-104">Publish An Extension</span></span>  
+# <span data-ttu-id="440a7-104">拡張機能の公開</span><span class="sxs-lookup"><span data-stu-id="440a7-104">Publish your extension</span></span>  
 
-<span data-ttu-id="d8b80-105">Microsoft Edge のアドオンカタログ (Microsoft Edge アドオン \) に拡張機能を公開します。</span><span class="sxs-lookup"><span data-stu-id="d8b80-105">Publish your Extension on Microsoft Edge Addons catalog \(Microsoft Edge Addons\).</span></span>  <span data-ttu-id="d8b80-106">まず、[パートナーセンター][MicrosoftPartnerCenter]で申請を作成して送信する必要があります。</span><span class="sxs-lookup"><span data-stu-id="d8b80-106">You must first create a submission on [Partner Center][MicrosoftPartnerCenter] and submit it.</span></span>  <span data-ttu-id="d8b80-107">このドキュメントでは、拡張機能の申請を作成するために提供する必要があるすべての詳細を示します。</span><span class="sxs-lookup"><span data-stu-id="d8b80-107">This document lists all the details that you must provide to create an Extension submission.</span></span>  
+<span data-ttu-id="440a7-105">拡張機能の開発とテストが完了したら、Microsoft Edge のアドオンカタログを使用して拡張機能を配布する準備ができている場合があります。</span><span class="sxs-lookup"><span data-stu-id="440a7-105">After completing development and testing of your extension, you may be ready to distribute your extension using the Microsoft Edge add-ons catalog.</span></span>  <span data-ttu-id="440a7-106">または、Microsoft Edge ユーザーが使用できるようにする既存の chromium 拡張機能がある場合は、 [既存の chromium 拡張機能][PortChromiumExtension] を microsoft edge に移植することができます。</span><span class="sxs-lookup"><span data-stu-id="440a7-106">Alternatively, if you have an existing chromium extension that you want to make available to Microsoft Edge users, you may [port your existing Chromium extension][PortChromiumExtension] to Microsoft Edge.</span></span>  
 
-## <span data-ttu-id="d8b80-108">始める前に</span><span class="sxs-lookup"><span data-stu-id="d8b80-108">Before You Begin</span></span>  
+<span data-ttu-id="440a7-107">拡張機能を Microsoft Edge のアドオンカタログに公開すると、拡張機能が強化され、エンドユーザーが利用できるようになります。</span><span class="sxs-lookup"><span data-stu-id="440a7-107">Publishing your extension to the Microsoft Edge add-ons catalog increases the reach of your extension and makes it available for end users.</span></span>  <span data-ttu-id="440a7-108">このトピックでは、Microsoft Edge のアドオンカタログに拡張機能を提出するプロセスのチュートリアルを示します。</span><span class="sxs-lookup"><span data-stu-id="440a7-108">This topic provides a walkthrough of the process to submit your extension to the Microsoft Edge add-ons catalog.</span></span>  
 
-*   <span data-ttu-id="d8b80-109">Microsoft Edge のアドオンで拡張機能を送信するには、[パートナーセンター][MicrosoftPartnerCenter]でアクティブな開発者アカウントが必要です。</span><span class="sxs-lookup"><span data-stu-id="d8b80-109">You must have an active developer account on [Partner Center][MicrosoftPartnerCenter] to submit your Extension in Microsoft Edge Addons.</span></span>  <span data-ttu-id="d8b80-110">まだインストールしていない場合は、[新しい開発者アカウントを作成][MicrosoftPartnerCenter]します。</span><span class="sxs-lookup"><span data-stu-id="d8b80-110">If you do not have one, [create a new developer account][MicrosoftPartnerCenter].</span></span>  
-*   <span data-ttu-id="d8b80-111">拡張パッケージの zip ファイルを作成して、次のファイルが含まれていることを確認します。</span><span class="sxs-lookup"><span data-stu-id="d8b80-111">Create a zip file of your Extension package and ensure that it contains these files:</span></span>  
-    *   <span data-ttu-id="d8b80-112">マニフェストファイルと、拡張機能の名前とバージョンを定義する必要があります。</span><span class="sxs-lookup"><span data-stu-id="d8b80-112">The manifest file and it must define the name and version of your Extension.</span></span>  
-    *   <span data-ttu-id="d8b80-113">拡張機能に必要な画像やその他のファイル。</span><span class="sxs-lookup"><span data-stu-id="d8b80-113">The images and other files that are required for your Extension.</span></span>  
+## <span data-ttu-id="440a7-109">始める前に</span><span class="sxs-lookup"><span data-stu-id="440a7-109">Before you begin</span></span>  
 
+<span data-ttu-id="440a7-110">この時点で、拡張機能の動作プロトタイプを用意する必要があります。</span><span class="sxs-lookup"><span data-stu-id="440a7-110">At this point, you should have a working prototype of your extension ready.</span></span>  <span data-ttu-id="440a7-111">内線番号を作成する方法については、「 [はじめ][ExtensionsGettingStarted]に」のチュートリアルを参照してください。</span><span class="sxs-lookup"><span data-stu-id="440a7-111">For information on how to create an extension, refer to the [Getting started tutorial][ExtensionsGettingStarted].</span></span>  
 
-<span data-ttu-id="d8b80-114">拡張機能の構築を開始していない場合は、「Microsoft Edge Chromium 拡張機能を構築するための[はじめ][ExtensionsGettingStarted]に」チュートリアルを参照してください。</span><span class="sxs-lookup"><span data-stu-id="d8b80-114">If you have not started building an Extension, you may refer to the [Getting Started][ExtensionsGettingStarted] tutorial for building a Microsoft Edge Chromium extension.</span></span>  
+<span data-ttu-id="440a7-112">Microsoft Edge のアドオン web サイトに拡張機能を公開するには、 [パートナーセンター][MicrosoftPartnerCenter]でアクティブな開発者アカウントが必要です。</span><span class="sxs-lookup"><span data-stu-id="440a7-112">To publish your extension to the Microsoft Edge add-ons website, you must have an active developer account on [Partner Center][MicrosoftPartnerCenter].</span></span>  <span data-ttu-id="440a7-113">新しい開発者アカウントを開いて Microsoft Edge のアドオンプログラムに登録するには、 [開発者登録][DeveloperRegistration] ガイドに記載されているプロセスに従います。</span><span class="sxs-lookup"><span data-stu-id="440a7-113">To open a new developer account and register to the Microsoft Edge add-ons program, follow the process mentioned in the [Developer registration][DeveloperRegistration] guide.</span></span>  
 
-<span data-ttu-id="d8b80-115">[パートナーセンター][MicrosoftPartnerCenter]で拡張機能の申請を作成するには、次の手順を実行します。</span><span class="sxs-lookup"><span data-stu-id="d8b80-115">To create an Extension submission on [Partner Center][MicrosoftPartnerCenter], follow these steps.</span></span>  
+<span data-ttu-id="440a7-114">拡張機能パッケージを表す zip ファイルを作成します。</span><span class="sxs-lookup"><span data-stu-id="440a7-114">Create a zip file that represents your extension package.</span></span>  <span data-ttu-id="440a7-115">拡張機能パッケージには、次のファイルが含まれている必要があります。</span><span class="sxs-lookup"><span data-stu-id="440a7-115">Your extension package must include the following files.</span></span>  
 
-## <span data-ttu-id="d8b80-116">手順 1: 新しい申請を開始する</span><span class="sxs-lookup"><span data-stu-id="d8b80-116">Step 1: Start a New Submission</span></span>  
+*   <span data-ttu-id="440a7-116">拡張機能の名前、短い説明、アクセス許可、既定の言語などの詳細を指定する拡張マニフェスト。</span><span class="sxs-lookup"><span data-stu-id="440a7-116">The extension manifest specifying details like the name of the extension, short description, permissions, and default language.</span></span>  
+*   <span data-ttu-id="440a7-117">拡張子によって必要な画像やその他のファイル。</span><span class="sxs-lookup"><span data-stu-id="440a7-117">Images and other files required by your extension.</span></span>  
 
-<span data-ttu-id="d8b80-117">[開発者ダッシュボード][MicrosoftPartnerCenter]に移動します。</span><span class="sxs-lookup"><span data-stu-id="d8b80-117">Go to your [developer dashboard][MicrosoftPartnerCenter].</span></span>  <span data-ttu-id="d8b80-118">[概要] ページで、[**新しい拡張機能の作成**] をクリックします。</span><span class="sxs-lookup"><span data-stu-id="d8b80-118">From the Overview page, click **Create new extension**.</span></span>  
+<span data-ttu-id="440a7-118">マニフェストの次のフィールドは、ストア登録情報の詳細に自動的に含まれており、このトピックの後半で説明するストア登録情報ページから変更することはできません。</span><span class="sxs-lookup"><span data-stu-id="440a7-118">The following fields in the manifest are automatically included in your store listing details and are not able to be modified from the store listings page, which is described later in this topic.</span></span>  <span data-ttu-id="440a7-119">パッケージをパートナーセンターにアップロードする前に、[ストアの詳細] ページの優先表示に合わせてフィールドが入力されていることを確認します。</span><span class="sxs-lookup"><span data-stu-id="440a7-119">Ensure the fields are filled-out to match your preferred display on the store details page, before uploading your package to Partner Center.</span></span>  <span data-ttu-id="440a7-120">マニフェストファイルに必要なコードの例については、マニフェストファイルの基本を確認してください。</span><span class="sxs-lookup"><span data-stu-id="440a7-120">For an example of the code required for the manifest file, review the manifest file basics.</span></span>  
 
-## <span data-ttu-id="d8b80-119">手順 2: 拡張機能 Zip ファイルをアップロードする</span><span class="sxs-lookup"><span data-stu-id="d8b80-119">Step 2: Upload Your Extension Zip File</span></span>  
+*   `Name` <span data-ttu-id="440a7-121">マニフェストファイルのフィールド。 [ストアの詳細] ページの **表示名** です。</span><span class="sxs-lookup"><span data-stu-id="440a7-121">field in the manifest file, which is the **Display name** on the store details page.</span></span>  
+*   `Description` <span data-ttu-id="440a7-122">マニフェストファイルのフィールド。 [ストアの詳細] ページの **短い説明** です。</span><span class="sxs-lookup"><span data-stu-id="440a7-122">field in the manifest file, which is the **Short description** on the store details page.</span></span>  <span data-ttu-id="440a7-123">内線番号の一覧の一番上に表示する、catchy の短い説明を入力します。</span><span class="sxs-lookup"><span data-stu-id="440a7-123">Provide a short, catchy description to display at the top of the listing for your extension.</span></span>  <span data-ttu-id="440a7-124">含まれている場合、拡張機能マニフェストファイルに指定されている短い説明がストア登録情報に表示されます。</span><span class="sxs-lookup"><span data-stu-id="440a7-124">When included, the short description specified in the extension manifest file is displayed in your store listing.</span></span>  <span data-ttu-id="440a7-125">マニフェストファイルに短い説明が含まれていない場合は、説明の最初の数行が表示されます。</span><span class="sxs-lookup"><span data-stu-id="440a7-125">If a short description is not included in the manifest file, the first few lines of Description are displayed.</span></span>  <span data-ttu-id="440a7-126">ストア登録情報ページでのコンテンツの繰り返しを回避するための簡単な説明を提供する必要があります。</span><span class="sxs-lookup"><span data-stu-id="440a7-126">You should provide a brief description to avoid content repetition on your store listing page.</span></span>  
 
-<span data-ttu-id="d8b80-120">[**パッケージ**] ページでは、拡張機能の申請用に zip ファイルをアップロードします。</span><span class="sxs-lookup"><span data-stu-id="d8b80-120">The **Package** page is where you upload the zip file for your Extension submission.</span></span>  <span data-ttu-id="d8b80-121">パッケージは一度に1つしかアップロードできないため、拡張機能が完了していない場合は、進行中のパッケージをアップロードしてから公開するまでの間に更新することができます。</span><span class="sxs-lookup"><span data-stu-id="d8b80-121">You may only upload one package at a time, so if your Extension is not complete you may upload a work-in-progress package and update at any time before you publish it.</span></span>  <span data-ttu-id="d8b80-122">パッケージにファイルが含まれて `manifest.json` おり、アップロードする前に Microsoft Edge で正常に動作していることを確認してください。</span><span class="sxs-lookup"><span data-stu-id="d8b80-122">Be sure that your package contains the `manifest.json` file and is working fine on Microsoft Edge prior to uploading.</span></span>  
-<span data-ttu-id="d8b80-123">[アップロード] フィールドにパッケージをドラッグするか、[**ファイルの参照**] を選択して、パッケージをアップロードします。</span><span class="sxs-lookup"><span data-stu-id="d8b80-123">Upload the package by dragging it into the upload field or by selecting **Browse your files**.</span></span>  <span data-ttu-id="d8b80-124">[パッケージ] ページでは、Extensions zip ファイルが検証され、**アップロードの成功または失敗の状態**が表示されます。</span><span class="sxs-lookup"><span data-stu-id="d8b80-124">The Package page validates the Extensions zip file and displays that **success or failure status of your upload**.</span></span>  <span data-ttu-id="d8b80-125">パッケージが検証に合格した場合正常にアップロードされ、成功メッセージが表示されます。</span><span class="sxs-lookup"><span data-stu-id="d8b80-125">If the package passes validation; it is uploaded successfully and you see a success message.</span></span>  <span data-ttu-id="d8b80-126">パッケージの検証に失敗した場合パッケージは受け入れられず、エラーメッセージが表示されます。</span><span class="sxs-lookup"><span data-stu-id="d8b80-126">If the package fails validation; the package is not accepted and you see an error message.</span></span>  <span data-ttu-id="d8b80-127">パッケージにエラーがある場合は、問題を解決して、もう一度アップロードしてみてください。</span><span class="sxs-lookup"><span data-stu-id="d8b80-127">If there are errors in the package, resolve the issues and try uploading it again.</span></span>  
+## <span data-ttu-id="440a7-127">拡張機能を Microsoft Edge のアドオンストアに送信する</span><span class="sxs-lookup"><span data-stu-id="440a7-127">Submit your extension to Microsoft Edge add-ons store</span></span>  
 
-<span data-ttu-id="d8b80-128">アップロードが正常に完了したら、拡張機能の詳細を確認し、[**次へ**] をクリックして続行します。</span><span class="sxs-lookup"><span data-stu-id="d8b80-128">After successful upload, review your Extension details and click **Next** to proceed.</span></span>  
+<span data-ttu-id="440a7-128">拡張機能を [パートナーセンター][MicrosoftPartnerCenter]に提出するには、次の手順を実行します。</span><span class="sxs-lookup"><span data-stu-id="440a7-128">To submit your extension to [Partner Center][MicrosoftPartnerCenter], use the following steps.</span></span>  
 
-## <span data-ttu-id="d8b80-129">手順 3: 空き時間情報を入力する</span><span class="sxs-lookup"><span data-stu-id="d8b80-129">Step 3: Provide Availability details</span></span>  
+#### <span data-ttu-id="440a7-129">手順 1: 新しい申請を開始する</span><span class="sxs-lookup"><span data-stu-id="440a7-129">Step 1:  Start a new submission</span></span>  
 
-### <span data-ttu-id="d8b80-130">表示の定義</span><span class="sxs-lookup"><span data-stu-id="d8b80-130">Define Visibility</span></span>  
+<span data-ttu-id="440a7-130">[開発][ダッシュボード][MicrosoftPartnerCenter]に移動し、[**概要**] ページで [**新しい拡張子の作成**] を選択します。</span><span class="sxs-lookup"><span data-stu-id="440a7-130">Go to the [developer dashboard][MicrosoftPartnerCenter] and select **Create new extension** on the **Overview** page.</span></span>  
 
-<span data-ttu-id="d8b80-131">**表示**オプションを選んで、内線番号を検出して入手できる参加者を定義します。</span><span class="sxs-lookup"><span data-stu-id="d8b80-131">Select a **Visibility** option to define the audience who may discover and acquire your Extension.</span></span>  <span data-ttu-id="d8b80-132">これにより、ユーザーが Microsoft Edge のアドオンで拡張機能を検索するかどうかを指定したり、一覧を見ることができます。</span><span class="sxs-lookup"><span data-stu-id="d8b80-132">This gives you the option to specify whether users should find your Extension in Microsoft Edge Addons or see the listing at all.</span></span>  <span data-ttu-id="d8b80-133">現在、[表示] には2つのオプションがあります。</span><span class="sxs-lookup"><span data-stu-id="d8b80-133">Currently, you have two options under visibility:</span></span>  
+#### <span data-ttu-id="440a7-131">手順 2: 拡張機能パッケージをアップロードする</span><span class="sxs-lookup"><span data-stu-id="440a7-131">Step 2:  Upload the extension package</span></span>  
 
-*   `Public`  
-    <span data-ttu-id="d8b80-134">これは既定のオプションです。</span><span class="sxs-lookup"><span data-stu-id="d8b80-134">This is the default option.</span></span>  
-    <span data-ttu-id="d8b80-135">を選択する `Public` と、拡張機能が使用可能になり、Microsoft Edge のアドオンのすべてのユーザーが検出できるようになります。</span><span class="sxs-lookup"><span data-stu-id="d8b80-135">If you select `Public`, your Extension is available and discoverable to everyone in Microsoft Edge Addons.</span></span>  <span data-ttu-id="d8b80-136">ユーザーが検索、参照、内線番号の直接リンクを使用して検索できるようにする場合は、このオプションを選択したままにしておきます。</span><span class="sxs-lookup"><span data-stu-id="d8b80-136">Leave this option selected if you want your Extension to be listed in Microsoft Edge Addons for users to find via searching, browsing, and the direct link of your Extension.</span></span>  
+<span data-ttu-id="440a7-132">[ **パッケージ** ] ページを使って、拡張機能パッケージの zip ファイルをアップロードします。</span><span class="sxs-lookup"><span data-stu-id="440a7-132">Use the **Packages** page to upload the zip file of your extension package.</span></span>  <span data-ttu-id="440a7-133">一度にアップロードできるパッケージは1つだけです。</span><span class="sxs-lookup"><span data-stu-id="440a7-133">You are only able to upload one package at a time.</span></span>  <span data-ttu-id="440a7-134">パッケージのアップロードが **パッケージ** ページで正常に行われなかった場合、申請を続行することはできません。</span><span class="sxs-lookup"><span data-stu-id="440a7-134">You are not able to continue with the submission if the package upload is not successful on the **Packages** page.</span></span>  
+
+<span data-ttu-id="440a7-135">パッケージをアップロードフィールドにドラッグするか、または [ **ファイルの参照**] を選択してパッケージをアップロードします。</span><span class="sxs-lookup"><span data-stu-id="440a7-135">Upload the package by either dragging the package to the upload field, or by selecting **Browse your files**.</span></span>  <span data-ttu-id="440a7-136">パッケージがアップロードされると、パッケージが検証されます。</span><span class="sxs-lookup"><span data-stu-id="440a7-136">Once the package is uploaded, your package is validated.</span></span>  <span data-ttu-id="440a7-137">検証に成功したら、拡張機能の詳細を確認して、[ **次へ** ] を選択して続行します。</span><span class="sxs-lookup"><span data-stu-id="440a7-137">Once validation succeeds, review the extension details, and then select **Next** to continue.</span></span>  <span data-ttu-id="440a7-138">検証エラーがある場合は、問題を解決して、もう一度アップロードしてみてください。</span><span class="sxs-lookup"><span data-stu-id="440a7-138">If there are validation errors, resolve the issues and try uploading again.</span></span>  
+
+#### <span data-ttu-id="440a7-139">手順 3: 空き時間情報を入力する</span><span class="sxs-lookup"><span data-stu-id="440a7-139">Step 3:  Provide Availability details</span></span>  
+
+<span data-ttu-id="440a7-140">[ **可用性** ] ページで、内線番号の利用可能性に関する次の情報を入力します。</span><span class="sxs-lookup"><span data-stu-id="440a7-140">On the **Availability** page, enter the following information about the availability of your extension.</span></span>  
+
+##### <span data-ttu-id="440a7-141">表示</span><span class="sxs-lookup"><span data-stu-id="440a7-141">Visibility</span></span>  
+
+<span data-ttu-id="440a7-142">Microsoft Edge アドオンカタログで拡張機能が検出可能かどうかを定義するには、次のいずれかの表示オプションを選びます。</span><span class="sxs-lookup"><span data-stu-id="440a7-142">Choose one of the following visibility options to define if your extension is discoverable in the Microsoft Edge add-ons catalog.</span></span>  
+
+*   `Public` <span data-ttu-id="440a7-143">\ (既定値 \)</span><span class="sxs-lookup"><span data-stu-id="440a7-143">\(default\)</span></span>  
+    <span data-ttu-id="440a7-144">[パブリック] を使用すると、検索、Microsoft Edge のアドオンカタログでの参照、または Microsoft Edge のアドオンストアの拡張機能へのリスト URL の使用を通じて、すべてのユーザーに対する拡張機能を見つけることができます。</span><span class="sxs-lookup"><span data-stu-id="440a7-144">Public allows extensions to be discoverable to everyone through search, browsing in the Microsoft Edge add-ons catalog, or using the listing URL to your extension in the Microsoft Edge add-ons store.</span></span>  <span data-ttu-id="440a7-145">リストの URL は、[拡張機能の **概要** ] ページのパートナーセンターダッシュボードで利用できます。</span><span class="sxs-lookup"><span data-stu-id="440a7-145">The listing URL is available on your Partner Center dashboard on the Extension **Overview** page.</span></span>  
 
 *   `Hidden`  
-    <span data-ttu-id="d8b80-137">を選択した場合 `Hidden` 、拡張機能は、ユーザーが検索または参照したときの Microsoft Edge アドオンでは表示されません。拡張機能を配布するには、リストの URL を共有する必要があります。</span><span class="sxs-lookup"><span data-stu-id="d8b80-137">If you select `Hidden`, your Extension is hidden in Microsoft Edge Addons from users searching or browsing; you must share your listing URL to distribute your Extension.</span></span>  <span data-ttu-id="d8b80-138">このリストへの直接リンクを持っているユーザーは、Microsoft Edge にダウンロードすることができます (この情報は、「拡張**機能の概要」** ページに表示されています)。</span><span class="sxs-lookup"><span data-stu-id="d8b80-138">Users who have the direct link to the listing may download it on Microsoft Edge \(you may find your listing URL under **Extension Overview** page of Extension submission\).</span></span>  
+    <span data-ttu-id="440a7-146">[非表示にするには、Microsoft Edge のアドオンカタログでの検索結果または参照から拡張機能を削除します。</span><span class="sxs-lookup"><span data-stu-id="440a7-146">Hidden removes extensions from search results or browsing in the Microsoft Edge add-ons catalog.</span></span>  <span data-ttu-id="440a7-147">Microsoft Edge のアドオンストアで非表示の拡張機能を配布するには、ユーザーの内線番号の URL を共有する必要があります。</span><span class="sxs-lookup"><span data-stu-id="440a7-147">To distribute hidden extensions in the Microsoft Edge add-ons store, you must share the listing URL to the extension with your customers.</span></span>  
 
 > [!NOTE]
-> <span data-ttu-id="d8b80-139">内線番号を**公開**し、後で [**非公開**] に変更した場合、内線番号が公開されているユーザーは、今後の更新プログラムにアクセスして受け取ることができます。</span><span class="sxs-lookup"><span data-stu-id="d8b80-139">If you submit an Extension as **Public** and later change it to **Private**, Users who installed the Extension when it was public continue to have access and receive future updates.</span></span>  
+> <span data-ttu-id="440a7-148">拡張機能の表示を **パブリック** から **非表示**に変更できます。</span><span class="sxs-lookup"><span data-stu-id="440a7-148">You may change the visibility of your extension from **Public** to **Hidden**.</span></span>  <span data-ttu-id="440a7-149">Visibility が [公開] に設定されているときに、拡張機能をインストールしたユーザーは、拡張機能へのアクセス権を保持し、Microsoft Edge アドオンの web サイトで入手できるすべての更新プログラムを受け取ることになります。</span><span class="sxs-lookup"><span data-stu-id="440a7-149">Users who installed your extension while the visibility was set to public retain access to your extension and receive any updates you make available through the Microsoft Edge add-ons website.</span></span>  
 
-### <span data-ttu-id="d8b80-140">市場の定義</span><span class="sxs-lookup"><span data-stu-id="d8b80-140">Define markets</span></span>  
+##### <span data-ttu-id="440a7-150">市場</span><span class="sxs-lookup"><span data-stu-id="440a7-150">Markets</span></span>  
 
-<span data-ttu-id="d8b80-141">内線番号を提供する特定の市場を定義する必要があります。 [**利用可能状況**] ページの [**市場**] セクションで、[**オプションの表示**] を選択します。</span><span class="sxs-lookup"><span data-stu-id="d8b80-141">You must define the specific markets in which you are offering your Extension, select **Show options** in the **Markets** section on the **Availability** page.</span></span>  <span data-ttu-id="d8b80-142">市場選択のポップアップウィンドウが表示され、そこで市場を選ぶことができます。</span><span class="sxs-lookup"><span data-stu-id="d8b80-142">The Market selection pop-up window is displayed, where you should choose the markets.</span></span>  <span data-ttu-id="d8b80-143">既定では、後で追加される可能性がある**将来の市場**も含めて、すべての市場が選択されます。</span><span class="sxs-lookup"><span data-stu-id="d8b80-143">By default, all markets are selected, including any **future markets** that may be added later.</span></span>  <span data-ttu-id="d8b80-144">個々の市場の選択を解除して除外することができます。または、[**すべて選択解除**] をクリックし、選択した個々の市場を追加することもできます。</span><span class="sxs-lookup"><span data-stu-id="d8b80-144">You may deselect individual markets to exclude them, or you may click **Unselect all** and then add individual markets of your choice.</span></span>  
-
-> [!NOTE]
-> <span data-ttu-id="d8b80-145">ユーザーが既に特定の市場に内線番号を持っていて、その市場でその市場を削除した場合、その市場の内線番号を既に持っているユーザーはその市場を引き続き使用できますが、提出した後の更新プログラムは取得できません。</span><span class="sxs-lookup"><span data-stu-id="d8b80-145">If users already have your Extension in a certain market, and you later remove that market, users who already has the Extension in that market may continue to use it, but they do not get the later updates you submit.</span></span>  
-
-<span data-ttu-id="d8b80-146">[**保存**] をクリックして、[**プロパティ**] セクションに進みます。</span><span class="sxs-lookup"><span data-stu-id="d8b80-146">Click **Save** to proceed to **Properties** section.</span></span>  
-
-## <span data-ttu-id="d8b80-147">手順 4: 拡張機能のプロパティを選択する</span><span class="sxs-lookup"><span data-stu-id="d8b80-147">Step 4: Select Properties for Your Extension</span></span>  
-
-### <span data-ttu-id="d8b80-148">拡張機能のプロパティ</span><span class="sxs-lookup"><span data-stu-id="d8b80-148">Extension properties</span></span>  
-
-*   [<span data-ttu-id="d8b80-149">カテゴリ</span><span class="sxs-lookup"><span data-stu-id="d8b80-149">Category</span></span>](#category)  
-*   [<span data-ttu-id="d8b80-150">プライバシーポリシーの要件</span><span class="sxs-lookup"><span data-stu-id="d8b80-150">Privacy policy requirements</span></span>](#privacy-policy-requirements)  
-*   [<span data-ttu-id="d8b80-151">プライバシー ポリシーの URL</span><span class="sxs-lookup"><span data-stu-id="d8b80-151">Privacy policy URL</span></span>](#privacy-policy-url)  
-*   [<span data-ttu-id="d8b80-152">Web サイトの URL</span><span class="sxs-lookup"><span data-stu-id="d8b80-152">Website URL</span></span>](#website-url)  
-*   [<span data-ttu-id="d8b80-153">サポート URL/メールアドレス</span><span class="sxs-lookup"><span data-stu-id="d8b80-153">Support URL/email address</span></span>](#support-urlemail-address)  
-*   [<span data-ttu-id="d8b80-154">内線番号の評価</span><span class="sxs-lookup"><span data-stu-id="d8b80-154">Extension Rating</span></span>](#extension-rating)  
-
-#### <span data-ttu-id="d8b80-155">カテゴリ</span><span class="sxs-lookup"><span data-stu-id="d8b80-155">Category</span></span>  
-
-<span data-ttu-id="d8b80-156">適切なカテゴリに拡張機能を登録すると、ユーザーは拡張機能を簡単に見つけて理解することができます。</span><span class="sxs-lookup"><span data-stu-id="d8b80-156">Listing your Extension in the right category helps users find your Extension easily and understand more about it.</span></span>  <span data-ttu-id="d8b80-157">拡張機能に最も適したカテゴリを選択します。</span><span class="sxs-lookup"><span data-stu-id="d8b80-157">Select a Category that best describes your Extension.</span></span>  
-
-<span data-ttu-id="d8b80-158">指定**可能な値**:</span><span class="sxs-lookup"><span data-stu-id="d8b80-158">**Possible Values**:</span></span>  
-
-*   `Accessibility`  
-*   `Blogging`  
-*   `Developer Tools`  
-*   `Fun`  
-*   `News & Weather`  
-*   `Photos`  
-*   `Productivity`  
-*   `Search Tools`  
-*   `Shopping`  
-*   `Social & Communication`  
-*   `Sports`  
-
-#### <span data-ttu-id="d8b80-159">プライバシーポリシーの要件</span><span class="sxs-lookup"><span data-stu-id="d8b80-159">Privacy policy requirements</span></span>  
-
-<span data-ttu-id="d8b80-160">拡張機能で個人情報へのアクセス、収集、または送信を行うかどうかを指定します。</span><span class="sxs-lookup"><span data-stu-id="d8b80-160">Indicate whether your Extension accesses, collects, or transmits any personal information.</span></span>  
+<span data-ttu-id="440a7-151">内線番号を提供する予定の特定の市場を定義します。</span><span class="sxs-lookup"><span data-stu-id="440a7-151">Define the specific markets in which you plan to offer your extension.</span></span>  <span data-ttu-id="440a7-152">既定では、後で追加された将来の市場も含めて、すべての市場が選択されています。</span><span class="sxs-lookup"><span data-stu-id="440a7-152">By default, all markets have been selected including any future markets that are added later.</span></span>  <span data-ttu-id="440a7-153">または、[ **市場の変更**] を選択して、特定の市場を選択します。</span><span class="sxs-lookup"><span data-stu-id="440a7-153">Alternatively, choose specific markets by selecting **Change markets**.</span></span>  <span data-ttu-id="440a7-154">個々の市場を選択解除して除外するか、[ **すべて選択解除** ] を選択してから、個別の市場を追加します。</span><span class="sxs-lookup"><span data-stu-id="440a7-154">Deselect individual markets to exclude them, or select **Unselect all** and then add individual markets of your choice.</span></span>  
 
 > [!NOTE]
-> <span data-ttu-id="d8b80-161">お客さまの内線番号にプライバシーポリシーが必要であり、提供されていない場合は、申請が認定に合格しない可能性があります。</span><span class="sxs-lookup"><span data-stu-id="d8b80-161">If your Extension requires a privacy policy and you have not provided one, your submission may fail certification.</span></span>  
+> <span data-ttu-id="440a7-155">拡張機能が提供されている市場は、変更することができます。</span><span class="sxs-lookup"><span data-stu-id="440a7-155">You may change the markets where your extension is offered.</span></span>  <span data-ttu-id="440a7-156">拡張機能をインストールしたユーザーが、自分の市場で利用可能になった場合、内線番号へのアクセスは維持されます。</span><span class="sxs-lookup"><span data-stu-id="440a7-156">Users who installed your extension while it was available in their market retain access to your extension.</span></span>  <span data-ttu-id="440a7-157">ただし、ユーザーは、Microsoft Edge アドオンカタログに提出された今後の更新プログラムにはアクセスできなくなります。</span><span class="sxs-lookup"><span data-stu-id="440a7-157">However, your users no longer have access to any future updates submitted to the Microsoft Edge add-ons catalog.</span></span>  
 
-<span data-ttu-id="d8b80-162">指定**可能な値**:</span><span class="sxs-lookup"><span data-stu-id="d8b80-162">**Possible Values**:</span></span>  
+<span data-ttu-id="440a7-158">[ **保存** ] を選択して、[ **プロパティ** ] セクションに進みます。</span><span class="sxs-lookup"><span data-stu-id="440a7-158">Select **Save** to continue to the **Properties** section.</span></span>  
 
-*   `No`<span data-ttu-id="d8b80-163">: プライバシーポリシーの URL は省略可能です。</span><span class="sxs-lookup"><span data-stu-id="d8b80-163">:  A privacy policy URL is optional.</span></span>  
-*   `Yes`<span data-ttu-id="d8b80-164">: プライバシーポリシー URL が必要です。</span><span class="sxs-lookup"><span data-stu-id="d8b80-164">:  A privacy policy URL is required.</span></span>  
+#### <span data-ttu-id="440a7-159">手順 4: 拡張機能のプロパティを選択する</span><span class="sxs-lookup"><span data-stu-id="440a7-159">Step 4: Select Properties for your extension</span></span>  
 
-#### <span data-ttu-id="d8b80-165">プライバシー ポリシーの URL</span><span class="sxs-lookup"><span data-stu-id="d8b80-165">Privacy policy URL</span></span>  
+<span data-ttu-id="440a7-160">[ **プロパティ] ページ**で、次の情報を入力して、拡張機能のプロパティを指定します。</span><span class="sxs-lookup"><span data-stu-id="440a7-160">On the **Properties page**, enter the following information to specify properties of your extension.</span></span>  <span data-ttu-id="440a7-161">プロパティは、Microsoft Edge のアドオンカタログのユーザーに表示されます。</span><span class="sxs-lookup"><span data-stu-id="440a7-161">The properties are displayed to users in the Microsoft Edge add-ons catalog.</span></span>  
 
-<span data-ttu-id="d8b80-166">お客様は、お客様がお客様の内線番号とプライバシーポリシーに準拠していること、および必要に応じて有効なプライバシーポリシー URL を提供する責任を負います。</span><span class="sxs-lookup"><span data-stu-id="d8b80-166">You are responsible for ensuring your Extension complies with privacy laws and regulations, and for providing a valid privacy policy URL, if required.</span></span>  <span data-ttu-id="d8b80-167">個人情報が、内線番号によってアクセス、送信、または収集される場合は、プライバシーポリシー URL を指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="d8b80-167">You must provide a privacy policy URL if any personal information is being accessed, transmitted, or collected by your Extension.</span></span>  
-<span data-ttu-id="d8b80-168">拡張機能にプライバシーポリシーが必要かどうかを判断するには、 [Microsoft Edge Developer Agreement][MicrosoftAppDeveloperAgreement]と[Microsoft Edge アドオンカタログ開発者ポリシードキュメント][MicrosoftEdgeAddonsCatalogDeveloperPolicies]を確認してください。</span><span class="sxs-lookup"><span data-stu-id="d8b80-168">To determine if your Extension requires a privacy policy, review the [Microsoft Edge Developer Agreement][MicrosoftAppDeveloperAgreement] and the [Microsoft Edge Addons Catalog Developer Policies document][MicrosoftEdgeAddonsCatalogDeveloperPolicies].</span></span>  
+| <span data-ttu-id="440a7-162">拡張機能プロパティ名</span><span class="sxs-lookup"><span data-stu-id="440a7-162">Extension property name</span></span> | <span data-ttu-id="440a7-163">説明</span><span class="sxs-lookup"><span data-stu-id="440a7-163">Description</span></span> |  
+|:--- |:--- |  
+| <span data-ttu-id="440a7-164">カテゴリ \ (必須 \)</span><span class="sxs-lookup"><span data-stu-id="440a7-164">Category \(required\)</span></span> | <span data-ttu-id="440a7-165">お使いの内線番号に最も適したカテゴリ。</span><span class="sxs-lookup"><span data-stu-id="440a7-165">The category that best describes your extension.</span></span>  <span data-ttu-id="440a7-166">適切なカテゴリに拡張機能を登録すると、ユーザーは拡張機能を簡単に見つけて理解することができます。</span><span class="sxs-lookup"><span data-stu-id="440a7-166">Listing your extension in the right category helps users find your extension easily and understand more about it.</span></span>  |  
+| <span data-ttu-id="440a7-167">プライバシーポリシー要件 \ (必須)</span><span class="sxs-lookup"><span data-stu-id="440a7-167">Privacy policy requirements \(required\)</span></span> | <span data-ttu-id="440a7-168">内線番号が個人情報にアクセス、収集、または送信されるかどうかを示します。</span><span class="sxs-lookup"><span data-stu-id="440a7-168">Indicate if your extension accesses, collects, or transmits any personal information.</span></span>  <span data-ttu-id="440a7-169">**「はい**」を選択して、を提供しない場合、お客様の内線番号は認定手順に合格しない可能性があり `Privacy policy URL` ます。</span><span class="sxs-lookup"><span data-stu-id="440a7-169">Your extension may fail the certification step if you choose **Yes** and you do not provide a `Privacy policy URL`.</span></span>  |  
+| <span data-ttu-id="440a7-170">プライバシー ポリシーの URL</span><span class="sxs-lookup"><span data-stu-id="440a7-170">Privacy policy URL</span></span> | <span data-ttu-id="440a7-171">お客様の内線番号とプライバシーに関する法令の遵守方法を伝える有効なプライバシーポリシー URL。</span><span class="sxs-lookup"><span data-stu-id="440a7-171">A valid privacy policy URL to communicate how your extension complies with privacy laws and regulations.</span></span>  <span data-ttu-id="440a7-172">お客様は、必要に応じて、お客様は、お客様がお客様の内線番号とプライバシーポリシーに準拠していることを保証する責任を負います。</span><span class="sxs-lookup"><span data-stu-id="440a7-172">You are responsible for ensuring your extension complies with privacy laws and regulations, and for providing a valid privacy policy URL, if necessary.</span></span>  <span data-ttu-id="440a7-173">個人情報が、内線番号によってアクセス、送信、または収集される場合は、プライバシーポリシーの URL を指定します。</span><span class="sxs-lookup"><span data-stu-id="440a7-173">Provide a privacy policy URL if any personal information is being accessed, transmitted, or collected by your extension.</span></span>  <span data-ttu-id="440a7-174">拡張機能にプライバシーポリシーが必要かどうかを判断するには、 [Microsoft Edge 開発者契約][MicrosoftAppDeveloperAgreement] と [microsoft edge アドオンカタログ開発者ポリシー][MicrosoftEdgeAddonsCatalogDeveloperPolicies]に移動します。</span><span class="sxs-lookup"><span data-stu-id="440a7-174">To determine if your extension requires a privacy policy, go to [Microsoft Edge Developer Agreement][MicrosoftAppDeveloperAgreement] and [Microsoft Edge add-ons catalog developer policies][MicrosoftEdgeAddonsCatalogDeveloperPolicies].</span></span>  |  
+| <span data-ttu-id="440a7-175">Web サイトの URL</span><span class="sxs-lookup"><span data-stu-id="440a7-175">Website URL</span></span> | <span data-ttu-id="440a7-176">拡張機能に関する追加情報を提供する web ページ。</span><span class="sxs-lookup"><span data-stu-id="440a7-176">A web page that provides additional information about your extension.</span></span>  <span data-ttu-id="440a7-177">は、 `Website URL` Microsoft Edge アドオンカタログの拡張機能の web サイトではなく、自分の web サイトのページを指している必要があります。</span><span class="sxs-lookup"><span data-stu-id="440a7-177">The `Website URL` must point to a page on your own website, not the web listing for your extension in the Microsoft Edge add-ons catalog.</span></span>  <span data-ttu-id="440a7-178">ユーザーは、 `Website URL` 拡張機能、その機能、その他の関連する情報について、さらに詳しく知ることができます。</span><span class="sxs-lookup"><span data-stu-id="440a7-178">The `Website URL` helps users learn more about your extension, its features, and any other relevant information.</span></span>  |  
+| <span data-ttu-id="440a7-179">サポート連絡先の詳細</span><span class="sxs-lookup"><span data-stu-id="440a7-179">Support contact details</span></span> | <span data-ttu-id="440a7-180">サポートの web ページの URL、またはサポートチームに連絡するためのメールアドレス。</span><span class="sxs-lookup"><span data-stu-id="440a7-180">The URL to your support webpage, or the email address to contact your support team.</span></span>  |  
+| <span data-ttu-id="440a7-181">成熟したコンテンツ</span><span class="sxs-lookup"><span data-stu-id="440a7-181">Mature content</span></span> | <span data-ttu-id="440a7-182">拡張機能に成熟したコンテンツが含まれているかどうかを指定するチェックボックス。</span><span class="sxs-lookup"><span data-stu-id="440a7-182">Checkbox to specify if your extension includes mature content.</span></span>  <span data-ttu-id="440a7-183">拡張評価は、内線番号の対象ユーザーの適切な年齢グループを決定するのに役立ちます。</span><span class="sxs-lookup"><span data-stu-id="440a7-183">Extension rating helps determine the appropriate age group of the target audience of your extension.</span></span>  <span data-ttu-id="440a7-184">拡張機能のコンテンツが成熟しているかどうかを判断するには、Microsoft Edge の [アドオン [カタログ開発者ポリシー][MicrosoftEdgeAddonsCatalogDeveloperPolicies]] に移動します。</span><span class="sxs-lookup"><span data-stu-id="440a7-184">To help determine if your extension has mature content, go to [Microsoft Edge add-ons catalog developer policies][MicrosoftEdgeAddonsCatalogDeveloperPolicies].</span></span>  |  
 
-<span data-ttu-id="d8b80-169">指定**可能な値**:</span><span class="sxs-lookup"><span data-stu-id="d8b80-169">**Possible Values**:</span></span>  
+<span data-ttu-id="440a7-185">[ **保存** ] を選択して、[ **ストア** 登録情報] セクションに進みます。</span><span class="sxs-lookup"><span data-stu-id="440a7-185">Select **Save** to continue to the **Store listings** section.</span></span>  
 
-*   `{url}`  
+#### <span data-ttu-id="440a7-186">手順 5: 拡張機能のストア登録情報の詳細を追加する</span><span class="sxs-lookup"><span data-stu-id="440a7-186">Step 5: Add Store listing details for your extension</span></span>  
 
-#### <span data-ttu-id="d8b80-170">Web サイトの URL</span><span class="sxs-lookup"><span data-stu-id="d8b80-170">Website URL</span></span>  
-
-<span data-ttu-id="d8b80-171">このプロパティは省略可能です。</span><span class="sxs-lookup"><span data-stu-id="d8b80-171">This property is Optional.</span></span>  
-<span data-ttu-id="d8b80-172">拡張機能の web ページの URL です。</span><span class="sxs-lookup"><span data-stu-id="d8b80-172">The URL of the web page for your Extension.</span></span>  <span data-ttu-id="d8b80-173">この URL は、お客様の web サイトのページを指している必要があります。 Microsoft Edge アドオンの内線番号の web サイトではありません。</span><span class="sxs-lookup"><span data-stu-id="d8b80-173">This URL must point to a page on your own website, not the web listing for your Extension in Microsoft Edge Addons.</span></span>  
-
-<span data-ttu-id="d8b80-174">指定**可能な値**:</span><span class="sxs-lookup"><span data-stu-id="d8b80-174">**Possible Values**:</span></span>  
-
-*   `{url}`  
-
-#### <span data-ttu-id="d8b80-175">サポート URL/メールアドレス</span><span class="sxs-lookup"><span data-stu-id="d8b80-175">Support URL/email address</span></span>  
-
-<span data-ttu-id="d8b80-176">このプロパティは省略可能です。</span><span class="sxs-lookup"><span data-stu-id="d8b80-176">This property is Optional.</span></span>  
-<span data-ttu-id="d8b80-177">ユーザーが拡張機能をサポートするために使用する web ページの URL、またはサポートのために連絡するメールアドレス。</span><span class="sxs-lookup"><span data-stu-id="d8b80-177">The URL of the web page where users go for support with your Extension, or an email address to contact you for support.</span></span>  <span data-ttu-id="d8b80-178">すべての申請のサポート情報が含まれているので、ユーザーが自分のサポートを受ける方法を知ることができます。</span><span class="sxs-lookup"><span data-stu-id="d8b80-178">You include support information for all submissions, so that your users know how to get support from you.</span></span>  
-
-<span data-ttu-id="d8b80-179">指定**可能な値**:</span><span class="sxs-lookup"><span data-stu-id="d8b80-179">**Possible Values**:</span></span>  
-
-*   `{email_address}`  
-*   `{url}`  
-
-#### <span data-ttu-id="d8b80-180">内線番号の評価</span><span class="sxs-lookup"><span data-stu-id="d8b80-180">Extension Rating</span></span>  
-
-<span data-ttu-id="d8b80-181">拡張評価は、お客様の内線番号の対象ユーザーの年齢を決定するのに役立ちます。</span><span class="sxs-lookup"><span data-stu-id="d8b80-181">Extension rating helps us determine the age of the target audience of your Extension.</span></span>  
-<span data-ttu-id="d8b80-182">拡張機能に成熟したコンテンツがあるかどうかを判断するには、 [Microsoft Edge のアドオンカタログ開発者ポリシードキュメント][MicrosoftEdgeAddonsCatalogDeveloperPolicies]を確認してください。</span><span class="sxs-lookup"><span data-stu-id="d8b80-182">To help you determine if your Extensions has a mature content, review the [Microsoft Edge Addons Catalog Developer Policies document][MicrosoftEdgeAddonsCatalogDeveloperPolicies].</span></span>  
-
-<span data-ttu-id="d8b80-183">指定**可能な値**:</span><span class="sxs-lookup"><span data-stu-id="d8b80-183">**Possible Values**:</span></span>  
-
-*   <span data-ttu-id="d8b80-184">成熟した \ (チェックボックス \): 拡張機能に成熟したコンテンツが含まれている場合は、このチェックボックスをオンにします。</span><span class="sxs-lookup"><span data-stu-id="d8b80-184">Mature \(checkbox\): Check this box if your Extension contains any mature content.</span></span>  <span data-ttu-id="d8b80-185">拡張機能として「成熟」を選択した場合、その登録情報には、拡張機能に成熟したコンテンツが含まれていることを示す個別のタグが表示されます。</span><span class="sxs-lookup"><span data-stu-id="d8b80-185">If you select mature for your Extension, your listing is available with a separate tag to indicate that the Extension contains mature content.</span></span>  
-
-<span data-ttu-id="d8b80-186">[**保存**] をクリックして、セクションの一覧に進みます。</span><span class="sxs-lookup"><span data-stu-id="d8b80-186">Click **Save** to proceed to listing section.</span></span>  
-
-## <span data-ttu-id="d8b80-187">手順 5: 拡張機能の一覧情報を追加する</span><span class="sxs-lookup"><span data-stu-id="d8b80-187">Step 5: Add Listings Information for Your Extension</span></span>  
-
-<span data-ttu-id="d8b80-188">これは、Microsoft Edge のアドオンで登録情報を表示するときにユーザーに表示される情報です。</span><span class="sxs-lookup"><span data-stu-id="d8b80-188">This is the information that users see when viewing your listing in Microsoft Edge Addons.</span></span>  <span data-ttu-id="d8b80-189">リスト内の多くのフィールドはオプションですが、リストを目立たせるためにできるだけ多くの情報を提供することをお勧めします。 Microsoft Edge のアドオンの完了と見なされるために必要な最低限の情報は、拡張機能パッケージで指定された各言語の[テキスト説明](#description)、[拡張ロゴ](#store-logo)、および[小さいプロモーションタイル](#small-promotional-tile)です。</span><span class="sxs-lookup"><span data-stu-id="d8b80-189">Many of the fields in a listing are optional, but we suggest providing as much information as possible to make your listing stand out.  The minimum required for your listing in Microsoft Edge Addons to be considered complete is the [text description](#description), [Extension logo](#store-logo), and [small promotional tile](#small-promotional-tile) in each language mentioned in your Extension package.</span></span>  
-
-### <span data-ttu-id="d8b80-190">ストア登録情報フィールド</span><span class="sxs-lookup"><span data-stu-id="d8b80-190">Store Listing fields</span></span>  
-
-*   [<span data-ttu-id="d8b80-191">ストア登録情報の言語</span><span class="sxs-lookup"><span data-stu-id="d8b80-191">Store listing languages</span></span>](#store-listing-languages)  
-*   [<span data-ttu-id="d8b80-192">ストアの表示名</span><span class="sxs-lookup"><span data-stu-id="d8b80-192">Store display name</span></span>](#store-display-name)  
-*   [<span data-ttu-id="d8b80-193">説明</span><span class="sxs-lookup"><span data-stu-id="d8b80-193">Description</span></span>](#description)  
-*   [<span data-ttu-id="d8b80-194">ストアロゴ</span><span class="sxs-lookup"><span data-stu-id="d8b80-194">Store logo</span></span>](#store-logo)  
-*   [<span data-ttu-id="d8b80-195">小規模のプロモーションタイル</span><span class="sxs-lookup"><span data-stu-id="d8b80-195">Small promotional tile</span></span>](#small-promotional-tile)  
-*   [<span data-ttu-id="d8b80-196">メディア</span><span class="sxs-lookup"><span data-stu-id="d8b80-196">Media</span></span>](#media)  
-*   [<span data-ttu-id="d8b80-197">簡単な説明</span><span class="sxs-lookup"><span data-stu-id="d8b80-197">Short description</span></span>](#short-description)  
-*   [<span data-ttu-id="d8b80-198">検索語句</span><span class="sxs-lookup"><span data-stu-id="d8b80-198">Search terms</span></span>](#search-terms)  
-
-#### <span data-ttu-id="d8b80-199">ストア登録情報の言語</span><span class="sxs-lookup"><span data-stu-id="d8b80-199">Store listing languages</span></span>  
-
-<span data-ttu-id="d8b80-200">拡張機能パッケージで複数の言語がサポートされている場合は、各言語の登録情報ページが必要です。</span><span class="sxs-lookup"><span data-stu-id="d8b80-200">If your Extension package supports multiple languages, your Extension must have a listing page for each one.</span></span>  
-<span data-ttu-id="d8b80-201">言語ごとに同じコンテンツを使用している場合は、各言語のリストの詳細 \ (テキストの説明、画像など) を個別に入力する必要があります。</span><span class="sxs-lookup"><span data-stu-id="d8b80-201">You must complete listing details \(text description, images, and so on\) for each language separately even if you are using the same content for each language.</span></span>  <span data-ttu-id="d8b80-202">拡張機能が複数の言語でローカライズされている場合、これらの言語は、一覧ページの上部に表示されます。</span><span class="sxs-lookup"><span data-stu-id="d8b80-202">If your Extension is localized in more than one language, those languages are displayed at the top of listing page.</span></span>  
-
-1.  <span data-ttu-id="d8b80-203">[**言語] ドロップダウン**リストから1つの言語名を選択します。</span><span class="sxs-lookup"><span data-stu-id="d8b80-203">Select any one language name from **Languages** drop-down list.</span></span>  
-1.  <span data-ttu-id="d8b80-204">登録情報を入力します。</span><span class="sxs-lookup"><span data-stu-id="d8b80-204">Fill the listing details.</span></span>  
-1.  <span data-ttu-id="d8b80-205">**[保存]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="d8b80-205">Click **Save**.</span></span>  
-1.  <span data-ttu-id="d8b80-206">サポートされているすべての言語について同じ手順を繰り返します。</span><span class="sxs-lookup"><span data-stu-id="d8b80-206">Repeat for all of your supported languages.</span></span>  
+<span data-ttu-id="440a7-187">次のセクションに記載されている情報は、Microsoft Edge のアドオンカタログの一覧にアクセスするユーザーに表示されます。</span><span class="sxs-lookup"><span data-stu-id="440a7-187">The information provided in the following section is displayed to users that visit your listing on the Microsoft Edge add-ons catalog.</span></span>  <span data-ttu-id="440a7-188">一部のフィールドはオプションですが、できるだけ多くの情報を提供する必要があります。</span><span class="sxs-lookup"><span data-stu-id="440a7-188">Even though some fields are optional, you should provide as much information as possible.</span></span>  <span data-ttu-id="440a7-189">内線番号パッケージに記載されている各言語について、ストアに登録するための必要最小限の詳細情報は、 **説明** と **拡張ストアロゴ**です。</span><span class="sxs-lookup"><span data-stu-id="440a7-189">The minimum required details for your extension for listing in the store, for each language mentioned in your extension package, are **Description** and **Extension Store logo**.</span></span>  
 
 > [!NOTE]
-> <span data-ttu-id="d8b80-207">Microsoft Edge アドオンで登録する言語を追加または削除するには、拡張機能パッケージでサポートされている言語の一覧を変更してから、もう一度アップロードする必要があります。</span><span class="sxs-lookup"><span data-stu-id="d8b80-207">To add or remove languages for your listing in Microsoft Edge Addons, you must modify the list of languages supported by your Extension package and re-upload it.</span></span>  
+> <span data-ttu-id="440a7-190">拡張 zip パッケージに記載されている言語ごとに、必須のストア登録情報の最小情報を入力する必要があります。</span><span class="sxs-lookup"><span data-stu-id="440a7-190">The minimum required store listing details must be filled-out for each language mentioned in your extension zip package.</span></span>  <span data-ttu-id="440a7-191">Microsoft Edge アドオンカタログでストア登録情報の言語を追加または削除するには、拡張機能パッケージの拡張機能でサポートされている言語の一覧を変更し、新しい拡張パッケージを作成して、もう一度アップロードする必要があります。</span><span class="sxs-lookup"><span data-stu-id="440a7-191">To add or remove languages in your store listing on the Microsoft Edge add-ons catalog, you must modify the list of languages supported by your extension in the extension package, create a new extension package, and re-upload it.</span></span>  
 
-<span data-ttu-id="d8b80-208">指定**可能な値**:</span><span class="sxs-lookup"><span data-stu-id="d8b80-208">**Possible Values**:</span></span>  
+| <span data-ttu-id="440a7-192">ストア登録情報プロパティ名</span><span class="sxs-lookup"><span data-stu-id="440a7-192">Store listing property name</span></span> | <span data-ttu-id="440a7-193">説明</span><span class="sxs-lookup"><span data-stu-id="440a7-193">Description</span></span> |  
+|:--- |:--- |  
+| <span data-ttu-id="440a7-194">ストア登録情報の言語 \ (必須)</span><span class="sxs-lookup"><span data-stu-id="440a7-194">Store listing languages \(required\)</span></span> | <span data-ttu-id="440a7-195">[ **言語] ドロップダウン** から言語を選択し、その言語のストア登録情報の詳細を入力します。</span><span class="sxs-lookup"><span data-stu-id="440a7-195">Select a language from the **Languages** dropdown and enter the store listing details for that language.</span></span>  <span data-ttu-id="440a7-196">複数の言語をサポートする拡張機能では、サポートされている各言語のストア登録情報ページを用意する必要があります。</span><span class="sxs-lookup"><span data-stu-id="440a7-196">Extensions that support multiple languages must provide a store listing page for each supported language.</span></span>  |  
+| <span data-ttu-id="440a7-197">表示名 \ (必須 \)</span><span class="sxs-lookup"><span data-stu-id="440a7-197">Display name \(required\)</span></span> | <span data-ttu-id="440a7-198">拡張機能のマニフェストファイルに指定されている拡張機能の名前。</span><span class="sxs-lookup"><span data-stu-id="440a7-198">The name of your extension specified in the manifest file of your extension.</span></span>  <span data-ttu-id="440a7-199">申請後にストアの表示名を変更するには、マニフェストファイルで名前を更新し、新しい拡張パッケージを作成してから、もう一度アップロードします。</span><span class="sxs-lookup"><span data-stu-id="440a7-199">To change the store display name after submission, you may update the name in the manifest file, create a new extension package, and then re-upload it.</span></span>  |  
+| <span data-ttu-id="440a7-200">説明 \ (必須 \)</span><span class="sxs-lookup"><span data-stu-id="440a7-200">Description \(required\)</span></span> | <span data-ttu-id="440a7-201">説明フィールドでは、拡張機能の概要、ユーザーがインストールする理由、ユーザーが知っておく必要があるその他の関連情報について説明します。</span><span class="sxs-lookup"><span data-stu-id="440a7-201">The description field focuses on explaining what your extension does, why users should install it, or other relevant information that users need to know.</span></span>  <span data-ttu-id="440a7-202">この値は、1万文字以下にする必要があります。</span><span class="sxs-lookup"><span data-stu-id="440a7-202">It should be less than 10,000 characters.</span></span>  |  
+| <span data-ttu-id="440a7-203">拡張機能保存ロゴ \ (必須 \)</span><span class="sxs-lookup"><span data-stu-id="440a7-203">Extension Store logo \(required\)</span></span> | <span data-ttu-id="440a7-204">縦横比1、推奨サイズ 300 x 300 ピクセルの会社または拡張ロゴを表す画像。</span><span class="sxs-lookup"><span data-stu-id="440a7-204">An image that represents your company or extension logo with an aspect ratio of 1 and recommended size of 300 x 300 pixels.</span></span>  |  
+| <span data-ttu-id="440a7-205">小規模のプロモーションタイル \ (オプション \)</span><span class="sxs-lookup"><span data-stu-id="440a7-205">Small promotional tile \(optional\)</span></span> | <span data-ttu-id="440a7-206">この `Small promotional tile` 画像は、ストアの他の拡張子と共に拡張機能を表示するために使用されます。</span><span class="sxs-lookup"><span data-stu-id="440a7-206">The `Small promotional tile` image is used to display your extension alongside other extensions in the store.</span></span>  <span data-ttu-id="440a7-207">画像のサイズは 440 x 280 ピクセルである必要があります。</span><span class="sxs-lookup"><span data-stu-id="440a7-207">The size of the image should be 440 x 280 pixels.</span></span>  |  
+| <span data-ttu-id="440a7-208">スクリーンショット \ (オプション \)</span><span class="sxs-lookup"><span data-stu-id="440a7-208">Screenshots \(optional\)</span></span> | <span data-ttu-id="440a7-209">拡張機能の詳細については、最大10個のスクリーンショットを送信できます。</span><span class="sxs-lookup"><span data-stu-id="440a7-209">You may submit a maximum of 10 screenshots describing the functionality of your extension in detail.</span></span>  <span data-ttu-id="440a7-210">スクリーンショットのサイズは、640 x 480 ピクセル、または 1280 x 800 ピクセルのいずれかである必要があります。</span><span class="sxs-lookup"><span data-stu-id="440a7-210">The size of the screenshots must be either 640 x 480 pixels, or 1280 x 800 pixels.</span></span>  |  
+| <span data-ttu-id="440a7-211">大規模なプロモーションタイル \ (オプション \)</span><span class="sxs-lookup"><span data-stu-id="440a7-211">Large promotional tile \(optional\)</span></span> | <span data-ttu-id="440a7-212">大規模なプロモーションタイルは、Microsoft Edge のアドオンの web サイトでより目立つ機能拡張機能に使用されます。</span><span class="sxs-lookup"><span data-stu-id="440a7-212">Large promotion tiles are used in the store to feature extensions more prominently in the Microsoft Edge add-ons website.</span></span>  <span data-ttu-id="440a7-213">送信された画像は、ユーザーに表示されます。</span><span class="sxs-lookup"><span data-stu-id="440a7-213">The images, if submitted, are visible to the users.</span></span>  <span data-ttu-id="440a7-214">PNG ファイルのサイズは、1400 x 560 ピクセルである必要があります。</span><span class="sxs-lookup"><span data-stu-id="440a7-214">The size of the PNG files must be 1400 x 560 pixels.</span></span>  |  
+| <span data-ttu-id="440a7-215">YouTube ビデオの URL \ (オプション \)</span><span class="sxs-lookup"><span data-stu-id="440a7-215">YouTube video URL \(optional\)</span></span> | <span data-ttu-id="440a7-216">お客様の内線番号には、プロモーション用の YouTube ビデオも含めることができます。</span><span class="sxs-lookup"><span data-stu-id="440a7-216">You may include a promotional YouTube video of your extension.</span></span>  <span data-ttu-id="440a7-217">`YouTube video URL`ビデオは、拡張機能の [ストア登録情報] ページに表示されます。</span><span class="sxs-lookup"><span data-stu-id="440a7-217">The `YouTube video URL` video is displayed on the store listing page of your extension.</span></span>  |  
+| <span data-ttu-id="440a7-218">短い説明 \ (必須 \)</span><span class="sxs-lookup"><span data-stu-id="440a7-218">Short description \(required\)</span></span> | <span data-ttu-id="440a7-219">短い説明を編集するには、拡張機能パッケージのマニフェストファイルの説明フィールドを更新して、もう一度アップロードする必要があります。</span><span class="sxs-lookup"><span data-stu-id="440a7-219">To edit the short description, you must update the description field in your manifest file of your extension package and re-upload it.</span></span>  |  
+| <span data-ttu-id="440a7-220">用語の検索 \ (オプション \)</span><span class="sxs-lookup"><span data-stu-id="440a7-220">Search terms \(optional\)</span></span> | <span data-ttu-id="440a7-221">検索用語は、Microsoft Edge のアドオンカタログで検索しているときに、ユーザーが拡張機能を見つけやすくするための単一の単語または語句です。</span><span class="sxs-lookup"><span data-stu-id="440a7-221">Search terms are single words or phrases that help users discover your extension when searching in the Microsoft Edge Add-ons Catalog.</span></span>  <span data-ttu-id="440a7-222">検索用語は、ユーザーには表示されません。</span><span class="sxs-lookup"><span data-stu-id="440a7-222">The search terms are not displayed to users.</span></span>  |  
 
-*   `English (United States)`<span data-ttu-id="d8b80-209">: これは既定値です。</span><span class="sxs-lookup"><span data-stu-id="d8b80-209">:  This is the default value.</span></span>  <span data-ttu-id="d8b80-210">パッケージの言語について説明していない場合は、既定の言語を英語 (米国) に設定し、英語 (米国) で登録する必要があります。</span><span class="sxs-lookup"><span data-stu-id="d8b80-210">If you do not mention any language in your package, we set your default language to English \(United States\) and you must provide a listing in English \(United States\).</span></span>  
-*   `{language}` <span data-ttu-id="d8b80-211">\(`{Country}`\)</span><span class="sxs-lookup"><span data-stu-id="d8b80-211">\(`{Country}`\)</span></span>  
+##### <span data-ttu-id="440a7-223">YouTube ビデオ URL の要件</span><span class="sxs-lookup"><span data-stu-id="440a7-223">YouTube video URL requirements</span></span>  
 
-#### <span data-ttu-id="d8b80-212">ストアの表示名</span><span class="sxs-lookup"><span data-stu-id="d8b80-212">Store display name</span></span>  
+<span data-ttu-id="440a7-224">ビデオが次の要件を満たしていることを確認します。</span><span class="sxs-lookup"><span data-stu-id="440a7-224">Ensure your video meets the following requirements.</span></span>  
 
-<span data-ttu-id="d8b80-213">拡張機能パッケージマニフェストで示されている拡張子の名前。</span><span class="sxs-lookup"><span data-stu-id="d8b80-213">The name of Extension as mentioned in your Extension package manifest.</span></span>  
+*   <span data-ttu-id="440a7-225">YouTube ビデオのコンテンツが [Microsoft Edge のアドオンカタログ開発者ポリシー][MicrosoftEdgeAddonsCatalogDeveloperPolicies] に準拠していることを確認します。</span><span class="sxs-lookup"><span data-stu-id="440a7-225">Verify that the content of the YouTube video complies with the [Microsoft Edge Addons Catalog Developer Policies][MicrosoftEdgeAddonsCatalogDeveloperPolicies] topic.</span></span>  
+*   <span data-ttu-id="440a7-226">ビデオの広告をオフにします。</span><span class="sxs-lookup"><span data-stu-id="440a7-226">Turn off advertisements on your video.</span></span>  <span data-ttu-id="440a7-227">詳細については、「[埋め込みビデオに][GoogleYoutubeAnswer132596][既定の広告の形式][GoogleYoutubeAnswer2531367Topic7072227]と広告を設定する」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="440a7-227">For more information, go to [Set your default ad formats][GoogleYoutubeAnswer2531367Topic7072227] and [Ads on embedded videos][GoogleYoutubeAnswer132596].</span></span>  
+*   <span data-ttu-id="440a7-228">ビデオの埋め込みを有効にします。</span><span class="sxs-lookup"><span data-stu-id="440a7-228">Turn on embedding for your videos.</span></span>  <span data-ttu-id="440a7-229">詳細については、「 [ビデオを埋め込む & のプレイリスト][GoogleYoutubeAnswer171780]」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="440a7-229">For more information, go to [Embed videos & playlists][GoogleYoutubeAnswer171780].</span></span>  
 
-> [!NOTE]
-> <span data-ttu-id="d8b80-214">名前を編集するには、拡張機能パッケージのマニフェストを更新して、もう一度アップロードする必要があります。</span><span class="sxs-lookup"><span data-stu-id="d8b80-214">To edit the name, you must update the manifest in your Extension package and re-upload it.</span></span>  
+<span data-ttu-id="440a7-230">次の手順を実行して、YouTube ビデオの URL をビデオで送信します。</span><span class="sxs-lookup"><span data-stu-id="440a7-230">Perform the following steps to submit the YouTube video URL of your video.</span></span>  
 
-#### <span data-ttu-id="d8b80-215">説明</span><span class="sxs-lookup"><span data-stu-id="d8b80-215">Description</span></span>  
+1.  <span data-ttu-id="440a7-231">YouTube で、[ストア登録情報] ページに追加するビデオを見つけます。</span><span class="sxs-lookup"><span data-stu-id="440a7-231">On YouTube, locate the video that you want to add to your store listing page.</span></span>  
+1.  <span data-ttu-id="440a7-232">ビデオで、[ **Share**  >  **埋め込み**の共有] を選びます。</span><span class="sxs-lookup"><span data-stu-id="440a7-232">Under the video, choose **Share** > **Embed**.</span></span>  
+1.  <span data-ttu-id="440a7-233">表示されている HTML コードをコピーします。</span><span class="sxs-lookup"><span data-stu-id="440a7-233">Copy the HTML code that is displayed.</span></span>  
+1.  <span data-ttu-id="440a7-234">[ストア登録情報の詳細] ページで、HTML コードをフィールドに貼り付け `YouTube video URL` ます。</span><span class="sxs-lookup"><span data-stu-id="440a7-234">On the store listing details page, paste the HTML code in the `YouTube video URL` field.</span></span>  
 
-<span data-ttu-id="d8b80-216">このフィールドは必須です。</span><span class="sxs-lookup"><span data-stu-id="d8b80-216">This field is required.</span></span>  
-<span data-ttu-id="d8b80-217">拡張機能のユーザーについての説明。</span><span class="sxs-lookup"><span data-stu-id="d8b80-217">The description for your users of what your Extension does.</span></span>  
+##### <span data-ttu-id="440a7-235">検索用語の要件</span><span class="sxs-lookup"><span data-stu-id="440a7-235">Search terms requirements</span></span>  
 
-<span data-ttu-id="d8b80-218">指定**可能な値**:</span><span class="sxs-lookup"><span data-stu-id="d8b80-218">**Possible Values**:</span></span>  
+<span data-ttu-id="440a7-236">検索用語は、次の要件を満たしている必要があります。</span><span class="sxs-lookup"><span data-stu-id="440a7-236">Search terms must meet the following requirements.</span></span>  
 
-*   <span data-ttu-id="d8b80-219">{plain_text}: 1万文字未満</span><span class="sxs-lookup"><span data-stu-id="d8b80-219">{plain_text}: Less than 10,000 characters.</span></span>  
+*   <span data-ttu-id="440a7-237">検索語句を入力すると、最大で21文字まで使用できます。</span><span class="sxs-lookup"><span data-stu-id="440a7-237">You may enter search terms to use up to a maximum of 21 words.</span></span>  <span data-ttu-id="440a7-238">単一の単語、語句、または両方の組み合わせのいずれかとして使用する場合は、最大21個の単語を使用できます。</span><span class="sxs-lookup"><span data-stu-id="440a7-238">Whether used as single words, phrases, or a combination of both, you are only allowed a maximum of 21 words.</span></span>  
+*   <span data-ttu-id="440a7-239">最大で7つの検索語句: 単一の単語または語句。</span><span class="sxs-lookup"><span data-stu-id="440a7-239">Up to a maximum of seven search terms:  single word or phrases.</span></span>  <span data-ttu-id="440a7-240">各検索語句の文字数は、30文字に制限されています。</span><span class="sxs-lookup"><span data-stu-id="440a7-240">Each search term has a character limit of 30 characters.</span></span>  
 
-#### <span data-ttu-id="d8b80-220">ストアロゴ</span><span class="sxs-lookup"><span data-stu-id="d8b80-220">Store logo</span></span>  
+#### <span data-ttu-id="440a7-241">手順 6: 申請を完了する</span><span class="sxs-lookup"><span data-stu-id="440a7-241">Step 6: Complete your submission</span></span>  
 
-<span data-ttu-id="d8b80-221">このフィールドは必須です。</span><span class="sxs-lookup"><span data-stu-id="d8b80-221">This field is required.</span></span>  
-<span data-ttu-id="d8b80-222">拡張ロゴの1:1 画像。</span><span class="sxs-lookup"><span data-stu-id="d8b80-222">A 1:1 image for your Extension logo.</span></span>  
+<span data-ttu-id="440a7-242">[ **内線番号の送信** ] ページで、証明書のメモを追加して、拡張機能のテストに役立てます。</span><span class="sxs-lookup"><span data-stu-id="440a7-242">On the **Submit your extension** page, add notes for certification to help test your extension.</span></span>  
 
-<span data-ttu-id="d8b80-223">指定**可能な値**:</span><span class="sxs-lookup"><span data-stu-id="d8b80-223">**Possible Values**:</span></span>  
+##### <span data-ttu-id="440a7-243">認定のメモ (オプション)</span><span class="sxs-lookup"><span data-stu-id="440a7-243">Notes for certification (Optional)</span></span>  
 
-*   <span data-ttu-id="d8b80-224">128px x 128px、PNG \ (.png \)</span><span class="sxs-lookup"><span data-stu-id="d8b80-224">128px x 128px, PNG \(.png\)</span></span>  
-*   <span data-ttu-id="d8b80-225">150px x 140px、PNG \ (.png \)</span><span class="sxs-lookup"><span data-stu-id="d8b80-225">150px x 140px, PNG \(.png\)</span></span>  
-*   <span data-ttu-id="d8b80-226">300px x 300px、PNG \ (.png \): 推奨サイズ。</span><span class="sxs-lookup"><span data-stu-id="d8b80-226">300px x 300px, PNG \(.png\):  The recommended size.</span></span>  
+<span data-ttu-id="440a7-244">内線番号を申請するときには、[ **認定のメモ** ] ページを使って、認定テスト担当者に追加情報を提供します。</span><span class="sxs-lookup"><span data-stu-id="440a7-244">When submitting your extension, use the **Notes for certification** page to provide additional information to the certification testers.</span></span>  <span data-ttu-id="440a7-245">追加情報は、拡張機能が正しくテストされていることを確認するのに役立ちます。</span><span class="sxs-lookup"><span data-stu-id="440a7-245">The additional information helps ensure that your extension is tested correctly.</span></span>  <span data-ttu-id="440a7-246">拡張機能が完全にテストされていない場合は、認定が不合格になることがあります。</span><span class="sxs-lookup"><span data-stu-id="440a7-246">If your extension is not fully tested, it may fail certification.</span></span>  
 
-#### <span data-ttu-id="d8b80-227">小規模のプロモーションタイル</span><span class="sxs-lookup"><span data-stu-id="d8b80-227">Small promotional tile</span></span>  
+<span data-ttu-id="440a7-247">必要に応じて、次の情報が含まれていることを確認します。</span><span class="sxs-lookup"><span data-stu-id="440a7-247">Ensure you include the following information, as necessary.</span></span>  
 
-<span data-ttu-id="d8b80-228">このフィールドは必須です。</span><span class="sxs-lookup"><span data-stu-id="d8b80-228">This field is required.</span></span>  
-<span data-ttu-id="d8b80-229">小さいサイズのプロモーションタイル。</span><span class="sxs-lookup"><span data-stu-id="d8b80-229">A small size promotional tile.</span></span>  <span data-ttu-id="d8b80-230">このタイルには、登録情報が表示されます。</span><span class="sxs-lookup"><span data-stu-id="d8b80-230">Your listing is displayed on this tile.</span></span>  
+*   <span data-ttu-id="440a7-248">テストアカウントのユーザー名とパスワード。</span><span class="sxs-lookup"><span data-stu-id="440a7-248">User names and passwords for test accounts.</span></span>  
+*   <span data-ttu-id="440a7-249">非表示の機能やロックされた機能にアクセスする手順。</span><span class="sxs-lookup"><span data-stu-id="440a7-249">Steps to access hidden or locked features.</span></span>  
+*   <span data-ttu-id="440a7-250">地域またはその他のユーザー設定に基づいて、機能の相違点が予測されます。</span><span class="sxs-lookup"><span data-stu-id="440a7-250">Expected differences in functionality based on region or other user settings.</span></span>  
+*   <span data-ttu-id="440a7-251">申請が既存の拡張子の更新である場合は、拡張機能に加えられた変更に関する情報を含めます。</span><span class="sxs-lookup"><span data-stu-id="440a7-251">If your submission is an update to an existing extension, include information about the changes made to the extension.</span></span>  
+*   <span data-ttu-id="440a7-252">テスターが申請について理解しておく必要があるその他の情報。</span><span class="sxs-lookup"><span data-stu-id="440a7-252">Any additional information that testers must understand about your submission.</span></span>  
 
-<span data-ttu-id="d8b80-231">指定**可能な値**:</span><span class="sxs-lookup"><span data-stu-id="d8b80-231">**Possible Values**:</span></span>  
+<span data-ttu-id="440a7-253">情報を入力したら、[ **発行** ] を選択して、Microsoft Edge のアドオンカタログに拡張機能を送信します。</span><span class="sxs-lookup"><span data-stu-id="440a7-253">After providing the information, select **Publish** to submit your extension to the Microsoft Edge add-ons catalog.</span></span>  <span data-ttu-id="440a7-254">申請が認定手順に進みます。</span><span class="sxs-lookup"><span data-stu-id="440a7-254">Your submission proceeds to the certification step.</span></span>  <span data-ttu-id="440a7-255">認定プロセスは、申請後に最大7営業日かかる場合があります。</span><span class="sxs-lookup"><span data-stu-id="440a7-255">The certification process may take up to seven business days after your submission.</span></span>  
 
-*   <span data-ttu-id="d8b80-232">440px x 280x, PNG \ (.png \)</span><span class="sxs-lookup"><span data-stu-id="d8b80-232">440px x 280x, PNG \(.png\)</span></span>  
-
-#### <span data-ttu-id="d8b80-233">メディア</span><span class="sxs-lookup"><span data-stu-id="d8b80-233">Media</span></span>  
-
-<span data-ttu-id="d8b80-234">このフィールドは省略可能です。</span><span class="sxs-lookup"><span data-stu-id="d8b80-234">This field is optional.</span></span>  
-<span data-ttu-id="d8b80-235">製品をより効果的に表示するために、これらのアセットを提供する必要があります。</span><span class="sxs-lookup"><span data-stu-id="d8b80-235">You should provide these assets to help display your product more effectively.</span></span>  
-
-*   <span data-ttu-id="d8b80-236">スクリーンショット</span><span class="sxs-lookup"><span data-stu-id="d8b80-236">Screenshots</span></span>  
-    <span data-ttu-id="d8b80-237">拡張機能について説明する拡張機能の画像。</span><span class="sxs-lookup"><span data-stu-id="d8b80-237">The images of your Extension that describe what your Extension does.</span></span>  
-    
-*   <span data-ttu-id="d8b80-238">大きなプロモーションタイル</span><span class="sxs-lookup"><span data-stu-id="d8b80-238">Large promotion tiles</span></span>  
-    <span data-ttu-id="d8b80-239">大きなプロモーションタイルは、Microsoft Edge のアドオンで拡張機能をより目立つようにするためのものです。</span><span class="sxs-lookup"><span data-stu-id="d8b80-239">A large promotional tile to be feature your Extension more prominently in Microsoft Edge Addons.</span></span>  
-    
-*   <span data-ttu-id="d8b80-240">YouTube ビデオの URL</span><span class="sxs-lookup"><span data-stu-id="d8b80-240">YouTube video URL</span></span>  
-    <span data-ttu-id="d8b80-241">[内線番号の有効な YouTube ビデオ URL][MicrosoftEdgeAddonsUploadYouTubeVideo]。</span><span class="sxs-lookup"><span data-stu-id="d8b80-241">A valid [YouTube video URL for your Extension][MicrosoftEdgeAddonsUploadYouTubeVideo].</span></span>  <span data-ttu-id="d8b80-242">ビデオの品質と最小の長さは、適切である必要があります。</span><span class="sxs-lookup"><span data-stu-id="d8b80-242">Your video should be good quality and minimal length.</span></span>  <span data-ttu-id="d8b80-243">Microsoft Edge のアドオンで、内線番号を公開する前に、YouTube ビデオが認定に合格している必要があります。</span><span class="sxs-lookup"><span data-stu-id="d8b80-243">Your YouTube video must pass certification before publishing your Extension in Microsoft Edge Addons.</span></span>  <span data-ttu-id="d8b80-244">YouTube ビデオが[Microsoft Edge アドオンカタログ開発者ポリシードキュメント][MicrosoftEdgeAddonsCatalogDeveloperPolicies]に準拠していることを確認します。</span><span class="sxs-lookup"><span data-stu-id="d8b80-244">Verify that your YouTube video complies with the [Microsoft Edge Addons Catalog Developer Policies document][MicrosoftEdgeAddonsCatalogDeveloperPolicies].</span></span>  
-
-<span data-ttu-id="d8b80-245">指定**可能な値**:</span><span class="sxs-lookup"><span data-stu-id="d8b80-245">**Possible Values**:</span></span>  
-
-*   <span data-ttu-id="d8b80-246">最大10個のスクリーンショット。</span><span class="sxs-lookup"><span data-stu-id="d8b80-246">10 Screenshots maximum.</span></span>  
-    *   <span data-ttu-id="d8b80-247">640 px x 480px、PNG \ (.png \): スクリーンショット。</span><span class="sxs-lookup"><span data-stu-id="d8b80-247">640px x 480px, PNG \(.png\):  Screenshots.</span></span>  
-    *   <span data-ttu-id="d8b80-248">1280px x 800px、PNG \ (.png \): スクリーンショット。</span><span class="sxs-lookup"><span data-stu-id="d8b80-248">1280px x 800px, PNG \(.png\):  Screenshots.</span></span>  
-*   <span data-ttu-id="d8b80-249">1400px x 560px、PNG \ (.png \): 大きなプロモーションタイル。</span><span class="sxs-lookup"><span data-stu-id="d8b80-249">1400px x 560px, PNG \(.png\):  Large promotion tiles.</span></span>  
-*   <span data-ttu-id="d8b80-250">60秒または短い間の YouTube ビデオ URL。</span><span class="sxs-lookup"><span data-stu-id="d8b80-250">60 seconds or shorter and 2GB or smaller, YouTube video URL.</span></span>  
-
-#### <span data-ttu-id="d8b80-251">簡単な説明</span><span class="sxs-lookup"><span data-stu-id="d8b80-251">Short description</span></span>  
-
-<span data-ttu-id="d8b80-252">Catchy の簡単な説明。製品の一覧の一番上に表示されることがあります。</span><span class="sxs-lookup"><span data-stu-id="d8b80-252">A short, catchy description that may be used at the top of the listing for your product.</span></span>  <span data-ttu-id="d8b80-253">指定しない場合は、長い説明の最初の数行が代わりに使用されます。</span><span class="sxs-lookup"><span data-stu-id="d8b80-253">If not provided, the first few lines from your longer description are used instead.</span></span>  <span data-ttu-id="d8b80-254">説明はこのテキストの下にも表示されているため、リストが繰り返されないように、別のテキストの短い説明を入力する必要があります。</span><span class="sxs-lookup"><span data-stu-id="d8b80-254">Because your description also appears below this text, you should provide a short description with different text so that your listing is less repetitive.</span></span>  <span data-ttu-id="d8b80-255">拡張機能の短い説明は、パッケージのマニフェストファイルから直接選択されます。</span><span class="sxs-lookup"><span data-stu-id="d8b80-255">The Short description of your Extension is picked directly from the manifest file of your package.</span></span>  
+<span data-ttu-id="440a7-256">申請が認定に合格すると、Microsoft Edge のアドオンカタログに拡張機能が公開されます。</span><span class="sxs-lookup"><span data-stu-id="440a7-256">When your submission passes certification, your extension is published in the Microsoft Edge add-ons catalog.</span></span>  <span data-ttu-id="440a7-257">パートナーセンターダッシュボードの拡張機能の状態がに変わり `In the Store` ます。</span><span class="sxs-lookup"><span data-stu-id="440a7-257">The status of your extension in the Partner Center dashboard changes to `In the Store`.</span></span>  
 
 > [!NOTE]
-> <span data-ttu-id="d8b80-256">短い説明を編集するには、拡張機能パッケージのマニフェストを更新して、もう一度アップロードする必要があります。</span><span class="sxs-lookup"><span data-stu-id="d8b80-256">To edit the short description, you must update the manifest in your Extension package and re-upload it.</span></span>  
-
-#### <span data-ttu-id="d8b80-257">検索語句</span><span class="sxs-lookup"><span data-stu-id="d8b80-257">Search terms</span></span>  
-
-<span data-ttu-id="d8b80-258">検索用語は、ユーザーには表示されない1つの単語または短いフレーズですが、ユーザーがこれらの用語を使用して検索するときに、Microsoft Edge のアドオンで拡張機能を見つけることができます。</span><span class="sxs-lookup"><span data-stu-id="d8b80-258">Search terms are single words or short phrases that are not displayed to users but help make your Extension discoverable in Microsoft Edge Addons when users search using those terms.</span></span>  
-
-<span data-ttu-id="d8b80-259">**要件**:</span><span class="sxs-lookup"><span data-stu-id="d8b80-259">**Requirements**:</span></span>  
-
-*   <span data-ttu-id="d8b80-260">7つ以下の検索語句</span><span class="sxs-lookup"><span data-stu-id="d8b80-260">7 or fewer search terms</span></span>  
-*   <span data-ttu-id="d8b80-261">検索用語あたり30文字以下</span><span class="sxs-lookup"><span data-stu-id="d8b80-261">30 or fewer characters per search term</span></span>  
-*   <span data-ttu-id="d8b80-262">検索語句の合計が21以下である</span><span class="sxs-lookup"><span data-stu-id="d8b80-262">21 or fewer words for combined search terms</span></span>  
-
-<span data-ttu-id="d8b80-263">[**保存**] をクリックして、リストセクションの保存に進みます。</span><span class="sxs-lookup"><span data-stu-id="d8b80-263">Click **Save** to proceed to save your listing section.</span></span>  <span data-ttu-id="d8b80-264">[**発行**] をクリックして、申請の詳細を入力します。</span><span class="sxs-lookup"><span data-stu-id="d8b80-264">Click **Publish** to provide submission details.</span></span>  
-
-## <span data-ttu-id="d8b80-265">手順 6: 申請を完了し、[発行] をクリックします。</span><span class="sxs-lookup"><span data-stu-id="d8b80-265">Step 6: Complete your submission and click Publish</span></span>  
-
-<span data-ttu-id="d8b80-266">拡張機能の申請プロセスの [申請オプション] ページでは、製品を適切にテストするための詳細情報を提供しています。</span><span class="sxs-lookup"><span data-stu-id="d8b80-266">The Submission options page of the Extension submission process is where you provide more information to help us test your product properly.</span></span>  <span data-ttu-id="d8b80-267">これは省略可能な手順ですが、多くの申請にお勧めします。</span><span class="sxs-lookup"><span data-stu-id="d8b80-267">This is an optional step, but it is recommended for many submissions.</span></span>  
-
-### <span data-ttu-id="d8b80-268">公開の保留オプション</span><span class="sxs-lookup"><span data-stu-id="d8b80-268">Publishing hold options</span></span>  
-
-<span data-ttu-id="d8b80-269">既定では、申請は認定に合格するとすぐに公開されます。</span><span class="sxs-lookup"><span data-stu-id="d8b80-269">By default, your submission is published as soon as it passes certification.</span></span>  <span data-ttu-id="d8b80-270">特定の日付まで申請を発行することを保留にすることができます。</span><span class="sxs-lookup"><span data-stu-id="d8b80-270">You may choose to place a hold on publishing your submission until a specific date.</span></span>  <span data-ttu-id="d8b80-271">ここでは、このセクションのオプションについて説明します。</span><span class="sxs-lookup"><span data-stu-id="d8b80-271">The options in this section are described below.</span></span>  
-
-*   **<span data-ttu-id="d8b80-272">認定に合格するとすぐに申請を公開する</span><span class="sxs-lookup"><span data-stu-id="d8b80-272">Publish your submission as soon as it passes certification</span></span>**  
-
-    <span data-ttu-id="d8b80-273">これは既定の選択です。</span><span class="sxs-lookup"><span data-stu-id="d8b80-273">This is the default selection.</span></span>  <span data-ttu-id="d8b80-274">これは、申請が認定に合格するとすぐに、発行プロセスを開始することを意味します。</span><span class="sxs-lookup"><span data-stu-id="d8b80-274">It means that your submission begins the publishing process as soon as it passes certification</span></span>  
-
-*   **<span data-ttu-id="d8b80-275">特定の日に申請の公開を開始する</span><span class="sxs-lookup"><span data-stu-id="d8b80-275">Start publishing your submission on a certain date</span></span>**  
-
-    <span data-ttu-id="d8b80-276">[特定の**日付に提出の発行を開始**する] を選択して、申請が特定の日付まで公開されないようにします。</span><span class="sxs-lookup"><span data-stu-id="d8b80-276">Choose **Start publishing your submission on a certain date** to ensure that the submission is not published until a specific date.</span></span>  <span data-ttu-id="d8b80-277">このオプションを使用すると、指定した日付以降に、できるだけ早く申請がリリースされます。</span><span class="sxs-lookup"><span data-stu-id="d8b80-277">With this option, your submission is released as soon as possible on or after the date you specify.</span></span>  <span data-ttu-id="d8b80-278">日付は 24 時間以上先の日付にする必要があります。</span><span class="sxs-lookup"><span data-stu-id="d8b80-278">The date must be at least 24 hours in the future.</span></span>  <span data-ttu-id="d8b80-279">日付と共に、提出を開始する時刻を指定することができます。</span><span class="sxs-lookup"><span data-stu-id="d8b80-279">Along with the date, you may specify the time at which the submission should begin to be published.</span></span>  
-
-### <span data-ttu-id="d8b80-280">認定の注意書き</span><span class="sxs-lookup"><span data-stu-id="d8b80-280">Notes for certification</span></span>  
-
-<span data-ttu-id="d8b80-281">内線番号を申請するときに、[認定のメモ] ページを使用して、認定テスト担当者に追加情報を提供するオプションがあります。</span><span class="sxs-lookup"><span data-stu-id="d8b80-281">As you submit your Extension, you have the option to use the Notes for certification page to provide additional information to the certification testers.</span></span>  <span data-ttu-id="d8b80-282">この情報は、拡張機能が正しくテストされていることを確認するために役立ちます。</span><span class="sxs-lookup"><span data-stu-id="d8b80-282">This information helps ensure that your Extension is tested correctly.</span></span>  <span data-ttu-id="d8b80-283">申請を完全にテストできない場合は、認定が不合格になることがあります。</span><span class="sxs-lookup"><span data-stu-id="d8b80-283">If we are not able to fully test your submission, it may fail certification.</span></span>  
-
-<span data-ttu-id="d8b80-284">以下の \ (内線番号に該当する場合) を必ず含めてください。</span><span class="sxs-lookup"><span data-stu-id="d8b80-284">Make sure to include the following \(if applicable for your Extension\):</span></span>  
-
-*   <span data-ttu-id="d8b80-285">テストアカウントのユーザー名とパスワード。</span><span class="sxs-lookup"><span data-stu-id="d8b80-285">User names and passwords for test accounts.</span></span>  
-*   <span data-ttu-id="d8b80-286">非表示の機能やロックされた機能にアクセスする手順。</span><span class="sxs-lookup"><span data-stu-id="d8b80-286">Steps to access hidden or locked features.</span></span>  
-*   <span data-ttu-id="d8b80-287">地域またはその他のユーザー設定に基づいて、動作の違いが予測されます。</span><span class="sxs-lookup"><span data-stu-id="d8b80-287">Expected differences in behavior based on region or other user settings.</span></span>  
-*   <span data-ttu-id="d8b80-288">アプリの更新プログラムで変更された内容に関する情報。</span><span class="sxs-lookup"><span data-stu-id="d8b80-288">Information about what changed in an app update.</span></span>  
-*   <span data-ttu-id="d8b80-289">テスターが申請について理解していると思われるその他のもの。</span><span class="sxs-lookup"><span data-stu-id="d8b80-289">Anything else you think testers must understand about your submission.</span></span>  
-
-<span data-ttu-id="d8b80-290">上記の詳細を完了したら、[**発行**] をクリックして、Microsoft Edge のアドオンで拡張機能を送信します。</span><span class="sxs-lookup"><span data-stu-id="d8b80-290">After completing the above details, click **Publish** to submit your Extension in Microsoft Edge Addons.</span></span>  
-
-<span data-ttu-id="d8b80-291">拡張機能の申請の作成が完了し、[**公開**] をクリックすると、申請が認定手順に入ります。</span><span class="sxs-lookup"><span data-stu-id="d8b80-291">When you finish creating the submission for your Extension and click **Publish**, the submission enters the certification step.</span></span>  <span data-ttu-id="d8b80-292">通常、このプロセスは数日以内に完了します。ただし、場合によっては、最大7営業日かかる場合があります。</span><span class="sxs-lookup"><span data-stu-id="d8b80-292">This process usually is completed within a couple of days, though in some cases it may take up to 7 business days.</span></span>  <span data-ttu-id="d8b80-293">申請が認定に合格すると、特定の日付までリリースされないように指定するために、[公開保留] オプションを選択していない限り、拡張機能が Microsoft Edge のアドオンに公開されます。</span><span class="sxs-lookup"><span data-stu-id="d8b80-293">After your submission passes certification, your Extension is published in Microsoft Edge Addons unless you selected the Publishing hold options to specify that it should not be released until a certain date.</span></span>  <span data-ttu-id="d8b80-294">申請が公開され、ダッシュボードの内線番号がに変更されたときに通知され `In the Store` ます。</span><span class="sxs-lookup"><span data-stu-id="d8b80-294">You are notified when your submission is published, and the status of your Extension in the dashboard changes to `In the Store`.</span></span>  
-
-<!-- image links -->  
+> <span data-ttu-id="440a7-258">申請または登録プロセスで問題が発生した場合は、 [ここで][ExtensionsSupportForm] サポートチケットを提出するか、 [ext_dev_support@microsoft.com](mailto:ext_dev_support@microsoft.com)にメールを送信します。</span><span class="sxs-lookup"><span data-stu-id="440a7-258">If you are facing any issues in the submission or registration process, file a support ticket [here][ExtensionsSupportForm] or send an email to [ext_dev_support@microsoft.com](mailto:ext_dev_support@microsoft.com).</span></span>  
 
 <!-- links -->  
 
-[ExtensionsGettingStarted]: ../getting-started/index.md "Microsoft Edge \ (Chromium \) Extensions の概要 |Microsoft ドキュメント"  
-
-[MicrosoftEdgeAddonsUploadYouTubeVideo]: ./upload-video.md "YouTube のビデオをアップロードする |Microsoft ドキュメント"  
+[ExtensionsGettingStarted]: ../getting-started/index.md "Microsoft Edge (Chromium) Extensions の概要 |Microsoft ドキュメント"  
+[DeveloperRegistration]: ./create-dev-account.md "Microsoft Edge extensions developer として登録する |Microsoft ドキュメント"  
+[PortChromiumExtension]: ../developer-guide/port-chrome-extension.md "Chromium extension を Microsoft Edge に移植する |Microsoft ドキュメント"  
 [MicrosoftEdgeAddonsCatalogDeveloperPolicies]: ../store-policies/developer-policies.md "Microsoft Edge アドオンカタログ開発者ポリシー |Microsoft ドキュメント"  
 
 [MicrosoftAppDeveloperAgreement]: /legal/windows/agreements/app-developer-agreement "アプリ開発者契約 |Microsoft ドキュメント"  
 
 [MicrosoftPartnerCenter]: https://partner.microsoft.com/dashboard/microsoftedge/public/login?ref=dd "パートナーセンター"  
+
+[ExtensionsSupportForm]: https://support.microsoft.com/supportrequestform/e7a381be-9c9a-fafb-ed76-262bc93fd9e4 "拡張機能の新しいサポートリクエスト |Microsoft サポート"  
+
+[GoogleYoutubeAnswer2531367Topic7072227]: https://support.google.com/youtube/answer/2531367?ref_topic=7072227 "既定の広告の形式を設定する-YouTube のヘルプ"  
+
+[GoogleYoutubeAnswer132596]: https://support.google.com/youtube/answer/132596 "埋め込みビデオに関する広告-YouTube のヘルプ"
+[GoogleYoutubeAnswer171780]: https://support.google.com/youtube/answer/171780 "ビデオを & のプレイリストに埋め込む-YouTube のヘルプ"  
