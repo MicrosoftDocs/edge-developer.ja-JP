@@ -8,14 +8,14 @@ metadata:
   ms.topic: hub-page
   author: MSEdgeTeam
   ms.author: msedgedevrel
-  ms.date: 08/20/2020
+  ms.date: 09/08/2020
   ms.localizationpriority: high
-  ms.openlocfilehash: 7b2bc99d1338737e2c1008225fd81915192db54e
-  ms.sourcegitcommit: 5ed791ed5423a3a4b03e8a1c7927f026307a6673
+  ms.openlocfilehash: 3d33b5a1e0e43269cd77b095f1516f5885fcf807
+  ms.sourcegitcommit: 6b577cb118f34f3ff2c65eab2908b65f155dc151
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 08/25/2020
-  ms.locfileid: "10960707"
+  ms.lasthandoff: 09/09/2020
+  ms.locfileid: "11004322"
 highlightedContent:
   items:
   - title: Microsoft Edge (正式な厩舎チャネル)
@@ -107,7 +107,7 @@ additionalContent:
       - text: DevTools の概要
         url: /microsoft-edge/devtools-guide-chromium
       - text: 新機能
-        url: /microsoft-edge/devtools-guide-chromium/whats-new/2019/12/devtools
+        url: /microsoft-edge/devtools-guide-chromium/whats-new/2020/08/devtools
       - text: DevTools を開く
         url: /microsoft-edge/devtools-guide-chromium/open
       - text: 初心者向け DevTools
@@ -124,7 +124,7 @@ additionalContent:
         url: /microsoft-edge/devtools-guide-chromium/console/index
       - text: ネットワーク
         url: /microsoft-edge/devtools-guide-chromium/network/index
-      - text: Storage
+      - text: 記憶域
         url: /microsoft-edge/devtools-guide-chromium/storage/cookies
       - text: コマンド メニュー
         url: /microsoft-edge/devtools-guide-chromium/command-menu/index
@@ -134,7 +134,7 @@ additionalContent:
         url: /microsoft-edge/devtools-guide-chromium/evaluate-performance/index
       - text: リモート デバッグ
         url: /microsoft-edge/devtools-guide-chromium/remote-debugging/index
-      - text: Security
+      - text: セキュリティ
         url: /microsoft-edge/devtools-guide-chromium/security/index
     - title: DevTools をカスタマイズする
       links:
