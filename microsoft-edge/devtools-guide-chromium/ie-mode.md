@@ -1,53 +1,92 @@
 ---
 description: IE モードと Microsoft Edge (Chromium) DevTools
 title: Internet Explorer モードと DevTools
-author: robpaveza
-ms.author: ropaveza
-ms.date: 01/15/2020
+author: MSEdgeTeam
+ms.author: msedgedevrel
+ms.date: 09/08/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools、ie11、internet explorer 11、ie モード
-ms.openlocfilehash: 18e5f029d277e446857ec48b9cf129149f219256
-ms.sourcegitcommit: 6860234c25a8be863b7f29a54838e78e120dbb62
+ms.openlocfilehash: b059cae3ff48a45fe92cbf69e37ad692e329b200
+ms.sourcegitcommit: 6b577cb118f34f3ff2c65eab2908b65f155dc151
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "10570363"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "11003971"
 ---
-# Internet Explorer モードと DevTools
+# Internet Explorer モードと DevTools  
 
-このドキュメントでは、Internet Explorer モード (IE モード) を Microsoft Edge (Chromium) DevTools と統合する方法について説明します。
+この記事では、Internet Explorer モード \ (IE モード \) と Microsoft Edge \ (Chromium \) DevTools との統合方法について説明します。  
 
-## IE モードについて
+## IE モードについて  
 
-IE モードは、現在、Internet Explorer 11 でのみ動作する一連の web サイトを企業が指定するためのメカニズムです。 Microsoft Edge (Chromium) でこれらの web サイトを表示すると、Internet Explorer 11 の完全なインスタンスが実行され、タブ内に表示されます。これにより、エンタープライズは、IE ドキュメントモード、ActiveX コントロール、および現在の最新の web ブラウザーとは互換性のないその他のレガシコンポーネントの互換性を管理することができます。
+IE モードでは、組織は、Internet Explorer 11 でのみ機能する web サイトのリストを指定することができます。  Microsoft Edge \ (Chromium \) でこれらの web サイトに移動すると、Internet Explorer 11 のインスタンスが実行され、タブに表示されます。 この機能により、エンタープライズは最新の web ブラウザーと互換性のないテクノロジとの互換性を管理することができます。  次のテクノロジのサポートは、IE モードに含まれています。  
 
-IE モードでは、レンダリングプロセスはすべて、Internet Explorer 11 に基づいています。 Microsoft Edge (Chromium) manager プロセスは、レンダリングプロセスの有効期間を管理しますが、特定のサイトまたはアプリケーションのタブの有効期間に制約されます。 タブが IE モードでレンダリングされている場合、指定したタブのアドレスバーにバッジが表示されます。
+*   IE ドキュメントモード  
+*   ActiveX コントロール  
+*   その他のレガシコンポーネント  
 
-![アドレスバーの IE モードバッジ](./media/ie-mode-badge.png)
+IE モードでは、レンダリングプロセスは Internet Explorer 11 に基づいています。  Microsoft Edge \ (Chromium \) プロセスマネージャーは、レンダリング処理の有効期間を処理します。  特定のサイト \ (またはアプリ \) のタブの有効期間に制限されています。  タブが IE モードでレンダリングされると、特定のタブのアドレスバーにバッジが表示されます。  
 
-IE モードは現在、Windows 10 バージョン 1903 (2019 の更新プログラム) で使用できますが、サポートされているすべての Windows プラットフォームに近い将来利用可能になります。
+:::image type="complex" source="./media/ie-mode-badge.msft.png" alt-text="アドレスバーの IE モードバッジ" lightbox="./media/ie-mode-badge.msft.png":::
+   アドレスバーの IE モードバッジ  
+:::image-end:::  
 
-## IE モードのタブで DevTools を起動する
+IE モードは現在、Windows 10 バージョン 1903 (2019 の更新プログラム \) で使用できますが、サポートされているすべての Windows プラットフォームに近い将来利用可能になります。  
 
-IE モードで web サイトのドキュメントモードを表示しようとしている場合は、アドレスバーのバッジをクリックします。
+## IE モードのタブで DevTools を起動する  
 
-![IE モードバッジでドキュメントモードを表示する](./media/ie-mode-badge-doc-mode.png)
+IE モードで web サイトのドキュメントモードを表示しようとしている場合は、アドレスバーでバッジを選択します。  
 
-IE モードのタブでは、DevTools は動作しません。 `F12`または、 `Ctrl` + `Shift` + `I` 次のようなメッセージが表示された Microsoft Edge (Chromium) devtools の空のインスタンスが起動します。 "開発者ツールは Internet Explorer モードでは使用できません。 ページをデバッグするには、Internet Explorer 11 でページを開きます。 [**ソースの表示**] は、メモ帳を起動し、IE モードのコンテキストメニューに [要素の**検査**] は表示されません。
+:::image type="complex" source="./media/ie-mode-badge-doc-mode.msft.png" alt-text="IE モードバッジを使用したドキュメントモードの表示" lightbox="./media/ie-mode-badge-doc-mode.msft.png":::
+   IE モードバッジを使用したドキュメントモードの表示  
+:::image-end:::  
 
-これは、レンダリングエンジンが IE モードで Chromium から Internet Explorer 11 に切り替えたときに、DevTools (Network、Performance tools など) のいくつかのコンポーネントが壊れる場合があるためです。 フィードバックを送信するには、アイコンをクリックし `:)` ます。
+タブが IE モードを使っている場合、DevTools は動作せず、次の条件が満たされます。
 
-![IE モードで起動した DevTools](./media/ie-mode-devtools.png)
+*   選択 `F12` または選択すると `Ctrl` + `Shift` + `I` 、Microsoft Edge \ (Chromium \) devtools の空のインスタンスが起動します。次のメッセージが表示されます。  
+    
+    ```text
+    Developer Tools are not available in Internet Explorer mode.  To debug the page, open it in Internet Explorer 11.
+    ```  
+    
+*   コンテキストメニューを開くと (\ を右クリックし)、[ **ソースの表示**] を選択すると、メモ帳が起動します。  
+*   コンテキストメニューを開くと (右クリック \)、 **検査要素** は表示されません。  
 
-Internet Explorer 11 ベースの web サイトまたはアプリケーションを開発またはメンテナンスする場合は、Internet Explorer 11 で同じページに移動することをお勧めします。 Windows 10 では、[Windows アクセサリ] の下にある [スタート] メニューで Internet Explorer 11 のショートカットを見つけることができます。 Windows 7 では、[スタート] メニューの [Internet Explorer 11] を見つけることができます。 次に、 `F12` コンテキストメニューの [**要素の検査**] をクリックまたはクリックして、Internet Explorer の devtools を起動します。 これらのツールの使用方法の詳細については、[ここ](/previous-versions/windows/internet-explorer/ie-developer/samples/bg182326(v%3dvs.85))をクリックしてください。
+DevTools \ ( **Network** や **Performance** tools など) 内の多数のツールが動作しない理由は、Chromium から INTERNET Explorer 11 に IE モードで切り替えたときです。  フィードバックを提供するには、「 [Microsoft Edge DevTools チームに連絡する」](#getting-in-touch-with-the-microsoft-edge-devtools-team)に移動します。  
 
-## リモートデバッグと IE モード
+:::image type="complex" source="./media/ie-mode-devtools.msft.png" alt-text="IE モードで起動した DevTools" lightbox="./media/ie-mode-devtools.msft.png":::
+   IE モードで起動した DevTools  
+:::image-end:::  
 
-リモートデバッグが有効になっている Microsoft Edge (Chromium) を起動することができます。これは、通常、Visual Studio や VS コード起動 Edge などのツールがコマンドラインから実行される方法です。
+Internet explorer 11 ベースの web サイト \ (またはアプリ \) を Internet Explorer 11 と IE モードでテストするには、次の手順を実行します。  
 
-`start msedge --remote-debugging-port=9222`
+1.  Internet Explorer 11 を開きます。  
+    *   Windows 10 では、Internet Explorer 11 のショートカットを見つけます。
+        1.  **[スタート] メニュー**  > **Windows アクセサリ**  > **Internet Explorer 11**。  
+    *   Windows 7 の場合は、Internet Explorer 11 を探します。
+        1.  **[スタート] メニュー**  > **Internet Explorer 11**。  
+1.  Internet Explorer 11 で、同じ web ページを開きます。  
+1.  Internet Explorer DevTools を起動します。  
+    *   を選択し `F12` ます。  
+    *   任意の場所にマウスポインターを置いてコンテキストメニューを開き (\ を右クリックし)、[ **要素の検査**] を選びます。  これらのツールの使用方法の詳細については、「 [F12 開発者ツール][PreviousVersionsWindowsInternetExplorerDeveloperSamplesbg182326]」を参照してください。  
 
-このコマンドライン引数で Microsoft Edge (Chromium) を起動すると、IE モードは利用できなくなります。 ただし、IE モードに含まれている web サイトまたはアプリケーションに移動することはできますが、Internet Explorer 11 ではなく Chromium 経由でコンテンツを表示します。 ActiveX コントロールなど、IE11 に依存しているページの部分が正しく表示されない場合があります。 IE モードのバッジはアドレスバーに表示されなくなります。
+## リモートデバッグと IE モード  
 
-IE モードは、Microsoft Edge (Chromium) を完全に終了するまで使用できません。
+コマンドラインインターフェイスからリモートデバッグを有効にして、Microsoft Edge \ (Chromium \) を起動します。  通常、visual Studio、Visual Studio コード、および他の開発ツールは、Microsoft Edge を起動するためのコマンドを実行します。  次のコマンドは、リモートデバッグポートがに設定された Microsoft Edge を起動し `9222` ます。  
+
+```shell
+start msedge --remote-debugging-port=9222
+```  
+
+コマンドライン引数を使用して Microsoft Edge \ (Chromium \) を起動した後、IE モードは使用できません。  ただし、他の方法で表示される IE モードの web サイトに移動することができます。 Web サイト \ (またはアプリ \) コンテンツは、Internet Explorer 11 ではなく Chromium を使用してレンダリングされます。  ActiveX コントロールなど、IE11 に依存しているページの一部が正しく表示されないようにします。  IE モードのバッジはアドレスバーに表示されません。  
+
+IE モードは、Microsoft Edge \ (Chromium \) を完全に閉じて再起動するまで使用できません。  
+
+## Microsoft Edge DevTools チームと連絡を取る  
+
+[!INCLUDE [contact DevTools team note](./includes/contact-devtools-team-note.md)]  
+
+<!-- links -->  
+
+[PreviousVersionsWindowsInternetExplorerDeveloperSamplesbg182326]: /previous-versions/windows/internet-explorer/ie-developer/samples/bg182326(v%3dvs.85) "F12 開発者ツールを使用する |Microsoft ドキュメント"  
