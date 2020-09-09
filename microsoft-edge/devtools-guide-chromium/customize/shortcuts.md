@@ -7,38 +7,49 @@ ms.date: 09/04/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools、custom、ショートカット、キーボード、visual studio コード
-ms.openlocfilehash: 0cf50a7822c39e92c84f3b104ebaeca4f5f82447
-ms.sourcegitcommit: 7e3644e6b1d568ab795168e421c013814efa0073
+ms.openlocfilehash: 65a54c343c043c30ad02ebdde53edb3e32e1e1df
+ms.sourcegitcommit: 6b577cb118f34f3ff2c65eab2908b65f155dc151
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "10996179"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "11003944"
 ---
-# <span data-ttu-id="2c267-104">Microsoft Edge DevTools でキーボードショートカットをカスタマイズする</span><span class="sxs-lookup"><span data-stu-id="2c267-104">Customize keyboard shortcuts in the Microsoft Edge DevTools</span></span>
+# <span data-ttu-id="b990d-104">Microsoft Edge DevTools でキーボードショートカットをカスタマイズする</span><span class="sxs-lookup"><span data-stu-id="b990d-104">Customize keyboard shortcuts in the Microsoft Edge DevTools</span></span>  
 
-<span data-ttu-id="2c267-105">[[設定][DevToolsCustomizeSettings]] の [**ショートカット**] ページには、[ショートカットをカスタマイズするため](#match-keyboard-shortcuts-in-the-devtools-to-microsoft-visual-studio-code)の devtools と機能の[キーボードショートカット][DevToolsShortcuts]の一覧が用意されています。</span><span class="sxs-lookup"><span data-stu-id="2c267-105">The **Shortcuts** page in [Settings][DevToolsCustomizeSettings] provides a list of [keyboard shortcuts in the DevTools][DevToolsShortcuts] and [features to customize the shortcuts](#match-keyboard-shortcuts-in-the-devtools-to-microsoft-visual-studio-code).</span></span>  
+<span data-ttu-id="b990d-105">[[設定][DevToolsCustomizeSettings]] の [**ショートカット**] ページには、[ショートカットをカスタマイズするため](#match-keyboard-shortcuts-in-the-devtools-to-microsoft-visual-studio-code)の devtools と機能の[キーボードショートカット][DevToolsShortcuts]の一覧が用意されています。</span><span class="sxs-lookup"><span data-stu-id="b990d-105">The **Shortcuts** page in [Settings][DevToolsCustomizeSettings] provides a list of [keyboard shortcuts in the DevTools][DevToolsShortcuts] and [features to customize the shortcuts](#match-keyboard-shortcuts-in-the-devtools-to-microsoft-visual-studio-code).</span></span>  
 
-<span data-ttu-id="2c267-106">を押して[設定][DevToolsCustomizeSettings]を開き `Shift` + `?` ます。</span><span class="sxs-lookup"><span data-stu-id="2c267-106">Open [Settings][DevToolsCustomizeSettings] by pressing `Shift`+`?`.</span></span>  <span data-ttu-id="2c267-107">[ **ショートカット** ] ページに移動します。</span><span class="sxs-lookup"><span data-stu-id="2c267-107">Navigate to the **Shortcuts** page.</span></span>  <span data-ttu-id="2c267-108">このトピックでは、DevTools の現在のキーボードショートカットと、各トリガーのアクションについて説明します。</span><span class="sxs-lookup"><span data-stu-id="2c267-108">This topic provides the current keyboard shortcuts in the DevTools and the actions that each trigger.</span></span>  
+<span data-ttu-id="b990d-106">この記事では、DevTools とトリガーされるアクションの現在のキーボードショートカットについて説明します。</span><span class="sxs-lookup"><span data-stu-id="b990d-106">This article provides the current keyboard shortcuts in the DevTools and the actions that are triggered.</span></span>  
 
-:::image type="complex" source="../media/settings-shortcuts.msft.png" alt-text="[設定] の [ショートカット] ページ" lightbox="../media/settings-shortcuts.msft.png":::
-   <span data-ttu-id="2c267-110">[**設定**] の [**ショートカット**] ページ</span><span class="sxs-lookup"><span data-stu-id="2c267-110">The **Shortcuts** page in **Settings**</span></span>  
-:::image-end:::  
+1.  <span data-ttu-id="b990d-107">[DevTools を開き][DevtoolOpenMain]ます。</span><span class="sxs-lookup"><span data-stu-id="b990d-107">[Open DevTools][DevtoolOpenMain].</span></span>  
+1.  <span data-ttu-id="b990d-108">[ [設定][DevToolsCustomizeSettings]] を開きます。</span><span class="sxs-lookup"><span data-stu-id="b990d-108">Open [Settings][DevToolsCustomizeSettings].</span></span>
+    *   <span data-ttu-id="b990d-109">を選択し `Shift` + `?` ます。</span><span class="sxs-lookup"><span data-stu-id="b990d-109">Select `Shift`+`?`.</span></span>  
+1.  <span data-ttu-id="b990d-110">[ **ショートカット** ] ページに移動します。</span><span class="sxs-lookup"><span data-stu-id="b990d-110">Navigate to the **Shortcuts** page.</span></span>  
+    
+    :::image type="complex" source="../media/settings-shortcuts.msft.png" alt-text="[設定] の [ショートカット] ページ" lightbox="../media/settings-shortcuts.msft.png":::
+       <span data-ttu-id="b990d-112">[**設定**] の [**ショートカット**] ページ</span><span class="sxs-lookup"><span data-stu-id="b990d-112">The **Shortcuts** page in **Settings**</span></span>  
+    :::image-end:::  
+    
+## <span data-ttu-id="b990d-113">DevTools のキーボードショートカットを Microsoft Visual Studio コードに一致させる</span><span class="sxs-lookup"><span data-stu-id="b990d-113">Match keyboard shortcuts in the DevTools to Microsoft Visual Studio Code</span></span>  
 
-## <span data-ttu-id="2c267-111">DevTools のキーボードショートカットを Microsoft Visual Studio コードに一致させる</span><span class="sxs-lookup"><span data-stu-id="2c267-111">Match keyboard shortcuts in the DevTools to Microsoft Visual Studio Code</span></span>
+<span data-ttu-id="b990d-114">[Visual Studio コード][VisualStudioCode]で同等のアクションを実行するために Microsoft Edge devtools のキーボードショートカットを一致させるには、次の手順を実行します。</span><span class="sxs-lookup"><span data-stu-id="b990d-114">To match the keyboard shortcuts in the Microsoft Edge DevTools for equivalent actions in [Visual Studio Code][VisualStudioCode], complete the following steps.</span></span>  
 
-<span data-ttu-id="2c267-112">[**ショートカット**] ページで、[**ショートカットキーを設定**してください] ドロップダウンで [ **devtools (既定)** ] を選び、[ **Visual Studio コード**] を選びます。</span><span class="sxs-lookup"><span data-stu-id="2c267-112">From the **Shortcuts** page, choose **DevTools (Default)** in the **Match shortcuts from preset** dropdown and choose **Visual Studio Code**.</span></span>  <span data-ttu-id="2c267-113">DevTools のキーボードショートカットは、 [Visual Studio コード][VisualStudioCode]で同等のアクションのショートカットと一致するようになりました。</span><span class="sxs-lookup"><span data-stu-id="2c267-113">The keyboard shortcuts in the DevTools now match the shortcuts for equivalent actions in [Visual Studio Code][VisualStudioCode].</span></span>  
+1.  <span data-ttu-id="b990d-115">[ **ショートカット** ] ページを開きます。</span><span class="sxs-lookup"><span data-stu-id="b990d-115">Open the **Shortcuts** page.</span></span>
+1.  <span data-ttu-id="b990d-116">[ **標準のショートカットを既定の** ドロップダウンから選択する] を選び、 **Devtools (既定)** を **Visual Studio のコード**に変更します。</span><span class="sxs-lookup"><span data-stu-id="b990d-116">Choose the **Match shortcuts from preset** dropdown and change **DevTools (Default)** to **Visual Studio Code**.</span></span>  
+    
+    :::image type="complex" source="../media/match-keyboard-shortcuts-visual-studio-code.msft.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる" lightbox="../media/match-keyboard-shortcuts-visual-studio-code.msft.png":::
+       <span data-ttu-id="b990d-118">DevTools for Visual Studio コードのキーボードショートカットを一致させる</span><span class="sxs-lookup"><span data-stu-id="b990d-118">Match keyboard shortcuts in the DevTools to Visual Studio Code</span></span>  
+    :::image-end:::  
 
-:::image type="complex" source="../media/match-keyboard-shortcuts-visual-studio-code.msft.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる" lightbox="../media/match-keyboard-shortcuts-visual-studio-code.msft.png":::
-   <span data-ttu-id="2c267-115">DevTools for Visual Studio コードのキーボードショートカットを一致させる</span><span class="sxs-lookup"><span data-stu-id="2c267-115">Match keyboard shortcuts in the DevTools to Visual Studio Code</span></span>  
-:::image-end:::  
-
-<span data-ttu-id="2c267-116">たとえば、Windows では、 [Visual Studio コード][VisualStudioCodeShortcutsKeyboardWindows] でスクリプトを一時停止または実行し続けるためのキーボードショートカットは `F5` です。</span><span class="sxs-lookup"><span data-stu-id="2c267-116">For example, on Windows the keyboard shortcut for pausing or continuing running a script in [Visual Studio Code][VisualStudioCodeShortcutsKeyboardWindows] is `F5`.</span></span>  <span data-ttu-id="2c267-117">**Devtools (既定)** の事前設定を使用すると、devtools の同じショートカットを使うことが `F8` できます。</span><span class="sxs-lookup"><span data-stu-id="2c267-117">With the **DevTools (Default)** preset, the same shortcut in the DevTools is `F8`.</span></span>  <span data-ttu-id="2c267-118">**Visual Studio コード**の事前設定を使用すると、ショートカットも表示され `F5` ます。</span><span class="sxs-lookup"><span data-stu-id="2c267-118">With the **Visual Studio Code** preset, the shortcut is also `F5`.</span></span>  
+<span data-ttu-id="b990d-119">たとえば、 [Visual Studio コード][VisualStudioCodeShortcutsKeyboardWindows]でスクリプトを一時停止または実行し続けるには、を選択し `F5` ます。</span><span class="sxs-lookup"><span data-stu-id="b990d-119">For example, to pause or continuing to run a script in [Visual Studio Code][VisualStudioCodeShortcutsKeyboardWindows], you select `F5`.</span></span>  
+<span data-ttu-id="b990d-120">Microsoft Edge DevTools で **devtools (既定値)** の事前設定から値を変更せずに、一時停止またはスクリプトの実行を続行する場合は、を選択し `F8` ます。</span><span class="sxs-lookup"><span data-stu-id="b990d-120">If you do not change values from the **DevTools (Default)** preset in the Microsoft Edge DevTools and you want to pause or continuing to run a script, you select `F8`.</span></span>  
+<span data-ttu-id="b990d-121">Microsoft Edge の DevTools で **Visual Studio** の値のコードプリセットを変更して、一時停止またはスクリプトの実行を続行する場合は、を選択し `F5` ます。</span><span class="sxs-lookup"><span data-stu-id="b990d-121">If you change the value **Visual Studio Code** preset in the Microsoft Edge DevTools and you want to pause or continuing to run a script, you select `F5`.</span></span>  
 
 <!-- ## Edit shortcuts for any action in the DevTools -->
 
 <!-- links -->  
 
 [DevToolsCustomizeSettings]: ./index.md#settings "設定-Microsoft Edge DevTools のカスタマイズ |Microsoft ドキュメント"  
+[DevtoolOpenMain]: ../open.md "Microsoft Edge DevTools を開く |Microsoft ドキュメント"  
 [DevToolsShortcuts]: ../shortcuts.md "Microsoft Edge DevTools のキーボードショートカット |Microsoft ドキュメント"  
 [VisualStudioCode]: https://code.visualstudio.com "Microsoft Visual Studio コード"  
 [VisualStudioCodeShortcutsKeyboardWindows]: https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf "Visual Studio のコードのキーボードショートカット (Windows |) |Microsoft Visual Studio コード"  

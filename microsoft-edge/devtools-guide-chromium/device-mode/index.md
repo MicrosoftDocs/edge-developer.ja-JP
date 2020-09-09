@@ -1,18 +1,18 @@
 ---
-description: Microsoft Edge のデバイスモードで仮想デバイスを使って、モバイルで最初の web サイトを構築します。
-title: Microsoft Edge DevTools のデバイスモードでモバイルデバイスをシミュレートする
+description: Microsoft Edge で仮想デバイスを使用して、モバイルの最初の web サイトを構築します。
+title: Microsoft Edge DevTools でモバイルデバイスをエミュレートする
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 09/01/2020
+ms.date: 09/04/2020
 ms.topic: article
 ms.prod: microsoft-edge
-keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: eababe8112b5d888671a8955e16f0fe1c89564fb
-ms.sourcegitcommit: 63e6d34ff483f3b419a0e271a3513874e6ce6c79
+keywords: microsoft edge、web 開発、f12 ツール、devtools、エミュレーション、デバイス、シミュレーション、モバイル
+ms.openlocfilehash: c70b81eabb145461eac7d1b9a8f438d6a18fbc89
+ms.sourcegitcommit: cc96ada9679b23feb841e46f19d8077251c4a4df
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "10993017"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "10997117"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -28,266 +28,316 @@ ms.locfileid: "10993017"
    See the License for the specific language governing permissions and
    limitations under the License.  -->
 
+# <span data-ttu-id="99ac9-104">Microsoft Edge DevTools でモバイルデバイスをエミュレートする</span><span class="sxs-lookup"><span data-stu-id="99ac9-104">Emulate mobile devices in Microsoft Edge DevTools</span></span>  
 
+<span data-ttu-id="99ac9-105">モバイルデバイスでページがどのように表示され、どのように応答するかについては、 **デバイスエミュレーション** を使用します。</span><span class="sxs-lookup"><span data-stu-id="99ac9-105">Use **Device emulation** to approximate how your page looks and responds on a mobile device.</span></span>  <span data-ttu-id="99ac9-106">Microsoft Edge の DevTools には、モバイルデバイスをエミュレートするための機能のコレクションが用意されています。</span><span class="sxs-lookup"><span data-stu-id="99ac9-106">The Microsoft Edge DevTools provide a collection of features to help you emulate mobile devices.</span></span>  <span data-ttu-id="99ac9-107">このコレクションには、次の機能が含まれています。</span><span class="sxs-lookup"><span data-stu-id="99ac9-107">The collection includes the following features.</span></span>  
 
+*   [<span data-ttu-id="99ac9-108">モバイルビューポートのシミュレーション</span><span class="sxs-lookup"><span data-stu-id="99ac9-108">Simulate a mobile viewport</span></span>](#simulate-a-mobile-viewport)  
+*   [<span data-ttu-id="99ac9-109">ネットワークを調整する</span><span class="sxs-lookup"><span data-stu-id="99ac9-109">Throttle the network</span></span>](#throttle-the-network-only)  
+*   [<span data-ttu-id="99ac9-110">CPU を調整する</span><span class="sxs-lookup"><span data-stu-id="99ac9-110">Throttle the CPU</span></span>](#throttle-the-cpu-only)  
+*   [<span data-ttu-id="99ac9-111">位置情報のシミュレーション</span><span class="sxs-lookup"><span data-stu-id="99ac9-111">Simulate geolocation</span></span>](#override-geolocation)  
+*   [<span data-ttu-id="99ac9-112">向きを設定する</span><span class="sxs-lookup"><span data-stu-id="99ac9-112">Set orientation</span></span>](#set-orientation)  
+*   [<span data-ttu-id="99ac9-113">ユーザーエージェントの文字列を設定する</span><span class="sxs-lookup"><span data-stu-id="99ac9-113">Set the user agent string</span></span>](#set-user-agent-string)  
 
+## <span data-ttu-id="99ac9-114">制限事項</span><span class="sxs-lookup"><span data-stu-id="99ac9-114">Limitations</span></span>  
 
-# <span data-ttu-id="19c53-104">Microsoft Edge DevTools のデバイスモードでモバイルデバイスをシミュレートする</span><span class="sxs-lookup"><span data-stu-id="19c53-104">Simulate mobile devices with Device Mode in Microsoft Edge DevTools</span></span>   
+<span data-ttu-id="99ac9-115">**デバイスエミュレーション** は、モバイルデバイスでのページのルックアンドフィールの最初の部分に [近い][WikiApproximation] ものです。</span><span class="sxs-lookup"><span data-stu-id="99ac9-115">**Device emulation** is a [first-order approximation][WikiApproximation] of the look and feel of your page on a mobile device.</span></span>  <span data-ttu-id="99ac9-116">**デバイスエミュレーション** では、モバイルデバイスで実際にコードが実行されるわけではありません。</span><span class="sxs-lookup"><span data-stu-id="99ac9-116">**Device emulation** does not actually run your code on a mobile device.</span></span>  <span data-ttu-id="99ac9-117">代わりに、モバイルユーザーエクスペリエンスをノート pc またはデスクトップからシミュレートします。</span><span class="sxs-lookup"><span data-stu-id="99ac9-117">Instead you simulate the mobile user experience from your laptop or desktop.</span></span>  
 
-  
+<span data-ttu-id="99ac9-118">モバイルデバイスのいくつかの側面は、DevTools ではエミュレートされません。</span><span class="sxs-lookup"><span data-stu-id="99ac9-118">Some aspects of mobile devices are never emulated in DevTools.</span></span>  <span data-ttu-id="99ac9-119">たとえば、モバイル Cpu のアーキテクチャは、ノート pc またはデスクトップ Cpu のアーキテクチャとは異なります。</span><span class="sxs-lookup"><span data-stu-id="99ac9-119">For example, the architecture of mobile CPUs is different than the architecture of laptop or desktop CPUs.</span></span>  <span data-ttu-id="99ac9-120">疑わしい場合は、実際にモバイルデバイスでページを実行することをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="99ac9-120">When in doubt, your best bet is to actually run your page on a mobile device.</span></span>  <span data-ttu-id="99ac9-121">[リモートデバッグ] を使って、ページがモバイルデバイスで実際に実行されているときに、コンピューターからページのコードを操作します。</span><span class="sxs-lookup"><span data-stu-id="99ac9-121">Use [Remote Debugging][DevToolsRemoteDebugging] to interact with the code of a page from your machine while your page actually runs on a mobile device.</span></span>  <span data-ttu-id="99ac9-122">コードを操作しているときに、表示、変更、デバッグ、プロファイル、またはすべて4つの操作を行うことができます。</span><span class="sxs-lookup"><span data-stu-id="99ac9-122">You may view, change, debug, profile, or all four while you interact with the code.</span></span>  <span data-ttu-id="99ac9-123">使用しているコンピューターがノートブックまたはデスクトップコンピューターである可能性があります。</span><span class="sxs-lookup"><span data-stu-id="99ac9-123">Your machine may be a notebook or desktop computer.</span></span>  
 
-<span data-ttu-id="19c53-105">モバイルデバイスでのページの外観と実行方法については、デバイスモードを使用します。</span><span class="sxs-lookup"><span data-stu-id="19c53-105">Use Device Mode to approximate how your page looks and performs on a mobile device.</span></span>  
+## <span data-ttu-id="99ac9-124">モバイルビューポートのシミュレーション</span><span class="sxs-lookup"><span data-stu-id="99ac9-124">Simulate a mobile viewport</span></span>  
 
-<span data-ttu-id="19c53-106">デバイスモードは、モバイルデバイスをシミュレートするために役立つ Microsoft Edge DevTools の機能のルースコレクションの名前です。</span><span class="sxs-lookup"><span data-stu-id="19c53-106">Device Mode is the name for the loose collection of features in Microsoft Edge DevTools that help you simulate mobile devices.</span></span>  <span data-ttu-id="19c53-107">次のような機能があります。</span><span class="sxs-lookup"><span data-stu-id="19c53-107">These features include:</span></span>  
-
-*   [<span data-ttu-id="19c53-108">モバイルビューポートのシミュレート</span><span class="sxs-lookup"><span data-stu-id="19c53-108">Simulating a mobile viewport</span></span>](#simulate-a-mobile-viewport)  
-*   [<span data-ttu-id="19c53-109">ネットワークの調整</span><span class="sxs-lookup"><span data-stu-id="19c53-109">Throttling the network</span></span>](#throttle-the-network-only)  
-*   [<span data-ttu-id="19c53-110">CPU の調整</span><span class="sxs-lookup"><span data-stu-id="19c53-110">Throttling the CPU</span></span>](#throttle-the-cpu-only)  
-*   [<span data-ttu-id="19c53-111">位置情報のシミュレーション</span><span class="sxs-lookup"><span data-stu-id="19c53-111">Simulating geolocation</span></span>](#override-geolocation)  
-*   [<span data-ttu-id="19c53-112">向きの設定</span><span class="sxs-lookup"><span data-stu-id="19c53-112">Setting orientation</span></span>](#set-orientation)  
-
-## <span data-ttu-id="19c53-113">制限事項</span><span class="sxs-lookup"><span data-stu-id="19c53-113">Limitations</span></span>   
-
-<span data-ttu-id="19c53-114">デバイスモードは、モバイルデバイスでページがどのように表示されるか、どのように感じられるかについての [最初の概算][WikiApproximation] と考えることができます。</span><span class="sxs-lookup"><span data-stu-id="19c53-114">Think of Device Mode as a [first-order approximation][WikiApproximation] of how your page looks and feels on a mobile device.</span></span>  <span data-ttu-id="19c53-115">デバイスモードでは、モバイルデバイスで実際にコードを実行することはありません。</span><span class="sxs-lookup"><span data-stu-id="19c53-115">With Device Mode you do not actually run your code on a mobile device.</span></span>  <span data-ttu-id="19c53-116">ノート pc またはデスクトップでモバイルユーザーエクスペリエンスをシミュレートします。</span><span class="sxs-lookup"><span data-stu-id="19c53-116">You simulate the mobile user experience from your laptop or desktop.</span></span>  
-
-<span data-ttu-id="19c53-117">DevTools はシミュレートできないモバイルデバイスにはいくつかの側面があります。</span><span class="sxs-lookup"><span data-stu-id="19c53-117">There are some aspects of mobile devices that DevTools will never be able to simulate.</span></span>  <span data-ttu-id="19c53-118">たとえば、モバイル Cpu のアーキテクチャは、ノート pc またはデスクトップ Cpu のアーキテクチャとは大きく異なります。</span><span class="sxs-lookup"><span data-stu-id="19c53-118">For example, the architecture of mobile CPUs is very different than the architecture of laptop or desktop CPUs.</span></span>  <span data-ttu-id="19c53-119">疑わしい場合は、実際にモバイルデバイスでページを実行することをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="19c53-119">When in doubt, your best bet is to actually run your page on a mobile device.</span></span>  <span data-ttu-id="19c53-120">[リモートデバッグ] を使用して、モバイルデバイスで実際に実行しているときに、ノート pc またはデスクトップからページのコードを表示、変更、デバッグ、プロファイルすることができます。</span><span class="sxs-lookup"><span data-stu-id="19c53-120">Use [Remote Debugging][DevToolsRemoteDebugging] to view, change, debug, and profile the code of a page from your laptop or desktop while it actually runs on a mobile device.</span></span>  
-
-## <span data-ttu-id="19c53-121">モバイルビューポートのシミュレーション</span><span class="sxs-lookup"><span data-stu-id="19c53-121">Simulate a mobile viewport</span></span>   
-
-<span data-ttu-id="19c53-122">[ **デバイスツールバーの切り替え** ] ( ![ デバイスツールバー ][ImageDeviceToolbarIcon] \ の切り替え) をクリックして、モバイルビューポートをシミュレートできる UI を開きます。</span><span class="sxs-lookup"><span data-stu-id="19c53-122">Click **Toggle Device Toolbar** \(![Toggle Device Toolbar][ImageDeviceToolbarIcon]\) to open the UI that enables you to simulate a mobile viewport.</span></span>  
+<span data-ttu-id="99ac9-125">[ **デバイスエミュレーションの切り替え**  \] ( ![ デバイスツールバー \ の切り替え) を選ぶ ][ImageDeviceToolbarIcon] か、[ **カスタマイズと > 制御** ] を選び `...` ます。 **デバイスエミュレーション** は、モバイルビューポートをシミュレートするための UI を開くために使用します。</span><span class="sxs-lookup"><span data-stu-id="99ac9-125">Choose **Toggle device emulation**  \(![Toggle Device Toolbar][ImageDeviceToolbarIcon]\) or choose **Customize and control DevTools** \(`...`\) > **Device emulation** to open the UI that enables you to simulate a mobile viewport.</span></span>  
 
 :::image type="complex" source="../media/device-mode-toggle-device-toolbar-highlighted.msft.png" alt-text="デバイスのツールバー" lightbox="../media/device-mode-toggle-device-toolbar-highlighted.msft.png":::
-   <span data-ttu-id="19c53-124">デバイスのツールバー</span><span class="sxs-lookup"><span data-stu-id="19c53-124">The Device Toolbar</span></span>  
+    <span data-ttu-id="99ac9-127">デバイスのツールバー</span><span class="sxs-lookup"><span data-stu-id="99ac9-127">The Device Toolbar</span></span>  
 :::image-end:::  
 
-<span data-ttu-id="19c53-125">既定では、デバイスのツールバーは、応答性のあるビューポートモードで開きます。</span><span class="sxs-lookup"><span data-stu-id="19c53-125">By default the Device Toolbar opens in Responsive Viewport Mode.</span></span>  
+<span data-ttu-id="99ac9-128">既定では、デバイスのツールバーは、応答性のあるビューポートモードで開きます。</span><span class="sxs-lookup"><span data-stu-id="99ac9-128">By default the Device Toolbar opens in Responsive Viewport Mode.</span></span>  
 
-### <span data-ttu-id="19c53-126">応答性ビューポートモード</span><span class="sxs-lookup"><span data-stu-id="19c53-126">Responsive Viewport Mode</span></span>   
+### <span data-ttu-id="99ac9-129">応答性ビューポートモード</span><span class="sxs-lookup"><span data-stu-id="99ac9-129">Responsive Viewport Mode</span></span>  
 
-<span data-ttu-id="19c53-127">ハンドルをドラッグして、ビューポートのサイズを必要なサイズに変更します。</span><span class="sxs-lookup"><span data-stu-id="19c53-127">Drag the handles to resize the viewport to whatever dimensions you need.</span></span>  <span data-ttu-id="19c53-128">または、[幅] ボックスと [高さ] ボックスに特定の値を入力します。</span><span class="sxs-lookup"><span data-stu-id="19c53-128">Or, enter specific values in the width and height boxes.</span></span>  <span data-ttu-id="19c53-129">次の図では、幅がに設定され、 `626` 高さがに設定されて `516` います。</span><span class="sxs-lookup"><span data-stu-id="19c53-129">In the following figure, the width is set to `626` and the height is set to `516`.</span></span>  
+<span data-ttu-id="99ac9-130">ページの外観を複数の画面サイズにわたってすばやくテストするには、ハンドルをドラッグしてビューポートのサイズを必要なサイズに変更します。</span><span class="sxs-lookup"><span data-stu-id="99ac9-130">To quickly test the look and feel of your page across multiple screen sizes, drag the handles to resize the viewport to your required dimensions.</span></span>  <span data-ttu-id="99ac9-131">[幅] ボックスと [高さ] ボックスに特定の値を入力することもできます。</span><span class="sxs-lookup"><span data-stu-id="99ac9-131">You may also enter specific values in the width and height boxes.</span></span>  <span data-ttu-id="99ac9-132">次の図では、幅がに設定され、 `626` 高さがに設定されて `516` います。</span><span class="sxs-lookup"><span data-stu-id="99ac9-132">In the following figure, the width is set to `626` and the height is set to `516`.</span></span>  
 
 :::image type="complex" source="../media/device-mode-toggle-device-toolbar-handles-highlighted.msft.png" alt-text="応答可能なビューポートモードのときにビューポートの寸法を変更するハンドル" lightbox="../media/device-mode-toggle-device-toolbar-handles-highlighted.msft.png":::
-   <span data-ttu-id="19c53-131">応答可能なビューポートモードのときにビューポートの寸法を変更するハンドル</span><span class="sxs-lookup"><span data-stu-id="19c53-131">The handles for changing the dimensions of the viewport when in Responsive Viewport Mode</span></span>  
+    <span data-ttu-id="99ac9-134">応答可能なビューポートモードのときにビューポートの寸法を変更するハンドル</span><span class="sxs-lookup"><span data-stu-id="99ac9-134">The handles for changing the dimensions of the viewport when in Responsive Viewport Mode</span></span>  
 :::image-end:::  
 
-#### <span data-ttu-id="19c53-132">メディアクエリを表示する</span><span class="sxs-lookup"><span data-stu-id="19c53-132">Show media queries</span></span>   
+#### <span data-ttu-id="99ac9-135">メディアクエリを表示する</span><span class="sxs-lookup"><span data-stu-id="99ac9-135">Show media queries</span></span>  
 
-<span data-ttu-id="19c53-133">ビューポートの上にメディアクエリのブレークポイントを表示するには、[ **その他のオプション** ] をクリックし、[ **メディアクエリの表示**] を選択します。</span><span class="sxs-lookup"><span data-stu-id="19c53-133">To show media query breakpoints above your viewport, click **More options** and then select **Show media queries**.</span></span>  
+<span data-ttu-id="99ac9-136">ページでメディアクエリを定義している場合は、ビューポートの上にメディアクエリのブレークポイントを表示して、メディアクエリが有効になるビューポートのサイズにジャンプします。</span><span class="sxs-lookup"><span data-stu-id="99ac9-136">If you have defined media queries on your page, jump to the viewport dimensions where those media queries take effect by showing media query breakpoints above your viewport.</span></span>  <span data-ttu-id="99ac9-137">[**その他のオプション**] で [  >  **メディアクエリ] を**選びます。</span><span class="sxs-lookup"><span data-stu-id="99ac9-137">Choose **More options** > **Show media queries**.</span></span>  
 
 :::image type="complex" source="../media/device-mode-toggle-device-toolbar-more-options-show-media-queries.msft.png" alt-text="メディアクエリを表示する" lightbox="../media/device-mode-toggle-device-toolbar-more-options-show-media-queries.msft.png":::
-   **<span data-ttu-id="19c53-135">メディアクエリを表示する</span><span class="sxs-lookup"><span data-stu-id="19c53-135">Show media queries</span></span>**  
+   **<span data-ttu-id="99ac9-139">メディアクエリを表示する</span><span class="sxs-lookup"><span data-stu-id="99ac9-139">Show media queries</span></span>**  
 :::image-end:::  
 
-<span data-ttu-id="19c53-136">ブレークポイントをクリックして、ブレークポイントがトリガーされるようにビューポートの幅を変更します。</span><span class="sxs-lookup"><span data-stu-id="19c53-136">Click a breakpoint to change the width of the viewport so that the breakpoint gets triggered.</span></span>  
+<span data-ttu-id="99ac9-140">メディアクエリがトリガーされるようにビューポートの幅を変更するには、ブレークポイントを選択します。</span><span class="sxs-lookup"><span data-stu-id="99ac9-140">Choose a breakpoint to change the width of the viewport so that the media query gets triggered.</span></span>  
 
-:::image type="complex" source="../media/device-mode-toggle-device-toolbar-click-breakpoint.msft.png" alt-text="ブレークポイントをクリックしてビューポートの幅を変更する" lightbox="../media/device-mode-toggle-device-toolbar-click-breakpoint.msft.png":::
-   <span data-ttu-id="19c53-138">ブレークポイントをクリックしてビューポートの幅を変更する</span><span class="sxs-lookup"><span data-stu-id="19c53-138">Click a breakpoint to change the width of the viewport</span></span>  
+:::image type="complex" source="../media/device-mode-toggle-device-toolbar-click-breakpoint.msft.png" alt-text="ブレークポイントを選択してビューポートの幅を変更する" lightbox="../media/device-mode-toggle-device-toolbar-click-breakpoint.msft.png":::
+   <span data-ttu-id="99ac9-142">ブレークポイントを選択してビューポートの幅を変更する</span><span class="sxs-lookup"><span data-stu-id="99ac9-142">Choose a breakpoint to change the width of the viewport</span></span>  
 :::image-end:::  
 
-#### <span data-ttu-id="19c53-139">デバイスの種類を設定する</span><span class="sxs-lookup"><span data-stu-id="19c53-139">Set the device type</span></span>   
+#### <span data-ttu-id="99ac9-143">デバイスの種類を設定する</span><span class="sxs-lookup"><span data-stu-id="99ac9-143">Set the device type</span></span>  
 
-<span data-ttu-id="19c53-140">[ **デバイスの種類** ] の一覧を使用して、モバイルデバイスやデスクトップデバイスをシミュレートします。</span><span class="sxs-lookup"><span data-stu-id="19c53-140">Use the **Device Type** list to simulate a mobile device or desktop device.</span></span>  
+<span data-ttu-id="99ac9-144">[ **デバイスの種類** ] の一覧を使用して、モバイルデバイスやデスクトップデバイスをシミュレートします。</span><span class="sxs-lookup"><span data-stu-id="99ac9-144">Use the **Device Type** list to simulate a mobile device or desktop device.</span></span>  
 
 :::image type="complex" source="../media/device-mode-toggle-device-toolbar-device-type-list.msft.png" alt-text="[デバイスの種類] の一覧" lightbox="../media/device-mode-toggle-device-toolbar-device-type-list.msft.png":::
-   <span data-ttu-id="19c53-142">[ **デバイスの種類** ] の一覧</span><span class="sxs-lookup"><span data-stu-id="19c53-142">The **Device Type** list</span></span>  
+   <span data-ttu-id="99ac9-146">[ **デバイスの種類** ] の一覧</span><span class="sxs-lookup"><span data-stu-id="99ac9-146">The **Device Type** list</span></span>  
 :::image-end:::  
 
-<span data-ttu-id="19c53-143">次の表では、オプションの違いについて説明します。</span><span class="sxs-lookup"><span data-stu-id="19c53-143">The table below describes the differences between the options.</span></span>  <span data-ttu-id="19c53-144">**レンダリングメソッド** は、Microsoft Edge がモバイルビューポートまたはデスクトップビューポートとしてページをレンダリングするかどうかを示します。</span><span class="sxs-lookup"><span data-stu-id="19c53-144">**Rendering method** refers to whether Microsoft Edge renders the page as a mobile or desktop viewport.</span></span>  <span data-ttu-id="19c53-145">**カーソルアイコン** は、ページ上にマウスポインターを置いたときに表示されるカーソルの種類を表します。</span><span class="sxs-lookup"><span data-stu-id="19c53-145">**Cursor icon** refers to what type of cursor you see when you hover over the page.</span></span>  <span data-ttu-id="19c53-146">**イベント** は、 `touch` `click` ページを操作するときにそのページが起動するか、イベントを発生させるかを示します。</span><span class="sxs-lookup"><span data-stu-id="19c53-146">**Events fired** refers to whether the page fires `touch` or `click` events when you interact with the page.</span></span>  
+<span data-ttu-id="99ac9-147">次の表では、使用可能なデバイスの種類のオプションの違いについて説明します。</span><span class="sxs-lookup"><span data-stu-id="99ac9-147">The following table describes the differences between the available device type options.</span></span>  <span data-ttu-id="99ac9-148">[レンダリング方法] 列は、Microsoft Edge が、モバイルまたはデスクトップのビューポートとしてページをレンダリングするかどうかを示します。</span><span class="sxs-lookup"><span data-stu-id="99ac9-148">The Rendering method column refers to whether Microsoft Edge renders the page as a mobile or desktop viewport.</span></span>  <span data-ttu-id="99ac9-149">カーソルのアイコン列は、ページ上にカーソルを置いたときに表示されるカーソルの種類を示しています。</span><span class="sxs-lookup"><span data-stu-id="99ac9-149">The Cursor icon column refers to what type of cursor you see when you hover on the page.</span></span>  <span data-ttu-id="99ac9-150">[トリガーされたイベント] 列は、 `touch` `click` ページを操作するときにページがトリガーまたはイベントを発生させるかどうかを示します。</span><span class="sxs-lookup"><span data-stu-id="99ac9-150">The Events triggered column refers to whether the page triggers `touch` or `click` events when you interact with the page.</span></span>  
 
-| <span data-ttu-id="19c53-147">オプション</span><span class="sxs-lookup"><span data-stu-id="19c53-147">Option</span></span> | <span data-ttu-id="19c53-148">レンダリング方法</span><span class="sxs-lookup"><span data-stu-id="19c53-148">Rendering method</span></span> | <span data-ttu-id="19c53-149">カーソルアイコン</span><span class="sxs-lookup"><span data-stu-id="19c53-149">Cursor icon</span></span> | <span data-ttu-id="19c53-150">イベントを発生させる</span><span class="sxs-lookup"><span data-stu-id="19c53-150">Events fired</span></span> |  
+| <span data-ttu-id="99ac9-151">オプション</span><span class="sxs-lookup"><span data-stu-id="99ac9-151">Option</span></span> | <span data-ttu-id="99ac9-152">レンダリング方法</span><span class="sxs-lookup"><span data-stu-id="99ac9-152">Rendering method</span></span> | <span data-ttu-id="99ac9-153">カーソルアイコン</span><span class="sxs-lookup"><span data-stu-id="99ac9-153">Cursor icon</span></span> | <span data-ttu-id="99ac9-154">トリガーされたイベント</span><span class="sxs-lookup"><span data-stu-id="99ac9-154">Events triggered</span></span> |  
 |:--- |:--- |:--- |:--- |  
-| <span data-ttu-id="19c53-151">モバイル</span><span class="sxs-lookup"><span data-stu-id="19c53-151">Mobile</span></span> | <span data-ttu-id="19c53-152">モバイル</span><span class="sxs-lookup"><span data-stu-id="19c53-152">Mobile</span></span> | <span data-ttu-id="19c53-153">円形</span><span class="sxs-lookup"><span data-stu-id="19c53-153">Circle</span></span> | <span data-ttu-id="19c53-154">タッチ</span><span class="sxs-lookup"><span data-stu-id="19c53-154">touch</span></span> |  
-| <span data-ttu-id="19c53-155">モバイル \ (タッチなし)</span><span class="sxs-lookup"><span data-stu-id="19c53-155">Mobile \(no touch\)</span></span> | <span data-ttu-id="19c53-156">モバイル</span><span class="sxs-lookup"><span data-stu-id="19c53-156">Mobile</span></span> | <span data-ttu-id="19c53-157">通常</span><span class="sxs-lookup"><span data-stu-id="19c53-157">Normal</span></span> | <span data-ttu-id="19c53-158"> で、</span><span class="sxs-lookup"><span data-stu-id="19c53-158">click</span></span> |  
-| <span data-ttu-id="19c53-159">Desktop</span><span class="sxs-lookup"><span data-stu-id="19c53-159">Desktop</span></span> | <span data-ttu-id="19c53-160">Desktop</span><span class="sxs-lookup"><span data-stu-id="19c53-160">Desktop</span></span> | <span data-ttu-id="19c53-161">通常</span><span class="sxs-lookup"><span data-stu-id="19c53-161">Normal</span></span> | <span data-ttu-id="19c53-162"> で、</span><span class="sxs-lookup"><span data-stu-id="19c53-162">click</span></span> |  
-| <span data-ttu-id="19c53-163">デスクトップ \ (タッチ \)</span><span class="sxs-lookup"><span data-stu-id="19c53-163">Desktop \(touch\)</span></span> | <span data-ttu-id="19c53-164">Desktop</span><span class="sxs-lookup"><span data-stu-id="19c53-164">Desktop</span></span> | <span data-ttu-id="19c53-165">円形</span><span class="sxs-lookup"><span data-stu-id="19c53-165">Circle</span></span> | <span data-ttu-id="19c53-166">タッチ</span><span class="sxs-lookup"><span data-stu-id="19c53-166">touch</span></span> |  
+| <span data-ttu-id="99ac9-155">モバイル</span><span class="sxs-lookup"><span data-stu-id="99ac9-155">Mobile</span></span> | <span data-ttu-id="99ac9-156">モバイル</span><span class="sxs-lookup"><span data-stu-id="99ac9-156">Mobile</span></span> | <span data-ttu-id="99ac9-157">円形</span><span class="sxs-lookup"><span data-stu-id="99ac9-157">Circle</span></span> | <span data-ttu-id="99ac9-158">タッチ</span><span class="sxs-lookup"><span data-stu-id="99ac9-158">touch</span></span> |  
+| <span data-ttu-id="99ac9-159">モバイル \ (タッチなし)</span><span class="sxs-lookup"><span data-stu-id="99ac9-159">Mobile \(no touch\)</span></span> | <span data-ttu-id="99ac9-160">モバイル</span><span class="sxs-lookup"><span data-stu-id="99ac9-160">Mobile</span></span> | <span data-ttu-id="99ac9-161">通常</span><span class="sxs-lookup"><span data-stu-id="99ac9-161">Normal</span></span> | <span data-ttu-id="99ac9-162"> で、</span><span class="sxs-lookup"><span data-stu-id="99ac9-162">click</span></span> |  
+| <span data-ttu-id="99ac9-163">Desktop</span><span class="sxs-lookup"><span data-stu-id="99ac9-163">Desktop</span></span> | <span data-ttu-id="99ac9-164">Desktop</span><span class="sxs-lookup"><span data-stu-id="99ac9-164">Desktop</span></span> | <span data-ttu-id="99ac9-165">通常</span><span class="sxs-lookup"><span data-stu-id="99ac9-165">Normal</span></span> | <span data-ttu-id="99ac9-166"> で、</span><span class="sxs-lookup"><span data-stu-id="99ac9-166">click</span></span> |  
+| <span data-ttu-id="99ac9-167">デスクトップ \ (タッチ \)</span><span class="sxs-lookup"><span data-stu-id="99ac9-167">Desktop \(touch\)</span></span> | <span data-ttu-id="99ac9-168">Desktop</span><span class="sxs-lookup"><span data-stu-id="99ac9-168">Desktop</span></span> | <span data-ttu-id="99ac9-169">円形</span><span class="sxs-lookup"><span data-stu-id="99ac9-169">Circle</span></span> | <span data-ttu-id="99ac9-170">タッチ</span><span class="sxs-lookup"><span data-stu-id="99ac9-170">touch</span></span> |  
 
 > [!NOTE]
-> <span data-ttu-id="19c53-167">[ **デバイスの種類** ] の一覧が表示されない場合は、[ **その他のオプション** ] をクリックし、[デバイスの種類の **追加**] を選択します。</span><span class="sxs-lookup"><span data-stu-id="19c53-167">If you do not see the **Device Type** list, click **More options** and select **Add device type**.</span></span>  
+> <span data-ttu-id="99ac9-171">[**デバイスの種類**] の一覧が表示されない場合は、[**その他**のデバイスの種類の追加] を選択し  >  **Add device type**ます。</span><span class="sxs-lookup"><span data-stu-id="99ac9-171">If the **Device Type** list is not displayed, choose **More options** > **Add device type**.</span></span>  
 
-### <span data-ttu-id="19c53-168">モバイルデバイスのビューポートモード</span><span class="sxs-lookup"><span data-stu-id="19c53-168">Mobile Device Viewport Mode</span></span>   
+### <span data-ttu-id="99ac9-172">モバイルデバイスのビューポートモード</span><span class="sxs-lookup"><span data-stu-id="99ac9-172">Mobile Device Viewport Mode</span></span>  
 
-<span data-ttu-id="19c53-169">特定のモバイルデバイスのサイズをシミュレートするには、 **デバイス** の一覧からデバイスを選びます。</span><span class="sxs-lookup"><span data-stu-id="19c53-169">To simulate the dimensions of a specific mobile device, select the device from the **Device** list.</span></span>  
+<span data-ttu-id="99ac9-173">特定のモバイルデバイスのサイズをシミュレートするには、 **デバイス** の一覧からデバイスを選びます。</span><span class="sxs-lookup"><span data-stu-id="99ac9-173">To simulate the dimensions of a specific mobile device, select the device from the **Device** list.</span></span>  
 
 :::image type="complex" source="../media/device-mode-toggle-device-toolbar-device-list.msft.png" alt-text="デバイスの一覧" lightbox="../media/device-mode-toggle-device-toolbar-device-list.msft.png":::
-   <span data-ttu-id="19c53-171">**デバイス**の一覧</span><span class="sxs-lookup"><span data-stu-id="19c53-171">The **Device** list</span></span>  
+   <span data-ttu-id="99ac9-175">**デバイス**の一覧</span><span class="sxs-lookup"><span data-stu-id="99ac9-175">The **Device** list</span></span>  
 :::image-end:::  
 
-#### <span data-ttu-id="19c53-172">ビューポートを横方向に回転する</span><span class="sxs-lookup"><span data-stu-id="19c53-172">Rotate the viewport to landscape orientation</span></span>   
+#### <span data-ttu-id="99ac9-176">ビューポートを横方向に回転する</span><span class="sxs-lookup"><span data-stu-id="99ac9-176">Rotate the viewport to landscape orientation</span></span>  
 
-<span data-ttu-id="19c53-173">**Rotate** ![ ][ImageRotateIcon] ビューポートを横方向に回転するには、[回転 (回転 \)] をクリックします。</span><span class="sxs-lookup"><span data-stu-id="19c53-173">Click **Rotate** \(![Rotate][ImageRotateIcon]\) to rotate the viewport to landscape orientation.</span></span>  
+<span data-ttu-id="99ac9-177">Web ページを横方向にテストします。</span><span class="sxs-lookup"><span data-stu-id="99ac9-177">Test your webpage in landscape orientation.</span></span>  
 
-:::image type="complex" source="../media/device-mode-toggle-device-toolbar-landscape.msft.png" alt-text="横方向" lightbox="../media/device-mode-toggle-device-toolbar-landscape.msft.png":::
-   <span data-ttu-id="19c53-175">横方向</span><span class="sxs-lookup"><span data-stu-id="19c53-175">Landscape orientation</span></span>  
-:::image-end:::  
-
+*   <span data-ttu-id="99ac9-178">ビューポートを横方向に回転するには、[ **回転** \ (回転 \)] を選び ![ ][ImageRotateIcon] ます。</span><span class="sxs-lookup"><span data-stu-id="99ac9-178">To rotate the viewport to landscape orientation, choose **Rotate** \(![Rotate][ImageRotateIcon]\).</span></span>  
+    
+    :::image type="complex" source="../media/device-mode-toggle-device-toolbar-landscape.msft.png" alt-text="横方向に表示されたページ" lightbox="../media/device-mode-toggle-device-toolbar-landscape.msft.png":::
+       <span data-ttu-id="99ac9-180">横方向に表示されたページ</span><span class="sxs-lookup"><span data-stu-id="99ac9-180">Page displayed in landscape orientation</span></span>  
+    :::image-end:::  
+    
 > [!NOTE]
-> <span data-ttu-id="19c53-176">**デバイスのツールバー**が狭い場合、[**回転**] ボタンは表示されなくなります。</span><span class="sxs-lookup"><span data-stu-id="19c53-176">The **Rotate** button disappears if your **Device Toolbar** is narrow.</span></span>  
+> <span data-ttu-id="99ac9-181">**デバイスのツールバー**が狭い場合、[**回転**] ボタンは表示されなくなります。</span><span class="sxs-lookup"><span data-stu-id="99ac9-181">The **Rotate** button disappears if your **Device Toolbar** is narrow.</span></span>  
 
 :::image type="complex" source="../media/device-mode-toggle-device-toolbar-highlighted.msft.png" alt-text="デバイスのツールバー" lightbox="../media/device-mode-toggle-device-toolbar-highlighted.msft.png":::
-   <span data-ttu-id="19c53-178">**デバイスのツールバー**</span><span class="sxs-lookup"><span data-stu-id="19c53-178">The **Device Toolbar**</span></span>  
+   <span data-ttu-id="99ac9-183">**デバイスのツールバー**</span><span class="sxs-lookup"><span data-stu-id="99ac9-183">The **Device Toolbar**</span></span>  
 :::image-end:::  
 
-<span data-ttu-id="19c53-179">「 [方向を設定](#set-orientation)する」もご覧ください。</span><span class="sxs-lookup"><span data-stu-id="19c53-179">See also [Set orientation](#set-orientation).</span></span>  
+<span data-ttu-id="99ac9-184">詳細については、「 [印刷の向きを設定](#set-orientation)する」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="99ac9-184">For more information, go to [Set orientation](#set-orientation).</span></span>  
 
-#### <span data-ttu-id="19c53-180">デバイスフレームの表示</span><span class="sxs-lookup"><span data-stu-id="19c53-180">Show device frame</span></span>   
+#### <span data-ttu-id="99ac9-185">デバイスフレームの表示</span><span class="sxs-lookup"><span data-stu-id="99ac9-185">Show device frame</span></span>  
 
-<span data-ttu-id="19c53-181">IPhone 6 など特定のモバイルデバイスのサイズをシミュレートする場合は、[ **その他のオプション** ] を開き、[ **デバイスフレームの表示** ] を選択して、ビューポートの周りに物理デバイスフレームを表示します。</span><span class="sxs-lookup"><span data-stu-id="19c53-181">When simulating the dimensions of a specific mobile device like an iPhone 6, open **More options** and then select **Show device frame** to show the physical device frame around the viewport.</span></span>  
+<span data-ttu-id="99ac9-186">IPhone 6 などの特定のモバイルデバイスのサイズをシミュレートするときに、ビューポートの周りに物理デバイスフレームを表示します。</span><span class="sxs-lookup"><span data-stu-id="99ac9-186">Display the physical device frame around the viewport when you simulate the dimensions of a specific mobile device such as an iPhone 6.</span></span>  
+
+1.  <span data-ttu-id="99ac9-187">**その他のオプション**を開きます。</span><span class="sxs-lookup"><span data-stu-id="99ac9-187">Open **More options**.</span></span>  
+1.  <span data-ttu-id="99ac9-188">[ **デバイスフレームの表示]** を選びます。</span><span class="sxs-lookup"><span data-stu-id="99ac9-188">Choose **Show device frame**.</span></span>  
 
 > [!NOTE]
-> <span data-ttu-id="19c53-182">特定のデバイスのデバイスフレームが表示されない場合は、DevTools にその特定のオプション用の art がないことが考えられます。</span><span class="sxs-lookup"><span data-stu-id="19c53-182">If you do not see a device frame for a particular device, it probably means that DevTools just does not have art for that specific option.</span></span>  
+> <span data-ttu-id="99ac9-189">特定のデバイスのデバイスフレームが表示されない場合は、DevTools にそのオプション用の art がないことを意味します。</span><span class="sxs-lookup"><span data-stu-id="99ac9-189">If you do not see a device frame for a particular device, it means that DevTools does not have art for that option.</span></span>  
 
 :::row:::
    :::column span="":::
       :::image type="complex" source="../media/device-mode-toggle-device-toolbar-option-show-device-frame.msft.png" alt-text="デバイスフレームの表示" lightbox="../media/device-mode-toggle-device-toolbar-option-show-device-frame.msft.png":::
-         <span data-ttu-id="19c53-184">デバイスフレームの表示</span><span class="sxs-lookup"><span data-stu-id="19c53-184">Show device frame</span></span>  
+         <span data-ttu-id="99ac9-191">デバイスフレームの表示</span><span class="sxs-lookup"><span data-stu-id="99ac9-191">Show device frame</span></span>  
       :::image-end:::  
    :::column-end:::
    :::column span="":::
       :::image type="complex" source="../media/device-mode-toggle-device-toolbar-options-device-frame-iphone-6.msft.png" alt-text="IPhone 6 のデバイスフレーム" lightbox="../media/device-mode-toggle-device-toolbar-options-device-frame-iphone-6.msft.png":::
-         <span data-ttu-id="19c53-186">IPhone 6 のデバイスフレーム</span><span class="sxs-lookup"><span data-stu-id="19c53-186">The device frame for the iPhone 6</span></span>  
+         <span data-ttu-id="99ac9-193">IPhone 6 のデバイスフレーム</span><span class="sxs-lookup"><span data-stu-id="99ac9-193">The device frame for the iPhone 6</span></span>  
       :::image-end:::  
    :::column-end:::
-:::row-end:::
+:::row-end:::  
 
-#### <span data-ttu-id="19c53-187">カスタムモバイルデバイスを追加する</span><span class="sxs-lookup"><span data-stu-id="19c53-187">Add a custom mobile device</span></span>   
+#### <span data-ttu-id="99ac9-194">カスタムモバイルデバイスを追加する</span><span class="sxs-lookup"><span data-stu-id="99ac9-194">Add a custom mobile device</span></span>  
 
-<span data-ttu-id="19c53-188">カスタムデバイスを追加するには:</span><span class="sxs-lookup"><span data-stu-id="19c53-188">To add a custom device:</span></span>  
+<span data-ttu-id="99ac9-195">必要なモバイルデバイスオプションが既定のリストに含まれていない場合は、カスタムデバイスを追加できます。</span><span class="sxs-lookup"><span data-stu-id="99ac9-195">If the mobile device option that you need is not included on the default list, you may add a custom device.</span></span>  <span data-ttu-id="99ac9-196">カスタムデバイスを追加するには、次の手順を実行します。</span><span class="sxs-lookup"><span data-stu-id="99ac9-196">To add a custom device, complete the following steps.</span></span>  
 
-1.  <span data-ttu-id="19c53-189">**デバイス**の一覧をクリックし、[**編集**] を選択します。</span><span class="sxs-lookup"><span data-stu-id="19c53-189">Click the **Device** list and then select **Edit**.</span></span>  
+1.  <span data-ttu-id="99ac9-197">[ **Edit**] >**デバイス**の一覧を選択します。</span><span class="sxs-lookup"><span data-stu-id="99ac9-197">Choose the **Device** list > **Edit**.</span></span>  
     
     :::image type="complex" source="../media/device-mode-toggle-device-toolbar-device-list-edit.msft.png" alt-text="[編集] を選ぶ" lightbox="../media/device-mode-toggle-device-toolbar-device-list-edit.msft.png":::
-       <span data-ttu-id="19c53-191">[**編集**] を選ぶ</span><span class="sxs-lookup"><span data-stu-id="19c53-191">Select **Edit**</span></span>  
+       <span data-ttu-id="99ac9-199">[**編集**] を選ぶ</span><span class="sxs-lookup"><span data-stu-id="99ac9-199">Select **Edit**</span></span>  
     :::image-end:::  
     
-1.  <span data-ttu-id="19c53-192">[ **カスタムデバイスの追加**] をクリックします。</span><span class="sxs-lookup"><span data-stu-id="19c53-192">Click **Add custom device**.</span></span>  
-1.  <span data-ttu-id="19c53-193">デバイスの名前、幅、高さを入力します。</span><span class="sxs-lookup"><span data-stu-id="19c53-193">Enter a name, width, and height for the device.</span></span>  <span data-ttu-id="19c53-194">[デバイスのピクセル比率][MDNWindowDevicePixelRatio]、[ユーザーエージェントの文字列][MDNUserAgent]、[デバイスの種類](#set-the-device-type)の各フィールドは省略可能です。</span><span class="sxs-lookup"><span data-stu-id="19c53-194">The [device pixel ratio][MDNWindowDevicePixelRatio], [user agent string][MDNUserAgent], and [device type](#set-the-device-type) fields are optional.</span></span>  <span data-ttu-id="19c53-195">[デバイスの種類] フィールドは、既定で [ **モバイル** ] に設定されているリストです。</span><span class="sxs-lookup"><span data-stu-id="19c53-195">The device type field is the list that is set to **Mobile** by default.</span></span>  
+1.  <span data-ttu-id="99ac9-200">[ **カスタムデバイスの追加**] を選びます。</span><span class="sxs-lookup"><span data-stu-id="99ac9-200">Choose **Add custom device**.</span></span>  
+1.  <span data-ttu-id="99ac9-201">エミュレートされた **デバイス**では、デバイス名、画面の幅、およびカスタムデバイスの画面の高さを入力します。</span><span class="sxs-lookup"><span data-stu-id="99ac9-201">On **Emulated Devices**, enter a device name, screen width, and screen height for the custom device.</span></span>  <span data-ttu-id="99ac9-202">[デバイスのピクセル比率][MDNWindowDevicePixelRatio]、[ユーザーエージェントの文字列][MDNUserAgent]、[デバイスの種類](#set-the-device-type)の各フィールドは省略可能です。</span><span class="sxs-lookup"><span data-stu-id="99ac9-202">The [device pixel ratio][MDNWindowDevicePixelRatio], [user agent string][MDNUserAgent], and [device type](#set-the-device-type) fields are optional.</span></span>  <span data-ttu-id="99ac9-203">[デバイスの種類] フィールドは既定で [ **モバイル**] に設定されています。</span><span class="sxs-lookup"><span data-stu-id="99ac9-203">The device type field defaults to **Mobile**.</span></span>  
     
     :::image type="complex" source="../media/device-mode-toggle-device-toolbar-settings-emulated-devices-add.msft.png" alt-text="カスタムデバイスを作成する" lightbox="../media/device-mode-toggle-device-toolbar-settings-emulated-devices-add.msft.png":::
-       <span data-ttu-id="19c53-197">カスタムデバイスの作成</span><span class="sxs-lookup"><span data-stu-id="19c53-197">Createa custom device</span></span>  
+       <span data-ttu-id="99ac9-205">カスタムデバイスを作成する</span><span class="sxs-lookup"><span data-stu-id="99ac9-205">Create a custom device</span></span>  
     :::image-end:::  
+    
+### <span data-ttu-id="99ac9-206">ルーラーを表示する</span><span class="sxs-lookup"><span data-stu-id="99ac9-206">Show rulers</span></span>  
 
-### <span data-ttu-id="19c53-198">ルーラーを表示する</span><span class="sxs-lookup"><span data-stu-id="19c53-198">Show rulers</span></span>   
-
-<span data-ttu-id="19c53-199">[ **その他のオプション** ] をクリックし、[ **ルーラーの表示** ] を選択して、ビューポートの左上にあるルーラーを表示します。</span><span class="sxs-lookup"><span data-stu-id="19c53-199">Click **More options** and then select **Show rulers** to see rulers above and to the left of your viewport.</span></span>  <span data-ttu-id="19c53-200">ルーラーのサイズ調整単位はピクセルです。</span><span class="sxs-lookup"><span data-stu-id="19c53-200">The sizing unit of the rulers is pixels.</span></span>  
+<span data-ttu-id="99ac9-207">画面のサイズを測定する必要がある場合は、ルーラーを使用して画面サイズをピクセル単位で測定することができます。</span><span class="sxs-lookup"><span data-stu-id="99ac9-207">If you need to measure screen dimensions, you may use rulers to measure the screen size in pixels.</span></span>  <span data-ttu-id="99ac9-208">[**その他のオプション**] を選択  >  **Show rulers**すると、ビューポートの左上にルーラーが表示されます。</span><span class="sxs-lookup"><span data-stu-id="99ac9-208">Choose **More options** > **Show rulers** to display rulers above and to the left of your viewport.</span></span>  
 
 :::row:::
    :::column span="":::
-      :::image type="complex" source="../media/device-mode-toggle-device-toolbar-options-show-rulers.msft.png" alt-text="ルーラーを表示する" lightbox="../media/device-mode-toggle-device-toolbar-options-show-rulers.msft.png":::
-         **<span data-ttu-id="19c53-202">ルーラーを表示する</span><span class="sxs-lookup"><span data-stu-id="19c53-202">Show rulers</span></span>**  
+      :::image type="complex" source="../media/device-mode-toggle-device-toolbar-options-show-rulers.msft.png" alt-text="ルーラーを表示するためのメニュー項目" lightbox="../media/device-mode-toggle-device-toolbar-options-show-rulers.msft.png":::
+         <span data-ttu-id="99ac9-210">ルーラーを表示するためのメニュー項目</span><span class="sxs-lookup"><span data-stu-id="99ac9-210">Menu item to display rulers</span></span>  
       :::image-end:::  
    :::column-end:::
    :::column span="":::
       :::image type="complex" source="../media/device-mode-toggle-device-toolbar-rulers.msft.png" alt-text="ビューポートの左上にあるルーラー" lightbox="../media/device-mode-toggle-device-toolbar-rulers.msft.png":::
-         <span data-ttu-id="19c53-204">ビューポートの左上にあるルーラー</span><span class="sxs-lookup"><span data-stu-id="19c53-204">Rulers above and to the left of the viewport</span></span>  
+         <span data-ttu-id="99ac9-212">ビューポートの左上にあるルーラー</span><span class="sxs-lookup"><span data-stu-id="99ac9-212">Rulers above and to the left of the viewport</span></span>  
       :::image-end:::  
    :::column-end:::
-:::row-end:::
+:::row-end:::  
 
-### <span data-ttu-id="19c53-205">ビューポートをズームする</span><span class="sxs-lookup"><span data-stu-id="19c53-205">Zoom the viewport</span></span>   
+### <span data-ttu-id="99ac9-213">ビューポートをズームする</span><span class="sxs-lookup"><span data-stu-id="99ac9-213">Zoom the viewport</span></span>  
 
-<span data-ttu-id="19c53-206">拡大または縮小するには、[ **ズーム** ] リストを使用します。</span><span class="sxs-lookup"><span data-stu-id="19c53-206">Use the **Zoom** list to zoom in or out.</span></span>  
+<span data-ttu-id="99ac9-214">ページの外観を複数のズームレベルでテストするには、[ **ズーム** ] リストを使用して拡大または縮小します。</span><span class="sxs-lookup"><span data-stu-id="99ac9-214">To test the look and feel of your page at multiple zoom levels, use the **Zoom** list to zoom in or out.</span></span>  
 
 :::image type="complex" source="../media/device-mode-toggle-device-toolbar-zoom.msft.png" alt-text="ズーム" lightbox="../media/device-mode-toggle-device-toolbar-zoom.msft.png":::
-   **<span data-ttu-id="19c53-208">ズーム</span><span class="sxs-lookup"><span data-stu-id="19c53-208">Zoom</span></span>**  
+   **<span data-ttu-id="99ac9-216">ズーム</span><span class="sxs-lookup"><span data-stu-id="99ac9-216">Zoom</span></span>**  
 :::image-end:::  
 
-## <span data-ttu-id="19c53-209">ネットワークと CPU を調整する</span><span class="sxs-lookup"><span data-stu-id="19c53-209">Throttle the network and CPU</span></span>   
+## <span data-ttu-id="99ac9-217">ネットワークと CPU を調整する</span><span class="sxs-lookup"><span data-stu-id="99ac9-217">Throttle the network and CPU</span></span>  
 
-<span data-ttu-id="19c53-210">ネットワークと CPU を調整するには、[**調整**] の一覧から [**ミッドティアモバイル**] または [**ローエンド**] のモバイルを選択します。</span><span class="sxs-lookup"><span data-stu-id="19c53-210">To throttle the network and CPU, select **Mid-tier mobile** or **Low-end mobile** from the **Throttle** list.</span></span>  
+<span data-ttu-id="99ac9-218">多くの場合、モバイルデバイスではネットワークと CPU の制約があります。</span><span class="sxs-lookup"><span data-stu-id="99ac9-218">Mobile devices often have network and CPU constraints.</span></span>  <span data-ttu-id="99ac9-219">ページの読み込みの速度と、さまざまなインターネットおよび CPU の速度での応答方法を確認します。</span><span class="sxs-lookup"><span data-stu-id="99ac9-219">Ensure you test how quickly your page loads and how it responds at different internet and CPU speeds.</span></span>  
 
-:::image type="complex" source="../media/device-mode-toggle-device-toolbar-throttle.msft.png" alt-text="スロットルリスト" lightbox="../media/device-mode-toggle-device-toolbar-throttle.msft.png":::
-   <span data-ttu-id="19c53-212">**スロットル**リスト</span><span class="sxs-lookup"><span data-stu-id="19c53-212">The **Throttle** list</span></span>  
+<span data-ttu-id="99ac9-220">ネットワークと CPU を調整します。</span><span class="sxs-lookup"><span data-stu-id="99ac9-220">Throttle the network and CPU.</span></span>  
+
+1.  <span data-ttu-id="99ac9-221">[ **スロットル** リスト] を選択して、事前設定を [ **中間層モバイル** ] または [ **ローエンド] モバイル**に変更します。</span><span class="sxs-lookup"><span data-stu-id="99ac9-221">Choose **Throttle** list and change the preset to **Mid-tier mobile** or **Low-end mobile**.</span></span>  
+    *   <span data-ttu-id="99ac9-222">**ミッドティアのモバイル** では `fast 3G` 、CPU のシミュレーションと調整を行います。</span><span class="sxs-lookup"><span data-stu-id="99ac9-222">**Mid-tier mobile** simulates `fast 3G` and throttles your CPU.</span></span>  <span data-ttu-id="99ac9-223">通常よりも4倍遅くなります。</span><span class="sxs-lookup"><span data-stu-id="99ac9-223">It is four times slower than normal.</span></span>  
+    *   <span data-ttu-id="99ac9-224">**ローエンドの携帯電話** では、 `slow 3G` CPU のシミュレーションと調整を行います。</span><span class="sxs-lookup"><span data-stu-id="99ac9-224">**Low-end mobile** simulates `slow 3G` and throttles your CPU.</span></span>  <span data-ttu-id="99ac9-225">通常よりも6倍遅くなります。</span><span class="sxs-lookup"><span data-stu-id="99ac9-225">It is six times slower than normal.</span></span>  
+    
+<span data-ttu-id="99ac9-226">すべての調整は、ノート pc またはデスクトップの通常の機能に基づいています。</span><span class="sxs-lookup"><span data-stu-id="99ac9-226">All of the throttling is based upon the normal capability of your laptop or desktop.</span></span>  
+
+:::image type="complex" source="../media/device-mode-toggle-device-toolbar-throttle.msft.png" alt-text="デバイスツールバーのスロットルリスト" lightbox="../media/device-mode-toggle-device-toolbar-throttle.msft.png":::
+   <span data-ttu-id="99ac9-228">デバイスツールバーの **スロットル** リスト</span><span class="sxs-lookup"><span data-stu-id="99ac9-228">The **Throttle** list in the Device Toolbar</span></span>  
 :::image-end:::  
-
-<span data-ttu-id="19c53-213">**ミッドティアモバイル** では、高速3g をシミュレートし、CPU を調整して、通常よりも4倍遅くなるようにします。</span><span class="sxs-lookup"><span data-stu-id="19c53-213">**Mid-tier mobile** simulates fast 3G and throttles your CPU so that it is 4 times slower than normal.</span></span>  <span data-ttu-id="19c53-214">**ローエンドの携帯電話** では、低速の3g がシミュレートされ、CPU の6倍が通常よりも遅くなります。</span><span class="sxs-lookup"><span data-stu-id="19c53-214">**Low-end mobile** simulates slow 3G and throttles your CPU 6 times slower than normal.</span></span>  <span data-ttu-id="19c53-215">調整は、ノート pc またはデスクトップの通常の機能に関連していることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="19c53-215">Keep in mind that the throttling is relative to the normal capability of your laptop or desktop.</span></span>  
 
 > [!NOTE]
-> <span data-ttu-id="19c53-216">**デバイスのツールバー**が狭い場合、**スロットル**リストは表示されません。</span><span class="sxs-lookup"><span data-stu-id="19c53-216">The **Throttle** list is hidden if your **Device Toolbar** is narrow.</span></span>  
+> <span data-ttu-id="99ac9-229">**スロットルリスト**が非表示になっている場合、**デバイスのツールバー**は狭すぎます。</span><span class="sxs-lookup"><span data-stu-id="99ac9-229">If the **Throttle list** is hidden, your **Device Toolbar** is too narrow.</span></span>  <span data-ttu-id="99ac9-230">**スロットルの一覧**にアクセスするには、デバイスの**ツールバー**の幅を広げます。</span><span class="sxs-lookup"><span data-stu-id="99ac9-230">To access the **Throttle list**, increase the width of the **Device Toolbar**.</span></span>  
 
 :::image type="complex" source="../media/device-mode-toggle-device-toolbar-highlighted.msft.png" alt-text="デバイスのツールバー" lightbox="../media/device-mode-toggle-device-toolbar-highlighted.msft.png":::
-   <span data-ttu-id="19c53-218">**デバイスのツールバー**</span><span class="sxs-lookup"><span data-stu-id="19c53-218">The **Device Toolbar**</span></span>  
+   <span data-ttu-id="99ac9-232">**デバイスのツールバー**</span><span class="sxs-lookup"><span data-stu-id="99ac9-232">The **Device Toolbar**</span></span>  
 :::image-end:::  
 
-### <span data-ttu-id="19c53-219">CPU のみを調整する</span><span class="sxs-lookup"><span data-stu-id="19c53-219">Throttle the CPU only</span></span>   
+### <span data-ttu-id="99ac9-233">CPU のみを調整する</span><span class="sxs-lookup"><span data-stu-id="99ac9-233">Throttle the CPU only</span></span>  
 
-<span data-ttu-id="19c53-220">ネットワークではなく CPU のみを調整するには、[**パフォーマンス**] パネルに移動し、[**キャプチャの設定**] (キャプチャ設定) をクリックして、[ ![ ][ImageCaptureIcon] **CPU** ] の一覧から [ **4 倍速**(減速)] または [ **6x** ] を選びます。</span><span class="sxs-lookup"><span data-stu-id="19c53-220">To throttle the CPU only and not the network, go to the **Performance** panel, click **Capture Settings** \(![Capture Settings][ImageCaptureIcon]\), and then select **4x slowdown** or **6x slowdown** from the **CPU** list.</span></span>  
+<span data-ttu-id="99ac9-234">ネットワークではなく CPU のみを調整するには、次の手順を実行します。</span><span class="sxs-lookup"><span data-stu-id="99ac9-234">To throttle the CPU only and not the network, complete the following steps.</span></span>
 
-:::image type="complex" source="../media/device-mode-performance-cpu-throttle.msft.png" alt-text="CPU リスト" lightbox="../media/device-mode-performance-cpu-throttle.msft.png":::
-   <span data-ttu-id="19c53-222">**CPU**リスト</span><span class="sxs-lookup"><span data-stu-id="19c53-222">The **CPU** list</span></span>  
-:::image-end:::  
+1.  <span data-ttu-id="99ac9-235">[ **パフォーマンス** ] パネルを選択し、[ **キャプチャ設定** ] ( ![ キャプチャ設定) を選択し ][ImageCaptureIcon] ます。</span><span class="sxs-lookup"><span data-stu-id="99ac9-235">Choose the **Performance** panel, and choose **Capture Settings** \(![Capture Settings][ImageCaptureIcon]\).</span></span>
+1.  <span data-ttu-id="99ac9-236">**CPU**  >  の**4 倍の速度**または6x の**減速**を選択します。</span><span class="sxs-lookup"><span data-stu-id="99ac9-236">Choose **CPU** > **4x slowdown** or **6x slowdown**.</span></span>
+    
+    :::image type="complex" source="../media/device-mode-performance-cpu-throttle.msft.png" alt-text="パフォーマンスパネルの CPU リスト" lightbox="../media/device-mode-performance-cpu-throttle.msft.png":::
+       <span data-ttu-id="99ac9-238">**パフォーマンス**パネルの**CPU**リスト</span><span class="sxs-lookup"><span data-stu-id="99ac9-238">The **CPU** list in the **Performance** panel</span></span>  
+    :::image-end:::  
+    
+### <span data-ttu-id="99ac9-239">ネットワークのみを調整する</span><span class="sxs-lookup"><span data-stu-id="99ac9-239">Throttle the network only</span></span>  
 
-### <span data-ttu-id="19c53-223">ネットワークのみを調整する</span><span class="sxs-lookup"><span data-stu-id="19c53-223">Throttle the network only</span></span>   
+<span data-ttu-id="99ac9-240">ネットワークを調整するには、次の手順を実行します。</span><span class="sxs-lookup"><span data-stu-id="99ac9-240">To throttle the network only, complete the following steps.</span></span>
 
-<span data-ttu-id="19c53-224">ネットワークのみを対象とし、CPU は調整しない場合は、**ネットワーク**パネルを開いて、[**スロットル**] の一覧から [ **Fast 3G** ] または [**低速の 3g** ] を選びます。</span><span class="sxs-lookup"><span data-stu-id="19c53-224">To throttle the network only and not the CPU, go the **Network** panel and select **Fast 3G** or **Slow 3G** from the **Throttle** list.</span></span>  
+1.  <span data-ttu-id="99ac9-241">[ **ネットワーク** ] パネルを選択します。</span><span class="sxs-lookup"><span data-stu-id="99ac9-241">Choose the **Network** panel.</span></span>
+1.  <span data-ttu-id="99ac9-242">「**オンライン**  >  **高速 3g** 」または「**低速 3g**」を選択します。</span><span class="sxs-lookup"><span data-stu-id="99ac9-242">Choose **Online** > **Fast 3G** or **Slow 3G**.</span></span>
+    
+    :::image type="complex" source="../media/device-mode-network-throttle.msft.png" alt-text="[ネットワーク] パネルのスロットルリスト" lightbox="../media/device-mode-network-throttle.msft.png":::
+       <span data-ttu-id="99ac9-244">[ネットワーク] パネルの **スロットル** リスト</span><span class="sxs-lookup"><span data-stu-id="99ac9-244">The **Throttle** list in the Network panel</span></span>  
+    :::image-end:::  
+    
+    <span data-ttu-id="99ac9-245">または、 `Control` + `Shift` + `P` \ (Windows \) または `Command` + `Shift` + `P` \ (macOS \) を選択して**コマンドメニュー**を開き、「 `3G` 高速な**3g 調整を有効**にする」または「**低速の3g 調整を**有効にする」を選択します。</span><span class="sxs-lookup"><span data-stu-id="99ac9-245">Or select `Control`+`Shift`+`P` \(Windows\) or `Command`+`Shift`+`P` \(macOS\) to open the **Command Menu**, type `3G`, and choose **Enable fast 3G throttling** or **Enable slow 3G throttling**.</span></span>  
+    
+    :::image type="complex" source="../media/device-mode-command-menu-throttle.msft.png" alt-text="コマンドメニュー" lightbox="../media/device-mode-command-menu-throttle.msft.png":::
+       <span data-ttu-id="99ac9-247">**コマンドメニュー**</span><span class="sxs-lookup"><span data-stu-id="99ac9-247">The **Command Menu**</span></span>  
+    :::image-end:::  
+    
+<span data-ttu-id="99ac9-248">また、[ **パフォーマンス** ] パネルからネットワークの調整を設定することもできます。</span><span class="sxs-lookup"><span data-stu-id="99ac9-248">You may also set network throttling from the **Performance** panel.</span></span>  
 
-:::image type="complex" source="../media/device-mode-network-throttle.msft.png" alt-text="スロットルリスト" lightbox="../media/device-mode-network-throttle.msft.png":::
-   <span data-ttu-id="19c53-226">**スロットル**リスト</span><span class="sxs-lookup"><span data-stu-id="19c53-226">The **Throttle** list</span></span>  
-:::image-end:::  
-
-<span data-ttu-id="19c53-227">または、 `Control` + `Shift` + `P` \ (Windows \) または `Command` + `Shift` + `P` \ (macOS \) キーを押すと、**コマンドメニュー**が開き、「 `3G` 高速な**3g 調整を有効**にする」または「**低速な3g 調整**を有効にする」を選択します。</span><span class="sxs-lookup"><span data-stu-id="19c53-227">Or press `Control`+`Shift`+`P` \(Windows\) or `Command`+`Shift`+`P` \(macOS\) to open the **Command Menu**, type `3G`, and select **Enable fast 3G throttling** or **Enable slow 3G throttling**.</span></span>  
-
-:::image type="complex" source="../media/device-mode-command-menu-throttle.msft.png" alt-text="コマンドメニュー" lightbox="../media/device-mode-command-menu-throttle.msft.png":::
-   <span data-ttu-id="19c53-229">**コマンドメニュー**</span><span class="sxs-lookup"><span data-stu-id="19c53-229">The **Command Menu**</span></span>  
-:::image-end:::  
-
-<span data-ttu-id="19c53-230">[ **パフォーマンス** ] パネルからネットワークの調整を設定することもできます。</span><span class="sxs-lookup"><span data-stu-id="19c53-230">You can also set network throttling from the **Performance** panel.</span></span>  <span data-ttu-id="19c53-231">「 **キャプチャ設定** 」 ( ![ キャプチャ設定 ][ImageCaptureIcon] ) をクリックして、「 **Fast 3G** 」または「 **低速な 3g** 」を **ネットワーク** リストから選択します。</span><span class="sxs-lookup"><span data-stu-id="19c53-231">Click **Capture Settings** \(![Capture Settings][ImageCaptureIcon]\) and then select **Fast 3G** or **Slow 3G** from the **Network** list.</span></span>  
-
-:::image type="complex" source="../media/device-mode-performance-network-throttle.msft.png" alt-text="パフォーマンスパネルからネットワーク調整を設定する" lightbox="../media/device-mode-performance-network-throttle.msft.png":::
-   <span data-ttu-id="19c53-233">**パフォーマンス**パネルからネットワーク調整を設定する</span><span class="sxs-lookup"><span data-stu-id="19c53-233">Set network throttling from the **Performance** panel</span></span>  
-:::image-end:::  
-
-## <span data-ttu-id="19c53-234">位置情報を無効にする</span><span class="sxs-lookup"><span data-stu-id="19c53-234">Override geolocation</span></span>   
-
-<span data-ttu-id="19c53-235">位置情報を上書きする UI を開くには、[**ユーザー設定と制御**] をクリックして ( `...` \)、[**その他のツール**センサー] を選択し  >  **Sensors**ます。</span><span class="sxs-lookup"><span data-stu-id="19c53-235">To open the geolocation overriding UI click **Customize and control DevTools** \(`...`\) and then select **More tools** > **Sensors**.</span></span>  
-
-:::image type="complex" source="../media/device-mode-toggle-device-toolbar-more-tools-sensors.msft.png" alt-text="センサー" lightbox="../media/device-mode-toggle-device-toolbar-more-tools-sensors.msft.png":::
-   **<span data-ttu-id="19c53-237">センサー</span><span class="sxs-lookup"><span data-stu-id="19c53-237">Sensors</span></span>**  
-:::image-end:::  
-
-<span data-ttu-id="19c53-238">または、 `Control` + `Shift` + `P` \ (Windows \) または `Command` + `Shift` + `P` \ (macOS \) を押してコマンドメニューを開き、「 `Sensors` 」と入力して、[**センサーの表示**] を選択します。</span><span class="sxs-lookup"><span data-stu-id="19c53-238">Or press `Control`+`Shift`+`P` \(Windows\) or `Command`+`Shift`+`P` \(macOS\) to open the Command Menu, type `Sensors`, and then select **Show Sensors**.</span></span>  
-
-:::image type="complex" source="../media/device-mode-toggle-device-toolbar-command-menu-sensors.msft.png" alt-text="センサーの表示" lightbox="../media/device-mode-toggle-device-toolbar-command-menu-sensors.msft.png":::
-   **<span data-ttu-id="19c53-240">センサーの表示</span><span class="sxs-lookup"><span data-stu-id="19c53-240">Show Sensors</span></span>**  
-:::image-end:::  
-
-<span data-ttu-id="19c53-241">[ **位置情報] の一覧から** いずれかのプリセットを選ぶか、[ **場所** の指定] を選んで独自の座標を入力するか、[場所を選択 **できません** ] を選択して、位置情報がエラー状態にあるときのページの動作をテストします。</span><span class="sxs-lookup"><span data-stu-id="19c53-241">Select one of the presets from the **Geolocation** list, or select **Custom location** to enter your own coordinates, or select **Location unavailable** to test out how your page behaves when geolocation is in an error state.</span></span>  
-
-:::image type="complex" source="../media/device-mode-toggle-device-toolbar-sensors-tokyo.msft.png" alt-text="位置情報" lightbox="../media/device-mode-toggle-device-toolbar-sensors-tokyo.msft.png":::
-   **<span data-ttu-id="19c53-243">位置情報</span><span class="sxs-lookup"><span data-stu-id="19c53-243">Geolocation</span></span>**  
-:::image-end:::  
-
-## <span data-ttu-id="19c53-244">向きを設定する</span><span class="sxs-lookup"><span data-stu-id="19c53-244">Set orientation</span></span>   
+1.  <span data-ttu-id="99ac9-249">[ **キャプチャの設定** ] (キャプチャ設定) を選択し、[ ![ ][ImageCaptureIcon] **ネットワーク** ] リストを選択して、[設定] を [ **高速 3g** ] または [ **低速 3g**] に変更します。</span><span class="sxs-lookup"><span data-stu-id="99ac9-249">Choose **Capture Settings** \(![Capture Settings][ImageCaptureIcon]\) and choose the **Network** list and change the preset to **Fast 3G** or **Slow 3G**.</span></span>  
+    
+    :::image type="complex" source="../media/device-mode-performance-network-throttle.msft.png" alt-text="パフォーマンスパネルからネットワーク調整を設定する" lightbox="../media/device-mode-performance-network-throttle.msft.png":::
+       <span data-ttu-id="99ac9-251">**パフォーマンス**パネルからネットワーク調整を設定する</span><span class="sxs-lookup"><span data-stu-id="99ac9-251">Set network throttling from the **Performance** panel</span></span>  
+    :::image-end:::  
+    
+## <span data-ttu-id="99ac9-252">位置情報を無効にする</span><span class="sxs-lookup"><span data-stu-id="99ac9-252">Override geolocation</span></span>  
 
 :::row:::
    :::column span="":::
-      <span data-ttu-id="19c53-245">向きの UI を開くには、[カスタマイズ] をクリックし、[ **devtools** ] をクリックして、[ `...` **その他のツール**センサー] を選択し  >  **Sensors**ます。</span><span class="sxs-lookup"><span data-stu-id="19c53-245">To open the orientation UI click **Customize and control DevTools** `...` and then select **More tools** > **Sensors**.</span></span>  
+      <span data-ttu-id="99ac9-253">適切に表示するために、モバイルデバイスからの位置情報に依存しているページの場合は、位置情報オーバーライド UI を使って、さまざまな geolocations 場所を指定します。</span><span class="sxs-lookup"><span data-stu-id="99ac9-253">If your page depends on geolocation information from a mobile device to render properly, provide different geolocations using the geolocation overriding UI.</span></span>  
+
+      1.  <span data-ttu-id="99ac9-254">[**カスタマイズと制御] を選択して、** ( `...` \)**その他のツール**  >  **センサー**> します。</span><span class="sxs-lookup"><span data-stu-id="99ac9-254">Choose **Customize and control DevTools** \(`...`\) > **More tools** > **Sensors**.</span></span>  
       
-      :::image type="complex" source="../media/device-mode-toggle-device-toolbar-more-tools-sensors.msft.png" alt-text="センサー" lightbox="../media/device-mode-toggle-device-toolbar-more-tools-sensors.msft.png":::
-         **<span data-ttu-id="19c53-247">センサー</span><span class="sxs-lookup"><span data-stu-id="19c53-247">Sensors</span></span>**  
+      :::image type="complex" source="../media/device-mode-toggle-device-toolbar-more-tools-sensors.msft.png" alt-text="位置情報のセンサー" lightbox="../media/device-mode-toggle-device-toolbar-more-tools-sensors.msft.png":::
+         <span data-ttu-id="99ac9-256">位置情報の**センサー**</span><span class="sxs-lookup"><span data-stu-id="99ac9-256">**Sensors** for geolocation</span></span>  
       :::image-end:::  
    :::column-end:::
    :::column span="":::
-      <span data-ttu-id="19c53-248">または、 `Control` + `Shift` + `P` \ (Windows \) または `Command` + `Shift` + `P` \ (macOS \) を押してコマンドメニューを開き、「 `Sensors` 」と入力して、[**センサーの表示**] を選択します。</span><span class="sxs-lookup"><span data-stu-id="19c53-248">Or press `Control`+`Shift`+`P` \(Windows\) or `Command`+`Shift`+`P` \(macOS\) to open the Command Menu, type `Sensors`, and then select **Show Sensors**.</span></span>  
+      1.  <span data-ttu-id="99ac9-257">コマンドメニューを開きます。</span><span class="sxs-lookup"><span data-stu-id="99ac9-257">Open the Command Menu.</span></span>  
+          *   <span data-ttu-id="99ac9-258">[ `Control` + `Shift` + `P` \ (Windows \)] または [ `Command` + `Shift` + `P` \ (macOS \)] を選びます。</span><span class="sxs-lookup"><span data-stu-id="99ac9-258">Select `Control`+`Shift`+`P` \(Windows\) or `Command`+`Shift`+`P` \(macOS\).</span></span>  
+      1. <span data-ttu-id="99ac9-259">「」 `Sensors` と入力して、「 **センサーを表示**」を選択します。</span><span class="sxs-lookup"><span data-stu-id="99ac9-259">Type `Sensors`, and choose **Show Sensors**.</span></span>  
       
-      :::image type="complex" source="../media/device-mode-toggle-device-toolbar-command-menu-sensors.msft.png" alt-text="センサーの表示" lightbox="../media/device-mode-toggle-device-toolbar-command-menu-sensors.msft.png":::
-         **<span data-ttu-id="19c53-250">センサーの表示</span><span class="sxs-lookup"><span data-stu-id="19c53-250">Show Sensors</span></span>**  
+      :::image type="complex" source="../media/device-mode-toggle-device-toolbar-command-menu-sensors.msft.png" alt-text="位置情報のセンサーを表示する" lightbox="../media/device-mode-toggle-device-toolbar-command-menu-sensors.msft.png":::
+         <span data-ttu-id="99ac9-261">位置情報の**センサーを表示する**</span><span class="sxs-lookup"><span data-stu-id="99ac9-261">**Show Sensors** for geolocation</span></span>  
       :::image-end:::  
    :::column-end:::
-:::row-end:::
+:::row-end:::  
 
-<span data-ttu-id="19c53-251">[ **印刷の向き** ] の一覧からいずれかのプリセットを選択するか、[ **ユーザー設定の向き** ] を選択して、独自のアルファ、ベータ、およびガンマ値を設定します。</span><span class="sxs-lookup"><span data-stu-id="19c53-251">Select one of the presets from the **Orientation** list or select **Custom orientation** to set your own alpha, beta, and gamma values.</span></span>  
+<span data-ttu-id="99ac9-262">[ **センサー** ] パネルで、[ **場所** ] ドロップダウンメニューを使用して、devtools に含まれている既定の場所のいずれかを選ぶことができます。</span><span class="sxs-lookup"><span data-stu-id="99ac9-262">On the **Sensors** panel, you may select one of the preset locations included in DevTools using the **Location** drop-down menu.</span></span>  <span data-ttu-id="99ac9-263">カスタムの場所を入力するには、[**その他...** ] を選択します。</span><span class="sxs-lookup"><span data-stu-id="99ac9-263">To enter a custom location, choose **Other…**</span></span> <span data-ttu-id="99ac9-264">目的の場所の座標を入力します。</span><span class="sxs-lookup"><span data-stu-id="99ac9-264">and enter the coordinates of your custom location.</span></span>  <span data-ttu-id="99ac9-265">位置情報を利用できないときにエラー状態のページをテストするには、[ **場所を使用できませ**ん] を選択します。</span><span class="sxs-lookup"><span data-stu-id="99ac9-265">To test your page in an error state when location information is unavailable, choose **Location unavailable**.</span></span>  
 
-:::image type="complex" source="../media/device-mode-toggle-device-toolbar-sensors-tokyo-portrait-upside-down.msft.png" alt-text="Orientation" lightbox="../media/device-mode-toggle-device-toolbar-sensors-tokyo-portrait-upside-down.msft.png":::
-   **<span data-ttu-id="19c53-253">Orientation</span><span class="sxs-lookup"><span data-stu-id="19c53-253">Orientation</span></span>**  
+:::image type="complex" source="../media/device-mode-toggle-device-toolbar-sensors-tokyo.msft.png" alt-text="既定の場所が選択されたセンサーパネル" lightbox="../media/device-mode-toggle-device-toolbar-sensors-tokyo.msft.png":::
+    <span data-ttu-id="99ac9-267">既定の場所が選択されている**センサー**パネル。</span><span class="sxs-lookup"><span data-stu-id="99ac9-267">**Sensors** panel with a preset location selected.</span></span>  
+:::image-end:::
+
+## <span data-ttu-id="99ac9-268">向きを設定する</span><span class="sxs-lookup"><span data-stu-id="99ac9-268">Set orientation</span></span>  
+
+:::row:::
+   :::column span="":::
+      <span data-ttu-id="99ac9-269">適切に表示するために、モバイルデバイスからの向き情報に依存するページの場合は、方向 UI を開きます。</span><span class="sxs-lookup"><span data-stu-id="99ac9-269">If your page depends on orientation information from a mobile device to render properly, open the orientation UI.</span></span>  
+
+      1.  <span data-ttu-id="99ac9-270">[**カスタマイズと制御] を選択して、** ( `...` \)**その他のツール**  >  **センサー**> します。</span><span class="sxs-lookup"><span data-stu-id="99ac9-270">Choose **Customize and control DevTools** \(`...`\) > **More tools** > **Sensors**.</span></span>  
+      
+      :::image type="complex" source="../media/device-mode-toggle-device-toolbar-more-tools-sensors.msft.png" alt-text="向きのセンサー" lightbox="../media/device-mode-toggle-device-toolbar-more-tools-sensors.msft.png":::
+         <span data-ttu-id="99ac9-272">向きの**センサー**</span><span class="sxs-lookup"><span data-stu-id="99ac9-272">**Sensors** for orientation</span></span>  
+      :::image-end:::  
+   :::column-end:::
+   :::column span="":::
+      1.  <span data-ttu-id="99ac9-273">コマンドメニューを開きます。</span><span class="sxs-lookup"><span data-stu-id="99ac9-273">Open the Command Menu.</span></span>  
+          *   <span data-ttu-id="99ac9-274">[ `Control` + `Shift` + `P` \ (Windows \)] または [ `Command` + `Shift` + `P` \ (macOS \)] を選びます。</span><span class="sxs-lookup"><span data-stu-id="99ac9-274">Select `Control`+`Shift`+`P` \(Windows\) or `Command`+`Shift`+`P` \(macOS\).</span></span>  
+      1. <span data-ttu-id="99ac9-275">「」 `Sensors` と入力して、「 **センサーを表示**」を選択します。</span><span class="sxs-lookup"><span data-stu-id="99ac9-275">Type `Sensors`, and choose **Show Sensors**.</span></span>  
+      
+      :::image type="complex" source="../media/device-mode-toggle-device-toolbar-command-menu-sensors.msft.png" alt-text="向きのセンサーを表示する" lightbox="../media/device-mode-toggle-device-toolbar-command-menu-sensors.msft.png":::
+         <span data-ttu-id="99ac9-277">向きの**センサーを表示する**</span><span class="sxs-lookup"><span data-stu-id="99ac9-277">**Show Sensors** for orientation</span></span>  
+      :::image-end:::  
+   :::column-end:::
+:::row-end:::  
+
+<span data-ttu-id="99ac9-278">[ **センサー** ] パネルで、[ **印刷の向き** ] ドロップダウンメニューから既定の向きを選ぶことができます。</span><span class="sxs-lookup"><span data-stu-id="99ac9-278">On the **Sensors** panel, you may select a preset orientation from the **Orientation** drop-down menu.</span></span>  <span data-ttu-id="99ac9-279">独自の向きを入力するには、[ **ユーザー設定の向き**] を選択し、独自の [アルファ][MDNDeviceOrientaitonAlpha]、 [ベータ][MDNDeviceOrientaitonBeta]、および [ガンマ][MDNDeviceOrientaitonGamma] 値を入力します。</span><span class="sxs-lookup"><span data-stu-id="99ac9-279">To enter your own orientation, choose **Custom orientation**, and enter your own [alpha][MDNDeviceOrientaitonAlpha], [beta][MDNDeviceOrientaitonBeta], and [gamma][MDNDeviceOrientaitonGamma] values.</span></span>  
+
+:::image type="complex" source="../media/device-mode-toggle-device-toolbar-sensors-tokyo-portrait-upside-down.msft.png" alt-text="センサーパネルの [向き] オプション" lightbox="../media/device-mode-toggle-device-toolbar-sensors-tokyo-portrait-upside-down.msft.png":::
+    <span data-ttu-id="99ac9-281">**センサー**パネルの [**向き**] オプション</span><span class="sxs-lookup"><span data-stu-id="99ac9-281">**Orientation** options on the **Sensors** panel</span></span>  
 :::image-end:::  
 
-<!--  
- 
+## <span data-ttu-id="99ac9-282">ユーザーエージェント文字列を設定する</span><span class="sxs-lookup"><span data-stu-id="99ac9-282">Set user agent string</span></span>  
 
+:::row:::
+   :::column span="":::
+      <span data-ttu-id="99ac9-283">ページがモバイルデバイスからのユーザーエージェント文字列に依存して適切に表示される場合は、[ **ネットワークの条件** ] パネルを使用して、さまざまなユーザーエージェント文字列を指定します。</span><span class="sxs-lookup"><span data-stu-id="99ac9-283">If your page depends on the user agent string from a mobile device to render properly, use the **Network conditions** panel to provide different user agent strings.</span></span>  
+      
+      1.  <span data-ttu-id="99ac9-284">[**カスタマイズと制御 devtools** \ (\)] を選択して、 `...` **その他**  >  のツールの**ネットワーク条件**> します。</span><span class="sxs-lookup"><span data-stu-id="99ac9-284">Choose **Customize and control DevTools** \(`...`\) > **More tools** > **Network conditions**.</span></span>  
+      
+      :::image type="complex" source="../media/device-mode-toggle-device-toolbar-more-tools-network-conditions.msft.png" alt-text="[その他のツール] メニューの [ネットワークの状態] エントリ" lightbox="../media/device-mode-toggle-device-toolbar-more-tools-network-conditions.msft.png":::
+         <span data-ttu-id="99ac9-286">[**その他のツール**] メニューの [**ネットワークの状態**] エントリ</span><span class="sxs-lookup"><span data-stu-id="99ac9-286">**Network conditions** entry in the **More tools** menu</span></span>  
+      :::image-end:::  
+   :::column-end:::
+   :::column span="":::
+      1.  <span data-ttu-id="99ac9-287">コマンドメニューを開きます。</span><span class="sxs-lookup"><span data-stu-id="99ac9-287">Open the Command Menu.</span></span>  
+          *   <span data-ttu-id="99ac9-288">[ `Control` + `Shift` + `P` \ (Windows \)] または [ `Command` + `Shift` + `P` \ (macOS \)] を選びます。</span><span class="sxs-lookup"><span data-stu-id="99ac9-288">Select `Control`+`Shift`+`P` \(Windows\) or `Command`+`Shift`+`P` \(macOS\).</span></span>  
+      1. <span data-ttu-id="99ac9-289">「 `Network conditions` **ネットワーク条件を表示**」を選択します。</span><span class="sxs-lookup"><span data-stu-id="99ac9-289">Type `Network conditions`, and choose **Show Network conditions**.</span></span>  
+      
+      :::image type="complex" source="../media/device-mode-toggle-device-toolbar-command-menu-network-conditions.msft.png" alt-text="ネットワークの状態を表示する" lightbox="../media/device-mode-toggle-device-toolbar-command-menu-network-conditions.msft.png":::
+         **<span data-ttu-id="99ac9-291">ネットワークの状態を表示する</span><span class="sxs-lookup"><span data-stu-id="99ac9-291">Show Network conditions</span></span>**  
+      :::image-end:::  
+   :::column-end:::
+:::row-end:::  
 
--->  
+<span data-ttu-id="99ac9-292">[ **ユーザーエージェント**] の横にある **[自動的に選択** する] チェックボックスをオフにします。</span><span class="sxs-lookup"><span data-stu-id="99ac9-292">Next to **User agent**, clear the **Select automatically** checkbox.</span></span>  <span data-ttu-id="99ac9-293">次に、[ **カスタム** ] を選択して、定義済みのユーザーエージェント文字列の一覧から選択します。</span><span class="sxs-lookup"><span data-stu-id="99ac9-293">Then, select **Custom...** to select from a list of predefined user agent strings.</span></span>  <span data-ttu-id="99ac9-294">独自のユーザーエージェント文字列を入力するには、[ **カスタムユーザーエージェントの入力**] に文字列を入力します。</span><span class="sxs-lookup"><span data-stu-id="99ac9-294">To enter your own user agent string, enter the string in **Enter a custom user agent**.</span></span>  
 
-<!--See [Join the DevTools community][DevToolsCommunity] for other ways to leave feedback.  -->  
+:::image type="complex" source="../media/device-mode-toggle-device-toolbar-network-conditions-macos.msft.png" alt-text="MacOS でユーザーエージェント文字列を Microsoft Edge に設定します。" lightbox="../media/device-mode-toggle-device-toolbar-network-conditions-macos.msft.png":::
+    <span data-ttu-id="99ac9-296">MacOS でユーザーエージェント文字列を Microsoft Edge に設定します。</span><span class="sxs-lookup"><span data-stu-id="99ac9-296">Set the user agent string to Microsoft Edge on macOS</span></span>  
+:::image-end:::  
+
+## <span data-ttu-id="99ac9-297">Microsoft Edge DevTools チームと連絡を取る</span><span class="sxs-lookup"><span data-stu-id="99ac9-297">Getting in touch with the Microsoft Edge DevTools team</span></span>  
+
+[!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
 <!-- image links -->  
 
@@ -303,15 +353,18 @@ ms.locfileid: "10993017"
 
 [MDNWindowDevicePixelRatio]: https://developer.mozilla.org/docs/Web/API/Window/devicePixelRatio "Window. Deviceピクセルの比率 |MDN"  
 [MDNUserAgent]: https://developer.mozilla.org/docs/Glossary/User_agent "ユーザーエージェント |MDN"  
+[MDNDeviceOrientaitonAlpha]: https://developer.mozilla.org/en-US/docs/Web/API/DeviceOrientationEvent/alpha "DeviceOrientationEvent |MDN"  
+[MDNDeviceOrientaitonBeta]: https://developer.mozilla.org/en-US/docs/Web/API/DeviceOrientationEvent/beta "DeviceOrientationEvent |MDN"  
+[MDNDeviceOrientaitonGamma]: https://developer.mozilla.org/en-US/docs/Web/API/DeviceOrientationEvent/gamma "DeviceOrientationEvent |MDN"  
 
 [WikiApproximation]: https://en.wikipedia.org/wiki/Order_of_approximation#First-order "最初の順序での Wikipedia の順序"  
 
 > [!NOTE]
-> <span data-ttu-id="19c53-258">このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。</span><span class="sxs-lookup"><span data-stu-id="19c53-258">Portions of this page are modifications based on work created and [shared by Google][GoogleSitePolicies] and used according to terms described in the [Creative Commons Attribution 4.0 International License][CCA4IL].</span></span>  
-> <span data-ttu-id="19c53-259">元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/device-mode/index) にあり、 [Kayce Basques][KayceBasques] テクニカルライター、Chrome Devtools \ & Lighthouse \) で作成されています。</span><span class="sxs-lookup"><span data-stu-id="19c53-259">The original page is found [here](https://developers.google.com/web/tools/chrome-devtools/device-mode/index) and is authored by [Kayce Basques][KayceBasques] \(Technical Writer, Chrome DevTools \& Lighthouse\).</span></span>  
+> <span data-ttu-id="99ac9-305">このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。</span><span class="sxs-lookup"><span data-stu-id="99ac9-305">Portions of this page are modifications based on work created and [shared by Google][GoogleSitePolicies] and used according to terms described in the [Creative Commons Attribution 4.0 International License][CCA4IL].</span></span>  
+> <span data-ttu-id="99ac9-306">元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/device-mode/index) にあり、 [Kayce Basques][KayceBasques] テクニカルライター、Chrome Devtools \ & Lighthouse \) で作成されています。</span><span class="sxs-lookup"><span data-stu-id="99ac9-306">The original page is found [here](https://developers.google.com/web/tools/chrome-devtools/device-mode/index) and is authored by [Kayce Basques][KayceBasques] \(Technical Writer, Chrome DevTools \& Lighthouse\).</span></span>  
 
 [![クリエイティブコモンズライセンス][CCby4Image]][CCA4IL]  
-<span data-ttu-id="19c53-261">この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。</span><span class="sxs-lookup"><span data-stu-id="19c53-261">This work is licensed under a [Creative Commons Attribution 4.0 International License][CCA4IL].</span></span>  
+<span data-ttu-id="99ac9-308">この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。</span><span class="sxs-lookup"><span data-stu-id="99ac9-308">This work is licensed under a [Creative Commons Attribution 4.0 International License][CCA4IL].</span></span>  
 
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
