@@ -1,21 +1,23 @@
 ---
 description: Microsoft Edge WebView2 コントロールを使用してネイティブアプリケーションに web 技術 (HTML、CSS、JavaScript) を埋め込む
-title: WebView2 について CoreWebView2Controller
+title: 0.9.579-WebView2 (CoreWebView2Controller の場合)
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 07/08/2020
+ms.date: 09/10/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: WebView2、Core、WebView2、webview、.net、wpf、winforms、アプリ、edge、CoreWebView2、CoreWebView2Controller、browser control、edge html、Microsoft の WebView2。 CoreWebView2Controller。
-ms.openlocfilehash: 581343b2373dac43dd89582f7ea6e551507f3a6c
-ms.sourcegitcommit: f6764f57aed9ab7229e4eb6cc8851d0cea667403
+ms.openlocfilehash: 06833047ddac6d7d048f4c8706eb5deef69ac267
+ms.sourcegitcommit: 0faf538d5033508af4320b9b89c4ed99872f0574
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "10878961"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "11011077"
 ---
-# WebView2 クラス (CoreWebView2Controller クラス) 
+# 0.9.579 クラスの WebView2 クラス (CoreWebView2Controller) 
+
+[!INCLUDE [deprecation-note](../../includes/deprecation-note.md)]
 
 名前空間: WebView2 () \
 アセンブリ: Microsoft.Web.WebView2.Core.dll
@@ -69,7 +71,7 @@ AcceleratorKeyPressed は、WebView がフォーカスされているときに�
 
 Webview の境界。
 
-> パブリック四角形の[境界](#bounds)
+> パブリック四角形の [境界](#bounds)
 
 境界は親 HWND を基準としています。 アプリには、WebView を配置する2つの方法があります。
 
@@ -81,7 +83,7 @@ Webview の境界。
 
 この CoreWebView2Controller に関連付けられている CoreWebView2 を取得します。
 
-> パブリック[CoreWebView2](microsoft-web-webview2-core-corewebview2.md) [CoreWebView2](#corewebview2)
+> パブリック [CoreWebView2](microsoft-web-webview2-core-corewebview2.md) [CoreWebView2](#corewebview2)
 
 #### GotFocus 
 
@@ -117,7 +119,7 @@ MoveFocusRequested は、ユーザーが WebView から tab キーを移動し�
 
 この WebView がコンテンツのレンダリングに使用しているアプリによって提供される親ウィンドウ。
 
-> パブリック IntPtr の[親ウィンドウ](#parentwindow)
+> パブリック IntPtr の [親ウィンドウ](#parentwindow)
 
 プロパティを設定すると、WebView が、新しく提供されたウィンドウにウィンドウを再表示します。
 
@@ -125,7 +127,7 @@ MoveFocusRequested は、ユーザーが WebView から tab キーを移動し�
 
 WebView のズームファクター。
 
-> パブリックダブル[ZoomFactor](#zoomfactor)
+> パブリックダブル [ZoomFactor](#zoomfactor)
 
 ズーム倍率を変更すると、ページレイアウトが変更される場合があることに注意して `window.innerWidth/innerHeight` ください。 ZoomFactor を呼び出して、ホストによって適用される拡大率は、WebView の新しい既定のズームになります。 このズーム倍率は、ナビゲーション間で適用され、ユーザーが ctrl + 0 キーを押したときに表示されるズームファクター WebView に戻ります。 拡大率がユーザーによって変更された場合 (アプリの ZoomFactorChanged を受け取る場合)、現在のページに対してのみズームが適用されます。 すべてのユーザーのズームは、現在のページに対してのみ適用され、ナビゲーションではリセットされます。 0以下の zoomFactor を指定することはできません。 WebView には、内部でサポートされているズームファクター範囲もあります。 指定したズームファクターがその範囲外の場合は、範囲内に収まるように正規化され、実際に適用されたズームファクターに対して ZoomFactorChanged イベントが発生します。 この範囲の正規化が行われると、ZoomFactor プロパティは、ZoomFactor プロパティの前の変更時に指定されたズーム率を報告します。これは、webview が正規化されたズームファクターを適用した後に ZoomFactorChanged イベントが受信されるまでです。
 
@@ -153,7 +155,7 @@ Close は、CoreWebView2Controller が最終的な参照を失い、destructed �
 
 WebView にフォーカスを移動します。
 
-> パブリック void [MoveFocus](#movefocus)([CoreWebView2MoveFocusReason](./namespace-microsoft-web-webview2-core.md)の理由)
+> パブリック void [MoveFocus](#movefocus)([CoreWebView2MoveFocusReason](./namespace-microsoft-web-webview2-core.md) の理由)
 
 WebView はフォーカスを取得し、WebView でホストされているページ内の対応する要素にフォーカスが設定されます。 プログラム的な理由により、フォーカスは前にフォーカスされた要素、または、前にフォーカスされている要素がない場合は既定の要素に設定されます。 次の理由から、フォーカスは最初の要素に設定されます。 前の理由から、フォーカスは最後の要素に設定されます。 また、WebView または Tab キーをクリックするなど、ユーザーの操作によってフォーカスを取得することもできます。 Tab キーを押した場合は、次のタブと shift キーを押しながら tab キーを押すと、[次へ] または [前のページ] を使用して MoveFocus を呼び出すことができます。 または、アプリがメッセージループの一部として IsDialogMessage を呼び出して、プラットフォームがタブを自動処理できるようにすることができます。 プラットフォームは、すべてのウィンドウを通じて WS_TABSTOP で回転します。 WebView が IsDialogMessage からフォーカスを取得すると、tab と shift + tab の最初または最後の要素にフォーカスが内部的に配置されます。
 

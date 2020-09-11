@@ -1,21 +1,23 @@
 ---
 description: Microsoft Edge WebView2 コントロールを使用してネイティブアプリケーションに web 技術 (HTML、CSS、JavaScript) を埋め込む
-title: WebView2 について CoreWebView2WebResourceResponseReceivedEventArgs
+title: 0.9.579-WebView2 (CoreWebView2WebResourceResponseReceivedEventArgs の場合)
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 07/20/2020
+ms.date: 09/10/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: WebView2、Core、WebView2、webview、.net、wpf、winforms、アプリ、edge、CoreWebView2、CoreWebView2Controller、browser control、edge html、Microsoft の WebView2。 CoreWebView2WebResourceResponseReceivedEventArgs。
-ms.openlocfilehash: 44fc4f47aa10a7e409ac584cb75b750048056e47
-ms.sourcegitcommit: e0cb9e6f59f222fade6afa4829c59524a9a9b9ff
+ms.openlocfilehash: a8c988fdfee72ed22e74886b440819d7a9d6fe24
+ms.sourcegitcommit: 0faf538d5033508af4320b9b89c4ed99872f0574
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "10886528"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "11010512"
 ---
-# WebView2 クラス (CoreWebView2WebResourceResponseReceivedEventArgs クラス) 
+# 0.9.579 クラスの WebView2 クラス (CoreWebView2WebResourceResponseReceivedEventArgs) 
+
+[!INCLUDE [deprecation-note](../../includes/deprecation-note.md)]
 
 [!INCLUDE [prerelease-note](../../includes/prerelease-note.md)]
 
@@ -38,7 +40,7 @@ WebResourceResponseReceived イベントのイベント引数。
 
 Web リソース要求オブジェクト。
 
-> パブリック HttpRequestMessage[要求](#request)
+> パブリック HttpRequestMessage [要求](#request)
 
 このオブジェクトに加えた変更はすべて無視されます。
 
@@ -46,7 +48,7 @@ Web リソース要求オブジェクト。
 
 Web リソース応答オブジェクト。
 
-> パブリック HttpResponseMessage[応答](#response)
+> パブリック HttpResponseMessage [応答](#response)
 
 このオブジェクトに加えた変更はすべて無視されます。
 

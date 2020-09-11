@@ -1,21 +1,23 @@
 ---
 description: Microsoft Edge WebView2 コントロールを使用してネイティブアプリケーションに web 技術 (HTML、CSS、JavaScript) を埋め込む
-title: WebView2 Win32 C++ ICoreWebView2ExperimentalNewWindowRequestedEventArgs
+title: 0.9.579-WebView2 Win32 C++ ICoreWebView2ExperimentalNewWindowRequestedEventArgs
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 07/20/2020
+ms.date: 09/10/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Controller、browser control、edge html、ICoreWebView2ExperimentalNewWindowRequestedEventArgs
-ms.openlocfilehash: d18ccc91d16213cf0a915420b406b65823b3f9d9
-ms.sourcegitcommit: e0cb9e6f59f222fade6afa4829c59524a9a9b9ff
+ms.openlocfilehash: 855425e5cbdd594c7a4bca12efe1827035ca2f3a
+ms.sourcegitcommit: 0faf538d5033508af4320b9b89c4ed99872f0574
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "10886452"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "11011105"
 ---
-# インターフェイス ICoreWebView2ExperimentalNewWindowRequestedEventArgs 
+# 0.9.579-インターフェイス ICoreWebView2ExperimentalNewWindowRequestedEventArgs 
+
+[!INCLUDE [deprecation-note](../../includes/deprecation-note.md)]
 
 [!INCLUDE [prerelease-note](../../includes/prerelease-note.md)]
 

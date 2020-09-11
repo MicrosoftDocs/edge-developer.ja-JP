@@ -3,17 +3,17 @@ description: Win32 C++ WebView2 API の規則
 title: Win32 C++ WebView2 API の規則
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 07/23/2020
+ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、wpf アプリ、wpf、edge、ICoreWebView2、ICoreWebView2Host、browser control、edge html
-ms.openlocfilehash: c8792133da2b858cfaa456df5a7dce26c3c65154
-ms.sourcegitcommit: 553957c101f83681b363103cb6af56bf20173f23
+ms.openlocfilehash: 6c596b038e871caa5a364991351636f51ef7d685
+ms.sourcegitcommit: 0faf538d5033508af4320b9b89c4ed99872f0574
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "10895567"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "11010685"
 ---
 # Win32 C++ WebView2 API の規則  
 
@@ -21,7 +21,7 @@ ms.locfileid: "10895567"
 
 WebView2 Win32 C++ API の非同期メソッドでは、デリゲートインターフェイスを使って、async メソッドが完了したとき、成功または失敗コード、非同期メソッドの結果などを示します。  すべての非同期メソッドの final パラメーターは、実装を提供するデリゲートインターフェイスへのポインターです。  
 
-Delegate インターフェイスには、 `Invoke` `HRESULT` 成功または失敗コードの最初のパラメーターとして受け取る1つのメソッドがあります。  また、メソッドに結果が含まれている場合は、メソッドの結果として2番目のパラメーターが必要になることもあります。  たとえば、 [ICoreWebView2:: CapturePreview][Webview2ReferenceWin3209538Icorewebview2CapturePreview]メソッドは、最後のパラメーターとして `ICoreWebView2CapturePreviewCompletedHandler` ポインターを受け取ります。  メソッド要求を送信するには `CapturePreview` 、実装するポインターのインスタンスを指定し `ICoreWebView2CapturePreviewCompletedHandler` ます。  次のコードスニペットでは、1つのメソッドを使って実装します。  
+Delegate インターフェイスには、 `Invoke` `HRESULT` 成功または失敗コードの最初のパラメーターとして受け取る1つのメソッドがあります。  また、メソッドに結果が含まれている場合は、メソッドの結果として2番目のパラメーターが必要になることもあります。  たとえば、[ICoreWebView2:: CapturePreview] [Webview2ReferenceWin3209538Icorewebview2CapturePreview] メソッドは、最後のパラメーターとして `ICoreWebView2CapturePreviewCompletedHandler` ポインターを受け取ります。  メソッド要求を送信するには `CapturePreview` 、実装するポインターのインスタンスを指定し `ICoreWebView2CapturePreviewCompletedHandler` ます。  次のコードスニペットでは、1つのメソッドを使って実装します。  
 
 ```cpp
 HRESULT Invoke(HRESULT result)
@@ -117,6 +117,6 @@ Uri_CREATE_ALLOW_IMPLICIT_FILE_SCHEME | Uri_CREATE_NO_DECODE_EXTRA_INFO
 
 <!-- links -->  
 
-[Webview2ReferenceWin3209538Icorewebview2CapturePreview]: ../reference/win32/0-9-538/icorewebview2.md#capturepreview "CapturePreview-インターフェイス ICoreWebView2 |Microsoft ドキュメント"  
+[Webview2ReferenceWin3209622Icorewebview2CapturePreview]: ../reference/win32/0-9-622/icorewebview2.md#capturepreview "CapturePreview-インターフェイス ICoreWebView2 |Microsoft ドキュメント"  
 
 [CppCxWrlCallbackFunction]: /cpp/cppcx/wrl/callback-function-wrl "コールバック関数 (WRL) |Microsoft ドキュメント"  

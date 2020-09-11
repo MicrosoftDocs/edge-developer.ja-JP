@@ -1,21 +1,23 @@
 ---
 description: Microsoft Edge WebView2 コントロールを使用してネイティブアプリケーションに web 技術 (HTML、CSS、JavaScript) を埋め込む
-title: WebView2 について EdgeNotFoundException
+title: 0.9.579-WebView2 (EdgeNotFoundException の場合)
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 07/08/2020
+ms.date: 09/10/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: WebView2、Core、WebView2、webview、.net、wpf、winforms、アプリ、edge、CoreWebView2、CoreWebView2Controller、browser control、edge html、Microsoft の WebView2。 EdgeNotFoundException。
-ms.openlocfilehash: 09a930231fd7f6886108904f25f07bde5c76db73
-ms.sourcegitcommit: f6764f57aed9ab7229e4eb6cc8851d0cea667403
+ms.openlocfilehash: b4dc30ff741702d03796cb40e6ea6367ffdd0fc0
+ms.sourcegitcommit: 0faf538d5033508af4320b9b89c4ed99872f0574
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "10879619"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "11010104"
 ---
-# WebView2 クラス (EdgeNotFoundException クラス) 
+# 0.9.579 クラスの WebView2 クラス (EdgeNotFoundException) 
+
+[!INCLUDE [deprecation-note](../../includes/deprecation-note.md)]
 
 名前空間: WebView2 () \
 アセンブリ: Microsoft.Web.WebView2.Core.dll
@@ -42,13 +44,13 @@ class Microsoft.Web.WebView2.Core.EdgeNotFoundException
 
 EdgeNotFoundException クラスの新しいインスタンスを初期化します。
 
-> パブリック[EdgeNotFoundException](#edgenotfoundexception)()
+> パブリック [EdgeNotFoundException](#edgenotfoundexception)()
 
 #### EdgeNotFoundException 
 
 この例外の原因である内部例外への参照を使って、EdgeNotFoundException クラスの新しいインスタンスを初期化します。
 
-> パブリック[EdgeNotFoundException](#edgenotfoundexception)(例外の内部)
+> パブリック [EdgeNotFoundException](#edgenotfoundexception)(例外の内部)
 
 ##### パラメーター
 * `inner` 現在の例外の原因である例外。
@@ -57,7 +59,7 @@ EdgeNotFoundException クラスの新しいインスタンスを初期化しま�
 
 指定したエラーメッセージを使用して、EdgeNotFoundException クラスの新しいインスタンスを初期化します。
 
-> パブリック[EdgeNotFoundException](#edgenotfoundexception)(文字列メッセージ)
+> パブリック [EdgeNotFoundException](#edgenotfoundexception)(文字列メッセージ)
 
 ##### パラメーター
 * `message` 例外の理由を説明するエラーメッセージ。
@@ -66,7 +68,7 @@ EdgeNotFoundException クラスの新しいインスタンスを初期化しま�
 
 指定したエラーメッセージと、この例外の原因である内部例外への参照を指定して、EdgeNotFoundException クラスの新しいインスタンスを初期化します。
 
-> パブリック[EdgeNotFoundException](#edgenotfoundexception)(文字列メッセージ、例外の内部)
+> パブリック [EdgeNotFoundException](#edgenotfoundexception)(文字列メッセージ、例外の内部)
 
 ##### パラメーター
 * `message` 例外の理由を説明するエラーメッセージ。 

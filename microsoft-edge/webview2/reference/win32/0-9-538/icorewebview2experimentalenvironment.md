@@ -1,21 +1,23 @@
 ---
 description: Microsoft Edge WebView2 コントロールを使用してネイティブアプリケーションに web 技術 (HTML、CSS、JavaScript) を埋め込む
-title: WebView2 Win32 C++ ICoreWebView2ExperimentalEnvironment
+title: 0.9.579-WebView2 Win32 C++ ICoreWebView2ExperimentalEnvironment
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 07/20/2020
+ms.date: 09/10/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Controller、browser control、edge html、ICoreWebView2ExperimentalEnvironment
-ms.openlocfilehash: 70e2ceab124b60c355f94161d2d25e49953520ca
-ms.sourcegitcommit: e0cb9e6f59f222fade6afa4829c59524a9a9b9ff
+ms.openlocfilehash: e7ccb108c137e54635c6e5b69f9bc615ff8ff018
+ms.sourcegitcommit: 0faf538d5033508af4320b9b89c4ed99872f0574
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "10886461"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "11011137"
 ---
-# インターフェイス ICoreWebView2ExperimentalEnvironment 
+# 0.9.579-インターフェイス ICoreWebView2ExperimentalEnvironment 
+
+[!INCLUDE [deprecation-note](../../includes/deprecation-note.md)]
 
 [!INCLUDE [prerelease-note](../../includes/prerelease-note.md)]
 
@@ -31,7 +33,7 @@ interface ICoreWebView2ExperimentalEnvironment
  Members                        | 説明
 --------------------------------|---------------------------------------------
 [CreateCoreWebView2CompositionController](#createcorewebview2compositioncontroller) | ビジュアルホスティングで使用する新しい WebView を非同期的に作成します。
-[CreateCoreWebView2PointerInfo](#createcorewebview2pointerinfo) | 空の[ICoreWebView2ExperimentalPointerInfo](icorewebview2experimentalpointerinfo.md)を作成します。
+[CreateCoreWebView2PointerInfo](#createcorewebview2pointerinfo) | 空の [ICoreWebView2ExperimentalPointerInfo](icorewebview2experimentalpointerinfo.md)を作成します。
 [GetProviderForHwnd](#getproviderforhwnd) | 指定された HWND に対応する ICoreWebView2CompositionController の UI オートメーションプロバイダーを返します。
 
 [ICoreWebView2ExperimentalEnvironment]()インターフェイスを実装するオブジェクトも[ICoreWebView2Environment](icorewebview2environment.md)を実装します。
@@ -178,11 +180,11 @@ HRESULT AppWindow::OnCreateEnvironmentCompleted(
 
 #### CreateCoreWebView2PointerInfo 
 
-空の[ICoreWebView2ExperimentalPointerInfo](icorewebview2experimentalpointerinfo.md)を作成します。
+空の [ICoreWebView2ExperimentalPointerInfo](icorewebview2experimentalpointerinfo.md)を作成します。
 
 > パブリック HRESULT [CreateCoreWebView2PointerInfo](#createcorewebview2pointerinfo)([ICoreWebView2ExperimentalPointerInfo](icorewebview2experimentalpointerinfo.md) * * ポインター情報)
 
-返された[ICoreWebView2ExperimentalPointerInfo](icorewebview2experimentalpointerinfo.md)には、Sendポインタ入力を呼び出す前に、関連するすべての情報を設定する必要があります。
+返された [ICoreWebView2ExperimentalPointerInfo](icorewebview2experimentalpointerinfo.md) には、Sendポインタ入力を呼び出す前に、関連するすべての情報を設定する必要があります。
 
 #### GetProviderForHwnd 
 

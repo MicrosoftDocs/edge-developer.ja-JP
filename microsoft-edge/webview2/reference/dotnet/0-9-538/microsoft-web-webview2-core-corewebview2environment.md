@@ -1,21 +1,23 @@
 ---
 description: Microsoft Edge WebView2 コントロールを使用してネイティブアプリケーションに web 技術 (HTML、CSS、JavaScript) を埋め込む
-title: WebView2 について CoreWebView2Environment
+title: 0.9.579-WebView2 (CoreWebView2Environment の場合)
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 07/20/2020
+ms.date: 09/10/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: WebView2、Core、WebView2、webview、.net、wpf、winforms、アプリ、edge、CoreWebView2、CoreWebView2Controller、browser control、edge html、Microsoft の WebView2。 CoreWebView2Environment。
-ms.openlocfilehash: 6b03997c8bd76137b20bb71edfd0d57b3686914a
-ms.sourcegitcommit: e0cb9e6f59f222fade6afa4829c59524a9a9b9ff
+ms.openlocfilehash: d1e30c17239eb1b609eb3f2c63e48a3a59616131
+ms.sourcegitcommit: 0faf538d5033508af4320b9b89c4ed99872f0574
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "10885290"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "11011028"
 ---
-# WebView2 クラス (CoreWebView2Environment クラス) 
+# 0.9.579 クラスの WebView2 クラス (CoreWebView2Environment) 
+
+[!INCLUDE [deprecation-note](../../includes/deprecation-note.md)]
 
 名前空間: WebView2 () \
 アセンブリ: Microsoft.Web.WebView2.Core.dll
@@ -45,7 +47,7 @@ WebViews は、環境パラメーターと共に指定したブラウザープ�
 
 CoreWebView2Environment が安定していない場合は、チャネル名を含む現在ののブラウザーバージョン情報。
 
-> パブリック文字列の[文字列](#browserversionstring)
+> パブリック文字列の [文字列](#browserversionstring)
 
 これは、GetAvailableCoreWebView2BrowserVersionString API の形式と一致します。 チャネル名は、"ベータ"、"dev"、"カナリア" のようになります。
 
@@ -115,7 +117,7 @@ parentWindow は、WebView を表示して入力を受け取る HWND です。 W
 
 空の CoreWebView2PointerInfo を作成します。
 
-> パブリック[CoreWebView2PointerInfo](microsoft-web-webview2-core-corewebview2pointerinfo.md) [CreateCoreWebView2PointerInfo](#createcorewebview2pointerinfo)()
+> パブリック [CoreWebView2PointerInfo](microsoft-web-webview2-core-corewebview2pointerinfo.md) [CreateCoreWebView2PointerInfo](#createcorewebview2pointerinfo)()
 
 返された CoreWebView2PointerInfo には、Sendポインタ入力を呼び出す前に、関連するすべての情報を設定する必要があります。
 
@@ -131,7 +133,7 @@ parentWindow は、WebView を表示して入力を受け取る HWND です。 W
 
 安定したチャネルまたは埋め込みエッジでない場合は、チャネル名などのブラウザーのバージョン情報を取得します。
 
-> パブリック静的な文字列[Getserverの](#getavailablebrowserversionstring)文字列 (String browserExecutableFolder)
+> パブリック静的な文字列 [Getserverの](#getavailablebrowserversionstring)文字列 (String browserExecutableFolder)
 
 ##### パラメーター
 * `browserExecutableFolder` 埋め込まれた端を含むフォルダーの相対パス。
@@ -142,5 +144,5 @@ parentWindow は、WebView を表示して入力を受け取る HWND です。 W
 
 指定された HWND に対応する CoreWebView2CompositionController の UI オートメーションプロバイダーを返します。
 
-> パブリックオブジェクト[Getproviderforhwnd](#getproviderforhwnd)(IntPtr hwnd)
+> パブリックオブジェクト [Getproviderforhwnd](#getproviderforhwnd)(IntPtr hwnd)
 

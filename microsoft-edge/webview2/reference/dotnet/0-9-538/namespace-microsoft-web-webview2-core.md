@@ -1,21 +1,23 @@
 ---
 description: Microsoft Edge WebView2 コントロールを使用してネイティブアプリケーションに web 技術 (HTML、CSS、JavaScript) を埋め込む
-title: WebView2 の基本
+title: 0.9.579-WebView2 の基本
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 07/20/2020
+ms.date: 09/10/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: WebView2、Core、WebView2、webview、.net、wpf、winforms、アプリ、edge、CoreWebView2、CoreWebView2Controller、browser control、edge html、Microsoft のようになります。
-ms.openlocfilehash: 121ca87d1cd444228aeba1328feb2d0633647d74
-ms.sourcegitcommit: e0cb9e6f59f222fade6afa4829c59524a9a9b9ff
+ms.openlocfilehash: 9786e7b2062532fcb0d982afb0c864bddc1ad125
+ms.sourcegitcommit: 0faf538d5033508af4320b9b89c4ed99872f0574
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "10884030"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "11010118"
 ---
-# WebView2 の Core 名前空間 
+# 0.9.579-WebView2 の名前空間 
+
+[!INCLUDE [deprecation-note](../../includes/deprecation-note.md)]
 
 ## まとめ
 
@@ -67,7 +69,7 @@ CoreWebView2PhysicalKeyStatus | Win32 キーイベントに指定された LPARA
 
 CoreWebView2CapturePreview メソッドで使用される画像形式。
 
-> 列挙型[CoreWebView2CapturePreviewImageFormat](#corewebview2capturepreviewimageformat)
+> 列挙型 [CoreWebView2CapturePreviewImageFormat](#corewebview2capturepreviewimageformat)
 
  値                         | 説明
 --------------------------------|---------------------------------------------
@@ -78,7 +80,7 @@ Jpeg            | JPEG イメージ形式。
 
 AcceleratorKeyPressed イベントをトリガーしたキーイベントの種類です。
 
-> 列挙型[CoreWebView2KeyEventKind](#corewebview2keyeventkind)
+> 列挙型 [CoreWebView2KeyEventKind](#corewebview2keyeventkind)
 
  値                         | 説明
 --------------------------------|---------------------------------------------
@@ -93,7 +95,7 @@ SystemKeyUp            | ウィンドウメッセージ WM_SYSKEYUP に対応し
 
 WebView に送信されるマウスイベントの種類を伝えるために、SendMouseInput で使われるマウスイベントの種類。
 
-> 列挙型[CoreWebView2MouseEventKind](#corewebview2mouseeventkind)
+> 列挙型 [CoreWebView2MouseEventKind](#corewebview2mouseeventkind)
 
  値                         | 説明
 --------------------------------|---------------------------------------------
@@ -120,7 +122,7 @@ XButtonUp            | 最初または2番目の X ボタンのマウスイベ�
 
 SendMouseInput の CoreWebView2MouseEventKind に関連付けられたマウスイベントの仮想キー。
 
-> 列挙型[CoreWebView2MouseEventVirtualKeys](#corewebview2mouseeventvirtualkeys)
+> 列挙型 [CoreWebView2MouseEventVirtualKeys](#corewebview2mouseeventvirtualkeys)
 
  値                         | 説明
 --------------------------------|---------------------------------------------
@@ -137,7 +139,7 @@ XButton2            | 第2の X ボタンが押され、MK_XBUTTON2 ます。
 
 フォーカスを移動する理由。
 
-> 列挙型[CoreWebView2MoveFocusReason](#corewebview2movefocusreason)
+> 列挙型 [CoreWebView2MoveFocusReason](#corewebview2movefocusreason)
 
  値                         | 説明
 --------------------------------|---------------------------------------------
@@ -149,7 +151,7 @@ Previous            | タブトラバーサルに戻るためにフォーカス�
 
 アクセス許可要求の種類。
 
-> 列挙型[CoreWebView2PermissionKind](#corewebview2permissionkind)
+> 列挙型 [CoreWebView2PermissionKind](#corewebview2permissionkind)
 
  値                         | 説明
 --------------------------------|---------------------------------------------
@@ -165,7 +167,7 @@ UnknownPermission            | 不明な権限。
 
 アクセス許可要求に対する応答。
 
-> 列挙型[CoreWebView2PermissionState](#corewebview2permissionstate)
+> 列挙型 [CoreWebView2PermissionState](#corewebview2permissionstate)
 
  値                         | 説明
 --------------------------------|---------------------------------------------
@@ -179,7 +181,7 @@ UnknownPermission            | 不明な権限。
 
 WebView に送信されるポインターイベントの種類を伝えるために Sendpointer 入力で使われるポインターイベントの種類です。
 
-> 列挙型[CoreWebView2PointerEventKind](#corewebview2pointereventkind)
+> 列挙型 [CoreWebView2PointerEventKind](#corewebview2pointereventkind)
 
  値                         | 説明
 --------------------------------|---------------------------------------------
@@ -194,7 +196,7 @@ Update            | WM_POINTERUPDATE に対応します。
 
 CoreWebView2ProcessFailedEventHandler クラスで使われているプロセスエラーの種類。
 
-> 列挙型[CoreWebView2ProcessFailedKind](#corewebview2processfailedkind)
+> 列挙型 [CoreWebView2ProcessFailedKind](#corewebview2processfailedkind)
 
  値                         | 説明
 --------------------------------|---------------------------------------------
@@ -206,7 +208,7 @@ RenderProcessUnresponsive が応答しません            | レンダリング�
 
 CoreWebView2ScriptDialogOpeningEventHandler クラスで使用される JavaScript ダイアログの種類。
 
-> 列挙型[CoreWebView2ScriptDialogKind](#corewebview2scriptdialogkind)
+> 列挙型 [CoreWebView2ScriptDialogKind](#corewebview2scriptdialogkind)
 
  値                         | 説明
 --------------------------------|---------------------------------------------
@@ -219,7 +221,7 @@ Beforeunload            | Beforeunload JavaScript 関数を使用して呼び出
 
 Web ナビゲーションのエラー状態の値。
 
-> 列挙型[CoreWebView2WebErrorStatus](#corewebview2weberrorstatus)
+> 列挙型 [CoreWebView2WebErrorStatus](#corewebview2weberrorstatus)
 
  値                         | 説明
 --------------------------------|---------------------------------------------
@@ -228,7 +230,7 @@ Unknown            | 不明なエラーが発生しました。
 CertificateExpired 切れ            | SSL 証明書の有効期限が切れています。
 ClientCertificateContainsErrors            | SSL クライアント証明書にエラーが含まれています。
 CertificateRevoked            | SSL 証明書が失効しています。
-CertificateIsInvalid            | SSL 証明書が無効になっている可能性があります。これは、 &ndash; 証明書がホスト名の公開キーピンと一致しなかったことを意味します。証明書が信頼されていない機関によって署名されている、または脆弱な署名アルゴリズムを使用している場合、証明書が名前の制限を超えている証明書、証明書の有効期間が長い、証明書の透過情報がない、証明書が[従来のシマンテックルート](https://security.googleblog.com/2018/03/distrust-of-symantec-pki-immediate.html)にチェーンされている。
+CertificateIsInvalid            | SSL 証明書が無効になっている可能性があります。これは、 &ndash; 証明書がホスト名の公開キーピンと一致しなかったことを意味します。証明書が信頼されていない機関によって署名されている、または脆弱な署名アルゴリズムを使用している場合、証明書が名前の制限を超えている証明書、証明書の有効期間が長い、証明書の透過情報がない、証明書が [従来のシマンテックルート](https://security.googleblog.com/2018/03/distrust-of-symantec-pki-immediate.html)にチェーンされている。
 ServerUnreachable 不可            | ホストに到達できません。
 タイムアウト            | 接続がタイムアウトしました。
 ErrorHttpInvalidServerResponse            | サーバーが無効または認識不能な応答を返しました。
@@ -245,7 +247,7 @@ UnexpectedError            | 予期しないエラーが発生しました。
 
 Web リソース要求コンテキストの列挙。
 
-> 列挙型[CoreWebView2WebResourceContext](#corewebview2webresourcecontext)
+> 列挙型 [CoreWebView2WebResourceContext](#corewebview2webresourcecontext)
 
  値                         | 説明
 --------------------------------|---------------------------------------------

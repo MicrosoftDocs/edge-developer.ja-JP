@@ -1,21 +1,23 @@
 ---
 description: Microsoft Edge WebView2 コントロールを使用してネイティブアプリケーションに web 技術 (HTML、CSS、JavaScript) を埋め込む
-title: WebView2 Win32 C++ ICoreWebView2ScriptDialogOpeningEventArgs
+title: 0.9.579-WebView2 Win32 C++ ICoreWebView2ScriptDialogOpeningEventArgs
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 07/08/2020
+ms.date: 09/10/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Controller、browser control、edge html、ICoreWebView2ScriptDialogOpeningEventArgs
-ms.openlocfilehash: 070e7799111113ab8b4f883df85e505894677a31
-ms.sourcegitcommit: f6764f57aed9ab7229e4eb6cc8851d0cea667403
+ms.openlocfilehash: e00d251635cde24c1a224141e56621264228d47c
+ms.sourcegitcommit: 0faf538d5033508af4320b9b89c4ed99872f0574
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "10879045"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "11010363"
 ---
-# インターフェイス ICoreWebView2ScriptDialogOpeningEventArgs 
+# 0.9.579-インターフェイス ICoreWebView2ScriptDialogOpeningEventArgs 
+
+[!INCLUDE [deprecation-note](../../includes/deprecation-note.md)]
 
 ```
 interface ICoreWebView2ScriptDialogOpeningEventArgs
@@ -34,7 +36,7 @@ Scriptな開始イベントのイベント引数。
 [get_Message](#get_message) | ダイアログボックスのメッセージ。
 [get_ResultText](#get_resulttext) | Accept が呼び出された場合の JavaScript プロンプト関数からの戻り値。
 [get_Uri](#get_uri) | ダイアログボックスを要求したページの URI。
-[GetDeferral](#getdeferral) | GetDeferral を呼び出して、 [ICoreWebView2Deferral](icorewebview2deferral.md)オブジェクトを返すことができます。
+[GetDeferral](#getdeferral) | GetDeferral を呼び出して、 [ICoreWebView2Deferral](icorewebview2deferral.md) オブジェクトを返すことができます。
 [put_ResultText](#put_resulttext) | ResultText プロパティを設定します。
 
 ## Members
@@ -87,7 +89,7 @@ Accept が呼び出された場合の JavaScript プロンプト関数からの�
 
 #### GetDeferral 
 
-GetDeferral を呼び出して、 [ICoreWebView2Deferral](icorewebview2deferral.md)オブジェクトを返すことができます。
+GetDeferral を呼び出して、 [ICoreWebView2Deferral](icorewebview2deferral.md) オブジェクトを返すことができます。
 
 > パブリック HRESULT [Getdeferral](#getdeferral)([ICoreWebView2Deferral](icorewebview2deferral.md) * * 延期)
 

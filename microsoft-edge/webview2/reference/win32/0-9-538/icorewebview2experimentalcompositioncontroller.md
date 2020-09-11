@@ -1,21 +1,23 @@
 ---
 description: Microsoft Edge WebView2 コントロールを使用してネイティブアプリケーションに web 技術 (HTML、CSS、JavaScript) を埋め込む
-title: WebView2 Win32 C++ ICoreWebView2ExperimentalCompositionController
+title: 0.9.579-WebView2 Win32 C++ ICoreWebView2ExperimentalCompositionController
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 07/20/2020
+ms.date: 09/10/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Controller、browser control、edge html、ICoreWebView2ExperimentalCompositionController
-ms.openlocfilehash: d651133162520e4a967d13de6f585fe3ac02e830
-ms.sourcegitcommit: e0cb9e6f59f222fade6afa4829c59524a9a9b9ff
+ms.openlocfilehash: 893628746e52ee8501e357f965d49324446d6470
+ms.sourcegitcommit: 0faf538d5033508af4320b9b89c4ed99872f0574
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "10886466"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "11010216"
 ---
-# インターフェイス ICoreWebView2ExperimentalCompositionController 
+# 0.9.579-インターフェイス ICoreWebView2ExperimentalCompositionController 
+
+[!INCLUDE [deprecation-note](../../includes/deprecation-note.md)]
 
 [!INCLUDE [prerelease-note](../../includes/prerelease-note.md)]
 
@@ -24,14 +26,14 @@ interface ICoreWebView2ExperimentalCompositionController
   : public IUnknown
 ```
 
-このインターフェイスは、 [ICoreWebView2Controller](icorewebview2controller.md)インターフェイスの拡張機能であり、ビジュアルホストをサポートします。
+このインターフェイスは、 [ICoreWebView2Controller](icorewebview2controller.md) インターフェイスの拡張機能であり、ビジュアルホストをサポートします。
 
 ## まとめ
 
  Members                        | 説明
 --------------------------------|---------------------------------------------
 [add_CursorChanged](#add_cursorchanged) | カーソル変更イベントのイベントハンドラーを追加します。
-[CreateCoreWebView2PointerInfoFromPointerId](#createcorewebview2pointerinfofrompointerid) | システムから受け取ったポインター Id を[ICoreWebView2ExperimentalPointerInfo](icorewebview2experimentalpointerinfo.md)に変換するヘルパー関数。
+[CreateCoreWebView2PointerInfoFromPointerId](#createcorewebview2pointerinfofrompointerid) | システムから受け取ったポインター Id を [ICoreWebView2ExperimentalPointerInfo](icorewebview2experimentalpointerinfo.md)に変換するヘルパー関数。
 [get_Cursor](#get_cursor) | WebView で現在のカーソルの位置を判断します。
 [get_RootVisualTarget](#get_rootvisualtarget) | RootVisualTarget は、ホストアプリのビジュアルツリー内のビジュアルです。
 [get_UIAProvider](#get_uiaprovider) | WebView の UI オートメーションプロバイダーを返します。
@@ -44,7 +46,7 @@ interface ICoreWebView2ExperimentalCompositionController
 [COREWEBVIEW2_MOUSE_EVENT_VIRTUAL_KEYS](#corewebview2_mouse_event_virtual_keys) | SendMouseInput の COREWEBVIEW2_MOUSE_EVENT_KIND に関連付けられたマウスイベントの仮想キー。
 [COREWEBVIEW2_POINTER_EVENT_KIND](#corewebview2_pointer_event_kind) | WebView に送信されるポインターイベントの種類を伝えるために Sendpointer 入力で使われるポインターイベントの種類です。
 
-ICoreWebView2ExperimentalCompositionController インターフェイスを実装するオブジェクトも[ICoreWebView2Controller](icorewebview2controller.md)を実装します。 呼び出し元は、サイズ変更、visibility、フォーカスなどのために[ICoreWebView2Controller](icorewebview2controller.md)を使うことを前提としており、ICoreWebView2ExperimentalCompositionController を使ってコンポジションツリーに接続し、WebView 用の入力を提供します。
+ICoreWebView2ExperimentalCompositionController インターフェイスを実装するオブジェクトも [ICoreWebView2Controller](icorewebview2controller.md)を実装します。 呼び出し元は、サイズ変更、visibility、フォーカスなどのために [ICoreWebView2Controller](icorewebview2controller.md) を使うことを前提としており、ICoreWebView2ExperimentalCompositionController を使ってコンポジションツリーに接続し、WebView 用の入力を提供します。
 
 ## Members
 
@@ -75,11 +77,11 @@ WebView がカーソルの変更であると判断されたときに、イベン
 
 #### CreateCoreWebView2PointerInfoFromPointerId 
 
-システムから受け取ったポインター Id を[ICoreWebView2ExperimentalPointerInfo](icorewebview2experimentalpointerinfo.md)に変換するヘルパー関数。
+システムから受け取ったポインター Id を [ICoreWebView2ExperimentalPointerInfo](icorewebview2experimentalpointerinfo.md)に変換するヘルパー関数。
 
 > パブリック HRESULT [CreateCoreWebView2PointerInfoFromPointerId](#createcorewebview2pointerinfofrompointerid)(UINT ポインター ID、HWND parentwindow、struct COREWEBVIEW2_MATRIX_4X4 Transform、 [ICoreWebView2ExperimentalPointerInfo](icorewebview2experimentalpointerinfo.md) * * ポインター情報)
 
-parentWindow は、webview を含む HWND です。 これは、webview を含む hwnd ツリー内の任意の HWND にすることができます。 COREWEBVIEW2_MATRIX_4X4 は、その HWND から webview への変換です。 返された[ICoreWebView2ExperimentalPointerInfo](icorewebview2experimentalpointerinfo.md)は、Sendポインタ info で使われます。 ポインターの型は、ペンまたはタッチである必要があります。または、関数は失敗します。
+parentWindow は、webview を含む HWND です。 これは、webview を含む hwnd ツリー内の任意の HWND にすることができます。 COREWEBVIEW2_MATRIX_4X4 は、その HWND から webview への変換です。 返された [ICoreWebView2ExperimentalPointerInfo](icorewebview2experimentalpointerinfo.md) は、Sendポインタ info で使われます。 ポインターの型は、ペンまたはタッチである必要があります。または、関数は失敗します。
 
 
 #### get_Cursor 
@@ -149,7 +151,7 @@ Add_CursorChanged で以前に追加されたイベントハンドラーを削�
 
 EventKind が COREWEBVIEW2_MOUSE_EVENT_KIND_HORIZONTAL_WHEEL または COREWEBVIEW2_MOUSE_EVENT_KIND_WHEEL の場合、mouseData は、WHEEL の動きの量を指定します。
 
-> パブリック HRESULT 送信[マウス入力](#sendmouseinput)([COREWEBVIEW2_MOUSE_EVENT_KIND](#corewebview2_mouse_event_kind) eventkind、 [COREWEBVIEW2_MOUSE_EVENT_VIRTUAL_KEYS](#corewebview2_mouse_event_virtual_keys) VIRTUALKEYS、UINT32 mousedata、ポイントポイント)
+> パブリック HRESULT 送信 [マウス入力](#sendmouseinput)([COREWEBVIEW2_MOUSE_EVENT_KIND](#corewebview2_mouse_event_kind) eventkind、 [COREWEBVIEW2_MOUSE_EVENT_VIRTUAL_KEYS](#corewebview2_mouse_event_virtual_keys) VIRTUALKEYS、UINT32 mousedata、ポイントポイント)
 
 正の値は、ホイールがユーザーによって前方に回転されたことを示します。負の値は、ホイールが背面に回転していることを示します。 ホイールクリックの1つは、120として定義されている WHEEL_DELTA として定義されています。 EventKind が COREWEBVIEW2_MOUSE_EVENT_KIND_X_BUTTON_DOUBLE_CLICK COREWEBVIEW2_MOUSE_EVENT_KIND_X_BUTTON_DOWN、または COREWEBVIEW2_MOUSE_EVENT_KIND_X_BUTTON_UP の場合、mouseData は、どの X ボタンが押されたか、離されたかを指定します。 この値は、最初の X ボタンが押されている場合は1、2番目の X ボタンが押されたとき、または離された場合は1になります。 EventKind が COREWEBVIEW2_MOUSE_EVENT_KIND_LEAVE の場合、virtualKeys、mouseData、point はすべてゼロである必要があります。 EventKind がその他の値である場合は、mouseData は0である必要があります。 Point は、WebView のクライアント座標空間に存在する必要があります。 WebView から始まり、WebView とホストアプリケーションの外側に移動する可能性のあるマウスイベントを追跡するには、SetCapture と ReleaseCapture の呼び出しをお勧めします。 ホバーポップアップを消すには、COREWEBVIEW2_MOUSE_EVENT_KIND_LEAVE メッセージを送信することをお勧めします。 
 ```cpp
@@ -258,9 +260,9 @@ bool ViewComponent::OnMouseMessage(UINT message, WPARAM wParam, LPARAM lParam)
 
 Sendpointer 入力は、COREWEBVIEW2_POINTER_EVENT_KIND で定義された型のタッチポインターまたはペンポインターの入力を受け入れます。
 
-> パブリック HRESULT 送信[ポインター入力](#sendpointerinput)([COREWEBVIEW2_POINTER_EVENT_KIND](#corewebview2_pointer_event_kind) eventType、 [ICoreWebView2ExperimentalPointerInfo](icorewebview2experimentalpointerinfo.md) * のポインター情報)
+> パブリック HRESULT 送信 [ポインター入力](#sendpointerinput)([COREWEBVIEW2_POINTER_EVENT_KIND](#corewebview2_pointer_event_kind) eventType、 [ICoreWebView2ExperimentalPointerInfo](icorewebview2experimentalpointerinfo.md) * のポインター情報)
 
-システムからのポインター入力は、最初に[ICoreWebView2ExperimentalPointerInfo](icorewebview2experimentalpointerinfo.md)に変換する必要があります。
+システムからのポインター入力は、最初に [ICoreWebView2ExperimentalPointerInfo](icorewebview2experimentalpointerinfo.md) に変換する必要があります。
 
 #### COREWEBVIEW2_MATRIX_4X4 
 
@@ -274,7 +276,7 @@ Sendpointer 入力は、COREWEBVIEW2_POINTER_EVENT_KIND で定義された型の
 
 WebView に送信されるマウスイベントの種類を伝えるために、SendMouseInput で使われるマウスイベントの種類。
 
-> 列挙型[COREWEBVIEW2_MOUSE_EVENT_KIND](#corewebview2_mouse_event_kind)
+> 列挙型 [COREWEBVIEW2_MOUSE_EVENT_KIND](#corewebview2_mouse_event_kind)
 
  値                         | 説明
 --------------------------------|---------------------------------------------
@@ -301,7 +303,7 @@ COREWEBVIEW2_MOUSE_EVENT_KIND_X_BUTTON_UP            | 最初または2番目の
 
 SendMouseInput の COREWEBVIEW2_MOUSE_EVENT_KIND に関連付けられたマウスイベントの仮想キー。
 
-> 列挙型[COREWEBVIEW2_MOUSE_EVENT_VIRTUAL_KEYS](#corewebview2_mouse_event_virtual_keys)
+> 列挙型 [COREWEBVIEW2_MOUSE_EVENT_VIRTUAL_KEYS](#corewebview2_mouse_event_virtual_keys)
 
  値                         | 説明
 --------------------------------|---------------------------------------------
@@ -320,7 +322,7 @@ COREWEBVIEW2_MOUSE_EVENT_VIRTUAL_KEYS_X_BUTTON2            | 第2の X ボタン
 
 WebView に送信されるポインターイベントの種類を伝えるために Sendpointer 入力で使われるポインターイベントの種類です。
 
-> 列挙型[COREWEBVIEW2_POINTER_EVENT_KIND](#corewebview2_pointer_event_kind)
+> 列挙型 [COREWEBVIEW2_POINTER_EVENT_KIND](#corewebview2_pointer_event_kind)
 
  値                         | 説明
 --------------------------------|---------------------------------------------

@@ -1,21 +1,23 @@
 ---
 description: Microsoft Edge WebView2 コントロールを使用してネイティブアプリケーションに web 技術 (HTML、CSS、JavaScript) を埋め込む
-title: WebView2 について CoreWebView2
+title: 0.9.579-WebView2 (CoreWebView2 の場合)
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 07/20/2020
+ms.date: 09/10/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: WebView2、Core、WebView2、webview、.net、wpf、winforms、アプリ、edge、CoreWebView2、CoreWebView2Controller、browser control、edge html、Microsoft の WebView2。 CoreWebView2。
-ms.openlocfilehash: 95ef347c8954dc67438a4d09825c11a64ad8872a
-ms.sourcegitcommit: e0cb9e6f59f222fade6afa4829c59524a9a9b9ff
+ms.openlocfilehash: ca31ddd3536350d3b3bdd02b445b4c47589f7dba
+ms.sourcegitcommit: 0faf538d5033508af4320b9b89c4ed99872f0574
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "10885276"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "11011112"
 ---
-# WebView2 クラス (CoreWebView2 クラス) 
+# 0.9.579 クラスの WebView2 クラス (CoreWebView2) 
+
+[!INCLUDE [deprecation-note](../../includes/deprecation-note.md)]
 
 名前空間: WebView2 () \
 アセンブリ: Microsoft.Web.WebView2.Core.dll
@@ -76,7 +78,7 @@ WebView2 では、最新の Edge web ブラウザー技術を使用して、web 
 
 WebView をホストしているブラウザープロセスのプロセス id。
 
-> パブリック uint[ブラウザー processid](#browserprocessid)
+> パブリック uint [ブラウザー processid](#browserprocessid)
 
 #### CanGoBack 
 
@@ -98,7 +100,7 @@ CanGoForward の値が変更されると、履歴変更イベントが発生し�
 
 WebView にフルスクリーン HTML 要素が含まれているかどうかを示します。
 
-> パブリックブール型[Fullscreenelement](#containsfullscreenelement)
+> パブリックブール型 [Fullscreenelement](#containsfullscreenelement)
 
 #### ContainsFullScreenElementChanged 
 
@@ -120,7 +122,7 @@ ContentLoading は、コンテンツが読み込まれる前に発生します�
 
 現在のトップレベルドキュメントのタイトル。
 
-> パブリック文字列[ドキュメントタイトル](#documenttitle)
+> パブリック文字列 [ドキュメントタイトル](#documenttitle)
 
 ドキュメントに明示的なタイトルが含まれていない場合、または空の場合は、ドキュメントの URI と一致しないかもしれない既定値が使用されます。
 
@@ -148,7 +150,7 @@ FrameNavigationStarting は、WebView の子フレームが別の URI に移動�
 
 履歴は、トップレベルのドキュメントのナビゲーション履歴の変更をリッスンします。
 
-> パブリックイベント EventHandler< オブジェクト >[履歴の変更](#historychanged)
+> パブリックイベント EventHandler< オブジェクト > [履歴の変更](#historychanged)
 
 履歴の変更を使って、CanGoBack/CanGoForward の値が変更されたかどうかを確認します。 GoBack/GoForward を使用する場合にも変更履歴が発生します。 変更履歴は、SourceChanged と ContentLoading の後に発生します。 履歴変更イベントのイベントハンドラーを追加します。
 
@@ -198,13 +200,13 @@ WebView プロセスが予期せず終了した場合、または応答不能に
 
 CoreWebView2Settings オブジェクトには、実行に関するさまざまな変更可能な設定が含まれています。
 
-> パブリック[CoreWebView2Settings](microsoft-web-webview2-core-corewebview2settings.md)の[設定](#settings)
+> パブリック [CoreWebView2Settings](microsoft-web-webview2-core-corewebview2settings.md)の [設定](#settings)
 
 #### Source 
 
 現在の最上位レベルのドキュメントの URI。
 
-> パブリック文字列[ソース](#source)
+> パブリック文字列 [ソース](#source)
 
 この値は、別のサイトやフラグメントナビゲーションへの移動などの場合に、SourceChanged イベント発生の一部として変更される可能性があります。 ページの再読み込みや、現在のページと同じ URL を持つ、他の種類のナビゲーションにも同じように表示されます。
 
@@ -326,7 +328,7 @@ URI パラメーターは、ワイルドカード文字列 (0 以上、"?": 完�
 
 WebView が表示されている画像をキャプチャします。
 
-> パブリック async タスク[CapturePreviewAsync](#capturepreviewasync)(CoreWebView2CapturePreviewImageFormat imageformat、ストリーム画像 estream)
+> パブリック async タスク [CapturePreviewAsync](#capturepreviewasync)(CoreWebView2CapturePreviewImageFormat imageformat、ストリーム画像 estream)
 
 ImageFormat パラメーターを使用して、画像の形式を指定します。 結果のイメージバイナリデータは、指定された imageStream パラメーターに書き込まれます。 CapturePreview がストリームへの書き込みを終了すると、指定された handler パラメーターの Invoke メソッドが呼び出されます。
 
@@ -365,7 +367,7 @@ WebView をナビゲーション履歴の次のページに移動します。
 
 最上位レベルのドキュメントを指定した URI に移動します。
 
-> パブリック void の[移動](#navigate)(文字列 uri)
+> パブリック void の [移動](#navigate)(文字列 uri)
 
 詳細については、ナビゲーションイベントを参照してください。 これによってナビゲーションが開始されることに注意してください。この操作が完了すると、対応する NavigationStarting イベントが発生します。
 
@@ -412,7 +414,7 @@ window.chrome.webview.removeEventListener('message', handler)
 
 現在のページを再読み込みします。
 
-> パブリックの void[再読み込み](#reload)()
+> パブリックの void [再読み込み](#reload)()
 
 これは、すべてのナビゲーションイベント (HTTP キャッシュ内のエントリを含む) を含む、現在のトップレベルドキュメントの URI に移動する操作と似ています。 ただし、戻る/forward 履歴は変更されません。
 

@@ -3,27 +3,27 @@ description: Microsoft Edge WebView 2 コントロールを使用して、WPF �
 title: Microsoft Edge WebView 2 (WPF アプリ)
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 08/10/2020
+ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: WebView2、WebView2、WebView、webview、wpf アプリ、wpf、edge、CoreWebView2、browser control、edge html、はじめに、作業の開始、.NET
-ms.openlocfilehash: bfddfff03363b5149db3f7e9741730c8e8de2de0
-ms.sourcegitcommit: 4bc904c5d54347185f275bd76441975be471c320
+ms.openlocfilehash: 65cd858cc314060e75113337f0ae6efc59896a43
+ms.sourcegitcommit: 0faf538d5033508af4320b9b89c4ed99872f0574
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "10926583"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "11010725"
 ---
 # WPF での WebView2 の概要 (プレビュー)
 
-この記事では、初めての WebView2 アプリの作成を開始し、 [WebView2 (preview)](../index.md)の主な機能について説明します。  個々の Api について詳しくは、 [api リファレンス](../reference/dotnet/0-9-515-reference-webview2.md)をご覧ください。  
+この記事では、初めての WebView2 アプリの作成を開始し、 [WebView2 (preview)](../index.md)の主な機能について説明します。  個々の Api について詳しくは、 [api リファレンス](../reference/dotnet/0-9-628-reference-webview2.md)をご覧ください。  
 
 ## 前提条件  
 
 続行する前に、次の前提条件の一覧をインストールしていることを確認します。  
 
-* [Microsoft Edge (Chromium) カナリアチャネル](https://www.microsoftedgeinsider.com/download)は、windows 10、windows 8.1、または windows 7 にインストールされています。  
+* [Microsoft Edge (Chromium) カナリアチャネル](https://www.microsoftedgeinsider.com/download) は、windows 10、windows 8.1、または windows 7 にインストールされています。  
 * [Visual Studio](https://visualstudio.microsoft.com) 2017 以降。  
 
 ## 手順 1-1 つのウィンドウアプリケーションを作成する  
@@ -31,7 +31,7 @@ ms.locfileid: "10926583"
 1つのメインウィンドウを含む基本的なデスクトッププロジェクトから始めます。  
 
 1.  **Visual Studio**を開きます。  
-1.  [ **Wpf .Net Core app** ] または [ **wpf .Net Framework] アプリ**を選択し、[**次へ**] を選択します。  
+1.  [ **Wpf .Net Core app** ] または [ **wpf .Net Framework] アプリ**を選択し、[ **次へ**] を選択します。  
     
     :::row:::
        :::column span="1":::
@@ -57,7 +57,7 @@ ms.locfileid: "10926583"
            :::column-end:::
         :::row-end:::
     
-1.  プロジェクトを作成するには、[**作成**] を選択します。  
+1.  プロジェクトを作成するには、[ **作成** ] を選択します。  
     
 ## 手順 2-WebView2 SDK をインストールする  
 
@@ -72,7 +72,7 @@ ms.locfileid: "10926583"
 1.  `Microsoft.Web.WebView2`検索バーに入力します。  検索結果から [ **WebView2** ] を選びます。  
 
     > [!IMPORTANT]
-    > [**プレリリースを含める**] をオンにして、**バージョン**でプレリリースパッケージを選択し、[**インストール**] を選択します。  
+    > [ **プレリリースを含める**] をオンにして、 **バージョン**でプレリリースパッケージを選択し、[ **インストール**] を選択します。  
   
      ![nuget.exe](./media/installnuget.PNG)
     
@@ -197,7 +197,7 @@ WebView2 コントロールをホストするアプリケーションは、web �
 *   `HistoryChanged`  
 *   `NavigationCompleted`  
 
-詳細については、「[ナビゲーションイベント](../concepts/navigation-events.md)」を参照してください。  
+詳細については、「 [ナビゲーションイベント](../concepts/navigation-events.md)」を参照してください。  
 
 :::image type="complex" source="../media/navigation-events.png" alt-text="ナビゲーションイベント":::
    ナビゲーションイベント
@@ -234,7 +234,7 @@ void EnsureHttps(object sender, CoreWebView2NavigationStartingEventArgs args)
 
 コンストラクターでは、EnsureHttps は、WebView2 コントロールのイベントのイベントハンドラーとして登録され `NavigationStarting` ます。  
 
-を押して `F5` 、プロジェクトをビルドして実行します。  HTTP サイトに移動するときに、WebView の表示が**変わら**ないことを確認します。  ただし、WebView は HTTPS サイトに移動します。  
+を押して `F5` 、プロジェクトをビルドして実行します。  HTTP サイトに移動するときに、WebView の表示が **変わら**ないことを確認します。  ただし、WebView は HTTPS サイトに移動します。  
 
 ## ステップ 6-スクリプト  
 
@@ -332,7 +332,7 @@ void EnsureHttps(object sender, CoreWebView2NavigationStartingEventArgs args)
 
 ## 次のステップ  
 
-*   WebView2 機能の包括的な例については、「GitHub の[WebView2Samples リポジトリ](https://github.com/MicrosoftEdge/WebView2Samples)」を参照してください。  
+*   WebView2 機能の包括的な例については、「GitHub の [WebView2Samples リポジトリ](https://github.com/MicrosoftEdge/WebView2Samples) 」を参照してください。  
 *   WebView2 Api について詳しくは、 [api リファレンス](../reference/wpf/0-9-515/microsoft-web-webview2-wpf-webview2.md)をご覧ください。  
 *   WebView2 の詳細については、「 [WebView2 のリソース](../index.md#next-steps)」を参照してください。  
 

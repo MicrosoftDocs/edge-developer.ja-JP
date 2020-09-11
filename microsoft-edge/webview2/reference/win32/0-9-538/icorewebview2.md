@@ -1,21 +1,23 @@
 ---
 description: Microsoft Edge WebView2 コントロールを使用してネイティブアプリケーションに web 技術 (HTML、CSS、JavaScript) を埋め込む
-title: WebView2 Win32 C++ ICoreWebView2
+title: 0.9.579-WebView2 Win32 C++ ICoreWebView2
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 07/23/2020
+ms.date: 09/10/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Controller、browser control、edge html、ICoreWebView2
-ms.openlocfilehash: a1da6789027234130c58078871d7da23b4e285ba
-ms.sourcegitcommit: 553957c101f83681b363103cb6af56bf20173f23
+ms.openlocfilehash: 695eb5697b95bdf3089bb81a926532a0de6f22c2
+ms.sourcegitcommit: 0faf538d5033508af4320b9b89c4ed99872f0574
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "10895498"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "11010643"
 ---
-# インターフェイス ICoreWebView2 
+# 0.9.579-インターフェイス ICoreWebView2 
+
+[!INCLUDE [deprecation-note](../../includes/deprecation-note.md)]
 
 ```
 interface ICoreWebView2
@@ -642,7 +644,7 @@ PostMessage 関数は、 `void postMessage(object)` JSON 変換でサポート�
             window.chrome.webview.postMessage("GetWindowBounds");
         }
 ```
- PostMessage が呼び出されると、この SetWebMessageReceivedEventHandler メソッドによって設定された[ICoreWebView2WebMessageReceivedEventHandler](icorewebview2webmessagereceivedeventhandler.md)が、postMessage のオブジェクトパラメーターを JSON 文字列に変換して呼び出されます。
+ PostMessage が呼び出されると、この SetWebMessageReceivedEventHandler メソッドによって設定された [ICoreWebView2WebMessageReceivedEventHandler](icorewebview2webmessagereceivedeventhandler.md) が、postMessage のオブジェクトパラメーターを JSON 文字列に変換して呼び出されます。
 
 ```cpp
     // Setup the web message received event handler before navigating to
@@ -958,7 +960,7 @@ URI パラメーターは、ワイルドカード文字列 (0 以上、"?": 完�
 
 非同期の Devて Protocol メソッドを呼び出します。
 
-> パブリック HRESULT[呼び出し DevLPCWSTR Protocolmethod](#calldevtoolsprotocolmethod)(METHODNAME、LPCWSTR ParametersAsJson、 [ICoreWebView2CallDevToolsProtocolMethodCompletedHandler](icorewebview2calldevtoolsprotocolmethodcompletedhandler.md) * handler)
+> パブリック HRESULT [呼び出し DevLPCWSTR Protocolmethod](#calldevtoolsprotocolmethod)(METHODNAME、LPCWSTR ParametersAsJson、 [ICoreWebView2CallDevToolsProtocolMethodCompletedHandler](icorewebview2calldevtoolsprotocolmethodcompletedhandler.md) * handler)
 
 使用できるメソッドの一覧と説明については、「 [Devtools プロトコルビューアー](https://aka.ms/DevToolsProtocolDocs) 」をご覧ください。 MethodName パラメーターは、書式のメソッドの完全な名前です `{domain}.{method}` 。 ParametersAsJson パラメーターは、対応するメソッドのパラメーターを含む JSON 形式の文字列です。 メソッドが非同期的に完了すると、ハンドラーの Invoke メソッドが呼び出されます。 Invoke は、JSON 文字列としてメソッドの戻りオブジェクトを使って呼び出されます。
 
@@ -1045,7 +1047,7 @@ void FileComponent::SaveScreenshot()
 
 WebView でレンダリングされた現在のトップレベルドキュメントの javascript パラメーターから JavaScript コードを実行します。
 
-> パブリック HRESULT の[Executescript](#executescript)(LPCWSTR JavaScript、 [ICoreWebView2ExecuteScriptCompletedHandler](icorewebview2executescriptcompletedhandler.md) * handler)
+> パブリック HRESULT の [Executescript](#executescript)(LPCWSTR JavaScript、 [ICoreWebView2ExecuteScriptCompletedHandler](icorewebview2executescriptcompletedhandler.md) * handler)
 
 これは非同期的に実行されます。完了すると、ExecuteScriptCompletedHandler パラメーターでハンドラーが指定されると、指定された JavaScript を評価した結果を使って Invoke メソッドが呼び出されます。 結果値は、JSON でエンコードされた文字列です。 結果が定義されていない場合、参照循環が含まれている場合、または JSON にエンコードできない場合は、JSON null 値が文字列 ' null ' として返されます。 明示的な戻り値のない関数は undefined を返します。 実行されたスクリプトが未処理の例外をスローした場合、結果は ' null ' にもなります。 このメソッドは非同期的に適用されます。 ナビゲーション中に、メソッドが NavigationStarting イベントの後で呼び出される場合、スクリプトは、コンテンツの読み込み時に新しいドキュメントで実行されます。これは、ContentLoading が呼び出されたときに発生します。 実行方法 IsScriptEnabled が FALSE に設定されている場合でも、スクリプトは機能します。
 
@@ -1153,7 +1155,7 @@ DevTools プロトコルイベントをサブスクライブできる DevTools �
 
 > パブリック HRESULT [GetDevToolsProtocolEventReceiver](#getdevtoolsprotocoleventreceiver)(LPCWSTR EventName, [ICoreWebView2DevToolsProtocolEventReceiver](icorewebview2devtoolsprotocoleventreceiver.md) * * レシーバー)
 
-EventName パラメーターは、形式におけるイベントの完全な名前です `{domain}.{event}` 。 Devtools プロトコル[ビューアー](https://aka.ms/DevToolsProtocolDocs)を参照して、devtools プロトコルイベントの説明とイベント引数の一覧を確認してください。
+EventName パラメーターは、形式におけるイベントの完全な名前です `{domain}.{event}` 。 Devtools プロトコル [ビューアー](https://aka.ms/DevToolsProtocolDocs) を参照して、devtools プロトコルイベントの説明とイベント引数の一覧を確認してください。
 
 ```cpp
 // Prompt the user to name a CDP event, and then subscribe to that event.
@@ -1216,7 +1218,7 @@ WebView をナビゲーション履歴の次のページに移動します。
 
 最上位レベルのドキュメントを指定した URI に移動します。
 
-> パブリック HRESULT[移動](#navigate)(LPCWSTR uri)
+> パブリック HRESULT [移動](#navigate)(LPCWSTR uri)
 
 詳細については、ナビゲーションイベントを参照してください。 これによってナビゲーションが開始されることに注意してください。この操作が完了すると、対応する NavigationStarting イベントが発生します。
 
@@ -1474,7 +1476,7 @@ Add_WindowCloseRequested で以前に追加されたイベントハンドラー�
 
 ICoreWebView2:: CapturePreview メソッドで使用されている画像形式。
 
-> 列挙型[COREWEBVIEW2_CAPTURE_PREVIEW_IMAGE_FORMAT](#corewebview2_capture_preview_image_format)
+> 列挙型 [COREWEBVIEW2_CAPTURE_PREVIEW_IMAGE_FORMAT](#corewebview2_capture_preview_image_format)
 
  値                         | 説明
 --------------------------------|---------------------------------------------
@@ -1485,7 +1487,7 @@ COREWEBVIEW2_CAPTURE_PREVIEW_IMAGE_FORMAT_JPEG            | JPEG イメージ形
 
 AcceleratorKeyPressed イベントをトリガーしたキーイベントの種類です。
 
-> 列挙型[COREWEBVIEW2_KEY_EVENT_KIND](#corewebview2_key_event_kind)
+> 列挙型 [COREWEBVIEW2_KEY_EVENT_KIND](#corewebview2_key_event_kind)
 
  値                         | 説明
 --------------------------------|---------------------------------------------
@@ -1498,7 +1500,7 @@ COREWEBVIEW2_KEY_EVENT_KIND_SYSTEM_KEY_UP            | ウィンドウメッセ�
 
 フォーカスを移動する理由。
 
-> 列挙型[COREWEBVIEW2_MOVE_FOCUS_REASON](#corewebview2_move_focus_reason)
+> 列挙型 [COREWEBVIEW2_MOVE_FOCUS_REASON](#corewebview2_move_focus_reason)
 
  値                         | 説明
 --------------------------------|---------------------------------------------
@@ -1510,7 +1512,7 @@ COREWEBVIEW2_MOVE_FOCUS_REASON_PREVIOUS            | タブトラバーサルに
 
 アクセス許可要求の種類。
 
-> 列挙型[COREWEBVIEW2_PERMISSION_KIND](#corewebview2_permission_kind)
+> 列挙型 [COREWEBVIEW2_PERMISSION_KIND](#corewebview2_permission_kind)
 
  値                         | 説明
 --------------------------------|---------------------------------------------
@@ -1526,7 +1528,7 @@ COREWEBVIEW2_PERMISSION_KIND_CLIPBOARD_READ            | ユーザーのジェ�
 
 アクセス許可要求に対する応答。
 
-> 列挙型[COREWEBVIEW2_PERMISSION_STATE](#corewebview2_permission_state)
+> 列挙型 [COREWEBVIEW2_PERMISSION_STATE](#corewebview2_permission_state)
 
  値                         | 説明
 --------------------------------|---------------------------------------------
@@ -1540,13 +1542,13 @@ Win32 キーイベントに指定された LPARAM にパックされた情報を
 
 > typedef [COREWEBVIEW2_PHYSICAL_KEY_STATUS](#corewebview2_physical_key_status)
 
-詳細については、WM_KEYDOWN のドキュメントを参照してください。[https://docs.microsoft.com/windows/win32/inputdev/wm-keydown](https://docs.microsoft.com/windows/win32/inputdev/wm-keydown)
+詳細については、WM_KEYDOWN のドキュメントを参照してください。 [https://docs.microsoft.com/windows/win32/inputdev/wm-keydown](https://docs.microsoft.com/windows/win32/inputdev/wm-keydown)
 
 #### COREWEBVIEW2_PROCESS_FAILED_KIND 
 
 ICoreWebView2ProcessFailedEventHandler インターフェイスで使用されているプロセスエラーの種類。
 
-> 列挙型[COREWEBVIEW2_PROCESS_FAILED_KIND](#corewebview2_process_failed_kind)
+> 列挙型 [COREWEBVIEW2_PROCESS_FAILED_KIND](#corewebview2_process_failed_kind)
 
  値                         | 説明
 --------------------------------|---------------------------------------------
@@ -1558,7 +1560,7 @@ COREWEBVIEW2_PROCESS_FAILED_KIND_RENDER_PROCESS_UNRESPONSIVE            | レン
 
 ICoreWebView2ScriptDialogOpeningEventHandler インターフェイスで使用される JavaScript ダイアログの種類。
 
-> 列挙型[COREWEBVIEW2_SCRIPT_DIALOG_KIND](#corewebview2_script_dialog_kind)
+> 列挙型 [COREWEBVIEW2_SCRIPT_DIALOG_KIND](#corewebview2_script_dialog_kind)
 
  値                         | 説明
 --------------------------------|---------------------------------------------
@@ -1571,7 +1573,7 @@ COREWEBVIEW2_SCRIPT_DIALOG_KIND_BEFOREUNLOAD            | Beforeunload JavaScrip
 
 Web ナビゲーションのエラー状態の値。
 
-> 列挙型[COREWEBVIEW2_WEB_ERROR_STATUS](#corewebview2_web_error_status)
+> 列挙型 [COREWEBVIEW2_WEB_ERROR_STATUS](#corewebview2_web_error_status)
 
  値                         | 説明
 --------------------------------|---------------------------------------------
@@ -1580,7 +1582,7 @@ COREWEBVIEW2_WEB_ERROR_STATUS_CERTIFICATE_COMMON_NAME_IS_INCORRECT            | 
 COREWEBVIEW2_WEB_ERROR_STATUS_CERTIFICATE_EXPIRED            | SSL 証明書の有効期限が切れています。
 COREWEBVIEW2_WEB_ERROR_STATUS_CLIENT_CERTIFICATE_CONTAINS_ERRORS            | SSL クライアント証明書にエラーが含まれています。
 COREWEBVIEW2_WEB_ERROR_STATUS_CERTIFICATE_REVOKED            | SSL 証明書が失効しています。
-COREWEBVIEW2_WEB_ERROR_STATUS_CERTIFICATE_IS_INVALID            | SSL 証明書が無効になっている可能性があります。これは、 &ndash; 証明書がホスト名の公開キーピンと一致しなかったことを意味します。証明書が信頼されていない機関によって署名されている、または脆弱な署名アルゴリズムを使用している場合、証明書が名前の制限を超えている証明書、証明書の有効期間が長い、証明書の透過情報がない、証明書が[従来のシマンテックルート](https://security.googleblog.com/2018/03/distrust-of-symantec-pki-immediate.html)にチェーンされている。
+COREWEBVIEW2_WEB_ERROR_STATUS_CERTIFICATE_IS_INVALID            | SSL 証明書が無効になっている可能性があります。これは、 &ndash; 証明書がホスト名の公開キーピンと一致しなかったことを意味します。証明書が信頼されていない機関によって署名されている、または脆弱な署名アルゴリズムを使用している場合、証明書が名前の制限を超えている証明書、証明書の有効期間が長い、証明書の透過情報がない、証明書が [従来のシマンテックルート](https://security.googleblog.com/2018/03/distrust-of-symantec-pki-immediate.html)にチェーンされている。
 COREWEBVIEW2_WEB_ERROR_STATUS_SERVER_UNREACHABLE            | ホストに到達できません。
 COREWEBVIEW2_WEB_ERROR_STATUS_TIMEOUT            | 接続がタイムアウトしました。
 COREWEBVIEW2_WEB_ERROR_STATUS_ERROR_HTTP_INVALID_SERVER_RESPONSE            | サーバーが無効または認識不能な応答を返しました。
@@ -1597,7 +1599,7 @@ COREWEBVIEW2_WEB_ERROR_STATUS_UNEXPECTED_ERROR            | 予期しないエ�
 
 Web リソース要求コンテキストの列挙。
 
-> 列挙型[COREWEBVIEW2_WEB_RESOURCE_CONTEXT](#corewebview2_web_resource_context)
+> 列挙型 [COREWEBVIEW2_WEB_RESOURCE_CONTEXT](#corewebview2_web_resource_context)
 
  値                         | 説明
 --------------------------------|---------------------------------------------

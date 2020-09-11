@@ -3,17 +3,17 @@ description: WebView2 アプリケーションでユーザーデータフォル�
 title: WebView2 アプリケーションでユーザーデータフォルダーを管理します。
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 07/23/2020
+ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Host、browser control、edge html、ユーザーデータフォルダー
-ms.openlocfilehash: 4e10f589bc7866cd06e007d70c0dff941afc35cb
-ms.sourcegitcommit: 553957c101f83681b363103cb6af56bf20173f23
+ms.openlocfilehash: 5f341458a85bfab93bd2618b4d274ad6a1edefa2
+ms.sourcegitcommit: 0faf538d5033508af4320b9b89c4ed99872f0574
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "10895505"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "11010741"
 ---
 # ユーザーデータフォルダーの管理  
 
@@ -28,7 +28,7 @@ WebView2 アプリケーションは、cookie、アクセス許可、キャッ�
 
 ## ユーザーデータフォルダーを作成する  
 
-ユーザーデータフォルダーの場所を指定するに `userDataFolder` は、 [ICoreWebView2Environment](../reference/win32/0-9-538/icorewebview2environment.md) \ (Win32 \) または[CoreWebView2Environment](../reference/dotnet/0-9-538/microsoft-web-webview2-core-corewebview2environment.md) \ (.net \) を呼び出すときにパラメーターを含めます。  作成後、WebView2 コントロールからのブラウザーデータは、のサブフォルダーに保存され `userDataFolder` ます。  `userDataFolder`指定しない場合、WebView2 は次のように既定の場所にユーザーデータフォルダーを作成します。  
+ユーザーデータフォルダーの場所を指定するに `userDataFolder` は、 [ICoreWebView2Environment](../reference/win32/0-9-622/icorewebview2environment.md) \ (Win32 \) または [CoreWebView2Environment](../reference/dotnet/0-9-628/microsoft-web-webview2-core-corewebview2environment.md) \ (.net \) を呼び出すときにパラメーターを含めます。  作成後、WebView2 コントロールからのブラウザーデータは、のサブフォルダーに保存され `userDataFolder` ます。  `userDataFolder`指定しない場合、WebView2 は次のように既定の場所にユーザーデータフォルダーを作成します。  
 
 *   パッケージ化された Windows ストアアプリの場合、既定のユーザーフォルダーは `ApplicationData\LocalFolder` パッケージのフォルダー内のサブフォルダーです。  
 *   既存のデスクトップアプリの場合、既定のユーザーデータフォルダーは、アプリケーションの exe パスになり `.WebView2` ます。  既定の代わりに、ユーザーデータフォルダーを指定して、他のすべてのアプリデータが保存されているフォルダーと同じフォルダーに作成することをお勧めします。  
@@ -54,9 +54,9 @@ WebView2 コントロールでは、同じユーザーデータフォルダー�
 
 ユーザーデータフォルダーを共有する場合は、次の点を考慮してください。  
 
-1.  WebView2 コントロールを再作成して、ブラウザーのバージョンを更新するには、 [add_NewBrowserVersionAvailable](../reference/win32/0-9-538/icorewebview2environment.md#add_newbrowserversionavailable) \ (Win32 \) または[NewexitserverWebView2 available](../reference/dotnet/0-9-538/microsoft-web-webview2-core-corewebview2environment.md#newbrowserversionavailable) \ (.net \) のイベントを使用します。  ブラウザープロセスのプロセス id を取得するには、 `BrowserProcessId` WebView2 コントロールのプロパティを使います。  
+1.  WebView2 コントロールを再作成して、ブラウザーのバージョンを更新するには、 [add_NewBrowserVersionAvailable](../reference/win32/0-9-622/icorewebview2environment.md#add_newbrowserversionavailable) \ (Win32 \) または [NewexitserverWebView2 available](../reference/dotnet/0-9-628/microsoft-web-webview2-core-corewebview2environment.md#newbrowserversionavailable) \ (.net \) のイベントを使用します。  ブラウザープロセスのプロセス id を取得するには、 `BrowserProcessId` WebView2 コントロールのプロパティを使います。  
 
-2.  同じユーザーデータフォルダーを共有する WebView2 コントロールでは、 [ICoreWebView2Environment](../reference/win32/0-9-538/icorewebview2environment.md) \ (Win32 \) または[CoreWebView2Environment](../reference/dotnet/0-9-538/microsoft-web-webview2-core-corewebview2environment.md) \ (.net \) に同じオプションを使用する必要があります。  満たされていない場合、WebView2 の作成は失敗 `HRESULT_FROM_WIN32(ERROR_INVALID_STATE)` します。  
+2.  同じユーザーデータフォルダーを共有する WebView2 コントロールでは、 [ICoreWebView2Environment](../reference/win32/0-9-622/icorewebview2environment.md) \ (Win32 \) または [CoreWebView2Environment](../reference/dotnet/0-9-628/microsoft-web-webview2-core-corewebview2environment.md) \ (.net \) に同じオプションを使用する必要があります。  満たされていない場合、WebView2 の作成は失敗 `HRESULT_FROM_WIN32(ERROR_INVALID_STATE)` します。  
 
 アプリケーションのさまざまな部分を分離したり、WebView2 コントロール間でデータを共有したりする必要がない場合は、別のユーザーデータフォルダーを使用することができます。  たとえば、アプリケーションは2つの WebView2 コントロールで構成されています。1つはアドバタイズを表示し、もう一方はアプリケーションのコンテンツを表示することです。  このシナリオでは、開発者は、WebView2 コントロールごとに異なるユーザーデータフォルダーを使うことができます。  
 

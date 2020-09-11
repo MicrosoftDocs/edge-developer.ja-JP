@@ -1,21 +1,23 @@
 ---
 description: Microsoft Edge WebView2 コントロールを使用してネイティブアプリケーションに web 技術 (HTML、CSS、JavaScript) を埋め込む
-title: WebView2 について CoreWebView2CompositionController
+title: 0.9.579-WebView2 (CoreWebView2CompositionController の場合)
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 07/20/2020
+ms.date: 09/10/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: WebView2、Core、WebView2、webview、.net、wpf、winforms、アプリ、edge、CoreWebView2、CoreWebView2Controller、browser control、edge html、Microsoft の WebView2。 CoreWebView2CompositionController。
-ms.openlocfilehash: 1eb2498e05e2ec9fafa317f6108d022f7354c249
-ms.sourcegitcommit: e0cb9e6f59f222fade6afa4829c59524a9a9b9ff
+ms.openlocfilehash: 8dccf532bed55d91a1b9f4d1edb2831fc07d0f82
+ms.sourcegitcommit: 0faf538d5033508af4320b9b89c4ed99872f0574
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "10885283"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "11011098"
 ---
-# WebView2 クラス (CoreWebView2CompositionController クラス) 
+# 0.9.579 クラスの WebView2 クラス (CoreWebView2CompositionController) 
+
+[!INCLUDE [deprecation-note](../../includes/deprecation-note.md)]
 
 [!INCLUDE [prerelease-note](../../includes/prerelease-note.md)]
 
@@ -42,7 +44,7 @@ ms.locfileid: "10885283"
 
 WebView で現在のカーソルの位置を判断します。
 
-> パブリック IntPtr[カーソル](#cursor)
+> パブリック IntPtr [カーソル](#cursor)
 
 WM_SETCURSOR でカーソルを設定するか、WebView ~ SetClassLongPtr の対応する親または先祖の HWND を設定する必要があります。 HCURSOR を解放すると、カーソルをすぐに設定するよりも、コピーを保持することをお勧めします。
 
@@ -58,7 +60,7 @@ WebView がカーソルの変更であると判断されたときに、イベン
 
 RootVisualTarget は、ホストアプリのビジュアルツリー内のビジュアルです。
 
-> パブリックオブジェクト[Rootvisualtarget](#rootvisualtarget)
+> パブリックオブジェクト [Rootvisualtarget](#rootvisualtarget)
 
 このビジュアルは、WebView がそのビジュアルツリーを接続する場所です。 アプリでは、このビジュアルを使って、アプリ内で WebView を配置します。 この場合も、アプリでは、境界プロパティを使って WebView のサイズを変更する必要があります。 RootVisualTarget プロパティは、IDCompositionVisual または Windows:: UI:: コンポジション:: ContainerVisual とすることができます。 WebView は、プロパティ setter から戻る前に、ビジュアルツリーを提供された visual に接続します。 アプリは、Root Visualtarget プロパティのデバイス設定でコミットする必要があります。 RootVisualTarget プロパティは、アプリのビジュアルツリーから WebView を切断するために nullptr に設定されています。
 
@@ -66,13 +68,13 @@ RootVisualTarget は、ホストアプリのビジュアルツリー内のビジ
 
 WebView の UI オートメーションプロバイダーを返します。
 
-> パブリックオブジェクト[Uiaprovider](#uiaprovider)
+> パブリックオブジェクト [Uiaprovider](#uiaprovider)
 
 #### CreateCoreWebView2PointerInfoFromPointerId 
 
 システムから受け取ったポインター Id を CoreWebView2PointerInfo に変換するヘルパー関数。
 
-> パブリック[CoreWebView2PointerInfo](microsoft-web-webview2-core-corewebview2pointerinfo.md) [CreateCoreWebView2PointerInfoFromPointerId](#createcorewebview2pointerinfofrompointerid)(Uint ポインター Id、IntPtr parentwindow、Matrix4x4 transform)
+> パブリック [CoreWebView2PointerInfo](microsoft-web-webview2-core-corewebview2pointerinfo.md) [CreateCoreWebView2PointerInfoFromPointerId](#createcorewebview2pointerinfofrompointerid)(Uint ポインター Id、IntPtr parentwindow、Matrix4x4 transform)
 
 parentWindow は、webview を含む HWND です。 これは、webview を含む hwnd ツリー内の任意の HWND にすることができます。 CoreWebView2Matrix4x4 は、その HWND から webview への変換です。 返された CoreWebView2PointerInfo は、Sendポインタ Info で使われます。 ポインターの型は、ペンまたはタッチである必要があります。または、関数は失敗します。
 
@@ -88,7 +90,7 @@ EventKind が CoreWebView2MouseEventKind Wheel または CoreWebView2MouseEventK
 
 Sendpointer Input は、CoreWebView2PointerEventKind で定義された型のタッチポインターまたはペンポインターの入力を受け入れます。
 
-> パブリック void [Sendポインタ入力](#sendpointerinput)([CoreWebView2PointerEventKind](./namespace-microsoft-web-webview2-core.md) eventType、 [CoreWebView2PointerInfo](microsoft-web-webview2-core-corewebview2pointerinfo.md)ポインター info)
+> パブリック void [Sendポインタ入力](#sendpointerinput)([CoreWebView2PointerEventKind](./namespace-microsoft-web-webview2-core.md) eventType、 [CoreWebView2PointerInfo](microsoft-web-webview2-core-corewebview2pointerinfo.md) ポインター info)
 
 システムからのポインター入力は、最初に CoreWebView2PointerInfo に変換する必要があります。
 

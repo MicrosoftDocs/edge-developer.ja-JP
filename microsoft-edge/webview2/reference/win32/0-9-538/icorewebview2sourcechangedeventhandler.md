@@ -1,21 +1,23 @@
 ---
 description: Microsoft Edge WebView2 コントロールを使用してネイティブアプリケーションに web 技術 (HTML、CSS、JavaScript) を埋め込む
-title: WebView2 Win32 C++ ICoreWebView2SourceChangedEventHandler
+title: 0.9.579-WebView2 Win32 C++ ICoreWebView2SourceChangedEventHandler
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 07/08/2020
+ms.date: 09/10/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Controller、browser control、edge html、ICoreWebView2SourceChangedEventHandler
-ms.openlocfilehash: b856211b8a4b4088acc741d4d5626b49340124d1
-ms.sourcegitcommit: f6764f57aed9ab7229e4eb6cc8851d0cea667403
+ms.openlocfilehash: 9c5054c296657d851f0a88773d5eb96cba2af64a
+ms.sourcegitcommit: 0faf538d5033508af4320b9b89c4ed99872f0574
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "10879332"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "11010447"
 ---
-# インターフェイス ICoreWebView2SourceChangedEventHandler 
+# 0.9.579-インターフェイス ICoreWebView2SourceChangedEventHandler 
+
+[!INCLUDE [deprecation-note](../../includes/deprecation-note.md)]
 
 ```
 interface ICoreWebView2SourceChangedEventHandler
@@ -36,5 +38,5 @@ interface ICoreWebView2SourceChangedEventHandler
 
 対応するイベントのイベント引数を実装側に提供するために呼び出されます。
 
-> パブリック HRESULT[呼び出し](#invoke)([ICoreWebView2](icorewebview2.md) * webview、 [ICoreWebView2SourceChangedEventArgs](icorewebview2sourcechangedeventargs.md) * args)
+> パブリック HRESULT [呼び出し](#invoke)([ICoreWebView2](icorewebview2.md) * webview、 [ICoreWebView2SourceChangedEventArgs](icorewebview2sourcechangedeventargs.md) * args)
 

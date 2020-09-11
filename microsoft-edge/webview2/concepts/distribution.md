@@ -3,21 +3,21 @@ description: Microsoft Edge WebView2 を使用してアプリをリリースす�
 title: Microsoft Edge WebView2 アプリケーションの配布
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 07/14/2020
+ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、wpf アプリ、wpf、edge、ICoreWebView2、ICoreWebView2Host、browser control、edge html
-ms.openlocfilehash: 1b7ebf9dde594b7cdac3b41915fa9d9187d09da1
-ms.sourcegitcommit: f6764f57aed9ab7229e4eb6cc8851d0cea667403
+ms.openlocfilehash: 3536b749c8a3389b5e247e42f53abf74a9e3281e
+ms.sourcegitcommit: 0faf538d5033508af4320b9b89c4ed99872f0574
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "10879178"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "11010769"
 ---
 # WebView2 を使用したアプリケーションの配布  
 
-WebView2 コントロールでは、Microsoft Edge \ (Chromium \) プラットフォームが利用されます。  アプリをパッケージ化して配布する場合は、アプリが起動される前にプラットフォームまたは WebView2 ランタイムのコピーが存在することを確認してください。  次のページでは、お客様が WebView2 ランタイムをインストールして、WebView2 アプリケーション用に2つの配布モードを使用する方法について説明します。 [Evergreen](#evergreen-distribution-mode)と[修正バージョン](#fixed-version-distribution-mode)。  
+WebView2 コントロールでは、Microsoft Edge \ (Chromium \) プラットフォームが利用されます。  アプリをパッケージ化して配布する場合は、アプリが起動される前にプラットフォームまたは WebView2 ランタイムのコピーが存在することを確認してください。  次のページでは、お客様が WebView2 ランタイムをインストールして、WebView2 アプリケーション用に2つの配布モードを使用する方法について説明します。  [Evergreen](#evergreen-distribution-mode) と [修正バージョン](#fixed-version-distribution-mode)。  
 
 ## Evergreen 配布モード  
 
@@ -39,7 +39,7 @@ Evergreen 配布モードでは、アプリが最新の機能とセキュリテ�
 > [!IMPORTANT]
 > Microsoft Edge の安定したチャネルは、WebView2 の有効なターゲットではないため、この理由については後で説明します。  
 
-バージョン管理の詳細については、「[バージョン管理][ConceptsVersioning]と[グローバル][ReferenceWin3209538WebviewIdl]化」を参照してください。  
+バージョン管理の詳細については、「 [バージョン管理][ConceptsVersioning] と [グローバル][ReferenceWin3209622WebviewIdl]化」を参照してください。  
 
 ### WebView2 のランタイムとインストーラーについて (プレビュー)  
 
@@ -52,9 +52,9 @@ Evergreen 配布モードでは、アプリが最新の機能とセキュリテ�
 
 アプリケーションが起動する前に、Evergreen WebView2 Runtime がインストールされていることを確認することをお勧めします。 ワークフローの例を次に示します。  
 
-1.  最新の[Evergreen WebView2 ランタイムインストーラー][Webview2Installer]をダウンロードします。  
+1.  最新の [Evergreen WebView2 ランタイムインストーラー][Webview2Installer]をダウンロードします。  
 1.  アプリケーションのインストーラーまたはアップデーターにインストーラーを含めます。  
-1.  アプリケーションのインストールまたは更新時に、 [GetAvailableCoreWebView2BrowserVersionString](../reference/win32/0-9-538/webview2-idl.md#getavailablecorewebview2browserversionstring) API を使って、ユーザーのコンピューターに Evergreen WebView2 Runtime が既にインストールされているかどうかを確認し、VERSIONINFO が NULL であるかどうかを確認します。 インストールされていない場合は、アプリケーションのインストーラー/アップデーターによって、昇格したプロセスまたはコマンドプロンプトからランタイムインストーラーを自動的に呼び出すことができ `MicrosoftEdgeWebView2RuntimeInstallerX64.exe /silent /install` ます。 
+1.  アプリケーションのインストールまたは更新時に、 [GetAvailableCoreWebView2BrowserVersionString](../reference/win32/0-9-622/webview2-idl.md#getavailablecorewebview2browserversionstring) API を使って、ユーザーのコンピューターに Evergreen WebView2 Runtime が既にインストールされているかどうかを確認し、VERSIONINFO が NULL であるかどうかを確認します。 インストールされていない場合は、アプリケーションのインストーラー/アップデーターによって、昇格したプロセスまたはコマンドプロンプトからランタイムインストーラーを自動的に呼び出すことができ `MicrosoftEdgeWebView2RuntimeInstallerX64.exe /silent /install` ます。 
 
 シナリオによっては、上記のワークフローを変更する必要がある場合があります。  たとえば、アプリケーションのインストーラーでは、アプリケーションパッケージに Evergreen WebView2 Runtime Installer を含める代わりに、インストーラーをダウンロードすることができます。  
 
@@ -66,7 +66,7 @@ Evergreen 配布モードでは、アプリが最新の機能とセキュリテ�
 プレビュー時には、次の推奨事項について検討してください。  
 
 *   [Evergreen WebView2 Runtime と Installer][Webview2Installer]を使って、パッケージ化パイプラインと配布パイプラインを開発またはテストしてください。  今後は、運用アプリケーションにインストーラーを含める必要があります。  
-*   アプリケーションを開発するには、Evergreen WebView2 ランタイムを使うことができます。  ただし、ランタイムは Dev チャネルからベータチャネルまたは安定したチャネルにシフトするため、ランタイムビルド番号は最新の preview WebView2 SDK 最小バージョン要件を満たしていない可能性があります。  最新の SDK を使用する場合は、Microsoft Edge カナリアチャネルをインストールして、デバイスで互換性のあるビルドが利用できることを確認します。  バージョン管理の詳細については、「[バージョン管理][ConceptsVersioning]」を参照してください。  
+*   アプリケーションを開発するには、Evergreen WebView2 ランタイムを使うことができます。  ただし、ランタイムは Dev チャネルからベータチャネルまたは安定したチャネルにシフトするため、ランタイムビルド番号は最新の preview WebView2 SDK 最小バージョン要件を満たしていない可能性があります。  最新の SDK を使用する場合は、Microsoft Edge カナリアチャネルをインストールして、デバイスで互換性のあるビルドが利用できることを確認します。  バージョン管理の詳細については、「 [バージョン管理][ConceptsVersioning]」を参照してください。  
 *   安定したチャネルで利用できないプラットフォームに対する変更と互換性のある web コンテンツをテストするには、必要に応じて、適切でない非安定チャネルを使用します。  
 
 ## 固定バージョンの配布モード  
@@ -79,6 +79,6 @@ Evergreen 配布モードでは、アプリが最新の機能とセキュリテ�
 <!-- links -->  
 
 [ConceptsVersioning]: ./versioning.md "ブラウザーのバージョンと WebView2 についてMicrosoft ドキュメント"  
-[ReferenceWin3209538WebviewIdl]: ../reference/win32/0-9-538/webview2-idl.md  "Globals |Microsoft ドキュメント"  
+[ReferenceWin3209622WebviewIdl]: ../reference/win32/0-9-622/webview2-idl.md  "Globals |Microsoft ドキュメント"  
 
 [Webview2Installer]: https://developer.microsoft.com/microsoft-edge/webview2 "WebView2 Installer"  

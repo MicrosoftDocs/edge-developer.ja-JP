@@ -3,25 +3,25 @@ description: Microsoft Edge WebView 2 コントロールを使用して Win32 �
 title: Win32 アプリの WebView2 の概要
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 08/10/2020
+ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Controller、browser control、edge html
-ms.openlocfilehash: ec5144f911d5bf00f141d1e8e53718154f1cbb24
-ms.sourcegitcommit: 4bc904c5d54347185f275bd76441975be471c320
+ms.openlocfilehash: 5bb2d8a1ec0d75c2cbb1d426bae6bf1cd8298592
+ms.sourcegitcommit: 0faf538d5033508af4320b9b89c4ed99872f0574
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "10926485"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "11010713"
 ---
 # WebView2 の概要 (開発者用プレビュー)  
 
-次のコンテンツでは、 [WebView2 (開発者向けプレビュー)][Webview2Index]の一般的な使用方法について説明し、最初の WebView2 アプリを作成するための開始点を示しています。  個々の WebView2 Api について詳しくは、 [api リファレンス][Webview2ReferenceWin3209538]をご覧ください。  
+次のコンテンツでは、 [WebView2 (開発者向けプレビュー)][Webview2Index] の一般的な使用方法について説明し、最初の WebView2 アプリを作成するための開始点を示しています。  個々の WebView2 Api について詳しくは、 [api リファレンス][Webview2ReferenceWin3209622]をご覧ください。  
 
 ## 前提条件  
 
-*   [Microsoft Edge (Chromium)][MicrosoftedgeinsiderDownload]は、サポートされている OS \ (現在 windows 10、windows 8.1、windows 7 \) にインストールされています。  
+*   [Microsoft Edge (Chromium)][MicrosoftedgeinsiderDownload] は、サポートされている OS \ (現在 windows 10、windows 8.1、windows 7 \) にインストールされています。  
     
     > [!NOTE]
     > WebView チームは、カナリアチャネルの使用を推奨し、最低限必要なバージョンは82.0.488.0 です。  
@@ -30,9 +30,9 @@ ms.locfileid: "10926485"
 
 ## 手順 1-単一ウィンドウの win32 アプリを作成する  
 
-1つのメインウィンドウを含む基本的なデスクトッププロジェクトから始めます。  チュートリアルに焦点を合わせるために、サンプルアプリ用の[従来の Windows デスクトップアプリケーション (C++) を作成][CppWindowsWalkthroughCreatingDesktopApplication]して、チュートリアルから変更されたサンプルコードを使用しています。  更新されたサンプルをダウンロードして始めるには、「 [WebView2 のサンプル][GithubMicrosoftedgeWebview2samplesGettingStartedGuide]」をご覧ください。  
+1つのメインウィンドウを含む基本的なデスクトッププロジェクトから始めます。  チュートリアルに焦点を合わせるために、サンプルアプリ用の [従来の Windows デスクトップアプリケーション (C++) を作成][CppWindowsWalkthroughCreatingDesktopApplication] して、チュートリアルから変更されたサンプルコードを使用しています。  更新されたサンプルをダウンロードして始めるには、「 [WebView2 のサンプル][GithubMicrosoftedgeWebview2samplesGettingStartedGuide]」をご覧ください。  
 
-Visual Studio で、を開き `WebView2GettingStarted.sln` ます。  以前のバージョンの Visual Studio を使っている場合は、 **WebView2GettingStarted**プロジェクトにカーソルを置いて、コンテキストメニュー \ (右クリック \) を開き、[**プロパティ**] を選びます。  [**構成プロパティ**の  >  **全般**] で、 **Windows sdk のバージョン**と**プラットフォームのツールセット**を変更して、Win10 SDK と Visual Studio のツールセット (VS ツールセット \) を使用できるようにします。  
+Visual Studio で、を開き `WebView2GettingStarted.sln` ます。  以前のバージョンの Visual Studio を使っている場合は、 **WebView2GettingStarted** プロジェクトにカーソルを置いて、コンテキストメニュー \ (右クリック \) を開き、[ **プロパティ**] を選びます。  [**構成プロパティ**の  >  **全般**] で、 **Windows sdk のバージョン**と**プラットフォームのツールセット**を変更して、Win10 SDK と Visual Studio のツールセット (VS ツールセット \) を使用できるようにします。  
 
 :::image type="complex" source="../media/tool-version.png" alt-text="ツールバージョン":::
    ツールバージョン  
@@ -170,7 +170,7 @@ CreateCoreWebView2EnvironmentWithOptions(nullptr, nullptr, nullptr,
 1.  `HistoryChanged`   
 1.  `NavigationCompleted`   
 
-詳細については、「[ナビゲーションイベント][Webview2ConceptsNavigationEvents]」を参照してください。  
+詳細については、「 [ナビゲーションイベント][Webview2ConceptsNavigationEvents]」を参照してください。  
 
 :::image type="complex" source="../media/navigation-events.png" alt-text="ナビゲーションイベント":::
    ナビゲーションイベント  
@@ -280,7 +280,7 @@ nullptr);
 
 *   WebView2 機能の包括的な例については、「 [WEBVIEW2 API のサンプル][GithubMicrosoftedgeWebview2samplesApisample]」をご覧ください。  
 *   WebView2 を使って構築されたサンプルアプリケーションについては、「 [WebView2Browser][GithubMicrosoftedgeWebview2browser]」を参照してください。  
-*   WebView2 API の詳細については、 [api リファレンス][Webview2ReferenceWin3209538]を参照してください。  
+*   WebView2 API の詳細については、 [api リファレンス][Webview2ReferenceWin3209622]を参照してください。  
 
 ## Microsoft Edge WebView チームと連絡を取り合う  
 
@@ -289,7 +289,7 @@ nullptr);
 <!-- links -->  
 
 [Webview2Index]: ../index.md "Microsoft Edge WebView2 の概要 (プレビュー) |Microsoft ドキュメント"  
-[Webview2ReferenceWin3209538]: ../reference/win32/0-9-538-reference-webview2.md "Reference (WebView2) |Microsoft ドキュメント"  
+[Webview2ReferenceWin3209622]: ../reference/win32/0-9-622-reference-webview2.md "Reference (WebView2) |Microsoft ドキュメント"  
 [Webview2ConceptsNavigationEvents]: ../concepts/navigation-events.md "ナビゲーションイベント |Microsoft ドキュメント"  
 
 [CppCxWrlTemplateLibraryVS2019]: /cpp/cppcx/wrl/windows-runtime-cpp-template-library-wrl?view=vs-2019 "Windows ランタイム C++ テンプレートライブラリ (WRL) |Microsoft ドキュメント"  

@@ -1,21 +1,23 @@
 ---
 description: Microsoft Edge WebView2 コントロールを使用してネイティブアプリケーションに web 技術 (HTML、CSS、JavaScript) を埋め込む
-title: WebView2 について CoreWebView2PointerInfo
+title: 0.9.579-WebView2 (CoreWebView2PointerInfo の場合)
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 07/08/2020
+ms.date: 09/10/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: WebView2、Core、WebView2、webview、.net、wpf、winforms、アプリ、edge、CoreWebView2、CoreWebView2Controller、browser control、edge html、Microsoft の WebView2。 CoreWebView2PointerInfo。
-ms.openlocfilehash: 8a5e5f4188b5115e1c6b836f80aad69c4bf2da7e
-ms.sourcegitcommit: f6764f57aed9ab7229e4eb6cc8851d0cea667403
+ms.openlocfilehash: 9ce4c9c3f076d54f03295ffda84c5fb0f03b4166
+ms.sourcegitcommit: 0faf538d5033508af4320b9b89c4ed99872f0574
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "10878759"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "11010903"
 ---
-# WebView2 クラス (CoreWebView2PointerInfo クラス) 
+# 0.9.579 クラスの WebView2 クラス (CoreWebView2PointerInfo) 
+
+[!INCLUDE [deprecation-note](../../includes/deprecation-note.md)]
 
 名前空間: WebView2 () \
 アセンブリ: Microsoft.Web.WebView2.Core.dll
@@ -47,7 +49,7 @@ ms.locfileid: "10878759"
 [PointerFlags](#pointerflags) | ポインターイベントの PointerFlags。
 [ポインター Id](#pointerid) | ポインターイベントのポインタ Id。
 [ポインターの種類](#pointerkind) | ポインターイベントのポインターの種類。
-[Time](#time) | ポインターイベントの時刻。
+[時間](#time) | ポインターイベントの時刻。
 [TouchContact](#touchcontact) | ポインターイベントの TouchContact。
 [TouchContactRaw](#touchcontactraw) | ポインターイベントの TouchContactRaw。
 [TouchFlags](#touchflags) | ポインターイベントの TouchFlags。
@@ -61,7 +63,7 @@ ms.locfileid: "10878759"
 
 ポインターイベントの ButtonChangeKind。
 
-> パブリック int[ボタンの Changekind](#buttonchangekind)
+> パブリック int [ボタンの Changekind](#buttonchangekind)
 
 これは、POINTER_INFO 構造体の ButtonChangeKind プロパティに対応しています。 この値は、Windows SDK (winuser) の POINTER_BUTTON_CHANGE_KIND 列挙型で定義されます。
 
@@ -75,7 +77,7 @@ Windows SDK (winuser) で定義されている POINTER_INFO 構造体の sourceD
 
 ポインターイベントのフレーム Id。
 
-> パブリック uint[フレーム id](#frameid)
+> パブリック uint [フレーム id](#frameid)
 
 これは、Windows SDK (winuser .h) で定義されている POINTER_INFO 構造体のフレーム Id プロパティに対応しています。
 
@@ -83,7 +85,7 @@ Windows SDK (winuser) で定義されている POINTER_INFO 構造体の sourceD
 
 ポインターイベントの HimetricLocation。
 
-> パブリックポイントの[Himetriclocation](#himetriclocation)
+> パブリックポイントの [Himetriclocation](#himetriclocation)
 
 これは、Windows SDK (winuser) で定義されている POINTER_INFO 構造体のプロパティに対応しています。
 
@@ -91,7 +93,7 @@ Windows SDK (winuser) で定義されている POINTER_INFO 構造体の sourceD
 
 ポインターイベントのロウ Metriclocation。
 
-> パブリックポイントの[Himetriclocationraw](#himetriclocationraw)
+> パブリックポイントの [Himetriclocationraw](#himetriclocationraw)
 
 これは、Windows SDK (winuser) で定義されている POINTER_INFO 構造体のプロパティに対応しています。
 
@@ -99,7 +101,7 @@ Windows SDK (winuser) で定義されている POINTER_INFO 構造体の sourceD
 
 ポインターイベントの履歴カウント。
 
-> パブリック uint[履歴カウント](#historycount)
+> パブリック uint [履歴カウント](#historycount)
 
 これは、Windows SDK (winuser .h) で定義されている POINTER_INFO 構造体の履歴カウントプロパティに対応しています。
 
@@ -107,7 +109,7 @@ Windows SDK (winuser) で定義されている POINTER_INFO 構造体の sourceD
 
 ポインターイベントの InputData。
 
-> パブリック int の[Inputdata](#inputdata)
+> パブリック int の [Inputdata](#inputdata)
 
 これは、Windows SDK (winuser .h) で定義されている POINTER_INFO 構造体の InputData プロパティに対応しています。
 
@@ -123,7 +125,7 @@ Windows SDK (winuser) で定義されている POINTER_INFO 構造体の sourceD
 
 ポインターイベントのペンフラグ。
 
-> パブリック uint の[フラグ](#penflags)
+> パブリック uint の [フラグ](#penflags)
 
 これは、POINTER_PEN_INFO 構造体の "ペン" プロパティに対応しています。 これらの値は、Windows SDK (winuser) の PEN_FLAGS 定数によって定義されます。
 
@@ -131,7 +133,7 @@ Windows SDK (winuser) で定義されている POINTER_INFO 構造体の sourceD
 
 ポインターイベントのペンマスク。
 
-> パブリック uint の[マスク](#penmask)
+> パブリック uint の [マスク](#penmask)
 
 これは POINTER_PEN_INFO 構造体の "ペンマスク" プロパティに対応します。 これらの値は、Windows SDK (winuser) の PEN_MASK 定数によって定義されます。
 
@@ -139,7 +141,7 @@ Windows SDK (winuser) で定義されている POINTER_INFO 構造体の sourceD
 
 ポインターイベントのペンの筆圧。
 
-> 公開 uint の[気圧](#penpressure)
+> 公開 uint の [気圧](#penpressure)
 
 これは、Windows SDK (winuser .h) で定義されている POINTER_PEN_INFO 構造体の圧力プロパティに対応しています。
 
@@ -147,7 +149,7 @@ Windows SDK (winuser) で定義されている POINTER_INFO 構造体の sourceD
 
 ポインターイベントのペン回転。
 
-> 公開 uint の[回転](#penrotation)
+> 公開 uint の [回転](#penrotation)
 
 これは、Windows SDK (winuser .h) で定義されている POINTER_PEN_INFO 構造体の rotation プロパティに対応しています。
 
@@ -179,7 +181,7 @@ Windows SDK (winuser) で定義されている POINTER_INFO 構造体の sourceD
 
 ポインターイベントのピクセルの位置。
 
-> パブリックポイントの[ピクセルの位置](#pixellocation)
+> パブリックポイントの [ピクセルの位置](#pixellocation)
 
 これは、Windows SDK (winuser .h) で定義されている POINTER_INFO struct の Ptの Location プロパティに対応しています。
 
@@ -187,7 +189,7 @@ Windows SDK (winuser) で定義されている POINTER_INFO 構造体の sourceD
 
 ポインターイベントのピクセルの場所。
 
-> パブリックポイントのピクセルの位置の[raw](#pixellocationraw)
+> パブリックポイントのピクセルの位置の [raw](#pixellocationraw)
 
 これは、Windows SDK (winuser .h) で定義された POINTER_INFO struct の Ptピクセルの Raw プロパティに対応しています。
 
@@ -209,7 +211,7 @@ Windows SDK で定義されている POINTER_INFO 構造体の sourceDevice プ�
 
 ポインターイベントのポインタ Id。
 
-> パブリック uint[ポインター id](#pointerid)
+> パブリック uint [ポインター id](#pointerid)
 
 これは、Windows SDK (winuser .h) で定義されている POINTER_INFO 構造体のポインター Id プロパティに対応しています。
 
@@ -217,15 +219,15 @@ Windows SDK で定義されている POINTER_INFO 構造体の sourceDevice プ�
 
 ポインターイベントのポインターの種類。
 
-> パブリック uint[ポインターの種類](#pointerkind)
+> パブリック uint [ポインターの種類](#pointerkind)
 
 これは、POINTER_INFO 構造体のポインター Kind プロパティに対応しています。 この値は、Windows SDK (winuser) の POINTER_INPUT_KIND 列挙型で定義されます。 PT_PEN と PT_TOUCH をサポートします。
 
-#### Time 
+#### 時間 
 
 ポインターイベントの時刻。
 
-> 公開 uint[時間](#time)
+> 公開 uint [時間](#time)
 
 これは、Windows SDK (winuser .h) で定義されている POINTER_INFO 構造体の dwTime プロパティに対応しています。
 

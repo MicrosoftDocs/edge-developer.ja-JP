@@ -1,21 +1,23 @@
 ---
 description: Microsoft Edge WebView2 コントロールを使用してネイティブアプリケーションに web 技術 (HTML、CSS、JavaScript) を埋め込む
-title: WebView2 Win32 C++ ICoreWebView2PermissionRequestedEventArgs
+title: 0.9.579-WebView2 Win32 C++ ICoreWebView2PermissionRequestedEventArgs
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 07/08/2020
+ms.date: 09/10/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Controller、browser control、edge html、ICoreWebView2PermissionRequestedEventArgs
-ms.openlocfilehash: b3178f3c012bc19b9221fbf6961ce0665245d551
-ms.sourcegitcommit: f6764f57aed9ab7229e4eb6cc8851d0cea667403
+ms.openlocfilehash: 4abb6fb058765a05ebb32fe97474348c4aebde12
+ms.sourcegitcommit: 0faf538d5033508af4320b9b89c4ed99872f0574
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "10879339"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "11010034"
 ---
-# インターフェイス ICoreWebView2PermissionRequestedEventArgs 
+# 0.9.579-インターフェイス ICoreWebView2PermissionRequestedEventArgs 
+
+[!INCLUDE [deprecation-note](../../includes/deprecation-note.md)]
 
 ```
 interface ICoreWebView2PermissionRequestedEventArgs
@@ -32,7 +34,7 @@ PermissionRequested されたイベントのイベント引数。
 [get_PermissionKind](#get_permissionkind) | 要求されるアクセス許可の型。
 [get_State](#get_state) | 権限要求の状態。つまり、
 [get_Uri](#get_uri) | アクセス許可を要求する web コンテンツの起点。
-[GetDeferral](#getdeferral) | GetDeferral を呼び出して、 [ICoreWebView2Deferral](icorewebview2deferral.md)オブジェクトを返すことができます。
+[GetDeferral](#getdeferral) | GetDeferral を呼び出して、 [ICoreWebView2Deferral](icorewebview2deferral.md) オブジェクトを返すことができます。
 [put_State](#put_state) | State プロパティを設定します。
 
 ## Members
@@ -67,7 +69,7 @@ PermissionRequested されたイベントのイベント引数。
 
 #### GetDeferral 
 
-GetDeferral を呼び出して、 [ICoreWebView2Deferral](icorewebview2deferral.md)オブジェクトを返すことができます。
+GetDeferral を呼び出して、 [ICoreWebView2Deferral](icorewebview2deferral.md) オブジェクトを返すことができます。
 
 > パブリック HRESULT [Getdeferral](#getdeferral)([ICoreWebView2Deferral](icorewebview2deferral.md) * * 延期)
 

@@ -1,21 +1,23 @@
 ---
 description: Microsoft Edge WebView2 コントロールを使用してネイティブアプリケーションに web 技術 (HTML、CSS、JavaScript) を埋め込む
-title: WebView2 Win32 C++ ICoreWebView2ZoomFactorChangedEventHandler
+title: 0.9.579-WebView2 Win32 C++ ICoreWebView2ZoomFactorChangedEventHandler
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 07/08/2020
+ms.date: 09/10/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Controller、browser control、edge html、ICoreWebView2ZoomFactorChangedEventHandler
-ms.openlocfilehash: 74cd0451e111780078714b17e5bd1097c56d6b2e
-ms.sourcegitcommit: f6764f57aed9ab7229e4eb6cc8851d0cea667403
+ms.openlocfilehash: c941629ab8ee87c0c964b00798878bb69265669a
+ms.sourcegitcommit: 0faf538d5033508af4320b9b89c4ed99872f0574
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "10877575"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "11011392"
 ---
-# インターフェイス ICoreWebView2ZoomFactorChangedEventHandler 
+# 0.9.579-インターフェイス ICoreWebView2ZoomFactorChangedEventHandler 
+
+[!INCLUDE [deprecation-note](../../includes/deprecation-note.md)]
 
 ```
 interface ICoreWebView2ZoomFactorChangedEventHandler
@@ -38,7 +40,7 @@ interface ICoreWebView2ZoomFactorChangedEventHandler
 
 対応するイベントのイベント引数を実装側に提供するために呼び出されます。
 
-> パブリック HRESULT[呼び出し](#invoke)([ICoreWebView2Controller](icorewebview2controller.md) * sender、IUnknown * args)
+> パブリック HRESULT [呼び出し](#invoke)([ICoreWebView2Controller](icorewebview2controller.md) * sender、IUnknown * args)
 
 イベント引数はなく、args パラメーターは null になります。
 

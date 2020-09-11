@@ -3,31 +3,31 @@ description: Microsoft Edge WebView 2 コントロールを使用して、Window
 title: Microsoft Edge WebView 2 Windows フォームアプリ
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 08/10/2020
+ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: WebView2、WebView2、WebView、webview、winforms アプリ、winforms、edge、CoreWebView2、browser control、edge html、はじめに、作業の開始、.NET、windows フォーム
-ms.openlocfilehash: 7d7ddf445adee7b3d20d268ab1d53c0999fd54ce
-ms.sourcegitcommit: 4bc904c5d54347185f275bd76441975be471c320
+ms.openlocfilehash: 885524581112a208e1e5134ecd7a6f7446e331ce
+ms.sourcegitcommit: 0faf538d5033508af4320b9b89c4ed99872f0574
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "10926457"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "11010734"
 ---
 # Windows Forms アプリでの WebView2 の概要 (プレビュー)  
 
-この記事では、初めての WebView2 アプリの作成を開始し、 [WebView2 (preview)](/microsoft-edge/hosting/webview2/index)の主な機能について説明します。  個々の Api について詳しくは、 [api リファレンス](../reference/dotnet/0-9-515-reference-webview2.md)をご覧ください。  
+この記事では、初めての WebView2 アプリの作成を開始し、 [WebView2 (preview)](/microsoft-edge/hosting/webview2/index)の主な機能について説明します。  個々の Api について詳しくは、 [api リファレンス](../reference/dotnet/0-9-628-reference-webview2.md)をご覧ください。  
 
 ## 前提条件  
 
 続行する前に、次の前提条件の一覧をインストールしていることを確認します。  
 
-* [Microsoft Edge (Chromium) カナリアチャネル](https://www.microsoftedgeinsider.com/download)は、windows 10、windows 8.1、または windows 7 にインストールされています。 
+* [Microsoft Edge (Chromium) カナリアチャネル](https://www.microsoftedgeinsider.com/download) は、windows 10、windows 8.1、または windows 7 にインストールされています。 
 * [Visual Studio](https://visualstudio.microsoft.com) 2017 以降。
 
 > [!NOTE]
-> 現時点では、WebView2 は .NET Core 3.0 の[デザイナー (preview)](https://visualstudio.microsoft.com/vs/preview)をサポートしていません。
+> 現時点では、WebView2 は .NET Core 3.0 の [デザイナー (preview)](https://visualstudio.microsoft.com/vs/preview)をサポートしていません。
 
 ## 手順 1-1 つのウィンドウアプリケーションを作成する
 
@@ -35,7 +35,7 @@ ms.locfileid: "10926457"
 
 1. **Visual Studio を開きます。**
 
-1. [ **Windows Forms .Net Framework アプリ**] を選び、[**次へ**] を選びます。
+1. [ **Windows Forms .Net Framework アプリ** ] を選び、[ **次へ**] を選びます。
 
     ![newproject](./media/winforms-newproject.png)
 
@@ -43,7 +43,7 @@ ms.locfileid: "10926457"
 
     ![project の startproject](./media/winforms-startproj.png)
 
-1. プロジェクトを作成するには、[**作成**] を選びます。
+1. プロジェクトを作成するには、[ **作成** ] を選びます。
 
 ## 手順 2-WebView2 SDK をインストールする
 
@@ -54,10 +54,10 @@ ms.locfileid: "10926457"
     :::image type="complex" source="./media/wpf-gettingstarted-mngnuget.png" alt-text="Nuget.exe":::
        Nuget.exe :::image-end:::
 
-1. `Microsoft.Web.WebView2`検索バーに入力します。  検索結果から**WebView2**を選びます。  
+1. `Microsoft.Web.WebView2`検索バーに入力します。  検索結果から **WebView2** を選びます。  
 
     > [!IMPORTANT]
-    > [**プレリリースを含める**] をオンにして、**バージョン**でプレリリースパッケージを選択し、[**インストール**] を選択します。  
+    > [ **プレリリースを含める**] をオンにして、 **バージョン**でプレリリースパッケージを選択し、[ **インストール**] を選択します。  
 
     ![nuget.exe](./media/installnuget.png)
 
@@ -87,7 +87,7 @@ WebView2 API を使用したアプリケーションの開発を開始するよ�
 ![\ 低 ebビュー](./media/winforms-hellowebview.png)
 
 > [!NOTE]
-> 高 DPI モニターで作業している場合は、[高 dpi サポートのために Windows フォームアプリを構成](/dotnet/framework/winforms/high-dpi-support-in-windows-forms#configuring-your-windows-forms-app-for-high-dpi-support)することが必要な場合があります。
+> 高 DPI モニターで作業している場合は、 [高 dpi サポートのために Windows フォームアプリを構成](/dotnet/framework/winforms/high-dpi-support-in-windows-forms#configuring-your-windows-forms-app-for-high-dpi-support)することが必要な場合があります。
 
 ## 手順 4-ウィンドウのサイズ変更イベントを処理する
 
@@ -144,7 +144,7 @@ WebView2 コントロールに表示される URL をユーザーが変更でき
     }
     ```  
 
-`F5`プロジェクトをビルドして実行する場合に選択します。  アドレスバーに新しい URL を入力し、[設定]**をクリックし**ます。  たとえば、と入力 `https://www.bing.com` します。  WebView2 コントロールが URL に移動することを確認します。  
+`F5`プロジェクトをビルドして実行する場合に選択します。  アドレスバーに新しい URL を入力し、[設定] **をクリックし**ます。  たとえば、と入力 `https://www.bing.com` します。  WebView2 コントロールが URL に移動することを確認します。  
 
 > [!NOTE]
 > アドレスバーに完全な URL が入力されていることを確認します。 `ArgumentException`URL が先頭以外の場合、 `http://` または `https://`
@@ -161,7 +161,7 @@ WebView2 コントロールをホストするアプリケーションは、web �
 * `HistoryChanged`  
 * `NavigationCompleted`  
 
-詳細については、「[ナビゲーションイベント](../concepts/navigation-events.md)」を参照してください。  
+詳細については、「 [ナビゲーションイベント](../concepts/navigation-events.md)」を参照してください。  
 
 :::image type="complex" source="../media/navigation-events.png" alt-text="ナビゲーションイベント":::
    ナビゲーションイベント
@@ -295,9 +295,9 @@ async void InitializeAsync()
 
 ## 次のステップ 
 
-* WebView2's 機能の包括的な例については、 [WebView2Samples リポジトリ](https://github.com/MicrosoftEdge/WebView2Samples)をチェックアウトする
+* WebView2's 機能の包括的な例については、 [WebView2Samples リポジトリ](https://github.com/MicrosoftEdge/WebView2Samples) をチェックアウトする
 * Api についての詳細情報を参照するための[api 参照](../reference/winforms/0-9-515/microsoft-web-webview2-winforms-webview2.md)
-* WebView2 の詳細については、 [WebView2 のリソース](../index.md#next-steps)の一覧をチェックアウトする
+* WebView2 の詳細については、 [WebView2 のリソース](../index.md#next-steps) の一覧をチェックアウトする
 
 
 ## Microsoft Edge WebView チームと連絡を取り合う  

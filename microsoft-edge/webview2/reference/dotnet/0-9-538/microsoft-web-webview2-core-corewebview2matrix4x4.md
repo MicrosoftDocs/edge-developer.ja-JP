@@ -1,21 +1,23 @@
 ---
 description: Microsoft Edge WebView2 コントロールを使用してネイティブアプリケーションに web 技術 (HTML、CSS、JavaScript) を埋め込む
-title: WebView2 について CoreWebView2Matrix4x4
+title: 0.9.579-WebView2 (CoreWebView2Matrix4x4 の場合)
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 07/20/2020
+ms.date: 09/10/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: WebView2、Core、WebView2、webview、.net、wpf、winforms、アプリ、edge、CoreWebView2、CoreWebView2Controller、browser control、edge html、Microsoft の WebView2。 CoreWebView2Matrix4x4。
-ms.openlocfilehash: b34dca29aca3d7f24e8f5fd99ab8b8515fcb4664
-ms.sourcegitcommit: e0cb9e6f59f222fade6afa4829c59524a9a9b9ff
+ms.openlocfilehash: 1ea98d55323e2f38dbac5e4e68ab2cfc437d16f1
+ms.sourcegitcommit: 0faf538d5033508af4320b9b89c4ed99872f0574
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "10885528"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "11010979"
 ---
-# CoreWebView2Matrix4x4 構造体 (WebView2) 
+# WebView2 構造体 0.9.579-CoreWebView2Matrix4x4 構造体 
+
+[!INCLUDE [deprecation-note](../../includes/deprecation-note.md)]
 
 [!INCLUDE [prerelease-note](../../includes/prerelease-note.md)]
 
@@ -53,95 +55,95 @@ ms.locfileid: "10885528"
 
 マトリックスの最初の行と最初の列の値。
 
-> パブリックシングル[_11](#_11)
+> パブリックシングル [_11](#_11)
 
 #### _12 
 
 マトリックスの最初の行と2番目の列の値。
 
-> パブリックシングル[_12](#_12)
+> パブリックシングル [_12](#_12)
 
 #### _13 
 
 マトリックスの最初の行と3番目の列の値。
 
-> パブリックシングル[_13](#_13)
+> パブリックシングル [_13](#_13)
 
 #### _ 14 
 
 マトリックスの最初の行と4番目の列の値。
 
-> パブリック (1 つ[)](#_14)
+> パブリック (1 つ [)](#_14)
 
 #### _ 21 
 
 マトリックスの2番目の行と最初の列の値。
 
-> 公開 (1 つ[)](#_21)
+> 公開 (1 つ [)](#_21)
 
 #### _ 22 
 
 マトリックスの2番目の行と2番目の列の値。
 
-> 公開 (1 つ[)](#_22)
+> 公開 (1 つ [)](#_22)
 
 #### _ 23 
 
 マトリックスの2行目と3列目の値。
 
-> パブリック (1 つ[)](#_23)
+> パブリック (1 つ [)](#_23)
 
 #### _ 24 
 
 マトリックスの2番目の行と4番目の列の値。
 
-> パブリック1つの[24](#_24)
+> パブリック1つの [24](#_24)
 
 #### _ 31 
 
 マトリックスの3番目の行と最初の列の値。
 
-> 公開 (1 つ[)](#_31)
+> 公開 (1 つ [)](#_31)
 
 #### _ 32 
 
 マトリックスの3番目の行と2番目の列の値。
 
-> パブリック1つの[32](#_32)
+> パブリック1つの [32](#_32)
 
 #### _ 33 
 
 マトリックスの3番目の行と3番目の列の値。
 
-> パブリック1つの[33](#_33)
+> パブリック1つの [33](#_33)
 
 #### _ 34 
 
 マトリックスの3行目と4列目の値。
 
-> 公開[(1) 34](#_34)
+> 公開 [(1) 34](#_34)
 
 #### _ 41 
 
 マトリックスの4行目と1列目の値。
 
-> パブリック単一の[41](#_41)
+> パブリック単一の [41](#_41)
 
 #### _ 42 
 
 マトリックスの4番目の行と2番目の列の値。
 
-> パブリックの1つの[_](#_42)
+> パブリックの1つの [_](#_42)
 
 #### _ 43 
 
 マトリックスの4行目と3列目の値。
 
-> 公開 1[回](#_43)
+> 公開 1 [回](#_43)
 
 #### _ 44 
 
 マトリックスの4番目の行と4番目の列の値。
 
-> パブリックシングル[44](#_44)
+> パブリックシングル [44](#_44)
 
