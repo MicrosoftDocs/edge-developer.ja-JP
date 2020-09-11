@@ -3,21 +3,20 @@ description: Microsoft Edge プライバシー ホワイトペーパー
 title: Microsoft Edge プライバシー ホワイトペーパー
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 08/03/2020
+ms.date: 09/09/2020
 ms.topic: article
 ms.prod: microsoft-edge
-ms.technology: browser
 keywords: Microsoft Edge、プライバシー、ホワイトペーパー、信頼
 ms.localizationpriority: high
 no-loc:
 - Cast
 - Google Cast
-ms.openlocfilehash: ff4d2b9a10e225478aaacbe0b70604a730172187
-ms.sourcegitcommit: 01940d5708339b03debc14001596f560cc9ab75a
+ms.openlocfilehash: 35227178a909ae6b378c4a17f578bac364f551c7
+ms.sourcegitcommit: ad02b0a3159eb9f111a580d1c229cb4297467210
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "10903874"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "11009246"
 ---
 # Microsoft Edge プライバシー ホワイトペーパー  
 
@@ -76,6 +75,8 @@ Web 上のサイト、テキスト、画像を収集し、Microsoft Edge のコ�
 Microsoft Edge は 24 時間ごとに、特別なエンティティ抽出テンプレートが存在するサポートされているサイトのリストをダウンロードします。  テンプレートは各 Web サイトに対して固有のものです。  コレクションに新しいアイテムを作成すると、Microsoft Edge は、新しいコレクション アイテムの作成元のサイトが、サポートされているサイトのリストにあることを確認します。  サイトがリストにある場合、Microsoft Edge は特定のサイトのテンプレートのエンティティ抽出サービスに ping を送信します。  サービスへの要求に関連付けられているユーザー識別子はありません。  テンプレートは、収集されているアイテムの名前、価格、評価、一次像、およびその他のデータを識別しようとします。  新しいコレクション アイテムの作成元のサイトがサポートされているリスト サイトにない場合、Microsoft Edge はテンプレートをダウンロードしません。  テンプレートを使用すると、すべてのコレクション アイテムをデバイス上でローカルに作成できます。  コレクションを作成するために、コレクション アイテムに関するデータがサービスに送信されることはありません。  
 
 デバイスに保存されているテンプレートを削除してキャッシュ データをクリアするには、`edge://settings/privacy` に移動し、**[閲覧データを今すぐクリア]** の横にある **[閲覧データのクリア]** で [**クリアするデータの選択**] ボタンをクリックし、目的の時間範囲とデータの種類を選択してから、**[今すぐクリア]** ボタンを選択します。  キャッシュ データを削除する別の方法は、`edge://settings/clearBrowserData` に移動して、目的の時間範囲とデータの種類を選択してから、[**今すぐクリア**] ボタンを選択します。  
+
+コレクションを購入して使用する際に最安値を調べるために、コレクションに製品を追加する場合、Microsoft Edge は他の小売業者と製品の価格を比較する機能を提供します。  [他の小売店と価格を比較する] を選択すると、Microsoft Edge は製品名、ショッピング ドメイン、価格、および製品に関するその他の製品の詳細を Bing に送信して、他の小売業者と価格を比較します。  コレクションの製品情報は HTTPS 経由で送信されます。 これらの HTTPS の呼び出しには、ユーザー識別子は含まれていません。  
 
 **[コレクション内の Pinterest からの提案を表示する]** 設定をオンにした場合、コレクションを表示したい場合は、コレクションのタイトルを使用して Microsoft Bing 検索を実行し、関連する Pinterest トピック ページを見つけます。  Microsoft Edge は、コレクションに関するデータを Pinterest に送信しません。  Pinterest トピック ページの提案を削除して検索を停止するには、`edge://settings/privacy` に移動し、**[コレクション内の Pinterest からの提案を表示する]** 設定をオフにします。  
 
@@ -257,7 +258,9 @@ Microsoft Edge は、Microsoft ネットワーク時間サービスを使用し�
 
 ## 新規タブ ページ  
 
-Microsoft Edge は、[Bing][|::ref2::|Main] が提供する検索ボックス、最も頻繁に移動するサイトのクイック リンク タイル、Microsoft ニュースまたは Office 365 の関連コンテンツにより、魅力的でユーザー中心の新しいタブ ページ エクスペリエンスを提供します。  カスタマイズ ボタンを選択して、新しいタブ ページの外観をカスタマイズします。  新しいタブ ページの設定はプロファイルごとに設定され、デバイスにローカルに保存されます。設定はデバイス間で同期されません。  
+Microsoft Edge は、[Bing][|::ref2::|Main] が提供する検索ボックス、最も頻繁に移動するサイトのクイック リンク タイル、Microsoft ニュースまたは Office 365 の関連コンテンツにより、魅力的でユーザー中心の新しいタブ ページ エクスペリエンスを提供します。  カスタマイズ ボタンを選択して、新しいタブ ページの外観をカスタマイズします。  新しいタブ ページの設定はプロファイルごとに設定され、デバイスにローカルに保存されます。設定はデバイス間で同期されません。
+
+新しいタブ ページの読み込み時間を短縮するために、Microsoft の新しいタブ ページをバックグラウンドで読み込んで高速化できます。 Cookie を許可すると、読み込まれるコンテンツに Cookie が含まれる場合があります。 Microsoft の新しいタブ ページのバックグラウンドでの読み込みを無効にするには、`edge://settings/newTabPage` に移動し、[**新しいタブ ページを事前に読み込んで高速化する]** の設定をオフにします。 
 
 :::image type="complex" source="./media/whitepaper-media/n-t-p1.png" alt-text="新規タブ ページ" lightbox="./media/whitepaper-media/n-t-p1.png":::
    新規タブ ページ  
@@ -417,8 +420,8 @@ Web サイト エラーの原因となるアドレス バーの URL の入力ミ
 
 Microsoft アカウントで Microsoft Edge にサインインすると、サインインしているすべてのバージョンの Microsoft Edge 間で閲覧データを同期できます。  お気に入り、設定、フォーム入力データ \(アドレスなど\)、パスワード、拡張子、およびコレクションを同期できます。  Microsoft Edge で同期をオンにする権限を許可する必要があります。同期される各データの種類は個別にオンまたはオフにすることができます。  お気に入りには、従来のバージョンの Microsoft Edge で以前に取っておいたタブが含まれています。これらのタブは、他のお気に入りと同期します。  サインイン バージョンの Microsoft Edge 同期から、同期がオンになっている他のすべてのサインイン バージョンの Microsoft Edge にお気に入りまたはその他のデータを削除または変更しました。  同期構成を管理するには、`edge://settings/profiles/sync` に移動します。  同期設定は組織によって管理されている場合があります。
 
-:::image type="complex" source="./media/whitepaper-media/sync.png" alt-text="同期" lightbox="./media/whitepaper-media/sync.png":::
-   同期  
+:::image type="complex" source="./media/whitepaper-media/sync.png" alt-text="同期設定がオンに設定されている画像" lightbox="./media/whitepaper-media/sync.png":::
+   同期設定がオンになっている
 :::image-end:::  
 
 同期が機能するために、デバイスの名前、メーカー、モデルなど、同期エクスペリエンスを提供するために必要な追加のデバイス接続および構成データが送信されます。  データは、[Microsoft デバイス ダッシュボード][MicrosoftAccountDevices]から削除できます。  同期したお気に入りを管理するには、`edge://favorites` に移動します。  他のすべてのデータの種類を管理するには、`edge://settings/profiles` に移動します。  
@@ -426,6 +429,12 @@ Microsoft アカウントで Microsoft Edge にサインインすると、サイ
 すべての同期データは、ブラウザーと Microsoft サーバー間で転送されるときに、HTTPS 経由で転送中に暗号化されます。  同期されたデータは、Microsoft サーバーに暗号化された状態で保存されます。  アドレスやパスワードなどの機密データの種類は、同期される前にデバイスでさらに暗号化されます。  職場または学校のアカウントを使用している場合、Microsoft Information Protection を使用して同期される前に、すべてのデータの種類がさらに暗号化されます。  他のすべての同期データの種類は、データを削除するか、アカウントが削除されるか、アカウントが非アクティブになるまで保存されます。  ID は複数のデバイス間で同期を実行するために必要なので、同期されたすべてのデータにアカウント ID が添付されます。 
 
 InPrivate およびゲスト モードの閲覧データは、Microsoft アカウントと同期しません。  ただし、InPrivate セッション中に作成されたお気に入りは、同期がオンになっているサインイン バージョンの Microsoft Edge 全体で同期されます。  
+
+## ヒントと推奨事項
+
+Microsoft Edge は、ブラウザーを使用して最高のエクスペリエンスを得るために、関連するヒントと推奨事項を提供したいと考えています。  Microsoft Edge は、利用可能なデバイス接続と構成データを使用して、関連するヒントと推奨事項を提供します。  このデータは、オペレーティング システム、ロケール、ブラウザー設定、およびその他のデバイス接続と構成データで構成されます。  このデータは、ブラウザーに固有のリセット可能な識別子を使用して、安全な HTTPS 接続を介して送信されます。  Microsoft Edge のセットアップ中の Windows 10 デバイスについては、Windows でのカスタマイズされたエクスペリエンスを尊重します。  [Windows でのカスタマイズされたエクスペリエンスの詳細][https://support.microsoft.com/help/4468236/diagnostics-feedback-and-privacy-in-windows-10-microsoft-privacy]。  
+
+このデータは、InPrivate ブラウズまたはゲスト モードでは送信されません。  
 
 ## 追跡防止  
 
