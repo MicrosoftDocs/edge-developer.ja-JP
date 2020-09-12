@@ -1,6 +1,6 @@
 ---
-description: スレッドモデル
-title: スレッドモデル
+description: スレッド化
+title: スレッド化
 author: MSEdgeTeam
 ms.author: msedgedevrel
 ms.date: 07/23/2020
@@ -8,14 +8,16 @@ ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、wpf アプリ、wpf、edge、ICoreWebView2、ICoreWebView2Host、browser control、edge html
-ms.openlocfilehash: ad51afee97d3cc3e913ecdd73c4f0c2a99c70564
-ms.sourcegitcommit: 553957c101f83681b363103cb6af56bf20173f23
+ms.openlocfilehash: 61e3b7fc8d25e2a1ce9c60fb84f5f39ba43f281b
+ms.sourcegitcommit: efdc6369c48942bfa39e45c713300ed70f0e3655
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "10895561"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "11013738"
 ---
-# スレッドモデル  
+# スレッド化 
+
+WebView2 コントロールは、 [コンポーネントオブジェクトモデル (COM)](https://docs.microsoft.com/windows/win32/com/the-component-object-model) に基づいており、 [シングルスレッドアパートメント (STA)](https://docs.microsoft.com/windows/win32/com/single-threaded-apartments) スレッドで実行する必要があります。
 
 ## スレッド セーフティ  
 

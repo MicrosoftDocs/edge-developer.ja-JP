@@ -1,5 +1,5 @@
 ---
-description: Microsoft Edge WebView 2 コントロールを使用して Win32 アプリの web コンテンツをホストする
+description: Microsoft Edge WebView2 control を使用して Win32、.NET、UWP アプリケーションの web コンテンツをホストする
 title: Microsoft Edge WebView2 コントロール
 author: MSEdgeTeam
 ms.author: msedgedevrel
@@ -7,17 +7,17 @@ ms.date: 08/10/2020
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
-keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、CoreWebView2、ICoreWebView2Host、browser control、edge html、Windows フォーム、WinForms、WPF、.NET
-ms.openlocfilehash: bb2287ca854372d9592a3b90c7df6f9a8abf620e
-ms.sourcegitcommit: 4bc904c5d54347185f275bd76441975be471c320
+keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、CoreWebView2、ICoreWebView2Host、browser control、edge html、Windows フォーム、WinForms、WPF、.NET、WinUI、Project レユニオン
+ms.openlocfilehash: d3294ce72237a323113ed9f7c8f31e37af43f5e6
+ms.sourcegitcommit: efdc6369c48942bfa39e45c713300ed70f0e3655
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "10926471"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "11013745"
 ---
 # Microsoft Edge WebView2 の概要 (プレビュー)  
 
-Microsoft Edge WebView2 コントロールを使うと、ネイティブアプリケーションで web 技術 (HTML、CSS、JavaScript \) を埋め込むことができます。  WebView2 コントロールは、 [Microsoft Edge (Chromium)][MicrosoftedgeinsiderMain]をレンダリングエンジンとして使用して、ネイティブアプリケーションで web コンテンツを表示します。  WebView2 を使用すると、ネイティブアプリケーションのさまざまな場所に web コードを埋め込むことができます。または、1つの WebView 内でネイティブアプリケーション全体をビルドすることもできます。  WebView2 アプリケーションの作成を開始する方法については、「使用[を開始する」を参照し](#getting-started)てください。  
+Microsoft Edge WebView2 コントロールを使うと、ネイティブアプリケーションで web 技術 (HTML、CSS、JavaScript \) を埋め込むことができます。  WebView2 コントロールは、 [Microsoft Edge (Chromium)][MicrosoftedgeinsiderMain] をレンダリングエンジンとして使用して、ネイティブアプリケーションで web コンテンツを表示します。  WebView2 を使用すると、ネイティブアプリケーションのさまざまな場所に web コードを埋め込むことができます。または、1つの WebView 内でネイティブアプリケーション全体をビルドすることもできます。  WebView2 アプリケーションの作成を開始する方法については、「使用 [を開始する」を参照し](#getting-started)てください。  
 
 :::image type="complex" source="./media/WebView2/whatwebview.png" alt-text="WebView とは" lightbox="./media/WebView2/whatwebview.png":::
    WebView とは  
@@ -76,7 +76,7 @@ Microsoft Edge WebView2 コントロールを使うと、ネイティブアプ�
       最新バージョンの Chromium を使用して、定期的なプラットフォームの更新とセキュリティ更新プログラムを利用します。  
    :::column-end:::
    :::column span="1":::
-      **固定**\ (近日公開)  
+      **固定** \ (近日公開)  
       アプリケーションに Chromium ビットをパッケージ化することを選択します。  
    :::column-end:::
    :::column span="1":::
@@ -87,7 +87,7 @@ Microsoft Edge WebView2 コントロールを使うと、ネイティブアプ�
 
 ## 開始するには  
 
-WebView2 コントロールを使用してアプリケーションをビルドしてテストするには、 [Microsoft Edge (Chromium)][MicrosoftedgeinsiderDownload]と[WebView2 SDK][NugetPackagesMicrosoftWebWebView2]の両方をインストールする必要があります。  開始するには、次のいずれかのオプションを選択します。  
+WebView2 コントロールを使用してアプリケーションをビルドしてテストするには、 [Microsoft Edge (Chromium)][MicrosoftedgeinsiderDownload] と [WebView2 SDK][NugetPackagesMicrosoftWebWebView2] の両方をインストールする必要があります。  開始するには、次のいずれかのオプションを選択します。  
 
 *   [Win32 C/C + + の概要][Webview2GettingstartedWin32]  
 *   [WPF の概要][Webview2GettingstartedWpf]  
@@ -111,6 +111,7 @@ WebView2 アプリケーションは、次のバージョンの Windows で実�
 *   Windows 8.1  
 *   Windows 8  
 *   Windows 7  
+*   Windows Server 2019  
 *   Windows Server 2016  
 *   Windows Server 2012  
 *   Windows Server 2012R2  
