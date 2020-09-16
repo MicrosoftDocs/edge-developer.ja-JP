@@ -3,20 +3,22 @@ description: 拡張機能の概要パート1
 title: その日の NASA の絵を飛び出すシンプルな拡張機能を構築する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 05/08/2020
+ms.date: 09/15/2020
 ms.topic: article
-ms.prod: microsoft-edge-chromium
+ms.prod: microsoft-edge
 keywords: edge-chromium、web 開発、html、css、javascript、開発者、拡張機能
-ms.openlocfilehash: dd5c1dab0cb9b54b79be7d2728cb9bfde0945185
-ms.sourcegitcommit: 0bc1312a1e6a0ac37cf385201db4361fc05184fc
+ms.openlocfilehash: 826401869b98d339e9b156a3727d94bd1182063d
+ms.sourcegitcommit: d360e419b5f96f4f691cf7330b0d8dff9126f82e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "10683624"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "11015766"
 ---
-# その日の NASA の絵を飛び出すシンプルな拡張機能を構築する  
-
-[このパートの完成した拡張パッケージソース][ArchiveExtensionGettingStartedPart1]  
+# その日の NASA の絵を飛び出すシンプルな拡張機能を構築する 
+ 
+<!--  
+[Completed Extension Package Source for This Part][ArchiveExtensionGettingStartedPart1]  
+-->  
 
 ## 概要  
 
@@ -161,10 +163,12 @@ HTML ファイルには、という名前が付いてい `popup/popup.html` ま�
         └── popup.html
 ```  
 
+<!--  
 > [!NOTE]
-> `images/stars.jpeg`前の画像に記載されているファイルは、 [zip ダウンロード][ArchiveExtensionGettingStartedPart1]で参照できます。  
+> The `images/stars.jpeg` file listed in the previous image is available in the [zip download][ArchiveExtensionGettingStartedPart1].  
+-->  
 
-これは、機能拡張を構築するために必要なものです。  これまでの残りのすべてを試してください。  
+これは、機能拡張を構築するために必要なものです。  これだけで、テストを行うことができます。  
 
 次のセクションでは、Microsoft Edge \ (Chromium) ブラウザーに拡張機能 \ (サイドローディング \ とも呼ばれます) をロードして、それをテストする方法について説明します。  
 
@@ -180,7 +184,7 @@ Microsoft Edge \ (Chromium) ブラウザーには、開発中に拡張機能を�
 
 <!--![Choose Extensions][ImagePart1Threedots]  -->  
 
-次の図に示すように、[**拡張機能**] ページを表示している場合は、次の図に示すように、ページの左下のトグルを有効にして、**開発者モード**を有効にします。  
+次の図に示すように、[ **拡張機能** ] ページを表示している場合は、次の図に示すように、ページの左下のトグルを有効にして、 **開発者モード** を有効にします。  
 
 :::image type="complex" source="./media/part1-developermode-toggle.png" alt-text="開発者モードを有効にする":::
    開発者モードを有効にする

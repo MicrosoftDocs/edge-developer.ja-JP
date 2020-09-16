@@ -3,31 +3,31 @@ description: Microsoft Edge のアドオンストアに拡張機能を公開す�
 title: Microsoft Edge 拡張機能の開発者として登録して、拡張機能を公開する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 07/15/2020
+ms.date: 09/15/2020
 ms.topic: conceptual
-ms.prod: microsoft-edge-chromium
+ms.prod: microsoft-edge
 keywords: エッジ-chromium、拡張機能の開発、ブラウザーの拡張機能、アドオン、パートナーセンター、開発者
-ms.openlocfilehash: 55f3520526a97ebbd8eeacf1c46f801b94599694
-ms.sourcegitcommit: ad5eb43172280974b8c063867c2097f7c5c0e77d
+ms.openlocfilehash: 87c5dbfdec65ae3957724ae846a06480a2488084
+ms.sourcegitcommit: d360e419b5f96f4f691cf7330b0d8dff9126f82e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "10898208"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "11015745"
 ---
 # Microsoft Edge 拡張機能の開発者として登録する  
 
-Microsoft Edge アドオンの web サイトに拡張機能を提出するには、[パートナーセンター][MicrosoftPartnerCenter]で microsoft edge プログラムを開発者として登録する必要があります。  Microsoft Edge プログラムへの拡張機能の送信には、登録料金は必要ありません。  
+Microsoft Edge アドオンの web サイトに拡張機能を提出するには、 [パートナーセンター][MicrosoftPartnerCenter]で microsoft edge プログラムを開発者として登録する必要があります。  Microsoft Edge プログラムへの拡張機能の送信には、登録料金は必要ありません。  
 
 ## 始める前に  
 
-アカウントを持っていない場合、またはパートナーセンターで既存の商用アカウントがある場合は、Microsoft Edge プログラムに登録するための新しい[microsoft アカウント (MSA)][WindowsCommunityEverythingAboutMicrosoftAccounts]を作成する必要があります。  Microsoft アカウント (Outlook/live/Hotmail \) を作成するには、 [account.microsoft.com][MicrosoftAccount]にアクセスし、[ **Microsoft アカウントの作成**] を選択します。  開発者アカウントでパートナーセンターに登録されている場合は、対応する Microsoft アカウント \ (MSA \) を使ってサインインし、Microsoft Edge プログラムに登録します。  
+アカウントを持っていない場合、またはパートナーセンターで既存の商用アカウントがある場合は、Microsoft Edge プログラムに登録するための新しい [microsoft アカウント (MSA)][WindowsCommunityEverythingAboutMicrosoftAccounts] を作成する必要があります。  Microsoft アカウント (Outlook/live/Hotmail \) を作成するには、 [account.microsoft.com][MicrosoftAccount] にアクセスし、[ **Microsoft アカウントの作成**] を選択します。  開発者アカウントでパートナーセンターに登録されている場合は、対応する Microsoft アカウント \ (MSA \) を使ってサインインし、Microsoft Edge プログラムに登録します。  
 
 > [!NOTE]
 > 現在、Microsoft Edge extensions チームは、職場または学校のアカウントにサインアップすることをサポートしていません。  今後、Microsoft Edge extensions チームは、AAD の管理のための MSA アカウントへの AAD テナントのリンクをサポートする予定です。  
 
 ## パートナーセンターで Microsoft Edge プログラムに登録する  
 
-1.  [[開発] ページ][MicrosoftPartnerCenter]に移動して、[**ダッシュボードに移動**] を選択します。  
+1.  [ [開発] ページ][MicrosoftPartnerCenter] に移動して、[ **ダッシュボードに移動**] を選択します。  
 1.  **Microsoft アカウント**でまだサインインしていない場合は、今すぐサインインするか、新しい microsoft アカウントを作成します。  開発者アカウントにサインインするときに使用するのと同じ Microsoft アカウントを使用します。  サインインすると、この登録フォームが表示されます。  
     
     Microsoft Edge プログラムに登録するには、アカウントにサインインして、フォームに入力します。  
@@ -124,13 +124,13 @@ Microsoft Edge アドオンの web サイトに拡張機能を提出するには
         For company accounts, provide the contact information \(name, email address, and phone number\) of your company approver.  Microsoft contacts the company approver specified as a part of the verification process to ensure that the extensions belong to your organization.  
         -->
 1. 登録フォームを送信する前に、 [Microsoft Edge 開発者契約][MicrosoftAppDeveloperAgreement]の条項と条件をお読みいただき、同意してください。  
-1. 登録手続きを完了するには、[**完了**] を選択します。  
+1. 登録手続きを完了するには、[ **完了**] を選択します。  
 
 ## 次のステップ  
 
-確認の状態は、パートナーセンターの [**アカウント設定**] ページで確認できます。  確認プロセスが完了するまで待ちます。引き続き申請の構築、テスト、準備を行うことができます。  
+確認の状態は、パートナーセンターの [ **アカウント設定** ] ページで確認できます。  確認プロセスが完了するまで待ちます。引き続き申請の構築、テスト、準備を行うことができます。  
 
-詳細については、「[拡張機能を発行する][ExtensionsChromiumPublishExtension]」を参照してください。  拡張機能の使用を開始する方法については、「 [Microsoft Edge (Chromium) 拡張機能の][ExtensionsChromiumGettingStartedIndex]概要」を参照してください。  
+詳細については、「 [拡張機能を発行する][ExtensionsChromiumPublishExtension]」を参照してください。  拡張機能の使用を開始する方法については、「 [Microsoft Edge (Chromium) 拡張機能の][ExtensionsChromiumGettingStartedIndex]概要」を参照してください。  
 
 <!-- links -->  
 

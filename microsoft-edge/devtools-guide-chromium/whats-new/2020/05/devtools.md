@@ -1,18 +1,18 @@
 ---
-description: Windows ハイコントラストモードの DevTools を使用して、DevTools のキーボードショートカットを VS コードに一致させることができます。
+description: Windows のハイコントラストモードの DevTools を使って、DevTools for Visual Studio コードのキーボードショートカットを検索します。
 title: DevTools の新機能 (Microsoft Edge 84)
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 09/01/2020
+ms.date: 09/11/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 62f261b381b0382561e166bca67f77f37225b764
-ms.sourcegitcommit: 63e6d34ff483f3b419a0e271a3513874e6ce6c79
+ms.openlocfilehash: 2752dec8bc7c4eec34ddde05a7dedff7bebef05f
+ms.sourcegitcommit: b337717957529239434b4e8e1e167aebf0543518
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "10992889"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "11015490"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -32,7 +32,7 @@ ms.locfileid: "10992889"
 
 ## Microsoft Edge DevTools チームからのお知らせ  
 
-以下のセクションでは、Microsoft Edge DevTools チームから見落とした可能性があるお知らせの一覧を示します。 これらを確認して、DevTools、VS コード拡張などの新機能を試してみてください。  開発者ツールの最新の機能と最大の機能を常に最新の状態に維持するには、 [Microsoft Edge preview チャネル][MicrosoftEdgePreviewChannels] をダウンロードして、 [Twitter に従っ][EdgeDevToolsTwitterAccount]てください。  
+以下のセクションでは、Microsoft Edge DevTools チームから見落とした可能性があるお知らせの一覧を示します。 それらを確認して、DevTools、Visual Studio コード拡張などの新機能を試してみてください。  開発者ツールの最新の機能と最大の機能を常に最新の状態に維持するには、 [Microsoft Edge preview チャネル][MicrosoftEdgePreviewChannels] をダウンロードして、 [Twitter に従っ][EdgeDevToolsTwitterAccount]てください。  
 
 ### Windows のハイコントラストモードで DevTools を使う
 
@@ -49,19 +49,19 @@ Windows がハイコントラストモードの場合は、Microsoft Edge DevToo
 
 Chromium の問題 [#1048378][CR1048378]  
 
-### 開発ツールのキーボードショートカットを VS コードに一致させる  
+### DevTools for Visual Studio コードのキーボードショートカットを一致させる  
 
-[フィードバック](#getting-in-touch-with-microsoft-edge-devtools-team)と[Chromium の公開問題の追跡][CRIssuesList]ツールでは、Microsoft Edge DevTools チームが、devtools でキーボードショートカットをカスタマイズする機能が必要であることを学習しました。  Microsoft Edge 84 では、DevTools のキーボードショートカットを、ショートカットのカスタマイズについてチームが作業している機能の1つである [VS コード][VSCode]に一致させることができるようになりました。  
+[フィードバック](#getting-in-touch-with-microsoft-edge-devtools-team)と[Chromium の公開問題の追跡][CRIssuesList]ツールでは、Microsoft Edge DevTools チームが、devtools でキーボードショートカットをカスタマイズする機能が必要であることを学習しました。  Microsoft Edge 84 では、DevTools と [Visual Studio コード][VSCode]のキーボードショートカットを一致させることができます。これは、ショートカットのカスタマイズのためにチームが作業している機能の1つにすぎません。  
 
-:::image type="complex" source="../../media/2020/05/keyboard-shortcut.msft.png" alt-text="開発ツールのキーボードショートカットを VS コードに一致させる" lightbox="../../media/2020/05/keyboard-shortcut.msft.png":::
+:::image type="complex" source="../../media/2020/05/keyboard-shortcut.msft.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる" lightbox="../../media/2020/05/keyboard-shortcut.msft.png":::
    ハイコントラストモードの Microsoft Edge DevTools  
 :::image-end:::  
 
 実験を試みるには、devtools `?` ![ ][ImageSettingsIcon] の右上隅にある [devtools の設定] アイコンをクリックまたは選択して、Devtools の設定を開きます。  [ **実験** ] セクションに移動し、[ユーザー設定の **キーボードショートカットを有効にする] をオンにします (再読み込みが必要)**。  次に、DevTools を再読み込みし、設定をもう一度開き、[ **ショートカット** ] セクションに移動します。  
 
-[**標準のショートカットキー**の選択] ドロップダウンで [ **Devtools (既定値)** ] を選び、[ **Visual Studio コード**] を選びます。  DevTools のキーボードショートカットは、VS コードで同等のアクションのショートカットと一致するようになりました。  
+[**標準のショートカットキー**の選択] ドロップダウンで [ **Devtools (既定値)** ] を選び、[ **Visual Studio コード**] を選びます。  DevTools のキーボードショートカットは、Visual Studio コードで同等のアクションのショートカットと一致するようになりました。  
 
-たとえば、 [VS コード][VSCodeShortcuts] でスクリプトを一時停止または実行し続けるためのキーボードショートカットは、 `F5` です。  **Devtools (既定)** の事前設定を使用すると、devtools の同じショートカットが `F8` **Visual Studio のコード**プリセットでも使用できるようになりました `F5` 。  
+たとえば、 [Visual Studio コード][VSCodeShortcuts] でスクリプトを一時停止または実行し続けるためのキーボードショートカットは、 `F5` です。  **Devtools (既定)** の事前設定を使用すると、devtools の同じショートカットが `F8` **Visual Studio のコード**プリセットでも使用できるようになりました `F5` 。  
 
 この機能は、現在 Microsoft Edge 84 で実験として提供されているので、チームと [フィードバック](#getting-in-touch-with-microsoft-edge-devtools-team) を共有してください。  
 
@@ -281,10 +281,10 @@ Windows または macOS を使用している場合は、 [Microsoft Edge previe
 
 <!-- image links -->  
 
-[ImageSettingsIcon]: /microsoft-edge/devtools-guide-chromium/media/settings-icon.msft.png "DevTools の設定アイコン"
-[ImageScreencastingIcon]: /microsoft-edge/devtools-guide-chromium/remote-debugging/images/toggle-screencast-icon.msft.png "DevTools トグル Screencasting アイコン"
-[ImageRefreshPageIcon]: /microsoft-edge/devtools-guide-chromium/media/refresh-page-icon.msft.png "DevTools のパフォーマンスパネルのページの更新アイコン"
-[ImageRecordIcon]: /microsoft-edge/devtools-guide-chromium/media/record-icon.msft.png "DevTools のパフォーマンスパネルのレコードアイコン"
+[ImageSettingsIcon]: /microsoft-edge/devtools-guide-chromium/remote-debugging/media/settings-icon.msft.png  
+[ImageScreencastingIcon]: /microsoft-edge/devtools-guide-chromium/remote-debugging/media/toggle-screencast-icon.msft.png  
+[ImageRefreshPageIcon]: /microsoft-edge/devtools-guide-chromium/remote-debugging/media/refresh-page-icon.msft.png  
+[ImageRecordIcon]: /microsoft-edge/devtools-guide-chromium/remote-debugging/media/record-icon.msft.png  
 
 <!-- links -->  
 

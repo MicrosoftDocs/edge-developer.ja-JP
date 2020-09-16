@@ -3,17 +3,17 @@ description: Microsoft Edge WebView2 コントロールを使用してネイテ�
 title: WebView2 について CoreWebView2Environment
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 09/10/2020
+ms.date: 09/11/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: WebView2、Core、WebView2、webview、.net、wpf、winforms、アプリ、edge、CoreWebView2、CoreWebView2Controller、browser control、edge html、Microsoft の WebView2。 CoreWebView2Environment。
-ms.openlocfilehash: c6b1f1c62da5aa5ef64693575abb9cb46ac13851
-ms.sourcegitcommit: 0faf538d5033508af4320b9b89c4ed99872f0574
+ms.openlocfilehash: 05b8a10c723ae57b2c95551f4d5043f3336eba3b
+ms.sourcegitcommit: 65db518273b3cd69f1b3c528809600719b9b70aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "11012286"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "11016327"
 ---
 # WebView2 クラス (CoreWebView2Environment クラス) 
 
@@ -28,15 +28,16 @@ ms.locfileid: "11012286"
 --------------------------------|---------------------------------------------
 [この文字列](#browserversionstring) | CoreWebView2Environment が安定していない場合は、チャネル名を含む現在ののブラウザーバージョン情報。
 [新機能をご利用いただけます](#newbrowserversionavailable) | 最新バージョンの Edge ブラウザーがインストールされていて、WebView2 で使用できるようになったときに呼び出される新機能。
+[CompareBrowserVersions](#comparebrowserversions) | ブラウザーのバージョンを比較して、一致しているか、異なるかを確認します。
+[CreateAsync](#createasync) | インストールされている Microsoft Edge のバージョンを使って、evergreen WebView2 環境を作成します。
 [CreateCoreWebView2CompositionControllerAsync](#createcorewebview2compositioncontrollerasync) | ビジュアルホスティングで使用する新しい WebView を非同期的に作成します。
 [CreateCoreWebView2ControllerAsync](#createcorewebview2controllerasync) | 新しい WebView を非同期的に作成します。
 [CreateCoreWebView2PointerInfo](#createcorewebview2pointerinfo) | 空の CoreWebView2PointerInfo を作成します。
 [CreateWebResourceResponse](#createwebresourceresponse) | 新しい web リソース応答オブジェクトを作成します。
+[Getserverした文字列](#getavailablebrowserversionstring) | ブラウザーのバージョン情報を取得します。
 [GetProviderForHwnd](#getproviderforhwnd) | 指定された HWND に対応する CoreWebView2CompositionController の UI オートメーションプロバイダーを返します。
 
 WebViews は、環境パラメーターと共に指定したブラウザープロセスで実行され、環境から作成されたオブジェクトを同じ環境で使う必要があります。 異なる環境での使用は、互換性が保証されるとは限りません。また、失敗する可能性があります。 
-
-WebViews は、環境パラメーターと共に指定したブラウザープロセスで実行され、環境から作成されたオブジェクトを同じ環境で使う必要があります。 異なる環境での使用は、互換性が保証されるとは限りません。また、失敗する可能性があります。
 
 ## Members
 
@@ -57,6 +58,34 @@ CoreWebView2Environment が安定していない場合は、チャネル名を�
 新しいバージョンのブラウザーを使用するには、新しい環境と WebView を作成する必要があります。 このイベントは、コードが実行されているのと同じエッジチャネルから新しいバージョンの場合にのみ発生します。 インストールされている Edge で実行されていない場合、イベントは発生しません。
 
 ユーザーデータフォルダーは一度に1つのブラウザープロセスでしか使用できないため、WebViews で新しいバージョンのブラウザーを使用して同じユーザーデータフォルダーを使用する場合は、最初に古いバージョンのブラウザーを使用している環境と WebViews を閉じる必要があります。 または、単に、アプリを再起動するようにユーザーに求めます。
+
+#### CompareBrowserVersions 
+
+ブラウザーのバージョンを比較して、一致しているか、異なるかを確認します。
+
+> パブリック静的な int [CompareBrowserVersions](#comparebrowserversions)(文字列 version1、文字列 version2)
+
+最初のバージョンが比較されている2番目のバージョンより小さいか、等しいか、それよりも大きいかに応じて、-1、0、または1を返します。
+
+入力では、GetAvailableCoreWebView2BrowserVersionString から取得した versionInfo を直接使うことができます。チャネル情報は無視されます。
+
+##### パラメーター
+* `version1` 比較する最初のバージョン。 
+
+* `version2` 比較する2つ目のバージョン。
+
+#### CreateAsync 
+
+インストールされている Microsoft Edge のバージョンを使って、evergreen WebView2 環境を作成します。
+
+> パブリック静的非同期タスク< [CoreWebView2Environment](microsoft-web-webview2-core-corewebview2environment.md)  >  [createasync](#createasync)(string browserexecutablefolder、文字列 userdatafolder、CoreWebView2EnvironmentOptions options)
+
+##### パラメーター
+* `browserExecutableFolder` WebView2 ランタイムの修正されたバージョンを含むフォルダーへの相対パスです。 
+
+* `userDataFolder` userDataFolder を指定して、WebView2 の既定のユーザーデータフォルダーの場所を変更できます。 
+
+* `options` WebView2 環境の作成に使用するオプション。
 
 #### CreateCoreWebView2CompositionControllerAsync 
 
@@ -100,6 +129,17 @@ parentWindow は、WebView を表示して入力を受け取る HWND です。 W
 
 ヘッダーは、改行で区切られた直接応答ヘッダー文字列です。 空のヘッダー文字列を使ってこのオブジェクトを作成し、CoreWebView2HttpResponseHeaders を使用してヘッダー行を1行ずつ作成することもできます。 その他のパラメーターについては、「CoreWebView2WebResourceResponse」を参照してください。
 
+#### Getserverした文字列 
+
+ブラウザーのバージョン情報を取得します。
+
+> パブリック静的な文字列 [Getserverの](#getavailablebrowserversionstring)文字列 (String browserExecutableFolder)
+
+チャネルが安定していない場合は、チャネル名も表示されます。 WebView2 ランタイムを使っている場合、チャネル名は返されません。
+
+##### パラメーター
+* `browserExecutableFolder` WebView2 ランタイムの修正されたバージョンを含むフォルダーへの相対パスです。
+
 #### GetProviderForHwnd 
 
 [!INCLUDE [prerelease-note](../../includes/prerelease-note.md)]
@@ -107,4 +147,3 @@ parentWindow は、WebView を表示して入力を受け取る HWND です。 W
 指定された HWND に対応する CoreWebView2CompositionController の UI オートメーションプロバイダーを返します。
 
 > パブリックオブジェクト [Getproviderforhwnd](#getproviderforhwnd)(IntPtr hwnd)
-

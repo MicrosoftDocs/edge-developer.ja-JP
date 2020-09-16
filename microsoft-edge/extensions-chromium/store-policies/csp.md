@@ -3,20 +3,20 @@ description: Edge (Chromium) 拡張機能のコンテンツセキュリティポ
 title: コンテンツセキュリティポリシー (CSP)
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 12/09/2019
+ms.date: 09/15/2020
 ms.topic: article
-ms.prod: microsoft-edge-chromium
+ms.prod: microsoft-edge
 keywords: edge-chromium、拡張機能の開発、ブラウザーの拡張、アドオン、パートナーセンター、開発者
-ms.openlocfilehash: 52d6d0afb38401250183788726013d521a269f06
-ms.sourcegitcommit: 6860234c25a8be863b7f29a54838e78e120dbb62
+ms.openlocfilehash: f3769639465d048c42ad0705f74598fbd1db8a20
+ms.sourcegitcommit: d360e419b5f96f4f691cf7330b0d8dff9126f82e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "10569540"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "11015717"
 ---
 # コンテンツセキュリティポリシー \ (CSP \)  
 
-大量の潜在的なクロスサイトスクリプティングの問題を軽減するために、Microsoft Edge 拡張システムには、[コンテンツセキュリティポリシー \ (CSP \)][W3CContentSecurityPolicy]の一般的な概念が組み込まれています。  これにより、既定で拡張機能の安全性を高めるための厳格なポリシーがいくつか導入され、拡張機能やアプリケーションで読み込みと実行が可能なコンテンツの種類を管理するためのルールを作成して適用することができます。  
+大量の潜在的なクロスサイトスクリプティングの問題を軽減するために、Microsoft Edge 拡張システムには、 [コンテンツセキュリティポリシー \ (CSP \)][W3CContentSecurityPolicy]の一般的な概念が組み込まれています。  これにより、既定で拡張機能の安全性を高めるための厳格なポリシーがいくつか導入され、拡張機能やアプリケーションで読み込みと実行が可能なコンテンツの種類を管理するためのルールを作成して適用することができます。  
 
 一般的に、CSP は、拡張機能によって読み込みまたは実行されるリソースのブロック/allowlisting 機構として機能します。  拡張機能に適したポリシーを定義することで、拡張機能に必要なリソースを慎重に検討し、拡張機能によってアクセスできる唯一のリソースかどうかをブラウザーに確認することができます。  これらのポリシーは、拡張要求に対するホストのアクセス許可よりも、セキュリティを提供します。これは、保護の追加レイヤーであり、置き換えるものではありません。  
 
@@ -30,7 +30,7 @@ Web 上のポリシーは、HTTP ヘッダーまたは要素によって定義�
 }
 ```  
 
-> CSP の構文について詳しくは、「[コンテンツセキュリティポリシーの仕様][W3CContentSecurityPolicy]」と「HTML5Rocks の[「コンテンツセキュリティポリシーの概要」][HTML5RocksIntroductionContentSecurityPolicy]をご覧ください。  
+> CSP の構文について詳しくは、「 [コンテンツセキュリティポリシーの仕様][W3CContentSecurityPolicy] 」と「HTML5Rocks の [「コンテンツセキュリティポリシーの概要」][HTML5RocksIntroductionContentSecurityPolicy] をご覧ください。  
 
 ## 既定のポリシーの制限  
 
@@ -194,7 +194,7 @@ JQuery \ (または他のライブラリ \) で外部 CDN から読み込みを�
 
 As of Chrome 46, -->  
 
-インラインスクリプトを許可するには、ポリシーのソースコードの base64 でエンコードされたハッシュを指定します。  このハッシュのプレフィックスは、使用されているハッシュアルゴリズム \ (sha256、sha384、または sha512 \) である必要があります。  例については、「 [\ <スクリプト \ > 要素のハッシュの使用状況][W3CContentSecurityPolicyLevel2ScriptSrcHashUsage]」を参照してください。  
+インラインスクリプトを許可するには、ポリシーのソースコードの base64 でエンコードされたハッシュを指定します。  このハッシュのプレフィックスは、使用されているハッシュアルゴリズム \ (sha256、sha384、または sha512 \) である必要があります。  例については、「 [ \<script\> 要素のハッシュの使用状況][W3CContentSecurityPolicyLevel2ScriptSrcHashUsage] 」を参照してください。  
 
 **リモートスクリプト**  
 
@@ -294,8 +294,8 @@ script.innerHTML = 'eval("alert(1);")';
 [WikiManMiddleAttacks]: https://en.wikipedia.org/wiki/Man-in-the-middle_attack "Man-in-the-middle 攻撃-Wikipedia (Wikipedia)"  
 
 > [!NOTE]
-> このページの一部は、 [Google によっ][GoogleSitePolicies]て作成および共有され、[クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
-> 元のページは[ここ](https://developer.chrome.com/extensions/contentSecurityPolicy)にあります。  
+> このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
+> 元のページは [ここ](https://developer.chrome.com/extensions/contentSecurityPolicy)にあります。  
 
 [![クリエイティブコモンズライセンス][CCby4Image]][CCA4IL]  
 この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。  

@@ -3,16 +3,16 @@ description: Chromium Extension の概要と、オプション、コンテンツ
 title: Microsoft Edge (Chromium) の拡張機能の概要
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 07/29/2020
+ms.date: 09/15/2020
 ms.topic: article
-ms.prod: microsoft-edge-chromium
+ms.prod: microsoft-edge
 keywords: edge-chromium、web 開発、html、css、javascript、開発者、拡張機能
-ms.openlocfilehash: c2b24dc3d5535beeef6a4255b6fe2439fb67b77d
-ms.sourcegitcommit: 19ef1422733ef1fd051d2b4f0263ce191e8d67bc
+ms.openlocfilehash: 31bb970201e8fe66c9996938fe8461d503d9c6a1
+ms.sourcegitcommit: d360e419b5f96f4f691cf7330b0d8dff9126f82e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "10902837"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "11015724"
 ---
 # Microsoft Edge \ (Chromium \) Extensions の概要  
 

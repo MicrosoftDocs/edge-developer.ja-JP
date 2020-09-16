@@ -3,16 +3,16 @@ description: Microsoft Edge DevTools のアニメーションのインスペク�
 title: アニメーションの検査
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 09/01/2020
+ms.date: 09/15/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: a74a401edf5331f2dd3c1bf574110241f616d9f6
-ms.sourcegitcommit: 63e6d34ff483f3b419a0e271a3513874e6ce6c79
+ms.openlocfilehash: e867cc373286666f73bee3b8fb886f60fa1b94f6
+ms.sourcegitcommit: d360e419b5f96f4f691cf7330b0d8dff9126f82e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "10992828"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "11015773"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -28,13 +28,7 @@ ms.locfileid: "10992828"
    See the License for the specific language governing permissions and
    limitations under the License.  -->  
 
-
-
-
-
-# アニメーションの検査   
-
-
+# アニメーションの検査  
 
 Microsoft Edge DevTools のアニメーションのインスペクターを使って、アニメーションの検査と変更を行います。  
 
@@ -48,7 +42,7 @@ Microsoft Edge DevTools のアニメーションのインスペクターを使�
 *   1つずつ減速して、1つずつ再生するか、ソースコードを表示して、アニメーションを検査します。  
 *   タイミング、遅延、再生時間、またはキーフレームのオフセットを変更して、アニメーションを変更します。  
 
-## 概要   
+## 概要  
 
 Microsoft Edge DevTools アニメーションのインスペクターには、2つの主な目的があります。  
 
@@ -85,8 +79,8 @@ Microsoft Edge DevTools アニメーションのインスペクターには、2�
 
 アニメーションの検査は、4つのメインセクション \ (またはウィンドウ \) にグループ化されています。  このガイドでは、各ウィンドウについて次のことを示します。  
 
-| | ウィンドウ | 説明 |  
-| --- |:--- |:--- |  
+| インデックス | ウィンドウ | 説明 |  
+|:--- |:--- |:--- |  
 | 件 | **コントロール** | ここでは、現在キャプチャされているすべてのアニメーショングループをクリアするか、現在選択されているアニメーショングループの速度を変更することができます。 |  
 | 両面 | **概要** | ここでアニメーショングループを選択して、 **詳細** ウィンドウで確認して変更します。 |  
 | - | **タイムライン** | ここからアニメーションを一時停止して開始するか、アニメーション内の特定のポイントにジャンプします。 |  
@@ -104,7 +98,7 @@ Microsoft Edge DevTools アニメーションのインスペクターには、2�
 
 <!--  > [!VIDEO animations/capture-animations.mp4]  -->  
 
-## アニメーションの検査   
+## アニメーションの検査  
 
 アニメーションをキャプチャした後は、いくつかの方法で再生できます。  
 
@@ -138,7 +132,7 @@ Microsoft Edge DevTools アニメーションのインスペクターには、2�
    色分けされたアニメーション  
 :::image-end:::  
 
-## アニメーションの変更   
+## アニメーションの変更  
 
 アニメーションインスペクターでアニメーションを変更するには、3つの方法があります。  
 
@@ -170,11 +164,9 @@ Microsoft Edge DevTools アニメーションのインスペクターには、2�
    変更遅延  
 :::image-end:::  
 
-<!--  
-  
+## Microsoft Edge DevTools チームと連絡を取る  
 
-
--->  
+[!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
 <!-- image links -->  
 

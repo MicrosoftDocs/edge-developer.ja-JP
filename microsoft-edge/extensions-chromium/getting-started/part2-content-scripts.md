@@ -1,22 +1,24 @@
 ---
-description: 拡張機能の概要パート1
+description: 拡張機能の概要パート2
 title: コンテンツスクリプトを使用して、ページ本文タグの下に NASA 画像を動的に挿入する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 05/08/2020
+ms.date: 09/15/2020
 ms.topic: article
-ms.prod: microsoft-edge-chromium
+ms.prod: microsoft-edge
 keywords: edge-chromium、web 開発、html、css、javascript、開発者、拡張機能
-ms.openlocfilehash: b37184f0188b72ec868ab3de3f2341c0694ee42c
-ms.sourcegitcommit: 0bc1312a1e6a0ac37cf385201db4361fc05184fc
+ms.openlocfilehash: 586f0427241e5f01b63a22ce204484dc5e8cf154
+ms.sourcegitcommit: d360e419b5f96f4f691cf7330b0d8dff9126f82e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "10683645"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "11015759"
 ---
 # コンテンツスクリプトを使用して、ページ本文タグの下に NASA 画像を動的に挿入する  
-  
-[このパートの完成した拡張パッケージソース][ArchiveExtensionGettingStartedPart2]  
+
+<!--  
+[Completed Extension Package Source for This Part][ArchiveExtensionGettingStartedPart2]  
+-->  
 
 ## 概要  
 
@@ -61,8 +63,8 @@ ms.locfileid: "10683645"
 
 拡張機能を更新して拡張機能起動アイコンを選ぶと、次のポップアップに表示される [表示] ボタンが表示されます。  
 
-:::image type="complex" source="./media/part2-popupdialog.png" alt-text="拡張子アイコンを押した後のポップアップ表示":::
-   拡張子アイコンを押した後のポップアップ表示
+:::image type="complex" source="./media/part2-popupdialog.png" alt-text="拡張アイコンを押した後に表示される l popup.htm":::
+   拡張アイコンを押した後に表示される l popup.htm
 :::image-end:::
 
 <!--![popup.html display after pressing the Extension icon][ImagePart2Popupdialog]  -->  
@@ -139,7 +141,7 @@ extension://inigobacliaghocjiapeaaoemkjifjhp/images/stars.jpeg
 
 `popup.js`現在のアクティブなタブページに埋め込まれたコンテンツページにメッセージを送信するためのコードをファイルに書き込みましたが、そのコンテンツページを作成して挿入していません。  これを実行します。  
 
-## コンテンツと web アクセス用のマニフェストの更新  
+## コンテンツと web アクセスの manifest.jsを更新する  
 
 And を含む更新は次のように `manifest.json` `content-scripts` `web_accessible_resources` なります。  
 
@@ -172,7 +174,7 @@ And を含む更新は次のように `manifest.json` `content-scripts` `web_acc
 }
 ```  
 
-追加したセクションは `content_scripts` です。  この属性が設定されて `matches` `<all_urls>` いる場合、 **content_scripts**セクションに含まれるすべてのファイルが、読み込まれるたびにすべてのブラウザータブページに挿入されることを意味します。  ここに挿入できるファイルの種類は、javascript と css です。  も追加されました `libjquery.min.js` 。  このセクションの一番上に記載されているダウンロードからそのような情報を含めることができます。  
+追加したセクションは `content_scripts` です。  この属性が設定されて `matches` `<all_urls>` いる場合、 **content_scripts** セクションに含まれるすべてのファイルが、読み込まれるたびにすべてのブラウザータブページに挿入されることを意味します。  ここに挿入できるファイルの種類は、javascript と css です。  も追加されました `libjquery.min.js` 。  このセクションの一番上に記載されているダウンロードからそのような情報を含めることができます。  
 
 ## JQuery の追加と関連するスレッドの理解  
 
@@ -217,10 +219,10 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 
 ## 選択時に表示されている画像を削除する機能の追加  
 
-これで、任意のページを参照して**拡張機能**アイコンを選択すると、次のようにポップアップメニューが表示されます。  
+これで、任意のページを参照して **拡張機能** アイコンを選択すると、次のようにポップアップメニューが表示されます。  
 
-:::image type="complex" source="./media/part2-popupdialog.png" alt-text="拡張子アイコンを押した後のポップアップ表示":::
-   拡張子アイコンを押した後のポップアップ表示
+:::image type="complex" source="./media/part2-popupdialog.png" alt-text="拡張アイコンを押した後に表示される l popup.htm":::
+   拡張アイコンを押した後に表示される l popup.htm
 :::image-end:::
 
 <!--![popup.html display after pressing the Extension icon][ImagePart2Popupdialog]  -->  

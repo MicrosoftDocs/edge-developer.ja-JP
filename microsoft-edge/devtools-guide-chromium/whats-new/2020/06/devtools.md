@@ -3,22 +3,22 @@ description: CSS grid のデバッグ機能、ネットワークコンソール�
 title: DevTools の新機能 (Microsoft Edge 85)
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 09/01/2020
+ms.date: 09/11/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 96ad9a4f21c36135013033fa4de31281fe6c4e83
-ms.sourcegitcommit: 63e6d34ff483f3b419a0e271a3513874e6ce6c79
+ms.openlocfilehash: 01651bdf0f36f7c175f843655c275695a680b6c1
+ms.sourcegitcommit: b337717957529239434b4e8e1e167aebf0543518
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "10993612"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "11015462"
 ---
 # DevTools の新機能 (Microsoft Edge 85)  
 
 ## Microsoft Edge DevTools チームからのお知らせ  
 
-以下のセクションでは、Microsoft Edge DevTools チームから見落とした可能性があるお知らせの一覧を示します。  このお知らせを参照して、DevTools、VS コード拡張などの新機能を試してみてください。  開発者ツールの最新の機能と最大の機能を常に最新の状態に維持するには、 [Microsoft edge preview チャネル][MicrosoftEdgePreviewChannels] をダウンロードして、 [Twitter の Microsoft edge devtools チームに従い][EdgeDevToolsTwitterAccount]ます。  
+以下のセクションでは、Microsoft Edge DevTools チームから見落とした可能性があるお知らせの一覧を示します。  Visual Studio コード拡張機能などの新機能を試すには、お知らせを参照してください。  開発者ツールの最新の機能と最大の機能を常に最新の状態に維持するには、 [Microsoft edge preview チャネル][MicrosoftEdgePreviewChannels] をダウンロードして、 [Twitter の Microsoft edge devtools チームに従い][EdgeDevToolsTwitterAccount]ます。  
 
 ### CSS grid のデバッグ機能  
 
@@ -245,8 +245,8 @@ Chromium の問題 [#1071432][CR1071432]
 
 [ソースパネルエディター][DevtoolsSourcesEditCssJavascript]で選択なしでコピーまたは切り取りを実行すると、devtools で現在のコンテンツの行がコピーまたは切り取りられます。  
 
-:::image type="complex" source="../../media/2020/06/line-wise-cut.msft.png" alt-text="カーソルが行5の最後にある状態で、DevTools の pen.js から行全体をコピーして、VS コードに貼り付けます。" lightbox="../../media/2020/06/line-wise-cut.msft.png":::
-   カーソルが行5の最後にある状態で、DevTools の **pen.js** から行全体をコピーして、 [VS コード][VSCode]に貼り付けます。
+:::image type="complex" source="../../media/2020/06/line-wise-cut.msft.png" alt-text="カーソルが行5の最後にある状態で、DevTools の pen.js から行全体をコピーし、Visual Studio コードを貼り付けます。" lightbox="../../media/2020/06/line-wise-cut.msft.png":::
+   カーソルが5行目の最後にある状態で、DevTools の **pen.js** から行全体をコピーし、 [Visual Studio コード][VSCode]を貼り付けます。
 :::image-end:::  
 
 Chromium の問題 [#800028][CR800028]
@@ -260,7 +260,7 @@ Chromium の問題 [#800028][CR800028]
 たとえば、前の例で `hello` は、グループの同様のチェックマークがオフになっているにもかかわらず、DevTools がメッセージのグループ **化** を解除しました。  これで、 `hello` メッセージはグループ解除されます。  
 
 :::image type="complex" source="../../media/2020/06/ungroup-similar.msft.png" alt-text="[グループ類似] がオフの場合、hello メッセージはグループ解除されます。" lightbox="../../media/2020/06/ungroup-similar.msft.png":::
-   [ **グループ類似]** がオフの場合、 `hello` メッセージはグループ解除されます。
+   [ **グループ類似]** がオフの場合、メッセージはグループ解除 `hello` されます。
 :::image-end:::  
 
 この機能については、 [コンソールに重複したメッセージを送信するサンプル][CodepenZoherghadyaliZyrjgdJ]を試してみてください。  
@@ -303,7 +303,7 @@ Chromium の問題 [#974550][CR974550]
 
 ### ブレークポイント、条件付きブレークポイント、および logpoints の新しいアイコン  
 
-[ **ソース** ] パネルには、ブレークポイント、条件付きブレークポイント、および logpoints の新しいデザインが用意されています。  ブレークポイントは、 [VS コード][VSCode] と [Visual Studio][VS]と同様に、赤い円で表されます。  条件付きブレークポイントと logpoints を区別するためにアイコンが追加されます。  
+[ **ソース** ] パネルには、ブレークポイント、条件付きブレークポイント、および logpoints の新しいデザインが用意されています。  ブレークポイントは、 [Visual Studio コード][VSCode] と [visual studio][VS]と同様に、赤い円で表されます。  条件付きブレークポイントと logpoints を区別するためにアイコンが追加されます。  
 
 :::image type="complex" source="../../media/2020/06/breakpoints.msft.png" alt-text="ブレークポイント" lightbox="../../media/2020/06/breakpoints.msft.png":::
    ブレークポイント  

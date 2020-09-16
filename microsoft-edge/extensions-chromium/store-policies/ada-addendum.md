@@ -3,16 +3,16 @@ description: Microsoft Edge の ADA 補遺
 title: ADA 補遺
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/11/2020
+ms.date: 09/15/2020
 ms.topic: article
-ms.prod: microsoft-edge-chromium
+ms.prod: microsoft-edge
 keywords: edge-chromium、拡張機能の開発、ブラウザーの拡張、アドオン、パートナーセンター、開発者
-ms.openlocfilehash: 323ae9976d9f5d73d20a492cefc4be594315cf22
-ms.sourcegitcommit: 6860234c25a8be863b7f29a54838e78e120dbb62
+ms.openlocfilehash: 40147cd32f2dcd2c0069d34b5751305819834a22
+ms.sourcegitcommit: d360e419b5f96f4f691cf7330b0d8dff9126f82e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "10569541"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "11015668"
 ---
 # Microsoft Edge プログラムユーザー向けのアプリ開発者契約 (補遺)  
 

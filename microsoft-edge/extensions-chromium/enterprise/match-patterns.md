@@ -1,24 +1,24 @@
 ---
 description: Edge (Chromium) 拡張機能のエンタープライズポリシードキュメント。
-title: マッチパターン
+title: 一致パターン
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 12/05/2019
+ms.date: 09/15/2020
 ms.topic: article
-ms.prod: microsoft-edge-chromium
+ms.prod: microsoft-edge
 keywords: edge-chromium、拡張機能の開発、ブラウザーの拡張、アドオン、パートナーセンター、開発者
-ms.openlocfilehash: 16f54fcdc127822e89e050c367a681d886b0c8d0
-ms.sourcegitcommit: 6860234c25a8be863b7f29a54838e78e120dbb62
+ms.openlocfilehash: 59427769a010ca774833a809d3025e7594634202
+ms.sourcegitcommit: d360e419b5f96f4f691cf7330b0d8dff9126f82e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "10569579"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "11015661"
 ---
-# マッチパターン
+# 一致パターン
 
 ホストのアクセス許可とコンテンツスクリプトの一致は、一致パターンによって定義された一連の Url に基づいています。  一致パターンは、基本的に、許可されたスキーム (、、、 `http` `https` または) で始まり、 `file` `ftp` "" 文字を含むことができる URL です `*` 。  特殊なパターンは、 `<all_urls>` 許可されたスキームで始まる任意の URL と一致します。  各一致パターンには3つの部分があります。  
 
-*   _スキーム_: `http` or `file` など `*`  
+*   _スキーム_ : `http` or `file` など `*`  
 
 > [!NOTE]
 > Url へのアクセス `file` は、自動的には行われません。  ユーザーは、[拡張機能の管理] ページにアクセスして、 `file` 要求された各拡張機能へのアクセスをオプトインする必要があります。  
@@ -61,8 +61,8 @@ ms.locfileid: "10569579"
 一部のスキームは、すべてのコンテキストでサポートされていません。
 
 > [!NOTE]
-> このページの一部は、 [Google によっ][GoogleSitePolicies]て作成および共有され、[クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
-> 元のページは[ここ](https://developer.chrome.com/extensions/match_patterns/)にあります。  
+> このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
+> 元のページは [ここ](https://developer.chrome.com/extensions/match_patterns/)にあります。  
 
 [![クリエイティブコモンズライセンス][CCby4Image]][CCA4IL]  
 この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。  

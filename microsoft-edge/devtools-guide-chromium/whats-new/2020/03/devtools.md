@@ -3,16 +3,16 @@ description: カラービジョンの欠陥のエミュレート、コマンド�
 title: DevTools の新機能 (Microsoft Edge 83)
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 09/01/2020
+ms.date: 09/11/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 8ce8979a7128217b72aee42c05a0048b511f9cae
-ms.sourcegitcommit: 6b577cb118f34f3ff2c65eab2908b65f155dc151
+ms.openlocfilehash: f9eb306ab7b30495c91ff4a70797898459d7e722
+ms.sourcegitcommit: b337717957529239434b4e8e1e167aebf0543518
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "11004329"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "11015483"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -36,14 +36,14 @@ Microsoft Edge 83 の DevTools で利用できる新機能を紹介します。
 
 ## Microsoft Edge DevTools チームからのお知らせ  
 
-以下のセクションでは、Microsoft Edge DevTools チームから見落とした可能性があるお知らせの一覧を示します。 これらを確認して、DevTools、VS コード拡張などの新機能を試してみてください。  開発者ツールの最新の機能と最大の機能を常に最新の状態に維持するには、 [Microsoft Edge preview チャネル][MicrosoftEdgePreviewChannels] をダウンロードして、 [Twitter に従っ][EdgeDevToolsTwitterAccount]てください。  
+以下のセクションでは、Microsoft Edge DevTools チームから見落とした可能性があるお知らせの一覧を示します。 それらを確認して、DevTools、Visual Studio コード拡張などの新機能を試してみてください。  開発者ツールの最新の機能と最大の機能を常に最新の状態に維持するには、 [Microsoft Edge preview チャネル][MicrosoftEdgePreviewChannels] をダウンロードして、 [Twitter に従っ][EdgeDevToolsTwitterAccount]てください。  
 
 ### Windows 10 デバイスで Microsoft Edge をリモートでデバッグする  
 
 Microsoft [Edge \ (ベータ版) アプリのリモートツール][RemoteTools] は、 [microsoft Store][MicrosoftStore]で利用できるようになりました。  [Windows Device Portal][WindowsUwpDebugTestPerfDevicePortal]を拡張するこのアプリを使うと、開発用コンピューター上で実行されている microsoft edge のインスタンスからリモートの windows 10 デバイスに接続することができます。ターゲットの一覧 (Microsoft Edge と Pwas は Windows 10 デバイスで開か[れていました][PprgressiveWebAppsChromiumIndex]) をご覧ください。また、開発用コンピューターで、リモートの windows 10 デバイスで実行さ  
 
 :::image type="complex" source="../../media/2020/03/remote-tools.msft.png" alt-text="Microsoft Store で利用できる Microsoft Edge (ベータ版) アプリのリモートツール" lightbox="../../media/2020/03/remote-tools.msft.png":::
-   図 1: microsoft [Store][MicrosoftStore]で利用できる[Microsoft Edge (ベータ版) アプリのリモートツール][RemoteTools]  
+   Microsoft [Store][MicrosoftStore]で利用できる[Microsoft Edge (ベータ版) アプリのリモートツール][RemoteTools]  
 :::image-end:::  
 
 [Windows 10 デバイスと、リモートデバッグ用の開発マシンのセットアップガイドを参照][DevtoolsRemoteDebuggingWindows]してください。  [ツイート][PostTweetEdgeDevTools]または [[フィードバックの送信](#getting-in-touch-with-microsoft-edge-devtools-team)] アイコンをクリックして、リモートデバッグのエクスペリエンスについてお知らせください。  
@@ -53,13 +53,13 @@ Microsoft [Edge \ (ベータ版) アプリのリモートツール][RemoteTools]
 Devtools にはさまざまな設定が用意されており、これらをカスタマイズして、開発者向けツールの外観、操作性、および作業を行うことができます。 Microsoft Edge 83 では、DevTools の [設定][DevtoolsCustomizeIndexSettings] へのアクセスが非常に簡単になりました。 [コンソール通知] の横にある歯車アイコンとメインメニューの [設定] を開きます。  
 
 :::image type="complex" source="../../media/2020/03/settings.msft.png" alt-text="歯車アイコンによって、DevTools の設定が開きます。" lightbox="../../media/2020/03/settings.msft.png":::
-   図 2: 歯車アイコンによって [DevTools] の **設定** が開きます。  
+   歯車アイコンによって、DevTools の **設定** が開きます。  
 :::image-end:::  
 
 [**その他のツール**] の下にある**メインメニュー**から[設定][DevtoolsCustomizeIndexSettings]を開くこともできます。
 
 :::image type="complex" source="../../media/2020/03/settings2.msft.png" alt-text="> の [その他のツール > 設定] のメインメニュー" lightbox="../../media/2020/03/settings2.msft.png":::
-   図 3:**メインメニューの [**  >  **その他のツール**]  >  **設定**  
+   **メインメニュー**  > **その他のツール**  > **設定**  
 :::image-end:::  
 
 Chromium の問題 [#1050855][CR1050855]
@@ -69,7 +69,7 @@ Chromium の問題 [#1050855][CR1050855]
 DevTools の情報通知バー \ (infobars) では、見栄えと機能が改善されました。 Microsoft Edge 83 では、適切な操作をすぐに行うことができるように、infobars ボタンが読みやすく、提供されています。  
 
 :::image type="complex" source="../../media/2020/03/infobar.msft.png" alt-text="Microsoft Edge 83 で縮小版のファイルをきれいに印刷するための情報バー" lightbox="../../media/2020/03/infobar.msft.png":::
-   図 4: Microsoft Edge バージョン83でミニのファイルをきれいに印刷するための情報バー  
+   Microsoft Edge バージョン83でミニのファイルを印刷するための情報バー  
 :::image-end:::  
 
 Chromium の問題 [#1056348][CR1056348]
@@ -79,7 +79,7 @@ Chromium の問題 [#1056348][CR1056348]
 [カラーピッカー][DevtoolsCssReferenceColorPicker]は、変更と宣言のための[要素パネル][DevtoolsCssIndex]の GUI です `color` `background-color` 。  以前のバージョンの Microsoft Edge では、キーボードを使って[カラーピッカー][DevtoolsCssReferenceColorPicker]の [**階調**] セクションを移動できませんでした。  
 
 :::image type="complex" source="../../media/2020/03/color-picker.msft.png" alt-text="これでキーボードを使用して、カラーピッカーの [階調] セクションでセレクターを移動できるようになりました" lightbox="../../media/2020/03/color-picker.msft.png":::
-   図 5: キーボードを使用して、[カラーピッカー][DevtoolsCssReferenceColorPicker]の [**階調**] セクションでセレクターを移動できるようになりました  
+   これでキーボードを使用して、[カラーピッカー][DevtoolsCssReferenceColorPicker]の [**階調**] セクションでセレクターを移動できるようになりました  
 :::image-end:::  
 
 Microsoft Edge 83 では、キーボードを使用して、カラーピッカーの [ **階調** ] セクションでセレクターを移動できるようになりました。  
@@ -91,13 +91,13 @@ Chromium の問題 [#963183][CR963183]
 Microsoft Edge 81 以前では、[[要素] パネル][DevtoolsCssIndex]の [**プロパティ] タブ**は、ページの更新によって解除されました。  ページを更新すると、[ **プロパティ] タブ** に現在選択されている要素のプロパティが設定されませんでした。  
 
 :::image type="complex" source="../../media/2020/03/properties-in-81.msft.png" alt-text="Microsoft Edge 81 以前のバージョンでは、ページの更新後に [プロパティ] タブが空白になっていました" lightbox="../../media/2020/03/properties-in-81.msft.png":::
-   図 6: Microsoft Edge 81 以前のバージョンでは、ページの更新後に [ **プロパティ] タブ** が空白になっていました  
+   Microsoft Edge 81 以前のバージョンでは、ページの更新後に [ **プロパティ] タブ** が空白になっていました  
 :::image-end:::  
 
 Microsoft Edge 83 では、[ **プロパティ] タブ**のページを更新した後に、現在選択されている要素のプロパティを表示できるようになりました。  
 
 :::image type="complex" source="../../media/2020/03/properties-in-82.msft.png" alt-text="Microsoft Edge 83 の [プロパティ] タブには、ページの更新後に現在選択されている要素のプロパティが表示されます。" lightbox="../../media/2020/03/properties-in-82.msft.png":::
-   図 7: Microsoft Edge 83 で、[ **プロパティ] タブ** には、ページの更新後に現在選択されている要素のプロパティが表示されます。  
+   Microsoft Edge 83 の [ **プロパティ] タブ** には、ページの更新後に現在選択されている要素のプロパティが表示されます。  
 :::image-end:::  
 
 Chromium の問題 [#1050999][CR1050999]  
@@ -111,7 +111,7 @@ Devtools を押して [**変更] ツール**を開き、 `Ctrl` + `Shift` + `P` 
 縮小されたファイルに変更を加えた場合は、[ **変更] ツール** を使って横方向にスクロールして、表示されているすべてのコードを表示することができます。  Microsoft Edge 83 以降、キーボードの方向キーを使用して水平方向にスクロールできるようになりました。  
 
 :::image type="complex" source="../../media/2020/03/changes.msft.png" alt-text="Microsoft Edge 83 では、方向キーを使用して水平方向にスクロールして、[変更] ツールに表示されているバーを表示することができます。" lightbox="../../media/2020/03/changes.msft.png":::
-   図 8: Microsoft Edge 83 では、方向キーを使用して水平方向にスクロールして、[**変更] ツール**の縮小表示コードに加えた変更を確認することができます。  
+   Microsoft Edge 83 では、方向キーを使用して水平方向にスクロールして、[**変更] ツール**の縮小表示コードに加えた変更を確認することができます。  
 :::image-end:::  
 
 スクリーンリーダーまたはキーボードを使用して DevTools を移動する場合は、 [ツイート][PostTweetEdgeDevTools] でフィードバックを送信するか、[ [フィードバックの送信](#getting-in-touch-with-microsoft-edge-devtools-team) ] アイコンをクリックしてフィードバックを送信してください。  
@@ -127,7 +127,7 @@ Chromium の問題 [#963183][CR963183]
 [ [レンダリング] タブ][DevtoolsEvaluatePreformanceReferenceAnalyzeRenderingTab] を開き、新しい **エミュレート** されたビジョンの機能を使用して、さまざまな視覚障碍を持つユーザーがサイトでどのように利用できるかをわかりやすく把握します。  
 
 :::image type="complex" source="../../media/2020/03/vision.msft.png" alt-text="ぼやけたビジョンのエミュレート" lightbox="../../media/2020/03/vision.msft.png":::
-   図 9: ぼやけたビジョンのエミュレート  
+   ぼやけたビジョンのエミュレート  
 :::image-end:::  
 
 DevTools は、ぼやけたビジョンと次の [種類の色ビジョンの欠陥][ColorBlindnessTypes]をエミュレートできます。  
@@ -155,13 +155,13 @@ Chromium の問題 [#1003700][CR1003700]
 *   `Intl.*` Api などの例を次に示します。 `new Intl.NumberFormat().resolvedOptions().locale`  
 *   その他のロケールに対応した JavaScript Api (など) `String.prototype.localeCompare` `*.prototype.toLocaleString` : `123_456..toLocaleString()`  
 *   などの DOM Api `navigator.language` `navigator.languages`  
-*   [`Accept-Language`][MDNAcceptLanguage]HTTP 要求のヘッダー  
+*   [承認言語][MDNAcceptLanguage]の HTTP 要求ヘッダー  
 
 > [!NOTE]
 > の更新はすぐには `navigator.language` `navigator.languages` 表示されませんが、次のナビゲーションまたはページの更新後にのみ行われます。  HTTP ヘッダーへの変更 `Accept-Language` は、以降の要求に対してのみ反映されます。  
 
 :::image type="complex" source="../../media/2020/03/locale.msft.png" alt-text="ロケールのエミュレート" lightbox="../../media/2020/03/locale.msft.png":::
-   図 10: ロケールのエミュレート  
+   ロケールのエミュレート  
 :::image-end:::  
 
 デモについては、「 [ロケールに依存するコードの例][MathiasByensLocaleDemo]」をご覧ください。
@@ -175,13 +175,13 @@ Chromium の問題 [#1051822][CR1051822]
 [ **状態** ] 列には、要求がブロックされた理由と、さらにデバッグのためにその要求のヘッダーを表示するためのリンクが表示されるようになりました。  
 
 :::image type="complex" source="../../media/2020/03/status.msft.png" alt-text="* * Status * * 列のブロックされたリクエスト" lightbox="../../media/2020/03/status.msft.png":::
-   図 11: ブロックされたリクエストの [状態」列  
+   [ **状態** 」列でブロックされたリクエスト  
 :::image-end:::  
 
 [**ヘッダー** ] タブの [**応答ヘッダー** ] セクションには、問題を解決するための詳しいガイダンスが表示されます。  
 
 :::image type="complex" source="../../media/2020/03/guidance.msft.png" alt-text="[応答ヘッダー] セクションのその他のガイダンス" lightbox="../../media/2020/03/guidance.msft.png":::
-   図 12: [応答ヘッダー] セクションのその他のガイダンス  
+   [ **応答ヘッダー** ] セクションのその他のガイダンス  
 :::image-end:::  
 
 [ツイート][PostTweetEdgeDevTools]でフィードバックを送信するか、[[フィードバックの送信](#getting-in-touch-with-microsoft-edge-devtools-team)] アイコンをクリックします。  
@@ -211,11 +211,11 @@ Chromium の問題 [#1041830][CR1041830]
 [コマンドメニュー][DevToolsCommandMenuIndex]を開き、コマンドを実行して、 `Dock to left` ビューポートの左側に devtools を移動します。  
 
 :::image type="complex" source="../../media/2020/03/dock-to-left.msft.png" alt-text="ビューポートの左側にドッキングされた DevTools" lightbox="../../media/2020/03/dock-to-left.msft.png":::
-   図 13: ビューポートの左側にドッキングされた DevTools  
+   ビューポートの左側にドッキングされた DevTools  
 :::image-end:::  
 
 > [!NOTE]
-> [ **左から左** ] 機能は、Microsoft Edge 75 以降で使用できますが、以前は [**メインメニュー**][DevtoolsCustomizePlacementsChangeMainMenu]からしかアクセスできませんでした。  Microsoft Edge 83 の新機能は、コマンドメニューからこの機能にアクセスできるということです。  
+> [ **左から左** ] 機能は、Microsoft Edge 75 以降で使用できますが、以前は [メインメニュー][DevtoolsCustomizePlacementsChangeMainMenu]からしかアクセスできませんでした。  Microsoft Edge 83 の新機能は、コマンドメニューからこの機能にアクセスできるということです。  
 
 [ツイート][PostTweetEdgeDevTools]でフィードバックを送信するか、[[フィードバックの送信](#getting-in-touch-with-microsoft-edge-devtools-team)] アイコンをクリックします。  
 
@@ -226,7 +226,7 @@ Chromium の問題 [#1011679][CR1011679]
 DevTools チームは、開発者からのフィードバックを頻繁に発生させていますが、開発者は [Lighthouse][GithubGoogleChromeLighthouse] を試してみても、"Lighthouse" パネルを見つけることができなかったため、 **監査** パネルは **Lighthouse** パネルになりました。  
 
 :::image type="complex" source="../../media/2020/03/lighthouse.msft.png" alt-text="Lighthouse パネル" lightbox="../../media/2020/03/lighthouse.msft.png":::
-   図 14: Lighthouse パネル  
+   Lighthouse パネル  
 :::image-end:::  
 
 > [!NOTE]
@@ -237,7 +237,7 @@ DevTools チームは、開発者からのフィードバックを頻繁に発�
 **ローカルの上書き**を設定した後、フォルダーを右クリックし、[**すべての上書きの削除**] オプションを選択して、そのフォルダー内のすべてのローカル上書きを削除することができます。  
 
 :::image type="complex" source="../../media/2020/03/overrides.msft.png" alt-text="すべての上書きを削除する" lightbox="../../media/2020/03/overrides.msft.png":::
-   図 15: すべての上書きを削除する  
+   すべての上書きを削除する  
 :::image-end:::  
 
 [ツイート][PostTweetEdgeDevTools]でフィードバックを送信するか、[[フィードバックの送信](#getting-in-touch-with-microsoft-edge-devtools-team)] アイコンをクリックします。  
@@ -251,7 +251,7 @@ Chromium の問題 [#1016501][CR1016501]
 現時点では、[ [パフォーマンス] パネルで長いタスクをビジュアル][DevtoolsEvaluatePerformanceReferenceViewMainThreadActivity] 化することができましたが、Microsoft Edge 83 では、[パフォーマンス] パネルに長いタスクの視覚エフェクト UI が更新されています。  タスクの長いタスクの部分が色付きの赤の背景で色付けされるようになりました。  
 
 :::image type="complex" source="../../media/2020/03/long-task.msft.png" alt-text="新しい長いタスク UI" lightbox="../../media/2020/03/long-task.msft.png":::
-   図 16: 新しい長いタスク UI  
+   新しい長いタスク UI  
 :::image-end:::  
 
 [ツイート][PostTweetEdgeDevTools]でフィードバックを送信するか、[[フィードバックの送信](#getting-in-touch-with-microsoft-edge-devtools-team)] アイコンをクリックします。  
@@ -266,8 +266,8 @@ Android Oreo では、さまざまなデバイスモデルのさまざまな図�
 
 <!-- Check out [Are my current icons ready?] to learn more.  -->  
 
-:::image type="complex" source="../../media/2020/03/maskable-icons.msft.png" alt-text="[マスクアイコンの最小安全領域のみを表示する] チェックボックス" lightbox="../../media/2020/03/maskable-icons.msft.png":::
-   図 17: [ **マスクアイコンの最小安全領域のみを表示** する] チェックボックス  
+:::image type="complex" source="../../media/2020/03/maskable-icons.msft.png" alt-text="[マスクアイコンの最小安全な領域のみを表示する] チェックボックス" lightbox="../../media/2020/03/maskable-icons.msft.png":::
+   [ **マスクアイコンの最小安全領域のみを表示** する] チェックボックス  
 :::image-end:::  
 
 > [!NOTE]
@@ -282,12 +282,6 @@ Windows または macOS を使用している場合は、 [Microsoft Edge previe
 [!INCLUDE [contact DevTools team note](../../includes/contact-whats-new-note.md)]  
 
 <!-- links -->  
-
-[PostTweetEdgeDevTools]: https://twitter.com/intent/tweet?text=@EdgeDevTools "@EdgeDevTools |ツイートを投稿する"  
-[EdgeDevToolsTwitterAccount]: https://twitter.com/EdgeDevTools "@EdgeDevTools Twitter アカウント"  
-[GitHubMicrosoftDocsEdgeDeveloperNewIssue]: https://github.com/MicrosoftDocs/edge-developer/issues/new?title=[DevTools%20Docs%20Feedback] "新しい問題-Microsoft のドキュメント/エッジ-開発者-GitHub"  
-[MicrosoftEdgePreviewChannels]: https://www.microsoftedgeinsider.com/download "Microsoft Edge Preview チャネル"  
-[TheWebWeWant]: https://webwewant.fyi "必要な Web"  
 
 [WhatsNew81]: ../01/devtools.md "DevTools の新機能 (Microsoft Edge 81) |Microsoft ドキュメント"  
 
@@ -308,16 +302,26 @@ Windows または macOS を使用している場合は、 [Microsoft Edge previe
 [RemoteTools]: https://www.microsoft.com/store/apps/9P6CMFV44ZLT "Microsoft Edge 向けリモートツール (ベータ版)"  
 [MicrosoftStore]: https://www.microsoft.com/store/apps/windows "Microsoft ストア"  
 
-[WindowsBlogStableRelease]: https://blogs.windows.com/msedgedev/2020/03/20 "Microsoft Edge の安定したチャネルリリースでの更新"
+[MicrosoftEdgePreviewChannels]: https://www.microsoftedgeinsider.com/download "Microsoft Edge Preview チャネル"  
+
+[WindowsBlogStableRelease]: https://blogs.windows.com/msedgedev/2020/03/20 "Microsoft Edge の安定したチャネルリリースでの更新"  
+
+[GitHubMicrosoftDocsEdgeDeveloperNewIssue]: https://github.com/MicrosoftDocs/edge-developer/issues/new?title=[DevTools%20Docs%20Feedback] "新しい問題-Microsoft のドキュメント/エッジ-開発者-GitHub"  
 
 [MicrosoftVisualstudio]: https://visualstudio.microsoft.com "Visual Studio"  
 
 [VisualstudioCode]: https://code.visualstudio.com "Visual Studio コード"  
 
+[PostTweetEdgeDevTools]: https://twitter.com/intent/tweet?text=@EdgeDevTools "@EdgeDevTools |ツイートを投稿する"  
+[EdgeDevToolsTwitterAccount]: https://twitter.com/EdgeDevTools "@EdgeDevTools Twitter アカウント"  
+[TheWebWeWant]: https://webwewant.fyi "必要な Web"  
+
 [ColorBlindnessTypes]: http://www.colourblindawareness.org/colour-blindness/types-of-colour-blindness "色障碍のある種類"  
-[MDNAcceptLanguage]: https://developer.mozilla.org/docs/Web/HTTP/Headers/Accept-Language "受諾-言語"
-[MathiasByensLocaleDemo]: https://mathiasbynens.be/demo/locale "ロケールに依存するコードの例"
-[MDNCookiePath]: https://developer.mozilla.org/docs/Web/HTTP/Headers/Set-Cookie#Directives
+
+[MDNAcceptLanguage]: https://developer.mozilla.org/docs/Web/HTTP/Headers/Accept-Language "受諾-言語 |MDN"  
+[MDNCookiePath]: https://developer.mozilla.org/docs/Web/HTTP/Headers/Set-Cookie#Directives "Cookie の設定 |MDN"  
+
+[MathiasByensLocaleDemo]: https://mathiasbynens.be/demo/locale "ロケールに依存するコードの例"  
 
 [CR963183]: https://crbug.com/963183 "問題 963183: DevTools は WCAG に準拠していません"  
 [CR1003700]: https://crbug.com/1003700 "問題 1003700: カラービジョンの欠陥シミュレーションのための DevTools のサポートを追加する"  
@@ -334,7 +338,7 @@ Windows または macOS を使用している場合は、 [Microsoft Edge previe
 [COOP]: https://docs.google.com/document/d/1zDlfvfTJ_9e8Jdc8ehuV4zMEu9ySMCiTGMS9y0GU92k/edit#bookmark=id.tu4hyy6v12wn "CO-OP および COEP についての説明 (クロスオリジンの Opener ポリシー)"  
 [COEP]: https://docs.google.com/document/d/1zDlfvfTJ_9e8Jdc8ehuV4zMEu9ySMCiTGMS9y0GU92k/edit#bookmark=id.uo6kivyh0ge2 "CO-OP および COEP についての説明 (クロスオリジンの Embedder ポリシー)"  
 
-[GithubGoogleChromeLighthouse]: https://github.com/GoogleChrome/lighthouse "Lighthouse GitHub リポジトリ"  
+[GithubGoogleChromeLighthouse]: https://github.com/GoogleChrome/lighthouse "Lighthouse |GitHub"  
 
 > [!NOTE]
 > このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
