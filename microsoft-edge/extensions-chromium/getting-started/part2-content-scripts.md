@@ -7,12 +7,12 @@ ms.date: 09/15/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: edge-chromium、web 開発、html、css、javascript、開発者、拡張機能
-ms.openlocfilehash: 586f0427241e5f01b63a22ce204484dc5e8cf154
-ms.sourcegitcommit: d360e419b5f96f4f691cf7330b0d8dff9126f82e
+ms.openlocfilehash: fd2276c069116a7f69f06ae50f201e284b60f3ea
+ms.sourcegitcommit: 744e2ecf42bcc427ae33e5dadbf6cd48ee0ab6a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "11015759"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "11016730"
 ---
 # コンテンツスクリプトを使用して、ページ本文タグの下に NASA 画像を動的に挿入する  
 
@@ -32,7 +32,7 @@ ms.locfileid: "11015759"
 
 ## ポップアップから画像を削除し、ボタンに置き換えます。  
 
-まず、 `popup.html` タイトルとボタンを表示する、いくつかのまっすぐな前方のマークアップでファイルを更新します。  このボタンをすぐにプログラムでプログラムしますが、ここでは空の JavaScript ファイルへの参照を含め `popup.js` ます。  次に、更新 HTML を示します。  
+まず、 `popup.html` タイトルとボタンを表示する、いくつかのまっすぐな前方のマークアップでファイルを更新します。  このボタンをすぐにプログラムしますが、ここでは空の JavaScript ファイルへの参照を含め `popup.js` ます。  次に、更新 HTML を示します。  
 
 ```html
 <html>
