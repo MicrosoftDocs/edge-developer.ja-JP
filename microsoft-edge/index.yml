@@ -10,12 +10,12 @@ metadata:
   ms.author: msedgedevrel
   ms.date: 09/08/2020
   ms.localizationpriority: high
-  ms.openlocfilehash: 3d33b5a1e0e43269cd77b095f1516f5885fcf807
-  ms.sourcegitcommit: 6b577cb118f34f3ff2c65eab2908b65f155dc151
+  ms.openlocfilehash: 053bd46133e1e476bd30539ad09c74d17814a0d4
+  ms.sourcegitcommit: 744e2ecf42bcc427ae33e5dadbf6cd48ee0ab6a5
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 09/09/2020
-  ms.locfileid: "11004322"
+  ms.lasthandoff: 09/17/2020
+  ms.locfileid: "11016737"
 highlightedContent:
   items:
   - title: Microsoft Edge (正式な厩舎チャネル)
@@ -184,8 +184,6 @@ additionalContent:
         url: /microsoft-edge/extensions-chromium/publish/publish-extension
       - text: 開発者アカウントを開く
         url: /microsoft-edge/extensions-chromium/publish/create-dev-account
-      - text: YouTube ビデオをアップロードする
-        url: /microsoft-edge/extensions-chromium/publish/upload-video
       - text: 拡張機能の一覧を更新する
         url: /microsoft-edge/extensions-chromium/publish/update
       - text: アカウント設定を管理する
