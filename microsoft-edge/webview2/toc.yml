@@ -16,6 +16,8 @@
       href: concepts/distribution.md
     - name: ユーザーデータフォルダーの管理
       href: concepts/userdatafolder.md
+    - name: WebView2 アプリケーションの管理
+      href: concepts/enterprise.md
     - name: ナビゲーションイベント
       href: concepts/navigation-events.md
     - name: プロセス モデル
