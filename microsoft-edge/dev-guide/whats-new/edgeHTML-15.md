@@ -1,35 +1,35 @@
 ---
-description: このガイドでは、EdgeHTML 15 に含まれている開発者の機能と標準の概要を示します。
-title: EdgeHTML 15 の新機能と API
+description: This guide provides an overview of the developer features and standards included in EdgeHTML 15.
+title: New features and APIs in EdgeHTML 15
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 07/28/2020
+ms.date: 10/02/2020
 ms.topic: article
 ms.prod: microsoft-edge
-keywords: edge、Web 開発、html、cs、javascript、開発者
+keywords: edge, web development, html, css, javascript, developer
 ms.custom: seodec18
-ms.openlocfilehash: 4febe4be1fce29207de7a57b61d96eae0a5c02ab
-ms.sourcegitcommit: 29cbe0f464ba0092e025f502833eb9cc3e02ee89
+ms.openlocfilehash: 4fd0bbc06d27bace424ea99cfe9941aabc737fee
+ms.sourcegitcommit: 204a284e21bf2da5cdc862c5e8b5839245abbbbc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "10941919"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "11094362"
 ---
-# Microsoft EdgeHTML 15 の新機能  
+# What's new in EdgeHTML 15  
 
 [!INCLUDE [deprecation-note](../../includes/legacy-edge-note.md)]  
 
-[Windows 10 Creators Update](https://blogs.windows.com/buildingapps/2017/04/05/windows-10-creators-update-creators-update-sdk-released/#MMhK2OdcrR12Vi6u.97) \(04/2017, ビルド 15063\) に含めた変更は次のとおりです。  Microsoft Edge ブラウザー全体の変更の概要については [、Windows 10 Creators Update の Microsoft Edge の新機能をご覧ください](https://blogs.windows.com/msedgedev/2017/04/11)。  
+Here are the changes shipped with the current release of the Microsoft Edge platform, as of the [Windows 10 Creators Update](https://blogs.windows.com/buildingapps/2017/04/05/windows-10-creators-update-creators-update-sdk-released/#MMhK2OdcrR12Vi6u.97) \(04/2017, Build 15063\).  For an overview of changes to the overall Microsoft Edge browser, see [What's new in Microsoft Edge in the Windows 10 Creators Update](https://blogs.windows.com/msedgedev/2017/04/11).  
 
-以降の Windows Insider Preview ビルドの変更については [、EdgeHTML の新機能を参照してください](../whats-new.md)。  
+For changes in subsequent Windows Insider Preview builds, see [What's New in EdgeHTML](../whats-new.md).  
 
-次の一覧を行うと、この機能が利用できます  [https://aka.ms/devguide_edgehtml_15](./edgehtml-15.md) 。  
+Here's the permalink for the following list of changes:  [https://aka.ms/devguide_edgehtml_15](./edgehtml-15.md).  
 
-## 新機能  
+## New features  
 
-### CSS カスタム プロパティ  
+### CSS Custom Properties  
 
-Microsoft Edge では [、CSS](https://drafts.csswg.org/css-variables)のカスタム プロパティ (A.k.a CSS 変数) がサポートされるようになりました。  CSS 変数を使用すると、スタイルシート全体で再利用できるカスタム CSS プロパティを作成して、繰り返しカラーなど、重複データの量を減らすことができます。  CSS 変数は簡単に使用できます。  
+Microsoft Edge now supports [CSS Custom Properties](https://drafts.csswg.org/css-variables), a.k.a CSS Variables.  CSS Variables allow you to create custom CSS properties that can be reused throughout stylesheets to help reduce the amount of duplicate data, like repeated colors.  Using CSS Variables is simple:  
 
 ```css
 /* define a custom property by using two dashes and assign it a value */
@@ -45,133 +45,133 @@ h1 {
 
 ### Intersection Observer  
 
-EdgeHTML 15 では [、Intersection Observer API](https://w3c.github.io/IntersectionObserver) の指定が追加されました。  Intersection Observer API を使用すると、他の要素またはグローバル ビューポートとの間で DOM 要素の位置と表示を非同期で実行できます。  この API では、ユーザーがビューにいるときに要素を効果的に知らすための方法を作成することで、カスタムの経用コードが必要なくなります。  
+EdgeHTML 15 introduces the [Intersection Observer API](https://w3c.github.io/IntersectionObserver) specification.  The Intersection Observer API allows you to asynchronously query the position and visibility of DOM elements relative to other elements or the global viewport.  This API eliminates the need for custom expensive code by creating a method to efficiently notify elements when they are in view.  
 
 ### JavaScript  
 
-Chakra JavaScript エンジンの EdgeHTML 15 Reva によってパフォーマンス最適化が行われます。  Windows 10 Creators Update では、Chakra は関数を再度段階的に定義し、ヒープ引数を最適化することでメモリを保存し、ミニされたコードのパフォーマンスを改善します。  
+Performance optimizations take center stage with the EdgeHTML 15 rev of the Chakra JavaScript engine.  With the Windows 10 Creators Update, Chakra saves memory by re-deferring functions and optimizing away heap arguments and improves performance for minified code.  
 
-さらに、Microsoft EdgeHTML 15 では、次の機能プレビューが追加されました。  
+Additionally, EdgeHTML 15 introduces the following feature previews:  
 
-#### 実用 JavaScript 機能  
+#### Experimental JavaScript features  
 
-有効 `about:flags`  
+Enabled with `about:flags`  
 
-*   [WebAssembly](https://developer.microsoft.com/microsoft-edge/platform/status/webassemblymvp/?q=WebAssembly) \([デモ](https://webassembly.org/demo)ル \)  
-*   [共有メモリとアトミックス](https://developer.microsoft.com/microsoft-edge/platform/status/sharedmemoryandatomics/?q=Atomics)  
+*   [WebAssembly](https://developer.microsoft.com/microsoft-edge/platform/status/webassemblymvp/?q=WebAssembly) \([demo](https://webassembly.org/demo)\)  
+*   [Shared Memory and Atomics](https://developer.microsoft.com/microsoft-edge/platform/status/sharedmemoryandatomics/?q=Atomics)  
 
-[詳細については、Microsoft Edge で JavaScript のパフォーマンス、WebAssembly、共有メモ](https://blogs.windows.com/msedgedev/2017/04/20)リを改善して詳細を確認します。  
+See [Improved JavaScript performance, WebAssembly, and Shared Memory in Microsoft Edge](https://blogs.windows.com/msedgedev/2017/04/20) for further details.  
 
-### 支払い要求 API  
+### Payment Request API  
 
-[Payment Request API](https://w3.org/TR/payment-request)がサポートされるようになりました。Windows 10 PC およびスマートフォンで Web 上で簡単なチェックアウトと支払いを有効にできるようになりました。  この API により、Microsoft Edge は、クラウドに保存されている一部のコンシューマー、コンシューマー、支払方法 \(クレジット カード\) 間の中間として機能します。  支払い要求 API の詳細については、シンプルな Web ペイリングを [確認してください。支払要求 API と](https://blogs.windows.com/msedgedev/2016/12/15) [Payment Request API 開発者ガイドの](/microsoft-edge/dev-guide/device/payment-request-api) 説明を追加してください。  
+The [Payment Request API](https://w3.org/TR/payment-request) is now supported, enabling simpler checkout and payments on the web on Windows 10 PCs and Phones.  This API enables Microsoft Edge to act as an intermediary between merchants, consumers, and the payment methods \(such as credit cards\) that consumers have stored in the cloud.  For more information on the Payment Request API, check out [Simpler web payments: Introducing the Payment Request API](https://blogs.windows.com/msedgedev/2016/12/15) and the [Payment Request API](/microsoft-edge/dev-guide/device/payment-request-api) developer guide.  
 
-### TCP ファースト オープン (TFO)  
-TCP ファースト オープンは、ブラウザー ネットワークのパフォーマンスを向上させるために必要なラウンド トリップの数を減らす機能です。  [詳細については、TCP ファ](https://blogs.windows.com/msedgedev/2016/06/15)ースト オープンを使用して、高速でより高度な Web を構築してください。  ネットワーク トポロジの不整合のため、Microsoft Edge では、この機能は既定では無効になっています。  これを有効にするには、アドレス バーに入力し、[ `about:flags` **ネットワーク] セクションの下にある [TCP ファーストオーストを有効** にする] チェック ボックスを **オンに** します。  
+### TCP Fast Open (TFO)  
+TCP Fast Open is a feature that reduces the number of round trips required to open a TCP connection, improving browser networking performance.  For more details, see [Building a faster and more secure web with TCP Fast Open](https://blogs.windows.com/msedgedev/2016/06/15).  Due to interoperability differences in various network topologies, this features is not enabled by default in Microsoft Edge.  To enable it, type `about:flags` in your address bar, and select the checkbox for **Enable TCP Fast Open** under the **Networking** section.  
 
-### WebRTC と操作可能な RTC ビデオ コーデック サポート  
+### WebRTC and interoperable RTC video codec support  
 
-Microsoft EDGEHTML 15 は、以前のバージョンの W3C WebRTC-PC API 円で作成されたアプリケーションとの互換性を保つために、WebRTC 1.0 API のサブセットをサポートしています。  [詳細については、WebRTC API リ](/previous-versions//mt806139(v=vs.85))ファレンスを参照してください。  
+EdgeHTML 15 supports a subset of the WebRTC 1.0 API for interoperability with applications built with earlier versions of the W3C WebRTC-PC API circa 2015.  See the [WebRTC API reference](/previous-versions//mt806139(v=vs.85)) for details.  
 
-ピア間の音声とビデオ通信で最も高度な機能を活用するには [、Object Real-Time Communication) API を使用することをお勧めします](https://ortc.org)。  ORTC API は、グループの音声通話やビデオ通話をセットアップする場合や、個々のトランスポート、送信者、受信者オブジェクトを直接制御する必要がある場合に適しています。  
+To take advantage of our most advanced features in peer-to-peer audio and video communication, we recommend using the [Object Real-Time Communication) API](https://ortc.org).  The ORTC API is better suited for situations where you want to set up group audio and video calls, or directly control individual transport, sender, and receiver objects.  
 
-Microsoft Edge は、ORTC と WebRTC 1.0 が付いた H.264/AVC と VP8 のビデオの両方をサポートしており、両方のコーデックの種類 ([送信](https://webrtc.org/experiments/rtp-hdrext/abs-send-time)時、[良](https://tools.ietf.org/html/draft-alvestrand-rmcat-remb-03)いリマブ、画像損失インジケーションと[汎用 NACK フィードバック](https://tools.ietf.org/html/rfc4585)[、RTP リミュ](https://tools.ietf.org/html/rfc4588)ーション) のサポートに対応しています。  
+The Microsoft Edge supports both H.264/AVC and VP8 video with ORTC and WebRTC 1.0, and provides the following features in support of both codec types: [abs-send-time](https://webrtc.org/experiments/rtp-hdrext/abs-send-time), [goog-remb](https://tools.ietf.org/html/draft-alvestrand-rmcat-remb-03), [Picture Loss Indication and Generic NACK feedback](https://tools.ietf.org/html/rfc4585), [RTP Retransmission](https://tools.ietf.org/html/rfc4588).  
 
-詳細については、Microsoft Edge で [WebRTC 1.0 の概要と、WebRTC の](https://blogs.windows.com/msedgedev/2017/01/31)知識ややすいリアルタイム通信を参照してください。  
+For more info, see [Introducing WebRTC 1.0 and interoperable real-time communications in Microsoft Edge](https://blogs.windows.com/msedgedev/2017/01/31).  
 
 ### WebVR  
 
-Microsoft Edge では [、Windows](https://immersive-web.github.io/webxr)Mixed Reality Headed ディスプレイと Microsoft Edge を接続する実用的 API をサポートできるようになりました。  この接続により、VR コンテンツは Web サイト内での経験ができるため、VR エクスペリエンスが高いデスクトップ アプリケーションに制限がないことを意味します。  
+Microsoft Edge now has support for [WebVR](https://immersive-web.github.io/webxr), an experimental API that connects Windows Mixed Reality head mounted displays and Microsoft Edge.  This connection enables VR content to be experienced within a website, meaning immersive VR experiences are no longer limited to desktop applications.  
 
-Microsoft Edge の仮想リアルティは WebGL を利用しています。これは WebGL を利用することで、3D グラフィックと 2D グラフィックをレンダリングするための JavaScript API。  WebGL ライブラリ (BabylonJS など) ライブラリで作成された WebGL アプリケーションとアプリケーションがサポートされます。  接続すると、WebVR はヘッドセットの位置と上下に表示される位置と情報を視覚的に送信します。  WebVR API は、ゲームパッド API の拡張機能にかかって、バティカル コントローラ [ーもサポートしています](../dom/gamepad-api.md)。  この API は既定でオンになっているため、フラグを切り替えなくてもかなりません。  
+Virtual reality in Microsoft Edge is powered by WebGL, a JavaScript API for rendering 3D and 2D graphics.  WebGL applications and applications built with WebGL libraries like BabylonJS are supported.  Once connected, WebVR sends visuals corresponding to the position and sensor information around the headset.  The WebVR API also supports spatial controllers thanks to an extension to the [Gamepad API](../dom/gamepad-api.md).  This API is on by default, so no need to toggle a flag.  
 
-詳細 [については、WebVR API](/previous-versions//mt806281(v=vs.85)) リファレ [ンスとゲームパッド API リファレン](https://developer.mozilla.org/docs/Web/API/Gamepad_API) スを参照してください。  
+See the [WebVR API reference](/previous-versions//mt806281(v=vs.85)) and [Gamepad API reference](https://developer.mozilla.org/docs/Web/API/Gamepad_API) for details.  
 
  > [!NOTE] 
- > WebVR の速度は開発中であるため、Microsoft Edge の実装は後で行直す場合があります。  
+ > Since the WebVR spec is still in development, Microsoft Edge's implementation may change later down the line.  
 
-## 更新された機能  
+## Updated features  
 
-### コンテンツ セキュリティ ポリシー (レベル 2)  
+### Content Security Policy (Level 2)  
 
-既に CSP 1 を使用しているサイトは、CSP 2 の Microsoft Edge サポートに連絡する必要がありますが、ワーカー スクリプトを読み込むディレクティブを、現在のサイトの正しい正常性に向けて新しいディレクティブ `frame-src` `child-src` に切り替えることをおすすめします。  \(CSP 3 では `frame-src` 、workers.\) CSP 2 にも次の情報が追加されます。  
+Sites already using CSP 1 should continue to work with Microsoft Edge support for CSP 2, however it's best to switch any `frame-src` directives that load worker scripts to the new `child-src` directive to future-proof your site.  \(In CSP 3, `frame-src` will no longer apply to workers.\) CSP 2 also adds the following:  
 
 :::row:::
    :::column span="1":::
-      新しいダイレクト  
+      New directives  
    :::column-end:::
    :::column span="2":::
-      `base-uri`、 `child-src` `form-action` および `frame-ancestors` `plugin-types` .  [詳細については、Microsoft Edge で CSP ディレクティブをサポート](../security/content-security-policy.md)している Microsoft Edge を参照してください。  
+      `base-uri`, `child-src`, `form-action`, `frame-ancestors` and `plugin-types`.  See [Microsoft Edge supported CSP directives](../security/content-security-policy.md) for more.  
    :::column-end:::
 :::row-end:::  
 :::row:::
    :::column span="1":::
-      作業者のサポート  
+      Workers support  
    :::column-end:::
    :::column span="2":::
-      バックグラウンド ワーカー スクリプトは、ドキュメントの読み込みポリシーとは別に、それぞれのポリシーによって管理されます。  ホスト ドキュメントと同じように、応答ヘッダーに作業者の CSP を設定できます。  また、CSP 2 の新機能は、ワーカー スレッドの作成に影響を与える  `allow-scripts` `allow-same-origin` `sandbox` ことです。  
+      Background worker scripts are governed by their own policy, separate from the policy of the document loading them.  As with host documents, you can set the CSP for a worker in the response header.  Also new in CSP 2 is that  `allow-scripts` and `allow-same-origin` flags of the `sandbox` directive now affect worker thread creation.  
    :::column-end:::
 :::row-end:::  
 :::row:::
    :::column span="1":::
-      インライン スクリプトとスタイル  
+      Inline scripts and styles  
    :::column-end:::
    :::column span="2":::
-      CSP 2 では、ニーズとハッシュをホワイトリスト メカニズムとして指定することで、インライン スクリプトとスタイルのブロックの実行を行えます。  Nonce は、各ページ読み込みに対して生成されるランダム 64 値であり、ページ内のスクリプト タグの両方に表示されます。  ページが読み込みで動的に生成されると、サーバーは nonce 値を生成し、ページに NonceToken に挿入し、コンテンツ セキュリティ ポリシーの HTTP ヘッダーでも説明します。  ハッシュは、CSP ポリシーで `<script>` `<style>` \(または `script-src` directives\) を指定したコンテンツから生き出される統計値 `style-src` です。  
+      CSP 2 allows for the execution of inline scripts and style blocks by providing nonces and hashes as a allow-listing mechanism.  Nonces are random base-64 values generated on each page load that appears in both the CSP policy and in the script tags in the page.  When the page is dynamically generated on load, the server generates a nonce value, inserts it into the NonceToken in the page and also declares it in the Content Security Policy HTTP header.  Hashes are static values generated \(using sha256, sha384 or sha512 algorithms\) from the content of a `<script>` or `<style>` element that are then specified \(using `script-src` or `style-src` directives\) in the CSP policy.  
    :::column-end:::
 :::row-end:::  
 :::row:::
    :::column span="1":::
-      CSP のバリオのレポート  
+      CSP violation reporting  
    :::column-end:::
    :::column span="2":::
-      新しいイベントは CSP の休文 `SecurityPolicyViolationEvent` に送信されました。  CSP レポートの以前のメカニスムは引き `report-uri` 続きサポートされます。  いくつかの新しいフィールドが `effectiveDirective` 、\(違う/ポリシーが違う `statusCode` )、\(HTTP 応答コード\)、\(オフロンド リソースの URL の URL) など、両方に共通する休末報告書に `sourceFile` `lineNumber` いくつかの新しいフィールドが追加されています `columnNumber` 。  
+      A new event, `SecurityPolicyViolationEvent` is now fired upon CSP violations.  The earlier mechanism for CSP reporting, `report-uri`, continues to be supported.  Several new fields have been added to the violation reports common to both, including `effectiveDirective` \(the policy that was violated\), `statusCode` \(the HTTP response code\), `sourceFile` \(the URL of the offending resource\), `lineNumber`, and `columnNumber`.  
    :::column-end:::
 :::row-end:::  
 
-### Web 認証  
+### Web Authentication  
 
-[Windows Hello](https://www.microsoft.com/windows/comprehensive-security)の生き出[しを使用した EPI](../device/web-authentication.md)のサポートが、次の変更に加えました。  
+Microsoft Edge support for the emerging [Web Authentication API](../device/web-authentication.md) using [Windows Hello](https://www.microsoft.com/windows/comprehensive-security) biometrics has been updated with the following changes:  
 
-*   [EdgeHTML 14](https://blogs.windows.com/msedgedev/2016/08/04)での実用 Web 認証 API の初期実装は、MS-- プレフィックス付き API [\(MSCredentials](/previous-versions//mt697639(v=vs.85))インターフェイス\) によって展開されています。  これらの API は Microsoft EdgeHTML 15 でも引き続き使用できますが、定義の最近のスナップショットで定義されている非定義の標準 API と動作の基本で廃止され、標準[recent snapshot](https://w3.org/TR/2016/WD-webauthn-20160928)化に向けて速度の高さが向上するため、そのように継続的に変更される場合があります。  
+*   The initial implementation of the experimental Web Authentication API introduced in [EdgeHTML 14](https://blogs.windows.com/msedgedev/2016/08/04) \(Windows 10 Anniversary Update, build 10240, 7/2016\) was exposed through MS- prefixed APIs \(the [MSCredentials](/previous-versions//mt697639(v=vs.85)) interface\).  While these APIs are still available in EdgeHTML 15, they are now deprecated in favor of the non-prefixed, standards-based APIs and behaviors defined in a more [recent snapshot](https://w3.org/TR/2016/WD-webauthn-20160928) of the specification, and are likely to continue changing as the spec matures toward standardization.  
 
-*   既定では、Microsoft Edge の実装は既定では無効になっており、フラグ \の後で出荷されます (この機能を `about:flags` 有効にするにはアドレス バーに入力してください)。  
+*   The latest Microsoft Edge implementation is turned off by default and ships behind a flag \(type `about:flags` in your address bar to turn on the feature\).  
 
-*   Microsoft Edge では、USB キーやデバイスなどの外部資ーデ資BluetoothはまだBluetoothいません。  現在の API は TPM に保存されている埋め込み資ーデンシャルに限定されます。  デバイスで TPM を利用できない場合、ソフトウェア フォールバックが使用されます。  
+*   Microsoft Edge does not yet support external credentials like USB keys or Bluetooth devices.  The current API is limited to embedded credentials stored in the TPM.  A software fallback is used if TPM is not available on the device.  
 
-*   Windows ユーザー アカウントに現在ログインしている場合は、PIN をサポートしており、少なくとも、対面または指紋のバリックスを必要とする必要があります。  これは、Windows が TPM へのアクセスを認証できるようにするためです。  
+*   The currently logged in Windows user account must be configured to support at least a PIN, and preferably face or fingerprint biometrics.  This is to ensure that Windows can authenticate the access to the TPM.  
 
-*   この時 [点では](https://w3.org/TR/webauthn/#extension-predef) 、Microsoft Edge では [FIDO AppId](https://w3.org/TR/webauthn/#extension-appid) \(\) のみ `webauthn_txAuthSimple` をサポートしています。  
+*   Of the [predefined extensions](https://w3.org/TR/webauthn/#extension-predef) described in the spec, Microsoft Edge only supports the [FIDO AppId](https://w3.org/TR/webauthn/#extension-appid) \(`webauthn_txAuthSimple`\) at this time.  
 
-*  現在 `timeoutSeconds` 、オプションは評価されていません  
+*  The `timeoutSeconds` option is not currently evaluated  
 
 ### WebDriver  
 
-Microsoft EdgeHTML 15 では、サイレント コマンド ライン フラグや新しいコマンド エンドポイントのサポートなど、WebDriver の更新プログラムを一部の WebDriver の更新プログラムで利用できます。  
+EdgeHTML 15 brings a handful of WebDriver updates including support for the silent command line flag and new command endpoints:  
 
-| メソッド | URI テンプレート | コマンド |  
+| Method | URI Template | Command |  
 |:--- |:---  |:--- |    
-| POST | /session/{session id}/alert/accept | [通知を承諾する](https://w3c.github.io/webdriver/webdriver-spec.html#dfn-accept-alert) |  
-| POST | /session/{session id}/alert/dismiss | [アラートを削除する](https://w3c.github.io/webdriver/webdriver-spec.html#dfn-dismiss-alert) |  
-| GET | /session/{session id}/alert/text | [通知テキストを取得する](https://w3c.github.io/webdriver/webdriver-spec.html#dfn-get-alert-text) |  
-| POST | /session/{session id}/alert/text | [通知テキストを送信する](https://w3c.github.io/webdriver/webdriver-spec.html#dfn-send-alert-text) |  
-| POST | /session/{session id}/execute/async | [非同期スクリプトの実行](https://w3c.github.io/webdriver/webdriver-spec.html#dfn-execute-async-script) |  
-| POST | /session/{session id}/execute/sync | [スクリプトの実行](https://w3c.github.io/webdriver/webdriver-spec.html#dfn-execute-script) |  
-| GET | /session/{session id}/window | [ウィンドウ ハンドルを入手する](https://w3c.github.io/webdriver/webdriver-spec.html#get-window-handle) |  
-| GET | /session/{session id}/window/handles | [ウィンドウ ハンドルを入手する](https://w3c.github.io/webdriver/webdriver-spec.html#dfn-get-window-handles) |  
+| POST | /session/{session id}/alert/accept | [Accept Alert](https://w3c.github.io/webdriver/webdriver-spec.html#dfn-accept-alert) |  
+| POST | /session/{session id}/alert/dismiss | [Dismiss Alert](https://w3c.github.io/webdriver/webdriver-spec.html#dfn-dismiss-alert) |  
+| GET | /session/{session id}/alert/text | [Get Alert Text](https://w3c.github.io/webdriver/webdriver-spec.html#dfn-get-alert-text) |  
+| POST | /session/{session id}/alert/text | [Send Alert Text](https://w3c.github.io/webdriver/webdriver-spec.html#dfn-send-alert-text) |  
+| POST | /session/{session id}/execute/async | [Execute Async Script](https://w3c.github.io/webdriver/webdriver-spec.html#dfn-execute-async-script) |  
+| POST | /session/{session id}/execute/sync | [Execute Script](https://w3c.github.io/webdriver/webdriver-spec.html#dfn-execute-script) |  
+| GET | /session/{session id}/window | [Get Window Handle](https://w3c.github.io/webdriver/webdriver-spec.html#get-window-handle) |  
+| GET | /session/{session id}/window/handles | [Get Window Handles](https://w3c.github.io/webdriver/webdriver-spec.html#dfn-get-window-handles) |  
 
-WebDriver のその他の機能の詳細と状態については、WebDriver [を参照してください](../../webdriver.md)。  
+For more info and the status of other WebDriver features, check out [WebDriver](../../webdriver.md).  
 
-## EdgeHTML 15 の新しい API  
+## New APIs in EdgeHTML 15  
 
-EdgeHTML 15 の新しい API の完全な一覧を次に示します。  これらは形式で表示されます `[interface name].[api name]` 。  
+Here's the full list of new APIs in EdgeHTML 15.  They are listed in the format of `[interface name].[api name]`.  
 
-<iframe height='582' scrolling='no' title='New EdgeHTML15 API' src='//codepen.io/MicrosoftEdgeDocumentation/embed/evRjjZ/?height=582&theme-id=23761&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'><a href='http://codepen.io/MicrosoftEdgeDocumentation/pen/evRjjZ/'> </a> CodePen で、Microsoft Edge Docs (新しい EdgeHTML15 API <a href='http://codepen.io/MicrosoftEdgeDocumentation'> </a> @MicrosoftEdgeDocumentation) <a href='http://codepen.io'> を参照してください </a> 。</iframe>  
+<iframe height='582' scrolling='no' title='New EdgeHTML15 APIs' src='//codepen.io/MicrosoftEdgeDocumentation/embed/evRjjZ/?height=582&theme-id=23761&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/MicrosoftEdgeDocumentation/pen/evRjjZ/'>New EdgeHTML15 APIs</a> by Microsoft Edge Docs (<a href='http://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) on <a href='http://codepen.io'>CodePen</a>.</iframe>  
 
-## 以前の EdgeHTML リリース  
+## Previous EdgeHTML releases  
 
-[Microsoft EdgeHTML 12 / Windows ビルド 10240 (7/2015)](./edgehtml-12.md)  
+[EdgeHTML 12 / Windows build 10240 (7/2015)](./edgehtml-12.md)  
 
-[Microsoft EdgeHTML 13 / Windows ビルド 10586 (2015/11)](./edgehtml-13.md)  
+[EdgeHTML 13 / Windows build 10586 (11/2015)](./edgehtml-13.md)  
 
-[EdgeHTML 14 / Windows ビルド 14393 (8/2016)](./edgehtml-14.md)  
+[EdgeHTML 14 / Windows build 14393 (8/2016)](./edgehtml-14.md)  
