@@ -1,63 +1,66 @@
 ---
-description: サイトの互換性に影響を与える可能性の高い変更の概要を示します。
-title: Microsoft Edge 向けのサイトの互換性に影響する変更点
+description: Provides a summary of high-impact changes that may impact site compatibility
+title: Site compatibility-impacting changes coming to Microsoft Edge
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 07/14/2020
+ms.date: 10/02/2020
 ms.topic: article
 ms.prod: microsoft-edge
-keywords: microsoft edge、互換性、web プラットフォーム
-ms.openlocfilehash: 32b8d7ef4c34365a005fbcceec0097adbf08ea37
-ms.sourcegitcommit: aba52b35b832ba7a7dd6eb042807cd7c8e56e79f
+keywords: microsoft edge, compatibility, web platform
+ms.openlocfilehash: 49fbedb2fe979a52b771539c7ceedce8968c2fb4
+ms.sourcegitcommit: 903524ab85321ade278facd741d6487e8cabe33f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "10920243"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "11100289"
 ---
-# Microsoft Edge 向けのサイトの互換性に影響する変更点  
+# Site compatibility-impacting changes coming to Microsoft Edge  
 
-Web は、ユーザーエクスペリエンス、セキュリティ、プライバシーを向上させるために絶えず進化しています。  場合によっては、既存のページの機能に影響を与えるために変更が重要になることがあります。  次の表は、Microsoft Edge チームが現在追跡している、特に大きな影響を与える変更をまとめたものです。  定期的にご確認ください。Microsoft Edge チームでは、次のページが、考え方の変化、タイムラインの定着、および新しい変更が発表されたときに更新されます。  
+The web is constantly evolving to improve the user experience, security, and privacy.  In some cases, changes may be significant enough to impact the functionality of existing pages.  The following table summarizes particularly high-impact changes that the Microsoft Edge team is currently tracking.  Review this article often; the Microsoft Edge team updates the following page as thinking evolves, timelines solidify, and new changes are announced.  
 
-| 変更点 | Stable チャネル | Experimentation | 追加情報 |  
+| Change | Stable Channel | Experimentation | Additional information |  
 |:--- |:--- |:--- |:--- |
-| Cookie の既定値 `SameSite=Lax` と `SameSite=None-requires-Secure` | [Chrome + 1](#release-comments) \ (Edge v86 \)  | カナリア v82、Dev v82 | この変更は、Microsoft Edge が基づく Chromium プロジェクトで行われています。  この変更に関する Google の計画されたタイムラインを含む詳細については、 [Chrome Platform Status エントリ][ChromePlatformStatus5088147346030592]を確認してください。  |  
-| 参照元ポリシー: 既定値 `strict-origin-when-cross-origin` | [Chrome + 1](#release-comments) \ (Edge v86 \)  | カナリア v79、Dev v79 | この変更は、Microsoft Edge が基づく Chromium プロジェクトで行われています。  この変更に関する Google の計画されたタイムラインを含む詳細については、 [Chrome Platform Status エントリ][ChromePlatformStatus6251880185331712]を確認してください。  |  
-| ページを離れる際の同期 XmlHttpRequest の禁止 | [Chrome + 1](#release-comments) \ (Edge v83 \) |  | この変更は、Microsoft Edge が基づく Chromium プロジェクトで行われています。  Chrome の場合、Microsoft Edge には、Edge v88 までこの変更を無効にするグループポリシーが用意されています。  この変更に関する Google の計画されたタイムラインを含む詳細については、 [Chrome Platform Status エントリ][ChromePlatformStatus4664843055398912]を確認してください。  |  
-| 通知のアクセス許可要求に関する微妙なプロンプトを表示する | Edge v84 |  | Quiet 通知要求は、または API を使って要求されたサイト通知のアクセス許可のアドレスバーに微妙な要求のアイコンを表示し `Notifications` `Push` ます。フルまたは標準のアクセス許可ポップアッププロンプト UI を置き換えます。  この機能は、現在すべてのユーザーに対して有効になっています。  自動通知要求を無効にするには、にアクセス `edge://settings/content/notifications` します。  今後、Microsoft Edge チームは、いくつかのシナリオで、完全なポップアップ通知のプロンプトを再び有効にすることができます。  |  
-| TLS/1.0 と TLS/1.1 を既定で無効にする | Edge v84 |  | 影響を受けるサイトを見つけるために、フラグを設定することで、 `edge://flags/#display-legacy-tls-warnings` Microsoft Edge で従来の TLS プロトコルを必要とするページを読み込むときに、ブロックしない "セキュリティで保護されていない" という通知を表示することができます。  [Sslminversion][DeployedEdgePoliciesSSLMinVersion]グループポリシーでは、tls/1.0 および tls/1.1 の再有効化が許可されています。ポリシーは、Edge 88 まで利用できます。  |  
-| 混在したコンテンツのダウンロードをブロックする | [Chrome + 1](#release-comments) \ (Edge v86 \)  |  | この変更は、Microsoft Edge が基づく Chromium プロジェクトで行われています。  この変更に関する Google の計画されたタイムラインを含む詳細については、 [google セキュリティのブログエントリ][GoogleBlogSecurity20200206]を確認してください。  注意またはブロックするファイルの種類に関する Microsoft ロールアウトのスケジュールは、Chrome 後の1回のリリースで計画されています。  |  
-| AppCache の廃止 | [Chrome + 1](#release-comments) \ (Edge v86 \)  |  | この変更は、Microsoft Edge が基づく Chromium プロジェクトで行われています。  詳細については、 [Web dev のドキュメント][WebDevAppCacheRemoval]を参照してください。  廃止の Microsoft ロールアウトスケジュールは、Chrome 以降のリリース1回で計画されています。  [Appcache OriginTrial Token][AppCacheOriginTrial]を要求すると、サイトはエッジ v90 まで廃止された API を引き続き使うことができます。  |  
-| Adobe Flash の削除 | Edge v88  |  | この変更は、Microsoft Edge が基づく Chromium プロジェクトで行われています。  詳細については、[アドビ Flash Chromium のロードマップ][ChromiumFlashRoadmapSupportRemoved]を確認してください。  | 
-##### リリースコメント  
+| Cookies default to `SameSite=Lax` and `SameSite=None-requires-Secure` | [Chrome+1](#release-comments) \(Edge v86\)  | Canary v82, Dev v82 | This change is happening in the Chromium project, on which Microsoft Edge is based.  For more information, including the planned timeline by Google for this change, navigate to the [Chrome Platform Status entry][ChromePlatformStatus5088147346030592].  |  
+| Referrer Policy: Default to `strict-origin-when-cross-origin` | [Chrome+1](#release-comments) \(Edge v86\)  | Canary v79, Dev v79 | This change is happening in the Chromium project, on which Microsoft Edge is based.  For more information, including the planned timeline by Google for this change, navigate to the [Chrome Platform Status entry][ChromePlatformStatus6251880185331712].  |  
+| Disallow synchronous `XmlHttpRequest` in page dismissal | [Chrome+1](#release-comments) \(Edge v83\) |  | This change is happening in the Chromium project, on which Microsoft Edge is based.  Matching Chrome, Microsoft Edge offers a Group Policy to turn off this change until Edge v88.  For more information, including the planned timeline by Google for this change, navigate to the [Chrome Platform Status entry][ChromePlatformStatus4664843055398912].  |  
+| Display subtle prompt for notification permissions requests | Edge v84 |  | Quiet notification requests display a subtle request icon in the address bar for site notification permissions requested using the `Notifications` or `Push` API, replacing the full or standard permission flyout prompt UI.  This feature is currently enabled for all users.  To opt out of quiet notification requests, navigate to `edge://settings/content/notifications`.  In the future, the Microsoft Edge team may explore re-enabling the full flyout notification prompt in some scenarios.  |  
+| Turn off TLS/1.0 and TLS/1.1 by default | Edge v84 |  | The [SSLMinVersion][DeployedEdgePoliciesSSLMinVersion] Group Policy permits re-enabling of TLS/1.0 and TLS/1.1; the policy remains available until Edge v90.  |  
+| Block mixed content downloads | [Chrome+1](#release-comments) \(Edge v86\)  |  | This change is happening in the Chromium project, on which Microsoft Edge is based.  For more information, including the planned timeline by Google for this change, navigate to the [Google security blog entry][GoogleBlogSecurity20200206].  The Microsoft rollout schedule on file types to warn or block is planned for one release after Chrome.  |  
+| Deprecate AppCache | [Chrome+1](#release-comments) \(Edge v86\)  |  | This change is happening in the Chromium project, on which Microsoft Edge is based.  For more information, navigate to the [WebDev documentation][WebDevAppCacheRemoval].  The Microsoft rollout schedule for deprecation is planned for one release after Chrome.  Requesting an [AppCache OriginTrial Token][AppCacheOriginTrial] allows sites to continue to use the deprecated API until Edge v90.  |  
+| Removal of Adobe Flash | Edge v88  |  | This change is happening in the Chromium project, on which Microsoft Edge is based.  For more information, navigate to the [Adobe Flash Chromium Roadmap][ChromiumFlashRoadmapSupportRemoved].  | 
+| Turn off and remove FTP | Edge v88  | Edge v87 | In Edge v87, FTP support is turned off by default.  In Edge v88, FTP support is removed.  This change is happening in the Chromium project, on which Microsoft Edge is based.  For more information, navigate to the [Chrome Platform Status Entry][ChromePlatformStatus6246151319715840].  |   
+
+##### Release comments  
 
 :::row:::
    :::column span="1":::
-      Chrome + 1
+      Chrome+1
    :::column-end:::
    :::column span="2":::
-      ユーザーと開発者のフィードバックに基づいて、指示された機能や変更が Chrome の後に1回リリースされます。
+      Based on user and developer feedback, the indicated feature or change ships one release after Chrome.
    :::column-end:::
 :::row-end:::
 :::row:::
    :::column span="1":::
-      Chrome または Chrome + 1
+      Chrome or Chrome+1
    :::column-end:::
    :::column span="2":::
-      ユーザーと開発者のフィードバックに基づいて、指定された機能を同時に、または Chrome の後に1つずつ解放します。
+      Based on user and developer feedback, the indicated feature or change ships at the same time or one release after Chrome.
    :::column-end:::
 :::row-end:::
 
 <!-- links -->  
 
-[DeployedEdgePoliciesSSLMinVersion]: /deployedge/microsoft-edge-policies#sslversionmin "SSLVersionMin-Microsoft Edge-ポリシー |Microsoft ドキュメント"  
+[DeployedEdgePoliciesSSLMinVersion]: /deployedge/microsoft-edge-policies#sslversionmin "SSLVersionMin - Microsoft Edge - Policies | Microsoft Docs"  
 
-[ChromePlatformStatus4664843055398912]: https://www.chromestatus.com/feature/4664843055398912 "ページ強制的 JavaScript の同期 XHR を許可しない |Chrome プラットフォームの状態"  
-[ChromePlatformStatus5088147346030592]: https://www.chromestatus.com/feature/5088147346030592 "Cookie の既定値は SameSite = 甘い |Chrome プラットフォームの状態"  
-[ChromePlatformStatus6251880185331712]: https://www.chromestatus.com/feature/6251880185331712 "参照元のポリシー: 既定では、"元の値に戻す" (cross-origin) |Chrome プラットフォームの状態"  
+[ChromePlatformStatus4664843055398912]: https://www.chromestatus.com/feature/4664843055398912 "Disallow sync XHR in page dismissal JavaScript | Chrome Platform Status"  
+[ChromePlatformStatus5088147346030592]: https://www.chromestatus.com/feature/5088147346030592 "Cookies default to SameSite=Lax | Chrome Platform Status"  
+[ChromePlatformStatus6251880185331712]: https://www.chromestatus.com/feature/6251880185331712 "Referrer Policy: Default to strict-origin-when-cross-origin | Chrome Platform Status"  
+[ChromePlatformStatus6246151319715840]: https://chromestatus.com/feature/6246151319715840 "Deprecate FTP support | Chrome Platform Status"
 
-[ChromiumFlashRoadmapSupportRemoved]: https://www.chromium.org/flash-roadmap#TOC-Flash-Support-Removed-from-Chromium-Target:-Chrome-88---Jan-2021- "フラッシュのサポートが Chromium から削除されました (Target: Chrome 88 +-Jan 2021)-フラッシュロードマップ |Chromium プロジェクト"  
+[ChromiumFlashRoadmapSupportRemoved]: https://www.chromium.org/flash-roadmap#TOC-Flash-Support-Removed-from-Chromium-Target:-Chrome-88---Jan-2021- "Flash Support Removed from Chromium (Target: Chrome 88+ - Jan 2021) - Flash Roadmap | Chromium Projects"  
 
-[GoogleBlogSecurity20200206]: https://security.googleblog.com/2020/02/protecting-users-from-insecure_6.html "Google Chrome での安全でないダウンロードからのユーザーの保護-Google Online セキュリティブログ" 
+[GoogleBlogSecurity20200206]: https://security.googleblog.com/2020/02/protecting-users-from-insecure_6.html "Protecting users from insecure downloads in Google Chrome - Google Online Security Blog" 
 
-[WebDevAppCacheRemoval]: https://web.dev/appcache-removal/ "AppCache の削除"
+[WebDevAppCacheRemoval]: https://web.dev/appcache-removal/ "AppCache Removal"
 [AppCacheOriginTrial]: https://developers.chrome.com/origintrials/#/view_trial/1776670052997660673 "AppCache OriginTrial token"
