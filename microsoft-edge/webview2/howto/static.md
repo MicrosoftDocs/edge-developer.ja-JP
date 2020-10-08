@@ -1,13 +1,13 @@
 ---
-description: Learn how to statically link the WebView2 loader library.
-title: How to Statically link the WebView2 loader library
+description: WebView2 loader ライブラリを静的にリンクする方法について説明します。
+title: WebView2 loader ライブラリを静的にリンクする方法
 author: MSEdgeTeam
 ms.author: msedgedevrel
 ms.date: 10/01/2020
 ms.topic: how-to
 ms.prod: microsoft-edge
 ms.technology: webview
-keywords: IWebView2, IWebView2WebView, webview2, webview, win32 apps, win32, edge, ICoreWebView2, ICoreWebView2Host, browser control, edge html
+keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Host、browser control、edge html
 ms.openlocfilehash: b7e0ec70cb00f318d4eb67254f37fcec79a5fcf6
 ms.sourcegitcommit: 903524ab85321ade278facd741d6487e8cabe33f
 ms.translationtype: MT
@@ -15,33 +15,33 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/06/2020
 ms.locfileid: "11100312"
 ---
-# How to Statically link the WebView2 loader library  
+# WebView2 loader ライブラリを静的にリンクする方法  
 
-## Context  
+## コンテキスト  
 
-What is the WebView2Loader.dll?  
+WebView2Loader.dll とは何ですか?  
 
-*   The WebView2 SDK contains a header file, `WebView2Loader.dll.`, and the `IDL` file. `WebView2Loader.dll` is a small component that helps apps locate the WebView2 Runtime (or non-stable Microsoft Edge channels) on the device.  
+*   WebView2 SDK には、ヘッダーファイルとファイルが含まれてい `WebView2Loader.dll.` `IDL` ます。 `WebView2Loader.dll` は、アプリがデバイス上の WebView2 Runtime (または非永続的な Microsoft Edge チャネル) を見つけるのに役立ちます。  
 
-For apps that have a single runtime, and do not want to ship a `WebView2Loader.dll`, complete the following **Procedure** steps.  
+1つのランタイムを備えたアプリについては、次の手順を `WebView2Loader.dll` 実行し**Procedure**ます。  
 
-## Procedure  
+## 手順  
 
-1.  Open the `.vcxproj` project file for your app in a text editor, such as Visual Studio Code.  
+1.  `.vcxproj`Visual Studio コードなどのテキストエディターでアプリのプロジェクトファイルを開きます。  
     
     > [!NOTE]
-    > The `.vcproj` project file may be a hidden file, meaning it does not display in Visual Studio.  Use the command-line to find a hidden file.  
+    > `.vcproj`プロジェクトファイルは非表示のファイルである可能性があります。これは Visual Studio では表示されません。  コマンドラインを使用して、非表示のファイルを検索します。  
     
-1.  Locate the section in the code where you include the WebView2 NuGet package target files.  The location in the code is highlighted in the following figure.  
+1.  WebView2 NuGet パッケージターゲットファイルが含まれているコードのセクションを見つけます。  次の図では、コード内の場所が強調表示されています。  
     
-    :::image type="complex" source="./media/inserthere.png" alt-text="Project Files code snippet" lightbox="./media/inserthere.png"::: 
-       Project Files code snippet  
+    :::image type="complex" source="./media/inserthere.png" alt-text="プロジェクトファイルのコードスニペット" lightbox="./media/inserthere.png"::: 
+       プロジェクトファイルのコードスニペット  
     :::image-end:::  
     
-1.  Copy the following code snippet and paste it everywhere the `Microsoft.Web.WebView2.targets` is included.  
+1.  次のコードスニペットをコピーして、が含まれている場所に貼り付け `Microsoft.Web.WebView2.targets` ます。  
 
     > [!NOTE]
-    > For example, include it after the following code block.  
+    > たとえば、次のコードブロックの後に追加します。  
     > 
     > ```csharp
     > <Import Project="..\packages\Microsoft.Web.WebView2.0.9.579-prerelease\build\native\Microsoft.Web.WebView2.targets" Condition="Exists('..\packages\Microsoft.Web.WebView2.0.9.579-prerelease\build\native\Microsoft.Web.WebView2.targets')" />
@@ -51,46 +51,46 @@ For apps that have a single runtime, and do not want to ship a `WebView2Loader.d
     <PropertyGroup> <WebView2LoaderPreference>Static</WebView2LoaderPreference> </PropertyGroup>
     ```
     
-    :::image type="complex" source="./media/staticlib.png" alt-text="Project Files code snippet" lightbox="./media/staticlib.png"::: 
-       Inserted code snippet  
+    :::image type="complex" source="./media/staticlib.png" alt-text="プロジェクトファイルのコードスニペット" lightbox="./media/staticlib.png"::: 
+       挿入されたコードスニペット  
     :::image-end:::  
     
-1.  Edit the additional dependencies of the build configuration for your app.  To begin, find all of the `<AdditionalDependencies>` tags.  
-1.  Add `version.lib` as an additional dependency to every different build configuration in the `.vcxproj` file for your app.  
+1.  アプリのビルド構成のその他の依存関係を編集します。  まず、すべてのタグを確認し `<AdditionalDependencies>` ます。  
+1.  `version.lib`アプリのファイル内のすべてのビルド構成に、追加の依存関係として追加し `.vcxproj` ます。  
     
-    :::image type="complex" source="./media/versionlib.png" alt-text="Project Files code snippet" lightbox="./media/versionlib.png"::: 
-       Adding `version.lib` to `ItemDefinitionGroups`  
+    :::image type="complex" source="./media/versionlib.png" alt-text="プロジェクトファイルのコードスニペット" lightbox="./media/versionlib.png"::: 
+       追加 `version.lib` 先 `ItemDefinitionGroups`  
     :::image-end:::  
     
     > [!NOTE]
-    > The WebView2 team aims to automate the additional dependency step in future releases.  
+    > WebView2 チームは、今後のリリースで追加の依存関係の手順を自動化することを目的としています。  
     
-Compile and deploy your app.  Success.  
+アプリをコンパイルして展開します。  正しい.  
 
-## See also  
+## 関連項目  
 
-*   To get started using WebView2, navigate to [WebView2 Getting Started Guides][Webview2MainGettingStarted].  
-*   For a comprehensive example of WebView2 capabilities, navigate to [WebView2Samples][GithubMicrosoftedgeWebview2samples] on GitHub.
-*   For more detailed information about WebView2 APIs, navigate to [API reference][Webview2ApiReference].
-*   For more information about WebView2, navigate to [WebView2 Resources][Webview2MainNextSteps].
+*   WebView2 の使用を開始するには、 [WebView2 の概要ガイド][Webview2MainGettingStarted]に移動します。  
+*   WebView2 機能の包括的な例については、GitHub on [WebView2Samples][GithubMicrosoftedgeWebview2samples] を参照してください。
+*   WebView2 Api の詳細については、 [api リファレンス][Webview2ApiReference]に移動してください。
+*   WebView2 の詳細については、 [WebView2 リソース][Webview2MainNextSteps]を参照してください。
 
-## Getting in touch with the WebView2 team  
+## WebView2 チームと連絡を取り合う  
 
 [!INCLUDE [contact WebView team note](../includes/contact-webview-team-note.md)]  
 
 <!-- links -->  
 
-[DevtoolsGuideChromiumMain]: ../../devtools-guide-chromium.md "Microsoft Edge (Chromium) Developer Tools | Microsoft Docs"  
+[DevtoolsGuideChromiumMain]: ../../devtools-guide-chromium.md "Microsoft Edge (Chromium) 開発者ツール |Microsoft ドキュメント"  
 
-[Webview2ReferenceDotnet09628MicrosoftWebWebview2CoreCorewebview2environmentoptionsAdditionalbrowserarguments]: ../reference/dotnet/0-9-628/microsoft-web-webview2-core-corewebview2environmentoptions.md#additionalbrowserarguments "AdditionalBrowserArguments - 0.9.515 - Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions class | Microsoft Docs"  
-[Webview2ReferenceWin3209622Webview2IdlParameters]: ../reference/win32/0-9-622/webview2-idl.md#createcorewebview2environment  "CreateCoreWebView2Environment - Globals | Microsoft Docs"  
-[Webview2ApiReference]: ../webview2-api-reference.md "Microsoft Edge WebView2 API Reference | Microsoft Docs"  
-[Webview2MainNextSteps]: ../index.md#next-steps "Next steps - Introduction to Microsoft Edge WebView2 (Preview) | Microsoft Docs"  
-[Webview2MainGettingStarted]: ../index.md#getting-started "Getting started - Introduction to Microsoft Edge WebView2 (Preview) | Microsoft Docs"  
+[Webview2ReferenceDotnet09628MicrosoftWebWebview2CoreCorewebview2environmentoptionsAdditionalbrowserarguments]: ../reference/dotnet/0-9-628/microsoft-web-webview2-core-corewebview2environmentoptions.md#additionalbrowserarguments "AdditionalBrowserArguments-0.9.515 クラス | WebView2 クラスの場合 |Microsoft ドキュメント"  
+[Webview2ReferenceWin3209622Webview2IdlParameters]: ../reference/win32/0-9-622/webview2-idl.md#createcorewebview2environment  "CreateCoreWebView2Environment-Globals |Microsoft ドキュメント"  
+[Webview2ApiReference]: ../webview2-api-reference.md "Microsoft Edge WebView2 API リファレンス |Microsoft ドキュメント"  
+[Webview2MainNextSteps]: ../index.md#next-steps "次の手順-Microsoft Edge WebView2 の概要 (プレビュー) |Microsoft ドキュメント"  
+[Webview2MainGettingStarted]: ../index.md#getting-started "はじめに-Microsoft Edge WebView2 の概要 (プレビュー) |Microsoft ドキュメント"  
 
-[GithubMicrosoftedgeWebviewfeedbackMain]: https://github.com/MicrosoftEdge/WebViewFeedback "WebView Feedback - MicrosoftEdge/WebViewFeedback | GitHub"  
-[GithubMicrosoftedgeWebview2samples]: https://github.com/MicrosoftEdge/WebView2Samples "WebView2 Samples - MicrosoftEdge/WebView2Samples | GitHub"  
+[GithubMicrosoftedgeWebviewfeedbackMain]: https://github.com/MicrosoftEdge/WebViewFeedback "WebView フィードバック-MicrosoftEdge/WebViewFeedback |GitHub"  
+[GithubMicrosoftedgeWebview2samples]: https://github.com/MicrosoftEdge/WebView2Samples "WebView2 サンプル-MicrosoftEdge/WebView2Samples |GitHub"  
 
-[GithubMicrosoftVscodeJSDebugWhatsNew]: https://github.com/microsoft/vscode-js-debug#whats-new "What's new? - JavaScript debugger for Visual Studio Code - microsoft/vscode-js-debug | GitHub"  
+[GithubMicrosoftVscodeJSDebugWhatsNew]: https://github.com/microsoft/vscode-js-debug#whats-new "新機能-Visual Studio コードの JavaScript デバッガー-microsoft/vscode-js-debug |GitHub"  
 
-[GithubMicrosoftVscodeEdgeDebug2ReadmeChromiumWebviewApplications]: https://github.com/microsoft/vscode-edge-debug2/blob/master/README.md#microsoft-edge-chromium-webview-applications "Microsoft Edge (Chromium) WebView applications - Visual Studio Code - Debugger for Microsoft Edge - microsoft/vscode-edge-debug2 | GitHub"  
+[GithubMicrosoftVscodeEdgeDebug2ReadmeChromiumWebviewApplications]: https://github.com/microsoft/vscode-edge-debug2/blob/master/README.md#microsoft-edge-chromium-webview-applications "Microsoft Edge (Chromium) WebView アプリケーション-Visual Studio Code-Microsoft Edge 用デバッガー-microsoft/vscode-edge-debug2 |GitHub"  

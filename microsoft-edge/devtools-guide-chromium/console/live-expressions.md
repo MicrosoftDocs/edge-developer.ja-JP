@@ -43,7 +43,7 @@ ms.locfileid: "10993115"
 1.  [本体を開き][DevToolsConsoleReferenceOpenConsole]ます。  
 1.  [ **ライブ式の作成** \ ( ![ ライブ式 ][ImageCreateLiveExpressionIcon] の作成 \)] をクリックします。  [ **ライブ式** ] テキストボックスが表示されます。  
     
-    :::image type="complex" source="../media/console-create-live-expression.msft.png" alt-text="ライブ式のテキストボックスへの "activeElement 要素の入力" lightbox="../media/console-create-live-expression.msft.png":::
+    :::image type="complex" source="../media/console-create-live-expression.msft.png" alt-text="ライブ式のテキストボックスへの &quot;activeElement 要素の入力" lightbox="../media/console-create-live-expression.msft.png":::
        `document.activeElement`[**ライブ式**] テキストボックスへの入力  
     :::image-end:::  
     

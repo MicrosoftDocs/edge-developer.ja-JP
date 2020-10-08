@@ -36,7 +36,7 @@ Chromium の問題 [#174309][CR174309]
 
 ### Surface Duo と Samsung Galaxy 折りたたみのエミュレート  
 
-:::image type="complex" source="../../media/2020/06/experimental-tag-14px.msft.png" alt-text="実験的機能":::
+:::image type="complex" source="../../media/2020/06/experimental-tag-14px.msft.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる":::
    実験的機能  
 :::image-end:::  
 
@@ -48,7 +48,7 @@ Microsoft Edge で、  [Surface Duo][MicrosoftSurfaceDevicesDuo] と [Samsung Ga
 *   2つの画面の間の領域である[継ぎ目をレンダリング][DualScreenIntroductionHowWorkSeam]します。
 *   [実験的な Web プラットフォーム api を有効][DevtoolsExperimentalFeaturesEnableExperimentalApis] にして、新しい [CSS メディア画面のスパニング機能][DualScreenWebCssMediaSpanning] と [JavaScript getwindowsegments api][DualScreenWebJavascriptGetwindowsegments]にアクセスします。  
 
-:::image type="complex" source="../../media/2020/08/surface-duo-device-emulation.msft.png" alt-text="Surface Duo のデバイスエミュレーション" lightbox="../../media/2020/08/surface-duo-device-emulation.msft.png":::
+:::image type="complex" source="../../media/2020/08/surface-duo-device-emulation.msft.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる" lightbox="../../media/2020/08/surface-duo-device-emulation.msft.png":::
    Surface Duo のデバイスエミュレーション  
 :::image-end:::  
 
@@ -62,7 +62,7 @@ Chromium の問題: [#1054281][CR1054281]
 
 CSS グリッドのオーバーレイの改善について、ご意見をお寄せいただきありがとうございます。  CSS グリッドのオーバーレイは既定で有効になりました。実験を有効にする必要はありません。  
 
-:::image type="complex" source="../../media/2020/08/css-grid-overlay-article.msft.png" alt-text="Article 要素の CSS グリッドオーバーレイ" lightbox="../../media/2020/08/css-grid-overlay-article.msft.png":::
+:::image type="complex" source="../../media/2020/08/css-grid-overlay-article.msft.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる" lightbox="../../media/2020/08/css-grid-overlay-article.msft.png":::
    要素の CSS グリッドのオーバーレイ `article`  
 :::image-end:::  
 
@@ -83,12 +83,12 @@ Microsoft Edge 85 以前のバージョンでは、コピーの書式設定が `
 
 :::row:::
    :::column span="":::
-      :::image type="complex" source="../../media/2020/08/console-table-beta.msft.png" alt-text="Microsoft Edge 85 以前の表本体 API 出力" lightbox="../../media/2020/08/console-table-beta.msft.png":::
+      :::image type="complex" source="../../media/2020/08/console-table-beta.msft.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる" lightbox="../../media/2020/08/console-table-beta.msft.png":::
          `table` Microsoft Edge 85 以前の本体の API 出力  
       :::image-end:::  
    :::column-end:::  
    :::column span="":::
-      :::image type="complex" source="../../media/2020/08/console-table-beta-paste-visual-studio-code.msft.png" alt-text="Microsoft Edge 85 以降の表本体 API の出力が Visual Studio コードに貼り付けられています" lightbox="../../media/2020/08/console-table-beta-paste-visual-studio-code.msft.png":::
+      :::image type="complex" source="../../media/2020/08/console-table-beta-paste-visual-studio-code.msft.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる" lightbox="../../media/2020/08/console-table-beta-paste-visual-studio-code.msft.png":::
          `table` Microsoft Edge 85 またはそれ以前のバージョンの Visual Studio コードに貼り付けられた本体 API の出力  
       :::image-end:::  
    :::column-end:::
@@ -98,12 +98,12 @@ Microsoft Edge 86 以降では、 **コンソール**から表をコピーする
 
 :::row:::
    :::column span="":::
-      :::image type="complex" source="../../media/2020/08/console-table-canary.msft.png" alt-text="Microsoft Edge 86 以降の表本体 API の出力" lightbox="../../media/2020/08/console-table-canary.msft.png":::
+      :::image type="complex" source="../../media/2020/08/console-table-canary.msft.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる" lightbox="../../media/2020/08/console-table-canary.msft.png":::
          `table` Microsoft Edge 86 以降の本体の API 出力  
       :::image-end:::  
    :::column-end:::  
    :::column span="":::
-      :::image type="complex" source="../../media/2020/08/console-table-canary-paste-visual-studio-code.msft.png" alt-text="Microsoft Edge 86 以降の表本体 API の出力が Visual Studio コードに貼り付けられている" lightbox="../../media/2020/08/console-table-canary-paste-visual-studio-code.msft.png":::
+      :::image type="complex" source="../../media/2020/08/console-table-canary-paste-visual-studio-code.msft.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる" lightbox="../../media/2020/08/console-table-canary-paste-visual-studio-code.msft.png":::
          `table` Microsoft Edge 86 以降で Visual Studio コードに貼り付けられた本体 API の出力  
       :::image-end:::  
    :::column-end:::
@@ -113,13 +113,13 @@ Chromium の問題: [#1115011] [CR1115011]
 
 ### 簡単なアクセシビリティテストのためのソースオーダービューアー  
 
-:::image type="complex" source="../../media/2020/06/experimental-tag-14px.msft.png" alt-text="実験的機能":::
+:::image type="complex" source="../../media/2020/06/experimental-tag-14px.msft.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる":::
    実験的機能  
 :::image-end:::  
 
 新しいアクセシビリティヘルパーは、ソース内の要素の順序を表示します。  
 
-:::image type="complex" source="../../media/2020/08/source-order-viewer.msft.png" alt-text="ソース注文の表示をアクティブ化する" lightbox="../../media/2020/08/source-order-viewer.msft.png":::
+:::image type="complex" source="../../media/2020/08/source-order-viewer.msft.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる" lightbox="../../media/2020/08/source-order-viewer.msft.png":::
    **ソース注文の表示を**アクティブ化する  
 :::image-end:::  
 
@@ -138,12 +138,12 @@ Your feedback and internal discoveries uncovered which text strings used in the 
 
 :::row:::
    :::column span="":::
-      :::image type="complex" source="../../media/2020/08/localization-improvements-chinese-complex-stable.msft.png" alt-text="Microsoft Edge DevTools in Traditional Chinese" lightbox="localization-improvements-chinese-complex-stable.msft.png":::
+      :::image type="complex" source="../../media/2020/08/localization-improvements-chinese-complex-stable.msft.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる" lightbox="localization-improvements-chinese-complex-stable.msft.png":::
          Microsoft Edge DevTools 85 and earlier in Traditional Chinese  
       :::image-end:::  
    :::column-end:::  
    :::column span="":::
-      :::image type="complex" source="../../media/2020/08/localization-improvements-chinese-complex-canary.msft.png" alt-text="Microsoft Edge DevTools in Japanese" lightbox="../../media/2020/08/localization-improvements-chinese-complex-canary.msft.png":::
+      :::image type="complex" source="../../media/2020/08/localization-improvements-chinese-complex-canary.msft.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる" lightbox="../../media/2020/08/localization-improvements-chinese-complex-canary.msft.png":::
          Microsoft Edge DevTools 86  or later in Traditional Chinese  
       :::image-end:::  
    :::column-end:::
@@ -160,7 +160,7 @@ Microsoft Edge 84 および85では、 **要素** パネルの最初の検索結
 
 フィードバックを送信して、Chromium の改善に努めていただき、ありがとうございました。  Chromium によって報告される [#1103316][CR1103316] 問題は、オープンソースのプロジェクトにあります。  
 
-:::image type="complex" source="../../media/2020/08/elements- search-highlight-fixed.msft.png" alt-text="Microsoft Edge 84 以降の要素パネルで強調表示された最初の検索結果" lightbox="../../media/2020/08/elements- search-highlight-fixed.msft.png":::
+:::image type="complex" source="../../media/2020/08/elements- search-highlight-fixed.msft.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる" lightbox="../../media/2020/08/elements- search-highlight-fixed.msft.png":::
    Microsoft Edge 84 以降の **要素** パネルで強調表示された最初の検索結果  
 :::image-end:::  
 
@@ -180,7 +180,7 @@ DevTools でメディアプレーヤーの情報が [メディア][DevtoolsMedia
 
 1.  [**カスタマイズと制御 devtools** \ (\)] を選択して、 `...` **その他のツール**  >  **メディア**> します。  
     
-    :::image type="complex" source="../../media/2020/08/media-panel.msft.png" alt-text="新しいメディアパネル" lightbox="../../media/2020/08/media-panel.msft.png":::
+    :::image type="complex" source="../../media/2020/08/media-panel.msft.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる" lightbox="../../media/2020/08/media-panel.msft.png":::
        新しい **メディア** パネル  
     :::image-end:::  
 
@@ -197,7 +197,7 @@ DevTools の新しい **メディア** パネルの前に、ビデオプレー�
 
 たとえば、目次のスクリーンショットを撮るには、要素をポイントしてコンテキストメニューを開き (\ を右クリックし)、[ **キャプチャノードのスクリーンショット**] を選びます。  
 
-:::image type="complex" source="../../media/2020/08/capture-node-screenshot.msft.png" alt-text="キャプチャノードのスクリーンショット" lightbox="../../media/2020/08/capture-node-screenshot.msft.png":::
+:::image type="complex" source="../../media/2020/08/capture-node-screenshot.msft.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる" lightbox="../../media/2020/08/capture-node-screenshot.msft.png":::
    キャプチャノードのスクリーンショット  
 :::image-end:::  
 
@@ -209,13 +209,13 @@ Chromium の問題: [#1100253][CR1100253]
 
 <!--todo: this figure need to be updated  -->  
 
-:::image type="complex" source="../../media/2020/08/issue-console-msg.msft.png" alt-text="コンソールメッセージの問題" lightbox="../../media/2020/08/issue-console-msg.msft.png":::
+:::image type="complex" source="../../media/2020/08/issue-console-msg.msft.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる" lightbox="../../media/2020/08/issue-console-msg.msft.png":::
    コンソールメッセージの問題  
 :::image-end:::  
 
 サードパーティの cookie の問題は、[ **問題** ] ツールで既定で非表示になっています。  [ **サードパーティの cookie の追加の問題** ] チェックボックスをオンにして、問題を表示します。  
 
-:::image type="complex" source="../../media/2020/08/third-party-cookies.msft.png" alt-text="サードパーティの cookie の問題チェックボックス" lightbox="../../media/2020/08/third-party-cookies.msft.png":::
+:::image type="complex" source="../../media/2020/08/third-party-cookies.msft.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる" lightbox="../../media/2020/08/third-party-cookies.msft.png":::
    サードパーティの cookie の問題チェックボックス  
 :::image-end:::  
 
@@ -229,7 +229,7 @@ Chromium の問題: [1096481][CR1096481]、 [1068116][CR1068116]、 [1080589][CR
 
 [ **ローカルフォントを無効** にする] が有効になっている場合、devtools ではフォントが無視され、 `local()` 各ネットワークからの取り出しが行われます。  
 
-:::image type="complex" source="../../media/2020/08/disable-font.msft.png" alt-text="見つからないローカルフォントのエミュレート" lightbox="../../media/2020/08/disable-font.msft.png":::
+:::image type="complex" source="../../media/2020/08/disable-font.msft.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる" lightbox="../../media/2020/08/disable-font.msft.png":::
    見つからないローカルフォントのエミュレート  
 :::image-end:::  
 
@@ -250,7 +250,7 @@ Chromium の問題: [#384968][CR384968]
 
 [アイドル検出 API][WebDevIdleDetection]を使うと、開発者は非アクティブなユーザーを検出し、アイドル状態の変更を反映することができます。  この時点で、DevTools を使って、 **センサー** ツールでのアイドル状態の変更を、ユーザーの状態と画面の状態の両方に対してエミュレートすることができるようになりました。これは、実際のアイドル状態が変更されるのを待機する必要はありません。  [引き出し][DevtoolsCustomizeIndexDrawer]から**センサー**ツールを開くことができます。  
 
-:::image type="complex" source="../../media/2020/08/emulate-idle.msft.png" alt-text="アクティブでないユーザーのエミュレート" lightbox="../../media/2020/08/emulate-idle.msft.png":::
+:::image type="complex" source="../../media/2020/08/emulate-idle.msft.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる" lightbox="../../media/2020/08/emulate-idle.msft.png":::
    アクティブでないユーザーのエミュレート  
 :::image-end:::  
 
@@ -265,7 +265,7 @@ Chromium の問題: [#1090802][CR1090802]
 
 これで、DevTools を使ってメディアクエリをエミュレートでき `prefers-reduced-data` ます。  
 
-:::image type="complex" source="../../media/2020/08/emulate-prefers-reduced-data.msft.png" alt-text="割引の優先のエミュレート-データ" lightbox="../../media/2020/08/emulate-prefers-reduced-data.msft.png":::
+:::image type="complex" source="../../media/2020/08/emulate-prefers-reduced-data.msft.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる" lightbox="../../media/2020/08/emulate-prefers-reduced-data.msft.png":::
    割引の優先のエミュレート-データ  
 :::image-end:::  
 
@@ -294,7 +294,7 @@ DevTools では、[ **サービス作業者** ] ウィンドウからのリン�
 
 以前の DevTools は、 **アプリケーション** パネル > **Service worker** ] ウィンドウの下に入れ子になっているリストを表示していました。  
 
-:::image type="complex" source="../../media/2020/08/sw-other-origins.msft.png" alt-text="他のオリジンとのリンク" lightbox="../../media/2020/08/sw-other-origins.msft.png":::
+:::image type="complex" source="../../media/2020/08/sw-other-origins.msft.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる" lightbox="../../media/2020/08/sw-other-origins.msft.png":::
    他のオリジンとのリンク  
 :::image-end:::  
 
@@ -308,12 +308,12 @@ DevTools は、更新されたカバレッジ情報の概要を動的に表示�
 
 :::row:::
    :::column span="":::
-      :::image type="complex" source="../../media/2020/08/coverage-compare.msft.png" alt-text="カバレッジの概要" lightbox="../../media/2020/08/coverage-compare.msft.png":::
+      :::image type="complex" source="../../media/2020/08/coverage-compare.msft.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる" lightbox="../../media/2020/08/coverage-compare.msft.png":::
          カバレッジの概要  
       :::image-end:::  
    :::column-end:::
    :::column span="":::
-      :::image type="complex" source="../../media/2020/08/coverage-compare-css-filter.msft.png" alt-text="フィルター処理されたアイテムのカバレッジの概要" lightbox="../../media/2020/08/coverage-compare-css-filter.msft.png":::
+      :::image type="complex" source="../../media/2020/08/coverage-compare-css-filter.msft.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる" lightbox="../../media/2020/08/coverage-compare-css-filter.msft.png":::
          フィルター処理されたアイテムのカバレッジの概要  
       :::image-end:::  
    :::column-end:::
@@ -325,7 +325,7 @@ Chromium の問題: [#1061385][CR1090802]
 
 DevTools には、各フレームの詳細ビューが表示されるようになりました。  このアプリにアクセスするには、**アプリケーション**パネルの**フレーム**メニューの下にあるフレームを選択します。  
 
-:::image type="complex" source="../../media/2020/08/frame-details.msft.png" alt-text="アプリケーションパネルのフレームの新しい詳細表示" lightbox="../../media/2020/08/frame-details.msft.png":::
+:::image type="complex" source="../../media/2020/08/frame-details.msft.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる" lightbox="../../media/2020/08/frame-details.msft.png":::
    **アプリケーション**パネルのフレームの新しい詳細表示  
 :::image-end:::  
 
@@ -335,7 +335,7 @@ Chromium の問題: [#1093247][CR1093247]
 
 ウィンドウを開くと、フレームツリーにも表示されるようになりました。  開いているウィンドウの詳細ビューには、追加のセキュリティ情報が含まれます。  
 
-:::image type="complex" source="../../media/2020/08/window-opener.msft.png" alt-text="開いているウィンドウの新しいフレームの詳細ビュー" lightbox="../../media/2020/08/window-opener.msft.png":::
+:::image type="complex" source="../../media/2020/08/window-opener.msft.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる" lightbox="../../media/2020/08/window-opener.msft.png":::
    開いているウィンドウの新しいフレームの詳細ビュー  
 :::image-end:::  
 
@@ -345,7 +345,7 @@ Chromium の問題: [#1107766] [CR1107766]
 
 セキュリティで保護されたコンテキスト、 [クロスオリジン-ポリシー (COEP)][WebDevCoopCoep]、および [クロスオリジン-Opener-ポリシー (co-op)][WebDevCoopCoep] がフレームの詳細に表示されるようになりました。  
 
-:::image type="complex" source="../../media/2020/08/coep-coop.msft.png" alt-text="セキュリティと分離に関する情報" lightbox="../../media/2020/08/coep-coop.msft.png":::
+:::image type="complex" source="../../media/2020/08/coep-coop.msft.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる" lightbox="../../media/2020/08/coep-coop.msft.png":::
    セキュリティと分離に関する情報  
 :::image-end:::  
 
@@ -361,7 +361,7 @@ DevTools では、色の低いコントラストのテキストの色の候補�
 
 次の例で `h1` は、コントラストの低いテキストが設定されています。  修正するには、 `color` [ **スタイル** ] ウィンドウでプロパティのカラーピッカーを開きます。  [ **コントラスト比** ] セクションを展開すると、DEVTOOLS で AA と AAA の色候補が提供されます。  色を適用する色を選択します。  
 
-:::image type="complex" source="../../media/2020/08/contrast-color-suggestion.msft.png" alt-text="色のピッカーで AA と AAA の色候補が提示される" lightbox="../../media/2020/08/contrast-color-suggestion.msft.png":::
+:::image type="complex" source="../../media/2020/08/contrast-color-suggestion.msft.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる" lightbox="../../media/2020/08/contrast-color-suggestion.msft.png":::
    色のピッカーで AA と AAA の色候補が提示される  
 :::image-end:::  
 
@@ -371,7 +371,7 @@ Chromium の問題: [#1093227][CR1093227]
 
 [ **プロパティ** ] ウィンドウが再び表示されます。  [Microsoft Edge 84 では廃止][DevtoolsWhatsnew200205DevtoolsDeprecationPropertiesPaneElementsPanel]されました。  Microsoft Edge DevTools チームと Chrome DevTools チームは、要素の検査プロパティの改善を計画しています。  
 
-:::image type="complex" source="../../media/2020/08/properties-pane.msft.png" alt-text="[要素] パネルの [プロパティ] ウィンドウ" lightbox="../../media/2020/08/properties-pane.msft.png":::
+:::image type="complex" source="../../media/2020/08/properties-pane.msft.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる" lightbox="../../media/2020/08/properties-pane.msft.png":::
    [**要素**] パネルの [**プロパティ**] ウィンドウ  
 :::image-end:::  
 
@@ -384,7 +384,7 @@ When inspecting a network resource in the Network panel, DevTools now formats an
 
 The `X-Client-Data` HTTP header contains a list of experiment IDs and Microsoft Edge flags that are enabled in your browser.  The raw header values look like opaque strings since the values are `base-64-encoded`, serialized [protocol buffers][GoogleDevelopersProtocolBuffers].  To make the contents more transparent to developers, DevTools now shows the decoded values.  
 
-:::image type="complex" source="../../media/2020/08/x-client-data.msft.png" alt-text="Human-readable `X-Client-Data` header values" lightbox="../../media/2020/08/x-client-data.msft.png":::
+:::image type="complex" source="../../media/2020/08/x-client-data.msft.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる" lightbox="../../media/2020/08/x-client-data.msft.png":::
    Human-readable `X-Client-Data` header values  
 :::image-end:::  
 
@@ -397,7 +397,7 @@ Chromium issue: [#1103854][CR1103854]
 
 たとえば、 `monospace` カスタムフォントがローカルコンピューターにインストールされている場合は、CSS コンプリートリストに表示されます。 以前のバージョンの Microsoft Edge では、フォントは表示されませんでした。
 
-:::image type="complex" source="../../media/2020/08/font-auto-complete.msft.png" alt-text="オートコンプリートのカスタムフォント" lightbox="../../media/2020/08/font-auto-complete.msft.png":::
+:::image type="complex" source="../../media/2020/08/font-auto-complete.msft.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる" lightbox="../../media/2020/08/font-auto-complete.msft.png":::
    オートコンプリートのカスタムフォント  
 :::image-end:::  
 
@@ -409,7 +409,7 @@ DevTools では、元のネットワーク要求と同じリソースの種類�
 
 以前の DevTools によって型が変わる場合がありました `Other` 。  
 
-:::image type="complex" source="../../media/2020/08/network-redirect.msft.png" alt-text="リダイレクトリソースの種類を表示する" lightbox="../../media/2020/08/network-redirect.msft.png":::
+:::image type="complex" source="../../media/2020/08/network-redirect.msft.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる" lightbox="../../media/2020/08/network-redirect.msft.png":::
    リダイレクトリソースの種類を表示する  
 :::image-end:::  
 
@@ -426,12 +426,12 @@ Chromium の問題: [#997694][CR997694]
 
 :::row:::
    :::column span="":::
-      :::image type="complex" source="../../media/2020/08/clear-button-elements.msft.png" alt-text="[要素] パネルの [クリア] ボタン" lightbox="../../media/2020/08/clear-button-elements.msft.png":::
+      :::image type="complex" source="../../media/2020/08/clear-button-elements.msft.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる" lightbox="../../media/2020/08/clear-button-elements.msft.png":::
          [ **要素** ] パネルの [クリア] ボタン  
       :::image-end:::  
    :::column-end:::
    :::column span="":::
-      :::image type="complex" source="../../media/2020/08/clear-button-network.msft.png" alt-text="ネットワークパネルのボタンをクリアする" lightbox="../../media/2020/08/clear-button-network.msft.png":::
+      :::image type="complex" source="../../media/2020/08/clear-button-network.msft.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる" lightbox="../../media/2020/08/clear-button-network.msft.png":::
          **ネットワーク**パネルのボタンをクリアする  
       :::image-end:::  
    :::column-end:::

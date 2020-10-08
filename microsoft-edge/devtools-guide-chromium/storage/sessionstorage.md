@@ -48,19 +48,19 @@ ms.locfileid: "10993549"
     
 1.  [ **セッションストレージ** ] メニューを展開します。  
     
-    :::image type="complex" source="../media/storage-application-storage-session-storage.msft.png" alt-text="[セッション記憶域] メニュー" lightbox="../media/storage-application-storage-session-storage.msft.png":::
+    :::image type="complex" source="../media/storage-application-storage-session-storage.msft.png" alt-text="マニフェストウィンドウ" lightbox="../media/storage-application-storage-session-storage.msft.png":::
        [ **セッション記憶域** ] メニュー  
     :::image-end:::  
     
 1.  ドメインを選択して、キーと値のペアを表示します。  
     
-    :::image type="complex" source="../media/storage-application-storage-session-storage-domain.msft.png" alt-text=""SessionStorage" キーと値のペア" lightbox="../media/storage-application-storage-session-storage-domain.msft.png":::
+    :::image type="complex" source="../media/storage-application-storage-session-storage-domain.msft.png" alt-text="マニフェストウィンドウ" lightbox="../media/storage-application-storage-session-storage-domain.msft.png":::
        `sessionStorage`キーと値のペア  
     :::image-end:::  
     
 1.  テーブルの行を選択して、テーブルの下に表示されているビューアーの値を確認します。  
     
-    :::image type="complex" source="../media/storage-application-storage-session-storage-domain-key-value-selected.msft.png" alt-text="X sid キーの値を表示する" lightbox="../media/storage-application-storage-session-storage-domain-key-value-selected.msft.png":::
+    :::image type="complex" source="../media/storage-application-storage-session-storage-domain-key-value-selected.msft.png" alt-text="マニフェストウィンドウ" lightbox="../media/storage-application-storage-session-storage-domain-key-value-selected.msft.png":::
        キーの値を表示する `x-sid`  
     :::image-end:::  
     
@@ -69,7 +69,7 @@ ms.locfileid: "10993549"
 1.  [ `sessionStorage` ドメインのキーと値のペアを表示](#view-sessionstorage-keys-and-values)します。  
 1.  表の空の部分をダブルクリックします。  DevTools で新しい行を作成し、 **キー** 列にカーソルをフォーカスします。  
     
-    :::image type="complex" source="../media/storage-application-storage-session-storage-domain-key-value-new.msft.png" alt-text="新しいキーと値のペアを作成するためにダブルクリックするテーブルの空の部分" lightbox="../media/storage-application-storage-session-storage-domain-key-value-new.msft.png":::
+    :::image type="complex" source="../media/storage-application-storage-session-storage-domain-key-value-new.msft.png" alt-text="マニフェストウィンドウ" lightbox="../media/storage-application-storage-session-storage-domain-key-value-new.msft.png":::
        新しいキーと値のペアを作成するためにダブルクリックするテーブルの空の部分  
     :::image-end:::  
     
@@ -78,7 +78,7 @@ ms.locfileid: "10993549"
 1.  [ `sessionStorage` ドメインのキーと値のペアを表示](#view-sessionstorage-keys-and-values)します。  
 1.  キーまた**は値の列の**セルをダブルクリックし**て、その**キーまたは値を編集します。  
     
-    :::image type="complex" source="../media/storage-application-storage-session-storage-domain-key-value-edit.msft.png" alt-text="セッションストレージキーを編集する" lightbox="../media/storage-application-storage-session-storage-domain-key-value-edit.msft.png":::
+    :::image type="complex" source="../media/storage-application-storage-session-storage-domain-key-value-edit.msft.png" alt-text="マニフェストウィンドウ" lightbox="../media/storage-application-storage-session-storage-domain-key-value-edit.msft.png":::
        キーを編集する `sessionStorage`  
     :::image-end:::  
     
@@ -99,13 +99,13 @@ JavaScript は**本体**で実行できるため、**本体**はページの jav
 
 1.  使用しているページ以外のドメインのキーと値のペアにアクセスする場合は、 **javascript のコンテキスト** メニューを使って **本体** の javascript コンテキストを変更し `sessionStorage` ます。  
     
-    :::image type="complex" source="../media/storage-console-domain-selection.msft.png" alt-text="本体の JavaScript のコンテキストを変更する" lightbox="../media/storage-console-domain-selection.msft.png":::
+    :::image type="complex" source="../media/storage-console-domain-selection.msft.png" alt-text="マニフェストウィンドウ" lightbox="../media/storage-console-domain-selection.msft.png":::
        本体の JavaScript のコンテキストを変更する  
     :::image-end:::  
     
 1.  `sessionStorage`JavaScript と同じように、コンソールで式を実行します。  
     
-    :::image type="complex" source="../media/storage-console-session-storage-keys.msft.png" alt-text="コンソールからセッションストレージを操作する" lightbox="../media/storage-console-session-storage-keys.msft.png":::
+    :::image type="complex" source="../media/storage-console-session-storage-keys.msft.png" alt-text="マニフェストウィンドウ" lightbox="../media/storage-console-session-storage-keys.msft.png":::
        `sessionStorage`**コンソール**から操作する  
     :::image-end:::  
     

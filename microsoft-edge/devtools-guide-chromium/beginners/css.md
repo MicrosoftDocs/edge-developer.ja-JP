@@ -45,7 +45,7 @@ ms.locfileid: "10993304"
 
 チュートリアルを完了したら、サイトは次の図のようになります。  
 
-:::image type="complex" source="../media/beginners-css-intro2.msft.png" alt-text="チュートリアルの最後にサイトがどのように表示されるか" lightbox="../media/beginners-css-intro2.msft.png":::
+:::image type="complex" source="../media/beginners-css-intro2.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-intro2.msft.png":::
    チュートリアルの最後にサイトがどのように表示されるか  
 :::image-end:::  
 
@@ -75,13 +75,13 @@ ms.locfileid: "10993304"
 
 1.  [ソースコード][GlitchCookedAmphibianIndex]を開きます。  ブラウザーの [フォーカス] タブは [ **編集] タブ**として参照されます。  
     
-    :::image type="complex" source="../media/beginners-css-setup1.msft.png" alt-text="[編集] タブ" lightbox="../media/beginners-css-setup1.msft.png":::
+    :::image type="complex" source="../media/beginners-css-setup1.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-setup1.msft.png":::
        [ **編集** ] タブ  
     :::image-end:::  
     
 1.  [ **クック-水陸両用機**] を選びます。  メニューがポップアップ表示されます。  
     
-    :::image type="complex" source="../media/beginners-css-setup2.msft.png" alt-text="[プロジェクトのオプション] メニュー" lightbox="../media/beginners-css-setup2.msft.png":::
+    :::image type="complex" source="../media/beginners-css-setup2.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-setup2.msft.png":::
        [プロジェクトのオプション] メニュー  
     :::image-end:::  
 
@@ -92,7 +92,7 @@ ms.locfileid: "10993304"
     
 1.  [ **表示** ] を選択し、 **新しいウィンドウで**を選択します。  サイトのライブビューで別のタブが開きます。  ブラウザーの [フォーカス] タブは、[ **ライブ] タブ**として参照されます。  
     
-    :::image type="complex" source="../media/beginners-css-setup3.msft.png" alt-text="[ライブ] タブ" lightbox="../media/beginners-css-setup3.msft.png":::
+    :::image type="complex" source="../media/beginners-css-setup3.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-setup3.msft.png":::
        [ **ライブ] タブ**  
     :::image-end:::  
 
@@ -100,7 +100,7 @@ ms.locfileid: "10993304"
 
 **CSS** は、web ページのレイアウトとスタイルを決定するコンピューターの言語です。  次の図は、罫線が付いた段落を示しています。  
 
-:::image type="complex" source="../media/beginners-css-red_paragraph.msft.png" alt-text="テキストは CSS でスタイル設定されています" lightbox="../media/beginners-css-red_paragraph.msft.png":::
+:::image type="complex" source="../media/beginners-css-red_paragraph.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-red_paragraph.msft.png":::
    テキストは CSS でスタイル設定されています  
 :::image-end:::  
 
@@ -120,7 +120,7 @@ ms.locfileid: "10993304"
 
 1.  [編集] タブに戻り、[開く] をクリックし `index.html` ます。  
     
-    :::image type="complex" source="../media/beginners-css-inline1.msft.png" alt-text="index.html" lightbox="../media/beginners-css-inline1.msft.png":::
+    :::image type="complex" source="../media/beginners-css-inline1.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-inline1.msft.png":::
        [ `index.html` 編集] タブで開く  
     :::image-end:::  
     
@@ -140,7 +140,7 @@ ms.locfileid: "10993304"
     
 1.  [ **ライブ] タブ** に移動して変更を確認します。  セクションの背景 `<nav>` が青色になります。  
     
-    :::image type="complex" source="../media/beginners-css-inline2.msft.png" alt-text="ホームと連絡先のリンクの背景色が青になりました" lightbox="../media/beginners-css-inline2.msft.png":::
+    :::image type="complex" source="../media/beginners-css-inline2.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-inline2.msft.png":::
        **ホーム**と**連絡先**のリンクの背景色が青になりました  
     :::image-end:::  
     
@@ -158,7 +158,7 @@ ms.locfileid: "10993304"
 
 1.  「ライブ」タブで、「 **コンタクト** 」を選択して、コンタクトページに移動します。  [ **ホーム** ] と [ **連絡先**] のフォントを確認します。  
     
-    :::image type="complex" source="../media/beginners-css-internal1.msft.png" alt-text="[連絡先] ページ" lightbox="../media/beginners-css-internal1.msft.png":::
+    :::image type="complex" source="../media/beginners-css-internal1.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-internal1.msft.png":::
        [連絡先] ページ  
     :::image-end:::  
     
@@ -184,7 +184,7 @@ ms.locfileid: "10993304"
 1.  [ **ライブ] タブ**に戻ります。  
 1.  [ **連絡先** ] を選択して、連絡先ページに戻ります。  [ **ホーム** ] と [ **連絡先** ] のフォントが変更されました。  
     
-    :::image type="complex" source="../media/beginners-css-internal2.msft.png" alt-text="自宅と連絡先のリンクのフォントが変更されました" lightbox="../media/beginners-css-internal2.msft.png":::
+    :::image type="complex" source="../media/beginners-css-internal2.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-internal2.msft.png":::
        **自宅**と**連絡先**のリンクのフォントが変更されました  
     :::image-end:::  
     
@@ -262,7 +262,7 @@ li a {
 1.  [ **ライブ] タブ**に移動します。  
 1.  **連絡先のリンクを**選択して、連絡先ページに戻ります。  今すぐ **連絡してください。** ナビゲーションリンクと同じフォントに設定されています。  
     
-    :::image type="complex" source="../media/beginners-css-multiple1.msft.png" alt-text="「連絡」というテキストが表示されます。  自宅と連絡先のリンクと同じフォントになりました" lightbox="../media/beginners-css-multiple1.msft.png":::
+    :::image type="complex" source="../media/beginners-css-multiple1.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-multiple1.msft.png":::
        「連絡」というテキストが表示されます **。** **自宅**と**連絡先**のリンクと同じフォントになりました  
     :::image-end:::  
     
@@ -276,7 +276,7 @@ li a {
 
 1.  [ **ホーム** ] リンク上にマウスポインターを置いて、コンテキストメニュー \ (右クリック \) を開き、[ **検査**] を選びます。  
     
-    :::image type="complex" source="../media/beginners-css-add1.msft.png" alt-text="[ホーム] リンクを検査する" lightbox="../media/beginners-css-add1.msft.png":::
+    :::image type="complex" source="../media/beginners-css-add1.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-add1.msft.png":::
        [ホーム] リンクを検査する  
     :::image-end:::  
     
@@ -286,14 +286,14 @@ li a {
        :::column span="":::
           次の図では、 `font-family: 'Courier New', Courier, serif` 以前に追加した宣言 `contact.html` が DOM ツリーの下にある [ **スタイル** ] タブに表示されています。  
           
-          :::image type="complex" source="../media/beginners-css-add2.msft.png" alt-text="[スタイル] タブが DOM ツリーの下にある" lightbox="../media/beginners-css-add2.msft.png":::
+          :::image type="complex" source="../media/beginners-css-add2.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-add2.msft.png":::
              [ **スタイル** ] タブが DOM ツリーの下にある  
           :::image-end:::  
        :::column-end:::
        :::column span="":::
           DevTools ウィンドウが広くなっている場合、[スタイル] タブは DOM ツリーの右側にあります。  
           
-          :::image type="complex" source="../media/beginners-css-add3.msft.png" alt-text="[スタイル] タブは DOM ツリーの右側にあります。" lightbox="../media/beginners-css-add3.msft.png":::
+          :::image type="complex" source="../media/beginners-css-add3.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-add3.msft.png":::
              [ **スタイル** ] タブは DOM ツリーの右側にあります。  
           :::image-end:::  
        :::column-end:::
@@ -301,19 +301,19 @@ li a {
     
 1.  新しい宣言を追加するには、下の空の行を選び `font-family: 'Courier New', Courier, Serif` ます。  
     
-    :::image type="complex" source="../media/beginners-css-add4.msft.png" alt-text="新しい宣言を追加する" lightbox="../media/beginners-css-add4.msft.png":::
+    :::image type="complex" source="../media/beginners-css-add4.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-add4.msft.png":::
        新しい宣言を追加する  
     :::image-end:::  
     
 1.  入力 `color` して、を選択し `Enter` ます。  入力時にオートコンプリート UI によってオプションが提示されます。  
     
-    :::image type="complex" source="../media/beginners-css-add5.msft.png" alt-text="テキストの色" lightbox="../media/beginners-css-add5.msft.png":::
+    :::image type="complex" source="../media/beginners-css-add5.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-add5.msft.png":::
        型 `color`  
     :::image-end:::  
     
 1.  入力 `magenta` して、を選択し `Enter` ます。  連絡先ページのすべてのテキストがマジェンタ色になりました。  
     
-    :::image type="complex" source="../media/beginners-css-add6.msft.png" alt-text="「マゼンタ」と入力" lightbox="../media/beginners-css-add6.msft.png":::
+    :::image type="complex" source="../media/beginners-css-add6.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-add6.msft.png":::
        型 `magenta`  
     :::image-end:::  
     
@@ -323,13 +323,13 @@ DevTools で既存の宣言を編集するには、次の操作を実行しま�
 
 1.  の横にあるマゼンタの正方形を選び `magenta` ます。  カラーピッカーがポップアップ表示されます。  
     
-    :::image type="complex" source="../media/beginners-css-edit1.msft.png" alt-text="色のパレット" lightbox="../media/beginners-css-edit1.msft.png":::
+    :::image type="complex" source="../media/beginners-css-edit1.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-edit1.msft.png":::
        色のパレット  
     :::image-end:::  
     
 1.  カラーピッカーを使用して、フォントのテキストを好みの色に変更します。  
     
-    :::image type="complex" source="../media/beginners-css-edit2.msft.png" alt-text="カラーピッカーを使用してフォントの色を紫色に変更する" lightbox="../media/beginners-css-edit2.msft.png":::
+    :::image type="complex" source="../media/beginners-css-edit2.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-edit2.msft.png":::
        カラーピッカーを使用してフォントの色を紫色に変更する  
     :::image-end:::  
     
@@ -339,13 +339,13 @@ DevTools で新しいルールセットを追加するには、次の操作を�
 
 1.  Cls の隣にある [**新しいスタイルルール**] \ ( ![ 新しいスタイルルール ][ImageNewStyleRuleIcon] ) **.cls**を選びます。  空のルールセットが `a` セレクターとして表示されます。  
     
-    :::image type="complex" source="../media/beginners-css-rule1.msft.png" alt-text="新しいルールを追加する" lightbox="../media/beginners-css-rule1.msft.png":::
+    :::image type="complex" source="../media/beginners-css-rule1.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-rule1.msft.png":::
        新しいルールを追加する  
     :::image-end:::  
     
 1.  置換後 `a` の文字列 `a:hover`  
     
-    :::image type="complex" source="../media/beginners-css-rule2.msft.png" alt-text="を "a/a" に変更する" lightbox="../media/beginners-css-rule2.msft.png":::
+    :::image type="complex" source="../media/beginners-css-rule2.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-rule2.msft.png":::
        置換後 `a` の文字列 `a:hover`  
     :::image-end:::  
     
@@ -354,19 +354,19 @@ DevTools で新しいルールセットを追加するには、次の操作を�
 1.  角かっこの間を選択して新しい宣言を追加します。  
 1.  `background-color`宣言の名前を入力して、を選択し `Enter` ます。  
     
-    :::image type="complex" source="../media/beginners-css-rule3.msft.png" alt-text="背景色を入力する" lightbox="../media/beginners-css-rule3.msft.png":::
+    :::image type="complex" source="../media/beginners-css-rule3.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-rule3.msft.png":::
        型 `background-color`  
     :::image-end:::  
     
 1.  `green`[宣言] の値を入力して、を選択し `Enter` ます。  
     
-    :::image type="complex" source="../media/beginners-css-rule4.msft.png" alt-text="「緑」と入力" lightbox="../media/beginners-css-rule4.msft.png":::
+    :::image type="complex" source="../media/beginners-css-rule4.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-rule4.msft.png":::
        型 `green`  
     :::image-end:::  
     
 1.  [ **ホーム** ] リンクの上にマウスポインターを置きます。  リンクの背景が緑色になります。  
     
-    :::image type="complex" source="../media/beginners-css-rule5.msft.png" alt-text="[ホーム] リンクをポイントすると、緑色の背景が表示されます。" lightbox="../media/beginners-css-rule5.msft.png":::
+    :::image type="complex" source="../media/beginners-css-rule5.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-rule5.msft.png":::
        [ホーム] リンクをポイントすると、緑色の背景が表示されます。  
     :::image-end:::  
     
@@ -392,37 +392,37 @@ DevTools で新しいルールセットを追加するには、次の操作を�
 
 1.  まず、[ライブ] タブをもう一度読み込んで、DevTools で行った変更を削除します。  
     
-    :::image type="complex" source="../media/beginners-css-external1.msft.png" alt-text=" ページを更新すると、DevTools で行った変更は廃止されます。" lightbox="../media/beginners-css-external1.msft.png":::
+    :::image type="complex" source="../media/beginners-css-external1.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-external1.msft.png":::
         ページを更新すると、DevTools で行った変更は廃止されます。  
     :::image-end:::  
     
 1.  [ **エディター] タブ** に戻り、を開き `contact.html` ます。  
     
-    :::image type="complex" source="../media/beginners-css-external2.msft.png" alt-text="contact.html" lightbox="../media/beginners-css-external2.msft.png":::
+    :::image type="complex" source="../media/beginners-css-external2.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-external2.msft.png":::
        contact.html  
     :::image-end:::  
     
 1.  およびを `<style>` `</style>` 含む、and を含むすべてのデータを削除し `<style>` `</style>` ます。  
     
-    :::image type="complex" source="../media/beginners-css-external3.msft.png" alt-text="スタイルタグが削除されました" lightbox="../media/beginners-css-external3.msft.png":::
+    :::image type="complex" source="../media/beginners-css-external3.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-external3.msft.png":::
        スタイルタグが削除されました  
     :::image-end:::  
     
 1.  `index.html`タグから移動して削除し `style="background-color: aliceblue;"` `<nav>` ます。  これで、以前にサイトに追加した CSS がすべて削除されました。  
     
-    :::image type="complex" source="../media/beginners-css-external4.msft.png" alt-text="インラインスタイルが nav 要素から削除されている" lightbox="../media/beginners-css-external4.msft.png":::
+    :::image type="complex" source="../media/beginners-css-external4.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-external4.msft.png":::
        インラインスタイルが nav 要素から削除されている  
     :::image-end:::  
     
 1.  [ **新しいファイル**] を選びます。  
     
-    :::image type="complex" source="../media/beginners-css-external5.msft.png" alt-text="[新しいファイル] ダイアログ" lightbox="../media/beginners-css-external5.msft.png":::
+    :::image type="complex" source="../media/beginners-css-external5.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-external5.msft.png":::
        [新しいファイル] ダイアログ  
     :::image-end:::  
     
 1.  [置換後 `cool-file.js` の文字列 `style.css` ] を選び、[ **ファイルの追加**] を選びます。  
     
-    :::image type="complex" source="../media/beginners-css-external6.msft.png" alt-text="「スタイル .css」と入力します。" lightbox="../media/beginners-css-external6.msft.png":::
+    :::image type="complex" source="../media/beginners-css-external6.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-external6.msft.png":::
        型 `style.css`  
     :::image-end:::  
     
@@ -440,7 +440,7 @@ DevTools で新しいルールセットを追加するには、次の操作を�
     }
     ```  
     
-    :::image type="complex" source="../media/beginners-css-external7.msft.png" alt-text=".Css にコードを追加する" lightbox="../media/beginners-css-external7.msft.png":::
+    :::image type="complex" source="../media/beginners-css-external7.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-external7.msft.png":::
        コードを追加 `style.css`  
     :::image-end:::  
     
@@ -457,25 +457,25 @@ DevTools で新しいルールセットを追加するには、次の操作を�
     </head>
     ```  
     
-    :::image type="complex" source="../media/beginners-css-external8.msft.png" alt-text="スタイル .css へのリンク" lightbox="../media/beginners-css-external8.msft.png":::
+    :::image type="complex" source="../media/beginners-css-external8.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-external8.msft.png":::
        へのリンク `style.css`  
     :::image-end:::  
     
 1.  ファイルを開き、 `contact.html` そこにリンクを追加します。  
     
-    :::image type="complex" source="../media/beginners-css-external9.msft.png" alt-text="contact.html のスタイル .css へのリンク" lightbox="../media/beginners-css-external9.msft.png":::
+    :::image type="complex" source="../media/beginners-css-external9.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-external9.msft.png":::
        [リンク先] `style.css` `contact.html`  
     :::image-end:::  
     
 1.  [ **ライブ] タブ**に移動します。 これで、ホームページの最後のセクションと青色のナビゲーションセクションのフォントが変わりました。  
     
-    :::image type="complex" source="../media/beginners-css-external10.msft.png" alt-text="ホームページ" lightbox="../media/beginners-css-external10.msft.png":::
+    :::image type="complex" source="../media/beginners-css-external10.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-external10.msft.png":::
        ホームページ  
     :::image-end:::  
     
 1.  [ **連絡先** ] リンクを選択して、連絡先ページに移動します。  連絡先ページは、ホームページと同じ書式設定になっています。  
     
-    :::image type="complex" source="../media/beginners-css-external11.msft.png" alt-text="[連絡先] ページ" lightbox="../media/beginners-css-external11.msft.png":::
+    :::image type="complex" source="../media/beginners-css-external11.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-external11.msft.png":::
        [連絡先] ページ  
     :::image-end:::  
     
@@ -491,19 +491,19 @@ DevTools で新しいルールセットを追加するには、次の操作を�
     
 1.  [編集] タブに移動し、コードを貼り付け `contact.html` ます。  
     
-    :::image type="complex" source="../media/beginners-css-framework1.msft.png" alt-text="contact.html のフレームワークへのリンク" lightbox="../media/beginners-css-framework1.msft.png":::
+    :::image type="complex" source="../media/beginners-css-framework1.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-framework1.msft.png":::
        フレームワークへのリンク `contact.html`  
     :::image-end:::  
     
 1.  ファイルを開き、 `index.html` そこにコードを追加します。  
     
-    :::image type="complex" source="../media/beginners-css-framework2.msft.png" alt-text="index.html のフレームワークへのリンク" lightbox="../media/beginners-css-framework2.msft.png":::
+    :::image type="complex" source="../media/beginners-css-framework2.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-framework2.msft.png":::
        フレームワークへのリンク `index.html`  
     :::image-end:::  
     
 1.  [ライブ] タブに戻り、変更内容を確認します。  要素の背景色 `<nav>` と要素のフォントは同じであるのに、 `<li>` 他の `<a>` 要素のフォントが変更されています。  
     
-    :::image type="complex" source="../media/beginners-css-framework3.msft.png" alt-text="フレームワークによって変更されたホームページのフォントの一部" lightbox="../media/beginners-css-framework3.msft.png":::
+    :::image type="complex" source="../media/beginners-css-framework3.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-framework3.msft.png":::
        フレームワークによって変更されたホームページのフォントの一部  
     :::image-end:::  
     
@@ -519,19 +519,19 @@ DevTools で新しいルールセットを追加するには、次の操作を�
     
 1.  前のコードスニペットをタグに追加 `<header>` `index.html` します。  
     
-    :::image type="complex" source="../media/beginners-css-jumbotron1.msft.png" alt-text="index.html でクラスを追加する" lightbox="../media/beginners-css-jumbotron1.msft.png":::
+    :::image type="complex" source="../media/beginners-css-jumbotron1.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-jumbotron1.msft.png":::
        クラスを追加する `index.html`  
     :::image-end:::  
     
 1.  タグにコードを追加 `<header>` `contact.html` します。  
     
-    :::image type="complex" source="../media/beginners-css-jumbotron2.msft.png" alt-text="contact.html でクラスを追加する" lightbox="../media/beginners-css-jumbotron2.msft.png":::
+    :::image type="complex" source="../media/beginners-css-jumbotron2.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-jumbotron2.msft.png":::
        クラスを追加する `contact.html`  
     :::image-end:::  
     
 1.  [ライブ] タブで変更内容を表示します。 ヘッダーの周りに大きな灰色のボックスがあります。  
     
-    :::image type="complex" source="../media/beginners-css-jumbotron3.msft.png" alt-text="ヘッダーの周りに大きな灰色のボックスがあるようになりました" lightbox="../media/beginners-css-jumbotron3.msft.png":::
+    :::image type="complex" source="../media/beginners-css-jumbotron3.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-jumbotron3.msft.png":::
        ヘッダーの周りに大きな灰色のボックスがあるようになりました  
     :::image-end:::  
     
@@ -572,25 +572,25 @@ DevTools で新しいルールセットを追加するには、次の操作を�
 1.  [エディター] タブに戻り、を開き `index.html` ます。  
 1.  `class="container-fluid"`タグに追加 `<body>` します。  
     
-    :::image type="complex" source="../media/beginners-css-align1.msft.png" alt-text="コンテナー-流体クラスを追加する" lightbox="../media/beginners-css-align1.msft.png":::
+    :::image type="complex" source="../media/beginners-css-align1.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-align1.msft.png":::
        クラスを追加する `container-fluid`  
     :::image-end:::  
     
 1.  `<nav>`と `<main>` の要素を折り返し `<div class="row">` ます。  `</div>` `</main>` 新しいノートシールを正しく閉じるには、[指定の日時以降] をオンにしてください。  
     
-    :::image type="complex" source="../media/beginners-css-align2.msft.png" alt-text="行を追加する" lightbox="../media/beginners-css-align2.msft.png":::
+    :::image type="complex" source="../media/beginners-css-align2.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-align2.msft.png":::
        行を追加する  
     :::image-end:::  
     
 1.  `class="col-3"` `<nav>` タグとタグに追加 `class="col-9"` `<main>` します。  
     
-    :::image type="complex" source="../media/beginners-css-align3.msft.png" alt-text="列3と列9のクラスを追加する" lightbox="../media/beginners-css-align3.msft.png":::
+    :::image type="complex" source="../media/beginners-css-align3.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-align3.msft.png":::
        `col-3`クラスとクラスを追加する `col-9`  
     :::image-end:::  
     
 1.  [ライブ] タブで変更内容を表示します。  
     
-    :::image type="complex" source="../media/beginners-css-align4.msft.png" alt-text="これで、ナビゲーションコンテンツがメインコンテンツの左になりました" lightbox="../media/beginners-css-align4.msft.png":::
+    :::image type="complex" source="../media/beginners-css-align4.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-align4.msft.png":::
        これで、ナビゲーションコンテンツがメインコンテンツの左になりました  
     :::image-end:::  
     

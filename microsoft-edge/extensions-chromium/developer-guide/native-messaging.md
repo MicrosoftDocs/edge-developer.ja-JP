@@ -1,12 +1,12 @@
 ---
-description: Native messaging documentation
-title: Native Messaging
+description: ネイティブメッセージングのドキュメント
+title: ネイティブ メッセージング
 author: MSEdgeTeam
 ms.author: msedgedevrel
 ms.date: 10/06/2020
 ms.topic: article
 ms.prod: microsoft-edge
-keywords: edge-chromium, extensions development, browser extensions, addons, partner center, developer
+keywords: edge-chromium、拡張機能の開発、ブラウザーの拡張、アドオン、パートナーセンター、開発者
 ms.openlocfilehash: c5da9acf79225c88ad5829c2b7f57d1d833ca49b
 ms.sourcegitcommit: 75c200a029d19fe372c1505c0006dbfbfad90bf5
 ms.translationtype: MT
@@ -14,20 +14,20 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/06/2020
 ms.locfileid: "11100253"
 ---
-# Native messaging  
+# ネイティブ メッセージング  
 
-Extensions communicate with a native Win32 application installed on a user's device using message passing APIs.  The native application host sends and receives messages with extensions using standard input and standard output.  Extensions using native messaging are installed in Microsoft Edge similar to any other extension.  However, native applications are not installed or managed by Microsoft Edge.  
+拡張機能は、メッセージパッシング Api を使って、ユーザーのデバイスにインストールされているネイティブ Win32 アプリケーションと通信します。  ネイティブのアプリケーションホストは、標準の入力と標準の出力を使って、拡張機能を使ってメッセージを送受信します。  ネイティブメッセージングを使用する拡張機能は、他の拡張機能と同様に Microsoft Edge にインストールされます。  ただし、ネイティブアプリケーションは Microsoft Edge でインストールまたは管理されません。  
 
-To acquire the extension and native application host, you have two distribution models.  
+拡張機能とネイティブアプリケーションホストを取得するには、2つの配布モデルがあります。  
 
-*   Package your extension and the host together.  When a user installs the package, both the extension and the host are installed.
-*   Install your extension using the [Microsoft Edge Add-ons store][EdgeAddons], and your extension prompts users to install the host.  
+*   拡張機能とホストをまとめてパッケージ化します。  ユーザーがパッケージをインストールすると、拡張機能とホストの両方がインストールされます。
+*   [Microsoft Edge アドオンストア][EdgeAddons]を使用して拡張機能をインストールすると、拡張機能により、ユーザーにホストをインストールするように求められます。  
 
-To create your extension to send and receive messages with native application hosts, refer to the following steps.  
+ネイティブアプリケーションホストでメッセージを送受信するための拡張機能を作成するには、次の手順を参照してください。  
 
-## Step 1 - Add permissions to the extension manifest  
+## 手順 1-拡張機能マニフェストにアクセス許可を追加する  
 
-Add the `nativeMessaging` permission to the **manifest.json** file of the extension.  The following code snippet is an example of **manifest.json**.  
+`nativeMessaging`拡張子のファイルの**manifest.js**にアクセス許可を追加します。  次のコードスニペットは、 **manifest.js**の例です。  
 
 ```json
     {
@@ -45,9 +45,9 @@ Add the `nativeMessaging` permission to the **manifest.json** file of the extens
     }
 ```  
 
-## Step 2 - Create your native messaging host manifest file  
+## 手順 2-ネイティブメッセージングホストマニフェストファイルを作成する  
 
-Native applications must provide a native messaging host manifest file.  The manifest file contains the path to the native messaging host runtime, the method of communication with the extension, and a list of allowed extensions to which it communicates.  The browser reads and validates the native messaging host manifest.  The browser does not install or manage the native messaging host manifest file.  
+ネイティブアプリケーションでは、ネイティブメッセージングホストマニフェストファイルを提供する必要があります。  マニフェストファイルには、ネイティブメッセージングホストランタイムへのパス、拡張機能との通信方法、および通信先として使用できる拡張機能の一覧が含まれます。  ブラウザーは、ネイティブのメッセージングホストマニフェストを読み取り、検証します。  ブラウザーは、ネイティブメッセージングホストマニフェストファイルをインストールまたは管理しません。  
 
 ```json
     {
@@ -61,17 +61,17 @@ Native applications must provide a native messaging host manifest file.  The man
     }
 ```  
 
-The host manifest file must be a valid JSON file that contains the following keys.  
+ホストマニフェストファイルは、次のキーを含む有効な JSON ファイルである必要があります。  
 
 :::row:::
    :::column span="1":::
       `name`  
    :::column-end:::
    :::column span="2":::
-      Specifies the name of the native messaging host.  Clients pass this string to `runtime.connectNative` or `runtime.sendNativeMessage`.  
+      ネイティブメッセージングホストの名前を指定します。  クライアントは、またはにこの文字列を渡し `runtime.connectNative` `runtime.sendNativeMessage` ます。  
       
-      *   This value must only contain lowercase alphanumeric characters, underscores, and dots.  
-      *   This value must not start or end with a dot, and a dot must not be followed by another dot.  
+      *   この値には、小文字の英数字、アンダースコア、ドットを含める必要があります。  
+      *   この値は、先頭と末尾以外のドットで指定する必要があります。ドットの後に別のドットを付けることはできません。  
    :::column-end:::
 :::row-end:::  
 :::row:::
@@ -79,7 +79,7 @@ The host manifest file must be a valid JSON file that contains the following key
       `description`  
    :::column-end:::
    :::column span="2":::
-      Describes the application.  
+      アプリケーションについて説明します。  
    :::column-end:::
 :::row-end:::  
 :::row:::
@@ -87,12 +87,12 @@ The host manifest file must be a valid JSON file that contains the following key
       `path`  
    :::column-end:::
    :::column span="2":::
-      Specifies the path to the native messaging host binary.  
+      ネイティブメッセージングホストバイナリへのパスを指定します。  
       
-      *   On Windows devices, you may use relative paths to the directory that contains the manifest file.  
-      *   On macOS and Linux, the path must be absolute.  
+      *   Windows デバイスでは、マニフェストファイルを含むディレクトリへの相対パスを使うことができます。  
+      *   MacOS と Linux では、パスは絶対パスにする必要があります。  
       
-      The host process starts with the current directory set to the directory that contains the host binary.  For example \(Windows\), if this parameter is set to `C:\Application\nm_host.exe`, the binary is started using the current directory \(`C:\Application\`\).  
+      ホストプロセスは、現在のディレクトリがホストバイナリを含むディレクトリに設定された状態で開始されます。  たとえば、\ (Windows \) では、このパラメーターがに設定されている場合、 `C:\Application\nm_host.exe` 現在のディレクトリ \ (\) を使ってバイナリが開始され `C:\Application\` ます。  
    :::column-end:::
 :::row-end:::  
 :::row:::
@@ -100,8 +100,8 @@ The host manifest file must be a valid JSON file that contains the following key
       `type`  
    :::column-end:::
    :::column span="2":::
-      Specifies the type of the interface used to communicate with the native messaging host.  This value instructs Microsoft Edge to use `stdin` and `stdout` to communicate with the host.  
-      The only acceptable value is `stdio`.  
+      ネイティブメッセージングホストとの通信に使用されるインターフェイスの型を指定します。  この値は、Microsoft Edge がホストとの通信を行うために使用することを指示 `stdin` し `stdout` ます。  
+      指定できる値は、だけ `stdio` です。  
    :::column-end:::
 :::row-end:::  
 :::row:::
@@ -109,7 +109,7 @@ The host manifest file must be a valid JSON file that contains the following key
       `allowed_origins` 
    :::column-end:::
    :::column span="2":::
-      Specifies the list of extensions that have access to the native messaging host.  To enable your application to identify and communicate with an extension, in your native messaging host manifest file set the following value.  
+      ネイティブメッセージングホストにアクセスできる拡張子の一覧を指定します。  アプリケーションで拡張機能を認識して通信できるようにするには、ネイティブメッセージングホストマニフェストファイルで次の値を設定します。  
       
       ```json
       "allowed_origins": ["chrome-extension://{microsoft_catalog_extension_id}"]
@@ -117,26 +117,26 @@ The host manifest file must be a valid JSON file that contains the following key
    :::column-end:::
 :::row-end:::  
 
-Sideload your extension to test native messaging with the host.  
-To sideload your extension during development and retrieve `microsoft_catalog_extension_id`, complete the following steps.  
+ホストとのネイティブメッセージングをテストするために拡張機能をサイドローディングします。  
+開発中に拡張機能をサイドローディングして取得するには `microsoft_catalog_extension_id` 、次の手順を実行します。  
 
-1.  Navigate to `edge://extensions`, and then turn on the Developer mode toggle button.  
-1.  Choose **Load unpacked**, and then select your extension package to sideload.  
-1.  Choose **OK**.
-1.  Navigate to `edge://extensions` page and verify your extension is listed.  
-1.  Copy the key from `microsoft_catalog_extension_id` \(ID\) from the extension listing on the page.
+1.  に移動し `edge://extensions` て、[開発者モード] トグルボタンをオンにします。  
+1.  [ **アンパックの読み込み**] を選択し、サイドローディングに拡張パッケージを選択します。  
+1.  **[OK]** をクリックします。
+1.  ページに移動して、 `edge://extensions` 拡張子が表示されていることを確認します。  
+1.  `microsoft_catalog_extension_id`ページの内線番号リストからキーを \ (ID) からコピーします。
 
-When you are ready to distribute your extension to users, publish your extension to the Microsoft Edge add-ons store.  The extension ID of the published extension may differ from the ID used while sideloading your extension.  If the ID changed, update `allowed_origins` in the host manifest file with the ID of your published extension.  
+内線番号をユーザーに配布する準備ができたら、Microsoft Edge のアドオンストアに拡張機能を公開します。  公開された拡張機能の拡張 ID は、拡張機能のサイドローディング時に使用した ID とは異なる場合があります。  ID が変更された場合は、公開された `allowed_origins` 拡張機能の id でホストマニフェストファイル内で更新します。  
 
-## Step 3 - Copy the native messaging host manifest file to your system  
+## 手順 3-ネイティブのメッセージングホストマニフェストファイルをシステムにコピーする  
 
-The final step involves copying the native messaging host manifest file to your computer, and ensuring it is configured correctly.  To ensure your manifest file is placed in the expected location, complete the following the steps.  The location varies by platform.  
+最後の手順では、ネイティブのメッセージングホストマニフェストファイルをコンピューターにコピーし、正しく構成されていることを確認します。  マニフェストファイルが予期した場所に配置されるようにするには、次の手順を実行します。  場所はプラットフォームによって異なります。  
 
 ### [Windows](#tab/windows/)  
 
 <a id="copy-manifest-file"></a>  
 
-The manifest file may be located anywhere in the file system.  The application installer must create a registry key and set the default value of that key to the full path of the manifest file.  The following commands are examples of registry keys.  
+マニフェストファイルは、ファイルシステム内の任意の場所に配置されている可能性があります。  アプリケーションのインストーラーでは、レジストリキーを作成し、そのキーの既定値をマニフェストファイルの完全パスに設定する必要があります。  次のコマンドは、レジストリキーの例です。  
 
 ```text
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Edge\NativeMessagingHosts\com.my_company.my_application
@@ -146,19 +146,19 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Edge\NativeMessagingHosts\com.my_company.m
 HKEY_CURRENT_USER\SOFTWARE\Microsoft\Edge\NativeMessagingHosts\com.my_company.my_application
 ```
 
-To add a registry key to the directory with the manifest key.  
+マニフェストキーを使ってディレクトリにレジストリキーを追加します。  
 
-*   Run command in command prompt.    
+*   コマンドプロンプトでコマンドを実行します。    
     
-    1.  Run the following command.  
+    1.  次のコマンドを実行します。  
         
         ```shell
         REG ADD "HKCU\Software\Microsoft\Edge\NativeMessagingHosts\com.my_company.my_application" /ve /t REG_SZ /d "C:\path\to\nmh-manifest.json" /f
         ```  
     
-*   Create a `.reg` file and run it.  
+*   ファイルを作成 `.reg` して実行します。  
     
-    1.  Copy the following command into a `.reg` file.  
+    1.  次のコマンドをファイルにコピー `.reg` します。  
         
         ```shell
         Windows Registry Editor Version 5.00
@@ -166,49 +166,49 @@ To add a registry key to the directory with the manifest key.
         @="C:\\path\\to\\nmh-manifest.json"
         ```  
         
-    1.  Run the `.reg` file.  
+    1.  ファイルを実行 `.reg` します。  
     
-Microsoft Edge queries the 32-bit registry first, and then the 64-bit registry to identify native messaging hosts.  If you run the above `.reg` file as part of a batch script, ensure you run it using an administrator command prompt.  
+Microsoft Edge では、最初に32ビットレジストリが照会され、次に64ビットレジストリによってネイティブメッセージングホストが識別されます。  上記 `.reg` のファイルをバッチスクリプトの一部として実行する場合は、管理者のコマンドプロンプトを使用して実行していることを確認します。  
 
 ### [macOS](#tab/macos/)  
 
 <a id="copy-manifest-file"></a>  
 
-To store the manifest file, complete one of the following actions.  
+マニフェストファイルを保存するには、次のいずれかの操作を実行します。  
 
-*   System-wide native messaging hosts, which are available to all users, are stored in a fixed location.  For example, the manifest file must be stored in following location. 
+*   すべてのユーザーが使用できるシステム全体のネイティブメッセージングホストは、固定された場所に格納されます。  たとえば、マニフェストファイルは、次の場所に格納されている必要があります。 
     
     ```bash
     /Library/Microsoft/Edge/NativeMessagingHosts/com.my_company.my_application.json
     ```  
     
-*   User-specific native messaging hosts, which are available to the current user only, are located in the `NativeMessagingHosts` subdirectory in the user profile directory.  For example, the manifest file must be stored in following location.  
+*   現在のユーザーのみが利用できる、ユーザー固有のネイティブメッセージホストは、 `NativeMessagingHosts` ユーザープロファイルディレクトリのサブディレクトリにあります。  たとえば、マニフェストファイルは、次の場所に格納されている必要があります。  
     
     ```bash
     ~/Library/Application Support/Microsoft Edge {Channel_Name}/NativeMessagingHosts/com.my_company.my_application.json
     ```  
     
-    The  `{Channel_Name}` in `Microsoft Edge {Channel_Name}` must be one of the following values.  
+    In は、  `{Channel_Name}` `Microsoft Edge {Channel_Name}` 次のいずれかの値である必要があります。  
     
     *   Canary  
     *   Dev  
     *   Beta  
 
-    When using the Stable channel, `{Channel_Name}` is not required.  
+    安定したチャネルを使用する場合 `{Channel_Name}` は必須ではありません。  
 
 ### [Linux](#tab/linux/)  
 
 <a id="copy-manifest-file"></a>  
 
-To store the manifest file, complete one of the following actions.  
+マニフェストファイルを保存するには、次のいずれかの操作を実行します。  
 
-*   System-wide native messaging hosts, which are available to all users, are stored in a fixed location.  The manifest file must be stored in following location.  
+*   すべてのユーザーが使用できるシステム全体のネイティブメッセージングホストは、固定された場所に格納されます。  マニフェストファイルは、次の場所に格納されている必要があります。  
     
     ```bash
     /etc/opt/edge/native-messaging-hosts
     ```
     
-*   User-specific native messaging hosts, which are available to the current user only, are located in the `NativeMessagingHosts` subdirectory in the user profile directory.  The manifest file must be stored in following location.  
+*   現在のユーザーのみが利用できる、ユーザー固有のネイティブメッセージホストは、 `NativeMessagingHosts` ユーザープロファイルディレクトリのサブディレクトリにあります。  マニフェストファイルは、次の場所に格納されている必要があります。  
     
     ```bash
     ~/.config/microsoft-edge/NativeMessagingHosts
@@ -217,18 +217,18 @@ To store the manifest file, complete one of the following actions.
 * * *  
 
 > [!NOTE]
-> Ensure that you provide read permissions on the manifest file, and run permissions on the host runtime.  
+> マニフェストファイルで読み取りアクセス許可を指定し、ホストランタイムでアクセス許可を実行していることを確認します。  
 
 <!-- links -->  
 
 > [!NOTE]
-> Portions of this page are modifications based on work created and [shared by Google][GoogleSitePolicies] and used according to terms described in the [Creative Commons Attribution 4.0 International License][CCA4IL].  
-> The original page is found [here](https://developer.chrome.com/extensions/nativeMessaging).  
+> このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
+> 元のページは [ここ](https://developer.chrome.com/extensions/nativeMessaging)にあります。  
 
-[![Creative Commons License][CCby4Image]][CCA4IL]  
-This work is licensed under a [Creative Commons Attribution 4.0 International License][CCA4IL].  
+[![クリエイティブコモンズライセンス][CCby4Image]][CCA4IL]  
+この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。  
 
-[EdgeAddons]: https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home "Microsoft Edge Add-ons"
+[EdgeAddons]: https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home "Microsoft Edge アドオン"
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
 [GoogleSitePolicies]: https://developers.google.com/terms/site-policies

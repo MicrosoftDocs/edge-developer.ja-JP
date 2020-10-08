@@ -36,8 +36,10 @@
   href: roadmap.md
 - name: 方法
   items:
+    - name: 静的リンク ローダー
+      href: howto/static.md
     - name: Debug WebView2
-      href: howto/Debug.md
+      href: howto/debug.md
     - name: エッジ ドライバーで自動化
       href: howto/webdriver.md
 - name: リファレンス
