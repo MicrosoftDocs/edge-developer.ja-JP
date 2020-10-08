@@ -48,19 +48,19 @@ ms.locfileid: "10993549"
     
 1.  <span data-ttu-id="a2f48-111">[ **セッションストレージ** ] メニューを展開します。</span><span class="sxs-lookup"><span data-stu-id="a2f48-111">Expand the **Session Storage** menu.</span></span>  
     
-    :::image type="complex" source="../media/storage-application-storage-session-storage.msft.png" alt-text="[セッション記憶域] メニュー" lightbox="../media/storage-application-storage-session-storage.msft.png":::
+    :::image type="complex" source="../media/storage-application-storage-session-storage.msft.png" alt-text="マニフェストウィンドウ" lightbox="../media/storage-application-storage-session-storage.msft.png":::
        <span data-ttu-id="a2f48-113">[ **セッション記憶域** ] メニュー</span><span class="sxs-lookup"><span data-stu-id="a2f48-113">The **Session Storage** Menu</span></span>  
     :::image-end:::  
     
 1.  <span data-ttu-id="a2f48-114">ドメインを選択して、キーと値のペアを表示します。</span><span class="sxs-lookup"><span data-stu-id="a2f48-114">Select a domain to view the key-value pairs.</span></span>  
     
-    :::image type="complex" source="../media/storage-application-storage-session-storage-domain.msft.png" alt-text=""SessionStorage" キーと値のペア" lightbox="../media/storage-application-storage-session-storage-domain.msft.png":::
+    :::image type="complex" source="../media/storage-application-storage-session-storage-domain.msft.png" alt-text="マニフェストウィンドウ" lightbox="../media/storage-application-storage-session-storage-domain.msft.png":::
        <span data-ttu-id="a2f48-116">`sessionStorage`キーと値のペア</span><span class="sxs-lookup"><span data-stu-id="a2f48-116">The `sessionStorage` key-value pairs</span></span>  
     :::image-end:::  
     
 1.  <span data-ttu-id="a2f48-117">テーブルの行を選択して、テーブルの下に表示されているビューアーの値を確認します。</span><span class="sxs-lookup"><span data-stu-id="a2f48-117">Select a row of the table to view the value in the viewer below the table.</span></span>  
     
-    :::image type="complex" source="../media/storage-application-storage-session-storage-domain-key-value-selected.msft.png" alt-text="X sid キーの値を表示する" lightbox="../media/storage-application-storage-session-storage-domain-key-value-selected.msft.png":::
+    :::image type="complex" source="../media/storage-application-storage-session-storage-domain-key-value-selected.msft.png" alt-text="マニフェストウィンドウ" lightbox="../media/storage-application-storage-session-storage-domain-key-value-selected.msft.png":::
        <span data-ttu-id="a2f48-119">キーの値を表示する `x-sid`</span><span class="sxs-lookup"><span data-stu-id="a2f48-119">View the value of the `x-sid` key</span></span>  
     :::image-end:::  
     
@@ -69,7 +69,7 @@ ms.locfileid: "10993549"
 1.  <span data-ttu-id="a2f48-121">[ `sessionStorage` ドメインのキーと値のペアを表示](#view-sessionstorage-keys-and-values)します。</span><span class="sxs-lookup"><span data-stu-id="a2f48-121">[View the `sessionStorage` key-value pairs of a domain](#view-sessionstorage-keys-and-values).</span></span>  
 1.  <span data-ttu-id="a2f48-122">表の空の部分をダブルクリックします。</span><span class="sxs-lookup"><span data-stu-id="a2f48-122">Double-click the empty part of the table.</span></span>  <span data-ttu-id="a2f48-123">DevTools で新しい行を作成し、 **キー** 列にカーソルをフォーカスします。</span><span class="sxs-lookup"><span data-stu-id="a2f48-123">DevTools creates a new row and focuses your cursor in the **Key** column.</span></span>  
     
-    :::image type="complex" source="../media/storage-application-storage-session-storage-domain-key-value-new.msft.png" alt-text="新しいキーと値のペアを作成するためにダブルクリックするテーブルの空の部分" lightbox="../media/storage-application-storage-session-storage-domain-key-value-new.msft.png":::
+    :::image type="complex" source="../media/storage-application-storage-session-storage-domain-key-value-new.msft.png" alt-text="マニフェストウィンドウ" lightbox="../media/storage-application-storage-session-storage-domain-key-value-new.msft.png":::
        <span data-ttu-id="a2f48-125">新しいキーと値のペアを作成するためにダブルクリックするテーブルの空の部分</span><span class="sxs-lookup"><span data-stu-id="a2f48-125">The empty part of the table to double-click in order to create a new key-value pair</span></span>  
     :::image-end:::  
     
@@ -78,7 +78,7 @@ ms.locfileid: "10993549"
 1.  <span data-ttu-id="a2f48-127">[ `sessionStorage` ドメインのキーと値のペアを表示](#view-sessionstorage-keys-and-values)します。</span><span class="sxs-lookup"><span data-stu-id="a2f48-127">[View the `sessionStorage` key-value pairs of a domain](#view-sessionstorage-keys-and-values).</span></span>  
 1.  <span data-ttu-id="a2f48-128">キーまた**は値の列の**セルをダブルクリックし**て、その**キーまたは値を編集します。</span><span class="sxs-lookup"><span data-stu-id="a2f48-128">Double-click a cell in the **Key** or **Value** column to edit that key or value.</span></span>  
     
-    :::image type="complex" source="../media/storage-application-storage-session-storage-domain-key-value-edit.msft.png" alt-text="セッションストレージキーを編集する" lightbox="../media/storage-application-storage-session-storage-domain-key-value-edit.msft.png":::
+    :::image type="complex" source="../media/storage-application-storage-session-storage-domain-key-value-edit.msft.png" alt-text="マニフェストウィンドウ" lightbox="../media/storage-application-storage-session-storage-domain-key-value-edit.msft.png":::
        <span data-ttu-id="a2f48-130">キーを編集する `sessionStorage`</span><span class="sxs-lookup"><span data-stu-id="a2f48-130">Edit a `sessionStorage` key</span></span>  
     :::image-end:::  
     
@@ -99,13 +99,13 @@ ms.locfileid: "10993549"
 
 1.  <span data-ttu-id="a2f48-141">使用しているページ以外のドメインのキーと値のペアにアクセスする場合は、 **javascript のコンテキスト** メニューを使って **本体** の javascript コンテキストを変更し `sessionStorage` ます。</span><span class="sxs-lookup"><span data-stu-id="a2f48-141">Use the **JavaScript contexts** menu to change the JavaScript context of the **Console** if you want to access the `sessionStorage` key-value pairs of a domain other than the page you are on.</span></span>  
     
-    :::image type="complex" source="../media/storage-console-domain-selection.msft.png" alt-text="本体の JavaScript のコンテキストを変更する" lightbox="../media/storage-console-domain-selection.msft.png":::
+    :::image type="complex" source="../media/storage-console-domain-selection.msft.png" alt-text="マニフェストウィンドウ" lightbox="../media/storage-console-domain-selection.msft.png":::
        <span data-ttu-id="a2f48-143">本体の JavaScript のコンテキストを変更する</span><span class="sxs-lookup"><span data-stu-id="a2f48-143">Change the JavaScript context of the Console</span></span>  
     :::image-end:::  
     
 1.  <span data-ttu-id="a2f48-144">`sessionStorage`JavaScript と同じように、コンソールで式を実行します。</span><span class="sxs-lookup"><span data-stu-id="a2f48-144">Run your `sessionStorage` expressions in the Console, the same as you would in your JavaScript.</span></span>  
     
-    :::image type="complex" source="../media/storage-console-session-storage-keys.msft.png" alt-text="コンソールからセッションストレージを操作する" lightbox="../media/storage-console-session-storage-keys.msft.png":::
+    :::image type="complex" source="../media/storage-console-session-storage-keys.msft.png" alt-text="マニフェストウィンドウ" lightbox="../media/storage-console-session-storage-keys.msft.png":::
        <span data-ttu-id="a2f48-146">`sessionStorage`**コンソール**から操作する</span><span class="sxs-lookup"><span data-stu-id="a2f48-146">Interact with `sessionStorage` from the **Console**</span></span>  
     :::image-end:::  
     

@@ -45,7 +45,7 @@ ms.locfileid: "10993304"
 
 <span data-ttu-id="bf53c-116">チュートリアルを完了したら、サイトは次の図のようになります。</span><span class="sxs-lookup"><span data-stu-id="bf53c-116">After you complete the tutorial, you site should look like the following figure.</span></span>  
 
-:::image type="complex" source="../media/beginners-css-intro2.msft.png" alt-text="チュートリアルの最後にサイトがどのように表示されるか" lightbox="../media/beginners-css-intro2.msft.png":::
+:::image type="complex" source="../media/beginners-css-intro2.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-intro2.msft.png":::
    <span data-ttu-id="bf53c-118">チュートリアルの最後にサイトがどのように表示されるか</span><span class="sxs-lookup"><span data-stu-id="bf53c-118">What your site should look like at the end of the tutorial</span></span>  
 :::image-end:::  
 
@@ -75,13 +75,13 @@ ms.locfileid: "10993304"
 
 1.  <span data-ttu-id="bf53c-134">[ソースコード][GlitchCookedAmphibianIndex]を開きます。</span><span class="sxs-lookup"><span data-stu-id="bf53c-134">Open the [source code][GlitchCookedAmphibianIndex].</span></span>  <span data-ttu-id="bf53c-135">ブラウザーの [フォーカス] タブは [ **編集] タブ**として参照されます。</span><span class="sxs-lookup"><span data-stu-id="bf53c-135">The in-focus tab of your browser is referenced as the **editing tab**.</span></span>  
     
-    :::image type="complex" source="../media/beginners-css-setup1.msft.png" alt-text="[編集] タブ" lightbox="../media/beginners-css-setup1.msft.png":::
+    :::image type="complex" source="../media/beginners-css-setup1.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-setup1.msft.png":::
        <span data-ttu-id="bf53c-137">[ **編集** ] タブ</span><span class="sxs-lookup"><span data-stu-id="bf53c-137">The **editing** tab</span></span>  
     :::image-end:::  
     
 1.  <span data-ttu-id="bf53c-138">[ **クック-水陸両用機**] を選びます。</span><span class="sxs-lookup"><span data-stu-id="bf53c-138">Choose **cooked-amphibian**.</span></span>  <span data-ttu-id="bf53c-139">メニューがポップアップ表示されます。</span><span class="sxs-lookup"><span data-stu-id="bf53c-139">A menu pops up.</span></span>  
     
-    :::image type="complex" source="../media/beginners-css-setup2.msft.png" alt-text="[プロジェクトのオプション] メニュー" lightbox="../media/beginners-css-setup2.msft.png":::
+    :::image type="complex" source="../media/beginners-css-setup2.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-setup2.msft.png":::
        <span data-ttu-id="bf53c-141">[プロジェクトのオプション] メニュー</span><span class="sxs-lookup"><span data-stu-id="bf53c-141">The Project Options menu</span></span>  
     :::image-end:::  
 
@@ -92,7 +92,7 @@ ms.locfileid: "10993304"
     
 1.  <span data-ttu-id="bf53c-145">[ **表示** ] を選択し、 **新しいウィンドウで**を選択します。</span><span class="sxs-lookup"><span data-stu-id="bf53c-145">Choose **Show** and select **In a New Window**.</span></span>  <span data-ttu-id="bf53c-146">サイトのライブビューで別のタブが開きます。</span><span class="sxs-lookup"><span data-stu-id="bf53c-146">Another tab opens with a live view of your site.</span></span>  <span data-ttu-id="bf53c-147">ブラウザーの [フォーカス] タブは、[ **ライブ] タブ**として参照されます。</span><span class="sxs-lookup"><span data-stu-id="bf53c-147">The in-focus tab of your browser is referenced as the **live tab**.</span></span>  
     
-    :::image type="complex" source="../media/beginners-css-setup3.msft.png" alt-text="[ライブ] タブ" lightbox="../media/beginners-css-setup3.msft.png":::
+    :::image type="complex" source="../media/beginners-css-setup3.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-setup3.msft.png":::
        <span data-ttu-id="bf53c-149">[ **ライブ] タブ**</span><span class="sxs-lookup"><span data-stu-id="bf53c-149">The **live tab**</span></span>  
     :::image-end:::  
 
@@ -100,7 +100,7 @@ ms.locfileid: "10993304"
 
 <span data-ttu-id="bf53c-151">**CSS** は、web ページのレイアウトとスタイルを決定するコンピューターの言語です。</span><span class="sxs-lookup"><span data-stu-id="bf53c-151">**CSS** is a computer language that determines the layout and styling of web pages.</span></span>  <span data-ttu-id="bf53c-152">次の図は、罫線が付いた段落を示しています。</span><span class="sxs-lookup"><span data-stu-id="bf53c-152">The following figure is a paragraph with a border.</span></span>  
 
-:::image type="complex" source="../media/beginners-css-red_paragraph.msft.png" alt-text="テキストは CSS でスタイル設定されています" lightbox="../media/beginners-css-red_paragraph.msft.png":::
+:::image type="complex" source="../media/beginners-css-red_paragraph.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-red_paragraph.msft.png":::
    <span data-ttu-id="bf53c-154">テキストは CSS でスタイル設定されています</span><span class="sxs-lookup"><span data-stu-id="bf53c-154">The text has been styled with CSS</span></span>  
 :::image-end:::  
 
@@ -120,7 +120,7 @@ ms.locfileid: "10993304"
 
 1.  <span data-ttu-id="bf53c-161">[編集] タブに戻り、[開く] をクリックし `index.html` ます。</span><span class="sxs-lookup"><span data-stu-id="bf53c-161">Go back to the editing tab and open `index.html`.</span></span>  
     
-    :::image type="complex" source="../media/beginners-css-inline1.msft.png" alt-text="index.html" lightbox="../media/beginners-css-inline1.msft.png":::
+    :::image type="complex" source="../media/beginners-css-inline1.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-inline1.msft.png":::
        <span data-ttu-id="bf53c-163">[ `index.html` 編集] タブで開く</span><span class="sxs-lookup"><span data-stu-id="bf53c-163">Open `index.html` in the editing tab</span></span>  
     :::image-end:::  
     
@@ -140,7 +140,7 @@ ms.locfileid: "10993304"
     
 1.  <span data-ttu-id="bf53c-167">[ **ライブ] タブ** に移動して変更を確認します。</span><span class="sxs-lookup"><span data-stu-id="bf53c-167">Go to the **live tab** to see the changes!</span></span>  <span data-ttu-id="bf53c-168">セクションの背景 `<nav>` が青色になります。</span><span class="sxs-lookup"><span data-stu-id="bf53c-168">The background of the `<nav>` section is now blue.</span></span>  
     
-    :::image type="complex" source="../media/beginners-css-inline2.msft.png" alt-text="ホームと連絡先のリンクの背景色が青になりました" lightbox="../media/beginners-css-inline2.msft.png":::
+    :::image type="complex" source="../media/beginners-css-inline2.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-inline2.msft.png":::
        <span data-ttu-id="bf53c-170">**ホーム**と**連絡先**のリンクの背景色が青になりました</span><span class="sxs-lookup"><span data-stu-id="bf53c-170">The background color behind the **Home** and **Contact** links is now blue</span></span>  
     :::image-end:::  
     
@@ -158,7 +158,7 @@ ms.locfileid: "10993304"
 
 1.  <span data-ttu-id="bf53c-178">「ライブ」タブで、「 **コンタクト** 」を選択して、コンタクトページに移動します。</span><span class="sxs-lookup"><span data-stu-id="bf53c-178">In the live tab, choose **Contact** to go to the contact page.</span></span>  <span data-ttu-id="bf53c-179">[ **ホーム** ] と [ **連絡先**] のフォントを確認します。</span><span class="sxs-lookup"><span data-stu-id="bf53c-179">Notice the font of **Home** and **Contact**.</span></span>  
     
-    :::image type="complex" source="../media/beginners-css-internal1.msft.png" alt-text="[連絡先] ページ" lightbox="../media/beginners-css-internal1.msft.png":::
+    :::image type="complex" source="../media/beginners-css-internal1.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-internal1.msft.png":::
        <span data-ttu-id="bf53c-181">[連絡先] ページ</span><span class="sxs-lookup"><span data-stu-id="bf53c-181">The Contact page</span></span>  
     :::image-end:::  
     
@@ -184,7 +184,7 @@ ms.locfileid: "10993304"
 1.  <span data-ttu-id="bf53c-186">[ **ライブ] タブ**に戻ります。</span><span class="sxs-lookup"><span data-stu-id="bf53c-186">Go back to the **live tab**.</span></span>  
 1.  <span data-ttu-id="bf53c-187">[ **連絡先** ] を選択して、連絡先ページに戻ります。</span><span class="sxs-lookup"><span data-stu-id="bf53c-187">Choose **Contact** to go back to the contact page.</span></span>  <span data-ttu-id="bf53c-188">[ **ホーム** ] と [ **連絡先** ] のフォントが変更されました。</span><span class="sxs-lookup"><span data-stu-id="bf53c-188">The font of **Home** and **Contact** has changed.</span></span>  
     
-    :::image type="complex" source="../media/beginners-css-internal2.msft.png" alt-text="自宅と連絡先のリンクのフォントが変更されました" lightbox="../media/beginners-css-internal2.msft.png":::
+    :::image type="complex" source="../media/beginners-css-internal2.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-internal2.msft.png":::
        <span data-ttu-id="bf53c-190">**自宅**と**連絡先**のリンクのフォントが変更されました</span><span class="sxs-lookup"><span data-stu-id="bf53c-190">The font of the **Home** and **Contact** links has changed</span></span>  
     :::image-end:::  
     
@@ -262,7 +262,7 @@ li a {
 1.  <span data-ttu-id="bf53c-212">[ **ライブ] タブ**に移動します。</span><span class="sxs-lookup"><span data-stu-id="bf53c-212">Go to the **live tab**.</span></span>  
 1.  <span data-ttu-id="bf53c-213">**連絡先のリンクを**選択して、連絡先ページに戻ります。</span><span class="sxs-lookup"><span data-stu-id="bf53c-213">Choose the **Contact** link to go back to the contact page.</span></span>  <span data-ttu-id="bf53c-214">今すぐ **連絡してください。**</span><span class="sxs-lookup"><span data-stu-id="bf53c-214">Now, **Contact Me!**</span></span> <span data-ttu-id="bf53c-215">ナビゲーションリンクと同じフォントに設定されています。</span><span class="sxs-lookup"><span data-stu-id="bf53c-215">has the same font as the navigation links.</span></span>  
     
-    :::image type="complex" source="../media/beginners-css-multiple1.msft.png" alt-text="「連絡」というテキストが表示されます。  自宅と連絡先のリンクと同じフォントになりました" lightbox="../media/beginners-css-multiple1.msft.png":::
+    :::image type="complex" source="../media/beginners-css-multiple1.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-multiple1.msft.png":::
        <span data-ttu-id="bf53c-218">「連絡」というテキストが表示されます **。**</span><span class="sxs-lookup"><span data-stu-id="bf53c-218">The text **Contact Me!**</span></span> <span data-ttu-id="bf53c-219">**自宅**と**連絡先**のリンクと同じフォントになりました</span><span class="sxs-lookup"><span data-stu-id="bf53c-219">now has the same font as the **Home** and **Contact** links</span></span>  
     :::image-end:::  
     
@@ -276,7 +276,7 @@ li a {
 
 1.  <span data-ttu-id="bf53c-226">[ **ホーム** ] リンク上にマウスポインターを置いて、コンテキストメニュー \ (右クリック \) を開き、[ **検査**] を選びます。</span><span class="sxs-lookup"><span data-stu-id="bf53c-226">Hover on the **Home** link, open the contextual menu \(right-click\), and select **Inspect**.</span></span>  
     
-    :::image type="complex" source="../media/beginners-css-add1.msft.png" alt-text="[ホーム] リンクを検査する" lightbox="../media/beginners-css-add1.msft.png":::
+    :::image type="complex" source="../media/beginners-css-add1.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-add1.msft.png":::
        <span data-ttu-id="bf53c-228">[ホーム] リンクを検査する</span><span class="sxs-lookup"><span data-stu-id="bf53c-228">Inspect the Home link</span></span>  
     :::image-end:::  
     
@@ -286,14 +286,14 @@ li a {
        :::column span="":::
           <span data-ttu-id="bf53c-232">次の図では、 `font-family: 'Courier New', Courier, serif` 以前に追加した宣言 `contact.html` が DOM ツリーの下にある [ **スタイル** ] タブに表示されています。</span><span class="sxs-lookup"><span data-stu-id="bf53c-232">In the following figure, the `font-family: 'Courier New', Courier, serif` declaration that you previously added to `contact.html` is seen in the **Styles** tab below the DOM Tree.</span></span>  
           
-          :::image type="complex" source="../media/beginners-css-add2.msft.png" alt-text="[スタイル] タブが DOM ツリーの下にある" lightbox="../media/beginners-css-add2.msft.png":::
+          :::image type="complex" source="../media/beginners-css-add2.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-add2.msft.png":::
              <span data-ttu-id="bf53c-234">[ **スタイル** ] タブが DOM ツリーの下にある</span><span class="sxs-lookup"><span data-stu-id="bf53c-234">The **Styles** tab is below the DOM Tree</span></span>  
           :::image-end:::  
        :::column-end:::
        :::column span="":::
           <span data-ttu-id="bf53c-235">DevTools ウィンドウが広くなっている場合、[スタイル] タブは DOM ツリーの右側にあります。</span><span class="sxs-lookup"><span data-stu-id="bf53c-235">If your DevTools window is wide, the Styles tab is to the right of the DOM Tree.</span></span>  
           
-          :::image type="complex" source="../media/beginners-css-add3.msft.png" alt-text="[スタイル] タブは DOM ツリーの右側にあります。" lightbox="../media/beginners-css-add3.msft.png":::
+          :::image type="complex" source="../media/beginners-css-add3.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-add3.msft.png":::
              <span data-ttu-id="bf53c-237">[ **スタイル** ] タブは DOM ツリーの右側にあります。</span><span class="sxs-lookup"><span data-stu-id="bf53c-237">The **Styles** tab is to the right of the DOM Tree</span></span>  
           :::image-end:::  
        :::column-end:::
@@ -301,19 +301,19 @@ li a {
     
 1.  <span data-ttu-id="bf53c-238">新しい宣言を追加するには、下の空の行を選び `font-family: 'Courier New', Courier, Serif` ます。</span><span class="sxs-lookup"><span data-stu-id="bf53c-238">Choose the empty line below `font-family: 'Courier New', Courier, Serif` to add a new declaration.</span></span>  
     
-    :::image type="complex" source="../media/beginners-css-add4.msft.png" alt-text="新しい宣言を追加する" lightbox="../media/beginners-css-add4.msft.png":::
+    :::image type="complex" source="../media/beginners-css-add4.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-add4.msft.png":::
        <span data-ttu-id="bf53c-240">新しい宣言を追加する</span><span class="sxs-lookup"><span data-stu-id="bf53c-240">Add a new declaration</span></span>  
     :::image-end:::  
     
 1.  <span data-ttu-id="bf53c-241">入力 `color` して、を選択し `Enter` ます。</span><span class="sxs-lookup"><span data-stu-id="bf53c-241">Type `color` and select `Enter`.</span></span>  <span data-ttu-id="bf53c-242">入力時にオートコンプリート UI によってオプションが提示されます。</span><span class="sxs-lookup"><span data-stu-id="bf53c-242">The autocomplete UI suggests options as you type.</span></span>  
     
-    :::image type="complex" source="../media/beginners-css-add5.msft.png" alt-text="テキストの色" lightbox="../media/beginners-css-add5.msft.png":::
+    :::image type="complex" source="../media/beginners-css-add5.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-add5.msft.png":::
        <span data-ttu-id="bf53c-244">型</span><span class="sxs-lookup"><span data-stu-id="bf53c-244">Type</span></span> `color`  
     :::image-end:::  
     
 1.  <span data-ttu-id="bf53c-245">入力 `magenta` して、を選択し `Enter` ます。</span><span class="sxs-lookup"><span data-stu-id="bf53c-245">Type `magenta` and select `Enter`.</span></span>  <span data-ttu-id="bf53c-246">連絡先ページのすべてのテキストがマジェンタ色になりました。</span><span class="sxs-lookup"><span data-stu-id="bf53c-246">All of the text on the contact page is now magenta.</span></span>  
     
-    :::image type="complex" source="../media/beginners-css-add6.msft.png" alt-text="「マゼンタ」と入力" lightbox="../media/beginners-css-add6.msft.png":::
+    :::image type="complex" source="../media/beginners-css-add6.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-add6.msft.png":::
        <span data-ttu-id="bf53c-248">型</span><span class="sxs-lookup"><span data-stu-id="bf53c-248">Type</span></span> `magenta`  
     :::image-end:::  
     
@@ -323,13 +323,13 @@ li a {
 
 1.  <span data-ttu-id="bf53c-251">の横にあるマゼンタの正方形を選び `magenta` ます。</span><span class="sxs-lookup"><span data-stu-id="bf53c-251">Choose the magenta square next to `magenta`.</span></span>  <span data-ttu-id="bf53c-252">カラーピッカーがポップアップ表示されます。</span><span class="sxs-lookup"><span data-stu-id="bf53c-252">A color picker pops up.</span></span>  
     
-    :::image type="complex" source="../media/beginners-css-edit1.msft.png" alt-text="色のパレット" lightbox="../media/beginners-css-edit1.msft.png":::
+    :::image type="complex" source="../media/beginners-css-edit1.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-edit1.msft.png":::
        <span data-ttu-id="bf53c-254">色のパレット</span><span class="sxs-lookup"><span data-stu-id="bf53c-254">The Color Picker</span></span>  
     :::image-end:::  
     
 1.  <span data-ttu-id="bf53c-255">カラーピッカーを使用して、フォントのテキストを好みの色に変更します。</span><span class="sxs-lookup"><span data-stu-id="bf53c-255">Use the color picker to change the font text to a color that you like.</span></span>  
     
-    :::image type="complex" source="../media/beginners-css-edit2.msft.png" alt-text="カラーピッカーを使用してフォントの色を紫色に変更する" lightbox="../media/beginners-css-edit2.msft.png":::
+    :::image type="complex" source="../media/beginners-css-edit2.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-edit2.msft.png":::
        <span data-ttu-id="bf53c-257">カラーピッカーを使用してフォントの色を紫色に変更する</span><span class="sxs-lookup"><span data-stu-id="bf53c-257">Change the font color to purple with the Color Picker</span></span>  
     :::image-end:::  
     
@@ -339,13 +339,13 @@ li a {
 
 1.  <span data-ttu-id="bf53c-260">Cls の隣にある [**新しいスタイルルール**] \ ( ![ 新しいスタイルルール ][ImageNewStyleRuleIcon] ) **.cls**を選びます。</span><span class="sxs-lookup"><span data-stu-id="bf53c-260">Choose **New Style Rule** \(![New Style Rule][ImageNewStyleRuleIcon]\) which is next to **.cls**.</span></span>  <span data-ttu-id="bf53c-261">空のルールセットが `a` セレクターとして表示されます。</span><span class="sxs-lookup"><span data-stu-id="bf53c-261">An empty ruleset appears with `a` as the selector.</span></span>  
     
-    :::image type="complex" source="../media/beginners-css-rule1.msft.png" alt-text="新しいルールを追加する" lightbox="../media/beginners-css-rule1.msft.png":::
+    :::image type="complex" source="../media/beginners-css-rule1.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-rule1.msft.png":::
        <span data-ttu-id="bf53c-263">新しいルールを追加する</span><span class="sxs-lookup"><span data-stu-id="bf53c-263">Add a new rule</span></span>  
     :::image-end:::  
     
 1.  <span data-ttu-id="bf53c-264">置換後 `a` の文字列 `a:hover`</span><span class="sxs-lookup"><span data-stu-id="bf53c-264">Replace `a` with `a:hover`.</span></span>  
     
-    :::image type="complex" source="../media/beginners-css-rule2.msft.png" alt-text="を "a/a" に変更する" lightbox="../media/beginners-css-rule2.msft.png":::
+    :::image type="complex" source="../media/beginners-css-rule2.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-rule2.msft.png":::
        <span data-ttu-id="bf53c-266">置換後 `a` の文字列</span><span class="sxs-lookup"><span data-stu-id="bf53c-266">Replace `a` with</span></span> `a:hover`  
     :::image-end:::  
     
@@ -354,19 +354,19 @@ li a {
 1.  <span data-ttu-id="bf53c-270">角かっこの間を選択して新しい宣言を追加します。</span><span class="sxs-lookup"><span data-stu-id="bf53c-270">Choose between the brackets to add a new declaration.</span></span>  
 1.  <span data-ttu-id="bf53c-271">`background-color`宣言の名前を入力して、を選択し `Enter` ます。</span><span class="sxs-lookup"><span data-stu-id="bf53c-271">Type `background-color` for the declaration name and select `Enter`.</span></span>  
     
-    :::image type="complex" source="../media/beginners-css-rule3.msft.png" alt-text="背景色を入力する" lightbox="../media/beginners-css-rule3.msft.png":::
+    :::image type="complex" source="../media/beginners-css-rule3.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-rule3.msft.png":::
        <span data-ttu-id="bf53c-273">型</span><span class="sxs-lookup"><span data-stu-id="bf53c-273">Type</span></span> `background-color`  
     :::image-end:::  
     
 1.  <span data-ttu-id="bf53c-274">`green`[宣言] の値を入力して、を選択し `Enter` ます。</span><span class="sxs-lookup"><span data-stu-id="bf53c-274">Type `green` for the declaration value and select `Enter`.</span></span>  
     
-    :::image type="complex" source="../media/beginners-css-rule4.msft.png" alt-text="「緑」と入力" lightbox="../media/beginners-css-rule4.msft.png":::
+    :::image type="complex" source="../media/beginners-css-rule4.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-rule4.msft.png":::
        <span data-ttu-id="bf53c-276">型</span><span class="sxs-lookup"><span data-stu-id="bf53c-276">Type</span></span> `green`  
     :::image-end:::  
     
 1.  <span data-ttu-id="bf53c-277">[ **ホーム** ] リンクの上にマウスポインターを置きます。</span><span class="sxs-lookup"><span data-stu-id="bf53c-277">Hover your mouse over the **Home** link.</span></span>  <span data-ttu-id="bf53c-278">リンクの背景が緑色になります。</span><span class="sxs-lookup"><span data-stu-id="bf53c-278">The background of the link turns green.</span></span>  
     
-    :::image type="complex" source="../media/beginners-css-rule5.msft.png" alt-text="[ホーム] リンクをポイントすると、緑色の背景が表示されます。" lightbox="../media/beginners-css-rule5.msft.png":::
+    :::image type="complex" source="../media/beginners-css-rule5.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-rule5.msft.png":::
        <span data-ttu-id="bf53c-280">[ホーム] リンクをポイントすると、緑色の背景が表示されます。</span><span class="sxs-lookup"><span data-stu-id="bf53c-280">Hover over the Home link to reveal its green background</span></span>  
     :::image-end:::  
     
@@ -392,37 +392,37 @@ li a {
 
 1.  <span data-ttu-id="bf53c-287">まず、[ライブ] タブをもう一度読み込んで、DevTools で行った変更を削除します。</span><span class="sxs-lookup"><span data-stu-id="bf53c-287">First, reload the live tab to remove the changes that you made in DevTools.</span></span>  
     
-    :::image type="complex" source="../media/beginners-css-external1.msft.png" alt-text=" ページを更新すると、DevTools で行った変更は廃止されます。" lightbox="../media/beginners-css-external1.msft.png":::
+    :::image type="complex" source="../media/beginners-css-external1.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-external1.msft.png":::
         <span data-ttu-id="bf53c-289">ページを更新すると、DevTools で行った変更は廃止されます。</span><span class="sxs-lookup"><span data-stu-id="bf53c-289">After you refresh the page, the changes that were made in DevTools are gone</span></span>  
     :::image-end:::  
     
 1.  <span data-ttu-id="bf53c-290">[ **エディター] タブ** に戻り、を開き `contact.html` ます。</span><span class="sxs-lookup"><span data-stu-id="bf53c-290">Go back to the **editor tab** and open `contact.html`.</span></span>  
     
-    :::image type="complex" source="../media/beginners-css-external2.msft.png" alt-text="contact.html" lightbox="../media/beginners-css-external2.msft.png":::
+    :::image type="complex" source="../media/beginners-css-external2.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-external2.msft.png":::
        <span data-ttu-id="bf53c-292">contact.html</span><span class="sxs-lookup"><span data-stu-id="bf53c-292">contact.html</span></span>  
     :::image-end:::  
     
 1.  <span data-ttu-id="bf53c-293">およびを `<style>` `</style>` 含む、and を含むすべてのデータを削除し `<style>` `</style>` ます。</span><span class="sxs-lookup"><span data-stu-id="bf53c-293">Delete everything between `<style>` and `</style>`, including `<style>` and `</style>`.</span></span>  
     
-    :::image type="complex" source="../media/beginners-css-external3.msft.png" alt-text="スタイルタグが削除されました" lightbox="../media/beginners-css-external3.msft.png":::
+    :::image type="complex" source="../media/beginners-css-external3.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-external3.msft.png":::
        <span data-ttu-id="bf53c-295">スタイルタグが削除されました</span><span class="sxs-lookup"><span data-stu-id="bf53c-295">The style tag has been removed</span></span>  
     :::image-end:::  
     
 1.  <span data-ttu-id="bf53c-296">`index.html`タグから移動して削除し `style="background-color: aliceblue;"` `<nav>` ます。</span><span class="sxs-lookup"><span data-stu-id="bf53c-296">Go to `index.html` and remove `style="background-color: aliceblue;"` from the `<nav>` tag.</span></span>  <span data-ttu-id="bf53c-297">これで、以前にサイトに追加した CSS がすべて削除されました。</span><span class="sxs-lookup"><span data-stu-id="bf53c-297">You have now removed all of the CSS that you previously added to your site.</span></span>  
     
-    :::image type="complex" source="../media/beginners-css-external4.msft.png" alt-text="インラインスタイルが nav 要素から削除されている" lightbox="../media/beginners-css-external4.msft.png":::
+    :::image type="complex" source="../media/beginners-css-external4.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-external4.msft.png":::
        <span data-ttu-id="bf53c-299">インラインスタイルが nav 要素から削除されている</span><span class="sxs-lookup"><span data-stu-id="bf53c-299">The inline style has been removed from the nav element</span></span>  
     :::image-end:::  
     
 1.  <span data-ttu-id="bf53c-300">[ **新しいファイル**] を選びます。</span><span class="sxs-lookup"><span data-stu-id="bf53c-300">Choose **New File**.</span></span>  
     
-    :::image type="complex" source="../media/beginners-css-external5.msft.png" alt-text="[新しいファイル] ダイアログ" lightbox="../media/beginners-css-external5.msft.png":::
+    :::image type="complex" source="../media/beginners-css-external5.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-external5.msft.png":::
        <span data-ttu-id="bf53c-302">[新しいファイル] ダイアログ</span><span class="sxs-lookup"><span data-stu-id="bf53c-302">The new file dialog</span></span>  
     :::image-end:::  
     
 1.  <span data-ttu-id="bf53c-303">[置換後 `cool-file.js` の文字列 `style.css` ] を選び、[ **ファイルの追加**] を選びます。</span><span class="sxs-lookup"><span data-stu-id="bf53c-303">Replace `cool-file.js` with `style.css` and choose **Add File**.</span></span>  
     
-    :::image type="complex" source="../media/beginners-css-external6.msft.png" alt-text="「スタイル .css」と入力します。" lightbox="../media/beginners-css-external6.msft.png":::
+    :::image type="complex" source="../media/beginners-css-external6.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-external6.msft.png":::
        <span data-ttu-id="bf53c-305">型</span><span class="sxs-lookup"><span data-stu-id="bf53c-305">Type</span></span> `style.css`  
     :::image-end:::  
     
@@ -440,7 +440,7 @@ li a {
     }
     ```  
     
-    :::image type="complex" source="../media/beginners-css-external7.msft.png" alt-text=".Css にコードを追加する" lightbox="../media/beginners-css-external7.msft.png":::
+    :::image type="complex" source="../media/beginners-css-external7.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-external7.msft.png":::
        <span data-ttu-id="bf53c-308">コードを追加</span><span class="sxs-lookup"><span data-stu-id="bf53c-308">Add code to</span></span> `style.css`  
     :::image-end:::  
     
@@ -457,25 +457,25 @@ li a {
     </head>
     ```  
     
-    :::image type="complex" source="../media/beginners-css-external8.msft.png" alt-text="スタイル .css へのリンク" lightbox="../media/beginners-css-external8.msft.png":::
+    :::image type="complex" source="../media/beginners-css-external8.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-external8.msft.png":::
        <span data-ttu-id="bf53c-314">へのリンク</span><span class="sxs-lookup"><span data-stu-id="bf53c-314">Link to</span></span> `style.css`  
     :::image-end:::  
     
 1.  <span data-ttu-id="bf53c-315">ファイルを開き、 `contact.html` そこにリンクを追加します。</span><span class="sxs-lookup"><span data-stu-id="bf53c-315">Open the `contact.html` file and add the link there.</span></span>  
     
-    :::image type="complex" source="../media/beginners-css-external9.msft.png" alt-text="contact.html のスタイル .css へのリンク" lightbox="../media/beginners-css-external9.msft.png":::
+    :::image type="complex" source="../media/beginners-css-external9.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-external9.msft.png":::
        <span data-ttu-id="bf53c-317">[リンク先] `style.css`</span><span class="sxs-lookup"><span data-stu-id="bf53c-317">Link to `style.css` in</span></span> `contact.html`  
     :::image-end:::  
     
 1.  <span data-ttu-id="bf53c-318">[ **ライブ] タブ**に移動します。 これで、ホームページの最後のセクションと青色のナビゲーションセクションのフォントが変わりました。</span><span class="sxs-lookup"><span data-stu-id="bf53c-318">Go to the **live tab**.  The home page now has the same font from the last section and a blue navigation section.</span></span>  
     
-    :::image type="complex" source="../media/beginners-css-external10.msft.png" alt-text="ホームページ" lightbox="../media/beginners-css-external10.msft.png":::
+    :::image type="complex" source="../media/beginners-css-external10.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-external10.msft.png":::
        <span data-ttu-id="bf53c-320">ホームページ</span><span class="sxs-lookup"><span data-stu-id="bf53c-320">The home page</span></span>  
     :::image-end:::  
     
 1.  <span data-ttu-id="bf53c-321">[ **連絡先** ] リンクを選択して、連絡先ページに移動します。</span><span class="sxs-lookup"><span data-stu-id="bf53c-321">Choose the **Contact** link to go to the contact page.</span></span>  <span data-ttu-id="bf53c-322">連絡先ページは、ホームページと同じ書式設定になっています。</span><span class="sxs-lookup"><span data-stu-id="bf53c-322">The contact page has the same formatting as the home page.</span></span>  
     
-    :::image type="complex" source="../media/beginners-css-external11.msft.png" alt-text="[連絡先] ページ" lightbox="../media/beginners-css-external11.msft.png":::
+    :::image type="complex" source="../media/beginners-css-external11.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-external11.msft.png":::
        <span data-ttu-id="bf53c-324">[連絡先] ページ</span><span class="sxs-lookup"><span data-stu-id="bf53c-324">The contact page</span></span>  
     :::image-end:::  
     
@@ -491,19 +491,19 @@ li a {
     
 1.  <span data-ttu-id="bf53c-329">[編集] タブに移動し、コードを貼り付け `contact.html` ます。</span><span class="sxs-lookup"><span data-stu-id="bf53c-329">Go to the editing tab and paste the code into `contact.html`.</span></span>  
     
-    :::image type="complex" source="../media/beginners-css-framework1.msft.png" alt-text="contact.html のフレームワークへのリンク" lightbox="../media/beginners-css-framework1.msft.png":::
+    :::image type="complex" source="../media/beginners-css-framework1.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-framework1.msft.png":::
        <span data-ttu-id="bf53c-331">フレームワークへのリンク</span><span class="sxs-lookup"><span data-stu-id="bf53c-331">Link to the framework in</span></span> `contact.html`  
     :::image-end:::  
     
 1.  <span data-ttu-id="bf53c-332">ファイルを開き、 `index.html` そこにコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="bf53c-332">Open the `index.html` file and add the code there.</span></span>  
     
-    :::image type="complex" source="../media/beginners-css-framework2.msft.png" alt-text="index.html のフレームワークへのリンク" lightbox="../media/beginners-css-framework2.msft.png":::
+    :::image type="complex" source="../media/beginners-css-framework2.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-framework2.msft.png":::
        <span data-ttu-id="bf53c-334">フレームワークへのリンク</span><span class="sxs-lookup"><span data-stu-id="bf53c-334">Link to the framework in</span></span> `index.html`  
     :::image-end:::  
     
 1.  <span data-ttu-id="bf53c-335">[ライブ] タブに戻り、変更内容を確認します。</span><span class="sxs-lookup"><span data-stu-id="bf53c-335">Go back to the live tab to view your changes.</span></span>  <span data-ttu-id="bf53c-336">要素の背景色 `<nav>` と要素のフォントは同じであるのに、 `<li>` 他の `<a>` 要素のフォントが変更されています。</span><span class="sxs-lookup"><span data-stu-id="bf53c-336">While the background color of the `<nav>` element and the font of the `<li>` and `<a>` elements are the same, the font of the other elements has changed.</span></span>  
     
-    :::image type="complex" source="../media/beginners-css-framework3.msft.png" alt-text="フレームワークによって変更されたホームページのフォントの一部" lightbox="../media/beginners-css-framework3.msft.png":::
+    :::image type="complex" source="../media/beginners-css-framework3.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-framework3.msft.png":::
        <span data-ttu-id="bf53c-338">フレームワークによって変更されたホームページのフォントの一部</span><span class="sxs-lookup"><span data-stu-id="bf53c-338">Some of the font on the home page changed because of the framework</span></span>  
     :::image-end:::  
     
@@ -519,19 +519,19 @@ li a {
     
 1.  <span data-ttu-id="bf53c-344">前のコードスニペットをタグに追加 `<header>` `index.html` します。</span><span class="sxs-lookup"><span data-stu-id="bf53c-344">Add the previous code snippet to your `<header>` tag in `index.html`.</span></span>  
     
-    :::image type="complex" source="../media/beginners-css-jumbotron1.msft.png" alt-text="index.html でクラスを追加する" lightbox="../media/beginners-css-jumbotron1.msft.png":::
+    :::image type="complex" source="../media/beginners-css-jumbotron1.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-jumbotron1.msft.png":::
        <span data-ttu-id="bf53c-346">クラスを追加する</span><span class="sxs-lookup"><span data-stu-id="bf53c-346">Add classes in</span></span> `index.html`  
     :::image-end:::  
     
 1.  <span data-ttu-id="bf53c-347">タグにコードを追加 `<header>` `contact.html` します。</span><span class="sxs-lookup"><span data-stu-id="bf53c-347">Add the code to your `<header>` tag in `contact.html`.</span></span>  
     
-    :::image type="complex" source="../media/beginners-css-jumbotron2.msft.png" alt-text="contact.html でクラスを追加する" lightbox="../media/beginners-css-jumbotron2.msft.png":::
+    :::image type="complex" source="../media/beginners-css-jumbotron2.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-jumbotron2.msft.png":::
        <span data-ttu-id="bf53c-349">クラスを追加する</span><span class="sxs-lookup"><span data-stu-id="bf53c-349">Add classes in</span></span> `contact.html`  
     :::image-end:::  
     
 1.  <span data-ttu-id="bf53c-350">[ライブ] タブで変更内容を表示します。 ヘッダーの周りに大きな灰色のボックスがあります。</span><span class="sxs-lookup"><span data-stu-id="bf53c-350">View your changes in the live tab.  There is a big, grey box around your header.</span></span>  
     
-    :::image type="complex" source="../media/beginners-css-jumbotron3.msft.png" alt-text="ヘッダーの周りに大きな灰色のボックスがあるようになりました" lightbox="../media/beginners-css-jumbotron3.msft.png":::
+    :::image type="complex" source="../media/beginners-css-jumbotron3.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-jumbotron3.msft.png":::
        <span data-ttu-id="bf53c-352">ヘッダーの周りに大きな灰色のボックスがあるようになりました</span><span class="sxs-lookup"><span data-stu-id="bf53c-352">The header now has a big, grey box around it</span></span>  
     :::image-end:::  
     
@@ -572,25 +572,25 @@ li a {
 1.  <span data-ttu-id="bf53c-362">[エディター] タブに戻り、を開き `index.html` ます。</span><span class="sxs-lookup"><span data-stu-id="bf53c-362">Go back to the editor tab and open `index.html`.</span></span>  
 1.  <span data-ttu-id="bf53c-363">`class="container-fluid"`タグに追加 `<body>` します。</span><span class="sxs-lookup"><span data-stu-id="bf53c-363">Add `class="container-fluid"` to your `<body>` tag.</span></span>  
     
-    :::image type="complex" source="../media/beginners-css-align1.msft.png" alt-text="コンテナー-流体クラスを追加する" lightbox="../media/beginners-css-align1.msft.png":::
+    :::image type="complex" source="../media/beginners-css-align1.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-align1.msft.png":::
        <span data-ttu-id="bf53c-365">クラスを追加する `container-fluid`</span><span class="sxs-lookup"><span data-stu-id="bf53c-365">Add the `container-fluid` class</span></span>  
     :::image-end:::  
     
 1.  <span data-ttu-id="bf53c-366">`<nav>`と `<main>` の要素を折り返し `<div class="row">` ます。</span><span class="sxs-lookup"><span data-stu-id="bf53c-366">Wrap your `<nav>` and `<main>` elements in `<div class="row">`.</span></span>  <span data-ttu-id="bf53c-367">`</div>` `</main>` 新しいノートシールを正しく閉じるには、[指定の日時以降] をオンにしてください。</span><span class="sxs-lookup"><span data-stu-id="bf53c-367">Make sure to put `</div>` after `</main>` in order to properly close the new tag.</span></span>  
     
-    :::image type="complex" source="../media/beginners-css-align2.msft.png" alt-text="行を追加する" lightbox="../media/beginners-css-align2.msft.png":::
+    :::image type="complex" source="../media/beginners-css-align2.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-align2.msft.png":::
        <span data-ttu-id="bf53c-369">行を追加する</span><span class="sxs-lookup"><span data-stu-id="bf53c-369">Add a row</span></span>  
     :::image-end:::  
     
 1.  <span data-ttu-id="bf53c-370">`class="col-3"` `<nav>` タグとタグに追加 `class="col-9"` `<main>` します。</span><span class="sxs-lookup"><span data-stu-id="bf53c-370">Add `class="col-3"` to your `<nav>` tag and `class="col-9"` to your `<main>` tag.</span></span>  
     
-    :::image type="complex" source="../media/beginners-css-align3.msft.png" alt-text="列3と列9のクラスを追加する" lightbox="../media/beginners-css-align3.msft.png":::
+    :::image type="complex" source="../media/beginners-css-align3.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-align3.msft.png":::
        <span data-ttu-id="bf53c-372">`col-3`クラスとクラスを追加する `col-9`</span><span class="sxs-lookup"><span data-stu-id="bf53c-372">Add the `col-3` and `col-9` classes</span></span>  
     :::image-end:::  
     
 1.  <span data-ttu-id="bf53c-373">[ライブ] タブで変更内容を表示します。</span><span class="sxs-lookup"><span data-stu-id="bf53c-373">View your changes in the live tab.</span></span>  
     
-    :::image type="complex" source="../media/beginners-css-align4.msft.png" alt-text="これで、ナビゲーションコンテンツがメインコンテンツの左になりました" lightbox="../media/beginners-css-align4.msft.png":::
+    :::image type="complex" source="../media/beginners-css-align4.msft.png" alt-text="現在のサイトの外観" lightbox="../media/beginners-css-align4.msft.png":::
        <span data-ttu-id="bf53c-375">これで、ナビゲーションコンテンツがメインコンテンツの左になりました</span><span class="sxs-lookup"><span data-stu-id="bf53c-375">The nav content is now to the left of the main content</span></span>  
     :::image-end:::  
     

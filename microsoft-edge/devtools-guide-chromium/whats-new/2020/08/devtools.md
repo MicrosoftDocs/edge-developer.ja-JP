@@ -36,7 +36,7 @@ ms.locfileid: "11004196"
 
 ### <span data-ttu-id="de972-114">Surface Duo と Samsung Galaxy 折りたたみのエミュレート</span><span class="sxs-lookup"><span data-stu-id="de972-114">Emulate Surface Duo and Samsung Galaxy Fold</span></span>  
 
-:::image type="complex" source="../../media/2020/06/experimental-tag-14px.msft.png" alt-text="実験的機能":::
+:::image type="complex" source="../../media/2020/06/experimental-tag-14px.msft.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる":::
    <span data-ttu-id="de972-116">実験的機能</span><span class="sxs-lookup"><span data-stu-id="de972-116">Experimental feature</span></span>  
 :::image-end:::  
 
@@ -48,7 +48,7 @@ ms.locfileid: "11004196"
 *   <span data-ttu-id="de972-120">2つの画面の間の領域である[継ぎ目をレンダリング][DualScreenIntroductionHowWorkSeam]します。</span><span class="sxs-lookup"><span data-stu-id="de972-120">[Rendering the seam][DualScreenIntroductionHowWorkSeam], which is the space between the two screens.</span></span>
 *   <span data-ttu-id="de972-121">[実験的な Web プラットフォーム api を有効][DevtoolsExperimentalFeaturesEnableExperimentalApis] にして、新しい [CSS メディア画面のスパニング機能][DualScreenWebCssMediaSpanning] と [JavaScript getwindowsegments api][DualScreenWebJavascriptGetwindowsegments]にアクセスします。</span><span class="sxs-lookup"><span data-stu-id="de972-121">[Enabling experimental Web Platform APIs][DevtoolsExperimentalFeaturesEnableExperimentalApis] to access the new [CSS media screen-spanning feature][DualScreenWebCssMediaSpanning] and [JavaScript getWindowSegments API][DualScreenWebJavascriptGetwindowsegments].</span></span>  
 
-:::image type="complex" source="../../media/2020/08/surface-duo-device-emulation.msft.png" alt-text="Surface Duo のデバイスエミュレーション" lightbox="../../media/2020/08/surface-duo-device-emulation.msft.png":::
+:::image type="complex" source="../../media/2020/08/surface-duo-device-emulation.msft.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる" lightbox="../../media/2020/08/surface-duo-device-emulation.msft.png":::
    <span data-ttu-id="de972-123">Surface Duo のデバイスエミュレーション</span><span class="sxs-lookup"><span data-stu-id="de972-123">Device emulation for Surface Duo</span></span>  
 :::image-end:::  
 
@@ -62,7 +62,7 @@ ms.locfileid: "11004196"
 
 <span data-ttu-id="de972-128">CSS グリッドのオーバーレイの改善について、ご意見をお寄せいただきありがとうございます。</span><span class="sxs-lookup"><span data-stu-id="de972-128">Thank you for the positive feedback about the improved CSS grid overlays.</span></span>  <span data-ttu-id="de972-129">CSS グリッドのオーバーレイは既定で有効になりました。実験を有効にする必要はありません。</span><span class="sxs-lookup"><span data-stu-id="de972-129">The CSS grid overlays are now enabled by default and do not require you to turn on an experiment.</span></span>  
 
-:::image type="complex" source="../../media/2020/08/css-grid-overlay-article.msft.png" alt-text="Article 要素の CSS グリッドオーバーレイ" lightbox="../../media/2020/08/css-grid-overlay-article.msft.png":::
+:::image type="complex" source="../../media/2020/08/css-grid-overlay-article.msft.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる" lightbox="../../media/2020/08/css-grid-overlay-article.msft.png":::
    <span data-ttu-id="de972-131">要素の CSS グリッドのオーバーレイ `article`</span><span class="sxs-lookup"><span data-stu-id="de972-131">CSS grid overlay for `article` element</span></span>  
 :::image-end:::  
 
@@ -83,12 +83,12 @@ ms.locfileid: "11004196"
 
 :::row:::
    :::column span="":::
-      :::image type="complex" source="../../media/2020/08/console-table-beta.msft.png" alt-text="Microsoft Edge 85 以前の表本体 API 出力" lightbox="../../media/2020/08/console-table-beta.msft.png":::
+      :::image type="complex" source="../../media/2020/08/console-table-beta.msft.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる" lightbox="../../media/2020/08/console-table-beta.msft.png":::
          `table` <span data-ttu-id="de972-142">Microsoft Edge 85 以前の本体の API 出力</span><span class="sxs-lookup"><span data-stu-id="de972-142">Console API output in Microsoft Edge 85 or earlier</span></span>  
       :::image-end:::  
    :::column-end:::  
    :::column span="":::
-      :::image type="complex" source="../../media/2020/08/console-table-beta-paste-visual-studio-code.msft.png" alt-text="Microsoft Edge 85 以降の表本体 API の出力が Visual Studio コードに貼り付けられています" lightbox="../../media/2020/08/console-table-beta-paste-visual-studio-code.msft.png":::
+      :::image type="complex" source="../../media/2020/08/console-table-beta-paste-visual-studio-code.msft.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる" lightbox="../../media/2020/08/console-table-beta-paste-visual-studio-code.msft.png":::
          `table` <span data-ttu-id="de972-144">Microsoft Edge 85 またはそれ以前のバージョンの Visual Studio コードに貼り付けられた本体 API の出力</span><span class="sxs-lookup"><span data-stu-id="de972-144">Console API output from Microsoft Edge 85 or earlier pasted into Visual Studio Code</span></span>  
       :::image-end:::  
    :::column-end:::
@@ -98,12 +98,12 @@ ms.locfileid: "11004196"
 
 :::row:::
    :::column span="":::
-      :::image type="complex" source="../../media/2020/08/console-table-canary.msft.png" alt-text="Microsoft Edge 86 以降の表本体 API の出力" lightbox="../../media/2020/08/console-table-canary.msft.png":::
+      :::image type="complex" source="../../media/2020/08/console-table-canary.msft.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる" lightbox="../../media/2020/08/console-table-canary.msft.png":::
          `table` <span data-ttu-id="de972-147">Microsoft Edge 86 以降の本体の API 出力</span><span class="sxs-lookup"><span data-stu-id="de972-147">Console API output in Microsoft Edge 86 or later</span></span>  
       :::image-end:::  
    :::column-end:::  
    :::column span="":::
-      :::image type="complex" source="../../media/2020/08/console-table-canary-paste-visual-studio-code.msft.png" alt-text="Microsoft Edge 86 以降の表本体 API の出力が Visual Studio コードに貼り付けられている" lightbox="../../media/2020/08/console-table-canary-paste-visual-studio-code.msft.png":::
+      :::image type="complex" source="../../media/2020/08/console-table-canary-paste-visual-studio-code.msft.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる" lightbox="../../media/2020/08/console-table-canary-paste-visual-studio-code.msft.png":::
          `table` <span data-ttu-id="de972-149">Microsoft Edge 86 以降で Visual Studio コードに貼り付けられた本体 API の出力</span><span class="sxs-lookup"><span data-stu-id="de972-149">Console API output from Microsoft Edge 86 or later pasted into Visual Studio Code</span></span>  
       :::image-end:::  
    :::column-end:::
@@ -113,13 +113,13 @@ ms.locfileid: "11004196"
 
 ### <span data-ttu-id="de972-151">簡単なアクセシビリティテストのためのソースオーダービューアー</span><span class="sxs-lookup"><span data-stu-id="de972-151">Source Order Viewer for easier accessibility testing</span></span>  
 
-:::image type="complex" source="../../media/2020/06/experimental-tag-14px.msft.png" alt-text="実験的機能":::
+:::image type="complex" source="../../media/2020/06/experimental-tag-14px.msft.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる":::
    <span data-ttu-id="de972-153">実験的機能</span><span class="sxs-lookup"><span data-stu-id="de972-153">Experimental feature</span></span>  
 :::image-end:::  
 
 <span data-ttu-id="de972-154">新しいアクセシビリティヘルパーは、ソース内の要素の順序を表示します。</span><span class="sxs-lookup"><span data-stu-id="de972-154">The new accessibility helper displays the order of elements in the source.</span></span>  
 
-:::image type="complex" source="../../media/2020/08/source-order-viewer.msft.png" alt-text="ソース注文の表示をアクティブ化する" lightbox="../../media/2020/08/source-order-viewer.msft.png":::
+:::image type="complex" source="../../media/2020/08/source-order-viewer.msft.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる" lightbox="../../media/2020/08/source-order-viewer.msft.png":::
    <span data-ttu-id="de972-156">**ソース注文の表示を**アクティブ化する</span><span class="sxs-lookup"><span data-stu-id="de972-156">Activate **Show source order**</span></span>  
 :::image-end:::  
 
@@ -138,12 +138,12 @@ Your feedback and internal discoveries uncovered which text strings used in the 
 
 :::row:::
    :::column span="":::
-      :::image type="complex" source="../../media/2020/08/localization-improvements-chinese-complex-stable.msft.png" alt-text="Microsoft Edge DevTools in Traditional Chinese" lightbox="localization-improvements-chinese-complex-stable.msft.png":::
+      :::image type="complex" source="../../media/2020/08/localization-improvements-chinese-complex-stable.msft.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる" lightbox="localization-improvements-chinese-complex-stable.msft.png":::
          Microsoft Edge DevTools 85 and earlier in Traditional Chinese  
       :::image-end:::  
    :::column-end:::  
    :::column span="":::
-      :::image type="complex" source="../../media/2020/08/localization-improvements-chinese-complex-canary.msft.png" alt-text="Microsoft Edge DevTools in Japanese" lightbox="../../media/2020/08/localization-improvements-chinese-complex-canary.msft.png":::
+      :::image type="complex" source="../../media/2020/08/localization-improvements-chinese-complex-canary.msft.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる" lightbox="../../media/2020/08/localization-improvements-chinese-complex-canary.msft.png":::
          Microsoft Edge DevTools 86  or later in Traditional Chinese  
       :::image-end:::  
    :::column-end:::
@@ -160,7 +160,7 @@ The current effort to improve translation quality enables easier support for mor
 
 <span data-ttu-id="de972-166">フィードバックを送信して、Chromium の改善に努めていただき、ありがとうございました。</span><span class="sxs-lookup"><span data-stu-id="de972-166">Thank you for sending your feedback and helping improve Chromium.</span></span>  <span data-ttu-id="de972-167">Chromium によって報告される [#1103316][CR1103316] 問題は、オープンソースのプロジェクトにあります。</span><span class="sxs-lookup"><span data-stu-id="de972-167">Your feedback uncovered Issue [#1103316][CR1103316] in the open-source Chromium project.</span></span>  
 
-:::image type="complex" source="../../media/2020/08/elements- search-highlight-fixed.msft.png" alt-text="Microsoft Edge 84 以降の要素パネルで強調表示された最初の検索結果" lightbox="../../media/2020/08/elements- search-highlight-fixed.msft.png":::
+:::image type="complex" source="../../media/2020/08/elements- search-highlight-fixed.msft.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる" lightbox="../../media/2020/08/elements- search-highlight-fixed.msft.png":::
    <span data-ttu-id="de972-169">Microsoft Edge 84 以降の **要素** パネルで強調表示された最初の検索結果</span><span class="sxs-lookup"><span data-stu-id="de972-169">Highlighted first search result on **Elements** panel in Microsoft Edge 84 or later</span></span>  
 :::image-end:::  
 
@@ -180,7 +180,7 @@ The current effort to improve translation quality enables easier support for mor
 
 1.  <span data-ttu-id="de972-176">[**カスタマイズと制御 devtools** \ (\)] を選択して、 `...` **その他のツール**  >  **メディア**> します。</span><span class="sxs-lookup"><span data-stu-id="de972-176">Choose **Customize and control DevTools** \(`...`\) > **More tools** > **Media**.</span></span>  
     
-    :::image type="complex" source="../../media/2020/08/media-panel.msft.png" alt-text="新しいメディアパネル" lightbox="../../media/2020/08/media-panel.msft.png":::
+    :::image type="complex" source="../../media/2020/08/media-panel.msft.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる" lightbox="../../media/2020/08/media-panel.msft.png":::
        <span data-ttu-id="de972-178">新しい **メディア** パネル</span><span class="sxs-lookup"><span data-stu-id="de972-178">New **Media** panel</span></span>  
     :::image-end:::  
 
@@ -197,7 +197,7 @@ The current effort to improve translation quality enables easier support for mor
 
 <span data-ttu-id="de972-186">たとえば、目次のスクリーンショットを撮るには、要素をポイントしてコンテキストメニューを開き (\ を右クリックし)、[ **キャプチャノードのスクリーンショット**] を選びます。</span><span class="sxs-lookup"><span data-stu-id="de972-186">For example, to take a screenshot of the table of contents, hover on the element, open the contextual menu \(right-click\), and select **Capture node screenshot**.</span></span>  
 
-:::image type="complex" source="../../media/2020/08/capture-node-screenshot.msft.png" alt-text="キャプチャノードのスクリーンショット" lightbox="../../media/2020/08/capture-node-screenshot.msft.png":::
+:::image type="complex" source="../../media/2020/08/capture-node-screenshot.msft.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる" lightbox="../../media/2020/08/capture-node-screenshot.msft.png":::
    <span data-ttu-id="de972-188">キャプチャノードのスクリーンショット</span><span class="sxs-lookup"><span data-stu-id="de972-188">Capture node screenshots</span></span>  
 :::image-end:::  
 
@@ -209,13 +209,13 @@ The current effort to improve translation quality enables easier support for mor
 
 <!--todo: this figure need to be updated  -->  
 
-:::image type="complex" source="../../media/2020/08/issue-console-msg.msft.png" alt-text="コンソールメッセージの問題" lightbox="../../media/2020/08/issue-console-msg.msft.png":::
+:::image type="complex" source="../../media/2020/08/issue-console-msg.msft.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる" lightbox="../../media/2020/08/issue-console-msg.msft.png":::
    <span data-ttu-id="de972-193">コンソールメッセージの問題</span><span class="sxs-lookup"><span data-stu-id="de972-193">Issues in console message</span></span>  
 :::image-end:::  
 
 <span data-ttu-id="de972-194">サードパーティの cookie の問題は、[ **問題** ] ツールで既定で非表示になっています。</span><span class="sxs-lookup"><span data-stu-id="de972-194">Third-party cookie issues are now hidden by default in the **Issues** tool.</span></span>  <span data-ttu-id="de972-195">[ **サードパーティの cookie の追加の問題** ] チェックボックスをオンにして、問題を表示します。</span><span class="sxs-lookup"><span data-stu-id="de972-195">Enable the new **Include third-party cookie issues** checkbox to view the issues.</span></span>  
 
-:::image type="complex" source="../../media/2020/08/third-party-cookies.msft.png" alt-text="サードパーティの cookie の問題チェックボックス" lightbox="../../media/2020/08/third-party-cookies.msft.png":::
+:::image type="complex" source="../../media/2020/08/third-party-cookies.msft.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる" lightbox="../../media/2020/08/third-party-cookies.msft.png":::
    <span data-ttu-id="de972-197">サードパーティの cookie の問題チェックボックス</span><span class="sxs-lookup"><span data-stu-id="de972-197">third-party cookie issues checkbox</span></span>  
 :::image-end:::  
 
@@ -229,7 +229,7 @@ The current effort to improve translation quality enables easier support for mor
 
 <span data-ttu-id="de972-202">[ **ローカルフォントを無効** にする] が有効になっている場合、devtools ではフォントが無視され、 `local()` 各ネットワークからの取り出しが行われます。</span><span class="sxs-lookup"><span data-stu-id="de972-202">When **Disable local fonts** is enabled, DevTools ignores the `local()` fonts and fetches each from the network.</span></span>  
 
-:::image type="complex" source="../../media/2020/08/disable-font.msft.png" alt-text="見つからないローカルフォントのエミュレート" lightbox="../../media/2020/08/disable-font.msft.png":::
+:::image type="complex" source="../../media/2020/08/disable-font.msft.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる" lightbox="../../media/2020/08/disable-font.msft.png":::
    <span data-ttu-id="de972-204">見つからないローカルフォントのエミュレート</span><span class="sxs-lookup"><span data-stu-id="de972-204">Emulate missing local fonts</span></span>  
 :::image-end:::  
 
@@ -250,7 +250,7 @@ The current effort to improve translation quality enables easier support for mor
 
 <span data-ttu-id="de972-214">[アイドル検出 API][WebDevIdleDetection]を使うと、開発者は非アクティブなユーザーを検出し、アイドル状態の変更を反映することができます。</span><span class="sxs-lookup"><span data-stu-id="de972-214">The [Idle Detection API][WebDevIdleDetection] allows developers to detect inactive users and react on idle state changes.</span></span>  <span data-ttu-id="de972-215">この時点で、DevTools を使って、 **センサー** ツールでのアイドル状態の変更を、ユーザーの状態と画面の状態の両方に対してエミュレートすることができるようになりました。これは、実際のアイドル状態が変更されるのを待機する必要はありません。</span><span class="sxs-lookup"><span data-stu-id="de972-215">You are now able to use DevTools to emulate idle state changes in the **Sensors** tool for both the user state and the screen state instead of waiting for the actual idle state to change.</span></span>  <span data-ttu-id="de972-216">[引き出し][DevtoolsCustomizeIndexDrawer]から**センサー**ツールを開くことができます。</span><span class="sxs-lookup"><span data-stu-id="de972-216">You may open the **Sensors** tool from the [Drawer][DevtoolsCustomizeIndexDrawer].</span></span>  
 
-:::image type="complex" source="../../media/2020/08/emulate-idle.msft.png" alt-text="アクティブでないユーザーのエミュレート" lightbox="../../media/2020/08/emulate-idle.msft.png":::
+:::image type="complex" source="../../media/2020/08/emulate-idle.msft.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる" lightbox="../../media/2020/08/emulate-idle.msft.png":::
    <span data-ttu-id="de972-218">アクティブでないユーザーのエミュレート</span><span class="sxs-lookup"><span data-stu-id="de972-218">Emulate inactive users</span></span>  
 :::image-end:::  
 
@@ -265,7 +265,7 @@ The current effort to improve translation quality enables easier support for mor
 
 <span data-ttu-id="de972-225">これで、DevTools を使ってメディアクエリをエミュレートでき `prefers-reduced-data` ます。</span><span class="sxs-lookup"><span data-stu-id="de972-225">You may now use DevTools to emulate the `prefers-reduced-data` media query.</span></span>  
 
-:::image type="complex" source="../../media/2020/08/emulate-prefers-reduced-data.msft.png" alt-text="割引の優先のエミュレート-データ" lightbox="../../media/2020/08/emulate-prefers-reduced-data.msft.png":::
+:::image type="complex" source="../../media/2020/08/emulate-prefers-reduced-data.msft.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる" lightbox="../../media/2020/08/emulate-prefers-reduced-data.msft.png":::
    <span data-ttu-id="de972-227">割引の優先のエミュレート-データ</span><span class="sxs-lookup"><span data-stu-id="de972-227">Emulate prefers-reduced-data</span></span>  
 :::image-end:::  
 
@@ -294,7 +294,7 @@ The current effort to improve translation quality enables easier support for mor
 
 <span data-ttu-id="de972-245">以前の DevTools は、 **アプリケーション** パネル > **Service worker** ] ウィンドウの下に入れ子になっているリストを表示していました。</span><span class="sxs-lookup"><span data-stu-id="de972-245">Previously DevTools displayed a list nested under the **Application** panel > **Service workers** pane.</span></span>  
 
-:::image type="complex" source="../../media/2020/08/sw-other-origins.msft.png" alt-text="他のオリジンとのリンク" lightbox="../../media/2020/08/sw-other-origins.msft.png":::
+:::image type="complex" source="../../media/2020/08/sw-other-origins.msft.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる" lightbox="../../media/2020/08/sw-other-origins.msft.png":::
    <span data-ttu-id="de972-247">他のオリジンとのリンク</span><span class="sxs-lookup"><span data-stu-id="de972-247">Link to other origins</span></span>  
 :::image-end:::  
 
@@ -308,12 +308,12 @@ The current effort to improve translation quality enables easier support for mor
 
 :::row:::
    :::column span="":::
-      :::image type="complex" source="../../media/2020/08/coverage-compare.msft.png" alt-text="カバレッジの概要" lightbox="../../media/2020/08/coverage-compare.msft.png":::
+      :::image type="complex" source="../../media/2020/08/coverage-compare.msft.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる" lightbox="../../media/2020/08/coverage-compare.msft.png":::
          <span data-ttu-id="de972-255">カバレッジの概要</span><span class="sxs-lookup"><span data-stu-id="de972-255">Coverage summary</span></span>  
       :::image-end:::  
    :::column-end:::
    :::column span="":::
-      :::image type="complex" source="../../media/2020/08/coverage-compare-css-filter.msft.png" alt-text="フィルター処理されたアイテムのカバレッジの概要" lightbox="../../media/2020/08/coverage-compare-css-filter.msft.png":::
+      :::image type="complex" source="../../media/2020/08/coverage-compare-css-filter.msft.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる" lightbox="../../media/2020/08/coverage-compare-css-filter.msft.png":::
          <span data-ttu-id="de972-257">フィルター処理されたアイテムのカバレッジの概要</span><span class="sxs-lookup"><span data-stu-id="de972-257">Coverage summary for filtered items</span></span>  
       :::image-end:::  
    :::column-end:::
@@ -325,7 +325,7 @@ The current effort to improve translation quality enables easier support for mor
 
 <span data-ttu-id="de972-260">DevTools には、各フレームの詳細ビューが表示されるようになりました。</span><span class="sxs-lookup"><span data-stu-id="de972-260">DevTools now show a detailed view for each frame.</span></span>  <span data-ttu-id="de972-261">このアプリにアクセスするには、**アプリケーション**パネルの**フレーム**メニューの下にあるフレームを選択します。</span><span class="sxs-lookup"><span data-stu-id="de972-261">To access it, choose a frame under the **Frames** menu in the **Application** panel.</span></span>  
 
-:::image type="complex" source="../../media/2020/08/frame-details.msft.png" alt-text="アプリケーションパネルのフレームの新しい詳細表示" lightbox="../../media/2020/08/frame-details.msft.png":::
+:::image type="complex" source="../../media/2020/08/frame-details.msft.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる" lightbox="../../media/2020/08/frame-details.msft.png":::
    <span data-ttu-id="de972-263">**アプリケーション**パネルのフレームの新しい詳細表示</span><span class="sxs-lookup"><span data-stu-id="de972-263">New detailed view for a frame in **Application** panel</span></span>  
 :::image-end:::  
 
@@ -335,7 +335,7 @@ The current effort to improve translation quality enables easier support for mor
 
 <span data-ttu-id="de972-266">ウィンドウを開くと、フレームツリーにも表示されるようになりました。</span><span class="sxs-lookup"><span data-stu-id="de972-266">Open windows and pop-up windows now display under the frame tree as well.</span></span>  <span data-ttu-id="de972-267">開いているウィンドウの詳細ビューには、追加のセキュリティ情報が含まれます。</span><span class="sxs-lookup"><span data-stu-id="de972-267">The detailed view of the opened windows includes additional security information.</span></span>  
 
-:::image type="complex" source="../../media/2020/08/window-opener.msft.png" alt-text="開いているウィンドウの新しいフレームの詳細ビュー" lightbox="../../media/2020/08/window-opener.msft.png":::
+:::image type="complex" source="../../media/2020/08/window-opener.msft.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる" lightbox="../../media/2020/08/window-opener.msft.png":::
    <span data-ttu-id="de972-269">開いているウィンドウの新しいフレームの詳細ビュー</span><span class="sxs-lookup"><span data-stu-id="de972-269">New frame detailed view for opened windows</span></span>  
 :::image-end:::  
 
@@ -345,7 +345,7 @@ The current effort to improve translation quality enables easier support for mor
 
 <span data-ttu-id="de972-272">セキュリティで保護されたコンテキスト、 [クロスオリジン-ポリシー (COEP)][WebDevCoopCoep]、および [クロスオリジン-Opener-ポリシー (co-op)][WebDevCoopCoep] がフレームの詳細に表示されるようになりました。</span><span class="sxs-lookup"><span data-stu-id="de972-272">Secure context, [Cross-Origin-Embedder-Policy (COEP)][WebDevCoopCoep], and [Cross-Origin-Opener-Policy (COOP)][WebDevCoopCoep] are now displayed in the frame details.</span></span>  
 
-:::image type="complex" source="../../media/2020/08/coep-coop.msft.png" alt-text="セキュリティと分離に関する情報" lightbox="../../media/2020/08/coep-coop.msft.png":::
+:::image type="complex" source="../../media/2020/08/coep-coop.msft.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる" lightbox="../../media/2020/08/coep-coop.msft.png":::
    <span data-ttu-id="de972-274">セキュリティと分離に関する情報</span><span class="sxs-lookup"><span data-stu-id="de972-274">Security and isolation information</span></span>  
 :::image-end:::  
 
@@ -361,7 +361,7 @@ The current effort to improve translation quality enables easier support for mor
 
 <span data-ttu-id="de972-280">次の例で `h1` は、コントラストの低いテキストが設定されています。</span><span class="sxs-lookup"><span data-stu-id="de972-280">In the example below, `h1` has low contrast text.</span></span>  <span data-ttu-id="de972-281">修正するには、 `color` [ **スタイル** ] ウィンドウでプロパティのカラーピッカーを開きます。</span><span class="sxs-lookup"><span data-stu-id="de972-281">To fix it, open the color picker of the `color` property in the **Styles** pane.</span></span>  <span data-ttu-id="de972-282">[ **コントラスト比** ] セクションを展開すると、DEVTOOLS で AA と AAA の色候補が提供されます。</span><span class="sxs-lookup"><span data-stu-id="de972-282">After you expand the **Contrast ratio** section, DevTools provides AA and AAA color suggestions.</span></span>  <span data-ttu-id="de972-283">色を適用する色を選択します。</span><span class="sxs-lookup"><span data-stu-id="de972-283">Select the suggested color to apply the color.</span></span>  
 
-:::image type="complex" source="../../media/2020/08/contrast-color-suggestion.msft.png" alt-text="色のピッカーで AA と AAA の色候補が提示される" lightbox="../../media/2020/08/contrast-color-suggestion.msft.png":::
+:::image type="complex" source="../../media/2020/08/contrast-color-suggestion.msft.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる" lightbox="../../media/2020/08/contrast-color-suggestion.msft.png":::
    <span data-ttu-id="de972-285">色のピッカーで AA と AAA の色候補が提示される</span><span class="sxs-lookup"><span data-stu-id="de972-285">Color picker suggests AA and AAA color suggestions</span></span>  
 :::image-end:::  
 
@@ -371,7 +371,7 @@ The current effort to improve translation quality enables easier support for mor
 
 <span data-ttu-id="de972-288">[ **プロパティ** ] ウィンドウが再び表示されます。</span><span class="sxs-lookup"><span data-stu-id="de972-288">The **Properties** pane is back.</span></span>  <span data-ttu-id="de972-289">[Microsoft Edge 84 では廃止][DevtoolsWhatsnew200205DevtoolsDeprecationPropertiesPaneElementsPanel]されました。</span><span class="sxs-lookup"><span data-stu-id="de972-289">It was [deprecated in Microsoft Edge 84][DevtoolsWhatsnew200205DevtoolsDeprecationPropertiesPaneElementsPanel].</span></span>  <span data-ttu-id="de972-290">Microsoft Edge DevTools チームと Chrome DevTools チームは、要素の検査プロパティの改善を計画しています。</span><span class="sxs-lookup"><span data-stu-id="de972-290">The Microsoft Edge DevTools team and the Chrome DevTools team are planning improvements for inspecting properties of elements.</span></span>  
 
-:::image type="complex" source="../../media/2020/08/properties-pane.msft.png" alt-text="[要素] パネルの [プロパティ] ウィンドウ" lightbox="../../media/2020/08/properties-pane.msft.png":::
+:::image type="complex" source="../../media/2020/08/properties-pane.msft.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる" lightbox="../../media/2020/08/properties-pane.msft.png":::
    <span data-ttu-id="de972-292">[**要素**] パネルの [**プロパティ**] ウィンドウ</span><span class="sxs-lookup"><span data-stu-id="de972-292">**Properties** pane in the **Elements** panel</span></span>  
 :::image-end:::  
 
@@ -384,7 +384,7 @@ When inspecting a network resource in the Network panel, DevTools now formats an
 
 The `X-Client-Data` HTTP header contains a list of experiment IDs and Microsoft Edge flags that are enabled in your browser.  The raw header values look like opaque strings since the values are `base-64-encoded`, serialized [protocol buffers][GoogleDevelopersProtocolBuffers].  To make the contents more transparent to developers, DevTools now shows the decoded values.  
 
-:::image type="complex" source="../../media/2020/08/x-client-data.msft.png" alt-text="Human-readable `X-Client-Data` header values" lightbox="../../media/2020/08/x-client-data.msft.png":::
+:::image type="complex" source="../../media/2020/08/x-client-data.msft.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる" lightbox="../../media/2020/08/x-client-data.msft.png":::
    Human-readable `X-Client-Data` header values  
 :::image-end:::  
 
@@ -397,7 +397,7 @@ Chromium issue: [#1103854][CR1103854]
 
 <span data-ttu-id="de972-297">たとえば、 `monospace` カスタムフォントがローカルコンピューターにインストールされている場合は、CSS コンプリートリストに表示されます。</span><span class="sxs-lookup"><span data-stu-id="de972-297">For example, if `monospace` is a custom font installed on the local machine, it's displayed in the CSS completion list.</span></span> <span data-ttu-id="de972-298">以前のバージョンの Microsoft Edge では、フォントは表示されませんでした。</span><span class="sxs-lookup"><span data-stu-id="de972-298">In previous versions of Microsoft Edge, the font wasn't displayed.</span></span>
 
-:::image type="complex" source="../../media/2020/08/font-auto-complete.msft.png" alt-text="オートコンプリートのカスタムフォント" lightbox="../../media/2020/08/font-auto-complete.msft.png":::
+:::image type="complex" source="../../media/2020/08/font-auto-complete.msft.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる" lightbox="../../media/2020/08/font-auto-complete.msft.png":::
    <span data-ttu-id="de972-300">オートコンプリートのカスタムフォント</span><span class="sxs-lookup"><span data-stu-id="de972-300">Autocomplete custom fonts</span></span>  
 :::image-end:::  
 
@@ -409,7 +409,7 @@ Chromium issue: [#1103854][CR1103854]
 
 <span data-ttu-id="de972-304">以前の DevTools によって型が変わる場合がありました `Other` 。</span><span class="sxs-lookup"><span data-stu-id="de972-304">Previously DevTools changed the type to `Other` sometimes.</span></span>  
 
-:::image type="complex" source="../../media/2020/08/network-redirect.msft.png" alt-text="リダイレクトリソースの種類を表示する" lightbox="../../media/2020/08/network-redirect.msft.png":::
+:::image type="complex" source="../../media/2020/08/network-redirect.msft.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる" lightbox="../../media/2020/08/network-redirect.msft.png":::
    <span data-ttu-id="de972-306">リダイレクトリソースの種類を表示する</span><span class="sxs-lookup"><span data-stu-id="de972-306">Display redirect resource type</span></span>  
 :::image-end:::  
 
@@ -426,12 +426,12 @@ Chromium issue: [#1103854][CR1103854]
 
 :::row:::
    :::column span="":::
-      :::image type="complex" source="../../media/2020/08/clear-button-elements.msft.png" alt-text="[要素] パネルの [クリア] ボタン" lightbox="../../media/2020/08/clear-button-elements.msft.png":::
+      :::image type="complex" source="../../media/2020/08/clear-button-elements.msft.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる" lightbox="../../media/2020/08/clear-button-elements.msft.png":::
          <span data-ttu-id="de972-314">[ **要素** ] パネルの [クリア] ボタン</span><span class="sxs-lookup"><span data-stu-id="de972-314">Clear buttons in the **Elements** panels</span></span>  
       :::image-end:::  
    :::column-end:::
    :::column span="":::
-      :::image type="complex" source="../../media/2020/08/clear-button-network.msft.png" alt-text="ネットワークパネルのボタンをクリアする" lightbox="../../media/2020/08/clear-button-network.msft.png":::
+      :::image type="complex" source="../../media/2020/08/clear-button-network.msft.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる" lightbox="../../media/2020/08/clear-button-network.msft.png":::
          <span data-ttu-id="de972-316">**ネットワーク**パネルのボタンをクリアする</span><span class="sxs-lookup"><span data-stu-id="de972-316">Clear buttons in the  **Network** panels</span></span>  
       :::image-end:::  
    :::column-end:::

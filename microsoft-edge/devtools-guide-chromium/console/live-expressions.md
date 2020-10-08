@@ -43,7 +43,7 @@ ms.locfileid: "10993115"
 1.  <span data-ttu-id="bb320-109">[本体を開き][DevToolsConsoleReferenceOpenConsole]ます。</span><span class="sxs-lookup"><span data-stu-id="bb320-109">[Open the Console][DevToolsConsoleReferenceOpenConsole].</span></span>  
 1.  <span data-ttu-id="bb320-110">[ **ライブ式の作成** \ ( ![ ライブ式 ][ImageCreateLiveExpressionIcon] の作成 \)] をクリックします。</span><span class="sxs-lookup"><span data-stu-id="bb320-110">Click **Create Live Expression** \(![Create Live Expression][ImageCreateLiveExpressionIcon]\).</span></span>  <span data-ttu-id="bb320-111">[ **ライブ式** ] テキストボックスが表示されます。</span><span class="sxs-lookup"><span data-stu-id="bb320-111">The **Live Expression** text box appears.</span></span>  
     
-    :::image type="complex" source="../media/console-create-live-expression.msft.png" alt-text="ライブ式のテキストボックスへの "activeElement 要素の入力" lightbox="../media/console-create-live-expression.msft.png":::
+    :::image type="complex" source="../media/console-create-live-expression.msft.png" alt-text="ライブ式のテキストボックスへの &quot;activeElement 要素の入力" lightbox="../media/console-create-live-expression.msft.png":::
        <span data-ttu-id="bb320-113">`document.activeElement`[**ライブ式**] テキストボックスへの入力</span><span class="sxs-lookup"><span data-stu-id="bb320-113">Typing `document.activeElement` into the **Live Expression** text box</span></span>  
     :::image-end:::  
     
