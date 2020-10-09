@@ -1,38 +1,36 @@
 ---
-description: 拡張機能の概要パート2
-title: コンテンツスクリプトを使用して、ページ本文タグの下に NASA 画像を動的に挿入する
+description: コンテンツスクリプトを使用して、ページ本文タグの下に NASA 画像を動的に挿入する
+title: 拡張チュートリアルパート2を作成する
 author: MSEdgeTeam
 ms.author: msedgedevrel
 ms.date: 09/15/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: edge-chromium、web 開発、html、css、javascript、開発者、拡張機能
-ms.openlocfilehash: fd2276c069116a7f69f06ae50f201e284b60f3ea
-ms.sourcegitcommit: 744e2ecf42bcc427ae33e5dadbf6cd48ee0ab6a5
+ms.openlocfilehash: 755b70635c93d7331ef3ac985625ba7ac5689679
+ms.sourcegitcommit: 845a0d53a86bee3678f421adee26b3372cefce57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "11016730"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "11104715"
 ---
-# <span data-ttu-id="ea5b9-104">コンテンツスクリプトを使用して、ページ本文タグの下に NASA 画像を動的に挿入する</span><span class="sxs-lookup"><span data-stu-id="ea5b9-104">Dynamically Insert NASA Picture Below The Page Body Tag Using Content Scripts</span></span>  
+# <span data-ttu-id="72d6a-104">拡張チュートリアルパート2を作成する</span><span class="sxs-lookup"><span data-stu-id="72d6a-104">Create an extension tutorial Part 2</span></span>  
+  
+[<span data-ttu-id="72d6a-105">このパートの完成した拡張パッケージソース</span><span class="sxs-lookup"><span data-stu-id="72d6a-105">Completed Extension Package Source for This Part</span></span>][ArchiveExtensionGettingStartedPart2]    
 
-<!--  
-[Completed Extension Package Source for This Part][ArchiveExtensionGettingStartedPart2]  
--->  
+## <span data-ttu-id="72d6a-106">概要</span><span class="sxs-lookup"><span data-stu-id="72d6a-106">Overview</span></span>  
 
-## <span data-ttu-id="ea5b9-105">概要</span><span class="sxs-lookup"><span data-stu-id="ea5b9-105">Overview</span></span>  
+<span data-ttu-id="72d6a-107">このチュートリアルでは、次の拡張技術について説明します。</span><span class="sxs-lookup"><span data-stu-id="72d6a-107">This tutorial covers the following extension technologies.</span></span>
+*   <span data-ttu-id="72d6a-108">拡張子に JavaScript ライブラリを挿入する</span><span class="sxs-lookup"><span data-stu-id="72d6a-108">Injecting JavaScript libraries into extension</span></span>  
+*   <span data-ttu-id="72d6a-109">ブラウザーのタブへの拡張アセットの公開</span><span class="sxs-lookup"><span data-stu-id="72d6a-109">Exposing extension assets to browser tabs</span></span>  
+*   <span data-ttu-id="72d6a-110">既存のブラウザータブにコンテンツページを含める</span><span class="sxs-lookup"><span data-stu-id="72d6a-110">Including content pages in existing browser tabs</span></span>  
+*   <span data-ttu-id="72d6a-111">コンテンツページでポップアップからのメッセージを聞き、返信する</span><span class="sxs-lookup"><span data-stu-id="72d6a-111">Having content pages listen for messages from pop-ups and respond</span></span>  
 
-<span data-ttu-id="ea5b9-106">パート2では、作成した星の画像を表示しないようにポップアップメニューを更新する方法について説明します。ただし、その画像をタイトルと標準の HTML ボタンで置き換えることができます。</span><span class="sxs-lookup"><span data-stu-id="ea5b9-106">In part 2, you learn to update your pop-up menu to not show the static stars image you had before, but to replace that image with a title and a standard HTML button.</span></span>  <span data-ttu-id="ea5b9-107">このボタンは、選択すると、拡張機能に埋め込まれた星の画像をコンテンツページに渡します。</span><span class="sxs-lookup"><span data-stu-id="ea5b9-107">That button, when selected, passes that stars image, which is embedded in the Extension, to the content page.</span></span>  <span data-ttu-id="ea5b9-108">この画像は、アクティブなブラウザータブに挿入されます。</span><span class="sxs-lookup"><span data-stu-id="ea5b9-108">That image, is inserted into the active browser tab.</span></span>  
+<span data-ttu-id="72d6a-112">ポップアップメニューを更新して、静的なスタート画像をタイトルと標準の HTML ボタンに置き換える方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="72d6a-112">You'll learn to update your pop-up menu to replace your static starts image with a title and a standard HTML button.</span></span>  <span data-ttu-id="72d6a-113">このボタンは、選択すると、拡張機能に埋め込まれた星の画像をコンテンツページに渡します。</span><span class="sxs-lookup"><span data-stu-id="72d6a-113">That button, when selected, passes that stars image, which is embedded in the extension, to the content page.</span></span>  <span data-ttu-id="72d6a-114">この画像は、アクティブなブラウザータブに挿入されます。詳細については、次の手順に従ってください。</span><span class="sxs-lookup"><span data-stu-id="72d6a-114">That image, is inserted into the active browser tab. Follow the below steps for further details.</span></span>
 
-*   <span data-ttu-id="ea5b9-109">このガイドで説明する拡張テクノロジ</span><span class="sxs-lookup"><span data-stu-id="ea5b9-109">Extension technologies covered in this guide</span></span>  
-    *   <span data-ttu-id="ea5b9-110">拡張子に JavaScript ライブラリを挿入する</span><span class="sxs-lookup"><span data-stu-id="ea5b9-110">Injecting JavaScript libraries into Extension</span></span>  
-    *   <span data-ttu-id="ea5b9-111">ブラウザーのタブへの拡張アセットの公開</span><span class="sxs-lookup"><span data-stu-id="ea5b9-111">Exposing Extension assets to browser tabs</span></span>  
-    *   <span data-ttu-id="ea5b9-112">既存のブラウザータブにコンテンツページを含める</span><span class="sxs-lookup"><span data-stu-id="ea5b9-112">Including content pages in existing browser tabs</span></span>  
-    *   <span data-ttu-id="ea5b9-113">コンテンツページでポップアップからのメッセージを聞き、返信する</span><span class="sxs-lookup"><span data-stu-id="ea5b9-113">Having content pages listen for messages from pop-ups and respond</span></span>  
+1.  <span data-ttu-id="72d6a-115">ポップアップから画像を削除し、ボタンに置き換えます。</span><span class="sxs-lookup"><span data-stu-id="72d6a-115">Remove the image from the pop-up and replace it with a button</span></span>  
 
-## <span data-ttu-id="ea5b9-114">ポップアップから画像を削除し、ボタンに置き換えます。</span><span class="sxs-lookup"><span data-stu-id="ea5b9-114">Remove the image from the pop-up and replace it with a button</span></span>  
-
-<span data-ttu-id="ea5b9-115">まず、 `popup.html` タイトルとボタンを表示する、いくつかのまっすぐな前方のマークアップでファイルを更新します。</span><span class="sxs-lookup"><span data-stu-id="ea5b9-115">First, update your `popup.html` file with some straight forward markup that displays a title and a button.</span></span>  <span data-ttu-id="ea5b9-116">このボタンをすぐにプログラムしますが、ここでは空の JavaScript ファイルへの参照を含め `popup.js` ます。</span><span class="sxs-lookup"><span data-stu-id="ea5b9-116">You will program that button shortly, but for now, just include a reference to an empty JavaScript file `popup.js`.</span></span>  <span data-ttu-id="ea5b9-117">次に、更新 HTML を示します。</span><span class="sxs-lookup"><span data-stu-id="ea5b9-117">Here is update HTML.</span></span>  
+<span data-ttu-id="72d6a-116">まず、 `popup.html` タイトルとボタンを表示する、いくつかのまっすぐな前方のマークアップでファイルを更新します。</span><span class="sxs-lookup"><span data-stu-id="72d6a-116">First, update your `popup.html` file with some straight forward markup that displays a title and a button.</span></span>  <span data-ttu-id="72d6a-117">このボタンはすぐにプログラムでプログラミングしますが、ここでは空の JavaScript ファイルへの参照を含め `popup.js` ます。</span><span class="sxs-lookup"><span data-stu-id="72d6a-117">You'll program that button shortly, but for now, just include a reference to an empty JavaScript file `popup.js`.</span></span>  <span data-ttu-id="72d6a-118">次に、更新 HTML を示します。</span><span class="sxs-lookup"><span data-stu-id="72d6a-118">Here is update HTML.</span></span>  
 
 ```html
 <html>
@@ -53,7 +51,7 @@ ms.locfileid: "11016730"
         </style>
     </head>
     <body>
-        <h1>Show the NASA Picture of the Day</h1>
+        <h1>Show the NASA picture of the day</h1>
         <h2>(select the image to remove)</h2>
         <button id="sendmessageid">Display</button>
         <script src="popup.js"></script>
@@ -61,23 +59,23 @@ ms.locfileid: "11016730"
 </html>
 ```  
 
-<span data-ttu-id="ea5b9-118">拡張機能を更新して拡張機能起動アイコンを選ぶと、次のポップアップに表示される [表示] ボタンが表示されます。</span><span class="sxs-lookup"><span data-stu-id="ea5b9-118">After updating your Extension and selecting the Extension launch icon, the have the following pop-up includes a display button.</span></span>  
+<span data-ttu-id="72d6a-119">拡張機能を更新して開くと、ポップアップボタンが表示されます。</span><span class="sxs-lookup"><span data-stu-id="72d6a-119">After updating and opening the extension, a pop-up opens with a display button.</span></span>  
 
 :::image type="complex" source="./media/part2-popupdialog.png" alt-text="拡張アイコンを押した後に表示される l popup.htm":::
-   <span data-ttu-id="ea5b9-120">拡張アイコンを押した後に表示される l popup.htm</span><span class="sxs-lookup"><span data-stu-id="ea5b9-120">popup.html display after pressing the Extension icon</span></span>
+   <span data-ttu-id="72d6a-121">拡張アイコンを押した後に表示される l popup.htm</span><span class="sxs-lookup"><span data-stu-id="72d6a-121">popup.html display after pressing the Extension icon</span></span>
 :::image-end:::
 
 <!--![popup.html display after pressing the Extension icon][ImagePart2Popupdialog]  -->  
 
-## <span data-ttu-id="ea5b9-121">ブラウザータブの上部に画像を表示する方法が更新されました</span><span class="sxs-lookup"><span data-stu-id="ea5b9-121">Updated strategy to display image at the top of the browser tab</span></span>  
+2.  <span data-ttu-id="72d6a-122">ブラウザータブの上部に画像が表示されるように更新方法</span><span class="sxs-lookup"><span data-stu-id="72d6a-122">Update strategy to display image at the top of the browser tab</span></span>  
 
-<span data-ttu-id="ea5b9-122">ボタンを追加した後は、次のタスクとして、 `images/stars.jpeg` アクティブなタブページの上部に画像ファイルを設定します。</span><span class="sxs-lookup"><span data-stu-id="ea5b9-122">After adding the button, the next task is to make it bring up the `images/stars.jpeg` image file at the top of the active tab page.</span></span>  
+<span data-ttu-id="72d6a-123">ボタンを追加した後は、次のタスクとして、 `images/stars.jpeg` アクティブなタブページの上部に画像ファイルを設定します。</span><span class="sxs-lookup"><span data-stu-id="72d6a-123">After adding the button, the next task is to make it bring up the `images/stars.jpeg` image file at the top of the active tab page.</span></span>  
 
-<span data-ttu-id="ea5b9-123">各タブページには固有のスレッドがあり、拡張には別個のスレッドがあることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="ea5b9-123">Remember, each tab page has a unique own thread and the Extension has a separate thread.</span></span>  <span data-ttu-id="ea5b9-124">そのため、まずコンテンツスクリプトを作成し、そのコンテンツスクリプトをタブページに挿入する必要があります。</span><span class="sxs-lookup"><span data-stu-id="ea5b9-124">So, you must first create a content script and inject that content script into the tab page.</span></span>  <span data-ttu-id="ea5b9-125">この操作を行うと、タブページ上で実行されているコンテンツスクリプトにメッセージを送信する必要があります。コンテンツスクリプトは、表示する画像とその表示方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="ea5b9-125">Once you do that, you must send a message from your pop-up to that content script running on the tab page telling that content script what image to show, and how to show it.</span></span>  
+<span data-ttu-id="72d6a-124">タブページはそれぞれ独自のスレッドで実行されることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="72d6a-124">Remember, each tab page runs in its own thread.</span></span> <span data-ttu-id="72d6a-125">また、拡張機能では別のスレッドが使用されます。</span><span class="sxs-lookup"><span data-stu-id="72d6a-125">Also, the extension uses a different thread.</span></span>  <span data-ttu-id="72d6a-126">まず、タブページに挿入されたコンテンツスクリプトを作成します。</span><span class="sxs-lookup"><span data-stu-id="72d6a-126">First, create a content script that is injected into the tab page.</span></span>  <span data-ttu-id="72d6a-127">次に、ポップアップから、タブページで実行されているコンテンツスクリプトにメッセージを送信します。</span><span class="sxs-lookup"><span data-stu-id="72d6a-127">Then, send a message from your pop-up to that content script running on the tab page.</span></span> <span data-ttu-id="72d6a-128">コンテンツスクリプトは、どの画像を表示するかを説明するメッセージを受信します。</span><span class="sxs-lookup"><span data-stu-id="72d6a-128">The content script receives the message, which describes which image should be displayed.</span></span>  
 
-## <span data-ttu-id="ea5b9-126">メッセージを送信するためのポップアップ JavaScript の作成</span><span class="sxs-lookup"><span data-stu-id="ea5b9-126">Creating the pop-up JavaScript to send a message</span></span>  
+3. <span data-ttu-id="72d6a-129">ポップアップ JavaScript を作成してメッセージを送信する</span><span class="sxs-lookup"><span data-stu-id="72d6a-129">Create the pop-up JavaScript to send a message</span></span>  
 
-<span data-ttu-id="ea5b9-127">最初に、まだ作成されて `popup/popup.js` いないコンテンツスクリプトにメッセージを送信するコードを作成して追加します。これにより、ブラウザータブに一時的に作成して挿入する必要があります。 そのためには、次のコードでは、 `onclick` ポップアップ表示ボタンにイベントを追加します。</span><span class="sxs-lookup"><span data-stu-id="ea5b9-127">First, create `popup/popup.js` and add code to send a message to your not-yet-created content script that you must momentarily create and inject into your browser tab.  To do that, the following code adds an `onclick` event to your pop-up display button.</span></span>  
+<span data-ttu-id="72d6a-130">最初に、まだ作成されて `popup/popup.js` いないコンテンツスクリプトにメッセージを送信するコードを作成して追加します。これにより、ブラウザータブに一時的に作成して挿入する必要があります。 そのためには、次のコードでは、 `onclick` ポップアップ表示ボタンにイベントを追加します。</span><span class="sxs-lookup"><span data-stu-id="72d6a-130">First, create `popup/popup.js` and add code to send a message to your not-yet-created content script that you must momentarily create and inject into your browser tab.  To do that, the following code adds an `onclick` event to your pop-up display button.</span></span>  
 
 ```javascript
 const sendMessageId = document.getElementById("sendmessageid");
@@ -88,11 +86,11 @@ if (sendMessageId) {
 }
 ```  
 
-<span data-ttu-id="ea5b9-128">`onclick`このイベントでは、現在のブラウザーのタブを確認する必要があります (開いているブラウザーが1つだけの場合は、それが1つであることを意味します)。</span><span class="sxs-lookup"><span data-stu-id="ea5b9-128">In the `onclick` event, what you must do is find the current browser tab \(if there is only one open it is that one\).</span></span>  <span data-ttu-id="ea5b9-129">その後、そのタブが見つかったら、 `chrome.tabs.sendmessage` EXTENSION API を使ってそのタブにメッセージを送信します。</span><span class="sxs-lookup"><span data-stu-id="ea5b9-129">Then, once you find that tab, use the `chrome.tabs.sendmessage` Extension API to send a message to that tab.</span></span>  
+<span data-ttu-id="72d6a-131">イベントの `onclick` [現在のブラウザー] タブを見つけます。 次に、拡張 API を使用し `chrome.tabs.sendmessage` て、そのタブにメッセージを送信します。</span><span class="sxs-lookup"><span data-stu-id="72d6a-131">In the `onclick` event, find the current browser tab.  Then, use the `chrome.tabs.sendmessage` Extension API to send a message to that tab.</span></span>  
 
-<span data-ttu-id="ea5b9-130">このメッセージには、表示する画像の URL を含める必要があります。また、挿入した画像に割り当てる必要がある一意の ID を送信する必要があります。</span><span class="sxs-lookup"><span data-stu-id="ea5b9-130">In that message you must include the URL to the image you want to display, and you want to send a unique ID that should be assigned to that inserted image.</span></span>  <span data-ttu-id="ea5b9-131">コンテンツ挿入の JavaScript によって生成されるようにすることもできますが、後で明らかになる理由については、その一意の ID をここで生成 `popup.js` し、まだ作成されていないコンテンツスクリプトに渡します。</span><span class="sxs-lookup"><span data-stu-id="ea5b9-131">You may choose to let the content insertion JavaScript generate that, but for reasons that become apparent later, generate that unique ID here in `popup.js` and pass it to the not-yet-created content script.</span></span>  
+<span data-ttu-id="72d6a-132">このメッセージでは、表示する画像の URL を指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="72d6a-132">In that message you must include the URL to the image you want to display.</span></span> <span data-ttu-id="72d6a-133">また、挿入した画像に割り当てるための一意の ID を送信します。</span><span class="sxs-lookup"><span data-stu-id="72d6a-133">Also, send a unique ID to assign to the inserted image.</span></span>  <span data-ttu-id="72d6a-134">コンテンツ挿入の JavaScript によって生成されるようにすることもできますが、後で明らかになる理由については、その一意の ID をここで生成 `popup.js` し、まだ作成されていないコンテンツスクリプトに渡します。</span><span class="sxs-lookup"><span data-stu-id="72d6a-134">You may choose to let the content insertion JavaScript generate that, but for reasons that become apparent later, generate that unique ID here in `popup.js` and pass it to the not-yet-created content script.</span></span>  
 
-<span data-ttu-id="ea5b9-132">更新されたファイルを次に示し `popup/popup.js` ます。</span><span class="sxs-lookup"><span data-stu-id="ea5b9-132">Here is your updated `popup/popup.js` file.</span></span>  <span data-ttu-id="ea5b9-133">また、それ以降のセクションで必要な現在のタブ ID を渡すことはできません。</span><span class="sxs-lookup"><span data-stu-id="ea5b9-133">Also, pass in the current tab ID which you should need in a later section but for now, is not be used.</span></span>  
+<span data-ttu-id="72d6a-135">次のコードスニペットでは、の更新されたコードの概要を示して `popup/popup.js` います。</span><span class="sxs-lookup"><span data-stu-id="72d6a-135">The following code snippet outlines the updated code in `popup/popup.js`.</span></span>  <span data-ttu-id="72d6a-136">また、この記事で後述する現在のタブ ID を渡します。</span><span class="sxs-lookup"><span data-stu-id="72d6a-136">Also, pass in the current tab ID, which is used later in this article.</span></span>  
 
 ```javascript
 const sendMessageId = document.getElementById("sendmessageid");
@@ -121,17 +119,17 @@ if (sendMessageId) {
 }
 ```  
 
-## <span data-ttu-id="ea5b9-134">任意のブラウザータブから星の .jpeg を作成することができます。</span><span class="sxs-lookup"><span data-stu-id="ea5b9-134">Making your stars.jpeg available from any browser tab</span></span>  
+4. <span data-ttu-id="72d6a-137">任意のブラウザータブから星の .jpeg を使用できるようにします。</span><span class="sxs-lookup"><span data-stu-id="72d6a-137">Make your stars.jpeg available from any browser tab</span></span>  
 
-<span data-ttu-id="ea5b9-135">このような場合は、前のセクションの `images/stars.jpeg` `chrome.extension.getURL` ように追加プレフィックスを指定せずに、相対 URL を渡す代わりに、CHROME 拡張 API を使用する必要があると考えられます。</span><span class="sxs-lookup"><span data-stu-id="ea5b9-135">You are probably wondering why, when you pass the `images/stars.jpeg` must you use the `chrome.extension.getURL` chrome Extension API instead of just passing in the relative URL without the extra prefix like in the previous section.</span></span>  <span data-ttu-id="ea5b9-136">このように、添付された画像によって返される追加のプレフィックスは、 `getUrl` 次のようになります。</span><span class="sxs-lookup"><span data-stu-id="ea5b9-136">By the way, that extra prefix, returned by `getUrl` with the image attached looks something like the following.</span></span>  
+<span data-ttu-id="72d6a-138">このような場合は、前のセクションの `images/stars.jpeg` `chrome.extension.getURL` ように追加プレフィックスを指定せずに、相対 URL を渡す代わりに、Chrome 拡張機能 API を使用する必要があることをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="72d6a-138">You're probably wondering why, when you pass the `images/stars.jpeg` must you use the `chrome.extension.getURL` chrome Extension API instead of just passing in the relative URL without the extra prefix like in the previous section.</span></span>  <span data-ttu-id="72d6a-139">このように、添付された画像によって返される追加のプレフィックスは、 `getUrl` 次のようになります。</span><span class="sxs-lookup"><span data-stu-id="72d6a-139">By the way, that extra prefix, returned by `getUrl` with the image attached looks something like the following.</span></span>  
 
 ```http
 extension://inigobacliaghocjiapeaaoemkjifjhp/images/stars.jpeg
 ```  
 
-<span data-ttu-id="ea5b9-137">その理由は、要素の属性を使用して `src` コンテンツページに画像を挿入するためです `img` 。</span><span class="sxs-lookup"><span data-stu-id="ea5b9-137">The reason is that you are injecting the image using the `src` attribute of the `img` element into the content page.</span></span>  <span data-ttu-id="ea5b9-138">コンテンツページは、拡張機能を実行しているスレッドとは異なる固有のスレッドで実行されています。</span><span class="sxs-lookup"><span data-stu-id="ea5b9-138">The content page is running on a unique thread that is not the same as the thread running the Extension.</span></span>  <span data-ttu-id="ea5b9-139">静的な画像ファイルを正常に動作させるには、web アセットとして公開する必要があります。</span><span class="sxs-lookup"><span data-stu-id="ea5b9-139">You must expose the static image file as a web asset for it to work correctly.</span></span>  
+<span data-ttu-id="72d6a-140">その理由は、 `src` 要素の属性を使ってコンテンツページに画像を挿入するためです `img` 。</span><span class="sxs-lookup"><span data-stu-id="72d6a-140">The reason is that you're injecting the image using the `src` attribute of the `img` element into the content page.</span></span>  <span data-ttu-id="72d6a-141">コンテンツページは、拡張機能を実行しているスレッドと同じではない一意のスレッドで実行されています。</span><span class="sxs-lookup"><span data-stu-id="72d6a-141">The content page is running on a unique thread that isn't the same as the thread running the Extension.</span></span>  <span data-ttu-id="72d6a-142">静的な画像ファイルを正常に動作させるには、web アセットとして公開する必要があります。</span><span class="sxs-lookup"><span data-stu-id="72d6a-142">You must expose the static image file as a web asset for it to work correctly.</span></span>  
 
-<span data-ttu-id="ea5b9-140">そのためには、ファイルに別のエントリを追加する必要があり `manifest.json` ます。</span><span class="sxs-lookup"><span data-stu-id="ea5b9-140">To do that, you must add another entry in the `manifest.json` file.</span></span>  <span data-ttu-id="ea5b9-141">どのブラウザータブからでもアクセスできるようにイメージを宣言する必要があります。 このエントリは次のようになります (コンテンツスクリプトの宣言を追加するときは、以下の完全なファイルで確認してください `manifest.json` \)。</span><span class="sxs-lookup"><span data-stu-id="ea5b9-141">You must declare the image to be accessible from any browser tab.  That entry is as follows \(you should see it in the full `manifest.json` file below when you add the content script declaration coming up\).</span></span>  
+<span data-ttu-id="72d6a-143">ファイルに別のエントリを追加して `manifest.json` 、すべてのブラウザータブでその画像が利用可能であることを宣言します。</span><span class="sxs-lookup"><span data-stu-id="72d6a-143">Add another entry in the `manifest.json` file to declare that the image is available to all browser tabs.</span></span>  <span data-ttu-id="72d6a-144">このエントリは次のようになります (コンテンツスクリプトの宣言を追加するときは、以下の完全なファイルで確認してください `manifest.json` \)。</span><span class="sxs-lookup"><span data-stu-id="72d6a-144">That entry is as follows \(you should see it in the full `manifest.json` file below when you add the content script declaration coming up\).</span></span>  
 
 ```json
 "web_accessible_resources": [
@@ -139,18 +137,18 @@ extension://inigobacliaghocjiapeaaoemkjifjhp/images/stars.jpeg
 ]
 ```  
 
-<span data-ttu-id="ea5b9-142">`popup.js`現在のアクティブなタブページに埋め込まれたコンテンツページにメッセージを送信するためのコードをファイルに書き込みましたが、そのコンテンツページを作成して挿入していません。</span><span class="sxs-lookup"><span data-stu-id="ea5b9-142">You have now written the code in your `popup.js` file to send a message to the content page that is embedded on the current active tab page, but you have not created and injected that content page.</span></span>  <span data-ttu-id="ea5b9-143">これを実行します。</span><span class="sxs-lookup"><span data-stu-id="ea5b9-143">Do that now.</span></span>  
+<span data-ttu-id="72d6a-145">`popup.js`現在のアクティブなタブページに埋め込まれたコンテンツページにメッセージを送信するコードをファイルに記述しましたが、そのコンテンツページを作成して挿入することはできません。</span><span class="sxs-lookup"><span data-stu-id="72d6a-145">You've now written the code in your `popup.js` file to send a message to the content page that is embedded on the current active tab page, but you haven't created and injected that content page.</span></span>  <span data-ttu-id="72d6a-146">これを実行します。</span><span class="sxs-lookup"><span data-stu-id="72d6a-146">Do that now.</span></span>  
 
-## <span data-ttu-id="ea5b9-144">コンテンツと web アクセスの manifest.jsを更新する</span><span class="sxs-lookup"><span data-stu-id="ea5b9-144">Updating your manifest.json for content and web access</span></span>  
+5.  <span data-ttu-id="72d6a-147">コンテンツと web アクセスの manifest.jsを更新する</span><span class="sxs-lookup"><span data-stu-id="72d6a-147">Update your manifest.json for content and web access</span></span>  
 
-<span data-ttu-id="ea5b9-145">And を含む更新は次のように `manifest.json` `content-scripts` `web_accessible_resources` なります。</span><span class="sxs-lookup"><span data-stu-id="ea5b9-145">The updated `manifest.json` that includes the `content-scripts` and `web_accessible_resources` is as follows.</span></span>  
+<span data-ttu-id="72d6a-148">And を含む更新は次のように `manifest.json` `content-scripts` `web_accessible_resources` なります。</span><span class="sxs-lookup"><span data-stu-id="72d6a-148">The updated `manifest.json` that includes the `content-scripts` and `web_accessible_resources` is as follows.</span></span>  
 
 ```json
 {
-    "name": "NASA Picture of the day viewer",
+    "name": "NASA picture of the day viewer",
     "version": "0.0.0.1",
     "manifest_version": 2,
-    "description": "A Chromium Extension to show the NASA Picture of the Day.",
+    "description": "A Chromium extension to show the NASA picture of the day.",
     "icons": {
         "16": "icons/nasapod16x16.png",
         "32": "icons/nasapod32x32.png",
@@ -174,17 +172,17 @@ extension://inigobacliaghocjiapeaaoemkjifjhp/images/stars.jpeg
 }
 ```  
 
-<span data-ttu-id="ea5b9-146">追加したセクションは `content_scripts` です。</span><span class="sxs-lookup"><span data-stu-id="ea5b9-146">The section you added is `content_scripts`.</span></span>  <span data-ttu-id="ea5b9-147">この属性が設定されて `matches` `<all_urls>` いる場合、 **content_scripts** セクションに含まれるすべてのファイルが、読み込まれるたびにすべてのブラウザータブページに挿入されることを意味します。</span><span class="sxs-lookup"><span data-stu-id="ea5b9-147">The attribute `matches` set to `<all_urls>` means that all the files mention in the **content_scripts** section is injected into all browser tab pages when each are loaded.</span></span>  <span data-ttu-id="ea5b9-148">ここに挿入できるファイルの種類は、javascript と css です。</span><span class="sxs-lookup"><span data-stu-id="ea5b9-148">The allowable types of files that are able to be injected here are javascript and css.</span></span>  <span data-ttu-id="ea5b9-149">も追加されました `libjquery.min.js` 。</span><span class="sxs-lookup"><span data-stu-id="ea5b9-149">You also added `libjquery.min.js`.</span></span>  <span data-ttu-id="ea5b9-150">このセクションの一番上に記載されているダウンロードからそのような情報を含めることができます。</span><span class="sxs-lookup"><span data-stu-id="ea5b9-150">You are able to include that from the download mentioned at the top of the section.</span></span>  
+<span data-ttu-id="72d6a-149">追加したセクションは `content_scripts` です。</span><span class="sxs-lookup"><span data-stu-id="72d6a-149">The section you added is `content_scripts`.</span></span>  <span data-ttu-id="72d6a-150">`matches`属性はに設定されてい `<all_urls>` ます。つまり、 `content_scripts` 各タブが読み込まれると、すべてのブラウザータブページにすべてのファイルが挿入されます。</span><span class="sxs-lookup"><span data-stu-id="72d6a-150">The `matches` attribute is set to `<all_urls>`, which means that all files in `content_scripts` are injected into all browser tab pages when each tab is loaded.</span></span>  <span data-ttu-id="72d6a-151">挿入できる許可されているファイルの種類は JavaScript と CSS です。</span><span class="sxs-lookup"><span data-stu-id="72d6a-151">The allowed files types that can be injected are JavaScript and CSS.</span></span>  <span data-ttu-id="72d6a-152">も追加されました `libjquery.min.js` 。</span><span class="sxs-lookup"><span data-stu-id="72d6a-152">You also added `libjquery.min.js`.</span></span>  <span data-ttu-id="72d6a-153">このセクションの最初に記載されているダウンロードの内容を含めることができます。</span><span class="sxs-lookup"><span data-stu-id="72d6a-153">You're able to include that from the download mentioned at the top of the section.</span></span>  
 
-## <span data-ttu-id="ea5b9-151">JQuery の追加と関連するスレッドの理解</span><span class="sxs-lookup"><span data-stu-id="ea5b9-151">Adding jQuery and understanding the associated thread</span></span>  
+6. <span data-ttu-id="72d6a-154">JQuery を追加し、関連付けられたスレッドについて理解する</span><span class="sxs-lookup"><span data-stu-id="72d6a-154">Add jQuery and understanding the associated thread</span></span>  
 
-<span data-ttu-id="ea5b9-152">挿入するコンテンツスクリプトで、jQuery \ (\) の使用を計画し `$` ます。</span><span class="sxs-lookup"><span data-stu-id="ea5b9-152">In the content scripts you are injecting, plan on using jQuery \(`$`\).</span></span>  <span data-ttu-id="ea5b9-153">JQuery の縮小版を追加し、内線番号をとして追加しました `lib\jquery.min.js` 。</span><span class="sxs-lookup"><span data-stu-id="ea5b9-153">You added a minified version of jQuery and put it in your Extension package as `lib\jquery.min.js`.</span></span>  <span data-ttu-id="ea5b9-154">これらのコンテンツスクリプトは、並べ替えの個別のサンドボックスで実行されます。つまり、ページに挿入された jQuery は `popup.js` コンテンツと共有されません。</span><span class="sxs-lookup"><span data-stu-id="ea5b9-154">These content scripts run in an individual sandbox of sorts, which means that the jQuery injected into the `popup.js` page does not share with the content.</span></span>  
+<span data-ttu-id="72d6a-155">挿入するコンテンツスクリプトで、jQuery \ (\) の使用を計画し `$` ます。</span><span class="sxs-lookup"><span data-stu-id="72d6a-155">In the content scripts that you're injecting, plan on using jQuery \(`$`\).</span></span>  <span data-ttu-id="72d6a-156">JQuery の縮小版を追加し、内線番号をとして追加しました `lib\jquery.min.js` 。</span><span class="sxs-lookup"><span data-stu-id="72d6a-156">You added a minified version of jQuery and put it in your Extension package as `lib\jquery.min.js`.</span></span>  <span data-ttu-id="72d6a-157">これらのコンテンツスクリプトは個々のサンドボックスで実行されるため、ページに挿入された jQuery は `popup.js` コンテンツと共有されません。</span><span class="sxs-lookup"><span data-stu-id="72d6a-157">These content scripts run in individual sandboxes, which means that the jQuery injected into the `popup.js` page isn't shared with the content.</span></span>  
 
-<span data-ttu-id="ea5b9-155">読み込まれた web ページ上の JavaScript がブラウザータブで実行されている場合でも、挿入されたコンテンツにはアクセスできないことに注意してください。</span><span class="sxs-lookup"><span data-stu-id="ea5b9-155">Keep in mind that even if the browser tab has JavaScript running on it on the loaded web page, any content injected does not have access to that.</span></span>  <span data-ttu-id="ea5b9-156">挿入された JavaScript は、そのブラウザータブに読み込まれている実際の DOM にアクセスするだけです。</span><span class="sxs-lookup"><span data-stu-id="ea5b9-156">That injected JavaScript just has access to the actual DOM loaded in that browser tab.</span></span>  
+<span data-ttu-id="72d6a-158">読み込まれた web ページの [ブラウザー] タブで JavaScript を実行している場合でも、挿入されたコンテンツにはアクセスできません。</span><span class="sxs-lookup"><span data-stu-id="72d6a-158">Keep in mind that even if the browser tab has JavaScript running on it on the loaded web page, any content injected doesn't have access to that.</span></span>  <span data-ttu-id="72d6a-159">挿入された JavaScript は、そのブラウザータブに読み込まれている実際の DOM にアクセスするだけです。</span><span class="sxs-lookup"><span data-stu-id="72d6a-159">That injected JavaScript just has access to the actual DOM loaded in that browser tab.</span></span>  
 
-## <span data-ttu-id="ea5b9-157">コンテンツスクリプトメッセージリスナーの追加</span><span class="sxs-lookup"><span data-stu-id="ea5b9-157">Adding the content script message listener</span></span>  
+7. <span data-ttu-id="72d6a-160">コンテンツスクリプトメッセージリスナーを追加する</span><span class="sxs-lookup"><span data-stu-id="72d6a-160">Add the content script message listener</span></span>  
 
-<span data-ttu-id="ea5b9-158">`content-scripts\content.js`セクションに基づいて、すべてのブラウザータブページに挿入されるファイルを次に示し `manifest.json` `content-scripts` ます。</span><span class="sxs-lookup"><span data-stu-id="ea5b9-158">Here is that `content-scripts\content.js` file that gets injected into every browser tab page based on your `manifest.json` `content-scripts` section.</span></span>  
+<span data-ttu-id="72d6a-161">`content-scripts\content.js`セクションに基づいて、すべてのブラウザータブページに挿入されるファイルを次に示し `manifest.json` `content-scripts` ます。</span><span class="sxs-lookup"><span data-stu-id="72d6a-161">Here is that `content-scripts\content.js` file that gets injected into every browser tab page based on your `manifest.json` `content-scripts` section.</span></span>  
 
 ```javascript
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
@@ -207,41 +205,37 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 });
 ```  
 
-<span data-ttu-id="ea5b9-159">上記の JavaScript はすべて、 `listener` EXTENSION API メソッドを使用してを登録することに注意して `chrome.runtime.onMessage.addListener` ください。</span><span class="sxs-lookup"><span data-stu-id="ea5b9-159">Notice that all the above JavaScript does is to register a `listener` using the `chrome.runtime.onMessage.addListener` Extension API method.</span></span>  <span data-ttu-id="ea5b9-160">このリスナーは、前に説明したように、Extension API メソッドで送信したメッセージなどのメッセージを待機 `popup.js` `chrome.tabs.sendMessage` します。</span><span class="sxs-lookup"><span data-stu-id="ea5b9-160">This listener waits for messages like the one you sent from the `popup.js` described earlier with the `chrome.tabs.sendMessage` Extension API method.</span></span>  
+<span data-ttu-id="72d6a-162">上記の JavaScript はすべて、 `listener` EXTENSION API メソッドを使用してを登録することに注意して `chrome.runtime.onMessage.addListener` ください。</span><span class="sxs-lookup"><span data-stu-id="72d6a-162">Notice that all the above JavaScript does is to register a `listener` using the `chrome.runtime.onMessage.addListener` Extension API method.</span></span>  <span data-ttu-id="72d6a-163">このリスナーは、前に説明したように、Extension API メソッドで送信したメッセージなどのメッセージを待機 `popup.js` `chrome.tabs.sendMessage` します。</span><span class="sxs-lookup"><span data-stu-id="72d6a-163">This listener waits for messages like the one you sent from the `popup.js` described earlier with the `chrome.tabs.sendMessage` Extension API method.</span></span>  
 
-<span data-ttu-id="ea5b9-161">メソッドの1番目のパラメーター `addListener` は、渡されるメッセージの詳細を最初のパラメーターとして要求する関数です。</span><span class="sxs-lookup"><span data-stu-id="ea5b9-161">The first parameter of the `addListener` method is a function whose first parameter, request, is the details of the message being passed in.</span></span>  <span data-ttu-id="ea5b9-162">`popup.js`メソッドを使ったとき、最初の `sendMessage` パラメーターの属性は and であることを覚え `url` ておいて `imageDivId` ください。</span><span class="sxs-lookup"><span data-stu-id="ea5b9-162">Remember, from `popup.js`, when you used the `sendMessage` method, those attributes of the first parameter are `url` and `imageDivId`.</span></span>  
+<span data-ttu-id="72d6a-164">メソッドの1番目のパラメーター `addListener` は、渡されるメッセージの詳細を最初のパラメーターとして要求する関数です。</span><span class="sxs-lookup"><span data-stu-id="72d6a-164">The first parameter of the `addListener` method is a function whose first parameter, request, is the details of the message being passed in.</span></span>  <span data-ttu-id="72d6a-165">`popup.js`メソッドを使ったとき、最初の `sendMessage` パラメーターの属性は and であることを覚え `url` ておいて `imageDivId` ください。</span><span class="sxs-lookup"><span data-stu-id="72d6a-165">Remember, from `popup.js`, when you used the `sendMessage` method, those attributes of the first parameter are `url` and `imageDivId`.</span></span>  
 
-<span data-ttu-id="ea5b9-163">リスナーによってイベントが処理されると、最初のパラメーターである関数が実行されます。</span><span class="sxs-lookup"><span data-stu-id="ea5b9-163">When an event is processed by the listener, the function that is the first parameter is run.</span></span>  <span data-ttu-id="ea5b9-164">この関数の最初のパラメーターは、によって割り当てられた属性を含むオブジェクトです `sendMessage` 。</span><span class="sxs-lookup"><span data-stu-id="ea5b9-164">The first parameter of that function is an object that has attributes as assigned by `sendMessage`.</span></span>  <span data-ttu-id="ea5b9-165">この関数は、3つの jQuery スクリプト行を処理するだけです。</span><span class="sxs-lookup"><span data-stu-id="ea5b9-165">That function simply processes the three jQuery script lines.</span></span>  
+<span data-ttu-id="72d6a-166">リスナーによってイベントが処理されると、最初のパラメーターである関数が実行されます。</span><span class="sxs-lookup"><span data-stu-id="72d6a-166">When an event is processed by the listener, the function that is the first parameter is run.</span></span>  <span data-ttu-id="72d6a-167">この関数の最初のパラメーターは、によって割り当てられた属性を含むオブジェクトです `sendMessage` 。</span><span class="sxs-lookup"><span data-stu-id="72d6a-167">The first parameter of that function is an object that has attributes as assigned by `sendMessage`.</span></span>  <span data-ttu-id="72d6a-168">この関数は、3つの jQuery スクリプト行を処理するだけです。</span><span class="sxs-lookup"><span data-stu-id="72d6a-168">That function simply processes the three jQuery script lines.</span></span>  
 
-*   <span data-ttu-id="ea5b9-166">最初に、 **\<style\>** クラスとして要素に割り当てる必要があるセクションが DOM ヘッダーに動的に挿入され `slide-image` `img` ます。</span><span class="sxs-lookup"><span data-stu-id="ea5b9-166">The first dynamically inserts into the DOM header a **\<style\>** section that you must assign as a `slide-image` class to your `img` element.</span></span>  
-*   <span data-ttu-id="ea5b9-167">2番目の例では、 `img` ブラウザーのタブのすぐ下に、そのクラスが割り当てられている `body` クラスと `slide-image` 、 `imageDivId` そのイメージ要素の ID として要素が追加されます。</span><span class="sxs-lookup"><span data-stu-id="ea5b9-167">The second, appends an `img` element right below the `body` of your browser tab that has the `slide-image` class assigned as well as the `imageDivId` as the ID of that image element.</span></span>  
-*   <span data-ttu-id="ea5b9-168">3番目は、画像全体をカバーするイベントを追加し `click` ます。これにより、ユーザーは画像上の任意の場所を選ぶことができ、その画像はページから (イベントリスナー \ と共に) 削除されます。</span><span class="sxs-lookup"><span data-stu-id="ea5b9-168">The third adds a `click` event that covers the entire image allowing the user to select any place on the image and that image is be removed from the page \(along with it is event listener\).</span></span>  
+*   <span data-ttu-id="72d6a-169">最初のスクリプト行では、 **\<style\>** クラスとして要素に割り当てる必要があるセクションが DOM ヘッダーに動的に挿入され `slide-image` `img` ます。</span><span class="sxs-lookup"><span data-stu-id="72d6a-169">The first script line dynamically inserts into the DOM header a **\<style\>** section that you must assign as a `slide-image` class to your `img` element.</span></span>  
+*   <span data-ttu-id="72d6a-170">2番目のスクリプト行は、その `img` `body` `slide-image` `imageDivId` 画像要素の ID として、そのクラスが割り当てられていることを示す、ブラウザータブのすぐ下に要素を追加します。</span><span class="sxs-lookup"><span data-stu-id="72d6a-170">The second script line appends an `img` element right below the `body` of your browser tab that has the `slide-image` class assigned as well as the `imageDivId` as the ID of that image element.</span></span>  
+*   <span data-ttu-id="72d6a-171">3番目のスクリプト行は、ユーザーが画像の任意の場所を選択できるように、画像全体をカバーするイベントを追加し `click` ます。このイベントは、その画像がページから削除されます (その他はイベントリスナーとなります)。</span><span class="sxs-lookup"><span data-stu-id="72d6a-171">The third script line adds a `click` event that covers the entire image allowing the user to select anywhere on the image and that image is removed from the page \(along with it is event listener\).</span></span>  
 
-## <span data-ttu-id="ea5b9-169">選択時に表示されている画像を削除する機能の追加</span><span class="sxs-lookup"><span data-stu-id="ea5b9-169">Adding functionality to remove the displayed image when selected</span></span>  
+8. <span data-ttu-id="72d6a-172">選択したときに表示される画像を削除する機能を追加する</span><span class="sxs-lookup"><span data-stu-id="72d6a-172">Add functionality to remove the displayed image when selected</span></span>  
 
-<span data-ttu-id="ea5b9-170">これで、任意のページを参照して **拡張機能** アイコンを選択すると、次のようにポップアップメニューが表示されます。</span><span class="sxs-lookup"><span data-stu-id="ea5b9-170">Now, when you browse to any page and select your **Extension** icon, the pop-up menu is displayed as follows.</span></span>  
+<span data-ttu-id="72d6a-173">これで、任意のページを参照して **拡張機能** アイコンを選択すると、次のようにポップアップメニューが表示されます。</span><span class="sxs-lookup"><span data-stu-id="72d6a-173">Now, when you browse to any page and select your **Extension** icon, the pop-up menu is displayed as follows.</span></span>  
 
 :::image type="complex" source="./media/part2-popupdialog.png" alt-text="拡張アイコンを押した後に表示される l popup.htm":::
-   <span data-ttu-id="ea5b9-172">拡張アイコンを押した後に表示される l popup.htm</span><span class="sxs-lookup"><span data-stu-id="ea5b9-172">popup.html display after pressing the Extension icon</span></span>
+   <span data-ttu-id="72d6a-175">拡張アイコンを押した後に表示される l popup.htm</span><span class="sxs-lookup"><span data-stu-id="72d6a-175">popup.html display after pressing the Extension icon</span></span>
 :::image-end:::
 
 <!--![popup.html display after pressing the Extension icon][ImagePart2Popupdialog]  -->  
 
-<span data-ttu-id="ea5b9-173">ボタンを選択すると `Display` 、次の情報が表示されます。</span><span class="sxs-lookup"><span data-stu-id="ea5b9-173">When you select the `Display` button, you get what is below.</span></span>  <span data-ttu-id="ea5b9-174">画像上の任意の場所を選択する `stars.jpeg` と、その画像要素が削除され、タブページが元の表示に戻るまで折りたたまれます。</span><span class="sxs-lookup"><span data-stu-id="ea5b9-174">If you select anywhere on the `stars.jpeg` image, that image element is removed and tab pages collapses back to what was originally displayed.</span></span>  
+<span data-ttu-id="72d6a-176">ボタンを選択すると `Display` 、次の情報が表示されます。</span><span class="sxs-lookup"><span data-stu-id="72d6a-176">When you select the `Display` button, you get what is below.</span></span>  <span data-ttu-id="72d6a-177">画像上の任意の場所を選択する `stars.jpeg` と、その画像要素が削除され、タブページが元の表示に戻るまで折りたたまれます。</span><span class="sxs-lookup"><span data-stu-id="72d6a-177">If you select anywhere on the `stars.jpeg` image, that image element is removed and tab pages collapses back to what was originally displayed.</span></span>  
 
-:::image type="complex" source="./media/part2-showingimage.png" alt-text="ブラウザーに表示されている画像":::
-   <span data-ttu-id="ea5b9-176">ブラウザーに表示されている画像</span><span class="sxs-lookup"><span data-stu-id="ea5b9-176">The image showing in browser</span></span>
+:::image type="complex" source="./media/part2-showingimage.png" alt-text="拡張アイコンを押した後に表示される l popup.htm":::
+   <span data-ttu-id="72d6a-179">ブラウザーに表示されている画像</span><span class="sxs-lookup"><span data-stu-id="72d6a-179">The image showing in browser</span></span>
 :::image-end:::
 
-<!--![The image showing in browser][ImagePart2Showingimage]  -->  
-
-<span data-ttu-id="ea5b9-177">これで、[ブラウザー] タブのコンテンツとして動的に挿入された JavaScript に、拡張子アイコンのポップアップからメッセージを正常に送信できる拡張機能が作成されました。 このように挿入されたコンテンツは、静止した星 jpeg を表示するためにイメージ要素を設定します。</span><span class="sxs-lookup"><span data-stu-id="ea5b9-177">You have now created an Extension that successfully sends a message from the Extension icon pop-up, to the dynamically inserted JavaScript running as content on the browser tab.  That injected content set the image element to display your static stars jpeg.</span></span>  
+<span data-ttu-id="72d6a-180">内線番号のアイコンのポップアップからメッセージを正常に送信し、[ブラウザー] タブのコンテンツとして動的に挿入された JavaScript を作成した拡張機能を作成しました。 挿入されたコンテンツによって、静的な星 jpeg が表示されるようにイメージ要素が設定されます。</span><span class="sxs-lookup"><span data-stu-id="72d6a-180">You've created an Extension that successfully sends a message from the extension icon pop-up, and dynamically inserted JavaScript running as content on the browser tab.  The injected content sets the image element to display your static stars jpeg.</span></span>  
 
 <!-- image links -->  
 
-<!--[ImagePart2Popupdialog]: ./media/part2-popupdialog.png "popup.html display after pressing the Extension icon"  -->  
-<!--[ImagePart2Showingimage]: ./media/part2-showingimage.png "The image showing in browser"  -->
 
 <!-- links -->  
 
-[ArchiveExtensionGettingStartedPart2]: ./extension-source/extension-getting-started-part2.zip "このパーツの完成した拡張パッケージソース |Microsoft ドキュメント"  
+[ArchiveExtensionGettingStartedPart2]: https://github.com/MicrosoftEdge/MicrosoftEdge-Extensions-Demos/tree/master/extension-getting-started-part2/extension-getting-started-part2 "完成した拡張パッケージソース |Microsoft ドキュメント"  
