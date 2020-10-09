@@ -3,16 +3,16 @@ description: キーボードショートカットを Visual Studio コードに�
 title: DevTools の新機能 (Microsoft Edge 86)
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 09/08/2020
+ms.date: 10/08/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 943eca7e73385513b264feb74ec37c450d5c5a2f
-ms.sourcegitcommit: 6b577cb118f34f3ff2c65eab2908b65f155dc151
+ms.openlocfilehash: 74fb4e276547d9f653a5bcbdcab9c4406d09a81a
+ms.sourcegitcommit: 912609aa49864e3363aaa3b245ff2aa4bec3fc3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "11004196"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "11104862"
 ---
 # DevTools の新機能 (Microsoft Edge 86)  
 
@@ -174,7 +174,7 @@ Chromium の問題: [#1103316][CR1103316]
 
 ### 新しいメディアパネル  
 
-DevTools でメディアプレーヤーの情報が [メディア][DevtoolsMediaIndex] パネルに表示されるようになりました。  
+DevTools でメディアプレーヤーの情報が [メディア][DevtoolsMediaPanelIndex] パネルに表示されるようになりました。  
 
 新しい **メディア** パネルを開くには、次の手順を実行します。  
 
@@ -468,7 +468,7 @@ Windows または macOS を使用している場合は、 [Microsoft Edge previe
 [DevtoolsCoverageIndex]: /microsoft-edge/devtools-guide-chromium/coverage/index "Microsoft Edge DevTools の [カバレッジ] タブを使用して、使用されていない JavaScript と CSS コードを見つけます。Microsoft ドキュメント"  
 [DevtoolsCustomizeIndexDrawer]: /microsoft-edge/devtools-guide-chromium/customize/index#drawer "ドローワ-Microsoft Edge DevTools のカスタマイズ |Microsoft ドキュメント"  
 [DevtoolsEvaluatePerformanceReferenceAnalyzeRenderingPerformance]: /microsoft-edge/devtools-guide-chromium/evaluate-performance/reference#analyze-rendering-performance-with-the-rendering-tab "[レンダリング] タブの [パフォーマンス分析] 参照で、レンダリングのパフォーマンスを分析します。Microsoft ドキュメント"  
-[DevtoolsMediaIndex]: /microsoft-edge/devtools-guide-chromium/media/index "メディアプレーヤー情報を表示してデバッグする |Microsoft ドキュメント"  
+[DevtoolsMediaPanelIndex]: /microsoft-edge/devtools-guide-chromium/media-panel/index "メディアプレーヤー情報を表示してデバッグする |Microsoft ドキュメント"  
 
 [DualScreenIntroductionHowWorkSeam]:  /dual-screen/introduction#how-to-work-with-the-seam "Seam の操作方法-デュアルスクリーンデバイスの概要 |Microsoft ドキュメント"  
 [DualScreenWebCssMediaSpanning]: /dual-screen/web/css-media-spanning "CSS メディア画面のスパン機能で、デュアルスクリーン検出Microsoft ドキュメント"  

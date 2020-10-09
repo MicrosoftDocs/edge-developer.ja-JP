@@ -1,63 +1,61 @@
 ---
-description: 拡張機能の概要パート1
-title: その日の NASA の絵を飛び出すシンプルな拡張機能を構築する
+description: その日の NASA の画像をポップアップする拡張機能を作成する
+title: 拡張チュートリアルを作成する-パート1
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 09/15/2020
-ms.topic: article
+ms.date: 09/23/2020
+ms.topic: conceptual
 ms.prod: microsoft-edge
 keywords: edge-chromium、web 開発、html、css、javascript、開発者、拡張機能
-ms.openlocfilehash: 826401869b98d339e9b156a3727d94bd1182063d
-ms.sourcegitcommit: d360e419b5f96f4f691cf7330b0d8dff9126f82e
+ms.openlocfilehash: 3809bfac714621cf97184127132487ed93958a2f
+ms.sourcegitcommit: 845a0d53a86bee3678f421adee26b3372cefce57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "11015766"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "11104708"
 ---
-# その日の NASA の絵を飛び出すシンプルな拡張機能を構築する 
- 
-<!--  
-[Completed Extension Package Source for This Part][ArchiveExtensionGettingStartedPart1]  
--->  
+# 拡張チュートリアルを作成する-パート1  
 
 ## 概要  
 
-パート1では、空のディレクトリから開始する非常にシンプルな Edge Chromium 拡張機能を作成することを目標としています。  この拡張機能の目標は、次のタスクを実行することです。  
+このチュートリアルの目標は、空のディレクトリから開始する Microsoft Edge (Chromium) の拡張機能を構築することです。 この日の NASA の画像をポップアップする拡張機能を作成します。 このチュートリアルでは、次の方法で拡張機能を作成する方法について説明します。
 
-*   複数の場所で使用される可能性がある、さまざまなサイズの拡張のアイコンを作成する  
-*   簡単なファイルを作成する `manifest.json`  
-*   選択されたときに、その日の NASA の画像が含まれたポップアップウィンドウを表示する起動アイコンを表示する  
+*   ファイルを作成する `manifest.json` 。  
+*   アイコンを追加します。  
+*   既定のポップアップダイアログを開く。  
 
-## マニフェストファイルの基本  
+## 始める前に
 
-すべての拡張パッケージには `manifest.json` 、ルートにファイルが必要です。  これは、拡張機能の青写真と考える必要があります。  この機能は、ブラウザーエンジンに、Extension が想定している拡張 API のバージョン、拡張機能の名前と説明、その他多くの詳細情報を示します。これについては、このマルチパート拡張機能の概要について説明します。  
+このチュートリアルで構築する完成した拡張機能をテストするには、 [ソースコード][ArchiveExtensionGettingStartedPart1]をダウンロードしてください。  
 
-以下は簡単  `manifest.json`  
+## 手順 1: ファイルを作成する `manifest.json`
+
+すべての拡張パッケージには `manifest.json` 、ルートにファイルが必要です。  マニフェストには、拡張機能の詳細、拡張機能パッケージのバージョン、拡張機能の名前と説明などが用意されています。  
+
+次のコードスニペットでは、ファイルに必要な基本的な情報を示して `manifest.json` います。  
 
 ```json
 {
-    "name": "NASA Picture of the day viewer",
+    "name": "NASA picture of the day viewer",
     "version": "0.0.0.1",
     "manifest_version": 2,
-    "description": "A Chromium Extension to show the NASA Picture of the Day."
+    "description": "A Chromium extension to display the NASA picture of the day."
 }
 ```  
 
-## 拡張機能のアイコンのセットアップ  
+## 手順 2: アイコンを追加する  
 
-次に、ファイルにいくつかのアイコンを追加 `manifest.json` し `/icons` ます (アイコンファイルを使って新しいディレクトリを作成します)。  アイコンは、拡張機能 \ (存在する場合) を起動するためにユーザーが選択したボタンの背景画像や、適切なその他の場所に使用されます。  
+まず `icons` 、アイコンイメージファイルを格納するディレクトリをプロジェクトに作成します。  アイコンは、ユーザーが拡張機能を起動するために選択したボタンの背景画像に使用されます。  
 
-`PNG` は推奨される形式ですが、、、、を使用することもでき `BMP` `GIF` `ICO` `JPEG` ます。  常に少なくとも 128 x 128 ピクセルのサイズアイコンを設定することをお勧めします。ブラウザーは必要に応じて、自動的にサイズを変更することをお勧めします。  
-
-ディレクトリ構造は、次の図のようになります。  
-
-<!--  
-:::image type="complex" source="./media/part1-heirarchy.png" alt-text="Directory Structure":::
-   Directory Structure
+:::image type="complex" source="./media/part1-badge1.png" alt-text="拡張機能を開くためのツールバーのアイコン&quot;:::
+   拡張機能を開くためのツールバーのアイコン
 :::image-end:::
--->  
 
-<!--![Directory Structure][ImagePart1Heirarchy]  -->  
+アイコンの場合は、次のことをお勧めします。 
+*   `PNG` アイコンの書式を設定しますが、、、 `BMP` `GIF` `ICO` または形式を使用することもでき `JPEG` ます。  
+*   128 x 128 ピクセルの画像。必要に応じてブラウザーでサイズが変更されます。  
+
+プロジェクトのディレクトリは、次のような構造になっている必要があります。   
 
 ```shell
 └── part1
@@ -69,85 +67,44 @@ ms.locfileid: "11015766"
         └── nasapod128x128.png
 ```  
 
-更新された `manifest.json` ファイルは、次のように表示されます。  
+次に、ファイルにアイコンを追加 `manifest.json` します。 `manifest.json`次のコードスニペットと一致するように、アイコンの情報でファイルを更新します。 `png`次のコードに記載されているファイルは、この記事の前半で説明したダウンロードファイルで入手できます。  
 
 ```json
 {
-    "name": "NASA Picture of the day viewer",
-    "version": "0.0.0.1",
-    "manifest_version": 2,
-    "description": "A chromium extension to show the NASA Picture of the Day.",
-    "icons": {
-        "16": "icons/nasapod16x16.png",
-        "32": "icons/nasapod32x32.png",
-        "48": "icons/nasapod48x48.png",
-        "128": "icons/nasapod128x128.png"
+    &quot;name&quot;: &quot;NASA picture of the day viewer&quot;,
+    &quot;version&quot;: &quot;0.0.0.1&quot;,
+    &quot;manifest_version&quot;: 2,
+    &quot;description&quot;: &quot;A chromium extension to show the NASA picture of the day.&quot;,
+    &quot;icons&quot;: {
+        &quot;16&quot;: &quot;icons/nasapod16x16.png&quot;,
+        &quot;32&quot;: &quot;icons/nasapod32x32.png&quot;,
+        &quot;48&quot;: &quot;icons/nasapod48x48.png&quot;,
+        &quot;128&quot;: &quot;icons/nasapod128x128.png"
     }
 }
 ```  
 
-> [!NOTE]
-> `png`このページの一番上に記載されている zip ダウンロードで、前のコードに記載されているアイコンファイルを利用できます。  
+## 手順 3: 既定のポップアップダイアログを開く  
 
-## 既定のポップアップダイアログを追加する  
+次に、 `HTML` ユーザーが拡張機能を起動したときに実行されるファイルを作成します。  `popup.html`という名前のディレクトリにある HTML ファイルを作成 `popup` します。  ユーザーが拡張機能を起動するためにアイコンを選択すると、 `popup/popup.html` モーダルダイアログとして表示されます。  
 
-次に、 `HTML` ユーザーが拡張機能アイコンを選択したときに自動的に実行されるファイルを作成します。  
-
-:::image type="complex" source="./media/part1-badge1.png" alt-text="ツールバーバッジのアイコン":::
-   ツールバーバッジのアイコン
-:::image-end:::
-
-<!--![Toolbar Badge Icon][ImagePart1Badge1]  -->  
-
-HTML ファイルには、という名前が付いてい `popup/popup.html` ます。  [拡張機能] アイコンを選択 `popup/popup.html` すると、ダイアログの外側にある [モーダル] ダイアログが開きます。  
-
-そのためには、次のコードの下のにある [既定のポップアップとしてファイルを登録します] を選び `manifest.json` `browser_action` ます。  
-
-```json
-{
-    "name": "NASA Picture of the day viewer",
-    "version": "0.0.0.1",
-    "manifest_version": 2,
-    "description": "A chromium Extension to show the NASA Picture of the Day.",
-    "icons": {
-        "16": "icons/nasapod16x16.png",
-        "32": "icons/nasapod32x32.png",
-        "48": "icons/nasapod48x48.png",
-        "128": "icons/nasapod128x128.png"
-    },
-    "browser_action": {
-        "default_popup": "popup/popup.html"
-    }
-}
-```  
-
-ディレクトリで、 `popup` ファイルを追加して、 `popup.html` 星の画像を表示します。  ファイルを次に示し `popup.html` ます。  
+次のコードスニペットから、星の画像を表示するコードを追加し `popup.html` ます。  
 
 ```html
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <title>NASA Picture of the Day</title>
+        <title>NASA picture of the day</title>
     </head>
     <body>
         <div>
-            <img src="/images/stars.jpeg" alt="stars" />
+            <img src="/images/stars.jpeg" alt="Display the stars image" />
         </div>
     </body>
 </html>
 ```  
 
- また、 `images/stars.jpeg` ファイルで参照されている画像ファイルを追加し `popup.html` ます。  
-
-次の図は、この例の拡張機能のディレクトリ構造を示しています。  
-
-<!--  
-:::image type="complex" source="./media/part1-heirarchy1.png" alt-text="Directory Structure for Extension":::
-   Directory Structure for Extension
-:::image-end:::
--->  
-
-<!--![Directory Structure for Extension][ImagePart1Heirarchy1]  -->  
+画像ファイルを `images/stars.jpeg` images フォルダーに追加します。  プロジェクトのディレクトリは、次のような構造になっている必要があります。   
 
 ```shell
 └── part1
@@ -163,52 +120,29 @@ HTML ファイルには、という名前が付いてい `popup/popup.html` ま�
         └── popup.html
 ```  
 
-<!--  
-> [!NOTE]
-> The `images/stars.jpeg` file listed in the previous image is available in the [zip download][ArchiveExtensionGettingStartedPart1].  
--->  
+最後に、 `manifest.json` `browser_action` 次のコードスニペットに示すように、でポップアップを登録していることを確認します。  
 
-これは、機能拡張を構築するために必要なものです。  これだけで、テストを行うことができます。  
+```json
+{
+    "name": "NASA picture of the day viewer",
+    "version": "0.0.0.1",
+    "manifest_version": 2,
+    "description": "A chromium extension to display the NASA picture of the day.",
+    "icons": {
+        "16": "icons/nasapod16x16.png",
+        "32": "icons/nasapod32x32.png",
+        "48": "icons/nasapod48x48.png",
+        "128": "icons/nasapod128x128.png"
+    },
+    "browser_action": {
+        "default_popup": "popup/popup.html"
+    }
+}
+```  
 
-次のセクションでは、Microsoft Edge \ (Chromium) ブラウザーに拡張機能 \ (サイドローディング \ とも呼ばれます) をロードして、それをテストする方法について説明します。  
+## 次のステップ
+これは、作業拡張機能を開発するために必要なものです。 次に、サイドローディングに進み、拡張機能をテストします。 詳細については、「 [サイドローディングの拡張機能][TestExtensionSideload]」を参照してください。  
 
-## ブラウザーで拡張機能をローカルで実行する (サイドロード \)  
-
-Microsoft Edge \ (Chromium) ブラウザーには、開発中に拡張機能をデバッグできる安全で簡単な方法が用意されています。  
-
-このプロセスは非常に簡単です。  まず、ブラウザーの上部にある3つの点を選択する必要があります。  次に、 `Extensions` 次の図に示すように、コンテキストメニューから選びます。  
-
-:::image type="complex" source="./media/part1-threedots.png" alt-text="拡張機能の選択":::
-   拡張機能の選択
-:::image-end:::
-
-<!--![Choose Extensions][ImagePart1Threedots]  -->  
-
-次の図に示すように、[ **拡張機能** ] ページを表示している場合は、次の図に示すように、ページの左下のトグルを有効にして、 **開発者モード** を有効にします。  
-
-:::image type="complex" source="./media/part1-developermode-toggle.png" alt-text="開発者モードを有効にする":::
-   開発者モードを有効にする
-:::image-end:::
-
-<!--![Enable Developer Mode][ImagePart1DevelopermodeToggle]  -->  
-
-## サイドロードされた拡張機能のインストールと更新  
-
-初めて拡張機能をインストールする場合は、次の画像のようなオプションを選択し `Load Unpacked` ます。  これにより、ファイルによって拡張アセットファイルが保存されているディレクトリを入力するように求められます。  これにより、ストアからダウンロードした場合と同じように拡張機能がインストールされます。  
-
-:::image type="complex" source="./media/part1-installed-extension.png" alt-text="インストールされている拡張機能":::
-   インストールされている拡張機能
-:::image-end:::
-
-<!--![Installed Extensions][ImagePart1InstalledExtension]  -->  
-
-拡張機能をインストールしたら、拡張機能の一覧の下にあるボタンを選択して更新することができ `Reload` ます。  
-
-ブラウザーから拡張機能を削除するには、 `Remove` 拡張機能一覧の下部にあるボタンをクリックします。  
-
-## デバッグ用の拡張機能  
-
-拡張機能のデバッグは非常に簡単で、Edge Chromium DevTools のすべての機能をサポートしています。  ただし、これらの詳細は、この「はじめに」のガイドでは説明していませんが、拡張機能を正常に構築するには非常に重要です。  
 
 <!-- image links -->  
 
@@ -221,4 +155,6 @@ Microsoft Edge \ (Chromium) ブラウザーには、開発中に拡張機能を�
 
 <!-- links -->  
 
-[ArchiveExtensionGettingStartedPart1]: ./extension-source/extension-getting-started-part1.zip "このパーツの完成した拡張パッケージソース |Microsoft ドキュメント"  
+[ArchiveExtensionGettingStartedPart1]: https://github.com/MicrosoftEdge/MicrosoftEdge-Extensions-Demos/tree/master/extension-getting-started-part1/part1 "完成した拡張パッケージソース |Microsoft ドキュメント"
+
+[TestExtensionSideload]: ./extension-sideloading.md "拡張機能をテストする (サイドローディング) |Microsoft ドキュメント"

@@ -1,38 +1,36 @@
 ---
-description: 拡張機能の概要パート2
-title: コンテンツスクリプトを使用して、ページ本文タグの下に NASA 画像を動的に挿入する
+description: コンテンツスクリプトを使用して、ページ本文タグの下に NASA 画像を動的に挿入する
+title: 拡張チュートリアルパート2を作成する
 author: MSEdgeTeam
 ms.author: msedgedevrel
 ms.date: 09/15/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: edge-chromium、web 開発、html、css、javascript、開発者、拡張機能
-ms.openlocfilehash: fd2276c069116a7f69f06ae50f201e284b60f3ea
-ms.sourcegitcommit: 744e2ecf42bcc427ae33e5dadbf6cd48ee0ab6a5
+ms.openlocfilehash: 755b70635c93d7331ef3ac985625ba7ac5689679
+ms.sourcegitcommit: 845a0d53a86bee3678f421adee26b3372cefce57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "11016730"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "11104715"
 ---
-# コンテンツスクリプトを使用して、ページ本文タグの下に NASA 画像を動的に挿入する  
-
-<!--  
-[Completed Extension Package Source for This Part][ArchiveExtensionGettingStartedPart2]  
--->  
+# 拡張チュートリアルパート2を作成する  
+  
+[このパートの完成した拡張パッケージソース][ArchiveExtensionGettingStartedPart2]    
 
 ## 概要  
 
-パート2では、作成した星の画像を表示しないようにポップアップメニューを更新する方法について説明します。ただし、その画像をタイトルと標準の HTML ボタンで置き換えることができます。  このボタンは、選択すると、拡張機能に埋め込まれた星の画像をコンテンツページに渡します。  この画像は、アクティブなブラウザータブに挿入されます。  
+このチュートリアルでは、次の拡張技術について説明します。
+*   拡張子に JavaScript ライブラリを挿入する  
+*   ブラウザーのタブへの拡張アセットの公開  
+*   既存のブラウザータブにコンテンツページを含める  
+*   コンテンツページでポップアップからのメッセージを聞き、返信する  
 
-*   このガイドで説明する拡張テクノロジ  
-    *   拡張子に JavaScript ライブラリを挿入する  
-    *   ブラウザーのタブへの拡張アセットの公開  
-    *   既存のブラウザータブにコンテンツページを含める  
-    *   コンテンツページでポップアップからのメッセージを聞き、返信する  
+ポップアップメニューを更新して、静的なスタート画像をタイトルと標準の HTML ボタンに置き換える方法について説明します。  このボタンは、選択すると、拡張機能に埋め込まれた星の画像をコンテンツページに渡します。  この画像は、アクティブなブラウザータブに挿入されます。詳細については、次の手順に従ってください。
 
-## ポップアップから画像を削除し、ボタンに置き換えます。  
+1.  ポップアップから画像を削除し、ボタンに置き換えます。  
 
-まず、 `popup.html` タイトルとボタンを表示する、いくつかのまっすぐな前方のマークアップでファイルを更新します。  このボタンをすぐにプログラムしますが、ここでは空の JavaScript ファイルへの参照を含め `popup.js` ます。  次に、更新 HTML を示します。  
+まず、 `popup.html` タイトルとボタンを表示する、いくつかのまっすぐな前方のマークアップでファイルを更新します。  このボタンはすぐにプログラムでプログラミングしますが、ここでは空の JavaScript ファイルへの参照を含め `popup.js` ます。  次に、更新 HTML を示します。  
 
 ```html
 <html>
@@ -53,7 +51,7 @@ ms.locfileid: "11016730"
         </style>
     </head>
     <body>
-        <h1>Show the NASA Picture of the Day</h1>
+        <h1>Show the NASA picture of the day</h1>
         <h2>(select the image to remove)</h2>
         <button id="sendmessageid">Display</button>
         <script src="popup.js"></script>
@@ -61,7 +59,7 @@ ms.locfileid: "11016730"
 </html>
 ```  
 
-拡張機能を更新して拡張機能起動アイコンを選ぶと、次のポップアップに表示される [表示] ボタンが表示されます。  
+拡張機能を更新して開くと、ポップアップボタンが表示されます。  
 
 :::image type="complex" source="./media/part2-popupdialog.png" alt-text="拡張アイコンを押した後に表示される l popup.htm":::
    拡張アイコンを押した後に表示される l popup.htm
@@ -69,13 +67,13 @@ ms.locfileid: "11016730"
 
 <!--![popup.html display after pressing the Extension icon][ImagePart2Popupdialog]  -->  
 
-## ブラウザータブの上部に画像を表示する方法が更新されました  
+2.  ブラウザータブの上部に画像が表示されるように更新方法  
 
 ボタンを追加した後は、次のタスクとして、 `images/stars.jpeg` アクティブなタブページの上部に画像ファイルを設定します。  
 
-各タブページには固有のスレッドがあり、拡張には別個のスレッドがあることに注意してください。  そのため、まずコンテンツスクリプトを作成し、そのコンテンツスクリプトをタブページに挿入する必要があります。  この操作を行うと、タブページ上で実行されているコンテンツスクリプトにメッセージを送信する必要があります。コンテンツスクリプトは、表示する画像とその表示方法を示しています。  
+タブページはそれぞれ独自のスレッドで実行されることに注意してください。 また、拡張機能では別のスレッドが使用されます。  まず、タブページに挿入されたコンテンツスクリプトを作成します。  次に、ポップアップから、タブページで実行されているコンテンツスクリプトにメッセージを送信します。 コンテンツスクリプトは、どの画像を表示するかを説明するメッセージを受信します。  
 
-## メッセージを送信するためのポップアップ JavaScript の作成  
+3. ポップアップ JavaScript を作成してメッセージを送信する  
 
 最初に、まだ作成されて `popup/popup.js` いないコンテンツスクリプトにメッセージを送信するコードを作成して追加します。これにより、ブラウザータブに一時的に作成して挿入する必要があります。 そのためには、次のコードでは、 `onclick` ポップアップ表示ボタンにイベントを追加します。  
 
@@ -88,11 +86,11 @@ if (sendMessageId) {
 }
 ```  
 
-`onclick`このイベントでは、現在のブラウザーのタブを確認する必要があります (開いているブラウザーが1つだけの場合は、それが1つであることを意味します)。  その後、そのタブが見つかったら、 `chrome.tabs.sendmessage` EXTENSION API を使ってそのタブにメッセージを送信します。  
+イベントの `onclick` [現在のブラウザー] タブを見つけます。 次に、拡張 API を使用し `chrome.tabs.sendmessage` て、そのタブにメッセージを送信します。  
 
-このメッセージには、表示する画像の URL を含める必要があります。また、挿入した画像に割り当てる必要がある一意の ID を送信する必要があります。  コンテンツ挿入の JavaScript によって生成されるようにすることもできますが、後で明らかになる理由については、その一意の ID をここで生成 `popup.js` し、まだ作成されていないコンテンツスクリプトに渡します。  
+このメッセージでは、表示する画像の URL を指定する必要があります。 また、挿入した画像に割り当てるための一意の ID を送信します。  コンテンツ挿入の JavaScript によって生成されるようにすることもできますが、後で明らかになる理由については、その一意の ID をここで生成 `popup.js` し、まだ作成されていないコンテンツスクリプトに渡します。  
 
-更新されたファイルを次に示し `popup/popup.js` ます。  また、それ以降のセクションで必要な現在のタブ ID を渡すことはできません。  
+次のコードスニペットでは、の更新されたコードの概要を示して `popup/popup.js` います。  また、この記事で後述する現在のタブ ID を渡します。  
 
 ```javascript
 const sendMessageId = document.getElementById("sendmessageid");
@@ -121,17 +119,17 @@ if (sendMessageId) {
 }
 ```  
 
-## 任意のブラウザータブから星の .jpeg を作成することができます。  
+4. 任意のブラウザータブから星の .jpeg を使用できるようにします。  
 
-このような場合は、前のセクションの `images/stars.jpeg` `chrome.extension.getURL` ように追加プレフィックスを指定せずに、相対 URL を渡す代わりに、CHROME 拡張 API を使用する必要があると考えられます。  このように、添付された画像によって返される追加のプレフィックスは、 `getUrl` 次のようになります。  
+このような場合は、前のセクションの `images/stars.jpeg` `chrome.extension.getURL` ように追加プレフィックスを指定せずに、相対 URL を渡す代わりに、Chrome 拡張機能 API を使用する必要があることをお勧めします。  このように、添付された画像によって返される追加のプレフィックスは、 `getUrl` 次のようになります。  
 
 ```http
 extension://inigobacliaghocjiapeaaoemkjifjhp/images/stars.jpeg
 ```  
 
-その理由は、要素の属性を使用して `src` コンテンツページに画像を挿入するためです `img` 。  コンテンツページは、拡張機能を実行しているスレッドとは異なる固有のスレッドで実行されています。  静的な画像ファイルを正常に動作させるには、web アセットとして公開する必要があります。  
+その理由は、 `src` 要素の属性を使ってコンテンツページに画像を挿入するためです `img` 。  コンテンツページは、拡張機能を実行しているスレッドと同じではない一意のスレッドで実行されています。  静的な画像ファイルを正常に動作させるには、web アセットとして公開する必要があります。  
 
-そのためには、ファイルに別のエントリを追加する必要があり `manifest.json` ます。  どのブラウザータブからでもアクセスできるようにイメージを宣言する必要があります。 このエントリは次のようになります (コンテンツスクリプトの宣言を追加するときは、以下の完全なファイルで確認してください `manifest.json` \)。  
+ファイルに別のエントリを追加して `manifest.json` 、すべてのブラウザータブでその画像が利用可能であることを宣言します。  このエントリは次のようになります (コンテンツスクリプトの宣言を追加するときは、以下の完全なファイルで確認してください `manifest.json` \)。  
 
 ```json
 "web_accessible_resources": [
@@ -139,18 +137,18 @@ extension://inigobacliaghocjiapeaaoemkjifjhp/images/stars.jpeg
 ]
 ```  
 
-`popup.js`現在のアクティブなタブページに埋め込まれたコンテンツページにメッセージを送信するためのコードをファイルに書き込みましたが、そのコンテンツページを作成して挿入していません。  これを実行します。  
+`popup.js`現在のアクティブなタブページに埋め込まれたコンテンツページにメッセージを送信するコードをファイルに記述しましたが、そのコンテンツページを作成して挿入することはできません。  これを実行します。  
 
-## コンテンツと web アクセスの manifest.jsを更新する  
+5.  コンテンツと web アクセスの manifest.jsを更新する  
 
 And を含む更新は次のように `manifest.json` `content-scripts` `web_accessible_resources` なります。  
 
 ```json
 {
-    "name": "NASA Picture of the day viewer",
+    "name": "NASA picture of the day viewer",
     "version": "0.0.0.1",
     "manifest_version": 2,
-    "description": "A Chromium Extension to show the NASA Picture of the Day.",
+    "description": "A Chromium extension to show the NASA picture of the day.",
     "icons": {
         "16": "icons/nasapod16x16.png",
         "32": "icons/nasapod32x32.png",
@@ -174,15 +172,15 @@ And を含む更新は次のように `manifest.json` `content-scripts` `web_acc
 }
 ```  
 
-追加したセクションは `content_scripts` です。  この属性が設定されて `matches` `<all_urls>` いる場合、 **content_scripts** セクションに含まれるすべてのファイルが、読み込まれるたびにすべてのブラウザータブページに挿入されることを意味します。  ここに挿入できるファイルの種類は、javascript と css です。  も追加されました `libjquery.min.js` 。  このセクションの一番上に記載されているダウンロードからそのような情報を含めることができます。  
+追加したセクションは `content_scripts` です。  `matches`属性はに設定されてい `<all_urls>` ます。つまり、 `content_scripts` 各タブが読み込まれると、すべてのブラウザータブページにすべてのファイルが挿入されます。  挿入できる許可されているファイルの種類は JavaScript と CSS です。  も追加されました `libjquery.min.js` 。  このセクションの最初に記載されているダウンロードの内容を含めることができます。  
 
-## JQuery の追加と関連するスレッドの理解  
+6. JQuery を追加し、関連付けられたスレッドについて理解する  
 
-挿入するコンテンツスクリプトで、jQuery \ (\) の使用を計画し `$` ます。  JQuery の縮小版を追加し、内線番号をとして追加しました `lib\jquery.min.js` 。  これらのコンテンツスクリプトは、並べ替えの個別のサンドボックスで実行されます。つまり、ページに挿入された jQuery は `popup.js` コンテンツと共有されません。  
+挿入するコンテンツスクリプトで、jQuery \ (\) の使用を計画し `$` ます。  JQuery の縮小版を追加し、内線番号をとして追加しました `lib\jquery.min.js` 。  これらのコンテンツスクリプトは個々のサンドボックスで実行されるため、ページに挿入された jQuery は `popup.js` コンテンツと共有されません。  
 
-読み込まれた web ページ上の JavaScript がブラウザータブで実行されている場合でも、挿入されたコンテンツにはアクセスできないことに注意してください。  挿入された JavaScript は、そのブラウザータブに読み込まれている実際の DOM にアクセスするだけです。  
+読み込まれた web ページの [ブラウザー] タブで JavaScript を実行している場合でも、挿入されたコンテンツにはアクセスできません。  挿入された JavaScript は、そのブラウザータブに読み込まれている実際の DOM にアクセスするだけです。  
 
-## コンテンツスクリプトメッセージリスナーの追加  
+7. コンテンツスクリプトメッセージリスナーを追加する  
 
 `content-scripts\content.js`セクションに基づいて、すべてのブラウザータブページに挿入されるファイルを次に示し `manifest.json` `content-scripts` ます。  
 
@@ -213,11 +211,11 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 
 リスナーによってイベントが処理されると、最初のパラメーターである関数が実行されます。  この関数の最初のパラメーターは、によって割り当てられた属性を含むオブジェクトです `sendMessage` 。  この関数は、3つの jQuery スクリプト行を処理するだけです。  
 
-*   最初に、 **\<style\>** クラスとして要素に割り当てる必要があるセクションが DOM ヘッダーに動的に挿入され `slide-image` `img` ます。  
-*   2番目の例では、 `img` ブラウザーのタブのすぐ下に、そのクラスが割り当てられている `body` クラスと `slide-image` 、 `imageDivId` そのイメージ要素の ID として要素が追加されます。  
-*   3番目は、画像全体をカバーするイベントを追加し `click` ます。これにより、ユーザーは画像上の任意の場所を選ぶことができ、その画像はページから (イベントリスナー \ と共に) 削除されます。  
+*   最初のスクリプト行では、 **\<style\>** クラスとして要素に割り当てる必要があるセクションが DOM ヘッダーに動的に挿入され `slide-image` `img` ます。  
+*   2番目のスクリプト行は、その `img` `body` `slide-image` `imageDivId` 画像要素の ID として、そのクラスが割り当てられていることを示す、ブラウザータブのすぐ下に要素を追加します。  
+*   3番目のスクリプト行は、ユーザーが画像の任意の場所を選択できるように、画像全体をカバーするイベントを追加し `click` ます。このイベントは、その画像がページから削除されます (その他はイベントリスナーとなります)。  
 
-## 選択時に表示されている画像を削除する機能の追加  
+8. 選択したときに表示される画像を削除する機能を追加する  
 
 これで、任意のページを参照して **拡張機能** アイコンを選択すると、次のようにポップアップメニューが表示されます。  
 
@@ -229,19 +227,4 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 
 ボタンを選択すると `Display` 、次の情報が表示されます。  画像上の任意の場所を選択する `stars.jpeg` と、その画像要素が削除され、タブページが元の表示に戻るまで折りたたまれます。  
 
-:::image type="complex" source="./media/part2-showingimage.png" alt-text="ブラウザーに表示されている画像":::
-   ブラウザーに表示されている画像
-:::image-end:::
-
-<!--![The image showing in browser][ImagePart2Showingimage]  -->  
-
-これで、[ブラウザー] タブのコンテンツとして動的に挿入された JavaScript に、拡張子アイコンのポップアップからメッセージを正常に送信できる拡張機能が作成されました。 このように挿入されたコンテンツは、静止した星 jpeg を表示するためにイメージ要素を設定します。  
-
-<!-- image links -->  
-
-<!--[ImagePart2Popupdialog]: ./media/part2-popupdialog.png "popup.html display after pressing the Extension icon"  -->  
-<!--[ImagePart2Showingimage]: ./media/part2-showingimage.png "The image showing in browser"  -->
-
-<!-- links -->  
-
-[ArchiveExtensionGettingStartedPart2]: ./extension-source/extension-getting-started-part2.zip "このパーツの完成した拡張パッケージソース |Microsoft ドキュメント"  
+:::image type="complex" source="./media/part2-showingimage.png" alt-text="拡張アイコンを押した後に表示される l popup.htm"  

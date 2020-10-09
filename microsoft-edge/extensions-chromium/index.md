@@ -7,14 +7,14 @@ ms.date: 05/28/2020
 ms.topic: conceptual
 ms.prod: microsoft-edge
 keywords: edge、拡張機能の開発、ブラウザーの拡張、アドオン、パートナーセンター、開発者、chromium の拡張機能
-ms.openlocfilehash: 2c4c34805e93bf6fbae57f1d0230cc821d1f3f65
-ms.sourcegitcommit: a5392ab44133d742c0e1fa500ad9a872989b7c3f
+ms.openlocfilehash: 85858fc7e1159db3175c3a67c3cfd5f6dfbb448f
+ms.sourcegitcommit: 845a0d53a86bee3678f421adee26b3372cefce57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "10684700"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "11104701"
 ---
-# Microsoft Edge (Chromium) の拡張機能  
+# Microsoft Edge (Chromium) の拡張機能 
 
 拡張機能とは、Microsoft Edge \ (Chromium \) に新しい機能を追加したり、既存の機能を変更したりするために使用できる小さなプログラムです。  拡張は、対象ユーザーにとって重要なニッチ機能を提供することによって、ユーザーの日常的なブラウジングエクスペリエンスを向上させることを目的としています。  
 
@@ -22,7 +22,7 @@ ms.locfileid: "10684700"
 
 拡張機能は、通常の web アプリと同じように構成されています。  少なくとも、基本的なプラットフォーム情報を含むアプリマニフェストの JSON ファイル、機能を定義する JavaScript ファイル、およびユーザーインターフェイス \ (必要に応じて) の外観を決定するための HTML ファイルと CSS ファイルが含まれています。  ウィンドウやタブなど、ブラウザーの一部を直接操作するには、API 要求を送信し、多くの場合、名前でブラウザーを参照する必要があります。  
 
-:::image type="complex" source="./media/example-extension-screenshot.png" alt-text="Microsoft Edge (Chromium) 拡張機能":::
+:::image type="complex" source="./media/example-extension-screenshot.png" alt-text="Microsoft Edge (Chromium) 拡張機能&quot;:::
   Microsoft Edge \ (Chromium \) 拡張機能  
 :::image-end:::  
 
@@ -40,11 +40,11 @@ Safari、Firefox、Chrome、Opera、Brave、Microsoft Edge など、一般的な
 | 新しい Microsoft Edge | あり | [developer.microsoft.com/microsoft-edge/extensions][MicrosoftDeveloperEdgeExtensions] |  
 
 > [!IMPORTANT]
-> サイトの多くのチュートリアルでは、開発しているブラウザーと一致しない可能性のあるブラウザー固有の Api を使用しています。  ほとんどの場合、Chromium 拡張機能は、異なる Chromium ブラウザーで動作しており、Api は期待どおりに動作します。  一部の一般的ではない Api は、厳密にはブラウザー固有のものである場合があります。  チュートリアルへのリンクについては、「[関連項目](#see-also)」を参照してください。  
+> サイトの多くのチュートリアルでは、開発しているブラウザーと一致しない可能性のあるブラウザー固有の Api を使用しています。  ほとんどの場合、Chromium 拡張機能は、異なる Chromium ブラウザーで動作しており、Api は期待どおりに動作します。  一部の一般的ではない Api は、厳密にはブラウザー固有のものである場合があります。  チュートリアルへのリンクについては、「 [関連項目](#see-also)」を参照してください。  
 
-## Chromium  
+## Chromium はなぜですか?
 
-拡張機能を可能な限り多くのブラウザー拡張ストアに公開することを目標としている場合は、それぞれのブラウザー環境でターゲットを指定して実行するために、複数のバージョンに対して変更する必要があります。  [Safari extensions][AppleDeveloperSafariservicesAppExtensions]は、他の拡張型とは異なり、web とネイティブコードの両方を活用して、ネイティブアプリケーションとの通信に使用できます。  [Firefox extensions][MDNWebextensions]は、他の種類の拡張機能と共通していますが、考慮すべき[点][ExtensionworkshopPorting]もいくつかあります。  ただし、良いお知らせがあります。上記の表の最後の4つのブラウザーでは、同じコードパッケージを活用して、並列バージョンを変更および管理するための要件を最小限に抑えることができます。  これは、ブラウザーが[Chromium のオープンソースプロジェクト][|::ref1::|Home]に基づいているためです。  
+拡張機能を可能な限り多くのブラウザー拡張ストアに公開することを目標としている場合は、それぞれのブラウザー環境でターゲットを指定して実行するために、複数のバージョンに対して変更する必要があります。  [Safari extensions][AppleDeveloperSafariservicesAppExtensions]は、他の拡張型とは異なり、web とネイティブコードの両方を活用して、ネイティブアプリケーションとの通信に使用できます。  [Firefox extensions][MDNWebextensions] は、他の種類の拡張機能と共通していますが、考慮すべき [点][ExtensionworkshopPorting] もいくつかあります。  ただし、良いお知らせがあります。上記の表の最後の4つのブラウザーでは、同じコードパッケージを活用して、並列バージョンを変更および管理するための要件を最小限に抑えることができます。  これは、ブラウザーが [Chromium のオープンソースプロジェクト][|::ref1::|Home]に基づいているためです。  
 
 Chromium 拡張機能を作成すると、ターゲットとする拡張ストアの数を最大化するコードの量を最小限に抑えることができます。最終的には、拡張機能を検索して取得できるユーザーの数です。  
 
@@ -79,7 +79,7 @@ Chrome 拡張機能の移植の詳細については、「 [Microsoft (Chromium)
 
 ### Microsoft Edge のアドオン web サイトに発行する  
 
-Microsoft Edge への拡張機能の公開を開始するには、MSA メールアカウント (@outlook .com、@live など) を持つ[開発者アカウントに登録][MicrosoftDeveloperRegistration]して、ストアで拡張機能の一覧を提出する必要があります。  登録するメールアドレスを選択する場合は、組織内の他のユーザーと内線番号の所有権を移転または共有する必要があるかどうかを検討してください。  登録が完了したら、ストアに新しい拡張機能の申請を作成することができます。  
+Microsoft Edge への拡張機能の公開を開始するには、MSA メールアカウント (@outlook .com、@live など) を持つ [開発者アカウントに登録][MicrosoftDeveloperRegistration] して、ストアで拡張機能の一覧を提出する必要があります。  登録するメールアドレスを選択する場合は、組織内の他のユーザーと内線番号の所有権を移転または共有する必要があるかどうかを検討してください。  登録が完了したら、ストアに新しい拡張機能の申請を作成することができます。  
 
 内線番号をストアに提出するには、次の要件を満たしている必要があります。  
 
@@ -89,7 +89,7 @@ Microsoft Edge への拡張機能の公開を開始するには、MSA メール�
 *   名前、短い説明、長い説明、プライバシーポリシーへのリンクなど、拡張機能について説明する情報。  
 
 > [!NOTE]
-> ストアによって、送信要件が異なる場合があります。  上記の一覧は、Microsoft Edge に拡張機能を公開するための[要件][ExtensionsChromiumPublish]をまとめたものです。  
+> ストアによって、送信要件が異なる場合があります。  上記の一覧は、Microsoft Edge に拡張機能を公開するための [要件][ExtensionsChromiumPublish] をまとめたものです。  
 
 申請プロセスが完了すると、拡張機能が確認され、認定プロセスに合格するか、または不合格になります。  所有者には、結果が通知され、必要に応じて次の手順が示されます。  拡張機能一覧の詳細の更新など、更新された拡張機能をストアに提出すると、新しいレビュープロセスが開始されます。  
 
@@ -106,35 +106,35 @@ Microsoft Edge への拡張機能の公開を開始するには、MSA メール�
 
 <!-- links -->  
 
-[ExtensionsChromiumDeveloperGuidePortChrome]: ./developer-guide/port-chrome-extension.md "Microsoft (Chromium) Edge のポート Chrome 拡張機能 |Microsoft ドキュメント"  
-[ExtensionsChromiumGettingStartedIndex]: ./getting-started/index.md "Microsoft Edge (Chromium) Extensions の概要 |Microsoft ドキュメント"  
-[ExtensionsChromiumPublish]: ./publish/publish-extension.md "拡張子を公開する |Microsoft ドキュメント"  
+[ExtensionsChromiumDeveloperGuidePortChrome]: ./developer-guide/port-chrome-extension.md &quot;Microsoft (Chromium) Edge のポート Chrome 拡張機能 |Microsoft ドキュメント&quot;  
+[ExtensionsChromiumGettingStartedIndex]: ./getting-started/index.md &quot;Microsoft Edge (Chromium) Extensions の概要 |Microsoft ドキュメント&quot;  
+[ExtensionsChromiumPublish]: ./publish/publish-extension.md &quot;拡張子を公開する |Microsoft ドキュメント&quot;  
 
-[MicrosoftDeveloperEdgeExtensions]: https://developer.microsoft.com/microsoft-edge/extensions "Microsoft Edge 用の拡張機能を開発する |Microsoft 開発者"  
-[MicrosoftDeveloperRegistration]: https://developer.microsoft.com/registration "パートナーセンター |Microsoft 開発者"  
+[MicrosoftDeveloperEdgeExtensions]: https://developer.microsoft.com/microsoft-edge/extensions &quot;Microsoft Edge 用の拡張機能を開発する |Microsoft 開発者&quot;  
+[MicrosoftDeveloperRegistration]: https://developer.microsoft.com/registration &quot;パートナーセンター |Microsoft 開発者&quot;  
 
-[MicrosoftEdgeAddonsCategoryExtensions]: https://microsoftedge.microsoft.com/addons/category/Edge-Extensions "Microsoft Edge 用の拡張機能 |Microsoft Edge"  
+[MicrosoftEdgeAddonsCategoryExtensions]: https://microsoftedge.microsoft.com/addons/category/Edge-Extensions &quot;Microsoft Edge 用の拡張機能 |Microsoft Edge&quot;  
 
-[AppleDeveloperSafariservicesAppExtensions]: https://developer.apple.com/documentation/safariservices/safari_app_extensions "Safari アプリの拡張機能 |Apple 開発者"  
-[AppleDeveloperSafariservicesAppExtensionsBuilding]: https://developer.apple.com/documentation/safariservices/safari_app_extensions/building_a_safari_app_extension "Safari アプリの拡張機能の構築 |Apple 開発者"  
+[AppleDeveloperSafariservicesAppExtensions]: https://developer.apple.com/documentation/safariservices/safari_app_extensions &quot;Safari アプリの拡張機能 |Apple 開発者&quot;  
+[AppleDeveloperSafariservicesAppExtensionsBuilding]: https://developer.apple.com/documentation/safariservices/safari_app_extensions/building_a_safari_app_extension &quot;Safari アプリの拡張機能の構築 |Apple 開発者&quot;  
 
-[ChromeDeveloperExtensions]: https://developer.chrome.com/extensions "拡張子とはChrome 開発者"  
-[ChromeDeveloperExtensionsApiIndex]: https://developer.chrome.com/extensions/api_index "Chrome Api |Chrome 開発者"  
-[ChromeDeveloperExtensionsGetstarted]: https://developer.chrome.com/extensions/getstarted "はじめにのチュートリアル |Chrome 開発者"  
+[ChromeDeveloperExtensions]: https://developer.chrome.com/extensions &quot;拡張子とはChrome 開発者&quot;  
+[ChromeDeveloperExtensionsApiIndex]: https://developer.chrome.com/extensions/api_index &quot;Chrome Api |Chrome 開発者&quot;  
+[ChromeDeveloperExtensionsGetstarted]: https://developer.chrome.com/extensions/getstarted &quot;はじめにのチュートリアル |Chrome 開発者&quot;  
 
-[ChromiumHome]: https://www.chromium.org/Home "Chromium"  
+[ChromiumHome]: https://www.chromium.org/Home &quot;Chromium&quot;  
 
-[ExtensionworkshopPorting]: https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension "Google Chrome 拡張機能の移植 |拡張ワークショップ"  
+[ExtensionworkshopPorting]: https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension &quot;Google Chrome 拡張機能の移植 |拡張ワークショップ&quot;  
 
-[GoogleChromeWebstoreCategoryExtensions]: https://chrome.google.com/webstore/category/extensions "拡張子 |Chrome Web ストア"  
+[GoogleChromeWebstoreCategoryExtensions]: https://chrome.google.com/webstore/category/extensions &quot;拡張子 |Chrome Web ストア&quot;  
 
-[MDNWebextensions]: https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions "ブラウザーの拡張機能 |MDN"  
-[MDNWebextensionsYourFirst]: https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension "最初の内線番号 |MDN"  
+[MDNWebextensions]: https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions &quot;ブラウザーの拡張機能 |MDN&quot;  
+[MDNWebextensionsYourFirst]: https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension &quot;最初の内線番号 |MDN&quot;  
 
-[MozillaAddonsFirefoxExtensions]: https://addons.mozilla.org/firefox/extensions "拡張子 |Firefox 用のアドオン"  
+[MozillaAddonsFirefoxExtensions]: https://addons.mozilla.org/firefox/extensions &quot;拡張子 |Firefox 用のアドオン&quot;  
 
-[OperaAddonsExtensions]: https://addons.opera.com/extensions "拡張子 |Opera のアドオン"  
+[OperaAddonsExtensions]: https://addons.opera.com/extensions &quot;拡張子 |Opera のアドオン&quot;  
 
-[OperaDevExtensions]: https://dev.opera.com/extensions "拡張機能ドキュメント |Opera"  
-[OperaDevExtensionsApis]: https://dev.opera.com/extensions/apis "Opera でサポートされている拡張 ApiOpera"  
-[OperaDevExtensionsGettingStarted]: https://dev.opera.com/extensions/getting-started "はじめにOpera"  
+[OperaDevExtensions]: https://dev.opera.com/extensions &quot;拡張機能ドキュメント |Opera&quot;  
+[OperaDevExtensionsApis]: https://dev.opera.com/extensions/apis &quot;Opera でサポートされている拡張 ApiOpera&quot;  
+[OperaDevExtensionsGettingStarted]: https://dev.opera.com/extensions/getting-started &quot;はじめにOpera"  
