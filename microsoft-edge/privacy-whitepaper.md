@@ -3,7 +3,7 @@ description: Microsoft Edge プライバシー ホワイトペーパー
 title: Microsoft Edge プライバシー ホワイトペーパー
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 09/09/2020
+ms.date: 10/07/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: Microsoft Edge、プライバシー、ホワイトペーパー、信頼
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 no-loc:
 - Cast
 - Google Cast
-ms.openlocfilehash: 35227178a909ae6b378c4a17f578bac364f551c7
-ms.sourcegitcommit: ad02b0a3159eb9f111a580d1c229cb4297467210
+ms.openlocfilehash: 132b07236f31568d6f9c24b7616eb02fffe9df09
+ms.sourcegitcommit: 845a0d53a86bee3678f421adee26b3372cefce57
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "11009246"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "11104764"
 ---
 # Microsoft Edge プライバシー ホワイトペーパー  
 
@@ -86,7 +86,7 @@ InPrivate ブラウズまたはゲスト モードを使用している場合、
 
 クラッシュ レポートを含むオプションの診断データがオンになっている場合、Microsoft Edge がクラッシュしたり、その他の信頼性の問題が発生したりすると、Microsoft は診断データを収集します。  診断データは、Microsoft Edge およびその他の Microsoft 製品とサービスの信頼性の問題を診断および修正するために使用されます。  
 
-:::image type="complex" source="./media/whitepaper-media/crashes2.png" alt-text="クラッシュ" lightbox="./media/whitepaper-media/crashes2.png":::
+:::image type="complex" source="./media/whitepaper-media/crashes2.png" alt-text="アドレス バー" lightbox="./media/whitepaper-media/crashes2.png":::
    クラッシュ  
 :::image-end:::  
 
@@ -96,33 +96,41 @@ InPrivate ブラウズまたはゲスト モードを使用している場合、
 
 デバイスのファイル システムからローカルに保存されているクラッシュ診断データをクリアするには、`edge://crashes` に移動して、**[すべてクリア]** ボタンを選択します。  
 
-Windows 10 でクラッシュ診断データの収集をオフにするには、**[スタート]** > **[設定]** > **[プライバシー]** の順に開き、**[診断とフィードバック]** を選択します。  他のすべてのプラットフォーム上の Microsoft Edge のバージョンについては、`edge://settings/privacy` に移動し、**[クラッシュ レポートとブラウザーの使用方法に関するデータを送信して、Microsoft 製品を改善する**] 設定をオフにします。  診断データ収集機能は、[組織が管理するグループ ポリシー][DeployedgeEnterprisePrivacySettings]を介して、企業に対してオフにすることもできます。  
+Windows 10 でクラッシュ診断データの収集をオフにするには、**[スタート]** > **[設定]** > **[プライバシー]** の順に開き、**[診断とフィードバック]** を選択します。  他のすべてのプラットフォーム上の Microsoft Edge のバージョンについては、`edge://settings/privacy` に移動して、**[ブラウザーの使用方法、アクセスした Web サイト、およびクラッシュ レポートに関するオプションの診断データを送信して、Microsoft 製品の改善に協力する]** の設定をオフにします。  診断データ収集機能は、[組織が管理するグループ ポリシー][DeployedgeEnterprisePrivacySettings]を介して、企業に対してオフにすることもできます。  
 
 ## 開発者ツール
 
 Microsoft Edge 開発者ツールは、Web サイトのデバッグとテストのためのツールを提供します。 開発者ツールにアクセスするには、**[設定など (...)]** > **[その他のツール]** を開き、**[開発者ツール]** を選択します。  開発者ツールで特定の機能をオンにすると、Microsoft Edge は Microsoft サーバーにモジュールを要求し、デバイスにダウンロードします。  送信されたモジュールの要求は安全な HTTPS 接続を介して行われ、使用されている Microsoft Edge のバージョンを表す一意でない識別子が含まれています。  リモート ダウンロードが必要な特定のエクスペリエンスには、3D ビューと要素ツールのアクセシビリティ ウィンドウがあります。  Webhint 統合には、開発者ツールを開いたときに自動的に要求されるリモート モジュールが必要です。  
 
-## ブラウザーの使用方法に関する診断データ  
+## 診断データ
 
-Microsoft は診断データを使用して、Microsoft 製品とサービスを改善し、Microsoft 製品を安全かつ最新の状態に保ち、Microsoft 製品のパフォーマンスをよりよく理解するのに役立ちます。Microsoft Edge チームがデータを収集するときはいつでも、決定が最適な選択肢であるかどうかが検証されます。  Microsoft では情報コレクションの最小化が妥当であると考えて実施してます。  Microsoft Edge チームは、必要な情報のみを収集し、Microsoft 製品とサービスを改善するために必要な間だけ情報を保存するよう努めています。  
+Microsoft は、診断データを使用して、製品とサービスを改善し、製品を安全で最新の状態に保ち、期待どおりのパフォーマンスを維持します。 私たちがデータを収集するときはいつでも、それがあなたにとって正しい選択であることを確認したいと思います。 Microsoft では情報コレクションの最小化が妥当であると考えて実施してます。 必要な情報のみを収集し、製品やサービスの改善に必要な期間のみ保存するよう努めています。 
 
-Microsoft Edge および Microsoft Edge Web プラットフォームを使用するその他のアプリケーションで機能とサービスを使用すると、それらの機能の使用方法に関する診断データが Microsoft に送信されます。  診断データには、Microsoft Edge のインストール、機能の使用状況、パフォーマンス、メモリの使用状況などの情報が含まれています。  たとえば、Web サイトをお気に入りに追加した場合、Microsoft Edge チームは、[お気に入り] ボタンがクリックされ、お気に入りが正常に追加されたという情報を受け取りますが、お気に入りとして設定されたサイトは受け取りません。  診断データには、新しいタブを開くのにかかったミリ秒数などのパフォーマンス情報も含まれます。ホワイトペーパーに記載されている機能とサービスは、診断データを収集します。  
+Microsoft Edge は、製品を安全に、最新の状態に保ち、適切に実行するために必要な一連の必須診断データを収集します。 必須診断データには、デバイス接続、構成情報、ソフトウェア セットアップ、インベントリ データなどのデータが含まれます。 Microsoft は、この必須診断データを使用して問題のトラブルシューティングを行い、Microsoft の製品とサービスの信頼性、安全性、および正常な動作を維持します。 管理対象デバイスの診断データの詳細については、「[組織内の Windows 診断データの構成][WindowsPrivacyConfigureDiagnosticDataOrganization]」および「[Microsoft Edge 診断データ グループ ポリシー](https://docs.microsoft.com/deployedge/microsoft-edge-enterprise-privacy-settings)」を参照してください。 
 
-:::image type="complex" source="./media/whitepaper-media/diagnostic-data2.png" alt-text="診断データ" lightbox="./media/whitepaper-media/diagnostic-data2.png":::
+:::image type="complex" source="./media/whitepaper-media/diagnostic-data2.png" alt-text="アドレス バー" lightbox="./media/whitepaper-media/diagnostic-data2.png":::
    診断データ  
 :::image-end:::  
 
-さらに、Microsoft Edge では、製品を最新の状態に保ち、セキュリティで保護し、適切に実行するために必要な一連の診断データが収集されます。  必要な診断データには、デバイスの接続、現在のデータ収集の同意設定に関する構成情報、アプリのバージョン、およびインストール状態が含まれます。  組織が管理するグループ ポリシーでのみ設定をオフにできます。  組織の診断データの詳細については、「[組織での Windows 診断データの構成][WindowsPrivacyConfigureDiagnosticDataOrganization]」を参照してください。  
+さらに、オプションの診断データを共有することもできます。 Microsoft Edge の機能とサービスまたは Microsoft Edge Web プラットフォームを使用するその他のアプリケーションを使用すると、Microsoft Edge は、それらの機能の使用方法とアクセスした Web サイトに関するオプションの診断データを送信します。 アクセス許可があれば、このオプションの診断データは Microsoft に送信され、すべてのユーザーの Microsoft 製品とサービスが改善されます。 このデータは、Microsoft アカウントで収集または保存されません。  
 
-Microsoft Edge は診断データを生成してローカルに保存し、定期的に Microsoft に送信します。  診断データは HTTPS を使用して送信され、Microsoft サーバーに保存されます。  診断データは、デバイス固有の識別子と、ブラウザー固有のリセット可能な識別子に関連付けられています。  識別子には個人情報は含まれません。  Windows 10 デバイスのブラウザー固有の識別子をリセットするには、**[スタート]** > **[設定]** > **[プライバシー]** > **[診断とフィードバック]** の順に開き、**[診断データの削除]** で **[削除]** を選択するか、**[診断データ]** で 設定を **[完全]** から **[基本]** に変更します。  他のプラットフォームでは、ブラウザー固有の新しいリセット可能な識別子 \(ID\) を生成するには、`edge://settings/privacy` に移動し、**[ブラウザーの使用方法に関するデータを送信して Microsoft 製品を改善する**] 設定をオフにします。  ID のリセット機能は、組織によって設定されたグループ ポリシーで管理されているデバイスでは異なる場合があります。  
+オプションの診断データには、機能の使用状況、パフォーマンス データ、サイトの読み込み時間、メモリの使用状況、アクセスした Web サイトなどの情報が含まれます。 たとえば、Web サイトをお気に入りに追加した場合、オプションの診断データには、お気に入りボタンが選択され、お気に入りが正常に追加されたという情報が含まれますが、どのサイトがお気に入りとして設定されたかは含まれません。  
 
-Windows 10 バージョン 1803 \(2018 年 4 月の更新\) 以降の診断データ ビューアーで Microsoft と共有されている製品データを表示するには、**[スタート]** > **[設定]** > **[プライバシー]** > **[診断とフィードバック]** の順に開き、**[診断データの表示]** で **[診断データ ビューアーを開く]** を選択します。  
+Microsoft Edge でアクセスした Web サイトに関する情報は、Microsoft がサイトの読み込み速度を理解するのに役立ち、すべてのユーザーの検索結果の関連性を高めます。 データには、アクセスしたページの URL、Web サイトのメトリック、ページのタイトル、ページへのアクセス方法、ページのコンテンツに関する情報、およびページ ナビゲーションに関するその他の関連情報などの Web サイトに関する情報が含まれます。  
 
-診断データを表示する他のプラットフォームまたは Windows 10 バージョン 1803 以前のバージョンについては、`edge://data-viewer` に移動します。  前回ビューアーを開いてから Microsoft に定期的に送信されるデータを表示するには、`edge://data-viewer` に移動します。  特定のセッションで Microsoft に送信されたデータを確認するには、ビューアーを更新します。  `edge://data-viewer` の入力に使用されるデータは、デバイスのローカルに保存されます。  ビューアーのデータをクリアするには、`edge://data-viewer` タブを閉じます。  
+診断データは HTTPS を使用して送信され、Microsoft サーバーに保存されます。 Windows デバイスでは、診断データはデバイスに固有の識別子で送信されます。 他のデバイスでは、診断データは、ランダムに生成され、個人情報を含まない、ブラウザに固有のリセット可能な識別子に関連付けられています。  
 
-診断データは Microsoft サーバーに最大 18 か月間保存されます。  Windows 10 上で診断データを削除するには、**[スタート]** > **[設定]** > **[プライバシー]** > **[診断とフィードバック]** の順に開き、**[診断データを削除する]** の下で **[削除]** を選択します。  診断データの削除機能は、Windows 10 バージョン 1803 以降でのみサポートされています。  詳細については、「[Windows 10 の診断、フィードバック、プライバシー][MicrosoftSupport4468236]」をご覧ください。  
+Microsoft Edge チームは、データ アクセスを制限したり、個人を特定できる情報をスクラブしたりすることで、診断データの機密性を尊重します。 Windows 10 デバイスでブラウザーに固有の識別子をリセットするには、**[スタート]** > **[設定]** > **[プライバシー]** > **[診断とフィードバック]** の順に移動し、**[診断データの削除]** で **[削除]** を選択するか、**[診断データ]** で設定を **[完全]** から **[基本]** に変更するか、**[オプションの診断データ]** をオフにします。  
 
-Windows 10 上の Microsoft Edge の場合、**[ブラウザーの使用方法に関するデータを送信して Microsoft 製品を改善する]** 設定は、Windows 診断データ設定によって決定されます。  設定の状態を表示するには、`edge://settings/privacy` に移動します。  Windows 設定を変更するには、**[スタート]** > **[設定]** > **[プライバシー]** の順に開き、**[診断とフィードバック]** を選択します。  他のすべてのプラットフォームで診断データの収集を制御するには、`edge://settings/privacy` に移動し、**[クラッシュ レポートとブラウザーの使用方法に関するデータを送信して、Microsoft 製品を改善する**] 設定をオフにします。  この設定は、デバイスへの Microsoft Edge のインストールに関連するすべてのプロファイルに使用されます。  設定はデバイス間で同期されません。  この設定は、InPrivate ブラウズとゲスト モードに適用されます。  デバイスが組織によって設定されたグループ ポリシーで管理されているかどうかを確認するには、`edge://settings/privacy` に移動します。  
+他のプラットフォームで、ブラウザーに固有の新しいリセット可能な識別子 \（ID\） を生成するには、`edge://settings/privacy` に移動し、**[ブラウザーの使用方法、アクセスした Web サイト、およびクラッシュ レポートに関するオプションの診断データを送信して、Microsoft 製品の改善に協力する]** の設定をオフにします。 \(ID\) のリセット機能は、組織によって設定されたグループ ポリシーで管理されているデバイスでは異なる場合があります。 
+
+Windows 10 バージョン 1803 （2018 年 4 月更新） 以降を使用している場合、Microsoft と共有されている製品データを診断データ ビューアーで表示するには、**[スタート]** > **[設定]** > **[プライバシー]** > **[診断とフィードバック]** の順に移動し、**[診断データの表示]** で **[診断データ ビューアーを開く]** を選択します。 
+
+他のプラットフォームまたは Windows 10 バージョン 1803 以前のバージョンの場合は、`edge://data-viewer` に移動して診断データを表示します。 前回ビューアーを開いてから Microsoft に定期的に送信されるデータを表示するには、`edge://data-viewer` に移動します。 特定のセッションで Microsoft に送信されたデータを確認するには、ビューアーを更新します。 `edge://data-viewer` の入力に使用されるデータは、デバイスのローカルに保存されます。 ビューアーのデータをクリアするには、`edge://data-viewer` タブを閉じます。 
+
+Microsoft の製品とサービスの改善を支援するため、匿名化および集約された診断データは最大 2 年間保存されます。 診断データは Microsoft アカウントから収集または保存されないため、[[Microsoft プライバシー ダッシュボード]][MicrosoftAccountPrivacy] から表示または削除できない場合があります。 Windows 10 上で診断データを削除するには、**[スタート]** > **[設定]** > **[プライバシー]** > **[診断とフィードバック]** の順に移動し、**[診断データの削除]** で **[削除]** を選択します。 診断データの削除機能は、Windows 10 バージョン 1803 以降でのみサポートされています。 詳細については、「[Windows 10 の診断、フィードバック、プライバシー][MicrosoftSupport4468236]」をご覧ください。 
+
+Windows 10 上の Microsoft Edge の場合、オプションの診断データの送信は、Windows 診断データの設定によって決まります。 設定は `edge://settings/privacy` に反映されます。 **[スタート]** > **[設定]** > **[プライバシー]** > **[診断とフィードバック]** の順に移動して、Windows 設定を変更します。 他のすべてのプラットフォームで、診断データの収集を制御するには、`edge://settings/privacy` に移動して、**[ブラウザーの使用方法、アクセスした Web サイト、およびクラッシュ レポートに関するオプションの診断データを送信して、Microsoft 製品の改善に協力する]** をオンまたはオフにします。 この設定は、デバイスへの Microsoft Edge のインストールに関連するすべてのプロファイルに使用されます。  設定はデバイス間で同期されません。 この設定は、InPrivate ブラウズとゲスト モードに適用されます。 InPrivate またはゲスト モードでの参照中は、アクセスした Web サイトに関する情報が送信されることはありません。 デバイスが組織によって設定されたグループ ポリシーで管理されている場合、それは `edge://settings/privacy` に反映されます。  
 
 ## デジタル著作権管理とメディア ライセンス  
 
@@ -195,7 +203,7 @@ Microsoft Edge は、[位置情報 API][W3cGeolocationApiMain] をサポート�
 
 Microsoft Edge は、アドレス バーの右側に、現在地が共有されているかどうかを示します。  
 
-:::image type="complex" source="./media/whitepaper-media/geolocation2.png" alt-text="Location" lightbox="./media/whitepaper-media/geolocation2.png":::
+:::image type="complex" source="./media/whitepaper-media/geolocation2.png" alt-text="アドレス バー" lightbox="./media/whitepaper-media/geolocation2.png":::
    Location  
 :::image-end:::  
 
@@ -209,7 +217,7 @@ InPrivate ブラウズでは、InPrivate セッションが開始されたプロ
 
 Microsoft Edge は、ブラウザーを初めて起動したときにインタラクティブでシームレスなエクスペリエンスを提供します。  エクスペリエンスの一部として、ブラウザー データを別のブラウザーから Microsoft Edge にインポートするオプションがあります。  インポート中に、インポートしたデータを保持するか、削除して最初からやり直すことができます。  データには、お気に入り、閲覧の履歴、自動入力データ、拡張機能、設定、その他の閲覧データが含まれます。  新しい Microsoft Edge に更新すると、古いバージョンの Microsoft Edge の閲覧データが自動的にインポートされます。  確認すると、Microsoft Edge はGoogle Chrome、Mozilla Firefox、Internet Explorer などの他のブラウザーからブラウザー データをインポートします。インポート元のブラウザーは、OS で定義されている最も使用されているブラウザーに基づいて決定されます。  データのインポートはすべて、デバイス上でローカルに完了し、ローカルに保存され、閲覧データの同期に同意しない限り、Microsoft に送信されません。  
 
-:::image type="complex" source="./media/whitepaper-media/migration.png" alt-text="Import" lightbox="./media/whitepaper-media/migration.png":::
+:::image type="complex" source="./media/whitepaper-media/migration.png" alt-text="アドレス バー" lightbox="./media/whitepaper-media/migration.png":::
    Import  
 :::image-end:::  
 
@@ -231,7 +239,7 @@ Microsoft Edge は、Microsoft Edge アップデーター サービスに、イ�
 
 Microsoft Edge は、Internet Explorer \(IE\) の統合により、簡素化されたエクスペリエンスを提供します。  Microsoft Edge は IE 11 のみをサポートし、IE モードは Windows でのみ使用できます。  IE モード機能は、グループ ポリシーを通じて組織で使用できます。  管理者は、特定のサイトを Microsoft Edge の IE モードで開くことを選択します。  
 
-:::image type="complex" source="./media/whitepaper-media/ie-mode.png" alt-text="IE モード" lightbox="./media/whitepaper-media/ie-mode.png":::
+:::image type="complex" source="./media/whitepaper-media/ie-mode.png" alt-text="アドレス バー" lightbox="./media/whitepaper-media/ie-mode.png":::
    IE モード  
 :::image-end:::  
 
@@ -262,7 +270,7 @@ Microsoft Edge は、[Bing][|::ref2::|Main] が提供する検索ボックス、
 
 新しいタブ ページの読み込み時間を短縮するために、Microsoft の新しいタブ ページをバックグラウンドで読み込んで高速化できます。 Cookie を許可すると、読み込まれるコンテンツに Cookie が含まれる場合があります。 Microsoft の新しいタブ ページのバックグラウンドでの読み込みを無効にするには、`edge://settings/newTabPage` に移動し、[**新しいタブ ページを事前に読み込んで高速化する]** の設定をオフにします。 
 
-:::image type="complex" source="./media/whitepaper-media/n-t-p1.png" alt-text="新規タブ ページ" lightbox="./media/whitepaper-media/n-t-p1.png":::
+:::image type="complex" source="./media/whitepaper-media/n-t-p1.png" alt-text="アドレス バー" lightbox="./media/whitepaper-media/n-t-p1.png":::
    新規タブ ページ  
 :::image-end:::  
 
@@ -276,7 +284,7 @@ Microsoft Edge は、[Bing][|::ref2::|Main] が提供する検索ボックス、
 
 Microsoft アカウントで Microsoft Edge にサインインしている場合は、[Microsoft プライバシー ダッシュボード][MicrosoftAccountPrivacyAdSettings]から新しいタブ ページに関連付けられた閲覧アクティビティを管理できます。  
 
-Microsoft Edge は、検索ボックスの操作やクイック リンク タイルのクリックなど、新しいタブ ページの使用方法に関する診断データを収集します。  新しいタブ ページの使用方法に関する診断データの収集を有効にするには、`edge://settings/privacy` に移動し、**[クラッシュ レポートとブラウザーの使用方法に関するデータを送信して、Microsoft 製品を改善する**] 設定をオフにします。  ブラウザーは、Microsoft ニュース ページの使用方法に関する診断データを Microsoft に送信して、ニュース コンテンツとのユーザー操作の理解と Microsoft 製品の改善に役立てます。  新しいタブ ページのカスタマイズ ボタンを選択して、Microsoft ニュース コンテンツをオフにすることができます。  ニュース データは HTTPS を使用して Microsoft に送信され、最長 13 か月間保存された後、集計されて匿名化されます。  
+Microsoft Edge は、検索ボックスの操作やクイック リンク タイルのクリックなど、新しいタブ ページの使用方法に関する診断データを収集します。  新しいタブ ページの使用方法に関する診断データの収集を有効にするには、`edge://settings/privacy` に移動して、**[ブラウザーの使用方法、アクセスした Web サイト、およびクラッシュ レポートに関するオプションの診断データを送信して、Microsoft 製品の改善に協力する]** の設定をオンにします。  ブラウザーは、Microsoft ニュース ページの使用方法に関する診断データを Microsoft に送信して、ニュース コンテンツとのユーザー操作の理解と Microsoft 製品の改善に役立てます。  新しいタブ ページのカスタマイズ ボタンを選択して、Microsoft ニュース コンテンツをオフにすることができます。  ニュース データは HTTPS を使用して Microsoft に送信され、最長 13 か月間保存された後、集計されて匿名化されます。  
 
 新しいタブ ページでは、カスタム画像を背景として設定することもできます。  画像はデバイスのローカルに保存され、画像を削除するか、新しい画像をアップロードすることで削除できます。  画像に関する情報は Microsoft に送信されません。  
 
@@ -356,13 +364,21 @@ Microsoft Edge は、ユーザーに Web ページのコンテンツを読み上
 
 Microsoft Edge を改善するために、Microsoft Edge チームは常にユーザーから学んでいます。  学習の一環として、一部のユーザーは、すべての人が利用できるようになる前に新しい機能を体験する場合があります。  ランダムに選択されたユーザーに対して新機能を有効にするために、Microsoft Edge は、オペレーティング システム、チャネル、バージョン、国または地域、およびその他のデバイス構成データに関する必要な情報を Microsoft Edge 構成サービスに定期的に送信します。  データは、ブラウザー固有のリセット可能な識別子とともに送信されます。  データは HTTPS 経由でサービスに送信されます。  データは、新しい機能を有効にし、Microsoft Edge を最新の状態に保ち、適切に実行し、Microsoft 製品とサービスを改善するための更新プログラムを受信するために使用されます。  組織では、追加の制御と構成を利用できます。  組織の追加の制御と構成の詳細については、「[Microsoft Edge の構成と試験][DeployedgeConfigurationExperiments]」を参照してください。  
 
-ユーザーは、組織によって制御または構成されているブラウザーの更新をオフにすることはできませんが、製品の使用状況データを Microsoft に送信するかどうかを制御するには、`edge://settings/privacy` に移動し、[**Microsoft Edge の改善に役立つ**] で設定を変更します。  
+ユーザーは、組織によって制御または構成されているブラウザーの更新をオフにすることはできませんが、製品の使用状況データを Microsoft に送信するかどうかを制御するには、`edge://settings/privacy` に移動し、**[オプションの診断データ]** で設定を変更します。  
 
-新しい機能が Microsoft Edge および Microsoft サービスにどのように影響するかを理解するために、Microsoft Edge は、ブラウザー固有のリセット可能な識別子と、Microsoft Edge および Microsoft サービスに対して有効にされた新しい機能をエンコードする機能タグを送信します。  新しい機能は、誰にとっても最高のエクスペリエンスと最高のブラウザーを構築するのに役立ちます。  機能タグは Microsoft Edge のインストール固有のものではなく、有効になっている同じ機能セットを共有するすべての Microsoft Edge インストール間で共有されます。  Microsoft Edge は、情報を HTTPS で Microsoft サービスに送信します。  InPrivate またはゲスト モードで閲覧する場合、ブラウザーは情報を送信しません。  データが送信されないようにするには、`edge://settings/privacy` に移動し、**[クラッシュ レポートとブラウザーの使用方法に関するデータを送信して、Microsoft 製品を改善する**] 設定をオフにします。  ブラウザー固有の識別子をリセットする方法の詳細については、「[ブラウザーの使用方法に関する診断データ](#diagnostic-data-about-how-you-use-the-browser)」セクションを参照してください。  
+新しい機能が Microsoft Edge および Microsoft サービスにどのように影響するかを理解するために、Microsoft Edge は、ブラウザー固有のリセット可能な識別子と、Microsoft Edge および Microsoft サービスに対して有効にされた新しい機能をエンコードする機能タグを送信します。  新しい機能は、誰にとっても最高のエクスペリエンスと最高のブラウザーを構築するのに役立ちます。  機能タグは Microsoft Edge のインストール固有のものではなく、有効になっている同じ機能セットを共有するすべての Microsoft Edge インストール間で共有されます。  Microsoft Edge は、情報を HTTPS で Microsoft サービスに送信します。  InPrivate またはゲスト モードで閲覧する場合、ブラウザーは情報を送信しません。  データが送信されないようにするには、`edge://settings/privacy` に移動して、**[ブラウザーの使用方法、アクセスした Web サイト、およびクラッシュ レポートに関するオプションの診断データを送信して、Microsoft 製品の改善に協力する]** の設定をオフにします。  ブラウザー固有の識別子をリセットする方法の詳細については、「[ブラウザーの使用方法に関する診断データ](#diagnostic-data)」セクションを参照してください。  
 
 ## ナビゲーション エラーを解決する  
 
 Microsoft Edge が SSL 接続タイムアウト、証明書エラー、またはキャプティブ ポータル \(たとえば、ホテルまたは空港の Wi-Fi ネットワーク\) が原因である可能性のあるその他のネットワーク問題を検出した場合、Microsoft Edge は要求を `http://edge.microsoft.com/captiveportal/generate_204` に送信し、応答コードをチェックします。  要求が別の URL にリダイレクトされる場合、Microsoft Edge は、それがサインイン ページであると想定して、新しいタブで URL を開きます。  キャプティブ ポータル検出ページへの要求はステートレス サービスであり、要求はログに記録されず、Cookie は送信または保存されません。  Windows プラットフォームで、Microsoft Edge は Windows キャプティブ ポータル サービスを使用します。  それ以外の場合は、Microsoft Edge キャプティブ ポータル サービスが使用されます。  サービスをオフにするには、`edge://settings/privacy` に移動し、**[ナビゲーション エラーの解決に役立つ Web サービスを使用する]** 設定をオフにします。  
+
+## セキュリティで保護された DNS
+
+Web サイトに移動するには、ブラウザーは Web サイトの URL で使用されているホスト名 （example.com など） のネットワーク アドレス （93.184.216.34 など） を検索する必要があります。 セキュリティで保護された DNS は、DNS サービス プロバイダーへの HTTPS 接続を介したサービスを使用してこの検索を実行するため、ネットワーク上の攻撃者による、参照の改ざんや盗聴から保護します。  
+
+既定では、閲覧の中断を回避するために、現在の DNS サービス プロバイダーが使用されます。 すべてのサービス プロバイダーがセキュリティで保護された DNS を提供しているわけではありません。 閲覧の中断を回避するために、セキュリティで保護された DNS 接続が失敗した場合、Microsoft Edge はフォールバックし、現在の DNS サービス プロバイダーで暗号化されていない DNS 参照を実行します。 Microsoft Edge では、セキュリティで保護された特定の DNS プロバイダーを使うことができます。 セキュリティで保護された DNS プロバイダーが選択されている場合、セキュリティで保護された検索が失敗しても、Microsoft Edge は通常の DNS 参照にフォールバックしません。 `edge://setting/privacy` でセキュリティで保護された DNS 設定を選択できます。  
+
+セキュリティで保護された DNS は、組織の一部である管理対象コンピューターに対しては既定でオフになっていますが、管理ポリシーを使用して構成できます。 InPrivate ブラウズでは、InPrivate セッションが開始されたプロファイルのセキュリティで保護された DNS 設定を使用します。 ゲスト モードでは、常に現在のサービス プロバイダーが使用されます。
 
 ## サインインと ID  
 
@@ -384,7 +400,7 @@ macOS 上の Microsoft Edge の ID は、Microsoft アプリ間で共有され�
 
 SmartScreen は、安全に Web を閲覧できるように設計されています。  Web サイトに移動するかファイルをダウンロードすると、SmartScreen は URL またはファイルの評判をチェックします。  SmartScreen がサイトまたはファイルが悪意のあるものであると判断した場合、サイトに移動したり、ファイルをダウンロードしたりできなくなります。  
 
-:::image type="complex" source="./media/whitepaper-media/smart-screen.png" alt-text="SmartScreen" lightbox="./media/whitepaper-media/smart-screen.png":::
+:::image type="complex" source="./media/whitepaper-media/smart-screen.png" alt-text="アドレス バー" lightbox="./media/whitepaper-media/smart-screen.png":::
    SmartScreen  
 :::image-end:::  
 
@@ -396,7 +412,7 @@ SmartScreen は、3 種類の評判チェックを使用します。  まず、S
 
 SmartScreen サービスは、評判チェックに関するデータを保存し、既知の悪意のある URL とファイルのデータベースを構築します。  データは安全な Microsoft サーバーに保存され、Microsoft セキュリティ サービスでのみ使用されます。  データは、決してユーザーを特定したりターゲットにしたりするために使用されることはありません。  ブラウジング キャッシュをクリアすると、ローカルに保存されているすべての SmartScreen URL データがクリアされます。  ダウンロード履歴をクリアすると、ファイルのダウンロードに関するローカルに保存されている SmartScreen データが削除されます。  
 
-SmartScreen は、Microsoft Edge では既定でオンになっています。  SmartScreen を無効にするには、`edge://settings/privacy` に移動し、**[サービス]** で **Microsoft Defender SmartScreen** 設定をオフにします。  設定は、デバイスへの Microsoft Edge のインストールに関連付けられているすべてのプロファイルで同じです。  設定はデバイス間で同期されません。  この設定は、InPrivate ブラウズとゲスト モードに適用されます。  デバイスが組織によって設定されたグループ ポリシーで管理されている場合、設定は Microsoft Edge に反映されます。  設定を表示するには、`edge://settings/privacy` に移動します。  SmartScreen の詳細については、「[SmartScreen: FAQ][MicrosoftSupport17443]」を参照してください。  
+SmartScreen は、Microsoft Edge では既定でオンになっています。  SmartScreen を無効にするには、`edge://settings/privacy` に移動し、**[セキュリティ]** で **[Microsoft Defender SmartScreen]** の設定をオフにします。  設定は、デバイスへの Microsoft Edge のインストールに関連付けられているすべてのプロファイルで同じです。  設定はデバイス間で同期されません。  この設定は、InPrivate ブラウズとゲスト モードに適用されます。  デバイスが組織によって設定されたグループ ポリシーで管理されている場合、設定は Microsoft Edge に反映されます。  設定を表示するには、`edge://settings/privacy` に移動します。  SmartScreen の詳細については、「[SmartScreen: FAQ][MicrosoftSupport17443]」を参照してください。  
 
 必要に応じて、SmartScreen はダウンロードしたファイルの URL をチェックして、不要と思われるアプリとして分類されているものがないか確認します。  望ましくない可能性のあるアプリをブロックすると、より生産的で、パフォーマンスが高く、楽しい Windows エクスペリエンスを提供できます。  設定は既定でオフになっており、Windows 10 デバイスでのみ使用できます。  機能を有効にするには、`edge://settings/privacy` に移動し、**[不要と思われるアプリをブロックする]** 設定をオンにします。  望ましくない可能性のあるアプリの分類方法の詳細については、「[望ましくない可能性のあるアプリケーション (PUA)][WindowsSecurityThreatProtectionIntelligenceCriteriaPotentiallyUnwanted]」を参照してください。  設定を構成する方法の詳細については、「[望ましくない可能性のあるアプリケーションの検出およびブロック][WindowsSecurityThreatProtectionWindowsDefender]」をご覧ください。  
 
@@ -420,7 +436,7 @@ Web サイト エラーの原因となるアドレス バーの URL の入力ミ
 
 Microsoft アカウントで Microsoft Edge にサインインすると、サインインしているすべてのバージョンの Microsoft Edge 間で閲覧データを同期できます。  お気に入り、設定、フォーム入力データ \(アドレスなど\)、パスワード、拡張子、およびコレクションを同期できます。  Microsoft Edge で同期をオンにする権限を許可する必要があります。同期される各データの種類は個別にオンまたはオフにすることができます。  お気に入りには、従来のバージョンの Microsoft Edge で以前に取っておいたタブが含まれています。これらのタブは、他のお気に入りと同期します。  サインイン バージョンの Microsoft Edge 同期から、同期がオンになっている他のすべてのサインイン バージョンの Microsoft Edge にお気に入りまたはその他のデータを削除または変更しました。  同期構成を管理するには、`edge://settings/profiles/sync` に移動します。  同期設定は組織によって管理されている場合があります。
 
-:::image type="complex" source="./media/whitepaper-media/sync.png" alt-text="同期設定がオンに設定されている画像" lightbox="./media/whitepaper-media/sync.png":::
+:::image type="complex" source="./media/whitepaper-media/sync.png" alt-text="アドレス バー" lightbox="./media/whitepaper-media/sync.png":::
    同期設定がオンになっている
 :::image-end:::  
 
@@ -432,7 +448,7 @@ InPrivate およびゲスト モードの閲覧データは、Microsoft アカ�
 
 ## ヒントと推奨事項
 
-Microsoft Edge は、ブラウザーを使用して最高のエクスペリエンスを得るために、関連するヒントと推奨事項を提供したいと考えています。  Microsoft Edge は、利用可能なデバイス接続と構成データを使用して、関連するヒントと推奨事項を提供します。  このデータは、オペレーティング システム、ロケール、ブラウザー設定、およびその他のデバイス接続と構成データで構成されます。  このデータは、ブラウザーに固有のリセット可能な識別子を使用して、安全な HTTPS 接続を介して送信されます。  Microsoft Edge のセットアップ中の Windows 10 デバイスについては、Windows でのカスタマイズされたエクスペリエンスを尊重します。  [Windows でのカスタマイズされたエクスペリエンスの詳細][https://support.microsoft.com/help/4468236/diagnostics-feedback-and-privacy-in-windows-10-microsoft-privacy]。  
+Microsoft Edge は、ブラウザーを使用して最高のエクスペリエンスを得るために、関連するヒントと推奨事項を提供したいと考えています。  Microsoft Edge は、利用可能なデバイス接続と構成データを使用して、関連するヒントと推奨事項を提供します。  このデータは、オペレーティング システム、ロケール、ブラウザー設定、およびその他のデバイス接続と構成データで構成されます。  このデータは、ブラウザーに固有のリセット可能な識別子を使用して、安全な HTTPS 接続を介して送信されます。  Microsoft Edge のセットアップ中の Windows 10 デバイスについては、Windows でのカスタマイズされたエクスペリエンスを尊重します。  [Windows でのカスタマイズされたエクスペリエンスの詳細をご覧ください](https://support.microsoft.com/help/4468236/diagnostics-feedback-and-privacy-in-windows-10-microsoft-privacy)。  
 
 このデータは、InPrivate ブラウズまたはゲスト モードでは送信されません。  
 
@@ -442,7 +458,7 @@ Microsoft Edge は、既知のトラッカーを検出してブロックする�
 
 次のグループ ポリシーの [[Microsoft Edge でコンポーネントの更新を有効にする]][DeployedgePoliciesComponentupdatesenabled] を使用して、リストの更新をオフにすることができます。  
 
-:::image type="complex" source="./media/whitepaper-media/tracking-prevention.png" alt-text="追跡防止" lightbox="./media/whitepaper-media/tracking-prevention.png":::
+:::image type="complex" source="./media/whitepaper-media/tracking-prevention.png" alt-text="アドレス バー" lightbox="./media/whitepaper-media/tracking-prevention.png":::
    追跡防止  
 :::image-end:::  
 
@@ -458,33 +474,19 @@ Microsoft Edge を使用すると、Web サイト開発者が作成した Web �
 
 ## WebView
 
-Microsoft Edge WebViews を使用すると、アプリ開発者は Windows 10 および Windows 7 上のネイティブ アプリケーションで Web コンテンツをホストできます。  Microsoft Edge WebView をホストするアプリケーションは、Microsoft Edge Web プラットフォームの使用方法やアプリケーションでアクセスするサイトなどの診断データを Microsoft に送信する場合があります。  診断データの収集を有効にするには、`edge://settings/privacy` に移動し、**[Microsoft Edge の改善に役立つ]** で設定をオンにします。  Windows 10 で Microsoft Edge の診断データの収集をオフにするには、**[スタート]** > **[設定]** > **[プライバシー]** を開き、**[診断とフィードバック]** を選択します。  他のすべてのプラットフォームの診断データ収集をオフにするには、通常のブラウズ セッションで `edge://settings/privacy` に移動し、**[クラッシュ レポートとブラウザーの使用方法に関するデータを送信して Microsoft 製品を改善する]** と **[Microsoft Edge でアクセスする Web サイトに関する情報を送信して、検索と Microsoft 製品をより良いものにする]** 設定を両方ともオフにします。  Microsoft Edge WebView をホストするアプリケーションは、開発者のデータ収集管理および関連するプライバシー ポリシーによって管理される他のデータを収集する場合があります。  
-
-## 製品やサービスの改善のために移動する Web サイト  
-
-検索やその他の Microsoft 製品およびサービスの改善を選択した場合、Microsoft Edge は、アクセスした Web サイトに関する情報を Microsoft に送信します。  診断データは、すべてのユーザー向けの Microsoft 製品およびサービスを改善するために集約的に使用され、Microsoft アカウントと共に収集または保存されることはありません。  Microsoft Edge でアクセスしたサイトに関する情報を送信すると、Microsoft がサイトの読み込み速度を理解し、検索結果の関連性を高めるのに役立ちます。  
-
-診断データには、アクセスしたページの URL、Web サイトのメトリック、ページのタイトル、ページへのアクセス方法、ページのコンテンツに関する情報、およびページ ナビゲーションに関するその他の関連情報が含まれます。  一部の診断データには、デバイス固有の識別子が添付されています。  それ以外の場合、診断データは、ブラウザー固有のリセット可能な識別子に関連付けられています。  識別子には個人情報は含まれません。  Microsoft Edge チームは、データ アクセスや個人を特定できる情報のスクラブを制限することにより、診断データの機密性を尊重します。  Windows 10 デバイスのブラウザー固有の識別子をリセットするには、**[スタート]** > **[設定]** > **[プライバシー]** > **[診断とフィードバック]** の順に開き、**[診断データ]** の下で **[完全]** から **[基本]** に変更します。  他のプラットフォームでは、ブラウザーの新しいリセット可能な識別子を生成するには、`edge://settings/privacy` に移動し、**[Microsoft Edge でアクセスする Web サイトに関する情報を送信することにより、検索と Microsoft 製品を改善する]** 設定を **[オン]** から **[オフ]** に変更します。  リセット機能は、組織によって設定されたグループ ポリシーで管理されているデバイスでは異なる場合があります。  
-
-Windows 10 上の Microsoft Edge の場合、設定は Windows 診断データ設定によって決定されます。  Microsoft Edge で反映された設定を表示するには、**[プライバシー]** および **[サービス]** の下の `edge://settings/privacy` に移動します。  Windows 設定を変更するには、**[スタート]** > **[設定]** > **[プライバシー]** の順に開き、**[診断とフィードバック]** を選択します。  すべての他のプラットフォームでは、診断データ コレクションを制御するには、`edge://settings/privacy` に移動し、**[Microsoft Edge でアクセスする Web サイトに関する情報を送信することにより、検索と Microsoft 製品を改善する]** 設定をオンまたはオフにします。  設定は、デバイスへの Microsoft Edge のインストールに関連付けられているすべてのプロファイルで同じです。  設定はデバイス間で同期されません。  デバイスが組織によって設定されたグループ ポリシーで管理されているかどうかを確認するには、`edge://settings/privacy` に移動します。  
-
-診断データは転送中に暗号化され、安全な Microsoft サーバーに生の形式で最大 30 日間保存されます。  診断データが匿名化および集約された後、生の診断データは削除されます。  匿名化および集計された診断データは、Microsoft 製品およびサービスを継続的に改善するために最大 2 年間保存されます。  診断データは Microsoft アカウントから収集または保存されないため、[[Microsoft プライバシー ダッシュボード]][MicrosoftAccountPrivacy] から表示または削除できない場合があります。  Windows 10 デバイスでデバイスに関連付けられている診断データの削除を要求するには、**[スタート]** > **[設定]** > **[プライバシー]** > **[診断とフィードバック]** の順に開き、**[診断データを削除する]** の下で **[削除]** を選択します。  他のプラットフォームでは、診断データは削除されるか完全に集約され、30 日以内に匿名になります。  
-
-Windows 10 上で収集された診断データを表示するには、**[スタート]** > **[設定]** > **[プライバシー]** の順に開き、**[診断とフィードバック]** を選択し、**[診断データを表示する]** を選択します。  他のプラットフォームでデータを表示するには、`edge://data-viewer` に移動します。  他のプラットフォームでは、診断データ ビューアー機能を有効にするには、`edge://settings/privacy` に移動し、**[Microsoft Edge でアクセスする Web サイトに関する情報を送信することにより、検索と Microsoft 製品を改善する]** 設定をオンにします。  
-
-診断データは、InPrivate またはゲスト モードの参照中では送信されません。  
+Microsoft Edge WebViews を使用すると、アプリ開発者は Windows 10 および Windows 7 上のネイティブ アプリケーションで Web コンテンツをホストできます。  Microsoft Edge WebView をホストするアプリケーションは、Microsoft Edge Web プラットフォームの使用方法やアプリケーションでアクセスするサイトなどの診断データを Microsoft に送信する場合があります。  診断データの収集を有効にするには、`edge://settings/privacy` に移動し、**[オプションの診断データ]** で設定をオンにします。  Windows 10 で Microsoft Edge の診断データの収集をオフにするには、**[スタート]** > **[設定]** > **[プライバシー]** を開き、**[診断とフィードバック]** を選択します。  他のすべてのプラットフォームで診断データの収集をオフにするには、通常の閲覧セッションで `edge://settings/privacy` に移動して、**[ブラウザーの使用方法、アクセスした Web サイト、およびクラッシュ レポートに関するオプションの診断データを送信して、Microsoft 製品の改善に協力する]** の設定をオフにします。  Microsoft Edge WebView をホストするアプリケーションは、開発者のデータ収集管理および関連するプライバシー ポリシーによって管理される他のデータを収集する場合があります。  
 
 ## Windows Defender Application Guard  
 
 Windows Defender Application Guard \(WDAG\) は、組織で使用できる機能です。  Windows Defender Application Guard がオンになっている場合、Microsoft Edge は隔離されたコンテナー内の信頼できないサイトを開いて、悪意のあるサイトやフィッシング攻撃から組織のリソースを保護します。  この機能は、組織で管理されているグループ ポリシーでのみ有効になり、Windows 10 の最新バージョンでのみ使用できます。  WDAG は、新しい Application Guard ウィンドウを開くのにかかる時間など、隔離されたコンテナーで信頼されていないサイトを開くことに関する製品改善の診断データを収集します。  
 
-WDAG はユーザーの許可を得て、ブラウザーの使用方法に関する情報や、アクセスしたサイトに関する情報も収集します。  Windows 10 で Microsoft Edge の診断データの収集をオフにするには、**[スタート]** > **[設定]** > **[プライバシー]** を開き、**[診断とフィードバック]** を選択します。  他のすべてのプラットフォームの診断データ収集を無効にするには、通常のブラウズ セッションで `edge://settings/privacy` に移動し、**[クラッシュ レポートとブラウザーの使用方法に関するデータを送信して Microsoft 製品を改善する]** と **[Microsoft Edge でアクセスする Web サイトに関する情報を送信して、検索と Microsoft 製品をより良いものにする]** 設定をオフにします。  
+WDAG はユーザーの許可を得て、ブラウザーの使用方法に関する情報や、アクセスしたサイトに関する情報も収集します。  Windows 10 で Microsoft Edge の診断データの収集をオフにするには、**[スタート]** > **[設定]** > **[プライバシー]** を開き、**[診断とフィードバック]** を選択します。  他のすべてのプラットフォームで診断データの収集を無効にするには、通常の閲覧セッションで `edge://settings/privacy` に移動して、**[ブラウザーの使用方法、アクセスした Web サイト、およびクラッシュ レポートに関するオプションの診断データを送信して、Microsoft 製品の改善に協力する]** の設定をオフにします。  
 
 ## Windows 情報保護  
 
 Windows 情報保護 \(WIP\) は、企業情報の偶発的な漏洩を防ぐのに役立ちます。  組織で管理されているグループ ポリシーを使用する組織でのみ使用できます。  WIP は、企業の資産として識別されるサイトで有効になっています。  アドレス バーの管理アイコンから、企業の資産であるサイトを特定します。  WIP は、ブラウザーからのコピーと貼り付けの防止や、組織外のサイトへの特定のファイルのアップロードなどの機能を実施します。  
 
-:::image type="complex" source="./media/whitepaper-media/w-i-p.png" alt-text="Windows 情報保護" lightbox="./media/whitepaper-media/w-i-p.png":::
+:::image type="complex" source="./media/whitepaper-media/w-i-p.png" alt-text="アドレス バー" lightbox="./media/whitepaper-media/w-i-p.png":::
    Windows 情報保護  
 :::image-end:::  
 
@@ -500,7 +502,7 @@ Microsoft Edge は、[Chromium][ChromiumMain] オープン ソース プロジ�
 
 Microsoft Edge チームは常にお客様の声に耳を傾け、フィードバックを尊重します。  Microsoft Edge でフィードバックを提供するには、**[設定など]** > **[ヘルプとフィードバック]** の順に開き、**[フィードバックの送信]** を選択します。  Progressive Web Apps \(PWAs\) の場合は、[**設定など...]** を開き、**[Microsoft にフィードバックを送信]** を選択します。  フィードバックの詳細を入力する必要がありますが、その他の情報はすべてオプションです。  Microsoft Edge プロファイルからメールが検出された場合、そのメールは、現在アクセスしているサイトの現在の URL および関連する診断データとともに事前入力されています。  診断データには、ユーザーがオンにした Microsoft Edge 機能やブラウザーの使用に関するデータが含まれる場合があります。  スクリーンショット、デバイスからのファイル、およびブラウザーの記録もオプションで含めることができます。  お客様が提供するオプションのスクリーンショット、ファイル、または記録には、個人を特定できる情報が含まれる場合があります。  データは診断および製品改善の目的でのみ使用されます。  
 
-ユーザーのフィードバックは HTTPS を使用して安全に Microsoft に送信され、安全な Microsoft サーバーに保存されます。  メール アドレスを含めて **[クラッシュ レポートとブラウザーの使用方法に関するデータを送信して Microsoft 製品を改善する]** 設定が Microsoft Edge プライバシー設定でオンになっている場合、デバイスにインストールされているブラウザー固有の識別子がフィードバックに関連付けられます。  診断ログ、記録、添付ファイルを含むすべての診断データは、最大 30 日間保存されます。  オプションのスクリーンショットを含む残りのフィードバック データは、最大 15 か月間保存されます。  フィードバック アイテムをメールで提供した場合は、フィードバックの削除を[要求][MicrosoftConcernPrivacy]してください。  
+ユーザーのフィードバックは HTTPS を使用して安全に Microsoft に送信され、安全な Microsoft サーバーに保存されます。  メール アドレスを含め、Microsoft Edge のプライバシー設定で **[ブラウザーの使用方法、アクセスした Web サイト、およびクラッシュ レポートに関するオプションの診断データを送信して、Microsoft 製品の改善に協力する]** の設定がオンになっている場合、デバイスにインストールされているブラウザー固有の識別子がフィードバックに関連付けられます。  診断ログ、記録、添付ファイルを含むすべての診断データは、最大 30 日間保存されます。  オプションのスクリーンショットを含む残りのフィードバック データは、最大 15 か月間保存されます。  フィードバック アイテムをメールで提供した場合は、フィードバックの削除を[要求][MicrosoftConcernPrivacy]してください。  
 
 <!-- links -->  
 
