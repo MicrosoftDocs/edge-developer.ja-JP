@@ -360,13 +360,16 @@
     - name: 拡張機能 (Chromium)
       href: extensions-chromium/index.md
       items:
-        - name: ファースト ステップ チュートリアル
-          href: extensions-chromium/getting-started/index.md
+        - name: 作業の開始
           items:
-            - name: 簡単な拡張機能を作成する - パート I
+            - name: 拡張機能のアーキテクチャ
+              href: extensions-chromium/getting-started/index.md
+            - name: 拡張機能のチュートリアルを作成する パート 1
               href: extensions-chromium/getting-started/part1-simple-extension.md
-            - name: 簡単な拡張機能を作成する - パート II
+            - name: 拡張機能のチュートリアルを作成する パート 2
               href: extensions-chromium/getting-started/part2-content-scripts.md
+            - name: 拡張機能をサイドロードする
+              href: extensions-chromium/getting-started/extension-sideloading.md
         - name: 開発者向けガイド
           items:
             - name: Microsoft Edge のポート Chromium の拡張機能
