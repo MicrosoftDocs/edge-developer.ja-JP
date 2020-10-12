@@ -144,7 +144,7 @@
           href: devtools-guide-chromium/issues/index.md
         - name: コマンド メニュー
           href: devtools-guide-chromium/command-menu/index.md
-        - name: モバイル シミュレーション
+        - name: エミュレーション
           items:
             - name: 概要
               href: devtools-guide-chromium/device-mode/index.md
@@ -236,6 +236,8 @@
               href: devtools-guide-chromium/memory-problems/heap-snapshots.md
             - name: タイムラインでアロケーション インストルメンテーションを使用する
               href: devtools-guide-chromium/memory-problems/allocation-profiler.md
+        - name: Media
+          href: devtools-guide-chromium/media-panel/index.md
         - name: ワークスペース
           href: devtools-guide-chromium/workspaces/index.md
         - name: プログレッシブ Web アプリ
