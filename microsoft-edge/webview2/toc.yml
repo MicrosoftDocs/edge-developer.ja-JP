@@ -36,6 +36,8 @@
   href: roadmap.md
 - name: 方法
   items:
+    - name: WebView2 の拡張 JavaScript シナリオ
+      href: howto/js.md
     - name: 静的リンク ローダー
       href: howto/static.md
     - name: Debug WebView2
