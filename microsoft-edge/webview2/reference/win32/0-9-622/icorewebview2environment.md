@@ -8,12 +8,12 @@ ms.topic: reference
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Controller、browser control、edge html、ICoreWebView2Environment
-ms.openlocfilehash: 3552de59b8b349c62d61ca165141d9adddd2a5a9
-ms.sourcegitcommit: 0faf538d5033508af4320b9b89c4ed99872f0574
+ms.openlocfilehash: edf573bc7c4c83c7882005937db29a068ab7b015
+ms.sourcegitcommit: 2d57b515d6ccbbe24cb3a8c8f44f9c3a26fc17a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "11012211"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "11115786"
 ---
 # インターフェイス ICoreWebView2Environment 
 
@@ -224,7 +224,7 @@ HRESULT AppWindow::OnCreateEnvironmentCompleted(
 ```
  アプリケーションで障害が発生したときに CreateCoreWebView2Controller が再試行される場合は、新しい WebView2 環境の作成からアプリケーションを再起動することをお勧めします。 エッジ更新が発生した場合は、WebView2 環境に関連付けられているバージョンが削除され、オブジェクトが機能しなくなっている可能性があります。 新しい WebView2 環境の作成は、最新バージョンを使用することで動作します。
 
-同じユーザーデータフォルダーを使って既に実行中のインスタンスがあり、環境オブジェクトの EnvironmentOptions が異なる場合は、WebView の作成に失敗します。 たとえば、1つの言語で既に WebView が作成されている場合、同じユーザーデータフォルダーを使って別の言語で WebView を作成しようとすると、失敗します。
+同じユーザーデータフォルダーを使って既に実行中のインスタンスがあり、環境オブジェクトの EnvironmentOptions が異なる場合、または HWND の親ウィンドウにさまざまな DPI の認識がある場合は、WebView の作成に失敗します。 たとえば、1つの言語で既に WebView が作成されている場合、同じユーザーデータフォルダーを使って別の言語で WebView を作成しようとすると、失敗します。
 
 #### CreateWebResourceResponse 
 
