@@ -8,14 +8,14 @@ metadata:
   ms.topic: hub-page
   author: MSEdgeTeam
   ms.author: msedgedevrel
-  ms.date: 09/08/2020
+  ms.date: 10/14/2020
   ms.localizationpriority: high
-  ms.openlocfilehash: 053bd46133e1e476bd30539ad09c74d17814a0d4
-  ms.sourcegitcommit: 744e2ecf42bcc427ae33e5dadbf6cd48ee0ab6a5
+  ms.openlocfilehash: 9400bf4be62a4050b7d6511386ee5e66777b18fd
+  ms.sourcegitcommit: 1ad087b00df16fd7718a5d95226de57e29b335e1
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 09/17/2020
-  ms.locfileid: "11016737"
+  ms.lasthandoff: 10/14/2020
+  ms.locfileid: "11117813"
 highlightedContent:
   items:
   - title: Microsoft Edge (正式な厩舎チャネル)
@@ -102,50 +102,20 @@ additionalContent:
   sections:
   - title: 開発者向け Microsoft Edge
     items:
-    - title: DevTools の概要
+    - title: DevTools
       links:
       - text: DevTools の概要
         url: /microsoft-edge/devtools-guide-chromium
-      - text: 新機能
-        url: /microsoft-edge/devtools-guide-chromium/whats-new/2020/08/devtools
-      - text: DevTools を開く
-        url: /microsoft-edge/devtools-guide-chromium/open
-      - text: 初心者向け DevTools
+      - text: 初心者向けの DevTools
         url: /microsoft-edge/devtools-guide-chromium/beginners/html
-      - text: CSS
-        url: /microsoft-edge/devtools-guide-chromium/css/index
-      - text: ガイド
-        url: /microsoft-edge/devtools-guide-chromium/css/print-preview
-      - text: リソース
-        url: /microsoft-edge/devtools-guide-chromium/resources/index
-    - title: 個々のツールガイド
-      links:
-      - text: Console
-        url: /microsoft-edge/devtools-guide-chromium/console/index
-      - text: ネットワーク
-        url: /microsoft-edge/devtools-guide-chromium/network/index
-      - text: 記憶域
-        url: /microsoft-edge/devtools-guide-chromium/storage/cookies
-      - text: コマンド メニュー
-        url: /microsoft-edge/devtools-guide-chromium/command-menu/index
-      - text: JavaScript
-        url: /microsoft-edge/devtools-guide-chromium/javascript/index
-      - text: パフォーマンス
-        url: /microsoft-edge/devtools-guide-chromium/evaluate-performance/index
-      - text: リモート デバッグ
-        url: /microsoft-edge/devtools-guide-chromium/remote-debugging/index
-      - text: セキュリティ
-        url: /microsoft-edge/devtools-guide-chromium/security/index
-    - title: DevTools をカスタマイズする
-      links:
-      - text: 概要
-        url: /microsoft-edge/devtools-guide-chromium/customize/index
-      - text: 濃色テーマ
-        url: /microsoft-edge/devtools-guide-chromium/customize/dark-theme
-      - text: ワークスペース
-        url: /microsoft-edge/devtools-guide-chromium/workspaces/index
       - text: キーボード ショートカット
         url: /microsoft-edge/devtools-guide-chromium/shortcuts
+      - text: コマンドメニュー
+        url: /microsoft-edge/devtools-guide-chromium/command-menu/index
+      - text: DevTools を開く
+        url: /microsoft-edge/devtools-guide-chromium/open
+      - text: CSS
+        url: /microsoft-edge/devtools-guide-chromium/css/index
     - title: テスト & オートメーション
       links:
       - text: アクセシビリティ
