@@ -3,17 +3,17 @@ description: Microsoft Edge WebView2 で使用されるバージョン管理モ�
 title: Microsoft Edge WebView2 のバージョン管理
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 09/10/2020
+ms.date: 10/14/2020
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、wpf アプリ、wpf、edge、ICoreWebView2、ICoreWebView2Host、browser control、edge html
-ms.openlocfilehash: 3ce1f0653a14d92571f1365cbfebc8bb2215ecbe
-ms.sourcegitcommit: 0faf538d5033508af4320b9b89c4ed99872f0574
+ms.openlocfilehash: b673a2b250e46959a2eabaeb88cd8535f9a271e4
+ms.sourcegitcommit: 61cc15d2fc89aee3e09cec48ef1e0e5bbf8d289a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "11010678"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "11118983"
 ---
 # WebView2 SDK のバージョンについて  
 
@@ -28,11 +28,11 @@ WebView2 は Microsoft Edge によって異なります。  各 WebView2 SDK で
 
 [プレビュー] のリリースパッケージには、次の情報が含まれています。  
 
-*   [Win32 C/c + + api][ReferenceWin3209622]: SDK の api であり、GA 時には同じままであると想定されています。  
+*   [Win32 C/c + + api][ReferenceWin32]: SDK の api であり、GA 時には同じままであると想定されています。  
 
 プレビューでは、プレリリースパッケージには次のコンポーネントが含まれています。  
 
-*   .NET Api: [WPF][ReferenceWpf09515]、 [WinForms][ReferenceWinforms09515]、および [Core][ReferenceDotnet09628]  
+*   .NET Api: [WPF][DotnetMicrosoftWebWebview2WpfNamespace]、 [WinForms][DotnetMicrosoftWebWebview2WinformsNamespace]、および [Core][DotnetMicrosoftWebWebview2CoreNamespace]  
 *   実験的な Api。  詳細については、「 [実験的 api](#experimental-apis) 」セクションを参照してください。  
 
 ## 試験的な API  
@@ -69,10 +69,10 @@ After you have used a particular version of the SDK to build your app, your app 
 <!--links -->
 
 [DistributionEvergreenMode]: ./distribution.md#evergreen-distribution-mode "Evergreen 配布モード-WebView2 を使用したアプリケーションの配布 |Microsoft ドキュメント"  
-[ReferenceDotnet09628]: ../reference/dotnet/0-9-628-reference-webview2.md "Reference (WebView2) |Microsoft ドキュメント"  
-[ReferenceWinforms09515]: ../reference/winforms/0-9-515-reference-webview2.md "Reference (WebView2) |Microsoft ドキュメント"  
-[ReferenceWin3209622]: ../reference/win32/0-9-622-reference-webview2.md "Reference (WebView2) |Microsoft ドキュメント"  
-[ReferenceWpf09515]: ../reference/wpf/0-9-515-reference-webview2.md "Reference (WebView2) |Microsoft ドキュメント"  
+[DotnetMicrosoftWebWebview2CoreNamespace]: /dotnet/api/microsoft.web.webview2.core "WebView2 の名前空間 |Microsoft ドキュメント"
+[DotnetMicrosoftWebWebview2WpfNamespace]: /dotnet/api/microsoft.web.webview2.wpf "WebView2 の名前空間 |Microsoft ドキュメント"
+[DotnetMicrosoftWebWebview2WinformsNamespace]: /dotnet/api/microsoft.web.webview2.winforms "WinForms 名前空間 WebView2 |Microsoft ドキュメント"
+[ReferenceWin32]: /microsoft-edge/webview2/reference/win32 "WebView2 Win32 C++ リファレンス |Microsoft ドキュメント"  
 [Releasenotes]: ../releasenotes.md "WebView2 SDK のリリースノート |Microsoft ドキュメント"  
 
 [DeployedgeChannels]: /deployedge/microsoft-edge-channels "Microsoft Edge チャネルの概要 |Microsoft ドキュメント"  

@@ -1,23 +1,23 @@
 ---
-description: Microsoft Edge WebView 2 コントロールを使用して、Windows フォームアプリの web コンテンツをホストする
-title: Microsoft Edge WebView 2 Windows フォームアプリ
+description: WebView2 for WinForms アプリの概要ガイド
+title: WebView2 for WinForms アプリの概要
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 09/10/2020
+ms.date: 10/14/2020
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: WebView2、WebView2、WebView、webview、winforms アプリ、winforms、edge、CoreWebView2、browser control、edge html、はじめに、作業の開始、.NET、windows フォーム
-ms.openlocfilehash: 885524581112a208e1e5134ecd7a6f7446e331ce
-ms.sourcegitcommit: 0faf538d5033508af4320b9b89c4ed99872f0574
+ms.openlocfilehash: e9451d4bfafacf78f723be75379e57400d0ba914
+ms.sourcegitcommit: 61cc15d2fc89aee3e09cec48ef1e0e5bbf8d289a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "11010734"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "11119081"
 ---
-# Windows Forms アプリでの WebView2 の概要 (プレビュー)  
+# Windows フォームでの WebView2 の概要 (プレビュー)  
 
-この記事では、初めての WebView2 アプリの作成を開始し、 [WebView2 (preview)](/microsoft-edge/hosting/webview2/index)の主な機能について説明します。  個々の Api について詳しくは、 [api リファレンス](../reference/dotnet/0-9-628-reference-webview2.md)をご覧ください。  
+この記事では、初めての WebView2 アプリの作成を開始し、 [WebView2 (preview)](/microsoft-edge/webview2/index)の主な機能について説明します。  個々の Api について詳しくは、 [api リファレンス](/dotnet/api/microsoft.web.webview2.winforms)をご覧ください。  
 
 ## 前提条件  
 
@@ -51,8 +51,8 @@ ms.locfileid: "11010734"
 
 1. プロジェクトのコンテキストメニューを開き (\ [\] を右クリックし)、[ **NuGet パッケージの管理**] を選択します。  
 
-    :::image type="complex" source="./media/wpf-gettingstarted-mngnuget.png" alt-text="Nuget.exe":::
-       Nuget.exe :::image-end:::
+    :::image type="complex" source="./media/wpf-gettingstarted-mngnuget.png" alt-text="NuGet パッケージを管理する":::
+       NuGet パッケージを管理する :::image-end:::
 
 1. `Microsoft.Web.WebView2`検索バーに入力します。  検索結果から **WebView2** を選びます。  
 
@@ -70,17 +70,20 @@ WebView2 API を使用したアプリケーションの開発を開始するよ�
 次に、アプリケーションに WebView を追加します。  
 
 1. **Windows フォームデザイナー**を開きます。  
-1. **ツールボックス**で**WebView2**を検索します。 **WebView2**コントロールを Windows フォームアプリにドラッグアンドドロップする
-
-    ![ツール](./media/winforms-toolbox.png)
+1. **ツールボックス**で**WebView2**を検索します。 **WebView2**コントロールを Windows フォームアプリにドラッグアンドドロップします。
+    
+    :::image type="complex" source="./media/winforms-toolbox.png" alt-text="NuGet パッケージを管理する":::
+       WebView2 が表示されたツールボックス :::image-end:::  
 
 1. `Name`プロパティをに変更 `webView` します。
-
-    ![ツール](./media/winforms-properties.png)
+    
+    :::image type="complex" source="./media/winforms-properties.png" alt-text="NuGet パッケージを管理する":::
+       WebView2 コントロールのプロパティ :::image-end:::
 
 1. この `Source` プロパティは、WebView2 コントロールに表示される初期 URI を設定します。 Source プロパティをに設定します。 <https://www.microsoft.com>
-
-    ![ツール](./media/winforms-source.png)
+    
+    :::image type="complex" source="./media/winforms-source.png" alt-text="NuGet パッケージを管理する":::
+       WebView2 コントロールの Source プロパティ :::image-end:::
 
 `F5`プロジェクトをビルドして実行する場合に選択します。  WebView2 コントロールが表示されていることを確認 [https://www.microsoft.com](https://www.microsoft.com) します。
 
@@ -163,7 +166,7 @@ WebView2 コントロールをホストするアプリケーションは、web �
 
 詳細については、「 [ナビゲーションイベント](../concepts/navigation-events.md)」を参照してください。  
 
-:::image type="complex" source="../media/navigation-events.png" alt-text="ナビゲーションイベント":::
+:::image type="complex" source="../media/navigation-events.png" alt-text="NuGet パッケージを管理する":::
    ナビゲーションイベント
 :::image-end:::
 
@@ -296,7 +299,7 @@ async void InitializeAsync()
 ## 次のステップ 
 
 * WebView2's 機能の包括的な例については、 [WebView2Samples リポジトリ](https://github.com/MicrosoftEdge/WebView2Samples) をチェックアウトする
-* Api についての詳細情報を参照するための[api 参照](../reference/winforms/0-9-515/microsoft-web-webview2-winforms-webview2.md)
+* Api についての詳細情報を参照するための[api 参照](/dotnet/api/microsoft.web.webview2.winformswebview2)
 * WebView2 の詳細については、 [WebView2 のリソース](../index.md#next-steps) の一覧をチェックアウトする
 
 

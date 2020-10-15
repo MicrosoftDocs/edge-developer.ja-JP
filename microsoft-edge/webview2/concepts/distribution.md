@@ -3,17 +3,17 @@ description: Microsoft Edge WebView2 を使用してアプリをリリースす�
 title: Microsoft Edge WebView2 アプリケーションの配布
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 09/21/2020
+ms.date: 10/14/2020
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、wpf アプリ、wpf、edge、ICoreWebView2、ICoreWebView2Host、browser control、edge html
-ms.openlocfilehash: 7db610ff1133b1b5b380372422f1f2f10981e583
-ms.sourcegitcommit: 24151cc65bad92d751a8e7a868c102e1121456e3
+ms.openlocfilehash: e96ca2b26feb3883b51ad468db1fabe68ed8ad1f
+ms.sourcegitcommit: 61cc15d2fc89aee3e09cec48ef1e0e5bbf8d289a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "11052187"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "11118998"
 ---
 # WebView2 を使用したアプリケーションの配布  
 
@@ -61,7 +61,7 @@ Evergreen WebView2 Runtime は、Windows の将来のリリースで受信トレ
 
 *   アプリケーションのセットアップ中に、次のいずれかの方法でランタイムが既にインストールされているかどうかを確認します。  
     *   `pv (REG_SZ)`、のいずれかでレジストリキーが存在するかどう `HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\EdgeUpdate\ClientState\{F3017226-FE2A-4295-8BDF-00C3A9A7E4C5}` かを調べます。  
-    *   WebView2 API [GetAvailableCoreWebView2BrowserVersionString](../reference/win32/0-9-622/webview2-idl.md#getavailablecorewebview2browserversionstring) を呼び出して、VERSIONINFO が NULL であるかどうかを確認します。  
+    *   WebView2 API [GetAvailableCoreWebView2BrowserVersionString](/microsoft-edge/webview2/reference/win32/webview2-idl#getavailablecorewebview2browserversionstring) を呼び出して、VERSIONINFO が NULL であるかどうかを確認します。  
 *   ランタイムがインストールされていない場合は、リンクを使用してブートストラップをプログラムでダウンロードします。  
 *   昇格したプロセスまたはコマンドプロンプトから、 `MicrosoftEdgeWebview2Setup.exe /silent /install` サイレントインストールのためにブートストラップを呼び出します。  
 
@@ -75,7 +75,7 @@ Evergreen WebView2 Runtime は、Windows の将来のリリースで受信トレ
 *   アプリケーションのインストーラーまたはアップデーターにインストーラーを含めます。  
 *   アプリケーションのセットアップ中に、次のいずれかの方法でランタイムが既にインストールされているかどうかを確認します。  
     *   `pv (REG_SZ)`、のいずれかでレジストリキーが存在するかどう `HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\EdgeUpdate\ClientState\{F3017226-FE2A-4295-8BDF-00C3A9A7E4C5}` かを調べます。  
-    *   WebView2 API [GetAvailableCoreWebView2BrowserVersionString](../reference/win32/0-9-622/webview2-idl.md#getavailablecorewebview2browserversionstring) を呼び出して、VERSIONINFO が NULL であるかどうかを確認します。  
+    *   WebView2 API [GetAvailableCoreWebView2BrowserVersionString](/microsoft-edge/webview2/reference/win32/webview2-idl#getavailablecorewebview2browserversionstring) を呼び出して、VERSIONINFO が NULL であるかどうかを確認します。  
 *   ランタイムがインストールされていない場合は、昇格されたプロセスまたはコマンドプロンプトから、サイレントインストールのためにスタンドアロンインストーラーを起動し `MicrosoftEdgeWebView2RuntimeInstaller{X64/X86/ARM64}.exe /silent /install` ます。  
 
 ## 固定バージョンの配布モード  
@@ -89,6 +89,5 @@ Evergreen WebView2 Runtime は、Windows の将来のリリースで受信トレ
 <!-- links -->  
 
 [ConceptsVersioning]: ./versioning.md "ブラウザーのバージョンと WebView2 についてMicrosoft ドキュメント"  
-[ReferenceWin3209622WebviewIdl]: ../reference/win32/0-9-622/webview2-idl.md  "Globals |Microsoft ドキュメント"  
 
 [Webview2Installer]: https://developer.microsoft.com/microsoft-edge/webview2 "WebView2 Installer"  

@@ -1,19 +1,19 @@
 ---
-description: Microsoft Edge WebView 2 コントロールを使用して Win32 アプリの web コンテンツをホストする
+description: Microsoft Edge WebView2 SDK の API リファレンス
 title: Microsoft Edge WebView2 API リファレンス
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 09/10/2020
+ms.date: 10/14/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Controller、browser control
-ms.openlocfilehash: f6417b543191c923c89af2e17a59f4505cc82a7d
-ms.sourcegitcommit: 0faf538d5033508af4320b9b89c4ed99872f0574
+ms.openlocfilehash: 36c951967675d1daed769e40e8eacbf668a5973c
+ms.sourcegitcommit: 61cc15d2fc89aee3e09cec48ef1e0e5bbf8d289a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "11010139"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "11119053"
 ---
 # Microsoft Edge WebView2 API リファレンス  
 
@@ -23,8 +23,12 @@ Microsoft Edge WebView2 コントロールでは、 [Microsoft edge (Chromium)](
 
 ## 言語とフレームワーク  
 
-*   [Win32 C++](reference/win32/0-9-622-reference-webview2.md)  
+*   [Win32 C++](/microsoft-edge/webview2/reference/win32/index)  
 *   .NET  
-    *   [Core](reference/dotnet/0-9-628-reference-webview2.md)  
-    *   [Windows フォーム](reference/winforms/0-9-515-reference-webview2.md)  
-    *   [WPF](reference/wpf/0-9-515-reference-webview2.md)  
+    *   [Core][DotnetMicrosoftWebWebView2CoreNamespace]  
+    *   [WPF][DotnetMicrosoftWebWebView2WpfNamespace]  
+    *   [Windows フォーム][DotnetMicrosoftWebWebView2WinformsNamespace]  
+
+[DotnetMicrosoftWebWebview2CoreNamespace]: /dotnet/api/microsoft.web.webview2.core "WebView2 の名前空間 |Microsoft ドキュメント"
+[DotnetMicrosoftWebWebview2WpfNamespace]: /dotnet/api/microsoft.web.webview2.wpf "WebView2 の名前空間 |Microsoft ドキュメント"
+[DotnetMicrosoftWebWebview2WinformsNamespace]: /dotnet/api/microsoft.web.webview2.winforms "WinForms 名前空間 WebView2 |Microsoft ドキュメント"

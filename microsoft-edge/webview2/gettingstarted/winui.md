@@ -1,19 +1,19 @@
 ---
-description: Microsoft Edge WebView 2 コントロールを使用して、WinUI アプリの web コンテンツをホストする
-title: WinUI アプリ用 Microsoft Edge WebView2
+description: WinUI アプリ用 WebView2 の概要ガイド
+title: WinUI アプリの WebView2 の概要
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 08/17/2020
+ms.date: 10/14/2020
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: WebView2、WebView2、WebView、webview、winui apps、winui、edge、CoreWebView2、browser control、edge html、はじめに、作業の開始、.NET
-ms.openlocfilehash: 805655fd27c0b654e1ccb41c615aa21797d6ddf7
-ms.sourcegitcommit: ef6d6adae1f4d18a219fa3e17f91b95b40367a40
+ms.openlocfilehash: df6ee7a7391337635a63a961f62317e5b8a67334
+ms.sourcegitcommit: 61cc15d2fc89aee3e09cec48ef1e0e5bbf8d289a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "10934899"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "11119095"
 ---
 # WinUI3 での WebView2 の概要 (プレビュー)  
 
@@ -47,7 +47,7 @@ ms.locfileid: "10934899"
     *   ターゲットバージョン: **Windows 10、バージョン 1903 (ビルド 18362)** 以降。  
     *   最小バージョン: **Windows 10、バージョン 1803 (ビルド 17134)**。  
     
-    :::image type="complex" source="./media/winui-gettingstarted-projecttype.png" alt-text="[ターゲットバージョン] と [最小バージョン] の値が選択された新しいユニバーサル Windows プラットフォームプロジェクトダイアログ。" lightbox="./media/winui-gettingstarted-projecttype.png":::
+    :::image type="complex" source="./media/winui-gettingstarted-projecttype.png" alt-text="WinUI の Visual studio プロジェクト作成ダイアログ" lightbox="./media/winui-gettingstarted-projecttype.png":::
        [ターゲットバージョン] と [最小バージョン] の値が選択された新しいユニバーサル Windows プラットフォームプロジェクトダイアログ。
     :::image-end:::  
     
@@ -117,7 +117,7 @@ ms.locfileid: "10934899"
     
 1.  `F5`プロジェクトをビルドして実行する場合に選択します。  WebView2 コントロールが表示されていることを確認 [https://www.microsoft.com][|::ref1::|Main] します。  
     
-    :::image type="complex" source="./media/winui-gettingstarted-part3.png" alt-text="Microsoft.com サイトを表示する WebView2 コントロール" lightbox="./media/winui-gettingstarted-part3.png":::
+    :::image type="complex" source="./media/winui-gettingstarted-part3.png" alt-text="WinUI の Visual studio プロジェクト作成ダイアログ" lightbox="./media/winui-gettingstarted-part3.png":::
        Microsoft.com サイトを表示する WebView2 コントロール。  
     :::image-end:::  
     
@@ -177,7 +177,7 @@ WebView2 コントロールに表示される web ページをアプリに追加
     > [!NOTE]
     > アドレスバーに完全な Url を使用していることを確認します。 `ArgumentException` URL が、またはで始まらない場合は、例外がスローされ `http://` `https://` ます。  
     
-    :::image type="complex" source="./media/winui-gettingstarted-bing.png" alt-text="Bing.com" lightbox="./media/winui-gettingstarted-bing.png":::
+    :::image type="complex" source="./media/winui-gettingstarted-bing.png" alt-text="WinUI の Visual studio プロジェクト作成ダイアログ" lightbox="./media/winui-gettingstarted-bing.png":::
        Bing.com  
     :::image-end:::  
     
@@ -231,7 +231,7 @@ private void EnsureHttps(WebView2 sender, WebView2NavigationStartingEventArgs ar
 
 ホストアプリケーションは、実行時に WebView2 コントロールに JavaScript コードを挿入することがあります。  挿入された JavaScript は、JavaScript が削除されるまで、すべての新しい最上位レベルのドキュメントとすべての子フレームに適用されます。  挿入された JavaScript は、グローバルオブジェクトの作成後、および HTML ドキュメントに含まれている他のスクリプトが実行される前に実行されます。  
 
-例として、ユーザーが HTTPS 以外のサイトに移動したときにアラートが送信されることがあります。  この関数を変更し `EnsureHttps` て、 [executesを][Webviews2ReferenceWpf09515MicrosoftWebExecutescriptasync]使って web コンテンツにスクリプトを挿入します。  
+例として、ユーザーが HTTPS 以外のサイトに移動したときにアラートが送信されることがあります。  この関数を変更し `EnsureHttps` て、 [executesを][Webviews2ReferenceWpfMicrosoftWebExecutescriptasync]使って web コンテンツにスクリプトを挿入します。  
 
 ```csharp
 private void EnsureHttps(WebView2 sender, WebView2NavigationStartingEventArgs args)
@@ -251,7 +251,7 @@ private void EnsureHttps(WebView2 sender, WebView2NavigationStartingEventArgs ar
 
 `F5`プロジェクトをビルドして実行する場合に選択します。  HTTPS を使用していないサイトに移動したときに、アプリケーションにアラートが表示されることを確認します。  
 
-:::image type="complex" source="./media/winui-gettingstarted-script.png" alt-text="通知ダイアログを表示する WebView2 コントロール" lightbox="./media/winui-gettingstarted-script.png":::
+:::image type="complex" source="./media/winui-gettingstarted-script.png" alt-text="WinUI の Visual studio プロジェクト作成ダイアログ" lightbox="./media/winui-gettingstarted-script.png":::
    通知ダイアログを表示する WebView2 コントロール
 :::image-end:::  
 
@@ -264,7 +264,7 @@ private void EnsureHttps(WebView2 sender, WebView2NavigationStartingEventArgs ar
 > [!NOTE]
 > WebView2 Api が出荷されている時点で、WinRT CoreWebView2 オブジェクトが利用できない場合があります。 WebView2 コントロールで利用できる Api を理解するには、利用可能な Api の一覧については、 [WebView2 Spec][GithubMicrosoftUiXamlSpecsWebview2] を参照してください。 
 
-WebView2 機能の詳細については、「 [WebView2 の概念と使い方のガイド][Webview2IndexNextSteps]」と「 [WebView2 サンプルのリポジトリ][GithubMicrosoftedgeWebview2samplesMain]」を参照してください。  
+WebView2 機能の詳細については、「 [WebView2 の概念と How-To ガイド][Webview2IndexNextSteps]」および [WebView2 サンプルのリポジトリ][GithubMicrosoftedgeWebview2samplesMain]を参照してください。  
 
 ## Microsoft Edge WebView チームと連絡を取り合う  
 
@@ -275,7 +275,7 @@ WebView2 機能の詳細については、「 [WebView2 の概念と使い方の
 [Webview2Index]: ../index.md "Microsoft Edge WebView2 の概要 (プレビュー) |Microsoft ドキュメント"  
 [Webview2IndexNextSteps]: ../index.md#next-steps "次の手順-Microsoft Edge WebView2 の概要 (プレビュー) |Microsoft ドキュメント"  
 [Webviews2ConceptsNavigationEvents]: ../concepts/navigation-events.md "ナビゲーションイベント |Microsoft ドキュメント"  
-[Webviews2ReferenceWpf09515MicrosoftWebExecutescriptasync]: ../reference/wpf/0-9-515/microsoft-web-webview2-wpf-webview2.md#executescriptasync "WebView2 クラス | WebView2 クラスの場合は、このサイトをお選びください。Microsoft ドキュメント"  
+[Webviews2ReferenceWpfMicrosoftWebExecutescriptasync]: /dotnet/api/microsoft.web.webview2.wpf.webview2.executescriptasync "WebView2.Exe(文字列) メソッド (WebView2) | cuteScriptAsync) |Microsoft ドキュメント"  
 
 [UwpSchemasAppxpackageUapmanifestRoot]: /uwp/schemas/appxpackage/uapmanifestschema/schema-root "Windows 10 のパッケージマニフェストスキーマリファレンス |Microsoft ドキュメント"  
 

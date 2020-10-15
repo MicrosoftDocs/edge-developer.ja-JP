@@ -1,23 +1,23 @@
 ---
-description: Microsoft Edge WebView 2 コントロールを使用して Win32 アプリの web コンテンツをホストする
+description: Win32 アプリ用 WebView2 の概要ガイド
 title: Win32 アプリの WebView2 の概要
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 09/10/2020
+ms.date: 10/14/2020
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Controller、browser control、edge html
-ms.openlocfilehash: 5bb2d8a1ec0d75c2cbb1d426bae6bf1cd8298592
-ms.sourcegitcommit: 0faf538d5033508af4320b9b89c4ed99872f0574
+ms.openlocfilehash: 906ddbea08440aaa0f1fd7e32550c3b1790ba8a1
+ms.sourcegitcommit: 61cc15d2fc89aee3e09cec48ef1e0e5bbf8d289a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "11010713"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "11119102"
 ---
 # WebView2 の概要 (開発者用プレビュー)  
 
-次のコンテンツでは、 [WebView2 (開発者向けプレビュー)][Webview2Index] の一般的な使用方法について説明し、最初の WebView2 アプリを作成するための開始点を示しています。  個々の WebView2 Api について詳しくは、 [api リファレンス][Webview2ReferenceWin3209622]をご覧ください。  
+次のコンテンツでは、 [WebView2 (開発者向けプレビュー)][Webview2Index] の一般的な使用方法について説明し、最初の WebView2 アプリを作成するための開始点を示しています。  個々の WebView2 Api について詳しくは、 [api リファレンス][Webview2ReferenceWin32]をご覧ください。  
 
 ## 前提条件  
 
@@ -46,7 +46,7 @@ Visual Studio では、WebView2 ヘッダーファイルが見つからないこ
 
 1.  プロジェクトにマウスポインターを合わせて、コンテキストメニュー \ (右クリック \) を開き、[ **Nuget パッケージの管理**] を選択します。  
     
-    :::image type="complex" source="../media/manage-nuget-packages.png" alt-text="Nuget パッケージを管理する":::
+    :::image type="complex" source="../media/manage-nuget-packages.png" alt-text="ツールバージョン":::
        Nuget パッケージを管理する  
     :::image-end:::  
     
@@ -56,15 +56,15 @@ Visual Studio では、WebView2 ヘッダーファイルが見つからないこ
         > [!NOTE] 
         > [Windows 実装ライブラリ][GithubMicrosoftWilMain]と[Windows ランタイム C++ テンプレートライブラリ][CppCxWrlTemplateLibraryVS2019]は省略可能であり、この例で COM を簡単に操作できるように追加されています。  
         
-        :::image type="complex" source="../media/wil.png" alt-text="Windows 実装ライブラリ":::
+        :::image type="complex" source="../media/wil.png" alt-text="ツールバージョン":::
            Windows 実装ライブラリ  
         :::image-end:::  
         
 1.  WebView2 SDK をインストールします。  
     1.  `Microsoft.Web.WebView2`検索バーに入力し、結果から [ **WebView2** ] を選択して、右側のウィンドウで [**インストール**] を選択します。  Nuget によって SDK がコンピューターにダウンロードされます。  
         
-        :::image type="complex" source="../media/nuget.png" alt-text="Nuget.exe":::
-           Nuget.exe
+        :::image type="complex" source="../media/nuget.png" alt-text="ツールバージョン":::
+           Nuget パッケージマネージャー
         :::image-end:::  
         
 1.  プロジェクトに WebView2 ヘッダーを追加します。  
@@ -96,7 +96,7 @@ WebView2 API に対して使用およびビルドするように設定されて�
 
 を押して `F5` 、サンプルアプリをビルドして実行します。  空のウィンドウが表示されたアプリが表示されます。  
 
-:::image type="complex" source="../media/empty-app.png" alt-text="空のアプリ":::
+:::image type="complex" source="../media/empty-app.png" alt-text="ツールバージョン":::
    空のアプリ  
 :::image-end:::  
 
@@ -156,7 +156,7 @@ CreateCoreWebView2EnvironmentWithOptions(nullptr, nullptr, nullptr,
 
 を押して `F5` アプリをビルドして実行します。  これで、[WebView] ウィンドウに Bing ページが表示されます。  
 
-:::image type="complex" source="../media/bing-window.png" alt-text="Bing ウィンドウ":::
+:::image type="complex" source="../media/bing-window.png" alt-text="ツールバージョン":::
    Bing ウィンドウ  
 :::image-end:::  
 
@@ -172,7 +172,7 @@ CreateCoreWebView2EnvironmentWithOptions(nullptr, nullptr, nullptr,
 
 詳細については、「 [ナビゲーションイベント][Webview2ConceptsNavigationEvents]」を参照してください。  
 
-:::image type="complex" source="../media/navigation-events.png" alt-text="ナビゲーションイベント":::
+:::image type="complex" source="../media/navigation-events.png" alt-text="ツールバージョン":::
    ナビゲーションイベント  
 :::image-end:::  
 
@@ -266,34 +266,10 @@ nullptr);
 
 を押して `F5` アプリをビルドして実行します。  ページに移動する前に、ポップアップウィンドウに URL が表示されている必要があります。  
 
-:::image type="complex" source="../media/show-url.png" alt-text="Url の表示":::
-   Url の表示  
-:::image-end:::  
+:::image type="complex" source="../media/show-url.png" alt-text="ツールバージョン"  
 
-おめでとうございます。最初の WebView2 アプリを作成しました。  
-
-## 次のステップ  
-
-このページで取り上げていない WebView2 の機能の多くは、次のセクションで追加のリソースを提供しています。  
-
-### 関連項目  
-
-*   WebView2 機能の包括的な例については、「 [WEBVIEW2 API のサンプル][GithubMicrosoftedgeWebview2samplesApisample]」をご覧ください。  
-*   WebView2 を使って構築されたサンプルアプリケーションについては、「 [WebView2Browser][GithubMicrosoftedgeWebview2browser]」を参照してください。  
-*   WebView2 API の詳細については、 [api リファレンス][Webview2ReferenceWin3209622]を参照してください。  
-
-## Microsoft Edge WebView チームと連絡を取り合う  
-
-[!INCLUDE [contact WebView team note](../includes/contact-webview-team-note.md)]  
-
-<!-- links -->  
-
-[Webview2Index]: ../index.md "Microsoft Edge WebView2 の概要 (プレビュー) |Microsoft ドキュメント"  
-[Webview2ReferenceWin3209622]: ../reference/win32/0-9-622-reference-webview2.md "Reference (WebView2) |Microsoft ドキュメント"  
-[Webview2ConceptsNavigationEvents]: ../concepts/navigation-events.md "ナビゲーションイベント |Microsoft ドキュメント"  
-
-[CppCxWrlTemplateLibraryVS2019]: /cpp/cppcx/wrl/windows-runtime-cpp-template-library-wrl?view=vs-2019 "Windows ランタイム C++ テンプレートライブラリ (WRL) |Microsoft ドキュメント"  
-[CppWindowsWalkthroughCreatingDesktopApplication]: /cpp/windows/walkthrough-creating-windows-desktop-applications-cpp?view=vs-2019 "チュートリアル: 従来の Windows デスクトップアプリケーションの作成 (C++) |Microsoft ドキュメント"  
+[CppCxWrlTemplateLibraryVS2019]: /cpp/cppcx/wrl/windows-runtime-cpp-template-library-wrl?view=vs-2019&preserve-view=true "Windows ランタイム C++ テンプレートライブラリ (WRL) |Microsoft ドキュメント"  
+[CppWindowsWalkthroughCreatingDesktopApplication]: /cpp/windows/walkthrough-creating-windows-desktop-applications-cpp?view=vs-2019&preserve-view=true "チュートリアル: 従来の Windows デスクトップアプリケーションの作成 (C++) |Microsoft ドキュメント"  
 
 [GithubMicrosoftedgeWebview2browser]: https://github.com/MicrosoftEdge/WebView2Browser "WebView2Browser-MicrosoftEdge/WebView2Browser |GitHub"  
 

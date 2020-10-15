@@ -3,17 +3,17 @@ description: セキュリティで保護された WebView2 アプリケーショ
 title: セキュリティで保護された WebView2 アプリケーションを開発するためのベストプラクティス
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 09/10/2020
+ms.date: 10/14/2020
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Host、browser control、edge html、security
-ms.openlocfilehash: 774c812789bea4936611c41915e0c34f93205dba
-ms.sourcegitcommit: 0faf538d5033508af4320b9b89c4ed99872f0574
+ms.openlocfilehash: d53417cc1ac98b44565692edbaec06216f7c110b
+ms.sourcegitcommit: 61cc15d2fc89aee3e09cec48ef1e0e5bbf8d289a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "11010762"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "11119003"
 ---
 # セキュリティで保護された WebView2 アプリケーションを開発するためのベストプラクティス  
 
@@ -23,14 +23,14 @@ ms.locfileid: "11010762"
     *   Web メッセージとパラメーターを検証してから各パラメーターを使うことができます。これは、web メッセージとパラメーターの形式が間違っている可能性があります。
     *   WebView2 内で実行されているドキュメントの出所を常に確認して、コンテンツの信頼性を評価してください。  
 1.  汎用プロキシを使う代わりに、特定の web メッセージとホストオブジェクトの操作を設計します。  
-1.  次のオプションを設定して、 [ICoreWebView2Settings (Win32)][Webview2ReferenceWin3209622Icorewebview2settings] または [CoreWebView2Settings (.net)][Webview2ReferenceWin3209628MicrosoftWebWebview2CoreCorewebview2settings]を変更することにより、web コンテンツの機能を制限します。  
+1.  次のオプションを設定して、 [ICoreWebView2Settings (Win32)][Webview2ReferenceWin32Icorewebview2settings] または [CoreWebView2Settings (.net)][Webview2ReferenceDotnetMicrosoftWebWebview2CoreCorewebview2settings]を変更することにより、web コンテンツの機能を制限します。  
     *   `AreHostObjectsAllowed` `false` Web コンテンツがホストオブジェクトにアクセスすることを想定していない場合は、をに設定します。  
     *   Web `IsWebMessageEnabled` `false` コンテンツによってネイティブアプリケーションに web メッセージが投稿されないようにする場合は、をに設定します。  
     *   `IsScriptEnabled` `false` Web コンテンツがスクリプトを実行することを想定していない場合は、をに設定します (静的 html コンテンツを表示する場合など)。  
     *   `AreDefaultScriptDialogsEnabled` `false` Web コンテンツが表示されない場合、またはダイアログボックスを表示しない場合は、をに設定 `alert` `prompt` します。  
 1.  次の手順では、およびイベントを使用して、 `NavigationStarting` `FrameNavigationStarting` 新しいページの起点に基づいて設定を更新します。  
     1.  アプリケーションが特定のページに移動できないようにするには、イベントを使用して、ページまたはフレームのナビゲーションを確認してからブロックします。  
-    1.  新しいページに移動するときは、前に説明したように、 [ICoreWebView2Settings (Win32)][Webview2ReferenceWin3209622Icorewebview2settings] または [CoreWebView2Settings (.net)][Webview2ReferenceWin3209628MicrosoftWebWebview2CoreCorewebview2settings] でプロパティ値を調整する必要がある場合があります。  
+    1.  新しいページに移動するときは、前に説明したように、 [ICoreWebView2Settings (Win32)][Webview2ReferenceWin32Icorewebview2settings] または [CoreWebView2Settings (.net)][Webview2ReferenceDotnetMicrosoftWebWebview2CoreCorewebview2settings] でプロパティ値を調整する必要がある場合があります。  
 1.  新しいドキュメントに移動するときは、 `ContentLoading` を使用して、公開されているホストオブジェクトを削除し `RemoveHostObjectFromScript` ます。  
 
 <!--## Security
@@ -45,6 +45,6 @@ When constructing a message to send into a WebView, prefer using `PostWebMessage
 
 [Webview2Main]: ../index.md "Microsoft Edge WebView2 の概要 (プレビュー) |Microsoft ドキュメント"  
 
-[Webview2ReferenceWin3209622Icorewebview2settings]: ../reference/win32/0-9-622/icorewebview2settings.md "インターフェイス ICoreWebView2Settings |Microsoft ドキュメント"  
+[Webview2ReferenceWin32Icorewebview2settings]: /microsoft-edge/webview2/reference/win32/icorewebview2settings "インターフェイス ICoreWebView2Settings |Microsoft ドキュメント"  
 
-[Webview2ReferenceWin3209628MicrosoftWebWebview2CoreCorewebview2settings]: ../reference/dotnet/0-9-628/microsoft-web-webview2-core-corewebview2settings.md "WebView2 クラス | CoreWebView2Settings クラスを |Microsoft ドキュメント"  
+[Webview2ReferenceDotnetMicrosoftWebWebview2CoreCorewebview2settings]: /dotnet/api/microsoft.web.webview2.core.corewebview2settings "CoreWebView2Settings クラス (WebView2 の場合) |Microsoft ドキュメント"  
