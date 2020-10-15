@@ -28,7 +28,7 @@ ms.locfileid: "11015462"
 
 Microsoft Edge DevTools チームは、Chrome DevTools チームと Chromium コミュニティと連携して、新しい CSS grid のデバッグ機能を DevTools に追加します。  これで、グリッド線の番号、グリッドのギャップ、拡張グリッド線をページ内のオーバーレイとして表示できるようになりました。  さらに、グリッドツールの機能がさらに向上しました。  
 
-:::image type="complex" source="../../media/2020/06/experiments-grid.msft.png" alt-text="CSS grid のデバッグ機能" lightbox="../../media/2020/06/experiments-grid.msft.png":::
+:::image type="complex" source="../../media/2020/06/experiments-grid.msft.png" alt-text="実験的機能" lightbox="../../media/2020/06/experiments-grid.msft.png":::
    CSS grid のデバッグ機能
 :::image-end:::  
 
@@ -47,7 +47,7 @@ Chromium の問題 [#1047356][CR1047356]
 
 ネットワーク**コンソール**を使用して、[ネットワークログ][DevtoolsNetworkIndexLogActivity]の要求に対して**編集と再生**を使用できるようになりました。  
 
-:::image type="complex" source="../../media/2020/06/experiments-network-console-edit-and-replay.msft.png" alt-text="ネットワークコンソールを使用して NetworkLog で要求を編集して再生する" lightbox="../../media/2020/06/experiments-network-console-edit-and-replay.msft.png":::
+:::image type="complex" source="../../media/2020/06/experiments-network-console-edit-and-replay.msft.png" alt-text="実験的機能" lightbox="../../media/2020/06/experiments-network-console-edit-and-replay.msft.png":::
    **ネットワークコンソール**を使用して[networklog][DevtoolsNetworkIndexLogActivity]で要求を編集して再生する  
 :::image-end:::  
 
@@ -55,7 +55,7 @@ Chromium の問題 [#1047356][CR1047356]
 
 また、 **ネットワークコンソール** を使用して、devtools から直接 HTTP 要求を作成して送信することもできます。  
 
-:::image type="complex" source="../../media/2020/06/experiments-network-console.msft.png" alt-text="ネットワークコンソールパネル" lightbox="../../media/2020/06/experiments-network-console.msft.png":::
+:::image type="complex" source="../../media/2020/06/experiments-network-console.msft.png" alt-text="実験的機能" lightbox="../../media/2020/06/experiments-network-console.msft.png":::
    **ネットワークコンソール**パネル  
 :::image-end:::  
 
@@ -73,13 +73,13 @@ Chromium の問題 [#1093687][CR1093687]
 
 [**ネットワーク**] パネルの [**タイミング**] タブに、サービスワーカーイベントが表示されるようになりました `respondWith` 。  `respondWith`サービスワーカーイベントは、 `fetch` `respondWith` ハンドラーの promise が決済された時点までのサービスワーカーイベントハンドラーの開始時刻からの時間を示し `fetch` ます。  
 
-:::image type="complex" source="../../media/2020/06/timing-tab.msft.png" alt-text="[ネットワーク] パネルの [タイミング] タブにある [サービスワーカーイベント]" lightbox="../../media/2020/06/timing-tab.msft.png":::
+:::image type="complex" source="../../media/2020/06/timing-tab.msft.png" alt-text="実験的機能" lightbox="../../media/2020/06/timing-tab.msft.png":::
    [ `respondWith` **ネットワーク**] パネルの [**タイミング**] タブのサービスワーカーイベント  
 :::image-end:::  
 
 [ **返信の受信** ] を展開して、、、、などの返信の追加情報を表示し `fetch` `CacheStorageCacheName` `serviceWorkerResponseSource` `ResponseTime` ます。  
 
-:::image type="complex" source="../../media/2020/06/timing-tab2.msft.png" alt-text="[返信の受信] を展開して、フェッチ応答から追加情報を確認する" lightbox="../../media/2020/06/timing-tab2.msft.png":::
+:::image type="complex" source="../../media/2020/06/timing-tab2.msft.png" alt-text="実験的機能" lightbox="../../media/2020/06/timing-tab2.msft.png":::
    [**返信の受信**] を展開して、応答から追加情報を確認する `fetch`  
 :::image-end:::  
 
@@ -93,7 +93,7 @@ Chromium の問題 [#1066579][CR1066579]
 
 [webhint][WebhintMain] は、アクセシビリティ、クロスブラウザーの互換性、セキュリティ、パフォーマンス、pwas、web サイトのその他の一般的な web 開発の問題に関するフィードバックをリアルタイムで提供するオープンソースツールです。  これで、[ [問題][DevtoolsIssues] ] パネルに webhint のフィードバックが表示されるようになります。  
 
-:::image type="complex" source="../../media/2020/06/experiments-webhint.msft.png" alt-text="[問題] パネルでの webhint のフィードバック" lightbox="../../media/2020/06/experiments-webhint.msft.png":::
+:::image type="complex" source="../../media/2020/06/experiments-webhint.msft.png" alt-text="実験的機能" lightbox="../../media/2020/06/experiments-webhint.msft.png":::
    [問題] パネルでの webhint のフィードバック  
 :::image-end:::  
 
@@ -112,7 +112,7 @@ Chromium の問題 [#1070378][CR1070378]
 
 通常、 **要素** や **ネットワーク** などのツールは、devtools のメイン \ (トップ) パネルでのみ開くことができます。  同様に、 **3D ビュー** や **問題** などのツールは、devtools のドローワ \ (ボトム \) パネルでのみ開くことができます。  これで、[上] と [下] パネルの間でツールを移動して、DevTools のレイアウトをカスタマイズできるようになりました。  
 
-:::image type="complex" source="../../media/2020/06/experiments-move-panels.msft.png" alt-text="パネル間でタブを移動する" lightbox="../../media/2020/06/experiments-move-panels.msft.png":::
+:::image type="complex" source="../../media/2020/06/experiments-move-panels.msft.png" alt-text="実験的機能" lightbox="../../media/2020/06/experiments-move-panels.msft.png":::
    パネル間でタブを移動する  
 :::image-end:::  
 
@@ -125,13 +125,13 @@ Chromium の問題 [#897944][CR897944]
 
 Microsoft Edge 83 および84では、[イニシエーター] 列のツールチップが表示されます。これにより、 [ネットワークログ][DevtoolsNetworkIndexLogActivity] には、水平スクロールバーが表示されます。  要求を開始したコールスタックを表示できるのは、ヒントを水平方向にスクロールすることだけです。  
 
-:::image type="complex" source="../../media/2020/06/initiator-tooltip-84.msft.png" alt-text="Microsoft Edge 84 のイニシエーターのヒント" lightbox="../../media/2020/06/initiator-tooltip-84.msft.png":::
+:::image type="complex" source="../../media/2020/06/initiator-tooltip-84.msft.png" alt-text="実験的機能" lightbox="../../media/2020/06/initiator-tooltip-84.msft.png":::
    Microsoft Edge 84 のイニシエーターのヒント  
 :::image-end:::  
 
 Microsoft Edge 85 以降では、水平方向にスクロールしなくても、ツールヒントでイニシエーターのコールスタックを確認できるようになりました。  
 
-:::image type="complex" source="../../media/2020/06/initiator-tooltip-85.msft.png" alt-text="Microsoft Edge 85 のイニシエーターのヒント" lightbox="../../media/2020/06/initiator-tooltip-85.msft.png":::
+:::image type="complex" source="../../media/2020/06/initiator-tooltip-85.msft.png" alt-text="実験的機能" lightbox="../../media/2020/06/initiator-tooltip-85.msft.png":::
    Microsoft Edge 85 のイニシエーターのヒント
 :::image-end:::  
 
@@ -149,7 +149,7 @@ Chromium の問題 [#1069404][CR1069404]
 
 たとえば、 `h1` `CSSStyleSheet` \ (Cssom api \) で追加されたスタイルは、以前は編集できませんでした。  スタイルは、[ **スタイル** ] ウィンドウで編集できるようになりました。  
 
-:::image type="complex" source="../../media/2020/06/css-in-js.msft.png" alt-text="CSSStyleSheet によって追加された h1 スタイルの background プロパティをピンクからライトブルーに変更する" lightbox="../../media/2020/06/css-in-js.msft.png":::
+:::image type="complex" source="../../media/2020/06/css-in-js.msft.png" alt-text="実験的機能" lightbox="../../media/2020/06/css-in-js.msft.png":::
    `background` `h1` From からに追加されたスタイルのプロパティを変更 `CSSStyleSheet` `pink` `lightblue` します。
 :::image-end:::  
 
@@ -218,7 +218,7 @@ Chromium の問題 [#1073903][CR1073903]、 [#1083214][CR1083214]、 [#1083797][
 * アプリのショートカットアイコンが 96 x 96 ピクセルより小さい  
 * アプリのショートカットアイコンとマニフェストアイコンは、(アイコンが無視されているため) 四角形ではありません。  
 
-:::image type="complex" source="../../media/2020/06/app-shortcut-warnings.msft.png" alt-text="アプリのショートカットの警告" lightbox="../../media/2020/06/app-shortcut-warnings.msft.png":::
+:::image type="complex" source="../../media/2020/06/app-shortcut-warnings.msft.png" alt-text="実験的機能" lightbox="../../media/2020/06/app-shortcut-warnings.msft.png":::
    アプリのショートカットの警告  
 :::image-end:::  
 
@@ -228,7 +228,7 @@ Chromium の問題 [#955497][CR955497]
 
 [**要素**] パネルの**計算**ウィンドウは、すべてのビューポートサイズのウィンドウとして一貫して表示されるようになりました。  以前は、DevTools ビューポートの幅が狭い場合に、[**スタイル**] ウィンドウ内にマージされた**計算**ウィンドウ。  
 
-:::image type="complex" source="../../media/2020/06/computed-pane.msft.png" alt-text="DevTools が限定されている場合でも、計算ウィンドウは個別のウィンドウとして表示されます" lightbox="../../media/2020/06/computed-pane.msft.png":::
+:::image type="complex" source="../../media/2020/06/computed-pane.msft.png" alt-text="実験的機能" lightbox="../../media/2020/06/computed-pane.msft.png":::
    この **ウィンドウは、** devtools が限定されている場合でも、個別のウィンドウとして常に表示されます。
 :::image-end:::  
 
@@ -245,7 +245,7 @@ Chromium の問題 [#1071432][CR1071432]
 
 [ソースパネルエディター][DevtoolsSourcesEditCssJavascript]で選択なしでコピーまたは切り取りを実行すると、devtools で現在のコンテンツの行がコピーまたは切り取りられます。  
 
-:::image type="complex" source="../../media/2020/06/line-wise-cut.msft.png" alt-text="カーソルが行5の最後にある状態で、DevTools の pen.js から行全体をコピーし、Visual Studio コードを貼り付けます。" lightbox="../../media/2020/06/line-wise-cut.msft.png":::
+:::image type="complex" source="../../media/2020/06/line-wise-cut.msft.png" alt-text="実験的機能" lightbox="../../media/2020/06/line-wise-cut.msft.png":::
    カーソルが5行目の最後にある状態で、DevTools の **pen.js** から行全体をコピーし、 [Visual Studio コード][VSCode]を貼り付けます。
 :::image-end:::  
 
@@ -259,7 +259,7 @@ Chromium の問題 [#800028][CR800028]
 
 たとえば、前の例で `hello` は、グループの同様のチェックマークがオフになっているにもかかわらず、DevTools がメッセージのグループ **化** を解除しました。  これで、 `hello` メッセージはグループ解除されます。  
 
-:::image type="complex" source="../../media/2020/06/ungroup-similar.msft.png" alt-text="[グループ類似] がオフの場合、hello メッセージはグループ解除されます。" lightbox="../../media/2020/06/ungroup-similar.msft.png":::
+:::image type="complex" source="../../media/2020/06/ungroup-similar.msft.png" alt-text="実験的機能" lightbox="../../media/2020/06/ungroup-similar.msft.png":::
    [ **グループ類似]** がオフの場合、メッセージはグループ解除 `hello` されます。
 :::image-end:::  
 
@@ -271,7 +271,7 @@ Chromium の問題 [#1082963][CR1082963]
 
 コンソール設定で **選択されたコンテキストのみ** の設定が保持されるようになりました。  以前は、DevTools を閉じてもう一度開くたびに、設定はリセットされました。  この変更により、設定動作は、他の本体の設定オプションと一貫性が保たれます。  
 
-:::image type="complex" source="../../media/2020/06/selected-context.msft.png" alt-text="選択されたコンテキストのみの設定" lightbox="../../media/2020/06/selected-context.msft.png":::
+:::image type="complex" source="../../media/2020/06/selected-context.msft.png" alt-text="実験的機能" lightbox="../../media/2020/06/selected-context.msft.png":::
    **選択されたコンテキストのみ** の設定  
 :::image-end:::  
 
@@ -283,7 +283,7 @@ Chromium の問題 [#1055875][CR1055875]
 
 [JavaScript コンパイルキャッシュ情報][V8DevCodeCaching] が、常に [パフォーマンス] パネルの [概要] タブに表示されるようになりました。  以前は、コードキャッシュが行われなかった場合、DevTools でコードキャッシュに関連するものは表示されませんでした。  
 
-:::image type="complex" source="../../media/2020/06/js-compilation-cache.msft.png" alt-text="JavaScript コンパイルキャッシュ情報" lightbox="../../media/2020/06/js-compilation-cache.msft.png":::
+:::image type="complex" source="../../media/2020/06/js-compilation-cache.msft.png" alt-text="実験的機能" lightbox="../../media/2020/06/js-compilation-cache.msft.png":::
    JavaScript コンパイルキャッシュ情報  
 :::image-end:::  
 
@@ -293,7 +293,7 @@ Chromium の問題 [#912581][CR912581]
 
 [ **パフォーマンス** ] パネルでは、録画が開始されたタイミングに基づいてルーラーに時間が表示されます。  これで、ユーザーが移動する記録のタイミングが変更されました。これで、DevTools でナビゲーションに対するルーラーの時間が表示されるようになりました。  
 
-:::image type="complex" source="../../media/2020/06/nav-timing.msft.png" alt-text="[パフォーマンス] パネルでのナビゲーションのタイミングの調整" lightbox="../../media/2020/06/nav-timing.msft.png":::
+:::image type="complex" source="../../media/2020/06/nav-timing.msft.png" alt-text="実験的機能" lightbox="../../media/2020/06/nav-timing.msft.png":::
    [ **パフォーマンス** ] パネルでのナビゲーションのタイミングの調整  
 :::image-end:::  
 
@@ -305,7 +305,7 @@ Chromium の問題 [#974550][CR974550]
 
 [ **ソース** ] パネルには、ブレークポイント、条件付きブレークポイント、および logpoints の新しいデザインが用意されています。  ブレークポイントは、 [Visual Studio コード][VSCode] と [visual studio][VS]と同様に、赤い円で表されます。  条件付きブレークポイントと logpoints を区別するためにアイコンが追加されます。  
 
-:::image type="complex" source="../../media/2020/06/breakpoints.msft.png" alt-text="ブレークポイント" lightbox="../../media/2020/06/breakpoints.msft.png":::
+:::image type="complex" source="../../media/2020/06/breakpoints.msft.png" alt-text="実験的機能" lightbox="../../media/2020/06/breakpoints.msft.png":::
    ブレークポイント  
 :::image-end:::  
 
