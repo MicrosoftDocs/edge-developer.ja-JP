@@ -28,7 +28,7 @@ ms.locfileid: "11015462"
 
 <span data-ttu-id="e95d9-112">Microsoft Edge DevTools チームは、Chrome DevTools チームと Chromium コミュニティと連携して、新しい CSS grid のデバッグ機能を DevTools に追加します。</span><span class="sxs-lookup"><span data-stu-id="e95d9-112">The Microsoft Edge DevTools team is collaborating with the Chrome DevTools team and Chromium community to add new CSS grid debugging features to DevTools.</span></span>  <span data-ttu-id="e95d9-113">これで、グリッド線の番号、グリッドのギャップ、拡張グリッド線をページ内のオーバーレイとして表示できるようになりました。</span><span class="sxs-lookup"><span data-stu-id="e95d9-113">You are now able to display grid line numbers, grid gaps, and extended grid lines as an on-page overlay.</span></span>  <span data-ttu-id="e95d9-114">さらに、グリッドツールの機能がさらに向上しました。</span><span class="sxs-lookup"><span data-stu-id="e95d9-114">Plus, more improvements to the grid tools are coming soon.</span></span>  
 
-:::image type="complex" source="../../media/2020/06/experiments-grid.msft.png" alt-text="CSS grid のデバッグ機能" lightbox="../../media/2020/06/experiments-grid.msft.png":::
+:::image type="complex" source="../../media/2020/06/experiments-grid.msft.png" alt-text="実験的機能" lightbox="../../media/2020/06/experiments-grid.msft.png":::
    <span data-ttu-id="e95d9-116">CSS grid のデバッグ機能</span><span class="sxs-lookup"><span data-stu-id="e95d9-116">CSS grid debugging features</span></span>
 :::image-end:::  
 
@@ -47,7 +47,7 @@ ms.locfileid: "11015462"
 
 <span data-ttu-id="e95d9-123">ネットワーク**コンソール**を使用して、[ネットワークログ][DevtoolsNetworkIndexLogActivity]の要求に対して**編集と再生**を使用できるようになりました。</span><span class="sxs-lookup"><span data-stu-id="e95d9-123">You are now able to use **Edit and Replay** on requests in the [Network Log][DevtoolsNetworkIndexLogActivity] using the **Network Console**.</span></span>  
 
-:::image type="complex" source="../../media/2020/06/experiments-network-console-edit-and-replay.msft.png" alt-text="ネットワークコンソールを使用して NetworkLog で要求を編集して再生する" lightbox="../../media/2020/06/experiments-network-console-edit-and-replay.msft.png":::
+:::image type="complex" source="../../media/2020/06/experiments-network-console-edit-and-replay.msft.png" alt-text="実験的機能" lightbox="../../media/2020/06/experiments-network-console-edit-and-replay.msft.png":::
    <span data-ttu-id="e95d9-125">**ネットワークコンソール**を使用して[networklog][DevtoolsNetworkIndexLogActivity]で要求を編集して再生する</span><span class="sxs-lookup"><span data-stu-id="e95d9-125">Edit and Replay a request in the [NetworkLog][DevtoolsNetworkIndexLogActivity] with the **Network Console**</span></span>  
 :::image-end:::  
 
@@ -55,7 +55,7 @@ ms.locfileid: "11015462"
 
 <span data-ttu-id="e95d9-128">また、 **ネットワークコンソール** を使用して、devtools から直接 HTTP 要求を作成して送信することもできます。</span><span class="sxs-lookup"><span data-stu-id="e95d9-128">You may also use the **Network Console** to create and send HTTP requests directly from the DevTools.</span></span>  
 
-:::image type="complex" source="../../media/2020/06/experiments-network-console.msft.png" alt-text="ネットワークコンソールパネル" lightbox="../../media/2020/06/experiments-network-console.msft.png":::
+:::image type="complex" source="../../media/2020/06/experiments-network-console.msft.png" alt-text="実験的機能" lightbox="../../media/2020/06/experiments-network-console.msft.png":::
    <span data-ttu-id="e95d9-130">**ネットワークコンソール**パネル</span><span class="sxs-lookup"><span data-stu-id="e95d9-130">The **Network Console** panel</span></span>  
 :::image-end:::  
 
@@ -73,13 +73,13 @@ ms.locfileid: "11015462"
 
 <span data-ttu-id="e95d9-136">[**ネットワーク**] パネルの [**タイミング**] タブに、サービスワーカーイベントが表示されるようになりました `respondWith` 。</span><span class="sxs-lookup"><span data-stu-id="e95d9-136">The **Timing** tab of the **Network** panel now includes `respondWith` service worker events.</span></span>  <span data-ttu-id="e95d9-137">`respondWith`サービスワーカーイベントは、 `fetch` `respondWith` ハンドラーの promise が決済された時点までのサービスワーカーイベントハンドラーの開始時刻からの時間を示し `fetch` ます。</span><span class="sxs-lookup"><span data-stu-id="e95d9-137">The `respondWith` service worker event shows the duration from the time immediately before the service worker `fetch` event handler starts running to the time when the `respondWith` promise of the `fetch` handler is settled.</span></span>  
 
-:::image type="complex" source="../../media/2020/06/timing-tab.msft.png" alt-text="[ネットワーク] パネルの [タイミング] タブにある [サービスワーカーイベント]" lightbox="../../media/2020/06/timing-tab.msft.png":::
+:::image type="complex" source="../../media/2020/06/timing-tab.msft.png" alt-text="実験的機能" lightbox="../../media/2020/06/timing-tab.msft.png":::
    <span data-ttu-id="e95d9-139">[ `respondWith` **ネットワーク**] パネルの [**タイミング**] タブのサービスワーカーイベント</span><span class="sxs-lookup"><span data-stu-id="e95d9-139">The `respondWith` service worker event in the **Timing** tab of the **Network** panel</span></span>  
 :::image-end:::  
 
 <span data-ttu-id="e95d9-140">[ **返信の受信** ] を展開して、、、、などの返信の追加情報を表示し `fetch` `CacheStorageCacheName` `serviceWorkerResponseSource` `ResponseTime` ます。</span><span class="sxs-lookup"><span data-stu-id="e95d9-140">Expand **Response received** to see additional information from the `fetch` response like `CacheStorageCacheName`, `serviceWorkerResponseSource`, and `ResponseTime`.</span></span>  
 
-:::image type="complex" source="../../media/2020/06/timing-tab2.msft.png" alt-text="[返信の受信] を展開して、フェッチ応答から追加情報を確認する" lightbox="../../media/2020/06/timing-tab2.msft.png":::
+:::image type="complex" source="../../media/2020/06/timing-tab2.msft.png" alt-text="実験的機能" lightbox="../../media/2020/06/timing-tab2.msft.png":::
    <span data-ttu-id="e95d9-142">[**返信の受信**] を展開して、応答から追加情報を確認する `fetch`</span><span class="sxs-lookup"><span data-stu-id="e95d9-142">Expand **Response received** to see additional information from the `fetch` response</span></span>  
 :::image-end:::  
 
@@ -93,7 +93,7 @@ ms.locfileid: "11015462"
 
 <span data-ttu-id="e95d9-147">[webhint][WebhintMain] は、アクセシビリティ、クロスブラウザーの互換性、セキュリティ、パフォーマンス、pwas、web サイトのその他の一般的な web 開発の問題に関するフィードバックをリアルタイムで提供するオープンソースツールです。</span><span class="sxs-lookup"><span data-stu-id="e95d9-147">[webhint][WebhintMain] is an open-source tool that provides real-time feedback on the accessibility, cross-browser compatibility, security, performance, PWAs, and other common web development issues of websites.</span></span>  <span data-ttu-id="e95d9-148">これで、[ [問題][DevtoolsIssues] ] パネルに webhint のフィードバックが表示されるようになります。</span><span class="sxs-lookup"><span data-stu-id="e95d9-148">You are now able to see webhint feedback in the [Issues][DevtoolsIssues] panel.</span></span>  
 
-:::image type="complex" source="../../media/2020/06/experiments-webhint.msft.png" alt-text="[問題] パネルでの webhint のフィードバック" lightbox="../../media/2020/06/experiments-webhint.msft.png":::
+:::image type="complex" source="../../media/2020/06/experiments-webhint.msft.png" alt-text="実験的機能" lightbox="../../media/2020/06/experiments-webhint.msft.png":::
    <span data-ttu-id="e95d9-150">[問題] パネルでの webhint のフィードバック</span><span class="sxs-lookup"><span data-stu-id="e95d9-150">webhint feedback in the Issues panel</span></span>  
 :::image-end:::  
 
@@ -112,7 +112,7 @@ ms.locfileid: "11015462"
 
 <span data-ttu-id="e95d9-157">通常、 **要素** や **ネットワーク** などのツールは、devtools のメイン \ (トップ) パネルでのみ開くことができます。</span><span class="sxs-lookup"><span data-stu-id="e95d9-157">Normally, tools such as **Elements** and **Network** may only be opened in the main \(top\) panel of DevTools.</span></span>  <span data-ttu-id="e95d9-158">同様に、 **3D ビュー** や **問題** などのツールは、devtools のドローワ \ (ボトム \) パネルでのみ開くことができます。</span><span class="sxs-lookup"><span data-stu-id="e95d9-158">Similarly, tools such as **3D View** and **Issues** may only be opened in the drawer \(bottom\) panel of DevTools.</span></span>  <span data-ttu-id="e95d9-159">これで、[上] と [下] パネルの間でツールを移動して、DevTools のレイアウトをカスタマイズできるようになりました。</span><span class="sxs-lookup"><span data-stu-id="e95d9-159">You are now able to customize your DevTools layout by moving tools between the top and bottom panels.</span></span>  
 
-:::image type="complex" source="../../media/2020/06/experiments-move-panels.msft.png" alt-text="パネル間でタブを移動する" lightbox="../../media/2020/06/experiments-move-panels.msft.png":::
+:::image type="complex" source="../../media/2020/06/experiments-move-panels.msft.png" alt-text="実験的機能" lightbox="../../media/2020/06/experiments-move-panels.msft.png":::
    <span data-ttu-id="e95d9-161">パネル間でタブを移動する</span><span class="sxs-lookup"><span data-stu-id="e95d9-161">Moving tabs between panels</span></span>  
 :::image-end:::  
 
@@ -125,13 +125,13 @@ ms.locfileid: "11015462"
 
 <span data-ttu-id="e95d9-165">Microsoft Edge 83 および84では、[イニシエーター] 列のツールチップが表示されます。これにより、 [ネットワークログ][DevtoolsNetworkIndexLogActivity] には、水平スクロールバーが表示されます。</span><span class="sxs-lookup"><span data-stu-id="e95d9-165">In Microsoft Edge 83 and 84, tooltips for the Initiator column, which shows the cause of the resource request, in the [Network Log][DevtoolsNetworkIndexLogActivity] displayed with a horizontal scrollbar.</span></span>  <span data-ttu-id="e95d9-166">要求を開始したコールスタックを表示できるのは、ヒントを水平方向にスクロールすることだけです。</span><span class="sxs-lookup"><span data-stu-id="e95d9-166">You were only able to see the call stack that initiated the request by scrolling horizontally in the tooltip.</span></span>  
 
-:::image type="complex" source="../../media/2020/06/initiator-tooltip-84.msft.png" alt-text="Microsoft Edge 84 のイニシエーターのヒント" lightbox="../../media/2020/06/initiator-tooltip-84.msft.png":::
+:::image type="complex" source="../../media/2020/06/initiator-tooltip-84.msft.png" alt-text="実験的機能" lightbox="../../media/2020/06/initiator-tooltip-84.msft.png":::
    <span data-ttu-id="e95d9-168">Microsoft Edge 84 のイニシエーターのヒント</span><span class="sxs-lookup"><span data-stu-id="e95d9-168">The Initiator tooltip in Microsoft Edge 84</span></span>  
 :::image-end:::  
 
 <span data-ttu-id="e95d9-169">Microsoft Edge 85 以降では、水平方向にスクロールしなくても、ツールヒントでイニシエーターのコールスタックを確認できるようになりました。</span><span class="sxs-lookup"><span data-stu-id="e95d9-169">Starting with Microsoft Edge 85, you are now able to see the Initiator call stack in the tooltip without scrolling horizontally.</span></span>  
 
-:::image type="complex" source="../../media/2020/06/initiator-tooltip-85.msft.png" alt-text="Microsoft Edge 85 のイニシエーターのヒント" lightbox="../../media/2020/06/initiator-tooltip-85.msft.png":::
+:::image type="complex" source="../../media/2020/06/initiator-tooltip-85.msft.png" alt-text="実験的機能" lightbox="../../media/2020/06/initiator-tooltip-85.msft.png":::
    <span data-ttu-id="e95d9-171">Microsoft Edge 85 のイニシエーターのヒント</span><span class="sxs-lookup"><span data-stu-id="e95d9-171">The Initiator tooltip in Microsoft Edge 85</span></span>
 :::image-end:::  
 
@@ -149,7 +149,7 @@ ms.locfileid: "11015462"
 
 <span data-ttu-id="e95d9-180">たとえば、 `h1` `CSSStyleSheet` \ (Cssom api \) で追加されたスタイルは、以前は編集できませんでした。</span><span class="sxs-lookup"><span data-stu-id="e95d9-180">For example, the `h1` styles added with `CSSStyleSheet` \(CSSOM APIs\) were not editable previously.</span></span>  <span data-ttu-id="e95d9-181">スタイルは、[ **スタイル** ] ウィンドウで編集できるようになりました。</span><span class="sxs-lookup"><span data-stu-id="e95d9-181">The styles are editable now in the **Styles** pane.</span></span>  
 
-:::image type="complex" source="../../media/2020/06/css-in-js.msft.png" alt-text="CSSStyleSheet によって追加された h1 スタイルの background プロパティをピンクからライトブルーに変更する" lightbox="../../media/2020/06/css-in-js.msft.png":::
+:::image type="complex" source="../../media/2020/06/css-in-js.msft.png" alt-text="実験的機能" lightbox="../../media/2020/06/css-in-js.msft.png":::
    <span data-ttu-id="e95d9-183">`background` `h1` From からに追加されたスタイルのプロパティを変更 `CSSStyleSheet` `pink` `lightblue` します。</span><span class="sxs-lookup"><span data-stu-id="e95d9-183">Changing the `background` property of the `h1` styles added with `CSSStyleSheet` from `pink` to `lightblue`.</span></span>
 :::image-end:::  
 
@@ -218,7 +218,7 @@ ms.locfileid: "11015462"
 * <span data-ttu-id="e95d9-209">アプリのショートカットアイコンが 96 x 96 ピクセルより小さい</span><span class="sxs-lookup"><span data-stu-id="e95d9-209">The app shortcut icons are smaller than 96x96 pixels</span></span>  
 * <span data-ttu-id="e95d9-210">アプリのショートカットアイコンとマニフェストアイコンは、(アイコンが無視されているため) 四角形ではありません。</span><span class="sxs-lookup"><span data-stu-id="e95d9-210">The app shortcut icons and manifest icons are not square \(since the icons are ignored\)</span></span>  
 
-:::image type="complex" source="../../media/2020/06/app-shortcut-warnings.msft.png" alt-text="アプリのショートカットの警告" lightbox="../../media/2020/06/app-shortcut-warnings.msft.png":::
+:::image type="complex" source="../../media/2020/06/app-shortcut-warnings.msft.png" alt-text="実験的機能" lightbox="../../media/2020/06/app-shortcut-warnings.msft.png":::
    <span data-ttu-id="e95d9-212">アプリのショートカットの警告</span><span class="sxs-lookup"><span data-stu-id="e95d9-212">App shortcut warnings</span></span>  
 :::image-end:::  
 
@@ -228,7 +228,7 @@ ms.locfileid: "11015462"
 
 <span data-ttu-id="e95d9-215">[**要素**] パネルの**計算**ウィンドウは、すべてのビューポートサイズのウィンドウとして一貫して表示されるようになりました。</span><span class="sxs-lookup"><span data-stu-id="e95d9-215">The **Computed** pane in the **Elements** panel now displays consistently as a pane across all viewport sizes.</span></span>  <span data-ttu-id="e95d9-216">以前は、DevTools ビューポートの幅が狭い場合に、[**スタイル**] ウィンドウ内にマージされた**計算**ウィンドウ。</span><span class="sxs-lookup"><span data-stu-id="e95d9-216">Previously the **Computed** pane merged inside the **Styles** pane when the width of the DevTools viewport was narrow.</span></span>  
 
-:::image type="complex" source="../../media/2020/06/computed-pane.msft.png" alt-text="DevTools が限定されている場合でも、計算ウィンドウは個別のウィンドウとして表示されます" lightbox="../../media/2020/06/computed-pane.msft.png":::
+:::image type="complex" source="../../media/2020/06/computed-pane.msft.png" alt-text="実験的機能" lightbox="../../media/2020/06/computed-pane.msft.png":::
    <span data-ttu-id="e95d9-218">この **ウィンドウは、** devtools が限定されている場合でも、個別のウィンドウとして常に表示されます。</span><span class="sxs-lookup"><span data-stu-id="e95d9-218">The **Computed** pane consistently displays as a separate pane even when the DevTools are narrow.</span></span>
 :::image-end:::  
 
@@ -245,7 +245,7 @@ ms.locfileid: "11015462"
 
 <span data-ttu-id="e95d9-225">[ソースパネルエディター][DevtoolsSourcesEditCssJavascript]で選択なしでコピーまたは切り取りを実行すると、devtools で現在のコンテンツの行がコピーまたは切り取りられます。</span><span class="sxs-lookup"><span data-stu-id="e95d9-225">When performing copy or cut with no selection in the [Sources panel editor][DevtoolsSourcesEditCssJavascript], DevTools copies or cuts the current line of content.</span></span>  
 
-:::image type="complex" source="../../media/2020/06/line-wise-cut.msft.png" alt-text="カーソルが行5の最後にある状態で、DevTools の pen.js から行全体をコピーし、Visual Studio コードを貼り付けます。" lightbox="../../media/2020/06/line-wise-cut.msft.png":::
+:::image type="complex" source="../../media/2020/06/line-wise-cut.msft.png" alt-text="実験的機能" lightbox="../../media/2020/06/line-wise-cut.msft.png":::
    <span data-ttu-id="e95d9-227">カーソルが5行目の最後にある状態で、DevTools の **pen.js** から行全体をコピーし、 [Visual Studio コード][VSCode]を貼り付けます。</span><span class="sxs-lookup"><span data-stu-id="e95d9-227">With the cursor at the end of Line 5, copying the whole line from **pen.js** in the DevTools and pasting in [Visual Studio Code][VSCode].</span></span>
 :::image-end:::  
 
@@ -259,7 +259,7 @@ ms.locfileid: "11015462"
 
 <span data-ttu-id="e95d9-233">たとえば、前の例で `hello` は、グループの同様のチェックマークがオフになっているにもかかわらず、DevTools がメッセージのグループ **化** を解除しました。</span><span class="sxs-lookup"><span data-stu-id="e95d9-233">For example, previously, DevTools did not ungroup the `hello` messages even though **Group similar** is unchecked.</span></span>  <span data-ttu-id="e95d9-234">これで、 `hello` メッセージはグループ解除されます。</span><span class="sxs-lookup"><span data-stu-id="e95d9-234">Now, the `hello` messages are ungrouped.</span></span>  
 
-:::image type="complex" source="../../media/2020/06/ungroup-similar.msft.png" alt-text="[グループ類似] がオフの場合、hello メッセージはグループ解除されます。" lightbox="../../media/2020/06/ungroup-similar.msft.png":::
+:::image type="complex" source="../../media/2020/06/ungroup-similar.msft.png" alt-text="実験的機能" lightbox="../../media/2020/06/ungroup-similar.msft.png":::
    <span data-ttu-id="e95d9-236">[ **グループ類似]** がオフの場合、メッセージはグループ解除 `hello` されます。</span><span class="sxs-lookup"><span data-stu-id="e95d9-236">When **Group similar** is unchecked, the `hello` messages are ungrouped</span></span>
 :::image-end:::  
 
@@ -271,7 +271,7 @@ ms.locfileid: "11015462"
 
 <span data-ttu-id="e95d9-240">コンソール設定で **選択されたコンテキストのみ** の設定が保持されるようになりました。</span><span class="sxs-lookup"><span data-stu-id="e95d9-240">The **Selected context only** settings in Console Settings is now persisted.</span></span>  <span data-ttu-id="e95d9-241">以前は、DevTools を閉じてもう一度開くたびに、設定はリセットされました。</span><span class="sxs-lookup"><span data-stu-id="e95d9-241">Previously the settings were reset every time you closed and reopened DevTools.</span></span>  <span data-ttu-id="e95d9-242">この変更により、設定動作は、他の本体の設定オプションと一貫性が保たれます。</span><span class="sxs-lookup"><span data-stu-id="e95d9-242">The change makes the setting behavior consistent with other Console Settings options.</span></span>  
 
-:::image type="complex" source="../../media/2020/06/selected-context.msft.png" alt-text="選択されたコンテキストのみの設定" lightbox="../../media/2020/06/selected-context.msft.png":::
+:::image type="complex" source="../../media/2020/06/selected-context.msft.png" alt-text="実験的機能" lightbox="../../media/2020/06/selected-context.msft.png":::
    <span data-ttu-id="e95d9-244">**選択されたコンテキストのみ** の設定</span><span class="sxs-lookup"><span data-stu-id="e95d9-244">**Selected context only** setting</span></span>  
 :::image-end:::  
 
@@ -283,7 +283,7 @@ ms.locfileid: "11015462"
 
 <span data-ttu-id="e95d9-248">[JavaScript コンパイルキャッシュ情報][V8DevCodeCaching] が、常に [パフォーマンス] パネルの [概要] タブに表示されるようになりました。</span><span class="sxs-lookup"><span data-stu-id="e95d9-248">[JavaScript compilation cache information][V8DevCodeCaching] is now always displayed in the Summary tab of the Performance panel.</span></span>  <span data-ttu-id="e95d9-249">以前は、コードキャッシュが行われなかった場合、DevTools でコードキャッシュに関連するものは表示されませんでした。</span><span class="sxs-lookup"><span data-stu-id="e95d9-249">Previously, DevTools did not show anything related to code caching if code caching did not happen.</span></span>  
 
-:::image type="complex" source="../../media/2020/06/js-compilation-cache.msft.png" alt-text="JavaScript コンパイルキャッシュ情報" lightbox="../../media/2020/06/js-compilation-cache.msft.png":::
+:::image type="complex" source="../../media/2020/06/js-compilation-cache.msft.png" alt-text="実験的機能" lightbox="../../media/2020/06/js-compilation-cache.msft.png":::
    <span data-ttu-id="e95d9-251">JavaScript コンパイルキャッシュ情報</span><span class="sxs-lookup"><span data-stu-id="e95d9-251">JavaScript compilation cache information</span></span>  
 :::image-end:::  
 
@@ -293,7 +293,7 @@ ms.locfileid: "11015462"
 
 <span data-ttu-id="e95d9-254">[ **パフォーマンス** ] パネルでは、録画が開始されたタイミングに基づいてルーラーに時間が表示されます。</span><span class="sxs-lookup"><span data-stu-id="e95d9-254">The **Performance** panel used to show times in the rulers based on when the recording started.</span></span>  <span data-ttu-id="e95d9-255">これで、ユーザーが移動する記録のタイミングが変更されました。これで、DevTools でナビゲーションに対するルーラーの時間が表示されるようになりました。</span><span class="sxs-lookup"><span data-stu-id="e95d9-255">The timing has now changed for recordings where the user navigates, where DevTools now shows ruler times relative to the navigation instead.</span></span>  
 
-:::image type="complex" source="../../media/2020/06/nav-timing.msft.png" alt-text="[パフォーマンス] パネルでのナビゲーションのタイミングの調整" lightbox="../../media/2020/06/nav-timing.msft.png":::
+:::image type="complex" source="../../media/2020/06/nav-timing.msft.png" alt-text="実験的機能" lightbox="../../media/2020/06/nav-timing.msft.png":::
    <span data-ttu-id="e95d9-257">[ **パフォーマンス** ] パネルでのナビゲーションのタイミングの調整</span><span class="sxs-lookup"><span data-stu-id="e95d9-257">Align navigation timing in **Performance** panel</span></span>  
 :::image-end:::  
 
@@ -305,7 +305,7 @@ ms.locfileid: "11015462"
 
 <span data-ttu-id="e95d9-261">[ **ソース** ] パネルには、ブレークポイント、条件付きブレークポイント、および logpoints の新しいデザインが用意されています。</span><span class="sxs-lookup"><span data-stu-id="e95d9-261">The **Sources** panel has new designs for breakpoints, conditional breakpoints, and logpoints.</span></span>  <span data-ttu-id="e95d9-262">ブレークポイントは、 [Visual Studio コード][VSCode] と [visual studio][VS]と同様に、赤い円で表されます。</span><span class="sxs-lookup"><span data-stu-id="e95d9-262">Breakpoints are represented by a red circle, just like [Visual Studio Code][VSCode] and [Visual Studio][VS].</span></span>  <span data-ttu-id="e95d9-263">条件付きブレークポイントと logpoints を区別するためにアイコンが追加されます。</span><span class="sxs-lookup"><span data-stu-id="e95d9-263">Icons are added to differentiate conditional breakpoints and logpoints.</span></span>  
 
-:::image type="complex" source="../../media/2020/06/breakpoints.msft.png" alt-text="ブレークポイント" lightbox="../../media/2020/06/breakpoints.msft.png":::
+:::image type="complex" source="../../media/2020/06/breakpoints.msft.png" alt-text="実験的機能" lightbox="../../media/2020/06/breakpoints.msft.png":::
    <span data-ttu-id="e95d9-265">ブレークポイント</span><span class="sxs-lookup"><span data-stu-id="e95d9-265">Breakpoints</span></span>  
 :::image-end:::  
 
