@@ -78,7 +78,7 @@
           href: devtools-guide-chromium/experimental-features.md
         - name: IE モード
           href: devtools-guide-chromium/ie-mode.md
-        - name: 3D View (3D ビュー)
+        - name: 3D ビュー
           href: devtools-guide-chromium/3d-view/index.md
         - name: 初心者向け DevTools
           items:
@@ -96,10 +96,8 @@
               href: devtools-guide-chromium/coverage/index.md
             - name: アニメーションの検査
               href: devtools-guide-chromium/inspect-styles/animations.md
-            - name: ガイド
-              items:
-                - name: DevTools を強制的に印刷プレビュー モードにする
-                  href: devtools-guide-chromium/css/print-preview.md
+            - name: DevTools を強制的に印刷プレビュー モードにする
+              href: devtools-guide-chromium/css/print-preview.md
         - name: Console
           items:
             - name: 概要
@@ -118,7 +116,7 @@
               href: devtools-guide-chromium/console/live-expressions.md
         - name: ネットワーク
           items:
-            - name: はじめに
+            - name: 使ってみる
               href: devtools-guide-chromium/network/index.md
             - name: ネットワーク問題ガイド
               href: devtools-guide-chromium/network/issues.md
@@ -152,19 +150,19 @@
               href: devtools-guide-chromium/device-mode/testing-other-browsers.md
             - name: ガイド
               items:
-                - name: ユーザー エージェント文字列の上書き
+                - name: ユーザー エージェント文字列を上書きする
                   href: devtools-guide-chromium/device-mode/override-user-agent.md
-                - name: 位置情報の上書き
+                - name: 位置情報を上書きする
                   href: devtools-guide-chromium/device-mode/geolocation.md
-                - name: デバイスの向きをシミュレートする
+                - name: デバイスの向きをシミュレーションする
                   href: devtools-guide-chromium/device-mode/orientation.md
         - name: DOM
           items:
-            - name: はじめに
+            - name: 使ってみる
               href: devtools-guide-chromium/dom/index.md
         - name: JavaScript
           items:
-            - name: はじめに
+            - name: 使ってみる
               href: devtools-guide-chromium/javascript/index.md
             - name: ブレークポイントを使用してコードを一時停止する
               href: devtools-guide-chromium/javascript/breakpoints.md
@@ -188,7 +186,7 @@
                   href: devtools-guide-chromium/javascript/disable.md
         - name: パフォーマンス
           items:
-            - name: はじめに
+            - name: 使ってみる
               href: devtools-guide-chromium/evaluate-performance/index.md
             - name: Web サイトの速度を最適化する
               href: devtools-guide-chromium/speed/get-started.md
@@ -210,7 +208,7 @@
               items:
                 - name: フォーカスされている要素を追跡する
                   href: devtools-guide-chromium/accessibility/focus.md
-                - name: 淡色/濃色カラーのスキームシミュレーション
+                - name: 濃色/淡色のスキーム シミュレーション
                   href: devtools-guide-chromium/accessibility/preferred-color-scheme-simulation.md
                 - name: モーション削減をシミュレーションする
                   href: devtools-guide-chromium/accessibility/reduced-motion-simulation.md
@@ -362,13 +360,13 @@
     - name: 拡張機能 (Chromium)
       href: extensions-chromium/index.md
       items:
-        - name: 作業の開始
+        - name: 開始するには
           items:
             - name: 拡張機能のアーキテクチャ
               href: extensions-chromium/getting-started/index.md
-            - name: 拡張機能のチュートリアルを作成する パート 1
+            - name: 拡張機能のチュートリアルを作成する (パート 1)
               href: extensions-chromium/getting-started/part1-simple-extension.md
-            - name: 拡張機能のチュートリアルを作成する パート 2
+            - name: 拡張機能のチュートリアルを作成する (パート 2)
               href: extensions-chromium/getting-started/part2-content-scripts.md
             - name: 拡張機能をサイドロードする
               href: extensions-chromium/getting-started/extension-sideloading.md
@@ -376,6 +374,8 @@
           items:
             - name: Microsoft Edge のポート Chromium の拡張機能
               href: extensions-chromium/developer-guide/port-chrome-extension.md
+            - name: 拡張機能をマニフェスト v2 から v3 に移行する
+              href: extensions-chromium/developer-guide/migrate-your-extension-from-manifest-v2-to-v3.md
             - name: 拡張機能を配布するための代替方法
               href: extensions-chromium/developer-guide/alternate-distribution-options.md
             - name: ネイティブ メッセージング
