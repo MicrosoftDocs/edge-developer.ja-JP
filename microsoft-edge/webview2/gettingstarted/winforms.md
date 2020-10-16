@@ -3,17 +3,17 @@ description: WebView2 for WinForms アプリの概要ガイド
 title: WebView2 for WinForms アプリの概要
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 10/14/2020
+ms.date: 10/15/2020
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: WebView2、WebView2、WebView、webview、winforms アプリ、winforms、edge、CoreWebView2、browser control、edge html、はじめに、作業の開始、.NET、windows フォーム
-ms.openlocfilehash: e9451d4bfafacf78f723be75379e57400d0ba914
-ms.sourcegitcommit: 61cc15d2fc89aee3e09cec48ef1e0e5bbf8d289a
+ms.openlocfilehash: 90d25816b862d6096856faf439436706c98f7dbe
+ms.sourcegitcommit: 442de63da52d00c6dc27fa08ccdb736534127566
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "11119081"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "11120089"
 ---
 # Windows フォームでの WebView2 の概要 (プレビュー)  
 
@@ -299,7 +299,7 @@ async void InitializeAsync()
 ## 次のステップ 
 
 * WebView2's 機能の包括的な例については、 [WebView2Samples リポジトリ](https://github.com/MicrosoftEdge/WebView2Samples) をチェックアウトする
-* Api についての詳細情報を参照するための[api 参照](/dotnet/api/microsoft.web.webview2.winformswebview2)
+* Api についての詳細情報を参照するための[api 参照](/dotnet/api/microsoft.web.webview2.winforms.webview2)
 * WebView2 の詳細については、 [WebView2 のリソース](../index.md#next-steps) の一覧をチェックアウトする
 
 

@@ -3,17 +3,17 @@ description: WebView2 アプリで複雑なシナリオで JavaScript を使用�
 title: WebView2 アプリで JavaScript を使う
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 10/14/2020
+ms.date: 10/15/2020
 ms.topic: how-to
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Host、browser control、edge html
-ms.openlocfilehash: f6e59acb0c4bf8ad5357aba87e0359d3b103ed63
-ms.sourcegitcommit: 61cc15d2fc89aee3e09cec48ef1e0e5bbf8d289a
+ms.openlocfilehash: 0fd4e33b7cfc16dcd19a850147b6efbca8922a8e
+ms.sourcegitcommit: 442de63da52d00c6dc27fa08ccdb736534127566
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "11119067"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "11120071"
 ---
 # 拡張シナリオでの、WebView での JavaScript の使用  
 
@@ -29,8 +29,8 @@ WebView アプリで JavaScript の埋め込みを開始するには、次の関
 
 | API  | 説明  |
 |:--- |:--- |  
-| [すべてのユーティリティ][Webview2ReferenceWpf09515MicrosoftWebExecutescriptasync] | WebView コントロールで JavaScript を実行します。 詳細については、「はじめに」チュートリアルを参照してください。 |
-| [Ondocumentの使い方非同期][Webview2ReferenceWin3209538Icorewebview2Addscripttoexecuteondocumentcreated] | ドキュメントオブジェクトモデル \ (DOM \) を作成するときに実行されます。 |
+| [すべてのユーティリティ][Webview2ReferenceWpfMicrosoftWebExecutescriptasync] | WebView コントロールで JavaScript を実行します。 詳細については、「はじめに」チュートリアルを参照してください。 |
+| [Ondocumentの使い方非同期][Webview2ReferenceWin32Icorewebview2Addscripttoexecuteondocumentcreated] | ドキュメントオブジェクトモデル \ (DOM \) を作成するときに実行されます。 |
       
 ## シナリオ: 専用スクリプトファイルを実行する  
 
@@ -130,7 +130,7 @@ WebView アプリで JavaScript の埋め込みを開始するには、次の関
 [Webview2GettingstartedWpf]: ../gettingstarted/wpf.md "WPF での WebView2 の概要 (プレビュー) |Microsoft ドキュメント"  
 [Webview2MainGettingStarted]: ../index.md#getting-started "はじめに-Microsoft Edge WebView2 の概要 (プレビュー) |Microsoft ドキュメント"  
 [Webview2MainNextSteps]: ../index.md#next-steps "次の手順-Microsoft Edge WebView2 の概要 (プレビュー) |Microsoft ドキュメント"  
-[Webview2ReferenceWin3209538Icorewebview2Addscripttoexecuteondocumentcreated]: ../reference/win32/0-9-538/icorewebview2.md#addscripttoexecuteondocumentcreated "AddScriptToExecuteOnDocumentCreated-0.9.579 ICoreWebView2 |Microsoft ドキュメント"  
-[Webview2ReferenceWpf09515MicrosoftWebExecutescriptasync]: ../reference/wpf/0-9-515/microsoft-web-webview2-wpf-webview2.md#executescriptasync "WebView2 クラス | WebView2 クラスの場合は、このサイトをお選びください。Microsoft ドキュメント"  
+[Webview2ReferenceWin32Icorewebview2Addscripttoexecuteondocumentcreated]: /microsoft-edge/webview2/reference/win32/icorewebview2#addscripttoexecuteondocumentcreated "AddScriptToExecuteOnDocumentCreated-0.9.579 ICoreWebView2 |Microsoft ドキュメント"  
+[Webview2ReferenceWpfMicrosoftWebExecutescriptasync]: /dotnet/api/microsoft.web.webview2.wpf.webview2.executescriptasync "WebView2.Exe(文字列) メソッド (WebView2) | cuteScriptAsync) |Microsoft ドキュメント"  
 
 [GithubMicrosoftedgeWebview2samples]: https://github.com/MicrosoftEdge/WebView2Samples "WebView2 サンプル-MicrosoftEdge/WebView2Samples |GitHub"  
