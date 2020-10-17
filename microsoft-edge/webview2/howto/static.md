@@ -8,24 +8,18 @@ ms.topic: how-to
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Host、browser control、edge html
-ms.openlocfilehash: a25bd85c8a6b17bdf8712c954eb7b7cc28738eb2
-ms.sourcegitcommit: 442de63da52d00c6dc27fa08ccdb736534127566
+ms.openlocfilehash: 880e9ed809dc268ee0b30b6ee3b5996711f54300
+ms.sourcegitcommit: 0ded671914aae231493f418dd7645a04361dca1b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/16/2020
-ms.locfileid: "11120074"
+ms.locfileid: "11120125"
 ---
-# WebView2 loader ライブラリを静的にリンクする方法  
+# WebView2 loader ライブラリの静的なリンク  
 
-## コンテキスト  
+多数のファイルのパッケージではなく、1つの実行可能ファイルを使用してアプリケーションを配布することもできます。 1つの実行可能ファイルを作成するか、パッケージのサイズを小さくするには、WebView2Loader ファイルを静的にリンクする必要があります。 WebView2 SDK には、ヘッダーファイルとファイルが含まれてい `WebView2Loader.dll` `IDL` ます。 `WebView2Loader.dll` は、デバイス上の WebView2 Runtime、または Microsoft Edge の非永続的なチャネルをアプリが見つけるのに役立ちます。  
 
-WebView2Loader.dll とは何ですか?  
-
-*   WebView2 SDK には、ヘッダーファイルとファイルが含まれてい `WebView2Loader.dll.` `IDL` ます。 `WebView2Loader.dll` は、アプリがデバイス上の WebView2 Runtime (または非永続的な Microsoft Edge チャネル) を見つけるのに役立ちます。  
-
-1つのランタイムを備えたアプリについては、次の手順を `WebView2Loader.dll` 実行し**Procedure**ます。  
-
-## 手順  
+を出荷したくないアプリの `WebView2Loader.dll` 場合は、次の手順を実行します。  
 
 1.  `.vcxproj`Visual Studio コードなどのテキストエディターでアプリのプロジェクトファイルを開きます。  
     
@@ -33,50 +27,44 @@ WebView2Loader.dll とは何ですか?
     > `.vcproj`プロジェクトファイルは非表示のファイルである可能性があります。これは Visual Studio では表示されません。  コマンドラインを使用して、非表示のファイルを検索します。  
     
 1.  WebView2 NuGet パッケージターゲットファイルが含まれているコードのセクションを見つけます。  次の図では、コード内の場所が強調表示されています。  
-    
-    :::image type="complex" source="./media/inserthere.png" alt-text="プロジェクトファイルのコードスニペット" lightbox="./media/inserthere.png"::: 
-       プロジェクトファイルのコードスニペット  
+
+    :::image type="complex" source="./media/inserthere.png" alt-text="プロジェクトファイルのコードスニペット" lightbox="./media/inserthere.png":::
+       プロジェクトファイルのコードスニペット   
     :::image-end:::  
-    
+  
 1.  次のコードスニペットをコピーして、が含まれている場所に貼り付け `Microsoft.Web.WebView2.targets` ます。  
 
-    > [!NOTE]
-    > たとえば、次のコードブロックの後に追加します。  
-    > 
-    > ```csharp
-    > <Import Project="..\packages\Microsoft.Web.WebView2.0.9.579-prerelease\build\native\Microsoft.Web.WebView2.targets" Condition="Exists('..\packages\Microsoft.Web.WebView2.0.9.579-prerelease\build\native\Microsoft.Web.WebView2.targets')" />
-    > ```  
-    
-    ```csharp
-    <PropertyGroup> <WebView2LoaderPreference>Static</WebView2LoaderPreference> </PropertyGroup>
+    ```xaml
+    <PropertyGroup> 
+        <WebView2LoaderPreference>Static</WebView2LoaderPreference> 
+    </PropertyGroup>
     ```
-    
-    :::image type="complex" source="./media/staticlib.png" alt-text="プロジェクトファイルのコードスニペット" lightbox="./media/staticlib.png"::: 
+      
+    :::image type="complex" source="./media/staticlib.png" alt-text="プロジェクトファイルのコードスニペット" lightbox="./media/staticlib.png":::
        挿入されたコードスニペット  
     :::image-end:::  
     
-1.  アプリのビルド構成のその他の依存関係を編集します。  まず、すべてのタグを確認し `<AdditionalDependencies>` ます。  
-1.  `version.lib`アプリのファイル内のすべてのビルド構成に、追加の依存関係として追加し `.vcxproj` ます。  
+1.  アプリのビルド構成のその他の依存関係を編集します。  まず、すべてのタグを確認し `<AdditionalDependencies>` ます。 それぞれについて、 `version.lib` ファイル内のすべての異なるビルド構成に対して、追加の依存関係として追加し `.vcxproj` ます。  
     
-    :::image type="complex" source="./media/versionlib.png" alt-text="プロジェクトファイルのコードスニペット" lightbox="./media/versionlib.png"::: 
+    :::image type="complex" source="./media/versionlib.png" alt-text="プロジェクトファイルのコードスニペット" lightbox="./media/versionlib.png":::
        追加 `version.lib` 先 `ItemDefinitionGroups`  
     :::image-end:::  
     
     > [!NOTE]
-    > WebView2 チームは、今後のリリースで追加の依存関係の手順を自動化することを目的としています。  
+    > WebView2 チームは、今後のリリースで追加の依存関係を自動的に追加することを目的としています。  
     
-アプリをコンパイルして展開します。  正しい.  
+1. アプリをコンパイルして実行します。
 
-## 関連項目  
+### WebView2 チームと連絡を取り合う  
+
+[!INCLUDE [contact WebView team note](../includes/contact-webview-team-note.md)]  
+
+### 関連項目  
 
 *   WebView2 の使用を開始するには、 [WebView2 の概要ガイド][Webview2MainGettingStarted]に移動します。  
 *   WebView2 機能の包括的な例については、GitHub on [WebView2Samples][GithubMicrosoftedgeWebview2samples] を参照してください。
 *   WebView2 Api の詳細については、 [api リファレンス][Webview2ApiReference]に移動してください。
 *   WebView2 の詳細については、 [WebView2 リソース][Webview2MainNextSteps]を参照してください。
-
-## WebView2 チームと連絡を取り合う  
-
-[!INCLUDE [contact WebView team note](../includes/contact-webview-team-note.md)]  
 
 <!-- links -->  
 
