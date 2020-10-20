@@ -3,142 +3,136 @@ description: Microsoft Edge WebView2 control を使用して Win32、.NET、UWP 
 title: Microsoft Edge WebView2 コントロール
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 08/10/2020
+ms.date: 10/19/2020
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、CoreWebView2、ICoreWebView2Host、browser control、edge html、Windows フォーム、WinForms、WPF、.NET、WinUI、Project レユニオン
-ms.openlocfilehash: d3294ce72237a323113ed9f7c8f31e37af43f5e6
-ms.sourcegitcommit: efdc6369c48942bfa39e45c713300ed70f0e3655
+ms.openlocfilehash: 412ff112ab0eed69b63316b2916f849a32196363
+ms.sourcegitcommit: af91bfc3e6d8afc51f0fbbc0fe392262f424225c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "11013745"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "11120376"
 ---
-# <span data-ttu-id="d4534-104">Microsoft Edge WebView2 の概要 (プレビュー)</span><span class="sxs-lookup"><span data-stu-id="d4534-104">Introduction to Microsoft Edge WebView2 (Preview)</span></span>  
+# <span data-ttu-id="70188-104">Microsoft Edge WebView2 の概要</span><span class="sxs-lookup"><span data-stu-id="70188-104">Introduction to Microsoft Edge WebView2</span></span>  
 
-<span data-ttu-id="d4534-105">Microsoft Edge WebView2 コントロールを使うと、ネイティブアプリケーションで web 技術 (HTML、CSS、JavaScript \) を埋め込むことができます。</span><span class="sxs-lookup"><span data-stu-id="d4534-105">The Microsoft Edge WebView2 control enables you to embed web technologies \(HTML, CSS, and JavaScript\) in your native applications.</span></span>  <span data-ttu-id="d4534-106">WebView2 コントロールは、 [Microsoft Edge (Chromium)][MicrosoftedgeinsiderMain] をレンダリングエンジンとして使用して、ネイティブアプリケーションで web コンテンツを表示します。</span><span class="sxs-lookup"><span data-stu-id="d4534-106">The WebView2 control uses [Microsoft Edge (Chromium)][MicrosoftedgeinsiderMain] as the rendering engine to display the web content in native applications.</span></span>  <span data-ttu-id="d4534-107">WebView2 を使用すると、ネイティブアプリケーションのさまざまな場所に web コードを埋め込むことができます。または、1つの WebView 内でネイティブアプリケーション全体をビルドすることもできます。</span><span class="sxs-lookup"><span data-stu-id="d4534-107">With WebView2, you may embed web code in different parts of your native application, or build the entire native application within a single WebView.</span></span>  <span data-ttu-id="d4534-108">WebView2 アプリケーションの作成を開始する方法については、「使用 [を開始する」を参照し](#getting-started)てください。</span><span class="sxs-lookup"><span data-stu-id="d4534-108">For information on how to start building a WebView2 application, see [Get Started](#getting-started).</span></span>  
+<span data-ttu-id="70188-105">Microsoft Edge WebView2 コントロールを使うと、ネイティブアプリケーションで web 技術 (HTML、CSS、JavaScript \) を埋め込むことができます。</span><span class="sxs-lookup"><span data-stu-id="70188-105">The Microsoft Edge WebView2 control enables you to embed web technologies \(HTML, CSS, and JavaScript\) in your native applications.</span></span>  <span data-ttu-id="70188-106">WebView2 コントロールは、 [Microsoft Edge (Chromium)][MicrosoftedgeinsiderMain] をレンダリングエンジンとして使用して、ネイティブアプリケーションで web コンテンツを表示します。</span><span class="sxs-lookup"><span data-stu-id="70188-106">The WebView2 control uses [Microsoft Edge (Chromium)][MicrosoftedgeinsiderMain] as the rendering engine to display the web content in native applications.</span></span>  <span data-ttu-id="70188-107">WebView2 を使用すると、ネイティブアプリケーションのさまざまな場所に web コードを埋め込むことができます。または、1つの WebView 内でネイティブアプリケーション全体をビルドすることもできます。</span><span class="sxs-lookup"><span data-stu-id="70188-107">With WebView2, you may embed web code in different parts of your native application, or build the entire native application within a single WebView.</span></span>  <span data-ttu-id="70188-108">WebView2 アプリケーションの作成を開始する方法については、「 [はじめ](#getting-started)に」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="70188-108">For information on how to start building a WebView2 application, navigate to [Get Started](#getting-started).</span></span>  
 
 :::image type="complex" source="./media/WebView2/whatwebview.png" alt-text="WebView とは" lightbox="./media/WebView2/whatwebview.png":::
-   <span data-ttu-id="d4534-110">WebView とは</span><span class="sxs-lookup"><span data-stu-id="d4534-110">What is WebView</span></span>  
+   <span data-ttu-id="70188-110">WebView とは</span><span class="sxs-lookup"><span data-stu-id="70188-110">What is WebView</span></span>  
 :::image-end:::  
 
-> [!NOTE]
-> <span data-ttu-id="d4534-111">WebView2 Preview は、早期にプロトタイプを形成し、API の形成に役立つフィードバックを収集することを目的としています。</span><span class="sxs-lookup"><span data-stu-id="d4534-111">The WebView2 Preview is intended for early prototyping and to gather feedback to help shape the API.</span></span>  <span data-ttu-id="d4534-112">変更内容が壊れる可能性があるため、実稼働アプリではプレビューを使用しないでください。</span><span class="sxs-lookup"><span data-stu-id="d4534-112">You should not use the preview in your production apps because there may be breaking changes.</span></span>  <span data-ttu-id="d4534-113">詳細については、「 [Webview2Releasenotes]」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="d4534-113">For more information, see [Webview2Releasenotes].</span></span>  
+## <span data-ttu-id="70188-111">ハイブリッドアプリケーションのアプローチ</span><span class="sxs-lookup"><span data-stu-id="70188-111">Hybrid application approach</span></span>  
 
-## <span data-ttu-id="d4534-114">ハイブリッドアプリケーションのアプローチ</span><span class="sxs-lookup"><span data-stu-id="d4534-114">Hybrid application approach</span></span>  
+<span data-ttu-id="70188-112">開発者は、多くの場合、web アプリケーションまたはネイティブアプリケーションの構築を決定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="70188-112">Developers often have to decide between building a web application or a native application.</span></span>  <span data-ttu-id="70188-113">意思決定は、リーチとパワーの間のトレードオフに対して行われます。</span><span class="sxs-lookup"><span data-stu-id="70188-113">The decision hinges on the trade-off between reach and power.</span></span>  <span data-ttu-id="70188-114">Web アプリケーションを使用すると広範なアクセスが可能になります。</span><span class="sxs-lookup"><span data-stu-id="70188-114">Web applications allow for a broad reach.</span></span>  <span data-ttu-id="70188-115">Web 開発者は、すべての異なるプラットフォームで、ほとんどのコードを再利用することができます。</span><span class="sxs-lookup"><span data-stu-id="70188-115">As a Web developer, you may reuse most, if not all of your code, across all different platforms.</span></span>  <span data-ttu-id="70188-116">ただし、ネイティブアプリケーションは、ネイティブプラットフォーム全体の機能を利用します。</span><span class="sxs-lookup"><span data-stu-id="70188-116">Native applications, however, utilize the capabilities of the entire native platform.</span></span>  
 
-<span data-ttu-id="d4534-115">開発者は、多くの場合、web アプリケーションまたはネイティブアプリケーションの構築を決定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="d4534-115">Developers often have to decide between building a web application or a native application.</span></span>  <span data-ttu-id="d4534-116">意思決定は、リーチとパワーの間のトレードオフに対して行われます。</span><span class="sxs-lookup"><span data-stu-id="d4534-116">The decision hinges on the trade-off between reach and power.</span></span>  <span data-ttu-id="d4534-117">Web アプリケーションを使用すると広範なアクセスが可能になります。</span><span class="sxs-lookup"><span data-stu-id="d4534-117">Web applications allow for a broad reach.</span></span>  <span data-ttu-id="d4534-118">Web 開発者は、すべての異なるプラットフォームで、ほとんどのコードを再利用することができます。</span><span class="sxs-lookup"><span data-stu-id="d4534-118">As a Web developer, you may reuse most, if not all of your code, across all different platforms.</span></span>  <span data-ttu-id="d4534-119">ただし、ネイティブアプリケーションは、ネイティブプラットフォーム全体の機能を利用します。</span><span class="sxs-lookup"><span data-stu-id="d4534-119">Native applications, however, utilize the capabilities of the entire native platform.</span></span>  
-
-:::image type="complex" source="./media/WebView2/webnative.png" alt-text="Web native" lightbox="./media/WebView2/webnative.png":::
-   <span data-ttu-id="d4534-121">Web native</span><span class="sxs-lookup"><span data-stu-id="d4534-121">Web native</span></span>  
+:::image type="complex" source="./media/WebView2/webnative.png" alt-text="WebView とは" lightbox="./media/WebView2/webnative.png":::
+   <span data-ttu-id="70188-118">Web native</span><span class="sxs-lookup"><span data-stu-id="70188-118">Web native</span></span>  
 :::image-end:::  
 
-<span data-ttu-id="d4534-122">ハイブリッドアプリケーションを使用すると、開発者は両方のメリットを享受できます。</span><span class="sxs-lookup"><span data-stu-id="d4534-122">Hybrid applications allow developers to enjoy the best of both worlds.</span></span>  <span data-ttu-id="d4534-123">ハイブリッドアプリケーションの開発者は、web プラットフォームの ubiquity と強み、およびネイティブプラットフォームの機能と機能を最大限に活用できます。</span><span class="sxs-lookup"><span data-stu-id="d4534-123">Hybrid application developers benefit from the ubiquity and strength of the web platform, and the power and full capabilities of the native platform.</span></span>  
+<span data-ttu-id="70188-119">ハイブリッドアプリケーションを使用すると、開発者は両方のメリットを享受できます。</span><span class="sxs-lookup"><span data-stu-id="70188-119">Hybrid applications allow developers to enjoy the best of both worlds.</span></span>  <span data-ttu-id="70188-120">ハイブリッドアプリケーションの開発者は、web プラットフォームの ubiquity と強み、およびネイティブプラットフォームの機能と機能を最大限に活用できます。</span><span class="sxs-lookup"><span data-stu-id="70188-120">Hybrid application developers benefit from the ubiquity and strength of the web platform, and the power and full capabilities of the native platform.</span></span>  
 
-## <span data-ttu-id="d4534-124">WebView2 の利点</span><span class="sxs-lookup"><span data-stu-id="d4534-124">WebView2 benefits</span></span>   
+## <span data-ttu-id="70188-121">WebView2 の利点</span><span class="sxs-lookup"><span data-stu-id="70188-121">WebView2 benefits</span></span>   
 
-:::image type="complex" source="./media/WebView2/webviewreasons.png" alt-text="WebView の理由" lightbox="./media/WebView2/webviewreasons.png":::
-   <span data-ttu-id="d4534-126">WebView の理由</span><span class="sxs-lookup"><span data-stu-id="d4534-126">WebView reasons</span></span>  
+:::image type="complex" source="./media/WebView2/webviewreasons.png" alt-text="WebView とは" lightbox="./media/WebView2/webviewreasons.png":::
+   <span data-ttu-id="70188-123">WebView の理由</span><span class="sxs-lookup"><span data-stu-id="70188-123">WebView reasons</span></span>  
 :::image-end:::  
 
 :::row:::
    :::column span="1":::
-      **<span data-ttu-id="d4534-127">Web エコシステム \ & のスキルセット</span><span class="sxs-lookup"><span data-stu-id="d4534-127">Web ecosystem \& skillset</span></span>**  
-      <span data-ttu-id="d4534-128">Web エコシステム内に存在する web プラットフォーム、ライブラリ、ツール、人材をすべて活用できます。</span><span class="sxs-lookup"><span data-stu-id="d4534-128">Utilize the entire web platform, libraries, tooling, and talent that exists within the web ecosystem.</span></span>  
+      **<span data-ttu-id="70188-124">Web エコシステム \ & のスキルセット</span><span class="sxs-lookup"><span data-stu-id="70188-124">Web ecosystem \& skillset</span></span>**  
+      <span data-ttu-id="70188-125">Web エコシステム内に存在する web プラットフォーム、ライブラリ、ツール、人材をすべて活用できます。</span><span class="sxs-lookup"><span data-stu-id="70188-125">Utilize the entire web platform, libraries, tooling, and talent that exists within the web ecosystem.</span></span>  
    :::column-end:::
    :::column span="1":::
-      **<span data-ttu-id="d4534-129">急速な革新</span><span class="sxs-lookup"><span data-stu-id="d4534-129">Rapid innovation</span></span>**  
-      <span data-ttu-id="d4534-130">Web 開発により、迅速な展開とイテレーションが可能になります。</span><span class="sxs-lookup"><span data-stu-id="d4534-130">Web development allows for faster deployment and iteration.</span></span>  
+      **<span data-ttu-id="70188-126">急速な革新</span><span class="sxs-lookup"><span data-stu-id="70188-126">Rapid innovation</span></span>**  
+      <span data-ttu-id="70188-127">Web 開発により、迅速な展開とイテレーションが可能になります。</span><span class="sxs-lookup"><span data-stu-id="70188-127">Web development allows for faster deployment and iteration.</span></span>  
    :::column-end:::
    :::column span="1":::
-      **<span data-ttu-id="d4534-131">Windows 7、8、10のサポート</span><span class="sxs-lookup"><span data-stu-id="d4534-131">Windows 7, 8, 10 support</span></span>**  
-      <span data-ttu-id="d4534-132">Windows 7、8、10での一貫したユーザーエクスペリエンスのサポート。</span><span class="sxs-lookup"><span data-stu-id="d4534-132">Support for a consistent user experience across Windows 7, 8, and 10.</span></span>  
+      **<span data-ttu-id="70188-128">Windows 7、8、10のサポート</span><span class="sxs-lookup"><span data-stu-id="70188-128">Windows 7, 8, 10 support</span></span>**  
+      <span data-ttu-id="70188-129">Windows 7、8、10での一貫したユーザーエクスペリエンスのサポート。</span><span class="sxs-lookup"><span data-stu-id="70188-129">Support for a consistent user experience across Windows 7, 8, and 10.</span></span>  
    :::column-end:::
-:::row-end:::
+:::row-end:::  
 :::row:::
    :::column span="1":::
-      **<span data-ttu-id="d4534-133">ネイティブ機能</span><span class="sxs-lookup"><span data-stu-id="d4534-133">Native capabilities</span></span>**  
-      <span data-ttu-id="d4534-134">ネイティブ Api の完全なセットにアクセスします。</span><span class="sxs-lookup"><span data-stu-id="d4534-134">Access the full set of Native APIs.</span></span>  
+      **<span data-ttu-id="70188-130">ネイティブ機能</span><span class="sxs-lookup"><span data-stu-id="70188-130">Native capabilities</span></span>**  
+      <span data-ttu-id="70188-131">ネイティブ Api の完全なセットにアクセスします。</span><span class="sxs-lookup"><span data-stu-id="70188-131">Access the full set of Native APIs.</span></span>  
    :::column-end:::
    :::column span="1":::
-      **<span data-ttu-id="d4534-135">コード共有</span><span class="sxs-lookup"><span data-stu-id="d4534-135">Code-sharing</span></span>**  
-      <span data-ttu-id="d4534-136">Web コードをコードベースに追加することで、複数のプラットフォーム間での再利用を高速化できます。</span><span class="sxs-lookup"><span data-stu-id="d4534-136">Add web code to your codebase allows for increased re-use across multiple platforms.</span></span>  
+      **<span data-ttu-id="70188-132">コード共有</span><span class="sxs-lookup"><span data-stu-id="70188-132">Code-sharing</span></span>**  
+      <span data-ttu-id="70188-133">Web コードをコードベースに追加することで、複数のプラットフォーム間での再利用を高速化できます。</span><span class="sxs-lookup"><span data-stu-id="70188-133">Add web code to your codebase allows for increased re-use across multiple platforms.</span></span>  
    :::column-end:::
    :::column span="1":::
-      **<span data-ttu-id="d4534-137">Microsoft サポート</span><span class="sxs-lookup"><span data-stu-id="d4534-137">Microsoft support</span></span>**  
-      <span data-ttu-id="d4534-138">Microsoft は、WebView2 が GA としてリリースされたときにサポートを提供し、新しい機能要求を追加します。</span><span class="sxs-lookup"><span data-stu-id="d4534-138">Microsoft provides support and adds new feature requests when WebView2 is release as GA.</span></span>  
+      **<span data-ttu-id="70188-134">Microsoft サポート</span><span class="sxs-lookup"><span data-stu-id="70188-134">Microsoft support</span></span>**  
+      <span data-ttu-id="70188-135">Microsoft は、WebView2 が GA としてリリースされたときにサポートを提供し、新しい機能要求を追加します。</span><span class="sxs-lookup"><span data-stu-id="70188-135">Microsoft provides support and adds new feature requests when WebView2 is release as GA.</span></span>  
    :::column-end:::
-:::row-end:::
+:::row-end:::  
 :::row:::
    :::column span="1":::
-      **<span data-ttu-id="d4534-139">Evergreen 分布</span><span class="sxs-lookup"><span data-stu-id="d4534-139">Evergreen distribution</span></span>**  
-      <span data-ttu-id="d4534-140">最新バージョンの Chromium を使用して、定期的なプラットフォームの更新とセキュリティ更新プログラムを利用します。</span><span class="sxs-lookup"><span data-stu-id="d4534-140">Rely on an up-to-date version of Chromium with regular platform updates and security patches.</span></span>  
+      **<span data-ttu-id="70188-136">Evergreen 分布</span><span class="sxs-lookup"><span data-stu-id="70188-136">Evergreen distribution</span></span>**  
+      <span data-ttu-id="70188-137">最新バージョンの Chromium を使用して、定期的なプラットフォームの更新とセキュリティ更新プログラムを利用します。</span><span class="sxs-lookup"><span data-stu-id="70188-137">Rely on an up-to-date version of Chromium with regular platform updates and security patches.</span></span>  
    :::column-end:::
    :::column span="1":::
-      <span data-ttu-id="d4534-141">**固定** \ (近日公開)</span><span class="sxs-lookup"><span data-stu-id="d4534-141">**Fixed** \(coming soon\)</span></span>  
-      <span data-ttu-id="d4534-142">アプリケーションに Chromium ビットをパッケージ化することを選択します。</span><span class="sxs-lookup"><span data-stu-id="d4534-142">Choose to package the Chromium bits in your application.</span></span>  
+      <span data-ttu-id="70188-138">**固定** \ (近日公開)</span><span class="sxs-lookup"><span data-stu-id="70188-138">**Fixed** \(coming soon\)</span></span>  
+      <span data-ttu-id="70188-139">アプリケーションに Chromium ビットをパッケージ化することを選択します。</span><span class="sxs-lookup"><span data-stu-id="70188-139">Choose to package the Chromium bits in your application.</span></span>  
    :::column-end:::
    :::column span="1":::
-      **<span data-ttu-id="d4534-143">段階的導入</span><span class="sxs-lookup"><span data-stu-id="d4534-143">Incremental adoption</span></span>**  
-      <span data-ttu-id="d4534-144">アプリケーションに web コンポーネントを追加します。</span><span class="sxs-lookup"><span data-stu-id="d4534-144">Add web components piece by piece to your application.</span></span>  
+      **<span data-ttu-id="70188-140">段階的導入</span><span class="sxs-lookup"><span data-stu-id="70188-140">Incremental adoption</span></span>**  
+      <span data-ttu-id="70188-141">アプリケーションに web コンポーネントを追加します。</span><span class="sxs-lookup"><span data-stu-id="70188-141">Add web components piece by piece to your application.</span></span>  
    :::column-end:::
-:::row-end:::
+:::row-end:::  
 
-## <span data-ttu-id="d4534-145">開始するには</span><span class="sxs-lookup"><span data-stu-id="d4534-145">Getting started</span></span>  
+## <span data-ttu-id="70188-142">開始するには</span><span class="sxs-lookup"><span data-stu-id="70188-142">Getting started</span></span>  
 
-<span data-ttu-id="d4534-146">WebView2 コントロールを使用してアプリケーションをビルドしてテストするには、 [Microsoft Edge (Chromium)][MicrosoftedgeinsiderDownload] と [WebView2 SDK][NugetPackagesMicrosoftWebWebView2] の両方をインストールする必要があります。</span><span class="sxs-lookup"><span data-stu-id="d4534-146">To build and test your application using the WebView2 control, you need to have both [Microsoft Edge (Chromium)][MicrosoftedgeinsiderDownload] and the [WebView2 SDK][NugetPackagesMicrosoftWebWebView2] installed.</span></span>  <span data-ttu-id="d4534-147">開始するには、次のいずれかのオプションを選択します。</span><span class="sxs-lookup"><span data-stu-id="d4534-147">Select one of the following options to get started.</span></span>  
+<span data-ttu-id="70188-143">WebView2 コントロールを使用してアプリケーションをビルドしてテストするには、 [Microsoft Edge (Chromium)][MicrosoftedgeinsiderDownload] と [WebView2 SDK][NugetPackagesMicrosoftWebWebView2] の両方をインストールする必要があります。</span><span class="sxs-lookup"><span data-stu-id="70188-143">To build and test your application using the WebView2 control, you need to have both [Microsoft Edge (Chromium)][MicrosoftedgeinsiderDownload] and the [WebView2 SDK][NugetPackagesMicrosoftWebWebView2] installed.</span></span>  <span data-ttu-id="70188-144">開始するには、次のいずれかのオプションを選択します。</span><span class="sxs-lookup"><span data-stu-id="70188-144">Select one of the following options to get started.</span></span>  
 
-*   [<span data-ttu-id="d4534-148">Win32 C/C + + の概要</span><span class="sxs-lookup"><span data-stu-id="d4534-148">Getting Started with Win32 C/C++</span></span>][Webview2GettingstartedWin32]  
-*   [<span data-ttu-id="d4534-149">WPF の概要</span><span class="sxs-lookup"><span data-stu-id="d4534-149">Getting Started with WPF</span></span>][Webview2GettingstartedWpf]  
-*   [<span data-ttu-id="d4534-150">WinForms の概要</span><span class="sxs-lookup"><span data-stu-id="d4534-150">Getting Started with WinForms</span></span>][Webview2GettingstartedWinforms]  
-*   [<span data-ttu-id="d4534-151">WinUI3 の概要</span><span class="sxs-lookup"><span data-stu-id="d4534-151">Getting Started with WinUI3</span></span>][Webview2GettingstartedWinui]  
+*   [<span data-ttu-id="70188-145">Win32 C/C + + の概要</span><span class="sxs-lookup"><span data-stu-id="70188-145">Getting Started with Win32 C/C++</span></span>][Webview2GettingstartedWin32]  
+*   [<span data-ttu-id="70188-146">WPF の概要</span><span class="sxs-lookup"><span data-stu-id="70188-146">Getting Started with WPF</span></span>][Webview2GettingstartedWpf]  
+*   [<span data-ttu-id="70188-147">WinForms の概要</span><span class="sxs-lookup"><span data-stu-id="70188-147">Getting Started with WinForms</span></span>][Webview2GettingstartedWinforms]  
+*   [<span data-ttu-id="70188-148">WinUI3 の概要</span><span class="sxs-lookup"><span data-stu-id="70188-148">Getting Started with WinUI3</span></span>][Webview2GettingstartedWinui]  
 
-<span data-ttu-id="d4534-152">[WebView2 サンプル][GithubMicrosoftedgeWebview2samples]リポジトリには、すべての WebView2 SDK 機能と API の使用パターンを示すサンプルが含まれています。</span><span class="sxs-lookup"><span data-stu-id="d4534-152">The [WebView2 Samples][GithubMicrosoftedgeWebview2samples] repository contains samples that demonstrate all of the WebView2 SDK features and API usage patterns.</span></span>  <span data-ttu-id="d4534-153">WebView2 SDK に追加された機能により、サンプルアプリケーションが更新されます。</span><span class="sxs-lookup"><span data-stu-id="d4534-153">As more features are added to the WebView2 SDK, the sample applications will be updated.</span></span>  
+<span data-ttu-id="70188-149">[WebView2 サンプル][GithubMicrosoftedgeWebview2samples]リポジトリには、すべての WebView2 SDK 機能と API の使用パターンを示すサンプルが含まれています。</span><span class="sxs-lookup"><span data-stu-id="70188-149">The [WebView2 Samples][GithubMicrosoftedgeWebview2samples] repository contains samples that demonstrate all of the WebView2 SDK features and API usage patterns.</span></span>  <span data-ttu-id="70188-150">WebView2 SDK に追加された機能により、サンプルアプリケーションが更新されます。</span><span class="sxs-lookup"><span data-stu-id="70188-150">As more features are added to the WebView2 SDK, the sample applications will be updated.</span></span>  
 
-## <span data-ttu-id="d4534-154">サポートされているプラットフォーム</span><span class="sxs-lookup"><span data-stu-id="d4534-154">Supported platforms</span></span>  
+## <span data-ttu-id="70188-151">サポートされているプラットフォーム</span><span class="sxs-lookup"><span data-stu-id="70188-151">Supported platforms</span></span>  
 
-<span data-ttu-id="d4534-155">開発者プレビューは、次のプログラミング環境で利用できます。</span><span class="sxs-lookup"><span data-stu-id="d4534-155">A developer preview is available on the following programming environments.</span></span>  
+<span data-ttu-id="70188-152">一般的な可用性 \ (GA) またはプレビューバージョンは、次のプログラミング環境で利用できます。</span><span class="sxs-lookup"><span data-stu-id="70188-152">A General Availability \(GA\) or Preview version is available on the following programming environments.</span></span>  
 
-*   <span data-ttu-id="d4534-156">Win32 C/c + +</span><span class="sxs-lookup"><span data-stu-id="d4534-156">Win32 C/C++</span></span>  
-*   <span data-ttu-id="d4534-157">.NET Framework 4.6.2 以降</span><span class="sxs-lookup"><span data-stu-id="d4534-157">.NET Framework 4.6.2 or later</span></span>  
-*   <span data-ttu-id="d4534-158">.NET Core 3.0 以降</span><span class="sxs-lookup"><span data-stu-id="d4534-158">.NET Core 3.0 or later</span></span>  
-*   [<span data-ttu-id="d4534-159">WinUI 3.0</span><span class="sxs-lookup"><span data-stu-id="d4534-159">WinUI 3.0</span></span>][UwpToolkitsWinui3]  
+*   <span data-ttu-id="70188-153">Win32 C/c + + \ (GA \)</span><span class="sxs-lookup"><span data-stu-id="70188-153">Win32 C/C++ \(GA\)</span></span>
+*   <span data-ttu-id="70188-154">.NET Framework 4.6.2 以降 \ (プレビュー \)</span><span class="sxs-lookup"><span data-stu-id="70188-154">.NET Framework 4.6.2 or later \(Preview\)</span></span> 
+*   <span data-ttu-id="70188-155">.NET Core 3.0 以降 \ (プレビュー \)</span><span class="sxs-lookup"><span data-stu-id="70188-155">.NET Core 3.0 or later \(Preview\)</span></span>
+*   <span data-ttu-id="70188-156">[WinUI 3.0][UwpToolkitsWinui3] \ (プレビュー \)</span><span class="sxs-lookup"><span data-stu-id="70188-156">[WinUI 3.0][UwpToolkitsWinui3] \(Preview\)</span></span>
 
-<span data-ttu-id="d4534-160">WebView2 アプリケーションは、次のバージョンの Windows で実行できます。</span><span class="sxs-lookup"><span data-stu-id="d4534-160">You are able to run WebView2 applications on the following versions of Windows.</span></span>  
+<span data-ttu-id="70188-157">WebView2 アプリケーションは、次のバージョンの Windows で実行できます。</span><span class="sxs-lookup"><span data-stu-id="70188-157">You are able to run WebView2 applications on the following versions of Windows.</span></span>  
 
-*   <span data-ttu-id="d4534-161">Windows 10</span><span class="sxs-lookup"><span data-stu-id="d4534-161">Windows 10</span></span>  
-*   <span data-ttu-id="d4534-162">Windows 8.1</span><span class="sxs-lookup"><span data-stu-id="d4534-162">Windows 8.1</span></span>  
-*   <span data-ttu-id="d4534-163">Windows 8</span><span class="sxs-lookup"><span data-stu-id="d4534-163">Windows 8</span></span>  
-*   <span data-ttu-id="d4534-164">Windows 7</span><span class="sxs-lookup"><span data-stu-id="d4534-164">Windows 7</span></span>  
-*   <span data-ttu-id="d4534-165">Windows Server 2019</span><span class="sxs-lookup"><span data-stu-id="d4534-165">Windows Server 2019</span></span>  
-*   <span data-ttu-id="d4534-166">Windows Server 2016</span><span class="sxs-lookup"><span data-stu-id="d4534-166">Windows Server 2016</span></span>  
-*   <span data-ttu-id="d4534-167">Windows Server 2012</span><span class="sxs-lookup"><span data-stu-id="d4534-167">Windows Server 2012</span></span>  
-*   <span data-ttu-id="d4534-168">Windows Server 2012R2</span><span class="sxs-lookup"><span data-stu-id="d4534-168">Windows Server 2012R2</span></span>  
-*   <span data-ttu-id="d4534-169">Windows Server 2008 R2</span><span class="sxs-lookup"><span data-stu-id="d4534-169">Windows Server 2008 R2</span></span>  
+*   <span data-ttu-id="70188-158">Windows 10</span><span class="sxs-lookup"><span data-stu-id="70188-158">Windows 10</span></span>  
+*   <span data-ttu-id="70188-159">Windows 8.1</span><span class="sxs-lookup"><span data-stu-id="70188-159">Windows 8.1</span></span>  
+*   <span data-ttu-id="70188-160">Windows 8</span><span class="sxs-lookup"><span data-stu-id="70188-160">Windows 8</span></span>  
+*   <span data-ttu-id="70188-161">Windows 7</span><span class="sxs-lookup"><span data-stu-id="70188-161">Windows 7</span></span>  
+*   <span data-ttu-id="70188-162">Windows Server 2019</span><span class="sxs-lookup"><span data-stu-id="70188-162">Windows Server 2019</span></span>  
+*   <span data-ttu-id="70188-163">Windows Server 2016</span><span class="sxs-lookup"><span data-stu-id="70188-163">Windows Server 2016</span></span>  
+*   <span data-ttu-id="70188-164">Windows Server 2012</span><span class="sxs-lookup"><span data-stu-id="70188-164">Windows Server 2012</span></span>  
+*   <span data-ttu-id="70188-165">Windows Server 2012R2</span><span class="sxs-lookup"><span data-stu-id="70188-165">Windows Server 2012R2</span></span>  
+*   <span data-ttu-id="70188-166">Windows Server 2008 R2</span><span class="sxs-lookup"><span data-stu-id="70188-166">Windows Server 2008 R2</span></span>  
 
-## <span data-ttu-id="d4534-170">次のステップ</span><span class="sxs-lookup"><span data-stu-id="d4534-170">Next steps</span></span>  
+## <span data-ttu-id="70188-167">次のステップ</span><span class="sxs-lookup"><span data-stu-id="70188-167">Next steps</span></span>  
 
-<span data-ttu-id="d4534-171">WebView2 アプリケーションを作成して展開する方法の詳細については、概念的なドキュメントと使い方ガイドを参照してください。</span><span class="sxs-lookup"><span data-stu-id="d4534-171">For more information on how to build and deploy WebView2 applications, review the conceptual documentation and how-to guides.</span></span>  
+<span data-ttu-id="70188-168">WebView2 アプリケーションを作成して展開する方法の詳細については、概念的なドキュメントと使い方ガイドを参照してください。</span><span class="sxs-lookup"><span data-stu-id="70188-168">For more information on how to build and deploy WebView2 applications, review the conceptual documentation and how-to guides.</span></span>  
 
-#### <span data-ttu-id="d4534-172">概念</span><span class="sxs-lookup"><span data-stu-id="d4534-172">Concepts</span></span>  
+#### <span data-ttu-id="70188-169">概念</span><span class="sxs-lookup"><span data-stu-id="70188-169">Concepts</span></span>  
 
-*   [<span data-ttu-id="d4534-173">WebView2 SDK のバージョンについて</span><span class="sxs-lookup"><span data-stu-id="d4534-173">Understand WebView2 SDK versions</span></span>][Webview2ConceptsVersioning]
-*   [<span data-ttu-id="d4534-174">WebView2 を使用したアプリケーションの配布</span><span class="sxs-lookup"><span data-stu-id="d4534-174">Distribution of applications using WebView2</span></span>][Webview2ConceptsDistribution]  
-*   [<span data-ttu-id="d4534-175">セキュリティで保護された WebView2 アプリケーションを開発するためのベストプラクティス</span><span class="sxs-lookup"><span data-stu-id="d4534-175">Best practices for developing secure WebView2 applications</span></span>][Webview2ConceptsSecurity]
-*   [<span data-ttu-id="d4534-176">WebView2 アプリケーションでユーザーデータフォルダーを管理する</span><span class="sxs-lookup"><span data-stu-id="d4534-176">Manage User Data Folder in WebView2 Applications</span></span>][Webview2ConceptsUserdatafolder]
+*   [<span data-ttu-id="70188-170">WebView2 SDK のバージョンについて</span><span class="sxs-lookup"><span data-stu-id="70188-170">Understand WebView2 SDK versions</span></span>][Webview2ConceptsVersioning]
+*   [<span data-ttu-id="70188-171">WebView2 を使用したアプリケーションの配布</span><span class="sxs-lookup"><span data-stu-id="70188-171">Distribution of applications using WebView2</span></span>][Webview2ConceptsDistribution]  
+*   [<span data-ttu-id="70188-172">セキュリティで保護された WebView2 アプリケーションを開発するためのベストプラクティス</span><span class="sxs-lookup"><span data-stu-id="70188-172">Best practices for developing secure WebView2 applications</span></span>][Webview2ConceptsSecurity]
+*   [<span data-ttu-id="70188-173">WebView2 アプリケーションでユーザーデータフォルダーを管理する</span><span class="sxs-lookup"><span data-stu-id="70188-173">Manage User Data Folder in WebView2 Applications</span></span>][Webview2ConceptsUserdatafolder]
  
-#### <span data-ttu-id="d4534-177">使い方ガイド</span><span class="sxs-lookup"><span data-stu-id="d4534-177">How-To guides</span></span>  
+#### <span data-ttu-id="70188-174">How-To ガイド</span><span class="sxs-lookup"><span data-stu-id="70188-174">How-To guides</span></span>  
 
-*   [<span data-ttu-id="d4534-178">WebView2 を使用してデバッグする方法</span><span class="sxs-lookup"><span data-stu-id="d4534-178">How to Debug with WebView2</span></span>][Webview2HowtoDebug]  
-*   [<span data-ttu-id="d4534-179">Microsoft Edge ドライバーを使用した WebView2 の自動化とテスト</span><span class="sxs-lookup"><span data-stu-id="d4534-179">Automating and testing WebView2 with Microsoft Edge Driver</span></span>][Webview2HowtoWebdriver]  
+*   [<span data-ttu-id="70188-175">WebView2 を使用してデバッグする方法</span><span class="sxs-lookup"><span data-stu-id="70188-175">How to Debug with WebView2</span></span>][Webview2HowtoDebug]  
+*   [<span data-ttu-id="70188-176">Microsoft Edge ドライバーを使用した WebView2 の自動化とテスト</span><span class="sxs-lookup"><span data-stu-id="70188-176">Automating and testing WebView2 with Microsoft Edge Driver</span></span>][Webview2HowtoWebdriver]  
 
-## <span data-ttu-id="d4534-180">Microsoft Edge WebView チームと連絡を取り合う</span><span class="sxs-lookup"><span data-stu-id="d4534-180">Getting in touch with the Microsoft Edge WebView team</span></span>  
+## <span data-ttu-id="70188-177">Microsoft Edge WebView チームと連絡を取り合う</span><span class="sxs-lookup"><span data-stu-id="70188-177">Getting in touch with the Microsoft Edge WebView team</span></span>  
 
 [!INCLUDE [contact WebView team note](./includes/contact-webview-team-note.md)]  
-
-> [!NOTE]
-> <span data-ttu-id="d4534-181">プレビュー中に収集されたデータにより、より良い製品を構築できます。</span><span class="sxs-lookup"><span data-stu-id="d4534-181">During the preview, the collected data helps build a better product.</span></span>  <span data-ttu-id="d4534-182">WebView2 データの収集をオフにするには、ブラウザーデータの収集に移動してオフにし `edge://settings/privacy` ます。</span><span class="sxs-lookup"><span data-stu-id="d4534-182">To turn off WebView2 data collection, go to `edge://settings/privacy` and turn off browser data collection.</span></span>  
 
 <!-- links -->  
 
@@ -146,13 +140,13 @@ ms.locfileid: "11013745"
 [Webview2ConceptsSecurity]: ./concepts/security.md "セキュリティで保護された WebView2 アプリケーションを開発するためのベストプラクティス |Microsoft ドキュメント"  
 [Webview2ConceptsUserdatafolder]: ./concepts/userdatafolder.md "ユーザーデータフォルダーの管理 |Microsoft ドキュメント"  
 [Webview2ConceptsVersioning]: ./concepts/versioning.md "WebView2 SDK のバージョンについて理解する |Microsoft ドキュメント"  
-[Webview2GettingstartedWin32]: ./gettingstarted/win32.md "WebView2 の概要 (開発者用プレビュー) |Microsoft ドキュメント"   
+[Webview2GettingstartedWin32]: ./gettingstarted/win32.md "WebView2 の概要 |Microsoft ドキュメント"   
 [Webview2GettingstartedWinforms]: ./gettingstarted/winforms.md "Windows フォームアプリでの WebView2 の概要 (プレビュー) |Microsoft ドキュメント"  
 [Webview2GettingstartedWinui]: ./gettingstarted/winui.md "WinUI3 での WebView2 の概要 (プレビュー) |Microsoft ドキュメント"  
 [Webview2GettingstartedWpf]: ./gettingstarted/wpf.md "WPF での WebView2 の概要 (プレビュー) |Microsoft ドキュメント"  
 [Webview2HowtoDebug]: ./howto/debug.md "WebView2 を使用してデバッグする方法 |Microsoft ドキュメント"  
 [Webview2HowtoWebdriver]: ./howto/webdriver.md "Microsoft Edge Driver での WebView2 の自動化とテスト |Microsoft ドキュメント"  
-[Webview2Releasenotes]: ./releasenotes.md "Release NOTES for WebView2 SDK |Microsoft ドキュメント"  
+[Webview2Releasenotes]: ./releasenotes.md "WebView2 SDK のリリースノート |Microsoft ドキュメント"  
 
 [UwpToolkitsWinui3]: ./gettingstarted/winui.md "Windows UI ライブラリ3プレビュー 2 (2020 年7月) |Microsoft ドキュメント"  
 
