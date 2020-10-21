@@ -3,16 +3,16 @@ description: '[ネットワークの条件] タブを開き、[自動的に選�
 title: Microsoft Edge DevTools からユーザーエージェント文字列を上書きする
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 09/01/2020
+ms.date: 10/19/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: ecaa1247824e5c3acb07a2c631feab30d25aba8d
-ms.sourcegitcommit: 63e6d34ff483f3b419a0e271a3513874e6ce6c79
+ms.openlocfilehash: befbe186a5992c651f877a18f1c3232bf212394a
+ms.sourcegitcommit: 99eee78698dc95b2a3fa638a5b063ef449899cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "10992926"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "11124951"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -32,22 +32,22 @@ ms.locfileid: "10992926"
 
 Microsoft Edge DevTools から [ユーザーエージェント][MDNUserAgent] 文字列を上書きするには、次の操作を行います。  
 
-1.  `Control` + `Shift` + `P` コマンドメニューを開くには、\ (Windows \) または `Command` + `Shift` + `P` \ **Command Menu**(macOS \) を押します。  
+1.  `Control` + `Shift` + `P` コマンドメニューを開くには、\ (Windows, Linux \) または `Command` + `Shift` + `P` \ **Command Menu**(macOS \) を選択します。  
     
     :::image type="complex" source="../media/device-mode-console-command-menu.msft.png" alt-text="コマンドメニュー" lightbox="../media/device-mode-console-command-menu.msft.png":::
        **コマンドメニュー**  
     :::image-end:::  
     
-1.  「 `network conditions` **ネットワーク**条件の表示」を選択し、を押して [ネットワークの `Enter` **条件** ] タブを開きます。  
+1.  「 `network conditions` **ネットワーク条件を表示**」を選択して、「 `Enter` **ネットワーク条件** 」タブを選択します。  
 1.  [ **ユーザーエージェント** ] セクションで、 **[自動的に選択** する] チェックボックスをオフにします。  
     
-    :::image type="complex" source="../media/device-mode-console-network-conditions-user-agent-select-automatically-deselected.msft.png" alt-text="自動選択を無効にする" lightbox="../media/device-mode-console-network-conditions-user-agent-select-automatically-deselected.msft.png":::
+    :::image type="complex" source="../media/device-mode-console-network-conditions-user-agent-select-automatically-deselected.msft.png" alt-text="コマンドメニュー" lightbox="../media/device-mode-console-network-conditions-user-agent-select-automatically-deselected.msft.png":::
        **自動選択**を無効にする  
     :::image-end:::  
     
 1.  リストからユーザーエージェント文字列を選択するか、独自のカスタム文字列を入力します。  
-
-## Microsoft Edge DevTools チームと連絡を取り合う  
+    
+## Microsoft Edge DevTools チームと連絡を取る  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 

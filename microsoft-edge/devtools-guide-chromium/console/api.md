@@ -3,16 +3,16 @@ description: コンソール API を使って、コンソールにメッセー�
 title: 本体の API リファレンス
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 09/01/2020
+ms.date: 10/19/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 684c0a1e42357ceca0a0295859e64447251f191a
-ms.sourcegitcommit: 63e6d34ff483f3b419a0e271a3513874e6ce6c79
+ms.openlocfilehash: 38fb3ee2345530775423ac3ec8e53e0d8de76eaf
+ms.sourcegitcommit: 99eee78698dc95b2a3fa638a5b063ef449899cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "10993255"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "11125287"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -30,7 +30,7 @@ ms.locfileid: "10993255"
 
 # 本体の API リファレンス  
 
-コンソール API メソッドを使って、JavaScript からコンソールにメッセージを書き込みます。  このトピックの対話的な紹介については、「 [コンソールへのメッセージのログ記録の][DevtoolsConsoleLog]概要」を参照してください。  このような便利なメソッド、 `debug()` または `monitorEvents()` **コンソール** ウィンドウからのみ利用できる便利なメソッドについては、「 [コンソールユーティリティ API リファレンス][DevtoolConsoleUtilities]」をご覧ください。  
+コンソール API メソッドを使って、JavaScript からコンソールにメッセージを書き込みます。  このトピックの対話的な紹介については、「 [コンソールへのメッセージのログ記録の][DevtoolsConsoleLog]概要」を参照してください。  このような便利なメソッド、 `debug()` または `monitorEvents()` **コンソール** ウィンドウからのみ利用できる便利なメソッドについては、[ [コンソールユーティリティ API リファレンス][DevtoolConsoleUtilities]] に移動します。  
 
 ---  
 
@@ -96,7 +96,7 @@ console.count();
 console.count();
 ```  
 
-:::image type="complex" source="../media/console-demo-count-button.msft.png" alt-text="Console count () の例の結果" lightbox="../media/console-demo-count-button.msft.png":::
+:::image type="complex" source="../media/console-demo-count-button.msft.png" alt-text="本体の assert () の結果" lightbox="../media/console-demo-count-button.msft.png":::
    図 2: 例の結果 `console.count()`  
 :::image-end:::  
 
@@ -131,7 +131,7 @@ console.debug(object [, object, ...])
 console.debug('debug');  
 ```  
 
-:::image type="complex" source="../media/console-demo-debug-button.msft.png" alt-text="Xbox の debug () の例" lightbox="../media/console-demo-debug-button.msft.png":::
+:::image type="complex" source="../media/console-demo-debug-button.msft.png" alt-text="本体の assert () の結果" lightbox="../media/console-demo-debug-button.msft.png":::
    図 3: 例の結果 `console.debug()`  
 :::image-end:::  
 
@@ -151,7 +151,7 @@ console.dir(object)
 console.dir(document.head);
 ```  
 
-:::image type="complex" source="../media/console-demo-dir-button.msft.png" alt-text="Console () の例の結果" lightbox="../media/console-demo-dir-button.msft.png":::
+:::image type="complex" source="../media/console-demo-dir-button.msft.png" alt-text="本体の assert () の結果" lightbox="../media/console-demo-dir-button.msft.png":::
    図 4: この例の結果 `console.dir()`  
 :::image-end:::  
 
@@ -171,7 +171,7 @@ console.dirxml(node)
 console.dirxml(document);
 ```  
 
-:::image type="complex" source="../media/console-demo-dirxml-button.msft.png" alt-text="コンソールの dirxml () 例の結果" lightbox="../media/console-demo-dirxml-button.msft.png":::
+:::image type="complex" source="../media/console-demo-dirxml-button.msft.png" alt-text="本体の assert () の結果" lightbox="../media/console-demo-dirxml-button.msft.png":::
    図 5: 例の結果 `console.dirxml()`  
 :::image-end:::  
 
@@ -191,7 +191,7 @@ console.error(object [, object, ...])
 console.error("I'm sorry, Dave.  I'm afraid I can't do that.");
 ```  
 
-:::image type="complex" source="../media/console-demo-error-button.msft.png" alt-text="本体の結果。エラー () の例" lightbox="../media/console-demo-error-button.msft.png":::
+:::image type="complex" source="../media/console-demo-error-button.msft.png" alt-text="本体の assert () の結果" lightbox="../media/console-demo-error-button.msft.png":::
    図 6: 例の結果 `console.error()`  
 :::image-end:::  
 
@@ -215,7 +215,7 @@ console.info('Raph');
 console.groupEnd(label);
 ```  
 
-:::image type="complex" source="../media/console-demo-group-button.msft.png" alt-text="Console の結果。 group () の例" lightbox="../media/console-demo-group-button.msft.png":::
+:::image type="complex" source="../media/console-demo-group-button.msft.png" alt-text="本体の assert () の結果" lightbox="../media/console-demo-group-button.msft.png":::
    図 7: 例の結果 `console.group()`  
 :::image-end:::  
 
@@ -255,7 +255,7 @@ console.info(object [, object, ...])
 console.info('info');
 ```  
 
-:::image type="complex" source="../media/console-demo-info-button.msft.png" alt-text="Console.info () 例の結果" lightbox="../media/console-demo-info-button.msft.png":::
+:::image type="complex" source="../media/console-demo-info-button.msft.png" alt-text="本体の assert () の結果" lightbox="../media/console-demo-info-button.msft.png":::
    図 8: 例の結果 `console.info()`  
 :::image-end:::  
 
@@ -275,7 +275,7 @@ console.log(object [, object, ...])
 console.log('log');
 ```  
 
-:::image type="complex" source="../media/console-demo-log-button.msft.png" alt-text="Console .log () の例の結果" lightbox="../media/console-demo-log-button.msft.png":::
+:::image type="complex" source="../media/console-demo-log-button.msft.png" alt-text="本体の assert () の結果" lightbox="../media/console-demo-log-button.msft.png":::
    図 9: 例の結果 `console.log()`  
 :::image-end:::  
 
@@ -309,7 +309,7 @@ console.table([
 ]);
 ```  
 
-:::image type="complex" source="../media/console-demo-table-button.msft.png" alt-text="本体の結果 () 例" lightbox="../media/console-demo-table-button.msft.png":::
+:::image type="complex" source="../media/console-demo-table-button.msft.png" alt-text="本体の assert () の結果" lightbox="../media/console-demo-table-button.msft.png":::
    図 10: 例の結果 `console.table()`  
 :::image-end:::  
 
@@ -331,7 +331,7 @@ for (var i = 0; i < 100000; i++) {
 console.timeEnd();
 ```  
 
-:::image type="complex" source="../media/console-demo-time-button.msft.png" alt-text="Console の結果。 time () の例" lightbox="../media/console-demo-time-button.msft.png":::
+:::image type="complex" source="../media/console-demo-time-button.msft.png" alt-text="本体の assert () の結果" lightbox="../media/console-demo-time-button.msft.png":::
    図 11: 例の結果 `console.time()`  
 :::image-end:::  
 
@@ -367,7 +367,7 @@ const fourth = () => { console.trace(); };
 first();
 ```  
 
-:::image type="complex" source="../media/console-demo-trace-button.msft.png" alt-text="本体のトレースの結果 () 例" lightbox="../media/console-demo-trace-button.msft.png":::
+:::image type="complex" source="../media/console-demo-trace-button.msft.png" alt-text="本体の assert () の結果" lightbox="../media/console-demo-trace-button.msft.png":::
    図 12: 例の結果 `console.trace()`  
 :::image-end:::  
 
@@ -387,9 +387,13 @@ console.warn(object [, object, ...])
 console.warn('warn');
 ```  
 
-:::image type="complex" source="../media/console-demo-warn-button.msft.png" alt-text="本体の結果。 warn () の例" lightbox="../media/console-demo-warn-button.msft.png":::
+:::image type="complex" source="../media/console-demo-warn-button.msft.png" alt-text="本体の assert () の結果" lightbox="../media/console-demo-warn-button.msft.png":::
    図 13: 例の結果 `console.warn()`  
 :::image-end:::  
+
+## Microsoft Edge DevTools チームと連絡を取る  
+
+[!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
 <!-- links -->  
 

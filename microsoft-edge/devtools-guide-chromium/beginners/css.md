@@ -3,16 +3,16 @@ description: CSS の使用を開始する
 title: '初心者向けの DevTools: CSS の使用を開始する'
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 09/01/2020
+ms.date: 10/19/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: fe87b4f840c6d9dde3cdf6455700161ea8d8d31e
-ms.sourcegitcommit: 63e6d34ff483f3b419a0e271a3513874e6ce6c79
+ms.openlocfilehash: 62821084af8c22809f6e14ca4038ee173efd964a
+ms.sourcegitcommit: 99eee78698dc95b2a3fa638a5b063ef449899cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "10993304"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "11125336"
 ---
 <!-- Copyright Katherine Jackson 
 
@@ -35,7 +35,7 @@ ms.locfileid: "10993304"
 次の記事は、web 開発と Microsoft Edge DevTools の基礎について説明している一連のチュートリアルの2番目のチュートリアルです。  実際に自分の web サイトを構築することで、実践的なエクスペリエンスを実現できます。  2番目のチュートリアルに従う前に、最初のチュートリアルを完了する必要はありません。  [コードを設定](#set-up-your-code) すると、セットアップ方法が表示されます。  
 
 > [!NOTE]
-> このチュートリアルは、基本的な初心者向けに設計されており、 **web 開発の基礎** と、開発者向けの基本的なツールを使用した CSS の基本的な使い方に重点を置いています。  開発ツールにのみ重点を置いたチュートリアルが必要な場合は、「 [CSS の表示と変更の概要][DevtoolsCssIndex]」を参照してください。  
+> このチュートリアルは、基本的な初心者向けに設計されており、 **web 開発の基礎** と、開発者向けの基本的なツールを使用した CSS の基本的な使い方に重点を置いています。  DevTools のみに焦点を当てたチュートリアルが必要な場合は、「 [CSS の表示と変更を開始][DevtoolsCssIndex]する」を参照してください。  
 
 チュートリアルの最初に、サイトは次の図のようになります。  
 
@@ -601,6 +601,10 @@ DevTools で新しいルールセットを追加するには、次の操作を�
 *   Web 開発に適した方法は、さらに多くのサイトを構築することです。  問題を壊す心配はありません。  今まで以上に楽しく、できる限り学習しましょう。  
 *   Web ページのスタイル設定の詳細については、「 [CSS の概要][MDNCssFirstSteps]」を参照してください。  
 *   DevTools を使ってページの CSS を試す方法の詳細については、「 [css の表示と変更の概要][DevtoolsCssIndex]」を参照してください。  
+
+## Microsoft Edge DevTools チームと連絡を取る  
+
+[!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
 <!--- image links --->  
 

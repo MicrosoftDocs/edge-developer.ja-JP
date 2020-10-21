@@ -3,16 +3,16 @@ description: Microsoft Edge DevTools で使用されていない JavaScript と 
 title: Microsoft Edge DevTools の [カバレッジ] タブで使用されていない JavaScript と CSS コードを見つける
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 09/01/2020
+ms.date: 10/19/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 19bc15578e00e5a9f3389529f589e9790280a0e4
-ms.sourcegitcommit: 63e6d34ff483f3b419a0e271a3513874e6ce6c79
+ms.openlocfilehash: 08c4daaabd30296b53ad57a81caa0e7b155a4fc9
+ms.sourcegitcommit: 99eee78698dc95b2a3fa638a5b063ef449899cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "10993094"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "11125189"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -28,13 +28,7 @@ ms.locfileid: "10993094"
    See the License for the specific language governing permissions and
    limitations under the License.  -->
 
-
-
-
-
-# Microsoft Edge DevTools の [カバレッジ] タブで使用されていない JavaScript と CSS コードを見つける   
-
-
+# Microsoft Edge DevTools の [カバレッジ] タブで使用されていない JavaScript と CSS コードを見つける  
 
 Microsoft Edge の DevTools の [カバレッジ] タブは、使用されていない JavaScript と CSS コードを見つけるのに役立ちます。  使用されていないコードを削除すると、ページの読み込みが速くなり、モバイルユーザーの携帯電話のデータが保存される可能性があります。  
 
@@ -45,7 +39,7 @@ Microsoft Edge の DevTools の [カバレッジ] タブは、使用されてい
 > [!WARNING]
 > 使用されていないコードの検索は比較的簡単です。  ただし、コードベースをリファクタリングして、各ページが必要な JavaScript と CSS を確実に出荷することが難しい場合があります。  このガイドでは、コードベースをリファクターして使用されていないコードを回避する方法については説明しません。これらの refactors はテクノロジスタックに依存しているためです。  
 
-## 概要   
+## 概要  
 
 使用されていない JavaScript または CSS は、web 開発での一般的な問題です。  たとえば、ページで [ブートストラップボタンコンポーネント][BootstrapButtons] を使用するとします。  Button コンポーネントを使用するには、次のように HTML のブートストラップスタイルシートへのリンクを追加する必要があります。  
 
@@ -66,27 +60,27 @@ Microsoft Edge の DevTools の [カバレッジ] タブは、使用されてい
     
 <!--[render]: /web/fundamentals/performance/critical-rendering-path/render-blocking-css  -->  
 
-## [カバレッジ] タブを開く   
+## [カバレッジ] タブを開く  
 
 1.  [コマンドメニューを開き][DevToolsCommandMenu]ます。  
-1.  入力を開始し、[ `coverage` **カバレッジの表示** ] コマンドを選択して、キーを押してコマンドを `Enter` 実行します。  [ **補充** ] タブが **引き出し**で開きます。  
+1.  入力を開始し、[ `coverage` **カバレッジの表示** ] コマンドを選択して、コマンドを `Enter` 実行します。  [ **補充** ] タブが **引き出し**で開きます。  
 
-    :::image type="complex" source="../media/coverage-console-drawer-coverage-empty.msft.png" alt-text="[カバレッジ] タブ" lightbox="../media/coverage-console-drawer-coverage-empty.msft.png":::
+    :::image type="complex" source="../media/coverage-console-drawer-coverage-empty.msft.png" alt-text="コードカバレッジの分析" lightbox="../media/coverage-console-drawer-coverage-empty.msft.png":::
        [ **カバレッジ** ] タブ  
     :::image-end:::  
     
-## コードカバレッジの記録   
+## コードカバレッジの記録  
 
 1.  [ **カバレッジ** ] タブで、次のいずれかのボタンをクリックします。  
-    *   ページの読み込みに必要なコードを確認したい場合は、[ **インストルメントの開始] をクリックし、ページを再読み込み** し ![ ます (インストルメント化とページの再読み込みの開始 ][ImageReloadIcon] )。  
-    *   **Instrument Coverage** ![ ][ImageRecordIcon] ページを操作した後に使用されたコードを確認する場合は、[音色の範囲 \ (インストルメント化の対象)] をクリックします。  
-1.  **Stop Instrumenting Coverage And Show Results** ![ ][ImageStopIcon] コードカバレッジの記録を停止する場合は、[インストルメントのインストルメンテーションを停止し、結果を表示します] をクリックします。  
+    *   **Start Instrumenting Coverage And Reload Page** ![ ][ImageReloadIcon] ページの読み込みに必要なコードを確認するには、[インストルメント化の開始] と [ページの再読み込み] を選びます。  
+    *   **Instrument Coverage** ![ ][ImageRecordIcon] ページを操作した後で使用されるコードを確認する場合は、[インストルメント化の対象] ([インストルメントのカバレッジ]) を選択します。  
+1.  コードカバレッジの記録を停止する場合は **、[インストルメントの実装を停止し、結果を表示** する ( ![ インストルメント化の停止と結果の表示)] を選び ][ImageStopIcon] ます。  
     
-## コードカバレッジの分析   
+## コードカバレッジの分析  
 
 [ **カバレッジ** ] タブの表には、分析されたリソースと、各リソース内で使用されているコードの量が表示されます。  [ **ソース** ] パネルで行をクリックしてそのリソースを開き、使用されているコードと未使用コードの行ごとの内訳を確認します。  
 
-:::image type="complex" source="../media/coverage-sources-resource-drawer-coverage-selected.msft.png" alt-text="コードカバレッジレポート" lightbox="../media/coverage-sources-resource-drawer-coverage-selected.msft.png":::
+:::image type="complex" source="../media/coverage-sources-resource-drawer-coverage-selected.msft.png" alt-text="コードカバレッジの分析" lightbox="../media/coverage-sources-resource-drawer-coverage-selected.msft.png":::
    コードカバレッジレポート  
 :::image-end:::  
 
@@ -96,11 +90,9 @@ Microsoft Edge の DevTools の [カバレッジ] タブは、使用されてい
 *   **未使用バイト**列は、使用されなかったバイト数です。  
 *   最後の名前が付いていない列は、[ **合計のバイト** 数] 列と [ **未使用のバイト数** ] 列の視覚エフェクトです。  バーの赤い部分は未使用のバイトです。  緑のセクションは、バイトを使用しています。  
     
-<!--  
- 
+## Microsoft Edge DevTools チームと連絡を取る  
 
-
--->  
+[!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
 <!-- image links -->  
 

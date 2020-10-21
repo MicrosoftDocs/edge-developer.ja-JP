@@ -3,16 +3,16 @@ description: Microsoft Edge と Android でサイトが適切に動作するよ�
 title: 他のブラウザーをエミュレートしてテストする
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 09/01/2020
+ms.date: 10/19/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 1b76447aa86837abac88bc4727eb7f4ee082342a
-ms.sourcegitcommit: 63e6d34ff483f3b419a0e271a3513874e6ce6c79
+ms.openlocfilehash: 1a7cc1c7e0a49760f30afdc16921824372b3a1aa
+ms.sourcegitcommit: 99eee78698dc95b2a3fa638a5b063ef449899cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "10992912"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "11124944"
 ---
 <!-- Copyright Meggin Kearney and Paul Bakaus
 
@@ -28,14 +28,7 @@ ms.locfileid: "10992912"
    See the License for the specific language governing permissions and
    limitations under the License.  -->
 
-
-
-
-
-# 他のブラウザーをエミュレートしてテストする   
-
-
-
+# 他のブラウザーをエミュレートしてテストする  
 
 Microsoft Edge と Android でサイトが適切に動作するように、ジョブが終了することはありません。  デバイスモードでは、iPhones などのさまざまなデバイスをシミュレートできますが、他のブラウザーで提供されているエミュレーションのためのソリューションを確認することをお勧めします。  
 
@@ -79,7 +72,7 @@ Android エミュレーターには、android [Studio][AndroidStudioDownload]の
 #### Android での Chromium コンテンツシェル  
 
 <!--  
-:::image type="complex" source="../media/device-mode-android-avd-contentshell.msft.png" alt-text="Android Emulator Content Shell" lightbox="../media/device-mode-android-avd-contentshell.msft.png":::
+:::image type="complex" source="../media/device-mode-android-avd-contentshell.msft.png" alt-text="Stock Browser in Android Emulator" lightbox="../media/device-mode-android-avd-contentshell.msft.png":::
    Android Emulator Content Shell  
 :::image-end:::  
 -->  
@@ -97,7 +90,7 @@ chmod u+x ./chromium-android-installer/*.sh
 #### Android の Firefox  
 
 <!--  
-:::image type="complex" source="../media/device-mode-ff-on-android-emulator.msft.png" alt-text="Firefox Icon on Android Emulator" lightbox="../media/device-mode-ff-on-android-emulator.msft.png":::
+:::image type="complex" source="../media/device-mode-ff-on-android-emulator.msft.png" alt-text="Stock Browser in Android Emulator" lightbox="../media/device-mode-ff-on-android-emulator.msft.png":::
    Firefox Icon on Android Emulator  
 :::image-end:::  
 -->  
@@ -123,7 +116,7 @@ IOS シミュレータ for Mac OS X には Xcode が付属しています。こ�
 
 ###  Microsoft Edge (EdgeHTML)  
 
-:::image type="complex" source="../media/device-mode-modern-ie-vm.msft.png" alt-text="モダン IE VM" lightbox="../media/device-mode-modern-ie-vm.msft.png":::
+:::image type="complex" source="../media/device-mode-modern-ie-vm.msft.png" alt-text="Stock Browser in Android Emulator" lightbox="../media/device-mode-modern-ie-vm.msft.png":::
    モダン IE VM  
 :::image-end:::  
 
@@ -137,11 +130,9 @@ Microsoft Edge \ (EdgeHTML \) 仮想マシン \ (Vm \) を使用すると、Virt
 *   [SauceLabs (商用)][SauceLabs] では、エミュレーターの内部で単体テストを実行できます。この機能は、サイト内でのフローのスクリプトを作成し、後でさまざまなデバイスでその後のビデオ録画を監視する場合に特に便利です。  サイトで手動テストを行うこともできます。  
 *   [任意のデバイス (商用)][AppExperience] では、リモートで制御できるエミュレーターである実際のデバイスは使用されません。  これは、特定のデバイスで問題を再現する必要があり、前のガイドに記載されているオプションを使用してもバグを確認できないというイベントで非常に便利です。  
 
-<!--  
- 
+## Microsoft Edge DevTools チームと連絡を取る  
 
-
--->  
+[!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
 <!-- links -->  
 

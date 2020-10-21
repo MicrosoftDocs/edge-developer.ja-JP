@@ -3,16 +3,16 @@ description: '[センサー] タブを開き、[印刷の向き] セクション
 title: Microsoft Edge DevTools を使ってデバイスの向きをシミュレートする
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 09/01/2020
+ms.date: 10/19/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 42b58ef2d4b132eedad2663287894e25e72b2572
-ms.sourcegitcommit: 63e6d34ff483f3b419a0e271a3513874e6ce6c79
+ms.openlocfilehash: 01e6d3a24513b504665dbe0c03d9e72cc1f97533
+ms.sourcegitcommit: 99eee78698dc95b2a3fa638a5b063ef449899cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "10992933"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "11124958"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -34,18 +34,18 @@ Microsoft Edge DevTools からさまざまなデバイスの向きをシミュ�
 
 <!--todo: update device orientation section when available -->  
 
-1.  `Control` + `Shift` + `P` コマンドメニューを開くには、\ (Windows \) または `Command` + `Shift` + `P` \ **Command Menu**(macOS \) を押します。  
+1.  `Control` + `Shift` + `P` コマンドメニューを開くには、\ (Windows, Linux \) または `Command` + `Shift` + `P` \ **Command Menu**(macOS \) を選択します。  
     
     :::image type="complex" source="../media/device-mode-console-command-menu.msft.png" alt-text="コマンドメニュー" lightbox="../media/device-mode-console-command-menu.msft.png":::
        **コマンドメニュー**  
     :::image-end:::  
     
-1.  「」と入力して、「 `sensors` **センサーを表示**」を選択し、を押し `Enter` ます。  [ **センサー** ] タブが、[devtools] ウィンドウの下部に表示されます。  
-1.  [**印刷の向き**] ボックスの一覧で、[などの事前設定の向き] のいずれかを選択するか、独自の向きを選択して、 `Portrait upside down` 正確な向きを指定します。 **Custom orientation**  
+1.  「」と入力し `sensors` 、[ **センサーの表示**] を選択して、を選択し `Enter` ます。  [ **センサー** ] タブが、[devtools] ウィンドウの下部に表示されます。  
+1.  [ **印刷の向き** ] ボックスの一覧で、[など] のいずれかの既定の向きを選択 `Portrait upside down` するか、[ **カスタムの向き** ] を選んで正確な向きを指定します。  
     
     :::row:::
        :::column span="":::
-          :::image type="complex" source="../media/device-mode-console-sensors-orientation-portrait-upside-down.msft.png" alt-text="[向き] の一覧から [縦] を上下に反転する" lightbox="../media/device-mode-console-sensors-orientation-portrait-upside-down.msft.png":::
+          :::image type="complex" source="../media/device-mode-console-sensors-orientation-portrait-upside-down.msft.png" alt-text="コマンドメニュー" lightbox="../media/device-mode-console-sensors-orientation-portrait-upside-down.msft.png":::
              [ `Portrait upside down` 印刷の **向き** ] の一覧から選択する  
           :::image-end:::  
        :::column-end:::
@@ -55,13 +55,13 @@ Microsoft Edge DevTools からさまざまなデバイスの向きをシミュ�
           <!--todo: update links to alpha, beta, and gamma section when available -->  
           **向きのモデル**をドラッグして、独自の向きを設定することもできます。  `Shift`ドラッグして軸に沿って回転させ `alpha` ます。  
           
-          :::image type="complex" source="../media/device-mode-console-sensors-orientation-custom.msft.png" alt-text="向きのモデル" lightbox="../media/device-mode-console-sensors-orientation-custom.msft.png":::
+          :::image type="complex" source="../media/device-mode-console-sensors-orientation-custom.msft.png" alt-text="コマンドメニュー" lightbox="../media/device-mode-console-sensors-orientation-custom.msft.png":::
              **向きのモデル**  
           :::image-end:::  
        :::column-end:::
     :::row-end:::
     
-## Microsoft Edge DevTools チームと連絡を取り合う  
+## Microsoft Edge DevTools チームと連絡を取る  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 

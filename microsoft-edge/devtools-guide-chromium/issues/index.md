@@ -1,17 +1,18 @@
 ---
+description: '[問題] ツールを使用して、web サイトの問題を見つけて修正します。'
 title: Microsoft Edge DevTools の問題を見つけて解決する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 09/01/2020
+ms.date: 10/19/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: bad9e9d99f0d2f3179784920fc334823289b9f99
-ms.sourcegitcommit: 63e6d34ff483f3b419a0e271a3513874e6ce6c79
+ms.openlocfilehash: 4691db9542ecff93d1b59e243844109e0c730d23
+ms.sourcegitcommit: 99eee78698dc95b2a3fa638a5b063ef449899cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "10992821"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "11124727"
 ---
 <!-- Copyright Sam Dutton 
 
@@ -54,7 +55,7 @@ Microsoft Edge DevTools の [ **問題** ] ツールは、 **本体**の通知�
        :::column span="":::
           または、[**その他のツール**] メニューから [**問題**] を選択します。  
           
-          :::image type="complex" source="../media//issues-more-tools-menu.msft.png" alt-text="[その他のツール] メニューの [問題] ツール" lightbox="../media//issues-more-tools-menu.msft.png":::
+          :::image type="complex" source="../media//issues-more-tools-menu.msft.png" alt-text="問題が検出されたときに黄色の警告バーにある [懸案事項] ボタンに移動する" lightbox="../media//issues-more-tools-menu.msft.png":::
              [**その他のツール**] メニューの [**問題**] ツール  
           :::image-end:::  
        :::column-end:::
@@ -62,13 +63,13 @@ Microsoft Edge DevTools の [ **問題** ] ツールは、 **本体**の通知�
     
 1.  必要に応じて、[ **ページの再読み込み** ] ボタンを選択します。  
     
-    :::image type="complex" source="../media/issues-tab-before-refresh.msft.png" alt-text="[ページの再読み込み] ボタンがある DevTools ドローワの問題ツール" lightbox="../media/issues-tab-before-refresh.msft.png":::
+    :::image type="complex" source="../media/issues-tab-before-refresh.msft.png" alt-text="問題が検出されたときに黄色の警告バーにある [懸案事項] ボタンに移動する" lightbox="../media/issues-tab-before-refresh.msft.png":::
        [**ページの再読み込み**] ボタンがある Devtools ドローワの**問題**ツール  
     :::image-end:::  
 
     **コンソール**で報告される問題は、次の画像の cookie の警告など、非常に理解しにくくなります。  報告された問題に基づいて、何を行う必要があるかが明確でない場合があります。  
     
-    :::image type="complex" source="../media/issues-tab-after-refresh.msft.png" alt-text="3つの cookie の問題が発生した DevTools の [問題] ツール" lightbox="../media/issues-tab-after-refresh.msft.png":::
+    :::image type="complex" source="../media/issues-tab-after-refresh.msft.png" alt-text="問題が検出されたときに黄色の警告バーにある [懸案事項] ボタンに移動する" lightbox="../media/issues-tab-after-refresh.msft.png":::
        3つの cookie の問題が発生した DevTools の [**問題**] ツール  
     :::image-end:::  
     
@@ -78,7 +79,7 @@ DevTools のドローワの **問題** ツールでは、構造化され、集�
 
 1.  問題を修正し、影響を受けるリソースを見つける方法についてのガイダンスを表示するには、[ **案件** ] ツールのアイテムを選択します。  
     
-    :::image type="complex" source="../media/issues-tab-issue-open.msft.png" alt-text="[問題] ツールで、クロスサイト cookie をセキュリティで保護された問題としてマークする" lightbox="../media/issues-tab-issue-open.msft.png":::
+    :::image type="complex" source="../media/issues-tab-issue-open.msft.png" alt-text="問題が検出されたときに黄色の警告バーにある [懸案事項] ボタンに移動する" lightbox="../media/issues-tab-issue-open.msft.png":::
        [**問題**] ツールで、**クロスサイト Cookie をセキュリティで保護された問題としてマーク**する  
     :::image-end:::  
     
@@ -91,7 +92,7 @@ DevTools のドローワの **問題** ツールでは、構造化され、集�
     
 1.  [影響を **受けるリソース** ] 内のアイテムを選択して、詳細を表示します。  次の例では、1つの cookie と2つの要求が **セキュリティで保護された問題としてマークさ** れています。  
     
-    :::image type="complex" source="../media/issues-tab-affected-resources.msft.png" alt-text="[問題の引き出し] タブで表示される影響を受けるリソース" lightbox="../media/issues-tab-affected-resources.msft.png":::
+    :::image type="complex" source="../media/issues-tab-affected-resources.msft.png" alt-text="問題が検出されたときに黄色の警告バーにある [懸案事項] ボタンに移動する" lightbox="../media/issues-tab-affected-resources.msft.png":::
        DevTools のドローワの [ **問題** ] ツールで、影響を受けるリソースが開かれる  
     :::image-end:::  
     
@@ -99,17 +100,17 @@ DevTools のドローワの **問題** ツールでは、構造化され、集�
 
 1.  リソースリンクを選んで、DevTools 内の適切なコンテキストで項目を表示します。  次の例では、 `samesite-sandbox.glitch.me` [ **要求** ] の下で、その要求に関連付けられている cookie を表示します。  
     
-    :::image type="complex" source="../media/issues-tab-view-request.msft.png" alt-text="DevTools ネットワークパネルで影響を受ける cookie を表示する" lightbox="../media/issues-tab-view-request.msft.png":::
+    :::image type="complex" source="../media/issues-tab-view-request.msft.png" alt-text="問題が検出されたときに黄色の警告バーにある [懸案事項] ボタンに移動する" lightbox="../media/issues-tab-view-request.msft.png":::
        DevTools **ネットワーク** パネルで影響を受ける cookie を表示する  
     :::image-end:::  
 
 1.  スクロールして、問題のあるアイテムを表示します。次の例では、cookie が表示されます。 `ck02`  **SameSite**列の上にマウスポインターを移動すると、 `None` 問題が検出された値が表示されます。  
     
-    :::image type="complex" source="../media/issues-tab-view-issue.msft.png" alt-text="DevTools ネットワークパネルの ck02 cookie の SameSite 列の値なし" lightbox="../media/issues-tab-view-issue.msft.png":::
+    :::image type="complex" source="../media/issues-tab-view-issue.msft.png" alt-text="問題が検出されたときに黄色の警告バーにある [懸案事項] ボタンに移動する" lightbox="../media/issues-tab-view-issue.msft.png":::
        `None` **SameSite** `ck02` devtools**ネットワーク**パネルの cookie の [SameSite] 列の値  
     :::image-end:::  
 
-## Microsoft Edge DevTools チームと連絡を取り合う  
+## Microsoft Edge DevTools チームと連絡を取る  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 

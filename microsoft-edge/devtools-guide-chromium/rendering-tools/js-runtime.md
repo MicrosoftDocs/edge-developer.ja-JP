@@ -3,16 +3,16 @@ description: Microsoft Edge DevTools メモリパネルを使用して、負荷�
 title: JavaScript ランタイムを高速化する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 09/01/2020
+ms.date: 10/19/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 27afe999083470cde0cc0fabf76d0d1ab54e6562
-ms.sourcegitcommit: 63e6d34ff483f3b419a0e271a3513874e6ce6c79
+ms.openlocfilehash: f3cf0440579865495f4afc8b1ae4e3940af7b04f
+ms.sourcegitcommit: 99eee78698dc95b2a3fa638a5b063ef449899cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "10993584"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "11125357"
 ---
 <!-- Copyright Kayce Basques and Meggin Kearney
 
@@ -28,7 +28,7 @@ ms.locfileid: "10993584"
    See the License for the specific language governing permissions and
    limitations under the License. -->
 
-# JavaScript の実行時間を短縮する  
+# JavaScript ランタイムを高速化する  
 
 **メモリ**パネルを使用して負荷の高い機能を特定します。  
 
@@ -47,7 +47,7 @@ JavaScript で jank に気付いた場合は、サンプリングプロファイ
 
 1.  DevTools の **メモリ** パネルに移動します。  
 1.  [ **割り当てのサンプリング** ] ラジオボタンを選択します。  
-1.  **[スタート]** を選択します。  
+1.  [ **開始**] を選びます。  
 1.  分析しようとしている内容に応じて、ページをもう一度読み込むか、ページを操作するか、またはページを実行します。  
 1.  完了したら、[ **停止** ] ボタンを選択します。  
     
@@ -66,19 +66,19 @@ JavaScript で jank に気付いた場合は、サンプリングプロファイ
 
 **グラフ**。  記録の時系列グラフを表示します。  
 
-:::image type="complex" source="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-chart.msft.png" alt-text="炎のグラフ" lightbox="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-chart.msft.png":::
+:::image type="complex" source="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-chart.msft.png" alt-text="サンプルプロファイル" lightbox="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-chart.msft.png":::
    炎のグラフ  
 :::image-end:::  
 
 **ヘビー (ボトムアップ)**  パフォーマンスに影響を与えて関数を一覧表示し、関数への呼び出しパスを調べることができます。  これは既定のビューです。  
 
-:::image type="complex" source="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-heavy-bottom-up.msft.png" alt-text="ヘビーグラフ" lightbox="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-heavy-bottom-up.msft.png":::
+:::image type="complex" source="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-heavy-bottom-up.msft.png" alt-text="サンプルプロファイル" lightbox="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-heavy-bottom-up.msft.png":::
    ヘビーグラフ  
 :::image-end:::  
 
 **ツリー \ (上から下へ)**  呼び出し履歴の先頭から、呼び出し元の構造体の全体像が示されます。  
 
-:::image type="complex" source="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-tree-top-down.msft.png" alt-text="ツリーグラフ" lightbox="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-tree-top-down.msft.png":::
+:::image type="complex" source="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-tree-top-down.msft.png" alt-text="サンプルプロファイル" lightbox="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-tree-top-down.msft.png":::
    ツリーグラフ  
 :::image-end:::  
 
@@ -94,7 +94,7 @@ JavaScript で jank に気付いた場合は、サンプリングプロファイ
 
 [サンプリングプロファイルを記録](#record-a-sampling-profile)したら、[[並べ替え順序](#change-sort-order)] を [**グラフ**] に変更して、記録を炎グラフとして表示します。  
 
-:::image type="complex" source="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-chart.msft.png" alt-text="炎のグラフビュー" lightbox="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-chart.msft.png":::
+:::image type="complex" source="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-chart.msft.png" alt-text="サンプルプロファイル" lightbox="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-chart.msft.png":::
    炎のグラフビュー  
 :::image-end:::  
 
@@ -107,7 +107,7 @@ JavaScript で jank に気付いた場合は、サンプリングプロファイ
 
 関数はランダムに色付けされます。  他のパネルで使用されている色との関連付けはありません。  ただし、各ランタイムでパターンを表示できるように、呼び出し時には関数の色が常に同じになります。  
 
-:::image type="complex" source="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-chart-highlighted.msft.png" alt-text="注釈付きの炎のグラフ" lightbox="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-chart-highlighted.msft.png":::
+:::image type="complex" source="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-chart-highlighted.msft.png" alt-text="サンプルプロファイル" lightbox="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-chart-highlighted.msft.png":::
    注釈付きの炎のグラフ  
 :::image-end:::  
 
@@ -117,7 +117,7 @@ JavaScript で jank に気付いた場合は、サンプリングプロファイ
 
 呼び出し履歴の特定の部分を拡大するには、マウスを選択してから、[概要] にドラッグします。  拡大すると、選択した記録の一部が自動的に通話スタックに表示されます。  
 
-:::image type="complex" source="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-chart-zoomed.msft.png" alt-text="拡大されたグラフ" lightbox="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-chart-zoomed.msft.png":::
+:::image type="complex" source="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-chart-zoomed.msft.png" alt-text="サンプルプロファイル" lightbox="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-chart-zoomed.msft.png":::
    拡大されたグラフ  
 :::image-end:::  
 
@@ -137,11 +137,11 @@ JavaScript で jank に気付いた場合は、サンプリングプロファイ
 <!--*   **Aggregated total time**.  Aggregate total time for all invocations of the function, including functions called by this function.  -->  
 <!--*   **Not optimized**.  If the profiler has detected a potential optimization for the function it lists it here.  -->  
 
-:::image type="complex" source="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-chart-hover.msft.png" alt-text="関数の詳細をグラフで表示する" lightbox="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-chart-hover.msft.png":::
+:::image type="complex" source="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-chart-hover.msft.png" alt-text="サンプルプロファイル" lightbox="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-chart-hover.msft.png":::
    関数の詳細をグラフで表示する  
 :::image-end:::  
 
-## Microsoft Edge DevTools チームと連絡を取り合う  
+## Microsoft Edge DevTools チームと連絡を取る  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 

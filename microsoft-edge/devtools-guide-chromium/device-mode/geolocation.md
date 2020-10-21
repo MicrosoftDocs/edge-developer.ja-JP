@@ -3,16 +3,16 @@ description: '[センサー] タブを開き、[位置情報] の一覧から [�
 title: Microsoft Edge DevTools で位置情報を上書きする
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 09/01/2020
+ms.date: 10/19/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 269e7ca4bf259aa168c06ac0fd915604731463c4
-ms.sourcegitcommit: 63e6d34ff483f3b419a0e271a3513874e6ce6c79
+ms.openlocfilehash: f2bc395993ff59d88360a363b2c4bc12b570f1ab
+ms.sourcegitcommit: 99eee78698dc95b2a3fa638a5b063ef449899cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "10992989"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "11125014"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -36,20 +36,20 @@ ms.locfileid: "10992989"
 
 ユーザーがどこにいるかによって変更される UI を作成する場合は、サイトが世界のさまざまな場所で適切に動作することを確認する必要があります。  Microsoft Edge DevTools で位置情報を上書きするには、次の操作を実行します。  
 
-1.  `Control` + `Shift` + `P` コマンドメニューを開くには、\ (Windows \) または `Command` + `Shift` + `P` \ **Command Menu**(macOS \) を押します。  
+1.  `Control` + `Shift` + `P` コマンドメニューを開くには、\ (Windows, Linux \) または `Command` + `Shift` + `P` \ **Command Menu**(macOS \) を選択します。  
     
     :::image type="complex" source="../media/device-mode-console-command-menu.msft.png" alt-text="コマンドメニュー" lightbox="../media/device-mode-console-command-menu.msft.png":::
        **コマンドメニュー**  
     :::image-end:::  
     
-1.  「」と入力して、「 `sensors` **センサーを表示**」を選択し、を押し `Enter` ます。  [ **センサー** ] タブが、[devtools] ウィンドウの下部に表示されます。  
-1.  [位置 **情報] リストから** 、いずれかの事前設定された都市のいずれかを選択するか、[ `Tokyo` カスタムの **場所** ] を選択してカスタムの経度と緯度の座標を入力するか、[場所を選択 **でき** ません] を選択してユーザーの位置情報が表示されない場合の動作を確認します。  
+1.  「」と入力し `sensors` 、[ **センサーの表示**] を選択して、を選択し `Enter` ます。  [ **センサー** ] タブが、[devtools] ウィンドウの下部に表示されます。  
+1.  [位置情報 **] リストから**、いずれかの事前設定された都市のいずれかを選択するか、[カスタムの場所] を選択してユーザー設定の経度と緯度の座標を入力するか、[場所を使用できません] を選択し `Tokyo` て、ユーザーの位置情報が表示されない場合のサイトの動作を確認**Custom location** **Location unavailable**  
     
-    :::image type="complex" source="../media/device-mode-console-sensors-geolocation-tokyo.msft.png" alt-text="位置情報リストから東京を選ぶ" lightbox="../media/device-mode-console-sensors-geolocation-tokyo.msft.png":::
+    :::image type="complex" source="../media/device-mode-console-sensors-geolocation-tokyo.msft.png" alt-text="コマンドメニュー" lightbox="../media/device-mode-console-sensors-geolocation-tokyo.msft.png":::
        `Tokyo`**位置**情報リストから選択する  
     :::image-end:::  
     
-## Microsoft Edge DevTools チームと連絡を取り合う
+## Microsoft Edge DevTools チームと連絡を取る
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 

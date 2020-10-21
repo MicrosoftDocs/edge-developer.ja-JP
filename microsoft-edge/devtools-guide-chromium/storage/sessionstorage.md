@@ -3,16 +3,16 @@ description: セッション記憶域のウィンドウと本体を使って、s
 title: Microsoft Edge DevTools を使ってセッションストレージを表示および編集する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 09/01/2020
+ms.date: 10/19/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 24fca3fd3a068f3b2ffbe4ec1c23e6b80b968953
-ms.sourcegitcommit: 63e6d34ff483f3b419a0e271a3513874e6ce6c79
+ms.openlocfilehash: 6543c03f04ff80b1bba1d244598a901d066db13a
+ms.sourcegitcommit: 99eee78698dc95b2a3fa638a5b063ef449899cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "10993549"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "11125476"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -28,17 +28,11 @@ ms.locfileid: "10993549"
    See the License for the specific language governing permissions and
    limitations under the License.  -->
 
-
-
-
-
-# Microsoft Edge DevTools を使ってセッションストレージを表示および編集する   
-
-  
+# Microsoft Edge DevTools を使ってセッションストレージを表示および編集する  
 
 このガイドでは、 [Microsoft Edge DevTools][MicrosoftEdgeDevTools] を使って、キーと値のペアを表示、編集、削除する方法について説明し [`sessionStorage`][MDNSessionStorage] ます。  
 
-## SessionStorage のキーと値の表示   
+## SessionStorage のキーと値の表示  
 
 1.  [ **アプリケーション** ] タブを選択して、[ **アプリケーション** ] パネルを開きます。  **マニフェスト**ウィンドウは既定で表示されます。  
     
@@ -64,7 +58,7 @@ ms.locfileid: "10993549"
        キーの値を表示する `x-sid`  
     :::image-end:::  
     
-## 新しい sessionStorage のキーと値のペアを作成する   
+## 新しい sessionStorage のキーと値のペアを作成する  
 
 1.  [ `sessionStorage` ドメインのキーと値のペアを表示](#view-sessionstorage-keys-and-values)します。  
 1.  表の空の部分をダブルクリックします。  DevTools で新しい行を作成し、 **キー** 列にカーソルをフォーカスします。  
@@ -73,7 +67,7 @@ ms.locfileid: "10993549"
        新しいキーと値のペアを作成するためにダブルクリックするテーブルの空の部分  
     :::image-end:::  
     
-## SessionStorage のキーまたは値を編集する   
+## SessionStorage のキーまたは値を編集する  
 
 1.  [ `sessionStorage` ドメインのキーと値のペアを表示](#view-sessionstorage-keys-and-values)します。  
 1.  キーまた**は値の列の**セルをダブルクリックし**て、その**キーまたは値を編集します。  
@@ -82,18 +76,18 @@ ms.locfileid: "10993549"
        キーを編集する `sessionStorage`  
     :::image-end:::  
     
-## セッションストレージのキーと値のペアを削除する   
+## セッションストレージのキーと値のペアを削除する  
 
 1.  [ `sessionStorage` ドメインのキーと値のペアを表示](#view-sessionstorage-keys-and-values)します。  
 1.  削除するキーと値のペアを選択します。  DevTools は、青色を強調表示して、選択されていることを示します。  
-1.  キーを押す `Delete` か、[ **選択した** ものを削除] をクリックし ![ ます (選択した \ を削除 ][ImageDeleteIcon] )。  
+1.  キーを押すか、選択し `Delete` た \ を **削除** \ ( ![ 選択した \ を削除) を選択し ][ImageDeleteIcon] ます。  
     
-## ドメインのすべてのセッション記憶域のキーと値のペアを削除する   
+## ドメインのすべてのセッション記憶域のキーと値のペアを削除する  
 
 1.  [ `sessionStorage` ドメインのキーと値のペアを表示](#view-sessionstorage-keys-and-values)します。  
-1.  [ **すべてクリア** ] を選択し ![ ][ImageClearIcon] ます。  
+1.  [ **すべてクリア** ] を選び ![ ます (\ すべてクリア ][ImageClearIcon] )。  
     
-## コンソールからセッションストレージを操作する   
+## コンソールからセッションストレージを操作する  
 
 JavaScript は**本体**で実行できるため、**本体**はページの javascript コンテキストにアクセスできるため、コンソールから操作することができ `sessionStorage` ます。 **Console**  
 
@@ -109,11 +103,9 @@ JavaScript は**本体**で実行できるため、**本体**はページの jav
        `sessionStorage`**コンソール**から操作する  
     :::image-end:::  
     
-<!--  
-   
+## Microsoft Edge DevTools チームと連絡を取る  
 
-  
--->  
+[!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
 <!-- image links -->  
 

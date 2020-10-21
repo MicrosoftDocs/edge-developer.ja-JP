@@ -3,16 +3,16 @@ description: Microsoft Edge DevTools をビューポートの下または左側�
 title: Microsoft Edge DevTools の配置を変更する (ドッキング解除、下へのドッキング、左へのドッキング)
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 09/01/2020
+ms.date: 10/19/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: da7bd4ed23c54faac6d9fef9afbc78128f8cfd3c
-ms.sourcegitcommit: 63e6d34ff483f3b419a0e271a3513874e6ce6c79
+ms.openlocfilehash: 65c0849af5da671bb0d76397d6d9395bc249eaac
+ms.sourcegitcommit: 99eee78698dc95b2a3fa638a5b063ef449899cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "10993010"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "11125049"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -28,13 +28,7 @@ ms.locfileid: "10993010"
    See the License for the specific language governing permissions and
    limitations under the License.  -->
 
-
-
-
-
-# Microsoft Edge DevTools の配置を変更する (ドッキング解除、下へのドッキング、左へのドッキング)   
-
-
+# Microsoft Edge DevTools の配置を変更する (ドッキング解除、下へのドッキング、左へのドッキング)  
 
 既定では、DevTools はビューポートの右側にドッキングされます。  また、下部へのドッキング、左へのドッキング、別のウィンドウへの DevTools のドッキング解除を行うこともできます。  
 
@@ -45,46 +39,44 @@ ms.locfileid: "10993010"
       :::image-end:::  
    :::column-end:::
    :::column span="":::
-      :::image type="complex" source="../media/customize-elements-styles-bottom-docked.msft.png" alt-text="[下へ] を選ぶ" lightbox="../media/customize-elements-styles-bottom-docked.msft.png":::
+      :::image type="complex" source="../media/customize-elements-styles-bottom-docked.msft.png" alt-text="[左へ] を選ぶ" lightbox="../media/customize-elements-styles-bottom-docked.msft.png":::
          選択する `Dock To Bottom`  
       :::image-end:::  
    :::column-end:::
 :::row-end:::  
 :::row:::
    :::column span="":::
-      :::image type="complex" source="../media/customize-elements-styles-options-dock-side-highlight-browser.msft.png" alt-text="別のウィンドウに表示されるブラウザー" lightbox="../media/customize-elements-styles-options-dock-side-highlight-browser.msft.png":::
+      :::image type="complex" source="../media/customize-elements-styles-options-dock-side-highlight-browser.msft.png" alt-text="[左へ] を選ぶ" lightbox="../media/customize-elements-styles-options-dock-side-highlight-browser.msft.png":::
          別のウィンドウに表示されるブラウザー  
       :::image-end:::  
    :::column-end:::
    :::column span="":::
-      :::image type="complex" source="../media/customize-elements-styles-options-dock-side-highlight-devtools.msft.png" alt-text="独立したウィンドウに表示されるアンドックされる DevTools" lightbox="../media/customize-elements-styles-options-dock-side-highlight-devtools.msft.png":::
+      :::image type="complex" source="../media/customize-elements-styles-options-dock-side-highlight-devtools.msft.png" alt-text="[左へ] を選ぶ" lightbox="../media/customize-elements-styles-options-dock-side-highlight-devtools.msft.png":::
          独立したウィンドウに表示されるアンドックされる DevTools  
       :::image-end:::  
    :::column-end:::
 :::row-end:::  
 
-## メインメニューから配置を変更する   
+## メインメニューから配置を変更する  
 
-1.  [**カスタマイズと制御**] をクリックし `...` ます。 \ (\) [独立した**ウィンドウに**固定する] (ドッキング解除 \)、[下へ固定] \ (下から下へ)、 ![ ][ImageUndockIcon] **Dock To Bottom** ![ ][ImageBottomIcon] または**左に** ![ ][ImageLeftIcon] 固定  
+1.  [**カスタマイズと制御 DevTools** \ ( `...` \)] を選択し、[**別のウィンドウに装着を解除する]** を選択し ![ ][ImageUndockIcon] **Dock To Bottom** ![ ][ImageBottomIcon] **Dock To Left** ![ ][ImageLeftIcon] ます。 \ (ドッキング解除 \)、下から下へ (ドッキング)、下に固定  
     
-    :::image type="complex" source="../media/customize-elements-styles-options-dock-side-highlight.msft.png" alt-text="[別ウィンドウに装着する] を選ぶ" lightbox="../media/customize-elements-styles-options-dock-side-highlight.msft.png":::
-       [**別ウィンドウに装着する]** を選ぶ  
+    :::image type="complex" source="../media/customize-elements-styles-options-dock-side-highlight.msft.png" alt-text="[左へ] を選ぶ" lightbox="../media/customize-elements-styles-options-dock-side-highlight.msft.png":::
+       [**別のウィンドウにドッキングを解除する]** を選ぶ  
     :::image-end:::  
     
-## コマンドメニューから配置を変更する   
+## コマンドメニューから配置を変更する  
 
 1.  [コマンドメニューを開き][DevtoolsCommandMenu]ます。  
 1.  次のいずれかのコマンド `Dock To Bottom` を実行 `Undock Into Separate Window` します。  現時点では、左へのドッキング用のコマンドはありませんが、 [メインメニュー](#change-placement-from-the-main-menu)からアクセスできます。  
     
-    :::image type="complex" source="../media/customize-elements-styles-command-menu-undo.msft.png" alt-text="[ドッキング解除] コマンド" lightbox="../media/customize-elements-styles-command-menu-undo.msft.png":::
+    :::image type="complex" source="../media/customize-elements-styles-command-menu-undo.msft.png" alt-text="[左へ] を選ぶ" lightbox="../media/customize-elements-styles-command-menu-undo.msft.png":::
        [ドッキング解除] コマンド  
     :::image-end:::  
     
-<!--  
- 
+## Microsoft Edge DevTools チームと連絡を取る  
 
-
--->  
+[!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
 <!-- image links -->  
 

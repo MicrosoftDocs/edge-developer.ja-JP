@@ -3,16 +3,16 @@ description: Microsoft Edge DevTools のネットワークパネル機能の包�
 title: ネットワーク分析のリファレンス
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 09/30/2020
+ms.date: 10/19/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 758623482ab2179987c6467f8e30c72d8893d710
-ms.sourcegitcommit: addfd27bb765c92880a59f259dc702f6e4e1bf28
+ms.openlocfilehash: 8123fbebadf1d43fd1460ecebf91190cac793e19
+ms.sourcegitcommit: 99eee78698dc95b2a3fa638a5b063ef449899cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "11092315"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "11125371"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -49,12 +49,12 @@ Microsoft Edge DevTools のネットワーク分析機能の包括的な参照�
 
 要求の記録を停止するには、次の手順を実行します。  
 
-1.  [ネットワーク] パネルの [**ネットワークログの記録を停止**する] を選択します (ネットワーク ![ ログの記録を停止し ][ImageRecordOnIcon] ます)。 **Network**  灰色に変わり、DevTools が要求を記録しなくなったことを示します。  
-1.  `Control` + `E` `Command` + `E` **ネットワーク**パネルがフォーカスされているときに、\ (Windows \) または \ (macOS \) を押します。  
+1.  [ **Stop recording network log** ![ ][ImageRecordOnIcon] **ネットワーク**] パネルで [ネットワークログの記録停止] を選びます。  灰色に変わり、DevTools が要求を記録しなくなったことを示します。  
+1.  `Control` + `E` `Command` + `E` **ネットワーク**パネルがフォーカスされているときに、[\ (Windows, Linux \)] または [\ (macOS \)] を選びます。  
 
 ### 要求をクリアする  
 
-[ネットワーク] パネルの [ **クリア** ] (オフ) を選択して ![ ][ImageClearIcon] 、要求テーブルからのすべての要求をクリアします。  
+[ネットワーク] パネルで [ **クリア** \ (クリア)] を選択して ![ ][ImageClearIcon] 、要求テーブルからすべての要求をクリアします。  
 
 :::image type="complex" source="../media/network-network-clear-button.msft.png" alt-text="[ネットワーク] パネル" lightbox="../media/network-network-clear-button.msft.png":::
    [ **クリア** ] ボタン  
@@ -88,7 +88,7 @@ Microsoft Edge DevTools のネットワーク分析機能の包括的な参照�
 
 <!--  ### Replay XHR request  -->
 
-<!--  To replay an XHR request, hover on the request in the Requests table, open the contextual menu \(right-click\), and select **Replay XHR**.  -->
+<!--  To replay an XHR request, hover on the request in the Requests table, open the contextual menu \(right-click\), and choose **Replay XHR**.  -->
 
 <!--  
 :::image type="complex" source="../media/network-replay-xhr.msft.png" alt-text="[ネットワーク] パネル" lightbox="../media/network-replay-xhr.msft.png":::
@@ -117,7 +117,7 @@ Microsoft Edge DevTools のネットワーク分析機能の包括的な参照�
 
 ### ブラウザキャッシュを手動でクリアする  
 
-ブラウザーのキャッシュをいつでも手動でクリアするには、[要求] テーブルの任意の場所でコンテキストメニュー \ (右クリック \) を開き、[ **ブラウザキャッシュのクリア**] を選びます。  
+ブラウザーのキャッシュをいつでも手動でクリアするには、[要求] テーブルの任意の場所でコンテキストメニュー \ (右クリック \) を開き、[ **ブラウザーキャッシュのクリア**] を選びます。  
 
 :::image type="complex" source="../media/network-network-clear-browser-cache.msft.png" alt-text="[ネットワーク] パネル" lightbox="../media/network-network-clear-browser-cache.msft.png":::
    [**ブラウザーキャッシュのクリア**] を選ぶ  
@@ -158,7 +158,7 @@ DevTools は、調整が有効になっていることを通知するために�
 
 ### ブラウザーの cookie を手動でクリアする  
 
-ブラウザーの cookie をいつでも手動でクリアするには、[要求] テーブルの任意の場所でコンテキストメニュー \ (右クリック \) を開き、[ **ブラウザ cookie のクリア**] を選びます。  
+ブラウザーの cookie をいつでも手動でクリアするには、[要求] テーブルの任意の場所でコンテキストメニュー \ (右クリック \) を開き、[ **ブラウザー cookie のクリア**] を選びます。  
 
 :::image type="complex" source="../media/network-network-clear-browser-cookies.msft.png" alt-text="[ネットワーク] パネル" lightbox="../media/network-network-clear-browser-cookies.msft.png":::
    [**ブラウザーのクリア cookie**の選択]  
@@ -244,7 +244,7 @@ DevTools は、調整が有効になっていることを通知するために�
 :::row-end:::  
 :::row:::
    :::column span="1":::
-      **メディア**  
+      **Media**  
    :::column-end:::
    :::column span="2":::
       &nbsp;  
@@ -294,7 +294,7 @@ DevTools は、調整が有効になっていることを通知するために�
 ボタンが表示されない場合は、[ **フィルター** ] ウィンドウが非表示になっている可能性があります。  
 詳細については、「 [[フィルター] ウィンドウを非表示](#hide-the-filters-pane)にする」を参照してください。  
 
-複数の種類のフィルターを同時に有効にするに `Control` は、\ (Windows \) または `Command` \ (macOS \) を保持し、を選択します。  
+複数の種類のフィルターを同時に有効にするに `Control` は、\ (Windows、Linux \) または `Command` \ (macOS \) を保持し、を選択します。  
 
 :::image type="complex" source="../media/network-network-type-filters.msft.png" alt-text="[ネットワーク] パネル" lightbox="../media/network-network-type-filters.msft.png":::
    型フィルターを使用した JS、CSS、およびドキュメントのリソースの表示  
@@ -464,7 +464,7 @@ DevTools が開いている限り、すべての要求がネットワークパ�
 
 #### カスタム列を追加する  
 
-要求テーブルにカスタム列を追加するには、要求テーブルのヘッダーにマウスポインターを合わせて、コンテキストメニューを開き (\ を右クリック \)、[**応答ヘッダー**で  >  **ヘッダー列を管理**する] を選択します。  
+要求テーブルにカスタム列を追加するには、要求テーブルのヘッダーをポイントし、コンテキストメニューの [\ (右クリック \)] を開き、[**応答ヘッダー**] で [  >  **ヘッダー列の管理**] を選びます。  
 
 :::image type="complex" source="../media/network-network-requests-add-custom.msft.png" alt-text="[ネットワーク] パネル" lightbox="../media/network-network-requests-add-custom.msft.png":::
    要求テーブルへのカスタム列の追加  
@@ -550,7 +550,7 @@ To refresh the table, re-select the name of the WebSocket connection under the *
 既定では、[ヘッダー] タブにはヘッダーの名前がアルファベット順に表示されます。  受け取った順序で HTTP ヘッダーの名前を表示するには、次の手順を使用します。  
 
 1.  興味のある要求の [ **ヘッダー** ] タブを開きます。  詳細については、「 [HTTP ヘッダーを表示](#view-http-headers)する」を参照してください。  
-1.  [**要求ヘッダー** ] または [**応答ヘッダー** ] セクションの横にある [**ソースの表示**] を選択します。  
+1.  [**要求ヘッダー**または**応答ヘッダー** ] セクションの横にある [**ソースの表示**] を選択します。  
 
 ### クエリ文字列パラメーターの表示  
 
@@ -568,14 +568,14 @@ To refresh the table, re-select the name of the WebSocket connection under the *
 要求のクエリ文字列のパラメーターソースを表示するには、次の手順を使用します。  
 
 1.  [クエリ文字列パラメーター] セクションに移動します。  詳細については、「 [クエリ文字列パラメーターを表示](#view-query-string-parameters)する」を参照してください。  
-1.  [ **ソースの表示**] を選択します。  
+1.  [ **ソースの表示**] を選びます。  
 
 #### URL 形式でエンコードされたクエリ文字列パラメーターの表示  
 
 人間が読める形式でクエリ文字列パラメーターを表示するには、エンコードが保持されている場合は、次の手順を使用します。  
 
 1.  [クエリ文字列パラメーター] セクションに移動します。  詳細については、「 [クエリ文字列パラメーターを表示](#view-query-string-parameters)する」を参照してください。  
-1.  [ **表示 URL をエンコード**した] を選択します。  
+1.  [ **表示 URL エンコード**] を選びます。  
 
 ### Cookie の表示  
 
@@ -891,7 +891,7 @@ HAR ファイルを保存すると、そのファイルを分析用の DevTools 
 ### [フィルター] ウィンドウを非表示にする  
 
 既定では、DevTools によって [ **フィルター] ウィンドウ**が表示されます。  
-**Filter** ![ ][ImageFilterIcon] 非表示にするには、[フィルター \] (フィルター \) を選択します。  
+[ **フィルター** \ ( ![ フィルター ][ImageFilterIcon] \)] を選択して非表示にします。  
 
 :::image type="complex" source="../media/network-network-resources-hide-filters-button.msft.png" alt-text="[ネットワーク] パネル" lightbox="../media/network-network-resources-hide-filters-button.msft.png":::
    [フィルターの非表示] ボタン  
@@ -918,6 +918,10 @@ HAR ファイルを保存すると、そのファイルを分析用の DevTools 
 :::image type="complex" source="../media/network-network-requests-show-overview-off.msft.png" alt-text="[ネットワーク] パネル" lightbox="../media/network-network-requests-show-overview-off.msft.png":::
    [ **概要の表示** ] チェックボックス  
 :::image-end:::  
+
+## Microsoft Edge DevTools チームと連絡を取る  
+
+[!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
 <!-- image links -->  
 

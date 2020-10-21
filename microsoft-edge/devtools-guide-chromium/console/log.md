@@ -3,16 +3,16 @@ description: コンソールにメッセージを記録する方法について�
 title: コンソールでのメッセージの記録を開始する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 09/01/2020
+ms.date: 10/19/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 3a2562eeb25bcee7c8b5195f6f2297613e37f2d6
-ms.sourcegitcommit: 63e6d34ff483f3b419a0e271a3513874e6ce6c79
+ms.openlocfilehash: 96e3ad76fb86e32cf58abe6187fa0d6e75a2c00a
+ms.sourcegitcommit: 99eee78698dc95b2a3fa638a5b063ef449899cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "10993150"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "11125273"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -28,13 +28,7 @@ ms.locfileid: "10993150"
    See the License for the specific language governing permissions and
    limitations under the License.  -->
 
-
-
-
-
-# コンソールでのメッセージの記録を開始する   
-
-
+# コンソールでのメッセージの記録を開始する  
 
 この対話形式のチュートリアルでは、 [Microsoft Edge DevTools][MicrosoftEdgeDevTools] コンソールでメッセージの記録とフィルター処理を行う方法について説明します。  
 
@@ -44,11 +38,11 @@ ms.locfileid: "10993150"
 
 このチュートリアルは順番どおりに完了することを目的としています。  JavaScript を使用してページにインタラクティビティを追加する方法など、web 開発の基礎を理解していることを前提としています。  
 
-## デモツールと DevTools をセットアップする   
+## デモツールと DevTools をセットアップする  
 
 このチュートリアルは、デモを開き、すべてのワークフローを自分で試すことができるように設計されています。  実際にフォローすると、後でワークフローを覚える可能性が高くなります。  
 
-1.  `Control`[\ (Windows \)] または `Command` [\ (macOS \)] を押したまま、新しいタブで開くための**コンソールログの例**をクリックします。  
+1.  [ `Control` \ (Windows, Linux \]) または `Command` \ (macOS \) を保持し、新しいタブで開くための **コンソールログの例** を選択します。  
     
     [コンソールログの例][GlitchDevToolsConsoleLogExamples]
     
@@ -56,16 +50,16 @@ ms.locfileid: "10993150"
     > [!TIP]
     > Move the demo to a separate window.  
     > 
-    > :::image type="complex" source="../media/log-set-up-1.msft.png" alt-text="The tutorial on the left, and the demo on the right" lightbox="../media/log-set-up-1.msft.png":::
+    > :::image type="complex" source="../media/log-set-up-1.msft.png" alt-text="コンソールでのメッセージ" lightbox="../media/log-set-up-1.msft.png":::
     >    The tutorial on the left, and the demo on the right  
     > :::image-end:::  
     -->
     
-1.  デモにフォーカスを置いて、 `Control` + `Shift` + `J` \ (Windows \) または `Command` + `Option` + `J` \ (macOS \) を押すと、devtools を開くことができます。  既定では、DevTools がデモの右側に表示されます。  
+1.  デモにフォーカスして、[ `Control` + `Shift` + `J` \ (Windows、Linux \)] または [\ (macOS \)] を選択して、 `Command` + `Option` + `J` devtools を開きます。  既定では、DevTools がデモの右側に表示されます。  
     
     :::row:::
        :::column span="":::
-          :::image type="complex" source="../media/console-example-devtools-right-console.msft.png" alt-text="デモの右側に DevTools が開きます。" lightbox="../media/console-example-devtools-right-console.msft.png":::
+          :::image type="complex" source="../media/console-example-devtools-right-console.msft.png" alt-text="コンソールでのメッセージ" lightbox="../media/console-example-devtools-right-console.msft.png":::
              デモの右側に DevTools が開きます。  
           :::image-end:::  
        :::column-end:::
@@ -73,7 +67,7 @@ ms.locfileid: "10993150"
           > [!TIP]
           > [ウィンドウの下部に DevTools をドッキング][DevToolsCustomizePlacement]します。  
           
-          :::image type="complex" source="../media/console-example-devtools-bottom-console.msft.png" alt-text="デモの下部にドッキングされた DevTools" lightbox="../media/console-example-devtools-bottom-console.msft.png":::
+          :::image type="complex" source="../media/console-example-devtools-bottom-console.msft.png" alt-text="コンソールでのメッセージ" lightbox="../media/console-example-devtools-bottom-console.msft.png":::
              デモの下部にドッキングされた DevTools  
           :::image-end:::  
        :::column-end:::
@@ -83,7 +77,7 @@ ms.locfileid: "10993150"
           > [!TIP]
           > [DevTools を別のウィンドウにドッキング解除][DevToolsCustomizePlacement]します。  
           
-          :::image type="complex" source="../media/console-example-devtools-separate-console-browse.msft.png" alt-text="別のウィンドウに表示されるブラウザー" lightbox="../media/console-example-devtools-separate-console-browse.msft.png":::
+          :::image type="complex" source="../media/console-example-devtools-separate-console-browse.msft.png" alt-text="コンソールでのメッセージ" lightbox="../media/console-example-devtools-separate-console-browse.msft.png":::
              別のウィンドウに表示されるブラウザー  
           :::image-end:::  
        :::column-end:::
@@ -91,38 +85,38 @@ ms.locfileid: "10993150"
           > [!TIP]
           > [DevTools を別のウィンドウにドッキング解除][DevToolsCustomizePlacement]します。  
           
-          :::image type="complex" source="../media/console-example-devtools-separate-console-devtools.msft.png" alt-text="別のウィンドウでアンドックされる DevTools" lightbox="../media/console-example-devtools-separate-console-devtools.msft.png":::
+          :::image type="complex" source="../media/console-example-devtools-separate-console-devtools.msft.png" alt-text="コンソールでのメッセージ" lightbox="../media/console-example-devtools-separate-console-devtools.msft.png":::
              別のウィンドウでアンドックされる DevTools  
           :::image-end:::  
        :::column-end:::
     :::row-end:::  
     
-## JavaScript から記録されたメッセージを表示する   
+## JavaScript から記録されたメッセージを表示する  
 
 本体に表示されるほとんどのメッセージは、ページの JavaScript を作成した web 開発者から提供されます。  このセクションの目標は、コンソールに表示される可能性のあるさまざまなメッセージの種類について説明し、各メッセージの種類を自分の JavaScript から自分でログに記録する方法について説明します。  
 
 1.  デモの [ **ログ情報** ] ボタンをクリックします。  `Hello, Console!` コンソールにログインします。
     
-    :::image type="complex" source="../media/console-log-info.msft.png" alt-text="ログ情報をクリックした後の本体" lightbox="../media/console-log-info.msft.png":::
+    :::image type="complex" source="../media/console-log-info.msft.png" alt-text="コンソールでのメッセージ" lightbox="../media/console-log-info.msft.png":::
        **ログ情報**をクリックした後の**本体**  
     :::image-end:::  
     
-1.  コンソールのメッセージの横にある `Hello, Console!` [ **log.js: 2**] をクリックします。  [ソース] パネルが開き、メッセージがコンソールに記録される原因となったコード行が強調表示されます。  ページの JavaScript の実行時にメッセージが記録されました `console.log('Hello, Console!')` 。
+1.  コンソールのメッセージの横にある `Hello, Console!` 「 **log.js: 2**」を選択します。  [ソース] パネルが開き、メッセージがコンソールに記録される原因となったコード行が強調表示されます。  ページの JavaScript の実行時にメッセージが記録されました `console.log('Hello, Console!')` 。
     
-    :::image type="complex" source="../media/console-sources-logjs.msft.png" alt-text="[log.js] をクリックすると、[ソース] パネルが開きます。2" lightbox="../media/console-sources-logjs.msft.png":::
+    :::image type="complex" source="../media/console-sources-logjs.msft.png" alt-text="コンソールでのメッセージ" lightbox="../media/console-sources-logjs.msft.png":::
        [DevTools] をクリックすると、[ **ソース** ] パネルが開きます。 `log.js:2`  
     :::image-end:::  
     
 1.  次のいずれかのワークフローを使用して、 **コンソール** に移動します。  
     
     *   [ **コンソール** ] タブをクリックします。  
-    *   `Control` + `[` `Command` + `[` コンソールパネルがフォーカスされるまで、\ (Windows \) または \ (macOS \) キーを押します。  
-    *   [コマンドメニューを開き][DevToolsCommandMenu]、入力を開始して `Console` 、[ **コンソールパネルを表示** ] コマンドを選択し、を押し `Enter` ます。  
+    *   `Control` + `[` `Command` + コンソールパネルがフォーカスされるまで、\ (Windows, Linux \) または `[` \ (macOS \) を選択します。  
+    *   [コマンドメニューを開き][DevToolsCommandMenu]、入力を開始し `Console` て、[ **コンソールパネルを表示** ] コマンドを選択し、を選択し `Enter` ます。  
     
 1.  デモの [ **ログの警告** ] をクリックします。  `Abandon Hope All Ye Who Enter` コンソールにログインします。  次のように書式設定されたメッセージは警告です。  
     
-    :::image type="complex" source="../media/console-log-warning.msft.png" alt-text="[ログ警告] をクリックした後の本体" lightbox="../media/console-log-warning.msft.png":::
-       [**ログ警告**] をクリックした後の**本体**  
+    :::image type="complex" source="../media/console-log-warning.msft.png" alt-text="コンソールでのメッセージ" lightbox="../media/console-log-warning.msft.png":::
+       **ログの警告**を選択した後の**本体**  
     :::image-end:::  
     
     > [!TIP]
@@ -130,36 +124,36 @@ ms.locfileid: "10993150"
 
 1.  **Expand** ![ の前にある展開 \ (展開 ][ImageExpandIcon] \) アイコンをクリックし `Abandon Hope All Ye Who Enter` ます。  DevTools は、呼び出しにつながる [スタックトレース][WikiStackTrace] を示します。  
     
-    :::image type="complex" source="../media/console-log-warning-expanded.msft.png" alt-text="スタックトレース" lightbox="../media/console-log-warning-expanded.msft.png":::
+    :::image type="complex" source="../media/console-log-warning-expanded.msft.png" alt-text="コンソールでのメッセージ" lightbox="../media/console-log-warning-expanded.msft.png":::
        スタックトレース  
     :::image-end:::  
     
     スタックトレースでは、という名前の関数が呼び出されたことが通知され `logWarning` ます。これは、という名前の関数が呼び出され `quoteDante` ます。  つまり、最初に発生した通話はスタックトレースの一番下にあります。  スタックトレースの記録は、いつでも呼び出すことができ `console.trace()` ます。  
 
-1.  [ **ログエラー**] をクリックします。  次のエラーメッセージが記録されます。 `I'm sorry, Dave.  I'm afraid I can't do that.`  
+1.  [ **ログエラー**] を選びます。  次のエラーメッセージが記録されます。 `I'm sorry, Dave.  I'm afraid I can't do that.`  
     
-    :::image type="complex" source="../media/console-log-error.msft.png" alt-text="エラーメッセージ" lightbox="../media/console-log-error.msft.png":::
+    :::image type="complex" source="../media/console-log-error.msft.png" alt-text="コンソールでのメッセージ" lightbox="../media/console-log-error.msft.png":::
        エラーメッセージ  
     :::image-end:::  
     
-1.  [ **Log Table**] をクリックします。  有名なアーティストについての表が本体に記録されます。  
+1.  [ **ログテーブル**] を選びます。  有名なアーティストについての表が本体に記録されます。  
     
     > [!NOTE]
     > `birthday`列は1つの行にのみ設定されます。  コードを確認して、その理由を確認します。
     
-    :::image type="complex" source="../media/console-log-table.msft.png" alt-text="コンソールの表" lightbox="../media/console-log-table.msft.png":::
+    :::image type="complex" source="../media/console-log-table.msft.png" alt-text="コンソールでのメッセージ" lightbox="../media/console-log-table.msft.png":::
        **コンソール**の表  
     :::image-end:::  
     
-1.  [ **Log Group**] をクリックします。  4つの有名、犯罪 turtles の名前はラベルの下にグループ化されてい `Adolescent Irradiated Espionage Tortoises` ます。  
+1.  [ **Log Group**] を選びます。  4つの有名、犯罪 turtles の名前はラベルの下にグループ化されてい `Adolescent Irradiated Espionage Tortoises` ます。  
     
-    :::image type="complex" source="../media/console-log-group.msft.png" alt-text="コンソールのメッセージのグループ" lightbox="../media/console-log-group.msft.png":::
+    :::image type="complex" source="../media/console-log-group.msft.png" alt-text="コンソールでのメッセージ" lightbox="../media/console-log-group.msft.png":::
        **コンソール**のメッセージのグループ  
     :::image-end:::  
     
-1.  [ **Custom Custom**] をクリックします。  赤い境界線の付いたメッセージと青色の背景が本体に記録されます。  
+1.  [ **Custom Custom**] を選びます。  赤い境界線の付いたメッセージと青色の背景が本体に記録されます。  
     
-    :::image type="complex" source="../media/console-log-custom.msft.png" alt-text="コンソールでのカスタム書式設定を含むメッセージ" lightbox="../media/console-log-custom.msft.png":::
+    :::image type="complex" source="../media/console-log-custom.msft.png" alt-text="コンソールでのメッセージ" lightbox="../media/console-log-custom.msft.png":::
        **コンソール**でのカスタム書式設定を含むメッセージ  
     :::image-end:::  
     
@@ -167,19 +161,19 @@ ms.locfileid: "10993150"
 
 このセクションで説明されている方法よりも、さらに多くの方法があります。  このチュートリアルでは、残りのメソッドについて説明します。  
 
-## ブラウザーでログに記録されたメッセージを表示する   
+## ブラウザーでログに記録されたメッセージを表示する  
 
 ブラウザーでも、コンソールにメッセージが記録されます。  これは通常、ページに問題がある場合に発生します。  
 
-1.  [ **原因 404**] をクリックします。  `404`ページの JavaScript が存在しないファイルを取得しようとしたため、ブラウザーは、HTTP 状態コード (ネットワークエラー) をログに記録します。  
+1.  [ **原因 404**] を選びます。  `404`ページの JavaScript が存在しないファイルを取得しようとしたため、ブラウザーは、HTTP 状態コード (ネットワークエラー) をログに記録します。  
     
-    :::image type="complex" source="../media/console-cause-404.msft.png" alt-text="本体の404エラー" lightbox="../media/console-cause-404.msft.png":::
+    :::image type="complex" source="../media/console-cause-404.msft.png" alt-text="コンソールでのメッセージ" lightbox="../media/console-cause-404.msft.png":::
        `404`**本体**のエラー  
     :::image-end:::  
     
-1.  [ **原因エラー**] をクリックします。  `TypeError`JavaScript が存在しない DOM ノードを更新しようとしているため、ブラウザーは不明なログを記録します。  
+1.  [ **原因エラー**] を選びます。  `TypeError`JavaScript が存在しない DOM ノードを更新しようとしているため、ブラウザーは不明なログを記録します。  
     
-    :::image type="complex" source="../media/console-cause-error.msft.png" alt-text="本体の TypeError" lightbox="../media/console-cause-error.msft.png":::
+    :::image type="complex" source="../media/console-cause-error.msft.png" alt-text="コンソールでのメッセージ" lightbox="../media/console-cause-error.msft.png":::
        `TypeError`**コンソール**の A  
     :::image-end:::  
     
@@ -188,92 +182,92 @@ ms.locfileid: "10993150"
     > [!NOTE]
     > [既定のレベル] ドロップダウンが無効になっている場合は、 **コンソール** サイドバーを閉じる必要がある場合があります。  **コンソール**サイドバーの詳細については、以下の「メッセージソースでフィルター処理する」を参照してください。
     
-    :::image type="complex" source="../media/console-cause-error-log-levels.msft.png" alt-text="詳細ログレベルを有効にする" lightbox="../media/console-cause-error-log-levels.msft.png":::
+    :::image type="complex" source="../media/console-cause-error-log-levels.msft.png" alt-text="コンソールでのメッセージ" lightbox="../media/console-cause-error-log-levels.msft.png":::
        詳細ログレベルを有効にする  
     :::image-end:::  
     
-1.  [ **原因違反**] をクリックします。  ページが数秒間応答しなくなった後、ブラウザーで本体にメッセージが記録され `[Violation] 'click' handler took 3000ms` ます。  正確な期間は異なる場合があります。  
+1.  [ **原因違反**] を選びます。  ページが数秒間応答しなくなった後、ブラウザーで本体にメッセージが記録され `[Violation] 'click' handler took 3000ms` ます。  正確な期間は異なる場合があります。  
     
-    :::image type="complex" source="../media/console-cause-violation.msft.png" alt-text="本体の違反" lightbox="../media/console-cause-violation.msft.png":::
+    :::image type="complex" source="../media/console-cause-violation.msft.png" alt-text="コンソールでのメッセージ" lightbox="../media/console-cause-violation.msft.png":::
        **本体**の違反  
     :::image-end:::  
     
-## メッセージをフィルター処理する   
+## メッセージをフィルター処理する  
 
 一部のページでは、コンソールにメッセージがあふれて表示されます。  DevTools には、現在のタスクに関連しないメッセージをフィルター処理するさまざまな方法が用意されています。  
 
-### ログレベルでフィルター処理する   
+### ログレベルでフィルター処理する  
 
 各 `console` メソッドには、、、、 `Verbose` `Info` `Warning` またはなどの重大度レベルが割り当てられます `Error` 。  たとえば、はレベルのメッセージです。のように、 `console.log()` `Info` レベルのメッセージです `console.error()` `Error` 。  
 
 1.  [ **ログレベル** ] ドロップダウンをクリックして **エラー**を無効にします。  横にチェックマークが表示されなくなった場合、レベルは無効になります。  レベルのメッセージが表示さ `Error` れなくなります。  
     
-    :::image type="complex" source="../media/console-cause-violation-log-levels.msft.png" alt-text="コンソールでエラーレベルのメッセージを無効にする" lightbox="../media/console-cause-violation-log-levels.msft.png":::
+    :::image type="complex" source="../media/console-cause-violation-log-levels.msft.png" alt-text="コンソールでのメッセージ" lightbox="../media/console-cause-violation-log-levels.msft.png":::
        **コンソール**でエラーレベルのメッセージを無効にする  
     :::image-end:::  
     
 1.  [ **ログレベル** ] ドロップダウンをもう一度クリックし、 **エラー**を再度有効にします。  レベルのメッセージが再び表示さ `Error` れます。  
 
-### テキストでフィルター処理する   
+### テキストでフィルター処理する  
 
 正確な文字列を含むメッセージのみを表示する場合は、その文字列を [ **フィルター** ] テキストボックスに入力します。  
 
 1.  `Dave`[**フィルター** ] テキストボックスに入力します。  文字列を含まないすべてのメッセージ `Dave` は非表示になります。  また、ラベルが表示される場合もあり `Adolescent Irradiated Espionage Tortoises` ます。  これはバグです。  
     
-    :::image type="complex" source="../media/console-all-messages-text-filter.msft.png" alt-text="Dave が含まれていないメッセージをフィルターで除外する" lightbox="../media/console-all-messages-text-filter.msft.png":::
+    :::image type="complex" source="../media/console-all-messages-text-filter.msft.png" alt-text="コンソールでのメッセージ" lightbox="../media/console-all-messages-text-filter.msft.png":::
        含まれていないメッセージをフィルターで除外する `Dave`  
     :::image-end:::  
     
 1.  `Dave`[**フィルター** ] テキストボックスから削除します。  すべてのメッセージが再び表示されます。  
 
-### 正規表現によるフィルター   
+### 正規表現によるフィルター  
 
 特定の文字列ではなく、テキストのパターンを含むすべてのメッセージを表示する場合は、 [正規表現][MDNRegularExpressions]を使用します。  
 
 1.  `/^[AH]/`[**フィルター** ] テキストボックスに入力します。  このパターンを [RegExr][|::ref1::|Main] に入力して、実行内容の説明を入力します。  
     
-    :::image type="complex" source="../media/console-all-messages-regex-filter.msft.png" alt-text="パターンに一致しないメッセージをフィルターで除外する" lightbox="../media/console-all-messages-regex-filter.msft.png":::
+    :::image type="complex" source="../media/console-all-messages-regex-filter.msft.png" alt-text="コンソールでのメッセージ" lightbox="../media/console-all-messages-regex-filter.msft.png":::
        パターンに一致しないメッセージをフィルターで除外する `/^[AH]/`  
     :::image-end:::  
     
 1.  `/^[AH]/`[**フィルター** ] テキストボックスから削除します。  すべてのメッセージが再び表示されます。  
 
-### メッセージソース別にフィルターを適用する   
+### メッセージソース別にフィルターを適用する  
 
 特定の URL のメッセージのみを表示するには、 **サイドバー**を使用します。  
 
-1.  [ **コンソールサイドバーの表示** ] をクリックします ([ ![ コンソールサイドバーを表示] をクリック ][ImageShowConsoleSidebarIcon] します)。  
+1.  [ **コンソールサイドバーを表示** ] を選び ![ ][ImageShowConsoleSidebarIcon] ます。  
     
-    :::image type="complex" source="../media/console-sidebar-all-messages.msft.png" alt-text="サイドバー" lightbox="../media/console-sidebar-all-messages.msft.png":::
+    :::image type="complex" source="../media/console-sidebar-all-messages.msft.png" alt-text="コンソールでのメッセージ" lightbox="../media/console-sidebar-all-messages.msft.png":::
        サイドバー  
     :::image-end:::  
     
 1.  メッセージ数の隣にある **展開** \ ( ![ 展開 ][ImageExpandIcon] \) アイコンをクリックします。  次の図は、メッセージの数が **13 のメッセージ**であることを示しています。  **サイドバー**には、メッセージが記録される原因となった url の一覧が表示されます。  たとえば、11個のメッセージが発生しました `log.js` 。  
     
-    :::image type="complex" source="../media/console-sidebar-expanded-all-messages.msft.png" alt-text="サイドバーでのメッセージのソースの表示" lightbox="../media/console-sidebar-expanded-all-messages.msft.png":::
+    :::image type="complex" source="../media/console-sidebar-expanded-all-messages.msft.png" alt-text="コンソールでのメッセージ" lightbox="../media/console-sidebar-expanded-all-messages.msft.png":::
        サイドバーでのメッセージのソースの表示  
     :::image-end:::  
     
-### ユーザーメッセージでフィルターを適用する   
+### ユーザーメッセージでフィルターを適用する  
 
 以前は、[ **ログ情報**] をクリックしたときに、 `console.log('Hello, Console!')` メッセージをコンソールにログするためのスクリプトが呼び出されます。  このような JavaScript から記録されるメッセージは、「 **ユーザメッセージ**」と呼ばれます。  これに対して、[ **原因 404**] をクリックすると、 `Error` 要求されたリソースが見つからなかったことを示すレベルのメッセージがブラウザーでログに記録されます。  そのようなメッセージは、 **ブラウザーメッセージ**とみなされます。  **サイドバー**を使用して、ブラウザーメッセージをフィルター処理し、ユーザーメッセージのみを表示します。  
 
-1.  [ **9 ユーザーメッセージ**] をクリックします。  ブラウザーのメッセージが非表示になります。  
+1.  [ **9 ユーザーメッセージ**] を選びます。  ブラウザーのメッセージが非表示になります。  
     
-    :::image type="complex" source="../media/console-sidebar-user-messages.msft.png" alt-text="ブラウザーメッセージのフィルター処理" lightbox="../media/console-sidebar-user-messages.msft.png":::
+    :::image type="complex" source="../media/console-sidebar-user-messages.msft.png" alt-text="コンソールでのメッセージ" lightbox="../media/console-sidebar-user-messages.msft.png":::
        ブラウザーメッセージのフィルター処理  
     :::image-end:::  
     
-1.  [ **13** 個のメッセージ] をクリックすると、再びすべてのメッセージが表示されます。  
+1.  [ **13** 個のメッセージ] を選択して、再びすべてのメッセージを表示します。  
 
-## 他のパネルと共に本体を使用する   
+## 他のパネルと共に本体を使用する  
 
-スタイルを編集していても、コンソールログの何かをすばやく確認する必要がある場合はどうすればよいですか。 引き出しを使用します。  
+スタイルを編集していても、コンソールログの何かをすばやく確認する必要がある場合はどうすればよいですか。  引き出しを使用します。  
 
 1.  [ **要素** ] タブをクリックします。  
-1.  キーを押し `Escape` ます。  **ドロワー**の [コンソール] タブが開きます。  このチュートリアルで使用しているコンソールパネルのすべての機能が含まれています。  
+1.  を選択し `Escape` ます。  **ドロワー**の [**コンソール**] タブが開きます。  このチュートリアルで使用しているコンソールパネルのすべての機能が含まれています。  
     
-    :::image type="complex" source="../media/console-elements-drawer-console-sidebar-all-messages.msft.png" alt-text="ドローワの [コンソール] タブ" lightbox="../media/console-elements-drawer-console-sidebar-all-messages.msft.png":::
+    :::image type="complex" source="../media/console-elements-drawer-console-sidebar-all-messages.msft.png" alt-text="コンソールでのメッセージ" lightbox="../media/console-elements-drawer-console-sidebar-all-messages.msft.png":::
          **ドローワ**の [**コンソール**] タブ  
     :::image-end:::  
     
@@ -284,11 +278,9 @@ ms.locfileid: "10993150"
 *   See [Console API Reference][DevToolsConsoleReference] to learn more about all of the `console` methods that were demonstrated in [View messages logged from JavaScript(#view-messages-logged-from-javascript) and explore the other `console` methods that were not covered in this tutorial.  
 *   See [Get Started](/microsoft-edge/devtools-guide-chromium/#start) to explore what else you are able to do with DevTools.  -->  
 
-<!--
- 
+## Microsoft Edge DevTools チームと連絡を取る  
 
-
--->  
+[!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
 <!-- image links -->  
 
@@ -310,8 +302,6 @@ ms.locfileid: "10993150"
 [RegExrMain]: https://regexr.com "RegExr"  
 
 [WikiStackTrace]: https://en.wikipedia.org/wiki/Stack_trace "スタックトレース-Wikipedia"  
-
-
 > [!NOTE]
 > このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
 > 元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/console/log) にあり、 [Kayce Basques][KayceBasques] テクニカルライター、Chrome Devtools \ & Lighthouse \) で作成されています。  

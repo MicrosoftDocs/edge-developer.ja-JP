@@ -4,16 +4,16 @@ ms.author: msedgedevrel
 ms.prod: microsoft-edge
 ms.topic: include
 ms.date: 09/01/2020
-ms.openlocfilehash: 52fab56b92ffd19d4db1968e337ab2c5f93f6ae7
-ms.sourcegitcommit: 63e6d34ff483f3b419a0e271a3513874e6ce6c79
+ms.openlocfilehash: abd837417098aa6d665bb112f99085ff2473b4ca
+ms.sourcegitcommit: 99eee78698dc95b2a3fa638a5b063ef449899cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "10992706"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "11124682"
 ---
 次のオプションを使用して、投稿の新機能や変更点、または DevTools に関連するその他の機能について説明します。  
 
-*   [**フィードバックの送信**] アイコンを使ってフィードバックを送信するか、 `Alt` + `Shift` + `I` devtools で \ (Windows \) または `Option` + `Shift` + `I` \ (macOS \) を選択します。  
+*   [**フィードバックの送信**] アイコンを使ってフィードバックを送信するか、 `Alt` + `Shift` + `I` devtools で \ (Windows、Linux \) または `Option` + `Shift` + `I` \ (macOS) を選択します。  
 *   ツイートで [@EdgeDevTools][PostTweetEdgeDevTools]ます。  
 *   [必要な Web][TheWebWeWant]に提案を送信します。  
 *   [ [フィードバック](#feedback) ] セクションを使用して、この記事のファイルのバグを修正します。  

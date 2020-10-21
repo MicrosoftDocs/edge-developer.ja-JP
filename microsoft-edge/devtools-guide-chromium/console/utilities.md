@@ -3,16 +3,16 @@ description: Microsoft Edge DevTools コンソールで利用できる便利な�
 title: コンソールユーティリティ API リファレンス
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 09/01/2020
+ms.date: 10/19/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 2882d980e6da45072cab4b028ceb1838a9078064
-ms.sourcegitcommit: 63e6d34ff483f3b419a0e271a3513874e6ce6c79
+ms.openlocfilehash: f224bb8235437e971ff0e59c20d69e589ce520fb
+ms.sourcegitcommit: 99eee78698dc95b2a3fa638a5b063ef449899cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "10993108"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "11125252"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -53,7 +53,7 @@ $_
 
 次の図では、評価式には最初に名前の配列が含まれています。  評価して `$_.length` 配列の長さを確認します。変更された値は、 `$_` 最新の評価済みの式になり `4` ます。  
 
-:::image type="complex" source="../media/console-array-length.msft.png" alt-text="新しいコマンドが評価されたときの $ _ 変更" lightbox="../media/console-array-length.msft.png":::
+:::image type="complex" source="../media/console-array-length.msft.png" alt-text="$ _ は、最近評価された式です。" lightbox="../media/console-array-length.msft.png":::
    図 2:  `$_` 新しいコマンドの評価時の変更点  
 :::image-end:::  
 
@@ -99,13 +99,13 @@ $0
 
 次の図では、[ `img` **要素** ] パネルで要素が選択されています。  **本体**のドロアーで、 `$0` 評価が完了し、同じ要素が表示されます。  
 
-:::image type="complex" source="../media/console-image-highlighted-$0.msft.png" alt-text="$0" lightbox="../media/console-image-highlighted-$0.msft.png":::
+:::image type="complex" source="../media/console-image-highlighted-$0.msft.png" alt-text="$ _ は、最近評価された式です。" lightbox="../media/console-image-highlighted-$0.msft.png":::
    図 3: `$0`  
 :::image-end:::  
 
 次の図では、同じページで選択された別の要素が画像に表示されています。  現在選択されている `$0` 要素を参照して `$1` いますが、以前に選択されていた要素を返します。  
 
-:::image type="complex" source="../media/console-image-highlighted-$1.msft.png" alt-text="$1" lightbox="../media/console-image-highlighted-$1.msft.png":::
+:::image type="complex" source="../media/console-image-highlighted-$1.msft.png" alt-text="$ _ は、最近評価された式です。" lightbox="../media/console-image-highlighted-$1.msft.png":::
    図 4: `$1`  
 :::image-end:::  
 
@@ -119,15 +119,15 @@ $(selector, [startNode])
 
 次の図では、文書内の最初の要素への参照 `<img>` が返されます。  
 
-:::image type="complex" source="../media/console-element-selector-image.msft.png" alt-text="$ (' Img ')" lightbox="../media/console-element-selector-image.msft.png":::
+:::image type="complex" source="../media/console-element-selector-image.msft.png" alt-text="$ _ は、最近評価された式です。" lightbox="../media/console-element-selector-image.msft.png":::
    図 5: `$('img')`  
 :::image-end:::  
 
-返された結果にポインターを置いて、コンテキストメニュー \ (右クリック \) を開き、[ **要素パネルで** 表示] を選択して DOM で見つけるか、表示されたらページ上に **スクロール** して表示します。  
+返された結果にポインターを置いて、コンテキストメニュー \ (右クリック \) を開き、[ **要素パネルで** 表示] を選択して DOM で見つけるか、 **表示** されたページで表示します。  
 
 次の図では、現在選択されている要素への参照が返され、src プロパティが表示されます。  
 
-:::image type="complex" source="../media/console-element-selector-image-source.msft.png" alt-text="$ (' Img ') src" lightbox="../media/console-element-selector-image-source.msft.png":::
+:::image type="complex" source="../media/console-element-selector-image-source.msft.png" alt-text="$ _ は、最近評価された式です。" lightbox="../media/console-element-selector-image-source.msft.png":::
    図 6: `$('img').src`  
 :::image-end:::  
 
@@ -135,7 +135,7 @@ $(selector, [startNode])
 
 次の図では、最初 `img` の要素がであり、 `title--image` 正しく表示され `src` ます。  
 
-:::image type="complex" source="../media/console-element-selector-image-filter-source.msft.png" alt-text="$ (' Img '、ドキュメントの querySelector (' タイトル--image ')) src" lightbox="../media/console-element-selector-image-filter-source.msft.png":::
+:::image type="complex" source="../media/console-element-selector-image-filter-source.msft.png" alt-text="$ _ は、最近評価された式です。" lightbox="../media/console-element-selector-image-filter-source.msft.png":::
    図 7: `$('img', document.querySelector('title--image')).src`  
 :::image-end:::  
 
@@ -159,7 +159,7 @@ for (each in images) {
 }
 ```  
 
-:::image type="complex" source="../media/console-element-selector-image-all.msft.png" alt-text="$ $ () を使用して、ドキュメント内のすべての画像を選択し、ソースを表示する" lightbox="../media/console-element-selector-image-all.msft.png":::
+:::image type="complex" source="../media/console-element-selector-image-all.msft.png" alt-text="$ _ は、最近評価された式です。" lightbox="../media/console-element-selector-image-all.msft.png":::
    図 8: `$$()` ドキュメント内のすべての画像を選択してソースを表示するために使用する  
 :::image-end:::  
 
@@ -174,12 +174,12 @@ for (each in images) {
 }
 ```  
 
-:::image type="complex" source="../media/console-element-selector-image-filter-all.msft.png" alt-text="$ $ () を使用して、文書内の指定された <div> 要素の後に表示されるすべての画像を選択して、ソースを表示する" lightbox="../media/console-element-selector-image-filter-all.msft.png":::
+:::image type="complex" source="../media/console-element-selector-image-filter-all.msft.png" alt-text="$ _ は、最近評価された式です。" lightbox="../media/console-element-selector-image-filter-all.msft.png":::
    図 9: `$$()` 文書内の指定された要素の後に表示されるすべての画像を選択して `<div>` ソースを表示する  
 :::image-end:::  
 
 > [!NOTE]
-> コンソールを押して、 `Shift` + `Enter` スクリプトを実行せずに、新しい行を開始します。  
+> コンソールでを選択して、 `Shift` + `Enter` スクリプトを実行せずに新しい行を開始します。  
 
 ## X  
 
@@ -195,7 +195,7 @@ $x(path, [startNode])
 $x("//p")
 ```  
 
-:::image type="complex" source="../media/console-array-xpath.msft.png" alt-text="XPath セレクターを使用する" lightbox="../media/console-array-xpath.msft.png":::
+:::image type="complex" source="../media/console-array-xpath.msft.png" alt-text="$ _ は、最近評価された式です。" lightbox="../media/console-array-xpath.msft.png":::
    図 10: XPath セレクターを使用する  
 :::image-end:::  
 
@@ -205,13 +205,13 @@ $x("//p")
 $x("//p[a]")
 ```  
 
-:::image type="complex" source="../media/console-array-xpath-sub-element.msft.png" alt-text="より複雑な XPath セレクターを使用する" lightbox="../media/console-array-xpath-sub-element.msft.png":::
+:::image type="complex" source="../media/console-array-xpath-sub-element.msft.png" alt-text="$ _ は、最近評価された式です。" lightbox="../media/console-array-xpath-sub-element.msft.png":::
    図 11: より複雑な XPath セレクターを使用する  
 :::image-end:::  
 
 他のセレクターコマンドと同様に、 `$x(path)` `startNode` 要素を検索する要素またはノードを指定する、オプションの2番目のパラメーターを持ちます。  
 
-:::image type="complex" source="../media/console-array-xpath-startnode.msft.png" alt-text="StartNode で XPath セレクターを使用する" lightbox="../media/console-array-xpath-startnode.msft.png":::
+:::image type="complex" source="../media/console-array-xpath-startnode.msft.png" alt-text="$ _ は、最近評価された式です。" lightbox="../media/console-array-xpath-startnode.msft.png":::
    図 12: で XPath セレクターを使用する `startNode`  
 :::image-end:::  
 
@@ -254,13 +254,13 @@ debug(method)
 debug("debug");
 ```  
 
-:::image type="complex" source="../media/console-debug-text.msft.png" alt-text="Debug () を使用したメソッド内の中断" lightbox="../media/console-debug-text.msft.png":::
+:::image type="complex" source="../media/console-debug-text.msft.png" alt-text="$ _ は、最近評価された式です。" lightbox="../media/console-debug-text.msft.png":::
    図 13: メソッド内での区切り `debug()`  
 :::image-end:::  
 
 `undebug(method)`メソッドの中断を停止するには、または UI を使ってすべてのブレークポイントを無効にする場合に使用します。  
 
-ブレークポイントの詳細については、「 [ブレークポイントでコードを一時停止][DevToolsJavascriptBreakpoints]する」を参照してください。  
+ブレークポイントの詳細については、「 [ブレークポイントでコードを一時停止][DevToolsJavascriptBreakpoints]する」に移動します。  
 
 ## dir  
 
@@ -277,11 +277,11 @@ document.head;
 dir(document.head);
 ```  
 
-:::image type="complex" source="../media/console-dir-document-head-expanded.msft.png" alt-text="Dir () メソッドを使ってドキュメントをログに記録します。" lightbox="../media/console-dir-document-head-expanded.msft.png":::
+:::image type="complex" source="../media/console-dir-document-head-expanded.msft.png" alt-text="$ _ は、最近評価された式です。" lightbox="../media/console-dir-document-head-expanded.msft.png":::
    図 14: `document.head` メソッドを使用してログを記録する `dir()`  
 :::image-end:::  
 
-詳細については、 [`console.dir()`][DevToolsConsoleApiConsoleDirObject] 本体 API のエントリを参照してください。  
+詳細については、「コンソール API のエントリ」を参照して [`console.dir()`][DevToolsConsoleApiConsoleDirObject] ください。  
 
 ## dirxml  
 
@@ -305,7 +305,7 @@ inspect(object/method)
 inspect(document.body);
 ```  
 
-:::image type="complex" source="../media/console-inspect-document-body.msft.png" alt-text="検査 () での要素の検査" lightbox="../media/console-inspect-document-body.msft.png":::
+:::image type="complex" source="../media/console-inspect-document-body.msft.png" alt-text="$ _ は、最近評価された式です。" lightbox="../media/console-inspect-document-body.msft.png":::
    図 15: の要素を調べる `inspect()`  
 :::image-end:::  
 
@@ -323,19 +323,19 @@ getEventListeners(object)
 getEventListeners(document);
 ```  
 
-:::image type="complex" source="../media/console-elements-event-listeners-console-get-event-listeners-document.msft.png" alt-text="GetEventListeners を使った出力 (ドキュメント)" lightbox="../media/console-elements-event-listeners-console-get-event-listeners-document.msft.png":::
+:::image type="complex" source="../media/console-elements-event-listeners-console-get-event-listeners-document.msft.png" alt-text="$ _ は、最近評価された式です。" lightbox="../media/console-elements-event-listeners-console-get-event-listeners-document.msft.png":::
    図 16: を使用した場合の結果 `getEventListeners(document)`  
 :::image-end:::  
 
 指定したオブジェクトに複数のリスナーが登録されている場合、この配列には各リスナーのメンバーが含まれます。  次の図に、イベントのドキュメント要素に登録されている2つのイベントリスナーを示し `click` ます。  
 
-:::image type="complex" source="../media/console-elements-event-listeners-console-get-event-listeners-document-expanded-1.msft.png" alt-text="複数のリスナー" lightbox="../media/console-elements-event-listeners-console-get-event-listeners-document-expanded-1.msft.png":::
+:::image type="complex" source="../media/console-elements-event-listeners-console-get-event-listeners-document-expanded-1.msft.png" alt-text="$ _ は、最近評価された式です。" lightbox="../media/console-elements-event-listeners-console-get-event-listeners-document-expanded-1.msft.png":::
    図 17: 複数のリスナー  
 :::image-end:::  
 
 次の各オブジェクトをさらに拡張して、プロパティを確認できます。  
 
-:::image type="complex" source="../media/console-elements-event-listeners-console-get-event-listeners-document-2.msft.png" alt-text="リスナーオブジェクトの展開ビュー" lightbox="../media/console-elements-event-listeners-console-get-event-listeners-document-2.msft.png":::
+:::image type="complex" source="../media/console-elements-event-listeners-console-get-event-listeners-document-2.msft.png" alt-text="$ _ は、最近評価された式です。" lightbox="../media/console-elements-event-listeners-console-get-event-listeners-document-2.msft.png":::
    図 18: リスナーオブジェクトの展開ビュー  
 :::image-end:::  
 
@@ -350,7 +350,7 @@ keys(object)
 たとえば、アプリケーションが次のオブジェクトを定義したとします。  
 
 ```console
-var player1 = { "name":  "Ted", "level": 42 }
+var player1 =   
 ```  
 
 次のコードサンプルと図では、 `player1` 入力と本体への入力前に、その結果がグローバル名前空間 \ (簡潔さ) で定義されていることを前提としてい `keys(player1)` `values(player1)` ます。  
@@ -361,7 +361,7 @@ keys(player1)
 values(player1)
 ```  
 
-:::image type="complex" source="../media/console-keys-values.msft.png" alt-text="Keys () コマンドと values () コマンド" lightbox="../media/console-keys-values.msft.png":::
+:::image type="complex" source="../media/console-keys-values.msft.png" alt-text="$ _ は、最近評価された式です。" lightbox="../media/console-keys-values.msft.png":::
    図 19: `keys()` および `values()` コマンド  
 :::image-end:::  
 
@@ -380,7 +380,7 @@ function sum(x, y) {
 monitor(sum);
 ```  
 
-:::image type="complex" source="../media/console-function-monitor-sum.msft.png" alt-text="Monitor () メソッド" lightbox="../media/console-function-monitor-sum.msft.png":::
+:::image type="complex" source="../media/console-function-monitor-sum.msft.png" alt-text="$ _ は、最近評価された式です。" lightbox="../media/console-function-monitor-sum.msft.png":::
    図 20: `monitor()` メソッド  
 :::image-end:::  
 
@@ -400,7 +400,7 @@ monitorEvents(object[, events])
 monitorEvents(window, "resize");
 ```  
 
-:::image type="complex" source="../media/console-monitor-events-resize-window.msft.png" alt-text="モニタリングウィンドウのサイズ変更イベント" lightbox="../media/console-monitor-events-resize-window.msft.png":::
+:::image type="complex" source="../media/console-monitor-events-resize-window.msft.png" alt-text="$ _ は、最近評価された式です。" lightbox="../media/console-monitor-events-resize-window.msft.png":::
    図 21: ウィンドウのサイズ変更イベントの監視  
 :::image-end:::  
 
@@ -427,7 +427,7 @@ monitorEvents($0, "key");
 
 次の図では、テキストフィールドに文字を入力した後のサンプル出力が表示されています。  
 
-:::image type="complex" source="../media/console-monitor-events-type-t-y.msft.png" alt-text="主要イベントの監視" lightbox="../media/console-monitor-events-type-t-y.msft.png":::
+:::image type="complex" source="../media/console-monitor-events-type-t-y.msft.png" alt-text="$ _ は、最近評価された式です。" lightbox="../media/console-monitor-events-type-t-y.msft.png":::
    図 22: 主要イベントの監視  
 :::image-end:::  
 
@@ -485,7 +485,7 @@ profileEnd('B');
 
 結果は、 **メモリ** パネルにヒープスナップショットとして表示されます。  
 
-:::image type="complex" source="../media/console-memory-multiple-cpu-profiles.msft.png" alt-text="グループ化されたプロファイル" lightbox="../media/console-memory-multiple-cpu-profiles.msft.png":::
+:::image type="complex" source="../media/console-memory-multiple-cpu-profiles.msft.png" alt-text="$ _ は、最近評価された式です。" lightbox="../media/console-memory-multiple-cpu-profiles.msft.png":::
    図 23: グループ化されたプロファイル  
 :::image-end:::  
 
@@ -548,7 +548,7 @@ var names = {
 table(names);
 ```  
 
-:::image type="complex" source="../media/console-table-display.msft.png" alt-text="Table () メソッドの結果" lightbox="../media/console-table-display.msft.png":::
+:::image type="complex" source="../media/console-table-display.msft.png" alt-text="$ _ は、最近評価された式です。" lightbox="../media/console-table-display.msft.png":::
    図 24: メソッドの結果 `table()`  
 :::image-end:::  
 
@@ -606,6 +606,10 @@ values(object)
 ```console
 values(object);
 ```  
+
+## Microsoft Edge DevTools チームと連絡を取る  
+
+[!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
 <!-- links -->  
 

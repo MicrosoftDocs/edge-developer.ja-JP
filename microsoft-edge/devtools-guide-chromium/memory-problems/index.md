@@ -3,16 +3,16 @@ description: Microsoft Edge と DevTools を使って、ページのパフォー
 title: メモリの問題を解決する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 09/01/2020
+ms.date: 10/19/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: ef820353f81eb3fd791433e9c53434dff3b10a60
-ms.sourcegitcommit: 63e6d34ff483f3b419a0e271a3513874e6ce6c79
+ms.openlocfilehash: 1d8a24fc360dc307471be33544c9c707736be06d
+ms.sourcegitcommit: 99eee78698dc95b2a3fa638a5b063ef449899cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "10992779"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "11125455"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -63,7 +63,7 @@ Microsoft Edge と DevTools を使って、ページのパフォーマンスに�
 
 Microsoft Edge ブラウザーのタスクマネージャーを使用して、メモリの問題の調査を開始します。  Microsoft Edge Browser のタスクマネージャーは、ページが現在使用しているメモリの量を示すリアルタイムモニターです。  
 
-1.  `Shift` + `Esc` Microsoft edge のメインメニューをクリックするか、[**その他のツール**] を選択して、  >  **Browser Task Manager** microsoft edge browser のタスクマネージャーを開きます。  
+1.  `Shift` + `Esc` Microsoft edge のメインメニューで、[**その他のツール**] を選択するか、[タスクマネージャー] を選択して  >  **Browser Task Manager** microsoft edge ブラウザーのタスクマネージャーを開きます。  
     
     :::image type="complex" source="../media/memory-problems-bing-settings-more-tools-browser-task-manager.msft.png" alt-text="Microsoft Edge Browser のタスクマネージャーを開く" lightbox="../media/memory-problems-bing-settings-more-tools-browser-task-manager.msft.png":::
        図 1: Microsoft Edge ブラウザーのタスクマネージャーを開く  
@@ -71,7 +71,7 @@ Microsoft Edge ブラウザーのタスクマネージャーを使用して、�
     
 1.  Microsoft Edge Browser タスクマネージャーのテーブルの見出しにマウスポインターを置いて、コンテキストメニュー \ (右クリック \) を開き、 **JavaScript メモリ**を有効にします。  
     
-    :::image type="complex" source="../media/memory-problems-bing-browser-task-manager-javascript-memory.msft.png" alt-text="JavaScript メモリを有効にする" lightbox="../media/memory-problems-bing-browser-task-manager-javascript-memory.msft.png":::
+    :::image type="complex" source="../media/memory-problems-bing-browser-task-manager-javascript-memory.msft.png" alt-text="Microsoft Edge Browser のタスクマネージャーを開く" lightbox="../media/memory-problems-bing-browser-task-manager-javascript-memory.msft.png":::
        図 2: JavaScript メモリを有効にする  
     :::image-end:::  
     
@@ -108,7 +108,7 @@ document.getElementById('grow').addEventListener('click', grow);
 
 コードで参照されているボタンが押されるたびに、1万 `div` ノードがドキュメントの本文に追加され、100万 `x` 文字の文字列が配列にプッシュされ `x` ます。  前のコードサンプルを実行すると、次の図のような [ **パフォーマンス** ] パネルに記録が生成されます。  
 
-:::image type="complex" source="../media/memory-problems-glitch-example-1-performance-memory.msft.png" alt-text="単純な成長" lightbox="../media/memory-problems-glitch-example-1-performance-memory.msft.png":::
+:::image type="complex" source="../media/memory-problems-glitch-example-1-performance-memory.msft.png" alt-text="Microsoft Edge Browser のタスクマネージャーを開く" lightbox="../media/memory-problems-glitch-example-1-performance-memory.msft.png":::
    図 3: 単純な成長  
 :::image-end:::  
 
@@ -144,7 +144,7 @@ document.getElementById('create').addEventListener('click', create);
 
 スナップショットを作成するには、DevTools を開き、[ **メモリ** ] パネルに移動して、[ **ヒープスナップショット** ] ラジオボタンを選択し、[ **スナップショットを撮る** ] ボタンを押します。  
 
-:::image type="complex" source="../media/memory-problems-glitch-example-12-memory-heap-snapshot.msft.png" alt-text="ヒープスナップショットの取得" lightbox="../media/memory-problems-glitch-example-12-memory-heap-snapshot.msft.png":::
+:::image type="complex" source="../media/memory-problems-glitch-example-12-memory-heap-snapshot.msft.png" alt-text="Microsoft Edge Browser のタスクマネージャーを開く" lightbox="../media/memory-problems-glitch-example-12-memory-heap-snapshot.msft.png":::
    図 4: ヒープスナップショットを撮る  
 :::image-end:::  
 
@@ -152,13 +152,13 @@ document.getElementById('create').addEventListener('click', create);
 
 `Detached`デタッチされた DOM ツリーを検索するには、**クラスフィルター**のテキストボックスに入力します。  
 
-:::image type="complex" source="../media/memory-problems-glitch-example-12-memory-heap-snapshot-filter-detached.msft.png" alt-text="デタッチしたノードのフィルター処理" lightbox="../media/memory-problems-glitch-example-12-memory-heap-snapshot-filter-detached.msft.png":::
+:::image type="complex" source="../media/memory-problems-glitch-example-12-memory-heap-snapshot-filter-detached.msft.png" alt-text="Microsoft Edge Browser のタスクマネージャーを開く" lightbox="../media/memory-problems-glitch-example-12-memory-heap-snapshot-filter-detached.msft.png":::
    図 5: デタッチしたノードのフィルター処理  
 :::image-end:::  
 
 Carats を展開して、デタッチされたツリーを調査します。  
 
-:::image type="complex" source="../media/memory-problems-glitch-example-12-memory-heap-snapshot-filter-detached-expanded.msft.png" alt-text="デタッチしたツリーの調査" lightbox="../media/memory-problems-glitch-example-12-memory-heap-snapshot-filter-detached-expanded.msft.png":::
+:::image type="complex" source="../media/memory-problems-glitch-example-12-memory-heap-snapshot-filter-detached-expanded.msft.png" alt-text="Microsoft Edge Browser のタスクマネージャーを開く" lightbox="../media/memory-problems-glitch-example-12-memory-heap-snapshot-filter-detached-expanded.msft.png":::
    図 6: デタッチしたツリーの調査  
 :::image-end:::  
 
@@ -166,7 +166,7 @@ Carats を展開して、デタッチされたツリーを調査します。
 
 ノードを選択して、さらに詳しく調べます。  [ **オブジェクト** ] ウィンドウには、参照しているコードに関する詳細情報が表示されます。  たとえば、次の図では、変数がそのノードを参照していることを確認でき `detachedNodes` ます。  この特定のメモリリークを解決するには、変数を使うコードを調べて、不要 `detachedUNode` になったときにノードへの参照が削除されるようにする必要があります。  
 
-:::image type="complex" source="../media/memory-problems-glitch-example-12-memory-heap-snapshot-filter-detached-expanded-selected.msft.png" alt-text="ノードの調査" lightbox="../media/memory-problems-glitch-example-12-memory-heap-snapshot-filter-detached-expanded-selected.msft.png":::
+:::image type="complex" source="../media/memory-problems-glitch-example-12-memory-heap-snapshot-filter-detached-expanded-selected.msft.png" alt-text="Microsoft Edge Browser のタスクマネージャーを開く" lightbox="../media/memory-problems-glitch-example-12-memory-heap-snapshot-filter-detached-expanded-selected.msft.png":::
    図 7: ノードの調査  
 :::image-end:::  
 
@@ -192,19 +192,19 @@ document.getElementById('grow').addEventListener('click', grow);
 
 記録中に、次の図のように、タイムライン上の割り当てインストルメンテーションで青色のバーが表示されているかどうかを確認します。  
 
-:::image type="complex" source="../media/memory-problems-glitch-example-13-allocation-timeline-snapshot-all.msft.png" alt-text="新しい割り当て" lightbox="../media/memory-problems-glitch-example-13-allocation-timeline-snapshot-all.msft.png":::
+:::image type="complex" source="../media/memory-problems-glitch-example-13-allocation-timeline-snapshot-all.msft.png" alt-text="Microsoft Edge Browser のタスクマネージャーを開く" lightbox="../media/memory-problems-glitch-example-13-allocation-timeline-snapshot-all.msft.png":::
    図 8: 新しい割り当て  
 :::image-end:::  
 
 これらの青いバーは、新しいメモリ割り当てを表します。  これらの新しいメモリ割り当ては、メモリリークの候補です。  バーを拡大して、指定した期間内に割り当てられたオブジェクトのみを表示するように、 **コンストラクター** ウィンドウをフィルター処理することができます。  
 
-:::image type="complex" source="../media/memory-problems-glitch-example-13-allocation-timeline-snapshot-focused.msft.png" alt-text="拡大された割り当てタイムライン" lightbox="../media/memory-problems-glitch-example-13-allocation-timeline-snapshot-focused.msft.png":::
+:::image type="complex" source="../media/memory-problems-glitch-example-13-allocation-timeline-snapshot-focused.msft.png" alt-text="Microsoft Edge Browser のタスクマネージャーを開く" lightbox="../media/memory-problems-glitch-example-13-allocation-timeline-snapshot-focused.msft.png":::
    図 9: 割り当てのタイムラインを拡大する  
 :::image-end:::  
 
 オブジェクトを展開し、[ **オブジェクト** ] ウィンドウで値を選択して詳細を表示します。  たとえば、次の図では、新しく割り当てられたオブジェクトの詳細を表示することで、スコープ内の変数に割り当てられていることを確認でき `x` `Window` ます。  
 
-:::image type="complex" source="../media/memory-problems-glitch-example-13-allocation-timeline-snapshot-focused-constructor-expanded.msft.png" alt-text="オブジェクトの詳細" lightbox="../media/memory-problems-glitch-example-13-allocation-timeline-snapshot-focused-constructor-expanded.msft.png":::
+:::image type="complex" source="../media/memory-problems-glitch-example-13-allocation-timeline-snapshot-focused-constructor-expanded.msft.png" alt-text="Microsoft Edge Browser のタスクマネージャーを開く" lightbox="../media/memory-problems-glitch-example-13-allocation-timeline-snapshot-focused-constructor-expanded.msft.png":::
    図 10: オブジェクトの詳細  
 :::image-end:::  
 
@@ -212,7 +212,7 @@ document.getElementById('grow').addEventListener('click', grow);
 
 **アロケーションサンプリング**プロファイリング型を使って、JavaScript 関数によるメモリ割り当てを表示します。  
 
-:::image type="complex" source="../media/memory-problems-glitch-example-05-memory-allocation-sampling.msft.png" alt-text="レコード割り当てのサンプリング" lightbox="../media/memory-problems-glitch-example-05-memory-allocation-sampling.msft.png":::
+:::image type="complex" source="../media/memory-problems-glitch-example-05-memory-allocation-sampling.msft.png" alt-text="Microsoft Edge Browser のタスクマネージャーを開く" lightbox="../media/memory-problems-glitch-example-05-memory-allocation-sampling.msft.png":::
    図 11: 割り当てのサンプリングの記録  
 :::image-end:::  
 
@@ -223,7 +223,7 @@ document.getElementById('grow').addEventListener('click', grow);
 
 DevTools には、関数によるメモリ割り当ての内訳が表示されます。  既定のビューは **ヘビー (ボトムアップ)** で、最も多くのメモリを割り当てた関数が表示されます。  
 
-:::image type="complex" source="../media/memory-problems-glitch-example-05-memory-allocation-sampling-heavy-bottom-up.msft.png" alt-text="割り当てのサンプリング" lightbox="../media/memory-problems-glitch-example-05-memory-allocation-sampling-heavy-bottom-up.msft.png":::
+:::image type="complex" source="../media/memory-problems-glitch-example-05-memory-allocation-sampling-heavy-bottom-up.msft.png" alt-text="Microsoft Edge Browser のタスクマネージャーを開く" lightbox="../media/memory-problems-glitch-example-05-memory-allocation-sampling-heavy-bottom-up.msft.png":::
    図 12: 割り当てのサンプリング  
 :::image-end:::  
 
@@ -234,6 +234,10 @@ DevTools には、関数によるメモリ割り当ての内訳が表示され�
 Microsoft Edge Browser タスクマネージャーまたはパフォーマンスメモリ記録を使って、頻繁にガベージコレクションを見つけることができます。  Microsoft Edge ブラウザータスクマネージャーでは、頻繁に増加している **メモリ** または **JavaScript メモリ** 値がガベージコレクションの頻度を頻繁に表しています。  パフォーマンスの記録では、頻繁な変更 (上昇と下降) から JS ヒープまたはノードカウントグラフは、頻繁なガベージコレクションを示しています。  
 
 問題を特定した後は、 **タイムライン記録での割り当てインストルメンテーション** を使って、メモリが割り当てられている場所と割り当ての原因となっている関数を確認できます。  
+
+## Microsoft Edge DevTools チームと連絡を取る  
+
+[!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
 <!-- image links -->  
 

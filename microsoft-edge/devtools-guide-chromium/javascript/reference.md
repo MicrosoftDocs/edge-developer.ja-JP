@@ -3,16 +3,16 @@ description: Microsoft Edge DevTools のデバッグ機能の包括的なリフ�
 title: JavaScript デバッグ リファレンス
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 09/01/2020
+ms.date: 10/19/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: f11dfb52e97dcec20d1e6c4f3adeee7010857a33
-ms.sourcegitcommit: 63e6d34ff483f3b419a0e271a3513874e6ce6c79
+ms.openlocfilehash: c1d6b9d301ff2bc696900b48d80a3d5352f8fd58
+ms.sourcegitcommit: 99eee78698dc95b2a3fa638a5b063ef449899cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "10993423"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "11124804"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -28,7 +28,7 @@ ms.locfileid: "10993423"
    See the License for the specific language governing permissions and
    limitations under the License.  -->
 
-# JavaScript febugging リファレンス  
+# JavaScript デバッグ リファレンス  
 
 Microsoft Edge DevTools デバッグ機能の次の包括的なリファレンスで、新しいデバッグワークフローを見つけます。  
 
@@ -72,7 +72,7 @@ function getName() {
 
 デバッグしている問題に関連する関数呼び出しが含まれているコード行で一時停止した場合、その機能をさらに調べるに **は、[** ( ![ ステップイン ][ImageStepIntoIcon] )] ボタンをクリックします。  
 
-:::image type="complex" source="../media/javascript-source-page-debugger-step-into-next-function-call.msft.png" alt-text="[ステップイン] を選ぶ" lightbox="../media/javascript-source-page-debugger-step-into-next-function-call.msft.png":::
+:::image type="complex" source="../media/javascript-source-page-debugger-step-into-next-function-call.msft.png" alt-text="[ステップオーバー] を選ぶ" lightbox="../media/javascript-source-page-debugger-step-into-next-function-call.msft.png":::
    [**ステップイン**] を選ぶ  
 :::image-end:::  
 
@@ -96,7 +96,7 @@ function getName() {
 
 デバッグ中の問題に関連していない関数の内部で一時停止している場合は、[ **ステップアウト** \ ( ![ ステップアウト ][ImageStepOutIcon] )] ボタンをクリックして関数の残りのコードを実行します。  
 
-:::image type="complex" source="../media/javascript-source-page-debugger-step-out-of-current-function.msft.png" alt-text="[ステップアウト] を選ぶ" lightbox="../media/javascript-source-page-debugger-step-out-of-current-function.msft.png":::
+:::image type="complex" source="../media/javascript-source-page-debugger-step-out-of-current-function.msft.png" alt-text="[ステップオーバー] を選ぶ" lightbox="../media/javascript-source-page-debugger-step-out-of-current-function.msft.png":::
    [**ステップアウト**] を選ぶ  
 :::image-end:::  
 
@@ -124,13 +124,13 @@ Long 関数をデバッグする場合、デバッグしている問題に関連
 
 目的のコード行を右クリックし、[ **続行**] を選択します。  DevTools では、その時点までのすべてのコードが実行され、その行が一時停止されます。  
 
-:::image type="complex" source="../media/javascript-source-page-continue-to-here.msft.png" alt-text="[続行] を選択する" lightbox="../media/javascript-source-page-continue-to-here.msft.png":::
-   [**続行**] を選択する  
+:::image type="complex" source="../media/javascript-source-page-continue-to-here.msft.png" alt-text="[ステップオーバー] を選ぶ" lightbox="../media/javascript-source-page-continue-to-here.msft.png":::
+   [**続行する**] を選ぶ  
 :::image-end:::  
 
 ### コールスタックの top 関数を再起動する  
 
-一時停止しているコード行で、[ **通話スタック** ] ウィンドウ内の任意の場所を右クリックし、[ **フレームの再起動** ] を選択して、呼び出し履歴の一番上の関数の1行目にカーソルを置きます。  Top 関数は、最後に実行された関数です。  
+一時停止しているコード行で、[ **通話スタック** ] ウィンドウ内の任意の場所を右クリックし、[ **フレームの再起動** ] をクリックして、呼び出し履歴の一番上の関数の1行目にカーソルを置きます。  Top 関数は、最後に実行された関数です。  
 
 次のコードスニペットは、手順の例です。  
 
@@ -144,37 +144,37 @@ function factorial(n) {
 }
 ```  
 
-はに一時停止 `A` しています。  [ **フレームの再起動**] をクリックした後、 `B` ブレークポイントを設定したり、[ **再開] スクリプト実行**を押したりしなくても、を一時停止しておく必要があります。  
+はに一時停止 `A` しています。  [ **フレームの再起動**] を選択した後、 `B` ブレークポイントを設定したり、[ **スクリプト実行の再開**] を選択したりすることなく、一時停止する必要があります。  
 
-:::image type="complex" source="../media/javascript-source-page-debugger-restart-frame.msft.png" alt-text="[フレームの再起動] を選ぶ" lightbox="../media/javascript-source-page-debugger-restart-frame.msft.png":::
+:::image type="complex" source="../media/javascript-source-page-debugger-restart-frame.msft.png" alt-text="[ステップオーバー] を選ぶ" lightbox="../media/javascript-source-page-debugger-restart-frame.msft.png":::
    [**フレームの再起動**] を選ぶ  
 :::image-end:::  
 
 ### スクリプトランタイムを再開する  
 
-スクリプトを一時停止した後でランタイムを継続するには、[ **スクリプト実行の再開** ] ([ ![ スクリプト実行の再開 ][ImageResumeScriptExecutionIcon] ]) ボタンをクリックします。  DevTools は、次のブレークポイント (存在する場合) までスクリプトを実行します。  
+スクリプトを一時停止した後でランタイムを続行するには、[ **スクリプトの実行を再開** する] ( ![ スクリプト実行の再開) ボタンを選択し ][ImageResumeScriptExecutionIcon] ます。  DevTools は、次のブレークポイント (存在する場合) までスクリプトを実行します。  
 
-:::image type="complex" source="../media/javascript-sources-get-started-js-resume-script-runtime.msft.png" alt-text="[スクリプト実行の再開] を選択する" lightbox="../media/javascript-sources-get-started-js-resume-script-runtime.msft.png":::
-   [**スクリプト実行の再開**] を選択する  
+:::image type="complex" source="../media/javascript-sources-get-started-js-resume-script-runtime.msft.png" alt-text="[ステップオーバー] を選ぶ" lightbox="../media/javascript-sources-get-started-js-resume-script-runtime.msft.png":::
+   [**スクリプト実行の再開**] を選ぶ  
 :::image-end:::  
 
 #### スクリプトの強制実行  
 
-すべてのブレークポイントを無視してスクリプトを強制的に実行し続けるには、[**スクリプト**実行の再開] をクリックして、[スクリプト実行の強制実行] (スクリプト実行の ![ 強制) ボタンを選択し ][ImageResumeScriptExecutionIcon] **Force script execution** ![ ][ImageForceScriptExecutionIcon] ます。  
+すべてのブレークポイントを無視してスクリプトを実行し続けるには、[ **スクリプト実行** の再開 ![ ] ([スクリプト実行の再開 \]) ボタンを選び、 ][ImageResumeScriptExecutionIcon] [ **スクリプトの強制実行** \ (スクリプト実行の ![ 強制 ][ImageForceScriptExecutionIcon] ]) ボタンを選びます。  
 
-:::image type="complex" source="../media/javascript-sources-get-started-js-force-script-runtime.msft.png" alt-text="[スクリプト実行の強制] を選ぶ" lightbox="../media/javascript-sources-get-started-js-force-script-runtime.msft.png":::
+:::image type="complex" source="../media/javascript-sources-get-started-js-force-script-runtime.msft.png" alt-text="[ステップオーバー] を選ぶ" lightbox="../media/javascript-sources-get-started-js-force-script-runtime.msft.png":::
    [**スクリプト実行の強制**] を選ぶ  
 :::image-end:::  
 
 ### スレッドコンテキストの変更  
 
-Web ワーカーまたはサービスワーカーを操作するときに、[ **スレッド** ] ウィンドウに表示されているコンテキストをクリックして、そのコンテキストに切り替えます。  青い矢印のアイコンは、現在選択されているコンテキストを示します。  
+Web ワーカーまたはサービスワーカーを操作するときに、[ **スレッド** ] ウィンドウに表示されているコンテキストを選択して、そのコンテキストに切り替えます。  青い矢印のアイコンは、現在選択されているコンテキストを示します。  
 
-:::image type="complex" source="../media/javascript-sources-main-min-js-threads.msft.png" alt-text="[スレッド] ウィンドウ" lightbox="../media/javascript-sources-main-min-js-threads.msft.png":::
+:::image type="complex" source="../media/javascript-sources-main-min-js-threads.msft.png" alt-text="[ステップオーバー] を選ぶ" lightbox="../media/javascript-sources-main-min-js-threads.msft.png":::
    [ **スレッド** ] ウィンドウ  
 :::image-end:::  
 
-たとえば、メインスクリプトとサービスワーカースクリプトの両方のブレークポイントで一時停止しているとします。  サービスワーカーコンテキストのローカルプロパティとグローバルプロパティを表示する必要があるが、[ **ソース** ] パネルにはメインスクリプトコンテキストが表示されています。  [ **スレッド** ] ウィンドウで service worker エントリをクリックすると、そのコンテキストに切り替えることができるようになります。  
+たとえば、メインスクリプトとサービスワーカースクリプトの両方のブレークポイントで一時停止しているとします。  サービスワーカーコンテキストのローカルプロパティとグローバルプロパティを表示する必要があるが、[ **ソース** ] パネルにはメインスクリプトコンテキストが表示されています。  [ **スレッド** ] ウィンドウで service worker エントリを選ぶと、そのコンテキストに切り替えることができるようになります。  
 
 ## ローカル、クロージャ、グローバルプロパティの表示と編集  
 
@@ -183,7 +183,7 @@ Web ワーカーまたはサービスワーカーを操作するときに、[ **
 *   プロパティ値をダブルクリックして変更します。  
 *   列挙可能でないプロパティは灰色で表示されます。  
 
-:::image type="complex" source="../media/javascript-sources-get-started-js-scope.msft.png" alt-text="スコープウィンドウ" lightbox="../media/javascript-sources-get-started-js-scope.msft.png":::
+:::image type="complex" source="../media/javascript-sources-get-started-js-scope.msft.png" alt-text="[ステップオーバー] を選ぶ" lightbox="../media/javascript-sources-get-started-js-scope.msft.png":::
    **スコープ**ウィンドウ  
 :::image-end:::  
 
@@ -193,9 +193,9 @@ Web ワーカーまたはサービスワーカーを操作するときに、[ **
 
 <!--If you are working with async code, check the **Async** checkbox to enable async call stacks.  -->  
 
-エントリをクリックすると、その関数が呼び出されたコード行にジャンプします。  青色の矢印アイコンは、現在の DevTools が現在強調表示されている関数を示しています。  
+エントリを選択して、関数が呼び出されたコード行にジャンプします。  青色の矢印アイコンは、現在の DevTools が現在強調表示されている関数を示しています。  
 
-:::image type="complex" source="../media/javascript-glitch-debug-js-sources-get-started-inputs-are-empty.msft.png" alt-text="[通話スタック] ウィンドウ" lightbox="../media/javascript-glitch-debug-js-sources-get-started-inputs-are-empty.msft.png":::
+:::image type="complex" source="../media/javascript-glitch-debug-js-sources-get-started-inputs-are-empty.msft.png" alt-text="[ステップオーバー] を選ぶ" lightbox="../media/javascript-glitch-debug-js-sources-get-started-inputs-are-empty.msft.png":::
    [ **通話スタック** ] ウィンドウ  
 :::image-end:::  
 
@@ -210,7 +210,7 @@ This should be moved to an "Export debug data" H2 section when there is enough c
 
 [ **通話スタック** ] ウィンドウ内の任意の場所を右クリックし、[ **スタックトレースのコピー** ] を選択して、現在の呼び出し履歴をクリップボードにコピーします。  
 
-:::image type="complex" source="../media/javascript-glitch-debug-js-sources-get-started-inputs-are-empty-copy-stack-trace.msft.png" alt-text="[スタックトレースのコピー] を選ぶ" lightbox="../media/javascript-glitch-debug-js-sources-get-started-inputs-are-empty-copy-stack-trace.msft.png":::
+:::image type="complex" source="../media/javascript-glitch-debug-js-sources-get-started-inputs-are-empty-copy-stack-trace.msft.png" alt-text="[ステップオーバー] を選ぶ" lightbox="../media/javascript-glitch-debug-js-sources-get-started-inputs-are-empty-copy-stack-trace.msft.png":::
    [**スタックトレースのコピー** ] を選ぶ  
 :::image-end:::  
 
@@ -244,9 +244,9 @@ function animate() {
 
 1.  ファイルを開きます。  
 1.  任意の場所を右クリックします。  
-1.  [ **Library code としてマーク**] を選択します。  
+1.  [ **ライブラリコードとしてマーク**] を選択します。  
     
-    :::image type="complex" source="../media/javascript-glitch-debug-js-sources-get-started-inputs-are-empty-editor-mark-as-library-code.msft.png" alt-text="[エディター] ウィンドウからスクリプトをライブラリコードとしてマークする" lightbox="../media/javascript-glitch-debug-js-sources-get-started-inputs-are-empty-editor-mark-as-library-code.msft.png":::
+    :::image type="complex" source="../media/javascript-glitch-debug-js-sources-get-started-inputs-are-empty-editor-mark-as-library-code.msft.png" alt-text="[ステップオーバー] を選ぶ" lightbox="../media/javascript-glitch-debug-js-sources-get-started-inputs-are-empty-editor-mark-as-library-code.msft.png":::
        [**エディター** ] ウィンドウからスクリプトを**ライブラリコード**としてマークする  
     :::image-end:::  
     
@@ -255,9 +255,9 @@ function animate() {
 [**呼び出し履歴**] ウィンドウからスクリプトを**ライブラリコード**としてマークするための、操作を実行します。  
 
 1.  スクリプトから関数を右クリックします。  
-1.  [ **Library code としてマーク**] を選択します。  
+1.  [ **ライブラリコードとしてマーク**] を選択します。  
     
-    :::image type="complex" source="../media/javascript-glitch-debug-js-sources-get-started-inputs-are-empty-call-stack-mark-as-library-code.msft.png" alt-text="[呼び出し履歴] ウィンドウからスクリプトをライブラリコードとしてマークする" lightbox="../media/javascript-glitch-debug-js-sources-get-started-inputs-are-empty-call-stack-mark-as-library-code.msft.png":::
+    :::image type="complex" source="../media/javascript-glitch-debug-js-sources-get-started-inputs-are-empty-call-stack-mark-as-library-code.msft.png" alt-text="[ステップオーバー] を選ぶ" lightbox="../media/javascript-glitch-debug-js-sources-get-started-inputs-are-empty-call-stack-mark-as-library-code.msft.png":::
        [**呼び出し履歴**] ウィンドウからスクリプトを**ライブラリコード**としてマークする  
     :::image-end:::  
     
@@ -267,15 +267,15 @@ function animate() {
 
 1.  [ [設定][DevToolsCustomize]] を開きます。  
 1.  [ **ライブラリコード** ] タブに移動します。  
-1.  [ **パターンの追加**] をクリックします。  
+1.  [ **パターンの追加**] を選びます。  
 1.  **ライブラリコード**としてマークするスクリプト名またはスクリプト名の regex パターンを入力します。  
-1.  **[Add]** (追加) をクリックします。  
+1.  [ **追加**] を選びます。  
     
-    :::image type="complex" source="../media/javascript-framework-library-code.msft.png" alt-text="設定からスクリプトをライブラリコードとしてマークする" lightbox="../media/javascript-framework-library-code.msft.png":::
+    :::image type="complex" source="../media/javascript-framework-library-code.msft.png" alt-text="[ステップオーバー] を選ぶ" lightbox="../media/javascript-framework-library-code.msft.png":::
        **設定**からスクリプトを**ライブラリコード**としてマークする  
     :::image-end:::  
     
-## 任意のページからデバッグコードのスニペットを実行します。   
+## 任意のページからデバッグコードのスニペットを実行します。  
 
 本体で同じデバッグコードを繰り返し実行していることがわかった場合は、スニペットを検討してください。  スニペットは、DevTools 内で作成、保存、実行するランタイムスクリプトです。  
 
@@ -285,23 +285,23 @@ function animate() {
 
 **ウォッチ**ウィンドウを使用して、カスタム式の値を確認します。  有効な JavaScript 式を見ることができます。  
 
-:::image type="complex" source="../media/javascript-sources-get-started-js-watch.msft.png" alt-text="ウォッチウィンドウ" lightbox="../media/javascript-sources-get-started-js-watch.msft.png":::
+:::image type="complex" source="../media/javascript-sources-get-started-js-watch.msft.png" alt-text="[ステップオーバー] を選ぶ" lightbox="../media/javascript-sources-get-started-js-watch.msft.png":::
    **ウォッチ**ウィンドウ  
 :::image-end:::  
 
-*   **Add Expression** ![ 新しいウォッチ式を作成するには、[式の追加 \ (式の追加 \ ][ImageAddExpressionIcon] )] ボタンをクリックします。  
-*   **Refresh** ![ ][ImageRefreshIcon] すべての既存の式の値を更新するには、[更新] (更新) ボタンをクリックします。  値は、コードをステップ実行して自動的に更新されます。  
-*   式の上にマウスポインターを移動し、[ **式の削除** \ (式 \ の ![ 削除)] ボタンをクリックし ][ImageDeleteExpressionIcon] て削除します。  
+*   新しいウォッチ式を作成するには、[ **式の追加** \ ( ![ 式の追加 ][ImageAddExpressionIcon] )] ボタンを選択します。  
+*   [更新] を選択 **して、** ![ ][ImageRefreshIcon] 既存のすべての式の値を更新します。  値は、コードをステップ実行して自動的に更新されます。  
+*   式の上にマウスポインターを移動し、[ **式の削除** \ (式 \ の ![ 削除)] ボタンを選択し ][ImageDeleteExpressionIcon] て削除します。  
 
 ## ファイルを読みやすくする  
 
-[\] (書式 \) ボタンをクリックして、 **表示** ![ ][ImageFormatIcon] したファイルを人間が読めるようにします。  
+[\] (書式 \) ボタンを選択して、 **表示** している ![ ][ImageFormatIcon] ファイルを人間が読めるようにします。  
 
-:::image type="complex" source="../media/javascript-sources-html-non-minified.msft.png" alt-text="[書式] ボタン" lightbox="../media/javascript-sources-html-non-minified.msft.png":::
+:::image type="complex" source="../media/javascript-sources-html-non-minified.msft.png" alt-text="[ステップオーバー] を選ぶ" lightbox="../media/javascript-sources-html-non-minified.msft.png":::
    [ **書式** ] ボタン  
 :::image-end:::  
 
-## スクリプトを編集する   
+## スクリプトを編集する  
 
 バグを修正する場合、多くの場合、JavaScript コードに加えられた変更をいくつかテストする必要があります。  外部のエディターまたは IDE で変更を行ってから、ページを再読み込みする必要はありません。  作成したスクリプトは、DevTools で編集できます。  
 
@@ -309,17 +309,17 @@ function animate() {
 
 1.  [**ソース**] パネルの [**エディター** ] ウィンドウでファイルを開きます。  
 1.  [ **エディター** ] ウィンドウで変更します。  
-1.  `Ctrl` + `S` 保存するには、\ (Windows \) または `Command` + `S` \ (macOS \) を押します。  DevTools は、JS ファイル全体を Microsoft Edge の JavaScript エンジンに更新します。  
+1.  `Ctrl` + `S` 保存するには、\ (Windows、Linux \) または `Command` + `S` \ (macOS \) を選択します。  DevTools は、JS ファイル全体を Microsoft Edge の JavaScript エンジンに更新します。  
     
-    :::image type="complex" source="../media/javascript-sources-html-minified.msft.png" alt-text="[エディター] ウィンドウ" lightbox="../media/javascript-sources-html-minified.msft.png":::
+    :::image type="complex" source="../media/javascript-sources-html-minified.msft.png" alt-text="[ステップオーバー] を選ぶ" lightbox="../media/javascript-sources-html-minified.msft.png":::
        [ **エディター** ] ウィンドウ  
     :::image-end:::  
      
-## JavaScript を無効にする   
+## JavaScript を無効にする  
 
-「 [Microsoft Edge DevTools で JavaScript を無効にする」を][DevToolsJavascriptDisable]参照してください。  
+[Microsoft Edge DevTools で JavaScript を無効][DevToolsJavascriptDisable]にするには、こちらを参照してください。  
 
-## Microsoft Edge DevTools チームと連絡を取り合う  
+## Microsoft Edge DevTools チームと連絡を取る  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 

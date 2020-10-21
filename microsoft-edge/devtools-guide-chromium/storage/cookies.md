@@ -3,16 +3,16 @@ description: Microsoft Edge DevTools を使用して、ページの HTTP cookie 
 title: Microsoft Edge DevTools を使った Cookie の表示、編集、削除
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 09/01/2020
+ms.date: 10/19/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: eaaf4663504fc674fd70dc1ca9e0357febb529e0
-ms.sourcegitcommit: 63e6d34ff483f3b419a0e271a3513874e6ce6c79
+ms.openlocfilehash: 328771aa254dac1f851535a44126ea220dc95a9c
+ms.sourcegitcommit: 99eee78698dc95b2a3fa638a5b063ef449899cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "10993241"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "11125483"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -43,7 +43,7 @@ ms.locfileid: "10993241"
 
 1.  [ **記憶域** ] で [ **cookie**] を展開し、[起点] を選択します。  
     
-    :::image type="complex" source="../media/storage-application-storage-cookies-selected.msft.png" alt-text="[Cookie] ウィンドウ" lightbox="../media/storage-application-storage-cookies-selected.msft.png":::
+    :::image type="complex" source="../media/storage-application-storage-cookies-selected.msft.png" alt-text="マニフェストウィンドウ" lightbox="../media/storage-application-storage-cookies-selected.msft.png":::
        図 2: [Cookie] ウィンドウ  
     :::image-end:::  
 
@@ -66,7 +66,7 @@ ms.locfileid: "10993241"
 
 **名前**または**値**で cookie をフィルター処理するには、[**フィルター** ] テキストボックスを使用します。  他のフィールドによるフィルター処理はサポートされていません。  
 
-:::image type="complex" source="../media/storage-application-storage-cookies-filter-id.msft.png" alt-text="テキスト ID が含まれていないすべての cookie をフィルターで除外する" lightbox="../media/storage-application-storage-cookies-filter-id.msft.png":::
+:::image type="complex" source="../media/storage-application-storage-cookies-filter-id.msft.png" alt-text="マニフェストウィンドウ" lightbox="../media/storage-application-storage-cookies-filter-id.msft.png":::
    図 3: テキストが含まれていないすべての cookie をフィルター処理する `ID`  
 :::image-end:::  
 
@@ -75,7 +75,7 @@ ms.locfileid: "10993241"
 [ **名前**]、[ **値**]、[ **ドメイン**]、[ **パス**]、[ **有効期限** ]、[最大有効期限] の各フィールドは編集できます。  
 フィールドをダブルクリックして編集します。  
 
-:::image type="complex" source="../media/storage-application-storage-cookies-rename.msft.png" alt-text="DEVTOOLS に cookie の名前を設定します。" lightbox="../media/storage-application-storage-cookies-rename.msft.png":::
+:::image type="complex" source="../media/storage-application-storage-cookies-rename.msft.png" alt-text="マニフェストウィンドウ" lightbox="../media/storage-application-storage-cookies-rename.msft.png":::
    図 4: クッキーの名前を設定する `DEVTOOLS!`  
 :::image-end:::  
 
@@ -83,15 +83,19 @@ ms.locfileid: "10993241"
 
 Cookie を選択して、[選択した削除の **削除] を**選択し ![ ][ImageDeleteIcon]  、特定の cookie を削除します。  
 
-:::image type="complex" source="../media/storage-application-storage-cookies-delete-selected.msft.png" alt-text="特定の cookie を削除する" lightbox="../media/storage-application-storage-cookies-delete-selected.msft.png":::
+:::image type="complex" source="../media/storage-application-storage-cookies-delete-selected.msft.png" alt-text="マニフェストウィンドウ" lightbox="../media/storage-application-storage-cookies-delete-selected.msft.png":::
    図 5: 特定の cookie を削除する  
 :::image-end:::  
 
-すべて**Clear All**の ![ ][ImageClearIcon] cookie を削除するには、[すべてクリア] を選択します。  
+すべて**Clear All** ![ ][ImageClearIcon] の cookie を削除するには、[すべてクリア] を選択します。  
 
-:::image type="complex" source="../media/storage-application-storage-cookies-clear-all.msft.png" alt-text="すべての cookie をクリアする" lightbox="../media/storage-application-storage-cookies-clear-all.msft.png":::
+:::image type="complex" source="../media/storage-application-storage-cookies-clear-all.msft.png" alt-text="マニフェストウィンドウ" lightbox="../media/storage-application-storage-cookies-clear-all.msft.png":::
    図 6: すべての cookie をクリアする  
 :::image-end:::  
+
+## Microsoft Edge DevTools チームと連絡を取る  
+
+[!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
 <!-- image links -->  
 

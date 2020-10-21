@@ -3,16 +3,16 @@ description: Microsoft Edge DevTools のネットワークパネルでネット�
 title: ネットワーク問題ガイド
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 09/01/2020
+ms.date: 10/19/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: ccd78c34a50bf235416df58aad28df9253b1b24e
-ms.sourcegitcommit: 63e6d34ff483f3b419a0e271a3513874e6ce6c79
+ms.openlocfilehash: 4713dc252d428abbf5b60ee5f74a7316a102dab6
+ms.sourcegitcommit: 99eee78698dc95b2a3fa638a5b063ef449899cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "10993374"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "11125378"
 ---
 <!-- Copyright Kayce Basques and Jonathan Garbee
 
@@ -28,20 +28,13 @@ ms.locfileid: "10993374"
    See the License for the specific language governing permissions and
    limitations under the License.  -->
 
-
-
-
-
-# ネットワークの問題に関するガイド   
-
-
-
+# ネットワーク問題ガイド  
 
 このガイドでは、Microsoft Edge DevTools のネットワークパネルでネットワークの問題や最適化の機会を検出する方法について説明します。  
 
 詳しく [は、「][NetworkPerformance] **ネットワーク** パネルの基本」をご覧ください。  
 
-## キューに入っているまたは停止している要求   
+## キューに入っているまたは停止している要求  
 
 **現象**  
 
@@ -63,7 +56,7 @@ ms.locfileid: "10993374"
 *   HTTP/2 を使用します。  HTTP/2 では domain sharding を使用しないでください。  
 *   重要な要求が事前にダウンロードされるように、不要な要求を削除または保留します。  
     
-## 最初のバイトまでの時間が遅い (TTFB)   
+## 最初のバイトまでの時間が遅い (TTFB)  
 
 **現象**  
 
@@ -71,7 +64,7 @@ ms.locfileid: "10993374"
 
 次の図では、 **ウォーターフォール** の長い緑色のバーは、要求が長い時間待機していたことを示します。  これは、ネットワークの速度を制限し、遅延を追加するためにプロファイルを使用してシミュレートされました。  
 
-:::image type="complex" source="../media/network-network-resources-using-dial-up-profile.msft.png" alt-text="最初のバイトまでの時間が遅い要求の例" lightbox="../media/network-network-resources-using-dial-up-profile.msft.png":::
+:::image type="complex" source="../media/network-network-resources-using-dial-up-profile.msft.png" alt-text="[ネットワーク] パネルのキューに入っている、または停止しているシリーズの例" lightbox="../media/network-network-resources-using-dial-up-profile.msft.png":::
    最初のバイトまでの時間が遅い要求の例  
 :::image-end:::  
 
@@ -85,7 +78,7 @@ ms.locfileid: "10993374"
 *   接続速度が遅い場合は、CDN でコンテンツをホストするか、ホスティングプロバイダーを変更することを検討してください。  
 *   サーバーの速度が遅い場合は、データベースクエリの最適化、キャッシュの実装、またはサーバー構成の変更を検討してください。  
     
-## コンテンツのダウンロードが遅い   
+## コンテンツのダウンロードが遅い  
 
 **現象**  
 
@@ -93,7 +86,7 @@ ms.locfileid: "10993374"
 
 次の図では、png の隣にある **ウォーターフォール** の長い青色のバーは、ダウンロードに時間がかかることを意味します。  
 
-:::image type="complex" source="../media/network-network-resources-edge-devtools.msft.png" alt-text="ダウンロードに時間がかかる要求の例" lightbox="../media/network-network-resources-edge-devtools.msft.png":::
+:::image type="complex" source="../media/network-network-resources-edge-devtools.msft.png" alt-text="[ネットワーク] パネルのキューに入っている、または停止しているシリーズの例" lightbox="../media/network-network-resources-edge-devtools.msft.png":::
    ダウンロードに時間がかかる要求の例  
 :::image-end:::  
 
@@ -107,19 +100,17 @@ ms.locfileid: "10993374"
 *   コンテンツを CDN でホストするか、ホスティングプロバイダーを変更することを検討してください。  
 *   要求を最適化して、送信するバイト数を減らします。  
     
-## 知識の投稿  
+<!--   ## Contribute knowledge  
 
-このガイドに追加する必要があるネットワークの問題はありますか?  
+Do you have a network issue that should be added to this guide?  
 
-*   [@EdgeDevTools][MicrosoftEdgeTweet]にツイートを送信します。  
-*   **Send Feedback** ![ ][ImageSendFeedbackIcon] フィードバックや機能のリクエストについては、devtools で [フィードバックの送信 \ (フィードバックを送信 \)] または [\ (Windows \)] または [ `Alt` + `Shift` + `I` `Option` + `Shift` + `I` \ (macOS \)] を選択します。  
-*   Docs リポジトリで[問題を開き][WebFundamentalsIssue]ます。  
+*   Send a tweet to [@EdgeDevTools][MicrosoftEdgeTweet].  
+*   Choose **Send Feedback** \(![Send Feedback][ImageSendFeedbackIcon]\) in the DevTools or select `Alt`+`Shift`+`I` \(Windows, Linux\) or `Option`+`Shift`+`I` \(macOS\) to provide feedback or feature requests.  
+*   [Open an issue][WebFundamentalsIssue] on the docs repo.  -->  
     
-<!--  
-  
+## Microsoft Edge DevTools チームと連絡を取る  
 
-
--->  
+[!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
 <!-- image links -->  
 

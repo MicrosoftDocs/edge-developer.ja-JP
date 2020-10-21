@@ -3,16 +3,16 @@ description: Microsoft Edge DevTools で実行時のパフォーマンスを評�
 title: 実行時のパフォーマンスの分析を開始する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 09/01/2020
+ms.date: 10/19/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 65351f3846ed76ef8a27dbff2cfb08c497282d15
-ms.sourcegitcommit: 63e6d34ff483f3b419a0e271a3513874e6ce6c79
+ms.openlocfilehash: 7cb1d8f073cdb8a43093514dd7dea86d72102011
+ms.sourcegitcommit: 99eee78698dc95b2a3fa638a5b063ef449899cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "10992947"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "11124986"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -31,7 +31,7 @@ ms.locfileid: "10992947"
 # 実行時のパフォーマンスの分析を開始する  
 
 > [!NOTE]
-> ページの読み込みを高速化する方法については、「 [Web サイトの速度を最適化][DevtoolsSpeedGetStarted]する」を参照してください。  
+> ページの読み込みを速くする方法については、「 [Web サイトの速度を最適化][DevtoolsSpeedGetStarted]する」を参照してください。  
 
 実行時のパフォーマンスは、読み込みとは異なり、ページが実行されている場合の実行方法です。  次のチュートリアルでは、Microsoft Edge DevTools パフォーマンスパネルを使って実行時のパフォーマンスを分析する方法について説明します。  このチュートリアルで学習するスキル **は、ページ** の応答、アニメーション、およびアイドルフェーズを分析するのに役立ちます。  
 
@@ -51,7 +51,7 @@ ms.locfileid: "10992947"
     https://microsoft-edge-chromium-devtools.glitch.me/sluggish/
     ```  
     
-1.  `Control` + `Shift` + `I` Devtools を開くには、\ (Windows \) または `Command` + `Option` + `I` \ (macOS \) を選択します。  
+1.  `Control` + `Shift` + `I` Devtools を開くには、\ (Windows, Linux \) または `Command` + `Option` + `I` \ (macOS \) を選択します。  
     
     :::image type="complex" source="../media/evaluate-performance-get-started-side-by-side.msft.png" alt-text="左側のデモと、右側の DevTools" lightbox="../media/evaluate-performance-get-started-side-by-side.msft.png":::
        左側のデモと、右側の DevTools  
@@ -67,9 +67,9 @@ ms.locfileid: "10992947"
 1.  DevTools で、[ **パフォーマンス** ] タブを選択します。  
 1.  [ **スクリーンショット** ] チェックボックスがオンになっていることを確認します。  
 1.  [ **キャプチャの設定** ] を選びます。Capture 設定] [ImageCaptureSettingsIcon] \)。  DevTools は、パフォーマンス指標のキャプチャに関連する設定を明らかにします。  
-1.  **CPU**の場合は、[ **4 倍速減速**] を選びます。  DevTools では、CPU が通常より4倍遅くなるように CPU を調整します。  
+1.  **CPU**の場合は、[ **4 倍速の速度**] を選びます。  DevTools では、CPU が通常より4倍遅くなるように CPU を調整します。  
     
-    :::image type="complex" source="../media/evaluate-performance-performance-capture-settings.msft.png" alt-text="CPU 調整" lightbox="../media/evaluate-performance-performance-capture-settings.msft.png":::
+    :::image type="complex" source="../media/evaluate-performance-performance-capture-settings.msft.png" alt-text="左側のデモと、右側の DevTools" lightbox="../media/evaluate-performance-performance-capture-settings.msft.png":::
        CPU 調整  
     :::image-end:::  
     
@@ -95,14 +95,14 @@ Web サイトのすべてのリーダーで一貫して動作するランタイ�
 
 1.  DevTools で、[ **Record** ] (! [Record] [ImageRecordIcon] \)。  DevTools は、ページが実行されたときにパフォーマンスのメトリックをキャプチャします。  
     
-    :::image type="complex" source="../media/evaluate-performance-performance-profiling.msft.png" alt-text="ページのプロファイル" lightbox="../media/evaluate-performance-performance-profiling.msft.png":::
+    :::image type="complex" source="../media/evaluate-performance-performance-profiling.msft.png" alt-text="左側のデモと、右側の DevTools" lightbox="../media/evaluate-performance-performance-profiling.msft.png":::
        ページのプロファイル  
     :::image-end:::  
     
 1.  数秒待ってください。  
 1.  [ **停止**] を選びます。  DevTools は記録を停止し、データを処理して、パフォーマンスパネルに結果を表示します。  
     
-    :::image type="complex" source="../media/evaluate-performance-performance-capture-results.msft.png" alt-text="プロファイルの結果" lightbox="../media/evaluate-performance-performance-capture-results.msft.png":::
+    :::image type="complex" source="../media/evaluate-performance-performance-capture-results.msft.png" alt-text="左側のデモと、右側の DevTools" lightbox="../media/evaluate-performance-performance-capture-results.msft.png":::
        プロファイルの結果  
     :::image-end:::  
     
@@ -118,25 +118,25 @@ Web サイトのすべてのリーダーで一貫して動作するランタイ�
 
 1.  **FPS**グラフを確認します。  **FPS**の上に赤色のバーが表示されている場合は、ユーザーエクスペリエンスが損なわれる可能性が低いため、フレームレートが低下していることを意味します。  一般に、緑色のバーが大きくなるほど、FPS は高くなります。  
     
-    :::image type="complex" source="../media/evaluate-performance-performance-fps-chart.msft.png" alt-text="FPS グラフ" lightbox="../media/evaluate-performance-performance-fps-chart.msft.png":::
+    :::image type="complex" source="../media/evaluate-performance-performance-fps-chart.msft.png" alt-text="左側のデモと、右側の DevTools" lightbox="../media/evaluate-performance-performance-fps-chart.msft.png":::
        **FPS**グラフ  
     :::image-end:::  
     
 1.  **FPS**グラフの下には、 **CPU**グラフが表示されます。  **CPU**グラフの色は、[パフォーマンス] パネルの下部にある [**概要**] タブの色に対応しています。  **Cpu**グラフが色がいっぱいになっているということは、記録中に cpu が最大化されていたことを意味します。  長期間にわたって CPU が不足している場合は、作業を軽減する方法を見つけるための手掛かりとなります。  
     
-    :::image type="complex" source="../media/evaluate-performance-performance-cpu-chart.msft.png" alt-text="[CPU グラフ] と [概要] タブ" lightbox="../media/evaluate-performance-performance-cpu-chart.msft.png":::
+    :::image type="complex" source="../media/evaluate-performance-performance-cpu-chart.msft.png" alt-text="左側のデモと、右側の DevTools" lightbox="../media/evaluate-performance-performance-cpu-chart.msft.png":::
        [ **CPU** グラフ] と [ **概要** ] タブ  
     :::image-end:::  
     
 1.  **FPS**、 **CPU**、または**ネット**チャートをポイントします。  [DevTools] は、現時点でのページのスクリーンショットを示します。  マウスを左または右に移動して、記録を再生します。  この操作はスクラブとして参照され、アニメーションの進行状況を手動で分析するのに役立ちます。  
     
-    :::image type="complex" source="../media/evaluate-performance-performance-screenshot-hover.msft.png" alt-text="記録の2500ms マークの周りのページのスクリーンショットを表示する" lightbox="../media/evaluate-performance-performance-screenshot-hover.msft.png":::
+    :::image type="complex" source="../media/evaluate-performance-performance-screenshot-hover.msft.png" alt-text="左側のデモと、右側の DevTools" lightbox="../media/evaluate-performance-performance-screenshot-hover.msft.png":::
        記録の2500ms マークの周りのページのスクリーンショットを表示する  
     :::image-end:::  
     
 1.  [ **フレーム** ] セクションで、緑色の四角形のいずれかにマウスポインターを置きます。  DevTools には、特定のフレームの FPS が表示されます。  各フレームは、60 FPS のターゲットよりも適切な場合があります。  
     
-    :::image type="complex" source="../media/evaluate-performance-performance-frame-hover.msft.png" alt-text="フレーム上にカーソルを移動する" lightbox="../media/evaluate-performance-performance-frame-hover.msft.png":::
+    :::image type="complex" source="../media/evaluate-performance-performance-frame-hover.msft.png" alt-text="左側のデモと、右側の DevTools" lightbox="../media/evaluate-performance-performance-frame-hover.msft.png":::
        フレーム上にカーソルを移動する  
     :::image-end:::  
     
@@ -146,11 +146,11 @@ Web サイトのすべてのリーダーで一貫して動作するランタイ�
 
 もう1つの便利なツールは FPS メーターで、ページの実行時に FPS に対してリアルタイムの推定値が提供されます。  
 
-1.  [ `Control` + `Shift` + `P` \ (Windows \)] または [ `Command` + `Shift` + `P` \ (macOS \)] を選択して、**コマンドメニュー**を開きます。  
+1.  `Control` + `Shift` + `P` コマンドメニューを開くには、\ (Windows, Linux \) または `Command` + `Shift` + `P` \ **Command Menu**(macOS \) を選択します。  
 1.  `Rendering`**コマンドメニュー**で入力を開始し、[**レンダリングの表示**] を選択します。  
 1.  [ **レンダリング** ] タブで、[ **FPS メーター**] を有効にします。  新しいオーバーレイがビューポートの右上に表示されます。  
     
-    :::image type="complex" source="../media/evaluate-performance-fps-meter-overlay.msft.png" alt-text="FPS メーター" lightbox="../media/evaluate-performance-fps-meter-overlay.msft.png":::
+    :::image type="complex" source="../media/evaluate-performance-fps-meter-overlay.msft.png" alt-text="左側のデモと、右側の DevTools" lightbox="../media/evaluate-performance-fps-meter-overlay.msft.png":::
        **FPS メーター**  
         :::image-end:::  
     
@@ -162,19 +162,19 @@ Web サイトのすべてのリーダーで一貫して動作するランタイ�
 
 1.  イベントが選択されていない場合、[ **概要** ] タブにアクティビティの内訳が表示されます。  このページでは、ほとんどの時間のレンダリングに費やされています。  パフォーマンスは、作業を軽減することを目的としているため、目標は、作業のレンダリングに費やされる時間を減らすことです。  
     
-    :::image type="complex" source="../media/evaluate-performance-performance-summary-tab.msft.png" alt-text="[概要] タブ" lightbox="../media/evaluate-performance-performance-summary-tab.msft.png":::
+    :::image type="complex" source="../media/evaluate-performance-performance-summary-tab.msft.png" alt-text="左側のデモと、右側の DevTools" lightbox="../media/evaluate-performance-performance-summary-tab.msft.png":::
        [ **概要** ] タブ  
     :::image-end:::  
     
 1.  **メイン**セクションを展開する。  DevTools には、時間の経過に伴うメインスレッドでのアクティビティを示す炎のグラフが表示されます。  X 軸は、時間の経過に伴う記録を表します。  各バーはイベントを表します。  広いバーは、イベントが長くなったことを意味します。  Y 軸は、呼び出しスタックを表します。  互いに重なり合っているイベントが表示される場合は、上位のイベントによって下位のイベントが発生したことを意味します。  
     
-    :::image type="complex" source="../media/evaluate-performance-performance-main.msft.png" alt-text="メインセクション" lightbox="../media/evaluate-performance-performance-main.msft.png":::
+    :::image type="complex" source="../media/evaluate-performance-performance-main.msft.png" alt-text="左側のデモと、右側の DevTools" lightbox="../media/evaluate-performance-performance-main.msft.png":::
        **メイン**セクション  
     :::image-end:::  
     
 1.  レコーディングには大量のデータが含まれています。  1つのイベントにズームするには[ **概要**] の上にカーソルを置くと、 **FPS**、 **CPU**、および **ネット** チャートが含まれているセクションになります。  **メイン**セクションと [**概要**] タブには、レコーディングの選択した部分に関する情報のみが表示されます。  
     
-    :::image type="complex" source="../media/evaluate-performance-performance-main-zoomed.msft.png" alt-text="イベントを拡大する" lightbox="../media/evaluate-performance-performance-main-zoomed.msft.png":::
+    :::image type="complex" source="../media/evaluate-performance-performance-main-zoomed.msft.png" alt-text="左側のデモと、右側の DevTools" lightbox="../media/evaluate-performance-performance-main-zoomed.msft.png":::
        イベントを拡大する  
     :::image-end:::  
     
@@ -188,7 +188,7 @@ Web サイトのすべてのリーダーで一貫して動作するランタイ�
     
 1.  [ **Animation Frame** ] イベントを選びます。  [ **概要** ] タブに、そのイベントに関する情報が表示されるようになりました。  [ **公開** ] リンクに注目してください。  このツールを選ぶと、 **アニメーションフレームの発生** イベントを開始したイベントが強調表示されます。  また、 **app.js:95** のリンクに注目してください。  選択すると、ソースコードの該当する行が表示されます。
     
-    :::image type="complex" source="../media/evaluate-performance-performance-animation-frame-fired.msft.png" alt-text="アニメーションフレームの発生イベントに関する詳細情報" lightbox="../media/evaluate-performance-performance-animation-frame-fired.msft.png":::
+    :::image type="complex" source="../media/evaluate-performance-performance-animation-frame-fired.msft.png" alt-text="左側のデモと、右側の DevTools" lightbox="../media/evaluate-performance-performance-animation-frame-fired.msft.png":::
        **アニメーションフレームの発生**イベントに関する詳細情報  
     :::image-end:::  
     
@@ -200,7 +200,7 @@ Web サイトのすべてのリーダーで一貫して動作するランタイ�
     
 1.  [**概要**] タブで、[**強制的にレイアウト**] の [ **app.js:71** ] リンクを選択します。  DevTools は、レイアウトを強制したコード行に移動します。  
     
-    :::image type="complex" source="../media/evaluate-performance-sources-app-update.msft.png" alt-text="強制レイアウトの原因となったコード行" lightbox="../media/evaluate-performance-sources-app-update.msft.png":::
+    :::image type="complex" source="../media/evaluate-performance-sources-app-update.msft.png" alt-text="左側のデモと、右側の DevTools" lightbox="../media/evaluate-performance-sources-app-update.msft.png":::
        強制レイアウトの原因となったコード行  
     :::image-end:::  
     
@@ -225,9 +225,9 @@ Web サイトのすべてのリーダーで一貫して動作するランタイ�
 <!--The foundation for understanding performance is the RAIL model.  The RAIL model teaches you the performance metrics that are most important to your users.  
 See [Measure Performance With The RAIL Model][RAIL] to learn more.  -->  
 
-[パフォーマンス] パネルを使いやすくするために、練習は完璧です。  ページのプロファイリングを行って、結果を分析してみてください。  結果についての質問がある場合は、[**フィードバックの送信**] アイコンを使用して、[ `Alt` + `Shift` + `I` \ (Windows \)]、[ `Option` + `Shift` + `I` \ (macOS \)]、または [ [devtools] チームにツイート][TwitterEdgeDevtools]します。  可能であれば、スクリーンショットまたは再現可能なページへのリンクを含めます。  
+[パフォーマンス] パネルを使いやすくするために、練習は完璧です。  ページのプロファイリングを行って、結果を分析してみてください。  結果についての質問がある場合は、[**フィードバックの送信**] アイコンを使用して、[ `Alt` + `Shift` + `I` \ (Windows、Linux \)]、[\ ( `Option` + `Shift` + `I` macOS \)]、または[ツイート][TwitterEdgeDevtools]を選択します。  可能であれば、スクリーンショットまたは再現可能なページへのリンクを含めます。  
 
-:::image type="complex" source="../media/evaluate-performance-feedback-icon.msft.png" alt-text="Microsoft Edge DevTools の * * フィードバック * * アイコン" lightbox="../media/evaluate-performance-feedback-icon.msft.png":::
+:::image type="complex" source="../media/evaluate-performance-feedback-icon.msft.png" alt-text="左側のデモと、右側の DevTools" lightbox="../media/evaluate-performance-feedback-icon.msft.png":::
    Microsoft Edge DevTools の [ **フィードバックの送信** ] アイコン  
 :::image-end:::  
 
@@ -243,6 +243,10 @@ See [Measure Performance With The RAIL Model][RAIL] to learn more.  -->
 *   [Stick To Compositor-Only Properties And Manage Layer Count][RenderingManageLayers]  
 *   [Debounce Your Input Handlers][RenderingDebounceInputs]  
 -->
+
+## Microsoft Edge DevTools チームと連絡を取る  
+
+[!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
 <!-- links -->
 

@@ -3,16 +3,16 @@ description: 本体を開き、ライブ式を作成して、式を "activeEleme
 title: フォーカスされている要素を追跡する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 09/01/2020
+ms.date: 10/19/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 9000b8ca1fa52daf5257f201c65dcabd78298ec7
-ms.sourcegitcommit: 63e6d34ff483f3b419a0e271a3513874e6ce6c79
+ms.openlocfilehash: a0d0861494db87e546443c0f3a1d4f531412300c
+ms.sourcegitcommit: 99eee78698dc95b2a3fa638a5b063ef449899cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "10993206"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "11125308"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -35,7 +35,7 @@ ms.locfileid: "10993206"
 DevTools で優先要素を追跡するには、次の操作を実行します。  
 
 1.  **本体**を開きます。  
-1.  [ **ライブ式の作成** \ ( ![ ライブ式 ][ImageCreateIcon] の作成 \)] をクリックします。  
+1.  [ **ライブ式の作成** ] \ ( ![ ライブ式 ][ImageCreateIcon] の作成 \) を選びます。  
     
     :::image type="complex" source="../media/accessibility-console-create-live-expression-empty.msft.png" alt-text="ライブ式を作成する" lightbox="../media/accessibility-console-create-live-expression-empty.msft.png":::
        ライブ式を作成する  
@@ -52,7 +52,7 @@ DevTools で優先要素を追跡するには、次の操作を実行します�
 *   結果を右クリックし、[要素 **パネルで** 表示] を選択して、 **[要素] パネルの** DOM ツリーに要素を表示します。  
 *   結果を右クリックし、[ **グローバル変数として保存** ] を選択して、 **コンソール**で使うことができるノードへの可変参照を作成します。  
 
-## Microsoft Edge DevTools チームと連絡を取り合う  
+## Microsoft Edge DevTools チームと連絡を取る  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 

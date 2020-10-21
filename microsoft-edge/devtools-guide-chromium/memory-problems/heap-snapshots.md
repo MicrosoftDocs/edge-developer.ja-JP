@@ -3,16 +3,16 @@ description: Microsoft Edge DevTools ヒーププロファイラーを使用し�
 title: ヒープスナップショットの記録方法
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 09/01/2020
+ms.date: 10/19/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 15692b0258de6db66c0b58a2659348a6e849aaca
-ms.sourcegitcommit: 63e6d34ff483f3b419a0e271a3513874e6ce6c79
+ms.openlocfilehash: 9762cb1d4932ce1a5d0b1c3944aa0b85d78b1060
+ms.sourcegitcommit: 99eee78698dc95b2a3fa638a5b063ef449899cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "10993472"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "11125462"
 ---
 <!-- Copyright Meggin Kearney 
 
@@ -36,7 +36,7 @@ Microsoft Edge DevTools ヒーププロファイラーは、JavaScript オブジ
 
 ## スナップショットを撮る  
 
-[ **メモリ** ] パネルで、[ **スナップショット**の作成] を選択し、[ **開始**] をクリックします。  `Ctrl` + `E` \ (Windows \) または `Cmd` + `E` \ (macOS \) を押すこともできます。  
+[ **メモリ** ] パネルで、[ **スナップショット**の作成] を選択し、[ **開始**] を選択します。  `Ctrl` + `E` \ (Windows、Linux \) または `Cmd` + `E` \ (macOS \) を選択することもできます。  
 
 :::image type="complex" source="../media/memory-problems-gh-nodejs-benchmarks-run-memory-heap-snapshots.msft.png" alt-text="プロファイルの種類の選択" lightbox="../media/memory-problems-gh-nodejs-benchmarks-run-memory-heap-snapshots.msft.png":::
    プロファイルの種類の選択  
@@ -46,7 +46,7 @@ Microsoft Edge DevTools ヒーププロファイラーは、JavaScript オブジ
 
 スナップショットが DevTools に読み込まれ、解析されると、スナップショットのタイトルの下に表示される数値が表示され、 [アクセス可能な JavaScript オブジェクトの合計サイズ][DevtoolsMemoryProblems101ObjectSizes]が示されます。  
 
-:::image type="complex" source="../media/memory-problems-gh-nodejs-benchmarks-run-memory-heap-snapshots-all.msft.png" alt-text="到達可能なオブジェクトの合計サイズ" lightbox="../media/memory-problems-gh-nodejs-benchmarks-run-memory-heap-snapshots-all.msft.png":::
+:::image type="complex" source="../media/memory-problems-gh-nodejs-benchmarks-run-memory-heap-snapshots-all.msft.png" alt-text="プロファイルの種類の選択" lightbox="../media/memory-problems-gh-nodejs-benchmarks-run-memory-heap-snapshots-all.msft.png":::
    到達可能なオブジェクトの合計サイズ  
 :::image-end:::  
 
@@ -55,9 +55,9 @@ Microsoft Edge DevTools ヒーププロファイラーは、JavaScript オブジ
 
 ## スナップショットをクリアする  
 
-[ **すべてのプロファイルをクリア** ] アイコンをクリックして、スナップショットを削除します (devtools から、およびレンダラープロセスに関連付けられているすべてのメモリの両方)。  
+[ **すべてのプロファイルをクリア** ] アイコンを選択して、スナップショットを削除します (devtools から、およびレンダラープロセスに関連付けられているすべてのメモリの両方)。  
 
-:::image type="complex" source="../media/memory-problems-gh-nodejs-benchmarks-run-memory-heap-snapshots-all-hover-clear-all-profiles.msft.png" alt-text="スナップショットを削除する" lightbox="../media/memory-problems-gh-nodejs-benchmarks-run-memory-heap-snapshots-all-hover-clear-all-profiles.msft.png":::
+:::image type="complex" source="../media/memory-problems-gh-nodejs-benchmarks-run-memory-heap-snapshots-all-hover-clear-all-profiles.msft.png" alt-text="プロファイルの種類の選択" lightbox="../media/memory-problems-gh-nodejs-benchmarks-run-memory-heap-snapshots-all-hover-clear-all-profiles.msft.png":::
    スナップショットを削除する  
 :::image-end:::  
 
@@ -80,7 +80,7 @@ DevTools ウィンドウを閉じると、レンダラープロセスに関連�
 
 ビューを切り替えるには、ビューの上部にあるセレクターを使用します。  
 
-:::image type="complex" source="../media/memory-problems-gh-nodejs-benchmarks-run-memory-heap-snapshots-view-dropdown.msft.png" alt-text="ビューセレクターの切り替え" lightbox="../media/memory-problems-gh-nodejs-benchmarks-run-memory-heap-snapshots-view-dropdown.msft.png":::
+:::image type="complex" source="../media/memory-problems-gh-nodejs-benchmarks-run-memory-heap-snapshots-view-dropdown.msft.png" alt-text="プロファイルの種類の選択" lightbox="../media/memory-problems-gh-nodejs-benchmarks-run-memory-heap-snapshots-view-dropdown.msft.png":::
    ビューセレクターの切り替え  
 :::image-end:::  
 
@@ -91,7 +91,7 @@ DevTools ウィンドウを閉じると、レンダラープロセスに関連�
 
 最初に、スナップショットが [概要] ビューで開き、次のようにオブジェクトの合計が表示されます。これは、インスタンスを表示するために展開することができます。  
 
-:::image type="complex" source="../media/memory-problems-gh-nodejs-benchmarks-run-memory-heap-snapshots-constructor-retainers.msft.png" alt-text="サマリービュー" lightbox="../media/memory-problems-gh-nodejs-benchmarks-run-memory-heap-snapshots-constructor-retainers.msft.png":::
+:::image type="complex" source="../media/memory-problems-gh-nodejs-benchmarks-run-memory-heap-snapshots-constructor-retainers.msft.png" alt-text="プロファイルの種類の選択" lightbox="../media/memory-problems-gh-nodejs-benchmarks-run-memory-heap-snapshots-constructor-retainers.msft.png":::
    **サマリー** ビュー  
 :::image-end:::  
 
@@ -112,7 +112,7 @@ DevTools ウィンドウを閉じると、レンダラープロセスに関連�
 
 **ヒーププロファイラーのさまざまなコンストラクター \ (グループ \) エントリに対応するものは何ですか?**  
 
-:::image type="complex" source="../media/memory-problems-gh-nodejs-benchmarks-run-memory-heap-snapshots-constructor-highlight.msft.png" alt-text="コンストラクターグループ" lightbox="../media/memory-problems-gh-nodejs-benchmarks-run-memory-heap-snapshots-constructor-highlight.msft.png":::
+:::image type="complex" source="../media/memory-problems-gh-nodejs-benchmarks-run-memory-heap-snapshots-constructor-highlight.msft.png" alt-text="プロファイルの種類の選択" lightbox="../media/memory-problems-gh-nodejs-benchmarks-run-memory-heap-snapshots-constructor-highlight.msft.png":::
    **コンストラクター** グループ  
 :::image-end:::  
 
@@ -138,7 +138,7 @@ DevTools ウィンドウを閉じると、レンダラープロセスに関連�
     
 [ **比較** ] ビューでは、2つのスナップショットの差が表示されます。  合計項目を展開すると、追加または削除されたオブジェクトインスタンスが表示されます。  
 
-:::image type="complex" source="../media/memory-problems-gh-nodejs-benchmarks-run-memory-heap-snapshots-comparison-dropdown.msft.png" alt-text="比較ビュー" lightbox="../media/memory-problems-gh-nodejs-benchmarks-run-memory-heap-snapshots-comparison-dropdown.msft.png":::
+:::image type="complex" source="../media/memory-problems-gh-nodejs-benchmarks-run-memory-heap-snapshots-comparison-dropdown.msft.png" alt-text="プロファイルの種類の選択" lightbox="../media/memory-problems-gh-nodejs-benchmarks-run-memory-heap-snapshots-comparison-dropdown.msft.png":::
    **比較** ビュー  
 :::image-end:::  
 
@@ -154,7 +154,7 @@ DevTools ウィンドウを閉じると、レンダラープロセスに関連�
 | **GC ルート** | VM のガーベジで使用される実際の GC ルート。  GC ルートは、組み込みのオブジェクトマップ、シンボルテーブル、VM スレッドスタック、コンパイルキャッシュ、ハンドルスコープ、グローバルハンドルで構成されています。  |  
 | **ネイティブオブジェクト** | ブラウザーオブジェクトは、JavaScript 仮想マシンの内部に "プッシュされました" (JavaScript VM \) で、オートメーション (DOM ノード、CSS ルールなど) を許可します。  |  
 
-:::image type="complex" source="../media/memory-problems-gh-nodejs-benchmarks-run-memory-heap-snapshots-containment-dropdown.msft.png" alt-text="コンテインメントビュー" lightbox="../media/memory-problems-gh-nodejs-benchmarks-run-memory-heap-snapshots-containment-dropdown.msft.png":::
+:::image type="complex" source="../media/memory-problems-gh-nodejs-benchmarks-run-memory-heap-snapshots-containment-dropdown.msft.png" alt-text="プロファイルの種類の選択" lightbox="../media/memory-problems-gh-nodejs-benchmarks-run-memory-heap-snapshots-containment-dropdown.msft.png":::
    **コンテインメント** ビュー  
 :::image-end:::  
 
@@ -186,7 +186,7 @@ DevTools ウィンドウを閉じると、レンダラープロセスに関連�
 > ```  
 > 
 > <!--  
-> :::image type="complex" source="../media/memory-problems-domleaks.msft.png" alt-text="Name functions to distinguish between closures" lightbox="../media/memory-problems-domleaks.msft.png":::
+> :::image type="complex" source="../media/memory-problems-domleaks.msft.png" alt-text="プロファイルの種類の選択" lightbox="../media/memory-problems-domleaks.msft.png":::
 >    Name functions to distinguish between closures  
 > :::image-end:::  
 > -->  
@@ -235,7 +235,7 @@ leafRef = null;
 
 は、 `#leaf` 関連する親 \ (parentNode \) への参照を保持し、 `#tree` leafRef が nullified の場合にのみ、GC の候補の下にあるツリー全体を示し `#tree` ます。  
 
-:::image type="complex" source="../media/memory-problems-tree-gc.msft.png" alt-text="DOM サブツリー" lightbox="../media/memory-problems-tree-gc.msft.png":::
+:::image type="complex" source="../media/memory-problems-tree-gc.msft.png" alt-text="プロファイルの種類の選択" lightbox="../media/memory-problems-tree-gc.msft.png":::
    DOM サブツリー  
 :::image-end:::  
 
@@ -251,7 +251,7 @@ DOM のリークとメモリ分析の基礎の詳細については、「 [Micro
 
 <!--todo: add heap profiling dom leaks section when available  -->  
 
-## Microsoft Edge DevTools チームと連絡を取り合う  
+## Microsoft Edge DevTools チームと連絡を取る  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 

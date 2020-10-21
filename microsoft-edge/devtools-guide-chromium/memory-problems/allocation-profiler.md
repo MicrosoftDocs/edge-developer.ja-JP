@@ -3,16 +3,16 @@ description: タイムライン上で割り当てインストルメンテーシ�
 title: タイムラインでの割り当てインストルメンテーションの使い方
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 09/01/2020
+ms.date: 10/19/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 58a951c4241ae0fe7dce70f523a701694b8254f9
-ms.sourcegitcommit: 63e6d34ff483f3b419a0e271a3513874e6ce6c79
+ms.openlocfilehash: 1e76e3459128be5b659d790163ef62447dd97ae4
+ms.sourcegitcommit: 99eee78698dc95b2a3fa638a5b063ef449899cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "10993507"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "11125448"
 ---
 <!-- Copyright Meggin Kearney 
 
@@ -56,7 +56,7 @@ ms.locfileid: "10993507"
 1.  [ **メモリ** ] パネルを開き、[ **タイムライン上の割り当てインストルメンテーション** ] を選択します。  
 1.  Start recording (録画開始)   
     
-    :::image type="complex" source="../media/memory-problems-memory-allocation-instrumentation-on-timeline-selected.msft.png" alt-text="ヒープ割り当てプロファイラーの記録" lightbox="../media/memory-problems-memory-allocation-instrumentation-on-timeline-selected.msft.png":::
+    :::image type="complex" source="../media/memory-problems-memory-allocation-instrumentation-on-timeline-selected.msft.png" alt-text="タイムライン上の割り当てインストルメンテーション" lightbox="../media/memory-problems-memory-allocation-instrumentation-on-timeline-selected.msft.png":::
        ヒープ割り当てプロファイラーの記録  
     :::image-end:::  
     
@@ -66,7 +66,7 @@ ms.locfileid: "10993507"
 
 各バーの高さは、最近割り当てられたオブジェクトのサイズに対応し、バーの色は、それらのオブジェクトが最終的なヒープスナップショットでまだ存在するかどうかを示します。  青いバーは、タイムラインの最後にあるオブジェクトを示します。灰色のバーは、タイムラインで割り当てられたが、ガベージコレクションされているオブジェクトを示します。  
 
-:::image type="complex" source="../media/memory-problems-memory-allocation-timelines-snapshot.msft.png" alt-text="タイムラインスナップショットの割り当てインストルメンテーション" lightbox="../media/memory-problems-memory-allocation-timelines-snapshot.msft.png":::
+:::image type="complex" source="../media/memory-problems-memory-allocation-timelines-snapshot.msft.png" alt-text="タイムライン上の割り当てインストルメンテーション" lightbox="../media/memory-problems-memory-allocation-timelines-snapshot.msft.png":::
    **タイムラインスナップショットの割り当てインストルメンテーション**  
 :::image-end:::  
 
@@ -75,7 +75,7 @@ ms.locfileid: "10993507"
 
 上のタイムラインのスライダーを使用して、特定のスナップショットを拡大し、その時点で最近割り当てられたオブジェクトを確認することができます。  
 
-:::image type="complex" source="../media/memory-problems-memory-allocation-timeline-snapshot-highlighted-annotated.msft.png" alt-text="スナップショットの拡大" lightbox="../media/memory-problems-memory-allocation-timeline-snapshot-highlighted-annotated.msft.png":::
+:::image type="complex" source="../media/memory-problems-memory-allocation-timeline-snapshot-highlighted-annotated.msft.png" alt-text="タイムライン上の割り当てインストルメンテーション" lightbox="../media/memory-problems-memory-allocation-timeline-snapshot-highlighted-annotated.msft.png":::
    スナップショットの拡大  
 :::image-end:::  
 
@@ -83,9 +83,9 @@ ms.locfileid: "10993507"
 
 ## 関数によるメモリ割り当てを表示する  
 
-JavaScript 関数によるメモリ割り当てを表示できます。  詳細については、「 [関数によるメモリ割り当ての調査][DevtoolsMemoryProblemsIndexInvestigateMemoryAllocationFunction]」を参照してください。  
+JavaScript 関数によるメモリ割り当てを表示できます。  詳細については、「 [関数によるメモリ割り当てを調査][DevtoolsMemoryProblemsIndexInvestigateMemoryAllocationFunction]する」を参照してください。  
 
-## Microsoft Edge DevTools チームと連絡を取り合う  
+## Microsoft Edge DevTools チームと連絡を取る  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 

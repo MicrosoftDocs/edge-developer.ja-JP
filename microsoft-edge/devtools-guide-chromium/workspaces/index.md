@@ -3,16 +3,16 @@ description: DevTools で行った変更をディスクに保存する方法に�
 title: ワークスペースを使用してファイルを編集する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 09/01/2020
+ms.date: 10/19/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: fd72021e75c536fa38c27ae17e4b1678eb4ca85f
-ms.sourcegitcommit: 63e6d34ff483f3b419a0e271a3513874e6ce6c79
+ms.openlocfilehash: 496bbbb34cdf900d36aa7ebfbf79ad63cdf3e6e7
+ms.sourcegitcommit: 99eee78698dc95b2a3fa638a5b063ef449899cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "10992723"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "11125350"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -81,9 +81,9 @@ ms.locfileid: "10992723"
     :::image-end:::  
     
     <!--1.  Choose the project name.  -->  
-    <!--1.  Select **Advanced Options** > **Download Project**.  
+    <!--1.  Choose **Advanced Options** > **Download Project**.  
     
-    :::image type="complex" source="../media/workspaces-glitch-advanced-options-download-project.msft.png" alt-text="The Download Project button" lightbox="../media/workspaces-glitch-advanced-options-download-project.msft.png":::
+    :::image type="complex" source="../media/workspaces-glitch-advanced-options-download-project.msft.png" alt-text="エラープロジェクト" lightbox="../media/workspaces-glitch-advanced-options-download-project.msft.png":::
        The Download Project button  
     :::image-end:::  
 
@@ -111,22 +111,22 @@ ms.locfileid: "10992723"
     
 1.  Microsoft Edge でタブを開き、ローカルでホストされているバージョンのサイトに移動します。  またはのような URL を使用してアクセスできる必要があり `localhost:8080` `http://0.0.0.0:8080` ます。  正確な [ポート番号][WikiPortURLs] は異なる場合があります。  
     
-    :::image type="complex" source="../media/workspaces-workspaces-demo.msft.png" alt-text="デモ" lightbox="../media/workspaces-workspaces-demo.msft.png":::
+    :::image type="complex" source="../media/workspaces-workspaces-demo.msft.png" alt-text="エラープロジェクト" lightbox="../media/workspaces-workspaces-demo.msft.png":::
        デモ  
     :::image-end:::  
     
 ### DevTools のセットアップ  
 
-1.  [ `Control` + `Shift` + `J` \ (Windows \)] または [ `Command` + `Option` + `J` \ (macOS \)] を選択して、devtools の**コンソール**パネルを開きます。  
+1.  [ `Control` + `Shift` + `J` \ (Windows, Linux \)] または [ `Command` + `Option` + `J` \ (macOS \)] を選択して、devtools の**コンソール**パネルを開きます。  
     
-    :::image type="complex" source="../media/workspaces-workspaces-demo-console.msft.png" alt-text="コンソールパネル" lightbox="../media/workspaces-workspaces-demo-console.msft.png":::
+    :::image type="complex" source="../media/workspaces-workspaces-demo-console.msft.png" alt-text="エラープロジェクト" lightbox="../media/workspaces-workspaces-demo-console.msft.png":::
        **コンソール**パネル  
     :::image-end:::  
     
 1.  [ **ソース** ] タブを選択します。  
 1.  [ **Filesystem** ] タブを選びます。  
     
-    :::image type="complex" source="../media/workspaces-workspaces-demo-sources-filesystem.msft.png" alt-text="[Filesystem] タブ" lightbox="../media/workspaces-workspaces-demo-sources-filesystem.msft.png":::
+    :::image type="complex" source="../media/workspaces-workspaces-demo-sources-filesystem.msft.png" alt-text="エラープロジェクト" lightbox="../media/workspaces-workspaces-demo-sources-filesystem.msft.png":::
        [ **Filesystem** ] タブ  
     :::image-end:::  
     
@@ -135,7 +135,7 @@ ms.locfileid: "10992723"
 1.  ディレクトリの読み取りと書き込みを行うための DevTools アクセス許可を与えるには、[ **許可** ] を選びます。  
     [ **Filesystem** ] タブで、、、およびの横に緑の点が表示され `index.html` `script.js` `styles.css` ます。  これらの緑の点は、DevTools がページのネットワークリソースとの間のマッピングを確立したことを意味 `~/Desktop/app` します。  
     
-    :::image type="complex" source="../media/workspaces-workspaces-demo-sources-filesystem-folder.msft.png" alt-text="[Filesystem] タブに、ローカルファイルとネットワーク間のマッピングが表示されるようになりました" lightbox="../media/workspaces-workspaces-demo-sources-filesystem-folder.msft.png":::
+    :::image type="complex" source="../media/workspaces-workspaces-demo-sources-filesystem-folder.msft.png" alt-text="エラープロジェクト" lightbox="../media/workspaces-workspaces-demo-sources-filesystem-folder.msft.png":::
        [ **Filesystem** ] タブに、ローカルファイルとネットワーク間のマッピングが表示されるようになりました  
     :::image-end:::  
     
@@ -146,7 +146,7 @@ ms.locfileid: "10992723"
     > [!NOTE]
     > `color`要素のプロパティ `h1` はに設定され `fuchsia` ます。  
     
-    :::image type="complex" source="../media/workspaces-workspaces-demo-sources-filesystem-css.msft.png" alt-text="テキストエディターでスタイル .css を表示する" lightbox="../media/workspaces-workspaces-demo-sources-filesystem-css.msft.png":::
+    :::image type="complex" source="../media/workspaces-workspaces-demo-sources-filesystem-css.msft.png" alt-text="エラープロジェクト" lightbox="../media/workspaces-workspaces-demo-sources-filesystem-css.msft.png":::
        `styles.css`テキストエディターで表示する  
     :::image-end:::  
     
@@ -154,7 +154,7 @@ ms.locfileid: "10992723"
 1.  `color`要素のプロパティの値 `<h1>` を、お気に入りの色に変更します。  
     [ `<h1>` **スタイル**] ウィンドウで CSS ルールが適用されていることを確認するために、 **DOM ツリー**で要素を選ぶ必要があることに注意してください。  [] の横にある緑の点は、 `styles.css:1` 加えた変更がマップされていることを意味 `~/Desktop/app/styles.css` します。  
     
-    :::image type="complex" source="../media/workspaces-workspaces-demo-elements-styles-css.msft.png" alt-text="ファイルがリンクされていることを示す緑色のインジケーター" lightbox="../media/workspaces-workspaces-demo-elements-styles-css.msft.png":::
+    :::image type="complex" source="../media/workspaces-workspaces-demo-elements-styles-css.msft.png" alt-text="エラープロジェクト" lightbox="../media/workspaces-workspaces-demo-elements-styles-css.msft.png":::
        ファイルがリンクされていることを示す緑色のインジケーター  
     :::image-end:::  
     
@@ -177,7 +177,7 @@ DOM ツリーは html ではありません。
 1.  Choose the **Elements** tab.  
 1.  Choose and edit the text content of the `h1` element, which says `Workspaces Demo`, and replace it with `I ❤️  Cake`.  
     
-    :::image type="complex" source="../media/workspaces-workspaces-demo-change-h1.msft.png" alt-text="Attempt to change html from the DOM Tree of the Elements panel" lightbox="../media/workspaces-workspaces-demo-change-h1.msft.png":::
+    :::image type="complex" source="../media/workspaces-workspaces-demo-change-h1.msft.png" alt-text="エラープロジェクト" lightbox="../media/workspaces-workspaces-demo-change-h1.msft.png":::
        Attempt to change html from the DOM Tree of the **Elements** panel  
     :::image-end:::  
     
@@ -207,10 +207,10 @@ In short, the **DOM Tree** `!==` HTML.
 1.  [ **ページ** ] タブを選択します。  
 1.  [ **(インデックス)**] を選びます。  ページの HTML が開きます。  
 1.  置換後 `<h1>Workspaces Demo</h1>` の文字列 `<h1>I ❤️  Cake</h1>`  次の図を参照してください。  
-1.  `Control` + `S` 変更を保存するには、\ (Windows \) または `Command` + `S` \ (macOS \) を選択します。  
+1.  `Control` + `S` 変更を保存するには、\ (Windows、Linux \) または `Command` + `S` \ (macOS \) を選択します。  
 1.  ページを最新の情報に更新してください。  `<h1>`要素に新しいテキストが引き続き表示されています。  
     
-    :::image type="complex" source="../media/workspaces-workspaces-demo-sources-page-h1.msft.png" alt-text="[ソース] パネルで HTML を変更する" lightbox="../media/workspaces-workspaces-demo-sources-page-h1.msft.png":::
+    :::image type="complex" source="../media/workspaces-workspaces-demo-sources-page-h1.msft.png" alt-text="エラープロジェクト" lightbox="../media/workspaces-workspaces-demo-sources-page-h1.msft.png":::
        [ **ソース** ] パネルで HTML を変更する  
     :::image-end:::  
     
@@ -221,17 +221,17 @@ In short, the **DOM Tree** `!==` HTML.
 [ **ソース** ] パネルも JavaScript を変更する場所です。  ただし、サイトを変更するときに、[ **要素** ] パネルや **コンソール** パネルなどの他のパネルにアクセスする必要がある場合もあります。  他のパネルと共に **ソース** パネルを開く方法があります。  
 
 1.  [ **要素** ] タブを選択します。  
-1.  [ `Control` + `Shift` + `P` \ (Windows \)] または [ `Command` + `Shift` + `P` \ (macOS \)] を選びます。  **コマンドメニュー**が開きます。  
-1.  入力して `QS` 、[ **クイックソースの表示**] を選択します。  [DevTools] ウィンドウの下部に、[ **クイックソース** ] タブが表示されています。 タブには `index.html` 、[ **ソース** ] パネルで最後に編集したファイルの内容が表示されます。  [ **クイックソース** ] タブでは、[ **ソース** ] パネルからエディターが表示されるため、他のパネルを開いたままファイルを編集できます。  
+1.  `Control` + `Shift` + `P` \ (Windows, Linux \) または `Command` + `Shift` + `P` \ (macOS \) を選択します。  **コマンドメニュー**が開きます。  
+1.  「 `QS` 」と入力し、[ **クイックソースの表示**] を選択します。  [DevTools] ウィンドウの下部に、[ **クイックソース** ] タブが表示されています。 タブには `index.html` 、[ **ソース** ] パネルで最後に編集したファイルの内容が表示されます。  [ **クイックソース** ] タブでは、[ **ソース** ] パネルからエディターが表示されるため、他のパネルを開いたままファイルを編集できます。  
     
-    :::image type="complex" source="../media/workspaces-workspaces-demo-search-show-quick-source.msft.png" alt-text="コマンドメニューを使用して [クイックソース] タブを開く" lightbox="../media/workspaces-workspaces-demo-search-show-quick-source.msft.png":::
+    :::image type="complex" source="../media/workspaces-workspaces-demo-search-show-quick-source.msft.png" alt-text="エラープロジェクト" lightbox="../media/workspaces-workspaces-demo-search-show-quick-source.msft.png":::
        **コマンドメニュー**を使用して [**クイックソース**] タブを開く  
     :::image-end:::  
     
-1.  [ `Control` + `P` \ (Windows \)] または [ `Command` + `P` \ (macOS \)] を選択して、[**ファイルを開く**] ダイアログボックスを開きます。  次の図を参照してください。  
-1.  入力して `script` 、[ **アプリ/script.js**] を選びます。  
+1.  [ `Control` + `P` \ (Windows, Linux \)] または [ `Command` + `P` \ (macOS \)] を選択して、[**ファイルを開く**] ダイアログボックスを開きます。  次の図を参照してください。  
+1.  入力して `script` 、[ **app/script.js**] を選びます。  
     
-    :::image type="complex" source="../media/workspaces-workspaces-demo-search-script.msft.png" alt-text="[ファイルを開く] ダイアログボックスを使用して script.js を開く" lightbox="../media/workspaces-workspaces-demo-search-script.msft.png":::
+    :::image type="complex" source="../media/workspaces-workspaces-demo-search-script.msft.png" alt-text="エラープロジェクト" lightbox="../media/workspaces-workspaces-demo-search-script.msft.png":::
        [ `script.js` ファイルを **開く** ] ダイアログボックスを使って開く  
     :::image-end:::  
     
@@ -245,13 +245,13 @@ In short, the **DOM Tree** `!==` HTML.
     document.querySelector('a').style = 'font-style:italic';
     ```  
     
-1.  `Control` + `S` 変更を保存するには、\ (Windows \) または `Command` + `S` \ (macOS \) を選択します。  
+1.  `Control` + `S` 変更を保存するには、\ (Windows、Linux \) または `Command` + `S` \ (macOS \) を選択します。  
 1.  ページを最新の情報に更新してください。  
     
     > [!NOTE]
     > ページ上のリンクが斜体になりました。  
     
-    :::image type="complex" source="../media/workspaces-workspaces-demo-elements-styles-quick-source-script.msft.png" alt-text="ページ上のリンクが斜体になりました" lightbox="../media/workspaces-workspaces-demo-elements-styles-quick-source-script.msft.png":::
+    :::image type="complex" source="../media/workspaces-workspaces-demo-elements-styles-quick-source-script.msft.png" alt-text="エラープロジェクト" lightbox="../media/workspaces-workspaces-demo-elements-styles-quick-source-script.msft.png":::
        ページ上のリンクが斜体になりました  
     :::image-end:::  
     
@@ -263,8 +263,11 @@ In short, the **DOM Tree** `!==` HTML.
 If you have more feedback on the topics or anything else, please use any of the channels below:  
 
 *   [Mailing List][AlphabetGroupsAlphabetBrowserDevTools]  
-*   [Twitter][TwitterAlphabetBrowserDevTools]  
-    -->  
+*   [Twitter][TwitterAlphabetBrowserDevTools]  -->  
+
+## Microsoft Edge DevTools チームと連絡を取る  
+
+[!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
 <!-- links -->  
 

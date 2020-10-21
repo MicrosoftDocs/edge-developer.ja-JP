@@ -3,16 +3,16 @@ description: Microsoft Edge DevTools でダークテーマを有効にする方�
 title: Microsoft Edge DevTools でダークテーマを有効にする
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 09/01/2020
+ms.date: 10/19/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 4369d06fff8372677910e2807daa3b23c2c0e333
-ms.sourcegitcommit: 63e6d34ff483f3b419a0e271a3513874e6ce6c79
+ms.openlocfilehash: 7eaedc59bf1b8ab592612f3a2006a0aac1dfbe9e
+ms.sourcegitcommit: 99eee78698dc95b2a3fa638a5b063ef449899cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "10993024"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "11125098"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -28,13 +28,7 @@ ms.locfileid: "10993024"
    See the License for the specific language governing permissions and
    limitations under the License.  -->
 
-
-
-
-
-# Microsoft Edge DevTools でダークテーマを有効にする   
-
-  
+# Microsoft Edge DevTools でダークテーマを有効にする  
 
 [ [設定](#set-up-dark-theme-from-settings) ] または [コマンドメニュー](#set-up-dark-theme-from-the-command-menu)で、ダークテーマを有効にすることができます。  
 
@@ -42,34 +36,32 @@ ms.locfileid: "10993024"
    濃色テーマ  
 :::image-end:::  
 
-## 設定からダークテーマを設定する   
+## 設定からダークテーマを設定する  
 
-1.  [開発 **ツールのカスタマイズと制御**] をクリックして、[ `...` **設定**] を選択します。  または、を押して **設定** を開くこともでき `F1` ます。  
+1.  [ **カスタマイズと制御 DevTools** \ (\)] を選び、 `...` [ **設定**] を選びます。  または、を押して **設定** を開くこともでき `F1` ます。  
     
-    :::image type="complex" source="../media/customize-options-settings.msft.png" alt-text="[設定] を開く" lightbox="../media/customize-options-settings.msft.png":::
+    :::image type="complex" source="../media/customize-options-settings.msft.png" alt-text="濃色テーマ" lightbox="../media/customize-options-settings.msft.png":::
        **設定**を開く  
     :::image-end:::  
 
 1.  [ **環境設定** ] ウィンドウの **[外観**] で、[ **テーマ** ] ドロップダウンをクリックし、[ **濃色**] を選択します。  
     
-    :::image type="complex" source="../media/customize-settings-preferences-appearance-theme-dark.msft.png" alt-text="基本設定" lightbox="../media/customize-settings-preferences-appearance-theme-dark.msft.png":::
+    :::image type="complex" source="../media/customize-settings-preferences-appearance-theme-dark.msft.png" alt-text="濃色テーマ" lightbox="../media/customize-settings-preferences-appearance-theme-dark.msft.png":::
        **基本設定**  
     :::image-end:::  
 
-## コマンドメニューから濃色テーマを設定する   
+## コマンドメニューから濃色テーマを設定する  
 
 1.  [コマンドメニューを開き][DevtoolsCommandMenu]ます。  
-1.  入力を開始し、[ `dark` **濃色テーマに切り替える** ] コマンドを選択し、を押して `Enter` コマンドを実行します。  
+1.  入力を開始し `dark` 、[ **濃色テーマに切り替える** ] コマンドを選択して、 `Enter` コマンドを実行します。  
     
-    :::image type="complex" source="../media/customize-command-menu-dark.msft.png" alt-text="[濃色テーマ] コマンド" lightbox="../media/customize-command-menu-dark.msft.png":::
+    :::image type="complex" source="../media/customize-command-menu-dark.msft.png" alt-text="濃色テーマ" lightbox="../media/customize-command-menu-dark.msft.png":::
        [濃色テーマ] コマンド  
     :::image-end:::  
     
-<!--  
-   
+## Microsoft Edge DevTools チームと連絡を取る  
 
-
--->  
+[!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
 <!-- links -->  
 

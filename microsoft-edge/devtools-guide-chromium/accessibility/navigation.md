@@ -3,16 +3,16 @@ description: スクリーンリーダーなどの支援技術を利用して、M
 title: Microsoft Edge の DevTools を支援技術でナビゲートする
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 09/01/2020
+ms.date: 10/19/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 9a9accd043d05d1c55b1e79ce580f7b45711118f
-ms.sourcegitcommit: 63e6d34ff483f3b419a0e271a3513874e6ce6c79
+ms.openlocfilehash: f4ec63a0d432925b7db99ce695db66dd61f8bcf1
+ms.sourcegitcommit: 99eee78698dc95b2a3fa638a5b063ef449899cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "10993192"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "11125294"
 ---
 <!-- Copyright Rob Dodson 
 
@@ -52,14 +52,14 @@ DevTools のアクセシビリティは、進行中の作業です。  一部の
 
 ## DevTools を開く  
 
-開始するには、「[Microsoft Edge DevTools を開く] [DevTools Open]」を参照してください。  開発ツールを開くには、キーボードショートカットまたはメニュー項目を使用する方法がいくつかあります。  
+始めるには、[Microsoft Edge DevTools を開く] に移動し、[DevTools Open] を選びます。  開発ツールを開くには、キーボードショートカットまたはメニュー項目を使用する方法がいくつかあります。  
 
 ## パネル間を移動する  
 
 ### キーボードを使用して移動する  
 
-*   Devtools が開いている状態で、[ `Control` + `]` \ (Windows \)] または [ `Command` + `]` \ (macOS \)] を選択して、次のパネルにフォーカスを移動します。  
-*   `Control` + `[` 前のパネルにフォーカスするには、[\ (Windows \)] または [ `Command` + `[` \ (macOS \)] を選択します。  
+*   Devtools が開いている状態で、[ `Control` + `]` \ (Windows、Linux \)] または [ `Command` + `]` \ (macOS \)] を選択して、次のパネルにフォーカスを移動します。  
+*   `Control` + `[` 前のパネルにフォーカスするには、[\ (Windows, Linux \]) または `Command` + `[` \ (macOS \) を選択します。  
 *   また、 `Shift` + `Tab` パネルの[ARIA タブリスト][W3CWaiAriaTablist]にフォーカスを移動したり、方向キーを使ってパネルを変更したりすることもできますが、前に説明したショートカットキーを使用する方が高速である場合もあります。  
 
 **既知の問題**  
@@ -71,7 +71,7 @@ DevTools のアクセシビリティは、進行中の作業です。  一部の
 
 特定のパネルにフォーカスを移動するには、 [コマンドメニュー][DevtoolsCommandMenuIndex]を使用します。  
 
-1.  Devtools を開いて、[ `Control` + `Shift` + `P` \ (Windows \)] または [ `Command` + `Shift` + `P` \ (macOS \ **Command Menu**)] を選択してコマンドメニューを開きます。  
+1.  Devtools を開いて、[ `Control` + `Shift` + `P` \ (Windows, Linux \)] または [ `Command` + `Shift` + `P` \ (macOS \ **Command Menu**)] を選択してコマンドメニューを開きます。  
     **コマンドメニュー**は、ファジー検索オートコンプリートのコンボボックスです。  
 1.  開こうとしているパネルの名前を入力し、キーボードのを使用して `Down Arrow` 適切なオプションに移動します。  
 1.  `Enter`コマンドを実行する場合に選択します。  
@@ -92,7 +92,7 @@ DevTools のアクセシビリティは、進行中の作業です。  一部の
 1.  要素のマウスを使って右クリックをシミュレートし、コンテキストメニューを開きます。  
 1.  [ **検査** ] オプションを選びます。  これにより、[要素] パネルが開き、DOM ツリーの要素がフォーカスされます ([DevtoolsDomIndexViewDomNodes])。  
 
-**DOM ツリー**は、 [ARIA ツリー][W3CWaiAriaTree]としてレイアウトされています。  例については、「[キーボードによる **DOM ツリー** 内の移動] [DevtoolsDomIndexNavigateDomTreeKeyboard]」をご覧ください。  
+**DOM ツリー**は、 [ARIA ツリー][W3CWaiAriaTree]としてレイアウトされています。  例については、[[DevtoolsDomIndexNavigateDomTreeKeyboard] に移動して、[ **DOM Tree** を移動] を選びます。  
 
 ### DOM ツリーの要素のコードをコピーする  
 
@@ -108,7 +108,7 @@ DevTools のアクセシビリティは、進行中の作業です。  一部の
 
 *   **DOM ツリー**のノードにフォーカスがある状態で、それを選択し `Enter` て編集できるようにします。  
 *   `Tab`属性値の間を移動する場合に選択します。  "スペース" という音声が空のテキスト入力の中にあり、新しい属性値を入力できます。  
-*   `Control` + `Enter` `Command` + 変更を承諾して要素の内容全体を読み上げるには、[\ (Windows \)] または [ `Enter` \ (macOS \)] を選択します。  
+*   `Control` + `Enter` `Command` + `Enter` 変更を承諾して要素の内容全体を読み上げるには、[\ (Windows, Linux \)] または [\ (macOS \)] を選択します。  
 
 **既知の問題**  
 
@@ -118,9 +118,9 @@ DevTools のアクセシビリティは、進行中の作業です。  一部の
 
 *   **DOM ツリー**のノードにフォーカスがある状態で、それを選択し `Enter` て編集できるようにします。  
 *   `Tab`属性値の間を移動する場合に選択します。  たとえば、要素の名前が読み上げられた場合 `h2` は、テキスト入力の内部にあり、要素の型を変更することがあります。  
-*   `Control` + `Enter` 変更を反映するには、[\ (Windows \)] または [ `Command` + `Enter` \ (macOS \)] を選択します。  
+*   `Control` + `Enter` 変更を受け入れるには、\ (Windows、Linux \) または `Command` + `Enter` \ (macOS \) を選択します。  
 
-たとえば、「 `h3` `Control` + `Enter` \ (Windows \)」または「\ (macOS \)」と入力すると、 `Command` + `Enter` 要素の開始タグと終了タグが `h3` 変わります。  
+たとえば、「 `h3` `Control` + `Enter` \ (Windows、Linux \)」または「\ (macOS \)」と入力すると、 `Command` + `Enter` 要素の開始タグと終了タグが `h3` 変わります。  
 
 ## 要素パネルのタブ  
 
@@ -152,7 +152,7 @@ DevTools のアクセシビリティは、進行中の作業です。  一部の
 *   `Tab`各 CSS プロパティの編集可能なバージョンと対応する値の間を移動する場合に選択します。  各スタイルブロックの末尾には、CSS プロパティを追加するために使用できる空白の編集可能なテキストフィールドがあります。  
 *   引き続き選択し `Tab` てスタイルの一覧を移動するか、を選択して `Escape` モードを終了し、方向キーを使用して移動することができます。  
 
-その他のショートカットについては、「[スタイル] ウィンドウのキーボードリファレンス] [DevtoolsShortcutsStylesPaneKeyboard]」を参照してください。  
+その他のショートカットについては、[[スタイル] ウィンドウのキーボードリファレンス] [DevtoolsShortcutsStylesPaneKeyboard] に移動します。  
 
 **既知の問題**  
 
@@ -236,7 +236,7 @@ DevTools のアクセシビリティは、進行中の作業です。  一部の
 
 新しい監査を実行するには、を使用して `Shift` + `Tab` レポートを終了し、[**監査の実行**] ボタンを探します。  
 
-## Microsoft Edge DevTools チームと連絡を取り合う
+## Microsoft Edge DevTools チームと連絡を取る  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 

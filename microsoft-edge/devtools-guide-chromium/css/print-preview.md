@@ -3,16 +3,16 @@ description: '[レンダリング] タブを開き、"print" > "CSS メディア
 title: Microsoft Edge の DevTools を印刷プレビューモード (CSS 印刷メディアの種類) に強制する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 09/01/2020
+ms.date: 10/19/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 1b71135c5ed2d86903b76e659434ee2125985a24
-ms.sourcegitcommit: 63e6d34ff483f3b419a0e271a3513874e6ce6c79
+ms.openlocfilehash: d4e8e06d60461ac4cdcab8686a18a0698d52f6e3
+ms.sourcegitcommit: 99eee78698dc95b2a3fa638a5b063ef449899cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "10993052"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "11125119"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -28,36 +28,28 @@ ms.locfileid: "10993052"
    See the License for the specific language governing permissions and
    limitations under the License.  -->
 
-
-
-
-
-# Microsoft Edge の DevTools を印刷プレビューモード (CSS 印刷メディアの種類) に強制する   
-
-
+# Microsoft Edge の DevTools を印刷プレビューモード (CSS 印刷メディアの種類) に強制する  
 
 [印刷メディアクエリ][MDNUsingMediaQueries]は、ページがどのように印刷されるかを制御します。  ページを印刷プレビューモードにするには、次の操作を行います。  
 
-1.  `Control` + `Shift` + `P` コマンドメニューを開くには、\ (Windows \) または `Command` + `Shift` + `P` \ **Command Menu**(macOS \) を押します。  
+1.  `Control` + `Shift` + `P` コマンドメニューを開くには、\ (Windows, Linux \) または `Command` + `Shift` + `P` \ **Command Menu**(macOS \) を選択します。  
     
     :::image type="complex" source="../media/css-console-command-menu-rendering.msft.png" alt-text="コマンドメニュー" lightbox="../media/css-console-command-menu-rendering.msft.png":::
        **コマンドメニュー**  
     :::image-end:::  
     
-1.  入力し `rendering` て、[ **レンダリングの表示**] を選択し、を押し `Enter` ます。  
+1.  「」と入力し `rendering` 、[レンダリングの **表示**] を選択して、を選択し `Enter` ます。  
 1.  [ **CSS メディアのエミュレート** ] で [ **印刷**] を選びます。  
     
-    :::image type="complex" source="../media/css-elements-styles-qs-rendering-emulate-css-media-print.msft.png" alt-text="印刷プレビューモード" lightbox="../media/css-elements-styles-qs-rendering-emulate-css-media-print.msft.png":::
+    :::image type="complex" source="../media/css-elements-styles-qs-rendering-emulate-css-media-print.msft.png" alt-text="コマンドメニュー" lightbox="../media/css-elements-styles-qs-rendering-emulate-css-media-print.msft.png":::
        印刷プレビューモード  
     :::image-end:::  
     
 ここでは、他の web ページと同じように、CSS を表示したり変更したりできます。  「 [CSS の表示と変更」の「使用を開始する」を][DevToolsCSSGetStarted]参照してください。  
 
-<!--  
- 
+## Microsoft Edge DevTools チームと連絡を取る  
 
-
--->  
+[!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
 <!-- links -->  
 

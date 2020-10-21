@@ -3,16 +3,16 @@ description: Microsoft Edge で仮想デバイスを使用して、モバイル�
 title: Microsoft Edge DevTools でモバイルデバイスをエミュレートする
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 09/04/2020
+ms.date: 10/19/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools、エミュレーション、デバイス、シミュレーション、モバイル
-ms.openlocfilehash: c70b81eabb145461eac7d1b9a8f438d6a18fbc89
-ms.sourcegitcommit: cc96ada9679b23feb841e46f19d8077251c4a4df
+ms.openlocfilehash: 8b636a20fcb1c55630009031ec8bf300624d03d7
+ms.sourcegitcommit: 99eee78698dc95b2a3fa638a5b063ef449899cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "10997117"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "11125105"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -59,7 +59,7 @@ ms.locfileid: "10997117"
 
 ページの外観を複数の画面サイズにわたってすばやくテストするには、ハンドルをドラッグしてビューポートのサイズを必要なサイズに変更します。  [幅] ボックスと [高さ] ボックスに特定の値を入力することもできます。  次の図では、幅がに設定され、 `626` 高さがに設定されて `516` います。  
 
-:::image type="complex" source="../media/device-mode-toggle-device-toolbar-handles-highlighted.msft.png" alt-text="応答可能なビューポートモードのときにビューポートの寸法を変更するハンドル" lightbox="../media/device-mode-toggle-device-toolbar-handles-highlighted.msft.png":::
+:::image type="complex" source="../media/device-mode-toggle-device-toolbar-handles-highlighted.msft.png" alt-text="デバイスのツールバー" lightbox="../media/device-mode-toggle-device-toolbar-handles-highlighted.msft.png":::
     応答可能なビューポートモードのときにビューポートの寸法を変更するハンドル  
 :::image-end:::  
 
@@ -67,13 +67,13 @@ ms.locfileid: "10997117"
 
 ページでメディアクエリを定義している場合は、ビューポートの上にメディアクエリのブレークポイントを表示して、メディアクエリが有効になるビューポートのサイズにジャンプします。  [**その他のオプション**] で [  >  **メディアクエリ] を**選びます。  
 
-:::image type="complex" source="../media/device-mode-toggle-device-toolbar-more-options-show-media-queries.msft.png" alt-text="メディアクエリを表示する" lightbox="../media/device-mode-toggle-device-toolbar-more-options-show-media-queries.msft.png":::
+:::image type="complex" source="../media/device-mode-toggle-device-toolbar-more-options-show-media-queries.msft.png" alt-text="デバイスのツールバー" lightbox="../media/device-mode-toggle-device-toolbar-more-options-show-media-queries.msft.png":::
    **メディアクエリを表示する**  
 :::image-end:::  
 
 メディアクエリがトリガーされるようにビューポートの幅を変更するには、ブレークポイントを選択します。  
 
-:::image type="complex" source="../media/device-mode-toggle-device-toolbar-click-breakpoint.msft.png" alt-text="ブレークポイントを選択してビューポートの幅を変更する" lightbox="../media/device-mode-toggle-device-toolbar-click-breakpoint.msft.png":::
+:::image type="complex" source="../media/device-mode-toggle-device-toolbar-click-breakpoint.msft.png" alt-text="デバイスのツールバー" lightbox="../media/device-mode-toggle-device-toolbar-click-breakpoint.msft.png":::
    ブレークポイントを選択してビューポートの幅を変更する  
 :::image-end:::  
 
@@ -81,7 +81,7 @@ ms.locfileid: "10997117"
 
 [ **デバイスの種類** ] の一覧を使用して、モバイルデバイスやデスクトップデバイスをシミュレートします。  
 
-:::image type="complex" source="../media/device-mode-toggle-device-toolbar-device-type-list.msft.png" alt-text="[デバイスの種類] の一覧" lightbox="../media/device-mode-toggle-device-toolbar-device-type-list.msft.png":::
+:::image type="complex" source="../media/device-mode-toggle-device-toolbar-device-type-list.msft.png" alt-text="デバイスのツールバー" lightbox="../media/device-mode-toggle-device-toolbar-device-type-list.msft.png":::
    [ **デバイスの種類** ] の一覧  
 :::image-end:::  
 
@@ -101,7 +101,7 @@ ms.locfileid: "10997117"
 
 特定のモバイルデバイスのサイズをシミュレートするには、 **デバイス** の一覧からデバイスを選びます。  
 
-:::image type="complex" source="../media/device-mode-toggle-device-toolbar-device-list.msft.png" alt-text="デバイスの一覧" lightbox="../media/device-mode-toggle-device-toolbar-device-list.msft.png":::
+:::image type="complex" source="../media/device-mode-toggle-device-toolbar-device-list.msft.png" alt-text="デバイスのツールバー" lightbox="../media/device-mode-toggle-device-toolbar-device-list.msft.png":::
    **デバイス**の一覧  
 :::image-end:::  
 
@@ -111,7 +111,7 @@ Web ページを横方向にテストします。
 
 *   ビューポートを横方向に回転するには、[ **回転** \ (回転 \)] を選び ![ ][ImageRotateIcon] ます。  
     
-    :::image type="complex" source="../media/device-mode-toggle-device-toolbar-landscape.msft.png" alt-text="横方向に表示されたページ" lightbox="../media/device-mode-toggle-device-toolbar-landscape.msft.png":::
+    :::image type="complex" source="../media/device-mode-toggle-device-toolbar-landscape.msft.png" alt-text="デバイスのツールバー" lightbox="../media/device-mode-toggle-device-toolbar-landscape.msft.png":::
        横方向に表示されたページ  
     :::image-end:::  
     
@@ -136,12 +136,12 @@ IPhone 6 などの特定のモバイルデバイスのサイズをシミュレ�
 
 :::row:::
    :::column span="":::
-      :::image type="complex" source="../media/device-mode-toggle-device-toolbar-option-show-device-frame.msft.png" alt-text="デバイスフレームの表示" lightbox="../media/device-mode-toggle-device-toolbar-option-show-device-frame.msft.png":::
+      :::image type="complex" source="../media/device-mode-toggle-device-toolbar-option-show-device-frame.msft.png" alt-text="デバイスのツールバー" lightbox="../media/device-mode-toggle-device-toolbar-option-show-device-frame.msft.png":::
          デバイスフレームの表示  
       :::image-end:::  
    :::column-end:::
    :::column span="":::
-      :::image type="complex" source="../media/device-mode-toggle-device-toolbar-options-device-frame-iphone-6.msft.png" alt-text="IPhone 6 のデバイスフレーム" lightbox="../media/device-mode-toggle-device-toolbar-options-device-frame-iphone-6.msft.png":::
+      :::image type="complex" source="../media/device-mode-toggle-device-toolbar-options-device-frame-iphone-6.msft.png" alt-text="デバイスのツールバー" lightbox="../media/device-mode-toggle-device-toolbar-options-device-frame-iphone-6.msft.png":::
          IPhone 6 のデバイスフレーム  
       :::image-end:::  
    :::column-end:::
@@ -153,14 +153,14 @@ IPhone 6 などの特定のモバイルデバイスのサイズをシミュレ�
 
 1.  [ **Edit**] >**デバイス**の一覧を選択します。  
     
-    :::image type="complex" source="../media/device-mode-toggle-device-toolbar-device-list-edit.msft.png" alt-text="[編集] を選ぶ" lightbox="../media/device-mode-toggle-device-toolbar-device-list-edit.msft.png":::
+    :::image type="complex" source="../media/device-mode-toggle-device-toolbar-device-list-edit.msft.png" alt-text="デバイスのツールバー" lightbox="../media/device-mode-toggle-device-toolbar-device-list-edit.msft.png":::
        [**編集**] を選ぶ  
     :::image-end:::  
     
 1.  [ **カスタムデバイスの追加**] を選びます。  
 1.  エミュレートされた **デバイス**では、デバイス名、画面の幅、およびカスタムデバイスの画面の高さを入力します。  [デバイスのピクセル比率][MDNWindowDevicePixelRatio]、[ユーザーエージェントの文字列][MDNUserAgent]、[デバイスの種類](#set-the-device-type)の各フィールドは省略可能です。  [デバイスの種類] フィールドは既定で [ **モバイル**] に設定されています。  
     
-    :::image type="complex" source="../media/device-mode-toggle-device-toolbar-settings-emulated-devices-add.msft.png" alt-text="カスタムデバイスを作成する" lightbox="../media/device-mode-toggle-device-toolbar-settings-emulated-devices-add.msft.png":::
+    :::image type="complex" source="../media/device-mode-toggle-device-toolbar-settings-emulated-devices-add.msft.png" alt-text="デバイスのツールバー" lightbox="../media/device-mode-toggle-device-toolbar-settings-emulated-devices-add.msft.png":::
        カスタムデバイスを作成する  
     :::image-end:::  
     
@@ -170,12 +170,12 @@ IPhone 6 などの特定のモバイルデバイスのサイズをシミュレ�
 
 :::row:::
    :::column span="":::
-      :::image type="complex" source="../media/device-mode-toggle-device-toolbar-options-show-rulers.msft.png" alt-text="ルーラーを表示するためのメニュー項目" lightbox="../media/device-mode-toggle-device-toolbar-options-show-rulers.msft.png":::
+      :::image type="complex" source="../media/device-mode-toggle-device-toolbar-options-show-rulers.msft.png" alt-text="デバイスのツールバー" lightbox="../media/device-mode-toggle-device-toolbar-options-show-rulers.msft.png":::
          ルーラーを表示するためのメニュー項目  
       :::image-end:::  
    :::column-end:::
    :::column span="":::
-      :::image type="complex" source="../media/device-mode-toggle-device-toolbar-rulers.msft.png" alt-text="ビューポートの左上にあるルーラー" lightbox="../media/device-mode-toggle-device-toolbar-rulers.msft.png":::
+      :::image type="complex" source="../media/device-mode-toggle-device-toolbar-rulers.msft.png" alt-text="デバイスのツールバー" lightbox="../media/device-mode-toggle-device-toolbar-rulers.msft.png":::
          ビューポートの左上にあるルーラー  
       :::image-end:::  
    :::column-end:::
@@ -185,7 +185,7 @@ IPhone 6 などの特定のモバイルデバイスのサイズをシミュレ�
 
 ページの外観を複数のズームレベルでテストするには、[ **ズーム** ] リストを使用して拡大または縮小します。  
 
-:::image type="complex" source="../media/device-mode-toggle-device-toolbar-zoom.msft.png" alt-text="ズーム" lightbox="../media/device-mode-toggle-device-toolbar-zoom.msft.png":::
+:::image type="complex" source="../media/device-mode-toggle-device-toolbar-zoom.msft.png" alt-text="デバイスのツールバー" lightbox="../media/device-mode-toggle-device-toolbar-zoom.msft.png":::
    **ズーム**  
 :::image-end:::  
 
@@ -201,7 +201,7 @@ IPhone 6 などの特定のモバイルデバイスのサイズをシミュレ�
     
 すべての調整は、ノート pc またはデスクトップの通常の機能に基づいています。  
 
-:::image type="complex" source="../media/device-mode-toggle-device-toolbar-throttle.msft.png" alt-text="デバイスツールバーのスロットルリスト" lightbox="../media/device-mode-toggle-device-toolbar-throttle.msft.png":::
+:::image type="complex" source="../media/device-mode-toggle-device-toolbar-throttle.msft.png" alt-text="デバイスのツールバー" lightbox="../media/device-mode-toggle-device-toolbar-throttle.msft.png":::
    デバイスツールバーの **スロットル** リスト  
 :::image-end:::  
 
@@ -219,7 +219,7 @@ IPhone 6 などの特定のモバイルデバイスのサイズをシミュレ�
 1.  [ **パフォーマンス** ] パネルを選択し、[ **キャプチャ設定** ] ( ![ キャプチャ設定) を選択し ][ImageCaptureIcon] ます。
 1.  **CPU**  >  の**4 倍の速度**または6x の**減速**を選択します。
     
-    :::image type="complex" source="../media/device-mode-performance-cpu-throttle.msft.png" alt-text="パフォーマンスパネルの CPU リスト" lightbox="../media/device-mode-performance-cpu-throttle.msft.png":::
+    :::image type="complex" source="../media/device-mode-performance-cpu-throttle.msft.png" alt-text="デバイスのツールバー" lightbox="../media/device-mode-performance-cpu-throttle.msft.png":::
        **パフォーマンス**パネルの**CPU**リスト  
     :::image-end:::  
     
@@ -230,13 +230,13 @@ IPhone 6 などの特定のモバイルデバイスのサイズをシミュレ�
 1.  [ **ネットワーク** ] パネルを選択します。
 1.  「**オンライン**  >  **高速 3g** 」または「**低速 3g**」を選択します。
     
-    :::image type="complex" source="../media/device-mode-network-throttle.msft.png" alt-text="[ネットワーク] パネルのスロットルリスト" lightbox="../media/device-mode-network-throttle.msft.png":::
+    :::image type="complex" source="../media/device-mode-network-throttle.msft.png" alt-text="デバイスのツールバー" lightbox="../media/device-mode-network-throttle.msft.png":::
        [ネットワーク] パネルの **スロットル** リスト  
     :::image-end:::  
     
-    または、 `Control` + `Shift` + `P` \ (Windows \) または `Command` + `Shift` + `P` \ (macOS \) を選択して**コマンドメニュー**を開き、「 `3G` 高速な**3g 調整を有効**にする」または「**低速の3g 調整を**有効にする」を選択します。  
+    または、 `Control` + `Shift` + `P` \ (Windows, Linux \) または `Command` + `Shift` + `P` \ (macOS \) を選択して**コマンドメニュー**を開き、「 `3G` 高速な**3g 調整を有効**にする」または「**低速な3g 調整を有効**にする」を選択します。  
     
-    :::image type="complex" source="../media/device-mode-command-menu-throttle.msft.png" alt-text="コマンドメニュー" lightbox="../media/device-mode-command-menu-throttle.msft.png":::
+    :::image type="complex" source="../media/device-mode-command-menu-throttle.msft.png" alt-text="デバイスのツールバー" lightbox="../media/device-mode-command-menu-throttle.msft.png":::
        **コマンドメニュー**  
     :::image-end:::  
     
@@ -244,11 +244,11 @@ IPhone 6 などの特定のモバイルデバイスのサイズをシミュレ�
 
 1.  [ **キャプチャの設定** ] (キャプチャ設定) を選択し、[ ![ ][ImageCaptureIcon] **ネットワーク** ] リストを選択して、[設定] を [ **高速 3g** ] または [ **低速 3g**] に変更します。  
     
-    :::image type="complex" source="../media/device-mode-performance-network-throttle.msft.png" alt-text="パフォーマンスパネルからネットワーク調整を設定する" lightbox="../media/device-mode-performance-network-throttle.msft.png":::
+    :::image type="complex" source="../media/device-mode-performance-network-throttle.msft.png" alt-text="デバイスのツールバー" lightbox="../media/device-mode-performance-network-throttle.msft.png":::
        **パフォーマンス**パネルからネットワーク調整を設定する  
     :::image-end:::  
     
-## 位置情報を無効にする  
+## 位置情報を上書きする  
 
 :::row:::
    :::column span="":::
@@ -256,16 +256,16 @@ IPhone 6 などの特定のモバイルデバイスのサイズをシミュレ�
 
       1.  [**カスタマイズと制御] を選択して、** ( `...` \)**その他のツール**  >  **センサー**> します。  
       
-      :::image type="complex" source="../media/device-mode-toggle-device-toolbar-more-tools-sensors.msft.png" alt-text="位置情報のセンサー" lightbox="../media/device-mode-toggle-device-toolbar-more-tools-sensors.msft.png":::
+      :::image type="complex" source="../media/device-mode-toggle-device-toolbar-more-tools-sensors.msft.png" alt-text="デバイスのツールバー" lightbox="../media/device-mode-toggle-device-toolbar-more-tools-sensors.msft.png":::
          位置情報の**センサー**  
       :::image-end:::  
    :::column-end:::
    :::column span="":::
       1.  コマンドメニューを開きます。  
-          *   [ `Control` + `Shift` + `P` \ (Windows \)] または [ `Command` + `Shift` + `P` \ (macOS \)] を選びます。  
+          *   `Control` + `Shift` + `P` \ (Windows, Linux \) または `Command` + `Shift` + `P` \ (macOS \) を選択します。  
       1. 「」 `Sensors` と入力して、「 **センサーを表示**」を選択します。  
       
-      :::image type="complex" source="../media/device-mode-toggle-device-toolbar-command-menu-sensors.msft.png" alt-text="位置情報のセンサーを表示する" lightbox="../media/device-mode-toggle-device-toolbar-command-menu-sensors.msft.png":::
+      :::image type="complex" source="../media/device-mode-toggle-device-toolbar-command-menu-sensors.msft.png" alt-text="デバイスのツールバー" lightbox="../media/device-mode-toggle-device-toolbar-command-menu-sensors.msft.png":::
          位置情報の**センサーを表示する**  
       :::image-end:::  
    :::column-end:::
@@ -273,7 +273,7 @@ IPhone 6 などの特定のモバイルデバイスのサイズをシミュレ�
 
 [ **センサー** ] パネルで、[ **場所** ] ドロップダウンメニューを使用して、devtools に含まれている既定の場所のいずれかを選ぶことができます。  カスタムの場所を入力するには、[**その他...** ] を選択します。 目的の場所の座標を入力します。  位置情報を利用できないときにエラー状態のページをテストするには、[ **場所を使用できませ**ん] を選択します。  
 
-:::image type="complex" source="../media/device-mode-toggle-device-toolbar-sensors-tokyo.msft.png" alt-text="既定の場所が選択されたセンサーパネル" lightbox="../media/device-mode-toggle-device-toolbar-sensors-tokyo.msft.png":::
+:::image type="complex" source="../media/device-mode-toggle-device-toolbar-sensors-tokyo.msft.png" alt-text="デバイスのツールバー" lightbox="../media/device-mode-toggle-device-toolbar-sensors-tokyo.msft.png":::
     既定の場所が選択されている**センサー**パネル。  
 :::image-end:::
 
@@ -285,16 +285,16 @@ IPhone 6 などの特定のモバイルデバイスのサイズをシミュレ�
 
       1.  [**カスタマイズと制御] を選択して、** ( `...` \)**その他のツール**  >  **センサー**> します。  
       
-      :::image type="complex" source="../media/device-mode-toggle-device-toolbar-more-tools-sensors.msft.png" alt-text="向きのセンサー" lightbox="../media/device-mode-toggle-device-toolbar-more-tools-sensors.msft.png":::
+      :::image type="complex" source="../media/device-mode-toggle-device-toolbar-more-tools-sensors.msft.png" alt-text="デバイスのツールバー" lightbox="../media/device-mode-toggle-device-toolbar-more-tools-sensors.msft.png":::
          向きの**センサー**  
       :::image-end:::  
    :::column-end:::
    :::column span="":::
       1.  コマンドメニューを開きます。  
-          *   [ `Control` + `Shift` + `P` \ (Windows \)] または [ `Command` + `Shift` + `P` \ (macOS \)] を選びます。  
+          *   `Control` + `Shift` + `P` \ (Windows, Linux \) または `Command` + `Shift` + `P` \ (macOS \) を選択します。  
       1. 「」 `Sensors` と入力して、「 **センサーを表示**」を選択します。  
       
-      :::image type="complex" source="../media/device-mode-toggle-device-toolbar-command-menu-sensors.msft.png" alt-text="向きのセンサーを表示する" lightbox="../media/device-mode-toggle-device-toolbar-command-menu-sensors.msft.png":::
+      :::image type="complex" source="../media/device-mode-toggle-device-toolbar-command-menu-sensors.msft.png" alt-text="デバイスのツールバー" lightbox="../media/device-mode-toggle-device-toolbar-command-menu-sensors.msft.png":::
          向きの**センサーを表示する**  
       :::image-end:::  
    :::column-end:::
@@ -302,7 +302,7 @@ IPhone 6 などの特定のモバイルデバイスのサイズをシミュレ�
 
 [ **センサー** ] パネルで、[ **印刷の向き** ] ドロップダウンメニューから既定の向きを選ぶことができます。  独自の向きを入力するには、[ **ユーザー設定の向き**] を選択し、独自の [アルファ][MDNDeviceOrientaitonAlpha]、 [ベータ][MDNDeviceOrientaitonBeta]、および [ガンマ][MDNDeviceOrientaitonGamma] 値を入力します。  
 
-:::image type="complex" source="../media/device-mode-toggle-device-toolbar-sensors-tokyo-portrait-upside-down.msft.png" alt-text="センサーパネルの [向き] オプション" lightbox="../media/device-mode-toggle-device-toolbar-sensors-tokyo-portrait-upside-down.msft.png":::
+:::image type="complex" source="../media/device-mode-toggle-device-toolbar-sensors-tokyo-portrait-upside-down.msft.png" alt-text="デバイスのツールバー" lightbox="../media/device-mode-toggle-device-toolbar-sensors-tokyo-portrait-upside-down.msft.png":::
     **センサー**パネルの [**向き**] オプション  
 :::image-end:::  
 
@@ -314,16 +314,16 @@ IPhone 6 などの特定のモバイルデバイスのサイズをシミュレ�
       
       1.  [**カスタマイズと制御 devtools** \ (\)] を選択して、 `...` **その他**  >  のツールの**ネットワーク条件**> します。  
       
-      :::image type="complex" source="../media/device-mode-toggle-device-toolbar-more-tools-network-conditions.msft.png" alt-text="[その他のツール] メニューの [ネットワークの状態] エントリ" lightbox="../media/device-mode-toggle-device-toolbar-more-tools-network-conditions.msft.png":::
+      :::image type="complex" source="../media/device-mode-toggle-device-toolbar-more-tools-network-conditions.msft.png" alt-text="デバイスのツールバー" lightbox="../media/device-mode-toggle-device-toolbar-more-tools-network-conditions.msft.png":::
          [**その他のツール**] メニューの [**ネットワークの状態**] エントリ  
       :::image-end:::  
    :::column-end:::
    :::column span="":::
       1.  コマンドメニューを開きます。  
-          *   [ `Control` + `Shift` + `P` \ (Windows \)] または [ `Command` + `Shift` + `P` \ (macOS \)] を選びます。  
+          *   `Control` + `Shift` + `P` \ (Windows, Linux \) または `Command` + `Shift` + `P` \ (macOS \) を選択します。  
       1. 「 `Network conditions` **ネットワーク条件を表示**」を選択します。  
       
-      :::image type="complex" source="../media/device-mode-toggle-device-toolbar-command-menu-network-conditions.msft.png" alt-text="ネットワークの状態を表示する" lightbox="../media/device-mode-toggle-device-toolbar-command-menu-network-conditions.msft.png":::
+      :::image type="complex" source="../media/device-mode-toggle-device-toolbar-command-menu-network-conditions.msft.png" alt-text="デバイスのツールバー" lightbox="../media/device-mode-toggle-device-toolbar-command-menu-network-conditions.msft.png":::
          **ネットワークの状態を表示する**  
       :::image-end:::  
    :::column-end:::
@@ -331,7 +331,7 @@ IPhone 6 などの特定のモバイルデバイスのサイズをシミュレ�
 
 [ **ユーザーエージェント**] の横にある **[自動的に選択** する] チェックボックスをオフにします。  次に、[ **カスタム** ] を選択して、定義済みのユーザーエージェント文字列の一覧から選択します。  独自のユーザーエージェント文字列を入力するには、[ **カスタムユーザーエージェントの入力**] に文字列を入力します。  
 
-:::image type="complex" source="../media/device-mode-toggle-device-toolbar-network-conditions-macos.msft.png" alt-text="MacOS でユーザーエージェント文字列を Microsoft Edge に設定します。" lightbox="../media/device-mode-toggle-device-toolbar-network-conditions-macos.msft.png":::
+:::image type="complex" source="../media/device-mode-toggle-device-toolbar-network-conditions-macos.msft.png" alt-text="デバイスのツールバー" lightbox="../media/device-mode-toggle-device-toolbar-network-conditions-macos.msft.png":::
     MacOS でユーザーエージェント文字列を Microsoft Edge に設定します。  
 :::image-end:::  
 

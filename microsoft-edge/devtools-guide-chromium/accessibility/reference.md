@@ -3,16 +3,16 @@ description: Microsoft Edge DevTools のアクセシビリティ機能の包括�
 title: アクセシビリティリファレンス
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 09/01/2020
+ms.date: 10/19/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 39b0b8c36cea017b9976ea4e80e92ea93896a671
-ms.sourcegitcommit: 63e6d34ff483f3b419a0e271a3513874e6ce6c79
+ms.openlocfilehash: de8f4bee6fef7725af9b97fb80ab45582dfa2286
+ms.sourcegitcommit: 99eee78698dc95b2a3fa638a5b063ef449899cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "10993269"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "11125315"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -74,25 +74,25 @@ ms.locfileid: "10993269"
     > [!NOTE]
     > このセクションのスクリーンショットは、Microsoft Edge のバージョン79で採用されています。  実行しているバージョンを確認でき `edge://version` ます。  **監査**パネルの UI は、以前のバージョンの Microsoft Edge では異なりますが、一般的なワークフローは同じです。  
     
-1.  モバイルデバイスをシミュレートする場合は、[ **デバイス**] で [ **モバイル** ] を選択します。  このオプションでは、ユーザーエージェントの文字列が変更され、ビューポートのサイズが変更されます。  ページのモバイルバージョンの表示がデスクトップバージョンとは異なる場合、このオプションは監査結果に大きな影響を与える可能性があります。  
+1.  モバイルデバイスをシミュレートする場合は、[ **デバイス**] で [ **モバイル** ] を選びます。  このオプションでは、ユーザーエージェントの文字列が変更され、ビューポートのサイズが変更されます。  ページのモバイルバージョンの表示がデスクトップバージョンとは異なる場合、このオプションは監査結果に大きな影響を与える可能性があります。  
 1.  [ **監査** ] セクションで、[ **アクセシビリティ** ] が有効になっていることを確認します。  レポートから除外する場合は、その他のカテゴリを無効にします。  ページの品質を向上させるその他の方法を見つける場合は、有効のままにしておきます。  
 1.  [ **調整** ] セクションでは、ネットワークと CPU を調整することができます。これは、読み込みのパフォーマンスを分析するときに役立ちます。  このオプションは、お客様のアクセシビリティのスコアには無関係であるため、好きなように使用できます。  
 1.  [ **記憶域のクリア** ] チェックボックスを使用すると、ページを読み込む前にすべての記憶域をクリアするか、ページの読み込みの間に記憶域を保持することができます。  このオプションは、アクセシビリティのスコアには無関係であるため、好きなように使用することもできます。  
-1.  [ **監査の実行**] をクリックします。 10 ~ 30 秒後に、DevTools でレポートが提供されます。  レポートには、ページのアクセシビリティを向上させるためのさまざまなヒントが用意されています。  
+1.  [ **監査の実行**] を選びます。 10 ~ 30 秒後に、DevTools でレポートが提供されます。  レポートには、ページのアクセシビリティを向上させるためのさまざまなヒントが用意されています。  
     
-    :::image type="complex" source="../media/accessibility-audits-run-audits-result.msft.png" alt-text="レポート" lightbox="../media/accessibility-audits-run-audits-result.msft.png":::
+    :::image type="complex" source="../media/accessibility-audits-run-audits-result.msft.png" alt-text="監査を構成する" lightbox="../media/accessibility-audits-run-audits-result.msft.png":::
        レポート  
     :::image-end:::  
     
 1.  詳細については、監査をクリックしてください。  
     
-    :::image type="complex" source="../media/accessibility-audits-run-audits-result-issues-expanded.msft.png" alt-text="監査に関するその他の情報" lightbox="../media/accessibility-audits-run-audits-result-issues-expanded.msft.png":::
+    :::image type="complex" source="../media/accessibility-audits-run-audits-result-issues-expanded.msft.png" alt-text="監査を構成する" lightbox="../media/accessibility-audits-run-audits-result-issues-expanded.msft.png":::
        監査に関するその他の情報  
     :::image-end:::  
     
-1.  [ **詳細情報** ] をクリックして、その監査のドキュメントを表示します。  
+1.  [ **詳細情報** ] を選択して、その監査のドキュメントを表示します。  
     
-    :::image type="complex" source="../media/accessibility-web-dev-accessibility-audits-learn-more.msft.png" alt-text="監査のドキュメントを表示する" lightbox="../media/accessibility-web-dev-accessibility-audits-learn-more.msft.png":::
+    :::image type="complex" source="../media/accessibility-web-dev-accessibility-audits-learn-more.msft.png" alt-text="監査を構成する" lightbox="../media/accessibility-web-dev-accessibility-audits-learn-more.msft.png":::
        監査のドキュメントを表示する  
     :::image-end:::  
     
@@ -102,7 +102,7 @@ ms.locfileid: "10993269"
 通常、アックス extension は、監査パネルを累乗する基になるエンジンであるため、同じ情報を提供します。  アックス extension にはさまざまな UI があり、監査の方法は少し異なります。  
 [ **監査** ] パネルに表示される [アックス extension] の利点の1つは、障害のあるノードを検査して強調表示できることです。  
 
-:::image type="complex" source="../media/accessibility-devtools-extension-axe-panel.msft.png" alt-text="アックス extension" lightbox="../media/accessibility-devtools-extension-axe-panel.msft.png":::
+:::image type="complex" source="../media/accessibility-devtools-extension-axe-panel.msft.png" alt-text="監査を構成する" lightbox="../media/accessibility-devtools-extension-axe-panel.msft.png":::
    アックス extension  
 :::image-end:::  
 
@@ -116,7 +116,7 @@ ms.locfileid: "10993269"
 1.  **DOM ツリー**で、検査する要素を選択します。  
 1.  [ **アクセシビリティ** ] タブをクリックします。 このタブは、[ **その他** のタブ \ ( ![ その他のタブ)] ボタンの背後に隠れている可能性があり ][ImageMoreTabsIcon] ます。  
 
-:::image type="complex" source="../media/accessibility-elements-accessibility.msft.png" alt-text="[アクセシビリティ] ウィンドウで DevTools ホームページの h1 要素を検査する" lightbox="../media/accessibility-elements-accessibility.msft.png":::
+:::image type="complex" source="../media/accessibility-elements-accessibility.msft.png" alt-text="監査を構成する" lightbox="../media/accessibility-elements-accessibility.msft.png":::
    [ `h1` **アクセシビリティ** ] ウィンドウで devtools ホームページの要素を検査する  
 :::image-end:::  
 
@@ -126,7 +126,7 @@ ms.locfileid: "10993269"
 
 アクセシビリティツリーの要素の位置を [ [アクセシビリティ] ウィンドウ](#the-accessibility-pane)から調べます。  
 
-:::image type="complex" source="../media/accessibility-elements-accessibility-tree.msft.png" alt-text="[アクセシビリティツリー] セクション" lightbox="../media/accessibility-elements-accessibility-tree.msft.png":::
+:::image type="complex" source="../media/accessibility-elements-accessibility-tree.msft.png" alt-text="監査を構成する" lightbox="../media/accessibility-elements-accessibility-tree.msft.png":::
    [ **アクセシビリティツリー** ] セクション  
 :::image-end:::  
 
@@ -136,20 +136,20 @@ ARIA 属性によって、ページのコンテンツを適切に表すために
 
 [ [アクセシビリティ] ウィンドウ](#the-accessibility-pane)で要素の ARIA 属性を表示します。  
 
-:::image type="complex" source="../media/accessibility-elements-accessibility-aria-attributes.msft.png" alt-text="[ARIA 属性] セクション" lightbox="../media/accessibility-elements-accessibility-aria-attributes.msft.png":::
+:::image type="complex" source="../media/accessibility-elements-accessibility-aria-attributes.msft.png" alt-text="監査を構成する" lightbox="../media/accessibility-elements-accessibility-aria-attributes.msft.png":::
    [ **ARIA 属性** ] セクション  
 :::image-end:::  
 
 ### 要素の計算されたアクセシビリティプロパティを表示する  
 
 > [!NOTE]
-> 計算された CSS プロパティを検索する場合は、[ [計算] タブ][DevtoolsCssReferenceViewActuallyAppliedElements]を参照してください。  
+> 計算された CSS プロパティを探している場合は、 [[計算済み] タブ][DevtoolsCssReferenceViewActuallyAppliedElements]に移動します。  
 
 一部のアクセシビリティプロパティは、ブラウザーによって動的に計算されます。  これらのプロパティは、[**アクセシビリティ**] ウィンドウの [計算された**プロパティ**] セクションに表示されます。  
 
 [ [アクセシビリティ] ウィンドウ](#the-accessibility-pane)で、要素の計算されたアクセシビリティプロパティを表示します。  
 
-:::image type="complex" source="../media/accessibility-elements-accessibility-computed-properties.msft.png" alt-text="[アクセシビリティ] ウィンドウの [計算されたプロパティ] セクション" lightbox="../media/accessibility-elements-accessibility-computed-properties.msft.png":::
+:::image type="complex" source="../media/accessibility-elements-accessibility-computed-properties.msft.png" alt-text="監査を構成する" lightbox="../media/accessibility-elements-accessibility-computed-properties.msft.png":::
    [**アクセシビリティ**] ウィンドウの [計算された**プロパティ**] セクション  
 :::image-end:::  
 
@@ -164,29 +164,29 @@ ARIA 属性によって、ページのコンテンツを適切に表すために
 1.  [ **要素** ] タブをクリックします。  
 1.  **DOM ツリー**で、検査するテキスト要素を選択します。  
     
-    :::image type="complex" source="../media/accessibility-elements-paragraph-highlight.msft.png" alt-text="DOM ツリーの段落を検査する" lightbox="../media/accessibility-elements-paragraph-highlight.msft.png":::
+    :::image type="complex" source="../media/accessibility-elements-paragraph-highlight.msft.png" alt-text="監査を構成する" lightbox="../media/accessibility-elements-paragraph-highlight.msft.png":::
        **DOM ツリー**の段落を検査する  
     :::image-end:::  
     
 1.  [ **スタイル** ] ウィンドウで、要素の値の横にある色の四角をクリックし `color` ます。  
     
-    :::image type="complex" source="../media/accessibility-elements-styles-paragraph-highlight-color.msft.png" alt-text="要素の color プロパティ" lightbox="../media/accessibility-elements-styles-paragraph-highlight-color.msft.png":::
+    :::image type="complex" source="../media/accessibility-elements-styles-paragraph-highlight-color.msft.png" alt-text="監査を構成する" lightbox="../media/accessibility-elements-styles-paragraph-highlight-color.msft.png":::
        `color`要素のプロパティ  
     :::image-end:::  
     
 1.  カラーピッカーの [ **コントラスト比** ] のチェックボックスをオンにします。  1つのチェックマークは、要素が [最小要件][W3CContrastMinimum]を満たしていることを意味します。  2つのチェックマークは、強化された [推奨事項][W3CContrastEnhanced]を満たしていることを意味します。  
     
-    :::image type="complex" source="../media/accessibility-elements-styles-paragraph-highlight-color-picker.msft.png" alt-text="カラーピッカーの [コントラスト比] セクションには、2つのチェックマークと値13.97 が表示されます。" lightbox="../media/accessibility-elements-styles-paragraph-highlight-color-picker.msft.png":::
+    :::image type="complex" source="../media/accessibility-elements-styles-paragraph-highlight-color-picker.msft.png" alt-text="監査を構成する" lightbox="../media/accessibility-elements-styles-paragraph-highlight-color-picker.msft.png":::
        カラーピッカーの [ **コントラスト比** ] セクションには、2つのチェックマークと値が表示されます。 `13.97`  
     :::image-end:::  
     
 1.  [ **コントラスト比** ] セクションをクリックして、詳細情報を表示します。  カラーピッカーの上部にあるビジュアルピッカーに線が表示されます。  現在の色が推奨事項を満たしている場合は、その行の同じ側にあるものも、推奨事項を満たしているものとします。  現在の色が推奨事項を満たしていない場合は、同じ側にあるものも、推奨されません。  
     
-    :::image type="complex" source="../media/accessibility-elements-styles-paragraph-highlight-color-picker-contrast-ratio-details.msft.png" alt-text="ビジュアルピッカーのコントラスト比線" lightbox="../media/accessibility-elements-styles-paragraph-highlight-color-picker-contrast-ratio-details.msft.png":::
+    :::image type="complex" source="../media/accessibility-elements-styles-paragraph-highlight-color-picker-contrast-ratio-details.msft.png" alt-text="監査を構成する" lightbox="../media/accessibility-elements-styles-paragraph-highlight-color-picker-contrast-ratio-details.msft.png":::
        ビジュアルピッカーの **コントラスト比** 線  
     :::image-end:::  
     
-<!--## Feedback   -->  
+## Microsoft Edge DevTools チームと連絡を取る  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 

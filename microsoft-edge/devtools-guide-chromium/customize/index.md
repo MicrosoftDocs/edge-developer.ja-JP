@@ -3,16 +3,16 @@ description: Microsoft Edge DevTools をカスタマイズする方法の一覧
 title: Microsoft Edge DevTools をカスタマイズする
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 09/01/2020
+ms.date: 10/19/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 238ee27a75aa94bf986d41f00a98e5eacc806d7f
-ms.sourcegitcommit: 63e6d34ff483f3b419a0e271a3513874e6ce6c79
+ms.openlocfilehash: 91f353c6b6c4dea2bc6764a972acf2ad52b1f151
+ms.sourcegitcommit: 99eee78698dc95b2a3fa638a5b063ef449899cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "10992996"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "11125084"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -28,87 +28,81 @@ ms.locfileid: "10992996"
    See the License for the specific language governing permissions and
    limitations under the License.  -->
 
-
-
-
-
-# Microsoft Edge DevTools をカスタマイズする   
+# Microsoft Edge DevTools をカスタマイズする  
 
   
 
 このページでは、Microsoft Edge DevTools をカスタマイズする方法を示します。  
 
-## 設定   
+## 設定  
 
 **設定**  > **環境設定**には、devtools をカスタマイズするための多くのオプションが含まれています。  
 
 [設定] を開くには、次のいずれかの操作を行います。  
 
-*   `F1`DevTools がフォーカスされているときに、を押します。  
+*   `F1`DevTools がフォーカスされているときにを選択します。  
 *   **メインメニュー**を開き、[**設定**] を選択します。  
     
     :::image type="complex" source="../media/customize-settings-preferences.msft.png" alt-text="設定" lightbox="../media/customize-settings-preferences.msft.png":::
        **設定**  
     :::image-end:::  
     
-## ドロアー   
+## ドロアー  
 
 **ドロワー**には、多くの非表示機能が含まれています。  
 
-を押して `Escape` 、 **引き出し**を開くか、閉じます。  
+`Escape`**引き出し**を開くか閉じる場合に選択します。  
 
-:::image type="complex" source="../media/customize-drawer-open.msft.png" alt-text="ドロワー" lightbox="../media/customize-drawer-open.msft.png":::
+:::image type="complex" source="../media/customize-drawer-open.msft.png" alt-text="設定" lightbox="../media/customize-drawer-open.msft.png":::
    **ドロワー**  
 :::image-end:::  
 
-[ **その** 他] をクリックして ![ ][ImageMoreIcon] 、他の **引き出し** タブを開きます。  
+**More** ![ ][ImageMoreIcon] 他の**引き出し**タブを開くには、[その他 \ (詳細 \)] を選びます。  
 
-:::image type="complex" source="../media/customize-drawer-open-more-tools.msft.png" alt-text="引き出しタブを開くためのボタン" lightbox="../media/customize-drawer-open-more-tools.msft.png":::
+:::image type="complex" source="../media/customize-drawer-open-more-tools.msft.png" alt-text="設定" lightbox="../media/customize-drawer-open-more-tools.msft.png":::
    **引き出し**タブを開くためのボタン  
 :::image-end:::  
 
-## パネルの順序を変更する   
+## パネルの順序を変更する  
 
 パネルタブをクリックし、ドラッグして順序を変更します。  カスタムタブの順序は、DevTools セッション間で維持されます。  
 
 > [!NOTE]
 > 既定では、[ **ネットワーク** パネル] タブは左側の4番目のタブにあります。  次の図では、[ **ネットワーク** ] パネルは左側の最初のものです。  
 
-:::image type="complex" source="../media/customize-network-first-position.msft.png" alt-text="カスタムパネルタブの順序が表示された DevTools ウィンドウ" lightbox="../media/customize-network-first-position.msft.png":::
+:::image type="complex" source="../media/customize-network-first-position.msft.png" alt-text="設定" lightbox="../media/customize-network-first-position.msft.png":::
    カスタムパネルタブの順序が表示された DevTools ウィンドウ  
 :::image-end:::  
 
-## DevTools の配置を変更する   
+## DevTools の配置を変更する  
 
 「 [Microsoft Edge DevTools の配置][DevToolsPlacement]」を参照してください。  
 
-:::image type="complex" source="../media/customize-dev-tools-dock-side.msft.png" alt-text="アンドックした DevTools" lightbox="../media/customize-dev-tools-dock-side.msft.png":::
+:::image type="complex" source="../media/customize-dev-tools-dock-side.msft.png" alt-text="設定" lightbox="../media/customize-dev-tools-dock-side.msft.png":::
    アンドックした DevTools  
 :::image-end:::  
 
-## 濃色テーマ   
+## 濃色テーマ  
 
 「 [濃色テーマを有効にする」を][DarkTheme]参照してください。  
 
-:::image type="complex" source="../media/customize-settings-appearance-theme.msft.png" alt-text="濃色テーマ" lightbox="../media/customize-settings-appearance-theme.msft.png":::
+:::image type="complex" source="../media/customize-settings-appearance-theme.msft.png" alt-text="設定" lightbox="../media/customize-settings-appearance-theme.msft.png":::
    濃色テーマ  
 :::image-end:::  
 
-## テスト   
+## テスト  
 
 DevTools の実験を有効にするには、次の操作を実行します。  
 
 1.  に移動 `edge://flags/#enable-devtools-experiments` します。  
-1.  **[有効]** をクリックします。  
-1.  ページの下部にある [ **今すぐ**再起動] をクリックします。  
+1.  [ **有効にする**] を選びます。  
+1.  ページの下部にある [ **今すぐ**再起動] を選びます。  
 
-次に DevTools を開くと、[[設定](#settings)] に "**実験**" という新しいページが表示されます。  
+次に DevTools を開くと、[[設定](#settings)] に "**実験**" という名前の新しいページが表示されます。  
 
-<!--  
-   
+## Microsoft Edge DevTools チームと連絡を取る  
 
-  
--->  
+[!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
 <!-- image links -->  
 

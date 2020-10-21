@@ -3,16 +3,16 @@ description: フレームワークライブラリコード > の [設定] から
 title: コンテンツ スクリプトをライブラリ コードとしてマークする
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 09/01/2020
+ms.date: 10/19/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 517e0a4e944f32d41451a0a5d9d7baa91ff97212
-ms.sourcegitcommit: 63e6d34ff483f3b419a0e271a3513874e6ce6c79
+ms.openlocfilehash: 2a9bca703004b6232bef857d7b9e2f45458db52d
+ms.sourcegitcommit: 99eee78698dc95b2a3fa638a5b063ef449899cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "10992793"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "11124699"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -32,7 +32,7 @@ ms.locfileid: "10992793"
 
 Microsoft Edge DevTools の **ソース** パネルを使用して [コードをステップ実行][DevToolsJavascriptStepThroughCode]するときに、認識できないコードを一時停止することがあります。  インストールした Microsoft Edge 拡張機能のいずれかのコードで一時停止している可能性があります。  次の手順を実行して、拡張コードに一時停止しないようにします。  
 
-1.  DevTools を開くには、[ **devtools のカスタマイズと制御** ] \ (\) を選択して、[ `...` **設定**] を選択します。  または、を選択して **設定** を開くこともでき `F1` ます。  
+1.  DevTools を開くには、[ユーザー設定] を選び、[ **DevTools** \ (\)] を選択し `...` て、[ **設定**] を選びます。  または、を選択して **設定** を開くこともでき `F1` ます。  
 
 1.  [**ライブラリコード**] タブを選択すると、[**設定**] の**フレームワークライブラリコード**セクションが開きます。  
 1.  [ **コンテンツスクリプトをライブラリコードとしてマーク** する] チェックボックスをオンにします。  
@@ -41,7 +41,7 @@ Microsoft Edge DevTools の **ソース** パネルを使用して [コードを
        [ **コンテンツスクリプトをライブラリコードとしてマーク** する] チェックボックスを有効にする  
     :::image-end:::  
     
-## Microsoft Edge DevTools チームと連絡を取り合う  
+## Microsoft Edge DevTools チームと連絡を取る  
 
 [!INCLUDE [contact DevTools team note](../../includes/contact-devtools-team-note.md)]  
 

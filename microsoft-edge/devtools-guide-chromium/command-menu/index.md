@@ -1,18 +1,18 @@
 ---
-description: コマンドメニューを開く方法、コマンドを実行する方法、その他の操作を表示する方法に関するガイド。
+description: コマンドメニューを開く方法、コマンドを実行する方法、その他の操作を確認する方法に関するガイド。
 title: Microsoft Edge DevTools コマンドメニューを使用してコマンドを実行する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 09/01/2020
+ms.date: 10/19/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 54dead492e7d58053efab77c82a10e7e3c912460
-ms.sourcegitcommit: 63e6d34ff483f3b419a0e271a3513874e6ce6c79
+ms.openlocfilehash: 2f13461fdf04e034b324db63c6ec6d9090f80f50
+ms.sourcegitcommit: 99eee78698dc95b2a3fa638a5b063ef449899cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "10993199"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "11125280"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -28,11 +28,7 @@ ms.locfileid: "10993199"
    See the License for the specific language governing permissions and
    limitations under the License.  -->  
 
-
-
-
-
-# Microsoft Edge DevTools コマンドメニューを使用してコマンドを実行する   
+# Microsoft Edge DevTools コマンドメニューを使用してコマンドを実行する  
 
   
 
@@ -42,31 +38,31 @@ ms.locfileid: "10993199"
    コマンドメニューを使用して JavaScript を無効にする  
 :::image-end:::  
 
-## コマンドメニューを開く   
+## コマンドメニューを開く  
 
-`Control` + `Shift` + `P` \ (Windows \) または `Command` + `Shift` + `P` \ (macOS \) を押します。 または、[ **DevTools のカスタマイズと制御**] をクリックし、[ `...` **コマンドの実行**] を選択します。  
+`Control` + `Shift` + `P` \ (Windows, Linux \) または `Command` + `Shift` + `P` \ (macOS \) を選択します。 または、[ **DevTools のカスタマイズと制御**] を選び、 `...` [ **コマンドの実行**] を選びます。  
 
-:::image type="complex" source="../media/command-menu-options-run-command.msft.png" alt-text="コマンドの実行" lightbox="../media/command-menu-options-run-command.msft.png":::
+:::image type="complex" source="../media/command-menu-options-run-command.msft.png" alt-text="コマンドメニューを使用して JavaScript を無効にする" lightbox="../media/command-menu-options-run-command.msft.png":::
    コマンドの実行  
 :::image-end:::  
 
-## 使用可能なその他の操作を表示する   
+## 使用可能なその他の操作を表示する  
 
 [ [コマンドメニューを開く](#open-the-command-menu)] でアウトライン表示されたワークフローを使用している場合、コマンドメニューが開き、 `>` コマンドメニューのテキストボックスに前に "延期" という文字が表示されます。  
 
-:::image type="complex" source="../media/command-menu-run-command.msft.png" alt-text="コマンド文字" lightbox="../media/command-menu-run-command.msft.png":::
+:::image type="complex" source="../media/command-menu-run-command.msft.png" alt-text="コマンドメニューを使用して JavaScript を無効にする" lightbox="../media/command-menu-run-command.msft.png":::
    コマンド文字  
 :::image-end:::  
 
 `>`文字と入力を削除し `?` て、コマンドメニューから利用可能なその他の操作を確認します。  
 
-:::image type="complex" source="../media/command-menu-help.msft.png" alt-text="その他の使用可能なアクション" lightbox="../media/command-menu-help.msft.png":::
+:::image type="complex" source="../media/command-menu-help.msft.png" alt-text="コマンドメニューを使用して JavaScript を無効にする" lightbox="../media/command-menu-help.msft.png":::
    その他の使用可能なアクション  
 :::image-end:::  
 
- 
+## Microsoft Edge DevTools チームと連絡を取る  
 
-
+[!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
 <!-- links -->  
 

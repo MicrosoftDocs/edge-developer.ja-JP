@@ -3,16 +3,16 @@ description: クライアント側のコードは、結合、ミニ方法、ま�
 title: ソース コードに前処理コードをマッピングする
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 09/01/2020
+ms.date: 10/19/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: bd04c7bae6f57d4fe3f9b293d70775aa99db3dd1
-ms.sourcegitcommit: 63e6d34ff483f3b419a0e271a3513874e6ce6c79
+ms.openlocfilehash: c16f59658217ab9dfb905bd814f96af21f95130d
+ms.sourcegitcommit: 99eee78698dc95b2a3fa638a5b063ef449899cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "10993234"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "11124683"
 ---
 <!-- Copyright Meggin Kearney and Paul Bakaus
 
@@ -50,7 +50,7 @@ ms.locfileid: "10993234"
 
 ## サポートされているプリプロセッサを使用する  
 
-ソースマップを作成できるミニ識別子を使う必要があります。  <!--For the most popular options, see the preprocessor support section.  -->  拡張ビューの場合は、「 [ソースマップ: 言語、ツール、その他の情報][GitHubWikiSourceMapsLanguagesTools] wiki」ページを参照してください。  
+ソースマップを作成できるミニ識別子を使う必要があります。  <!--For the most popular options, navigate to preprocessor support section.  -->  拡張ビューの場合は、[ソースマップ] に移動します [。 [言語]、[ツール]、[その他の情報][GitHubWikiSourceMapsLanguagesTools] ] wiki ページ。  
 
 <!--todo: add link to see the preprocessor support section when section is available -->  
 <!--[]: /web/tools/setup/setup-preprocessors?#supported_preprocessors ""  -->  
@@ -108,11 +108,11 @@ DevTools でソースマップを実行する場合は、JavaScript がコンパ
     
 [ **ソース** ] サブパネルを展開すると、前に入力したカスタムファイル名を含む新しいファイルが表示されるようになります。  このファイルをダブルクリックして表示すると、元のソースのコンパイル済み JavaScript が含まれます。  ただし、最後の行には、 `// @sourceURL` 元のソースファイルを示すコメントがあります。  これは、言語の抽象化を操作しているときに、デバッグに役立つ場合があります。  
 
-:::image type="complex" source="../media/javascript-sources-page-coffeeeeeeee.msft.png" alt-text="SourceURL を使用する" lightbox="../media/javascript-sources-page-coffeeeeeeee.msft.png":::
+:::image type="complex" source="../media/javascript-sources-page-coffeeeeeeee.msft.png" alt-text="ソースマップを有効にする" lightbox="../media/javascript-sources-page-coffeeeeeeee.msft.png":::
    共同作業 `sourceURL`  
 :::image-end:::  
 
-## Microsoft Edge DevTools チームと連絡を取り合う
+## Microsoft Edge DevTools チームと連絡を取る
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 

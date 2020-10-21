@@ -3,16 +3,16 @@ description: Microsoft Edge DevTools を使って JavaScript のバグを検出�
 title: Microsoft Edge DevTools のデバッグ JavaScript の概要
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 09/01/2020
+ms.date: 10/19/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: f8846388f92ba330940b4b6842964d96d9bbce4d
-ms.sourcegitcommit: 63e6d34ff483f3b419a0e271a3513874e6ce6c79
+ms.openlocfilehash: bff87ca36c484689134f284514bbab353b8b99b6
+ms.sourcegitcommit: 99eee78698dc95b2a3fa638a5b063ef449899cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "10993395"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "11124790"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -28,53 +28,45 @@ ms.locfileid: "10993395"
    See the License for the specific language governing permissions and
    limitations under the License.  -->
 
-
-
-
-
-
-
-# Microsoft Edge DevTools のデバッグ JavaScript の概要   
-
-
+# Microsoft Edge DevTools のデバッグ JavaScript の概要  
 
 このチュートリアルでは、DevTools で JavaScript の問題をデバッグするための基本的なワークフローについて説明します。  
 
-## 手順 1: バグを再現する   
+## 手順 1: バグを再現する  
 
 常にバグを再現する一連のアクションを見つけることは、常にデバッグの最初の手順です。  
 
-1.  [ **デモを開く**] をクリックします。  `Control`\ (Windows \) または `Command` \ (macOS \) を保持し、新しいタブでデモを開きます。  
+1.  [ **デモを開く**] を選びます。  `Control`\ (Windows、Linux \) または `Command` \ (macOS \) を保持し、新しいタブでデモを開きます。  
     
     [デモを開く][OpenDebugJSDemo]  
     
 1.  [ `5` **数値 1** ] テキストボックスに入力します。  
 1.  [ `1` **数値 2** ] テキストボックスに入力します。  
-1.  [ **番号 1] と [番号2の追加] を**クリックします。  ボタンの下にラベルが表示され `5 + 1 = 51` ます。  結果はになり `6` ます。  これは、修正する予定のバグです。  
+1.  [ **Add number 1 And number 2**] を選びます。  ボタンの下にラベルが表示され `5 + 1 = 51` ます。  結果はになり `6` ます。  これは、修正する予定のバグです。  
     
     :::image type="complex" source="../media/javascript-js-demo-bad.msft.png" alt-text="5 + 1 の結果は51ですが、6にする必要があります。" lightbox="../media/javascript-js-demo-bad.msft.png":::
        の結果 `5 + 1` はですが `51` 、 `6`  
     :::image-end:::  
     
-## 手順 2: ソースパネルの UI について理解する   
+## 手順 2: ソースパネルの UI について理解する  
 
 DevTools には、CSS の変更、ページの読み込みパフォーマンスのプロファイリング、ネットワーク要求の監視など、さまざまなタスクに対応するさまざまなツールが用意されています。  [ **ソース** ] パネルでは、JavaScript をデバッグします。  
 
-1.  `Control` + `Shift` + `J` \ (Windows \) または `Command` + `Option` + `J` \ (macOS \) を押して、devtools を開きます。  このショートカットは **コンソール** パネルを開きます。  
+1.  `Control` + `Shift` + `J` \ (Windows、Linux \) または `Command` + `Option` + `J` \ (macOS \) を押して、devtools を開きます。  このショートカットは **コンソール** パネルを開きます。  
     
-    :::image type="complex" source="../media/javascript-console-empty.msft.png" alt-text="コンソールパネル" lightbox="../media/javascript-console-empty.msft.png":::
+    :::image type="complex" source="../media/javascript-console-empty.msft.png" alt-text="5 + 1 の結果は51ですが、6にする必要があります。" lightbox="../media/javascript-console-empty.msft.png":::
        **コンソール**パネル  
     :::image-end:::  
     
 1.  [ **ソース** ] タブをクリックします。  
     
-    :::image type="complex" source="../media/javascript-sources-sections.msft.png" alt-text="[ソース] パネル" lightbox="../media/javascript-sources-sections.msft.png":::
+    :::image type="complex" source="../media/javascript-sources-sections.msft.png" alt-text="5 + 1 の結果は51ですが、6にする必要があります。" lightbox="../media/javascript-sources-sections.msft.png":::
        [ **ソース** ] パネル  
     :::image-end:::  
     
 **ソース**パネルの UI には3つの部分があります。  
 
-:::image type="complex" source="../media/javascript-sources-sections-annotated.msft.png" alt-text="ソースパネルの UI の3つの部分" lightbox="../media/javascript-sources-sections-annotated.msft.png":::
+:::image type="complex" source="../media/javascript-sources-sections-annotated.msft.png" alt-text="5 + 1 の結果は51ですが、6にする必要があります。" lightbox="../media/javascript-sources-sections-annotated.msft.png":::
    **ソース**パネルの UI の3つの部分  
 :::image-end:::  
 
@@ -82,7 +74,7 @@ DevTools には、CSS の変更、ページの読み込みパフォーマンス�
 1.  **コードエディター**ウィンドウ \ (前の図のセクション 2)  [ **ファイルナビゲーター** ] ウィンドウでファイルを選択すると、そのファイルの内容がここに表示されます。  
 1.  **JavaScript のデバッグ**ウィンドウ (前の図のセクション 3)  ページの JavaScript を調べるためのさまざまなツール。  DevTools ウィンドウが広くなっている場合、このウィンドウは [ **コードエディター** ] ウィンドウの右側に表示されます。  
     
-## 手順 3: ブレークポイントでコードを一時停止する   
+## 手順 3: ブレークポイントでコードを一時停止する  
 
 このような問題をデバッグする一般的な方法は、スクリプトの実行時に値を検査するために、コードに大量のステートメントを挿入することです `console.log()` 。  次に、例を示します。  
 
@@ -107,15 +99,15 @@ function updateLabel() {
 
 手順を実行して、アプリの動作について考えている場合は、 `5 + 1 = 51` `click` [ **1 と番号2を追加** ] ボタンに関連付けられているイベントリスナーで、誤った sum () が計算されることを推測できます。  そのため、おそらくリスナーが実行されている時間の前後にコードを一時停止する必要があり `click` ます。  **イベントリスナーのブレークポイント** を使用すると、次の操作を行うことができます。  
 
-1.  JavaScript の **デバッグ** ウィンドウで、[ **イベントリスナーブレークポイント** ] をクリックしてセクションを展開します。  DevTools は、 **アニメーション** や **クリップボード**などの拡張可能なイベントカテゴリの一覧を表示します。  
-1.  **マウス**イベントカテゴリの横にある [**展開**] ( ![ 展開アイコン ][ImageExpandIcon] \) をクリックします。  DevTools は、 **click** 、 **mousedown**などのマウスイベントの一覧を表示します。  各イベントの横にチェックボックスがあります。  
+1.  JavaScript の **デバッグ** ウィンドウで、[ **イベントリスナーのブレークポイント** ] を選択してセクションを展開します。  DevTools は、 **アニメーション** や **クリップボード**などの拡張可能なイベントカテゴリの一覧を表示します。  
+1.  **マウス**イベントカテゴリの横にある [**展開**] (展開 ![ アイコン ][ImageExpandIcon] \) を選びます。  DevTools は、 **click** 、 **mousedown**などのマウスイベントの一覧を表示します。  各イベントの横にチェックボックスがあります。  
 1.  **[クリック**時] チェックボックスをオンにします。  DevTools は *、* イベントリスナーが実行されると自動的に一時停止するように設定されました `click` 。  
     
-    :::image type="complex" source="../media/javascript-sources-event-listener-breakpoint-mouse-click.msft.png" alt-text="[クリック] チェックボックスが有効になっている" lightbox="../media/javascript-sources-event-listener-breakpoint-mouse-click.msft.png":::
+    :::image type="complex" source="../media/javascript-sources-event-listener-breakpoint-mouse-click.msft.png" alt-text="5 + 1 の結果は51ですが、6にする必要があります。" lightbox="../media/javascript-sources-event-listener-breakpoint-mouse-click.msft.png":::
        **[クリック**] チェックボックスが有効になっている  
     :::image-end:::  
     
-1.  デモに戻り、[ **番号 1] と [番号 2** をもう一度追加する] をクリックします。  DevTools はデモを一時停止し、[ **ソース** ] パネルでコードの行を強調表示します。  DevTools は、16行目で一時停止する必要があり `get-started.js` ます。  
+1.  デモに戻り、[ **段落番号を追加** する] をもう一度選びます。  DevTools はデモを一時停止し、[ **ソース** ] パネルでコードの行を強調表示します。  DevTools は、16行目で一時停止する必要があり `get-started.js` ます。  
     
     ```javascript
     if (inputsAreEmpty()) {
@@ -130,11 +122,11 @@ function updateLabel() {
 
 **イベントリスナーのブレークポイント** は、devtools で利用できる多くの種類のブレークポイントのうちの1つにすぎません。  各型は最終的に、できるだけ簡単にさまざまなシナリオをデバッグするのに役立ちますので、すべての種類を memorizing することをお勧めします。  <!--See [Pause Your Code With Breakpoints][JSBreakpoints] to learn when and how to use each type.  -->  
 
-## 手順 4: コードをステップ実行する   
+## 手順 4: コードをステップ実行する  
 
 バグの一般的な原因の1つとして、スクリプトが誤った順序で実行されることがあります。  コードをステップ実行することで、コードの実行を1行ずつ実行し、予期していた順序で実行されている位置を正確に把握することができます。  今すぐお試しください:  
 
-1.  [ **次** の関数の呼び出し] をクリックし ![ ます (次の関数の呼び出しに進み ][ImageOverIcon] ます)。  DevTools では、次のコードをステップ実行せずに実行します。  
+1.  [ **次** の関数の呼び出し] を選び ![ ][ImageOverIcon] ます。  DevTools では、次のコードをステップ実行せずに実行します。  
     
     ```javascript
     if (inputsAreEmpty()) {
@@ -143,11 +135,11 @@ function updateLabel() {
     > [!NOTE]
     > DevTools では、数行のコードをスキップします。  これは、 `inputsAreEmpty()` false として評価されるため、このステートメントのコードブロックは `if` 実行されません。  
     
-1.  DevTools の **ソース** パネルで、[ **次** の関数呼び出しに進む] をクリックし ![ ][ImageIntoIcon] 、関数の実行時に1行ずつ手順を実行し `updateLabel()` ます。  
+1.  DevTools の **ソース** パネルで、[ **次の関数** 呼び出しを実行します] を選択して、関数の実行時に一度 ![ ][ImageIntoIcon] に1行ずつ手順を実行し `updateLabel()` ます。  
     
 これは、コードをステップ実行するための基本的な考え方です。  コードを見ると `get-started.js` 、バグが関数のどこかにあると考えられ `updateLabel()` ます。  すべてのコード行をステップ実行するのではなく、別の種類のブレークポイントを使って、バグの可能性がある場所に近いコードを一時停止することができます。  
 
-## 手順 5: コード行のブレークポイントを設定する   
+## 手順 5: コード行のブレークポイントを設定する  
 
 行コードのブレークポイントは、最も一般的なブレークポイントの種類です。  一時停止する特定のコード行を取得したら、コード行のブレークポイントを使用します。  
 
@@ -158,68 +150,68 @@ function updateLabel() {
     ```  
     
 1.  コードの左側に、この特定のコード行の行番号 ( **33**) が表示されています。  [ **33**] をクリックします。  DevTools は、 **33**の左側に赤いアイコンを配置します。  これは、この行に行コードのブレークポイントがあることを意味します。  DevTools は、このコード行が実行される前に常に一時停止されるようになりました。  
-1.  [ **スクリプト実行の再開** ] ![ をクリックします (スクリプト実行を再開し ][ImageResumeIcon] ます)。  スクリプトは、33行目に到達するまで実行され続けます。  [DevTools] は、30、31、および32の行で、 `addend1` `addend2` `sum` 各行のセミコロンの右にある、、、の値を出力します。  
+1.  [ **スクリプト実行の再開** ] を選択し ![ ます (スクリプトの実行を再開 ][ImageResumeIcon] します)。  スクリプトは、33行目に到達するまで実行され続けます。  [DevTools] は、30、31、および32の行で、 `addend1` `addend2` `sum` 各行のセミコロンの右にある、、、の値を出力します。  
     
-    :::image type="complex" source="../media/javascript-sources-breakpoint-paused.msft.png" alt-text="DevTools は、32行目のコードの行のブレークポイントで一時停止します" lightbox="../media/javascript-sources-breakpoint-paused.msft.png":::
+    :::image type="complex" source="../media/javascript-sources-breakpoint-paused.msft.png" alt-text="5 + 1 の結果は51ですが、6にする必要があります。" lightbox="../media/javascript-sources-breakpoint-paused.msft.png":::
        DevTools は、32行目のコードの行のブレークポイントで一時停止します  
     :::image-end:::  
     
-## 手順 6: 変数の値を確認する   
+## 手順 6: 変数の値を確認する  
 
 [] の値、[ `addend1` `addend2` 疑わしい] と表示さ `sum` れます。  引用符で囲まれています。これは文字列であることを意味します。  これは、バグの原因を説明するための優れた仮説です。  次に、詳細情報を収集します。  DevTools には、可変値を検査するための多くのツールが用意されています。  
 
-### 方法 1: 範囲ウィンドウ   
+### 方法 1: 範囲ウィンドウ  
 
 コード行を一時停止すると、 **スコープ** ウィンドウに、現在定義されているローカルとグローバル変数、および各変数の値が表示されます。  また、必要に応じて休業変数も表示されます。  変数値をダブルクリックして編集します。  コード行で一時停止していない場合、 **スコープ** ウィンドウは空です。  
 
-:::image type="complex" source="../media/javascript-sources-breakpoint-paused-scope.msft.png" alt-text="スコープウィンドウ" lightbox="../media/javascript-sources-breakpoint-paused-scope.msft.png":::
+:::image type="complex" source="../media/javascript-sources-breakpoint-paused-scope.msft.png" alt-text="5 + 1 の結果は51ですが、6にする必要があります。" lightbox="../media/javascript-sources-breakpoint-paused-scope.msft.png":::
    **スコープ**ウィンドウ  
 :::image-end:::  
 
-### 方法 2: 式をウォッチする   
+### 方法 2: 式をウォッチする  
 
 [ **式のウォッチ** ] タブでは、時間の経過に伴う変数の値を監視できます。  名前が示すように、ウォッチ式は変数だけに限定されているわけではありません。  ウォッチ式には有効な JavaScript 式を格納することができます。  今すぐお試しください:  
 
 1.  [ **ウォッチ** ] タブをクリックします。  
-1.  [ **式の追加** \ ( ![ 式 ][ImageAddIcon] の追加)] をクリックします。  
+1.  [ **式の追加** \ ( ![ 式の追加)] を選び ][ImageAddIcon] ます。  
 1.  「`typeof sum`」と入力します。  
-1.  キーを押し `Enter` ます。  DevTools が表示さ `typeof sum: "string"` れます。  コロンの右側の値は、ウォッチ式の結果です。  
+1.  を選択し `Enter` ます。  DevTools が表示さ `typeof sum: "string"` れます。  コロンの右側の値は、ウォッチ式の結果です。  
     
 > [!NOTE]
 > 次の図の [式のウォッチ] ウィンドウ (右下) では、" `typeof sum` ウォッチ式" が表示されています。  DevTools ウィンドウが大きい場合は、[ウォッチ式] ウィンドウは、 **イベントリスナーの [ブレークポイント** ] ウィンドウの右側にあります。  
 
-:::image type="complex" source="../media/javascript-sources-breakpoint-paused-watch.msft.png" alt-text="ウォッチ式ウィンドウ" lightbox="../media/javascript-sources-breakpoint-paused-watch.msft.png":::
+:::image type="complex" source="../media/javascript-sources-breakpoint-paused-watch.msft.png" alt-text="5 + 1 の結果は51ですが、6にする必要があります。" lightbox="../media/javascript-sources-breakpoint-paused-watch.msft.png":::
    **ウォッチ式**ウィンドウ  
 :::image-end:::  
 
 疑わしいとして、 `sum` 数値の場合は文字列として評価されます。  これがバグの原因であることが確認されました。  
 
-### 方法 3: 本体   
+### 方法 3: 本体  
 
 メッセージを表示するだけで `console.log()` なく、コンソールを使って任意の JavaScript ステートメントを評価することもできます。  デバッグの観点から、本体を使ってバグの潜在的な解決をテストすることができます。  今すぐお試しください:  
 
-1.  コンソールの引き出しを開いていない場合は、を押して `Escape` 開きます。  これは、DevTools ウィンドウの下部に表示されます。  
+1.  コンソールの引き出しを開いていない場合は、を選択し `Escape` て開きます。  これは、DevTools ウィンドウの下部に表示されます。  
 1.  コンソールで、と入力 `parseInt(addend1) + parseInt(addend2)` します。  このステートメントは `addend1` 、および範囲内のコード行で一時停止しているために動作し `addend2` ます。  
-1.  キーを押し `Enter` ます。  DevTools は、ステートメントを評価して出力し `6` ます。これは、デモで生成される結果です。  
+1.  を選択し `Enter` ます。  DevTools は、ステートメントを評価して出力し `6` ます。これは、デモで生成される結果です。  
     
-    :::image type="complex" source="../media/javascript-sources-breakpoint-paused-console.msft.png" alt-text="ParseInt (addend1) + parseInt (addend2) を評価した後の本体の引き出し" lightbox="../media/javascript-sources-breakpoint-paused-console.msft.png":::
+    :::image type="complex" source="../media/javascript-sources-breakpoint-paused-console.msft.png" alt-text="5 + 1 の結果は51ですが、6にする必要があります。" lightbox="../media/javascript-sources-breakpoint-paused-console.msft.png":::
        評価後の **本体** の引き出し `parseInt(addend1) + parseInt(addend2)`  
     :::image-end:::  
     
-## 手順 7: 修正プログラムを適用する   
+## 手順 7: 修正プログラムを適用する  
 
 バグの修正プログラムが見つかった場合は、コードを編集してデモを再実行して、修正を試してください。  この修正プログラムを適用するには、DevTools を終了する必要はありません。  DevTools UI では、JavaScript コードを直接編集できます。  今すぐお試しください:  
 
-1.  [ **スクリプト実行の再開** ] ![ をクリックします (スクリプト実行を再開し ][ImageResumeIcon] ます)。  
+1.  [ **スクリプト実行の再開** ] を選択し ![ ます (スクリプトの実行を再開 ][ImageResumeIcon] します)。  
 1.  **コードエディター**で、行32、 `var sum = addend1 + addend2` をに置き換え `var sum = parseInt(addend1) + parseInt(addend2)` ます。  
-1.  `Control` + `S` \ (Windows \) または `Command` + `S` \ (macOS \) を押して、変更内容を保存します。  
-1.  [ **ブレークポイントの非アクティブ化** ] をクリックし ![ ][ImageDeactivateIcon] ます。  これは青色に変わり、アクティブであることを示します。  この設定を行うと、設定したブレークポイントはすべて、DevTools によって無視されます。  
+1.  `Control` + `S` 変更内容を保存するには、\ (Windows、Linux \) または `Command` + `S` \ (macOS \) を選択します。  
+1.  [ **ブレークポイントの非アクティブ化** ] を選び ![ ][ImageDeactivateIcon] ます。  これは青色に変わり、アクティブであることを示します。  この設定を行うと、設定したブレークポイントはすべて、DevTools によって無視されます。  
 1.  さまざまな値を持つデモを試してみてください。  デモが正しく計算されるようになりました。  
     
 > [!CAUTION]
 > このワークフローは、ブラウザーで実行されているコードにのみ修正プログラムを適用します。  ページにアクセスするすべてのユーザーのコードは修正されません。  そのためには、サーバー上のコードを修正する必要があります。  
 
-## 次のステップ   
+## 次のステップ  
 
 お疲れさまでした。  これで、JavaScript のデバッグ時に Microsoft Edge DevTools を最大限に活用する方法がわかりました。  このチュートリアルで学んだツールと方法を使用すると、時間を節約できます。  
 
@@ -233,11 +225,9 @@ function updateLabel() {
 
 このチュートリアルで説明していないいくつかのコードステップコントロールがあります。  詳細については、「 [コード行をステップオーバー][DevtoolsJavascriptReferenceStepThroughCode]する」を参照してください。  
 
-<!--  
- 
+## Microsoft Edge DevTools チームと連絡を取る  
 
-
--->  
+[!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
 <!-- image links -->  
 

@@ -3,16 +3,16 @@ description: Microsoft Edge DevTools のアニメーションのインスペク�
 title: アニメーションの検査
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 09/15/2020
+ms.date: 10/19/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: e867cc373286666f73bee3b8fb886f60fa1b94f6
-ms.sourcegitcommit: d360e419b5f96f4f691cf7330b0d8dff9126f82e
+ms.openlocfilehash: fed686c07acd0648ac512dac131d85a317fb64eb
+ms.sourcegitcommit: 99eee78698dc95b2a3fa638a5b063ef449899cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "11015773"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "11124776"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -64,7 +64,7 @@ Microsoft Edge DevTools アニメーションのインスペクターには、2�
     1.  [ **その他のツール** ] サブメニューに移動します。  
     1.  [ **アニメーション**] を選択します。  
         
-        :::image type="complex" source="../media/inspect-styles-elements-styles-more-tools-animations.msft.png" alt-text="メインメニューを使用するアニメーション" lightbox="../media/inspect-styles-elements-styles-more-tools-animations.msft.png":::
+        :::image type="complex" source="../media/inspect-styles-elements-styles-more-tools-animations.msft.png" alt-text="アニメーションの詳細設定" lightbox="../media/inspect-styles-elements-styles-more-tools-animations.msft.png":::
            メインメニューを使用する**アニメーション**  
     :::image-end:::  
         
@@ -73,7 +73,7 @@ Microsoft Edge DevTools アニメーションのインスペクターには、2�
 
 [アニメーションの設定] が、コンソールドロワーの横にタブとして開きます。  アニメーション検査は [引き出し] タブであるため、任意の DevTools パネルからアニメーションのインスペクターを使用できます。  
 
-:::image type="complex" source="../media/inspect-styles-elements-styles-drawer-animations.msft.png" alt-text="空のアニメーション検査" lightbox="../media/inspect-styles-elements-styles-drawer-animations.msft.png":::
+:::image type="complex" source="../media/inspect-styles-elements-styles-drawer-animations.msft.png" alt-text="アニメーションの詳細設定" lightbox="../media/inspect-styles-elements-styles-drawer-animations.msft.png":::
    空のアニメーション検査  
 :::image-end:::  
 
@@ -86,7 +86,7 @@ Microsoft Edge DevTools アニメーションのインスペクターには、2�
 | - | **タイムライン** | ここからアニメーションを一時停止して開始するか、アニメーション内の特定のポイントにジャンプします。 |  
 | 4d | **詳細** | 現在選択されているアニメーショングループを検査して変更します。 |  
 
-:::image type="complex" source="../media/inspect-styles-elements-styles-drawer-animations-selected-paused.msft.png" alt-text="注釈付きアニメーションのインスペクター" lightbox="../media/inspect-styles-elements-styles-drawer-animations-selected-paused.msft.png":::
+:::image type="complex" source="../media/inspect-styles-elements-styles-drawer-animations-selected-paused.msft.png" alt-text="アニメーションの詳細設定" lightbox="../media/inspect-styles-elements-styles-drawer-animations-selected-paused.msft.png":::
    注釈付きアニメーションのインスペクター  
 :::image-end:::  
 
@@ -110,25 +110,25 @@ Microsoft Edge DevTools アニメーションのインスペクターには、2�
 
 アニメーショングループをキャプチャしたら、[ **概要** ] ウィンドウでクリックして詳細を表示します。  **詳細**ウィンドウには、個々のアニメーションに1行が割り当てられます。  
 
-:::image type="complex" source="../media/inspect-styles-elements-styles-drawer-animations-selected-completed.msft.png" alt-text="アニメーショングループの詳細" lightbox="../media/inspect-styles-elements-styles-drawer-animations-selected-completed.msft.png":::
+:::image type="complex" source="../media/inspect-styles-elements-styles-drawer-animations-selected-completed.msft.png" alt-text="アニメーションの詳細設定" lightbox="../media/inspect-styles-elements-styles-drawer-animations-selected-completed.msft.png":::
    アニメーショングループの詳細  
 :::image-end:::  
 
 アニメーションの上にマウスポインターを移動すると、ビューポート内で強調表示されます。  アニメーションをクリックして、[ **要素** ] パネルで選択します。  
 
-:::image type="complex" source="../media/inspect-styles-split-elements-styles-drawer-animations-selected-completed.msft.png" alt-text="ビューポートでアニメーションをポイントして強調表示する" lightbox="../media/inspect-styles-split-elements-styles-drawer-animations-selected-completed.msft.png":::
+:::image type="complex" source="../media/inspect-styles-split-elements-styles-drawer-animations-selected-completed.msft.png" alt-text="アニメーションの詳細設定" lightbox="../media/inspect-styles-split-elements-styles-drawer-animations-selected-completed.msft.png":::
    ビューポートでアニメーションをポイントして強調表示する  
 :::image-end:::  
 
 アニメーションの左端、濃い色の部分が定義です。  右側の [薄い色] セクションは、反復計算を表します。  たとえば、次の図では、セクション2と3はセクション1のイテレーションを表しています。  
 
-:::image type="complex" source="../media/inspect-styles-glitch-display-animations-highlight.msft.png" alt-text="アニメーションの反復計算の図" lightbox="../media/inspect-styles-glitch-display-animations-highlight.msft.png":::
+:::image type="complex" source="../media/inspect-styles-glitch-display-animations-highlight.msft.png" alt-text="アニメーションの詳細設定" lightbox="../media/inspect-styles-glitch-display-animations-highlight.msft.png":::
    アニメーションの反復計算の図  
 :::image-end:::  
 
 2つの要素に同じアニメーションが適用されている場合、アニメーションのインスペクターでは要素に同じ色が割り当てられます。  色はランダムであり、意味はありません。  たとえば、次の図では、要素と要素と同様に、2つの要素 `div.cwccw.earlier` と、 `div.cwccw.later` 同じアニメーション \ ( `spinrightleft` \) が適用されてい `div.ccwcw.earlier` `div.ccwcw.later` ます。  
 
-:::image type="complex" source="../media/inspect-styles-glitch-display-animations.msft.png" alt-text="色分けされたアニメーション" lightbox="../media/inspect-styles-glitch-display-animations.msft.png":::
+:::image type="complex" source="../media/inspect-styles-glitch-display-animations.msft.png" alt-text="アニメーションの詳細設定" lightbox="../media/inspect-styles-glitch-display-animations.msft.png":::
    色分けされたアニメーション  
 :::image-end:::  
 
@@ -142,25 +142,25 @@ Microsoft Edge DevTools アニメーションのインスペクターには、2�
     
 次の図では、元のアニメーションが表示されています。  
 
-:::image type="complex" source="../media/inspect-styles-glitch-spin-animations-console-animations.msft.png" alt-text="変更前の元のアニメーション" lightbox="../media/inspect-styles-glitch-spin-animations-console-animations.msft.png":::
+:::image type="complex" source="../media/inspect-styles-glitch-spin-animations-console-animations.msft.png" alt-text="アニメーションの詳細設定" lightbox="../media/inspect-styles-glitch-spin-animations-console-animations.msft.png":::
    変更前の元のアニメーション  
 :::image-end:::  
 
 アニメーションの継続時間を変更するには、最初または最後の円をクリックしてドラッグします。  
 
-:::image type="complex" source="../media/inspect-styles-glitch-spin-animations-console-animations-shorter.msft.png" alt-text="変更された期間" lightbox="../media/inspect-styles-glitch-spin-animations-console-animations-shorter.msft.png":::
+:::image type="complex" source="../media/inspect-styles-glitch-spin-animations-console-animations-shorter.msft.png" alt-text="アニメーションの詳細設定" lightbox="../media/inspect-styles-glitch-spin-animations-console-animations-shorter.msft.png":::
    変更された期間  
 :::image-end:::  
 
 アニメーションでキーフレームルールが定義されている場合は、それらは白色の内側の円として表されます。  いずれかをクリックしてドラッグし、キーフレームのタイミングを変更します。  
 
-:::image type="complex" source="../media/inspect-styles-glitch-spin-animations-console-animations-keyframe-modification.msft.png" alt-text="変更されたキーフレーム" lightbox="../media/inspect-styles-glitch-spin-animations-console-animations-keyframe-modification.msft.png":::
+:::image type="complex" source="../media/inspect-styles-glitch-spin-animations-console-animations-keyframe-modification.msft.png" alt-text="アニメーションの詳細設定" lightbox="../media/inspect-styles-glitch-spin-animations-console-animations-keyframe-modification.msft.png":::
    変更されたキーフレーム  
 :::image-end:::  
 
 アニメーションに遅延を追加するには、円以外の任意の場所でクリックしてドラッグします。  
 
-:::image type="complex" source="../media/inspect-styles-glitch-spin-animations-console-animations-delay.msft.png" alt-text="変更遅延" lightbox="../media/inspect-styles-glitch-spin-animations-console-animations-delay.msft.png":::
+:::image type="complex" source="../media/inspect-styles-glitch-spin-animations-console-animations-delay.msft.png" alt-text="アニメーションの詳細設定" lightbox="../media/inspect-styles-glitch-spin-animations-console-animations-delay.msft.png":::
    変更遅延  
 :::image-end:::  
 

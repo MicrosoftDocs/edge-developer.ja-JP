@@ -3,16 +3,16 @@ description: Microsoft Edge DevTools の最新の実験的な機能
 title: 試験的機能
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 10/05/2020
+ms.date: 10/19/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools、実験
-ms.openlocfilehash: f885201ddfb7553a2b9c58a07dd52b7a77c4137a
-ms.sourcegitcommit: 0326a4082064e9cdfa602736f3f9ce7d8d294604
+ms.openlocfilehash: 65cf178596abfbaaac0e80bf205035838967cf59
+ms.sourcegitcommit: 99eee78698dc95b2a3fa638a5b063ef449899cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "11094933"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "11124895"
 ---
 # 試験的機能  
 
@@ -25,7 +25,7 @@ Microsoft Edge のすべてのチャネルで実験的機能を利用できま�
 Microsoft Edge で \ (またはオフ) の試験的機能を有効にするには、次の手順を実行します。  
 
 1.  [DevTools を開き][DevtoolsOpen]ます。  
-     *   [ `Control` + `Shift` + `I` \ (Windows \)] または [ `Command` + `Option` + `I` \ (macOS \)] を選びます。  詳細については、「 [Microsoft Edge DevTools のキーボードショートカット][DevToolsShortcuts]」を参照してください。  
+     *   `Control` + `Shift` + `I` \ (Windows, Linux \) または `Command` + `Option` + `I` \ (macOS \) を選択します。  詳細については、「 [Microsoft Edge DevTools のキーボードショートカット][DevToolsShortcuts]」を参照してください。  
 1.  [ [設定][DevToolsCustomizeSettings] ] ウィンドウを開きます。  
     *   を選択し `Shift` + `?` ます。  詳細については、「 [Microsoft Edge DevTools のキーボードショートカット][DevToolsShortcuts]」を参照してください。  
 1.  [ **設定** ] ウィンドウの左側で、[ **実験** ] セクションを選択します。  

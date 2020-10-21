@@ -3,16 +3,16 @@ description: タイムラインイベントモードでは、記録を作成す�
 title: タイムライン イベント リファレンス
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 09/01/2020
+ms.date: 10/19/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 624035636e2231cf1f3cd1e2ba0fdda7e2e4fa00
-ms.sourcegitcommit: 63e6d34ff483f3b419a0e271a3513874e6ce6c79
+ms.openlocfilehash: 989d4d84345fedc1c5aef2cb8d893db3c0e1634b
+ms.sourcegitcommit: 99eee78698dc95b2a3fa638a5b063ef449899cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "10992849"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "11124902"
 ---
 <!-- Copyright Meggin Kearney and Flavio Copes
 
@@ -28,14 +28,7 @@ ms.locfileid: "10992849"
    See the License for the specific language governing permissions and
    limitations under the License.  -->
 
-
-
-
-
-# タイムライン イベント リファレンス   
-
-
-
+# タイムライン イベント リファレンス  
 
 タイムラインイベントモードでは、記録を作成するときにトリガーされるすべてのイベントが表示されます。  タイムラインイベントのリファレンスを使って、各タイムラインイベントの種類について詳しく知ることができます。  
 
@@ -149,11 +142,9 @@ ms.locfileid: "10992849"
 | 場所 | Paint イベントの場合は、ペイントの四角形の x 座標と y 座標を使用します。 |  
 | 各 | Paint イベントの場合は、塗装領域の高さと幅。 |  
 
- 
+## Microsoft Edge DevTools チームと連絡を取る  
 
-
-
-<!-- image links -->  
+[!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
 <!-- links -->
 

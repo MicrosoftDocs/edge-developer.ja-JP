@@ -3,16 +3,16 @@ description: セキュリティパネルを使用して、ページが HTTPS に
 title: Microsoft Edge DevTools のセキュリティに関する問題を理解する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 09/01/2020
+ms.date: 10/19/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 2538f80b08c8162d27f075775075a8b81c5f7725
-ms.sourcegitcommit: 63e6d34ff483f3b419a0e271a3513874e6ce6c79
+ms.openlocfilehash: 09f7e641ddd8da74c361980b9ce61b212a8477fe
+ms.sourcegitcommit: 99eee78698dc95b2a3fa638a5b063ef449899cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "10993577"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "11125385"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -28,11 +28,7 @@ ms.locfileid: "10993577"
    See the License for the specific language governing permissions and
    limitations under the License.  -->  
 
-
-
-
-
-# Microsoft Edge DevTools のセキュリティに関する問題を理解する   
+# Microsoft Edge DevTools のセキュリティに関する問題を理解する  
 
   
 
@@ -40,24 +36,24 @@ ms.locfileid: "10993577"
 
 <!--todo: add section when why-https is available -->  
 
-## セキュリティパネルを開く   
+## セキュリティパネルを開く  
 
 **セキュリティ**パネルは、ページのセキュリティを検査するための devtools の主要な場所です。  
 
 1.  [DevTools を開き][DevToolsOpen]ます。  
-1.  [ **セキュリティ** ] タブをクリックして、[ **セキュリティ** ] パネルを開きます。  
+1.  [ **セキュリティ** ] タブを選択して [ **セキュリティ** ] パネルを開きます。  
     
     :::image type="complex" source="../media/security-security-overview-secure.msft.png" alt-text="セキュリティパネル" lightbox="../media/security-security-overview-secure.msft.png":::
        **セキュリティ**パネル  
     :::image-end:::  
     
-## 一般的な問題   
+## 一般的な問題  
 
-### セキュリティで保護されていない本文   
+### セキュリティで保護されていない本文  
 
 ページのメインの起点がセキュリティで保護されていない場合、**このページは**セキュリティで保護されていないことを**示してい**ます。  
 
-:::image type="complex" source="../media/security-security-overview-non-secure.msft.png" alt-text="セキュリティで保護されていないページ" lightbox="../media/security-security-overview-non-secure.msft.png":::
+:::image type="complex" source="../media/security-security-overview-non-secure.msft.png" alt-text="セキュリティパネル" lightbox="../media/security-security-overview-non-secure.msft.png":::
    セキュリティで保護されていないページ  
 :::image-end:::  
 
@@ -70,50 +66,46 @@ ms.locfileid: "10993577"
 > [!TIP]
 > [Webhint][Webhint]で[https の使用][WebhintUseHttps]に関するヒントを使用すると、すべての HTTP 要求が HTTPS に転送されることを確認するプロセスを自動化することができます。  
 
-### 混在したコンテンツ   
+### 混在したコンテンツ  
 
 **混在** しているコンテンツとは、ページのメインの起点がセキュリティで保護されているが、ページは安全ではない元のリソースを要求したことを意味します。  混在したコンテンツページは、HTTP コンテンツがスニファーでアクセス可能であり、man-in-the-middle 攻撃に対して脆弱であるため、部分的に保護されています。  
 
-:::image type="complex" source="../media/security-security-overview-mixed-secure.msft.png" alt-text="混在したコンテンツ" lightbox="../media/security-security-overview-mixed-secure.msft.png":::
+:::image type="complex" source="../media/security-security-overview-mixed-secure.msft.png" alt-text="セキュリティパネル" lightbox="../media/security-security-overview-mixed-secure.msft.png":::
    混在したコンテンツ  
 :::image-end:::  
 
-上の図では、[**ネットワークパネル] で [1 つの要求を表示**] をクリックして [ネットワーク] パネルを開き、 **Network** `mixed-content:displayed` **ネットワークログ**にセキュリティ以外のリソースしか表示されないようにフィルターを適用します。  
+上の図では、[**ネットワークパネル] で [1 つの要求を表示**] を選択して [ネットワーク] パネルを開き、 **Network** `mixed-content:displayed` **ネットワークログ**にセキュリティ以外のリソースしか表示されないようにフィルターを適用します。  
 
-:::image type="complex" source="../media/security-network-filter.msft.png" alt-text="ネットワークログの混在したリソース" lightbox="../media/security-network-filter.msft.png":::
+:::image type="complex" source="../media/security-network-filter.msft.png" alt-text="セキュリティパネル" lightbox="../media/security-network-filter.msft.png":::
    **ネットワークログ**の混在したリソース  
 :::image-end:::  
 
-## 詳細の表示   
+## 詳細の表示  
 
-### メインの元の証明書を表示する   
+### メインの元の証明書を表示する  
 
-セキュリティの **概要**で、[ **証明書の表示** ] をクリックして、メインの元の証明書をすばやく検査します。  
+[ **セキュリティの概要**] で、[ **証明書の表示** ] を選択して、メインの元の証明書をすばやく検査します。  
 
-:::image type="complex" source="../media/security-security-overview-secure-view-certificate.msft.png" alt-text="メインの元の証明書" lightbox="../media/security-security-overview-secure-view-certificate.msft.png":::
+:::image type="complex" source="../media/security-security-overview-secure-view-certificate.msft.png" alt-text="セキュリティパネル" lightbox="../media/security-security-overview-secure-view-certificate.msft.png":::
    メインの元の証明書  
 :::image-end:::  
 
-### オリジンの詳細の表示   
+### オリジンの詳細の表示  
 
 左側のナビゲーションでいずれかのエントリをクリックして、元の情報を表示します。  [詳細] ページでは、接続と証明書の情報を表示できます。  証明書の透過性情報は、可能な場合にも表示されます。  
 
-:::image type="complex" source="../media/security-security-overview-mixed-secure-main-origin.msft.png" alt-text="主要な原産国の詳細" lightbox="../media/security-security-overview-mixed-secure-main-origin.msft.png":::
+:::image type="complex" source="../media/security-security-overview-mixed-secure-main-origin.msft.png" alt-text="セキュリティパネル" lightbox="../media/security-security-overview-mixed-secure-main-origin.msft.png":::
    主要な原産国の詳細  
 :::image-end:::  
 
-<!--  
- 
+## Microsoft Edge DevTools チームと連絡を取る  
 
-
--->  
+[!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
 <!-- links -->  
 
 [MicrosoftEdgeDevTools]: ../../devtools-guide-chromium.md "Microsoft Edge (Chromium) 開発者ツール |Microsoft ドキュメント"  
 [DevToolsOpen]: ../open.md "Microsoft Edge DevTools を開く |Microsoft ドキュメント"  
-
-
 [LetsEncrypt]: https://letsencrypt.org "暗号化されていない SSL/TLS 証明書を使用する"  
 
 [Webhint]: https://webhint.io "web ヒント"  

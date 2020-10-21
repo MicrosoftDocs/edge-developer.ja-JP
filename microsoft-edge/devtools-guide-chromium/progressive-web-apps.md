@@ -7,12 +7,12 @@ ms.date: 09/01/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 7eb71d0d57d8a9227a54b921f15dfe434ad6e65b
-ms.sourcegitcommit: 63e6d34ff483f3b419a0e271a3513874e6ce6c79
+ms.openlocfilehash: 80475ebcbbdd3fb04fd0196e993c933e0bdcf090
+ms.sourcegitcommit: 99eee78698dc95b2a3fa638a5b063ef449899cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "10993605"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "11125392"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -28,13 +28,7 @@ ms.locfileid: "10993605"
    See the License for the specific language governing permissions and
    limitations under the License.  -->  
 
-
-
-
-
-# プログレッシブ Web アプリをデバッグする   
-
-
+# プログレッシブ Web アプリをデバッグする  
 
 **アプリケーション**パネルを使用して、web アプリマニフェスト、サービスワーカー、service worker キャッシュを検査、変更、およびデバッグします。  
 
@@ -55,7 +49,7 @@ ms.locfileid: "10993605"
 *   [ **キャッシュ記憶域** ] ウィンドウからサービスワーカーキャッシュを表示します。  
 *   サービスワーカーの登録を解除し、[ **記憶域のクリア** ] ウィンドウから1回ボタンをクリックして、すべての記憶域とキャッシュをクリアします。  
     
-## Web アプリマニフェスト   
+## Web アプリマニフェスト  
 
 ユーザーが自分のモバイル homescreens にアプリを追加できるようにするには、web アプリマニフェストが必要です。  マニフェストは、アプリがホーム画面にどのように表示されるかを定義します。ここでは、ホーム画面からの起動時にユーザーに指示し、アプリが起動時にどのように見えるかを示します。  
 
@@ -77,7 +71,7 @@ ms.locfileid: "10993605"
 *   [ **Id** ] セクションと [ **プレゼンテーション** ] セクションには、マニフェストソースからのフィールドが、わかりやすい表示で表示されます。  
 *   [ **アイコン** ] セクションには、指定したすべてのアイコンが表示されます。  
     
-<!--### Simulate Add to Homescreen events   -->
+<!--### Simulate Add to Homescreen events  -->
 
 <!--A web app can only be added to a homescreen when the site is visited at least twice, with at least five minutes between visits.  While developing or debugging your Add to Homescreen workflow, this criteria can be inconvenient.  
 The **Add to homescreen** button on the **App Manifest** pane lets you simulate Add to Homescreen events whenever you want.  -->
@@ -85,7 +79,7 @@ The **Add to homescreen** button on the **App Manifest** pane lets you simulate 
 <!--You can test out this feature with the [Microsoft I/O 2016 progressive web app](https://events.alpahabet.com/io2016/), which has proper support for Add to Homescreen.  Clicking on **Add to Homescreen** while the app is open prompts Microsoft Edge to display the "add this site to your shelf" banner, which is the desktop equivalent of the "add to homescreen" banner for mobile devices.  -->
 
 <!--  
-:::image type="complex" source="./media/io.msft.png" alt-text="Add to desktop shelf" lightbox="./media/io.msft.png":::
+:::image type="complex" source="./media/io.msft.png" alt-text="マニフェストウィンドウ" lightbox="./media/io.msft.png":::
    Add to desktop shelf  
 :::image-end:::
 -->  
@@ -102,7 +96,7 @@ The **Add to homescreen** button on the **App Manifest** pane lets you simulate 
 
 <!--TODO:  Link Debug "remote debugging" sections when available. -->
 
-## サービス員   
+## サービス ワーカー  
 
 サービスワーカーは、今後の web プラットフォームの基本的なテクノロジです。  これは、ブラウザーで web ページとは別にバックグラウンドで実行されるスクリプトです。  これらのスクリプトを使用すると、プッシュ通知、バックグラウンド同期、オフライン操作など、web ページまたはユーザーの操作を必要としない機能にアクセスできます。  
 
@@ -115,7 +109,7 @@ The **Add to homescreen** button on the **App Manifest** pane lets you simulate 
 
 **アプリケーション**パネルの [ **service worker** ] ウィンドウは、サービスワーカーを検査およびデバッグするための devtools の主要な場所です。  
 
-:::image type="complex" source="./media/service-workers-pane.msft.png" alt-text="[Service Worker] ウィンドウ" lightbox="./media/service-workers-pane.msft.png":::
+:::image type="complex" source="./media/service-workers-pane.msft.png" alt-text="マニフェストウィンドウ" lightbox="./media/service-workers-pane.msft.png":::
    [ **Service worker** ] ウィンドウ  
 :::image-end:::  
 
@@ -134,7 +128,7 @@ The **Add to homescreen** button on the **App Manifest** pane lets you simulate 
 サービスワーカーからエラーが発生した場合、[ **エラー** ] という名前の新しいラベルが表示されます。  
 
 <!--  
-:::image type="complex" source="./media/sw-error.msft.png" alt-text="Service worker with errors" lightbox="./media/sw-error.msft.png":::
+:::image type="complex" source="./media/sw-error.msft.png" alt-text="マニフェストウィンドウ" lightbox="./media/sw-error.msft.png":::
    Service worker with errors  
 :::image-end:::
 -->  
@@ -142,11 +136,11 @@ The **Add to homescreen** button on the **App Manifest** pane lets you simulate 
 <!--TODO:  Capture Service Worker Errors sample when available. -->
 <!--TODO:  Link Web "How tickle works" sections when available. -->
 
-## Service worker キャッシュ 
+## Service worker キャッシュ  
 
 [ **キャッシュ記憶域** ] ウィンドウには、\ (service Worker) [キャッシュ API][MDNWebCacheAPI]を使用してキャッシュされたリソースの読み取り専用リストが表示されます。  
 
-:::image type="complex" source="./media/cache-pane-cache-storage-resources.msft.png" alt-text="[キャッシュの記憶域] ウィンドウ" lightbox="./media/cache-pane-cache-storage-resources.msft.png":::
+:::image type="complex" source="./media/cache-pane-cache-storage-resources.msft.png" alt-text="マニフェストウィンドウ" lightbox="./media/cache-pane-cache-storage-resources.msft.png":::
    [ **キャッシュの記憶域** ] ウィンドウ  
 :::image-end:::  
 
@@ -155,11 +149,11 @@ The **Add to homescreen** button on the **App Manifest** pane lets you simulate 
 
 2つ以上のキャッシュを開いている場合は、[ **キャッシュストレージ** ] ドロップダウンの下に一覧表示されます。  
 
-:::image type="complex" source="./media/cache-pane-cache-storage.msft.png" alt-text="[キャッシュ記憶域] ドロップダウン" lightbox="./media/cache-pane-cache-storage.msft.png":::
+:::image type="complex" source="./media/cache-pane-cache-storage.msft.png" alt-text="マニフェストウィンドウ" lightbox="./media/cache-pane-cache-storage.msft.png":::
    [ **キャッシュ記憶域** ] ドロップダウン  
 :::image-end:::  
 
-## クォータ使用量 
+## クォータ使用量  
 
 [ **キャッシュ記憶域** ] ウィンドウ内の一部の応答は、"不透明" としてマークされることがあります。  これは、 [CORS][FetchHttpCorsProtocol]が有効になっていない場合に、 **CDN**やリモート API などの別の起点から取得された応答を指します。  
 
@@ -179,7 +173,7 @@ The **Add to homescreen** button on the **App Manifest** pane lets you simulate 
     
 <!--TODO:  Link Work container storage quota for opaque responses section when available. -->
 
-## 記憶域をクリアする 
+## 記憶域をクリアする  
 
 [ **記憶域のクリア** ] ウィンドウは、プログレッシブ web アプリを開発するときに便利な機能です。  このウィンドウでは、サービスワーカーの登録を解除し、1回のボタンクリックですべてのキャッシュとストレージをクリアすることができます。  <!--Check out the section below to learn more.  -->
 
@@ -189,7 +183,7 @@ The **Add to homescreen** button on the **App Manifest** pane lets you simulate 
     
 <!--TODO:  Link to sections when available. -->
 
-<!--## Other Application panel guides 
+<!--## Other Application panel guides   
 
 Check out the guides below for more help on the other panes of the **Application** panel.  
 
@@ -198,13 +192,9 @@ Related Guides:
 *   [Inspect page resources](/iterate/manage-data/page-resources)  
 *   [Inspect and manage local storage and caches](/iterate/manage-data/local-storage)  -->
     
-<!--TODO  -->
+## Microsoft Edge DevTools チームと連絡を取る  
 
-<!--  
- 
-
-
--->  
+[!INCLUDE [contact DevTools team note](./includes/contact-devtools-team-note.md)]  
 
 <!-- links -->  
 

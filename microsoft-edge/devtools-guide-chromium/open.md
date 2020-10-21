@@ -3,16 +3,16 @@ description: Microsoft Edge DevTools を開くすべての方法。
 title: Microsoft Edge DevTools を開く
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 09/01/2020
+ms.date: 10/19/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: ffc05a1eff2cdb7f3020a7dbb853a7520a0502dd
-ms.sourcegitcommit: 63e6d34ff483f3b419a0e271a3513874e6ce6c79
+ms.openlocfilehash: 298edeebc99d858306938e4a876e8ef03a371f2c
+ms.sourcegitcommit: 99eee78698dc95b2a3fa638a5b063ef449899cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "10993598"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "11125406"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -37,7 +37,7 @@ ms.locfileid: "10993598"
 次の各タスクによって、DOM ノードのスタイルまたは属性を調べることができます。
 
 *   要素にマウスポインターを合わせて、コンテキストメニュー \ (右クリック \) を開き、[ **検査**] を選びます。  
-*   `Control` + `Shift` + `C` \ (Windows \) または `Command` + `Option` + `C` \ (macOS \) を押します。  詳細については、「 [Microsoft Edge DevTools のキーボードショートカット][DevToolsShortcuts]」を参照してください。  
+*   `Control` + `Shift` + `C` \ (Windows, Linux \) または `Command` + `Option` + `C` \ (macOS \) を選択します。  詳細については、「 [Microsoft Edge DevTools のキーボードショートカット][DevToolsShortcuts]」を参照してください。  
 
 :::image type="complex" source="./media/bing-right-click-inspect.msft.png" alt-text="* * 検査 * * オプション" lightbox="./media/bing-right-click-inspect.msft.png":::
    [ **検査** ] オプション  
@@ -54,13 +54,13 @@ ms.locfileid: "10993598"
     1.  [DevTools を開き](#open-microsoft-edge-devtools)ます。  
     1.  [ [コンソール][DevToolsConsoleIndex] ] ウィンドウを選択します。  
 
-*   [コンソール][DevToolsConsoleIndex]ウィンドウに直接ジャンプするには、 `Control` + `Shift` + `J` \ (Windows \) または `Command` + `Option` + `J` \ (macOS \) を押します。  詳細については、「 [Microsoft Edge DevTools のキーボードショートカット][DevToolsShortcuts]」を参照してください。  
+*   [コンソール][DevToolsConsoleIndex]ウィンドウに直接ジャンプするには、 `Control` + `Shift` + `J` \ (Windows、Linux \) または `Command` + `Option` + `J` \ (macOS \) を選択します。  詳細については、「 [Microsoft Edge DevTools のキーボードショートカット][DevToolsShortcuts]」を参照してください。  
 
 <!--See [Get Started With The Console][ConsoleGetStarted].  -->
 
 ## 前のパネルを開く  
 
-開いていた前のパネルにジャンプするに `Control` + `Shift` + `I` は、\ (Windows \) または `Command` + `Option` + `I` \ (macOS \) を押します。  詳細については、「 [Microsoft Edge DevTools のキーボードショートカット][DevToolsShortcuts]」を参照してください。  
+開いていた前のパネルにジャンプするには、[ `Control` + `Shift` + `I` \ (Windows、Linux \)] または [ `Command` + `Option` + `I` \ (macOS \)] を選びます。  詳細については、「 [Microsoft Edge DevTools のキーボードショートカット][DevToolsShortcuts]」を参照してください。  
 
 ## Microsoft Edge DevTools を開く  
 
@@ -70,11 +70,11 @@ ms.locfileid: "10993598"
     
     1.  `...`アイコン (**設定など**のアイコン) を選びます。  
     1.  [ **その他のツール**] を選びます。  
-    1.  [ **開発者ツール**] を選択します。  
+    1.  [ **開発者ツール**] を選びます。  
     
-*   Microsoft Edge devtools を開くに `F12` は、または `Control` + `Shift` + `I` \ (Windows \) または `Command` + `Option` + `I` \ (macOS \) を押します。  詳細については、「 [Microsoft Edge DevTools のキーボードショートカット][DevToolsShortcuts]」を参照してください。  
+*   Microsoft Edge devtools を開くに `F12` は、または `Control` + `Shift` + `I` \ (Windows、Linux \) または `Command` + `Option` + `I` \ (macOS \) を選択します。  詳細については、「 [Microsoft Edge DevTools のキーボードショートカット][DevToolsShortcuts]」を参照してください。  
 
-:::image type="complex" source="./media/bing-customize-more-tools-developer-tools-transparent.msft.png" alt-text="Microsoft Edge のメインメニューから DevTools を開く" lightbox="./media/bing-customize-more-tools-developer-tools-transparent.msft.png":::
+:::image type="complex" source="./media/bing-customize-more-tools-developer-tools-transparent.msft.png" alt-text="* * 検査 * * オプション" lightbox="./media/bing-customize-more-tools-developer-tools-transparent.msft.png":::
    Microsoft Edge のメインメニューから DevTools を開く  
 :::image-end:::  
 
@@ -82,17 +82,17 @@ ms.locfileid: "10993598"
 
 すべての新しいタブで DevTools を自動的に開くには、コマンドラインから Microsoft Edge を開き、 `--auto-open-devtools-for-tabs` フラグを渡します。  
 
-#### [CMD (Windows)](#tab/cmd-windows/)  
+#### [CMD (Windows)](#tab/cmd-Windows/)  
 
-<a id="selenium-tools-install"></a>  
+<a id="auto-open-devtools-command-line"></a>  
 
 ```cmd
 start msedge --auto-open-devtools-for-tabs
 ```  
 
-#### [PowerShell (Windows)](#tab/powershell-windows/)  
+#### [PowerShell (Windows)](#tab/powershell-Windows/)  
 
-<a id="selenium-tools-install"></a>  
+<a id="auto-open-devtools-command-line"></a>  
 
 ```powershell
 Start-Process -FilePath "msedge" -ArgumentList "--auto-open-devtools-for-tabs"
@@ -100,13 +100,25 @@ Start-Process -FilePath "msedge" -ArgumentList "--auto-open-devtools-for-tabs"
 
 #### [bash (macOS)](#tab/bash-macos/)  
 
-<a id="selenium-tools-install"></a>  
+<a id="auto-open-devtools-command-line"></a>  
 
 ```bash
 /Applications/Microsoft\ Edge\ Beta.app/Contents/MacOS/Microsoft\ Edge\ Beta --auto-open-devtools-for-tabs
 ```  
 
+#### [bash (Linux)](#tab/bash-linux/)  
+
+<a id="auto-open-devtools-command-line"></a>  
+
+```bash
+microsoft-edge-dev --auto-open-devtools-for-tabs
+```  
+
 * * *  
+
+## Microsoft Edge DevTools チームと連絡を取る  
+
+[!INCLUDE [contact DevTools team note](./includes/contact-devtools-team-note.md)]  
 
 <!-- links -->  
 
