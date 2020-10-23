@@ -3,17 +3,17 @@ description: Microsoft Edge (Chromium) 開発者ツールについて理解す�
 title: Microsoft Edge (Chromium) 開発者ツール
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 09/08/2020
+ms.date: 10/22/2020
 ms.topic: article
 ms.prod: microsoft-edge
 ms.technology: devtools
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 50c4fa578ffa1738649496176cda2611625908b8
-ms.sourcegitcommit: 99eee78698dc95b2a3fa638a5b063ef449899cda
+ms.openlocfilehash: 9f035df5bc80aa6a1df0464eb326e4185e2205d2
+ms.sourcegitcommit: 6e2b26d41a0aa56ac34e6edc7dddd852ddb415b1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "11125322"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "11133905"
 ---
 # Microsoft Edge (Chromium) 開発者ツール  
 

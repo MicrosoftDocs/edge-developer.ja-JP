@@ -7,12 +7,12 @@ ms.date: 10/08/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 74fb4e276547d9f653a5bcbdcab9c4406d09a81a
-ms.sourcegitcommit: 912609aa49864e3363aaa3b245ff2aa4bec3fc3e
+ms.openlocfilehash: 0e759c18b5ef547bfd490f4d525930f92809a6a1
+ms.sourcegitcommit: 6e2b26d41a0aa56ac34e6edc7dddd852ddb415b1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "11104862"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "11133912"
 ---
 # DevTools の新機能 (Microsoft Edge 86)  
 
@@ -490,7 +490,7 @@ Windows または macOS を使用している場合は、 [Microsoft Edge previe
 [CR772558]: https://crbug.com/772558 "DevTools: 最新バージョンの Lighthouse を更新する |Chromium のバグ"  
 [CR807440]: https://crbug.com/807440 "Chrome では、多数の SWs | を使ってロックするChromium のバグ"  
 [CR997694]: https://crbug.com/997694 "[ネットワーク] パネルの \ "xhr \" フィルターの下に、302状態の XHR 要求が表示されません。Chromium のバグ"  
-[CR1047356]: https://crbug.com/1047356 "CSS Grid/Flexbox/Table ツール"  
+[CR1047356]: https://crbug.com/1047356 "CSS Grid/Flexbox/Table ツーリング |Chromium のバグ"  
 [CR1051466]: https://crbug.com/1051466 "DevTools での CO-OP/COEP のデバッグのサポート |Chromium のバグ"  
 [CR1054281]: https://crbug.com/1054281 "機能の要求: DevTools では、折りたたみ式とデュアルスクリーンデバイスをエミュレートする必要があります。Chromium のバグ"  
 [CR1067184]: https://crbug.com/1067184 "機能の要求: ネットワーク & 要素で [フィルターのクリア] ボタンを > スタイルフィルターの入力 |Chromium のバグ"  
