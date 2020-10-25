@@ -62,6 +62,8 @@
           href: devtools-guide-chromium/open.md
         - name: 新着情報
           items:
+            - name: Microsoft Edge 87
+              href: devtools-guide-chromium/whats-new/2020/10/devtools.md
             - name: Microsoft Edge 86
               href: devtools-guide-chromium/whats-new/2020/08/devtools.md
             - name: Microsoft Edge 85
@@ -96,6 +98,8 @@
               href: devtools-guide-chromium/coverage/index.md
             - name: アニメーションの検査
               href: devtools-guide-chromium/inspect-styles/animations.md
+            - name: CSS グリッドの検査
+              href: devtools-guide-chromium/css/grid.md
             - name: DevTools を強制的に印刷プレビュー モードにする
               href: devtools-guide-chromium/css/print-preview.md
         - name: Console
@@ -236,6 +240,8 @@
               href: devtools-guide-chromium/memory-problems/allocation-profiler.md
         - name: Media
           href: devtools-guide-chromium/media-panel/index.md
+        - name: WebAuthn
+          href: devtools-guide-chromium/WebAuthn/index.md
         - name: ワークスペース
           href: devtools-guide-chromium/workspaces/index.md
         - name: プログレッシブ Web アプリ
