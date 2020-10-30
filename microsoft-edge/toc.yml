@@ -178,6 +178,8 @@
               href: devtools-guide-chromium/javascript/reference.md
             - name: スニペット
               href: devtools-guide-chromium/javascript/snippets.md
+            - name: '[上書き] をクリックし、'
+              href: devtools-guide-chromium/javascript/overrides.md
             - name: ソース パネルの概要
               href: devtools-guide-chromium/sources.md
             - name: デバッグ バックグラウンド サービス
