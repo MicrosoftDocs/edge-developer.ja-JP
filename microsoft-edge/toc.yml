@@ -525,6 +525,8 @@
       items:
         - name: Microsoft Edge 向けのサイトの互換性に影響する変更点
           href: web-platform/site-impacting-changes.md
+        - name: IE から Microsoft Edge にユーザーを移動させる
+          href: web-platform/ie-to-microsoft-edge-redirection.md
         - name: Microsoft Edge でのトラッキング防止
           href: web-platform/tracking-prevention.md
         - name: Microsoft Edge ユーザー エージェント文字列
