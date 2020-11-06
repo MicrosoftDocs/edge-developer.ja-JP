@@ -3,16 +3,16 @@ description: サイトの互換性に影響を与える可能性の高い変更�
 title: Microsoft Edge 向けのサイトの互換性に影響する変更点
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 10/02/2020
+ms.date: 11/04/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、互換性、web プラットフォーム
-ms.openlocfilehash: 49fbedb2fe979a52b771539c7ceedce8968c2fb4
-ms.sourcegitcommit: 903524ab85321ade278facd741d6487e8cabe33f
+ms.openlocfilehash: bb4d67bf1ab6274a10a83ee750fa9db52ab85464
+ms.sourcegitcommit: 4497b399a6ddfa34163b7d3db4f76423d4da3c12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "11100289"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "11156349"
 ---
 # Microsoft Edge 向けのサイトの互換性に影響する変更点  
 
@@ -28,7 +28,7 @@ Web は、ユーザー エクスペリエンス、セキュリティ、および
 | 混在したコンテンツのダウンロードをブロックする | [Chrome + 1](#release-comments) \ (Edge v86 \)  |  | この変更は、Microsoft Edge が基づく Chromium プロジェクトで行われています。  この変更に関する Google の計画されたタイムラインを含む詳細については、 [google セキュリティのブログエントリ][GoogleBlogSecurity20200206]を参照してください。  注意またはブロックするファイルの種類に関する Microsoft ロールアウトのスケジュールは、Chrome 後の1回のリリースで計画されています。  |  
 | AppCache の廃止 | [Chrome + 1](#release-comments) \ (Edge v86 \)  |  | この変更は、Microsoft Edge が基づく Chromium プロジェクトで行われています。  詳細については、 [Webdev のドキュメント][WebDevAppCacheRemoval]を参照してください。  廃止の Microsoft ロールアウトスケジュールは、Chrome 以降のリリース1回で計画されています。  [Appcache OriginTrial Token][AppCacheOriginTrial]を要求すると、サイトはエッジ v90 まで廃止された API を引き続き使うことができます。  |  
 | Adobe Flash の削除 | Edge v88  |  | この変更は、Microsoft Edge が基づく Chromium プロジェクトで行われています。  詳細については、「 [Adobe Flash Chromium のロードマップ][ChromiumFlashRoadmapSupportRemoved]」を参照してください。  | 
-| FTP をオフにして削除する | Edge v88  | Edge v87 | Edge v87 では、FTP サポートは既定で無効になっています。  Edge v88 では、FTP サポートは削除されます。  この変更は、Microsoft Edge が基づく Chromium プロジェクトで行われています。  詳細については、 [Chrome プラットフォームの状態エントリ][ChromePlatformStatus6246151319715840]に移動します。  |   
+| FTP をオフにして削除する | Edge v88  | Edge ベータ版 v87 | Edge ベータ v87 では、FTP のサポートは既定で無効になっています。エッジの厩舎 v87 の場合は、有効のままになります。  Edge v88 では、FTP のサポートは完全に削除されます。  この変更は、Microsoft Edge が基づく Chromium プロジェクトで行われています。  詳細については、 [Chrome プラットフォームの状態エントリ][ChromePlatformStatus6246151319715840]に移動します。  依然として FTP サポートが必要なサイトがある企業は、 [IE モード](https://docs.microsoft.com/deployedge/edge-ie-mode)を使うようにサイトを構成することによって、引き続き ftp を使用できます。  |   
 
 ##### リリースコメント  
 
@@ -64,3 +64,5 @@ Web は、ユーザー エクスペリエンス、セキュリティ、および
 
 [WebDevAppCacheRemoval]: https://web.dev/appcache-removal/ "AppCache の削除"
 [AppCacheOriginTrial]: https://developers.chrome.com/origintrials/#/view_trial/1776670052997660673 "AppCache OriginTrial token"
+
+<!--todo:  cleanup links  -->  
