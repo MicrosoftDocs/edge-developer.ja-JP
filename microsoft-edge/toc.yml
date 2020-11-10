@@ -504,6 +504,8 @@
               href: progressive-web-apps-edgehtml/xbox-considerations.md
         - name: Microsoft Store のPWA
           href: progressive-web-apps-edgehtml/microsoft-store.md
+    - name: Playwright
+      href: playwright/index.md
     - name: Puppeteer
       href: puppeteer.md
     - name: Visual Studio
