@@ -3,16 +3,16 @@ description: Microsoft Edge DevTools の最新の実験的な機能
 title: 試験的機能
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 10/21/2020
+ms.date: 11/06/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools、実験
-ms.openlocfilehash: b620388df309109e28ab8b9c010dfd448ca906f7
-ms.sourcegitcommit: 6e2b26d41a0aa56ac34e6edc7dddd852ddb415b1
+ms.openlocfilehash: ddedf62ff27023751c511a7d2e34b6ea14461db5
+ms.sourcegitcommit: be42902c404e9f9ac2d661df9c55de3db4d956a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "11133864"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "11160368"
 ---
 # 試験的機能  
 
@@ -53,6 +53,7 @@ Microsoft Edge で \ (またはオフ) の試験的機能を有効にするに�
 | [ネットワーク本体を有効にする](#enable-network-console) | 85以降 |  
 | [ソースオーダービューアー](#source-order-viewer) | 86以降 |  
 | [キーボードショートカットエディターを有効にする](#enable-keyboard-shortcut-editor) | 87以降 |  
+| [3D ビューでの合成レイヤーの有効化](#turn-on-composited-layers-in-3d-view) | 87以降 |  
 
 ### エミュレーション: デュアルスクリーンモードのサポート  
 
@@ -68,7 +69,7 @@ Microsoft Edge で2つの新しいデュアル画面と折りたたみ式デバ�
     
 [実験的な Web Platform api を有効](#enable-experimental-apis) にして、 [CSS メディアの画面スパン機能][DualScreenDocsCssMedia] と [JavaScript getwindowsegments API][DualScreenDocsJSAPI] を使用して、デュアルスクリーンデバイスと折りたたみ式デバイス用の web サイト (またはアプリ) を強化します。  
 
-:::image type="complex" source="./media/experiments-surface-duo-emulation.msft.png" alt-text="DevTools の設定での実験の一覧" lightbox="./media/experiments-surface-duo-emulation.msft.png":::  
+:::image type="complex" source="./media/experiments-surface-duo-emulation.msft.png" alt-text="Microsoft Edge で Surface Duo をエミュレートする" lightbox="./media/experiments-surface-duo-emulation.msft.png":::  
    Microsoft Edge で Surface Duo をエミュレートする  
 :::image-end:::  
 
@@ -80,7 +81,7 @@ Microsoft Edge で2つの新しいデュアル画面と折りたたみ式デバ�
 1.  [ **検索フラグ** ] ボックスに、「 `Experimental Web Platform features` 実験的な **Web Platform 機能** 」というフラグを選択して、[ **無効** ] を [ **有効**] に変更します。  
 1.  [Microsoft Edge を再起動]。  
 
-:::image type="complex" source="./media/experiments-dual-screen-emulation-edge-flags.msft.png" alt-text="DevTools の設定での実験の一覧" lightbox="./media/experiments-dual-screen-emulation.msft.png":::
+:::image type="complex" source="./media/experiments-dual-screen-emulation-edge-flags.msft.png" alt-text="実験的な Web Platform 機能のフラグを有効にする" lightbox="./media/experiments-dual-screen-emulation.msft.png":::
    実験的な Web Platform 機能のフラグを有効にする  
 :::image-end:::  
 
@@ -97,7 +98,7 @@ Microsoft Edge のデュアル画面の姿勢で [Surface Duo][SurfaceDevicesDuo
 
 [デバイスツールバー][DevtoolsDeviceModeIndexSimulateMobileViewport]には、web サイトまたはアプリを複数の方法でテストするための追加機能が用意されています。  **Rotate** ![ ][ImageRotateIcon] ビューポートを横方向に回転するには、[回転 \ (回転 \)] を選びます。 この機能を **スパン** \ ( ![ スパン \) と組み合わせると、シングル画面で、または折る、または折り目を切り替えることが ][ImageSpanIcon] できます。  これらの機能により、web サイトやアプリを4つのすべての方法でテストできます。  
 
-:::image type="complex" source="./media/experiments-dual-screen-emulation-rotate-span.msft.png" alt-text="DevTools の設定での実験の一覧" lightbox="./media/experiments-dual-screen-emulation-rotate-span.msft.png":::
+:::image type="complex" source="./media/experiments-dual-screen-emulation-rotate-span.msft.png" alt-text="デュアルスクリーンデバイスと折りたたみ式デバイスの事後の姿勢と向きのマトリックス" lightbox="./media/experiments-dual-screen-emulation-rotate-span.msft.png":::
    デュアルスクリーンデバイスと折りたたみ式デバイスの事後の姿勢と向きのマトリックス  
 :::image-end:::  
 
@@ -124,7 +125,7 @@ The **Experimental Web Platform features** \(![ExperimentalApis][ImageExperiment
 
 **検査**ツールを使うと、マウスをポイントして web サイトの CSS グリッドのレイアウトを簡単に識別して視覚化することができます。  **Inspect** ![ ](./media/inspect-icon.msft.png) Devtools の左上隅にある検査 (検査 \) アイコンを選択します。  次に、デバッグしている web サイトの Grid 要素にマウスポインターを置きます。  グリッドの周りに枠線が表示され、[網かけ] ではグリッドのギャップの位置が示されます (存在する場合)。  
 
-:::image type="complex" source="./media/grid-inspect.msft.png" alt-text="DevTools の設定での実験の一覧" lightbox="./media/grid-inspect.msft.png":::
+:::image type="complex" source="./media/grid-inspect.msft.png" alt-text="検査ツールでグリッドを表示する" lightbox="./media/grid-inspect.msft.png":::
    検査ツールでグリッドを表示する  
 :::image-end:::  
 
@@ -140,13 +141,13 @@ Microsoft Edge バージョン86以降では、実験的な CSS grid 機能で�
 
 *   **要素**ツールの DOM ツリーに表示されている grid 要素の隣にある**グリッド**楕円アイコンを選択します。  
     
-    :::image type="complex" source="./media/grid-adorner.msft.png" alt-text="DevTools の設定での実験の一覧" lightbox="./media/grid-adorner.msft.png":::
+    :::image type="complex" source="./media/grid-adorner.msft.png" alt-text="要素ツールのグリッドの [楕円] アイコン" lightbox="./media/grid-adorner.msft.png":::
        **要素**ツールのグリッドの [楕円] アイコン  
     :::image-end:::  
     
 *   [要素] ツールにある新しい **レイアウト** パネルを開き、強調表示する各グリッド要素の横にあるチェックボックスをオンにします。  
     
-    :::image type="complex" source="./media/grid-layout-zoom.msft.png" alt-text="DevTools の設定での実験の一覧" lightbox="./media/grid-layout-zoom.msft.png":::
+    :::image type="complex" source="./media/grid-layout-zoom.msft.png" alt-text="DevTools のレイアウトパネル" lightbox="./media/grid-layout-zoom.msft.png":::
        DevTools の**レイアウト**パネル  
     :::image-end:::  
     
@@ -154,7 +155,7 @@ Microsoft Edge バージョン86以降では、実験的な CSS grid 機能で�
 
 Microsoft Edge バージョン86以降では、新しい **レイアウト** パネルは **要素** ツールの [ **スタイル** ] タブと [ **計算** ] タブにあります。  **レイアウト**パネルには、持続的なオーバーレイの構成オプションがあります。  
 
-:::image type="complex" source="./media/experiments-grid.msft.png" alt-text="DevTools の設定での実験の一覧" lightbox="./media/experiments-grid.msft.png":::
+:::image type="complex" source="./media/experiments-grid.msft.png" alt-text="CSS グリッドのデバッグ機能" lightbox="./media/experiments-grid.msft.png":::
    CSS グリッドのデバッグ機能  
 :::image-end:::  
 
@@ -162,7 +163,7 @@ Microsoft Edge バージョン86以降では、新しい **レイアウト** パ
 
 通常、 **要素** や **ネットワーク** などのツールは、devtools の上部にあるメインパネルでのみ開くことができます。  **3D ビュー**などのツール、および devtools の下部にある**引き出し**パネルで通常のみ開かれる**問題**。  実験を選択した後、上下のパネル間でツールを移動することができます。  ツールを移動するには、タブの上にマウスポインターを合わせて、コンテキストメニューの [ **先頭へ移動** ] または [ **下へ移動**] を選択します。   この実験では、DevTools レイアウトをカスタマイズできます。  **ドロワー**パネルの表示と非表示を切り替えるには、を選択し `Escape` ます。  
 
-:::image type="complex" source="./media/experiments-move-panels.msft.png" alt-text="DevTools の設定での実験の一覧" lightbox="./media/experiments-move-panels.msft.png":::
+:::image type="complex" source="./media/experiments-move-panels.msft.png" alt-text="パネル間でタブを移動する" lightbox="./media/experiments-move-panels.msft.png":::
    パネル間でタブを移動する  
 :::image-end:::  
 
@@ -176,12 +177,12 @@ Microsoft Edge バージョン86以降では、新しい **レイアウト** パ
 *   ブラウザー間の互換性  
 *   セキュリティ  
 *   処理  
-*   PWA  
+*   プログレッシブ Web アプリ (PWAs)  
 *   その他の一般的な web 開発の問題  
 
 [Webhint][WebhintMain]の実験では、[[問題][DevtoolsIssues]] パネルに webhint のフィードバックが表示されます。  問題を選択すると、ソリューションのドキュメントと web サイト上の影響を受けるリソースの一覧が表示されます。  リソースリンクを選んで、DevTools で関連する **ネットワーク**、 **ソース**、または **要素** のウィンドウを開きます。  
 
-:::image type="complex" source="./media/experiments-webhint.msft.png" alt-text="DevTools の設定での実験の一覧" lightbox="./media/experiments-webhint.msft.png":::
+:::image type="complex" source="./media/experiments-webhint.msft.png" alt-text="[問題] パネルでの webhint のフィードバック" lightbox="./media/experiments-webhint.msft.png":::
    [ **問題** ] パネルでの webhint のフィードバック  
 :::image-end:::  
 
@@ -199,7 +200,7 @@ Microsoft Edge バージョン86以降では、新しい **レイアウト** パ
 1.  **ネットワークコンソール**が開いたら、ネットワーク要求情報を編集します。  
 1.  [ **送信**] を選びます。  
 
-:::image type="complex" source="./media/network-network-console.msft.png" alt-text="DevTools の設定での実験の一覧" lightbox="./media/network-network-console.msft.png":::
+:::image type="complex" source="./media/network-network-console.msft.png" alt-text="Console ドローワのネットワーク本体" lightbox="./media/network-network-console.msft.png":::
    **Console**ドローワの**ネットワーク本体**  
 :::image-end:::  
 
@@ -209,14 +210,14 @@ Microsoft Edge バージョン86以降では、新しい **レイアウト** パ
 
 **ソースオーダービューアー** は、ページソース内の要素の順序を表示する実験です。  オンスクリーン表示の順序は、ソースの順序とは異なる場合があります。これには、スクリーンリーダーとキーボードのユーザーが混乱させるます。  **ソース注文ビューアー**を使用して、画面上の表示順序とソースの順序の違いを確認します。  
 
-実験を有効にした後、DevTools を再起動してください。  **ソースオーダービューアー**を使用するには、次の手順を使用します。  
+実験を有効にした後、DevTools を再起動してください。  **ソースオーダービューアー**を使用するには、次の手順を実行します。  
 
 1.  [ **要素** ] ウィンドウを開く。  
 1.  [引き出し] \ (下) パネルで [ **アクセシビリティ** ] ウィンドウを開きます。  
 1.  [ **ソース注文ビューアー** ] セクションで、[ **ソースの順序を表示** ] チェックボックスをオンにします。  
 1.  任意の HTML 要素を強調表示して、ページソースの順序でオーバーレイを表示します。  
 
-:::image type="complex" source="./media/experiments-source-order-viewer.msft.png" alt-text="DevTools の設定での実験の一覧" lightbox="./media/experiments-source-order-viewer.msft.png":::
+:::image type="complex" source="./media/experiments-source-order-viewer.msft.png" alt-text="[アクセシビリティ] ウィンドウのソースオーダービューアー" lightbox="./media/experiments-source-order-viewer.msft.png":::
    [**アクセシビリティ**] ウィンドウの**ソースオーダービューアー**  
 :::image-end:::  
 
@@ -233,19 +234,19 @@ Microsoft Edge バージョン86以降では、新しい **レイアウト** パ
 1.  カスタマイズするアクションを選択します。  
 1.  [ **Edit** ![ ] (edit キーボードショートカット ][ImageEditKeyboardShortcutIcon] ) アイコンを選びます。  
     
-    :::image type="complex" source="./media/experiments-custom-keyboard-shortcuts-select-action.msft.png" alt-text="DevTools の設定での実験の一覧" lightbox="./media/experiments-custom-keyboard-shortcuts-select-action.msft.png":::
+    :::image type="complex" source="./media/experiments-custom-keyboard-shortcuts-select-action.msft.png" alt-text="[設定] の [ショートカット] ページからカスタマイズするアクションを選ぶ" lightbox="./media/experiments-custom-keyboard-shortcuts-select-action.msft.png":::
        [[設定][DevToolsCustomizeSettings]] の [**ショートカット**] ページからカスタマイズするアクションを選ぶ
     :::image-end:::  
     
 1.  キーボードで、アクションにバインドするキーを選択します。
     
-    :::image type="complex" source="./media/experiments-custom-keyboard-shortcuts-enter-key.msft.png" alt-text="DevTools の設定での実験の一覧" lightbox="./media/experiments-custom-keyboard-shortcuts-enter-key.msft.png":::
+    :::image type="complex" source="./media/experiments-custom-keyboard-shortcuts-enter-key.msft.png" alt-text="アクションに割り当てるキーを選択します。" lightbox="./media/experiments-custom-keyboard-shortcuts-enter-key.msft.png":::
        アクションに割り当てるキーを選択します。
     :::image-end:::  
     
 1.  新しいキーボードショートカットを保存するには、チェックマークを選択します (![ショートカットキーのマーク][ImageCheckmarkKeyboardShortcutIcon]\) アイコンを選びます。
     
-    :::image type="complex" source="./media/experiments-custom-keyboard-shortcuts-save-shortcut.msft.png" alt-text="DevTools の設定での実験の一覧" lightbox="./media/experiments-custom-keyboard-shortcuts-enter-key.msft.png":::
+    :::image type="complex" source="./media/experiments-custom-keyboard-shortcuts-save-shortcut.msft.png" alt-text="新しいキーボードショートカットを保存するには、チェックマークアイコンを選択します。" lightbox="./media/experiments-custom-keyboard-shortcuts-enter-key.msft.png":::
        新しいキーボードショートカットを保存するには、チェックマークアイコンを選択します。
     :::image-end:::  
     
@@ -257,6 +258,25 @@ Microsoft Edge バージョン86以降では、新しい **レイアウト** パ
 
 > [!NOTE]
 > キーボードショートカットが現在別のアクションに割り当てられている場合、新しいアクションに保存することはできません。  最初に、前のアクションのショートカットキーを削除してから、新しいアクションに追加する必要があります。  
+
+<!--Available in Microsoft Edge version 87 and later.  -->
+
+### 3D ビューでの合成レイヤーの有効化
+
+これで、z インデックスとドキュメントオブジェクトモデル \ (DOM \) のレイヤーを視覚化することができます。  この機能を使うと、頻繁にコンテキストを切り替えることなく、デバッグを行うことができます。  コンテキスト切り替えの削減が重大な問題点であったことを特定しました。  入力するコードが web アプリにどのように影響するかは必ずしも明確ではありません。  包括的なビジュアルデバッグエクスペリエンスを実現するために、3D ビューレイヤーと合成レイヤーが結合されました。  実験を有効にした後、DevTools を再起動してください。  **合成レイヤー**を使用するには、次の手順を実行します。  
+
+<!--1.  Navigate to a PWA-enabled website such as `twitter.com`.  
+1.  Choose the **Install ...** \(![Install PWA icon](./media/install-pwa-icon.msft.png)\) icon to install the Twitter PWA.  If it is already set up, open the app as usual.  
+1.  Open the Devtools.  -->  
+1.  ドロワーで、 **3D ビュー** ツールを選択します。  
+1.  [ **合成レイヤー** ] ウィンドウを開く。  
+1.  アプリのペイントレイヤーがすべて表示されます。  独自の web アプリでこの機能を試してみてください。  
+
+:::image type="complex" source="./media/experiments-layers.msft.png" alt-text="合成レイヤーウィンドウ" lightbox="./media/experiments-layers.msft.png":::
+   **合成レイヤー** ウィンドウ  
+:::image-end:::  
+
+<!--Available in Microsoft Edge version 87 and later.  -->  
 
 ## 以前の実験的な機能  
 
@@ -270,7 +290,7 @@ Microsoft Edge DevTools のテスト、または DevTools に関連するその�
 *   DevTools のフィードバックの **送信** アイコンを使ってフィードバックを送信する  
 *   [@EdgeDevTools][TwitterEdgedevtools]ツイート  
 
-:::image type="complex" source="./media/bing-devtools-send-feedback.msft.png" alt-text="DevTools の設定での実験の一覧" lightbox="./media/bing-devtools-send-feedback.msft.png":::
+:::image type="complex" source="./media/bing-devtools-send-feedback.msft.png" alt-text="Microsoft Edge DevTools の [フィードバックの送信] アイコン" lightbox="./media/bing-devtools-send-feedback.msft.png":::
    Microsoft Edge DevTools の [ **フィードバックの送信** ] アイコン  
 :::image-end:::  
 
