@@ -3,17 +3,17 @@ description: WebView2 for WinForms アプリの概要ガイド
 title: WebView2 for WinForms アプリの概要
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 10/15/2020
+ms.date: 11/10/2020
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: WebView2、WebView2、WebView、webview、winforms アプリ、winforms、edge、CoreWebView2、browser control、edge html、はじめに、作業の開始、.NET、windows フォーム
-ms.openlocfilehash: 90d25816b862d6096856faf439436706c98f7dbe
-ms.sourcegitcommit: 442de63da52d00c6dc27fa08ccdb736534127566
+ms.openlocfilehash: c4092c545c24bf09667a5090251b51b96259efc2
+ms.sourcegitcommit: a59464aff9e2c0bf57d172afbacdeed2c1a3ea42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "11120089"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "11162638"
 ---
 # Windows フォームでの WebView2 の概要 (プレビュー)  
 
@@ -23,11 +23,11 @@ ms.locfileid: "11120089"
 
 続行する前に、次の前提条件の一覧をインストールしていることを確認します。  
 
-* [Microsoft Edge (Chromium) カナリアチャネル](https://www.microsoftedgeinsider.com/download) は、windows 10、windows 8.1、または windows 7 にインストールされています。 
+* [WebView2 Runtime][Webview2Installer] または windows 10、windows 8.1、または windows 7 にインストールされている [非安定した Microsoft Edge (Chromium) カナリアチャネル](https://www.microsoftedgeinsider.com/download) 。 
 * [Visual Studio](https://visualstudio.microsoft.com) 2017 以降。
 
 > [!NOTE]
-> 現時点では、WebView2 は .NET Core 3.0 の [デザイナー (preview)](https://visualstudio.microsoft.com/vs/preview)をサポートしていません。
+> 現時点では、WebView2 は .NET 5 および .NET のコアデザイナーをサポートしていません。
 
 ## 手順 1-1 つのウィンドウアプリケーションを作成する
 
@@ -72,17 +72,17 @@ WebView2 API を使用したアプリケーションの開発を開始するよ�
 1. **Windows フォームデザイナー**を開きます。  
 1. **ツールボックス**で**WebView2**を検索します。 **WebView2**コントロールを Windows フォームアプリにドラッグアンドドロップします。
     
-    :::image type="complex" source="./media/winforms-toolbox.png" alt-text="NuGet パッケージを管理する":::
+    :::image type="complex" source="./media/winforms-toolbox.png" alt-text="WebView2 が表示されたツールボックス":::
        WebView2 が表示されたツールボックス :::image-end:::  
 
 1. `Name`プロパティをに変更 `webView` します。
     
-    :::image type="complex" source="./media/winforms-properties.png" alt-text="NuGet パッケージを管理する":::
+    :::image type="complex" source="./media/winforms-properties.png" alt-text="WebView2 コントロールのプロパティ":::
        WebView2 コントロールのプロパティ :::image-end:::
 
 1. この `Source` プロパティは、WebView2 コントロールに表示される初期 URI を設定します。 Source プロパティをに設定します。 <https://www.microsoft.com>
     
-    :::image type="complex" source="./media/winforms-source.png" alt-text="NuGet パッケージを管理する":::
+    :::image type="complex" source="./media/winforms-source.png" alt-text="WebView2 コントロールの Source プロパティ":::
        WebView2 コントロールの Source プロパティ :::image-end:::
 
 `F5`プロジェクトをビルドして実行する場合に選択します。  WebView2 コントロールが表示されていることを確認 [https://www.microsoft.com](https://www.microsoft.com) します。
@@ -166,7 +166,7 @@ WebView2 コントロールをホストするアプリケーションは、web �
 
 詳細については、「 [ナビゲーションイベント](../concepts/navigation-events.md)」を参照してください。  
 
-:::image type="complex" source="../media/navigation-events.png" alt-text="NuGet パッケージを管理する":::
+:::image type="complex" source="../media/navigation-events.png" alt-text="ナビゲーションイベント":::
    ナビゲーションイベント
 :::image-end:::
 
@@ -306,3 +306,8 @@ async void InitializeAsync()
 ## Microsoft Edge WebView チームと連絡を取り合う  
 
 [!INCLUDE [contact WebView team note](../includes/contact-webview-team-note.md)]  
+
+
+<!-- links -->  
+
+[Webview2Installer]: https://developer.microsoft.com/microsoft-edge/webview2 "WebView2 Installer" 

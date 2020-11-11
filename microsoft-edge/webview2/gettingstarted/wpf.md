@@ -3,17 +3,17 @@ description: WebView2 for WPF アプリの概要ガイド
 title: WebView2 for WPF アプリの概要
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 10/14/2020
+ms.date: 11/10/2020
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: WebView2、WebView2、WebView、webview、wpf アプリ、wpf、edge、CoreWebView2、browser control、edge html、はじめに、作業の開始、.NET
-ms.openlocfilehash: 8a18d12f30872ce3dd373e40ce8c7a4f0c4edad9
-ms.sourcegitcommit: 61cc15d2fc89aee3e09cec48ef1e0e5bbf8d289a
+ms.openlocfilehash: 9977fad5f0462372eaa863fd740cbba6c92f6354
+ms.sourcegitcommit: a59464aff9e2c0bf57d172afbacdeed2c1a3ea42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "11119116"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "11162632"
 ---
 # WPF での WebView2 の概要 (プレビュー)
 
@@ -23,7 +23,7 @@ ms.locfileid: "11119116"
 
 続行する前に、次の前提条件の一覧をインストールしていることを確認します。  
 
-* [Microsoft Edge (Chromium) カナリアチャネル](https://www.microsoftedgeinsider.com/download) は、windows 10、windows 8.1、または windows 7 にインストールされています。  
+* [WebView2 Runtime][Webview2Installer] または windows 10、windows 8.1、または windows 7 にインストールされている [非安定した Microsoft Edge (Chromium) カナリアチャネル](https://www.microsoftedgeinsider.com/download) 。  
 * [Visual Studio](https://visualstudio.microsoft.com) 2017 以降。  
 
 ## 手順 1-1 つのウィンドウアプリケーションを作成する  
@@ -39,7 +39,7 @@ ms.locfileid: "11119116"
              WPF core :::image-end:::
        :::column-end:::
        :::column span="1":::
-          :::image type="complex" source="./media/wpf-gettingstarted-wpffw.png" alt-text="WPF core":::
+          :::image type="complex" source="./media/wpf-gettingstarted-wpffw.png" alt-text="WPF フレームワーク":::
              WPF フレームワーク :::image-end:::
        :::column-end:::
     :::row-end:::
@@ -48,11 +48,11 @@ ms.locfileid: "11119116"
     
     :::row:::
            :::column span="1":::
-              :::image type="complex" source="./media/wpf-gettingstarted-createcore.png" alt-text="WPF core":::
+              :::image type="complex" source="./media/wpf-gettingstarted-createcore.png" alt-text="コアの作成":::
                  コアの作成 :::image-end:::
            :::column-end:::
            :::column span="1":::
-              :::image type="complex" source="./media/wpf-gettingstarted-createfw.png" alt-text="WPF core":::
+              :::image type="complex" source="./media/wpf-gettingstarted-createfw.png" alt-text="フレームワークの作成":::
                  フレームワークの作成 :::image-end:::
            :::column-end:::
         :::row-end:::
@@ -65,7 +65,7 @@ ms.locfileid: "11119116"
 
 1.  プロジェクトのコンテキストメニューを開き (\ [\] を右クリックし)、[ **NuGet パッケージの管理**] を選択します。  
     
-    :::image type="complex" source="./media/wpf-gettingstarted-mngnuget.png" alt-text="WPF core":::
+    :::image type="complex" source="./media/wpf-gettingstarted-mngnuget.png" alt-text="Nuget.exe":::
        Nuget.exe
     :::image-end:::
     
@@ -78,7 +78,7 @@ ms.locfileid: "11119116"
     
     WebView2 API を使用したアプリケーションの開発を開始するように設定されています。  `F5`プロジェクトをビルドして実行する場合に選択します。  実行中のプロジェクトに空のウィンドウが表示されます。  
     
-    :::image type="complex" source="./media/wpf-gettingstarted-blank.png" alt-text="WPF core":::
+    :::image type="complex" source="./media/wpf-gettingstarted-blank.png" alt-text="空のアプリ":::
        空のアプリ
     :::image-end:::  
     
@@ -125,7 +125,7 @@ ms.locfileid: "11119116"
     
 1.  を押して `F5` 、プロジェクトをビルドして実行します。  WebView2 コントロールが表示されていることを確認 [https://www.microsoft.com](https://www.microsoft.com) します。  
     
-    :::image type="complex" source="./media/wpf-gettingstarted-microsoft.png" alt-text="WPF core":::
+    :::image type="complex" source="./media/wpf-gettingstarted-microsoft.png" alt-text="Microsoft.com":::
        Microsoft.com
     :::image-end:::  
     
@@ -183,7 +183,7 @@ WebView2 コントロールに表示される URL をユーザーが変更でき
     > [!NOTE]
     > アドレスバーに完全な URL が入力されていることを確認します。  `ArgumentException`URL がまたはで始まらない場合は、がスローされ `http://` `https://` ます。  
     
-    :::image type="complex" source="./media/wpf-gettingstarted-bing.png" alt-text="WPF core":::
+    :::image type="complex" source="./media/wpf-gettingstarted-bing.png" alt-text="Bing":::
        Bing
     :::image-end:::
     
@@ -199,7 +199,7 @@ WebView2 コントロールをホストするアプリケーションは、web �
 
 詳細については、「 [ナビゲーションイベント](../concepts/navigation-events.md)」を参照してください。  
 
-:::image type="complex" source="../media/navigation-events.png" alt-text="WPF core":::
+:::image type="complex" source="../media/navigation-events.png" alt-text="ナビゲーションイベント":::
    ナビゲーションイベント
 :::image-end:::  
 
@@ -256,7 +256,7 @@ void EnsureHttps(object sender, CoreWebView2NavigationStartingEventArgs args)
 
 を押して `F5` 、プロジェクトをビルドして実行します。  HTTPS を使用していないサイトに移動したときに、アプリケーションにアラートが表示されることを確認します。  
 
-:::image type="complex" source="./media/wpf-gettingstarted-https.png" alt-text="WPF core":::
+:::image type="complex" source="./media/wpf-gettingstarted-https.png" alt-text="HTTPS":::
    HTTPS
 :::image-end:::  
 
@@ -324,7 +324,7 @@ void EnsureHttps(object sender, CoreWebView2NavigationStartingEventArgs args)
     
     を押して `F5` アプリをビルドして実行します。  アドレスバーに WebView の URI が表示されるようになり、新しい URI に正常に移動すると、webview に表示される URI のユーザーに対して WebView が通知されます。  
     
-    :::image type="complex" source="./media/wpf-gettingstarted-searchbar.png" alt-text="WPF core":::
+    :::image type="complex" source="./media/wpf-gettingstarted-searchbar.png" alt-text="アドレスバー":::
        アドレスバー
     :::image-end:::
 
@@ -339,3 +339,8 @@ void EnsureHttps(object sender, CoreWebView2NavigationStartingEventArgs args)
 ## Microsoft Edge WebView チームと連絡を取り合う  
 
 [!INCLUDE [contact WebView team note](../includes/contact-webview-team-note.md)]  
+
+
+<!-- links -->  
+
+[Webview2Installer]: https://developer.microsoft.com/microsoft-edge/webview2 "WebView2 Installer" 
