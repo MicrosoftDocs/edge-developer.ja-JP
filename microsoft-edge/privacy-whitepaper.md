@@ -3,7 +3,7 @@ description: Microsoft Edge プライバシー ホワイトペーパー
 title: Microsoft Edge プライバシー ホワイトペーパー
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 10/07/2020
+ms.date: 11/06/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: Microsoft Edge、プライバシー、ホワイトペーパー、信頼
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 no-loc:
 - Cast
 - Google Cast
-ms.openlocfilehash: 132b07236f31568d6f9c24b7616eb02fffe9df09
-ms.sourcegitcommit: 845a0d53a86bee3678f421adee26b3372cefce57
+ms.openlocfilehash: ad65877818e8baf47f2a86be4bc4c3cc03d7b7ed
+ms.sourcegitcommit: de29787c02c35084985cc3d4df97a9b12f004971
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "11104764"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "11163271"
 ---
 # Microsoft Edge プライバシー ホワイトペーパー  
 
@@ -34,7 +34,7 @@ ms.locfileid: "11104764"
    アドレス バー  
 :::image-end:::  
 
-ブラウズと検索を高速化するために、アドレス バーに入力すると、入力された文字が既定の検索プロバイダーに送信され、検索プロバイダーは提案された検索クエリを送り返します。  アドレス バーは、エントリを URL、検索、または不明として分類します。  選択した候補、選択の位置、およびその他のアドレス バー データとともに、情報が既定の検索プロバイダーに送信されます。  検索プロバイダーが Bing の場合、検索クエリとクエリ セッションを理解するために、ブラウザーに固有のリセット可能な識別子がデータと共に送信されます。  他の自動提案サービス ID が既定の検索エンジンに送信され、検索候補が完成します。  検索結果の関連性を高めるために、IP アドレスと Cookie が既定の検索プロバイダーに送信されます。  提案を提供する準備をするためにプロバイダーに信号を送るアドレス バーを選択すると、既定の検索プロバイダーに信号が送信されます。  入力した文字と検索クエリは、検索プロバイダーが Bing でない限り、Microsoft に送信されません。  既定の検索プロバイダーへのデータ送信を有効にするには、`edge://settings/privacy` に移動し、[**サービス**] の下で [**アドレス バー**] を選択して、[**入力した文字を使用して検索とサイトの候補を表示する**] 設定をオンにします。  設定をオフにすると、入力した文字は既定の検索プロバイダーに送信されなくなります。  検索クエリは引き続き既定の検索プロバイダーに送信され、検索結果が提供されます。  Microsoft Edge が、認証資格情報、ローカル ファイル名、通常暗号化されている URL データなどの機密情報を含む可能性のあるアドレス バーへの入力を検出した場合、入力したテキストは送信されません。  Microsoft Edge で、すべての検索プロバイダーのプロバイダーに提供されたクエリの数を含むアドレス バーに関する診断データを収集する場合は、`edge://settings/privacy` に移動し、[**Web エクスペリエンスのカスタマイズ**] で **[Microsoft がこのアカウントの閲覧の履歴を使用して、広告、検索、ニュース、その他の Microsoft サービスをカスタマイズできるようにすることで Web エクスペリエンスを向上させる]** 設定をオンにします。  
+ブラウズと検索を高速化するために、アドレス バーに入力すると、入力された文字が既定の検索プロバイダーに送信され、検索プロバイダーは提案された検索クエリを送り返します。  アドレス バーは、エントリを URL、検索、または不明として分類します。  選択した候補、選択の位置、およびその他のアドレス バー データとともに、情報が既定の検索プロバイダーに送信されます。  検索プロバイダーが Bing の場合、検索クエリとクエリ セッションを理解するために、ブラウザーに固有のリセット可能な識別子がデータと共に送信されます。  他の自動提案サービス ID が既定の検索エンジンに送信され、検索候補が完成します。  検索結果の関連性を高めるために、IP アドレスと Cookie が既定の検索プロバイダーに送信されます。  提案を提供する準備をするためにプロバイダーに信号を送るアドレス バーを選択すると、既定の検索プロバイダーに信号が送信されます。  入力した文字と検索クエリは、検索プロバイダーが Bing でない限り、Microsoft に送信されません。  既定の検索プロバイダーへのデータ送信を有効にするには、`edge://settings/privacy` に移動し、[**サービス**] の下で [**アドレス バー**] を選択して、[**入力した文字を使用して検索とサイトの候補を表示する**] 設定をオンにします。  設定をオフにすると、入力した文字は既定の検索プロバイダーに送信されなくなります。  検索クエリは引き続き既定の検索プロバイダーに送信され、検索結果が提供されます。  Microsoft Edge が、認証資格情報、ローカル ファイル名、通常暗号化されている URL データなどの機密情報を含む可能性のあるアドレス バーへの入力を検出した場合、入力したテキストは送信されません。  Microsoft Edge で、すべての検索プロバイダーに提供されたクエリの数を含むアドレス バーに関する診断データを収集する場合は、`edge://settings/privacy` に移動し、[**Web エクスペリエンスのカスタマイズ**] で **[Microsoft がこのアカウントの閲覧の履歴を使用して、広告、検索、ニュース、その他の Microsoft サービスをカスタマイズできるようにすることで Web エクスペリエンスを向上させる]** 設定をオンにします。  
 
 キーストロークとアクセスした Web サイトは、プロファイルごとにデバイスにローカルに保存されます。  データを削除するには、`edge://settings/clearBrowserData` に移動し、[**閲覧データのクリア**] ウィンドウで [**閲覧の履歴**] チェックボックスを選択して、[**今すぐクリア**] ボタンを選択します。  Bing が既定の検索プロバイダーであり、Bing にサインインしている場合は、[Microsoft プライバシー ダッシュボード][MicrosoftAccountPrivacy]から検索を削除できます。  閲覧の履歴をクリアし、アドレス バーに候補として表示されないように Web サイトを削除するには、`edge://history` に移動して、**[閲覧データのクリア]** を選択します。  Microsoft が Windows 10 のアドレス バーと検索候補機能から収集したデータをクリアするには、[**スタート**] > [**設定**] > [**プライバシー**] > [**診断とフィードバック**] の順に移動して [**診断データの削除**] の順に開き、[**削除**] を選択します。  他のすべてのデータは 36 か月後に削除されます。  
 
@@ -50,7 +50,7 @@ Microsoft の職場または学校アカウントで Microsoft Edge にサイン
 
 ## オートフィル  
 
-Microsoft Edge の自動入力を使用すると、パスワード、支払い情報、住所、およびその他のフォーム エントリ データを保存できるため、生産性が向上します。  サイトに移動してフォームに入力すると、Microsoft Edge はフォーム入力情報を使用して、保存されている自動入力データをフォームと照合します。  Microsoft Edge は、同様のフォームに遭遇したときに以前に保存したフォーム エントリ データを提供します。  パスワードとクレジット カード情報は、各パスワードとカードの明示的な許可がある場合にのみ保存されます。  
+Microsoft Edge の自動入力を使用すると、パスワード、支払い情報、住所、およびその他のフォーム エントリ データ (誕生日など) を保存できるため、生産性が向上します。  サイトに移動してフォームに入力すると、Microsoft Edge はフォーム入力情報を使用して、保存されている自動入力データをフォームと照合します。  Microsoft Edge は、同様のフォームに遭遇したときに以前に保存したフォーム エントリ データを提供します。  パスワードとクレジット カード情報は、各パスワードとカードの明示的な許可がある場合にのみ保存されます。  
 
 既定では、住所やその他のフォーム入力が保存されます。  住所やその他のフォーム データの保存と自動入力を無効にするには、`edge://settings/addresses` に移動して、**[アドレスを保存して入力]** 設定をオフにします。  
 
@@ -76,9 +76,7 @@ Microsoft Edge は 24 時間ごとに、特別なエンティティ抽出テン�
 
 デバイスに保存されているテンプレートを削除してキャッシュ データをクリアするには、`edge://settings/privacy` に移動し、**[閲覧データを今すぐクリア]** の横にある **[閲覧データのクリア]** で [**クリアするデータの選択**] ボタンをクリックし、目的の時間範囲とデータの種類を選択してから、**[今すぐクリア]** ボタンを選択します。  キャッシュ データを削除する別の方法は、`edge://settings/clearBrowserData` に移動して、目的の時間範囲とデータの種類を選択してから、[**今すぐクリア**] ボタンを選択します。  
 
-コレクションを購入して使用する際に最安値を調べるために、コレクションに製品を追加する場合、Microsoft Edge は他の小売業者と製品の価格を比較する機能を提供します。  [他の小売店と価格を比較する] を選択すると、Microsoft Edge は製品名、ショッピング ドメイン、価格、および製品に関するその他の製品の詳細を Bing に送信して、他の小売業者と価格を比較します。  コレクションの製品情報は HTTPS 経由で送信されます。 これらの HTTPS の呼び出しには、ユーザー識別子は含まれていません。  
-
-**[コレクション内の Pinterest からの提案を表示する]** 設定をオンにした場合、コレクションを表示したい場合は、コレクションのタイトルを使用して Microsoft Bing 検索を実行し、関連する Pinterest トピック ページを見つけます。  Microsoft Edge は、コレクションに関するデータを Pinterest に送信しません。  Pinterest トピック ページの提案を削除して検索を停止するには、`edge://settings/privacy` に移動し、**[コレクション内の Pinterest からの提案を表示する]** 設定をオフにします。  
+**[コレクション内の Pinterest からの提案を表示する]** 設定をオンにした場合、コレクションを表示するには、コレクションのタイトルを使用して Microsoft Bing 検索を実行し、関連する Pinterest トピック ページを検索します。  Microsoft Edge は、コレクションに関するデータを Pinterest に送信しません。  Pinterest トピック ページの提案を削除して検索を停止するには、`edge://settings/privacy` に移動し、**[コレクション内の Pinterest からの提案を表示する]** 設定をオフにします。  
 
 InPrivate ブラウズまたはゲスト モードを使用している場合、コレクションは使用できません。  
 
@@ -86,7 +84,7 @@ InPrivate ブラウズまたはゲスト モードを使用している場合、
 
 クラッシュ レポートを含むオプションの診断データがオンになっている場合、Microsoft Edge がクラッシュしたり、その他の信頼性の問題が発生したりすると、Microsoft は診断データを収集します。  診断データは、Microsoft Edge およびその他の Microsoft 製品とサービスの信頼性の問題を診断および修正するために使用されます。  
 
-:::image type="complex" source="./media/whitepaper-media/crashes2.png" alt-text="アドレス バー" lightbox="./media/whitepaper-media/crashes2.png":::
+:::image type="complex" source="./media/whitepaper-media/crashes2.png" alt-text="クラッシュ" lightbox="./media/whitepaper-media/crashes2.png":::
    クラッシュ  
 :::image-end:::  
 
@@ -108,7 +106,7 @@ Microsoft は、診断データを使用して、製品とサービスを改善�
 
 Microsoft Edge は、製品を安全に、最新の状態に保ち、適切に実行するために必要な一連の必須診断データを収集します。 必須診断データには、デバイス接続、構成情報、ソフトウェア セットアップ、インベントリ データなどのデータが含まれます。 Microsoft は、この必須診断データを使用して問題のトラブルシューティングを行い、Microsoft の製品とサービスの信頼性、安全性、および正常な動作を維持します。 管理対象デバイスの診断データの詳細については、「[組織内の Windows 診断データの構成][WindowsPrivacyConfigureDiagnosticDataOrganization]」および「[Microsoft Edge 診断データ グループ ポリシー](https://docs.microsoft.com/deployedge/microsoft-edge-enterprise-privacy-settings)」を参照してください。 
 
-:::image type="complex" source="./media/whitepaper-media/diagnostic-data2.png" alt-text="アドレス バー" lightbox="./media/whitepaper-media/diagnostic-data2.png":::
+:::image type="complex" source="./media/whitepaper-media/diagnostic-data2.png" alt-text="診断データ" lightbox="./media/whitepaper-media/diagnostic-data2.png":::
    診断データ  
 :::image-end:::  
 
@@ -120,7 +118,7 @@ Microsoft Edge でアクセスした Web サイトに関する情報は、Micros
 
 診断データは HTTPS を使用して送信され、Microsoft サーバーに保存されます。 Windows デバイスでは、診断データはデバイスに固有の識別子で送信されます。 他のデバイスでは、診断データは、ランダムに生成され、個人情報を含まない、ブラウザに固有のリセット可能な識別子に関連付けられています。  
 
-Microsoft Edge チームは、データ アクセスを制限したり、個人を特定できる情報をスクラブしたりすることで、診断データの機密性を尊重します。 Windows 10 デバイスでブラウザーに固有の識別子をリセットするには、**[スタート]** > **[設定]** > **[プライバシー]** > **[診断とフィードバック]** の順に移動し、**[診断データの削除]** で **[削除]** を選択するか、**[診断データ]** で設定を **[完全]** から **[基本]** に変更するか、**[オプションの診断データ]** をオフにします。  
+Microsoft Edge チームは、データ アクセスを制限したり、個人を特定できる情報を削除したりすることで、診断データの機密性を尊重します。 Windows 10 デバイスでブラウザーに固有の識別子をリセットするには、**[スタート]** > **[設定]** > **[プライバシー]** > **[診断とフィードバック]** の順に移動し、**[診断データの削除]** で **[削除]** を選択するか、**[診断データ]** で設定を **[完全]** から **[基本]** に変更するか、**[オプションの診断データ]** をオフにします。  
 
 他のプラットフォームで、ブラウザーに固有の新しいリセット可能な識別子 \（ID\） を生成するには、`edge://settings/privacy` に移動し、**[ブラウザーの使用方法、アクセスした Web サイト、およびクラッシュ レポートに関するオプションの診断データを送信して、Microsoft 製品の改善に協力する]** の設定をオフにします。 \(ID\) のリセット機能は、組織によって設定されたグループ ポリシーで管理されているデバイスでは異なる場合があります。 
 
@@ -203,7 +201,7 @@ Microsoft Edge は、[位置情報 API][W3cGeolocationApiMain] をサポート�
 
 Microsoft Edge は、アドレス バーの右側に、現在地が共有されているかどうかを示します。  
 
-:::image type="complex" source="./media/whitepaper-media/geolocation2.png" alt-text="アドレス バー" lightbox="./media/whitepaper-media/geolocation2.png":::
+:::image type="complex" source="./media/whitepaper-media/geolocation2.png" alt-text="Location" lightbox="./media/whitepaper-media/geolocation2.png":::
    Location  
 :::image-end:::  
 
@@ -217,7 +215,7 @@ InPrivate ブラウズでは、InPrivate セッションが開始されたプロ
 
 Microsoft Edge は、ブラウザーを初めて起動したときにインタラクティブでシームレスなエクスペリエンスを提供します。  エクスペリエンスの一部として、ブラウザー データを別のブラウザーから Microsoft Edge にインポートするオプションがあります。  インポート中に、インポートしたデータを保持するか、削除して最初からやり直すことができます。  データには、お気に入り、閲覧の履歴、自動入力データ、拡張機能、設定、その他の閲覧データが含まれます。  新しい Microsoft Edge に更新すると、古いバージョンの Microsoft Edge の閲覧データが自動的にインポートされます。  確認すると、Microsoft Edge はGoogle Chrome、Mozilla Firefox、Internet Explorer などの他のブラウザーからブラウザー データをインポートします。インポート元のブラウザーは、OS で定義されている最も使用されているブラウザーに基づいて決定されます。  データのインポートはすべて、デバイス上でローカルに完了し、ローカルに保存され、閲覧データの同期に同意しない限り、Microsoft に送信されません。  
 
-:::image type="complex" source="./media/whitepaper-media/migration.png" alt-text="アドレス バー" lightbox="./media/whitepaper-media/migration.png":::
+:::image type="complex" source="./media/whitepaper-media/migration.png" alt-text="Import" lightbox="./media/whitepaper-media/migration.png":::
    Import  
 :::image-end:::  
 
@@ -233,13 +231,13 @@ Microsoft Edge をダウンロードしてインストールすると、リリ�
 
 Microsoft Edge は、Microsoft Edge アップデーター サービスに、インストールと更新プロセスを ping します。  インストールまたは更新が失敗し、クラッシュ レポートがオンになっている場合、ログが作成され、Microsoft に送信されます。  クラッシュ レポートを Microsoft に送信する方法の詳細については、「[クラッシュ](#crashes)」セクションを参照してください。  Microsoft は、Microsoft Edge のダウンロード方法、インストールの成功、およびアンインストールの情報を収集して、Microsoft Edge のダウンロードの成功をより深く理解します。  
 
-自動更新は、すべての Microsoft Edge ユーザーに対して既定でオンになっています。  すべてのプラットフォームで、Microsoft Edge は起動時および実行中に定期的に更新をチェックします。  MacOS デバイスで Microsoft AutoUpdate は、Microsoft 製品の更新も定期的にチェックします。  組織では、追加の制御と構成を利用できます。  追加の制御と構成の詳細については、「[更新][DeployedgeUpdatePoliciesUpdate]」を参照してください。  
+自動更新は、すべての Microsoft Edge ユーザーに対して既定でオンになっています。  すべてのプラットフォームで、Microsoft Edge は起動時および実行中に定期的に更新プログラムをチェックします。  MacOS デバイスで Microsoft AutoUpdate は、Microsoft 製品の更新プログラムも定期的にチェックします。  組織では、追加の制御と構成を利用できます。  追加の制御と構成の詳細については、「[更新][DeployedgeUpdatePoliciesUpdate]」を参照してください。  
 
 ## Internet Explorer モード  
 
 Microsoft Edge は、Internet Explorer \(IE\) の統合により、簡素化されたエクスペリエンスを提供します。  Microsoft Edge は IE 11 のみをサポートし、IE モードは Windows でのみ使用できます。  IE モード機能は、グループ ポリシーを通じて組織で使用できます。  管理者は、特定のサイトを Microsoft Edge の IE モードで開くことを選択します。  
 
-:::image type="complex" source="./media/whitepaper-media/ie-mode.png" alt-text="アドレス バー" lightbox="./media/whitepaper-media/ie-mode.png":::
+:::image type="complex" source="./media/whitepaper-media/ie-mode.png" alt-text="IE モード" lightbox="./media/whitepaper-media/ie-mode.png":::
    IE モード  
 :::image-end:::  
 
@@ -270,7 +268,7 @@ Microsoft Edge は、[Bing][|::ref2::|Main] が提供する検索ボックス、
 
 新しいタブ ページの読み込み時間を短縮するために、Microsoft の新しいタブ ページをバックグラウンドで読み込んで高速化できます。 Cookie を許可すると、読み込まれるコンテンツに Cookie が含まれる場合があります。 Microsoft の新しいタブ ページのバックグラウンドでの読み込みを無効にするには、`edge://settings/newTabPage` に移動し、[**新しいタブ ページを事前に読み込んで高速化する]** の設定をオフにします。 
 
-:::image type="complex" source="./media/whitepaper-media/n-t-p1.png" alt-text="アドレス バー" lightbox="./media/whitepaper-media/n-t-p1.png":::
+:::image type="complex" source="./media/whitepaper-media/n-t-p1.png" alt-text="新規タブ ページ" lightbox="./media/whitepaper-media/n-t-p1.png":::
    新規タブ ページ  
 :::image-end:::  
 
@@ -284,7 +282,7 @@ Microsoft Edge は、[Bing][|::ref2::|Main] が提供する検索ボックス、
 
 Microsoft アカウントで Microsoft Edge にサインインしている場合は、[Microsoft プライバシー ダッシュボード][MicrosoftAccountPrivacyAdSettings]から新しいタブ ページに関連付けられた閲覧アクティビティを管理できます。  
 
-Microsoft Edge は、検索ボックスの操作やクイック リンク タイルのクリックなど、新しいタブ ページの使用方法に関する診断データを収集します。  新しいタブ ページの使用方法に関する診断データの収集を有効にするには、`edge://settings/privacy` に移動して、**[ブラウザーの使用方法、アクセスした Web サイト、およびクラッシュ レポートに関するオプションの診断データを送信して、Microsoft 製品の改善に協力する]** の設定をオンにします。  ブラウザーは、Microsoft ニュース ページの使用方法に関する診断データを Microsoft に送信して、ニュース コンテンツとのユーザー操作の理解と Microsoft 製品の改善に役立てます。  新しいタブ ページのカスタマイズ ボタンを選択して、Microsoft ニュース コンテンツをオフにすることができます。  ニュース データは HTTPS を使用して Microsoft に送信され、最長 13 か月間保存された後、集計されて匿名化されます。  
+Microsoft Edge は、検索ボックスの操作やクイック リンク タイルの選択など、新しいタブ ページの使用方法に関する診断データを収集します。  新しいタブ ページの使用方法に関する診断データの収集を有効にするには、`edge://settings/privacy` に移動して、**[ブラウザーの使用方法、アクセスした Web サイト、およびクラッシュ レポートに関するオプションの診断データを送信して、Microsoft 製品の改善に協力する]** の設定をオンにします。  ブラウザーは、Microsoft ニュース ページの使用方法に関する診断データを Microsoft に送信して、ニュース コンテンツとのユーザー操作の理解と Microsoft 製品の改善に役立てます。  新しいタブ ページのカスタマイズ ボタンを選択して、Microsoft ニュース コンテンツをオフにすることができます。  ニュース データは HTTPS を使用して Microsoft に送信され、最長 13 か月間保存された後、集計されて匿名化されます。  
 
 新しいタブ ページでは、カスタム画像を背景として設定することもできます。  画像はデバイスのローカルに保存され、画像を削除するか、新しい画像をアップロードすることで削除できます。  画像に関する情報は Microsoft に送信されません。  
 
@@ -358,7 +356,7 @@ InPrivate ブラウズは、閲覧の履歴、ダウンロード履歴、Cookie 
 
 Microsoft Edge は、ユーザーに Web ページのコンテンツを読み上げる「音声読み上げ」機能を提供します。  [音声読み上げ] を開始するには、ページの任意の場所にカーソルを合わせてコンテキスト メニュー \(右クリック\) を開くか、**[設定など (...)]**  を開いて  **[音声読み上げ]** を選択します。  声を出して読むと、Web ページのコンテンツを読むために使用できる複数の音声が提供されます。  Windows 10 設定の [**時間と言語**] セクションで [Windows 10 にインストールされている][OfficeSupport4c83a8d8748642f78e462b0fdf753130]音声を使用している場合、以前に使用した音声のローカル キャッシュをクリアしたい場合は、`edge://settings/clearBrowserData` に移動します。  
 
-読み上げを開始すると、Microsoft Edge は [Web Speech API][GithubW3cIncubatorCommunityGroupSpeechApi] を使用します。  選択した音声に応じて、ページのコンテンツは、プラットフォームが提供するクライアント側のライブラリ \(たとえば、オペレーティング システム固有のライブラリ\)、または Microsoft Cognitive Services を搭載したサーバー側のライブラリを使用してテキストから音声に変換されます。  コンテンツがクライアント側のライブラリを使用して音声に変換された場合、情報は Microsoft サーバーに送信されません。  Microsoft Cognitive Services を使用してコンテンツが音声に変換された場合 \(音声名の「オンライン」という単語で示されているように\)、テキストはランダムに生成されたトークンとともに Microsoft に送信されます。  変換が完了すると、サービスは音声ファイルの音声テキストをデバイスに返します。  デバイスから Microsoft に、またはその逆に転送される間、すべてのデータは暗号化されます。  Microsoft に送信されるテキストと生成されるオーディオ ファイルは、どちらも変換が行われた直後に削除されます。Web コンテンツに関する他のデータが一定期間保存されることはありません。  
+読み上げを開始すると、Microsoft Edge は [Web Speech API][GithubW3cIncubatorCommunityGroupSpeechApi] を使用します。  選択した音声に応じて、ページのコンテンツは、プラットフォームが提供するクライアント側のライブラリ \(たとえば、オペレーティング システム固有のライブラリ\)、または Azure Cognitive Services を搭載したサーバー側のライブラリを使用してテキストから音声に変換されます。  コンテンツがクライアント側のライブラリを使用して音声に変換された場合、情報は Microsoft サーバーに送信されません。  Azure Cognitive Services を使用してコンテンツが音声に変換された場合 \(音声名の「オンライン」という単語で示されているように\)、テキストはランダムに生成されたトークンとともに Microsoft に送信されます。  変換が完了すると、サービスは音声ファイルの音声テキストをデバイスに返します。  デバイスから Microsoft に、またはその逆に転送される間、すべてのデータは暗号化されます。  Microsoft に送信されるテキストと生成されるオーディオ ファイルは、どちらも変換が行われた直後に削除されます。Web コンテンツに関する他のデータが一定期間保存されることはありません。  
 
 ## 新機能のリリース  
 
@@ -374,11 +372,25 @@ Microsoft Edge が SSL 接続タイムアウト、証明書エラー、または
 
 ## セキュリティで保護された DNS
 
-Web サイトに移動するには、ブラウザーは Web サイトの URL で使用されているホスト名 （example.com など） のネットワーク アドレス （93.184.216.34 など） を検索する必要があります。 セキュリティで保護された DNS は、DNS サービス プロバイダーへの HTTPS 接続を介したサービスを使用してこの検索を実行するため、ネットワーク上の攻撃者による、参照の改ざんや盗聴から保護します。  
+Web サイトに移動するには、ブラウザーは Web サイトの URL で使用されているホスト名 （example.com など） のネットワーク アドレス （93.184.216.34 など） を検索する必要があります。 セキュリティで保護された DNS は、DNS サービス プロバイダーへの HTTPS 接続を介したサービスを使用してこの参照を実行するため、ネットワーク上の攻撃者による、参照の改ざんや盗聴から保護します。  
 
-既定では、閲覧の中断を回避するために、現在の DNS サービス プロバイダーが使用されます。 すべてのサービス プロバイダーがセキュリティで保護された DNS を提供しているわけではありません。 閲覧の中断を回避するために、セキュリティで保護された DNS 接続が失敗した場合、Microsoft Edge はフォールバックし、現在の DNS サービス プロバイダーで暗号化されていない DNS 参照を実行します。 Microsoft Edge では、セキュリティで保護された特定の DNS プロバイダーを使うことができます。 セキュリティで保護された DNS プロバイダーが選択されている場合、セキュリティで保護された検索が失敗しても、Microsoft Edge は通常の DNS 参照にフォールバックしません。 `edge://setting/privacy` でセキュリティで保護された DNS 設定を選択できます。  
+既定では、閲覧の中断を回避するために、現在の DNS サービス プロバイダーが使用されます。 すべてのサービス プロバイダーがセキュリティで保護された DNS を提供しているわけではありません。 閲覧の中断を回避するために、セキュリティで保護された DNS 接続が失敗した場合、Microsoft Edge はフォールバックし、現在の DNS サービス プロバイダーで暗号化されていない DNS 参照を実行します。 Microsoft Edge では、セキュリティで保護された特定の DNS プロバイダーを使うことができます。 セキュリティで保護された DNS プロバイダーが選択されている場合、セキュリティで保護された参照が失敗しても、Microsoft Edge は通常の DNS 参照にフォールバックしません。 `edge://setting/privacy` でセキュリティで保護された DNS 設定を選択できます。  
 
 セキュリティで保護された DNS は、組織の一部である管理対象コンピューターに対しては既定でオフになっていますが、管理ポリシーを使用して構成できます。 InPrivate ブラウズでは、InPrivate セッションが開始されたプロファイルのセキュリティで保護された DNS 設定を使用します。 ゲスト モードでは、常に現在のサービス プロバイダーが使用されます。
+
+## ショッピング
+
+Microsoft Edge は、オンラインでショッピングしながらクーポンやお得な価格を見つけるのに役立ちます。  オンライン ショッピング中にクーポンを見つけるのに役立つように、Microsoft Edge はショッピング ドメインのリストを Microsoft ショッピング サービスからクライアントにローカルにダウンロードします。  Web サイトにアクセスすると、Microsoft Edge は、アクセスしているサイトがショッピング ドメインであるかどうかをローカルで判断します。  サイトがショッピング ドメインであると判断された場合、Microsoft Edge は、個人を特定できる情報が削除された URL を Microsoft ショッピング サービスに送信します。  ショッピング サービスは、そのサイトで利用可能なクーポンを返します。  
+
+クーポンを適用すると、クーポン プロバイダーを正しく関連付けるために Cookie がデバイスに保存されます。  クーポンがカートに正常に適用された後にのみ、信頼できるクーポン プロバイダーによって Cookie が保存されます。  クーポンが適用された後、クーポンの成功に関する情報が Microsoft ショッピング サービスに返送され、どのクーポンが成功したか失敗したかを理解するのに役立ちます。  Microsoft ショッピング サービスに送信されるデータは、クーポン参照ごとに変化するランダムに生成された識別子を使用して HTTPS 経由で送信されます。  
+
+:::image type="complex" source="./media/whitepaper-media/shopping.png" alt-text="ショッピングとクーポン" lightbox="./media/whitepaper-media/shopping.png":::
+   ショッピングとクーポン  
+:::image-end:::  
+
+オンラインでショッピングしたりコレクションを使用したりするときに最適な価格を見つけるために、Microsoft Edge は、表示しているページまたはコレクションアイテムが製品の詳細ページであるかどうかをローカルで判断します。  製品の詳細ページを表示している場合、Microsoft Edge は、個人を特定できる情報が削除された URL を含め、製品の詳細をショッピング サービスに送信します。 また、製品の価格、製品の画像、製品名、評価、レビュー、および Microsoft Edge とオペレーティング システムのバージョンに関する情報をサービスに送信します。  このデータは、ランダムに生成された識別子を使用して HTTPS 経由で送信されます。  Microsoft のショッピング サービスは、同じ製品について他の小売業者から価格を返します。  
+
+ショッピング サービスは、すべてのユーザーに対して既定でオンになっています。  Microsoft Edge のショッピング設定を変更するには、`edge://settings/privacy` に移動し、**[Microsoft Edge でのショッピングで時間とお金を節約する]** をオフにします。  InPrivate ブラウズは、InPrivate セッションを開始したプロファイルのショッピング設定を使用します。  
 
 ## サインインと ID  
 
@@ -400,7 +412,7 @@ macOS 上の Microsoft Edge の ID は、Microsoft アプリ間で共有され�
 
 SmartScreen は、安全に Web を閲覧できるように設計されています。  Web サイトに移動するかファイルをダウンロードすると、SmartScreen は URL またはファイルの評判をチェックします。  SmartScreen がサイトまたはファイルが悪意のあるものであると判断した場合、サイトに移動したり、ファイルをダウンロードしたりできなくなります。  
 
-:::image type="complex" source="./media/whitepaper-media/smart-screen.png" alt-text="アドレス バー" lightbox="./media/whitepaper-media/smart-screen.png":::
+:::image type="complex" source="./media/whitepaper-media/smart-screen.png" alt-text="SmartScreen" lightbox="./media/whitepaper-media/smart-screen.png":::
    SmartScreen  
 :::image-end:::  
 
@@ -434,9 +446,9 @@ Web サイト エラーの原因となるアドレス バーの URL の入力ミ
 
 ## 同期  
 
-Microsoft アカウントで Microsoft Edge にサインインすると、サインインしているすべてのバージョンの Microsoft Edge 間で閲覧データを同期できます。  お気に入り、設定、フォーム入力データ \(アドレスなど\)、パスワード、拡張子、およびコレクションを同期できます。  Microsoft Edge で同期をオンにする権限を許可する必要があります。同期される各データの種類は個別にオンまたはオフにすることができます。  お気に入りには、従来のバージョンの Microsoft Edge で以前に取っておいたタブが含まれています。これらのタブは、他のお気に入りと同期します。  サインイン バージョンの Microsoft Edge 同期から、同期がオンになっている他のすべてのサインイン バージョンの Microsoft Edge にお気に入りまたはその他のデータを削除または変更しました。  同期構成を管理するには、`edge://settings/profiles/sync` に移動します。  同期設定は組織によって管理されている場合があります。
+Microsoft アカウントで Microsoft Edge にサインインすると、サインインしているすべてのバージョンの Microsoft Edge 間で閲覧データを同期できます。  閲覧履歴、お気に入り、設定、フォーム入力データ \(アドレスなど\)、パスワード、拡張子、およびコレクションを同期できます。  Microsoft Edge で同期をオンにする権限を許可する必要があります。同期される各データの種類は個別にオンまたはオフにすることができます。  お気に入りには、従来のバージョンの Microsoft Edge で以前に取っておいたタブが含まれています。これらのタブは、他のお気に入りと同期します。  サインイン バージョンの Microsoft Edge 同期から、同期がオンになっている他のすべてのサインイン バージョンの Microsoft Edge にお気に入りまたはその他のデータを削除または変更しました。  同期構成を管理するには、`edge://settings/profiles/sync` に移動します。  同期設定は組織によって管理されている場合があります。
 
-:::image type="complex" source="./media/whitepaper-media/sync.png" alt-text="アドレス バー" lightbox="./media/whitepaper-media/sync.png":::
+:::image type="complex" source="./media/whitepaper-media/sync.png" alt-text="同期設定がオンに設定されている画像" lightbox="./media/whitepaper-media/sync.png":::
    同期設定がオンになっている
 :::image-end:::  
 
@@ -458,7 +470,7 @@ Microsoft Edge は、既知のトラッカーを検出してブロックする�
 
 次のグループ ポリシーの [[Microsoft Edge でコンポーネントの更新を有効にする]][DeployedgePoliciesComponentupdatesenabled] を使用して、リストの更新をオフにすることができます。  
 
-:::image type="complex" source="./media/whitepaper-media/tracking-prevention.png" alt-text="アドレス バー" lightbox="./media/whitepaper-media/tracking-prevention.png":::
+:::image type="complex" source="./media/whitepaper-media/tracking-prevention.png" alt-text="追跡防止" lightbox="./media/whitepaper-media/tracking-prevention.png":::
    追跡防止  
 :::image-end:::  
 
@@ -486,7 +498,7 @@ WDAG はユーザーの許可を得て、ブラウザーの使用方法に関す
 
 Windows 情報保護 \(WIP\) は、企業情報の偶発的な漏洩を防ぐのに役立ちます。  組織で管理されているグループ ポリシーを使用する組織でのみ使用できます。  WIP は、企業の資産として識別されるサイトで有効になっています。  アドレス バーの管理アイコンから、企業の資産であるサイトを特定します。  WIP は、ブラウザーからのコピーと貼り付けの防止や、組織外のサイトへの特定のファイルのアップロードなどの機能を実施します。  
 
-:::image type="complex" source="./media/whitepaper-media/w-i-p.png" alt-text="アドレス バー" lightbox="./media/whitepaper-media/w-i-p.png":::
+:::image type="complex" source="./media/whitepaper-media/w-i-p.png" alt-text="Windows 情報保護" lightbox="./media/whitepaper-media/w-i-p.png":::
    Windows 情報保護  
 :::image-end:::  
 
