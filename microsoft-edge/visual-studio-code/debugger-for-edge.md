@@ -7,12 +7,12 @@ ms.date: 05/07/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools、vs コード、visual studio コード、デバッガー
-ms.openlocfilehash: 58bcbc927505f4c5a1f493349c3e9475cb75e1be
-ms.sourcegitcommit: c1b5fdd48d39d874a76c9b8f68309eb1b507fd0b
+ms.openlocfilehash: d9f33a17db7083a6a7cbb013dbf9886755f92c5e
+ms.sourcegitcommit: 56cb5821d1b8e96f55bfa14a4ce87a3845b009c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "10695867"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "11182302"
 ---
 # Microsoft Edge VS コード拡張用デバッガー  
 
@@ -26,7 +26,7 @@ ms.locfileid: "10695867"
 
 ## Microsoft Edge を起動する  
 
-`Ctrl` + `Shift` + `D` アクティビティバーの (Windows または macOS 上の `Command` + `Shift` + `D` ) **Activity Bar**デバッグビューに移動します。  VS コードにまだ構成がない場合 `F5` は、Windows または macOS を押すか、緑色の**再生**ボタンを選択します。  ドロップダウンで [**エッジ**] を選択します。  `launch.json`次の構成のファイルが表示されます。  
+`Ctrl` + `Shift` + `D` アクティビティバーの (Windows または macOS 上の `Command` + `Shift` + `D` ) **Activity Bar**デバッグビューに移動します。  VS コードにまだ構成がない場合 `F5` は、Windows または macOS を押すか、緑色の **再生** ボタンを選択します。  ドロップダウンで [ **エッジ** ] を選択します。  `launch.json`次の構成のファイルが表示されます。  
 
 ```json
 {
@@ -47,7 +47,7 @@ ms.locfileid: "10695867"
 
 ### Microsoft Edge (Chromium)  
 
-Microsoft edge \ (Chromium \) を起動するには、microsoft edge \ (EdgeHTML \) ではなく、microsoft edge の次のバージョン (microsoft edge \ (Chromium \) を起動したいバージョンの microsoft edge `version` \ (\) を使って、既存の構成に属性を追加するだけ `dev` `beta` `canary` です。 以下の構成では、Microsoft Edge \ (Chromium) のカナリアバージョンが起動されます。  
+Microsoft edge \ (Chromium \) を起動するには、microsoft edge \ (EdgeHTML \) ではなく、microsoft edge の次のバージョンを起動するために、microsoft edge `version` \ (Chromium \) を起動するバージョンの microsoft edge \ (\) で属性を追加し `stable` `dev` `beta` `canary` ます。 以下の構成では、Microsoft Edge \ (Chromium) のカナリアバージョンが起動されます。  
 
 ```json
 {
@@ -85,13 +85,13 @@ start msedge --remote-debugging-port=9222
 
 拡張機能の[GitHub リポジトリ][GithubMicrosoftVscodeEdgeDebug2]で[問題を整理][GithubMicrosoftVscodeEdgeDebug2NewIssue]して、フィードバックを送信します。  `%temp%`名前の付いたディレクトリの各実行に対して作成された debug adapter ログファイルを含めてください `vscode-edge-debug2.txt` 。  このファイルを問題のコメントにドラッグして、GitHub にアップロードします。  
 
-Microsoft Edge VS のコード拡張機能の向上に役立つように、投稿は歓迎されます。  拡張機能の[GitHub リポジトリ][GithubMicrosoftVscodeEdgeDebug2]で始めるのに必要なものをすべて見つけます。  
+Microsoft Edge VS のコード拡張機能の向上に役立つように、投稿は歓迎されます。  拡張機能の [GitHub リポジトリ][GithubMicrosoftVscodeEdgeDebug2] で始めるのに必要なものをすべて見つけます。  
 
 
 <!-- image links -->  
 
 <!--[ImageGifDebuggerEdge]: ./media/debugger-for-edge.gif "Debugger for Edge VS Code extension in action"  -->  
-[ImagePngDebuggerEdge]:/media/debugger-for-edge.png "Edge 用のデバッガーとコード拡張の動作"  
+[ImagePngDebuggerEdge]:/media/debugger-for-edge.png "のようなデバッガーで、Edge とコードの拡張が動作しています  
 
 <!--links -->  
 

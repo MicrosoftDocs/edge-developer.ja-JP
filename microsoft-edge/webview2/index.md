@@ -3,17 +3,17 @@ description: Microsoft Edge WebView2 control を使用して Win32、.NET、UWP 
 title: Microsoft Edge WebView2 コントロール
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 10/19/2020
+ms.date: 11/19/2020
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、CoreWebView2、ICoreWebView2Host、browser control、edge html、Windows フォーム、WinForms、WPF、.NET、WinUI、Project レユニオン
-ms.openlocfilehash: 412ff112ab0eed69b63316b2916f849a32196363
-ms.sourcegitcommit: af91bfc3e6d8afc51f0fbbc0fe392262f424225c
+ms.openlocfilehash: 9e5cc3a26f07a11c9fd5c21d62ecafc3ed5103f4
+ms.sourcegitcommit: c619168deea44cdec8ebc80ef9ddf1d91d5f726d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "11120376"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "11182184"
 ---
 # Microsoft Edge WebView2 の概要  
 
@@ -27,15 +27,15 @@ Microsoft Edge WebView2 コントロールを使うと、ネイティブアプ�
 
 開発者は、多くの場合、web アプリケーションまたはネイティブアプリケーションの構築を決定する必要があります。  意思決定は、リーチとパワーの間のトレードオフに対して行われます。  Web アプリケーションを使用すると広範なアクセスが可能になります。  Web 開発者は、すべての異なるプラットフォームで、ほとんどのコードを再利用することができます。  ただし、ネイティブアプリケーションは、ネイティブプラットフォーム全体の機能を利用します。  
 
-:::image type="complex" source="./media/WebView2/webnative.png" alt-text="WebView とは" lightbox="./media/WebView2/webnative.png":::
+:::image type="complex" source="./media/WebView2/webnative.png" alt-text="Web native" lightbox="./media/WebView2/webnative.png":::
    Web native  
 :::image-end:::  
 
 ハイブリッドアプリケーションを使用すると、開発者は両方のメリットを享受できます。  ハイブリッドアプリケーションの開発者は、web プラットフォームの ubiquity と強み、およびネイティブプラットフォームの機能と機能を最大限に活用できます。  
 
-## WebView2 の利点   
+## WebView2 の利点  
 
-:::image type="complex" source="./media/WebView2/webviewreasons.png" alt-text="WebView とは" lightbox="./media/WebView2/webviewreasons.png":::
+:::image type="complex" source="./media/WebView2/webviewreasons.png" alt-text="WebView の理由" lightbox="./media/WebView2/webviewreasons.png":::
    WebView の理由  
 :::image-end:::  
 
@@ -97,22 +97,24 @@ WebView2 コントロールを使用してアプリケーションをビルド�
 
 一般的な可用性 \ (GA) またはプレビューバージョンは、次のプログラミング環境で利用できます。  
 
-*   Win32 C/c + + \ (GA \)
-*   .NET Framework 4.6.2 以降 \ (プレビュー \) 
-*   .NET Core 3.0 以降 \ (プレビュー \)
-*   [WinUI 3.0][UwpToolkitsWinui3] \ (プレビュー \)
+*   Win32 C/c + + \ (GA \)  
+*   .NET Framework 4.6.2 以降 \ (プレビュー \)  
+*   .NET Core 3.0 以降 \ (プレビュー \)  
+*   [WinUI 3.0][UwpToolkitsWinui3] \ (プレビュー \)  
 
 WebView2 アプリケーションは、次のバージョンの Windows で実行できます。  
 
 *   Windows 10  
 *   Windows 8.1  
-*   Windows 8  
-*   Windows 7  
+*   Windows 7 \ * \ *  
 *   Windows Server 2019  
 *   Windows Server 2016  
 *   Windows Server 2012  
-*   Windows Server 2012R2  
-*   Windows Server 2008 R2  
+*   Windows Server 2012 R2  
+*   Windows Server 2008 R2 \ * \ *  
+
+> [!IMPORTANT]
+> \ * \ * WebView2 for Windows 7 および Windows Server 2008 R2 のサポートサイクルは、Microsoft Edge と同じです。  詳細については、「 [Microsoft Edge でサポートされているオペレーティングシステム][DeployedgeMicrosoftEdgeSupportedOS]」を参照してください。  
 
 ## 次のステップ  
 
@@ -140,7 +142,7 @@ WebView2 アプリケーションを作成して展開する方法の詳細に�
 [Webview2ConceptsSecurity]: ./concepts/security.md "セキュリティで保護された WebView2 アプリケーションを開発するためのベストプラクティス |Microsoft ドキュメント"  
 [Webview2ConceptsUserdatafolder]: ./concepts/userdatafolder.md "ユーザーデータフォルダーの管理 |Microsoft ドキュメント"  
 [Webview2ConceptsVersioning]: ./concepts/versioning.md "WebView2 SDK のバージョンについて理解する |Microsoft ドキュメント"  
-[Webview2GettingstartedWin32]: ./gettingstarted/win32.md "WebView2 の概要 |Microsoft ドキュメント"   
+[Webview2GettingstartedWin32]: ./gettingstarted/win32.md "WebView2 の概要 |Microsoft ドキュメント"  
 [Webview2GettingstartedWinforms]: ./gettingstarted/winforms.md "Windows フォームアプリでの WebView2 の概要 (プレビュー) |Microsoft ドキュメント"  
 [Webview2GettingstartedWinui]: ./gettingstarted/winui.md "WinUI3 での WebView2 の概要 (プレビュー) |Microsoft ドキュメント"  
 [Webview2GettingstartedWpf]: ./gettingstarted/wpf.md "WPF での WebView2 の概要 (プレビュー) |Microsoft ドキュメント"  
@@ -148,7 +150,9 @@ WebView2 アプリケーションを作成して展開する方法の詳細に�
 [Webview2HowtoWebdriver]: ./howto/webdriver.md "Microsoft Edge Driver での WebView2 の自動化とテスト |Microsoft ドキュメント"  
 [Webview2Releasenotes]: ./releasenotes.md "WebView2 SDK のリリースノート |Microsoft ドキュメント"  
 
-[UwpToolkitsWinui3]: ./gettingstarted/winui.md "Windows UI ライブラリ3プレビュー 2 (2020 年7月) |Microsoft ドキュメント"  
+[UwpToolkitsWinui3]: /uwp/toolkits/winui3/index "Windows UI ライブラリ3プレビュー 2 (2020 年7月) |Microsoft ドキュメント"  
+
+[DeployedgeMicrosoftEdgeSupportedOS]: /deployedge/microsoft-edge-supported-operating-systems "Microsoft Edge でサポートされているオペレーティングシステム |Microsoft ドキュメント"  
 
 [GithubMicrosoftedgeWebview2samples]: https://github.com/MicrosoftEdge/WebView2Samples "WebView2 サンプル-MicrosoftEdge/WebView2Samples |GitHub"  
 [GithubMicrosoftedgeWebviewfeddback]: https://github.com/MicrosoftEdge/WebViewFeedback "WebView フィードバック-MicrosoftEdge/WebViewFeedback |GitHub" 
