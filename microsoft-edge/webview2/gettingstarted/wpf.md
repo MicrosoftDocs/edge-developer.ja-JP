@@ -3,21 +3,21 @@ description: WebView2 for WPF アプリの概要ガイド
 title: WebView2 for WPF アプリの概要
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 11/10/2020
+ms.date: 11/19/2020
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: WebView2、WebView2、WebView、webview、wpf アプリ、wpf、edge、CoreWebView2、browser control、edge html、はじめに、作業の開始、.NET
-ms.openlocfilehash: 9977fad5f0462372eaa863fd740cbba6c92f6354
-ms.sourcegitcommit: a59464aff9e2c0bf57d172afbacdeed2c1a3ea42
+ms.openlocfilehash: e928dae0aa63f15ca5fa21860c83fa5529e905df
+ms.sourcegitcommit: fab44f7e183a3c4f12bf925512fc62d84a4d6edc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "11162632"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "11182375"
 ---
-# WPF での WebView2 の概要 (プレビュー)
+# WPF での WebView2 の概要
 
-この記事では、初めての WebView2 アプリの作成を開始し、 [WebView2 (preview)](../index.md)の主な機能について説明します。  個々の Api について詳しくは、 [api リファレンス](/dotnet/api/microsoft.web.webview2.wpf)をご覧ください。  
+この記事では、初めての WebView2 アプリの作成を開始し、 [WebView2](../index.md)の主な機能について説明します。  個々の Api について詳しくは、 [api リファレンス](/dotnet/api/microsoft.web.webview2.wpf)をご覧ください。  
 
 ## 前提条件  
 
@@ -61,7 +61,7 @@ ms.locfileid: "11162632"
     
 ## 手順 2-WebView2 SDK をインストールする  
 
-次に、WebView2 SDK をプロジェクトに追加します。  プレビューでは、Nuget を使用して WebView2 SDK をインストールします。  
+次に、NuGet を使ってプロジェクトに WebView2 SDK を追加します。  
 
 1.  プロジェクトのコンテキストメニューを開き (\ [\] を右クリックし)、[ **NuGet パッケージの管理**] を選択します。  
     
@@ -70,13 +70,10 @@ ms.locfileid: "11162632"
     :::image-end:::
     
 1.  `Microsoft.Web.WebView2`検索バーに入力します。  検索結果から [ **WebView2** ] を選びます。  
-
-    > [!IMPORTANT]
-    > [ **プレリリースを含める**] をオンにして、 **バージョン**でプレリリースパッケージを選択し、[ **インストール**] を選択します。  
-  
+   
      ![nuget.exe](./media/installnuget.PNG)
     
-    WebView2 API を使用したアプリケーションの開発を開始するように設定されています。  `F5`プロジェクトをビルドして実行する場合に選択します。  実行中のプロジェクトに空のウィンドウが表示されます。  
+    WebView2 API を使ってアプリケーションの開発を開始する準備が整いました。  `F5`プロジェクトをビルドして実行する場合に選択します。  実行中のプロジェクトに空のウィンドウが表示されます。  
     
     :::image type="complex" source="./media/wpf-gettingstarted-blank.png" alt-text="空のアプリ":::
        空のアプリ
@@ -189,7 +186,7 @@ WebView2 コントロールに表示される URL をユーザーが変更でき
     
 ## ステップ 5-ナビゲーションイベント  
 
-WebView2 コントロールをホストするアプリケーションは、web ページへのナビゲーション中に WebView2 コントロールによって発生する次のイベントをリッスンします。  
+Web ページのナビゲーション中に、WebView2 コントロールはイベントを発生させます。 WebView2 コントロールをホストするアプリケーションは、次のイベントをリッスンします。  
 
 *   `NavigationStarting`  
 *   `SourceChanged`  
@@ -238,7 +235,7 @@ void EnsureHttps(object sender, CoreWebView2NavigationStartingEventArgs args)
 
 ## ステップ 6-スクリプト  
 
-ホストアプリケーションを使って、実行時に WebView2 コントロールに JavaScript コードを挿入することができます。  挿入された JavaScript は、JavaScript が削除されるまで、すべての新しい最上位レベルのドキュメントとすべての子フレームに適用されます。  挿入された JavaScript は、グローバルオブジェクトの作成後、および HTML ドキュメントに含まれている他のスクリプトが実行される前に実行されます。  
+ホストアプリケーションを使って、実行時に WebView2 コントロールに JavaScript コードを挿入することができます。  挿入された JavaScript は、JavaScript が削除されるまで、すべての新しいトップレベルドキュメントと任意の子フレームに適用されます。  挿入された JavaScript は、グローバルオブジェクトの作成後、および HTML ドキュメントに含まれるスクリプトの前に実行されます。  
 
 スクリプトを使用して、HTTPS 以外のサイトに移動したときにユーザーに通知することができます。  `EnsureHttps` [Executesの](/dotnet/api/microsoft.web.webview2.wpf.webview2.executescriptasync)メソッドを使って、スクリプトが web コンテンツに挿入されるように関数を変更します。  
 
@@ -287,7 +284,7 @@ void EnsureHttps(object sender, CoreWebView2NavigationStartingEventArgs args)
     }
     ```  
     
-1.  **CoreWebView2**が初期化されたら、イベントハンドラーを登録して応答 `WebMessageReceived` します。  **MainWindow.xaml.cs** update で、 `InitializeAsync` `UpdateAddressBar` 次のコードスニペットを使用して追加します。  
+1.  **CoreWebView2**が初期化されたら、イベントハンドラーを登録して応答 `WebMessageReceived` します。  **MainWindow.xaml.cs**で、 `InitializeAsync` `UpdateAddressBar` 次のコードスニペットを使用して、更新して追加します。  
     
     ```csharp
     async void InitializeAsync()
@@ -322,7 +319,7 @@ void EnsureHttps(object sender, CoreWebView2NavigationStartingEventArgs args)
     }
     ```  
     
-    を押して `F5` アプリをビルドして実行します。  アドレスバーに WebView の URI が表示されるようになり、新しい URI に正常に移動すると、webview に表示される URI のユーザーに対して WebView が通知されます。  
+    を押して `F5` アプリをビルドして実行します。  これで、アドレスバーに WebView2 コントロールの URI が表示されます。 新しい URI に正常に移動すると、WebView2 コントロールは、WebView2 コントロールに表示される URI をユーザーに通知します。  
     
     :::image type="complex" source="./media/wpf-gettingstarted-searchbar.png" alt-text="アドレスバー":::
        アドレスバー

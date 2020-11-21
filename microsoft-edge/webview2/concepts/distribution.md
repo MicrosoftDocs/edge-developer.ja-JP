@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、wpf アプリ、wpf、edge、ICoreWebView2、ICoreWebView2Host、browser control、edge html
-ms.openlocfilehash: 89e53c43c3550d0a7a3707381cc4c76be111db28
-ms.sourcegitcommit: 56cb5821d1b8e96f55bfa14a4ce87a3845b009c3
+ms.openlocfilehash: cbe3fb35bdf64a3627256028940cf868b8b185c2
+ms.sourcegitcommit: fab44f7e183a3c4f12bf925512fc62d84a4d6edc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/20/2020
-ms.locfileid: "11182292"
+ms.locfileid: "11182410"
 ---
 # WebView2 を使用したアプリの配布  
 
@@ -125,14 +125,12 @@ Web は絶えず進化しています。  Evergreen WebView2 Runtime は最新�
 
 未安定の Microsoft Edge チャネル (ベータ/開発/カナリア) では、WebView2 Runtime の次の機能についてのヒントを見ることができます。  Microsoft Edge 用の web サイトを開発する場合と同様に、WebView2 アプリを定期的にテストする必要があります。  WebView2 アプリを、非永続的なチャネルのいずれかに対してテストし、問題が発生した場合にアプリを更新したり、 [問題を報告][GithubMicrosoftedgeWebviewfeedback] したりします。 通常、開発者とベータ版が推奨されるチャネルです。  適切なチャネルを判断するには、「 [Microsoft Edge チャネルの概要」][DeployEdgeMicrosoftEdgeChannels]に移動します。  テスト環境では、安定してい [ない Microsoft Edge チャネル][DownloadNonstableEdge] をダウンロードでき `regkey` ます。また、または環境変数を使用して、テストアプリのチャネルの優先順位を指定します。  詳細については、 [CreateCoreWebView2EnvironmentWithOptions][ReferenceWin32Webview2IdlCreatecorewebview2environmentwithoptions]に移動してください。  また、 [Webdriver][HowtoWebdriver] を使って WebView2 のテストを自動化することもできます。
 
-## 固定バージョンの配布モード  
-
-> [!NOTE]
-> 修正されたバージョンの配布モードは、パブリックプレビューに含まれています。  
-
-修正されたバージョンの配布モードは、以前の名前として使用されていました。  
+## 固定バージョンの配布モード   
 
 厳密な互換性要件を持つ制約のある環境では、固定バージョンの配布モードの使用を検討してください。  WebView2 ランタイムの特定のバージョンを、固定バージョンの配布モードで選択してパッケージ化します。  アプリのランタイム更新のタイミングを指定できます。  修正済みのバージョン配布モードでは、自動更新は取得されません。 アプリとランタイムの更新を計画します。  
+
+> [!NOTE] 
+> 修正されたバージョンの配布モードは、以前は "自分で作成" と呼ばれていました。  
 
 修正済みバージョンモードを使用するには、次の操作を実行します。
 

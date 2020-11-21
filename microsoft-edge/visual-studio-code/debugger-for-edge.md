@@ -1,32 +1,32 @@
 ---
-description: VS コードから Microsoft Edge (Chromium) と Microsoft Edge (EdgeHTML) をデバッグする方法
-title: VS コードから Microsoft Edge (Chromium) をデバッグする
+description: Visual Studio コードから Microsoft Edge (Chromium) と Microsoft Edge (EdgeHTML) をデバッグする方法
+title: Visual Studio コードから Microsoft Edge (Chromium) をデバッグする
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 05/07/2020
+ms.date: 11/20/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools、vs コード、visual studio コード、デバッガー
-ms.openlocfilehash: d9f33a17db7083a6a7cbb013dbf9886755f92c5e
-ms.sourcegitcommit: 56cb5821d1b8e96f55bfa14a4ce87a3845b009c3
+ms.openlocfilehash: df15b76cc26ad01d3b8508362aa4b86998f8b41b
+ms.sourcegitcommit: acf8ad7cb6c8ecf83a6170f8eeb9bec32878f8ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/20/2020
-ms.locfileid: "11182302"
+ms.locfileid: "11182506"
 ---
-# Microsoft Edge VS コード拡張用デバッガー  
+# Microsoft Edge Visual Studio コード拡張用デバッガー  
 
-[Microsoft Edge VS のコード拡張用デバッガー][VisualstudioMarketplaceDebuggerMicrosoftEdge]を使って、フロントエンド JavaScript コードを1行ずつデバッグし、 `console.log()` [Visual Studio コード][VisualstudioCode]からステートメントを直接参照します。  
+Microsoft Edge Visual Studio コード拡張機能 [のデバッガー][VisualstudioMarketplaceDebuggerMicrosoftEdge] を使って、フロントエンド JavaScript コードを1行ずつデバッグし、 `console.log()` [Visual Studio コード][VisualstudioCode]からステートメントを直接表示します。  
 
-:::image type="complex" source="./media/debugger-for-edge.gif" alt-text="Edge 用デバッガーと作業中のコード拡張機能":::
-   Edge 用デバッガーと作業中のコード拡張機能  
+:::image type="complex" source="./media/debugger-for-edge.gif" alt-text="勤務先の Edge Visual Studio コード拡張用デバッガー" lightbox="./media/debugger-for-edge.gif":::
+   勤務先の Edge Visual Studio コード拡張用デバッガー  
 :::image-end:::
 
-<!--![Debugger for Edge VS Code extension at work][ImageGifDebuggerEdge]  -->  
+<!--![Debugger for Edge Visual Studio Code extension at work][ImageGifDebuggerEdge]  -->  
 
 ## Microsoft Edge を起動する  
 
-`Ctrl` + `Shift` + `D` アクティビティバーの (Windows または macOS 上の `Command` + `Shift` + `D` ) **Activity Bar**デバッグビューに移動します。  VS コードにまだ構成がない場合 `F5` は、Windows または macOS を押すか、緑色の **再生** ボタンを選択します。  ドロップダウンで [ **エッジ** ] を選択します。  `launch.json`次の構成のファイルが表示されます。  
+`Ctrl` + `Shift` + `D` アクティビティバーの (Windows または macOS 上の `Command` + `Shift` + `D` ) **Activity Bar**デバッグビューに移動します。  Visual Studio コードにいずれの構成も含まれていない場合 `F5` は、Windows または macOS を押すか、緑色の **再生** ボタンを選択します。  ドロップダウンで [ **エッジ** ] を選択します。  `launch.json`次の構成のファイルが表示されます。  
 
 ```json
 {
@@ -43,11 +43,11 @@ ms.locfileid: "11182302"
 }
 ```  
 
-`F5`Windows または macOS を押すか、緑色の「**再生**」ボタンをもう一度選択すると、vs コードによって Microsoft Edge \ (EdgeHTML \) が起動し、vs コードから直接ポートで実行している web プロジェクトをデバッグでき `8080` ます。  
+`F5`Windows または macOS を押すか、緑色の [**再生**] ボタンをもう一度選択すると、visual Studio コードが Microsoft Edge \ (EdgeHTML \) を起動し、ポートで実行している Web プロジェクトを `8080` visual studio コードから直接デバッグできます。  
 
 ### Microsoft Edge (Chromium)  
 
-Microsoft edge \ (Chromium \) を起動するには、microsoft edge \ (EdgeHTML \) ではなく、microsoft edge の次のバージョンを起動するために、microsoft edge `version` \ (Chromium \) を起動するバージョンの microsoft edge \ (\) で属性を追加し `stable` `dev` `beta` `canary` ます。 以下の構成では、Microsoft Edge \ (Chromium) のカナリアバージョンが起動されます。  
+Microsoft edge \ (EdgeHTML \) ではなく、microsoft edge \ (Chromium \) を起動するには、microsoft edge \ ( `version` Chromium \) を起動するバージョンの microsoft edge \ (\) を使って、既存の構成に属性を追加するだけ `dev` `beta` `canary` です。  以下の構成では、Microsoft Edge \ (Chromium) のカナリアバージョンが起動されます。  
 
 ```json
 {
@@ -62,9 +62,9 @@ Microsoft edge \ (Chromium \) を起動するには、microsoft edge \ (EdgeHTML
 
 ## Microsoft Edge へのアタッチ  
 
-Microsoft Edge \ (Chromium \) に VS コードをアタッチします。  ターミナルから次のコマンドを実行します。  
+Visual Studio コードを Microsoft Edge \ (Chromium) に添付します。  ターミナルから次のコマンドを実行します。  
 
-```console
+```shell
 start msedge --remote-debugging-port=9222
 ```  
 
@@ -79,19 +79,19 @@ start msedge --remote-debugging-port=9222
 }
 ```  
 
-この構成を現在実行している場合、VS コードは Microsoft Edge \ (Chromium) にアタッチしてデバッグを開始します。  
+この構成を現在実行している場合、Visual Studio コードは Microsoft Edge \ (Chromium \) にアタッチされ、デバッグが開始されます。  
 
-## Microsoft Edge VS コード拡張チームの要素に連絡する    
+## Microsoft Edge Visual Studio コード拡張チームの要素に連絡する    
 
 拡張機能の[GitHub リポジトリ][GithubMicrosoftVscodeEdgeDebug2]で[問題を整理][GithubMicrosoftVscodeEdgeDebug2NewIssue]して、フィードバックを送信します。  `%temp%`名前の付いたディレクトリの各実行に対して作成された debug adapter ログファイルを含めてください `vscode-edge-debug2.txt` 。  このファイルを問題のコメントにドラッグして、GitHub にアップロードします。  
 
-Microsoft Edge VS のコード拡張機能の向上に役立つように、投稿は歓迎されます。  拡張機能の [GitHub リポジトリ][GithubMicrosoftVscodeEdgeDebug2] で始めるのに必要なものをすべて見つけます。  
+Microsoft Edge Visual Studio のコード拡張機能の要素を向上させるために、投稿は歓迎されます。  拡張機能の [GitHub リポジトリ][GithubMicrosoftVscodeEdgeDebug2] で始めるのに必要なものをすべて見つけます。  
 
 
 <!-- image links -->  
 
-<!--[ImageGifDebuggerEdge]: ./media/debugger-for-edge.gif "Debugger for Edge VS Code extension in action"  -->  
-[ImagePngDebuggerEdge]:/media/debugger-for-edge.png "のようなデバッガーで、Edge とコードの拡張が動作しています  
+<!--[ImageGifDebuggerEdge]: ./media/debugger-for-edge.gif "Debugger for Edge Visual Studio Code extension in action"  -->  
+[ImagePngDebuggerEdge]:/media/debugger-for-edge.png "Edge Visual Studio のコード拡張機能が動作しています"  
 
 <!--links -->  
 

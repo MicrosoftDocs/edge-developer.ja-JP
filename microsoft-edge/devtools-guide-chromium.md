@@ -3,17 +3,17 @@ description: Microsoft Edge (Chromium) 開発者ツールについて理解す�
 title: Microsoft Edge (Chromium) 開発者ツール
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 10/22/2020
+ms.date: 10/23/2020
 ms.topic: article
 ms.prod: microsoft-edge
 ms.technology: devtools
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 9f035df5bc80aa6a1df0464eb326e4185e2205d2
-ms.sourcegitcommit: 6e2b26d41a0aa56ac34e6edc7dddd852ddb415b1
+ms.openlocfilehash: ffc31dad9e641adfb9f1ae0b5b88b29192ea4152
+ms.sourcegitcommit: acf8ad7cb6c8ecf83a6170f8eeb9bec32878f8ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "11133905"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "11182499"
 ---
 # Microsoft Edge (Chromium) 開発者ツール  
 
@@ -23,11 +23,11 @@ Web はさまざまな種類のデバイスにわたって使用されていま�
 
 Microsoft Edge をチェックしていて、Chromium ベースのブラウザーで主に開発している場合は、自宅で適切なことを考えてください。  Microsoft Edge \ (Chromium \) 開発者ツールは、既に知っていて使用している開発者ツールと同じ方法で機能します。  詳細については、「 [Microsoft Edge (Chromium) DevTools の新機能][DevtoolsGuideChromiumWhatsNewIndex]」を参照してください。  
 
-:::image type="complex" source="./devtools-guide-chromium/media/devtools.png" alt-text="Microsoft Edge (Chromium) DevTools":::
+:::image type="complex" source="./devtools-guide-chromium/media/devtools.png" alt-text="Microsoft Edge (Chromium) DevTools" lightbox="./devtools-guide-chromium/media/devtools.png":::
    Microsoft Edge (Chromium) DevTools  
 :::image-end:::  
 
-Microsoft edge の次のバージョンを確認していて、以前に Microsoft edge \ (EdgeHTML \) で開発したことがある場合は、Microsoft Edge で web サイトを簡単かつ迅速に構築およびテストするための新しいツールが追加されました。  
+新しい Microsoft Edge をチェックアウトしていて、以前に Microsoft Edge \ (EdgeHTML \) で開発したことがある場合は、Microsoft Edge で web サイトを簡単かつ迅速に構築してテストするための新しいツールがいくつか用意されています。  
 
 ## DevTools を開く  
 
@@ -51,7 +51,7 @@ DevTools を開くには
 
 ## コア ツール  
 
-:::image type="complex" source="./devtools-guide-chromium/media/devtools-core-tools.png" alt-text="Microsoft Edge (Chromium) DevTools":::
+:::image type="complex" source="./devtools-guide-chromium/media/devtools-core-tools.png" alt-text="Microsoft Edge (Chromium) DevTools コアツール" lightbox="./devtools-guide-chromium/media/devtools-core-tools.png":::
    Microsoft Edge (Chromium) DevTools コアツール  
 :::image-end::: 
 
@@ -80,7 +80,7 @@ Web サイトやアプリの構築時に発生する問題の診断とデバッ�
 
 [Chrome Web ストア][GoogleChromeWebstoreExtensions]から拡張機能を追加することもできます。  
 
-:::image type="complex" source="./devtools-guide-chromium/media/allow-extensions-from-stores.png" alt-text="Microsoft Edge (Chromium) DevTools":::
+:::image type="complex" source="./devtools-guide-chromium/media/allow-extensions-from-stores.png" alt-text="Microsoft Edge の Chrome Web ストア" lightbox="./devtools-guide-chromium/media/allow-extensions-from-stores.png":::
    Microsoft Edge の Chrome Web ストア  
 :::image-end:::  
 
@@ -91,4 +91,60 @@ Web サイトやアプリの構築時に発生する問題の診断とデバッ�
 
 [ **Chrome に追加** ] を選択して、Microsoft Edge に devtools 拡張機能を追加します。  
 
-:::image type="complex" source="./devtools-guide-chromium/media/install-extension-from-chrome-store.png" alt-text="Microsoft Edge (Chromium) DevTools"  
+:::image type="complex" source="./devtools-guide-chromium/media/install-extension-from-chrome-store.png" alt-text="Chrome Web ストアから Microsoft Edge に拡張機能を追加する" lightbox="./devtools-guide-chromium/media/install-extension-from-chrome-store.png":::
+   Chrome Web ストアから Microsoft Edge に拡張機能を追加する  
+:::image-end:::  
+
+## ショートカット  
+
+これらのショートカットは、メインの [開発ツール] ウィンドウの制御、すべてのツールの操作、またはその両方を行うことができます。  
+
+| 操作 | Windows/Linux | macOS |  
+|:--- |:--- | :--- |  
+| DevTools の表示/非表示 \ (最後に表示されたパネルに表示される \) | `F12` / `Ctrl`+`Shift`+`I` | `Command`+`Option`+`I` |  
+| コンソールパネルを表示する | `Ctrl`+`Shift`+`J` | `Command`+`Option`+`J` |  
+| サイト上の要素を選択して、[**要素**] パネルで HTML と CSS を表示できる [**要素の検査] モード**で devtools を表示します。 | `Ctrl`+`Shift`+`C` | `Command`+`Option`+`C` |  
+| 設定を表示する | `?` / `Fn`+`F1` | `?` / `Fn`+`F1` |  
+| 次のパネルを表示 | `Ctrl`+`]` | `Command`+`]` |  
+| 前のパネルを表示する | `Ctrl`+`[` | `Command`+`[` |  
+| 使用されている最後の位置に DevTools をドッキングします。  DevTools がセッション全体の既定の位置に留まる場合は、このショートカットでは、DevTools を別のウィンドウにドッキング解除します。 | `Ctrl`+`Shift`+`D` | `Command`+`Shift`+`D` |  
+| **デバイスモード**の切り替え | `Ctrl`+`Shift`+`M` | `Command`+`Shift`+`M` |  
+| [ **要素の検査] モード** を切り替えて、サイトの要素を選択し、[ **要素** ] パネルで HTML と CSS を表示します。 | `Ctrl`+`Shift`+`C` | `Command`+`Shift`+`C` |  
+| コマンドメニューを表示する | `Ctrl`+`Shift`+`P` | `Command`+`Shift`+`P` |  
+| ドロワーの表示/非表示 | `Esc` | `Esc` |  
+| 非.  キャッシュを使用してページが更新されます。  | `F5` / `Ctrl`+`R` | `Command`+`R` |  
+| ハードリフレッシュ。  これにより、Microsoft Edge はリソースをもう一度ダウンロードして、再読み込みします。  使用されているリソースがキャッシュバージョンから取得されている可能性があります。 | `Ctrl`+`F5` / `Ctrl`+`Shift`+`R` | `Command`+`Shift`+`R` |  
+| 現在のパネル内でテキストを検索します。  監査、アプリケーション、セキュリティの各パネルではサポートされません。 | `Ctrl`+`F` | `Command`+`F` |  
+| 引き出しに検索パネルを表示します。これにより、読み込まれたすべてのリソースのテキストを検索することができます。 | `Ctrl`+`Shift`+`F` | `Command`+`Option`+`F` |  
+| [ソース] パネルでファイルを開く | `Ctrl`+`O` / `Ctrl`+`P` | `Command`+`O` / `Command`+`P` |  
+| 拡大 | `Ctrl`+`Shift`+`+` | `Command`+`Shift`+`+` |  
+| 縮小 | `Ctrl`+`-` | `Command`+`-` |  
+| 既定のズームレベルに戻す | `Ctrl`+`0` | `Command`+`0` |  
+| スニペットの実行 | `Ctrl`+`O`または、「」と入力し、その `Ctrl` + `P` `!` 後にスクリプトの名前を入力して、 `Enter` | `Command` + `O` または、「」と入力して、 `Command` + `P` `!` 続けてスクリプトの名前を入力して、 `Enter` |  
+| 編集不可の HTML ソースコードを新しいタブに表示する | `Ctrl`+`U` | 該当せず |  
+
+> [!NOTE]
+> デバッグ中にブレークポイントで一時停止している場合は、[ **更新** ] ショートカットで最初にランタイムが再開されます。  
+
+## 関連項目  
+
+*   [初心者向けの DevTools: HTML と DOM の使用を開始する][DevtoolsGuideChromiumBeginnersHtml]  
+*   [Microsoft Edge (Chromium) DevTools プロトコル][DevtoolsProtocolChromiumIndex]  
+
+## Microsoft Edge DevTools チームと連絡を取る  
+
+[!INCLUDE [contact DevTools team note](./devtools-guide-chromium/includes/contact-devtools-team-note.md)]  
+
+[DevTools の最新機能][DevtoolsGuideChromiumWhatsNewIndex]をプレビューする場合は、夜間にビルドされた[Microsoft Edge カナリア][MicrosoftedgeinsiderDownload]をダウンロードしてください。  
+
+<!-- links -->  
+
+[DevtoolsGuideChromiumBeginnersHtml]: /microsoft-edge/devtools-guide-chromium/beginners/html "初心者向けの DevTools: HTML と DOM の使用を開始する |Microsoft ドキュメント"  
+[DevtoolsGuideChromiumWhatsNewIndex]: /microsoft-edge/devtools-guide-chromium/whats-new/2020/10/devtools "Microsoft Edge (Chromium) DevTools の新機能 |Microsoft ドキュメント"  
+[DevtoolsProtocolChromiumIndex]: /microsoft-edge/devtools-protocol-chromium "Microsoft Edge (Chromium) DevTools Protocol |Microsoft ドキュメント"  
+
+[MicrosoftEdgeAddonsExtensions]: https://microsoftedge.microsoft.com/addons/category/Edge-Extensions "Microsoft Edge アドオン"  
+
+[MicrosoftedgeinsiderDownload]: https://www.microsoftedgeinsider.com/download "Microsoft Edge Insider チャネルをダウンロードする"  
+
+[GoogleChromeWebstoreExtensions]: https://chrome.google.com/webstore/category/extensions "拡張子 |Chrome Web ストア"  

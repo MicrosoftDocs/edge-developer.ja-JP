@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、CoreWebView2、ICoreWebView2Host、browser control、edge html、Windows フォーム、WinForms、WPF、.NET、WinUI、Project レユニオン
-ms.openlocfilehash: 9e5cc3a26f07a11c9fd5c21d62ecafc3ed5103f4
-ms.sourcegitcommit: c619168deea44cdec8ebc80ef9ddf1d91d5f726d
+ms.openlocfilehash: 02d17b05364f02f26a4917b65ac497156be02b2e
+ms.sourcegitcommit: fab44f7e183a3c4f12bf925512fc62d84a4d6edc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "11182184"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "11182368"
 ---
 # Microsoft Edge WebView2 の概要  
 
@@ -97,10 +97,11 @@ WebView2 コントロールを使用してアプリケーションをビルド�
 
 一般的な可用性 \ (GA) またはプレビューバージョンは、次のプログラミング環境で利用できます。  
 
-*   Win32 C/c + + \ (GA \)  
-*   .NET Framework 4.6.2 以降 \ (プレビュー \)  
-*   .NET Core 3.0 以降 \ (プレビュー \)  
-*   [WinUI 3.0][UwpToolkitsWinui3] \ (プレビュー \)  
+*   Win32 C/c + + \ (GA \)
+*   .NET Framework 4.6.2 以降
+*   .NET Core 3.1 以降
+*   .NET 5
+*   [WinUI 3.0][UwpToolkitsWinui3] \ (プレビュー \)
 
 WebView2 アプリケーションは、次のバージョンの Windows で実行できます。  
 
@@ -130,7 +131,8 @@ WebView2 アプリケーションを作成して展開する方法の詳細に�
 #### How-To ガイド  
 
 *   [WebView2 を使用してデバッグする方法][Webview2HowtoDebug]  
-*   [Microsoft Edge ドライバーを使用した WebView2 の自動化とテスト][Webview2HowtoWebdriver]  
+*   [Microsoft Edge ドライバーを使用した WebView2 の自動化とテスト][Webview2HowtoWebdriver]
+
 
 ## Microsoft Edge WebView チームと連絡を取り合う  
 

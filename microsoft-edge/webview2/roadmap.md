@@ -3,21 +3,21 @@ description: WebView2 の次の項目について
 title: Microsoft Edge WebView のロードマップ2
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 10/19/2020
+ms.date: 11/19/2020
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Host、browser control、edge html
-ms.openlocfilehash: 52a2f6d9ef3447955554a5507c3eaab39e6b6a9e
-ms.sourcegitcommit: af91bfc3e6d8afc51f0fbbc0fe392262f424225c
+ms.openlocfilehash: 99e743db0c1fb17ea46405b08e1ed074a3386068
+ms.sourcegitcommit: fab44f7e183a3c4f12bf925512fc62d84a4d6edc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "11120369"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "11182361"
 ---
 # Microsoft Edge WebView2 のロードマップ  
 
-##### 最終更新日: 2020 年10月  
+##### 最終更新日: 2020 年11月  
 
 WebView2 コントロールを使うと、開発者はネイティブアプリケーションに web テクノロジを埋め込むことができます。  次のページは、WebView2 の予想されるロードマップの概要を示しています。  
 
@@ -38,7 +38,7 @@ WebView2 チームは今後の更新プログラムに対して、次の主な�
 :::row-end:::
 :::row:::
    :::column span="1":::
-      修正されたバージョン  
+      修正済みバージョン  
    :::column-end:::
    :::column span="2":::
       *   2020年第4四半期  
@@ -61,7 +61,7 @@ WebView2 チームは今後の更新プログラムに対して、次の主な�
 
 ## 修正されたバージョン  
 
-[固定バージョンの配布モデル][ConceptsDistributionFixedVersionModel] では、ネイティブアプリケーション内に Microsoft Edge バイナリをパッケージ化することができます。  現在、プレビュー版で、2020年4四半期のターゲットとなっています。  
+[固定バージョンの配布モデル][ConceptsDistributionFixedVersionModel] では、ネイティブアプリケーション内に Microsoft Edge バイナリをパッケージ化することができます。  修正されたバージョンは、一般的な可用性 \ (GA) に到達しました。  
 
 ## Ga  
 
@@ -71,11 +71,11 @@ Win32 C/c + + SDK の GA に到達しました。
 
 ### .NET  
 
-.NET SDK は、Win32 C/C + + SDK をラップします。  .NET SDK は、2020年4四半期に Win32 C/c + + GA の後、まもなく GA となります。  
+.NET SDK の GA に到達しました。 
 
 ### WinUI 3.0  
 
-WebView2 には、現在の alpha の [UI 3.0][UwpToolkitsWinui3Index]を使って UWP アプリケーションでアクセスできます。  最新の状態に保つ方法について詳しくは、「 [WINDOWS UI ライブラリのロードマップ][GithubMicrosoftUiXamlRoadmap]」をご覧ください。  
+UWP アプリケーションの WebView2 にアクセスするには、現在、 [WIN UI 3.0][UwpToolkitsWinui3Index]を使用します。  最新の状態に保つ方法について詳しくは、「 [WINDOWS UI ライブラリのロードマップ][GithubMicrosoftUiXamlRoadmap]」をご覧ください。  
 
 <!-- links -->  
 
