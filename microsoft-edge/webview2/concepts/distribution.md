@@ -3,17 +3,17 @@ description: Microsoft Edge WebView2 を使用してアプリをリリースす�
 title: Microsoft Edge WebView2 アプリの配布
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 11/19/2020
+ms.date: 11/23/2020
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、wpf アプリ、wpf、edge、ICoreWebView2、ICoreWebView2Host、browser control、edge html
-ms.openlocfilehash: cbe3fb35bdf64a3627256028940cf868b8b185c2
-ms.sourcegitcommit: fab44f7e183a3c4f12bf925512fc62d84a4d6edc
+ms.openlocfilehash: 0cbaaeade03feac766647c55bb5edabfe8e8456e
+ms.sourcegitcommit: 7b16c3e6eb458e0b2458279c2498597fb227bc8c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "11182410"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "11182910"
 ---
 # WebView2 を使用したアプリの配布  
 
@@ -58,7 +58,7 @@ WebView2 ランタイムは再配布可能なランタイムであり、WebView2
     
 現時点では、ブートストラップとスタンドアロンインストーラーは両方ともコンピューターごとにインストールをサポートします。昇格が必要です。  昇格せずにインストーラーを実行すると、ユーザーにアクセス許可の昇格を促すメッセージが表示されます。  
 
-次のワークフローを使用して、アプリを起動する前にランタイムが既にインストールされていることを確認します。  シナリオによっては、ワークフローを調整できます。  サンプルコードは、[サンプルリポジトリ] [GitHubMicrosoftedgeWebView2samplesWebview2Deployment] で参照できます。  
+次のワークフローを使用して、アプリを起動する前にランタイムが既にインストールされていることを確認します。  シナリオによっては、ワークフローを調整できます。  サンプルの [リポジトリ][GitHubMicrosoftedgeWebView2samplesWebview2Deployment]にはサンプルコードが用意されています。  
 
 #### オンラインのみの展開  
 
@@ -195,6 +195,6 @@ Evergreen ランタイムと比べると、修正されたバージョンには�
 
 [GithubMicrosoftedgeWebviewfeedback]: https://github.com/MicrosoftEdge/WebViewFeedback "WebView のフィードバック |GitHub"  
 
-[GitHubMicrosoftMicrosoftEdgeWebView2SamplesWebview2Deployment]: https://github.com/MicrosoftEdge/WebView2Samples#webview2-deployment "WebView2 展開-MicrosoftEdge/WebView2Samples |GitHub"  
+[GitHubMicrosoftEdgeWebView2SamplesWebview2Deployment]: https://github.com/MicrosoftEdge/WebView2Samples#webview2-deployment "WebView2 展開-MicrosoftEdge/WebView2Samples |GitHub"  
 
 [MicrosoftPlayReady]: https://www.microsoft.com/playready "Microsoft PlayReady"  
