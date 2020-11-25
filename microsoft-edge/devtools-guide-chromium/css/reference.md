@@ -7,12 +7,12 @@ ms.date: 10/19/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: a4c8d5ed7f3cf84f20b4b73531f871e17921b186
-ms.sourcegitcommit: 99eee78698dc95b2a3fa638a5b063ef449899cda
+ms.openlocfilehash: 707841901046db6a7e957771164ffb868900bdd8
+ms.sourcegitcommit: 080759f68a0a158f10dc20d20c14e222ace1be84
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "11125224"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "11190013"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -65,7 +65,7 @@ DevTools の **要素** パネルでは、一度に1つの要素の CSS を表�
 
 <!--todo:  replace "Master" phrasing in code snippet, if possible.  -->  
 
-:::image type="complex" source="../media/css-elements-styles-h1-highlight.msft.png" alt-text="選択された要素の例" lightbox="../media/css-elements-styles-h1-highlight.msft.png":::
+:::image type="complex" source="../media/css-elements-styles-h1-highlight.msft.png" alt-text="ルールが定義されているスタイルシートの表示" lightbox="../media/css-elements-styles-h1-highlight.msft.png":::
   ルールが定義されているスタイルシートの表示  
 :::image-end:::  
 
@@ -84,7 +84,7 @@ DevTools の **要素** パネルでは、一度に1つの要素の CSS を表�
 > [!NOTE]
 > 次の図では、[ **計算** ] タブに、現在選択されている要素に適用されている CSS プロパティが表示されて `h1` います。  
 
-:::image type="complex" source="../media/css-elements-computed-h1.msft.png" alt-text="選択された要素の例" lightbox="../media/css-elements-computed-h1.msft.png":::
+:::image type="complex" source="../media/css-elements-computed-h1.msft.png" alt-text="[計算] タブ" lightbox="../media/css-elements-computed-h1.msft.png":::
    [ **計算** ] タブ  
 :::image-end:::  
 
@@ -105,7 +105,7 @@ DevTools の **要素** パネルでは、一度に1つの要素の CSS を表�
 > [!NOTE]
 > 次の図では、[**スタイル**] タブの**ボックスモデル**図は、現在選択されている要素のボックスモデルを示して `h1` います。  
 
-:::image type="complex" source="../media/css-elements-styles-h1-2.msft.png" alt-text="選択された要素の例" lightbox="../media/css-elements-styles-h1-2.msft.png":::
+:::image type="complex" source="../media/css-elements-styles-h1-2.msft.png" alt-text="ボックスモデル図" lightbox="../media/css-elements-styles-h1-2.msft.png":::
    **ボックスモデル**図  
 :::image-end:::  
 
@@ -118,14 +118,14 @@ DevTools の **要素** パネルでは、一度に1つの要素の CSS を表�
 > [!NOTE]
 > 次の図では、[ **スタイル** ] タブをフィルター処理して、検索クエリを含むルールのみを表示してい `color` ます。  
 
-:::image type="complex" source="../media/css-elements-styles-filter-color.msft.png" alt-text="選択された要素の例" lightbox="../media/css-elements-styles-filter-color.msft.png":::
+:::image type="complex" source="../media/css-elements-styles-filter-color.msft.png" alt-text="[スタイル] タブをフィルター処理する" lightbox="../media/css-elements-styles-filter-color.msft.png":::
    [ **スタイル** ] タブをフィルター処理する  
 :::image-end:::  
 
 > [!NOTE]
 > 次の図では、[ **計算** ] タブをフィルター処理して、検索クエリを含む宣言のみが表示されるようにしてい `100%` ます。  
 
-:::image type="complex" source="../media/css-elements-computed-filter-100.msft.png" alt-text="選択された要素の例" lightbox="../media/css-elements-computed-filter-100.msft.png":::
+:::image type="complex" source="../media/css-elements-computed-filter-100.msft.png" alt-text="計算されたタブをフィルター処理する" lightbox="../media/css-elements-computed-filter-100.msft.png":::
    **計算**されたタブをフィルター処理する  
 :::image-end:::  
 
@@ -141,7 +141,7 @@ DevTools の **要素** パネルでは、一度に1つの要素の CSS を表�
 > [!NOTE]
 > 次の図では、 `:hover` 擬似クラスを切り替えます。  ビューポートで、宣言が要素に適用されていることを確認し `background-color: cornflowerblue` ます。これは、要素が実際にマウスをポイントしていない場合でも同様です。  
 
-:::image type="complex" source="../media/css-elements-styles-hov-hover.msft.png" alt-text="選択された要素の例" lightbox="../media/css-elements-styles-hov-hover.msft.png":::
+:::image type="complex" source="../media/css-elements-styles-hov-hover.msft.png" alt-text="切り替え: hover 擬似クラス" lightbox="../media/css-elements-styles-hov-hover.msft.png":::
    `:hover`擬似クラスの切り替え  
 :::image-end:::  
 
@@ -164,12 +164,12 @@ DevTools の **要素** パネルでは、一度に1つの要素の CSS を表�
     
     :::row:::
        :::column span="":::
-          :::image type="complex" source="../media/css-console-command-menu-coverage.msft.png" alt-text="選択された要素の例" lightbox="../media/css-console-command-menu-coverage.msft.png":::
+          :::image type="complex" source="../media/css-console-command-menu-coverage.msft.png" alt-text="[コマンド] メニューから [カバレッジ] タブを開く" lightbox="../media/css-console-command-menu-coverage.msft.png":::
              [**コマンド] メニュー**から [**カバレッジ**] タブを開く  
           :::image-end:::  
        :::column-end:::
        :::column span="":::
-          :::image type="complex" source="../media/css-console-qs-coverage-empty.msft.png" alt-text="選択された要素の例" lightbox="../media/css-console-qs-coverage-empty.msft.png":::
+          :::image type="complex" source="../media/css-console-qs-coverage-empty.msft.png" alt-text="[カバレッジ] タブ" lightbox="../media/css-console-qs-coverage-empty.msft.png":::
              [ **カバレッジ** ] タブ  
           :::image-end:::  
        :::column-end:::
@@ -177,7 +177,7 @@ DevTools の **要素** パネルでは、一度に1つの要素の CSS を表�
     
 1.  [ **インストルメントの開始] を選択し、ページを更新** し ![ ます (インストルメント化を開始し、ページを更新し ][ImageRefreshIcon] ます)。  ページの更新と [カバレッジ] タブには、ブラウザーが読み込む各ファイルからの CSS (および JavaScript \) の使用量の概要が表示されます。  緑色は、使用されている CSS を表します。  赤は未使用の CSS を示します。  
     
-    :::image type="complex" source="../media/css-console-qs-coverage-run.msft.png" alt-text="選択された要素の例" lightbox="../media/css-console-qs-coverage-run.msft.png":::
+    :::image type="complex" source="../media/css-console-qs-coverage-run.msft.png" alt-text="CSS (および JavaScript) が使用されていて未使用かどうかの概要" lightbox="../media/css-console-qs-coverage-run.msft.png":::
        CSS (および JavaScript \) が使用されていて未使用である割合の概要  
     :::image-end:::  
 
@@ -186,7 +186,7 @@ DevTools の **要素** パネルでは、一度に1つの要素の CSS を表�
     > [!NOTE]
     > 次の図では、145 ~ 147、149から151の行 `b66bc881.site-ltr.css` は未使用であり、行163から166に使用されています。  
     
-    :::image type="complex" source="../media/css-sources-css-coverage.msft.png" alt-text="選択された要素の例" lightbox="../media/css-sources-css-coverage.msft.png":::
+    :::image type="complex" source="../media/css-sources-css-coverage.msft.png" alt-text="使用されている、未使用の CSS の行単位の内訳" lightbox="../media/css-sources-css-coverage.msft.png":::
        使用されている、未使用の CSS の行単位の内訳  
     :::image-end:::  
     
@@ -221,7 +221,7 @@ DevTools の **要素** パネルでは、一度に1つの要素の CSS を表�
 > [!NOTE]
 > 次の図では、 `margin-top` と `background-color` プロパティが選択された要素に適用されています。  **DOM ツリー**で、宣言が要素の属性に反映されていることを確認し `style` ます。  
 
-:::image type="complex" source="../media/css-elements-styles-margin-top-background-color.msft.png" alt-text="選択された要素の例" lightbox="../media/css-elements-styles-margin-top-background-color.msft.png":::
+:::image type="complex" source="../media/css-elements-styles-margin-top-background-color.msft.png" alt-text="インライン宣言を追加する" lightbox="../media/css-elements-styles-margin-top-background-color.msft.png":::
    インライン宣言を追加する  
 :::image-end:::  
 
@@ -234,7 +234,7 @@ DevTools の **要素** パネルでは、一度に1つの要素の CSS を表�
 1.  プロパティ名を入力して、を選択し `Enter` ます。  
 1.  そのプロパティの有効な値を入力して、を選択し `Enter` ます。  
 
-:::image type="complex" source="../media/css-elements-styles-border-bottom-style.msft.png" alt-text="選択された要素の例" lightbox="../media/css-elements-styles-border-bottom-style.msft.png":::
+:::image type="complex" source="../media/css-elements-styles-border-bottom-style.msft.png" alt-text="スタイルルールへの宣言の追加" lightbox="../media/css-elements-styles-border-bottom-style.msft.png":::
    `border-bottom-style:groove`スタイルルールに宣言を追加する  
 :::image-end:::  
 
@@ -242,7 +242,7 @@ DevTools の **要素** パネルでは、一度に1つの要素の CSS を表�
 
 宣言の名前または値を選んで編集し、それを変更します。  すばやく値を増減するためのショートカットキーについては、「 [宣言の値を変更](#change-declaration-values-with-keyboard-shortcuts) する」を参照してください `0.1` `1` `10` `100` 。  
 
-:::image type="complex" source="../media/css-elements-styles-border-bottom-style-dropdown.msft.png" alt-text="選択された要素の例" lightbox="../media/css-elements-styles-border-bottom-style-dropdown.msft.png":::
+:::image type="complex" source="../media/css-elements-styles-border-bottom-style-dropdown.msft.png" alt-text="宣言の値を変更する" lightbox="../media/css-elements-styles-border-bottom-style-dropdown.msft.png":::
    宣言の値を変更する `border-bottom-style`  
 :::image-end:::  
 
@@ -266,7 +266,7 @@ DevTools の **要素** パネルでは、一度に1つの要素の CSS を表�
 1.  [ **Add New class** ] テキストボックスにクラスの名前を入力します。  
 1.  を選択し `Enter` ます。  
 
-:::image type="complex" source="../media/css-elements-styles-filter-classes.msft.png" alt-text="選択された要素の例" lightbox="../media/css-elements-styles-filter-classes.msft.png":::
+:::image type="complex" source="../media/css-elements-styles-filter-classes.msft.png" alt-text="[要素クラス] ウィンドウ" lightbox="../media/css-elements-styles-filter-classes.msft.png":::
    [ **要素クラス** ] ウィンドウ  
 :::image-end:::  
 
@@ -288,7 +288,7 @@ DevTools の **要素** パネルでは、一度に1つの要素の CSS を表�
 > [!NOTE]
 > 次の図では、 `h1.devsite-page-title` **新しいスタイルルール**を選択すると、devtools でスタイルルールが追加されます。  
 
-:::image type="complex" source="../media/css-elements-styles-style-new.msft.png" alt-text="選択された要素の例" lightbox="../media/css-elements-styles-style-new.msft.png":::
+:::image type="complex" source="../media/css-elements-styles-style-new.msft.png" alt-text="新しいスタイルルールを追加する" lightbox="../media/css-elements-styles-style-new.msft.png":::
    新しいスタイルルールを追加する  
 :::image-end:::  
 
@@ -296,7 +296,7 @@ DevTools の **要素** パネルでは、一度に1つの要素の CSS を表�
 
 [新しいスタイルルールを追加](#add-a-style-rule)するときに、[**新しい**スタイルルール] (新しいスタイルルール) を選んで保持して、 ![ ][ImageNewStyleRuleIcon] スタイルルールを追加するスタイルを選択します。  
 
-:::image type="complex" source="../media/css-elements-styles-style-new-select-existing.msft.png" alt-text="選択された要素の例" lightbox="../media/css-elements-styles-style-new-select-existing.msft.png":::
+:::image type="complex" source="../media/css-elements-styles-style-new-select-existing.msft.png" alt-text="スタイルシートを選択する" lightbox="../media/css-elements-styles-style-new-select-existing.msft.png":::
    スタイルシートを選択する  
 :::image-end:::  
 
@@ -308,7 +308,7 @@ DevTools の **要素** パネルでは、一度に1つの要素の CSS を表�
 1.  [[ **その他の操作** ] ツールバーを](#reveal-the-more-actions-toolbar)表示します。  
 1.  [ **スタイルルールの挿入** ] を選択します (下に ![ スタイルルールを挿入し ][ImageNewStyleRuleIcon] ます)。  
 
-:::image type="complex" source="../media/css-elements-styles-insert-style-rule-below.msft.png" alt-text="選択された要素の例" lightbox="../media/css-elements-styles-insert-style-rule-below.msft.png":::
+:::image type="complex" source="../media/css-elements-styles-insert-style-rule-below.msft.png" alt-text="下にスタイルルールを挿入する" lightbox="../media/css-elements-styles-insert-style-rule-below.msft.png":::
    **下にスタイルルールを挿入する**  
 :::image-end:::  
 
@@ -326,7 +326,7 @@ DevTools の **要素** パネルでは、一度に1つの要素の CSS を表�
     > [!NOTE]
     > 次の図では、スタイルルールにマウスポインターを合わせる `.header-holder.has-default-focus` と、[スタイルルール] セクションの右下に [ **その他のアクション** ] が現れています。  
     
-    :::image type="complex" source="../media/css-elements-styles-new-rule-styles.msft.png" alt-text="選択された要素の例" lightbox="../media/css-elements-styles-new-rule-styles.msft.png":::
+    :::image type="complex" source="../media/css-elements-styles-new-rule-styles.msft.png" alt-text="その他のアクションを表示" lightbox="../media/css-elements-styles-new-rule-styles.msft.png":::
        **その他のアクション**を表示 \ ( `...` \)  
     :::image-end:::  
     
@@ -335,7 +335,7 @@ DevTools の **要素** パネルでは、一度に1つの要素の CSS を表�
     > [!NOTE]
     > [ **次のスタイルルールの挿入** アクションを実行すると、 **その他の操作**をマウスでポイントしたときに、次のように  
     
-    :::image type="complex" source="../media/css-elements-styles-rule-more-options-insert-style-rule-below.msft.png" alt-text="選択された要素の例" lightbox="../media/css-elements-styles-rule-more-options-insert-style-rule-below.msft.png":::
+    :::image type="complex" source="../media/css-elements-styles-rule-more-options-insert-style-rule-below.msft.png" alt-text="[その他の操作] ツールバー" lightbox="../media/css-elements-styles-rule-more-options-insert-style-rule-below.msft.png":::
        [ **その他の操作** ] ツールバー  
     :::image-end:::  
     
@@ -350,7 +350,7 @@ Folllwoing アクションを完了して \ (またはオフ) の1つの宣言�
 > [!NOTE]
 > 次の図では、 `margin-top` 現在選択されている要素のプロパティがトグルオフになっています。  
 
-:::image type="complex" source="../media/css-elements-styles-rule-deactivated.msft.png" alt-text="選択された要素の例" lightbox="../media/css-elements-styles-rule-deactivated.msft.png":::
+:::image type="complex" source="../media/css-elements-styles-rule-deactivated.msft.png" alt-text="宣言を切り替える" lightbox="../media/css-elements-styles-rule-deactivated.msft.png":::
    宣言を切り替える  
 :::image-end:::  
 
@@ -362,7 +362,7 @@ Folllwoing アクションを完了して \ (またはオフ) の1つの宣言�
 1.  [[ **その他の操作** ] ツールバーを](#reveal-the-more-actions-toolbar)表示します。  
 1.  [ **背景色の追加** ] を選択し ![ ます (背景色の追加アイコン ][ImageAddBackgroundColorIcon] \)。  
 
-:::image type="complex" source="../media/css-elements-styles-rule-add-background-color.msft.png" alt-text="選択された要素の例" lightbox="../media/css-elements-styles-rule-add-background-color.msft.png":::
+:::image type="complex" source="../media/css-elements-styles-rule-add-background-color.msft.png" alt-text="背景色を追加する" lightbox="../media/css-elements-styles-rule-add-background-color.msft.png":::
    **背景色を追加する**  
 :::image-end:::  
 
@@ -374,7 +374,7 @@ Folllwoing アクションを完了して \ (またはオフ) の1つの宣言�
 1.  [[ **その他の操作** ] ツールバーを](#reveal-the-more-actions-toolbar)表示します。  
 1.  [ **色の追加** ![ ] (色の追加アイコン ][ImageAddColorIcon] \) を選びます。  
 
-:::image type="complex" source="../media/css-elements-styles-rule-add-color.msft.png" alt-text="選択された要素の例" lightbox="../media/css-elements-styles-rule-add-color.msft.png":::
+:::image type="complex" source="../media/css-elements-styles-rule-add-color.msft.png" alt-text="色を追加する" lightbox="../media/css-elements-styles-rule-add-color.msft.png":::
    **色を追加する**  
 :::image-end:::  
 
@@ -386,7 +386,7 @@ Folllwoing アクションを完了して \ (またはオフ) の1つの宣言�
 1.  [[ **その他の操作** ] ツールバーを](#reveal-the-more-actions-toolbar)表示します。  
 1.  [ **Add Box shadow** ] ( ![ box shadow icon を追加) を選び ][ImageAddBoxShadowIcon] ます。  
 
-:::image type="complex" source="../media/css-elements-styles-rule-add-box-shadow.msft.png" alt-text="選択された要素の例" lightbox="../media/css-elements-styles-rule-add-box-shadow.msft.png":::
+:::image type="complex" source="../media/css-elements-styles-rule-add-box-shadow.msft.png" alt-text="ボックスの影を追加する" lightbox="../media/css-elements-styles-rule-add-box-shadow.msft.png":::
    **ボックスの影を追加する**  
 :::image-end:::  
 
@@ -398,7 +398,7 @@ Folllwoing アクションを完了して \ (またはオフ) の1つの宣言�
 1.  [[ **その他の操作** ] ツールバーを](#reveal-the-more-actions-toolbar)表示します。  
 1.  [ **テキストの影** を追加 ![ ] を選び ][ImageAddTextShadowIcon] ます。  
 
-:::image type="complex" source="../media/css-elements-styles-rule-add-text-shadow.msft.png" alt-text="選択された要素の例" lightbox="../media/css-elements-styles-rule-add-text-shadow.msft.png":::
+:::image type="complex" source="../media/css-elements-styles-rule-add-text-shadow.msft.png" alt-text="テキストの影を追加する" lightbox="../media/css-elements-styles-rule-add-text-shadow.msft.png":::
    **テキストの影を追加する**  
 :::image-end:::  
 
@@ -414,19 +414,19 @@ Folllwoing アクションを完了して \ (またはオフ) の1つの宣言�
     > [!NOTE]
     > 次の図では、左側の小さな四角形 `rgba(0, 0, 0, 0.7)` がその色のプレビューです。  
     
-    :::image type="complex" source="../media/css-elements-styles-rule-overlay-color-box.msft.png" alt-text="選択された要素の例" lightbox="../media/css-elements-styles-rule-overlay-color-box.msft.png":::
+    :::image type="complex" source="../media/css-elements-styles-rule-overlay-color-box.msft.png" alt-text="色のプレビュー" lightbox="../media/css-elements-styles-rule-overlay-color-box.msft.png":::
        色のプレビュー  
     :::image-end:::  
     
 1.  プレビューを選択して、 **カラーピッカー**を開きます。  
     
-    :::image type="complex" source="../media/css-elements-styles-rule-color-picker.msft.png" alt-text="選択された要素の例" lightbox="../media/css-elements-styles-rule-color-picker.msft.png":::
+    :::image type="complex" source="../media/css-elements-styles-rule-color-picker.msft.png" alt-text="色のパレット" lightbox="../media/css-elements-styles-rule-color-picker.msft.png":::
        **色のパレット**  
     :::image-end:::  
     
 次の図と、 **カラーピッカー**の各 UI 要素のはを示します。  
 
-:::image type="complex" source="../media/css-elements-styles-rule-color-picker-annotated.msft.png" alt-text="選択された要素の例" lightbox="../media/css-elements-styles-rule-color-picker-annotated.msft.png":::
+:::image type="complex" source="../media/css-elements-styles-rule-color-picker-annotated.msft.png" alt-text="カラーピッカーの注釈" lightbox="../media/css-elements-styles-rule-color-picker-annotated.msft.png":::
    **カラーピッカー**の注釈  
 :::image-end:::  
 
@@ -540,7 +540,7 @@ Folllwoing アクションを完了して \ (またはオフ) の1つの宣言�
     > [!NOTE]
     > 次の図では、 **色のパレット** に現在の色の値が表示されてい `rgba(0,0,0,0.7)` ます。これは黒に近くなります。  特定の色を、選択した後にビューポートで現在強調表示されている黒のバージョンに変更する必要があります。  
     
-    :::image type="complex" source="../media/css-color-picker-eye-dropper.msft.png" alt-text="選択された要素の例" lightbox="../media/css-color-picker-eye-dropper.msft.png":::
+    :::image type="complex" source="../media/css-color-picker-eye-dropper.msft.png" alt-text="スポイトを使用する" lightbox="../media/css-color-picker-eye-dropper.msft.png":::
        スポイトを使用する  
     :::image-end:::  
     

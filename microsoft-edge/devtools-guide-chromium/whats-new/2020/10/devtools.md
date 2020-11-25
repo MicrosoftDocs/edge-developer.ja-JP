@@ -7,12 +7,12 @@ ms.date: 10/22/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 0e4b1972918797d69e2068236f6d1336c54cc858
-ms.sourcegitcommit: 6e2b26d41a0aa56ac34e6edc7dddd852ddb415b1
+ms.openlocfilehash: b972468ad21f3a64985a00aecbe29836032b3334
+ms.sourcegitcommit: 080759f68a0a158f10dc20d20c14e222ace1be84
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "11134103"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "11190006"
 ---
 # DevTools の新機能 (Microsoft Edge 87)  
 
@@ -41,14 +41,14 @@ DevTools では、上と下のパネル間の移動ツールがサポートさ�
    :::column span="":::
       一番上のツールを下に移動するには、タブをポイントしてコンテキストメニューを開き (\ を右クリックし)、[ **下へ移動**] を選択します。  
       
-      :::image type="complex" source="../../media/2020/10/move-to-bottom.msft.png" alt-text="ローカライズされていないフィルターを含むネットワークツール" lightbox="../../media/2020/10/move-to-bottom.msft.png":::
+      :::image type="complex" source="../../media/2020/10/move-to-bottom.msft.png" alt-text="下へ移動" lightbox="../../media/2020/10/move-to-bottom.msft.png":::
          下へ移動  
       :::image-end:::  
    :::column-end:::
    :::column span="":::
       一番下にあるツールを一番上に移動するには、タブ上にカーソルを置いて、コンテキストメニュー \ (右クリック \) を開き、[ **先頭へ移動**] を選びます。  
       
-      :::image type="complex" source="../../media/2020/10/move-to-top.msft.png" alt-text="ローカライズされていないフィルターを含むネットワークツール" lightbox="../../media/2020/10/move-to-top.msft.png":::
+      :::image type="complex" source="../../media/2020/10/move-to-top.msft.png" alt-text="先頭に移動" lightbox="../../media/2020/10/move-to-top.msft.png":::
          先頭に移動  
       :::image-end:::  
    :::column-end:::
@@ -56,7 +56,7 @@ DevTools では、上と下のパネル間の移動ツールがサポートさ�
 
 ## ネットワークコンソールを使用した保存とエクスポート  
 
-:::image type="complex" source="../../media/2020/06/experimental-tag-14px.msft.png" alt-text="ローカライズされていないフィルターを含むネットワークツール":::
+:::image type="complex" source="../../media/2020/06/experimental-tag-14px.msft.png" alt-text="実験的機能":::
    実験的機能  
 :::image-end:::  
 
@@ -69,12 +69,12 @@ Chromium のオープンソースプロジェクトでこの機能に関する�
 
 :::row:::
    :::column span="":::
-      :::image type="complex" source="../../media/2020/10/network-console-environments-new-name.msft.png" alt-text="ローカライズされていないフィルターを含むネットワークツール" lightbox="../../media/2020/10/network-console-environments-new-name.msft.png":::
+      :::image type="complex" source="../../media/2020/10/network-console-environments-new-name.msft.png" alt-text="新しい環境の名前を入力する" lightbox="../../media/2020/10/network-console-environments-new-name.msft.png":::
          新しい環境の名前を入力する  
       :::image-end:::  
    :::column-end:::
    :::column span="":::
-      :::image type="complex" source="../../media/2020/10/network-console-environments-new-format.msft.png" alt-text="ローカライズされていないフィルターを含むネットワークツール" lightbox="../../media/2020/10/network-console-environments-new-format.msft.png":::
+      :::image type="complex" source="../../media/2020/10/network-console-environments-new-format.msft.png" alt-text="新しい環境の形式を選ぶ" lightbox="../../media/2020/10/network-console-environments-new-format.msft.png":::
          新しい環境の形式を選ぶ  
       :::image-end:::  
    :::column-end:::
@@ -82,7 +82,7 @@ Chromium のオープンソースプロジェクトでこの機能に関する�
 
 ## 強化された CSS Grid ツール  
 
-:::image type="complex" source="../../media/2020/06/experimental-tag-14px.msft.png" alt-text="ローカライズされていないフィルターを含むネットワークツール":::
+:::image type="complex" source="../../media/2020/06/experimental-tag-14px.msft.png" alt-text="実験的機能":::
    実験的機能  
 :::image-end:::  
 
@@ -95,13 +95,13 @@ Microsoft Edge DevTools では、CSS グリッドの検査、表示、デバッ�
     
 これらの機能は、既定で有効になっています。  機能の詳細については、「 [CSS グリッド][DevtoolsCssGrid]」を参照してください。  Chromium のオープンソースプロジェクトでこの機能の履歴を確認するには、[懸案事項の [#1047356][CR1047356]に移動します。  さらに、Microsoft Edge DevTools チームでは、Chromium コミュニティを使用して、新しい flexbox ツール機能を DevTools に追加しています。  Chromium のオープンソースプロジェクトの flexbox ツーリングでの更新については、[問題の [#1136394][CR1136394]] に移動します。  
 
-:::image type="complex" source="../../media/2020/10/grid-layout-pane.msft.png" alt-text="ローカライズされていないフィルターを含むネットワークツール" lightbox="../../media/2020/10/grid-layout-pane.msft.png":::
+:::image type="complex" source="../../media/2020/10/grid-layout-pane.msft.png" alt-text="グリッド付きレイアウトツール" lightbox="../../media/2020/10/grid-layout-pane.msft.png":::
    グリッド付き**レイアウト**ツール  
 :::image-end:::  
 
 ## 設定のショートカットキーをカスタマイズする  
 
-:::image type="complex" source="../../media/2020/06/experimental-tag-14px.msft.png" alt-text="ローカライズされていないフィルターを含むネットワークツール":::
+:::image type="complex" source="../../media/2020/06/experimental-tag-14px.msft.png" alt-text="実験的機能":::
    実験的機能  
 :::image-end:::  
 
@@ -109,7 +109,7 @@ DevTools で操作のキーボードショートカットをカスタマイズ�
 
 実験を有効にするには、「 [実験的な機能][DevtoolsExperimentalFeaturesTurnOnExperimentalFeatures] を有効にする」に移動し、[ショートカットキーを **有効**にする] の横にあるチェックボックスをオンにします。  ショートカットのカスタマイズと編集について詳しくは、「 [キーボードショートカットエディターの実験的機能を有効][DevtoolsExperimentalFeaturesEnableKeyboardShortcutEditor]にする」を参照してください。  Chromium のオープンソースプロジェクトでこの機能に関するリアルタイムの更新を確認するには、[問題の [#174309][CR174309]] に移動します。  
 
-:::image type="complex" source="../../media/2020/10/custom-shortcut-pause-script.msft.png" alt-text="ローカライズされていないフィルターを含むネットワークツール" lightbox="../../media/2020/10/custom-shortcut-pause-script.msft.png":::
+:::image type="complex" source="../../media/2020/10/custom-shortcut-pause-script.msft.png" alt-text="スクリプトを一時停止するためのカスタムショートカット" lightbox="../../media/2020/10/custom-shortcut-pause-script.msft.png":::
    スクリプトを一時停止するためのカスタムショートカット  
 :::image-end:::  
 
@@ -125,12 +125,12 @@ Visual studio**コードおよび visual studio コード拡張**用の**要素*
 
 :::row:::
    :::column span="":::
-      :::image type="complex" source="../../media/2020/10/microsoft-edge-tools-full-browser.msft.png" alt-text="ローカライズされていないフィルターを含むネットワークツール" lightbox="../../media/2020/10/microsoft-edge-tools-full-browser.msft.png":::
+      :::image type="complex" source="../../media/2020/10/microsoft-edge-tools-full-browser.msft.png" alt-text="完全ブラウザーモードのスクリーンショットで拡張機能を使用する" lightbox="../../media/2020/10/microsoft-edge-tools-full-browser.msft.png":::
          完全ブラウザーモードのスクリーンショットで拡張機能を使用する  
       :::image-end:::  
    :::column-end:::
    :::column span="":::
-      :::image type="complex" source="../../media/2020/10/microsoft-edge-tools-headless.msft.png" alt-text="ローカライズされていないフィルターを含むネットワークツール" lightbox="../../media/2020/10/microsoft-edge-tools-headless.msft.png":::
+      :::image type="complex" source="../../media/2020/10/microsoft-edge-tools-headless.msft.png" alt-text="ヘッドレスモードのスクリーンショットで拡張機能を使用する" lightbox="../../media/2020/10/microsoft-edge-tools-headless.msft.png":::
          ヘッドレスモードのスクリーンショットで拡張機能を使用する  
       :::image-end:::  
    :::column-end:::
@@ -154,12 +154,12 @@ Visual studio**コードおよび visual studio コード拡張**用の**要素*
 
 :::row:::
    :::column span="":::
-      :::image type="complex" source="../../media/2020/10/more-tools-webauthn.msft.png" alt-text="ローカライズされていないフィルターを含むネットワークツール" lightbox="../../media/2020/10/more-tools-webauthn.msft.png":::
+      :::image type="complex" source="../../media/2020/10/more-tools-webauthn.msft.png" alt-text="[WebAuthn] ツールを開く" lightbox="../../media/2020/10/more-tools-webauthn.msft.png":::
          [ **WebAuthn** ] ツールを開く  
       :::image-end:::  
    :::column-end:::  
    :::column span="":::
-      :::image type="complex" source="../../media/2020/10/webauthn-enable-virtual-auth.msft.png" alt-text="ローカライズされていないフィルターを含むネットワークツール" lightbox="../../media/2020/10/webauthn-enable-virtual-auth.msft.png":::
+      :::image type="complex" source="../../media/2020/10/webauthn-enable-virtual-auth.msft.png" alt-text="WebAuthn ツール" lightbox="../../media/2020/10/webauthn-enable-virtual-auth.msft.png":::
          **WebAuthn** ツール  
       :::image-end:::  
    :::column-end:::
@@ -173,12 +173,12 @@ Visual studio**コードおよび visual studio コード拡張**用の**要素*
 
 :::row:::
    :::column span="":::
-      :::image type="complex" source="../../media/2020/10/computed-sidebar-pane.msft.png" alt-text="ローカライズされていないフィルターを含むネットワークツール" lightbox="../../media/2020/10/computed-sidebar-pane.msft.png":::
+      :::image type="complex" source="../../media/2020/10/computed-sidebar-pane.msft.png" alt-text="[計算されたサイドバー] ウィンドウを開く" lightbox="../../media/2020/10/computed-sidebar-pane.msft.png":::
          [計算された **サイドバー** ] ウィンドウを開く  
       :::image-end:::  
    :::column-end:::  
    :::column span="":::
-      :::image type="complex" source="../../media/2020/10/computed-sidebar-pane-open.msft.png" alt-text="ローカライズされていないフィルターを含むネットワークツール" lightbox="../../media/2020/10/computed-sidebar-pane-open.msft.png":::
+      :::image type="complex" source="../../media/2020/10/computed-sidebar-pane-open.msft.png" alt-text="計算されたサイドバーウィンドウ" lightbox="../../media/2020/10/computed-sidebar-pane-open.msft.png":::
          **計算** されたサイドバーウィンドウ  
       :::image-end:::  
    :::column-end:::
@@ -188,7 +188,7 @@ Visual studio**コードおよび visual studio コード拡張**用の**要素*
 
 適用した CSS のスクロールを減らして、CSS のプロパティをカテゴリ別にグループ化するには、[ **計算** ] ウィンドウの [カテゴリ別] をグループ化します。  CSS を検査しながら、一連の関連するプロパティに対して選択的にフォーカスを設定することもできます。  **要素**ツールで要素を選択します。  [CSS のプロパティ] をグループ化またはグループ解除するには、[ **グループ化** ] チェックボックスをオンにします。  Chromium のオープンソースプロジェクトでこの機能に関するリアルタイムの更新を確認するには、[ [#1096230][CR1096230]]、[ [#1084673][CR1084673]]、[ [#1106251][CR1106251]] に移動します。  
 
-:::image type="complex" source="../../media/2020/10/grouping-css-prop.msft.png" alt-text="ローカライズされていないフィルターを含むネットワークツール" lightbox="../../media/2020/10/grouping-css-prop.msft.png":::
+:::image type="complex" source="../../media/2020/10/grouping-css-prop.msft.png" alt-text="CSS プロパティのグループ化" lightbox="../../media/2020/10/grouping-css-prop.msft.png":::
    CSS プロパティのグループ化  
 :::image-end:::  
 
@@ -210,7 +210,7 @@ performance.mark('end');
 
 次に、 [パフォーマンス][DevtoolsGuideChromiumEvaluatePerformanceReference] ツールを開き、[ **タイミング] セクション** に移動して、JavaScript コードを記録します。  `performance.mark()`追加したイベントが記録に表示されるようになりました。  
 
-:::image type="complex" source="../../media/2020/10/perf-mark.msft.png" alt-text="ローカライズされていないフィルターを含むネットワークツール" lightbox="../../media/2020/10/perf-mark.msft.png":::
+:::image type="complex" source="../../media/2020/10/perf-mark.msft.png" alt-text="パフォーマンス。イベントをマークする" lightbox="../../media/2020/10/perf-mark.msft.png":::
    `performance.mark` 事象  
 :::image-end:::  
 
@@ -218,7 +218,7 @@ performance.mark('end');
 
 ネットワークツールの新規とキーワードを使って、 `resource-type` `url` ネットワーク要求をフィルター処理します。 **Network**  たとえば、画像で `resource-type:image` あるネットワーク要求にフォーカスするために使用します。  
 
-:::image type="complex" source="../../media/2020/10/network-resource-type-filter.msft.png" alt-text="ローカライズされていないフィルターを含むネットワークツール" lightbox="../../media/2020/10/network-resource-type-filter.msft.png":::
+:::image type="complex" source="../../media/2020/10/network-resource-type-filter.msft.png" alt-text="リソースの種類フィルター" lightbox="../../media/2020/10/network-resource-type-filter.msft.png":::
    リソースの種類フィルター  
 :::image-end:::  
 
@@ -230,7 +230,7 @@ performance.mark('end');
 
 `reporting to`[**セキュリティ & 分離**] セクションで、cross-origin Embedder POLICY \ (coep \) と cross-origin Opener POLICY \ (co-op) エンドポイントを表示します。  [レポート API][MdnReportingApi]では、新しい HTTP ヘッダーが定義され `Report-To` ています。これにより、ブラウザーのサーバーエンドポイントを指定して、警告やエラーを送信できます。  Chromium のオープンソースプロジェクトでこの機能に関するリアルタイムの更新を確認するには、[問題の [#1051466][CR1051466]] に移動します。  
 
-:::image type="complex" source="../../media/2020/10/https_first_party_test_glitch_me_coop-1.msft.png" alt-text="ローカライズされていないフィルターを含むネットワークツール" lightbox="../../media/2020/10/https_first_party_test_glitch_me_coop-1.msft.png":::
+:::image type="complex" source="../../media/2020/10/https_first_party_test_glitch_me_coop-1.msft.png" alt-text="レポート終了のエンドポイント" lightbox="../../media/2020/10/https_first_party_test_glitch_me_coop-1.msft.png":::
    `reporting to`エンドポイント  
 :::image-end:::  
 
@@ -238,13 +238,13 @@ performance.mark('end');
 
 `report-only`DEVTOOLS と co-op のラベルが表示されるようになりました。これは、モードに設定されてい `report-only` ます。  Chromium のオープンソースプロジェクトでこの機能に関するリアルタイムの更新を確認するには、[問題の [#1051466][CR1051466]] に移動します。  
 
-:::image type="complex" source="../../media/2020/10/https_first_party_test_glitch_me_coop-2.msft.png" alt-text="ローカライズされていないフィルターを含むネットワークツール" lightbox="../../media/2020/10/https_first_party_test_glitch_me_coop-2.msft.png":::
+:::image type="complex" source="../../media/2020/10/https_first_party_test_glitch_me_coop-2.msft.png" alt-text="レポート専用モードのラベル" lightbox="../../media/2020/10/https_first_party_test_glitch_me_coop-2.msft.png":::
    `report-only`モードラベル  
 :::image-end:::  
 
 ### CSS の概要ツールで色のコントラストの問題を表示して修正する  
 
-:::image type="complex" source="../../media/2020/06/experimental-tag-14px.msft.png" alt-text="ローカライズされていないフィルターを含むネットワークツール":::
+:::image type="complex" source="../../media/2020/06/experimental-tag-14px.msft.png" alt-text="実験的機能":::
    実験的機能  
 :::image-end:::  
 
@@ -254,7 +254,7 @@ performance.mark('end');
 
 この実験を有効にするには、[**設定**の実験] で [  >  **Experiments** **CSS の概要**] チェックボックスをオンにします。  色のコントラストの問題がある要素の一覧を表示するには、[ **コントラストの問題**] で [ **テキスト**] を選択します。  **要素ツールで**要素を開くには、リスト内の要素を選択します。  コントラストの問題を解決するために、Microsoft Edge DevTools では [色候補が自動的に提供][DevtoolsWhatsnew200208DevtoolsAccessibleColorSuggestionStylesPane]されます。  Chromium のオープンソースプロジェクトでこの機能に関するリアルタイムの更新を確認するには、[問題の [#1120316][CR1120316]] に移動します。  
 
-:::image type="complex" source="../../media/2020/10/css-overview.msft.png" alt-text="ローカライズされていないフィルターを含むネットワークツール" lightbox="../../media/2020/10/css-overview.msft.png":::
+:::image type="complex" source="../../media/2020/10/css-overview.msft.png" alt-text="低色のコントラストの問題" lightbox="../../media/2020/10/css-overview.msft.png":::
    低色のコントラストの問題  
 :::image-end:::  
 

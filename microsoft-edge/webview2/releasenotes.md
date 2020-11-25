@@ -3,17 +3,17 @@ description: Microsoft Edge WebView2 SDK のリリースノート
 title: Win32、WPF、および WinForms の Microsoft Edge WebView2 のリリースノート
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 11/23/2020
+ms.date: 11/24/2020
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Controller、browser control、edge html
-ms.openlocfilehash: f0be7602bd5fe5cf8ede5158b12cb0b957247c20
-ms.sourcegitcommit: 2d2cef9046f85ae731f8aa80b565546fcfe72e90
+ms.openlocfilehash: f0ddcbfe2d72c1285e6d4a42c3cb796b93495c55
+ms.sourcegitcommit: 652c345b46aae8b7e3723eb55a01b71a4ef76bf0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "11182843"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "11191444"
 ---
 # WebView2 SDK のリリースノート  
 
@@ -26,7 +26,7 @@ WebView2 チームは、6週間のリズムで [WEBVIEW2 SDK][NuGetGallery] を�
 
 リリース日: 2020 年11月23日  
 
-[NuGet パッケージ][NuGetGallery1.0.707-prerelease] \ |Microsoft Edge の最小バージョン89.0.707.0。  
+[NuGet パッケージ][NuGetGallery1.0.707-prerelease] \ |Microsoft Edge の最小バージョン86.0.616.0。  
 
 #### 全般的な情報  
 
@@ -51,8 +51,9 @@ WebView2 チームは、6週間のリズムで [WEBVIEW2 SDK][NuGetGallery] を�
 
 ###### 機能  
 
-* .NET Core 3.1 + および .NET 5 の WinForms designer を有効にしました。  
-* .NET cookie 管理が改善されました。  \ ([\ #611][GithubMicrosoftedgeWebviewfeedbackIssue611]\)  
+*   .NET Core 3.1 + および .NET 5 の WinForms designer を有効にしました。  
+*   .NET cookie 管理が改善されました。  \ ([\ #611][GithubMicrosoftedgeWebviewfeedbackIssue611]\)  
+*   `CoreWebView2Ready` [CoreWebView2InitializationCompleted][DotnetApiMicrosoftWebWebview2Corewebview2initializationcompletedeventargs]に名前が変更されます。
 
 ###### バグ修正
 
@@ -64,7 +65,7 @@ WebView2 チームは、6週間のリズムで [WEBVIEW2 SDK][NuGetGallery] を�
 
 リリース日: 2020 年11月20日  
 
-[NuGet パッケージ][NuGetGallery1.0.664.37] \ |WebView2 の最小ランタイムバージョン86.0.664.37。  
+[NuGet パッケージ][NuGetGallery1.0.664.37] \ |WebView2 の最小ランタイムバージョン86.0.616.0。  
 
 #### 全般的な情報  
 
@@ -467,6 +468,8 @@ WebView2 SDK は、フィードバックからいくつかの機能要求を取�
 [DotnetApiMicrosoftWebWebview2WpfWebview2Destroywindowcore]: /dotnet/api/microsoft.web.webview2.wpf.webview2.destroywindowcore "WebView2: HandleRef () メソッド (WebView2 ()] |Microsoft ドキュメント"  
 
 [DotnetApiMicrosoftWebWebview2WpfWebview2Acceleratorkeypressed]: /dotnet/api/microsoft.web.webview2.wpf.webview2.acceleratorkeypressed "webview2 | acceleratorkeypressed |) | webview2 |Microsoft ドキュメント"  
+
+[DotnetApiMicrosoftWebWebview2Corewebview2initializationcompletedeventargs]: /dotnet/api/microsoft.web.webview2.core.corewebview2initializationcompletedeventargs "CoreWebView2InitializationCompletedEventArgs クラス |Microsoft ドキュメント"  
 
 [ReferenceWin32Icorewebview2Addhostobjecttoscript09538]: /microsoft-edge/webview2/reference/win32/icorewebview2#addhostobjecttoscript?view=webview2-0.9.538&preserve-view=true "AddHostObjectToScript-interface ICoreWebView2 |Microsoft ドキュメント"  
 [ReferenceWin32Icorewebview2experimentalAddWebresourceresponsereceived09538]: /microsoft-edge/webview2/reference/win32/icorewebview2experimental?view=webview2-0.9.538-prerelease&preserve-view=true#add_webresourceresponsereceived "add_WebResourceResponseReceived インターフェイス ICoreWebView2Experimental |Microsoft ドキュメント"  
