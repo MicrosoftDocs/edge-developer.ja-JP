@@ -3,17 +3,17 @@ description: Microsoft Edge ドライバーを使用して WebView2 コントロ
 title: Microsoft Edge ドライバーを使用した WebView2 の自動化とテスト
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 11/24/2020
+ms.date: 11/25/2020
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、edge、ICoreWebView2、ICoreWebView2Controller、Selenium、Microsoft Edge Driver
-ms.openlocfilehash: 6f7f84fa88a57e54d7b5143a489d1138c7426d88
-ms.sourcegitcommit: 652c345b46aae8b7e3723eb55a01b71a4ef76bf0
+ms.openlocfilehash: 2af1ce222abb1dc7a279afc05e87e7e42a45fe9e
+ms.sourcegitcommit: 2e14ff82350f700d7eabc8d33b3ec3e5fc8c61fa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "11191451"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "11191618"
 ---
 # Microsoft Edge ドライバーを使用した WebView2 の自動化とテスト  
 
@@ -23,7 +23,7 @@ WebView2 は Microsoft Edge \ (Chromium \) web platform を使っているため
 
 ## 手順 1: WebView2API のサンプルをダウンロードする  
 
-既存の WebView2 プロジェクトがない場合は、最新の WebView2 SDK の包括的なサンプルである [WebView2API サンプルアプリ][GithubMicrosoftedgewebview2samplesSampleappsWebview2apisample]をダウンロードしてください。  [WebView2API サンプルアプリの前提条件][GithubMicrosoftedgeWebview2samplesSampleappsWebview2apisamplePrerequisites]を満たしていることを確認します。 
+既存の WebView2 プロジェクトがない場合は、最新の WebView2 SDK の包括的なサンプルである [WebView2API サンプルアプリ][GithubMicrosoftedgewebview2samplesSampleappsWebview2apisample]をダウンロードしてください。  [WebView2API サンプルアプリの前提条件][GithubMicrosoftedgeWebview2samplesSampleappsWebview2apisamplePrerequisites]を満たしていることを確認します。  
 
 リポジトリを複製したら、Visual Studio でプロジェクトをビルドします。  次の図のようになります。  
 
@@ -70,7 +70,7 @@ Microsoft Edge ドライバーのバージョンが、アプリで使用する W
        NuGet パッケージをダウンロードする  
     :::image-end:::  
     
-1.  検索バーに「 **Selenium** 」と入力し、結果から **Selenium ドライバー** を選択して、「 **プレリリースを含める**」の横のチェックボックスをオンにします。 右側のウィンドウで、 **バージョン** が **4.0.0 をインストール** するように設定されていることを確認し、[ **インストール**] を選択します。  Nuget をコンピューターにダウンロード Selenium します。  
+1.  `Selenium.WebDriver`検索バーに入力し、結果から [ **Selenium ドライバー** ] を選び、[**プレリリースを含める**] の横にあるチェックボックスをオンにします。  右側のウィンドウで、 **バージョン** が **4.0.0 をインストール** するように設定されていることを確認し、[ **インストール**] を選択します。  NuGet をコンピューターにダウンロード Selenium します。  
     
     Selenium ドライバーの NuGet パッケージの詳細については、 [Selenium][NugetSeleniumWebdriver400Alpha04]にアクセスしてください。  
     
@@ -158,8 +158,8 @@ Microsoft Edge ドライバーのバージョンが、アプリで使用する W
 
 <!-- links -->  
 
-[WebdriverChromium]: ../../webdriver-chromium.md "テストオートメーションに WebDriver (Chromium) を使います。Microsoft ドキュメント"  
-[WebdriverChromiumDownloadMicrosoftEdgeDriver]: ../../webdriver-chromium.md#download-microsoft-edge-driver "Microsoft Edge ドライバーをダウンロードする-テストオートメーション用に WebDriver (Chromium) を使います。Microsoft ドキュメント"  
+[WebdriverChromium]: ../../webdriver-chromium/index.md "テストオートメーションに WebDriver (Chromium) を使います。Microsoft ドキュメント"  
+[WebdriverChromiumDownloadMicrosoftEdgeDriver]: ../../webdriver-chromium/index.md#download-microsoft-edge-driver "Microsoft Edge ドライバーをダウンロードする-テストオートメーション用に WebDriver (Chromium) を使います。Microsoft ドキュメント"  
 [WebViewIndex]: ../index.md "Microsoft Edge WebView2 の概要-Microsoft ドキュメント"  
 [Webview2Releasenotes]: ../releasenotes.md "WebView2 SDK のリリースノート |Microsoft ドキュメント"  
 

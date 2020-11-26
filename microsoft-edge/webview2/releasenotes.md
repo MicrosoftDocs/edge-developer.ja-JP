@@ -3,17 +3,17 @@ description: Microsoft Edge WebView2 SDK のリリースノート
 title: Win32、WPF、および WinForms の Microsoft Edge WebView2 のリリースノート
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 11/24/2020
+ms.date: 11/25/2020
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Controller、browser control、edge html
-ms.openlocfilehash: f0ddcbfe2d72c1285e6d4a42c3cb796b93495c55
-ms.sourcegitcommit: 652c345b46aae8b7e3723eb55a01b71a4ef76bf0
+ms.openlocfilehash: 840d9d5e074e2ea2777942fd19106592151c29ee
+ms.sourcegitcommit: 2e14ff82350f700d7eabc8d33b3ec3e5fc8c61fa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "11191444"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "11192227"
 ---
 # WebView2 SDK のリリースノート  
 
@@ -28,38 +28,43 @@ WebView2 チームは、6週間のリズムで [WEBVIEW2 SDK][NuGetGallery] を�
 
 [NuGet パッケージ][NuGetGallery1.0.707-prerelease] \ |Microsoft Edge の最小バージョン86.0.616.0。  
 
-#### 全般的な情報  
+> [!IMPORTANT]
+> 既知のエラーのため、このパッケージは廃止されました。 
 
-###### 機能  
+<!--  
+#### General  
 
-*   [WebView2 グループポリシー][DeployedgeMicrosoftEdgeWebviewPolicies]が追加されました。  推奨される手順の詳細については、「 [グループポリシーの WebView2][Webview2ConceptsEnterpriseGroupPoliciesForWebview2]」を参照してください。  
+###### Features  
+
+*   Added [WebView2 Group Policies][DeployedgeMicrosoftEdgeWebviewPolicies].  For more information on recommended practices, navigate to [group policies for WebView2][Webview2ConceptsEnterpriseGroupPoliciesForWebview2].  
 *   > [!IMPORTANT]
-    > **変更の中断**: 古いレジストリの場所が廃止されました。  
+    > **Breaking Change**:  Deprecated the old registry location.  
     > 
     > ```text
     > {Root}\Software\Policies\Microsoft\EmbeddedBrowserWebView\LoaderOverride\{AppId}
     > ```  
      
-*   WebView2 内の [ドラッグ & ドロップ][ReferenceWin32Icorewebview2experimentalcompositioncontroller3] のサポートが追加されました。  
-*   DPI サポートを処理するための Api を追加しました。  
-    *   WebView のコンテンツと UI のポップアップ、および関連付けられた[RasterizationScaleChanged][ReferenceWin32Icorewebview2experimentalcontrollerViewWebview210707PrereleaseAddRasterizationscalechanged]イベントの DPI スケールを変更する[RasterizationScale][ReferenceWin32Icorewebview2experimentalcontrollerViewWebview210707PrereleaseGetRasterizationscale]プロパティが追加されました。  
-    *   必要に応じて、自動的に [更新される][ReferenceWin32Icorewebview2experimentalcontrollerViewWebview210707PrereleaseGetShouldDetectMonitorScaleChanges] ように、プロパティを設定し `RasterizationScale` ます。  
-    *   境界がロジックピクセルであり、WebView で for WebView2 pixels ディスプレイを使用できることを指定して、 [BoundsMode プロパティ][ReferenceWin32Icorewebview2experimentalcontrollerViewWebview210707PrereleaseGetBoundsMode] を追加して `RasterizationScale` `RasterizationScale` 物理サイズを取得するには、をに適用し `Bounds` ます。
-*   `NewWindowRequested`処理するイベントが更新されました `Ctrl` + `click` `Shift` + `click` 。  \ ([\ #168][GithubMicrosoftedgeWebviewfeedbackIssue168] と [\ #371][GithubMicrosoftedgeWebviewfeedbackIssue371]\)。  
+*   Added support for [Drag & Drop][ReferenceWin32Icorewebview2experimentalcompositioncontroller3] within WebView2.  
+*   Added APIs to handle DPI support.  
+    *   Added [RasterizationScale][ReferenceWin32Icorewebview2experimentalcontrollerViewWebview210707PrereleaseGetRasterizationscale] property to change the DPI scale for WebView content and UI popups, and associated [RasterizationScaleChanged][ReferenceWin32Icorewebview2experimentalcontrollerViewWebview210707PrereleaseAddRasterizationscalechanged] event.  
+    *   Added [ShouldDetectMonitorScaleChanges][ReferenceWin32Icorewebview2experimentalcontrollerViewWebview210707PrereleaseGetShouldDetectMonitorScaleChanges] property to automatically update `RasterizationScale` property if needed.  
+    *   Added [BoundsMode property][ReferenceWin32Icorewebview2experimentalcontrollerViewWebview210707PrereleaseGetBoundsMode] to specify that the bounds are logic pixels and allow WebView to use the `RasterizationScale` for WebView2 pixel display, and have WebView apply the `RasterizationScale` to the `Bounds` to get the physical size.
+*   Updated `NewWindowRequested` event to handle `Ctrl`+`click` and `Shift`+`click`.  \([\#168][GithubMicrosoftedgeWebviewfeedbackIssue168] and [\#371][GithubMicrosoftedgeWebviewfeedbackIssue371]\).  
 
 #### .NET  
 
-###### 機能  
+###### Features  
 
-*   .NET Core 3.1 + および .NET 5 の WinForms designer を有効にしました。  
-*   .NET cookie 管理が改善されました。  \ ([\ #611][GithubMicrosoftedgeWebviewfeedbackIssue611]\)  
-*   `CoreWebView2Ready` [CoreWebView2InitializationCompleted][DotnetApiMicrosoftWebWebview2Corewebview2initializationcompletedeventargs]に名前が変更されます。
+*   Enabled WinForms designer in .NET Core 3.1+ and .NET 5.  
+*   Improved .NET cookie management.  \([\#611][GithubMicrosoftedgeWebviewfeedbackIssue611]\).  
+*   Renamed `CoreWebView2Ready` to [CoreWebView2InitializationCompleted][DotnetApiMicrosoftWebWebview2Corewebview2initializationcompletedeventargs].
 
-###### バグ修正
+###### Bug fixes
 
-*   WebView2 で Automationproperties.acceleratorkey をサポートする [AcceleratorKeyPressed][DotnetApiMicrosoftWebWebview2WpfWebview2Acceleratorkeypressed] イベントが追加されました。  \ ([\ #288][GithubMicrosoftedgeWebviewfeedbackIssue288]\)  
-*   WebView2 フォルダーへの出力から不要なファイルが削除されました。  \ ([\ #461][GithubMicrosoftedgeWebviewfeedbackIssue461]\)  
-*   改善されたホストオブジェクト API。  \ ([\ #335][GithubMicrosoftedgeWebviewfeedbackIssue335] と [\ #525][GithubMicrosoftedgeWebviewfeedbackIssue525]\)。  
+*   Added [AcceleratorKeyPressed][DotnetApiMicrosoftWebWebview2WpfWebview2Acceleratorkeypressed] event to support AcceleratorKey press in WebView2.  \([\#288][GithubMicrosoftedgeWebviewfeedbackIssue288]\).  
+*   Removed unnecessary files from being output to WebView2 folders.  \([\#461][GithubMicrosoftedgeWebviewfeedbackIssue461]\).  
+*   Improved host object API.  \([\#335][GithubMicrosoftedgeWebviewfeedbackIssue335] and [\#525][GithubMicrosoftedgeWebviewfeedbackIssue525]\).  
+-->  
 
 ## 1.0.664.37  
 
