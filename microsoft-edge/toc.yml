@@ -522,7 +522,11 @@
         - name: Webhint
           href: visual-studio-code/webhint.md
     - name: WebDriver (Chromium)
-      href: webdriver-chromium.md
+      items:
+        - name: 開始するには
+          href: webdriver-chromium/index.md
+        - name: 機能と EdgeOptions
+          href: webdriver-chromium/capabilities-edge-options.md
     - name: WebDriver (EdgeHTML)
       href: webdriver.md
     - name: Web プラットフォーム (Chromium)
