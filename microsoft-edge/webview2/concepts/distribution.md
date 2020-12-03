@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、wpf アプリ、wpf、edge、ICoreWebView2、ICoreWebView2Host、browser control、edge html
-ms.openlocfilehash: 0cbaaeade03feac766647c55bb5edabfe8e8456e
-ms.sourcegitcommit: 7b16c3e6eb458e0b2458279c2498597fb227bc8c
+ms.openlocfilehash: 14f252b0155beb6bfce0b01dc080900f2d3e57ee
+ms.sourcegitcommit: e79503c6c53ea9b7de58f8cf1532b5c82116a6eb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "11182910"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "11195167"
 ---
 # WebView2 を使用したアプリの配布  
 
@@ -76,7 +76,7 @@ WebView2 ランタイムは再配布可能なランタイムであり、WebView2
         32ビット版の Windows の場合  
         
         ```text
-        HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\EdgeUpdate\Clients\{F3017226-FE2A-4295-8BDF-00C3A9A7E4C5}
+        HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\EdgeUpdate\Clients\{F3017226-FE2A-4295-8BDF-00C3A9A7E4C5}
         ```  
         
     *   [GetAvailableCoreWebView2BrowserVersionString][ReferenceWin32Webview2IdlGetavailablecorewebview2browserversionstring]を実行し、がになっていることを確認し `versionInfo` `NULL` ます。  
@@ -109,7 +109,7 @@ WebView2 ランタイムは再配布可能なランタイムであり、WebView2
         32ビット版の Windows の場合  
         
         ```text
-        HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\EdgeUpdate\Clients\{F3017226-FE2A-4295-8BDF-00C3A9A7E4C5}
+        HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\EdgeUpdate\Clients\{F3017226-FE2A-4295-8BDF-00C3A9A7E4C5}
         ```  
         
     *   [GetAvailableCoreWebView2BrowserVersionString][ReferenceWin32Webview2IdlGetavailablecorewebview2browserversionstring]を実行し、がになっていることを確認し `versionInfo` `NULL` ます。  

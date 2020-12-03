@@ -1,58 +1,49 @@
 ---
 description: Microsoft Edge への Chrome 拡張機能の移植プロセス。
-title: Microsoft (Chromium) Edge の港の Chrome 拡張機能
+title: Microsoft Edge のポート Chrome 拡張機能
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 09/15/2020
+ms.date: 11/25/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: edge-chromium、拡張機能の開発、ブラウザーの拡張、アドオン、パートナーセンター、開発者
-ms.openlocfilehash: 1852e267579f0fb790c6b8cac75a566298223933
-ms.sourcegitcommit: d360e419b5f96f4f691cf7330b0d8dff9126f82e
+ms.openlocfilehash: 0f767107bfb259476d1ab35d081fb9bb05c81b46
+ms.sourcegitcommit: e79503c6c53ea9b7de58f8cf1532b5c82116a6eb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "11015689"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "11195160"
 ---
-# Microsoft \ (Chromium) Edge のポート Chrome 拡張機能  
+# 内線番号を移植する  
 
-Chrome 拡張機能を Microsoft Edge に移植するプロセスは非常に簡単です。  Chromium 用に記述された拡張機能は、ほとんどの場合、最小限の変更で Microsoft Edge で実行されます。  Chrome でサポートされている拡張 Api とマニフェストキーは、Microsoft Edge とのコード互換性があります。  ただし、Microsoft Edge では、次の拡張 Api はサポートされていません。  
+Microsoft Edge では、最小限の変更で Chrome 拡張機能を移植できます。  Chrome でサポートされている拡張 Api とマニフェストキーは、Microsoft Edge とのコード互換性があります。  Microsoft Edge でサポートされている Api の一覧については、「 [api のサポート][ExtensionApiSupport]」を参照してください。  
 
-*   `chrome.gcm`  
-*   `chrome.identity.getAccounts`  
-*   `chrome.identity.getAuthToken`  
-*   `chrome.instanceID`  
+Chrome の拡張機能を移植するには、次の手順を実行します。  
 
-> [!Note]
-> API を使用するには、ユーザーが MSA または AAD アカウントを使用して Microsoft Edge にサインインしている必要があり `chrome.identity.getProfileUserInfo` ます。  ユーザーが **オンプレミス広告**を使って Microsoft Edge にサインインした場合、API は `null` メールと ID の値に対して戻ります。  
-
-> [!IMPORTANT]
-> **支払い**: Microsoft Edge では、サインインしたユーザーが REST ベースのライセンス API 要求を送信するためのトークンを取得するために要求を使用する必要があるため、 [Chrome Web Store の支払い][ChromeDeveloperWebStorePayments] を使用する拡張機能は直接サポートされません `identity.getAuthtoken` 。  Microsoft Edge は要求をサポートしていない `getAuthtoken` ため、このフローは動作しません。  
-
-Chrome 拡張機能を移植するには、次の手順を実行します。  
-
-1.  拡張機能で使用されている Chrome 拡張 Api を確認します。  Microsoft Edge でサポートされていない機能または Api を使用している場合は、拡張機能を移植できない可能性があります。  
+1.  Microsoft Edge extensions の [サポートされている api][ExtensionApiSupport] の一覧で、拡張機能で使用されている Chrome 拡張 api を確認します。  
     
     > [!NOTE]
-    > `getAuthToken`API は Microsoft Edge では動作しませんが、OAuth2 トークンを取得してユーザーを認証するために使うことができ `launchWebAuthFlow` ます。  
+    > 拡張機能で Microsoft Edge でサポートされていない Api を使用している場合は、直接移植できない可能性があります。  
     
-1.  `Chrome`内線番号の名前または説明を使用している場合は、の内線番号を再ブランド化し `Microsoft Edge` ます。  認定プロセスに合格する必要があります。  
-    
-1.  Microsoft Edge で動作するかどうかを確認するために拡張機能をテストします。  この操作を行う最初の手順は、拡張機能の開発者向け機能が有効になっていることを確認することです。  これにより、Microsoft Edge で拡張機能ファイルをサイドロードすることができるため、拡張機能の開発中に拡張機能をテストすることができます。  
-    
-1.  問題が発生した場合は、DevTools を使用して Microsoft Edge で拡張機能をデバッグするか、 [お問い合わせ][mailtoExtensionPartnerOpsMicrosoft]ください。  
-    
-1.  これで、拡張機能が最終的に磨き、パッケージ化される準備が整いました。  Microsoft Edge のアドオンカタログ (Microsoft Edge アドオン \) への提出を準備する場合は、拡張機能をパッケージ化する必要はありません。  さらに、 [公開ガイドライン][ExtensionsPublishExtension] に従って、Microsoft Edge のアドオンに拡張機能を公開してください。  
+1.  名前 `Chrome` が拡張子の名前または説明のいずれかで使用されている場合は、用の拡張子をもう一度ブランド化し `Microsoft Edge` ます。  この手順は、認定プロセスに合格するために必要です。  
+1.  拡張機能の [サイドローディング][ExtensionsGettingStartedExtensionSideloading]によって、Microsoft Edge で機能するかどうかを確認します。  
+1.  問題が発生した場合は、DevTools を使用して Microsoft Edge で拡張機能をデバッグするか、 [お問い合わせ][mailtoExtensionMicrosoft]ください。  
+1.  [公開ガイドライン][ExtensionsPublishPublishExtension]に従って、Microsoft Edge のアドオンストアで拡張機能を公開します。  
     
     > [!NOTE]
-    > 拡張機能が API を使ってネイティブアプリケーションとのメッセージを交換する場合は `chrome.runtime.connectNative` 、 `allowedorigins` `extension://[Microsoft-Catalog-extensionID]` ネイティブメッセージングホストマニフェストファイルで "" に設定してください。  これにより、アプリで拡張機能を識別できるようになります。  
+    > 拡張機能が API を使用してネイティブアプリとメッセージを交換する場合は `chrome.runtime.connectNative` 、 `allowed_origins` ネイティブの `extension://[Microsoft-Catalog-extensionID]` メッセージングホストマニフェストファイルでを設定してください。  これにより、アプリで拡張機能を識別できるようになります。  
+    
+## 次のステップ  
 
-<!-- image links -->  
+拡張パッケージを Microsoft Edge のアドオンストアに公開する準備ができたら、 [開発者アカウントを作成][ExtensionsPublishCreateDevAccount] して、 [拡張機能を公開][ExtensionsPublishPublishExtension]します。  
 
 <!-- links -->  
 
-[ExtensionsPublishExtension]: ../publish/publish-extension.md "内線番号を発行する"  
+[ExtensionApiSupport]: ./api-support.md "API サポート |Microsoft ドキュメント"  
+[ExtensionsGettingStartedExtensionSideloading]: ../getting-started/extension-sideloading.md "内線番号をサイドローディング |Microsoft ドキュメント"  
+[ExtensionsPublishCreateDevAccount]: ../publish/create-dev-account.md "開発者登録 |Microsoft ドキュメント"  
+[ExtensionsPublishPublishExtension]: ../publish/publish-extension.md "拡張機能を公開する |Microsoft ドキュメント"  
 
-[mailtoExtensionPartnerOpsMicrosoft]: mailto:extensionpartnerops@microsoft.com "ExtensionPartnerOps@microsoft.com"  
+[ChromeDeveloperWebStorePayments]: https://developer.chrome.com/webstore/one_time_payments "1回限りの支払い |Chrome 開発者"  
 
-[ChromeDeveloperWebStorePayments]: https://developer.chrome.com/webstore/one_time_payments "ワンタイムの支払い-Google Chrome"  
+[mailtoExtensionMicrosoft]: mailto:ext_dev_support@microsoft.com "ext_dev_support@microsoft.com"  
