@@ -1,58 +1,49 @@
 ---
 description: Microsoft Edge への Chrome 拡張機能の移植プロセス。
-title: Microsoft (Chromium) Edge の港の Chrome 拡張機能
+title: Microsoft Edge のポート Chrome 拡張機能
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 09/15/2020
+ms.date: 11/25/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: edge-chromium、拡張機能の開発、ブラウザーの拡張、アドオン、パートナーセンター、開発者
-ms.openlocfilehash: 1852e267579f0fb790c6b8cac75a566298223933
-ms.sourcegitcommit: d360e419b5f96f4f691cf7330b0d8dff9126f82e
+ms.openlocfilehash: 0f767107bfb259476d1ab35d081fb9bb05c81b46
+ms.sourcegitcommit: e79503c6c53ea9b7de58f8cf1532b5c82116a6eb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "11015689"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "11195160"
 ---
-# <span data-ttu-id="ac999-104">Microsoft \ (Chromium) Edge のポート Chrome 拡張機能</span><span class="sxs-lookup"><span data-stu-id="ac999-104">Port Chrome Extension To Microsoft \(Chromium\) Edge</span></span>  
+# <span data-ttu-id="7d092-104">内線番号を移植する</span><span class="sxs-lookup"><span data-stu-id="7d092-104">Port your extension</span></span>  
 
-<span data-ttu-id="ac999-105">Chrome 拡張機能を Microsoft Edge に移植するプロセスは非常に簡単です。</span><span class="sxs-lookup"><span data-stu-id="ac999-105">The process of porting a Chrome Extension to Microsoft Edge is very straightforward.</span></span>  <span data-ttu-id="ac999-106">Chromium 用に記述された拡張機能は、ほとんどの場合、最小限の変更で Microsoft Edge で実行されます。</span><span class="sxs-lookup"><span data-stu-id="ac999-106">Extensions written for Chromium, in most cases, run on Microsoft Edge with minimal changes.</span></span>  <span data-ttu-id="ac999-107">Chrome でサポートされている拡張 Api とマニフェストキーは、Microsoft Edge とのコード互換性があります。</span><span class="sxs-lookup"><span data-stu-id="ac999-107">The Extension APIs and manifest keys supported by Chrome are code-compatible with Microsoft Edge.</span></span>  <span data-ttu-id="ac999-108">ただし、Microsoft Edge では、次の拡張 Api はサポートされていません。</span><span class="sxs-lookup"><span data-stu-id="ac999-108">However, Microsoft Edge does not support the following Extension APIs:</span></span>  
+<span data-ttu-id="7d092-105">Microsoft Edge では、最小限の変更で Chrome 拡張機能を移植できます。</span><span class="sxs-lookup"><span data-stu-id="7d092-105">Microsoft Edge allows you to port your Chrome extension with minimal changes.</span></span>  <span data-ttu-id="7d092-106">Chrome でサポートされている拡張 Api とマニフェストキーは、Microsoft Edge とのコード互換性があります。</span><span class="sxs-lookup"><span data-stu-id="7d092-106">The Extension APIs and manifest keys supported by Chrome are code-compatible with Microsoft Edge.</span></span>  <span data-ttu-id="7d092-107">Microsoft Edge でサポートされている Api の一覧については、「 [api のサポート][ExtensionApiSupport]」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="7d092-107">For a list of APIs supported by Microsoft Edge, navigate to [API support][ExtensionApiSupport].</span></span>  
 
-*   `chrome.gcm`  
-*   `chrome.identity.getAccounts`  
-*   `chrome.identity.getAuthToken`  
-*   `chrome.instanceID`  
+<span data-ttu-id="7d092-108">Chrome の拡張機能を移植するには、次の手順を実行します。</span><span class="sxs-lookup"><span data-stu-id="7d092-108">To port your Chrome extension, complete the following steps.</span></span>  
 
-> [!Note]
-> <span data-ttu-id="ac999-109">API を使用するには、ユーザーが MSA または AAD アカウントを使用して Microsoft Edge にサインインしている必要があり `chrome.identity.getProfileUserInfo` ます。</span><span class="sxs-lookup"><span data-stu-id="ac999-109">The user must be signed into Microsoft Edge using an MSA or AAD account in order to use the `chrome.identity.getProfileUserInfo` API.</span></span>  <span data-ttu-id="ac999-110">ユーザーが **オンプレミス広告**を使って Microsoft Edge にサインインした場合、API は `null` メールと ID の値に対して戻ります。</span><span class="sxs-lookup"><span data-stu-id="ac999-110">If the user is signed into Microsoft Edge using **On-premise AD**, the API returns `null` for the email and ID values.</span></span>  
-
-> [!IMPORTANT]
-> <span data-ttu-id="ac999-111">**支払い**: Microsoft Edge では、サインインしたユーザーが REST ベースのライセンス API 要求を送信するためのトークンを取得するために要求を使用する必要があるため、 [Chrome Web Store の支払い][ChromeDeveloperWebStorePayments] を使用する拡張機能は直接サポートされません `identity.getAuthtoken` 。</span><span class="sxs-lookup"><span data-stu-id="ac999-111">**Payments**:  Microsoft Edge does not directly support an Extension that uses [Chrome Web Store payments][ChromeDeveloperWebStorePayments] due to the requirement to use the `identity.getAuthtoken` request to get the token for signed-in users to send the REST-based licensing API request.</span></span>  <span data-ttu-id="ac999-112">Microsoft Edge は要求をサポートしていない `getAuthtoken` ため、このフローは動作しません。</span><span class="sxs-lookup"><span data-stu-id="ac999-112">Microsoft Edge does not support the `getAuthtoken` request, so this flow does not work.</span></span>  
-
-<span data-ttu-id="ac999-113">Chrome 拡張機能を移植するには、次の手順を実行します。</span><span class="sxs-lookup"><span data-stu-id="ac999-113">To port your Chrome Extension, follow these steps:</span></span>  
-
-1.  <span data-ttu-id="ac999-114">拡張機能で使用されている Chrome 拡張 Api を確認します。</span><span class="sxs-lookup"><span data-stu-id="ac999-114">Review the Chrome Extension APIs used in your Extensions.</span></span>  <span data-ttu-id="ac999-115">Microsoft Edge でサポートされていない機能または Api を使用している場合は、拡張機能を移植できない可能性があります。</span><span class="sxs-lookup"><span data-stu-id="ac999-115">If you are using features or APIs that are not supported by Microsoft Edge, you may not be able to port your Extension.</span></span>  
+1.  <span data-ttu-id="7d092-109">Microsoft Edge extensions の [サポートされている api][ExtensionApiSupport] の一覧で、拡張機能で使用されている Chrome 拡張 api を確認します。</span><span class="sxs-lookup"><span data-stu-id="7d092-109">Review the Chrome extension APIs used in your extensions with the Microsoft Edge extensions [supported APIs][ExtensionApiSupport] list.</span></span>  
     
     > [!NOTE]
-    > <span data-ttu-id="ac999-116">`getAuthToken`API は Microsoft Edge では動作しませんが、OAuth2 トークンを取得してユーザーを認証するために使うことができ `launchWebAuthFlow` ます。</span><span class="sxs-lookup"><span data-stu-id="ac999-116">The `getAuthToken` API does not work with Microsoft Edge, however you may use `launchWebAuthFlow` to fetch an OAuth2 token to authenticate users.</span></span>  
+    > <span data-ttu-id="7d092-110">拡張機能で Microsoft Edge でサポートされていない Api を使用している場合は、直接移植できない可能性があります。</span><span class="sxs-lookup"><span data-stu-id="7d092-110">If your extension uses APIs that are not supported by Microsoft Edge, it may not port directly.</span></span>  
     
-1.  <span data-ttu-id="ac999-117">`Chrome`内線番号の名前または説明を使用している場合は、の内線番号を再ブランド化し `Microsoft Edge` ます。</span><span class="sxs-lookup"><span data-stu-id="ac999-117">If you are using `Chrome` in the name or description of your Extension, re-brand the Extension for `Microsoft Edge`.</span></span>  <span data-ttu-id="ac999-118">認定プロセスに合格する必要があります。</span><span class="sxs-lookup"><span data-stu-id="ac999-118">You must pass the certification process.</span></span>  
-    
-1.  <span data-ttu-id="ac999-119">Microsoft Edge で動作するかどうかを確認するために拡張機能をテストします。</span><span class="sxs-lookup"><span data-stu-id="ac999-119">Test your Extension to check if it works in Microsoft Edge.</span></span>  <span data-ttu-id="ac999-120">この操作を行う最初の手順は、拡張機能の開発者向け機能が有効になっていることを確認することです。</span><span class="sxs-lookup"><span data-stu-id="ac999-120">The first step to do this is to ensure that you have Extension developer features turned on.</span></span>  <span data-ttu-id="ac999-121">これにより、Microsoft Edge で拡張機能ファイルをサイドロードすることができるため、拡張機能の開発中に拡張機能をテストすることができます。</span><span class="sxs-lookup"><span data-stu-id="ac999-121">This enables you to side load Extension files in Microsoft Edge so that you are able to test your Extension while developing it.</span></span>  
-    
-1.  <span data-ttu-id="ac999-122">問題が発生した場合は、DevTools を使用して Microsoft Edge で拡張機能をデバッグするか、 [お問い合わせ][mailtoExtensionPartnerOpsMicrosoft]ください。</span><span class="sxs-lookup"><span data-stu-id="ac999-122">If you have any issues, debug your Extensions in Microsoft Edge by using the DevTools, or [contact us][mailtoExtensionPartnerOpsMicrosoft].</span></span>  
-    
-1.  <span data-ttu-id="ac999-123">これで、拡張機能が最終的に磨き、パッケージ化される準備が整いました。</span><span class="sxs-lookup"><span data-stu-id="ac999-123">Now your Extension is finally polished up and ready to be packaged.</span></span>  <span data-ttu-id="ac999-124">Microsoft Edge のアドオンカタログ (Microsoft Edge アドオン \) への提出を準備する場合は、拡張機能をパッケージ化する必要はありません。</span><span class="sxs-lookup"><span data-stu-id="ac999-124">If you wish to prepare for submission to the Microsoft Edge Addons catalog \(Microsoft Edge Addons\), you do not need to package your Extension.</span></span>  <span data-ttu-id="ac999-125">さらに、 [公開ガイドライン][ExtensionsPublishExtension] に従って、Microsoft Edge のアドオンに拡張機能を公開してください。</span><span class="sxs-lookup"><span data-stu-id="ac999-125">Further, follow our [publishing guidelines][ExtensionsPublishExtension] to publish your Extension on Microsoft Edge Addons.</span></span>  
+1.  <span data-ttu-id="7d092-111">名前 `Chrome` が拡張子の名前または説明のいずれかで使用されている場合は、用の拡張子をもう一度ブランド化し `Microsoft Edge` ます。</span><span class="sxs-lookup"><span data-stu-id="7d092-111">If the name `Chrome` is being used in either the name or the description of the extension, rebrand the extension for `Microsoft Edge`.</span></span>  <span data-ttu-id="7d092-112">この手順は、認定プロセスに合格するために必要です。</span><span class="sxs-lookup"><span data-stu-id="7d092-112">This step is required to pass the certification process.</span></span>  
+1.  <span data-ttu-id="7d092-113">拡張機能の [サイドローディング][ExtensionsGettingStartedExtensionSideloading]によって、Microsoft Edge で機能するかどうかを確認します。</span><span class="sxs-lookup"><span data-stu-id="7d092-113">Test your extension to check if it works in Microsoft Edge by [sideloading your extension][ExtensionsGettingStartedExtensionSideloading].</span></span>  
+1.  <span data-ttu-id="7d092-114">問題が発生した場合は、DevTools を使用して Microsoft Edge で拡張機能をデバッグするか、 [お問い合わせ][mailtoExtensionMicrosoft]ください。</span><span class="sxs-lookup"><span data-stu-id="7d092-114">If you face any issues, you may debug your extensions in Microsoft Edge by using the DevTools, or [contact us][mailtoExtensionMicrosoft].</span></span>  
+1.  <span data-ttu-id="7d092-115">[公開ガイドライン][ExtensionsPublishPublishExtension]に従って、Microsoft Edge のアドオンストアで拡張機能を公開します。</span><span class="sxs-lookup"><span data-stu-id="7d092-115">Follow the [publishing guidelines][ExtensionsPublishPublishExtension] to publish your extension on Microsoft Edge Add-ons store.</span></span>  
     
     > [!NOTE]
-    > <span data-ttu-id="ac999-126">拡張機能が API を使ってネイティブアプリケーションとのメッセージを交換する場合は `chrome.runtime.connectNative` 、 `allowedorigins` `extension://[Microsoft-Catalog-extensionID]` ネイティブメッセージングホストマニフェストファイルで "" に設定してください。</span><span class="sxs-lookup"><span data-stu-id="ac999-126">If your Extension exchanges messages with a native application using `chrome.runtime.connectNative` API, ensure that you set `allowedorigins` to "`extension://[Microsoft-Catalog-extensionID]`" in your native messaging host manifest file.</span></span>  <span data-ttu-id="ac999-127">これにより、アプリで拡張機能を識別できるようになります。</span><span class="sxs-lookup"><span data-stu-id="ac999-127">This enables the app to identify the Extension.</span></span>  
+    > <span data-ttu-id="7d092-116">拡張機能が API を使用してネイティブアプリとメッセージを交換する場合は `chrome.runtime.connectNative` 、 `allowed_origins` ネイティブの `extension://[Microsoft-Catalog-extensionID]` メッセージングホストマニフェストファイルでを設定してください。</span><span class="sxs-lookup"><span data-stu-id="7d092-116">If the extension exchanges messages with a native app using `chrome.runtime.connectNative` API, ensure that you set `allowed_origins` to `extension://[Microsoft-Catalog-extensionID]` in your native messaging host manifest file.</span></span>  <span data-ttu-id="7d092-117">これにより、アプリで拡張機能を識別できるようになります。</span><span class="sxs-lookup"><span data-stu-id="7d092-117">This enables the app to identify the extension.</span></span>  
+    
+## <span data-ttu-id="7d092-118">次のステップ</span><span class="sxs-lookup"><span data-stu-id="7d092-118">Next steps</span></span>  
 
-<!-- image links -->  
+<span data-ttu-id="7d092-119">拡張パッケージを Microsoft Edge のアドオンストアに公開する準備ができたら、 [開発者アカウントを作成][ExtensionsPublishCreateDevAccount] して、 [拡張機能を公開][ExtensionsPublishPublishExtension]します。</span><span class="sxs-lookup"><span data-stu-id="7d092-119">Once your extension package is ready to be published to Microsoft Edge add-ons store, [create a developer account][ExtensionsPublishCreateDevAccount] and [publish your extension][ExtensionsPublishPublishExtension].</span></span>  
 
 <!-- links -->  
 
-[ExtensionsPublishExtension]: ../publish/publish-extension.md "内線番号を発行する"  
+[ExtensionApiSupport]: ./api-support.md "API サポート |Microsoft ドキュメント"  
+[ExtensionsGettingStartedExtensionSideloading]: ../getting-started/extension-sideloading.md "内線番号をサイドローディング |Microsoft ドキュメント"  
+[ExtensionsPublishCreateDevAccount]: ../publish/create-dev-account.md "開発者登録 |Microsoft ドキュメント"  
+[ExtensionsPublishPublishExtension]: ../publish/publish-extension.md "拡張機能を公開する |Microsoft ドキュメント"  
 
-[mailtoExtensionPartnerOpsMicrosoft]: mailto:extensionpartnerops@microsoft.com "ExtensionPartnerOps@microsoft.com"  
+[ChromeDeveloperWebStorePayments]: https://developer.chrome.com/webstore/one_time_payments "1回限りの支払い |Chrome 開発者"  
 
-[ChromeDeveloperWebStorePayments]: https://developer.chrome.com/webstore/one_time_payments "ワンタイムの支払い-Google Chrome"  
+[mailtoExtensionMicrosoft]: mailto:ext_dev_support@microsoft.com "ext_dev_support@microsoft.com"  
