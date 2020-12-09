@@ -3,17 +3,17 @@ description: Microsoft Edge WebView2 SDK のリリースノート
 title: Win32、WPF、および WinForms の Microsoft Edge WebView2 のリリースノート
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 11/25/2020
+ms.date: 12/08/2020
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Controller、browser control、edge html
-ms.openlocfilehash: 840d9d5e074e2ea2777942fd19106592151c29ee
-ms.sourcegitcommit: 2e14ff82350f700d7eabc8d33b3ec3e5fc8c61fa
+ms.openlocfilehash: 34063aee7bec324464cf592e6aab8ca499e9c944
+ms.sourcegitcommit: 1a35a0d52c412c503d742e66f25c4e97286a3919
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "11192227"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "11203624"
 ---
 # WebView2 SDK のリリースノート  
 
@@ -22,49 +22,44 @@ WebView2 チームは、6週間のリズムで [WEBVIEW2 SDK][NuGetGallery] を�
 > [!NOTE]
 > NuGet パッケージの更新後に、アプリを再コンパイルします。  
 
-## 1.0.707-プレリリース  
+## 1.0.721-プレリリース  
 
-リリース日: 2020 年11月23日  
+リリース日: 2020 年12月8日  
 
-[NuGet パッケージ][NuGetGallery1.0.707-prerelease] \ |Microsoft Edge の最小バージョン86.0.616.0。  
+[NuGet パッケージ][NuGetGallery1.0.721-prerelease] \ |Microsoft Edge の最小バージョン86.0.616.0。  
 
-> [!IMPORTANT]
-> 既知のエラーのため、このパッケージは廃止されました。 
+#### 全般的な情報  
 
-<!--  
-#### General  
+###### 機能  
 
-###### Features  
-
-*   Added [WebView2 Group Policies][DeployedgeMicrosoftEdgeWebviewPolicies].  For more information on recommended practices, navigate to [group policies for WebView2][Webview2ConceptsEnterpriseGroupPoliciesForWebview2].  
+*   [WebView2 グループポリシー][DeployedgeMicrosoftEdgeWebviewPolicies]が追加されました。  推奨される手順の詳細については、「 [グループポリシーの WebView2][Webview2ConceptsEnterpriseGroupPoliciesForWebview2]」を参照してください。  
 *   > [!IMPORTANT]
-    > **Breaking Change**:  Deprecated the old registry location.  
+    > **変更の中断**: 古いレジストリの場所が廃止されました。  
     > 
     > ```text
     > {Root}\Software\Policies\Microsoft\EmbeddedBrowserWebView\LoaderOverride\{AppId}
     > ```  
      
-*   Added support for [Drag & Drop][ReferenceWin32Icorewebview2experimentalcompositioncontroller3] within WebView2.  
-*   Added APIs to handle DPI support.  
-    *   Added [RasterizationScale][ReferenceWin32Icorewebview2experimentalcontrollerViewWebview210707PrereleaseGetRasterizationscale] property to change the DPI scale for WebView content and UI popups, and associated [RasterizationScaleChanged][ReferenceWin32Icorewebview2experimentalcontrollerViewWebview210707PrereleaseAddRasterizationscalechanged] event.  
-    *   Added [ShouldDetectMonitorScaleChanges][ReferenceWin32Icorewebview2experimentalcontrollerViewWebview210707PrereleaseGetShouldDetectMonitorScaleChanges] property to automatically update `RasterizationScale` property if needed.  
-    *   Added [BoundsMode property][ReferenceWin32Icorewebview2experimentalcontrollerViewWebview210707PrereleaseGetBoundsMode] to specify that the bounds are logic pixels and allow WebView to use the `RasterizationScale` for WebView2 pixel display, and have WebView apply the `RasterizationScale` to the `Bounds` to get the physical size.
-*   Updated `NewWindowRequested` event to handle `Ctrl`+`click` and `Shift`+`click`.  \([\#168][GithubMicrosoftedgeWebviewfeedbackIssue168] and [\#371][GithubMicrosoftedgeWebviewfeedbackIssue371]\).  
+*   WebView2 内の [ドラッグ & ドロップ][ReferenceWin32Icorewebview2experimentalcompositioncontroller3] のサポートが追加されました。  
+*   DPI サポートを処理するための Api を追加しました。  
+    *   WebView のコンテンツと UI のポップアップ、および関連付けられた[RasterizationScaleChanged][ReferenceWin32Icorewebview2experimentalcontrollerViewWebview210721PrereleaseAddRasterizationscalechanged]イベントの DPI スケールを変更する[RasterizationScale][ReferenceWin32Icorewebview2experimentalcontrollerViewWebview210721PrereleaseGetRasterizationscale]プロパティが追加されました。  
+    *   必要に応じて、自動的に [更新される][ReferenceWin32Icorewebview2experimentalcontrollerViewWebview210721PrereleaseGetShouldDetectMonitorScaleChanges] ように、プロパティを設定し `RasterizationScale` ます。  
+    *   境界がロジックピクセルであり、WebView で for WebView2 pixels ディスプレイを使用できることを指定して、 [BoundsMode プロパティ][ReferenceWin32Icorewebview2experimentalcontrollerViewWebview210721PrereleaseGetBoundsMode] を追加して `RasterizationScale` `RasterizationScale` 物理サイズを取得するには、をに適用し `Bounds` ます。
+*   `NewWindowRequested`処理するイベントが更新されました `Ctrl` + `click` `Shift` + `click` 。  \ ([\ #168][GithubMicrosoftedgeWebviewfeedbackIssue168] と [\ #371][GithubMicrosoftedgeWebviewfeedbackIssue371]\)。  
 
 #### .NET  
 
-###### Features  
+###### 機能  
 
-*   Enabled WinForms designer in .NET Core 3.1+ and .NET 5.  
-*   Improved .NET cookie management.  \([\#611][GithubMicrosoftedgeWebviewfeedbackIssue611]\).  
-*   Renamed `CoreWebView2Ready` to [CoreWebView2InitializationCompleted][DotnetApiMicrosoftWebWebview2Corewebview2initializationcompletedeventargs].
+*   .NET Core 3.1 + および .NET 5 の WinForms designer を有効にしました。  
+*   .NET cookie 管理が改善されました。  \ ([\ #611][GithubMicrosoftedgeWebviewfeedbackIssue611]\)  
+*   `CoreWebView2Ready` [CoreWebView2InitializationCompleted][DotnetApiMicrosoftWebWebview2Corewebview2initializationcompletedeventargs]に名前が変更されます。  
 
-###### Bug fixes
+###### バグ修正
 
-*   Added [AcceleratorKeyPressed][DotnetApiMicrosoftWebWebview2WpfWebview2Acceleratorkeypressed] event to support AcceleratorKey press in WebView2.  \([\#288][GithubMicrosoftedgeWebviewfeedbackIssue288]\).  
-*   Removed unnecessary files from being output to WebView2 folders.  \([\#461][GithubMicrosoftedgeWebviewfeedbackIssue461]\).  
-*   Improved host object API.  \([\#335][GithubMicrosoftedgeWebviewfeedbackIssue335] and [\#525][GithubMicrosoftedgeWebviewfeedbackIssue525]\).  
--->  
+*   WebView2 で Automationproperties.acceleratorkey をサポートする [AcceleratorKeyPressed][DotnetApiMicrosoftWebWebview2WpfWebview2Acceleratorkeypressed] イベントが追加されました。  \ ([\ #288][GithubMicrosoftedgeWebviewfeedbackIssue288]\)  
+*   WebView2 フォルダーへの出力から不要なファイルが削除されました。  \ ([\ #461][GithubMicrosoftedgeWebviewfeedbackIssue461]\)  
+*   改善されたホストオブジェクト API。  \ ([\ #335][GithubMicrosoftedgeWebviewfeedbackIssue335] と [\ #525][GithubMicrosoftedgeWebviewfeedbackIssue525]\)。  
 
 ## 1.0.664.37  
 
@@ -445,10 +440,10 @@ WebView2 SDK は、フィードバックからいくつかの機能要求を取�
 [ReferenceWin32Webview2IdlCreatecorewebview2environmentwithoptions09488]: /microsoft-edge/webview2/reference/win32/webview2-idl?view=webview2-0.9.488&preserve-view=true#createcorewebview2environmentwithoptions "CreateCoreWebView2EnvironmentWithOptions-Globals |Microsoft ドキュメント"  
 [ReferenceWin32Webview2IdlGetavailablecorewebview2browserversionstring09488]: /microsoft-edge/webview2/reference/win32/webview2-idl?view=webview2-0.9.488&preserve-view=true#getavailablecorewebview2browserversionstring "GetAvailableCoreWebView2BrowserVersionString-Globals |Microsoft ドキュメント"  
 
-[ReferenceWin32Icorewebview2experimentalcontrollerViewWebview210707PrereleaseAddRasterizationscalechanged]: /microsoft-edge/webview2/reference/win32/icorewebview2experimentalcontroller?view=webview2-1.0.707-prerelease&preserve-view=true#add_rasterizationscalechanged "add_RasterizationScaleChanged インターフェイス ICoreWebView2ExperimentalController |Microsoft ドキュメント"  
-[ReferenceWin32Icorewebview2experimentalcontrollerViewWebview210707PrereleaseGetBoundsMode]: /microsoft-edge/webview2/reference/win32/icorewebview2experimentalcontroller?view=webview2-1.0.707-prerelease&preserve-view=true#get_boundsmode "get_BoundsMode インターフェイス ICoreWebView2ExperimentalController |Microsoft ドキュメント"  
-[ReferenceWin32Icorewebview2experimentalcontrollerViewWebview210707PrereleaseGetRasterizationscale]: /microsoft-edge/webview2/reference/win32/icorewebview2experimentalcontroller?view=webview2-1.0.707-prerelease&preserve-view=true#get_rasterizationscale "get_RasterizationScale インターフェイス ICoreWebView2ExperimentalController |Microsoft ドキュメント"  
-[ReferenceWin32Icorewebview2experimentalcontrollerViewWebview210707PrereleaseGetShouldDetectMonitorScaleChanges]: /microsoft-edge/webview2/reference/win32/icorewebview2experimentalcontroller?view=webview2-1.0.707-prerelease&preserve-view=true#get_shoulddetectmonitorscalechanges "get_ShouldDetectMonitorScaleChanges インターフェイス ICoreWebView2ExperimentalController |Microsoft ドキュメント"  
+[ReferenceWin32Icorewebview2experimentalcontrollerViewWebview210721PrereleaseAddRasterizationscalechanged]: /microsoft-edge/webview2/reference/win32/icorewebview2experimentalcontroller?view=webview2-1.0.721-prerelease&preserve-view=true#add_rasterizationscalechanged "add_RasterizationScaleChanged インターフェイス ICoreWebView2ExperimentalController |Microsoft ドキュメント"  
+[ReferenceWin32Icorewebview2experimentalcontrollerViewWebview210721PrereleaseGetBoundsMode]: /microsoft-edge/webview2/reference/win32/icorewebview2experimentalcontroller?view=webview2-1.0.721-prerelease&preserve-view=true#get_boundsmode "get_BoundsMode インターフェイス ICoreWebView2ExperimentalController |Microsoft ドキュメント"  
+[ReferenceWin32Icorewebview2experimentalcontrollerViewWebview210721PrereleaseGetRasterizationscale]: /microsoft-edge/webview2/reference/win32/icorewebview2experimentalcontroller?view=webview2-1.0.721-prerelease&preserve-view=true#get_rasterizationscale "get_RasterizationScale インターフェイス ICoreWebView2ExperimentalController |Microsoft ドキュメント"  
+[ReferenceWin32Icorewebview2experimentalcontrollerViewWebview210721PrereleaseGetShouldDetectMonitorScaleChanges]: /microsoft-edge/webview2/reference/win32/icorewebview2experimentalcontroller?view=webview2-1.0.721-prerelease&preserve-view=true#get_shoulddetectmonitorscalechanges "get_ShouldDetectMonitorScaleChanges インターフェイス ICoreWebView2ExperimentalController |Microsoft ドキュメント"  
 
 [DotnetApiMicrosoftWebWebview2Core]: /dotnet/api/microsoft.web.webview2.core "WebView2 の名前空間 |Microsoft ドキュメント"  
 [DotnetApiMicrosoftWebWebview2Wpf]: /dotnet/api/microsoft.web.webview2.wpf "WebView2 の名前空間 |Microsoft ドキュメント"  
@@ -502,7 +497,7 @@ WebView2 SDK は、フィードバックからいくつかの機能要求を取�
 [ReferenceWin32Icorewebview2experimentalwebresourceresponseview10674]: /microsoft-edge/webview2/reference/win32/icorewebview2experimentalwebresourceresponseview?view=webview2-1.0.674-prerelease&preserve-view=true "インターフェイス ICoreWebView2ExperimentalWebResourceResponseView |Microsoft ドキュメント"  
 [ReferenceWin32Icorewebview2experimentalwebresourceresponseviewGetcontent10674]: /microsoft-edge/webview2/reference/win32/icorewebview2experimentalwebresourceresponseview?view=webview2-1.0.674-prerelease&preserve-view=true#getcontent "GetContent-インターフェイス ICoreWebView2ExperimentalWebResourceResponseView |Microsoft ドキュメント"  
 
-[ReferenceWin32Icorewebview2experimentalcompositioncontroller3]: /microsoft-edge/webview2/reference/win32/icorewebview2experimentalcompositioncontroller3?view=webview2-1.0.707-prerelease&preserve-view=true "インターフェイス ICoreWebView2ExperimentalCompositionController3 |Microsoft ドキュメント"  
+[ReferenceWin32Icorewebview2experimentalcompositioncontroller3]: /microsoft-edge/webview2/reference/win32/icorewebview2experimentalcompositioncontroller3?view=webview2-1.0.721-prerelease&preserve-view=true "インターフェイス ICoreWebView2ExperimentalCompositionController3 |Microsoft ドキュメント"  
 
 [DeployedgeMicrosoftEdgePolicies]: /deployedge/microsoft-edge-policies "Microsoft Edge-ポリシー |Microsoft ドキュメント"  
 [DeployedgeMicrosoftEdgeWebviewPolicies]: /deployedge/microsoft-edge-webview-policies "Microsoft Edge WebView2-ポリシー |Microsoft ドキュメント"  
@@ -589,6 +584,6 @@ WebView2 SDK は、フィードバックからいくつかの機能要求を取�
 [NuGetGallery1.0.664.37]:  https://www.nuget.org/packages/Microsoft.Web.WebView2/1.0.664.37 "NuGet ギャラリー |WebView2 v 1.0.664.37"
 [NuGetGallery0.9.628-prerelease]:  https://www.nuget.org/packages/Microsoft.Web.WebView2/0.9.628-prerelease "NuGet ギャラリー |WebView2 v 0.9.628 プレリリース"  
 [NuGetGallery1.0.674-prerelease]:  https://www.nuget.org/packages/Microsoft.Web.WebView2/1.0.674-prerelease "NuGet ギャラリー |WebView2 v 1.0.674 プレリリース"  
-[NuGetGallery1.0.707-prerelease]:  https://www.nuget.org/packages/Microsoft.Web.WebView2/1.0.707-prerelease "NuGet ギャラリー |WebView2 v 1.0.707 プレリリース"  
+[NuGetGallery1.0.721-prerelease]:  https://www.nuget.org/packages/Microsoft.Web.WebView2/1.0.721-prerelease "NuGet ギャラリー |WebView2 v 1.0.721 プレリリース"  
 
 [WindowsBlogsMsedgedevEdgeWebview2GeneralAvailability]: https://blogs.windows.com/msedgedev/edge-webview2-general-availability "Microsoft Edge WebView2 の一般的な利用可能性についてのアナウンス |Microsoft Edge ブログ"  
