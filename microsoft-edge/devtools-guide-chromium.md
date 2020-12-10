@@ -3,17 +3,17 @@ description: Microsoft Edge (Chromium) 開発者ツールについて理解す�
 title: Microsoft Edge (Chromium) 開発者ツール
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 10/23/2020
+ms.date: 12/09/2020
 ms.topic: article
 ms.prod: microsoft-edge
 ms.technology: devtools
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: ffc31dad9e641adfb9f1ae0b5b88b29192ea4152
-ms.sourcegitcommit: acf8ad7cb6c8ecf83a6170f8eeb9bec32878f8ff
+ms.openlocfilehash: 8f773db3d175f8b5128e1558809334c8f2de4bd7
+ms.sourcegitcommit: 3234b32e73c9f8362082d995296bd1c5e4286036
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "11182499"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "11204006"
 ---
 # Microsoft Edge (Chromium) 開発者ツール  
 
@@ -112,7 +112,7 @@ Web サイトやアプリの構築時に発生する問題の診断とデバッ�
 | [ **要素の検査] モード** を切り替えて、サイトの要素を選択し、[ **要素** ] パネルで HTML と CSS を表示します。 | `Ctrl`+`Shift`+`C` | `Command`+`Shift`+`C` |  
 | コマンドメニューを表示する | `Ctrl`+`Shift`+`P` | `Command`+`Shift`+`P` |  
 | ドロワーの表示/非表示 | `Esc` | `Esc` |  
-| 非.  キャッシュを使用してページが更新されます。  | `F5` / `Ctrl`+`R` | `Command`+`R` |  
+| 更新。  キャッシュを使用してページが更新されます。  | `F5` / `Ctrl`+`R` | `Command`+`R` |  
 | ハードリフレッシュ。  これにより、Microsoft Edge はリソースをもう一度ダウンロードして、再読み込みします。  使用されているリソースがキャッシュバージョンから取得されている可能性があります。 | `Ctrl`+`F5` / `Ctrl`+`Shift`+`R` | `Command`+`Shift`+`R` |  
 | 現在のパネル内でテキストを検索します。  監査、アプリケーション、セキュリティの各パネルではサポートされません。 | `Ctrl`+`F` | `Command`+`F` |  
 | 引き出しに検索パネルを表示します。これにより、読み込まれたすべてのリソースのテキストを検索することができます。 | `Ctrl`+`Shift`+`F` | `Command`+`Option`+`F` |  
@@ -140,7 +140,7 @@ Web サイトやアプリの構築時に発生する問題の診断とデバッ�
 <!-- links -->  
 
 [DevtoolsGuideChromiumBeginnersHtml]: /microsoft-edge/devtools-guide-chromium/beginners/html "初心者向けの DevTools: HTML と DOM の使用を開始する |Microsoft ドキュメント"  
-[DevtoolsGuideChromiumWhatsNewIndex]: /microsoft-edge/devtools-guide-chromium/whats-new/2020/10/devtools "Microsoft Edge (Chromium) DevTools の新機能 |Microsoft ドキュメント"  
+[DevtoolsGuideChromiumWhatsNewIndex]: /microsoft-edge/devtools-guide-chromium/whats-new/2020/11/devtools "Microsoft Edge (Chromium) DevTools の新機能 |Microsoft ドキュメント"  
 [DevtoolsProtocolChromiumIndex]: /microsoft-edge/devtools-protocol-chromium "Microsoft Edge (Chromium) DevTools Protocol |Microsoft ドキュメント"  
 
 [MicrosoftEdgeAddonsExtensions]: https://microsoftedge.microsoft.com/addons/category/Edge-Extensions "Microsoft Edge アドオン"  

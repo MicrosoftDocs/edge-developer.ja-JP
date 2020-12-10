@@ -3,16 +3,16 @@ description: Microsoft Edge DevTools の最新の実験的な機能
 title: 試験的機能
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 11/06/2020
+ms.date: 12/07/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools、実験
-ms.openlocfilehash: ddedf62ff27023751c511a7d2e34b6ea14461db5
-ms.sourcegitcommit: be42902c404e9f9ac2d661df9c55de3db4d956a5
+ms.openlocfilehash: b2b2e591834f1c75d51ec98523e2752d67a2d354
+ms.sourcegitcommit: 6571bcc0b7f1c4c9d6ead65081374bab87cd4469
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "11160368"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "11203900"
 ---
 # 試験的機能  
 
@@ -25,7 +25,7 @@ Microsoft Edge のすべてのチャネルで実験的機能を利用できま�
 Microsoft Edge で \ (またはオフ) の試験的機能を有効にするには、次の手順を実行します。  
 
 1.  [DevTools を開き][DevtoolsOpen]ます。  
-     *   `Control` + `Shift` + `I` \ (Windows, Linux \) または `Command` + `Option` + `I` \ (macOS \) を選択します。  詳細については、「 [Microsoft Edge DevTools のキーボードショートカット][DevToolsShortcuts]」を参照してください。  
+    *   `Control` + `Shift` + `I` \ (Windows, Linux \) または `Command` + `Option` + `I` \ (macOS \) を選択します。  詳細については、「 [Microsoft Edge DevTools のキーボードショートカット][DevToolsShortcuts]」を参照してください。  
 1.  [ [設定][DevToolsCustomizeSettings] ] ウィンドウを開きます。  
     *   を選択し `Shift` + `?` ます。  詳細については、「 [Microsoft Edge DevTools のキーボードショートカット][DevToolsShortcuts]」を参照してください。  
 1.  [ **設定** ] ウィンドウの左側で、[ **実験** ] セクションを選択します。  
@@ -36,7 +36,7 @@ Microsoft Edge で \ (またはオフ) の試験的機能を有効にするに�
     
 1.  [ **実験** ] ページで、利用可能なすべての実験的な機能の一覧をスクロールし、テストする各機能の横にあるチェックボックスをオンにします。  
 1.  Microsoft Edge DevTools を閉じてからもう一度開きます。  
-
+    
 > [!NOTE]
 > 実験的な機能は常に更新され、パフォーマンスの問題が発生する可能性があります。  実験的な機能を無効にするには、[ **実験** ] ページを開き、無効にする実験的機能のチェックボックスをオフにします。  
 
@@ -61,7 +61,7 @@ Microsoft Edge で2つの新しいデュアル画面と折りたたみ式デバ�
 
 *   [Surface Duo][SurfaceDevicesDuo]  
 *   [Samsung Galaxy Fold][SamsungMobileGalaxyFold]  
-
+    
 デバイスをエミュレートし、次の後処理を切り替えます。  
 
 *   シングルスクリーンまたは折り目  
@@ -80,7 +80,7 @@ Microsoft Edge で2つの新しいデュアル画面と折りたたみ式デバ�
 1.  に移動 `edge://flags` します。  
 1.  [ **検索フラグ** ] ボックスに、「 `Experimental Web Platform features` 実験的な **Web Platform 機能** 」というフラグを選択して、[ **無効** ] を [ **有効**] に変更します。  
 1.  [Microsoft Edge を再起動]。  
-
+    
 :::image type="complex" source="./media/experiments-dual-screen-emulation-edge-flags.msft.png" alt-text="実験的な Web Platform 機能のフラグを有効にする" lightbox="./media/experiments-dual-screen-emulation.msft.png":::
    実験的な Web Platform 機能のフラグを有効にする  
 :::image-end:::  
@@ -96,7 +96,7 @@ Microsoft Edge のデュアル画面の姿勢で [Surface Duo][SurfaceDevicesDuo
 
 エミュレートされたディスプレイは、 [Surface Duo][SurfaceDevicesDuo]で実行されている[Microsoft Edge Android アプリ][GooglePlayMicrosoftEdge]での web サイト \ (またはアプリ \) の表示方法と一致します。  お客様の web サイト \ (またはアプリ \) を更新して、継ぎ目に合わせて表示を改善しなければならない場合があります。  Web サイトの外観 (またはアプリ \) を seam に適合させる方法については、「 [seam の操作方法][DualScreenIntroductionHowWorkSeam]」を参照してください。  
 
-[デバイスツールバー][DevtoolsDeviceModeIndexSimulateMobileViewport]には、web サイトまたはアプリを複数の方法でテストするための追加機能が用意されています。  **Rotate** ![ ][ImageRotateIcon] ビューポートを横方向に回転するには、[回転 \ (回転 \)] を選びます。 この機能を **スパン** \ ( ![ スパン \) と組み合わせると、シングル画面で、または折る、または折り目を切り替えることが ][ImageSpanIcon] できます。  これらの機能により、web サイトやアプリを4つのすべての方法でテストできます。  
+[デバイスツールバー][DevtoolsDeviceModeIndexSimulateMobileViewport]には、web サイトまたはアプリを複数の方法でテストするための追加機能が用意されています。  **** ![ ][ImageRotateIcon] ビューポートを横方向に回転するには、[回転 \ (回転 \)] を選びます。 この機能を **スパン** \ ( ![ スパン \) と組み合わせると、シングル画面で、または折る、または折り目を切り替えることが ][ImageSpanIcon] できます。  これらの機能により、web サイトやアプリを4つのすべての方法でテストできます。  
 
 :::image type="complex" source="./media/experiments-dual-screen-emulation-rotate-span.msft.png" alt-text="デュアルスクリーンデバイスと折りたたみ式デバイスの事後の姿勢と向きのマトリックス" lightbox="./media/experiments-dual-screen-emulation-rotate-span.msft.png":::
    デュアルスクリーンデバイスと折りたたみ式デバイスの事後の姿勢と向きのマトリックス  
@@ -111,7 +111,7 @@ The **Experimental Web Platform features** \(![ExperimentalApis][ImageExperiment
 
 *   デュアルスクリーンデバイスでの web 開発の詳細については、「 [デュアルスクリーン web エクスペリエンス][DualScreenWebIndex]」を参照してください。  
 *   [Surface Duo エミュレーター][DualScreenAndroidUseEmulator]をインストールします。  これは、Microsoft Edge のエミュレーターとは異なり、Android を実行している Surface Duo のエミュレートと [Android Studio][AndroidDeveloperStudio]との統合です。  詳細については、「 [Surface DUO SDK の入手][DualScreenAndroidGetDuoSdk]」を参照してください。  
-
+    
 > [!NOTE]
 > 次に、現在の既知の問題の一覧を示します。  
 > 
@@ -123,7 +123,7 @@ The **Experimental Web Platform features** \(![ExperimentalApis][ImageExperiment
 
 #### 検査ツールを使用したホバーグリッドのオーバーレイの表示  
 
-**検査**ツールを使うと、マウスをポイントして web サイトの CSS グリッドのレイアウトを簡単に識別して視覚化することができます。  **Inspect** ![ ](./media/inspect-icon.msft.png) Devtools の左上隅にある検査 (検査 \) アイコンを選択します。  次に、デバッグしている web サイトの Grid 要素にマウスポインターを置きます。  グリッドの周りに枠線が表示され、[網かけ] ではグリッドのギャップの位置が示されます (存在する場合)。  
+**検査**ツールを使うと、マウスをポイントして web サイトの CSS グリッドのレイアウトを簡単に識別して視覚化することができます。  **** ![ ](./media/inspect-icon.msft.png) Devtools の左上隅にある検査 (検査 \) アイコンを選択します。  次に、デバッグしている web サイトの Grid 要素にマウスポインターを置きます。  グリッドの周りに枠線が表示され、[網かけ] ではグリッドのギャップの位置が示されます (存在する場合)。  
 
 :::image type="complex" source="./media/grid-inspect.msft.png" alt-text="検査ツールでグリッドを表示する" lightbox="./media/grid-inspect.msft.png":::
    検査ツールでグリッドを表示する  
@@ -136,7 +136,7 @@ Microsoft Edge バージョン86以降では、実験的な CSS grid 機能で�
 *   永続的なオーバーレイはスクロールしてもページに表示されたままになり、マウスを動かすと、DevTools のその他の機能を使うことができます。  
 *   同時に複数の持続的なオーバーレイを有効にすることができます。複数のグリッドレイアウトを一度に確認することができます。  
 *   永続的なオーバーレイには、グリッド領域の名前の非表示と表示、グリッドのギャップ、追跡サイズなど、さまざまな構成オプションが用意されています。  
-
+    
 永続的なグリッドのオーバーレイを切り替える2つの方法  
 
 *   **要素**ツールの DOM ツリーに表示されている grid 要素の隣にある**グリッド**楕円アイコンを選択します。  
@@ -179,7 +179,7 @@ Microsoft Edge バージョン86以降では、新しい **レイアウト** パ
 *   処理  
 *   プログレッシブ Web アプリ (PWAs)  
 *   その他の一般的な web 開発の問題  
-
+    
 [Webhint][WebhintMain]の実験では、[[問題][DevtoolsIssues]] パネルに webhint のフィードバックが表示されます。  問題を選択すると、ソリューションのドキュメントと web サイト上の影響を受けるリソースの一覧が表示されます。  リソースリンクを選んで、DevTools で関連する **ネットワーク**、 **ソース**、または **要素** のウィンドウを開きます。  
 
 :::image type="complex" source="./media/experiments-webhint.msft.png" alt-text="[問題] パネルでの webhint のフィードバック" lightbox="./media/experiments-webhint.msft.png":::
@@ -199,7 +199,7 @@ Microsoft Edge バージョン86以降では、新しい **レイアウト** パ
 1.  コンテキストメニューを開き (\ 右クリック \)、[ **編集と再生**] を選びます。  
 1.  **ネットワークコンソール**が開いたら、ネットワーク要求情報を編集します。  
 1.  [ **送信**] を選びます。  
-
+    
 :::image type="complex" source="./media/network-network-console.msft.png" alt-text="Console ドローワのネットワーク本体" lightbox="./media/network-network-console.msft.png":::
    **Console**ドローワの**ネットワーク本体**  
 :::image-end:::  
@@ -216,7 +216,7 @@ Microsoft Edge バージョン86以降では、新しい **レイアウト** パ
 1.  [引き出し] \ (下) パネルで [ **アクセシビリティ** ] ウィンドウを開きます。  
 1.  [ **ソース注文ビューアー** ] セクションで、[ **ソースの順序を表示** ] チェックボックスをオンにします。  
 1.  任意の HTML 要素を強調表示して、ページソースの順序でオーバーレイを表示します。  
-
+    
 :::image type="complex" source="./media/experiments-source-order-viewer.msft.png" alt-text="[アクセシビリティ] ウィンドウのソースオーダービューアー" lightbox="./media/experiments-source-order-viewer.msft.png":::
    [**アクセシビリティ**] ウィンドウの**ソースオーダービューアー**  
 :::image-end:::  
@@ -265,13 +265,10 @@ Microsoft Edge バージョン86以降では、新しい **レイアウト** パ
 
 これで、z インデックスとドキュメントオブジェクトモデル \ (DOM \) のレイヤーを視覚化することができます。  この機能を使うと、頻繁にコンテキストを切り替えることなく、デバッグを行うことができます。  コンテキスト切り替えの削減が重大な問題点であったことを特定しました。  入力するコードが web アプリにどのように影響するかは必ずしも明確ではありません。  包括的なビジュアルデバッグエクスペリエンスを実現するために、3D ビューレイヤーと合成レイヤーが結合されました。  実験を有効にした後、DevTools を再起動してください。  **合成レイヤー**を使用するには、次の手順を実行します。  
 
-<!--1.  Navigate to a PWA-enabled website such as `twitter.com`.  
-1.  Choose the **Install ...** \(![Install PWA icon](./media/install-pwa-icon.msft.png)\) icon to install the Twitter PWA.  If it is already set up, open the app as usual.  
-1.  Open the Devtools.  -->  
 1.  ドロワーで、 **3D ビュー** ツールを選択します。  
 1.  [ **合成レイヤー** ] ウィンドウを開く。  
 1.  アプリのペイントレイヤーがすべて表示されます。  独自の web アプリでこの機能を試してみてください。  
-
+    
 :::image type="complex" source="./media/experiments-layers.msft.png" alt-text="合成レイヤーウィンドウ" lightbox="./media/experiments-layers.msft.png":::
    **合成レイヤー** ウィンドウ  
 :::image-end:::  

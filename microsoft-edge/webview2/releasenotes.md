@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Controller、browser control、edge html
-ms.openlocfilehash: 34063aee7bec324464cf592e6aab8ca499e9c944
-ms.sourcegitcommit: 1a35a0d52c412c503d742e66f25c4e97286a3919
+ms.openlocfilehash: 2859f931aea8963e8a50835110914a216811c191
+ms.sourcegitcommit: 3234b32e73c9f8362082d995296bd1c5e4286036
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 12/09/2020
-ms.locfileid: "11203624"
+ms.locfileid: "11204020"
 ---
 # WebView2 SDK のリリースノート  
 
@@ -53,7 +53,7 @@ WebView2 チームは、6週間のリズムで [WEBVIEW2 SDK][NuGetGallery] を�
 
 *   .NET Core 3.1 + および .NET 5 の WinForms designer を有効にしました。  
 *   .NET cookie 管理が改善されました。  \ ([\ #611][GithubMicrosoftedgeWebviewfeedbackIssue611]\)  
-*   `CoreWebView2Ready` [CoreWebView2InitializationCompleted][DotnetApiMicrosoftWebWebview2Corewebview2initializationcompletedeventargs]に名前が変更されます。  
+*   `CoreWebView2Ready` [CoreWebView2InitializationCompleted][DotnetApiMicrosoftWebWebview2Corewebview2initializationcompletedeventargs]に置き換えられます。  
 
 ###### バグ修正
 
@@ -105,7 +105,7 @@ WebView2 チームは、6週間のリズムで [WEBVIEW2 SDK][NuGetGallery] を�
 #### .NET  
 
 *   CoreWebView2Environment 変数を公開するために [CoreWebView2][DotnetApiMicrosoftWebWebview2CoreCorewebview2] クラスが更新されました。  
-*   名前空間のカスタム EventArgs クラスの実装 `Microsoft.Web.WebView2.Core` が、system.componentmodel.annotations また[System.EventArgs][DotnetApiSystemEventargs]は[CancelEventArgs][DotnetApiSystemComponentmodelCancelEventargs]のサブクラスとして変更されました。  \ ([\ #250][GithubMicrosoftedgeWebviewfeedbackIssue250]\)  
+*   名前空間のカスタム EventArgs クラスの実装 `Microsoft.Web.WebView2.Core` が、system.componentmodel.annotations また[][DotnetApiSystemEventargs]は[CancelEventArgs][DotnetApiSystemComponentmodelCancelEventargs]のサブクラスとして変更されました。  \ ([\ #250][GithubMicrosoftedgeWebviewfeedbackIssue250]\)  
 *   WinForms での [CoreWebView2CreationProperties][DotnetApiMicrosoftWebWebview2Winforms] のサポートが追加されました。  \ ([\ #204][GithubMicrosoftedgeWebviewfeedbackIssue204]\)
 *   .NET [WebResourceRequested][DotnetApiMicrosoftWebWebview2CoreCorewebview2Webresourcerequested] api が追加されました。  \ ([\ #219][GithubMicrosoftedgeWebviewfeedbackIssue219]\)  
 *   WinForms Designer [Source][DotnetApiMicrosoftWebWebview2WinformsWebview2Source] プロパティが default に更新されたか、null にリセットされました。  \ ([\ #177][GithubMicrosoftedgeWebviewfeedbackIssue177]\)  
@@ -223,8 +223,8 @@ WebView2 チームは、6週間のリズムで [WEBVIEW2 SDK][NuGetGallery] を�
 *   WinForms と WPF WebView2API のサンプルをリリースしました。これは WebView2 SDK の包括的なガイドです。  詳細については、「 [サンプルリポジトリ][GithubMicrosoftedgeWebview2samplesMain]」を参照してください。  
 *   ビジュアルホスト機能と window 機能の [実験的な api][ConceptsVersioningExperimentalApis]のサポートが追加されました。  
 *   > [!IMPORTANT]
-    > **変更の中断**: 次の保留は IDisposable: [scriptWebResourceRequested 始値][DotnetApiMicrosoftWebWebview2CoreCorewebview2Scriptdialogopening]、 [newwindowrequested][DotnetApiMicrosoftWebWebview2CoreCorewebview2Newwindowrequested]、 [WebResourceRequested][DotnetApiMicrosoftWebWebview2CoreCorewebview2Webresourcerequested]、および[permissionrequested][DotnetApiMicrosoftWebWebview2CoreCorewebview2Permissionrequested]実装するようになりました。  
-*   [GetCompareBrowserVersions の文字列][DotnetApiMicrosoftWebWebview2CoreCorewebview2environmentGetavailablebrowserversionstring]と[CompareBrowserVersions][DotnetApiMicrosoftWebWebview2CoreCorewebview2environmentComparebrowserversions]を[CoreWebView2Environment][DotnetApiMicrosoftWebWebview2CoreCorewebview2environment]の静的として追加しました。  
+    > **変更の中断**: 次の保留は IDisposable: [scriptWebResourceRequested 始値][DotnetApiMicrosoftWebWebview2CoreCorewebview2Scriptdialogopening]、 [newwindowrequested][DotnetApiMicrosoftWebWebview2CoreCorewebview2Newwindowrequested]、 [][DotnetApiMicrosoftWebWebview2CoreCorewebview2Webresourcerequested]、および[permissionrequested][DotnetApiMicrosoftWebWebview2CoreCorewebview2Permissionrequested]実装するようになりました。  
+*   [GetCompareBrowserVersions の文字列][DotnetApiMicrosoftWebWebview2CoreCorewebview2environmentGetavailablebrowserversionstring]と[][DotnetApiMicrosoftWebWebview2CoreCorewebview2environmentComparebrowserversions]を[CoreWebView2Environment][DotnetApiMicrosoftWebWebview2CoreCorewebview2environment]の静的として追加しました。  
 
 ## 0.9.515-プレリリース  
 
@@ -298,7 +298,7 @@ WebView2 SDK は、フィードバックからいくつかの機能要求を取�
 *   JavaScript ダイアログイベントのダイアログ型のサポートが追加され、 `beforeunload` 列挙型エントリ [CORE_WEBVIEW2_SCRIPT_DIALOG_KIND_BEFOREUNLOAD][ReferenceWin32Icorewebview2CoreWebview2ScriptDialogKind09430] 追加されました。  
 *   HttpRequestHeaders、 [GetHeader][ReferenceWin32Icorewebview2httpresponseheadersGetheader09430] 、HttpResponseHeaders、 [Get_HasCurrentHeader][ReferenceWin32Icorewebview2httpheaderscollectioniteratorGetHascurrentheader09430]プロパティに[GetHeaders][ReferenceWin32Icorewebview2httprequestheadersGetheaders09430]を httpheaderscollectioniterator に追加しました。  
 *   > [!IMPORTANT]
-    > **変更の中断**: 動作が変更されました `DevToolsProtocolEventReceived` 。  次に、 [add_DevToolsProtocolEventReceived][ReferenceWin32Icorewebview2devtoolsprotocoleventreceiverAddDevtoolsprotocoleventreceived09430]remove_DevToolsProtocolEventReceived を使用して、特定の devtools プロトコルイベント用の[DevToolsProtocolEventReceiver][ReferenceWin32Icorewebview2devtoolsprotocoleventreceiver09430]を作成し、そのイベントをサブスクライブまたはサブスクライブ解除することができ / [remove_DevToolsProtocolEventReceived][ReferenceWin32Icorewebview2devtoolsprotocoleventreceiverRemoveDevtoolsprotocoleventreceived09430]ます。
+    > **変更の中断**: 動作が変更されました `DevToolsProtocolEventReceived` 。  次に、 [add_DevToolsProtocolEventReceived][ReferenceWin32Icorewebview2devtoolsprotocoleventreceiverAddDevtoolsprotocoleventreceived09430]remove_DevToolsProtocolEventReceived を使用して、特定の devtools プロトコルイベント用の[DevToolsProtocolEventReceiver][ReferenceWin32Icorewebview2devtoolsprotocoleventreceiver09430]を作成し、そのイベントをサブスクライブまたはサブスクライブ解除することができ / [][ReferenceWin32Icorewebview2devtoolsprotocoleventreceiverRemoveDevtoolsprotocoleventreceived09430]ます。
 *   > [!IMPORTANT]
     > **変更の中断**: `WebMessageReceivedEventArgs` [Get_WebMessageAsString][ReferenceWin32Iwebview2webmessagereceivedeventargsGetWebmessageasstring08190] プロパティが [trygetwebmessageasstring][ReferenceWin32Icorewebview2webmessagereceivedeventargsTrygetwebmessageasstring09430] メソッドに変更されました。  
 *   > [!IMPORTANT]
