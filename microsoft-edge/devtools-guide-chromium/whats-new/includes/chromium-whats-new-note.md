@@ -6,9 +6,9 @@ ms.topic: include
 ms.date: 09/08/2020
 ms.openlocfilehash: 3aa63a0713bf192e3c95ce6c8ca2dc660984bde9
 ms.sourcegitcommit: 6b577cb118f34f3ff2c65eab2908b65f155dc151
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 09/09/2020
 ms.locfileid: "11004195"
 ---
-<span data-ttu-id="74100-101">次のセクションでは、オープンソースの Chromium プロジェクトに寄与した Microsoft Edge で利用できるその他の機能について説明します。</span><span class="sxs-lookup"><span data-stu-id="74100-101">The following sections announce additional features available in Microsoft Edge that were contributed to the open-source Chromium project.</span></span>  
+<span data-ttu-id="f45dc-101">次のセクションでは、オープンソースの Chromium プロジェクトに寄与した Microsoft Edge で利用できるその他の機能について説明します。</span><span class="sxs-lookup"><span data-stu-id="f45dc-101">The following sections announce additional features available in Microsoft Edge that were contributed to the open-source Chromium project.</span></span>  
