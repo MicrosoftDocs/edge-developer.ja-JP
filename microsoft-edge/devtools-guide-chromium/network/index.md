@@ -1,6 +1,6 @@
 ---
 description: Microsoft Edge DevTools の最も一般的なネットワーク関連機能のチュートリアルです。
-title: Microsoft Edge DevTools でネットワークアクティビティを検査する
+title: Microsoft Edge DevTools でネットワーク アクティビティを検査する
 author: MSEdgeTeam
 ms.author: msedgedevrel
 ms.date: 10/19/2020
@@ -9,7 +9,7 @@ ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
 ms.openlocfilehash: a55ff05e29817c483cbf13b8713ef37cf96424d5
 ms.sourcegitcommit: 99eee78698dc95b2a3fa638a5b063ef449899cda
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/20/2020
 ms.locfileid: "11125427"
@@ -28,11 +28,11 @@ ms.locfileid: "11125427"
    See the License for the specific language governing permissions and
    limitations under the License.  -->  
 
-# Microsoft Edge DevTools でネットワークアクティビティを検査する  
+# Microsoft Edge DevTools でネットワーク アクティビティを検査する  
 
-これは、ページのネットワークアクティビティの検査に関連する、よく使われる DevTools 機能のいくつかの実践的なチュートリアルです。  
+これは、最も一般的な DevTools 機能のいくつかの実践的なチュートリアルで、ページのネットワーク アクティビティの検査に関連しています。  
 
-代わりに機能を参照する場合は、 [ネットワークの参照][DevtoolsNetworkReference] を参照してください。  
+代わりに機能を参照する場合は、 [ネットワークの参照][DevtoolsNetworkReference] を確認します。  
 
 <!--TODO: This entire section needs a Microsoft Edge DevTools re-write  -->
 
@@ -42,20 +42,20 @@ ms.locfileid: "11125427"
 > [!VIDEO embed/e1gAyQuIFQo]  
 -->
 
-## [ネットワーク] パネルを使用する場合  
+## ネットワーク パネルを使用する場合  
 
-通常、[ネットワーク] パネルは、リソースが予期したとおりにダウンロードまたはアップロードされるようにする必要がある場合に使用します。  [ネットワーク] パネルの最も一般的なユースケースは、次のとおりです。  
+通常、リソースが予期したとおりにダウンロードまたはアップロードされるようにする必要がある場合にネットワーク パネルを使用します。  ネットワーク パネルの最も一般的なユースケースは、次のとおりです。  
 
-*   リソースが実際にはまったくアップロードまたはダウンロードされていることを確認します。  
-*   HTTP ヘッダー、コンテンツ、サイズなど、個々のリソースのプロパティを検査します。  
+*   リソースが実際にすべてアップロードまたはダウンロードされていることを確認する。  
+*   HTTP ヘッダー、コンテンツ、サイズなど、個々のリソースのプロパティを検査する。  
     
-ページの読み込みのパフォーマンスを向上させる方法を探している場合は、[ネットワーク] パネルから開始しないで **ください** 。  ネットワークアクティビティに関連していない読み込みパフォーマンスの問題には、さまざまな種類があります。  ページを改善する方法についての候補が表示されるため、監査パネルから開始します。  「 [Web サイトの速度を最適化][DevtoolsSpeedGetStarted]する」を参照してください。  
+ページの読み込みのパフォーマンスを向上させる方法をお探しの場合は、ネットワーク パネルから開始 **しないでください**。  ネットワーク アクティビティに関連しない読み込みパフォーマンスの問題には、さまざまな種類があります。  ページを改善する方法についての対象候補が表示されるので、監査パネルから開始します。  [Web サイトの速度を最適化する][DevtoolsSpeedGetStarted]を参照してください。  
 
-## [ネットワーク] パネルを開く  
+## ネットワーク パネルを開く  
 
-このチュートリアルを最大限に活用するには、デモを開き、デモページの機能を試してください。  
+このチュートリアルを最大限に活用するには、デモを開いてデモのページで機能を試してみてください。  
 
-1.  [はじめに] の [デモ][GlitchNetworkGetStarted]を開きます。  
+1.  [デモを開始する][GlitchNetworkGetStarted]を開きます。  
     
     :::image type="complex" source="../media/network-glitch-inspect-network-activity-demo.msft.png" alt-text="デモ" lightbox="../media/network-glitch-inspect-network-activity-demo.msft.png":::
        デモ  
@@ -64,302 +64,302 @@ ms.locfileid: "11125427"
     <!--You may prefer to move the demo to a separate window.  -->  
     
     <!--
-    :::image type="complex" source="../media/network-tutorial/windows.msft.png" alt-text="デモ" lightbox="../media/network-tutorial/windows.msft.png":::
+    :::image type="complex" source="../media/network-tutorial/windows.msft.png" alt-text="The demo in one window and this tutorial in a different window" lightbox="../media/network-tutorial/windows.msft.png":::
        The demo in one window and this tutorial in a different window  
     :::image-end:::  
     -->
     
-1.  [Open DevTools][DevToolsOpen] `Control` + `Shift` + `J` \ (Windows、Linux \) または `Command` + `Option` + `J` \ (macOS \) を押して、devtools を開きます。  **コンソール**パネルが開きます。  
+1.  [DevTools を開始][DevToolsOpen] するには、 `Control`+`Shift`+`J` \(Windows, Linux\) または `Command`+`Option`+`J` \(macOS\) を押します。  **コンソール**パネルが開きます。  
     
-    :::image type="complex" source="../media/network-glitch-console.msft.png" alt-text="デモ" lightbox="../media/network-glitch-console.msft.png":::
-       **本体**  
+    :::image type="complex" source="../media/network-glitch-console.msft.png" alt-text="コンソール" lightbox="../media/network-glitch-console.msft.png":::
+       **コンソール**  
     :::image-end:::  
     
     [ウィンドウの下部に DevTools をドッキング][DevToolsCustomizePlacement]することをお勧めします。  
     
-    :::image type="complex" source="../media/network-glitch-console-bottom.msft.png" alt-text="デモ" lightbox="../media/network-glitch-console-bottom.msft.png":::
+    :::image type="complex" source="../media/network-glitch-console-bottom.msft.png" alt-text="ウィンドウの下部にドッキングされた DevTools" lightbox="../media/network-glitch-console-bottom.msft.png":::
        ウィンドウの下部にドッキングされた DevTools  
     :::image-end:::  
     
-1.  [ **ネットワーク** ] タブを選択します。 [ **ネットワーク** ] パネルが開きます。  
+1.  **ネットワーク** タブを選択します。  **ネットワーク** パネルが開きます。  
     
-    :::image type="complex" source="../media/network-glitch-network-bottom.msft.png" alt-text="デモ" lightbox="../media/network-glitch-network-bottom.msft.png":::
+    :::image type="complex" source="../media/network-glitch-network-bottom.msft.png" alt-text="ウィンドウの下部にドッキングされた DevTools のコンソール ツール" lightbox="../media/network-glitch-network-bottom.msft.png":::
        ウィンドウの下部にドッキングされた DevTools の**コンソール**ツール  
     :::image-end:::  
     
-[ネットワーク] パネルが空になりました。  DevTools は、開いた後にのみネットワークアクティビティを記録し、DevTools を開いた後のネットワークアクティビティは発生しませんでした。  
+ネットワーク パネルは空の状態です。  DevTools は、開始された場合のみネットワークアクティビティを記録し、DevTools を開始してからはネットワーク アクティビティは発生しません。  
 
-## ネットワークアクティビティをログに記録する  
+## ネットワーク アクティビティをログする  
 
 ページによって発生するネットワークアクティビティを表示するには、次の操作を行います。  
 
-1.  ページを再読み込みします。  ネットワークパネルでは、ネットワーク **ログ**にすべてのネットワークアクティビティが記録されます。  
+1.  ページを再読み込みします。  ネットワーク パネルでは、**ネットワーク ログ**にすべてのネットワークアクティビティが記録されます。  
     
-    :::image type="complex" source="../media/network-glitch-network.msft.png" alt-text="デモ" lightbox="../media/network-glitch-network.msft.png":::
-       **ネットワークログ**  
+    :::image type="complex" source="../media/network-glitch-network.msft.png" alt-text="ネットワーク ログ" lightbox="../media/network-glitch-network.msft.png":::
+       **ネットワーク ログ**  
     :::image-end:::  
     
-    **ネットワークログ**の各行は、リソースを表します。  既定では、リソースは時系列順に表示されます。  トップリソースは、通常、メインの HTML 文書です。  一番下のリソースは、要求されたすべてのものです。  
+    **ネットワークログ**の各行は、リソースを表します。  既定では、リソースは時系列順に表示されます。  トップリソースは、通常、メインの HTML 文書です。  一番下のリソースは、最後にリクエストされたものです。  
     
     各列は、リソースに関する情報を表します。  前の図では、既定の列が表示されています。  
 
-    *   **状態**。  応答の HTTP 状態コード。  
-    *   **[種類]**。  リソースの種類。  
-    *   **イニシエーター**。  リソース要求の原因。  [イニシエーター] 列のリンクを選ぶと、要求を発生させたソースコードが表示されます。  
-    *   **時刻**。  要求の期間。  
-    *   **ウォーターフォール**  要求の異なるステージのグラフィカル表現。  ウォーターフォールの上にマウスポインターを置くと、ブレークダウンが表示できます。  
+    *   **状態**。  応答用の HTTP 状態コード。  
+    *   **種類**。  リソースの種類。  
+    *   **イニシエーター**。  リソースによるリクエストの原因。  イニシエーター列のリンクを選ぶと、リクエストの原因になったソースコードが表示されます。  
+    *   **時刻**。  リクエストの期間。  
+    *   **ウォーター フォール**。  リクエストの異なるステージのグラフィカル表現。  ウォーターフォールの上にマウスポインターを置いて、ブレークダウンを表示します。  
     
     > [!NOTE]
-    > ネットワークログの上のグラフは概要と呼ばれます。  このチュートリアルの概要グラフは使用しないため、非表示にすることができます。  「 [概要ウィンドウを非表示にする」を][DevtoolsReferenceHideOverview]参照してください。
+    > ネットワーク ログの上のグラフは概要と呼ばれています。  このチュートリアルの概要グラフは使用しないため、非表示にすることができます。  [概要ウィンドウを非表示にする][DevtoolsReferenceHideOverview]を参照してください。
     
-1.  DevTools を開くと、ネットワークログにネットワークアクティビティが記録されます。  
-    これを示すには、まず **ネットワークログ** の下部を確認し、最後のアクティビティを記録します。  
-1.  次に、デモの [ **データの取得** ] ボタンを選択します。  
-1.  もう一度 **ネットワークログ** の下部を確認します。  という新しいリソースが表示され `getstarted.json` ます。  [ **データの取得** ] ボタンを選択すると、ページによってこのファイルが要求されます。  
+1.  DevTools を開くと、ネットワーク ログにネットワークアクティビティが記録されます。  
+    これを実践するには、まず **ネットワーク ログ** の下部を確認し、最後のアクティビティを頭で記録します。  
+1.  次に、デモで **データ取得** ボタンを選択します。  
+1.  もう一度 **ネットワーク ログ** の下部を確認します。  `getstarted.json` と呼ばれる新しいリソースが表示されます。  **データ取得** ボタンを選択すると、ページによってこのファイルが要求されます。  
     
-    :::image type="complex" source="../media/network-glitch-network-new-resource.msft.png" alt-text="デモ" lightbox="../media/network-glitch-network-new-resource.msft.png":::
-       **ネットワークログ**の新しいリソース  
+    :::image type="complex" source="../media/network-glitch-network-new-resource.msft.png" alt-text="ネットワーク ログの新しいリソース" lightbox="../media/network-glitch-network-new-resource.msft.png":::
+       **ネットワーク ログ**の新しいリソース  
     :::image-end:::  
     
 ## 詳細情報を表示する  
 
 ネットワークログの列は構成可能です。  使用していない列を非表示にすることができます。  
-既定で非表示になっている列も数多く用意されています。  
+既定では非表示になっていますが、役に立つと思われる列も数多くあります。  
 
-1.  ネットワークログテーブルのヘッダーを右クリックして、[ **ドメイン**] を選びます。  各リソースのドメインが表示されるようになりました。  
+1.  ネットワーク ログ テーブルのヘッダーを右クリックして、**ドメイン** を選びます。  各リソースのドメインが表示されるようになりました。  
     
-    :::image type="complex" source="../media/network-glitch-network-edit-column.msft.png" alt-text="デモ" lightbox="../media/network-glitch-network-edit-column.msft.png":::
-       [Domain] 列を有効にする  
+    :::image type="complex" source="../media/network-glitch-network-edit-column.msft.png" alt-text="ドメインの列を有効にする" lightbox="../media/network-glitch-network-edit-column.msft.png":::
+       ドメインの列を有効にする  
     :::image-end:::  
     
     > [!TIP]
-    > [ **名前** 列のセルの上にマウスポインターを置くと、リソースの完全な URL が表示されます。  
+    > **名前** 列のセルの上にマウスポインターを置いて、リソースの完全な URL を表示します。  
     
 ## 低速ネットワーク接続のシミュレーション  
 
-サイトの構築に使用するコンピューターのネットワーク接続は、おそらく、ユーザーのモバイルデバイスのネットワーク接続よりも高速です。  ページを調整することによって、モバイルデバイスでページが読み込まれるまでの時間を把握することができます。  
+サイトの構築に使用するコンピューターのネットワーク接続は、おそらく、ユーザーのモバイルデ バイスのネットワーク接続よりも高速です。  ページを調整して、モバイル デバイスでページが読み込まれるまでの時間を把握することができます。  
 
-1.  [ **調整** ] ドロップダウンを選択します。これは、既定で [ **オンライン** ] に設定されています。  
+1.  **調整** ドロップダウンを選択します。これは、既定で **オンライン** に設定されているものです。  
     
-    :::image type="complex" source="../media/network-glitch-network-throttling.msft.png" alt-text="デモ" lightbox="../media/network-glitch-network-throttling.msft.png":::
+    :::image type="complex" source="../media/network-glitch-network-throttling.msft.png" alt-text="調整を有効にする" lightbox="../media/network-glitch-network-throttling.msft.png":::
        調整を有効にする  
     :::image-end:::  
     
-1.  [ **低速 3g**] を選びます。  
+1.  **スロー (低速) 3G** を選びます。  
     
-    :::image type="complex" source="../media/network-glitch-network-throttling-slow-3g.msft.png" alt-text="デモ" lightbox="../media/network-glitch-network-throttling-slow-3g.msft.png":::
-       低速3G を選択  
+    :::image type="complex" source="../media/network-glitch-network-throttling-slow-3g.msft.png" alt-text="スロー (低速) 3G を選択" lightbox="../media/network-glitch-network-throttling-slow-3g.msft.png":::
+       スロー (低速) 3G を選択  
     :::image-end:::  
     
-1.  長 **押しし** て ( ![ リロード ][ImageRefreshIcon] \)、[ **キャッシュを空**にする] を選択し、[ハードリロード] を選びます。  
+1.  **再読み込み** \(![再読み込み][ImageRefreshIcon]\) を長押しして **キャッシュを空にして再読み込み** を選びます。  
     
-    :::image type="complex" source="../media/network-glitch-empty-cache-and-hard-reset.msft.png" alt-text="デモ" lightbox="../media/network-glitch-empty-cache-and-hard-reset.msft.png":::
-       **空のキャッシュとハードリロード**  
+    :::image type="complex" source="../media/network-glitch-empty-cache-and-hard-reset.msft.png" alt-text="キャッシュを空にして再読み込み" lightbox="../media/network-glitch-empty-cache-and-hard-reset.msft.png":::
+       **キャッシュを空にして再読み込み**  
     :::image-end:::  
     
-    繰り返しアクセスした場合、ブラウザーは通常 [キャッシュ][MDNHTTPCache]の一部のファイルを提供します。これにより、ページの読み込みが高速化されます。  **空のキャッシュとハードリロード** は、ブラウザーがすべてのリソースについてネットワークにアクセスすることを強制します。  これは、初めてのユーザーがページの読み込みを体験する方法を確認する場合に便利です。  
+    繰り返しアクセスした場合、ブラウザーは通常 [キャッシュ][MDNHTTPCache] の一部のファイルを提供します。これにより、ページの読み込みが高速化します。  **キャッシュを空にして再読み込み** で、ブラウザーは強制的にすべてのリソースのネットワークにアクセスします。  これは、初めてのユーザーがあるページの読み込みを使用する方法を確認する場合に便利です。  
     
     > [!NOTE]
-    > **空のキャッシュと "Hard Reload** " ワークフローは、devtools が開いている場合にのみ使用できます。  
+    > **キャッシュを空にして再読み込み** ワークフローは、DevTools を開いている場合にのみ使用できます。  
     
 ## スクリーンショットをキャプチャする  
 
-スクリーンショットを使用すると、ページの読み込み中にページがどのように表示されるかを確認できます。  
+スクリーンショットを使用すると、読み込み中にページがどのように表示されるかを確認できます。  
 
-1.  \ ( ![ ネットワーク設定) を選択 ][ImageSettingsIcon] し、[ **スクリーンショットのキャプチャ** ] チェックボックスをオンにします。
-1.  **空のキャッシュとハードリロード**ワークフローを使用して、もう一度ページを再読み込みします。  この方法について事前に確認が必要な場合は [、「低速接続をシミュレート](#simulate-a-slower-network-connection) する」を参照してください。  
-    スクリーンショットウィンドウには、読み込み処理中のさまざまなポイントでページがどのように表示されるかが表示されます。  
+1.  \(![ネットワーク設定][ImageSettingsIcon]\) を選択し、**スクリーンショットをキャプチャする** チェックボックスをオンにします。
+1.  **キャッシュを空にして再読み込み** ワークフローを使用して、もう一度ページを再読み込みします。  この方法についてリマインダーが必要な場合は、[低速接続をシミュレートする](#simulate-a-slower-network-connection) を参照してください。  
+    スクリーンショット ウィンドウには、読み込み処理中のさまざまなポイントでのページ表示方法についてサムネイルが表示されます。  
     
-    :::image type="complex" source="../media/network-glitch-network-screenshots.msft.png" alt-text="デモ" lightbox="../media/network-glitch-network-screenshots.msft.png":::
+    :::image type="complex" source="../media/network-glitch-network-screenshots.msft.png" alt-text="ページの読み込みのスクリーンショット" lightbox="../media/network-glitch-network-screenshots.msft.png":::
        ページの読み込みのスクリーンショット  
     :::image-end:::  
     
-1.  最初のサムネイルを選択します。  DevTools は、現時点で発生していたネットワークアクティビティを示しています。  
+1.  最初のサムネイルを選択します。  DevTools では、その地点で発生しているネットワーク アクティビティが表示されます。  
     
-    :::image type="complex" source="../media/network-glitch-network-screenshots-first.msft.png" alt-text="デモ" lightbox="../media/network-glitch-network-screenshots-first.msft.png":::
-       最初のスクリーンショットで発生したネットワークアクティビティ  
+    :::image type="complex" source="../media/network-glitch-network-screenshots-first.msft.png" alt-text="最初のスクリーンショット中に発生したネットワーク アクティビティ" lightbox="../media/network-glitch-network-screenshots-first.msft.png":::
+       最初のスクリーンショット中に発生したネットワーク アクティビティ  
     :::image-end:::  
     
-1.  もう一度 [\ (ネットワーク設定)] を選び、[ ![ ][ImageSettingsIcon] **スクリーンショットのキャプチャ** ] チェックボックスをオフにして、スクリーンショットウィンドウを閉じます。
+1.  \(![ネットワーク設定][ImageSettingsIcon]\) をもう一度選択し、**スクリーンショットをキャプチャする** チェックボックスをオフにして、スクリーンショット ウィンドウを閉じます。
 1.  ページをもう一度読み込みます。  
     
-## リソースの詳細を調べる  
+## リソースの詳細を検査する  
 
-詳細については、リソースを選択してください。  今すぐお試しください:  
+リソースを選択して、詳細情報を参照します。  今すぐお試しください:  
 
-1.  を選択し `getstarted.html` ます。  [ **ヘッダー** ] タブが表示されます。  このタブを使用して、HTTP ヘッダーを検査します。  
+1.  `getstarted.html` を選択します。  **ヘッダー** タブが表示されます。  このタブを使用して、HTTP ヘッダーを検査します。  
     
-    :::image type="complex" source="../media/network-glitch-network-resources-headers.msft.png" alt-text="デモ" lightbox="../media/network-glitch-network-resources-headers.msft.png":::
-       [ **ヘッダー** ] タブ  
+    :::image type="complex" source="../media/network-glitch-network-resources-headers.msft.png" alt-text="[ヘッダー] タブ" lightbox="../media/network-glitch-network-resources-headers.msft.png":::
+       **ヘッダー** タブ  
     :::image-end:::  
     
-1.  [ **プレビュー** ] タブを選択します。 HTML の基本的なレンダリングが表示されます。  
+1.  **プレビュー** タブを選択します。  HTML の基本的なレンダリングが表示されます。  
     
-    :::image type="complex" source="../media/network-glitch-network-resources-preview.msft.png" alt-text="デモ" lightbox="../media/network-glitch-network-resources-preview.msft.png":::
-       [ **プレビュー** ] タブ  
+    :::image type="complex" source="../media/network-glitch-network-resources-preview.msft.png" alt-text="[プレビュー] タブ" lightbox="../media/network-glitch-network-resources-preview.msft.png":::
+       **プレビュー** タブ  
     :::image-end:::  
     
-    このタブは、API が HTML でエラーコードを返す場合に便利です。  HTML ソースコードよりもレンダリングされた HTML を読みやすくしたり、画像を検査したりすることができます。  
+    このタブは、API が HTML でエラーコードを返す場合に便利です。  HTML ソースコードよりも、または画像を検査する場合よりも、レンダリングされた HTML の方が読みやすいと思われるかもしれません。  
 
-1.  [ **応答** ] タブを選択します。 HTML ソースコードが表示されます。  
+1.  **応答** タブを選択します。  HTML ソースコードが表示されます。  
     
-    :::image type="complex" source="../media/network-glitch-network-resources-response.msft.png" alt-text="デモ" lightbox="../media/network-glitch-network-resources-response.msft.png":::
-       [ **応答** ] タブ  
+    :::image type="complex" source="../media/network-glitch-network-resources-response.msft.png" alt-text="[応答] タブ" lightbox="../media/network-glitch-network-resources-response.msft.png":::
+       **応答** タブ  
     :::image-end:::  
     
     > [!TIP]
-    > ファイルが縮小されたときに、 **Format** [ ![ ][ImageFormatIcon] **返信**] タブの下部にある [書式 \ (書式 \)] ボタンを選択すると、ファイルの内容が読みやすくなります。  
+    > ファイルが縮小されたときに、**応答** タブの下部にある**フォーマット** \(![フォーマット][ImageFormatIcon]\) ボタンを選択すると、ファイルの内容が読みやすくなります。  
     
-1.  [ **タイミング** ] タブを選択します。 このリソースのネットワークアクティビティの内訳が表示されます。  
+1.  **タイミング** タブを選択します。 このリソースのネットワークアクティビティの内訳が表示されます。  
     
-    :::image type="complex" source="../media/network-glitch-network-resources-timing.msft.png" alt-text="デモ" lightbox="../media/network-glitch-network-resources-timing.msft.png":::
-       [ **タイミング** ] タブ  
+    :::image type="complex" source="../media/network-glitch-network-resources-timing.msft.png" alt-text="[タイミング] タブ" lightbox="../media/network-glitch-network-resources-timing.msft.png":::
+       **タイミング** タブ  
     :::image-end:::  
     
-1.  [ **閉じる** ] を選択し ![ ][ImageCloseIcon] て、もう一度ネットワークログを表示します。  
+1.  **閉じる** \(![閉じる][ImageCloseIcon]\) を選択して、もう一度ネットワーク ログを表示します。  
     
-    :::image type="complex" source="../media/network-glitch-network-resources-close-tabs.msft.png" alt-text="デモ" lightbox="../media/network-glitch-network-resources-close-tabs.msft.png":::
-       [ **閉じる** ] ボタン  
+    :::image type="complex" source="../media/network-glitch-network-resources-close-tabs.msft.png" alt-text="[閉じる] ボタン" lightbox="../media/network-glitch-network-resources-close-tabs.msft.png":::
+       **閉じる** ボタン  
     :::image-end:::  
     
 ## ネットワークのヘッダーと返信を検索する  
 
-特定の文字列または正規表現について、すべてのリソースの HTTP ヘッダーと応答を検索する必要がある場合は、[ **検索** ] ウィンドウを使用します。  
+特定の文字列または正規表現に関するすべてのリソースの HTTP ヘッダーと応答を検索する必要がある場合は、**検索** ウィンドウを使用します。  
 
-たとえば、リソースが適切な **キャッシュポリシー**を使っていることを確認する必要があるとします。  
+たとえば、リソースが適切な **キャッシュポリシー** を使用していることを確認する必要があるとします。  
 
 <!--TODO: add cache policies section when available  -->
 
-1.  [ **検索** ] ( ![ 検索 ][ImageSearchIcon] \) を選びます。  [検索] ウィンドウがネットワークログの左側に表示されます。  
+1.  **検索** \(![検索][ImageSearchIcon]\) を選びます。  [検索] ウィンドウがネットワーク ログの左側に表示されます。  
     
-    :::image type="complex" source="../media/network-glitch-network-search-empty.msft.png" alt-text="デモ" lightbox="../media/network-glitch-network-search-empty.msft.png":::
-       [ **検索** ] ウィンドウ  
+    :::image type="complex" source="../media/network-glitch-network-search-empty.msft.png" alt-text="[検索] ウィンドウ" lightbox="../media/network-glitch-network-search-empty.msft.png":::
+       **検索** ウィンドウ  
     :::image-end:::  
     
-1.  入力 `Cache-Control` して、を選択し `Enter` ます。  [検索] ウィンドウには、 `Cache-Control` リソースヘッダーまたはコンテンツ内で見つかったすべてのインスタンスが一覧表示されます。  
+1.  `Cache-Control` を入力して、`Enter` を選択します。  [検索] ウィンドウには、リソース ヘッダーまたはコンテンツ内で見つかった `Cache-Control` のすべてのインスタンスが一覧表示されます。  
     
-    :::image type="complex" source="../media/network-glitch-network-search-cache-control.msft.png" alt-text="デモ" lightbox="../media/network-glitch-network-search-cache-control.msft.png":::
+    :::image type="complex" source="../media/network-glitch-network-search-cache-control.msft.png" alt-text="キャッシュ コントロールの検索結果" lightbox="../media/network-glitch-network-search-cache-control.msft.png":::
        検索結果 `Cache-Control`  
     :::image-end:::  
     
-1.  結果を選択すると、結果が見つかったリソースが表示されます。  リソースの詳細が表示されている場合は、結果を選択して直接移動します。  たとえば、ヘッダーで検索されたクエリの場合、[ヘッダー] タブが開きます。   コンテンツ内にクエリが見つかった場合は、[ **応答** ] タブが開きます。  
+1.  結果を選択すると、結果が見つかったリソースが表示されます。  リソースの詳細を参照している場合は、結果を選択して直接移動します。  たとえば、ヘッダーでクエリが見つかった場合、[ヘッダー] タブが開きます。   コンテンツ内にクエリが見つかった場合は、**応答** タブが開きます。  
     
-    :::image type="complex" source="../media/network-glitch-network-search-cache-control-headers-response-headers.msft.png" alt-text="デモ" lightbox="../media/network-glitch-network-search-cache-control-headers-response-headers.msft.png":::
-       [ **ヘッダー** ] タブで強調表示された検索結果  
+    :::image type="complex" source="../media/network-glitch-network-search-cache-control-headers-response-headers.msft.png" alt-text="[ヘッダー] タブで強調表示された検索結果" lightbox="../media/network-glitch-network-search-cache-control-headers-response-headers.msft.png":::
+       **ヘッダー** タブで強調表示された検索結果  
     :::image-end:::  
     
 1.  [検索] ウィンドウと [ヘッダー] タブを閉じます。  
     
-    :::image type="complex" source="../media/network-glitch-network-search-close.msft.png" alt-text="デモ" lightbox="../media/network-glitch-network-search-close.msft.png":::
-       [ **閉じる** ] ボタン  
+    :::image type="complex" source="../media/network-glitch-network-search-close.msft.png" alt-text="[閉じる] ボタン" lightbox="../media/network-glitch-network-search-close.msft.png":::
+       **閉じる** ボタン  
     :::image-end:::  
     
 ## リソースをフィルター処理する  
 
-DevTools には、タスクに関連していないリソースをフィルター処理するための多数のワークフローが用意されています。  
+DevTools には、タスクに直接関連していないリソースをフィルター処理する多数のワークフローが用意されています。  
 
-:::image type="complex" source="../media/network-glitch-network-filter-empty.msft.png" alt-text="デモ" lightbox="../media/network-glitch-network-filter-empty.msft.png":::
-   [ **フィルター** ] ツールバー  
+:::image type="complex" source="../media/network-glitch-network-filter-empty.msft.png" alt-text="[フィルター] ツールバー" lightbox="../media/network-glitch-network-filter-empty.msft.png":::
+   **フィルター** ツールバー  
 :::image-end:::  
 
-[ **フィルター** ] ツールバーは、既定で有効になっています。  そうでなければ：  
+**フィルター** ツールバーは、既定で有効になっています。  そうでなければ：  
 
-1.  [ **フィルター** \ ![ ] (フィルター \) を選んで ][ImageFilterIcon] 表示します。  
+1.  **フィルター** \(![フィルター][ImageFilterIcon]\) を選んで表示します。  
     
-### 文字列、正規表現、またはプロパティによるフィルター処理  
+### 文字列、正規表現、またはプロパティによってフィルターする  
 
-**フィルター**テキストボックスでは、さまざまな種類のフィルターがサポートされています。  
+**フィルター** テキスト ボックスでは、さまざまな種類のフィルターがサポートされています。  
 
-1.  `png`[**フィルター** ] テキストボックスに入力します。  テキストが含まれているファイルのみ `png` が表示されます。  この場合、フィルターに一致するファイルは PNG 画像のみです。  
+1.  `png` を **フィルター** テキストボックスに入力します。  テキスト `png` が含まれているファイルだけが表示されます。  この場合、フィルターに一致するファイルは PNG 画像のみです。  
     
-    :::image type="complex" source="../media/network-glitch-network-filter-png.msft.png" alt-text="デモ" lightbox="../media/network-glitch-network-filter-png.msft.png":::
+    :::image type="complex" source="../media/network-glitch-network-filter-png.msft.png" alt-text="文字列フィルター" lightbox="../media/network-glitch-network-filter-png.msft.png":::
        文字列フィルター  
     :::image-end:::  
     
-1.  「`/.*\.[cj]s+$/`」と入力します。  DevTools では、末尾が a または a の後に1つ以上の文字が続いているファイル名でリソースをフィルター処理 `j` `c` `s` します。  
+1.  「`/.*\.[cj]s+$/`」と入力します。  DevTools では、末尾が `j` または `c` で終わらず、1つ以上の`s`文字が続いているファイル名で任意のリソースをフィルター処理 します。  
     
-    :::image type="complex" source="../media/network-glitch-network-filter-regex.msft.png" alt-text="デモ" lightbox="../media/network-glitch-network-filter-regex.msft.png":::
+    :::image type="complex" source="../media/network-glitch-network-filter-regex.msft.png" alt-text="正規表現フィルター" lightbox="../media/network-glitch-network-filter-regex.msft.png":::
        正規表現フィルター  
     :::image-end:::  
     
-1.  「`-main.css`」と入力します。  DevTools でフィルター処理 `main.css` します。  他のファイルがそのパターンに一致した場合は、それらもフィルターで除外されます。  
+1.  「`-main.css`」と入力します。  DevTools で `main.css` をフィルターします。  他のファイルがそのパターンに一致した場合は、それらもフィルター処理されます。  
     
-    :::image type="complex" source="../media/network-glitch-network-filter-negative-statement.msft.png" alt-text="デモ" lightbox="../media/network-glitch-network-filter-negative-statement.msft.png":::
-       ネガティブフィルター  
+    :::image type="complex" source="../media/network-glitch-network-filter-negative-statement.msft.png" alt-text="ネガティブ フィルター" lightbox="../media/network-glitch-network-filter-negative-statement.msft.png":::
+       ネガティブ フィルター  
     :::image-end:::  
     
-1.  `domain:cdn.glitch.com`[**フィルター** ] テキストボックスに入力します。  DevTools は、このドメインと一致しない URL のリソースをフィルター処理します。  
+1.  `domain:cdn.glitch.com` を **フィルター処理** テキスト ボックスに入力します。  DevTools では、このドメインと一致しない URL のリソースをフィルター処理します。  
     
-    :::image type="complex" source="../media/network-glitch-network-filter-property-value.msft.png" alt-text="デモ" lightbox="../media/network-glitch-network-filter-property-value.msft.png":::
-       プロパティフィルター  
+    :::image type="complex" source="../media/network-glitch-network-filter-property-value.msft.png" alt-text="プロパティ フィルター" lightbox="../media/network-glitch-network-filter-property-value.msft.png":::
+       プロパティ フィルター  
     :::image-end:::  
     
-    フィルター処理可能なプロパティの完全なリストについては、「 [プロパティ別に要求をフィルター処理][DevtoolsReferenceProperty] する」をご覧ください。  
+    フィルター処理できるプロパティの完全なリストについては、[プロパティ別にリクエストをフィルター処理する][DevtoolsReferenceProperty] を参照します。  
     
-1.  任意のテキストの **フィルター** テキストボックスをクリアします。  
+1.  任意のテキストのテキスト ボックスを **フィルター処理** をクリアします。  
     
 ### リソースの種類でフィルター処理する  
 
-スタイルシートなど、特定の種類のファイルにフォーカスを移動するには、次の操作を行います。  
+スタイルシートなど、特定の種類のファイルに重点を置く場合は、次の操作を行います。  
 
-1.  [ **CSS**] を選びます。  その他のすべての種類のファイルはフィルターで除外されます。  
+1.  **CSS** を選びます。  その他のすべての種類のファイルはフィルター処理されます。  
     
-    :::image type="complex" source="../media/network-glitch-network-filter-file-type-css.msft.png" alt-text="デモ" lightbox="../media/network-glitch-network-filter-file-type-css.msft.png":::
+    :::image type="complex" source="../media/network-glitch-network-filter-file-type-css.msft.png" alt-text="CSS ファイルのみを表示する" lightbox="../media/network-glitch-network-filter-file-type-css.msft.png":::
        CSS ファイルのみを表示する  
     :::image-end:::  
     
-1.  スクリプトも表示するに `Control` は、\ (Windows、Linux \) または `Command` \ (macOS \) を保持し、[ **JS**] を選びます。  
+1.  スクリプトも表示するに `Control` \(Windows, Linux\) または `Command` \(macOS\)を保持してから、**JS** を選びます。  
     
-    :::image type="complex" source="../media/network-glitch-network-filter-file-type-css-js.msft.png" alt-text="デモ" lightbox="../media/network-glitch-network-filter-file-type-css-js.msft.png":::
+    :::image type="complex" source="../media/network-glitch-network-filter-file-type-css-js.msft.png" alt-text="CSS と JS ファイルのみを表示する" lightbox="../media/network-glitch-network-filter-file-type-css-js.msft.png":::
        CSS と JS ファイルのみを表示する  
     :::image-end:::  
     
-1.  [ **すべて** ] を選択してフィルターを削除し、すべてのリソースをもう一度表示します。  
+1.  **すべて** を選択してフィルターを削除し、すべてのリソースをもう一度表示します。  
     
-「他のフィルター処理ワークフローの [フィルター要求][DevtoolsNetworkReferenceFilter] 」を参照してください。  
+他のフィルター処理ワークフローについては、[フィルターのリクエスト][DevtoolsNetworkReferenceFilter] を参照してください。  
 
 ## リクエストをブロック  
 
-ページリソースの一部が利用できない場合、ページはどのように表示され、どのように動作しますか?  完全に失敗したか、まだ機能していますか?  確認要求をブロックする:  
+ページリソースの一部が利用できない場合、ページはどのように表示され、どのように動作しますか?  完全に失敗しましたか? それとも、まだ機能していますか?  リクエストをブロックして、以下の内容を見つけます:  
 
-1.  `Control` + `Shift` + `P` コマンドメニューを開くには、\ (Windows, Linux \) または `Command` + `Shift` + `P` \ **Command Menu**(macOS \) を選択します。  
+1.  `Control`+`Shift`+`P` \(Windows, Linux\) または `Command`+`Shift`+`P` \(macOS\) を選択して、**コマンド メニュー** を開きます。  
     
-    :::image type="complex" source="../media/network-glitch-network-cli-empty.msft.png" alt-text="デモ" lightbox="../media/network-glitch-network-cli-empty.msft.png":::
-       **コマンドメニュー**  
+    :::image type="complex" source="../media/network-glitch-network-cli-empty.msft.png" alt-text="コマンド メニュー" lightbox="../media/network-glitch-network-cli-empty.msft.png":::
+       **コマンド メニュー**  
     :::image-end:::  
     
-1.  「」と入力し `block` 、[ **要求ブロックの表示**] を選択して、を選択し `Enter` ます。  
+1.  `block` と入力して、**リクエストのブロックを表示** を選択してから、`Enter` を選択します。  
     
-    :::image type="complex" source="../media/network-glitch-network-cli-block.msft.png" alt-text="デモ" lightbox="../media/network-glitch-network-cli-block.msft.png":::
-       **リクエストブロックの表示**  
+    :::image type="complex" source="../media/network-glitch-network-cli-block.msft.png" alt-text="リクエストのブロックを表示" lightbox="../media/network-glitch-network-cli-block.msft.png":::
+       **リクエストのブロックを表示**  
     :::image-end:::  
     
-1.  [ **パターンの追加** ] ( ![ パターン ][ImageAddIcon] の追加) を選びます。  
+1.  **パターンを追加** \(![パターンを追加][ImageAddIcon]\) を選びます。  
 1.  「`main.css`」と入力します。  
     
-    :::image type="complex" source="../media/network-glitch-network-cli-block-add-pattern.msft.png" alt-text="デモ" lightbox="../media/network-glitch-network-cli-block-add-pattern.msft.png":::
+    :::image type="complex" source="../media/network-glitch-network-cli-block-add-pattern.msft.png" alt-text="メインの.css をブロックする" lightbox="../media/network-glitch-network-cli-block-add-pattern.msft.png":::
        ブロッキング `main.css`  
     :::image-end:::  
     
-1.  [ **追加**] を選びます。  
-1.  ページを再読み込みします。  期待どおり、メインのスタイルシートがブロックされているため、ページのスタイルが少し messed ます。  
+1.  **追加** を選びます。  
+1.  ページを再読み込みします。  予想どおり、メインのスタイルシートがブロックされているため、ページのスタイルがあまりよくありません。  
     
     > [!NOTE]
-    > `main.css`ネットワークログの行。  赤いテキストは、リソースがブロックされたことを意味します。
+    > ネットワーク ログの `main.css` 行。  赤いテキストは、リソースがブロックされたことを意味します。
     
-    :::image type="complex" source="../media/network-glitch-network-cli-block-main-css.msft.png" alt-text="デモ" lightbox="../media/network-glitch-network-cli-block-main-css.msft.png":::
-       `main.css` がブロックされています  
+    :::image type="complex" source="../media/network-glitch-network-cli-block-main-css.msft.png" alt-text="メインの.css がブロックされています" lightbox="../media/network-glitch-network-cli-block-main-css.msft.png":::
+       `main.css` ブロックされています  
     :::image-end:::  
     
-1.  [ **リクエストのブロックを有効にする** ] チェックボックスをオフにします。  
+1.  **リクエストのブロックを有効にする** チェックボックスをオフにします。  
 
 ## まとめ  
 
-これでチュートリアルを完了しました。  Microsoft Edge DevTools での **ネットワーク** パネルの使い方について説明しました。
+おめでとうございます。これでチュートリアルは完了です。  Microsoft Edge DevTools での **ネットワーク** パネルの使い方を理解できました。
 
-ネットワーク [参照][DevtoolsNetworkReference] に移動して、ネットワークアクティビティの調査に関連するその他の devtools 機能を見つけます。  
+[ネットワーク リファレンス][DevtoolsNetworkReference] に移動して、ネットワーク アクティビティの調査に関連するその他の DevTools 機能を見つけます。  
 
-## Microsoft Edge DevTools チームと連絡を取る  
+## Microsoft Edge DevTools チームに連絡する  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
@@ -378,24 +378,24 @@ DevTools には、タスクに関連していないリソースをフィルタ�
 
 <!--[CachePolicies]: ../../../web/tools/lighthouse/audits/cache-policy ""  -->  
 
-[DevToolsCustomizePlacement]: ../customize/placement.md "Microsoft Edge DevTools の配置を変更する |Microsoft ドキュメント"  
-[DevtoolsNetworkReference]: ./reference.md "ネットワーク分析のリファレンス |Microsoft ドキュメント"
-[DevtoolsNetworkReferenceFilter]: ./reference.md#filter-requests "フィルター要求-ネットワーク分析リファレンス |Microsoft ドキュメント"  
-[DevtoolsReferenceHideOverview]: ./reference.md#hide-the-overview-pane "概要ウィンドウを非表示にする-ネットワーク分析のリファレンス |Microsoft ドキュメント"
-[DevtoolsReferenceProperty]: ./reference.md#filter-requests-by-properties "プロパティによるフィルター要求-ネットワーク分析のリファレンス |Microsoft ドキュメント"
-[DevToolsOpen]: ../open.md "Microsoft Edge DevTools を開く |Microsoft ドキュメント"  
-[DevtoolsSpeedGetStarted]: ../speed/get-started.md "Microsoft Edge DevTools を使用して web サイトの速度を最適化する |Microsoft ドキュメント"  
+[DevToolsCustomizePlacement]: ../customize/placement.md "Microsoft Edge DevTools の配置を変更 | Microsoft Docs"  
+[DevtoolsNetworkReference]: ./reference.md "ネットワーク分析のリファレンス | Microsoft Docs"
+[DevtoolsNetworkReferenceFilter]: ./reference.md#filter-requests "フィルターのリクエスト - ネットワーク分析リファレンス | Microsoft Docs"  
+[DevtoolsReferenceHideOverview]: ./reference.md#hide-the-overview-pane "概要ウィンドウを非表示 - ネットワーク分析リファレンス | Microsoft Docs"
+[DevtoolsReferenceProperty]: ./reference.md#filter-requests-by-properties "プロパティによるリクエストをフィルター処理 - ネットワーク分析のリファレンス | Microsoft Docs"
+[DevToolsOpen]: ../open.md "Microsoft Edge DevTools を開く | Microsoft Docs"  
+[DevtoolsSpeedGetStarted]: ../speed/get-started.md "Microsoft Edge DevTools を使用して web サイトの速度を最適化 | Microsoft Docs"  
 
-[GlitchNetworkGetStarted]: https://microsoft-edge-chromium-devtools.glitch.me/static/network/getstarted.html "ネットワークアクティビティの調査デモ |故障"  
+[GlitchNetworkGetStarted]: https://microsoft-edge-chromium-devtools.glitch.me/static/network/getstarted.html "ネットワーク アクティビティのデモを検査 | グリッチ"  
 
-[MDNHTTPCache]: https://developer.mozilla.org/docs/Web/HTTP/Caching "HTTP キャッシュMDN"  
+[MDNHTTPCache]: https://developer.mozilla.org/docs/Web/HTTP/Caching "HTTP キャッシュ | MDN"  
 
 > [!NOTE]
-> このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
-> 元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/network/index) にあり、 [Kayce Basques][KayceBasques] テクニカルライター、Chrome Devtools \ & Lighthouse \) で作成されています。  
+> このページの一部は、 [Google によって][GoogleSitePolicies] 作成および共有され、 [クリエイティブ コモンズ 4.0 インターナショナル ライセンス][CCA4IL]で説明されている用語に従って使用されます。  
+> 元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/network/index) にあり、[Kayce Basques][KayceBasques] で作成されています (Technical Writer, Chrome DevTools \& Lighthouse\)。  
 
-[![クリエイティブコモンズライセンス][CCby4Image]][CCA4IL]  
-この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。  
+[![クリエイティブ コモンズ ライセンス][CCby4Image]][CCA4IL]  
+この著作物は、[クリエイティブ コモンズ 4.0 インターナショナル ライセンス][CCA4IL] に従って使用許諾されています。  
 
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  

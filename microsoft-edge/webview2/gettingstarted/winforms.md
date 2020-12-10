@@ -1,5 +1,5 @@
 ---
-description: WebView2 for WinForms アプリの概要ガイド
+description: WebView2 for WinForms アプリの入門ガイド
 title: WebView2 for WinForms アプリの概要
 author: MSEdgeTeam
 ms.author: msedgedevrel
@@ -7,58 +7,58 @@ ms.date: 11/19/2020
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
-keywords: WebView2、WebView2、WebView、webview、winforms アプリ、winforms、edge、CoreWebView2、browser control、edge html、はじめに、作業の開始、.NET、windows フォーム
+keywords: WebView2, webview2, WebView, webview, winforms アプリ, winforms, edge, CoreWebView2, ブラウザー管理, edge html, getting started, Getting Started, .NET, windows フォーム
 ms.openlocfilehash: f4768c38f293d1931e625136ea7068a61176541e
 ms.sourcegitcommit: fab44f7e183a3c4f12bf925512fc62d84a4d6edc
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/20/2020
 ms.locfileid: "11182389"
 ---
 # Windows フォームでの WebView2 の概要
 
-この記事では、初めての WebView2 アプリの作成を開始し、 [WebView2](/microsoft-edge/webview2/index)の主な機能について説明します。  個々の Api について詳しくは、 [api リファレンス](/dotnet/api/microsoft.web.webview2.winforms)をご覧ください。  
+この記事では、[WebView2](/microsoft-edge/webview2/index)の主な機能について説明して、初めて WebView2 アプリの作成を開始します。  個々の API について詳しくは、「[API リファレンス](/dotnet/api/microsoft.web.webview2.winforms)」 をご覧ください。  
 
 ## 前提条件  
 
 続行する前に、次の前提条件の一覧をインストールしていることを確認します。  
 
-* [WebView2 Runtime][Webview2Installer] または windows 10、windows 8.1、または windows 7 にインストールされている [非安定した Microsoft Edge (Chromium) カナリアチャネル](https://www.microsoftedgeinsider.com/download) 。 
+* [WebView2 Runtime][Webview2Installer] または Windows 10、Windows 8.1、または Windows 7 にインストールされている [非安定型 Microsoft Edge (Chromium) カナリア チャネル](https://www.microsoftedgeinsider.com/download)のいずれか 。 
 * [Visual Studio](https://visualstudio.microsoft.com) 2017 以降。
 
 > [!NOTE]
-> 現時点では、WebView2 は .NET 5 および .NET のコアデザイナーをサポートしていません。
+> 現時点では、WebView2 は .NET 5 および .NET のコア デザイナーをサポートしていません。
 
-## 手順 1-1 つのウィンドウアプリケーションを作成する
+## 手順 1-1 つのウィンドウ アプリケーションを作成する
 
-1つのメインウィンドウを含む基本的なデスクトッププロジェクトから始めます。  
+1 つのメイン ウィンドウを含む基本的なデスクトッププロジェクトから始めます。  
 
-1. **Visual Studio を開きます。**
+1. **Visual Studio **を開きます。
 
-1. [ **Windows Forms .Net Framework アプリ** ] を選び、[ **次へ**] を選びます。
+1. [**Windows Forms .Net Framework アプリ**] を選び、[**次へ**] を選びます。
 
     ![newproject](./media/winforms-newproject.png)
 
-1. **プロジェクト名**と**場所**の値を入力します。  **.Net Framework 4.6.2**以降を選択します。  
+1. **プロジェクト名**と**場所**の値を入力します。  [**.Net Framework 4.6.2**] またはそれ以降を選択します。  
 
-    ![project の startproject](./media/winforms-startproj.png)
+    ![startproject](./media/winforms-startproj.png)
 
-1. プロジェクトを作成するには、[ **作成** ] を選びます。
+1. プロジェクトを作成するには、[**作成**] を選びます。
 
 ## 手順 2-WebView2 SDK をインストールする
 
 次に、NuGet を使ってプロジェクトに WebView2 SDK を追加します。
 
-1. プロジェクトのコンテキストメニューを開き (\ [\] を右クリックし)、[ **NuGet パッケージの管理**] を選択します。  
+1. プロジェクトのコンテキスト メニューを開き \(右クリック\)、[ **NuGet パッケージ...の管理**] を選択します。  
 
     :::image type="complex" source="./media/wpf-gettingstarted-mngnuget.png" alt-text="NuGet パッケージを管理する":::
        NuGet パッケージを管理する :::image-end:::
 
-1. `Microsoft.Web.WebView2`検索バーに入力します。  検索結果から **WebView2** を選びます。  
+1. 検索バーに `Microsoft.Web.WebView2` を入力します。  検索結果から[**Microsoft.Web.WebView2**] を選びます。  
 
-    ![nuget.exe](./media/installnuget.png)
+    ![nuget](./media/installnuget.png)
 
-WebView2 API を使ってアプリケーションの開発を開始する準備が整いました。  `F5`プロジェクトをビルドして実行する場合に選択します。  実行中のプロジェクトに空のウィンドウが表示されます。  
+WebView2 API を使ってアプリケーションの開発を開始する準備が整いました。  `F5` を選択して、プロジェクトをビルドして実行します。  実行中のプロジェクトに空のウィンドウが表示されます。  
 
 ![emptyApp](./media/winforms-emptyApp.png)
 
@@ -66,42 +66,42 @@ WebView2 API を使ってアプリケーションの開発を開始する準備�
 
 次に、アプリケーションに WebView を追加します。  
 
-1. **Windows フォームデザイナー**を開きます。  
-1. **ツールボックス**で**WebView2**を検索します。 **WebView2**コントロールを Windows フォームアプリにドラッグアンドドロップします。
+1. **Windows フォーム デザイナー**を開きます。  
+1. **ツールボックス**で**WebView2**を検索します。 **WebView2**コントロールを Windows フォーム アプリにドラッグしてドロップします。
     
     :::image type="complex" source="./media/winforms-toolbox.png" alt-text="WebView2 が表示されたツールボックス":::
        WebView2 が表示されたツールボックス :::image-end:::  
 
-1. `Name`プロパティをに変更 `webView` します。
+1. `Name` プロパティを `webView` に変更します。
     
     :::image type="complex" source="./media/winforms-properties.png" alt-text="WebView2 コントロールのプロパティ":::
        WebView2 コントロールのプロパティ :::image-end:::
 
-1. この `Source` プロパティは、WebView2 コントロールに表示される初期 URI を設定します。 Source プロパティをに設定します。 <https://www.microsoft.com>
+1. この `Source` プロパティは、WebView2 コントロールに表示される初期 URI を設定します。 Source プロパティを設定します。 <https://www.microsoft.com>
     
     :::image type="complex" source="./media/winforms-source.png" alt-text="WebView2 コントロールの Source プロパティ":::
        WebView2 コントロールの Source プロパティ :::image-end:::
 
-`F5`プロジェクトをビルドして実行する場合に選択します。  WebView2 コントロールが表示されていることを確認 [https://www.microsoft.com](https://www.microsoft.com) します。
+`F5` を選択して、プロジェクトをビルドして実行します。  WebView2 コントロールが表示されていることを確認します[https://www.microsoft.com](https://www.microsoft.com)。
 
-![\ 低 ebビュー](./media/winforms-hellowebview.png)
+![hellowebview](./media/winforms-hellowebview.png)
 
 > [!NOTE]
-> 高 DPI モニターで作業している場合は、 [高 dpi サポートのために Windows フォームアプリを構成](/dotnet/framework/winforms/high-dpi-support-in-windows-forms#configuring-your-windows-forms-app-for-high-dpi-support)することが必要な場合があります。
+> 高 DPI モニターで作業している場合は、 [高 DPI サポートのために Windows フォーム アプリを構成](/dotnet/framework/winforms/high-dpi-support-in-windows-forms#configuring-your-windows-forms-app-for-high-dpi-support)することが必要な場合があります。
 
 ## 手順 4-ウィンドウのサイズ変更イベントを処理する
 
-ツールボックスからさらにいくつかのコントロールを追加し、ウィンドウのサイズ変更イベントを適切に処理します。
+ツールボックスからさらにいくつかのコントロールを Windows フォームに追加し、ウィンドウのサイズ変更イベントを適切に処理します。
 
-1. **Windows フォームデザイナー**で、**ツールボックス**を開きます。
-1. **TextBox**を Windows フォームアプリにドラッグアンドドロップします。 [ **TextBox** `addressBar` **プロパティ] タブ**で、テキストボックスに名前を指定します。
-1. **ボタン**をドラッグして、Windows フォームアプリにドロップします。 [ **Button** `Go!` **Button** `goButton` **プロパティ] タブ**で、ボタンのテキストを変更し、ボタンに名前を指定します。
+1. **Windows フォーム デザイナー**で、**ツールボックス**を開きます。
+1. **TextBox**を Windows フォーム アプリにドラッグ アンド ドロップします。 **プロパティ タブ**で、**TextBox** `addressBar`に名前を指定します。
+1. **ボタン**を、Windows フォーム アプリにドラッグアンド ドロップします。 **ボタン**のテキストを `Go!` に変更して**プロパティ タブ**で、**ボタン** `goButton`に名前を指定します。
 
-    このアプリは、デザイナーの次の画像のようになります。
+    このアプリは、デザイナー上で次の画像のように見えます。
     
     ![デザイナー](./media/winforms-designer.png)
 
-1. **Form1.cs**では、 `Form_Resize` アプリのウィンドウのサイズが変更されたときに、コントロールを配置したままにします。
+1. **Form1.cs**で、アプリのウィンドウのサイズが変更されたときに、`Form_Resize` を定義してコントロールを配置したままにします。
 
 ```csharp
 public Form1()
@@ -118,21 +118,21 @@ private void Form_Resize(object sender, EventArgs e)
 }
 ```
 
-`F5`プロジェクトをビルドして実行する場合に選択します。  アプリが次のスクリーンショットのように表示されることを確認します。
+`F5` を選択して、プロジェクトをビルドして実行します。  アプリが次のスクリーンショットのように表示されることを確認します。
 
 ![アプリ](./media/winforms-app.png)
 
 ## ステップ 5-ナビゲーション
 
-WebView2 コントロールに表示される URL をユーザーが変更できるようにする機能を追加するには、アドレスバーをアプリに追加します。
+WebView2 コントロールに表示される URL をユーザーが変更できるようにする機能を追加するには、アドレス バーをアプリに追加します。
 
-1. 「 `Form1.cs` 名前空間を追加する」 `CoreWebView2` の先頭に、次のコードスニペットを挿入し `Form1.cs` ます。  
+1. `Form1.cs` で `CoreWebView2` namespace を追加するには、`Form1.cs` の先頭に、次のコード スニペットを挿入します。  
 
     ```csharp
     using Microsoft.Web.WebView2.Core;
     ```
 
-1. **Windows Forms Designer**で、ボタンをダブルクリックして `Go!` メソッドを作成 `goButton_Click` `Form1.cs` します。 関数内で次のスニペットをコピーして貼り付けます。 これで、この関数は、 `goButton_Click` アドレスバーに入力された URL に WebView を移動します。
+1. **Windows Forms Designer**で、`Go!` ボタンをダブルクリックして `Form1.cs` に `goButton_Click` メソッドを作成 します。 関数内で次のスニペットをコピーして貼り付けます。 これで、この関数は、 `goButton_Click` アドレス バーに入力された URL に WebView を移動します。
 
     ```csharp
     private void goButton_Click(object sender, EventArgs e)
@@ -144,14 +144,14 @@ WebView2 コントロールに表示される URL をユーザーが変更でき
     }
     ```  
 
-`F5`プロジェクトをビルドして実行する場合に選択します。  アドレスバーに新しい URL を入力し **、[設定] を選択し**ます。  たとえば、と入力 `https://www.bing.com` します。  WebView2 コントロールが URL に移動することを確認します。  
+`F5` を選択して、プロジェクトをビルドして実行します。  アドレス バーに新しい URL を入力し [**実行**]を選択します。  たとえば、`https://www.bing.com` と入力します。  WebView2 コントロールが URL に移動することを確認します。  
 
 > [!NOTE]
-> アドレスバーに完全な URL が入力されていることを確認します。 `ArgumentException`URL が先頭以外の場合、 `http://` または `https://`
+> アドレス バーに完全な URL が入力されていることを確認します。 URL が `http://` または以下で開始する場合は、`ArgumentException`がスローされます。 `https://`
 
 ![bing.](./media/winforms-bing.png)
 
-## ステップ 6-ナビゲーションイベント  
+## ステップ 6-ナビゲーション イベント  
 
 Web ページのナビゲーション中に、WebView2 コントロールはイベントを発生させます。 WebView2 コントロールをホストするアプリケーションは、次のイベントをリッスンします。  
 
@@ -161,23 +161,23 @@ Web ページのナビゲーション中に、WebView2 コントロールはイ�
 * `HistoryChanged`  
 * `NavigationCompleted`  
 
-詳細については、「 [ナビゲーションイベント](../concepts/navigation-events.md)」を参照してください。  
+詳細については、「[ナビゲーション イベント](../concepts/navigation-events.md)」を参照してください。  
 
-:::image type="complex" source="../media/navigation-events.png" alt-text="ナビゲーションイベント":::
-   ナビゲーションイベント
+:::image type="complex" source="../media/navigation-events.png" alt-text="ナビゲーション イベント":::
+   ナビゲーション イベント
 :::image-end:::
 
-エラーが発生した場合、次のイベントが発生し、エラーページへの移動に依存することがあります。  
+エラーが発生した場合、次のイベントが発生し、エラー ページへ移動することがあります。  
 
 * `SourceChanged`  
 * `ContentLoading`  
 * `HistoryChanged`  
 
-HTTP リダイレクトがある場合は、複数のイベントがあり `NavigationStarting` ます。  
+HTTP リダイレクトがある場合は、複数の`NavigationStarting`イベントがあり ます。  
 
-これらのイベントの使い方を示すには、HTTPS を使って `NavigationStarting` いない要求をキャンセルするためのハンドラーを登録します。  
+これらのイベントの使い方を示すには、HTTPS を使用しない要求をキャンセルするための `NavigationStarting` 用ハンドラーを登録します。  
 
-で `Form1.cs` 、次に示すようにコンストラクターを変更し、関数を追加し `EnsureHttps` ます。  
+`Form1.cs` で、次に示すようにコンストラクターを変更し、 `EnsureHttps` 関数を追加します。  
 
 ```csharp
 public Form1()
@@ -198,15 +198,15 @@ void EnsureHttps(object sender, CoreWebView2NavigationStartingEventArgs args)
 }
 ```
 
-コンストラクターでは、EnsureHttps は、WebView2 コントロールのイベントのイベントハンドラーとして登録され `NavigationStarting` ます。  
+コンストラクターでは、EnsureHttps が、WebView2 コントロールの`NavigationStarting` イベントのイベント ハンドラーとして登録されています。  
 
-`F5`プロジェクトをビルドして実行する場合に選択します。 HTTP サイトに移動するときに、WebView の表示が変わらないことを確認します。 ただし、WebView は HTTPS サイトに移動します。
+`F5` を選択して、プロジェクトをビルドして実行します。 HTTP サイトに移動するときに、WebView が変化しないことを確認します。 ただし、WebView は HTTPS サイトに移動します。
 
 ## 手順 7-スクリプト  
 
-ホストアプリケーションを使って、実行時に WebView2 コントロールに JavaScript コードを挿入することができます。  挿入された JavaScript は、JavaScript が削除されるまで、すべての新しいトップレベルドキュメントと任意の子フレームに適用されます。  挿入された JavaScript は、グローバルオブジェクトの作成後、および HTML ドキュメントに含まれるスクリプトの前に実行されます。  
+ホスト アプリケーションを使って、実行時に WebView2 コントロールに JavaScript コードを挿入することができます。  挿入された JavaScript は、JavaScript が削除されるまで、すべての新しいトップレベル ドキュメントと任意の子フレームに適用されます。  挿入された JavaScript は、グローバル オブジェクトの作成の後、および HTML ドキュメントに含まれるスクリプトの前に実行されます。  
 
-スクリプトを使用して、HTTPS 以外のサイトに移動したときにユーザーに通知することができます。  `EnsureHttps` [Executesの]()メソッドを使って、スクリプトが web コンテンツに挿入されるように関数を変更します。  
+スクリプトを使用して、HTTPS 以外のサイトに移動したときにユーザーに通知することができます。  [ExecuteScriptAsync]()メソッドを使って、スクリプトがWeb コンテンツに挿入されるように `EnsureHttps` 関数を変更します。  
 
 ```csharp
 void EnsureHttps(object sender, CoreWebView2NavigationStartingEventArgs args)
@@ -220,22 +220,22 @@ void EnsureHttps(object sender, CoreWebView2NavigationStartingEventArgs args)
 }
 ```  
 
-`F5`プロジェクトをビルドして実行する場合に選択します。  HTTPS を使用していないサイトに移動したときに、アプリケーションにアラートが表示されることを確認します。  
+`F5` を選択して、プロジェクトをビルドして実行します。  HTTPS を使用していないサイトにユーザーが移動したときに、アプリケーションにアラートが表示されることを確認します。  
 
 ![https](./media/winforms-https.png)
 
-## 手順 8-ホストと web コンテンツ間の通信  
+## 手順 8-ホストと Web コンテンツ間の通信  
 
-ホストと web コンテンツは、次の方法で相互に通信でき `postMessage` ます。  
+ホストと Web コンテンツは、`postMessage` を使用して次の方法で相互に通信でき ます。  
 
-* WebView2 コントロールの Web コンテンツは、を使ってホストにメッセージを投稿でき `window.chrome.webview.postMessage` ます。  ホストは、ホストに登録されているメッセージを処理し `WebMessageReceived` ます。  
-* ホストは、またはを使用して WebView2 コントロールの web コンテンツにメッセージを投稿し `CoreWebView2.PostWebMessageAsString` `CoreWebView2.PostWebMessageAsJSON` ます。  これらのメッセージは、ハンドラーが追加されることによって検出され `window.chrome.webview.addEventListener` ます。  
+* WebView2 コントロールの Web コンテンツは、`window.chrome.webview.postMessage` を使ってホストにメッセージを投稿できます。  ホストは、ホストに登録されている `WebMessageReceived` のいずれかを使ってメッセージを処理します。  
+* ホストは`CoreWebView2.PostWebMessageAsString` または `CoreWebView2.PostWebMessageAsJSON` を使用して WebView2 コントロールの Web コンテンツにメッセージを投稿します。  これらのメッセージは、`window.chrome.webview.addEventListener` に追加されているハンドラーによって検出されます。  
 
-この通信メカニズムにより、web コンテンツはネイティブ機能を使ってホストにメッセージを渡すことができます。  
+この通信メカニズムにより、Web コンテンツはネイティブ機能を使ってホストにメッセージを渡すことができます。  
 
-プロジェクトでは、WebView2 コントロールが URL に移動すると、アドレスバーに URL が表示され、WebView2 コントロールに表示される URL のユーザーに警告が表示されます。  
+プロジェクトでは、WebView2 コントロールが URL に移動すると、アドレスバーに URL が表示され、WebView2 コントロールに表示される URLについて警告がユーザーに表示されます。  
 
-1. **Form1.cs**で、 `InitializeAsync` 次のコードスニペットに示すように、コンストラクターを更新し、関数を作成します。  `InitializeAsync`の初期化は非同期であるため、この関数は[EnsureCoreWebView2Async]()を待機し `CoreWebView2` ます。  
+1. **Form1.cs**で、 次のコード スニペットに示すように、コンストラクターを更新し、`InitializeAsync` 関数を作成します。  `CoreWebView2` の初期化は非同期であるため、`InitializeAsync` の関数は[EnsureCoreWebView2Async]() を待機します。  
 
     ```csharp
     public Form1()
@@ -252,7 +252,7 @@ void EnsureHttps(object sender, CoreWebView2NavigationStartingEventArgs args)
     }
     ```  
 
-1. **CoreWebView2**が初期化されたら、イベントハンドラーを登録して応答 `WebMessageReceived` します。  `Form1.cs` `InitializeAsync` 次の `UpdateAddressBar` コードスニペットを使用して、での更新と追加を行います。  
+1. **CoreWebView2** が初期化されたら、イベント ハンドラーを登録して `WebMessageReceived` に応答 します。  `Form1.cs` で `InitializeAsync` を更新して、次のコード スニペットを使用して、`UpdateAddressBar` を追加します。  
 
     ```csharp
     async void InitializeAsync()
@@ -269,12 +269,12 @@ void EnsureHttps(object sender, CoreWebView2NavigationStartingEventArgs args)
     }
     ```  
 
-1. WebView が web メッセージを送信して応答するためには、が初期化された後、 `CoreWebView2` 次のように、ホストが web コンテンツにスクリプトを挿入します。  
+1. WebView がWeb メッセージを送信して応答するためには、`CoreWebView2` が初期化された後、ホストが Web コンテンツにスクリプトを挿入します。  
 
-    1. を使って、ホストに URL を送信し `postMessage` ます。
-    1. イベントハンドラーを登録して、ホストから送信されたメッセージを出力します。  
+    1. そして、`postMessage` を使って、ホストに URL を送信し ます。
+    1. イベント ハンドラーを登録して、ホストから送信されたメッセージを出力します。  
 
-`Form1.cs` `InitializeAsync` 次のコードスニペットに示すように、を更新します。  
+次のコード スニペットに示すように、`Form1.cs` で `InitializeAsync` を更新します。  
 
 ```csharp
 async void InitializeAsync()
@@ -287,7 +287,7 @@ async void InitializeAsync()
 }
 ```  
 
-`F5`アプリをビルドして実行することを選択します。  アドレスバーに、WebView に表示されているサイトの URL が表示されていることを確認します。 また、新しい URL に正常に移動すると、webview に表示された URL のユーザーに対して WebView が通知されます。  
+`F5` を選択して、アプリをビルドして実行します。  アドレス バーに、WebView に表示されているサイトの URL が表示されていることを確認します。 また、新しい URL に正常に移動すると、WebView に表示された URL について、WebView はアラートをユーザーに通知します。  
 
 ![finalapp](./media/winforms-finalapp.png)
 
@@ -298,7 +298,7 @@ async void InitializeAsync()
 WebView2 の詳細については、次のリソースを参照してください。
 
 * [WebView2Samples リポジトリ](https://github.com/MicrosoftEdge/WebView2Samples)には、WebView2's 機能の包括的な例があります。
-* Api [リファレンス](/dotnet/api/microsoft.web.webview2.winforms.webview2) 。 api の詳細については、こちらを参照してください。
+* [API リファレンス](/dotnet/api/microsoft.web.webview2.winforms.webview2) API の詳細については、こちらを参照してください。
 * [WebView2 リソース](../index.md#next-steps)。
 
 
@@ -309,4 +309,4 @@ WebView2 の詳細については、次のリソースを参照してくださ�
 
 <!-- links -->  
 
-[Webview2Installer]: https://developer.microsoft.com/microsoft-edge/webview2 "WebView2 Installer" 
+[Webview2Installer]: https://developer.microsoft.com/microsoft-edge/webview2 "WebView2 インストーラー" 
