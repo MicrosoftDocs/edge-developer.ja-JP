@@ -3,18 +3,18 @@ author: MSEdgeTeam
 ms.author: msedgedevrel
 ms.prod: microsoft-edge
 ms.topic: include
-ms.date: 09/08/2020
-ms.openlocfilehash: e6d1cf188792c6ee6594685943e51c9a5761844e
-ms.sourcegitcommit: 6b577cb118f34f3ff2c65eab2908b65f155dc151
+ms.date: 12/08/2020
+ms.openlocfilehash: 4dbb6c0c07b6294c647f49929f12739447b43e8a
+ms.sourcegitcommit: 3234b32e73c9f8362082d995296bd1c5e4286036
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "11004194"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "11205236"
 ---
-以下のセクションでは、Microsoft Edge DevTools チームからのもので、見落としがあった可能性のあるお知らせの一覧を示します。  Visual Studio Code 拡張機能などの新機能を試すには、お知らせを参照してください。  開発者ツールの最新の機能と最大の機能を常に最新の状態に維持するには、 [Microsoft edge preview チャネル][MicrosoftEdgePreviewChannels] をダウンロードして、 [Twitter の Microsoft edge devtools チームに従います][EdgeDevToolsTwitterAccount]。  
+以下のセクションでは、Microsoft Edge DevTools チームからのお知らせを一覧表示します。  DevTools、Visual Studio Code 拡張機能、その他の新機能を試すには、お知らせを確認します。  開発者ツールの最新の機能と最大の機能を常に把握するには、 [Microsoft Edge プレビュー チャネル][MicrosoftEdgePreviewChannels] をダウンロードして、 [Twitter の Microsoft Edge DevTools チームに従います][EdgeDevToolsTwitterAccount]。
 
 <!-- links -->  
 
-[MicrosoftEdgePreviewChannels]: https://www.microsoftedgeinsider.com/download "Microsoft Edge Preview チャネル"  
+[MicrosoftEdgePreviewChannels]: https://www.microsoftedgeinsider.com/download "Microsoft Edge プレビュー チャネル"  
 
 [EdgeDevToolsTwitterAccount]: https://twitter.com/EdgeDevTools "@EdgeDevTools Twitter アカウント"  
