@@ -1,18 +1,18 @@
 ---
-description: セキュリティパネルを使用して、ページが HTTPS によって完全に保護されていることを確認します。
-title: Microsoft Edge DevTools のセキュリティに関する問題を理解する
+description: セキュリティ パネルを使用して、ページが HTTPS で完全に保護されている必要があります。
+title: Microsoft Edge DevTools のセキュリティの問題を理解する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 10/19/2020
+ms.date: 12/11/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 09f7e641ddd8da74c361980b9ce61b212a8477fe
-ms.sourcegitcommit: 99eee78698dc95b2a3fa638a5b063ef449899cda
+ms.openlocfilehash: 5bef22eae8deacc81e31cf6d1c7791e016541346
+ms.sourcegitcommit: a35a6b5bbc21b7df61d08cbc6b074b5325ad4fef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "11125385"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "11230615"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -28,97 +28,98 @@ ms.locfileid: "11125385"
    See the License for the specific language governing permissions and
    limitations under the License.  -->  
 
-# <span data-ttu-id="0c113-104">Microsoft Edge DevTools のセキュリティに関する問題を理解する</span><span class="sxs-lookup"><span data-stu-id="0c113-104">Understand security issues with Microsoft Edge DevTools</span></span>  
+# <span data-ttu-id="bb9d1-104">Microsoft Edge DevTools のセキュリティの問題を理解する</span><span class="sxs-lookup"><span data-stu-id="bb9d1-104">Understand security issues with Microsoft Edge DevTools</span></span>  
 
   
 
-<!--Use the **Security** Panel in [Microsoft Edge DevTools][MicrosoftEdgeDevTools] to make sure HTTPS is properly implemented on a page.  See **Why HTTPS Matters** to learn why every website should be protected with HTTPS, even sites that do not handle sensitive user data.  -->  
+<!--Use the **Security** Panel in [Microsoft Edge DevTools][MicrosoftEdgeDevTools] to make sure HTTPS is properly implemented on a page.  Navigate to **Why HTTPS Matters** to learn why every website should be protected with HTTPS, even sites that do not handle sensitive user data.  -->  
 
 <!--todo: add section when why-https is available -->  
 
-## <span data-ttu-id="0c113-105">セキュリティパネルを開く</span><span class="sxs-lookup"><span data-stu-id="0c113-105">Open the Security panel</span></span>  
+## <span data-ttu-id="bb9d1-105">セキュリティ パネルを開く</span><span class="sxs-lookup"><span data-stu-id="bb9d1-105">Open the Security panel</span></span>  
 
-<span data-ttu-id="0c113-106">**セキュリティ**パネルは、ページのセキュリティを検査するための devtools の主要な場所です。</span><span class="sxs-lookup"><span data-stu-id="0c113-106">The **Security** panel is the main place in DevTools for inspecting the security of a page.</span></span>  
+<span data-ttu-id="bb9d1-106">セキュリティ **パネル** は、ページのセキュリティを検査する DevTools の主要な場所です。</span><span class="sxs-lookup"><span data-stu-id="bb9d1-106">The **Security** panel is the main place in DevTools for inspecting the security of a page.</span></span>  
 
-1.  <span data-ttu-id="0c113-107">[DevTools を開き][DevToolsOpen]ます。</span><span class="sxs-lookup"><span data-stu-id="0c113-107">[Open DevTools][DevToolsOpen].</span></span>  
-1.  <span data-ttu-id="0c113-108">[ **セキュリティ** ] タブを選択して [ **セキュリティ** ] パネルを開きます。</span><span class="sxs-lookup"><span data-stu-id="0c113-108">Choose the **Security** tab to open the **Security** panel.</span></span>  
+1.  <span data-ttu-id="bb9d1-107">[DevTools を開きます][DevToolsOpen]。</span><span class="sxs-lookup"><span data-stu-id="bb9d1-107">[Open DevTools][DevToolsOpen].</span></span>  
+1.  <span data-ttu-id="bb9d1-108">[セキュリティ **] タブを** 選択して、[セキュリティ] パネル **を開** きます。</span><span class="sxs-lookup"><span data-stu-id="bb9d1-108">Choose the **Security** tab to open the **Security** panel.</span></span>  
     
-    :::image type="complex" source="../media/security-security-overview-secure.msft.png" alt-text="セキュリティパネル" lightbox="../media/security-security-overview-secure.msft.png":::
-       <span data-ttu-id="0c113-110">**セキュリティ**パネル</span><span class="sxs-lookup"><span data-stu-id="0c113-110">The **Security** panel</span></span>  
+    :::image type="complex" source="../media/security-security-overview-secure.msft.png" alt-text="[セキュリティ] パネル" lightbox="../media/security-security-overview-secure.msft.png":::
+       <span data-ttu-id="bb9d1-110">[ **セキュリティ]** パネル</span><span class="sxs-lookup"><span data-stu-id="bb9d1-110">The **Security** panel</span></span>  
     :::image-end:::  
     
-## <span data-ttu-id="0c113-111">一般的な問題</span><span class="sxs-lookup"><span data-stu-id="0c113-111">Common problems</span></span>  
+## <span data-ttu-id="bb9d1-111">一般的な問題</span><span class="sxs-lookup"><span data-stu-id="bb9d1-111">Common problems</span></span>  
 
-### <span data-ttu-id="0c113-112">セキュリティで保護されていない本文</span><span class="sxs-lookup"><span data-stu-id="0c113-112">Non-secure main origins</span></span>  
+### <span data-ttu-id="bb9d1-112">セキュリティで保護されていないメインの原点</span><span class="sxs-lookup"><span data-stu-id="bb9d1-112">Non-secure main origins</span></span>  
 
-<span data-ttu-id="0c113-113">ページのメインの起点がセキュリティで保護されていない場合、**このページは**セキュリティで保護されていないことを**示してい**ます。</span><span class="sxs-lookup"><span data-stu-id="0c113-113">When the main origin of a page is not secure, the **Security Overview** says **This page is not secure**.</span></span>  
+<span data-ttu-id="bb9d1-113">ページのメインの作成元がセキュリティで保護されていない場合\*\*\*\*、セキュリティの概要では、この**ページはセキュリティで保護されていないと表示されます**。</span><span class="sxs-lookup"><span data-stu-id="bb9d1-113">When the main origin of a page is not secure, the **Security Overview** says **This page is not secure**.</span></span>  
 
-:::image type="complex" source="../media/security-security-overview-non-secure.msft.png" alt-text="セキュリティパネル" lightbox="../media/security-security-overview-non-secure.msft.png":::
-   <span data-ttu-id="0c113-115">セキュリティで保護されていないページ</span><span class="sxs-lookup"><span data-stu-id="0c113-115">A non-secure page</span></span>  
+:::image type="complex" source="../media/security-security-overview-non-secure.msft.png" alt-text="セキュリティで保護されていないページ" lightbox="../media/security-security-overview-non-secure.msft.png":::
+   <span data-ttu-id="bb9d1-115">セキュリティで保護されていないページ</span><span class="sxs-lookup"><span data-stu-id="bb9d1-115">A non-secure page</span></span>  
 :::image-end:::  
 
-<span data-ttu-id="0c113-116">この問題は、アクセスした URL が HTTP 経由で要求された場合に発生します。</span><span class="sxs-lookup"><span data-stu-id="0c113-116">This problem occurs when the URL that you visited was requested over HTTP.</span></span>  <span data-ttu-id="0c113-117">セキュリティを確保するには、HTTPS 経由で要求する必要があります。</span><span class="sxs-lookup"><span data-stu-id="0c113-117">To make it secure you need to request it over HTTPS.</span></span>  <span data-ttu-id="0c113-118">たとえば、アドレスバーに表示される URL を見ると、次のように表示されることがあり `http://example.com` ます。</span><span class="sxs-lookup"><span data-stu-id="0c113-118">For example, if you look at the URL in your address bar, it probably looks similar to `http://example.com`.</span></span>  <span data-ttu-id="0c113-119">URL がセキュリティで保護されるようにし `https://example.com` ます。</span><span class="sxs-lookup"><span data-stu-id="0c113-119">To make it secure the URL should be `https://example.com`.</span></span>  
+<span data-ttu-id="bb9d1-116">この問題は、アクセスした URL が HTTP で要求された場合に発生します。</span><span class="sxs-lookup"><span data-stu-id="bb9d1-116">This problem occurs when the URL that you visited was requested over HTTP.</span></span>  <span data-ttu-id="bb9d1-117">セキュリティを確保するには、HTTPS 経由で要求する必要があります。</span><span class="sxs-lookup"><span data-stu-id="bb9d1-117">To make it secure you need to request it over HTTPS.</span></span>  <span data-ttu-id="bb9d1-118">たとえば、アドレス バーの URL を確認すると、次のようになります `http://example.com` 。</span><span class="sxs-lookup"><span data-stu-id="bb9d1-118">For example, if you look at the URL in your address bar, it probably looks similar to `http://example.com`.</span></span>  <span data-ttu-id="bb9d1-119">URL をセキュリティで保護するには、次の必要があります `https://example.com` 。</span><span class="sxs-lookup"><span data-stu-id="bb9d1-119">To make it secure the URL should be `https://example.com`.</span></span>  
 
-<span data-ttu-id="0c113-120">サーバーに HTTPS を既にセットアップしている場合は、この問題を解決するために必要な操作は、すべての HTTP 要求を HTTPS にリダイレクトするようにサーバーを構成することだけです。</span><span class="sxs-lookup"><span data-stu-id="0c113-120">If you already set up HTTPS on your server, all you need to do to fix this problem is configure your server to redirect all HTTP requests to HTTPS.</span></span>  
+<span data-ttu-id="bb9d1-120">サーバーで HTTPS を既にセットアップしている場合、この問題を解決するために必要なのは、すべての HTTP 要求を HTTPS にリダイレクトするようにサーバーを構成することです。</span><span class="sxs-lookup"><span data-stu-id="bb9d1-120">If you already set up HTTPS on your server, all you need to do to fix this problem is configure your server to redirect all HTTP requests to HTTPS.</span></span>  
 
-<span data-ttu-id="0c113-121">サーバーで HTTPS をセットアップしていない場合は、 [暗号化][LetsEncrypt] を使用して、処理を開始するための無料で比較的簡単な方法を提供します。</span><span class="sxs-lookup"><span data-stu-id="0c113-121">If you have not set up HTTPS on your server, [Let's Encrypt][LetsEncrypt] provides a free and relatively-easy way to start the process.</span></span>  <span data-ttu-id="0c113-122">または、サイトを CDN でホストすることを検討することもできます。</span><span class="sxs-lookup"><span data-stu-id="0c113-122">Or, you might consider hosting your site on a CDN.</span></span>  <span data-ttu-id="0c113-123">既定では、ほとんどの主要な CDNs ホストサイトが HTTPS で提供されます。</span><span class="sxs-lookup"><span data-stu-id="0c113-123">Most major CDNs host sites on HTTPS by default now.</span></span>  
+<span data-ttu-id="bb9d1-121">サーバーに HTTPS を設定していない場合は [、Let's Encrypt][LetsEncrypt] を使用すると、無料で比較的簡単にプロセスを開始できます。</span><span class="sxs-lookup"><span data-stu-id="bb9d1-121">If you have not set up HTTPS on your server, [Let's Encrypt][LetsEncrypt] provides a free and relatively-easy way to start the process.</span></span>  <span data-ttu-id="bb9d1-122">または、CDN でのサイトのホストを検討する場合もあります。</span><span class="sxs-lookup"><span data-stu-id="bb9d1-122">Or, you might consider hosting your site on a CDN.</span></span>  <span data-ttu-id="bb9d1-123">ほとんどの主要な CDN は、既定で HTTPS 上のサイトをホストします。</span><span class="sxs-lookup"><span data-stu-id="bb9d1-123">Most major CDNs host sites on HTTPS by default now.</span></span>  
 
 > [!TIP]
-> <span data-ttu-id="0c113-124">[Webhint][Webhint]で[https の使用][WebhintUseHttps]に関するヒントを使用すると、すべての HTTP 要求が HTTPS に転送されることを確認するプロセスを自動化することができます。</span><span class="sxs-lookup"><span data-stu-id="0c113-124">The [Use HTTPS][WebhintUseHttps] hint in [webhint][Webhint] may help automate the process of making sure that all HTTP requests are directed to HTTPS.</span></span>  
+> <span data-ttu-id="bb9d1-124">Webhint [で HTTPS][WebhintUseHttps] ヒント [を使用すると][Webhint] 、すべての HTTP 要求が HTTPS に送信されるプロセスを自動化できる場合があります。</span><span class="sxs-lookup"><span data-stu-id="bb9d1-124">The [Use HTTPS][WebhintUseHttps] hint in [webhint][Webhint] may help automate the process of making sure that all HTTP requests are directed to HTTPS.</span></span>  
 
-### <span data-ttu-id="0c113-125">混在したコンテンツ</span><span class="sxs-lookup"><span data-stu-id="0c113-125">Mixed content</span></span>  
+### <span data-ttu-id="bb9d1-125">混在コンテンツ</span><span class="sxs-lookup"><span data-stu-id="bb9d1-125">Mixed content</span></span>  
 
-<span data-ttu-id="0c113-126">**混在** しているコンテンツとは、ページのメインの起点がセキュリティで保護されているが、ページは安全ではない元のリソースを要求したことを意味します。</span><span class="sxs-lookup"><span data-stu-id="0c113-126">**Mixed content** means that the main origin of a page is secure, but the page requested resources from non-secure origins.</span></span>  <span data-ttu-id="0c113-127">混在したコンテンツページは、HTTP コンテンツがスニファーでアクセス可能であり、man-in-the-middle 攻撃に対して脆弱であるため、部分的に保護されています。</span><span class="sxs-lookup"><span data-stu-id="0c113-127">Mixed content pages are only partially protected because the HTTP content is accessible to sniffers and vulnerable to man-in-the-middle attacks.</span></span>  
+<span data-ttu-id="bb9d1-126">**コンテンツが** 混在しているということは、ページのメインの作成元は安全ですが、ページはセキュリティ保護されていない元の元のリソースを要求しました。</span><span class="sxs-lookup"><span data-stu-id="bb9d1-126">**Mixed content** means that the main origin of a page is secure, but the page requested resources from non-secure origins.</span></span>  <span data-ttu-id="bb9d1-127">混在コンテンツ ページは部分的にしか保護されません。これは、HTTP コンテンツはスニファーからアクセス可能であり、man-in-the-middle 攻撃に対して脆弱だからです。</span><span class="sxs-lookup"><span data-stu-id="bb9d1-127">Mixed content pages are only partially protected because the HTTP content is accessible to sniffers and vulnerable to man-in-the-middle attacks.</span></span>  
 
-:::image type="complex" source="../media/security-security-overview-mixed-secure.msft.png" alt-text="セキュリティパネル" lightbox="../media/security-security-overview-mixed-secure.msft.png":::
-   <span data-ttu-id="0c113-129">混在したコンテンツ</span><span class="sxs-lookup"><span data-stu-id="0c113-129">Mixed content</span></span>  
+:::image type="complex" source="../media/security-security-overview-mixed-secure.msft.png" alt-text="混在コンテンツ" lightbox="../media/security-security-overview-mixed-secure.msft.png":::
+   <span data-ttu-id="bb9d1-129">混在コンテンツ</span><span class="sxs-lookup"><span data-stu-id="bb9d1-129">Mixed content</span></span>  
 :::image-end:::  
 
-<span data-ttu-id="0c113-130">上の図では、[**ネットワークパネル] で [1 つの要求を表示**] を選択して [ネットワーク] パネルを開き、 **Network** `mixed-content:displayed` **ネットワークログ**にセキュリティ以外のリソースしか表示されないようにフィルターを適用します。</span><span class="sxs-lookup"><span data-stu-id="0c113-130">In the previous figure, choose **View 1 request in Network panel** to open the **Network** panel and apply the `mixed-content:displayed` filter so that the **Network Log** only shows non-secure resources.</span></span>  
+<span data-ttu-id="bb9d1-130">前の図で、[ネットワーク] パネルで **[View 1 request]** を選択してネットワーク パネルを開き、セキュリティで保護されていないリソースのみをネットワーク ログに表示するフィルター\*\*\*\* `mixed-content:displayed` を適用します。 \*\*\*\*</span><span class="sxs-lookup"><span data-stu-id="bb9d1-130">In the previous figure, choose **View 1 request in Network panel** to open the **Network** panel and apply the `mixed-content:displayed` filter so that the **Network Log** only shows non-secure resources.</span></span>  
 
-:::image type="complex" source="../media/security-network-filter.msft.png" alt-text="セキュリティパネル" lightbox="../media/security-network-filter.msft.png":::
-   <span data-ttu-id="0c113-132">**ネットワークログ**の混在したリソース</span><span class="sxs-lookup"><span data-stu-id="0c113-132">Mixed resources in the **Network Log**</span></span>  
+:::image type="complex" source="../media/security-network-filter.msft.png" alt-text="ネットワーク ログ内の混在リソース" lightbox="../media/security-network-filter.msft.png":::
+   <span data-ttu-id="bb9d1-132">ネットワーク ログ内の混在 **リソース**</span><span class="sxs-lookup"><span data-stu-id="bb9d1-132">Mixed resources in the **Network Log**</span></span>  
 :::image-end:::  
 
-## <span data-ttu-id="0c113-133">詳細の表示</span><span class="sxs-lookup"><span data-stu-id="0c113-133">View details</span></span>  
+## <span data-ttu-id="bb9d1-133">詳細の表示</span><span class="sxs-lookup"><span data-stu-id="bb9d1-133">View details</span></span>  
 
-### <span data-ttu-id="0c113-134">メインの元の証明書を表示する</span><span class="sxs-lookup"><span data-stu-id="0c113-134">View main origin certificate</span></span>  
+### <span data-ttu-id="bb9d1-134">メインの生成元の証明書を表示する</span><span class="sxs-lookup"><span data-stu-id="bb9d1-134">View main origin certificate</span></span>  
 
-<span data-ttu-id="0c113-135">[ **セキュリティの概要**] で、[ **証明書の表示** ] を選択して、メインの元の証明書をすばやく検査します。</span><span class="sxs-lookup"><span data-stu-id="0c113-135">From the **Security Overview**, choose **View certificate** to quickly inspect the certificate for the main origin.</span></span>  
+<span data-ttu-id="bb9d1-135">[セキュリティ **の概要] で**、[証明書の **表示] を** 選択して、証明書をメインの発行元にすばやく検査します。</span><span class="sxs-lookup"><span data-stu-id="bb9d1-135">From the **Security Overview**, choose **View certificate** to quickly inspect the certificate for the main origin.</span></span>  
 
-:::image type="complex" source="../media/security-security-overview-secure-view-certificate.msft.png" alt-text="セキュリティパネル" lightbox="../media/security-security-overview-secure-view-certificate.msft.png":::
-   <span data-ttu-id="0c113-137">メインの元の証明書</span><span class="sxs-lookup"><span data-stu-id="0c113-137">A main origin certificate</span></span>  
+:::image type="complex" source="../media/security-security-overview-secure-view-certificate.msft.png" alt-text="メインの生成元証明書" lightbox="../media/security-security-overview-secure-view-certificate.msft.png":::
+   <span data-ttu-id="bb9d1-137">メインの生成元証明書</span><span class="sxs-lookup"><span data-stu-id="bb9d1-137">A main origin certificate</span></span>  
 :::image-end:::  
 
-### <span data-ttu-id="0c113-138">オリジンの詳細の表示</span><span class="sxs-lookup"><span data-stu-id="0c113-138">View origin details</span></span>  
+### <span data-ttu-id="bb9d1-138">原点の詳細を表示する</span><span class="sxs-lookup"><span data-stu-id="bb9d1-138">View origin details</span></span>  
 
-<span data-ttu-id="0c113-139">左側のナビゲーションでいずれかのエントリをクリックして、元の情報を表示します。</span><span class="sxs-lookup"><span data-stu-id="0c113-139">Click one of the entries in the left-hand nav to view the details of the origin.</span></span>  <span data-ttu-id="0c113-140">[詳細] ページでは、接続と証明書の情報を表示できます。</span><span class="sxs-lookup"><span data-stu-id="0c113-140">From the details page you are able to view connection and certificate information.</span></span>  <span data-ttu-id="0c113-141">証明書の透過性情報は、可能な場合にも表示されます。</span><span class="sxs-lookup"><span data-stu-id="0c113-141">Certificate transparency information is also shown when available.</span></span>  
+<span data-ttu-id="bb9d1-139">左側のナビゲーションのエントリの 1 つを選択して、原点の詳細を表示します。</span><span class="sxs-lookup"><span data-stu-id="bb9d1-139">Choose one of the entries in the left-hand nav to view the details of the origin.</span></span>  <span data-ttu-id="bb9d1-140">詳細ページから、接続と証明書の情報を表示できます。</span><span class="sxs-lookup"><span data-stu-id="bb9d1-140">From the details page you are able to view connection and certificate information.</span></span>  <span data-ttu-id="bb9d1-141">証明書の透過性情報は、利用可能な場合にも表示されます。</span><span class="sxs-lookup"><span data-stu-id="bb9d1-141">Certificate transparency information is also shown when available.</span></span>  
 
-:::image type="complex" source="../media/security-security-overview-mixed-secure-main-origin.msft.png" alt-text="セキュリティパネル" lightbox="../media/security-security-overview-mixed-secure-main-origin.msft.png":::
-   <span data-ttu-id="0c113-143">主要な原産国の詳細</span><span class="sxs-lookup"><span data-stu-id="0c113-143">Main origin details</span></span>  
+:::image type="complex" source="../media/security-security-overview-mixed-secure-main-origin.msft.png" alt-text="メインの原点の詳細" lightbox="../media/security-security-overview-mixed-secure-main-origin.msft.png":::
+   <span data-ttu-id="bb9d1-143">メインの原点の詳細</span><span class="sxs-lookup"><span data-stu-id="bb9d1-143">Main origin details</span></span>  
 :::image-end:::  
 
-## <span data-ttu-id="0c113-144">Microsoft Edge DevTools チームと連絡を取る</span><span class="sxs-lookup"><span data-stu-id="0c113-144">Getting in touch with the Microsoft Edge DevTools team</span></span>  
+## <span data-ttu-id="bb9d1-144">Microsoft Edge DevTools チームと連絡を取る</span><span class="sxs-lookup"><span data-stu-id="bb9d1-144">Getting in touch with the Microsoft Edge DevTools team</span></span>  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
 <!-- links -->  
 
-[MicrosoftEdgeDevTools]: ../../devtools-guide-chromium.md "Microsoft Edge (Chromium) 開発者ツール |Microsoft ドキュメント"  
-[DevToolsOpen]: ../open.md "Microsoft Edge DevTools を開く |Microsoft ドキュメント"  
-[LetsEncrypt]: https://letsencrypt.org "暗号化されていない SSL/TLS 証明書を使用する"  
+[MicrosoftEdgeDevTools]: ../../devtools-guide-chromium/index.md "Microsoft Edge (Chromium) 開発者ツール |Microsoft Docs"  
+[DevToolsOpen]: ../open/index.md "Microsoft Edge DevTools を開く | Microsoft Docs"  
 
-[Webhint]: https://webhint.io "web ヒント"  
-[WebhintUseHttps]: https://webhint.io/docs/user-guide/hints/hint-https-only "HTTPS を使用 |webhint に関するドキュメント"  
+[LetsEncrypt]: https://letsencrypt.org "暗号化 - 無料の SSL/TLS 証明書"  
+
+[Webhint]: https://webhint.io "webhint"  
+[WebhintUseHttps]: https://webhint.io/docs/user-guide/hints/hint-https-only "HTTPS を使用する |webhint ドキュメント"  
 
 <!--[mixed]: /web/fundamentals/security/prevent-mixed-content/what-is-mixed-content ""  -->
 
 > [!NOTE]
-> <span data-ttu-id="0c113-150">このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。</span><span class="sxs-lookup"><span data-stu-id="0c113-150">Portions of this page are modifications based on work created and [shared by Google][GoogleSitePolicies] and used according to terms described in the [Creative Commons Attribution 4.0 International License][CCA4IL].</span></span>  
-> <span data-ttu-id="0c113-151">元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/security/index) にあり、 [Kayce Basques][KayceBasques] テクニカルライター、Chrome Devtools \ & Lighthouse \) で作成されています。</span><span class="sxs-lookup"><span data-stu-id="0c113-151">The original page is found [here](https://developers.google.com/web/tools/chrome-devtools/security/index) and is authored by [Kayce Basques][KayceBasques] \(Technical Writer, Chrome DevTools \& Lighthouse\).</span></span>  
+> <span data-ttu-id="bb9d1-150">このページの一部は、 [Google によっ て作成および共有された][GoogleSitePolicies]作業に基づく変更で、「[Creative Commons Attribution 4.0 International License][CCA4IL]」で記載されている条項に従って使用されます。</span><span class="sxs-lookup"><span data-stu-id="bb9d1-150">Portions of this page are modifications based on work created and [shared by Google][GoogleSitePolicies] and used according to terms described in the [Creative Commons Attribution 4.0 International License][CCA4IL].</span></span>  
+> <span data-ttu-id="bb9d1-151">元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/security/index) にあり、 [Kayce Basques][KayceBasques] \(Chrome DevTools \& Lighthouse\ のテクニカル ライター) が作成しました。</span><span class="sxs-lookup"><span data-stu-id="bb9d1-151">The original page is found [here](https://developers.google.com/web/tools/chrome-devtools/security/index) and is authored by [Kayce Basques][KayceBasques] \(Technical Writer, Chrome DevTools \& Lighthouse\).</span></span>  
 
-[![クリエイティブコモンズライセンス][CCby4Image]][CCA4IL]  
-<span data-ttu-id="0c113-153">この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。</span><span class="sxs-lookup"><span data-stu-id="0c113-153">This work is licensed under a [Creative Commons Attribution 4.0 International License][CCA4IL].</span></span>  
+[![Creative Commons ライセンス][CCby4Image]][CCA4IL]  
+<span data-ttu-id="bb9d1-153">この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。</span><span class="sxs-lookup"><span data-stu-id="bb9d1-153">This work is licensed under a [Creative Commons Attribution 4.0 International License][CCA4IL].</span></span>  
 
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
