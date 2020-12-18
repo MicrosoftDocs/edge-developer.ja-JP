@@ -1,5 +1,5 @@
 ---
-description: Microsoft Edge で Playwright を使用して自動化およびテストを行う
+description: Playwright を使用して Microsoft Edge で自動化とテストを行う
 title: Playwright
 author: MSEdgeTeam
 ms.author: msedgedevrel
@@ -7,25 +7,25 @@ ms.date: 11/24/2020
 ms.topic: article
 ms.prod: microsoft-edge
 ms.technology: devtools
-keywords: microsoft edge、web 開発、開発者、ツール、オートメーション、テスト、再生ライト、ノード、javascript、npm
-ms.openlocfilehash: ac03923fb25da00f07cb70e81ac06b106a6e1452
-ms.sourcegitcommit: 2e14ff82350f700d7eabc8d33b3ec3e5fc8c61fa
+keywords: microsoft edge, Web 開発, 開発者, ツール, 自動化, テスト, プレイライト, ノード, javascript, npm
+ms.openlocfilehash: 5ce51864177731dd1bafb845466abb00cce1e0aa
+ms.sourcegitcommit: a35a6b5bbc21b7df61d08cbc6b074b5325ad4fef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "11192213"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "11231084"
 ---
 # Playwright  
 
-[Playwright][|::ref1::|Main]は、 [Chromium][ChromiumHome]、 [Firefox][FirefoxMain]、 [WebKit][|::ref2::|Main]を1つの API で自動化するための[Node.js][NodejsMain]ライブラリです。  Playwright は、緑色、機能、信頼性、および高速のクロスブラウザー web オートメーションを可能にするために構築されています。  [Microsoft edge は、オープンソースの Chromium web プラットフォーム上に構築されて][MicrosoftBlogsWindowsExperience20181206]いるため、Playwright は microsoft edge を自動化することもできます。  
+[Playwright][|::ref1::|Main]は[、Node.js][NodejsMain] API を使用して Chromium、Firefox、WebKit を自動化するための新しいライブラリです。 [][ChromiumHome] [][FirefoxMain] [][|::ref2::|Main]  Playwright は、常に緑化され、機能し、信頼性が高く、高速なクロスブラウザー Web オートメーションを実現するために構築されています。  [Microsoft Edge はオープン ソースの Chromium Web][MicrosoftBlogsWindowsExperience20181206]プラットフォームに基づいているので、Playwright は Microsoft Edge を自動化することも可能です。  
 
-Playwright 既定では、 [ヘッドレスブラウザー][WikiHeadlessBrowser] が起動します。  ヘッドレスブラウザーでは UI が表示されないため、代わりにコマンドラインを使用する必要があります。  また、Microsoft Edge で完全 \ (非ヘッドレス) を実行するように Playwright を構成することもできます。  
+Playwright は、既定 [でヘッドレス ブラウザーを][WikiHeadlessBrowser] 起動します。  ヘッドレス ブラウザーでは UI が表示されないので、代わりにコマンド ラインを使用する必要があります。  また、Microsoft Edge を完全 \(ヘッドレス\) で実行する Playwright を構成することもできます。  
 
-既定では、Playwright をインストールすると、インストーラーが [Chromium][ChromiumHome]、 [Firefox][FirefoxMain]、および [WebKit][|::ref3::|Main]をダウンロードします。  Microsoft Edge \ (Chromium \) もインストールされている場合、Playwright は、Microsoft Edge で web サイトまたはアプリをテストするために1行のコード変更が必要になるだけです。  Microsoft Edge \ (Chromium) をダウンロードするには、「 [Microsoft edge のダウンロード][MicrosoftEdgeDownload]」に移動します。  
+既定では、Playwright をインストールすると、インストーラーは[Chromium、Firefox、][ChromiumHome][および WebKit をダウンロードします][|::ref3::|Main]。 [][FirefoxMain]  Microsoft Edge \(Chromium\) もインストールされている場合、Playwright は、Microsoft Edge で Web サイトまたはアプリをテストするために 1 行のコード変更が必要です。  Microsoft Edge \(Chromium\) をダウンロードするには [、Microsoft Edge のダウンロードに移動します][MicrosoftEdgeDownload]。  
 
 ## Playwright のインストール  
 
-次のコマンドを使用して、web サイトまたはアプリをテストするために [Playwright][|::ref4::|Main] をインストールします。  
+[Playwright をインストールし][|::ref4::|Main]、次のコマンドを使用して Web サイトまたはアプリをテストします。  
 
 ```shell
 npm i playwright
@@ -34,11 +34,11 @@ npm i playwright
 ## Playwright で Microsoft Edge を起動する  
 
 > [!NOTE]
-> [Playwright][|::ref5::|Main] には Node.js バージョン10.17 以降が必要です。 `node -v`コマンドラインから実行し、互換性のあるバージョンの Node.js があることを確認します。  Chromium、Firefox、および WebKit のブラウザーバイナリは、Windows、macOS、Linux で動作します。 詳細については、「 [Playwright のシステム要件][PlaywrightSystemRequirements]」を参照してください。  
+> [Playwright では、Node.js][|::ref5::|Main] バージョン 10.17 以上が必要です。 コマンド `node -v` ラインから実行して、互換性のあるバージョンの Node.js。  Chromium、Firefox、WebKit のブラウザー バイナリは、Windows、macOS、Linux で動作します。 詳細については [、「Playwright System Requirements」に移動してください][PlaywrightSystemRequirements]。  
 
-Playwright は、 [Webdriver][WebDriverChromiumMain] や [Puppeteer][PuppeteerMain]など、他のブラウザーテストフレームワークのユーザーに馴染みのあるものにする必要があります。  ブラウザーのインスタンスを作成し、ページを開き、 [Playwright API][PlaywrightAPIReference]で操作します。  次のコードスニペットでは、Playwright が Microsoft Edge \ (Chromium \) を起動し、に移動し `https://www.microsoft.com/edge` て、スクリーンショットをとして保存して `example.png` います。  
+Playwright は [、WebDriver][WebDriverChromiumMain] や Browsereer などの他のブラウザー テスト フレームワークのユーザーをよく理解 [している必要があります][PuppeteerMain]。  ブラウザーのインスタンスを作成し、ページを開き [、Playwright API を使用して操作します][PlaywrightAPIReference]。  次のコード スニペットでは、Playwright は Microsoft Edge \(Chromium\) を起動し、スクリーンショットに移動して保存 `https://www.microsoft.com/edge` します `example.png` 。  
 
-次のコードスニペットをコピーして、として保存し `example.js` ます。  
+次のコード スニペットをコピーし、名前を付けて保存します `example.js` 。  
 
 ```javascript
 const { chromium } = require('playwright');
@@ -55,13 +55,13 @@ const { chromium } = require('playwright');
 })();
 ```  
 
-`executablePath`Microsoft Edge \ (Chromium \) のインストールをポイントします。  たとえば、macOS では、 `executablePath` Microsoft Edge カナリアをに設定する必要があり `/Applications/Microsoft\ Edge\ Canary.app/` ます。  を見つけるに `executablePath` `edge://version` は、そのページの **実行可能ファイルのパス** に移動してコピーするか、次のコマンドを使用して [エッジパス][npmEdgePaths] パッケージをインストールします。  
+`executablePath`Microsoft Edge \(Chromium\) のインストールをポイントするために変更します。  たとえば、macOS では `executablePath` 、Microsoft Edge Canary の設定が必要です `/Applications/Microsoft\ Edge\ Canary.app/` 。  To find the `executablePath` , navigate to and copy the Executable `edge://version` **path** on that page or install the [edge-paths][npmEdgePaths] package with the following command.  
 
 ```shell
 npm i edge-paths
 ```  
 
-次のコードスニペットでは、 [edge パス][npmEdgePaths] パッケージを使って、OS の Microsoft edge \ (Chromium \) のインストールへのパスをプログラムで検索しています。  
+次のコード スニペットでは、 [エッジ パス][npmEdgePaths] パッケージを使用して、OS 上の Microsoft Edge \(Chromium\) のインストールへのパスをプログラムによって検索します。  
 
 ```javascript
 const edgePaths = require("edge-paths");
@@ -69,30 +69,30 @@ const edgePaths = require("edge-paths");
 const EDGE_PATH = edgePaths.getEdgePath();
 ```  
 
-最後に、を設定 `executablePath: EDGE_PATH` `example.js` します。  変更内容を保存するには、[保存] をクリックします。  
+最後に、設定 `executablePath: EDGE_PATH` します `example.js` 。  変更内容を保存するには、[保存] をクリックします。  
 
 > [!NOTE]
-> Microsoft Edge \ (EdgeHTML \) は、Playwright では動作しません。  この例に従って続行するには、 [Microsoft Edge \ (Chromium \)][MicrosoftEdgeDownload] をインストールする必要があります。  
+> Microsoft Edge \(EdgeHTML\) は、Playwright では動作しません。  この例を引 [き続き実行するには、Microsoft Edge \(Chromium\)][MicrosoftEdgeDownload] をインストールする必要があります。  
 
-次 `example.js` に、コマンドラインから実行します。  
+コマンド ライン `example.js` から実行します。  
 
 ```shell
 node example.js
 ```  
 
-Playwright Microsoft Edge を起動し、 `https://www.microsoft.com/edge` ページに移動して、ページのスクリーンショットを保存します。  ページサイズをカスタマイズするには、 [setViewportSize ()][PlaywrightAPIPageSetViewport]を使用します。  
+Playwright は Microsoft Edge を起動し、ページに移動して、ページ `https://www.microsoft.com/edge` のスクリーンショットを保存します。  [page.setViewportSize() を使用してページ サイズをカスタマイズできます][PlaywrightAPIPageSetViewport]。  
 
-:::image type="complex" source="../media/playwright-example.png" alt-text="example.js によって生成された example.png ファイル" lightbox="../media/playwright-example.png":::
-    生成される `example.png` ファイル `example.js`  
+:::image type="complex" source="../media/playwright-example.png" alt-text="このexample.pngによって生成されたファイルexample.js" lightbox="../media/playwright-example.png":::
+    生成 `example.png` されたファイル `example.js`  
 :::image-end:::  
 
-`example.js` ここでは、Playwright によって有効になるオートメーションとテストのシナリオを簡単にデモンストレーションします。  複数の web ブラウザーでスクリーンショットを撮るには、次のコードを変更します。  
+`example.js` は、Playwright によって実現される自動化およびテスト シナリオの簡単なデモンストレーションです。  複数の Web ブラウザーでスクリーンショットを撮る場合は、次のコードを変更します。  
 
 *   Chromium  `await chromium.launch()`  
 *   Firefox  `await firefox.launch()`  
 *   WebKit  `await webkit.launch()`  
 
-Playwright の詳細については、 [Playwright の web サイト][|::ref6::|Main]を参照してください。  GitHub の  [Playwright リポジトリ][PlaywrightRepo] をご覧ください。  プレイライトを使って web サイトまたはアプリの自動化とテストを行ってフィードバックを共有するには、 [問題をファイル][PlaywrightRepoNewIssue]します。  
+Playwright の詳細については、Playwright [Web サイトに移動してください][|::ref6::|Main]。  GitHub  [で Playwright リポジトリ][PlaywrightRepo] を確認します。  Playwright で Web サイトまたはアプリの自動化とテストに関するフィードバックを共有するには、問題 [を解決してください][PlaywrightRepoNewIssue]。  
 
 ## Microsoft Edge DevTools チームと連絡を取る  
 
@@ -100,12 +100,12 @@ Playwright の詳細については、 [Playwright の web サイト][|::ref6::|
 
 <!-- links -->  
 
-[WebdriverChromiumMain]: ../webdriver-chromium/index.md "WebDriver (Chromium) |Microsoft ドキュメント"  
-[PuppeteerMain]: ../puppeteer.md "Puppeteer |Microsoft ドキュメント"  
+[WebdriverChromiumMain]: ../webdriver-chromium/index.md "WebDriver (Chromium) |Microsoft Docs"  
+[PuppeteerMain]: ../puppeteer/index.md "サーティファー |Microsoft Docs"  
 
-[MicrosoftBlogsWindowsExperience20181206]: https://blogs.windows.com/windowsexperience/2018/12/06/microsoft-edge-making-the-web-better-through-more-open-source-collaboration "Microsoft Edge: さまざまなオープンソースの共同作業で web の品質を向上させる |Microsoft エクスペリエンスブログ"  
+[MicrosoftBlogsWindowsExperience20181206]: https://blogs.windows.com/windowsexperience/2018/12/06/microsoft-edge-making-the-web-better-through-more-open-source-collaboration "Microsoft Edge: オープン ソースコラボレーションによる Web の向上 |Microsoft Experience ブログ"  
 
-[MicrosoftEdgeDownload]: https://microsoft.com/edge "Microsoft Edge をダウンロードする"  
+[MicrosoftEdgeDownload]: https://microsoft.com/edge "Microsoft Edge のダウンロード"  
 
 [ChromiumHome]: https://www.chromium.org/Home "Chromium |Chromium プロジェクト"  
 
@@ -113,16 +113,16 @@ Playwright の詳細については、 [Playwright の web サイト][|::ref6::|
 
 [NodejsMain]: https://nodejs.org "Node.js"  
 
-[npmEdgePaths]: https://www.npmjs.com/package/edge-paths "edge-パス |npm"  
+[npmEdgePaths]: https://www.npmjs.com/package/edge-paths "edge-paths |npm"  
 
 [PlaywrightMain]: https://playwright.dev "Playwright"  
 [PlaywrightAPIReference]: https://playwright.dev#?path=docs/api.md "Playwright API リファレンス"  
-[PlaywrightAPIPageSetViewport]: https://playwright.dev#?path=docs%2Fapi.md&q=pagesetviewportsizeviewportsize "setViewportSize (viewportSize) |Playwright API リファレンス"    
-[PlaywrightSystemRequirements]: https://playwright.dev#?path=docs/intro.md&q=system-requirements "Playwright システム要件"  
+[PlaywrightAPIPageSetViewport]: https://playwright.dev#?path=docs%2Fapi.md&q=pagesetviewportsizeviewportsize "page.setViewportSize(viewportSize) |Playwright API リファレンス"    
+[PlaywrightSystemRequirements]: https://playwright.dev#?path=docs/intro.md&q=system-requirements "プレイライト システムの要件"  
 
 [PlaywrightRepo]: https://github.com/microsoft/playwright "Playwright |GitHub"  
-[PlaywrightRepoNewIssue]: https://github.com/microsoft/playwright/issues/new/choose "Playwright リポジトリでの新しい問題 |GitHub"  
+[PlaywrightRepoNewIssue]: https://github.com/microsoft/playwright/issues/new/choose "Playwright repo の新しい問題 |GitHub"  
 
 [WebKitMain]: https://webkit.org "WebKit"  
 
-[WikiHeadlessBrowser]: https://en.wikipedia.org/wiki/Headless_browser "ヘッドレスブラウザー |Wikipedia"  
+[WikiHeadlessBrowser]: https://en.wikipedia.org/wiki/Headless_browser "ヘッドレス ブラウザー |Wikipedia"  

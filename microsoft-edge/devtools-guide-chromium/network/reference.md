@@ -1,18 +1,18 @@
 ---
-description: Microsoft Edge DevTools のネットワークパネル機能の包括的な参照。
+description: Microsoft Edge DevTools ネットワーク パネル機能の包括的なリファレンス。
 title: ネットワーク分析のリファレンス
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 12/08/2020
+ms.date: 12/17/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 4d4dc8ad5102766f3ad3c8322dbf9342a69e9097
-ms.sourcegitcommit: 6571bcc0b7f1c4c9d6ead65081374bab87cd4469
+ms.openlocfilehash: c600197ffa0e415fe42aecc704a523d1b23f8260
+ms.sourcegitcommit: a35a6b5bbc21b7df61d08cbc6b074b5325ad4fef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "11203907"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "11230755"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -30,55 +30,55 @@ ms.locfileid: "11203907"
 
 # ネットワーク分析のリファレンス  
 
-Microsoft Edge DevTools のネットワーク分析機能の包括的な参照でページがどのように読み込まれるかを分析するための新しい方法について説明します。  
+Microsoft Edge DevTools ネットワーク分析機能の包括的なリファレンスで、ページの読み込み方法を分析する新しい方法について説明します。  
 
 ## ネットワーク要求を記録する  
 
-既定では、devtools が開いている限り、すべてのネットワーク要求が **ネットワーク** パネルに記録されます。  
+既定では、DevTools が開いている限り、DevTools はネットワーク パネルにすべてのネットワーク要求を記録します。 ****  
 
 :::image type="complex" source="../media/network-network-panel.msft.png" alt-text="[ネットワーク] パネル" lightbox="../media/network-network-panel.msft.png":::
-   [ **ネットワーク** ] パネル  
+   [ **ネットワーク]** パネル  
 :::image-end:::  
 
 ### ネットワーク要求の記録を停止する  
 
 要求の記録を停止するには、次の手順を実行します。  
 
-1.  [ **ネットワーク** ] パネルで、[ **ネットワークログの記録を停止** する] を選択します ( ![ ネットワークログの記録を停止し ][ImageRecordOnIcon] ます)。  灰色に変わり、DevTools が要求を記録しなくなったことを示します。  
-1.  `Control` + `E` `Command` + `E` **ネットワーク**パネルがフォーカスされているときに、[\ (Windows, Linux \)] または [\ (macOS \)] を選びます。  
+1.  [ネットワーク] **パネルで** 、[ネットワーク ログの **記録を停止** する] \( [ネットワーク ログの記録 ![ を停止する] ][ImageRecordOnIcon] \) を選択します。  DevTools が要求を記録しなくなった場合は灰色になります。  
+1.  ネットワーク `Control` + `E` パネルにフォーカスがある場合は `Command` + `E` 、\(Windows,Linux\)**** または \(macOS\) を選択します。  
 
 ### 要求をクリアする  
 
-[ネットワーク] パネルで [**クリア**\ (クリア)] を選択して ![ ][ImageClearIcon] 、要求**** テーブルからすべての要求をクリアします。  
+[**要求]** テーブルからすべての要求をクリアするには、[ネットワーク] パネルで [クリア \ (クリア ![ ][ImageClearIcon] \) ] を選択します。 ****  
 
 :::image type="complex" source="../media/network-network-clear-button.msft.png" alt-text="[クリア] ボタン" lightbox="../media/network-network-clear-button.msft.png":::
-   [ **クリア** ] ボタン  
+   [ **クリア]** ボタン  
 :::image-end:::  
 
-### ページのロード間で要求を保存する  
+### ページの読み込み時に要求を保存する  
 
-ページのロード間で要求を保存するには、[ **ネットワーク** ] パネルで、[ **ログの保持** ] チェックボックスをオンにします。  DevTools では、 **Preserve log**を無効にするまで、すべての要求が保存されます。  
+ページの読み込み時に要求を保存するには、[ **ネットワーク** ] パネルで [保持ログ] チェック **ボックスをオン** にします。  DevTools は、保持ログを無効にするまで、すべての要求 **を保存します**。  
 
-:::image type="complex" source="../media/network-network-preserve-log.msft.png" alt-text="[ログの保存] チェックボックス" lightbox="../media/network-network-preserve-log.msft.png":::
-   [ **ログの保存** ] チェックボックス  
+:::image type="complex" source="../media/network-network-preserve-log.msft.png" alt-text="[ログの保持] チェック ボックス" lightbox="../media/network-network-preserve-log.msft.png":::
+   [ **ログの保持]** チェック ボックス  
 :::image-end:::  
 
-### ページの読み込み中にスクリーンショットをキャプチャする  
+### ページ読み込み中のスクリーンショットのキャプチャ  
 
-ページが読み込まれるのを待っている間にユーザーに表示される内容を分析するためのスクリーンショットをキャプチャします。  
+スクリーンショットをキャプチャして、ページが読み込むのを待っている間にユーザーに表示される画面を分析します。  
 
-スクリーンショットを有効にするには、[ **ネットワーク設定**] を選び、[ **ネットワーク** ] パネルで [ **スクリーンショットのキャプチャ** ] チェックボックスをオンにします。  
+スクリーンショットを有効にするには、[ネットワーク**設定]** を選択し****、[ネットワーク] パネルで [スクリーンショットのキャプチャ]**チェック ボックスをオン**にします。  
 
-**ネットワーク**パネルがフォーカスされているときにページを更新して、スクリーンショットをキャプチャします。  
+ネットワーク パネルにフォーカス **がある間に** ページを更新し、スクリーンショットをキャプチャします。  
 
-スクリーンショットをキャプチャした後、次のように操作します。  
+スクリーンショットをキャプチャした後は、次の方法で操作します。  
 
-*   スクリーンショットにマウスポインターを置くと、そのスクリーンショットがキャプチャされたポイントが表示されます。  [ **概要** ] ウィンドウに黄色の線が表示されます。  
-*   画面のサムネイルを選択して、スクリーンショットがキャプチャされた後に発生した要求をすべて除外します。  
+*   スクリーンショットをポイントすると、そのスクリーンショットがキャプチャされたポイントが表示されます。  [概要] ウィンドウに黄色の線 **が表示** されます。  
+*   スクリーンショットをキャプチャした後に発生した要求をフィルター処理するには、画面のサムネイルを選択します。  
 *   サムネイルをダブルクリックして拡大します。  
 
-:::image type="complex" source="../media/network-network-screenshot-hover.msft.png" alt-text="スクリーンショットにマウスポインターを移動する" lightbox="../media/network-network-screenshot-hover.msft.png":::
-   スクリーンショットにマウスポインターを移動する  
+:::image type="complex" source="../media/network-network-screenshot-hover.msft.png" alt-text="スクリーンショットにカーソルを合わせる" lightbox="../media/network-network-screenshot-hover.msft.png":::
+   スクリーンショットにカーソルを合わせる  
 :::image-end:::  
 
 <!--  ### Replay XHR request  -->
@@ -91,119 +91,119 @@ Microsoft Edge DevTools のネットワーク分析機能の包括的な参照�
 :::image-end:::  
 -->  
 
-## 読み込み動作を変更する  
+## 読み込み時の動作を変更する  
 
-### ブラウザーのキャッシュを無効にして、初めてのユーザーをエミュレートする  
+### ブラウザー キャッシュを無効にして初回訪問者をエミュレートする  
 
-初めてのユーザーがサイトをどのように体験したかをエミュレートするには、[ **キャッシュを無効** にする] チェックボックスをオンにします。  DevTools は、ブラウザーのキャッシュを無効にします。  この機能は、初回のユーザーエクスペリエンスをより正確にエミュレートします。要求は、繰り返しアクセスの際にブラウザーのキャッシュから提供されるためです。  
+初めてのユーザーがサイトを体験する方法をエミュレートするには、[キャッシュを無効にする] チェック **ボックスをオン** にします。  DevTools はブラウザー キャッシュを無効にします。  この機能は、初回のユーザー エクスペリエンスをより正確にエミュレートします。これは、要求は繰り返しアクセス時にブラウザー キャッシュから提供されます。  
 
-:::image type="complex" source="../media/network-network-disable-cache-checkbox.msft.png" alt-text="[キャッシュを無効にする] チェックボックス" lightbox="../media/network-network-disable-cache-checkbox.msft.png":::
-   [ **キャッシュを無効にする** ] チェックボックス  
+:::image type="complex" source="../media/network-network-disable-cache-checkbox.msft.png" alt-text="[キャッシュを無効にする] チェック ボックス" lightbox="../media/network-network-disable-cache-checkbox.msft.png":::
+   [ **キャッシュを無効にする] チェック** ボックス  
 :::image-end:::  
 
-#### [ネットワーク条件] ドロアーからブラウザーキャッシュを無効にする  
+#### ネットワーク条件ドロワーからブラウザー キャッシュを無効にする  
 
-他の DevTools パネルを操作しているときに、キャッシュを無効にするには、[ネットワーク条件] ドローワを使用します。  
+他の DevTools パネルで作業している間にキャッシュを無効にする場合は、ネットワーク条件ドロワーを使用します。  
 
-1.  [ **ネットワーク条件** ] ドローワを開きます。  
-1.  [ **キャッシュを無効にする** ] チェックボックスをオン (またはオフ) にします。  
+1.  ネットワーク条件ドロ **ワーを開** きます。  
+1.  [キャッシュを無効にする] チェック ボックスをオン **またはオフ** にします。  
 
 <!--todo: add network condition section when available -->  
 
-### ブラウザキャッシュを手動でクリアする  
+### ブラウザー キャッシュを手動でクリアする  
 
-ブラウザーのキャッシュをいつでも手動でクリアするには、[要求] テーブルの任意の場所でコンテキストメニュー \ (右クリック \) を開き、[ **ブラウザーキャッシュのクリア**] を選びます。  
+ブラウザー キャッシュをいつでも手動でクリアするには、[要求] テーブルの任意の場所でコンテキスト メニュー \(右クリック\) を開き、[ブラウザー キャッシュのクリア] を選択 **します**。  
 
-:::image type="complex" source="../media/network-network-clear-browser-cache.msft.png" alt-text="[ブラウザーキャッシュのクリア] を選ぶ" lightbox="../media/network-network-clear-browser-cache.msft.png":::
-   [**ブラウザーキャッシュのクリア**] を選ぶ  
+:::image type="complex" source="../media/network-network-clear-browser-cache.msft.png" alt-text="ブラウザー キャッシュのクリアを選択する" lightbox="../media/network-network-clear-browser-cache.msft.png":::
+   ブラウザー **キャッシュのクリアを選択する**  
 :::image-end:::  
 
 ### オフラインでエミュレートする  
 
-[プログレッシブ Web アプリ][DevtoolsProgressiveWebApps]という名前の新しいクラスの web アプリでは、サービスの担当**者**のためにオフラインで機能します。  この種類のアプリを構築しているときに、データ接続がないデバイスをすばやくシミュレートすると便利です。  
+新しいクラスの Web アプリ [(Progressive Web Apps)][DevtoolsProgressiveWebApps]は、サービス ワーカーの支援を受け、オフライン **で機能します**。  この種類のアプリを構築するときに、データ接続がないデバイスをすばやくシミュレートすると便利な場合があります。  
 
 <!--[ServiceWorkers]: /web/fundamentals/getting-started/primers/service-workers  -->
 
-[ **オンライン** ] ドロップダウンメニューの [ **プリセット**] で検索し、[ **オフライン** ] を選択して、オフラインネットワークエクスペリエンスをシミュレートします。  
+[オンライン] **ドロップダウン メニュー** を選択し、[ **プリセット**] で検索し、[ **オフライン** ] を選択してオフライン ネットワーク エクスペリエンスをシミュレートします。  
 
-:::image type="complex" source="../media/network-network-offline-dropdown.msft.png" alt-text="[オフライン] ドロップダウンメニュー" lightbox="../media/network-network-offline-dropdown.msft.png":::
-   [ **オフライン** ] ドロップダウンメニュー  
+:::image type="complex" source="../media/network-network-offline-dropdown.msft.png" alt-text="[オフライン] ドロップダウン メニュー" lightbox="../media/network-network-offline-dropdown.msft.png":::
+   [ **オフライン]** ドロップダウン メニュー  
 :::image-end:::  
 
-### 低速ネットワーク接続のエミュレート  
+### 低速ネットワーク接続をエミュレートする  
 
-「 **オンライン** 」ドロップダウンメニューから、低速の3G、Fast 3g、その他の接続速度をエミュレートできます。  
+[オンライン] ドロップダウン メニューからスロー 3G、Fast 3G、その他の接続速度 **を** エミュレートします。  
 
-:::image type="complex" source="../media/network-network-throttling-menu.msft.png" alt-text="[調整] ドロップダウンメニュー" lightbox="../media/network-network-throttling-menu.msft.png":::
-   [ **調整** ] ドロップダウンメニュー  
+:::image type="complex" source="../media/network-network-throttling-menu.msft.png" alt-text="[調整] ドロップダウン メニュー" lightbox="../media/network-network-throttling-menu.msft.png":::
+   [ **調整]** ドロップダウン メニュー  
 :::image-end:::  
 
-低速の3G や Fast 3G など、さまざまなプリセットから選ぶことができます。  独自のカスタムプリセットを追加するには、[調整] メニューを開き、[**カスタム**  >  **追加**] を選びます。  
+スロー 3G や Fast 3G など、さまざまなプリセットから選択できます。  独自のカスタム プリセットを追加するには、[調整] メニューを開き、[カスタム追加]**を選択**  >  **します**。  
 
-DevTools は、調整が有効になっていることを通知するために、[ **ネットワーク** ] タブの横に警告アイコンを表示します。  
+DevTools では、[ネットワーク] タブの横に警告アイコンが **表示** され、調整が有効になっていることを通知します。  
 
-#### ネットワークの状態のドロアーからの低速ネットワーク接続のエミュレート  
+#### ネットワーク条件ドロワーからの低速ネットワーク接続をエミュレートする  
 
-他の DevTools パネルでの作業中にネットワーク接続を調整したい場合は、ネットワーク条件の引き出しを使用します。  
+他の DevTools パネルで作業している間にネットワーク接続を調整する場合は、ネットワーク条件ドロワーを使用します。  
 
-1.  [ **ネットワーク条件** ] ドローワを開きます。  
-1.  **調整**メニューから接続速度を選択します。  
+1.  ネットワーク条件ドロ **ワーを開** きます。  
+1.  [調整] メニューから接続速度 **を選択** します。  
 
 <!--todo: add network condition section when available -->  
 
-### ブラウザーの cookie を手動でクリアする  
+### ブラウザーの Cookie を手動でクリアする  
 
-ブラウザ cookie を手動でクリアするには、要求テーブルの任意の場所にマウスポインターを置いて、コンテキストメニュー \ (右クリック \) を開いて、[ **ブラウザクッキーのクリア**] を選びます。  
+ブラウザーの Cookie をいつでも手動でクリアするには、[要求] テーブルの任意の場所にマウス ポインターを移動し、コンテキスト メニュー \(右クリック\) を開き、[ブラウザー Cookie のクリア] を選択 **します**。  
 
-:::image type="complex" source="../media/network-network-clear-browser-cookies.msft.png" alt-text="[ブラウザー Cookie のクリア] を選ぶ" lightbox="../media/network-network-clear-browser-cookies.msft.png":::
-   [**ブラウザー cookie のクリア**] を選ぶ  
+:::image type="complex" source="../media/network-network-clear-browser-cookies.msft.png" alt-text="ブラウザーの Cookie のクリアを選択する" lightbox="../media/network-network-clear-browser-cookies.msft.png":::
+   ブラウザー **の Cookie のクリアを選択する**  
 :::image-end:::  
 
-### ユーザーエージェントを上書きする  
+### ユーザー エージェントを上書きする  
 
-ユーザーエージェントを手動で上書きするには、次の手順を使用します。  
+ユーザー エージェントを手動で上書きするには、次の手順を使用します。  
 
-1.  [ **ネットワーク条件** ] ドローワを開きます。  
-1.  **[自動的に選択**する] チェックボックスをオフにします。  
-1.  メニューからユーザーエージェントオプションを選択するか、テキストボックスにユーザー設定のオプションを入力します。  
+1.  ネットワーク条件ドロ **ワーを開** きます。  
+1.  [自動的に選択 **] チェック ボックスを** オフにします。  
+1.  メニューからユーザー エージェント オプションを選択するか、テキスト ボックスにカスタム エージェント オプションを入力します。  
 
 <!--todo: add network condition section when available -->  
 
-## フィルター要求  
+## 要求をフィルター処理する  
 
-### プロパティによって要求をフィルター処理する  
+### プロパティで要求をフィルター処理する  
 
-[ **フィルター** ] テキストボックスを使用して、要求のドメインやサイズなどのプロパティによって要求をフィルター処理します。  
+[フィルター **] テキスト** ボックスを使用して、要求のドメインやサイズなどのプロパティで要求をフィルター処理します。  
 
-テキストボックスが表示されない場合は、[ **フィルター** ] ウィンドウが非表示になっている可能性があります。  
-詳細については、「 [[フィルター] ウィンドウを非表示](#hide-the-filters-pane)にする」を参照してください。  
+テキスト ボックスが表示されていない場合は、[フィルター **]** ウィンドウは非表示である可能性があります。  
+詳細については、[フィルター] ウィンドウ [を非表示にするに移動します](#hide-the-filters-pane)。  
 
-:::image type="complex" source="../media/network-network-filters-textbox.msft.png" alt-text="[フィルター] テキストボックス" lightbox="../media/network-network-filters-textbox.msft.png":::
-   [ **フィルター** ] テキストボックス  
+:::image type="complex" source="../media/network-network-filters-textbox.msft.png" alt-text="[フィルター] テキスト ボックス" lightbox="../media/network-network-filters-textbox.msft.png":::
+   [ **フィルター]** テキスト ボックス  
 :::image-end:::  
 
-各プロパティをスペースで区切ることで、複数のプロパティを同時に使うことができます。  たとえば、 `mime-type:image/png larger-than:1K` 1 kb より大きいすべての PNGs を表示します。  複数プロパティフィルターは、操作と同じです `AND` 。  `OR` 操作は現在サポートされていません。  
+各プロパティをスペースで区切って、複数のプロパティを同時に使用できます。  たとえば、1 キロバイトを超えるすべての `mime-type:image/png larger-than:1K` PNG を表示します。  マルチプロパティ フィルターは操作と同 `AND` じです。  `OR` 操作は現在サポートされていません。  
 
-サポートされているプロパティの完全な一覧です。  
+サポートされているプロパティの完全な一覧。  
 
 | プロパティ | 詳細 |  
 |:--- | :--- |  
-| `domain` | 指定したドメインのリソースのみを表示します。  複数のドメインを含めるには、ワイルドカード文字 \ (\) を使用することができ `*` ます。  たとえば、 `*.com` で終わるすべてのドメイン名のリソースが表示され `.com` ます。  DevTools は、見つかったすべてのドメインのオートコンプリートのドロップダウンメニューに入力します。 |  
-| `has-response-header` | 指定した HTTP 応答ヘッダーを含むリソースを表示します。  DevTools は、見つかったすべての応答ヘッダーのオートコンプリートのドロップダウンリストにデータを設定します。 |  
-| `is` | `is:running`リソースを検索するために使用 `WebSocket` します。 |  
-| `larger-than` | 指定したサイズよりも大きいリソースを、バイト単位で表示します。  値の設定 `1000` は、の値の設定に相当 `1k` します。 |  
-| `method` | 指定した HTTP メソッド型を経由して取得されたリソースを表示します。  DevTools は、検出されたすべての HTTP メソッドを使用して、ドロップダウンにデータを設定します。 |  
-| `mime-type` | 指定した MIME の種類のリソースを表示します。  DevTools では、検出されたすべての MIME の種類がドロップダウンに設定されます。 |  
-| `mixed-content` | すべての混合コンテンツリソース \ ( `mixed-content:all` \) を表示するか、現在 \ (\) を表示しているものだけを表示し `mixed-content:displayed` ます。 |  
-| `scheme` | 保護されていない HTTP \ ( `scheme:http` \) または保護された HTTPS \ (\) 経由で取得したリソース `scheme:https` を表示します。 |  
-| `set-cookie-domain` | 指定した値と一致する属性を持つヘッダーが含まれているリソースを表示 `Set-Cookie` `Domain` します。  DevTools は、検出されたすべての cookie ドメインにオートコンプリートを設定します。 |  
-| `set-cookie-name` | 指定した値と一致する名前のヘッダーが含まれているリソースを表示 `Set-Cookie` します。  DevTools は、検出されたすべての cookie 名でオートコンプリートを設定します。 |  
-| `set-cookie-value` | 指定された値と一致する値のヘッダーが含まれているリソースを表示 `Set-Cookie` します。  DevTools は、検出されたすべての cookie 値でオートコンプリートを設定します。 |  
-| `status-code` | 特定の HTTP 状態コードに一致するリソースを表示します。  DevTools は、検出されたすべての状態コードと共にオートコンプリートのドロップダウンメニューに入力します。 |  
+| `domain` | 指定されたドメインのリソースのみを表示します。  複数のドメインを含めるには、ワイルドカード文字 `*` \( \) を使用できます。  たとえば、終 `*.com` わるすべてのドメイン名のリソースを表示します `.com` 。  DevTools は、オートコンプリートドロップダウン メニューに、見つかったすべてのドメインを設定します。 |  
+| `has-response-header` | 指定された HTTP 応答ヘッダーを含むリソースを表示します。  DevTools は、見つかったすべての応答ヘッダーをオートコンプリート ドロップダウンに設定します。 |  
+| `is` | リソース `is:running` を検索するために `WebSocket` 使用します。 |  
+| `larger-than` | 指定したサイズより大きいリソースをバイト単位で表示します。  値の設定は `1000` 、値を設定するのと同じです `1k` 。 |  
+| `method` | 指定された HTTP メソッド型で取得されたリソースを表示します。  DevTools は、見つかったすべての HTTP メソッドをドロップダウンに設定します。 |  
+| `mime-type` | 指定された MIME タイプのリソースを表示します。  DevTools は、見つかったすべての MIME タイプをドロップダウンに設定します。 |  
+| `mixed-content` | すべての混在コンテンツ リソース \( \) または現在表示されているリソース `mixed-content:all` \( \) を表示 `mixed-content:displayed` します。 |  
+| `scheme` | 保護されていない HTTP \( \) または保護された `scheme:http` HTTPS \( \) で取得したリソースを表示 `scheme:https` します。 |  
+| `set-cookie-domain` | 指定された値と一致 `Set-Cookie` する属性を持つ `Domain` ヘッダーを持つリソースを表示します。  DevTools は、見つかったすべての Cookie ドメインをオートコンプリートに追加します。 |  
+| `set-cookie-name` | 指定された値と一致 `Set-Cookie` する名前のヘッダーを持つリソースを表示します。  DevTools は、見つかったすべての Cookie 名をオートコンプリートに追加します。 |  
+| `set-cookie-value` | 指定された値と一 `Set-Cookie` 致する値を持つヘッダーを持つリソースを表示します。  DevTools は、見つかったすべての Cookie 値をオートコンプリートに設定します。 |  
+| `status-code` | 特定の HTTP 状態コードに一致するリソースを表示します。  DevTools は、オートコンプリートドロップダウン メニューに、見つかったすべての状態コードを設定します。 |  
 
 ### 種類別に要求をフィルター処理する  
 
-要求の種類別に要求をフィルター処理するには、[ **ネットワーク** ] パネルで次のいずれかのボタンを選択します。  
+要求の種類によって要求をフィルター処理するには、[ネットワーク] パネルで次のいずれかのボタンを **選択** します。  
 
 :::row:::
    :::column span="1":::
@@ -215,7 +215,7 @@ DevTools は、調整が有効になっていることを通知するために�
 :::row-end:::  
 :::row:::
    :::column span="1":::
-      **.JS**  
+      **JS**  
    :::column-end:::
    :::column span="2":::
       &nbsp;  
@@ -255,7 +255,7 @@ DevTools は、調整が有効になっていることを通知するために�
 :::row-end:::  
 :::row:::
    :::column span="1":::
-      **アドバイザー**  
+      **Doc**  
    :::column-end:::
    :::column span="2":::
       &nbsp;  
@@ -263,15 +263,15 @@ DevTools は、調整が有効になっていることを通知するために�
 :::row-end:::  
 :::row:::
    :::column span="1":::
-      **WS-METADATA**  
+      **WS**  
    :::column-end:::
    :::column span="2":::
-      WebSocket.  
+      WebSocket。  
    :::column-end:::
 :::row-end:::  
 :::row:::
    :::column span="1":::
-      **ノート**  
+      **マニフェスト**  
    :::column-end:::
    :::column span="2":::
       &nbsp;  
@@ -282,55 +282,55 @@ DevTools は、調整が有効になっていることを通知するために�
       **Other**  
    :::column-end:::
    :::column span="2":::
-      リストされていないその他の型。  
+      一覧に表示されないその他の型。  
    :::column-end:::
 :::row-end:::  
 
-ボタンが表示されない場合は、[ **フィルター** ] ウィンドウが非表示になっている可能性があります。  
-詳細については、「 [[フィルター] ウィンドウを非表示](#hide-the-filters-pane)にする」を参照してください。  
+ボタンが表示されない場合は、[フィルター] **ウィンドウ** が非表示になる場合があります。  
+詳細については、[フィルター] ウィンドウ [を非表示にするに移動します](#hide-the-filters-pane)。  
 
-複数の種類のフィルターを同時に有効にするに `Control` は、\ (Windows、Linux \) または `Command` \ (macOS \) を保持し、を選択します。  
+複数の種類のフィルターを同時に有効にするには `Control` 、\(Windows,Linux\) または `Command` \(macOS\) を保持してから選択します。  
 
-:::image type="complex" source="../media/network-network-type-filters.msft.png" alt-text="種類のフィルターを使用して、JS、CSS、およびドキュメントのリソースを表示する" lightbox="../media/network-network-type-filters.msft.png":::
-   種類のフィルターを使用して、JS、CSS、およびドキュメントのリソースを表示する  
+:::image type="complex" source="../media/network-network-type-filters.msft.png" alt-text="Type フィルターを使用して JS、CSS、および Document リソースを表示する" lightbox="../media/network-network-type-filters.msft.png":::
+   Type フィルターを使用して JS、CSS、および Document リソースを表示する  
 :::image-end:::  
 
-### 時間に基づいて要求をフィルター処理する  
+### 時間で要求をフィルター処理する  
 
-[ **概要** ] ウィンドウで左または右にドラッグすると、その期間中にアクティブだった要求のみが表示されます。  フィルターは包含されています。  強調表示された時間にアクティブだった要求が表示されます。  
+[概要] ウィンドウで左または**** 右に選択してドラッグすると、その期間にアクティブだった要求だけが表示されます。  フィルターは包括的です。  強調表示された時間中にアクティブだったすべての要求が表示されます。  
 
-:::image type="complex" source="../media/network-network-overview-filter.msft.png" alt-text="300 ms で非アクティブな要求をすべてフィルターで除外する" lightbox="../media/network-network-overview-filter.msft.png":::
-   300 ms で非アクティブな要求をすべてフィルターで除外する  
+:::image type="complex" source="../media/network-network-overview-filter.msft.png" alt-text="約 300 ミリ秒で非アクティブだったすべての要求をフィルター処理する" lightbox="../media/network-network-overview-filter.msft.png":::
+   約 300 ミリ秒で非アクティブだったすべての要求をフィルター処理する  
 :::image-end:::  
 
-### データ Url を非表示にする  
+### データ URL を非表示にする  
 
-[データ url][MDNHTTPDataURIs] は、他のドキュメントに埋め込まれた小さなファイルです。  で始まる要求テーブルに表示されるすべての要求 `data:` は、データの URL です。  
+[データ URL は、][MDNHTTPDataURIs] 他のドキュメントに埋め込まれた小さなファイルです。  [要求] テーブルに表示される要求は、データ `data:` URL です。  
 
-要求を非表示にするには、[ **データ url を非表示** にする] チェックボックスをオフにします。  
+要求を非表示にする場合は、[データ URL を非表示 **にする] チェック ボックスをオフ** にします。  
 
-:::image type="complex" source="../media/network-network-hide-data-urls.msft.png" alt-text="[データ Url を非表示にする] チェックボックス" lightbox="../media/network-network-hide-data-urls.msft.png":::
-   [ **データ url を非表示** にする] チェックボックス  
+:::image type="complex" source="../media/network-network-hide-data-urls.msft.png" alt-text="[データ URL を非表示にする] チェック ボックス" lightbox="../media/network-network-hide-data-urls.msft.png":::
+   [ **データ URL を非表示にする] チェック** ボックス  
 :::image-end:::  
 
-## 並べ替え要求  
+## 要求を並べ替える  
 
-既定では、要求テーブルの要求は開始時刻によって並べ替えられますが、他の条件を使用してテーブルを並べ替えることができます。  
+既定では、[Requests] テーブルの要求は開始時刻で並べ替されますが、他の条件を使用してテーブルを並べ替える場合があります。  
 
-### 列で並べ替え  
+### 列で並べ替える  
 
-要求内の任意の列のヘッダーを選び、その列によって要求を並べ替えます。  
+[要求] 内の任意の列のヘッダーを選択して、その列で要求を並べ替える。  
 
-### アクティビティ別の並べ替えフェーズ  
+### アクティビティ フェーズでの並べ替え  
 
-ウォーターフォールによる要求の並べ替え方法を変更するには、要求テーブルのヘッダーにカーソルを合わせて、コンテキストメニューを開きます (右クリック \)、 **ウォーターフォール**をポイントして、次のいずれかのオプションを選びます。  
+ウォーターフォールで要求を並べ替える方法を変更するには、[要求] テーブルのヘッダーにマウス ポインターを移動し、コンテキスト メニュー \(右クリック\) を開き、 **ウォーター**フォールにカーソルを合わせると、次のいずれかのオプションを選択します。  
 
 :::row:::
    :::column span="1":::
       **開始時刻**  
    :::column-end:::
    :::column span="2":::
-      最初に開始された要求は一番上にあります。  
+      最初に開始された要求が一番上にある。  
    :::column-end:::
 :::row-end:::  
 :::row:::
@@ -338,7 +338,7 @@ DevTools は、調整が有効になっていることを通知するために�
       **応答時間**  
    :::column-end:::
    :::column span="2":::
-      ダウンロードを開始した最初の要求は上部にあります。  
+      最初にダウンロードを開始した要求が一番上に表示されます。  
    :::column-end:::
 :::row-end:::  
 :::row:::
@@ -346,15 +346,15 @@ DevTools は、調整が有効になっていることを通知するために�
       **終了時刻**  
    :::column-end:::
    :::column span="2":::
-      最初の要求が一番上にあります。  
+      完了した最初の要求は一番上です。  
    :::column-end:::
 :::row-end:::  
 :::row:::
    :::column span="1":::
-      **合計期間**  
+      **Total Duration**  
    :::column-end:::
    :::column span="2":::
-      最短の接続設定と要求または応答を含む要求が一番上にあります。  
+      最短の接続設定と要求または応答を持つ要求が一番上に表示されます。  
    :::column-end:::
 :::row-end:::  
 :::row:::
@@ -362,30 +362,30 @@ DevTools は、調整が有効になっていることを通知するために�
       **遅延**  
    :::column-end:::
    :::column span="2":::
-      応答の最短時間を待っている要求が一番上にあります。  
+      応答の最も短い時間を待った要求が一番上にある。  
    :::column-end:::
 :::row-end:::  
 
-これらの説明は、それぞれのオプションが最短から最長の順にランク付けされていることを前提としています。  順序を逆にするには、 **ウォーターフォール** 列のヘッダーを選択します。  
+これらの説明では、各オプションが最短から最長の間でランク付けされている必要があります。  [ウォーターフォール] 列の **ヘッダーを選択** して、順序を逆にします。  
 
-:::image type="complex" source="../media/network-network-waterfall-total-duration.msft.png" alt-text="ウォーターフォールを合計期間で並べ替える" lightbox="../media/network-network-waterfall-total-duration.msft.png":::
-   [ウォーターフォール (全体の期間)] の値を並べ替える (各バーの明るい部分は待機時間で、暗い部分はバイトのダウンロードにかかる時間です)。  
+:::image type="complex" source="../media/network-network-waterfall-total-duration.msft.png" alt-text="ウォーターフォールを合計時間で並べ替える" lightbox="../media/network-network-waterfall-total-duration.msft.png":::
+   合計時間でウォーターフォールを並べ替える \(各バーの明るい部分は待機時間、暗い部分はバイトのダウンロードに費やされた時間\)  
 :::image-end:::  
 
-## 分析要求  
+## 要求を分析する  
 
-DevTools が開いている限り、すべての要求が **ネットワーク** パネルに記録されます。  
-[ネットワーク] パネルを使用して要求を分析します。  
+DevTools が開いている限り、すべての要求をネットワーク パネルに **記録** します。  
+ネットワーク パネルを使用して要求を分析します。  
 
 ### 要求のログを表示する  
 
-[要求] テーブルを使用して、DevTools が開いている間に行われたすべての要求のログを表示します。  各アイテムについての詳細を参照するには、[リクエスト] を選択するか、マウスでポイントします。  
+DevTools が開いている間に行われたすべての要求のログを表示するには、Requests テーブルを使用します。  各アイテムに関する詳細な情報を表示するには、要求を選択またはホバーします。  
 
 :::image type="complex" source="../media/network-network-requests-table.msft.png" alt-text="要求テーブル" lightbox="../media/network-network-requests-table.msft.png":::
    要求テーブル  
 :::image-end:::  
 
-要求テーブルには、既定で次の列が表示されます。  
+既定では、[要求] テーブルには次の列が表示されます。  
 
 :::row:::
    :::column span="1":::
@@ -408,20 +408,20 @@ DevTools が開いている限り、すべての要求が **ネットワーク**
       **型**  
    :::column-end:::
    :::column span="2":::
-      要求されたリソースの MIME の種類。  
+      要求されたリソースの MIME タイプ。  
    :::column-end:::
 :::row-end:::  
 :::row:::
    :::column span="1":::
-      **・**  
+      **Initiator**  
    :::column-end:::
    :::column span="2":::
       次のオブジェクトまたはプロセスが要求を開始します。  
       
       *   **パーサー**  Microsoft Edge の HTML パーサー。  
-      *   **Redirect**  HTTP リダイレクト。  
+      *   **リダイレクト**  HTTP リダイレクト。  
       *   **スクリプト**  JavaScript 関数。  
-      *   **その他**  リンクを使用してページに移動したり、アドレスバーに URL を入力したりするなど、他のプロセスまたはアクション。  
+      *   **その他**  リンクを使用してページに移動したり、アドレス バーに URL を入力したりなど、その他のプロセスまたはアクション。  
    :::column-end:::
 :::row-end:::  
 :::row:::
@@ -429,7 +429,7 @@ DevTools が開いている限り、すべての要求が **ネットワーク**
       **Size**  
    :::column-end:::
    :::column span="2":::
-      サーバーによって配信された、返信ヘッダーと応答本文の合計サイズ。  
+      サーバーによって配信される応答ヘッダーと応答本文の合計サイズ。  
    :::column-end:::
 :::row-end:::  
 :::row:::
@@ -437,29 +437,29 @@ DevTools が開いている限り、すべての要求が **ネットワーク**
       **時間**  
    :::column-end:::
    :::column span="2":::
-      要求の開始から、応答の最後のバイトの受領までの合計時間。  
+      要求の開始から、応答の最後のバイトの受信まで、合計時間。  
    :::column-end:::
 :::row-end:::  
 :::row:::
    :::column span="1":::
-      [ウォーターフォール図](#display-the-timing-relationship-of-requests)  
+      [ウォーターフォール](#display-the-timing-relationship-of-requests)  
    :::column-end:::
    :::column span="2":::
-      各要求のアクティビティの視覚的な分類。  
+      各要求のアクティビティの視覚的な内訳。  
    :::column-end:::
 :::row-end:::  
 
 #### 列を追加または削除する  
 
-要求テーブルのヘッダーにカーソルを置いて、コンテキストメニュー \ (右クリック \) を開き、表示または非表示にするオプションを選択します。  現在表示されているオプションは各項目の横にチェックマークが付いています。  
+[要求] テーブルのヘッダーにマウス ポインターを移動し、コンテキスト メニュー \(右クリック\) を開き、表示または非表示にするオプションを選択します。  現在表示されているオプションでは、各項目の横にチェックマークが付きます。  
 
-:::image type="complex" source="../media/network-network-requests-add-column.msft.png" alt-text="要求テーブルに列を追加する" lightbox="../media/network-network-requests-add-column.msft.png":::
-   要求テーブルに列を追加する  
+:::image type="complex" source="../media/network-network-requests-add-column.msft.png" alt-text="[要求] テーブルに列を追加する" lightbox="../media/network-network-requests-add-column.msft.png":::
+   [要求] テーブルに列を追加する  
 :::image-end:::  
 
 #### カスタム列を追加する  
 
-要求テーブルにカスタム列を追加するには、要求テーブルのヘッダーをポイントし、コンテキストメニューの [\ (右クリック \)] を開き、[**応答ヘッダー**] で [  >  **ヘッダー列の管理**] を選びます。  
+要求テーブルにカスタム列を追加するには、[要求] テーブルのヘッダーにマウス ポインターを移動し、コンテキスト メニュー \(右クリック\)**** を開き、[応答ヘッダーヘッダーのヘッダー列の管理] を選択します  >  ****。  
 
 :::image type="complex" source="../media/network-network-requests-add-custom.msft.png" alt-text="要求テーブルにカスタム列を追加する" lightbox="../media/network-network-requests-add-custom.msft.png":::
    要求テーブルにカスタム列を追加する  
@@ -467,14 +467,14 @@ DevTools が開いている限り、すべての要求が **ネットワーク**
 
 ### 要求のタイミング関係を表示する  
 
-ウォーターフォールを使用して、要求のタイミングの関係を表示します。  
+ウォーターフォールを使用して、要求のタイミング関係を表示します。  
 ウォーターフォールの既定の組織では、要求の開始時刻が使用されます。  
-そのため、左から右への要求よりも早く開始されていた要求は、その前から始まります。  
+したがって、左側の要求は、右側の要求よりも早く開始されます。  
 
-ウォーターフォールのさまざまな並べ替え方法を確認するには、[ [アクティビティ別に並べ替え] フェーズ](#sort-by-activity-phase)に移動します。  
+ウォーターフォールを並べ替えるさまざまな方法を確認するには、[アクティビティ別に並べ替え] [フェーズに移動します](#sort-by-activity-phase)。  
 
-:::image type="complex" source="../media/network-network-requests-waterfall.msft.png" alt-text="[要求] ウィンドウの [ウォーターフォール] 列" lightbox="../media/network-network-requests-waterfall.msft.png":::
-   [ **要求** ] ウィンドウの [ウォーターフォール] 列  
+:::image type="complex" source="../media/network-network-requests-waterfall.msft.png" alt-text="[要求] ウィンドウのウォーターフォール列" lightbox="../media/network-network-requests-waterfall.msft.png":::
+   [要求] ウィンドウの **ウォーターフォール** 列  
 :::image-end:::  
 
 <!-- ### Analyze the frames of a WebSocket Connection  -->
@@ -509,75 +509,75 @@ To refresh the table, re-choose the name of the WebSocket connection under the *
 
 応答本文のプレビューを表示するには、次の手順を使用します。  
 
-1.  要求の URL を要求テーブルの [ **名前** ] 列で選びます。  
-1.  [ **プレビュー** ] タブを選択します。  
+1.  [要求] テーブルの [名前****] 列で、要求の URL を選択します。  
+1.  [プレビュー] **タブを選択** します。  
 
-[プレビュー] タブはほとんどの場合、画像を表示するのに役立ちます。  
+[プレビュー] タブは、画像を表示する場合に最も便利です。  
 
 :::image type="complex" source="../media/network-network-resources-preview.msft.png" alt-text="[プレビュー] タブ" lightbox="../media/network-network-resources-preview.msft.png":::
-   [ **プレビュー** ] タブ  
+   **プレビュー** タブ  
 :::image-end:::  
 
-### 返信の本文を表示する  
+### 応答本文を表示する  
 
-要求に対する応答の本文を表示するには、次の手順を使用します。  
+要求に応答本文を表示するには、次の手順を使用します。  
 
-1.  要求の URL を要求テーブルの [ **名前** ] 列で選びます。  
-1.  [ **応答** ] タブを選択します。  
+1.  [要求] テーブルの [名前****] 列で、要求の URL を選択します。  
+1.  [応答] **タブを選択** します。  
 
 :::image type="complex" source="../media/network-network-resources-response.msft.png" alt-text="[応答] タブ" lightbox="../media/network-network-resources-response.msft.png":::
-   [ **応答** ] タブ  
+   **応答** タブ  
 :::image-end:::  
 
-### HTTP ヘッダーの表示  
+### HTTP ヘッダーを表示する  
 
-要求に関する HTTP ヘッダーデータを表示するには、次の手順を使用します。  
+要求に関する HTTP ヘッダー データを表示するには、次の手順を使用します。  
 
-1.  要求の URL を要求テーブルの [ **名前** ] 列で選びます。  
-1.  [ **ヘッダー** ] タブを選択します。  
+1.  [要求] テーブルの [名前****] 列で、要求の URL を選択します。  
+1.  [ヘッダー **] タブを選択** します。  
 
 :::image type="complex" source="../media/network-resources-headers.msft.png" alt-text="[ヘッダー] タブ" lightbox="../media/network-resources-headers.msft.png":::
-   [ **ヘッダー** ] タブ  
+   **ヘッダー** タブ  
 :::image-end:::  
 
-#### HTTP ヘッダーソースを表示する  
+#### HTTP ヘッダー ソースの表示  
 
-既定では、[ヘッダー] タブにはヘッダーの名前がアルファベット順に表示されます。  受け取った順序で HTTP ヘッダーの名前を再生するには、次の手順を使用します。  
+既定では、[ヘッダー] タブにはヘッダー名がアルファベット順に表示されます。  HTTP ヘッダー名を受け取った順序で表示するには、次の手順を使用します。  
 
-1.  興味のある要求の [ **ヘッダー** ] タブを開きます。  詳細については、「 [HTTP ヘッダーを表示](#display-http-headers)する」を参照してください。  
-1.  [**要求ヘッダー**または**応答ヘッダー** ] セクションの横にある [**ソースの表示**] を選択します。  
+1.  関心のある **要求** の [ヘッダー] タブを開きます。  詳細については、「HTTP ヘッダーを表示 [する」に移動します](#display-http-headers)。  
+1.  [**要求ヘッダー] セクションまたは**[応答ヘッダー] セクションの横にあるビュー**ソースを選択**します。 ****  
 
-### クエリ文字列パラメーターの表示  
+### クエリ文字列パラメーターを表示する  
 
-人間が読める形式で URL のクエリ文字列パラメーターを表示するには、次の手順を使用します。  
+URL のクエリ文字列パラメーターを人間が判読できる形式で表示するには、次の手順を使用します。  
 
-1.  興味のある要求の [ **ヘッダー** ] タブを開きます。  詳細については、「 [HTTP ヘッダーを表示](#display-http-headers)する」を参照してください。  
-1.  [ **クエリ文字列パラメーター** ] セクションに移動します。  
+1.  関心のある **要求** の [ヘッダー] タブを開きます。  詳細については、「HTTP ヘッダーを表示 [する」に移動します](#display-http-headers)。  
+1.  [クエリ文字列パラメーター **] セクションに移動** します。  
 
 :::image type="complex" source="../media/network-network-resources-headers-query-string-parameters.msft.png" alt-text="[クエリ文字列パラメーター] セクション" lightbox="../media/network-network-resources-headers-query-string-parameters.msft.png":::
-   [ **クエリ文字列パラメーター** ] セクション  
+   [ **クエリ文字列パラメーター]** セクション  
 :::image-end:::  
 
-#### クエリ文字列のパラメーターソースの表示  
+#### クエリ文字列パラメーター ソースを表示する  
 
-要求のクエリ文字列のパラメーターソースを表示するには、次の手順を使用します。  
+要求のクエリ文字列パラメーター ソースを表示するには、次の手順を使用します。  
 
-1.  [クエリ文字列パラメーター] セクションに移動します。  詳細については、「 [クエリ文字列パラメーターを表示](#display-query-string-parameters)する」を参照してください。  
-1.  [ **ソースの表示**] を選びます。  
+1.  [クエリ文字列パラメーター] セクションに移動します。  詳細については、クエリ文字列パラメーター [を表示するに移動します](#display-query-string-parameters)。  
+1.  ビュー **ソースを選択します**。  
 
-#### 表示 URL エンコードされたクエリ文字列パラメーター  
+#### URL エンコードされたクエリ文字列パラメーターを表示する  
 
-ユーザーが判読できる形式でクエリ文字列パラメーターを表示するには、エンコードが保持されている場合は、次の手順を使用します。  
+クエリ文字列パラメーターを人間が読み取り可能な形式で表示し、エンコードを保持するには、次の手順を使用します。  
 
-1.  [クエリ文字列パラメーター] セクションに移動します。  詳細については、「 [クエリ文字列パラメーターを表示](#display-query-string-parameters)する」を参照してください。  
-1.  [ **表示 URL エンコード**] を選びます。  
+1.  [クエリ文字列パラメーター] セクションに移動します。  詳細については、クエリ文字列パラメーター [を表示するに移動します](#display-query-string-parameters)。  
+1.  エンコード **されたビュー URL を選択します**。  
 
 ### Cookie の表示  
 
-要求の HTTP ヘッダーで送信された cookie を表示するには、次の手順を使用します。  
+要求の HTTP ヘッダーで送信された Cookie を表示するには、次の手順を使用します。  
 
-1.  要求の URL を要求テーブルの [ **名前** ] 列で選びます。  
-1.  [ **Cookies** ] タブを選択します。  
+1.  [要求] テーブルの [名前****] 列で、要求の URL を選択します。  
+1.  [Cookie] **タブを選択** します。  
 
 <!--For more information about each of the columns, navigate to [Fields][ManageDataCookiesFields].  -->  
 
@@ -588,57 +588,57 @@ To refresh the table, re-choose the name of the WebSocket connection under the *
    [Cookie] タブ  
 :::image-end:::  
 
-### 要求のタイミングのブレークダウンを表示する  
+### 要求のタイミングの内訳を表示する  
 
-要求のタイミングの詳細を表示するには、次の手順を使用します。  
+要求のタイミングの内訳を表示するには、次の手順を使用します。  
 
-1.  要求の URL を要求テーブルの [ **名前** ] 列で選びます。  
-1.  [ **タイミング** ] タブを選択します。  
+1.  [要求] テーブルの [名前****] 列で、要求の URL を選択します。  
+1.  [タイミング **] タブを選択** します。  
 
-データにすばやくアクセスする方法については、「 [タイミングのブレークダウンのプレビュー](#preview-a-timing-breakdown)」を参照してください。  
+データに高速にアクセスするには、[タイミングの詳細をプレビューする [] に移動します](#preview-a-timing-breakdown)。  
 
-[ **タイミング** ] タブに表示される可能性がある各フェーズについて詳しくは、「 [タイミングのブレークダウンフェーズ](#timing-breakdown-phases-explained)」を参照してください。  
+[タイミング] タブに表示される各フェーズの詳細については、説明**** されているタイミングブレークダウン フェーズ[に移動します](#timing-breakdown-phases-explained)。  
 
 :::image type="complex" source="../media/network-network-resources-timing.msft.png" alt-text="[タイミング] タブ" lightbox="../media/network-network-resources-timing.msft.png":::
-   [ **タイミング** ] タブ  
+   **タイミング** タブ  
 :::image-end:::  
 
-各フェーズに関する詳細情報。  
+各フェーズの詳細。  
 
-ディスプレイへのアクセスについて詳しくは、「 [タイミングのブレークダウンを表示](#display-the-timing-breakdown-of-a-request)する」を参照してください。  
+表示にアクセスする方法の詳細については、[表示タイミングの詳細 [] に移動します](#display-the-timing-breakdown-of-a-request)。  
 
-#### タイミングの内訳をプレビューする  
+#### タイミングの詳細をプレビューする  
 
-要求のタイミングの内訳のプレビューを表示するには、要求テーブルの [ **ウォーターフォール** ] 列で、要求のエントリをポイントします。  
+要求のタイミングの詳細のプレビューを表示するには、[要求] テーブルの **[ウォーター** フォール] 列で、要求のエントリをポイントします。  
 
-マウスポインターを使わずにデータにアクセスする方法の詳細については、「 [要求のタイミングの](#display-the-timing-breakdown-of-a-request)詳細を表示する」を参照してください。  
+ホバーせずにデータにアクセスする方法の詳細については、「要求のタイミングの内訳を表示 [する」に移動します](#display-the-timing-breakdown-of-a-request)。  
 
-:::image type="complex" source="../media/network-network-resources-waterfall-hover.msft.png" alt-text="要求のタイミングの詳細をプレビュー >" lightbox="../media/network-network-resources-waterfall-hover.msft.png":::
-   要求のタイミングの内訳をプレビューする  
+:::image type="complex" source="../media/network-network-resources-waterfall-hover.msft.png" alt-text=">要求のタイミングの詳細をプレビューする" lightbox="../media/network-network-resources-waterfall-hover.msft.png":::
+   要求のタイミングの詳細をプレビューする  
 :::image-end:::  
 
-#### タイミングのブレークフェーズについて  
+#### 説明されているタイミングブレークダウン フェーズ  
 
-[ **タイミング** ] タブに表示される可能性のある各フェーズについて詳しく説明します。  
+[タイミング] タブに表示される各フェーズ**の詳細。**  
 
 :::row:::
    :::column span="1":::
-      **キュー**  
+      **キューに入る**  
    :::column-end:::
    :::column span="2":::
-      ブラウザーは、次のいずれかの条件が満たされた場合に要求を待ちます。  
+      ブラウザーは、次の場合に要求をキューに入れられます。  
       
       *   優先度の高い要求が存在します。  
-      *   同じ起点 (上限) に対して6つの TCP 接続が開かれます。  HTTP/1.0 および HTTP/1.1 にのみ適用されます。  
-      *   ブラウザーは、ディスクキャッシュの領域を一時的に割り当てます。  
+      *   同じオリジンに対して 6 つの TCP 接続が開いている。これは制限です。  HTTP/1.0 および HTTP/1.1 にのみ適用されます。  
+      *   ブラウザーは、ディスク キャッシュ内の領域を一時的に割り当て中です。  
    :::column-end:::
 :::row-end:::  
 :::row:::
    :::column span="1":::
-      **停止**  
+      **ストール**  
    :::column-end:::
    :::column span="2":::
-      **キュー**に記載されている理由により、要求は停止します。  
+      要求は、「キュー」で説明されている理由の何らかの理由で **ストールします**。  
    :::column-end:::
 :::row-end:::  
 :::row:::
@@ -654,20 +654,20 @@ To refresh the table, re-choose the name of the WebSocket connection under the *
       **初期接続**  
    :::column-end:::
    :::column span="2":::
-      ブラウザーは、TCP ハンドシェイク、TCP 再試行、セキュリティで保護されたソケットレイヤーのネゴシエーションを含む接続を確立します。
+      ブラウザーは、TCP ハンドシェイク、TCP 再試行、および Secure Socket Layer のネゴシエートを含む接続を確立します。
    :::column-end:::
 :::row-end:::  
 :::row:::
    :::column span="1":::
-      **プロキシネゴシエーション**  
+      **プロキシ ネゴシエーション**  
    :::column-end:::
    :::column span="2":::
-      ブラウザーは、要求を [プロキシサーバー][WikiProxyServer]とネゴシエートしています。  
+      ブラウザーがプロキシ サーバーと要求をネゴ [シエートしています][WikiProxyServer]。  
    :::column-end:::
 :::row-end:::  
 :::row:::
    :::column span="1":::
-      **送信要求**  
+      **送信された要求**  
    :::column-end:::
    :::column span="2":::
       要求が送信されています。  
@@ -678,23 +678,23 @@ To refresh the table, re-choose the name of the WebSocket connection under the *
       **ServiceWorker の準備**  
    :::column-end:::
    :::column span="2":::
-      ブラウザーがサービスワーカーを開始しています。  
+      ブラウザーがサービス ワーカーを開始しています。  
    :::column-end:::
 :::row-end:::  
 :::row:::
    :::column span="1":::
-      **ServiceWorker へのリクエスト**  
+      **ServiceWorker への要求**  
    :::column-end:::
    :::column span="2":::
-      要求がサービスワーカーに送信されます。  
+      要求はサービス ワーカーに送信されています。  
    :::column-end:::
 :::row-end:::  
 :::row:::
    :::column span="1":::
-      **待機中 \ (TTFB \)**  
+      **Waiting \(TTFB\)**  
    :::column-end:::
    :::column span="2":::
-      ブラウザーは、応答の最初のバイトを待機しています。  TTFB は、最初のバイトまでの時間を表します。  このタイミングには、待機時間のラウンドトリップの1つと、サーバーが応答の準備に費やした時間が含まれます。  
+      ブラウザーは応答の最初のバイトを待機しています。  TTFB は、Time To First Byte を表します。  このタイミングには、1 回の待機時間と、サーバーが応答の準備にかかった時間が含まれます。  
    :::column-end:::
 :::row-end:::  
 :::row:::
@@ -702,71 +702,71 @@ To refresh the table, re-choose the name of the WebSocket connection under the *
       **コンテンツのダウンロード**  
    :::column-end:::
    :::column span="2":::
-      ブラウザーが応答を受信します。  
+      ブラウザーが応答を受信しています。  
    :::column-end:::
 :::row-end:::  
 :::row:::
    :::column span="1":::
-      **プッシュ受信**  
+      **プッシュの受信**  
    :::column-end:::
    :::column span="2":::
-      ブラウザーが、HTTP/2 Server プッシュ経由でこの応答のデータを受信しています。  
+      ブラウザーは HTTP/2 サーバー プッシュを介してこの応答のデータを受信しています。  
    :::column-end:::
 :::row-end:::  
 :::row:::
    :::column span="1":::
-      **プッシュの読み取り**  
+      **プッシュ読み取り**  
    :::column-end:::
    :::column span="2":::
-      ブラウザーは、前に受信したローカルデータを読み取ります。  
+      ブラウザーは、以前に受信したローカル データを読み取り中です。  
    :::column-end:::
 :::row-end:::  
 
-### イニシエーターと依存関係を表示する  
+### 開始者と依存関係を表示する  
 
-要求のイニシエーターと依存関係を表示するには、要求テーブルの要求を保留にして `Shift` ポイントします。  DevTools の色: イニシエーターは緑で表示され、依存関係は赤で示されます。  
+要求の開始者と依存関係を表示するには、[要求] テーブルで要求を保持して `Shift` ポイントします。  DevTools の色: 開始者は緑色で表示され、依存関係は赤で表示されます。  
 
-:::image type="complex" source="../media/network-network-resources-initiators-dependencies.msft.png" alt-text="要求のイニシエーターと依存関係を表示する" lightbox="../media/network-network-resources-initiators-dependencies.msft.png":::
-   要求のイニシエーターと依存関係を表示する  
+:::image type="complex" source="../media/network-network-resources-initiators-dependencies.msft.png" alt-text="要求の開始者と依存関係を表示する" lightbox="../media/network-network-resources-initiators-dependencies.msft.png":::
+   要求の開始者と依存関係を表示する  
 :::image-end:::  
 
-要求テーブルが時系列で並べ替えられている場合、その行の上にカーソルを置くと、その行の前の行に緑色の要求が表示されます。  緑の要求は、依存関係のイニシエーターです。  この行の前に別の緑の要求が表示されている場合は、その上位の要求がイニシエーターのイニシエーターになります。  などなど。  
+時間順に Requests テーブルが並べらた場合、行にカーソルを合わせると、前の行に緑色の要求が表示されます。  緑色の要求は、依存関係の開始者です。  それより前の行に別の緑色の要求が表示される場合、その上位の要求は開始者の開始者になります。  などなど。  
 
 ### 読み込みイベントを表示する  
 
-DevTools は、 `DOMContentLoaded` [ `load` **ネットワーク** ] パネル上の複数の場所にある [イベントのタイミング] を表示します。  `DOMContentLoaded`イベントは青色で色分けされ、 `load` イベントは赤になります。  
+DevTools は、ネットワーク パネル上の複数の場所にイベントの `DOMContentLoaded` `load` タイミングを **表示** します。  イベント `DOMContentLoaded` は青色で、イベントは `load` 赤です。  
 
-:::image type="complex" source="../media/network-network-requests-load-events.msft.png" alt-text="[ネットワーク] パネルでの DOMContentLoaded と load イベントの場所" lightbox="../media/network-network-requests-load-events.msft.png":::
-   [ `DOMContentLoaded` `load` **ネットワーク** ] パネルでのイベントとイベントの場所  
+:::image type="complex" source="../media/network-network-requests-load-events.msft.png" alt-text="DOMContentLoaded の場所とネットワーク パネル上のイベントの読み込み" lightbox="../media/network-network-requests-load-events.msft.png":::
+   ネットワーク パネル上 `DOMContentLoaded` の `load` イベント **の** 場所  
 :::image-end:::  
 
-### 要求の合計数を表示する  
+### 要求の総数を表示する  
 
-[**ネットワーク**] パネルの下部にある [**概要**] ウィンドウに、要求の合計数が表示されます。  
+要求の総数は、[ネットワーク] パネルの下部**** にある [概要] ウィンドウに**表示**されます。  
 
 > [!CAUTION]
-> この数値は、DevTools が開かれた後にログに記録された要求のみを追跡します。  DevTools が開かれる前に他の要求が発生した場合、これらの要求はカウントされません。  
+> この番号は、DevTools が開いた後にログに記録された要求のみを追跡します。  DevTools が開く前に他の要求が発生した場合、それらの要求はカウントされません。  
 
-:::image type="complex" source="../media/network-network-total-requests.msft.png" alt-text="DevTools が開かれてからの要求の合計数です。" lightbox="../media/network-network-total-requests.msft.png":::
-   DevTools が開かれてからの要求の合計数です。  
+:::image type="complex" source="../media/network-network-total-requests.msft.png" alt-text="DevTools が開いた後の要求の総数" lightbox="../media/network-network-total-requests.msft.png":::
+   DevTools が開いた後の要求の総数  
 :::image-end:::  
 
-### ダウンロードの合計サイズを表示する  
+### ダウンロード の合計サイズを表示する  
 
-要求の合計ダウンロードサイズが、[**ネットワーク**] パネルの下部にある [**概要**] ウィンドウに表示されます。  
+要求の合計ダウンロード サイズは、[概要] ウィンドウ**** の [ネットワーク] パネルの下部に**一覧表示**されます。  
 
 > [!CAUTION]
-> この数値は、DevTools が開かれた後にログに記録された要求のみを追跡します。  DevTools が開かれる前に、他の要求が発生した場合、以前の要求はカウントされません。  
+> この番号は、DevTools が開いた後にログに記録された要求のみを追跡します。  DevTools が開く前に他の要求が発生した場合、以前の要求はカウントされません。  
 
-:::image type="complex" source="../media/network-network-total-download-size.msft.png" alt-text="リクエストのダウンロード合計サイズ" lightbox="../media/network-network-total-download-size.msft.png":::
-   リクエストのダウンロード合計サイズ  
+:::image type="complex" source="../media/network-network-total-download-size.msft.png" alt-text="要求の合計ダウンロード サイズ" lightbox="../media/network-network-total-download-size.msft.png":::
+   要求の合計ダウンロード サイズ  
 :::image-end:::  
 
-サイズの大きいリソースがどのように圧縮されているかを確認するには、[ [リソースの未圧縮サイズの表示](#display-the-uncompressed-size-of-a-resource)] に移動します。  
+ブラウザーが各アイテムの圧縮を解除した後のリソースの大きさを確認するには、リソースの圧縮されていないサイズを表示 [します](#display-the-uncompressed-size-of-a-resource)。  
 
-### 要求の原因となったスタックトレースを表示します。  
+### 要求を発生したスタック トレースを表示する  
 
-JavaScript ステートメントでリソースを要求した後、[ **イニシエーター** ] 列をポイントすると、要求までのスタックトレースが表示されます。  
+JavaScript ステートメントがリソースを要求した後 **、Initiator** 列をポイントして、要求に至るスタック トレースを表示します。  
 
 <!-- [codepen.io/contoso/pen/yLBrOWa?editors=0010#0](https://codepen.io/contoso/pen/yLBrOWa?editors=0010#0) -->  
 
@@ -784,16 +784,16 @@ init();
 ```  
 -->  
 
-:::image type="complex" source="../media/network-network-requests-initiator-stack.msft.png" alt-text="リソース要求までのスタックトレース" lightbox="../media/network-network-requests-initiator-stack.msft.png":::
-   リソース要求までのスタックトレース  
+:::image type="complex" source="../media/network-network-requests-initiator-stack.msft.png" alt-text="リソース要求に至るスタック トレース" lightbox="../media/network-network-requests-initiator-stack.msft.png":::
+   リソース要求に至るスタック トレース  
 :::image-end:::  
 
-### リソースの未圧縮サイズを表示する  
+### リソースの圧縮されていないサイズを表示する  
 
-[ **大きい要求行を使用する** ] チェックボックスをオンにして、[ **サイズ** ] 列の下の値を確認します。  
+[大きな要求 **行を使用する]** チェック ボックスをオンにし、[サイズ] 列の一番下の値 **を確認** します。  
 
 :::image type="complex" source="../media/network-network-requests-uncompressed-compare.msft.png" alt-text="圧縮されていないリソースの例" lightbox="../media/network-network-requests-uncompressed-compare.msft.png":::
-   圧縮されていないリソースの例 \ (ネットワーク経由で送信されたファイルの圧縮サイズ、圧縮されてい `jquery-3.3.1.min.js` ない `29.9 KB` サイズなど `84.9 KB` )  
+   圧縮されていないリソース \(ネットワーク上で送信されたファイルの圧縮されたサイズは `jquery-3.3.1.min.js` `29.9 KB` `84.9 KB` \) の例です。  
 :::image-end:::  
 
 ## 要求データをエクスポートする  
@@ -802,32 +802,32 @@ init();
 
 すべてのネットワーク要求を HAR ファイルに保存するには、次の手順を実行します。  
 
-1.  要求テーブル内の任意の要求にマウスポインターを合わせ、コンテキストメニューを開きます (\ を右クリックします)。  
-1.  [ **コンテンツを含む HAR として保存**] を選びます。  DevTools は、HAR ファイルに対して DevTools を開いた後に発生した要求をすべて保存します。  要求をフィルター処理することはできません。  1つのリクエストを保存することもできません。  
+1.  [要求] テーブル内の任意の要求をポイントし、コンテキスト メニュー \(右クリック\) を開きます。  
+1.  Choose **Save as HAR with Content**.  DevTools は、DevTools を開いた後に発生した要求を HAR ファイルに保存します。  要求をフィルター処理できない。  また、1 つの要求を保存する必要があります。  
 
-HAR ファイルを保存すると、そのファイルを分析用の DevTools にインポートして戻すことができます。  HAR ファイルを [要求] テーブルにドラッグアンドドロップするだけです。  
+HAR ファイルを保存したら、分析のために DevTools にインポートし戻します。  HAR ファイルを Requests テーブルにドラッグ アンド ドロップします。  
 <!--For more information, navigate to also [HAR Analyzer][HARAnalyzer].  -->  
 
 <!--[HARAnalyzer]: https://toolbox.alphabetapps.com/apps/har_analyzer  -->  
 <!--Todo: add section link when content is available  -->  
 
-:::image type="complex" source="../media/network-network-requests-save-har-content.msft.png" alt-text="[コンテンツで HAR として保存] を選ぶ" lightbox="../media/network-network-requests-save-har-content.msft.png":::
-   [**コンテンツで HAR として保存**] を選ぶ  
+:::image type="complex" source="../media/network-network-requests-save-har-content.msft.png" alt-text="Choose Save as HAR with Content" lightbox="../media/network-network-requests-save-har-content.msft.png":::
+   Choose **Save as HAR with Content**  
 :::image-end:::  
 
-### 1つ以上の要求をクリップボードにコピーする  
+### 1 つ以上の要求をクリップボードにコピーする  
 
-要求テーブルの [ **名前** ] 列で、要求をポイントし、コンテキストメニューを開きます。 \ (右クリック \)、[ **コピー**] をポイントして、次のいずれかのオプションを選びます。  
+[要求****] テーブルの [名前] 列で、要求をポイントし、コンテキスト メニュー \(右クリック\) を開き、[コピー] をポイントして、次のいずれかのオプションを選択します。 ****  
 
 | 名前 | 詳細 |  
 |:--- |:--- |  
-| **リンクアドレスをコピーする** | 要求の URL をクリップボードにコピーします。 |  
-| **返信のコピー** | 応答本文をクリップボードにコピーします。 |  
+| **リンク アドレスのコピー** | 要求の URL をクリップボードにコピーします。 |  
+| **応答のコピー** | 応答本文をクリップボードにコピーします。 |  
 | **フェッチとしてコピー** | &nbsp; |  
-| **CURL としてコピー** | CURL コマンドとして要求をコピーします。 |  
-| **すべてをフェッチとしてコピーする** | &nbsp; |  
-| **CURL としてすべてコピー** | すべての要求を cURL コマンドのチェーンとしてコピーします。 |  
-| **すべてを HAR としてコピーする** | すべての要求を HAR データとしてコピーします。 |  
+| **cURL としてコピー** | 要求を cURL コマンドとしてコピーします。 |  
+| **すべてフェッチとしてコピー** | &nbsp; |  
+| **すべて cURL としてコピー** | すべての要求を cURL コマンドのチェーンとしてコピーします。 |  
+| **Copy All as HAR** | すべての要求を HAR データとしてコピーします。 |  
 
 <!--
 :::row:::
@@ -888,48 +888,48 @@ HAR ファイルを保存すると、そのファイルを分析用の DevTools 
 :::row-end:::  
 -->  
 
-:::image type="complex" source="../media/network-network-requests-copy-response.msft.png" alt-text="[応答のコピー] を選ぶ" lightbox="../media/network-network-requests-copy-response.msft.png":::
-   [**応答のコピー** ] を選ぶ  
+:::image type="complex" source="../media/network-network-requests-copy-response.msft.png" alt-text="Choose Copy Response" lightbox="../media/network-network-requests-copy-response.msft.png":::
+   Choose **Copy Response**  
 :::image-end:::  
 
-### 書式設定された応答の JSON をクリップボードにコピーする  
+### 書式設定された応答 JSON をクリップボードにコピーする  
 
-ネットワーク要求を選択し、[ **ヘッダー** ] ウィンドウに移動します。  応答の JSON 値をコピーするには、[ **要求ペイロード**] に移動し、JSON 応答コンテンツにカーソルを合わせて、コンテキストメニューを開き (\ を右クリックし)、[ **値のコピー**] を選びます。  
+ネットワーク要求を選択し、[ヘッダー] ウィンドウ **に移動** します。  応答の JSON 値をコピーするには、[要求**** ペイロード] に移動し、JSON 応答コンテンツにマウス ポインターを置き、コンテキスト メニュー \(右クリック\) を開き、[値のコピー] を選択**します**。  
 
 :::row:::
    :::column span="":::
-        :::image type="complex" source="../media/network-header-copy-property-value.msft.png" alt-text="コンテキストメニューで値をコピーする" lightbox="../media/network-header-copy-property-value.msft.png":::
-          コンテキストメニューで**値をコピー**する  
+        :::image type="complex" source="../media/network-header-copy-property-value.msft.png" alt-text="コンテキスト メニューの [値のコピー]" lightbox="../media/network-header-copy-property-value.msft.png":::
+          **コンテキスト メニューの [値** のコピー]  
         :::image-end:::  
    :::column-end:::
    :::column span="":::
-        :::image type="complex" source="../media/network-header-paste-property-value.msft.png" alt-text="書式付き応答の JSON を含む Visual Studio コード" lightbox="../media/network-header-paste-property-value.msft.png":::
-          Visual Studio コードでの書式付き応答の JSON の貼り付け  
+        :::image type="complex" source="../media/network-header-paste-property-value.msft.png" alt-text="Visual Studio応答 JSON を含むコード" lightbox="../media/network-header-paste-property-value.msft.png":::
+          書式設定された応答 JSON を Visual Studio コードに貼り付け  
         :::image-end:::  
    :::column-end:::
 :::row-end:::  
 
-### プロパティ値をネットワーク要求からクリップボードにコピーする  
+### ネットワーク要求からクリップボードにプロパティ値をコピーする  
 
-プロパティの値をネットワーク要求からクリップボードにコピーするには、次の操作を実行します。  
+ネットワーク要求からクリップボードにプロパティ値をコピーするには、次の操作を実行します。  
 
-1.  [ **ヘッダー** ] ウィンドウを開きます。  
-1.  次のヘッダーセクションのいずれかを開きます。  
-    *   要求ペイロード \ (JSON \)  
-    *   フォームデータ  
+1.  [ヘッダー **] ウィンドウを開** きます。  
+1.  次のいずれかのヘッダー セクションを開きます。  
+    *   要求ペイロード \(JSON\)  
+    *   フォーム データ  
     *   クエリ文字列パラメーター  
     *   要求ヘッダー  
     *   応答ヘッダー  
-1.  コンテキストメニューを開きます \ (右クリック \) > **コピー値**)。  任意のエディターに値を貼り付けてレビューできるようになりました。  
+1.  コンテキスト メニュー \(右クリック\) を開き、[値を> **します**。  これで、任意のエディターに値を貼り付け、確認できます。  
     
-## [ネットワーク] パネルのレイアウトを変更する  
+## ネットワーク パネルのレイアウトを変更する  
 
-**ネットワーク**パネル UI のセクションを展開したり折りたたんだりして、重要な情報を強調することができます。  
+ネットワーク パネル UI のセクションを展開または折りたたみ、 **重要な情報** に集中することができます。  
 
 ### [フィルター] ウィンドウを非表示にする  
 
-既定では、DevTools によって [ **フィルター** ] ウィンドウが表示されます。  
-[ **フィルター** \ ( ![ フィルター ][ImageFilterIcon] \)] を選択して非表示にします。  
+既定では、DevTools には [フィルター] ウィンドウ **が表示** されます。  
+Choose **Filter** \( ![ Filter ][ImageFilterIcon] \) to hide it.  
 
 :::image type="complex" source="../media/network-network-resources-hide-filters-button.msft.png" alt-text="[フィルターの非表示] ボタン" lightbox="../media/network-network-resources-hide-filters-button.msft.png":::
    [フィルターの非表示] ボタン  
@@ -937,24 +937,24 @@ HAR ファイルを保存すると、そのファイルを分析用の DevTools 
 
 ### 大きな要求行を使用する  
 
-ネットワーク要求テーブルにより多くの空白が必要な場合は、大きな行を使用します。  列によっては、大きな行を使用するときに、さらに多くの情報が表示される場合もあります。  たとえば、 **Size** 列の下の値は、要求の非圧縮サイズです。  
+ネットワーク要求テーブルに空白を追加する場合は、大きな行を使用します。  一部の列は、大きな行を使用する場合に、もう少し多くの情報を提供します。  たとえば、[Size] 列の下部**** の値は、要求の圧縮されていないサイズです。  
 
-:::image type="complex" source="../media/network-network-requests-large-request-rows.msft.png" alt-text="要求ウィンドウの大きな要求行の例" lightbox="../media/network-network-requests-large-request-rows.msft.png":::
-   **要求ウィンドウの**大きな要求行の例  
+:::image type="complex" source="../media/network-network-requests-large-request-rows.msft.png" alt-text="[要求] ウィンドウの大きな要求行の例" lightbox="../media/network-network-requests-large-request-rows.msft.png":::
+   [要求] ウィンドウの大きな要求行 **の** 例  
 :::image-end:::  
 
-大きい行を有効にするには、[ **大きな要求行を使用** する] チェックボックスをオンにします。  
+大きい行を有効にするには、[大きい要求行を使用 **する] チェック ボックスをオン** にします。  
 
-:::image type="complex" source="../media/network-network-requests-use-large-request-rows-on.msft.png" alt-text="[大きな要求行の使用] チェックボックス" lightbox="../media/network-network-requests-use-large-request-rows-on.msft.png":::
-   [ **大きな要求行の使用** ] チェックボックス  
+:::image type="complex" source="../media/network-network-requests-use-large-request-rows-on.msft.png" alt-text="[大きな要求行を使用する] チェック ボックス" lightbox="../media/network-network-requests-use-large-request-rows-on.msft.png":::
+   [ **大きな要求行を使用する] チェック** ボックス  
 :::image-end:::  
 
 ### [概要] ウィンドウを非表示にする  
 
-既定では、DevTools によって [ **概要** ] ウィンドウが表示されます。  非表示にするには、[ **概要の表示** ] チェックボックスをオフにします。  
+既定では、DevTools には [概要] ウィンドウ **が表示** されます。  非表示にする場合は、[概要の表示 **] チェック ボックスをオフ** にします。  
 
-:::image type="complex" source="../media/network-network-requests-show-overview-off.msft.png" alt-text="[概要の表示] チェックボックス" lightbox="../media/network-network-requests-show-overview-off.msft.png":::
-   [ **概要の表示** ] チェックボックス  
+:::image type="complex" source="../media/network-network-requests-show-overview-off.msft.png" alt-text="[概要の表示] チェック ボックス" lightbox="../media/network-network-requests-show-overview-off.msft.png":::
+   [ **概要の表示]** チェック ボックス  
 :::image-end:::  
 
 ## Microsoft Edge DevTools チームと連絡を取る  
@@ -972,19 +972,19 @@ HAR ファイルを保存すると、そのファイルを分析用の DevTools 
 
 <!-- links -->  
 
-[DevtoolsProgressiveWebApps]: ../progressive-web-apps.md "プログレッシブ Web アプリのデバッグ |Microsoft ドキュメント"  
+[DevtoolsProgressiveWebApps]: ../progressive-web-apps/index.md "段階的な Web アプリをデバッグする |Microsoft Docs"  
 
 <!--[NetworkConditions]: /microsoft-edge/devtools-guide-chromium/network/network-conditions "Optimize Performance Under Varying Network Conditions | Microsoft Docs"  -->  
 
-[MDNHTTPDataURIs]: https://developer.mozilla.org/docs/Web/HTTP/Basics_of_HTTP/Data_URIs "データ Url |MDN"  
+[MDNHTTPDataURIs]: https://developer.mozilla.org/docs/Web/HTTP/Basics_of_HTTP/Data_URIs "データ URL |MDN"  
 
-[WikiProxyServer]: https://en.wikipedia.org/wiki/Proxy_server "プロキシサーバー-Wikipedia"  
+[WikiProxyServer]: https://en.wikipedia.org/wiki/Proxy_server "プロキシ サーバー - Wikipedia"  
 
 > [!NOTE]
-> このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
-> 元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/network/reference) にあり、 [Kayce Basques][KayceBasques] テクニカルライター、Chrome Devtools \ & Lighthouse \) で作成されています。  
+> このページの一部は、 [Google によっ て作成および共有された][GoogleSitePolicies]作業に基づく変更で、「[Creative Commons Attribution 4.0 International License][CCA4IL]」で記載されている条項に従って使用されます。  
+> 元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/network/reference) にあり、 [Kayce Basques][KayceBasques] \(Chrome DevTools \& Lighthouse\ のテクニカル ライター) が作成しました。  
 
-[![クリエイティブコモンズライセンス][CCby4Image]][CCA4IL]  
+[![Creative Commons ライセンス][CCby4Image]][CCA4IL]  
 この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。  
 
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  

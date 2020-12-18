@@ -1,18 +1,18 @@
 ---
-description: コマンドメニューを開き、[JavaScript を無効にする] コマンドを実行します。
+description: コマンド メニューを開き、"JavaScript を無効にする" コマンドを実行します。
 title: Microsoft Edge DevTools で JavaScript を無効にする
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 10/19/2020
+ms.date: 12/11/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 4a200e2faa303a12d46fe2daf7ba89226a985b1f
-ms.sourcegitcommit: 99eee78698dc95b2a3fa638a5b063ef449899cda
+ms.openlocfilehash: f7aafee4b05f843319a4a744e6cba148d4642667
+ms.sourcegitcommit: a35a6b5bbc21b7df61d08cbc6b074b5325ad4fef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "11124720"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "11230671"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -30,34 +30,34 @@ ms.locfileid: "11124720"
 
 # Microsoft Edge DevTools で JavaScript を無効にする  
 
-JavaScript が無効になっている場合に、web ページの外観と動作を確認するには、次の操作を実行します。  
+JavaScript が無効になっている場合の Web ページの外観と動作を確認するには、次のアクションを実行します。  
 
-1.  [Microsoft Edge DevTools を開き][DevToolsOpen]ます。  
-1.  `Control` + `Shift` + `P` コマンドメニューを開くには、\ (Windows, Linux \) または `Command` + `Shift` + `P` \ **Command Menu**(macOS \) を選択します。  
+1.  [Microsoft Edge DevTools を開きます][DevToolsOpen]。  
+1.  `Control`+`Shift`+`P` \(Windows, Linux\) または `Command`+`Shift`+`P` \(macOS\) を選択して、**コマンド メニュー** を開きます。  
     
-    :::image type="complex" source="../media/javascript-console-command.msft.png" alt-text="コマンドメニュー" lightbox="../media/javascript-console-command.msft.png":::
-       **コマンドメニュー**  
+    :::image type="complex" source="../media/javascript-console-command.msft.png" alt-text="コマンド メニュー" lightbox="../media/javascript-console-command.msft.png":::
+       **コマンド メニュー**  
     :::image-end:::  
     
-1.  入力を開始し `javascript` 、[ **JavaScript を無効**にする] を選択して、 `Enter` コマンドを実行します。  JavaScript が無効になりました。  
+1.  入力を開始 `javascript` し **、[JavaScript を無効にする**] を選択し、コマンドの `Enter` 実行を選択します。  JavaScript が無効になりました。  
     
-    :::image type="complex" source="../media/javascript-console-command-javascript.msft.png" alt-text="コマンドメニュー" lightbox="../media/javascript-console-command-javascript.msft.png":::
-       **コマンドメニュー**の [ **JavaScript を無効にする**] を選択します。  
+    :::image type="complex" source="../media/javascript-console-command-javascript.msft.png" alt-text="コマンド メニューで [JavaScript を無効にする] を選択する" lightbox="../media/javascript-console-command-javascript.msft.png":::
+       コマンド **メニューで [JavaScript を** 無効にする] **を選択する**  
     :::image-end:::  
     
-    [ **ソース** ] の横にある黄色の警告アイコンは、JavaScript が無効になっていることを通知します。  
+    ソースの横にある黄色の警告アイコン **は** 、JavaScript が無効になっていることを通知します。  
     
-    :::image type="complex" source="../media/javascript-console-javascript-disabled-warning.msft.png" alt-text="コマンドメニュー" lightbox="../media/javascript-console-javascript-disabled-warning.msft.png":::
-       **ソース**の横にある警告アイコン  
+    :::image type="complex" source="../media/javascript-console-javascript-disabled-warning.msft.png" alt-text="[ソース] の横にある警告アイコン" lightbox="../media/javascript-console-javascript-disabled-warning.msft.png":::
+       [ソース] の横にある **警告アイコン**  
     :::image-end:::  
     
-DevTools が開いている限り、タブ内の JavaScript は無効のままです。  
+DevTools を開いている限り、JavaScript はタブで無効のままです。  
 
-読み込み中にページが JavaScript に依存するかどうかとその方法を確認するには、ページの再読み込みが必要になることがあります。  
+ページを再読み込みして、読み込み中にページが JavaScript に依存するかどうか、およびどのように依存するか確認できます。  
 
-JavaScript を再び有効にするには、次の操作を実行します。  
+JavaScript を再び有効にするには、次のアクションを実行します。  
 
-*   もう一度 **コマンドメニュー** を開き、コマンドを実行し `Enable JavaScript` ます。  
+*   コマンド メニュー **を再度開** き、コマンドを実行 `Enable JavaScript` します。  
 *   DevTools を閉じます。  
 
 ## Microsoft Edge DevTools チームと連絡を取る  
@@ -66,13 +66,13 @@ JavaScript を再び有効にするには、次の操作を実行します。
 
 <!-- links -->  
 
-[DevToolsOpen]: ../open.md "Microsoft Edge DevTools を開く |Microsoft ドキュメント"  
+[DevToolsOpen]: ../open/index.md "Microsoft Edge DevTools を開く | Microsoft Docs"  
 
 > [!NOTE]
-> このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
-> 元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/javascript/disable) にあり、 [Kayce Basques][KayceBasques] テクニカルライター、Chrome Devtools \ & Lighthouse \) で作成されています。  
+> このページの一部は、 [Google によっ て作成および共有された][GoogleSitePolicies]作業に基づく変更で、「[Creative Commons Attribution 4.0 International License][CCA4IL]」で記載されている条項に従って使用されます。  
+> 元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/javascript/disable) にあり、 [Kayce Basques][KayceBasques] \(Chrome DevTools \& Lighthouse\ のテクニカル ライター) が作成しました。  
 
-[![クリエイティブコモンズライセンス][CCby4Image]][CCA4IL]  
+[![Creative Commons ライセンス][CCby4Image]][CCA4IL]  
 この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。  
 
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  

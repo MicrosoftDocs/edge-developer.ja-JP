@@ -1,18 +1,18 @@
 ---
-description: Microsoft Edge DevTools でのパフォーマンスの記録と分析に関するすべての方法を参照します。
+description: Microsoft Edge DevTools でパフォーマンスを記録および分析するためのすべての方法に関するリファレンスです。
 title: パフォーマンス分析リファレンス
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 10/19/2020
+ms.date: 12/11/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: d135f83273842a1e128df0bb346f0f126e2fbe8d
-ms.sourcegitcommit: 99eee78698dc95b2a3fa638a5b063ef449899cda
+ms.openlocfilehash: d5b6be92c1419ba880a94c62c3f586a740816622
+ms.sourcegitcommit: a35a6b5bbc21b7df61d08cbc6b074b5325ad4fef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "11125140"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "11230762"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -30,544 +30,544 @@ ms.locfileid: "11125140"
 
 # パフォーマンス分析リファレンス  
 
-このページでは、パフォーマンスの分析に関連する Microsoft Edge DevTools の機能について包括的にご参照ください。  
+このページは、パフォーマンスの分析に関連する Microsoft Edge DevTools 機能の包括的なリファレンスです。  
 
-[Microsoft Edge DevTools][MicrosoftEdgeDevTools]を使ってページのパフォーマンスを分析する方法については、ガイド付きチュートリアルの「[実行時のパフォーマンスの分析][DevtoolsEvaluatePerformanceGettingStarted]」を参照してください。  
+[Microsoft Edge DevTools][MicrosoftEdgeDevTools][を使用して][DevtoolsEvaluatePerformanceGettingStarted]ページのパフォーマンスを分析する方法に関するガイド付きチュートリアルについては、「ランタイム パフォーマンスの分析の開始」に移動します。  
 
-## レコードのパフォーマンス  
+## パフォーマンスを記録する  
 
 ### 実行時のパフォーマンスを記録する  
 
-読み込みとは異なり、実行中にページのパフォーマンスを分析する場合は、実行時のパフォーマンスを記録します。  
+読み込みではなく、実行中のページのパフォーマンスを分析する場合は、実行時のパフォーマンスを記録します。  
 
-1.  分析対象のページに移動します。  
-1.  DevTools で [ **パフォーマンス** ] タブをクリックします。  
-1.  [ **レコード** \ ( ![ レコードアイコン ][ImageRecordIcon] \)] を選びます。  
+1.  分析するページに移動します。  
+1.  DevTools **の** [パフォーマンス] タブを選択します。  
+1.  Choose **Record** \( ![ Record icon ][ImageRecordIcon] \).  
     
     :::image type="complex" source="../media/evaluate-performance-performance-record-highlight.msft.png" alt-text="Record" lightbox="../media/evaluate-performance-performance-record-highlight.msft.png":::
        **Record**  
     :::image-end:::  
     
-1.  ページを操作します。  DevTools は、操作の結果として発生するすべてのページアクティビティを記録します。  
-1.  [ **記録** ] をもう一度選択するか、[ **停止** ] を選択して記録を停止します。  
+1.  ページを操作します。  DevTools は、操作の結果として発生するページ アクティビティを記録します。  
+1.  もう一 **度 [Record]** を選ぶか **、[Stop]** を選んでレコーディングを停止します。  
     
-### 読み込みのパフォーマンスの記録  
+### 読み込みパフォーマンスを記録する  
 
-実行時とは異なり、読み込み中にページのパフォーマンスを分析する場合は、読み込みのパフォーマンスを記録します。  
+実行中ではなく、読み込み中のページのパフォーマンスを分析する場合は、読み込みパフォーマンスを記録します。  
 
-1.  分析対象のページに移動します。  
-1.  DevTools の [ **パフォーマンス** ] パネルを開きます。  
-1.  [ **ページの更新** ] を選び ![ ます (ページを更新 ][ImageRefreshPageIcon] します)。  DevTools では、ページが更新されている間はパフォーマンスのメトリックが記録され、読み込みが完了してから数秒間、自動的に記録が停止します。  
+1.  分析するページに移動します。  
+1.  DevTools **の** パフォーマンス パネルを開きます。  
+1.  Choose **Refresh page** \( Refresh Page ![ ][ImageRefreshPageIcon] \).  DevTools は、ページの更新中にパフォーマンス メトリックを記録し、読み込み完了から数秒後に自動的に記録を停止します。  
     
-    :::image type="complex" source="../media/evaluate-performance-performance-refresh-button.msft.png" alt-text="Record" lightbox="../media/evaluate-performance-performance-refresh-button.msft.png":::
-       **ページの更新**  
+    :::image type="complex" source="../media/evaluate-performance-performance-refresh-button.msft.png" alt-text="ページを更新する" lightbox="../media/evaluate-performance-performance-refresh-button.msft.png":::
+       **ページを更新する**  
     :::image-end:::  
     
-DevTools は、ほとんどのアクティビティが発生したレコーディングの部分に自動的にズームインします。  
+DevTools は、ほとんどのアクティビティが発生した記録の部分を自動的に拡大します。  
 
-:::image type="complex" source="../media/evaluate-performance-performance-refreshed.msft.png" alt-text="Record" lightbox="../media/evaluate-performance-performance-refreshed.msft.png":::
-   ページ読み込みの記録  
+:::image type="complex" source="../media/evaluate-performance-performance-refreshed.msft.png" alt-text="ページ読み込み記録" lightbox="../media/evaluate-performance-performance-refreshed.msft.png":::
+   ページ読み込み記録  
 :::image-end:::  
 
-### 記録中にスクリーンショットをキャプチャする  
+### 記録中のスクリーンショットのキャプチャ  
 
-記録中にすべてのフレームのスクリーンショットをキャプチャするには、[ **スクリーンショット** ] チェックボックスをオンにします。  
+**[Screenshots] チェック ボックスをオン**にして、記録中のすべてのフレームのスクリーンショットをキャプチャします。  
 
-:::image type="complex" source="../media/evaluate-performance-performance-capture-screenshots-checkbox.msft.png" alt-text="Record" lightbox="../media/evaluate-performance-performance-capture-screenshots-checkbox.msft.png":::
-   **スクリーンショット**のチェックボックス  
+:::image type="complex" source="../media/evaluate-performance-performance-capture-screenshots-checkbox.msft.png" alt-text="[スクリーンショット] チェック ボックス" lightbox="../media/evaluate-performance-performance-capture-screenshots-checkbox.msft.png":::
+   [ **スクリーンショット]** チェック ボックス  
 :::image-end:::  
 
-スクリーン [ショットを表示](#view-a-screenshot) して、スクリーンショットを操作する方法を学習します。  
+[スクリーンショット [の表示] に移動して](#view-a-screenshot) 、スクリーンショットを操作する方法を確認します。  
 
-### 記録中にガベージコレクションを強制する  
+### 記録中にガベージ コレクションを強制する  
 
-ページの記録中に、ガーベジコレクションを強制するには、[ガーベジの **収集** \ ![ ] (ガーベジアイコンの収集 ][ImageCollectGarbageIcon] ) を選択します。  
+ページを記録している間に、[ガベージ**** の収集\ ( ガベージ アイコン \) を収集する] を選択して、ガベージ ![ ][ImageCollectGarbageIcon] コレクションを強制的に実行します。  
 
-:::image type="complex" source="../media/evaluate-performance-performance-collect-garbage-button.msft.png" alt-text="Record" lightbox="../media/evaluate-performance-performance-collect-garbage-button.msft.png":::
-   ガーベジの収集  
+:::image type="complex" source="../media/evaluate-performance-performance-collect-garbage-button.msft.png" alt-text="ガベージを収集する" lightbox="../media/evaluate-performance-performance-collect-garbage-button.msft.png":::
+   ガベージを収集する  
 :::image-end:::  
 
 ### レコーディング設定を表示する  
 
-[ **キャプチャの設定** ] ( ![ キャプチャ設定) を選択 ][ImageCaptureSettingsIcon] すると、devtools がパフォーマンスの記録をキャプチャする方法に関連するその他の設定を表示できます。  
+DevTools **がパフォーマンス** 記録をキャプチャする方法に関連するその他の設定を公開するには、[Capture settings \( ![ Capture settings ][ImageCaptureSettingsIcon] \) ] を選択します。  
 
-:::image type="complex" source="../media/evaluate-performance-performance-capture-settings-button-open-drawer.msft.png" alt-text="Record" lightbox="../media/evaluate-performance-performance-capture-settings-button-open-drawer.msft.png":::
-   [ **キャプチャの設定** ] セクション  
+:::image type="complex" source="../media/evaluate-performance-performance-capture-settings-button-open-drawer.msft.png" alt-text="[キャプチャの設定] セクション" lightbox="../media/evaluate-performance-performance-capture-settings-button-open-drawer.msft.png":::
+   [ **キャプチャの設定]** セクション  
 :::image-end:::  
 
-### JavaScript のサンプルを無効にする  
+### JavaScript サンプルを無効にする  
 
-記録の **メイン** セクションには、記録中に呼び出された JavaScript 関数の詳細なコールスタックが既定で表示されます。  次の呼び出し履歴を無効にするには:  
+既定では、レコーディングの **Main** セクションには、レコーディング中に呼び出された JavaScript 関数の詳細な呼び出し履歴が表示されます。  これらのコール スタックを無効にするには:  
 
-1.  [ **キャプチャの設定** ] メニューを開きます。  [ [レコーディング設定の表示]](#show-recording-settings)に移動します。  
-1.  [ **JavaScript のサンプルを無効** にする] チェックボックスをオンにします。  
+1.  [キャプチャの **設定] メニューを開** きます。  [Show [recording settings] (レコーディング設定の表示) に移動します](#show-recording-settings)。  
+1.  [JavaScript サンプル **を無効にする] チェック ボックスをオン** にします。  
 1.  ページの記録を取ります。  
     
-次の2つの図は、JavaScript サンプルの無効化と有効化の違いを示しています。  サンプリングが無効になっている場合、記録の **メイン** セクションは、JavaScript のすべての呼び出し履歴を省略しているため、非常に短くなります。  
+次の 2 つの図は、JavaScript サンプルの無効化と有効化の違いを示しています。  サンプリング **を** 無効にすると、すべての JavaScript 呼び出しスタックが省略されるので、レコーディングの Main セクションははるかに短くなります。  
 
 :::row:::
    :::column span="":::
-      :::image type="complex" source="../media/evaluate-performance-performance-refreshed-disable-javascript-samples-checkbox-on.msft.png" alt-text="Record" lightbox="../media/evaluate-performance-performance-refreshed-disable-javascript-samples-checkbox-on.msft.png":::
-         JS サンプルが無効になっている場合のレコーディングの例  
+      :::image type="complex" source="../media/evaluate-performance-performance-refreshed-disable-javascript-samples-checkbox-on.msft.png" alt-text="JS サンプルが無効になっている場合の記録の例" lightbox="../media/evaluate-performance-performance-refreshed-disable-javascript-samples-checkbox-on.msft.png":::
+         JS サンプルが無効になっている場合の記録の例  
       :::image-end:::  
    :::column-end:::
    :::column span="":::
-      :::image type="complex" source="../media/evaluate-performance-performance-refreshed-disable-javascript-samples-checkbox-off.msft.png" alt-text="Record" lightbox="../media/evaluate-performance-performance-refreshed-disable-javascript-samples-checkbox-off.msft.png":::
-         JS サンプルが有効になっている場合のレコーディングの例  
+      :::image type="complex" source="../media/evaluate-performance-performance-refreshed-disable-javascript-samples-checkbox-off.msft.png" alt-text="JS サンプルをオンにした場合の記録の例" lightbox="../media/evaluate-performance-performance-refreshed-disable-javascript-samples-checkbox-off.msft.png":::
+         JS サンプルをオンにした場合の記録の例  
       :::image-end:::  
    :::column-end:::
 :::row-end:::
 
 ### 記録中にネットワークを調整する  
 
-記録中にネットワークを調整するには:  
+記録中にネットワークを調整するには、次の操作を行います。  
 
-1.  [ **キャプチャの設定** ] メニューを開きます。  [ [レコーディング設定の表示]](#show-recording-settings)に移動します。  
-1.  **ネットワーク**を適切な調整レベルに設定します。  
+1.  [キャプチャの **設定] メニューを開** きます。  [Show [recording settings] (レコーディング設定の表示) に移動します](#show-recording-settings)。  
+1.  ネットワーク **を** 目的の調整レベルに設定します。  
     
 ### 記録中に CPU を調整する  
 
-記録中に CPU を調整するには:  
+記録中に CPU を調整するには、次の操作を行います。  
 
-1.  [ **キャプチャの設定** ] メニューを開きます。  [ [レコーディング設定の表示]](#show-recording-settings)に移動します。  
-1.  **CPU**を目的の調整レベルに設定します。  
+1.  [キャプチャの **設定] メニューを開** きます。  [Show [recording settings] (レコーディング設定の表示) に移動します](#show-recording-settings)。  
+1.  **CPU を**目的の調整レベルに設定します。  
     
-調整は、コンピューターの機能を基準とします。  たとえば、 **2 倍速の遅延** オプションを使うと、CPU は通常の2倍の速度で動作します。  モバイルデバイスのアーキテクチャはデスクトップとノート pc とは大きく異なりますので、DevTools はモバイルデバイスの Cpu を実際にシミュレートするわけではありません。  
+調整は、コンピューターの機能に関連します。  たとえば **、2x の** スローダウン オプションでは、CPU の動作が通常よりも 2 倍遅くなります。  モバイル デバイスのアーキテクチャはデスクトップやノート PC のアーキテクチャと非常に異なっているので、DevTools はモバイル デバイスの CPU を実際にシミュレートするのではありません。  
 
-### 高度な描画インストルメンテーションを有効にする  
+### 高度なペイントインストルメンテーションを有効にする  
 
-詳細な描画インストルメンテーションを表示するには:  
+ペイントインストルメンテーションの詳細を表示するには:  
 
-1.  [ **キャプチャの設定** ] メニューを開きます。  [ [レコーディング設定の表示]](#show-recording-settings)に移動します。  
-1.  **[高度な描画インストルメンテーション (低速) を有効にする**] チェックボックスをオンにします。  
+1.  [キャプチャの **設定] メニューを開** きます。  [Show [recording settings] (レコーディング設定の表示) に移動します](#show-recording-settings)。  
+1.  [高度な **ペイントインストルメンテーションを有効にする (低速) チェック ボックスを** オンにします。  
 
-ペイント情報を操作する方法については、「 [レイヤーの表示](#view-layers-information) と [ペイントプロファイラーの表示](#view-paint-profiler)」を参照してください。  
+ペイント情報を操作する方法については、「レイヤーの表示」[](#view-layers-information)と「ペイント プロファイラーの[表示」に移動します](#view-paint-profiler)。  
 
 ## レコーディングを保存する  
 
-レコーディングを保存するには、右クリックして、[ **プロファイルの保存**] を選択します。  
+記録を保存するには、コンテキスト メニュー \(右クリック\) を開き、[プロファイルの保存] **を選択します**。  
 
-:::image type="complex" source="../media/evaluate-performance-performance-refreshed-disable-javascript-samples-checkbox-off-save-profile.msft.png" alt-text="Record" lightbox="../media/evaluate-performance-performance-refreshed-disable-javascript-samples-checkbox-off-save-profile.msft.png":::
-   **プロフィールの保存**  
+:::image type="complex" source="../media/evaluate-performance-performance-refreshed-disable-javascript-samples-checkbox-off-save-profile.msft.png" alt-text="プロファイルの保存" lightbox="../media/evaluate-performance-performance-refreshed-disable-javascript-samples-checkbox-off-save-profile.msft.png":::
+   **プロファイルの保存**  
 :::image-end:::  
 
 ## レコーディングを読み込む  
 
-レコーディングを読み込むには、右クリックして、[ **プロファイルの読み込み**] を選択します。  
+レコーディングを読み込むには、コンテキスト メニュー \(右クリック\) を開き、[プロファイルの読み込み **] を選択します**。  
 
-:::image type="complex" source="../media/evaluate-performance-performance-refreshed-disable-javascript-samples-checkbox-off-load-profile.msft.png" alt-text="Record" lightbox="../media/evaluate-performance-performance-refreshed-disable-javascript-samples-checkbox-off-load-profile.msft.png":::
+:::image type="complex" source="../media/evaluate-performance-performance-refreshed-disable-javascript-samples-checkbox-off-load-profile.msft.png" alt-text="プロファイルの読み込み" lightbox="../media/evaluate-performance-performance-refreshed-disable-javascript-samples-checkbox-off-load-profile.msft.png":::
    **プロファイルの読み込み**  
 :::image-end:::  
 
-## 前の記録をクリアする  
+## 前のレコーディングをクリアする  
 
-レコーディングを作成したら、[ **レコーディングのクリア** ] (録音アイコンの ![ クリア) を押して、[ ][ImageClearRecordingIcon] **パフォーマンス** ] パネルからその記録をクリアします。  
+レコーディングを行った後、Clear **recording** \( Clear recording icon \) を押して、パフォーマンス パネルからそのレコーディング ![ ][ImageClearRecordingIcon] を **クリア** します。  
 
-:::image type="complex" source="../media/evaluate-performance-performance-refreshed-disable-javascript-samples-checkbox-off-clear-button.msft.png" alt-text="Record" lightbox="../media/evaluate-performance-performance-refreshed-disable-javascript-samples-checkbox-off-clear-button.msft.png":::
+:::image type="complex" source="../media/evaluate-performance-performance-refreshed-disable-javascript-samples-checkbox-off-clear-button.msft.png" alt-text="レコーディングのクリア" lightbox="../media/evaluate-performance-performance-refreshed-disable-javascript-samples-checkbox-off-clear-button.msft.png":::
    **レコーディングのクリア**  
 :::image-end:::  
 
-## パフォーマンスの記録を分析する  
+## パフォーマンス記録を分析する  
 
-[実行時のパフォーマンス](#record-runtime-performance)または[レコードの読み込みのパフォーマンス](#record-load-performance)を記録すると、**パフォーマンス**パネルに多くのデータが表示され、発生した処理のパフォーマンスを分析できます。  
+実行時の[パフォーマンスまたは](#record-runtime-performance)レコード読[](#record-load-performance)み込みパフォーマンスを**** 記録した後、パフォーマンス パネルには、発生したパフォーマンスを分析するための多くのデータが表示されます。  
 
 ### レコーディングの一部を選択する  
 
-[ **概要** ] でマウスを左右にドラッグして、レコーディングの一部を選択します。  **概要**は、 **FPS**、 **CPU**、および**ネット**チャートを含むセクションです。  
+マウスを [概要] の左または右に **ドラッグ** して、レコーディングの一部を選択します。  概要**は****、FPS、CPU、および NET****** グラフを含む**セクション**です。  
 
-:::image type="complex" source="../media/evaluate-performance-performance-zoom-highlighted.msft.png" alt-text="Record" lightbox="../media/evaluate-performance-performance-zoom-highlighted.msft.png":::
-   **概要**の上でマウスをドラッグして拡大  
+:::image type="complex" source="../media/evaluate-performance-performance-zoom-highlighted.msft.png" alt-text="マウスを [概要] の上にドラッグしてズームする" lightbox="../media/evaluate-performance-performance-zoom-highlighted.msft.png":::
+   マウスを [概要] の上 **にドラッグして** ズームする  
 :::image-end:::  
 
-キーボードを使用して部分を選択するには、次の操作を行います。  
+キーボードを使って部分を選択するには:  
 
-1.  **メイン**セクションの背景をクリックするか、[**操作**]、[**ネットワーク**]、[ **GPU**] などの横にあるセクションのいずれかをクリックします。  このキーボードワークフローは、これらのセクションのいずれかがフォーカスされている場合にのみ動作します。  
-1.  それぞれ、、、[左へ移動]、[縮小]、 `W` `A` `S` [右へ移動] の各キーを使用し `D` ます。  
+1.  Main セクションの背景 **、またはその**横にあるセクション (**操作**、ネットワーク **、GPU**など)**を選択**します。  このキーボード ワークフローは、これらのセクションの 1 つがフォーカスされている場合にのみ機能します。  
+1.  拡大、左へ移動、縮小、右に移動するには、キー 、 `W` `A` `S` `D` を使用します。  
 
-トラックパッドを使用して部分を選択するには、次の操作を行います。  
+トラックパッドを使って部分を選択するには、次の操作を実行します。  
 
-1.  [ **概要** ] セクションまたは [ **詳細** ] セクションの上にマウスポインターを置きます。  [ **概要** ] セクションは、 **FPS**、 **CPU**、および **正味** グラフを含む領域です。  [ **詳細** ] セクションは、 **メイン** セクション、[ **操作** ] セクションなどを含む領域です。  
-1.  2本の指で上方向にスワイプして縮小し、左方向にスワイプして左へ移動し、下方向にスワイプしてズームインし、右にスワイプして右に移動します。  
+1.  [概要] セクションまたは [ **詳細] セクション** の上にマウス ポインター **を移動** します。  [**概要**] セクションは **、FPS、CPU、および**NET グラフを含む**領域**です。 ****  [ **詳細]** セクションは **、Main** セクションや [Interactions] **セクションを含** む領域です。  
+1.  2 本の指でスワイプして縮小表示し、左にスワイプして左に移動し、下にスワイプして拡大し、右にスワイプして右に移動します。  
 
-**メイン**セクションまたはそのいずれかの近隣にある長い炎のグラフをスクロールするには、上下にドラッグしてクリックしたままにします。  左または右にドラッグして、録音中の部分を移動します。  
+Main セクションまたは任意の隣接する**** グラフで長い横棒グラフをスクロールするには、上下にドラッグしながら長押しします。  左右にドラッグして、レコーディングの選択部分を移動します。  
 
-### アクティビティを検索する  
+### 検索アクティビティ  
 
-[ `Control` + `F` \ (Windows, Linux \)] または [\ (macOS \)] を選択して、 `Command` + `F` **パフォーマンス**パネルの下部にある [検索] ボックスを開きます。  
+`Control` + `F` \(Windows,Linux\) または `Command` + `F` \(macOS\)**** を選択して、パフォーマンス パネルの下部にある検索ボックスを開きます。  
 
-:::image type="complex" source="../media/evaluate-performance-performance-search-regex.msft.png" alt-text="Record" lightbox="../media/evaluate-performance-performance-search-regex.msft.png":::
+:::image type="complex" source="../media/evaluate-performance-performance-search-regex.msft.png" alt-text="検索ボックス" lightbox="../media/evaluate-performance-performance-search-regex.msft.png":::
    検索ボックス  
 :::image-end:::  
 
-クエリに一致するアクティビティを移動するには、次の操作を行います。  
+クエリに一致するアクティビティを移動するには:  
 
-*   **前**の \ ( ![ 前の ][ImagePreviousIcon] \) と**次**の \ (次の \) ボタンを使用し ![ ][ImageNextIcon] ます。  
-*   [前へ] を選択するか、[次へ] を選択し `Shift` + `Enter` `Enter` ます。  
+*   以前の**** \( ![ Previous \) ボタン ][ImagePreviousIcon] と Next \( **Next** \) ボタン ![ ][ImageNextIcon] を使用します。  
+*   前 `Shift` + `Enter` の項目を選択するか、 `Enter` 次の項目を選択します。  
 
-クエリの設定を変更するには:  
+クエリ設定を変更するには:  
 
-*   [ **大文字** と小文字を区別する] を押して ![ ][ImageSearchCaseIcon] 、クエリの大文字と小文字を区別します。  
-*   **Regex** ![ ][ImageSearchRegexIcon] クエリで正規表現を使用するには、regex \ (regex \) を押します。  
+*   大文字 **と小文字を区別** する \( 大文字と小文字を区別する \) を押して、クエリ ![ ][ImageSearchCaseIcon] で大文字と小文字を区別します。  
+*   **Regex** \( Regex \) キーを押して、クエリで ![ ][ImageSearchRegexIcon] 正規表現を使用します。  
 
-検索ボックスを非表示にするには、 **[キャンセル**] をクリックします。  
+検索ボックスを非表示にする場合は **、Cancel**キーを押します。  
 
-### メインスレッドアクティビティの表示  
+### メイン スレッド アクティビティを表示する  
 
-**メイン**セクションを使って、ページのメインスレッドで発生したアクティビティを表示します。  
+Main セクション **を使用** して、ページのメイン スレッドで発生したアクティビティを表示します。  
 
-:::image type="complex" source="../media/evaluate-performance-performance-main-zoomed.msft.png" alt-text="Record" lightbox="../media/evaluate-performance-performance-main-zoomed.msft.png":::
-   **メイン**セクション  
+:::image type="complex" source="../media/evaluate-performance-performance-main-zoomed.msft.png" alt-text="Main セクション" lightbox="../media/evaluate-performance-performance-main-zoomed.msft.png":::
+   Main **** セクション  
 :::image-end:::  
 
-イベントをクリックすると、[ **概要** ] タブにそのイベントの詳細情報が表示されます。 DevTools では、選択したイベントの概要が示されます。  
+イベントを選択すると、そのイベントに関する詳細が [概要] タブ **に表示** されます。 DevTools は、選択したイベントの概要を示します。  
 
-:::image type="complex" source="../media/evaluate-performance-performance-summary-me.msft.png" alt-text="Record" lightbox="../media/evaluate-performance-performance-summary-me.msft.png":::
-   [ `anonymous` **概要** ] タブの関数についての詳細  
+:::image type="complex" source="../media/evaluate-performance-performance-summary-me.msft.png" alt-text="[概要] タブの匿名関数の詳細" lightbox="../media/evaluate-performance-performance-summary-me.msft.png":::
+   [概要] `anonymous` タブの関数**の詳細**  
 :::image-end:::  
 
-DevTools は、炎グラフによるメインスレッドアクティビティを表します。  X 軸は、時間の経過に伴う記録を表します。  Y 軸は、呼び出しスタックを表します。  一番上にあるイベントは、その下にあるイベントを発生させます。  
+DevTools は、メイン スレッド アクティビティを表し、グラフを表示します。  x 軸は、時間の過ごした記録を表します。  y 軸は呼び出し履歴を表します。  一番上のイベントは、その下のイベントを引き起こします。  
 
-:::image type="complex" source="../media/evaluate-performance-performance-main-flame-chart.msft.png" alt-text="Record" lightbox="../media/evaluate-performance-performance-main-flame-chart.msft.png":::
-   炎のグラフ  
+:::image type="complex" source="../media/evaluate-performance-performance-main-flame-chart.msft.png" alt-text="グラフ (グラフ)" lightbox="../media/evaluate-performance-performance-main-flame-chart.msft.png":::
+   グラフ (グラフ)  
 :::image-end:::  
 
-上の図では、 `click` イベントが53で発生し `Function Call` `activitytabs.js` ています。  次 `Function Call` に、匿名関数が呼び出されたことを確認します。  呼び出された匿名関数が呼び出され `a` ます。これが呼び出され `wait` `Minor GC` ます。  
+前の図では、53 行目にイベント `click` `Function Call` `activitytabs.js` が発生しました。  次 `Function Call` に、匿名関数が実行されたと確認します。  要求された匿名関数 `a` 。要求 `wait` されました `Minor GC` 。  
 
-DevTools では、スクリプトのランダムな色が割り当てられます。  前の図では、1つのスクリプトからの関数呼び出しは色が緑になっています。  別のスクリプトからの呼び出しは、色ベージュになります。  濃い黄色はスクリプトアクティビティを表し、紫色のイベントはレンダリングアクティビティを表します。  これらの暗い黄と紫色のイベントは、すべての記録で一貫しています。  
+DevTools は、スクリプトのランダムな色を割り当てします。  前の図では、1 つのスクリプトからの関数要求は薄い緑色で表示されています。  別のスクリプトからの要求は色分けされています。  濃い黄色はスクリプト アクティビティを表し、紫色のイベントはレンダリング アクティビティを表します。  これらの濃い黄色と紫色のイベントは、すべてのレコーディングで一貫しています。  
 
-JavaScript 呼び出しの詳細な炎グラフを非表示にする場合は、「 [javascript サンプルを無効](#disable-javascript-samples) にする」に移動します。  JS サンプルが無効になっている場合は、前の図などの上位レベルのイベントのみが表示され `Event: click` `Function Call` ます。  
+JavaScript 要求 [の詳細な](#disable-javascript-samples) グラフを非表示にする場合は、[JavaScript サンプルを無効にする] に移動します。  JS サンプルが無効になっている場合は、前の図のような、および前の図からの高レベル `Event: click` `Function Call` のイベントだけが表示 `str` されます。  
 
-### テーブルのアクティビティを表示する  
+### テーブル内のアクティビティを表示する  
 
-ページを記録したら、 **メイン** セクションに依存してアクティビティを分析する必要はありません。  DevTools には、アクティビティを分析するための3つの表形式ビューも用意されています。  各ビューには、次のような操作があります。  
+ページを記録した後は、Main セクションのみを使用してアクティビティ **を分析** する必要があります。  DevTools には、アクティビティを分析するための 3 つの表形式ビューもあります。  各ビューには、アクティビティに対する異なる視点があります。  
 
-*   最も作業を引き起こしているルートアクティビティを表示するには、[ [通話ツリー] タブ](#the-call-tree-tab)を使用します。  
-*   最も多くの時間を費やしたアクティビティを表示する場合は、[ [Bottom-Up] タブ](#the-bottom-up-tab)を使用します。  
-*   記録中に発生した順番でアクティビティを表示する場合は、 [[イベントログ] タブ](#the-event-log-tab)を使用します。  
+*   最も多くの作業を引き起こすルート アクティビティを表示する場合は、[呼び出 [しツリー] タブを使用します](#the-call-tree-tab)。  
+*   最も時間が直接費やされたアクティビティを表示するには、次のBottom-Up [します](#the-bottom-up-tab)。  
+*   記録中に発生した順序でアクティビティを表示する場合は、[イベント ログ] タブ [を使用します](#the-event-log-tab)。  
     
 > [!NOTE]
-> 次の3つのセクションはすべて同じデモを示しています。  [アクティビティ] タブの [デモ][ActivityTabsDemo]で、自分でデモを実行します。  
+> 次の 3 つのセクションはすべて同じデモを参照します。  アクティビティ タブのデモで [デモを自分で実行します][ActivityTabsDemo]。  
 
-#### ルートアクティビティ  
+#### ルート アクティビティ  
 
-[**通話ツリー** ] タブ、[**ボトムアップ**] タブ、[**イベントログ**] の各セクションで説明されている**ルートアクティビティ**の概念について説明します。  
+ここでは、[コール ツリー]**** タブ******、[Bottom-Up]** タブ、および [Event **Log]** セクションに記載されているルート アクティビティの概念について説明します。  
 
-ルートアクティビティは、ブラウザーが何らかの操作を実行する原因となります。  たとえば、ページをクリックすると、ブラウザーで `Event` ルートアクティビティとしてアクティビティが発生します。  これにより、ハンドラーが実行される `Event` 可能性があります。  
+ルート アクティビティは、ブラウザーが何らかの作業を行う原因となるアクティビティです。  たとえば、Web ページを選択すると、ブラウザーはルート `Event` アクティビティとしてアクティビティを実行します。  そのため `Event` 、ハンドラーが実行される可能性があります。  
 
-**メイン**セクションの炎チャートでは、ルートアクティビティはグラフの一番上にあります。  [ **コールツリー** ] タブと [ **イベントログ** ] タブでは、ルートアクティビティはトップレベルのアイテムです。  
+Main セクションの **グラフでは、** ルート アクティビティがグラフの上部に表示されます。  [ **呼び出しツリー]** **タブと [イベント ログ] タブ** では、ルート アクティビティがトップ レベルの項目です。  
 
-ルートアクティビティの例について [は、[通話ツリー] タブ](#the-call-tree-tab) に移動します。  
+ルート アクティビティ [の例の [呼び出](#the-call-tree-tab) しツリー] タブに移動します。  
 
-#### [通話ツリー] タブ  
+#### [呼び出しツリー] タブ  
 
-[ **呼び出しツリー** ] タブを使用して、最も作業を発生させる [ルートアクティビティ](#root-activities) を表示します。  
+[呼 **び出しツリー] タブ** を使用して、最も [多くの作業を引き起](#root-activities) こすルート アクティビティを表示します。  
 
-[ **通話ツリー** ] タブには、レコーディングの選択した部分のアクティビティのみが表示されます。  部分を選択する方法については [、「記録の一部を選択する」](#select-a-portion-of-a-recording) を参照してください。  
+[ **呼び出しツリー]** タブには、レコーディングの選択した部分のアクティビティだけが表示されます。  [記録の [一部を選択] に移動して](#select-a-portion-of-a-recording) 、部分を選択する方法を確認します。  
 
-:::image type="complex" source="../media/evaluate-performance-performance-call-tree.msft.png" alt-text="Record" lightbox="../media/evaluate-performance-performance-call-tree.msft.png":::
-   [ **通話ツリー** ] タブ  
+:::image type="complex" source="../media/evaluate-performance-performance-call-tree.msft.png" alt-text="[呼び出しツリー] タブ" lightbox="../media/evaluate-performance-performance-call-tree.msft.png":::
+   [ **呼び出しツリー]** タブ  
 :::image-end:::  
 
-上の図では、"and" など、" **アクティビティ** " 列の項目の最上位レベルが `Evaluate Script` `Parse HTML` ルートアクティビティです。  入れ子は、呼び出しスタックを表します。  たとえば、上の図のように、という問題が `Parse HTML` 発生しました `Evaluate Script` `Compile Script` `(anonymous)` 。  
+前の図では、[アクティビティ] 列のアイテムのトップ**** レベル (ルート アクティビティなど `Evaluate Script` ) `Parse HTML` です。  入れ子は呼び出し履歴を表します。  たとえば、前の図では、 `Parse HTML` 原因と原因が `Evaluate Script` 次 `Compile Script` のようになります `(anonymous)` 。  
 
-**Self time** は、そのアクティビティに直接費やした時間を表します。  **合計時間** は、そのアクティビティまたはいずれかの子に費やした時間を表します。  
+**Self Time は** 、そのアクティビティに直接費やされた時間を表します。  **Total Time** は、そのアクティビティまたは任意の子に費やされた時間を表します。  
 
-列によってテーブルが並べ替えられるように、[ **自己時間**]、[ **合計時間**]、または [ **アクティビティ** ] を選択します。  
+[Self **Time]、[Total** **Time]、または** **[Activity]** を選択して、テーブルをその列で並べ替える。  
 
-[ **フィルター** ] テキストボックスを使用して、アクティビティ名ごとにイベントをフィルター処理します。  
+[フィルター **] テキスト ボックス** を使用して、アクティビティ名でイベントをフィルター処理します。  
 
-既定では、 **グループ化** メニューは [ **グループ化なし**] に設定されます。  [ **グループ化** ] メニューを使用して、さまざまな条件に基づいてアクティビティテーブルを並べ替えます。  
+既定では、[ **グループ化] メニュー** は [グループ化なし **] に設定されています**。  [グループ **化] メニューを使用** して、さまざまな条件に基づいてアクティビティ テーブルを並べ替える。  
 
-**Show Heaviest Stack** ![ ][ImageShowHeaviestStackIcon] **アクティビティ**テーブルの右側に別のテーブルを表示するには、[最も高いスタックを表示] を選びます。  [アクティビティ] をクリックして、最も **重いスタック** テーブルにデータを入力します。  最も大きな **スタック** テーブルには、選択したアクティビティのどの子が最も時間がかかるかが示されます。  
+[Show **Heaviest Stack** \( Show Heaviest Stack \) ] を選択して、Activity テーブルの右側に別のテーブル ![ ][ImageShowHeaviestStackIcon] を **表示** します。  最も重いスタック テーブルを設定 **するアクティビティを選択** します。  最 **も重いスタック** テーブルには、選択したアクティビティの子の実行に最も時間がかかった時間が表示されます。  
 
 #### [Bottom-Up] タブ  
 
-[ **ボトムアップ** ] タブを使用して、集計で最も時間のかかるアクティビティを表示します。  
+[ **下へ上へ] タブを** 使用して、集計で最も時間を直接取ったアクティビティを表示します。  
 
-**下**のタブには、レコーディングの選択した部分のアクティビティのみが表示されます。  部分を選択する方法については [、「記録の一部を選択する」](#select-a-portion-of-a-recording) を参照してください。  
+[ **下へ上へ]** タブには、レコーディングの選択した部分の間のアクティビティだけが表示されます。  [記録の [一部を選択] に移動して](#select-a-portion-of-a-recording) 、部分を選択する方法を確認します。  
 
-:::image type="complex" source="../media/evaluate-performance-performance-bottoms-up.msft.png" alt-text="Record" lightbox="../media/evaluate-performance-performance-bottoms-up.msft.png":::
-   [ **ボトムアップ** ] タブ  
+:::image type="complex" source="../media/evaluate-performance-performance-bottoms-up.msft.png" alt-text="[Bottom-Up] タブ" lightbox="../media/evaluate-performance-performance-bottoms-up.msft.png":::
+   [ **下へ]** タブ  
 :::image-end:::  
 
-前の図の **メイン** セクションの炎のグラフでは、ほとんどの時間が実行されていた時間に移動 `Parse HTML` します。  前の図の **下部** にある [上位] タブのアクティビティは `Parse HTML` です。  <!--In the flame chart of the previous figure, the yellow below the calls to `wait` are actually thousands of `Minor GC` calls.  -->  **下**のタブに移動します。次に、最も負荷の高いアクティビティは `Layout` です。  
+前の **図の Main** セクションのグラフグラフで、ほぼすべての時間が実行に費やされたグラフに移動します `Parse HTML` 。  前の図の [ **下から上** へ] タブの一番上のアクティビティは次の値です `Parse HTML` 。  <!--In the flame chart of the previous figure, the yellow below the calls to `wait` are actually thousands of `Minor GC` calls.  -->  最もコスト **の高い次** のアクティビティである [下向き] タブに移動します `Layout` 。  
 
-[ **自己時刻** ] 列は、すべてのオカレンスにわたって、そのアクティビティで直接費やした合計時間を表します。  
+[Self **Time]** 列は、すべての発生回数にわたって、そのアクティビティに直接費やされた合計時間を表します。  
 
-[ **合計時間** 」列は、そのアクティビティまたはいずれかの子に費やした集計時間を表します。  
+[ **合計時間]** 列は、そのアクティビティまたは任意の子に費やされた合計時間を表します。  
 
-#### [イベントログ] タブ  
+#### [イベント ログ] タブ  
 
-[ **イベントログ** ] タブを使用して、記録中に発生した順序でアクティビティを表示します。  
+[イベント **ログ] タブを** 使用して、記録中に発生した順序でアクティビティを表示します。  
 
-[ **イベントログ** ] タブには、記録の選択されている部分のアクティビティのみが表示されます。  部分を選択する方法については [、「記録の一部を選択する」](#select-a-portion-of-a-recording) を参照してください。  
+[ **イベント ログ] タブ** には、記録中に選択した部分のアクティビティだけが表示されます。  [記録の [一部を選択] に移動して](#select-a-portion-of-a-recording) 、部分を選択する方法を確認します。  
 
-:::image type="complex" source="../media/evaluate-performance-performance-event-log.msft.png" alt-text="Record" lightbox="../media/evaluate-performance-performance-event-log.msft.png":::
-   [ **イベントログ** ] タブ  
+:::image type="complex" source="../media/evaluate-performance-performance-event-log.msft.png" alt-text="[イベント ログ] タブ" lightbox="../media/evaluate-performance-performance-event-log.msft.png":::
+   [ **イベント ログ]** タブ  
 :::image-end:::  
 
-[ **開始時刻** ] 列は、そのアクティビティが開始されたポイントを表します。レコーディングの開始日を基準としています。  たとえば、 `175.7 ms` 前の図で選んだ項目の開始時刻は、記録を開始した後にアクティビティが175.7 ミリ秒で開始されたことを意味します。  
+[ **開始時刻]** 列は、記録の開始位置を基準に、そのアクティビティが開始されたポイントを表します。  たとえば、前の図で選択したアイテムの開始時刻は、記録が開始した `175.7 ms` 後、アクティビティが 175.7 ミリ秒後に開始されたという意味です。  
 
-**Self time**列は、そのアクティビティに直接費やした時間を表します。  
+[Self **Time] 列** は、そのアクティビティに直接費やされた時間を表します。  
 
-**合計時間**列は、そのアクティビティまたはその子のいずれかに直接費やした時間を表します。  
+[ **合計時間]** 列は、そのアクティビティまたは任意の子に直接費やされた時間を表します。  
 
-[ **開始時刻**]、[ **自己時刻**]、または [ **合計時間** ] を選択して、その列を基準にしてテーブルを並べ替えます。
+[ **開始時刻]、[Self** **Time]、または** **[Total Time]** を選択して、テーブルをその列で並べ替える。
 
-[ **フィルター** ] テキストボックスを使って、名前でアクティビティをフィルター処理します。  
+[フィルター **] テキスト ボックス** を使用して、アクティビティを名前でフィルター処理します。  
 
-[ **継続時間** ] メニューを使用して、1ミリ秒または15ミリ秒未満のアクティビティを除外します。  既定では、[ **期間** ] メニューは [ **すべて**] に設定されており、すべてのアクティビティが表示されます。  
+[期間 **] メニューを** 使用して、1 ミリ秒未満または 15 ミリ秒未満のアクティビティをフィルター処理します。  既定では、[ **期間] メニュー** は [すべて] に **設定され、** すべてのアクティビティが表示されます。  
 
-**読み込み**、**スクリプト**、**レンダリング**、または**Painting**のチェックボックスを無効にして、それらのカテゴリのすべてのアクティビティをフィルター処理します。  
+[読み**込み****]、[スクリプト]、[****レンダリング]、** または [**描画**] チェック ボックスを無効にして、これらのカテゴリからすべてのアクティビティをフィルター処理します。  
 
 ### GPU アクティビティの表示  
 
-**Gpu セクションの**gpu アクティビティを表示します。  
+GPU セクションで GPU アクティビティ **を表示** します。  
 
-:::image type="complex" source="../media/evaluate-performance-performance-gpu-zoomed.msft.png" alt-text="Record" lightbox="../media/evaluate-performance-performance-gpu-zoomed.msft.png":::
-   **GPU**セクション  
+:::image type="complex" source="../media/evaluate-performance-performance-gpu-zoomed.msft.png" alt-text="GPU セクション" lightbox="../media/evaluate-performance-performance-gpu-zoomed.msft.png":::
+   **GPU セクション**  
 :::image-end:::  
 
-### ラスターアクティビティを表示する  
+### ラスター アクティビティを表示する  
 
-**ラスターセクションで**ラスターアクティビティを表示します。  
+[ラスター] セクションでラスター アクティビティ **を表示** します。  
 
-:::image type="complex" source="../media/evaluate-performance-performance-raster.msft.png" alt-text="Record" lightbox="../media/evaluate-performance-performance-raster.msft.png":::
-   **ラスター**セクション  
+:::image type="complex" source="../media/evaluate-performance-performance-raster.msft.png" alt-text="[ラスター] セクション" lightbox="../media/evaluate-performance-performance-raster.msft.png":::
+   [ **ラスター]** セクション  
 :::image-end:::  
 
-### ビューの操作  
+### 操作の表示  
 
-記録中に発生したユーザー操作を見つけて分析するには、[ **対話** ] セクションを使用します。  
+[操作 **] セクションを** 使用して、レコーディング中に発生したユーザー操作を見つけて分析します。  
 
-:::image type="complex" source="../media/evaluate-performance-performance-interactions-animation.msft.png" alt-text="Record" lightbox="../media/evaluate-performance-performance-interactions-animation.msft.png":::
-   [ **操作** ] セクション  
+:::image type="complex" source="../media/evaluate-performance-performance-interactions-animation.msft.png" alt-text="[操作] セクション" lightbox="../media/evaluate-performance-performance-interactions-animation.msft.png":::
+   [ **操作]** セクション  
 :::image-end:::  
 
-対話式の下部にある赤い線は、メインスレッドの待機に費やされた時間を表します。  
+対話式操作の下部にある赤い線は、メイン スレッドの待機に費やされた時間を表します。  
 
-[ファイルの **概要** ] タブで、操作をクリックして詳細情報を表示します。  
+操作を選択すると、[概要] タブに詳細 **な情報が表示** されます。  
 
-### 1秒あたりのフレーム数 (FPS) の分析  
+### 秒あたりのフレーム数を分析する (FPS)  
 
-DevTools には、1秒あたりのフレームの分析方法が多数用意されています。  
+DevTools には、1 秒あたりのフレームを分析するさまざまな方法があります。  
 
-*   [Fps チャート](#the-fps-chart)を使用して、記録中の fps の概要を把握します。  
-*   [[フレーム] セクション](#the-frames-section)を使用して、特定のフレームの所要時間を表示します。  
-*   ページの実行時に、fps のリアルタイムの推定に **fps メーター** を使用します。  [FPS メーターでリアルタイムのフレーム/秒を表示するには、次の](#view-frames-per-second-in-realtime-with-the-fps-meter)操作を行います。  
+*   [記録期間中の FPS](#the-fps-chart)の概要を取得するには、FPS グラフを使用します。  
+*   [[Frames] セクションを使用](#the-frames-section)して、特定のフレームにかかった時間を表示します。  
+*   ページの **実行中に FPS** のリアルタイム推定値として FPS メーターを使用します。  FPS メーターを使って、リアルタイムで [1 秒あたりのフレーム [数の表示] に移動します](#view-frames-per-second-in-realtime-with-the-fps-meter)。  
     
 #### FPS グラフ  
 
-**FPS**グラフは、記録中のフレームレートの概要を示しています。  通常、緑色のバーが大きくなるほど、フレームレートが向上します。  
+**FPS グラフ**は、レコーディング中のフレーム レートの概要を示します。  一般に、緑のバーが大きいほど、フレーム レートが良くなります。  
 
-**FPS**グラフの上に赤いバーが表示されるのは、ユーザーエクスペリエンスが損なわれている可能性が高いため、フレームレートが低下するという警告です。  
+FPS グラフの上の赤 **い** バーは、フレーム レートが低く低下し、ユーザーのエクスペリエンスに損害を与えた可能性があるという警告です。  
 
-:::image type="complex" source="../media/evaluate-performance-performance-fps-highlight.msft.png" alt-text="Record" lightbox="../media/evaluate-performance-performance-fps-highlight.msft.png":::
-   **FPS**グラフ  
+:::image type="complex" source="../media/evaluate-performance-performance-fps-highlight.msft.png" alt-text="FPS グラフ" lightbox="../media/evaluate-performance-performance-fps-highlight.msft.png":::
+   **FPS グラフ**  
 :::image-end:::  
 
 #### [フレーム] セクション  
 
-**フレーム**セクションでは、特定のフレームの所要時間が正確に示されます。  
+**[Frames]** セクションでは、特定のフレームにかかった時間を正確に示します。  
 
-Frame の上にマウスポインターを移動すると、ヒントが表示され、詳細情報が表示されます。  
+フレームの上にマウス ポインターを移動すると、そのフレームに関する詳細な情報を含むヒントが表示されます。  
 
-:::image type="complex" source="../media/evaluate-performance-performance-frames-hover.msft.png" alt-text="Record" lightbox="../media/evaluate-performance-performance-frames-hover.msft.png":::
-   フレームの上にマウスポインターを置く  
+:::image type="complex" source="../media/evaluate-performance-performance-frames-hover.msft.png" alt-text="フレームにカーソルを合わせる" lightbox="../media/evaluate-performance-performance-frames-hover.msft.png":::
+   フレームにカーソルを合わせる  
 :::image-end:::  
 
-フレームをクリックすると、[ **概要** ] タブに、フレームに関するさらに詳しい情報が表示されます。 DevTools では、選択したフレームが青色で示されます。  
+[概要] タブでフレームに関する詳細を表示するには、フレーム **を選択** します。 DevTools は、選択したフレームの輪郭を青で示します。  
 
-:::image type="complex" source="../media/evaluate-performance-performance-frames-summary.msft.png" alt-text="Record" lightbox="../media/evaluate-performance-performance-frames-summary.msft.png":::
-   [ **概要** ] タブでフレームを表示する  
+:::image type="complex" source="../media/evaluate-performance-performance-frames-summary.msft.png" alt-text="[概要] タブでフレームを表示する" lightbox="../media/evaluate-performance-performance-frames-summary.msft.png":::
+   [概要] タブでフレーム **を表示** する  
 :::image-end:::  
 
-### ネットワーク要求を表示する  
+### ネットワーク要求の表示  
 
-[ **ネットワーク** ] セクションを展開すると、記録中に発生した、ウォーターフォールのネットワーク要求が表示されます。  
+[ネットワーク **] セクションを** 展開して、レコーディング中に発生したネットワーク要求のウォーターフォールを表示します。  
 
-:::image type="complex" source="../media/evaluate-performance-performance-network.msft.png" alt-text="Record" lightbox="../media/evaluate-performance-performance-network.msft.png":::
-   [ **ネットワーク** ] セクション  
+:::image type="complex" source="../media/evaluate-performance-performance-network.msft.png" alt-text="[ネットワーク] セクション" lightbox="../media/evaluate-performance-performance-network.msft.png":::
+   [ **ネットワーク]** セクション  
 :::image-end:::  
 
-要求は、次のように色分けされます。  
+要求は、次のように色分けされています。  
 
-*   HTML: 青  
-*   CSS: 紫  
-*   JS: 黄  
+*   HTML: Blue  
+*   CSS: 紫色  
+*   JS: Yellow  
 *   画像: 緑  
     
-[ファイルの **概要** ] タブで要求をクリックすると、詳細情報が表示されます。 たとえば、上の図では、[ **概要** ] タブには、[ **ネットワーク** ] セクションで選択された青い要求についての詳細情報が表示されています。  
+詳細を表示する要求を [概要] タブ**で選択**します。 たとえば、前の図の [概要****] タブには、[ネットワーク] セクションで選択されている青色の要求に関する詳細が**表示**されています。  
 
-要求の左上の濃い青色の正方形は、優先度の高い要求であることを意味します。  薄い青色の正方形は、優先度が低いことを意味します。  たとえば、前の図では、青色の選択された要求の優先度は高く、緑の1つは優先度の低いものです。  
+要求の左上に濃い青色の正方形が表示されている場合は、優先度の高い要求です。  明るい青の正方形は優先順位が低いという意味です。  たとえば、前の図では、青の選択された要求の方が優先度が高く、下の緑色の要求は優先度が低くなります。  
 
-次の図のうちの1つ目では、要求は `www.bing.com` 左側にある線で表され、中央に暗い部分と薄い部分があるバー、右側に線が表示されます。  次の図の2に、[**ネットワーク**] パネルの [**タイミング**] タブに表示される同じ要求の対応表現を示します。  2つの表現が相互にマップされる方法を次に示します。
+次の図の 1 つ目では、要求は左側の行、中央に暗い部分と明るい部分を含むバー、右側に線で表されます。 `www.bing.com`  次の図の 2nd では、[ネットワーク] パネルの [タイミング]**** タブに同じ要求の対応する表現が**示**されています。  次に、これら 2 つの表現を互いにマップする方法を示します。
 
-*   左側の行は、一連のイベントを含むすべての項目になり `Connection Start` ます。  つまり、これはすべて、排他的な前にあり `Request Sent` ます。  
-*   バーの光部分は `Request Sent` と `Waiting (TTFB)` です。  
-*   バーの暗い部分は `Content Download` です。  
-*   適切な行は、基本的にメインスレッドの待機に費やされた時間です。  これは、[ **タイミング** ] タブには表示されません。  
+*   左側の行は、イベントのグループ `Connection Start` までのすべてです。  つまり、前のすべてで、排他的 `Request Sent` です。  
+*   バーの明るい部分は、 `Request Sent` `Waiting (TTFB)` .  
+*   バーの暗い部分は次の値です `Content Download` 。  
+*   正しい行は、基本的にメイン スレッドの待機に費やされた時間です。  これは 、[タイミング] タブには **表示** されません。  
     
 :::row:::
    :::column span="":::
-      :::image type="complex" source="../media/evaluate-performance-bing-performance-network.msft.png" alt-text="Record" lightbox="../media/evaluate-performance-bing-performance-network.msft.png":::
-         要求の線の表示 `www.bing.com`  
+      :::image type="complex" source="../media/evaluate-performance-bing-performance-network.msft.png" alt-text="要求の行バー www.bing.comします。" lightbox="../media/evaluate-performance-bing-performance-network.msft.png":::
+         要求の行バー `www.bing.com` 表現  
       :::image-end:::  
    :::column-end:::
    :::column span="":::
-      :::image type="complex" source="../media/evaluate-performance-bing-network-timing.msft.png" alt-text="Record" lightbox="../media/evaluate-performance-bing-network-timing.msft.png":::
-         **ネットワーク**ツール  
-::: イメージ終了:::  
+      :::image type="complex" source="../media/evaluate-performance-bing-network-timing.msft.png" alt-text="ネットワーク ツール" lightbox="../media/evaluate-performance-bing-network-timing.msft.png":::
+         ネットワーク**ツール**  
+: ::image-end:::  
    :::column-end:::
 :::row-end:::
 
-### メモリメトリックの表示  
+### メモリ メトリックスを表示する  
 
-[ **メモリ** ] チェックボックスを有効にして、最後の記録からメモリ指標を表示します。  
+[メモリ] チェック **ボックスを** オンにして、最後の記録のメモリ メトリックを表示します。  
 
-:::image type="complex" source="../media/evaluate-performance-performance-memory-highlight.msft.png" alt-text="Record" lightbox="../media/evaluate-performance-performance-memory-highlight.msft.png":::
-   **メモリ**チェックボックス  
+:::image type="complex" source="../media/evaluate-performance-performance-memory-highlight.msft.png" alt-text="[メモリ] チェック ボックス" lightbox="../media/evaluate-performance-performance-memory-highlight.msft.png":::
+   [ **メモリ]** チェック ボックス  
 :::image-end:::  
 
-DevTools で、[**概要**] タブの上に新しい**メモリ**グラフが表示されます。 また、[**ヒープ**] という新しいグラフも表示**されます**。  **ヒープ**グラフは、**メモリ**グラフの**JS ヒープ**行と同じ情報を提供します。  
+DevTools は、[ **概要]** タブの上に新しい **メモリ グラフを表示** します。 また、NET グラフの下には **、HEAP** という新しいグラフ **があります**。  **HEAP グラフ**は、Memory グラフの**JS ヒープ**行と同じ情報を**提供**します。  
 
-:::image type="complex" source="../media/evaluate-performance-performance-memory-chart.msft.png" alt-text="Record" lightbox="../media/evaluate-performance-performance-memory-chart.msft.png":::
-   メモリメトリック  
+:::image type="complex" source="../media/evaluate-performance-performance-memory-chart.msft.png" alt-text="メモリメトリックス" lightbox="../media/evaluate-performance-performance-memory-chart.msft.png":::
+   メモリメトリックス  
 :::image-end:::  
 
-グラフ上の色付きの線は、グラフ上の色付きのチェックボックスにマップされます。  
-チェックボックスを無効にして、そのカテゴリをグラフから非表示にする。  
+グラフの色付き線は、グラフの上の色付きチェック ボックスにマップされます。  
+チェック ボックスを無効にして、グラフからそのカテゴリを非表示にします。  
 
-グラフには、現在選択されているレコーディングの領域のみが表示されます。  たとえば、上の図では、 **メモリ** グラフは 400 ms マークの前後にあるメモリ使用量のみを 1750 ms マークに示しています。  
+グラフには、現在選択されているレコーディングの領域だけが表示されます。  たとえば、前の図の [メモリ****] グラフには、400 ミリ秒のマークから 1750 ミリ秒のマークまでメモリ使用量だけが表示されています。  
 
-### レコーディングの一部の継続時間を表示する  
+### レコーディングの一部の期間を表示する  
 
-**Network**や**Main**などのセクションを分析するときに、特定のイベントの所要時間をより正確に予測する必要がある場合があります。  長押しして長押しし、 `Shift` 左または右にドラッグしてレコーディングの一部を選択します。  選択範囲の一番下にある DevTools は、その部分の所要時間を示します。  
+Network や**Main****** などのセクションを分析する場合、特定のイベントにかかった時間を正確に見積もる必要がある場合があります。  録音 `Shift` の一部を選択するには、長押し、長押し、左右にドラッグします。  選択した部分の下部に、DevTools はその部分にかかった時間を示します。  
 
-:::image type="complex" source="../media/evaluate-performance-performance-main-duration.msft.png" alt-text="Record" lightbox="../media/evaluate-performance-performance-main-duration.msft.png":::
-   レコーディングの一部の継続時間を表示する  
+:::image type="complex" source="../media/evaluate-performance-performance-main-duration.msft.png" alt-text="レコーディングの一部の期間を表示する" lightbox="../media/evaluate-performance-performance-main-duration.msft.png":::
+   レコーディングの一部の期間を表示する  
 :::image-end:::  
 
 ### スクリーンショットを表示する  
 
-[記録中にスクリーンショットをキャプチャ](#capture-screenshots-while-recording)して、スクリーンショットを有効にする方法について説明します。  
+記録中 [に [キャプチャ] のスクリーンショットに移動して](#capture-screenshots-while-recording) 、スクリーンショットを有効にする方法を確認します。  
 
-**概要**にマウスポインターを合わせると、その時点でページがどのように表示されたかを示すスクリーンショットが表示されます。  **概要**は、 **CPU**、 **FPS**、および**ネット**チャートを含むセクションです。  
+[概要] **をポイント** すると、記録中にページがどのように表示されたのかのスクリーンショットが表示されます。  [ **概要** ] は **、CPU、FPS、および** **NET**のグラフを含む **セクション** です。  
 
-:::image type="complex" source="../media/evaluate-performance-performance-screenshots-hover.msft.png" alt-text="Record" lightbox="../media/evaluate-performance-performance-screenshots-hover.msft.png":::
+:::image type="complex" source="../media/evaluate-performance-performance-screenshots-hover.msft.png" alt-text="スクリーンショットを表示する" lightbox="../media/evaluate-performance-performance-screenshots-hover.msft.png":::
    スクリーンショットを表示する  
 :::image-end:::  
 
-**フレーム**セクションのフレームをクリックしてスクリーンショットを表示することもできます。  DevTools では、[ **概要** ] タブにスクリーンショットの小さなバージョンが表示されます。  
+[フレーム] セクションでフレームを選択して、スクリーンショットを **表示** することもできます。  DevTools は、[概要] タブに小さいバージョンのスクリーンショット **を表示** します。  
 
-:::image type="complex" source="../media/evaluate-performance-performance-summary-preview.msft.png" alt-text="Record" lightbox="../media/evaluate-performance-performance-summary-preview.msft.png":::
-   [ **概要** ] タブにスクリーンショットを表示する  
+:::image type="complex" source="../media/evaluate-performance-performance-summary-preview.msft.png" alt-text="[概要] タブでスクリーンショットを表示する" lightbox="../media/evaluate-performance-performance-summary-preview.msft.png":::
+   [概要] タブでスクリーンショット **を表示** する  
 :::image-end:::  
 
-[ **概要** ] タブでサムネイルをクリックして、スクリーンショットを拡大します。  
+[概要] タブでサムネイル **を選択** して、スクリーンショットを拡大します。  
 
-:::image type="complex" source="../media/evaluate-performance-performance-summary-preview-select.msft.png" alt-text="Record" lightbox="../media/evaluate-performance-performance-summary-preview-select.msft.png":::
-   [ **概要** ] タブでスクリーンショットを拡大する  
+:::image type="complex" source="../media/evaluate-performance-performance-summary-preview-select.msft.png" alt-text="[概要] タブからスクリーンショットを拡大する" lightbox="../media/evaluate-performance-performance-summary-preview-select.msft.png":::
+   [概要] タブからスクリーンショット **を拡大** する  
 :::image-end:::  
 
 ### レイヤー情報の表示  
 
-フレームに関する高度なレイヤー情報を表示するには、次の操作を行います。  
+フレームに関する高度なレイヤー情報を表示するには:  
 
-1.  [高度な描画インストルメンテーションを有効に](#enable-advanced-paint-instrumentation)します。  
-1.  **フレームセクションで**フレームを選択します。  [開発ツール] では、[新しい **レイヤー** ] タブの [ **イベントログ** ] タブの横に、レイヤーに関する情報が表示されます。  
+1.  [高度なペイントインストルメンテーションを有効にする](#turn-on-advanced-paint-instrumentation)。  
+1.  [フレーム] セクションでフレーム **を選択** します。  DevTools は、[イベント ログ] タブ**** の横にある新しい [レイヤー] タブにレイヤーに関する**情報を表示**します。  
     
-    :::image type="complex" source="../media/evaluate-performance-layers-all.msft.png" alt-text="Record" lightbox="../media/evaluate-performance-layers-all.msft.png":::
-       [ **レイヤー** ] ウィンドウ  
+    :::image type="complex" source="../media/evaluate-performance-layers-all.msft.png" alt-text="[レイヤー] ウィンドウ" lightbox="../media/evaluate-performance-layers-all.msft.png":::
+       [ **レイヤー]** ウィンドウ  
     :::image-end:::  
     
-レイヤーをポイントすると、図の中で強調表示されます。  
+レイヤーの上にカーソルを合わせると、図内で強調表示されます。  
 
-:::image type="complex" source="../media/evaluate-performance-performance-frames-document-nav-bar-highlighted.msft.png" alt-text="Record" lightbox="../media/evaluate-performance-performance-frames-document-nav-bar-highlighted.msft.png":::
+:::image type="complex" source="../media/evaluate-performance-performance-frames-document-nav-bar-highlighted.msft.png" alt-text="レイヤーを強調表示する" lightbox="../media/evaluate-performance-performance-frames-document-nav-bar-highlighted.msft.png":::
    レイヤーを強調表示する  
 :::image-end:::  
 
-ダイアグラムを移動するには、次の操作を行います。  
+図を移動するには:  
 
-*   **Pan Mode** ![ ][ImagePanModeIcon] X 軸と Y 軸に沿って移動するには、[パンモード] (pan モード \) を選択します。  
-*   Z 軸に沿って回転するには、[ **回転モード** \ ( ![ 回転モード ][ImageRotateModeIcon] \)] を選びます。  
-*   [ **変換のリセット** ] ( ![ 変形 ][ImageResetTransformIcon] のリセット) を選択して、図を元の位置にリセットします。  
+*   [ **パン モード** \( パン モード \) ] を ![ ][ImagePanModeIcon] 選択して、X 軸と Y 軸に沿って移動します。  
+*   Z **軸に沿って** 回転するには、回転モード ![ ][ImageRotateModeIcon] \( 回転モード \) を選択します。  
+*   図 **を元の位置** にリセットするには、Reset ![ Transform \( Reset Transform ][ImageResetTransformIcon] \) を選択します。  
     
-### ペイントプロファイラーの表示  
+### ペイント プロファイラーの表示  
 
-ペイントイベントに関する詳細情報を表示するには、次の操作を行います。  
+ペイント イベントに関する詳細な情報を表示するには:  
 
-1.  [高度な描画インストルメンテーションを有効に](#enable-advanced-paint-instrumentation)します。  
-1.  **メイン**セクションで**Paint**イベントを選択します。  
+1.  [オンにする](#turn-on-advanced-paint-instrumentation)。  
+1.  Main セクション **でペイント** イベント **を選択** します。  
     
-    :::image type="complex" source="../media/evaluate-performance-paint-profiler.msft.png" alt-text="Record" lightbox="../media/evaluate-performance-paint-profiler.msft.png":::
-       [ **ペイントプロファイラー** ] タブ  
+    :::image type="complex" source="../media/evaluate-performance-paint-profiler.msft.png" alt-text="[ペイント プロファイラー] タブ" lightbox="../media/evaluate-performance-paint-profiler.msft.png":::
+       [ **ペイント プロファイラー]** タブ  
     :::image-end:::  
     
-## [レンダリング] タブでのレンダリングのパフォーマンスの分析  
+## [レンダリング] タブを使用してレンダリングパフォーマンスを分析する  
 
-[ **レンダリング** ] タブの機能を使用すると、ページのレンダリングパフォーマンスを視覚化できます。  
+[レンダリング] タブの **機能を使用** して、ページのレンダリング パフォーマンスを視覚化します。  
 
-[ **レンダリング** ] タブを開くには、次の操作を行います。  
+[レンダリング] タブ **を開** く方法:  
 
-1.  [コマンドメニューを開き][DevToolsCommandMenu]ます。  
-1.  入力を開始し `Rendering` 、を選択し `Show Rendering` ます。  DevTools は、DevTools ウィンドウの下部にある [ **レンダリング** ] タブを表示します。  
+1.  [コマンド メニューを開きます][DevToolsCommandMenu]。  
+1.  入力を開始 `Rendering` し、選択します `Show Rendering` 。  DevTools は **、DevTools** ウィンドウの下部に [レンダリング] タブを表示します。  
     
-    :::image type="complex" source="../media/evaluate-performance-console-drawer-rendering.msft.png" alt-text="Record" lightbox="../media/evaluate-performance-console-drawer-rendering.msft.png":::
-       [ **レンダリング** ] タブ  
+    :::image type="complex" source="../media/evaluate-performance-console-drawer-rendering.msft.png" alt-text="[レンダリング] タブ" lightbox="../media/evaluate-performance-console-drawer-rendering.msft.png":::
+       [ **レンダリング]** タブ  
     :::image-end:::  
     
-### FPS メーターを使ってリアルタイムで1秒あたりのフレームを表示する  
+### FPS メーターを使用してリアルタイムで 1 秒あたりのフレーム数を表示する  
 
-**FPS メーター**は、ビューポートの右上隅に表示されるオーバーレイです。  ページの実行時に、リアルタイムでの FPS の推定値が提供されます。  **FPS メーター**を開くには:  
+**FPS メーターは**、ビューポートの右上隅に表示されるオーバーレイです。  ページの実行に合った FPS のリアルタイムの推定値を提供します。  FPS メーターを **開く方法**:  
 
-1.  [ **レンダリング** ] タブを開きます。 Na [[レンダリング] タブを使って、レンダリングのパフォーマンスを分析](#analyze-rendering-performance-with-the-rendering-tab)します。  
-1.  [ **FPS メーター** ] チェックボックスをオンにします。  
+1.  [レンダリング] **タブを開** きます。 Na [Analyze rendering performance with the Rendering tab](#analyze-rendering-performance-with-the-rendering-tab).  
+1.  **[FPS メーター] チェック ボックスをオン**にします。  
     
-    :::image type="complex" source="../media/evaluate-performance-jank-console-rendering-frame-rate.msft.png" alt-text="Record" lightbox="../media/evaluate-performance-jank-console-rendering-frame-rate.msft.png":::
+    :::image type="complex" source="../media/evaluate-performance-jank-console-rendering-frame-rate.msft.png" alt-text="FPS メーター" lightbox="../media/evaluate-performance-jank-console-rendering-frame-rate.msft.png":::
        **FPS メーター**  
     :::image-end:::  
     
-### ペイントの点滅でリアルタイムで描画イベントを表示する  
+### ペイント フラッシュを使ってリアルタイムで描画イベントを表示する  
 
-[ペイントのフラッシュ] を使って、ページ上のすべての描画イベントをリアルタイムで表示します。  ページの一部が再描画されるたびに、DevTools でそのセクションの輪郭が緑色で示されます。  
+ページ上のすべてのペイント イベントのリアルタイム ビューを取得するには、ペイント フラッシュを使用します。  ページの一部が再描画されるたびに、DevTools によってそのセクションのアウトラインが緑色で表示されます。  
 
-ペイントのフラッシュを有効にするには:  
+ペイント フラッシュを有効にする場合は、次の操作を実行します。  
 
-1.  [ **レンダリング** ] タブを開きます。 [[レンダリング] タブで移動して、レンダリングのパフォーマンスを分析](#analyze-rendering-performance-with-the-rendering-tab)します。  
-1.  [ **ペイントの点滅** ] チェックボックスをオンにします。  
+1.  [レンダリング] **タブを開** きます。 [レンダリング] タブ [で [レンダリングパフォーマンスの分析] に移動します](#analyze-rendering-performance-with-the-rendering-tab)。  
+1.  [ペイントの点滅 **] チェック ボックスをオン** にします。  
     
-    :::image type="complex" source="../media/evaluate-performance-jank-console-rendering-paint-flashing.msft.png" alt-text="Record" lightbox="../media/evaluate-performance-jank-console-rendering-paint-flashing.msft.png":::
+    :::image type="complex" source="../media/evaluate-performance-jank-console-rendering-paint-flashing.msft.png" alt-text="ペイントの点滅" lightbox="../media/evaluate-performance-jank-console-rendering-paint-flashing.msft.png":::
        **ペイントの点滅**  
     :::image-end:::  
     
-### レイヤーの枠線を使用してレイヤーを重ねて表示する  
+### レイヤー罫線を使用してレイヤーのオーバーレイを表示する  
 
-レイヤー境界 **線** を使用して、レイヤーの境界線とタイルをページの上に重ねて表示します。  
+レイヤー **罫線を使用** して、ページの上にレイヤー罫線とタイルのオーバーレイを表示します。  
 
-レイヤーの境界線を有効にするには:  
+レイヤー罫線を有効にする場合は、次の操作を実行します。  
 
-1.  [ **レンダリング** ] タブを開きます。 [[レンダリング] タブで移動して、レンダリングのパフォーマンスを分析](#analyze-rendering-performance-with-the-rendering-tab)します。  
-1.  [ **レイヤー罫線** ] チェックボックスをオンにします。  
+1.  [レンダリング] **タブを開** きます。 [レンダリング] タブ [で [レンダリングパフォーマンスの分析] に移動します](#analyze-rendering-performance-with-the-rendering-tab)。  
+1.  [レイヤー罫 **線] チェック ボックスをオン** にします。  
     
-    :::image type="complex" source="../media/evaluate-performance-devtools-console-rendering-layer-borders.msft.png" alt-text="Record" lightbox="../media/evaluate-performance-devtools-console-rendering-layer-borders.msft.png":::
-       **レイヤーの枠線**  
+    :::image type="complex" source="../media/evaluate-performance-devtools-console-rendering-layer-borders.msft.png" alt-text="レイヤー罫線" lightbox="../media/evaluate-performance-devtools-console-rendering-layer-borders.msft.png":::
+       **レイヤー罫線**  
     :::image-end:::  
     
-Debug_colors のコメントに移動して、codings の説明を参照してください[。][ChromiumDebugColors]  
+[debug_colors.cc][ChromiumDebugColors]のコメントに移動して、色分けについて説明します。  
 
-### スクロールパフォーマンスの問題をリアルタイムで見つける  
+### リアルタイムでスクロール パフォーマンスの問題を見つける  
 
-スクロールパフォーマンスの問題を使って、スクロールに関連するイベントリスナーを持つページの要素を特定し、ページのパフォーマンスに悪影響を与える可能性があります。  
-DevTools では、青緑で問題が発生する可能性のある要素について説明します。  
+スクロールパフォーマンスの問題を使用して、ページのパフォーマンスを低下させる可能性のあるスクロールに関連するイベント リスナーを持つページの要素を特定します。  
+DevTools は、問題が発生する可能性のある要素の概要を小さい形で示します。  
 
-スクロールパフォーマンスの問題を表示するには:  
+スクロール パフォーマンスの問題を表示するには、次の操作を実行します。 
 
-1.  [ **レンダリング** ] タブを開きます。 [[レンダリング] タブで移動して、レンダリングのパフォーマンスを分析](#analyze-rendering-performance-with-the-rendering-tab)します。  
-1.  [ **パフォーマンスの問題のスクロール** ] チェックボックスをオンにします。  
+1.  [レンダリング] **タブを開** きます。 [レンダリング] タブ [で [レンダリングパフォーマンスの分析] に移動します](#analyze-rendering-performance-with-the-rendering-tab)。  
+1.  **[Scrolling Performance Issues] チェック ボックスをオン**にします。  
     
-    :::image type="complex" source="../media/evaluate-performance-bing-console-drawer-rendering-scrolling-performance-issues.msft.png" alt-text="Record" lightbox="../media/evaluate-performance-bing-console-drawer-rendering-scrolling-performance-issues.msft.png":::
-       **スクロールパフォーマンスの問題** は、非レイヤーのビューポートに制約のあるオブジェクトによってパフォーマンスの低下が発生する可能性があることを示します。  
+    :::image type="complex" source="../media/evaluate-performance-bing-console-drawer-rendering-scrolling-performance-issues.msft.png" alt-text="スクロールのパフォーマンスの問題は、レイヤー以外のビューポートに制約のあるオブジェクトがスクロールのパフォーマンスを低下させる可能性を示します" lightbox="../media/evaluate-performance-bing-console-drawer-rendering-scrolling-performance-issues.msft.png":::
+       **スクロールのパフォーマンスの問題は、** レイヤー以外のビューポートに制約のあるオブジェクトがスクロールのパフォーマンスを低下させる可能性を示します  
     :::image-end:::  
     
 ## Microsoft Edge DevTools チームと連絡を取る  
@@ -592,19 +592,19 @@ DevTools では、青緑で問題が発生する可能性のある要素につ�
 
 <!-- links -->  
 
-[MicrosoftEdgeDevTools]: ../../devtools-guide-chromium.md "Microsoft Edge (Chromium) 開発者ツール |Microsoft ドキュメント"  
-[DevToolsCommandMenu]: ../command-menu/index.md#open-the-command-menu "コマンドメニューを開きます。 [Microsoft Edge DevTools] コマンドメニューでコマンドを実行します。Microsoft ドキュメント"  
-[DevtoolsEvaluatePerformanceGettingStarted]: ./index.md "実行時のパフォーマンスの分析を開始する |Microsoft ドキュメント"  
+[MicrosoftEdgeDevTools]: ../../devtools-guide-chromium/index.md "Microsoft Edge (Chromium) 開発者ツール |Microsoft Docs"  
+[DevToolsCommandMenu]: ../command-menu/index.md#open-the-command-menu "コマンド メニューを開く - Microsoft Edge DevTools コマンド メニューを使用してコマンドを実行する |Microsoft Docs"  
+[DevtoolsEvaluatePerformanceGettingStarted]: ./index.md "ランタイム パフォーマンスの分析を開始する |Microsoft Docs"  
 
-[ActivityTabsDemo]: https://microsoft-edge-chromium-devtools.glitch.me/perf/activitytabs.html "アクティビティタブのデモ |故障"  
+[ActivityTabsDemo]: https://microsoft-edge-chromium-devtools.glitch.me/perf/activitytabs.html "アクティビティ タブのデモ |不具合"  
 
-[ChromiumDebugColors]: https://cs.chromium.org/chromium/src/cc/debug/debug_colors.cc "debug_colors cc-コードの検索"  
+[ChromiumDebugColors]: https://cs.chromium.org/chromium/src/cc/debug/debug_colors.cc "debug_colors.cc - コード検索"  
 
 > [!NOTE]
-> このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
-> 元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/reference) にあり、 [Kayce Basques][KayceBasques] テクニカルライター、Chrome Devtools \ & Lighthouse \) で作成されています。  
+> このページの一部は、 [Google によっ て作成および共有された][GoogleSitePolicies]作業に基づく変更で、「[Creative Commons Attribution 4.0 International License][CCA4IL]」で記載されている条項に従って使用されます。  
+> 元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/reference) にあり、 [Kayce Basques][KayceBasques] \(Chrome DevTools \& Lighthouse\ のテクニカル ライター) が作成しました。  
 
-[![クリエイティブコモンズライセンス][CCby4Image]][CCA4IL]  
+[![Creative Commons ライセンス][CCby4Image]][CCA4IL]  
 この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。  
 
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  

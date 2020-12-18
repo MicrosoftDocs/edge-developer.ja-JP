@@ -1,18 +1,18 @@
 ---
-description: ローカルストレージウィンドウと本体で localStorage を表示および編集する方法を説明します。
-title: Microsoft Edge DevTools を使ってローカルストレージを表示および編集する
+description: ローカル ストレージ ウィンドウとコンソールを使用して localStorage を表示および編集する方法について説明します。
+title: Microsoft Edge DevTools を使ったローカル ストレージの表示と編集
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 10/19/2020
+ms.date: 12/11/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 25404e454187db941dc12d356dfe5ae7437d833b
-ms.sourcegitcommit: 99eee78698dc95b2a3fa638a5b063ef449899cda
+ms.openlocfilehash: c68f11b8ba2c10a0792f10acf5c5ededf2ad8e8d
+ms.sourcegitcommit: a35a6b5bbc21b7df61d08cbc6b074b5325ad4fef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "11125420"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "11231189"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -28,79 +28,79 @@ ms.locfileid: "11125420"
    See the License for the specific language governing permissions and
    limitations under the License.  -->  
 
-# Microsoft Edge DevTools を使ってローカルストレージを表示および編集する  
+# Microsoft Edge DevTools を使用してローカル ストレージを表示および編集する  
 
-このガイドでは、 [Microsoft Edge DevTools][MicrosoftEdgeDevTools] を使って、 [localstorage][MDNWindowsLocalStorage] のキーと値のペアを表示、編集、削除する方法について説明します。  
+このガイドでは [、Microsoft Edge DevTools][MicrosoftEdgeDevTools] を使用して [localStorage][MDNWindowsLocalStorage] キーと値のペアを表示、編集、削除する方法について説明します。  
 
-## LocalStorage のキーと値の表示  
+## localStorage キーと値を表示する  
 
-1.  [ **アプリケーション** ] タブを選択して、[ **アプリケーション** ] パネルを開きます。  **マニフェスト**ウィンドウは既定で表示されます。  
+1.  [アプリケーション **] タブ** を選択して、アプリケーション ツール **を開** きます。  マニフェスト **ウィンドウ** は既定で表示されます。  
     
-    :::image type="complex" source="../media/storage-application-manifest.msft.png" alt-text="マニフェストウィンドウ" lightbox="../media/storage-application-manifest.msft.png":::
-       **マニフェスト**ウィンドウ  
+    :::image type="complex" source="../media/storage-application-manifest.msft.png" alt-text="マニフェスト ウィンドウ" lightbox="../media/storage-application-manifest.msft.png":::
+       マニフェスト**ウィンドウ**  
     :::image-end:::  
     
-1.  [ **ローカルストレージ** ] メニューを展開します。  
+1.  [ローカル ストレージ **] メニューを展開** します。  
     
-    :::image type="complex" source="../media/storage-application-local-storage.msft.png" alt-text="マニフェストウィンドウ" lightbox="../media/storage-application-local-storage.msft.png":::
-       [ **ローカルストレージ** ] メニュー  
+    :::image type="complex" source="../media/storage-application-local-storage.msft.png" alt-text="[ローカル ストレージ] メニュー" lightbox="../media/storage-application-local-storage.msft.png":::
+       [ **ローカル ストレージ]** メニュー  
     :::image-end:::  
     
-1.  ドメインを選択して、キーと値のペアを表示します。  
+1.  キーと値のペアを表示するドメインを選択します。  
     
-    :::image type="complex" source="../media/storage-application-local-storage-view-key-value.msft.png" alt-text="マニフェストウィンドウ" lightbox="../media/storage-application-local-storage-view-key-value.msft.png":::
-       `localStorage`ドメインのキーと値のペア `https://www.bing.com`  
+    :::image type="complex" source="../media/storage-application-local-storage-view-key-value.msft.png" alt-text="ドメインの localStorage キーと値の https://www.bing.com ペア" lightbox="../media/storage-application-local-storage-view-key-value.msft.png":::
+       ドメイン `localStorage` のキーと値の `https://www.bing.com` ペア  
     :::image-end:::  
     
-1.  テーブルの行を選択して、テーブルの下に表示されているビューアーの値を確認します。  
+1.  テーブルの行を選択して、テーブルの下のビューアーに値を表示します。  
     
-    :::image type="complex" source="../media/storage-application-local-storage-view-key-value-selected.msft.png" alt-text="マニフェストウィンドウ" lightbox="../media/storage-application-local-storage-view-key-value-selected.msft.png":::
-       キーの値を表示する `eventLogQueue_Online`  
+    :::image type="complex" source="../media/storage-application-local-storage-view-key-value-selected.msft.png" alt-text="キーの値をeventLogQueue_Onlineする" lightbox="../media/storage-application-local-storage-view-key-value-selected.msft.png":::
+       キーの値を表示 `eventLogQueue_Online` する  
     :::image-end:::  
     
 ## 新しい localStorage キーと値のペアを作成する  
 
-1.  [ `localStorage` ドメインのキーと値のペアを表示](#view-localstorage-keys-and-values)します。  
-1.  表の空の部分をダブルクリックします。  DevTools で新しい行を作成し、 **キー** 列にカーソルをフォーカスします。  
+1.  [ドメインの localStorage キーと値のペアを表示します](#view-localstorage-keys-and-values)。  
+1.  テーブルの空の部分をダブルクリックします。  DevTools によって新しい行が作成され、カーソルが [キー] 列に **表示** されます。  
     
-    :::image type="complex" source="../media/storage-application-local-storage-new-key-value.msft.png" alt-text="マニフェストウィンドウ" lightbox="../media/storage-application-local-storage-new-key-value.msft.png":::
+    :::image type="complex" source="../media/storage-application-local-storage-new-key-value.msft.png" alt-text="新しいキーと値のペアを作成するためにダブルクリックするテーブルの空の部分" lightbox="../media/storage-application-local-storage-new-key-value.msft.png":::
        新しいキーと値のペアを作成するためにダブルクリックするテーブルの空の部分  
     :::image-end:::  
     
-## ローカルストレージのキーまたは値を編集する  
+## localStorage キーまたは値を編集する  
 
-1.  [ `localStorage` ドメインのキーと値のペアを表示](#view-localstorage-keys-and-values)します。  
-1.  キーまた**は値の列の**セルをダブルクリックし**て、その**キーまたは値を編集します。  
+1.  [ドメインの localStorage キーと値のペアを表示します](#view-localstorage-keys-and-values)。  
+1.  [キー] 列または****[値] 列のセルを**ダブルクリック**して、そのキーまたは値を編集します。  
     
-    :::image type="complex" source="../media/storage-application-local-storage-edit-key-value.msft.png" alt-text="マニフェストウィンドウ" lightbox="../media/storage-application-local-storage-edit-key-value.msft.png":::
-       キーを編集する `localStorage`  
+    :::image type="complex" source="../media/storage-application-local-storage-edit-key-value.msft.png" alt-text="localStorage キーを編集する" lightbox="../media/storage-application-local-storage-edit-key-value.msft.png":::
+       キーを編集 `localStorage` する  
     :::image-end:::  
     
-## LocalStorage のキーと値のペアを削除する  
+## localStorage のキーと値のペアを削除する  
 
-1.  [ `localStorage` ドメインのキーと値のペアを表示](#view-localstorage-keys-and-values)します。  
-1.  削除するキーと値のペアを選択します。  DevTools は、青色を強調表示して、選択されていることを示します。  
-1.  キーを押すか、選択し `Delete` た \ を **削除** \ ( ![ 選択した \ を削除) を選択し ][ImageDeleteIcon] ます。  
+1.  [ドメインの `localStorage` キーと値のペアを表示します](#view-localstorage-keys-and-values)。  
+1.  削除するキーと値のペアを選択します。  DevTools では、青色が強調表示され、選択されている状態が示されます。  
+1.  Select the `Delete` key or choose Delete **Selected** \( ![ Delete Selected ][ImageDeleteIcon] \).  
     
-## `localStorage`ドメインのすべてのキーと値のペアを削除する  
+## ドメインのすべての `localStorage` キーと値のペアを削除する  
 
-1.  [ `localStorage` ドメインのキーと値のペアを表示](#view-localstorage-keys-and-values)します。  
-1.  [ **すべてクリア** ] を選び ![ ます (\ すべてクリア ][ImageClearIcon] )。  
+1.  [ドメインの `localStorage` キーと値のペアを表示します](#view-localstorage-keys-and-values)。  
+1.  Choose **Clear All** \( Clear All ![ ][ImageClearIcon] \).  
     
-## コンソールからローカルストレージを操作する  
+## コンソールから localStorage を操作する  
 
-JavaScript は**本体**で実行できますが、**本体**はページの javascript コンテキストにアクセスできるため、コンソールから操作することもでき `localStorage` ます。 **Console**  
+コンソールで JavaScript を実行できます。**** また、コンソールはページ**** の JavaScript コンテキストにアクセスできるので、コンソールから操作 `localStorage` **できます**。  
 
-1.  表示さ**JavaScript contexts**れて**Console** `localStorage` いるページ以外のドメインのキーと値のペアにアクセスする場合は、javascript コンテキストメニューを使って本体の javascript コンテキストを変更します。  
+1.  表示される**ページ以外**のドメインのキーと値のペアにアクセスする**** 場合は、JavaScript コンテキスト メニューを使用してコンソールの JavaScript コンテキストを `localStorage` 変更します。  
     
-    :::image type="complex" source="../media/storage-console-local-storage.msft.png" alt-text="マニフェストウィンドウ" lightbox="../media/storage-console-local-storage.msft.png":::
-       本体の JavaScript のコンテキストを変更する  
+    :::image type="complex" source="../media/storage-console-local-storage.msft.png" alt-text="コンソールの JavaScript コンテキストを変更する" lightbox="../media/storage-console-local-storage.msft.png":::
+       コンソールの JavaScript コンテキストを変更する  
     :::image-end:::  
     
-1.  `localStorage`JavaScript と同じように、コンソールで式を実行します。  
+1.  JavaScript `localStorage` と同じように、コンソールで式を実行します。  
     
-    :::image type="complex" source="../media/storage-console-local-storage-interaction.msft.png" alt-text="マニフェストウィンドウ" lightbox="../media/storage-console-local-storage-interaction.msft.png":::
-       `localStorage`**コンソール**から操作する  
+    :::image type="complex" source="../media/storage-console-local-storage-interaction.msft.png" alt-text="コンソールから localStorage を操作する" lightbox="../media/storage-console-local-storage-interaction.msft.png":::
+       コンソールから `localStorage` 操作 **する**  
     :::image-end:::  
     
 ## Microsoft Edge DevTools チームと連絡を取る  
@@ -114,15 +114,15 @@ JavaScript は**本体**で実行できますが、**本体**はページの jav
 
 <!-- links -->  
 
-[MicrosoftEdgeDevTools]: ../../devtools-guide-chromium.md "Microsoft Edge (Chromium) 開発者ツール |Microsoft ドキュメント"  
+[MicrosoftEdgeDevTools]: ../../devtools-guide-chromium/index.md "Microsoft Edge (Chromium) 開発者ツール |Microsoft Docs"  
 
-[MDNWindowsLocalStorage]: https://developer.mozilla.org/docs/Web/API/Window/localStorage "ウィンドウ。 localStorage |MDN"  
+[MDNWindowsLocalStorage]: https://developer.mozilla.org/docs/Web/API/Window/localStorage "Window.localStorage |MDN"  
 
 > [!NOTE]
-> このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
-> 元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/storage/localstorage) にあり、 [Kayce Basques][KayceBasques] テクニカルライター、Chrome Devtools \ & Lighthouse \) で作成されています。  
+> このページの一部は、 [Google によっ て作成および共有された][GoogleSitePolicies]作業に基づく変更で、「[Creative Commons Attribution 4.0 International License][CCA4IL]」で記載されている条項に従って使用されます。  
+> 元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/storage/localstorage) にあり、 [Kayce Basques][KayceBasques] \(Chrome DevTools \& Lighthouse\ のテクニカル ライター) が作成しました。  
 
-[![クリエイティブコモンズライセンス][CCby4Image]][CCA4IL]  
+[![Creative Commons ライセンス][CCby4Image]][CCA4IL]  
 この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。  
 
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  

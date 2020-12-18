@@ -3,19 +3,19 @@ description: Microsoft Edge で Web サイトまたはアプリをテストす�
 title: WebDriver (Chromium)
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 11/25/2020
+ms.date: 12/02/2020
 ms.topic: article
 ms.prod: microsoft-edge
 ms.technology: devtools
 keywords: microsoft edge, web 開発, html, css, javascript, 開発者, webdriver, selenium,テストする, ツール, 自動化, テスト
-ms.openlocfilehash: 3c197a83dbf16c68102ff6e9a4ee6f33b0573af2
-ms.sourcegitcommit: 2e14ff82350f700d7eabc8d33b3ec3e5fc8c61fa
-ms.translationtype: HT
+ms.openlocfilehash: 5e881eec59c966fd4fa6d35118032a3a51e7b9e5
+ms.sourcegitcommit: a35a6b5bbc21b7df61d08cbc6b074b5325ad4fef
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "11192255"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "11231134"
 ---
-# テスト オートメーションに WebDriver (Chromium) を使用する  
+# WebDriver (Chromium) を使用したテスト自動化の概要  
 
 WebDriver を使うと、\(developers\) は、ユーザーの操作をシミュレートする自動テストを作成できます。  WebDriver のテストとシミュレーションは、次の理由から、JavaScript 単体テストとは異なります。  
 
@@ -36,19 +36,21 @@ WebDriver を使うと、\(developers\) は、ユーザーの操作をシミュ�
 
 1.  `edge://settings/help` に移動して、Microsoft Edge のバージョンを取得します。  
     
-    :::image type="complex" source="../media/webdriver-chromium/edge-version.png" alt-text="2020 年 1 月 14 日の Microsoft Edge カナリアのビルド番号" lightbox="../media/webdriver-chromium/edge-version.png":::
-       2020 年 1 月 14 日の Microsoft Edge カナリアのビルド番号  
+    :::image type="complex" source="./media/edge-version.png" alt-text="2020 年 1 月 14 日の Microsoft Edge カナリアのビルド番号":::
+       2020 年 1 月 14 日の Microsoft Edge カナリアのビルド番号
     :::image-end:::  
     
 1.  [Microsoft Edge ドライバーのダウンロード][MicrosoftDeveloperEdgeToolsWebdriverDownloads]ページに移動して、Microsoft edge のバージョン番号と一致するドライバーをダウンロードします。  
     
-    :::image type="complex" source="../media/webdriver-chromium/edge-driver-install.png" alt-text="Microsoft Edge ドライバー ページのダウンロード セクション" lightbox="../media/webdriver-chromium/edge-driver-install.png":::
-       [Microsoft Edge ドライバー][MicrosoftDeveloperEdgeToolsWebdriver]ページのダウンロードセクション  
+    :::image type="complex" source="./media/edge-driver-install.png" alt-text="Microsoft Edge ドライバー ページのダウンロード セクション":::
+       [Microsoft Edge ドライバー][MicrosoftDeveloperEdgeToolsWebdriver]ページのダウンロードセクション
     :::image-end:::  
     
+    <!--  
     > [!NOTE] 
-    > Microsoft Edge \ (EdgeHTML \) を使用したテストオートメーションの詳細については、「[Microsoft WebDriver for Microsoft Edge (EdgeHTML)][Webdriver]」を参照してください。  
-    
+    > For more information about test automation using Microsoft Edge (EdgeHTML), see [Microsoft WebDriver for Microsoft Edge (EdgeHTML)][Webdriver].  
+    -->  
+
 ## WebDriver 言語バインドの選択  
 
 ダウンロードする必要がある最後のコンポーネントは、コード \(Python、 Java、 C\#, Ruby、 JavaScript\) を、Microsoft Edge \(Chromium\)でMicrosoft Edge ドライバーが実行するコマンドに変換するための言語固有のクライアント ドライバーです。  
@@ -332,8 +334,8 @@ Microsoft Edge チームは、WebDriver、Selenium、Microsoft Edge の使用に
 
 <!-- links -->  
 
-[DevToolsMain]: ../devtools-guide-chromium.md "Microsoft Edge (Chromium) 開発者ツール |Microsoft ドキュメント"
-[Webdriver]: ../webdriver.md "WebDriver (EdgeHTML) |Microsoft ドキュメント"  
+[DevToolsMain]: ../devtools-guide-chromium/index.md "Microsoft Edge (Chromium) 開発者ツール |Microsoft ドキュメント"
+[Webdriver]: ../webdriver/index.md "WebDriver (EdgeHTML) |Microsoft ドキュメント"  
 
 [DeployedgePoliciesDevelopertoolsavailability]: /deployedge/microsoft-edge-policies#developertoolsavailability "DeveloperToolsAvailability-Microsoft Edge-ポリシー |Microsoft ドキュメント"  
 

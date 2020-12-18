@@ -1,84 +1,84 @@
 ---
-description: Microsoft Edge (Chromium) と Visual Studio コード
+description: Microsoft Edge (Chromium) および Visual Studio Code
 title: Visual Studio Code
 author: MSEdgeTeam
 ms.author: msedgedevrel
 ms.date: 11/20/2020
 ms.topic: article
 ms.prod: microsoft-edge
-keywords: microsoft edge、web 開発、f12 ツール、devtools、vs コード、visual studio コード、デバッガー、webhint
-ms.openlocfilehash: 0d13c6eb9411f89e3a681176ade0caf8d59d46d8
-ms.sourcegitcommit: 02c602379537ab3b9d0a355cea7fcf96fdbd8870
+keywords: microsoft edge, Web 開発, f12 ツール, devtools, vs code, visual studio code, debugger, webhint
+ms.openlocfilehash: 1aa5b66043e87ebb0f1b848dcd60e2553b378f36
+ms.sourcegitcommit: a35a6b5bbc21b7df61d08cbc6b074b5325ad4fef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "11182745"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "11230692"
 ---
-# Visual Studio Code  
+# Visual Studio Code の概要  
 
-[Visual Studio コード][VisualStudioCodeDocs] は、軽量であり、強力なソースコードエディターです。  [Visual Studio コード][VisualStudioCodeDocs] は、Windows、Linux、macOS で利用できます。  JavaScript、TypeScript、Node.js の組み込みサポートが含まれているため、これをカスタマイズするには、web 開発者向けの優れたツールです。  まだ使っていない場合は、 [Visual Studio コード][VisualstudioCode]をダウンロードしてください。  
+[Visual Studioは][VisualStudioCodeDocs] 、軽量で強力なソース コード エディターです。  [Visual Studioコード][VisualStudioCodeDocs] は、Windows、Linux、macOS で利用できます。  JavaScript、TypeScript、および Node.js の組み込みサポートが含まれるので、カスタマイズする前に Web 開発者に最適なツールです。  If you are not using it yet, download [Visual Studio Code][VisualstudioCode].  
 
 ## 拡張機能  
 
 <!--todo: We want to put something like the tiles for extensions Visual Studio Code uses on this page https://code.visualstudio.com/Docs#top-extensions but I don't think this is a markdown page.  I think it's a web page.  I couldn't find anything in https://github.com/Microsoft/vscode-docs that looks like this page. In the meantime, here's what I've come up with: -->  
 
-以下で強調表示されている拡張機能を取得するには、 `Ctrl` + `Shift` + `X` `Command` + `Shift` + `X` Visual Studio コードで [extensions] ([Windows/Linux または macOS 上)] に移動します。  
+以下で強調表示されている拡張機能を取得するには、Visual Studio Code で Extensions \(Windows/Linux または macOS で選択 `Ctrl` + `Shift` + `X` `Command` + `Shift` + `X` )に移動します。  
 
-市場で特定の拡張子を検索し、[ **インストール**] を選択します。  
+Marketplace で特定の拡張機能を検索し、[インストール] を **選択します**。  
 
-:::image type="complex" source="./media/vscode-debugger-install.png" alt-text="Microsoft Edge Visual Studio のコード拡張用のデバッガーをインストールする" lightbox="./media/vscode-debugger-install.png":::
-   Microsoft Edge Visual Studio のコード拡張 **用のデバッガーを** インストールする  
+:::image type="complex" source="./media/vscode-debugger-install.png" alt-text="Microsoft Edge Visual Studio Code 拡張機能のデバッガーをインストールする" lightbox="./media/vscode-debugger-install.png":::
+   Microsoft **Edge Visual Studio** Code 拡張機能のデバッガーをインストールする  
 :::image-end:::  
 
 :::row:::
    :::column span="1":::
-      :::image type="complex" source="./media/visual-studio-code-extension-debugger-for-microsoft-edge.msft.png" alt-text="Microsoft Edge Visual Studio コード拡張用デバッガー" lightbox="./media/visual-studio-code-extension-debugger-for-microsoft-edge.msft.png":::
-         **Microsoft Edge 用デバッガー** Visual Studio コード拡張機能  
+      :::image type="complex" source="./media/visual-studio-code-extension-debugger-for-microsoft-edge.msft.png" alt-text="Microsoft Edge Visual Studio Code 拡張機能のデバッガー" lightbox="./media/visual-studio-code-extension-debugger-for-microsoft-edge.msft.png":::
+         **Microsoft Edge のデバッガー** Visual Studioコード拡張機能  
       :::image-end:::  
-      [Microsoft Edge 用デバッガー](#debugger-for-microsoft-edge)  
+      [Microsoft Edge のデバッガー](#debugger-for-microsoft-edge)  
    :::column-end:::
    :::column span="1":::
-      :::image type="complex" source="./media/visual-studio-code-extension-microsoft-edge-tools-for-visual-studio-code.msft.png" alt-text="Visual Studio コードの visual studio コード拡張のための Microsoft Edge ツール" lightbox="./media/visual-studio-code-extension-microsoft-edge-tools-for-visual-studio-code.msft.png":::
-         **Microsoft Edge Tools For Visual Studio コード** Visual Studio コード拡張機能  
+      :::image type="complex" source="./media/visual-studio-code-extension-microsoft-edge-tools-for-visual-studio-code.msft.png" alt-text="Microsoft Edge Tools for Visual Studio Code Visual Studio Extension" lightbox="./media/visual-studio-code-extension-microsoft-edge-tools-for-visual-studio-code.msft.png":::
+         **Microsoft Edge Tools for Visual Studio Code** Visual Studioコード拡張機能  
       :::image-end:::  
-      [Microsoft Edge Tools for Visual Studio コード](#microsoft-edge-tools-for-visual-studio-code)  
+      [Microsoft Edge Tools for Visual Studio Code](#microsoft-edge-tools-for-visual-studio-code)  
    :::column-end:::
    :::column span="1":::
-      :::image type="complex" source="./media/visual-studio-code-extension-webhint.msft.png" alt-text="webhint Visual Studio コード拡張" lightbox="./media/visual-studio-code-extension-webhint.msft.png":::
-         **web ヒント** Visual Studio コード拡張機能  
+      :::image type="complex" source="./media/visual-studio-code-extension-webhint.msft.png" alt-text="webhint Visual Studio コード拡張機能" lightbox="./media/visual-studio-code-extension-webhint.msft.png":::
+         **webhint** Visual Studioコード拡張機能  
       :::image-end:::  
       [Webhint](#webhint)  
    :::column-end:::
 :::row-end:::  
 
-## Microsoft Edge 用デバッガー  
+## Microsoft Edge のデバッガー  
 
-Microsoft Edge Visual Studio コード拡張機能 [用のデバッガー][VisualstudioMarketplaceDebuggerMicrosoftEdge] を使うと、フロントエンド JavaScript コードを行ごとにデバッグし、 `console.log()` [Visual Studio コード][VisualstudioCode]からステートメントを直接表示することができます。  
+Microsoft [Edge Visual Studio][VisualstudioMarketplaceDebuggerMicrosoftEdge] Code 拡張機能のデバッガーを使用して、フロントエンド JavaScript コードを 1 行でデバッグし、コードから直接ステートメント `console.log()` [Visual Studioします][VisualstudioCode]。  
       
-デバッガーツールを使って、Microsoft Edge \ (EdgeHTML \) と Microsoft Edge \ (Chromium \) の両方を起動または接続できます。  Visual Studio のコードと構成例から Microsoft Edge をデバッグする方法のチュートリアルについては `launch.json` 、「 [Microsoft Edge Visual Studio のコード拡張のデバッガー][VisualStudioCodeDebuggerEdge]」を参照してください。  次の画像を選択して、拡張機能の動作を確認します。  
+デバッガー ツールを使用すると、Microsoft Edge \(EdgeHTML\) と Microsoft Edge \(Chromium\) の両方を起動またはアタッチできます。  Visual Studio コードとサンプル構成から Microsoft Edge をデバッグするチュートリアルについては、Debugger For Microsoft Edge Visual Studio Code Extension に `launch.json` [移動します][VisualStudioCodeDebuggerEdge]。  次の画像を選択して、拡張機能の動作を確認します。  
 
-:::image type="complex" source="./media/debugger-for-edge.png" alt-text="Edge Visual Studio コード拡張機能のデバッガー" lightbox="./media/debugger-for-edge.gif":::
-   **Microsoft Edge 用デバッガー** Visual Studio のコード拡張機能の動作  
+:::image type="complex" source="./media/debugger-for-edge.png" alt-text="Edge Visual Studio コード拡張機能のデバッガーの動作" lightbox="./media/debugger-for-edge.gif":::
+   **Microsoft Edge のデバッガー** Visual Studioコード拡張機能の動作  
 :::image-end:::  
 
-## Microsoft Edge Tools for Visual Studio コード
+## Microsoft Edge Tools for Visual Studio Code
 
-[Microsoft Edge ツールの][VisualstudioMarketplaceMicrosoftEdgeToolsVisualStudioCode]visual studio コード拡張機能を使って、Visual studio コード内で microsoft edge ブラウザーの**要素**ツールを使用します。  次の操作に使用します。  
+Microsoft [Edge Tools for Visual Studio Code][VisualstudioMarketplaceMicrosoftEdgeToolsVisualStudioCode] Visual Studio拡張機能を使用して、Microsoft Edge ブラウザーの **Elements** ツールを Visual Studio Code 内で使用します。  次のアクションに使用します。  
 
 *   インスタンスにアタッチするか、Microsoft Edge のインスタンスを起動します。  
-*   実行時の HTML 構造を表示します。  
+*   ランタイム HTML 構造を表示します。  
 *   レイアウトを更新します。  
-*   スタイルの問題を解決します。  
+*   スタイルの問題を修正します。  
     
-詳細については、「 [Microsoft Edge Tools For Visual studio Code Visual studio code extension][VisualStudioCodeMicrosoftEdgeDevtoolsExtension]」を参照してください。  <!--  Choose the following image to see the extension in action.  -->  
+詳細については [、Microsoft Edge Tools for][VisualStudioCodeMicrosoftEdgeDevtoolsExtension]Visual Studio Code Visual Studio してください。  <!--  Choose the following image to see the extension in action.  -->  
       
-:::image type="complex" source="./media/microsoft-edge-tools-for-visual-studio-code.png" alt-text="Visual Studio の Visual studio のコード拡張機能を使用するための Microsoft Edge ツール" lightbox="./media/microsoft-edge-tools-for-visual-studio-code.png":::
-   **Microsoft Edge Tools For Visual Studio コード** Visual Studio のコード拡張機能の動作  
+:::image type="complex" source="./media/microsoft-edge-tools-for-visual-studio-code.png" alt-text="Microsoft Edge Tools for Visual Studio Code Visual Studio Code extension in action" lightbox="./media/microsoft-edge-tools-for-visual-studio-code.png":::
+   **Microsoft Edge Tools for Visual Studio Code** Visual Studioコード拡張機能の動作  
 :::image-end:::  
 
 ## Webhint  
       
-[Web][WebhintMain]サイトの次の機能を向上させるために、カスタマイズ可能なカスタマイズされたカスタマイズされた機能を使用します。  
+[Webhint (カスタマイズ][WebhintMain]可能な linting ツール) を使用して、サイトの次の機能を向上します。  
 
 *   アクセシビリティ
 *   パフォーマンス
@@ -86,29 +86,29 @@ Microsoft Edge Visual Studio コード拡張機能 [用のデバッガー][Visua
 *   PWA の互換性
 *   セキュリティ
 
-コードでコーディングの問題や一般的なエラーをチェックします。 Microsoft Edge チームによって最初に開発された webhint オープンソースプロジェクトが、 [Openjs Foundation][OpenjsFoundation]の一部になりました。  Microsoft Edge チームは、コミュニティの web 開発者と共に web ヒントに投稿し続けています。  <!--  Choose the following image to see the extension in action.  -->  
+コードでコーディングのプラクティスと一般的なエラーをチェックします。 最初に Microsoft Edge チームによって開発された webhint オープン ソース プロジェクトは [、OpenJS Foundation][OpenjsFoundation]の一部です。  Microsoft Edge チームは、コミュニティの Web 開発者と共に Webhint に引き続き投稿します。  <!--  Choose the following image to see the extension in action.  -->  
       
-:::image type="complex" source="./media/webhint-extension.png" alt-text="Webhint Visual Studio コード拡張のスクリーンショット" lightbox="./media/webhint-extension.png":::
-   **Webhint** Visual Studio コード拡張のスクリーンショット  
+:::image type="complex" source="./media/webhint-extension.png" alt-text="Webhint とコードVisual Studioのスクリーンショット" lightbox="./media/webhint-extension.png":::
+   **Webhint Visual Studio** Code 拡張機能のスクリーンショット  
 :::image-end:::  
       
-[Visual Studio コードの webhint 拡張機能][VisualstudioMarketplaceWebhint]を追加して、web サイトの問題を特定して修正します。  ヒント HTML、CSS、JavaScript、TypeScript などを調べます。  ヒントはインライン下線として表示され、[ **問題** ] ウィンドウに集計されます。  
+Web サイトの問題を特定し、修正するには、Web サイト コードの [webhint 拡張機能Visual Studioします][VisualstudioMarketplaceWebhint]。  ヒントでは、HTML、CSS、JavaScript、TypeScript などについて説明します。  ヒントはインラインの下線として表示され、[問題] ウィンドウ **に要約** されます。  
       
-詳細については、「 [Visual Studio コードでの webhint の使い方」][VisualStudioCodeWebhint]を参照してください。  
+詳細については、コードで [webhint を使用する方法にVisual Studioしてください][VisualStudioCodeWebhint]。  
 
 <!--links -->  
 
-[VisualStudioCodeDebuggerEdge]: ./debugger-for-edge.md "Microsoft Edge Visual Studio コード拡張機能のデバッガー |Microsoft ドキュメント"  
-[VisualStudioCodeMicrosoftEdgeDevtoolsExtension]: ./microsoft-edge-devtools-extension.md "Microsoft Edge DevTools for Visual Studio コード拡張機能 |Microsoft ドキュメント"  
-[VisualStudioCodeWebhint]: ./webhint.md "Webhint Visual Studio のコード拡張 |Microsoft ドキュメント"  
+[VisualStudioCodeDebuggerEdge]: ./debugger-for-edge.md "Microsoft Edge Visual Studio コード拡張機能のデバッガー |Microsoft Docs"  
+[VisualStudioCodeMicrosoftEdgeDevtoolsExtension]: ./microsoft-edge-devtools-extension.md "Microsoft Edge DevTools for Visual Studio Code extension |Microsoft Docs"  
+[VisualStudioCodeWebhint]: ./webhint.md "Webhint Visual Studio コード拡張 |Microsoft Docs"  
 
 [VisualstudioCode]: https://code.visualstudio.com "Visual Studio コード"  
 [VisualStudioCodeDocs]: https://code.visualstudio.com/Docs "ドキュメント |Visual Studio コード"   
 
-[VisualstudioMarketplaceDebuggerMicrosoftEdge]: https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-edge "Microsoft Edge 用デバッガー |Visual Studio Marketplace"  
-[VisualstudioMarketplaceMicrosoftEdgeToolsVisualStudioCode]: https://marketplace.visualstudio.com/items?itemName=ms-edgedevtools.vscode-edge-devtools "Microsoft Edge Tools for Visual Studio コード |Visual Studio Marketplace"  
+[VisualstudioMarketplaceDebuggerMicrosoftEdge]: https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-edge "Microsoft Edge のデバッガー |Visual Studio Marketplace"  
+[VisualstudioMarketplaceMicrosoftEdgeToolsVisualStudioCode]: https://marketplace.visualstudio.com/items?itemName=ms-edgedevtools.vscode-edge-devtools "Microsoft Edge Tools for Visual Studio Code |Visual Studio Marketplace"  
 
-[VisualstudioMarketplaceWebhint]: https://marketplace.visualstudio.com/items?itemName=webhint.vscode-webhint "web ヒント |Visual Studio Marketplace"  
+[VisualstudioMarketplaceWebhint]: https://marketplace.visualstudio.com/items?itemName=webhint.vscode-webhint "webhint |Visual Studio Marketplace"  
 
-[WebhintMain]:  https://webhint.io "web ヒント"  
+[WebhintMain]:  https://webhint.io "webhint"  
 [OpenjsFoundation]:  https://openjsf.org "OpenJS Foundation"  

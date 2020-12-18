@@ -3,31 +3,31 @@ description: WebView2 コントロールをデバッグする方法について�
 title: WebView2 アプリケーションのデバッグを開始する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 10/14/2020
+ms.date: 12/02/2020
 ms.topic: how-to
 ms.prod: microsoft-edge
 ms.technology: webview
-keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Host、browser control、edge html
-ms.openlocfilehash: 25a710796b499a78a43045266058029caa890b78
-ms.sourcegitcommit: 61cc15d2fc89aee3e09cec48ef1e0e5bbf8d289a
+keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Host、ブラウザー コントロール、エッジ html
+ms.openlocfilehash: 4f94fe880f66f8aeb387d2db4a8bfaab20699466
+ms.sourcegitcommit: a35a6b5bbc21b7df61d08cbc6b074b5325ad4fef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "11119109"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "11230699"
 ---
 # WebView2 アプリケーションのデバッグを開始する  
 
-Microsoft Edge WebView2 コントロールの目標は、web とネイティブアプリケーションの両方の開発機能とツールの両方を組み合わせることです。  WebView2 アプリケーションを開発するときは、アプリケーションをデバッグする必要があります。  この記事では、WebView2 アプリケーションで web とネイティブコードの両方をデバッグするために使用するさまざまなツールについて説明します。  
+Microsoft Edge WebView2 コントロールの目標は、Web とネイティブの両方のアプリケーション開発機能とツールを組み合わせることです。  WebView2 アプリケーションを開発する場合は、アプリケーションをデバッグする必要があります。  この記事では、WebView2 アプリケーションで Web とネイティブ コードの両方をデバッグするために使用するさまざまなツールの概要を説明します。  
 
 ## [Microsoft Edge DevTools](#tab/devtools)  
 
-Microsoft edge [(Chromium) 開発者ツール][DevtoolsGuideChromiumMain] を使用して、microsoft edge に表示されている別の web ページをデバッグする場合と同じ方法で、WebView2 コントロールに表示される web コンテンツをデバッグします。  DevTools を開くには、WebView コントロールにフォーカスを設定し、次のいずれかの操作を実行します。  
+[Microsoft Edge (Chromium) 開発者][DevtoolsGuideChromiumMain]ツールを使用して、Microsoft Edge に表示される別の Web ページをデバッグするのと同じ方法で、WebView2 コントロールに表示される Web コンテンツをデバッグします。  DevTools を開く場合は、WebView コントロールにフォーカスを設定し、次のいずれかのアクションを使用します。  
 
-*   を選択し `F12` ます。  
-*   を選択し `Ctrl` + `Shift` + `I` ます。  
-*   コンテキストメニューを開き (\ を右クリックし)、[] を選び `Inspect` ます。  
-
-詳細については、「 [Devtools の概要][DevtoolsGuideChromiumMain]」を参照してください。  
+*   `F12` を選択します。  
+*   選択 `Ctrl` + `Shift` + `I` します。  
+*   コンテキスト メニュー \(右クリック\) を開き、選択します `Inspect` 。  
+    
+詳しくは [、DevTools の概要に関するページをご覧ください][DevtoolsGuideChromiumMain]。  
 
 :::image type="complex" source="./media/f12.png" alt-text="DevTools のデバッグ" lightbox="./media/f12.png":::
    DevTools のデバッグ  
@@ -35,75 +35,76 @@ Microsoft edge [(Chromium) 開発者ツール][DevtoolsGuideChromiumMain] を使
 
 ## [Visual Studio](#tab/visualstudio)  
 
-Visual Studio には、WebView2 アプリケーションの web とネイティブコード向けのさまざまなデバッグツールが用意されています。  Visual Studio セクションでは、主にフォーカスが WebView コントロールのデバッグを行っていますが、Visual Studio でのデバッグ方法は通常どおり利用できます。  Win32 アプリケーションまたは Office アドインでのみ、web とネイティブコードをデバッグするには、次のプロセスを使用します。  
+Visual Studioは、WebView2 アプリケーションで Web およびネイティブ コード用のさまざまなデバッグ ツールを提供します。  このセクションVisual Studio、主に WebView コントロールのデバッグに重点を置きますが、WebView コントロール内の他のデバッグ方法Visual Studio通常どおり使用できます。  Win32 アプリケーションで Web とネイティブ コードをデバッグしたり、アドインのみをOfficeするには、次のプロセスを使用します。  
 
 > [!IMPORTANT]
-> ネイティブデバッガーがアタッチされている Visual Studio でアプリケーションをデバッグする場合、を選択すると、 `F12` 開発者ツールではなくネイティブデバッガーがトリガーされる可能性があります。  `Ctrl` + `Shift` + `I` または、コンテキストメニュー \ (右クリック \) を使用して、この状況を回避します。  
+> ネイティブ デバッガーがアタッチされた Visual Studio でアプリケーションをデバッグすると、選択すると、開発者ツールではなくネイティブ デバッガー `F12` がトリガーされる場合があります。  状況 `Ctrl` + `Shift` + `I` を回避するには、コンテキスト メニュー \(右クリック\) を選択するか、または使用します。  
 
-作業を始める前に、次の要件が満たされていることを確認します。  
+開始する前に、次の要件を満たしていることを確認してください。  
 
-*   スクリプトをデバッグするには、Visual Studio 内からアプリを起動する必要があります。  
+*   スクリプトをデバッグするには、アプリをアプリ内から起動するVisual Studio。  
 *   実行中の WebView2 プロセスにデバッガーをアタッチすることはできません。  
-*   Visual Studio 2019 バージョン 16.4 Preview 2 以降をインストールします。  
+*   2019 Visual Studio 16.4 Preview 2 以降をインストールします。  
+    
+スクリプト デバッガー ツールをインストールしてセットアップVisual Studio。  
 
-Visual Studio でスクリプトデバッガーツールをインストールしてセットアップします。  
-
-1.  **C++ でデスクトップ開発**に**JavaScript 診断**コンポーネントをインストールするには、次の操作を実行します。  
-
-    1. Windows エクスプローラーバーに「」と入力 `Visual Studio Installer` します。  
-    1. [ **Visual Studio インストーラー** ] を選択して開きます。  
-    1. Visual Studio インストーラーのインストールされているバージョンで、[ **その他** ] ボタンを選択し、[ **変更**] を選択します。  
-    1. Visual Studio の [ **ワークロード**] で、[ **デスクトップ開発** ] の [C++] の設定を選択します。  
+1.  C++ を使用したデスクトップ開発で **JavaScript 診断コンポーネント** をインストールするには、次 **の操作を実行します**。  
+    
+    1.  エクスプローラー バーに「.」と入力します `Visual Studio Installer` 。  
+    1.  **[Visual Studioを選択して**開きます。  
+    1.  新しいVisual Studioインストーラーのインストール済みバージョンで、[その他]**** ボタンを選択し、[変更] を**選択します**。  
+    1.  [Visual Studioワークロード] で、[C++ でのデスクトップ開発]**設定を選択**します。 ****  
         
-        :::image type="complex" source="./media/workloads.png" alt-text="DevTools のデバッグ" lightbox="./media/workloads.png":::
-            Visual Studio のワークロードの変更画面 :::image-end:::  
-        
-    1.  **個々のコンポーネント**を選択します。  
-    1.  検索ボックスに「」と入力し `JavaScript diagnostics` ます。  
-    1.  **JavaScript 診断**設定を選択します。  
-    1.  [ **Modify**] を選びます。 
-        
-        :::image type="complex" source="./media/indivcomp.png" alt-text="DevTools のデバッグ" lightbox="./media/indivcomp.png":::
-           Visual Studio による個々のコンポーネントの変更のタブ  
+        :::image type="complex" source="./media/workloads.png" alt-text="Visual Studioの変更画面" lightbox="./media/workloads.png":::
+            Visual Studioの変更画面
         :::image-end:::  
         
-1.  WebView2 アプリケーションのスクリプトのデバッグを有効にします。  
-    1.  WebView2 プロジェクトで、コンテキストメニュー \ を右クリックし、[ **プロパティ**] を選びます。  
-    1.  [ **構成プロパティ**] で、[ **デバッグ**] を選びます。  
-    1.  [ **デバッガーの種類**] で、[ **JavaScript (WebView2)**] を選びます。  
+    1.  個別の **コンポーネントを選択します**。  
+    1.  検索ボックスに「.」と入力します `JavaScript diagnostics` 。  
+    1.  **JavaScript 診断設定を選択**します。  
+    1.  Choose **Modify**. 
         
-        :::image type="complex" source="./media/enbjs.png" alt-text="DevTools のデバッグ" lightbox="./media/enbjs.png":::
-           Visual Studio の **デバッグ** 構成プロパティ  
+        :::image type="complex" source="./media/indivcomp.png" alt-text="Visual Studioの変更] タブ" lightbox="./media/indivcomp.png":::
+           Visual Studioの変更] タブ  
+        :::image-end:::  
+        
+1.  WebView2 アプリケーションのスクリプト デバッグを有効にする。  
+    1.  WebView2 プロジェクトで、コンテキスト メニュー \(右クリック\) を開き、[プロパティ] を選択 **します**。  
+    1.  [構成プロパティ **] で、[** デバッグ] **を選択します**。  
+    1.  デバッガーの**種類で****、JavaScript (WebView2) を選択します**。  
+        
+        :::image type="complex" source="./media/enbjs.png" alt-text="Visual Studioデバッグ構成プロパティ" lightbox="./media/enbjs.png":::
+           Visual Studio **デバッグ構成** プロパティ  
         :::image-end:::  
         
 WebView2 アプリケーションをデバッグするには、次の操作を実行します。  
 
-1.  ソースコードにブレークポイントを設定するには、行番号の左側にカーソルを置いて、[ブレークポイントの設定] を選択します。  JS/TS デバッグアダプターはソースパスマッピングを実行しません。  WebView2 に関連付けられているのとまったく同じパスを開く必要があります。  
+1.  ソース コードにブレークポイントを設定するには、行番号の左側にポイントし、ブレークポイントの設定を選択します。  JS/TS デバッグ アダプターはソース パス マッピングを実行します。  WebView2 に関連付けられているパスとまったく同じパスを開く必要があります。  
     
-    :::image type="complex" source="./media/breakpoint.png" alt-text="DevTools のデバッグ" lightbox="./media/breakpoint.png"::: 
-       Visual Studio のブレークポイントの追加  
+    :::image type="complex" source="./media/breakpoint.png" alt-text="Visual Studioブレークポイントを追加する" lightbox="./media/breakpoint.png"::: 
+       Visual Studioブレークポイントを追加する  
     :::image-end:::  
     
-1.  デバッガーを実行するには、プラットフォームのビットサイズを選択し、[ **ローカル Windows デバッガー**] の横にある緑色の [再生] ボタンを選択します。  アプリケーションが実行され、作成された最初の WebView2 プロセスにデバッガーが接続されます。  
+1.  デバッガーを実行するには、プラットフォームのビット サイズを選択し、ローカル Windows デバッガーの横にある緑色の再生ボタン **を選択します**。  アプリケーションが実行され、デバッガーは作成された最初の WebView2 プロセスに接続します。  
     
-    :::image type="complex" source="./media/run.png" alt-text="DevTools のデバッグ" lightbox="./media/run.png"::: 
-       Visual Studio の **ローカル Windows デバッガー**  
+    :::image type="complex" source="./media/run.png" alt-text=" Visual Studio Windows デバッガーを使う" lightbox="./media/run.png"::: 
+       Visual Studio Windows **デバッガーのインストール**  
     :::image-end:::  
     
-1.  **デバッグコンソール**でデバッガーからの出力を見つけます。  
+1.  デバッグ コンソール **で、** デバッガーからの出力を見つける。  
     
-    :::image type="complex" source="./media/console.png" alt-text="DevTools のデバッグ" lightbox="./media/console.png"::: 
-       Visual Studio の **デバッグコンソール**  
+    :::image type="complex" source="./media/console.png" alt-text=" Visual Studio デバッグ コンソール" lightbox="./media/console.png"::: 
+       Visual Studio **デバッグ コンソール**  
     :::image-end:::  
     
 ## [Visual Studio Code](#tab/visualstudiocode)  
 
-Microsoft Visual Studio コードを使って、WebView2 コントロールで実行されるスクリプトをデバッグします。  <!--Ensure that you're using Visual Studio Code version [insert build here] or later.  -->  
+Microsoft Visual Studio コードを使用して、WebView2 コントロールで実行されるスクリプトをデバッグします。  <!--Ensure that you're using Visual Studio Code version [insert build here] or later.  -->  
 
-Visual Studio コードで、次の操作を実行してコードをデバッグします。 
+コードVisual Studio、次のアクションを実行してコードをデバッグします。 
 
-1.  プロジェクトにファイルが必要です `launch.json` 。  プロジェクトにファイルが含まれていない場合は `launch.json` 、次のコードスニペットをコピーして、新しいファイルを作成し `launch.json` ます。  
-        
+1.  プロジェクトにはファイルが必要 `launch.json` です。  プロジェクトにファイルが存在しない場合は、次のコード スニペットをコピーして `launch.json` 、新しいファイルを作成 `launch.json` します。  
+    
     ```json
         "name": "Hello debug world",
         "type": "pwa-msedge",
@@ -116,40 +117,40 @@ Visual Studio コードで、次の操作を実行してコードをデバッグ
         },
         "useWebView": true,
     ```  
-        
-1.  ソースコードにブレークポイントを設定するには、その行にカーソルを合わせて、 `F9`
     
-    :::image type="complex" source="./media/breakpointvs.png" alt-text="DevTools のデバッグ" lightbox="./media/breakpointvs.png":::
-       Visual Studio コードでブレークポイントが設定されている  
+1.  ソース コードにブレークポイントを設定するには、行にカーソルを合わせると、 `F9`
+    
+    :::image type="complex" source="./media/breakpointvs.png" alt-text="ブレークポイントがコードでVisual Studioされている" lightbox="./media/breakpointvs.png":::
+       ブレークポイントがコードでVisual Studioされている  
     :::image-end:::
     
     > [!NOTE]
-    > Visual Studio コードではソースマッピングが実行されないため、WebView2 で使用するのと同じファイルにブレークポイントを設定してください。  パスが一致しない場合、Visual Studio コードはブレークポイントで実行中のコードを一時停止しません。  
+    > コードVisual Studioソース マッピングを実行しないので、WebView2 が使用するファイルと同じファイルにブレークポイントを設定してください。  パスが一致しない場合、Visual Studioコードは実行中のコードをブレークポイントで一時停止しません。  
     
 1.  コードを実行します。  
-    1.  [ **実行** ] タブで、ドロップダウンメニューから [起動構成] を選びます。  
-    1.  アプリケーションのデバッグを開始するには、[デバッグの開始] を選びます。これは、[起動構成] ドロップダウンの隣にある緑色の三角形です。  
+    1.  [実行 **] タブ** で、ドロップダウン メニューから起動構成を選択します。  
+    1.  アプリケーションのデバッグを開始するには、[デバッグの開始] を選択します。これは、起動構成ドロップダウンの横にある緑色の三角形です。  
         
-        :::image type="complex" source="./media/runvs.png" alt-text="DevTools のデバッグ" lightbox="./media/runvs.png":::
-           Visual Studio コードの [実行] タブ  
+        :::image type="complex" source="./media/runvs.png" alt-text=" Visual Studioコードの実行] タブ" lightbox="./media/runvs.png":::
+           Visual Studioコードの実行] タブ  
         :::image-end:::  
         
-1.  デバッグ **コンソール** を開いて、デバッグ出力とエラーを表示します。  
+1.  デバッグ **コンソールを開** き、デバッグ出力とエラーを表示します。  
     
-    :::image type="complex" source="./media/resultsvs.png" alt-text="DevTools のデバッグ" lightbox="./media/resultsvs.png":::
-       Visual Studio コードデバッグコンソール  
+    :::image type="complex" source="./media/resultsvs.png" alt-text=" Visual Studio コード デバッグ コンソール" lightbox="./media/resultsvs.png":::
+       Visual Studio コード デバッグ コンソール  
     :::image-end:::  
     
 **詳細設定**:  
 
-*   ターゲット Webview のデバッグ。 
-
-    一部の WebView2 アプリケーションでは、複数の WebView2 コントロールを使うことができます。 この状況でデバッグする WebView2 コントロールを選ぶには、ターゲット指定された WebView2 デバッグを使用できます。 
+*   対象となる Web ビューのデバッグ。 
     
-    `launch.json`ターゲット Webview のデバッグを使用するには、次の操作を開いて実行します。  
+    一部の WebView2 アプリケーションでは、複数の WebView2 コントロールを使用できます。 この状況でデバッグする WebView2 コントロールを選択するには、ターゲット Webview2 デバッグを使用できます。 
     
-    1.  パラメーターがに設定されていることを確認 `useWebview` `true` します。  
-    1.  パラメーターを追加 `urlFilter` します。  WebView2 コントロールが URL に移動すると、 `urlFilter` パラメーター値が使用され、url に表示される文字列が比較されます。  
+    次 `launch.json` の操作を開いて完了し、対象の Webview デバッグを使用します。  
+    
+    1.  パラメーターが `useWebview` 次に設定されているのを確認します `true` 。  
+    1.  パラメーターを追加 `urlFilter` します。  WebView2 コントロールが URL に移動すると、URL に表示される文字列を比較するためにパラメーター値 `urlFilter` が使用されます。  
     
     ```json
     "useWebview": "true",
@@ -162,15 +163,15 @@ Visual Studio コードで、次の操作を実行してコードをデバッグ
     urlFilter="file://C:/path/to/my/index.ts," // To match explicit file called index.ts.  
     ```  
     
-    アプリケーションをデバッグするときに、レンダリング処理の最初からコードをステップ実行しなければならない場合があります。 Web ページをサイトにレンダリングしていて、ソースコードにアクセスできない場合、web ページでは認識されないパラメーターが無視されるため、このオプションを使うことができ `?=value`  ます。   
+    アプリケーションをデバッグするときに、レンダリング プロセスの最初からコードをステップ実行する必要がある場合があります。 サイトで Web ページをレンダリングする場合にソース コードにアクセスできない場合は、このオプションを使用できます。Web ページは認識できないパラメーターを `?=value`  無視します。   
     
     > [!IMPORTANT]
-    > URL で最初の一致が見つかった後、デバッガーは停止します。  CDP ポートはすべての WebView2 コントロールで共有され、1つのポート番号を使用するため、2つの WebView2 コントロールを同時にデバッグすることはできません。  
+    > URL で最初の一致が見つかると、デバッガーは停止します。  CDP ポートは、すべての WebView2 コントロールで共有され、1 つのポート番号を使用するために、2 つの WebView2 コントロールを同時にデバッグすることはできません。  
     
 *   実行中のプロセスをデバッグする  
     
-    WebView2 プロセスを実行するためにデバッガーをアタッチすることが必要な場合があります。 そのためには、で `launch.json` `request` パラメーターをに更新 `attach` します。
-        
+    実行中の WebView2 プロセスにデバッガーをアタッチする必要がある場合があります。 これを行うには、in `launch.json` パラメーターを `request` 次の値に更新します `attach` 。
+    
     ```json
         "name": "Hello debugging world",
         "type": "pwa-msedge",
@@ -182,16 +183,14 @@ Visual Studio コードで、次の操作を実行してコードをデバッグ
         },
         "useWebView": true
     ```  
-        
-    WebView2 コントロールは、WebView2 コントロールのデバッグを許可するために、CDP ポートを開く必要があります。  デバッガーを開始する前に、コードをビルドして、1つの WebView2 コントロールのみに Chrome (Chrome) ポートを開いていることを確認する必要があります。  
     
-*   デバッグトレースオプション  
+    WebView2 コントロールは、Cdp ポートを開き、WebView2 コントロールのデバッグを可能にする必要があります。  デバッガーを起動する前に、Chrome Developer Protocol (CDP) ポートを開いている WebView2 コントロールが 1 つだけ確保するために、コードをビルドする必要があります。  
     
-    `trace`launch.jsのパラメーターを追加して、デバッグトレースを有効にします。  
+*   デバッグ トレース オプション  
     
-    1.  `trace`パラメーターを追加します。  
-        
- 
+    デバッグ トレース `trace` を有効にするにはlaunch.jsパラメーターを追加します。  
+    
+    1.  パラメーターを `trace` 追加します。  
         
         :::row:::
            :::column span="":::
@@ -208,8 +207,8 @@ Visual Studio コードで、次の操作を実行してコードをデバッグ
                 ,"trace": true  // Turn on  debug tracing, and save the output to a log file.
               ```  
               
-              :::image type="complex" source="./media/tracelog.png" alt-text="DevTools のデバッグ" lightbox="./media/tracelog.png":::
-                 ログファイルへのデバッグ出力の保存  
+              :::image type="complex" source="./media/tracelog.png" alt-text=" デバッグ出力をログ ファイルに保存します。" lightbox="./media/tracelog.png":::
+                 デバッグ出力をログ ファイルに保存する  
               :::image-end:::  
            :::column-end:::
            :::column span="":::
@@ -217,15 +216,15 @@ Visual Studio コードで、次の操作を実行してコードをデバッグ
               ,"trace": "verbose"  // Turn on verbose tracing in the Debug Output pane.
               ```  
               
-              :::image type="complex" source="./media/verbose.png" alt-text="DevTools のデバッグ" lightbox="./media/verbose.png":::
-                 冗長トレースが有効になっている Visual Studio コードデバッグの出力  
+              :::image type="complex" source="./media/verbose.png" alt-text=" 詳細出力" lightbox="./media/verbose.png":::
+                 Visual Studioトレースを有効にしたコード デバッグ出力  
               :::image-end:::  
            :::column-end:::
         :::row-end:::  
         
-*   Office アドインをデバッグします。
+*   アドインOfficeデバッグします。
     
-    Office アドインをデバッグする場合は、アドインのソースコードを Visual Studio コードの別のインスタンスで開きます。  WebView2 アプリケーションで launch.jsを開き、次のコードスニペットを追加して、デバッガーを Office アドインにアタッチします。
+    アドインをデバッグするOffice、アドイン ソース コードをアドイン コードの別のインスタンスVisual Studioします。  WebView2 launch.jsでアプリケーションを開き、次のコード スニペットを追加して、デバッガーをアドインにアタッチOfficeします。
     
     ```json
     ,"debugServer": 4711
@@ -233,40 +232,37 @@ Visual Studio コードで、次の操作を実行してコードをデバッグ
     
 *   デバッガーのトラブルシューティング  
     
-    デバッガーの使用時には、次のシナリオが発生する可能性があります。  
-
-    *   デバッガーはブレークポイントで停止せず、デバッグ出力があります。  この問題を解決するには、ブレークポイントを設定したファイルが WebView2 コントロールで使用されているファイルと同じであることを確認します。  デバッガーはソースパスマッピングを実行しません。  
-    *   実行中のプロセスにアタッチできないため、タイムアウトエラーが発生します。  この問題を解決するには、WebView2 コントロールが CDP ポートを開いていることを確認します。  レジストリの  `additionalBrowserArguments`  値が正しいこと、またはオプションが正しいことを確認します。  詳細については、「他 [のブラウザー][Webview2ReferenceDotnetMicrosoftWebWebview2CoreCorewebview2environmentoptionsAdditionalbrowserarguments] 引数と [Win32 用][Webview2ReferenceWin32Webview2IdlParameters]の .net を参照してください。  
+    デバッガーを使用する場合、次のシナリオが発生する場合があります。  
     
-* * *  
-
-
+    *   デバッガーはブレークポイントで停止しないので、デバッグ出力があります。  この問題を解決するには、ブレークポイントが設定されたファイルが、WebView2 コントロールで使用されているファイルと同じファイルである必要があります。  デバッガーはソース パスマッピングを実行します。  
+    *   実行中のプロセスにアタッチできないので、タイムアウト エラーが発生します。  この問題を解決するには、WebView2 コントロールが CDP ポートを開いているのを確認します。  レジストリの  `additionalBrowserArguments`  値が正しいか、オプションが正しいか確認します。  詳細については [、dotnet 用の additionalBrowserArguments][Webview2ReferenceDotnetMicrosoftWebWebview2CoreCorewebview2environmentoptionsAdditionalbrowserarguments] と [Win32 用の additionalBrowserArguments を参照してください][Webview2ReferenceWin32Webview2IdlParameters]。  
+    
 * * *  
 
 ## 関連項目  
 
-*   WebView2 の使用を開始するには、 [WebView2 の概要ガイド][Webview2MainGettingStarted]を参照してください。  
+*   WebView2 の使用を開始するには [、WebView2 の開始ガイドを参照してください][Webview2MainGettingStarted]。  
 *   WebView2 機能の包括的な例については、GitHub の [WebView2Samples][GithubMicrosoftedgeWebview2samples] リポジトリを参照してください。
-*   WebView2 Api について詳しくは、 [api リファレンス][Webview2ApiReference]をご覧ください。
-*   WebView2 の詳細については、「 [WebView2 のリソース][Webview2MainNextSteps]」を参照してください。
-
+*   WebView2 API の詳細については、API リファレンスを [参照してください][Webview2ApiReference]。
+*   WebView2 の詳細については [、「WebView2 リソース」を参照してください][Webview2MainNextSteps]。
+    
 ## Microsoft Edge WebView チームと連絡を取り合う  
 
 [!INCLUDE [contact WebView team note](../includes/contact-webview-team-note.md)]  
 
 <!-- links -->  
 
-[DevtoolsGuideChromiumMain]: ../../devtools-guide-chromium.md "Microsoft Edge (Chromium) 開発者ツール"  
+[DevtoolsGuideChromiumMain]: ../index.md "Microsoft Edge (Chromium) 開発者ツール |Microsoft ドキュメント"  
 
-[Webview2ReferenceDotnetMicrosoftWebWebview2CoreCorewebview2environmentoptionsAdditionalbrowserarguments]: /dotnet/api/microsoft.web.webview2.core.corewebview2environmentoptions.additionalbrowserarguments "CoreWebView2EnvironmentOptions/ブラウザーの引数プロパティ (WebView2 の場合) |Microsoft ドキュメント"  
-[Webview2ReferenceWin32Webview2IdlParameters]: /microsoft-edge/webview2/reference/win32/webview2-idl#createcorewebview2environmentwithoptions  "CreateCoreWebView2Environment-Globals |Microsoft ドキュメント"  
-[Webview2ApiReference]: ../webview2-api-reference.md "Microsoft Edge WebView2 API リファレンス |Microsoft ドキュメント"  
-[Webview2MainNextSteps]: ../index.md#next-steps "次の手順-Microsoft Edge WebView2 の概要 (プレビュー) |Microsoft ドキュメント"  
-[Webview2MainGettingStarted]: ../index.md#getting-started "はじめに-Microsoft Edge WebView2 の概要 (プレビュー) |Microsoft ドキュメント"  
+[Webview2ReferenceDotnetMicrosoftWebWebview2CoreCorewebview2environmentoptionsAdditionalbrowserarguments]: /dotnet/api/microsoft.web.webview2.core.corewebview2environmentoptions.additionalbrowserarguments "CoreWebView2EnvironmentOptions.AdditionalBrowserArguments プロパティ (Microsoft.Web.WebView2.Core) |Microsoft Docs"  
+[Webview2ReferenceWin32Webview2IdlParameters]: /microsoft-edge/webview2/reference/win32/webview2-idl#createcorewebview2environmentwithoptions  "CreateCoreWebView2Environment - Globals |Microsoft Docs"  
+[Webview2ApiReference]: ../webview2-api-reference.md "Microsoft Edge WebView2 API リファレンス |Microsoft Docs"  
+[Webview2MainNextSteps]: ../index.md#next-steps "次の手順 - Microsoft Edge WebView2 の概要 (プレビュー) |Microsoft Docs"  
+[Webview2MainGettingStarted]: ../index.md#getting-started "はじめに - Microsoft Edge WebView2 の概要 (プレビュー) |Microsoft Docs"  
 
-[GithubMicrosoftedgeWebviewfeedbackMain]: https://github.com/MicrosoftEdge/WebViewFeedback "WebView フィードバック-MicrosoftEdge/WebViewFeedback |GitHub"  
-[GithubMicrosoftedgeWebview2samples]: https://github.com/MicrosoftEdge/WebView2Samples "WebView2 サンプル-MicrosoftEdge/WebView2Samples |GitHub"  
+[GithubMicrosoftedgeWebviewfeedbackMain]: https://github.com/MicrosoftEdge/WebViewFeedback "WebView フィードバック - MicrosoftEdge/WebViewFeedback |GitHub"  
+[GithubMicrosoftedgeWebview2samples]: https://github.com/MicrosoftEdge/WebView2Samples "WebView2 サンプル-MicrosoftEdge/WebView2Samples | GitHub"  
 
-[GithubMicrosoftVscodeJSDebugWhatsNew]: https://github.com/microsoft/vscode-js-debug#whats-new "新機能-Visual Studio コードの JavaScript デバッガー-microsoft/vscode-js-debug |GitHub"  
+[GithubMicrosoftVscodeJSDebugWhatsNew]: https://github.com/microsoft/vscode-js-debug#whats-new "新機能- Visual Studio コードの JavaScript デバッガー - microsoft/vscode-js-debug |GitHub"  
 
-[GithubMicrosoftVscodeEdgeDebug2ReadmeChromiumWebviewApplications]: https://github.com/microsoft/vscode-edge-debug2/blob/master/README.md#microsoft-edge-chromium-webview-applications "Microsoft Edge (Chromium) WebView アプリケーション-Visual Studio Code-Microsoft Edge 用デバッガー-microsoft/vscode-edge-debug2 |GitHub"  
+[GithubMicrosoftVscodeEdgeDebug2ReadmeChromiumWebviewApplications]: https://github.com/microsoft/vscode-edge-debug2/blob/master/README.md#microsoft-edge-chromium-webview-applications "Microsoft Edge (Chromium) WebView アプリケーション - Visual Studio コード - Microsoft Edge のデバッガー - microsoft/vscode-edge-debug2 |GitHub"  

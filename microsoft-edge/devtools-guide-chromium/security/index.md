@@ -1,18 +1,18 @@
 ---
-description: セキュリティパネルを使用して、ページが HTTPS によって完全に保護されていることを確認します。
-title: Microsoft Edge DevTools のセキュリティに関する問題を理解する
+description: セキュリティ パネルを使用して、ページが HTTPS で完全に保護されている必要があります。
+title: Microsoft Edge DevTools のセキュリティの問題を理解する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 10/19/2020
+ms.date: 12/11/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 09f7e641ddd8da74c361980b9ce61b212a8477fe
-ms.sourcegitcommit: 99eee78698dc95b2a3fa638a5b063ef449899cda
+ms.openlocfilehash: 5bef22eae8deacc81e31cf6d1c7791e016541346
+ms.sourcegitcommit: a35a6b5bbc21b7df61d08cbc6b074b5325ad4fef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "11125385"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "11230615"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -28,74 +28,74 @@ ms.locfileid: "11125385"
    See the License for the specific language governing permissions and
    limitations under the License.  -->  
 
-# Microsoft Edge DevTools のセキュリティに関する問題を理解する  
+# Microsoft Edge DevTools のセキュリティの問題を理解する  
 
   
 
-<!--Use the **Security** Panel in [Microsoft Edge DevTools][MicrosoftEdgeDevTools] to make sure HTTPS is properly implemented on a page.  See **Why HTTPS Matters** to learn why every website should be protected with HTTPS, even sites that do not handle sensitive user data.  -->  
+<!--Use the **Security** Panel in [Microsoft Edge DevTools][MicrosoftEdgeDevTools] to make sure HTTPS is properly implemented on a page.  Navigate to **Why HTTPS Matters** to learn why every website should be protected with HTTPS, even sites that do not handle sensitive user data.  -->  
 
 <!--todo: add section when why-https is available -->  
 
-## セキュリティパネルを開く  
+## セキュリティ パネルを開く  
 
-**セキュリティ**パネルは、ページのセキュリティを検査するための devtools の主要な場所です。  
+セキュリティ **パネル** は、ページのセキュリティを検査する DevTools の主要な場所です。  
 
-1.  [DevTools を開き][DevToolsOpen]ます。  
-1.  [ **セキュリティ** ] タブを選択して [ **セキュリティ** ] パネルを開きます。  
+1.  [DevTools を開きます][DevToolsOpen]。  
+1.  [セキュリティ **] タブを** 選択して、[セキュリティ] パネル **を開** きます。  
     
-    :::image type="complex" source="../media/security-security-overview-secure.msft.png" alt-text="セキュリティパネル" lightbox="../media/security-security-overview-secure.msft.png":::
-       **セキュリティ**パネル  
+    :::image type="complex" source="../media/security-security-overview-secure.msft.png" alt-text="[セキュリティ] パネル" lightbox="../media/security-security-overview-secure.msft.png":::
+       [ **セキュリティ]** パネル  
     :::image-end:::  
     
 ## 一般的な問題  
 
-### セキュリティで保護されていない本文  
+### セキュリティで保護されていないメインの原点  
 
-ページのメインの起点がセキュリティで保護されていない場合、**このページは**セキュリティで保護されていないことを**示してい**ます。  
+ページのメインの作成元がセキュリティで保護されていない場合****、セキュリティの概要では、この**ページはセキュリティで保護されていないと表示されます**。  
 
-:::image type="complex" source="../media/security-security-overview-non-secure.msft.png" alt-text="セキュリティパネル" lightbox="../media/security-security-overview-non-secure.msft.png":::
+:::image type="complex" source="../media/security-security-overview-non-secure.msft.png" alt-text="セキュリティで保護されていないページ" lightbox="../media/security-security-overview-non-secure.msft.png":::
    セキュリティで保護されていないページ  
 :::image-end:::  
 
-この問題は、アクセスした URL が HTTP 経由で要求された場合に発生します。  セキュリティを確保するには、HTTPS 経由で要求する必要があります。  たとえば、アドレスバーに表示される URL を見ると、次のように表示されることがあり `http://example.com` ます。  URL がセキュリティで保護されるようにし `https://example.com` ます。  
+この問題は、アクセスした URL が HTTP で要求された場合に発生します。  セキュリティを確保するには、HTTPS 経由で要求する必要があります。  たとえば、アドレス バーの URL を確認すると、次のようになります `http://example.com` 。  URL をセキュリティで保護するには、次の必要があります `https://example.com` 。  
 
-サーバーに HTTPS を既にセットアップしている場合は、この問題を解決するために必要な操作は、すべての HTTP 要求を HTTPS にリダイレクトするようにサーバーを構成することだけです。  
+サーバーで HTTPS を既にセットアップしている場合、この問題を解決するために必要なのは、すべての HTTP 要求を HTTPS にリダイレクトするようにサーバーを構成することです。  
 
-サーバーで HTTPS をセットアップしていない場合は、 [暗号化][LetsEncrypt] を使用して、処理を開始するための無料で比較的簡単な方法を提供します。  または、サイトを CDN でホストすることを検討することもできます。  既定では、ほとんどの主要な CDNs ホストサイトが HTTPS で提供されます。  
+サーバーに HTTPS を設定していない場合は [、Let's Encrypt][LetsEncrypt] を使用すると、無料で比較的簡単にプロセスを開始できます。  または、CDN でのサイトのホストを検討する場合もあります。  ほとんどの主要な CDN は、既定で HTTPS 上のサイトをホストします。  
 
 > [!TIP]
-> [Webhint][Webhint]で[https の使用][WebhintUseHttps]に関するヒントを使用すると、すべての HTTP 要求が HTTPS に転送されることを確認するプロセスを自動化することができます。  
+> Webhint [で HTTPS][WebhintUseHttps] ヒント [を使用すると][Webhint] 、すべての HTTP 要求が HTTPS に送信されるプロセスを自動化できる場合があります。  
 
-### 混在したコンテンツ  
+### 混在コンテンツ  
 
-**混在** しているコンテンツとは、ページのメインの起点がセキュリティで保護されているが、ページは安全ではない元のリソースを要求したことを意味します。  混在したコンテンツページは、HTTP コンテンツがスニファーでアクセス可能であり、man-in-the-middle 攻撃に対して脆弱であるため、部分的に保護されています。  
+**コンテンツが** 混在しているということは、ページのメインの作成元は安全ですが、ページはセキュリティ保護されていない元の元のリソースを要求しました。  混在コンテンツ ページは部分的にしか保護されません。これは、HTTP コンテンツはスニファーからアクセス可能であり、man-in-the-middle 攻撃に対して脆弱だからです。  
 
-:::image type="complex" source="../media/security-security-overview-mixed-secure.msft.png" alt-text="セキュリティパネル" lightbox="../media/security-security-overview-mixed-secure.msft.png":::
-   混在したコンテンツ  
+:::image type="complex" source="../media/security-security-overview-mixed-secure.msft.png" alt-text="混在コンテンツ" lightbox="../media/security-security-overview-mixed-secure.msft.png":::
+   混在コンテンツ  
 :::image-end:::  
 
-上の図では、[**ネットワークパネル] で [1 つの要求を表示**] を選択して [ネットワーク] パネルを開き、 **Network** `mixed-content:displayed` **ネットワークログ**にセキュリティ以外のリソースしか表示されないようにフィルターを適用します。  
+前の図で、[ネットワーク] パネルで **[View 1 request]** を選択してネットワーク パネルを開き、セキュリティで保護されていないリソースのみをネットワーク ログに表示するフィルター**** `mixed-content:displayed` を適用します。 ****  
 
-:::image type="complex" source="../media/security-network-filter.msft.png" alt-text="セキュリティパネル" lightbox="../media/security-network-filter.msft.png":::
-   **ネットワークログ**の混在したリソース  
+:::image type="complex" source="../media/security-network-filter.msft.png" alt-text="ネットワーク ログ内の混在リソース" lightbox="../media/security-network-filter.msft.png":::
+   ネットワーク ログ内の混在 **リソース**  
 :::image-end:::  
 
 ## 詳細の表示  
 
-### メインの元の証明書を表示する  
+### メインの生成元の証明書を表示する  
 
-[ **セキュリティの概要**] で、[ **証明書の表示** ] を選択して、メインの元の証明書をすばやく検査します。  
+[セキュリティ **の概要] で**、[証明書の **表示] を** 選択して、証明書をメインの発行元にすばやく検査します。  
 
-:::image type="complex" source="../media/security-security-overview-secure-view-certificate.msft.png" alt-text="セキュリティパネル" lightbox="../media/security-security-overview-secure-view-certificate.msft.png":::
-   メインの元の証明書  
+:::image type="complex" source="../media/security-security-overview-secure-view-certificate.msft.png" alt-text="メインの生成元証明書" lightbox="../media/security-security-overview-secure-view-certificate.msft.png":::
+   メインの生成元証明書  
 :::image-end:::  
 
-### オリジンの詳細の表示  
+### 原点の詳細を表示する  
 
-左側のナビゲーションでいずれかのエントリをクリックして、元の情報を表示します。  [詳細] ページでは、接続と証明書の情報を表示できます。  証明書の透過性情報は、可能な場合にも表示されます。  
+左側のナビゲーションのエントリの 1 つを選択して、原点の詳細を表示します。  詳細ページから、接続と証明書の情報を表示できます。  証明書の透過性情報は、利用可能な場合にも表示されます。  
 
-:::image type="complex" source="../media/security-security-overview-mixed-secure-main-origin.msft.png" alt-text="セキュリティパネル" lightbox="../media/security-security-overview-mixed-secure-main-origin.msft.png":::
-   主要な原産国の詳細  
+:::image type="complex" source="../media/security-security-overview-mixed-secure-main-origin.msft.png" alt-text="メインの原点の詳細" lightbox="../media/security-security-overview-mixed-secure-main-origin.msft.png":::
+   メインの原点の詳細  
 :::image-end:::  
 
 ## Microsoft Edge DevTools チームと連絡を取る  
@@ -104,20 +104,21 @@ ms.locfileid: "11125385"
 
 <!-- links -->  
 
-[MicrosoftEdgeDevTools]: ../../devtools-guide-chromium.md "Microsoft Edge (Chromium) 開発者ツール |Microsoft ドキュメント"  
-[DevToolsOpen]: ../open.md "Microsoft Edge DevTools を開く |Microsoft ドキュメント"  
-[LetsEncrypt]: https://letsencrypt.org "暗号化されていない SSL/TLS 証明書を使用する"  
+[MicrosoftEdgeDevTools]: ../../devtools-guide-chromium/index.md "Microsoft Edge (Chromium) 開発者ツール |Microsoft Docs"  
+[DevToolsOpen]: ../open/index.md "Microsoft Edge DevTools を開く | Microsoft Docs"  
 
-[Webhint]: https://webhint.io "web ヒント"  
-[WebhintUseHttps]: https://webhint.io/docs/user-guide/hints/hint-https-only "HTTPS を使用 |webhint に関するドキュメント"  
+[LetsEncrypt]: https://letsencrypt.org "暗号化 - 無料の SSL/TLS 証明書"  
+
+[Webhint]: https://webhint.io "webhint"  
+[WebhintUseHttps]: https://webhint.io/docs/user-guide/hints/hint-https-only "HTTPS を使用する |webhint ドキュメント"  
 
 <!--[mixed]: /web/fundamentals/security/prevent-mixed-content/what-is-mixed-content ""  -->
 
 > [!NOTE]
-> このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
-> 元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/security/index) にあり、 [Kayce Basques][KayceBasques] テクニカルライター、Chrome Devtools \ & Lighthouse \) で作成されています。  
+> このページの一部は、 [Google によっ て作成および共有された][GoogleSitePolicies]作業に基づく変更で、「[Creative Commons Attribution 4.0 International License][CCA4IL]」で記載されている条項に従って使用されます。  
+> 元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/security/index) にあり、 [Kayce Basques][KayceBasques] \(Chrome DevTools \& Lighthouse\ のテクニカル ライター) が作成しました。  
 
-[![クリエイティブコモンズライセンス][CCby4Image]][CCA4IL]  
+[![Creative Commons ライセンス][CCby4Image]][CCA4IL]  
 この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。  
 
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  

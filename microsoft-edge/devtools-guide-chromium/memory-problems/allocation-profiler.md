@@ -1,18 +1,18 @@
 ---
-description: タイムライン上で割り当てインストルメンテーションを使用して、適切なガベージコレクションが実行されていないオブジェクトを探し、引き続きメモリを保持します。
-title: タイムラインでの割り当てインストルメンテーションの使い方
+description: タイムラインで Allocation インストルメンテーションを使用して、適切にガベージ コレクションされていないオブジェクトを検索し、メモリを保持し続ける。
+title: タイムラインで Allocation Instrumentation を使用する方法
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 10/19/2020
+ms.date: 12/11/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 1e76e3459128be5b659d790163ef62447dd97ae4
-ms.sourcegitcommit: 99eee78698dc95b2a3fa638a5b063ef449899cda
+ms.openlocfilehash: 946c2d8b45f316b491a604c16c37bb2467983222
+ms.sourcegitcommit: a35a6b5bbc21b7df61d08cbc6b074b5325ad4fef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "11125448"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "11230916"
 ---
 <!-- Copyright Meggin Kearney 
 
@@ -28,62 +28,62 @@ ms.locfileid: "11125448"
    See the License for the specific language governing permissions and
    limitations under the License. -->
 
-# タイムラインでの割り当てインストルメンテーションの使い方  
+# タイムラインで Allocation インストルメンテーションを使用する方法  
 
-**タイムライン上で割り当てインストルメンテーション**を使用して、適切なガベージコレクションが実行されていないオブジェクトを探し、引き続きメモリを保持します。  
+タイムライン **で Allocation インストルメンテーションを** 使用して、適切にガベージ コレクションされていないオブジェクトを検索し、メモリを保持し続ける。  
 
-## タイムラインの割り当てインストルメンテーションのしくみ  
+## タイムラインでの Allocation のインストルメンテーションのしくみ  
 
-**タイムライン上の割り当てインストルメンテーション** は、 **ヒーププロファイラー** の詳細なスナップショット情報を、 **パフォーマンス** パネルの段階的な更新と追跡と組み合わせたものです。  同様に、オブジェクトのヒープ割り当てのトラッキングでは、記録の開始、一連の操作の実行、分析のための記録の停止などを行います。  
+**タイムラインでの割り当ての**インストルメンテーションは****、ヒープ プロファイラーの詳細なスナップショット情報と、パフォーマンス パネルの増分更新と追跡を**組み合**わせたものになります。  同様に、オブジェクトのヒープ割り当てを追跡するには、記録を開始し、一連の操作を実行し、分析のために記録を停止します。  
 
 <!--todo: add profile memory problems (heap profiler) section when available  -->  
 <!--todo: add profile evaluate performance (Performance panel) section when available  -->  
 
-**タイムライン上の割り当てインストルメンテーションで** は、記録中の (50 ミリ秒ごとに) ヒープスナップショットが定期的に、記録の最後に1つの最終スナップショットが行われます。  
+**タイムラインでの割** り当てインストルメンテーションは、記録 \(50 ミリ秒ごとに頻繁に) ヒープ スナップショットと、記録の最後に 1 つの最終的なスナップショットを定期的に取得します。  
 
-:::image type="complex" source="../media/memory-problems-memory-allocation-timeline-snapshot-highlighted.msft.png" alt-text="タイムライン上の割り当てインストルメンテーション" lightbox="../media/memory-problems-memory-allocation-timeline-snapshot-highlighted.msft.png":::
-   **タイムライン上の割り当てインストルメンテーション**  
+:::image type="complex" source="../media/memory-problems-memory-allocation-timeline-snapshot-highlighted.msft.png" alt-text="タイムラインでの割り当てインストルメンテーション" lightbox="../media/memory-problems-memory-allocation-timeline-snapshot-highlighted.msft.png":::
+   **タイムラインでの割り当てインストルメンテーション**  
 :::image-end:::  
 
 > [!NOTE]
-> の後の番号は、 `@` 記録セッション中に作成された複数のスナップショット間で保持されるオブジェクト ID です。  永続的なオブジェクト ID によって、ヒープの状態を正確に比較できます。  オブジェクトはガベージコレクション中に移動されるため、オブジェクトのアドレスを表示すると意味がありません。  
+> その後の数値は、レコーディング セッション中に取得された複数のスナップショット全体にわたって保持される `@` オブジェクト ID です。  永続的なオブジェクト ID を使用すると、ヒープ状態を正確に比較できます。  オブジェクトはガベージ コレクション中に移動されます。そのため、オブジェクトのアドレスを表示する方法は意味がありません。  
 
-## タイムラインでの割り当てインストルメンテーションの有効化  
+## タイムラインで Allocation Instrumentation を有効にする  
 
-**タイムラインでの割り当てインストルメンテーション**の使用を開始するには、次の操作を実行します。  
+タイムラインで Allocation インストルメンテーションの使用を開始するには、 **次の操作を実行します**。  
 
-1.  [DevTools を開き][DevtoolsOpenIndex]ます。  
-1.  [ **メモリ** ] パネルを開き、[ **タイムライン上の割り当てインストルメンテーション** ] を選択します。  
+1.  [DevTools を開きます][DevtoolsOpenIndex]。  
+1.  メモリ パネル **を開** き、タイムラインの [割り当て **インストルメンテーション] ラジオ ボタンを** 選択します。  
 1.  Start recording (録画開始)   
     
-    :::image type="complex" source="../media/memory-problems-memory-allocation-instrumentation-on-timeline-selected.msft.png" alt-text="タイムライン上の割り当てインストルメンテーション" lightbox="../media/memory-problems-memory-allocation-instrumentation-on-timeline-selected.msft.png":::
-       ヒープ割り当てプロファイラーの記録  
+    :::image type="complex" source="../media/memory-problems-memory-allocation-instrumentation-on-timeline-selected.msft.png" alt-text="レコード ヒープ割り当てプロファイラー" lightbox="../media/memory-problems-memory-allocation-instrumentation-on-timeline-selected.msft.png":::
+       レコード ヒープ割り当てプロファイラー  
     :::image-end:::  
     
-## ヒープ割り当てタイムラインの読み取り  
+## ヒープ割り当てのタイムラインを読み取る  
 
-ヒープ割り当てのタイムラインには、オブジェクトが作成されている場所と保持パスが示されます。  次の図では、上部のバーは、新しいオブジェクトがヒープで見つかったことを示します。  
+ヒープ割り当てのタイムラインは、オブジェクトが作成されている場所を示し、保持パスを識別します。  次の図では、上部のバーは、ヒープ内で新しいオブジェクトが見つかったかどうかを示しています。  
 
-各バーの高さは、最近割り当てられたオブジェクトのサイズに対応し、バーの色は、それらのオブジェクトが最終的なヒープスナップショットでまだ存在するかどうかを示します。  青いバーは、タイムラインの最後にあるオブジェクトを示します。灰色のバーは、タイムラインで割り当てられたが、ガベージコレクションされているオブジェクトを示します。  
+各バーの高さは、最近割り当てられたオブジェクトのサイズに対応し、バーの色は、それらのオブジェクトが最終的なヒープ スナップショット内にまだ存在するかどうかを示します。  青いバーは、タイムラインの最後にまだ存在しているオブジェクトを示し、灰色のバーは、タイムラインの間に割り当てられたが、その後ガベージ コレクションされたオブジェクトを示します。  
 
-:::image type="complex" source="../media/memory-problems-memory-allocation-timelines-snapshot.msft.png" alt-text="タイムライン上の割り当てインストルメンテーション" lightbox="../media/memory-problems-memory-allocation-timelines-snapshot.msft.png":::
-   **タイムラインスナップショットの割り当てインストルメンテーション**  
+:::image type="complex" source="../media/memory-problems-memory-allocation-timelines-snapshot.msft.png" alt-text="タイムライン スナップショットでの割り当てのインストルメンテーション" lightbox="../media/memory-problems-memory-allocation-timelines-snapshot.msft.png":::
+   **タイムライン スナップショットでの割り当てのインストルメンテーション**  
 :::image-end:::  
 
 <!--In the following figure, an action was performed 3 times.  The sample program caches five objects, so the last five blue bars are expected.  But the left-most blue bar indicates a potential problem.  -->  
 <!--todo: redo figure 4 with multiple click actions  -->  
 
-上のタイムラインのスライダーを使用して、特定のスナップショットを拡大し、その時点で最近割り当てられたオブジェクトを確認することができます。  
+上のタイムラインのスライダーを使って、その特定のスナップショットを拡大し、その時点で最近割り当てられたオブジェクトを確認できます。  
 
-:::image type="complex" source="../media/memory-problems-memory-allocation-timeline-snapshot-highlighted-annotated.msft.png" alt-text="タイムライン上の割り当てインストルメンテーション" lightbox="../media/memory-problems-memory-allocation-timeline-snapshot-highlighted-annotated.msft.png":::
-   スナップショットの拡大  
+:::image type="complex" source="../media/memory-problems-memory-allocation-timeline-snapshot-highlighted-annotated.msft.png" alt-text="スナップショットを拡大する" lightbox="../media/memory-problems-memory-allocation-timeline-snapshot-highlighted-annotated.msft.png":::
+   スナップショットを拡大する  
 :::image-end:::  
 
-ヒープ内の特定のオブジェクトをクリックすると、ヒープスナップショットの下の部分に保持ツリーが表示されます。  オブジェクトへの保持パスを調べることで、オブジェクトが収集されなかった理由を理解するために十分な情報を得ることができます。また、不要な参照を削除するために必要なコードの変更を行う必要があります。  
+ヒープ内の特定のオブジェクトをクリックすると、ヒープ スナップショットの下部に保持ツリーが表示されます。  オブジェクトへの保持パスを調べることで、オブジェクトが収集されていない理由を理解するのに十分な情報が得ら、不要な参照を削除するために必要なコードを変更する必要があります。  
 
-## 関数によるメモリ割り当てを表示する  
+## メモリ割り当てを関数別に表示する  
 
-JavaScript 関数によるメモリ割り当てを表示できます。  詳細については、「 [関数によるメモリ割り当てを調査][DevtoolsMemoryProblemsIndexInvestigateMemoryAllocationFunction]する」を参照してください。  
+JavaScript 関数によってメモリ割り当てを表示できます。  詳細については、「関数別にメモリ割り [当てを調査する」に移動します][DevtoolsMemoryProblemsIndexInvestigateMemoryAllocationFunction]。  
 
 ## Microsoft Edge DevTools チームと連絡を取る  
 
@@ -91,8 +91,8 @@ JavaScript 関数によるメモリ割り当てを表示できます。  詳細�
 
 <!-- links -->  
 
-[DevToolsOpenIndex]: ../open.md "Microsoft Edge (Chromium) DevTools を開く |Microsoft ドキュメント"
-[DevtoolsMemoryProblemsIndexInvestigateMemoryAllocationFunction]: ./index.md#investigate-memory-allocation-by-function "関数によるメモリ割り当てを調べる-メモリの問題を解決する |Microsoft ドキュメント"  
+[DevToolsOpenIndex]: ../open/index.md "Microsoft Edge (Chromium) DevTools を開く |Microsoft Docs"
+[DevtoolsMemoryProblemsIndexInvestigateMemoryAllocationFunction]: ./index.md#investigate-memory-allocation-by-function "関数別にメモリ割り当てを調査する - メモリの問題を修正する |Microsoft Docs"  
 
 <!--[HeapProfiler]: ./heap-snapshots.md "How to Record Heap Snapshots"  -->  
 <!--[PerformancePanel]: ../profile/evaluate-performance/timeline-tool ""  -->  
@@ -100,10 +100,10 @@ JavaScript 関数によるメモリ割り当てを表示できます。  詳細�
 [MicrosoftEdgeChannel]: https://www.microsoftedgeinsider.com/download "Microsoft Edge チャネルをダウンロードする"  
 
 > [!NOTE]
-> このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
-> 元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/memory-problems/allocation-profiler) にあり、 [Meggin Kearney][MegginKearney] \ (テクニカルライター \) によって作成されています。  
+> このページの一部の情報は、[Google によって作成および共有][GoogleSitePolicies]されている著作物に基づいており、[Creative Commons Attribution 4.0 International License][CCA4IL] に記載されている条項に従って使用されています。  
+> 元のページはここから [見](https://developers.google.com/web/tools/chrome-devtools/memory-problems/allocation-profiler) つかり [、Meggin Kearney][MegginKearney] \(Technical Writer\) によって作成されています。  
 
-[![クリエイティブコモンズライセンス][CCby4Image]][CCA4IL]  
+[![Creative Commons ライセンス][CCby4Image]][CCA4IL]  
 この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。  
 
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  

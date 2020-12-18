@@ -1,98 +1,105 @@
 ---
-title: リモートデバッグ Surface Duo エミュレーターの使用を開始する
-author: zoherghadyali
-ms.author: zoghadya
-ms.date: 04/28/2020
+description: Surface Emulator エミュレーターのリモート デバッグを開始します。
+title: Surface Emulator エミュレーターのリモート デバッグの開始
+author: MSEdgeTeam
+ms.author: msedgedevrel
+ms.date: 12/17/2020
 ms.topic: article
 ms.prod: microsoft-edge
-keywords: microsoft edge、web 開発、f12 ツール、devtools、リモートデバッグ、android、surface duo
-ms.openlocfilehash: af6fa6433b0bc6bba0599e6e9a805235504caadd
-ms.sourcegitcommit: 966bfc60040acc794b6ee20eb2084bc8264a4852
+keywords: Microsoft Edge, Web 開発, f12 ツール, devtools, リモート デバッグ, android, surface の数
+ms.openlocfilehash: f44c85c468de3bdd7727695e3f33269584966231
+ms.sourcegitcommit: a35a6b5bbc21b7df61d08cbc6b074b5325ad4fef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "10621503"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "11230647"
 ---
-# リモートデバッグ Surface Duo エミュレーターの使用を開始する
+# Surface Emulator エミュレーターのリモート デバッグの開始  
 
-この記事では、 [microsoft][DesktopEdge]edge のデスクトップインスタンスから[Surface Duo][SurfaceDuo]エミュレーター上の[microsoft edge アプリ][AndroidEdge]の web コンテンツをリモートでデバッグするプロセスについて説明します。 Surface Duo デバイスでのデバッグについては、「 [Android デバイスのリモートデバッグ][RemoteDebuggingAndroid]のガイド」を参照してください。
+この記事では[、Microsoft Edge][MicrosoftSurfaceDevicesSurfaceDuo]のデスクトップ インスタンスから Surface Emulator の[Microsoft Edge][GooglePlayStoreAppsComMicrosoftEmmx]アプリで Web コンテンツをリモートでデバッグするプロセスについて[説明します][MicrosoftEdge]。  Surface Duo デバイスでのデバッグの詳細については、Android デバイスのリモート デバッグに関する [ガイドに従ってください][DevtoolsRemoteDebuggingMain]。  
 
 ## 始める前に
 
-Surface [duo エミュレーター][DuoEmulator]を実行する前に[surface duo SDK][DuoSdk]をインストールします。 詳しくは、「 [Surface DUO SDK の入手][DuoSdkdocs]」をご覧ください。
+Surface Emulator エミュレーター [を実行する][MicrosoftDownload100847] 前に [、Surface Sdk をインストールします][DualScreenAndroidUseEmulator]。  詳しくは [、Surface Sdk の取得に関するページをご覧ください][DualScreenAndroidGetDuoSdk]。  
 
-## 手順 1: edge://inspect に移動する
+## 手順 1: フォルダーに移動edge://inspect  
 
-[Microsoft Edge][DesktopEdge]のデスクトップインスタンスを開き、に移動し `edge://inspect` ます。
+Microsoft Edge のデスクトップ インスタンス [を開き][MicrosoftEdge]、次に移動します `edge://inspect` 。  
 
-> ##### 図 1  
-> デスクトップ `edge://inspect` 上の Microsoft edge のページデスクトップ上の ![ microsoft edge の edge://inspect ページ][ImageEdgeInspect]
-
-> [!NOTE]
-> ページで `edge://inspect` [Surface Duo エミュレーター][DuoEmulator]が認識されない場合は、エミュレーターを再起動します。
-
-## 手順 2: Surface Duo エミュレーターを起動する
-
-[Surface Duo エミュレーター][DuoEmulator]を起動します。 エミュレーターでは、2つの異なる画面がエミュレーターで実行されていることに注意してください。
-
-> ##### 図 2
-> Surface duo エミュレーター ![ の Surface duo エミュレーター][ImageDuoEmulator]  
-
-## 手順 3: Surface Duo エミュレーターで Microsoft Edge に web コンテンツを読み込む
-
-どちらの画面でも、 [Surface Duo エミュレーター][DuoEmulator]のお気に入りトレイを上にスワイプして、[アプリ] ドローワを表示します。 [ **Edge** ] を選択して、 [Microsoft edge アプリ][AndroidEdge]を起動します。
-
-> ##### 図 3
-> Surface duo エミュレーター上の Microsoft edge アプリ (surface duo エミュレーター上の microsoft edge ![ アプリ)][ImageDuoEmulatorEdge]  
-
-[Microsoft Edge アプリ][AndroidEdge]でデバッグする web サイトまたはアプリに移動します。
-
-## 手順 4: Surface Duo エミュレーターから web コンテンツをデバッグする 
-
-[Microsoft Edge][DesktopEdge]のデスクトップインスタンスに切り替えます。 この `edge://inspect` ページには、 [Surface Duo エミュレーター][DuoEmulator]で実行されている、開いているタブまたは[pwas][PwaDocs]の一覧が表示された**SurfaceDuoEmulator**が表示されるようになりました。
-
-> ##### 図 4
-> このページには、 `edge://inspect` エミュレーターで実行されている Microsoft edge アプリの開いているタブの一覧が表示され ![ ます。 Edge://inspect ページには、エミュレーターで実行されている microsoft edge アプリの開いているタブの一覧が表示されます。][ImageEdgeInspectTargets]  
+:::image type="complex" source="../media/remote-debugging-surface-duo-inspect-page.msft.png" alt-text="デスクトップedge://inspect Microsoft Edge のページ" lightbox="../media/remote-debugging-surface-duo-inspect-page.msft.png":::
+   デスクトップ `edge://inspect` 上の Microsoft Edge のページ  
+:::image-end:::
 
 > [!NOTE]
-> ページに**SurfaceDuoEmulator**が表示されない場合は `edge://inspect` 、 [Surface Duo エミュレーター][DuoEmulator]で[Microsoft Edge アプリ][AndroidEdge]のタブを開くか、または閉じてみてください。 その他のトラブルシューティング手順については、「 [Android デバイスのトラブルシューティング」][TroubleshootingAndroid]を参照してください。
+> ページで `edge://inspect` Surface Emulator エミュレーターが認識されない場合 [は、][DualScreenAndroidUseEmulator]エミュレーターを再起動します。  
 
-エミュレーターで実行されている開いているタブの一覧から、デバッグする web コンテンツがあるタブで [**検査**] を選びます。 [Microsoft Edge DevTools][DevToolsDocs]が新しいウィンドウで開きます。 「ツール」「**切り替え Screencast** ![ トグル Screencast を選択して ][ImageToggleScreencastIcon] 、「Devtools」ウィンドウで[Surface Duo エミュレーター][DuoEmulator]の web コンテンツを表示します。 [Surface Duo エミュレーター][DuoEmulator]で、Microsoft Edge devtools を使って web コンテンツをデバッグできるようになりました。
+## 手順 2: Surface Emulator エミュレーターを起動する  
 
-> ##### 図 5
-> Microsoft edge DevTools を使って Surface Duo エミュレーター上の Microsoft Edge アプリで Bing をデバッグします。 ![ surface duo エミュレーター上の Microsoft edge アプリで bing をデバッグします。][ImageDevTools]  
+Surface [Emulator エミュレーターを起動します][DualScreenAndroidUseEmulator]。  エミュレーターで実行されている 2 つの異なる画面がエミュレーターに表示されます。  
+
+:::image type="complex" source="../media/remote-debugging-surface-duo-emulator.msft.png" alt-text="Surface Emulator" lightbox="../media/remote-debugging-surface-duo-emulator.msft.png":::
+   Surface Emulator  
+:::image-end:::  
+
+## 手順 3: Surface Emulator エミュレーターで Microsoft Edge に Web コンテンツを読み込む  
+
+どちらの画面でも [、Surface Emulator][DualScreenAndroidUseEmulator] エミュレーターのお気に入りトレイを上にスワイプして、アプリ ドロワーを表示します。  **[Edge] を**選択して[Microsoft Edge アプリを起動します][GooglePlayStoreAppsComMicrosoftEmmx]。  
+
+:::image type="complex" source="../media/remote-debugging-surface-duo-emulator-edge.msft.png" alt-text="Surface Emulator エミュレーター上の Microsoft Edge アプリ" lightbox="../media/remote-debugging-surface-duo-emulator-edge.msft.png":::
+   Surface Emulator エミュレーター上の Microsoft Edge アプリ  
+:::image-end:::  
+
+Microsoft Edge アプリでデバッグする Web サイトまたはアプリに [移動します][GooglePlayStoreAppsComMicrosoftEmmx]。  
+
+## 手順 4: Surface Emulator エミュレーターから Web コンテンツをデバッグする  
+
+Microsoft Edge のデスクトップ インスタンスに切り [替えます][MicrosoftEdge]。  このページには、Surface Emulator エミュレーターで実行されている開いているタブまたは PAS の一覧が表示された `edge://inspect` [][ProgressiveWebAppsIndex]**SurfaceDwrEmulator** [が表示されます][DualScreenAndroidUseEmulator]。  
+
+:::image type="complex" source="../media/remote-debugging-surface-duo-inspect-page-with-targets.msft.png" alt-text="次edge://inspect、エミュレーターで実行されている Microsoft Edge アプリで開いているタブの一覧が表示されます。" lightbox="../media/remote-debugging-surface-duo-inspect-page-with-targets.msft.png":::
+   この `edge://inspect` ページには、エミュレーターで実行されている Microsoft Edge アプリで開いているタブの一覧が表示されます。  
+:::image-end:::  
 
 > [!NOTE]
-> エミュレーターの両方の画面で[Microsoft Edge アプリ][AndroidEdge]をスパンしている場合、screencast には、アプリケーションの新しいサイズが反映されますが、ヒンジは表示されません。 ヒンジが web コンテンツのレイアウトに与える影響を理解するには、screencast ではなく[Surface Duo エミュレーター][DuoEmulator]を使用します。
+> ページに**SurfaceD emulatorEmulator**が表示されない場合は、Surface Emulator エミュレーターの Microsoft Edge アプリでタブを開くまたは閉 `edge://inspect` [じしてみてください][DualScreenAndroidUseEmulator]。 [][GooglePlayStoreAppsComMicrosoftEmmx]  その他のトラブルシューティング手順については [、Android デバイスのトラブルシューティングのセクションを参照してください][DevtoolsRemoteDebuggingIndexTroubleshootingDevtoolsIsNotDetectingAndroidDevice]。  
 
-## その他のリソース
+エミュレーターで実行されている開いているタブの一覧から、**** デバッグする Web コンテンツを含むタブの検査を選択します。  Microsoft [Edge DevTools が][DevtoolsIndex] 新しいウィンドウで開きます。  [Toggle **Screencast** \( Toggle Screencast \) ] を選択して、Surface Emulator エミュレーターの Web コンテンツを ![ ][ImageToggleScreencastIcon] DevTools ウィンドウに表示します。 [][DualScreenAndroidUseEmulator]  これで、Microsoft Edge DevTools を使用して、Surface Emulator エミュレーターで Web コンテンツ [をデバッグできます][DualScreenAndroidUseEmulator]。  
 
-Web は、HTML、CSS、JavaScript を1回作成でき、1画面、2画面、折りたたみ式デバイスで適切に表示されるようにするため、折りたたみ式とデュアルスクリーンデバイスの新しいクラスの優れたプラットフォームです。 詳細については、以下の追加リソースを参照してください。これらの新しいデバイスの web コンテンツの構築を開始します。
+:::image type="complex" source="../media/remote-debugging-surface-duo-devtools.msft.png" alt-text="Microsoft Edge DevTools を使用して Surface Emulator エミュレーター上の Microsoft Edge アプリで Bing をデバッグする" lightbox="../media/remote-debugging-surface-duo-devtools.msft.png":::
+   Microsoft Edge DevTools を使用して Surface Emulator エミュレーター上の Microsoft Edge アプリで Bing をデバッグする  
+:::image-end:::  
 
-- [デュアルスクリーンデバイスでのアプリの作成に関するドキュメント][DualScreenDocs]
-- [Microsoft Edge web platform explainer は、新しい Api を使用して、折りたたみ式デバイスとデュアルスクリーンデバイスで web エクスペリエンスを構築します。][WebPlatformExplainer]
-- [Microsoft 365 Developer Day セッションの記録: web サイトと web アプリのためのデュアルスクリーンエクスペリエンスの構築方法][DeveloperDay]
+> [!NOTE]
+> エミュレーターの両方の画面 [に Microsoft Edge][GooglePlayStoreAppsComMicrosoftEmmx] アプリをまたがっている場合、スクリーンキャストにはアプリの新しいサイズが反映されますが、画面は反映されません。  この問題が Web コンテンツのレイアウトに与える影響を理解するには、スクリーンキャストの代わりに [Surface Emulator][DualScreenAndroidUseEmulator] エミュレーターを使用します。  
+
+## その他のリソース  
+
+この Web は、HTML、CSS、JavaScript を 1 回記述して、単一画面、デュアルスクリーン、折りたたみ可能なデバイスで見た目が良いため、折りたたみ可能なデュアルスクリーン デバイスの新しいクラスに最適なプラットフォームです。  詳細については、これらの新しいデバイスの Web コンテンツの構築を開始するために、以下のその他のリソースを参照してください。  
+
+*   [デュアルスクリーン デバイスでアプリを作成するためのドキュメント][DualScreenIndex]  
+*   [折りたたみ可能なデュアルスクリーン デバイスで Web エクスペリエンスを構築するための新しい API に関する Microsoft Edge Web プラットフォームの説明][GithubMicrosoftedgeMsedgeexplainersFoldablesExplainer]  
+*   [Microsoft 365 Developer Day セッションのレコーディング: Web サイトと Web アプリのデュアルスクリーン エクスペリエンスを構築する方法][YoutubeDxrzwsqxpvc]  
 
 <!-- image links -->  
-[ImageEdgeInspect]: /microsoft-edge/devtools-guide-chromium/media/remote-debugging-surface-duo-inspect-page.msft.png "図 1: デスクトップ上の Microsoft Edge の edge://inspect ページ"
-[ImageDuoEmulator]: /microsoft-edge/devtools-guide-chromium/media/remote-debugging-surface-duo-emulator.msft.png "図 2: Surface Duo エミュレーター"
-[ImageDuoEmulatorEdge]: /microsoft-edge/devtools-guide-chromium/media/remote-debugging-surface-duo-emulator-edge.msft.png "図 3: Surface Duo エミュレーター上の Microsoft Edge アプリ"
-[ImageEdgeInspectTargets]: /microsoft-edge/devtools-guide-chromium/media/remote-debugging-surface-duo-inspect-page-with-targets.msft.png "図 4: edge://inspect ページには、エミュレーターで実行されている Microsoft Edge アプリの開いているタブの一覧が表示されます。"
-[ImageToggleScreencastIcon]: images/toggle-screencast-icon.msft.png
-[ImageDevTools]: /microsoft-edge/devtools-guide-chromium/media/remote-debugging-surface-duo-devtools.msft.png "図 5: Surface Duo エミュレーター上の Microsoft Edge アプリで Bing をデバッグするための Microsoft Edge DevTools の使用"
+
+[ImageToggleScreencastIcon]: images/toggle-screencast-icon.msft.png  
 
 <!-- links -->  
-[RemoteDebuggingAndroid]: /microsoft-edge/devtools-guide-chromium/remote-debugging/index "Android デバイスのリモートデバッグの概要"
-[PwaDocs]: /microsoft-edge/progressive-web-apps-chromium/index "Windows のプログレッシブ Web アプリ"
-[DevToolsDocs]: /microsoft-edge/devtools-guide-chromium "Microsoft Edge (Chromium) 開発者ツール"
-[TroubleshootingAndroid]: /microsoft-edge/devtools-guide-chromium/remote-debugging/index#troubleshooting-devtools-is-not-detecting-the-android-device "トラブルシューティング: DevTools で Android デバイスが検出されない"
 
-[AndroidEdge]: https://play.google.com/store/apps/details?id=com.microsoft.emmx "Microsoft Edge Android アプリ"
-[SurfaceDuo]: https://www.microsoft.com/surface/devices/surface-duo "Surface Duo の概要"
-[DesktopEdge]: https://www.microsoft.com/edge/ "新しい Microsoft Edge の紹介"
-[DuoEmulator]: https://docs.microsoft.com/dual-screen/android/use-emulator "Surface DUo エミュレーターを使う"
-[DuoSdk]: https://www.microsoft.com/download/details.aspx?id=100847 "Surface Duo SDK Preview リリース"
-[DuoSdkDocs]: https://docs.microsoft.com/dual-screen/android/get-duo-sdk "Surface Duo SDK の入手"
-[DualScreenDocs]: https://docs.microsoft.com/dual-screen/ "デュアルスクリーンデバイス用のアプリを作成する"
-[WebPlatformExplainer]: https://github.com/MicrosoftEdge/MSEdgeExplainers/blob/master/Foldables/explainer.md "折りたたみ式デバイスでの対応エクスペリエンスのための Web Platform プリミティブ"
-[DeveloperDay]: https://youtu.be/DXrZWsqXPVc "Web サイトと web アプリのためのデュアルスクリーンエクスペリエンスを構築する方法"
+[DevtoolsIndex]: ../index.md "Microsoft Edge (Chromium) 開発者ツール | Microsoft Docs"  
+[ProgressiveWebAppsIndex]: ../../progressive-web-apps-chromium/index.md "Windows での段階的な Web アプリ |Microsoft Docs"  
+[DevtoolsRemoteDebuggingMain]: ./index.md "Android デバイスのリモート デバッグの概要 |Microsoft Docs"  
+[DevtoolsRemoteDebuggingIndexTroubleshootingDevtoolsIsNotDetectingAndroidDevice]: ./index.md#troubleshooting-devtools-is-not-detecting-the-android-device "トラブルシューティング: DevTools が Android デバイスを検出しない - Android デバイスのリモート デバッグの概要 |Microsoft Docs"  
+
+[DualScreenIndex]: /dual-screen/index "デュアルスクリーン デバイス用のアプリを作成する |Microsoft Docs"  
+[DualScreenAndroidUseEmulator]: /dual-screen/android/use-emulator "Surface D Emulator を使う |Microsoft Docs"  
+[DualScreenAndroidGetDuoSdk]: /dual-screen/android/get-duo-sdk "Surface Sdk を取得する |Microsoft Docs"  
+
+[MicrosoftEdge]: https://www.microsoft.com/edge "新しい Microsoft Edge の導入"  
+[MicrosoftSurfaceDevicesSurfaceDuo]: https://www.microsoft.com/surface/devices/surface-duo "新しい Surface の組み合わせ |Microsoft Surface"  
+[MicrosoftDownload100847]: https://www.microsoft.com/download/details.aspx?id=100847 "Surface Sdk プレビュー リリースをダウンロードする |Microsoft ダウンロード センター"  
+
+[GooglePlayStoreAppsComMicrosoftEmmx]: https://play.google.com/store/apps/details?id=com.microsoft.emmx "Microsoft Edge: Web ブラウザー |GooglePlay"  
+
+[GithubMicrosoftedgeMsedgeexplainersFoldablesExplainer]: https://github.com/MicrosoftEdge/MSEdgeExplainers/blob/master/Foldables/explainer.md "折りたたみ可能なデバイスでの対応エクスペリエンスのための Web プラットフォーム プリミティブ - MicrosoftEdge/MSEdgeExplainers |GitHub"  
+
+[YoutubeDxrzwsqxpvc]: https://youtu.be/DXrZWsqXPVc "Web サイトと Web アプリのデュアルスクリーン エクスペリエンスを構築する方法 |YouTube"  

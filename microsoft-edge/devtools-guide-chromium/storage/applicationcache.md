@@ -1,18 +1,18 @@
 ---
-description: Microsoft Edge DevTools のアプリケーションパネルからアプリケーションキャッシュデータを表示する方法について説明します。
-title: Microsoft Edge DevTools を使ってアプリケーションキャッシュデータを表示する
+description: Microsoft Edge DevTools の [アプリケーション] パネルからアプリケーション キャッシュ データを表示する方法について説明します。
+title: Microsoft Edge DevTools を使用してアプリケーション キャッシュ データを表示する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 09/01/2020
+ms.date: 12/11/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: ed742f24900786c3c5b31ec2a026ddbf9d16ccb6
-ms.sourcegitcommit: 63e6d34ff483f3b419a0e271a3513874e6ce6c79
+ms.openlocfilehash: 3d73047a8332e4d6cae5f7411f968a7dfe4c3738
+ms.sourcegitcommit: a35a6b5bbc21b7df61d08cbc6b074b5325ad4fef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "10993325"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "11230783"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -28,64 +28,64 @@ ms.locfileid: "10993325"
    See the License for the specific language governing permissions and
    limitations under the License.  -->  
 
-# Microsoft Edge DevTools を使ってアプリケーションキャッシュデータを表示する  
+# Microsoft Edge DevTools を使用してアプリケーション キャッシュ データを表示する  
 
 > [!WARNING]
-> アプリケーションキャッシュ API が [web プラットフォームから削除されて][HTMLStandardOfflineWebApplications]います。  
+> アプリケーション キャッシュ API は [、Web プラットフォームから削除されています][HTMLStandardOfflineWebApplications]。  
 
-このガイドでは、 [Microsoft Edge DevTools][MicrosoftEdgeDevTools] を使って [アプリケーションキャッシュ][MDNWebAPIsWindowApplicationCache] のリソースを検査する方法について説明します。  
+このガイドでは [、Microsoft Edge DevTools を使用して][MicrosoftEdgeDevTools] アプリケーション キャッシュ リソースを [検査する方法を示][MDNWebAPIsWindowApplicationCache] します。  
 
-## アプリケーションキャッシュデータの表示  
+## アプリケーション キャッシュ データの表示  
 
-1.  [ **ソース** ] タブを選択して、[ **ソース** ] パネルを開きます。  通常、 **マニフェスト** ウィンドウは既定で開かれます。  
+1.  [ソース **] タブを** 選択して 、[ソース] パネル **を開** きます。  通常 **、マニフェスト** ウィンドウは既定で開きます。  
     
-    :::image type="complex" source="../media/storage-application-manifest.msft.png" alt-text="マニフェストウィンドウ" lightbox="../media/storage-application-manifest.msft.png":::
-       **マニフェスト**ウィンドウ  
+    :::image type="complex" source="../media/storage-application-manifest.msft.png" alt-text="マニフェスト ウィンドウ" lightbox="../media/storage-application-manifest.msft.png":::
+       マニフェスト**ウィンドウ**  
     :::image-end:::  
 
-1.  [ **アプリケーションキャッシュ** ] セクションを展開し、リソースを表示するキャッシュを選択します。  
+1.  [アプリケーション キャッシュ **] セクションを展開** し、リソースを表示するキャッシュを選択します。  
     
-    :::image type="complex" source="../media/storage-cache-pane-cache-storage-resources.msft.png" alt-text="[アプリケーションキャッシュ] ウィンドウ" lightbox="../media/storage-cache-pane-cache-storage-resources.msft.png":::
-       [ **アプリケーションキャッシュ** ] ウィンドウ  
+    :::image type="complex" source="../media/storage-cache-pane-cache-storage-resources.msft.png" alt-text="[アプリケーション キャッシュ] ウィンドウ" lightbox="../media/storage-cache-pane-cache-storage-resources.msft.png":::
+       [ **アプリケーション キャッシュ]** ウィンドウ  
     :::image-end:::  
 
-表の各行は、キャッシュされたリソースを表します。  
+テーブルの各行は、キャッシュされたリソースを表します。  
 
-[ **種類** ] 列は [リソースのカテゴリ][MDNHTMLResourcesInAnApplicationCache]を表します。  
+[ **種類]** 列は、リソース [のカテゴリを表します][MDNHTMLResourcesInAnApplicationCache]。  
 
 | カテゴリ | 詳細 |  
 |:--- |:--- |  
-| `Explicit` | このリソースはマニフェストに明示的に含まれていました。 |  
-| `Fallback` | URL は、別のリソースのフォールバックです。  その他のリソースの URL は、DevTools には記載されていません。 |  
-| `Master` | `manifest`リソースの属性は、キャッシュがリソースの親であることを示します。 |  
-| `Network` | リソースがネットワークから取得される必要があることを示すマニフェスト。 |  
+| `Explicit` | このリソースは、マニフェストに明示的に一覧表示されています。 |  
+| `Fallback` | URL は別のリソースのフォールバックです。  他のリソースの URL は DevTools には表示されません。 |  
+| `Master` | リソース `manifest` の属性は、キャッシュがリソースの親を示します。 |  
+| `Network` | リソースがネットワークから取得される必要があるというマニフェスト。 |  
 
 <!--todo:  replace "Master" phrasing if possible.  -->  
 
-表の下部には、ネットワーク接続と **アプリケーションキャッシュ**の状態を示す状態アイコンがあります。  **アプリケーションキャッシュ**には、次のような状態があります。  
+表の下部には、ネットワーク接続とアプリケーション キャッシュの状態を示すステータス アイコン **があります**。  アプリケーション **キャッシュの** 状態は次のとおりです。  
 
 | 状態 | 詳細 |  
 |:--- |:--- |  
-| `CHECKING` | マニフェストが取得され、更新プログラムがチェックされます。 |  
-| `DOWNLOADING` | キャッシュにリソースが追加されています。 |  
+| `CHECKING` | マニフェストがフェッチされ、更新プログラムが確認されています。 |  
+| `DOWNLOADING` | リソースがキャッシュに追加されています。 |  
 | `IDLE` | キャッシュには新しい変更はありません。 |  
-| `OBSOLETE` | キャッシュを削除しています。 |  
-| `UPDATEREADY` |  キャッシュの新しいバージョンが使用可能になります。 |  
+| `OBSOLETE` | キャッシュが削除されます。 |  
+| `UPDATEREADY` |  新しいバージョンのキャッシュを使用できます。 |  
 
 <!-- links -->  
 
-[MicrosoftEdgeDevTools]: ../../devtools-guide-chromium.md "Microsoft Edge (Chromium) 開発者ツール |Microsoft ドキュメント"  
+[MicrosoftEdgeDevTools]: ../../devtools-guide-chromium/index.md "Microsoft Edge (Chromium) 開発者ツール |Microsoft ドキュメント"  
 
-[HTMLStandardOfflineWebApplications]: https://html.spec.whatwg.org/multipage/offline.html#offline "オフライン Web アプリケーション-HTML 標準"  
+[HTMLStandardOfflineWebApplications]: https://html.spec.whatwg.org/multipage/offline.html#offline "オフライン Web アプリケーション - HTML 標準"  
 
-[MDNHTMLResourcesInAnApplicationCache]: https://developer.mozilla.org/docs/Web/HTML/Using_the_application_cache#Resources_in_an_application_cache "アプリケーションキャッシュのリソース |MDN"  
-[MDNWebAPIsWindowApplicationCache]: https://developer.mozilla.org/docs/Web/API/Window/applicationCache "Window. applicationCache-Web Api |MDN"  
+[MDNHTMLResourcesInAnApplicationCache]: https://developer.mozilla.org/docs/Web/HTML/Using_the_application_cache#Resources_in_an_application_cache "アプリケーション キャッシュ内のリソース |MDN"  
+[MDNWebAPIsWindowApplicationCache]: https://developer.mozilla.org/docs/Web/API/Window/applicationCache "Window.applicationCache - Web API |MDN"  
 
 > [!NOTE]
-> このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
-> 元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/storage/applicationcache) にあり、 [Kayce Basques][KayceBasques] テクニカルライター、Chrome Devtools \ & Lighthouse \) で作成されています。  
+> このページの一部は、 [Google によっ て作成および共有された][GoogleSitePolicies]作業に基づく変更で、「[Creative Commons Attribution 4.0 International License][CCA4IL]」で記載されている条項に従って使用されます。  
+> 元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/storage/applicationcache) にあり、 [Kayce Basques][KayceBasques] \(Chrome DevTools \& Lighthouse\ のテクニカル ライター) が作成しました。  
 
-[![クリエイティブコモンズライセンス][CCby4Image]][CCA4IL]  
+[![Creative Commons ライセンス][CCby4Image]][CCA4IL]  
 この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。  
 
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
