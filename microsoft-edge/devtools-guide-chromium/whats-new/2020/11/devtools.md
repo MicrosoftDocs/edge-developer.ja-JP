@@ -1,73 +1,73 @@
 ---
-description: Linux の Microsoft Edge、問題ツールの web ヒントのヒント、新しいサービスワーカーのデバッグ機能などが改善されました。
+description: Linux 上の Microsoft Edge、問題ツールの Webhint ヒントの改善、新しいサービス ワーカー デバッグ機能など。
 title: DevTools の新機能 (Microsoft Edge 88)
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 12/09/2020
+ms.date: 12/15/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 500b64e7b51e0f02c9fcbcb7a83e8273b3a5a0d7
-ms.sourcegitcommit: 3234b32e73c9f8362082d995296bd1c5e4286036
-ms.translationtype: MT
+ms.openlocfilehash: a9c262075f3d541861ed825a8da96b3a86956c0e
+ms.sourcegitcommit: c06a4ece7bcbfeae4677d15fca677ca42a0373b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "11205244"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "11229478"
 ---
 # DevTools の新機能 (Microsoft Edge 88)  
 
 [!INCLUDE [contact DevTools team note](../../includes/edge-whats-new-note.md)]  
 
-## Microsoft Edge および Microsoft Edge ドライバーが Linux で利用できるようになりました  
+## Microsoft Edge と Microsoft Edge ドライバーが Linux で利用可能に  
 
 <!-- Title: Microsoft Edge and Microsoft Edge Driver on Linux  -->  
 <!-- Subtitle: Get Microsoft Edge Dev on Ubuntu, Debian, Fedora, and openSUSE distributions and start automating in CI/CD environments with Microsoft Edge Driver. -->  
 
-Microsoft Edge Dev は、Ubuntu、Debian、Fedora、openSUSE の配布でサポートされるようになりました。  Microsoft edge の開発者 `.deb` または `.rpm` パッケージを [microsoft edge Insider サイト][MicrosoftinsiderDownloadPlatformLinux] から直接ダウンロードしてインストールするか、またはお使いの Linux ディストリビューションの標準パッケージ管理ツールを使用します。  
+Microsoft Edge Dev は、Ubuntu、Debian、Fedora、openSUSE の配布でサポートされます。  Microsoft Edge Dev `.deb`または`.rpm`パッケージを [Microsoft Edge Insider サイト][MicrosoftinsiderDownloadPlatformLinux]から直接ダウンロードしてインストールするか、お使いの Linux 配布の標準パッケージ管理ツールを使用します。   
 
-継続的インテグレーションと配信 \ (CI/CD \) ソリューションで Linux 環境を使用している場合は、Microsoft Edge ドライバーも Linux で利用できます。  Microsoft edge ドライバーを使用した Microsoft Edge の開発を開始するには、 [Microsoft Edge ドライバーのダウンロードページ][MicrosoftDeveloperMicrosoftEdgeToolsWebdriverDownloads]に移動します。  Microsoft edge ドライバーと共に Microsoft edge Dev を自動化する方法については、「 [WebDriver (Chromium) を使ってテストオートメーションを使用][WebDriverChromiumMain]する」を参照してください。  
+継続的インテグレーションおよび配信 \(CI/CD\) ソリューションで Linux 環境を使用している場合は、Linux でも Microsoft Edge ドライバーを利用できます。  Microsoft Edge ドライバーを使用した Microsoft Edge Dev の自動化を開始する方法については、[Microsoft Edge ドライバーのダウンロードページに移動します][MicrosoftDeveloperMicrosoftEdgeToolsWebdriverDownloads]。  Microsoft Edge ドライバーと共に Microsoft Edge Dev を自動化する方法については、[「テスト オートメーションに WebDriver (Chromium) を使用する」][WebDriverChromiumMain]に移動してください。  
 
-:::image type="complex" source="../../media/2020/11/edge-on-linux.msft.png" alt-text="Linux での Microsoft Edge の DevTools" lightbox="../../media/2020/11/edge-on-linux.msft.png":::
-   Linux での Microsoft Edge の DevTools  
+:::image type="complex" source="../../media/2020/11/edge-on-linux.msft.png" alt-text="Linux 上の Microsoft Edge の DevTools" lightbox="../../media/2020/11/edge-on-linux.msft.png":::
+   Linux 上の Microsoft Edge の DevTools  
 :::image-end:::  
 
-## 問題解決ツールの web ヒントとプラットフォームのヒントの改善  
+## 問題ツールの Webhint とプラットフォームのヒントの向上  
 
 <!-- Title: Improvements to Issues tool and webhint integration  -->  
 <!-- Subtitle: Categories and third-party filtering make it easier to survey issues in the Issues tool.  Issues surfaced by webhint now have improved code snippets and documentation links to help you fix problems in your website.  -->  
 
-オープンソースツールである web [ヒント][WebhintMain]は、web サイトやローカル web ページについてリアルタイムでフィードバックを提供します。  [Microsoft Edge バージョン 85][WhatsNew202006DevtoolsWebhintFeedbackInTheIssuesPanel]以降では、[[問題][DevtoolsIssuesIndex]] ツールの webhint のフィードバックを確認します。  **懸案事項**ツールに表示される問題は、次のカテゴリを追加することで簡単に確認できるようになりました。  
+オープン ソース ツールである [webhint][WebhintMain]は、Web サイトとローカル Web ページに対してリアルタイムでのフィードバックを提供します。  [Microsoft Edge バージョン 85][WhatsNew202006DevtoolsWebhintFeedbackInTheIssuesPanel] から、[問題][DevtoolsIssuesIndex]ツールで webhint フィードバックを確認できます。  **問題**ツールに表示される問題は、次のカテゴリを追加することで簡単に確認できます。  
 
 *   [アクセシビリティ][WebhintUserGuideHintsAccessibility]  
 *   [互換性][WebhintUserGuideHintsCompatibility]  
 *   [パフォーマンス][WebhintUserGuideHintsPerformance]  
-*   [Pitfalls][WebhintUserGuideHintsPitfalls]  
+*   [落とし穴][WebhintUserGuideHintsPitfalls]  
 *   [PWA][WebhintUserGuideHintsPwa]  
 *   [セキュリティ][WebhintUserGuideHintsSecurity]  
     
-これで、新しいチェックボックスを使ってサードパーティの問題をフィルター処理できるようになりました。  フィルター機能を使用すると、サードパーティのライブラリやその他のソースからのコードに関連する問題を非表示にすることができます。  
+新しいチェックボックスを使用して、サードパーティの問題をフィルター処理できます。  フィルター機能を使用すると、サードパーティ製のライブラリや他のソースからのコードに関連した問題を非表示にできます。  
 
-[Webhint][WebhintMain]によって発生した問題を確認するために、**問題**ツールには次の情報が表示されるようになりました。  
+[Webhint][WebhintMain] によって表示される問題を確認するために、**問題**ツールに次の情報が表示されるようになりました。  
 
-*   改善されたコードスニペット。  
+*   コード スニペットが改善されました。  
 *   他の関連パネルへのリンク。  
-*   Web サイトの問題を解決するのに役立つドキュメントへのリンクです。  
+*   Web サイトの問題の解決に役立つドキュメントへのリンク。  
     
 :::image type="complex" source="../../media/2020/11/issues-webhints.msft.png" alt-text="問題ツール" lightbox="../../media/2020/11/issues-webhints.msft.png":::
    **問題** ツール  
 :::image-end:::  
 
-## 合成レイヤーが3D ビューに表示されるようになりました  
+## コンポジット レイヤーが 3D ビューに表示される  
 
 <!-- Title: 3D View is now integrated with Composited Layers  -->  
 <!-- Subtitle: Composited Layers are now in 3D View.  -->  
 
 :::image type="icon" source="../../media/2020/06/experimental-tag-14px.msft.png":::
 
-これで、 **レイヤー** コンテンツと、z インデックス値、ドキュメントオブジェクトモデル \ (DOM \) を視覚化することができるようになりました。  この機能により、 [3d ビュー][Devtools3dViewIndex] と **レイヤー** ツールを頻繁に切り替えることなく、デバッグを行うことができます。  包括的なビジュアルデバッグエクスペリエンスを実現するために、 [3D ビューレイヤーと合成レイヤーが結合されました][DevtoolsExperimentalFeaturesTurnOnCompositedLayers3dView]。  
+Z インデックス値と ドキュメント オブジェクト モデル \(DOM\) と共に、**レイヤー** コンテンツを視覚化できるようになりました。  この機能は、[3D ビュー][Devtools3dViewIndex]と**レイヤー** ツールを頻繁に切り替えることなくデバッグするのに役立ちます。  視覚的なデバッグを総合的に行う目的で、[3D ビューレイヤーと複合レイヤーが結合されました][DevtoolsExperimentalFeaturesTurnOnCompositedLayers3dView]。  
 
-:::image type="complex" source="../../media/2020/11/experiments-layers.msft.png" alt-text="合成レイヤーウィンドウ" lightbox="../../media/2020/11/experiments-layers.msft.png":::
-   **合成レイヤー** ウィンドウ  
+:::image type="complex" source="../../media/2020/11/experiments-layers.msft.png" alt-text="[コンポジット レイヤー] ウィンドウ" lightbox="../../media/2020/11/experiments-layers.msft.png":::
+   **[コンポジット レイヤー]** ウィンドウ  
 :::image-end:::  
 
 ## [スタイル] ウィンドウの CSS 変数の定義  
@@ -75,10 +75,10 @@ Microsoft Edge Dev は、Ubuntu、Debian、Fedora、openSUSE の配布でサポ�
 <!-- Title: Jump to CSS variable definitions  -->  
 <!-- Subtitle: Choose any CSS variable to navigate directly to the definition in the Styles tool. -->  
 
-[ **スタイル** ] ウィンドウで、 [CSS 変数][MdnUsingCssCustomProperties] が各定義に直接リンクされるようになりました。  変数を選択して、CSS 変数定義を簡単に表示したり、変更したりします。  この例では、DevTools に要素の CSS 属性が表示されて `body` います。  CSS 変数の変数定義を表示するには `--theme-body-background` 、次の操作を実行します。  
+**[スタイル]** ウィンドウで、[CSS 変数][MdnUsingCssCustomProperties]が各定義に直接リンクされます。  CSS 変数の定義を簡単に表示または変更するには、変数を選択します。  この例では、DevTools は`body`要素の CSS 属性を表示します。  `--theme-body-background`CSS 変数の変数定義を表示するには、次のアクションを実行します。  
 
-1.  [ **スタイル** ] ウィンドウで、を選択し `var(--theme-body-background)` ます。  
-1.  [ **スタイル** ] ウィンドウに、CSS 変数の定義が表示されるようになりました `--theme-body-background` 。  
+1.  **[スタイル]** ウィンドウで、`var(--theme-body-background)`を選択します。  
+1.  **[スタイル]** ウィンドウに `--theme-body-background`CSS 変数の定義が表示されます。  
     
 :::row:::
    :::column span="":::
@@ -87,75 +87,75 @@ Microsoft Edge Dev は、Ubuntu、Debian、Fedora、openSUSE の配布でサポ�
       :::image-end:::  
    :::column-end:::
    :::column span="":::
-      :::image type="complex" source="../../media/2020/11/css-variable-support-target.msft.png" alt-text="Style ターゲットにリンクされた CSS 変数" lightbox="../../media/2020/11/css-variable-support-target.msft.png":::
-         Style ターゲットにリンクされた CSS 変数  
+      :::image type="complex" source="../../media/2020/11/css-variable-support-target.msft.png" alt-text="スタイル ターゲットにリンクされた CSS 変数" lightbox="../../media/2020/11/css-variable-support-target.msft.png":::
+         スタイル ターゲットにリンクされた CSS 変数  
       :::image-end:::  
    :::column-end:::
 :::row-end:::  
 
-## サービスワーカーのデバッグ機能の改善  
+## サービス ワーカー デバッグの機能強化  
 
 <!-- Title:  Service worker debugging improvements in the Network, Application, and Sources tools  -->  
 <!-- Subtitle:  Making service workers easier to debug for progressive web applications and more.  -->  
 
-[ネットワーク](#network-tool)、[アプリケーション](#application-tool)、[ソース](#sources-tool)の各ツールの次の新機能を使うと、 [PWA][ProgressiveWebAppsChromiumIndex]を構築することができます。  サービスワーカーのデバッグが困難な場合は、次の機能を使用します。  
+[ネットワーク ツール](#network-tool)、[アプリケーション ツール](#application-tool)、および[ソース ツール](#sources-tool)の次の新機能は、[PWA][ProgressiveWebAppsChromiumIndex] の構築に役立ちます。  サービス ワーカーのデバッグが困難な場合は、次の機能を使用します。  
 
-[ルーティングの要求] は、 `startup` `fetch` サービスワーカーによって実行されるネットワーク要求に基づいて、およびイベントを表示します。  タイムラインには、 **アプリケーション** または **ネットワーク** ツールからアクセスできます。  タイムラインは、service worker の問題が発生していて、or イベントに何らかの問題があるかどうかを確認したい場合に役立ち `startup` `fetch` ます。  
+要求ルーティングは、サービス ワーカーを経由して実行されるネットワーク要求に基づいて、`startup` と `fetch` イベントを表示します。  タイムラインには、**アプリケーション ツール**または**ネットワーク ツール**からアクセスします。  タイムラインは、サービス ワーカーに問題が発生し、`startup` または `fetch` イベントに何の問題があるかを確信する場合に役立ちます。  
 
-### アプリケーションツール  
+### アプリケーション ツール  
 
 <!-- Title: Open Network tool from the Service Workers pane  -->  
 <!-- Subtitle: Display additional context when debugging a service worker.  -->  
 
-[新しい **ネットワーク要求** ] リンクを使用して、すべてのサービスワーカー要求ルーティング情報を表示します。  サービスワーカーのデバッグ時に追加のコンテキストを表示するには、次の操作を実行します。  
+新しい **[ネットワーク要求]** リンクを使用して、すべてのサービス ワーカー 要求ルーティング情報を表示 します。  サービス ワーカーをデバッグするときに追加のコンテキストを表示するには、次のアクションを実行します。  
 
-1.  **アプリケーション**サービスの担当  >  **者**に移動します。  
-1.  [ **ネットワーク要求**] を選びます。  
+1.  **アプリケーション ** > **サービス ワーカー**に移動します。  
+1.  **[ネットワーク 要求]**.を選びます。  
     
-    :::image type="complex" source="../../media/2020/11/service-worker-application-network-requests.msft.png" alt-text="[Service Worker] ウィンドウからネットワークツールを開く" lightbox="../../media/2020/11/service-worker-application-network-requests.msft.png":::
-       [ **Service worker** ] ウィンドウから**ネットワーク**ツールを開く
+    :::image type="complex" source="../../media/2020/11/service-worker-application-network-requests.msft.png" alt-text="[サービス ワーカー] ウィンドウから、ネットワーク ツールを開く" lightbox="../../media/2020/11/service-worker-application-network-requests.msft.png":::
+       **[サービス ワーカー]** ウィンドウから、**ネットワーク** ツールを開く
     :::image-end:::  
     
-1.  [ **ネットワーク** ] ツールが **引き出し** で開き、すべてのサービスワーカー関連のネットワーク要求が表示されます。  ネットワーク要求は、を使ってフィルター処理され `is:service-worker-intercepted` ます。  
+1.  **ネットワーク ツール**が**ドロワー**で開き、サービス ワーカー関連のすべてのネットワーク要求が表示されます。  ネットワーク要求は、`is:service-worker-intercepted` を使用してフィルター処理されます。  
     
-    :::image type="complex" source="../../media/2020/11/service-worker-application-network-drawer.msft.png" alt-text="ドロアーのネットワークツール" lightbox="../../media/2020/11/service-worker-application-network-drawer.msft.png":::
-       **ドロアー**の**ネットワーク**ツール  
+    :::image type="complex" source="../../media/2020/11/service-worker-application-network-drawer.msft.png" alt-text="ドロワー内のネットワーク ツール" lightbox="../../media/2020/11/service-worker-application-network-drawer.msft.png":::
+       **ドロワー**内の**ネットワーク** ツール  
     :::image-end:::
     
-1. **ネットワーク**ツールを上のパネルに戻すには、**引き出し**を閉じます。  
+1. **ネットワーク** ツールをトップ パネルに戻す場合は、**ドロワー**を閉じます。  
     
-    :::image type="complex" source="../../media/2020/11/service-worker-application-network-return.msft.png" alt-text="ネットワークツールを戻すには、[引き出し] を閉じます。" lightbox="../../media/2020/11/service-worker-application-network-return.msft.png":::
-       **ネットワーク**ツールを戻すには、[**引き出し**] を閉じます。  
+    :::image type="complex" source="../../media/2020/11/service-worker-application-network-return.msft.png" alt-text="ドロワーを閉じて、ネットワーク ツールを返す" lightbox="../../media/2020/11/service-worker-application-network-return.msft.png":::
+       **ドロワー**を閉じて、**ネットワーク ツール**を返す  
     :::image-end:::  
     
-### ネットワークツール  
+### ネットワーク ツール  
 
-サービスワーカーを通じて実行されるネットワーク要求をデバッグします。  また、 **アプリケーション** ツールからネットワーク要求を開くこともできます。  各要求について、DevTools では、[ [タイミング][DevtoolsNetworkReferenceViewTimingBreakdownRequest] ] ウィンドウに次の情報が表示されます。  
+サービス ワーカーを介して実行されるネットワーク要求をデバッグします。  **アプリケーション** ツールからネットワーク要求を開く場合があります。  要求ごとに、DevTools はタイミング ウィンドウに次の情報を[[タイミング]][DevtoolsNetworkReferenceViewTimingBreakdownRequest] ウインドウに表示 します。  
 
-*   要求の開始とブートストラップの期間。  
-*   サービスワーカー登録の変更。  
-*   イベントハンドラーの実行時 `fetch` 。  
-*   `fetch`クライアントを読み込むすべてのイベントのランタイム。  
+*   ブートストラップの要求の開始と期間。  
+*   サービス ワーカーの登録に対する変更。  
+*   `fetch`イベント ハンドラーのランタイム。  
+*   クライアントを読み込むすべての `fetch` イベントのランタイム。  
     
-:::image type="complex" source="../../media/2020/11/network-timing-service-worker.msft.png" alt-text="タイミングウィンドウ" lightbox="../../media/2020/11/network-timing-service-worker.msft.png":::
-   **タイミング** ウィンドウ  
+:::image type="complex" source="../../media/2020/11/network-timing-service-worker.msft.png" alt-text="[タイミング] ウィンドウ" lightbox="../../media/2020/11/network-timing-service-worker.msft.png":::
+   **[タイミング]** ウィンドウ  
 :::image-end:::  
 
-### ソースツール  
+### ソース ツール  
 
-以前のバージョンの Microsoft Edge では、コールスタックの深度レベルは、サービスワーカーの JavaScript コードに制限されていました。  Microsoft Edge 88 では、呼び出し履歴にサービスワーカーを通じて実行される要求のイニシエーターが表示されるようになりました。  
+以前のバージョンの Microsoft Edge では、呼び出し履歴の深さのレベルは、サービス ワーカーの JavaScript コードに制限されています。  Microsoft Edge 88 では、呼び出し履歴に、サービス ワーカーを介して実行される要求を行ったイニシエーターが表示されます。  
 
-要求のイニシエーターを見つけるには、サービスワーカーの JavaScript コードのコールスタックを使用します。  次の図のコールスタックは、サービスワーカーの JavaScript コードから始まり、元の web ページの要求としての参照を表示し `(index):157` ます。  2番目の図では、参照が選択され、要求を行ったイニシエーターが開かれています。  2番目の図のイニシエーターは web ページです。  
+要求を行ったイニシエーターを見つけるには、サービス ワーカーで JavaScript コードの呼び出し履歴を使用します。  次の図の呼び出し履歴は、サービス ワーカーの JavaScript コードから始まり、元の Web ページ要求への参照を `(index):157` のように表示します。  2 番目の図では、参照が選択され、要求を行ったイニシエーターが開きます。  2 番目の図のイニシエーターは Web ページです。  
 
 :::row:::
    :::column span="":::
-      :::image type="complex" source="../../media/2020/11/service-worker-sources-stopped-at-breakpoint.msft.png" alt-text="要求元の service-worker.js ファイルとコールスタックの強調表示" lightbox="../../media/2020/11/service-worker-sources-stopped-at-breakpoint.msft.png":::
-         要求の送信 `service-worker.js` 元を強調表示したファイルとコールスタック  
+      :::image type="complex" source="../../media/2020/11/service-worker-sources-stopped-at-breakpoint.msft.png" alt-text="service-worker.js ファイルと呼び出し履歴の強調表示要求の発信者" lightbox="../../media/2020/11/service-worker-sources-stopped-at-breakpoint.msft.png":::
+         `service-worker.js` ファイルと呼び出し履歴の強調表示要求の発信者  
       :::image-end:::  
    :::column-end:::
    :::column span="":::
-      :::image type="complex" source="../../media/2020/11/service-worker-sources-call-stack-target.msft.png" alt-text="(インデックス) web ページが要求の開始者である" lightbox="../../media/2020/11/service-worker-sources-call-stack-target.msft.png":::
-         `(index)`Web ページが要求の開始者である  
+      :::image type="complex" source="../../media/2020/11/service-worker-sources-call-stack-target.msft.png" alt-text="(インデックス) Web ページは、要求のイニシエーターです" lightbox="../../media/2020/11/service-worker-sources-call-stack-target.msft.png":::
+         `(index)` Web ページは要求のイニシエーターです  
       :::image-end:::  
    :::column-end:::
 :::row-end:::  
@@ -165,163 +165,171 @@ Microsoft Edge Dev は、Ubuntu、Debian、Fedora、openSUSE の配布でサポ�
 <!-- Title: Copy response JSON in Network tool using the contextual menu  -->  
 <!-- Subtitle:  The Network tool now has a more consistent UX.  Easily copy the JSON response using the contextual menu.  -->  
 
-[ **ネットワーク** ツール] で、[新しい **値のコピー** ] オプションを使用して、ネットワーク要求のプロパティの値をコピーします。  プロパティ値はデコードされた JSON 値としてコピーされます。  以前のバージョンの Microsoft Edge では、次のいずれかのアクションを使用して値をコピーする必要がありました。  
+**ネットワーク** ツールで、新しい **[値のコピー]** オプションを使用して、ネットワーク要求のプロパティ値をコピーします。  プロパティ値は、デコードされた JSON 値としてコピーされます。  以前のバージョンの Microsoft Edge では、次のいずれかの操作を使用して値をコピーする必要があります。  
 
 *   テキスト全体を強調表示してコピーします。  
-*   該当する場合はグローバル変数として値を保存し、DevTools [コンソール][DevtoolsConsoleIndex]からコピーします。  
+*   必要に応じ、値をグローバル変数として格納し、DevTools [コンソール][DevtoolsConsoleIndex]からコピー します。  
     
-プロパティの値をクリップボードにコピーするには、[ [書式設定された応答 JSON をクリップボードにコピー][DevtoolsNetworkReferenceCopyFormattedResponseJsonClipboard]] に移動します。  Chromium のオープンソースプロジェクトでこの機能の履歴を確認するには、「案件 [1132084][CR1132084]」に移動します。  
+プロパティ値をクリップボードにコピーするには、[[書式設定された応答 JSON をクリップボードにコピーする]][DevtoolsNetworkReferenceCopyFormattedResponseJsonClipboard] に移動します。  Chromium オープン ソース プロジェクトでこの機能の履歴を確認するには、問題 [1132084][CR1132084] に移動します。  
 
 :::row:::
    :::column span="":::
-      :::image type="complex" source="../../media/2020/11/copy-property-value.msft.png" alt-text="DevTools でのプロパティ値のコピー" lightbox="../../media/2020/11/copy-property-value.msft.png":::
-         DevTools でのプロパティ値のコピー  
+      :::image type="complex" source="../../media/2020/11/copy-property-value.msft.png" alt-text="DevTools のプロパティ値をコピーする" lightbox="../../media/2020/11/copy-property-value.msft.png":::
+         DevTools のプロパティ値をコピーする  
       :::image-end:::  
    :::column-end:::
    :::column span="":::
-      :::image type="complex" source="../../media/2020/11/paste-property-value.msft.png" alt-text="Visual Studio コードでのプロパティ値の貼り付け" lightbox="../../media/2020/11/paste-property-value.msft.png":::
-         Visual Studio コードでのプロパティ値の貼り付け  
+      :::image type="complex" source="../../media/2020/11/paste-property-value.msft.png" alt-text="Visual Studio Code にプロパティ値を貼り付ける" lightbox="../../media/2020/11/paste-property-value.msft.png":::
+         Visual Studio Code にプロパティ値を貼り付ける  
       :::image-end:::  
    :::column-end:::
 :::row-end:::  
 
-## マルチキーボードショートカットをカスタマイズする  
+## 複数押しのキーボード ショートカットをカスタマイズする  
 
 <!-- Title: Customize multi-press keyboard shortcuts  -->  
 <!-- Subtitle: Create custom multi-press keyboard shortcuts in the shortcut editor.  -->  
 
 :::image type="icon" source="../../media/2020/06/experimental-tag-14px.msft.png":::
 
-[Microsoft Edge バージョン87以降][WhatsNew202010DevtoolsCustomizeKeyboardShortcutsSettings]では、devtools で操作のキーボードショートカットをカスタマイズすることができます。  Microsoft Edge バージョン88では、複数のキーボードショートカットを作成できるようになりました。  Devtools で操作のショートカットを設定するには、[[設定][DevtoolsCustomizeIndexSettings]の試験] に移動  >  **** し、[**キーボードショートカットエディターを有効**にする] の横にあるチェックボックスをオンにします。  ショートカットのカスタマイズと編集について詳しくは、「 [キーボードショートカットエディターの実験的機能を有効][DevtoolsExperimentalFeaturesEnableKeyboardShortcutEditor]にする」を参照してください。  
+[Microsoft Edge バージョン 87 以降][WhatsNew202010DevtoolsCustomizeKeyboardShortcutsSettings]では、DevTools でいずれのアクションのキーボード ショートカットもカスタマイズできます。  Microsoft Edge バージョン 88 では、複数押しのキーボード ショートカットを作成できます。  DevTools でアクションのショートカットを設定するには、[[設定][DevtoolsCustomizeIndexSettings] > **の実験**] に移動し、[**キーボード ショートカット エディターを有効にする**] の横にあるチェックボックスをオンにします。  ショートカットのカスタマイズと編集の詳細については、「[キーボード ショートカット エディターの試験的機能を有効にする][DevtoolsExperimentalFeaturesEnableKeyboardShortcutEditor]」に移動します。  
 
-たとえば、赤色の強調表示は、[記録して **イベントを開始** ] アクション用にカスタマイズされた複数のキーボードショートカットを示しています。  Chromium のオープンソースプロジェクトでこの機能に関するリアルタイムの更新を確認するには、[ [問題の #174309][CR174309]] に移動します。  
+たとえば、赤い強調表示は、[**イベントの記録の開始**] アクション用にカスタマイズされた複数押しの キーボード ショートカットが表示 されます。  Chromium オープン ソース プロジェクトで、この機能に関するリアルタイムの更新を確認するについては、[問題 #174309][CR174309] に移動します。  
 
-:::image type="complex" source="../../media/2020/11/multi-press-keyboard-shortcuts.msft.png" alt-text="弦のショートカットキー" lightbox="../../media/2020/11/multi-press-keyboard-shortcuts.msft.png":::
-   複数のキーボードショートカットを使用する  
+:::image type="complex" source="../../media/2020/11/multi-press-keyboard-shortcuts.msft.png" alt-text="コード キーボード ショートカット" lightbox="../../media/2020/11/multi-press-keyboard-shortcuts.msft.png":::
+   複数押しキーボード ショートカット  
+:::image-end:::  
+
+## DevTools がブラウザーの言語と一致する  
+
+Microsoft Edge バージョン 87 では、[DevTools の設定][DevtoolsCustomizeIndexSettings]で [**ブラウザーの言語の一致**] 設定をオンにした場合、DevTools はブラウザーの言語と一致しません。  Microsoft Edge バージョン 88 では、[**ブラウザーの言語の一致]** 設定をオンにすると、DevTools はブラウザーの言語と一致します。  **ブラウザーの言語の一致** DevTools 設定の詳細については、[「DevTools 言語設定の変更」][DevtoolsCustomizeLocalization]に移動します。  
+
+:::image type="complex" source="../../media/2020/11/startpage-devtools-settings-japanese.msft.png" alt-text="日本語でのブラウザーの言語の一致 DevTools 設定" lightbox="../../media/2020/11/startpage-devtools-settings-japanese.msft.png":::
+   日本語での**ブラウザーの言語の一致** DevTools 設定   
 :::image-end:::  
 
 ## Chromium プロジェクトからのお知らせ  
 
 [!INCLUDE [contact DevTools team note](../../includes/chromium-whats-new-note.md)]  
 
-### 新しい CSS アングル視覚エフェクトツール  
+### 新しい CSS 角度可視化ツール  
 
-DevTools で CSS アングルデバッギングのサポートが強化されました。  ページの HTML 要素に CSS アングルが適用されている場合、 **スタイル** ツールの角度の横に時計アイコンが表示されます。  時計のオーバーレイを切り替えるには、時計アイコンを選びます。  角度を変更するには、時計の任意の場所を選ぶか、または針をドラッグします。  [角度] の値を変更するには、マウスとキーボードのショートカットを使うこともできます。  <!--  To learn more, navigate to [Angle Clock][DevtoolsCssReferenceChangeAngleValueWithAngleClock].  -->  Chromium のオープンソースプロジェクトでこの機能に関するリアルタイムの更新を確認するには、[懸案事項 [1126178][CR1126178] および [1138633][CR1138633]] に移動します。  
+DevTools では、CSS 角度デバッグのサポートが向上しました。  ページ上の HTML 要素に CSS 角度が適用されている場合、**[スタイル]** ツールの角度の横に時計アイコンが表示 されます。  クロック オーバーレイを切り替えるには、時計アイコンを選択します。  角度を変更するには、時計の任意の場所を選択するか、または針をドラッグします。  角度の値を変更するには、マウス ショートカットとキーボード ショートカットを使用することもできます。  <!--  To learn more, navigate to [Angle Clock][DevtoolsCssReferenceChangeAngleValueWithAngleClock].  -->  Chromium オープン ソース プロジェクトでこの機能のリアルタイム更新を確認するには、問題 [1126178][CR1126178] および [1138633][CR1138633]に移動します。  
 
 <!--todo:  add link when css angle clock section exists.  -->  
 
-この例では、次の CSS アングルが使われています。  
+この例では、次の CSS 角度を使用します。  
 
 ```css
 background: linear-gradient(100deg, lightblue, pink);
 ```  
 
-:::image type="complex" source="../../media/2020/11/css-angle.msft.png" alt-text="CSS アングル" lightbox="../../media/2020/11/css-angle.msft.png":::
-   CSS アングル  
+:::image type="complex" source="../../media/2020/11/css-angle.msft.png" alt-text="CSS の角度" lightbox="../../media/2020/11/css-angle.msft.png":::
+   CSS の角度  
 :::image-end:::  
 
-### [記憶域] ウィンドウで記憶域のクォータサイズをシミュレートする  
+### [記憶域] ウィンドウで、記憶域クォータのサイズをシミュレートする  
 
-**ストレージ**ウィンドウでストレージのクォータサイズを上書きできるようになりました。  この機能により、さまざまなデバイスをシミュレートし、ディスク可用性の低いシナリオで web サイトやアプリの動作をテストすることができます。  記憶域のクォータをシミュレートするには、次の操作を実行します。  
+**[記憶域]** ウィンドウで記憶域クォータのサイズを上書きする場合があります。  この機能を使用すると、ディスクの可用性が低いシナリオで、さまざまなデバイスをシミュレートし、Web サイトまたはアプリの動作をテストできます。  記憶域クォータをシミュレートするには、次の操作を実行します。  
 
-1.  **アプリケーション**  >  **ストレージ**に移動します。  
-1.  [ **カスタム記憶域クォータのシミュレート** ] チェックボックスをオンにします。  
-1.  有効な番号を入力してください。  
+1.  **アプリケーション**  > **ストレージ**に移動します。  
+1.  **[カスタム ストレージ クォータをシミュレートする]** のチェック ボックスをオンにします。  
+1.  有効な数値を入力します。  
     
-モバイルデバイスやその他の機能を開発ツールでエミュレートする方法の詳細については、「 [Microsoft Edge DevTools でモバイルデバイスをエミュレートする」 ][DevtoolsDeviceModeIndex]を参照してください。  Chromium のオープンソースプロジェクトでこの機能に関するリアルタイムの更新を確認するには、[懸案事項 [945786][CR945786] および [1146985][CR1146985]] に移動します。  
+DevTools でモバイル デバイスや他の機能をエミュレートする方法の詳細については、[「Microsoft Edge DevTools でモバイル デバイスをエミュレートする」][DevtoolsDeviceModeIndex] に移動します。  Chromium オープン ソース プロジェクトでこの機能のリアルタイム更新を確認するには、問題[945786][CR945786] および [1146985][CR1146985]に移動します。  
 
-:::image type="complex" source="../../media/2020/11/storage-quota.msft.png" alt-text="記憶域のクォータサイズのシミュレート" lightbox="../../media/2020/11/storage-quota.msft.png":::
-   記憶域のクォータサイズのシミュレート  
+:::image type="complex" source="../../media/2020/11/storage-quota.msft.png" alt-text="記憶域クォータのサイズをシミュレートする" lightbox="../../media/2020/11/storage-quota.msft.png":::
+   記憶域クォータのサイズをシミュレートする  
 :::image-end:::  
 
-### ネットワークツールで CORS エラーを報告する  
+### ネットワーク ツールで CORS エラーを報告する  
 
-この機能を試すには、「 [CORS エラーデモ][GlitchCorsErrors]」に移動します。  **ネットワーク**ツールを開き、ページを更新して、失敗した CORS ネットワーク要求を確認します。  [状態の列には、 **CORS エラー**が表示されます。  エラーをポイントすると、ヒントにエラーコードが表示されるようになりました。  Microsoft Edge バージョン87以前の DevTools では、CORS エラーの一般的な (失敗した) 状態しか表示され **ませんでした** 。  Chromium のオープンソースプロジェクトでこの機能に関するリアルタイムの更新を確認するには、[問題 [1141824][CR1141824]] に移動します。  
+[「CORS エラー デモ」][GlitchCorsErrors]に移動して、この機能を試してみてください。  **ネットワーク** ツールを開き、ページを更新して、失敗した CORS ネットワーク要求を確認します。  状態の列には、**CORS エラー**が表示されます。  エラーの上にホバーすると、ツールヒントにエラー コードが表示されます。  Microsoft Edge バージョン 87 以前では、DevTools は CORS エラーの一般的な **(失敗)** 状態のみを表示しました。  Chromium オープン ソース プロジェクトでこの機能のリアルタイム更新を確認するには、問題 [1141824][CR1141824] に移動します。  
 
 :::image type="complex" source="../../media/2020/11/cors-err.msft.png" alt-text="CORS エラー" lightbox="../../media/2020/11/cors-err.msft.png":::
    CORS エラー  
 :::image-end:::  
 
-### フレームの詳細ビューの更新  
+### フレーム詳細ビューの更新  
 
-#### フレームの詳細表示のクロスオリジンの分離情報  
+#### フレーム詳細ビューのクロスオリジン分離情報  
 
-[ **セキュリティ & 分離** ] セクションの下に、クロスオリジン分離ステータスが表示されるようになりました。  [新しい **API の可用性** ] セクションには、 `SharedArrayBuffer` s \ (sab \) の空き時間と、バッファーを使用して共有できるかどうかが表示され `postMessage()` ます。  非推奨警告は、SAB と現在利用可能な場合に表示され `postMessage()` ますが、コンテキストはクロスオリジン分離されません。  クロスオリジン分離およびそのような機能に必要な理由の詳細については `SharedArrayBuffers` 、「 [WindowOrWorkerGlobalScope][MdnWindoworworkerglobalscopeCrossoriginisolated]」を参照してください。  Chromium のオープンソースプロジェクトでこの機能のリアルタイムの更新を確認するには、「案件 [1139899][CR1139899]」に移動します。  
+クロスオリジン分離状態は、**「セキュリティと分離」** セクションに表示されます。  新しい **「API の可用性」** セクションには、`SharedArrayBuffer`s \(SAB\) の可用性と、バッファーを使用して共有できるかどうかが表示されます`postMessage()`。  SAB と `postMessage()` が現在利用可能な場合、非推奨の警告が表示されますが、コンテキストはクロスオリジン分離されていません。  クロスオリジン分離の詳細と、`SharedArrayBuffers`が必要な理由については、[WindowOrWorkerGlobalScope.crossOriginIsolated][MdnWindoworworkerglobalscopeCrossoriginisolated] に移動します。  Chromium オープン ソース プロジェクトでこの機能のリアルタイム更新を確認するには、問題 [1139899][CR1139899] に移動します。  
 
-:::image type="complex" source="../../media/2020/11/frame-cross-origin-isolated-api.msft.png" alt-text="Cross-origin 情報" lightbox="../../media/2020/11/frame-cross-origin-isolated-api.msft.png":::
-   Cross-origin 情報  
+:::image type="complex" source="../../media/2020/11/frame-cross-origin-isolated-api.msft.png" alt-text="クロスオリジン情報" lightbox="../../media/2020/11/frame-cross-origin-isolated-api.msft.png":::
+   クロスオリジン情報  
 :::image-end:::  
 
-#### フレームの詳細表示の新しい Web ワーカー情報  
+#### フレーム詳細ビューの新しい Web ワーカー情報  
 
-DevTools は、web ワーカーを関連する親フレームの下に整理するようになりました。  たとえば、フレームで作成された場合は、 `someName` `worker.js` `worker.js` [フレーム] の一覧の下に表示され `someName` ます。 ****  Web worker の詳細を表示するには、次の操作を実行します。  
+DevTools では、関連する親フレームの下に Web ワーカーが整理されます。  たとえば、`someName` フレームが `worker.js` を作成する場合、`worker.js` が**フレーム** リストの下にある `someName` に表示 されます。  Web ワーカーの詳細を表示するには、次のアクションを実行します。  
 
-1.  **アプリケーション**ツールを開きます。  
+1.  **アプリケーション** ツールを開きます。  
 1.  Web ワーカーを含むフレームを展開します。  
-1.  [ **社員** ] ツリーを展開します。  
-1.  作業者を選択します。  
+1.  **[ワーカー]** ツリーを展開します。  
+1.  ワーカーを選択します。  
     
-Chromium のオープンソースプロジェクトでこの機能に関するリアルタイムの更新を確認するには、[懸案事項 [1122507][CR1122507] および [1051466][CR1051466]] に移動します。  
+Chromium オープン ソース プロジェクトでこの機能のリアルタイム更新を確認するには、問題 [1122507][CR1122507] および [1051466][CR1051466]に移動します。  
 
 :::image type="complex" source="../../media/2020/11/application-frames-service-workers.msft.png" alt-text="Web ワーカー情報" lightbox="../../media/2020/11/application-frames-service-workers.msft.png":::
    Web ワーカー情報  
 :::image-end:::  
 
-#### 開いているウィンドウの opener フレームの詳細を表示する  
+#### 開いたウィンドウのオープン フレームの詳細を表示する  
 
-DevTools では、開いている [ウィンドウ][MdnWindowConstructors] が関連する親 [フレーム][MdnWindowFrames]の下に表示されるようになりました。  たとえば、 `top` フレームで `Window` をクリックすると、[ `https://docs.microsoft.com/microsoft-edge/devtools-guide-chromium` `Window` フレーム] の一覧の下に表示され `top` ます。 ****  
+DevTools では、関連する親[フレーム][MdnWindowFrames]の下に開いている [Windows][MdnWindowConstructors] が整理 されます。  たとえば、`top` フレームが `Window` を `https://docs.microsoft.com/microsoft-edge/devtools-guide-chromium` に開く場合は、**フレーム** リストの下の `top` に `Window` が表示されます。  
 
-[ **要素** ] ツールで別のウィンドウを開くためのフレームを表示するには、次の操作を実行します。  
+**要素**ツールで別の Window を開くためのフレームを表示するには、次のアクションを実行します。  
 
-1.  [ **フレーム** ] ツリーを開きます。  
-1.  [ **開い** ているウィンドウ] を展開し、 `Window` 確認したい親フレームのを選びます。  
-1.  [ **Opener Frame** ] リンクを選びます。  
+1.  **フレーム** ツリーを開きます。  
+1.  **[開いた Windows]** を展開 し、知りたい親フレームの `Window` を選択します。  
+1.  **[Opener フレーム]** リンクを選択します。  
 
-詳細は、別のフレームを開くフレームについて表示され `Window` ます。  **Elements**ツールで opener を表示するには、次の操作を実行します。  
+どのフレームが別の `Window` を開いたのかについての詳細が表示されます。  **要素**ツールで Opener を表示するには、次のアクションを実行します。  
 
-1.  [ **フレーム** ] ツリーを開きます。  
-1.  開いているウィンドウを選択して詳細を表示し `Window` ます。  
-1.  [ **Opener Frame** ] リンクを選びます。  
+1.  **フレーム** ツリーを開きます。  
+1.  開いているウィンドウを選択して `Window` の詳細を開きます。  
+1.  **[Opener フレーム]** リンクを選択します。  
     
-Chromium のオープンソースプロジェクトでこの機能の履歴を確認するには、「案件 [1107766][CR1107766]」に移動します。  
+Chromium オープン ソース プロジェクトでこの機能の履歴を確認するには、問題 [1107766][CR1107766]に移動します。  
 
-:::image type="complex" source="../../media/2020/11/application-frames-opened-windows-security-opener-frame.msft.png" alt-text="開いているフレームの詳細" lightbox="../../media/2020/11/application-frames-opened-windows-security-opener-frame.msft.png":::
-   開いているフレームの詳細  
+:::image type="complex" source="../../media/2020/11/application-frames-opened-windows-security-opener-frame.msft.png" alt-text="開いたフレームの詳細" lightbox="../../media/2020/11/application-frames-opened-windows-security-opener-frame.msft.png":::
+   開いたフレームの詳細  
 :::image-end:::  
 
-### ネットワークイニシエーターの stacktrace をコピーする  
+### ネットワーク イニシエーターの stacktrace をコピーする  
 
-Stacktrace をクリップボードにコピーするには、次の操作を実行します。  
+stacktrace をクリップボードにコピーするには、次のアクションを実行します。  
 
-1.  コンテキストメニューを開きます (\ [\] を右クリックします)。  
-1.  [ **Copy**  >  **copy stacktrace**] を選びます。  
+1.  コンテキスト メニュー \(右クリック\) を開きます。  
+1.  **[コピー]** を選んでから、 > **[stacktrace をコピー]** を選びます。  
     
-Chromium のオープンソースプロジェクトでこの機能の履歴を確認するには、「案件 [1139615][CR1139615]」に移動します。
+Chromium オープン ソース プロジェクトでこの機能の履歴を確認するには、問題 [1139615][CR1139615] に移動します。
 
-:::image type="complex" source="../../media/2020/11/copy-stacktrace.msft.png" alt-text="Stacktrace をコピーする" lightbox="../../media/2020/11/copy-stacktrace.msft.png":::
-   Stacktrace をコピーする  
+:::image type="complex" source="../../media/2020/11/copy-stacktrace.msft.png" alt-text="stacktrace のコピー" lightbox="../../media/2020/11/copy-stacktrace.msft.png":::
+   stacktrace のコピー  
 :::image-end:::  
 
-### マウスを置いたときの Wasm 変数値のプレビュー  
+### マウスオーバー時の Wasm 変数値のプレビュー  
 
-この機能を使用すると、コードが一時停止されているときに、(Wasm \) 変数の値を確認することができます。  変数の現在の値を表示するには、変数をポイントします。  Chromium のオープンソースプロジェクトでこの機能に関するリアルタイムの更新を確認するには、[懸案事項 [1058836][CR1058836] および [1071432][CR1071432]] に移動します。  
+この機能を使用して、コードが一時停止した時に WebAssembly \(Wasm\) 変数の値を確認します。  変数の現在の値を表示するには、変数にホバーします。  Chromium オープン ソース プロジェクトでこの機能のリアルタイム更新を確認するには、問題 [1058836][CR1058836] および [1071432][CR1071432] に移動します。  
 
-:::image type="complex" source="../../media/2020/11/wasm-mouseover.msft.png" alt-text="マウスの上に表示される Wasm 変数のプレビュー" lightbox="../../media/2020/11/wasm-mouseover.msft.png":::
-   マウスの上に表示される Wasm 変数のプレビュー  
+:::image type="complex" source="../../media/2020/11/wasm-mouseover.msft.png" alt-text="マウスオーバー時の Wasm 変数のプレビュー" lightbox="../../media/2020/11/wasm-mouseover.msft.png":::
+   マウスオーバー時の Wasm 変数のプレビュー  
 :::image-end:::  
 
-### ファイルとメモリのサイズの一定の測定単位  
+### ファイルとメモリのサイズに対する一貫した測定単位  
 
-DevTools `kB` は、ファイルとメモリのサイズを表示するために一貫して使用されるようになりました。  以前の DevTools `kB` と `KiB` の混在。
+DevTools は、ファイルとメモリのサイズを表示するために、`kB` を常に使用します。  以前の DevTools では、`kB` と `KiB` が混在していました。
 
-*   `kB` またはキロバイト \ (10 ^ 3 または1000バイト)  
-*   `KiB` または kibibyte \ (2 ^ 10 または1024バイト)  
+*   `kB` またはキロバイト \(10^3 または 1000 バイト\)  
+*   `KiB` またはキビバイト \(2^10 または 1024 バイト\)  
     
-たとえば、以前は**** ラベルで使用した `kB` が、計算に使用されたネットワークツールなどです `KiB` 。  この不整合により混乱が生じたことがフィードバックに示されました。  Chromium のオープンソースプロジェクトでこの機能の履歴を確認するには、「案件 [1035309][CR1035309]」に移動します。  
+たとえば、**ネットワーク** ツールは以前`kB` をラベルで使用していましたが、計算には `KiB` を使用していました。  お客様のフィードバックから、この不整合によって混乱が生じることが明らかになりました。  Chromium オープン ソース プロジェクトでこの機能の履歴を確認するには、問題 [1035309][CR1035309] に移動します。  
 
-## Microsoft Edge preview チャネルをダウンロードする  
+## Microsoft Edge プレビュー チャネルをダウンロードする  
 
-Windows、Linux、または macOS を使用している場合は、既定の開発ブラウザーとして [Microsoft Edge preview channels] [MicrosoftEdgePreviewChannels] を使うことを検討してください。  プレビューチャネルを使うと、最新の DevTools 機能にアクセスできます。  
+Windows、Linux、または macOS を使用している場合は、[Microsoft Edge プレビュー チャネル][MicrosoftEdgePreviewChannels] を既定の開発ブラウザーとして使用することを検討してください。  プレビュー チャネルを使用すると、最新の DevTools 機能にアクセスできます。  
 
 ## Microsoft Edge DevTools チームに連絡する  
 
@@ -329,74 +337,75 @@ Windows、Linux、または macOS を使用している場合は、既定の開�
 
 <!-- links -->  
 
-[Devtools3dViewIndex]: /microsoft-edge/devtools-guide-chromium/3d-view/index "3D ビュー |Microsoft ドキュメント"  
-[DevtoolsConsoleIndex]: /microsoft-edge/devtools-guide-chromium/console/index "本体の概要 |Microsoft ドキュメント"  
-[DevtoolsCustomizeIndexSettings]: /microsoft-edge/devtools-guide-chromium/customize/index#settings "設定-Microsoft Edge DevTools のカスタマイズ |Microsoft ドキュメント"  
-[DevtoolsDeviceModeIndex]: /microsoft-edge/devtools-guide-chromium/device-mode/index "Microsoft Edge DevTools でモバイルデバイスをエミュレートする |Microsoft ドキュメント"  
-[DevtoolsExperimentalFeaturesEnableKeyboardShortcutEditor]: /microsoft-edge/devtools-guide-chromium/experimental-features#enable-keyboard-shortcut-editor "キーボードショートカットエディターを有効にする-実験的な機能 |microsoft ドキュメント"  
-[DevtoolsExperimentalFeaturesTurnOnCompositedLayers3dView]: /microsoft-edge/devtools-guide-chromium/experimental-features#turn-on-composited-layers-in-3d-view "3D ビューでの合成レイヤーの有効化-実験的な機能 |Microsoft ドキュメント"  
-[DevtoolsIssuesIndex]: /microsoft-edge/devtools-guide-chromium/issues/index "Microsoft Edge DevTools の問題を見つけて解決するツール |Microsoft ドキュメント"  
-[DevtoolsNetworkReferenceCopyFormattedResponseJsonClipboard]: /microsoft-edge/devtools-guide-chromium/network/reference#copy-formatted-response-json-to-the-clipboard "書式設定された応答の JSON をクリップボードにコピーする-ネットワーク分析のリファレンス |Microsoft ドキュメント"  
-[DevtoolsNetworkReferenceViewTimingBreakdownRequest]: /microsoft-edge/devtools-guide-chromium/network/reference#view-the-timing-breakdown-of-a-request "要求のタイミングの内訳を表示する-ネットワーク分析のリファレンス |Microsoft ドキュメント"  
-[WebDriverChromiumMain]: /microsoft-edge/webdriver-chromium "テストオートメーションに WebDriver (Chromium) を使います。Microsoft ドキュメント"  
+[Devtools3dViewIndex]: /microsoft-edge/devtools-guide-chromium/3d-view/index "3D ビュー | Microsoft Docs"  
+[DevtoolsConsoleIndex]: /microsoft-edge/devtools-guide-chromium/console/index "コンソールの概要 | Microsoft Docs"  
+[DevtoolsCustomizeIndexSettings]: /microsoft-edge/devtools-guide-chromium/customize/index#settings "設定 - Microsoft Edge DevTools をカスタマイズする | Microsoft Docs"  
+[DevtoolsCustomizeLocalization]: /microsoft-edge/devtools-guide-chromium/customize/localization "DevTools の言語設定を変更する | Microsoft Docs"  
+[DevtoolsDeviceModeIndex]: /microsoft-edge/devtools-guide-chromium/device-mode/index "Microsoft Edge DevTools でモバイル デバイスをエミュレートする | Microsoft Docs"  
+[DevtoolsExperimentalFeaturesEnableKeyboardShortcutEditor]: /microsoft-edge/devtools-guide-chromium/experimental-features#enable-keyboard-shortcut-editor "キーボード ショートカット エディターを有効にする - 試験的な機能 | microsoft Docs"  
+[DevtoolsExperimentalFeaturesTurnOnCompositedLayers3dView]: /microsoft-edge/devtools-guide-chromium/experimental-features#turn-on-composited-layers-in-3d-view "3D ビューで複合レイヤーを有効にする - 試験的機能 | Microsoft Docs"  
+[DevtoolsIssuesIndex]: /microsoft-edge/devtools-guide-chromium/issues/index "Microsoft Edge DevTools の問題ツールに関する問題を見つけて修正する | Microsoft Docs"  
+[DevtoolsNetworkReferenceCopyFormattedResponseJsonClipboard]: /microsoft-edge/devtools-guide-chromium/network/reference#copy-formatted-response-json-to-the-clipboard "書式設定された応答 JSON をクリップボードにコピーする - ネットワーク分析リファレンス | Microsoft Docs"  
+[DevtoolsNetworkReferenceViewTimingBreakdownRequest]: /microsoft-edge/devtools-guide-chromium/network/reference#view-the-timing-breakdown-of-a-request "要求のタイミング ブレークダウンを表示する - ネットワーク分析リファレンス | Microsoft Docs"  
+[WebDriverChromiumMain]: /microsoft-edge/webdriver-chromium "テスト自動化に WebDriver (Chromium) を使用する | Microsoft Docs"  
 
 <!--  [DevtoolsCssReferenceChangeAngleValueWithAngleClock]: /microsoft-edge/devtools-guide-chromium/css/reference#change-angle-value-with-the-angle-clock "Change angle value with the Angle Clock - CSS reference | Microsoft Docs"  -->  
 
-[ProgressiveWebAppsChromiumIndex]: /microsoft-edge/progressive-web-apps-chromium/index "Windows のプログレッシブ Web アプリ |Microsoft ドキュメント"  
+[ProgressiveWebAppsChromiumIndex]: /microsoft-edge/progressive-web-apps-chromium/index "Windows 上のプログレッシブ Web アプリ | Microsoft Docs"  
 
-[WhatsNew202010DevtoolsCustomizeKeyboardShortcutsSettings]: /microsoft-edge/devtools-guide-chromium/whats-new/2020/10/devtools#customize-keyboard-shortcuts-in-settings "設定のショートカットキーをカスタマイズする-DevTools の新機能 (Microsoft Edge 87) |Microsoft ドキュメント"  
-[WhatsNew202006DevtoolsWebhintFeedbackInTheIssuesPanel]: /microsoft-edge/devtools-guide-chromium/whats-new/2020/06/devtools#webhint-feedback-in-the-issues-panel "[問題] パネルでの webhint のフィードバック-DevTools の新機能 (Microsoft Edge 85) |Microsoft ドキュメント"  
+[WhatsNew202010DevtoolsCustomizeKeyboardShortcutsSettings]: /microsoft-edge/devtools-guide-chromium/whats-new/2020/10/devtools#customize-keyboard-shortcuts-in-settings "[設定] でキーボード ショートカットをカスタマイズする - DevTools の新機能 (Microsoft Edge 87) | Microsoft Docs"  
+[WhatsNew202006DevtoolsWebhintFeedbackInTheIssuesPanel]: /microsoft-edge/devtools-guide-chromium/whats-new/2020/06/devtools#webhint-feedback-in-the-issues-panel "[問題] パネルの webhint フィードバック - DevTools の新機能 (Microsoft Edge 85) | Microsoft Docs"  
 
-[MicrosoftDeveloperMicrosoftEdgeToolsWebdriverDownloads]: https://developer.microsoft.com/microsoft-edge/tools/webdriver#downloads "WebDriver をダウンロード |Microsoft 開発者"  
+[MicrosoftDeveloperMicrosoftEdgeToolsWebdriverDownloads]: https://developer.microsoft.com/microsoft-edge/tools/webdriver#downloads "WebDriver のダウンロード | Microsoft 開発者"  
 
-[MicrosoftinsiderDownloadPlatformLinux]: https://www.microsoftedgeinsider.com/download?platform=linux "Microsoft Edge Insider チャネルをダウンロードする"  
+[MicrosoftinsiderDownloadPlatformLinux]: https://www.microsoftedgeinsider.com/download?platform=linux "Microsoft Edge Insider Channels をダウンロードする"  
 
-[VisualStudioCode]: https://code.visualstudio.com "Visual Studio コード"  
+[VisualStudioCode]: https://code.visualstudio.com "Visual Studio Code"  
 
-[CRIssuesList]: https://bugs.chromium.org/p/chromium/issues/list "Chromium のバグ"  
+[CRIssuesList]: https://bugs.chromium.org/p/chromium/issues/list "Chromium bugs"  
 
-[CR174309]: https://crbug.com/174309 "問題 174309: DevTools: キーボードショートカットとキーバインディングのカスタマイズを許可する |Chromium のバグ"  
-[CR945786]: https://crbug.com/945786 "問題 945786: DevTools: 「ナビゲーターの上書きを許可する」の推定 () |Chromium のバグ"  
-[CR1029427]: https://crbug.com/1029427 "問題 1029427: フロントエンドでのプロトコルメッセージディスパッチのパフォーマンスのオーバーヘッドを削減する |Chromium のバグ"  
-[CR1035309]: https://crbug.com/1035309 "問題 1035309: DevTools では、mebibyte ではなく、MB を平均して MB を使用する必要があります。Chromium のバグ"  
-[CR1051466]: https://crbug.com/1051466 "問題 1051466: DevTools での CO-OP/COEP のデバッグのサポート |Chromium のバグ"  
-[CR1058836]: https://crbug.com/1058836 "問題 1058836: Wasm のデバッグに関する UX の問題 |Chromium のバグ"  
-[CR1071432]: https://crbug.com/1071432 "問題 1071432: ☂️ Wasm Basic 開発者エクスペリエンス |Chromium のバグ"  
-[CR1107766]: https://crbug.com/1107766 "問題 1107766: 「window. open ()」 (frame tree) で生成されたフレームについての情報を表示する |Chromium のバグ"  
-[CR1122507]: https://crbug.com/1122507 "問題 1122507: フレームツリービューでの Surface worker 情報 |Chromium のバグ"  
-[CR1126178]: https://crbug.com/1126178 "問題 1126178: ☂ DevTools: CSS <種類> コンポーネントを入力します。Chromium のバグ"  
-[CR1130556]: https://crbug.com/1130556 "問題 1130556: DevTools: テストイメージフォールバック (エミュレーション) |Chromium のバグ"  
-[CR1132084]: https://crbug.com/1132084 "問題 1132084: JSON 要求ペイロードを簡単にコピーする方法はありません |Chromium のバグ"  
-[CR1136394]: https://crbug.com/1136394 "問題 1136394: Flexbox のツール |Chromium のバグ"  
-[CR1138633]: https://crbug.com/1138633 "問題 1138633: DevTools: CSS <angle> component は、時計の背景に存在するプロパティの外観を反映する必要があります。Chromium のバグ"  
-[CR1139615]: https://crbug.com/1139615 "問題 1139615: ネットワークイニシエーターは、スタックトレースをコピーする機能を提供する必要があります。 |Chromium のバグ"  
-[CR1139899]: https://crbug.com/1139899 "問題 1139899: フレームの詳細表示でのゲート API の可用性レポート |Chromium のバグ"  
-[CR1139945]: https://crbug.com/1139945 "問題 1139945: [スタイル] パネルでの flexbox CSS プロパティのアイコン |Chromium のバグ"  
-[CR1141824]: https://crbug.com/1141824 "問題 1141824: DevTools で CORS のエラー報告を改善するChromium のバグ"  
-[CR1144090]: https://crbug.com/1144090 "問題 1144090: 柔軟なスタイルの装飾を要素ツリーに追加する |Chromium のバグ"  
-[CR1146985]: https://crbug.com/1146985 "問題 1146985: クリアテキストは、「Dev Tools」ウィンドウの「ストレージ」セクションのテキストボックスに引き続き表示されます。Chromium のバグ"  
+[CR174309]: https://crbug.com/174309 "問題 174309: DevTools: キーボード ショートカット/キー バインドのカスタマイズを許可する | Chromium のバグ"  
+[CR945786]: https://crbug.com/945786 "問題 945786: DevTools: navigator.storage.estimate() の上書きを許可する | Chromium のバグ"  
+[CR1029427]: https://crbug.com/1029427 "問題 1029427: フロントエンドでのプロトコル メッセージ ディスパッチのパフォーマンス オーバーヘッドを削減する | Chromium のバグ"  
+[CR1035309]: https://crbug.com/1035309 "問題 1035309: DevTools は MB をメビバイトではなくメガバイトという意味で一貫して使用する必要があります | Chromium のバグ"  
+[CR1051466]: https://crbug.com/1051466 "問題 1051466: DevTools での COOP/COEP デバッグのサポート | Chromium のバグ"  
+[CR1058836]: https://crbug.com/1058836 "問題 1058836: Wasm のデバッグに関する UX の問題 | Chromium のバグ"  
+[CR1071432]: https://crbug.com/1071432 "問題 1071432: ☂️ Wasm Basic 開発者のエクスペリエンス | Chromium のバグ"  
+[CR1107766]: https://crbug.com/1107766 "問題 1107766: 'window.open()' によって生成されたフレームに関する情報をフレーム ツリーに表示する | Chromium のバグ"  
+[CR1122507]: https://crbug.com/1122507 "問題 1122507: フレーム ツリー ビューでの Surface ワーカー情報 | Chromium のバグ"  
+[CR1126178]: https://crbug.com/1126178 "問題 1126178: devTools ☂: CSS <タイプ> コンポーネント | Chromium のバグ"  
+[CR1130556]: https://crbug.com/1130556 "問題 1130556: DevTools: テスト イメージのフォールバック (エミュレーション) | Chromium のバグ"  
+[CR1132084]: https://crbug.com/1132084 "問題 1132084: JSON 要求ペイロードを簡単にコピーする方法がない | Chromium のバグ"  
+[CR1136394]: https://crbug.com/1136394 "問題 1136394: Flexbox ツール | Chromium のバグ"  
+[CR1138633]: https://crbug.com/1138633 "問題 1138633: DevTools: CSS <角度> コンポーネントが、時計の背景にあるプロパティの外観を反射している必要がある |Chromium のバグ"  
+[CR1139615]: https://crbug.com/1139615 "問題 1139615: ネットワーク イニシエーターがスタック トレースをコピーする機能を提供する必要がある | Chromium のバグ"  
+[CR1139899]: https://crbug.com/1139899 "問題 1139899: フレーム詳細ビューでゲート API の可用性を報告する | Chromium のバグ"  
+[CR1139945]: https://crbug.com/1139945 "問題 1139945: [スタイル] パネルの flexbox CSS プロパティのアイコン | Chromium のバグ"  
+[CR1141824]: https://crbug.com/1141824 "問題 1141824: DevTools で CORS エラー報告を改善する | Chromium のバグ"  
+[CR1144090]: https://crbug.com/1144090 "問題 1144090: 要素ツリーに柔軟なスタイルの装飾を追加する | Chromium のバグ"  
+[CR1146985]: https://crbug.com/1146985 "問題 1146985: 「Dev Tools」ウィンドウの「ストレージ」セクションのテキスト ボックスに、クリアされたテキストが表示される | Chromium のバグ"  
 
-[GlitchCorsErrors]: https://cors-errors.glitch.me "CORS のエラー |故障"  
+[GlitchCorsErrors]: https://cors-errors.glitch.me "CORS エラー | Glitch"  
 
-[MdnCors]: https://developer.mozilla.org/docs/Web/HTTP/CORS "クロスオリジンリソース共有 (CORS) |MDN"  
-[MdnUsingCssCustomProperties]: https://developer.mozilla.org/docs/Web/CSS/Using_CSS_custom_properties "CSS カスタムプロパティ (変数) を使用する |MDN"  
-[MdnWindowConstructors]: https://developer.mozilla.org/docs/Web/API/Window#Constructors "コンストラクター-Window |MDN"  
-[MdnWindowFrames]: https://developer.mozilla.org/docs/Web/API/Window/frames "ウィンドウ。フレーム |MDN"  
-[MdnWindoworworkerglobalscopeCrossoriginisolated]: https://developer.mozilla.org/docs/Web/API/WindowOrWorkerGlobalScope/crossOriginIsolated "WindowOrWorkerGlobalScope の分離 |MDN"  
+[MdnCors]: https://developer.mozilla.org/docs/Web/HTTP/CORS "クロスオリジン リソース共有 (CORS) | MDN"  
+[MdnUsingCssCustomProperties]: https://developer.mozilla.org/docs/Web/CSS/Using_CSS_custom_properties "CSS カスタム プロパティ (変数) を使用する |MDN"  
+[MdnWindowConstructors]: https://developer.mozilla.org/docs/Web/API/Window#Constructors "コンストラクター - Window | MDN"  
+[MdnWindowFrames]: https://developer.mozilla.org/docs/Web/API/Window/frames "Window.frames |MDN"  
+[MdnWindoworworkerglobalscopeCrossoriginisolated]: https://developer.mozilla.org/docs/Web/API/WindowOrWorkerGlobalScope/crossOriginIsolated "WindowOrWorkerGlobalScope.crossOriginIsolated | MDN"  
 
-[WebhintMain]: https://webhint.io "web ヒント"  
-[WebhintUserGuideHintsAccessibility]: https://webhint.io/docs/user-guide/hints/accessibility "アクセシビリティ |web ヒント"  
-[WebhintUserGuideHintsCompatibility]: https://webhint.io/docs/user-guide/hints/compatibility "互換性 |web ヒント"  
-[WebhintUserGuideHintsPerformance]: https://webhint.io/docs/user-guide/hints/performance "パフォーマンス |web ヒント"  
-[WebhintUserGuideHintsPitfalls]: https://webhint.io/docs/user-guide/hints/pitfalls "落とし穴 |web ヒント"  
-[WebhintUserGuideHintsPwa]: https://webhint.io/docs/user-guide/hints/pwa "PWA |web ヒント"  
-[WebhintUserGuideHintsSecurity]: https://webhint.io/docs/user-guide/hints/security "セキュリティ |web ヒント"  
+[WebhintMain]: https://webhint.io "webhint"  
+[WebhintUserGuideHintsAccessibility]: https://webhint.io/docs/user-guide/hints/accessibility "アクセシビリティ | webhint"  
+[WebhintUserGuideHintsCompatibility]: https://webhint.io/docs/user-guide/hints/compatibility "互換性 | webhint"  
+[WebhintUserGuideHintsPerformance]: https://webhint.io/docs/user-guide/hints/performance "パフォーマンス | webhint"  
+[WebhintUserGuideHintsPitfalls]: https://webhint.io/docs/user-guide/hints/pitfalls "落とし穴 | webhint"  
+[WebhintUserGuideHintsPwa]: https://webhint.io/docs/user-guide/hints/pwa "PWA | webhint"  
+[WebhintUserGuideHintsSecurity]: https://webhint.io/docs/user-guide/hints/security "セキュリティ | webhint"  
 
 > [!NOTE]
-> このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
-> 元のページは [ここ](https://developers.google.com/web/updates/2020/11/devtools/index) にあり、 [Jecelyn][JecelynYeen] で作成されています (開発者の代表者、Chrome devtools \)。  
+> このページの一部の情報は、[Google によって作成および共有][GoogleSitePolicies]されている著作物に基づいており、[Creative Commons Attribution 4.0 International License][CCA4IL] に記載されている条項に従って使用されています。  
+> [Jecelyn Yeen][JecelynYeen] \(デベロッパー アドボケイト、Chrome DevTools\) によって作成された元のページは[こちら](https://developers.google.com/web/updates/2020/11/devtools/index)にあります。  
 
-[![クリエイティブコモンズライセンス][CCby4Image]][CCA4IL]  
+[![Creative Commons ライセンス][CCby4Image]][CCA4IL]  
 この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。  
 
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
