@@ -11,4 +11,4 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 09/09/2020
 ms.locfileid: "11004195"
 ---
-<span data-ttu-id="f45dc-101">次のセクションでは、オープンソースの Chromium プロジェクトに寄与した Microsoft Edge で利用できるその他の機能について説明します。</span><span class="sxs-lookup"><span data-stu-id="f45dc-101">The following sections announce additional features available in Microsoft Edge that were contributed to the open-source Chromium project.</span></span>  
+<span data-ttu-id="ece27-101">次のセクションでは、オープンソースの Chromium プロジェクトに提供された、Microsoft Edge で利用できるその他の機能について説明します。</span><span class="sxs-lookup"><span data-stu-id="ece27-101">The following sections announce additional features available in Microsoft Edge that were contributed to the open-source Chromium project.</span></span>  
