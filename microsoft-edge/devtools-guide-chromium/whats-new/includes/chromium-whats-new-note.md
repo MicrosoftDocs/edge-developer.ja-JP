@@ -11,4 +11,4 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 09/09/2020
 ms.locfileid: "11004195"
 ---
-次のセクションでは、オープンソースの Chromium プロジェクトに寄与した Microsoft Edge で利用できるその他の機能について説明します。  
+次のセクションでは、オープンソースの Chromium プロジェクトに提供された、Microsoft Edge で利用できるその他の機能について説明します。  
