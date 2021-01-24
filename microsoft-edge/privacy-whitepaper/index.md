@@ -11,12 +11,12 @@ ms.localizationpriority: high
 no-loc:
 - Cast
 - Google Cast
-ms.openlocfilehash: 86981c0ab9dcce7069c7da7b3bdaaee6bf93077e
-ms.sourcegitcommit: a35a6b5bbc21b7df61d08cbc6b074b5325ad4fef
+ms.openlocfilehash: e34228f7b094fbf11320da7d9523f04d2a550aae
+ms.sourcegitcommit: 5f10022bd1da3477660be40c559411fadf59d8f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "11234403"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "11297738"
 ---
 # Microsoft Edge プライバシー ホワイトペーパー  
 
