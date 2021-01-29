@@ -47,7 +47,7 @@ ms.locfileid: "11104708"
 
 まず `icons` 、アイコンイメージファイルを格納するディレクトリをプロジェクトに作成します。  アイコンは、ユーザーが拡張機能を起動するために選択したボタンの背景画像に使用されます。  
 
-:::image type="complex" source="./media/part1-badge1.png" alt-text="拡張機能を開くためのツールバーのアイコン&quot;:::
+:::image type="complex" source="./media/part1-badge1.png" alt-text="拡張機能を開くためのツールバーのアイコン":::
    拡張機能を開くためのツールバーのアイコン
 :::image-end:::
 
