@@ -1,88 +1,90 @@
 ---
-description: WinUI アプリ用 WebView2 の概要ガイド
-title: WinUI アプリの WebView2 の概要
+description: WinUI アプリ用 WebView2 の使用を開始するガイド
+title: WinUI アプリ用 WebView2 の使用を開始する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 11/20/2020
+ms.date: 01/29/2021
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
-keywords: WebView2、WebView2、WebView、webview、winui apps、winui、edge、CoreWebView2、browser control、edge html、はじめに、作業の開始、.NET
-ms.openlocfilehash: a1ccffe332f71ee9d53ff267e8cca6bdbda81703
-ms.sourcegitcommit: 02c602379537ab3b9d0a355cea7fcf96fdbd8870
+keywords: WebView2、webview2、WebView、webview、winui アプリ、winui、edge、CoreWebView2、ブラウザー コントロール、エッジ HTML、開始、開始、.NET
+ms.openlocfilehash: 5188a735eaf635c3b3bc0eead6f4ee4f3a83f1c4
+ms.sourcegitcommit: d89f77d4667dfbc44ed35f2ec7e3ae64ab98bf1a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "11182722"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "11306153"
 ---
-# WinUI 3 での WebView2 の概要 (プレビュー)  
+# WinUI 3 での WebView2 の使用を開始する (プレビュー)  
 
-この記事では、初めての WebView2 アプリを作成する方法と、 [Microsoft Edge WebView2 (Preview) の概要][Webview2Index]の主な機能について説明します。  初めての WebView2 アプリでは、WinUI3 が使われます。  個々の Api について詳しくは、「 [api リファレンス][GithubMicrosoftUiXamlSpecsWebview2]」をご覧ください。  
+この記事では、[WebView2][MicrosoftDeveloperMicrosoftEdgeWebview2]の主な機能について説明して、初めて WebView2 アプリの作成を開始します。  最初の WebView2 アプリは WinUI3 を使用します。  個々の API の詳細については、API リファレンスに [移動してください][GithubMicrosoftUiXamlSpecsWebview2]。  
 
 ## 前提条件  
 
-次の記事を始める前に、次の前提条件の一覧をインストールしてください。  
+先に進む前に、前提条件の次の一覧をインストールしてください。  
 
-1.  Windows 10 バージョン 1803 \ (ビルド 17134 \) 以降。  詳細については、「 [Windows Update: よく寄せ][MicrosoftSupport12373]られる質問 (FAQ)」を参照してください。  
-1.  [Microsoft Edge (Chromium) カナリア Channel][MicrosoftedgeinsiderDownload] windows 10、windows 8.1、または windows 7。  
-1.  Visual Studio 2019、バージョン 16.9 Preview。  詳細については、「 [WINDOWS UI ライブラリ3プレビュー 3][WindowsAppsWinui3ConfigureYourDevEnvironment]」を参照してください。  
+*   Windows 10 バージョン 1803 \(ビルド 17134\) 以降にインストールされている[WebView2][Webview2Installer]ランタイムまたは[Microsoft Edge (Chromium)][MicrosoftedgeinsiderDownload]非安定チャネル。  Windows 10 について詳しくは、「Windows [Update: FAQ」をご覧ください][MicrosoftSupport12373]。  
     
-    Visual Studio をインストールする場合は、次のワークロードを含めます。  
+    > [!NOTE]
+    > WebView チームでは、Canary チャネルの使用をお勧めします。必要な最小バージョンは 82.0.488.0 です。  
     
-    *   .NET デスクトップ開発 \ (インストーラーでも .NET 5 がインストールされます)  
-    *   ユニバーサル Windows プラットフォーム開発  
+*   [Visual Studio][MicrosoftVisualstudioMain] 2019 バージョン 16.9 プレビュー。  詳しくは [、Windows UI ライブラリ 3 プレビュー 3 に移動してください][WindowsAppsWinui3ConfigureYourDevEnvironment]。  
+    
+    *   インストール時に次のワークロードを含Visual Studio。  
+        *   .NET Desktop Development \(インストーラーは .NET 5\ もインストールします)  
+        *   ユニバーサル Windows プラットフォーム開発  
+    *   C++ アプリをビルドするには、次のワークロードも含める必要があります。  
+        *   C++ を使用したデスクトップ開発  
+        *   C++ \(v142\) ユニバーサル Windows プラットフォーム ツール (ユニバーサル Windows プラットフォーム ワークロード用のオプション コンポーネント)。  詳細については、右側のウィンドウの [**ユニバーサル Windows**プラットフォーム**開発]** セクションの [インストールの詳細] に移動します。  
         
-    C++ アプリをビルドするには、次のワークロードも含める必要があります。  
-    
-    *   C++ でのデスクトップ開発  
-    *   ユニバーサル Windows プラットフォームのワークロードの C++ (v142) ユニバーサル Windows プラットフォームツールのオプションコンポーネント。  詳細については、右側のウィンドウで [ユニバーサル Windows プラットフォーム開発] セクションの [インストールの詳細] を参照してください。  
-        
-1.  [Nuget.org][NugetHome]に対して有効になっている NuGet パッケージソースがシステムにあることを確認します。 詳細については、「[共通の NuGet 構成][NugetConsumePackagesConfiguringNugetBehavior]と[Windows コミュニティツールキット][WindowsCommunitytoolkit]」を参照してください。  
-1.  [WinUI 3 Preview 3 VSIX パッケージ][VisualstudioMarketplaceMicrosoftWinuiWinuiprojecttemplates]をダウンロードしてインストールします。  インストーラーは、winui 3 プロジェクトテンプレートと、WinUI 3 ライブラリを含む NuGet パッケージを Visual Studio 2019 に追加します。  
-    
-    VSIX パッケージを Visual Studio に追加する方法については、「 [Visual Studio 拡張機能の検索と使用][VisualstudioIdeFindingUsingVisualStudioExtensionsInstallWithoutUsing-ManageExtensionsDialogBox]」を参照してください。
-    
-1.  開発 [者モード][WindowsUwpGetStartedEnableYourDeviceForDevelopment] を有効にして、開発者固有の Visual Studio のすべての機能に確実にアクセスできるようにします。  
-    
-## 手順 1-プロジェクトを作成する  
+## 手順 0 - Visual Studio設定  
 
-1つのメインウィンドウを含む基本的なデスクトッププロジェクトから始めます。  
-
-1.  Visual Studio で、[ **新しいプロジェクトの作成**] を選択します。  
-1.  [プロジェクト] ドロップダウンで、[ **C#**]、[ **Windows**]、[ **WinUI** ] の順に選択します。  
+1.  システムで NuGet パッケージ ソースが有効になっているか確認 [nuget.org。][NugetHome] 詳細については、一般的な [NuGet][NugetConsumePackagesConfiguringNugetBehavior] 構成と [Windows コミュニティ][WindowsCommunitytoolkit]に移動Toolkit。  
+1.  [WinUI 3 Preview 3 VSIX パッケージをダウンロードしてインストールします][VisualstudioMarketplaceMicrosoftWinuiWinuiprojecttemplates]。  インストーラーは、WinUI 3 プロジェクト テンプレートと、WinUI 3 ライブラリを含む NuGet パッケージの両方を 2019 Visual Studioします。  
     
-    :::image type="complex" source="./media/winui-gettingstarted-selections.png" alt-text="Visual Studio を使って新しい WinUI プロジェクトを作成する" lightbox="./media/winui-gettingstarted-selections.png":::
-        Visual Studio を使って新しい WinUI プロジェクトを作成する
+    パッケージをパッケージに追加する方法についてはVisual Studio拡張機能の検索と `VSIX` [使用Visual Studioしてください][VisualstudioIdeFindingUsingVisualStudioExtensionsInstallWithoutUsing-ManageExtensionsDialogBox]。
+    
+1.  開発者固有のすべての機能にアクセスVisual Studio、開発者モードを [有効にします][WindowsUwpGetStartedEnableYourDeviceForDevelopment]。  
+    
+## 手順 1 - プロジェクトを作成する  
+
+1 つのメイン ウィンドウを含む基本的なデスクトップ プロジェクトから開始します。  
+
+1.  In Visual Studio, choose **Create a new project**.  
+1.  プロジェクトのドロップダウンで **、C#、Windows、****および** **WinUI をそれぞれ**選択します。  
+    
+    :::image type="complex" source="./media/winui-gettingstarted-selections.png" alt-text="次のコマンドを使用して新しい WinUI プロジェクトをVisual Studio" lightbox="./media/winui-gettingstarted-selections.png":::
+        次のコマンドを使用して新しい WinUI プロジェクトをVisual Studio
     :::image-end:::  
     
-1.  [ **空のアプリ]、[パッケージ] (デスクトップの WinUI)** の順に選び、[ **次へ**] を選びます。  
-1.  プロジェクト名を入力し、必要に応じてその他のオプションを選択して、[ **作成**] を選択します。  
-1.  **新しいユニバーサル Windows プラットフォームプロジェクト**で、次の値を選択し、[ **OK]** を選択します。  
-    *   **ターゲットバージョン**:  **Windows 10、バージョン 1903 (ビルド 18362)** 以降  
-    *   **最小バージョン**:  **Windows 10、バージョン 1803 (ビルド 17134)**  
+1.  Choose **Blank App, Packaged (WinUI in Desktop)**  >  **Next**.  
+1.  プロジェクト名を入力します。
+1.  必要に応じてオプションを選択します。  
+1.  [**Create (作成)**] を選択します。  
+1.  [ **新しいユニバーサル Windows プラットフォーム プロジェクト] で**、次の値を選択し **、[OK]** を選択します。  
+    *   **ターゲット バージョン**:  **Windows 10 バージョン 1903 (ビルド 18362)** 以降  
+    *   **最小バージョン**:  **Windows 10 バージョン 1803 (ビルド 17134)**  
     
-    :::image type="complex" source="./media/winui-gettingstarted-projecttype.png" alt-text="[ターゲットバージョン] と [最小バージョン] の値が選択された新しいユニバーサル Windows プラットフォームプロジェクトダイアログ。" lightbox="./media/winui-gettingstarted-projecttype.png":::
-       [ターゲットバージョン] と [最小バージョン] の値が選択された新しいユニバーサル Windows プラットフォームプロジェクトダイアログ。
+    :::image type="complex" source="./media/winui-gettingstarted-projecttype.png" alt-text="[ターゲット バージョン] と [最小バージョン] の値が選択された [新しいユニバーサル Windows プラットフォーム プロジェクト] ダイアログ。" lightbox="./media/winui-gettingstarted-projecttype.png":::
+       [ターゲット バージョン] と [最小バージョン] の値が選択された [新しいユニバーサル Windows プラットフォーム プロジェクト] ダイアログ。
     :::image-end:::  
     
-1.  ソリューションエクスプローラーで、2つのプロジェクトが生成されます。  
-    *   **プロジェクト名 (デスクトップ)**  このプロジェクトには、アプリのコードが含まれています。  **App.xaml.cs** は、 `Application` アプリインスタンスを表すクラスを定義します。  **MainWindow.xaml.cs** は、 `MainWindow` アプリインスタンスによって表示されるメインウィンドウを表すクラスを定義します。  これらのクラスは、 `Microsoft.UI.Xaml` WinUI の名前空間の型から派生します。  
+1.  ソリューション エクスプローラーでは、2 つのプロジェクトが生成されます。  
+    *   **プロジェクト名 (デスクトップ)** です。  デスクトップ プロジェクトには、アプリのコードが含まれている。  この `App.xaml.cs` ファイルは、アプリ `Application` インスタンスを表すクラスを定義します。  この `MainWindow.xaml.cs` ファイルは、アプリ `MainWindow` インスタンスによって表示されるメイン ウィンドウを表すクラスを定義します。  これらのクラスは `Microsoft.UI.Xaml` 、WinUI の名前空間の型から派生します。  
+    *   **プロジェクト名 (パッケージ)** です。  Package プロジェクトは、アプリを展開用の MSIX パッケージにビルドするように構成された Windows アプリケーション パッケージ プロジェクトです。  プロジェクトにはアプリのパッケージ マニフェストが含まれています。既定では、ソリューションのスタートアップ プロジェクトです。  詳しくは[、「Windows 10][UwpSchemasAppxpackageUapmanifestRoot]のパッケージ マニフェスト スキーマ リファレンス」の「Visual Studio [MSIX][WindowsMsixDesktopToUwpPackagingDotNet]パッケージ用のデスクトップ アプリケーションのセットアップ」をご覧ください。  
+1.  ソリューション エクスプローラーでコードを表示するには、ファイルを開 `MainWindow.xaml` きます。  プロジェクトを実行し、ボタンのあるウィンドウを表示するには、次を選択します `F5` 。  
     
-    *   **プロジェクト名 (パッケージ)**。  このプロジェクトは、アプリを展開用の MSIX パッケージにビルドするように構成された Windows アプリケーションパッケージプロジェクトです。  プロジェクトには、アプリのパッケージマニフェストが含まれており、既定では、ソリューションのスタートアッププロジェクトになります。  詳細については、「 [Windows 10 のパッケージマニフェストスキーマリファレンス][UwpSchemasAppxpackageUapmanifestRoot]」の「 [msix パッケージ用にデスクトップアプリケーションをセットアップする」][WindowsMsixDesktopToUwpPackagingDotNet]を参照してください。
-    
-1.  ソリューションエクスプローラーで、コードを表示するには、[ファイル] を開き `MainWindow.xaml` ます。  プロジェクトを実行し、 `F5` ボタンを含むウィンドウを表示するには、を選択します。  
-    
-## 手順 2-WebView2 コントロールをプロジェクトに追加する  
+## 手順 2 - WebView2 コントロールをプロジェクトに追加する  
 
-次に、WebView2 コントロールをプロジェクトに追加します。  
+WebView2 コントロールをプロジェクトに追加します。  
 
-1.  [開く] `MainWindow.xaml` を選びます。  タグ内に次の行を挿入して、WebView2 XAML 名前空間を追加し `<Window/>` ます。  
+1.  ファイルで `MainWindow.xaml` 、WebView2 XAML 名前空間を追加するには、タグ内に次の行を挿入 `<Window/>` します。  
     
     ```xml
     xmlns:controls="using:Microsoft.UI.Xaml.Controls"
     ```  
     
-    次のコードスニペットのように、コードが次のようになっていることを確認 `MainWindow.xaml` します。  
+    コードが次 `MainWindow.xaml` のコード スニペットと似ている必要があります。  
     
     ```xml
     <Window
@@ -103,7 +105,7 @@ ms.locfileid: "11182722"
     </Window>
     ```  
     
-1.  WebView2 コントロールを追加するには、 `<StackPanel>` 次のコードスニペットでタグを置き換えます。  この `Source` プロパティは、WebView2 コントロールに表示される初期 URI を設定します。  
+1.  WebView2 コントロールを追加するには、タグを次の `<StackPanel>` コード スニペットに置き換えます。  この `Source` プロパティは、WebView2 コントロールに表示される初期 URI を設定します。  
     
     ```xml  
     <Grid>
@@ -123,30 +125,30 @@ ms.locfileid: "11182722"
     </Grid>
     ```  
     
-1.  `MainWindow.xaml.cs`次の行を開いてコメントアウトします。
+1.  ファイル内 `MainWindow.xaml.cs` で、次の行をコメント アウトします。
     
     ```xml
         // myButton.Content = "Clicked";     
     ```  
     
-1.  `F5`プロジェクトをビルドして実行する場合に選択します。  WebView2 コントロールが表示されていることを確認 [https://www.microsoft.com][|::ref1::|Main] します。  
+1.  プロジェクトをビルドして実行するには、次を選択します `F5` 。  WebView2 コントロールが表示されます [https://www.microsoft.com][|::ref1::|Main] 。  
     
-    :::image type="complex" source="./media/winui-gettingstarted-part3.png" alt-text="Microsoft.com サイトを表示する WebView2 コントロール" lightbox="./media/winui-gettingstarted-part3.png":::
-       Microsoft.com サイトを表示する WebView2 コントロール。  
+    :::image type="complex" source="./media/winui-gettingstarted-part3.png" alt-text="WebView2 コントロールには、次のmicrosoft.com" lightbox="./media/winui-gettingstarted-part3.png":::
+       WebView2 コントロールは、コントロールを表示microsoft.com  
     :::image-end:::  
     
-## 手順 3-ナビゲーションコントロールを追加する  
+## 手順 3 - ナビゲーション コントロールを追加する  
 
-WebView2 コントロールに表示される web ページをアプリに追加することにより、ユーザーがそのページをコントロールできるようにします。  
+WebView2 コントロールに表示される Web ページをユーザーが制御するには、アプリにアドレス バーを追加します。  
 
-1.  で `MainWindow.xaml` 、次のコードスニペットを、要素を含む要素内にコピーして貼り付け `Grid` `WebView2` ます。  
+1.  ファイル内 `MainWindow.xaml` で、要素を含む要素内に次のコード `<Grid>` スニペットをコピーして貼り付 `WebView2` けます。  
     
     ```xml
         <TextBox Name="addressBar" Grid.Column="0"/>
         <Button x:Name="myButton" Grid.Column="1" Click="myButton_Click">Go</Button>
     ```  
     
-    要素が次のコードスニペットのようになっていることを確認 `Grid` `MainWindow.xaml` します。  
+    ファイル内 `<Grid>` の要素が `MainWindow.xaml` 次のコード スニペットと似ている必要があります。  
     
     ```xml
     <Grid>
@@ -169,7 +171,7 @@ WebView2 コントロールに表示される web ページをアプリに追加
     </Grid>
     ```  
     
-1.  で、 `MainWindow.xaml.cs` 次のコードスニペットをコピーして `myButton_Click` 、WebView2 コントロールをアドレスバーに入力した URL に移動します。  
+1.  ファイル内で、次のコード スニペットをコピーして、WebView2 コントロールをアドレス バーに入力された `MainWindow.xaml.cs` `myButton_Click` URL に移動します。  
     
     ```csharp
     private void myButton_Click(object sender, RoutedEventArgs e)
@@ -186,18 +188,18 @@ WebView2 コントロールに表示される web ページをアプリに追加
     }
     ```  
     
-    `F5`プロジェクトをビルドして実行する場合に選択します。  アドレスバーに新しい URL を入力して、[ **Go**] を選びます。  たとえば、と入力 `https://www.bing.com` します。  
+    プロジェクトをビルドして実行するには、次を選択します `F5` 。  アドレス バーに新しい URL を入力し、[移動] を選択 **します**。  たとえば、`https://www.bing.com` と入力します。  
     
     > [!NOTE]
-    > アドレスバーに完全な Url を使用していることを確認します。  `ArgumentException` URL が、またはで始まらない場合は、例外がスローされ `http://` `https://` ます。  
+    > アドレス バーに完全な URL を入力してください。  `ArgumentException` URL が次の値で始まるか、または次の URL で始まる場合は例外が `http://` スローされます `https://` 。  
     
-    :::image type="complex" source="./media/winui-gettingstarted-bing.png" alt-text="Bing.com" lightbox="./media/winui-gettingstarted-bing.png":::
-       Bing.com  
+    :::image type="complex" source="./media/winui-gettingstarted-bing.png" alt-text="bing.com" lightbox="./media/winui-gettingstarted-bing.png":::
+       bing.com  
     :::image-end:::  
     
-## ステップ 4-ナビゲーションイベント  
+## 手順 4 - ナビゲーション イベント  
 
-WebView2 コントロールをホストするアプリケーションは、web ページのナビゲーション中に WebView2 コントロールによって発生する次のイベントをリッスンします。  
+WebView2 コントロールをホストするアプリは、WebView2 コントロールが Web ページのナビゲーション中に発生する次のイベントをリッスンします。  
 
 *   `NavigationStarting`  
 *   `SourceChanged`  
@@ -206,17 +208,17 @@ WebView2 コントロールをホストするアプリケーションは、web �
 *   `NavigationCompleted`  
 
 > [!NOTE]
-> HTTP のリダイレクトでは `NavigationStarting` 、複数のイベントが発生します。  
+> HTTP リダイレクトが発生した場合、1 行に `NavigationStarting` 複数のイベントがあります。  
 
-詳細については、「 [ナビゲーションイベント][Webviews2ConceptsNavigationEvents]」を参照してください。  
+詳細については、ナビゲーション イベントに [移動します][Webviews2ConceptsNavigationEvents]。  
 
-エラーが発生すると、次のイベントが発生し、エラーページに移動する可能性があります。  
+エラーが発生すると、次のイベントが発生し、エラー Web ページに移動する可能性があります。  
 
 *   `SourceChanged`  
 *   `ContentLoading`  
 *   `HistoryChanged`  
      
-イベントの使い方の例として、 `NavigationStarting` HTTPS を使わない要求をキャンセルするためのハンドラーを登録します。  で `MainWindow.xaml.cs` 、登録するコンストラクターを変更 `EnsureHttps` し、 `EnsureHttps` 次のコードスニペットと一致するように関数を追加します。  
+イベントを使用する方法の例として、HTTPS 以外の要求をキャンセル `NavigationStarting` するハンドラーを登録します。  In, `MainWindow.xaml.cs` modify the constructor to `EnsureHttps` register, and add the function so that `EnsureHttps` it matches the following code snippet.  
 
 ```csharp
 public MainWindow()
@@ -239,16 +241,16 @@ private void EnsureHttps(WebView2 sender, WebView2NavigationStartingEventArgs ar
 }
 ```  
 
-`F5`プロジェクトをビルドして実行する場合に選択します。  HTTP サイトへのナビゲーションがブロックされ、HTTPS サイトで許可されていることを確認します。  
+プロジェクトをビルドして実行するには、次を選択します `F5` 。  HTTP サイトへのナビゲーションがブロックされ、HTTPS サイトで許可されます。  
 
-## 手順 5-スクリプト  
+## 手順 5 - スクリプト  
 
-ホストアプリケーションは、実行時に WebView2 コントロールに JavaScript コードを挿入することがあります。  挿入された JavaScript は、JavaScript が削除されるまで、すべての新しいトップレベルドキュメントと任意の子フレームに適用されます。  挿入された JavaScript は、特定のタイミングで実行されます。  
+ホスト アプリを使用して、実行時に JavaScript コードを WebView2 コントロールに挿入できます。  任意の JavaScript を実行したり、初期化スクリプトを追加したりするために、WebView をタスクすることができます。  挿入された JavaScript は、JavaScript が削除されるまで、すべての新しいトップ レベル ドキュメントとすべての子フレームに適用されます。  挿入された JavaScript は、特定のタイミングで実行されます。  
 
-*   グローバルオブジェクトの作成後に実行します。  
-*   HTML ドキュメントに含まれている他のスクリプトが実行される前に実行します。  
+*   グローバル オブジェクトの作成後に実行します。  
+*   HTML ドキュメントに含まれる他のスクリプトを実行する前に実行します。  
 
-例として、ユーザーが HTTPS 以外のサイトに移動したときにアラートが送信されることがあります。  `EnsureHttps` [Executesサブスクリプション][Webviews2ReferenceWpfMicrosoftWebExecutescriptasync]を使っている web コンテンツにスクリプトを挿入するように関数を変更します。  
+たとえば、ユーザーが HTTPS 以外のサイトに移動するときに警告を送信するスクリプトを追加します。  `EnsureHttps` [ExecuteScriptAsync][Webviews2ReferenceWpfMicrosoftWebExecutescriptasync]を使用する Web コンテンツにスクリプトを挿入する関数を変更します。  
 
 ```csharp
 private void EnsureHttps(WebView2 sender, WebView2NavigationStartingEventArgs args)
@@ -266,60 +268,69 @@ private void EnsureHttps(WebView2 sender, WebView2NavigationStartingEventArgs ar
 }
 ```  
 
-`F5`プロジェクトをビルドして実行する場合に選択します。  HTTPS を使用していないサイトに移動したときに、アプリケーションにアラートが表示されることを確認します。  
+プロジェクトをビルドして実行するには、次を選択します `F5` 。  HTTPS 以外の Web サイトに移動するときに、アプリに警告が表示されます。  
 
 :::image type="complex" source="./media/winui-gettingstarted-script.png" alt-text="通知ダイアログを表示する WebView2 コントロール" lightbox="./media/winui-gettingstarted-script.png":::
    通知ダイアログを表示する WebView2 コントロール
 :::image-end:::  
 
-おめでとうございます。最初の WebView2 アプリを作成しました。  
+これで、最初の WebView2 アプリがビルドされました。  
 
 ## 次のステップ  
 
-現在、チームは WebView2 の Api を構築しています。  WebView2 Api の現在の状態について詳しくは、 [WebView2 仕様][GithubMicrosoftUiXamlSpecsWebview2]に移動してください。  
+WebView2 の詳細については、次のリソースを参照してください。  
 
-> [!NOTE]
-> WebView2 Api が出荷されている時点で、WinRT CoreWebView2 オブジェクトが利用できない場合があります。  WebView2 コントロールで利用できる Api を理解するには、[ [WebView2 Spec][GithubMicrosoftUiXamlSpecsWebview2] ] に移動して、利用可能な api の一覧を表示します。  
+### 関連項目  
 
-WebView2 機能の詳細については、 [WebView2 の概念と How-To ガイド][Webview2IndexNextSteps] 、 [WebView2 サンプルのリポジトリ][GithubMicrosoftedgeWebview2samplesMain]に移動してください。  
-
+*   WebView2 機能の包括的な例については [、WebView2Samples に移動します][GithubMicrosoftedgeWebview2samplesMain]。  
+*   WebView2 の詳細については [、「WebView2 リソース」に移動してください][Webview2IndexNextSteps]。  
+    
+    > [!NOTE]
+    > WinRT CoreWebView2 オブジェクトは、WebView2 API のリリースでは使用できない場合があります。  WebView2 コントロールで使用できる API を理解するには [、WebView2 Spec][GithubMicrosoftUiXamlSpecsWebview2] に移動して、使用可能な API の一覧を確認します。  
+    
+*   WebView2 API の詳細については [、WebView2 仕様に移動してください][GithubMicrosoftUiXamlSpecsWebview2]。  
+    
 ## Microsoft Edge WebView チームと連絡を取り合う  
 
 [!INCLUDE [contact WebView team note](../includes/contact-webview-team-note.md)]  
 
 <!-- links -->  
 
-[Webview2Index]: ../index.md "Microsoft Edge WebView2 の概要 (プレビュー) |Microsoft ドキュメント"  
-[Webview2IndexNextSteps]: ../index.md#next-steps "次の手順-Microsoft Edge WebView2 の概要 (プレビュー) |Microsoft ドキュメント"  
-[Webviews2ConceptsNavigationEvents]: ../concepts/navigation-events.md "ナビゲーションイベント |Microsoft ドキュメント"  
-[Webviews2ReferenceWpfMicrosoftWebExecutescriptasync]: /dotnet/api/microsoft.web.webview2.wpf.webview2.executescriptasync "WebView2.Exe(文字列) メソッド (WebView2) | cuteScriptAsync) |Microsoft ドキュメント"  
+[MicrosoftDeveloperMicrosoftEdgeWebview2]: ../index.md "Microsoft Edge WebView2 (プレビュー) |Microsoft Docs"  
+[Webview2IndexNextSteps]: ../index.md#next-steps "次の手順 - Microsoft Edge WebView2 (プレビュー) |Microsoft Docs"  
+[Webviews2ConceptsNavigationEvents]: ../concepts/navigation-events.md "ナビゲーション イベント|Microsoft Docs"  
+[Webviews2ReferenceWpfMicrosoftWebExecutescriptasync]: /dotnet/api/microsoft.web.webview2.wpf.webview2.executescriptasync "WebView2.ExecuteScriptAsync(String) メソッド (Microsoft.Web.WebView2.Wpf) |Microsoft Docs"  
 
-[NugetConsumePackagesConfiguringNugetBehavior]: /nuget/consume-packages/configuring-nuget-behavior "一般的な NuGet 構成 |Microsoft ドキュメント"  
+[NugetConsumePackagesConfiguringNugetBehavior]: /nuget/consume-packages/configuring-nuget-behavior "NuGet の一般的な構成|Microsoft Docs"  
 
-[UwpSchemasAppxpackageUapmanifestRoot]: /uwp/schemas/appxpackage/uapmanifestschema/schema-root "Windows 10 のパッケージマニフェストスキーマリファレンス |Microsoft ドキュメント"  
+[UwpSchemasAppxpackageUapmanifestRoot]: /uwp/schemas/appxpackage/uapmanifestschema/schema-root "Windows 10 | のパッケージ マニフェスト スキーマ リファレンスMicrosoft Docs"  
 
-[VisualstudioIdeFindingUsingVisualStudioExtensionsInstallWithoutUsing-ManageExtensionsDialogBox]: /visualstudio/ide/finding-and-using-visual-studio-extensions#install-without-using-the-manage-extensions-dialog-box "[拡張機能の管理] ダイアログボックスを使用せずにインストールする-Visual Studio の拡張機能を管理する |Microsoft ドキュメント"  
+[VisualstudioIdeFindingUsingVisualStudioExtensionsInstallWithoutUsing-ManageExtensionsDialogBox]: /visualstudio/ide/finding-and-using-visual-studio-extensions#install-without-using-the-manage-extensions-dialog-box "[拡張機能の管理] ダイアログ ボックスを使用せずにインストールする - Visual Studio |Microsoft Docs"  
 
-[WindowsAppsWinui3ConfigureYourDevEnvironment]: /windows/apps/winui/winui3#configure-your-dev-environment "開発環境の構成-Windows UI Library 3.0 Preview 1 (2020 年5月) |Microsoft ドキュメント"  
-[WindowsCommunitytoolkit]: /windows/communitytoolkit "Windows コミュニティツールキットドキュメント |Microsoft ドキュメント"  
-[WindowsMsixDesktopToUwpPackagingDotNet]: /windows/msix/desktop/desktop-to-uwp-packaging-dot-net "Visual Studio の MSIX パッケージ用にデスクトップアプリケーションをセットアップする |Microsoft ドキュメント"  
-[WindowsUwpGetStartedEnableYourDeviceForDevelopment]: /windows/uwp/get-started/enable-your-device-for-development "デバイスを開発用に有効にする |Microsoft ドキュメント"  
+[WindowsAppsWinui3ConfigureYourDevEnvironment]: /windows/apps/winui/winui3#configure-your-dev-environment "開発環境を構成する - Windows UI Library 3.0 Preview 1 (2020 年 5 月) |Microsoft Docs"  
+[WindowsCommunitytoolkit]: /windows/communitytoolkit "Windows Community Toolkit ドキュメント |Microsoft Docs"  
+[WindowsMsixDesktopToUwpPackagingDotNet]: /windows/msix/desktop/desktop-to-uwp-packaging-dot-net "MSIX パッケージ用にデスクトップ アプリケーションをセットアップVisual Studio |Microsoft Docs"  
+[WindowsUwpGetStartedEnableYourDeviceForDevelopment]: /windows/uwp/get-started/enable-your-device-for-development "デバイスを開発用に有効|Microsoft Docs"  
 
-[GithubMicrosoftUiXamlSpecsWebview2]: https://github.com/microsoft/microsoft-ui-xaml-specs/blob/master/active/WebView2/WebView2_spec.md "WebView2 spec-microsoft/microsoft-ui-xaml-定義 |GitHub"  
+[GithubMicrosoftUiXamlSpecsWebview2]: https://github.com/microsoft/microsoft-ui-xaml-specs/blob/master/active/WebView2/WebView2_spec.md "WebView2 仕様 - microsoft/microsoft-ui-xaml-specs |GitHub"  
 
-[GithubMicrosoftedgeWebview2samplesMain]: https://github.com/MicrosoftEdge/WebView2Samples "WebView2 サンプル-MicrosoftEdge/WebView2Samples |GitHub"  
-[GithubMicrosoftedgeWebviewfeedback]: https://github.com/MicrosoftEdge/WebViewFeedback "WebView フィードバック-MicrosoftEdge/WebViewFeedback |GitHub"  
+[GithubMicrosoftedgeWebview2samplesMain]: https://github.com/MicrosoftEdge/WebView2Samples "WebView2 サンプル-MicrosoftEdge/WebView2Samples | GitHub"  
+[GithubMicrosoftedgeWebviewfeedback]: https://github.com/MicrosoftEdge/WebViewFeedback "WebView フィードバック-MicrosoftEdge/WebViewFeedback | GitHub"  
 
-[MicrosoftMain]: https://www.microsoft.com "Publisher"  
+[MicrosoftMain]: https://www.microsoft.com "Microsoft"  
 
-[MicrosoftSupport12373]: https://support.microsoft.com/help/12373 "Windows Update: よく寄せられる質問 (FAQ)"  
+[MicrosoftSupport12373]: https://support.microsoft.com/help/12373 "Windows Update: FAQ"  
 
-[MicrosoftedgeinsiderDownload]: https://www.microsoftedgeinsider.com/download "Microsoft Edge Insider チャネルをダウンロードする"  
+[MicrosoftedgeinsiderDownload]: https://www.microsoftedgeinsider.com/download "Microsoft Edge Insider Channels をダウンロードする"  
 
 [NugetHome]: https://nuget.org "ホーム |NuGet ギャラリー"  
 
-[WindowsDotnetcliBlobCoreSdk50100Preview4202681X86]: https://dotnetcli.blob.core.windows.net/dotnet/Sdk/5.0.100-preview.4.20268.1/dotnet-sdk-5.0.100-preview.4.20268.1-win-x86.exe "dotnet-sdk-5.0.100-preview.4.20268.1-win-x86.exeをダウンロードする "  
+[WindowsDotnetcliBlobCoreSdk50100Preview4202681X86]: https://dotnetcli.blob.core.windows.net/dotnet/Sdk/5.0.100-preview.4.20268.1/dotnet-sdk-5.0.100-preview.4.20268.1-win-x86.exe "ダウンロードdotnet-sdk-5.0.100-preview.4.20268.1-win-x86.exe"  
 
 [WindowsDotnetcliBlobCoreSdk50100Preview4202681X64]: https://dotnetcli.blob.core.windows.net/dotnet/Sdk/5.0.100-preview.4.20268.1/dotnet-sdk-5.0.100-preview.4.20268.1-win-x64.exe " dotnet-sdk-5.0.100-preview.4.20268.1-win-x64.exe"  
 
-[VisualstudioMarketplaceMicrosoftWinuiWinuiprojecttemplates]: https://marketplace.visualstudio.com/items?itemName=Microsoft-WinUI.WinUIProjectTemplates "WinUI 3 プロジェクトテンプレート |Visual Studio Marketplace"  
+[VisualstudioMarketplaceMicrosoftWinuiWinuiprojecttemplates]: https://marketplace.visualstudio.com/items?itemName=Microsoft-WinUI.WinUIProjectTemplates "WinUI 3 プロジェクト テンプレート |Visual Studio Marketplace"  
+
+[MicrosoftVisualstudioMain]: https://visualstudio.microsoft.com "Visual Studio"  
+
+[Webview2Installer]: https://developer.microsoft.com/microsoft-edge/webview2 "WebView2 インストーラー" 
