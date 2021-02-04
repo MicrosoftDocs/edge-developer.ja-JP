@@ -3,16 +3,16 @@ description: Microsoft Edge DevTools の最新の実験的機能
 title: 試験的機能
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 12/17/2020
+ms.date: 02/03/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge, Web 開発, f12 ツール, devtools, 実験
-ms.openlocfilehash: fbdeeb08599285a9cfa6edd467282cfbabbadd74
-ms.sourcegitcommit: a35a6b5bbc21b7df61d08cbc6b074b5325ad4fef
+ms.openlocfilehash: 018364d4debc1791685a028c337f61f85865ef6b
+ms.sourcegitcommit: 12c30ad4ab2664d17c9b7e9d59d7a3cda60ff65c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "11234705"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "11313062"
 ---
 # 試験的機能  
 
@@ -26,12 +26,12 @@ Microsoft Edge で実験的な機能 \(またはオフ\) を有効にする場�
 
 1.  [DevTools を開きます][DevtoolsOpenMain]。  
     *   `Control` + `Shift` + `I` \(Windows,Linux\) または `Command` + `Option` + `I` \(macOS\) を選択します。  詳細については [、Microsoft Edge DevTools のキーボード ショートカットに移動します][DevToolsShortcuts]。  
-1.  [設定] [ウィンドウを開][DevToolsCustomizeSettings] きます。  
-    *   選択します `Shift` + `?` 。  詳細については [、Microsoft Edge DevTools のキーボード ショートカットに移動します][DevToolsShortcuts]。  
+1.  [設定] [ウィンドウを開][DevToolsCustomizeIndexSettings] きます。  
+    *   選択 `Shift` + `?` します。  詳細については [、Microsoft Edge DevTools のキーボード ショートカットに移動します][DevToolsShortcuts]。  
 1.  [設定] ウィンドウの左側 **で** 、[実験] **セクションを選択** します。  
     
-    :::image type="complex" source="../media/experiments-devtools.msft.png" alt-text="DevTools の設定の実験の一覧" lightbox="../media/experiments-devtools.msft.png":::
-       DevTools の設定の実験の **一覧**  
+    :::image type="complex" source="../media/experiments-devtools.msft.png" alt-text="[設定] の [実験] ページ" lightbox="../media/experiments-devtools.msft.png":::
+       [ **設定] の** [実験] **ページ**  
     :::image-end:::  
     
 1.  [ **実験] ページで** 、利用可能なすべての試験的な機能の一覧をスクロールし、テストする各機能の横にあるチェック ボックスをオンにします。  
@@ -46,84 +46,23 @@ Microsoft Edge で実験的な機能 \(またはオフ\) を有効にする場�
 
 | 試験的機能 | Microsoft Edge のバージョン |  
 |:--- |:--- |  
-| [エミュレーション: デュアル スクリーン モードのサポート](#emulation-support-dual-screen-mode) | 84 以降 |  
-| [新しい CSS グリッド デバッグ機能を有効にする](#enable-new-css-grid-debugging-features) | 85 以降 |  
-| [パネル間でタブを移動するサポートを有効にする](#enable-support-to-move-tabs-between-panels) | 85 以降 |  
 | [webhint を有効にする](#enable-webhint) | 85 以降 |  
 | [ネットワーク コンソールを有効にする](#enable-network-console) | 85 以降 |  
 | [ソース オーダー ビューアー](#source-order-viewer) | 86 以降 |  
 | [キーボード ショートカット エディターを有効にする](#enable-keyboard-shortcut-editor) | 87 以降 |  
-| [3D ビューで複合レイヤーを有効にする](#turn-on-composited-layers-in-3d-view) | 87 以降 |  
-
-### エミュレーション: デュアル スクリーン モードのサポート  
-
-Microsoft Edge で 2 つの新しいデュアルスクリーン デバイスと折りたたみ可能なデバイスを適用する追加機能を提供します。  
-
-*   [Surface の一方][SurfaceDevicesDuo]  
-*   [Samsung Galaxy Fold][SamsungMobileGalaxyFold]  
-    
-デバイスをエミュレートし、次の状態を切り替えます。  
-
-*   単一画面または折りたたまれた状態  
-*   デュアルスクリーンまたは展開された体勢  
-    
-試験[的な Web プラットフォーム API](#enable-experimental-apis)を有効にし[、CSS][DualScreenDocsCssMedia]メディア画面スパン機能と[JavaScript getWindowSegments API][DualScreenDocsJSAPI]を使用して、デュアルスクリーンと折りたたみ可能なデバイス向けの Web サイト \(または app\) を強化します。  
-
-:::image type="complex" source="../media/experiments-surface-duo-emulation.msft.png" alt-text="Microsoft Edge で Surface をエミュレートする" lightbox="../media/experiments-surface-duo-emulation.msft.png":::  
-   Microsoft Edge で Surface をエミュレートする  
-:::image-end:::  
-
-#### 試験的な API を有効にする  
-
-[CSS][DualScreenDocsCssMedia]メディア画面スパン機能と[JavaScript getWindowSegments API][DualScreenDocsJSAPI]を使用するには、Microsoft Edge でフラグ `Experimental Web Platform features` をオンにします。  次の手順を実行します。  
-
-1.  に移動します `edge://flags` 。  
-1.  [検索フラグ **] ボックスに**、「試験的な Web プラットフォーム機能」フラグを入力し、[無効] を [有効] `Experimental Web Platform features` に**変更します**。 **** ****  
-1.  [Microsoft Edge を再起動]。  
-    
-:::image type="complex" source="../media/experiments-dual-screen-emulation-edge-flags.msft.png" alt-text="[試験的な Web プラットフォーム機能] フラグを有効にする" lightbox="../media/experiments-dual-screen-emulation.msft.png":::
-   [試験的な Web プラットフォーム機能] フラグを有効にする  
-:::image-end:::  
-
-> [!NOTE]
-> [CSS][DualScreenDocsCssMedia]メディア クエリまたは[JavaScript Windows セグメント][DualScreenDocsJSAPI]列挙 API を使用して、Surface Surface の Web サイトまたはアプリを強化する場合は[、Surface Surface][SurfaceDevicesDuo] [デバイス][SurfaceDevicesDuo]の Android [Microsoft Edge][GooglePlayMicrosoftEdge]アプリで試験的な**Web**プラットフォーム機能フラグも有効にする必要があります。  
-> 
-> デスクトップの[Microsoft][MicrosoftEdge] [Edge][SurfaceDevicesDuo]で試験**的な Web**プラットフォーム機能のフラグが有効になっている場合[、Android Microsoft Edge][GooglePlayMicrosoftEdge]アプリで無効になっている場合、デスクトップの Surface Emulator の Web サイトまたはアプリの動作が、Microsoft Edge のデスクトップの Android [Microsoft Edge][GooglePlayMicrosoftEdge]アプリと一致しません。  フラグが Android とデスクトップの Microsoft Edge で一致し、デスクトップの Microsoft Edge で Surface Emulator エミュレーターが正常に使用 [されたことを確認します][MicrosoftEdge]。  
-
-#### 折りたたみ可能なデュアルスクリーン デバイスでのテスト  
-
-Microsoft Edge でデュアルスクリーンの位置で [Surface Over][SurfaceDevicesDuo] をエミュレートすると、Web サイトまたはアプリの上に、"2 つの画面の間のスペース\" という円が描画されます。  
-
-エミュレートされた表示は、Surface Surface で実行されている [Microsoft Edge Android][GooglePlayMicrosoftEdge] アプリで Web サイト \(または app\) がレンダリングされる方法と [一致します][SurfaceDevicesDuo]。  Web サイト \(または app\) を更新して、より良い画面を表示する必要がある場合があります。  For more information about adapting your website \(or app\) to the navigate to [How to work with the windows.][DualScreenIntroductionHowWorkSeam]  
-
-デバイス [ツール バーには、][DevtoolsDeviceModeIndexSimulateMobileViewport] 複数の位置と向きで Web サイトまたはアプリをテストするのに役立つ追加機能があります。  ビューポート **を横向** きに回転するには、回転 ![ ][ImageRotateIcon] \( Rotate \) を選択します。 機能を Span \( **Span** \) と組み合わせて、単一画面または折りたたまれた状態とデュアルスクリーンまたは展開された状態を ![ 切り ][ImageSpanIcon] 替える。  これらの機能を組み合わせて、4 つの考えられるすべての位置と向きで Web サイトまたはアプリをテストできます。  
-
-:::image type="complex" source="../media/experiments-dual-screen-emulation-rotate-span.msft.png" alt-text="デュアルスクリーンおよび折りたたみ可能なデバイスの位置と向きのマトリックス" lightbox="../media/experiments-dual-screen-emulation-rotate-span.msft.png":::
-   デュアルスクリーンおよび折りたたみ可能なデバイスの位置と向きのマトリックス  
-:::image-end:::  
-
-Experimental **Web プラットフォーム機能** \( ExperimentalApis \) アイコンには、Experimental Web Platform 機能 ![ フラグの ][ImageExperimentalApisIcon] **状態が表示** されます。  フラグがオンの場合、アイコンが強調表示されます。  フラグがオフの場合、アイコンは強調表示されません。  フラグを \(または off\) に切り替えるには、フラグに移動 `edge://flags` して切り替えます。  
-
-<!-- Commenting out until the icon issue is fixed in Edge Canary
-The **Experimental Web Platform features** \(![ExperimentalApis][ImageExperimentalApisIcon]\) icon displays the state of the **Experimental Web Platform features** flag.  If the flag is turned on, the icon is highlighted.  If the flag is turned off, the icon is not highlighted.  To turn on \(or off\) the flag, either choose the icon or navigate to `edge://flags` and toggle the flag.   -->  
-
-ここでは、デュアルスクリーン デバイス用に Web サイト \(または app\) を強化するのに役立つ可能性があるその他のリソースを示します。  
-
-*   デュアルスクリーン デバイスでの Web 開発の詳細については、「デュアルスクリーン Web [エクスペリエンス」に移動してください][DualScreenWebIndex]。  
-*   Surface [Emulator エミュレーターをインストールします][DualScreenAndroidUseEmulator]。  Microsoft Edge のエミュレーターとは異なるので、Android を実行している Surface Surface をエミュレートし [、Android Studio と統合します][AndroidDeveloperStudio]。  詳しくは [、Surface Sdk の取得に関するページをご覧ください][DualScreenAndroidGetDuoSdk]。  
-    
-> [!NOTE]
-> 現在の既知の問題の一覧を次に示します。  
-> 
-> *   [Microsoft][RemoteDesktopClientDocs]リモート デスクトップ クライアントを使用してリモート PC に接続し[、Surface Galaxy][SurfaceDevicesDuo]または Samsung Galaxy [Fold][SamsungMobileGalaxyFold]をエミュレートする場合、ポインターが動く可能性があります。  If you run into the issue, [send feedback](#providing-feedback-on-experimental-features).  
+| [3D ビューで複合レイヤーを有効にする](#enable-composited-layers-in-3d-view) | 87 以降 |  
+| [[スタイル] ウィンドウで新しいフォント エディター ツールを有効にする](#) | 89 以降 |  
+| [新しい CSS Flexbox デバッグ機能を有効にする](#enable-new-css-flexbox-debugging-features) | 89 以降 |  
+| [[+] ボタン タブ メニューを有効にして、その他のツールを開く](#enable--button-tab-menus-to-open-more-tools) | 89 以降 |  
+| [[ようこそ] タブを有効にする](#enable-welcome-tool) | 89 以降 |  
 
 ### 新しい CSS グリッド デバッグ機能を有効にする  
 
-この試験的な機能は、CSS グリッド レイアウトのデバッグに役立つ新しい視覚エフェクトを多数提供します。  最新の試験的な機能をプレビューするには、 [この実験を有効に](#turn-on-experimental-features) し、DevTools を再読み込みします。  この実験は、Microsoft Edge バージョン 87 以降で既定で有効になっています。  
+この試験的な機能は、CSS グリッド レイアウトのデバッグに役立つ新しい視覚エフェクトを多数提供します。  最新の試験的な機能をプレビューするには、 [この実験を有効](#turn-on-experimental-features) にし、DevTools を再読み込みします。  この実験は、Microsoft Edge バージョン 87 以降で既定で有効になっています。  
 
 #### 検査ツールを使用した、ホバー時のグリッド オーバーレイの表示  
 
-検査 **ツール** を使用すると、Web サイト内の CSS グリッド レイアウトをマウスでポイントすることで、簡単に識別して視覚化できます。  DevTools **の左上隅** にある Inspect ![ \( Inspect ][ImageInspectIcon] \) アイコンを選択します。  次に、デバッグする Web サイトの Grid 要素をポイントします。  枠線はグリッドの周囲に表示され、網かけはグリッドのギャップがある場合の位置を示します。  
+検査 **ツール** を使用すると、Web サイト内の CSS グリッド レイアウトをマウスでポイントすることで、簡単に識別して視覚化できます。  DevTools **の左上隅** にある Inspect ![ \( Inspect ](../media/inspect-icon.msft.png) \) アイコンを選択します。  次に、デバッグする Web サイトの Grid 要素をポイントします。  枠線はグリッドの周囲に表示され、網かけはグリッドのギャップがある場合の位置を示します。  
 
 :::image type="complex" source="../media/grid-inspect.msft.png" alt-text="検査ツールを使用してグリッドを表示する" lightbox="../media/grid-inspect.msft.png":::
    検査ツールを使用してグリッド **を表示** する  
@@ -133,7 +72,7 @@ The **Experimental Web Platform features** \(![ExperimentalApis][ImageExperiment
 
 Microsoft Edge バージョン 86 以降では、試験的な CSS グリッド機能を使用して、永続的なグリッド オーバーレイを有効にすることもできます。  永続的なオーバーレイには、いくつかの利点があります。  
 
-*   永続的なオーバーレイは、スクロール、マウスの移動、DevTools のその他の機能の使用時にページに表示されたままです。  
+*   永続的なオーバーレイは、スクロール、マウスの移動、DevTools のその他の機能の使用時にページ上に表示されたままです。  
 *   複数の固定オーバーレイを同時に有効にすることができ、複数のグリッド レイアウトを一度に確認できます。  
 *   永続的なオーバーレイには、グリッド領域での名前の非表示や表示、グリッド のギャップ、トラックのサイズなど、多くの構成オプションが用意されています。  
     
@@ -145,7 +84,7 @@ Microsoft Edge バージョン 86 以降では、試験的な CSS グリッド�
        要素ツールのグリッド楕 **円** アイコン  
     :::image-end:::  
     
-*   要素ツール **にある新しいレイアウト** パネルを開き、強調表示する各 Grid 要素の横にあるチェック ボックスをオンにします。  
+*   要素ツールにある **新しいレイアウト** パネルを開き、強調表示する各 Grid 要素の横にあるチェック ボックスをオンにします。  
     
     :::image type="complex" source="../media/grid-layout-zoom.msft.png" alt-text="DevTools のレイアウト パネル" lightbox="../media/grid-layout-zoom.msft.png":::
        **** DevTools のレイアウト パネル  
@@ -208,14 +147,14 @@ Microsoft Edge バージョン 86 以降では、新しい**レイアウト**パ
 
 ### ソース オーダー ビューアー  
 
-**ソース オーダー ビューアーは** 、ページ ソース内の要素の順序を表示する実験です。  スクリーン リーダーとキーボード のユーザーを混乱させるソースの順序と、画面の表示順序が異なる場合があります。  ソース オーダー **ビューアーの実験を** 使用して、画面の表示順序とソースの順序の違いを確認します。  
+**ソース オーダー ビューアーは** 、Web ページ ソース内の要素の順序を表示する実験です。  スクリーン リーダーとキーボード のユーザーを混乱させるソースの順序と、画面の表示順序が異なる場合があります。  ソース オーダー **ビューアーの実験を使用** して、画面の表示順序とソースの順序の違いを確認します。  
 
 実験を有効にした後、DevTools を再起動してください。  ソース オーダー **ビューアーを使用するには、** 次の手順を実行します。  
 
-1.  [要素] **ウィンドウを開** きます。  
+1.  要素ツール **を開** きます。  
 1.  ドロワー **\(** 下部\) パネルの [アクセシビリティ] ウィンドウを開きます。  
 1.  [ソース オーダー **ビューアー] セクションで** 、[ソース注文の **表示] チェック ボックスをオン** にします。  
-1.  HTML 要素を強調表示して、ページ ソース内の順序に合ったオーバーレイを表示します。  
+1.  任意の HTML 要素を強調表示して、Web ページ ソース内の順序に合ったオーバーレイを表示します。  
     
 :::image type="complex" source="../media/experiments-source-order-viewer.msft.png" alt-text="[アクセシビリティ] ウィンドウのソース 注文ビューアー" lightbox="../media/experiments-source-order-viewer.msft.png":::
    **[アクセシビリティ] ウィンドウ** のソース **注文** ビューアー  
@@ -225,45 +164,47 @@ Microsoft Edge バージョン 86 以降では、新しい**レイアウト**パ
 
 ### キーボード ショートカット エディターを有効にする
 
-キーボード ショートカット **エディターの** 有効化実験を有効にすると、DevTools 内の任意のアクションのキーボード ショートカットをカスタマイズできます。  特定の操作のキーボード ショートカットをカスタマイズするには、次の手順を実行します。  
+キーボード ショートカット **エディターの有効化** 実験を有効にした状態で、DevTools 内の任意のアクションのキーボード ショートカットをカスタマイズできます。  特定の操作のキーボード ショートカットをカスタマイズするには、次の手順を実行します。  
 
 1.  [DevTools を開きます][DevtoolsOpenMain]。  
-1.  [設定 [] を開きます][DevToolsCustomizeSettings]。
+1.  [設定 [] を開きます][DevToolsCustomizeIndexSettings]。  
     *   選択します `Shift` + `?` 。  
 1.  [ショートカット] **ページに移動** します。  
 1.  カスタマイズするアクションを選択します。  
-1.  [ **編集** \( ![ EditKeyboardShortcut \) ] ][ImageEditKeyboardShortcutIcon] アイコンを選択します。  
+1.  [ **編集** \( ![ EditKeyboardShortcut \) ] ](../media/edit-keyboard-shortcut-icon.msft.png) アイコンを選択します。  
     
     :::image type="complex" source="../media/experiments-custom-keyboard-shortcuts-select-action.msft.png" alt-text="[設定] の [ショートカット] ページからカスタマイズするアクションを選択する" lightbox="../media/experiments-custom-keyboard-shortcuts-select-action.msft.png":::
-       [設定] の [ショートカット] ページ **からカスタマイズ** するアクションを選択 [する][DevToolsCustomizeSettings]
+       [設定] の [ショートカット] ページ **からカスタマイズ** するアクションを選択 [する][DevToolsCustomizeIndexSettings]  
     :::image-end:::  
     
-1.  キーボードで、アクションにバインドするキーを選択します。
+1.  キーボードで、アクションにバインドするキーを選択します。  
     
     :::image type="complex" source="../media/experiments-custom-keyboard-shortcuts-enter-key.msft.png" alt-text="アクションに割り当てるキーを選択する" lightbox="../media/experiments-custom-keyboard-shortcuts-enter-key.msft.png":::
-       アクションに割り当てるキーを選択する
+       アクションに割り当てるキーを選択する  
     :::image-end:::  
     
-1.  新しいキーボード ショートカットを保存するには、チェックマーク \(![CheckmarkKeyboardShortcut][ImageCheckmarkKeyboardShortcutIcon]\) アイコン
+1.  新しいキーボード ショートカットを保存するには、チェックマーク \(![CheckmarkKeyboardShortcut](../media/checkmark-keyboard-shortcut-icon.msft.png)\) アイコン  
     
     :::image type="complex" source="../media/experiments-custom-keyboard-shortcuts-save-shortcut.msft.png" alt-text="チェックマーク アイコンを選択して新しいキーボード ショートカットを保存する" lightbox="../media/experiments-custom-keyboard-shortcuts-enter-key.msft.png":::
-       チェックマーク アイコンを選択して新しいキーボード ショートカットを保存する
+       チェックマーク アイコンを選択して新しいキーボード ショートカットを保存する  
     :::image-end:::  
     
 1.  DevTools でアクションをトリガーするには、新しいキーボード ショートカットを選択します。  
     
-[ショートカット **] ページ** で、ユーザー設定のキーボード ショートカット **\(** CustomKeyboardShortcut \) アイコンに、カスタマイズしたキーボード ショートカット ![ ][ImageCustomKeyboardShortcutIcon] が表示されます。  すべてのショートカットをリセットするには、[既定のショートカット **を復元する] を選択します**。  
+[ショートカット **] ページ** で、ユーザー設定のキーボード ショートカット **\(** CustomKeyboardShortcut \) アイコンに、カスタマイズしたキーボード ![ ](../media/custom-keyboard-shortcut-icon.msft.png) ショートカットが表示されます。  すべてのショートカットをリセットするには、[既定のショートカット **を復元する] を選択します**。  
 
-When you are editing the keyboard shortcuts for an action, to discard your changes, choose the X \( ![ XKeyboardShortcut ][ImageXKeyboardShortcutIcon] \) icon.  特定のアクションのショートカットを削除するには、ショートカットの **削除** \( ![ DeleteKeyboardShortcut ][ImageDeleteKeyboardShortcutIcon] \) アイコンを選択します。  1 つのアクションに複数のショートカットを追加するには、[ショートカットの **追加] を選択します**。
+アクションのキーボード ショートカットの編集中に変更を破棄するには、[X \( ![ XKeyboardShortcut \) ] アイコン ](../media/discard-changes-keyboard-shortcut-icon.msft.png) を選択します。  特定のアクションのショートカットを削除するには、ショートカットの **削除** \( ![ DeleteKeyboardShortcut ](../media/delete-keyboard-shortcut-icon.msft.png) \) アイコンを選択します。  1 つのアクションに複数のショートカットを追加するには、[ショートカットの **追加] を選択します**。  
 
 > [!NOTE]
-> キーボード ショートカットが別のアクションに現在割り当てられている場合は、新しい操作のためにキーボード ショートカットを保存できない。  最初に、前の操作のキーボード ショートカットを削除してから、新しいアクションに追加する必要があります。  
+> キーボード ショートカットが別のアクションに現在割り当てられている場合は、新しい操作のためにキーボード ショートカットを保存できない可能性があります。  最初に、前の操作のキーボード ショートカットを削除してから、新しいアクションに追加する必要があります。  
 
-<!--Available in Microsoft Edge version 87 and later.  -->
+<!--Available in Microsoft Edge version 87 and later.  -->  
 
-### 3D ビューで複合レイヤーを有効にする
+### 3D ビューで複合レイヤーを有効にする  
 
-レイヤーを z インデックスとドキュメント オブジェクト モデル \(DOM\) と共に視覚化できます。  この機能は、コンテキストを頻繁に切り替えることなくデバッグするのに役立ちます。  コンテキストの切り替えの削減が大きな問題と見なされました。  作成するコードが Web アプリに与える影響は必ずしも明確ではありません。  視覚的なデバッグを総合的に行う目的で、3D ビューレイヤーと複合レイヤーが結合されました。  実験を有効にした後、DevTools を再起動してください。  複合レイヤー **を使用するには、次**の手順を実行します。  
+レイヤーを z インデックスとドキュメント オブジェクト モデル \(DOM\) と共に視覚化できます。  この機能は、コンテキストを頻繁に切り替えることなくデバッグするのに役立ちます。  コンテキストの切り替えの削減が大きな問題と見なされました。  作成するコードが Web アプリに与える影響は必ずしも明確ではありません。  視覚的なデバッグを総合的に行う目的で、3D ビューレイヤーと複合レイヤーが結合されました。  
+
+実験を有効にした後、DevTools を再起動してください。  複合レイヤー **を使用するには、次**の手順を実行します。  
 
 1.  ドロワーで **、3D ビュー ツールを選択** します。  
 1.  [コンポジット **レイヤー] ウィンドウを開** きます。  
@@ -275,18 +216,112 @@ When you are editing the keyboard shortcuts for an action, to discard your chang
 
 <!--Available in Microsoft Edge version 87 and later.  -->  
 
+### [スタイル] ウィンドウで新しいフォント エディター ツールを有効にする  
+
+これで、新しいビジュアル フォント エディター [を使用してフォント][DevtoolsInspectStylesEditFonts] を編集できます。  フォントとフォントの特性を定義するために使用します。  ビジュアル フォント **エディターを使用すると、** 次の操作を実行できます。  
+
+*   さまざまなフォント プロパティの単位を切り替える  
+*   さまざまなフォント プロパティのキーワードを切り替える  
+*   単位を変換する  
+*   正確な CSS コードを生成する  
+    
+実験を有効にした後、DevTools を再起動してください。  新しいビジュアル フォント エディター **を使用するには、次**の手順を実行します。  
+
+1.  要素ツール **を開** きます。  
+1.  [スタイル] **ウィンドウを開** きます。  
+1.  [フォント エディター **] アイコンを選択** します。  
+    
+新しいビジュアル フォント エディター**** の詳細については[、DevTools][DevtoolsInspectStylesEditFonts]の [スタイル] ウィンドウの [CSS フォントのスタイルと設定の編集] に移動します。  
+
+:::image type="complex" source="../media/font-editor-open.msft.png" alt-text="[Visual Font Editor] ウィンドウが強調表示されている" lightbox="../media/font-editor-open.msft.png":::
+   [Visual **Font Editor] ウィンドウ** が強調表示されている  
+:::image-end:::  
+
+<!--Available in Microsoft Edge version 89 and later.  -->  
+
+### 新しい CSS Flexbox デバッグ機能を有効にする  
+
+この試験的な機能は、CSS Flexbox レイアウトのデバッグに役立つ多くの新しい視覚エフェクトを提供します。  最新の試験的な機能をプレビューするには、 [この実験を有効](#turn-on-experimental-features) にし、DevTools を再読み込みします。  
+
+#### Inspect ツールを使用して Flexbox レイアウトに永続的なオーバーレイを表示する  
+
+Inspect **ツール** を使用すると、Web サイト内の CSS Flexbox レイアウトをマウスでポイントすることで、簡単に識別して視覚化できます。  DevTools **の左上隅** にある Inspect ![ \( Inspect ](../media/inspect-icon.msft.png) \) アイコンを選択します。  次に、Web サイトのデバッグ中に、flex コンテナーにカーソルを合わせると、flex コンテナーの周囲にアウトラインが表示されます。  
+
+:::image type="complex" source="../media/flexbox-hover.msft.png" alt-text="Inspect ツールを使用して Flexbox コンテナーを表示する" lightbox="../media/flexbox-hover.msft.png":::
+   Inspect ツールを使用して Flexbox コンテナー **を表示** する  
+:::image-end:::  
+
+#### Flexbox レイアウトに永続的なオーバーレイを表示する  
+
+Microsoft Edge バージョン 89 以降では、実験的な CSS Flexbox 機能を使用して、Flexbox レイアウトで永続的なオーバーレイを有効にすることもできます。  永続的なオーバーレイには、次の利点があります。  
+
+*   スクロール、マウスの移動、DevTools のその他の機能の使用を行う間、永続的なオーバーレイは Web ページに表示されたままです。
+*   複数の永続的なオーバーレイを同時に使用して、一度に複数の Flexbox レイアウトを確認できます。  
+*   永続的なオーバーレイは、色構成オプションを提供します。  
+    
+Flexbox レイアウトで固定オーバーレイを切り替えるには、次のいずれかのアクションを使用します。  
+
+*   Elements ツール **の DOM ツリー** に表示されている Flexbox コンテナーの横にある Flexbox 楕円アイコンを **選択** します。  
+*   **要素**ツール**にある新しいレイアウト**パネルを開き、強調表示する各 Flexbox コンテナーの横にあるチェック ボックスをオンにします。  
+    
+:::image type="complex" source="../media/flexbox-overlay.msft.png" alt-text="DevTools の Flex アイコンとレイアウト パネル" lightbox="../media/flexbox-overlay.msft.png":::
+   DevTools **の Flex** アイコンとレイアウト パネル  
+:::image-end:::  
+
+#### 永続的なオーバーレイを構成する  
+
+CSS グリッドまたは Flexbox レイアウトの固定オーバーレイのオプションを構成するには、[レイアウト] ウィンドウ **を使用** します。  [ **レイアウト** ] ウィンドウは、要素ツール **の** [スタイル] ウィンドウと **[計算** ] ウィンドウ **の横** に配置されます。  
+
+:::image type="complex" source="../media/flexbox-layout.msft.png" alt-text="レイアウト パネル" lightbox="../media/flexbox-layout.msft.png":::
+   レイアウト パネル  
+:::image-end:::  
+
+<!--Available in Microsoft Edge version 89 and later.  -->  
+
+### [+] ボタン タブ メニューを有効にして、その他のツールを開く  
+
+新しい [その他のツール] **\(** \) アイコンを使用して、その他のツール `+` を開く場合があります。  [有効 **+** ボタン] タブ メニューをオンにして、他のツールの実験を開き、DevTools を再読み込みした後、DevTools の上部にあるタブ グループの右側にプラス記号 \( \) が表示されます。 `+`  タブ バーに追加できる他のツールの一覧を表示するには、新しい **[** その他のツール] \( `+` \) アイコンを選択します。  
+
+:::image type="complex" source="../media/experiments-more-tools-button.msft.png" alt-text="上部のウィンドウの [その他のツール]" lightbox="../media/experiments-more-tools-button.msft.png":::
+   **上部のウィンドウ** の [その他のツール]
+:::image-end:::  
+
+<!--Available in Microsoft Edge version 89 and later.  -->  
+
+### ウェルカム ツールを有効にする
+
+この実験では、新機能 **ツールが新しいウェルカム** ツールに **置き換** わるものになります。  次のコンテンツの更新されたデザインが表示されます。  
+
+*   開発者向けドキュメントへのリンク  
+*   最新機能  
+*   リリース ノート  
+*   Microsoft Edge DevTools チームに連絡するオプション  
+    
+Microsoft Edge **を** 更新すると、ウェルカム ツールが自動的に開きます。  更新ごとにウェルカム ツールが**** 表示されるのを防ぐには、ウェルカム ツール**** タイトルの更新後に [開く] タブの横にあるチェック ボックス**を**オフにします。  
+
+元の新機能ツール**が**必要な場合は、[設定の実験[][DevtoolsCustomizeIndexSettings]] に移動し、[ようこそ] タブの横にある  >  ******チェック ボックスをオフにします**。  
+
+:::image type="complex" source="../media/experiments-welcome.msft.png" alt-text="ウェルカム ツール" lightbox="../media/experiments-welcome.msft.png":::
+   **ウェルカム** ツール  
+:::image-end:::  
+
+<!--Available in Microsoft Edge version 89 and later.  -->  
+
 ## 以前の試験的な機能  
 
-*   Microsoft Edge バージョン 83 以降では[、3D][Devtools3dViewIndex]ビューが使用可能になっていて、既定でオンになっています。  
+*   Microsoft Edge バージョン 83 以降では[、3D][Devtools3dViewIndex]ビューが使用可能で、既定でオンになっています。  
+*   [Microsoft][DevtoolsMoveTabs] Edge バージョン 85 以降では、パネル間でタブを移動するサポートを有効にし、既定で有効になっています。  
 *   [Microsoft][DevtoolsCustomKeyboardShortcuts] Edge バージョン 86 以降で、キーボード ショートカットのカスタマイズが使用可能で、既定で有効になっています。  
-
+*   [エミュレーション: Microsoft][DevtoolsDeviceModeDualScreenAndFoldables] Edge バージョン 89 以降で、デュアル スクリーン モードをサポートし、既定で有効になっています。  
+*   [Microsoft][DevtoolsCssGrid] Edge バージョン 89 以降で、新しい CSS グリッド デバッグ機能が使用可能になっていて、既定で有効になっている機能を有効にします。  
+    
 ## 試験的な機能に関するフィードバックの提供  
 
 Microsoft Edge DevTools 実験、または DevTools に関連するその他の実験に関するフィードバックを提供する。  
 
 *   DevTools の **[フィードバック** の送信] アイコンを使用してフィードバックを送信する  
-*   次の時点 [でツイート@EdgeDevTools][TwitterEdgedevtools]  
-
+*   次の時点で [ツイート@EdgeDevTools][TwitterEdgedevtools]  
+    
 :::image type="complex" source="../media/bing-devtools-send-feedback.msft.png" alt-text="Microsoft Edge DevTools の [フィードバックの送信] アイコン" lightbox="../media/bing-devtools-send-feedback.msft.png":::
    Microsoft Edge DevTools の **[フィードバックの送信]** アイコン  
 :::image-end:::  
@@ -297,46 +332,38 @@ Microsoft Edge DevTools 実験、または DevTools に関連するその他の�
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 -->  
 
-<!-- image links -->  
-
-[ImageCheckmarkKeyboardShortcutIcon]: ../media/checkmark-keyboard-shortcut-icon.msft.png  
-[ImageCustomKeyboardShortcutIcon]: ../media/custom-keyboard-shortcut-icon.msft.png  
-[ImageDeleteKeyboardShortcutIcon]: ../media/delete-keyboard-shortcut-icon.msft.png  
-[ImageEditKeyboardShortcutIcon]: ../media/edit-keyboard-shortcut-icon.msft.png  
-[ImageExperimentalApisIcon]: ../media/experimental-apis-dark-icon.msft.png  
-[ImageInspectIcon]: ../media/inspect-icon.msft.png  
-[ImageRotateIcon]: ../media/rotate-dark-icon.msft.png  
-[ImageSpanIcon]: ../media/span-dark-icon.msft.png  
-[ImageXKeyboardShortcutIcon]: ../media/discard-changes-keyboard-shortcut-icon.msft.png  
-
 <!-- links -->  
 
 [Devtools3dViewIndex]: ../3d-view/index.md "3D ビュー | Microsoft Docs"  
-[DevToolsCustomizeSettings]: ../customize/index.md#settings "設定 - Microsoft Edge DevTools をカスタマイズする | Microsoft Docs"  
-[DevtoolsDeviceModeIndexSimulateMobileViewport]: ../device-mode/index.md#simulate-a-mobile-viewport "Microsoft Edge DevTools のデバイス モードでモバイル デバイスをシミュレートする |Microsoft Edge"  
+[DevtoolsCssGrid]: ../css/grid.md "Microsoft Edge DevTools アプリケーションで CSS グリッドを|Microsoft Docs"  
+[DevtoolsMoveTabs]: ../customize/index.md "Microsoft Edge DevTools のカスタマイズ|Microsoft Docs"  
+[DevToolsCustomizeIndexSettings]: ../customize/index.md#settings "設定 - Microsoft Edge DevTools をカスタマイズする | Microsoft Docs"  
+[DevtoolsDeviceModeIndexSimulateMobileViewport]: ../device-mode/index.md#simulate-a-mobile-viewport "Microsoft Edge DevTools アプリケーションでデバイス モードを使用してモバイル デバイスをシミュレート|Microsoft Edge"  
+[DevtoolsInspectStylesEditFonts]: ../inspect-styles/edit-fonts.md "DevTools プロジェクトの [スタイル] ウィンドウで CSS フォントのスタイルと設定を編集|Microsoft Docs"  
 [DevtoolsIssues]: ../issues/index.md "Microsoft Edge DevTools の問題ツールに関する問題を見つけて修正する | Microsoft Docs"  
-[DevToolsShortcuts]: ../shortcuts/index.md "Microsoft Edge DevTools のキーボード ショートカット |Microsoft Docs"  
+[DevToolsShortcuts]: ../shortcuts/index.md "Microsoft Edge DevTools キーボード ショートカット |Microsoft Docs"  
 [DevtoolsCustomKeyboardShortcuts]: ../customize/shortcuts.md "Microsoft Edge DevTools でキーボード ショートカットをカスタマイズする | Microsoft Docs"  
 [DevtoolsOpenMain]: ../open/index.md "Microsoft Edge DevTools を開く | Microsoft Docs"  
 
-[DualScreenWebIndex]: /dual-screen/web/index "デュアルスクリーン Web エクスペリエンス |Microsoft Docs"  
-[DualScreenAndroidGetDuoSdk]: /dual-screen/android/get-duo-sdk "Surface Emulator エミュレーターを取得する |Microsoft Docs"  
+[DualScreenWebIndex]: /dual-screen/web/index "デュアルスクリーン Web エクスペリエンス|Microsoft Docs"  
+[DualScreenAndroidGetDuoSdk]: /dual-screen/android/get-duo-sdk "Surface Emulator エミュレーター を取得|Microsoft Docs"  
 [DualScreenIntroductionHowWorkSeam]: /dual-screen/introduction#how-to-work-with-the-seam "シームを処理する方法 - デュアルスクリーン デバイスの概要 | Microsoft Docs"  
-[DualScreenAndroidUseEmulator]: /dual-screen/android/use-emulator "Surface Emulator エミュレーターを使用する |Microsoft Docs"  
+[DualScreenAndroidUseEmulator]: /dual-screen/android/use-emulator "Surface Emulator エミュレーター を使|Microsoft Docs"  
 [DualScreenDocsCssMedia]: /dual-screen/web/css-media-spanning "デュアルスクリーン検出のための CSS メディアのスクリーンスパニング機能 | Microsoft Docs"  
 [DualScreenDocsJSAPI]: /dual-screen/web/javascript-getwindowsegments "デュアルスクリーン デバイスのための getWindowSegments JavaScript API | Microsoft Docs"  
 
-[RemoteDesktopClientDocs]: /windows-server/remote/remote-desktop-services/clients/remote-desktop-clients "リモート デスクトップ クライアント |Microsoft Docs"
+[RemoteDesktopClientDocs]: /windows-server/remote/remote-desktop-services/clients/remote-desktop-clients "リモート デスクトップ クライアント|Microsoft Docs"
 
 [MicrosoftEdge]: https://www.microsoft.com/edge "Microsoft Edge"  
 
-[SurfaceDevicesDuo]: https://www.microsoft.com/surface/devices/surface-duo "Surface の一方 |Microsoft Surface"  
+[SurfaceDevicesDuo]: https://www.microsoft.com/surface/devices/surface-duo "Surface Surface の |Microsoft Surface"  
 
 [AndroidDeveloperStudio]: https://developer.android.com/studio/ "Android Studio"  
 
 [GooglePlayMicrosoftEdge]: https://play.google.com/store/apps/details?id=com.microsoft.emmx "Microsoft Edge |Google Play"  
 
 [SamsungMobileGalaxyFold]: https://www.samsung.com/mobile/galaxy-fold/ "Galaxy Fold |Samsung"  
+[DevtoolsDeviceModeDualScreenAndFoldables]: ../device-mode/dual-screen-and-foldables.md "Microsoft Edge DevTools アプリケーションでデュアルスクリーンデバイスと折りたたみ可能なデバイスをエミュレート|Microsoft Docs"
 
 [TwitterEdgedevtools]: https://www.twitter.com/EdgeDevTools "Microsoft Edge DevTools |Twitter"  
 

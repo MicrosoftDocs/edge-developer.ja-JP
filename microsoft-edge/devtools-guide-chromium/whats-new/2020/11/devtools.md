@@ -3,16 +3,16 @@ description: Linux 上の Microsoft Edge、問題ツールの Webhint ヒント�
 title: DevTools の新機能 (Microsoft Edge 88)
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 12/15/2020
+ms.date: 02/03/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: a9c262075f3d541861ed825a8da96b3a86956c0e
-ms.sourcegitcommit: c06a4ece7bcbfeae4677d15fca677ca42a0373b9
-ms.translationtype: HT
+ms.openlocfilehash: 9e4bdfcb3cc32364931894dcb3c857ac6e082809
+ms.sourcegitcommit: 12c30ad4ab2664d17c9b7e9d59d7a3cda60ff65c
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "11229478"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "11313087"
 ---
 # DevTools の新機能 (Microsoft Edge 88)  
 
@@ -62,7 +62,7 @@ Microsoft Edge Dev は、Ubuntu、Debian、Fedora、openSUSE の配布でサポ�
 <!-- Title: 3D View is now integrated with Composited Layers  -->  
 <!-- Subtitle: Composited Layers are now in 3D View.  -->  
 
-:::image type="icon" source="../../media/2020/06/experimental-tag-14px.msft.png":::
+:::image type="icon" source="../../media/2020/06/experimental-tag-14px.msft.png":::  
 
 Z インデックス値と ドキュメント オブジェクト モデル \(DOM\) と共に、**レイヤー** コンテンツを視覚化できるようになりました。  この機能は、[3D ビュー][Devtools3dViewIndex]と**レイヤー** ツールを頻繁に切り替えることなくデバッグするのに役立ちます。  視覚的なデバッグを総合的に行う目的で、[3D ビューレイヤーと複合レイヤーが結合されました][DevtoolsExperimentalFeaturesTurnOnCompositedLayers3dView]。  
 
@@ -222,7 +222,7 @@ DevTools では、CSS 角度デバッグのサポートが向上しました。 
 
 ```css
 background: linear-gradient(100deg, lightblue, pink);
-```  
+```
 
 :::image type="complex" source="../../media/2020/11/css-angle.msft.png" alt-text="CSS の角度" lightbox="../../media/2020/11/css-angle.msft.png":::
    CSS の角度  
@@ -329,7 +329,7 @@ DevTools は、ファイルとメモリのサイズを表示するために、`k
 
 ## Microsoft Edge プレビュー チャネルをダウンロードする  
 
-Windows、Linux、または macOS を使用している場合は、[Microsoft Edge プレビュー チャネル][MicrosoftEdgePreviewChannels] を既定の開発ブラウザーとして使用することを検討してください。  プレビュー チャネルを使用すると、最新の DevTools 機能にアクセスできます。  
+Windows、Linux、または macOS を使用している場合は、 [既定][MicrosoftEdgePreviewChannels] の開発ブラウザーとして Microsoft Edge プレビュー チャネルの使用を検討してください。  プレビュー チャネルを使用すると、最新の DevTools 機能にアクセスできます。  
 
 ## Microsoft Edge DevTools チームに連絡する  
 
@@ -360,6 +360,8 @@ Windows、Linux、または macOS を使用している場合は、[Microsoft Ed
 
 [MicrosoftinsiderDownloadPlatformLinux]: https://www.microsoftedgeinsider.com/download?platform=linux "Microsoft Edge Insider Channels をダウンロードする"  
 
+[MicrosoftEdgePreviewChannels]: https://www.microsoftedgeinsider.com/download "Microsoft Edge プレビュー チャネル"  
+
 [VisualStudioCode]: https://code.visualstudio.com "Visual Studio Code"  
 
 [CRIssuesList]: https://bugs.chromium.org/p/chromium/issues/list "Chromium bugs"  
@@ -370,7 +372,7 @@ Windows、Linux、または macOS を使用している場合は、[Microsoft Ed
 [CR1035309]: https://crbug.com/1035309 "問題 1035309: DevTools は MB をメビバイトではなくメガバイトという意味で一貫して使用する必要があります | Chromium のバグ"  
 [CR1051466]: https://crbug.com/1051466 "問題 1051466: DevTools での COOP/COEP デバッグのサポート | Chromium のバグ"  
 [CR1058836]: https://crbug.com/1058836 "問題 1058836: Wasm のデバッグに関する UX の問題 | Chromium のバグ"  
-[CR1071432]: https://crbug.com/1071432 "問題 1071432: ☂️ Wasm Basic 開発者のエクスペリエンス | Chromium のバグ"  
+[CR1071432]: https://crbug.com/1071432 "問題 1071432: Wasm Basic Developer Experience ☂︝を使用する|Chromium のバグ"  
 [CR1107766]: https://crbug.com/1107766 "問題 1107766: 'window.open()' によって生成されたフレームに関する情報をフレーム ツリーに表示する | Chromium のバグ"  
 [CR1122507]: https://crbug.com/1122507 "問題 1122507: フレーム ツリー ビューでの Surface ワーカー情報 | Chromium のバグ"  
 [CR1126178]: https://crbug.com/1126178 "問題 1126178: devTools ☂: CSS <タイプ> コンポーネント | Chromium のバグ"  

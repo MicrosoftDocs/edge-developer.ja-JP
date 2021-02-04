@@ -3,16 +3,16 @@ description: Microsoft Edge DevTools をカスタマイズする方法の一覧
 title: Microsoft Edge DevTools をカスタマイズする
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 11/20/2020
+ms.date: 01/22/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 682ff78b6a5272c1f6462648d64241448838edac
-ms.sourcegitcommit: 080759f68a0a158f10dc20d20c14e222ace1be84
+ms.openlocfilehash: 5822fa087244fdfafdefe040709058411040ea45
+ms.sourcegitcommit: 12c30ad4ab2664d17c9b7e9d59d7a3cda60ff65c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "11189987"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "11313024"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -34,70 +34,70 @@ ms.locfileid: "11189987"
 
 ## 設定  
 
-**設定**  > **環境設定**には、devtools をカスタマイズするための多くのオプションが含まれています。  
+**設定**  > **基本設定には**、DevTools をカスタマイズするための多くのオプションが含まれている。  
 
 [設定] を開くには、次のいずれかの操作を実行します。  
 
-*   `F1`DevTools がフォーカスされているときにを選択します。  
-*   **メインメニュー**を開き、[**設定**] を選択します。  
+*   `F1`DevTools にフォーカスがある間に選択します。  
+*   メイン メニューを **開き、[** 設定] を **選択します**。  
     
 :::image type="complex" source="../media/customize-settings-preferences.msft.png" alt-text="設定" lightbox="../media/customize-settings-preferences.msft.png":::
    **設定**  
 :::image-end:::  
 
-## ドロアー  
+## ドロワー  
 
-**引き出し**は、選択したツールが表示される2番目のパネルです。  
+ドロ **ワー** は、選択したツールが表示される 2 番目のパネルです。  
 
-**引き出し**を開く (または閉じる) には、を選択し `Escape` ます。  
+ドロワーを \(または閉じる\ を開く) **には**、選択します `Escape` 。  
 
 :::image type="complex" source="../media/customize-drawer-open.msft.png" alt-text="ドロワー" lightbox="../media/customize-drawer-open.msft.png":::
-   **ドロワー**  
+   ドロ **ワー**  
 :::image-end:::  
 
-既定では、一部のツールはメインパネルに表示されますが、その他のツールは **引き出し**に表示されます。  [ **詳細** \ ()] を選ん `...` で、 **引き出し**でツールを開きます。  
+既定では、一部のツールはメイン パネルで開き、他のツールはドロワーに表示 **されます**。  Choose **More** \( `...` \) to open a tool in the **Drawer**.  
 
-:::image type="complex" source="../media/customize-drawer-open-more-tools.msft.png" alt-text="引き出しを開くためのボタン" lightbox="../media/customize-drawer-open-more-tools.msft.png":::
-   **引き出し**を開くためのボタン  
+:::image type="complex" source="../media/customize-drawer-open-more-tools.msft.png" alt-text="ドロワーを開くボタン" lightbox="../media/customize-drawer-open-more-tools.msft.png":::
+   ドロワーを開く **ボタン**  
 :::image-end:::  
 
-メインパネルとドロアーの間でツールを移動することができます。  
+メイン パネルとドロワーの間でツールを移動できます。  
 
-*   引き出しからメインパネルにツールを移動するには、ツールをポイントしてコンテキストメニューを開き (\ を右クリックし)、[ **先頭へ移動**] を選択します。  
+*   ドロワーからメイン パネルにツールを移動するには、ツールをポイントし、コンテキスト メニュー \(右クリック\) を開き、[一番上に移動] を **選択します**。  
     
-    :::image type="complex" source="../media/move-from-drawer.msft.png" alt-text="引き出しからメインパネルに移動ツール" lightbox="../media/move-from-drawer.msft.png":::
-       **引き出し**からメインパネルに移動ツール  
+    :::image type="complex" source="../media/move-from-drawer.msft.png" alt-text="ドロワーからメイン パネルにツールを移動する" lightbox="../media/move-from-drawer.msft.png":::
+       ドロワーからメイン **パネル** にツールを移動する  
     :::image-end:::  
     
-*   メインパネルから引き出しにツールを移動するには、ツールをポイントしてコンテキストメニューを開き (\ を右クリックし)、[ **下へ移動**] を選択します。  
+*   メイン パネルからドロワーにツールを移動するには、ツールをポイントし、コンテキスト メニュー \(右クリック\) を開き、[下へ移動] を **選択します**。  
     
-    :::image type="complex" source="../media/move-to-drawer.msft.png" alt-text="メインパネルからドローワへの移動ツール" lightbox="../media/move-to-drawer.msft.png":::
-       メインパネルから**ドローワ**への移動ツール
+    :::image type="complex" source="../media/move-to-drawer.msft.png" alt-text="メイン パネルからドロワーにツールを移動する" lightbox="../media/move-to-drawer.msft.png":::
+       メイン パネルからドロワーにツールを移動 **する**
     :::image-end:::  
     
 
-## パネルの順序を変更する  
+## パネルを並べ替える  
 
-ツールを選択してドラッグし、順序を変更します。  カスタムツールの順序は、DevTools セッション間で保持されます。  
+ツールを選択してドラッグし、順序を変更します。  カスタム ツールの順序は、DevTools セッション間で保持されます。  
 
 > [!NOTE]
-> 既定では、 **ネットワーク** ツールは左側の4番目のツールです。  次の図では、[ **ネットワーク** ] パネルは左側の最初のものです。  
+> 既定では、 **通常、ネットワーク** ツールは左から 4 番目です。  次の図では、[ **ネットワーク** ] パネルは左から 1 つ目です。  
 
-:::image type="complex" source="../media/customize-network-first-position.msft.png" alt-text="パネル内の Devtools のカスタム順序" lightbox="../media/customize-network-first-position.msft.png":::
-   パネル内の Devtools のカスタム順序  
+:::image type="complex" source="../media/customize-network-first-position.msft.png" alt-text="パネルでの Devtools のカスタム順序" lightbox="../media/customize-network-first-position.msft.png":::
+   パネルでの Devtools のカスタム順序  
 :::image-end:::  
 
 ## DevTools の配置を変更する  
 
-「 [Microsoft Edge DevTools の配置][DevToolsPlacement]」を参照してください。  
+[「Microsoft Edge DevTools Placement」を参照してください][DevToolsPlacement]。  
 
-:::image type="complex" source="../media/customize-dev-tools-dock-side.msft.png" alt-text="アンドックした DevTools" lightbox="../media/customize-dev-tools-dock-side.msft.png":::
-   アンドックした DevTools  
+:::image type="complex" source="../media/customize-dev-tools-dock-side.msft.png" alt-text="ドッキングされていない DevTools" lightbox="../media/customize-dev-tools-dock-side.msft.png":::
+   ドッキングされていない DevTools  
 :::image-end:::  
 
 ## 濃色テーマ  
 
-「 [濃色テーマを有効にする」を][DarkTheme]参照してください。  
+「濃色 [テーマを有効にする」をご覧ください][DarkTheme]。  
 
 :::image type="complex" source="../media/customize-settings-appearance-theme.msft.png" alt-text="濃色テーマ" lightbox="../media/customize-settings-appearance-theme.msft.png":::
    濃色テーマ  
@@ -105,15 +105,15 @@ ms.locfileid: "11189987"
 
 ## テスト  
 
-DevTools の実験を有効にするには、次の操作を実行します。  
+DevTools 実験を有効にするには、次の操作を実行します。  
 
-1.  に移動 `edge://flags/#enable-devtools-experiments` します。  
-1.  [ **有効にする**] を選びます。  
-1.  ページの下部にある [ **今すぐ**再起動] を選びます。  
+1.  に移動します `edge://flags/#enable-devtools-experiments` 。  
+1.  Choose **Enable**.  
+1.  ページ **の下部にある [今すぐ**再起動] を選択します。  
 
-次に DevTools を開くと、[[設定](#settings)] に "**実験**" という名前の新しいページが表示されます。  
+次回 DevTools を開く時に、[設定] に **Experiments** という名前の新しいページが表示 [されます](#settings)。  
 
-## Microsoft Edge DevTools チームと連絡を取る  
+## Microsoft Edge DevTools チームに連絡する  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
@@ -123,14 +123,14 @@ DevTools の実験を有効にするには、次の操作を実行します。
 
 <!-- links -->  
 
-[DevToolsPlacement]: ./placement.md "Microsoft Edge DevTools の配置を変更する |Microsoft ドキュメント"  
-[DarkTheme]: ./dark-theme.md "Microsoft Edge DevTools でダークテーマを有効にする |Microsoft ドキュメント"  
+[DevToolsPlacement]: ./placement.md "Microsoft Edge DevTools の配置を変更 | Microsoft Docs"  
+[DarkTheme]: ./dark-theme.md "Microsoft Edge DevTools アプリケーションで濃色テーマを|Microsoft Docs"  
 
 > [!NOTE]
-> このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
-> 元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/customize/index) にあり、 [Kayce Basques][KayceBasques] テクニカルライター、Chrome Devtools \ & Lighthouse \) で作成されています。  
+> このページの一部は、 [Google によっ て作成および共有された][GoogleSitePolicies]作業に基づく変更で、「[Creative Commons Attribution 4.0 International License][CCA4IL]」で記載されている条項に従って使用されます。  
+> 元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/customize/index) にあり、 [Kayce Basques][KayceBasques] \(Chrome DevTools \& Lighthouse\ のテクニカル ライター) が作成しました。  
 
-[![クリエイティブコモンズライセンス][CCby4Image]][CCA4IL]  
+[![Creative Commons ライセンス][CCby4Image]][CCA4IL]  
 この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。  
 
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
