@@ -23,6 +23,8 @@
           href: devtools-guide-chromium/open/index.md
         - name: 新着情報
           items:
+            - name: Microsoft Edge 89
+              href: devtools-guide-chromium/whats-new/2021/01/devtools.md
             - name: Microsoft Edge 88
               href: devtools-guide-chromium/whats-new/2020/11/devtools.md
             - name: Microsoft Edge 87
@@ -63,6 +65,8 @@
               href: devtools-guide-chromium/coverage/index.md
             - name: アニメーションの検査
               href: devtools-guide-chromium/inspect-styles/animations.md
+            - name: CSS フォントのスタイルと設定の編集
+              href: devtools-guide-chromium/inspect-styles/edit-fonts.md
             - name: CSS グリッドの検査
               href: devtools-guide-chromium/css/grid.md
             - name: DevTools を強制的に印刷プレビュー モードにする
@@ -115,6 +119,8 @@
           items:
             - name: エミュレーションの概要
               href: devtools-guide-chromium/device-mode/index.md
+            - name: 2 画面表示と折りたたみ式デバイスのエミュレート
+              href: devtools-guide-chromium/device-mode/dual-screen-and-foldables.md
             - name: 他のブラウザーをエミュレートしてテストする
               href: devtools-guide-chromium/device-mode/testing-other-browsers.md
             - name: ガイド
