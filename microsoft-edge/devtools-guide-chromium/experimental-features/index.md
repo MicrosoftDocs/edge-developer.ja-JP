@@ -3,16 +3,16 @@ description: Microsoft Edge DevTools の最新の実験的機能
 title: 試験的機能
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/03/2020
+ms.date: 02/04/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge, Web 開発, f12 ツール, devtools, 実験
-ms.openlocfilehash: 018364d4debc1791685a028c337f61f85865ef6b
-ms.sourcegitcommit: 12c30ad4ab2664d17c9b7e9d59d7a3cda60ff65c
+ms.openlocfilehash: 32eaa3e8d41efefa669142297891e7c62cf4eb5b
+ms.sourcegitcommit: d53421b7219ad87fa9d58f601d9c61ee44c2e43a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/04/2021
-ms.locfileid: "11313062"
+ms.locfileid: "11313466"
 ---
 # 試験的機能  
 
@@ -51,7 +51,7 @@ Microsoft Edge で実験的な機能 \(またはオフ\) を有効にする場�
 | [ソース オーダー ビューアー](#source-order-viewer) | 86 以降 |  
 | [キーボード ショートカット エディターを有効にする](#enable-keyboard-shortcut-editor) | 87 以降 |  
 | [3D ビューで複合レイヤーを有効にする](#enable-composited-layers-in-3d-view) | 87 以降 |  
-| [[スタイル] ウィンドウで新しいフォント エディター ツールを有効にする](#) | 89 以降 |  
+| [[スタイル] ウィンドウで新しいフォント エディター ツールを有効にする](#enable-new-font-editor-tool-within-the-styles-pane) | 89 以降 |  
 | [新しい CSS Flexbox デバッグ機能を有効にする](#enable-new-css-flexbox-debugging-features) | 89 以降 |  
 | [[+] ボタン タブ メニューを有効にして、その他のツールを開く](#enable--button-tab-menus-to-open-more-tools) | 89 以降 |  
 | [[ようこそ] タブを有効にする](#enable-welcome-tool) | 89 以降 |  
@@ -60,7 +60,7 @@ Microsoft Edge で実験的な機能 \(またはオフ\) を有効にする場�
 
 この試験的な機能は、CSS グリッド レイアウトのデバッグに役立つ新しい視覚エフェクトを多数提供します。  最新の試験的な機能をプレビューするには、 [この実験を有効](#turn-on-experimental-features) にし、DevTools を再読み込みします。  この実験は、Microsoft Edge バージョン 87 以降で既定で有効になっています。  
 
-#### 検査ツールを使用した、ホバー時のグリッド オーバーレイの表示  
+#### Inspect ツールを使用した、ホバー時のグリッド オーバーレイの表示  
 
 検査 **ツール** を使用すると、Web サイト内の CSS グリッド レイアウトをマウスでポイントすることで、簡単に識別して視覚化できます。  DevTools **の左上隅** にある Inspect ![ \( Inspect ](../media/inspect-icon.msft.png) \) アイコンを選択します。  次に、デバッグする Web サイトの Grid 要素をポイントします。  枠線はグリッドの周囲に表示され、網かけはグリッドのギャップがある場合の位置を示します。  
 
@@ -72,7 +72,7 @@ Microsoft Edge で実験的な機能 \(またはオフ\) を有効にする場�
 
 Microsoft Edge バージョン 86 以降では、試験的な CSS グリッド機能を使用して、永続的なグリッド オーバーレイを有効にすることもできます。  永続的なオーバーレイには、いくつかの利点があります。  
 
-*   永続的なオーバーレイは、スクロール、マウスの移動、DevTools のその他の機能の使用時にページ上に表示されたままです。  
+*   永続的なオーバーレイは、スクロール、マウスの移動、DevTools のその他の機能の使用時にページに表示されたままです。  
 *   複数の固定オーバーレイを同時に有効にすることができ、複数のグリッド レイアウトを一度に確認できます。  
 *   永続的なオーバーレイには、グリッド領域での名前の非表示や表示、グリッド のギャップ、トラックのサイズなど、多くの構成オプションが用意されています。  
     
@@ -84,7 +84,7 @@ Microsoft Edge バージョン 86 以降では、試験的な CSS グリッド�
        要素ツールのグリッド楕 **円** アイコン  
     :::image-end:::  
     
-*   要素ツールにある **新しいレイアウト** パネルを開き、強調表示する各 Grid 要素の横にあるチェック ボックスをオンにします。  
+*   要素ツール **にある新しいレイアウト** パネルを開き、強調表示する各 Grid 要素の横にあるチェック ボックスをオンにします。  
     
     :::image type="complex" source="../media/grid-layout-zoom.msft.png" alt-text="DevTools のレイアウト パネル" lightbox="../media/grid-layout-zoom.msft.png":::
        **** DevTools のレイアウト パネル  
@@ -110,7 +110,7 @@ Microsoft Edge バージョン 86 以降では、新しい**レイアウト**パ
 
 ### webhint を有効にする  
 
-[webhint は][WebhintMain] 、Web サイトとローカル Web ページにリアルタイムのフィードバックを提供するオープン ソース ツールです。  Webhint によって提供される [フィードバックの種類][WebhintMain]。  
+[webhint は][WebhintMain] 、Web サイトとローカル Web ページに対してリアルタイムのフィードバックを提供するオープン ソース ツールです。  Webhint によって提供される [フィードバックの種類][WebhintMain]。  
 
 *   アクセシビリティ  
 *   ブラウザー間の互換性  
@@ -152,7 +152,7 @@ Microsoft Edge バージョン 86 以降では、新しい**レイアウト**パ
 実験を有効にした後、DevTools を再起動してください。  ソース オーダー **ビューアーを使用するには、** 次の手順を実行します。  
 
 1.  要素ツール **を開** きます。  
-1.  ドロワー **\(** 下部\) パネルの [アクセシビリティ] ウィンドウを開きます。  
+1.  ドロワー **\(** 下\) パネルの [アクセシビリティ] ウィンドウを開きます。  
 1.  [ソース オーダー **ビューアー] セクションで** 、[ソース注文の **表示] チェック ボックスをオン** にします。  
 1.  任意の HTML 要素を強調表示して、Web ページ ソース内の順序に合ったオーバーレイを表示します。  
     
@@ -168,7 +168,7 @@ Microsoft Edge バージョン 86 以降では、新しい**レイアウト**パ
 
 1.  [DevTools を開きます][DevtoolsOpenMain]。  
 1.  [設定 [] を開きます][DevToolsCustomizeIndexSettings]。  
-    *   選択します `Shift` + `?` 。  
+    *   選択 `Shift` + `?` します。  
 1.  [ショートカット] **ページに移動** します。  
 1.  カスタマイズするアクションを選択します。  
 1.  [ **編集** \( ![ EditKeyboardShortcut \) ] ](../media/edit-keyboard-shortcut-icon.msft.png) アイコンを選択します。  
@@ -261,7 +261,7 @@ Microsoft Edge バージョン 89 以降では、実験的な CSS Flexbox 機能
     
 Flexbox レイアウトで固定オーバーレイを切り替えるには、次のいずれかのアクションを使用します。  
 
-*   Elements ツール **の DOM ツリー** に表示されている Flexbox コンテナーの横にある Flexbox 楕円アイコンを **選択** します。  
+*   Elements ツール **の DOM ツリー** に表示される Flexbox コンテナーの横にある Flexbox 楕円アイコンを **選択** します。  
 *   **要素**ツール**にある新しいレイアウト**パネルを開き、強調表示する各 Flexbox コンテナーの横にあるチェック ボックスをオンにします。  
     
 :::image type="complex" source="../media/flexbox-overlay.msft.png" alt-text="DevTools の Flex アイコンとレイアウト パネル" lightbox="../media/flexbox-overlay.msft.png":::
@@ -270,7 +270,7 @@ Flexbox レイアウトで固定オーバーレイを切り替えるには、次
 
 #### 永続的なオーバーレイを構成する  
 
-CSS グリッドまたは Flexbox レイアウトの固定オーバーレイのオプションを構成するには、[レイアウト] ウィンドウ **を使用** します。  [ **レイアウト** ] ウィンドウは、要素ツール **の** [スタイル] ウィンドウと **[計算** ] ウィンドウ **の横** に配置されます。  
+CSS グリッドまたは Flexbox レイアウトの固定オーバーレイのオプションを構成するには、[レイアウト] ウィンドウ **を使用** します。  [ **レイアウト** ] ウィンドウは、要素 **ツールの** [スタイル] ウィンドウと **[計算** ] ウィンドウ **の横** に配置されます。  
 
 :::image type="complex" source="../media/flexbox-layout.msft.png" alt-text="レイアウト パネル" lightbox="../media/flexbox-layout.msft.png":::
    レイアウト パネル  
@@ -299,7 +299,7 @@ CSS グリッドまたは Flexbox レイアウトの固定オーバーレイの�
     
 Microsoft Edge **を** 更新すると、ウェルカム ツールが自動的に開きます。  更新ごとにウェルカム ツールが**** 表示されるのを防ぐには、ウェルカム ツール**** タイトルの更新後に [開く] タブの横にあるチェック ボックス**を**オフにします。  
 
-元の新機能ツール**が**必要な場合は、[設定の実験[][DevtoolsCustomizeIndexSettings]] に移動し、[ようこそ] タブの横にある  >  ******チェック ボックスをオフにします**。  
+元の新機能ツール**が**必要な場合は、[[設定][DevtoolsCustomizeIndexSettings]の実験] に移動し、[ようこそ] タブの横にある  >  **** チェック**ボックスをオフにします**。  
 
 :::image type="complex" source="../media/experiments-welcome.msft.png" alt-text="ウェルカム ツール" lightbox="../media/experiments-welcome.msft.png":::
    **ウェルカム** ツール  
@@ -309,7 +309,7 @@ Microsoft Edge **を** 更新すると、ウェルカム ツールが自動的�
 
 ## 以前の試験的な機能  
 
-*   Microsoft Edge バージョン 83 以降では[、3D][Devtools3dViewIndex]ビューが使用可能で、既定でオンになっています。  
+*   Microsoft Edge バージョン 83 以降では[、3D][Devtools3dViewIndex]ビューが使用可能になっていて、既定でオンになっています。  
 *   [Microsoft][DevtoolsMoveTabs] Edge バージョン 85 以降では、パネル間でタブを移動するサポートを有効にし、既定で有効になっています。  
 *   [Microsoft][DevtoolsCustomKeyboardShortcuts] Edge バージョン 86 以降で、キーボード ショートカットのカスタマイズが使用可能で、既定で有効になっています。  
 *   [エミュレーション: Microsoft][DevtoolsDeviceModeDualScreenAndFoldables] Edge バージョン 89 以降で、デュアル スクリーン モードをサポートし、既定で有効になっています。  
@@ -320,7 +320,7 @@ Microsoft Edge **を** 更新すると、ウェルカム ツールが自動的�
 Microsoft Edge DevTools 実験、または DevTools に関連するその他の実験に関するフィードバックを提供する。  
 
 *   DevTools の **[フィードバック** の送信] アイコンを使用してフィードバックを送信する  
-*   次の時点で [ツイート@EdgeDevTools][TwitterEdgedevtools]  
+*   次の時点 [でツイート@EdgeDevTools][TwitterEdgedevtools]  
     
 :::image type="complex" source="../media/bing-devtools-send-feedback.msft.png" alt-text="Microsoft Edge DevTools の [フィードバックの送信] アイコン" lightbox="../media/bing-devtools-send-feedback.msft.png":::
    Microsoft Edge DevTools の **[フィードバックの送信]** アイコン  
