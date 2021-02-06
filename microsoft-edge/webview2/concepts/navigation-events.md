@@ -3,47 +3,47 @@ description: ナビゲーション
 title: ナビゲーション
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 07/23/2020
+ms.date: 02/05/2021
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
-keywords: IWebView2、IWebView2WebView、webview2、webview、wpf アプリ、wpf、edge、ICoreWebView2、ICoreWebView2Host、browser control、edge html
-ms.openlocfilehash: 0df8e12acb11824006515ac711250d776d276e36
-ms.sourcegitcommit: 553957c101f83681b363103cb6af56bf20173f23
+keywords: IWebView2、IWebView2WebView、webview2、webview、wpf アプリ、wpf、edge、ICoreWebView2、ICoreWebView2Host、ブラウザー コントロール、edge html
+ms.openlocfilehash: ac15b9f32a29c64bbdc2a7886fa654a2d71a5453
+ms.sourcegitcommit: 4cea8cf99b5f12db9d2daba99bbf48f3ccc537fe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "10895579"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "11314798"
 ---
 # ナビゲーションイベント  
 
-通常のナビゲーションイベントのシーケンスは、、、、、ということです `NavigationStarting` `SourceChanged` `ContentLoading` `HistoryChanged` `NavigationCompleted` 。  次のイベントは、各ナビゲーションでの WebView2 の状態を示しています。  
+ナビゲーション イベントの通常のシーケンスは `NavigationStarting` 、 , , , , , and then `SourceChanged` `ContentLoading` `HistoryChanged` です `NavigationCompleted` 。  次のイベントは、各ナビゲーション中の WebView2 の状態を示しています。  
 
-| 動作 | [Event Name] | 詳細 |  
+| Sequence | [Event Name] | 詳細 |  
 |:--- |:--- |:--- |  
-| 件 | `NavigationStarting`  |  WebView2 が移動を開始し、ナビゲーションの結果がネットワーク要求になります。  ホストは、イベント中に要求を許可することはできません。  |  
-| 両面 | `SourceChanged`  |  WebView2 のソースが新しい URL に変更されます。  このイベントは、フラグメントナビゲーションなどのネットワーク要求が発生しないナビゲーションによって発生する可能性があります。  |  
-| - | `HistoryChanged`  |  ナビゲーションの結果としての WebView2 の更新履歴。  |  
-| 4d | `ContentLoading`  |  WebView で、新しいページのコンテンツの読み込みが開始されます。  |  
-| 個 | `NavigationCompleted`  |  WebView2 は、新しいページのコンテンツの読み込みを完了します。  |  
+| 1 | `NavigationStarting`  |  WebView2 は移動を開始し、ナビゲーションの結果はネットワーク要求になります。  ホストは、イベント中に要求を禁止できます。  |  
+| 2 | `SourceChanged`  |  WebView2 のソースが新しい URL に変更されます。  このイベントは、フラグメント ナビゲーションなどのネットワーク要求を引き起こしていないナビゲーションによって発生する可能性があります。  |  
+| 3 | `HistoryChanged`  |  ナビゲーションの結果として WebView2 の履歴が更新されます。  |  
+| 4 | `ContentLoading`  |  WebView2 は、新しいページのコンテンツの読み込みを開始します。  |  
+| 5 | `NavigationCompleted`  |  WebView2 は、新しいページでのコンテンツの読み込みを完了します。  |  
 
-`navigations`ナビゲーション ID \ (\) を使用して、新しいドキュメントごとに追跡 `NavigationId` します。  `NavigationId`新しい文書へのナビゲーションが正常に完了するたびに、WebView の内容が変更されます。
+ナビゲーション ID \( \) を使用して、新しい `navigations` 各ドキュメントに `NavigationId` 追跡します。  新 `NavigationId` しいドキュメントへのナビゲーションが正常に行うたび、WebView の変更点が変わります。
 
-:::image type="complex" source="../media/navigation-graph.png" alt-text="Microsoft Edge WebView2 ナビゲーションイベント" lightbox="../media/navigation-graph.png":::
-   Microsoft Edge WebView2 ナビゲーションイベント  
+:::image type="complex" source="../media/navigation-graph.png" alt-text="Microsoft Edge WebView2 ナビゲーション イベント" lightbox="../media/navigation-graph.png":::
+   Microsoft Edge WebView2 ナビゲーション イベント  
 :::image-end:::  
 
 > [!NOTE]
-> 上の図は、それぞれのイベント arg で同じプロパティを持つナビゲーションイベントを示して `NavigationId` います。  
+> 前の図は、それぞれのイベント引数で同じ `NavigationId` プロパティを持つナビゲーション イベントを表しています。  
 
- `Navigations` イベントのインスタンスが異なるイベント `NavigationId` は、重複する可能性があります。  たとえば、ナビゲーションを開始する場合は、関連するイベントを待つ必要があり `NavigationStarting` ます。  別のナビゲーションを開始した場合は、最初のナビゲートのイベントと2番目の移動のイベントが表示され、最初のナビゲーションにイベントが `NavigationStarting` `NavigationStarting` 続き、2番目のナビゲーションで該当する `NavigationCompleted` ナビゲーションイベントの残りすべてが表示されます。  
+ `Navigations` イベントのインスタンスが異なると、 `NavigationId` イベントが重複する可能性があります。  たとえば、ナビゲーションを開始するときに、関連するイベントを待つ必要 `NavigationStarting` があります。  その後、別のナビゲーションを開始すると、最初のナビゲーションのイベントが表示され、次に 2 番目のナビゲーションのイベントが表示され、次に最初のナビゲーションのイベントが表示され、次に 2 番目のナビゲーションに適したナビゲーション イベントの残りのすべてが表示されます。 `NavigationStarting` `NavigationStarting` `NavigationCompleted`  
  
- エラーが発生した場合は、 `ContentLoading` ナビゲーションがエラーページに続いているかどうかによって、イベントが発生する可能性があります。  
+ エラーの場合、ナビゲーションがエラー ページに続くかどうかによって、イベントが発生する場合とない `ContentLoading` 場合があります。  
  
- HTTP リダイレクトの場合、1つの行に複数のイベントがあります。その場合は、次のイベント引数にプロパティが設定されていますが、値は `NavigationStarting` `IsRedirect` `NavigationId` 変わりません。  
+ HTTP リダイレクトの場合、1 行に複数のイベントがあります。後続のイベント引数にはプロパティが設定されます。ただし、イベントは `NavigationStarting` `IsRedirect` `NavigationId` 同じままです。  
  
- 同じドキュメント (フラグメントへの移動など) では、 `navigations` イベントは発生せず、 `NavigationStarting` をインクリメントしません `NavigationId` 。  
+ フラグメントへの移動など、同じドキュメントではイベントが発生し、インクリメント `navigations` `NavigationStarting` は行わりません `NavigationId` 。  
 
-WebView でサブフレームの内部を監視またはキャンセルするには、と等価の、フレームに対応して `navigations` `FrameNavigationStarting` いないイベントと同じように動作するイベントを使用し `FrameNavigationCompleted` ます。  
+WebView のサブフレーム内で監視またはキャンセルするには、対応する同等の非フレーム イベントと同様に機能するイベント `navigations` `FrameNavigationStarting` `FrameNavigationCompleted` とイベントを使用します。  
 
 <!-- links -->  
