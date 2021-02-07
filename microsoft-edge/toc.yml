@@ -277,6 +277,8 @@
               href: extensions-chromium/publish/submission-states.md
             - name: アカウント設定の管理
               href: extensions-chromium/publish/manage-settings.md
+            - name: お問い合わせ
+              href: extensions-chromium/publish/contact-us.md
         - name: Microsoft Edge のアドオン ポリシー
           items:
             - name: コンテンツ セキュリティ ポリシー
