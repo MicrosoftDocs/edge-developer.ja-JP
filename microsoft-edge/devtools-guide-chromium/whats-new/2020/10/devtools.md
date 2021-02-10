@@ -3,16 +3,16 @@ description: 新しい CSS グリッド デバッグ ツール、Webauthn ツー
 title: DevTools の新機能 (Microsoft Edge 87)
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 10/22/2020
+ms.date: 01/26/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: cf3a685a1a4e9a3f13d2401a6294058a71dd5104
-ms.sourcegitcommit: 12c30ad4ab2664d17c9b7e9d59d7a3cda60ff65c
+ms.openlocfilehash: 88e6678880172a7a494bcf73c74874aeb70c24b9
+ms.sourcegitcommit: e737277744dd25a7585c113eef22a2aa4d4c167f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "11313031"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "11325960"
 ---
 # DevTools の新機能 (Microsoft Edge 87)  
 
@@ -27,7 +27,7 @@ Microsoft Edge DevTools チームは、翻訳のニーズを満たすために�
 *   ネットワーク ツール **フィルターの** 一部 (例: `URL` , , , `XHR` `JS` `CSS` .  
 *   [$0][DevtoolsGuideChromiumConsoleUtilitiesRecentlySelectedElementJavascriptObject]コンソール ユーティリティ API。  
     
-[$0][DevtoolsGuideChromiumConsoleUtilitiesRecentlySelectedElementJavascriptObject]は、ローカライズされた[](/microsoft-edge/devtools-guide-chromium/console/index.md)バージョンの DevTools のユーザーがコンソールで利用できます。   Microsoft Edge DevTools のローカライズの改善に役立つグローバル開発者コミュニティに感謝します。  すべてのローカライズ [での DevTools のサポートを](#getting-in-touch-with-microsoft-edge-devtools-team) 向上させるために、ローカライズ品質に関するフィードバックを引き続き送信します。  Chromium オープン ソース プロジェクトでこの機能のリアルタイムの更新を確認するには、[問題] ページ[#1136655。][CR1136655]  
+[$0 は][DevtoolsGuideChromiumConsoleUtilitiesRecentlySelectedElementJavascriptObject]、ローカライズされた[](/microsoft-edge/devtools-guide-chromium/console/index.md)バージョンの DevTools のユーザーがコンソールで利用できます。   Microsoft Edge DevTools のローカライズの改善に役立つグローバル開発者コミュニティに感謝します。  すべてのローカライズ [での DevTools のサポートを向上](#getting-in-touch-with-microsoft-edge-devtools-team) させるために、ローカライズ品質に関するフィードバックを引き続き送信します。  Chromium オープン ソース プロジェクトでこの機能のリアルタイム更新を確認するには、[問題] ページ[#1136655。][CR1136655]  
 
 :::image type="complex" source="../../media/2020/10/bing-network-japanese.msft.png" alt-text="ローカライズされていないフィルターを含むネットワーク ツール" lightbox="../../media/2020/10/bing-network-japanese.msft.png":::
    **ローカライズ** されていないフィルターを含むネットワーク ウィンドウ  
@@ -39,7 +39,7 @@ DevTools では、上部と下部のパネル間でのツールの移動がサ�
 
 :::row:::
    :::column span="":::
-      上部のツールを下部に移動するには、タブをポイントし、コンテキスト メニュー \(右クリック\) を開き、[下へ移動] **を選択します**。  
+      上部のツールを下部に移動するには、タブをポイントし、コンテキスト メニュー \(右クリック\) を開き、[下へ移動] を **選択します**。  
       
       :::image type="complex" source="../../media/2020/10/move-to-bottom.msft.png" alt-text="下に移動" lightbox="../../media/2020/10/move-to-bottom.msft.png":::
          下に移動  
@@ -93,7 +93,7 @@ Microsoft Edge DevTools では、CSS グリッドを検査、表示、デバッ�
 *   複数のグリッドに対して固定オーバーレイを有効にできます。  
 *   新しい **レイアウト ツールを** 使用すると、グリッド オーバーレイを簡単に切り替え、それぞれの外観とコンテンツを構成できます。  
     
-この機能は既定で有効になっています。  機能の詳細については [、CSS グリッドに移動します][DevtoolsCssGrid]。  Chromium オープン ソース プロジェクトでこの機能の履歴を確認するには、[Issue #1047356] [に移動します][CR1047356]。  さらに、Microsoft Edge DevTools チームは Chrome DevTools チームおよび Chromium コミュニティと協力して、DevTools に新しい flexbox ツール機能を追加しています。  Chromium オープン ソース プロジェクトの flexbox ツールの更新については、[問題] ページ[#1136394。][CR1136394]  
+この機能は既定で有効になっています。  機能の詳細については [、CSS グリッドに移動します][DevtoolsCssGrid]。  Chromium オープン ソース プロジェクトでこの機能の履歴を確認するには、[問題] ページ[#1047356。][CR1047356]  さらに、Microsoft Edge DevTools チームは Chrome DevTools チームと Chromium コミュニティと協力して、DevTools に新しい flexbox ツール機能を追加しています。  Chromium オープン ソース プロジェクトの flexbox ツールの更新については、[問題] ページ[#1136394。][CR1136394]  
 
 :::image type="complex" source="../../media/2020/10/grid-layout-pane.msft.png" alt-text="グリッドを含むレイアウト ツール" lightbox="../../media/2020/10/grid-layout-pane.msft.png":::
    **グリッド** を含むレイアウト ツール  
@@ -115,7 +115,7 @@ Microsoft Edge DevTools では、CSS グリッドを検査、表示、デバッ�
 
 ## Microsoft Edge Tools for Visual Studio Code 拡張機能の紹介  
 
-現在 **、Visual Studio Code** 拡張機能と **Network for Visual Studio コード** 拡張機能の要素は、新しい [Microsoft Edge Developer Tools for Visual Studio統合][VisualStudioCodeMarketplaceMsEdgedevtools] されました。  Microsoft Edge DevTools は、次のコードを残さずに次のVisual Studioします。  
+Visual Studio 用の Visual Studio **Code** および **Network** の要素は、新しい Microsoft Edge [Developer Tools for][VisualStudioCodeMarketplaceMsEdgedevtools] Visual Studio Code 拡張機能にマージされました。  Microsoft Edge DevTools は、次のコードを残さずに次のVisual Studioします。  
 
 *   DOM をデバッグする  
 *   CSS の編集  
@@ -169,7 +169,7 @@ WebAuthn 機能の詳細 **については、「Authenticators** をエミュレ
 
 #### [スタイル] ウィンドウの [計算されたサイドバー] ウィンドウを表示する  
 
-[スタイル **] ウィンドウの [** 計算] ウィンドウ **を切り替** えます。  [ **スタイル] ウィンドウ** の [ **計算** ] ウィンドウは、既定で折りたたまれています。  切り替えるには、ボタンを選択します。  Chromium オープン ソース プロジェクトでこの機能のリアルタイムの更新を確認するには、[問題] ページ[#1073899。][CR1073899]  
+[スタイル **] ウィンドウの [** 計算] ウィンドウ **を切り替** えます。  [ **スタイル] ウィンドウ** の [ **計算** ] ウィンドウは、既定で折りたたまれています。  切り替えるには、ボタンを選択します。  Chromium オープン ソース プロジェクトでこの機能のリアルタイム更新を確認するには、[問題] ページ[#1073899。][CR1073899]  
 
 :::row:::
    :::column span="":::
@@ -194,9 +194,9 @@ WebAuthn 機能の詳細 **については、「Authenticators** をエミュレ
 
 ### 1 つ以上のツールの 6.4  
 
-これで **、The 立** ち回りツールは 6.4 を実行しています。  変更の完全な一覧については、大島のリリース [ノートに移動します][GithubGoogleChromeLighthouseReleasesV641]。  Chromium オープン ソース プロジェクトでこの機能のリアルタイムの更新を確認するには、[問題] ページ[#772558。][CR772558]  
+これで **、The立** ち回りツールで 6.4 が実行されています。  変更の完全な一覧については、大島のリリース [ノートに移動します][GithubGoogleChromeLighthouseReleasesV641]。  Chromium オープン ソース プロジェクトでこの機能のリアルタイムの更新を確認するには、[問題] ページ[#772558。][CR772558]  
 
-### [タイミング] セクションの performance.mark() イベント  
+### Timings セクションの performance.mark() イベント  
 
 パフォーマンス **ツールの記録の** [タイミング] セクション [でイベントが][DevtoolsGuideChromiumEvaluatePerformanceReference] マーク `performance.mark()` されます。  この機能を試し、JavaScript コードのパフォーマンスを測定するには、コード `performance.mark()` にイベントを追加します。  たとえば、次のコード スニペットでは、ループの前と後にマーカーを追加し、7 の増分を使用して 0 から `for` 1000 まで反復します。  
 
@@ -228,7 +228,7 @@ To discover more special keywords such as `resource-type` `url` and, navigate to
 
 #### COEP および COOP レポートをエンドポイントに表示する  
 
-[セキュリティと保護の分離] セクションで、クロスオリジン 埋め込みポリシー \(COEP\) およびクロスオリジン オープン ポリシー \(COOP\) `reporting to` **エンドポイント&表示** します。  レポート [API は][MdnReportingApi] 、新しい HTTP ヘッダーを定義します。これにより、ブラウザーが警告やエラーを送信するためのサーバー エンドポイント `Report-To` を指定できます。  Chromium オープン ソース プロジェクトでこの機能のリアルタイム更新を確認するには、[問題] ページに移動[#1051466。][CR1051466]  
+[セキュリティと保護の分離] セクションで、クロスオリジン 埋め込みポリシー \(COEP\) およびクロスオリジン オープン ポリシー \(COOP\) `reporting to` **エンドポイント&表示** します。  レポート [API は][MdnReportingApi] 、新しい HTTP ヘッダーを定義します。これにより、ブラウザーが警告やエラーを送信するためのサーバー エンドポイント `Report-To` を指定できます。  Chromium オープン ソース プロジェクトでこの機能のリアルタイムの更新を確認するには、[問題] ページ[#1051466。][CR1051466]  
 
 :::image type="complex" source="../../media/2020/10/https_first_party_test_glitch_me_coop-1.msft.png" alt-text="エンドポイントへのレポート" lightbox="../../media/2020/10/https_first_party_test_glitch_me_coop-1.msft.png":::
    エンドポイント `reporting to`  
@@ -236,7 +236,7 @@ To discover more special keywords such as `resource-type` `url` and, navigate to
 
 #### COEP および COOP レポート専用モードを表示する  
 
-DevTools に、モードに `report-only` 設定されている COEP と COOP のラベルが表示 `report-only` されます。  Chromium オープン ソース プロジェクトでこの機能のリアルタイム更新を確認するには、[問題] ページに移動[#1051466。][CR1051466]  
+DevTools に、モードに `report-only` 設定されている COEP と COOP のラベルが表示 `report-only` されます。  Chromium オープン ソース プロジェクトでこの機能のリアルタイムの更新を確認するには、[問題] ページ[#1051466。][CR1051466]  
 
 :::image type="complex" source="../../media/2020/10/https_first_party_test_glitch_me_coop-2.msft.png" alt-text="レポート専用モード ラベル" lightbox="../../media/2020/10/https_first_party_test_glitch_me_coop-2.msft.png":::
    モード `report-only` ラベル  
@@ -252,7 +252,7 @@ CSS **概要ツールで** 、ページ上に色コントラストの問題が�
 
 [CSS の概要のアクセス可能な色のデモ][GlitchCssOverviewAccessibleColorsDemo]  
 
-この実験を有効にするには、[設定**の実験]**  >  **で**、[CSS の概要]**チェック ボックスをオン**にします。  色コントラストの問題がある要素の一覧を表示するには、[ **コントラスト**] の問題で [テキスト] を選択 **します**。  要素ツールで要素を **開く** 場合は、一覧から要素を選択します。  コントラストの問題を解決するために、Microsoft Edge DevTools は自動的に色の候補 [を提供します][DevtoolsWhatsnew200208DevtoolsAccessibleColorSuggestionStylesPane]。  Chromium オープン ソース プロジェクトでこの機能のリアルタイムの更新を確認するには、[問題] ページ[#1120316。][CR1120316]  
+この実験を有効にするには、[設定の実験 **]** で  >  ****、[CSS の概要]**チェック ボックスをオン**にします。  コントラストに関する問題がある要素の一覧を表示するには、[**** テキスト] を選択**します**。  要素ツールで要素を **開く** 場合は、一覧から要素を選択します。  コントラストの問題を解決するために、Microsoft Edge DevTools は自動的に色の候補 [を提供します][DevtoolsWhatsnew200208DevtoolsAccessibleColorSuggestionStylesPane]。  Chromium オープン ソース プロジェクトでこの機能のリアルタイムの更新を確認するには、[問題] ページ[#1120316。][CR1120316]  
 
 :::image type="complex" source="../../media/2020/10/css-overview.msft.png" alt-text="低色コントラストの問題" lightbox="../../media/2020/10/css-overview.msft.png":::
    低色コントラストの問題  
@@ -275,7 +275,7 @@ Windows または macOS を使用している場合、[Microsoft Edge プレビ�
 [DevtoolsDeviceModeIndex]: /microsoft-edge/devtools-guide-chromium/device-mode/index "Microsoft Edge DevTools でモバイル デバイスをエミュレートする | Microsoft Docs"  
 [DevtoolsGuideChromiumConsoleUtilitiesRecentlySelectedElementJavascriptObject]:  https://docs.microsoft.com/microsoft-edge/devtools-guide-chromium/console/utilities#recently-selected-element-or-javascript-object "最近選択した要素または JavaScript オブジェクト - コンソール ユーティリティ API リファレンス |Microsoft Docs"  
 [DevtoolsCustomizeShortcuts]: /microsoft-edge/devtools-guide-chromium/customize/shortcuts "Microsoft Edge DevTools でキーボード ショートカットをカスタマイズする | Microsoft Docs"  
-[DevtoolsGuideChromiumEvaluatePerformanceReference]: /microsoft-edge/devtools-guide-chromium/evaluate-performance/reference "パフォーマンス分析のリファレンス |Microsoft Docs"  
+[DevtoolsGuideChromiumEvaluatePerformanceReference]: /microsoft-edge/devtools-guide-chromium/evaluate-performance/reference "パフォーマンス分析リファレンス |Microsoft Docs"  
 [DevtoolsExperimentalFeaturesEmulationSupportDualScreenMode]: /microsoft-edge/devtools-guide-chromium/experimental-features#emulation-support-dual-screen-mode "エミュレーション: デュアル スクリーン モードのサポート - 試験的機能 | Microsoft Docs"  
 [DevtoolsExperimentalFeaturesEnableExperimentalApis]: /microsoft-edge/devtools-guide-chromium/experimental-features#enable-experimental-apis "試験的な API を有効にする - 試験的機能 | Microsoft Docs"  
 [DevtoolsExperimentalFeaturesEnableKeyboardShortcutEditor]: /microsoft-edge/devtools-guide-chromium/experimental-features#enable-keyboard-shortcut-editor "キーボード ショートカット エディターを有効にする - 試験的な機能|Microsoft Docs"  
@@ -283,14 +283,14 @@ Windows または macOS を使用している場合、[Microsoft Edge プレビ�
 [DevtoolsExperimentalFeaturesEnableNetworkConsole]: /microsoft-edge/devtools-guide-chromium/experimental-features#enable-network-console "ネットワーク コンソールを有効にする - 試験的な機能|Microsoft Docs"  
 [DevtoolsExperimentalFeaturesEnableSourceOrderViewer]: /microsoft-edge/devtools-guide-chromium/experimental-features#enable-source-order-viewer "ソース オーダー ビューアーを有効にする - 試験的機能 | Microsoft Docs"
 [DevtoolsExperimentalFeaturesTestingOnFoldableDualScreenDevices]: /microsoft-edge/devtools-guide-chromium/experimental-features#testing-on-foldable-and-dual-screen-devices "折りたたみ式デバイスとデュアルスクリーン デバイスのテスト - 試験的機能 | Microsoft Docs"  
-[DevtoolsExperimentalFeaturesTurnOnExperimentalFeatures]: /microsoft-edge/devtools-guide-chromium/experimental-features#turn-on-experimental-features "試験的機能を有効にする - 試験的な機能|Microsoft Docs"  
+[DevtoolsExperimentalFeaturesTurnOnExperimentalFeatures]: /microsoft-edge/devtools-guide-chromium/experimental-features#turn-on-experimental-features "試験的機能を有効にする - 試験的機能の|Microsoft Docs"  
 [DevtoolsConsoleApiTable]: /microsoft-edge/devtools-guide-chromium/console/api#table "table - コンソール API リファレンス | Microsoft Docs"  
 [DevtoolsCoverageIndex]: /microsoft-edge/devtools-guide-chromium/coverage/index "Microsoft Edge DevTools の [カバレッジ] タブで使用されていない JavaScript と CSS コードを見つける | Microsoft Docs"  
 [DevtoolsCssGrid]:  /microsoft-edge/devtools-guide-chromium/css/grid "CSS グリッド を検査|Microsoft Docs"  
 [DevtoolsCustomizeIndexDrawer]: /microsoft-edge/devtools-guide-chromium/customize/index#drawer "ドロワー - Microsoft Edge DevTools をカスタマイズする | Microsoft Docs"  
 [DevtoolsCustomizeIndexSettings]: /microsoft-edge/devtools-guide-chromium/customize/index#settings "設定 - Microsoft Edge DevTools をカスタマイズする | Microsoft Docs"  
 [DevtoolsEvaluatePerformanceReferenceAnalyzeRenderingPerformance]: /microsoft-edge/devtools-guide-chromium/evaluate-performance/reference#analyze-rendering-performance-with-the-rendering-tab "[レンダリング] タブでレンダリング パフォーマンスを分析する - パフォーマンス分析リファレンス | Microsoft Docs"  
-[DevtoolsMediaIndex]: /microsoft-edge/devtools-guide-chromium/media/index "メディア プレーヤー情報の表示とデバッグ|Microsoft Docs"  
+[DevtoolsMediaIndex]: /microsoft-edge/devtools-guide-chromium/media/index "メディア プレーヤー情報の表示と|Microsoft Docs"  
 [DevtoolsNetworkReferenceFilterRequestsProperties]: /microsoft-edge/devtools-guide-chromium/network/reference#filter-requests-by-properties  "プロパティで要求をフィルター処理する - ネットワーク分析の参照|Microsoft Docs"  
 [DevtoolsWebauthnIndex]: /microsoft-edge/devtools-guide-chromium/webauthn/index "Microsoft Edge DevTools アプリケーションで認証システムをエミュレートし、WebAuthn をデバッグ|Microsoft Docs"  
 
@@ -346,4 +346,4 @@ Windows または macOS を使用している場合、[Microsoft Edge プレビ�
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
 [GoogleSitePolicies]: https://developers.google.com/terms/site-policies  
-[JecelynYeen]: https://developers.google.com/web/resources/contributors/jecelynyeen
+[JecelynYeen]: https://developers.google.com/web/resources/contributors/jecelynyeen  
