@@ -6,7 +6,7 @@ ms.author: msedgedevrel
 ms.date: 10/27/2020
 ms.topic: conceptual
 ms.prod: microsoft-edge
-keywords: edge、拡張機能の開発、ブラウザーの拡張、アドオン、パートナーセンター、開発者、chromium の拡張機能
+keywords: edge、拡張機能の開発、ブラウザーの拡張機能、アドオン、パートナー センター、開発者、Chromium の拡張機能
 ms.openlocfilehash: 04b9ffb7ec175bad4f980310819ea6d3551ef9f8
 ms.sourcegitcommit: a35a6b5bbc21b7df61d08cbc6b074b5325ad4fef
 ms.translationtype: MT
@@ -14,7 +14,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 12/17/2020
 ms.locfileid: "11230944"
 ---
-# Microsoft Edge (Chromium) 拡張機能の概要 
+# Microsoft Edge (Chromium) の拡張機能の概要 
 
 拡張機能とは、Microsoft Edge \ (Chromium \) に新しい機能を追加したり、既存の機能を変更したりするために使用できる小さなプログラムです。  拡張は、対象ユーザーにとって重要なニッチ機能を提供して、ユーザーの日常的なブラウジング エクスペリエンスの改善を目的としています。  
 
