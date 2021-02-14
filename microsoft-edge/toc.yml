@@ -267,11 +267,11 @@
               href: extensions-chromium/developer-guide/native-messaging.md
         - name: Microsoft Store に公開する
           items:
-            - name: 拡張機能の公開
-              href: extensions-chromium/publish/publish-extension.md
             - name: 開発者の登録
               href: extensions-chromium/publish/create-dev-account.md
-            - name: 拡張機能の一覧を更新する
+            - name: 拡張機能の公開
+              href: extensions-chromium/publish/publish-extension.md
+            - name: 拡張機能の更新
               href: extensions-chromium/publish/update.md
             - name: 申請の状態
               href: extensions-chromium/publish/submission-states.md
