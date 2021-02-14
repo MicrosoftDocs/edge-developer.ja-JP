@@ -1,50 +1,45 @@
 ---
-description: Edge (Chromium) 拡張機能のエンタープライズドキュメントを拡張します。
-title: ホスティングと更新
+description: Microsoft Edge (Chromium) の企業で拡張機能をホストおよび公開します。
+title: Microsoft Edge アドオン ストアでの拡張機能の公開と更新
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 09/15/2020
+ms.date: 02/10/2021
 ms.topic: article
 ms.prod: microsoft-edge
-keywords: edge-chromium、拡張機能の開発、ブラウザーの拡張、アドオン、パートナーセンター、開発者
-ms.openlocfilehash: d918aec12e56daf66d13488d360a454d736031e8
-ms.sourcegitcommit: d360e419b5f96f4f691cf7330b0d8dff9126f82e
+keywords: edge-chromium, 拡張機能の開発, ブラウザー拡張機能, アドオン, パートナー センター, 開発者
+ms.openlocfilehash: 91fdd5c2f625890653085e8999da3e513b072348
+ms.sourcegitcommit: fe7301d0f62493e42e6a1a81cdbda3457f0343b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "11015703"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "11327688"
 ---
-# Web Store のホストと更新  
+# Microsoft Edge アドオン ストアでの拡張機能の公開と更新  
 
-ほとんどの拡張機能は、 [Microsoft Edge Insider アドオンカタログ (Microsoft Edge insider のアドオン \)][MicrosoftStoreExtensions] にホストされ、ユーザーが悪意のある拡張機能を最大限に保護します。  
+ほとんどの拡張機能は、悪意のある拡張機能からユーザーを保護するために [Microsoft Edge アドオン][MicrosoftMicrosoftedgeInsiderAddonsEdgeextensions] ストアに公開されます。  
 
-## ホスティング  
+## 拡張機能の公開オプション  
 
-すべての拡張機能は、すべてのユーザーに対して、crx というサフィックスを持つ特別な ZIP ファイルとして配布されます。  Microsoft Edge のアドオンでホストされる拡張機能は、.zip ファイルとしてアップロードされます。 発行処理によって、.zip が自動的に crx ファイルに変換されます。  
+すべての拡張子は、サフィックス付き特別なアーカイブ `.zip` \( \) ファイルとしてユーザーに配布 `.crx` されます。  Microsoft Edge アドオン ストアに公開された拡張機能は、ファイルとしてアップロード `.zip` されます。  発行プロセスでは、ファイルがファイル `.zip` に自動的に変換 `.crx` されます。  
 
-Microsoft Edge のアドオンホスティングルールには次の2つの例外があります。  
+次の 2 つのシナリオでは、Microsoft Edge アドオン ストアで拡張機能を公開する必要が生じることはできません。  
 
-1.  エンタープライズポリシーを通じて配布される拡張機能。  
-1.  開発者モードでローカルコンピューターから拡張機能ディレクトリを展開しました。  
+*   エンタープライズ ポリシーを使用して配布される拡張機能。  
+*   Microsoft Edge が開発者モードの場合に、ローカル コンピューターで展開されていない拡張ディレクトリを使用する。  
 
-## 更新  
+## 拡張機能の更新
 
-Microsoft Edge ブラウザーでは、ユーザーの操作なしで、インストールされている拡張機能と更新プログラムの新しいバージョンが定期的にチェックされます。  
-
-> [!NOTE]
-> Microsoft Edge のアドオンで拡張機能を更新する手順は計画されています。  
-
-<!-- image links -->
+Microsoft Edge ブラウザーは、インストールされている拡張機能の新しいバージョンを定期的にチェックし、ユーザーの介入なしに各拡張機能を更新します。  
 
 <!-- links -->  
 
-[MicrosoftStoreExtensions]: https://microsoftedge.microsoft.com/insider-addons/category/EdgeExtensions "拡張機能-Microsoft Edge Insider アドオン"  
+[MicrosoftMicrosoftedgeInsiderAddonsEdgeextensions]: https://microsoftedge.microsoft.com/insider-addons/category/EdgeExtensions "拡張機能 - Microsoft Edge Insider アドオン |Microsoft"  
 
 > [!NOTE]
-> このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
-> 元のページは [ここ](https://developer.chrome.com/extensions/hosting)にあります。  
+> このページの一部の情報は、[Google によって作成および共有][GoogleSitePolicies]されている著作物に基づいており、[Creative Commons Attribution 4.0 International License][CCA4IL] に記載されている条項に従って使用されています。  
+> 元のページはここ [です](https://developer.chrome.com/extensions/hosting)。  
 
-[![クリエイティブコモンズライセンス][CCby4Image]][CCA4IL]  
+[![Creative Commons ライセンス][CCby4Image]][CCA4IL]  
 この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。  
 
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  

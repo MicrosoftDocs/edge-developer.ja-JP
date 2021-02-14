@@ -3,51 +3,51 @@ description: Microsoft Edge (Chromium) 開発者ツールについて
 title: Microsoft Edge (Chromium) 開発者ツール
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 12/09/2020
+ms.date: 02/10/2021
 ms.topic: article
 ms.prod: microsoft-edge
 ms.technology: devtools
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: fcae8f0974244e87ba781b94221cb5d8a1bb3dce
-ms.sourcegitcommit: a35a6b5bbc21b7df61d08cbc6b074b5325ad4fef
+ms.openlocfilehash: 05b757b7cb399815d072b9d6038873cfd118a59d
+ms.sourcegitcommit: fe7301d0f62493e42e6a1a81cdbda3457f0343b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "11234380"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "11327492"
 ---
 # Microsoft Edge (Chromium) 開発者ツールの概要  
 
-Microsoft Edge では、Chromium オープン ソース プロジェクトを採用して、Web の互換性を向上し、異なる基盤となる Web プラットフォームの断片化を減らしています。  この変更により、Microsoft Edge で Web サイトを簡単に構築してテストし、それぞれが別の Chromium ベースのブラウザー \(Google Chrome、Vivaldi、Opera、または Brave\ など) で表示されている場合でも、それぞれにおいて期待通りに機能することを確認できます。  
+Microsoft Edge は Chromium オープン ソース プロジェクトを採用しています。  新しい Microsoft Edge ブラウザーにより、Web の互換性が向上し、さまざまな Web プラットフォームの断片化が軽減されます。  この変更により、Microsoft Edge で Web ページを簡単に構築およびテストできます。  新しい Microsoft Edge は、他の Chromium ベースのブラウザーで開いた場合に Web ページが期待通り動作するのに役立ちます。  Chromium ベースのブラウザーには、Google Chrome、Chromeldi、Opera、Opera、新しい Microsoft Edge が含まれます。  
 
-デバイスの種類が拡大するにつれて、Web の利用も拡大し、Web サイトのテストに伴う複雑性とオーバーヘッドが大きく増加しました。 Web 開発者 \(特に小規模企業の開発者\) は、非常に多くの異なるシステムに対してテストを行う必要があるため、サイトがすべてのデバイスの種類とすべてのブラウザーで適切に動作することを確認するのは、ほぼ不可能に近いことです。  Microsoft Edge が Chromium に基づいているので、Microsoft Edge チームは、Microsoft Edge Web プラットフォームを他の Chromium ベースのブラウザーと一致することでマトリックスを簡略化し、ブラウザー内と、毎日使用する他の開発者ツール (Visual Studio Code\ など) の両方で、クラス最高の開発者ツール エクスペリエンスを実現しました。  
+Web は、デバイスの種類が増え続け、利用が拡大しています。  Web ページのテストに伴う複雑性とオーバーヘッドは急速に増加しています。  Web 開発者は、さまざまなシステムに対してテストを行う必要があります。  Web ページがすべてのデバイスの種類とブラウザーで適切に動作するために、特に小規模な会社で働く場合は、ほとんど不可能な場合があります。  新しい Microsoft Edge は Chromium に基づくものに変更しました。  Microsoft Edge チームは、Microsoft Edge Web プラットフォームを他の Chromium ベースのブラウザーと一致することでマトリックスを簡略化しました。  新しい Microsoft Edge は、クラス最高の開発エクスペリエンスを提供します。  このエクスペリエンスは、ブラウザー内や、日常的に使用する他の開発者ツール (Visual Studio Code など) と共に実行されます。  
 
-Microsoft Edge をチェック アウトしており、主に Chromium ベースのブラウザーで開発を行っている場合は、自宅にいるような安心感を感じることでしょう。  Microsoft Edge \(Chromium\) 開発者ツール は、既に使用している開発者ツールと同じように機能します。  詳細については [、Microsoft Edge (Chromium) DevTools の新機能に移動します][DevtoolsGuideChromiumWhatsNewIndex]。  
+Chromium ベースのブラウザー開発者は、新しい Microsoft Edge ブラウザーを快適に使用できます。  Microsoft Edge \(Chromium\) DevTools は、既に知っている開発者ツールと同様に動作します。  Microsoft Edge \(Chromium\) 開発者ツールは、Microsoft Edge \(Chromium\) DevTools または DevTools と呼ばれることが多い。  詳細については [、Microsoft Edge (Chromium) DevTools の新機能に移動します][DevtoolsGuideChromiumWhatsNewIndex]。  
 
 :::image type="complex" source="./media/devtools.png" alt-text="Microsoft Edge (Chromium) DevTools" lightbox="./media/devtools.png":::
    Microsoft Edge (Chromium) DevTools  
 :::image-end:::  
 
-新しい Microsoft Edge をチェックアウトし、以前に Microsoft Edge \(EdgeHTML\) で開発した場合、Microsoft Edge での Web サイトのビルドとテストをより簡単かつ迅速に行える新しいツールがいくつか追加されました。  
+以前に Microsoft Edge \(EdgeHTML\) 用に開発し、新しい Microsoft Edge を評価している場合、Web ページをより簡単かつ迅速に構築およびテストするための優れた新しいツールが提供されます。  
 
 ## DevTools を開く  
 
-DevTools を使用したことがない方のために説明しますと、Microsoft Edge 開発者ツールは、Microsoft Edge ブラウザーに直接組み込まれているツール セットです。  DevTools を使用すると、次の操作を実行できます。  
+Microsoft Edge DevTools は、Microsoft Edge ブラウザーに直接組み込む一連のツールです。  DevTools を使用すると、次のタスクをブラウザー内で直接実行できます。  
 
-*   HTML Web サイトを検査して変更する  
-*   CSS を編集し、Web サイトのレンダリング方法のプレビューを即座に確認する  
-*   フロントエンド JavaScript コードから、すべての `console.log()` ステートメントを参照する  
-*   ブレークポイントを設定し、1 行ずつステップ実行してスクリプトをデバッグする  
+*   HTML Web ページを検査して変更する  
+*   CSS を編集し、Web ページのレンダリング方法をプレビューする  
+*   フロントエンド `console.log()` JavaScript コードからすべてのステートメントを確認する  
+*   スクリプトをデバッグし、ブレークポイントを設定し、コードを 1 行にステップ実行する  
     
-すべてはブラウザー内で直接行います。  これらは、Microsoft Edge で Web サイトを簡単かつ迅速に構築およびテストするために、DevTools が提供する機能の一部の例です。  
+DevTools が提供する機能のその他の例を使用すると、Microsoft Edge で Web ページを簡単かつ迅速に構築およびテストできます。  
 
 DevTools を開く方法  
 
 *   選択する `F12` 
-*   Select `Ctrl` + `Shift` + `I` on Windows/Linux \( `Command` + `Option` + `I` on macOS\)  
+*   `Ctrl` + `Shift` + `I` \(Windows/Linux\) または `Command` + `Option` + `I` \(macOS\) を選択します。  
     
-サイト上の要素の HTML または CSS を表示する場合は、要素を右クリックし、[**検査**] を選択して [要素] パネルに移動します。  Windows/Linux の場合、`Ctrl` + `Shift` + `C` を押す \(macOS の場合、`Command` + `Option` + `C` を押す\) と、を押して**要素の検査モード**で DevTools を開くと、サイト上の要素を選択し、**[要素]** パネルに HTML と CSS を表示することができます。  
+サイト上の要素の HTML または CSS を表示する場合は、要素を右クリックし****、[検査] を選択して要素ツールに**ジャンプ**します。  **要素**の検査モードで DevTools を開く場合は `Ctrl` + `Shift` + `C` 、\(Windows/Linux\) または `Command` + `Option` + `C` \(macOS\) を選択します。 要素 **の検査モードでは** 、Web ページで要素を選択し、要素ツールに HTML と CSS を **表示** できます。  
 
-フロントエンド JavaScript コードのログを表示する場合や、スクリプトをすばやく実行する場合は、Windows/Linux または macOS 上で選択して `Ctrl` + `Shift` + `J` `Command` + `Option` + `J` 、DevTools**** のコンソール パネルを起動します。  
+フロントエンド JavaScript コードからログを確認する場合や、スクリプトをすばやく実行する場合は、コンソールを開 **きます**。   DevTools**でコンソール**ツールを起動するには `Ctrl` + `Shift` + `J` 、\(Windows/Linux\) または `Command` + `Option` + `J` \(macOS\) を選択します。  
 
 ## コア ツール  
 
@@ -55,28 +55,28 @@ DevTools を開く方法
    Microsoft Edge (Chromium) DevTools コア ツール  
 :::image-end::: 
 
-Microsoft Edge \(Chromium\) DevTools には、次のパネルが含まれます。  
+Microsoft Edge \(Chromium\) DevTools には、次のツールが含まれています。  
 
-*   **要素** は、パネルHTML および CSS の編集、アクセシビリティのプロパティの検査、イベント リスナーの表示、DOM 変異のブレークポイントの設定を行います。  
-*   **コンソール** は、ログ メッセージを表示およびフィルタリングし、JavaScript オブジェクトと DOM ノードを検査し、選択したウィンドウやフレームのコンテキストでの JavaScript を実行します。  
-*   コードを開いてライブ編集し、ブレークポイントを設定し、コードをステップ実行して、一度に 1 行の JavaScript だけでWeb サイトの状態を確認する**ソース** パネル  
-*   **ネットワーク** パネルは、ネットワークとブラウザーのキャッシュからの要求や応答を監視および検査します。   
-*   **パフォーマンス** パネルは、サイトに必要な時間とシステム リソースをプロファイルします。  
-*   **メモリ** パネルは、メモリ リソースの使用状況を測定し、コード ランタイムの異なる状態でヒープ スナップショットを比較します。  
-*   Web アプリ マニフェスト、サービス ワーカー、およびサービス ワーカーのキャッシュを検査、変更、デバッグする **[アプリケーション]** パネル。  **[アプリケーション]** パネルからストレージ、データベース、およびキャッシュを検査および管理することもできます。  
-*   セキュリティの問題をデバッグし、Web サイトに HTTPS を適切に実装した **[セキュリティ]** パネル。  HTTPS は、サイトとサイト上に個人情報を入力するユーザーの両方に対して、重要なセキュリティとデータの整合性を提供します。  
-*   Web サイトの監査を実行するために、**監査**パネル \(現在は **Lighthouse**\ という名前に変更されました)。  監査の結果は、次の方法でサイトの品質を向上させるのに役立ちます。  
-    *   Web サイトのアクセス性、セキュリティ、パフォーマンスの確保に関連する一般的なエラーを発見します。  
+*   HTML **と** CSS の編集、アクセシビリティ プロパティの検査、イベント リスナーの表示、DOM のブレークポイントの設定を行う要素ツール  
+*   ログ **メッセージの** 確認とフィルター処理、JavaScript オブジェクトと DOM ノードの検査、選択したウィンドウまたはフレームのコンテキストでの JavaScript の実行を行うコンソール  
+*   コード **を開** いて編集し、ブレークポイントを設定し、コードをステップ実行して、Web ページの状態を表示するソース ツール
+*   ネットワーク **および** ブラウザー キャッシュからの要求と応答を監視および検査するネットワーク ツール   
+*   サイト **に** 必要な時間とシステム リソースをプロファイルするパフォーマンス ツール  
+*   メモリ **リソース** の使用を測定し、異なる状態のコード ランタイムでヒープ スナップショットを比較するメモリ ツール  
+*   Web **アプリ** マニフェスト、サービス ワーカー、およびサービス ワーカー キャッシュを検査、変更、デバッグするアプリケーション ツール。  また、アプリケーション ツールからストレージ、データベース、およびキャッシュを検査および **管理** することもできます。  
+*   セキュリティ **の** 問題をデバッグし、HTTPS が Web ページに正しく実装されていることを確認するためのセキュリティ ツール。  HTTPS は、サイトとサイト上に個人情報を入力するユーザーの両方に対して、重要なセキュリティとデータの整合性を提供します。  
+*   Web **ページの監査** を実行するために、監査ツール \(現在は **Rename**\という名前に変更されています)。  監査の結果は、次の方法でサイトの品質を向上させるのに役立ちます。  
+    *   Web ページのアクセス、セキュリティ、パフォーマンスの確保に関連する一般的なエラーをキャッチします。  
     *   各エラーを修正します。  
     *   PWA を構築します。  
         
 [!INCLUDE [audits-panel-note](./includes/audits-panel-note.md)]  
 
-[フィードバックと機能のリクエスト](#getting-in-touch-with-the-microsoft-edge-devtools-team) を送信してください。  
+フィードバックと [機能の要求を送信します](#getting-in-touch-with-the-microsoft-edge-devtools-team)。  
 
 ## 拡張機能  
 
-DevTools の拡張機能を使用して、Web サイトやアプリの構築時の問題を診断およびデバッグした可能性があります。  [Microsoft Edge アドオン][MicrosoftEdgeAddonsExtensions] ページから Microsoft Edge の拡張機能を取得できます。  [Microsoft Edge アドオン ページ][MicrosoftEdgeAddonsExtensions]から、**開発者ツール** カテゴリの DevTools 拡張機能を参照するか、特定の拡張機能を検索することができます。  
+Web ページ \(または apps\) の構築中に問題を診断してデバッグするときに、拡張機能を使用して DevTools にアクセスした可能性があります。 Microsoft Edge 拡張機能は [、Microsoft Edge アドオンから取得されます][MicrosoftEdgeAddonsExtensions]。  [Microsoft Edge アドオンで、][MicrosoftEdgeAddonsExtensions]開発者ツール カテゴリから DevTools**** 拡張機能を参照するか、特定の拡張機能を検索します。  
 
 [Chrome Web ストア][GoogleChromeWebstoreExtensions]から拡張機能を追加することもできます。  
 
@@ -91,31 +91,31 @@ DevTools の拡張機能を使用して、Web サイトやアプリの構築時�
 
 [Chrome **に追加] を** 選択して、DevTools 拡張機能を Microsoft Edge に追加します。  
 
-:::image type="complex" source="./media/install-extension-from-chrome-store.png" alt-text="Chrome Web ストアからの Microsoft Edge への拡張機能の追加" lightbox="./media/install-extension-from-chrome-store.png":::
-   Chrome Web ストアからの Microsoft Edge への拡張機能の追加  
+:::image type="complex" source="./media/install-extension-from-chrome-store.png" alt-text="Chrome Web ストアの拡張機能を Microsoft Edge に追加する" lightbox="./media/install-extension-from-chrome-store.png":::
+   Chrome Web ストアの拡張機能を Microsoft Edge に追加する  
 :::image-end:::  
 
 ## ショートカット  
 
-これらのショートカットは、DevTools のメイン ウィンドウを制御するか、すべてのツールで機能するか、または両方を実行します。  
+次のショートカットは、DevTools のメイン ウィンドウを制御するか、すべてのツールで動作するか、または両方を制御します。  
 
 | Action | Windows/Linux | macOS |  
 |:--- |:--- | :--- |  
-| DevTools の表示/非表示 \(最後に表示されたパネルに表示される\) | `F12` または `Ctrl`+`Shift`+`I` | `Command`+`Option`+`I` |  
-| コンソール パネルを表示する | `Ctrl`+`Shift`+`J` | `Command`+`Option`+`J` |  
-| 要素の検査モードで**** DevTools を表示します。これにより、サイトで要素を選択し、[要素] パネルに HTML と CSS を**表示**できます。 | `Ctrl`+`Shift`+`C` | `Command`+`Option`+`C` |  
+| DevTools の表示/非表示 \(最後に表示されたツールが開きます\) | `F12` または `Ctrl`+`Shift`+`I` | `Command`+`Option`+`I` |  
+| コンソールを表示する | `Ctrl`+`Shift`+`J` | `Command`+`Option`+`J` |  
+| 要素を選択して要素ツール **に** HTML と CSS を表示できる要素の検査モードで DevTools を **表示** する | `Ctrl`+`Shift`+`C` | `Command`+`Option`+`C` |  
 | 設定の表示 | `?` または `Fn`+`F1` | `?` または `Fn`+`F1` |  
 | 次のパネルを表示する | `Ctrl`+`]` | `Command`+`]` |  
 | 前のパネルを表示する | `Ctrl`+`[` | `Command`+`[` |  
 | DevTools を最後に使用した位置にドッキングします。  DevTools がセッション全体の既定の位置にとどまっている場合、ショートカットは DevTools を別のウィンドウにドッキング解除します。 | `Ctrl`+`Shift`+`D` | `Command`+`Shift`+`D` |  
 | **デバイス モード**の切り替え | `Ctrl`+`Shift`+`M` | `Command`+`Shift`+`M` |  
-| **[要素の検査モード] **に切り替えると、サイトで要素を選択し、**[要素]** パネルに HTML と CSS を表示することができます。 | `Ctrl`+`Shift`+`C` | `Command`+`Shift`+`C` |  
+| 要素 **を選択して要素** ツールに HTML と CSS を表示できる要素検査モードの切り **替** え | `Ctrl`+`Shift`+`C` | `Command`+`Shift`+`C` |  
 | コマンド メニューを表示する | `Ctrl`+`Shift`+`P` | `Command`+`Shift`+`P` |  
 | ドロワーの表示/非表示 | `Esc` | `Esc` |  
-| 更新。  キャッシュを使用してページを変更します。  | `F5` または `Ctrl`+`R` | `Command`+`R` |  
-| ハードの更新。  Microsoft Edge にリソースの再ダウンロードと再読み込みを強制的に実行します。  使用されているリソースが、キャッシュされたバージョンから取得される可能性があります。 | `Ctrl`+`F5` または `Ctrl`+`Shift`+`R` | `Command`+`Shift`+`R` |  
-| 現在のパネル内のテキストを検索します。  監査、アプリケーション、およびセキュリティ パネルではサポートされていません | `Ctrl`+`F` | `Command`+`F` |  
-| ドロワーに検索パネルを表示すると、読み込まれたすべてのリソースでテキストを検索できます。 | `Ctrl`+`Shift`+`F` | `Command`+`Option`+`F` |  
+| 更新。  キャッシュを使用して Web ページを更新します。  | `F5` または `Ctrl`+`R` | `Command`+`R` |  
+| ハードの更新。  Microsoft Edge にリソースの再ダウンロードと再読み込みを強制的に実行します。  使用されるリソースは、キャッシュされたバージョンから取得される場合があります。 | `Ctrl`+`F5` または `Ctrl`+`Shift`+`R` | `Command`+`Shift`+`R` |  
+| 現在のパネル内のテキストを検索します。  監査ツール、アプリケーション ツール、およびセキュリティ ツールではサポートされていません | `Ctrl`+`F` | `Command`+`F` |  
+| ドロワーに検索ツールを表示します。これにより、読み込まれたすべてのリソースでテキストを検索できます。 | `Ctrl`+`Shift`+`F` | `Command`+`Option`+`F` |  
 | ソース パネルでファイルを開く | `Ctrl`+`O` または `Ctrl`+`P` | `Command`+`O` または `Command`+`P` |  
 | 拡大する | `Ctrl`+`Shift`+`+` | `Command`+`Shift`+`+` |  
 | 縮小 | `Ctrl`+`-` | `Command`+`-` |  

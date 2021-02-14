@@ -1,33 +1,33 @@
 ---
-description: ネイティブメッセージングのドキュメント
+description: ネイティブ メッセージングに関するドキュメント
 title: ネイティブ メッセージング
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 10/06/2020
+ms.date: 02/10/2021
 ms.topic: article
 ms.prod: microsoft-edge
-keywords: edge-chromium、拡張機能の開発、ブラウザーの拡張、アドオン、パートナーセンター、開発者
-ms.openlocfilehash: c5da9acf79225c88ad5829c2b7f57d1d833ca49b
-ms.sourcegitcommit: 75c200a029d19fe372c1505c0006dbfbfad90bf5
+keywords: edge-chromium, 拡張機能の開発, ブラウザー拡張機能, アドオン, パートナー センター, 開発者
+ms.openlocfilehash: 2d629762d4c7c75832905cfbf8c2d5311191092d
+ms.sourcegitcommit: fe7301d0f62493e42e6a1a81cdbda3457f0343b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "11100253"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "11327702"
 ---
 # ネイティブ メッセージング  
 
-拡張機能は、メッセージパッシング Api を使って、ユーザーのデバイスにインストールされているネイティブ Win32 アプリケーションと通信します。  ネイティブのアプリケーションホストは、標準の入力と標準の出力を使って、拡張機能を使ってメッセージを送受信します。  ネイティブメッセージングを使用する拡張機能は、他の拡張機能と同様に Microsoft Edge にインストールされます。  ただし、ネイティブアプリケーションは Microsoft Edge でインストールまたは管理されません。  
+拡張機能は、メッセージを渡す API を使用して、ユーザーのデバイスにインストールされているネイティブの Win32 アプリケーションと通信します。  ネイティブ アプリケーション ホストは、標準の入力と標準出力を使用して、拡張機能を使用してメッセージを送信および受信します。  ネイティブ メッセージングを使用する拡張機能は、他の拡張機能と同様に Microsoft Edge にインストールされます。  ただし、ネイティブ アプリケーションは Microsoft Edge によってインストールまたは管理されません。  
 
-拡張機能とネイティブアプリケーションホストを取得するには、2つの配布モデルがあります。  
+拡張機能とネイティブ アプリケーション ホストを取得するには、2 つの配布モデルがあります。  
 
-*   拡張機能とホストをまとめてパッケージ化します。  ユーザーがパッケージをインストールすると、拡張機能とホストの両方がインストールされます。
-*   [Microsoft Edge アドオンストア][EdgeAddons]を使用して拡張機能をインストールすると、拡張機能により、ユーザーにホストをインストールするように求められます。  
+*   拡張機能とホストを一緒にパッケージ化します。  ユーザーがパッケージをインストールすると、拡張機能とホストの両方がインストールされます。  
+*   Microsoft Edge アドオン ストアを [使用して] [MicrosoftMicrosoftedgeAddonsMicrosoftEdgeExtensionsHome]拡張機能をインストールすると、拡張機能によってホストのインストールを求めるメッセージが表示されます。  
 
-ネイティブアプリケーションホストでメッセージを送受信するための拡張機能を作成するには、次の手順を参照してください。  
+ネイティブ アプリケーション ホストとの間でメッセージを送受信する拡張機能を作成するには、次の手順を参照してください。  
 
-## 手順 1-拡張機能マニフェストにアクセス許可を追加する  
+## 手順 1 - 拡張機能マニフェストにアクセス許可を追加する  
 
-`nativeMessaging`拡張子のファイルの**manifest.js**にアクセス許可を追加します。  次のコードスニペットは、 **manifest.js**の例です。  
+拡張子の `nativeMessaging` ファイルのmanifest.js** に** アクセス許可を追加します。  次のコード スニペットは、次に示すmanifest.js** です**。  
 
 ```json
     {
@@ -45,9 +45,15 @@ ms.locfileid: "11100253"
     }
 ```  
 
-## 手順 2-ネイティブメッセージングホストマニフェストファイルを作成する  
+## 手順 2 - ネイティブ メッセージング ホスト マニフェスト ファイルを作成する  
 
-ネイティブアプリケーションでは、ネイティブメッセージングホストマニフェストファイルを提供する必要があります。  マニフェストファイルには、ネイティブメッセージングホストランタイムへのパス、拡張機能との通信方法、および通信先として使用できる拡張機能の一覧が含まれます。  ブラウザーは、ネイティブのメッセージングホストマニフェストを読み取り、検証します。  ブラウザーは、ネイティブメッセージングホストマニフェストファイルをインストールまたは管理しません。  
+ネイティブ アプリケーションは、ネイティブ のメッセージング ホスト マニフェスト ファイルを提供する必要があります。  マニフェスト ファイルには、次の情報が含まれています。  
+
+*   ネイティブ メッセージング ホスト ランタイムへのパス。  
+*   拡張機能との通信方法。  
+*   通信先の許可された拡張機能の一覧。  
+    
+ブラウザーは、ネイティブ メッセージング ホスト マニフェストを読み取って検証します。  ブラウザーは、ネイティブ のメッセージング ホスト マニフェスト ファイルをインストールまたは管理しない。  
 
 ```json
     {
@@ -61,17 +67,17 @@ ms.locfileid: "11100253"
     }
 ```  
 
-ホストマニフェストファイルは、次のキーを含む有効な JSON ファイルである必要があります。  
+ホスト マニフェスト ファイルは、次のキーを含む有効な JSON ファイルである必要があります。  
 
 :::row:::
    :::column span="1":::
       `name`  
    :::column-end:::
    :::column span="2":::
-      ネイティブメッセージングホストの名前を指定します。  クライアントは、またはにこの文字列を渡し `runtime.connectNative` `runtime.sendNativeMessage` ます。  
+      ネイティブ メッセージング ホストの名前を指定します。  クライアントは、この文字列を渡す、または `runtime.connectNative` `runtime.sendNativeMessage` .  
       
-      *   この値には、小文字の英数字、アンダースコア、ドットを含める必要があります。  
-      *   この値は、先頭と末尾以外のドットで指定する必要があります。ドットの後に別のドットを付けることはできません。  
+      *   この値には、小文字の英数字、アンダースコア、ドットのみを含めることができます。  
+      *   この値は、ドットで開始または終了し、ドットの後に別のドットを付けずにしてください。  
    :::column-end:::
 :::row-end:::  
 :::row:::
@@ -79,7 +85,7 @@ ms.locfileid: "11100253"
       `description`  
    :::column-end:::
    :::column span="2":::
-      アプリケーションについて説明します。  
+      アプリケーションを記述します。  
    :::column-end:::
 :::row-end:::  
 :::row:::
@@ -87,12 +93,12 @@ ms.locfileid: "11100253"
       `path`  
    :::column-end:::
    :::column span="2":::
-      ネイティブメッセージングホストバイナリへのパスを指定します。  
+      ネイティブ メッセージング ホスト バイナリへのパスを指定します。  
       
-      *   Windows デバイスでは、マニフェストファイルを含むディレクトリへの相対パスを使うことができます。  
-      *   MacOS と Linux では、パスは絶対パスにする必要があります。  
+      *   Windows デバイスでは、マニフェスト ファイルを含むディレクトリへの相対パスを使用できます。  
+      *   macOS と Linux では、パスは絶対パスである必要があります。  
       
-      ホストプロセスは、現在のディレクトリがホストバイナリを含むディレクトリに設定された状態で開始されます。  たとえば、\ (Windows \) では、このパラメーターがに設定されている場合、 `C:\Application\nm_host.exe` 現在のディレクトリ \ (\) を使ってバイナリが開始され `C:\Application\` ます。  
+      ホスト プロセスは、ホスト バイナリを含むディレクトリに設定された現在のディレクトリから始まります。  たとえば、\(Windows\) の場合、このパラメーターが設定されている場合、バイナリは現在の `C:\Application\nm_host.exe` ディレクトリ \( \) を使用して `C:\Application\` 開始されます。  
    :::column-end:::
 :::row-end:::  
 :::row:::
@@ -100,8 +106,8 @@ ms.locfileid: "11100253"
       `type`  
    :::column-end:::
    :::column span="2":::
-      ネイティブメッセージングホストとの通信に使用されるインターフェイスの型を指定します。  この値は、Microsoft Edge がホストとの通信を行うために使用することを指示 `stdin` し `stdout` ます。  
-      指定できる値は、だけ `stdio` です。  
+      ネイティブ メッセージング ホストとの通信に使用するインターフェイスの種類を指定します。  この値は、Microsoft Edge がホストを使用 `stdin` し、 `stdout` ホストと通信するように指示します。  
+      唯一の許容値は次の値です `stdio` 。  
    :::column-end:::
 :::row-end:::  
 :::row:::
@@ -109,7 +115,7 @@ ms.locfileid: "11100253"
       `allowed_origins` 
    :::column-end:::
    :::column span="2":::
-      ネイティブメッセージングホストにアクセスできる拡張子の一覧を指定します。  アプリケーションで拡張機能を認識して通信できるようにするには、ネイティブメッセージングホストマニフェストファイルで次の値を設定します。  
+      ネイティブ メッセージング ホストにアクセスできる拡張機能の一覧を指定します。  アプリケーションで拡張機能を識別して通信するには、ネイティブ メッセージング ホスト マニフェスト ファイルで次の値を設定します。  
       
       ```json
       "allowed_origins": ["chrome-extension://{microsoft_catalog_extension_id}"]
@@ -117,26 +123,26 @@ ms.locfileid: "11100253"
    :::column-end:::
 :::row-end:::  
 
-ホストとのネイティブメッセージングをテストするために拡張機能をサイドローディングします。  
-開発中に拡張機能をサイドローディングして取得するには `microsoft_catalog_extension_id` 、次の手順を実行します。  
+拡張機能をサイドロードして、ホストとのネイティブ メッセージングをテストします。  
+開発中に拡張機能をサイドロードして取得するには、 `microsoft_catalog_extension_id` 次の手順を実行します。  
 
-1.  に移動し `edge://extensions` て、[開発者モード] トグルボタンをオンにします。  
-1.  [ **アンパックの読み込み**] を選択し、サイドローディングに拡張パッケージを選択します。  
-1.  **[OK]** をクリックします。
-1.  ページに移動して、 `edge://extensions` 拡張子が表示されていることを確認します。  
-1.  `microsoft_catalog_extension_id`ページの内線番号リストからキーを \ (ID) からコピーします。
+1.  [開発モード `edge://extensions` ] トグル ボタンに移動し、オンにします。  
+1.  [ **アンパックの読み込**み] を選択し、サイドロードする拡張機能パッケージを選択します。  
+1.  **[OK]** をクリックします。  
+1.  ページに `edge://extensions` 移動し、拡張機能が一覧に表示されます。  
+1.  ページの拡張機能の `microsoft_catalog_extension_id` 一覧から \(ID\) からキーをコピーします。  
 
-内線番号をユーザーに配布する準備ができたら、Microsoft Edge のアドオンストアに拡張機能を公開します。  公開された拡張機能の拡張 ID は、拡張機能のサイドローディング時に使用した ID とは異なる場合があります。  ID が変更された場合は、公開された `allowed_origins` 拡張機能の id でホストマニフェストファイル内で更新します。  
+拡張機能をユーザーに配布する準備ができたら、拡張機能を Microsoft Edge アドオン ストアに公開します。  公開された拡張機能の拡張 ID は、拡張機能のサイドロード中に使用される ID とは異なる場合があります。  ID が変更された場合は、公開された拡張機能の ID を使用してホスト `allowed_origins` マニフェスト ファイルを更新します。  
 
-## 手順 3-ネイティブのメッセージングホストマニフェストファイルをシステムにコピーする  
+## 手順 3 - ネイティブ メッセージング ホスト マニフェスト ファイルをシステムにコピーする  
 
-最後の手順では、ネイティブのメッセージングホストマニフェストファイルをコンピューターにコピーし、正しく構成されていることを確認します。  マニフェストファイルが予期した場所に配置されるようにするには、次の手順を実行します。  場所はプラットフォームによって異なります。  
+最後の手順では、ネイティブのメッセージング ホスト マニフェスト ファイルをコンピューターにコピーし、マニフェスト ファイルが正しく構成されていることを確認します。  マニフェスト ファイルが想定される場所に配置されるのを確認するには、次の手順を実行します。  場所はプラットフォームによって異なります。  
 
 ### [Windows](#tab/windows/)  
 
 <a id="copy-manifest-file"></a>  
 
-マニフェストファイルは、ファイルシステム内の任意の場所に配置されている可能性があります。  アプリケーションのインストーラーでは、レジストリキーを作成し、そのキーの既定値をマニフェストファイルの完全パスに設定する必要があります。  次のコマンドは、レジストリキーの例です。  
+マニフェスト ファイルは、ファイル システムの任意の場所に配置できます。  アプリケーション インストーラーは、レジストリ キーを作成し、そのキーの既定値をマニフェスト ファイルの完全なパスに設定する必要があります。  レジストリ キーの例を次に示します。  
 
 ```text
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Edge\NativeMessagingHosts\com.my_company.my_application
@@ -146,9 +152,9 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Edge\NativeMessagingHosts\com.my_company.m
 HKEY_CURRENT_USER\SOFTWARE\Microsoft\Edge\NativeMessagingHosts\com.my_company.my_application
 ```
 
-マニフェストキーを使ってディレクトリにレジストリキーを追加します。  
+マニフェスト キーを使用してディレクトリにレジストリ キーを追加する。  
 
-*   コマンドプロンプトでコマンドを実行します。    
+*   コマンド プロンプトでコマンドを実行します。  
     
     1.  次のコマンドを実行します。  
         
@@ -156,7 +162,7 @@ HKEY_CURRENT_USER\SOFTWARE\Microsoft\Edge\NativeMessagingHosts\com.my_company.my
         REG ADD "HKCU\Software\Microsoft\Edge\NativeMessagingHosts\com.my_company.my_application" /ve /t REG_SZ /d "C:\path\to\nmh-manifest.json" /f
         ```  
     
-*   ファイルを作成 `.reg` して実行します。  
+*   ファイルを `.reg` 作成して実行します。  
     
     1.  次のコマンドをファイルにコピー `.reg` します。  
         
@@ -168,47 +174,47 @@ HKEY_CURRENT_USER\SOFTWARE\Microsoft\Edge\NativeMessagingHosts\com.my_company.my
         
     1.  ファイルを実行 `.reg` します。  
     
-Microsoft Edge では、最初に32ビットレジストリが照会され、次に64ビットレジストリによってネイティブメッセージングホストが識別されます。  上記 `.reg` のファイルをバッチスクリプトの一部として実行する場合は、管理者のコマンドプロンプトを使用して実行していることを確認します。  
+Microsoft Edge は、ルート `HKEY_CURRENT_USER` キーの後にクエリを実行 `HKEY_LOCAL_MACHINE` します。  どちらのキーでも、最初に 32 ビット レジストリが検索され、次に 64 ビット レジストリが検索され、ネイティブ メッセージング ホストが識別されます。  レジストリ キーは、ネイティブ メッセージング ホスト マニフェストの場所を指定します。  Microsoft Edge は、前に示した場所でレジストリ キーを見つけた場合、この段落に記載されている場所に対してクエリを実行します。  上記のファイルをバッチ スクリプトの一部として実行する場合は、管理者コマンド プロンプトを使用 `.reg` して実行してください。  
 
 ### [macOS](#tab/macos/)  
 
 <a id="copy-manifest-file"></a>  
 
-マニフェストファイルを保存するには、次のいずれかの操作を実行します。  
+マニフェスト ファイルを保存するには、次のいずれかの操作を実行します。  
 
-*   すべてのユーザーが使用できるシステム全体のネイティブメッセージングホストは、固定された場所に格納されます。  たとえば、マニフェストファイルは、次の場所に格納されている必要があります。 
+*   すべてのユーザーが利用できるシステム全体のネイティブ メッセージング ホストは、固定の場所に格納されます。  たとえば、マニフェスト ファイルは次の場所に格納する必要があります。  
     
     ```bash
     /Library/Microsoft/Edge/NativeMessagingHosts/com.my_company.my_application.json
     ```  
     
-*   現在のユーザーのみが利用できる、ユーザー固有のネイティブメッセージホストは、 `NativeMessagingHosts` ユーザープロファイルディレクトリのサブディレクトリにあります。  たとえば、マニフェストファイルは、次の場所に格納されている必要があります。  
+*   ユーザー固有のネイティブ メッセージング ホスト (現在のユーザーだけが使用できます) は、ユーザー プロファイル ディレクトリのサブディレクトリ `NativeMessagingHosts` にあります。  たとえば、マニフェスト ファイルは次の場所に格納する必要があります。  
     
     ```bash
     ~/Library/Application Support/Microsoft Edge {Channel_Name}/NativeMessagingHosts/com.my_company.my_application.json
     ```  
     
-    In は、  `{Channel_Name}` `Microsoft Edge {Channel_Name}` 次のいずれかの値である必要があります。  
+    in  `{Channel_Name}` は `Microsoft Edge {Channel_Name}` 、次のいずれかの値である必要があります。  
     
     *   Canary  
     *   Dev  
     *   Beta  
 
-    安定したチャネルを使用する場合 `{Channel_Name}` は必須ではありません。  
+    Stable チャネルを使用する `{Channel_Name}` 場合、必須ではありません。  
 
 ### [Linux](#tab/linux/)  
 
 <a id="copy-manifest-file"></a>  
 
-マニフェストファイルを保存するには、次のいずれかの操作を実行します。  
+マニフェスト ファイルを保存するには、次のいずれかの操作を実行します。  
 
-*   すべてのユーザーが使用できるシステム全体のネイティブメッセージングホストは、固定された場所に格納されます。  マニフェストファイルは、次の場所に格納されている必要があります。  
+*   すべてのユーザーが利用できるシステム全体のネイティブ メッセージング ホストは、固定の場所に格納されます。  マニフェスト ファイルは、次の場所に格納する必要があります。  
     
     ```bash
     /etc/opt/edge/native-messaging-hosts
     ```
     
-*   現在のユーザーのみが利用できる、ユーザー固有のネイティブメッセージホストは、 `NativeMessagingHosts` ユーザープロファイルディレクトリのサブディレクトリにあります。  マニフェストファイルは、次の場所に格納されている必要があります。  
+*   ユーザー固有のネイティブ メッセージング ホスト (現在のユーザーだけが使用できます) は、ユーザー プロファイル ディレクトリのサブディレクトリ `NativeMessagingHosts` にあります。  マニフェスト ファイルは、次の場所に格納する必要があります。  
     
     ```bash
     ~/.config/microsoft-edge/NativeMessagingHosts
@@ -217,18 +223,20 @@ Microsoft Edge では、最初に32ビットレジストリが照会され、次
 * * *  
 
 > [!NOTE]
-> マニフェストファイルで読み取りアクセス許可を指定し、ホストランタイムでアクセス許可を実行していることを確認します。  
+> マニフェスト ファイルに対する読み取りアクセス許可を提供し、ホスト ランタイムでアクセス許可を実行します。  
 
 <!-- links -->  
 
-> [!NOTE]
-> このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
-> 元のページは [ここ](https://developer.chrome.com/extensions/nativeMessaging)にあります。  
 
-[![クリエイティブコモンズライセンス][CCby4Image]][CCA4IL]  
+ [MicrosoftMicrosoftedgeAddonsMicrosoftEdgeExtensionsHome]: https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home "Microsoft Edge アドオン"
+
+> [!NOTE]
+> このページの一部の情報は、[Google によって作成および共有][GoogleSitePolicies]されている著作物に基づいており、[Creative Commons Attribution 4.0 International License][CCA4IL] に記載されている条項に従って使用されています。  
+> 元のページはここ [です](https://developer.chrome.com/extensions/nativeMessaging)。  
+
+[![Creative Commons ライセンス][CCby4Image]][CCA4IL]  
 この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。  
 
-[EdgeAddons]: https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home "Microsoft Edge アドオン"
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
 [GoogleSitePolicies]: https://developers.google.com/terms/site-policies

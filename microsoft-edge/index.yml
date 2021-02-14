@@ -8,14 +8,14 @@ metadata:
   ms.topic: hub-page
   author: MSEdgeTeam
   ms.author: msedgedevrel
-  ms.date: 12/10/2020
+  ms.date: 02/04/2021
   ms.localizationpriority: high
-  ms.openlocfilehash: 787e80a0db6754d9d2046084f601294aa68a62a5
-  ms.sourcegitcommit: 5f10022bd1da3477660be40c559411fadf59d8f0
+  ms.openlocfilehash: 150dcdf1a5d4f5ac06a4d0b105f89a05907d7ddb
+  ms.sourcegitcommit: fe7301d0f62493e42e6a1a81cdbda3457f0343b8
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 01/23/2021
-  ms.locfileid: "11297724"
+  ms.lasthandoff: 02/13/2021
+  ms.locfileid: "11327631"
 highlightedContent:
   items:
   - title: Microsoft Edge (公式 Stable チャネル)
@@ -158,11 +158,11 @@ additionalContent:
         url: /microsoft-edge/extensions-chromium/publish/update
       - text: アカウント設定を管理する
         url: /microsoft-edge/extensions-chromium/publish/manage-settings
-    - title: '拡張機能: Microsoft Edge のアドオン ポリシー'
+    - title: '拡張機能: Microsoft Edge アドオン ポリシー'
       links:
       - text: コンテンツ セキュリティ ポリシー
         url: /microsoft-edge/extensions-chromium/store-policies/csp
-      - text: Microsoft Edge アドオン カタログ開発者ポリシー
+      - text: Microsoft Edge アドオン カタログの開発者ポリシー
         url: /microsoft-edge/extensions-chromium/store-policies/developer-policies
     - title: プログレッシブ Web アプリ
       links:

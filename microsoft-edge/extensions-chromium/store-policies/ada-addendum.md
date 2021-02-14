@@ -1,45 +1,43 @@
 ---
-description: Microsoft Edge の ADA 補遺
-title: ADA 補遺
+description: Edge 開発者 ADA の追加
+title: ADA Addendum
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 09/15/2020
+ms.date: 02/10/2021
 ms.topic: article
 ms.prod: microsoft-edge
-keywords: edge-chromium、拡張機能の開発、ブラウザーの拡張、アドオン、パートナーセンター、開発者
-ms.openlocfilehash: 40147cd32f2dcd2c0069d34b5751305819834a22
-ms.sourcegitcommit: d360e419b5f96f4f691cf7330b0d8dff9126f82e
+keywords: edge-chromium, 拡張機能の開発, ブラウザー拡張機能, アドオン, パートナー センター, 開発者
+ms.openlocfilehash: 8f6df89fc48b3492d0e27183c90d29f79861b064
+ms.sourcegitcommit: fe7301d0f62493e42e6a1a81cdbda3457f0343b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "11015668"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "11327678"
 ---
-# Microsoft Edge プログラムユーザー向けのアプリ開発者契約 (補遺)  
+# Microsoft Edge プログラム ユーザー向けのアプリ開発者契約の追加  
 
-## 展示 G: Microsoft Edge Extensions の使用条件  
+## 関連資料 G: Microsoft Edge 拡張機能の使用条件  
 
-Microsoft Edge Extensions ("拡張補遺") の利用規約は、アプリ開発者契約の条項と条件を補足するものであり、現在のバージョンはで入手でき [https://go.microsoft.com/fwlink/p/?LinkID=221922][ExtensionsMicrosoftEdgeAddonsCatalogDeveloperPolicies] ます。  この補遺が適用されるのは、microsoft edge 拡張機能 (各 "拡張子" \) を microsoft edge のアドオンから送信または使用できる場合です。  この拡張子によって明示的に変更された場合を除き、ここに記載されているアプリ開発者契約のすべての条項と条件は、Microsoft Edge 拡張機能の提供と配布に適用されます。  この補遺によって明示的に変更された箇所を除き、アプリ開発者契約の下の "アプリケーション" または "アプリ" に適用される条項と条件は、この補遺で定義されている拡張機能に適用され、アプリ開発者契約の下にある "Store" または "Microsoft Store" へのすべての参照は、この補遺で  
+これらの Microsoft Edge Extensions \("Extensions Addendum"\) の使用条件は、アプリ開発者契約の使用条件を補完する機能であり、現在のバージョンは次の場所にあります [https://go.microsoft.com/fwlink/p/?LinkID=221922][ExtensionsMicrosoftEdgeAddonsCatalogDeveloperPolicies] 。  この追加機能は、Microsoft Edge アドオンを通じて Microsoft Edge Extensions \(それぞれ"Extension"\) を提出した場合、または利用可能にしている場合に適用されます。  この拡張機能の追加条項によって明示的に変更された場合を除き、アプリ開発者契約に記載されているアプリ開発者契約のすべての条件は、お客様の Microsoft Edge 拡張機能の提供と配布に適用されます。  この追加条項によって明示的に変更された場合を除き、アプリ開発者契約の下で "アプリケーション" または "アプリ" に適用される使用条件は、この追加条項で定義されている拡張機能に適用され、アプリ開発者契約に基く "ストア" または "Microsoft Store" へのすべての参照は、このアドオンで定義されている Microsoft Edge アドオンに適用されます。  
 
-1.  構造.  ここに定義されていない大文字と小文字は、アプリ開発者契約で提供される意味を持ちます。  
+1.  定義。  ここで定義されていない大文字の用語には、アプリ開発者契約で提供される意味があります。  
 
-    1.  "認定要件" とは、microsoft [https://go.microsoft.com/fwlink/?linkid=2104222][ExtensionsMicrosoftEdgeAddonsCatalogDeveloperPolicies] Edge のアドオンを通じて提供される拡張機能のために microsoft \ (at、または microsoft \ () によって指定された別の場所 \) によって提供される技術、機能、コンテンツ、およびその他のポリシー要件を指します。  
+    1.  「認定要件」とは、Microsoft Edge アドオンを通じて提供される拡張機能に関して Microsoft \(at, or another location\s\) が提供する技術、機能、コンテンツ、その他のポリシー要件を意味します。 [https://go.microsoft.com/fwlink/?linkid=2104222][ExtensionsMicrosoftEdgeAddonsCatalogDeveloperPolicies]  
 
-    1.  "Microsoft Edge のアドオン" とは、microsoft が所有する、または運営されているプラットフォームであり、Microsoft Edge の拡張機能がユーザーに提供または取得される可能性があることを意味します。
+    1.  「Microsoft Edge アドオン」とは、Microsoft が所有または運用しているプラットフォームを意味します。ただし、Microsoft Edge 拡張機能は、お客様に提供または取得できます。
 
-1.  アプリの申請、認定、配布。  アプリ開発者契約のセクション3は、次のように削除され、置き換えられます。  
+1.  アプリの申請、認定、配布。  ここで、アプリ開発者契約のセクション 3 は削除され、次の部分に置き換えられるものとします。  
 
-    1.  申請.  Microsoft Edge のアドオンで利用できるようにする各拡張機能 (各拡張機能の更新を含む) を Microsoft に送信する必要があります。  お客様は、提出する内線番号に対してのみ責任を負うものとします。  お客様は、のサポートを担当しています。  Microsoft は、提出した内線番号およびその他の資料のコピーをすべて保存します (または破棄します)。  Microsoft は、これらのファイルを返さないため、バックアップコピーを保持する必要があります。  
+    1.  申請。  Microsoft Edge アドオンを通じて利用可能にする各拡張機能 (各拡張機能の更新プログラムを含む) を Microsoft に提出する必要があります。  お客様は、お客様が提出する拡張機能について、一部の責任を負い、責任を負います。  拡張機能をサポートする責任があります。  Microsoft は、お客様が提出した内線番号および他の資料のすべてのコピーを \(または destroy\) 保持します。  Microsoft はそれらを返しません。そのため、独自のバックアップ コピーを保持する必要があります。  
 
-    1.  拡張子の更新。  Microsoft Edge アドオンを通じて認定と配布のための拡張機能に更新プログラムを提出することができます。  これらの更新プログラムには、本契約書のすべての要件が適用されます。  エンドユーザーは更新プログラムを自動的に受信する可能性があることを理解している。  お客様に対して、お客様に通知を提供したり、同意を入手したりしなくても、お客様からの新機能を追加することはできません。  
+    1.  拡張機能の更新。  Microsoft Edge アドオンを通じて、認定および配布用の拡張機能に更新プログラムを提出できます。  これらの更新プログラムは、本契約のすべての要件の対象となります。  エンド ユーザーは更新プログラムを自動的に受信する可能性があります。  お客様は、まずお客様に通知し、拡張機能の配布を選択した市場で法律で要求される同意を得ることなく、お客様からの書面による同意を必要とする更新プログラムを通じて、拡張機能に新しい機能を追加することはできません。  
 
-    1.  初期認定。  Microsoft は、本契約書 (適用されている認定要件を含む) およびその他のポリシー (該当する場合) に準拠するために申請した各拡張機能 (任意の更新プログラムを含む) をテストします。  Microsoft は、拡張機能が認定されるまで、Microsoft Edge アドオンを介して利用可能な拡張機能を提供することはありません。  
+    1.  最初の認定。  マイクロソフトは、本契約 \(該当する認定要件を含む)、および利用可能なその他のポリシー (該当する場合は\) に準拠するために提出した各内線番号 \(更新プログラムを含む\) をテストします。  Microsoft は、拡張機能が認定されない限り、Microsoft Edge アドオンを通じて拡張機能を利用できません。  
 
-1.  肯定拒否は不要です。  一般に、アプリ開発者契約のセクション 4 \ (i \) では、教育機関向けの Microsoft Store for Business および Microsoft Store への参加を拒否する必要はありません。 affirmatively  拡張機能は、Microsoft Edge のアドオンでのみ利用できます。  
+1.  肯定的な辞退は必要ありません。  アプリ開発者契約のセクション 4\(i\) にかかわらず、ビジネス向け Microsoft Store と教育向け Microsoft Store への参加を肯定的に辞退する必要はありません。  拡張機能は、Microsoft Edge アドオンを通じてのみ利用できます。  
 
-1.  アプリの価格、支払い、トランザクション、税。  アプリ開発者契約のセクション6は、拡張機能には適用されず、完全に削除されます。  
-
-<!-- image links  -->  
+1.  アプリの価格、支払い、取引、税金。  アプリ開発者契約のセクション 6 は拡張機能には適用されません。この部分は完全に削除されます。  
 
 <!-- links -->  
 
-[ExtensionsMicrosoftEdgeAddonsCatalogDeveloperPolicies]: developer-policies.md "Microsoft Edge のアドオンカタログ開発者ポリシー"  
+[ExtensionsMicrosoftEdgeAddonsCatalogDeveloperPolicies]: ./developer-policies.md "Microsoft Edge アドオン カタログ開発者ポリシー |Microsoft Docs"  

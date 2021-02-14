@@ -3,63 +3,71 @@ description: Microsoft Edge WebView2 SDK のリリース ノート
 title: Win32、WPF、WinForms 向け Microsoft Edge WebView2 のリリース ノート
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/01/2021
+ms.date: 02/10/2021
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Controller、ブラウザー コントロール、エッジ html
-ms.openlocfilehash: 199077b1922fd7249bd67133d55d85bc0f144926
-ms.sourcegitcommit: ab4b555d30f3be05d8620e8deb3c74350b6696be
+ms.openlocfilehash: 43df4c6155350881059fc6ca7f6fe3a047ba0f12
+ms.sourcegitcommit: fe7301d0f62493e42e6a1a81cdbda3457f0343b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "11306617"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "11327639"
 ---
 # WebView2 SDK のリリース ノート  
 
 WebView2 チームは [、WebView2 SDK][NuGetGallery] を 6 週間の更新で更新します。  API に対する製品のアナウンス、追加、変更、および変更の詳細については、次のコンテンツを確認してください。  
 
 > [!NOTE]
-> NuGet パッケージの更新後にアプリを再コンパイルしてください。  プレリリース パッケージを使用して開発する場合は Canary チャネルを使用し、リリース済みパッケージを使用する場合は常にランタイムを使用する方法をお勧めします。  詳細については、[バージョン管理] [に移動します][VersioningDoc]。  
+> NuGet パッケージの更新後にアプリを再コンパイルしてください。  プレリリース パッケージを使用して開発する場合は Canary チャネルを使用し、リリース済みパッケージを使用する場合は常緑のランタイムを使用する方法をお勧めします。  詳細については、[バージョン管理] [に移動します][VersioningDoc]。  
  
-## 1.0.781 プレリリース  
+## 1.0.790 プレリリース  
 
-リリース日: 2021 年 1 月 29 日  
+リリース日: 2021 年 2 月 10 日  
 
-[NuGet パッケージ][NuGetGallery1.0.781-prerelease] \|Microsoft Edge バージョン 86.0.616.0 以降  
+[NuGet パッケージ][NuGetGallery1.0.790-prerelease] \|Microsoft Edge バージョン 86.0.616.0 以降  
 
 ### 全般的な情報  
+
+> [!IMPORTANT]
+> **Breaking Change**: WebView2 pre-release package 1.0.781 is deprecated.  このパッケージの開発を中止してください。  
 
 > [!IMPORTANT]
 > WebView2 プレリリース パッケージ 0.9.430 は廃止され、今後のリリースから削除される予定です。  WebView アプリでパッケージを使う場合は、新しいパッケージに更新することをお勧めします。  
 
 ##### 機能  
 
-*   [WebView を中断して再開する TrySuspend][ReferenceWin32Icorewebview210781PreReleaseTrySuspendResume]メソッドと Resume メソッドが追加されました。  
-*   仮想ホスト [名をディレクトリ パスにマップする SetVirtualHostNameToFolderMapping][ReferenceWin32Icorewebview210781PreReleaseSetVirtualHostNameToFolderMapping] メソッドが追加されました。  \([\#37][GithubMicrosoftedgeWebviewfeedbackIssue37], [\#161][GithubMicrosoftedgeWebviewfeedbackIssue161], and [\#212][GithubMicrosoftedgeWebviewfeedbackIssue212]\).  
-*   背景の色とアルファ チャネルを設定する [DefaultBackgroundColor][ReferenceWin32Icorewebview2controllerViewWebview210781PreReleaseDefaultBackgroundColor] プロパティを追加しました。  \([\#414][GithubMicrosoftedgeWebviewfeedbackIssue414]\)。  
-*   User [Agent を取得][ReferenceWin32Icorewebview2experimentalsettings10781PreReleaseGetUserAgent] または設定する UserAgent プロパティを追加しました。  \([\#122][GithubMicrosoftedgeWebviewfeedbackIssue122]\)。
+*   [WebView を中断して再開する TrySuspend][ReferenceWin32Icorewebview210790PreReleaseTrySuspendResume]メソッドと Resume メソッドが追加されました。  
+*   仮想ホスト [名をディレクトリ パスにマップする SetVirtualHostNameToFolderMapping][ReferenceWin32Icorewebview210790PreReleaseSetVirtualHostNameToFolderMapping] メソッドが追加されました。  \([\#37][GithubMicrosoftedgeWebviewfeedbackIssue37], [\#161][GithubMicrosoftedgeWebviewfeedbackIssue161], and [\#212][GithubMicrosoftedgeWebviewfeedbackIssue212]\).  
+*   背景の色とアルファ チャネルを設定する [DefaultBackgroundColor][ReferenceWin32Icorewebview2controllerViewWebview210790PreReleaseDefaultBackgroundColor] プロパティを追加しました。  \([\#414][GithubMicrosoftedgeWebviewfeedbackIssue414]\)。  
+*   User [Agent を取得][ReferenceWin32Icorewebview2experimentalsettings10790PreReleaseGetUserAgent] または設定する UserAgent プロパティを追加しました。  \([\#122][GithubMicrosoftedgeWebviewfeedbackIssue122]\)。
 *   メソッドを `CreateCookieWithCookie` メソッドに置き換 `CopyCookie` えました。  
-*   [ICoreWebView2CompositionController][ReferenceWin32Icorewebview2controllerViewWebview210781CompositionController]インターフェイスを使用してビジュアル ホスティングのサポートを追加しました。このインターフェイスは、次の新しいメソッドを `CreateCoreWebView2CompositionController` 使用して作成されます `ICoreWebView2Environment3` 。  
+*   [ICoreWebView2CompositionController][ReferenceWin32Icorewebview2controllerViewWebview210790CompositionController]インターフェイスを使用してビジュアル ホスティングのサポートを追加しました。このインターフェイスは、次の新しいメソッドを `CreateCoreWebView2CompositionController` 使用して作成されます `ICoreWebView2Environment3` 。  
 
     
 ##### バグ修正  
 
-*   WebView2 で Microsoft Edge のショッピング機能を無効にします。  
+*   WebView2 で Microsoft Edge のショッピング機能を無効にしました。  
 *   オンになっている場合は、PDF ビューアーでコンテキスト メニューを `AreDefaultContextMenusEnabled` オフにします `false` 。  \([\#605][GithubMicrosoftedgeWebviewfeedbackIssue605]\)。  
 *   クエリを実行するときに返 `E_NOINTERFACE` されるバグを修正 `ICoreWebView2` しました `ICoreWebView2Experimental` 。  \([\#691][GithubMicrosoftedgeWebviewfeedbackIssue691]\)。  
 *   URI の形式が正しく設定されているときにナビゲーションが許可されるバグ `CoreWebView2NavigationStartingEventArgs.Cancel` を修正しました `false` 。  \([\#400][GithubMicrosoftedgeWebviewfeedbackIssue400]\)。  
 *   イベントハンドラーがイベントに `window.print()` 関連付けられているポップアップ ウィンドウでブロックされるバグを修正 `NewWindowRequested` しました。  \([\#409][GithubMicrosoftedgeWebviewfeedbackIssue409]\)。  
 *   異なるモニター間でアプリを移動する場合の動的 DPI の問題を修正しました。  \([\#58][GithubMicrosoftedgeWebviewfeedbackIssue58]\)  
-*   `HRESULT` [ICoreWebView2WebResourceResponseViewGetContentCompletedHandler::Invoke][ReferenceWin32Icorewebview2webresourceresponseviewgetcontentcompletedhandlerInvoke10781]によって渡される処理が改善されました。  
+*   `HRESULT` [ICoreWebView2WebResourceResponseViewGetContentCompletedHandler::Invoke][ReferenceWin32Icorewebview2webresourceresponseviewgetcontentcompletedhandlerInvoke10790]によって渡される処理が改善されました。  
+*   無効化されたオートフィル管理ボタン。  \([\#585][GithubMicrosoftedgeWebviewfeedbackIssue585]\)。 
+*   複数Visual Studioでホストされている場合に呼び出 `WebView2.Dispose` しからクラッシュする問題を修正しました。  \([\#816][GithubMicrosoftedgeWebviewfeedbackIssue816]\ and [\#442][GithubMicrosoftedgeWebviewfeedbackIssue442]\).  
+*   WebView2 コントロールをツールボックスに表示Visual Studio修正しました。  \([\#210][GithubMicrosoftedgeWebviewfeedbackIssue210]\)。 
+*   CPU 使用率の高い問題の削減。  \([\#878][GithubMicrosoftedgeWebviewfeedbackIssue878]\)。  
+*   非推奨の 1.0.781 プレリリース パッケージの問題を修正しました。 [\#875][GithubMicrosoftedgeWebviewfeedbackIssue875] [\#878][GithubMicrosoftedgeWebviewfeedbackIssue878]\)。  
     
 ##### プロモーション  
 
 *   次の試験的な API が Stable に昇格されました。  
     *   ビジュアル ホスティング API。  
-    *   [SetVirtualHostNameToFolderMapping][ReferenceWin32Icorewebview210781PreReleaseSetVirtualHostNameToFolderMapping]  
-    *   [TrySuspend と Resume][ReferenceWin32Icorewebview210781PreReleaseTrySuspendResume]  
-    *   [DefaultBackgroundColor][ReferenceWin32Icorewebview2controllerViewWebview210781PreReleaseDefaultBackgroundColor]  
+    *   [SetVirtualHostNameToFolderMapping][ReferenceWin32Icorewebview210790PreReleaseSetVirtualHostNameToFolderMapping]  
+    *   [TrySuspend と Resume][ReferenceWin32Icorewebview210790PreReleaseTrySuspendResume]  
+    *   [DefaultBackgroundColor][ReferenceWin32Icorewebview2controllerViewWebview210790PreReleaseDefaultBackgroundColor]  
     
 #### .NET  
 
@@ -81,9 +89,9 @@ WebView2 チームは [、WebView2 SDK][NuGetGallery] を 6 週間の更新で�
     *   [NavigateWithWebResourceRequest API][NavigateWithWebResourceRequestAPI]  
     *   [Cookie 管理 API][CookiemanagementAPI]  
     *   [DOMContentLoaded API][DOMContentLoadedAPI]  
-    *   [WebView Environment プロパティ][WebViewEnvironmentproperty]  
+    *   [WebView 環境プロパティ][WebViewEnvironmentproperty]  
 
-## 1.0.721-プレリリース  
+## 1.0.721 プレリリース  
 
 リリース日: 2020 年 12 月 8 日  
 
@@ -108,7 +116,7 @@ WebView2 チームは [、WebView2 SDK][NuGetGallery] を 6 週間の更新で�
 *   DPI サポートを処理する API が追加されました。  
     *   [WebView コンテンツと][ReferenceWin32Icorewebview2experimentalcontrollerViewWebview210721PrereleaseGetRasterizationscale]UI ポップアップの DPI スケールを変更する RasterizationScale プロパティ、および[関連付けられた RasterizationScaleChanged イベントが追加][ReferenceWin32Icorewebview2experimentalcontrollerViewWebview210721PrereleaseAddRasterizationscalechanged]されました。  
     *   [ShouldDetectMonitorScaleChanges][ReferenceWin32Icorewebview2experimentalcontrollerViewWebview210721PrereleaseGetShouldDetectMonitorScaleChanges]プロパティが追加され、必要に応じてプロパティ `RasterizationScale` が自動的に更新されます。  
-    *   [BoundsMode][ReferenceWin32Icorewebview2experimentalcontrollerViewWebview210721PrereleaseGetBoundsMode]プロパティが追加され、境界がロジック ピクセルであり、WebView が WebView2 ピクセル表示に使用できると指定され `RasterizationScale` 、WebView は物理サイズを取得するために With を使用します。 `RasterizationScale` `Bounds`  
+    *   [BoundsMode プロパティ][ReferenceWin32Icorewebview2experimentalcontrollerViewWebview210721PrereleaseGetBoundsMode]が追加され、境界がロジック ピクセルであり、WebView が WebView2 ピクセル表示に使用され、WebView は物理サイズを取得するために With を使用できます `RasterizationScale` `RasterizationScale` `Bounds` 。  
 *   イベントを `NewWindowRequested` 処理および `Ctrl` + `click` 更新しました `Shift` + `click` 。  \([\#168][GithubMicrosoftedgeWebviewfeedbackIssue168] and [\#371][GithubMicrosoftedgeWebviewfeedbackIssue371]\).  
 *   次の試験的な API が Stable に昇格されました。  
     *   [WebResourceResponseReceived API][WebResourceResponseReceivedAPI]  
@@ -153,7 +161,7 @@ WebView2 チームは [、WebView2 SDK][NuGetGallery] を 6 週間の更新で�
 
 *   `CoreWebView2NewWindowRequestedEventArgs.Handled` をクリックすると、新しいウィンドウが開かれません。  \([\#549][GithubMicrosoftedgeWebviewfeedbackIssue549] and [\#560][GithubMicrosoftedgeWebviewfeedbackIssue560]\).  
     
-## 1.0.674 プレリリース  
+## 1.0.674-プレリリース  
 
 リリース日: 2020 年 10 月 19 日  
 
@@ -210,7 +218,7 @@ WebView2 チームは [、WebView2 SDK][NuGetGallery] を 6 週間の更新で�
     
 *   切断 [されたブラウザー ポリシー][DeployedgeMicrosoftEdgePolicies]。  
 *   [WebView2 環境オプションに AllowSingleSignOnUsingOSPrimaryAccount][ReferenceWin32Icorewebview2environmentoptionsGetAllowsinglesignonusingosprimaryaccount09622]プロパティを追加し、WebView の条件付きアクセスを有効にしました。  
-*   `ICoreWebView2NewWindowRequestedEventArgs` [WindowFeatures プロパティと][ReferenceWin32Icorewebview2newwindowrequestedeventargsGetWindowfeatures09622]、関連付けられた[ICoreWebView2WindowFeatures][ReferenceWin32Icorewebview2windowfeatures09622]を含む更新を行いました。  \([\#293][GithubMicrosoftedgeWebviewfeedbackIssue293]\)。  
+*   `ICoreWebView2NewWindowRequestedEventArgs` [WindowFeatures プロパティと][ReferenceWin32Icorewebview2newwindowrequestedeventargsGetWindowfeatures09622]、関連する[ICoreWebView2WindowFeatures][ReferenceWin32Icorewebview2windowfeatures09622]を含む更新を行いました。  \([\#293][GithubMicrosoftedgeWebviewfeedbackIssue293]\)。  
 *   `System.Windows.Rect` `System.Drawing.Rectangle` `System.Windows.Rect` \([\#235][GithubMicrosoftedgeWebviewfeedbackIssue235]\) の代わりに使用#235しました。  
 *   パラメーターを指定せずに要求を処理する NewWindowRequested `window.open()` イベントを更新しました。  \([\#293][GithubMicrosoftedgeWebviewfeedbackIssue293]\)。  
 *   [指定された AdditionalBrowserArguments][ReferenceWin32Icorewebview2environmentoptionsPutAdditionalbrowserarguments09622] は、環境変数やレジストリ値 `ICoreWebView2EnvironmentOptions` で上書きされるのではない。  詳細については、「[CreateCoreWebView2EnvironmentWithOptions][ReferenceWin32IdlCreatecorewebview2environmentwithoptions09622]」を参照してください。  
@@ -224,7 +232,7 @@ WebView2 チームは [、WebView2 SDK][NuGetGallery] を 6 週間の更新で�
 #### 全般的な情報  
 
 *   > [!IMPORTANT]
-    > **アナウンス**: Evergreen WebView2 ランタイムとインストーラーがプレビュー用にリリースされます。  詳細については [、WebView2 の配布に移動します][Webview2ConceptsDistributionUnderstandRuntimeInstaller]。  
+    > **Announcement**: Evergreen WebView2 Runtime and installer is released for preview.  詳細については [、WebView2 の配布に移動します][Webview2ConceptsDistributionUnderstandRuntimeInstaller]。  
     
 *   > [!IMPORTANT]
     > **アナウンス**: 次の WebView2 SDK バージョンは、次の SDK リリース以降サポートされなくなりました。  
@@ -239,7 +247,7 @@ WebView2 チームは [、WebView2 SDK][NuGetGallery] を 6 週間の更新で�
     
 *   WebView ワーカー スレッドの機能強化が追加されました。  \([\#318][GithubMicrosoftedgeWebviewfeedbackIssue318]\)。  
 *   WebView でポップアップ ブロックをオフにします。  詳細については、イベントの [IsUserInitiated][ReferenceWin32Icorewebview2newwindowrequestedeventargsGetIsuserinitiated09538] プロパティに移動 `NewWindowRequested` します。  
-*   WebView ナビゲーション開始イベントが実行されます `about:blank` 。  現在では、すべてのナビゲーションに対してイベントが実行されますが、iframe または iframe の取り消しは `NavigationStarting` `about:blank` サポートされ `srcdoc` 、無視されません。  
+*   WebView ナビゲーション開始イベントが実行されます `about:blank` 。  現在では、すべてのナビゲーションに対してイベントが実行されますが、iframe に対する取り消しは `NavigationStarting` `about:blank` サポートされ `srcdoc` 、無視されません。  
 *   `edge://`WebView で一部の URI スキームをブロックしました。  
 *   WebView2 環境 [オプションに実験的な IsSingleSignOnUsingOSPrimaryAccountEnabled][ReferenceWin32Icorewebview2experimentaloptionsGetIssinglesignonusingosprimaryaccountenabled09538] プロパティを追加し、WebView の条件付きアクセスを有効にしました。  
 *   WebView が WebResource 要求からの応答を受信して処理した後に実行される試験的な [WebResourceResponseReceived][ReferenceWin32Icorewebview2experimentalAddWebresourceresponsereceived09538] イベントが追加されました。  認証ヘッダーがある場合は、応答オブジェクトに含まれます。  
@@ -274,7 +282,7 @@ WebView2 チームは [、WebView2 SDK][NuGetGallery] を 6 週間の更新で�
 #### .NET (0.9.538 プレリリース)  
 
 *   リリースされた WinForms と WPF WebView2API サンプルは、WebView2 SDK の包括的なガイドです。  詳細については、Samples [Repo に移動します][GithubMicrosoftedgeWebview2samplesMain]。  
-*   視覚的なホスティングとウィンドウ機能の試験的な API [のサポートが追加されました][ConceptsVersioningExperimentalApis]。  
+*   視覚的なホスティングとウィンドウ機能の試験的な API の [サポートが追加されました][ConceptsVersioningExperimentalApis]。  
 *   > [!IMPORTANT]
     > **Breaking Change**: 次の保留が IDisposable を実装しました: ScriptDialogOpening、NewWindowRequested、WebResourceRequested、[][DotnetApiMicrosoftWebWebview2CoreCorewebview2Scriptdialogopening]および[PermissionRequested][DotnetApiMicrosoftWebWebview2CoreCorewebview2Permissionrequested]。 [][DotnetApiMicrosoftWebWebview2CoreCorewebview2Newwindowrequested] [][DotnetApiMicrosoftWebWebview2CoreCorewebview2Webresourcerequested]  
     
@@ -285,7 +293,7 @@ WebView2 チームは [、WebView2 SDK][NuGetGallery] を 6 週間の更新で�
 [NuGet パッケージ][NuGetGallery0.9.515-prerelease] \|Microsoft Edge バージョン 84.0.515.0。  
 
 *   > [!IMPORTANT]
-    > **お**知らせ : WebView2 では、.NET Framework 4.6.2 以降で Windows フォームと WPF がサポートされ、プレリリース パッケージの .NET Core 3.0 以降がサポート**されます。**  
+    > **お**知らせ : WebView2 では、プレリリース パッケージの .NET Framework 4.6.2 以降および .NET Core 3.0 以降で Windows フォームと WPF **が**サポートされます。  
     
 *   WPF アプリの作成の詳細については [、「WPF Getting Started Guide」][GettingstartedWpf] および「WebView2 [WPF Reference][DotnetApiMicrosoftWebWebview2Wpf] for WPF-specific APIs」を参照してください。  
 *   Windows フォーム アプリの構築の詳細については [、「Windows フォーム][GettingstartedWinforms] の概要ガイド」および「Windows フォーム固有 API 用 WebView2 [Windows][DotnetApiMicrosoftWebWebview2Winforms] フォーム リファレンス」に移動してください。  
@@ -330,14 +338,14 @@ WebView2 チームは [、WebView2 SDK][NuGetGallery] を 6 週間の更新で�
     
 *   [FrameNavigationCompleted イベントが追加][ReferenceWin32Icorewebview2AddFramenavigationcompleted09488]されました。  これで、iframe がナビゲーションを完了すると、イベントが実行され、ナビゲーションの成功とナビゲーション ID が返されます。  
 *   [ICoreWebView2EnvironmentOptions][ReferenceWin32Icorewebview2environmentoptions09488]インターフェイスが追加されました。このインターフェイスは、アプリの対象となる WebView2 ランタイムのバージョンを判断するために使用できます。  
-*   [IsBuiltInErrorPageEnabled 設定を追加][ReferenceWin32Icorewebview2settingsGetIsbuiltinerrorpageenabled09488]しました。  ナビゲーションエラーとレンダリング プロセスの失敗に関して、組み込みのエラー Web ページをオンまたはオフにできます。  
+*   [IsBuiltInErrorPageEnabled 設定を追加][ReferenceWin32Icorewebview2settingsGetIsbuiltinerrorpageenabled09488]しました。  ナビゲーションエラーとレンダリング プロセスの失敗に関して、組み込みのエラー Web ページをオンまたはオフに切り替えます。  
 *   .NET 実装 \( #113 `IDispatch` \)[をサポートするためにリモート オブジェクト インジェクションを][GithubMicrosoftedgeWebviewfeedbackIssue113]更新しました。  
 *   コンテキスト メニュー \( #108 \) からの要求を処理する [NewWindowRequested][ReferenceWin32Icorewebview2AddNewwindowrequested09488] [イベントを更新][GithubMicrosoftedgeWebviewfeedbackIssue108]しました。  
-*   ビジュアル ホスティング API にアクセスできる最初の独立した WebView2 プレリリース パッケージをリリースしました。  WebView チームは、 [新しい試験的な API を含む APISample][GithubMicrosoftedgeWebview2samplesMain] を更新しました。  
+*   ビジュアル ホスティング API にアクセスできる、最初の独立した WebView2 プレリリース パッケージをリリースしました。  WebView チームは、 [新しい試験的な API を含む APISample][GithubMicrosoftedgeWebview2samplesMain] を更新しました。  
     
     *   コンポジション ツリーに接続し、WebView の入力を提供するための [ICoreWebView2ExperimentalCompositionController][ReferenceWin32Icorewebview2experimentalcompositioncontroller09488] インターフェイスが追加されました。  
     *   [ICoreWebView2ExperimentalPointerInfo][ReferenceWin32Icorewebview2experimentalpointerinfo09488]が追加されました。この情報には、 `POINTER_INFO`  このオブジェクトは、ポインター入力を WebView に挿入するために SendPointerInput に渡されます。  
-    *   [ICoreWebView2ExperimentalCursorChangedEventHandler][ReferenceWin32Icorewebview2experimentalcursorchangedeventhandler09488]が追加されました。このイベントは、WebView 上のマウス カーソルを変更する必要がある場合にアプリに指示します。  WebView のテキスト ボックスの上にマウスポインターを置く場合、カーソルは矢印からセレクターに変わります。  アプリ上のプロパティは、マウス カーソルが WebView に対して現在何をする必要かを `cursor` `CompositionController` 示します。  
+    *   [ICoreWebView2ExperimentalCursorChangedEventHandler][ReferenceWin32Icorewebview2experimentalcursorchangedeventhandler09488]が追加されました。このイベントは、WebView 上のマウス カーソルを変更する必要がある場合にアプリに指示します。  WebView のテキスト ボックスの上にマウスポインターを置く場合、カーソルは矢印からセレクターに変わります。  アプリ `cursor` のプロパティは、WebView のマウス カーソルの `CompositionController` 現在の位置を示します。  
     
 ## 0.9.430  
 
@@ -357,11 +365,11 @@ WebView2 SDK は正式な Win32 C++ ベータ版で、フィードバックか�
 *   ウィンドウ モードでウィンドウに従うステータス バーの [NotifyParentWindowPositionChanged][ReferenceWin32Icorewebview2hostNotifyparentwindowpositionchanged09430] が追加されました。  また、アクセシビリティ機能を機能するために、ウィンドウレス モードで変更を実装します。  
 *   リモート オブジェクトから Web ページにアクセスできるかどうかをグローバルに制御する [AreRemoteObjectsAllowed][ReferenceWin32Icorewebview2settingsGetAreremoteobjectsallowed09430] 設定が追加されました。  既定ではオン `AreRemoteObjectsAllowed` になっているので [、AddRemoteObject][ReferenceWin32Icorewebview2Addremoteobject09430] によって追加されたリモート オブジェクトには Web ページからアクセスできます。  オフ `AreRemoteObjectsAllowed` にすると、Web ページからオブジェクトにアクセスできない。  変更は、次のナビゲーション イベントに適用されます。  
 *   [IsZoomControlEnabled][ReferenceWin32Icorewebview2settingsGetIszoomcontrolenabled09430]設定が追加され、ユーザーが \(または + マウス ホイール\) を使用して WebView のズームに影響を与えるのを `ctrl` + `+` `ctrl` + `-` `ctrl` 防ぐ機能が追加されました。  設定をオフにした場合でも [、put_ZoomFactorを][ReferenceWin32Icorewebview2hostPutZoomfactor09430] 使ってズームを設定できます。  
-*   ZoomFactor が現在の WebView にのみ適用されるに変更されました。  現在の WebView に対するズームの変更は、同じ原点のサイトを使用して移動した他の WebView には影響を与えいません。  詳細については、次 [のリンク][ReferenceWin32Icorewebview2hostGetZoomfactor09430]get_ZoomFactor。  
+*   ZoomFactor が現在の WebView にのみ適用されるに変更されました。  現在の WebView に対するズームの変更は、同じ原点のサイトを使用して移動した他の WebView には影響を与えいません。  詳細については、次のリンク[get_ZoomFactor。][ReferenceWin32Icorewebview2hostGetZoomfactor09430]  
 *   WebView の ZoomView UI を非表示に \([#95][GithubMicrosoftedgeWebviewfeedbackIssue95]\)。  
 *   [SetBoundsAndZoomFactor を追加しました][ReferenceWin32Icorewebview2hostSetboundsandzoomfactor09430]。  これで、WebView のズーム倍率と範囲を同時に設定できます。  
 *   [WindowCloseRequested イベントが追加][ReferenceWin32Icorewebview2AddWindowcloserequested09430]されました。  詳細については、\( [add_WindowCloseRequested][ReferenceWin32Icorewebview2AddWindowcloserequested09430] \)[に#119][GithubMicrosoftedgeWebviewfeedbackIssue119]してください。  
-*   JavaScript ダイアログ イベントの `beforeunload` ダイアログの種類のサポートが追加され、列挙 [CORE_WEBVIEW2_SCRIPT_DIALOG_KIND_BEFOREUNLOAD][ReferenceWin32Icorewebview2CoreWebview2ScriptDialogKind09430] が追加されました。  
+*   JavaScript ダイアログ イベントのダイアログの種類のサポートが追加され、列挙 `beforeunload` [CORE_WEBVIEW2_SCRIPT_DIALOG_KIND_BEFOREUNLOAD][ReferenceWin32Icorewebview2CoreWebview2ScriptDialogKind09430] が追加されました。  
 *   [GetHeaders][ReferenceWin32Icorewebview2httprequestheadersGetheaders09430]を HttpRequestHeaders、GetHeader を HttpResponseHeaders、および httpHeadersCollectionIterator [get_HasCurrentHeaderプロパティに][ReferenceWin32Icorewebview2httpheaderscollectioniteratorGetHascurrentheader09430]追加しました。 [][ReferenceWin32Icorewebview2httpresponseheadersGetheader09430]  
 *   > [!IMPORTANT]
     > **Breaking Change**: 変更 `DevToolsProtocolEventReceived` された動作。  ここで、特定の DevTools Protocol イベントに対して[DevToolsProtocolEventReceiver][ReferenceWin32Icorewebview2devtoolsprotocoleventreceiver09430]を作成し、次のコマンドを使用してそのようなイベントをサブスクライブ/[サブスクライブ解除][ReferenceWin32Icorewebview2devtoolsprotocoleventreceiverAddDevtoolsprotocoleventreceived09430] / [add_DevToolsProtocolEventReceived remove_DevToolsProtocolEventReceived。][ReferenceWin32Icorewebview2devtoolsprotocoleventreceiverRemoveDevtoolsprotocoleventreceived09430]  
@@ -377,7 +385,7 @@ WebView2 SDK は正式な Win32 C++ ベータ版で、フィードバックか�
 [NuGet パッケージ][NuGetGallery0.8.355] \|Microsoft Edge バージョン 80.0.355.0。  
 
 *   リリースされた WebView2API サンプルは、WebView2 SDK の包括的なガイドです。  詳細については、API サンプルに [移動してください][GithubMicrosoftedgeWebview2samplesApisample]。  
-*   英語 \( \ ( \ ) 以外のすべての言語に IME[#30][GithubMicrosoftedgeWebviewfeedbackIssue30]しました。  
+*   英語 \( \ ([\][GithubMicrosoftedgeWebviewfeedbackIssue30]) 以外のすべての言語に IME #30しました。  
 *   バグ 報告に応じてイベントの API `WebResourceRequested` サーフェスを更新しました。  同時にフィルターを指定し、作成時にイベントを指定する機能は廃止されました。  Web リソース要求イベントを作成するには、add_WebResourceRequested を使用してイベントを追加し[、AddWebResourceRequestedFilter][ReferenceWin32Iwebview2webview5Addwebresourcerequestedfilter08190]を使用してフィルターを追加します。 [][ReferenceWin32Iwebview2webview5AddWebresourcerequested08190]  [RemoveWebResourceRequestedFilter][ReferenceWin32Iwebview2webview5Removewebresourcerequestedfilter08190] はフィルター \([#36][GithubMicrosoftedgeWebviewfeedbackIssue36]\) \( #74 \)[を削除][GithubMicrosoftedgeWebviewfeedbackIssue74]します。  
 *   > [!IMPORTANT]
     > **Breaking Change**: 全画面での動作が変更されました。  非推奨 [の IsFullScreenAllowed][ReferenceWin32Iwebview2settingsGetIsfullscreenallowedDeprecated08190]。  既定では、WebView \(video\など) の要素が全画面に設定されている場合、WebView の境界が埋め込みます。  [ContainsFullScreenElementChanged][ReferenceWin32Iwebview2containsfullscreenelementchangedeventhandler08190]イベントと[][ReferenceWin32Iwebview2webview5GetContainsfullscreenelement08190]get_ContainsFullScreenElement を使って、要素が全画面表示モードに入る場合に、アプリで WebView のサイズを変更する方法を指定します。  
@@ -389,8 +397,8 @@ WebView2 SDK は正式な Win32 C++ ベータ版で、フィードバックか�
 *   Windows 7、Windows 8、Windows 8.1 のサポートが追加されました。  
 *   WebView2 Visual Studioコード Visual Studioサポートを追加しました。  次に、IDE から直接 WebView2 でスクリプトをデバッグします。  詳細については [、WebView2 コントロールを使用して開発するときにデバッグする方法に移動します][HowtoDebug]。  
 *   WebView2 の実行中のスクリプトが、アプリの Win32 コンポーネントから IDispatch オブジェクトにアクセスし、IDispatch オブジェクトのプロパティにアクセスするために追加 `Native Object Injection` されました。  詳細については [、AddRemoteObject][ReferenceWin32Iwebview2webview4Addremoteobject08190] \( #17 \)[に移動][GithubMicrosoftedgeWebviewfeedbackIssue17]します。  
-*   イベントが `AcceleratorKeyPressed` 追加されました。  詳細については、\( [add_AcceleratorKeyPressed][ReferenceWin32Iwebview2webview4AddAcceleratorkeypressed08190] \)[に#57][GithubMicrosoftedgeWebviewfeedbackIssue57]してください。  
-*   オフ `Context Menus` にしました。  詳細については、\( [put_AreDefaultContextMenusEnabled][ReferenceWin32Iwebview2settings2PutAredefaultcontextmenusenabled08190] \)[に][GithubMicrosoftedgeWebviewfeedbackIssue57]#57してください。  
+*   イベントが追加 `AcceleratorKeyPressed` されました。  詳細については、\( [add_AcceleratorKeyPressed][ReferenceWin32Iwebview2webview4AddAcceleratorkeypressed08190] \)[に#57][GithubMicrosoftedgeWebviewfeedbackIssue57]してください。  
+*   をオフ `Context Menus` にします。  詳細については、\( [put_AreDefaultContextMenusEnabled][ReferenceWin32Iwebview2settings2PutAredefaultcontextmenusenabled08190] \)[に][GithubMicrosoftedgeWebviewfeedbackIssue57]#57してください。  
 *   更新されました `DPI Awareness` 。  現在、WebView の DPI 対応はホスト アプリの DPI 対応と同じです。  
     
     > [!NOTE]
@@ -422,7 +430,7 @@ WebView2 SDK は正式な Win32 C++ ベータ版で、フィードバックか�
 
 [NuGet パッケージ][NuGetGallery0.8.190] \|Microsoft Edge バージョン 77.0.190.0。  
 
-*   ユーザーが `get_AreDevToolsEnabled` / `put_AreDevToolsEnabled` DevTools \( \#16 \) を開くことができるか制御[するために追加][GithubMicrosoftedgeWebviewfeedbackIssue16]されました。  
+*   ユーザーが `get_AreDevToolsEnabled` / `put_AreDevToolsEnabled` DevTools \( \#16 \) を開くことができるか制御[するために追加][GithubMicrosoftedgeWebviewfeedbackIssue16]されます。  
 *   ステータス バー `get_IsStatusBarEnabled` / `put_IsStatusBarEnabled` が表示される \( \#19 \)[を制御するために追加][GithubMicrosoftedgeWebviewfeedbackIssue19]されます。  
 *   ナビゲーション履歴 `get_CanGoBack` / `GoBack` / `get_CanGoForward` / `GoForward` を行き来する場合に追加されました。  
 *   WebView で HTTP ヘッダーを表示および変更する HTTP ヘッダーの種類 `IWebView2HttpHeadersCollectionIterator` / `IWebView2HttpRequestHeaders` / `IWebView2HttpRequestHeaders` \( \) が追加されました。  
@@ -436,7 +444,7 @@ WebView2 SDK は正式な Win32 C++ ベータ版で、フィードバックか�
 
 [NuGet パッケージ][NuGetGallery0.8.149] \|Microsoft Edge バージョン 76.0.149.0。  
 
-開発者向けの最初のプレビュー リリース。  
+開発者向けプレビューの最初のリリース。  
 
 <!-- Links -->  
 
@@ -449,7 +457,7 @@ WebView2 SDK は正式な Win32 C++ ベータ版で、フィードバックか�
 [ConceptsVersioning]: ./concepts/versioning.md "ブラウザーのバージョンと WebView2 について | Microsoft Docs"  
 [ConceptsVersioningExperimentalApis]: ./concepts/versioning.md#experimental-apis "試験的な API - ブラウザーのバージョンと WebView2 |Microsoft Docs"  
 [GettingstartedWinforms]: ./gettingstarted/winforms.md "Windows Forms アプリの WebView2 の使用を開始する|Microsoft Docs"  
-[GettingstartedWpf]: ./gettingstarted/wpf.md "WPF アプリケーションでの WebView2 の|Microsoft Docs"  
+[GettingstartedWpf]: ./gettingstarted/wpf.md "WPF アプリケーションでの WebView2 の概要|Microsoft Docs"  
 [HowtoDebug]: ./howto/debug.md "WebView2 コントロールを使用して開発するときにデバッグする|Microsoft Docs"  
 
 [ReferenceWin32Iwebview2acceleratorkeypressedeventargsHandle08190]: /microsoft-edge/webview2/reference/win32/iwebview2acceleratorkeypressedeventargs?view=webview2-0.8.355&preserve-view=true#handle "Handle - インターフェイス IWebView2AcceleratorKeyPressedEventArgs |Microsoft Docs"  
@@ -514,7 +522,7 @@ WebView2 SDK は正式な Win32 C++ ベータ版で、フィードバックか�
 [ReferenceWin32Icorewebview2experimentalcontrollerViewWebview210721PrereleaseGetShouldDetectMonitorScaleChanges]: /microsoft-edge/webview2/reference/win32/icorewebview2experimentalcontroller?view=webview2-1.0.721-prerelease&preserve-view=true#get_shoulddetectmonitorscalechanges "get_ShouldDetectMonitorScaleChanges - インターフェイス ICoreWebView2ExperimentalController |Microsoft Docs"  
 
 [DotnetApiMicrosoftWebWebview2Core]: /dotnet/api/microsoft.web.webview2.core "Microsoft.Web.WebView2.Core 名前空間 |Microsoft Docs"  
-[DotnetApiMicrosoftWebWebview2Wpf]: /dotnet/api/microsoft.web.webview2.wpf "Microsoft.Web.WebView2.Wpf 名前空間 |Microsoft Docs"  
+[DotnetApiMicrosoftWebWebview2Wpf]: /dotnet/api/microsoft.web.webview2.wpf "Microsoft.Web.WebView2.Wpf 名前空間 | Microsoft Docs"  
 [DotnetApiMicrosoftWebWebview2Winforms]: /dotnet/api/microsoft.web.webview2.winforms "Microsoft.Web.WebView2.WinForms 名前空間 |Microsoft Docs"  
 
 [DotnetApiMicrosoftWebWebview2CoreWebview2runtimenotfoundexception]: /dotnet/api/microsoft.web.webview2.core.webview2runtimenotfoundexception "CoreWebView2.WebView2RuntimeNotFound (Microsoft.Web.WebView2.Core) |Microsoft Docs"  
@@ -585,10 +593,10 @@ WebView2 SDK は正式な Win32 C++ ベータ版で、フィードバックか�
 [GithubMicrosoftedgeWebviewfeedbackIssue18]:  https://github.com/MicrosoftEdge/WebViewFeedback/issues/18 "MicrosoftEdge/WebViewFeedback 問題 18 に関するフィードバックの情報"  
 [GithubMicrosoftedgeWebviewfeedbackIssue19]:  https://github.com/MicrosoftEdge/WebViewFeedback/issues/19 "MicrosoftEdge/WebViewFeedback 問題 19 に関するフィードバックの情報"  
 [GithubMicrosoftedgeWebviewfeedbackIssue22]:  https://github.com/MicrosoftEdge/WebViewFeedback/issues/22 "MicrosoftEdge/WebViewFeedback 問題 22 のフィードバック情報"  
-[GithubMicrosoftedgeWebviewfeedbackIssue27]:  https://github.com/MicrosoftEdge/WebViewFeedback/issues/27 "MicrosoftEdge/WebViewFeedback 問題 27 のフィードバックの情報"  
-[GithubMicrosoftedgeWebviewfeedbackIssue28]:  https://github.com/MicrosoftEdge/WebViewFeedback/issues/28 "MicrosoftEdge/WebViewFeedback 問題 28 のフィードバックの情報"  
+[GithubMicrosoftedgeWebviewfeedbackIssue27]:  https://github.com/MicrosoftEdge/WebViewFeedback/issues/27 "MicrosoftEdge/WebViewFeedback 問題 27 のフィードバック 情報"  
+[GithubMicrosoftedgeWebviewfeedbackIssue28]:  https://github.com/MicrosoftEdge/WebViewFeedback/issues/28 "MicrosoftEdge/WebViewFeedback 問題 28 のフィードバック 情報"  
 [GithubMicrosoftedgeWebviewfeedbackIssue30]:  https://github.com/MicrosoftEdge/WebViewFeedback/issues/30 "MicrosoftEdge/WebViewFeedback 問題 30 のフィードバック 情報"  
-[GithubMicrosoftedgeWebviewfeedbackIssue32]:  https://github.com/MicrosoftEdge/WebViewFeedback/issues/32 "MicrosoftEdge/WebViewFeedback 問題 32 のフィードバックの情報"  
+[GithubMicrosoftedgeWebviewfeedbackIssue32]:  https://github.com/MicrosoftEdge/WebViewFeedback/issues/32 "MicrosoftEdge/WebViewFeedback 問題 32 のフィードバック 情報"  
 [GithubMicrosoftedgeWebviewfeedbackIssue36]:  https://github.com/MicrosoftEdge/WebViewFeedback/issues/36 "MicrosoftEdge/WebViewFeedback 問題 36 のフィードバック 情報"  
 [GithubMicrosoftedgeWebviewfeedbackIssue57]:  https://github.com/MicrosoftEdge/WebViewFeedback/issues/57 "MicrosoftEdge/WebViewFeedback 問題 57 のフィードバック 情報"  
 [GithubMicrosoftedgeWebviewfeedbackIssue70]:  https://github.com/MicrosoftEdge/WebViewFeedback/issues/70 "MicrosoftEdge/WebViewFeedback 問題 70 のフィードバック 情報"  
@@ -602,7 +610,7 @@ WebView2 SDK は正式な Win32 C++ ベータ版で、フィードバックか�
 [GithubMicrosoftedgeWebviewfeedbackIssue168]:  https://github.com/MicrosoftEdge/WebViewFeedback/issues/168 "MicrosoftEdge/WebViewFeedback 問題 168 に関するフィードバックの情報"  
 [GithubMicrosoftedgeWebviewfeedbackIssue177]:  https://github.com/MicrosoftEdge/WebViewFeedback/issues/177 "MicrosoftEdge/WebViewFeedback 問題 177 のフィードバック の情報"
 [GithubMicrosoftedgeWebviewfeedbackIssue179]:  https://github.com/MicrosoftEdge/WebViewFeedback/issues/179 "MicrosoftEdge/WebViewFeedback 問題 179 に関するフィードバックの情報"
-[GithubMicrosoftedgeWebviewfeedbackIssue181]:  https://github.com/MicrosoftEdge/WebViewFeedback/issues/181 "MicrosoftEdge/WebViewFeedback の問題 181 に関するフィードバックの情報"
+[GithubMicrosoftedgeWebviewfeedbackIssue181]:  https://github.com/MicrosoftEdge/WebViewFeedback/issues/181 "MicrosoftEdge/WebViewFeedback 問題 181 に関するフィードバックの情報"
 [GithubMicrosoftedgeWebviewfeedbackIssue183]:  https://github.com/MicrosoftEdge/WebViewFeedback/issues/183 "MicrosoftEdge/WebViewFeedback 問題 183 に関するフィードバックの情報"
 [GithubMicrosoftedgeWebviewfeedbackIssue185]:  https://github.com/MicrosoftEdge/WebViewFeedback/issues/185 "MicrosoftEdge/WebViewFeedback 問題 185 のフィードバック の情報"
 [GithubMicrosoftedgeWebviewfeedbackIssue204]:  https://github.com/MicrosoftEdge/WebViewFeedback/issues/204 "MicrosoftEdge/WebViewFeedback 問題 204 に関するフィードバックの情報"
@@ -610,13 +618,13 @@ WebView2 SDK は正式な Win32 C++ ベータ版で、フィードバックか�
 [GithubMicrosoftedgeWebviewfeedbackIssue228]:  https://github.com/MicrosoftEdge/WebViewFeedback/issues/228 "MicrosoftEdge/WebViewFeedback 問題 228 に関するフィードバックの情報"
 [GithubMicrosoftedgeWebviewfeedbackIssue235]:  https://github.com/MicrosoftEdge/WebViewFeedback/issues/235 "MicrosoftEdge/WebViewFeedback 問題 235 のフィードバック の情報"
 [GithubMicrosoftedgeWebviewfeedbackIssue250]:  https://github.com/MicrosoftEdge/WebViewFeedback/issues/250 "MicrosoftEdge/WebViewFeedback 問題 250 のフィードバック 情報"
-[GithubMicrosoftedgeWebviewfeedbackIssue288]:  https://github.com/MicrosoftEdge/WebViewFeedback/issues/288 "MicrosoftEdge/WebViewFeedback 問題 288 のフィードバック 情報"
-[GithubMicrosoftedgeWebviewfeedbackIssue293]:  https://github.com/MicrosoftEdge/WebViewFeedback/issues/293 "MicrosoftEdge/WebViewFeedback 問題 293 のフィードバック の情報"
-[GithubMicrosoftedgeWebviewfeedbackIssue318]:  https://github.com/MicrosoftEdge/WebViewFeedback/issues/318 "MicrosoftEdge/WebViewFeedback 問題 318 のフィードバックの情報"  
+[GithubMicrosoftedgeWebviewfeedbackIssue288]:  https://github.com/MicrosoftEdge/WebViewFeedback/issues/288 "MicrosoftEdge/WebViewFeedback 問題 288 のフィードバック の情報"
+[GithubMicrosoftedgeWebviewfeedbackIssue293]:  https://github.com/MicrosoftEdge/WebViewFeedback/issues/293 "MicrosoftEdge/WebViewFeedback 問題 293 に関するフィードバックの情報"
+[GithubMicrosoftedgeWebviewfeedbackIssue318]:  https://github.com/MicrosoftEdge/WebViewFeedback/issues/318 "MicrosoftEdge/WebViewFeedback 問題 318 に関するフィードバックの情報"  
 [GithubMicrosoftedgeWebviewfeedbackIssue335]:  https://github.com/MicrosoftEdge/WebViewFeedback/issues/335 "MicrosoftEdge/WebViewFeedback 問題 335 のフィードバック の情報"  
-[GithubMicrosoftedgeWebviewfeedbackIssue371]:  https://github.com/MicrosoftEdge/WebViewFeedback/issues/371 "MicrosoftEdge/WebViewFeedback の問題 371 に関するフィードバックの情報"  
+[GithubMicrosoftedgeWebviewfeedbackIssue371]:  https://github.com/MicrosoftEdge/WebViewFeedback/issues/371 "MicrosoftEdge/WebViewFeedback 問題 371 に関するフィードバックの情報"  
 [GithubMicrosoftedgeWebviewfeedbackIssue382]:  https://github.com/MicrosoftEdge/WebViewFeedback/issues/382 "MicrosoftEdge/WebViewFeedback 問題 382 のフィードバック の情報"  
-[GithubMicrosoftedgeWebviewfeedbackIssue431]:  https://github.com/MicrosoftEdge/WebViewFeedback/issues/431 "MicrosoftEdge/WebViewFeedback 問題 431 のフィードバック の情報"  
+[GithubMicrosoftedgeWebviewfeedbackIssue431]:  https://github.com/MicrosoftEdge/WebViewFeedback/issues/431 "MicrosoftEdge/WebViewFeedback 問題 431 に関するフィードバックの情報"  
 [GithubMicrosoftedgeWebviewfeedbackIssue432]:  https://github.com/MicrosoftEdge/WebViewFeedback/issues/432 "MicrosoftEdge/WebViewFeedback 問題 432 のフィードバック の情報"  
 [GithubMicrosoftedgeWebviewfeedbackIssue461]:  https://github.com/MicrosoftEdge/WebViewFeedback/issues/461 "MicrosoftEdge/WebViewFeedback 問題 461 に関するフィードバックの情報"  
 [GithubMicrosoftedgeWebviewfeedbackIssue525]:  https://github.com/MicrosoftEdge/WebViewFeedback/issues/525 "MicrosoftEdge/WebViewFeedback 問題 525 のフィードバック の情報"  
@@ -661,24 +669,31 @@ WebView2 SDK は正式な Win32 C++ ベータ版で、フィードバックか�
 [DOMContentLoadedAPI]: /microsoft-edge/webview2/reference/win32/icorewebview2_2?view=webview2-1.0.721-prerelease#add_domcontentloaded&preserve-view=true "add_DOMContentLoaded - インターフェイスICoreWebView2_2 |Microsoft Docs"
 [WebViewEnvironmentproperty]: /microsoft-edge/webview2/reference/win32/icorewebview2_2?view=webview2-1.0.721-prerelease#get_environment&preserve-view=true "ICoreWebView2CookieManager |Microsoft Docs"
 
-[GithubMicrosoftedgeWebviewfeedbackIssue37]:  https://github.com/MicrosoftEdge/WebViewFeedback/issues/37 "MicrosoftEdge/WebViewFeedback 問題 37 のフィードバック の情報" 
+[GithubMicrosoftedgeWebviewfeedbackIssue585]:  https://github.com/MicrosoftEdge/WebViewFeedback/issues/585 "MicrosoftEdge/WebViewFeedback 問題 585 のフィードバック の情報" 
+[GithubMicrosoftedgeWebviewfeedbackIssue275]:  https://github.com/MicrosoftEdge/WebViewFeedback/issues/275 "MicrosoftEdge/WebViewFeedback 問題 275 のフィードバック の情報" 
+[GithubMicrosoftedgeWebviewfeedbackIssue816]:  https://github.com/MicrosoftEdge/WebViewFeedback/issues/816 "MicrosoftEdge/WebViewFeedback 問題 816 のフィードバック の情報" 
+[GithubMicrosoftedgeWebviewfeedbackIssue210]:  https://github.com/MicrosoftEdge/WebViewFeedback/issues/210 "MicrosoftEdge/WebViewFeedback 問題 210 のフィードバック情報" 
+[GithubMicrosoftedgeWebviewfeedbackIssue442]:  https://github.com/MicrosoftEdge/WebViewFeedback/issues/442 "MicrosoftEdge/WebViewFeedback 問題 442 に関するフィードバックの情報" 
+[GithubMicrosoftedgeWebviewfeedbackIssue878]:  https://github.com/MicrosoftEdge/WebViewFeedback/issues/878 "MicrosoftEdge/WebViewFeedback 問題 878 のフィードバック の情報" 
+[GithubMicrosoftedgeWebviewfeedbackIssue875]:  https://github.com/MicrosoftEdge/WebViewFeedback/issues/875 "MicrosoftEdge/WebViewFeedback 問題 875 のフィードバック の情報" 
+[GithubMicrosoftedgeWebviewfeedbackIssue37]:  https://github.com/MicrosoftEdge/WebViewFeedback/issues/37 "MicrosoftEdge/WebViewFeedback 問題 37 のフィードバック 情報" 
 [GithubMicrosoftedgeWebviewfeedbackIssue58]:  https://github.com/MicrosoftEdge/WebViewFeedback/issues/58 "MicrosoftEdge/WebViewFeedback 問題 58 のフィードバック 情報" 
 [GithubMicrosoftedgeWebviewfeedbackIssue122]:  https://github.com/MicrosoftEdge/WebViewFeedback/issues/122 "MicrosoftEdge/WebViewFeedback 問題 122 のフィードバックの情報" 
 [GithubMicrosoftedgeWebviewfeedbackIssue161]:  https://github.com/MicrosoftEdge/WebViewFeedback/issues/161 "MicrosoftEdge/WebViewFeedback 問題 161 に関するフィードバックの情報" 
-[GithubMicrosoftedgeWebviewfeedbackIssue196]:  https://github.com/MicrosoftEdge/WebViewFeedback/issues/196 "MicrosoftEdge/WebViewFeedback 問題 196 のフィードバック の情報" 
-[GithubMicrosoftedgeWebviewfeedbackIssue205]:  https://github.com/MicrosoftEdge/WebViewFeedback/issues/205 "MicrosoftEdge/WebViewFeedback 問題 205 のフィードバック の情報" 
+[GithubMicrosoftedgeWebviewfeedbackIssue196]:  https://github.com/MicrosoftEdge/WebViewFeedback/issues/196 "MicrosoftEdge/WebViewFeedback 問題 196 に関するフィードバックの情報" 
+[GithubMicrosoftedgeWebviewfeedbackIssue205]:  https://github.com/MicrosoftEdge/WebViewFeedback/issues/205 "MicrosoftEdge/WebViewFeedback 問題 205 のフィードバックの情報" 
 [GithubMicrosoftedgeWebviewfeedbackIssue212]:  https://github.com/MicrosoftEdge/WebViewFeedback/issues/212 "MicrosoftEdge/WebViewFeedback 問題 212 のフィードバックの情報" 
 [GithubMicrosoftedgeWebviewfeedbackIssue399]:  https://github.com/MicrosoftEdge/WebViewFeedback/issues/399 "MicrosoftEdge/WebViewFeedback 問題 399 のフィードバック の情報" 
 [GithubMicrosoftedgeWebviewfeedbackIssue400]:  https://github.com/MicrosoftEdge/WebViewFeedback/issues/400 "MicrosoftEdge/WebViewFeedback 問題 400 のフィードバック 情報"  
 [GithubMicrosoftedgeWebviewfeedbackIssue409]:  https://github.com/MicrosoftEdge/WebViewFeedback/issues/409 "MicrosoftEdge/WebViewFeedback 問題 409 に関するフィードバックの情報" 
 [GithubMicrosoftedgeWebviewfeedbackIssue605]:  https://github.com/MicrosoftEdge/WebViewFeedback/issues/605 "MicrosoftEdge/WebViewFeedback 問題 605 のフィードバック の情報"  
 [GithubMicrosoftedgeWebviewfeedbackIssue691]:  https://github.com/MicrosoftEdge/WebViewFeedback/issues/691 "MicrosoftEdge/WebViewFeedback 問題 691 に関するフィードバックの情報" 
-[GithubMicrosoftedgeWebviewfeedbackIssue414]:  https://github.com/MicrosoftEdge/WebViewFeedback/issues/414 "MicrosoftEdge/WebViewFeedback 問題 414 のフィードバックの情報" 
+[GithubMicrosoftedgeWebviewfeedbackIssue414]:  https://github.com/MicrosoftEdge/WebViewFeedback/issues/414 "MicrosoftEdge/WebViewFeedback 問題 414 のフィードバック の情報" 
 [NuGetGallery1.0.705.50]:  https://www.nuget.org/packages/Microsoft.Web.WebView2/1.0.705.50 "NuGet ギャラリー |Microsoft.Web.WebView2 v1.0.705.50"
-[NuGetGallery1.0.781-prerelease]:  https://www.nuget.org/packages/Microsoft.Web.WebView2/1.0.781-prerelease "NuGet ギャラリー |Microsoft.Web.WebView2 v1.0.781 プレリリース"  
-[ReferenceWin32Icorewebview210781PreReleaseTrySuspendResume]: /microsoft-edge/webview2/reference/win32/icorewebview2_3?view=webview2-1.0.781-prerelease&preserve-view=true#trysuspend "TrySuspend - インターフェイス ICoreWebview2_3 |Microsoft Docs"  
-[ReferenceWin32Icorewebview2experimentalsettings10781PreReleaseGetUserAgent]: /microsoft-edge/webview2/reference/win32/icorewebview2experimentalsettings?view=webview2-1.0.781-prerelease#get_useragent "get_UserAgent - インターフェイス ICoreWebView2ExperimentalSettings |Microsoft Docs"  
-[ReferenceWin32Icorewebview210781PreReleaseSetVirtualHostNameToFolderMapping]: /microsoft-edge/webview2/reference/win32/icorewebview2_3?view=webview2-1.0.781-prerelease&preserve-view=true#setvirtualhostnametofoldermapping "SetVirtualHostNameToFolderMapping - インターフェイス ICoreWebView2_3 |Microsoft Docs"   
-[ReferenceWin32Icorewebview2controllerViewWebview210781PreReleaseDefaultBackgroundColor]: /microsoft-edge/webview2/reference/win32/icorewebview2controller2?view=webview2-1.0.781-prerelease&preserve-view=true#get_defaultbackgroundcolor "get_DefaultBackgroundColor - インターフェイス ICoreWebView2Controller2 |Microsoft Docs"  
-[ReferenceWin32Icorewebview2controllerViewWebview210781CompositionController]:  /microsoft-edge/webview2/reference/win32/icorewebview2compositioncontroller?view=webview2-1.0.781-prerelease&preserve-view=true "インターフェイス ICoreWebView2CompositionController |Microsoft Docs"  
-[ReferenceWin32Icorewebview2webresourceresponseviewgetcontentcompletedhandlerInvoke10781]: /microsoft-edge/webview2/reference/win32/icorewebview2webresourceresponseviewgetcontentcompletedhandler?view=webview2-1.0.781-prerelease&preserve-view=true#invoke "Invoke - インターフェイス ICoreWebView2WebResourceResponseViewGetContentCompletedHandler |Microsoft Docs"  
+[NuGetGallery1.0.790-prerelease]:  https://www.nuget.org/packages/Microsoft.Web.WebView2/1.0.790-prerelease "NuGet ギャラリー |Microsoft.Web.WebView2 v1.0.790 プレリリース"  
+[ReferenceWin32Icorewebview210790PreReleaseTrySuspendResume]: /microsoft-edge/webview2/reference/win32/icorewebview2_3?view=webview2-1.0.790-prerelease&preserve-view=true#trysuspend "TrySuspend - インターフェイス ICoreWebview2_3 |Microsoft Docs"  
+[ReferenceWin32Icorewebview2experimentalsettings10790PreReleaseGetUserAgent]: /microsoft-edge/webview2/reference/win32/icorewebview2experimentalsettings?view=webview2-1.0.790-prerelease&preserve-view=true#get_useragent "get_UserAgent - インターフェイス ICoreWebView2ExperimentalSettings |Microsoft Docs"  
+[ReferenceWin32Icorewebview210790PreReleaseSetVirtualHostNameToFolderMapping]: /microsoft-edge/webview2/reference/win32/icorewebview2_3?view=webview2-1.0.790-prerelease&preserve-view=true#setvirtualhostnametofoldermapping "SetVirtualHostNameToFolderMapping - インターフェイス ICoreWebView2_3 |Microsoft Docs"   
+[ReferenceWin32Icorewebview2controllerViewWebview210790PreReleaseDefaultBackgroundColor]: /microsoft-edge/webview2/reference/win32/icorewebview2controller2?view=webview2-1.0.790-prerelease&preserve-view=true#get_defaultbackgroundcolor "get_DefaultBackgroundColor - インターフェイス ICoreWebView2Controller2 |Microsoft Docs"  
+[ReferenceWin32Icorewebview2controllerViewWebview210790CompositionController]:  /microsoft-edge/webview2/reference/win32/icorewebview2compositioncontroller?view=webview2-1.0.790-prerelease&preserve-view=true "インターフェイス ICoreWebView2CompositionController |Microsoft Docs"  
+[ReferenceWin32Icorewebview2webresourceresponseviewgetcontentcompletedhandlerInvoke10790]: /microsoft-edge/webview2/reference/win32/icorewebview2webresourceresponseviewgetcontentcompletedhandler?view=webview2-1.0.790-prerelease&preserve-view=true#invoke "Invoke - インターフェイス ICoreWebView2WebResourceResponseViewGetContentCompletedHandler |Microsoft Docs"  
