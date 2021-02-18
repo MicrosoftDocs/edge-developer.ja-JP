@@ -3,16 +3,16 @@ description: ネイティブ メッセージングに関するドキュメント
 title: ネイティブ メッセージング
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/10/2021
+ms.date: 02/17/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: edge-chromium, 拡張機能の開発, ブラウザー拡張機能, アドオン, パートナー センター, 開発者
-ms.openlocfilehash: 2d629762d4c7c75832905cfbf8c2d5311191092d
-ms.sourcegitcommit: fe7301d0f62493e42e6a1a81cdbda3457f0343b8
+ms.openlocfilehash: d9c2370d6a4f9f7cd25001c1c58ce266423af19a
+ms.sourcegitcommit: 916b4daa26c2c78611f7d837bd6ecf009f0082df
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2021
-ms.locfileid: "11327702"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "11343067"
 ---
 # ネイティブ メッセージング  
 
@@ -98,7 +98,7 @@ ms.locfileid: "11327702"
       *   Windows デバイスでは、マニフェスト ファイルを含むディレクトリへの相対パスを使用できます。  
       *   macOS と Linux では、パスは絶対パスである必要があります。  
       
-      ホスト プロセスは、ホスト バイナリを含むディレクトリに設定された現在のディレクトリから始まります。  たとえば、\(Windows\) の場合、このパラメーターが設定されている場合、バイナリは現在の `C:\Application\nm_host.exe` ディレクトリ \( \) を使用して `C:\Application\` 開始されます。  
+      ホスト プロセスは、ホスト バイナリを含むディレクトリに設定された現在のディレクトリから始まります。  たとえば、\(Windows\) の場合、このパラメーターが設定されている場合、バイナリは現在のディレクトリ `C:\Application\nm_host.exe` \( \) を使用して `C:\Application\` 開始されます。  
    :::column-end:::
 :::row-end:::  
 :::row:::
@@ -127,7 +127,7 @@ ms.locfileid: "11327702"
 開発中に拡張機能をサイドロードして取得するには、 `microsoft_catalog_extension_id` 次の手順を実行します。  
 
 1.  [開発モード `edge://extensions` ] トグル ボタンに移動し、オンにします。  
-1.  [ **アンパックの読み込**み] を選択し、サイドロードする拡張機能パッケージを選択します。  
+1.  [ **展開されていない読み込み**] を選択し、サイドロードする拡張機能パッケージを選択します。  
 1.  **[OK]** をクリックします。  
 1.  ページに `edge://extensions` 移動し、拡張機能が一覧に表示されます。  
 1.  ページの拡張機能の `microsoft_catalog_extension_id` 一覧から \(ID\) からキーをコピーします。  
@@ -174,7 +174,7 @@ HKEY_CURRENT_USER\SOFTWARE\Microsoft\Edge\NativeMessagingHosts\com.my_company.my
         
     1.  ファイルを実行 `.reg` します。  
     
-Microsoft Edge は、ルート `HKEY_CURRENT_USER` キーの後にクエリを実行 `HKEY_LOCAL_MACHINE` します。  どちらのキーでも、最初に 32 ビット レジストリが検索され、次に 64 ビット レジストリが検索され、ネイティブ メッセージング ホストが識別されます。  レジストリ キーは、ネイティブ メッセージング ホスト マニフェストの場所を指定します。  Microsoft Edge は、前に示した場所でレジストリ キーを見つけた場合、この段落に記載されている場所に対してクエリを実行します。  上記のファイルをバッチ スクリプトの一部として実行する場合は、管理者コマンド プロンプトを使用 `.reg` して実行してください。  
+Microsoft Edge は、ルート `HKEY_CURRENT_USER` キーの後に続くキーを照会 `HKEY_LOCAL_MACHINE` します。  どちらのキーでも、最初に 32 ビット レジストリが検索され、次に 64 ビット レジストリが検索され、ネイティブ メッセージング ホストが識別されます。  レジストリ キーは、ネイティブ メッセージング ホスト マニフェストの場所を指定します。  Microsoft Edge は、前に示した場所でレジストリ キーを見つけた場合、この段落に記載されている場所に対してクエリを実行します。  上記のファイルをバッチ スクリプトの一部として実行する場合は、管理者のコマンド プロンプトを使用 `.reg` して実行してください。  
 
 ### [macOS](#tab/macos/)  
 
@@ -182,13 +182,13 @@ Microsoft Edge は、ルート `HKEY_CURRENT_USER` キーの後にクエリを�
 
 マニフェスト ファイルを保存するには、次のいずれかの操作を実行します。  
 
-*   すべてのユーザーが利用できるシステム全体のネイティブ メッセージング ホストは、固定の場所に格納されます。  たとえば、マニフェスト ファイルは次の場所に格納する必要があります。  
+*   すべてのユーザーが利用できるシステム全体のネイティブ メッセージング ホストは、固定の場所に格納されます。  たとえば、マニフェスト ファイルは次の場所に保存する必要があります。  
     
     ```bash
     /Library/Microsoft/Edge/NativeMessagingHosts/com.my_company.my_application.json
     ```  
     
-*   ユーザー固有のネイティブ メッセージング ホスト (現在のユーザーだけが使用できます) は、ユーザー プロファイル ディレクトリのサブディレクトリ `NativeMessagingHosts` にあります。  たとえば、マニフェスト ファイルは次の場所に格納する必要があります。  
+*   現在のユーザーだけが使用できる、ユーザー固有のネイティブ メッセージング ホストは、ユーザー プロファイル ディレクトリのサブ `NativeMessagingHosts` ディレクトリにあります。  たとえば、マニフェスト ファイルは次の場所に保存する必要があります。  
     
     ```bash
     ~/Library/Application Support/Microsoft Edge {Channel_Name}/NativeMessagingHosts/com.my_company.my_application.json
@@ -214,7 +214,7 @@ Microsoft Edge は、ルート `HKEY_CURRENT_USER` キーの後にクエリを�
     /etc/opt/edge/native-messaging-hosts
     ```
     
-*   ユーザー固有のネイティブ メッセージング ホスト (現在のユーザーだけが使用できます) は、ユーザー プロファイル ディレクトリのサブディレクトリ `NativeMessagingHosts` にあります。  マニフェスト ファイルは、次の場所に格納する必要があります。  
+*   現在のユーザーだけが使用できる、ユーザー固有のネイティブ メッセージング ホストは、ユーザー プロファイル ディレクトリのサブ `NativeMessagingHosts` ディレクトリにあります。  マニフェスト ファイルは、次の場所に格納する必要があります。  
     
     ```bash
     ~/.config/microsoft-edge/NativeMessagingHosts

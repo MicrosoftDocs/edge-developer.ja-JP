@@ -1,18 +1,18 @@
 ---
-description: Chrome 拡張機能を Microsoft Edge に移植するプロセス。
+description: Chrome 拡張機能を Microsoft Edge に移植するプロセス
 title: Chrome 拡張機能を Microsoft Edge に移植する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/10/2021
+ms.date: 02/17/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: edge-chromium, 拡張機能の開発, ブラウザー拡張機能, アドオン, パートナー センター, 開発者
-ms.openlocfilehash: 64a92927b9fe7658562f87f326bb9ac148991031
-ms.sourcegitcommit: fe7301d0f62493e42e6a1a81cdbda3457f0343b8
+ms.openlocfilehash: 6be7d788ac22232475e278ae9a5b04de9b6e17f7
+ms.sourcegitcommit: 916b4daa26c2c78611f7d837bd6ecf009f0082df
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2021
-ms.locfileid: "11327695"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "11343137"
 ---
 # 内線番号を移植する  
 
@@ -28,7 +28,7 @@ Chrome 拡張機能を移植するには、次の手順を実行します。
 1.  マニフェスト ファイルで、フィールドを `update_URL` 次の値に設定します `https://edge.microsoft.com/extensionwebstorebase/v1/crx` 。  この値は、Microsoft Edge アドオン ストア内の拡張機能のファイルをポイントし、Microsoft Edge で拡張機能の更新 `.crx` プログラムを確認できます。  
 1.  拡張機能の名前または説明で使用する場合は、次を使用して拡張機能 `Chrome` のブランドを変更します `Microsoft Edge` 。  認定プロセスに合格するには、変更が必要です。  
 1.  拡張機能をテストして、拡張機能をサイドロードして、Microsoft Edge で機能 [する機能を確認します][ExtensionsGettingStartedExtensionSideloading]。  
-1.  問題が発生した場合は、DevTools を使用して Microsoft Edge で拡張機能をデバッグするか、マイクロソフトにお問い [合わせください][mailtoExtensionMicrosoft]。  
+1.  問題が発生した場合は、DevTools を使用して Microsoft Edge で拡張機能をデバッグするか、マイクロソフトにお [問い合わせください][mailtoExtensionMicrosoft]。  
 1.  Microsoft Edge [アドオン ストアで][ExtensionsPublishPublishExtension] 拡張機能を公開するには、公開ガイドラインに従います。  
     
     > [!NOTE]

@@ -3,16 +3,16 @@ description: 検証済みストアを使用しない別の方法を使用して�
 title: 拡張機能を配布する別の方法
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/10/2021
+ms.date: 02/17/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: edge-chromium, 拡張機能の開発, ブラウザー拡張機能, アドオン, パートナー センター, 開発者
-ms.openlocfilehash: 9232b8912acaa52c8d97fdd5f13b82ec33c865d4
-ms.sourcegitcommit: fe7301d0f62493e42e6a1a81cdbda3457f0343b8
+ms.openlocfilehash: 3b2c72e13488632e2fadea2a7e8eb95888f67170
+ms.sourcegitcommit: 916b4daa26c2c78611f7d837bd6ecf009f0082df
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2021
-ms.locfileid: "11327625"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "11343151"
 ---
 # 代替の拡張配布方法  
 
@@ -65,24 +65,24 @@ Windows レジストリを使用して拡張機能を配布するには、次の
 基本設定の JSON ファイルを使用して拡張機能を配布するには、次の手順を実行します。
 
 1.  Linux を使用する場合は、拡張機能がインストールされるコンピューターで拡張機能 `.crx` ファイルが利用可能な場所を確認します。 拡張機能ファイル `.crx` をローカル ディレクトリにコピーするか、コンピューターから到達可能なネットワーク共有を使用します。 
-1.  ファイルの名前が拡張子の ID に対応する JSON ファイルを作成します。 たとえば、ファイル名を使用して JSON ファイルを作成します `aaaaaaaaaabbbbbbbbbbcccccccccc.json` 。  
+1.  ファイルの名前が拡張子の ID に対応する JSON ファイルを作成します。 たとえば、ファイル名を含む JSON ファイルを作成します `aaaaaaaaaabbbbbbbbbbcccccccccc.json` 。  
 1.  使用しているオペレーティング システムに応じて、JSON ファイルを次のいずれかのフォルダーに保存します。   
     *   **macOS**  
         *   ユーザー固有: `~USERNAME/Library/Application Support/Microsoft Edge/External Extensions/`  
         *   すべてのユーザー: `/Library/Application Support/Microsoft/Edge/External Extensions/`  
         
-        承認されていないユーザーがすべてのユーザーに拡張機能をインストールするのを防ぐには、拡張子ファイルが読み取り専用である必要があります。 さらに、次の条件が満たされている必要があります。
+        承認されていないユーザーがすべてのユーザーに拡張機能をインストールするのを防ぐには、拡張子ファイルが読み取り専用に設定されている必要があります。 さらに、次の条件が満たされている必要があります。
         
         *   パス内のすべてのディレクトリは、ユーザー ルートによって所有されます。  
         *   パス内のすべてのディレクトリは、1 つ以上のグループに `admin` 割り当 `wheel` てられます。  
         *   パス内のすべてのディレクトリは、ワールド書き込み可能ではありません。  
-        *   また、パスにはシンボリック リンクを含めずに指定する必要があります。  
+        *   パスにはシンボリック リンクも含めずに指定する必要があります。  
         
     *   **Linux**  
         *   ユーザー固有: `~/.config/microsoft-edge/External Extensions/`  
         *   すべてのユーザー: `/usr/share/microsoft-edge/extensions/`  
 1.  シナリオに応じて、JSON ファイルに続く適切なコードをコピーします。 
-    *   Linux にのみ適用されます。 ファイルからインストールする場合は、使用する場所とバージョンを指定 `external_crx` します `external_version` 。  
+    *   Linux にのみ適用されます。 ファイルからインストールする場合は、使用する場所とバージョンを指定 `external_crx` し、 `external_version`  
             
         ```json
         {
@@ -91,7 +91,7 @@ Windows レジストリを使用して拡張機能を配布するには、次の
         }
         ```  
 
-    *   macOS と Linux に適用されます。 からインストールする場合 `update_URL` は、次を使用して更新 URL を指定します `external_update_url` 。 
+    *   macOS および Linux に適用されます。 からインストールする場合 `update_URL` は、次を使用して更新 URL を指定します `external_update_url` 。 
         
         Linux 上のローカル ファイルからのみインストールする場合は、次のコードを `.crx` JSON ファイルにコピーします。  
     

@@ -1,22 +1,22 @@
 ---
-description: 開発者アカウントに登録して、Microsoft Edge アドオン ストアに拡張機能を公開する方法について説明します。
+description: Microsoft Edge アドオン ストアに拡張機能を公開するために開発者アカウントに登録する方法について説明します。
 title: Microsoft Edge 拡張機能開発者として登録して拡張機能を公開する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/05/2021
+ms.date: 02/17/2021
 ms.topic: conceptual
 ms.prod: microsoft-edge
 keywords: edge-chromium, 拡張機能の開発, ブラウザー拡張機能, アドオン, パートナー センター, 開発者
-ms.openlocfilehash: 8277390bb78e6692345e9c30ef26f60528655374
-ms.sourcegitcommit: fe7301d0f62493e42e6a1a81cdbda3457f0343b8
+ms.openlocfilehash: 0c3b4d70da214a171b7a6ebb308e89bad2ab16c2
+ms.sourcegitcommit: 916b4daa26c2c78611f7d837bd6ecf009f0082df
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2021
-ms.locfileid: "11327520"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "11343060"
 ---
 # Microsoft Edge 拡張機能開発者として登録する  
 
-拡張機能を Microsoft Edge アドオン カタログに提出するには、Microsoft Edge プログラムに開発者として登録する必要があります。  Microsoft Edge プログラムは、パートナー センター [にあります][MicrosoftPartnerCenter]。  
+拡張機能を Microsoft Edge アドオン ストアに提出するには、Microsoft Edge プログラムに開発者として登録する必要があります。  Microsoft Edge プログラムは、パートナー センター [にあります][MicrosoftPartnerCenter]。  
 
 > [!IMPORTANT]
 > Microsoft Edge プログラムに拡張機能を提出する際に必要な登録料はありません。  
@@ -57,7 +57,7 @@ ms.locfileid: "11327520"
           **アカウントの種類**  
        :::column-end:::
        :::column span="2":::
-          パートナー センターの Microsoft Edge プログラム [では、個人][MicrosoftPartnerCenter] アカウントと会社アカウントの両方が提供されます。  アカウントの詳細については、次の箇条書きで説明します。  どちらのアカウントの種類でも、Microsoft Edge アドオン カタログに拡張機能を公開できます。  
+          パートナー センターの Microsoft Edge プログラム [では、個人][MicrosoftPartnerCenter] アカウントと会社アカウントの両方が提供されます。  アカウントの詳細については、次の箇条書きで説明します。  どちらの種類のアカウントでも、Microsoft Edge アドオン ストアに拡張機能を公開できます。  
           
           > [!IMPORTANT]
           > 登録後は、このフィールドの値を変更できます。  
@@ -66,7 +66,7 @@ ms.locfileid: "11327520"
               個人アカウントは、会社に関連付けされていない開発者に適しています。  アカウント検証プロセスは短く、発行元の表示名が使用可能なか確認する必要があります。  
 
           *   `Company account`  
-              会社のアカウントは、組織または企業に関連付けられている。  アカウントの検証プロセスは長く、会社のアカウントを作成する権限を持っているという確認が含まれる。  プロセスの期間は、数日から数週間までです。  会社が Microsoft 検証パートナーから電話を受ける場合があります。  
+              会社のアカウントは、組織またはビジネスに関連付けられている。  アカウントの検証プロセスは長く、会社のアカウントを作成する権限を持っているという確認が含まれる。  プロセスの期間は、数日から数週間までです。  会社が Microsoft 検証パートナーから電話を受ける場合があります。  
               
        :::column-end:::
     :::row-end:::  
@@ -75,7 +75,7 @@ ms.locfileid: "11327520"
           **発行元の表示名**  
        :::column-end:::
        :::column span="2":::
-          このフィールドには、Microsoft Edge アドオン カタログに表示される名前が含まれる。  使用できる名前と、その名前を使用する権限がある場合にのみ使用できます。  会社のアカウントは、組織の登録された会社名を使用する必要があります。  
+          このフィールドには、Microsoft Edge アドオン ストアに表示される名前が含まれる。  使用できる名前と、その名前を使用する権限がある場合にのみ使用できます。  会社のアカウントは、組織の登録された会社名を使用する必要があります。  
           
           > [!NOTE]
           > このフィールドの最大長は 50 文字です。  
@@ -95,7 +95,7 @@ ms.locfileid: "11327520"
           **会社の承認者**  
        :::column-end:::
        :::column span="2":::
-          会社のアカウントの場合は、会社の承認者の連絡先情報を入力する必要があります。  連絡先情報には、名前、メール アドレス、電話番号が含まれます。  Microsoft は、認証プロセスの一部として指定されている会社の承認者に連絡し、拡張機能が組織に属している必要があります。  
+          会社のアカウントの場合は、会社の承認者の連絡先情報を入力する必要があります。  連絡先情報には、名前、メール アドレス、電話番号が含まれます。  Microsoft は、認証プロセスの一部として指定されている会社の承認者に連絡を取り、拡張機能が組織に属している必要があります。  
        :::column-end:::
     :::row-end:::  
     
@@ -104,7 +104,7 @@ ms.locfileid: "11327520"
     
 ## 次の手順  
 
-確認の状態を表示するには、パートナー センターの [アカウント設定] > **移動します**。  検証プロセスが完了するのを待っている間は、引き続き申請のビルド、テスト、準備を行います。  
+確認の状態を表示するには、パートナー センターの [アカウント設定> **に移動します**。  検証プロセスが完了するのを待っている間は、引き続き申請のビルド、テスト、準備を行います。  
 
 詳細については、「拡張機能を公開 [する」に移動します][ExtensionsChromiumPublishExtension]。  拡張機能の使用を開始する方法については [、「Microsoft Edge (Chromium)][ExtensionsChromiumGettingStartedIndex]拡張機能の使用を開始する」に移動してください。  
 
@@ -119,4 +119,4 @@ ms.locfileid: "11327520"
 
 [MicrosoftPartnerCenter]:  https://partner.microsoft.com/dashboard/microsoftedge/public/login?ref=dd "パートナー センター"  
 
-[WindowsCommunityEverythingAboutMicrosoftAccounts]:  https://community.windows.com/stories/everything-you-need-to-know-about-microsoft-accounts "Microsoft アカウントについて知る必要がある|Windows コミュニティ"  
+[WindowsCommunityEverythingAboutMicrosoftAccounts]:  https://community.windows.com/stories/everything-you-need-to-know-about-microsoft-accounts "Microsoft アカウントに関して知る必要がある|Windows コミュニティ"  

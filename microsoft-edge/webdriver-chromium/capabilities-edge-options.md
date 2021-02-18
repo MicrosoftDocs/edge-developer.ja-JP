@@ -3,23 +3,23 @@ description: EdgeDriver (Chromium) でサポートされている WebDriver の 
 title: Capabilities と EdgeOptions
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 01/29/2021
+ms.date: 02/10/2021
 ms.topic: article
 ms.prod: microsoft-edge
 ms.technology: devtools
 keywords: Microsoft Edge、Web 開発、html、css、javascript、開発者、WebDriver、Selenium、テスト、ツール、オートメーション、テスト
-ms.openlocfilehash: c2842740dfc6d902d1727634e00565f8e556969d
-ms.sourcegitcommit: 070a60f634908eea0e29e260331f9fc0aa85ee78
+ms.openlocfilehash: 5a48ca34e46b56fa60bcacfade2add23026be144
+ms.sourcegitcommit: f95812c4e1b7277f67c6c4891be2779cc1b5bdf1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "11306235"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "11343780"
 ---
 # Capabilities と EdgeOptions  
 
-Capabilities は、`EdgeDriver` セッションをカスタマイズして構成するために使用できるオプションです。  新しいセッションを開始する方法については、「Microsoft Edge の自動化 `EdgeDriver` [」に移動します][WebdriverIndexDrivingMicrosoftEdgeChromium]。  この記事では [、Microsoft Edge][WebdriverIndexInstallMicrosoftEdgeChromium] でサポートされている機能すべてと、セッションに機能を渡す方法について説明 `EdgeDriver` します。  
+Capabilities は、`EdgeDriver` セッションをカスタマイズして構成するために使用できるオプションです。  新しいセッションを開始する方法については、「Microsoft Edge の自動化 `EdgeDriver` [」に移動します][WebdriverIndexAutomateMicrosoftEdgeChromium]。  この記事では [、Microsoft Edge][WebdriverIndexInstallMicrosoftEdgeChromium] でサポートされている機能すべてについて説明し、セッションに機能を渡す方法の詳細について説明 `EdgeDriver` します。  
 
-機能は、JSON マップとして WebDriver セッションに渡されます。  WebDriver 言語バインドは、通常、タイプ セーフな便利なメソッドを提供します。そのため、JSON マップを自分で構成する必要はありません。  WebDriver の言語バインドごとに、機能を構成するためのメカニズムが異なります。  機能を構成する方法の [詳細については][WebdriverIndexChooseWebdriverLanguageBinding] 、優先する言語バインドのドキュメントに移動します。  [Selenium は][SeleniumMain] 、クラスを通じて機能を構成 `EdgeOptions` します。  
+機能は、JSON マップとして WebDriver セッションに渡されます。  WebDriver 言語バインドは、通常、タイプ セーフな便利なメソッドを提供します。そのため、JSON マップを自分で構成する必要はありません。  WebDriver の言語バインドによって、機能を構成するためのメカニズムが異なります。  機能を構成する方法の [詳細については][WebdriverIndexChooseWebdriverLanguageBinding] 、優先する言語バインドのドキュメントに移動します。  [Selenium は][SeleniumMain] 、クラスを通じて機能を構成 `EdgeOptions` します。  
 
 ## EdgeOptions クラスの使用  
 
@@ -32,7 +32,7 @@ options.AddExtensions("/path/to/extension.crx");
 var driver = new EdgeDriver(options);
 ```  
 
-便利な方法が関連付けられている機能を使用するには、このメソッドを使用 `AddAdditionalCapability` します。  機能の完全な名前と、適切な型の値を渡す必要があります。  使用できる機能と値の種類の完全な一覧を確認するには [、EdgeOptions オブジェクトに移動します](#edgeoptions-object)。  
+便利な方法が関連付けられている機能を使用するには、このメソッドを使用 `AddAdditionalCapability` します。  機能の完全な名前と、正しい型の値を渡す必要があります。  使用できる機能と値の種類の完全な一覧を確認するには [、EdgeOptions オブジェクトに移動します](#edgeoptions-object)。  
 
 ```csharp
 options.AddAdditionalCapability("wdpAddress", "remotehost:50080");
@@ -89,7 +89,7 @@ Microsoft Edge 固有の Capabilities は、ほとんどが `EdgeOptions` オブ
 
 [DevtoolsRemoteDebuggingWindows]: ../devtools-guide-chromium/remote-debugging/windows.md "Windows 10 デバイスのリモート デバッグの|Microsoft Docs"  
 [WebdriverIndexChooseWebdriverLanguageBinding]: ./index.md#choose-a-webdriver-language-binding "WebDriver 言語バインドを選択する - WebDriver (Chromium) |Microsoft Docs"
-[WebdriverIndexDrivingMicrosoftEdgeChromium]: ./index.md#automating-microsoft-edge-chromium "Microsoft Edge (Chromium) の自動化 - WebDriver (Chromium) |Microsoft Docs"    
+[WebdriverIndexAutomateMicrosoftEdgeChromium]: ./index.md#automate-microsoft-edge-chromium "Microsoft Edge (Chromium) の自動化 - WebDriver (Chromium) |Microsoft Docs"    
 [WebdriverIndexInstallMicrosoftEdgeChromium]: ./index.md#install-microsoft-edge-chromium "Microsoft Edge (Chromium) - WebDriver (Chromium) |Microsoft Docs"  
 
 [SeleniumMain]: https://www.selenium.dev "SeleniumHQ ブラウザ オートメーション"  
