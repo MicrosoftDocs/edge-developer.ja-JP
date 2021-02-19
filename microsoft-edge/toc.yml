@@ -272,20 +272,20 @@
             - name: 拡張機能の公開
               href: extensions-chromium/publish/publish-extension.md
             - name: 拡張機能の更新
-              href: extensions-chromium/publish/update.md
+              href: extensions-chromium/publish/update-extension.md
             - name: 申請の状態
               href: extensions-chromium/publish/submission-states.md
             - name: アカウント設定の管理
               href: extensions-chromium/publish/manage-settings.md
-            - name: お問い合わせ
-              href: extensions-chromium/publish/contact-us.md
+            - name: 連絡先の内線のサポート
+              href: extensions-chromium/publish/contact-extensions-team.md
         - name: Microsoft Edge のアドオン ポリシー
           items:
             - name: コンテンツ セキュリティ ポリシー
               href: extensions-chromium/store-policies/csp.md
             - name: Microsoft Edge 開発者向け ADA の補遺
               href: extensions-chromium/store-policies/ada-addendum.md
-            - name: Microsoft Edge アドオン カタログ開発者ポリシー
+            - name: Microsoft Edge アドオンストアの開発者ポリシー
               href: extensions-chromium/store-policies/developer-policies.md
         - name: エンタープライズ向け拡張機能
           items:
