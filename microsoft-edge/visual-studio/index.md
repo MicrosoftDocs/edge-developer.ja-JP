@@ -1,109 +1,145 @@
 ---
-description: Microsoft Edge (Chromium) と Visual Studio
+description: Microsoft Edge (クロム) と Visual Studio
 title: Visual Studio
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 12/15/2020
+ms.date: 02/18/2021
 ms.topic: article
 ms.prod: microsoft-edge
-keywords: microsoft edge, Web 開発, f12 ツール, devtools, vs, visual studio, debugger
-ms.openlocfilehash: f3796a040fe6c658211b4009445b5c179ab9b077
-ms.sourcegitcommit: a35a6b5bbc21b7df61d08cbc6b074b5325ad4fef
+keywords: microsoft edge, Web 開発, f12 ツール, devtools, vs, visual studio, デバッガー
+ms.openlocfilehash: 562952ef238c05922e468501706ab75e1976273d
+ms.sourcegitcommit: 661e8def3f27cea381c59ac38954789e736c18f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "11231210"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "11387272"
 ---
-# Visual Studio
+# <a name="visual-studio"></a>Visual Studio  
 
-Microsoft [Visual Studio](https://visualstudio.microsoft.com/vs/) は、Web アプリケーションの編集、デバッグ、ビルド、発行に使用できる統合された開発環境 (IDE) です。 これは、Web 開発の多くの側面に使用できる豊富な機能を備えるプログラムです。 Visual Studio には、ほとんどの ID で提供される標準のエディターとデバッガー以上の機能が用意されています。Visual Studio には、開発プロセスを容易にするためのコンパイラ、コード完了ツール、グラフィカル デザイナー、その他の多くの機能が含まれています。 まだ使用 [していない場合](https://visualstudio.microsoft.com/downloads/) は、Visual Studioページにアクセスしてダウンロードしてください。
+Microsoft [Visual Studio][MicrosoftVisualstudioVs] は、統合された開発環境 \(IDE\) です。   Web アプリの編集、デバッグ、ビルド、発行に使用します。  これは、Web 開発の多くの側面で使用できる機能豊富なプログラムです。  ほとんどの ID が提供する標準エディターとデバッガーの上に、Visual Studio機能が含まれています。  
 
-現在、Visual Studio 2019 では、ASP\.NET Framework および ASP\.NET Core アプリケーションの Microsoft Edge での JavaScript のデバッグがサポートされています。 次の手順に従って、Microsoft Edge をVisual Studio。
+*   コンパイラ  
+*   コード補完ツール  
+*   グラフィカル デザイナー  
+*   より多くの  
+    
+ファイルをまだ使用していない場合はVisual Studioに移動 [し][MicrosoftVisualstudioDownloads] 、Visual Studioダウンロードします。  
 
-## Microsoft Edge を起動する
-Visual Studio ASP\.NET と ASP\.NET Core アプリケーションをビルドし、Web サーバーを起動し、Microsoft Edge を起動して、1 つのボタンをクリックすると Visual Studio デバッガーを接続します。 これにより、MICROSOFT Edge で実行されている JavaScript を IDE から直接デバッグできます。
+現在、Visual Studio 2019 では、Microsoft Edge での JavaScript のデバッグがサポートされ、ASP.NET Core アプリASP.NETサポートされています。  Microsoft Edge のデバッグに使用するVisual Studio手順を実行します。  
 
-### 新しい ASP.NET Core Web アプリケーションを作成する
+## <a name="launch-microsoft-edge"></a>Microsoft Edge の起動  
 
-2019 Visual Studio開き、[新しいプロジェクトの **作成] を選択します**。 次の画面で **、[ASP\.NET Core Web アプリケーション** ] を選択し、[次へ] を **クリックします**。
+Visual Studioボタンを使用して次のワークフローを完了します。  
 
-> ##### 図 1  
-> 新しい ASP.NET Core Web アプリケーションを作成する 新しい ASP.NET ![ Core Web アプリケーションを作成する](./media/create-new-project.png)  
+1.  コア アプリASP.NETとASP.NET作成します。  
+1.  Web サーバーを起動します。  
+1.  Microsoft Edge を起動します。  
+1.  デバッガーをVisual Studioします。  
+    
+簡略化されたワークフローを使用すると、MICROSOFT Edge で実行される JavaScript を IDE から直接デバッグできます。  
 
-新しいプロジェクト **のプロジェクト名を** 入力し、[作成] をクリック **します**。 この例の目的上、React.jsを**** React.js Core アプリケーションと統合する方法を示すテンプレートとして ASP.NET を選択し、[作成] をクリック**します**。
+### <a name="create-a-new-aspnet-core-web-app"></a>コア Web アプリASP.NET作成する  
 
-### Microsoft Edge をアプリから起動Visual Studio
+2019 Visual Studio開き、[新しいプロジェクトの作成 **] を選択します**。  次の画面で、[コア Web アプリ**ASP.NET] を**  >  **選択します**。  
 
-プロジェクトを作成したら **、ClientApp/src/components/Counter.js。 ** 次に、Visual Studio再生ボタンと**IIS Express**の横にあるドロップダウンを選択して、JavaScript をデバッグする必要があります。 **** 
+:::image type="complex" source="./media/create-new-project.png" alt-text="コア Web アプリASP.NET作成する" lightbox="./media/create-new-project.png":::
+   コア Web アプリASP.NET作成する  
+:::image-end:::  
 
-> ##### 図 2  
-> 緑色の [再生]**** ボタンと **[IIS Express]** ドロップダウンの横にある、緑色の再生ボタンと IIS Express の横にある 
-> ![ ドロップダウン](./media/vs-dropdown.png)  
+新しいプロジェクト **のプロジェクト名を** 指定し、[作成] を **選択します**。  この例では、テンプレートとして ** [React.js] ** を選択し、[作成] を **選択します**。  この **React.js** テンプレートは、コア アプリにReact.jsをASP.NETします。  
 
-[スクリプト **のデバッグ] を選択し、[** 有効] を **クリックします**。
+### <a name="launch-microsoft-edge-from-visual-studio"></a>Microsoft Edge をアプリから起動Visual Studio  
 
-> ##### 図 3  
-> [スクリプトのデバッグを有効にする] Visual Studio ![ でスクリプトのデバッグを有効Visual Studio](./media/enable-script-debugging.png)  
+プロジェクトを作成した後、開きます `ClientApp/src/components/Counter.js` 。  ここで、JavaScript をデバッグVisual Studioするには、緑色の [再生] ボタンと******[IIS Express]** の横にあるドロップダウンを選択します。  
 
-同じドロップダウンで **、[Web ブラウザー** ] を選択し、Visual Studio起動する Microsoft Edge のプレビュー チャネル (Microsoft Edge Canary、Dev、Beta) をクリックします。 まだインストールしていない場合は、この [ページにアクセス](https://www.microsoftedgeinsider.com/download) して Microsoft Edge プレビュー チャネルをインストールしてください。
+:::image type="complex" source="./media/vs-dropdown.png" alt-text="緑の [再生] ボタンと IIS Express の横にあるドロップダウン" lightbox="./media/vs-dropdown.png":::
+   緑の [再生] ボタンと **IIS** Express の横 **にあるドロップダウン**  
+:::image-end:::  
 
-> ##### 図 4  
-> 起動する Microsoft Edge のプレビュー チャネルをVisual Studio Microsoft Edge のプレビュー チャネルを選択し、Visual Studio ![ します。](./media/set-web-browser.png)  
+[スクリプト**のデバッグが有効]**  >  **を選択します**。  
+
+:::image type="complex" source="./media/enable-script-debugging.png" alt-text="スクリプトのデバッグを有効にする方法をVisual Studio" lightbox="./media/enable-script-debugging.png":::
+   スクリプトのデバッグを有効にする方法をVisual Studio  
+:::image-end:::  
+
+同じドロップダウンで **、[Web ブラウザー** ] > Microsoft Edge のプレビュー チャネル (Microsoft Edge Canary、Dev、Beta など) を起動する Visual Studio を選択します。  Microsoft Edge プレビュー チャネルをまだ使用していない場合は [、[Microsoft Edge Insider][MicrosoftedgeinsiderDownload] チャネルのダウンロード] に移動してダウンロードします。  
+
+:::image type="complex" source="./media/set-web-browser.png" alt-text="起動する Microsoft Edge のプレビュー チャネルVisual Studio選択する" lightbox="./media/set-web-browser.png":::
+   起動する Microsoft Edge のプレビュー チャネルVisual Studio選択する  
+:::image-end:::  
 
 > [!NOTE]
-> Microsoft Edge (EdgeHTML) を選択するとVisual Studio Microsoft Edge (Chromium) の代わりに起動します。 [Microsoft Edge の](https://www.microsoftedgeinsider.com/download) プレビュー チャネルをインストールし、それらを選択するか、コンピューターにインストールされている Microsoft Edge のバージョンが Microsoft Edge (Chromium) であり、Microsoft Edge (EdgeHTML) ではインストールされていないことを確認します。
+> [Microsoft Edge\(EdgeHTML\] ) を選択した場合、Visual Studio代わりに Microsoft Edge \(Chromium\) を起動します。  [Microsoft Edge のプレビュー][MicrosoftedgeinsiderDownload] チャネルの 1 つをインストールするか、コンピューターにインストールされている Microsoft Edge のバージョンが Microsoft Edge \(Chromium\) であり、Microsoft Edge \(EdgeHTML\) ではインストールされていないことを確認します。  
 
-これで、Visual Studio構成が完了しました。緑色の [再生] ボタン **をクリック** します。 Visual Studioアプリケーションを構築し、Web サーバーを起動し、Microsoft Edge を起動して、そのアプリケーションで指定されているポートまたはポートに `https://localhost:44362/` **launchSettings.jsします**。
+これで、Visual Studioが正しく構成されたので、緑色の [再生] ボタン **を選択** します。  Visual Studioをビルドし、Web サーバーを起動し、Microsoft Edge を起動し、に指定されているポートに移動します `https://localhost:44362/` `launchSettings.json` 。  
 
-> ##### 図 5  
-> Microsoft Edge は、microsoft Edge Visual Studio ![ から起動された Microsoft Edge からVisual Studio](./media/edge-launch.png)  
+:::image type="complex" source="./media/edge-launch.png" alt-text="Microsoft Edge がアプリから起動Visual Studio" lightbox="./media/edge-launch.png":::
+   Microsoft Edge がアプリから起動Visual Studio  
+:::image-end:::  
 
-### Microsoft Edge で実行されている JavaScript のデバッグ
+### <a name="debug-javascript-running-in-microsoft-edge"></a>Microsoft Edge で実行されている JavaScript のデバッグ  
 
-再び Visual Studio に切り替えます。 次 **Counter.js**行 13 のブレークポイントを設定するには、その行の横にあるとじしろをクリックします。
+再び Visual Studio に切り替えます。  で `Counter.js` 、13 行目にブレークポイントを設定するには、行の横にあるガターを選択します。  
 
-> ##### 図 6
-> Visual Studio にブレークポイントを設定するには、Counter.jsの行 13 の横にあると**** じしろをクリックし、Visual Studio の行 13 の横にあるとじしろをクリック 
-> ![ Counter.js](./media/set-breakpoint.png)  
+:::image type="complex" source="./media/set-breakpoint.png" alt-text="[13 行目] の横にあるCounter.jsを選択して、ブレークポイントを設定Visual Studio" lightbox="./media/set-breakpoint.png":::
+   [13 行目] の横にあるガターを選択して、ブレークポイントを設定 `Counter.js` Visual Studio  
+:::image-end:::  
 
-起動した Microsoft Edge のインスタンスにVisual Studioします。 ページの **左側にある** NavMenu の [カウンター] をクリックします。 ここで、[増分] **をクリックします**。
+次に、起動した Microsoft Edge のインスタンスVisual Studioします。  Web ページ **の左側** にある NavMenu の [カウンター] を選択します。  次に、[増分] **を選択します**。  
 
-> ##### 図 7
-> ASP.NET Core Web アプリケーションの ASP.NET ページの [ ![ カウンター] ページ](./media/edge-counter.png)  
+:::image type="complex" source="./media/edge-counter.png" alt-text="コア Web アプリの [ASP.NET] ページ" lightbox="./media/edge-counter.png":::
+   コア Web アプリの [ASP.NET] ページ  
+:::image-end:::  
 
-JavaScript debugger in Visual Studio is going to hit the breakpoint we set in **Counter.js**. Visual Studio Microsoft Edge で実行されている JavaScript の実行を一時停止し、スクリプトを 1 行に 1 行ステップ実行できます。
+このページの JavaScript デバッガー Visual Studioで設定したブレークポイントにヒットします `Counter.js` 。  Visual Studio、Microsoft Edge で実行されている JavaScript のランタイムを一時停止し、スクリプトを 1 行に 1 行で実行できます。  
 
-> ##### 図 8
-> Visual Studio Microsoft Edge で実行されている JavaScript の一時停止Visual Studio Microsoft Edge で ![ 実行されている JavaScript の一時停止](./media/hit-breakpoint.png)  
+:::image type="complex" source="./media/hit-breakpoint.png" alt-text="Visual Studioが Microsoft Edge で実行されている JavaScript を一時停止する" lightbox="./media/hit-breakpoint.png":::
+   Visual Studioが Microsoft Edge で実行されている JavaScript を一時停止する  
+:::image-end:::  
 
-この例は、次の例で使用できる機能の簡単なVisual Studio。 2019 年 1 月 2019 年にVisual Studio詳細については、ドキュメントを [参照してください](/visualstudio/windows/?view=vs-2019&preserve-view=true)。
+この例は、ユーザーが使用できる機能の小さなデモンストレーションVisual Studio。  2019 の機能の詳細については、Visual Studioドキュメントに [Visual Studioしてください][VisualStudioWindowsIndex]。  
 
-## Microsoft Edge に接続する
-前のワークフローでは、Microsoft Edge Visual Studio起動します。 このワークフローを使用すると、既に実行されている Microsoft Edge Visual Studioデバッガーをアタッチできます。 
+## <a name="attach-to-microsoft-edge"></a>Microsoft Edge に接続する  
 
-最初に、Microsoft Edge の実行中のインスタンスが含めずに確認します。 次に、ターミナルから次のコマンドを実行します。
+以前は、Microsoft Edge をアプリから起動する必要Visual Studio。  これで、実行中の Microsoft Edge Visual Studioデバッガーを接続できます。  
+
+最初に、Microsoft Edge の実行中のインスタンスが含めずに確認します。  次に、コマンド ラインから次のコマンドを実行します。  
 
 ```console
 start msedge –remote-debugging-port=9222
-```
+```  
 
-次Visual Studio、[デバッグ] メニュー**を開**き、[プロセスにアタッチ **] を**選択するか、押します `Ctrl`  +  `Alt`  +  `P` 。
+[Visual Studio] メニューを**開**き、[プロセスに添付]**を選択**するか、 を選択します `Ctrl` + `Alt` + `P` 。  
 
-> ##### 図 9
-> Selecting **Attach to Process** in Visual Studio ![ Selecting **Attach to Process** in Visual Studio](./media/attach-to-process.png)  
+:::image type="complex" source="./media/attach-to-process.png" alt-text="[プロセスに添付] を選択Visual Studio" lightbox="./media/attach-to-process.png":::
+   [ **プロセスに添付]** を選択Visual Studio  
+:::image-end:::  
 
-[プロセス **にアタッチ]** ダイアログで、[接続の **種類** ] を **Chrome devtools プロトコル websocket (認証なし) に設定します**。 [接続先 **] テキストボックスに** 、入力して `http://localhost:9222/` 押 `Enter` します。 Microsoft Edge で開いているタブの一覧が 、[プロセスにアタッチ] ダイアログ **ボックスに一覧表示** されます。
+[プロセス**に接続] ダイアログで****、[接続の**種類] を **[Chrome devtools プロトコル websocket] (認証なし) に設定します**。  [接続先 **] テキスト ボックス** で、と入力して `http://localhost:9222/` 選択します `Enter` 。  [プロセスに添付] ダイアログボックスに表示されている Microsoft Edge にある開いているタブ **の一覧を確認** します。  
 
-> ##### 図 10
-> [プロセスに **アタッチ]** ダイアログボックスをVisual Studioの [プロセスにアタッチ] ![ ダイアログ ボックスをVisual Studio](./media/attach-to-process-dialog.png)  
+:::image type="complex" source="./media/attach-to-process-dialog.png" alt-text="[プロセスに添付] ダイアログ ボックスを構成Visual Studio" lightbox="./media/attach-to-process-dialog.png":::
+   [プロセスに **添付] ダイアログ ボックス** を構成Visual Studio  
+:::image-end:::  
 
-**[Select...] をクリックします。** JavaScript **(Microsoft Edge – Chromium) を確認します**。 [最新の情報に更新] ボタンをクリックすると、タブの追加、新しいタブへの**** 移動、およびタブの終了を行い、[プロセスにアタッチ] ダイアログに反映された変更**を確認**できます。 デバッグするタブを選択し、[アタッチ] を **クリックします**。
+**[Select...] を選択>** **JavaScript (Microsoft Edge – Chromium) の**横にあるチェック ボックスをオンにします。  タブを追加するには、新しいタブに移動し、タブを閉じて、[プロセスに添付****] ダイアログに反映された変更を表示するには、[更新] ボタン**を選択**します。  デバッグするタブを選択し、[アタッチ] を **選択します**。  
 
-これでVisual Studioデバッガーが Microsoft Edge にアタッチされました。 JavaScript の実行を一時停止し、ブレークポイントを設定し、次のコマンドの [デバッグ出力] ウィンドウでステートメント `console.log()` を直接Visual Studio。
+これでVisual Studioデバッガーが Microsoft Edge に接続されました。  JavaScript の実行を一時停止し、ブレークポイントを設定し、ステートメントを確認するには、次のページの [デバッグ出力] ウィンドウで直接 `console.log()` Visual Studio。  
 
-## Microsoft Visual Studio チームと連絡を取る  
+## <a name="getting-in-touch-with-the-microsoft-visual-studio-team"></a>Microsoft のチームと連絡を取Visual Studioする  
 
-JavaScript を使用する方法の詳細については、このページVisual Studio。  Please send us feedback by clicking the **Feedback** icon in Visual Studio or by twittering [ @VisualStudio and @EdgeDevTools](https://twitter.com/intent/tweet?text= @VisualStudio+@EdgeDevTools).  
+Microsoft Visual Studioおよび Microsoft Edge チームは、JavaScript を使用する方法の詳細について、Visual Studio。  フィードバックを送信するには、[フィードバックの**** 送信] アイコンをVisual Studioまたはツイート@VisualStudio[を@EdgeDevTools。][TwitterIntentTweetViualstudioEdgdevtools]  
 
-> ##### 図 11
-> [ **フィードバック** ] アイコンVisual Studioの ![ [フィードバック] アイコンVisual Studio](./media/feedback-icon.png)  
+:::image type="complex" source="./media/feedback-icon.png" alt-text="[フィードバックの送信] Visual Studio" lightbox="./media/feedback-icon.png":::
+   [ **フィードバックの送信** ] Visual Studio  
+:::image-end:::  
+
+<!-- links -->  
+
+[VisualStudioWindowsIndex]: /visualstudio/windows/index "Visual Studioドキュメント|Microsoft Docs"  
+
+[MicrosoftVisualstudioDownloads]: https://visualstudio.microsoft.com/downloads "ダウンロード Visual Studio"  
+[MicrosoftVisualstudioVs]: https://visualstudio.microsoft.com/vs "Visual Studio IDE"  
+
+[MicrosoftedgeinsiderDownload]: https://www.microsoftedgeinsider.com/download "Microsoft Edge Insider Channels をダウンロードする"  
+
+[TwitterIntentTweetViualstudioEdgdevtools]: https://twitter.com/intent/tweet?text=@VisualStudio+@EdgeDevTools "ツイートして@VisualStudioと@EdgeDevTools |Twitter"  

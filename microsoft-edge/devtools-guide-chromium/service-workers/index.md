@@ -1,97 +1,97 @@
 ---
-description: サービスの作業者の機能強化とそれぞれの使い方について説明します。
-title: サービスワーカーの機能強化
+description: Service Worker の機能強化とそれぞれの使い方について説明します。
+title: サービス ワーカーの機能強化
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 11/10/2020
+ms.date: 02/19/2021
 ms.topic: article
 ms.prod: microsoft-edge
-keywords: microsoft edge、web 開発、f12 ツール、devtools、service worker、PWA
-ms.openlocfilehash: 4e1b43235ccd7b108d2aadd1c803aa3276fa1265
-ms.sourcegitcommit: 080759f68a0a158f10dc20d20c14e222ace1be84
+keywords: microsoft edge, Web 開発, f12 ツール, devtools, service worker, PWA
+ms.openlocfilehash: 2f32155d1d28d1e65ad29abfe58a414f3e3c6ed7
+ms.sourcegitcommit: 661e8def3f27cea381c59ac38954789e736c18f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "11190039"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "11387278"
 ---
-# サービスワーカーの機能強化  
+# <a name="service-worker-improvements"></a>サービス ワーカーの機能強化  
 
-この記事では、サービスの担当者と、各 [ユーザー][MdnServiceWorkerApi] を通過するネットワーク要求の改善について説明します。  **Service worker の機能強化**は、**ネットワーク**、**アプリケーション**、**ソース**の各ツールに含まれています。  この改善には、次のタスクが含まれます。  
+この記事では、サービス ワーカーを操作するための開発者ツールの改善[][MdnServiceWorkerApi]と、各サービス ワーカーを通過するネットワーク要求について説明します。  サービス**ワーカーの機能強化は、[** ネットワーク **]、[****アプリケーション**]、および [ソース]**ツールにあります**。  この機能強化により、以下のタスクが簡略化されます。  
 
-*   サービスワーカーのタイムラインに基づいてデバッグします。  
-    *   要求の開始とブートストラップの期間。  
-    *   サービスワーカー登録に更新します。  
-    *   [Fetch イベント][MdnFetchEvent]ハンドラーを使った要求の実行時。  
-    *   クライアントを読み込むすべての fetch イベントのランタイム。  
-*   Fetch イベントハンドラーのランタイムの詳細、イベントハンドラーのインストール、イベントハンドラーのアクティブ化について説明します。  
-*   [ページスクリプト情報](#sources)を使った fetch イベントハンドラーのステップインとアウト。  
+*   サービス ワーカーのタイムラインに基づいてデバッグします。  
+    *   ブートストラップの要求の開始と期間。  
+    *   サービス ワーカー登録に更新します。  
+    *   フェッチ イベント ハンドラーを使用した [要求の][MdnFetchEvent] ランタイム。  
+    *   クライアントを読み込むすべてのフェッチ イベントのランタイム。  
+*   フェッチ イベント ハンドラーの実行時の詳細を確認し、イベント ハンドラーをインストールし、イベント ハンドラーをアクティブ化します。  
+*   ページ スクリプト情報を使用してフェッチ イベント ハンドラーにステップ [アウトします](#sources)。  
+    
+エクスペリエンスは、3 つの異なる開発者ツールにまたがっています。  
 
-このエクスペリエンスは、3種類の開発者ツールにわたります。  
+1.  ネットワーク [ツール](#network) 。  サービス ワーカーを介して実行されるネットワーク要求を選択し、タイミング ツールでサービス ワーカーの対応するタイムラインに **アクセス** します。  
+1.  アプリケーション [ツール](#application) 。  サービス ワーカーをデバッグするには、サービス ワーカー **ツールに移動** します。  
+1.  [ [ソース]](#sources) ツール。  フェッチ イベント ハンドラーにステップ インするときにページ スクリプト情報にアクセスします。  
+    
+## <a name="network"></a>ネットワーク  
 
-1.  [ネットワーク](#network)ツール。  サービスワーカーを通じて実行されるネットワーク要求を選択し、 **タイミング** ツールでサービスワーカーの対応するタイムラインにアクセスします。  
-1.  [アプリケーション](#application)ツール。  サービスワーカーをデバッグするには、 **サービスワーカー** ツールに移動します。  
-1.  [ソース](#sources)ツール。  Fetch イベントハンドラーにステップインするときに、ページのスクリプト情報にアクセスします。  
-
-## ネットワーク  
-
-:::image type="complex" source="../media/sw-network-timeline.msft.png" alt-text="ネットワークツールのサービスワーカーのタイムライン" lightbox="../media/sw-network-timeline.msft.png":::
-   ネットワークビュー  
+:::image type="complex" source="../media/sw-network-timeline.msft.png" alt-text="ネットワーク ツールのサービス ワーカー タイムライン" lightbox="../media/sw-network-timeline.msft.png":::
+   ネットワーク ビュー  
 :::image-end:::  
 
-**ネットワーク**ツールの service worker デバッグ機能にアクセスするには、次のいずれかの操作を実行します。  
+ネットワーク ツールでサービス ワーカーのデバッグ機能に **アクセスするには** 、次のいずれかの操作を実行します。  
 
-*   **ネットワーク**ツールで直接アクセスする。  
-*   **アプリケーション**ツールで開始されました。  
+*   ネットワーク ツールで **直接アクセス** します。  
+*   アプリケーション ツール **で開始** します。  
     
-### ルーティングを要求する  
+### <a name="request-routing"></a>要求ルーティング  
 
-要求のルーティングをより簡単にするために、タイムラインでは、サービスワーカーの起動時と fetch イベントが表示されるようになりました `respondWith` 。  サービスワーカーを通じて渡されたネットワーク要求をデバッグし、視覚化するには、次の操作を実行します。  
+要求ルーティングを視覚化しやすくするために、タイムラインにサービス ワーカーの起動とフェッチ イベントが `respondWith` 表示されます。  サービス ワーカーを介して渡されたネットワーク要求をデバッグおよび視覚化するには、次のアクションを実行します。  
 
-1.  サービスワーカーを通じて行われたネットワーク要求を選択します。  
-1.  **タイミング**ツールを開きます。  
+1.  サービス ワーカーを経由したネットワーク要求を選択します。  
+1.  タイミング ツール **を開** きます。  
     
-### イベントの取得  
+### <a name="fetch-events"></a>イベントのフェッチ  
 
-Fetch イベントの詳細については、 `respondWith` の左にあるドロップダウン矢印を選択して `respondWith` ください。  受信した **元の要求** と **応答**の詳細については、対応するドロップダウン矢印を参照してください。  
+フェッチ イベントの詳細 `respondWith` については、左側のドロップダウン矢印を選択します `respondWith` 。  元の要求と **受信した応答** の詳細については **、対応する**ドロップダウン矢印を使用します。  
 
-## Application  
+## <a name="application"></a>Application  
 
-:::image type="complex" source="../media/sw-application-timeline.msft.png" alt-text="アプリケーションビュー" lightbox="../media/sw-application-timeline.msft.png":::
-   アプリケーションビュー  
+:::image type="complex" source="../media/sw-application-timeline.msft.png" alt-text="アプリケーション ビュー" lightbox="../media/sw-application-timeline.msft.png":::
+   アプリケーション ビュー  
 :::image-end:::  
 
-### サービスワーカーの更新タイムライン  
+### <a name="service-worker-update-timeline"></a>サービス ワーカーの更新タイムライン  
 
-Microsoft Edge DevTools チームは、サービスワーカーの更新ライフサイクルを反映するために、 **アプリケーション** ツールにタイムラインを追加しました。  インストールイベントとライセンス認証イベントが表示されます。  各イベントには、より詳しい情報を提供するためのドロップダウン矢印があります。  
+Microsoft Edge DevTools チームは、サービス**** ワーカーの更新ライフサイクルを反映するために、アプリケーション ツールにタイムラインを追加しました。  インストールイベントとライセンス認証イベントが表示されます。  各イベントには、詳細を示す対応するドロップダウン矢印があります。  
 
-### ルーティングイベントとフェッチイベントを要求する  
+### <a name="request-routing-and-fetch-events"></a>ルーティングイベントとフェッチ イベントの要求  
 
-これで、コンソールのドロアーから **ネットワーク** ツールを介してサービスワーカーのタイムラインにアクセスできるようになりました。  この機能は、パフォーマンスを向上させると共に、UI の重複を最小限に抑え、より包括的なデバッグエクスペリエンスを作成します。  
+これで、コンソール ドロワーのネットワーク ツールを**** 使用してサービス ワーカーのタイムラインにアクセスできます。  この機能は、パフォーマンスを向上し、UI の重複を最小限に抑え、より包括的なデバッグ エクスペリエンスを作成します。  
 
-1.  デバッグしているサービスワーカーを開きます。  
-1.  [ **ネットワーク** ] ボタンを選んで、 [要求ルーティングエクスペリエンス](#network)を開きます。  
-1.  Fetch イベントの要求と応答の情報については、返答 **Dwith** ドロップダウンを使います。  
+1.  デバッグ中のサービス ワーカーを開きます。  
+1.  [ネットワーク] **ボタンを** 選択して、要求ルーティング [エクスペリエンスを開きます](#network)。  
+1.  イベント要求と **応答情報をフェッチするには、respondWith** ドロップダウンを使用します。  
 
-**ネットワーク**ツールには、デバッグしているサービスワーカーを通じて発生したネットワーク要求が表示されます。  自動フィルターを使用すると、調査を絞り込むことができます。
+ネットワーク **ツール** には、デバッグ中のサービス ワーカーを経由したネットワーク要求が表示されます。  自動フィルターは、探索を絞り込む方法です。
 
-## Sources  
+## <a name="sources"></a>Sources  
 
 :::image type="complex" source="../media/sw-sources.msft.png" alt-text="DOM ビュー" lightbox="../media/sw-sources.msft.png":::
    DOM ビュー  
 :::image-end:::  
 
-さらに多くのスタック情報を見つけるには、fetch ハンドラーにブレークポイントを設定します。  詳細情報は、ページスクリプトでリソースが要求された場所を示します。  デバッガーが fetch ハンドラー内で一時停止すると、パネルの右側にスタック情報がまとめて表示されます。  その後は、スタックフレーム内を移動することができます。  
+スタック情報の詳細を見つけるには、フェッチ ハンドラーでブレーク ポイントを設定します。  詳細は、ページ スクリプトでリソースが要求される場所につながる。  デバッガーがフェッチ ハンドラー内で一時停止すると、結合されたスタック情報が右側のパネルに表示されます。  その後、スタック フレーム内を移動できます。  
 
-### 今後の作業  
+### <a name="future-work"></a>今後の作業  
 
-Microsoft Edge DevTools チームは、キャッシュの詳細をさらに開発することを計画しており、 [プログレッシブ Web アプリケーション][MdnProgressiveWebApps] 開発者向けのサービスワーカーのデバッグエクスペリエンスを向上させるその他の方法について調査しています。  
+Microsoft Edge DevTools チームは、キャッシュの詳細をさらに開発し、 [プログレッシブ Web][MdnProgressiveWebApps] アプリケーション開発者向けのサービス ワーカー デバッグ エクスペリエンスを向上させる方法を検討しています。  
 
-## Microsoft Edge DevTools チームと連絡を取る  
+## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームと連絡を取る  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
 <!-- links -->  
 
 [MdnFetchEvent]: https://developer.mozilla.org/docs/Web/API/FetchEvent "FetchEvent |MDN"  
-[MdnProgressiveWebApps]: https://developer.mozilla.org/docs/Web/Progressive_web_apps "プログレッシブ web アプリ (PWAs) |MDN"  
+[MdnProgressiveWebApps]: https://developer.mozilla.org/docs/Web/Progressive_web_apps "プログレッシブ Web アプリ (PWAs) |MDN"  
 [MdnServiceWorkerApi]: https://developer.mozilla.org/docs/Web/API/Service_Worker_API "Service Worker API |MDN"  

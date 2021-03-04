@@ -7,18 +7,18 @@ ms.date: 02/03/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 9e4bdfcb3cc32364931894dcb3c857ac6e082809
-ms.sourcegitcommit: 12c30ad4ab2664d17c9b7e9d59d7a3cda60ff65c
+ms.openlocfilehash: f56586fa77e34da7884d9d7c565b8cbcc4106c4a
+ms.sourcegitcommit: 661e8def3f27cea381c59ac38954789e736c18f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "11313087"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "11387287"
 ---
-# DevTools の新機能 (Microsoft Edge 88)  
+# <a name="whats-new-in-devtools-microsoft-edge-88"></a>DevTools の新機能 (Microsoft Edge 88)  
 
 [!INCLUDE [contact DevTools team note](../../includes/edge-whats-new-note.md)]  
 
-## Microsoft Edge と Microsoft Edge ドライバーが Linux で利用可能に  
+## <a name="microsoft-edge-and-microsoft-edge-driver-now-available-on-linux"></a>Microsoft Edge と Microsoft Edge ドライバーが Linux で利用可能に  
 
 <!-- Title: Microsoft Edge and Microsoft Edge Driver on Linux  -->  
 <!-- Subtitle: Get Microsoft Edge Dev on Ubuntu, Debian, Fedora, and openSUSE distributions and start automating in CI/CD environments with Microsoft Edge Driver. -->  
@@ -31,7 +31,7 @@ Microsoft Edge Dev は、Ubuntu、Debian、Fedora、openSUSE の配布でサポ�
    Linux 上の Microsoft Edge の DevTools  
 :::image-end:::  
 
-## 問題ツールの Webhint とプラットフォームのヒントの向上  
+## <a name="improved-webhint-and-platform-tips-in-the-issues-tool"></a>問題ツールの Webhint とプラットフォームのヒントの向上  
 
 <!-- Title: Improvements to Issues tool and webhint integration  -->  
 <!-- Subtitle: Categories and third-party filtering make it easier to survey issues in the Issues tool.  Issues surfaced by webhint now have improved code snippets and documentation links to help you fix problems in your website.  -->  
@@ -57,7 +57,7 @@ Microsoft Edge Dev は、Ubuntu、Debian、Fedora、openSUSE の配布でサポ�
    **問題** ツール  
 :::image-end:::  
 
-## コンポジット レイヤーが 3D ビューに表示される  
+## <a name="composited-layers-are-now-in-3d-view"></a>コンポジット レイヤーが 3D ビューに表示される  
 
 <!-- Title: 3D View is now integrated with Composited Layers  -->  
 <!-- Subtitle: Composited Layers are now in 3D View.  -->  
@@ -70,7 +70,7 @@ Z インデックス値と ドキュメント オブジェクト モデル \(DOM
    **[コンポジット レイヤー]** ウィンドウ  
 :::image-end:::  
 
-## [スタイル] ウィンドウの CSS 変数の定義  
+## <a name="css-variable-definitions-in-styles-pane"></a>[スタイル] ウィンドウの CSS 変数の定義  
 
 <!-- Title: Jump to CSS variable definitions  -->  
 <!-- Subtitle: Choose any CSS variable to navigate directly to the definition in the Styles tool. -->  
@@ -93,7 +93,7 @@ Z インデックス値と ドキュメント オブジェクト モデル \(DOM
    :::column-end:::
 :::row-end:::  
 
-## サービス ワーカー デバッグの機能強化  
+## <a name="service-worker-debugging-improvements"></a>サービス ワーカー デバッグの機能強化  
 
 <!-- Title:  Service worker debugging improvements in the Network, Application, and Sources tools  -->  
 <!-- Subtitle:  Making service workers easier to debug for progressive web applications and more.  -->  
@@ -102,7 +102,7 @@ Z インデックス値と ドキュメント オブジェクト モデル \(DOM
 
 要求ルーティングは、サービス ワーカーを経由して実行されるネットワーク要求に基づいて、`startup` と `fetch` イベントを表示します。  タイムラインには、**アプリケーション ツール**または**ネットワーク ツール**からアクセスします。  タイムラインは、サービス ワーカーに問題が発生し、`startup` または `fetch` イベントに何の問題があるかを確信する場合に役立ちます。  
 
-### アプリケーション ツール  
+### <a name="application-tool"></a>アプリケーション ツール  
 
 <!-- Title: Open Network tool from the Service Workers pane  -->  
 <!-- Subtitle: Display additional context when debugging a service worker.  -->  
@@ -128,7 +128,7 @@ Z インデックス値と ドキュメント オブジェクト モデル \(DOM
        **ドロワー**を閉じて、**ネットワーク ツール**を返す  
     :::image-end:::  
     
-### ネットワーク ツール  
+### <a name="network-tool"></a>ネットワーク ツール  
 
 サービス ワーカーを介して実行されるネットワーク要求をデバッグします。  **アプリケーション** ツールからネットワーク要求を開く場合があります。  要求ごとに、DevTools はタイミング ウィンドウに次の情報を[[タイミング]][DevtoolsNetworkReferenceViewTimingBreakdownRequest] ウインドウに表示 します。  
 
@@ -141,7 +141,7 @@ Z インデックス値と ドキュメント オブジェクト モデル \(DOM
    **[タイミング]** ウィンドウ  
 :::image-end:::  
 
-### ソース ツール  
+### <a name="sources-tool"></a>ソース ツール  
 
 以前のバージョンの Microsoft Edge では、呼び出し履歴の深さのレベルは、サービス ワーカーの JavaScript コードに制限されています。  Microsoft Edge 88 では、呼び出し履歴に、サービス ワーカーを介して実行される要求を行ったイニシエーターが表示されます。  
 
@@ -160,7 +160,7 @@ Z インデックス値と ドキュメント オブジェクト モデル \(DOM
    :::column-end:::
 :::row-end:::  
 
-## ネットワーク要求のプロパティ値をコピーする  
+## <a name="copy-property-value-of-a-network-request"></a>ネットワーク要求のプロパティ値をコピーする  
 
 <!-- Title: Copy response JSON in Network tool using the contextual menu  -->  
 <!-- Subtitle:  The Network tool now has a more consistent UX.  Easily copy the JSON response using the contextual menu.  -->  
@@ -185,7 +185,7 @@ Z インデックス値と ドキュメント オブジェクト モデル \(DOM
    :::column-end:::
 :::row-end:::  
 
-## 複数押しのキーボード ショートカットをカスタマイズする  
+## <a name="customize-multi-press-keyboard-shortcuts"></a>複数押しのキーボード ショートカットをカスタマイズする  
 
 <!-- Title: Customize multi-press keyboard shortcuts  -->  
 <!-- Subtitle: Create custom multi-press keyboard shortcuts in the shortcut editor.  -->  
@@ -200,7 +200,7 @@ Z インデックス値と ドキュメント オブジェクト モデル \(DOM
    複数押しキーボード ショートカット  
 :::image-end:::  
 
-## DevTools がブラウザーの言語と一致する  
+## <a name="devtools-now-match-browser-language"></a>DevTools がブラウザーの言語と一致する  
 
 Microsoft Edge バージョン 87 では、[DevTools の設定][DevtoolsCustomizeIndexSettings]で [**ブラウザーの言語の一致**] 設定をオンにした場合、DevTools はブラウザーの言語と一致しません。  Microsoft Edge バージョン 88 では、[**ブラウザーの言語の一致]** 設定をオンにすると、DevTools はブラウザーの言語と一致します。  **ブラウザーの言語の一致** DevTools 設定の詳細については、[「DevTools 言語設定の変更」][DevtoolsCustomizeLocalization]に移動します。  
 
@@ -208,11 +208,11 @@ Microsoft Edge バージョン 87 では、[DevTools の設定][DevtoolsCustomiz
    日本語での**ブラウザーの言語の一致** DevTools 設定   
 :::image-end:::  
 
-## Chromium プロジェクトからのお知らせ  
+## <a name="announcements-from-the-chromium-project"></a>Chromium プロジェクトからのお知らせ  
 
 [!INCLUDE [contact DevTools team note](../../includes/chromium-whats-new-note.md)]  
 
-### 新しい CSS 角度可視化ツール  
+### <a name="new-css-angle-visualization-tools"></a>新しい CSS 角度可視化ツール  
 
 DevTools では、CSS 角度デバッグのサポートが向上しました。  ページ上の HTML 要素に CSS 角度が適用されている場合、**[スタイル]** ツールの角度の横に時計アイコンが表示 されます。  クロック オーバーレイを切り替えるには、時計アイコンを選択します。  角度を変更するには、時計の任意の場所を選択するか、または針をドラッグします。  角度の値を変更するには、マウス ショートカットとキーボード ショートカットを使用することもできます。  <!--  To learn more, navigate to [Angle Clock][DevtoolsCssReferenceChangeAngleValueWithAngleClock].  -->  Chromium オープン ソース プロジェクトでこの機能のリアルタイム更新を確認するには、問題 [1126178][CR1126178] および [1138633][CR1138633]に移動します。  
 
@@ -222,13 +222,13 @@ DevTools では、CSS 角度デバッグのサポートが向上しました。 
 
 ```css
 background: linear-gradient(100deg, lightblue, pink);
-```
+```  
 
 :::image type="complex" source="../../media/2020/11/css-angle.msft.png" alt-text="CSS の角度" lightbox="../../media/2020/11/css-angle.msft.png":::
    CSS の角度  
 :::image-end:::  
 
-### [記憶域] ウィンドウで、記憶域クォータのサイズをシミュレートする  
+### <a name="simulate-storage-quota-size-in-the-storage-pane"></a>[記憶域] ウィンドウで、記憶域クォータのサイズをシミュレートする  
 
 **[記憶域]** ウィンドウで記憶域クォータのサイズを上書きする場合があります。  この機能を使用すると、ディスクの可用性が低いシナリオで、さまざまなデバイスをシミュレートし、Web サイトまたはアプリの動作をテストできます。  記憶域クォータをシミュレートするには、次の操作を実行します。  
 
@@ -242,7 +242,7 @@ DevTools でモバイル デバイスや他の機能をエミュレートする�
    記憶域クォータのサイズをシミュレートする  
 :::image-end:::  
 
-### ネットワーク ツールで CORS エラーを報告する  
+### <a name="report-cors-errors-in-the-network-tool"></a>ネットワーク ツールで CORS エラーを報告する  
 
 [「CORS エラー デモ」][GlitchCorsErrors]に移動して、この機能を試してみてください。  **ネットワーク** ツールを開き、ページを更新して、失敗した CORS ネットワーク要求を確認します。  状態の列には、**CORS エラー**が表示されます。  エラーの上にホバーすると、ツールヒントにエラー コードが表示されます。  Microsoft Edge バージョン 87 以前では、DevTools は CORS エラーの一般的な **(失敗)** 状態のみを表示しました。  Chromium オープン ソース プロジェクトでこの機能のリアルタイム更新を確認するには、問題 [1141824][CR1141824] に移動します。  
 
@@ -250,9 +250,9 @@ DevTools でモバイル デバイスや他の機能をエミュレートする�
    CORS エラー  
 :::image-end:::  
 
-### フレーム詳細ビューの更新  
+### <a name="frame-details-view-updates"></a>フレーム詳細ビューの更新  
 
-#### フレーム詳細ビューのクロスオリジン分離情報  
+#### <a name="cross-origin-isolation-information-in-the-frame-details-view"></a>フレーム詳細ビューのクロスオリジン分離情報  
 
 クロスオリジン分離状態は、**「セキュリティと分離」** セクションに表示されます。  新しい **「API の可用性」** セクションには、`SharedArrayBuffer`s \(SAB\) の可用性と、バッファーを使用して共有できるかどうかが表示されます`postMessage()`。  SAB と `postMessage()` が現在利用可能な場合、非推奨の警告が表示されますが、コンテキストはクロスオリジン分離されていません。  クロスオリジン分離の詳細と、`SharedArrayBuffers`が必要な理由については、[WindowOrWorkerGlobalScope.crossOriginIsolated][MdnWindoworworkerglobalscopeCrossoriginisolated] に移動します。  Chromium オープン ソース プロジェクトでこの機能のリアルタイム更新を確認するには、問題 [1139899][CR1139899] に移動します。  
 
@@ -260,7 +260,7 @@ DevTools でモバイル デバイスや他の機能をエミュレートする�
    クロスオリジン情報  
 :::image-end:::  
 
-#### フレーム詳細ビューの新しい Web ワーカー情報  
+#### <a name="new-web-workers-information-in-the-frame-details-view"></a>フレーム詳細ビューの新しい Web ワーカー情報  
 
 DevTools では、関連する親フレームの下に Web ワーカーが整理されます。  たとえば、`someName` フレームが `worker.js` を作成する場合、`worker.js` が**フレーム** リストの下にある `someName` に表示 されます。  Web ワーカーの詳細を表示するには、次のアクションを実行します。  
 
@@ -275,7 +275,7 @@ Chromium オープン ソース プロジェクトでこの機能のリアルタ
    Web ワーカー情報  
 :::image-end:::  
 
-#### 開いたウィンドウのオープン フレームの詳細を表示する  
+#### <a name="display-opener-frame-details-for-opened-windows"></a>開いたウィンドウのオープン フレームの詳細を表示する  
 
 DevTools では、関連する親[フレーム][MdnWindowFrames]の下に開いている [Windows][MdnWindowConstructors] が整理 されます。  たとえば、`top` フレームが `Window` を `https://docs.microsoft.com/microsoft-edge/devtools-guide-chromium` に開く場合は、**フレーム** リストの下の `top` に `Window` が表示されます。  
 
@@ -297,7 +297,7 @@ Chromium オープン ソース プロジェクトでこの機能の履歴を確
    開いたフレームの詳細  
 :::image-end:::  
 
-### ネットワーク イニシエーターの stacktrace をコピーする  
+### <a name="copy-stacktrace-for-network-initiator"></a>ネットワーク イニシエーターの stacktrace をコピーする  
 
 stacktrace をクリップボードにコピーするには、次のアクションを実行します。  
 
@@ -310,7 +310,7 @@ Chromium オープン ソース プロジェクトでこの機能の履歴を確
    stacktrace のコピー  
 :::image-end:::  
 
-### マウスオーバー時の Wasm 変数値のプレビュー  
+### <a name="preview-wasm-variable-value-on-mouseover"></a>マウスオーバー時の Wasm 変数値のプレビュー  
 
 この機能を使用して、コードが一時停止した時に WebAssembly \(Wasm\) 変数の値を確認します。  変数の現在の値を表示するには、変数にホバーします。  Chromium オープン ソース プロジェクトでこの機能のリアルタイム更新を確認するには、問題 [1058836][CR1058836] および [1071432][CR1071432] に移動します。  
 
@@ -318,7 +318,7 @@ Chromium オープン ソース プロジェクトでこの機能の履歴を確
    マウスオーバー時の Wasm 変数のプレビュー  
 :::image-end:::  
 
-### ファイルとメモリのサイズに対する一貫した測定単位  
+### <a name="consistent-units-of-measurement-for-sizes-of-files-and-memory"></a>ファイルとメモリのサイズに対する一貫した測定単位  
 
 DevTools は、ファイルとメモリのサイズを表示するために、`kB` を常に使用します。  以前の DevTools では、`kB` と `KiB` が混在していました。
 
@@ -327,11 +327,11 @@ DevTools は、ファイルとメモリのサイズを表示するために、`k
     
 たとえば、**ネットワーク** ツールは以前`kB` をラベルで使用していましたが、計算には `KiB` を使用していました。  お客様のフィードバックから、この不整合によって混乱が生じることが明らかになりました。  Chromium オープン ソース プロジェクトでこの機能の履歴を確認するには、問題 [1035309][CR1035309] に移動します。  
 
-## Microsoft Edge プレビュー チャネルをダウンロードする  
+## <a name="download-the-microsoft-edge-preview-channels"></a>Microsoft Edge プレビュー チャネルをダウンロードする  
 
 Windows、Linux、または macOS を使用している場合は、 [既定][MicrosoftEdgePreviewChannels] の開発ブラウザーとして Microsoft Edge プレビュー チャネルの使用を検討してください。  プレビュー チャネルを使用すると、最新の DevTools 機能にアクセスできます。  
 
-## Microsoft Edge DevTools チームに連絡する  
+## <a name="getting-in-touch-with-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームに連絡する  
 
 [!INCLUDE [contact DevTools team note](../../includes/contact-whats-new-note.md)]  
 
@@ -372,7 +372,7 @@ Windows、Linux、または macOS を使用している場合は、 [既定][Mic
 [CR1035309]: https://crbug.com/1035309 "問題 1035309: DevTools は MB をメビバイトではなくメガバイトという意味で一貫して使用する必要があります | Chromium のバグ"  
 [CR1051466]: https://crbug.com/1051466 "問題 1051466: DevTools での COOP/COEP デバッグのサポート | Chromium のバグ"  
 [CR1058836]: https://crbug.com/1058836 "問題 1058836: Wasm のデバッグに関する UX の問題 | Chromium のバグ"  
-[CR1071432]: https://crbug.com/1071432 "問題 1071432: Wasm Basic Developer Experience ☂︝を使用する|Chromium のバグ"  
+[CR1071432]: https://crbug.com/1071432 "問題 1071432: ☂️ Wasm Basic 開発者のエクスペリエンス | Chromium のバグ"  
 [CR1107766]: https://crbug.com/1107766 "問題 1107766: 'window.open()' によって生成されたフレームに関する情報をフレーム ツリーに表示する | Chromium のバグ"  
 [CR1122507]: https://crbug.com/1122507 "問題 1122507: フレーム ツリー ビューでの Surface ワーカー情報 | Chromium のバグ"  
 [CR1126178]: https://crbug.com/1126178 "問題 1126178: devTools ☂: CSS <タイプ> コンポーネント | Chromium のバグ"  
