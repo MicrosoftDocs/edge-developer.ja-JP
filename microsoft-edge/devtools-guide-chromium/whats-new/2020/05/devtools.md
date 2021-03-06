@@ -1,18 +1,18 @@
 ---
-description: Windows のハイコントラストモードの DevTools を使って、DevTools for Visual Studio コードのキーボードショートカットを検索します。
+description: Windows ハイ コントラスト モードで DevTools を使用し、DevTools のキーボード ショートカットをコードVisual Studio一致します。
 title: DevTools の新機能 (Microsoft Edge 84)
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 09/11/2020
+ms.date: 02/12/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 2752dec8bc7c4eec34ddde05a7dedff7bebef05f
-ms.sourcegitcommit: b337717957529239434b4e8e1e167aebf0543518
+ms.openlocfilehash: 701c328c1dc975a81129049fe2931139757205c3
+ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "11015490"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "11398575"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -28,254 +28,254 @@ ms.locfileid: "11015490"
    See the License for the specific language governing permissions and
    limitations under the License.  -->  
 
-# DevTools の新機能 (Microsoft Edge 84)  
+# <a name="whats-new-in-devtools-microsoft-edge-84"></a>DevTools の新機能 (Microsoft Edge 84)  
 
-## Microsoft Edge DevTools チームからのお知らせ  
+## <a name="announcements-from-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームからのお知らせ  
 
-以下のセクションでは、Microsoft Edge DevTools チームから見落とした可能性があるお知らせの一覧を示します。 それらを確認して、DevTools、Visual Studio コード拡張などの新機能を試してみてください。  開発者ツールの最新の機能と最大の機能を常に最新の状態に維持するには、 [Microsoft Edge preview チャネル][MicrosoftEdgePreviewChannels] をダウンロードして、 [Twitter に従っ][EdgeDevToolsTwitterAccount]てください。  
+以下のセクションでは、Microsoft Edge DevTools チームからのもので、見落としがあった可能性のあるお知らせの一覧を示します。  DevTools、Microsoft コード拡張機能、その他の新機能を試Visual Studioお知らせをご覧ください。  開発者ツールのすべての最新および最大の機能を最新の情報に更新するには [、Microsoft Edge][MicrosoftEdgePreviewChannels] プレビュー チャネルをダウンロードし [、Twitter][EdgeDevToolsTwitterAccount]でフォローしてください。  
 
-### Windows のハイコントラストモードで DevTools を使う
+### <a name="use-the-devtools-in-windows-high-contrast-mode"></a>Windows ハイ コントラスト モードで DevTools を使用する
 
-Windows がハイコントラストモードの場合は、Microsoft Edge DevTools がハイコントラストモードで表示されるようになりました。  
+Windows がハイ コントラスト モードの場合、Microsoft Edge DevTools はハイ コントラスト モードで表示されます。  
 
-:::image type="complex" source="../../media/2020/05/high-contrast.msft.png" alt-text="ハイコントラストモードの Microsoft Edge DevTools" lightbox="../../media/2020/05/high-contrast.msft.png":::
-   ハイコントラストモードの Microsoft Edge DevTools  
+:::image type="complex" source="../../media/2020/05/high-contrast.msft.png" alt-text="ハイ コントラスト モードの Microsoft Edge DevTools" lightbox="../../media/2020/05/high-contrast.msft.png":::
+   ハイ コントラスト モードの Microsoft Edge DevTools  
 :::image-end:::  
 
-[指示に従って、Windows でハイコントラストモードをオン][MicrosoftSupportWindows10HighContrastMode]にします。  またはを押して、Microsoft Edge で DevTools を開き `F12` `Ctrl` + `Shift` + `I` ます。  DevTools はハイコントラストモードで表示されます。  
+[手順に従って、Windows でハイ コントラスト モードを有効にします][MicrosoftSupportWindows10HighContrastMode]。  Microsoft Edge で DevTools を開く場合は、 を選択するか `F12` 、 を選択します `Ctrl` + `Shift` + `I` 。  DevTools はハイ コントラスト モードで表示されます。  
 
 > [!NOTE]
-> Microsoft Edge DevTools は現在、macOS ではサポートされていませんが、Windows のハイコントラストモードをサポートしています。 
+> Microsoft Edge DevTools は現在、Windows ではハイ コントラスト モードをサポートしていますが、macOS ではサポートされていません。  
 
-Chromium の問題 [#1048378][CR1048378]  
+クロムの問題 [#1048378][CR1048378]  
 
-### DevTools for Visual Studio コードのキーボードショートカットを一致させる  
+### <a name="match-keyboard-shortcuts-in-the-devtools-to-visual-studio-code"></a>DevTools のキーボード ショートカットを Visual Studio Code と一致させる  
 
-[フィードバック](#getting-in-touch-with-microsoft-edge-devtools-team)と[Chromium の公開問題の追跡][CRIssuesList]ツールでは、Microsoft Edge DevTools チームが、devtools でキーボードショートカットをカスタマイズする機能が必要であることを学習しました。  Microsoft Edge 84 では、DevTools と [Visual Studio コード][VSCode]のキーボードショートカットを一致させることができます。これは、ショートカットのカスタマイズのためにチームが作業している機能の1つにすぎません。  
+フィードバックと[クロム](#getting-in-touch-with-microsoft-edge-devtools-team)の公開[][CRIssuesList]問題トラッカーから、Microsoft Edge DevTools チームは、DevTools でキーボード ショートカットをカスタマイズする機能が必要なことを学習しました。  Microsoft Edge 84 では、DevTools のキーボード ショートカットを Visual Studio [コードに][VisualStudioCode]一致できます。これは、チームがショートカットのカスタマイズに取り組む機能の 1 つにすすみ込む必要があります。  
 
-:::image type="complex" source="../../media/2020/05/keyboard-shortcut.msft.png" alt-text="DevTools for Visual Studio コードのキーボードショートカットを一致させる" lightbox="../../media/2020/05/keyboard-shortcut.msft.png":::
-   ハイコントラストモードの Microsoft Edge DevTools  
+:::image type="complex" source="../../media/2020/05/keyboard-shortcut.msft.png" alt-text="DevTools のキーボード ショートカットを Visual Studio Code と一致させる" lightbox="../../media/2020/05/keyboard-shortcut.msft.png":::
+   ハイ コントラスト モードの Microsoft Edge DevTools  
 :::image-end:::  
 
-実験を試みるには、devtools `?` ![ ][ImageSettingsIcon] の右上隅にある [devtools の設定] アイコンをクリックまたは選択して、Devtools の設定を開きます。  [ **実験** ] セクションに移動し、[ユーザー設定の **キーボードショートカットを有効にする] をオンにします (再読み込みが必要)**。  次に、DevTools を再読み込みし、設定をもう一度開き、[ **ショートカット** ] セクションに移動します。  
+実験を試す場合は、DevTools の右上隅にある [DevTools 設定] アイコンアイコンを選択または選択して `?` ![ ][ImageSettingsIcon] 、DevTools の設定を開きます。  [実験] セクション **に移動し、[** カスタム キーボード ショートカット設定を有効にする] タブ (再読み込 **みが必要) をオンにします**。  DevTools を再読み込みし、[設定] を再度開き、[ショートカット] **セクションに移動** します。  
 
-[**標準のショートカットキー**の選択] ドロップダウンで [ **Devtools (既定値)** ] を選び、[ **Visual Studio コード**] を選びます。  DevTools のキーボードショートカットは、Visual Studio コードで同等のアクションのショートカットと一致するようになりました。  
+[**プリセットからショートカットを一致] ドロップダウンで [DevTools( Default)** ] を選択し、[コード] **Visual Studioします**。 ****  DevTools のキーボード ショートカットは、コード内の同等のアクションのショートカットVisual Studioしました。  
 
-たとえば、 [Visual Studio コード][VSCodeShortcuts] でスクリプトを一時停止または実行し続けるためのキーボードショートカットは、 `F5` です。  **Devtools (既定)** の事前設定を使用すると、devtools の同じショートカットが `F8` **Visual Studio のコード**プリセットでも使用できるようになりました `F5` 。  
+たとえば、[Visual Studio Code][VisualStudioCodeShortcuts] でスクリプトを一時停止または実行し続けるためのキーボード ショートカットは `F5` です。  **DevTools (Default)** プリセットを使用すると、DevTools の同じショートカットが、Visual Studio コード プリセットと同じショートカットになります。 `F8` **** `F5`  
 
-この機能は、現在 Microsoft Edge 84 で実験として提供されているので、チームと [フィードバック](#getting-in-touch-with-microsoft-edge-devtools-team) を共有してください。  
+この機能は現在、Microsoft Edge 84 で実験として利用できます。チームと [フィードバックを共有](#getting-in-touch-with-microsoft-edge-devtools-team) してください。  
 
 Chromium の問題 [#174309][CR174309]  
 
-### リモートデバッグ Surface Duo エミュレーター  
+### <a name="remote-debug-surface-duo-emulators"></a>リモート デバッグ Surface Duo エミュレーター  
 
-[Microsoft Edge DevTools][DevToolsChromiumGuide]の全機能を使用して、 [Surface Duo エミュレーター][DualScreensAndroidEmulator]で実行されている web コンテンツをリモートでデバッグできるようになりました。  
+[これで、Microsoft Edge DevTools][DevToolsChromiumGuide]のフル パワーを使用して[Surface Duo][DualScreensAndroidEmulator]エミュレーターで実行されている Web コンテンツをリモートでデバッグできます。  
 
-[Surface Duo エミュレーター][DualScreensAndroidEmulator]を使用すると、折りたたみ式とデュアルスクリーンデバイスの新しいクラスで web コンテンツがどのようにレンダリングされるかをテストすることができます。  エミュレーターは Android オペレーティングシステムを実行し、 [Microsoft Edge Android アプリ][AndroidEdge]を提供します。  [Microsoft edge アプリ][AndroidEdge]で web コンテンツを読み込み、 [Microsoft edge devtools][DevToolsChromiumGuide]を使ってデバッグします。  
+Surface [Duo エミュレーターを使用][DualScreensAndroidEmulator]すると、折りたたみ可能なデュアルスクリーン デバイスの新しいクラスで Web コンテンツがどのようにレンダリングされるのかテストできます。  エミュレーターは Android オペレーティング システムを実行し [、Microsoft Edge Android アプリを提供します][AndroidEdge]。  Microsoft Edge アプリで Web コンテンツを[読み込み][AndroidEdge][、Microsoft Edge DevTools][DevToolsChromiumGuide]でデバッグします。  
 
 :::image type="complex" source="../../media/2020/05/surface-duo-emulator.msft.png" alt-text="Surface Duo エミュレーターで実行されている Microsoft Edge アプリ" lightbox="../../media/2020/05/surface-duo-emulator.msft.png":::
-   Surface Duo エミュレーター上の Microsoft Edge アプリ  
+   Surface Duo エミュレーターの Microsoft Edge アプリ  
 :::image-end:::  
 
-`edge://inspect` [Microsoft Edge][DesktopEdge]のデスクトップインスタンスのページには、 [Surface Duo エミュレーター][DualScreensAndroidEmulator]で実行されている開いているタブまたは[pwas][PwaIndex]の一覧が表示された**SurfaceDuoEmulator**が示されています。  
+Microsoft Edge のデスクトップ インスタンスのページには `edge://inspect` **、SurfaceDuoEmulator**に Surface Duo エミュレーターで実行されている開いているタブまたは[PWA][PwaIndex]の一覧[][DesktopEdge]が[表示されます][DualScreensAndroidEmulator]。  
 
-:::image type="complex" source="../../media/2020/05/edge-inspect.msft.png" alt-text="Edge://inspect ページには、エミュレーターで実行されている Microsoft Edge アプリの開いているタブの一覧が表示されます。" lightbox="../../media/2020/05/edge-inspect.msft.png":::
-   このページには、 `edge://inspect` エミュレーターで実行されている Microsoft Edge アプリの開いているタブの一覧が表示されます。
+:::image type="complex" source="../../media/2020/05/edge-inspect.msft.png" alt-text="[edge://inspect] ページには、エミュレーターで実行されている Microsoft Edge アプリで開いているタブの一覧が表示されます。" lightbox="../../media/2020/05/edge-inspect.msft.png":::
+   この `edge://inspect` ページには、エミュレーターで実行されている Microsoft Edge アプリで開いているタブの一覧が表示されます。
 :::image-end:::  
 
-デバッグするタブまたは PWA の [ **検査** ] を選ぶと、 [Microsoft Edge devtools][DevToolsChromiumGuide]が開きます。  [次のステップバイステップガイドを参照して、Surface Duo エミュレーターで web コンテンツをリモートでデバッグ][DevToolsRemoteDebugDuoEmulator]します。  
+デバッグ **する** タブまたは PWA の検査を選択して [、Microsoft Edge DevTools を開きます][DevToolsChromiumGuide]。  Surface Duo エミュレーターで Web コンテンツをリモートでデバッグするには、ステップ[バイ ステップ ガイドに従います][DevToolsRemoteDebugDuoEmulator]。  
 
-### DevTools のドローワのサイズをより簡単に変更する  
+### <a name="resize-the-devtools-drawer-more-easily"></a>DevTools ドロワーのサイズを簡単に変更する  
 
-Microsoft Edge 83 以前のバージョンでは、ドロアーのツールバー内にマウスポインターを置くことによって、 [Devtools の引き出し][DevToolsDrawer] のサイズを変更することはできませんでした。  ドロワーの動作は、ウィンドウの枠線をポイントしてサイズを変更する DevTools のウィンドウの他のサイズ変更コントロールとは異なります。  次の画像を選択して、Microsoft Edge のバージョン83またはそれ以前のドロアーのサイズ変更の動作を確認します。  
+Microsoft Edge 83 以前では、ドロワーのツールバー内をホバリングして [DevTools ドロ][DevToolsDrawer] ワーのサイズを変更するのみ可能でした。  ドロワーの動作は、DevTools 内のペインの他のサイズ変更コントロールとは異なって動作し、ウィンドウの枠線にマウス ポインターを移動してサイズを変更しました。  Microsoft Edge のバージョン 83 以前でドロワーのサイズを変更する方法を表示するには、次の画像を選択します。  
 
-:::image type="complex" source="../../media/2020/05/drawer-83.msft.png" alt-text="Microsoft Edge 83 の DevTools の引き出しのサイズ変更" lightbox="../../media/2020/05/drawer-83.msft.gif":::
-   Microsoft Edge 83 の DevTools の引き出しのサイズ変更
-:::image-end:::  
-
-<!--todo:  create png that represents the gif information  -->  
-
-Microsoft Edge 84 以降では、ドロアーの境界線の上にマウスポインターを置くと、引き出しのサイズを変更できるようになりました。  この変更によって、devtools の他のペインのサイズを変更する方法で、DevTools のドローワのサイズ変更動作が揃えられます。  Microsoft Edge 84 でのサイズ変更の動作を確認するには、次の画像を選択します。  
-
-:::image type="complex" source="../../media/2020/05/drawer-84.msft.png" alt-text="Microsoft Edge 84 の DevTools の引き出しのサイズ変更" lightbox="../../media/2020/05/drawer-84.msft.gif":::
-   Microsoft Edge 84 の DevTools の引き出しのサイズ変更
+:::image type="complex" source="../../media/2020/05/drawer-83.msft.png" alt-text="Microsoft Edge 83 で DevTools ドロワーのサイズを変更する" lightbox="../../media/2020/05/drawer-83.msft.gif":::
+   Microsoft Edge 83 で DevTools ドロワーのサイズを変更する
 :::image-end:::  
 
 <!--todo:  create png that represents the gif information  -->  
 
-Chromium の問題 [#1076112][CR1076112]  
+Microsoft Edge 84 から、ドロワーの境界線にカーソルを合わせて引き出しのサイズを変更できます。  この変更により、DevTools ドロワーのサイズを変更する動作と、DevTools 内の他のウィンドウのサイズを変更する方法が揃います。  Microsoft Edge 84 で動作中のサイズ変更を表示するには、次の画像を選択します。  
 
-### Screencasting ナビゲーションボタンにフォーカスが表示  
-
-[Android デバイス][DevToolsRemoteDebugAndroid]、 [Windows 10 デバイス][DevToolsRemoteDebugWindows]、 [Surface Duo エミュレーター][DevToolsRemoteDebugDuoEmulator]をリモートでデバッグしている場合、 ![ ][ImageScreencastingIcon] Devtools の左上隅にあるトグル Screencast アイコンを使用して screencasting を切り替えることができます。  Screencasting を有効にすると、DevTools ウィンドウからリモートデバイスの Microsoft Edge でタブ内を移動できます。  Microsoft Edge 84 では、これらのナビゲーションボタンは、キーボードからアクセスできるようになりました。  
-
-:::image type="complex" source="../../media/2020/05/screencasting-nav.msft.png" alt-text="Screencasted URL バーから Shift + Tab キーを押すと、[更新] ボタンにフォーカスが表示される" lightbox="../../media/2020/05/screencasting-nav.msft.png":::
-   `Shift` + `Tab` Screencasted URL バーを押すと、[**更新**] ボタンにフォーカスが表示される
+:::image type="complex" source="../../media/2020/05/drawer-84.msft.png" alt-text="Microsoft Edge 84 で DevTools ドロワーのサイズを変更する" lightbox="../../media/2020/05/drawer-84.msft.gif":::
+   Microsoft Edge 84 で DevTools ドロワーのサイズを変更する
 :::image-end:::  
 
-Chromium の問題 [#1081486][CR1081486]  
+<!--todo:  create png that represents the gif information  -->  
 
-### ネットワークパネルの詳細ウィンドウにアクセスできるようになりました  
+クロムの問題 [#1076112][CR1076112]  
 
-Microsoft Edge 84 では、ネットワーク[ログ][DevToolsNetworkLog]内のリソースに対して [**ネットワーク**] パネルを開くと、[[詳細] ウィンドウ][DevToolsNetworkDetails]がフォーカスされます。  この変更により、スクリーンリーダーは **詳細** ウィンドウの内容を読み上げて操作できるようになります。  
+### <a name="screencasting-navigation-buttons-display-focus"></a>スクリーン キャスト ナビゲーション ボタンにフォーカスが表示される  
 
-:::image type="complex" source="../../media/2020/05/network-details.msft.png" alt-text="[ネットワーク] パネルの詳細ウィンドウでは、開いたときにフォーカスが移動します。" lightbox="../../media/2020/05/network-details.msft.png":::
-   [**ネットワーク**] パネルの**詳細**ウィンドウでは、開いたときにフォーカスが移動します。
+[Android][DevToolsRemoteDebugAndroid]デバイス[、Windows 10][DevToolsRemoteDebugWindows]デバイス、[または Surface Duo][DevToolsRemoteDebugDuoEmulator]エミュレーターをリモート デバッグする場合は ![ 、DevTools の左上隅にある [画面キャストの切り替え] アイコンを使用してスクリーン キャストを切り替えられます。 ][ImageScreencastingIcon]  スクリーンキャストが有効になっていると、リモート デバイスの Microsoft Edge のタブを DevTools ウィンドウから移動できます。  Microsoft Edge 84 では、これらのナビゲーション ボタンもキーボードアクセス可能です。  
+
+:::image type="complex" source="../../media/2020/05/screencasting-nav.msft.png" alt-text="スクリーン キャストされた URL バーから [Shift+ Tab] を選択すると、[更新] ボタンにフォーカスが表示されます" lightbox="../../media/2020/05/screencasting-nav.msft.png":::
+   スクリーン `Shift` + `Tab` キャストされた URL バーから選択すると、[更新] ボタンにフォーカスが**表示**されます
 :::image-end:::  
 
-Chromium の問題 [#963183][CR963183]  
+クロムの問題 [#1081486][CR1081486]  
 
-## Chromium プロジェクトからのお知らせ  
+### <a name="network-panel-details-pane-is-now-accessible"></a>ネットワーク パネルの [詳細] ウィンドウにアクセス可能  
 
-次のセクションでは、open source Chromium プロジェクトに寄与した Microsoft Edge 84 で利用可能なその他の機能を示します。  
+Microsoft Edge 84[][DevToolsNetworkDetails]では、ネットワーク**** ログでリソースを開く際に、[ネットワーク] ツールの [詳細] ウィンドウにフォーカス[が集中します][DevToolsNetworkLog]。  この変更により、スクリーン リーダーは詳細ウィンドウのコンテンツを読み取り、 **操作** できます。  
 
-### DevTools のドローワの新しい問題ツールでサイトの問題を解決する
-
-DevTools のドロアーの新しい **問題** ツールは、 **本体**の通知の疲労と低優先メールを削減するために構築されました。  現時点では、 **コンソール** は、web サイトの開発者、ライブラリ、フレームワーク、Microsoft Edge がメッセージ、警告、エラーをログに記録するための中心的な場所です。  **懸案事項**ツールは、ブラウザーからの警告を、構造化された、集計された実用的な方法で収集します。 Microsoft Edge devtools 内の影響を受けるリソースへのリンク、問題の修正方法のガイダンスを提供します。  時間の経過と共に、Microsoft Edge のツールでは **、本体で**はなく、[**問題**のツール] で、より多くの警告が表示されます。これにより、**本体**の低優先メール数を減らすことができます。  
-
-始めるには、「 [Microsoft Edge DevTools の問題を見つけて解決][DevtoolsIssuesIndex]する」を参照してください。  
-
-:::image type="complex" source="../../media/2020/05/issues.msft.png" alt-text="DevTools のドローワの問題ツール" lightbox="../../media/2020/05/issues.msft.png":::
-   DevTools のドローワの **問題** ツール  
+:::image type="complex" source="../../media/2020/05/network-details.msft.png" alt-text="[ネットワーク] パネルの [詳細] ウィンドウが開いたときにフォーカスを受け取る" lightbox="../../media/2020/05/network-details.msft.png":::
+   ネットワーク **ツールの** [詳細] **ウィンドウが** 開いたときにフォーカスを受け取る
 :::image-end:::  
 
-Chromium の問題 [#1068116][CR1068116]  
+クロムの問題 [#963183][CR963183]  
 
-### 検査モードのヒントでアクセシビリティ情報を表示する  
+## <a name="announcements-from-the-chromium-project"></a>Chromium プロジェクトからのお知らせ  
 
-**検査モード**のヒントは、要素にアクセシビリティ対応の[名前とロール][WebhintHintsAxeNameRoleValue]があり、[キーボードフォーカス][WebhintHintsAxeKeyboard]可能であるかどうかを示します。  
+次のセクションでは、オープン ソースのクロム プロジェクトに貢献した Microsoft Edge 84 で利用可能な追加機能について説明します。  
+
+### <a name="fix-site-issues-with-the-new-issues-tool-in-the-devtools-drawer"></a>DevTools ドロワーの新しい Issues ツールでサイトの問題を修正する
+
+**DevTools ドロワー**の新しい問題ツールは、コンソールの通知の疲労と混乱を軽減するために構築**されました**。  現在、 **コンソールは、Web** サイト開発者、ライブラリ、フレームワーク、Microsoft Edge がメッセージ、警告、エラーを記録する中心的な場所です。  **Issues**ツールは、構造化された、集約された、操作可能な方法でブラウザーからの警告を集約し、Microsoft Edge DevTools 内の影響を受けるリソースへのリンク、および問題を解決する方法に関するガイダンスを提供します。  時間がたつ間に、コンソールではなく、問題ツールの Microsoft **** Edge で多くの警告が**** 表示され、コンソールの混乱を減らすのに役立**ちます**。  
+
+開始するには、[Microsoft Edge DevTools の問題の検索と修正] ツール [に移動します][DevtoolsIssuesIndex]。  
+
+:::image type="complex" source="../../media/2020/05/issues.msft.png" alt-text="DevTools ドロワーの問題ツール" lightbox="../../media/2020/05/issues.msft.png":::
+   **DevTools**ドロワーの問題ツール  
+:::image-end:::  
+
+クロムの問題 [#1068116][CR1068116]  
+
+### <a name="view-accessibility-information-in-the-inspect-mode-tooltip"></a>[検査モード] ツールヒントでアクセシビリティ情報を表示する  
+
+[**検査モード]** ツールヒントは、要素にアクセス可能な名前[][WebhintHintsAxeNameRoleValue]と役割を持ち、キーボードフォーカスが可能[かどうかを示します][WebhintHintsAxeKeyboard]。  
 
 <!--todo:  add link inspect mode tooltip (WebdevCls) when section is live  -->  
 <!--todo:  add link name and role (WebdevLabelsText) when section is live  -->  
 <!--todo:  add link keyboard-focusable (WebdevControlFocus) when section is live  -->  
 
-:::image type="complex" source="../../media/2020/05/a11y.msft.png" alt-text="アクセシビリティ情報が含まれる検査モードのヒント" lightbox="../../media/2020/05/a11y.msft.png":::
-  アクセシビリティ情報が含まれる **検査モード** のヒント  
+:::image type="complex" source="../../media/2020/05/a11y.msft.png" alt-text="アクセシビリティ情報を含む検査モードのヒント" lightbox="../../media/2020/05/a11y.msft.png":::
+  アクセシビリティ **情報を含** む検査モードのヒント  
 :::image-end:::  
 
-Chromium の問題 [#1040025][CR1040025]  
+クロムの問題 [#1040025][CR1040025]  
 
-### パフォーマンスパネルの更新  
+### <a name="performance-panel-updates"></a>[パフォーマンス] パネルの更新  
 
-#### フッターのブロック時間情報の合計を表示する  
+#### <a name="view-total-blocking-time-information-in-the-footer"></a>フッターにブロック時間の合計情報を表示する  
 
-ロードパフォーマンスの記録後、[ **パフォーマンス** ] パネルには、フッター内のブロック時間 (tbt) 情報が表示されるようになりました。  TBT は、ページが使用可能になるまでにかかる時間を数値化するのに役立つロードパフォーマンスメトリックです。  基本的には、ページが使用可能になるまでの時間を測定します (コンテンツが画面にレンダリングされるためです)。ただし、JavaScript がメインスレッドをブロックしているため、実際には使用できません。そのため、ページはユーザー入力に応答しません。  TBT は、おおよその最初の入力遅延の主な基準となります。  
+読み込みパフォーマンスを記録すると、[ **パフォーマンス** ] パネルにフッターに [合計ブロック時間] \(TBT\) 情報が表示されます。  TBT は読み込みパフォーマンスの指標で、ページが使用できる時間を数値化するのに役立ちます。  基本的には、ページが使用できる \(コンテンツが screen\にレンダリングされるので)使用できる時間を測定します。JavaScript がメイン スレッドをブロックするため、ページはユーザー入力に応答しないので、実際には使用できません。  TBT は、最初の入力遅延を近似する主な指標です。  
 
 <!--todo:  add link Total Blocking Time (TBT) (WebdevTbt) when section is live  -->  
 <!--todo:  add link lab metric (WebdevMeasureSpeedLabField) when section is live  -->  
 <!--todo:  add link Core Web Vitals (WebdevCoreWebVitals) when section is live  -->  
 
-ブロックの合計時間情報を取得するには、 **Refresh Page**ページの ![ ][ImageRefreshPageIcon] 読み込みのパフォーマンスを記録するために、ページの更新ページの更新アイコンのワークフローを使わないでください。  
+[合計ブロック時間] 情報を取得するには、**** ページ読み込みパフォーマンスを記録するために [ページの更新] ページの更新アイコン ![ ][ImageRefreshPageIcon] ワークフローを使用しない必要があります。  
 
-代わりに、[レコードレコード] アイコン **を選択し**、ページを手動で読み込むか ![ ][ImageRecordIcon] 、ページが読み込まれるのを待ってから、記録を停止します。  
+代わりに、[ **レコード] アイコンを**選択し、ページを手動で再読み込みし、ページが読み込むのを待ち、記録 ![ ][ImageRecordIcon] を停止します。  
 
-`Total Blocking Time: Unavailable`Microsoft Edge DevTools では、Microsoft edge の内部プロファイリングデータから必要な情報を取得できませんでした。  
+表示されている場合、Microsoft Edge DevTools は Microsoft Edge の内部プロファイリング データから必要な `Total Blocking Time: Unavailable` 情報を取得してくれなかった。  
 
-:::image type="complex" source="../../media/2020/05/tbt.msft.png" alt-text="パフォーマンスパネル記録のフッターのブロック時間情報の合計" lightbox="../../media/2020/05/tbt.msft.png":::
-   **パフォーマンス**パネル記録のフッターのブロック時間情報の合計  
+:::image type="complex" source="../../media/2020/05/tbt.msft.png" alt-text="パフォーマンス パネルの記録のフッターの合計ブロック時間情報" lightbox="../../media/2020/05/tbt.msft.png":::
+   パフォーマンス パネルの記録のフッターの合計 **ブロック時間** 情報  
 :::image-end:::  
 
-Chromium の問題 [#1054381][CR1054381]  
+クロムの問題 [#1054381][CR1054381]  
 
-#### [新しいエクスペリエンス] セクションのレイアウトシフトのイベント  
+#### <a name="layout-shift-events-in-the-new-experience-section"></a>[新しいエクスペリエンス] セクションの [Shift イベントのレイアウト]  
 
-[**パフォーマンス**] パネルの [新しい**エクスペリエンス**] セクションでは、レイアウトシフトを検出できます。  累積レイアウトシフト \ (CLS \) は、表示が不安定になるのを防ぐためのメトリックです。
+[パフォーマンス **] パネルの** 新しい **[エクスペリエンス] セクション** を使用すると、レイアウトシフトを検出できます。  累積レイアウト シフト \(CLS\) は、望ましくない視覚不安定を定量化するのに役立つ指標です。
 
 <!--todo:  add link Core Web Vitals (WebdevCoreWebVitals) when section is live  -->  
 <!--todo:  add link layout shifts (WebdevCls) when section is live  -->  
 
-[ **レイアウトシフト** ] イベントを選択して、[ **概要** ] ウィンドウのレイアウトシフトの詳細を表示します。  **移動**先と**移動**先のフィールドの上にマウスポインターを移動すると、レイアウトのシフトが発生した場所が表示されます。  
+[レイアウト **シフト] イベントを** 選択して、[概要] ウィンドウにレイアウト シフトの詳細 **を表示** します。  [移動先 **] フィールドと [****移動先**] フィールドにカーソルを合わせると、レイアウトシフトが発生した場所を視覚化できます。  
 
-:::image type="complex" source="../../media/2020/05/cls.msft.png" alt-text="レイアウトシフトの詳細" lightbox="../../media/2020/05/cls.msft.png":::
-   レイアウトシフトの詳細  
+:::image type="complex" source="../../media/2020/05/cls.msft.png" alt-text="レイアウト シフトの詳細" lightbox="../../media/2020/05/cls.msft.png":::
+   レイアウト シフトの詳細  
 :::image-end:::  
 
-### 本体のより正確な promise 用語  
+### <a name="more-accurate-promise-terminology-in-the-console"></a>コンソールのより正確な約束の用語  
 
-ログインしたときに、 `Promise` **コンソール** の値が正しく指定されて `PromiseStatus` `resolved` いません。  
+ログを記録すると `Promise` 、 **コンソールに正** しく指定されていない `PromiseStatus` 値がに設定されます `resolved` 。  
 
-:::image type="complex" source="../../media/2020/05/resolved.msft.png" alt-text="以前の解決された用語を使用した本体の例" lightbox="../../media/2020/05/resolved.msft.png":::
-   古い用語を使用した**本体**の例 `resolved`  
+:::image type="complex" source="../../media/2020/05/resolved.msft.png" alt-text="古い解決済み用語を使用するコンソールの例" lightbox="../../media/2020/05/resolved.msft.png":::
+   古い用語を **使用した** コンソールの `resolved` 例  
 :::image-end:::  
 
-これで、 **本体** で指定された用語が使用されるようになりました `fulfilled` `Promise` 。  仕様の詳細につい `Promise` ては、「 [GitHub の状態と Fates](https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md)」を参照してください。  
+コンソール **では** 、仕様に合 `fulfilled` わせて用語が使用 `Promise` されます。  仕様の詳細については `Promise` 、「States and [Fates on GitHub」に移動します](https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md)。  
 
-:::image type="complex" source="../../media/2020/05/fulfilled.msft.png" alt-text="新しいフルフィルメント用語を使用した本体の例" lightbox="../../media/2020/05/fulfilled.msft.png":::
-  新しい用語を使用した**本体**の例 `fulfilled`  
+:::image type="complex" source="../../media/2020/05/fulfilled.msft.png" alt-text="新しい満たされた用語を使用するコンソールの例" lightbox="../../media/2020/05/fulfilled.msft.png":::
+  新しい用語を **使用する** コンソールの `fulfilled` 例  
 :::image-end:::  
 
-V8 の問題 [#6751][CRV86751]  
+V8 の [問題#6751][CRV86751]  
 
-### スタイルウィンドウの更新  
+### <a name="styles-pane-updates"></a>スタイル ウィンドウの更新  
 
-#### Revert キーワードのサポート  
+#### <a name="support-for-the-revert-keyword"></a>revert キーワードのサポート  
 
-[ **スタイル** ] ウィンドウのオートコンプリート UI で、[CSS の [元に戻す][MDNRevert] ] キーワードが検出されるようになりました。これにより、プロパティのカスケード値が、要素のスタイル設定に適用された前の値に戻ります。  
+スタイル ウィンドウのオートコンプリート UI**** で[、元に][MDNRevert]戻す CSS キーワードが検出され、プロパティのカスケード値が要素のスタイル設定に適用された以前の値に戻ります。  
 
-:::image type="complex" source="../../media/2020/05/revert.msft.png" alt-text="元に戻すプロパティの値を設定する" lightbox="../../media/2020/05/revert.msft.png":::
-  元に戻すプロパティの値を設定する  
+:::image type="complex" source="../../media/2020/05/revert.msft.png" alt-text="プロパティの値を元に戻す設定" lightbox="../../media/2020/05/revert.msft.png":::
+  プロパティの値を元に戻す設定  
 :::image-end:::  
 
-Chromium の問題 [#1075437][CR1075437]  
+クロムの問題 [#1075437][CR1075437]  
 
-#### イメージのプレビュー  
+#### <a name="image-previews"></a>画像のプレビュー  
 
-[スタイル] ウィンドウの値の上にマウスポインターを置くと、 `background-image` ヒントに画像のプレビューが表示されます。 **Styles**  
+[スタイル] `background-image` ウィンドウの値に **カーソルを合** わせると、ツールヒントに画像のプレビューが表示されます。  
 
-:::image type="complex" source="../../media/2020/05/image-preview.msft.png" alt-text="背景画像の値の上にマウスポインターを置く" lightbox="../../media/2020/05/image-preview.msft.png":::
-  値の上にマウスポインターを置く `background-image`  
+:::image type="complex" source="../../media/2020/05/image-preview.msft.png" alt-text="背景画像の値にカーソルを合わせる" lightbox="../../media/2020/05/image-preview.msft.png":::
+  値の上にカーソルを移動 `background-image` する  
 :::image-end:::  
 
-Chromium の問題 [#1040019][CR1040019]  
+クロムの問題 [#1040019][CR1040019]  
 
-#### カラーピッカーでスペースで区切られた機能カラー表記が使用されるようになりました  
+#### <a name="color-picker-now-uses-space-separated-functional-color-notation"></a>カラー ピッカーでスペース区切りの機能色表記が使用される  
 
-[CSS カラーモジュールレベル 4][CSSWGDraftsColor4Changes3] では、などのカラー関数でスペース区切り引数をサポートすることを指定し `rgb()` ます。  たとえば、`rgb(0, 0, 0)` は `rbg(0 0 0)` と同じです。  
+[CSS Color Module Level 4][CSSWGDraftsColor4Changes3] は、スペースで区切られた引数をサポートするカラー関数 (など) `rgb()` を指定します。  たとえば、`rgb(0, 0, 0)` は `rbg(0 0 0)` と同じです。  
 
-[**スタイル**] ウィンドウで、値を保持して選択することにより、[カラーピッカー][DevtoolsCssReferenceColorPicker]で色を選ぶか、色表現の代わりに色を選ぶと `Shift` `background-color` 、スペース区切りの引数構文が表示されます。  
+[色の選択][][DevtoolsCssReferenceColorPicker]ウィンドウで色を選択するか、[スタイル] ウィンドウ**** で色表現を交互に選択する場合は、値を保持して選択すると、スペースで区切られた引数構文 `Shift` `background-color` が表示されます。  
 
-:::image type="complex" source="../../media/2020/05/color.msft.png" alt-text="[スタイル] ウィンドウでスペースで区切られた引数を使用する" lightbox="../../media/2020/05/color.msft.png":::
-  [ **スタイル** ] ウィンドウでスペースで区切られた引数を使用する  
+:::image type="complex" source="../../media/2020/05/color.msft.png" alt-text="[スタイル] ウィンドウでのスペース区切り引数の使用" lightbox="../../media/2020/05/color.msft.png":::
+  [スタイル] ウィンドウでのスペース区切り引数 **の** 使用  
 :::image-end:::  
 
-また、 **計算** されるウィンドウと **検査モード** のヒントで構文を確認する必要があります。  
+また、[計算済み] ウィンドウと [ **検査** モード] ツールヒントにも **構文を表示する必要** があります。  
 
-Microsoft Edge DevTools では、新しい構文が使用されています。これは、 [color ()][CSSWGDraftsColor4Property] などの CSS 機能では、非推奨のコンマ区切り引数構文がサポートされていないためです。  
+[Color()][CSSWGDraftsColor4Property]などの今後の CSS 機能では、廃止されたコンマ区切り引数構文がサポートされないので、Microsoft Edge DevTools は新しい構文を使用しています。  
 
-スペース区切りの引数構文は、ほとんどのブラウザーでしばらくサポートされています。  詳細については、「[スペースで区切られた機能カラー表記][CaniuseMDNSpaceSeparatedFunctionalColorNotations]」を参照してください。  
+スペースで区切られた引数の構文は、ほとんどのブラウザーでしばらくサポートされています。  詳細については、「使用できる:スペースで区切られた機能の色表記 [」に移動します。][CaniuseMDNSpaceSeparatedFunctionalColorNotations]  
 
-Chromium の問題 [#1072952][CR1072952]  
+クロム [の問題#1072952][CR1072952]  
 
-### [要素] パネルの [プロパティ] ウィンドウの廃止  
+### <a name="deprecation-of-the-properties-pane-in-the-elements-panel"></a>[要素] パネルの [プロパティ] ウィンドウの廃止  
 
-[**要素**] パネルの [**プロパティ**] ウィンドウは使われなくなりました。  `console.dir($0)`代わりに**本体**で実行します。  
+[ **要素]** ツールの **[プロパティ] ウィンドウ** は非推奨です。  代 `console.dir($0)` わりにコンソール **で** 実行します。  
 
-:::image type="complex" source="../../media/2020/05/properties.msft.png" alt-text="廃止されたプロパティのウィンドウ" lightbox="../../media/2020/05/properties.msft.png":::
-   廃止された **プロパティ** のウィンドウ  
+:::image type="complex" source="../../media/2020/05/properties.msft.png" alt-text="非推奨の [プロパティ] ウィンドウ" lightbox="../../media/2020/05/properties.msft.png":::
+   非推奨の **[プロパティ]** ウィンドウ  
 :::image-end:::  
 
-#### 参考資料  
+#### <a name="references"></a>参考資料  
 
-*   [console. dir ()][DevtoolsConsoleApiDir]  
+*   [console.dir()][DevtoolsConsoleApiDir]  
 *   [$0][DevtoolsConsoleUtilitiesDom]  
 
-### [マニフェスト] ウィンドウでのアプリのショートカットのサポート  
+### <a name="app-shortcuts-support-in-the-manifest-pane"></a>マニフェスト ウィンドウでのアプリ ショートカットのサポート  
 
-アプリのショートカットを使用すると、web アプリ内で一般的または推奨されるタスクをすばやく開始できます。  アプリのショートカットメニューは、ユーザーのデスクトップまたはモバイルデバイスにインストールされている [プログレッシブ Web アプリ][PwaIndex] についてのみ表示されます。  
+アプリのショートカット を使用すると、Web アプリ内で一般的または推奨されるタスクをすばやく開始できます。  アプリのショートカット メニューは、ユーザーのデスクトップまたはモバイル デバイスにインストールされている [プログレッシブ Web][PwaIndex] アプリにのみ表示されます。  
 
-<!--For more information, see [Get things done quickly with app shortcuts][WebdevAppShortcuts].  -->  
+<!--For more information, navigate to [Get things done quickly with app shortcuts][WebdevAppShortcuts].  -->  
 
 <!--todo:  add link Get things done quickly with app shortcuts (WebdevAppShortcuts) when section is live -->  
 
-:::image type="complex" source="../../media/2020/05/app-shortcuts.msft.png" alt-text="[マニフェスト] ウィンドウのアプリのショートカット" lightbox="../../media/2020/05/app-shortcuts.msft.png":::
-  [ **マニフェスト** ] ウィンドウのアプリのショートカット  
+:::image type="complex" source="../../media/2020/05/app-shortcuts.msft.png" alt-text="マニフェスト ウィンドウのアプリ ショートカット" lightbox="../../media/2020/05/app-shortcuts.msft.png":::
+  マニフェスト ウィンドウのアプリ**ショートカット**  
 :::image-end:::  
 
-## Microsoft Edge preview チャネルをダウンロードする  
+## <a name="download-the-microsoft-edge-preview-channels"></a>Microsoft Edge プレビュー チャネルをダウンロードする  
 
-Windows または macOS を使用している場合は、 [Microsoft Edge preview チャネル][MicrosoftEdgePreviewChannels] を既定の開発ブラウザーとして使用することを検討してください。  プレビューチャネルを使うと、最新の DevTools 機能にアクセスできます。  
+Windows または macOS を使用している場合、[Microsoft Edge プレビュー チャネル][MicrosoftEdgePreviewChannels] を既定の開発ブラウザーとして使用することを検討してください。  プレビュー チャネルを使用すると、最新の DevTools 機能にアクセスできます。  
 
-## Microsoft Edge Devtools チームに連絡する  
+## <a name="getting-in-touch-with-microsoft-edge-devtools-team"></a>Microsoft Edge Devtools チームと連絡を取る  
 
 [!INCLUDE [contact DevTools team note](../../includes/contact-whats-new-note.md)]  
 
@@ -288,64 +288,64 @@ Windows または macOS を使用している場合は、 [Microsoft Edge previe
 
 <!-- links -->  
 
-[DualScreensAndroidEmulator]: /dual-screen/android/use-emulator "Surface Duo エミュレーターを使用する |Microsoft ドキュメント"
+[DualScreensAndroidEmulator]: /dual-screen/android/use-emulator "Surface Duo エミュレーターを使用|Microsoft Docs"
 
-[DevtoolsConsoleApiDir]: /microsoft-edge/devtools-guide-chromium/console/api#dir "dir-本体 API リファレンス |Microsoft ドキュメント"  
-[DevtoolsConsoleUtilitiesDom]: /microsoft-edge/devtools-guide-chromium/console/utilities#recently-selected-element-or-javascript-object "最近選んだ要素または JavaScript オブジェクト-コンソールユーティリティ API リファレンス |Microsoft ドキュメント"  
-[DevtoolsCssReferenceColorPicker]: /microsoft-edge/devtools-guide-chromium/css/reference#change-colors-with-the-color-picker "カラーピッカーで色を変更する-CSS リファレンス |Microsoft ドキュメント"  
-[DevToolsDrawer]: /microsoft-edge/devtools-guide-chromium/customize/index#drawer "引き出し-概要のカスタマイズ |Microsoft ドキュメント"  
-[DevToolsChromiumGuide]: /microsoft-edge/devtools-guide-chromium "Microsoft Edge (Chromium) 開発者ツール |Microsoft ドキュメント"  
-[DevtoolsIssuesIndex]: /microsoft-edge/devtools-guide-chromium/issues/index "Microsoft Edge DevTools の [問題] タブの問題を見つけて解決する |Microsoft ドキュメント"  
-[DevToolsRemoteDebugAndroid]: /microsoft-edge/devtools-guide-chromium/remote-debugging/index "Android デバイスのリモートデバッグの概要 |Microsoft ドキュメント"  
-[DevToolsRemoteDebugDuoEmulator]: /microsoft-edge/devtools-guide-chromium/remote-debugging/surface-duo-emulator "リモートデバッグ Surface Duo エミュレーターの概要 |Microsoft ドキュメント"  
-[DevToolsRemoteDebugWindows]: /microsoft-edge/devtools-guide-chromium/remote-debugging/windows "Windows 10 デバイスのリモートデバッグの概要 |Microsoft ドキュメント"  
-[DevToolsNetworkDetails]: /microsoft-edge/devtools-guide-chromium/network/index#inspect-the-details-of-the-resource "リソースの詳細を調べる |Microsoft ドキュメント"  
-[DevToolsNetworkLog]: /microsoft-edge/devtools-guide-chromium/network/index#log-network-activity "ネットワークアクティビティのログ |Microsoft ドキュメント"  
-[PwaIndex]: /microsoft-edge/progressive-web-apps-chromium/index "Windows のプログレッシブ Web アプリ |Microsoft ドキュメント"  
+[DevtoolsConsoleApiDir]: /microsoft-edge/devtools-guide-chromium/console/api#dir "dir - コンソール API リファレンス |Microsoft Docs"  
+[DevtoolsConsoleUtilitiesDom]: /microsoft-edge/devtools-guide-chromium/console/utilities#recently-selected-element-or-javascript-object "最近選択した要素または JavaScript オブジェクト - コンソール ユーティリティ API リファレンス |Microsoft Docs"  
+[DevtoolsCssReferenceColorPicker]: /microsoft-edge/devtools-guide-chromium/css/reference#change-colors-with-the-color-picker "カラー ピッカー - CSS リファレンス を使用して色を変更|Microsoft Docs"  
+[DevToolsDrawer]: /microsoft-edge/devtools-guide-chromium/customize/index#drawer "ドロワー - カスタマイズの概要|Microsoft Docs"  
+[DevToolsChromiumGuide]: /microsoft-edge/devtools-guide-chromium "Microsoft Edge (Chromium) 開発者ツール | Microsoft Docs"  
+[DevtoolsIssuesIndex]: /microsoft-edge/devtools-guide-chromium/issues/index "Microsoft Edge DevTools の [問題] タブの問題を検索して修正|Microsoft Docs"  
+[DevToolsRemoteDebugAndroid]: /microsoft-edge/devtools-guide-chromium/remote-debugging/index "Android デバイスのリモート デバッグの|Microsoft Docs"  
+[DevToolsRemoteDebugDuoEmulator]: /microsoft-edge/devtools-guide-chromium/remote-debugging/surface-duo-emulator "リモート デバッグ Surface Duo エミュレーターの使用|Microsoft Docs"  
+[DevToolsRemoteDebugWindows]: /microsoft-edge/devtools-guide-chromium/remote-debugging/windows "Windows 10 デバイスのリモート デバッグの概要 | Microsoft Docs"  
+[DevToolsNetworkDetails]: /microsoft-edge/devtools-guide-chromium/network/index#inspect-the-details-of-the-resource "リソース リソースの詳細を調|Microsoft Docs"  
+[DevToolsNetworkLog]: /microsoft-edge/devtools-guide-chromium/network/index#log-network-activity "ネットワーク アクティビティのログ |Microsoft Docs"  
+[PwaIndex]: /microsoft-edge/progressive-web-apps-chromium/index "Windows 上のプログレッシブ Web アプリ |Microsoft Docs"  
 <!--[DevtoolsWhatsNew201901Inspect]: /microsoft-edge/devtools-guide-chromium/whats-new/2019/01/devtools#inspect "Detailed tooltips in Inspect Mode - What's New In DevTools (Edge 73) | Microsoft Docs"  -->  
 
 [AndroidEdge]: https://play.google.com/store/apps/details?id=com.microsoft.emmx "Microsoft Edge Android アプリ"
 
-[CaniuseMDNSpaceSeparatedFunctionalColorNotations]: https://caniuse.com/#feat=mdn-css_types_color_space_separated_functional_notation "スペースで区切られた機能カラーの表記法-MDN |使用できますか"  
+[CaniuseMDNSpaceSeparatedFunctionalColorNotations]: https://caniuse.com/#feat=mdn-css_types_color_space_separated_functional_notation "スペースで区切られた機能的な色表記 - MDN |使用できる"  
 
-[CRIssuesList]: https://bugs.chromium.org/p/chromium/issues/list "Chromium のバグ"
+[CRIssuesList]: https://bugs.chromium.org/p/chromium/issues/list "Chromium bugs"
 
-[CR174309]: https://crbug.com/174309 "DevTools: キーボードショートカット/キーバインディングのカスタマイズを許可する |Chromium のバグ"  
-[CR963183]: https://crbug.com/963183 "DevTools は WCAG に準拠していません |Chromium のバグ"  
-[CR1040019]: https://crbug.com/1040019 "DevTools: [スタイル] ウィンドウで画像や背景画像を簡単にプレビューできます。Chromium のバグ"  
-[CR1040025]: https://crbug.com/1040025 "DevTools: 要素 popover での基本的な a11y 情報の表示 |Chromium のバグ"  
-[CR1048378]: https://crbug.com/1048378 "DevTools UI のハイコントラストモードのサポート |Chromium のバグ"  
-[CR1054381]: https://crbug.com/1054381 "CR 1054381 |Chromium のバグ"  
-[CR1068116]: https://crbug.com/1068116 "出荷問題パネル |Chromium のバグ"  
-[CR1072952]: https://crbug.com/1072952 "DevTools: color picker は、モダン CSS の色の構文を生成する必要があります。Chromium のバグ"  
-[CR1075437]: https://crbug.com/1075437 "DevTools: CSS ' revert ' キーワード/値のサポートを追加します。Chromium のバグ"  
-[CR1076112]: https://crbug.com/1076112 "Devtools の個人用設定-引き出しのポインター"  
-[CR1081486]: https://crbug.com/1081486 "キーボードフォーカスは、screencast モードのナビゲーションボタンには表示されません。Chromium のバグ"  
-[CRV86751]: https://bugs.chromium.org/p/v8/issues/detail?id=6751 "PromiseStatus は「フルフィルメント」であり、「解決済み」ではないV8 のバグ"  
+[CR174309]: https://crbug.com/174309 "DevTools: キーボード ショートカット/キー バインドのカスタマイズを許可|クロムのバグ"  
+[CR963183]: https://crbug.com/963183 "DevTools は WCAG 準拠の|クロムのバグ"  
+[CR1040019]: https://crbug.com/1040019 "DevTools: [スタイル] ウィンドウの [スタイル] ウィンドウで画像と背景画像を簡単にプレビュー|クロムのバグ"  
+[CR1040025]: https://crbug.com/1040025 "DevTools: 要素ポップオーバー の基本 a11y 情報を表示|クロムのバグ"  
+[CR1048378]: https://crbug.com/1048378 "ハイ コントラスト モードの DevTools UI の|クロムのバグ"  
+[CR1054381]: https://crbug.com/1054381 "CR 1054381 |クロムのバグ"  
+[CR1068116]: https://crbug.com/1068116 "[出荷の問題] パネル|クロムのバグ"  
+[CR1072952]: https://crbug.com/1072952 "DevTools: カラー ピッカーは、最新の CSS カラー構文を生成|クロムのバグ"  
+[CR1075437]: https://crbug.com/1075437 "DevTools: CSS 'revert' キーワード/値のサポートを追加|クロムのバグ"  
+[CR1076112]: https://crbug.com/1076112 "Devtools 個人用設定 - ドロワーリサイズ"  
+[CR1081486]: https://crbug.com/1081486 "スクリーンキャスト モードのナビゲーション ボタンにキーボード フォーカスが表示されない|クロムのバグ"  
+[CRV86751]: https://bugs.chromium.org/p/v8/issues/detail?id=6751 "PromiseStatus は 'fulfilled' で、"解決済み" の|V8 のバグ"  
 
-[CSSWGDraftsColor4Changes3]: https://drafts.csswg.org/css-color#changes-from-3 "色の変更 3-CSS の色モジュールレベル 4 |W3C CSS ワーキンググループエディターの下書き"  
-[CSSWGDraftsColor4Property]: https://drafts.csswg.org/css-color#the-color-property "3. フォアグラウンド色: ' color '-CSS カラーモジュールレベル 4 |W3C CSS ワーキンググループエディターの下書き"  
+[CSSWGDraftsColor4Changes3]: https://drafts.csswg.org/css-color#changes-from-3 "色 3 からの変更 - CSS カラー モジュール レベル 4 |W3C CSS ワーキング グループ エディターの下書き"  
+[CSSWGDraftsColor4Property]: https://drafts.csswg.org/css-color#the-color-property "3. 前景色: 'color' - CSS Color Module Level 4 |W3C CSS ワーキング グループ エディターの下書き"  
 
-[DesktopEdge]: https://www.microsoft.com/edge/ "新しい Microsoft Edge の紹介"  
+[DesktopEdge]: https://www.microsoft.com/edge/ "新しい Microsoft Edge の導入"  
 
-[GithubDomenicPromiseUnwrappingStatesFates]: https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md "州と Fates-domenic/promise-ラップする |GitHub"  
+[GithubDomenicPromiseUnwrappingStatesFates]: https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md "状態と運命 - domenic/promises-unwrapping |GitHub"  
 
-[MDNRevert]: https://developer.mozilla.org/docs/Web/CSS/revert "元に戻す |MDN"  
-[MDNRevertBrowserCompatibility]: https://developer.mozilla.org/docs/Web/CSS/revert#Browser_compatibility "ブラウザーの互換性 |MDN"  
+[MDNRevert]: https://developer.mozilla.org/docs/Web/CSS/revert "元に戻す|MDN"  
+[MDNRevertBrowserCompatibility]: https://developer.mozilla.org/docs/Web/CSS/revert#Browser_compatibility "ブラウザーの互換性|MDN"  
 
-[VSCode]: https://code.visualstudio.com/ "Visual Studio コード"  
-[VSCodeShortcuts]: https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf "Windows 用 Visual Studio コードのキーボードショートカット"  
+[VisualStudioCode]: https://code.visualstudio.com/ "Visual Studioコード"  
+[VisualStudioCodeShortcuts]: https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf "Visual Studio Code の Windows 用キーボード ショートカット"  
 
-[WebhintHintsAxeKeyboard]: https://webhint.io/docs/user-guide/hints/hint-axe/keyboard/ "アックス: キーボード |Web ヒント"  
-[WebhintHintsAxeNameRoleValue]: https://webhint.io/docs/user-guide/hints/hint-axe/name-role-value/ "アックス: Name Role 値 |Web ヒント"  
+[WebhintHintsAxeKeyboard]: https://webhint.io/docs/user-guide/hints/hint-axe/keyboard/ "Axe: キーボード |WebHint"  
+[WebhintHintsAxeNameRoleValue]: https://webhint.io/docs/user-guide/hints/hint-axe/name-role-value/ "Axe: Name Role Value |WebHint"  
 
-[MicrosoftSupportWindows10HighContrastMode]: https://support.microsoft.com/help/4026951/windows-10-turn-high-contrast-mode-on-or-off "Windows でハイコントラストモードをオンまたはオフにする |Windows のサポート"  
+[MicrosoftSupportWindows10HighContrastMode]: https://support.microsoft.com/help/4026951/windows-10-turn-high-contrast-mode-on-or-off "Windows デバイスでハイ コントラスト モードのオンとオフを切り替|Windows のサポート"  
 
-[PostTweetEdgeDevTools]: https://aka.ms/tweet/edgedevtools "@EdgeDevTools |ツイートを投稿する"  
+[PostTweetEdgeDevTools]: https://aka.ms/tweet/edgedevtools "@EdgeDevTools | ツイートを投稿する"  
 [EdgeDevToolsTwitterAccount]: https://aka.ms/twitter/edgedevtools "@EdgeDevTools Twitter アカウント"  
-[GitHubMicrosoftDocsEdgeDeveloperNewIssue]: https://aka.ms/edgedevtoolsdocs/feedback "新しい問題-Microsoft のドキュメント/エッジ-開発者"  
+[GitHubMicrosoftDocsEdgeDeveloperNewIssue]: https://aka.ms/edgedevtoolsdocs/feedback "新しい問題 - MicrosoftDocs/edge-developer"  
 [MicrosoftEdgePreviewChannels]: https://aka.ms/microsoftedge "Microsoft Edge Preview チャネル"  
-[TheWebWeWant]: https://aka.ms/webwewant "必要な Web"  
+[TheWebWeWant]: https://aka.ms/webwewant "必要とされる Web"  
 
 <!--[WebdevAppShortcuts]: https://alphabet-dev/app-shortcuts "Get things done quickly with app shortcuts | alphabet-dev"  -->  
 <!--[WebdevCls]: https://alphabet-dev/cls "Cumulative Layout Shift (CLS) | alphabet-dev"  -->  
@@ -356,10 +356,10 @@ Windows または macOS を使用している場合は、 [Microsoft Edge previe
 <!--[WebdevCoreWebVitals]: https://alphabet-dev/vitals#core-web-vitals "Core Web Vitals | alphabet-dev"  -->  
 
 > [!NOTE]
-> このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
-> 元のページは [ここ](https://developers.google.com/web/updates/2020/05/devtools/index) にあり、 [Kayce Basques][KayceBasques] テクニカルライター、Chrome Devtools \ & Lighthouse \) で作成されています。  
+> このページの一部は、[Google によっ て作成および共有された][GoogleSitePolicies]作業に基づく変更であり、「[Creative Commons Attribution 4.0 International License][CCA4IL]」に記載されている条項に従って使用されます。  
+> 元のページは [ここ](https://developers.google.com/web/updates/2020/05/devtools/index) にあり、 [Kayce Basques][KayceBasques] \(Chrome DevTools \& Lighthouse\ のテクニカル ライター) が作成しました。  
 
-[![クリエイティブコモンズライセンス][CCby4Image]][CCA4IL]  
+[![Creative Commons ライセンス][CCby4Image]][CCA4IL]  
 この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。  
 
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  

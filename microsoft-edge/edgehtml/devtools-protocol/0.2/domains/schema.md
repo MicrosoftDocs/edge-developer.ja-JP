@@ -3,77 +3,49 @@ description: スキーマ ドメインの DevTools プロトコル バージョ�
 title: スキーマ ドメイン - DevTools プロトコル バージョン 0.2 (EdgeHTML)
 author: MSEdgeTeam
 ms.author: msedgedevrel
+ms.date: 11/03/2020
 ms.topic: reference
 ms.prod: microsoft-edge
-ms.date: 12/16/2020
 ROBOTS: NOINDEX,NOFOLLOW
-ms.openlocfilehash: 53038a02844fafc9550a6ac26303620a1a0183f8
-ms.sourcegitcommit: a35a6b5bbc21b7df61d08cbc6b074b5325ad4fef
+ms.openlocfilehash: 6844939f452bc96980d6d67d4652adcc7c078c7a
+ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "11234406"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "11398148"
 ---
-# スキーマ ドメイン - DevTools プロトコル バージョン 0.2 (EdgeHTML)  
+# <a name="schema-domain---devtools-protocol-version-02-edgehtml"></a>スキーマ ドメイン - DevTools プロトコル バージョン 0.2 (EdgeHTML)  
 
-プロトコル スキーマに関する情報を提供します。
+プロトコル スキーマに関する情報を提供します。  
 
-| | |
-|-|-|
-| [**メソッド**](#methods) | [getDomains](#getdomains) |
-| [**型**](#types) | [ドメイン](#domain) |
-## メソッド
+| 分類 | Members |  
+|:--- |:--- |  
+| [メソッド](#methods) | [getDomains](#getdomains) |  
+| [型](#types) | [Domain オブジェクト](#domain) |  
 
-### getDomains
-サポートされているドメインを返します。
+## <a name="methods"></a>メソッド  
 
-<table>
-    <thead>
-        <tr>
-            <th>戻り値</th>
-            <th></th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>domains</td>
-            <td><a href="#domain"><code class="flyout">Domain[]</code></a></td>
-            <td>サポートされているドメインの一覧。</td>
-        </tr>
-    </tbody>
-</table>
-</p>
+### <a name="getdomains"></a>getDomains  
 
----
+サポートされているドメインを返します。  
 
-## 型
+| 戻り値 | 型 | 詳細 |  
+|:--- |:--- |:--- |  
+| ドメイン | [Domain[]](#domain) | サポートされているドメインの一覧。 |  
 
-### <a name="domain"></a> ドメイン `object`
+---  
 
-プロトコル ドメインの説明。
+## <a name="types"></a>型  
 
-<table>
-    <thead>
-        <tr>
-            <th>プロパティ</th>
-            <th></th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>name</td>
-            <td><code class="flyout">string</code></td>
-            <td>ドメイン名。</td>
-        </tr>
-        <tr>
-            <td>version</td>
-            <td><code class="flyout">string</code></td>
-            <td>ドメインのバージョン。</td>
-        </tr>
-    </tbody>
-</table>
-</p>
+### <a name="domain-object"></a>Domain オブジェクト  
 
----
+<a name="domain"></a>  
+
+プロトコル ドメインの説明。  
+
+| プロパティ | 型 | 詳細 |  
+|:--- |:--- |:--- |  
+| name | `string` | ドメイン名。 |  
+| version | `string` | ドメイン バージョン。 |  
+
+---  

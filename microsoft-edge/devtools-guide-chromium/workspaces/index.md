@@ -1,18 +1,18 @@
 ---
-description: DevTools で行った変更をディスクに保存する方法について説明します。
-title: ワークスペースを使用してファイルを編集する
+description: DevTools 内で行われた変更をディスクに保存する方法について学習します。
+title: Workspaces を使用してファイルを編集する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 10/19/2020
+ms.date: 02/12/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 496bbbb34cdf900d36aa7ebfbf79ad63cdf3e6e7
-ms.sourcegitcommit: 99eee78698dc95b2a3fa638a5b063ef449899cda
+ms.openlocfilehash: 17f9ced15dbacd62c9ffe40e4af889925a8155fb
+ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "11125350"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "11399247"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -28,62 +28,62 @@ ms.locfileid: "11125350"
    See the License for the specific language governing permissions and
    limitations under the License.  -->  
 
-# ワークスペースを使用してファイルを編集する  
+# <a name="edit-files-with-workspaces"></a>Workspaces を使用してファイルを編集する  
 
 > [!NOTE]
-> このチュートリアルの目標は、ワークスペースのセットアップと使用に関する実践的な練習を行い、独自のプロジェクトでワークスペースを使用できるようにすることです。  ワークスペースを有効にした後、DevTools で作成したソースコードの変更をローカルコンピューターに保存することができます。  
+> このチュートリアルの目的は、ワークスペースをセットアップして使用する実践的な方法を提供し、独自のプロジェクトで Workspaces を使用する方法を提供します。  Workspaces を有効にした後、DevTools 内で行ったソース コードへの変更をローカル コンピューターに保存できます。  
 
 > [!IMPORTANT]
-> **前提条件**: このチュートリアルを始める前に、次の操作を実行する方法について理解しておく必要があります。  
+> **前提条件**: このチュートリアルを開始する前に、次の操作を実行する方法を知っている必要があります。  
 > 
-> *   [Html、CSS、JavaScript を使って web ページを作成する][MDNWebGettingStarted]  
-> *   [DevTools を使って CSS の基本的な変更を行う][DevToolsCssIndex]  
-> *   [ローカル HTTP web サーバーを実行する][MDNSimpleLocalHTTPServer]  
+> *   [html、CSS、JavaScript を使用して Web ページを作成する][MDNWebGettingStarted]  
+> *   [DevTools を使用して CSS に基本的な変更を加える][DevToolsCssIndex]  
+> *   [ローカル HTTP Web サーバーの実行][MDNSimpleLocalHTTPServer]  
 
-## 概要  
+## <a name="overview"></a>概要  
 
-ワークスペースを使用すると、Devtools で行った変更を、コンピューター上の同じファイルのローカルコピーに保存することができます。  このチュートリアルでは、コンピューターに次の設定を行う必要があります。  
+ワークスペースを使用すると、Devtools で行った変更を、コンピューター上の同じファイルのローカル コピーに保存できます。  このチュートリアルでは、コンピューターに次の設定が必要です。  
 
-*   自分のサイトのソースコードはデスクトップにあります。  
-*   ソースコードディレクトリからローカル web サーバーを実行しているため、サイトにアクセスできるように `localhost:8080` なります。  
-*   `localhost:8080`Microsoft Edge で開かれており、DevTools を使ってサイトの CSS を変更しています。  
+*   デスクトップ上にサイトのソース コードがあります。  
+*   ソース コード ディレクトリからローカル Web サーバーを実行して、サイトにアクセスできます `localhost:8080` 。  
+*   Microsoft `localhost:8080` Edge で開き、DevTools を使用してサイトの CSS を変更しています。  
 
-ワークスペースを有効にすると、DevTools で行った CSS の変更が、デスクトップのソースコードに保存されます。  
+Workspaces を有効にすると、DevTools 内で行った CSS の変更がデスクトップのソース コードに保存されます。  
 
-## 制限事項  
+## <a name="limitations"></a>制限事項  
 
-モダンフレームワークを使用している場合は、可能な限り早く実行するために最適化された形式に簡単に保持できる形式からソースコードを変換する可能性があります。  
+モダン フレームワークを使用している場合は、ソース コードを保守しやすい形式から、可能な限り迅速に実行するために最適化された形式に変換される可能性があります。  
 
-通常、ワークスペースでは、最適化されたコードを [ソースマップ][TreehouseBlogSourceMaps]のヘルプを使用して元のソースコードに戻すことができます。  ただし、フレームワーク間のソースマップの使用方法については、フレームワーク間に多くのバリエーションがあります。  Devtools は、単純にすべてのバリエーションをサポートします。  
+ワークスペースは、通常、ソース マップの助けを借りて、最適化されたコードを元のソース コードに [マップすることができます][TreehouseBlogSourceMaps]。  ただし、各ソース マップの使い方に関して、フレームワーク間には多くのバリエーションがあります。  Devtools は単にすべてのバリエーションをサポートします。  
 
-ワークスペースは、次のフレームワークで動作しないことがわかっています。  
+ワークスペースは、次のフレームワークでは動作しません。  
 
-*   反応するアプリを作成する  
+*   React アプリの作成  
 
     <!-- If you run into issues while using Workspaces with your framework of choice, or you get it working after some custom configuration, please [start a thread in the mailing list][AlphabetGroupsAlphabetBrowserDevTools] or [ask a question on Stack Overflow][StackOverflowAlphabetBrowserDevTools] to share your knowledge with the rest of the DevTools community.  -->  
     
-## 関連する機能: ローカルの上書き  
+## <a name="related-feature-local-overrides"></a>関連機能: ローカルオーバーライド  
 
-**ローカルオーバーライド** は、ワークスペースに似た別の devtools 機能です。  ページの変更を試す必要がある場合は、ローカルの上書きを使用しますが、ページの読み込み全体で変更を確認する必要がありますが、ページのソースコードへの変更のマッピングについては注意してください。  
+**ローカル オーバーライドは** 、Workspaces に似た別の DevTools 機能です。  Web ページの変更を試し、Web ページの読み込み間で変更を表示する必要がある場合はローカルオーバーライドを使用しますが、変更を Web ページのソース コードにマッピングする場合は気にしません。  
 
 <!--Todo: add section when content is ready  -->  
 
-## 手順 1: セットアップ  
+## <a name="step-1-set-up"></a>手順 1: セットアップ  
 
-次の操作を実行して、ワークスペースの実践的なエクスペリエンスを実現します。  
+Workspaces で実践的なエクスペリエンスを得るには、次のアクションを実行します。  
 
-### デモを設定する  
+### <a name="set-up-the-demo"></a>デモのセットアップ  
 
-1.  [デモを開き][GlitchWorkspacesDemo]ます。  <!--In the top-left of the editor, a randomly-generated project name is displayed.  -->  
+1.  [デモを開きます][GlitchWorkspacesDemo]。  <!--In the top-left of the editor, a randomly-generated project name is displayed.  -->  
     
-    :::image type="complex" source="../media/workspaces-glitch-workspaces-demo-source.msft.png" alt-text="エラープロジェクト" lightbox="../media/workspaces-glitch-workspaces-demo-source.msft.png":::
-       エラープロジェクト  
+    :::image type="complex" source="../media/workspaces-glitch-workspaces-demo-source.msft.png" alt-text="Glitch プロジェクト" lightbox="../media/workspaces-glitch-workspaces-demo-source.msft.png":::
+       Glitch プロジェクト  
     :::image-end:::  
     
     <!--1.  Choose the project name.  -->  
     <!--1.  Choose **Advanced Options** > **Download Project**.  
     
-    :::image type="complex" source="../media/workspaces-glitch-advanced-options-download-project.msft.png" alt-text="エラープロジェクト" lightbox="../media/workspaces-glitch-advanced-options-download-project.msft.png":::
+    :::image type="complex" source="../media/workspaces-glitch-advanced-options-download-project.msft.png" alt-text="The Download Project button" lightbox="../media/workspaces-glitch-advanced-options-download-project.msft.png":::
        The Download Project button  
     :::image-end:::  
 
@@ -91,8 +91,8 @@ ms.locfileid: "11125350"
     <!--1.  Close the tab.  -->  
     <!--1.  Unzip the source code and move the unzipped `app` directory to your desktop.  For the rest of this tutorial the unzipped directory is referred to as `~/Desktop/app`.  -->  
     
-1.  `app`デスクトップにディレクトリを作成します。  ディレクトリからディレクトリにファイルのコピー `workspaces-demo` を保存 `app` します。  このチュートリアルの残りの部分では、ディレクトリをと呼び `~/Desktop/app` ます。  
-1.  でローカル web サーバーを起動 `~/Desktop/app` します。  以下は、起動のためのサンプルコードです `SimpleHTTPServer` が、好きなサーバーを使用することもできます。  
+1.  デスクトップに `app` ディレクトリを作成します。  ディレクトリからディレクトリにファイル `workspaces-demo` のコピーを保存 `app` します。  チュートリアルの残りの部分では、ディレクトリはと呼ばれます `~/Desktop/app` 。  
+1.  でローカル Web サーバーを起動します `~/Desktop/app` 。  以下に、起動用のサンプル コードを示しますが、必要な `SimpleHTTPServer` サーバーを使用できます。  
     
     :::row:::
        :::column span="":::
@@ -109,63 +109,63 @@ ms.locfileid: "11125350"
        :::column-end:::
     :::row-end:::  
     
-1.  Microsoft Edge でタブを開き、ローカルでホストされているバージョンのサイトに移動します。  またはのような URL を使用してアクセスできる必要があり `localhost:8080` `http://0.0.0.0:8080` ます。  正確な [ポート番号][WikiPortURLs] は異なる場合があります。  
+1.  Microsoft Edge でタブを開き、ローカルでホストされているバージョンのサイトに移動します。  URL を使用してアクセスできる必要 `localhost:8080` があります `http://0.0.0.0:8080` 。  正確な [ポート番号は][WikiPortURLs] 異なる場合があります。  
     
-    :::image type="complex" source="../media/workspaces-workspaces-demo.msft.png" alt-text="エラープロジェクト" lightbox="../media/workspaces-workspaces-demo.msft.png":::
+    :::image type="complex" source="../media/workspaces-workspaces-demo.msft.png" alt-text="デモ" lightbox="../media/workspaces-workspaces-demo.msft.png":::
        デモ  
     :::image-end:::  
     
-### DevTools のセットアップ  
+### <a name="set-up-devtools"></a>DevTools のセットアップ  
 
-1.  [ `Control` + `Shift` + `J` \ (Windows, Linux \)] または [ `Command` + `Option` + `J` \ (macOS \)] を選択して、devtools の**コンソール**パネルを開きます。  
+1.  `Control` + `Shift` + `J` \(Windows, Linux\) または `Command` + `Option` + `J` \(macOS\) を選択して、DevTools の**コンソール**パネルを開きます。  
     
-    :::image type="complex" source="../media/workspaces-workspaces-demo-console.msft.png" alt-text="エラープロジェクト" lightbox="../media/workspaces-workspaces-demo-console.msft.png":::
-       **コンソール**パネル  
+    :::image type="complex" source="../media/workspaces-workspaces-demo-console.msft.png" alt-text="[コンソール] パネル" lightbox="../media/workspaces-workspaces-demo-console.msft.png":::
+       [ **コンソール]** パネル  
     :::image-end:::  
     
-1.  [ **ソース** ] タブを選択します。  
-1.  [ **Filesystem** ] タブを選びます。  
+1.  [ソース] **ツールを選択** します。  
+1.  [ファイルシステム] **パネルを選択** します。  
     
-    :::image type="complex" source="../media/workspaces-workspaces-demo-sources-filesystem.msft.png" alt-text="エラープロジェクト" lightbox="../media/workspaces-workspaces-demo-sources-filesystem.msft.png":::
-       [ **Filesystem** ] タブ  
+    :::image type="complex" source="../media/workspaces-workspaces-demo-sources-filesystem.msft.png" alt-text="[ファイルシステム] パネル" lightbox="../media/workspaces-workspaces-demo-sources-filesystem.msft.png":::
+       [ **ファイルシステム]** パネル  
     :::image-end:::  
     
-1.  [ **ワークスペースにフォルダーを追加**] を選びます。  
+1.  [ワークスペース **にフォルダーを追加] を選択します**。  
 1.  「`~/Desktop/app`」と入力します。  
-1.  ディレクトリの読み取りと書き込みを行うための DevTools アクセス許可を与えるには、[ **許可** ] を選びます。  
-    [ **Filesystem** ] タブで、、、およびの横に緑の点が表示され `index.html` `script.js` `styles.css` ます。  これらの緑の点は、DevTools がページのネットワークリソースとの間のマッピングを確立したことを意味 `~/Desktop/app` します。  
+1.  [ **許可] を** 選択して、ディレクトリへの読み取りおよび書き込みのアクセス許可を DevTools に付与します。  
+    [ファイルシステム **] パネル** で、 、 と の横に緑 `index.html` の `script.js` ドットが表示されます `styles.css` 。  これらの緑色の点は、DevTools がページのネットワーク リソースと内のファイルとの間にマッピングを確立したという意味です `~/Desktop/app` 。  
     
-    :::image type="complex" source="../media/workspaces-workspaces-demo-sources-filesystem-folder.msft.png" alt-text="エラープロジェクト" lightbox="../media/workspaces-workspaces-demo-sources-filesystem-folder.msft.png":::
-       [ **Filesystem** ] タブに、ローカルファイルとネットワーク間のマッピングが表示されるようになりました  
+    :::image type="complex" source="../media/workspaces-workspaces-demo-sources-filesystem-folder.msft.png" alt-text="[ファイルシステム] パネルに、ローカル ファイルとネットワーク ファイルのマッピングが表示されます。" lightbox="../media/workspaces-workspaces-demo-sources-filesystem-folder.msft.png":::
+       [ **ファイルシステム]** パネルに、ローカル ファイルとネットワーク ファイルのマッピングが表示されます。  
     :::image-end:::  
     
-## 手順 2: CSS の変更をディスクに保存する  
+## <a name="step-2-save-a-css-change-to-disk"></a>手順 2: CSS の変更をディスクに保存する  
 
-1.  [開く] `styles.css` を選びます。  
+1.  を `styles.css` 開きます。  
     
     > [!NOTE]
-    > `color`要素のプロパティ `h1` はに設定され `fuchsia` ます。  
+    > 要素 `color` のプロパティ `h1` は に設定されます `fuchsia` 。  
     
-    :::image type="complex" source="../media/workspaces-workspaces-demo-sources-filesystem-css.msft.png" alt-text="エラープロジェクト" lightbox="../media/workspaces-workspaces-demo-sources-filesystem-css.msft.png":::
-       `styles.css`テキストエディターで表示する  
+    :::image type="complex" source="../media/workspaces-workspaces-demo-sources-filesystem-css.msft.png" alt-text="テキスト エディターで styles.css を表示する" lightbox="../media/workspaces-workspaces-demo-sources-filesystem-css.msft.png":::
+       テキスト `styles.css` エディターでの表示  
     :::image-end:::  
     
-1.  [ **要素** ] タブを選択します。  
-1.  `color`要素のプロパティの値 `<h1>` を、お気に入りの色に変更します。  
-    [ `<h1>` **スタイル**] ウィンドウで CSS ルールが適用されていることを確認するために、 **DOM ツリー**で要素を選ぶ必要があることに注意してください。  [] の横にある緑の点は、 `styles.css:1` 加えた変更がマップされていることを意味 `~/Desktop/app/styles.css` します。  
+1.  [要素] **ツールを選択** します。  
+1.  要素のプロパティの値 `color` を、お気に `<h1>` 入りの色に変更します。  
+    スタイル ウィンドウに適用される CSS ルールを表示するには `<h1>` **、DOM ツリー** で要素を選択する **必要** があります。  次の緑の点 `styles.css:1` は、変更がマップされる点を意味します `~/Desktop/app/styles.css` 。  
     
-    :::image type="complex" source="../media/workspaces-workspaces-demo-elements-styles-css.msft.png" alt-text="エラープロジェクト" lightbox="../media/workspaces-workspaces-demo-elements-styles-css.msft.png":::
-       ファイルがリンクされていることを示す緑色のインジケーター  
+    :::image type="complex" source="../media/workspaces-workspaces-demo-elements-styles-css.msft.png" alt-text="ファイルがリンクされている緑色のインジケーター" lightbox="../media/workspaces-workspaces-demo-elements-styles-css.msft.png":::
+       ファイルがリンクされている緑色のインジケーター  
     :::image-end:::  
     
-1.  `styles.css`もう一度テキストエディターで開きます。  `color`これで、プロパティが [お気に入りの色」に設定されました。  
-1.  ページを最新の情報に更新してください。  要素の色 `<h1>` は、引き続き好みの色に設定されます。  この変更は更新されています。これにより、DevTools を変更したときに、ディスクへの変更が保存されたためです。  次に、ページを更新すると、ローカルサーバーは、ファイルの変更されたコピーをディスクから配信しました。  
+1.  テキスト `styles.css` エディターで再度開きます。  この `color` プロパティは、お気に入りの色に設定されます。  
+1.  ページを最新の情報に更新してください。  要素の色は `<h1>` 、引き続きお気に入りの色に設定されます。  変更を行った場合、DevTools によって変更がディスクに保存されたため、更新後も変更はそのまま残ります。  次に、ページを更新すると、ローカル サーバーがディスクからファイルの変更されたコピーを提供しました。  
     
-## 手順 3: HTML の変更をディスクに保存する  
+## <a name="step-3-save-an-html-change-to-disk"></a>手順 3: HTML の変更をディスクに保存する  
 
-### [要素] パネルで HTML を変更する  
+### <a name="change-html-from-the-elements-panel"></a>要素パネルから HTML を変更する  
 
-Html は、要素パネルから変更できますが、DOM ツリーへの変更はディスクに保存されず、現在のブラウザーセッションのみに影響します。  
+要素パネルから html に変更を加える場合がありますが、DOM ツリーへの変更はディスクに保存されません。現在のブラウザー セッションにのみ影響します。  
 
 DOM ツリーは html ではありません。  
 
@@ -174,11 +174,11 @@ DOM ツリーは html ではありません。
 > [!WARNING]
 > The workflow that you are about to try does not work.  You are trying it now so that you do not waste time later trying to figure out why it is not working.  
 
-1.  Choose the **Elements** tab.  
+1.  Choose the **Elements** tool.  
 1.  Choose and edit the text content of the `h1` element, which says `Workspaces Demo`, and replace it with `I ❤️  Cake`.  
     
-    :::image type="complex" source="../media/workspaces-workspaces-demo-change-h1.msft.png" alt-text="エラープロジェクト" lightbox="../media/workspaces-workspaces-demo-change-h1.msft.png":::
-       Attempt to change html from the DOM Tree of the **Elements** panel  
+    :::image type="complex" source="../media/workspaces-workspaces-demo-change-h1.msft.png" alt-text="Attempt to change html from the DOM Tree of the Elements panel" lightbox="../media/workspaces-workspaces-demo-change-h1.msft.png":::
+       Attempt to change html from the DOM Tree of the **Elements** tool  
     :::image-end:::  
     
 1.  Open `~/Desktop/app/index.html` in a text editor.  The change that you just made does not appear.  
@@ -189,75 +189,75 @@ DOM ツリーは html ではありません。
 > [!NOTE]
 > This section describes why the workflow from [Try changing html from the Elements panel](#try-changing-html-from-the-elements-panel) does not work.  You should skip this section if you do not care why.  
 
-*   The tree of nodes that you see on the **Elements** panel represents the [DOM][MDNWebAPIsDOM] of the page.  
+*   The tree of nodes that are displayed on the **Elements** tool represents the [DOM][MDNWebAPIsDOM] of the page.  
 *   To display a page, a browser fetches html over the network, parses the html, and then converts it into a tree of DOM nodes.  
 *   If the page has any JavaScript, that JavaScript may add, delete, or change DOM nodes.  CSS may change the DOM, too, using the [`content`][MDNCSSContent] property.  
 *   The browser eventually uses the DOM to determine what content it should present to browser users.  
-*   Therefore, the final state of the page that users see may be very different from the html that the browser fetched.  
-*   This makes it difficult for DevTools to resolve where a change made in the **Elements** panel should be saved, because the DOM is affected by HTML, JavaScript, and CSS.  
+*   Therefore, the final state of the webpage displayed for users may be very different from the html that the browser fetched.  
+*   This makes it difficult for DevTools to resolve where a change made in the **Elements** tool should be saved, because the DOM is affected by HTML, JavaScript, and CSS.  
 
 In short, the **DOM Tree** `!==` HTML.  
 -->  
 
-### [ソース] パネルで HTML を変更する  
+### <a name="change-html-from-the-sources-panel"></a>[ソース] パネルから HTML を変更する  
 
-ページの html への変更を保存する場合は、[ **ソース** ] パネルを使用します。  
+ページの html に対する変更を保存する場合は、[ソース] パネルを **使用して変更を行** います。  
 
-1.  [ **ソース** ] タブを選択します。  
-1.  [ **ページ** ] タブを選択します。  
-1.  [ **(インデックス)**] を選びます。  ページの HTML が開きます。  
-1.  置換後 `<h1>Workspaces Demo</h1>` の文字列 `<h1>I ❤️  Cake</h1>`  次の図を参照してください。  
-1.  `Control` + `S` 変更を保存するには、\ (Windows、Linux \) または `Command` + `S` \ (macOS \) を選択します。  
-1.  ページを最新の情報に更新してください。  `<h1>`要素に新しいテキストが引き続き表示されています。  
+1.  [ソース] **ツールを選択** します。  
+1.  [ページ] **パネルを選択** します。  
+1.  ( **インデックス) を選択します**。  ページの HTML が開きます。  
+1.  に `<h1>Workspaces Demo</h1>` 置き換える `<h1>I ❤️  Cake</h1>` 。  次の図を確認します。  
+1.  `Control` + `S` \(Windows, Linux\) または `Command` + `S` \(macOS\) を選択して変更を保存します。  
+1.  ページを最新の情報に更新してください。  要素 `<h1>` は引き続き新しいテキストを表示しています。  
     
-    :::image type="complex" source="../media/workspaces-workspaces-demo-sources-page-h1.msft.png" alt-text="エラープロジェクト" lightbox="../media/workspaces-workspaces-demo-sources-page-h1.msft.png":::
-       [ **ソース** ] パネルで HTML を変更する  
+    :::image type="complex" source="../media/workspaces-workspaces-demo-sources-page-h1.msft.png" alt-text="[ソース] パネルから HTML を変更する" lightbox="../media/workspaces-workspaces-demo-sources-page-h1.msft.png":::
+       [ソース] パネルから HTML **を変更** する  
     :::image-end:::  
     
-1.  [開く] `~/Desktop/app/index.html` を選びます。  `<h1>`要素に新しいテキストが含まれています。  
+1.  を `~/Desktop/app/index.html` 開きます。  要素 `<h1>` には、新しいテキストが含まれる。  
     
-## 手順 4: JavaScript の変更をディスクに保存する  
+## <a name="step-4-save-a-javascript-change-to-disk"></a>手順 4: JavaScript の変更をディスクに保存する  
 
-[ **ソース** ] パネルも JavaScript を変更する場所です。  ただし、サイトを変更するときに、[ **要素** ] パネルや **コンソール** パネルなどの他のパネルにアクセスする必要がある場合もあります。  他のパネルと共に **ソース** パネルを開く方法があります。  
+[ **ソース]** パネルは、JavaScript に変更を加える場所にもなっています。  ただし、サイトに変更を加えたときに、[**要素**] ツールや****[コンソール] パネルなどの他のパネルにアクセスする必要がある場合があります。  ソース パネルを他のパネル **と** 一緒に開く方法があります。  
 
-1.  [ **要素** ] タブを選択します。  
-1.  `Control` + `Shift` + `P` \ (Windows, Linux \) または `Command` + `Shift` + `P` \ (macOS \) を選択します。  **コマンドメニュー**が開きます。  
-1.  「 `QS` 」と入力し、[ **クイックソースの表示**] を選択します。  [DevTools] ウィンドウの下部に、[ **クイックソース** ] タブが表示されています。 タブには `index.html` 、[ **ソース** ] パネルで最後に編集したファイルの内容が表示されます。  [ **クイックソース** ] タブでは、[ **ソース** ] パネルからエディターが表示されるため、他のパネルを開いたままファイルを編集できます。  
+1.  [要素] **ツールを選択** します。  
+1.  `Control` + `Shift` + `P` \(Windows, Linux\) または `Command` + `Shift` + `P` \(macOS\) を選択します。  [ **コマンド] メニューが** 開きます。  
+1.  [入力 `QS` ] をクリックし、[ **クイック ソースの表示] を選択します**。  DevTools ウィンドウの下部にクイック ソース **パネルが表示** されます。  パネルには、ソース パネルで編集した最後のファイルであるコンテンツ `index.html` **が表示** されます。  [**クイック ソース]** パネルには、[ソース****] パネルからエディターが表示されます。これにより、他のパネルを開いている間にファイルを編集できます。  
     
-    :::image type="complex" source="../media/workspaces-workspaces-demo-search-show-quick-source.msft.png" alt-text="エラープロジェクト" lightbox="../media/workspaces-workspaces-demo-search-show-quick-source.msft.png":::
-       **コマンドメニュー**を使用して [**クイックソース**] タブを開く  
+    :::image type="complex" source="../media/workspaces-workspaces-demo-search-show-quick-source.msft.png" alt-text="コマンド メニューを使用してクイック ソース パネルを開く" lightbox="../media/workspaces-workspaces-demo-search-show-quick-source.msft.png":::
+       コマンド メニュー **を使用してクイック ソース** パネル **を開く**  
     :::image-end:::  
     
-1.  [ `Control` + `P` \ (Windows, Linux \)] または [ `Command` + `P` \ (macOS \)] を選択して、[**ファイルを開く**] ダイアログボックスを開きます。  次の図を参照してください。  
-1.  入力して `script` 、[ **app/script.js**] を選びます。  
+1.  `Control` + `P` \(Windows, Linux\) または `Command` + `P` \(macOS\) を選択して、[ファイルを開く]**ダイアログを開**きます。  次の図を確認します。  
+1.  [入力 `script` ] をクリックし、[**アプリ/script.js] をscript.js。 **  
     
-    :::image type="complex" source="../media/workspaces-workspaces-demo-search-script.msft.png" alt-text="エラープロジェクト" lightbox="../media/workspaces-workspaces-demo-search-script.msft.png":::
-       [ `script.js` ファイルを **開く** ] ダイアログボックスを使って開く  
+    :::image type="complex" source="../media/workspaces-workspaces-demo-search-script.msft.png" alt-text="[ファイルscript.jsダイアログを使用してファイルを開く" lightbox="../media/workspaces-workspaces-demo-search-script.msft.png":::
+       [ファイル `script.js` を開く] **ダイアログを使用して開** く  
     :::image-end:::  
     
     > [!NOTE]
-    > `Save Changes To Disk With Workspaces`デモのリンクは、定期的にスタイル設定されています。  
+    > デモ `Save Changes To Disk With Workspaces` のリンクは、定期的にスタイル設定されます。  
     
-1.  [**クイックソース**] タブを使用して、 **script.js**の下部に次のコードを追加します。  
+1.  [クイック ソース] パネルを**** 使用して、script.jsコード**を下部に追加**します。  
     
     ```javascript
     console.log('greetings from script.js');
     document.querySelector('a').style = 'font-style:italic';
     ```  
     
-1.  `Control` + `S` 変更を保存するには、\ (Windows、Linux \) または `Command` + `S` \ (macOS \) を選択します。  
+1.  `Control` + `S` \(Windows, Linux\) または `Command` + `S` \(macOS\) を選択して変更を保存します。  
 1.  ページを最新の情報に更新してください。  
     
     > [!NOTE]
-    > ページ上のリンクが斜体になりました。  
+    > ページ上のリンクが、現在は italicized です。  
     
-    :::image type="complex" source="../media/workspaces-workspaces-demo-elements-styles-quick-source-script.msft.png" alt-text="エラープロジェクト" lightbox="../media/workspaces-workspaces-demo-elements-styles-quick-source-script.msft.png":::
-       ページ上のリンクが斜体になりました  
+    :::image type="complex" source="../media/workspaces-workspaces-demo-elements-styles-quick-source-script.msft.png" alt-text="ページ上のリンクが italicized に変更されました" lightbox="../media/workspaces-workspaces-demo-elements-styles-quick-source-script.msft.png":::
+       ページ上のリンクが italicized に変更されました  
     :::image-end:::  
     
-## 次のステップ  
+## <a name="next-steps"></a>次の手順  
 
-このチュートリアルで学んだことを使用して、自分のプロジェクトでワークスペースをセットアップします。  <!-- If you run into any issues or are able to get it working after some custom configuration, please [start a thread in the mailing list][AlphabetGroupsAlphabetBrowserDevTools] or [ask a question on Stack Overflow][StackOverflowAlphabetBrowserDevTools] to share your knowledge with the rest of the DevTools community.  -->  
+このチュートリアルで学んだことを使用して、独自のプロジェクトで Workspaces を設定します。  <!-- If you run into any issues or are able to get it working after some custom configuration, please [start a thread in the mailing list][AlphabetGroupsAlphabetBrowserDevTools] or [ask a question on Stack Overflow][StackOverflowAlphabetBrowserDevTools] to share your knowledge with the rest of the DevTools community.  -->  
 
 <!--  
 If you have more feedback on the topics or anything else, please use any of the channels below:  
@@ -265,38 +265,38 @@ If you have more feedback on the topics or anything else, please use any of the 
 *   [Mailing List][AlphabetGroupsAlphabetBrowserDevTools]  
 *   [Twitter][TwitterAlphabetBrowserDevTools]  -->  
 
-## Microsoft Edge DevTools チームと連絡を取る  
+## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームと連絡を取る  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
 <!-- links -->  
 
-[DevToolsCssIndex]: ../css/index.md "CSS の表示と変更の概要 |Microsoft ドキュメント"  
+[DevToolsCssIndex]: ../css/index.md "CSS ファイルの表示と変更の|Microsoft Docs"  
 
 <!--[LocalOverrides]: ../whats-new/2018/01/devtools#overrides -->  
 
 <!--[AlphabetGroupsAlphabetBrowserDevTools]: https://groups.alphabet.com/forum/#!forum/alphabet-browser-developer-tools "Alphabet Browser DevTools - Alphabet Groups"  -->  
 
-[GlitchWorkspacesDemo]: https://glitch.com/edit/#!/microsoft-edge-chromium-devtools?path=workspaces-demo/index.html:1:0 "ワークスペースデモファイル |故障"  
+[GlitchWorkspacesDemo]: https://glitch.com/edit/#!/microsoft-edge-chromium-devtools?path=workspaces-demo/index.html:1:0 "Workspaces のデモ ファイル|Glitch"  
 
-[MDNCSSContent]: https://developer.mozilla.org/docs/Web/CSS/content "コンテンツ-CSS: カスケードスタイルシート |MDN"  
-[MDNWebGettingStarted]: https://developer.mozilla.org/docs/Learn/Getting_started_with_the_web "Web の概要 |MDN"  
-[MDNSimpleLocalHTTPServer]: https://developer.mozilla.org/docs/Learn/Common_questions/set_up_a_local_testing_server#Running_a_simple_local_HTTP_server "簡単なローカル HTTP サーバーを実行する |MDN"  
-[MDNWebAPIsDOM]: https://developer.mozilla.org/docs/Web/API/Document_Object_Model/Introduction "DOM の概要-Web Api |MDN"  
+[MDNCSSContent]: https://developer.mozilla.org/docs/Web/CSS/content "コンテンツ - CSS: カスケード スタイル シート |MDN"  
+[MDNWebGettingStarted]: https://developer.mozilla.org/docs/Learn/Getting_started_with_the_web "Web アプリケーションの|MDN"  
+[MDNSimpleLocalHTTPServer]: https://developer.mozilla.org/docs/Learn/Common_questions/set_up_a_local_testing_server#Running_a_simple_local_HTTP_server "単純なローカル HTTP サーバー を実行|MDN"  
+[MDNWebAPIsDOM]: https://developer.mozilla.org/docs/Web/API/Document_Object_Model/Introduction "DOM の概要 - Web API |MDN"  
 
 <!--[StackOverflowAlphabetBrowserDevTools]: https://stackoverflow.com/questions/ask?tags=alphabet-browser-devtools "Alphabet Browser DevTools - Stack Overflow"  -->
 
-[TreehouseBlogSourceMaps]: https://blog.teamtreehouse.com/introduction-source-maps "ソースマップの概要 |Treehouse ブログ"  
+[TreehouseBlogSourceMaps]: https://blog.teamtreehouse.com/introduction-source-maps "ソース マップの概要|Treehouse ブログ"  
 
 <!-- [TwitterAlphabetBrowserDevTools]: https://twitter.com/alphabetbrowserdevtools "Alphabet Browser DevTools \(@AlphabetBrowserDevTools\) | Twitter"  -->
 
-[WikiPortURLs]: https://en.wikipedia.org/wiki/Port_(computer_networking)#Use_in_URLs "ポート \ (コンピューターネットワーク \)-Wikipedia"  
+[WikiPortURLs]: https://en.wikipedia.org/wiki/Port_(computer_networking)#Use_in_URLs "Port \(computer networking\) - Wikipedia"  
 
 > [!NOTE]
-> このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
-> 元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/workspaces/index) にあり、 [Kayce Basques][KayceBasques] テクニカルライター、Chrome Devtools \ & Lighthouse \) で作成されています。  
+> このページの一部は、 [Google によっ て作成および共有された][GoogleSitePolicies]作業に基づく変更で、「[Creative Commons Attribution 4.0 International License][CCA4IL]」で記載されている条項に従って使用されます。  
+> 元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/workspaces/index) にあり、 [Kayce Basques][KayceBasques] \(Chrome DevTools \& Lighthouse\ のテクニカル ライター) が作成しました。  
 
-[![クリエイティブコモンズライセンス][CCby4Image]][CCA4IL]  
+[![Creative Commons ライセンス][CCby4Image]][CCA4IL]  
 この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。  
 
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  

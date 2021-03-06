@@ -3,16 +3,16 @@ description: Microsoft Edge DevTools を開くすべての方法。
 title: Microsoft Edge DevTools を開く
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 12/18/2020
+ms.date: 02/12/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: d21ebbf0b84be757c1b7a69d36b3bd3cc8403c6d
-ms.sourcegitcommit: 77c8f42cc84600c2b853b15aaaecf0749b74bb01
+ms.openlocfilehash: 770a9d3e7a0eaaecf322d2ca847d971d1ad11b9a
+ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "11238226"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "11398267"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -28,64 +28,62 @@ ms.locfileid: "11238226"
    See the License for the specific language governing permissions and
    limitations under the License. -->
 
-# Microsoft Edge DevTools を開く  
+# <a name="open-microsoft-edge-devtools"></a>Microsoft Edge DevTools を開く  
 
-Microsoft Edge DevTools を開く方法は多数あります。さまざまなユーザーが DevTools UI の異なる部分に高速にアクセスする必要があるためです。  
+さまざまなユーザーが DevTools UI の異なる部分に高速にアクセスする必要があるため、Microsoft Edge DevTools を開く方法は多数あります。  
 
-## 要素パネルを開き、DOM または CSS を検査する  
+## <a name="open-the-elements-panel-to-inspect-the-dom-or-css"></a>要素パネルを開き、DOM または CSS を検査する  
 
-次の各タスクを使用すると、DOM ノードのスタイルまたは属性を検査できます。
+次の各タスクを使用すると、DOM ノードのスタイルまたは属性を調うことができます。
 
-*   要素にマウス ポインターを移動し、コンテキスト メニュー \(右クリック\) を開き、[検査] を選択 **します**。  
-*   `Control` + `Shift` + `C` \(Windows,Linux\) または `Command` + `Option` + `C` \(macOS\) を選択します。  詳細については [、Microsoft Edge DevTools のキーボード ショートカットに移動します][DevtoolsShortcutsIndex]。  
+*   要素にマウス ポインターを置き、コンテキスト メニュー \(右クリック\) を開き、[検査] を **選択します**。  
+*   `Control` + `Shift` + `C` \(Windows, Linux\) または `Command` + `Option` + `C` \(macOS\) を選択します。  詳細については [、「Microsoft Edge DevTools キーボード ショートカット」に移動します][DevtoolsShortcutsIndex]。  
 
 :::image type="complex" source="../media/bing-right-click-inspect.msft.png" alt-text="[検査] オプション" lightbox="../media/bing-right-click-inspect.msft.png":::
    [ **検査]** オプション  
 :::image-end:::  
 
-<!--See [Get Started With Viewing And Changing CSS][GetStartedCSS].  -->  
+<!--Navigate to [Get Started With Viewing And Changing CSS][GetStartedCSS].  -->  
 
-## コンソール パネルを開く  
+## <a name="open-the-console-panel"></a>コンソール パネルを開く  
 
-次の各タスクでは、コンソール ウィンドウを[][DevtoolsConsoleIndex]開き、ログに記録されたメッセージを表示したり、JavaScript を実行できます。  
+次の各タスクを使用すると、コンソール[][DevtoolsConsoleIndex]ウィンドウを開き、ログに記録されたメッセージを表示したり、JavaScript を実行できます。  
 
-*   次の手順を使用して、コンソール ウィンドウ [を開][DevtoolsConsoleIndex] きます。  
+*   次の手順を使用して、[コンソール] ウィンドウ [を開][DevtoolsConsoleIndex] きます。  
     
     1.  [DevTools を開きます](#open-microsoft-edge-devtools)。  
-    1.  コンソール ウィンドウ [を選択][DevtoolsConsoleIndex] します。  
+    1.  [コンソール] [ウィンドウを選択][DevtoolsConsoleIndex] します。  
 
-*   コンソール ウィンドウに直接移動[するには][DevtoolsConsoleIndex] `Control` + `Shift` + `J` 、\(Windows,Linux\) または `Command` + `Option` + `J` \(macOS\) を選択します。  詳細については [、Microsoft Edge DevTools のキーボード ショートカットに移動します][DevtoolsShortcutsIndex]。  
+*   コンソール ウィンドウに直接移動[するには][DevtoolsConsoleIndex] `Control` + `Shift` + `J` 、[\(Windows,Linux\) または `Command` + `Option` + `J` \(macOS\) を選択します。  詳細については [、「Microsoft Edge DevTools キーボード ショートカット」に移動します][DevtoolsShortcutsIndex]。  
 
-<!--See [Get Started With The Console][ConsoleGetStarted].  -->
+<!--Navigate to [Get Started With The Console][ConsoleGetStarted].  -->
 
-## 前のパネルを開く  
+## <a name="open-the-previous-panel"></a>前のパネルを開く  
 
-開いた前のパネルに移動するには `Control` + `Shift` + `I` 、\(Windows, Linux\) または `Command` + `Option` + `I` \(macOS\) を選択します。  詳細については [、Microsoft Edge DevTools のキーボード ショートカットに移動します][DevtoolsShortcutsIndex]。  
+開いた前のパネルに移動するには `Control` + `Shift` + `I` 、[\(Windows, Linux\) または `Command` + `Option` + `I` \(macOS\) を選択します。  詳細については [、「Microsoft Edge DevTools キーボード ショートカット」に移動します][DevtoolsShortcutsIndex]。  
 
-## Microsoft Edge DevTools を開く  
+## <a name="open-microsoft-edge-devtools"></a>Microsoft Edge DevTools を開く  
 
 DevTools を開く場合は、次のいずれかのオプションを使用します。  
 
 *   Microsoft Edge UI を使用します。  
     
-    1.  [設定] **と [その他]** の [\( \) ] `...` アイコンを選択します。  
-    1.  [その **他のツール] を選択します**。  
-    1.  [ **開発者ツール] を選択します**。  
+    1.  [その他**のツール開発者ツール**] の [設定] > `...` \( \)**アイコン**  >   **を選択します**。  
     
 *   キーボードを使用します。  
-    *   Select `F12` or `Control` + `Shift` + `I` \(Windows, Linux\) or `Command` + `Option` + `I` \(macOS\).  
+    *   または `F12` `Control` + `Shift` + `I` \(Windows,Linux\) `Command` + `Option` + `I` または \(macOS\) を選択します。  
 
-詳細については [、Microsoft Edge DevTools のキーボード ショートカットに移動します][DevtoolsShortcutsIndex]。  
+詳細については [、「Microsoft Edge DevTools キーボード ショートカット」に移動します][DevtoolsShortcutsIndex]。  
 
-:::image type="complex" source="../media/bing-customize-more-tools-developer-tools-transparent.msft.png" alt-text="Microsoft Edge のメイン メニューから DevTools を開く" lightbox="../media/bing-customize-more-tools-developer-tools-transparent.msft.png":::
-   Microsoft Edge のメイン メニューから DevTools を開く  
+:::image type="complex" source="../media/bing-customize-more-tools-developer-tools-transparent.msft.png" alt-text="Microsoft Edge メイン メニューから DevTools を開く" lightbox="../media/bing-customize-more-tools-developer-tools-transparent.msft.png":::
+   Microsoft Edge メイン メニューから DevTools を開く  
 :::image-end:::  
 
-## すべての新しいタブで DevTools を自動開く  
+## <a name="auto-open-devtools-on-every-new-tab"></a>新しいタブごとに DevTools を自動開く  
 
-新しいタブごとに DevTools を自動的に開くには、コマンドラインから Microsoft Edge を開き、フラグを渡 `--auto-open-devtools-for-tabs` します。  
+新しいタブごとに DevTools を自動的に開くには、コマンド ラインから Microsoft Edge を開き、フラグを渡 `--auto-open-devtools-for-tabs` します。  
 
-### [CMD (Windows)](#tab/cmd-Windows/)  
+### [<a name="cmd-windows"></a>CMD (Windows)](#tab/cmd-Windows/)  
 
 <a id="auto-open-devtools-command-line"></a>  
 
@@ -93,7 +91,7 @@ DevTools を開く場合は、次のいずれかのオプションを使用し�
 start msedge --auto-open-devtools-for-tabs
 ```  
 
-### [PowerShell (Windows)](#tab/powershell-Windows/)  
+### [<a name="powershell-windows"></a>PowerShell (Windows)](#tab/powershell-Windows/)  
 
 <a id="auto-open-devtools-command-line"></a>  
 
@@ -101,7 +99,7 @@ start msedge --auto-open-devtools-for-tabs
 Start-Process -FilePath "msedge" -ArgumentList "--auto-open-devtools-for-tabs"
 ```  
 
-### [bash (macOS)](#tab/bash-macos/)  
+### [<a name="bash-macos"></a>bash (macOS)](#tab/bash-macos/)  
 
 <a id="auto-open-devtools-command-line"></a>  
 
@@ -109,7 +107,7 @@ Start-Process -FilePath "msedge" -ArgumentList "--auto-open-devtools-for-tabs"
 /Applications/Microsoft\ Edge\ Beta.app/Contents/MacOS/Microsoft\ Edge\ Beta --auto-open-devtools-for-tabs
 ```  
 
-### [bash (Linux)](#tab/bash-linux/)  
+### [<a name="bash-linux"></a>bash (Linux)](#tab/bash-linux/)  
 
 <a id="auto-open-devtools-command-line"></a>  
 
@@ -119,39 +117,39 @@ microsoft-edge-dev --auto-open-devtools-for-tabs
 
 * * *  
 
-## F12 キーボード ショートカットのオンとオフを切り替える  
+## <a name="toggle-the-f12-keyboard-shortcut-on-or-off"></a>F12 キーボード ショートカットのオンとオフを切り替える  
 
 `F12`DevTools を開くキーボード ショートカット設定を変更するには、次の操作を実行します。  
 
-1.  Choose the icon the **Settings and more** \( `...` \) icon > **Settings**.  
-1.  [ **検索の設定] に「.」** と入力します `Developer Tools` 。  
+1.  [設定] のアイコン **を選択し、[設定]** の `...` [\( \) > **選択します**。  
+1.  [ **検索の設定] に**「 」 と入力します `Developer Tools` 。  
     
-    :::image type="complex" source="../media/settings-developer-tools-f12-on.msft.png" alt-text="F12 キーが押された場合に DevTools を開く設定" lightbox="../media/settings-developer-tools-f12-on.msft.png":::
-       **F12 キーが押された場合に DevTools を開く設定**  
+    :::image type="complex" source="../media/settings-developer-tools-f12-on.msft.png" alt-text="[F12 キーが押された場合に DevTools を開く] 設定" lightbox="../media/settings-developer-tools-f12-on.msft.png":::
+       **[F12 キーが押された場合に DevTools を開く] 設定**  
     :::image-end:::  
     
-1.  **F12 キーが押されているときに [DevTools**を開く] を選択して、設定を \(または on\) に切り替えます。  設定をオフに切り替え、キーボード ショートカット `F12` が DevTools を開くのを停止します。  
+1.  **F12 キーが押されているときに [DevTools**を開く] を選択して、設定を \(または on\) に切り替えます。  キーボード ショートカットが DevTools を開くのを止めるには、設定を `F12` オフに切り替えます。  
     
-    :::image type="complex" source="../media/settings-developer-tools-f12-off.msft.png" alt-text="[F12 キーが押された場合に DevTools を開く] 設定がオフになっている" lightbox="../media/settings-developer-tools-f12-off.msft.png":::
-       **[F12 キーが押された場合に DevTools**を開く] 設定がオフになっている  
+    :::image type="complex" source="../media/settings-developer-tools-f12-off.msft.png" alt-text="[F12 キーを押した場合に DevTools を開く] 設定がオフになっている" lightbox="../media/settings-developer-tools-f12-off.msft.png":::
+       **[F12 キーを押した場合に DevTools**を開く] 設定がオフになっている  
     :::image-end:::  
     
-1.  トグルをオフに設定した後 `F12` 、DevTools が開かなくなったのを確認します。  
+1.  トグルをオフに設定した後 `F12` 、DevTools が開かなくなったか確認します。  
     
     > [!NOTE]
-    > F12 キーが押されているときに **DevTools** を開く設定をオフにした後、DevTools を開きます。次のいずれかの操作を実行します。  
+    > **[F12**キーが押されているときに DevTools を開く] 設定をオフにした後、DevTools を開き、次のいずれかの操作を実行します。  
     > 
-    > *   選択します `Ctrl` + `Shift` + `I` 。  
+    > *   を選択します `Ctrl` + `Shift` + `I` 。  
     > *   コンテキスト メニュー \(右クリック\) を開き、[検査] > **します**。  
     
-## Microsoft Edge DevTools チームと連絡を取る  
+## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームと連絡を取る  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
 <!-- links -->  
 
 [DevtoolsConsoleIndex]: ../console/index.md "コンソールの概要 | Microsoft Docs"  
-[DevtoolsShortcutsIndex]: ../shortcuts/index.md "Microsoft Edge DevTools のキーボード ショートカット |Microsoft Docs"  
+[DevtoolsShortcutsIndex]: ../shortcuts/index.md "Microsoft Edge DevTools キーボード ショートカット |Microsoft Docs"  
 
 <!--[ConsoleGetStarted]: /microsoft-edge/devtools-guide-chromium/console/get-started ""  -->  
 <!--[GetStartedCSS]: /microsoft-edge/devtools-guide-chromium/css "CSS"  -->

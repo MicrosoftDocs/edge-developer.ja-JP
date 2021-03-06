@@ -1,18 +1,18 @@
 ---
-description: Microsoft Edge DevTools で使用されていない JavaScript と CSS コードを検索して分析する方法について説明します。
-title: Microsoft Edge DevTools の [カバレッジ] タブで使用されていない JavaScript と CSS コードを見つける
+description: Microsoft Edge DevTools で使用されていない JavaScript コードと CSS コードを見つけて分析する方法。
+title: Microsoft Edge DevTools の [カバレッジ] パネルで未使用の JavaScript と CSS コードを検索する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 10/19/2020
+ms.date: 02/12/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 08c4daaabd30296b53ad57a81caa0e7b155a4fc9
-ms.sourcegitcommit: 99eee78698dc95b2a3fa638a5b063ef449899cda
+ms.openlocfilehash: 092788606347352876483b1a8282fbb75b2bff66
+ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "11125189"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "11398764"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -28,20 +28,20 @@ ms.locfileid: "11125189"
    See the License for the specific language governing permissions and
    limitations under the License.  -->
 
-# Microsoft Edge DevTools の [カバレッジ] タブで使用されていない JavaScript と CSS コードを見つける  
+# <a name="find-unused-javascript-and-css-code-with-the-coverage-panel-in-microsoft-edge-devtools"></a>Microsoft Edge DevTools の [カバレッジ] パネルで未使用の JavaScript コードと CSS コードを検索する  
 
-Microsoft Edge の DevTools の [カバレッジ] タブは、使用されていない JavaScript と CSS コードを見つけるのに役立ちます。  使用されていないコードを削除すると、ページの読み込みが速くなり、モバイルユーザーの携帯電話のデータが保存される可能性があります。  
+Microsoft **Edge DevTools** の [カバレッジ] パネルを使用すると、使用されていない JavaScript コードと CSS コードを見つけるのに役立ちます。  未使用のコードを削除すると、ページの読み込み速度が上がり、モバイル ユーザーの携帯電話データが保存される場合があります。  
 
-:::image type="complex" source="../media/coverage-sources-resource-drawer-coverage.msft.png" alt-text="コードカバレッジの分析" lightbox="../media/coverage-sources-resource-drawer-coverage.msft.png":::
-   コードカバレッジの分析  
+:::image type="complex" source="../media/coverage-sources-resource-drawer-coverage.msft.png" alt-text="コード 範囲の分析" lightbox="../media/coverage-sources-resource-drawer-coverage.msft.png":::
+   コード 範囲の分析  
 :::image-end:::  
 
 > [!WARNING]
-> 使用されていないコードの検索は比較的簡単です。  ただし、コードベースをリファクタリングして、各ページが必要な JavaScript と CSS を確実に出荷することが難しい場合があります。  このガイドでは、コードベースをリファクターして使用されていないコードを回避する方法については説明しません。これらの refactors はテクノロジスタックに依存しているためです。  
+> 使用されていないコードを見つけるのは比較的簡単です。  ただし、コードベースをリファクタリングして、必要な JavaScript と CSS のみを各ページに提供するのは難しい場合があります。  このガイドでは、これらのリファクタリングがテクノロジ スタックに大きな依存を持つため、コードベースをリファクタリングして未使用のコードを回避する方法については取り上げない。  
 
-## 概要  
+## <a name="overview"></a>概要  
 
-使用されていない JavaScript または CSS は、web 開発での一般的な問題です。  たとえば、ページで [ブートストラップボタンコンポーネント][BootstrapButtons] を使用するとします。  Button コンポーネントを使用するには、次のように HTML のブートストラップスタイルシートへのリンクを追加する必要があります。  
+未使用の JavaScript または CSS の配布は、Web 開発で一般的な問題です。  たとえば、ページでブートストラップ ボタン コンポーネントを [使用すると][BootstrapButtons] します。  ボタン コンポーネントを使用するには、HTML のブートストラップ スタイルシートへのリンクを次のように追加する必要があります。  
 
 ```html
 ...
@@ -53,44 +53,44 @@ Microsoft Edge の DevTools の [カバレッジ] タブは、使用されてい
 ...
 ```  
 
-このスタイルシートには、button コンポーネントのコードは含まれていません。  このファイルには、 **すべて** のブートストラップコンポーネントの CSS が含まれています。  ただし、他のブートストラップコンポーネントは使用していません。  このため、ページでは不要な CSS をダウンロードしようとしています。  このエクストラ CSS は、次のような理由で問題になります。  
+このスタイルシートには、ボタン コンポーネントのコードが含まれるだけではありません。  すべてのブートストラップ **コンポーネントの** CSS が含まれている。  ただし、他のブートストラップ コンポーネントは使用していない。  したがって、ページは必要ない CSS の束をダウンロードしています。  この追加の CSS は、次の理由で問題です。  
 
-*   余分なコードを使用すると、ページの読み込み速度が遅くなります。  <!--See [Render-Blocking CSS][render].  -->  
-*   ユーザーがモバイルデバイスでページにアクセスすると、追加のコードによって携帯電話のデータが使用されます。  
+*   余分なコードを使用すると、ページの読み込み速度が低下します。  <!--Navigate to [Render-Blocking CSS][render].  -->  
+*   ユーザーがモバイル デバイス上のページにアクセスした場合、追加のコードは携帯データを使用します。  
     
 <!--[render]: /web/fundamentals/performance/critical-rendering-path/render-blocking-css  -->  
 
-## [カバレッジ] タブを開く  
+## <a name="open-the-coverage-panel"></a>[カバレッジ] パネルを開く  
 
-1.  [コマンドメニューを開き][DevToolsCommandMenu]ます。  
-1.  入力を開始し、[ `coverage` **カバレッジの表示** ] コマンドを選択して、コマンドを `Enter` 実行します。  [ **補充** ] タブが **引き出し**で開きます。  
+1.  [コマンド メニューを開きます][DevToolsCommandMenu]。  
+1.  入力を開始 `coverage` し、[カバレッジの表示] コマンド **を** 選択し、コマンド `Enter` を実行する場合に選択します。  [ **引き出** し] に [カバレッジ] パネルが **開きます**。  
 
-    :::image type="complex" source="../media/coverage-console-drawer-coverage-empty.msft.png" alt-text="コードカバレッジの分析" lightbox="../media/coverage-console-drawer-coverage-empty.msft.png":::
-       [ **カバレッジ** ] タブ  
+    :::image type="complex" source="../media/coverage-console-drawer-coverage-empty.msft.png" alt-text="[カバレッジ] パネル" lightbox="../media/coverage-console-drawer-coverage-empty.msft.png":::
+       [ **カバレッジ]** パネル  
     :::image-end:::  
     
-## コードカバレッジの記録  
+## <a name="record-code-coverage"></a>レコード コード範囲  
 
-1.  [ **カバレッジ** ] タブで、次のいずれかのボタンをクリックします。  
-    *   **Start Instrumenting Coverage And Reload Page** ![ ][ImageReloadIcon] ページの読み込みに必要なコードを確認するには、[インストルメント化の開始] と [ページの再読み込み] を選びます。  
-    *   **Instrument Coverage** ![ ][ImageRecordIcon] ページを操作した後で使用されるコードを確認する場合は、[インストルメント化の対象] ([インストルメントのカバレッジ]) を選択します。  
-1.  コードカバレッジの記録を停止する場合は **、[インストルメントの実装を停止し、結果を表示** する ( ![ インストルメント化の停止と結果の表示)] を選び ][ImageStopIcon] ます。  
+1.  [カバレッジ] パネルで、次のいずれかのボタン **を選択** します。  
+    *   ページ **の読み込みに** 必要なコードを確認する場合は、[インストルメントカバレッジの開始とページの再読み込み]\(インストルメントカバレッジの開始とページの再読み込み ![ ][ImageReloadIcon] \) を選択します。  
+    *   ページ **を操作した** 後に使用するコードを確認する場合は、[Instrument Coverage \( Instrument ![ Coverage ][ImageRecordIcon] \) ] を選択します。  
+1.  コード **カバレッジの記録を停止する場合は、[** インストルメントカバレッジの停止と結果の表示] \( Stop Instrumenting Coverage and Show Results ![ ][ImageStopIcon] \) を選択します。  
     
-## コードカバレッジの分析  
+## <a name="analyze-code-coverage"></a>コード範囲の分析  
 
-[ **カバレッジ** ] タブの表には、分析されたリソースと、各リソース内で使用されているコードの量が表示されます。  [ **ソース** ] パネルで行をクリックしてそのリソースを開き、使用されているコードと未使用コードの行ごとの内訳を確認します。  
+[カバレッジ] パネル **の表** には、分析されたリソースと、各リソース内で使用されるコードの量が表示されます。  行を選択して[ソース] パネル**** でリソースを開き、使用されているコードと未使用のコードの 1 行の内訳を確認します。  
 
-:::image type="complex" source="../media/coverage-sources-resource-drawer-coverage-selected.msft.png" alt-text="コードカバレッジの分析" lightbox="../media/coverage-sources-resource-drawer-coverage-selected.msft.png":::
-   コードカバレッジレポート  
+:::image type="complex" source="../media/coverage-sources-resource-drawer-coverage-selected.msft.png" alt-text="コード カバレッジ レポート" lightbox="../media/coverage-sources-resource-drawer-coverage-selected.msft.png":::
+   コード カバレッジ レポート  
 :::image-end:::  
 
-*   **Url**列は、分析されたリソースの url です。  
-*   [ **Type** ] 列には、リソースに CSS、JavaScript、またはその両方が含まれているかどうかが示されます。  
-*   **Total bytes**列は、リソースの合計サイズ (バイト単位) です。  
-*   **未使用バイト**列は、使用されなかったバイト数です。  
-*   最後の名前が付いていない列は、[ **合計のバイト** 数] 列と [ **未使用のバイト数** ] 列の視覚エフェクトです。  バーの赤い部分は未使用のバイトです。  緑のセクションは、バイトを使用しています。  
+*   **[URL]** 列は、分析されたリソースの URL です。  
+*   **[Type]** 列には、リソースに CSS、JavaScript、または両方が含まれているかどうかを示します。  
+*   [ **合計バイト数]** 列は、リソースの合計サイズ (バイト単位) です。  
+*   [ **未使用のバイト数** ] 列は、使用されていないバイト数です。  
+*   最後の名前のない列は、[合計バイト数]**** 列と [未使用バイト] 列**を視覚化**します。  バーの赤いセクションは未使用のバイトです。  緑色のセクションはバイト数を使用します。  
     
-## Microsoft Edge DevTools チームと連絡を取る  
+## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームと連絡を取る  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
@@ -102,15 +102,15 @@ Microsoft Edge の DevTools の [カバレッジ] タブは、使用されてい
 
 <!-- links -->  
 
-[DevToolsCommandMenu]: ../command-menu/index.md "Microsoft Edge DevTools コマンドメニューを使用してコマンドを実行する |Microsoft ドキュメント"  
+[DevToolsCommandMenu]: ../command-menu/index.md "[Microsoft Edge DevTools コマンド] メニューメニューを使用してコマンドを実行|Microsoft Docs"  
 
-[BootstrapButtons]: https://getbootstrap.com/docs/4.3/components/buttons "ボタン-ブートストラップ"  
+[BootstrapButtons]: https://getbootstrap.com/docs/4.3/components/buttons "ボタン - ブートストラップ"  
 
 > [!NOTE]
-> このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
-> 元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/coverage/index) にあり、 [Kayce Basques][KayceBasques] テクニカルライター、Chrome Devtools \ & Lighthouse \) で作成されています。  
+> このページの一部は、 [Google によっ て作成および共有された][GoogleSitePolicies]作業に基づく変更で、「[Creative Commons Attribution 4.0 International License][CCA4IL]」で記載されている条項に従って使用されます。  
+> 元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/coverage/index) にあり、 [Kayce Basques][KayceBasques] \(Chrome DevTools \& Lighthouse\ のテクニカル ライター) が作成しました。  
 
-[![クリエイティブコモンズライセンス][CCby4Image]][CCA4IL]  
+[![Creative Commons ライセンス][CCby4Image]][CCA4IL]  
 この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。  
 
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  

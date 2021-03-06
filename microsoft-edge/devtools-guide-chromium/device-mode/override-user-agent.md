@@ -1,18 +1,18 @@
 ---
-description: '[ネットワークの条件] タブを開き、[自動的に選択しない] を無効にして、一覧から選ぶか、カスタム文字列を入力します。'
-title: Microsoft Edge DevTools からユーザーエージェント文字列を上書きする
+description: '[ネットワーク条件] ツールを開き、[自動的に選択] を無効にし、リストから選択するか、カスタム文字列を入力します。'
+title: Microsoft Edge DevTools からユーザー エージェント文字列を上書きする
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 10/19/2020
+ms.date: 02/12/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: befbe186a5992c651f877a18f1c3232bf212394a
-ms.sourcegitcommit: 99eee78698dc95b2a3fa638a5b063ef449899cda
+ms.openlocfilehash: a0ba10b551b4853cf204656ca7a9fb014323986b
+ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "11124951"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "11398694"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -28,38 +28,38 @@ ms.locfileid: "11124951"
    See the License for the specific language governing permissions and
    limitations under the License.  -->
 
-# Microsoft Edge DevTools からユーザーエージェント文字列を上書きする  
+# <a name="override-the-user-agent-string-from-microsoft-edge-devtools"></a>Microsoft Edge DevTools からユーザー エージェント文字列を上書きする  
 
-Microsoft Edge DevTools から [ユーザーエージェント][MDNUserAgent] 文字列を上書きするには、次の操作を行います。  
+Microsoft Edge DevTools [から][MDNUserAgent] ユーザー エージェント文字列を上書きするには、次のコマンドを実行します。  
 
-1.  `Control` + `Shift` + `P` コマンドメニューを開くには、\ (Windows, Linux \) または `Command` + `Shift` + `P` \ **Command Menu**(macOS \) を選択します。  
+1.  `Control`+`Shift`+`P` \(Windows, Linux\) または `Command`+`Shift`+`P` \(macOS\) を選択して、**コマンド メニュー** を開きます。  
     
-    :::image type="complex" source="../media/device-mode-console-command-menu.msft.png" alt-text="コマンドメニュー" lightbox="../media/device-mode-console-command-menu.msft.png":::
-       **コマンドメニュー**  
+    :::image type="complex" source="../media/device-mode-console-command-menu.msft.png" alt-text="コマンド メニュー" lightbox="../media/device-mode-console-command-menu.msft.png":::
+       **コマンド メニュー**  
     :::image-end:::  
     
-1.  「 `network conditions` **ネットワーク条件を表示**」を選択して、「 `Enter` **ネットワーク条件** 」タブを選択します。  
-1.  [ **ユーザーエージェント** ] セクションで、 **[自動的に選択** する] チェックボックスをオフにします。  
+1.  [ネットワーク `network conditions` 条件の **表示] を選択し**、[ネットワーク条件] ツール `Enter` **を開きます** 。  
+1.  [ユーザー エージェント **] セクション** で、[自動的に選択する] **チェック ボックスをオフ** にします。  
     
-    :::image type="complex" source="../media/device-mode-console-network-conditions-user-agent-select-automatically-deselected.msft.png" alt-text="コマンドメニュー" lightbox="../media/device-mode-console-network-conditions-user-agent-select-automatically-deselected.msft.png":::
-       **自動選択**を無効にする  
+    :::image type="complex" source="../media/device-mode-console-network-conditions-user-agent-select-automatically-deselected.msft.png" alt-text="[自動的に選択] をオフにする" lightbox="../media/device-mode-console-network-conditions-user-agent-select-automatically-deselected.msft.png":::
+       [自動的に **選択] をオフにする**  
     :::image-end:::  
     
-1.  リストからユーザーエージェント文字列を選択するか、独自のカスタム文字列を入力します。  
+1.  リストからユーザー エージェント文字列を選択するか、独自のカスタム文字列を入力します。  
     
-## Microsoft Edge DevTools チームと連絡を取る  
+## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームと連絡を取る  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
 <!-- links -->  
 
-[MDNUserAgent]: https://developer.mozilla.org/docs/Glossary/User_agent "ユーザーエージェント |MDN"  
+[MDNUserAgent]: https://developer.mozilla.org/docs/Glossary/User_agent "ユーザー エージェント |MDN"  
 
 > [!NOTE]
-> このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
-> 元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/device-mode/override-user-agent) にあり、 [Kayce Basques][KayceBasques] テクニカルライター、Chrome Devtools \ & Lighthouse \) で作成されています。  
+> このページの一部は、 [Google によっ て作成および共有された][GoogleSitePolicies]作業に基づく変更で、「[Creative Commons Attribution 4.0 International License][CCA4IL]」で記載されている条項に従って使用されます。  
+> 元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/device-mode/override-user-agent) にあり、 [Kayce Basques][KayceBasques] \(Chrome DevTools \& Lighthouse\ のテクニカル ライター) が作成しました。  
 
-[![クリエイティブコモンズライセンス][CCby4Image]][CCA4IL]  
+[![Creative Commons ライセンス][CCby4Image]][CCA4IL]  
 この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。  
 
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  

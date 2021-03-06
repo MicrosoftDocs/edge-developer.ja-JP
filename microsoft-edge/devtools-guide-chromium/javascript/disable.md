@@ -1,18 +1,18 @@
 ---
-description: コマンド メニューを開き、"JavaScript を無効にする" コマンドを実行します。
+description: コマンド メニューを開き、[JavaScript を無効にする] コマンドを実行します。
 title: Microsoft Edge DevTools で JavaScript を無効にする
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 12/11/2020
+ms.date: 02/12/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: f7aafee4b05f843319a4a744e6cba148d4642667
-ms.sourcegitcommit: a35a6b5bbc21b7df61d08cbc6b074b5325ad4fef
+ms.openlocfilehash: 2067944fa17c332dd15ffb3ef97afe02d35685ed
+ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "11230671"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "11398561"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -28,9 +28,9 @@ ms.locfileid: "11230671"
    See the License for the specific language governing permissions and
    limitations under the License.  -->
 
-# Microsoft Edge DevTools で JavaScript を無効にする  
+# <a name="disable-javascript-with-microsoft-edge-devtools"></a>Microsoft Edge DevTools で JavaScript を無効にする  
 
-JavaScript が無効になっている場合の Web ページの外観と動作を確認するには、次のアクションを実行します。  
+JavaScript が無効になっている場合の Web ページの外観と動作を表示するには、次のアクションを実行します。  
 
 1.  [Microsoft Edge DevTools を開きます][DevToolsOpen]。  
 1.  `Control`+`Shift`+`P` \(Windows, Linux\) または `Command`+`Shift`+`P` \(macOS\) を選択して、**コマンド メニュー** を開きます。  
@@ -39,28 +39,28 @@ JavaScript が無効になっている場合の Web ページの外観と動作�
        **コマンド メニュー**  
     :::image-end:::  
     
-1.  入力を開始 `javascript` し **、[JavaScript を無効にする**] を選択し、コマンドの `Enter` 実行を選択します。  JavaScript が無効になりました。  
+1.  入力を開始 `javascript` し **、[JavaScript を無効**にする] を選択し、コマンド `Enter` を実行する場合に選択します。  JavaScript が無効になりました。  
     
-    :::image type="complex" source="../media/javascript-console-command-javascript.msft.png" alt-text="コマンド メニューで [JavaScript を無効にする] を選択する" lightbox="../media/javascript-console-command-javascript.msft.png":::
-       コマンド **メニューで [JavaScript を** 無効にする] **を選択する**  
+    :::image type="complex" source="../media/javascript-console-command-javascript.msft.png" alt-text="コマンド メニューで [JavaScript を無効にする] を選択します。" lightbox="../media/javascript-console-command-javascript.msft.png":::
+       コマンド **メニューで [JavaScript** を無効にする] **を選択します。**  
     :::image-end:::  
     
-    ソースの横にある黄色の警告アイコン **は** 、JavaScript が無効になっていることを通知します。  
+    [ソース] の横にある黄色の **警告** アイコンは、JavaScript が無効になっていることを通知します。  
     
     :::image type="complex" source="../media/javascript-console-javascript-disabled-warning.msft.png" alt-text="[ソース] の横にある警告アイコン" lightbox="../media/javascript-console-javascript-disabled-warning.msft.png":::
        [ソース] の横にある **警告アイコン**  
     :::image-end:::  
     
-DevTools を開いている限り、JavaScript はタブで無効のままです。  
+DevTools を開いている限り、JavaScript はタブで無効なままです。  
 
-ページを再読み込みして、読み込み中にページが JavaScript に依存するかどうか、およびどのように依存するか確認できます。  
+ページを更新して、読み込み中に Web ページが JavaScript に依存するかどうかと方法を確認できます。  
 
 JavaScript を再び有効にするには、次のアクションを実行します。  
 
 *   コマンド メニュー **を再度開** き、コマンドを実行 `Enable JavaScript` します。  
 *   DevTools を閉じます。  
 
-## Microsoft Edge DevTools チームと連絡を取る  
+## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームと連絡を取る  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 

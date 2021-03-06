@@ -1,18 +1,18 @@
 ---
-description: タイムラインイベントモードでは、記録を作成するときにトリガーされるすべてのイベントが表示されます。  タイムラインイベントのリファレンスを使って、各タイムラインイベントの種類について詳しく知ることができます。
-title: タイムライン イベント リファレンス
+description: タイムライン イベント モードでは、録音中にトリガーされたイベントすべてが表示されます。  タイムライン イベントの各種類の詳細については、タイムライン イベント参照を使用します。
+title: Timeline イベントリファレンス
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 10/19/2020
+ms.date: 02/12/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 989d4d84345fedc1c5aef2cb8d893db3c0e1634b
-ms.sourcegitcommit: 99eee78698dc95b2a3fa638a5b063ef449899cda
+ms.openlocfilehash: 2a166c9eebc980682fa872e5ee8d213f2058b384
+ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "11124902"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "11398666"
 ---
 <!-- Copyright Meggin Kearney and Flavio Copes
 
@@ -28,139 +28,139 @@ ms.locfileid: "11124902"
    See the License for the specific language governing permissions and
    limitations under the License.  -->
 
-# タイムライン イベント リファレンス  
+# <a name="timeline-event-reference"></a>Timeline イベントリファレンス  
 
-タイムラインイベントモードでは、記録を作成するときにトリガーされるすべてのイベントが表示されます。  タイムラインイベントのリファレンスを使って、各タイムラインイベントの種類について詳しく知ることができます。  
+タイムライン イベント モードでは、録音中にトリガーされたイベントすべてが表示されます。  タイムライン イベントの各種類の詳細については、タイムライン イベント参照を使用します。  
 
-## 一般的なタイムラインイベントプロパティ  
+## <a name="common-timeline-event-properties"></a>一般的なタイムライン イベントのプロパティ  
 
-一部の詳細は、すべての種類のイベントに存在しますが、一部のイベントの種類にしか適用されません。  このセクションでは、さまざまなイベントの種類に共通するプロパティを示します。  特定のイベントの種類に固有のプロパティについては、次に示すイベントの種類に関する参照で示されています。  
+特定の詳細は、すべての種類のイベントに存在しますが、一部のイベントは特定のイベントの種類にのみ適用されます。  このセクションでは、さまざまなイベントの種類に共通するプロパティの一覧を示します。  特定のイベントの種類に固有のプロパティは、その後に続くイベントの種類の参照に一覧表示されます。  
 
-| プロパティ | 表示されるタイミング |  
+| プロパティ | いつ表示されるか |  
 |:--- |:--- |  
-| 集計時間 | **入れ子になっ**たイベントのイベントについては、各カテゴリのイベントによって実行される時間。 |  
-| 通話スタック | **子イベント**を持つイベントについては、各カテゴリのイベントによって行われる時間。 |  
-| CPU 時間 | 記録されたイベントに要した CPU 時間。 |  
+| 集計時間 | 入れ子になった **イベントの場合**、イベントの各カテゴリによって取られる時間。 |  
+| 呼び出し履歴 | 子イベントを **持つイベントの**場合、イベントの各カテゴリによって取られた時間。 |  
+| CPU 時間 | 記録されたイベントにかかった CPU 時間。 |  
 | 詳細 | イベントに関するその他の詳細。 |  
-| Duration (タイムスタンプ \) | すべての子のイベントが完了するまでの時間。[タイムスタンプ] は、記録を開始したタイミングを基準とした、イベントが発生した時刻です。 |  
-| セルフタイム | その子のいずれかがなくてもイベントはどのくらいの時間がかかります。 |  
-| 使用されたヒープサイズ | イベントが記録されたときにアプリケーションによって使用されたメモリの量と、前回のサンプリング以降、使用されたヒープサイズのデルタ \ (+/-\) が変化します。 |  
+| Duration \(at time-stamp\) | すべての子が完了するためにイベントにかかった時間。タイムスタンプは、イベントが発生した時刻で、記録が開始された時刻を基準として指定します。 |  
+| 自己時間 | 子がいなくてもイベントにかかった時間。 |  
+| 使用ヒープ サイズ | イベントの記録時にアプリケーションで使用されるメモリの量と、前回のサンプリング以降の使用ヒープ サイズのデルタ \(+/-\) の変化。 |  
 
 <!--todo: add nested and child events (timelinetool) section when available -->  
 
-## イベントの読み込み  
+## <a name="loading-events"></a>イベントの読み込み  
 
-このセクションには、カテゴリとそのプロパティの読み込みに属するイベントが一覧表示されます。  
+このセクションでは、読み込みカテゴリとそのプロパティに属するイベントの一覧を示します。  
 
 | イベント | 説明 |  
 |:--- |:--- |  
-| HTML の解析 |  Microsoft Edge は、HTML 解析アルゴリズムを実行しました。 |  
+| HTML の解析 |  Microsoft Edge は HTML 解析アルゴリズムを実行しました。 |  
 | 読み込みを完了する |  ネットワーク要求が完了しました。 |  
-| データの受信 |  要求のデータが受信されました。  1つ以上の受信データイベントがあります。 |  
-| 応答を受信する |  要求からの最初の HTTP 応答。 |  
-| リクエストを送信 |  ネットワーク要求が送信されました。 |  
+| データの受信 |  要求のデータが受信された。  1 つ以上の受信データ イベントがあります。 |  
+| 応答の受信 |  要求からの最初の HTTP 応答。 |  
+| 要求の送信 |  ネットワーク要求が送信されました。 |  
 
-### イベントプロパティの読み込み  
+### <a name="loading-event-properties"></a>イベント プロパティの読み込み  
 
 | プロパティ | 説明 |  
 |:--- |:--- |  
-| リソース | 要求されたリソースの URL です。 |  
-| Preview | 要求されたリソースのプレビュー \ (images のみ)。 |  
-| Request メソッド | 要求 (\ など) に使用される HTTP メソッド `GET` `POST` 。 |  
+| リソース | 要求されたリソースの URL。 |  
+| Preview | 要求されたリソース \(images only\) のプレビュー。 |  
+| Request メソッド | 要求 \( または 、 `GET` たとえば `POST` \) に使用される HTTP メソッド。 |  
 | ステータス コード | HTTP 応答コード。 |  
 | MIME の種類 | 要求されたリソースの MIME の種類。 |  
-| エンコードされたデータの長さ | 要求されたリソースの長さ (バイト単位) です。 |  
+| エンコードされたデータの長さ | 要求されたリソースの長さ (バイト単位)。 |  
 
-## スクリプトイベント  
+## <a name="scripting-events"></a>スクリプト イベント  
 
-このセクションには、スクリプトカテゴリとそのプロパティに属するイベントが一覧表示されます。  
+このセクションでは、Scripting カテゴリとそのプロパティに属するイベントの一覧を示します。  
 
 | イベント | 説明 |  
 |:--- |:--- |  
-| アニメーションフレームが発生した | スケジュールされたアニメーションフレームが起動され、そのコールバックハンドラーが呼び出されます。 |  
-| アニメーションフレームのキャンセル |  スケジュールされたアニメーションのフレームが取り消されました。 |  
-| GC イベント |  ガーベジコレクションが行われました。 |  
-| DOMContentLoaded |  [Domcontentloaded イベント][MDNWindowDOMContentLoadedEvent]がブラウザーによって起動されました。  このイベントは、すべてのページの DOM コンテンツが読み込まれて解析されたときに発生します。 |  
+| アニメーション フレームの作成 | スケジュールされたアニメーション フレームが起動され、コールバック ハンドラーが呼び出されます。 |  
+| アニメーション フレームの取り消し |  スケジュールされたアニメーション フレームが取り消されました。 |  
+| GC イベント |  ガベージ コレクションが発生しました。 |  
+| DOMContentLoaded |  [DOMContentLoaded イベントは][MDNWindowDOMContentLoadedEvent]ブラウザーによって発生しました。  このイベントは、ページのすべての DOM コンテンツが読み込まれ、解析されると発生します。 |  
 | スクリプトの評価 | スクリプトが評価されました。 |  
-| イベント | JavaScript イベント ( `mousedown` 、、など `key` )。 |  
-| 関数呼び出し | 最上位レベルの JavaScript 関数の呼び出しが行われました (ブラウザーが JavaScript エンジン \ に入力した場合にのみ表示されます)。 |  
-| インストールタイマー | タイマーは [Setinterval ()][MDNWindowOrWorkerGlobalScopeSetInterval] または [setTimeout ()][MDNWindowOrWorkerGlobalScopeSetTimeout]を使って作成されました。 |  
-| アニメーションフレームを要求する | 通話によって `requestAnimationFrame()` 新しいフレームがスケジュールされました。 |  
-| タイマーを削除する | 以前に作成したタイマーが消去されました。 |  
-| 時間 |  " [Console. time ()][ConsoleApiTime]" というスクリプト。 |  
-| 終了時刻 | " [Console. timeEnd ()][ConsoleApiTimeEnd]" というスクリプト。 |  
-| タイマーが発生した | またはでスケジュールされていたタイマーが起動しました `setInterval()` `setTimeout()` 。 |  
-| XHR のレディ状態の変更 | XMLHTTPRequest のレディ状態が変更されました。 |  
-| XHR 読み込み | `XMLHTTPRequest`読み込みが完了しました。 |  
+| イベント | JavaScript イベント \(たとえば `mousedown` `key` 、、\)。 |  
+| 関数呼び出し | トップ レベルの JavaScript 関数呼び出しが行われた \(ブラウザーが JavaScript エンジン\に入った場合にのみ表示されます)。 |  
+| インストール タイマー | [setInterval() または setTimeout() を][MDNWindowOrWorkerGlobalScopeSetInterval]使用[してタイマーが作成されました][MDNWindowOrWorkerGlobalScopeSetTimeout]。 |  
+| アニメーション フレームの要求 | 新 `requestAnimationFrame()` しいフレームをスケジュールした呼び出し。 |  
+| タイマーの削除 | 以前に作成したタイマーがクリアされました。 |  
+| 時間 |  [console.time() というスクリプト][ConsoleApiTime]。 |  
+| タイム エンド | [console.timeEnd()][ConsoleApiTimeEnd]というスクリプト。 |  
+| タイマーの発生 | またはでスケジュールされたタイマーが `setInterval()` 発生 `setTimeout()` しました。 |  
+| XHR Ready State Change | XMLHTTPRequest の準備状態が変更されました。 |  
+| XHR の読み込み | 読 `XMLHTTPRequest` み込みが完了しました。 |  
 
-### スクリプトイベントプロパティ  
+### <a name="scripting-event-properties"></a>スクリプト イベントのプロパティ  
 
 | プロパティ | 説明 |  
 |:--- |:--- |  
 | タイマー ID | タイマー ID。 |  
-| タイムアウト | タイマーによって指定されたタイムアウト。 |  
-| 繰り返し | タイマーを繰り返すかどうかを指定するブール値。 |  
+| タイムアウト | タイマーで指定されたタイムアウト。 |  
+| 繰り返し | タイマーが繰り返される場合を指定するブール値。 |  
 | 関数呼び出し | 呼び出された関数。 |  
 
-## レンダリングイベント  
+## <a name="rendering-events"></a>レンダリング イベント  
 
-このセクションには、レンダリングカテゴリとそのプロパティに属するイベントが一覧表示されます。  
+このセクションでは、レンダリング カテゴリとそのプロパティに属するイベントの一覧を示します。  
 
 | イベント | 説明 |  
 |:--- |:--- |  
-| レイアウトの無効化 | ページレイアウトは DOM の変更によって無効にされました。 |  
-| レイアウト | ページレイアウトが完了しました。 |  
+| レイアウトを無効にする | DOM の変更によってページ レイアウトが無効にされました。 |  
+| レイアウト | ページ レイアウトが完了しました。 |  
 | スタイルの再計算 | Microsoft Edge で再計算された要素のスタイル。 |  
-| Scroll | 入れ子になったビューのコンテンツがスクロールされました。 |  
+| Scroll | 入れ子になったビューの内容がスクロールされました。 |  
 
-### イベントプロパティのレンダリング  
+### <a name="rendering-event-properties"></a>レンダリング イベントのプロパティ  
 
 | プロパティ | 説明 |  
 |:--- |:--- |  
-| レイアウトの無効化 | レイアウトレコードの場合、レイアウトが無効になる原因となったコードのスタックトレース。 |  
-| レイアウトが必要なノード | レイアウトレコードの場合は、relayout が開始される前に、必要なレイアウトとしてマークされたノードの数。  これらは通常、開発者コードによって無効にされたノードに加えて、relayout ルートまでのパスを示しています。 |  
-| レイアウトツリーのサイズ | レイアウトレコードの場合、relayout ルート \ (Microsoft Edge が relayout を開始するノード) の下にあるノードの合計数です。 |  
-| レイアウトの範囲 | 可能な値は `Partial` \ (再レイアウトの境界は DOM の一部) または `Whole document` です。 |  
-| 影響を受ける要素 | スタイルの再計算には、スタイル再計算によって影響を受ける要素の数を指定します。 |  
-| 無効になったスタイル | スタイルレコードの再計算には、スタイルの無効化を引き起こしたコードのスタックトレースを提供します。 |  
+| レイアウトが無効 | Layout レコードの場合、レイアウトを無効にしたコードのスタック トレース。 |  
+| レイアウトが必要なノード | Layout レコードの場合、リレーアウトが開始される前に必要なレイアウトとしてマークされたノードの数。  これらは通常、開発者コードによって無効にされたノードと、ルートを中継する上方向のパスです。 |  
+| レイアウト ツリーのサイズ | Layout レコードの場合、リレーアウト ルート \(Microsoft Edge が relayout\を開始するノード) の下のノードの総数。 |  
+| レイアウト スコープ | 可能な値 `Partial` は \(再レイアウト境界は DOM\の一部) または `Whole document` です。 |  
+| 影響を受ける要素 | [スタイル レコードの再計算] では、スタイル再計算の影響を受ける要素の数を指定します。 |  
+| スタイルが無効 | [スタイル レコードの再計算] では、スタイルが無効になる原因となるコードのスタック トレースを提供します。 |  
 
-## 描画イベント  
+## <a name="painting-events"></a>ペイント イベント  
 
-このセクションには、Painting カテゴリとそのプロパティに属するイベントが一覧表示されます。  
+このセクションでは、Painting カテゴリとそのプロパティに属するイベントの一覧を示します。  
 
 | イベント | 説明 |  
 |:--- |:--- |  
-| 複合レイヤー | Microsoft Edge レンダリングエンジン用の合成画像レイヤー。 |  
-| 画像のデコード | 画像リソースがデコードされました。 |  
-| 画像のサイズ変更 | 画像がネイティブの寸法からサイズ変更されました。 |  
-| ペイント | 合成レイヤーは、ディスプレイの領域に対して描画されました。  ペイントレコードの上にマウスポインターを置くと、更新されたディスプレイの領域が強調表示されます。 |  
+| コンポジット レイヤー | Microsoft Edge レンダリング エンジンの合成イメージ レイヤー。 |  
+| 画像デコード | イメージ リソースがデコードされました。 |  
+| イメージのサイズ変更 | イメージのサイズは、ネイティブディメンションから変更されました。 |  
+| ペイント | 合成されたレイヤーは、ディスプレイの領域にペイントされました。  Paint レコードの上にカーソルを置くと、更新された表示領域が強調表示されます。 |  
 
-### Painting イベントプロパティ  
+### <a name="painting-event-properties"></a>イベントプロパティのペイント  
 
 | プロパティ | 説明 |  
 |:--- |:--- |  
-| 場所 | Paint イベントの場合は、ペイントの四角形の x 座標と y 座標を使用します。 |  
-| 各 | Paint イベントの場合は、塗装領域の高さと幅。 |  
+| 場所 | Paint イベントの場合、ペイント四角形の x 座標と y 座標。 |  
+| ディメンション | Paint イベントの場合、ペイントされた領域の高さと幅。 |  
 
-## Microsoft Edge DevTools チームと連絡を取る  
+## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームと連絡を取る  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
 <!-- links -->
 
-[ConsoleApiTime]: /microsoft-edge/devtools-guide-chromium/console/api#time "タイムコンソール API リファレンス"  
-[ConsoleApiTimeEnd]: /microsoft-edge/devtools-guide-chromium/console/api#timeend "timeEnd-本体の API リファレンス"  
+[ConsoleApiTime]: /microsoft-edge/devtools-guide-chromium/console/api#time "time - コンソール API リファレンス"  
+[ConsoleApiTimeEnd]: /microsoft-edge/devtools-guide-chromium/console/api#timeend "timeEnd - コンソール API リファレンス"  
 <!--[EvaluatePerformanceTimelineTool]: timeline-tool "How to Use the Timeline Tool"  -->
 
-[MDNWindowDOMContentLoadedEvent]: https://developer.mozilla.org/docs/Web/Events/DOMContentLoaded "Window: DOMContentLoaded イベント |MDN"  
-[MDNWindowOrWorkerGlobalScopeSetInterval]: https://developer.mozilla.org/docs/Web/API/WindowTimers/setInterval "WindowOrWorkerGlobalScope Interval () |MDN"  
-[MDNWindowOrWorkerGlobalScopeSetTimeout]: https://developer.mozilla.org/docs/Web/API/WindowTimers/setTimeout "WindowOrWorkerGlobalScope () |MDN"  
+[MDNWindowDOMContentLoadedEvent]: https://developer.mozilla.org/docs/Web/Events/DOMContentLoaded "ウィンドウ: DOMContentLoaded イベント |MDN"  
+[MDNWindowOrWorkerGlobalScopeSetInterval]: https://developer.mozilla.org/docs/Web/API/WindowTimers/setInterval "WindowOrWorkerGlobalScope.setInterval() |MDN"  
+[MDNWindowOrWorkerGlobalScopeSetTimeout]: https://developer.mozilla.org/docs/Web/API/WindowTimers/setTimeout "WindowOrWorkerGlobalScope.setTimeout() |MDN"  
 
 > [!NOTE]
-> このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
-> 元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/performance-reference) にあり、 [Meggin Kearney][MegginKearney] \ (Tech Writer \) と [Flavio Copes][FlavioCopes] \ (完全なスタック開発者) で作成されています。  
+> このページの一部の情報は、[Google によって作成および共有][GoogleSitePolicies]されている著作物に基づいており、[Creative Commons Attribution 4.0 International License][CCA4IL] に記載されている条項に従って使用されています。  
+> 元のページ [はここで見](https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/performance-reference) つかり [、Meggin Kearney][MegginKearney] \(Tech Writer\) と [Flavio Copes \(Full Stack][FlavioCopes] Developer\) によって作成されています。  
 
-[![クリエイティブコモンズライセンス][CCby4Image]][CCA4IL]  
+[![Creative Commons ライセンス][CCby4Image]][CCA4IL]  
 この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。  
 
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  

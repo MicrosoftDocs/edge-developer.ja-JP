@@ -1,18 +1,18 @@
 ---
-description: '[レンダリング] タブを開き、"print" > CSS メディアをエミュレートする] を選択します。'
-title: Microsoft Edge DevTools を印刷プレビュー モードに強制する (CSS 印刷メディア タイプ)
+description: '[レンダリング] ツールを開き、[印刷時に CSS メディアをエミュレート>選択します。'
+title: Microsoft Edge DevTools を印刷プレビュー モードに強制する (CSS 印刷メディアの種類)
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 12/11/2020
+ms.date: 02/12/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: a036e710de998f03e876126581956929d8652f1e
-ms.sourcegitcommit: a35a6b5bbc21b7df61d08cbc6b074b5325ad4fef
+ms.openlocfilehash: 0123b7abf475212304f654c04bc232e3e96f0bda
+ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "11230923"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "11399079"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -28,9 +28,9 @@ ms.locfileid: "11230923"
    See the License for the specific language governing permissions and
    limitations under the License.  -->
 
-# Microsoft Edge DevTools を印刷プレビュー モードに強制する (CSS Print Media Type)  
+# <a name="force-microsoft-edge-devtools-into-print-preview-mode"></a>Microsoft Edge DevTools を印刷プレビュー モードに強制する  
 
-印刷 [メディア クエリは、][MDNUsingMediaQueries] 印刷時のページの外観を制御します。  ページを印刷プレビュー モードにする場合:  
+印刷 [メディア クエリは、][MDNUsingMediaQueries] 印刷時のページの外観を制御します。  ページを印刷プレビュー モードに設定するには、次の方法を実行します。  
 
 1.  `Control`+`Shift`+`P` \(Windows, Linux\) または `Command`+`Shift`+`P` \(macOS\) を選択して、**コマンド メニュー** を開きます。  
     
@@ -38,25 +38,25 @@ ms.locfileid: "11230923"
        **コマンド メニュー**  
     :::image-end:::  
     
-1.  種類 `rendering` を入力し、[ **レンダリングの表示] を**選択して、次に選択します `Enter` 。  
-1.  [CSS **メディアのエミュレート] で、[** 印刷] を **選択します**。  
+1.  [レンダリング `rendering` の表示] **を選択し**、[選択] を選択します `Enter` 。  
+1.  [CSS **メディアのエミュレート] で**、[印刷] を **選択します**。  
     
     :::image type="complex" source="../media/css-elements-styles-qs-rendering-emulate-css-media-print.msft.png" alt-text="印刷プレビュー モード" lightbox="../media/css-elements-styles-qs-rendering-emulate-css-media-print.msft.png":::
        印刷プレビュー モード  
     :::image-end:::  
     
-ここから、他の Web ページと同様に CSS を表示および変更できます。  CSS の [表示と変更の開始に移動します][DevToolsCSSGetStarted]。  
+ここから、他の Web ページと同様に CSS を表示および変更できます。  [CSS の [表示と変更の開始] に移動します][DevToolsCSSGetStarted]。  
 
-## Microsoft Edge DevTools チームと連絡を取る  
+## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームと連絡を取る  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
 <!-- links -->  
 
-[MicrosoftEdgeDevTools]: ../../devtools-guide-chromium/index.md "Microsoft Edge (Chromium) 開発者ツール |Microsoft Docs"  
-[DevToolsCSSGetStarted]: ./index.md "CSS の表示と変更を開始する |Microsoft Docs"  
+[MicrosoftEdgeDevTools]: ../../devtools-guide-chromium/index.md "Microsoft Edge (クロム) 開発者向け|Microsoft Docs"  
+[DevToolsCSSGetStarted]: ./index.md "CSS ファイルの表示と変更の|Microsoft Docs"  
 
-[MDNUsingMediaQueries]: https://developer.mozilla.org/docs/Web/CSS/Media_Queries/Using_media_queries "メディア クエリの使用 |MDN"  
+[MDNUsingMediaQueries]: https://developer.mozilla.org/docs/Web/CSS/Media_Queries/Using_media_queries "メディア クエリの使用|MDN"  
 
 > [!NOTE]
 > このページの一部は、 [Google によっ て作成および共有された][GoogleSitePolicies]作業に基づく変更で、「[Creative Commons Attribution 4.0 International License][CCA4IL]」で記載されている条項に従って使用されます。  

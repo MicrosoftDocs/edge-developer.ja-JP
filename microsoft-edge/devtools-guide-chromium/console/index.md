@@ -1,18 +1,18 @@
 ---
-description: Microsoft Edge DevTools コンソールの主な用途として、メッセージの記録と JavaScript の実行があります。
-title: 本体の概要
+description: Microsoft Edge DevTools コンソールの主な用途は、メッセージのログ記録と JavaScript の実行です。
+title: コンソールの概要
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 10/19/2020
+ms.date: 02/12/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 32272c3f76f715566ced66d11346985dc95dd290
-ms.sourcegitcommit: 99eee78698dc95b2a3fa638a5b063ef449899cda
+ms.openlocfilehash: 496caa4d304d9511d4b1c341846f377899ba4597
+ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "11125266"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "11399121"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -28,15 +28,15 @@ ms.locfileid: "11125266"
    See the License for the specific language governing permissions and
    limitations under the License.  -->
 
-# 本体の概要  
+# <a name="console-overview"></a>コンソールの概要  
 
   
 
-このページでは、Microsoft Edge DevTools コンソールを使用して web ページを簡単に開発する方法について説明します。  本体には2つの主な用途があります。ログに記録された [メッセージを表示](#viewing-logged-messages) し、JavaScript を [実行](#running-javascript)します。  
+このページでは、Microsoft Edge DevTools コンソールによって Web ページの開発が容易になる方法について説明します。  コンソール**には、** ログに記録されたメッセージ[](#viewing-logged-messages)の表示と JavaScript の実行という 2[つの主な用途があります](#running-javascript)。  
 
-## ログメッセージの表示  
+## <a name="viewing-logged-messages"></a>ログに記録されたメッセージの表示  
 
-Web 開発者は、JavaScript が予期したとおりに動作することを確認するために、コンソールにメッセージを記録することがよくあります。  メッセージを記録するには、JavaScript に like として式を挿入し `console.log('Hello, Console!')` ます。  ブラウザーで JavaScript が実行され、そのような式が表示されたら、コンソールにメッセージが記録されます。  
+Web 開発者は、多くの場合、コンソールにメッセージをログに記録して、JavaScript が期待通り動作しているのを確認します。  メッセージをログに記録するには、JavaScript のような `console.log('Hello, Console!')` 式を挿入します。  ブラウザーで JavaScript を実行し、その式を処理すると、ブラウザーはメッセージをコンソールに記録 **します**。  
 
 :::row:::
    :::column span="":::
@@ -71,72 +71,72 @@ Web 開発者は、JavaScript が予期したとおりに動作することを�
       ```  
    :::column-end:::
    :::column span="":::
-      次の図に、ページの読み込みの結果と3秒間の待機の結果 **が表示されてい** ます。  
+      次の図では、 **ページ** を読み込み、3 秒待機した結果がコンソールに表示されます。  
       
-      :::image type="complex" source="../media/console-console-demo.msft.png" alt-text="コンソールパネル" lightbox="../media/console-console-demo.msft.png":::
-         **コンソール**パネル  
+      :::image type="complex" source="../media/console-console-demo.msft.png" alt-text="[コンソール] パネル" lightbox="../media/console-console-demo.msft.png":::
+         コンソール**ツール**  
       :::image-end:::  
       
-      ブラウザーがメッセージをログに記録したコード行を特定してみてください。  
+      ブラウザーがメッセージをログに記録する原因となるコード行を調してみてください。  
    :::column-end:::
 :::row-end:::  
 
-次の2つの一般的な理由により、Web 開発者はメッセージをログに記録します。  
+Web 開発者は、次の 2 つの一般的な理由でメッセージをログに記録します。  
 
-*   コードが正しい順序で実行されていることを確認します。  
-*   ある時点での変数の値を調べます。  
+*   コードが正しい順序で実行されている必要があります。  
+*   特定の時点での変数の値の検査。  
 
-詳細については、「ログ [メッセージの概要][DevtoolsConsoleLoggingMessages] 」を参照してください。  メソッドの完全な一覧を参照するには、 [CONSOLE API リファレンス][DevToolsConsoleAPI] を参照してください `console` 。  メソッドの主な違いは、ログに記録されるデータがどのように表示されるかです。  
+ログ記録の実践的なエクスペリエンスを得る場合は、「ログ メッセージの [使用を開始する」に移動します][DevtoolsConsoleLoggingMessages]。  メソッドの完全な一覧 `console` を参照するには、コンソール [API リファレンス に移動します][DevToolsConsoleAPI]。  メソッドの主な違いは、ログに記録されるデータの表示方法です。  
 
-## JavaScript の実行  
+## <a name="running-javascript"></a>JavaScript の実行  
 
-**本体**も[REPL][WikiREPLoop]です。  **コンソール**で JavaScript を実行して、検査対象のページを操作することができます。   
+コンソール **も** [REPL です][WikiREPLoop]。  コンソールで JavaScript を実行 **して、** 検査するページを操作できます。   
 
 :::row:::
    :::column span="":::
-      次の図では、DevTools のホームページの横に **コンソール** が表示されています。  
+      次の図では **、DevTools** ホームページの横にコンソールが表示されています。  
       
-      :::image type="complex" source="../media/devtools-console-empty.msft.png" alt-text="コンソールパネル" lightbox="../media/devtools-console-empty.msft.png":::
-         DevTools ホームページの横にある **コンソール** パネル  
+      :::image type="complex" source="../media/devtools-console-empty.msft.png" alt-text="DevTools ホームページの横にあるコンソール ツール" lightbox="../media/devtools-console-empty.msft.png":::
+         **DevTools**ホームページの横にあるコンソール ツール  
       :::image-end:::  
    :::column-end:::
    :::column span="":::
-      次の図では、 **本体** を使ってページの先頭見出しを変更した後に、同じページが表示されています。
+      次の図では、コンソールを使用してページの上部見出しを **変更した後** 、同じページが表示されます。
       
-      :::image type="complex" source="../media/devtools-console-h1-changed.msft.png" alt-text="コンソールパネル" lightbox="../media/devtools-console-h1-changed.msft.png":::
-         **コンソール**を使用してページの先頭見出しを変更する  
+      :::image type="complex" source="../media/devtools-console-h1-changed.msft.png" alt-text="コンソールを使用してページの上部見出しを変更する" lightbox="../media/devtools-console-h1-changed.msft.png":::
+         コンソールを **使用して** ページの上部見出しを変更する  
       :::image-end:::  
    :::column-end:::
 :::row-end:::
 
-本体からページを変更する **ことができる** のは、 **コンソール** の [ウィンドウ][MDNWindow] に対して完全にアクセスできるためです。  DevTools には、ページを簡単に調べるための便利な機能がいくつか用意されています。  たとえば、JavaScript にはという関数が含まれていると `hideModal` します。  Running を実行すると `debug(hideModal)` 、次回の実行時の最初の行にコードが一時停止し `hideModal` ます。  ユーティリティ関数の完全な一覧については、「 [コンソールユーティリティ API リファレンス][DevtoolsConsoleUtilitiesDebug]」を参照してください。  
+コンソールからページ**を変更すると**、コンソールがページのウィンドウ**** に完全にアクセス[できます][MDNWindow]。  DevTools には、ページの検査を容易にする便利な機能がいくつか含まれています。  たとえば、JavaScript にという関数が含まれているとします `hideModal` 。  実行 `debug(hideModal)` すると、次に実行するコードの最初の行でコード `hideModal` が一時停止します。  ユーティリティ関数の完全な一覧の詳細については、「コンソール ユーティリティ [API リファレンス」に移動します][DevtoolsConsoleUtilitiesDebug]。  
 
-JavaScript を実行しても、ページを操作する必要はありません。  この **本体** を使うと、ページに関係のない新しいコードを試すことができます。  たとえば、組み込みの JavaScript 配列 [map ()][MDNMap] メソッドについて学習し、その方法を試してみるとします。  
-この機能を試すには、 **コンソール** が適切な場所です。  
+JavaScript を実行する場合は、ページを操作する必要があります。  コンソールを使用して **、** ページに関係のない新しいコードを試してみてください。  たとえば、組み込みの JavaScript Array [map()][MDNMap] メソッドについて学習し、それを試したいとします。  
+コンソール **は** 、関数を試してみるのに便利な場所です。  
 
-**コンソール**での javascript の実行に関する実践的な操作については、「 [javascript の実行を開始][DevtoolsConsoleRunningJavascript]する」を参照してください。  
+コンソールで JavaScript を実行する方法の詳細**** については、「JavaScript の実行を開始する[」に移動します][DevtoolsConsoleRunningJavascript]。  
 
-## Microsoft Edge DevTools チームと連絡を取る  
+## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームと連絡を取る  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
 <!-- links -->  
 
-[DevToolsConsoleAPI]: ./api.md "コンソール API リファレンス |Microsoft ドキュメント"  
-[DevtoolsConsoleLoggingMessages]: ./log.md "コンソールでのメッセージの記録を開始する |Microsoft ドキュメント"  
-[DevtoolsConsoleRunningJavascript]: ./javascript.md "本体の JavaScript の実行を開始する |Microsoft ドキュメント"  
-[DevtoolsConsoleUtilitiesDebug]: ./utilities.md#debug "デバッグ-本体ユーティリティー API リファレンス |Microsoft ドキュメント"  
+[DevToolsConsoleAPI]: ./api.md "コンソール API リファレンス |Microsoft Docs"  
+[DevtoolsConsoleLoggingMessages]: ./log.md "コンソール ウィンドウでメッセージをログに記録する方法を|Microsoft Docs"  
+[DevtoolsConsoleRunningJavascript]: ./javascript.md "コンソール ウィンドウでの JavaScript の実行の開始|Microsoft Docs"  
+[DevtoolsConsoleUtilitiesDebug]: ./utilities.md#debug "debug - コンソール ユーティリティ API リファレンス |Microsoft Docs"  
 
-[MDNMap]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map "配列. .map () |MDN"  
-[MDNWindow]: https://developer.mozilla.org/docs/Web/API/Window "Window |MDN"  
+[MDNMap]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map "Array.prototype.map() |MDN"  
+[MDNWindow]: https://developer.mozilla.org/docs/Web/API/Window "ウィンドウ |MDN"  
 
-[WikiREPLoop]: https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop "読み取り– eval – print loop-Wikipedia"  
+[WikiREPLoop]: https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop "Read-eval-print ループ - Wikipedia"  
 
 > [!NOTE]
-> このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
-> 元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/console/index) にあり、 [Kayce Basques][KayceBasques] テクニカルライター、Chrome Devtools \ & Lighthouse \) で作成されています。  
+> このページの一部は、 [Google によっ て作成および共有された][GoogleSitePolicies]作業に基づく変更で、「[Creative Commons Attribution 4.0 International License][CCA4IL]」で記載されている条項に従って使用されます。  
+> 元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/console/index) にあり、 [Kayce Basques][KayceBasques] \(Chrome DevTools \& Lighthouse\ のテクニカル ライター) が作成しました。  
 
-[![クリエイティブコモンズライセンス][CCby4Image]][CCA4IL]  
+[![Creative Commons ライセンス][CCby4Image]][CCA4IL]  
 この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。  
 
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  

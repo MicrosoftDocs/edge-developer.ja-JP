@@ -1,18 +1,18 @@
 ---
-description: コマンドメニューを開く方法、コマンドを実行する方法、その他の操作を確認する方法に関するガイド。
-title: Microsoft Edge DevTools コマンドメニューを使用してコマンドを実行する
+description: コマンド メニューを開く方法、コマンドを実行する方法、その他のアクションを確認する方法などのガイド。
+title: '[Microsoft Edge DevTools コマンド] メニューでコマンドを実行する'
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 10/19/2020
+ms.date: 02/12/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 2f13461fdf04e034b324db63c6ec6d9090f80f50
-ms.sourcegitcommit: 99eee78698dc95b2a3fa638a5b063ef449899cda
+ms.openlocfilehash: a9e67815f69a44d3bd2a741738b04c7170f6ac15
+ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "11125280"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "11398029"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -28,53 +28,51 @@ ms.locfileid: "11125280"
    See the License for the specific language governing permissions and
    limitations under the License.  -->  
 
-# Microsoft Edge DevTools コマンドメニューを使用してコマンドを実行する  
+# <a name="run-commands-with-the-microsoft-edge-devtools-command-menu"></a>[Microsoft Edge DevTools コマンド] メニューでコマンドを実行する  
 
-  
+コマンド メニューを使用すると、Microsoft Edge DevTools UI を迅速に移動し、JavaScript の無効化などの一般的なタスク [を実行できます][JavascriptDisable]。  コマンド メニューの元のインスピレーションVisual Studioと呼ばれる Microsoft Visual Studio コードの[][VisualStudioCodeUICommandPalette]同様の機能についてよく知っているかもしれません。  
 
-コマンドメニューを使うと、Microsoft Edge の DevTools UI をすばやく移動し、 [JavaScript を無効][JavascriptDisable]にするなどの一般的な作業を実行することができます。  コマンド [パレット][VisualStudioCodeUICommandPalette]と呼ばれる Visual Studio コードと同様の機能 (コマンドメニューの元のインスピレーション) に精通していることがあります。  
-
-:::image type="complex" source="../media/command-menu-run-command-java.msft.png" alt-text="コマンドメニューを使用して JavaScript を無効にする" lightbox="../media/command-menu-run-command-java.msft.png":::
-   コマンドメニューを使用して JavaScript を無効にする  
+:::image type="complex" source="../media/command-menu-run-command-java.msft.png" alt-text="コマンド メニューを使用して JavaScript を無効にする" lightbox="../media/command-menu-run-command-java.msft.png":::
+   コマンド メニューを使用して JavaScript を無効にする  
 :::image-end:::  
 
-## コマンドメニューを開く  
+## <a name="open-the-command-menu"></a>コマンド メニューを開く  
 
-`Control` + `Shift` + `P` \ (Windows, Linux \) または `Command` + `Shift` + `P` \ (macOS \) を選択します。 または、[ **DevTools のカスタマイズと制御**] を選び、 `...` [ **コマンドの実行**] を選びます。  
+`Control` + `Shift` + `P` \(Windows, Linux\) または `Command` + `Shift` + `P` \(macOS\) を選択します。 または、[ **コマンドの実行] で [DevTools** `...` \( \) のカスタマイズと制御> **選択します**。  
 
-:::image type="complex" source="../media/command-menu-options-run-command.msft.png" alt-text="コマンドメニューを使用して JavaScript を無効にする" lightbox="../media/command-menu-options-run-command.msft.png":::
+:::image type="complex" source="../media/command-menu-options-run-command.msft.png" alt-text="コマンドの実行" lightbox="../media/command-menu-options-run-command.msft.png":::
    コマンドの実行  
 :::image-end:::  
 
-## 使用可能なその他の操作を表示する  
+## <a name="display-other-available-actions"></a>その他の使用可能なアクションを表示する  
 
-[ [コマンドメニューを開く](#open-the-command-menu)] でアウトライン表示されたワークフローを使用している場合、コマンドメニューが開き、 `>` コマンドメニューのテキストボックスに前に "延期" という文字が表示されます。  
+[コマンド メニューを開く][](#open-the-command-menu)で説明されているワークフローを使用すると、コマンド メニューが開き、[コマンド メニュー] テキスト ボックスに文字があらかじめ `>` 入力されています。  
 
-:::image type="complex" source="../media/command-menu-run-command.msft.png" alt-text="コマンドメニューを使用して JavaScript を無効にする" lightbox="../media/command-menu-run-command.msft.png":::
+:::image type="complex" source="../media/command-menu-run-command.msft.png" alt-text="コマンド文字" lightbox="../media/command-menu-run-command.msft.png":::
    コマンド文字  
 :::image-end:::  
 
-`>`文字と入力を削除し `?` て、コマンドメニューから利用可能なその他の操作を確認します。  
+コマンド メニュー `>` から使用できる `?` 他のアクションを表示するには、文字と種類を削除します。  
 
-:::image type="complex" source="../media/command-menu-help.msft.png" alt-text="コマンドメニューを使用して JavaScript を無効にする" lightbox="../media/command-menu-help.msft.png":::
+:::image type="complex" source="../media/command-menu-help.msft.png" alt-text="その他の使用可能なアクション" lightbox="../media/command-menu-help.msft.png":::
    その他の使用可能なアクション  
 :::image-end:::  
 
-## Microsoft Edge DevTools チームと連絡を取る  
+## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームと連絡を取る  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
 <!-- links -->  
 
-[JavascriptDisable]: ../javascript/disable.md "Microsoft Edge DevTools で JavaScript を無効にする |Microsoft ドキュメント"  
+[JavascriptDisable]: ../javascript/disable.md "Microsoft Edge DevTools を使用して JavaScript を無効|Microsoft Docs"  
 
-[VisualStudioCodeUICommandPalette]: https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette "コマンドパレット-Visual Studio コード UI"  
+[VisualStudioCodeUICommandPalette]: https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette "コマンド パレット - Visual Studio コード UI"  
 
 > [!NOTE]
-> このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
-> 元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/command-menu/index) にあり、 [Kayce Basques][KayceBasques] テクニカルライター、Chrome Devtools \ & Lighthouse \) で作成されています。  
+> このページの一部は、 [Google によっ て作成および共有された][GoogleSitePolicies]作業に基づく変更で、「[Creative Commons Attribution 4.0 International License][CCA4IL]」で記載されている条項に従って使用されます。  
+> 元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/command-menu/index) にあり、 [Kayce Basques][KayceBasques] \(Chrome DevTools \& Lighthouse\ のテクニカル ライター) が作成しました。  
 
-[![クリエイティブコモンズライセンス][CCby4Image]][CCA4IL]  
+[![Creative Commons ライセンス][CCby4Image]][CCA4IL]  
 この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。  
 
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  

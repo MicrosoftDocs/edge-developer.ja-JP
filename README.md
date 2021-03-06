@@ -1,98 +1,125 @@
-# Microsoft Edge ドキュメント
+# <a name="microsoft-edge-documentation"></a>Microsoft Edge ドキュメント  
 
-## Microsoft オープンソースコードの実施
+## <a name="microsoft-open-source-code-of-conduct"></a>Microsoft Open Source Code of Conduct  
 
-このプロジェクトは、 [Microsoft Open Source Code の倫理](https://opensource.microsoft.com/codeofconduct/)規定を採用しています。
-詳細については、「[よく寄せ](https://opensource.microsoft.com/codeofconduct/faq/)られる質問 (faq)」を参照するか、その他の質問やコメントで[opencode@microsoft.com](mailto:opencode@microsoft.com)を参照してください。
+このプロジェクトでは [、Microsoft Open Source Code of Conduct を採用しています](https://opensource.microsoft.com/codeofconduct)。  
+詳細については、「 [行動規範](https://opensource.microsoft.com/codeofconduct/faq) に関するよく寄せられる質問」または [「opencode@microsoft.comに](mailto:opencode@microsoft.com) 関する質問やコメント」を参照してください。  
 
-## 法的通知
-Microsoft およびすべての投稿者は、[Creative Commons Attribution 4.0 International Public License](https://creativecommons.org/licenses/by/4.0/legalcode) (クリエイティブ コモンズ ライセンス 4.0 インターナショナル パブリック ライセンス) に基づいて、このリポジトリにある Microsoft のドキュメントおよび他の内容に関するライセンスをユーザーに付与します ([LICENSE](LICENSE) ファイルをご覧ください)。また、[MIT ライセンス](https://opensource.org/licenses/MIT)に基づいて、リポジトリにあるすべてのコードに関するライセンスを付与します ([LICENSE-CODE](LICENSE-CODE) ファイルをご覧ください)。
+## <a name="legal-notices"></a>法的通知  
 
-ドキュメント内で参照されている Microsoft、Windows、Microsoft Azure、および他の Microsoft 製品やサービスは、米国 Microsoft Corporation の米国およびその他の国における商標または登録商標です。
-このプロジェクトのライセンスは、すべての Microsoft の名称、ロゴ、または商標を使用する権利を許諾するものではありません。
-Microsoft の一般的な商標のガイドラインについては、を参照 https://go.microsoft.com/fwlink/?LinkID=254653 してください。
+Microsoft および任意の投稿者は、クリエイティブ コモンズ アトリビューション[4.0](https://creativecommons.org/licenses/by/4.0/legalcode)インターナショナル パブリック ライセンスの下で、このリポジトリ内の Microsoft ドキュメントおよび他のコンテンツにライセンスを付与し[、LICENSE](./LICENSE)ファイルに移動し、MIT ライセンスの下のリポジトリ内の任意のコードにライセンスを付与し[、LICENSE-CODE](./LICENSE-CODE)ファイルに移動します。 [](https://opensource.org/licenses/MIT)  
 
-プライバシーに関する情報は、にあります。https://privacy.microsoft.com
+ドキュメント内で参照されている Microsoft、Windows、Microsoft Azure、および他の Microsoft 製品やサービスは、米国 Microsoft Corporation の米国およびその他の国における商標または登録商標です。  
+このプロジェクトのライセンスは、すべての Microsoft の名称、ロゴ、または商標を使用する権利を許諾するものではありません。  
+Microsoft の一般的な商標ガイドラインは、 に記載されています [https://go.microsoft.com/fwlink/?LinkID=254653](https://go.microsoft.com/fwlink/?LinkID=254653) 。  
 
-Microsoft およびすべての投稿者は、黙示、禁反言、またはその他によるかを問わず、他のすべての権利を (それらの権利がそれぞれの著作権、特許権、商標に基づくものであるかどうかに関係なく)、留保します。
+プライバシーに関する情報は、 で確認できます [https://privacy.microsoft.com](https://privacy.microsoft.com) 。  
 
-## 寄稿
+Microsoft およびすべての投稿者は、黙示、禁反言、またはその他によるかを問わず、他のすべての権利を (それらの権利がそれぞれの著作権、特許権、商標に基づくものであるかどうかに関係なく)、留保します。  
 
-これは、でホストされている Microsoft Edge**ドキュメント**のリポジトリです [https://docs.microsoft.com/microsoft-edge/](https://docs.microsoft.com/microsoft-edge/) 。
+## <a name="contributing"></a>寄稿  
 
-新しいカバーを表示したい場合やフィードバックがある場合は、[**投稿**](/CONTRIBUTING.md)を検討してください。  既存のコンテンツを編集したり、新しいコンテンツを追加したり、または新しい[問題](https://github.com/MicrosoftDocs/edge-developer/issues)を作成したりすることができます。 お客様からの提案を確認し、共同作業を行ってドキュメントに組み込みます。
+これは、でホストされている Microsoft Edge **ドキュメントの** リポジトリです [https://docs.microsoft.com/microsoft-edge/](https://docs.microsoft.com/microsoft-edge/index) 。  
 
-ページのデータを [`Status`](https://dev.windows.com/microsoft-edge/platform/status/) 次の場所で https://github.com/MicrosoftEdge/Status 見つけます。 この `Status` ページでは、最新の実装状態と、Microsoft Edge の web platform 機能の今後の計画について説明します。
+新しいカバレッジを含めるか、フィードバックを得る場合は、貢献を [検討してください](./CONTRIBUTING.md)。  既存のコンテンツを編集したり、新しいコンテンツを追加したり、新しい問題を [作成したりすることができます](https://github.com/MicrosoftDocs/edge-developer/issues)。  Microsoft Edge チームは、提案を確認し、提案をドキュメントに組み込むのに役立っています。  
 
-### 規則
+[状態] ページのデータ [を次](https://developer.microsoft.com/microsoft-edge/status) の場所で検索します  [https://github.com/MicrosoftEdge/Status](https://github.com/MicrosoftEdge/Status) 。  このページには、Microsoft Edge の Web プラットフォーム機能に関する最新の実装状態と `Status` 今後の計画が示されています。
 
-- ページを追加するときは、そのページを表示するために、 [toc.md](microsoft-edge/toc.md)でそのページのエントリを追加する必要があります。
-- フォルダーには、その他のフォルダーまたは s を含めることができます。 `readme.md`
-- フォルダー/ディレクトリ名はダッシュ区切り (例: `f12-tools` ) および小文字です。 Docs.microsoft.com サイトの Url で使用されます。 アンダースコアまたは文字の例/camelCase は使用しないでください。
+### <a name="conventions"></a>規則  
 
-### その他のテキスト要素
+*   ページを追加する場合は、ページが表示される [toc.mdエントリを](./microsoft-edge/toc.yml) 追加する必要があります。
+*   ディレクトリには、より多くのディレクトリまたは複数のディレクトリが含 `readme.md` まれている場合があります。
+*   フォルダー/ディレクトリ名は、ダッシュ区切り \(\ `f12-tools` など) と小文字です。  ディレクトリは、サイトの URL で使用 `docs.microsoft.com` されます。  アンダースコア、PascalCase、camelCase は使用しないようにします。  
 
-その他のテキスト要素には、次のようなスタイルがあります。
+### <a name="other-text-elements"></a>その他のテキスト要素  
 
-* 順序なしリスト
-* 通常の箇条書きを設定する
-   * 箇条書きを入れ子にすることもできます。
-   * 箇条書きリストには複数のエントリを含める必要があります。
-* 標準
+次の他のテキスト要素では、スタイルを使用できます。  
 
-1. 番号付きリスト。
-2. 標準の ol ' 西洋スタイルの段落番号を使用します。
-3. リストに実際の順序が設定されている場合にのみ使用します。
+*   順序なしリスト  
+*   通常の箇条書きがある  
+    *   箇条書きを入れ子にできます。  
+    *   箇条書きリストには、複数のエントリが必要です。  
+*   標準の配置 
 
-_________________________
+1.  順序付きリスト。  
+1.  通常の洋式の番号を使用します。  
+1.  リストが本当に注文を持つ場合にのみ使用する必要があります。  
 
-水平ルールを使用できます。 低優先メール機能を使用することをお勧めします。
-横方向ルールを見出しタグと組み合わせることはできません。既に使用されているビジュアル階層の線スタイル。
+---  
 
-### コードの表示
+水平方向のルールを使用できます。  水平ルールを使用して、煩雑な問題を軽減します。  
+見出しタグで水平方向のルールを使用しないようにします。一部の見出しでは、視覚的階層に線のスタイルが既に使用されています。  
 
-インライン `code` マークダウン構文 (バックチック付き) を使うことができます。
+### <a name="displaying-code"></a>コードの表示  
 
-または、次のようにコードのブロックを表示することもできます。
+インライン `code` Markdown 構文 \(backticks\) を使用できます。  
+
+または、コードのブロックを表示する場合があります。  次のコード スニペットは css の例です。  
 
 ```css
 body {
     background: #fff;
 }
-```
+```  
 
-### 示し
+### <a name="tables"></a>テーブル  
 
-| 操作     | ヘッダーを使用する | 表の場合    |
-|-------------|-------------|-------------:|
-| 左揃え| いない場合#  | 456          |
-| テキスト値  | その他のテキスト   | $0.00        |
+| お客様は、 | ヘッダーを使用する | テーブル上 |  
+|:--- |:--- |:--- |  
+| 左揃え | ない限り、# | 456 |  
+| テキスト値 | その他のテキスト | $0.00 |  
 
-### 備考
+### <a name="notes"></a>備考  
 
-メモを多用しないでください。 これは、"見落としてはなりません" 情報を強調するように設計されています。
+メモは注意して使用してください。  ブロックは、"見逃すな" 情報を強調表示するように設計されています。  
 
-現在、次の4つの異なるバージョンのメモがあります。
-- 注
-- 警告
-- メモ
-- 重要
+現在、4 つの異なるバージョンのノートのスタイルが設定されています。  
 
-それぞれ、次のように表示します。
+*   注  
+*   警告  
+*   ヒント  
+*   重要  
 
-![メモのパターン](./media/notes.png)
+それぞれ、メモは次のコード スニペットのようになります。  
 
-```
+```md
+> [!NOTE]
+> This is a NOTE  
+```  
+
+```md
 > [!WARNING]
-> Hello. Yes. I am a warning note that has been automagically created. My text may wrap to more than one line when the Markdown is parsed, but I must include all my information within a single (sometimes very long line) in the Markdown itself.```
+> This is a WARNING  
+```  
 
-For multi-line blockquote notes, use a > in front of each line of the notes as seen in the example below.
+```md
+> [!TIP]
+> This is a TIP  
+```  
 
+```md
+> [!IMPORTANT]
+> This is IMPORTANT  
+```  
+
+![ノート パターン](./media/notes.png)
+
+複数行のブロッククォート ノートの場合は、次の例に示すノートの各行の前に大きい `>` \( \) 文字を使用します。  
+
+```md
+> This is a line in a blockquote.  
+> My text may wrap to more than one line when the Markdown is parsed, but I must include all my information within a single \(sometimes very long line\) in the Markdown.  
+> This is another line in a blockquote.  
 ```
 
+### <a name="images"></a>画像  
 
-### 画像
+イメージはディレクトリに格納し、イメージ スクリプトを使用 `media` して相対パスで参照する必要があります。  
 
-画像はフォルダーに保存 `media` し、相対パスで参照する必要があります。
+<!--  `![Note patterns](media/notes.png)`  -->  
 
-`![Note patterns](media/notes.png)`
+```md
+:::image type="complex" source="./media/notes.png" alt-text="Note patterns" lightbox="./media/notes.png":::
+   Note patterns  
+:::image-end:::  
+```  

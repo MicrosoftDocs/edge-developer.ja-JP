@@ -3,16 +3,16 @@ description: Linux 上の Microsoft Edge、問題ツールの Webhint ヒント�
 title: DevTools の新機能 (Microsoft Edge 88)
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/03/2021
+ms.date: 02/12/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: f56586fa77e34da7884d9d7c565b8cbcc4106c4a
-ms.sourcegitcommit: 661e8def3f27cea381c59ac38954789e736c18f4
+ms.openlocfilehash: 7d24d1ba6fe33a7420ff34376c981d608a4e30af
+ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "11387287"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "11397578"
 ---
 # <a name="whats-new-in-devtools-microsoft-edge-88"></a>DevTools の新機能 (Microsoft Edge 88)  
 
@@ -98,9 +98,9 @@ Z インデックス値と ドキュメント オブジェクト モデル \(DOM
 <!-- Title:  Service worker debugging improvements in the Network, Application, and Sources tools  -->  
 <!-- Subtitle:  Making service workers easier to debug for progressive web applications and more.  -->  
 
-[ネットワーク ツール](#network-tool)、[アプリケーション ツール](#application-tool)、および[ソース ツール](#sources-tool)の次の新機能は、[PWA][ProgressiveWebAppsChromiumIndex] の構築に役立ちます。  サービス ワーカーのデバッグが困難な場合は、次の機能を使用します。  
+[ネットワーク ツール](#network-tool)、[アプリケーション ツール](#application-tool)、および[ソース ツール](#sources-tool)の次の新機能は、[PWA][ProgressiveWebAppsIndex] の構築に役立ちます。  サービス ワーカーのデバッグが困難な場合は、次の機能を使用します。  
 
-要求ルーティングは、サービス ワーカーを経由して実行されるネットワーク要求に基づいて、`startup` と `fetch` イベントを表示します。  タイムラインには、**アプリケーション ツール**または**ネットワーク ツール**からアクセスします。  タイムラインは、サービス ワーカーに問題が発生し、`startup` または `fetch` イベントに何の問題があるかを確信する場合に役立ちます。  
+要求ルーティングは、サービス ワーカーを経由して実行されるネットワーク要求に基づいて、`startup` と `fetch` イベントを表示します。  タイムラインには、**アプリケーション ツール**または**ネットワーク ツール**からアクセスします。  タイムラインは、サービス ワーカーに問題が発生し、イベントに問題がある場合に表示する場合 `startup` に役立 `fetch` ちます。  
 
 ### <a name="application-tool"></a>アプリケーション ツール  
 
@@ -179,8 +179,8 @@ Z インデックス値と ドキュメント オブジェクト モデル \(DOM
       :::image-end:::  
    :::column-end:::
    :::column span="":::
-      :::image type="complex" source="../../media/2020/11/paste-property-value.msft.png" alt-text="Visual Studio Code にプロパティ値を貼り付ける" lightbox="../../media/2020/11/paste-property-value.msft.png":::
-         Visual Studio Code にプロパティ値を貼り付ける  
+      :::image type="complex" source="../../media/2020/11/paste-property-value.msft.png" alt-text="Microsoft Visual Studio コードでプロパティ値を貼り付ける" lightbox="../../media/2020/11/paste-property-value.msft.png":::
+         Microsoft Visual Studio コードでプロパティ値を貼り付ける  
       :::image-end:::  
    :::column-end:::
 :::row-end:::  
@@ -351,10 +351,10 @@ Windows、Linux、または macOS を使用している場合は、 [既定][Mic
 
 <!--  [DevtoolsCssReferenceChangeAngleValueWithAngleClock]: /microsoft-edge/devtools-guide-chromium/css/reference#change-angle-value-with-the-angle-clock "Change angle value with the Angle Clock - CSS reference | Microsoft Docs"  -->  
 
-[ProgressiveWebAppsChromiumIndex]: /microsoft-edge/progressive-web-apps-chromium/index "Windows 上のプログレッシブ Web アプリ | Microsoft Docs"  
+[ProgressiveWebAppsIndex]: /microsoft-edge/progressive-web-apps-chromium/index "Windows 上のプログレッシブ Web アプリ | Microsoft Docs"  
 
-[WhatsNew202010DevtoolsCustomizeKeyboardShortcutsSettings]: /microsoft-edge/devtools-guide-chromium/whats-new/2020/10/devtools#customize-keyboard-shortcuts-in-settings "[設定] でキーボード ショートカットをカスタマイズする - DevTools の新機能 (Microsoft Edge 87) | Microsoft Docs"  
-[WhatsNew202006DevtoolsWebhintFeedbackInTheIssuesPanel]: /microsoft-edge/devtools-guide-chromium/whats-new/2020/06/devtools#webhint-feedback-in-the-issues-panel "[問題] パネルの webhint フィードバック - DevTools の新機能 (Microsoft Edge 85) | Microsoft Docs"  
+[WhatsNew202010DevtoolsCustomizeKeyboardShortcutsSettings]: ../10/devtools.md#customize-keyboard-shortcuts-in-settings "[設定] でキーボード ショートカットをカスタマイズする - DevTools の新機能 (Microsoft Edge 87) | Microsoft Docs"  
+[WhatsNew202006DevtoolsWebhintFeedbackInTheIssuesPanel]: ../06/devtools.md#webhint-feedback-in-the-issues-panel "[問題] パネルの webhint フィードバック - DevTools の新機能 (Microsoft Edge 85) | Microsoft Docs"  
 
 [MicrosoftDeveloperMicrosoftEdgeToolsWebdriverDownloads]: https://developer.microsoft.com/microsoft-edge/tools/webdriver#downloads "WebDriver のダウンロード | Microsoft 開発者"  
 

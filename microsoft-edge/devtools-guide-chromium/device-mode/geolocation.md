@@ -1,18 +1,18 @@
 ---
-description: '[センサー] タブを開き、[位置情報] の一覧から [座標] を選びます。'
-title: Microsoft Edge DevTools で位置情報を上書きする
+description: センサー ツールを開き、[位置情報] リストから座標を選択します。
+title: Microsoft Edge DevTools を使用して地理位置情報をオーバーライドする
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 10/19/2020
+ms.date: 02/12/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: f2bc395993ff59d88360a363b2c4bc12b570f1ab
-ms.sourcegitcommit: 99eee78698dc95b2a3fa638a5b063ef449899cda
+ms.openlocfilehash: 8f6ad09b2f8db110f6743aae32e16cc9b1185400
+ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "11125014"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "11399002"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -28,28 +28,28 @@ ms.locfileid: "11125014"
    See the License for the specific language governing permissions and
    limitations under the License.  -->
 
-# Microsoft Edge DevTools で位置情報を上書きする  
+# <a name="override-geolocation-with-microsoft-edge-devtools"></a>Microsoft Edge DevTools を使用して地理位置情報をオーバーライドする  
 
-多くの web サイトでは、ユーザーにより関連性の高いエクスペリエンスを提供するために、ユーザーの位置情報を利用しています。  たとえば、天気予報の web サイトでは、ユーザーが現在のユーザーの場所にアクセスするためのアクセス許可を付与した後、そのユーザーの領域にローカルの予測が表示される場合があります。  
+多くの Web サイトは、ユーザーに関連性の高いエクスペリエンスを提供するために、ユーザーの場所を利用します。  たとえば、天気予報 Web サイトでは、ユーザーが現在のユーザーの場所にアクセスするためのアクセス許可を Web サイトに付与した後、ユーザーの地域にローカル予測を表示できます。  
 
 <!--todo: add link to user location section when available -->  
 
-ユーザーがどこにいるかによって変更される UI を作成する場合は、サイトが世界のさまざまな場所で適切に動作することを確認する必要があります。  Microsoft Edge DevTools で位置情報を上書きするには、次の操作を実行します。  
+ユーザーの場所に応じて変更される UI を構築する場合は、サイトが世界中の異なる場所で正しく動作することを確認する必要があります。  Microsoft Edge DevTools で位置情報を上書きするには、次のアクションを実行します。  
 
-1.  `Control` + `Shift` + `P` コマンドメニューを開くには、\ (Windows, Linux \) または `Command` + `Shift` + `P` \ **Command Menu**(macOS \) を選択します。  
+1.  `Control`+`Shift`+`P` \(Windows, Linux\) または `Command`+`Shift`+`P` \(macOS\) を選択して、**コマンド メニュー** を開きます。  
     
-    :::image type="complex" source="../media/device-mode-console-command-menu.msft.png" alt-text="コマンドメニュー" lightbox="../media/device-mode-console-command-menu.msft.png":::
-       **コマンドメニュー**  
+    :::image type="complex" source="../media/device-mode-console-command-menu.msft.png" alt-text="コマンド メニュー" lightbox="../media/device-mode-console-command-menu.msft.png":::
+       **コマンド メニュー**  
     :::image-end:::  
     
-1.  「」と入力し `sensors` 、[ **センサーの表示**] を選択して、を選択し `Enter` ます。  [ **センサー** ] タブが、[devtools] ウィンドウの下部に表示されます。  
-1.  [位置情報 **] リストから**、いずれかの事前設定された都市のいずれかを選択するか、[カスタムの場所] を選択してユーザー設定の経度と緯度の座標を入力するか、[場所を使用できません] を選択し `Tokyo` て、ユーザーの位置情報が表示されない場合のサイトの動作を確認**Custom location** **Location unavailable**  
+1.  [種類 `sensors` ] を選択 **し、[センサーの表示]** を選択し、[ ] を選択します `Enter` 。  センサー **ツールが** DevTools ウィンドウの下部に開きます。  
+1.  [位置情報****] リストから、あらかじめ設定されている都市のいずれかを選択するか、[カスタムの場所] を選択してカスタムの経度と緯度の座標を入力するか、[使用できない場所] を選択して、ユーザーの場所が使用できない場合のサイトの動作を表示します。 `Tokyo` **** ****  
     
-    :::image type="complex" source="../media/device-mode-console-sensors-geolocation-tokyo.msft.png" alt-text="コマンドメニュー" lightbox="../media/device-mode-console-sensors-geolocation-tokyo.msft.png":::
-       `Tokyo`**位置**情報リストから選択する  
+    :::image type="complex" source="../media/device-mode-console-sensors-geolocation-tokyo.msft.png" alt-text="地理位置情報リストから東京を選択する" lightbox="../media/device-mode-console-sensors-geolocation-tokyo.msft.png":::
+       位置情報 `Tokyo` リスト **から選択** する  
     :::image-end:::  
     
-## Microsoft Edge DevTools チームと連絡を取る
+## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームと連絡を取る
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
@@ -58,10 +58,10 @@ ms.locfileid: "11125014"
 <!--[WebFundamentalsNativeHardwareUserLocationIndex]: /web/fundamentals/native-hardware/user-location/index "User Location"  -->  
 
 > [!NOTE]
-> このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
-> 元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/device-mode/geolocation) にあり、 [Kayce Basques][KayceBasques] テクニカルライター、Chrome Devtools \ & Lighthouse \) で作成されています。  
+> このページの一部は、 [Google によっ て作成および共有された][GoogleSitePolicies]作業に基づく変更で、「[Creative Commons Attribution 4.0 International License][CCA4IL]」で記載されている条項に従って使用されます。  
+> 元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/device-mode/geolocation) にあり、 [Kayce Basques][KayceBasques] \(Chrome DevTools \& Lighthouse\ のテクニカル ライター) が作成しました。  
 
-[![クリエイティブコモンズライセンス][CCby4Image]][CCA4IL]  
+[![Creative Commons ライセンス][CCby4Image]][CCA4IL]  
 この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。  
 
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  

@@ -1,27 +1,27 @@
 ---
-title: サービスワーカーを使ってネットワーク要求とプッシュ通知を管理する
-description: サービスワーカーは、パフォーマンスの向上、さまざまなネットワークの状態への対応、web アプリケーションとの接続性の向上に役立つ Web ワーカーです。
+title: サービス ワーカーを使用してネットワーク要求とプッシュ通知を管理する
+description: サービス ワーカーは、パフォーマンスの向上、さまざまなネットワーク状態への対応、Web アプリケーションとの接続の向上に役立つ Web ワーカーです。
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 05/15/2020
+ms.date: 01/07/2021
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: pwa
-keywords: プログレッシブ web アプリ、PWA、エッジ、JavaScript、Windows、UWP、Microsoft ストア
-ms.openlocfilehash: 9bf573b668ade351716b69965f653e05857c32ec
-ms.sourcegitcommit: d9cc829deb709b0866f6b43a5f4733682ddae5ca
+keywords: プログレッシブ Web アプリ、PWA、Edge、JavaScript、Windows、UWP、Microsoft Store
+ms.openlocfilehash: 314acbbd5a2f423c274f92e815b2be4329ace9b8
+ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "10659301"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "11399135"
 ---
-# サービスワーカーを使ってネットワーク要求とプッシュ通知を管理する
+# <a name="use-service-workers-to-manage-network-requests-and-push-notifications"></a>サービス ワーカーを使用してネットワーク要求とプッシュ通知を管理する
 
-サービスワーカーは、API を使ってすべてのネットワーク要求を傍受、変更、応答することができる特殊な種類の Web ワーカーです `Fetch` 。  サービスワーカーは、 `Cache` `IndexedDB` リソースを格納するために、API と非同期クライアント側データストアにアクセスできます。  
+サービス ワーカーは、API を使用してすべてのネットワーク要求を傍受、変更、および応答できる特別な種類の `Fetch` Web ワーカーです。  サービス ワーカーは、API や非同期クライアント側のデータ ストア (リソースを格納するなど `Cache` `IndexedDB` ) にアクセスできます。  
 
-## サービスワーカーの登録  
+## <a name="registering-a-service-worker"></a>サービス ワーカーの登録  
 
-他の Web ワーカーと同様に、サービスワーカーは別のファイル内に存在する必要があります。 このファイルは、次のコードスニペットに示すように、サービスワーカーを登録するときに参照します。  
+他の Web ワーカーと同様に、サービス ワーカーは別のファイルに存在する必要があります。 次のコード スニペットに示すように、Service Worker を登録するときにこのファイルを参照します。  
 
 ```javascript
 if ( "serviceWorker" in navigator ) {
@@ -29,14 +29,14 @@ if ( "serviceWorker" in navigator ) {
 }
 ```  
 
-最新のブラウザーには、サービスワーカー向けにさまざまなレベルのサポートが用意しています。 このため、 `serviceWorker` サービスワーカーに関連するコードを実行する前に、オブジェクトが存在するかどうかをテストすることをお勧めします。 上のコードスニペットでは、サービスワーカーは、 `serviceworker.min.js` サイトのルートにあるファイルを使って登録されています。 サービスワーカーを定義する JavaScript ファイルが、管理対象の最上位ディレクトリ (サービスワーカーの範囲として参照されます) に存在することを確認します。  上のコードスニペットでは、ファイルがルートに保存され、サービスワーカーがドメイン内のすべてのページを管理します。 サービスワーカーファイルがディレクトリに保存されていた場合 `js` 、サービスワーカーのスコープは `js` ディレクトリとサブディレクトリになります。  サービスワーカーのスコープを減らす必要がある場合を除き、サービスワーカーファイルは、サイトのルートに配置することをお勧めします。  
+最新のブラウザーでは、Service Workers のサポートレベルが異なります。 そのため、サービス ワーカー関連のコードを実行する前に、オブジェクトの存在を `serviceWorker` テストしてください。 上記のコード スニペットでは、サービス ワーカーがサイトのルートにあるファイルを使用 `serviceworker.min.js` して登録されます。 サービス ワーカーを定義する JavaScript ファイルが、\(Service Worker\のスコープと呼ばれます) を管理する最高レベルのディレクトリに存在することを確認します。  前のコード スニペットでは、ファイルはルートに格納され、Service Worker はドメイン内のすべてのページを管理します。 Service Worker ファイルがディレクトリに格納されている場合、Service Worker のスコープはディレクトリと `js` `js` サブディレクトリになります。  ベスト プラクティスとして、サービス ワーカーの範囲を減らす必要がない限り、サービス ワーカー ファイルをサイトのルートに配置します。  
 
-## サービスワーカーのライフサイクル  
+## <a name="the-service-worker-lifecycle"></a>Service Worker のライフサイクル  
 
-サービスワーカーのライフサイクルは、複数のステップで構成され、各手順でイベントがトリガーされます。 これらのイベントにリスナーを追加して、操作を実行するためのコードを実行できます。 次の一覧は、service worker のライフサイクルと関連イベントの概要を示しています。 
+Service Worker のライフサイクルは複数の手順で構成されます。各手順でイベントがトリガーされます。 これらのイベントにリスナーを追加して、アクションを実行するコードを実行できます。 次の一覧は、サービス ワーカーのライフサイクルと関連イベントの大きなレベルのビューを示しています。 
 
-1. サービスワーカーを登録します。  
-1.  ブラウザーは、JavaScript ファイルをダウンロードし、サービスワーカーをインストールし、イベントをトリガーし `install` ます。 `install`このイベントを使うと、web サイトから CSS ファイル、JavaScript ファイル、ロゴ画像、オフラインページなど、重要な有効期間が長いファイルを事前にキャッシュすることができます。  
+1.  サービス ワーカーを登録します。  
+1.  ブラウザーは JavaScript ファイルをダウンロードし、Service Worker をインストールし、イベントをトリガー `install` します。 このイベントを使用して、CSS ファイル、JavaScript ファイル、ロゴ イメージ、オフライン ページなど、重要で長命なファイルを Web サイトから事前に `install` キャッシュできます。  
     
     ```javascript
     self.addEventListener( "install", function( event ){
@@ -44,7 +44,7 @@ if ( "serviceWorker" in navigator ) {
     });
     ```  
     
-1.  サービスワーカーがアクティブになり、イベントがトリガーされ `activate` ます。  このイベントを使用して、古いキャッシュをクリーンアップします。  
+1.  サービス ワーカーがアクティブ化され、イベントがトリガー `activate` されます。  古いキャッシュをクリーンアップするには、このイベントを使用します。  
     
     ```javascript
     self.addEventListener( "activate", event => {
@@ -52,7 +52,7 @@ if ( "serviceWorker" in navigator ) {
     });
     ```  
     
-1.  サービスワーカーは、ページが更新されたとき、またはユーザーがサイト上の新しいページに移動したときに実行する準備ができています。 サービスワーカーを待機させずに実行する場合は、 `self.skipWaiting()` イベント中にメソッドを使い `install` ます。  
+1.  サービス ワーカーは、ページが更新された場合、またはユーザーがサイト上の新しいページに移動するときに実行する準備が整いました。 待機せずに Service Worker を実行する場合は、イベント中 `self.skipWaiting()` にメソッドを使用 `install` します。  
     
     ```javascript
     self.addEventListener( "install", event => {
@@ -61,11 +61,11 @@ if ( "serviceWorker" in navigator ) {
     });
     ```
     
-1.  現在、サービスワーカーを実行しています。     
+1.  サービス ワーカーが実行中です。     
     
-## サービスワーカーでの fetch の使用  
+## <a name="using-fetch-in-service-workers"></a>Service Workers でのフェッチの使用  
 
-サービスワーカーで使用する主なイベントは、 `fetch` イベントです。  イベントは、 `fetch` ブラウザーがサービスワーカーのスコープ内でコンテンツにアクセスしようとするたびに実行されます。 次のコードスニペットは、リスナーを fetch イベントに追加する方法を示しています。  
+Service Worker で使用する主なイベントはイベント `fetch` です。  このイベントは、ブラウザーが Service Worker のスコープ内のコンテンツにアクセスしようと試みる `fetch` 度に実行されます。 次のコード スニペットは、フェッチ イベントにリスナーを追加する方法を示しています。  
 
 ```javascript
 self.addEventListener( "fetch", event => {
@@ -73,28 +73,28 @@ self.addEventListener( "fetch", event => {
 });
 ```  
 
-ハンドラー内で、 `fetch` 要求がネットワークに送られるか、キャッシュから取得するかなどを制御できます。  目的のアプローチは、要求されているリソースの種類、更新頻度、およびアプリケーションに固有の他のビジネスロジックによって異なります。  次に、実行できる操作の例をいくつか示します。  
+ハンドラー内で、要求がネットワークに送信され、キャッシュからプルされるかどうかを `fetch` 制御できます。  使用する方法は、要求されるリソースの種類、更新頻度、およびアプリケーション固有の他のビジネス ロジックによって異なります。  次に、実行する操作の例を示します。  
 
-*   可能であれば、キャッシュから応答を返します。それ以外の場合は、ネットワーク経由でリソースを要求するためにフォールバックします。  
-*   ネットワークからリソースを取得し、コピーをキャッシュして、応答を返します。
-*   ユーザーがデータを保存するための環境設定を指定できるようにします。 
-*   特定の画像要求のプレースホルダー画像を指定します。  
-*   サービスワーカーで直接応答を生成します。  
+*   使用可能な場合は、キャッシュからの応答を返し、それ以外の場合はフォールバックしてネットワーク上でリソースを要求します。  
+*   ネットワークからリソースを取得し、コピーをキャッシュし、応答を返します。
+*   ユーザーがデータを保存する基本設定を指定できます。 
+*   特定のイメージ要求のプレースホルダー イメージを指定します。  
+*   サービス ワーカーで直接応答を生成します。  
+    
+## <a name="push-notifications"></a>プッシュ通知  
 
-## プッシュ通知  
+サービス ワーカーは、ユーザーに通知をプッシュできます。 プッシュ通知は、しばらく時間が経過した後にアプリケーションに再び参加するようにユーザーに促す場合に役立ちます。 詳細については、「プッシュ通知のチュートリアル [とデモ」に移動します][AzurewebsitesWebpushdemo]。  
 
-サービスワーカーは通知をユーザーにプッシュすることができます。 プッシュ通知は、一定の時間が経過した後に、ユーザーにアプリケーションの再利用を促すために役立ちます。 詳細については、「[プッシュ通知のチュートリアルとデモ][AzurewebsitesWebpushdemo]」を参照してください。  
+## <a name="see-also"></a>関連項目  
 
-## 関連項目  
+Service Workers の詳細については、次の関連トピックの一覧に移動します。  
 
-サービスワーカーの詳細については、次の関連するトピックの一覧を参照してください。  
-
-*   [Service worker で PWAs をオフライン作業する][MDNPwasMakingOfflineServiceWorkers]  
-*   [通知とプッシュを使用して PWAs を再作成する方法][MDNPwasMakeReengageablesingNotificationsPush]  
-
+*   [サービス ワーカーと PWA をオフラインで動作する][MDNPwasMakingOfflineServiceWorkers]  
+*   [通知とプッシュを使用して PWA を再エンゲージする方法][MDNPwasMakeReengageablesingNotificationsPush]  
+    
 <!-- links -->  
 
-[AzurewebsitesWebpushdemo]: https://webpushdemo.azurewebsites.net "Web プッシュ通知 | Microsoft Edge のデモ"  
+[AzurewebsitesWebpushdemo]: https://webpushdemo.azurewebsites.net "Web プッシュ通知| Microsoft Edge デモ"  
 
-[MDNPwasMakingOfflineServiceWorkers]: https://developer.mozilla.org/docs/Web/Progressive_web_apps/Offline_Service_workers "サービスワーカーで PWAs をオフラインで操作しました-PWAs |MDN"  
-[MDNPwasMakeReengageablesingNotificationsPush]: https://developer.mozilla.org/docs/Web/Progressive_web_apps/Re-engageable_Notifications_Push "通知を使って PWAs を再設定する方法とプッシュ-PWAs の使い方 |MDN"  
+[MDNPwasMakingOfflineServiceWorkers]: https://developer.mozilla.org/docs/Web/Progressive_web_apps/Offline_Service_workers "サービス ワーカーと一緒に PWA をオフラインで動作する - PWA |MDN"  
+[MDNPwasMakeReengageablesingNotificationsPush]: https://developer.mozilla.org/docs/Web/Progressive_web_apps/Re-engageable_Notifications_Push "通知とプッシュを使用して PWA を再びエンゲージする方法 - PWA |MDN"  

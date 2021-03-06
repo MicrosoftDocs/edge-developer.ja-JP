@@ -1,18 +1,18 @@
 ---
-description: Microsoft Edge DevTools の [アプリケーション] パネルからキャッシュ データを表示する方法について説明します。
+description: Microsoft Edge DevTools の [アプリケーション] パネルからキャッシュ データを表示する方法。
 title: Microsoft Edge DevTools を使用してキャッシュ データを表示する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 12/11/2020
+ms.date: 02/12/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 770001beb9b7eebd4dae76355a1f3e41a8021ecb
-ms.sourcegitcommit: a35a6b5bbc21b7df61d08cbc6b074b5325ad4fef
+ms.openlocfilehash: 7e0523e3293bbdafa9c3575344714da708fffe62
+ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "11230804"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "11397539"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -28,18 +28,18 @@ ms.locfileid: "11230804"
    See the License for the specific language governing permissions and
    limitations under the License.  -->
 
-# Microsoft Edge DevTools を使用してキャッシュ データを表示する  
+# <a name="view-cache-data-with-microsoft-edge-devtools"></a>Microsoft Edge DevTools を使用してキャッシュ データを表示する  
 
-このガイドでは [、Microsoft Edge DevTools を使用して][MicrosoftEdgeDevTools] キャッシュ データを検査する方法 [について説明][MDNCache] します。  
+このガイドでは [、Microsoft Edge DevTools][MicrosoftEdgeDevTools] を使用してキャッシュ データを検査する方法 [について説明][MDNCache] します。  
 
-HTTP キャッシュ データを検査 [しようとしている][MDNHTTPCaching] 場合、これは必要なガイドではありません。  ネットワーク ログの [ **サイズ** ] 列の情報を **探します**。  [ネットワーク アクティビティ [のログ] に移動します][DevtoolsNetworkLogActivity]。  
+[HTTP][MDNHTTPCaching]キャッシュ データを検査しようとしている場合、これは必要なガイドではありません。  ネットワーク ログの [ **サイズ** ] 列の情報を **探します**。  [ネットワーク アクティビティ [のログ記録] に移動します][DevtoolsNetworkLogActivity]。  
 
-## キャッシュ データを表示する  
+## <a name="view-cache-data"></a>キャッシュ データの表示  
 
-1.  [アプリケーション **] タブを** 選択して、[アプリケーション] パネル **を開** きます。  通常 **、マニフェスト** ウィンドウは既定で開きます。  
+1.  [アプリケーション] **タブを** 選択して、[アプリケーション] パネル **を開** きます。  通常 **、マニフェスト ウィンドウ** は既定で開きます。  
     
-    :::image type="complex" source="../media/storage-application-manifest.msft.png" alt-text="マニフェスト ウィンドウ" lightbox="../media/storage-application-manifest.msft.png":::
-       マニフェスト**ウィンドウ**  
+    :::image type="complex" source="../media/storage-application-manifest.msft.png" alt-text="[マニフェスト] ウィンドウ" lightbox="../media/storage-application-manifest.msft.png":::
+       [ **マニフェスト]** ウィンドウ  
     :::image-end:::  
     
 1.  [キャッシュ ストレージ **] セクションを展開** して、使用可能なキャッシュを表示します。  
@@ -48,7 +48,7 @@ HTTP キャッシュ データを検査 [しようとしている][MDNHTTPCachin
        使用可能なキャッシュ  
     :::image-end:::  
     
-1.  キャッシュを選択してコンテンツを表示します。  
+1.  コンテンツを表示するキャッシュを選択します。  
     
     :::image type="complex" source="../media/storage-application-cache-storage-domain-root-headers.msft.png" alt-text="キャッシュの内容を表示する" lightbox="../media/storage-application-cache-storage-domain-root-headers.msft.png":::
        キャッシュの内容を表示する  
@@ -66,40 +66,40 @@ HTTP キャッシュ データを検査 [しようとしている][MDNHTTPCachin
        リソースのコンテンツを表示する  
     :::image-end:::  
     
-## リソースを更新する  
+## <a name="refresh-a-resource"></a>リソースの更新  
 
 1.  [キャッシュのデータを表示します](#view-cache-data)。  
-1.  更新するリソースを選択します。  DevTools によって強調表示され、選択された状態が示されます。  
+1.  更新するリソースを選択します。  DevTools では強調表示され、選択されているかどうかを示します。  
     
     :::image type="complex" source="../media/storage-application-cache-storage-domain-refresh.msft.png" alt-text="更新するリソースを選択する" lightbox="../media/storage-application-cache-storage-domain-refresh.msft.png":::
        更新するリソースを選択する  
     :::image-end:::  
     
-1.  Choose **Refresh** \( ![ Refresh ][ImageRefreshIcon] \).  
+1.  [ **更新** \( ![ Refresh ][ImageRefreshIcon] \] を選択します)。  
     
-## リソースをフィルター処理する  
+## <a name="filter-resources"></a>リソースをフィルター処理する  
 
 1.  [キャッシュのデータを表示します](#view-cache-data)。  
-1.  [パス **でフィルター]** テキスト ボックスを使用して、指定したパスと一致しないリソースをフィルター処理します。  
+1.  [パス **でフィルター] テキスト** ボックスを使用して、指定したパスに一致しないリソースをフィルター処理します。  
     
-    :::image type="complex" source="../media/storage-application-cache-storage-filter.msft.png" alt-text="指定したパスと一致しないリソースをフィルター処理する" lightbox="../media/storage-application-cache-storage-filter.msft.png":::
-       指定したパスと一致しないリソースをフィルター処理する  
+    :::image type="complex" source="../media/storage-application-cache-storage-filter.msft.png" alt-text="指定したパスに一致しないリソースをフィルター処理する" lightbox="../media/storage-application-cache-storage-filter.msft.png":::
+       指定したパスに一致しないリソースをフィルター処理する  
     :::image-end:::  
     
-## リソースの削除  
+## <a name="delete-a-resource"></a>リソースの削除  
 
 1.  [キャッシュのデータを表示します](#view-cache-data)。  
-1.  削除するリソースを選択します。  DevTools によって強調表示され、選択された状態が示されます。  
+1.  削除するリソースを選択します。  DevTools では強調表示され、選択されているかどうかを示します。  
     
     :::image type="complex" source="../media/storage-application-cache-storage-delete-selected.msft.png" alt-text="削除するリソースを選択する" lightbox="../media/storage-application-cache-storage-delete-selected.msft.png":::
        削除するリソースを選択する  
     :::image-end:::  
     
-1.  Choose **Delete Selected** \( ![ Delete Selected ][ImageDeleteIcon] \).  
+1.  [ **選択済み \(** Delete ![ Selected ][ImageDeleteIcon] \) を削除する] を選択します。  
     
-## すべてのキャッシュ データを削除する  
+## <a name="delete-all-cache-data"></a>すべてのキャッシュ データを削除する  
 
-1.  アプリケーションクリア**ストレージ**  >  **を開きます**。  
+1.  [アプリケーション**クリア**  >  **ストレージ] を開きます**。  
 1.  [キャッシュ ストレージ] **チェック ボックスが有効** になっていることを確認します。  
     
     :::image type="complex" source="../media/storage-application-clear-storage-cache-storage-checkbox.msft.png" alt-text="[キャッシュ ストレージ] チェック ボックス" lightbox="../media/storage-application-clear-storage-cache-storage-checkbox.msft.png":::
@@ -112,7 +112,7 @@ HTTP キャッシュ データを検査 [しようとしている][MDNHTTPCachin
        [ **サイト データのクリア]** ボタン  
     :::image-end:::  
     
-## Microsoft Edge DevTools チームと連絡を取る  
+## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームと連絡を取る  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
@@ -123,10 +123,10 @@ HTTP キャッシュ データを検査 [しようとしている][MDNHTTPCachin
 
 <!-- links -->  
 
-[MicrosoftEdgeDevTools]: ../../devtools-guide-chromium/index.md "Microsoft Edge (Chromium) 開発者ツール |Microsoft Docs"  
-[DevtoolsNetworkLogActivity]: ../network/index.md#log-network-activity  "ネットワーク アクティビティをログに記録する |Microsoft Docs"  
+[MicrosoftEdgeDevTools]: ../../devtools-guide-chromium/index.md "Microsoft Edge (クロム) 開発者向け|Microsoft Docs"  
+[DevtoolsNetworkLogActivity]: ../network/index.md#log-network-activity  "ネットワーク アクティビティのログ |Microsoft Docs"  
 
-[MDNCache]: https://developer.mozilla.org/docs/Web/API/Cache "Cache |MDN"  
+[MDNCache]: https://developer.mozilla.org/docs/Web/API/Cache "キャッシュ |MDN"  
 [MDNHTTPCaching]: https://developer.mozilla.org/docs/Web/HTTP/Caching "HTTP キャッシュ | MDN"  
 
 > [!NOTE]

@@ -3,18 +3,16 @@ author: MSEdgeTeam
 ms.author: msedgedevrel
 ms.prod: microsoft-edge
 ms.topic: include
-ms.date: 09/01/2020
-ms.openlocfilehash: 68d32490ed0b2de890216b5425263885aba87e2b
-ms.sourcegitcommit: 63e6d34ff483f3b419a0e271a3513874e6ce6c79
-ms.translationtype: HT
+ms.date: 02/12/2021
+ms.openlocfilehash: ba355dce729c37d408afc31a8b705d75ebdf416a
+ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "10993441"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "11397704"
 ---
 > [!NOTE]
-> **監査** パネルには、サード パーティの Web サイトでホストされているコンテンツへのリンクが表示されます。  Microsoft は、これらのサイトのコンテンツおよび収集する可能性があるデータに対して責任を負いません。また、これらのサイトのコンテンツに対する制御は一切行いません。  
+> **監査** パネルには、サード パーティの Web サイトでホストされているコンテンツへのリンクが表示されます。  Microsoft は、これらのサイトのコンテンツに対して責任を負いません。また、これらのサイトのコンテンツを制御する必要はありません。また、データを収集する場合があります。  
 > 
-
-<!-- image links -->  
 
 <!-- links -->  

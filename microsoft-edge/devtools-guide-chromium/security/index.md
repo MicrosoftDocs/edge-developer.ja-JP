@@ -1,18 +1,18 @@
 ---
-description: セキュリティ パネルを使用して、ページが HTTPS で完全に保護されている必要があります。
+description: ページが HTTPS で完全に保護されている場合は、セキュリティ パネルを使用します。
 title: Microsoft Edge DevTools のセキュリティの問題を理解する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 12/11/2020
+ms.date: 02/12/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 5bef22eae8deacc81e31cf6d1c7791e016541346
-ms.sourcegitcommit: a35a6b5bbc21b7df61d08cbc6b074b5325ad4fef
+ms.openlocfilehash: 71138ad33afb9eb56055fa522eb35edb71974c89
+ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "11230615"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "11397777"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -28,7 +28,7 @@ ms.locfileid: "11230615"
    See the License for the specific language governing permissions and
    limitations under the License.  -->  
 
-# Microsoft Edge DevTools のセキュリティの問題を理解する  
+# <a name="understand-security-issues-with-microsoft-edge-devtools"></a>Microsoft Edge DevTools のセキュリティの問題を理解する  
 
   
 
@@ -36,81 +36,81 @@ ms.locfileid: "11230615"
 
 <!--todo: add section when why-https is available -->  
 
-## セキュリティ パネルを開く  
+## <a name="open-the-security-panel"></a>[セキュリティ] パネルを開く  
 
 セキュリティ **パネル** は、ページのセキュリティを検査する DevTools の主要な場所です。  
 
 1.  [DevTools を開きます][DevToolsOpen]。  
-1.  [セキュリティ **] タブを** 選択して、[セキュリティ] パネル **を開** きます。  
+1.  [セキュリティ **] タブを** 選択して、[セキュリティ] ツール **を開** きます。  
     
     :::image type="complex" source="../media/security-security-overview-secure.msft.png" alt-text="[セキュリティ] パネル" lightbox="../media/security-security-overview-secure.msft.png":::
        [ **セキュリティ]** パネル  
     :::image-end:::  
     
-## 一般的な問題  
+## <a name="common-problems"></a>一般的な問題  
 
-### セキュリティで保護されていないメインの原点  
+### <a name="non-secure-main-origins"></a>セキュリティで保護されていない主な発生元  
 
-ページのメインの作成元がセキュリティで保護されていない場合****、セキュリティの概要では、この**ページはセキュリティで保護されていないと表示されます**。  
+ページの主な作成元がセキュリティで保護されていない場合、セキュリティ **の概要には** 、この **ページはセキュリティで保護されていないと表示されます**。  
 
-:::image type="complex" source="../media/security-security-overview-non-secure.msft.png" alt-text="セキュリティで保護されていないページ" lightbox="../media/security-security-overview-non-secure.msft.png":::
-   セキュリティで保護されていないページ  
+:::image type="complex" source="../media/security-security-overview-non-secure.msft.png" alt-text="セキュリティ保護されていないページ" lightbox="../media/security-security-overview-non-secure.msft.png":::
+   セキュリティ保護されていないページ  
 :::image-end:::  
 
-この問題は、アクセスした URL が HTTP で要求された場合に発生します。  セキュリティを確保するには、HTTPS 経由で要求する必要があります。  たとえば、アドレス バーの URL を確認すると、次のようになります `http://example.com` 。  URL をセキュリティで保護するには、次の必要があります `https://example.com` 。  
+この問題は、アクセスした URL が HTTP を使用して要求された場合に発生します。  セキュリティで保護するには、HTTPS 経由で要求する必要があります。  たとえば、アドレス バーの URL を確認すると、おそらくに似ています `http://example.com` 。  URL をセキュリティで保護するには、 である必要があります `https://example.com` 。  
 
-サーバーで HTTPS を既にセットアップしている場合、この問題を解決するために必要なのは、すべての HTTP 要求を HTTPS にリダイレクトするようにサーバーを構成することです。  
+サーバーで HTTPS を既にセットアップしている場合は、この問題を解決するために必要なのは、すべての HTTP 要求を HTTPS にリダイレクトするようにサーバーを構成することです。  
 
-サーバーに HTTPS を設定していない場合は [、Let's Encrypt][LetsEncrypt] を使用すると、無料で比較的簡単にプロセスを開始できます。  または、CDN でのサイトのホストを検討する場合もあります。  ほとんどの主要な CDN は、既定で HTTPS 上のサイトをホストします。  
+サーバーで HTTPS を設定していない場合は [、Let's Encrypt][LetsEncrypt] を使用すると、プロセスを開始するための無料で比較的簡単な方法が提供されます。  または、CDN でのサイトのホストを検討する場合もあります。  現在、ほとんどの主要な CDN は HTTPS 上のサイトを既定でホストしています。  
 
 > [!TIP]
-> Webhint [で HTTPS][WebhintUseHttps] ヒント [を使用すると][Webhint] 、すべての HTTP 要求が HTTPS に送信されるプロセスを自動化できる場合があります。  
+> [Webhint で HTTPS][WebhintUseHttps]ヒント[を使用すると][Webhint]、すべての HTTP 要求が HTTPS に送信されるプロセスを自動化できます。  
 
-### 混在コンテンツ  
+### <a name="mixed-content"></a>混在コンテンツ  
 
-**コンテンツが** 混在しているということは、ページのメインの作成元は安全ですが、ページはセキュリティ保護されていない元の元のリソースを要求しました。  混在コンテンツ ページは部分的にしか保護されません。これは、HTTP コンテンツはスニファーからアクセス可能であり、man-in-the-middle 攻撃に対して脆弱だからです。  
+**混在コンテンツ** とは、ページの主な作成元がセキュリティで保護されているが、ページがセキュリティで保護されていないオリジンからリソースを要求したという意味です。  混在コンテンツ ページは部分的にしか保護されません。HTTP コンテンツはスニッフィングにアクセス可能で、中間者攻撃に対して脆弱です。  
 
 :::image type="complex" source="../media/security-security-overview-mixed-secure.msft.png" alt-text="混在コンテンツ" lightbox="../media/security-security-overview-mixed-secure.msft.png":::
    混在コンテンツ  
 :::image-end:::  
 
-前の図で、[ネットワーク] パネルで **[View 1 request]** を選択してネットワーク パネルを開き、セキュリティで保護されていないリソースのみをネットワーク ログに表示するフィルター**** `mixed-content:displayed` を適用します。 ****  
+前の図で、[ネットワーク] パネルで **[1**要求**** の表示] を選択してネットワーク ツールを開き、フィルターを適用して、ネットワーク ログにセキュリティ保護されていないリソースのみを `mixed-content:displayed` **** 表示します。  
 
 :::image type="complex" source="../media/security-network-filter.msft.png" alt-text="ネットワーク ログ内の混在リソース" lightbox="../media/security-network-filter.msft.png":::
-   ネットワーク ログ内の混在 **リソース**  
+   ネットワーク ログ内の **混在リソース**  
 :::image-end:::  
 
-## 詳細の表示  
+## <a name="view-details"></a>詳細の表示  
 
-### メインの生成元の証明書を表示する  
+### <a name="view-main-origin-certificate"></a>メインオリジン証明書の表示  
 
-[セキュリティ **の概要] で**、[証明書の **表示] を** 選択して、証明書をメインの発行元にすばやく検査します。  
+[セキュリティの **概要] で**、[証明書の **表示] を** 選択して、メインの発行元の証明書をすばやく検査します。  
 
-:::image type="complex" source="../media/security-security-overview-secure-view-certificate.msft.png" alt-text="メインの生成元証明書" lightbox="../media/security-security-overview-secure-view-certificate.msft.png":::
-   メインの生成元証明書  
+:::image type="complex" source="../media/security-security-overview-secure-view-certificate.msft.png" alt-text="主な発行元証明書" lightbox="../media/security-security-overview-secure-view-certificate.msft.png":::
+   主な発行元証明書  
 :::image-end:::  
 
-### 原点の詳細を表示する  
+### <a name="view-origin-details"></a>原点の詳細を表示する  
 
-左側のナビゲーションのエントリの 1 つを選択して、原点の詳細を表示します。  詳細ページから、接続と証明書の情報を表示できます。  証明書の透過性情報は、利用可能な場合にも表示されます。  
+左側のナビゲーションでエントリの 1 つを選択して、原点の詳細を表示します。  詳細ページから、接続と証明書の情報を表示できます。  証明書の透明性情報は、利用可能な場合にも表示されます。  
 
-:::image type="complex" source="../media/security-security-overview-mixed-secure-main-origin.msft.png" alt-text="メインの原点の詳細" lightbox="../media/security-security-overview-mixed-secure-main-origin.msft.png":::
-   メインの原点の詳細  
+:::image type="complex" source="../media/security-security-overview-mixed-secure-main-origin.msft.png" alt-text="主な発生元の詳細" lightbox="../media/security-security-overview-mixed-secure-main-origin.msft.png":::
+   主な発生元の詳細  
 :::image-end:::  
 
-## Microsoft Edge DevTools チームと連絡を取る  
+## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームと連絡を取る  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
 <!-- links -->  
 
-[MicrosoftEdgeDevTools]: ../../devtools-guide-chromium/index.md "Microsoft Edge (Chromium) 開発者ツール |Microsoft Docs"  
+[MicrosoftEdgeDevTools]: ../../devtools-guide-chromium/index.md "Microsoft Edge (クロム) 開発者向け|Microsoft Docs"  
 [DevToolsOpen]: ../open/index.md "Microsoft Edge DevTools を開く | Microsoft Docs"  
 
-[LetsEncrypt]: https://letsencrypt.org "暗号化 - 無料の SSL/TLS 証明書"  
+[LetsEncrypt]: https://letsencrypt.org "Let's Encrypt - 無料の SSL/TLS 証明書"  
 
 [Webhint]: https://webhint.io "webhint"  
-[WebhintUseHttps]: https://webhint.io/docs/user-guide/hints/hint-https-only "HTTPS を使用する |webhint ドキュメント"  
+[WebhintUseHttps]: https://webhint.io/docs/user-guide/hints/hint-https-only "HTTPS を使用|webhint のドキュメント"  
 
 <!--[mixed]: /web/fundamentals/security/prevent-mixed-content/what-is-mixed-content ""  -->
 

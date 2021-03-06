@@ -1,74 +1,74 @@
 ---
-description: Visual Studio コードから Microsoft Edge (Chromium) の要素を使う方法
-title: Visual Studio コードからの Microsoft Edge (Chromium) の要素
+description: コードから Microsoft Edge (Chromium) の要素を使用Visual Studio方法
+title: Microsoft Edge の要素 (クロム) Visual Studio コード
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 10/26/2020
+ms.date: 01/07/2021
 ms.topic: article
 ms.prod: microsoft-edge
-keywords: microsoft edge、web 開発、f12 ツール、devtools、vs コード、visual studio コード、要素
-ms.openlocfilehash: 81488c08a76a16b80a415cbd17cd0617df916f54
-ms.sourcegitcommit: 1cfcf2c8970a6c2221cfbf09a23d36b08bd60690
+keywords: microsoft edge, Web 開発, f12 ツール, devtools, vs code, visual studio code, elements
+ms.openlocfilehash: 83bac187fa2a9b1766a52f3f2cd176f171846e02
+ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "11135496"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "11398456"
 ---
-# Microsoft Edge DevTools for Visual Studio コード拡張  
+# <a name="microsoft-edge-devtools-for-visual-studio-code-extension"></a>Microsoft Edge DevTools for Visual Studio コード拡張機能  
 
-使用 <!--the [Microsoft Edge DevTools for Visual Studio Code][VisualstudioMarketplaceElementsMicrosoftEdgeChromium] -->この拡張機能は、 [Visual Studio コード][VisualstudioCode]内の Microsoft Edge devtools でアクセスするためのものです。  Microsoft Edge DevTools の **要素** と **ネットワーク** ツールにアクセスできます。  Microsoft Edge のインスタンスを起動するか、またはそのインスタンスにアタッチすることができます。  接続後、実行時の HTML 構造を表示し、レイアウトを変更し、スタイルの問題を修正し、ネットワークトラフィックを検査することができます。  
+使用 <!--the [Microsoft Edge DevTools for Visual Studio Code][VisualstudioMarketplaceElementsMicrosoftEdgeChromium] -->Microsoft Edge DevTools 内の Microsoft Edge DevTools にアクセスするこの拡張機能は、microsoft Visual Studio [コードです][VisualstudioCode]。  Microsoft Edge DevTools の **[** 要素と **ネットワーク** ] ツールにアクセスできます。  Microsoft Edge のインスタンスを起動またはアタッチできます。  接続後に、ランタイム HTML 構造を表示し、レイアウトを変更し、スタイルの問題を修正し、ネットワーク トラフィックを検査することができます。  
 
-## 要素ツール  
+## <a name="elements-tool"></a>要素ツール  
 
-既定では、拡張機能によって固有のウィンドウでブラウザーインスタンスが起動され、Microsoft Edge DevTools の **要素** 機能が提供されます。  
+既定では、拡張機能は一意のウィンドウでブラウザー インスタンスを起動し、Microsoft Edge DevTools の **Elements** 機能を提供します。  
 
-:::image type="complex" source="./media/edge-devtools-for-vscode-windowed.png" alt-text="完全なブラウザーウィンドウで実行されている Visual Studio の開発ツール用の Microsoft Edge DevTools" lightbox="./media/edge-devtools-for-vscode-windowed.png":::
-   完全なブラウザーウィンドウで実行されている Visual Studio の開発ツール用の Microsoft Edge DevTools  
+:::image type="complex" source="./media/edge-devtools-for-vscode-windowed.png" alt-text="完全なブラウザー ウィンドウで実行Visual Studio Microsoft Edge DevTools for Visual Studio コード" lightbox="./media/edge-devtools-for-vscode-windowed.png":::
+   完全なブラウザー ウィンドウで実行Visual Studio Microsoft Edge DevTools for Visual Studio コード  
 :::image-end:::  
 
-拡張機能の設定では、 **ヘッドレスモード** や **ネットワーク**などの機能をさらに有効にすることができます。  
+拡張機能の設定では、ヘッドレス モードやネットワークなど、 **より多くの機能を** 有効 **にできます**。  
 
-:::image type="complex" source="./media/edge-devtools-for-vscode-settings.png" alt-text="完全なブラウザーウィンドウで実行されている Visual Studio の開発ツール用の Microsoft Edge DevTools" lightbox="./media/edge-devtools-for-vscode-settings.png":::
-   拡張設定で \ (または \) ヘッドレスモードとネットワーク検査を有効にする  
+:::image type="complex" source="./media/edge-devtools-for-vscode-settings.png" alt-text="拡張機能の設定でヘッドレス モードとネットワーク検査を有効にする (または無効にする)" lightbox="./media/edge-devtools-for-vscode-settings.png":::
+   拡張機能の設定で \(または無効にする)ヘッドレス モードとネットワーク検査を有効にする  
 :::image-end:::  
 
-## ヘッドレスモード  
+## <a name="headless-mode"></a>ヘッドレス モード  
 
-ヘッドレスモードでは、この拡張機能はデバッグのための完全なブラウザーインスタンスを起動しません。  バックグラウンドでインスタンスが実行されます。  エディター内では、埋め込みブラウザーを操作する必要があります。  追加のブラウザーアイコンがタスクバーに表示されません。  
+ヘッドレス モードでは、この拡張機能はデバッグする完全なブラウザー インスタンスを起動しません。  バックグラウンドでインスタンスを実行します。  エディター内にとどまり、埋め込みブラウザーを操作する必要がある場合があります。  追加のブラウザー アイコンはタスク バーに表示されません。  
 
-:::image type="complex" source="./media/edge-devtools-for-vscode-headless.png" alt-text="完全なブラウザーウィンドウで実行されている Visual Studio の開発ツール用の Microsoft Edge DevTools" lightbox="./media/edge-devtools-for-vscode-headless.png":::
-   ヘッドレスブラウザーで実行されている Visual Studio DevTools の Microsoft Edge DevTools  
+:::image type="complex" source="./media/edge-devtools-for-vscode-headless.png" alt-text="ヘッドレスで実行Visual Studio Microsoft Edge DevTools" lightbox="./media/edge-devtools-for-vscode-headless.png":::
+   ヘッドレス ブラウザーで実行Visual Studio Microsoft Edge DevTools  
 :::image-end:::  
 
 > [!NOTE]
-> MacOS では、優先モードとしてヘッドレスモードを有効にする必要があります。  ヘッドレスモードを使用すると、ウィンドウが表示されていない場合に、ブラウザーウィンドウでそのことが報告される問題を解決する必要があり `Not Active` ます。  
+> macOS では、優先モードとしてヘッドレス モードを有効にする必要があります。  ヘッドレス モードを使用すると、ウィンドウが表示されない場合、ブラウザー ウィンドウからそれが表示されるという問題が解決されます `Not Active` 。  
 
-## ネットワークツール  
+## <a name="network-tool"></a>ネットワーク ツール  
 
-アプリケーションのネットワークトラフィックも検査する場合は、[設定] を開き、[ **ネットワーク** ] タブを有効にします。  
+アプリケーションのネットワーク トラフィックも検査する場合は、設定を開き、[ネットワーク] タブを **オン** にします。  
 
-:::image type="complex" source="./media/edge-devtools-for-vscode-network.png" alt-text="完全なブラウザーウィンドウで実行されている Visual Studio の開発ツール用の Microsoft Edge DevTools" lightbox="./media/edge-devtools-for-vscode-network.png":::
-    Microsoft Edge DevTools for Visual Studio コードでのネットワーク検査  
+:::image type="complex" source="./media/edge-devtools-for-vscode-network.png" alt-text="Microsoft Edge DevTools for Visual Studio コードのネットワーク検査" lightbox="./media/edge-devtools-for-vscode-network.png":::
+    Microsoft Edge DevTools for Visual Studio コードのネットワーク検査  
 :::image-end:::  
 
-## 内線番号から Microsoft Edge を起動する  
+## <a name="launching-microsoft-edge-from-the-extension"></a>Microsoft Edge の起動 拡張機能から  
 
-**アクティビティバー**の Microsoft Edge ツールに移動します。  [ **Microsoft Edge ツール: ターゲット]** と表示されている場所に、アプリのブラウザーを開くプラス記号が付いています。  [ **バージョン情報:** ] オプションを選択した場合、ブラウザーで web アプリに移動して、Visual Studio コードの [ **要素** ] パネルに表示されるようにする必要があります。  
+アクティビティ バーの [Microsoft Edge Tools] **に移動します**。  [Microsoft Edge **Tools: Targets]** と表示される場所の横に、アプリのブラウザーを開くプラス記号があります。  **about:blank**オプションを選択した場合は、ブラウザーの Web アプリに移動して、ブラウザーの [**** コード] の [要素] パネルに表示Visual Studioがあります。  
 
-## デバッグビューから Microsoft Edge を起動する  
+## <a name="launching-microsoft-edge-from-the-debug-view"></a>デバッグ ビューからの Microsoft Edge の起動  
 
-Visual Studio のコードでデバッグビューを使うことに慣れている場合は、Microsoft Edge DevTools にアクセスしてください。  
+コード内のデバッグ ビューの使用に慣れている場合Visual Studioから Microsoft Edge DevTools にアクセスします。  
 
-1.  Visual Studio のコードで、[デバッグ] ビューに移動します。 
-    *   `Ctrl` + `Shift` + `D` Windows/Linux \ (macOS) でを選択 `Command` + `Shift` + `D` します。  
+1.  [Visual Studio コード] で、[デバッグ] ビューに移動します。 
+    *   `Ctrl` + `Shift` + `D` Windows/Linux \( `Command` + `Shift` + `D` on macOS\) で選択します。  
 
 <!--TODO:  Is this section intended to be optional  -->  
 > [!NOTE]
-> 1.  Visual Studio コードにいずれの構成も含まれていない場合は、次のいずれかの操作を実行します。  
->     *   を選択し `F5` ます。  
->     *   [ **再生** ] (緑) ボタンを選択します。  
-> 1.  ドロップダウンで、ドロップダウンで [ **Edge** ] を選びます。  
-> 1.  `launch.json`次の構成を含むファイルを表示する必要があります。  
+> 1.  コードに構成が含Visual Studio、次のいずれかの操作を実行します。  
+>     *   `F5` を選択します。  
+>     *   [Play **** \(green\)] ボタンを選択します。  
+> 1.  ドロップダウンで、ドロップダウンで **[エッジ]** を選択します。  
+> 1.  次 `launch.json` の構成を含むファイルを表示する必要があります。  
 >     
 >     ```json
 >     {
@@ -84,28 +84,28 @@ Visual Studio のコードでデバッグビューを使うことに慣れてい
 >     }
 >     ```  
 >     
-> 正しい構成を読み込んだ後、次の操作を実行します。  
+> 正しい構成を読み込み、次のアクションを実行します。  
 
-1.  Visual Studio コードから **要素** ツールを起動するには、次のいずれかの操作を実行します。 
-    *   を選択し `F5` ます。  
-    *   [ **再生** ] (緑) ボタンを選択します。  
+1.  コードから **要素** ツールを起動Visual Studio、次のいずれかの操作を実行します。 
+    *   `F5` を選択します。  
+    *   [Play **** \(green\)] ボタンを選択します。  
          
-これで、次の操作を実行できるようになります。  
+次に、次の操作を実行できます。  
 
-*   ブラウザーの screencast にアクセスします。  
-*   DOM とページ上のコンポーネントのスタイルを検査します。  
+*   ブラウザーのスクリーンキャストにアクセスします。  
+*   ページ上のコンポーネントの DOM とスタイルを調します。  
 
-## Microsoft Edge へのアタッチ  
+## <a name="attaching-to-microsoft-edge"></a>Microsoft Edge への接続  
 
-ブラウザーを開き、Visual Studio コードにインスタンスを添付するには、次の手順を実行します。 
+ブラウザーを開き、インスタンスをコードにVisual Studioするには、次の手順を実行します。 
 
-1.  Microsoft Edge \ (Chromium \) のインスタンスを開くには、次のコマンドをコピーして実行します。  
+1.  Microsoft Edge \(Chromium\) のインスタンスを開く場合は、次のコマンドをコピーして実行します。  
     
     ```shell
     start msedge --remote-debugging-port=9222
     ```  
     
-1.  インスタンスが起動したら、次のコードスニペットをファイルにコピーして貼り付け `launch.json` ます。  
+1.  インスタンスが起動した後、次のコード スニペットをコピーしてファイルに貼り付 `launch.json` けます。  
     
     ```json
     {
@@ -118,28 +118,28 @@ Visual Studio のコードでデバッグビューを使うことに慣れてい
     }
     ```  
     
-1.  Visual Studio コードで、[ **デバッガー** ] ドロップダウンメニューを開き、[ **Microsoft Edge にアタッチ**] を選択して、[開発者ツール] を開きます。  
-1.  Visual Studio コードから **要素** ツールを起動するには、次のいずれかの操作を実行します。 
-    *   を選択し `F5` ます。  
-    *   [ **再生** ] (緑) ボタンを選択します。  
+1.  [Visual Studioコード] で、[ **デバッガー** ] ドロップダウン メニューを開き、[Microsoft Edge に接続] を選択し **、開発者ツールを開きます**。  
+1.  コードから **要素** ツールを起動Visual Studio、次のいずれかの操作を実行します。 
+    *   `F5` を選択します。  
+    *   [Play **** \(green\)] ボタンを選択します。  
          
-これで、次の操作を実行できるようになります。  
+次に、次の操作を実行できます。  
 
-*   ブラウザーの screencast にアクセスします。  
-*   DOM とページ上のコンポーネントのスタイルを検査します。  
+*   ブラウザーのスクリーンキャストにアクセスします。  
+*   ページ上のコンポーネントの DOM とスタイルを調します。  
     
-## Microsoft Edge DevTools for Visual Studio コード拡張チームに連絡する  
+## <a name="getting-in-touch-with-the-microsoft-edge-devtools-for-visual-studio-code-extension-team"></a>Microsoft Edge DevTools for the microsoft Edge DevTools for Visual Studio コード拡張機能チームへの連絡  
 
-拡張機能の[GitHub リポジトリ][GithubMicrosoftVscodeEdgeDevtools]に[関する問題を整理][GithubMicrosoftVscodeEdgeDevtoolsNewIssue]して、フィードバックを送信します。  
+拡張機能の GitHub リポジトリ [に対][GithubMicrosoftVscodeEdgeDevtoolsNewIssue] して問題を提出して [、フィードバック][GithubMicrosoftVscodeEdgeDevtools] を送信します。  
 
-お手伝いしたい場合 <!--the Microsoft Edge DevTools for Visual Studio Code -->この拡張機能は、お客さまのご協力をお待ちしています。  拡張機能の [GitHub リポジトリ][GithubMicrosoftVscodeEdgeDevtools] を使い始めるのに必要なものをすべて見つけます。  
+作成を支援する場合 <!--the Microsoft Edge DevTools for Visual Studio Code -->この拡張機能を使用すると、投稿が歓迎されます。  拡張機能の GitHub リポジトリで、開始 [するために必要なすべてを][GithubMicrosoftVscodeEdgeDevtools] 見つけることができます。  
 
 <!--links -->  
 
-[VisualstudioCode]: https://code.visualstudio.com "Visual Studio コード"  
-[VisualStudioCodeDocs]: https://code.visualstudio.com/Docs "ドキュメント |Visual Studio コード"   
+[VisualstudioCode]: https://code.visualstudio.com "Visual Studioコード"  
+[VisualStudioCodeDocs]: https://code.visualstudio.com/Docs "ドキュメント |Visual Studioコード"   
 
 [GithubMicrosoftVscodeEdgeDevtools]: https://github.com/Microsoft/vscode-edge-devtools "microsoft/vscode-edge-devtools |GitHub"  
-[GithubMicrosoftVscodeEdgeDevtoolsNewIssue]: https://github.com/Microsoft/vscode-edge-devtools/issues/new "新しい問題-microsoft/vscode-edge tools |GitHub"
+[GithubMicrosoftVscodeEdgeDevtoolsNewIssue]: https://github.com/Microsoft/vscode-edge-devtools/issues/new "新しい問題 - microsoft/vscode-edge-devtools |GitHub"
 
-[VisualstudioMarketplaceElementsMicrosoftEdgeChromium]: https://marketplace.visualstudio.com/items?itemName=ms-edgedevtools.vscode-edge-devtools "Microsoft Edge Tools for VS コード"  
+[VisualstudioMarketplaceElementsMicrosoftEdgeChromium]: https://marketplace.visualstudio.com/items?itemName=ms-edgedevtools.vscode-edge-devtools "Microsoft Edge Tools for Visual Studio コード"  

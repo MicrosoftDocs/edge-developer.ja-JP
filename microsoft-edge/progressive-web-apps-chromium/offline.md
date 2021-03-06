@@ -1,29 +1,29 @@
 ---
-title: プログレッシブ Web アプリでのオフラインおよびネットワーク接続のサポート
-description: サポート技術を利用して、さまざまなネットワークの状態を把握するための耐障害性のエクスペリエンスを実現する方法について説明します。
+title: プログレッシブ Web アプリでのオフライン接続とネットワーク接続のサポート
+description: サポート テクノロジを使用して、さまざまなネットワーク条件に対応する回復力のあるエクスペリエンスを作成する方法について学習します。
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 05/15/2020
+ms.date: 01/07/2021
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: pwa
-keywords: プログレッシブ web アプリ、PWA、エッジ、JavaScript、Windows、UWP、Microsoft ストア
-ms.openlocfilehash: 58ffb8e9ae596dec4b99143a3061995a6598ce44
-ms.sourcegitcommit: d9cc829deb709b0866f6b43a5f4733682ddae5ca
+keywords: プログレッシブ Web アプリ、PWA、Edge、JavaScript、Windows、UWP、Microsoft Store
+ms.openlocfilehash: 6b6031aac10161c16195c83496f8d8b5b842628e
+ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "10659308"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "11398078"
 ---
-# プログレッシブ Web アプリでのオフラインおよびネットワーク接続のサポート
+# <a name="offline-and-network-connectivity-support-in-progressive-web-apps"></a>プログレッシブ Web アプリでのオフライン接続とネットワーク接続のサポート
 
-多くの場合、web アプリケーションは安定したネットワーク接続に依存しているため、web ベースのソフトウェアへの多大な投資は、組織にとってあまり厳しくありませんでした。 現在、web プラットフォームでは、ネットワーク接続が不安定になった場合や完全にオフラインになった場合でも、ユーザーが作業を続けることができる堅牢なオプションが提供されるようになりました。
+長年にわたり、Web アプリケーションは安定したネットワーク接続に依存していたため、組織はネイティブ ソフトウェアよりも Web ベースのソフトウェアに多額の投資を行うのを消極的でした。 現在、Web プラットフォームでは、ネットワーク接続が不安定になったり、完全にオフラインになったりした場合でも、ユーザーが作業を続行できる堅牢なオプションが提供されています。
 
-## キャッシュを使用して PWAs のパフォーマンスを向上させる
+## <a name="use-the-caching-to-improve-performance-of-pwas"></a>キャッシュを使用して PWA のパフォーマンスを向上させる
 
-[サービスワーカー][MDNServiceWorker]の導入により、web platform は API を追加して、 `Cache` マネージキャッシュされたリソースへのアクセスを提供します。 この Promise ベースの API を使用すると、開発者は、HTML、CSS、JavaScript、画像、JSON など、多くの web リソースを保存して取得することができます。 通常、キャッシュ API は、サービスワーカーのコンテキスト内で使用されますが、オブジェクトのメインスレッドでも使用でき `window` ます。
+Service [Workers の導入により][MDNServiceWorker]、Web プラットフォームはマネージ キャッシュ されたリソースへのアクセスを提供する `Cache` API を追加しました。 この Promise ベースの API を使用すると、開発者は HTML、CSS、JavaScript、画像、JSON など、多くの Web リソースを格納および取得できます。 通常、キャッシュ API は Service Worker のコンテキスト内で使用されますが、オブジェクトのメイン スレッドでも使用 `window` できます。
 
-API の一般的な用途の1つ `Cache` は、次のコードスニペットに示すように、サービスワーカーのインストール時に重要なリソースを事前にキャッシュすることです。  
+API の一般的な使用の 1 つは、次のコード スニペットに示すように、Service Worker のインストール時に重要なリソースを事前に `Cache` キャッシュする方法です。  
 
 ```javascript
 self.addEventListener( "install", function( event ){
@@ -41,7 +41,7 @@ self.addEventListener( "install", function( event ){
 });
 ```  
 
-このコードは、サービスワーカーのライフサイクルイベント中に実行され、キャッシュの `install` 名前が付けら `static-cache` れ、キャッシュへのポインターがある場合に、このメソッドを使って4つのリソースを追加し `addAll()` ます。  このアプローチは、多くの場合、イベント中のキャッシュ取得と組み合わされています。 `fetch`   
+Service Worker ライフ サイクル イベント中に実行されるこのコードは、という名前のキャッシュを開き、キャッシュへのポインターがある場合は、メソッドを使用して 4 つのリソースを追加 `install` `static-cache` `addAll()` します。  多くの場合、このアプローチはイベント中にキャッシュ取得と結合 `fetch` されます。   
 
 ```javascript
 self.addEventListener( "fetch", event => {
@@ -78,23 +78,23 @@ self.addEventListener( "fetch", event => {
 });
 ```  
 
-このコードスニペットは、ブラウザーからこのサイトへの要求が行われるたびに、サービスワーカー内で実行され `fetch` ます。 このイベント内には、要求が HTML ファイルを対象としている場合に実行される条件付きステートメントがあります。 サービスワーカーは、ファイルが既にいずれかのキャッシュに存在するかどうかを確認し `match()` ます (メソッド \ を使用)。 要求がキャッシュ内に存在する場合、キャッシュされた結果が返されます。 存在しない場合、 `fetch` そのリソースの新しい動作が実行されると、後で応答のコピーがキャッシュされ、応答が返されます。 `fetch`ネットワークが利用できないために失敗した場合は、オフラインページがキャッシュから返されます。
+このコード スニペットは、ブラウザーがこのサイトに対して要求を行うたびに、Service Worker `fetch` 内で実行されます。 そのイベント内に、要求が HTML ファイルの場合に実行される条件付きステートメントがあります。 Service Worker は、ファイルがキャッシュ \(method\を使用して) に既に存在するかどうかを `match()` 確認します。 要求がキャッシュに存在する場合は、キャッシュされた結果が返されます。 指定しない場合は、そのリソースの新しいリソースが実行され、応答のコピーが後でキャッシュされ、 `fetch` 応答が返されます。 ネットワークが `fetch` 使用できなくなったため失敗した場合、オフライン ページはキャッシュから返されます。
 
-この簡単な概要では、プログレッシブ web アプリ (PWA) でキャッシュを使用する方法について説明します。 各 PWA は異なっていて、異なるキャッシュ計画を使用している可能性があります。 コードによって表示が異なる場合があり、同じアプリケーション内のさまざまなルートに異なるキャッシュ計画を使うことができます。
+この簡単な概要は、プログレッシブ Web アプリ (PWA) でキャッシュを使用する方法を示しています。 各 PWA は異なるので、異なるキャッシュ戦略を使用できます。 コードは見た目が異なる場合があります。また、同じアプリケーション内の異なるルートに対して異なるキャッシュ戦略を使用する場合があります。
 
-## PWA で IndexedDB を使って構造化データを保存する
+## <a name="use-indexeddb-in-your-pwa-to-store-structured-data"></a>PWA で IndexedDB を使用して構造化データを格納する
 
-`IndexedDB` 構造化データを保存するための API です。 API と似 `Cache` ていますが、非同期でもあります。これは、メインスレッドまたはサービスワーカーなどの Web ワーカーで使用できることを意味します。 API を使って、 `IndexedDB` 大量の構造化データをクライアントに保存するか、暗号化されたメディアオブジェクトなどのバイナリデータを保存します。 詳細については、「 [IndexedDB を使った MDN 入門][MDNIndexeddbApiUsing]」を参照してください。
+`IndexedDB` は構造化データを格納するための API です。 API と同様に、この API も非同期です。つまり、メイン スレッドまたはサービス ワーカーなどの Web ワーカーで使用 `Cache` できます。 クライアントに大量の構造化データを格納したり、暗号化されたメディア オブジェクトなどのバイナリ データを格納したりするには `IndexedDB` 、API を使用します。 詳細については [、IndexedDB の使用に関する MDN の入門書に移動します][MDNIndexeddbApiUsing]。
 
-## PWAs のストレージオプションについて
+## <a name="understand-storage-options-for-pwas"></a>PWA のストレージ オプションについて
 
-ユーザーに最適なオフライン操作を提供するために、少量のデータを保存しなければならない場合があります。 このような場合は、web storage のキーと値のペアシステムのシンプルさがニーズを満たしていることがわかります。  
+ユーザーに優れたオフライン エクスペリエンスを提供するために、少量のデータを保存する必要がある場合があります。 その場合は、Web ストレージのキーと値のペア システムがニーズを満たしているのが簡単です。  
 
 > [!IMPORTANT]
-> Web ストレージは同期プロセスであり、サービスワーカーなどのワーカースレッド内では使用できません。 使用頻度が高いと、アプリケーションのパフォーマンスの問題が発生する可能性があります。 
+> Web ストレージは同期プロセスであり、Service Workers などのワーカー スレッド内では使用できません。 使用量が多い場合は、アプリケーションのパフォーマンスの問題が発生する可能性があります。 
 
 
-Web Storage には、との2種類があり `localStorage` `sessionStorage` ます。 それぞれは、それを作成したドメインに対して分離された個別のデータストアとして管理されます。 `sessionStorage` 閲覧セッションの期間のみ保持されます (たとえば、ブラウザーが開かれている間のみ、更新と復元が含まれます)。 `localStorage` データが、コード、ユーザー、ブラウザーによって削除されるまで保持されます (たとえば、利用可能なストレージが限られている場合)。 次のコードスニペットは、の使い方と似ています。これを使う方法を示してい `localStorage` `sessionStorage` ます。
+Web ストレージには、次の 2 種類があります `localStorage` `sessionStorage` 。 それぞれが、作成したドメインに分離された個別のデータ ストアとして維持されます。 `sessionStorage` 閲覧セッションの期間中のみ保持されます (ブラウザーが開いている間など、更新と復元が含まれます)。 `localStorage` データがコード、ユーザー、またはブラウザーによって削除されるまで保持されます (たとえば、使用できる記憶域が限られている場合)。 次のコード スニペットは、使い方に似た使 `localStorage` い方を `sessionStorage` 示しています。
 
 ```javascript
 var data = {
@@ -104,9 +104,9 @@ var data = {
 localStorage.setItem( window.location, JSON.stringify(data) );
 ```  
 
-このコードスニペットは、現在のページに関するメタデータを取得し、JavaScript オブジェクトに格納します。 次に、メソッドを使用してその値を JSON として保存 `localStorage` `setItem()` し、現在の URL に等しいキーを割り当て `window.location` ます。 メソッドを使用して情報を取得することができ `localStorage` `getItem()` ます。 
+このコード スニペットは、現在のページに関するメタデータを取得し、JavaScript オブジェクトに格納します。 次に、メソッドを使用してその値を JSON として格納し、現在の URL と等しいキー `localStorage` `setItem()` を割り当 `window.location` てる。 メソッドを使用して情報 `localStorage` を取得 `getItem()` できます。 
 
-次のコードスニペットは、キャッシュされた `localstorage` ページを列挙し、メタデータを抽出して、リンクの一覧の作成などの作業を実行する方法を示しています。
+次のコード スニペットは、キャッシュを使用してキャッシュされたページを列挙し、メタデータを抽出してタスクを実行する方法 (リンクのリストの作成など) `localstorage` を示しています。
 
 ```javascript
 caches.open( "pages" )
@@ -130,19 +130,19 @@ function insertOfflineLink( request ) {
 }
 ```  
 
-メソッドは、 `insertOfflineLink()` `localStorage.getItem()` 保存されているメタデータを取得するために、要求の URL をメソッドに渡します。 取得したデータが存在するかどうかが確認され、存在する場合は、表示するためのマークアップの作成や挿入などの操作をデータに対して実行できます。
+この `insertOfflineLink()` メソッドは、要求の URL をメソッドに渡して `localStorage.getItem()` 、格納されているメタデータを取得します。 取得したデータが存在するかどうかを確認し、存在する場合は、マークアップを作成して表示する挿入など、データに対してアクションを実行できます。
 
-## PWA のネットワーク接続をテストする
+## <a name="test-for-network-connections-in-your-pwa"></a>PWA でのネットワーク接続のテスト
 
-オフラインで使用するための情報を保存するだけでなく、データを同期したり、ネットワークの状態が変わったことをユーザーに通知したりするために、ネットワーク接続が利用可能になっているかどうかを知ることができます。 ネットワーク接続をテストするには、次のオプションを使用します。
+オフラインで使用する情報を保存する以外に、データを同期したり、ネットワークの状態が変更されたとユーザーに通知したりするために、ネットワーク接続がいつ利用できるのか確認すると便利です。 ネットワーク接続をテストするには、次のオプションを使用します。
 
-### ナビゲーター。オンライン  
+### <a name="navigatoronline"></a>navigator.onLine  
 
-`navigator.onLine`プロパティは、ネットワークの現在の状態を知ることができるブール値です。 値がの場合は、ユーザーがオンラインであるかどうかを示し `true` ます。それ以外の場合は、ユーザーがオフラインになります。
+プロパティ `navigator.onLine` は、ネットワークの現在の状態を知るブール値です。 値がである場合 `true` 、ユーザーはオンラインで、それ以外の場合はユーザーはオフラインです。
 
-### オンラインイベントとオフラインイベント  
+### <a name="online-and-offline-events"></a>オンラインイベントとオフライン イベント  
 
-ネットワークが利用可能であるかどうかを知ることは有用ですが、ネットワーク接続が変更されたときに対処することが必要な場合があります。 この状況では、ネットワークイベントに応答してリッスンし、操作を行うことができます。 イベントは、、 `window` `document` および要素で、次のコードスニペットのように表示され `document.body` ます。
+ネットワークが利用できるかどうかを知るのは役に立ちますが、ネットワーク接続が変更された場合に対処する必要があります。 このような場合は、ネットワーク イベントに応答してリッスンしてアクションを実行できます。 イベントは、次のコード スニペットに表示される 、、および `window` `document` `document.body` 要素で使用できます。
 
 ```javascript
 window.addEventListener("online",  function(){
@@ -153,28 +153,28 @@ window.addEventListener("offline", function(){
 });
 ```  
 
-## 関連項目  
+## <a name="see-also"></a>関連項目  
 
-オフラインシナリオの管理の詳細については、次のページを参照してください。  
+オフライン シナリオの管理の詳細については、次のページに移動します。  
 
 *   [キャッシュ][MDNCache]  
 *   [IndexedDB][MDNIndexeddbApi]  
-*   [サービスワーカー][MDNServiceWorker]  
+*   [サービス ワーカー][MDNServiceWorker]  
 *   [Web ストレージ][MDNWebStorageApi]  
-*   [ナビゲーター。オンライン][MDNNavigatoronline]  
-*   [オンラインイベントとオフラインイベント][MDNNavigatoronlineOfflineEvents]  
-*   [インテントの要求: PWAs のキャッシュ計画][AlistapartRequestIntentCachingStrategiesAgePwas]
-
+*   [navigator.onLine][MDNNavigatoronline]  
+*   [オンラインイベントとオフライン イベント][MDNNavigatoronlineOfflineEvents]  
+*   [意図を持つ要求: PWA の時代のキャッシュ戦略][AlistapartRequestIntentCachingStrategiesAgePwas]
+    
 <!-- links -->  
 
 [MDNCache]: https://developer.mozilla.org/docs/Web/API/Cache "キャッシュ |MDN"  
 [MDNIndexeddbApi]: https://developer.mozilla.org/docs/Web/API/IndexedDB_API "IndexedDB API |MDN"  
-[MDNIndexeddbApiUsing]: https://developer.mozilla.org/docs/Web/API/IndexedDB_API/Using_IndexedDB "IndexDb API を使用しています。MDN"  
+[MDNIndexeddbApiUsing]: https://developer.mozilla.org/docs/Web/API/IndexedDB_API/Using_IndexedDB "IndexDb - IndexDB API の使用|MDN"  
 [MDNServiceWorker]: https://developer.mozilla.org/docs/Web/API/ServiceWorker "ServiceWorker |MDN"  
-[MDNWebStorageApi]: https://developer.mozilla.org/docs/Web/API/Web_Storage_API "Web Storage API |MDN"  
+[MDNWebStorageApi]: https://developer.mozilla.org/docs/Web/API/Web_Storage_API "Web ストレージ API |MDN"  
 [MDNNavigatoronline]: https://developer.mozilla.org/docs/Web/API/NavigatorOnLine "NavigatorOnLine |MDN"  
-[MDNNavigatoronlineOfflineEvents]: https://developer.mozilla.org/docs/Web/API/NavigatorOnLine/Online_and_offline_events "オンラインイベントとオフラインイベント-NavigatorOnLine |MDN"  
+[MDNNavigatoronlineOfflineEvents]: https://developer.mozilla.org/docs/Web/API/NavigatorOnLine/Online_and_offline_events "オンラインイベントとオフライン イベント - NavigatorOnLine |MDN"  
 
-[AbookapartGoingOffline]: https://abookapart.com/products/going-offline "Jeremy Keith によるオフラインでの移動本との分解"  
+[AbookapartGoingOffline]: https://abookapart.com/products/going-offline "Jeremy Keith |A Book Apart"  
 
-[AlistapartRequestIntentCachingStrategiesAgePwas]: https://alistapart.com/article/request-with-intent-caching-strategies-in-the-age-of-pwas "インテントの要求: PWAs のキャッシュ戦略はアーロン Gustafson |リストの分解"  
+[AlistapartRequestIntentCachingStrategiesAgePwas]: https://alistapart.com/article/request-with-intent-caching-strategies-in-the-age-of-pwas "意図を持つ要求: Aaron Gustafson による PWA の時代のキャッシュ戦略|A List Apart"  

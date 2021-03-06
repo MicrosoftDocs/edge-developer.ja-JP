@@ -1,18 +1,18 @@
 ---
-description: Microsoft Edge DevTools を使用して、web サイトの読み込みを高速化する方法について説明します。
+description: Microsoft Edge DevTools を使用して、Web サイトの読み込み速度を向上させる方法を見つける方法について説明します。
 title: Microsoft Edge DevTools を使用して Web サイトの速度を最適化する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 10/19/2020
+ms.date: 02/12/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: af655941fdc836759651e8d8202e41d8d03331c5
-ms.sourcegitcommit: 99eee78698dc95b2a3fa638a5b063ef449899cda
+ms.openlocfilehash: 7de97ab27528e89e2373e0a0d1002e8c86e37613
+ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "11125490"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "11398113"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -28,213 +28,213 @@ ms.locfileid: "11125490"
    See the License for the specific language governing permissions and
    limitations under the License.  -->  
 
-# Microsoft Edge DevTools を使用して web サイトの速度を最適化する  
+# <a name="optimize-website-speed-with-microsoft-edge-devtools"></a>Microsoft Edge DevTools を使用して Web サイトの速度を最適化する  
 
-## チュートリアルの目標  
+## <a name="goal-of-tutorial"></a>チュートリアルの目標  
 
-このチュートリアルでは、Microsoft Edge DevTools を使って、web サイトの読み込みを高速化する方法について説明します。  
+このチュートリアルでは、Microsoft Edge DevTools を使用して Web サイトの読み込み速度を向上させる方法について説明します。  
 
-## 前提条件  
+## <a name="prerequisites"></a>前提条件  
 
-*   この [Web 開発クラスの概要][CourseraIntroductionWebDevelopmentClass]で説明するように、基本的な web 開発環境を用意する必要があります。  
-*   読み込みのパフォーマンスについて何も知りません。  これについては、このチュートリアルで説明します。  
+*   この 「Web 開発の概要」クラスで説明されているのと同様に、基本的な Web 開発エクスペリエンス [が必要です][CourseraIntroductionWebDevelopmentClass]。  
+*   読み込みパフォーマンスについて何も知る必要はありません。  詳細については、このチュートリアルで説明します。  
 
-## はじめに  
+## <a name="introduction"></a>はじめに  
 
-これは Tony です。  Tony は、cat 協会で非常に有名です。  彼は、お客様がお気に入りの食品について知ることができるように、web サイトを構築しました。  Tony のファンは、サイトを気に入っていますが、サイトの読み込み速度が遅いという苦情を耳にしています。  Tony から、サイトの速度を向上させるように求められました。  
+これは Tony です。  トニーは猫社会で非常に有名です。  ファンが自分の好きな食べ物について学べる Web サイトを構築しました。  彼のファンはサイトを愛していますが、Tony はサイトの読み込み時間が遅いという苦情を聞き続ける。  Tony は、サイトの速度を上げろと頼んだ。  
 
-:::image type="complex" source="../media/speed-tony.msft.png" alt-text="猫を Tony" lightbox="../media/speed-tony.msft.png":::
-   猫を Tony  
+:::image type="complex" source="../media/speed-tony.msft.png" alt-text="猫のトニー" lightbox="../media/speed-tony.msft.png":::
+   猫のトニー  
 :::image-end:::  
 
-## 手順 1: サイトを監査する  
+## <a name="step-1-audit-the-site"></a>手順 1: サイトを監査する  
 
-サイトの読み込みのパフォーマンスを向上させるために、 **必ず監査を開始して**ください。  
-監査には、次の2つの重要な機能があります。  
+サイトの読み込みパフォーマンスを向上させるために設定する場合は常に、 **監査から始める必要があります**。  
+監査には、次の 2 つの重要な機能があります。  
 
-*   以降の変更を測定するための **基準計画** を作成します。  
-*   どのような変更が最も影響を与えるかに関する実用的な **ヒント** が提供されます。  
+*   それ以降の変更 **を測定** する基準を作成します。  
+*   これは、変更 **が最も影響を** 与える影響に関する操作可能なヒントを提供します。  
     
-### 設定  
+### <a name="set-up"></a>設定  
 
-最初に、後で変更できるようにサイトを設定する必要があります。  
+最初に、後で変更を加えるサイトをセットアップする必要があります。  
 
-1.  [サイトのソースコードを開き](https://glitch.com/edit/#!/tony)ます。  このタブは [ **エディター] タブ**と呼ばれます。  
+1.  [サイトのソース コードを開きます](https://glitch.com/edit/#!/tony)。  このタブは、エディター タブと **呼ばれます**。  
     
-    :::image type="complex" source="../media/speed-glitch-tony-server-js.msft.png" alt-text="猫を Tony" lightbox="../media/speed-glitch-tony-server-js.msft.png":::
+    :::image type="complex" source="../media/speed-glitch-tony-server-js.msft.png" alt-text="[エディター] タブ" lightbox="../media/speed-glitch-tony-server-js.msft.png":::
        [ **エディター] タブ**  
     :::image-end:::  
     
-1.  [ **Tony**] を選びます。  メニューが表示されます。  
+1.  Tony **を選択します**。  メニューが表示されます。  
     
-    :::image type="complex" source="../media/speed-glitch-tony-server-js-remix-project.msft.png" alt-text="猫を Tony" lightbox="../media/speed-glitch-tony-server-js-remix-project.msft.png":::
-       **Tony**をクリックした後に表示されるメニュー  
+    :::image type="complex" source="../media/speed-glitch-tony-server-js-remix-project.msft.png" alt-text="tony を選択した後に表示されるメニュー" lightbox="../media/speed-glitch-tony-server-js-remix-project.msft.png":::
+       tony を選択した後に表示される **メニュー**  
     :::image-end:::  
     
-1.  [ **Remix Project**] を選びます。  プロジェクトの名前が **tony** からランダムに生成された名前に変更されます。  これで、独自のコードの編集可能なコピーが作成されました。  後で、このコードを変更することができます。  
-1.  [ **表示** ] を選択し、 **新しいウィンドウで**を選択します。  新しいタブでデモが開きます。 このタブは [ **デモ] タブ**として参照されます。 サイトが読み込まれるまでには時間がかかることがあります。  
+1.  **[Remix Project] を選択します**。  プロジェクトの名前が **tony** からランダムに生成された名前に変わります。  これで、コードの独自の編集可能なコピーが作成されます。  後で、このコードを変更できます。  
+1.  [表示 **] を** 選択し、[ **新しいウィンドウ] を選択します**。  デモが新しいタブで開きます。 このタブは、デモ タブと **呼ばれます**。 サイトの読み込みには時間がかかる場合があります。  
     
-    :::image type="complex" source="../media/speed-glitch-tony-show-live.msft.png" alt-text="猫を Tony" lightbox="../media/speed-glitch-tony-show-live.msft.png":::
+    :::image type="complex" source="../media/speed-glitch-tony-show-live.msft.png" alt-text="[デモ] タブ" lightbox="../media/speed-glitch-tony-show-live.msft.png":::
        [デモ] タブ  
     :::image-end:::  
     
-1.  `Control` + `Shift` + `J` \ (Windows, Linux \) または `Command` + `Option` + `J` \ (macOS \) を選択します。  Microsoft Edge の DevTools がデモと共に開きます。  
+1.  `Control` + `Shift` + `J` \(Windows, Linux\) または `Command` + `Option` + `J` \(macOS\) を選択します。  Microsoft Edge DevTools がデモと共に開きます。  
     
-    :::image type="complex" source="../media/speed-glitch-tony-show-live-console.msft.png" alt-text="猫を Tony" lightbox="../media/speed-glitch-tony-show-live-console.msft.png":::
+    :::image type="complex" source="../media/speed-glitch-tony-show-live-console.msft.png" alt-text="DevTools とデモ" lightbox="../media/speed-glitch-tony-show-live-console.msft.png":::
        DevTools とデモ  
     :::image-end:::  
     
-このチュートリアルの残りのスクリーンショットでは、DevTools が別のウィンドウに表示されています。  [ `Control` + `Shift` + `P` \ (Windows, Linux \)] または [ `Command` + `Shift` + `P` \ (macOS \)] を選択して、コマンドメニューを開き、入力した `Undock` 後、**別のウィンドウに [ドッキング解除]** を選択します。  
+このチュートリアルの残りのスクリーンショットについては、DevTools が別のウィンドウに表示されます。  `Control` + `Shift` + `P` \(Windows, Linux\) または `Command` + `Shift` + `P` \(macOS\) `Undock` **** を選択してコマンド メニューを開き、入力し、[別のウィンドウにドッキング解除] を選択します。  
 
-:::image type="complex" source="../media/speed-console.msft.png" alt-text="猫を Tony" lightbox="../media/speed-console.msft.png":::
-   アンドックした DevTools  
+:::image type="complex" source="../media/speed-console.msft.png" alt-text="ドッキングされていない DevTools" lightbox="../media/speed-console.msft.png":::
+   ドッキングされていない DevTools  
 :::image-end:::  
 
-### ベースラインを確立する  
+### <a name="establish-a-baseline"></a>ベースラインを確立する  
 
-ベースラインは、パフォーマンスを向上させる前に、サイトがどのように実行されたかを記録したものです。  
+ベースラインは、パフォーマンスを向上させる前にサイトがどのように実行されたのかの記録です。  
 
-1.  [ **監査** ] タブを選択します。 その **他のパネル** \ ([ ![ その他のパネル]) ボタンの背後に隠れている可能性があり ][ImageMorePanelsIcon] ます。  監査パネルを累乗するプロジェクトには、 **Lighthouse**という名前が付いているため、このパネルには Lighthouse があります。  
+1.  [監査] **ツールを選択** します。  [その他のパネル] \( **More Panels** \) ボタン ![ の ][ImageMorePanelsIcon] 背後に非表示になる場合があります。  このパネルには、監査パネルの電源を供給するプロジェクトが「ライトハウス」という名前なので、ライトハウス **があります**。  
     
     [!INCLUDE [audits-panel-note](../includes/audits-panel-note.md)]  
     
-    :::image type="complex" source="../media/speed-audits-performance.msft.png" alt-text="猫を Tony" lightbox="../media/speed-audits-performance.msft.png":::
-       **監査**パネル  
+    :::image type="complex" source="../media/speed-audits-performance.msft.png" alt-text="監査ツール" lightbox="../media/speed-audits-performance.msft.png":::
+       監査**ツール**  
     :::image-end:::  
     
     <!--todo: add link to Lighthouse when section is available  -->  
     <!-- /web/tools/lighthouse  -->  
     
-1.  監査構成の設定と前の図の設定を一致させる。  さまざまなオプションについて説明します。  
+1.  監査構成設定を前の図の監査構成設定と一致します。  さまざまなオプションの説明を次に示します。  
     
-    *   **デバイス**。  [ **モバイル** に設定] をオンにすると、ユーザーエージェント文字列が変更され、モバイルビューポートがシミュレートされます。  **デスクトップ**に設定することで、**モバイル**の変更が無効になります。  
-    *   **監査**。  カテゴリを無効にすると、監査パネルでそれらの監査が実行されなくなり、レポートから監査が除外されます。  提供されている推奨事項の種類を表示する場合は、その他のカテゴリを有効のままにします。  カテゴリを無効にすると、監査プロセスが少し速くなります。  
-    *   **調整**。  シミュレートされた **4g の4倍の CPU 速度** は、モバイルデバイスでの一般的な参照条件をシミュレートしています。  監査プロセス中に監査パネルで実際にスロットルされないので、"シミュレート" という名前が付けられます。  代わりに、ページがモバイルの条件下で読み込むのにかかる時間を extrapolates だけです。  一方、適用された [. **..** ] 設定では、より多くの監査プロセスの代わりに、CPU とネットワークのスロットルが実際に行われます。  
-    *   **ストレージをクリア**します。  このチェックボックスを有効にすると、ページに関連付けられているすべてのストレージが、各監査前に消去されます  この設定は、サイトでの初回の閲覧者の操作性を監査する場合にオンのままにしておきます。  この設定は、ユーザーが繰り返しアクセスするときに無効にします。  
+    *   **デバイス .**  [モバイル] **に設定** すると、ユーザー エージェント文字列が変更され、モバイル ビューポートがシミュレートされます。  デスクトップに **設定すると** 、モバイルの変更が **オフ** になります。  
+    *   **監査**。  カテゴリをオフにし、[監査] パネル **で** これらの監査を実行し、それらの監査をレポートから除外します。  提供される推奨事項の種類を表示する場合は、他のカテゴリをオンのままにします。  カテゴリをオフにし、監査プロセスを少し高速化します。  
+    *   **調整 .**  [ **シミュレートされた低速 4G] に設定すると、4 倍の CPU** スローダウンによって、モバイル デバイスでの一般的なブラウズ条件がシミュレートされます。  監査プロセス中に監査パネルが実際に調整されないので、"シミュレート" という名前が付きます。  代わりに、モバイル条件下でページの読み込みにかかる時間を余分に表示します。  一 **方、Applied...** の設定は、より長い監査プロセスのトレードオフを使用して、CPU とネットワークを実際に調整します。  
+    *   **ストレージをクリアします**。  チェック ボックスをオンにすると、すべての監査の前にページに関連付けられているすべての記憶域がクリアされます。  初めての訪問者がサイトを体験する方法を監査する場合は、この設定をオンのままにします。  繰り返し訪問エクスペリエンスが必要な場合は、この設定をオフにします。  
     
-1.  [ **監査の実行**] を選びます。  10秒から30秒後に、監査パネルにサイトのパフォーマンスのレポートが表示されます。  
+1.  [ **監査の実行] を選択します**。  10 ~ 30 秒後に、[ **監査** ] パネルにサイトのパフォーマンスのレポートが表示されます。  
     
-    :::image type="complex" source="../media/speed-glitch-tony-remix-audits-performance-metrics-collapsed.msft.png" alt-text="猫を Tony" lightbox="../media/speed-glitch-tony-remix-audits-performance-metrics-collapsed.msft.png":::
-       サイトのパフォーマンスの監査パネルのレポート  
+    :::image type="complex" source="../media/speed-glitch-tony-remix-audits-performance-metrics-collapsed.msft.png" alt-text="サイトのパフォーマンスの [監査] パネルのレポート" lightbox="../media/speed-glitch-tony-remix-audits-performance-metrics-collapsed.msft.png":::
+       サイトのパフォーマンスの [監査] パネルのレポート  
     :::image-end:::  
     
-#### レポートのエラーを処理する  
+#### <a name="handling-report-errors"></a>レポート エラーの処理  
 
-監査パネルレポートにエラーが表示された場合は、他のタブが開いていない **InPrivate** ウィンドウで [デモ] タブを実行してみてください。  これにより、Microsoft Edge をクリーンな状態から実行することができます。  特に Microsoft Edge Extensions は、監査プロセスの妨げになることがよくあります。  
+監査パネル レポートでエラーが発生した場合は、他のタブが開いていない **InPrivate** ウィンドウからデモ タブを実行してみてください。  これにより、クリーンな状態から Microsoft Edge を実行できます。  特に Microsoft Edge Extensions は、多くの場合、監査プロセスに干渉します。  
 
 <!--todo: add screen capture for error in audit -->  
 <!--
-:::image type="complex" source="../media/speed-.msft.png" alt-text="猫を Tony" lightbox="../media/speed-.msft.png":::
+:::image type="complex" source="../media/speed-.msft.png" alt-text="A report that errored" lightbox="../media/speed-.msft.png":::
    A report that errored  
 :::image-end:::  
 -->  
 
-### レポートを理解する  
+### <a name="understand-your-report"></a>レポートを理解する  
 
-レポートの上部に表示される数値は、サイトの全体的なパフォーマンススコアです。  後でコードを変更すると、この数値の増加が確認できます。  高いスコアは、パフォーマンスが向上することを意味します。  
+レポートの上部にある数値は、サイトの全体的なパフォーマンス スコアです。  後で、コードを変更すると、表示される番号が上がる必要があります。  スコアが高いほど、パフォーマンスが向上します。  
 
-:::image type="complex" source="../media/speed-glitch-tony-remix-audits-performance-metrics-collapsed-metrics-highlighted.msft.png" alt-text="猫を Tony" lightbox="../media/speed-glitch-tony-remix-audits-performance-metrics-collapsed-metrics-highlighted.msft.png":::
-   全体的なパフォーマンススコア  
+:::image type="complex" source="../media/speed-glitch-tony-remix-audits-performance-metrics-collapsed-metrics-highlighted.msft.png" alt-text="全体的なパフォーマンス スコア" lightbox="../media/speed-glitch-tony-remix-audits-performance-metrics-collapsed-metrics-highlighted.msft.png":::
+   全体的なパフォーマンス スコア  
 :::image-end:::  
 
-[ **メトリック** ] セクションには、サイトのパフォーマンスの定量的な測定値が表示されます。  各メトリックは、パフォーマンスのさまざまな側面について把握します。  たとえば、 **最初の Contentful 塗料** は、画面に最初にコンテンツが描画されたときに表示されます。これは、ユーザーがページの読み込みにおいて重要なマイルストーンであり、 **対話型** のときには、ユーザーの操作を処理するのに必要なページが表示されている点を示します。  
+[ **メトリック] セクション** には、サイトのパフォーマンスの定量測定値が表示されます。  各メトリックは、パフォーマンスの異なる側面に関する分析情報を提供します。  たとえば、First **Contentful Paint** は、コンテンツが最初に画面にペイントされる時期を示します。これは、ページの読み込みに対するユーザーの認識における重要なマイルストーンですが **、Time To Interactive** は、ページがユーザーの操作を処理するのに十分な準備ができている状態で表示されるポイントをマークします。  
 
-:::image type="complex" source="../media/speed-glitch-tony-remix-audits-performance-metrics-collapsed-highlighted.msft.png" alt-text="猫を Tony" lightbox="../media/speed-glitch-tony-remix-audits-performance-metrics-collapsed-highlighted.msft.png":::
-   [ **メトリック** ] セクション  
+:::image type="complex" source="../media/speed-glitch-tony-remix-audits-performance-metrics-collapsed-highlighted.msft.png" alt-text="[メトリック] セクション" lightbox="../media/speed-glitch-tony-remix-audits-performance-metrics-collapsed-highlighted.msft.png":::
+   [ **メトリック]** セクション  
 :::image-end:::  
 
-次の図の強調表示されたトグルボタンを選択すると、各メトリックの説明が表示され、[ **詳細** 情報] を選択すると、その内容に関するドキュメントを参照できます。  
+次の図で強調表示されているトグル ボタンを選択して、各指標の説明を表示し****、[詳細] を選択してドキュメントを読み取ってください。  
 
-:::image type="complex" source="../media/speed-glitch-tony-remix-audits-performance-metrics-expanded.msft.png" alt-text="猫を Tony" lightbox="../media/speed-glitch-tony-remix-audits-performance-metrics-expanded.msft.png":::
-   強調表示されたトグルボタンを選択して、[Metrics] 項目を展開する  
+:::image type="complex" source="../media/speed-glitch-tony-remix-audits-performance-metrics-expanded.msft.png" alt-text="[メトリック] アイテムを展開するには、強調表示されたトグル ボタンを選択します。" lightbox="../media/speed-glitch-tony-remix-audits-performance-metrics-expanded.msft.png":::
+   [メトリック] アイテムを展開するには、強調表示されたトグル ボタンを選択します。  
 :::image-end:::  
 
-メトリックの下には、ページが読み込まれたときにどのように見えるかを示すスクリーンショットのコレクションがあります。  
+[指標] の下には、ページの読み込み時の外観を示すスクリーンショットのコレクションがあります。  
 
-:::image type="complex" source="../media/speed-glitch-tony-remix-audits-performance-view-trace.msft.png" alt-text="猫を Tony" lightbox="../media/speed-glitch-tony-remix-audits-performance-view-trace.msft.png":::
-   ページの読み込み中の画面のスクリーンショット  
+:::image type="complex" source="../media/speed-glitch-tony-remix-audits-performance-view-trace.msft.png" alt-text="読み込み中のページの外観のスクリーンショット" lightbox="../media/speed-glitch-tony-remix-audits-performance-view-trace.msft.png":::
+   読み込み中のページの外観のスクリーンショット  
 :::image-end:::  
 
-[ **営業案件** ] セクションでは、この特定のページの読み込みパフォーマンスを向上させるためのヒントを紹介します。  
+[ **機会] セクション** には、この特定のページの読み込みパフォーマンスを向上させる方法に関する具体的なヒントが示されています。  
 
-:::image type="complex" source="../media/speed-glitch-tony-remix-audits-performance-view-trace.msft.png" alt-text="猫を Tony" lightbox="../media/speed-glitch-tony-remix-audits-performance-view-trace.msft.png":::
-   [ **営業案件** ] セクション  
+:::image type="complex" source="../media/speed-glitch-tony-remix-audits-performance-view-trace.msft.png" alt-text="[商談] セクション" lightbox="../media/speed-glitch-tony-remix-audits-performance-view-trace.msft.png":::
+   [ **商談]** セクション  
 :::image-end:::  
 
-詳細については、[営業案件] を選択します。  
+その詳細を知る機会を選ぶ。  
 
-:::image type="complex" source="../media/speed-glitch-tony-remix-audits-performance-opportunities-expanded.msft.png" alt-text="猫を Tony" lightbox="../media/speed-glitch-tony-remix-audits-performance-opportunities-expanded.msft.png":::
-   **レンダーブロックリソースの機会を排除** する  
+:::image type="complex" source="../media/speed-glitch-tony-remix-audits-performance-opportunities-expanded.msft.png" alt-text="レンダリングブロックリソースの機会を排除する" lightbox="../media/speed-glitch-tony-remix-audits-performance-opportunities-expanded.msft.png":::
+   **レンダリングブロックリソースの機会を排除** する  
 :::image-end:::  
 
-[ **詳細情報** ] を選択して、営業案件が重要である理由とその解決方法についてのドキュメントを表示します。  
+[ **詳細] を** 選択して、機会が重要な理由に関するドキュメントと、その修正方法に関する具体的な推奨事項を表示します。  
 
-:::image type="complex" source="../media/speed-web-dev-performance-audits.msft.png" alt-text="猫を Tony" lightbox="../media/speed-web-dev-performance-audits.msft.png":::
-   **レンダーブロックリソース**の機会を減らすためのドキュメント  
+:::image type="complex" source="../media/speed-web-dev-performance-audits.msft.png" alt-text="レンダリングブロックリソースの排除機会に関するドキュメント" lightbox="../media/speed-web-dev-performance-audits.msft.png":::
+   レンダリングブロックリソース**の排除機会に関するドキュメント**  
 :::image-end:::  
 
-[ **診断** ] セクションには、ページの読み込み時間に影響する要因についての詳細情報が表示されます。  
+[ **診断] セクション** では、ページの読み込み時間に寄与する要因の詳細について説明します。  
 
-:::image type="complex" source="../media/speed-glitch-tony-remix-audits-performance-diagnostics.msft.png" alt-text="猫を Tony" lightbox="../media/speed-glitch-tony-remix-audits-performance-diagnostics.msft.png":::
-   [ **診断** ] セクション  
+:::image type="complex" source="../media/speed-glitch-tony-remix-audits-performance-diagnostics.msft.png" alt-text="[診断] セクション" lightbox="../media/speed-glitch-tony-remix-audits-performance-diagnostics.msft.png":::
+   [ **診断]** セクション  
 :::image-end:::  
 
-[ **成功** した監査] セクションには、サイトが正常に動作していることが示されます。  セクションを展開する場合に選択します。  
+[ **渡された監査] セクション** には、サイトの正常な動作が表示されます。  セクションを展開する場合に選択します。  
 
-:::image type="complex" source="../media/speed-glitch-tony-remix-audits-performance-passed-audits.msft.png" alt-text="猫を Tony" lightbox="../media/speed-glitch-tony-remix-audits-performance-passed-audits.msft.png":::
-   [ **成功** した監査] セクション  
+:::image type="complex" source="../media/speed-glitch-tony-remix-audits-performance-passed-audits.msft.png" alt-text="[渡された監査] セクション" lightbox="../media/speed-glitch-tony-remix-audits-performance-passed-audits.msft.png":::
+   [ **渡された監査]** セクション  
 :::image-end:::  
 
-## 手順 2: 実験  
+## <a name="step-2-experiment"></a>手順 2: 実験  
 
-監査レポートの [営業案件] セクションには、ページのパフォーマンスを向上させるためのヒントが表示されます。  このセクションでは、コードベースへの推奨される変更を実装します。各変更の後でサイトを監査し、サイトの速度にどのような影響があるかを測定します。  
+監査レポートの [機会] セクションには、ページのパフォーマンスを向上させる方法に関するヒントが表示されます。  このセクションでは、コードベースに対して推奨される変更を実装し、変更後にサイトを監査して、サイトの速度に与える影響を測定します。  
 
-### テキストの圧縮を有効にする  
+### <a name="enable-text-compression"></a>テキスト圧縮を有効にする  
 
-レポートでは、大量のネットワークペイロードを回避することが、ページのパフォーマンスを向上させるための最上位の機会の1つであることを示しています。  テキスト圧縮を有効にすると、ページのパフォーマンスを向上させることができます。  
+レポートでは、膨大なネットワーク ペイロードを避けることは、ページのパフォーマンスを向上させる最も重要な機会の 1 つだと述べています。  テキスト圧縮を有効にすると、ページのパフォーマンスが向上します。  
 
-テキストファイルをネットワーク経由で送信する前に、テキストファイルのサイズを縮小 (圧縮) する場合。  メールのサイズを小さくするためにメールを送信する前に、どのようにしてフォルダーを zip 圧縮するかなどです。  
+テキスト圧縮は、テキスト ファイルをネットワーク上で送信する前に、テキスト ファイルのサイズを小さくするか、圧縮する場合です。  サイズを小さくするために、ディレクトリを送信する前にアーカイブする方法と同様です。  
 
-圧縮を有効にする前に、テキストリソースが圧縮されているかどうかを手動で確認する方法がいくつかあります。  
+圧縮を有効にする前に、テキスト リソースが圧縮されているかどうかを手動で確認する方法を次に示します。  
 
-1.  [ **ネットワーク** ] タブを選択します。  
+1.  [ネットワーク] **ツールを選択** します。  
     
-    :::image type="complex" source="../media/speed-glitch-tony-remix-network.msft.png" alt-text="猫を Tony" lightbox="../media/speed-glitch-tony-remix-network.msft.png":::
-       [ **ネットワーク** ] パネル  
+    :::image type="complex" source="../media/speed-glitch-tony-remix-network.msft.png" alt-text="[ネットワーク] パネル" lightbox="../media/speed-glitch-tony-remix-network.msft.png":::
+       ネットワーク**ツール**  
     :::image-end:::  
     
-1.  [ **ネットワーク設定** ] アイコンを選択します。  
-1.  [ **大きな要求行を使用する** ] チェックボックスをオンにします。  ネットワーク要求のテーブルの行の高さが増加します。  
+1.  [ネットワーク設定 **] アイコンを選択** します。  
+1.  [大きな **要求行を使用する] チェック ボックスを** オンにします。  ネットワーク要求のテーブル内の行の高さが増加します。  
     
-    :::image type="complex" source="../media/speed-glitch-tony-remix-network-use-large-request-rows.msft.png" alt-text="猫を Tony" lightbox="../media/speed-glitch-tony-remix-network-use-large-request-rows.msft.png":::
-       ネットワーク要求テーブルの大きな行  
+    :::image type="complex" source="../media/speed-glitch-tony-remix-network-use-large-request-rows.msft.png" alt-text="ネットワーク要求テーブルの大きい行" lightbox="../media/speed-glitch-tony-remix-network-use-large-request-rows.msft.png":::
+       ネットワーク要求テーブルの大きい行  
     :::image-end:::  
     
-1.  ネットワーク要求のテーブルに [ **サイズ** ] 列が表示されない場合は、テーブルの見出しをクリックし、[ **サイズ**] を選択します。  
+1.  ネットワーク要求 **の表** の [サイズ] 列が表示されない場合は、テーブル ヘッダーを [サイズ] > **選択します**。  
 
-各 **Size** セルには2つの値が表示されます。  上の値は、ダウンロードしたリソースのサイズです。  
-ボトム値は、圧縮されていないリソースのサイズです。  2つの値が同じである場合は、ネットワーク経由で送信されたときにリソースが圧縮されていないことを意味します。  たとえば、上の図では、の上位と下位の値 `bundle.js` は and で指定し `1.2 MB` `1.2 MB` ます。  
+[各 **サイズ] セル** には、2 つの値が表示されます。  一番上の値は、ダウンロードしたリソースのサイズです。  
+一番下の値は、圧縮されていないリソースのサイズです。  2 つの値が同じ場合は、ネットワークを使用して送信するときにリソースが圧縮されません。  たとえば、前の図では、上と下の値は `bundle.js` 、 `1.2 MB` と です `1.2 MB` 。  
 
-リソースの HTTP ヘッダーを調べて、圧縮を確認します。  
+リソースの HTTP ヘッダーを検査して圧縮を確認します。  
 
-1.  [ **bundle.js**] を選びます。  
-1.  [ **ヘッダー** ] タブを選択します。  
+1.  を選択します `bundle.js` 。  
+1.  [ヘッダー] **パネルを選択** します。  
     
-    :::image type="complex" source="../media/speed-glitch-tony-remix-network-use-large-request-rows-bundle-js.msft.png" alt-text="猫を Tony" lightbox="../media/speed-glitch-tony-remix-network-use-large-request-rows-bundle-js.msft.png":::
-       [ **ヘッダー** ] タブ  
+    :::image type="complex" source="../media/speed-glitch-tony-remix-network-use-large-request-rows-bundle-js.msft.png" alt-text="[ヘッダー] パネル" lightbox="../media/speed-glitch-tony-remix-network-use-large-request-rows-bundle-js.msft.png":::
+       [ **ヘッダー]** パネル  
     :::image-end:::  
     
-1.  ヘッダーの [ **応答ヘッダー** ] セクションを検索し `content-encoding` ます。  圧縮されていないことを示すものは表示されません `bundle.js` 。  リソースが圧縮されている場合、このヘッダーは通常、、またはに設定され `gzip` `deflate` `br` ます。  これらの値の説明については、「 [ディレクティブ][MDNContentEncodingDirectives] 」を参照してください。  
+1.  [応答ヘッダー **] セクションで** ヘッダーを `content-encoding` 検索します。  見出 `content-encoding` しは表示されません。つまり、圧縮 `bundle.js` されません。  リソースが圧縮されている場合、通常、このヘッダーは `gzip` 、 、 または `deflate` に設定されます `br` 。  値の説明については、「ディレクティブ」 [に移動します][MDNContentEncodingDirectives]。  
 
-説明が必要です。  変更を加える時間  テキストの圧縮を有効にするには、数行のコードを追加します。  
+説明で十分です。  いくつかの変更を加える時間。  次の 2 行のコードを追加して、テキスト圧縮を有効にします。  
 
-1.  [エディター] タブで、[ **server.js**] を選びます。  
+1.  [エディター] タブで、[編集]**をserver.js。 **  
     
-    :::image type="complex" source="../media/speed-glitch-tony-remix-server-js.msft.png" alt-text="猫を Tony" lightbox="../media/speed-glitch-tony-remix-server-js.msft.png":::
+    :::image type="complex" source="../media/speed-glitch-tony-remix-server-js.msft.png" alt-text="編集server.js" lightbox="../media/speed-glitch-tony-remix-server-js.msft.png":::
        Edit `server.js`  
     :::image-end:::  
     
-1.  **server.js**に次のコードを追加します。  前に必ず入力してください `app.use(compression())` `app.use(express.static('build'))` 。  
+1.  次のコードを次のコード**にserver.js。 **  前に置く必要 `app.use(compression())` があります `app.use(express.static('build'))` 。  
 
     ```javascript
     const express = require('express');
@@ -251,266 +251,266 @@ ms.locfileid: "11125490"
     ```  
     
     > [!NOTE]
-    > 通常は、次のような方法でパッケージをインストールする必要があり `compression` `npm i -S compression` ますが、これは既に行われています。  
+    > 通常は、パッケージをインストールする必要 `compression` がありますが、 `npm i -S compression` これは既に行っています。  
     
-1.  サイトの新しいビルドが展開されるのを待ちます。  [ **ツール** ] の横にある凝ったアニメーションは、サイトが再構築されて再展開されることを意味します。  [ **ツール** ] の横にあるアニメーションが消えると、変更がすぐにできます。  [ **表示** ] を選択し、 **新しいウィンドウで** もう一度選択します。  
+1.  Glitch がサイトの新しいビルドを展開するのを待ちます。  [ツール] の横にある **アニメーションは** 、サイトが再構築され、再展開されるという意味です。  ツールの横にあるアニメーションが消え去った場合、変更 **の準備** ができました。  [表示 **] を** 選択し、[ **新しいウィンドウ] を再度選択** します。  
     
     <!--
-    :::image type="complex" source="../media/speed-glitch-tony-remix-server-js-edited.msft.png" alt-text="猫を Tony" lightbox="../media/speed-glitch-tony-remix-server-js-edited.msft.png":::
+    :::image type="complex" source="../media/speed-glitch-tony-remix-server-js-edited.msft.png" alt-text="The animation that indicates that the site is getting built" lightbox="../media/speed-glitch-tony-remix-server-js-edited.msft.png":::
        The animation that indicates that the site is getting built  
     :::image-end:::  
     -->  
     
-以前に学習したワークフローを使用して、圧縮が機能していることを手動で確認します。  
+前に説明したワークフローを使用して、圧縮が機能しているのを手動で確認します。  
 
-1.  [デモ] タブに戻り、ページを再読み込みします。  これで、[ **サイズ** ] 列に、次のようなテキストリソースの2つの異なる値が表示され `bundle.js` ます。  次の図では、の値 `256 KB` `bundle.js` はネットワーク経由で送信されたファイルのサイズであり、の下の値は圧縮されていない `1.2 MB` ファイルサイズです。  
+1.  デモ タブに戻り、ページを更新します。  [ **サイズ] 列** には、次のようなテキスト リソースに 2 つの異なる値が表示されます `bundle.js` 。  次の図では、for の上の値は、ネットワークを使用して送信されたファイルのサイズで、最下位の値は圧縮されていないファイル サイズ `256 KB` `bundle.js` `1.2 MB` です。  
     
-    :::image type="complex" source="../media/speed-glitch-tony-remix-network-main.msft.png" alt-text="猫を Tony" lightbox="../media/speed-glitch-tony-remix-network-main.msft.png":::
-       [ **サイズ** ] 列に、テキストリソースの2つの異なる値が表示されるようになりました  
+    :::image type="complex" source="../media/speed-glitch-tony-remix-network-main.msft.png" alt-text="[サイズ] 列に、テキスト リソースに 2 つの異なる値が表示される" lightbox="../media/speed-glitch-tony-remix-network-main.msft.png":::
+       [ **サイズ] 列** に、テキスト リソースに 2 つの異なる値が表示される  
     :::image-end:::  
     
-1.  [ **応答ヘッダー** ] セクションに、 `bundle.js` ヘッダーを含めるようになりました `content-encoding: gzip` 。
+1.  [ **応答ヘッダー]** セクションに `bundle.js` ヘッダーが含 `content-encoding: gzip` まれる必要があります。
     
-    :::image type="complex" source="../media/speed-glitch-tony-remix-network-bundle-js-headers-response.msft.png" alt-text="猫を Tony" lightbox="../media/speed-glitch-tony-remix-network-bundle-js-headers-response.msft.png":::
-       **応答ヘッダー**セクションにコンテンツエンコードヘッダーが含まれるようになりました  
+    :::image type="complex" source="../media/speed-glitch-tony-remix-network-bundle-js-headers-response.msft.png" alt-text="[応答ヘッダー] セクションにコンテンツ エンコード ヘッダーが含まれる" lightbox="../media/speed-glitch-tony-remix-network-bundle-js-headers-response.msft.png":::
+       [ **応答ヘッダー]** セクションにコンテンツ エンコード ヘッダーが含まれる  
     :::image-end:::  
     
-ページをもう一度監査して、ページの読み込みパフォーマンスにどのような影響があるかを測定します。  
+ページを再度監査して、ページの読み込みパフォーマンスに与える影響の種類を測定します。  
 
-1.  [ **監査** ] タブを選択します。  
-1.  [ **Audit** (監査 ![ の実行)] を選び ][ImagePerformIcon] ます。  
-1.  設定は前の設定のままにしておきます。  
-1.  [ **監査の実行**] を選びます。  
+1.  [監査] **ツールを選択** します。  
+1.  [ **監査を実行する** ]を選択します ![ ([監査を実行 ][ImagePerformIcon] する]\)。  
+1.  設定は以前と同じままにします。  
+1.  [監査 **の実行] を選択します**。  
     
-    :::image type="complex" source="../media/speed-glitch-tony-remix-updated-audits-performance.msft.png" alt-text="猫を Tony" lightbox="../media/speed-glitch-tony-remix-updated-audits-performance.msft.png":::
-       テキストの圧縮を有効にした後の監査レポート  
+    :::image type="complex" source="../media/speed-glitch-tony-remix-updated-audits-performance.msft.png" alt-text="テキスト圧縮を有効にした後の監査レポート" lightbox="../media/speed-glitch-tony-remix-updated-audits-performance.msft.png":::
+       テキスト圧縮を有効にした後の監査レポート  
     :::image-end:::  
     
-<!--  Woohoo!  That looks like progress.  -->  全体的なパフォーマンススコアは高くなります。つまり、サイトの速度が速くなります。  
+<!--  Woohoo!  That looks like progress.  -->  全体的なパフォーマンス スコアが上がっている必要があります。つまり、サイトの速度が速くなります。  
 
-#### 現実世界でのテキスト圧縮  
+#### <a name="text-compression-in-the-real-world"></a>現実世界でのテキスト圧縮  
 
-ほとんどのサーバーでは、圧縮を有効にするための単純な修正プログラムが用意されています。  テキストの圧縮に使用するサーバーを構成する方法について、検索を行うだけです。  
+ほとんどのサーバーには、圧縮を有効にするための簡単な修正が実際に含まれています。  テキストの圧縮に使用するサーバーを構成する方法を検索します。  
 
-### 画像のサイズを変更する  
+### <a name="resize-images"></a>画像のサイズを変更する  
 
-レポートでは、大量のネットワークペイロードを回避することが、ページのパフォーマンスを向上させるための最上位の機会の1つであることを示しています。  画像のサイズを変更すると、ネットワークペイロードのサイズを小さくすることができます。  ユーザーが500ピクセル幅のモバイルデバイス画面で画像を表示している場合、1500ピクセル幅の画像を送信することはまったくありません。  理想的には、500ピクセル幅の画像を送信することをお勧めします。  
+レポートは、膨大なネットワーク ペイロードを避けることは、ページのパフォーマンスを向上させる最も重要な機会の 1 つを示しています。  イメージのサイズを変更すると、ネットワーク ペイロードのサイズを小さくすることができます。  ユーザーが 500 ピクセル幅のモバイル デバイス画面で画像を表示している場合、1500 ピクセル幅の画像を送信しても意味はありません。  理想的には、最大で 500 ピクセル幅の画像を送信します。  
 
-1.  レポートで、[ **大量のネットワークペイロード** を使用しない] を選択して、サイズを変更する画像を確認します。  Jpg ファイルのうち2つは 2000 KB を超えるようですが、これは必要以上に大きくなります。  
+1.  レポートで、[巨大な **ネットワーク ペイロードを避** ける] を選択して、サイズを変更する画像を表示します。  jpg ファイルの 2 つが 2000 KB を超え、必要以上に大きいように見えます。  
     
     <!--
-    :::image type="complex" source="../media/speed-glitch-tony-remix-updated-audits-performance-opportunities-expanded.msft.png" alt-text="猫を Tony" lightbox="../media/speed-glitch-tony-remix-updated-audits-performance-opportunities-expanded.msft.png":::
+    :::image type="complex" source="../media/speed-glitch-tony-remix-updated-audits-performance-opportunities-expanded.msft.png" alt-text="Details about the properly size images opportunity" lightbox="../media/speed-glitch-tony-remix-updated-audits-performance-opportunities-expanded.msft.png":::
        Details about the properly size images opportunity  
     :::image-end:::  
     -->
     
-1.  [エディター] タブに戻り、[] を開き `src/model.js` ます。  
-1.  置換後 `const dir = 'big'` の文字列 `const dir = 'small'`  このディレクトリには、サイズ変更された同じ画像のコピーが含まれています。  
-1.  この変更が読み込みのパフォーマンスにどのように影響するかを確認するには、ページをもう一度監査します。  
+1.  [エディター] タブに戻り、を開きます `src/model.js` 。  
+1.  に `const dir = 'big'` 置き換える `const dir = 'small'` 。  このディレクトリには、サイズ変更された同じイメージのコピーが含まれています。  
+1.  ページを再度監査して、変更が読み込みパフォーマンスに与える影響を表示します。  
     
-    :::image type="complex" source="../media/speed-glitch-compression-small-images-audits-performance.msft.png" alt-text="猫を Tony" lightbox="../media/speed-glitch-compression-small-images-audits-performance.msft.png":::
-       画像のサイズを変更した後の監査レポート  
+    :::image type="complex" source="../media/speed-glitch-compression-small-images-audits-performance.msft.png" alt-text="イメージのサイズ変更後の監査レポート" lightbox="../media/speed-glitch-compression-small-images-audits-performance.msft.png":::
+       イメージのサイズ変更後の監査レポート  
     :::image-end:::  
     
-変更は、全体的なパフォーマンススコアに対して軽微な影響を与えるようです。  ただし、スコアが明確に表示されない場合は、ユーザーに保存されているネットワークデータの量です。  以前の写真の合計サイズは、5.3 mb になりましたが、現時点では 0.18 mb にすぎません。  
+この変更は、全体的なパフォーマンス スコアにのみ影響します。  ただし、スコアが明確に表示されない点の 1 つは、ユーザーを保存しているネットワーク データの量です。  古い写真の合計サイズは約 5.3 メガバイトですが、現在は約 0.18 メガバイトです。  
 
-#### 実際の画像のサイズ変更  
+#### <a name="resizing-images-in-the-real-world"></a>実世界の画像のサイズ変更  
 
-小規模のアプリでは、1回限りのサイズ変更を行っても問題が生じる可能性があります。  ただし、大規模なアプリでは、このようなスケーラビリティはありません。  大規模なアプリでイメージを管理するためのいくつかの方法を次に示します。  
+小さなアプリの場合は、このような 1 回のサイズ変更で十分な場合があります。  しかし、大規模なアプリの場合、これは明らかにスケーラブルではありません。  大規模なアプリで画像を管理するための戦略を次に示します。  
 
-*   ビルドプロセス中に画像のサイズを変更します。  
-*   ビルドプロセス中に各画像のサイズを複数作成し、 `srcset` コードで使用します。  実行時には、ブラウザーは、デバイスに最適なサイズを選択する必要があります。  
-    <!--See [Relative-sized images][relative].  -->
+*   ビルド プロセス中にイメージのサイズを変更します。  
+*   ビルド プロセス中に各イメージの複数のサイズを作成し、コード `srcset` で使用します。  実行時に、ブラウザーはデバイスに最適なサイズを選択します。  
+    <!--Navigate to [Relative-sized images][relative].  -->
     
 <!--[relative]: /web/fundamentals/design-and-ux/responsive/images#relative_sized_images  -->  
 
-*   要求時に画像のサイズを動的に変更できるようにするイメージ CDN を使用します。  
-*   少なくとも、各画像を最適化します。  これにより、大幅に節約できます。  
-  最適化とは、画像ファイルのサイズを小さくする特殊なプログラムで画像を実行する場合に使用されます。  その他のヒントについては、「 [重要な画像の最適化][EssentialImageOptimization] 」をご覧ください。  
+*   イメージ CDN を使用すると、要求時にイメージのサイズを動的に変更できます。  
+*   少なくとも、各画像を最適化します。  これにより、大きな節約が生まれる可能性があります。  
+  最適化は、イメージ ファイルのサイズを小さくする特別なプログラムを使用してイメージを実行する場合です。  その他のヒントについては、「Essential [Image Optimization」に移動します][EssentialImageOptimization]。  
     
-### レンダーブロックリソースを排除する  
+### <a name="eliminate-render-blocking-resources"></a>レンダリングブロックリソースを排除する  
 
-最新のレポートでは、レンダーブロックのリソースを除去することが最大の機会になりました。  
+最新のレポートでは、レンダリング ブロック リソースを排除する機会が最大の機会です。  
 
-レンダーブロックリソースは、ページを表示する前に、ブラウザーがダウンロード、解析、実行する必要がある外部 JavaScript または CSS ファイルです。  目的は、ページを適切に表示するために必要なコア CSS と JavaScript コードを実行することだけです。  
+レンダリング ブロック リソースは、ブラウザーがページを表示する前にダウンロード、解析、および実行する必要がある外部 JavaScript または CSS ファイルです。  目標は、ページを適切に表示するために必要なコア CSS と JavaScript コードのみを実行します。  
 
-最初のタスクでは、ページの読み込み時に実行する必要がないコードが検索されます。  
+最初のタスクは、ページの読み込み時に実行する必要はないコードを見つける方法です。  
 
-1.  [ **レンダーブロックリソースの削除** ] を選択して、ブロックされているリソースを確認します。  
-    `lodash.js` および `jquery.js` 。  
+1.  [ **レンダリング ブロック リソースを削除する] を選択** して、ブロックしているリソースを表示します。  
+    `lodash.js` と `jquery.js` .  
     
-    :::image type="complex" source="../media/speed-glitch-tony-remix-updated-audits-performance-oppportunities-expanded.msft.png" alt-text="猫を Tony" lightbox="../media/speed-glitch-tony-remix-updated-audits-performance-oppportunities-expanded.msft.png":::
-       **レンダーブロックリソース**の機会の削減に関するその他の情報  
+    :::image type="complex" source="../media/speed-glitch-tony-remix-updated-audits-performance-oppportunities-expanded.msft.png" alt-text="レンダリングブロックリソースの排除機会の詳細" lightbox="../media/speed-glitch-tony-remix-updated-audits-performance-oppportunities-expanded.msft.png":::
+       レンダリングブロックリソースの**排除機会の詳細**  
     :::image-end:::  
     
-1.  [ `Control` + `Shift` + `P` \ (Windows, Linux \]) または `Command` + `Shift` + `P` \ (macOS \) を選択してコマンドメニューを開き、入力を開始し `Coverage` て、[**カバレッジの表示**] を選択します。  
+1.  `Control` + `Shift` + `P` \(Windows, Linux\) または `Command` + `Shift` + `P` \(macOS\) `Coverage` **** を選択してコマンド メニューを開き、入力を開始し、[カバレッジの表示] を選択します。  
     
-    :::image type="complex" source="../media/speed-glitch-tony-remix-updated-audits-performance-oppportunities-expanded-command-coverage.msft.png" alt-text="猫を Tony" lightbox="../media/speed-glitch-tony-remix-updated-audits-performance-oppportunities-expanded-command-coverage.msft.png":::
-       [ **監査** ] パネルからコマンドメニューを開く  
+    :::image type="complex" source="../media/speed-glitch-tony-remix-updated-audits-performance-oppportunities-expanded-command-coverage.msft.png" alt-text="[監査] パネルから [コマンド メニュー] を開きます。" lightbox="../media/speed-glitch-tony-remix-updated-audits-performance-oppportunities-expanded-command-coverage.msft.png":::
+       [監査] パネルから [コマンド メニュー **] を開** きます。  
     :::image-end:::  
     
-    :::image type="complex" source="../media/speed-glitch-tony-remix-updated-audits-performance-oppportunities-expanded-drawer-coverage.msft.png" alt-text="猫を Tony" lightbox="../media/speed-glitch-tony-remix-updated-audits-performance-oppportunities-expanded-drawer-coverage.msft.png":::
-       [ **カバレッジ** ] タブ  
+    :::image type="complex" source="../media/speed-glitch-tony-remix-updated-audits-performance-oppportunities-expanded-drawer-coverage.msft.png" alt-text="カバレッジ ツール" lightbox="../media/speed-glitch-tony-remix-updated-audits-performance-oppportunities-expanded-drawer-coverage.msft.png":::
+       カバレッジ**ツール**  
     :::image-end:::  
     
-1.  [ **Refresh** ] ( ![ 更新 ][ImageRefreshIcon] \) を選びます。  [ **カバレッジ** ] タブには、ページの読み込み時にのコードの量の概要が表示され `bundle.js` `jquery.js` `lodash.js` ます。  次の図では、それぞれ、jQuery と Lodash のファイルの76% と30% は使用されません。  
+1.  [ **更新** \( ![ Refresh ][ImageRefreshIcon] \] を選択します)。  [ **カバレッジ** ] ツールは、ページの読み込み中に実行されるコードの量の `bundle.js` `jquery.js` `lodash.js` 概要を示します。  次の図では、jQuery ファイルと Lodash ファイルの約 76% と 30% がそれぞれ使用されません。  
     
-    :::image type="complex" source="../media/speed-glitch-tony-remix-updated-audits-performance-oppportunities-expanded-drawer-coverage-reloaded.msft.png" alt-text="猫を Tony" lightbox="../media/speed-glitch-tony-remix-updated-audits-performance-oppportunities-expanded-drawer-coverage-reloaded.msft.png":::
-       カバレッジレポート  
+    :::image type="complex" source="../media/speed-glitch-tony-remix-updated-audits-performance-oppportunities-expanded-drawer-coverage-reloaded.msft.png" alt-text="カバレッジ レポート" lightbox="../media/speed-glitch-tony-remix-updated-audits-performance-oppportunities-expanded-drawer-coverage-reloaded.msft.png":::
+       カバレッジ レポート  
     :::image-end:::  
     
-1.  [ **jquery.js** ] 行を選択します。  DevTools [ソース] パネルでファイルを開きます。  横に青色のバーが表示されている場合は、コード行が実行されます。  赤色のバーは、実行されなかったため、ページの読み込み時には必要ありません。  
+1.  [選択] ** 行jquery.js** 選択します。  DevTools は、[ソース] パネルでファイルを開きます。  コード行の横に青いバーがある場合は、コード行が実行されます。  赤いバーは、実行されていないという意味で、ページの読み込み時には必ず必要とされません。  
     
-    :::image type="complex" source="../media/speed-glitch-tony-remix-updated-sources-drawer-coverage-reloaded-jquery-js.msft.png" alt-text="猫を Tony" lightbox="../media/speed-glitch-tony-remix-updated-sources-drawer-coverage-reloaded-jquery-js.msft.png":::
-       **ソース**パネルで jQuery ファイルを表示する  
+    :::image type="complex" source="../media/speed-glitch-tony-remix-updated-sources-drawer-coverage-reloaded-jquery-js.msft.png" alt-text="[ソース] パネルで jQuery ファイルを表示する" lightbox="../media/speed-glitch-tony-remix-updated-sources-drawer-coverage-reloaded-jquery-js.msft.png":::
+       [ソース] パネルで jQuery ファイル **を表示** する  
     :::image-end:::  
     
-1.  JQuery コードを1ビットずつスクロールします。  "実行" を取得する行の一部は、実際にはコメントにすぎません。  このコードを実行するときには、コメントを取り除くための別の方法として、このファイルのサイズを小さくする方法もあります。  
+1.  jQuery コードを少しスクロールします。  "run" を取得する行の中には、実際にはコメントにすすむものがあります。  コメントを削除するミニフィアを使用してこのコードを実行する方法は、このファイルのサイズを小さくするもう 1 つの方法です。  
 
-つまり、独自のコードを操作している場合、[カバレッジ] タブでは、コードの分析や行ごとの分析を行うことができます。また、ページの読み込みに必要なコードのみを提供します。  
+つまり、独自のコードを操作する場合、カバレッジ ツール**** を使用すると、コードを 1 行 1 行で分析し、ページ読み込みに必要なコードのみを出荷できます。  
 
-ページの `jquery.js` `lodash.js` 読み込みにもファイルが必要ですか?  [要求のブロック] タブには、リソースが利用できない場合の動作が表示されます。  
+ページを `jquery.js` 読 `lodash.js` み込むにはファイルも必要ですか?  要求 **ブロック ツールは** 、リソースが利用できない場合の動作を表示します。  
 
-1.  [ **ネットワーク** ] タブを選択します。  
-1.  [ `Control` + `Shift` + `P` \ (Windows, Linux \)] または [ `Command` + `Shift` + `P` \ (macOS \)] を選択して、もう一度コマンドメニューを開きます。  
-1.  入力を開始し `blocking` て、[ **ブロック要求の表示]** を選択します。  
+1.  [ネットワーク] **ツールを選択** します。  
+1.  `Control` + `Shift` + `P` \(Windows, Linux\) または `Command` + `Shift` + `P` \(macOS\) を選択して、コマンド メニューを再度開きます。  
+1.  入力を開始し `blocking` 、[要求ブロック **の表示] を選択します**。  
     
-    :::image type="complex" source="../media/speed-glitch-tony-remix-updated-network-drawer-request-blocking-empty.msft.png" alt-text="猫を Tony" lightbox="../media/speed-glitch-tony-remix-updated-network-drawer-request-blocking-empty.msft.png":::
-       [ **要求のブロック** ] タブ  
+    :::image type="complex" source="../media/speed-glitch-tony-remix-updated-network-drawer-request-blocking-empty.msft.png" alt-text="要求ブロック ツール" lightbox="../media/speed-glitch-tony-remix-updated-network-drawer-request-blocking-empty.msft.png":::
+       要求 **ブロック** ツール  
     :::image-end:::  
     
-1.  [ **パターンの追加** ] ([パターンの追加]) を選択し、「 ![ ][ImageAddPatternIcon] `/libs/*` 」と入力して、[確認] を選択し `Enter` ます。  
+1.  [ **パターンの追加** \( ![ Add Pattern ][ImageAddPatternIcon] \), `/libs/*` type, and select to `Enter` confirm.  
     
-    :::image type="complex" source="../media/speed-glitch-tony-remix-updated-network-drawer-request-blocking-added.msft.png" alt-text="猫を Tony" lightbox="../media/speed-glitch-tony-remix-updated-network-drawer-request-blocking-added.msft.png":::
-       ディレクトリへの要求をブロックするためのパターンを追加する `libs`  
+    :::image type="complex" source="../media/speed-glitch-tony-remix-updated-network-drawer-request-blocking-added.msft.png" alt-text="libs ディレクトリへの要求をブロックするパターンを追加する" lightbox="../media/speed-glitch-tony-remix-updated-network-drawer-request-blocking-added.msft.png":::
+       ディレクトリへの要求をブロックするパターンを追加 `libs` する  
     :::image-end:::  
     
-1.  ページを最新の情報に更新してください。  JQuery と Lodash の要求は赤で、要求がブロックされたことを意味します。   ページは依然として読み込まれ、対話型であるため、これらのリソースは必要ではないようです。  
+1.  ページを最新の情報に更新してください。  jQuery 要求と Lodash 要求は赤で、要求がブロックされました。   ページは読み込み、対話型なので、これらのリソースは一切必要とされていないように見えます。  
     
-    :::image type="complex" source="../media/speed-glitch-tony-remix-updated-network-reloaded-drawer-request-blocking-added.msft.png" alt-text="猫を Tony" lightbox="../media/speed-glitch-tony-remix-updated-network-reloaded-drawer-request-blocking-added.msft.png":::
-       [ **ネットワーク** ] パネルに、リクエストがブロックされていることが示される  
+    :::image type="complex" source="../media/speed-glitch-tony-remix-updated-network-reloaded-drawer-request-blocking-added.msft.png" alt-text="[ネットワーク] パネルは、要求がブロックされたと表示されます。" lightbox="../media/speed-glitch-tony-remix-updated-network-reloaded-drawer-request-blocking-added.msft.png":::
+       ネットワーク **ツール** は、要求がブロックされたと表示されます。  
     :::image-end:::  
     
-1.  ブロックパターンを削除するには、[ **すべてのパターンの削除** ] ( ![ すべて ][ImageRemoveIcon] のパターンの削除) を選択し `/libs/*` ます。  
+1.  [ **すべてのパターンを削除する** ] \( ![ Remove all patterns \) を選択して、ブロック ][ImageRemoveIcon] パターンを `/libs/*` 削除します。  
     
-一般的に、[要求のブロック] タブは、特定のリソースが利用できない場合にページがどのように動作するかをシミュレートするのに役立ちます。  
+一般に、[ **要求のブロック** ] ツールは、特定のリソースが使用できない場合のページの動作をシミュレートする場合に役立ちます。  
 
-次に、これらのファイルへの参照をコードから削除して、ページをもう一度監査します。  
+次に、コードからこれらのファイルへの参照を削除し、ページを再度監査します。  
 
-1.  [エディター] タブに戻り、[] を開き `template.html` ます。  
+1.  [エディター] タブに戻り、を開きます `template.html` 。  
 1.  `<script src="/libs/lodash.js">` と `<script src="/libs/jquery.js"></script>` を削除します。  
-1.  サイトが再構築され、再展開されるのを待ちます。  
-1.  **監査パネルから**ページをもう一度監査します。  全体的なスコアは、もう一度向上させる必要があります。  
+1.  サイトが再ビルドして再展開するのを待ちます。  
+1.  [監査] ツールからページ **を再度監査** します。  全体的なスコアが再び向上している必要があります。  
     
-    :::image type="complex" source="../media/speed-glitch-tony-remix-updated-2-audits-performance.msft.png" alt-text="猫を Tony" lightbox="../media/speed-glitch-tony-remix-updated-2-audits-performance.msft.png":::
-       レンダーブロックリソースを削除した後の **監査** レポート  
+    :::image type="complex" source="../media/speed-glitch-tony-remix-updated-2-audits-performance.msft.png" alt-text="レンダリング ブロック リソースを削除した後の監査レポート" lightbox="../media/speed-glitch-tony-remix-updated-2-audits-performance.msft.png":::
+       レンダリング **ブロック リソースを** 削除した後の監査レポート  
     :::image-end:::  
     
-#### 現実世界での重大なレンダリングパスの最適化  
+#### <a name="optimizing-the-critical-rendering-path-in-the-real-world"></a>現実世界でのクリティカル レンダリング パスの最適化  
 
-**クリティカルレンダリングパス**は、ページの読み込みに必要なコードを指します。  一般的には、ページの読み込み中にクリティカルコードのみを配布することにより、ページの読み込みを高速化し、その他のすべての機能を遅延読み込みします。  
+クリティカル **レンダリング パスは** 、ページを読み込む必要があるコードを参照します。  一般に、ページの読み込み中に重要なコードのみを出荷し、それ以外のコードを遅延読み込みすることで、ページの読み込みを高速化します。  
 
 <!--[CRP]: /web/fundamentals/performance/critical-rendering-path/  -->  
 
-*   完全に削除できるスクリプトを見つけることはできませんが、ページの読み込み中に要求する必要のないスクリプトが数多くあり、非同期で要求される可能性があります。  <!--See [Using async or defer][async].  -->  
-*   フレームワークを使用している場合は、プロダクションモードであるかどうかを確認します。  このモードでは、重大なレンダリングをブロックしている不要なコードを取り除くために、 [ツリーのシェイク][WebpackTreeShaking] などの機能を使用する場合があります。  
+*   完全に削除できるスクリプトを見つけ出す可能性は低いですが、ページの読み込み中に要求する必要が生じ、代わりに非同期的に要求されるスクリプトが多数見つかるはずです。  <!--Navigate to [Using async or defer][async].  -->  
+*   フレームワークを使用している場合は、実稼働モードを使用している必要があります。  このモードでは、重要なレンダリングを[][WebpackTreeShaking]ブロックしている不要なコードを排除するために、ツリーの揺れなどの機能を使用できます。  
     
 <!--[async]: /web/fundamentals/performance/optimizing-content-efficiency/loading-third-party-javascript/#use_async_or_defer  -->  
 
-### メインスレッドの作業量を少なくする  
+### <a name="do-less-main-thread-work"></a>メイン スレッドの作業を減らします  
 
-最新のレポートでは、[営業案件] セクションで若干の節約が可能になりますが、[診断] セクションで確認すると、最大のボトルネックはメインスレッドのアクティビティが多すぎるようです。  
+最新のレポートには、[機会] セクションにわずかな節約が表示されますが、[診断] セクションを見下ろした場合、最大のボトルネックはメイン スレッド アクティビティが多すぎるように見えます。  
 
-メインスレッドでは、HTML、CSS、JavaScript の解析や実行など、ページを表示するために必要な作業のほとんどがブラウザーで行われます。  
+メイン スレッドは、HTML、CSS、JavaScript の解析と実行など、ページを表示するために必要なほとんどの作業をブラウザーが実行する場所です。  
 
-目標として、[パフォーマンス] パネルを使用して、ページの読み込み中にメインスレッドで実行されている作業を分析し、不要な作業を延期または削除する方法を見つけます。  
+目標は、[パフォーマンス] パネルを使用して、ページの読み込み中にメイン スレッドが実行している作業を分析し、不要な作業を延期または削除する方法を見つけ出すことです。  
 
-1.  [ **パフォーマンス** ] タブを選択します。  
-1.  [ **キャプチャ設定** ] ( ![ キャプチャ設定 ][ImageCaptureIcon] ) を選びます。  
-1.  [ **ネットワーク** ] を [ **3g** ] と [ **CPU** ] から [ **6x**] の速度に設定します。  通常、モバイルデバイスでは、ノート pc やデスクトップよりも多くのハードウェア制約があります。そのため、これらの設定では、より強力なデバイスを使用している場合と同じようにページの読み込みを行うことができます。  
-1.  [ **Refresh** ] ( ![ 更新 ][ImageRefreshIcon] \) を選びます。  DevTools はページを更新し、ページを読み込むために実行されたすべての作業の視覚エフェクトを作成します。  この視覚エフェクトは、 **トレース**として参照されます。  
+1.  [パフォーマンス] **ツールを選択** します。  
+1.  [ **キャプチャ設定]\(** ![ キャプチャ設定 ][ImageCaptureIcon] \) を選択します。  
+1.  [ **ネットワーク] を** **[低速 3G]** に設定し **、CPU** を **6 倍の低速に設定します**。  モバイル デバイスは通常、ラップトップやデスクトップよりもハードウェアの制約が多いので、これらの設定を使用すると、より強力なデバイスを使用している場合と同様に、ページの読み込みも発生します。  
+1.  [ **更新** \( ![ Refresh ][ImageRefreshIcon] \] を選択します)。  DevTools はページを更新し、ページを読み込むのに実行されたすべての作業の視覚化を生成します。  この視覚化は、トレースと呼 **ばれます**。  
     
-    :::image type="complex" source="../media/speed-glitch-tony-remix-performance-slow-network-slow-cpu.msft.png" alt-text="猫を Tony" lightbox="../media/speed-glitch-tony-remix-performance-slow-network-slow-cpu.msft.png":::
-       ページの読み込みの **パフォーマンス** パネルトレース  
+    :::image type="complex" source="../media/speed-glitch-tony-remix-performance-slow-network-slow-cpu.msft.png" alt-text="ページ読み込み時のパフォーマンス ツールのトレース" lightbox="../media/speed-glitch-tony-remix-performance-slow-network-slow-cpu.msft.png":::
+       ページ **読み** 込み時のパフォーマンス ツールのトレース  
     :::image-end:::  
     
-トレースには、左から右へのアクティビティが時系列で表示されます。  上の FPS、CPU、およびネットチャートでは、1秒あたりのフレーム数、CPU アクティビティ、ネットワークアクティビティの概要がわかります。  図の中で、次のように表示される黄色のブロック。これにより、CPU はスクリプトアクティビティで完全にビジー状態になりました。  これは、JavaScript の作業を少なくすることで、ページの読み込み速度を向上させることができることを示しています。  
+トレースは、左から右にアクティビティを時系列的に表示します。  上部の FPS、CPU、および NET グラフでは、1 秒あたりのフレーム数、CPU アクティビティ、およびネットワーク アクティビティの概要を示します。  次の図の後の図で強調表示されている黄色のブロックは、CPU がスクリプトアクティビティで完全にビジー状態でした。  これは、JavaScript の作業を減らしてページの読み込み速度を上げ得る手がかりです。  
 
-:::image type="complex" source="../media/speed-glitch-tony-remix-performance-slow-network-slow-cpu-main-highlight.msft.png" alt-text="猫を Tony" lightbox="../media/speed-glitch-tony-remix-performance-slow-network-slow-cpu-main-highlight.msft.png":::
-   トレースの概要セクション  
+:::image type="complex" source="../media/speed-glitch-tony-remix-performance-slow-network-slow-cpu-main-highlight.msft.png" alt-text="トレースの [概要] セクション" lightbox="../media/speed-glitch-tony-remix-performance-slow-network-slow-cpu-main-highlight.msft.png":::
+   トレースの [概要] セクション  
 :::image-end:::  
 
-トレースを調べて、JavaScript の作業を軽減する方法を見つけます。  
+トレースを調査して、JavaScript の作業を少なくする方法を探します。  
 
-1.  [ **タイミング** ] セクションを選択して展開します。  反応しない [タイミング][MDNUserTimingApi] が存在する可能性があるという事実に基づいて、Tony のアプリでは、反応の開発モードが使用されているように見えます。  処理の運用モードに切り替えると、パフォーマンスが簡単になります。  
+1.  [タイミング **] セクションを選択** して展開します。  React のタイミング対策が豊富にある可能性があるという[][MDNUserTimingApi]事実に基づいて、Tony のアプリは React の開発モードを使用しているようです。  React の実稼働モードに切り替えると、パフォーマンスが向上する可能性があります。  
     
-    :::image type="complex" source="../media/speed-glitch-tony-remix-performance-slow-network-slow-cpu-timings.msft.png" alt-text="猫を Tony" lightbox="../media/speed-glitch-tony-remix-performance-slow-network-slow-cpu-timings.msft.png":::
-       [ **タイミング** ] セクション  
+    :::image type="complex" source="../media/speed-glitch-tony-remix-performance-slow-network-slow-cpu-timings.msft.png" alt-text="[タイミング] セクション" lightbox="../media/speed-glitch-tony-remix-performance-slow-network-slow-cpu-timings.msft.png":::
+       [ **タイミング]** セクション  
     :::image-end:::  
     
-1.  [ **タイミング** ] をもう一度選んで、そのセクションを折りたたみます。  
-1.  **メイン**セクションを参照します。  このセクションでは、左から右へのメインスレッドアクティビティの時系列ログを示します。  Y 軸 (上から下) は、イベントが発生した理由を示しています。  たとえば、次のようにした後に、イベントによって関数が実行されました。これは、実行の原因となった場合などに発生し `Evaluate Script` `(anonymous)` `(anonymous)` `__webpack__require__` ます。  
+1.  もう **一度 [タイミング]** を選択して、そのセクションを折りたたみます。  
+1.  [メイン] **セクションを参照** します。  このセクションでは、メイン スレッドアクティビティの時系列ログを左から右に示します。  y 軸 (上から下) は、イベントが発生した理由を示します。  たとえば、次の後の図では、イベントによって関数が実行され、その結果、実行が発生し、実行が引き起こ `Evaluate Script` `(anonymous)` `(anonymous)` `__webpack__require__` されました。  
     
-    :::image type="complex" source="../media/speed-glitch-tony-remix-performance-slow-network-slow-cpu-main.msft.png" alt-text="猫を Tony" lightbox="../media/speed-glitch-tony-remix-performance-slow-network-slow-cpu-main.msft.png":::
-       **メイン**セクション  
+    :::image type="complex" source="../media/speed-glitch-tony-remix-performance-slow-network-slow-cpu-main.msft.png" alt-text="[メイン] セクション" lightbox="../media/speed-glitch-tony-remix-performance-slow-network-slow-cpu-main.msft.png":::
+       [ **メイン]** セクション  
     :::image-end:::  
     
-1.  **メイン**セクションの下部まで下にスクロールします。  フレームワークを使っている場合、ほとんどのアクティビティは、通常はコントロール以外のフレームワークによって発生します。  アプリが原因で発生するアクティビティは、通常、下部にあります。  このアプリでは、という名前の関数 `App` が多くの要求を処理しているように見え `mineBitcoin` ます。  Tony のように、ファンのデバイスを使用している可能性があります。  
+1.  [メイン] セクションの下部まで **下にスクロール** します。  フレームワークを使用する場合、上位のアクティビティの大部分はフレームワークによって引き起こされ、通常は制御が取り外されています。  アプリによって引き起こされたアクティビティは、通常、下部に表示されます。  このアプリでは、という名前の関数が関数に対して多くの要求 `App` を引き起こしている `mineBitcoin` ようです。  トニーがファンのデバイスを使って暗号化を採掘している可能性があるように聞こえます。..  
     
-    :::image type="complex" source="../media/speed-glitch-tony-remix-performance-slow-network-slow-cpu-timings-minebitcoin.msft.png" alt-text="猫を Tony" lightbox="../media/speed-glitch-tony-remix-performance-slow-network-slow-cpu-timings-minebitcoin.msft.png":::
-       アクティビティにマウスポインターを合わせる `mineBitcoin`  
+    :::image type="complex" source="../media/speed-glitch-tony-remix-performance-slow-network-slow-cpu-timings-minebitcoin.msft.png" alt-text="mineBitcoin アクティビティにカーソルを合わせる" lightbox="../media/speed-glitch-tony-remix-performance-slow-network-slow-cpu-timings-minebitcoin.msft.png":::
+       アクティビティにカーソルを合 `mineBitcoin` わせる  
     :::image-end:::  
     
     > [!NOTE]
-    > 通常、フレームワークによって行われる要求はコントロールから除外されますが、フレームワークを効率的に実行するための方法でアプリを構成することもあります。  フレームワークを効果的に使用するようにアプリを再構築することは、メインスレッドの作業を少なくするための手段です。  ただし、フレームワークの動作について深く理解している必要があります。また、フレームワークをより効率的に使用するために、独自のコードで行った変更の種類についても理解しておく必要があります。  
+    > フレームワークが行う要求は通常は制御されませんが、フレームワークを非効率的に実行する方法でアプリを構造化する場合があります。  フレームワークを効率的に使用するためにアプリを再構築すると、メイン スレッドの作業を減らします。  ただし、フレームワークをより効率的に使用するには、フレームワークの動作と、独自のコードで行う変更の種類について深く理解する必要があります。  
     
-1.  [ **ボトムアップ** ] セクションを展開します。  このタブでは、最も時間がかかるアクティビティを中断します。  [Bottom-Up] セクションに何も表示されない場合は、 **メイン** セクションのラベルをクリックします。  **ボトムアップ**セクションには、現在選択されているすべてのアクティビティまたは活動のグループの情報のみが表示されます。  たとえば、アクティビティの1つをクリックした場合、 `mineBitcoin` **ボトムアップ** セクションには、その1つのアクティビティの情報のみが表示されます。  
+1.  [ボトム **アップ] セクションを** 展開します。  このタブでは、最も時間がかかったアクティビティを分解します。  [メイン] セクションに何もBottom-Up場合は、[メイン] セクションのラベルを **選択** します。  [ **ボトムアップ] セクション** には、現在選択しているアクティビティまたはアクティビティのグループに関する情報だけが表示されます。  たとえば、アクティビティの 1 つを選択した場合、[ボトムアップ] セクションでは、その 1 つのアクティビティの `mineBitcoin` 情報のみを表示します。 ****  
     
-    :::image type="complex" source="../media/speed-glitch-tony-remix-performance-slow-network-slow-cpu-timings-summary-minebitcoin.msft.png" alt-text="猫を Tony" lightbox="../media/speed-glitch-tony-remix-performance-slow-network-slow-cpu-timings-summary-minebitcoin.msft.png":::
-       [ **ボトムアップ** ] タブ  
+    :::image type="complex" source="../media/speed-glitch-tony-remix-performance-slow-network-slow-cpu-timings-summary-minebitcoin.msft.png" alt-text="[Bottom-Up] タブ" lightbox="../media/speed-glitch-tony-remix-performance-slow-network-slow-cpu-timings-summary-minebitcoin.msft.png":::
+       [ **ボトムアップ]** タブ  
     :::image-end:::  
     
-[ **セルフ時刻** の列には、各アクティビティで直接費やした時間が表示されます。  たとえば、次の図では、メインスレッドの63% が関数に費やした時間を示してい `mineBitcoin` ます。  
+[Self **Time]** 列には、各アクティビティに直接費やされた時間が表示されます。  たとえば、次の図では、メイン スレッド時間の約 63% が関数に費や `mineBitcoin` されています。  
 
-実行モードを使用し、JavaScript アクティビティを減らすことで、ページの読み込み速度を向上させることができるかどうかを確認します。  プロダクションモードで開始する:  
+実稼働モードを使用して JavaScript アクティビティを減らすと、ページの読み込み速度が上がる可能性があるかどうかを確認する時間。  実稼働モードから開始します。  
 
-1.  [エディター] タブで、を開き `webpack.config.js` ます。  
-1.  `"mode":"development"`をに変更 `"mode":"production"` します。  
-1.  新しいビルドが展開されるまで待ちます。  
-1.  ページをもう一度監査します。  
+1.  [エディター] タブで、を開きます `webpack.config.js` 。  
+1.  に `"mode":"development"` 変更します `"mode":"production"` 。  
+1.  新しいビルドが展開されるのを待ちます。  
+1.  ページを再度監査します。  
     
-    :::image type="complex" source="../media/speed-glitch-tony-remix-updated-3-audits-performance.msft.png" alt-text="猫を Tony" lightbox="../media/speed-glitch-tony-remix-updated-3-audits-performance.msft.png":::
-       プロダクションモードを使用するように webpack を構成した後の監査レポート  
+    :::image type="complex" source="../media/speed-glitch-tony-remix-updated-3-audits-performance.msft.png" alt-text="実稼働モードを使用する Webpack を構成した後の監査レポート" lightbox="../media/speed-glitch-tony-remix-updated-3-audits-performance.msft.png":::
+       実稼働モードを使用する Webpack を構成した後の監査レポート  
     :::image-end:::  
     
-要求を削除して JavaScript のアクティビティを減らし `mineBitcoin` ます。  
+要求を削除して JavaScript アクティビティを減らします `mineBitcoin` 。  
 
-1.  [エディター] タブで、を開き `src/App.jsx` ます。  
-1.  の要求をにコメントアウトし `this.mineBitcoin(1500)` `constructor` ます。  
-1.  新しいビルドが展開されるまで待ちます。  
-1.  ページをもう一度監査します。  
+1.  [エディター] タブで、を開きます `src/App.jsx` 。  
+1.  に要求をコメント `this.mineBitcoin(1500)` アウト `constructor` します。  
+1.  新しいビルドが展開されるのを待ちます。  
+1.  ページを再度監査します。  
     
-    :::image type="complex" source="../media/speed-glitch-tony-remix-updated-4-audits-performance.msft.png" alt-text="猫を Tony" lightbox="../media/speed-glitch-tony-remix-updated-4-audits-performance.msft.png":::
+    :::image type="complex" source="../media/speed-glitch-tony-remix-updated-4-audits-performance.msft.png" alt-text="不要な JavaScript 作業を削除した後の監査レポート" lightbox="../media/speed-glitch-tony-remix-updated-4-audits-performance.msft.png":::
        不要な JavaScript 作業を削除した後の監査レポート  
     :::image-end:::  
     
-前回の変更によってパフォーマンスが大幅に向上したようです。  
+その最後の変更がパフォーマンスの大きなジャンプを引き起こしたように見えます。  
 
 > [!NOTE]
-> このセクションでは、パフォーマンスパネルについて簡単に説明します。  ページのパフォーマンスを分析する方法について詳しくは、「 [パフォーマンス分析のリファレンス][DevtoolsEvaluatePerformanceReference] 」をご覧ください。  
+> このセクションでは、パフォーマンス パネルについて簡単に説明しました。  ページのパフォーマンスを分析する方法の詳細については、「パフォーマンス分析リファレンス [」に移動します][DevtoolsEvaluatePerformanceReference]。  
 
 <!--todo: add section when available -->  
 
-#### 実際の環境でのメインスレッドの使用量を少なくする  
+#### <a name="doing-less-main-thread-work-in-the-real-world"></a>実際の世界でメイン スレッドの動作を減らします  
 
-一般的に、 **パフォーマンス** パネルは、サイトが読み込むときのアクティビティを理解するための最も一般的な方法です。また、不要なアクティビティを削除する方法についても説明します。  
+一般に、 **パフォーマンス ツールは** 、サイトが読み込まれるとどのようなアクティビティを行うのかを理解し、不要なアクティビティを削除する方法を見つける最も一般的な方法です。  
 
-もっと気に入ったアプローチが必要な場合は、 `console.log()` [ユーザーのタイミング API][MDNUserTimingApi] を使用して、各フェーズの所要時間を追跡するために、アプリのライフサイクルの特定のフェーズを任意にマークすることができます。  
+ユーザー タイミング API を使用すると、各フェーズにかかる時間を追跡するために、アプリのライフサイクルの特定のフェーズを任意にマークできます `console.log()` 。 [][MDNUserTimingApi]  
 
-## まとめ  
+## <a name="summary"></a>要約  
 
-*   サイトの読み込みパフォーマンスを最適化するために、必ず監査を開始してください。  監査によって基準計画が設定され、改善のヒントを得ることができます。  
-*   一度に1つずつ変更し、そのたびにページがどのように変化するかを確認するために、個別に変更を加えます。  
+*   サイトの読み込みパフォーマンスを最適化するために設定するたびに、常に監査を開始します。  監査はベースラインを確立し、改善方法に関するヒントを提供します。  
+*   一度に 1 つの変更を行い、変更後に Web ページを監査して、分離された変更がパフォーマンスに与える影響を表示します。  
 
 <!--
 ## Next steps  
@@ -519,7 +519,7 @@ ms.locfileid: "11125490"
 *   Please leave [feedback](#feedback) on this tutorial.  I really do use the data to make better tutorials for you.  
 -->  
 
-## Microsoft Edge DevTools チームと連絡を取る  
+## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームと連絡を取る  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
@@ -534,22 +534,22 @@ ms.locfileid: "11125490"
 [ImageRemoveIcon]: ../media/remove-icon.msft.png  
 <!-- links -->  
 
-[DevtoolsEvaluatePerformanceReference]: ../evaluate-performance/reference.md "業績分析リファレンス |Microsoft ドキュメント"  
+[DevtoolsEvaluatePerformanceReference]: ../evaluate-performance/reference.md "パフォーマンス分析|Microsoft Docs"  
 
-[CourseraIntroductionWebDevelopmentClass]: https://www.coursera.org/learn/web-development#syllabus "Web 開発クラスの概要 |Coursera"  
+[CourseraIntroductionWebDevelopmentClass]: https://www.coursera.org/learn/web-development#syllabus "Web 開発クラスの概要|Coursera"  
 
-[EssentialImageOptimization]: https://images.guide "基本的な画像の最適化"  
+[EssentialImageOptimization]: https://images.guide "重要な画像の最適化"  
 
-[MDNContentEncodingDirectives]: https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Encoding#Directives "ディレクティブ-コンテンツのエンコード |MDN"  
-[MDNUserTimingApi]: https://developer.mozilla.org/docs/Web/API/User_Timing_API "ユーザーのタイミング API |MDN"  
+[MDNContentEncodingDirectives]: https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Encoding#Directives "ディレクティブ - コンテンツ エンコード |MDN"  
+[MDNUserTimingApi]: https://developer.mozilla.org/docs/Web/API/User_Timing_API "ユーザー タイミング API |MDN"  
 
-[WebpackTreeShaking]: https://webpack.js.org/guides/tree-shaking "木のぶれ |webpack"  
+[WebpackTreeShaking]: https://webpack.js.org/guides/tree-shaking "ツリーの揺れ|webpack"  
 
 > [!NOTE]
-> このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
-> 元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/speed/get-started) にあり、 [Kayce Basques][KayceBasques] テクニカルライター、Chrome Devtools \ & Lighthouse \) で作成されています。  
+> このページの一部は、 [Google によっ て作成および共有された][GoogleSitePolicies]作業に基づく変更で、「[Creative Commons Attribution 4.0 International License][CCA4IL]」で記載されている条項に従って使用されます。  
+> 元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/speed/get-started) にあり、 [Kayce Basques][KayceBasques] \(Chrome DevTools \& Lighthouse\ のテクニカル ライター) が作成しました。  
 
-[![クリエイティブコモンズライセンス][CCby4Image]][CCA4IL]  
+[![Creative Commons ライセンス][CCby4Image]][CCA4IL]  
 この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。  
 
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  

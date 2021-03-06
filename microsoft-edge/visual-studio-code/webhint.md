@@ -1,34 +1,34 @@
 ---
-description: Visual Studio コードでの webhint の使い方
-title: webhint VS コード拡張
+description: コードで webhint をVisual Studioする方法
+title: webhint Visual Studio コード拡張機能
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 05/07/2020
+ms.date: 01/07/2021
 ms.topic: article
 ms.prod: microsoft-edge
-keywords: microsoft edge、web 開発、vs コード、visual studio コード、web ヒント
-ms.openlocfilehash: ec218fab8cbfb8181a0416c8e0eadc0e00412529
-ms.sourcegitcommit: c1b5fdd48d39d874a76c9b8f68309eb1b507fd0b
+keywords: microsoft edge, Web 開発, vs code, visual studio code, webhint
+ms.openlocfilehash: 3dfd900bf818d02dbc8123c00e7928e56d9b6ade
+ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "10695860"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "11399275"
 ---
-# Webhint Vs コード拡張  
+# <a name="webhint-vs-code-extension"></a>Webhint Vs Code Extension  
 
-カスタマイズ可能なカスタマイズされたカスタマイズされた機能[を使って][WebhintMain]、アクセシビリティ、パフォーマンス、クロスブラウザーの互換性、PWA の互換性、およびサイトのセキュリティを向上させることができます。  ベストプラクティスと一般的なエラーについてコードを確認します。 このオープンソースプロジェクトは、最初に Microsoft Edge チームによって開発されたものであり、 [Openjs Foundation][OpenjsFoundation]に含まれています。  Microsoft Edge チームは、コミュニティの web 開発者と共に web ヒントに投稿し続けています。  
+カスタマイズ可能なリント ツールである [webhint][WebhintMain]を使用して、サイトのアクセシビリティ、パフォーマンス、ブラウザー間の互換性、PWA の互換性、およびセキュリティを向上させます。  コードでベスト プラクティスと一般的なエラーをチェックします。 このオープン ソース プロジェクトは、Microsoft Edge チームによって最初に開発されましたが、 [現在は OpenJS Foundation の一部です][OpenjsFoundation]。  Microsoft Edge チームは、コミュニティの Web 開発者と共に Webhint に引き続き貢献しています。  
 
-:::image type="complex" source="./media/webhint-extension.png" alt-text="Web ヒントとコード拡張のスクリーンショット":::
-   Web ヒントとコード拡張のスクリーンショット  
+:::image type="complex" source="./media/webhint-extension.png" alt-text="Webhint Visual Studio Code 拡張機能のスクリーンショット":::
+   Webhint Visual Studio Code 拡張機能のスクリーンショット  
 :::image-end:::
 
-<!--![Screenshot of webhint VS Code extension][ImageWebhintExtension]  -->  
+<!--![Screenshot of webhint Visual Studio Code extension][ImageWebhintExtension]  -->  
 
-[VS コードの webhint 拡張機能][VisualstudioMarketplaceWebhint]を追加して、HTML、CSS、JavaScript、TypeScript などの問題を特定して修正します。  ヒントはインライン下線として表示され、[**問題**] ウィンドウに集計されます。  
+HTML、CSS、JavaScript、TypeScript など、コードの [webhint][VisualstudioMarketplaceWebhint]拡張機能を追加して、問題を特定Visual Studioします。  ヒントはインラインの下線として表示され、[問題] ウィンドウ **に要約** されます。  
 
-## 構成  
+## <a name="configuration"></a>構成  
 
-この拡張機能では、HTML、CSS、テンプレートシステム \ (JSX/TSX、角速度など)、JavaScript/TypeScript などのヒントとパーサーをアクティブ化する[既定の構成][GithubWebhintioIndexjson]json ファイルが使用されます。  
+この拡張機能では、HTML、CSS、テンプレート システム \(JSX/TSX、Angular など)、JavaScript/TypeScript などのヒントとパーサーをアクティブ化する既定の構成 json ファイルを使用します。 [][GithubWebhintioIndexjson]  
 
 ```json
 {
@@ -80,37 +80,37 @@ ms.locfileid: "10695860"
 }
 ```  
 
-アクティブ化されるヒントとパーサーをさらに制御する必要がある場合は、 `.hintrc` web ヒントを構成するためのローカルファイルを作成します。  特定のヒントからの出力に関するヘルプについては、「 [webhint ユーザーガイド][WebhintDocsUserguideConfiguringSummary]」を参照してください。  
+アクティブ化されるヒントとパーサーを詳細に制御する場合は、webhint を構成するローカル ファイル `.hintrc` を作成します。  特定のヒントからの出力のヘルプについては [、webhint][WebhintDocsUserguideConfiguringSummary]ユーザー ガイドに移動します。  
 
-## Webhint チームと連絡を取り合う  
+## <a name="getting-in-touch-with-the-webhint-team"></a>webhint チームと連絡を取る  
 
-[Webhint github リポジトリ][GithubWebhintio]の[問題を提出][GithubWebhintioIssuesNew]して、フィードバックを送信します。  
+[webhint GitHub][GithubWebhintio]リポジトリに問題を提出してフィードバックを送信します。 [][GithubWebhintioIssuesNew]  
 
-拡張機能に参加するには、「 [webhint とコード拡張の投稿ガイド][GithubWebhintioExtensionVscodeContributing]」を参照してください。  
+拡張機能に貢献するには [、webhint Visual Studio コード拡張機能の投稿ガイド に移動します][GithubWebhintioExtensionVscodeContributing]。  
 
-## 関連項目  
+## <a name="see-also"></a>関連項目  
 
 *   [アクセシビリティ][AccessibilityIndex]  
 *   [Visual Studio Code][VisualstudiocodeIndex]  
 
 <!-- image links -->  
 
-<!--[ImageWebhintExtension]: ./media/webhint-extension.png "Screenshot of webhint VS Code extension"  -->  
+<!--[ImageWebhintExtension]: ./media/webhint-extension.png "Screenshot of webhint Visual Studio Code extension"  -->  
 
 <!--links -->  
 
-[AccessibilityIndex]: /microsoft-edge/accessibility "アクセシビリティ |Microsoft ドキュメント"  
+[AccessibilityIndex]: /microsoft-edge/accessibility "アクセシビリティ |Microsoft Docs"  
 
-[VisualstudiocodeIndex]: /microsoft-edge/visual-studio-code/index "Visual Studio コード |Microsoft ドキュメント"  
+[VisualstudiocodeIndex]: /microsoft-edge/visual-studio-code/index "Visual Studio コード |Microsoft Docs"  
 
-[GithubWebhintio]: https://github.com/webhintio/hint "web ヒント |GitHub"  
-[GithubWebhintioExtensionVscodeContributing]: https://github.com/webhintio/hint/blob/master/packages/extension-vscode/CONTRIBUTING.md "投稿-web ヒント |GitHub"  
-[GithubWebhintioIndexjson]: https://github.com/webhintio/hint/blob/master/packages/configuration-development/index.json "webhintio/hint |GitHub"
-[GithubWebhintioIssuesNew]: https://github.com/webhintio/hint/issues/new "新しい問題-webhintio/ヒント |GitHub"  
+[GithubWebhintio]: https://github.com/webhintio/hint "webhint |GitHub"  
+[GithubWebhintioExtensionVscodeContributing]: https://github.com/webhintio/hint/blob/master/packages/extension-vscode/CONTRIBUTING.md "寄稿 - webhint |GitHub"  
+[GithubWebhintioIndexjson]: https://github.com/webhintio/hint/blob/master/packages/configuration-development/index.json "index.js- webhintio/hint |GitHub"
+[GithubWebhintioIssuesNew]: https://github.com/webhintio/hint/issues/new "新しい問題 - webhintio/hint |GitHub"  
 
-[VisualstudioMarketplaceWebhint]: https://marketplace.visualstudio.com/items?itemName=webhint.vscode-webhint "web ヒント |Visual Studio Marketplace"  
+[VisualstudioMarketplaceWebhint]: https://marketplace.visualstudio.com/items?itemName=webhint.vscode-webhint "webhint |Visual Studio Marketplace"  
 
 [OpenjsFoundation]:  https://openjsf.org "OpenJS Foundation"  
 
-[WebhintDocsUserguideConfiguringSummary]: https://webhint.io/docs/user-guide/configuring-webhint/summary "Webhint | の構成webhint に関するドキュメント"  
-[WebhintMain]:  https://webhint.io "web ヒント"  
+[WebhintDocsUserguideConfiguringSummary]: https://webhint.io/docs/user-guide/configuring-webhint/summary "Webhint ファイルの|webhint ドキュメント"  
+[WebhintMain]:  https://webhint.io "webhint"  

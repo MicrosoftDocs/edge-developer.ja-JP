@@ -1,39 +1,40 @@
 ---
-description: WebView2 の次の項目について
-title: Microsoft Edge WebView のロードマップ2
+description: WebView2 の次の予定について説明します。
+title: Microsoft Edge WebView 2 のロードマップ
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 11/19/2020
+ms.date: 01/07/2021
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
-keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Host、browser control、edge html
-ms.openlocfilehash: 99e743db0c1fb17ea46405b08e1ed074a3386068
-ms.sourcegitcommit: fab44f7e183a3c4f12bf925512fc62d84a4d6edc
+keywords: IWebView2、IWebView2WebView、Webview2、Webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Host、ブラウザー コントロール、エッジ html
+ms.openlocfilehash: 0f51b5cab32bdb9b9aa9b6baceef5fe5a17eea54
+ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "11182361"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "11398414"
 ---
-# Microsoft Edge WebView2 のロードマップ  
-
-##### 最終更新日: 2020 年11月  
-
-WebView2 コントロールを使うと、開発者はネイティブアプリケーションに web テクノロジを埋め込むことができます。  次のページは、WebView2 の予想されるロードマップの概要を示しています。  
+# <a name="microsoft-edge-webview2-roadmap"></a>Microsoft Edge WebView2 ロードマップ  
 
 > [!NOTE]
-> WebView2 は [アクティブな開発] の下にあります。また、ロードマップは市場の変化や顧客のフィードバックに基づいて進化し続けているため、ここで説明されているプランは完全ではなく、変更される可能性があることに注意してください。  
+> 最終更新日: 2020 年 11 月  
 
-ロードマップに関する懸念事項または質問がある場合は、フィードバックの [リポジトリ][GithubMicrosoftedgeWebviewfeedbackMain]にフィードバックを提供してください。  
+WebView2 コントロールを使用すると、開発者は Web テクノロジをネイティブ アプリケーションに埋め込むできます。  次のページでは、WebView2 のロードマップの概要を示します。  
 
-WebView2 チームは今後の更新プログラムに対して、次の主な取り組みを計画しています。  
+> [!NOTE]
+> WebView2 は積極的な開発中であり、市場の変化や顧客からのフィードバックに基づいてロードマップが進化し続けているので、ここで説明する計画は網羅的ではなく、変更される可能性があります。  
+
+ロードマップに関する懸念や質問がある場合は、フィードバック repo でフィードバック [を提供してください][GithubMicrosoftedgeWebviewfeedbackMain]。  
+
+WebView2 チームは、今後の更新に向けた以下の主要な取り組みを計画しています。  
 
 :::row:::
    :::column span="1":::
-      WebView2 Runtime Installer  
+      WebView2 ランタイム インストーラー  
    :::column-end:::
    :::column span="2":::
-      *   2020年第4四半期
+      *   Q4 2020
    :::column-end:::
 :::row-end:::
 :::row:::
@@ -41,49 +42,49 @@ WebView2 チームは今後の更新プログラムに対して、次の主な�
       修正済みバージョン  
    :::column-end:::
    :::column span="2":::
-      *   2020年第4四半期  
+      *   Q4 2020  
    :::column-end:::
 :::row-end:::
 :::row:::
    :::column span="1":::
-      Ga  
+      一般提供  
    :::column-end:::
    :::column span="2":::
-      *   Win32 C/c + + (2020 年4四半期 \)  
-      *   .NET \ (Q4 年4四半期 2020 \)  
+      *   Win32 C/C++ \(Q4 2020\)  
+      *   .NET \(Q4 2020\)  
       *   [WinUI 3.0][GithubMicrosoftUiXamlRoadmap]  
    :::column-end:::
 :::row-end:::  
 
-## WebView2 のランタイムとインストーラー  
+## <a name="webview2-runtime-and-installer"></a>WebView2 ランタイムとインストーラー  
 
-[Evergreen 配布モデル][ConceptDistributionEvergreenModel] では、ユーザーのコンピューターに WebView2 ランタイムをターゲットまたは連鎖してインストールすることができます。  Evergreen WebView2 Runtime と installer は、一般的な可用性 \ (GA) に到達しました。  
+[Evergreen 配布モデルを使用][ConceptDistributionEvergreenModel] すると、WebView2 ランタイムをユーザーのコンピューターにターゲットまたはチェーンインストールできます。  Evergreen WebView2 ランタイムとインストーラーが一般提供 \(GA\) に達しました。  
 
-## 修正されたバージョン  
+## <a name="fixed-version"></a>固定バージョン  
 
-[固定バージョンの配布モデル][ConceptsDistributionFixedVersionModel] では、ネイティブアプリケーション内に Microsoft Edge バイナリをパッケージ化することができます。  修正されたバージョンは、一般的な可用性 \ (GA) に到達しました。  
+[固定バージョン配布モデルを使用][ConceptsDistributionFixedVersionModel] すると、ネイティブ アプリケーション内で Microsoft Edge バイナリをパッケージ化できます。  固定バージョンが一般提供 \(GA\) に達しました。  
 
-## Ga  
+## <a name="general-availability"></a>一般提供  
 
-### Win32 C/c + +  
+### <a name="win32-cc"></a>Win32 C/C++  
 
-Win32 C/c + + SDK の GA に到達しました。  
+Win32 C/C++ SDK が GA に達しました。  
 
-### .NET  
+### <a name="net"></a>.NET  
 
-.NET SDK の GA に到達しました。 
+.NET SDK が GA に達しました。 
 
-### WinUI 3.0  
+### <a name="winui-30"></a>WinUI 3.0  
 
-UWP アプリケーションの WebView2 にアクセスするには、現在、 [WIN UI 3.0][UwpToolkitsWinui3Index]を使用します。  最新の状態に保つ方法について詳しくは、「 [WINDOWS UI ライブラリのロードマップ][GithubMicrosoftUiXamlRoadmap]」をご覧ください。  
+現在アルファ版の Win [UI 3.0][UwpToolkitsWinui3Index]を使用して、UWP アプリケーションの WebView2 にアクセスできます。  最新の状態を維持する方法の詳細については [、「Windows UI ライブラリのロードマップ」に移動します][GithubMicrosoftUiXamlRoadmap]。  
 
 <!-- links -->  
 
-[ConceptDistributionEvergreenModel]: ./concepts/distribution.md#evergreen-distribution-mode "Evergreen 配布モデル-WebView2 を使用したアプリケーションの配布 |Microsoft ドキュメント"  
-[ConceptsDistributionFixedVersionModel]: ./concepts/distribution.md#fixed-version-distribution-mode "WebView2 を使用したアプリケーションの配布モデルの固定バージョン |Microsoft ドキュメント"  
+[ConceptDistributionEvergreenModel]: ./concepts/distribution.md#evergreen-distribution-mode "Evergreen 配布モデル - WebView2 を使用したアプリケーションの|Microsoft Docs"  
+[ConceptsDistributionFixedVersionModel]: ./concepts/distribution.md#fixed-version-distribution-mode "固定バージョン配布モデル - WebView2 を使用したアプリケーションの|Microsoft Docs"  
 
-[UwpToolkitsWinui3Index]: /uwp/toolkits/winui3/index "Windows UI ライブラリ3.0 プレビュー 1 (2020 年5月) |Microsoft ドキュメント"  
+[UwpToolkitsWinui3Index]: /uwp/toolkits/winui3/index "Windows UI ライブラリ 3.0 プレビュー 1 (2020 年 5 月) |Microsoft Docs"  
 
-[GithubMicrosoftedgeWebviewfeedbackMain]: https://github.com/MicrosoftEdge/WebViewFeedback "WebView フィードバック-MicrosoftEdge/WebViewFeedback |GitHub"  
+[GithubMicrosoftedgeWebviewfeedbackMain]: https://github.com/MicrosoftEdge/WebViewFeedback "WebView フィードバック-MicrosoftEdge/WebViewFeedback | GitHub"  
 
-[GithubMicrosoftUiXamlRoadmap]: https://github.com/microsoft/microsoft-ui-xaml/blob/master/docs/roadmap.md "Windows UI ライブラリのロードマップ-microsoft/microsoft-UI-xaml |GitHub"  
+[GithubMicrosoftUiXamlRoadmap]: https://github.com/microsoft/microsoft-ui-xaml/blob/master/docs/roadmap.md "Windows UI ライブラリのロードマップ - microsoft/microsoft-ui-xaml |GitHub"  

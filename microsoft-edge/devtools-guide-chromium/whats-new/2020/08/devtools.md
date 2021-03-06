@@ -3,26 +3,26 @@ description: キーボード ショートカットを Visual Studio Code と一�
 title: DevTools の新機能 (Microsoft Edge 86)
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 10/08/2020
+ms.date: 02/12/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 0e759c18b5ef547bfd490f4d525930f92809a6a1
-ms.sourcegitcommit: 6e2b26d41a0aa56ac34e6edc7dddd852ddb415b1
-ms.translationtype: HT
+ms.openlocfilehash: 3853f097877fc45b14ceb0674309cb35b58a0aa6
+ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "11133912"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "11398617"
 ---
-# DevTools の新機能 (Microsoft Edge 86)  
+# <a name="whats-new-in-devtools-microsoft-edge-86"></a>DevTools の新機能 (Microsoft Edge 86)  
 
-## Microsoft Edge DevTools チームからのお知らせ  
+## <a name="announcements-from-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームからのお知らせ  
 
 [!INCLUDE [contact DevTools team note](../../includes/edge-whats-new-note.md)]  
 
-### DevTools のキーボード ショートカットを Visual Studio Code と一致させる  
+### <a name="match-keyboard-shortcuts-in-devtools-to-visual-studio-code"></a>DevTools のキーボード ショートカットを Visual Studio Code と一致させる  
 
-Microsoft Edge 86 では、DevTools のキーボード ショートカットを [Visual Studio Code][VisualStudioCode] のショートカットと一致させることができます。 
+Microsoft Edge 86 では、DevTools のキーボード ショートカットを Microsoft コードのショートカットと一致Visual Studio [があります][VisualStudioCode]。  
 
 :::image type="complex" source="../../media/2020/08/keyboard-shortcut.msft.png" alt-text="DevTools のキーボード ショートカットを Visual Studio Code と一致させる" lightbox="../../media/2020/08/keyboard-shortcut.msft.png":::
    DevTools のキーボード ショートカットを Visual Studio Code と一致させる  
@@ -34,7 +34,7 @@ Microsoft Edge 86 では、DevTools のキーボード ショートカットを 
 
 Chromium の問題 [#174309][CR174309]  
 
-### Surface Duo と Samsung Galaxy Fold のエミュレート  
+### <a name="emulate-surface-duo-and-samsung-galaxy-fold"></a>Surface Duo と Samsung Galaxy Fold のエミュレート  
 
 :::image type="complex" source="../../media/2020/06/experimental-tag-14px.msft.png" alt-text="試験的機能":::
    試験的機能  
@@ -58,7 +58,7 @@ Microsoft Edge を使用して、[Surface Duo][MicrosoftSurfaceDevicesDuo] と [
 
 Chromium の問題: [#1054281][CR1054281]  
 
-### CSS グリッドのオーバーレイの機能強化と新しい試験的なグリッド機能  
+### <a name="css-grid-overlay-improvements-and-new-experimental-grid-features"></a>CSS グリッドのオーバーレイの機能強化と新しい試験的なグリッド機能  
 
 CSS グリッドのオーバーレイの機能強化について、積極的なご意見をお寄せいただきありがとうございました。  CSS グリッドのオーバーレイは既定で有効になりましたので、実験を有効にする必要はありません。  
 
@@ -67,9 +67,9 @@ CSS グリッドのオーバーレイの機能強化について、積極的な�
 :::image-end:::  
 
 > [!NOTE]
-> グリッドのオーバーレイの詳細については、「[CSS グリッドのデバッグ機能][DevtoolsWhatsnew200206DevtoolsCssGridDebuggingFeatures]」を参照してください。  
+> グリッド オーバーレイの詳細については、「CSS グリッド デバッグ [機能」に移動します][DevtoolsWhatsnew200206DevtoolsCssGridDebuggingFeatures]。  
 
-Microsoft Edge DevTools チームと Chrome DevTools チームは、追加機能のための共同作業を行っています。  新機能には、[**要素**] パネルにある新しい [**レイアウト**] ウィンドウで構成可能な、永続的な複数のオーバーレイが含まれます。  
+Microsoft Edge DevTools チームと Chrome DevTools チームは、追加機能のための共同作業を行っています。  新しい機能には、要素ツールの新しいレイアウト ウィンドウから永続的**** で構成可能な複数のオーバーレイ**が含**まれます。  
 
 この試験的機能を有効にするには、「[実験的な機能を有効にする][DevtoolsExperimentalFeaturesTurnOnExperimentalFeatures]」に移動し、[**新しい CSS グリッドのデバッグ機能を有効にする (再起動後、[要素] にある [レイアウト] サイド バーウィンドウで構成オプションを利用できます)**] の横にあるチェックボックスをオンにします。  
 
@@ -77,7 +77,7 @@ Microsoft Edge DevTools チームと Chrome DevTools チームは、追加機能
 
 Chromium の問題: [#1047356][CR1047356]  
 
-### コンソールからコピーした表の書式の保持  
+### <a name="table-copied-from-the-console-preserves-formatting"></a>コンソールからコピーした表の書式の保持  
 
 Microsoft Edge 85 以前のバージョンでは、コピーした `console.table` の書式設定が失われていました。  [table][DevtoolsConsoleApiTable] コンソール API から出力をコピーして貼り付けた場合、表のテキストのみが保持されました。  
 
@@ -111,7 +111,7 @@ Microsoft Edge 86 以降のバージョンでは、**コンソール**から表�
 
 Chromium の問題: [#1115011][CR1115011]  
 
-### アクセシビリティ テストをより簡単にするためのソース オーダー ビューアー  
+### <a name="source-order-viewer-for-easier-accessibility-testing"></a>アクセシビリティ テストをより簡単にするためのソース オーダー ビューアー  
 
 :::image type="complex" source="../../media/2020/06/experimental-tag-14px.msft.png" alt-text="試験的機能":::
    試験的機能  
@@ -154,46 +154,46 @@ To meet your translation needs, the Microsoft Edge DevTools team is focused on i
 The current effort to improve translation quality enables easier support for more languages in the future.  
 -->  
 
-### [要素] ツールですべての検索結果を強調表示する  
+### <a name="highlight-all-search-results-in-elements-tool"></a>[要素] ツールですべての検索結果を強調表示する  
 
-Microsoft Edge 84 および 85 では、[**要素**] パネルの最初の検索結果は強調表示されませんでした。  残りの検索結果だけが正しく強調表示されました。  
+Microsoft Edge 84 および 85 では、要素ツールの最初 **の検索結果が** 強調表示されない。  残りの検索結果だけが正しく強調表示されました。  
 
 フィードバックにより Chromium の改善にご協力いただき、ありがとうございました。  フィードバックにより、オープン ソースの Chromium プロジェクトの問題 [#1103316][CR1103316] が発見されました。  
 
 :::image type="complex" source="../../media/2020/08/elements- search-highlight-fixed.msft.png" alt-text="Microsoft Edge 84 以降のバージョンで [要素] パネルで最初の検索結果が強調表示されている" lightbox="../../media/2020/08/elements- search-highlight-fixed.msft.png":::
-   Microsoft Edge 84 以降のバージョンで [**要素**] パネルで最初の検索結果が強調表示されている  
+   Microsoft Edge 84 以降の **要素** ツールで最初の検索結果を強調表示  
 :::image-end:::  
 
 この問題は、Microsoft Edge のすべてのバージョンで修正されました。  
 
 Chromium の問題: [#1103316][CR1103316]  
 
-## Chromium プロジェクトからのお知らせ  
+## <a name="announcements-from-the-chromium-project"></a>Chromium プロジェクトからのお知らせ  
 
 [!INCLUDE [contact DevTools team note](../../includes/chromium-whats-new-note.md)]  
 
-### 新しい [メディア] パネル  
+### <a name="new-media-tool"></a>新しいメディア ツール  
 
-DevTools の [[メディア][DevtoolsMediaPanelIndex]] パネルで、メディア プレーヤーの情報が表示されるようになりました。  
+DevTools は、メディア ツールにメディア プレイヤーの情報を [表示][DevtoolsMediaPanelIndex] します。  
 
-新しい [**メディア**] パネルを開くには、次の手順を実行します。  
+新しいメディア ツールを **開く** 場合は、次の手順を実行します。  
 
 1.  [**DevTools のカスタマイズとコントロール**] \(`...`\) > [**その他のツール**] > [**メディア**] の順に選びます。  
     
-    :::image type="complex" source="../../media/2020/08/media-panel.msft.png" alt-text="新しい [メディア] パネル" lightbox="../../media/2020/08/media-panel.msft.png":::
-       新しい [**メディア**] パネル  
+    :::image type="complex" source="../../media/2020/08/media-panel.msft.png" alt-text="新しいメディア ツール" lightbox="../../media/2020/08/media-panel.msft.png":::
+       新 **しいメディア** ツール  
     :::image-end:::  
 
-DevTools の新しい [**メディア**] パネルが導入される前、ビデオ プレイヤーに関するログ情報とデバッグ情報は [**最近のプレイヤー**] 設定の下にありました。  [**最近のプレイヤー**] 設定を開くには、`edge://media-internals` に移動して [**プレイヤー**] タブを選びます。  
+DevTools **の新** しいメディア ツールの前に、ビデオ プレーヤーに関するログとデバッグの情報は、[最近使ったプレイヤー] **設定の下に置** かれていました。  [最近使用した **プレイヤー] 設定を** 開く場合は、[ `edge://media-internals` プレイヤー] ツールに移動して **選択** します。  
 
 ライブ コンテンツを表示して、次の例を含む潜在的な問題をより迅速に検査します。  
 
 *   フレームが破棄される原因。  
 *   JavaScript が予期しない方法でプレーヤーと対話している原因。  
 
-### [要素] パネルのコンテキスト メニューを使用したノードのスクリーンショットのキャプチャ  
+### <a name="capture-node-screenshots-using-the-elements-tool-context-menu"></a>要素ツールのコンテキスト メニューを使用してノードのスクリーンショットをキャプチャする  
 
-[**要素**] パネルにあるコンテキスト メニューを使用して、ノードのスクリーンショットをキャプチャできるようになりました。  
+要素ツールのコンテキスト メニューを使用して、ノードのスクリーンショットを **キャプチャ** できます。  
 
 たとえば、目次のスクリーンショットを撮るには、要素にカーソルを合わせてコンテキスト メニューを開き (右クリック)、[**ノードのスクリーンショットをキャプチャ**] を選びます。  
 
@@ -203,13 +203,13 @@ DevTools の新しい [**メディア**] パネルが導入される前、ビデ
 
 Chromium の問題: [#1100253][CR1100253]  
 
-### [問題] ツールの更新  
+### <a name="issues-tool-updates"></a>[問題] ツールの更新  
 
-**コンソール** パネルの [問題] 警告バーは、通常のメッセージに置き換えられました。  
+コンソール ツールの [問題] **警告バー** が通常のメッセージに置き換えられる。  
 
 <!--todo: this figure need to be updated  -->  
 
-:::image type="complex" source="../../media/2020/08/issue-console-msg.msft.png" alt-text="コンソール内の問題 メッセージ" lightbox="../../media/2020/08/issue-console-msg.msft.png":::
+:::image type="complex" source="../../media/2020/08/issue-console-msg.msft.png" alt-text=""コンソール内の問題" メッセージ" lightbox="../../media/2020/08/issue-console-msg.msft.png":::
    "コンソール内の問題" メッセージ  
 :::image-end:::  
 
@@ -221,7 +221,7 @@ Chromium の問題: [#1100253][CR1100253]
 
 Chromium の問題: [1096481][CR1096481]、[1068116][CR1068116]、[1080589][CR1080589]  
 
-### 見つからないローカル フォントのエミュレート  
+### <a name="emulate-missing-local-fonts"></a>見つからないローカル フォントのエミュレート  
 
 [[レンダリング ツール][DevtoolsEvaluatePerformanceReferenceAnalyzeRenderingPerformance]] を開いて、新しい [**ローカル フォントを無効にする**] 機能を使用して `@font-face` 規則の見つからない `local()` ソースをエミュレートします。  
 
@@ -246,7 +246,7 @@ Chromium の問題: [1096481][CR1096481]、[1068116][CR1068116]、[1080589][CR10
 
 Chromium の問題: [#384968][CR384968]  
 
-### 非アクティブなユーザーのエミュレート  
+### <a name="emulate-inactive-users"></a>非アクティブなユーザーのエミュレート  
 
 [アイドル検出 API][WebDevIdleDetection] によって、開発者は非アクティブなユーザーを検出し、アイドル状態の変更を反映することができます。  DevTools を使って、[**センサー**] ツールでユーザーの状態と画面の状態の両方に対してアイドル状態の変更をエミュレートできるようになりました。これにより、実際のアイドル状態が変更されるのを待つ必要がなくなります。  [**センサー**] ツールは [[ドロワー][DevtoolsCustomizeIndexDrawer]] から開くことができます。  
 
@@ -256,10 +256,10 @@ Chromium の問題: [#384968][CR384968]
 
 Chromium の問題: [#1090802][CR1090802]  
 
-### prefers-reduced-data のエミュレート  
+### <a name="emulate-prefers-reduced-data"></a>prefers-reduced-data のエミュレート  
 
 > [!NOTE]
-> Microsoft Edge 86 でこの機能を有効にするには、`edge://flags#enable-experimental-web-platform-features` に移動し、[**Experimental Web Platform 機能**] フラグをオンにします。  エミュレーション オプションは、フラグが有効になっている場合にのみ表示されます。  
+> Microsoft Edge 86 で、この機能を有効にするには、[実験用 Web プラットフォームの機能] フラグに移動して `edge://flags#enable-experimental-web-platform-features` **オン** にします。  エミュレーション オプションは、フラグが有効になっている場合にのみ表示されます。  
 
 [prefers-reduced-data][CsswgDraftsMediaqueries5DescdefMediaPrefersReducedData] メディア クエリは、データを最少化するユーザーのコンテンツ設定を検出します。  これが選択されている場合、ユーザーはより少ないデータを使用する代替のページ コンテンツを受け取ります。  
 
@@ -271,28 +271,28 @@ DevTools を使って `prefers-reduced-data` メディア クエリをエミュ�
 
 Chromium の問題: [#1096068][CR1096068]  
 
-### 新しい JavaScript 機能のサポート  
+### <a name="support-for-new-javascript-features"></a>新しい JavaScript 機能のサポート  
 
 DevTools では、次の JavaScript 言語機能がサポートされるようになりました。  
 
 | JavaScript 言語機能 | 詳細 |  
 |:--- |:--- |  
-| [論理代入演算子][V8FeaturesLogicalAssignment] | DevTools の [**コンソール**] パネルと [**ソース**] パネルで、`&&=`、`||=`、`??=` の新しい演算子による論理代入がサポートされるようになりました。  |  
-| [数値区切り記号][V8FeaturesNumericSeparators]の整形出力 | DevTools の [**ソース**] パネルで、数値区切り記号が整形出力されるようになりました。  |  
+| [論理代入演算子][V8FeaturesLogicalAssignment] | DevTools では、コンソール ツールとソース ツールの新しい演算子 、演算子を使用した論理割 `&&=` `||=` `??=` **り** 当 **てがサポート** されます。  |  
+| [数値区切り記号][V8FeaturesNumericSeparators]の整形出力 | DevTools は、Sources ツールで数値の区切り記号を適切に **印刷** します。  |  
 
 Chromium の問題: [1086817][CR1086817]、[1080569][CR1080569]  
 
-### Lighthouse パネルの Lighthouse 6.2  
+### <a name="lighthouse-62-in-the-lighthouse-panel"></a>Lighthouse パネルの Lighthouse 6.2  
 
-[**Lighthouse**] パネルで Lighthouse 6.2 が実行されるようになりました。  すべての変更の一覧については、「[Lighthouse のリリース ノート][GithubGooglechromeLighthouseV620]」を参照してください。  
+ライト **ハウス ツール** は現在、ライトハウス 6.2 を実行しています。  変更の完全な一覧については、ライトハウスの [リリース ノートに移動します][GithubGooglechromeLighthouseV620]。  
 
 Chromium の問題: [#772558][CR772558]  
 
-### [サービス ワーカー] ウィンドウにおける他のオリジン一覧の廃止  
+### <a name="deprecation-of-other-origins-listing-in-the-service-workers-pane"></a>[サービス ワーカー] ウィンドウにおける他のオリジン一覧の廃止  
 
-DevTools では、[**サービス ワーカー**] ウィンドウ ([**アプリケーション**] パネル > [**サービス ワーカー**] ウィンドウ) で、他のオリジンからのサービス ワーカーの完全な一覧を表示するリンクが提供されるようになりました。  DevTools を開かずにリストにアクセスするには、`edge://service-worker-internals/?devtools` に移動します。  
+DevTools は、サービス ワーカー**** ウィンドウ**\(** Application tool > **Service workers** pane\) からのリンクを提供し、他の発生元からのサービス ワーカーの完全な一覧を表示します。  DevTools を開かなくてもリストにアクセスするには、に移動します `edge://service-worker-internals/?devtools` 。  
 
-以前の DevTools では、[**アプリケーション**] パネル > [**サービス ワーカー**] ウィンドウの下に入れ子になっているリストを表示していました。  
+以前の DevTools には、[サービス**** ワーカー] ウィンドウの [アプリケーション ツール] ウィンドウの下に入>**が表示**されています。  
 
 :::image type="complex" source="../../media/2020/08/sw-other-origins.msft.png" alt-text="他のオリジンへのリンク" lightbox="../../media/2020/08/sw-other-origins.msft.png":::
    他のオリジンへのリンク  
@@ -300,7 +300,7 @@ DevTools では、[**サービス ワーカー**] ウィンドウ ([**アプリ�
 
 Chromium の問題: [#807440][CR807440]  
 
-### フィルター処理されたアイテムのカバレッジの概要を表示する  
+### <a name="show-coverage-summary-for-filtered-items"></a>フィルター処理されたアイテムのカバレッジの概要を表示する  
 
 DevTools は、カバレッジ情報を再計算し、概要を動的に表示するようになりました。  動的表示は、[[カバレッジ][DevtoolsCoverageIndex]] ツールでフィルターが適用されたときにトリガーされます。  以前、[**カバレッジ**] ツールでは、常にすべてのカバレッジ情報の概要が表示されていました。  
 
@@ -321,17 +321,17 @@ DevTools は、カバレッジ情報を再計算し、概要を動的に表示�
 
 Chromium の問題: [#1061385][CR1090802]  
 
-### [アプリケーション] パネルでの新しいフレームの詳細ビュー  
+### <a name="new-frame-details-view-in-application-panel"></a>[アプリケーション] パネルでの新しいフレームの詳細ビュー  
 
-DevTools で、各フレームの詳細ビューが表示されるようになりました。  これにアクセスするには、[**アプリケーション**] パネルの [**フレーム**] メニューの下でフレームを選びます。  
+DevTools で、各フレームの詳細ビューが表示されるようになりました。  アクセスするには、アプリケーション ツールの [フレーム] **メニューでフレーム** を **選択** します。  
 
 :::image type="complex" source="../../media/2020/08/frame-details.msft.png" alt-text="[アプリケーション] パネルでのフレームの新しい詳細ビュー" lightbox="../../media/2020/08/frame-details.msft.png":::
-   [**アプリケーション**] パネルでのフレームの新しい詳細ビュー  
+   アプリケーション ツールのフレームの新しい**詳細ビュー**  
 :::image-end:::  
 
 Chromium の問題: [#1093247][CR1093247]  
 
-#### 開いているウィンドウのフレームの詳細  
+#### <a name="frame-details-for-opened-windows"></a>開いているウィンドウのフレームの詳細  
 
 開いているウィンドウとポップアップ ウィンドウがフレーム ツリーの下にも表示されるようになりました。  開いているウィンドウの詳細ビューには、セキュリティに関する追加情報が含まれます。  
 
@@ -341,7 +341,7 @@ Chromium の問題: [#1093247][CR1093247]
 
 Chromium の問題: [#1107766][CR1107766]  
 
-#### セキュリティと分離に関する情報  
+#### <a name="security-and-isolation-information"></a>セキュリティと分離に関する情報  
 
 セキュリティで保護されたコンテキスト、[Cross-Origin-Embedder-Policy (COEP)][WebDevCoopCoep]、[Cross-Origin-Opener-Policy (COOP)][WebDevCoopCoep] がフレーム詳細に表示されるようになりました。  
 
@@ -353,13 +353,13 @@ Chromium の問題: [#1107766][CR1107766]
 
 Chromium の問題: [#1051466][CR1051466]  
 
-### [要素] パネルと [ネットワーク] パネルの更新  
+### <a name="elements-and-network-panel-updates"></a>[要素] パネルと [ネットワーク] パネルの更新  
 
-#### [スタイル] ウィンドウでのアクセシビリティに対応した色の候補  
+#### <a name="accessible-color-suggestion-in-the-styles-pane"></a>[スタイル] ウィンドウでのアクセシビリティに対応した色の候補  
 
 DevTools では、コントラストの低い色のテキストに対して色の候補が表示されるようになりました。  
 
-次の例で、`h1` のテキストにコントラストの低い色が設定されています。  これを修正するには、[**スタイル**] ウィンドウで `color` プロパティのカラー ピッカーを開きます。  [**コントラスト比**] セクションを展開すると、DevTools は AA と AAA の色の候補を提供します。  候補の色を選択して、色を適用します。  
+次の例で、`h1` のテキストにコントラストの低い色が設定されています。  これを修正するには、[**スタイル**] ウィンドウで `color` プロパティのカラー ピッカーを開きます。  [**コントラスト比**] セクションを展開すると、DevTools は AA と AAA の色の候補を提供します。  色を適用するには、推奨される色を選択します。  
 
 :::image type="complex" source="../../media/2020/08/contrast-color-suggestion.msft.png" alt-text="カラー ピッカーで AA と AAA の色の候補が提示される" lightbox="../../media/2020/08/contrast-color-suggestion.msft.png":::
    カラー ピッカーで AA と AAA の色の候補が提示される  
@@ -367,12 +367,12 @@ DevTools では、コントラストの低い色のテキストに対して色�
 
 Chromium の問題: [#1093227][CR1093227]  
 
-#### [要素] パネルに [プロパティ] ウィンドウを復元  
+#### <a name="reinstate-properties-pane-in-the-elements-panel"></a>[要素] パネルに [プロパティ] ウィンドウを復元  
 
 [**プロパティ**] ウィンドウが復元されました。  このウィンドウは [Microsoft Edge 84 で廃止されました][DevtoolsWhatsnew200205DevtoolsDeprecationPropertiesPaneElementsPanel]。  Microsoft Edge DevTools チームと Chrome DevTools チームは、要素のプロパティ検査のための改善を計画しています。  
 
 :::image type="complex" source="../../media/2020/08/properties-pane.msft.png" alt-text="[要素] パネルの [プロパティ] ウィンドウ" lightbox="../../media/2020/08/properties-pane.msft.png":::
-   [**要素**] パネルの [**プロパティ**] ウィンドウ  
+   **[要素** ] ツールの **[プロパティ]** ウィンドウ  
 :::image-end:::  
 
 Chromium の問題:  <!--  [#1105205][CR1105205],  -->  [#1116085][CR1116085]  
@@ -391,11 +391,11 @@ The `X-Client-Data` HTTP header contains a list of experiment IDs and Microsoft 
 Chromium issue: [#1103854][CR1103854]  
 -->  
 
-#### [スタイル] ウィンドウでのカスタム フォントのオートコンプリート  
+#### <a name="autocomplete-custom-fonts-in-the-styles-pane"></a>[スタイル] ウィンドウでのカスタム フォントのオートコンプリート  
 
 [**スタイル**] ウィンドウで `font-family` プロパティを編集するときの CSS のオートコンプリート一覧に、インポートされたフォント フェイスが追加されるようになりました。  
 
-たとえば、`monospace` がローカル コンピューターにインストールされたカスタム フォントである場合、CSS コンプリート一覧に表示されます。 Microsoft Edge の以前のバージョンでは、フォントが表示されませんでした。
+たとえば、ローカル コンピューターにインストールされているカスタム フォントの場合は `monospace` 、CSS 完了リストに表示されます。  以前のバージョンの Microsoft Edge では、フォントは表示されません。
 
 :::image type="complex" source="../../media/2020/08/font-auto-complete.msft.png" alt-text="カスタム フォントのオートコンプリート" lightbox="../../media/2020/08/font-auto-complete.msft.png":::
    カスタム フォントのオートコンプリート  
@@ -403,7 +403,7 @@ Chromium issue: [#1103854][CR1103854]
 
 Chromium の問題: [#1106221] [CR1106221]  
 
-#### [ネットワーク] パネルでリソースの種類を一貫して表示する  
+#### <a name="consistently-display-resource-type-in-network-panel"></a>[ネットワーク] パネルでリソースの種類を一貫して表示する  
 
 DevTools では、元のネットワーク要求と同じリソースの種類が一貫して表示され、リダイレクト (HTTP 状態コード 302) が発生すると [**種類**] 列の値に `/ Redirect` が追加されるようになりました。  
 
@@ -415,35 +415,35 @@ DevTools では、元のネットワーク要求と同じリソースの種類�
 
 Chromium の問題: [#997694][CR997694]  
 
-#### [要素] パネルと [ネットワーク] パネルのクリア ボタン  
+#### <a name="clear-buttons-in-the-elements-and-network-tools"></a>要素とネットワーク ツールのボタンをクリアする  
 
 次のテキスト ボックスに、[**クリア**] ボタンが表示されるようになりました。  
 
-*   [**スタイル**] ウィンドウと [**ネットワーク**] パネルのフィルター テキスト ボックス。  
-*   [**要素**] パネルの DOM 検索テキスト ボックス。  
+*   [スタイル] ウィンドウと [ネットワーク] ツール**の****フィルター**テキスト ボックス。  
+*   要素ツールの DOM 検索テキスト **ボックス** 。  
 
 [**クリア**] ボタンを選択して、入力されたテキストを削除します。  
 
 :::row:::
    :::column span="":::
       :::image type="complex" source="../../media/2020/08/clear-button-elements.msft.png" alt-text="[要素] パネルの [クリア] ボタン" lightbox="../../media/2020/08/clear-button-elements.msft.png":::
-         [**要素**] パネルの [クリア] ボタン  
+         要素ツールのボタン **をクリア** する  
       :::image-end:::  
    :::column-end:::
    :::column span="":::
       :::image type="complex" source="../../media/2020/08/clear-button-network.msft.png" alt-text="[ネットワーク] パネルの [クリア] ボタン" lightbox="../../media/2020/08/clear-button-network.msft.png":::
-         [**ネットワーク**] パネルの [クリア] ボタン  
+         ネットワーク ツールの  **ボタンをクリア** する  
       :::image-end:::  
    :::column-end:::
 :::row-end:::  
 
 Chromium の問題: [#1067184][CR1067184]  
 
-## Microsoft Edge プレビュー チャネルをダウンロードする  
+## <a name="download-the-microsoft-edge-preview-channels"></a>Microsoft Edge プレビュー チャネルをダウンロードする  
 
 Windows または macOS を使用している場合、[Microsoft Edge プレビュー チャネル][MicrosoftEdgePreviewChannels] を既定の開発ブラウザーとして使用することを検討してください。  プレビュー チャネルを使用すると、最新の DevTools 機能にアクセスできます。  
 
-## Microsoft Edge DevTools チームに連絡する  
+## <a name="getting-in-touch-with-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームに連絡する  
 
 [!INCLUDE [contact DevTools team note](../../includes/contact-whats-new-note.md)]  
 

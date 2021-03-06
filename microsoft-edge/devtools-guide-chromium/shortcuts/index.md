@@ -1,18 +1,18 @@
 ---
 description: Microsoft Edge DevTools キーボード ショートカットの標準ドキュメント。
-title: Microsoft Edge DevTools のキーボード ショートカット
+title: Microsoft Edge DevTools キーボード ショートカット
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 12/17/2020
+ms.date: 02/12/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 417e2235e4ea63d0258c158035ea201cd5657099
-ms.sourcegitcommit: a35a6b5bbc21b7df61d08cbc6b074b5325ad4fef
+ms.openlocfilehash: c6d51d27ce41ed8192a867cf33555b3880dd3ef9
+ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "11234372"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "11398351"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -28,133 +28,133 @@ ms.locfileid: "11234372"
    See the License for the specific language governing permissions and
    limitations under the License.  -->
 
-# Microsoft Edge DevTools のキーボード ショートカット  
+# <a name="microsoft-edge-devtools-keyboard-shortcuts"></a>Microsoft Edge DevTools キーボード ショートカット  
 
 この記事は、Microsoft Edge DevTools のキーボード ショートカットのリファレンスです。
 
-また、ヒントにショートカットを表示できます。  DevTools の UI 要素にカーソルを合わせると、ヒントが表示されます。  要素にショートカットがある場合は、ヒントにショートカットが含まれます。
+ヒントにショートカットが表示される場合があります。  DevTools の UI 要素にカーソルを合わせると、ツールヒントが表示されます。  要素にショートカットがある場合は、ツールヒントにショートカットが含まれます。
 
-## DevTools を開くキーボード ショートカット  
+## <a name="keyboard-shortcuts-for-opening-devtools"></a>DevTools を開くキーボード ショートカット  
 
-DevTools を開く場合は、カーソルがブラウザーのビューポートにフォーカスされている間に、次のキーボード ショートカットを選択します。
+DevTools を開く場合は、カーソルがブラウザー ビューポートにフォーカスされている間に、次のキーボード ショートカットを選択します。
 
-| Action | Windows\/Linux | macOS |  
+| 操作 | Windows\/Linux | macOS |  
 |:--- |:--- |:--- |  
 | 最後に使用したパネルを開く | `F12` または `Control`+`Shift`+`I` | `Command`+`Option`+`I` |  
-| コンソール パネル **を開** く | `Control`+`Shift`+`J` | `Command`+`Option`+`J` |  
-| 要素パネル **を開** く | `Control`+`Shift`+`C` | `Command`+`Shift`+`C` または `Command`+`Option`+`C` |  
+| コンソール ツール **を開** く | `Control`+`Shift`+`J` | `Command`+`Option`+`J` |  
+| 要素ツール **を開** く | `Control`+`Shift`+`C` | `Command`+`Shift`+`C` または `Command`+`Option`+`C` |  
 
-## グローバル キーボード ショートカット  
+## <a name="global-keyboard-shortcuts"></a>グローバル キーボード ショートカット  
 
-次のキーボード ショートカットは、すべてではないにしろ、ほとんどの DevTools パネルで利用できます。
+以下のキーボード ショートカットは、すべてではないにしろ、ほとんどの場合 DevTools パネルで使用できます。
 
-| Action | Windows\/Linux | macOS |  
+| 操作 | Windows\/Linux | macOS |  
 |:--- |:--- |:--- |  
-| 設定の **表示** | `?` または `F1` | `?` または `Function`+`F1` |  
-| 次のパネルにフォーカスを移動する | `Control`+`]` | `Command`+`]` |  
-| 前のパネルにフォーカスを移動する | `Control`+`[` | `Command`+`[` |  
+| 設定の **表示** | `?` or `F1` | `?` または `Function`+`F1` |  
+| 次のパネルをフォーカスする | `Control`+`]` | `Command`+`]` |  
+| 前のパネルをフォーカスする | `Control`+`[` | `Command`+`[` |  
 | 最後に使用した [ドッキング位置に][DevtoolsCustomizeIndexPlacement] 戻ります。  DevTools がセッション全体の既定の位置にある場合、このショートカットは DevTools を別のウィンドウにドッキング解除します。 | `Control`+`Shift`+`D` | `Command`+`Shift`+`D` |  
-| デバイス エミュレーション [の切り替え][DevtoolsDeviceModeIndex] | `Control`+`Shift`+`M` | `Command`+`Shift`+`M` |  
-| 要素モード **の検査の切り替え** | `Control`+`Shift`+`C` | `Command`+`Shift`+`C` |  
+| デバイス [エミュレーションの切り替え][DevtoolsDeviceModeIndex] | `Control`+`Shift`+`M` | `Command`+`Shift`+`M` |  
+| 要素 **の検査モードの切り替え** | `Control`+`Shift`+`C` | `Command`+`Shift`+`C` |  
 | コマンド メニュー [を開く][DevtoolsCommandMenuIndex] | `Control`+`Shift`+`P` | `Command`+`Shift`+`P` |  
 | ドロワーを切り [替える][DevtoolsCustomizeIndexDrawer] | `Escape` | `Escape` |  
-| 通常の再読み込み | `F5` または `Control`+`R` | `Command`+`R` |  
-| ハード 再読み込み | `Control`+`F5` または `Control`+`Shift`+`R` | `Command`+`Shift`+`R` |  
-| 現在のパネル内のテキストを検索します。  監査パネル、アプリケーション パネル **、およびセキュリティ**パネル**ではサポート**されていません**** | `Control`+`F` | `Command`+`F` |  
-| ドロワー **の [検索** ] [タブを開][DevtoolsCustomizeIndexDrawer]きます。これにより、読み込まれたすべてのリソースのテキストを検索できます。 | `Control`+`Shift`+`F` | `Command`+`Option`+`F` |  
+| 通常の更新 | `F5` または `Control`+`R` | `Command`+`R` |  
+| ハード 更新 | `Control`+`F5` または `Control`+`Shift`+`R` | `Command`+`Shift`+`R` |  
+| 現在のパネル内のテキストを検索します。  監査、アプリケーション、**および**セキュリティ ツール******ではサポート**されていません | `Control`+`F` | `Command`+`F` |  
+| ドロワー **で [検索** ] [タブを][DevtoolsCustomizeIndexDrawer]開き、読み込まれたすべてのリソースでテキストを検索できます。 | `Control`+`Shift`+`F` | `Command`+`Option`+`F` |  
 | [ソース] パネルで **ファイルを開** く | `Control`+`O` または `Control`+`P` | `Command`+`O` または `Command`+`P` |  
 | 拡大する | `Control`+`Shift`+`+` | `Command`+`Shift`+`+` |  
 | 縮小 | `Control`+`-` | `Command`+`-` |  
 | 既定のズーム レベルを復元する | `Control`+`0` | `Command`+`0` |  
-| スニペットを実行する | Select `Control` + `O` キーを押して[コマンド メニューを][DevtoolsCommandMenuIndex]開き、その後にスクリプトの `!` 名前を入力して、 `Enter` | Select `Command` + `O` キーを押して[コマンド メニューを][DevtoolsCommandMenuIndex]開き、その後にスクリプト `!` の名前を入力して、 `Enter` |  
+| スニペットを実行する | [ `Control` + `O` コマンド] メニューを[開き、][DevtoolsCommandMenuIndex]次にスクリプトの名前を入力し、[次へ `!` ] を選択します。 `Enter` | [ `Command` + `O` コマンド] メニューを[開き、][DevtoolsCommandMenuIndex]次にスクリプトの名前を入力し、[次へ `!` ] を選択します。 `Enter` |  
 
 <!-- TODO: make a bug about this UIPlacement link being ambiguous.  -->  
 <!-- TODO: Link "Inspect Element Mode" when a good section exists.  -->  
 
-## 要素パネルのキーボード ショートカット  
+## <a name="elements-tool-keyboard-shortcuts"></a>要素ツールのキーボード ショートカット  
 
-| Action | Windows\/Linux | macOS |  
+| 操作 | Windows\/Linux | macOS |  
 |:--- |:--- |:--- |  
-| 変更を元に戻す | `Control`+`Z` | `Command`+`Z` |  
-| 変更をやり直す | `Control`+`Y` | `Command`+`Shift`+`Z` |  
+| 変更の元に戻す | `Control`+`Z` | `Command`+`Z` |  
+| やり直しの変更 | `Control`+`Y` | `Command`+`Shift`+`Z` |  
 | 現在選択されている要素の上/下の要素を選択する | `Up Arrow` / `Down Arrow` | `Up Arrow` / `Down Arrow` |  
-| 現在選択されているノードを展開します。  ノードが既に展開されている場合、このショートカットはノードの下の要素を選択します。 | `Right Arrow` | `Right Arrow` |  
-| 現在選択されているノードを折りたたむ。  ノードが既に折りたたまれる場合、このショートカットは上の要素を選択します。 | `Left Arrow` | `Left Arrow` |  
-| 現在選択されているノードとすべての子ノードを展開または折りたたむ | [保持 `Control` + `Alt` ] をクリックし、要素**の**名前の横にある矢印アイコンを選択します。 | [保持 `Option` ] をクリックし、要素 **の** 名前の横にある矢印アイコンを選択します。 |  
-| 現在 **選択されている要素で** 属性の編集モードを切り替える | `Enter` | `Enter` |  
-| 属性の編集モードに入った後、次 **の属性または前の属性を選択** する | `Tab` / `Shift`+`Tab` | `Tab` / `Shift`+`Tab` |  
+| 現在選択されているノードを展開します。  ノードが既に展開されている場合、このショートカットは、その下にある要素を選択します。 | `Right Arrow` | `Right Arrow` |  
+| 現在選択されているノードを折りたたむ。  ノードが既に折りたたまれる場合、このショートカットは、その上にある要素を選択します。 | `Left Arrow` | `Left Arrow` |  
+| 現在選択されているノードとすべての子を展開または折りたたむ | [ `Control` + `Alt` 保持] をクリックし、**要素**の名前の横にある矢印アイコンを選択します。 | [ `Option` 保持] をクリックし、 **要素** の名前の横にある矢印アイコンを選択します。 |  
+| 現在選択 **されている要素の** [属性の編集] モードを切り替える | `Enter` | `Enter` |  
+| 属性の編集モードに入った後で、次の/前 **の属性を選択** する | `Tab` / `Shift`+`Tab` | `Tab` / `Shift`+`Tab` |  
 | 現在選択されている要素を非表示にする | `H` | `H` |  
-| 現在 **選択されている要素で [編集] を HTML** モードに切り替える | `Function`+`F2` | `F2` |  
+| 現在選択 **されている要素の HTML** モードとして編集を切り替える | `Function`+`F2` | `F2` |  
 
-### スタイル ウィンドウのキーボード ショートカット  
+### <a name="styles-panel-keyboard-shortcuts"></a>スタイル パネルのキーボード ショートカット  
 
-| Action | Windows\/Linux | macOS |  
+| 操作 | Windows\/Linux | macOS |  
 |:--- |:--- |:--- |  
-| プロパティ値が宣言されている行に移動します。 | [保持 `Control` ] をクリックし、プロパティ値を選択します。 | [保持 `Command` ] をクリックし、プロパティ値を選択します。 |  
-| 色の値の RBGA、HSLA、および 16 進表現を繰り返す | [保留 `Shift` ] をクリックし、値 **の** 横にある [色のプレビュー] ボックスを選択します。 | [保留 `Shift` ] をクリックし、値 **の** 横にある [色のプレビュー] ボックスを選択します。 |  
-| 次または前のプロパティまたは値を選択する | プロパティの名前または値を選択し、 `Tab` / `Shift`+`Tab` | プロパティの名前または値を選択し、 `Tab` / `Shift`+`Tab` |  
-| プロパティ値を 0.1 ずつインクリメントまたはデクリメントする | 値を選択し、 `Alt`+`Up Arrow` / `Alt`+`Down Arrow` | 値を選択し、/ `Option` + `Up Arrow` オプション + 下矢印を選択します。 |  
-| プロパティ値を 1 ずつインクリメント/デクリメントする | 値を選択し、 `Up Arrow` / `Down Arrow` | 値を選択し、 `Up Arrow` / `Down Arrow` |  
-| プロパティ値を 10 ずつインクリメントまたはデクリメントする | 値を選択し、 `Shift`+`Up Arrow` / `Shift`+`Down Arrow` | 値を選択し、 `Shift`+`Up Arrow` / `Shift`+`Down Arrow` |  
-| プロパティ値を 100 ずつインクリメントまたはデクリメントする | 値を選択し、 `Control`+`Up Arrow` / `Control`+`Down Arrow` | 値を選択し、 `Command`+`Up Arrow` / `Command`+`Down Arrow` |  
+| プロパティ値が宣言されている行に移動する | [保持 `Control` ] をクリックし、プロパティの値を選択します。 | [保持 `Command` ] をクリックし、プロパティの値を選択します。 |  
+| 色の値の RBGA、HSLA、および 16 進表記を循環する | [ `Shift` 保持] をクリックし、値 **の横** にある [色のプレビュー] ボックスを選択します。 | [ `Shift` 保持] をクリックし、値 **の横** にある [色のプレビュー] ボックスを選択します。 |  
+| 次の/前のプロパティまたは値を選択する | プロパティ名または値を選択してから、 `Tab` / `Shift`+`Tab` | プロパティ名または値を選択してから、 `Tab` / `Shift`+`Tab` |  
+| プロパティ値を 0.1 ずつ増分/デクリメントする | 値を選択してから、 `Alt`+`Up Arrow` / `Alt`+`Down Arrow` | 値を選択し、[オプション] `Option` + `Up Arrow` + [下方向] の順に選択します。 |  
+| プロパティ値を 1 ずつインクリメント/デクリメントする | 値を選択してから、 `Up Arrow` / `Down Arrow` | 値を選択してから、 `Up Arrow` / `Down Arrow` |  
+| プロパティ値を 10 ずつインクリメント/デクリメントする | 値を選択してから、 `Shift`+`Up Arrow` / `Shift`+`Down Arrow` | 値を選択してから、 `Shift`+`Up Arrow` / `Shift`+`Down Arrow` |  
+| プロパティ値を 100 ずつ増分/デクリメントする | 値を選択してから、 `Control`+`Up Arrow` / `Control`+`Down Arrow` | 値を選択してから、 `Command`+`Up Arrow` / `Command`+`Down Arrow` |  
 
-## ソース パネルのキーボード ショートカット  
+## <a name="sources-tool-keyboard-shortcuts"></a>ソース ツールのキーボード ショートカット  
 
-| Action | Windows\/Linux | macOS |  
+| 操作 | Windows\/Linux | macOS |  
 |:--- |:--- |:--- |  
-| スクリプト ランタイム \(現在実行中の場合\) または再開 \(現在一時停止している場合\) を一時停止します。 | `F8` または `Control`+`\` | `F8` または `Command`+`\` |  
+| スクリプト ランタイムを一時停止する \(現在実行中の場合\) または resume \(現在一時停止している場合\) | `F8` または `Control`+`\` | `F8` または `Command`+`\` |  
 | 次の関数呼び出しのステップ オーバー | `F10` または `Control`+`'` | `F10` または `Command`+`'` |  
-| 次の関数呼び出しにステップ する | `F11` または `Control`+`;` | `F11` または `Command`+`;` |  
+| 次の関数呼び出しへのステップ | `F11` または `Control`+`;` | `F11` または `Command`+`;` |  
 | 現在の関数からステップ アウトする | `Shift`+`F11` または `Control`+`Shift`+`;` | `Shift`+`F11` または `Command`+`Shift`+`;` |  
-| 一時停止中 [に特定のコード行に進む][DevtoolsJavascriptBreakpointsLOC] | [保留 `Control` ] をクリックし、コード行を選択します。 | [保留 `Command` ] をクリックし、コード行を選択します。 |  
+| 一時停止中 [に特定のコード行に進む][DevtoolsJavascriptBreakpointsLOC] | [保持 `Control` ] をクリックし、コード行を選択します。 | [保持 `Command` ] をクリックし、コード行を選択します。 |  
 | 現在選択されているフレームの下/上の通話フレームを選択する | `Control`+`.` / `Control`+`,` | `Control`+`.` / `Control`+`,` |  
-| ローカルの変更に対する変更を保存する | `Control`+`S` | `Command`+`S` |  
+| ローカル変更への変更を保存する | `Control`+`S` | `Command`+`S` |  
 | すべての変更を保存する | `Control`+`Alt`+`S` | `Command`+`Option`+`S` |  
 | 行に移動する | `Control`+`G` | `Control`+`G` |  
-| 現在開いているファイルの行番号にジャンプする | Select `Control` + `O` キーを押して[コマンド メニューを][DevtoolsCommandMenuIndex]開き、その `:` 後に行番号を入力して、 `Enter` | Select `Command` + `O` キーを押して[コマンド メニューを][DevtoolsCommandMenuIndex]開き、その `:` 後に行番号を入力して、 `Enter` |  
-| 現在開いているファイルの列にジャンプします (例: 行 5、列 9\) | Select `Control` + `O` to open the [Command Menu,][DevtoolsCommandMenuIndex] `:` type, then the line number, then `:` another, then the column number, then select `Enter` | Select `Command` + `O` to open the [Command Menu,][DevtoolsCommandMenuIndex] `:` type, then the line number, then `:` another, then the column number, then select `Enter` |  
-| 現在のファイルが HTML またはスクリプトの場合は、関数宣言に移動します。  <br />  現在のファイルがスタイルシートの場合は、ルール セットに移動します。  | `Control` + `Shift` + `O` Select、then type in the name of the declaration / rule set, or select it from the list of options | `Command` + `Shift` + `O` Select、then type in the name of the declaration / rule set, or select it from the list of options |  
+| 現在開いているファイルの行番号にジャンプする | [ `Control` + `O` 選択] をクリックして[コマンド メニュー][DevtoolsCommandMenuIndex]を開き、次に行番号 `:` を入力してから、 `Enter` | [ `Command` + `O` 選択] をクリックして[コマンド メニュー][DevtoolsCommandMenuIndex]を開き、次に行番号 `:` を入力してから、 `Enter` |  
+| 現在開いているファイル \(たとえば、行 5、列 9\) の列にジャンプします。 | [コマンド] メニューを開き、次に行番号を開き、次に別の行番号を選択し、次に列 `Control` + `O` [][DevtoolsCommandMenuIndex] `:` `:` 番号を選択します。 `Enter` | [コマンド] メニューを開き、次に行番号を開き、次に別の行番号を選択し、次に列 `Command` + `O` [][DevtoolsCommandMenuIndex] `:` `:` 番号を選択します。 `Enter` |  
+| 現在のファイルが HTML またはスクリプトの場合は、関数宣言に移動します。  <br />  現在のファイルがスタイルシートの場合は、ルール セットに移動します。  | を `Control` + `Shift` + 選択し、宣言/ルール セットの名前を入力するか、オプションの一覧 `O` から選択します。 | を `Command` + `Shift` + 選択し、宣言/ルール セットの名前を入力するか、オプションの一覧 `O` から選択します。 |  
 | アクティブなタブを閉じる | `Alt`+`W` | `Option`+`W` |  
 
-### コード エディターのキーボード ショートカット  
+### <a name="code-editor-keyboard-shortcuts"></a>コード エディターのキーボード ショートカット  
 
-| Action | Windows\/Linux | macOS |  
+| 操作 | Windows\/Linux | macOS |  
 |:--- |:--- |:--- |  
-| カーソルまでの最後の単語のすべての文字を削除する | `Control`+`Delete` | `Option`+`Delete` |  
-| コード行のブレークポイント [を追加または削除する][DevtoolsJavascriptBreakpointsLOC] | 行にカーソルを合った後、 `Control`+`B` | 行にカーソルを合った後、 `Command`+`B` |  
-| 一致する角かっこに移動する | `Control`+`M` | `Control`+`M` |  
+| カーソルまで、最後の単語のすべての文字を削除する | `Control`+`Delete` | `Option`+`Delete` |  
+| コード行ブレークポイント [を追加または削除する][DevtoolsJavascriptBreakpointsLOC] | カーソルを行にフォーカスしてから、 `Control`+`B` | カーソルを行にフォーカスしてから、 `Command`+`B` |  
+| 一致するかっこに移動する | `Control`+`M` | `Control`+`M` |  
 | 1 行のコメントを切り替える。  複数行が選択されている場合、DevTools は各行の開始にコメントを追加します。 | `Control`+`/` | `Command`+`/` |  
-| カーソルが置く単語の次の出現箇所を選択または選択から削除します。  各オカレンスが同時に強調表示される | `Control`+`D` / `Control`+`U` | `Command`+`D` / `Command`+`U` |  
+| カーソルがオンの単語の次の出現をオンまたはオフにします。  各オカレンスが同時に強調表示されます | `Control`+`D` / `Control`+`U` | `Command`+`D` / `Command`+`U` |  
 
-## パフォーマンス パネルのキーボード ショートカット  
+## <a name="performance-tool-keyboard-shortcuts"></a>パフォーマンス ツールのキーボード ショートカット  
 
-| Action | Windows\/Linux | macOS |  
+| 操作 | Windows\/Linux | macOS |  
 |:--- |:--- |:--- |  
-| レコーディングの開始/停止 | `Control`+`E` | `Command`+`E` |  
-| レコーディングを保存する | `Control`+`S` | `Command`+`S` |  
-| レコーディングの読み込み | `Control`+`O` | `Command`+`O` |  
+| 録音の開始/停止 | `Control`+`E` | `Command`+`E` |  
+| 記録の保存 | `Control`+`S` | `Command`+`S` |  
+| 記録の読み込み | `Control`+`O` | `Command`+`O` |  
 
-## メモリ パネルのキーボード ショートカット  
+## <a name="memory-tool-keyboard-shortcuts"></a>メモリ ツールのキーボード ショートカット  
 
-| Action | Windows\/Linux | macOS |  
+| 操作 | Windows\/Linux | macOS |  
 |:--- |:--- |:--- |  
-| レコーディングの開始/停止 | `Control`+`E` | `Command`+`E` |  
+| 録音の開始/停止 | `Control`+`E` | `Command`+`E` |  
 
-## コンソール パネルのキーボード ショートカット  
+## <a name="console-tool-keyboard-shortcuts"></a>コンソール ツールのキーボード ショートカット  
 
-| Action | Windows\/Linux | macOS |  
+| 操作 | Windows\/Linux | macOS |  
 |:--- |:--- |:--- |  
-| オートコンプリート候補を受け入れる | `Right Arrow` または `Tab` | `Right Arrow` または `Tab` |  
-| オートコンプリート候補を拒否する | `Escape` | `Escape` |  
+| オートコンプリートの提案を受け入れる | `Right Arrow` or `Tab` | `Right Arrow` or `Tab` |  
+| オートコンプリートの提案を拒否する | `Escape` | `Escape` |  
 | 前のステートメントを取得する | `Up Arrow` | `Up Arrow` |  
 | Get next ステートメント | `Down Arrow` | `Down Arrow` |  
-| 本体の **フォーカス** | `Control`+ `` ` `` | `Control`+`` ` `` |  
-| 本体をクリア **する** | `Control`+`L` | `Command`+`K` または `Option`+`L` |  
-| 複数行の入力を強制します。  DevTools は既定で複数行のシナリオを検出する必要があるため、このショートカットはほとんどの場合不要です。 | `Shift`+`Enter` | `Command`+`Return` |  
+| コンソールの **フォーカス** | `Control`+ `` ` `` | `Control`+`` ` `` |  
+| コンソールをクリア **する** | `Control`+`L` | `Command`+`K` または `Option`+`L` |  
+| 複数行のエントリを強制的に指定します。  DevTools は既定で複数行のシナリオを検出する必要があるため、このショートカットはほとんどの場合不要です。 | `Shift`+`Enter` | `Command`+`Return` |  
 | 以下のコマンドを実行します。 | `Enter` | `Return` |  
-| コンソールに記録されるオブジェクトのすべてのサブプロパティを展開する | Hold `Alt` , then choose **Expand** \( ![ Expand ][ImageExpandIcon] \) | Hold `Alt` , then choose **Expand** \( ![ Expand ][ImageExpandIcon] \) |  
+| コンソールにログに記録されるオブジェクトのすべてのサブプロパティを展開する | [保持 `Alt` ]**** をクリックし、[展開\( ![ Expand ][ImageExpandIcon] \) | [保持 `Alt` ]**** をクリックし、[展開\( ![ Expand ][ImageExpandIcon] \) |  
 
-## Microsoft Edge DevTools チームと連絡を取る  
+## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームと連絡を取る  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
@@ -164,11 +164,11 @@ DevTools を開く場合は、カーソルがブラウザーのビューポー�
 
 <!-- links -->  
 
-[DevtoolsCommandMenuIndex]: ../command-menu/index.md "Microsoft Edge DevTools コマンド メニューを使用してコマンドを実行する |Microsoft Docs"  
+[DevtoolsCommandMenuIndex]: ../command-menu/index.md "Microsoft Edge DevTools コマンド メニュー を使用してコマンドを実行|Microsoft Docs"  
 [DevtoolsCustomizeIndexDrawer]: ../customize/index.md#drawer "ドロワー - Microsoft Edge DevTools をカスタマイズする | Microsoft Docs"  
-[DevtoolsCustomizeIndexPlacement]: ../customize/index.md#change-devtools-placement "DevTools の配置を変更する - Microsoft Edge DevTools をカスタマイズする |Microsoft Docs"  
+[DevtoolsCustomizeIndexPlacement]: ../customize/index.md#change-devtools-placement "DevTools の配置を変更する - Microsoft Edge DevTools の配置を|Microsoft Docs"  
 [DevtoolsDeviceModeIndex]: ../device-mode/index.md "Microsoft Edge DevTools でモバイル デバイスをエミュレートする | Microsoft Docs"  
-[DevtoolsJavascriptBreakpointsLOC]: ../javascript/breakpoints.md#line-of-code-breakpoints "コード行のブレークポイント - Microsoft Edge DevTools でブレークポイントでコードを一時停止する方法 |Microsoft Docs"  
+[DevtoolsJavascriptBreakpointsLOC]: ../javascript/breakpoints.md#line-of-code-breakpoints "コード行ブレークポイント - Microsoft Edge DevTools アプリケーションでブレークポイントを使用してコードを一時停止する|Microsoft Docs"  
 
 <!--[201705ReleaseNotesContinue]: whats-new/2017/05/devtools-release-notes#continue  -->  
 

@@ -1,18 +1,18 @@
 ---
-description: アプリケーション パネルを使用して、Web アプリ マニフェスト、サービス ワーカー、およびサービス ワーカー キャッシュを検査、変更、およびデバッグします。
-title: 段階的な Web アプリのデバッグ
+description: '[アプリケーション] パネルを使用して、Web アプリ マニフェスト、サービス ワーカー、およびサービス ワーカー キャッシュを検査、変更、およびデバッグします。'
+title: プログレッシブ Web アプリのデバッグ
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 12/17/2020
+ms.date: 02/12/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 79edf4b04c85db33e89d18ec1832138a61f4f884
-ms.sourcegitcommit: a35a6b5bbc21b7df61d08cbc6b074b5325ad4fef
+ms.openlocfilehash: aea01d25474a030e78ac0eaeaef3954ab7f4539f
+ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "11234376"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "11398540"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -28,9 +28,9 @@ ms.locfileid: "11234376"
    See the License for the specific language governing permissions and
    limitations under the License.  -->  
 
-# 段階的な Web アプリのデバッグ  
+# <a name="debug-progressive-web-apps"></a>プログレッシブ Web アプリのデバッグ  
 
-アプリケーション パネル **を使用** して、Web アプリ マニフェスト、サービス ワーカー、およびサービス ワーカー キャッシュを検査、変更、およびデバッグします。  
+[アプリケーション **] パネル** を使用して、Web アプリ マニフェスト、サービス ワーカー、およびサービス ワーカー キャッシュを検査、変更、およびデバッグします。  
 
 <!--Related Guides:  
 
@@ -38,20 +38,20 @@ ms.locfileid: "11234376"
 
 <!--TODO:  Link web "Progressive Web Apps" section when available. -->
 
-このガイドでは、アプリケーション パネルの段階的な Web App 機能についての **み説明** します。  <!--If you're looking for help on the other panes, check out the last section of this guide, [Other Application panel guides](#other-application-panel-guides).  -->
+このガイドでは、[アプリケーション] パネルのプログレッシブ Web アプリ機能についてのみ **説明** します。  <!--If you're looking for help on the other panes, check out the last section of this guide, [Other Application panel guides](#other-application-panel-guides).  -->
 
 <!--TODO:  Link to sections when available. -->
 
-### まとめ  
+### <a name="summary"></a>要約  
 
-*   マニフェスト ウィンドウ **を使用** して、Web アプリマニフェストを検査し、ホーム画面に追加イベントをトリガーします。  
-*   サービスワーカー **ウィンドウ** は、サービスの登録解除や更新、プッシュ イベントのモデル化、オフライン化、サービス ワーカーの停止など、サービス ワーカー関連の全範囲のタスクに使用します。  
+*   [マニフェスト] **ウィンドウを** 使用して Web アプリ マニフェストを検査し、[ホーム画面に追加] イベントをトリガーします。  
+*   サービスの **登録** 解除や更新、プッシュ イベントの表示、オフライン化、サービス ワーカーの停止など、サービス ワーカー関連のタスクの範囲全体に対して、[サービス ワーカー] ウィンドウを使用します。  
 *   [キャッシュ ストレージ] ウィンドウからサービス ワーカー **キャッシュを表示** します。  
-*   サービス ワーカーの登録を解除し、[ストレージのクリア] ウィンドウから 1 回クリックしてすべてのストレージと **キャッシュをクリア** します。  
+*   サービス ワーカーの登録を解除し、[ストレージのクリア] ウィンドウから選択した 1 つのボタンですべての記憶域と **キャッシュをクリア** します。  
     
-## Web アプリ マニフェスト  
+## <a name="web-app-manifest"></a>Web アプリ マニフェスト  
 
-ユーザーがモバイル ホーム画面にアプリを追加するには、Web アプリ マニフェストが必要です。  マニフェストは、アプリがホーム画面に表示される方法、ホーム画面から起動するときにユーザーを指示する場所、アプリの起動時の外観を定義します。  
+ユーザーがモバイル ホームスクリーンにアプリを追加するには、Web アプリ マニフェストが必要です。  マニフェストは、アプリがホームスクリーンに表示される方法、ホーム画面から起動するときにユーザーを指示する場所、およびアプリの起動時の外観を定義します。  
 
 <!--Related Guides:  
 
@@ -60,23 +60,23 @@ ms.locfileid: "11234376"
 
 <!--TODO:  Link to sections when available. -->
 
-マニフェストを設定した後、アプリケーション パネルの **マニフェスト** ウィンドウを使用して **マニフェストを検査** できます。  
+マニフェストをセットアップした後、アプリケーション パネルの **[マニフェスト**] ウィンドウ**** を使用して検査できます。  
 
 :::image type="complex" source="../media/manifest-pane.msft.png" alt-text="マニフェスト ウィンドウ" lightbox="../media/manifest-pane.msft.png":::
-   マニフェスト**** ウィンドウ  
+   マニフェスト**ウィンドウ**  
 :::image-end:::  
 
-*   マニフェスト ソースを確認するには、アプリ マニフェスト**** ラベル \( 前の図の \) の下の `https://airhorner.com/manifest.json` リンクをクリックします。  
-<!-- *   Press the **Add to homescreen** button to simulate an Add to Homescreen event.  Check out the next section for more information.  -->  
-*   Identity **セクション** と **Presentation セクション** では、マニフェスト ソースのフィールドを、より使い分け的な表示に表示します。  
+*   マニフェスト ソースを確認するには、前の図の**** アプリ マニフェスト ラベル \( の下 `https://airhorner.com/manifest.json` にあるリンクを選択します\)。  
+<!-- *   Choose the **Add to homescreen** button to simulate an Add to Homescreen event.  Check out the next section for more information.  -->  
+*   **[Id]** セクション**と [プレゼンテーション]** セクションでは、マニフェスト ソースのフィールドをユーザーフレンドリーな表示に表示します。  
 *   [ **アイコン]** セクションには、指定したアイコンが表示されます。  
     
 <!--### Simulate Add to Homescreen events  -->
 
-<!--A web app can only be added to a homescreen when the site is visited at least twice, with at least five minutes between visits.  While developing or debugging your Add to Homescreen workflow, this criteria can be inconvenient.  
+<!--A web app may only be added to a homescreen when the site is visited at least twice, with at least five minutes between visits.  While developing or debugging your Add to Homescreen workflow, the criteria is potentially inconvenient.  
 The **Add to homescreen** button on the **App Manifest** pane lets you simulate Add to Homescreen events whenever you want.  -->
 
-<!--You can test out this feature with the [Microsoft I/O 2016 progressive web app](https://events.alpahabet.com/io2016/), which has proper support for Add to Homescreen.  Clicking on **Add to Homescreen** while the app is open prompts Microsoft Edge to display the "add this site to your shelf" banner, which is the desktop equivalent of the "add to homescreen" banner for mobile devices.  -->
+<!--You may test out this feature with the [Microsoft I/O 2016 progressive web app](https://events.alpahabet.com/io2016/), which has proper support for Add to Homescreen.  Choosing on **Add to Homescreen** while the app is open prompts Microsoft Edge to display the "add this site to your shelf" banner, which is the desktop equivalent of the "add to homescreen" banner for mobile devices.  -->
 
 <!--  
 :::image type="complex" source="../media/io.msft.png" alt-text="Add to desktop shelf" lightbox="../media/io.msft.png":::
@@ -88,17 +88,17 @@ The **Add to homescreen** button on the **App Manifest** pane lets you simulate 
 > [!Tip]
 > Keep the **Console** drawer open while simulating Add to Homescreen events.  The Console tells you if your manifest has any issues and logs other information about the Add to Homescreen lifecycle.  -->
 
-<!--The **Add to Homescreen** feature cannot yet simulate the workflow for mobile devices.  Notice how the "add to shelf" prompt was triggered in the screenshot above, even though DevTools is in Device Mode.  However, if you can successfully add your app to your desktop shelf, then it'll work for mobile, too.  -->
+<!--The **Add to Homescreen** feature may not yet simulate the workflow for mobile devices.  Notice how the "add to shelf" prompt was triggered in the screenshot above, even though DevTools is in Device Mode.  However, if you may successfully add your app to your desktop shelf, then it works for mobile, too.  -->
 
 <!-- TODO: Rework content after sample app is created. -->
 
-<!--If you want to test out the genuine mobile experience, you can connect a real mobile device to DevTools via **remote debugging**, and then click the **Add to Homescreen** button \(on DevTools\) to trigger the "add to homescreen" prompt on the connected mobile device.  -->
+<!--If you want to test out the genuine mobile experience, you may connect a real mobile device to DevTools via **remote debugging**, and then choose the **Add to Homescreen** button \(on DevTools\) to trigger the "add to homescreen" prompt on the connected mobile device.  -->
 
 <!--TODO:  Link Debug "remote debugging" sections when available. -->
 
-## サービス ワーカー  
+## <a name="service-workers"></a>サービス ワーカー  
 
-サービス ワーカーは、将来の Web プラットフォームの基本的なテクノロジです。  これらは、Web ページとは別に、ブラウザーがバックグラウンドで実行されるスクリプトです。  これらのスクリプトを使用すると、プッシュ通知、バックグラウンド同期、オフライン エクスペリエンスなど、Web ページやユーザー操作を必要としない機能にアクセスできます。  
+サービス ワーカーは、将来の Web プラットフォームの基本的なテクノロジです。  これらは、Web ページとは別に、ブラウザーがバックグラウンドで実行するスクリプトです。  スクリプトを使用すると、プッシュ通知、バックグラウンド同期、オフライン エクスペリエンスなど、Web ページやユーザー操作を必要とせずに機能にアクセスできます。  
 
 <!--Related Guides:  
 
@@ -107,25 +107,25 @@ The **Add to homescreen** button on the **App Manifest** pane lets you simulate 
     
 <!--TODO:  Link to sections when available. -->  
 
-アプリケーション**パネルの [** サービス**** ワーカー] ウィンドウは、サービス ワーカーを検査およびデバッグする DevTools の主要な場所です。  
+[ **アプリケーション] パネルの** [ **サービス** ワーカー] ウィンドウは、サービス ワーカーを検査およびデバッグする DevTools の主要な場所です。  
 
 :::image type="complex" source="../media/service-workers-pane.msft.png" alt-text="[サービス ワーカー] ウィンドウ" lightbox="../media/service-workers-pane.msft.png":::
    [ **サービス ワーカー]** ウィンドウ  
 :::image-end:::  
 
-*   サービス ワーカーが現在開いているページにインストールされている場合、このウィンドウに表示されます。  たとえば、前の図では、次の範囲のサービス ワーカーがインストールされています `https://weather-pwa-sample.firebaseapp.com` 。  
-*   [ **オフライン]** チェック ボックスをオンにすると、DevTools はオフライン モードになります。  これは、[ネットワーク] パネルから使用できるオフライン**** モード、またはコマンド メニュー `Go offline` のオプションと[同じです][DevtoolsCommandMenuIndex]。  
-*   [再 **読み込み時に** 更新] チェック ボックスをオンにすると、サービス ワーカーはページの読み込みごとに強制的に更新されます。  
-*   [ **ネットワークのバイパス] チェック** ボックスは、サービス ワーカーをバイパスし、要求されたリソースのネットワークにブラウザーを強制的に移動します。  
+*   サービス ワーカーが現在開いているページにインストールされている場合は、このウィンドウに表示されます。  たとえば、前の図では、 のスコープにサービス ワーカーがインストールされています `https://weather-pwa-sample.firebaseapp.com` 。  
+*   [ **オフライン]** チェック ボックスをオンにすると、DevTools はオフライン モードになります。  これは、ネットワーク ツールで使用できるオフライン**** モード、またはコマンド `Go offline` メニューのオプションと[同じです][DevtoolsCommandMenuIndex]。  
+*   [再 **読み込み時に更新** ] チェック ボックスをオンにすると、サービス ワーカーはページの読み込みごとに強制的に更新されます。  
+*   [ **ネットワークのバイパス]** チェック ボックスは、サービス ワーカーをバイパスし、要求されたリソースのネットワークにブラウザーを強制的に移動します。  
 *   [ **更新]** ボタンは、指定したサービス ワーカーの 1 回の更新を実行します。  
-*   プッシュ **ボタン** は、ペイロード \(ティック \ とも呼ばれる) なしでプッシュ通知 **をエミュレート**します。  
+*   プッシュ **ボタン** は、ペイロード \(くすぐり \とも呼ばれる) なしでプッシュ通知を **エミュレート**します。  
 *   [ **同期]** ボタンは、バックグラウンド同期イベントをエミュレートします。  
-*   [ **登録解除]** ボタンは、指定したサービス ワーカーの登録を解除します。  サービス ワーカー [の登録を](#clear-storage) 解除し、1 回のボタン クリックでストレージとキャッシュをワイプする方法については、「ストレージのクリア」を参照してください。  
-*   [ **ソース]** 行は、現在実行中のサービス ワーカーがインストールされた時間を示します。  リンクは、サービス ワーカーのソース ファイルの名前です。  リンクをクリックすると、サービス ワーカーのソースに送信されます。  
-*   [ **状態]** 行は、サービス ワーカーの状態を示します。  緑色のステータス インジケーター \( 前の図\) の横にある ID 番号は、現在アクティブ `#36` なサービス ワーカー用です。  状態の横には、開始ボタン \(サービス ワーカーが停止している場合\) または停止ボタン**** \(サービス ワーカーが実行中の場合\) が表示されます。 ****  サービス ワーカーは、いつでもブラウザーによって停止および開始するように設計されています。  停止ボタンを使用してサービス ワーカーを明示的に **停止** すると、その動作をシミュレートできます。  サービス ワーカーを停止すると、サービス ワーカーが再び起動するときにコードがどのように動作するのかをテストできます。  永続的なグローバル状態に関する誤った前提により、バグが頻繁に明らかになります。  
-*   [ **クライアント]** 行は、サービス ワーカーのスコープが設定されている発生元を示します。  フォーカス **ボタンは** 、[すべての表示] チェック ボックスを有効にした場合 **に最も便利** です。  このチェック ボックスを有効にすると、登録されているサービス ワーカーすべてが一覧表示されます。  別のタブで実行**** されているサービス ワーカーの横にあるフォーカス ボタンをクリックすると、Microsoft Edge ではそのタブに焦点が当てられています。  
+*   [ **登録解除** ] ボタンは、指定したサービス ワーカーの登録を解除します。  サービス ワーカー [の登録を](#clear-storage) 解除し、1 つのボタンでストレージとキャッシュをワイプする方法については、「ストレージをクリアする」を参照してください。  
+*   [ **ソース]** 行は、現在実行中のサービス ワーカーがインストールされた時間を示します。  リンクは、サービス ワーカーのソース ファイルの名前です。  リンクを選択すると、サービス ワーカーのソースに送信されます。  
+*   [ **状態]** 行には、サービス ワーカーの状態が表示されます。  緑の状態インジケーター \( 前の図\) の横にある ID 番号は、現在アクティブ `#36` なサービス ワーカー用です。  状態の横には、開始**** ボタン \(サービス ワーカーが停止している場合\) または**** 停止ボタン \(サービス ワーカーが実行されている場合\) が表示されます。  サービス ワーカーは、いつでもブラウザーによって停止および開始するように設計されています。  停止ボタンを使用してサービス ワーカーを明示的に **停止** すると、その操作をシミュレートできます。  サービス ワーカーを停止すると、サービス ワーカーが再びバックアップを開始するときにコードがどのように動作するのかをテストできます。  これは、永続的なグローバル状態に関する誤った仮定によるバグを頻繁に明らかにします。  
+*   [ **クライアント]** 行には、サービス ワーカーのスコープが設定されている起点が示されます。  フォーカス **ボタンは** 、[すべて表示] チェック ボックスを有効にした場合 **に主に便利** です。  このチェック ボックスを有効にすると、登録されているサービス ワーカーすべてが一覧表示されます。  別のタブで実行 **されている** サービス ワーカーの横にあるフォーカス ボタンを選択した場合、Microsoft Edge ではそのタブに重点を置きます。  
     
-サービス ワーカーがエラーを発生すると、Errors という新しいラベル **が** 表示されます。  
+サービス ワーカーがエラーを発生すると、Errors という名前の新しいラベル **が** 表示されます。  
 
 <!--  
 :::image type="complex" source="../media/sw-error.msft.png" alt-text="Service worker with errors" lightbox="../media/sw-error.msft.png":::
@@ -136,35 +136,35 @@ The **Add to homescreen** button on the **App Manifest** pane lets you simulate 
 <!--TODO:  Capture Service Worker Errors sample when available. -->
 <!--TODO:  Link Web "How tickle works" sections when available. -->
 
-## サービス ワーカー キャッシュ  
+## <a name="service-worker-caches"></a>サービス ワーカー キャッシュ  
 
-[ **キャッシュ ストレージ]** ウィンドウには、\(サービス ワーカー\) キャッシュ API を使用してキャッシュされたリソースの読み取り専用リストが [表示されます][MDNWebCacheAPI]。  
+[ **キャッシュ ストレージ]** ウィンドウには、\(service worker\) キャッシュ API を使用してキャッシュされたリソースの読み取り専用 [リストが表示されます][MDNWebCacheAPI]。  
 
-:::image type="complex" source="../media/cache-pane-cache-storage-resources.msft.png" alt-text="[キャッシュストレージ] ウィンドウ" lightbox="../media/cache-pane-cache-storage-resources.msft.png":::
-   [ **キャッシュストレージ]** ウィンドウ  
+:::image type="complex" source="../media/cache-pane-cache-storage-resources.msft.png" alt-text="キャッシュ ストレージ ウィンドウ" lightbox="../media/cache-pane-cache-storage-resources.msft.png":::
+   キャッシュ**ストレージ ウィンドウ**  
 :::image-end:::  
 
 > [!NOTE]
-> 初めてキャッシュを開いてリソースを追加すると、DevTools が変更を検出しない可能性があります。  ページを再読み込みすると、キャッシュが表示されます。  
+> キャッシュを初めて開いてリソースを追加すると、DevTools によって変更が検出されない場合があります。  ページを更新し、キャッシュを表示します。  
 
-2 つ以上のキャッシュを開いている場合は、[キャッシュ ストレージ] ドロップダウンの下にキャッシュ **が表示** されます。  
+2 つ以上のキャッシュを開いている場合、キャッシュは次の [キャッシュ ストレージ] ドロップダウンの下 **に表示** されます。  
 
 :::image type="complex" source="../media/cache-pane-cache-storage.msft.png" alt-text="[キャッシュ ストレージ] ドロップダウン" lightbox="../media/cache-pane-cache-storage.msft.png":::
-   [ **キャッシュ ストレージ]** ドロップダウン  
+   [**キャッシュ ストレージ] ドロップダウン**  
 :::image-end:::  
 
-## クォータの使用状況  
+## <a name="quota-usage"></a>クォータ使用量  
 
-[キャッシュ ストレージ] ウィンドウ **内の一部の** 応答は、"不透明" としてフラグが設定される場合があります。  これは[、CORS][FetchHttpCorsProtocol]が有効になっていない場合に **、CDN**やリモート API など、別の配信元から取得された応答を指します。  
+[キャッシュ ストレージ] ウィンドウ **内の一部の** 応答には、"不透明" というフラグが設定されている場合があります。  これは[、CORS][FetchHttpCorsProtocol]が有効になっていない場合に **、CDN**やリモート API など、別の配信元から取得された応答を指します。  
 
 <!--TODO:  Link Web "CDN" section when available. -->  
 <!--TODO:  Link Web "opaque" section when available. -->
 
-クロスドメイン情報の漏洩を回避するために、ストレージ クォータの制限 \(例外がスローされたかどうかなど) を計算するために使用される不透明な応答のサイズに大幅なパディングが追加され `QuotaExceeded` 、API によって報告されます。 `navigator.storage`  
+クロスドメイン情報の漏洩を回避するために、ストレージ クォータ制限の計算に使用される不透明な応答のサイズに大きな埋め込み (たとえば、例外がスロー `QuotaExceeded` されるかどうか\) が `navigator.storage` 追加され、API によって報告されます。  
 
 <!--TODO:  Link Estimating "`navigator.storage` API" sections when available. -->
 
-このパディングの詳細はブラウザーによって異なりますが、Microsoft Edge の場合、単**** 一キャッシュされた不透明な応答が記憶域全体の使用量に与える最小サイズは約[7 MB][ChromiumIssues796060#c17]です。  これは、キャッシュする不透明な応答の数を決定する際に念頭に置く必要があります。これは、ストレージ クォータの制限を、不透明なリソースの実際のサイズに基づいて予想するよりもずっと早く簡単に超過する可能性があるからです。  
+このパディングの詳細はブラウザーによって異なりますが、Microsoft Edge の場合、キャッシュ**** された 1 回の不透明な応答がストレージ全体の使用量に与える最小サイズは約[7 メガバイト][ChromiumIssues796060#c17]です。  キャッシュする不透明な応答の数を決定する場合は、不透明なリソースの実際のサイズに基づいて、ストレージ クォータの制限をはるかに早く超える可能性があります。  
 
 関連ガイド:  
 
@@ -173,9 +173,9 @@ The **Add to homescreen** button on the **App Manifest** pane lets you simulate 
     
 <!--TODO:  Link Work container storage quota for opaque responses section when available. -->
 
-## ストレージのクリア  
+## <a name="clear-storage"></a>ストレージのクリア  
 
-[ **ストレージのクリア]** ウィンドウは、段階的な Web アプリを開発するときに非常に便利な機能です。  このウィンドウでは、サービス ワーカーの登録を解除し、ボタンを 1 回クリックしてすべてのキャッシュとストレージをクリアできます。  <!--Check out the section below to learn more.  -->
+[ **ストレージのクリア]** ウィンドウは、プログレッシブ Web アプリを開発するときに非常に便利な機能です。  このウィンドウでは、サービス ワーカーの登録を解除し、1 つのボタンですべてのキャッシュとストレージをクリアできます。  <!--Check out the section below to learn more.  -->
 
 <!--Related Guides:  
 
@@ -192,15 +192,15 @@ Related Guides:
 *   [Inspect page resources](/iterate/manage-data/page-resources)  
 *   [Inspect and manage local storage and caches](/iterate/manage-data/local-storage)  -->
     
-## Microsoft Edge DevTools チームと連絡を取る  
+## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームと連絡を取る  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
 <!-- links -->  
 
-[DevtoolsCommandMenuIndex]: ../command-menu/index.md "Microsoft Edge DevTools コマンド メニューを使用してコマンドを実行する |Microsoft Docs"  
+[DevtoolsCommandMenuIndex]: ../command-menu/index.md "Microsoft Edge DevTools コマンド メニュー を使用してコマンドを実行|Microsoft Docs"  
 
-[ChromiumIssues796060#c17]: https://bugs.chromium.org/p/chromium/issues/detail?id=796060#c17 "Chromium の問題 796060: 分析コードが html 内にある場合、更新ごとにキャッシュ ストレージの値が増加する"  
+[ChromiumIssues796060#c17]: https://bugs.chromium.org/p/chromium/issues/detail?id=796060#c17 "クロムの問題 796060: Analytics コードが html 内にあるとき、キャッシュ ストレージの値が更新ごとに上昇する"  
 
 [FetchHttpCorsProtocol]: https://fetch.spec.whatwg.org/#http-cors-protocol  
 

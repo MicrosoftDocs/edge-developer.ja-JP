@@ -1,18 +1,18 @@
 ---
-description: Microsoft Edge DevTools の [ソース] パネルで、ファイルの表示と編集、スニペットの作成、JavaScript のデバッグ、ワークスペースの設定を行います。
+description: ファイルの表示と編集、スニペットの作成、JavaScript のデバッグ、Microsoft Edge DevTools の [ソース] パネルでのワークスペースの設定。
 title: ソース パネルの概要
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 12/17/2020
+ms.date: 02/12/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge, web 開発, f12 ツール, devtools
-ms.openlocfilehash: b90f927670146c004a335256ace28203219442eb
-ms.sourcegitcommit: a35a6b5bbc21b7df61d08cbc6b074b5325ad4fef
+ms.openlocfilehash: 4677bf82d3506a4b8d6336ded7ab557b794fd3df
+ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "11234496"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "11397763"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -28,7 +28,7 @@ ms.locfileid: "11234496"
    See the License for the specific language governing permissions and
    limitations under the License.  -->
 
-# ソース パネルの概要  
+# <a name="sources-panel-overview"></a>ソース パネルの概要  
 
 Microsoft Edge DevTools **ソース** パネルを使用して、次の操作を実行します。  
 
@@ -38,12 +38,12 @@ Microsoft Edge DevTools **ソース** パネルを使用して、次の操作を
 *   [JavaScript をデバッグ](#debug-javascript)。  
 *   [ワークスペースをセット アップ](#set-up-a-workspace)して、DevTools で行った変更がファイル システムのコードに保存されるようにします。  
     
-## ファイルを表示する  
+## <a name="display-files"></a>ファイルの表示  
 
-ページ ウィンドウ **を使用** して、ページが読み込まれたすべてのリソースを表示します。
+[ページ] **パネルを使用** します。をクリックして、ページが読み込まれたすべてのリソースを表示します。
 
-:::image type="complex" source="../media/sources-page-pane.msft.png" alt-text="ページウィンドウ" lightbox="../media/sources-page-pane.msft.png":::
-   **ページ**ウィンドウ  
+:::image type="complex" source="../media/sources-page-pane.msft.png" alt-text="[ページ] パネル" lightbox="../media/sources-page-pane.msft.png":::
+   [ **ページ]** パネル  
 :::image-end:::  
 
 **ページ**ウィンドウの構成:  
@@ -51,13 +51,13 @@ Microsoft Edge DevTools **ソース** パネルを使用して、次の操作を
 *   `docs.microsoft.com`上の図のように、第 2 レベルは [起点][HtmlstandardOrigin]を表します。  
 *   第 3 レベル、第 4 レベルとそれ以降は、その起点から読み込まれたディレクトリとリソースを表します。  たとえば、前の図では、リソースへの完全なパス `devtools-guide-chromium` は `docs.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium`  
     
-[ページ] ウィンドウでファイル **を選択** し、[エディター] ウィンドウに内容 **を表示** します。  任意の種類のファイルを表示できます。  画像の場合、画像のプレビューが表示されます。  
+[ページ] パネルでファイル **を選択** して、[エディター] ウィンドウにコンテンツ **を表示** します。  任意の種類のファイルを表示できます。  画像の場合、画像のプレビューが表示されます。  
 
-:::image type="complex" source="../media/sources-editor-pane.msft.png" alt-text="[エディター] ウィンドウにa4d10f71.index-docs.jsコンテンツを表示する" lightbox="../media/sources-editor-pane.msft.png":::
-   エディター ウィンドウに `a4d10f71.index-docs.js` 内容を **表示** する  
+:::image type="complex" source="../media/sources-editor-pane.msft.png" alt-text="[エディター] ウィンドウにa4d10f71.index-docs.jsの内容を表示する" lightbox="../media/sources-editor-pane.msft.png":::
+   エディター パネルに内容 `a4d10f71.index-docs.js` を **表示** する  
 :::image-end:::  
 
-## CSS と JavaScript を編集する  
+## <a name="edit-css-and-javascript"></a>CSS と JavaScript を編集する  
 
 [ **エディター** ] ウィンドウを使って、CSS と JavaScript を編集します。  DevTools はページを更新して、新しいコードを実行します。  たとえば、次のようなスタイル ルールを追加して CSS ファイルを編集するとします。
 
@@ -73,17 +73,17 @@ Microsoft Edge DevTools **ソース** パネルを使用して、次の操作を
    [ **エディター** ] ウィンドウで [CSS の編集] を行うと、字幕のテキストの色が赤に変更されます。  
 :::image-end:::  
 
-CSS の変更は直ちに有効になります。保存する必要はありません。  JavaScript の変更を有効にするには`Control`+`S` [\(Windows, Linux\)] または`Command`+`S` [\(macOS\)] を選択します。  DevTools ではスクリプトは再実行されないため、 JavaScript の変更で有効にできるのは、関数内で行う変更のみです。  たとえば、次の図でどのような場合に `console.log('A')`実行されないか、それに対して `console.log('B')` 実行されるかに注意してください。  DevTools を変更した後でスクリプト全体を再実行すると、テキストは `A` **本体**に記録されます。  
+CSS の変更は直ちに有効になります。保存する必要はありません。  JavaScript の変更を有効にするには`Control`+`S` [\(Windows, Linux\)] または`Command`+`S` [\(macOS\)] を選択します。  DevTools ではスクリプトは再実行されないため、 JavaScript の変更で有効にできるのは、関数内で行う変更のみです。  たとえば、次の図でどのような場合に `console.log('A')`実行されないか、それに対して `console.log('B')` 実行されるかに注意してください。  DevTools が変更後にスクリプト全体を再び実行すると、テキストは `A` コンソールに記録 **されます**。  
 
 :::image type="complex" source="../media/edit-js.msft.png" alt-text="[エディター] ウィンドウでの JavaScript の編集" lightbox="../media/edit-js.msft.png":::
-   [ **エディター** ] ウィンドウでの JavaScript の編集  
+   エディター パネルでの JavaScript **の** 編集  
 :::image-end:::  
 
-DevTools は、ページの再読み込み時に CSS と JavaScript の変更を消去します。  ファイル システムへの変更を保存する方法については、「 [ワークスペースのセット アップ](#set-up-a-workspace)」へ移動して参照してください。  
+ページを更新すると、DevTools は CSS と JavaScript の変更を消去します。  ファイル システムへの変更を保存する方法については、「 [ワークスペースのセット アップ](#set-up-a-workspace)」へ移動して参照してください。  
 
-## スニペットの作成、保存、および実行  
+## <a name="create-save-and-run-snippets"></a>スニペットの作成、保存、および実行  
 
-スニペットは、任意のページで実行できるスクリプトです。  コンソールから jQuery コマンドを実行するために、jQuery ライブラリをページに挿入するために、コンソールで次のコードを繰り返し入力すると**します。** ****  
+スニペットは、任意のページで実行できるスクリプトです。  jQuery ライブラリをページに挿入するために、コンソールで**** 次のコードを繰り返し入力して、コンソールから jQuery コマンドを実行できると**します**。  
 
 ```javascript
 let script = document.createElement('script');
@@ -101,14 +101,14 @@ document.head.appendChild(script);
 
 **スニペット**を実行するには、次の操作を行います。
 
-*   [**スニペット**] ウィンドウを使ってファイルを開き、[**実行** \(![ボタンの実行][ImageRunIcon]\)] を選びます。  
-*   コマンド メニュー[を開き][DevtoolsGuideChromiumCommandMenuIndex]、文字を削除し、スニペットの名前を入力して `>` `!` 選択します**** `Enter` 。  
+*   [スニペット] パネルを使用 **してファイルを開** き、[ **実行** ] \( [実行] ![ ボタン ][ImageRunIcon] \) を選択します。  
+*   コマンド メニュー [を開き、][DevtoolsGuideChromiumCommandMenuIndex]文字を削除 `>` し、タイプし、スニペットの名前を `!` **入力**して、 を選択します `Enter` 。  
     
 詳細については「[任意のページからコードのスニペットを実行][DevtoolsGuideChromiumJavascriptSnippets]」へ移動して参照してください。
 
-## JavaScript のデバッグ   
+## <a name="debug-javascript"></a>JavaScript のデバッグ   
 
-`console.log()` を使って JavaScript に問題が発生した場所を推測するのではなく、Microsoft Edge DevTools デバッグ ツールの使用を検討してください。  一般的な考え方として、ブレーク ポイントを設定します。これは、コードの中で意図的に停止する場所です。その後、コードの実行時に 1 行ずつ手順を実行します。  コードをステップ実行すると、現在定義されているプロパティと変数の値を表示および変更し、コンソールで JavaScript を実行できます****。
+`console.log()` を使って JavaScript に問題が発生した場所を推測するのではなく、Microsoft Edge DevTools デバッグ ツールの使用を検討してください。  一般的な考え方として、ブレーク ポイントを設定します。これは、コードの中で意図的に停止する場所です。その後、コードの実行時に 1 行ずつ手順を実行します。  コードをステップ実行すると、現在定義されているプロパティと変数の値を表示および変更し、コンソールで JavaScript **を実行**できます。
 
 「[JavaScript のデバッグの概要][DevtoolsGuideChromiumJavascriptIndex]」に移動して、DevTools でのデバッグの基礎を学びます。
 
@@ -116,13 +116,13 @@ document.head.appendChild(script);
    JavaScript のデバッグ   
 :::image-end:::  
 
-## ワークスペースを設定する  
+## <a name="set-up-a-workspace"></a>ワークスペースを設定する  
 
-既定では、ソース ツールでファイルを編集**** すると、ページを再読み込みすると、それらの変更は失われます。  **ワークスペース** を使用すると、DevTools で行った変更をファイル システムに保存することができます。  基本的に、DevTools はコード エディターとして使うことができます。
+既定では、[ソース] ツールでファイルを**** 編集すると、ページを更新するとそれらの変更は失われます。  **ワークスペース** を使用すると、DevTools で行った変更をファイル システムに保存することができます。  基本的に、DevTools はコード エディターとして使うことができます。
 
 作業を開始するには、「[ワークスペースでファイルを編集][DevtoolsGuideChromiumWorkspacesIndex]」に移動します。
 
-## Microsoft Edge DevTools チームと連絡を取る  
+## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームと連絡を取る  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
@@ -132,10 +132,10 @@ document.head.appendChild(script);
 
 <!-- links -->  
 
-[DevtoolsGuideChromiumCommandMenuIndex]: ../command-menu/index.md "Microsoft Edge DevTools コマンド メニューを使用してコマンドを実行する |Microsoft Docs"  
-[DevtoolsGuideChromiumJavascriptIndex]: ../javascript/index.md "Microsoft Edge DevTools での JavaScript のデバッグを開始する |Microsoft Docs"  
-[DevtoolsGuideChromiumJavascriptSnippets]: ../javascript/snippets.md "Microsoft Edge DevTools を使用して任意のページで JavaScript のスニペットを実行する |Microsoft Docs"  
-[DevtoolsGuideChromiumWorkspacesIndex]: ../workspaces/index.md "ワークスペースを使用してファイルを編集する |Microsoft Docs"  
+[DevtoolsGuideChromiumCommandMenuIndex]: ../command-menu/index.md "Microsoft Edge DevTools コマンド メニュー を使用してコマンドを実行|Microsoft Docs"  
+[DevtoolsGuideChromiumJavascriptIndex]: ../javascript/index.md "Microsoft Edge DevTools の JavaScript のデバッグの|Microsoft Docs"  
+[DevtoolsGuideChromiumJavascriptSnippets]: ../javascript/snippets.md "Microsoft Edge DevTools を使用して任意のページで JavaScript のスニペットを実行|Microsoft Docs"  
+[DevtoolsGuideChromiumWorkspacesIndex]: ../workspaces/index.md "Workspaces を使用してファイルを編集|Microsoft Docs"  
 
 [HtmlstandardOrigin]: https://html.spec.whatwg.org/multipage/origin.html#origin "Origin |HTML 標準"  
 

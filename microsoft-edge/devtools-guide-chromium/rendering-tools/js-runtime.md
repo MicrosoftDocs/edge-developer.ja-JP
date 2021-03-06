@@ -1,18 +1,18 @@
 ---
-description: Microsoft Edge DevTools メモリパネルを使用して、負荷の高い機能を特定します。
+description: Microsoft Edge DevTools メモリ パネルを使用して、高価な関数を識別します。
 title: JavaScript ランタイムを高速化する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 10/19/2020
+ms.date: 02/12/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: f3cf0440579865495f4afc8b1ae4e3940af7b04f
-ms.sourcegitcommit: 99eee78698dc95b2a3fa638a5b063ef449899cda
+ms.openlocfilehash: 682001ae8d265b342e5d6e0725f9f8ac4e298cf8
+ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "11125357"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "11397602"
 ---
 <!-- Copyright Kayce Basques and Meggin Kearney
 
@@ -28,120 +28,120 @@ ms.locfileid: "11125357"
    See the License for the specific language governing permissions and
    limitations under the License. -->
 
-# JavaScript ランタイムを高速化する  
+# <a name="speed-up-javascript-runtime"></a>JavaScript ランタイムを高速化する  
 
-**メモリ**パネルを使用して負荷の高い機能を特定します。  
+メモリ パネルを使用して、高価な **関数を識別** します。  
 
-:::image type="complex" source="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-heavy-bottom-up.msft.png" alt-text="サンプルプロファイル" lightbox="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-heavy-bottom-up.msft.png":::
-   サンプルプロファイル  
+:::image type="complex" source="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-heavy-bottom-up.msft.png" alt-text="サンプル プロファイル" lightbox="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-heavy-bottom-up.msft.png":::
+   サンプル プロファイル  
 :::image-end:::  
 
-### まとめ  
+### <a name="summary"></a>要約  
 
-*   呼び出された関数と、 **メモリ** パネルの割り当てサンプリングで必要なメモリの量を記録します。  
-*   プロファイルを炎のグラフとして視覚化します。  
+*   [メモリ] パネルの [割り当てサンプリング] を使用して、呼び出された関数と必要なメモリの量を **正確に記録** します。  
+*   プロファイルを炎上グラフとして視覚化します。  
     
-## サンプリングプロファイルを記録する  
+## <a name="record-a-sampling-profile"></a>サンプリング プロファイルの記録  
 
-JavaScript で jank に気付いた場合は、サンプリングプロファイルを収集します。  サンプリングプロファイルは、ページ内の関数で実行時間が消費される場所を示します。  
+JavaScript で jank に気付いた場合は、サンプリング プロファイルを収集します。  サンプリング プロファイルは、ページ内の関数に実行時間が費やされる場所を示します。  
 
-1.  DevTools の **メモリ** パネルに移動します。  
-1.  [ **割り当てのサンプリング** ] ラジオボタンを選択します。  
-1.  [ **開始**] を選びます。  
-1.  分析しようとしている内容に応じて、ページをもう一度読み込むか、ページを操作するか、またはページを実行します。  
-1.  完了したら、[ **停止** ] ボタンを選択します。  
+1.  DevTools **の [メモリ** ] パネルに移動します。  
+1.  [割り当 **てサンプリング] ラジオ ボタン** を選択します。  
+1.  [スタート **] を選択します**。  
+1.  分析しようとしている内容に応じて、ページを更新するか、ページを操作するか、ページを実行できます。  
+1.  完了したら **、[停止** ] ボタンを選択します。  
     
 > [!NOTE]
-> また、 [コンソールユーティリティ API][DevtoolsConsoleUtilities] を使って、コマンドラインからプロファイルの記録とグループ化を行うこともできます。  
+> コンソール ユーティリティ API [を使用して][DevtoolsConsoleUtilities] 、コマンド ラインからプロファイルを記録およびグループ化することもできます。  
 
-## サンプリングプロファイルを表示する  
+## <a name="view-sampling-profile"></a>サンプリング プロファイルの表示  
 
-録音が終了すると、DevTools は、記録されたデータを使って、[**サンプリングプロファイル**] の下に**メモリ**パネルを自動的に設定します。  
+録音が完了すると、DevTools は [******サンプリング**プロファイル] の [メモリ] パネルに、レコーディングのデータを自動的に設定します。  
 
-既定のビューは [ **ヘビー] (ボトムアップ)** です。  このビューでは、パフォーマンスに最も影響を及ぼしている関数を確認し、その機能への呼び出しパスを調べることができます。  
+既定のビューは **Heavy \(Bottom Up\) です**。  このビューでは、パフォーマンスに最も影響を与えた関数を確認し、各関数の要求パスを確認できます。  
 
-### 並べ替え順序を変更する  
+### <a name="change-sort-order"></a>並べ替え順序の変更  
 
-並べ替え順序を変更するには、[ **選択した関数** \ (フォーカス選択された関数 \)] の横にあるドロップダウンメニューを選択し、 ![ ][ImageFocusIcon] 次のいずれかのオプションを選択します。
+並べ替え順序を変更するには、フォーカス選択関数 **\(** フォーカス選択関数 \) アイコンの横にあるドロップダウン メニューを選択し、次のいずれかのオプション ![ ][ImageFocusIcon] を選択します。
 
-**グラフ**。  記録の時系列グラフを表示します。  
+**グラフ**.  記録の時系列グラフを表示します。  
 
-:::image type="complex" source="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-chart.msft.png" alt-text="サンプルプロファイル" lightbox="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-chart.msft.png":::
-   炎のグラフ  
+:::image type="complex" source="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-chart.msft.png" alt-text="フレーム グラフ" lightbox="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-chart.msft.png":::
+   フレーム グラフ  
 :::image-end:::  
 
-**ヘビー (ボトムアップ)**  パフォーマンスに影響を与えて関数を一覧表示し、関数への呼び出しパスを調べることができます。  これは既定のビューです。  
+**Heavy \(Bottom Up\)**.  パフォーマンスに影響を与える関数を一覧表示し、関数への呼び出しパスを確認できます。  これは既定のビューです。  
 
-:::image type="complex" source="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-heavy-bottom-up.msft.png" alt-text="サンプルプロファイル" lightbox="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-heavy-bottom-up.msft.png":::
-   ヘビーグラフ  
+:::image type="complex" source="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-heavy-bottom-up.msft.png" alt-text="重いグラフ" lightbox="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-heavy-bottom-up.msft.png":::
+   重いグラフ  
 :::image-end:::  
 
-**ツリー \ (上から下へ)**  呼び出し履歴の先頭から、呼び出し元の構造体の全体像が示されます。  
+**Tree \(Top Down\)**.  呼び出し履歴の上部から始まる呼び出し構造の全体像を示します。  
 
-:::image type="complex" source="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-tree-top-down.msft.png" alt-text="サンプルプロファイル" lightbox="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-tree-top-down.msft.png":::
-   ツリーグラフ  
+:::image type="complex" source="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-tree-top-down.msft.png" alt-text="ツリー グラフ" lightbox="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-tree-top-down.msft.png":::
+   ツリー グラフ  
 :::image-end:::  
 
-### 除外関数  
+### <a name="exclude-functions"></a>関数を除外する  
 
-サンプリングプロファイルから関数を除外するには、関数を選び、[ **選択した関数を除外** \ ( ![ 選択した関数 \ を除外 ][ImageExcludeIcon] )] ボタンを選択します。  除外関数 \ (子 \) の要求関数 \ (親 \) には、除外された関数 \ (子) に割り当てられた割り当て済みのメモリが割り当てられます。  
+サンプリング プロファイルから関数を除外するには、その関数を選択し、選択した **関数を除外** する \( 選択した関数 \) を ![ 除外するボタン ][ImageExcludeIcon] を選択します。  除外された関数 \(child\) の要求関数 \(parent\) は、除外された関数 \(child\) に割り当てられた割り当てられたメモリで課金されます。  
 
-すべての関数 **を復元** する (すべての関数を復元) ボタンを選択して、除外され ![ ][ImageRestoreIcon] た関数をすべて記録に戻します。  
+[すべての **関数を復元する** ] \( [すべての関数を復元する\] ボタンを選択して、除外されているすべての関数を記録 ![ ][ImageRestoreIcon] に戻します。  
 
-## サンプリングプロファイルをグラフとして表示する  
+## <a name="view-sampling-profile-as-chart"></a>サンプリング プロファイルをグラフとして表示する  
 
-グラフビューでは、時間の経過に伴うサンプリングプロファイルが視覚的に表示されます。  
+グラフ ビューは、サンプリング プロファイルの時間の間に視覚的な表現を提供します。  
 
-[サンプリングプロファイルを記録](#record-a-sampling-profile)したら、[[並べ替え順序](#change-sort-order)] を [**グラフ**] に変更して、記録を炎グラフとして表示します。  
+サンプリング プロファイル [を記録した後、](#record-a-sampling-profile)並べ替え順序を [グラフ] に変更して、録音をフレーム [グラフとして](#change-sort-order) 表示 **します**。  
 
-:::image type="complex" source="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-chart.msft.png" alt-text="サンプルプロファイル" lightbox="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-chart.msft.png":::
-   炎のグラフビュー  
+:::image type="complex" source="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-chart.msft.png" alt-text="フレーム グラフ ビュー" lightbox="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-chart.msft.png":::
+   フレーム グラフ ビュー  
 :::image-end:::  
 
-炎のグラフは、2つの部分に分かれています。  
+フレーム グラフは 2 つの部分に分割されます。  
 
-| 位置 | 領域 | 説明 |  
+| index | パーツ | 説明 |  
 | --- |:--- |:--- |  
-| 件 | 概要 | レコーディング全体の鳥ビュー。  バーの高さは、通話スタックの深度に対応しています。  そのため、バーが大きくなるほど、さらに多くのコールスタックが表示されます。  |  
-| 両面 | 通話スタック | これは、記録中に呼び出された関数の詳細ビューです。  横軸は time と縦軸で、通話スタックです。  スタックは、上から順に並べて整理されます。  そのため、先頭の関数は、その下にある関数の下にあります。  |  
+| 1 | 概要 | 記録全体の鳥の目のビュー。  バーの高さは、呼び出し履歴の深さに対応します。  そのため、バーが高いほど、呼び出し履歴は深くなります。  |  
+| 2 | 呼び出し履歴 | これは、記録中に呼び出された関数の詳細なビューです。  横軸は時間、縦軸は呼び出し履歴です。  スタックはトップダウンで構成されます。  したがって、上の関数は、その下の関数を呼び出しました。  |  
 
-関数はランダムに色付けされます。  他のパネルで使用されている色との関連付けはありません。  ただし、各ランタイムでパターンを表示できるように、呼び出し時には関数の色が常に同じになります。  
+関数はランダムに色付けされます。  他のパネルで使用される色には相関関係はありません。  ただし、関数は常に呼び出し間で同じ色を付け、各ランタイムでパターンを観察できます。  
 
-:::image type="complex" source="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-chart-highlighted.msft.png" alt-text="サンプルプロファイル" lightbox="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-chart-highlighted.msft.png":::
-   注釈付きの炎のグラフ  
+:::image type="complex" source="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-chart-highlighted.msft.png" alt-text="注釈付きフレーム グラフ" lightbox="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-chart-highlighted.msft.png":::
+   注釈付きフレーム グラフ  
 :::image-end:::  
 
-長い通話スタックは必ずしも重大ではありません。これは、多くの関数が呼び出されたことを意味します。  ただし、ワイドバーは、関数が完了するまでに時間がかかりすぎることを意味します。  これらは最適化の候補です。  
+高い呼び出し履歴は必ずしも重要ではなく、多くの関数が呼び出されたという意味です。  ただし、幅の広いバーは、関数の完了に長い時間がかかったという意味です。  これらは最適化の候補です。  
 
-### 記録の特定の部分を拡大する  
+### <a name="zoom-in-on-specific-parts-of-recording"></a>記録の特定の部分を拡大する  
 
-呼び出し履歴の特定の部分を拡大するには、マウスを選択してから、[概要] にドラッグします。  拡大すると、選択した記録の一部が自動的に通話スタックに表示されます。  
+通話履歴の特定の部分を拡大するには、マウスの概要を左右に選択、保持、ドラッグします。  ズームすると、選択した録音の一部が通話履歴に自動的に表示されます。  
 
-:::image type="complex" source="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-chart-zoomed.msft.png" alt-text="サンプルプロファイル" lightbox="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-chart-zoomed.msft.png":::
-   拡大されたグラフ  
+:::image type="complex" source="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-chart-zoomed.msft.png" alt-text="グラフのズーム" lightbox="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-chart-zoomed.msft.png":::
+   グラフのズーム  
 :::image-end:::  
 
-### 関数の詳細の表示  
+### <a name="view-function-details"></a>関数の詳細を表示する  
 
-[関数] を選択して、[ **ソース** ] パネルで定義を表示します。  
+[ソース] パネルで定義を表示する **関数を選択** します。  
 
-関数の上にマウスポインターを移動すると、名前とタイミングのデータが表示されます。  以下の情報が提供されます。  
+関数にカーソルを合わせると、名前とタイミング データが表示されます。  以下の情報が提供されます。  
 
-| 詳しく | 説明 |  
+| 詳細 | 説明 |  
 |:--- |:--- |  
 | **Name (名前)** | 関数の名前。  |  
-| **自己サイズ** | 関数のステートメントのみを含む、関数の現在の呼び出しのサイズ。  |  
-| **合計サイズ** | この関数と呼び出された関数の現在の呼び出しのサイズ。  |  
-| **URL** | Where の形式での関数定義の場所は、関数が定義されている `base.js:261` `base.js` ファイルの名前であり、 `261` 定義の行番号です。  |  
+| **自己サイズ** | 関数の現在の呼び出しのサイズ (関数内のステートメントのみを含む)。  |  
+| **合計サイズ** | この関数の現在の呼び出しのサイズと、呼び出された関数。  |  
+| **URL** | where 形式の関数定義の場所は、関数が定義されているファイルの名前であり、定義の行 `base.js:261` `base.js` `261` 番号です。  |  
 <!--*   **Aggregated self time**.  Aggregate time for all invocations of the function across the recording, not including functions called by this function.  -->  
 <!--*   **Aggregated total time**.  Aggregate total time for all invocations of the function, including functions called by this function.  -->  
 <!--*   **Not optimized**.  If the profiler has detected a potential optimization for the function it lists it here.  -->  
 
-:::image type="complex" source="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-chart-hover.msft.png" alt-text="サンプルプロファイル" lightbox="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-chart-hover.msft.png":::
-   関数の詳細をグラフで表示する  
+:::image type="complex" source="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-chart-hover.msft.png" alt-text="グラフで関数の詳細を表示する" lightbox="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-chart-hover.msft.png":::
+   グラフで関数の詳細を表示する  
 :::image-end:::  
 
-## Microsoft Edge DevTools チームと連絡を取る  
+## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームと連絡を取る  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
@@ -153,15 +153,15 @@ JavaScript で jank に気付いた場合は、サンプリングプロファイ
 
 <!-- links -->  
 
-[DevtoolsConsoleUtilities]: ../console/utilities.md "コンソールユーティリティ API リファレンス |Microsoft ドキュメント"  
-[DevtoolsConsoleUtilitiesProfile]: ../console/utilities.md#profile "プロファイル-本体ユーティリティー API リファレンス |Microsoft ドキュメント"  
-[DevtoolsConsoleUtilitiesProfileEnd]: ../console/utilities.md#profileend "profileEnd-本体ユーティリティー API リファレンス |Microsoft ドキュメント"  
+[DevtoolsConsoleUtilities]: ../console/utilities.md "コンソール ユーティリティ API リファレンス |Microsoft Docs"  
+[DevtoolsConsoleUtilitiesProfile]: ../console/utilities.md#profile "profile - コンソール ユーティリティ API リファレンス |Microsoft Docs"  
+[DevtoolsConsoleUtilitiesProfileEnd]: ../console/utilities.md#profileend "profileEnd - コンソール ユーティリティ API リファレンス |Microsoft Docs"  
 
 > [!NOTE]
-> このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
-> 元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/rendering-tools/js-execution) にあり、 [Kayce basques][KayceBasques] テクニカルライター、Chrome Devtools \ & Lighthouse \) および [Meggin Kearney][MegginKearney] \ (Tech writer \) で作成されています。  
+> このページの一部の情報は、[Google によって作成および共有][GoogleSitePolicies]されている著作物に基づいており、[Creative Commons Attribution 4.0 International License][CCA4IL] に記載されている条項に従って使用されています。  
+> 元のページはここで[](https://developers.google.com/web/tools/chrome-devtools/rendering-tools/js-execution)見つかり[、Kayce バス][KayceBasques]ク人 \(Technical Writer, Chrome DevTools \& ライトハウス\) と[Meggin Kearney][MegginKearney] \(Tech Writer\) によって作成されています。  
 
-[![クリエイティブコモンズライセンス][CCby4Image]][CCA4IL]  
+[![Creative Commons ライセンス][CCby4Image]][CCA4IL]  
 この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。  
 
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  

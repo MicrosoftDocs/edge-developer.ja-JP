@@ -1,18 +1,18 @@
 ---
-description: Microsoft Edge DevTools ヒーププロファイラーを使用してヒープスナップショットを記録し、メモリリークを検出する方法について説明します。
-title: ヒープスナップショットの記録方法
+description: Microsoft Edge DevTools ヒープ プロファイラーを使用してヒープ スナップショットを記録し、メモリ リークを見つける方法について説明します。
+title: ヒープ スナップショットを記録する方法
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 10/19/2020
+ms.date: 02/12/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 9762cb1d4932ce1a5d0b1c3944aa0b85d78b1060
-ms.sourcegitcommit: 99eee78698dc95b2a3fa638a5b063ef449899cda
+ms.openlocfilehash: ce7a6f972bed386f96312808428bd74f1241668f
+ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "11125462"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "11397805"
 ---
 <!-- Copyright Meggin Kearney 
 
@@ -28,140 +28,140 @@ ms.locfileid: "11125462"
    See the License for the specific language governing permissions and
    limitations under the License.  -->
 
-# ヒープスナップショットの記録方法  
+# <a name="how-to-record-heap-snapshots"></a>ヒープ スナップショットを記録する方法  
 
-Microsoft Edge DevTools ヒーププロファイラーを使用してヒープスナップショットを記録し、メモリリークを検出する方法について説明します。  
+Microsoft Edge DevTools ヒープ プロファイラーを使用してヒープ スナップショットを記録し、メモリ リークを見つける方法について説明します。  
 
-Microsoft Edge DevTools ヒーププロファイラーは、JavaScript オブジェクトとページの関連する DOM ノードによるメモリ分布を示しています。  これは、JavaScript ヒープ \ (JS ヒープ) スナップショットの取得、メモリグラフの分析、スナップショットの比較、メモリリークの検出に使用します。  「 [オブジェクトを保持するツリー][DevtoolsMemoryProblems101ObjectsRetainingTree]」もご覧ください。  
+Microsoft Edge DevTools ヒープ プロファイラーは、ページの JavaScript オブジェクトと関連する DOM ノードによるメモリの分布を表示します。  JavaScript ヒープ \(JS heap\) スナップショットの取得、メモリ グラフの分析、スナップショットの比較、メモリ リークの検出に使用します。  [オブジェクト保持 [ツリー] に移動します][DevtoolsMemoryProblems101ObjectsRetainingTree]。  
 
-## スナップショットを撮る  
+## <a name="take-a-snapshot"></a>スナップショットを作成する  
 
-[ **メモリ** ] パネルで、[ **スナップショット**の作成] を選択し、[ **開始**] を選択します。  `Ctrl` + `E` \ (Windows、Linux \) または `Cmd` + `E` \ (macOS \) を選択することもできます。  
+[メモリ] **パネルで** 、[スナップショットの取得] **を選択し**、[スタート] を **選択します**。  `Ctrl` + `E` \(Windows, Linux\) または `Cmd` + `E` \(macOS\) を選択できます。  
 
-:::image type="complex" source="../media/memory-problems-gh-nodejs-benchmarks-run-memory-heap-snapshots.msft.png" alt-text="プロファイルの種類の選択" lightbox="../media/memory-problems-gh-nodejs-benchmarks-run-memory-heap-snapshots.msft.png":::
-   プロファイルの種類の選択  
+:::image type="complex" source="../media/memory-problems-gh-nodejs-benchmarks-run-memory-heap-snapshots.msft.png" alt-text="プロファイルの種類を選択する" lightbox="../media/memory-problems-gh-nodejs-benchmarks-run-memory-heap-snapshots.msft.png":::
+   プロファイルの種類を選択する  
 :::image-end:::  
 
-**スナップショット** は、最初はレンダラープロセスメモリに格納されます。  スナップショットは、スナップショットアイコンをクリックして表示すると、DevTools に転送されます。  
+**スナップショットは** 、最初はレンダラー プロセス メモリに格納されます。  スナップショットは、スナップショット アイコンを選択して表示するときに、オンデマンドで DevTools に転送されます。  
 
-スナップショットが DevTools に読み込まれ、解析されると、スナップショットのタイトルの下に表示される数値が表示され、 [アクセス可能な JavaScript オブジェクトの合計サイズ][DevtoolsMemoryProblems101ObjectSizes]が示されます。  
+スナップショットが DevTools に読み込まれ、解析された後、スナップショット タイトルの下の番号が表示され、到達可能な JavaScript オブジェクトの合計サイズ [が表示されます][DevtoolsMemoryProblems101ObjectSizes]。  
 
-:::image type="complex" source="../media/memory-problems-gh-nodejs-benchmarks-run-memory-heap-snapshots-all.msft.png" alt-text="プロファイルの種類の選択" lightbox="../media/memory-problems-gh-nodejs-benchmarks-run-memory-heap-snapshots-all.msft.png":::
+:::image type="complex" source="../media/memory-problems-gh-nodejs-benchmarks-run-memory-heap-snapshots-all.msft.png" alt-text="到達可能なオブジェクトの合計サイズ" lightbox="../media/memory-problems-gh-nodejs-benchmarks-run-memory-heap-snapshots-all.msft.png":::
    到達可能なオブジェクトの合計サイズ  
 :::image-end:::  
 
 > [!NOTE]
-> スナップショットには、到達可能なオブジェクトのみが含まれます。  また、スナップショットの取得は、常にガベージコレクションで開始されます。  
+> スナップショットには、到達可能なオブジェクトだけが含まれます。  また、スナップショットの取得は常にガベージ コレクションから始まります。  
 
-## スナップショットをクリアする  
+## <a name="clear-snapshots"></a>スナップショットのクリア  
 
-[ **すべてのプロファイルをクリア** ] アイコンを選択して、スナップショットを削除します (devtools から、およびレンダラープロセスに関連付けられているすべてのメモリの両方)。  
+[ **すべてのプロファイルをクリアする** ] アイコンを選択して、スナップショット \(DevTools とレンダラー プロセスに関連付けられているメモリの両方)を削除します。  
 
-:::image type="complex" source="../media/memory-problems-gh-nodejs-benchmarks-run-memory-heap-snapshots-all-hover-clear-all-profiles.msft.png" alt-text="プロファイルの種類の選択" lightbox="../media/memory-problems-gh-nodejs-benchmarks-run-memory-heap-snapshots-all-hover-clear-all-profiles.msft.png":::
-   スナップショットを削除する  
+:::image type="complex" source="../media/memory-problems-gh-nodejs-benchmarks-run-memory-heap-snapshots-all-hover-clear-all-profiles.msft.png" alt-text="スナップショットの削除" lightbox="../media/memory-problems-gh-nodejs-benchmarks-run-memory-heap-snapshots-all-hover-clear-all-profiles.msft.png":::
+   スナップショットの削除  
 :::image-end:::  
 
-DevTools ウィンドウを閉じると、レンダラープロセスに関連するメモリからプロファイルが削除されることはありません。  DevTools を再び開くと、以前に使用していたスナップショットがすべて、スナップショットの一覧に再び表示されます。  
+DevTools ウィンドウを閉じると、レンダラー プロセスに関連付けられたメモリからプロファイルは削除されません。  DevTools を再度開くと、以前に作成されたスナップショットすべてがスナップショットの一覧に再び表示されます。  
 
 > [!NOTE]
-> この例では、 [散在][GlitchDevtoolsMemoryExample03] しているオブジェクトの例を試して、ヒーププロファイラーを使ってそのオブジェクトをプロファイルしています。  いくつかの \ (オブジェクト \) 項目の割り当てが表示されます。  
+> この散布オブジェクトの例を [試し][GlitchDevtoolsMemoryExample03] 、ヒープ プロファイラーを使用してプロファイルを作成します。  \(object\) アイテムの割り当ての数が表示されます。  
 
-## スナップショットの表示  
+## <a name="view-snapshots"></a>スナップショットの表示  
 
-さまざまなタスクについてさまざまな視点からスナップショットを表示します。  
+タスクごとに異なる視点からスナップショットを表示します。  
 
-[**概要] ビュー**は、コンストラクター名によってグループ化されたオブジェクトを示しています。  このオブジェクトを使うと、コンストラクター名によってグループ化された型に基づいて、オブジェクト \ (およびメモリ使用量) を簡単に探すことができます。  これは、 **DOM リークを追跡**する場合に特に便利です。
+**概要ビューには、** コンストラクター名でグループ化されたオブジェクトが表示されます。  コンストラクター名でグループ化された型に基づいてオブジェクト \(およびメモリ使用\) を検索する場合に使用します。  DOM リークの追跡に **特に役立ちます**。
 
 <!--todo: add profile memory problems memory diagnosis (tracking down DOM leaks) section when available  -->  
 
-**比較ビュー**。  2つのスナップショットの差を表示します。  操作の前後の2つ以上のメモリスナップショットを比較するために使います。  解放されたメモリと参照カウントでデルタを調べると、メモリリークの有無と原因を確認できます。  
+**比較ビュー**.  2 つのスナップショットの違いを表示します。  操作の前と後の 2 つの \(or more\) メモリ スナップショットを比較する場合に使用します。  解放されたメモリと参照カウントでデルタを検査すると、メモリ リークの有無と原因を確認できます。  
 
-**コンテインメントビュー**。  ヒープの内容を調査できます。  **コンテインメントビュー** では、オブジェクト構造の詳細が表示され、グローバル名前空間 \ (ウィンドウ \) で参照されているオブジェクトを分析して、オブジェクトをどのように維持しているかを確認できます。  これを使って、クロージャを分析し、オブジェクトを低レベルで見ていきます。  
+**Containment ビュー**.  ヒープの内容の探索を許可します。  **Containment ビューは** 、オブジェクト構造のより良いビューを提供し、グローバル名前空間 \(window\) で参照されているオブジェクトを分析して、オブジェクトを保持しているオブジェクトを見つけるのに役立つ。  クロージャを分析し、低レベルでオブジェクトに飛び込む場合に使用します。  
 
-ビューを切り替えるには、ビューの上部にあるセレクターを使用します。  
+ビューを切り替える場合は、ビューの上部にあるセレクターを使用します。  
 
-:::image type="complex" source="../media/memory-problems-gh-nodejs-benchmarks-run-memory-heap-snapshots-view-dropdown.msft.png" alt-text="プロファイルの種類の選択" lightbox="../media/memory-problems-gh-nodejs-benchmarks-run-memory-heap-snapshots-view-dropdown.msft.png":::
-   ビューセレクターの切り替え  
+:::image type="complex" source="../media/memory-problems-gh-nodejs-benchmarks-run-memory-heap-snapshots-view-dropdown.msft.png" alt-text="ビューの切り替えセレクター" lightbox="../media/memory-problems-gh-nodejs-benchmarks-run-memory-heap-snapshots-view-dropdown.msft.png":::
+   ビューの切り替えセレクター  
 :::image-end:::  
 
 > [!NOTE]
-> すべてのプロパティが JavaScript ヒープに保存されるわけではありません。  ネイティブコードを実行する getter を使って実装されたプロパティはキャプチャされません。  また、数値などの文字列以外の値はキャプチャされません。  
+> 一部のプロパティが JavaScript ヒープに格納される場合があります。  ネイティブ コードを実行する getter を使用して実装されたプロパティはキャプチャされません。  また、数値などの文字列以外の値はキャプチャされません。  
 
-### サマリービュー  
+### <a name="summary-view"></a>概要ビュー  
 
-最初に、スナップショットが [概要] ビューで開き、次のようにオブジェクトの合計が表示されます。これは、インスタンスを表示するために展開することができます。  
+最初は、スナップショットが [概要] ビューに開き、オブジェクトの合計が表示され、インスタンスを表示するために展開される場合があります。  
 
-:::image type="complex" source="../media/memory-problems-gh-nodejs-benchmarks-run-memory-heap-snapshots-constructor-retainers.msft.png" alt-text="プロファイルの種類の選択" lightbox="../media/memory-problems-gh-nodejs-benchmarks-run-memory-heap-snapshots-constructor-retainers.msft.png":::
-   **サマリー** ビュー  
+:::image type="complex" source="../media/memory-problems-gh-nodejs-benchmarks-run-memory-heap-snapshots-constructor-retainers.msft.png" alt-text="概要ビュー" lightbox="../media/memory-problems-gh-nodejs-benchmarks-run-memory-heap-snapshots-constructor-retainers.msft.png":::
+   **概要ビュー**  
 :::image-end:::  
 
-トップレベルのエントリは、"合計" 行です。  
+トップ レベルのエントリは"合計" 行です。  
 
-| トップレベルのエントリ | 説明 |  
+| トップ レベルのエントリ | 説明 |  
 |:--- |:--- |  
-| **コンストラクター** | このコンストラクターを使用して作成されたすべてのオブジェクトを表します。  |  
-| **距離** | ノードの最短のシンプルパスを使用してルートへの距離を表示します。  |  
-| **浅いサイズ** | 特定のコンストラクター関数で作成されたすべてのオブジェクトの浅いサイズの合計を表示します。  緩斜面サイズとは、オブジェクトによって保持されているメモリのサイズです (一般的には、配列と文字列の緩斜面サイズが大きくなります)。  「 [オブジェクトサイズ][DevtoolsMemoryProblems101ObjectSizes]」もご覧ください。  |  
-| **保持サイズ** | 同じオブジェクトセット間で保持される最大のサイズを表示します。  オブジェクトが削除された後に解放できるメモリのサイズ \ (および依存関係がなくなります) は、保持されているサイズと呼ばれます。  「 [オブジェクトサイズ][DevtoolsMemoryProblems101ObjectSizes]」もご覧ください。  |  
+| **コンストラクター** | このコンストラクターを使用して作成されたオブジェクトを表します。  |  
+| **距離** | ノードの最短の単純パスを使用してルートまでの距離を表示します。  |  
+| **浅いサイズ** | 特定のコンストラクター関数によって作成されたオブジェクトの浅いサイズの合計を表示します。  浅いサイズは、オブジェクトが保持するメモリのサイズです (通常、配列と文字列は浅いサイズが大きくなります\)。  [オブジェクトの [サイズ] に移動します][DevtoolsMemoryProblems101ObjectSizes]。  |  
+| **保持サイズ** | 同じオブジェクト セットの中で保持される最大サイズを表示します。  オブジェクトが削除された後に解放できるメモリのサイズ \(および依存が到達不能になった\) は、保持されたサイズと呼ばれる。  [オブジェクトの [サイズ] に移動します][DevtoolsMemoryProblems101ObjectSizes]。  |  
 
 <!--| **Number of object instances** | Displayed in the # column.  |  -->  
 
-上のビューで合計行を展開すると、すべてのインスタンスが表示されます。  各インスタンスについて、"浅い" と "保持されるサイズ" が対応する列に表示されます。  文字の後に `@` 表示される数値は、オブジェクトの一意の ID です。ヒープスナップショットは、オブジェクトごとに比較できます。  
+上部ビューで合計行を展開すると、すべてのインスタンスが表示されます。  インスタンスごとに、浅いサイズと保持されたサイズが対応する列に表示されます。  文字の後の番号はオブジェクトの一意の ID で、オブジェクトごとにヒープ スナップショット `@` を比較できます。  
 
-黄色のオブジェクトには JavaScript 参照と赤のオブジェクトがあり、いずれかが黄色の背景で参照される切り離されたノードであることに注意してください。  
+黄色のオブジェクトは JavaScript 参照を持ち、赤いオブジェクトは、黄色の背景を持つノードから参照されるデタッチノードです。  
 
-**ヒーププロファイラーのさまざまなコンストラクター \ (グループ \) エントリに対応するものは何ですか?**  
+**ヒープ プロファイラーのさまざまなコンストラクター \(group\) エントリは何に対応しますか?**  
 
-:::image type="complex" source="../media/memory-problems-gh-nodejs-benchmarks-run-memory-heap-snapshots-constructor-highlight.msft.png" alt-text="プロファイルの種類の選択" lightbox="../media/memory-problems-gh-nodejs-benchmarks-run-memory-heap-snapshots-constructor-highlight.msft.png":::
-   **コンストラクター** グループ  
+:::image type="complex" source="../media/memory-problems-gh-nodejs-benchmarks-run-memory-heap-snapshots-constructor-highlight.msft.png" alt-text="コンストラクター グループ" lightbox="../media/memory-problems-gh-nodejs-benchmarks-run-memory-heap-snapshots-constructor-highlight.msft.png":::
+   **コンストラクター グループ**  
 :::image-end:::  
 
-| コンストラクター \ (グループ \) エントリ | 説明 |  
+| コンストラクター \(group\) エントリ | 説明 |  
 |:--- |:--- |  
-| **\ (グローバルプロパティ \)** | グローバルオブジェクトの間 ( `window` \) とそれが参照するオブジェクトの間の中間オブジェクト。  コンストラクターを使ってオブジェクトを作成 `Person` し、グローバルオブジェクトで保持している場合、保持パスは次のようになり `[global] > \(global property\) > Person` ます。  これは、オブジェクトが互いに直接参照する場合とは対照的です。  中間オブジェクトは、パフォーマンス上の理由で存在します。  グローバル変数は定期的に変更され、プロパティアクセスの最適化が行われます。グローバルでないオブジェクトには、グローバルには適用されません。  |  
-| **\ (ルート \)** | 保持ツリービューのルートエントリは、選択したオブジェクトを参照するエンティティです。  エンジン固有の目的で、エンジンによって作成された参照をエントリにすることもできます。  エンジンには参照オブジェクトをキャッシュしていますが、このような参照はすべて脆弱であり、実際には厳密な参照がないため、オブジェクトは収集されません。  |  
-| **\ (休業)** | 関数クロージャによってオブジェクトのグループに対する参照の数。  |  
-| **\ (配列, 文字列, 数値, regexp \)** | 配列、文字列、数値、または正規表現を参照するプロパティを持つオブジェクト型のリスト。  |  
-| **\ (コンパイル済みコード)** | コンパイル済みコードに関連するすべて。  スクリプトは関数と似ていますが、本文に対応してい `<script>` ます。  SharedFunctionInfos 機能 \ (SFI \) は、関数とコンパイルされたコードの間に位置するオブジェクトです。  関数は通常、コンテキストを持ちますが、SFIs はできません。  |  
-| **HTMLDivElement**、 **HTMLAnchorElement**、 **documentfragment**など。  | コードで参照されている特定の型の要素またはドキュメントオブジェクトへの参照。  |  
+| **\(global property\)** | グローバル オブジェクト \(\など) とによって参照される `window` オブジェクトとの間の中間オブジェクト。  オブジェクトがコンストラクターを使用して作成され、グローバル オブジェクトによって保持されている場合、保持パスは `Person` として表される場合があります `[global] > \(global property\) > Person` 。  これは、オブジェクトが互いに直接参照する標準とは対照的です。  パフォーマンス上の理由から、中間オブジェクトが存在します。  グローバルは定期的に変更され、プロパティ アクセスの最適化はグローバル 以外のオブジェクトに対して適切な処理を行います。グローバルオブジェクトには適用できません。  |  
+| **\(roots\)** | 保持ツリー ビューのルート エントリは、選択したオブジェクトへの参照を持つエンティティです。  エントリは、エンジン固有の目的でエンジンによって作成された参照である場合があります。  エンジンには参照オブジェクトのキャッシュがありますが、そのような参照はすべて弱く、本当に強力な参照が存在しない場合にオブジェクトが収集されるのを防ぐ必要はありません。  |  
+| **\(closure\)** | 関数クロージャを介したオブジェクトのグループへの参照の数。  |  
+| **\(array, string, number, regexp\)** | Array、String、Number、または正規表現を参照するプロパティを持つオブジェクト型のリスト。  |  
+| **\(コンパイルされたコード\)** | コンパイルされたコードに関連するすべて。  スクリプトは関数に似ていますが、本文に対応 `<script>` します。  SharedFunctionInfos \(SFI\) は、関数とコンパイル済みコードの間に存在するオブジェクトです。  通常、関数にはコンテキストが含まれていますが、SFIs はコンテキストを使用できません。  |  
+| **HTMLDivElement** **、HTMLAnchorElement、DocumentFragment**など。 ****  | コードによって参照される特定の型の要素またはドキュメント オブジェクトへの参照。  |  
 
 <!--todo: add heap profiling summary section when available -->  
 
-### 比較ビュー  
+### <a name="comparison-view"></a>比較ビュー  
 
-リークしたオブジェクトを検索するには、複数のスナップショットを相互に比較します。  特定のアプリケーションの操作によってリークが発生しないことを確認するには (たとえば、ドキュメントを開いて、それを閉じるときに、通常は1組の直接操作と逆方向の操作のペアである)、次のシナリオに従うことができます。  
+複数のスナップショットを互いに比較して、リークされたオブジェクトを検索します。  特定のアプリケーション操作でリークが発生しない \(たとえば、通常は、ドキュメントを開いて閉じるなど、直接操作と逆方向の操作のペアを作成しない場合は、ガベージ\を残さない方が良い) を確認するには、次のシナリオに従います。  
 
-1.  操作を実行する前に、ヒープスナップショットを取得します。  
-1.  操作を実行します (リークの原因と思われる何らかの方法でページを操作します)。  
-1.  逆の操作を実行します (反対の操作を行って、何度も繰り返します)。  
-1.  2つ目のヒープスナップショットを取得し、そのビューを**スナップショット 1**と比較して**比較**します。  
+1.  操作を実行する前にヒープ スナップショットを作成します。  
+1.  操作を実行する \(何らかの方法でページを操作し、リークを引き起こしている可能性があります\)。  
+1.  逆方向の操作を実行する \(反対の操作を行い、数回繰り返す\)。  
+1.  2 番目のヒープ スナップショットを作成し、このヒープ スナップショットのビューを比較に変更 **し**、スナップショット **1 と比較します**。  
     
-[ **比較** ] ビューでは、2つのスナップショットの差が表示されます。  合計項目を展開すると、追加または削除されたオブジェクトインスタンスが表示されます。  
+比較ビュー **では** 、2 つのスナップショットの違いが表示されます。  合計エントリを展開すると、追加および削除されたオブジェクト インスタンスが表示されます。  
 
-:::image type="complex" source="../media/memory-problems-gh-nodejs-benchmarks-run-memory-heap-snapshots-comparison-dropdown.msft.png" alt-text="プロファイルの種類の選択" lightbox="../media/memory-problems-gh-nodejs-benchmarks-run-memory-heap-snapshots-comparison-dropdown.msft.png":::
+:::image type="complex" source="../media/memory-problems-gh-nodejs-benchmarks-run-memory-heap-snapshots-comparison-dropdown.msft.png" alt-text="比較ビュー" lightbox="../media/memory-problems-gh-nodejs-benchmarks-run-memory-heap-snapshots-comparison-dropdown.msft.png":::
    **比較** ビュー  
 :::image-end:::  
 
 <!--todo: add HeapProfilingComparison section when available  -->  
 
-### コンテインメントビュー  
+### <a name="containment-view"></a>Containment ビュー  
 
-**コンテインメント**ビューは、基本的には、アプリケーションのオブジェクト構造の "鳥の視点" ビューです。  この機能を使用すると、JavaScript オブジェクトを構成する仮想マシン \ (VM) 内部オブジェクトを監視したり、アプリケーションが非常に低レベルで使用しているメモリ量を把握したりすることができます。  
+Containment **ビュー** は基本的に、アプリケーションのオブジェクト構造の "鳥の目" です。  これにより、関数クロージャの内部を覗き見し、JavaScript オブジェクトを構成する仮想マシン \(VM\) 内部オブジェクトを観察し、アプリケーションが非常に低いレベルで使用するメモリの量を理解できます。  
 
-| コンテインメントビューのエントリポイント | 説明 |  
+| 格納ビューのエントリ ポイント | 説明 |  
 |:--- |:--- |  
-| **DOMWindow オブジェクト** | JavaScript コードのグローバルオブジェクト。  |  
-| **GC ルート** | VM のガーベジで使用される実際の GC ルート。  GC ルートは、組み込みのオブジェクトマップ、シンボルテーブル、VM スレッドスタック、コンパイルキャッシュ、ハンドルスコープ、グローバルハンドルで構成されています。  |  
-| **ネイティブオブジェクト** | ブラウザーオブジェクトは、JavaScript 仮想マシンの内部に "プッシュされました" (JavaScript VM \) で、オートメーション (DOM ノード、CSS ルールなど) を許可します。  |  
+| **DOMWindow オブジェクト** | JavaScript コードのグローバル オブジェクト。  |  
+| **GC ルート** | VM のガベージによって使用される実際の GC ルート。  GC ルートは、組み込みのオブジェクト マップ、シンボル テーブル、VM スレッド スタック、コンパイル キャッシュ、ハンドル スコープ、およびグローバル ハンドルで構成されます。  |  
+| **ネイティブ オブジェクト** | JavaScript 仮想マシン \(JavaScript VM\) 内のブラウザー オブジェクトを "プッシュ" して、DOM ノード、CSS ルールなど、オートメーションを許可します。  |  
 
-:::image type="complex" source="../media/memory-problems-gh-nodejs-benchmarks-run-memory-heap-snapshots-containment-dropdown.msft.png" alt-text="プロファイルの種類の選択" lightbox="../media/memory-problems-gh-nodejs-benchmarks-run-memory-heap-snapshots-containment-dropdown.msft.png":::
-   **コンテインメント** ビュー  
+:::image type="complex" source="../media/memory-problems-gh-nodejs-benchmarks-run-memory-heap-snapshots-containment-dropdown.msft.png" alt-text="Containment ビュー" lightbox="../media/memory-problems-gh-nodejs-benchmarks-run-memory-heap-snapshots-containment-dropdown.msft.png":::
+   **Containment** ビュー  
 :::image-end:::  
 
 <!--todo: add heap profiling containment section when available  -->  
 
 > [!TIP]
-> クロージャに関するヒント。  スナップショットのクロージャを簡単に区別できるように、関数に名前を指定します。  たとえば、次の例では、名前付き関数は使用されません。  
+> クロージャに関するヒント。  スナップショット内のクロージャを簡単に区別するために、関数に名前を付ける。  たとえば、この例では名前付き関数を使用しない場合です。  
 > 
 > ```javascript
 > function createLargeClosure() {
@@ -173,7 +173,7 @@ DevTools ウィンドウを閉じると、レンダラープロセスに関連�
 > }
 > ```  
 > 
-> 以下のコードスニペットでは、名前付き関数を使用しています。  
+> 次のコード スニペットでは、名前付き関数を使用します。  
 > 
 > ```javascript
 > function createLargeClosure() {
@@ -186,38 +186,38 @@ DevTools ウィンドウを閉じると、レンダラープロセスに関連�
 > ```  
 > 
 > <!--  
-> :::image type="complex" source="../media/memory-problems-domleaks.msft.png" alt-text="プロファイルの種類の選択" lightbox="../media/memory-problems-domleaks.msft.png":::
+> :::image type="complex" source="../media/memory-problems-domleaks.msft.png" alt-text="Name functions to distinguish between closures" lightbox="../media/memory-problems-domleaks.msft.png":::
 >    Name functions to distinguish between closures  
 > :::image-end:::  
 > -->  
 > 
 > > [!NOTE]
-> > この例では、メモリ上でのクロージャの影響を分析するための悪を示して [ `eval` い][GlitchDevtoolsMemoryExample07] ます。  また、この例では、 [ヒープ割り当て][GlitchDevtoolsMemoryExample08]の記録に関する次の例を参考にしてください。  
+> > クロージャが [メモリに与 `eval` ][GlitchDevtoolsMemoryExample07] える影響を分析するために悪い理由のこの例を試してみてください。  この例では、ヒープ割り当ての記録を行う方法について [説明][GlitchDevtoolsMemoryExample08]します。  
 > 
 
-## 色のコーディングを検索する  
+## <a name="look-up-color-coding"></a>色分けを見る  
 
-オブジェクトのプロパティとプロパティ値の型が異なり、それに応じて色付けされます。  各プロパティには、4つの型のいずれかが含まれています。  
+オブジェクトのプロパティとプロパティの値は、さまざまな種類を持ち、色付けされます。  各プロパティには、4 つの種類の 1 つがあります。  
 
 | プロパティの種類 | 説明 |  
 |:--- |:--- |  
-| **a: プロパティ** | 名前を付けた標準プロパティ `.` 。 \ (ドット \) 演算子、または `[` `]` \ (かっこ \) 表記を使用してアクセスし `["foo bar"]` ます。  |  
-| **0: 要素** | `[` `]` \ (かっこ \) 表記法によってアクセスされる、数値インデックスを持つ標準プロパティ。  |  
-| **a: context var** |  関数の中で変数名によってアクセスできる関数のコンテキスト内の変数。  |  
-| **a: システムの prop** | Javascript の VM によって追加されたプロパティ。 JavaScript コードからはアクセスできません。  |  
+| **a: プロパティ** | \(dot\) 演算子を使用してアクセスされる名前を持つ通常のプロパティ、または `.` `[` `]` \(brackets\) 表記など `["foo bar"]` です。  |  
+| **0: 要素** | \(brackets\) 表記を使用してアクセスされる、数値インデックス `[` `]` を持つ通常のプロパティ。  |  
+| **a: context var** |  関数のクロージャ内から変数名でアクセスできる関数コンテキスト内の変数。  |  
+| **a: system prop** | JavaScript のコードからアクセスできない JavaScript VM によって追加されたプロパティ。  |  
 
-として指定 `System` されているオブジェクトは、JavaScript の型に対応していません。  それぞれは、Javascript VM のオブジェクトシステム実装の一部です。  V8 は、内部オブジェクトのほとんどを、ユーザーの JS オブジェクトと同じヒープに割り当てます。  そのため、これらは V8 の内部構造にすぎません。  
+指定されたオブジェクトには `System` 、対応する JavaScript 型が含まれています。  それぞれは、Javascript VM のオブジェクト システム実装の一部です。  V8 は、ユーザーの JS オブジェクトと同じヒープ内のほとんどの内部オブジェクトを割り当てます。  したがって、これらは V8 の内部です。  
 
-## 特定のオブジェクトを検索する  
+## <a name="find-a-specific-object"></a>特定のオブジェクトを検索する  
 
-収集されたヒープ内のオブジェクトを検索するには、を使用 `Ctrl` + `F` してオブジェクト ID を指定します。  
+収集されたヒープ内のオブジェクトを見つけるには、オブジェクト ID を使用 `Ctrl` + `F` して検索して指定します。  
 
-## DOM リークの発見  
+## <a name="uncover-dom-leaks"></a>DOM リークを検出する  
 
-ヒーププロファイラーには、ブラウザーのネイティブオブジェクトの間で双方向の依存関係 (DOM ノード、CSS ルール \)、JavaScript オブジェクトの間で双方向の依存関係を反映する機能があります。
-これにより、デタッチした切り離された DOM サブツリーを回避して、非表示のリークが発生する可能性があります。  
+ヒープ プロファイラーには、ブラウザー ネイティブ オブジェクト \(DOM ノード、CSS ルール\) と JavaScript オブジェクト間の双方向の依存関係を反映する機能があります。
+これは、切り離された DOM サブツリーが浮いているのを忘れた場合に、見えないリークが発生しているのを発見するのに役立ちます。  
 
-DOM リークは想像よりも大きくなることがあります。  次の例について考えてみましょう。  #Tree GC はいつですか?  
+DOM リークは、思ったよりも大きい場合があります。  次のサンプルを検討してください。  GC の#treeですか?  
 
 ```javascript
 var select = document.querySelector;
@@ -233,16 +233,16 @@ leafRef = null;
 //#NOW able to be #tree GC
 ```  
 
-は、 `#leaf` 関連する親 \ (parentNode \) への参照を保持し、 `#tree` leafRef が nullified の場合にのみ、GC の候補の下にあるツリー全体を示し `#tree` ます。  
+関連する親 \(parentNode\) への参照を再帰的に保持します。 `#leaf` `#tree` したがって、leafRef が nullified の場合にのみ `#tree` 、GC の候補の下にある WHOLE ツリーになります。  
 
-:::image type="complex" source="../media/memory-problems-tree-gc.msft.png" alt-text="プロファイルの種類の選択" lightbox="../media/memory-problems-tree-gc.msft.png":::
+:::image type="complex" source="../media/memory-problems-tree-gc.msft.png" alt-text="DOM サブツリー" lightbox="../media/memory-problems-tree-gc.msft.png":::
    DOM サブツリー  
 :::image-end:::  
 
 > [!NOTE]
-> 例: リークしている可能性のある [DOM ノード][GlitchDevtoolsMemoryExample06] を理解し、それを検出する方法については、次の例をご覧ください。  次の例では、 [DOM リークが予想よりも大きくなって][GlitchDevtoolsMemoryExample09]います。  
+> 例: リークしている [DOM][GlitchDevtoolsMemoryExample06] ノードのこの例を試して、リークする可能性のある場所と、それを検出する方法を理解します。  また、DOM リークが予想以上に大きいという [この例を見る場合があります][GlitchDevtoolsMemoryExample09]。  
 
-DOM のリークとメモリ分析の基礎の詳細については、「 [Microsoft Edge DevTools によるメモリリークの検出とデバッグ][GonzaloRuizdeVillaMemory] Gonzalo Ruiz de Villa」を参照してください。  
+DOM リークとメモリ分析の基本について詳しくは [、Gonzalo Ruiz][GonzaloRuizdeVillaMemory] de Villa の Microsoft Edge DevTools を使用してメモリ リークの検索とデバッグを行います。  
 
 <!--  
 > [!NOTE]
@@ -251,14 +251,14 @@ DOM のリークとメモリ分析の基礎の詳細については、「 [Micro
 
 <!--todo: add heap profiling dom leaks section when available  -->  
 
-## Microsoft Edge DevTools チームと連絡を取る  
+## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームと連絡を取る  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
 <!-- links -->  
 
-[DevtoolsMemoryProblems101ObjectSizes]: ./memory-101.md#object-sizes "オブジェクトサイズ-メモリの用語 |Microsoft ドキュメント"  
-[DevtoolsMemoryProblems101ObjectsRetainingTree]: ./memory-101.md#objects-retaining-tree "ツリーメモリの用語を保持するオブジェクト |Microsoft ドキュメント"  
+[DevtoolsMemoryProblems101ObjectSizes]: ./memory-101.md#object-sizes "オブジェクトサイズ - メモリ用語|Microsoft Docs"  
+[DevtoolsMemoryProblems101ObjectsRetainingTree]: ./memory-101.md#objects-retaining-tree "ツリーを保持するオブジェクト - メモリ用語|Microsoft Docs"  
 
 <!--[DevToolsHeapProfilingComparison]: https://developer.alphabet.com/devtools/docs/heap-profiling-comparison ""  -->  
 <!--[DevToolsHeapProfilingContainment]: https://developer.alphabet.com/devtools/docs/heap-profiling-containment ""  -->  
@@ -266,20 +266,20 @@ DOM のリークとメモリ分析の基礎の詳細については、「 [Micro
 <!--[DevToolsHeapProfilingSummary]: https://developer.alphabet.com/devtools/docs/heap-profiling-summary ""  -->  
 <!--[DevtoolsProfileMemoryProblemsDiagnosisCausesMemoryLeaks]: ../profile/memory-problems/memory-diagnosis#narrow-down-causes-of-memory-leaks ""  -->  
 
-[GlitchDevtoolsMemoryExample03]: https://microsoft-edge-chromium-devtools.glitch.me/static/memory/example-03.html "example-03.html-Microsoft Edge (Chromium) DevTools |故障"  
-[GlitchDevtoolsMemoryExample06]: https://microsoft-edge-chromium-devtools.glitch.me/static/memory/example-06.html "example-06.html-Microsoft Edge (Chromium) DevTools |故障"  
-[GlitchDevtoolsMemoryExample07]: https://microsoft-edge-chromium-devtools.glitch.me/static/memory/example-07.html "example-07.html-Microsoft Edge (Chromium) DevTools |故障"  
-[GlitchDevtoolsMemoryExample08]: https://microsoft-edge-chromium-devtools.glitch.me/static/memory/example-08.html "example-08.html-Microsoft Edge (Chromium) DevTools |故障"  
-[GlitchDevtoolsMemoryExample09]: https://microsoft-edge-chromium-devtools.glitch.me/static/memory/example-09.html "example-09.html-Microsoft Edge (Chromium) DevTools |故障"  
-[GlitchDevtoolsMemoryExample10]: https://microsoft-edge-chromium-devtools.glitch.me/static/memory/example-10.html "example-10.html-Microsoft Edge (Chromium) DevTools |故障"  
+[GlitchDevtoolsMemoryExample03]: https://microsoft-edge-chromium-devtools.glitch.me/static/memory/example-03.html "example-03.html - Microsoft Edge (クロム) DevTools |Glitch"  
+[GlitchDevtoolsMemoryExample06]: https://microsoft-edge-chromium-devtools.glitch.me/static/memory/example-06.html "example-06.html - Microsoft Edge (クロム) DevTools |Glitch"  
+[GlitchDevtoolsMemoryExample07]: https://microsoft-edge-chromium-devtools.glitch.me/static/memory/example-07.html "example-07.html - Microsoft Edge (クロム) DevTools |Glitch"  
+[GlitchDevtoolsMemoryExample08]: https://microsoft-edge-chromium-devtools.glitch.me/static/memory/example-08.html "example-08.html - Microsoft Edge (クロム) DevTools |Glitch"  
+[GlitchDevtoolsMemoryExample09]: https://microsoft-edge-chromium-devtools.glitch.me/static/memory/example-09.html "example-09.html - Microsoft Edge (クロム) DevTools |Glitch"  
+[GlitchDevtoolsMemoryExample10]: https://microsoft-edge-chromium-devtools.glitch.me/static/memory/example-10.html "example-10.html - Microsoft Edge (クロム) DevTools |Glitch"  
 
 [GonzaloRuizdeVillaMemory]: https://slid.es/gruizdevilla/memory "メモリ |スライド"  
 
 > [!NOTE]
-> このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
-> 元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/memory-problems/heap-snapshots) にあり、 [Meggin Kearney][MegginKearney] \ (テクニカルライター \) によって作成されています。  
+> このページの一部の情報は、[Google によって作成および共有][GoogleSitePolicies]されている著作物に基づいており、[Creative Commons Attribution 4.0 International License][CCA4IL] に記載されている条項に従って使用されています。  
+> 元のページはここで [見](https://developers.google.com/web/tools/chrome-devtools/memory-problems/heap-snapshots) つかり [、Meggin Kearney][MegginKearney] \(Technical Writer\) によって作成されています。  
 
-[![クリエイティブコモンズライセンス][CCby4Image]][CCA4IL]  
+[![Creative Commons ライセンス][CCby4Image]][CCA4IL]  
 この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。  
 
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  

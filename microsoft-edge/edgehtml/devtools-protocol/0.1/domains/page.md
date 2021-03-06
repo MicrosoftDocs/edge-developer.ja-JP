@@ -1,85 +1,69 @@
 ---
-description: ページ ドメインの DevTools プロトコル バージョン 0.1 (EdgeHTML) リファレンス。 検査されたページに関連するアクションとイベントは、ページ ドメインに属しています。
+description: ページ ドメインの DevTools プロトコル バージョン 0.1 (EdgeHTML) リファレンス。 検査されたページに関連するアクションとイベントは、ページ ドメインに属します。
 title: ページ ドメイン - DevTools プロトコル バージョン 0.1 (EdgeHTML)
 author: MSEdgeTeam
 ms.author: msedgedevrel
+ms.date: 11/03/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.custom: seodec18
-ms.date: 11/19/2020
 ROBOTS: NOINDEX,NOFOLLOW
-ms.openlocfilehash: 55575e54b9125d7ff544c23c81da4b15d3b56fb1
-ms.sourcegitcommit: a35a6b5bbc21b7df61d08cbc6b074b5325ad4fef
+ms.openlocfilehash: b04b0685a6b465d40e999a2a48d370573a3058d8
+ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "11234801"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "11399149"
 ---
-# ページ ドメイン - DevTools プロトコル バージョン 0.1 (EdgeHTML)  
+# <a name="page-domain---devtools-protocol-version-01-edgehtml"></a>ページ ドメイン - DevTools プロトコル バージョン 0.1 (EdgeHTML)  
 
-検査されたページに関連するアクションとイベントは、ページ ドメインに属しています。
+検査されたページに関連するアクションとイベントは、ページ ドメインに属します。  
 
-| | |
-|-|-|
-| [**メソッド**](#methods) | [有効、](#enable)[無効、](#disable)[移動](#navigate) |
-| [**型**](#types) | [FrameId](#frameid) |
-## メソッド
+| 分類 | Members |  
+|:--- |:--- |  
+| [**メソッド**](#methods) | [有効にする](#enable)、[無効にする、](#disable)[移動する](#navigate) |  
+| [**型**](#types) | [FrameId](#frameid) |  
 
-### [有効]
-ページ ドメイン通知を有効にします。
+## <a name="methods"></a>メソッド  
 
+### <a name="enable"></a>[有効]  
 
----
+ページ ドメイン通知を有効にします。  
 
-### [無効]
-ページ ドメイン通知を無効にします。
+&nbsp;  
 
+---  
 
----
+### <a name="disable"></a>[無効]  
 
-### ナビゲート
-現在のページを特定の URL に移動します。
+ページ ドメイン通知を無効にします。  
 
-<table>
-    <thead>
-        <tr>
-            <th>パラメーター</th>
-            <th></th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>url</td>
-            <td><code class="flyout">string</code></td>
-            <td>ページの移動先の URL。</td>
-        </tr>
-    </tbody>
-</table>
-<table>
-    <thead>
-        <tr>
-            <th>戻り値</th>
-            <th></th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>frameId</td>
-            <td><a href="#frameid"><code class="flyout">FrameId</code></a></td>
-            <td><span><b>試験的。 </b></span>移動するフレーム ID です。</td>
-        </tr>
-    </tbody>
-</table>
+&nbsp;  
 
----
+---  
 
-## 型
+### <a name="navigate"></a>ナビゲート  
 
-### <a name="frameid"></a> FrameId `string`
+現在のページを特定の URL に移動します。  
 
-一意のフレーム識別子。
+| パラメーター | 型 | 詳細 |  
+|:--- |:--- |:--- |  
+| url | `string` | ページを移動する URL。 |  
 
+| 戻り値 | 型 | 詳細 |  
+|:--- |:--- |:--- |  
+| frameId | [FrameId](#frameid) | **実験的な**.  移動するフレーム ID。 |  
 
----
+---  
+
+## <a name="types"></a>型  
+
+### <a name="frameid-string"></a>FrameId 文字列  
+
+<a name="frameid"></a>  
+
+一意のフレーム識別子。  
+
+&nbsp;  
+
+---  

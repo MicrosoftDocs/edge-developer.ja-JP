@@ -1,27 +1,27 @@
 ---
-title: Web アプリマニフェストを使ってプログレッシブ Web アプリをオペレーティングシステムに統合する
-description: Web アプリマニフェストを使って、プログレッシブ Web アプリをオペレーティングシステムに統合する方法について説明します。
+title: Web アプリ マニフェストを使用して、プログレッシブ Web アプリをオペレーティング システムに統合する
+description: Web アプリ マニフェストを使用してプログレッシブ Web アプリをオペレーティング システムに統合する方法について説明します。
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 05/15/2020
+ms.date: 01/07/2021
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: pwa
-keywords: プログレッシブ web アプリ、PWA、エッジ、JavaScript、Windows、UWP、Microsoft ストア
-ms.openlocfilehash: f493ae0c3cef3a1950b2207d66fef65055b2d959
-ms.sourcegitcommit: d9cc829deb709b0866f6b43a5f4733682ddae5ca
+keywords: プログレッシブ Web アプリ、PWA、Edge、JavaScript、Windows、UWP、Microsoft Store
+ms.openlocfilehash: 0063323b1fde94d84e70df51170726325dd0f2a9
+ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "10659294"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "11399100"
 ---
-# Web アプリマニフェストを使ってプログレッシブ Web アプリをオペレーティングシステムに統合する
+# <a name="use-the-web-app-manifest-to-integrate-your-progressive-web-app-into-the-operating-system"></a>Web アプリ マニフェストを使用して、プログレッシブ Web アプリをオペレーティング システムに統合する
 
-Web サイトの Web アプリマニフェストは、プログレッシブ Web アプリ \ (PWA) がデバイスにインストールされたときの外観と動作を制御します。  最も基本的なレベルでは、マニフェストは、アプリの名前、システムメニューでアプリを表すために使用するアイコン、オペレーティングシステム \ (OS \) がタイトルバーに使用するテーマの色について詳しく説明します。  マニフェストでは、システム上の他のネイティブアプリと同じようにアプリを動作させることができる強力な機能のロックを解除することもできます。  
+Web サイトの Web アプリ マニフェストは、デバイスにインストールされた場合のプログレッシブ Web アプリ \(PWA\) の外観と動作を制御します。  最も基本的なレベルでは、マニフェストはアプリの名前、システム メニューでアプリを表すアイコン、およびタイトル バーでオペレーティング システム \(OS\) が使用するテーマの色に関する詳細を提供します。  マニフェストを使用すると、アプリがシステム上の他のネイティブ アプリのように動作する強力な機能のロックを解除することもできます。  
 
-## ショートカットを使用して機能にすばやくアクセスする  
+## <a name="use-shortcuts-to-provide-quick-access-to-features"></a>ショートカットを使用して機能にすばやくアクセスする  
 
-ほとんどのオペレーティングシステムでは、アプリのアイコンに接続されたコンテキストメニューのショートカットを使用して、主要なアプリの機能にすばやくアクセスできます。  PWA のショートカットを使用するには、 `shortcuts` Web アプリマニフェストにプロパティを追加します。  次のコードスニペットは、web アプリマニフェストでショートカットを定義する方法を示しています。  
+ほとんどのオペレーティング システムでは、アプリのアイコンに接続されているコンテキスト メニューのショートカットを使用して、主要なアプリ機能にすばやくアクセスできます。  PWA でショートカットを使用するには、Web `shortcuts` アプリ マニフェストにプロパティを含める必要があります。  次のコード スニペットは、Web アプリ マニフェストでショートカットを定義する方法を示しています。  
 
 ```json
 "shortcuts": [
@@ -45,11 +45,11 @@ Web サイトの Web アプリマニフェストは、プログレッシブ Web 
 ]
 ```  
 
-完全な Web アプリマニフェストに追加された場合、前のコードスニペットを追加すると、アプリのアイコンのコンテキストメニューで2つのショートカットが有効になります。  最初の名前には、 `Play Later` カスタムアイコンが付いています。  2番目の引数には、 `Subscriptions` `icons` プロパティが省略可能であるため、という名前が付けられ、アイコンはありません。  この `description` プロパティはオプションでもあり、アクセシビリティのために追加情報を提供するために使うことができます。  
+完全な Web アプリ マニフェストに追加すると、前のコード スニペットを追加すると、アプリのアイコンのコンテキスト メニューで 2 つのショートカットが有効になります。  1 つ目の名前 `Play Later` はカスタム アイコンです。  プロパティは省略可能なので、2 番目の名前は付け `Subscriptions` 、 `icons` アイコンを持つ必要があります。  この `description` プロパティはオプションで、アクセシビリティの目的で追加情報を提供するために使用される場合があります。  
 
-## アプリを共有ターゲットとして識別する
+## <a name="identify-your-app-as-a-share-target"></a>アプリを共有ターゲットとして識別する
 
-多くのオペレーティングシステムでは、ネイティブアプリケーションでリンクやファイルを簡単に共有できます。 プログレッシブ Web アプリは、 `share_target` Web アプリマニフェストのメンバーを通じて、この機能にも参加できます。 Share_target を使って、"アクション" ページ (フォームと同様) と、それに渡す必要があるパラメーターを定義します。 次のコードスニペットは、の使い方の例を示して `share_target` います。
+多くのオペレーティング システムを使用すると、ユーザーはリンクやファイルをネイティブ アプリケーションとすばやく共有できます。 プログレッシブ Web アプリは、Web アプリ マニフェストのメンバーを使用して、この `share_target` 機能にも参加できます。  を `share_target` 使用して、ページ \(form\に似た) と、ページに渡す必要がある `"action"` パラメーターを定義します。  次のコード スニペットは、使用方法の例を表示します `share_target` 。
 
 ```json
 "share_target": {
@@ -62,18 +62,21 @@ Web サイトの Web アプリマニフェストは、プログレッシブ Web 
 }
 ```
 
-Web アプリマニフェストに追加されると、共有の操作ページとして "/¥ .html" が確立されます。 さらに、アクションページに渡される3つのパラメーターを定義します。これには、"title"、"text"、"url" があります。 これらのパラメーターは、"name"、"description"、"link [" の各](https://wicg.github.io/web-share#dom-sharedata)プロパティに保存されます。 既定では、アクションページは GET 要求の一部としてこれらのパラメーターを受け取りますが、web フォームの場合と同様に、要求 `method` とエンコードは \ (as) を指定でき `enctype` ます。
+Web アプリ マニフェストに追加すると、共有 `"/share.html"` のアクション ページとして確立されます。 さらに、そのアクション ページに渡される 3 つのパラメーターを定義 `"title"` します。 `"text"` `"url"`  これらのパラメーターは `"name"` 、ShareData オブジェクトの `"description"` 、、 `"link"` およびプロパティに [格納][GitHubWicgWebShareDomSharedata] されます。  既定では、アクション ページは GET 要求の一部としてパラメーターを受け取りますが、Web フォームと同様に、要求とエンコード `method` \(\) を `enctype` 指定できます。
 
-## 関連項目  
+## <a name="see-also"></a>関連項目  
 
-Web アプリマニフェストの詳細については、次の関連するトピックの一覧を参照してください。  
+Web アプリ マニフェストの詳細については、次の関連トピックの一覧に移動します。  
 
-* [Web App マニフェスト][MDNWebAppManifests]  
-* [Web 共有ターゲット][WICGShareTarget]
-* [Web 共有][WICGShare]
-
+*   [Web アプリ マニフェスト][MDNWebAppManifests]  
+*   [Web 共有ターゲット][GitHubWicgWebShareTarget]
+*   [Web 共有][GithubW3cWebShare]
+    
 <!-- links -->  
 
-[MDNWebAppManifests]: https://developer.mozilla.org/docs/Web/Manifest "Web アプリマニフェスト |MDN"  
-[WICGShareTarget]: https://wicg.github.io/web-share-target/ "Web 共有ターゲット API |WICG"
-[WICGShare]: https://w3c.github.io/web-share/ "Web Share API |WICG"
+[MDNWebAppManifests]: https://developer.mozilla.org/docs/Web/Manifest "Web アプリ のマニフェスト|MDN"  
+
+[GitHubWicgWebShareTarget]: https://wicg.github.io/web-share-target "Web 共有ターゲット API |WICG"
+[GitHubWicgWebShareDomSharedata]: https://wicg.github.io/web-share#dom-sharedata "ShareData ディクショナリ - Web Share API |WICG"  
+
+[GithubW3cWebShare]: https://w3c.github.io/web-share/ "Web 共有 API |WICG"

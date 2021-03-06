@@ -1,18 +1,18 @@
 ---
-description: 同じ JavaScript 式をコンソールに繰り返し入力していることがわかった場合は、代わりにライブ式を試してください。
-title: ライブ式で Real-Time で JavaScript の式値を見る
+description: コンソールに同じ JavaScript 式を繰り返し入力する場合は、代わりに Live 式を試してください。
+title: Live 式を使用して JavaScript 式の値をリアルタイムで確認する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 10/19/2020
+ms.date: 02/12/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: f6787455863f738d0fa4e014ca8fc318ad83a9cb
-ms.sourcegitcommit: 99eee78698dc95b2a3fa638a5b063ef449899cda
+ms.openlocfilehash: 5bc49b60cc1c1dfb41c793c3fec7681fb6415e4c
+ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "11125231"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "11398799"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -28,22 +28,22 @@ ms.locfileid: "11125231"
    See the License for the specific language governing permissions and
    limitations under the License.  -->
 
-# ライブ式で Real-Time で JavaScript の式値を見る  
+# <a name="watch-javascript-expression-values-in-real-time-with-live-expressions"></a>Live 式を使用して JavaScript 式の値をリアルタイムで確認する  
 
-コンソールで同じ JavaScript 式を繰り返し入力したことがわかった場合は、 **ライブ式**の作成が簡単になることがあります。  **ライブ式**で式を1回入力し、本体の先頭に固定します。  この式の値は、ほぼリアルタイムで更新されます。  
+コンソールで同じ JavaScript 式を繰り返し入力すると、Live 式の作成が簡単になる **場合があります**。  Live **Expression を使用すると** 、一度式を入力し、本体の上部にピン留めします。  式の値は、ほぼリアルタイムで更新されます。  
 
-## ライブ式を作成する  
+## <a name="create-a-live-expression"></a>Live 式の作成  
 
-1.  [本体を開き][DevToolsConsoleReferenceOpenConsole]ます。  
-1.  [ **ライブ式の作成** ] \ ( ![ ライブ式 ][ImageCreateLiveExpressionIcon] の作成 \) を選びます。  [ **ライブ式** ] テキストボックスが表示されます。  
+1.  [コンソールを開きます][DevToolsConsoleReferenceOpenConsole]。  
+1.  [Live **Expression \(** Create ![ Live Expression ][ImageCreateLiveExpressionIcon] \] を選択します)。  [Live **Expression]** テキスト ボックスが表示されます。  
     
-    :::image type="complex" source="../media/console-create-live-expression.msft.png" alt-text="ライブ式のテキストボックスへの &quot;activeElement 要素の入力" lightbox="../media/console-create-live-expression.msft.png":::
-       `document.activeElement`[**ライブ式**] テキストボックスへの入力  
+    :::image type="complex" source="../media/console-create-live-expression.msft.png" alt-text="[Live 式] テキスト ボックスに document.activeElement と入力する" lightbox="../media/console-create-live-expression.msft.png":::
+       [Live `document.activeElement` 式] **テキスト ボックスに入力** する  
     :::image-end:::  
     
-1.  `Control` + `Enter` 式を保存するには、[\ (Windows, Linux \)] または [ `Command` + `Enter` \ (macOS \)] を選択します。または、[**ライブ式**] ボックスの外側を選択します。  
+1.  `Control` + `Enter` \(Windows,Linux\) または `Command` + `Enter` \(macOS\)**** を選択して式を保存するか、[Live 式] テキスト ボックスの外側を選択します。  
 
-## Microsoft Edge DevTools チームと連絡を取る  
+## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームと連絡を取る  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
@@ -53,13 +53,13 @@ ms.locfileid: "11125231"
 
 <!-- links -->  
 
-[DevToolsConsoleReferenceOpenConsole]: ./reference.md#open-the-console "本体本体のリファレンスを開く |Microsoft ドキュメント"  
+[DevToolsConsoleReferenceOpenConsole]: ./reference.md#open-the-console "コンソール - コンソール リファレンス を開|Microsoft Docs"  
 
 > [!NOTE]
-> このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
-> 元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/console/live-expressions) にあり、 [Kayce Basques][KayceBasques] テクニカルライター、Chrome Devtools \ & Lighthouse \) で作成されています。  
+> このページの一部は、 [Google によっ て作成および共有された][GoogleSitePolicies]作業に基づく変更で、「[Creative Commons Attribution 4.0 International License][CCA4IL]」で記載されている条項に従って使用されます。  
+> 元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/console/live-expressions) にあり、 [Kayce Basques][KayceBasques] \(Chrome DevTools \& Lighthouse\ のテクニカル ライター) が作成しました。  
 
-[![クリエイティブコモンズライセンス][CCby4Image]][CCA4IL]  
+[![Creative Commons ライセンス][CCby4Image]][CCA4IL]  
 この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。  
 
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  

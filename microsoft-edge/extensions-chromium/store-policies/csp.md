@@ -1,26 +1,26 @@
 ---
-description: Edge (Chromium) 拡張機能のコンテンツセキュリティポリシー。
-title: コンテンツセキュリティポリシー (CSP)
+description: エッジ (クロム) 拡張機能のコンテンツ セキュリティ ポリシー。
+title: コンテンツ セキュリティ ポリシー (CSP)
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 09/15/2020
+ms.date: 01/07/2021
 ms.topic: article
 ms.prod: microsoft-edge
-keywords: edge-chromium、拡張機能の開発、ブラウザーの拡張、アドオン、パートナーセンター、開発者
-ms.openlocfilehash: f3769639465d048c42ad0705f74598fbd1db8a20
-ms.sourcegitcommit: d360e419b5f96f4f691cf7330b0d8dff9126f82e
+keywords: edge-chromium, 拡張機能の開発, ブラウザー拡張機能, アドオン, パートナー センター, 開発者
+ms.openlocfilehash: 8307482e780b4d631edffd976cca7ba724e2ad40
+ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "11015717"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "11397518"
 ---
-# コンテンツセキュリティポリシー \ (CSP \)  
+# <a name="content-security-policy-csp"></a>コンテンツ セキュリティ ポリシー \(CSP\)  
 
-大量の潜在的なクロスサイトスクリプティングの問題を軽減するために、Microsoft Edge 拡張システムには、 [コンテンツセキュリティポリシー \ (CSP \)][W3CContentSecurityPolicy]の一般的な概念が組み込まれています。  これにより、既定で拡張機能の安全性を高めるための厳格なポリシーがいくつか導入され、拡張機能やアプリケーションで読み込みと実行が可能なコンテンツの種類を管理するためのルールを作成して適用することができます。  
+潜在的なクロスサイト スクリプティングの問題の大規模なクラスを軽減するために、Microsoft Edge Extension システムはコンテンツ セキュリティ ポリシー [\(CSP\)][W3CContentSecurityPolicy]の一般的な概念を組み込んだ。  これにより、拡張機能のセキュリティを既定で高めるかなり厳格なポリシーが導入され、拡張機能とアプリケーションによって読み込まれ、実行される可能性のあるコンテンツの種類を管理するルールを作成および適用できます。  
 
-一般的に、CSP は、拡張機能によって読み込みまたは実行されるリソースのブロック/allowlisting 機構として機能します。  拡張機能に適したポリシーを定義することで、拡張機能に必要なリソースを慎重に検討し、拡張機能によってアクセスできる唯一のリソースかどうかをブラウザーに確認することができます。  これらのポリシーは、拡張要求に対するホストのアクセス許可よりも、セキュリティを提供します。これは、保護の追加レイヤーであり、置き換えるものではありません。  
+一般に、CSP は拡張機能によって読み込まれた、または実行されるリソースのブロック/許可リストメカニズムとして機能します。  拡張機能の適切なポリシーを定義すると、拡張機能で必要なリソースを慎重に検討し、拡張機能がアクセスできる唯一のリソースをブラウザーに確認することができます。  ポリシーは、拡張機能が要求するホストのアクセス許可以上のセキュリティを提供します。これらは、代替ではなく、保護の追加の層です。  
 
-Web 上のポリシーは、HTTP ヘッダーまたは要素によって定義され `meta` ます。  Microsoft Edge Extension システムでは、どちらも適切なメカニズムではありません。  代わりに、拡張ポリシーは、次のように拡張子のファイルを通じて定義され `manifest.json` ます。  
+Web では、このようなポリシーは HTTP ヘッダーまたは要素を介して定義 `meta` されます。  Microsoft Edge Extension システム内では、どちらも適切なメカニズムとは言えな  代わりに、拡張機能ポリシーは、拡張機能のファイルを使用 `manifest.json` して次のように定義されます。  
 
 ```javascript
 {
@@ -30,21 +30,21 @@ Web 上のポリシーは、HTTP ヘッダーまたは要素によって定義�
 }
 ```  
 
-> CSP の構文について詳しくは、「 [コンテンツセキュリティポリシーの仕様][W3CContentSecurityPolicy] 」と「HTML5Rocks の [「コンテンツセキュリティポリシーの概要」][HTML5RocksIntroductionContentSecurityPolicy] をご覧ください。  
+> CSP 構文の詳細については、HTML5Rocks の「コンテンツ[][W3CContentSecurityPolicy]セキュリティ ポリシーの仕様」[][HTML5RocksIntroductionContentSecurityPolicy]と「コンテンツ セキュリティ ポリシーの概要」を参照してください。  
 
-## 既定のポリシーの制限  
+## <a name="default-policy-restrictions"></a>既定のポリシー制限  
 
-が定義されていないパッケージには、 `manifest_version` 既定のコンテンツセキュリティポリシーがありません。  2を選択した `manifest_version` 場合は、次のような既定のコンテンツセキュリティポリシーが設定されます。  
+a を定義しないパッケージ `manifest_version` には、既定のコンテンツ セキュリティ ポリシーが適用されません。  `manifest_version`2 を選択するパッケージには、次の既定のコンテンツ セキュリティ ポリシーがあります。  
 
 ```javascript
 script-src 'self'; object-src 'self'
 ```  
 
-このポリシーでは、次の3つの方法で拡張機能とアプリケーションを制限して、セキュリティを強化します。  
+このポリシーは、拡張機能とアプリケーションを次の 3 つの方法で制限することでセキュリティを強化します。  
 
-**Eval 関数と関連関数が無効になっている**  
+**Eval および関連する関数が無効になっている**  
 
-次のようなコードは動作しません。  
+次のようなコードは機能しません。  
 
 ```javascript
 alert(eval("foo.bar.baz"));
@@ -64,9 +64,9 @@ function() { return foo && foo.bar && foo.bar.baz };
 
 **インライン JavaScript が実行されない**  
 
-インライン JavaScript は実行されません。  この制限 `<script>` は、インラインブロックとインラインイベントハンドラー (など) の両方を禁止し `<button onclick="...">` ます。
+インライン JavaScript は実行されません。  この制限は、インライン ブロックとインライン `<script>` イベント ハンドラーの両方 (など) を禁止します `<button onclick="...">` 。
 
-1つ目の制限では、悪意のあるサードパーティによって提供されたスクリプトを誤って実行することは不可能であるため、大量のクロスサイトスクリプト攻撃を消去しています。  ただし、コンテンツと動作の間の明確な分離を使用してコードを記述する必要があります (もちろん、実際にはこの方法で実行する必要があります)。  例としては、この方法がわかりやすくなっています。  次の内容を含む単一のブラウザーアクションポップアップとして作成することができ `pop-up.html` ます。  
+最初の制限では、悪意のあるサード パーティによって提供されるスクリプトを誤って実行することは不可能にすることで、クロスサイト スクリプティング攻撃の巨大なクラスを一掃します。  ただし、コンテンツと動作の間でクリーンな分離を使用してコードを記述する必要があります 。もちろん、これはもちろん行う必要があります。正しいですか?\)。  たとえば、これを明確にする場合があります。  ブラウザー アクション のポップアップは、次を含む 1 つのポップアップとして `pop-up.html` 記述できます。  
 
 ```html
 <!doctype html>
@@ -99,13 +99,13 @@ function() { return foo && foo.bar && foo.bar.baz };
 </html>
 ```  
 
-期待どおりに動作させるためには、次の3つの項目を変更する必要があります。  
+この動作を期待通りに行うには、次の 3 つの点が変更される必要があります。  
 
-*   `clickHandler`定義は外部 JavaScript ファイルに移動する必要があり `popup.js` ます。 \ (適切なターゲットの場合があります)。  
-*   インラインイベントハンドラーの定義は、のように書き換える必要があり `addEventListener` `popup.js` ます。  
-    次のようなコードを使ってプログラムを起動している場合は `<body onload="main();">` 、 `DOMContentLoaded` 必要に応じて、ドキュメントのイベントまたはウィンドウのイベントにフックすることで、プログラムを置き換えることを検討してください `load` 。  通常は、前者を使用します。  
+*   定義 `clickHandler` は、外部 JavaScript ファイル \( に移動する必要 `popup.js` があります。  
+*   インライン イベント ハンドラーの定義は、 という点で書き換え、 `addEventListener` に抽出する必要があります `popup.js` 。  
+    現在、コードを使用してプログラムを開始している場合は、要件に応じて、ドキュメントのイベントまたはウィンドウのイベントにフックして置き換え検討 `<body onload="main();">` `DOMContentLoaded` `load` してください。  一般にトリガーが速く行うので、前者を使用します。  
 
-*   呼び出しは、 `setTimeout` 実行するために JavaScript に文字列を変換しないように書き換える必要があり `"awesome(); totallyAwesome()"` ます。  
+*   文字列を JavaScript に変換して実行しないように、呼び出し `setTimeout` `"awesome(); totallyAwesome()"` を書き換えする必要があります。  
     これらの変更は、次のようになります。  
 
 ```javascript
@@ -152,11 +152,11 @@ document.addEventListener('DOMContentLoaded', function () {
 </html>
 ```  
 
-**ローカルスクリプトとオブジェクトリソースのみが読み込まれます。**  
+**ローカル スクリプトとオブジェクト リソースだけが読み込まれる**  
 
-スクリプトとオブジェクトのリソースは、拡張パッケージからのみ読み込むことができます。これは、web からは大きくできません。  これにより、お客様が明示的に承認したコードのみが実行され、アクティブなネットワーク攻撃者によるリソースの要求の不正なリダイレクトを防ぐことができます。  
+スクリプトリソースとオブジェクト リソースは、拡張機能パッケージからしか読み込めることはできません。Web からのみ読み込む必要があります。  これにより、拡張機能は、特に承認したコードのみを実行し、アクティブなネットワーク攻撃者がリソースの要求を悪意を持ってリダイレクトするのを防ぐことを保証します。  
 
-JQuery \ (または他のライブラリ \) で外部 CDN から読み込みを行うコードを記述する代わりに、拡張機能パッケージに jQuery の特定のバージョンを含めることを検討してください。  これは、次のようになります。  
+外部 CDN からの jQuery \(または他のライブラリ\) の読み込みに依存するコードを記述する代わりに、拡張機能パッケージに特定のバージョンの jQuery を含めて検討してください。  つまり、次の代わりに次の値を使用します。  
 
 ```html
 <!doctype html>
@@ -171,7 +171,7 @@ JQuery \ (または他のライブラリ \) で外部 CDN から読み込みを�
 </html>
 ```  
 
-ファイルをダウンロードして、パッケージに含め、次のように書き込みます。  
+ファイルをダウンロードし、パッケージに含め、次の値を記述します。  
 
 ```html
 <!doctype html>
@@ -186,75 +186,75 @@ JQuery \ (または他のライブラリ \) で外部 CDN から読み込みを�
 </html>
 ```  
 
-## 既定のポリシーの緩和  
+## <a name="relaxing-the-default-policy"></a>既定のポリシーをリラックスする  
 
-**インラインスクリプト**  
+**インライン スクリプト**  
 
 <!-- Up until Chrome 45, there was no mechanism for relaxing the restriction against running inline JavaScript.  In particular, setting a script policy that includes `'unsafe-inline'` has no effect.  
 
 As of Chrome 46, -->  
 
-インラインスクリプトを許可するには、ポリシーのソースコードの base64 でエンコードされたハッシュを指定します。  このハッシュのプレフィックスは、使用されているハッシュアルゴリズム \ (sha256、sha384、または sha512 \) である必要があります。  例については、「 [ \<script\> 要素のハッシュの使用状況][W3CContentSecurityPolicyLevel2ScriptSrcHashUsage] 」を参照してください。  
+インライン スクリプトは、ポリシーでソース コードの base64 エンコードハッシュを指定することで許可できます。  このハッシュの先頭には、使用するハッシュ アルゴリズム \(sha256、sha384、sha512\) を付ける必要があります。  たとえば、要素のハッシュ使用法 [に \<script\> 移動します][W3CContentSecurityPolicyLevel2ScriptSrcHashUsage]。  
 
-**リモートスクリプト**  
+**リモート スクリプト**  
 
-一部の外部 JavaScript またはオブジェクトリソースを必要とする場合は、スクリプトを受け入れることができる安全な元の元によって、ポリシーを制限された範囲に緩和することができます。  拡張機能の昇格されたアクセス許可で読み込まれたランタイムリソースが、意図したリソースとまったく同じであり、アクティブなネットワーク攻撃者によって置き換えられていないことを確認します。  [Man-in-the-middle 攻撃][WikiManMiddleAttacks]は、HTTP 経由での簡単で検出できないため、これらの元は受け入れられません。  
+外部 JavaScript またはオブジェクト リソースが必要な場合は、スクリプトを受け入れるセキュリティで保護された起点を許可することで、ポリシーを制限された範囲でリラックスできます。  拡張機能の昇格されたアクセス許可で読み込まれたランタイム リソースが、期待するリソースであり、アクティブなネットワーク攻撃者に置き換えることはできません。  中間 [者による攻撃][WikiManMiddleAttacks] は、HTTP 上では簡単で検出できないので、それらの発生元は受け入れなされません。  
 
-現時点では、開発者は、、、、 `blob` `filesystem` `https` およびというスキームでオリジンを allowlist `extension` できます。  オリジンのホスト部分は、およびスキームに対して明示的に指定する必要があり `https` `extension` ます。  Https: などの一般的なワイルド `https://*` カード `https://*.com` は使用できません。たとえば、などのサブドメインワイルドカードを `https://*.example.com` 使用できます。  [パブリックサフィックスリスト][PublicSuffixList]のドメインは、一般的なトップレベルドメインとしても表示されます。  これらのドメインからリソースを読み込むには、サブドメインが明示的に表示されている必要があります。  たとえば、 `https://*.cloudfront.net` は有効ではありませんが、 `https://XXXX.cloudfront.net` `https://*.XXXX.cloudfront.net` allowlisted で指定できます。  
+現在、開発者は、次のスキームを使用して、オリジンを許可 `blob` できます。 `filesystem` `https` `extension`  オリジンのホスト 部分は、and スキームに対して明示的に `https` 指定する `extension` 必要があります。  https:など、一般的なワイルドカードは許可されません。サブドメインのワイルドカード `https://*` `https://*.com` (許可 `https://*.example.com` されている場合など)。  [パブリック サフィックス] [リストのドメインは][PublicSuffixList] 、汎用のトップ レベル ドメインとして表示されます。  これらのドメインからリソースを読み込むには、サブドメインを明示的に一覧表示する必要があります。  たとえば、 `https://*.cloudfront.net` 無効ですが、 `https://XXXX.cloudfront.net` `https://*.XXXX.cloudfront.net` 可能です `allowlisted` 。  
 
-開発が簡単になるように、ローカルコンピューター上のサーバーから HTTP 経由で読み込まれたリソースは、allowlisted 表示されることがあります。  スクリプトとオブジェクトソースは、またはのいずれかのポートで allowlist ことができ `http://127.0.0.1` `http://localhost` ます。  
+開発を容易にするために、ローカル コンピューター上のサーバーから HTTP を使用して読み込まれるリソースを使用できます `allowlisted` 。  スクリプトとオブジェクト ソースは、いずれかのポートで許可 `http://127.0.0.1` できます `http://localhost` 。  
 
 > [!NOTE]
-> HTTP 経由で読み込まれたリソースに対する制限は、直接実行されるリソースに対してのみ適用されます。  たとえば、任意の起点への XMLHTTPRequest 接続を作成することもできます。既定のポリシーでは、 `connect-src` どのような方法でも他の CSP ディレクティブは制限されません。  
+> HTTP を使用して読み込まれるリソースに対する制限は、直接実行されるリソースにのみ適用されます。  たとえば、任意のオリジンへの接続を行う場合、既定のポリシーでは制限も他の CSP ディレクティブも制限 `XMLHTTPRequest` `connect-src` されません。  
 
-HTTPS 経由で example.com からスクリプトリソースを読み込むことができる緩やかなポリシー定義は、次のようになります。  
+HTTPS 経由でスクリプト リソースを読み込むリラックスしたポリシー定義は `example.com` 、次のような場合があります。  
 
 ```javascript
 "content_security_policy": "script-src 'self' https://example.com; object-src 'self'"
 ```  
 
 > [!NOTE]
-> どちらも、 `script-src` `object-src` ポリシーによって定義されます。  Microsoft Edge は、これらの各値が \ (少なくと \ \) ' ' に制限されていないポリシーを受け入れません `self` 。  
+> 両方 `script-src` とも `object-src` 、ポリシーによって定義されます。  Microsoft Edge では、これらの各値を \(少なくとも\) ' 'に制限しないポリシーは受け入 `self` れかねない。  
 
 <!-- Making use of Google Analytics is the canonical example for this sort of policy definition.  It is common enough that an Analytics boilerplate of sorts is provided in the Event Tracking with Google Analytics sample Extension, and a brief tutorial that goes into more detail.  -->  
 
-**JavaScript の評価**  
+**評価された JavaScript**  
 
-ポリシーに対して、 `eval()` およびというような関連する機能を、 `setTimeout(String)` `setInterval(String)` `new Function(String)` ポリシーに追加することによって緩和することができ `unsafe-eval` ます。  
+ポリシーに対 `eval()` するポリシーと関連する関数 (、、など) は、ポリシーに追加することで `setTimeout(String)` `setInterval(String)` `new Function(String)` `unsafe-eval` 緩和できます。  
 
 ```javascript
 "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
 ```  
 
-ただし、これを行うことは強くお勧めします。  これらの関数は、XSS 攻撃ベクトルになります。  
+ただし、ポリシーのリラックスは避ける必要があります。  関数は悪名高い XSS 攻撃ベクトルです。  
 
-## 既定のポリシーを強化する  
+## <a name="tightening-the-default-policy"></a>既定のポリシーの強化  
 
-もちろん、お客様の便宜を通じてセキュリティを強化するために、延長によって許可されたあらゆるエクステントにこのポリシーを締めることができます。  拡張機能で、関連付けられている拡張パッケージ (たとえば、ポリシーが該当する場合など) の任意の種類 \ (画像など) のリソースを読み込むことができるように指定するには、次のようにし `default-src 'self'` ます。  
+もちろん、利便性を犠牲にしてセキュリティを強化するために、拡張機能が許可する範囲でこのポリシーを強化することができます。  関連付けられた拡張パッケージから任意の種類の \(images など)のリソースのみを読み込み可能にするように指定するには、ポリシーが適切な `default-src 'self'` 場合があります。  
 
 <!-- The Mappy sample Extension is a good example of an Extension that is been locked down above and beyond the defaults.  -->  
 
-## コンテンツスクリプト  
+## <a name="content-scripts"></a>コンテンツ スクリプト  
 
-ディスカッション中のポリシーは、拡張機能の背景ページとイベントページに適用されます。  コンテンツスクリプトが拡張機能のコンテンツスクリプトにどのように適用されるかは、さらに複雑になります。  
+説明するポリシーは、拡張機能のバックグラウンド ページとイベント ページに適用されます。  拡張機能のコンテンツ スクリプトにコンテンツ スクリプトを適用する方法は、より複雑です。  
 
-通常、コンテンツスクリプトは、拡張機能の CSP の対象にはなりません。  コンテンツスクリプトは HTML ではないため、このような影響を与えるのは、 `eval` 拡張機能の CSP で指定されていない場合でも使用できるという点です `unsafe-eval` 。ただし、これはお勧めできません。  さらに、ページの CSP はコンテンツスクリプトには適用されません。  さらに複雑なタグとして、 `<script>` コンテンツスクリプトが作成され、実行されているページの DOM に挿入されます。  これらは、DOM 注入されたスクリプトとして転送されます。  
+コンテンツ スクリプトは、通常、拡張機能の CSP の対象ではありません。  コンテンツ スクリプトは HTML ではなからないので、拡張機能の CSP が指定されていない場合でも使用できる場合が主な影響ですが、これは `eval` `unsafe-eval` お勧めしません。  さらに、ページの CSP はコンテンツ スクリプトには適用されません。  さらに複雑になる `<script>` のは、コンテンツ スクリプトが作成し、実行しているページの DOM に入れるタグです。  これらは、今後 DOM によって挿入されるスクリプトとして参照されます。  
 
-ページへの挿入直後に実行される DOM の挿入されたスクリプトは、期待どおりに実行されます。  単純な例として、次のコードを含むコンテンツスクリプトを想像してみてください。  
+ページに挿入するとすぐに実行される DOM によって挿入されたスクリプトは、予想通り実行されます。  簡単な例として、次のコードを含むコンテンツ スクリプトを想像してください。  
 
 ```javascript
 document.write("<script>alert(1);</script>");
  ```  
 
-このコンテンツスクリプトは、のすぐにを発生させ `alert` `document.write()` ます。  これは、ページで指定されているポリシーに関係なく実行されることに注意してください。
-ただし、この動作は、DOM に挿入されたスクリプトと、挿入時にすぐに実行されないスクリプトの両方で複雑になります。  拡張機能が、関連付けられている CSP を提供するページで実行されているとし `script-src 'self'` ます。  ここでは、コンテンツスクリプトで次のコードを実行します。  
+このコンテンツ スクリプトは、 の `alert` 直後に発生します `document.write()` 。  これは、ページで指定できるポリシーに関係なく実行されます。
+ただし、DOM によって挿入されたスクリプトの内部と、挿入時にすぐに実行されないスクリプトの両方で、動作が複雑になります。  指定する関連付けられた CSP を提供するページで拡張機能が実行されているとします `script-src 'self'` 。  次に、コンテンツ スクリプトが次のコードを実行するとします。  
 
 ```javascript
 document.write("<button onclick='alert(1);'>click me</button>'");
 ```  
 
-ユーザーがそのボタンをクリックした場合、 `onclick` スクリプトは実行されません。  これは、スクリプトがすぐに実行されることはなく、click イベントが発生するまではコードが解釈されないため、(拡張子 \) のページの CSP は動作を制限します。  また、CSP で指定されていないため `unsafe-inline` 、インラインイベントハンドラーはブロックされます。  
-この場合、適切な動作を実装する正しい方法は、 `onclick` 次のようにコンテンツスクリプトからハンドラーを関数として追加することです。  
+ユーザーがボタンを選択した場合、 `onclick` スクリプトは実行されません。  これは、スクリプトがすぐに実行され、イベントが発生するまでコードが解釈されないので、コンテンツ スクリプトの一部と見なされないので、ページ \(Extension\ではない) の CSP は動作を `click` 制限します。  また、CSP が指定していないの `unsafe-inline` で、インライン イベント ハンドラーはブロックされます。  
+この場合、目的の動作を実装する正しい方法は、次のようにコンテンツ スクリプトからハンドラーを関数として `onclick` 追加する方法です。  
 
 ```javascript
 document.write("<button id='mybutton'>click me</button>'");
@@ -264,7 +264,7 @@ button.onclick = function() {
 };
 ```  
 
-コンテンツスクリプトで次の操作を実行した場合も、同様の問題が発生します。  
+コンテンツ スクリプトで次のような問題が発生します。  
 
 ```javascript
 var script = document.createElement('script');
@@ -272,7 +272,7 @@ script.innerHTML = 'alert(1);'
 document.getElementById('body').appendChild(script);
 ```  
 
-この場合、スクリプトが実行され、アラートが表示されます。  ただし、次のような場合に該当します。  
+この場合、スクリプトが実行され、アラートが表示されます。  ただし、次の場合に使用します。  
 
 ```javascript
 var script = document.createElement('script');
@@ -280,24 +280,24 @@ script.innerHTML = 'eval("alert(1);")';
 =document.getElementById('body').appendChild(script);
 ```  
 
-初期スクリプトを実行している間、の呼び出し `eval` はブロックされます。  つまり、初期スクリプトランタイムが許可されている間、スクリプト内の動作はページの CSP によって規制されます。  
-したがって、DOM に挿入されたスクリプトを拡張機能に記述する方法によっては、ページの CSP を変更すると、拡張機能の動作に影響する場合があります。  コンテンツスクリプトはページの CSP によって影響を受けることはないため、この方法では、拡張機能で可能な限り多くの動作を、DOM に挿入されたスクリプトではなくコンテンツスクリプトに含めることができます。  
+最初のスクリプトの実行中、呼び出し `eval` はブロックされます。  つまり、最初のスクリプト ランタイムが許可されている間、スクリプト内の動作はページの CSP によって規制されます。  
+したがって、拡張機能に DOM 挿入スクリプトを記述する方法によっては、ページの CSP に対する変更が拡張機能の動作に影響を与える可能性があります。  コンテンツ スクリプトはページの CSP の影響を受けかねないので、DOM によって挿入されたスクリプトではなく、拡張機能の可能な限り多くの動作をコンテンツ スクリプトに入れる大きな理由です。  
 
 <!-- image links -->  
 
 <!-- links -->  
 
-[HTML5RocksIntroductionContentSecurityPolicy]: https://www.html5rocks.com/en/tutorials/security/content-security-policy "コンテンツセキュリティポリシーの概要-HTML5 の岩"  
-[PublicSuffixList]: https://publicsuffix.org/list "パブリックサフィックスの一覧を表示する"  
-[W3CContentSecurityPolicyLevel2ScriptSrcHashUsage]: https://www.w3.org/TR/CSP2#script-src-hash-usage "\ <スクリプト \ > 要素のハッシュの使用-コンテンツセキュリティポリシーレベル2"  
-[W3CContentSecurityPolicy]: https://w3c.github.io/webappsec-csp "コンテンツセキュリティポリシーレベル3"  
-[WikiManMiddleAttacks]: https://en.wikipedia.org/wiki/Man-in-the-middle_attack "Man-in-the-middle 攻撃-Wikipedia (Wikipedia)"  
+[HTML5RocksIntroductionContentSecurityPolicy]: https://www.html5rocks.com/en/tutorials/security/content-security-policy "コンテンツ セキュリティ ポリシーの概要|HTML5 ロック"  
+[PublicSuffixList]: https://publicsuffix.org/list "パブリック サフィックス の一覧を表示する"  
+[W3CContentSecurityPolicyLevel2ScriptSrcHashUsage]: https://www.w3.org/TR/CSP2#script-src-hash-usage "\<script\>要素のハッシュ使用法 - コンテンツ セキュリティ ポリシー レベル 2 |W3C"  
+[W3CContentSecurityPolicy]: https://w3c.github.io/webappsec-csp "コンテンツ セキュリティ ポリシー レベル 3 |W3C"  
+[WikiManMiddleAttacks]: https://en.wikipedia.org/wiki/Man-in-the-middle_attack "中間者攻撃|Wikipedia"  
 
 > [!NOTE]
-> このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
-> 元のページは [ここ](https://developer.chrome.com/extensions/contentSecurityPolicy)にあります。  
+> このページの一部の情報は、[Google によって作成および共有][GoogleSitePolicies]されている著作物に基づいており、[Creative Commons Attribution 4.0 International License][CCA4IL] に記載されている条項に従って使用されています。  
+> 元のページは次 [のページに表示されます](https://developer.chrome.com/extensions/contentSecurityPolicy)。  
 
-[![クリエイティブコモンズライセンス][CCby4Image]][CCA4IL]  
+[![Creative Commons ライセンス][CCby4Image]][CCA4IL]  
 この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。  
 
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  

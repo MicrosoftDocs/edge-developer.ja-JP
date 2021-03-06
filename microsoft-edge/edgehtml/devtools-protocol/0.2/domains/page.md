@@ -3,320 +3,162 @@ description: ページ ドメインの DevTools プロトコル バージョン 
 title: ページ ドメイン - DevTools プロトコル バージョン 0.2 (EdgeHTML)
 author: MSEdgeTeam
 ms.author: msedgedevrel
+ms.date: 11/03/2020
 ms.topic: reference
 ms.prod: microsoft-edge
-ms.date: 11/19/2020
 ROBOTS: NOINDEX,NOFOLLOW
-ms.openlocfilehash: 2f1849a2e2aa2f53cef9dff5d03ac991d368a6f3
-ms.sourcegitcommit: a35a6b5bbc21b7df61d08cbc6b074b5325ad4fef
+ms.openlocfilehash: d969dd100164ace61445a4618174cfa943dcfd2b
+ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "11234411"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "11398848"
 ---
-# ページ ドメイン - DevTools プロトコル バージョン 0.2 (EdgeHTML)  
+# <a name="page-domain---devtools-protocol-version-02-edgehtml"></a>ページ ドメイン - DevTools プロトコル バージョン 0.2 (EdgeHTML)  
 
-検査されたページに関連するアクションとイベントは、ページ ドメインに属します。
+検査されたページに関連するアクションとイベントは、ページ ドメインに属します。  
 
-| | |
-|-|-|
-| [**メソッド**](#methods) | [有効](#enable)、[無効、](#disable)[移動](#navigate)[、getFrameTree](#getframetree) |
-| [**イベント**](#events) | [frameAttached](#frameattached)、 [frameDetached](#framedetached)、 [frameNavigated](#framenavigated)、 [loadEventFired](#loadeventfired)、 [domContentEventFired](#domcontenteventfired) |
-| [**型**](#types) | [](#frameid)FrameId、Frame、FrameTree [](#frame) [](#frametree) |
-## メソッド
+| 分類 | Members |  
+|:--- |:--- |  
+| [メソッド](#methods) | [enable](#enable), [disable](#disable), [navigate](#navigate), [getFrameTree](#getframetree) |  
+| [イベント](#events) | [frameAttached](#frameattached), [frameDetached](#framedetached), [frameNavigated](#framenavigated), [loadEventFired](#loadeventfired), [domContentEventFired](#domcontenteventfired) |  
+| [型](#types) | [FrameId](#frameid)、 [Frame](#frame)、 [FrameTree](#frametree) |  
 
-### [有効]
-ページ ドメイン通知を有効にします。
+## <a name="methods"></a>メソッド  
 
-</p>
+### <a name="enable"></a>[有効]  
 
----
+ページ ドメイン通知を有効にします。  
 
-### [無効]
-ページ ドメイン通知を無効にします。
+&nbsp;  
 
-</p>
+---  
 
----
+### <a name="disable"></a>[無効]  
 
-### ナビゲート
-現在のページを特定の URL に移動します。
+ページ ドメイン通知を無効にします。  
 
-<table>
-    <thead>
-        <tr>
-            <th>パラメーター</th>
-            <th></th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>url</td>
-            <td><code class="flyout">string</code></td>
-            <td>ページの移動先の URL。</td>
-        </tr>
-        <tr>
-            <td>frameId <br/> <i>オプション</i></td>
-            <td><a href="#frameid"><code class="flyout">FrameId</code></a></td>
-            <td>移動するフレーム ID。 指定しない場合、トップ ページに移動します。</td>
-        </tr>
-    </tbody>
-</table>
-<table>
-    <thead>
-        <tr>
-            <th>戻り値</th>
-            <th></th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>frameId</td>
-            <td><a href="#frameid"><code class="flyout">FrameId</code></a></td>
-            <td>移動するフレーム ID です。</td>
-        </tr>
-    </tbody>
-</table>
-</p>
+&nbsp;  
 
----
+---  
 
-### getFrameTree
-現在のフレーム ツリー構造を返します。
+### <a name="navigate"></a>ナビゲート  
 
-<table>
-    <thead>
-        <tr>
-            <th>戻り値</th>
-            <th></th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>frameTree</td>
-            <td><a href="#frametree"><code class="flyout">FrameTree</code></a></td>
-            <td>現在のフレーム ツリー構造。</td>
-        </tr>
-    </tbody>
-</table>
-</p>
+現在のページを特定の URL に移動します。  
 
----
+| パラメーター | 型 | 詳細 |  
+|:--- |:--- |:--- |  
+| url | `string` | ページを移動する URL。 |  
+| frameId \(optional\) | [FrameId](#frameid) | 移動するフレーム ID。  指定しない場合は、トップ ページを移動します。 |  
 
-## イベント
+| 戻り値 | 型 | 詳細 |  
+|:--- |:--- |:--- |  
+| frameId | [FrameId](#frameid) | 移動するフレーム ID。 |  
 
-### frameAttached
-フレームが親にアタッチされている場合に発生します。
+---  
 
-<table>
-    <thead>
-        <tr>
-            <th>パラメーター</th>
-            <th></th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>frameId</td>
-            <td><a href="#frameid"><code class="flyout">FrameId</code></a></td>
-            <td>アタッチされているフレームの ID。</td>
-        </tr>
-        <tr>
-            <td>parentFrameId</td>
-            <td><a href="#frameid"><code class="flyout">FrameId</code></a></td>
-            <td>親フレーム識別子。</td>
-        </tr>
-        <tr>
-            <td>stack <br/> <i>オプション</i></td>
-            <td><a href="runtime.md#stacktrace"><code class="flyout">Runtime.StackTrace</code></a></td>
-            <td>フレームがアタッチされた場合の JavaScript スタック トレース。スクリプトからフレームが開始された場合にのみ設定されます。</td>
-        </tr>
-    </tbody>
-</table>
-</p>
+### <a name="getframetree"></a>getFrameTree  
 
----
+現在のフレーム ツリー構造を返します。  
 
-### frameDetached
-フレームが親からデタッチされた場合に発生します。
+| 戻り値 | 型 | 詳細 |  
+|:--- |:--- |:--- |  
+| frameTree | [FrameTree](#frametree) | 現在のフレーム ツリー構造。 |  
 
-<table>
-    <thead>
-        <tr>
-            <th>パラメーター</th>
-            <th></th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>frameId</td>
-            <td><a href="#frameid"><code class="flyout">FrameId</code></a></td>
-            <td>デタッチされたフレームの ID。</td>
-        </tr>
-    </tbody>
-</table>
-</p>
+---  
 
----
+## <a name="events"></a>イベント  
 
-### frameNavigated
-フレームのナビゲーションが完了すると発生します。
+### <a name="frameattached"></a>frameAttached  
 
-<table>
-    <thead>
-        <tr>
-            <th>パラメーター</th>
-            <th></th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>frame</td>
-            <td><a href="#frame"><code class="flyout">Frame</code></a></td>
-            <td>Frame オブジェクト。</td>
-        </tr>
-    </tbody>
-</table>
-</p>
+フレームが親に接続されている場合に発生します。  
 
----
+| パラメーター | 型 | 詳細 |  
+|:--- |:--- |:--- |  
+| frameId | [FrameId](#frameid) | 接続されているフレームの ID。 |  
+| parentFrameId | [FrameId](#frameid) | 親フレーム識別子。 |  
+| stack \(optional\) | [Runtime.StackTrace](./runtime.md#stacktrace) | フレームが接続された場合の JavaScript スタック トレースは、スクリプトからフレームが開始された場合にのみ設定されます。 |  
 
-### loadEventFired
-window.onload イベントに対応します。
+---  
 
-<table>
-    <thead>
-        <tr>
-            <th>パラメーター</th>
-            <th></th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>timestamp</td>
-            <td><code class="flyout">number</code></td>
-            <td>エポックからのミリ秒。</td>
-        </tr>
-    </tbody>
-</table>
-</p>
+### <a name="framedetached"></a>frameDetached  
 
----
+フレームが親から切り離された場合に発生します。  
 
-### domContentEventFired
-document.onDOMContentLoaded イベントに対応します。
+| パラメーター | 型 | 詳細 |  
+|:--- |:--- |:--- |  
+| frameId | [FrameId](#frameid) | デタッチされたフレームの ID。 |  
 
-<table>
-    <thead>
-        <tr>
-            <th>パラメーター</th>
-            <th></th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>timestamp</td>
-            <td><code class="flyout">number</code></td>
-            <td>エポックからのミリ秒。</td>
-        </tr>
-    </tbody>
-</table>
-</p>
+---  
 
----
+### <a name="framenavigated"></a>frameNavigated  
 
-## 型
+フレームのナビゲーションが完了すると発生します。  
 
-### <a name="frameid"></a> FrameId `string`
+| パラメーター | 型 | 詳細 |  
+|:--- |:--- |:--- |  
+| フレーム | [フレーム](#frame) | Frame オブジェクト。 |  
 
-一意のフレーム識別子。
+---  
 
-</p>
+### <a name="loadeventfired"></a>loadEventFired  
 
----
+イベントに対応 `window.onload` します。  
 
-### <a name="frame"></a> フレーム `object`
+| パラメーター | 型 | 詳細 |  
+|:--- |:--- |:--- |  
+| タイムスタンプ | `number` | エポックからのミリ秒単位。 |  
 
-ページ上のフレームに関する情報。
+---  
 
-<table>
-    <thead>
-        <tr>
-            <th>プロパティ</th>
-            <th></th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>id</td>
-            <td><a href="#frameid"><code class="flyout">FrameId</code></a></td>
-            <td>フレームの一意識別子。</td>
-        </tr>
-        <tr>
-            <td>parentId <br/> <i>オプション</i></td>
-            <td><a href="#frameid"><code class="flyout">FrameId</code></a></td>
-            <td>親フレームの一意識別子。</td>
-        </tr>
-        <tr>
-            <td>name <br/> <i>オプション</i></td>
-            <td><code class="flyout">string</code></td>
-            <td>タグで指定されているフレームの名前。</td>
-        </tr>
-        <tr>
-            <td>url</td>
-            <td><code class="flyout">string</code></td>
-            <td>フレーム ドキュメントの URL。</td>
-        </tr>
-        <tr>
-            <td>securityOrigin</td>
-            <td><code class="flyout">string</code></td>
-            <td>フレーム ドキュメントのセキュリティの原点。</td>
-        </tr>
-        <tr>
-            <td>mimeType</td>
-            <td><code class="flyout">string</code></td>
-            <td>ブラウザーによって決まる、ドキュメントの mimeType をフレームします。</td>
-        </tr>
-    </tbody>
-</table>
-</p>
+### <a name="domcontenteventfired"></a>domContentEventFired  
 
----
+イベントに対応 `document.onDOMContentLoaded` します。  
 
-### <a name="frametree"></a> FrameTree `object`
+| パラメーター | 型 | 詳細 |  
+|:--- |:--- |:--- |  
+| タイムスタンプ | `number` | エポックからのミリ秒単位。 |  
 
-フレーム階層に関する情報。
+---  
 
-<table>
-    <thead>
-        <tr>
-            <th>プロパティ</th>
-            <th></th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>frame</td>
-            <td><a href="#frame"><code class="flyout">Frame</code></a></td>
-            <td>このツリー項目のフレーム情報。</td>
-        </tr>
-        <tr>
-            <td>childFrames <br/> <i>オプション</i></td>
-            <td><a href="#frametree"><code class="flyout">FrameTree[]</code></a></td>
-            <td>子フレーム。</td>
-        </tr>
-    </tbody>
-</table>
-</p>
+## <a name="types"></a>型  
 
----
+### <a name="frameid-string"></a>FrameId 文字列  
+
+<a name="frameid"></a>  
+
+一意のフレーム識別子。  
+
+&nbsp;  
+
+---  
+
+### <a name="frame-object"></a>Frame オブジェクト  
+
+<a name="frame"></a>  
+
+ページのフレームに関する情報。  
+
+| プロパティ | 型 | 詳細 |  
+|:--- |:--- |:--- |  
+| id | [FrameId](#frameid) | フレームの一意の識別子。 |  
+| parentId \(optional\) | [FrameId](#frameid) | 親フレームの一意の識別子。 |  
+| name \(optional\) | `string` | タグで指定されているフレームの名前。 |  
+| url | `string` | フレーム ドキュメントの URL。 |  
+| securityOrigin | `string` | フレーム ドキュメントのセキュリティの発生元。 |  
+| mimeType | `string` | ブラウザーによって決定されるドキュメントの mimeType をフレームします。 |  
+
+---  
+
+### <a name="frametree-object"></a>FrameTree オブジェクト  
+
+<a name="frametree"></a>  
+
+フレーム階層に関する情報。  
+
+| プロパティ | 型 | 詳細 |  
+|:--- |:--- |:--- |  
+| フレーム | [フレーム](#frame) | このツリー アイテムのフレーム情報。 |  
+| childFrames \(optional\) | [FrameTree[]](#frametree) | 子フレーム。 |  
+
+---  

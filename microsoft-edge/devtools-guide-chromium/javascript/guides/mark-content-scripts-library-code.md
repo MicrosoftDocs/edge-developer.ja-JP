@@ -1,18 +1,18 @@
 ---
-description: フレームワークライブラリコード > の [設定] から [コンテンツスクリプトをライブラリコードとしてマーク] を有効にします。
+description: '[設定] から [コンテンツ スクリプトをライブラリ コードとしてマークする] を有効>フレームワーク ライブラリ コードを使用します。'
 title: コンテンツ スクリプトをライブラリ コードとしてマークする
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 10/19/2020
+ms.date: 02/12/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 2a9bca703004b6232bef857d7b9e2f45458db52d
-ms.sourcegitcommit: 99eee78698dc95b2a3fa638a5b063ef449899cda
+ms.openlocfilehash: ffc27cdd04ce28df888507fb2e1dc460d5bb4f21
+ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "11124699"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "11398953"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -28,32 +28,32 @@ ms.locfileid: "11124699"
    See the License for the specific language governing permissions and
    limitations under the License.  -->
 
-# コンテンツスクリプトをライブラリコードとしてマークする  
+# <a name="mark-content-scripts-as-library-code"></a>コンテンツ スクリプトをライブラリ コードとしてマークする  
 
-Microsoft Edge DevTools の **ソース** パネルを使用して [コードをステップ実行][DevToolsJavascriptStepThroughCode]するときに、認識できないコードを一時停止することがあります。  インストールした Microsoft Edge 拡張機能のいずれかのコードで一時停止している可能性があります。  次の手順を実行して、拡張コードに一時停止しないようにします。  
+Microsoft Edge **** DevTools の [ソース][][DevToolsJavascriptStepThroughCode]パネルを使用してコードをステップ実行する場合は、認識できないコードを一時停止する場合があります。  おそらく、インストールした Microsoft Edge 拡張機能のコードを一時停止した可能性があります。  拡張機能コードを一時停止しない場合は、次の手順を実行します。  
 
-1.  DevTools を開くには、[ユーザー設定] を選び、[ **DevTools** \ (\)] を選択し `...` て、[ **設定**] を選びます。  または、を選択して **設定** を開くこともでき `F1` ます。  
+1.  DevTools を開き **、[DevTools** \( \) をカスタマイズして制御 `...` する] を選択し、[設定] > **します**。  [設定] を **選択して開** く場合があります `F1` 。  
 
-1.  [**ライブラリコード**] タブを選択すると、[**設定**] の**フレームワークライブラリコード**セクションが開きます。  
-1.  [ **コンテンツスクリプトをライブラリコードとしてマーク** する] チェックボックスをオンにします。  
+1.  [設定] **の [フレームワーク** ライブラリ コード] **セクションを開く [ライブラリ** コード] パネルを **選択します**。  
+1.  [コンテンツ スクリプトを **ライブラリ コードとしてマークする] チェック ボックスをオン** にします。  
     
-    :::image type="complex" source="../../media/javascript-settings-library-code-mark-content-scripts-library-code.msft.png" alt-text="[コンテンツスクリプトをライブラリコードとしてマークする] チェックボックスを有効にする" lightbox="../../media/javascript-settings-library-code-mark-content-scripts-library-code.msft.png":::
-       [ **コンテンツスクリプトをライブラリコードとしてマーク** する] チェックボックスを有効にする  
+    :::image type="complex" source="../../media/javascript-settings-library-code-mark-content-scripts-library-code.msft.png" alt-text="[コンテンツ スクリプトをライブラリ コードとしてマークする] チェック ボックスをオンにする" lightbox="../../media/javascript-settings-library-code-mark-content-scripts-library-code.msft.png":::
+       [コンテンツ スクリプト **をライブラリ コードとしてマークする] チェック ボックスをオン** にする  
     :::image-end:::  
     
-## Microsoft Edge DevTools チームと連絡を取る  
+## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームと連絡を取る  
 
 [!INCLUDE [contact DevTools team note](../../includes/contact-devtools-team-note.md)]  
 
 <!-- links -->  
 
-[DevToolsJavascriptStepThroughCode]: ../index.md#step-4-step-through-the-code "手順 4: 「Microsoft Edge DevTools で JavaScript のデバッグを開始する」をご覧ください。Microsoft ドキュメント"  
+[DevToolsJavascriptStepThroughCode]: ../index.md#step-4-step-through-the-code "手順 4: コードをステップ実行する - Microsoft Edge DevTools の JavaScript のデバッグの|Microsoft Docs"  
 
 > [!NOTE]
-> このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
-> 元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/javascript/guides/blackbox-chrome-extension-scripts) にあり、 [Kayce Basques][KayceBasques] テクニカルライター、Chrome Devtools \ & Lighthouse \) で作成されています。  
+> このページの一部は、 [Google によっ て作成および共有された][GoogleSitePolicies]作業に基づく変更で、「[Creative Commons Attribution 4.0 International License][CCA4IL]」で記載されている条項に従って使用されます。  
+> 元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/javascript/guides/blackbox-chrome-extension-scripts) にあり、 [Kayce Basques][KayceBasques] \(Chrome DevTools \& Lighthouse\ のテクニカル ライター) が作成しました。  
 
-[![クリエイティブコモンズライセンス][CCby4Image]][CCA4IL]  
+[![Creative Commons ライセンス][CCby4Image]][CCA4IL]  
 この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。  
 
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
