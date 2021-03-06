@@ -1,18 +1,18 @@
 ---
-description: Microsoft Edge DevTools を使用して、ページの HTTP cookie の表示、編集、削除を行う方法について説明します。
-title: Microsoft Edge DevTools を使った Cookie の表示、編集、削除
+description: Microsoft Edge DevTools を使用してページの HTTP Cookie を表示、編集、および削除する方法について説明します。
+title: Microsoft Edge DevTools で Cookie を表示、編集、および削除する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 10/19/2020
+ms.date: 02/12/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 328771aa254dac1f851535a44126ea220dc95a9c
-ms.sourcegitcommit: 99eee78698dc95b2a3fa638a5b063ef449899cda
+ms.openlocfilehash: 9c040aaa30142c2759c67b2c034d3a9271ca0a64
+ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "11125483"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "11397749"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -28,72 +28,72 @@ ms.locfileid: "11125483"
    See the License for the specific language governing permissions and
    limitations under the License.  -->
 
-# <span data-ttu-id="61246-104">Microsoft Edge DevTools を使った cookie の表示、編集、削除</span><span class="sxs-lookup"><span data-stu-id="61246-104">View, edit, and delete cookies with Microsoft Edge DevTools</span></span>  
+# <a name="view-edit-and-delete-cookies-with-microsoft-edge-devtools"></a><span data-ttu-id="28f05-104">Microsoft Edge DevTools で Cookie を表示、編集、および削除する</span><span class="sxs-lookup"><span data-stu-id="28f05-104">View, edit, and delete cookies with Microsoft Edge DevTools</span></span>  
 
-<span data-ttu-id="61246-105">[HTTP cookie][MDNHTTPCookies] は主に、ユーザーセッションを管理するために使用され、ユーザーの個人設定の設定を保存し、ユーザーの動作を追跡するために使用されます。</span><span class="sxs-lookup"><span data-stu-id="61246-105">[HTTP Cookies][MDNHTTPCookies] are mainly used to manage user sessions, store user personalization preferences, and track user behavior.</span></span>  <span data-ttu-id="61246-106">Cookie は、web 上で表示される、"このページに cookie が使用されています" という承諾フォームもあります。</span><span class="sxs-lookup"><span data-stu-id="61246-106">Cookies are also the cause of all of the annoying "this page uses cookies" consent forms that you see across the web.</span></span>  <span data-ttu-id="61246-107">次のガイドでは、 [Microsoft Edge DevTools][MicrosoftEdgeDevTools]を使って、ページの HTTP cookie の表示、編集、削除を行う方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="61246-107">The following guide teaches you how to view, edit, and delete the HTTP cookies for a page with [Microsoft Edge DevTools][MicrosoftEdgeDevTools].</span></span>  
+<span data-ttu-id="28f05-105">[HTTP Cookie は][MDNHTTPCookies] 、主にユーザー セッションの管理、ユーザーの個人用設定の保存、ユーザーの動作の追跡に使用されます。</span><span class="sxs-lookup"><span data-stu-id="28f05-105">[HTTP Cookies][MDNHTTPCookies] are mainly used to manage user sessions, store user personalization preferences, and track user behavior.</span></span>  <span data-ttu-id="28f05-106">Cookie は、このページが Web 全体で見つかった **Cookie** 同意フォームを使用しているすべての迷惑な原因です。</span><span class="sxs-lookup"><span data-stu-id="28f05-106">Cookies are also the cause of all of the annoying **this page uses cookies** consent forms that are found across the web.</span></span>  <span data-ttu-id="28f05-107">次のガイドでは [、Microsoft Edge DevTools][MicrosoftEdgeDevTools]を使用して Web ページの HTTP Cookie を表示、編集、および削除する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="28f05-107">The following guide teaches you how to view, edit, and delete the HTTP cookies for a webpage with [Microsoft Edge DevTools][MicrosoftEdgeDevTools].</span></span>  
 
-## <span data-ttu-id="61246-108">[Cookies] ウィンドウを開く</span><span class="sxs-lookup"><span data-stu-id="61246-108">Open the Cookies pane</span></span>  
+## <a name="open-the-cookies-pane"></a><span data-ttu-id="28f05-108">Cookie ウィンドウを開く</span><span class="sxs-lookup"><span data-stu-id="28f05-108">Open the Cookies pane</span></span>  
 
-1.  <span data-ttu-id="61246-109">[DevTools を開き][DevToolsOpen]ます。</span><span class="sxs-lookup"><span data-stu-id="61246-109">[Open DevTools][DevToolsOpen].</span></span>  
-1.  <span data-ttu-id="61246-110">[ **アプリケーション** ] タブを選択して、[ **アプリケーション** ] パネルを開きます。</span><span class="sxs-lookup"><span data-stu-id="61246-110">Select the **Application** tab to open the **Application** panel.</span></span>  <span data-ttu-id="61246-111">**マニフェスト**ウィンドウが開きます。</span><span class="sxs-lookup"><span data-stu-id="61246-111">The **Manifest** pane should open.</span></span>  
+1.  <span data-ttu-id="28f05-109">[DevTools を開きます][DevToolsOpen]。</span><span class="sxs-lookup"><span data-stu-id="28f05-109">[Open DevTools][DevToolsOpen].</span></span>  
+1.  <span data-ttu-id="28f05-110">[アプリケーション] **タブを** 選択して、[アプリケーション] パネル **を開** きます。</span><span class="sxs-lookup"><span data-stu-id="28f05-110">Choose the **Application** tab to open the **Application** panel.</span></span>  <span data-ttu-id="28f05-111">[ **マニフェスト] ウィンドウ** が開きます。</span><span class="sxs-lookup"><span data-stu-id="28f05-111">The **Manifest** pane should open.</span></span>  
     
-    :::image type="complex" source="../media/storage-application-manifest-empty.msft.png" alt-text="マニフェストウィンドウ" lightbox="../media/storage-application-manifest-empty.msft.png":::
-       <span data-ttu-id="61246-113">図 1: [マニフェスト] ウィンドウ</span><span class="sxs-lookup"><span data-stu-id="61246-113">Figure 1:  The Manifest pane</span></span>  
+    :::image type="complex" source="../media/storage-application-manifest-empty.msft.png" alt-text="[マニフェスト] ウィンドウ" lightbox="../media/storage-application-manifest-empty.msft.png":::
+       <span data-ttu-id="28f05-113">図 1: マニフェスト ウィンドウ</span><span class="sxs-lookup"><span data-stu-id="28f05-113">Figure 1:  The Manifest pane</span></span>  
     :::image-end:::  
 
-1.  <span data-ttu-id="61246-114">[ **記憶域** ] で [ **cookie**] を展開し、[起点] を選択します。</span><span class="sxs-lookup"><span data-stu-id="61246-114">Under **Storage** expand **Cookies**, then select an origin.</span></span>  
+1.  <span data-ttu-id="28f05-114">[記憶域 **] で** **[Cookie] を展開**し、原点を選択します。</span><span class="sxs-lookup"><span data-stu-id="28f05-114">Under **Storage** expand **Cookies**, then select an origin.</span></span>  
     
-    :::image type="complex" source="../media/storage-application-storage-cookies-selected.msft.png" alt-text="マニフェストウィンドウ" lightbox="../media/storage-application-storage-cookies-selected.msft.png":::
-       <span data-ttu-id="61246-116">図 2: [Cookie] ウィンドウ</span><span class="sxs-lookup"><span data-stu-id="61246-116">Figure 2:  The Cookies pane</span></span>  
+    :::image type="complex" source="../media/storage-application-storage-cookies-selected.msft.png" alt-text="[Cookie] ウィンドウ" lightbox="../media/storage-application-storage-cookies-selected.msft.png":::
+       <span data-ttu-id="28f05-116">図 2: Cookie ウィンドウ</span><span class="sxs-lookup"><span data-stu-id="28f05-116">Figure 2:  The Cookies pane</span></span>  
     :::image-end:::  
 
-## <span data-ttu-id="61246-117">フィールド</span><span class="sxs-lookup"><span data-stu-id="61246-117">Fields</span></span>  
+## <a name="fields"></a><span data-ttu-id="28f05-117">フィールド</span><span class="sxs-lookup"><span data-stu-id="28f05-117">Fields</span></span>  
 
-<span data-ttu-id="61246-118">**Cookies**テーブルには、次のフィールドが含まれています。</span><span class="sxs-lookup"><span data-stu-id="61246-118">The **Cookies** table contains the following fields.</span></span>  
+<span data-ttu-id="28f05-118">Cookie **テーブルには** 、次のフィールドが含まれています。</span><span class="sxs-lookup"><span data-stu-id="28f05-118">The **Cookies** table contains the following fields.</span></span>  
 
-*   <span data-ttu-id="61246-119">**[名前]**。</span><span class="sxs-lookup"><span data-stu-id="61246-119">**Name**.</span></span>  <span data-ttu-id="61246-120">Cookie の名前。</span><span class="sxs-lookup"><span data-stu-id="61246-120">The name of the cookie.</span></span>  
-*   <span data-ttu-id="61246-121">**値**。</span><span class="sxs-lookup"><span data-stu-id="61246-121">**Value**.</span></span>  <span data-ttu-id="61246-122">Cookie の値。</span><span class="sxs-lookup"><span data-stu-id="61246-122">The value of the cookie.</span></span>  
-*   <span data-ttu-id="61246-123">**ドメイン**。</span><span class="sxs-lookup"><span data-stu-id="61246-123">**Domain**.</span></span>  <span data-ttu-id="61246-124">Cookie の受信を許可されているホスト。</span><span class="sxs-lookup"><span data-stu-id="61246-124">The hosts that are allowed to receive the cookie.</span></span>  <span data-ttu-id="61246-125">「 [Cookie のスコープ][MDNHTTPCookiesScope]」をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="61246-125">See [Scope of cookies][MDNHTTPCookiesScope].</span></span>  
-*   <span data-ttu-id="61246-126">**Path**。</span><span class="sxs-lookup"><span data-stu-id="61246-126">**Path**.</span></span>  <span data-ttu-id="61246-127">ヘッダーを送信するために要求された URL 内に存在する必要がある URL `Cookie` 。</span><span class="sxs-lookup"><span data-stu-id="61246-127">The URL that must exist in the requested URL in order to send the `Cookie` header.</span></span>  <span data-ttu-id="61246-128">「 [Cookie のスコープ][MDNHTTPCookiesScope]」をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="61246-128">See [Scope of cookies][MDNHTTPCookiesScope].</span></span>  
-*   <span data-ttu-id="61246-129">**有効期限/最長年齢**。</span><span class="sxs-lookup"><span data-stu-id="61246-129">**Expires / Max-Age**.</span></span>  <span data-ttu-id="61246-130">Cookie の有効期限日または最大年齢。</span><span class="sxs-lookup"><span data-stu-id="61246-130">The expiration date or maximum age of the cookie.</span></span>  <span data-ttu-id="61246-131">「 [永続的な cookie][MDNHTTPCookiesPermanent]」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="61246-131">See [Permanent cookies][MDNHTTPCookiesPermanent].</span></span>  <span data-ttu-id="61246-132">[セッション cookie][MDNHTTPCookiesSession]の場合、この値は常に使用され `Session` ます。</span><span class="sxs-lookup"><span data-stu-id="61246-132">For [session cookies][MDNHTTPCookiesSession] this value is always `Session`.</span></span>  
-*   <span data-ttu-id="61246-133">**サイズ**。</span><span class="sxs-lookup"><span data-stu-id="61246-133">**Size**.</span></span>  <span data-ttu-id="61246-134">Cookie のサイズ (バイト単位) です。</span><span class="sxs-lookup"><span data-stu-id="61246-134">The size, in bytes, of the cookie.</span></span>  
-*   <span data-ttu-id="61246-135">**HTTP**。</span><span class="sxs-lookup"><span data-stu-id="61246-135">**HTTP**.</span></span>  <span data-ttu-id="61246-136">True の場合、このフィールドは、cookie が HTTP 経由でのみ使用され、JavaScript の変更が許可されていないことを示します。</span><span class="sxs-lookup"><span data-stu-id="61246-136">If true, this field indicates that the cookie should only be used over HTTP and JavaScript modification is not allowed.</span></span>  <span data-ttu-id="61246-137">「 [Httponly cookie][MDNHTTPCookiesSecure]」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="61246-137">See [HttpOnly cookies][MDNHTTPCookiesSecure].</span></span>  
-*   <span data-ttu-id="61246-138">**セキュリティ保護さ**れます。</span><span class="sxs-lookup"><span data-stu-id="61246-138">**Secure**.</span></span>  <span data-ttu-id="61246-139">True の場合、このフィールドは、cookie がセキュリティで保護された HTTPS 接続を介してのみサーバーに送信される必要があることを示します。</span><span class="sxs-lookup"><span data-stu-id="61246-139">If true, this field indicates that the cookie must be sent to the server only over a secure, HTTPS connection.</span></span>  <span data-ttu-id="61246-140">「 [安全な cookie][MDNHTTPCookiesSecure]」をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="61246-140">See [Secure cookies][MDNHTTPCookiesSecure].</span></span>  
-*   <span data-ttu-id="61246-141">**SameSite**。</span><span class="sxs-lookup"><span data-stu-id="61246-141">**SameSite**.</span></span>  <span data-ttu-id="61246-142">`strict` `lax` Cookie が実験的な[Samesite][MDNHTTPCookiesSamesite]属性を使用しているかどうかを示します。</span><span class="sxs-lookup"><span data-stu-id="61246-142">Contains `strict` or `lax` if the cookie is using the experimental [Samesite][MDNHTTPCookiesSamesite] attribute.</span></span>  
-*   <span data-ttu-id="61246-143">**優先度**。</span><span class="sxs-lookup"><span data-stu-id="61246-143">**Priority**.</span></span>  <span data-ttu-id="61246-144">含ま `low` れる `medium` 場合は、\ (既定値 \)、または `high` cookie で廃止された [cookie 優先順位][ChromiumIssue232693] の属性が使用されているかどうかが表示されます。</span><span class="sxs-lookup"><span data-stu-id="61246-144">Contains `low`, `medium` \(default\), or `high` if the cookie is using the deprecated [cookie Priority][ChromiumIssue232693] attribute.</span></span>
+*   <span data-ttu-id="28f05-119">**[名前]**。</span><span class="sxs-lookup"><span data-stu-id="28f05-119">**Name**.</span></span>  <span data-ttu-id="28f05-120">Cookie の名前。</span><span class="sxs-lookup"><span data-stu-id="28f05-120">The name of the cookie.</span></span>  
+*   <span data-ttu-id="28f05-121">**値**。</span><span class="sxs-lookup"><span data-stu-id="28f05-121">**Value**.</span></span>  <span data-ttu-id="28f05-122">Cookie の値。</span><span class="sxs-lookup"><span data-stu-id="28f05-122">The value of the cookie.</span></span>  
+*   <span data-ttu-id="28f05-123">**ドメイン**.</span><span class="sxs-lookup"><span data-stu-id="28f05-123">**Domain**.</span></span>  <span data-ttu-id="28f05-124">Cookie の受信を許可されているホスト。</span><span class="sxs-lookup"><span data-stu-id="28f05-124">The hosts that are allowed to receive the cookie.</span></span>  <span data-ttu-id="28f05-125">[Cookie の [スコープ] に移動します][MDNHTTPCookiesScope]。</span><span class="sxs-lookup"><span data-stu-id="28f05-125">Navigate to [Scope of cookies][MDNHTTPCookiesScope].</span></span>  
+*   <span data-ttu-id="28f05-126">**Path**.</span><span class="sxs-lookup"><span data-stu-id="28f05-126">**Path**.</span></span>  <span data-ttu-id="28f05-127">ヘッダーを送信するために要求された URL に存在する必要 `Cookie` がある URL。</span><span class="sxs-lookup"><span data-stu-id="28f05-127">The URL that must exist in the requested URL in order to send the `Cookie` header.</span></span>  <span data-ttu-id="28f05-128">[Cookie の [スコープ] に移動します][MDNHTTPCookiesScope]。</span><span class="sxs-lookup"><span data-stu-id="28f05-128">Navigate to [Scope of cookies][MDNHTTPCookiesScope].</span></span>  
+*   <span data-ttu-id="28f05-129">**有効期限 / 最大経過時間**。</span><span class="sxs-lookup"><span data-stu-id="28f05-129">**Expires / Max-Age**.</span></span>  <span data-ttu-id="28f05-130">Cookie の有効期限または最大有効期限。</span><span class="sxs-lookup"><span data-stu-id="28f05-130">The expiration date or maximum age of the cookie.</span></span>  <span data-ttu-id="28f05-131">[永続的な [Cookie] に移動します][MDNHTTPCookiesPermanent]。</span><span class="sxs-lookup"><span data-stu-id="28f05-131">Navigate to [Permanent cookies][MDNHTTPCookiesPermanent].</span></span>  <span data-ttu-id="28f05-132">セッション [Cookie の場合、][MDNHTTPCookiesSession] この値は常にです `Session` 。</span><span class="sxs-lookup"><span data-stu-id="28f05-132">For [session cookies][MDNHTTPCookiesSession] this value is always `Session`.</span></span>  
+*   <span data-ttu-id="28f05-133">**サイズ**.</span><span class="sxs-lookup"><span data-stu-id="28f05-133">**Size**.</span></span>  <span data-ttu-id="28f05-134">Cookie のサイズ (バイト単位)。</span><span class="sxs-lookup"><span data-stu-id="28f05-134">The size, in bytes, of the cookie.</span></span>  
+*   <span data-ttu-id="28f05-135">**HTTP**.</span><span class="sxs-lookup"><span data-stu-id="28f05-135">**HTTP**.</span></span>  <span data-ttu-id="28f05-136">true の場合、このフィールドは Cookie を HTTP でのみ使用し、JavaScript の変更は許可されません。</span><span class="sxs-lookup"><span data-stu-id="28f05-136">If true, this field indicates that the cookie should only be used over HTTP and JavaScript modification is not allowed.</span></span>  <span data-ttu-id="28f05-137">[HttpOnly Cookie に移動します][MDNHTTPCookiesSecure]。</span><span class="sxs-lookup"><span data-stu-id="28f05-137">Navigate to [HttpOnly cookies][MDNHTTPCookiesSecure].</span></span>  
+*   <span data-ttu-id="28f05-138">**セキュリティで保護されています**。</span><span class="sxs-lookup"><span data-stu-id="28f05-138">**Secure**.</span></span>  <span data-ttu-id="28f05-139">true の場合、このフィールドは、セキュリティで保護された HTTPS 接続経由でのみ Cookie をサーバーに送信する必要があります。</span><span class="sxs-lookup"><span data-stu-id="28f05-139">If true, this field indicates that the cookie must be sent to the server only over a secure, HTTPS connection.</span></span>  <span data-ttu-id="28f05-140">[セキュリティで保護 [された Cookie] に移動します][MDNHTTPCookiesSecure]。</span><span class="sxs-lookup"><span data-stu-id="28f05-140">Navigate to [Secure cookies][MDNHTTPCookiesSecure].</span></span>  
+*   <span data-ttu-id="28f05-141">**SameSite**.</span><span class="sxs-lookup"><span data-stu-id="28f05-141">**SameSite**.</span></span>  <span data-ttu-id="28f05-142">Cookie が `strict` 実験的 `lax` な Samesite 属性を使用している場合 [またはを含][MDNHTTPCookiesSamesite] む。</span><span class="sxs-lookup"><span data-stu-id="28f05-142">Contains `strict` or `lax` if the cookie is using the experimental [Samesite][MDNHTTPCookiesSamesite] attribute.</span></span>  
+*   <span data-ttu-id="28f05-143">**優先度**。</span><span class="sxs-lookup"><span data-stu-id="28f05-143">**Priority**.</span></span>  <span data-ttu-id="28f05-144">\(default\)、または Cookie が非推奨の Cookie Priority 属性を使用 `low` `medium` `high` [している場合を含][ChromiumIssue232693] む。</span><span class="sxs-lookup"><span data-stu-id="28f05-144">Contains `low`, `medium` \(default\), or `high` if the cookie is using the deprecated [cookie Priority][ChromiumIssue232693] attribute.</span></span>
 
-## <span data-ttu-id="61246-145">Cookie をフィルター処理する</span><span class="sxs-lookup"><span data-stu-id="61246-145">Filter cookies</span></span>  
+## <a name="filter-cookies"></a><span data-ttu-id="28f05-145">フィルター Cookie</span><span class="sxs-lookup"><span data-stu-id="28f05-145">Filter cookies</span></span>  
 
-<span data-ttu-id="61246-146">**名前**または**値**で cookie をフィルター処理するには、[**フィルター** ] テキストボックスを使用します。</span><span class="sxs-lookup"><span data-stu-id="61246-146">Use the **Filter** text box to filter cookies by **Name** or **Value**.</span></span>  <span data-ttu-id="61246-147">他のフィールドによるフィルター処理はサポートされていません。</span><span class="sxs-lookup"><span data-stu-id="61246-147">Filtering by other fields is not supported.</span></span>  
+<span data-ttu-id="28f05-146">[フィルター]**テキスト ボックス**を使用して、名前または値で**Cookie を\*\*\*\*フィルター処理します**。</span><span class="sxs-lookup"><span data-stu-id="28f05-146">Use the **Filter** text box to filter cookies by **Name** or **Value**.</span></span>  <span data-ttu-id="28f05-147">他のフィールドによるフィルター処理はサポートされていません。</span><span class="sxs-lookup"><span data-stu-id="28f05-147">Filtering by other fields is not supported.</span></span>  
 
-:::image type="complex" source="../media/storage-application-storage-cookies-filter-id.msft.png" alt-text="マニフェストウィンドウ" lightbox="../media/storage-application-storage-cookies-filter-id.msft.png":::
-   <span data-ttu-id="61246-149">図 3: テキストが含まれていないすべての cookie をフィルター処理する</span><span class="sxs-lookup"><span data-stu-id="61246-149">Figure 3:  Filtering out any cookies that do not contain the text</span></span> `ID`  
+:::image type="complex" source="../media/storage-application-storage-cookies-filter-id.msft.png" alt-text="テキスト ID を含む Cookie をフィルター処理する" lightbox="../media/storage-application-storage-cookies-filter-id.msft.png":::
+   <span data-ttu-id="28f05-149">図 3: テキストを含む Cookie をフィルター処理する</span><span class="sxs-lookup"><span data-stu-id="28f05-149">Figure 3:  Filtering out any cookies that do not contain the text</span></span> `ID`  
 :::image-end:::  
 
-## <span data-ttu-id="61246-150">Cookie を編集する</span><span class="sxs-lookup"><span data-stu-id="61246-150">Edit a cookie</span></span>  
+## <a name="edit-a-cookie"></a><span data-ttu-id="28f05-150">Cookie を編集する</span><span class="sxs-lookup"><span data-stu-id="28f05-150">Edit a cookie</span></span>  
 
-<span data-ttu-id="61246-151">[ **名前**]、[ **値**]、[ **ドメイン**]、[ **パス**]、[ **有効期限** ]、[最大有効期限] の各フィールドは編集できます。</span><span class="sxs-lookup"><span data-stu-id="61246-151">The **Name**, **Value**, **Domain**, **Path**, and **Expires / Max-Age** fields are editable.</span></span>  
-<span data-ttu-id="61246-152">フィールドをダブルクリックして編集します。</span><span class="sxs-lookup"><span data-stu-id="61246-152">Double-click a field to edit it.</span></span>  
+<span data-ttu-id="28f05-151">[**名前]、[\*\*\*\*値\*\*\*\*]、[ドメイン\*\*\*\*]、[パス**]、および **[有効期限] / [最大年齢**] フィールドは編集可能です。</span><span class="sxs-lookup"><span data-stu-id="28f05-151">The **Name**, **Value**, **Domain**, **Path**, and **Expires / Max-Age** fields are editable.</span></span>  
+<span data-ttu-id="28f05-152">フィールドをダブルクリックして編集します。</span><span class="sxs-lookup"><span data-stu-id="28f05-152">Double-click a field to edit it.</span></span>  
 
-:::image type="complex" source="../media/storage-application-storage-cookies-rename.msft.png" alt-text="マニフェストウィンドウ" lightbox="../media/storage-application-storage-cookies-rename.msft.png":::
-   <span data-ttu-id="61246-154">図 4: クッキーの名前を設定する</span><span class="sxs-lookup"><span data-stu-id="61246-154">Figure 4:  Setting the name of a cookie to</span></span> `DEVTOOLS!`  
+:::image type="complex" source="../media/storage-application-storage-cookies-rename.msft.png" alt-text="Cookie の名前を DEVTOOLS に設定する!" lightbox="../media/storage-application-storage-cookies-rename.msft.png":::
+   <span data-ttu-id="28f05-154">図 4: Cookie の名前をに設定する</span><span class="sxs-lookup"><span data-stu-id="28f05-154">Figure 4:  Setting the name of a cookie to</span></span> `DEVTOOLS!`  
 :::image-end:::  
 
-## <span data-ttu-id="61246-155">Cookie を削除する</span><span class="sxs-lookup"><span data-stu-id="61246-155">Delete cookies</span></span>  
+## <a name="delete-cookies"></a><span data-ttu-id="28f05-155">Cookie を削除する</span><span class="sxs-lookup"><span data-stu-id="28f05-155">Delete cookies</span></span>  
 
-<span data-ttu-id="61246-156">Cookie を選択して、[選択した削除の **削除] を**選択し ![ ][ImageDeleteIcon]  、特定の cookie を削除します。</span><span class="sxs-lookup"><span data-stu-id="61246-156">Select a cookie and choose **Delete Selected** ![Delete Selected][ImageDeleteIcon]  to delete the specific cookie.</span></span>  
+<span data-ttu-id="28f05-156">Cookie を選択し **、[Delete Selected** \( Delete Selected \) ] を選択して、特定の Cookie ![ ][ImageDeleteIcon] を削除します。</span><span class="sxs-lookup"><span data-stu-id="28f05-156">Choose a cookie and choose **Delete Selected** \(![Delete Selected][ImageDeleteIcon]\) to delete the specific cookie.</span></span>  
 
-:::image type="complex" source="../media/storage-application-storage-cookies-delete-selected.msft.png" alt-text="マニフェストウィンドウ" lightbox="../media/storage-application-storage-cookies-delete-selected.msft.png":::
-   <span data-ttu-id="61246-158">図 5: 特定の cookie を削除する</span><span class="sxs-lookup"><span data-stu-id="61246-158">Figure 5:  Deleting a specific cookie</span></span>  
+:::image type="complex" source="../media/storage-application-storage-cookies-delete-selected.msft.png" alt-text="特定の Cookie の削除" lightbox="../media/storage-application-storage-cookies-delete-selected.msft.png":::
+   <span data-ttu-id="28f05-158">図 5: 特定の Cookie の削除</span><span class="sxs-lookup"><span data-stu-id="28f05-158">Figure 5:  Deleting a specific cookie</span></span>  
 :::image-end:::  
 
-<span data-ttu-id="61246-159">すべて**Clear All** ![ ][ImageClearIcon] の cookie を削除するには、[すべてクリア] を選択します。</span><span class="sxs-lookup"><span data-stu-id="61246-159">Choose **Clear All** ![Clear All][ImageClearIcon]  to delete all cookies.</span></span>  
+<span data-ttu-id="28f05-159">[ **すべてクリア]** \( ![ Clear All ][ImageClearIcon] \) を選択して、すべての Cookie を削除します。</span><span class="sxs-lookup"><span data-stu-id="28f05-159">Choose **Clear All** \(![Clear All][ImageClearIcon]\)  to delete all cookies.</span></span>  
 
-:::image type="complex" source="../media/storage-application-storage-cookies-clear-all.msft.png" alt-text="マニフェストウィンドウ" lightbox="../media/storage-application-storage-cookies-clear-all.msft.png":::
-   <span data-ttu-id="61246-161">図 6: すべての cookie をクリアする</span><span class="sxs-lookup"><span data-stu-id="61246-161">Figure 6:  Clearing all cookies</span></span>  
+:::image type="complex" source="../media/storage-application-storage-cookies-clear-all.msft.png" alt-text="すべての Cookie のクリア" lightbox="../media/storage-application-storage-cookies-clear-all.msft.png":::
+   <span data-ttu-id="28f05-161">図 6: すべての Cookie をクリアする</span><span class="sxs-lookup"><span data-stu-id="28f05-161">Figure 6:  Clearing all cookies</span></span>  
 :::image-end:::  
 
-## <span data-ttu-id="61246-162">Microsoft Edge DevTools チームと連絡を取る</span><span class="sxs-lookup"><span data-stu-id="61246-162">Getting in touch with the Microsoft Edge DevTools team</span></span>  
+## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a><span data-ttu-id="28f05-162">Microsoft Edge DevTools チームと連絡を取る</span><span class="sxs-lookup"><span data-stu-id="28f05-162">Getting in touch with the Microsoft Edge DevTools team</span></span>  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
@@ -104,24 +104,24 @@ ms.locfileid: "11125483"
 
 <!-- links -->  
 
-[MicrosoftEdgeDevTools]: /microsoft-edge/devtools-guide-chromium "Microsoft Edge (Chromium) 開発者ツール"  
+[MicrosoftEdgeDevTools]: /microsoft-edge/devtools-guide-chromium "Microsoft Edge (クロム) 開発者ツール"  
 [DevToolsOpen]: /microsoft-edge/devtools-guide-chromium/open "Microsoft Edge DevTools を開く"  
 
-[ChromiumIssue232693]: https://bugs.chromium.org/p/chromium/issues/detail?id=232693 "Chromium の問題 232693: Cookie の優先度フィールドの実装 |Chromium のバグ"  
+[ChromiumIssue232693]: https://bugs.chromium.org/p/chromium/issues/detail?id=232693 "クロムの問題 232693: Cookie の優先度フィールドの実装|クロム バグ"  
 
-[MDNHTTPCookies]: https://developer.mozilla.org/docs/Web/HTTP/Cookies "HTTP クッキー |MDN"  
-[MDNHTTPCookiesPermanent]: https://developer.mozilla.org/docs/Web/HTTP/Cookies#Permanent_cookies "HTTP クッキー-永続的な cookie |MDN"  
-[MDNHTTPCookiesSamesite]: https://developer.mozilla.org/docs/Web/HTTP/Cookies#SameSite_cookies "HTTP クッキー-SameSite クッキー |MDN"  
-[MDNHTTPCookiesScope]: https://developer.mozilla.org/docs/Web/HTTP/Cookies#Scope_of_cookies "HTTP cookie-cookie のスコープ |MDN"  
-[MDNHTTPCookiesSecure]: https://developer.mozilla.org/docs/Web/HTTP/Cookies#Secure_and_HttpOnly_cookies "HTTP クッキー-セキュアおよび HttpOnly クッキー |MDN"  
-[MDNHTTPCookiesSession]: https://developer.mozilla.org/docs/Web/HTTP/Cookies#Session_cookies "HTTP クッキー-セッションクッキー |MDN"  
+[MDNHTTPCookies]: https://developer.mozilla.org/docs/Web/HTTP/Cookies "HTTP cookie |MDN"  
+[MDNHTTPCookiesPermanent]: https://developer.mozilla.org/docs/Web/HTTP/Cookies#Permanent_cookies "HTTP Cookie - 永続的な cookie |MDN"  
+[MDNHTTPCookiesSamesite]: https://developer.mozilla.org/docs/Web/HTTP/Cookies#SameSite_cookies "HTTP Cookie - SameSite cookie |MDN"  
+[MDNHTTPCookiesScope]: https://developer.mozilla.org/docs/Web/HTTP/Cookies#Scope_of_cookies "HTTP cookie - Cookie の範囲と|MDN"  
+[MDNHTTPCookiesSecure]: https://developer.mozilla.org/docs/Web/HTTP/Cookies#Secure_and_HttpOnly_cookies "HTTP Cookie - セキュリティで保護された HttpOnly |MDN"  
+[MDNHTTPCookiesSession]: https://developer.mozilla.org/docs/Web/HTTP/Cookies#Session_cookies "HTTP Cookie - セッション cookie |MDN"  
 
 > [!NOTE]
-> <span data-ttu-id="61246-172">このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。</span><span class="sxs-lookup"><span data-stu-id="61246-172">Portions of this page are modifications based on work created and [shared by Google][GoogleSitePolicies] and used according to terms described in the [Creative Commons Attribution 4.0 International License][CCA4IL].</span></span>  
-> <span data-ttu-id="61246-173">元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/storage/cookies) にあり、 [Kayce Basques][KayceBasques] テクニカルライター、Chrome Devtools \ & Lighthouse \) で作成されています。</span><span class="sxs-lookup"><span data-stu-id="61246-173">The original page is found [here](https://developers.google.com/web/tools/chrome-devtools/storage/cookies) and is authored by [Kayce Basques][KayceBasques] \(Technical Writer, Chrome DevTools \& Lighthouse\).</span></span>  
+> <span data-ttu-id="28f05-172">このページの一部は、 [Google によっ て作成および共有された][GoogleSitePolicies]作業に基づく変更で、「[Creative Commons Attribution 4.0 International License][CCA4IL]」で記載されている条項に従って使用されます。</span><span class="sxs-lookup"><span data-stu-id="28f05-172">Portions of this page are modifications based on work created and [shared by Google][GoogleSitePolicies] and used according to terms described in the [Creative Commons Attribution 4.0 International License][CCA4IL].</span></span>  
+> <span data-ttu-id="28f05-173">元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/storage/cookies) にあり、 [Kayce Basques][KayceBasques] \(Chrome DevTools \& Lighthouse\ のテクニカル ライター) が作成しました。</span><span class="sxs-lookup"><span data-stu-id="28f05-173">The original page is found [here](https://developers.google.com/web/tools/chrome-devtools/storage/cookies) and is authored by [Kayce Basques][KayceBasques] \(Technical Writer, Chrome DevTools \& Lighthouse\).</span></span>  
 
-[![クリエイティブコモンズライセンス][CCby4Image]][CCA4IL]  
-<span data-ttu-id="61246-175">この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。</span><span class="sxs-lookup"><span data-stu-id="61246-175">This work is licensed under a [Creative Commons Attribution 4.0 International License][CCA4IL].</span></span>  
+[![Creative Commons ライセンス][CCby4Image]][CCA4IL]  
+<span data-ttu-id="28f05-175">この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。</span><span class="sxs-lookup"><span data-stu-id="28f05-175">This work is licensed under a [Creative Commons Attribution 4.0 International License][CCA4IL].</span></span>  
 
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  

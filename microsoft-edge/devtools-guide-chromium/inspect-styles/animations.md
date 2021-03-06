@@ -1,18 +1,18 @@
 ---
-description: Microsoft Edge DevTools のアニメーションのインスペクターを使って、アニメーションの検査と変更を行います。
+description: Microsoft Edge DevTools アニメーション インスペクターを使用してアニメーションの検査と変更を行います。
 title: アニメーションの検査
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 10/19/2020
+ms.date: 02/12/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: fed686c07acd0648ac512dac131d85a317fb64eb
-ms.sourcegitcommit: 99eee78698dc95b2a3fa638a5b063ef449899cda
+ms.openlocfilehash: 742096f13179de2ad1a95dc9fa62d2bbf3d7c226
+ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "11124776"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "11397735"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -28,69 +28,69 @@ ms.locfileid: "11124776"
    See the License for the specific language governing permissions and
    limitations under the License.  -->  
 
-# <span data-ttu-id="7191c-104">アニメーションの検査</span><span class="sxs-lookup"><span data-stu-id="7191c-104">Inspect animations</span></span>  
+# <a name="inspect-animations"></a><span data-ttu-id="d43b0-104">アニメーションの検査</span><span class="sxs-lookup"><span data-stu-id="d43b0-104">Inspect animations</span></span>  
 
-<span data-ttu-id="7191c-105">Microsoft Edge DevTools のアニメーションのインスペクターを使って、アニメーションの検査と変更を行います。</span><span class="sxs-lookup"><span data-stu-id="7191c-105">Inspect and modify animations with the Microsoft Edge DevTools Animation Inspector.</span></span>  
+<span data-ttu-id="d43b0-105">Microsoft Edge DevTools アニメーション インスペクターを使用してアニメーションの検査と変更を行います。</span><span class="sxs-lookup"><span data-stu-id="d43b0-105">Inspect and modify animations with the Microsoft Edge DevTools Animation Inspector.</span></span>  
 
-:::image type="complex" source="../media/inspect-styles-elements-styles-drawer-animations-completed.msft.png" alt-text="アニメーションの詳細設定" lightbox="../media/inspect-styles-elements-styles-drawer-animations-completed.msft.png":::
-   <span data-ttu-id="7191c-107">アニメーションの詳細設定</span><span class="sxs-lookup"><span data-stu-id="7191c-107">animation inspector</span></span>  
+:::image type="complex" source="../media/inspect-styles-elements-styles-drawer-animations-completed.msft.png" alt-text="アニメーション インスペクター" lightbox="../media/inspect-styles-elements-styles-drawer-animations-completed.msft.png":::
+   <span data-ttu-id="d43b0-107">アニメーション インスペクター</span><span class="sxs-lookup"><span data-stu-id="d43b0-107">animation inspector</span></span>  
 :::image-end:::  
 
-### <span data-ttu-id="7191c-108">まとめ</span><span class="sxs-lookup"><span data-stu-id="7191c-108">Summary</span></span>  
+### <a name="summary"></a><span data-ttu-id="d43b0-108">要約</span><span class="sxs-lookup"><span data-stu-id="d43b0-108">Summary</span></span>  
 
-*   <span data-ttu-id="7191c-109">アニメーションインスペクターを開いてアニメーションをキャプチャします。</span><span class="sxs-lookup"><span data-stu-id="7191c-109">Capture animations by opening the Animation Inspector.</span></span>  <span data-ttu-id="7191c-110">アニメーションの検査機能により、アニメーションが自動的に検出され、グループに並べ替えられます。</span><span class="sxs-lookup"><span data-stu-id="7191c-110">The Animation Inspector automatically detects and sorts animations into groups.</span></span>  
-*   <span data-ttu-id="7191c-111">1つずつ減速して、1つずつ再生するか、ソースコードを表示して、アニメーションを検査します。</span><span class="sxs-lookup"><span data-stu-id="7191c-111">Inspect animations by slowing down each one, replaying each one, or viewing the source code.</span></span>  
-*   <span data-ttu-id="7191c-112">タイミング、遅延、再生時間、またはキーフレームのオフセットを変更して、アニメーションを変更します。</span><span class="sxs-lookup"><span data-stu-id="7191c-112">Modify animations by changing the timing, delay, duration, or keyframe offsets.</span></span>  
+*   <span data-ttu-id="d43b0-109">アニメーション インスペクターを開いてアニメーションをキャプチャします。</span><span class="sxs-lookup"><span data-stu-id="d43b0-109">Capture animations by opening the Animation Inspector.</span></span>  <span data-ttu-id="d43b0-110">アニメーション インスペクターは、アニメーションを自動的に検出し、グループに並べ替える。</span><span class="sxs-lookup"><span data-stu-id="d43b0-110">The Animation Inspector automatically detects and sorts animations into groups.</span></span>  
+*   <span data-ttu-id="d43b0-111">アニメーションを検査するには、各アニメーションの速度を低下したり、各アニメーションを再生したり、ソース コードを表示したりします。</span><span class="sxs-lookup"><span data-stu-id="d43b0-111">Inspect animations by slowing down each one, replaying each one, or viewing the source code.</span></span>  
+*   <span data-ttu-id="d43b0-112">タイミング、遅延、期間、またはキーフレーム のオフセットを変更してアニメーションを変更します。</span><span class="sxs-lookup"><span data-stu-id="d43b0-112">Modify animations by changing the timing, delay, duration, or keyframe offsets.</span></span>  
 
-## <span data-ttu-id="7191c-113">概要</span><span class="sxs-lookup"><span data-stu-id="7191c-113">Overview</span></span>  
+## <a name="overview"></a><span data-ttu-id="d43b0-113">概要</span><span class="sxs-lookup"><span data-stu-id="d43b0-113">Overview</span></span>  
 
-<span data-ttu-id="7191c-114">Microsoft Edge DevTools アニメーションのインスペクターには、2つの主な目的があります。</span><span class="sxs-lookup"><span data-stu-id="7191c-114">The Microsoft Edge DevTools Animation Inspector has two main purposes.</span></span>  
+<span data-ttu-id="d43b0-114">Microsoft Edge DevTools アニメーション インスペクターには、主に 2 つの目的があります。</span><span class="sxs-lookup"><span data-stu-id="d43b0-114">The Microsoft Edge DevTools Animation Inspector has two main purposes.</span></span>  
 
-*   <span data-ttu-id="7191c-115">アニメーションの検査。</span><span class="sxs-lookup"><span data-stu-id="7191c-115">Inspecting animations.</span></span>  <span data-ttu-id="7191c-116">アニメーショングループのソースコードを減速、再生、検査します。</span><span class="sxs-lookup"><span data-stu-id="7191c-116">You want to slow down, replay, or inspect the source code for an Animation Group.</span></span>  
-*   <span data-ttu-id="7191c-117">アニメーションの変更。</span><span class="sxs-lookup"><span data-stu-id="7191c-117">Modifying animations.</span></span>  <span data-ttu-id="7191c-118">アニメーショングループのタイミング、遅延、再生時間、またはキーフレームのオフセットを変更します。</span><span class="sxs-lookup"><span data-stu-id="7191c-118">You want to modify the timing, delay, duration, or keyframe offsets of an Animation Group.</span></span>  <span data-ttu-id="7191c-119">ベジエ編集とキーフレーム編集は現在サポートされていません。</span><span class="sxs-lookup"><span data-stu-id="7191c-119">Bezier editing and keyframe editing are currently not supported.</span></span>  
+*   <span data-ttu-id="d43b0-115">アニメーションの検査。</span><span class="sxs-lookup"><span data-stu-id="d43b0-115">Inspecting animations.</span></span>  <span data-ttu-id="d43b0-116">アニメーション グループのソース コードの速度を低下、再生、または検査する場合。</span><span class="sxs-lookup"><span data-stu-id="d43b0-116">You want to slow down, replay, or inspect the source code for an Animation Group.</span></span>  
+*   <span data-ttu-id="d43b0-117">アニメーションの変更。</span><span class="sxs-lookup"><span data-stu-id="d43b0-117">Modifying animations.</span></span>  <span data-ttu-id="d43b0-118">アニメーション グループのタイミング、遅延、期間、またはキーフレーム のオフセットを変更する場合。</span><span class="sxs-lookup"><span data-stu-id="d43b0-118">You want to modify the timing, delay, duration, or keyframe offsets of an Animation Group.</span></span>  <span data-ttu-id="d43b0-119">ベジエ編集とキーフレーム編集は現在サポートされていません。</span><span class="sxs-lookup"><span data-stu-id="d43b0-119">Bezier editing and keyframe editing are currently not supported.</span></span>  
 
-<span data-ttu-id="7191c-120">アニメーションのインスペクターでは、CSS アニメーション、CSS 切り替え、web アニメーションがサポートされています。</span><span class="sxs-lookup"><span data-stu-id="7191c-120">The Animation Inspector supports CSS animations, CSS transitions, and web animations.</span></span>  `requestAnimationFrame` <span data-ttu-id="7191c-121">アニメーションは現在サポートされていません。</span><span class="sxs-lookup"><span data-stu-id="7191c-121">animations are currently not supported.</span></span>  
+<span data-ttu-id="d43b0-120">アニメーション インスペクターは、CSS アニメーション、CSS 切り替え、および Web アニメーションをサポートします。</span><span class="sxs-lookup"><span data-stu-id="d43b0-120">The Animation Inspector supports CSS animations, CSS transitions, and web animations.</span></span>  `requestAnimationFrame` <span data-ttu-id="d43b0-121">アニメーションは現在サポートされていません。</span><span class="sxs-lookup"><span data-stu-id="d43b0-121">animations are currently not supported.</span></span>  
 
-### <span data-ttu-id="7191c-122">アニメーショングループとは</span><span class="sxs-lookup"><span data-stu-id="7191c-122">What is an Animation Group?</span></span>  
+### <a name="what-is-an-animation-group"></a><span data-ttu-id="d43b0-122">アニメーション グループとは</span><span class="sxs-lookup"><span data-stu-id="d43b0-122">What is an Animation Group?</span></span>  
 
-<span data-ttu-id="7191c-123">アニメーショングループは、互いに関連している可能性のあるアニメーションのグループです。</span><span class="sxs-lookup"><span data-stu-id="7191c-123">An Animation Group is a group of animations that may be related to each other.</span></span>  <span data-ttu-id="7191c-124">現時点では、web にはグループアニメーションの実際の概念はありません。このため、アニメーションが1つの一貫した視覚効果としてレンダリングされるように、モーションデザイナーと開発者は個々のアニメーションを作成して時間を設定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7191c-124">Currently, the web has no real concept of a group animation, so motion designers and developers have to compose and time individual animations so that the animations render as one coherent visual effect.</span></span>  <span data-ttu-id="7191c-125">アニメーションの設定では、開始時刻 \ (遅延を除く) に基づいて、どのアニメーションが関連しているかが予測されます。</span><span class="sxs-lookup"><span data-stu-id="7191c-125">The Animation Inspector predicts which animations are related based on start time \(excluding delays, and so on\).</span></span>  <span data-ttu-id="7191c-126">アニメーションのインスペクターでは、アニメーションを並べてグループ化することもできます。</span><span class="sxs-lookup"><span data-stu-id="7191c-126">The Animation Inspector also groups the animations side-by-side.</span></span>  
-<span data-ttu-id="7191c-127">つまり、同じスクリプトブロックですべてトリガーされる一連のアニメーションは一緒にグループ化されます。</span><span class="sxs-lookup"><span data-stu-id="7191c-127">In other words, a set of animations that are all triggered in the same script block are grouped together.</span></span>  <span data-ttu-id="7191c-128">アニメーションが非同期の場合は、別のグループに配置されます。</span><span class="sxs-lookup"><span data-stu-id="7191c-128">If an animation is asynchronous, it is placed in a separate group.</span></span>  
+<span data-ttu-id="d43b0-123">アニメーション グループは、互いに関連付け合う可能性があるアニメーションのグループです。</span><span class="sxs-lookup"><span data-stu-id="d43b0-123">An Animation Group is a group of animations that may be related to each other.</span></span>  <span data-ttu-id="d43b0-124">現時点では、Web にはグループ アニメーションの実際の概念はないので、モーション デザイナーと開発者は、アニメーションが 1 つの一貫性のある視覚効果としてレンダリングするために、個々のアニメーションを作成して時間を取る必要があります。</span><span class="sxs-lookup"><span data-stu-id="d43b0-124">Currently, the web has no real concept of a group animation, so motion designers and developers have to compose and time individual animations so that the animations render as one coherent visual effect.</span></span>  <span data-ttu-id="d43b0-125">アニメーション インスペクターは、開始時刻 \(遅延を除く、および on\) に基づいて関連するアニメーションを予測します。</span><span class="sxs-lookup"><span data-stu-id="d43b0-125">The Animation Inspector predicts which animations are related based on start time \(excluding delays, and so on\).</span></span>  <span data-ttu-id="d43b0-126">アニメーション インスペクターは、アニメーションを並べてグループ化します。</span><span class="sxs-lookup"><span data-stu-id="d43b0-126">The Animation Inspector also groups the animations side-by-side.</span></span>  
+<span data-ttu-id="d43b0-127">つまり、同じスクリプト ブロックでトリガーされるアニメーションのセットがグループ化されます。</span><span class="sxs-lookup"><span data-stu-id="d43b0-127">In other words, a set of animations that are all triggered in the same script block are grouped together.</span></span>  <span data-ttu-id="d43b0-128">アニメーションが非同期の場合は、別のグループに配置されます。</span><span class="sxs-lookup"><span data-stu-id="d43b0-128">If an animation is asynchronous, it is placed in a separate group.</span></span>  
 
-## <span data-ttu-id="7191c-129">使ってみる</span><span class="sxs-lookup"><span data-stu-id="7191c-129">Get started</span></span>  
+## <a name="get-started"></a><span data-ttu-id="d43b0-129">概要</span><span class="sxs-lookup"><span data-stu-id="d43b0-129">Get started</span></span>  
 
-<span data-ttu-id="7191c-130">アニメーションインスペクターを開くには、次の2つの方法があります。</span><span class="sxs-lookup"><span data-stu-id="7191c-130">There are two ways to open the Animation Inspector:</span></span>  
+<span data-ttu-id="d43b0-130">アニメーション インスペクターを開く方法は 2 通りあります。</span><span class="sxs-lookup"><span data-stu-id="d43b0-130">There are two ways to open the Animation Inspector:</span></span>  
 
-*   <span data-ttu-id="7191c-131">[ **カスタマイズ] および [コントロールの DevTools** ] メニューを開く</span><span class="sxs-lookup"><span data-stu-id="7191c-131">Open the **Customize and Control DevTools** menu</span></span>  
-    1.  <span data-ttu-id="7191c-132">[ **その他のツール** ] サブメニューに移動します。</span><span class="sxs-lookup"><span data-stu-id="7191c-132">Navigate to the **More tools** sub-menu.</span></span>  
-    1.  <span data-ttu-id="7191c-133">[ **アニメーション**] を選択します。</span><span class="sxs-lookup"><span data-stu-id="7191c-133">Choose **Animations**:</span></span>  
+*   <span data-ttu-id="d43b0-131">**[DevTools のカスタマイズと制御] メニューを開**きます。</span><span class="sxs-lookup"><span data-stu-id="d43b0-131">Open the **Customize and Control DevTools** menu</span></span>  
+    1.  <span data-ttu-id="d43b0-132">[その他の **ツール] サブメニュー** に移動します。</span><span class="sxs-lookup"><span data-stu-id="d43b0-132">Navigate to the **More tools** sub-menu.</span></span>  
+    1.  <span data-ttu-id="d43b0-133">[アニメーション **] を選択します**。</span><span class="sxs-lookup"><span data-stu-id="d43b0-133">Choose **Animations**:</span></span>  
         
-        :::image type="complex" source="../media/inspect-styles-elements-styles-more-tools-animations.msft.png" alt-text="アニメーションの詳細設定" lightbox="../media/inspect-styles-elements-styles-more-tools-animations.msft.png":::
-           <span data-ttu-id="7191c-135">メインメニューを使用する**アニメーション**</span><span class="sxs-lookup"><span data-stu-id="7191c-135">**Animations** using Main Menu</span></span>  
+        :::image type="complex" source="../media/inspect-styles-elements-styles-more-tools-animations.msft.png" alt-text="メイン メニューを使用したアニメーション" lightbox="../media/inspect-styles-elements-styles-more-tools-animations.msft.png":::
+           <span data-ttu-id="d43b0-135">**メイン メニュー** を使用したアニメーション</span><span class="sxs-lookup"><span data-stu-id="d43b0-135">**Animations** using Main Menu</span></span>  
     :::image-end:::  
         
-*   <span data-ttu-id="7191c-136">**コマンドメニュー**を開く</span><span class="sxs-lookup"><span data-stu-id="7191c-136">Open the **Command Menu**</span></span>  
-    1.  <span data-ttu-id="7191c-137">「`Drawer: Show Animations`」と入力します。</span><span class="sxs-lookup"><span data-stu-id="7191c-137">Type `Drawer: Show Animations`.</span></span>  
+*   <span data-ttu-id="d43b0-136">コマンド メニュー **を開く**</span><span class="sxs-lookup"><span data-stu-id="d43b0-136">Open the **Command Menu**</span></span>  
+    1.  <span data-ttu-id="d43b0-137">「`Drawer: Show Animations`」と入力します。</span><span class="sxs-lookup"><span data-stu-id="d43b0-137">Type `Drawer: Show Animations`.</span></span>  
 
-<span data-ttu-id="7191c-138">[アニメーションの設定] が、コンソールドロワーの横にタブとして開きます。</span><span class="sxs-lookup"><span data-stu-id="7191c-138">The Animation Inspector opens up as a tab next to the Console Drawer.</span></span>  <span data-ttu-id="7191c-139">アニメーション検査は [引き出し] タブであるため、任意の DevTools パネルからアニメーションのインスペクターを使用できます。</span><span class="sxs-lookup"><span data-stu-id="7191c-139">Since the Animation Inspector is a Drawer tab, you may use the Animation Inspector from any DevTools panel.</span></span>  
+<span data-ttu-id="d43b0-138">[アニメーション インスペクタ] が [コンソール] ツールの横 **に開** きます。</span><span class="sxs-lookup"><span data-stu-id="d43b0-138">The Animation Inspector opens next to the **Console** tool.</span></span>  <span data-ttu-id="d43b0-139">アニメーション インスペクターはドロワー ツールですから、任意の DevTools パネルからアニメーション インスペクターを使用できます。</span><span class="sxs-lookup"><span data-stu-id="d43b0-139">Since the Animation Inspector is a Drawer tool, you may use the Animation Inspector from any DevTools panel.</span></span>  
 
-:::image type="complex" source="../media/inspect-styles-elements-styles-drawer-animations.msft.png" alt-text="アニメーションの詳細設定" lightbox="../media/inspect-styles-elements-styles-drawer-animations.msft.png":::
-   <span data-ttu-id="7191c-141">空のアニメーション検査</span><span class="sxs-lookup"><span data-stu-id="7191c-141">Empty Animation Inspector</span></span>  
+:::image type="complex" source="../media/inspect-styles-elements-styles-drawer-animations.msft.png" alt-text="空のアニメーションインスペクター" lightbox="../media/inspect-styles-elements-styles-drawer-animations.msft.png":::
+   <span data-ttu-id="d43b0-141">空のアニメーションインスペクター</span><span class="sxs-lookup"><span data-stu-id="d43b0-141">Empty Animation Inspector</span></span>  
 :::image-end:::  
 
-<span data-ttu-id="7191c-142">アニメーションの検査は、4つのメインセクション \ (またはウィンドウ \) にグループ化されています。</span><span class="sxs-lookup"><span data-stu-id="7191c-142">The Animation Inspector is grouped into four main sections \(or panes\).</span></span>  <span data-ttu-id="7191c-143">このガイドでは、各ウィンドウについて次のことを示します。</span><span class="sxs-lookup"><span data-stu-id="7191c-143">This guide refers to each pane as follows:</span></span>  
+<span data-ttu-id="d43b0-142">アニメーション インスペクターは、4 つのメイン セクション \(または panes\) にグループ化されます。</span><span class="sxs-lookup"><span data-stu-id="d43b0-142">The Animation Inspector is grouped into four main sections \(or panes\).</span></span>  <span data-ttu-id="d43b0-143">このガイドでは、各ウィンドウを次のように参照します。</span><span class="sxs-lookup"><span data-stu-id="d43b0-143">This guide refers to each pane as follows:</span></span>  
 
-| <span data-ttu-id="7191c-144">インデックス</span><span class="sxs-lookup"><span data-stu-id="7191c-144">Index</span></span> | <span data-ttu-id="7191c-145">ウィンドウ</span><span class="sxs-lookup"><span data-stu-id="7191c-145">Pane</span></span> | <span data-ttu-id="7191c-146">説明</span><span class="sxs-lookup"><span data-stu-id="7191c-146">Description</span></span> |  
+| <span data-ttu-id="d43b0-144">インデックス</span><span class="sxs-lookup"><span data-stu-id="d43b0-144">Index</span></span> | <span data-ttu-id="d43b0-145">ウィンドウ</span><span class="sxs-lookup"><span data-stu-id="d43b0-145">Pane</span></span> | <span data-ttu-id="d43b0-146">説明</span><span class="sxs-lookup"><span data-stu-id="d43b0-146">Description</span></span> |  
 |:--- |:--- |:--- |  
-| <span data-ttu-id="7191c-147">件</span><span class="sxs-lookup"><span data-stu-id="7191c-147">1</span></span> | **<span data-ttu-id="7191c-148">コントロール</span><span class="sxs-lookup"><span data-stu-id="7191c-148">Controls</span></span>** | <span data-ttu-id="7191c-149">ここでは、現在キャプチャされているすべてのアニメーショングループをクリアするか、現在選択されているアニメーショングループの速度を変更することができます。</span><span class="sxs-lookup"><span data-stu-id="7191c-149">From here you may clear all currently captured Animation Groups, or change the speed of the currently selected Animation Group.</span></span> |  
-| <span data-ttu-id="7191c-150">両面</span><span class="sxs-lookup"><span data-stu-id="7191c-150">2</span></span> | **<span data-ttu-id="7191c-151">概要</span><span class="sxs-lookup"><span data-stu-id="7191c-151">Overview</span></span>** | <span data-ttu-id="7191c-152">ここでアニメーショングループを選択して、 **詳細** ウィンドウで確認して変更します。</span><span class="sxs-lookup"><span data-stu-id="7191c-152">Select an Animation Group here to inspect and modify it in the **Details** pane.</span></span> |  
-| <span data-ttu-id="7191c-153">-</span><span class="sxs-lookup"><span data-stu-id="7191c-153">3</span></span> | **<span data-ttu-id="7191c-154">タイムライン</span><span class="sxs-lookup"><span data-stu-id="7191c-154">Timeline</span></span>** | <span data-ttu-id="7191c-155">ここからアニメーションを一時停止して開始するか、アニメーション内の特定のポイントにジャンプします。</span><span class="sxs-lookup"><span data-stu-id="7191c-155">Pause and start an animation from here, or jump to a specific point in the animation.</span></span> |  
-| <span data-ttu-id="7191c-156">4d</span><span class="sxs-lookup"><span data-stu-id="7191c-156">4</span></span> | **<span data-ttu-id="7191c-157">詳細</span><span class="sxs-lookup"><span data-stu-id="7191c-157">Details</span></span>** | <span data-ttu-id="7191c-158">現在選択されているアニメーショングループを検査して変更します。</span><span class="sxs-lookup"><span data-stu-id="7191c-158">Inspect and modify the currently selected Animation Group.</span></span> |  
+| <span data-ttu-id="d43b0-147">1</span><span class="sxs-lookup"><span data-stu-id="d43b0-147">1</span></span> | **<span data-ttu-id="d43b0-148">コントロール</span><span class="sxs-lookup"><span data-stu-id="d43b0-148">Controls</span></span>** | <span data-ttu-id="d43b0-149">ここから、現在キャプチャされているすべてのアニメーション グループをクリアするか、現在選択されているアニメーション グループの速度を変更できます。</span><span class="sxs-lookup"><span data-stu-id="d43b0-149">From here you may clear all currently captured Animation Groups, or change the speed of the currently selected Animation Group.</span></span> |  
+| <span data-ttu-id="d43b0-150">2</span><span class="sxs-lookup"><span data-stu-id="d43b0-150">2</span></span> | **<span data-ttu-id="d43b0-151">概要</span><span class="sxs-lookup"><span data-stu-id="d43b0-151">Overview</span></span>** | <span data-ttu-id="d43b0-152">[詳細] ウィンドウでアニメーション グループを検査および変更するには、ここで [アニメーション グループ] **を選択** します。</span><span class="sxs-lookup"><span data-stu-id="d43b0-152">Choose an Animation Group here to inspect and modify it in the **Details** pane.</span></span> |  
+| <span data-ttu-id="d43b0-153">3</span><span class="sxs-lookup"><span data-stu-id="d43b0-153">3</span></span> | **<span data-ttu-id="d43b0-154">タイムライン</span><span class="sxs-lookup"><span data-stu-id="d43b0-154">Timeline</span></span>** | <span data-ttu-id="d43b0-155">ここからアニメーションを一時停止して開始するか、アニメーション内の特定のポイントにジャンプします。</span><span class="sxs-lookup"><span data-stu-id="d43b0-155">Pause and start an animation from here, or jump to a specific point in the animation.</span></span> |  
+| <span data-ttu-id="d43b0-156">4</span><span class="sxs-lookup"><span data-stu-id="d43b0-156">4</span></span> | **<span data-ttu-id="d43b0-157">詳細</span><span class="sxs-lookup"><span data-stu-id="d43b0-157">Details</span></span>** | <span data-ttu-id="d43b0-158">現在選択されているアニメーション グループを検査および変更します。</span><span class="sxs-lookup"><span data-stu-id="d43b0-158">Inspect and modify the currently selected Animation Group.</span></span> |  
 
-:::image type="complex" source="../media/inspect-styles-elements-styles-drawer-animations-selected-paused.msft.png" alt-text="アニメーションの詳細設定" lightbox="../media/inspect-styles-elements-styles-drawer-animations-selected-paused.msft.png":::
-   <span data-ttu-id="7191c-160">注釈付きアニメーションのインスペクター</span><span class="sxs-lookup"><span data-stu-id="7191c-160">Annotated Animation Inspector</span></span>  
+:::image type="complex" source="../media/inspect-styles-elements-styles-drawer-animations-selected-paused.msft.png" alt-text="注釈付きアニメーションインスペクター" lightbox="../media/inspect-styles-elements-styles-drawer-animations-selected-paused.msft.png":::
+   <span data-ttu-id="d43b0-160">注釈付きアニメーションインスペクター</span><span class="sxs-lookup"><span data-stu-id="d43b0-160">Annotated Animation Inspector</span></span>  
 :::image-end:::  
 
-<span data-ttu-id="7191c-161">アニメーションをキャプチャするには、アニメーションのインスペクターが開いている状態でアニメーションをトリガーする操作を実行します。</span><span class="sxs-lookup"><span data-stu-id="7191c-161">To capture an animation, just perform the interaction that triggers the animation while the Animation Inspector is open.</span></span>  <span data-ttu-id="7191c-162">ページの読み込みでアニメーションがトリガーされた場合は、アニメーションインスペクターが開いた状態でページを再読み込みして、アニメーションを検出します。</span><span class="sxs-lookup"><span data-stu-id="7191c-162">If an animation is triggered on page load, reload the page with the Animation Inspector open to detect the animation.</span></span>  
+<span data-ttu-id="d43b0-161">アニメーションをキャプチャするには、アニメーション インスペクターが開いている間にアニメーションをトリガーする操作を実行します。</span><span class="sxs-lookup"><span data-stu-id="d43b0-161">To capture an animation, just perform the interaction that triggers the animation while the Animation Inspector is open.</span></span>  <span data-ttu-id="d43b0-162">ページの読み込み時にアニメーションがトリガーされた場合は、[アニメーション インスペクター] を開いた状態でページを更新して、アニメーションを検出します。</span><span class="sxs-lookup"><span data-stu-id="d43b0-162">If an animation is triggered on page load, refresh the page with the Animation Inspector open to detect the animation.</span></span>  
 
 <!--  old link: <video src="animations/capture-animations.mp4" autoplay loop muted controls></video>  -->  
 
@@ -98,73 +98,73 @@ ms.locfileid: "11124776"
 
 <!--  > [!VIDEO animations/capture-animations.mp4]  -->  
 
-## <span data-ttu-id="7191c-163">アニメーションの検査</span><span class="sxs-lookup"><span data-stu-id="7191c-163">Inspect animations</span></span>  
+## <a name="inspect-animations"></a><span data-ttu-id="d43b0-163">アニメーションの検査</span><span class="sxs-lookup"><span data-stu-id="d43b0-163">Inspect animations</span></span>  
 
-<span data-ttu-id="7191c-164">アニメーションをキャプチャした後は、いくつかの方法で再生できます。</span><span class="sxs-lookup"><span data-stu-id="7191c-164">After you capture an animation, there are a few ways to replay it:</span></span>  
+<span data-ttu-id="d43b0-164">アニメーションをキャプチャした後、再生する方法は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="d43b0-164">After you capture an animation, there are a few ways to replay it:</span></span>  
 
-*   <span data-ttu-id="7191c-165">**概要**ウィンドウのサムネイルにマウスポインターを置くと、プレビューが表示されます。</span><span class="sxs-lookup"><span data-stu-id="7191c-165">Hover over the thumbnail in the **Overview** pane to view a preview of it.</span></span>  
-*   <span data-ttu-id="7191c-166">**概要**ウィンドウ (**詳細**ウィンドウに表示されるように) から [アニメーション] グループを選び、 **[再生**] ([ ![ 再生] アイコン ][ImageReplayButtonIcon] \) アイコンを押します。</span><span class="sxs-lookup"><span data-stu-id="7191c-166">Select the Animation Group from the **Overview** pane \(so that it is displayed in the **Details** pane\) and press the **replay** \(![replay icon][ImageReplayButtonIcon]\) icon.</span></span>  <span data-ttu-id="7191c-167">アニメーションはビューポートで再生されます。</span><span class="sxs-lookup"><span data-stu-id="7191c-167">The animation is replayed in the viewport.</span></span>  <span data-ttu-id="7191c-168">**animation speed** ![ ][ImageAnimationSpeedButtonsIcon] 現在選択されているアニメーショングループのプレビューの速度を変更するには、[アニメーションの速度] (アニメーションの速度のアイコン) アイコンをクリックします。</span><span class="sxs-lookup"><span data-stu-id="7191c-168">Click on the **animation speed** \(![animation speed icons][ImageAnimationSpeedButtonsIcon]\) icons to change the preview speed of the currently selected Animation Group.</span></span>  <span data-ttu-id="7191c-169">赤い垂直バーを使用して、現在の位置を変更することができます。</span><span class="sxs-lookup"><span data-stu-id="7191c-169">You may use the red vertical bar to change your current position.</span></span>  
-*   <span data-ttu-id="7191c-170">赤い垂直バーをクリックしてドラッグすると、ビューポートのアニメーションがスクラブされます。</span><span class="sxs-lookup"><span data-stu-id="7191c-170">Click and drag the red vertical bar to scrub the viewport animation.</span></span>  
+*   <span data-ttu-id="d43b0-165">[概要] ウィンドウのサムネイルに **カーソルを合わせる** と、プレビューが表示されます。</span><span class="sxs-lookup"><span data-stu-id="d43b0-165">Hover on the thumbnail in the **Overview** pane to view a preview of it.</span></span>  
+*   <span data-ttu-id="d43b0-166">[概要] ウィンドウ**\([** 詳細] ウィンドウ\に表示される\*\*\*\*) から [アニメーション グループ] を選択し、再生**\(** 再生アイコン ![ \) アイコン ][ImageReplayButtonIcon] を選択します。</span><span class="sxs-lookup"><span data-stu-id="d43b0-166">Choose the Animation Group from the **Overview** pane \(so that it is displayed in the **Details** pane\) and choose the **replay** \(![replay icon][ImageReplayButtonIcon]\) icon.</span></span>  <span data-ttu-id="d43b0-167">アニメーションはビューポートで再生されます。</span><span class="sxs-lookup"><span data-stu-id="d43b0-167">The animation is replayed in the viewport.</span></span>  <span data-ttu-id="d43b0-168">現在選択 **されているアニメーション** グループのプレビュー速度を変更するには、アニメーション速度 \( アニメーション速度アイコン ![ ][ImageAnimationSpeedButtonsIcon] \) アイコンを選択します。</span><span class="sxs-lookup"><span data-stu-id="d43b0-168">Choose the **animation speed** \(![animation speed icons][ImageAnimationSpeedButtonsIcon]\) icons to change the preview speed of the currently selected Animation Group.</span></span>  <span data-ttu-id="d43b0-169">赤い垂直バーを使用して現在の位置を変更できます。</span><span class="sxs-lookup"><span data-stu-id="d43b0-169">You may use the red vertical bar to change your current position.</span></span>  
+*   <span data-ttu-id="d43b0-170">赤い垂直バーを選択してドラッグして、ビューポート アニメーションをスクラブします。</span><span class="sxs-lookup"><span data-stu-id="d43b0-170">Choose and drag the red vertical bar to scrub the viewport animation.</span></span>  
     
-### <span data-ttu-id="7191c-171">アニメーションの詳細の表示</span><span class="sxs-lookup"><span data-stu-id="7191c-171">View animation details</span></span>  
+### <a name="view-animation-details"></a><span data-ttu-id="d43b0-171">アニメーションの詳細を表示する</span><span class="sxs-lookup"><span data-stu-id="d43b0-171">View animation details</span></span>  
 
-<span data-ttu-id="7191c-172">アニメーショングループをキャプチャしたら、[ **概要** ] ウィンドウでクリックして詳細を表示します。</span><span class="sxs-lookup"><span data-stu-id="7191c-172">After you capture an Animation Group, click on it from the **Overview** pane to view the details.</span></span>  <span data-ttu-id="7191c-173">**詳細**ウィンドウには、個々のアニメーションに1行が割り当てられます。</span><span class="sxs-lookup"><span data-stu-id="7191c-173">In the **Details** pane each individual animation is assigned the a row.</span></span>  
+<span data-ttu-id="d43b0-172">アニメーション グループをキャプチャした後、[概要] ウィンドウからアニメーション グループを **選択** して詳細を表示します。</span><span class="sxs-lookup"><span data-stu-id="d43b0-172">After you capture an Animation Group, choose on it from the **Overview** pane to view the details.</span></span>  <span data-ttu-id="d43b0-173">[詳細 **] ウィンドウ** では、各アニメーションに行が割り当てられます。</span><span class="sxs-lookup"><span data-stu-id="d43b0-173">In the **Details** pane each individual animation is assigned the a row.</span></span>  
 
-:::image type="complex" source="../media/inspect-styles-elements-styles-drawer-animations-selected-completed.msft.png" alt-text="アニメーションの詳細設定" lightbox="../media/inspect-styles-elements-styles-drawer-animations-selected-completed.msft.png":::
-   <span data-ttu-id="7191c-175">アニメーショングループの詳細</span><span class="sxs-lookup"><span data-stu-id="7191c-175">Animation Group details</span></span>  
+:::image type="complex" source="../media/inspect-styles-elements-styles-drawer-animations-selected-completed.msft.png" alt-text="アニメーション グループの詳細" lightbox="../media/inspect-styles-elements-styles-drawer-animations-selected-completed.msft.png":::
+   <span data-ttu-id="d43b0-175">アニメーション グループの詳細</span><span class="sxs-lookup"><span data-stu-id="d43b0-175">Animation Group details</span></span>  
 :::image-end:::  
 
-<span data-ttu-id="7191c-176">アニメーションの上にマウスポインターを移動すると、ビューポート内で強調表示されます。</span><span class="sxs-lookup"><span data-stu-id="7191c-176">Hover over an animation to highlight it in the viewport.</span></span>  <span data-ttu-id="7191c-177">アニメーションをクリックして、[ **要素** ] パネルで選択します。</span><span class="sxs-lookup"><span data-stu-id="7191c-177">Click on the animation to select it in the **Elements** panel.</span></span>  
+<span data-ttu-id="d43b0-176">アニメーションにカーソルを合わせると、ビューポート内でアニメーションが強調表示されます。</span><span class="sxs-lookup"><span data-stu-id="d43b0-176">Hover on an animation to highlight it in the viewport.</span></span>  <span data-ttu-id="d43b0-177">[要素] ツールでアニメーションを選択して **選択** します。</span><span class="sxs-lookup"><span data-stu-id="d43b0-177">Choose the animation to select it in the **Elements** tool.</span></span>  
 
-:::image type="complex" source="../media/inspect-styles-split-elements-styles-drawer-animations-selected-completed.msft.png" alt-text="アニメーションの詳細設定" lightbox="../media/inspect-styles-split-elements-styles-drawer-animations-selected-completed.msft.png":::
-   <span data-ttu-id="7191c-179">ビューポートでアニメーションをポイントして強調表示する</span><span class="sxs-lookup"><span data-stu-id="7191c-179">Hover over the animation to highlight it in viewport</span></span>  
+:::image type="complex" source="../media/inspect-styles-split-elements-styles-drawer-animations-selected-completed.msft.png" alt-text="アニメーションにカーソルを合わせると、ビューポートでアニメーションが強調表示されます。" lightbox="../media/inspect-styles-split-elements-styles-drawer-animations-selected-completed.msft.png":::
+   <span data-ttu-id="d43b0-179">アニメーションにカーソルを合わせると、ビューポートでアニメーションが強調表示されます。</span><span class="sxs-lookup"><span data-stu-id="d43b0-179">Hover on the animation to highlight it in viewport</span></span>  
 :::image-end:::  
 
-<span data-ttu-id="7191c-180">アニメーションの左端、濃い色の部分が定義です。</span><span class="sxs-lookup"><span data-stu-id="7191c-180">The leftmost, darker section of an animation is the definition.</span></span>  <span data-ttu-id="7191c-181">右側の [薄い色] セクションは、反復計算を表します。</span><span class="sxs-lookup"><span data-stu-id="7191c-181">The right, more faded section represents iterations.</span></span>  <span data-ttu-id="7191c-182">たとえば、次の図では、セクション2と3はセクション1のイテレーションを表しています。</span><span class="sxs-lookup"><span data-stu-id="7191c-182">For example, in the following figure, sections two and three represent iterations of section one.</span></span>  
+<span data-ttu-id="d43b0-180">アニメーションの左端の暗いセクションは定義です。</span><span class="sxs-lookup"><span data-stu-id="d43b0-180">The leftmost, darker section of an animation is the definition.</span></span>  <span data-ttu-id="d43b0-181">右側の色あせたセクションは、反復を表します。</span><span class="sxs-lookup"><span data-stu-id="d43b0-181">The right, more faded section represents iterations.</span></span>  <span data-ttu-id="d43b0-182">たとえば、次の図では、セクション 2 とセクション 3 はセクション 1 の反復を表します。</span><span class="sxs-lookup"><span data-stu-id="d43b0-182">For example, in the following figure, sections two and three represent iterations of section one.</span></span>  
 
-:::image type="complex" source="../media/inspect-styles-glitch-display-animations-highlight.msft.png" alt-text="アニメーションの詳細設定" lightbox="../media/inspect-styles-glitch-display-animations-highlight.msft.png":::
-   <span data-ttu-id="7191c-184">アニメーションの反復計算の図</span><span class="sxs-lookup"><span data-stu-id="7191c-184">Diagram of animation iterations</span></span>  
+:::image type="complex" source="../media/inspect-styles-glitch-display-animations-highlight.msft.png" alt-text="アニメーションの反復の図" lightbox="../media/inspect-styles-glitch-display-animations-highlight.msft.png":::
+   <span data-ttu-id="d43b0-184">アニメーションの反復の図</span><span class="sxs-lookup"><span data-stu-id="d43b0-184">Diagram of animation iterations</span></span>  
 :::image-end:::  
 
-<span data-ttu-id="7191c-185">2つの要素に同じアニメーションが適用されている場合、アニメーションのインスペクターでは要素に同じ色が割り当てられます。</span><span class="sxs-lookup"><span data-stu-id="7191c-185">If two elements have the same animation applied, the Animation Inspector assigns the same color to the elements.</span></span>  <span data-ttu-id="7191c-186">色はランダムであり、意味はありません。</span><span class="sxs-lookup"><span data-stu-id="7191c-186">The color is random and has no significance.</span></span>  <span data-ttu-id="7191c-187">たとえば、次の図では、要素と要素と同様に、2つの要素 `div.cwccw.earlier` と、 `div.cwccw.later` 同じアニメーション \ ( `spinrightleft` \) が適用されてい `div.ccwcw.earlier` `div.ccwcw.later` ます。</span><span class="sxs-lookup"><span data-stu-id="7191c-187">For example, in the following figure, the two elements `div.cwccw.earlier` and `div.cwccw.later` have the same animation \(`spinrightleft`\) applied, as do the `div.ccwcw.earlier` and `div.ccwcw.later` elements.</span></span>  
+<span data-ttu-id="d43b0-185">2 つの要素に同じアニメーションが適用されている場合、アニメーション インスペクターは同じ色を要素に割り当てる。</span><span class="sxs-lookup"><span data-stu-id="d43b0-185">If two elements have the same animation applied, the Animation Inspector assigns the same color to the elements.</span></span>  <span data-ttu-id="d43b0-186">色はランダムで、意味はありません。</span><span class="sxs-lookup"><span data-stu-id="d43b0-186">The color is random and has no significance.</span></span>  <span data-ttu-id="d43b0-187">たとえば、次の図では、2 つの要素と同じ `div.cwccw.earlier` アニメーション \( \) が適用されます。要素と同様 `div.cwccw.later` `spinrightleft` `div.ccwcw.earlier` `div.ccwcw.later` です。</span><span class="sxs-lookup"><span data-stu-id="d43b0-187">For example, in the following figure, the two elements `div.cwccw.earlier` and `div.cwccw.later` have the same animation \(`spinrightleft`\) applied, as do the `div.ccwcw.earlier` and `div.ccwcw.later` elements.</span></span>  
 
-:::image type="complex" source="../media/inspect-styles-glitch-display-animations.msft.png" alt-text="アニメーションの詳細設定" lightbox="../media/inspect-styles-glitch-display-animations.msft.png":::
-   <span data-ttu-id="7191c-189">色分けされたアニメーション</span><span class="sxs-lookup"><span data-stu-id="7191c-189">Color-coded animations</span></span>  
+:::image type="complex" source="../media/inspect-styles-glitch-display-animations.msft.png" alt-text="色分けされたアニメーション" lightbox="../media/inspect-styles-glitch-display-animations.msft.png":::
+   <span data-ttu-id="d43b0-189">色分けされたアニメーション</span><span class="sxs-lookup"><span data-stu-id="d43b0-189">Color-coded animations</span></span>  
 :::image-end:::  
 
-## <span data-ttu-id="7191c-190">アニメーションの変更</span><span class="sxs-lookup"><span data-stu-id="7191c-190">Modify animations</span></span>  
+## <a name="modify-animations"></a><span data-ttu-id="d43b0-190">アニメーションの変更</span><span class="sxs-lookup"><span data-stu-id="d43b0-190">Modify animations</span></span>  
 
-<span data-ttu-id="7191c-191">アニメーションインスペクターでアニメーションを変更するには、3つの方法があります。</span><span class="sxs-lookup"><span data-stu-id="7191c-191">There are three ways you are able to modify an animation with the Animation Inspector.</span></span>  
+<span data-ttu-id="d43b0-191">アニメーション インスペクターを使用してアニメーションを変更するには、3 つの方法があります。</span><span class="sxs-lookup"><span data-stu-id="d43b0-191">There are three ways you are able to modify an animation with the Animation Inspector.</span></span>  
 
-*   <span data-ttu-id="7191c-192">アニメーションの継続時間。</span><span class="sxs-lookup"><span data-stu-id="7191c-192">Animation duration.</span></span>  
-*   <span data-ttu-id="7191c-193">キーフレームのタイミング。</span><span class="sxs-lookup"><span data-stu-id="7191c-193">Keyframe timings.</span></span>  
-*   <span data-ttu-id="7191c-194">開始タイミングの遅延。</span><span class="sxs-lookup"><span data-stu-id="7191c-194">Start time delay.</span></span>  
+*   <span data-ttu-id="d43b0-192">アニメーションの期間。</span><span class="sxs-lookup"><span data-stu-id="d43b0-192">Animation duration.</span></span>  
+*   <span data-ttu-id="d43b0-193">キーフレームのタイミング。</span><span class="sxs-lookup"><span data-stu-id="d43b0-193">Keyframe timings.</span></span>  
+*   <span data-ttu-id="d43b0-194">開始時間の遅延。</span><span class="sxs-lookup"><span data-stu-id="d43b0-194">Start time delay.</span></span>  
     
-<span data-ttu-id="7191c-195">次の図では、元のアニメーションが表示されています。</span><span class="sxs-lookup"><span data-stu-id="7191c-195">In the following figure, the original animation is represented.</span></span>  
+<span data-ttu-id="d43b0-195">次の図では、元のアニメーションが表されています。</span><span class="sxs-lookup"><span data-stu-id="d43b0-195">In the following figure, the original animation is represented.</span></span>  
 
-:::image type="complex" source="../media/inspect-styles-glitch-spin-animations-console-animations.msft.png" alt-text="アニメーションの詳細設定" lightbox="../media/inspect-styles-glitch-spin-animations-console-animations.msft.png":::
-   <span data-ttu-id="7191c-197">変更前の元のアニメーション</span><span class="sxs-lookup"><span data-stu-id="7191c-197">Original animation before modification</span></span>  
+:::image type="complex" source="../media/inspect-styles-glitch-spin-animations-console-animations.msft.png" alt-text="変更前の元のアニメーション" lightbox="../media/inspect-styles-glitch-spin-animations-console-animations.msft.png":::
+   <span data-ttu-id="d43b0-197">変更前の元のアニメーション</span><span class="sxs-lookup"><span data-stu-id="d43b0-197">Original animation before modification</span></span>  
 :::image-end:::  
 
-<span data-ttu-id="7191c-198">アニメーションの継続時間を変更するには、最初または最後の円をクリックしてドラッグします。</span><span class="sxs-lookup"><span data-stu-id="7191c-198">To change the duration of an animation, click and drag the first or last circle.</span></span>  
+<span data-ttu-id="d43b0-198">アニメーションの期間を変更するには、最初または最後の円を選択してドラッグします。</span><span class="sxs-lookup"><span data-stu-id="d43b0-198">To change the duration of an animation, choose and drag the first or last circle.</span></span>  
 
-:::image type="complex" source="../media/inspect-styles-glitch-spin-animations-console-animations-shorter.msft.png" alt-text="アニメーションの詳細設定" lightbox="../media/inspect-styles-glitch-spin-animations-console-animations-shorter.msft.png":::
-   <span data-ttu-id="7191c-200">変更された期間</span><span class="sxs-lookup"><span data-stu-id="7191c-200">Modified duration</span></span>  
+:::image type="complex" source="../media/inspect-styles-glitch-spin-animations-console-animations-shorter.msft.png" alt-text="変更された期間" lightbox="../media/inspect-styles-glitch-spin-animations-console-animations-shorter.msft.png":::
+   <span data-ttu-id="d43b0-200">変更された期間</span><span class="sxs-lookup"><span data-stu-id="d43b0-200">Modified duration</span></span>  
 :::image-end:::  
 
-<span data-ttu-id="7191c-201">アニメーションでキーフレームルールが定義されている場合は、それらは白色の内側の円として表されます。</span><span class="sxs-lookup"><span data-stu-id="7191c-201">If the animation defines any keyframe rules, then these are represented as white inner circles.</span></span>  <span data-ttu-id="7191c-202">いずれかをクリックしてドラッグし、キーフレームのタイミングを変更します。</span><span class="sxs-lookup"><span data-stu-id="7191c-202">Click and drag one of these to change the timing of the keyframe.</span></span>  
+<span data-ttu-id="d43b0-201">アニメーションでキーフレーム ルールが定義されている場合、これらは白い内側の円として表されます。</span><span class="sxs-lookup"><span data-stu-id="d43b0-201">If the animation defines any keyframe rules, then these are represented as white inner circles.</span></span>  <span data-ttu-id="d43b0-202">これらの 1 つを選択してドラッグして、キーフレームのタイミングを変更します。</span><span class="sxs-lookup"><span data-stu-id="d43b0-202">Choose and drag one of these to change the timing of the keyframe.</span></span>  
 
-:::image type="complex" source="../media/inspect-styles-glitch-spin-animations-console-animations-keyframe-modification.msft.png" alt-text="アニメーションの詳細設定" lightbox="../media/inspect-styles-glitch-spin-animations-console-animations-keyframe-modification.msft.png":::
-   <span data-ttu-id="7191c-204">変更されたキーフレーム</span><span class="sxs-lookup"><span data-stu-id="7191c-204">Modified keyframe</span></span>  
+:::image type="complex" source="../media/inspect-styles-glitch-spin-animations-console-animations-keyframe-modification.msft.png" alt-text="変更されたキーフレーム" lightbox="../media/inspect-styles-glitch-spin-animations-console-animations-keyframe-modification.msft.png":::
+   <span data-ttu-id="d43b0-204">変更されたキーフレーム</span><span class="sxs-lookup"><span data-stu-id="d43b0-204">Modified keyframe</span></span>  
 :::image-end:::  
 
-<span data-ttu-id="7191c-205">アニメーションに遅延を追加するには、円以外の任意の場所でクリックしてドラッグします。</span><span class="sxs-lookup"><span data-stu-id="7191c-205">To add a delay to an animation, click and drag it anywhere except the circles.</span></span>  
+<span data-ttu-id="d43b0-205">アニメーションに遅延を追加するには、円以外の任意の場所を選択してドラッグします。</span><span class="sxs-lookup"><span data-stu-id="d43b0-205">To add a delay to an animation, choose and drag it anywhere except the circles.</span></span>  
 
-:::image type="complex" source="../media/inspect-styles-glitch-spin-animations-console-animations-delay.msft.png" alt-text="アニメーションの詳細設定" lightbox="../media/inspect-styles-glitch-spin-animations-console-animations-delay.msft.png":::
-   <span data-ttu-id="7191c-207">変更遅延</span><span class="sxs-lookup"><span data-stu-id="7191c-207">Modified delay</span></span>  
+:::image type="complex" source="../media/inspect-styles-glitch-spin-animations-console-animations-delay.msft.png" alt-text="変更された遅延" lightbox="../media/inspect-styles-glitch-spin-animations-console-animations-delay.msft.png":::
+   <span data-ttu-id="d43b0-207">変更された遅延</span><span class="sxs-lookup"><span data-stu-id="d43b0-207">Modified delay</span></span>  
 :::image-end:::  
 
-## <span data-ttu-id="7191c-208">Microsoft Edge DevTools チームと連絡を取る</span><span class="sxs-lookup"><span data-stu-id="7191c-208">Getting in touch with the Microsoft Edge DevTools team</span></span>  
+## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a><span data-ttu-id="d43b0-208">Microsoft Edge DevTools チームと連絡を取る</span><span class="sxs-lookup"><span data-stu-id="d43b0-208">Getting in touch with the Microsoft Edge DevTools team</span></span>  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
@@ -176,11 +176,11 @@ ms.locfileid: "11124776"
 <!-- links -->  
 
 > [!NOTE]
-> <span data-ttu-id="7191c-209">このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。</span><span class="sxs-lookup"><span data-stu-id="7191c-209">Portions of this page are modifications based on work created and [shared by Google][GoogleSitePolicies] and used according to terms described in the [Creative Commons Attribution 4.0 International License][CCA4IL].</span></span>  
-> <span data-ttu-id="7191c-210">元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/inspect-styles/animations) にあり、 [Kayce Basques][KayceBasques] テクニカルライター、Chrome Devtools \ & Lighthouse \) で作成されています。</span><span class="sxs-lookup"><span data-stu-id="7191c-210">The original page is found [here](https://developers.google.com/web/tools/chrome-devtools/inspect-styles/animations) and is authored by [Kayce Basques][KayceBasques] \(Technical Writer, Chrome DevTools \& Lighthouse\).</span></span>  
+> <span data-ttu-id="d43b0-209">このページの一部は、 [Google によっ て作成および共有された][GoogleSitePolicies]作業に基づく変更で、「[Creative Commons Attribution 4.0 International License][CCA4IL]」で記載されている条項に従って使用されます。</span><span class="sxs-lookup"><span data-stu-id="d43b0-209">Portions of this page are modifications based on work created and [shared by Google][GoogleSitePolicies] and used according to terms described in the [Creative Commons Attribution 4.0 International License][CCA4IL].</span></span>  
+> <span data-ttu-id="d43b0-210">元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/inspect-styles/animations) にあり、 [Kayce Basques][KayceBasques] \(Chrome DevTools \& Lighthouse\ のテクニカル ライター) が作成しました。</span><span class="sxs-lookup"><span data-stu-id="d43b0-210">The original page is found [here](https://developers.google.com/web/tools/chrome-devtools/inspect-styles/animations) and is authored by [Kayce Basques][KayceBasques] \(Technical Writer, Chrome DevTools \& Lighthouse\).</span></span>  
 
-[![クリエイティブコモンズライセンス][CCby4Image]][CCA4IL]  
-<span data-ttu-id="7191c-212">この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。</span><span class="sxs-lookup"><span data-stu-id="7191c-212">This work is licensed under a [Creative Commons Attribution 4.0 International License][CCA4IL].</span></span>  
+[![Creative Commons ライセンス][CCby4Image]][CCA4IL]  
+<span data-ttu-id="d43b0-212">この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。</span><span class="sxs-lookup"><span data-stu-id="d43b0-212">This work is licensed under a [Creative Commons Attribution 4.0 International License][CCA4IL].</span></span>  
 
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  

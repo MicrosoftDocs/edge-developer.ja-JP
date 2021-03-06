@@ -1,66 +1,69 @@
 ---
 description: Microsoft Edge DevTools でコードを一時停止できるすべての方法について説明します。
-title: Microsoft Edge DevTools のブレークポイントでコードを一時停止する方法
+title: Microsoft Edge DevTools でブレークポイントを使用してコードを一時停止する方法
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 10/19/2020
+ms.date: 02/12/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 98c0e42657d9b0900d3eaca8af69f1c17abfcf06
-ms.sourcegitcommit: 99eee78698dc95b2a3fa638a5b063ef449899cda
+ms.openlocfilehash: 84077503d6c786244fc2ca4d54c349ae9f6d20d8
+ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "11124811"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "11398596"
 ---
-<!-- Copyright Kayce Basques 
+<!-- Copyright Kayce Basques
+
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
    You may obtain a copy of the License at
+
        https://www.apache.org/licenses/LICENSE-2.0
+
    Unless required by applicable law or agreed to in writing, software
    distributed under the License is distributed on an "AS IS" BASIS,
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.  -->  
 
-# <span data-ttu-id="9b561-104">Microsoft Edge DevTools のブレークポイントでコードを一時停止する方法</span><span class="sxs-lookup"><span data-stu-id="9b561-104">How to pause your code with breakpoints in Microsoft Edge DevTools</span></span>  
+# <a name="how-to-pause-your-code-with-breakpoints-in-microsoft-edge-devtools"></a><span data-ttu-id="b7459-104">Microsoft Edge DevTools でブレークポイントを使用してコードを一時停止する方法</span><span class="sxs-lookup"><span data-stu-id="b7459-104">How to pause your code with breakpoints in Microsoft Edge DevTools</span></span>  
 
-<span data-ttu-id="9b561-105">ブレークポイントを使用して JavaScript コードを一時停止します。</span><span class="sxs-lookup"><span data-stu-id="9b561-105">Use breakpoints to pause your JavaScript code.</span></span>  <span data-ttu-id="9b561-106">このガイドでは、DevTools で利用できる各種類のブレークポイントと、それぞれの種類の設定方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="9b561-106">This guide explains each type of breakpoint that is available in DevTools, as well as when to use and how to set each type.</span></span>  <span data-ttu-id="9b561-107">デバッグプロセスの実践的なチュートリアルについては、「 [Microsoft Edge DevTools のデバッグ JavaScript の概要」][DevtoolsJavascriptIndex]を参照してください。</span><span class="sxs-lookup"><span data-stu-id="9b561-107">For a hands-on tutorial of the debugging process, navigate to [Get started with debugging JavaScript in Microsoft Edge DevTools][DevtoolsJavascriptIndex].</span></span>  
+<span data-ttu-id="b7459-105">ブレークポイントを使用して JavaScript コードを一時停止します。</span><span class="sxs-lookup"><span data-stu-id="b7459-105">Use breakpoints to pause your JavaScript code.</span></span>  <span data-ttu-id="b7459-106">このガイドでは、DevTools で使用できるブレークポイントの種類と、使用する時間と各種類の設定方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="b7459-106">This guide explains each type of breakpoint that is available in DevTools, as well as when to use and how to set each type.</span></span>  <span data-ttu-id="b7459-107">デバッグ プロセスの実践的なチュートリアルについては [、「Microsoft Edge DevTools][DevtoolsJavascriptIndex]での JavaScript のデバッグの開始」に移動します。</span><span class="sxs-lookup"><span data-stu-id="b7459-107">For a hands-on tutorial of the debugging process, navigate to [Get started with debugging JavaScript in Microsoft Edge DevTools][DevtoolsJavascriptIndex].</span></span>  
 
-## <span data-ttu-id="9b561-108">各ブレークポイントの種類を使用する状況の概要</span><span class="sxs-lookup"><span data-stu-id="9b561-108">Overview of when to use each breakpoint type</span></span>  
+## <a name="overview-of-when-to-use-each-breakpoint-type"></a><span data-ttu-id="b7459-108">各ブレークポイントの種類を使用する場合の概要</span><span class="sxs-lookup"><span data-stu-id="b7459-108">Overview of when to use each breakpoint type</span></span>  
 
-<span data-ttu-id="9b561-109">最もよく知られているブレークポイントの種類は、コード行です。</span><span class="sxs-lookup"><span data-stu-id="9b561-109">The most well-known type of breakpoint is line-of-code.</span></span>  <span data-ttu-id="9b561-110">ただし、行コードのブレークポイントを設定するのは効率的ではありません。特に、正確な場所がわからない場合や、大規模なコードベースを使用している場合などが考えられます。</span><span class="sxs-lookup"><span data-stu-id="9b561-110">But line-of-code breakpoints may be inefficient to set, especially if you do not know exactly where to look, or if you are working with a large codebase.</span></span>  <span data-ttu-id="9b561-111">他の種類のブレークポイントを使用する方法とタイミングを理解することで、デバッグ時に時間を節約できます。</span><span class="sxs-lookup"><span data-stu-id="9b561-111">You may save yourself time when debugging by knowing how and when to use the other types of breakpoints.</span></span>  
+<span data-ttu-id="b7459-109">最もよく知られているブレークポイントの種類は、コード行です。</span><span class="sxs-lookup"><span data-stu-id="b7459-109">The most well-known type of breakpoint is line-of-code.</span></span>  <span data-ttu-id="b7459-110">ただし、コード行のブレークポイントは、特に場所を正確に知らない場合や、大きなコードベースを使用している場合に設定が非効率的な場合があります。</span><span class="sxs-lookup"><span data-stu-id="b7459-110">But line-of-code breakpoints may be inefficient to set, especially if you do not know exactly where to look, or if you are working with a large codebase.</span></span>  <span data-ttu-id="b7459-111">他の種類のブレークポイントを使用する方法と時期を知ることにより、デバッグの時間を節約できます。</span><span class="sxs-lookup"><span data-stu-id="b7459-111">You may save yourself time when debugging by knowing how and when to use the other types of breakpoints.</span></span>  
 
-| <span data-ttu-id="9b561-112">ブレークポイントの種類</span><span class="sxs-lookup"><span data-stu-id="9b561-112">Breakpoint Type</span></span> | <span data-ttu-id="9b561-113">一時停止するときに使用する...</span><span class="sxs-lookup"><span data-stu-id="9b561-113">Use This When You Want To Pause...</span></span>  |  
+| <span data-ttu-id="b7459-112">ブレークポイントの種類</span><span class="sxs-lookup"><span data-stu-id="b7459-112">Breakpoint Type</span></span> | <span data-ttu-id="b7459-113">一時停止する場合は、これを使用します。</span><span class="sxs-lookup"><span data-stu-id="b7459-113">Use This When You Want To Pause...</span></span>  |  
 |:--- |:--- |  
-| [<span data-ttu-id="9b561-114">行コード</span><span class="sxs-lookup"><span data-stu-id="9b561-114">Line-of-code</span></span>](#line-of-code-breakpoints) | <span data-ttu-id="9b561-115">コードの正確な領域。</span><span class="sxs-lookup"><span data-stu-id="9b561-115">On an exact region of code.</span></span>  |  
-| [<span data-ttu-id="9b561-116">条件行コード</span><span class="sxs-lookup"><span data-stu-id="9b561-116">Conditional line-of-code</span></span>](#conditional-line-of-code-breakpoints) | <span data-ttu-id="9b561-117">コードの正確な領域で、他の条件が true の場合にのみ表示されます。</span><span class="sxs-lookup"><span data-stu-id="9b561-117">On an exact region of code, but only when some other condition is true.</span></span>  |  
-| [<span data-ttu-id="9b561-118">DOM</span><span class="sxs-lookup"><span data-stu-id="9b561-118">DOM</span></span>](#dom-change-breakpoints) | <span data-ttu-id="9b561-119">特定の DOM ノードまたは子を変更または削除するコード。</span><span class="sxs-lookup"><span data-stu-id="9b561-119">On the code that changes or removes a specific DOM node, or the children.</span></span>  |  
-| [<span data-ttu-id="9b561-120">XHR</span><span class="sxs-lookup"><span data-stu-id="9b561-120">XHR</span></span>](#xhrfetch-breakpoints) | <span data-ttu-id="9b561-121">XHR URL に文字列パターンが含まれている場合。</span><span class="sxs-lookup"><span data-stu-id="9b561-121">When an XHR URL contains a string pattern.</span></span>  |  
-| [<span data-ttu-id="9b561-122">イベントリスナー</span><span class="sxs-lookup"><span data-stu-id="9b561-122">Event listener</span></span>](#event-listener-breakpoints) | <span data-ttu-id="9b561-123">イベント (、など) の後で実行されるコードの `click` 場合。</span><span class="sxs-lookup"><span data-stu-id="9b561-123">On the code that runs after an event, such as `click`, runs.</span></span>  |  
-| [<span data-ttu-id="9b561-124">エラー</span><span class="sxs-lookup"><span data-stu-id="9b561-124">Exception</span></span>](#exception-breakpoints) | <span data-ttu-id="9b561-125">キャッチされた、またはキャッチされない例外をスローするコード行。</span><span class="sxs-lookup"><span data-stu-id="9b561-125">On the line of code that is throwing a caught or uncaught exception.</span></span>  |  
-| [<span data-ttu-id="9b561-126">機能</span><span class="sxs-lookup"><span data-stu-id="9b561-126">Function</span></span>](#function-breakpoints) | <span data-ttu-id="9b561-127">特定のコマンド、関数、またはメソッドを実行するたび。</span><span class="sxs-lookup"><span data-stu-id="9b561-127">Whenever a specific command, function, or method is run.</span></span>  |  
+| [<span data-ttu-id="b7459-114">コード行</span><span class="sxs-lookup"><span data-stu-id="b7459-114">Line-of-code</span></span>](#line-of-code-breakpoints) | <span data-ttu-id="b7459-115">コードの正確な領域。</span><span class="sxs-lookup"><span data-stu-id="b7459-115">On an exact region of code.</span></span>  |  
+| [<span data-ttu-id="b7459-116">条件付きコード行</span><span class="sxs-lookup"><span data-stu-id="b7459-116">Conditional line-of-code</span></span>](#conditional-line-of-code-breakpoints) | <span data-ttu-id="b7459-117">コードの正確な領域で、他の条件が true の場合のみ。</span><span class="sxs-lookup"><span data-stu-id="b7459-117">On an exact region of code, but only when some other condition is true.</span></span>  |  
+| [<span data-ttu-id="b7459-118">DOM</span><span class="sxs-lookup"><span data-stu-id="b7459-118">DOM</span></span>](#dom-change-breakpoints) | <span data-ttu-id="b7459-119">特定の DOM ノードまたは子ノードを変更または削除するコード。</span><span class="sxs-lookup"><span data-stu-id="b7459-119">On the code that changes or removes a specific DOM node, or the children.</span></span>  |  
+| [<span data-ttu-id="b7459-120">XHR</span><span class="sxs-lookup"><span data-stu-id="b7459-120">XHR</span></span>](#xhrfetch-breakpoints) | <span data-ttu-id="b7459-121">XHR URL に文字列パターンが含まれている場合。</span><span class="sxs-lookup"><span data-stu-id="b7459-121">When an XHR URL contains a string pattern.</span></span>  |  
+| [<span data-ttu-id="b7459-122">イベント リスナー</span><span class="sxs-lookup"><span data-stu-id="b7459-122">Event listener</span></span>](#event-listener-breakpoints) | <span data-ttu-id="b7459-123">イベントの実行後に実行されるコード (実行など `click` )。</span><span class="sxs-lookup"><span data-stu-id="b7459-123">On the code that runs after an event, such as `click`, runs.</span></span>  |  
+| [<span data-ttu-id="b7459-124">例外</span><span class="sxs-lookup"><span data-stu-id="b7459-124">Exception</span></span>](#exception-breakpoints) | <span data-ttu-id="b7459-125">キャッチまたはキャッチされていない例外をスローするコード行で。</span><span class="sxs-lookup"><span data-stu-id="b7459-125">On the line of code that is throwing a caught or uncaught exception.</span></span>  |  
+| [<span data-ttu-id="b7459-126">機能</span><span class="sxs-lookup"><span data-stu-id="b7459-126">Function</span></span>](#function-breakpoints) | <span data-ttu-id="b7459-127">特定のコマンド、関数、またはメソッドが実行されるたびに実行されます。</span><span class="sxs-lookup"><span data-stu-id="b7459-127">Whenever a specific command, function, or method is run.</span></span>  |  
 
-## <span data-ttu-id="9b561-128">行コードのブレークポイント</span><span class="sxs-lookup"><span data-stu-id="9b561-128">Line-of-code breakpoints</span></span>  
+## <a name="line-of-code-breakpoints"></a><span data-ttu-id="b7459-128">コード行ブレークポイント</span><span class="sxs-lookup"><span data-stu-id="b7459-128">Line-of-code breakpoints</span></span>  
 
-<span data-ttu-id="9b561-129">調査が必要なコードの正確な領域がわかっている場合は、コード行のブレークポイントを使います。</span><span class="sxs-lookup"><span data-stu-id="9b561-129">Use a line-of-code breakpoint when you know the exact region of code that you need to investigate.</span></span>  <span data-ttu-id="9b561-130">このコード行が実行される前に、DevTools は常に一時停止します。</span><span class="sxs-lookup"><span data-stu-id="9b561-130">DevTools always pauses before this line of code is run.</span></span>  
+<span data-ttu-id="b7459-129">調査する必要があるコードの正確な領域を知っている場合は、コード行ブレークポイントを使用します。</span><span class="sxs-lookup"><span data-stu-id="b7459-129">Use a line-of-code breakpoint when you know the exact region of code that you need to investigate.</span></span>  <span data-ttu-id="b7459-130">DevTools は、このコード行を実行する前に常に一時停止します。</span><span class="sxs-lookup"><span data-stu-id="b7459-130">DevTools always pauses before this line of code is run.</span></span>  
 
-<span data-ttu-id="9b561-131">DevTools で行コードのブレークポイントを設定するには、次の操作を行います。</span><span class="sxs-lookup"><span data-stu-id="9b561-131">To set a line-of-code breakpoint in DevTools:</span></span>  
+<span data-ttu-id="b7459-131">DevTools でコード行ブレークポイントを設定するには、次のコマンドを実行します。</span><span class="sxs-lookup"><span data-stu-id="b7459-131">To set a line-of-code breakpoint in DevTools:</span></span>  
 
-1.  <span data-ttu-id="9b561-132">[ **ソース** ] タブをクリックします。</span><span class="sxs-lookup"><span data-stu-id="9b561-132">Click the **Sources** tab.</span></span>  
-1.  <span data-ttu-id="9b561-133">改ページするコードの行が含まれているファイルを開きます。</span><span class="sxs-lookup"><span data-stu-id="9b561-133">Open the file containing the line of code on which you want to break.</span></span>  
-1.  <span data-ttu-id="9b561-134">コードの行に移動します。</span><span class="sxs-lookup"><span data-stu-id="9b561-134">Go the line of code.</span></span>  
-1.  <span data-ttu-id="9b561-135">コード行の左側には、[行番号列を入力します。</span><span class="sxs-lookup"><span data-stu-id="9b561-135">To the left of the line of code is the line number column.</span></span>  <span data-ttu-id="9b561-136">それをクリックします。</span><span class="sxs-lookup"><span data-stu-id="9b561-136">Click on it.</span></span>  <span data-ttu-id="9b561-137">[行番号] 列の横に赤いアイコンが表示されます。</span><span class="sxs-lookup"><span data-stu-id="9b561-137">A red icon appears next to the line number column.</span></span>  
+1.  <span data-ttu-id="b7459-132">[ソース] **ツールを選択** します。</span><span class="sxs-lookup"><span data-stu-id="b7459-132">Choose the **Sources** tool.</span></span>  
+1.  <span data-ttu-id="b7459-133">ブレークするコード行を含むファイルを開きます。</span><span class="sxs-lookup"><span data-stu-id="b7459-133">Open the file containing the line of code on which you want to break.</span></span>  
+1.  <span data-ttu-id="b7459-134">コード行を移動します。</span><span class="sxs-lookup"><span data-stu-id="b7459-134">Go the line of code.</span></span>  
+1.  <span data-ttu-id="b7459-135">コード行の左側に行番号列があります。</span><span class="sxs-lookup"><span data-stu-id="b7459-135">To the left of the line of code is the line number column.</span></span>  <span data-ttu-id="b7459-136">選択します。</span><span class="sxs-lookup"><span data-stu-id="b7459-136">Choose it.</span></span>  <span data-ttu-id="b7459-137">行番号列の横に赤いアイコンが表示されます。</span><span class="sxs-lookup"><span data-stu-id="b7459-137">A red icon appears next to the line number column.</span></span>  
     
-    :::image type="complex" source="../media/javascript-sources-page-js-breakpoint-30.msft.png" alt-text="行コードのブレークポイント" lightbox="../media/javascript-sources-page-js-breakpoint-30.msft.png":::
-       <span data-ttu-id="9b561-139">行コードのブレークポイント</span><span class="sxs-lookup"><span data-stu-id="9b561-139">A line-of-code breakpoint</span></span>  
+    :::image type="complex" source="../media/javascript-sources-page-js-breakpoint-30.msft.png" alt-text="コード行ブレークポイント" lightbox="../media/javascript-sources-page-js-breakpoint-30.msft.png":::
+       <span data-ttu-id="b7459-139">コード行ブレークポイント</span><span class="sxs-lookup"><span data-stu-id="b7459-139">A line-of-code breakpoint</span></span>  
     :::image-end:::  
     
-### <span data-ttu-id="9b561-140">コードの行コードのブレークポイント</span><span class="sxs-lookup"><span data-stu-id="9b561-140">Line-of-code breakpoints in your code</span></span>  
+### <a name="line-of-code-breakpoints-in-your-code"></a><span data-ttu-id="b7459-140">コード内のコード行ブレークポイント</span><span class="sxs-lookup"><span data-stu-id="b7459-140">Line-of-code breakpoints in your code</span></span>  
 
-<span data-ttu-id="9b561-141">コードからメソッドを実行して、 `debugger` その行にカーソルを置きます。</span><span class="sxs-lookup"><span data-stu-id="9b561-141">Run the `debugger` method from your code to pause on that line.</span></span>  <span data-ttu-id="9b561-142">これは、コード内にブレーク [ポイント](#line-of-code-breakpoints)が設定されている点を除いて、コード内にブレークポイントが設定されていることを意味します。</span><span class="sxs-lookup"><span data-stu-id="9b561-142">This is equivalent to a [line-of-code breakpoint](#line-of-code-breakpoints), except that the breakpoint is set in your code, not in the DevTools UI.</span></span>  
+<span data-ttu-id="b7459-141">コードから `debugger` メソッドを実行して、その行を一時停止します。</span><span class="sxs-lookup"><span data-stu-id="b7459-141">Run the `debugger` method from your code to pause on that line.</span></span>  <span data-ttu-id="b7459-142">これは、DevTools [](#line-of-code-breakpoints)UI ではなく、コードでブレークポイントが設定されている点を除き、コード行ブレークポイントと同じです。</span><span class="sxs-lookup"><span data-stu-id="b7459-142">This is equivalent to a [line-of-code breakpoint](#line-of-code-breakpoints), except that the breakpoint is set in your code, not in the DevTools UI.</span></span>  
 
 ```javascript
 console.log('a');
@@ -69,114 +72,114 @@ debugger;
 console.log('c');
 ```  
 
-### <span data-ttu-id="9b561-143">条件行コードのブレークポイント</span><span class="sxs-lookup"><span data-stu-id="9b561-143">Conditional line-of-code breakpoints</span></span>  
+### <a name="conditional-line-of-code-breakpoints"></a><span data-ttu-id="b7459-143">条件付きコード行ブレークポイント</span><span class="sxs-lookup"><span data-stu-id="b7459-143">Conditional line-of-code breakpoints</span></span>  
 
-<span data-ttu-id="9b561-144">調査が必要なコードの正確な領域がわかっているが、その他の条件が true の場合にのみ一時停止する必要がある場合は、条件付きコードのブレークポイントを使用します。</span><span class="sxs-lookup"><span data-stu-id="9b561-144">Use a conditional line-of-code breakpoint when you know the exact region of code that you need to investigate, but you want to pause only when some other condition is true.</span></span>  
+<span data-ttu-id="b7459-144">調査する必要があるコードの正確な領域がわかっているが、他の条件が true の場合にのみ一時停止する場合は、条件付きコード行ブレークポイントを使用します。</span><span class="sxs-lookup"><span data-stu-id="b7459-144">Use a conditional line-of-code breakpoint when you know the exact region of code that you need to investigate, but you want to pause only when some other condition is true.</span></span>  
 
-<span data-ttu-id="9b561-145">条件行コードのブレークポイントを設定するには、次の操作を行います。</span><span class="sxs-lookup"><span data-stu-id="9b561-145">To set a conditional line-of-code breakpoint:</span></span>  
+<span data-ttu-id="b7459-145">条件付きコード行ブレークポイントを設定するには、次のコマンドを実行します。</span><span class="sxs-lookup"><span data-stu-id="b7459-145">To set a conditional line-of-code breakpoint:</span></span>  
 
-1.  <span data-ttu-id="9b561-146">[ **ソース** ] タブをクリックします。</span><span class="sxs-lookup"><span data-stu-id="9b561-146">Click the **Sources** tab.</span></span>  
-1.  <span data-ttu-id="9b561-147">改ページするコードの行が含まれているファイルを開きます。</span><span class="sxs-lookup"><span data-stu-id="9b561-147">Open the file containing the line of code on which you want to break.</span></span>  
-1.  <span data-ttu-id="9b561-148">コードの行に移動します。</span><span class="sxs-lookup"><span data-stu-id="9b561-148">Go the line of code.</span></span>  
-1.  <span data-ttu-id="9b561-149">コード行の左側には、[行番号列を入力します。</span><span class="sxs-lookup"><span data-stu-id="9b561-149">To the left of the line of code is the line number column.</span></span>  <span data-ttu-id="9b561-150">行番号を右クリックします。</span><span class="sxs-lookup"><span data-stu-id="9b561-150">Right-click the line number.</span></span>  
-1.  <span data-ttu-id="9b561-151">[ **条件付きブレークポイントの追加**] を選びます。</span><span class="sxs-lookup"><span data-stu-id="9b561-151">Choose **Add conditional breakpoint**.</span></span>  <span data-ttu-id="9b561-152">ダイアログがコード行の下に表示されます。</span><span class="sxs-lookup"><span data-stu-id="9b561-152">A dialog displays underneath the line of code.</span></span>  
-1.  <span data-ttu-id="9b561-153">ダイアログに条件を入力します。</span><span class="sxs-lookup"><span data-stu-id="9b561-153">Enter your condition in the dialog.</span></span>  
-1.  <span data-ttu-id="9b561-154">`Enter`ブレークポイントをアクティブ化する場合に選択します。</span><span class="sxs-lookup"><span data-stu-id="9b561-154">Select `Enter` to activate the breakpoint.</span></span>  <span data-ttu-id="9b561-155">[行番号] 列の横にあるアイコン。</span><span class="sxs-lookup"><span data-stu-id="9b561-155">An icon next to the line number column.</span></span>  
+1.  <span data-ttu-id="b7459-146">[ソース] **ツールを選択** します。</span><span class="sxs-lookup"><span data-stu-id="b7459-146">Choose the **Sources** tool.</span></span>  
+1.  <span data-ttu-id="b7459-147">ブレークするコード行を含むファイルを開きます。</span><span class="sxs-lookup"><span data-stu-id="b7459-147">Open the file containing the line of code on which you want to break.</span></span>  
+1.  <span data-ttu-id="b7459-148">コード行を移動します。</span><span class="sxs-lookup"><span data-stu-id="b7459-148">Go the line of code.</span></span>  
+1.  <span data-ttu-id="b7459-149">コード行の左側に行番号列があります。</span><span class="sxs-lookup"><span data-stu-id="b7459-149">To the left of the line of code is the line number column.</span></span>  <span data-ttu-id="b7459-150">行番号にカーソルを合わせると、コンテキスト メニュー \(右クリック\) が開きます。</span><span class="sxs-lookup"><span data-stu-id="b7459-150">Hover on the line number and open the contextual menu \(right-click\).</span></span>  
+1.  <span data-ttu-id="b7459-151">[条件付 **きブレークポイントの追加] を選択します**。</span><span class="sxs-lookup"><span data-stu-id="b7459-151">Choose **Add conditional breakpoint**.</span></span>  <span data-ttu-id="b7459-152">コード行の下にダイアログが表示されます。</span><span class="sxs-lookup"><span data-stu-id="b7459-152">A dialog displays underneath the line of code.</span></span>  
+1.  <span data-ttu-id="b7459-153">ダイアログに条件を入力します。</span><span class="sxs-lookup"><span data-stu-id="b7459-153">Enter your condition in the dialog.</span></span>  
+1.  <span data-ttu-id="b7459-154">ブレークポイント `Enter` をアクティブ化する場合に選択します。</span><span class="sxs-lookup"><span data-stu-id="b7459-154">Select `Enter` to activate the breakpoint.</span></span>  <span data-ttu-id="b7459-155">行番号列の横にあるアイコン。</span><span class="sxs-lookup"><span data-stu-id="b7459-155">An icon next to the line number column.</span></span>  
     
-    :::image type="complex" source="../media/javascript-sources-page-js-conditional-breakpoint.msft.png" alt-text="行コードのブレークポイント" lightbox="../media/javascript-sources-page-js-conditional-breakpoint.msft.png":::
-       <span data-ttu-id="9b561-157">条件行コードのブレークポイント</span><span class="sxs-lookup"><span data-stu-id="9b561-157">A conditional line-of-code breakpoint</span></span>  
+    :::image type="complex" source="../media/javascript-sources-page-js-conditional-breakpoint.msft.png" alt-text="条件付きコード行ブレークポイント" lightbox="../media/javascript-sources-page-js-conditional-breakpoint.msft.png":::
+       <span data-ttu-id="b7459-157">条件付きコード行ブレークポイント</span><span class="sxs-lookup"><span data-stu-id="b7459-157">A conditional line-of-code breakpoint</span></span>  
     :::image-end:::  
     
-### <span data-ttu-id="9b561-158">行コードのブレークポイントを管理する</span><span class="sxs-lookup"><span data-stu-id="9b561-158">Manage line-of-code breakpoints</span></span>  
+### <a name="manage-line-of-code-breakpoints"></a><span data-ttu-id="b7459-158">コード行ブレークポイントの管理</span><span class="sxs-lookup"><span data-stu-id="b7459-158">Manage line-of-code breakpoints</span></span>  
 
-<span data-ttu-id="9b561-159">[ **ブレークポイント** ] ウィンドウを使用して、1つの場所から行コードのブレークポイントを無効化または削除します。</span><span class="sxs-lookup"><span data-stu-id="9b561-159">Use the **Breakpoints** pane to disable or remove line-of-code breakpoints from a single location.</span></span>  
+<span data-ttu-id="b7459-159">[ブレークポイント **] ウィンドウを使用** して、1 つの場所からコード行ブレークポイントを無効または削除します。</span><span class="sxs-lookup"><span data-stu-id="b7459-159">Use the **Breakpoints** pane to disable or remove line-of-code breakpoints from a single location.</span></span>  
 
-:::image type="complex" source="../media/javascript-sources-page-js-breakpoints-16-33.msft.png" alt-text="行コードのブレークポイント" lightbox="../media/javascript-sources-page-js-breakpoints-16-33.msft.png":::
-   <span data-ttu-id="9b561-161">[ **ブレークポイント** ] パネル</span><span class="sxs-lookup"><span data-stu-id="9b561-161">The **Breakpoints** panel</span></span>  
+:::image type="complex" source="../media/javascript-sources-page-js-breakpoints-16-33.msft.png" alt-text="[ブレークポイント] パネル" lightbox="../media/javascript-sources-page-js-breakpoints-16-33.msft.png":::
+   <span data-ttu-id="b7459-161">[ **ブレークポイント]** パネル</span><span class="sxs-lookup"><span data-stu-id="b7459-161">The **Breakpoints** panel</span></span>  
 :::image-end:::  
 
-*   <span data-ttu-id="9b561-162">エントリの横にあるチェックボックスをオンにして、そのブレークポイントを無効にします。</span><span class="sxs-lookup"><span data-stu-id="9b561-162">Check the checkbox next to an entry to disable that breakpoint.</span></span>  
-*   <span data-ttu-id="9b561-163">エントリを右クリックして、そのブレークポイントを削除します。</span><span class="sxs-lookup"><span data-stu-id="9b561-163">Right-click an entry to remove that breakpoint.</span></span>  
-*   <span data-ttu-id="9b561-164">[ **ブレークポイント** ] ウィンドウ内の任意の場所を右クリックして、すべてのブレークポイントを非アクティブ化、すべてのブレークポイントの無効化、すべてのブレークポイントの削除を行います。</span><span class="sxs-lookup"><span data-stu-id="9b561-164">Right-click anywhere in the **Breakpoints** pane to deactivate all breakpoints, disable all breakpoints, or remove all breakpoints.</span></span>  <span data-ttu-id="9b561-165">すべてのブレークポイントを無効にすることは、それぞれのチェックをオフにすることと同じです。</span><span class="sxs-lookup"><span data-stu-id="9b561-165">Disabling all breakpoints is equivalent to unchecking each one.</span></span>  <span data-ttu-id="9b561-166">すべてのブレークポイントを非アクティブ化するには、すべてのコードのブレークポイントを無視するように DevTools を使用しますが、それぞれのブレークポイントを再アクティブ化するときと同じ状態になるように、有効な状態を維持する必要があります。</span><span class="sxs-lookup"><span data-stu-id="9b561-166">Deactivating all breakpoints instructs DevTools to ignore all line-of-code breakpoints, but to also maintain the enabled state so that each are in the same state as before when you reactivate each one.</span></span>  
+*   <span data-ttu-id="b7459-162">エントリの横にあるチェック ボックスをオンにして、そのブレークポイントを無効にします。</span><span class="sxs-lookup"><span data-stu-id="b7459-162">Check the checkbox next to an entry to disable that breakpoint.</span></span>  
+*   <span data-ttu-id="b7459-163">エントリにカーソルを合わせると、コンテキスト メニュー \(右クリック\) を開き、そのブレークポイントを削除します。</span><span class="sxs-lookup"><span data-stu-id="b7459-163">Hover on an entry and open the contextual menu \(right-click\) to remove that breakpoint.</span></span>  
+*   <span data-ttu-id="b7459-164">[ブレークポイント] ウィンドウの任意の **場所** にマウス ポインターを移動し、コンテキスト メニュー \(右クリック\) を開いてすべてのブレークポイントを非アクティブ化するか、すべてのブレークポイントを無効にするか、すべてのブレークポイントを削除します。</span><span class="sxs-lookup"><span data-stu-id="b7459-164">Hover anywhere in the **Breakpoints** pane and open the contextual menu \(right-click\) to deactivate all breakpoints, disable all breakpoints, or remove all breakpoints.</span></span>  <span data-ttu-id="b7459-165">すべてのブレークポイントを無効にした場合は、各ブレークポイントのチェックを外すのと同じです。</span><span class="sxs-lookup"><span data-stu-id="b7459-165">Disabling all breakpoints is equivalent to unchecking each one.</span></span>  <span data-ttu-id="b7459-166">すべてのブレークポイントを非アクティブ化すると、DevTools は、すべてのコード行ブレークポイントを無視するように指示しますが、有効な状態を維持して、各ブレークポイントを再アクティブ化する場合と同じ状態になります。</span><span class="sxs-lookup"><span data-stu-id="b7459-166">Deactivating all breakpoints instructs DevTools to ignore all line-of-code breakpoints, but to also maintain the enabled state so that each are in the same state as before when you reactivate each one.</span></span>  
     
-    :::image type="complex" source="../media/javascript-sources-page-js-breakpoints-deactivate-breakpoints.msft.png" alt-text="行コードのブレークポイント" lightbox="../media/javascript-sources-page-js-breakpoints-deactivate-breakpoints.msft.png":::
-       <span data-ttu-id="9b561-168">[ **ブレークポイント** ] ウィンドウのブレークダウンの無効化</span><span class="sxs-lookup"><span data-stu-id="9b561-168">Deactivated breakpoints in the **Breakpoints** pane</span></span>  
+    :::image type="complex" source="../media/javascript-sources-page-js-breakpoints-deactivate-breakpoints.msft.png" alt-text="[ブレークポイント] ウィンドウで非アクティブ化されたブレークポイント" lightbox="../media/javascript-sources-page-js-breakpoints-deactivate-breakpoints.msft.png":::
+       <span data-ttu-id="b7459-168">[ブレークポイント] ウィンドウで **非アクティブ化された** ブレークポイント</span><span class="sxs-lookup"><span data-stu-id="b7459-168">Deactivated breakpoints in the **Breakpoints** pane</span></span>  
     :::image-end:::  
     
-## <span data-ttu-id="9b561-169">DOM 変更のブレークポイント</span><span class="sxs-lookup"><span data-stu-id="9b561-169">DOM change breakpoints</span></span>  
+## <a name="dom-change-breakpoints"></a><span data-ttu-id="b7459-169">DOM の変更ブレークポイント</span><span class="sxs-lookup"><span data-stu-id="b7459-169">DOM change breakpoints</span></span>  
 
-<span data-ttu-id="9b561-170">Dom ノードまたは子を変更するコードを一時停止する場合は、DOM 変更ブレークポイントを使用します。</span><span class="sxs-lookup"><span data-stu-id="9b561-170">Use a DOM change breakpoint when you want to pause on the code that changes a DOM node or the children.</span></span>  
+<span data-ttu-id="b7459-170">DOM ノードまたは子を変更するコードを一時停止する場合は、DOM 変更ブレークポイントを使用します。</span><span class="sxs-lookup"><span data-stu-id="b7459-170">Use a DOM change breakpoint when you want to pause on the code that changes a DOM node or the children.</span></span>  
 
-<span data-ttu-id="9b561-171">DOM 変更のブレークポイントを設定するには、次の操作を行います。</span><span class="sxs-lookup"><span data-stu-id="9b561-171">To set a DOM change breakpoint:</span></span>  
+<span data-ttu-id="b7459-171">DOM 変更ブレークポイントを設定するには、次の操作を行います。</span><span class="sxs-lookup"><span data-stu-id="b7459-171">To set a DOM change breakpoint:</span></span>  
 
-1.  <span data-ttu-id="9b561-172">[ **要素** ] タブをクリックします。</span><span class="sxs-lookup"><span data-stu-id="9b561-172">Click the **Elements** tab.</span></span>  
-1.  <span data-ttu-id="9b561-173">ブレークポイントを設定する要素に移動します。</span><span class="sxs-lookup"><span data-stu-id="9b561-173">Go the element on which you want to set the breakpoint.</span></span>  
-1.  <span data-ttu-id="9b561-174">要素を右クリックします。</span><span class="sxs-lookup"><span data-stu-id="9b561-174">Right-click the element.</span></span>  
-1.  <span data-ttu-id="9b561-175">[ **中断] に**カーソルを合わせ、[ **サブツリーの変更**]、[属性の **変更**]、または [ **ノードの削除**] を選択します。</span><span class="sxs-lookup"><span data-stu-id="9b561-175">Hover over **Break on**, then choose **Subtree modifications**, **Attribute modifications**, or **Node removal**.</span></span>  
+1.  <span data-ttu-id="b7459-172">[要素] **ツールを選択** します。</span><span class="sxs-lookup"><span data-stu-id="b7459-172">Choose the **Elements** tool.</span></span>  
+1.  <span data-ttu-id="b7459-173">ブレークポイントを設定する要素を移動します。</span><span class="sxs-lookup"><span data-stu-id="b7459-173">Go the element on which you want to set the breakpoint.</span></span>  
+1.  <span data-ttu-id="b7459-174">要素にカーソルを合わせると、コンテキスト メニュー \(右クリック\) が開きます。</span><span class="sxs-lookup"><span data-stu-id="b7459-174">Hover on the element and open the contextual menu \(right-click\).</span></span>  
+1.  <span data-ttu-id="b7459-175">[ブレーク]**をポイントし**、[サブツリーの変更 **] 、[\*\*\*\*属性の変更]**、または [ノードの削除]**を選択します**。</span><span class="sxs-lookup"><span data-stu-id="b7459-175">Hover on **Break on**, then choose **Subtree modifications**, **Attribute modifications**, or **Node removal**.</span></span>  
     
-    :::image type="complex" source="../media/javascript-elements-break-on-subtree-modifications.msft.png" alt-text="行コードのブレークポイント" lightbox="../media/javascript-elements-break-on-subtree-modifications.msft.png":::
-       <span data-ttu-id="9b561-177">DOM 変更ブレークポイントを作成するためのコンテキストメニュー</span><span class="sxs-lookup"><span data-stu-id="9b561-177">The context menu for creating a DOM change breakpoint</span></span>  
+    :::image type="complex" source="../media/javascript-elements-break-on-subtree-modifications.msft.png" alt-text="DOM 変更ブレークポイントを作成するためのコンテキスト メニュー" lightbox="../media/javascript-elements-break-on-subtree-modifications.msft.png":::
+       <span data-ttu-id="b7459-177">DOM 変更ブレークポイントを作成するためのコンテキスト メニュー</span><span class="sxs-lookup"><span data-stu-id="b7459-177">The context menu for creating a DOM change breakpoint</span></span>  
     :::image-end:::  
     
-### <span data-ttu-id="9b561-178">DOM の種類の変更ブレークポイント</span><span class="sxs-lookup"><span data-stu-id="9b561-178">Types of DOM change breakpoints</span></span>  
+### <a name="types-of-dom-change-breakpoints"></a><span data-ttu-id="b7459-178">DOM 変更ブレークポイントの種類</span><span class="sxs-lookup"><span data-stu-id="b7459-178">Types of DOM change breakpoints</span></span>  
 
-*   <span data-ttu-id="9b561-179">**サブツリーの変更**。</span><span class="sxs-lookup"><span data-stu-id="9b561-179">**Subtree modifications**.</span></span>  <span data-ttu-id="9b561-180">現在選択されているノードの子が削除または追加された場合、または子の内容が変更された場合にトリガーされます。</span><span class="sxs-lookup"><span data-stu-id="9b561-180">Triggered when a child of the currently-selected node is removed or added, or the contents of a child are changed.</span></span>  <span data-ttu-id="9b561-181">子ノードの属性の変更、または現在選択されているノードへの変更に対してトリガーされません。</span><span class="sxs-lookup"><span data-stu-id="9b561-181">Not triggered on child node attribute changes, or on any changes to the currently-selected node.</span></span>  
-*   <span data-ttu-id="9b561-182">**属性の変更**: 現在選択されているノードの属性が追加または削除されたとき、または属性値が変更されたときにトリガーされます。</span><span class="sxs-lookup"><span data-stu-id="9b561-182">**Attributes modifications**: Triggered when an attribute is added or removed on the currently-selected node, or when an attribute value changes.</span></span>  
-*   <span data-ttu-id="9b561-183">**ノードの削除**: 現在選択されているノードが削除されたときに発生します。</span><span class="sxs-lookup"><span data-stu-id="9b561-183">**Node Removal**: Triggered when the currently-selected node is removed.</span></span>  
+*   <span data-ttu-id="b7459-179">**サブツリーの変更**。</span><span class="sxs-lookup"><span data-stu-id="b7459-179">**Subtree modifications**.</span></span>  <span data-ttu-id="b7459-180">現在選択されているノードの子が削除または追加された場合、または子の内容が変更された場合にトリガーされます。</span><span class="sxs-lookup"><span data-stu-id="b7459-180">Triggered when a child of the currently-selected node is removed or added, or the contents of a child are changed.</span></span>  <span data-ttu-id="b7459-181">子ノード属性の変更、または現在選択されているノードに対する変更ではトリガーされません。</span><span class="sxs-lookup"><span data-stu-id="b7459-181">Not triggered on child node attribute changes, or on any changes to the currently-selected node.</span></span>  
+*   <span data-ttu-id="b7459-182">**属性の変更**: 現在選択されているノードで属性が追加または削除された場合、または属性値が変更された場合にトリガーされます。</span><span class="sxs-lookup"><span data-stu-id="b7459-182">**Attributes modifications**: Triggered when an attribute is added or removed on the currently-selected node, or when an attribute value changes.</span></span>  
+*   <span data-ttu-id="b7459-183">**ノードの削除**: 現在選択されているノードが削除されるとトリガーされます。</span><span class="sxs-lookup"><span data-stu-id="b7459-183">**Node Removal**: Triggered when the currently-selected node is removed.</span></span>  
     
-## <span data-ttu-id="9b561-184">XHR/Fetch のブレークポイント</span><span class="sxs-lookup"><span data-stu-id="9b561-184">XHR/Fetch breakpoints</span></span>  
+## <a name="xhrfetch-breakpoints"></a><span data-ttu-id="b7459-184">XHR/Fetch ブレークポイント</span><span class="sxs-lookup"><span data-stu-id="b7459-184">XHR/Fetch breakpoints</span></span>  
 
-<span data-ttu-id="9b561-185">XHR の要求 URL に指定された文字列が含まれている場合に中断する場合は、XHR ブレークポイントを使います。</span><span class="sxs-lookup"><span data-stu-id="9b561-185">Use an XHR breakpoint when you want to break when the request URL of an XHR contains a specified string.</span></span>  <span data-ttu-id="9b561-186">DevTools は、XHR がメソッドを実行しているコード行で一時停止し `send()` ます。</span><span class="sxs-lookup"><span data-stu-id="9b561-186">DevTools pauses on the line of code where the XHR runs the `send()` method.</span></span>  
+<span data-ttu-id="b7459-185">XHR の要求 URL に指定された文字列が含まれている場合は、XHR ブレークポイントを使用します。</span><span class="sxs-lookup"><span data-stu-id="b7459-185">Use an XHR breakpoint when you want to break when the request URL of an XHR contains a specified string.</span></span>  <span data-ttu-id="b7459-186">DevTools は、XHR がメソッドを実行するコード行で一時停止 `send()` します。</span><span class="sxs-lookup"><span data-stu-id="b7459-186">DevTools pauses on the line of code where the XHR runs the `send()` method.</span></span>  
 
 > [!NOTE]
-> <span data-ttu-id="9b561-187">この機能は、 [FETCH API][MDNFetchApi] 要求でも動作します。</span><span class="sxs-lookup"><span data-stu-id="9b561-187">This feature also works with [Fetch API][MDNFetchApi] requests.</span></span>  
+> <span data-ttu-id="b7459-187">この機能は、フェッチ [API 要求でも][MDNFetchApi] 機能します。</span><span class="sxs-lookup"><span data-stu-id="b7459-187">This feature also works with [Fetch API][MDNFetchApi] requests.</span></span>  
 
-<span data-ttu-id="9b561-188">これが役に立つ場合の1つの例として、ページで正しくない URL が要求されていることがわかっていて、誤った要求を引き起こしている AJAX またはフェッチソースコードをすばやく見つける必要がある場合があります。</span><span class="sxs-lookup"><span data-stu-id="9b561-188">One example of when this is helpful is when you see that your page is requesting an incorrect URL, and you want to quickly find the AJAX or Fetch source code that is causing the incorrect request.</span></span>  
+<span data-ttu-id="b7459-188">これが役に立つ例の 1 つは、Web ページが正しくない URL を要求し、要求が正しくない原因となっている AJAX または Fetch ソース コードをすばやく見つける場合です。</span><span class="sxs-lookup"><span data-stu-id="b7459-188">One example of when this is helpful is when your webpage is requesting an incorrect URL, and you want to quickly find the AJAX or Fetch source code that is causing the incorrect request.</span></span>  
 
-<span data-ttu-id="9b561-189">XHR のブレークポイントを設定するには:</span><span class="sxs-lookup"><span data-stu-id="9b561-189">To set an XHR breakpoint:</span></span>  
+<span data-ttu-id="b7459-189">XHR ブレークポイントを設定するには、次のコマンドを実行します。</span><span class="sxs-lookup"><span data-stu-id="b7459-189">To set an XHR breakpoint:</span></span>  
 
-1.  <span data-ttu-id="9b561-190">[ **ソース** ] タブをクリックします。</span><span class="sxs-lookup"><span data-stu-id="9b561-190">Click the **Sources** tab.</span></span>  
-1.  <span data-ttu-id="9b561-191">[ **Xhr のブレークポイント** ] ウィンドウを展開します。</span><span class="sxs-lookup"><span data-stu-id="9b561-191">Expand the **XHR Breakpoints** pane.</span></span>  
-1.  <span data-ttu-id="9b561-192">[ **ブレークポイントの追加**] を選びます。</span><span class="sxs-lookup"><span data-stu-id="9b561-192">Choose **Add breakpoint**.</span></span>  
-1.  <span data-ttu-id="9b561-193">改ページする文字列を入力します。</span><span class="sxs-lookup"><span data-stu-id="9b561-193">Enter the string which you want to break on.</span></span>  <span data-ttu-id="9b561-194">DevTools は、この文字列が XHR 要求 URL の任意の場所にある場合に一時停止します。</span><span class="sxs-lookup"><span data-stu-id="9b561-194">DevTools pauses when this string is present anywhere in an XHR request URL.</span></span>  
-1.  <span data-ttu-id="9b561-195">[ `Enter` 確認] を選択します。</span><span class="sxs-lookup"><span data-stu-id="9b561-195">Select `Enter` to confirm.</span></span>  
+1.  <span data-ttu-id="b7459-190">[ソース] **ツールを選択** します。</span><span class="sxs-lookup"><span data-stu-id="b7459-190">Choose the **Sources** tool.</span></span>  
+1.  <span data-ttu-id="b7459-191">**[XHR ブレークポイント] パネルを展開**します。</span><span class="sxs-lookup"><span data-stu-id="b7459-191">Expand the **XHR Breakpoints** panel.</span></span>  
+1.  <span data-ttu-id="b7459-192">[ブレークポイント **の追加] を選択します**。</span><span class="sxs-lookup"><span data-stu-id="b7459-192">Choose **Add breakpoint**.</span></span>  
+1.  <span data-ttu-id="b7459-193">折りたたむ文字列を入力します。</span><span class="sxs-lookup"><span data-stu-id="b7459-193">Enter the string which you want to break on.</span></span>  <span data-ttu-id="b7459-194">この文字列が XHR 要求 URL の任意の場所に存在する場合、DevTools は一時停止します。</span><span class="sxs-lookup"><span data-stu-id="b7459-194">DevTools pauses when this string is present anywhere in an XHR request URL.</span></span>  
+1.  <span data-ttu-id="b7459-195">選択 `Enter` して確認します。</span><span class="sxs-lookup"><span data-stu-id="b7459-195">Select `Enter` to confirm.</span></span>  
     
-    :::image type="complex" source="../media/javascript-sources-page-js-xhr-fetch-breakpoints-org.msft.png" alt-text="行コードのブレークポイント" lightbox="../media/javascript-sources-page-js-xhr-fetch-breakpoints-org.msft.png":::
-       <span data-ttu-id="9b561-197">XHR ブレークポイントを作成する</span><span class="sxs-lookup"><span data-stu-id="9b561-197">Create an XHR breakpoint</span></span>  
+    :::image type="complex" source="../media/javascript-sources-page-js-xhr-fetch-breakpoints-org.msft.png" alt-text="XHR ブレークポイントの作成" lightbox="../media/javascript-sources-page-js-xhr-fetch-breakpoints-org.msft.png":::
+       <span data-ttu-id="b7459-197">XHR ブレークポイントの作成</span><span class="sxs-lookup"><span data-stu-id="b7459-197">Create an XHR breakpoint</span></span>  
     :::image-end:::  
     
-## <span data-ttu-id="9b561-198">イベントリスナーのブレークポイント</span><span class="sxs-lookup"><span data-stu-id="9b561-198">Event listener breakpoints</span></span>   
+## <a name="event-listener-breakpoints"></a><span data-ttu-id="b7459-198">イベント リスナーのブレークポイント</span><span class="sxs-lookup"><span data-stu-id="b7459-198">Event listener breakpoints</span></span>  
 
-<span data-ttu-id="9b561-199">イベントが発生した後に実行されるイベントリスナーコードで一時停止する場合は、イベントリスナーのブレークポイントを使用します。</span><span class="sxs-lookup"><span data-stu-id="9b561-199">Use event listener breakpoints when you want to pause on the event listener code that runs after an event is fired.</span></span>  <span data-ttu-id="9b561-200">[ `click` すべてのマウスイベント] などのイベントのカテゴリやカテゴリなどの特定のイベントを選ぶことができます。</span><span class="sxs-lookup"><span data-stu-id="9b561-200">You are able to select specific events, such as `click`, or categories of events, such as all mouse events.</span></span>  
+<span data-ttu-id="b7459-199">イベントが発生した後に実行されるイベント リスナー コードで一時停止する場合は、イベント リスナー ブレークポイントを使用します。</span><span class="sxs-lookup"><span data-stu-id="b7459-199">Use event listener breakpoints when you want to pause on the event listener code that runs after an event is fired.</span></span>  <span data-ttu-id="b7459-200">すべてのマウス イベントなど、イベントのカテゴリなどの特定のイベント `click` を選択できます。</span><span class="sxs-lookup"><span data-stu-id="b7459-200">You are able to select specific events, such as `click`, or categories of events, such as all mouse events.</span></span>  
 
-1.  <span data-ttu-id="9b561-201">[ **ソース** ] タブをクリックします。</span><span class="sxs-lookup"><span data-stu-id="9b561-201">Click the **Sources** tab.</span></span>  
-1.  <span data-ttu-id="9b561-202">[ **イベントリスナーのブレークポイント** ] ウィンドウを展開します。</span><span class="sxs-lookup"><span data-stu-id="9b561-202">Expand the **Event Listener Breakpoints** pane.</span></span>  <span data-ttu-id="9b561-203">[DevTools] は、 **アニメーション**などのイベントカテゴリの一覧を表示します。</span><span class="sxs-lookup"><span data-stu-id="9b561-203">DevTools shows a list of event categories, such as **Animation**.</span></span>  
-1.  <span data-ttu-id="9b561-204">いずれかのカテゴリをチェックして、そのカテゴリのイベントが発生したときに一時停止するか、カテゴリを展開して特定のイベントを確認します。</span><span class="sxs-lookup"><span data-stu-id="9b561-204">Check one of these categories to pause whenever any event from that category is fired, or expand the category and check a specific event.</span></span>  
+1.  <span data-ttu-id="b7459-201">[ソース] **ツールを選択** します。</span><span class="sxs-lookup"><span data-stu-id="b7459-201">Choose the **Sources** tool.</span></span>  
+1.  <span data-ttu-id="b7459-202">[イベント リスナー **ブレークポイント] パネルを展開** します。</span><span class="sxs-lookup"><span data-stu-id="b7459-202">Expand the **Event Listener Breakpoints** panel.</span></span>  <span data-ttu-id="b7459-203">DevTools には、Animation などのイベント カテゴリの一覧が **表示されます**。</span><span class="sxs-lookup"><span data-stu-id="b7459-203">DevTools shows a list of event categories, such as **Animation**.</span></span>  
+1.  <span data-ttu-id="b7459-204">これらのカテゴリのいずれかを確認して、そのカテゴリのイベントが発生するたびに一時停止するか、カテゴリを展開して特定のイベントを確認します。</span><span class="sxs-lookup"><span data-stu-id="b7459-204">Check one of these categories to pause whenever any event from that category is fired, or expand the category and check a specific event.</span></span>  
     
-    :::image type="complex" source="../media/javascript-sources-page-js-event-listener-breakpoints-device-deviceorientation.msft.png" alt-text="行コードのブレークポイント" lightbox="../media/javascript-sources-page-js-event-listener-breakpoints-device-deviceorientation.msft.png":::
-       <span data-ttu-id="9b561-206">イベントリスナーのブレークポイントを作成する</span><span class="sxs-lookup"><span data-stu-id="9b561-206">Create an event listener breakpoint</span></span>  
+    :::image type="complex" source="../media/javascript-sources-page-js-event-listener-breakpoints-device-deviceorientation.msft.png" alt-text="イベント リスナーブレークポイントの作成" lightbox="../media/javascript-sources-page-js-event-listener-breakpoints-device-deviceorientation.msft.png":::
+       <span data-ttu-id="b7459-206">イベント リスナーブレークポイントの作成</span><span class="sxs-lookup"><span data-stu-id="b7459-206">Create an event listener breakpoint</span></span>  
     :::image-end:::  
     
-## <span data-ttu-id="9b561-207">例外のブレークポイント</span><span class="sxs-lookup"><span data-stu-id="9b561-207">Exception breakpoints</span></span>  
+## <a name="exception-breakpoints"></a><span data-ttu-id="b7459-207">例外ブレークポイント</span><span class="sxs-lookup"><span data-stu-id="b7459-207">Exception breakpoints</span></span>  
 
-<span data-ttu-id="9b561-208">キャッチまたはキャッチされない例外をスローするコード行で一時停止する場合は、例外のブレークポイントを使用します。</span><span class="sxs-lookup"><span data-stu-id="9b561-208">Use exception breakpoints when you want to pause on the line of code that is throwing a caught or uncaught exception.</span></span>  
+<span data-ttu-id="b7459-208">キャッチまたはキャッチされていない例外をスローするコード行で一時停止する場合は、例外ブレークポイントを使用します。</span><span class="sxs-lookup"><span data-stu-id="b7459-208">Use exception breakpoints when you want to pause on the line of code that is throwing a caught or uncaught exception.</span></span>  
 
-1.  <span data-ttu-id="9b561-209">[ **ソース** ] タブをクリックします。</span><span class="sxs-lookup"><span data-stu-id="9b561-209">Click the **Sources** tab.</span></span>  
-1.  <span data-ttu-id="9b561-210">[ **例外に対して一時停止** ] を選択します (例外がある場合は ![ 一時停止 ][ImagePauseOnExceptionsIcon] します)。</span><span class="sxs-lookup"><span data-stu-id="9b561-210">Choose **Pause on exceptions** \(![Pause on exceptions][ImagePauseOnExceptionsIcon]\).</span></span>  <span data-ttu-id="9b561-211">有効にすると、アイコンが青色に変わります。</span><span class="sxs-lookup"><span data-stu-id="9b561-211">The icon turns blue when enabled.</span></span>  
+1.  <span data-ttu-id="b7459-209">[ソース] **ツールを選択** します。</span><span class="sxs-lookup"><span data-stu-id="b7459-209">Choose the **Sources** tool.</span></span>  
+1.  <span data-ttu-id="b7459-210">[ **例外時に一時停止** する] \( ![ [例外の一時停止 ][ImagePauseOnExceptionsIcon] ] \) を選択します。</span><span class="sxs-lookup"><span data-stu-id="b7459-210">Choose **Pause on exceptions** \(![Pause on exceptions][ImagePauseOnExceptionsIcon]\).</span></span>  <span data-ttu-id="b7459-211">有効にすると、アイコンが青色に変わります。</span><span class="sxs-lookup"><span data-stu-id="b7459-211">The icon turns blue when enabled.</span></span>  
     
-    :::image type="complex" source="../media/javascript-sources-page-js-pause-on-exceptions.msft.png" alt-text="行コードのブレークポイント" lightbox="../media/javascript-sources-page-js-pause-on-exceptions.msft.png":::
-       <span data-ttu-id="9b561-213">**[例外時に一時停止**] ボタン</span><span class="sxs-lookup"><span data-stu-id="9b561-213">The **Pause on exceptions** button</span></span>  
+    :::image type="complex" source="../media/javascript-sources-page-js-pause-on-exceptions.msft.png" alt-text="[例外時に一時停止] ボタン" lightbox="../media/javascript-sources-page-js-pause-on-exceptions.msft.png":::
+       <span data-ttu-id="b7459-213">[ **例外時に一時停止]** ボタン</span><span class="sxs-lookup"><span data-stu-id="b7459-213">The **Pause on exceptions** button</span></span>  
     :::image-end:::  
     
-1.  <span data-ttu-id="9b561-214">**省略可能**。</span><span class="sxs-lookup"><span data-stu-id="9b561-214">**Optional**.</span></span>  <span data-ttu-id="9b561-215">キャッチされていない例外にも一時停止したい場合は、 **[キャッチした例外を一時停止** ] チェックボックスをオンにします。</span><span class="sxs-lookup"><span data-stu-id="9b561-215">Check the **Pause On Caught Exceptions** checkbox if you also want to pause on caught exceptions, in addition to uncaught ones.</span></span>  
+1.  <span data-ttu-id="b7459-214">**省略可能です**。</span><span class="sxs-lookup"><span data-stu-id="b7459-214">**Optional**.</span></span>  <span data-ttu-id="b7459-215">キャッチされていない **例外に** 加えて、キャッチされた例外でも一時停止する場合は、[キャッチ例外の一時停止] チェック ボックスをオンにします。</span><span class="sxs-lookup"><span data-stu-id="b7459-215">Check the **Pause On Caught Exceptions** checkbox if you also want to pause on caught exceptions, in addition to uncaught ones.</span></span>  
     
-    :::image type="complex" source="../media/javascript-sources-page-js-paused-on-exception.msft.png" alt-text="行コードのブレークポイント" lightbox="../media/javascript-sources-page-js-paused-on-exception.msft.png":::
-       <span data-ttu-id="9b561-217">キャッチされていない例外で一時停止</span><span class="sxs-lookup"><span data-stu-id="9b561-217">Paused on an uncaught exception</span></span>  
+    :::image type="complex" source="../media/javascript-sources-page-js-paused-on-exception.msft.png" alt-text="キャッチされない例外で一時停止" lightbox="../media/javascript-sources-page-js-paused-on-exception.msft.png":::
+       <span data-ttu-id="b7459-217">キャッチされない例外で一時停止</span><span class="sxs-lookup"><span data-stu-id="b7459-217">Paused on an uncaught exception</span></span>  
     :::image-end:::  
     
-## <span data-ttu-id="9b561-218">関数のブレークポイント</span><span class="sxs-lookup"><span data-stu-id="9b561-218">Function breakpoints</span></span>  
+## <a name="function-breakpoints"></a><span data-ttu-id="b7459-218">関数のブレークポイント</span><span class="sxs-lookup"><span data-stu-id="b7459-218">Function breakpoints</span></span>  
 
-<span data-ttu-id="9b561-219">特定の `debug(method)` `method` 関数が実行されているときに一時停止する必要がある場合は、デバッグするコマンド、関数、またはメソッドを実行します。</span><span class="sxs-lookup"><span data-stu-id="9b561-219">Run the `debug(method)` method, where `method` is the command, function, or method you want to debug, when you want to pause whenever a specific function is run.</span></span>  <span data-ttu-id="9b561-220">`debug()`コード (ステートメントなど) に挿入し `console.log()` たり、Devtools コンソールからメソッドを実行したりすることができます。</span><span class="sxs-lookup"><span data-stu-id="9b561-220">You may insert `debug()` into your code (like a `console.log()` statement) or run the method from the DevTools Console.</span></span>  `debug()` <span data-ttu-id="9b561-221">関数の最初の行に [行コードのブレークポイント](#line-of-code-breakpoints) を設定することと同じです。</span><span class="sxs-lookup"><span data-stu-id="9b561-221">is equivalent to setting a [line-of-code breakpoint](#line-of-code-breakpoints) on the first line of the function.</span></span>  
+<span data-ttu-id="b7459-219">特定の関数が実行されるたびに一時停止する場合は、デバッグするコマンド、関数、またはメソッドがあるメソッド `debug(method)` `method` を実行します。</span><span class="sxs-lookup"><span data-stu-id="b7459-219">Run the `debug(method)` method, where `method` is the command, function, or method you want to debug, when you want to pause whenever a specific function is run.</span></span>  <span data-ttu-id="b7459-220">コード (ステートメント `debug()` など) に挿入するか `console.log()` 、DevTools コンソールからメソッドを実行できます。</span><span class="sxs-lookup"><span data-stu-id="b7459-220">You may insert `debug()` into your code (like a `console.log()` statement) or run the method from the DevTools Console.</span></span>  `debug()` <span data-ttu-id="b7459-221">は、関数の最初 [の行](#line-of-code-breakpoints) にコード行ブレークポイントを設定するのと同じです。</span><span class="sxs-lookup"><span data-stu-id="b7459-221">is equivalent to setting a [line-of-code breakpoint](#line-of-code-breakpoints) on the first line of the function.</span></span>  
 
 ```javascript
 function sum(a, b) {
@@ -187,9 +190,9 @@ debug(sum); // Pass the function object, not a string.
 sum();
 ```  
 
-### <span data-ttu-id="9b561-222">ターゲット関数が範囲内にあることを確認する</span><span class="sxs-lookup"><span data-stu-id="9b561-222">Make sure the target function is in scope</span></span>  
+### <a name="make-sure-the-target-function-is-in-scope"></a><span data-ttu-id="b7459-222">ターゲット関数がスコープ内にあるか確認する</span><span class="sxs-lookup"><span data-stu-id="b7459-222">Make sure the target function is in scope</span></span>  
 
-<span data-ttu-id="9b561-223">DevTools は、 `ReferenceError` デバッグする関数がスコープ外であるかどうかをスローします。</span><span class="sxs-lookup"><span data-stu-id="9b561-223">DevTools throws a `ReferenceError` if the function you want to debug is not in scope.</span></span>  
+<span data-ttu-id="b7459-223">DevTools は、デバッグする関数がスコープ内にない `ReferenceError` 場合に a をスローします。</span><span class="sxs-lookup"><span data-stu-id="b7459-223">DevTools throws a `ReferenceError` if the function you want to debug is not in scope.</span></span>  
 
 ```javascript
 (function () {
@@ -205,13 +208,13 @@ sum();
 debug(hey); // This does not work.  hey() is out of scope.
 ```  
 
-<span data-ttu-id="9b561-224">DevTools コンソールからメソッドを実行している場合は、ターゲット関数がスコープ内にあることを確認するのが複雑になり `debug()` ます。</span><span class="sxs-lookup"><span data-stu-id="9b561-224">Ensuring the target function is in scope is tricky if you are running the `debug()` method from the DevTools Console.</span></span>  <span data-ttu-id="9b561-225">1つの戦略を次に示します。</span><span class="sxs-lookup"><span data-stu-id="9b561-225">Here is one strategy:</span></span>  
+<span data-ttu-id="b7459-224">DevTools コンソールからメソッドを実行している場合は、ターゲット関数がスコープ内にあるのを確認するのが `debug()` 難しい場合があります。</span><span class="sxs-lookup"><span data-stu-id="b7459-224">Ensuring the target function is in scope is tricky if you are running the `debug()` method from the DevTools Console.</span></span>  <span data-ttu-id="b7459-225">1 つの戦略を次に示します。</span><span class="sxs-lookup"><span data-stu-id="b7459-225">Here is one strategy:</span></span>  
 
-1.  <span data-ttu-id="9b561-226">関数がスコープ内のどこかにある [行コードのブレークポイント](#line-of-code-breakpoints) を設定します。</span><span class="sxs-lookup"><span data-stu-id="9b561-226">Set a [line-of-code breakpoint](#line-of-code-breakpoints) somewhere where the function is in scope.</span></span>
-1.  <span data-ttu-id="9b561-227">ブレークポイントをトリガーします。</span><span class="sxs-lookup"><span data-stu-id="9b561-227">Trigger the breakpoint.</span></span>  
-1.  <span data-ttu-id="9b561-228">コード `debug()` が行のブレークポイントで一時停止されている状態で、DevTools コンソールでこのメソッドを実行します。</span><span class="sxs-lookup"><span data-stu-id="9b561-228">Run the `debug()` method in the DevTools Console while the code is still paused on your line-of-code breakpoint.</span></span>  
+1.  <span data-ttu-id="b7459-226">関数が [スコープ内にある場所に](#line-of-code-breakpoints) コード行ブレークポイントを設定します。</span><span class="sxs-lookup"><span data-stu-id="b7459-226">Set a [line-of-code breakpoint](#line-of-code-breakpoints) somewhere where the function is in scope.</span></span>
+1.  <span data-ttu-id="b7459-227">ブレークポイントをトリガーします。</span><span class="sxs-lookup"><span data-stu-id="b7459-227">Trigger the breakpoint.</span></span>  
+1.  <span data-ttu-id="b7459-228">コードがコード行ブレークポイントで一時停止されている間 `debug()` 、DevTools コンソールでメソッドを実行します。</span><span class="sxs-lookup"><span data-stu-id="b7459-228">Run the `debug()` method in the DevTools Console while the code is still paused on your line-of-code breakpoint.</span></span>  
     
-## <span data-ttu-id="9b561-229">Microsoft Edge DevTools チームと連絡を取る</span><span class="sxs-lookup"><span data-stu-id="9b561-229">Getting in touch with the Microsoft Edge DevTools team</span></span>  
+## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a><span data-ttu-id="b7459-229">Microsoft Edge DevTools チームと連絡を取る</span><span class="sxs-lookup"><span data-stu-id="b7459-229">Getting in touch with the Microsoft Edge DevTools team</span></span>  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
@@ -221,16 +224,16 @@ debug(hey); // This does not work.  hey() is out of scope.
 
 <!-- links -->  
 
-[DevtoolsJavascriptIndex]: index.md "Microsoft Edge DevTools のデバッグ JavaScript の概要 |Microsoft ドキュメント"  
+[DevtoolsJavascriptIndex]: index.md "Microsoft Edge DevTools の JavaScript のデバッグの|Microsoft Docs"  
 
-[MDNFetchApi]: https://developer.mozilla.org/docs/Web/API/Fetch_API "取得 API |MDN"  
+[MDNFetchApi]: https://developer.mozilla.org/docs/Web/API/Fetch_API "FETCH API |MDN"  
 
 > [!NOTE]
-> <span data-ttu-id="9b561-232">このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。</span><span class="sxs-lookup"><span data-stu-id="9b561-232">Portions of this page are modifications based on work created and [shared by Google][GoogleSitePolicies] and used according to terms described in the [Creative Commons Attribution 4.0 International License][CCA4IL].</span></span>  
-> <span data-ttu-id="9b561-233">元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/javascript/breakpoints) にあり、 [Kayce Basques][KayceBasques] テクニカルライター、Chrome Devtools \ & Lighthouse \) で作成されています。</span><span class="sxs-lookup"><span data-stu-id="9b561-233">The original page is found [here](https://developers.google.com/web/tools/chrome-devtools/javascript/breakpoints) and is authored by [Kayce Basques][KayceBasques] \(Technical Writer, Chrome DevTools \& Lighthouse\).</span></span>  
+> <span data-ttu-id="b7459-232">このページの一部は、 [Google によっ て作成および共有された][GoogleSitePolicies]作業に基づく変更で、「[Creative Commons Attribution 4.0 International License][CCA4IL]」で記載されている条項に従って使用されます。</span><span class="sxs-lookup"><span data-stu-id="b7459-232">Portions of this page are modifications based on work created and [shared by Google][GoogleSitePolicies] and used according to terms described in the [Creative Commons Attribution 4.0 International License][CCA4IL].</span></span>  
+> <span data-ttu-id="b7459-233">元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/javascript/breakpoints) にあり、 [Kayce Basques][KayceBasques] \(Chrome DevTools \& Lighthouse\ のテクニカル ライター) が作成しました。</span><span class="sxs-lookup"><span data-stu-id="b7459-233">The original page is found [here](https://developers.google.com/web/tools/chrome-devtools/javascript/breakpoints) and is authored by [Kayce Basques][KayceBasques] \(Technical Writer, Chrome DevTools \& Lighthouse\).</span></span>  
 
-[![クリエイティブコモンズライセンス][CCby4Image]][CCA4IL]  
-<span data-ttu-id="9b561-235">この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。</span><span class="sxs-lookup"><span data-stu-id="9b561-235">This work is licensed under a [Creative Commons Attribution 4.0 International License][CCA4IL].</span></span>  
+[![Creative Commons ライセンス][CCby4Image]][CCA4IL]  
+<span data-ttu-id="b7459-235">この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。</span><span class="sxs-lookup"><span data-stu-id="b7459-235">This work is licensed under a [Creative Commons Attribution 4.0 International License][CCA4IL].</span></span>  
 
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  

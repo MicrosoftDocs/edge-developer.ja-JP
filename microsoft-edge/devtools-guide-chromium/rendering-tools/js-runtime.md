@@ -1,18 +1,18 @@
 ---
-description: Microsoft Edge DevTools メモリパネルを使用して、負荷の高い機能を特定します。
+description: Microsoft Edge DevTools メモリ パネルを使用して、高価な関数を識別します。
 title: JavaScript ランタイムを高速化する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 10/19/2020
+ms.date: 02/12/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: f3cf0440579865495f4afc8b1ae4e3940af7b04f
-ms.sourcegitcommit: 99eee78698dc95b2a3fa638a5b063ef449899cda
+ms.openlocfilehash: 682001ae8d265b342e5d6e0725f9f8ac4e298cf8
+ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "11125357"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "11397602"
 ---
 <!-- Copyright Kayce Basques and Meggin Kearney
 
@@ -28,120 +28,120 @@ ms.locfileid: "11125357"
    See the License for the specific language governing permissions and
    limitations under the License. -->
 
-# <span data-ttu-id="dc2ea-104">JavaScript ランタイムを高速化する</span><span class="sxs-lookup"><span data-stu-id="dc2ea-104">Speed up JavaScript runtime</span></span>  
+# <a name="speed-up-javascript-runtime"></a><span data-ttu-id="3aed0-104">JavaScript ランタイムを高速化する</span><span class="sxs-lookup"><span data-stu-id="3aed0-104">Speed up JavaScript runtime</span></span>  
 
-<span data-ttu-id="dc2ea-105">**メモリ**パネルを使用して負荷の高い機能を特定します。</span><span class="sxs-lookup"><span data-stu-id="dc2ea-105">Identify expensive functions using the **Memory** panel.</span></span>  
+<span data-ttu-id="3aed0-105">メモリ パネルを使用して、高価な **関数を識別** します。</span><span class="sxs-lookup"><span data-stu-id="3aed0-105">Identify expensive functions using the **Memory** panel.</span></span>  
 
-:::image type="complex" source="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-heavy-bottom-up.msft.png" alt-text="サンプルプロファイル" lightbox="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-heavy-bottom-up.msft.png":::
-   <span data-ttu-id="dc2ea-107">サンプルプロファイル</span><span class="sxs-lookup"><span data-stu-id="dc2ea-107">Sample Profiles</span></span>  
+:::image type="complex" source="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-heavy-bottom-up.msft.png" alt-text="サンプル プロファイル" lightbox="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-heavy-bottom-up.msft.png":::
+   <span data-ttu-id="3aed0-107">サンプル プロファイル</span><span class="sxs-lookup"><span data-stu-id="3aed0-107">Sample Profiles</span></span>  
 :::image-end:::  
 
-### <span data-ttu-id="dc2ea-108">まとめ</span><span class="sxs-lookup"><span data-stu-id="dc2ea-108">Summary</span></span>  
+### <a name="summary"></a><span data-ttu-id="3aed0-108">要約</span><span class="sxs-lookup"><span data-stu-id="3aed0-108">Summary</span></span>  
 
-*   <span data-ttu-id="dc2ea-109">呼び出された関数と、 **メモリ** パネルの割り当てサンプリングで必要なメモリの量を記録します。</span><span class="sxs-lookup"><span data-stu-id="dc2ea-109">Record exactly which functions were called and how much memory each requires with Allocation Sampling in the **Memory** panel.</span></span>  
-*   <span data-ttu-id="dc2ea-110">プロファイルを炎のグラフとして視覚化します。</span><span class="sxs-lookup"><span data-stu-id="dc2ea-110">Visualize your profiles as a flame chart.</span></span>  
+*   <span data-ttu-id="3aed0-109">[メモリ] パネルの [割り当てサンプリング] を使用して、呼び出された関数と必要なメモリの量を **正確に記録** します。</span><span class="sxs-lookup"><span data-stu-id="3aed0-109">Record exactly which functions were called and how much memory each requires with Allocation Sampling in the **Memory** panel.</span></span>  
+*   <span data-ttu-id="3aed0-110">プロファイルを炎上グラフとして視覚化します。</span><span class="sxs-lookup"><span data-stu-id="3aed0-110">Visualize your profiles as a flame chart.</span></span>  
     
-## <span data-ttu-id="dc2ea-111">サンプリングプロファイルを記録する</span><span class="sxs-lookup"><span data-stu-id="dc2ea-111">Record a Sampling Profile</span></span>  
+## <a name="record-a-sampling-profile"></a><span data-ttu-id="3aed0-111">サンプリング プロファイルの記録</span><span class="sxs-lookup"><span data-stu-id="3aed0-111">Record a Sampling Profile</span></span>  
 
-<span data-ttu-id="dc2ea-112">JavaScript で jank に気付いた場合は、サンプリングプロファイルを収集します。</span><span class="sxs-lookup"><span data-stu-id="dc2ea-112">If you notice jank in your JavaScript, collect a Sampling Profile.</span></span>  <span data-ttu-id="dc2ea-113">サンプリングプロファイルは、ページ内の関数で実行時間が消費される場所を示します。</span><span class="sxs-lookup"><span data-stu-id="dc2ea-113">Sampling Profiles show where running time is spent on functions in your page.</span></span>  
+<span data-ttu-id="3aed0-112">JavaScript で jank に気付いた場合は、サンプリング プロファイルを収集します。</span><span class="sxs-lookup"><span data-stu-id="3aed0-112">If you notice jank in your JavaScript, collect a Sampling Profile.</span></span>  <span data-ttu-id="3aed0-113">サンプリング プロファイルは、ページ内の関数に実行時間が費やされる場所を示します。</span><span class="sxs-lookup"><span data-stu-id="3aed0-113">Sampling Profiles show where running time is spent on functions in your page.</span></span>  
 
-1.  <span data-ttu-id="dc2ea-114">DevTools の **メモリ** パネルに移動します。</span><span class="sxs-lookup"><span data-stu-id="dc2ea-114">Go to the **Memory** panel of DevTools.</span></span>  
-1.  <span data-ttu-id="dc2ea-115">[ **割り当てのサンプリング** ] ラジオボタンを選択します。</span><span class="sxs-lookup"><span data-stu-id="dc2ea-115">Select the **Allocation sampling** radio button.</span></span>  
-1.  <span data-ttu-id="dc2ea-116">[ **開始**] を選びます。</span><span class="sxs-lookup"><span data-stu-id="dc2ea-116">Choose **Start**.</span></span>  
-1.  <span data-ttu-id="dc2ea-117">分析しようとしている内容に応じて、ページをもう一度読み込むか、ページを操作するか、またはページを実行します。</span><span class="sxs-lookup"><span data-stu-id="dc2ea-117">Depending on what you are trying to analyze, you may either reload the page, interact with the page, or just let the page run.</span></span>  
-1.  <span data-ttu-id="dc2ea-118">完了したら、[ **停止** ] ボタンを選択します。</span><span class="sxs-lookup"><span data-stu-id="dc2ea-118">Select the **Stop** button when you are finished.</span></span>  
+1.  <span data-ttu-id="3aed0-114">DevTools **の [メモリ** ] パネルに移動します。</span><span class="sxs-lookup"><span data-stu-id="3aed0-114">Navigate to the **Memory** panel of DevTools.</span></span>  
+1.  <span data-ttu-id="3aed0-115">[割り当 **てサンプリング] ラジオ ボタン** を選択します。</span><span class="sxs-lookup"><span data-stu-id="3aed0-115">Choose the **Allocation sampling** radio button.</span></span>  
+1.  <span data-ttu-id="3aed0-116">[スタート **] を選択します**。</span><span class="sxs-lookup"><span data-stu-id="3aed0-116">Choose **Start**.</span></span>  
+1.  <span data-ttu-id="3aed0-117">分析しようとしている内容に応じて、ページを更新するか、ページを操作するか、ページを実行できます。</span><span class="sxs-lookup"><span data-stu-id="3aed0-117">Depending on what you are trying to analyze, you may either refresh the page, interact with the page, or just let the page run.</span></span>  
+1.  <span data-ttu-id="3aed0-118">完了したら **、[停止** ] ボタンを選択します。</span><span class="sxs-lookup"><span data-stu-id="3aed0-118">Choose the **Stop** button when you are finished.</span></span>  
     
 > [!NOTE]
-> <span data-ttu-id="dc2ea-119">また、 [コンソールユーティリティ API][DevtoolsConsoleUtilities] を使って、コマンドラインからプロファイルの記録とグループ化を行うこともできます。</span><span class="sxs-lookup"><span data-stu-id="dc2ea-119">You may also use the [Console Utilities API][DevtoolsConsoleUtilities] to record and group profiles from the command line.</span></span>  
+> <span data-ttu-id="3aed0-119">コンソール ユーティリティ API [を使用して][DevtoolsConsoleUtilities] 、コマンド ラインからプロファイルを記録およびグループ化することもできます。</span><span class="sxs-lookup"><span data-stu-id="3aed0-119">You may also use the [Console Utilities API][DevtoolsConsoleUtilities] to record and group profiles from the command line.</span></span>  
 
-## <span data-ttu-id="dc2ea-120">サンプリングプロファイルを表示する</span><span class="sxs-lookup"><span data-stu-id="dc2ea-120">View Sampling Profile</span></span>  
+## <a name="view-sampling-profile"></a><span data-ttu-id="3aed0-120">サンプリング プロファイルの表示</span><span class="sxs-lookup"><span data-stu-id="3aed0-120">View Sampling Profile</span></span>  
 
-<span data-ttu-id="dc2ea-121">録音が終了すると、DevTools は、記録されたデータを使って、[**サンプリングプロファイル**] の下に**メモリ**パネルを自動的に設定します。</span><span class="sxs-lookup"><span data-stu-id="dc2ea-121">When you finish recording, DevTools automatically populates the **Memory** panel under **SAMPLING PROFILES** with the data from your recording.</span></span>  
+<span data-ttu-id="3aed0-121">録音が完了すると、DevTools は [\*\*\*\*\*\*サンプリング\*\*プロファイル] の [メモリ] パネルに、レコーディングのデータを自動的に設定します。</span><span class="sxs-lookup"><span data-stu-id="3aed0-121">When you finish recording, DevTools automatically populates the **Memory** panel under **SAMPLING PROFILES** with the data from your recording.</span></span>  
 
-<span data-ttu-id="dc2ea-122">既定のビューは [ **ヘビー] (ボトムアップ)** です。</span><span class="sxs-lookup"><span data-stu-id="dc2ea-122">The default view is **Heavy \(Bottom Up\)**.</span></span>  <span data-ttu-id="dc2ea-123">このビューでは、パフォーマンスに最も影響を及ぼしている関数を確認し、その機能への呼び出しパスを調べることができます。</span><span class="sxs-lookup"><span data-stu-id="dc2ea-123">This view enables you to see which functions had the most impact on performance and examine the calling paths to those functions.</span></span>  
+<span data-ttu-id="3aed0-122">既定のビューは **Heavy \(Bottom Up\) です**。</span><span class="sxs-lookup"><span data-stu-id="3aed0-122">The default view is **Heavy \(Bottom Up\)**.</span></span>  <span data-ttu-id="3aed0-123">このビューでは、パフォーマンスに最も影響を与えた関数を確認し、各関数の要求パスを確認できます。</span><span class="sxs-lookup"><span data-stu-id="3aed0-123">This view allows you to review which functions had the most impact on performance and examine the requesting path for each function.</span></span>  
 
-### <span data-ttu-id="dc2ea-124">並べ替え順序を変更する</span><span class="sxs-lookup"><span data-stu-id="dc2ea-124">Change sort order</span></span>  
+### <a name="change-sort-order"></a><span data-ttu-id="3aed0-124">並べ替え順序の変更</span><span class="sxs-lookup"><span data-stu-id="3aed0-124">Change sort order</span></span>  
 
-<span data-ttu-id="dc2ea-125">並べ替え順序を変更するには、[ **選択した関数** \ (フォーカス選択された関数 \)] の横にあるドロップダウンメニューを選択し、 ![ ][ImageFocusIcon] 次のいずれかのオプションを選択します。</span><span class="sxs-lookup"><span data-stu-id="dc2ea-125">To change the sorting order, select the dropdown menu next to the **focus selected function** \(![focus selected function][ImageFocusIcon]\) icon and then choose one of the following options.</span></span>
+<span data-ttu-id="3aed0-125">並べ替え順序を変更するには、フォーカス選択関数 **\(** フォーカス選択関数 \) アイコンの横にあるドロップダウン メニューを選択し、次のいずれかのオプション ![ ][ImageFocusIcon] を選択します。</span><span class="sxs-lookup"><span data-stu-id="3aed0-125">To change the sorting order, select the dropdown menu next to the **focus selected function** \(![focus selected function][ImageFocusIcon]\) icon and then choose one of the following options.</span></span>
 
-<span data-ttu-id="dc2ea-126">**グラフ**。</span><span class="sxs-lookup"><span data-stu-id="dc2ea-126">**Chart**.</span></span>  <span data-ttu-id="dc2ea-127">記録の時系列グラフを表示します。</span><span class="sxs-lookup"><span data-stu-id="dc2ea-127">Displays a chronological chart of the recording.</span></span>  
+<span data-ttu-id="3aed0-126">**グラフ**.</span><span class="sxs-lookup"><span data-stu-id="3aed0-126">**Chart**.</span></span>  <span data-ttu-id="3aed0-127">記録の時系列グラフを表示します。</span><span class="sxs-lookup"><span data-stu-id="3aed0-127">Displays a chronological chart of the recording.</span></span>  
 
-:::image type="complex" source="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-chart.msft.png" alt-text="サンプルプロファイル" lightbox="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-chart.msft.png":::
-   <span data-ttu-id="dc2ea-129">炎のグラフ</span><span class="sxs-lookup"><span data-stu-id="dc2ea-129">Flame chart</span></span>  
+:::image type="complex" source="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-chart.msft.png" alt-text="フレーム グラフ" lightbox="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-chart.msft.png":::
+   <span data-ttu-id="3aed0-129">フレーム グラフ</span><span class="sxs-lookup"><span data-stu-id="3aed0-129">Flame chart</span></span>  
 :::image-end:::  
 
-<span data-ttu-id="dc2ea-130">**ヘビー (ボトムアップ)**</span><span class="sxs-lookup"><span data-stu-id="dc2ea-130">**Heavy \(Bottom Up\)**.</span></span>  <span data-ttu-id="dc2ea-131">パフォーマンスに影響を与えて関数を一覧表示し、関数への呼び出しパスを調べることができます。</span><span class="sxs-lookup"><span data-stu-id="dc2ea-131">Lists functions by impact on performance and enables you to examine the calling paths to the functions.</span></span>  <span data-ttu-id="dc2ea-132">これは既定のビューです。</span><span class="sxs-lookup"><span data-stu-id="dc2ea-132">This is the default view.</span></span>  
+<span data-ttu-id="3aed0-130">**Heavy \(Bottom Up\)**.</span><span class="sxs-lookup"><span data-stu-id="3aed0-130">**Heavy \(Bottom Up\)**.</span></span>  <span data-ttu-id="3aed0-131">パフォーマンスに影響を与える関数を一覧表示し、関数への呼び出しパスを確認できます。</span><span class="sxs-lookup"><span data-stu-id="3aed0-131">Lists functions by impact on performance and enables you to examine the calling paths to the functions.</span></span>  <span data-ttu-id="3aed0-132">これは既定のビューです。</span><span class="sxs-lookup"><span data-stu-id="3aed0-132">This is the default view.</span></span>  
 
-:::image type="complex" source="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-heavy-bottom-up.msft.png" alt-text="サンプルプロファイル" lightbox="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-heavy-bottom-up.msft.png":::
-   <span data-ttu-id="dc2ea-134">ヘビーグラフ</span><span class="sxs-lookup"><span data-stu-id="dc2ea-134">Heavy chart</span></span>  
+:::image type="complex" source="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-heavy-bottom-up.msft.png" alt-text="重いグラフ" lightbox="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-heavy-bottom-up.msft.png":::
+   <span data-ttu-id="3aed0-134">重いグラフ</span><span class="sxs-lookup"><span data-stu-id="3aed0-134">Heavy chart</span></span>  
 :::image-end:::  
 
-<span data-ttu-id="dc2ea-135">**ツリー \ (上から下へ)**</span><span class="sxs-lookup"><span data-stu-id="dc2ea-135">**Tree \(Top Down\)**.</span></span>  <span data-ttu-id="dc2ea-136">呼び出し履歴の先頭から、呼び出し元の構造体の全体像が示されます。</span><span class="sxs-lookup"><span data-stu-id="dc2ea-136">Shows an overall picture of the calling structure, starting at the top of the call stack.</span></span>  
+<span data-ttu-id="3aed0-135">**Tree \(Top Down\)**.</span><span class="sxs-lookup"><span data-stu-id="3aed0-135">**Tree \(Top Down\)**.</span></span>  <span data-ttu-id="3aed0-136">呼び出し履歴の上部から始まる呼び出し構造の全体像を示します。</span><span class="sxs-lookup"><span data-stu-id="3aed0-136">Shows an overall picture of the calling structure, starting at the top of the call stack.</span></span>  
 
-:::image type="complex" source="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-tree-top-down.msft.png" alt-text="サンプルプロファイル" lightbox="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-tree-top-down.msft.png":::
-   <span data-ttu-id="dc2ea-138">ツリーグラフ</span><span class="sxs-lookup"><span data-stu-id="dc2ea-138">Tree chart</span></span>  
+:::image type="complex" source="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-tree-top-down.msft.png" alt-text="ツリー グラフ" lightbox="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-tree-top-down.msft.png":::
+   <span data-ttu-id="3aed0-138">ツリー グラフ</span><span class="sxs-lookup"><span data-stu-id="3aed0-138">Tree chart</span></span>  
 :::image-end:::  
 
-### <span data-ttu-id="dc2ea-139">除外関数</span><span class="sxs-lookup"><span data-stu-id="dc2ea-139">Exclude functions</span></span>  
+### <a name="exclude-functions"></a><span data-ttu-id="3aed0-139">関数を除外する</span><span class="sxs-lookup"><span data-stu-id="3aed0-139">Exclude functions</span></span>  
 
-<span data-ttu-id="dc2ea-140">サンプリングプロファイルから関数を除外するには、関数を選び、[ **選択した関数を除外** \ ( ![ 選択した関数 \ を除外 ][ImageExcludeIcon] )] ボタンを選択します。</span><span class="sxs-lookup"><span data-stu-id="dc2ea-140">To exclude a function from your Sampling Profile, select it and then select the **exclude selected function** \(![exclude selected function][ImageExcludeIcon]\) button.</span></span>  <span data-ttu-id="dc2ea-141">除外関数 \ (子 \) の要求関数 \ (親 \) には、除外された関数 \ (子) に割り当てられた割り当て済みのメモリが割り当てられます。</span><span class="sxs-lookup"><span data-stu-id="dc2ea-141">The requesting function \(parent\) of the excluded function \(child\) is charged with the allocated memory assigned to the excluded function \(child\).</span></span>  
+<span data-ttu-id="3aed0-140">サンプリング プロファイルから関数を除外するには、その関数を選択し、選択した **関数を除外** する \( 選択した関数 \) を ![ 除外するボタン ][ImageExcludeIcon] を選択します。</span><span class="sxs-lookup"><span data-stu-id="3aed0-140">To exclude a function from your Sampling Profile, select it and then select the **exclude selected function** \(![exclude selected function][ImageExcludeIcon]\) button.</span></span>  <span data-ttu-id="3aed0-141">除外された関数 \(child\) の要求関数 \(parent\) は、除外された関数 \(child\) に割り当てられた割り当てられたメモリで課金されます。</span><span class="sxs-lookup"><span data-stu-id="3aed0-141">The requesting function \(parent\) of the excluded function \(child\) is charged with the allocated memory assigned to the excluded function \(child\).</span></span>  
 
-<span data-ttu-id="dc2ea-142">すべての関数 **を復元** する (すべての関数を復元) ボタンを選択して、除外され ![ ][ImageRestoreIcon] た関数をすべて記録に戻します。</span><span class="sxs-lookup"><span data-stu-id="dc2ea-142">Select the **restore all functions** \(![restore all functions][ImageRestoreIcon]\) button to restore all excluded functions back into the recording.</span></span>  
+<span data-ttu-id="3aed0-142">[すべての **関数を復元する** ] \( [すべての関数を復元する\] ボタンを選択して、除外されているすべての関数を記録 ![ ][ImageRestoreIcon] に戻します。</span><span class="sxs-lookup"><span data-stu-id="3aed0-142">Choose the **restore all functions** \(![restore all functions][ImageRestoreIcon]\) button to restore all excluded functions back into the recording.</span></span>  
 
-## <span data-ttu-id="dc2ea-143">サンプリングプロファイルをグラフとして表示する</span><span class="sxs-lookup"><span data-stu-id="dc2ea-143">View Sampling Profile as Chart</span></span>  
+## <a name="view-sampling-profile-as-chart"></a><span data-ttu-id="3aed0-143">サンプリング プロファイルをグラフとして表示する</span><span class="sxs-lookup"><span data-stu-id="3aed0-143">View Sampling Profile as Chart</span></span>  
 
-<span data-ttu-id="dc2ea-144">グラフビューでは、時間の経過に伴うサンプリングプロファイルが視覚的に表示されます。</span><span class="sxs-lookup"><span data-stu-id="dc2ea-144">The Chart view provides a visual representation of the Sampling Profile over time.</span></span>  
+<span data-ttu-id="3aed0-144">グラフ ビューは、サンプリング プロファイルの時間の間に視覚的な表現を提供します。</span><span class="sxs-lookup"><span data-stu-id="3aed0-144">The Chart view provides a visual representation of the Sampling Profile over time.</span></span>  
 
-<span data-ttu-id="dc2ea-145">[サンプリングプロファイルを記録](#record-a-sampling-profile)したら、[[並べ替え順序](#change-sort-order)] を [**グラフ**] に変更して、記録を炎グラフとして表示します。</span><span class="sxs-lookup"><span data-stu-id="dc2ea-145">After you [record a Sampling Profile](#record-a-sampling-profile), view the recording as a flame chart by [changing the sort order](#change-sort-order) to **Chart**.</span></span>  
+<span data-ttu-id="3aed0-145">サンプリング プロファイル [を記録した後、](#record-a-sampling-profile)並べ替え順序を [グラフ] に変更して、録音をフレーム [グラフとして](#change-sort-order) 表示 **します**。</span><span class="sxs-lookup"><span data-stu-id="3aed0-145">After you [record a Sampling Profile](#record-a-sampling-profile), view the recording as a flame chart by [changing the sort order](#change-sort-order) to **Chart**.</span></span>  
 
-:::image type="complex" source="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-chart.msft.png" alt-text="サンプルプロファイル" lightbox="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-chart.msft.png":::
-   <span data-ttu-id="dc2ea-147">炎のグラフビュー</span><span class="sxs-lookup"><span data-stu-id="dc2ea-147">Flame chart view</span></span>  
+:::image type="complex" source="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-chart.msft.png" alt-text="フレーム グラフ ビュー" lightbox="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-chart.msft.png":::
+   <span data-ttu-id="3aed0-147">フレーム グラフ ビュー</span><span class="sxs-lookup"><span data-stu-id="3aed0-147">Flame chart view</span></span>  
 :::image-end:::  
 
-<span data-ttu-id="dc2ea-148">炎のグラフは、2つの部分に分かれています。</span><span class="sxs-lookup"><span data-stu-id="dc2ea-148">The flame chart is split into two parts.</span></span>  
+<span data-ttu-id="3aed0-148">フレーム グラフは 2 つの部分に分割されます。</span><span class="sxs-lookup"><span data-stu-id="3aed0-148">The flame chart is split into two parts.</span></span>  
 
-| <span data-ttu-id="dc2ea-149">位置</span><span class="sxs-lookup"><span data-stu-id="dc2ea-149">index</span></span> | <span data-ttu-id="dc2ea-150">領域</span><span class="sxs-lookup"><span data-stu-id="dc2ea-150">Part</span></span> | <span data-ttu-id="dc2ea-151">説明</span><span class="sxs-lookup"><span data-stu-id="dc2ea-151">Description</span></span> |  
+| <span data-ttu-id="3aed0-149">index</span><span class="sxs-lookup"><span data-stu-id="3aed0-149">index</span></span> | <span data-ttu-id="3aed0-150">パーツ</span><span class="sxs-lookup"><span data-stu-id="3aed0-150">Part</span></span> | <span data-ttu-id="3aed0-151">説明</span><span class="sxs-lookup"><span data-stu-id="3aed0-151">Description</span></span> |  
 | --- |:--- |:--- |  
-| <span data-ttu-id="dc2ea-152">件</span><span class="sxs-lookup"><span data-stu-id="dc2ea-152">1</span></span> | <span data-ttu-id="dc2ea-153">概要</span><span class="sxs-lookup"><span data-stu-id="dc2ea-153">Overview</span></span> | <span data-ttu-id="dc2ea-154">レコーディング全体の鳥ビュー。</span><span class="sxs-lookup"><span data-stu-id="dc2ea-154">A birds-eye view of the entire recording.</span></span>  <span data-ttu-id="dc2ea-155">バーの高さは、通話スタックの深度に対応しています。</span><span class="sxs-lookup"><span data-stu-id="dc2ea-155">The height of the bars correspond to the depth of the call stack.</span></span>  <span data-ttu-id="dc2ea-156">そのため、バーが大きくなるほど、さらに多くのコールスタックが表示されます。</span><span class="sxs-lookup"><span data-stu-id="dc2ea-156">So, the higher the bar, the deeper the call stack.</span></span>  |  
-| <span data-ttu-id="dc2ea-157">両面</span><span class="sxs-lookup"><span data-stu-id="dc2ea-157">2</span></span> | <span data-ttu-id="dc2ea-158">通話スタック</span><span class="sxs-lookup"><span data-stu-id="dc2ea-158">Call Stacks</span></span> | <span data-ttu-id="dc2ea-159">これは、記録中に呼び出された関数の詳細ビューです。</span><span class="sxs-lookup"><span data-stu-id="dc2ea-159">This is an in-depth view of the functions that were called during the recording.</span></span>  <span data-ttu-id="dc2ea-160">横軸は time と縦軸で、通話スタックです。</span><span class="sxs-lookup"><span data-stu-id="dc2ea-160">The horizontal axis is time and vertical axis is the call stack.</span></span>  <span data-ttu-id="dc2ea-161">スタックは、上から順に並べて整理されます。</span><span class="sxs-lookup"><span data-stu-id="dc2ea-161">The stacks are organized top-down.</span></span>  <span data-ttu-id="dc2ea-162">そのため、先頭の関数は、その下にある関数の下にあります。</span><span class="sxs-lookup"><span data-stu-id="dc2ea-162">So, the function on top called the one below it, and so on.</span></span>  |  
+| <span data-ttu-id="3aed0-152">1</span><span class="sxs-lookup"><span data-stu-id="3aed0-152">1</span></span> | <span data-ttu-id="3aed0-153">概要</span><span class="sxs-lookup"><span data-stu-id="3aed0-153">Overview</span></span> | <span data-ttu-id="3aed0-154">記録全体の鳥の目のビュー。</span><span class="sxs-lookup"><span data-stu-id="3aed0-154">A birds-eye view of the entire recording.</span></span>  <span data-ttu-id="3aed0-155">バーの高さは、呼び出し履歴の深さに対応します。</span><span class="sxs-lookup"><span data-stu-id="3aed0-155">The height of the bars correspond to the depth of the call stack.</span></span>  <span data-ttu-id="3aed0-156">そのため、バーが高いほど、呼び出し履歴は深くなります。</span><span class="sxs-lookup"><span data-stu-id="3aed0-156">So, the higher the bar, the deeper the call stack.</span></span>  |  
+| <span data-ttu-id="3aed0-157">2</span><span class="sxs-lookup"><span data-stu-id="3aed0-157">2</span></span> | <span data-ttu-id="3aed0-158">呼び出し履歴</span><span class="sxs-lookup"><span data-stu-id="3aed0-158">Call Stacks</span></span> | <span data-ttu-id="3aed0-159">これは、記録中に呼び出された関数の詳細なビューです。</span><span class="sxs-lookup"><span data-stu-id="3aed0-159">This is an in-depth view of the functions that were called during the recording.</span></span>  <span data-ttu-id="3aed0-160">横軸は時間、縦軸は呼び出し履歴です。</span><span class="sxs-lookup"><span data-stu-id="3aed0-160">The horizontal axis is time and vertical axis is the call stack.</span></span>  <span data-ttu-id="3aed0-161">スタックはトップダウンで構成されます。</span><span class="sxs-lookup"><span data-stu-id="3aed0-161">The stacks are organized top-down.</span></span>  <span data-ttu-id="3aed0-162">したがって、上の関数は、その下の関数を呼び出しました。</span><span class="sxs-lookup"><span data-stu-id="3aed0-162">So, the function on top called the one below it, and so on.</span></span>  |  
 
-<span data-ttu-id="dc2ea-163">関数はランダムに色付けされます。</span><span class="sxs-lookup"><span data-stu-id="dc2ea-163">Functions are colored randomly.</span></span>  <span data-ttu-id="dc2ea-164">他のパネルで使用されている色との関連付けはありません。</span><span class="sxs-lookup"><span data-stu-id="dc2ea-164">There is no correlation to the colors used in the other panels.</span></span>  <span data-ttu-id="dc2ea-165">ただし、各ランタイムでパターンを表示できるように、呼び出し時には関数の色が常に同じになります。</span><span class="sxs-lookup"><span data-stu-id="dc2ea-165">However, functions are always colored the same across invocations so that you are able to see patterns in each runtime.</span></span>  
+<span data-ttu-id="3aed0-163">関数はランダムに色付けされます。</span><span class="sxs-lookup"><span data-stu-id="3aed0-163">Functions are colored randomly.</span></span>  <span data-ttu-id="3aed0-164">他のパネルで使用される色には相関関係はありません。</span><span class="sxs-lookup"><span data-stu-id="3aed0-164">There is no correlation to the colors used in the other panels.</span></span>  <span data-ttu-id="3aed0-165">ただし、関数は常に呼び出し間で同じ色を付け、各ランタイムでパターンを観察できます。</span><span class="sxs-lookup"><span data-stu-id="3aed0-165">However, functions are always colored the same across invocations so that you may observe patterns in each runtime.</span></span>  
 
-:::image type="complex" source="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-chart-highlighted.msft.png" alt-text="サンプルプロファイル" lightbox="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-chart-highlighted.msft.png":::
-   <span data-ttu-id="dc2ea-167">注釈付きの炎のグラフ</span><span class="sxs-lookup"><span data-stu-id="dc2ea-167">Annotated flame chart</span></span>  
+:::image type="complex" source="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-chart-highlighted.msft.png" alt-text="注釈付きフレーム グラフ" lightbox="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-chart-highlighted.msft.png":::
+   <span data-ttu-id="3aed0-167">注釈付きフレーム グラフ</span><span class="sxs-lookup"><span data-stu-id="3aed0-167">Annotated flame chart</span></span>  
 :::image-end:::  
 
-<span data-ttu-id="dc2ea-168">長い通話スタックは必ずしも重大ではありません。これは、多くの関数が呼び出されたことを意味します。</span><span class="sxs-lookup"><span data-stu-id="dc2ea-168">A tall call stack is not necessarily significant, it just means that a lot of functions were called.</span></span>  <span data-ttu-id="dc2ea-169">ただし、ワイドバーは、関数が完了するまでに時間がかかりすぎることを意味します。</span><span class="sxs-lookup"><span data-stu-id="dc2ea-169">But a wide bar means that a function took a long time to complete.</span></span>  <span data-ttu-id="dc2ea-170">これらは最適化の候補です。</span><span class="sxs-lookup"><span data-stu-id="dc2ea-170">These are candidates for optimization.</span></span>  
+<span data-ttu-id="3aed0-168">高い呼び出し履歴は必ずしも重要ではなく、多くの関数が呼び出されたという意味です。</span><span class="sxs-lookup"><span data-stu-id="3aed0-168">A tall call stack is not necessarily significant, it just means that a lot of functions were called.</span></span>  <span data-ttu-id="3aed0-169">ただし、幅の広いバーは、関数の完了に長い時間がかかったという意味です。</span><span class="sxs-lookup"><span data-stu-id="3aed0-169">But a wide bar means that a function took a long time to complete.</span></span>  <span data-ttu-id="3aed0-170">これらは最適化の候補です。</span><span class="sxs-lookup"><span data-stu-id="3aed0-170">These are candidates for optimization.</span></span>  
 
-### <span data-ttu-id="dc2ea-171">記録の特定の部分を拡大する</span><span class="sxs-lookup"><span data-stu-id="dc2ea-171">Zoom in on specific parts of recording</span></span>  
+### <a name="zoom-in-on-specific-parts-of-recording"></a><span data-ttu-id="3aed0-171">記録の特定の部分を拡大する</span><span class="sxs-lookup"><span data-stu-id="3aed0-171">Zoom in on specific parts of recording</span></span>  
 
-<span data-ttu-id="dc2ea-172">呼び出し履歴の特定の部分を拡大するには、マウスを選択してから、[概要] にドラッグします。</span><span class="sxs-lookup"><span data-stu-id="dc2ea-172">Select, hold, and drag your mouse left and right across the overview to zoom in on particular parts of the call stack.</span></span>  <span data-ttu-id="dc2ea-173">拡大すると、選択した記録の一部が自動的に通話スタックに表示されます。</span><span class="sxs-lookup"><span data-stu-id="dc2ea-173">After you zoom, the call stack automatically displays the portion of the recording that you selected.</span></span>  
+<span data-ttu-id="3aed0-172">通話履歴の特定の部分を拡大するには、マウスの概要を左右に選択、保持、ドラッグします。</span><span class="sxs-lookup"><span data-stu-id="3aed0-172">Choose, hold, and drag your mouse left and right across the overview to zoom in on particular parts of the call stack.</span></span>  <span data-ttu-id="3aed0-173">ズームすると、選択した録音の一部が通話履歴に自動的に表示されます。</span><span class="sxs-lookup"><span data-stu-id="3aed0-173">After you zoom, the call stack automatically displays the portion of the recording that you selected.</span></span>  
 
-:::image type="complex" source="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-chart-zoomed.msft.png" alt-text="サンプルプロファイル" lightbox="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-chart-zoomed.msft.png":::
-   <span data-ttu-id="dc2ea-175">拡大されたグラフ</span><span class="sxs-lookup"><span data-stu-id="dc2ea-175">Chart zoomed</span></span>  
+:::image type="complex" source="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-chart-zoomed.msft.png" alt-text="グラフのズーム" lightbox="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-chart-zoomed.msft.png":::
+   <span data-ttu-id="3aed0-175">グラフのズーム</span><span class="sxs-lookup"><span data-stu-id="3aed0-175">Chart zoomed</span></span>  
 :::image-end:::  
 
-### <span data-ttu-id="dc2ea-176">関数の詳細の表示</span><span class="sxs-lookup"><span data-stu-id="dc2ea-176">View function details</span></span>  
+### <a name="view-function-details"></a><span data-ttu-id="3aed0-176">関数の詳細を表示する</span><span class="sxs-lookup"><span data-stu-id="3aed0-176">View function details</span></span>  
 
-<span data-ttu-id="dc2ea-177">[関数] を選択して、[ **ソース** ] パネルで定義を表示します。</span><span class="sxs-lookup"><span data-stu-id="dc2ea-177">Select on a function to view the definition in the **Sources** panel.</span></span>  
+<span data-ttu-id="3aed0-177">[ソース] パネルで定義を表示する **関数を選択** します。</span><span class="sxs-lookup"><span data-stu-id="3aed0-177">Choose a function to view the definition in the **Sources** panel.</span></span>  
 
-<span data-ttu-id="dc2ea-178">関数の上にマウスポインターを移動すると、名前とタイミングのデータが表示されます。</span><span class="sxs-lookup"><span data-stu-id="dc2ea-178">Hover over a function to display the name and timing data.</span></span>  <span data-ttu-id="dc2ea-179">以下の情報が提供されます。</span><span class="sxs-lookup"><span data-stu-id="dc2ea-179">The following information is provided.</span></span>  
+<span data-ttu-id="3aed0-178">関数にカーソルを合わせると、名前とタイミング データが表示されます。</span><span class="sxs-lookup"><span data-stu-id="3aed0-178">Hover on a function to display the name and timing data.</span></span>  <span data-ttu-id="3aed0-179">以下の情報が提供されます。</span><span class="sxs-lookup"><span data-stu-id="3aed0-179">The following information is provided.</span></span>  
 
-| <span data-ttu-id="dc2ea-180">詳しく</span><span class="sxs-lookup"><span data-stu-id="dc2ea-180">Detail</span></span> | <span data-ttu-id="dc2ea-181">説明</span><span class="sxs-lookup"><span data-stu-id="dc2ea-181">Description</span></span> |  
+| <span data-ttu-id="3aed0-180">詳細</span><span class="sxs-lookup"><span data-stu-id="3aed0-180">Detail</span></span> | <span data-ttu-id="3aed0-181">説明</span><span class="sxs-lookup"><span data-stu-id="3aed0-181">Description</span></span> |  
 |:--- |:--- |  
-| **<span data-ttu-id="dc2ea-182">Name (名前)</span><span class="sxs-lookup"><span data-stu-id="dc2ea-182">Name</span></span>** | <span data-ttu-id="dc2ea-183">関数の名前。</span><span class="sxs-lookup"><span data-stu-id="dc2ea-183">The name of the function.</span></span>  |  
-| **<span data-ttu-id="dc2ea-184">自己サイズ</span><span class="sxs-lookup"><span data-stu-id="dc2ea-184">Self size</span></span>** | <span data-ttu-id="dc2ea-185">関数のステートメントのみを含む、関数の現在の呼び出しのサイズ。</span><span class="sxs-lookup"><span data-stu-id="dc2ea-185">The size of the current invocation of the function, including only the statements in the function.</span></span>  |  
-| **<span data-ttu-id="dc2ea-186">合計サイズ</span><span class="sxs-lookup"><span data-stu-id="dc2ea-186">Total size</span></span>** | <span data-ttu-id="dc2ea-187">この関数と呼び出された関数の現在の呼び出しのサイズ。</span><span class="sxs-lookup"><span data-stu-id="dc2ea-187">The size of the current invocation of this function and any functions that it called.</span></span>  |  
-| **<span data-ttu-id="dc2ea-188">URL</span><span class="sxs-lookup"><span data-stu-id="dc2ea-188">URL</span></span>** | <span data-ttu-id="dc2ea-189">Where の形式での関数定義の場所は、関数が定義されている `base.js:261` `base.js` ファイルの名前であり、 `261` 定義の行番号です。</span><span class="sxs-lookup"><span data-stu-id="dc2ea-189">The location of the function definition in the form of `base.js:261` where `base.js` is the name of the file where the function is defined and `261` is the line number of the definition.</span></span>  |  
+| **<span data-ttu-id="3aed0-182">Name (名前)</span><span class="sxs-lookup"><span data-stu-id="3aed0-182">Name</span></span>** | <span data-ttu-id="3aed0-183">関数の名前。</span><span class="sxs-lookup"><span data-stu-id="3aed0-183">The name of the function.</span></span>  |  
+| **<span data-ttu-id="3aed0-184">自己サイズ</span><span class="sxs-lookup"><span data-stu-id="3aed0-184">Self size</span></span>** | <span data-ttu-id="3aed0-185">関数の現在の呼び出しのサイズ (関数内のステートメントのみを含む)。</span><span class="sxs-lookup"><span data-stu-id="3aed0-185">The size of the current invocation of the function, including only the statements in the function.</span></span>  |  
+| **<span data-ttu-id="3aed0-186">合計サイズ</span><span class="sxs-lookup"><span data-stu-id="3aed0-186">Total size</span></span>** | <span data-ttu-id="3aed0-187">この関数の現在の呼び出しのサイズと、呼び出された関数。</span><span class="sxs-lookup"><span data-stu-id="3aed0-187">The size of the current invocation of this function and any functions that it called.</span></span>  |  
+| **<span data-ttu-id="3aed0-188">URL</span><span class="sxs-lookup"><span data-stu-id="3aed0-188">URL</span></span>** | <span data-ttu-id="3aed0-189">where 形式の関数定義の場所は、関数が定義されているファイルの名前であり、定義の行 `base.js:261` `base.js` `261` 番号です。</span><span class="sxs-lookup"><span data-stu-id="3aed0-189">The location of the function definition in the form of `base.js:261` where `base.js` is the name of the file where the function is defined and `261` is the line number of the definition.</span></span>  |  
 <!--*   **Aggregated self time**.  Aggregate time for all invocations of the function across the recording, not including functions called by this function.  -->  
 <!--*   **Aggregated total time**.  Aggregate total time for all invocations of the function, including functions called by this function.  -->  
 <!--*   **Not optimized**.  If the profiler has detected a potential optimization for the function it lists it here.  -->  
 
-:::image type="complex" source="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-chart-hover.msft.png" alt-text="サンプルプロファイル" lightbox="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-chart-hover.msft.png":::
-   <span data-ttu-id="dc2ea-191">関数の詳細をグラフで表示する</span><span class="sxs-lookup"><span data-stu-id="dc2ea-191">View functions details in chart</span></span>  
+:::image type="complex" source="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-chart-hover.msft.png" alt-text="グラフで関数の詳細を表示する" lightbox="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-chart-hover.msft.png":::
+   <span data-ttu-id="3aed0-191">グラフで関数の詳細を表示する</span><span class="sxs-lookup"><span data-stu-id="3aed0-191">View functions details in chart</span></span>  
 :::image-end:::  
 
-## <span data-ttu-id="dc2ea-192">Microsoft Edge DevTools チームと連絡を取る</span><span class="sxs-lookup"><span data-stu-id="dc2ea-192">Getting in touch with the Microsoft Edge DevTools team</span></span>  
+## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a><span data-ttu-id="3aed0-192">Microsoft Edge DevTools チームと連絡を取る</span><span class="sxs-lookup"><span data-stu-id="3aed0-192">Getting in touch with the Microsoft Edge DevTools team</span></span>  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
@@ -153,16 +153,16 @@ ms.locfileid: "11125357"
 
 <!-- links -->  
 
-[DevtoolsConsoleUtilities]: ../console/utilities.md "コンソールユーティリティ API リファレンス |Microsoft ドキュメント"  
-[DevtoolsConsoleUtilitiesProfile]: ../console/utilities.md#profile "プロファイル-本体ユーティリティー API リファレンス |Microsoft ドキュメント"  
-[DevtoolsConsoleUtilitiesProfileEnd]: ../console/utilities.md#profileend "profileEnd-本体ユーティリティー API リファレンス |Microsoft ドキュメント"  
+[DevtoolsConsoleUtilities]: ../console/utilities.md "コンソール ユーティリティ API リファレンス |Microsoft Docs"  
+[DevtoolsConsoleUtilitiesProfile]: ../console/utilities.md#profile "profile - コンソール ユーティリティ API リファレンス |Microsoft Docs"  
+[DevtoolsConsoleUtilitiesProfileEnd]: ../console/utilities.md#profileend "profileEnd - コンソール ユーティリティ API リファレンス |Microsoft Docs"  
 
 > [!NOTE]
-> <span data-ttu-id="dc2ea-196">このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。</span><span class="sxs-lookup"><span data-stu-id="dc2ea-196">Portions of this page are modifications based on work created and [shared by Google][GoogleSitePolicies] and used according to terms described in the [Creative Commons Attribution 4.0 International License][CCA4IL].</span></span>  
-> <span data-ttu-id="dc2ea-197">元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/rendering-tools/js-execution) にあり、 [Kayce basques][KayceBasques] テクニカルライター、Chrome Devtools \ & Lighthouse \) および [Meggin Kearney][MegginKearney] \ (Tech writer \) で作成されています。</span><span class="sxs-lookup"><span data-stu-id="dc2ea-197">The original page is found [here](https://developers.google.com/web/tools/chrome-devtools/rendering-tools/js-execution) and is authored by [Kayce Basques][KayceBasques] \(Technical Writer, Chrome DevTools \& Lighthouse\) and [Meggin Kearney][MegginKearney] \(Tech Writer\).</span></span>  
+> <span data-ttu-id="3aed0-196">このページの一部の情報は、[Google によって作成および共有][GoogleSitePolicies]されている著作物に基づいており、[Creative Commons Attribution 4.0 International License][CCA4IL] に記載されている条項に従って使用されています。</span><span class="sxs-lookup"><span data-stu-id="3aed0-196">Portions of this page are modifications based on work created and [shared by Google][GoogleSitePolicies] and used according to terms described in the [Creative Commons Attribution 4.0 International License][CCA4IL].</span></span>  
+> <span data-ttu-id="3aed0-197">元のページはここで[](https://developers.google.com/web/tools/chrome-devtools/rendering-tools/js-execution)見つかり[、Kayce バス][KayceBasques]ク人 \(Technical Writer, Chrome DevTools \& ライトハウス\) と[Meggin Kearney][MegginKearney] \(Tech Writer\) によって作成されています。</span><span class="sxs-lookup"><span data-stu-id="3aed0-197">The original page is found [here](https://developers.google.com/web/tools/chrome-devtools/rendering-tools/js-execution) and is authored by [Kayce Basques][KayceBasques] \(Technical Writer, Chrome DevTools \& Lighthouse\) and [Meggin Kearney][MegginKearney] \(Tech Writer\).</span></span>  
 
-[![クリエイティブコモンズライセンス][CCby4Image]][CCA4IL]  
-<span data-ttu-id="dc2ea-199">この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。</span><span class="sxs-lookup"><span data-stu-id="dc2ea-199">This work is licensed under a [Creative Commons Attribution 4.0 International License][CCA4IL].</span></span>  
+[![Creative Commons ライセンス][CCby4Image]][CCA4IL]  
+<span data-ttu-id="3aed0-199">この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。</span><span class="sxs-lookup"><span data-stu-id="3aed0-199">This work is licensed under a [Creative Commons Attribution 4.0 International License][CCA4IL].</span></span>  
 
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  

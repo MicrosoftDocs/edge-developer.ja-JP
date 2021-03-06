@@ -1,18 +1,18 @@
 ---
-description: コマンド メニューを開き、"JavaScript を無効にする" コマンドを実行します。
+description: コマンド メニューを開き、[JavaScript を無効にする] コマンドを実行します。
 title: Microsoft Edge DevTools で JavaScript を無効にする
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 12/11/2020
+ms.date: 02/12/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: f7aafee4b05f843319a4a744e6cba148d4642667
-ms.sourcegitcommit: a35a6b5bbc21b7df61d08cbc6b074b5325ad4fef
+ms.openlocfilehash: 2067944fa17c332dd15ffb3ef97afe02d35685ed
+ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "11230671"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "11398561"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -28,39 +28,39 @@ ms.locfileid: "11230671"
    See the License for the specific language governing permissions and
    limitations under the License.  -->
 
-# <span data-ttu-id="d95f2-104">Microsoft Edge DevTools で JavaScript を無効にする</span><span class="sxs-lookup"><span data-stu-id="d95f2-104">Disable JavaScript With Microsoft Edge DevTools</span></span>  
+# <a name="disable-javascript-with-microsoft-edge-devtools"></a><span data-ttu-id="7ba16-104">Microsoft Edge DevTools で JavaScript を無効にする</span><span class="sxs-lookup"><span data-stu-id="7ba16-104">Disable JavaScript with Microsoft Edge DevTools</span></span>  
 
-<span data-ttu-id="d95f2-105">JavaScript が無効になっている場合の Web ページの外観と動作を確認するには、次のアクションを実行します。</span><span class="sxs-lookup"><span data-stu-id="d95f2-105">Complete the following actions to see how a web page looks and behaves when JavaScript is disabled.</span></span>  
+<span data-ttu-id="7ba16-105">JavaScript が無効になっている場合の Web ページの外観と動作を表示するには、次のアクションを実行します。</span><span class="sxs-lookup"><span data-stu-id="7ba16-105">Complete the following actions to display how a webpage looks and behaves when JavaScript is disabled.</span></span>  
 
-1.  <span data-ttu-id="d95f2-106">[Microsoft Edge DevTools を開きます][DevToolsOpen]。</span><span class="sxs-lookup"><span data-stu-id="d95f2-106">[Open Microsoft Edge DevTools][DevToolsOpen].</span></span>  
-1.  <span data-ttu-id="d95f2-107">`Control`+`Shift`+`P` \(Windows, Linux\) または `Command`+`Shift`+`P` \(macOS\) を選択して、**コマンド メニュー** を開きます。</span><span class="sxs-lookup"><span data-stu-id="d95f2-107">Select `Control`+`Shift`+`P` \(Windows, Linux\) or `Command`+`Shift`+`P` \(macOS\) to open the **Command Menu**.</span></span>  
+1.  <span data-ttu-id="7ba16-106">[Microsoft Edge DevTools を開きます][DevToolsOpen]。</span><span class="sxs-lookup"><span data-stu-id="7ba16-106">[Open Microsoft Edge DevTools][DevToolsOpen].</span></span>  
+1.  <span data-ttu-id="7ba16-107">`Control`+`Shift`+`P` \(Windows, Linux\) または `Command`+`Shift`+`P` \(macOS\) を選択して、**コマンド メニュー** を開きます。</span><span class="sxs-lookup"><span data-stu-id="7ba16-107">Select `Control`+`Shift`+`P` \(Windows, Linux\) or `Command`+`Shift`+`P` \(macOS\) to open the **Command Menu**.</span></span>  
     
     :::image type="complex" source="../media/javascript-console-command.msft.png" alt-text="コマンド メニュー" lightbox="../media/javascript-console-command.msft.png":::
-       <span data-ttu-id="d95f2-109">**コマンド メニュー**</span><span class="sxs-lookup"><span data-stu-id="d95f2-109">The **Command Menu**</span></span>  
+       <span data-ttu-id="7ba16-109">**コマンド メニュー**</span><span class="sxs-lookup"><span data-stu-id="7ba16-109">The **Command Menu**</span></span>  
     :::image-end:::  
     
-1.  <span data-ttu-id="d95f2-110">入力を開始 `javascript` し **、[JavaScript を無効にする**] を選択し、コマンドの `Enter` 実行を選択します。</span><span class="sxs-lookup"><span data-stu-id="d95f2-110">Start typing `javascript`, choose **Disable JavaScript**, and then select `Enter` to run the command.</span></span>  <span data-ttu-id="d95f2-111">JavaScript が無効になりました。</span><span class="sxs-lookup"><span data-stu-id="d95f2-111">JavaScript is now disabled.</span></span>  
+1.  <span data-ttu-id="7ba16-110">入力を開始 `javascript` し **、[JavaScript を無効**にする] を選択し、コマンド `Enter` を実行する場合に選択します。</span><span class="sxs-lookup"><span data-stu-id="7ba16-110">Start typing `javascript`, choose **Disable JavaScript**, and then select `Enter` to run the command.</span></span>  <span data-ttu-id="7ba16-111">JavaScript が無効になりました。</span><span class="sxs-lookup"><span data-stu-id="7ba16-111">JavaScript is now disabled.</span></span>  
     
-    :::image type="complex" source="../media/javascript-console-command-javascript.msft.png" alt-text="コマンド メニューで [JavaScript を無効にする] を選択する" lightbox="../media/javascript-console-command-javascript.msft.png":::
-       <span data-ttu-id="d95f2-113">コマンド **メニューで [JavaScript を** 無効にする] **を選択する**</span><span class="sxs-lookup"><span data-stu-id="d95f2-113">Choose **Disable JavaScript** in the **Command Menu**</span></span>  
+    :::image type="complex" source="../media/javascript-console-command-javascript.msft.png" alt-text="コマンド メニューで [JavaScript を無効にする] を選択します。" lightbox="../media/javascript-console-command-javascript.msft.png":::
+       <span data-ttu-id="7ba16-113">コマンド **メニューで [JavaScript** を無効にする] **を選択します。**</span><span class="sxs-lookup"><span data-stu-id="7ba16-113">Choose **Disable JavaScript** in the **Command Menu**</span></span>  
     :::image-end:::  
     
-    <span data-ttu-id="d95f2-114">ソースの横にある黄色の警告アイコン **は** 、JavaScript が無効になっていることを通知します。</span><span class="sxs-lookup"><span data-stu-id="d95f2-114">The yellow warning icon next to **Sources** reminds you that JavaScript is disabled.</span></span>  
+    <span data-ttu-id="7ba16-114">[ソース] の横にある黄色の **警告** アイコンは、JavaScript が無効になっていることを通知します。</span><span class="sxs-lookup"><span data-stu-id="7ba16-114">The yellow warning icon next to **Sources** reminds you that JavaScript is disabled.</span></span>  
     
     :::image type="complex" source="../media/javascript-console-javascript-disabled-warning.msft.png" alt-text="[ソース] の横にある警告アイコン" lightbox="../media/javascript-console-javascript-disabled-warning.msft.png":::
-       <span data-ttu-id="d95f2-116">[ソース] の横にある **警告アイコン**</span><span class="sxs-lookup"><span data-stu-id="d95f2-116">The warning icon next to **Sources**</span></span>  
+       <span data-ttu-id="7ba16-116">[ソース] の横にある **警告アイコン**</span><span class="sxs-lookup"><span data-stu-id="7ba16-116">The warning icon next to **Sources**</span></span>  
     :::image-end:::  
     
-<span data-ttu-id="d95f2-117">DevTools を開いている限り、JavaScript はタブで無効のままです。</span><span class="sxs-lookup"><span data-stu-id="d95f2-117">JavaScript remains disabled in the tab for as long as you have DevTools open.</span></span>  
+<span data-ttu-id="7ba16-117">DevTools を開いている限り、JavaScript はタブで無効なままです。</span><span class="sxs-lookup"><span data-stu-id="7ba16-117">JavaScript remains disabled in the tab for as long as you have DevTools open.</span></span>  
 
-<span data-ttu-id="d95f2-118">ページを再読み込みして、読み込み中にページが JavaScript に依存するかどうか、およびどのように依存するか確認できます。</span><span class="sxs-lookup"><span data-stu-id="d95f2-118">You may want to reload the page to see if and how the page depends on JavaScript while loading.</span></span>  
+<span data-ttu-id="7ba16-118">ページを更新して、読み込み中に Web ページが JavaScript に依存するかどうかと方法を確認できます。</span><span class="sxs-lookup"><span data-stu-id="7ba16-118">You may want to refresh the page to review if and how the webpage depends on JavaScript while loading.</span></span>  
 
-<span data-ttu-id="d95f2-119">JavaScript を再び有効にするには、次のアクションを実行します。</span><span class="sxs-lookup"><span data-stu-id="d95f2-119">To re-enable JavaScript, complete the following actions.</span></span>  
+<span data-ttu-id="7ba16-119">JavaScript を再び有効にするには、次のアクションを実行します。</span><span class="sxs-lookup"><span data-stu-id="7ba16-119">To re-enable JavaScript, complete the following actions.</span></span>  
 
-*   <span data-ttu-id="d95f2-120">コマンド メニュー **を再度開** き、コマンドを実行 `Enable JavaScript` します。</span><span class="sxs-lookup"><span data-stu-id="d95f2-120">Open the **Command Menu** again and run the `Enable JavaScript` command.</span></span>  
-*   <span data-ttu-id="d95f2-121">DevTools を閉じます。</span><span class="sxs-lookup"><span data-stu-id="d95f2-121">Close DevTools.</span></span>  
+*   <span data-ttu-id="7ba16-120">コマンド メニュー **を再度開** き、コマンドを実行 `Enable JavaScript` します。</span><span class="sxs-lookup"><span data-stu-id="7ba16-120">Open the **Command Menu** again and run the `Enable JavaScript` command.</span></span>  
+*   <span data-ttu-id="7ba16-121">DevTools を閉じます。</span><span class="sxs-lookup"><span data-stu-id="7ba16-121">Close DevTools.</span></span>  
 
-## <span data-ttu-id="d95f2-122">Microsoft Edge DevTools チームと連絡を取る</span><span class="sxs-lookup"><span data-stu-id="d95f2-122">Getting in touch with the Microsoft Edge DevTools team</span></span>  
+## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a><span data-ttu-id="7ba16-122">Microsoft Edge DevTools チームと連絡を取る</span><span class="sxs-lookup"><span data-stu-id="7ba16-122">Getting in touch with the Microsoft Edge DevTools team</span></span>  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
@@ -69,11 +69,11 @@ ms.locfileid: "11230671"
 [DevToolsOpen]: ../open/index.md "Microsoft Edge DevTools を開く | Microsoft Docs"  
 
 > [!NOTE]
-> <span data-ttu-id="d95f2-124">このページの一部は、 [Google によっ て作成および共有された][GoogleSitePolicies]作業に基づく変更で、「[Creative Commons Attribution 4.0 International License][CCA4IL]」で記載されている条項に従って使用されます。</span><span class="sxs-lookup"><span data-stu-id="d95f2-124">Portions of this page are modifications based on work created and [shared by Google][GoogleSitePolicies] and used according to terms described in the [Creative Commons Attribution 4.0 International License][CCA4IL].</span></span>  
-> <span data-ttu-id="d95f2-125">元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/javascript/disable) にあり、 [Kayce Basques][KayceBasques] \(Chrome DevTools \& Lighthouse\ のテクニカル ライター) が作成しました。</span><span class="sxs-lookup"><span data-stu-id="d95f2-125">The original page is found [here](https://developers.google.com/web/tools/chrome-devtools/javascript/disable) and is authored by [Kayce Basques][KayceBasques] \(Technical Writer, Chrome DevTools \& Lighthouse\).</span></span>  
+> <span data-ttu-id="7ba16-124">このページの一部は、 [Google によっ て作成および共有された][GoogleSitePolicies]作業に基づく変更で、「[Creative Commons Attribution 4.0 International License][CCA4IL]」で記載されている条項に従って使用されます。</span><span class="sxs-lookup"><span data-stu-id="7ba16-124">Portions of this page are modifications based on work created and [shared by Google][GoogleSitePolicies] and used according to terms described in the [Creative Commons Attribution 4.0 International License][CCA4IL].</span></span>  
+> <span data-ttu-id="7ba16-125">元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/javascript/disable) にあり、 [Kayce Basques][KayceBasques] \(Chrome DevTools \& Lighthouse\ のテクニカル ライター) が作成しました。</span><span class="sxs-lookup"><span data-stu-id="7ba16-125">The original page is found [here](https://developers.google.com/web/tools/chrome-devtools/javascript/disable) and is authored by [Kayce Basques][KayceBasques] \(Technical Writer, Chrome DevTools \& Lighthouse\).</span></span>  
 
 [![Creative Commons ライセンス][CCby4Image]][CCA4IL]  
-<span data-ttu-id="d95f2-127">この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。</span><span class="sxs-lookup"><span data-stu-id="d95f2-127">This work is licensed under a [Creative Commons Attribution 4.0 International License][CCA4IL].</span></span>  
+<span data-ttu-id="7ba16-127">この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。</span><span class="sxs-lookup"><span data-stu-id="7ba16-127">This work is licensed under a [Creative Commons Attribution 4.0 International License][CCA4IL].</span></span>  
 
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  

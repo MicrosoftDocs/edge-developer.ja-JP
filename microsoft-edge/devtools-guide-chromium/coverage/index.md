@@ -1,18 +1,18 @@
 ---
-description: Microsoft Edge DevTools で使用されていない JavaScript と CSS コードを検索して分析する方法について説明します。
-title: Microsoft Edge DevTools の [カバレッジ] タブで使用されていない JavaScript と CSS コードを見つける
+description: Microsoft Edge DevTools で使用されていない JavaScript コードと CSS コードを見つけて分析する方法。
+title: Microsoft Edge DevTools の [カバレッジ] パネルで未使用の JavaScript と CSS コードを検索する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 10/19/2020
+ms.date: 02/12/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 08c4daaabd30296b53ad57a81caa0e7b155a4fc9
-ms.sourcegitcommit: 99eee78698dc95b2a3fa638a5b063ef449899cda
+ms.openlocfilehash: 092788606347352876483b1a8282fbb75b2bff66
+ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "11125189"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "11398764"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -28,20 +28,20 @@ ms.locfileid: "11125189"
    See the License for the specific language governing permissions and
    limitations under the License.  -->
 
-# <span data-ttu-id="a5b2b-104">Microsoft Edge DevTools の [カバレッジ] タブで使用されていない JavaScript と CSS コードを見つける</span><span class="sxs-lookup"><span data-stu-id="a5b2b-104">Find Unused JavaScript And CSS Code With The Coverage Tab In Microsoft Edge DevTools</span></span>  
+# <a name="find-unused-javascript-and-css-code-with-the-coverage-panel-in-microsoft-edge-devtools"></a><span data-ttu-id="e8b82-104">Microsoft Edge DevTools の [カバレッジ] パネルで未使用の JavaScript コードと CSS コードを検索する</span><span class="sxs-lookup"><span data-stu-id="e8b82-104">Find unused JavaScript and CSS code with the Coverage panel in Microsoft Edge DevTools</span></span>  
 
-<span data-ttu-id="a5b2b-105">Microsoft Edge の DevTools の [カバレッジ] タブは、使用されていない JavaScript と CSS コードを見つけるのに役立ちます。</span><span class="sxs-lookup"><span data-stu-id="a5b2b-105">The Coverage tab in Microsoft Edge DevTools helps you find unused JavaScript and CSS code.</span></span>  <span data-ttu-id="a5b2b-106">使用されていないコードを削除すると、ページの読み込みが速くなり、モバイルユーザーの携帯電話のデータが保存される可能性があります。</span><span class="sxs-lookup"><span data-stu-id="a5b2b-106">Removing unused code may speed up your page load and save your mobile users cellular data.</span></span>  
+<span data-ttu-id="e8b82-105">Microsoft **Edge DevTools** の [カバレッジ] パネルを使用すると、使用されていない JavaScript コードと CSS コードを見つけるのに役立ちます。</span><span class="sxs-lookup"><span data-stu-id="e8b82-105">The **Coverage** panel in Microsoft Edge DevTools helps you find unused JavaScript and CSS code.</span></span>  <span data-ttu-id="e8b82-106">未使用のコードを削除すると、ページの読み込み速度が上がり、モバイル ユーザーの携帯電話データが保存される場合があります。</span><span class="sxs-lookup"><span data-stu-id="e8b82-106">Removing unused code may speed up your page load and save your mobile users cellular data.</span></span>  
 
-:::image type="complex" source="../media/coverage-sources-resource-drawer-coverage.msft.png" alt-text="コードカバレッジの分析" lightbox="../media/coverage-sources-resource-drawer-coverage.msft.png":::
-   <span data-ttu-id="a5b2b-108">コードカバレッジの分析</span><span class="sxs-lookup"><span data-stu-id="a5b2b-108">Analyzing code coverage</span></span>  
+:::image type="complex" source="../media/coverage-sources-resource-drawer-coverage.msft.png" alt-text="コード 範囲の分析" lightbox="../media/coverage-sources-resource-drawer-coverage.msft.png":::
+   <span data-ttu-id="e8b82-108">コード 範囲の分析</span><span class="sxs-lookup"><span data-stu-id="e8b82-108">Analyzing code coverage</span></span>  
 :::image-end:::  
 
 > [!WARNING]
-> <span data-ttu-id="a5b2b-109">使用されていないコードの検索は比較的簡単です。</span><span class="sxs-lookup"><span data-stu-id="a5b2b-109">Finding unused code is relatively easy.</span></span>  <span data-ttu-id="a5b2b-110">ただし、コードベースをリファクタリングして、各ページが必要な JavaScript と CSS を確実に出荷することが難しい場合があります。</span><span class="sxs-lookup"><span data-stu-id="a5b2b-110">But refactoring a codebase so that each page only ships the JavaScript and CSS that it needs may be difficult.</span></span>  <span data-ttu-id="a5b2b-111">このガイドでは、コードベースをリファクターして使用されていないコードを回避する方法については説明しません。これらの refactors はテクノロジスタックに依存しているためです。</span><span class="sxs-lookup"><span data-stu-id="a5b2b-111">This guide does not cover how to refactor a codebase to avoid unused code because these refactors depend highly on your technology stack.</span></span>  
+> <span data-ttu-id="e8b82-109">使用されていないコードを見つけるのは比較的簡単です。</span><span class="sxs-lookup"><span data-stu-id="e8b82-109">Finding unused code is relatively easy.</span></span>  <span data-ttu-id="e8b82-110">ただし、コードベースをリファクタリングして、必要な JavaScript と CSS のみを各ページに提供するのは難しい場合があります。</span><span class="sxs-lookup"><span data-stu-id="e8b82-110">But refactoring a codebase so that each page only ships the JavaScript and CSS that it needs may be difficult.</span></span>  <span data-ttu-id="e8b82-111">このガイドでは、これらのリファクタリングがテクノロジ スタックに大きな依存を持つため、コードベースをリファクタリングして未使用のコードを回避する方法については取り上げない。</span><span class="sxs-lookup"><span data-stu-id="e8b82-111">This guide does not cover how to refactor a codebase to avoid unused code because these refactors depend highly on your technology stack.</span></span>  
 
-## <span data-ttu-id="a5b2b-112">概要</span><span class="sxs-lookup"><span data-stu-id="a5b2b-112">Overview</span></span>  
+## <a name="overview"></a><span data-ttu-id="e8b82-112">概要</span><span class="sxs-lookup"><span data-stu-id="e8b82-112">Overview</span></span>  
 
-<span data-ttu-id="a5b2b-113">使用されていない JavaScript または CSS は、web 開発での一般的な問題です。</span><span class="sxs-lookup"><span data-stu-id="a5b2b-113">Shipping unused JavaScript or CSS is a common problem in web development.</span></span>  <span data-ttu-id="a5b2b-114">たとえば、ページで [ブートストラップボタンコンポーネント][BootstrapButtons] を使用するとします。</span><span class="sxs-lookup"><span data-stu-id="a5b2b-114">For example, suppose that you want to use [Bootstrap button component][BootstrapButtons] on your page.</span></span>  <span data-ttu-id="a5b2b-115">Button コンポーネントを使用するには、次のように HTML のブートストラップスタイルシートへのリンクを追加する必要があります。</span><span class="sxs-lookup"><span data-stu-id="a5b2b-115">To use the button component you need to add a link to the Bootstrap stylesheet in your HTML, like this:</span></span>  
+<span data-ttu-id="e8b82-113">未使用の JavaScript または CSS の配布は、Web 開発で一般的な問題です。</span><span class="sxs-lookup"><span data-stu-id="e8b82-113">Shipping unused JavaScript or CSS is a common problem in web development.</span></span>  <span data-ttu-id="e8b82-114">たとえば、ページでブートストラップ ボタン コンポーネントを [使用すると][BootstrapButtons] します。</span><span class="sxs-lookup"><span data-stu-id="e8b82-114">For example, suppose that you want to use [Bootstrap button component][BootstrapButtons] on your page.</span></span>  <span data-ttu-id="e8b82-115">ボタン コンポーネントを使用するには、HTML のブートストラップ スタイルシートへのリンクを次のように追加する必要があります。</span><span class="sxs-lookup"><span data-stu-id="e8b82-115">To use the button component you need to add a link to the Bootstrap stylesheet in your HTML, like this:</span></span>  
 
 ```html
 ...
@@ -53,44 +53,44 @@ ms.locfileid: "11125189"
 ...
 ```  
 
-<span data-ttu-id="a5b2b-116">このスタイルシートには、button コンポーネントのコードは含まれていません。</span><span class="sxs-lookup"><span data-stu-id="a5b2b-116">This stylesheet does not just include the code for the button component.</span></span>  <span data-ttu-id="a5b2b-117">このファイルには、 **すべて** のブートストラップコンポーネントの CSS が含まれています。</span><span class="sxs-lookup"><span data-stu-id="a5b2b-117">It contains the CSS for **all** of the Bootstrap components.</span></span>  <span data-ttu-id="a5b2b-118">ただし、他のブートストラップコンポーネントは使用していません。</span><span class="sxs-lookup"><span data-stu-id="a5b2b-118">But you are not using any of the other Bootstrap components.</span></span>  <span data-ttu-id="a5b2b-119">このため、ページでは不要な CSS をダウンロードしようとしています。</span><span class="sxs-lookup"><span data-stu-id="a5b2b-119">So your page is downloading a bunch of CSS that it does not need.</span></span>  <span data-ttu-id="a5b2b-120">このエクストラ CSS は、次のような理由で問題になります。</span><span class="sxs-lookup"><span data-stu-id="a5b2b-120">This extra CSS is a problem for the following reasons.</span></span>  
+<span data-ttu-id="e8b82-116">このスタイルシートには、ボタン コンポーネントのコードが含まれるだけではありません。</span><span class="sxs-lookup"><span data-stu-id="e8b82-116">This stylesheet does not just include the code for the button component.</span></span>  <span data-ttu-id="e8b82-117">すべてのブートストラップ **コンポーネントの** CSS が含まれている。</span><span class="sxs-lookup"><span data-stu-id="e8b82-117">It contains the CSS for **all** of the Bootstrap components.</span></span>  <span data-ttu-id="e8b82-118">ただし、他のブートストラップ コンポーネントは使用していない。</span><span class="sxs-lookup"><span data-stu-id="e8b82-118">But you are not using any of the other Bootstrap components.</span></span>  <span data-ttu-id="e8b82-119">したがって、ページは必要ない CSS の束をダウンロードしています。</span><span class="sxs-lookup"><span data-stu-id="e8b82-119">So your page is downloading a bunch of CSS that it does not need.</span></span>  <span data-ttu-id="e8b82-120">この追加の CSS は、次の理由で問題です。</span><span class="sxs-lookup"><span data-stu-id="e8b82-120">This extra CSS is a problem for the following reasons.</span></span>  
 
-*   <span data-ttu-id="a5b2b-121">余分なコードを使用すると、ページの読み込み速度が遅くなります。</span><span class="sxs-lookup"><span data-stu-id="a5b2b-121">The extra code slows down your page load.</span></span>  <!--See [Render-Blocking CSS][render].  -->  
-*   <span data-ttu-id="a5b2b-122">ユーザーがモバイルデバイスでページにアクセスすると、追加のコードによって携帯電話のデータが使用されます。</span><span class="sxs-lookup"><span data-stu-id="a5b2b-122">If a user accesses the page on a mobile device, the extra code uses up their cellular data.</span></span>  
+*   <span data-ttu-id="e8b82-121">余分なコードを使用すると、ページの読み込み速度が低下します。</span><span class="sxs-lookup"><span data-stu-id="e8b82-121">The extra code slows down your page load.</span></span>  <!--Navigate to [Render-Blocking CSS][render].  -->  
+*   <span data-ttu-id="e8b82-122">ユーザーがモバイル デバイス上のページにアクセスした場合、追加のコードは携帯データを使用します。</span><span class="sxs-lookup"><span data-stu-id="e8b82-122">If a user accesses the page on a mobile device, the extra code uses up their cellular data.</span></span>  
     
 <!--[render]: /web/fundamentals/performance/critical-rendering-path/render-blocking-css  -->  
 
-## <span data-ttu-id="a5b2b-123">[カバレッジ] タブを開く</span><span class="sxs-lookup"><span data-stu-id="a5b2b-123">Open the Coverage tab</span></span>  
+## <a name="open-the-coverage-panel"></a><span data-ttu-id="e8b82-123">[カバレッジ] パネルを開く</span><span class="sxs-lookup"><span data-stu-id="e8b82-123">Open the Coverage panel</span></span>  
 
-1.  <span data-ttu-id="a5b2b-124">[コマンドメニューを開き][DevToolsCommandMenu]ます。</span><span class="sxs-lookup"><span data-stu-id="a5b2b-124">[Open the Command Menu][DevToolsCommandMenu].</span></span>  
-1.  <span data-ttu-id="a5b2b-125">入力を開始し、[ `coverage` **カバレッジの表示** ] コマンドを選択して、コマンドを `Enter` 実行します。</span><span class="sxs-lookup"><span data-stu-id="a5b2b-125">Start typing `coverage`, select the **Show Coverage** command, and then select `Enter` to run the command.</span></span>  <span data-ttu-id="a5b2b-126">[ **補充** ] タブが **引き出し**で開きます。</span><span class="sxs-lookup"><span data-stu-id="a5b2b-126">The **Coverage** tab opens in the **Drawer**.</span></span>  
+1.  <span data-ttu-id="e8b82-124">[コマンド メニューを開きます][DevToolsCommandMenu]。</span><span class="sxs-lookup"><span data-stu-id="e8b82-124">[Open the Command Menu][DevToolsCommandMenu].</span></span>  
+1.  <span data-ttu-id="e8b82-125">入力を開始 `coverage` し、[カバレッジの表示] コマンド **を** 選択し、コマンド `Enter` を実行する場合に選択します。</span><span class="sxs-lookup"><span data-stu-id="e8b82-125">Start typing `coverage`, select the **Show Coverage** command, and then select `Enter` to run the command.</span></span>  <span data-ttu-id="e8b82-126">[ **引き出** し] に [カバレッジ] パネルが **開きます**。</span><span class="sxs-lookup"><span data-stu-id="e8b82-126">The **Coverage** panel opens in the **Drawer**.</span></span>  
 
-    :::image type="complex" source="../media/coverage-console-drawer-coverage-empty.msft.png" alt-text="コードカバレッジの分析" lightbox="../media/coverage-console-drawer-coverage-empty.msft.png":::
-       <span data-ttu-id="a5b2b-128">[ **カバレッジ** ] タブ</span><span class="sxs-lookup"><span data-stu-id="a5b2b-128">The **Coverage** tab</span></span>  
+    :::image type="complex" source="../media/coverage-console-drawer-coverage-empty.msft.png" alt-text="[カバレッジ] パネル" lightbox="../media/coverage-console-drawer-coverage-empty.msft.png":::
+       <span data-ttu-id="e8b82-128">[ **カバレッジ]** パネル</span><span class="sxs-lookup"><span data-stu-id="e8b82-128">The **Coverage** panel</span></span>  
     :::image-end:::  
     
-## <span data-ttu-id="a5b2b-129">コードカバレッジの記録</span><span class="sxs-lookup"><span data-stu-id="a5b2b-129">Record code coverage</span></span>  
+## <a name="record-code-coverage"></a><span data-ttu-id="e8b82-129">レコード コード範囲</span><span class="sxs-lookup"><span data-stu-id="e8b82-129">Record code coverage</span></span>  
 
-1.  <span data-ttu-id="a5b2b-130">[ **カバレッジ** ] タブで、次のいずれかのボタンをクリックします。</span><span class="sxs-lookup"><span data-stu-id="a5b2b-130">Click one of the following buttons in the **Coverage** tab:</span></span>  
-    *   <span data-ttu-id="a5b2b-131">**Start Instrumenting Coverage And Reload Page** ![ ][ImageReloadIcon] ページの読み込みに必要なコードを確認するには、[インストルメント化の開始] と [ページの再読み込み] を選びます。</span><span class="sxs-lookup"><span data-stu-id="a5b2b-131">Choose **Start Instrumenting Coverage And Reload Page** \(![Start Instrumenting Coverage And Reload Page][ImageReloadIcon]\) if you want to see what code is needed to load the page.</span></span>  
-    *   <span data-ttu-id="a5b2b-132">**Instrument Coverage** ![ ][ImageRecordIcon] ページを操作した後で使用されるコードを確認する場合は、[インストルメント化の対象] ([インストルメントのカバレッジ]) を選択します。</span><span class="sxs-lookup"><span data-stu-id="a5b2b-132">Choose **Instrument Coverage** \(![Instrument Coverage][ImageRecordIcon]\) if you want to see what code is used after interacting with the page.</span></span>  
-1.  <span data-ttu-id="a5b2b-133">コードカバレッジの記録を停止する場合は **、[インストルメントの実装を停止し、結果を表示** する ( ![ インストルメント化の停止と結果の表示)] を選び ][ImageStopIcon] ます。</span><span class="sxs-lookup"><span data-stu-id="a5b2b-133">Choose **Stop Instrumenting Coverage And Show Results** \(![Stop Instrumenting Coverage And Show Results][ImageStopIcon]\) when you want to stop recording code coverage.</span></span>  
+1.  <span data-ttu-id="e8b82-130">[カバレッジ] パネルで、次のいずれかのボタン **を選択** します。</span><span class="sxs-lookup"><span data-stu-id="e8b82-130">Choose one of the following buttons in the **Coverage** panel.</span></span>  
+    *   <span data-ttu-id="e8b82-131">ページ **の読み込みに** 必要なコードを確認する場合は、[インストルメントカバレッジの開始とページの再読み込み]\(インストルメントカバレッジの開始とページの再読み込み ![ ][ImageReloadIcon] \) を選択します。</span><span class="sxs-lookup"><span data-stu-id="e8b82-131">Choose **Start Instrumenting Coverage And Reload Page** \(![Start Instrumenting Coverage And Reload Page][ImageReloadIcon]\) if you want to review what code is needed to load the page.</span></span>  
+    *   <span data-ttu-id="e8b82-132">ページ **を操作した** 後に使用するコードを確認する場合は、[Instrument Coverage \( Instrument ![ Coverage ][ImageRecordIcon] \) ] を選択します。</span><span class="sxs-lookup"><span data-stu-id="e8b82-132">Choose **Instrument Coverage** \(![Instrument Coverage][ImageRecordIcon]\) if you want to review what code is used after interacting with the page.</span></span>  
+1.  <span data-ttu-id="e8b82-133">コード **カバレッジの記録を停止する場合は、[** インストルメントカバレッジの停止と結果の表示] \( Stop Instrumenting Coverage and Show Results ![ ][ImageStopIcon] \) を選択します。</span><span class="sxs-lookup"><span data-stu-id="e8b82-133">Choose **Stop Instrumenting Coverage And Show Results** \(![Stop Instrumenting Coverage And Show Results][ImageStopIcon]\) when you want to stop recording code coverage.</span></span>  
     
-## <span data-ttu-id="a5b2b-134">コードカバレッジの分析</span><span class="sxs-lookup"><span data-stu-id="a5b2b-134">Analyze code coverage</span></span>  
+## <a name="analyze-code-coverage"></a><span data-ttu-id="e8b82-134">コード範囲の分析</span><span class="sxs-lookup"><span data-stu-id="e8b82-134">Analyze code coverage</span></span>  
 
-<span data-ttu-id="a5b2b-135">[ **カバレッジ** ] タブの表には、分析されたリソースと、各リソース内で使用されているコードの量が表示されます。</span><span class="sxs-lookup"><span data-stu-id="a5b2b-135">The table in the **Coverage** tab shows you what resources were analyzed, and how much code is used within each resource.</span></span>  <span data-ttu-id="a5b2b-136">[ **ソース** ] パネルで行をクリックしてそのリソースを開き、使用されているコードと未使用コードの行ごとの内訳を確認します。</span><span class="sxs-lookup"><span data-stu-id="a5b2b-136">Click a row to open that resource in the **Sources** panel and see a line-by-line breakdown of used code and unused code.</span></span>  
+<span data-ttu-id="e8b82-135">[カバレッジ] パネル **の表** には、分析されたリソースと、各リソース内で使用されるコードの量が表示されます。</span><span class="sxs-lookup"><span data-stu-id="e8b82-135">The table in the **Coverage** panel displays the resources that were analyzed, and how much code is used within each resource.</span></span>  <span data-ttu-id="e8b82-136">行を選択して[ソース] パネル\*\*\*\* でリソースを開き、使用されているコードと未使用のコードの 1 行の内訳を確認します。</span><span class="sxs-lookup"><span data-stu-id="e8b82-136">Choose a row to open that resource in the **Sources** panel and review a line-by-line breakdown of used code and unused code.</span></span>  
 
-:::image type="complex" source="../media/coverage-sources-resource-drawer-coverage-selected.msft.png" alt-text="コードカバレッジの分析" lightbox="../media/coverage-sources-resource-drawer-coverage-selected.msft.png":::
-   <span data-ttu-id="a5b2b-138">コードカバレッジレポート</span><span class="sxs-lookup"><span data-stu-id="a5b2b-138">A code coverage report</span></span>  
+:::image type="complex" source="../media/coverage-sources-resource-drawer-coverage-selected.msft.png" alt-text="コード カバレッジ レポート" lightbox="../media/coverage-sources-resource-drawer-coverage-selected.msft.png":::
+   <span data-ttu-id="e8b82-138">コード カバレッジ レポート</span><span class="sxs-lookup"><span data-stu-id="e8b82-138">A code coverage report</span></span>  
 :::image-end:::  
 
-*   <span data-ttu-id="a5b2b-139">**Url**列は、分析されたリソースの url です。</span><span class="sxs-lookup"><span data-stu-id="a5b2b-139">The **URL** column is the URL of the resource that was analyzed.</span></span>  
-*   <span data-ttu-id="a5b2b-140">[ **Type** ] 列には、リソースに CSS、JavaScript、またはその両方が含まれているかどうかが示されます。</span><span class="sxs-lookup"><span data-stu-id="a5b2b-140">The **Type** column says whether the resource contains CSS, JavaScript, or both.</span></span>  
-*   <span data-ttu-id="a5b2b-141">**Total bytes**列は、リソースの合計サイズ (バイト単位) です。</span><span class="sxs-lookup"><span data-stu-id="a5b2b-141">The **Total Bytes** column is the total size of the resource in bytes.</span></span>  
-*   <span data-ttu-id="a5b2b-142">**未使用バイト**列は、使用されなかったバイト数です。</span><span class="sxs-lookup"><span data-stu-id="a5b2b-142">The **Unused Bytes** column is the number of bytes that were not used.</span></span>  
-*   <span data-ttu-id="a5b2b-143">最後の名前が付いていない列は、[ **合計のバイト** 数] 列と [ **未使用のバイト数** ] 列の視覚エフェクトです。</span><span class="sxs-lookup"><span data-stu-id="a5b2b-143">The last, unnamed column is a visualization of the **Total Bytes** and **Unused Bytes** columns.</span></span>  <span data-ttu-id="a5b2b-144">バーの赤い部分は未使用のバイトです。</span><span class="sxs-lookup"><span data-stu-id="a5b2b-144">The red section of the bar is unused bytes.</span></span>  <span data-ttu-id="a5b2b-145">緑のセクションは、バイトを使用しています。</span><span class="sxs-lookup"><span data-stu-id="a5b2b-145">The green section is used bytes.</span></span>  
+*   <span data-ttu-id="e8b82-139">**[URL]** 列は、分析されたリソースの URL です。</span><span class="sxs-lookup"><span data-stu-id="e8b82-139">The **URL** column is the URL of the resource that was analyzed.</span></span>  
+*   <span data-ttu-id="e8b82-140">**[Type]** 列には、リソースに CSS、JavaScript、または両方が含まれているかどうかを示します。</span><span class="sxs-lookup"><span data-stu-id="e8b82-140">The **Type** column says whether the resource contains CSS, JavaScript, or both.</span></span>  
+*   <span data-ttu-id="e8b82-141">[ **合計バイト数]** 列は、リソースの合計サイズ (バイト単位) です。</span><span class="sxs-lookup"><span data-stu-id="e8b82-141">The **Total Bytes** column is the total size of the resource in bytes.</span></span>  
+*   <span data-ttu-id="e8b82-142">[ **未使用のバイト数** ] 列は、使用されていないバイト数です。</span><span class="sxs-lookup"><span data-stu-id="e8b82-142">The **Unused Bytes** column is the number of bytes that were not used.</span></span>  
+*   <span data-ttu-id="e8b82-143">最後の名前のない列は、[合計バイト数]\*\*\*\* 列と [未使用バイト] 列**を視覚化**します。</span><span class="sxs-lookup"><span data-stu-id="e8b82-143">The last, unnamed column is a visualization of the **Total Bytes** and **Unused Bytes** columns.</span></span>  <span data-ttu-id="e8b82-144">バーの赤いセクションは未使用のバイトです。</span><span class="sxs-lookup"><span data-stu-id="e8b82-144">The red section of the bar is unused bytes.</span></span>  <span data-ttu-id="e8b82-145">緑色のセクションはバイト数を使用します。</span><span class="sxs-lookup"><span data-stu-id="e8b82-145">The green section is used bytes.</span></span>  
     
-## <span data-ttu-id="a5b2b-146">Microsoft Edge DevTools チームと連絡を取る</span><span class="sxs-lookup"><span data-stu-id="a5b2b-146">Getting in touch with the Microsoft Edge DevTools team</span></span>  
+## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a><span data-ttu-id="e8b82-146">Microsoft Edge DevTools チームと連絡を取る</span><span class="sxs-lookup"><span data-stu-id="e8b82-146">Getting in touch with the Microsoft Edge DevTools team</span></span>  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
@@ -102,16 +102,16 @@ ms.locfileid: "11125189"
 
 <!-- links -->  
 
-[DevToolsCommandMenu]: ../command-menu/index.md "Microsoft Edge DevTools コマンドメニューを使用してコマンドを実行する |Microsoft ドキュメント"  
+[DevToolsCommandMenu]: ../command-menu/index.md "[Microsoft Edge DevTools コマンド] メニューメニューを使用してコマンドを実行|Microsoft Docs"  
 
-[BootstrapButtons]: https://getbootstrap.com/docs/4.3/components/buttons "ボタン-ブートストラップ"  
+[BootstrapButtons]: https://getbootstrap.com/docs/4.3/components/buttons "ボタン - ブートストラップ"  
 
 > [!NOTE]
-> <span data-ttu-id="a5b2b-149">このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。</span><span class="sxs-lookup"><span data-stu-id="a5b2b-149">Portions of this page are modifications based on work created and [shared by Google][GoogleSitePolicies] and used according to terms described in the [Creative Commons Attribution 4.0 International License][CCA4IL].</span></span>  
-> <span data-ttu-id="a5b2b-150">元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/coverage/index) にあり、 [Kayce Basques][KayceBasques] テクニカルライター、Chrome Devtools \ & Lighthouse \) で作成されています。</span><span class="sxs-lookup"><span data-stu-id="a5b2b-150">The original page is found [here](https://developers.google.com/web/tools/chrome-devtools/coverage/index) and is authored by [Kayce Basques][KayceBasques] \(Technical Writer, Chrome DevTools \& Lighthouse\).</span></span>  
+> <span data-ttu-id="e8b82-149">このページの一部は、 [Google によっ て作成および共有された][GoogleSitePolicies]作業に基づく変更で、「[Creative Commons Attribution 4.0 International License][CCA4IL]」で記載されている条項に従って使用されます。</span><span class="sxs-lookup"><span data-stu-id="e8b82-149">Portions of this page are modifications based on work created and [shared by Google][GoogleSitePolicies] and used according to terms described in the [Creative Commons Attribution 4.0 International License][CCA4IL].</span></span>  
+> <span data-ttu-id="e8b82-150">元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/coverage/index) にあり、 [Kayce Basques][KayceBasques] \(Chrome DevTools \& Lighthouse\ のテクニカル ライター) が作成しました。</span><span class="sxs-lookup"><span data-stu-id="e8b82-150">The original page is found [here](https://developers.google.com/web/tools/chrome-devtools/coverage/index) and is authored by [Kayce Basques][KayceBasques] \(Technical Writer, Chrome DevTools \& Lighthouse\).</span></span>  
 
-[![クリエイティブコモンズライセンス][CCby4Image]][CCA4IL]  
-<span data-ttu-id="a5b2b-152">この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。</span><span class="sxs-lookup"><span data-stu-id="a5b2b-152">This work is licensed under a [Creative Commons Attribution 4.0 International License][CCA4IL].</span></span>  
+[![Creative Commons ライセンス][CCby4Image]][CCA4IL]  
+<span data-ttu-id="e8b82-152">この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。</span><span class="sxs-lookup"><span data-stu-id="e8b82-152">This work is licensed under a [Creative Commons Attribution 4.0 International License][CCA4IL].</span></span>  
 
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  

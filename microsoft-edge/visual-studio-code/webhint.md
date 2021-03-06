@@ -1,34 +1,34 @@
 ---
-description: Visual Studio コードでの webhint の使い方
-title: webhint VS コード拡張
+description: コードで webhint をVisual Studioする方法
+title: webhint Visual Studio コード拡張機能
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 05/07/2020
+ms.date: 01/07/2021
 ms.topic: article
 ms.prod: microsoft-edge
-keywords: microsoft edge、web 開発、vs コード、visual studio コード、web ヒント
-ms.openlocfilehash: ec218fab8cbfb8181a0416c8e0eadc0e00412529
-ms.sourcegitcommit: c1b5fdd48d39d874a76c9b8f68309eb1b507fd0b
+keywords: microsoft edge, Web 開発, vs code, visual studio code, webhint
+ms.openlocfilehash: 3dfd900bf818d02dbc8123c00e7928e56d9b6ade
+ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "10695860"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "11399275"
 ---
-# <span data-ttu-id="25907-104">Webhint Vs コード拡張</span><span class="sxs-lookup"><span data-stu-id="25907-104">Webhint Vs Code Extension</span></span>  
+# <a name="webhint-vs-code-extension"></a><span data-ttu-id="2e301-104">Webhint Vs Code Extension</span><span class="sxs-lookup"><span data-stu-id="2e301-104">Webhint Vs Code Extension</span></span>  
 
-<span data-ttu-id="25907-105">カスタマイズ可能なカスタマイズされたカスタマイズされた機能[を使って][WebhintMain]、アクセシビリティ、パフォーマンス、クロスブラウザーの互換性、PWA の互換性、およびサイトのセキュリティを向上させることができます。</span><span class="sxs-lookup"><span data-stu-id="25907-105">Use [webhint][WebhintMain], a customizable linting tool, to improve the accessibility, performance, cross-browser compatibility, PWA compatibility, and security of your site.</span></span>  <span data-ttu-id="25907-106">ベストプラクティスと一般的なエラーについてコードを確認します。</span><span class="sxs-lookup"><span data-stu-id="25907-106">It checks your code for best practices and common errors.</span></span> <span data-ttu-id="25907-107">このオープンソースプロジェクトは、最初に Microsoft Edge チームによって開発されたものであり、 [Openjs Foundation][OpenjsFoundation]に含まれています。</span><span class="sxs-lookup"><span data-stu-id="25907-107">This open-source project, initially developed by the Microsoft Edge team, is now part of the [OpenJS Foundation][OpenjsFoundation].</span></span>  <span data-ttu-id="25907-108">Microsoft Edge チームは、コミュニティの web 開発者と共に web ヒントに投稿し続けています。</span><span class="sxs-lookup"><span data-stu-id="25907-108">The Microsoft Edge team continues to contribute to webhint alongside web developers in the community.</span></span>  
+<span data-ttu-id="2e301-105">カスタマイズ可能なリント ツールである [webhint][WebhintMain]を使用して、サイトのアクセシビリティ、パフォーマンス、ブラウザー間の互換性、PWA の互換性、およびセキュリティを向上させます。</span><span class="sxs-lookup"><span data-stu-id="2e301-105">Use [webhint][WebhintMain], a customizable linting tool, to improve the accessibility, performance, cross-browser compatibility, PWA compatibility, and security of your site.</span></span>  <span data-ttu-id="2e301-106">コードでベスト プラクティスと一般的なエラーをチェックします。</span><span class="sxs-lookup"><span data-stu-id="2e301-106">It checks your code for best practices and common errors.</span></span> <span data-ttu-id="2e301-107">このオープン ソース プロジェクトは、Microsoft Edge チームによって最初に開発されましたが、 [現在は OpenJS Foundation の一部です][OpenjsFoundation]。</span><span class="sxs-lookup"><span data-stu-id="2e301-107">This open-source project, initially developed by the Microsoft Edge team, is now part of the [OpenJS Foundation][OpenjsFoundation].</span></span>  <span data-ttu-id="2e301-108">Microsoft Edge チームは、コミュニティの Web 開発者と共に Webhint に引き続き貢献しています。</span><span class="sxs-lookup"><span data-stu-id="2e301-108">The Microsoft Edge team continues to contribute to webhint alongside web developers in the community.</span></span>  
 
-:::image type="complex" source="./media/webhint-extension.png" alt-text="Web ヒントとコード拡張のスクリーンショット":::
-   <span data-ttu-id="25907-110">Web ヒントとコード拡張のスクリーンショット</span><span class="sxs-lookup"><span data-stu-id="25907-110">Screenshot of webhint VS Code extension</span></span>  
+:::image type="complex" source="./media/webhint-extension.png" alt-text="Webhint Visual Studio Code 拡張機能のスクリーンショット":::
+   <span data-ttu-id="2e301-110">Webhint Visual Studio Code 拡張機能のスクリーンショット</span><span class="sxs-lookup"><span data-stu-id="2e301-110">Screenshot of webhint Visual Studio Code extension</span></span>  
 :::image-end:::
 
-<!--![Screenshot of webhint VS Code extension][ImageWebhintExtension]  -->  
+<!--![Screenshot of webhint Visual Studio Code extension][ImageWebhintExtension]  -->  
 
-<span data-ttu-id="25907-111">[VS コードの webhint 拡張機能][VisualstudioMarketplaceWebhint]を追加して、HTML、CSS、JavaScript、TypeScript などの問題を特定して修正します。</span><span class="sxs-lookup"><span data-stu-id="25907-111">Identify and fix problems in your HTML, CSS, JavaScript, TypeScript, and more by adding the [webhint extension for VS Code][VisualstudioMarketplaceWebhint].</span></span>  <span data-ttu-id="25907-112">ヒントはインライン下線として表示され、[**問題**] ウィンドウに集計されます。</span><span class="sxs-lookup"><span data-stu-id="25907-112">Hints appear as inline underlines and are summarized in the **Problems** pane.</span></span>  
+<span data-ttu-id="2e301-111">HTML、CSS、JavaScript、TypeScript など、コードの [webhint][VisualstudioMarketplaceWebhint]拡張機能を追加して、問題を特定Visual Studioします。</span><span class="sxs-lookup"><span data-stu-id="2e301-111">Identify and fix problems in your HTML, CSS, JavaScript, TypeScript, and more by adding the [webhint extension for Visual Studio Code][VisualstudioMarketplaceWebhint].</span></span>  <span data-ttu-id="2e301-112">ヒントはインラインの下線として表示され、[問題] ウィンドウ **に要約** されます。</span><span class="sxs-lookup"><span data-stu-id="2e301-112">Hints appear as inline underlines and are summarized in the **Problems** pane.</span></span>  
 
-## <span data-ttu-id="25907-113">構成</span><span class="sxs-lookup"><span data-stu-id="25907-113">Configuration</span></span>  
+## <a name="configuration"></a><span data-ttu-id="2e301-113">構成</span><span class="sxs-lookup"><span data-stu-id="2e301-113">Configuration</span></span>  
 
-<span data-ttu-id="25907-114">この拡張機能では、HTML、CSS、テンプレートシステム \ (JSX/TSX、角速度など)、JavaScript/TypeScript などのヒントとパーサーをアクティブ化する[既定の構成][GithubWebhintioIndexjson]json ファイルが使用されます。</span><span class="sxs-lookup"><span data-stu-id="25907-114">This extension uses a [default configuration][GithubWebhintioIndexjson] json file that activates hints and parsers for HTML, CSS, templating systems \(JSX/TSX, Angular, and so on\), JavaScript/TypeScript, and more.</span></span>  
+<span data-ttu-id="2e301-114">この拡張機能では、HTML、CSS、テンプレート システム \(JSX/TSX、Angular など)、JavaScript/TypeScript などのヒントとパーサーをアクティブ化する既定の構成 json ファイルを使用します。 [][GithubWebhintioIndexjson]</span><span class="sxs-lookup"><span data-stu-id="2e301-114">This extension uses a [default configuration][GithubWebhintioIndexjson] json file that activates hints and parsers for HTML, CSS, templating systems \(JSX/TSX, Angular, and so on\), JavaScript/TypeScript, and more.</span></span>  
 
 ```json
 {
@@ -80,37 +80,37 @@ ms.locfileid: "10695860"
 }
 ```  
 
-<span data-ttu-id="25907-115">アクティブ化されるヒントとパーサーをさらに制御する必要がある場合は、 `.hintrc` web ヒントを構成するためのローカルファイルを作成します。</span><span class="sxs-lookup"><span data-stu-id="25907-115">If you want more control over the hints and parsers that get activated, create a local `.hintrc` file to configure webhint.</span></span>  <span data-ttu-id="25907-116">特定のヒントからの出力に関するヘルプについては、「 [webhint ユーザーガイド][WebhintDocsUserguideConfiguringSummary]」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="25907-116">For help with output from specific hints, see [webhint user guide][WebhintDocsUserguideConfiguringSummary].</span></span>  
+<span data-ttu-id="2e301-115">アクティブ化されるヒントとパーサーを詳細に制御する場合は、webhint を構成するローカル ファイル `.hintrc` を作成します。</span><span class="sxs-lookup"><span data-stu-id="2e301-115">If you want more control over the hints and parsers that get activated, create a local `.hintrc` file to configure webhint.</span></span>  <span data-ttu-id="2e301-116">特定のヒントからの出力のヘルプについては [、webhint][WebhintDocsUserguideConfiguringSummary]ユーザー ガイドに移動します。</span><span class="sxs-lookup"><span data-stu-id="2e301-116">For help with output from specific hints, navigate to [webhint user guide][WebhintDocsUserguideConfiguringSummary].</span></span>  
 
-## <span data-ttu-id="25907-117">Webhint チームと連絡を取り合う</span><span class="sxs-lookup"><span data-stu-id="25907-117">Getting in touch with the webhint team</span></span>  
+## <a name="getting-in-touch-with-the-webhint-team"></a><span data-ttu-id="2e301-117">webhint チームと連絡を取る</span><span class="sxs-lookup"><span data-stu-id="2e301-117">Getting in touch with the webhint team</span></span>  
 
-<span data-ttu-id="25907-118">[Webhint github リポジトリ][GithubWebhintio]の[問題を提出][GithubWebhintioIssuesNew]して、フィードバックを送信します。</span><span class="sxs-lookup"><span data-stu-id="25907-118">Send your feedback by [filing an issue][GithubWebhintioIssuesNew] in [webhint GitHub repo][GithubWebhintio].</span></span>  
+<span data-ttu-id="2e301-118">[webhint GitHub][GithubWebhintio]リポジトリに問題を提出してフィードバックを送信します。 [][GithubWebhintioIssuesNew]</span><span class="sxs-lookup"><span data-stu-id="2e301-118">Send your feedback by [filing an issue][GithubWebhintioIssuesNew] in [webhint GitHub repo][GithubWebhintio].</span></span>  
 
-<span data-ttu-id="25907-119">拡張機能に参加するには、「 [webhint とコード拡張の投稿ガイド][GithubWebhintioExtensionVscodeContributing]」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="25907-119">To contribute to the extension, see [webhint VS Code extension contribution guide][GithubWebhintioExtensionVscodeContributing].</span></span>  
+<span data-ttu-id="2e301-119">拡張機能に貢献するには [、webhint Visual Studio コード拡張機能の投稿ガイド に移動します][GithubWebhintioExtensionVscodeContributing]。</span><span class="sxs-lookup"><span data-stu-id="2e301-119">To contribute to the extension, navigate to [webhint Visual Studio Code extension contribution guide][GithubWebhintioExtensionVscodeContributing].</span></span>  
 
-## <span data-ttu-id="25907-120">関連項目</span><span class="sxs-lookup"><span data-stu-id="25907-120">See also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="2e301-120">関連項目</span><span class="sxs-lookup"><span data-stu-id="2e301-120">See also</span></span>  
 
-*   [<span data-ttu-id="25907-121">アクセシビリティ</span><span class="sxs-lookup"><span data-stu-id="25907-121">Accessibility</span></span>][AccessibilityIndex]  
-*   [<span data-ttu-id="25907-122">Visual Studio Code</span><span class="sxs-lookup"><span data-stu-id="25907-122">Visual Studio Code</span></span>][VisualstudiocodeIndex]  
+*   [<span data-ttu-id="2e301-121">アクセシビリティ</span><span class="sxs-lookup"><span data-stu-id="2e301-121">Accessibility</span></span>][AccessibilityIndex]  
+*   [<span data-ttu-id="2e301-122">Visual Studio Code</span><span class="sxs-lookup"><span data-stu-id="2e301-122">Visual Studio Code</span></span>][VisualstudiocodeIndex]  
 
 <!-- image links -->  
 
-<!--[ImageWebhintExtension]: ./media/webhint-extension.png "Screenshot of webhint VS Code extension"  -->  
+<!--[ImageWebhintExtension]: ./media/webhint-extension.png "Screenshot of webhint Visual Studio Code extension"  -->  
 
 <!--links -->  
 
-[AccessibilityIndex]: /microsoft-edge/accessibility "アクセシビリティ |Microsoft ドキュメント"  
+[AccessibilityIndex]: /microsoft-edge/accessibility "アクセシビリティ |Microsoft Docs"  
 
-[VisualstudiocodeIndex]: /microsoft-edge/visual-studio-code/index "Visual Studio コード |Microsoft ドキュメント"  
+[VisualstudiocodeIndex]: /microsoft-edge/visual-studio-code/index "Visual Studio コード |Microsoft Docs"  
 
-[GithubWebhintio]: https://github.com/webhintio/hint "web ヒント |GitHub"  
-[GithubWebhintioExtensionVscodeContributing]: https://github.com/webhintio/hint/blob/master/packages/extension-vscode/CONTRIBUTING.md "投稿-web ヒント |GitHub"  
-[GithubWebhintioIndexjson]: https://github.com/webhintio/hint/blob/master/packages/configuration-development/index.json "webhintio/hint |GitHub"
-[GithubWebhintioIssuesNew]: https://github.com/webhintio/hint/issues/new "新しい問題-webhintio/ヒント |GitHub"  
+[GithubWebhintio]: https://github.com/webhintio/hint "webhint |GitHub"  
+[GithubWebhintioExtensionVscodeContributing]: https://github.com/webhintio/hint/blob/master/packages/extension-vscode/CONTRIBUTING.md "寄稿 - webhint |GitHub"  
+[GithubWebhintioIndexjson]: https://github.com/webhintio/hint/blob/master/packages/configuration-development/index.json "index.js- webhintio/hint |GitHub"
+[GithubWebhintioIssuesNew]: https://github.com/webhintio/hint/issues/new "新しい問題 - webhintio/hint |GitHub"  
 
-[VisualstudioMarketplaceWebhint]: https://marketplace.visualstudio.com/items?itemName=webhint.vscode-webhint "web ヒント |Visual Studio Marketplace"  
+[VisualstudioMarketplaceWebhint]: https://marketplace.visualstudio.com/items?itemName=webhint.vscode-webhint "webhint |Visual Studio Marketplace"  
 
 [OpenjsFoundation]:  https://openjsf.org "OpenJS Foundation"  
 
-[WebhintDocsUserguideConfiguringSummary]: https://webhint.io/docs/user-guide/configuring-webhint/summary "Webhint | の構成webhint に関するドキュメント"  
-[WebhintMain]:  https://webhint.io "web ヒント"  
+[WebhintDocsUserguideConfiguringSummary]: https://webhint.io/docs/user-guide/configuring-webhint/summary "Webhint ファイルの|webhint ドキュメント"  
+[WebhintMain]:  https://webhint.io "webhint"  

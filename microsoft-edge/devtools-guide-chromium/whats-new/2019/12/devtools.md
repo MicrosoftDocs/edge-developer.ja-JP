@@ -1,18 +1,18 @@
 ---
-description: ユーザー補助機能の改善、その他の言語の DevTools の使用などがあります。
+description: アクセシビリティの向上、他の言語での DevTools の使用など。
 title: DevTools の新機能 (Microsoft Edge 80)
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 09/11/2020
+ms.date: 02/12/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 8f82f46cd683433a37614bcf15745e1de9f31ffb
-ms.sourcegitcommit: b337717957529239434b4e8e1e167aebf0543518
+ms.openlocfilehash: 80f870d22c81479bff9b9413717ccc7c323d9a05
+ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "11015469"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "11397560"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -28,68 +28,68 @@ ms.locfileid: "11015469"
    See the License for the specific language governing permissions and
    limitations under the License.  -->  
 
-# <span data-ttu-id="7904f-104">DevTools の新機能 (Microsoft Edge 80)</span><span class="sxs-lookup"><span data-stu-id="7904f-104">What's new in DevTools (Microsoft Edge 80)</span></span>  
+# <a name="whats-new-in-devtools-microsoft-edge-80"></a><span data-ttu-id="f0c09-104">DevTools の新機能 (Microsoft Edge 80)</span><span class="sxs-lookup"><span data-stu-id="f0c09-104">What's new in DevTools (Microsoft Edge 80)</span></span>  
 
-## <span data-ttu-id="7904f-105">Microsoft Edge DevTools チームからのお知らせ</span><span class="sxs-lookup"><span data-stu-id="7904f-105">Announcements from the Microsoft Edge DevTools team</span></span>  
+## <a name="announcements-from-the-microsoft-edge-devtools-team"></a><span data-ttu-id="f0c09-105">Microsoft Edge DevTools チームからのお知らせ</span><span class="sxs-lookup"><span data-stu-id="f0c09-105">Announcements from the Microsoft Edge DevTools team</span></span>  
 
-<span data-ttu-id="7904f-106">以下のセクションでは、Microsoft Edge DevTools チームから見落とした可能性があるお知らせの一覧を示します。</span><span class="sxs-lookup"><span data-stu-id="7904f-106">The following sections are a list of announcements you may have missed from the Microsoft Edge DevTools team!</span></span> <span data-ttu-id="7904f-107">それらを確認して、DevTools、Visual Studio コード拡張などの新機能を試してみてください。</span><span class="sxs-lookup"><span data-stu-id="7904f-107">Check them out to try new features in the DevTools, Visual Studio Code extensions, and more.</span></span>  <span data-ttu-id="7904f-108">開発者ツールの最新の機能と最大の機能を常に最新の状態に維持するには、 [Microsoft Edge preview チャネル][MicrosoftEdgePreviewChannels] をダウンロードして、 [Twitter に従っ][EdgeDevToolsTwitterAccount]てください。</span><span class="sxs-lookup"><span data-stu-id="7904f-108">To stay up to date on all the latest and greatest features in your developer tools, download the [Microsoft Edge preview channels][MicrosoftEdgePreviewChannels] and [follow us on Twitter][EdgeDevToolsTwitterAccount].</span></span>  
+<span data-ttu-id="f0c09-106">以下のセクションでは、Microsoft Edge DevTools チームからのもので、見落としがあった可能性のあるお知らせの一覧を示します。</span><span class="sxs-lookup"><span data-stu-id="f0c09-106">The following sections are a list of announcements you may have missed from the Microsoft Edge DevTools team.</span></span>  <span data-ttu-id="f0c09-107">DevTools、Microsoft コード拡張機能、その他の新機能を試Visual Studioお知らせをご覧ください。</span><span class="sxs-lookup"><span data-stu-id="f0c09-107">Check out the announcements to try new features in the DevTools, Microsoft Visual Studio Code extensions, and more.</span></span>  <span data-ttu-id="f0c09-108">開発者ツールのすべての最新および最大の機能を最新の情報に更新するには [、Microsoft Edge][MicrosoftEdgePreviewChannels] プレビュー チャネルをダウンロードし [、Twitter][EdgeDevToolsTwitterAccount]でフォローしてください。</span><span class="sxs-lookup"><span data-stu-id="f0c09-108">To stay up to date on all the latest and greatest features in your developer tools, download the [Microsoft Edge preview channels][MicrosoftEdgePreviewChannels] and [follow us on Twitter][EdgeDevToolsTwitterAccount].</span></span>  
 
-### <span data-ttu-id="7904f-109">DevTools のアクセシビリティの改善</span><span class="sxs-lookup"><span data-stu-id="7904f-109">Accessibility improvements to the DevTools</span></span>  
+### <a name="accessibility-improvements-to-the-devtools"></a><span data-ttu-id="f0c09-109">DevTools のアクセシビリティの向上</span><span class="sxs-lookup"><span data-stu-id="f0c09-109">Accessibility improvements to the DevTools</span></span>  
 
-<span data-ttu-id="7904f-110">DevTools チームは、Chromium に170の変更を加え、色のコントラスト、キーボード、スクリーンリーダーに関する大きな問題に対応します。</span><span class="sxs-lookup"><span data-stu-id="7904f-110">The DevTools team has contributed 170 changes to Chromium to address high-impact color contrast, keyboard, and screen reader issues in the DevTools.</span></span>  <span data-ttu-id="7904f-111">Web を構築するすべての開発者は、DevTools を使用できるようにする必要があります。</span><span class="sxs-lookup"><span data-stu-id="7904f-111">Every developer building the web should be able to use the DevTools.</span></span>  
+<span data-ttu-id="f0c09-110">DevTools チームは、DevTools で影響の大きなカラー コントラスト、キーボード、スクリーン リーダーの問題に対処するために、クロムに対して 170 の変更を提供しました。</span><span class="sxs-lookup"><span data-stu-id="f0c09-110">The DevTools team has contributed 170 changes to Chromium to address high-impact color contrast, keyboard, and screen reader issues in the DevTools.</span></span>  <span data-ttu-id="f0c09-111">Web を構築する開発者は、すべての開発者が DevTools を使用できる必要があります。</span><span class="sxs-lookup"><span data-stu-id="f0c09-111">Every developer building the web should be able to use the DevTools.</span></span>  
 
-:::image type="complex" source="../../images/2019/12/a11y-performance-tool.msft.gif" alt-text="キーボードナビゲーションとスクリーンリーダーの改良による DevTools のパフォーマンスツール" lightbox="../../images/2019/12/a11y-performance-tool.msft.gif":::
-   <span data-ttu-id="7904f-113">キーボードナビゲーションとスクリーンリーダーの改良による DevTools の **パフォーマンス** ツール</span><span class="sxs-lookup"><span data-stu-id="7904f-113">The **Performance** tool in the DevTools with the keyboard navigation and screen reader improvements</span></span>  
+:::image type="complex" source="../../images/2019/12/a11y-performance-tool.msft.gif" alt-text="キーボード ナビゲーションとスクリーン リーダーの機能強化を備え、DevTools のパフォーマンス ツール" lightbox="../../images/2019/12/a11y-performance-tool.msft.gif":::
+   <span data-ttu-id="f0c09-113">キーボード **ナビゲーション** とスクリーン リーダーの機能強化を備え、DevTools のパフォーマンス ツール</span><span class="sxs-lookup"><span data-stu-id="f0c09-113">The **Performance** tool in the DevTools with the keyboard navigation and screen reader improvements</span></span>  
 :::image-end:::  
 
-<span data-ttu-id="7904f-114">すべてのユーザーが web ページにアクセスできるようにする方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="7904f-114">Want to learn how to make your web page accessible to all of your users?</span></span>  <span data-ttu-id="7904f-115">使用を開始するには、Microsoft Edge のアクセシビリティに関する [洞察][AccessibilityInsights] と [webhint][WebhintBrowserExtension] の拡張機能をダウンロードしてください。</span><span class="sxs-lookup"><span data-stu-id="7904f-115">Download the [Accessibility Insights][AccessibilityInsights] and [webhint][WebhintBrowserExtension] extensions for Microsoft Edge to get started.</span></span>  
+<span data-ttu-id="f0c09-114">すべてのユーザーが Web ページにアクセス可能にする方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="f0c09-114">Want to learn how to make your web page accessible to all of your users?</span></span>  <span data-ttu-id="f0c09-115">Microsoft Edge [のアクセシビリティインサイト][AccessibilityInsights] と [webhint][WebhintBrowserExtension] 拡張機能をダウンロードして、開始します。</span><span class="sxs-lookup"><span data-stu-id="f0c09-115">Download the [Accessibility Insights][AccessibilityInsights] and [webhint][WebhintBrowserExtension] extensions for Microsoft Edge to get started.</span></span>  
 
-<span data-ttu-id="7904f-116">スクリーンリーダーまたはキーボードを使用して DevTools を移動する場合は、 [ツイート][PostTweetEdgeDevTools] でフィードバックを送信するか、[ [フィードバックの送信](#getting-in-touch-with-microsoft-edge-devtools-team) ] アイコンをクリックします。</span><span class="sxs-lookup"><span data-stu-id="7904f-116">If you use screen readers or the keyboard to navigate around the DevTools, send your feedback by [tweeting][PostTweetEdgeDevTools] at us or clicking the [Send Feedback](#getting-in-touch-with-microsoft-edge-devtools-team) icon!</span></span>  
+<span data-ttu-id="f0c09-116">スクリーン リーダーまたはキーボードを使用して DevTools の周りを移動する場合[][PostTweetEdgeDevTools]は、フィードバックの送信アイコンをツイートするか、フィードバックの送信アイコン[を選択してフィードバックを送信](#getting-in-touch-with-microsoft-edge-devtools-team)してください。</span><span class="sxs-lookup"><span data-stu-id="f0c09-116">If you use screen readers or the keyboard to navigate around the DevTools, send your feedback by [tweeting][PostTweetEdgeDevTools] at us orchoosing the [Send Feedback](#getting-in-touch-with-microsoft-edge-devtools-team) icon!</span></span>  
 
-<span data-ttu-id="7904f-117">Chromium の問題 [#963183][CR963183]</span><span class="sxs-lookup"><span data-stu-id="7904f-117">Chromium issue [#963183][CR963183]</span></span>  
+<span data-ttu-id="f0c09-117">クロムの問題 [#963183][CR963183]</span><span class="sxs-lookup"><span data-stu-id="f0c09-117">Chromium issue [#963183][CR963183]</span></span>  
 
-### <span data-ttu-id="7904f-118">他の言語での DevTools の使用</span><span class="sxs-lookup"><span data-stu-id="7904f-118">Using the DevTools in other languages</span></span>  
+### <a name="using-the-devtools-in-other-languages"></a><span data-ttu-id="f0c09-118">DevTools を他の言語で使用する</span><span class="sxs-lookup"><span data-stu-id="f0c09-118">Using the DevTools in other languages</span></span>  
 
-<span data-ttu-id="7904f-119">多くの開発者は、英語だけでなく、StackOverflow や Visual Studio コードなどの開発者ツールをネイティブ言語で使用しています。</span><span class="sxs-lookup"><span data-stu-id="7904f-119">Many developers use other developer tools, like StackOverflow and Visual Studio Code, in their native language, not just in English.</span></span>  <span data-ttu-id="7904f-120">ここでは、開発ツールのローカライズについて説明します。ここでは、英語以外の10言語のいずれかで使用できるようになっています。</span><span class="sxs-lookup"><span data-stu-id="7904f-120">We’re excited to announce localization for the DevTools, which you are now able to use in one of 10 languages besides English:</span></span>  
+<span data-ttu-id="f0c09-119">多くの開発者は、英語ではなく、母国語で StackOverflow や Visual Studio コードなどの他の開発者ツールを使用します。</span><span class="sxs-lookup"><span data-stu-id="f0c09-119">Many developers use other developer tools, like StackOverflow and Visual Studio Code, in their native language, not just in English.</span></span>  <span data-ttu-id="f0c09-120">英語以外の 10 か国語で使用できる DevTools のローカライズをお知らせします。</span><span class="sxs-lookup"><span data-stu-id="f0c09-120">We’re excited to announce localization for the DevTools, which you are now able to use in one of 10 languages besides English:</span></span>  
 
 :::row:::
    :::column span="":::
-      <span data-ttu-id="7904f-121">中国語 \ (簡体字)- &#20013;&#25991;&#65288;&#31616;&#20307;&#65289;</span><span class="sxs-lookup"><span data-stu-id="7904f-121">Chinese \(Simplified\) - &#20013;&#25991;&#65288;&#31616;&#20307;&#65289;</span></span>
+      <span data-ttu-id="f0c09-121">中国語 \(簡体字\) - &#20013;&#25991;&#65288;&#31616;&#20307;&#65289;</span><span class="sxs-lookup"><span data-stu-id="f0c09-121">Chinese \(Simplified\) - &#20013;&#25991;&#65288;&#31616;&#20307;&#65289;</span></span>
    :::column-end:::
    :::column span="":::
-      <span data-ttu-id="7904f-122">中国語 (繁体字)- &#20013;&#25991;&#65288;&#32321;&#39636;&#65289;</span><span class="sxs-lookup"><span data-stu-id="7904f-122">Chinese \(Traditional\) - &#20013;&#25991;&#65288;&#32321;&#39636;&#65289;</span></span>
+      <span data-ttu-id="f0c09-122">中国語 \(Traditional\) - &#20013;&#25991;&#65288;&#32321;&#39636;&#65289;</span><span class="sxs-lookup"><span data-stu-id="f0c09-122">Chinese \(Traditional\) - &#20013;&#25991;&#65288;&#32321;&#39636;&#65289;</span></span>
    :::column-end:::
 :::row-end:::
 :::row:::
    :::column span="":::
-      <span data-ttu-id="7904f-123">フランス語– fran&#231;ais</span><span class="sxs-lookup"><span data-stu-id="7904f-123">French – fran&#231;ais</span></span>
+      <span data-ttu-id="f0c09-123">フランス語 – フランス語&#231;ais</span><span class="sxs-lookup"><span data-stu-id="f0c09-123">French – fran&#231;ais</span></span>
    :::column-end:::
    :::column span="":::
-      <span data-ttu-id="7904f-124">ドイツ語-deutsch</span><span class="sxs-lookup"><span data-stu-id="7904f-124">German - deutsch</span></span>
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column span="":::
-      <span data-ttu-id="7904f-125">イタリア語-italiano</span><span class="sxs-lookup"><span data-stu-id="7904f-125">Italian - italiano</span></span>
-   :::column-end:::
-   :::column span="":::
-      <span data-ttu-id="7904f-126">日本語- &#26085;&#26412;&#35486;</span><span class="sxs-lookup"><span data-stu-id="7904f-126">Japanese - &#26085;&#26412;&#35486;</span></span>
+      <span data-ttu-id="f0c09-124">ドイツ語 - deutsch</span><span class="sxs-lookup"><span data-stu-id="f0c09-124">German - deutsch</span></span>
    :::column-end:::
 :::row-end:::
 :::row:::
    :::column span="":::
-      <span data-ttu-id="7904f-127">韓国語- &#54620;&#44397;&#50612;</span><span class="sxs-lookup"><span data-stu-id="7904f-127">Korean - &#54620;&#44397;&#50612;</span></span>
+      <span data-ttu-id="f0c09-125">イタリア語 - イタリア語</span><span class="sxs-lookup"><span data-stu-id="f0c09-125">Italian - italiano</span></span>
    :::column-end:::
    :::column span="":::
-      <span data-ttu-id="7904f-128">ポルトガル語-portugu&#234;s</span><span class="sxs-lookup"><span data-stu-id="7904f-128">Portuguese - portugu&#234;s</span></span>
+      <span data-ttu-id="f0c09-126">日本語 - &#26085;&#26412;&#35486;</span><span class="sxs-lookup"><span data-stu-id="f0c09-126">Japanese - &#26085;&#26412;&#35486;</span></span>
    :::column-end:::
 :::row-end:::
 :::row:::
    :::column span="":::
-      <span data-ttu-id="7904f-129">ロシア語–  &#1088;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;</span><span class="sxs-lookup"><span data-stu-id="7904f-129">Russian – &#1088;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;</span></span>
+      <span data-ttu-id="f0c09-127">韓国語 - &#54620;&#44397;&#50612;</span><span class="sxs-lookup"><span data-stu-id="f0c09-127">Korean - &#54620;&#44397;&#50612;</span></span>
    :::column-end:::
    :::column span="":::
-      <span data-ttu-id="7904f-130">スペイン語-&#241;ol</span><span class="sxs-lookup"><span data-stu-id="7904f-130">Spanish - espa&#241;ol</span></span>
+      <span data-ttu-id="f0c09-128">ポルトガル語 - portugu&#234;s</span><span class="sxs-lookup"><span data-stu-id="f0c09-128">Portuguese - portugu&#234;s</span></span>
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      <span data-ttu-id="f0c09-129">ロシア語 – &#1088;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;</span><span class="sxs-lookup"><span data-stu-id="f0c09-129">Russian – &#1088;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;</span></span>
+   :::column-end:::
+   :::column span="":::
+      <span data-ttu-id="f0c09-130">スペイン語 - espa&#241;ol</span><span class="sxs-lookup"><span data-stu-id="f0c09-130">Spanish - espa&#241;ol</span></span>
    :::column-end:::
 :::row-end:::
 
@@ -103,121 +103,122 @@ ms.locfileid: "11015469"
 | Russian – русский | Spanish - español |  
 -->  
 
-<span data-ttu-id="7904f-131">に移動 `edge://flags` して、[ローカライズされた **開発者ツールを有効** にする] フラグを [ **有効**] に設定します。</span><span class="sxs-lookup"><span data-stu-id="7904f-131">Navigate to `edge://flags` and set the **Enable localized Developer Tools** flag to **Enabled**.</span></span>  <span data-ttu-id="7904f-132">また、 **開発者ツールの実験** フラグを [ **有効**にする」に設定します。</span><span class="sxs-lookup"><span data-stu-id="7904f-132">Also set the **Developer Tools experiments** flag to **Enabled**.</span></span>  <span data-ttu-id="7904f-133">Microsoft Edge を再起動して、DevTools を開きます。</span><span class="sxs-lookup"><span data-stu-id="7904f-133">Restart Microsoft Edge and open the DevTools.</span></span>  <!-- Press `F1` in the DevTools or go to Settings > Experiments and check the **Match browser language** checkbox.  -->  <span data-ttu-id="7904f-134">DevTools は、Microsoft Edge で使用する言語と一致し `edge://settings/languages` ます。</span><span class="sxs-lookup"><span data-stu-id="7904f-134">The DevTools match the language you use for Microsoft Edge in `edge://settings/languages`.</span></span>  
+<span data-ttu-id="f0c09-131">[ローカライズされた `edge://flags` 開発者ツールを有効 **にする] フラグに移動し、[** 有効] に **設定します**。</span><span class="sxs-lookup"><span data-stu-id="f0c09-131">Navigate to `edge://flags` and set the **Enable localized Developer Tools** flag to **Enabled**.</span></span>  <span data-ttu-id="f0c09-132">また、[開発者ツールの **実験] フラグを [** 有効] に **設定します**。</span><span class="sxs-lookup"><span data-stu-id="f0c09-132">Also set the **Developer Tools experiments** flag to **Enabled**.</span></span>  <span data-ttu-id="f0c09-133">Microsoft Edge を再起動し、DevTools を開きます。</span><span class="sxs-lookup"><span data-stu-id="f0c09-133">Restart Microsoft Edge and open the DevTools.</span></span>  <!-- Select `F1` in the DevTools or navigate to Settings > Experiments and check the **Match browser language** checkbox.  -->  <span data-ttu-id="f0c09-134">DevTools は、Microsoft Edge で使用する言語と一致します `edge://settings/languages` 。</span><span class="sxs-lookup"><span data-stu-id="f0c09-134">The DevTools match the language you use for Microsoft Edge in `edge://settings/languages`.</span></span>  
 
 :::image type="complex" source="../../images/2019/12/localized-devtools.msft.png" alt-text="ドイツ語の DevTools" lightbox="../../images/2019/12/localized-devtools.msft.png":::
-   <span data-ttu-id="7904f-136">ドイツ語の DevTools</span><span class="sxs-lookup"><span data-stu-id="7904f-136">The DevTools in German</span></span>  
+   <span data-ttu-id="f0c09-136">ドイツ語の DevTools</span><span class="sxs-lookup"><span data-stu-id="f0c09-136">The DevTools in German</span></span>  
 :::image-end:::  
 
-<span data-ttu-id="7904f-137">用意されているものとは異なる言語で DevTools を使う場合は、 [ツイート][PostTweetEdgeDevTools] にサインインするか、[ [フィードバックの送信](#getting-in-touch-with-microsoft-edge-devtools-team) ] アイコンをクリックします。</span><span class="sxs-lookup"><span data-stu-id="7904f-137">If you want to use the DevTools in a different language than the ones that are available, [tweet][PostTweetEdgeDevTools] at us or click the [Send Feedback](#getting-in-touch-with-microsoft-edge-devtools-team) icon.</span></span>  
+<span data-ttu-id="f0c09-137">DevTools を使用可能な言語とは異なる言語で使用する場合は、ツイートするか、[[][PostTweetEdgeDevTools]フィードバックの送信][アイコンを選択](#getting-in-touch-with-microsoft-edge-devtools-team)します。</span><span class="sxs-lookup"><span data-stu-id="f0c09-137">If you want to use the DevTools in a different language than the ones that are available, [tweet][PostTweetEdgeDevTools] at us or choose the [Send Feedback](#getting-in-touch-with-microsoft-edge-devtools-team) icon.</span></span>  
 
-<span data-ttu-id="7904f-138">Chromium の問題 [#941561][CR941561]</span><span class="sxs-lookup"><span data-stu-id="7904f-138">Chromium issue [#941561][CR941561]</span></span>  
+<span data-ttu-id="f0c09-138">クロムの問題 [#941561][CR941561]</span><span class="sxs-lookup"><span data-stu-id="f0c09-138">Chromium issue [#941561][CR941561]</span></span>  
 
-### <span data-ttu-id="7904f-139">webhint Microsoft Edge extension</span><span class="sxs-lookup"><span data-stu-id="7904f-139">webhint Microsoft Edge extension</span></span>  
+### <a name="webhint-microsoft-edge-extension"></a><span data-ttu-id="f0c09-139">webhint Microsoft Edge 拡張機能</span><span class="sxs-lookup"><span data-stu-id="f0c09-139">webhint Microsoft Edge extension</span></span>  
 
-<span data-ttu-id="7904f-140">Webhint Microsoft Edge 拡張機能を使用すると、web ページを簡単にスキャンして、開発ツールでアクセシビリティ、ブラウザーの互換性、セキュリティ、パフォーマンスなどのフィードバックを得ることができます。</span><span class="sxs-lookup"><span data-stu-id="7904f-140">The webhint Microsoft Edge extension allows you to easily scan your web page and get feedback on accessibility, browser compatibility, security, performance, and more within the DevTools.</span></span>  <span data-ttu-id="7904f-141">詳細はこちら [https://webhint.io][Webhint] をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="7904f-141">Read more at [https://webhint.io][Webhint].</span></span>  
+<span data-ttu-id="f0c09-140">Webhint Microsoft Edge 拡張機能を使用すると、Web ページを簡単にスキャンし、DevTools 内のアクセシビリティ、ブラウザーの互換性、セキュリティ、パフォーマンスなどについてフィードバックを得ることができます。</span><span class="sxs-lookup"><span data-stu-id="f0c09-140">The webhint Microsoft Edge extension allows you to easily scan your web page and get feedback on accessibility, browser compatibility, security, performance, and more within the DevTools.</span></span>  <span data-ttu-id="f0c09-141">詳細については、 を参照してください [https://webhint.io][Webhint] 。</span><span class="sxs-lookup"><span data-stu-id="f0c09-141">Read more at [https://webhint.io][Webhint].</span></span>  
 
-:::image type="complex" source="../../images/2019/12/webhint-browser-extension.msft.png" alt-text="Webhint ブラウザー拡張機能がインストールされている場合の DevTools の [ヒント] タブ" lightbox="../../images/2019/12/webhint-browser-extension.msft.png":::
-   <span data-ttu-id="7904f-143">Webhint ブラウザー拡張機能がインストールされている場合の DevTools の [ **ヒント** ] タブ</span><span class="sxs-lookup"><span data-stu-id="7904f-143">The **Hints** tab in the DevTools when the webhint browser extension is installed</span></span>  
+:::image type="complex" source="../../images/2019/12/webhint-browser-extension.msft.png" alt-text="Webhint ブラウザー拡張機能がインストールされている場合の DevTools のヒント ツール" lightbox="../../images/2019/12/webhint-browser-extension.msft.png":::
+   <span data-ttu-id="f0c09-143">**Webhint**ブラウザー拡張機能がインストールされている場合の DevTools のヒント ツール</span><span class="sxs-lookup"><span data-stu-id="f0c09-143">The **Hints** tool in the DevTools when the webhint browser extension is installed</span></span>  
 :::image-end:::  
 
-<span data-ttu-id="7904f-144">[Microsoft Edge で webhint ブラウザーの拡張機能を試してみてください][MicrosoftEdgeInsiderAddons]。</span><span class="sxs-lookup"><span data-stu-id="7904f-144">[Try the webhint browser extension in Microsoft Edge][MicrosoftEdgeInsiderAddons].</span></span>  <span data-ttu-id="7904f-145">拡張機能をインストールしたら、DevTools を開いて、[ヒント] タブを選択します。 ここで、カスタマイズ可能なサイトスキャンを実行します。</span><span class="sxs-lookup"><span data-stu-id="7904f-145">Once you install the extension, open the DevTools and select the Hints tab.  From here, run a customizable site scan.</span></span>  <span data-ttu-id="7904f-146">詳細については、 [webhint.io][WebhintBrowserExtension] にアクセスしてください。</span><span class="sxs-lookup"><span data-stu-id="7904f-146">Head over to [webhint.io][WebhintBrowserExtension] to learn more.</span></span>
+<span data-ttu-id="f0c09-144">[Microsoft Edge で webhint ブラウザー拡張機能を試してみてください][MicrosoftEdgeInsiderAddons]。</span><span class="sxs-lookup"><span data-stu-id="f0c09-144">[Try the webhint browser extension in Microsoft Edge][MicrosoftEdgeInsiderAddons].</span></span>  <span data-ttu-id="f0c09-145">拡張機能をインストールしたら、DevTools を開き、ヒント ツール **を選択** します。</span><span class="sxs-lookup"><span data-stu-id="f0c09-145">Once you install the extension, open the DevTools and choose the **Hints** tool.</span></span>  <span data-ttu-id="f0c09-146">ここから、カスタマイズ可能なサイト スキャンを実行します。</span><span class="sxs-lookup"><span data-stu-id="f0c09-146">From here, run a customizable site scan.</span></span>  <span data-ttu-id="f0c09-147">詳細 [については、webhint.io][WebhintBrowserExtension] を参照してください。</span><span class="sxs-lookup"><span data-stu-id="f0c09-147">Head over to [webhint.io][WebhintBrowserExtension] to learn more.</span></span>
 
-### <span data-ttu-id="7904f-147">3D View (3D ビュー)</span><span class="sxs-lookup"><span data-stu-id="7904f-147">3D View</span></span>  
+### <a name="3d-view"></a><span data-ttu-id="f0c09-148">3D View (3D ビュー)</span><span class="sxs-lookup"><span data-stu-id="f0c09-148">3D View</span></span>  
 
-<span data-ttu-id="7904f-148">**3D ビュー**を使って、[ドキュメントオブジェクトモデル \ (DOM \)][MDNDocumentObjectModel]または[z インデックス][MDNZIndex]スタッキングのコンテキストを移動して、web アプリケーションをデバッグします。</span><span class="sxs-lookup"><span data-stu-id="7904f-148">Use the **3D View** to debug your web application by navigating through the [Document Object Model \(DOM\)][MDNDocumentObjectModel] or the [z-index][MDNZIndex] stacking context.</span></span>  
+<span data-ttu-id="f0c09-149">**3D ビューを使用**して、ドキュメント オブジェクト モデル[\(DOM\)][MDNDocumentObjectModel]または[z-index][MDNZIndex]スタック コンテキストを移動して、Web アプリケーションをデバッグします。</span><span class="sxs-lookup"><span data-stu-id="f0c09-149">Use the **3D View** to debug your web application by navigating through the [Document Object Model \(DOM\)][MDNDocumentObjectModel] or the [z-index][MDNZIndex] stacking context.</span></span>  
 
-:::image type="complex" source="../../images/2019/12/3dview.msft.png" alt-text="DevTools の3D ビュー" lightbox="../../images/2019/12/3dview.msft.png":::
-   <span data-ttu-id="7904f-150">DevTools の**3D ビュー**</span><span class="sxs-lookup"><span data-stu-id="7904f-150">The **3D View** in the DevTools</span></span>  
+:::image type="complex" source="../../images/2019/12/3dview.msft.png" alt-text="DevTools の 3D ビュー" lightbox="../../images/2019/12/3dview.msft.png":::
+   <span data-ttu-id="f0c09-151">DevTools **の 3D** ビュー</span><span class="sxs-lookup"><span data-stu-id="f0c09-151">The **3D View** in the DevTools</span></span>  
 :::image-end:::  
 
-<span data-ttu-id="7904f-151">3D ビューにアクセスするには、 `edge://flags` **開発者ツールの実験** フラグが [ **有効**] に設定されていることを確認します。</span><span class="sxs-lookup"><span data-stu-id="7904f-151">To access the 3D View, navigate to `edge://flags` and ensure that the **Developer Tools experiments** flag is set to **Enabled**.</span></span>  <span data-ttu-id="7904f-152">Microsoft Edge を再起動して、DevTools を開きます。</span><span class="sxs-lookup"><span data-stu-id="7904f-152">Restart Microsoft Edge and open the DevTools.</span></span>  <span data-ttu-id="7904f-153">`F1`DevTools または [**設定**] に移動し、[**実験**] セクションに移動して、[ **3d ビューを有効にする**] チェックボックスをオンにします。</span><span class="sxs-lookup"><span data-stu-id="7904f-153">Press `F1` in the DevTools or go to **Settings**, navigate to **Experiments** section, and check the **Enable 3D View** checkbox.</span></span>  <span data-ttu-id="7904f-154">を押して、 `Ctrl`  +  `Shift`  +  `P` **3d ビュー**を入力し、[ **3d ビューの表示**] を選択します。</span><span class="sxs-lookup"><span data-stu-id="7904f-154">Now, press `Ctrl` + `Shift` + `P`, type in **3D View** and select **Show 3D View**.</span></span>  
+<span data-ttu-id="f0c09-152">3D ビューにアクセスするには、[開発者ツールの実験] フラグが [有効] に設定されています `edge://flags` 。 \*\*\*\* \*\*\*\*</span><span class="sxs-lookup"><span data-stu-id="f0c09-152">To access the 3D View, navigate to `edge://flags` and ensure that the **Developer Tools experiments** flag is set to **Enabled**.</span></span>  <span data-ttu-id="f0c09-153">Microsoft Edge を再起動し、DevTools を開きます。</span><span class="sxs-lookup"><span data-stu-id="f0c09-153">Restart Microsoft Edge and open the DevTools.</span></span>  <span data-ttu-id="f0c09-154">`F1`DevTools で選択するか、[設定\*\*\*\* の実験] セクションを開き、[3D ビューを有効にする  >  \*\*\*\*] チェック**ボックスをオン**にします。</span><span class="sxs-lookup"><span data-stu-id="f0c09-154">Select `F1` in the DevTools or open the **Settings** > **Experiments** section, and turn on the **Enable 3D View** checkbox.</span></span>  <span data-ttu-id="f0c09-155">次に `Ctrl`  +  `Shift`  +  `P` **、[3D**ビュー] と入力し **、[3D ビューの表示] を選択します**。</span><span class="sxs-lookup"><span data-stu-id="f0c09-155">Now, select `Ctrl` + `Shift` + `P`, type in **3D View** and select **Show 3D View**.</span></span>  
 
-<span data-ttu-id="7904f-155">現在、UI を使って3D ビューに機能を追加しています。 [フィードバック](#getting-in-touch-with-microsoft-edge-devtools-team)をお送りください。</span><span class="sxs-lookup"><span data-stu-id="7904f-155">We're working on the UI and adding more functionality to the 3D View so please send us your [feedback](#getting-in-touch-with-microsoft-edge-devtools-team).</span></span>  
+<span data-ttu-id="f0c09-156">UI に取り組み、3D ビューに機能を追加していますので、フィードバックをお寄 [せください](#getting-in-touch-with-microsoft-edge-devtools-team)。</span><span class="sxs-lookup"><span data-stu-id="f0c09-156">We're working on the UI and adding more functionality to the 3D View so please send us your [feedback](#getting-in-touch-with-microsoft-edge-devtools-team).</span></span>  
 
-<span data-ttu-id="7904f-156">Chromium の問題 [#987787][CR987787]</span><span class="sxs-lookup"><span data-stu-id="7904f-156">Chromium issue [#987787][CR987787]</span></span>
+<span data-ttu-id="f0c09-157">クロムの問題 [#987787][CR987787]</span><span class="sxs-lookup"><span data-stu-id="f0c09-157">Chromium issue [#987787][CR987787]</span></span>
 
-### <span data-ttu-id="7904f-157">Visual Studio コード拡張機能</span><span class="sxs-lookup"><span data-stu-id="7904f-157">Visual Studio Code extensions</span></span>  
+### <a name="visual-studio-code-extensions"></a><span data-ttu-id="f0c09-158">Visual Studio コード拡張機能</span><span class="sxs-lookup"><span data-stu-id="f0c09-158">Visual Studio Code extensions</span></span>  
 
-<span data-ttu-id="7904f-158">開発者ツールチームは、テキストエディターからコードを直接使うことができる [Visual Studio コード][VisualStudioCode] の拡張機能もいくつかリリースされました。</span><span class="sxs-lookup"><span data-stu-id="7904f-158">The DevTools team has also released some extensions for [Visual Studio Code][VisualStudioCode] that let you use the power of the DevTools directly from your text editor.</span></span> <span data-ttu-id="7904f-159">次の拡張子を確認してください。</span><span class="sxs-lookup"><span data-stu-id="7904f-159">Check out the following extensions.</span></span>  
+<span data-ttu-id="f0c09-159">DevTools チームは、テキスト エディターから [直接 devTools][VisualStudioCode] の機能を使用Visual Studioコードの拡張機能もいくつかリリースしました。</span><span class="sxs-lookup"><span data-stu-id="f0c09-159">The DevTools team has also released some extensions for [Visual Studio Code][VisualStudioCode] that let you use the power of the DevTools directly from your text editor.</span></span> <span data-ttu-id="f0c09-160">次の拡張機能を確認してください。</span><span class="sxs-lookup"><span data-stu-id="f0c09-160">Check out the following extensions.</span></span>  
 
-#### <span data-ttu-id="7904f-160">Microsoft Edge の要素</span><span class="sxs-lookup"><span data-stu-id="7904f-160">Elements for Microsoft Edge</span></span>  
+#### <a name="elements-for-microsoft-edge"></a><span data-ttu-id="f0c09-161">Microsoft Edge の要素</span><span class="sxs-lookup"><span data-stu-id="f0c09-161">Elements for Microsoft Edge</span></span>  
 
-<span data-ttu-id="7904f-161">Visual Studio のコード拡張 [の要素][VisualStudioMarketplaceElementsMicrosoftEdgeChromiumExtension] を追加することによって、Visual studio コード内から要素ツールを使います。</span><span class="sxs-lookup"><span data-stu-id="7904f-161">Use the Elements tool from within Visual Studio Code by adding the [Elements for Microsoft Edge (Chromium)][VisualStudioMarketplaceElementsMicrosoftEdgeChromiumExtension] Visual Studio Code extension.</span></span>  
+<span data-ttu-id="f0c09-162">Microsoft Edge の要素 [(クロム)][VisualStudioMarketplaceElementsMicrosoftEdgeChromiumExtension] Visual Studioコード拡張機能を追加して、コード内の要素ツールVisual Studio使用します。</span><span class="sxs-lookup"><span data-stu-id="f0c09-162">Use the Elements tool from within Visual Studio Code by adding the [Elements for Microsoft Edge (Chromium)][VisualStudioMarketplaceElementsMicrosoftEdgeChromiumExtension] Visual Studio Code extension.</span></span>  
 
-:::image type="complex" source="../../images/2019/12/elements-for-edge.msft.png" alt-text="Microsoft Edge 拡張機能の要素を使った Visual Studio コードの要素ツール" lightbox="../../images/2019/12/elements-for-edge.msft.png":::
-   <span data-ttu-id="7904f-163">Microsoft Edge 拡張機能の要素を使った Visual Studio コードの **要素** ツール</span><span class="sxs-lookup"><span data-stu-id="7904f-163">The **Elements** tool in Visual Studio Code using the Elements for Microsoft Edge extension</span></span>  
+:::image type="complex" source="../../images/2019/12/elements-for-edge.msft.png" alt-text="Microsoft Edge 拡張機能の要素Visual Studioコードの要素ツール" lightbox="../../images/2019/12/elements-for-edge.msft.png":::
+   <span data-ttu-id="f0c09-164">Microsoft \*\*\*\* Edge 拡張機能の要素Visual Studioコードの要素ツール</span><span class="sxs-lookup"><span data-stu-id="f0c09-164">The **Elements** tool in Visual Studio Code using the Elements for Microsoft Edge extension</span></span>  
 :::image-end:::  
 
-<span data-ttu-id="7904f-164">詳細については、「 [Microsoft Edge Visual Studio コード拡張の要素][VisualStudioCodeElementEdgeExtension]」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="7904f-164">For more information, check out [Elements for Microsoft Edge Visual Studio Code extension][VisualStudioCodeElementEdgeExtension].</span></span>  
+<span data-ttu-id="f0c09-165">詳細については [、「Elements for Microsoft Edge Visual Studio コード拡張機能」を参照してください][VisualStudioCodeElementEdgeExtension]。</span><span class="sxs-lookup"><span data-stu-id="f0c09-165">For more information, check out [Elements for Microsoft Edge Visual Studio Code extension][VisualStudioCodeElementEdgeExtension].</span></span>  
 
-#### <span data-ttu-id="7904f-165">Microsoft Edge 用デバッガー</span><span class="sxs-lookup"><span data-stu-id="7904f-165">Debugger for Microsoft Edge</span></span>  
+#### <a name="debugger-for-microsoft-edge"></a><span data-ttu-id="f0c09-166">Microsoft Edge のデバッガー</span><span class="sxs-lookup"><span data-stu-id="f0c09-166">Debugger for Microsoft Edge</span></span>  
 
-<span data-ttu-id="7904f-166">Microsoft Edge visual Studio コード拡張 [用デバッガー][VisualStudioMarketplaceDebuggerEdge] を使って、microsoft edge で実行されている JavaScript を Visual Studio コードから直接デバッグします。</span><span class="sxs-lookup"><span data-stu-id="7904f-166">With the [Debugger for Microsoft Edge][VisualStudioMarketplaceDebuggerEdge] Visual Studio Code extension, debug JavaScript running in Microsoft Edge directly from Visual Studio Code.</span></span>  
+<span data-ttu-id="f0c09-167">デバッガー for [Microsoft Edge Visual Studio][VisualStudioMarketplaceDebuggerEdge] コード拡張機能を使用して、Microsoft Edge で実行されている JavaScript をコードから直接Visual Studioします。</span><span class="sxs-lookup"><span data-stu-id="f0c09-167">With the [Debugger for Microsoft Edge][VisualStudioMarketplaceDebuggerEdge] Visual Studio Code extension, debug JavaScript running in Microsoft Edge directly from Visual Studio Code.</span></span>  
 
-:::image type="complex" source="../../images/2019/12/vscode-debugger.msft.png" alt-text="Visual Studio コードの Microsoft Edge 拡張機能のデバッガー" lightbox="../../images/2019/12/vscode-debugger.msft.png":::
-   <span data-ttu-id="7904f-168">Visual Studio コードの Microsoft Edge 拡張機能のデバッガー</span><span class="sxs-lookup"><span data-stu-id="7904f-168">The Debugger for Microsoft Edge Extension in Visual Studio Code</span></span>  
+:::image type="complex" source="../../images/2019/12/vscode-debugger.msft.png" alt-text="コード内の Microsoft Edge 拡張機能のデバッガー Visual Studioします。" lightbox="../../images/2019/12/vscode-debugger.msft.png":::
+   <span data-ttu-id="f0c09-169">コード内の Microsoft Edge 拡張機能のデバッガー Visual Studioします。</span><span class="sxs-lookup"><span data-stu-id="f0c09-169">The Debugger for Microsoft Edge Extension in Visual Studio Code</span></span>  
 :::image-end:::  
 
-<span data-ttu-id="7904f-169">詳細については、「 [Visual Studio コードから Microsoft Edge をデバッグする方法][VisualStudioCodeDebuggerEdgeExtension]」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="7904f-169">For more information, check out [how to debug Microsoft Edge from Visual Studio Code][VisualStudioCodeDebuggerEdgeExtension].</span></span>  
+<span data-ttu-id="f0c09-170">詳細については、「Microsoft Edge をコードからデバッグする方法」 [をVisual Studioしてください][VisualStudioCodeDebuggerEdgeExtension]。</span><span class="sxs-lookup"><span data-stu-id="f0c09-170">For more information, check out [how to debug Microsoft Edge from Visual Studio Code][VisualStudioCodeDebuggerEdgeExtension].</span></span>  
 
-#### <span data-ttu-id="7904f-170">Webhint</span><span class="sxs-lookup"><span data-stu-id="7904f-170">webhint</span></span>  
+#### <a name="webhint"></a><span data-ttu-id="f0c09-171">Webhint</span><span class="sxs-lookup"><span data-stu-id="f0c09-171">webhint</span></span>  
 
-<span data-ttu-id="7904f-171">作成中の web ページの品質を向上させるために、 [webhint][VisualStudioMarketplaceWebhintExtension] Visual Studio のコードの拡張機能が使用されています。 `webhint`</span><span class="sxs-lookup"><span data-stu-id="7904f-171">The [webhint][VisualStudioMarketplaceWebhintExtension] Visual Studio Code extension uses `webhint` to improve your web page while you're writing it!</span></span> <span data-ttu-id="7904f-172">この拡張機能は、分析に基づいて、ワークスペースファイルで診断を実行して報告し `webhint` ます。</span><span class="sxs-lookup"><span data-stu-id="7904f-172">This extension runs and reports diagnostics on your workspace files based on `webhint` analysis.</span></span>  
+<span data-ttu-id="f0c09-172">[Webhint Visual Studio][VisualStudioMarketplaceWebhintExtension]コード拡張機能は、Web ページの作成中に Web ページを `webhint` 改善するために使用します。</span><span class="sxs-lookup"><span data-stu-id="f0c09-172">The [webhint][VisualStudioMarketplaceWebhintExtension] Visual Studio Code extension uses `webhint` to improve your web page while you're writing it!</span></span> <span data-ttu-id="f0c09-173">この拡張機能は、分析に基づいてワークスペース ファイルで診断を実行してレポート `webhint` します。</span><span class="sxs-lookup"><span data-stu-id="f0c09-173">This extension runs and reports diagnostics on your workspace files based on `webhint` analysis.</span></span>  
 
-:::image type="complex" source="../../images/2019/12/webhint-vscode-extension.msft.png" alt-text="Visual Studio コードでの tsx ファイルの分析に関する webhint Visual Studio のコード拡張" lightbox="../../images/2019/12/webhint-vscode-extension.msft.png":::
-   <span data-ttu-id="7904f-174">`.tsx`Visual Studio コードでのファイルの分析に関する webhint Visual Studio コードの拡張機能</span><span class="sxs-lookup"><span data-stu-id="7904f-174">The webhint Visual Studio Code extension analyzing a `.tsx` file in Visual Studio Code</span></span>  
+:::image type="complex" source="../../images/2019/12/webhint-vscode-extension.msft.png" alt-text="webhint Visual Studioコード内の .tsx ファイルを分析する Code Visual Studio拡張機能" lightbox="../../images/2019/12/webhint-vscode-extension.msft.png":::
+   <span data-ttu-id="f0c09-175">webhint Visual Studio コード拡張機能でファイルを分析する Visual Studio `.tsx` Code</span><span class="sxs-lookup"><span data-stu-id="f0c09-175">The webhint Visual Studio Code extension analyzing a `.tsx` file in Visual Studio Code</span></span>  
 :::image-end:::  
 
-<span data-ttu-id="7904f-175">[Visual Studio コード web ヒントの拡張機能について、詳細はこちらをご覧][WebhintVisualStudioCodeExtension]ください。</span><span class="sxs-lookup"><span data-stu-id="7904f-175">[Learn more about the Visual Studio Code webhint extension][WebhintVisualStudioCodeExtension].</span></span>  
+<span data-ttu-id="f0c09-176">[コード webhint 拡張機能Visual Studio詳細については、以下を参照してください][WebhintVisualStudioCodeExtension]。</span><span class="sxs-lookup"><span data-stu-id="f0c09-176">[Learn more about the Visual Studio Code webhint extension][WebhintVisualStudioCodeExtension].</span></span>  
 
-### <span data-ttu-id="7904f-176">Visual Studio との統合</span><span class="sxs-lookup"><span data-stu-id="7904f-176">Visual Studio integration</span></span>
-<span data-ttu-id="7904f-177">Visual Studio 2019 バージョン16.2 以降では、Visual Studio デバッガーを使って、Microsoft Edge で実行されている JavaScript をデバッグします。</span><span class="sxs-lookup"><span data-stu-id="7904f-177">In Visual Studio 2019 version 16.2 or later, use the Visual Studio debugger to debug JavaScript running in Microsoft Edge.</span></span>  <span data-ttu-id="7904f-178">この機能を試すには、 [Visual Studio 2019 をダウンロード][MicrosoftVisualStudioDownloads]してください。</span><span class="sxs-lookup"><span data-stu-id="7904f-178">[Download Visual Studio 2019][MicrosoftVisualStudioDownloads] to try this feature out!</span></span>  
+### <a name="visual-studio-integration"></a><span data-ttu-id="f0c09-177">Visual Studio統合</span><span class="sxs-lookup"><span data-stu-id="f0c09-177">Visual Studio integration</span></span>  
 
-:::image type="complex" source="../../images/2019/12/vs.msft.png" alt-text="Microsoft Edge カナリア、Dev、またはベータ版で web アプリを起動するオプションが表示された Visual Studio" lightbox="../../images/2019/12/vs.msft.png":::
-   <span data-ttu-id="7904f-180">Microsoft Edge カナリア、Dev、またはベータ版で web アプリを起動するオプションが表示された Visual Studio</span><span class="sxs-lookup"><span data-stu-id="7904f-180">Visual Studio with the option to launch your web app in Microsoft Edge Canary, Dev, or Beta</span></span>  
+<span data-ttu-id="f0c09-178">2019 Visual Studio 16.2 以降では、Microsoft Edge で実行されている JavaScript をデバッグVisual Studioデバッガーを使用します。</span><span class="sxs-lookup"><span data-stu-id="f0c09-178">In Visual Studio 2019 version 16.2 or later, use the Visual Studio debugger to debug JavaScript running in Microsoft Edge.</span></span>  <span data-ttu-id="f0c09-179">[2019 Visual Studioダウンロードして][MicrosoftVisualStudioDownloads] 、この機能を試してください。</span><span class="sxs-lookup"><span data-stu-id="f0c09-179">[Download Visual Studio 2019][MicrosoftVisualStudioDownloads] to try this feature out.</span></span>  
+
+:::image type="complex" source="../../images/2019/12/vs.msft.png" alt-text="Visual Studio Microsoft Edge Canary、Dev、または Beta で Web アプリを起動するオプションを使用します。" lightbox="../../images/2019/12/vs.msft.png":::
+   <span data-ttu-id="f0c09-181">Visual Studio Microsoft Edge Canary、Dev、または Beta で Web アプリを起動するオプションを使用します。</span><span class="sxs-lookup"><span data-stu-id="f0c09-181">Visual Studio with the option to launch your web app in Microsoft Edge Canary, Dev, or Beta</span></span>  
 :::image-end:::  
 
-<span data-ttu-id="7904f-181">[Visual Studio から Microsoft Edge をデバッグする方法については、ブログの投稿を参照][MicrosoftVisualStudioBlogDebugJavascript]してください。</span><span class="sxs-lookup"><span data-stu-id="7904f-181">[Read our blog post to learn how to debug Microsoft Edge from Visual Studio][MicrosoftVisualStudioBlogDebugJavascript].</span></span>  
+<span data-ttu-id="f0c09-182">[Microsoft Edge をデバッグする方法については][MicrosoftVisualStudioBlogDebugJavascript]、ブログ記事を参照Visual Studio。</span><span class="sxs-lookup"><span data-stu-id="f0c09-182">[Read our blog post to learn how to debug Microsoft Edge from Visual Studio][MicrosoftVisualStudioBlogDebugJavascript].</span></span>  
 
-### <span data-ttu-id="7904f-182">防止コンソールのメッセージを追跡する</span><span class="sxs-lookup"><span data-stu-id="7904f-182">Tracking prevention Console messages</span></span>  
+### <a name="tracking-prevention-console-messages"></a><span data-ttu-id="f0c09-183">追跡防止コンソール メッセージ</span><span class="sxs-lookup"><span data-stu-id="f0c09-183">Tracking prevention Console messages</span></span>  
 
-<span data-ttu-id="7904f-183">追跡防止は、以前にアクセスしていない web サイトによって管理されることを防ぐ、Microsoft Edge の固有の機能です。</span><span class="sxs-lookup"><span data-stu-id="7904f-183">Tracking prevention is a unique feature in Microsoft Edge that protects you from being tracked by websites you haven't visited before.</span></span>  <span data-ttu-id="7904f-184">既定の追跡防止設定はバランスモードで、サードパーティのトラッカーと既知の悪意のあるトラッカーが、プライバシーと web の互換性のバランスを保つためにブロックされます。</span><span class="sxs-lookup"><span data-stu-id="7904f-184">The default tracking prevention setting is Balanced mode, which blocks 3rd party trackers and known malicious trackers for an experience that balances privacy and web compatibility.</span></span>  <span data-ttu-id="7904f-185">特定のトラッカーがブロックされているときに、web ページの互換性をさらに把握できるように、トラッカーがブロックされたときに、コンソールでも警告メッセージが追加されています。</span><span class="sxs-lookup"><span data-stu-id="7904f-185">To give you more insight into the compatibility of your web page when certain trackers are blocked, we've also added warning messages in the Console when a tracker is blocked.</span></span>  
+<span data-ttu-id="f0c09-184">追跡防止は、Web サイトにアクセスする前に Web サイトで追跡されるのをブロックする Microsoft Edge の一意の機能です。</span><span class="sxs-lookup"><span data-stu-id="f0c09-184">Tracking prevention is a unique feature in Microsoft Edge that blocks you from being tracked by a website before you visited it.</span></span>  <span data-ttu-id="f0c09-185">既定の追跡防止設定はバランス モードで、プライバシーと Web の互換性のバランスを取るエクスペリエンスのために、サードパーティのトラッカーと既知の悪意のあるトラッカーをブロックします。</span><span class="sxs-lookup"><span data-stu-id="f0c09-185">The default tracking prevention setting is Balanced mode, which blocks 3rd party trackers and known malicious trackers for an experience that balances privacy and web compatibility.</span></span>  <span data-ttu-id="f0c09-186">特定のトラッカーがブロックされている場合の Web ページの互換性に関する詳細な分析情報を提供するために、Microsoft Edge チームは\*\*\*\*、トラッカーがブロックされているときに警告メッセージをコンソールに追加しました。</span><span class="sxs-lookup"><span data-stu-id="f0c09-186">To give you more insight into the compatibility of your web page when certain trackers are blocked, The Microsoft Edge team added warning messages in the **Console** when a tracker is blocked.</span></span>  
 
-:::image type="complex" source="../../images/2019/12/tracking-prevention.msft.png" alt-text="予防を追跡するときに本体に表示されるメッセージは、トラッカーの記憶域へのアクセスをブロックします。" lightbox="../../images/2019/12/tracking-prevention.msft.png":::
-   <span data-ttu-id="7904f-187">予防を追跡するときに **本体** に表示されるメッセージは、トラッカーの記憶域へのアクセスをブロックします。</span><span class="sxs-lookup"><span data-stu-id="7904f-187">Messages in the **Console** when tracking prevention blocks access to storage for a tracker</span></span>  
+:::image type="complex" source="../../images/2019/12/tracking-prevention.msft.png" alt-text="追跡防止がトラッカーのストレージへのアクセスをブロックする場合のコンソール内のメッセージ" lightbox="../../images/2019/12/tracking-prevention.msft.png":::
+   <span data-ttu-id="f0c09-188">追跡防止が **トラッカーのストレージ** へのアクセスをブロックする場合のコンソール内のメッセージ</span><span class="sxs-lookup"><span data-stu-id="f0c09-188">Messages in the **Console** when tracking prevention blocks access to storage for a tracker</span></span>  
 :::image-end:::  
 
-<span data-ttu-id="7904f-188">[詳細については、「プライバシーと web の互換性のバランスを管理する」を参照して][TrackingPrevention]ください。</span><span class="sxs-lookup"><span data-stu-id="7904f-188">[Read more about tracking prevention and the balance between privacy and web compatibility][TrackingPrevention].</span></span>  
+<span data-ttu-id="f0c09-189">[追跡防止とプライバシーと Web の互換性のバランスについて詳しくは、以下をご覧ください][TrackingPrevention]。</span><span class="sxs-lookup"><span data-stu-id="f0c09-189">[Read more about tracking prevention and the balance between privacy and web compatibility][TrackingPrevention].</span></span>  
 
-## <span data-ttu-id="7904f-189">Chromium プロジェクトからのお知らせ</span><span class="sxs-lookup"><span data-stu-id="7904f-189">Announcements from the Chromium project</span></span>  
+## <a name="announcements-from-the-chromium-project"></a><span data-ttu-id="f0c09-190">Chromium プロジェクトからのお知らせ</span><span class="sxs-lookup"><span data-stu-id="f0c09-190">Announcements from the Chromium project</span></span>  
 
-<span data-ttu-id="7904f-190">次のセクションでは、open source Chromium プロジェクトに寄与した Microsoft Edge 80 で利用可能なその他の機能を示します。</span><span class="sxs-lookup"><span data-stu-id="7904f-190">The following sections announce additional features available in Microsoft Edge 80 that were contributed to the open source Chromium project.</span></span>  
+<span data-ttu-id="f0c09-191">次のセクションでは、オープンソースのクロム プロジェクトに貢献した Microsoft Edge 80 で利用できる追加機能について説明します。</span><span class="sxs-lookup"><span data-stu-id="f0c09-191">The following sections announce additional features available in Microsoft Edge 80 that were contributed to the open source Chromium project.</span></span>  
 
-### <span data-ttu-id="7904f-191">本体での let と class の宣言のサポート</span><span class="sxs-lookup"><span data-stu-id="7904f-191">Support for let and class redeclarations in the Console</span></span>  
+### <a name="support-for-let-and-class-redeclarations-in-the-console"></a><span data-ttu-id="f0c09-192">コンソールでの let および class redeclarations のサポート</span><span class="sxs-lookup"><span data-stu-id="f0c09-192">Support for let and class redeclarations in the Console</span></span>  
 
-<span data-ttu-id="7904f-192">**本体**で `let` 、and ステートメントの再宣言がサポートされるようになりました `class` 。</span><span class="sxs-lookup"><span data-stu-id="7904f-192">The **Console** now supports redeclarations of `let` and `class` statements.</span></span>  <span data-ttu-id="7904f-193">再宣言できないことは、本体を使って新しい JavaScript コードを試す web 開発者にとってよくある面倒な方法です。</span><span class="sxs-lookup"><span data-stu-id="7904f-193">The inability to redeclare was a common annoyance for web developers who use the Console to experiment with new JavaScript code.</span></span>  
+<span data-ttu-id="f0c09-193">コンソール **は** 、ステートメントの再宣言 `let` を `class` サポートします。</span><span class="sxs-lookup"><span data-stu-id="f0c09-193">The **Console** now supports redeclarations of `let` and `class` statements.</span></span>  <span data-ttu-id="f0c09-194">redeclare が利用できなかったのは、コンソールを使用して新しい JavaScript コードを試す Web 開発者に対して一般的な迷惑でした。</span><span class="sxs-lookup"><span data-stu-id="f0c09-194">The inability to redeclare was a common annoyance for web developers who use the Console to experiment with new JavaScript code.</span></span>  
 
 > [!WARNING]
-> <span data-ttu-id="7904f-194">`let` `class` コンソールの外部にあるスクリプト、または1つの本体に含まれていないスクリプトの Redeclaring a またはステートメントは、引き続き発生 `SyntaxError` します。</span><span class="sxs-lookup"><span data-stu-id="7904f-194">Redeclaring a `let` or `class` statement in a script outside of the Console or within a single Console input still causes a `SyntaxError`.</span></span>  
+> <span data-ttu-id="f0c09-195">コンソールの外部または単一のコンソール入力内のスクリプトで a または ステートメントを再設定すると、引き続き `let` `class` `SyntaxError` .</span><span class="sxs-lookup"><span data-stu-id="f0c09-195">Redeclaring a `let` or `class` statement in a script outside of the Console or within a single Console input still causes a `SyntaxError`.</span></span>  
 
-<span data-ttu-id="7904f-195">たとえば、前に示したように、ローカル変数を再宣言すると `let` 、本体からエラーが返されます。</span><span class="sxs-lookup"><span data-stu-id="7904f-195">For example, previously, when re-declaring a local variable with `let`, the Console threw an error:</span></span>  
+<span data-ttu-id="f0c09-196">たとえば、以前は、ローカル変数を使用して再宣言すると、 `let` コンソールはエラーを発生しました。</span><span class="sxs-lookup"><span data-stu-id="f0c09-196">For example, previously, when re-declaring a local variable with `let`, the Console threw an error:</span></span>  
 
-:::image type="complex" source="../../images/2019/12/letbefore.msft.png" alt-text="再宣言が失敗することを示す Microsoft Edge 79 のコンソール" lightbox="../../images/2019/12/letbefore.msft.png":::
-   <span data-ttu-id="7904f-197">再宣言が失敗することを示す Microsoft Edge 79 の**コンソール**</span><span class="sxs-lookup"><span data-stu-id="7904f-197">The **Console** in Microsoft Edge 79 showing that the let re-declaration fails</span></span>  
+:::image type="complex" source="../../images/2019/12/letbefore.msft.png" alt-text="再宣言が失敗した Microsoft Edge 79 のコンソール" lightbox="../../images/2019/12/letbefore.msft.png":::
+   <span data-ttu-id="f0c09-198">再 **宣言** が失敗した Microsoft Edge 79 のコンソール</span><span class="sxs-lookup"><span data-stu-id="f0c09-198">The **Console** in Microsoft Edge 79 showing that the let re-declaration fails</span></span>  
 :::image-end:::  
 
-<span data-ttu-id="7904f-198">これで、コンソールは再宣言を許可します。</span><span class="sxs-lookup"><span data-stu-id="7904f-198">Now, the Console allows the redeclaration:</span></span>  
+<span data-ttu-id="f0c09-199">次に、コンソールで再宣言を許可します。</span><span class="sxs-lookup"><span data-stu-id="f0c09-199">Now, the Console allows the redeclaration:</span></span>  
 
-:::image type="complex" source="../../images/2019/12/letafter.msft.png" alt-text="再宣言が正常に完了したことを示す Microsoft Edge 80 のコンソール" lightbox="../../images/2019/12/letafter.msft.png":::
-   <span data-ttu-id="7904f-200">再宣言が成功することを示す Microsoft Edge 80 の**コンソール**</span><span class="sxs-lookup"><span data-stu-id="7904f-200">The **Console** in Microsoft Edge 80 showing that the let re-declaration succeeds</span></span>  
+:::image type="complex" source="../../images/2019/12/letafter.msft.png" alt-text="再宣言が成功した Microsoft Edge 80 のコンソール" lightbox="../../images/2019/12/letafter.msft.png":::
+   <span data-ttu-id="f0c09-201">再 **宣言** が成功した Microsoft Edge 80 のコンソール</span><span class="sxs-lookup"><span data-stu-id="f0c09-201">The **Console** in Microsoft Edge 80 showing that the let re-declaration succeeds</span></span>  
 :::image-end:::  
 
-<span data-ttu-id="7904f-201">Chromium の問題 [#1004193][CR1004193]</span><span class="sxs-lookup"><span data-stu-id="7904f-201">Chromium issue [#1004193][CR1004193]</span></span>  
+<span data-ttu-id="f0c09-202">クロムの問題 [#1004193][CR1004193]</span><span class="sxs-lookup"><span data-stu-id="f0c09-202">Chromium issue [#1004193][CR1004193]</span></span>  
 
-### <span data-ttu-id="7904f-202">優れたデバッグ</span><span class="sxs-lookup"><span data-stu-id="7904f-202">Improved WebAssembly debugging</span></span>  
+### <a name="improved-webassembly-debugging"></a><span data-ttu-id="f0c09-203">WebAssembly デバッグの改善</span><span class="sxs-lookup"><span data-stu-id="f0c09-203">Improved WebAssembly debugging</span></span>  
 
-<span data-ttu-id="7904f-203">DevTools は、 [DWARF のデバッグ標準][DwarfHome]をサポートするために開始されています。これは、コードのステップオーバーのサポートが強化され、ブレークポイントを設定して、devtools 内のソース言語でスタックトレースを解決することをサポートしています。</span><span class="sxs-lookup"><span data-stu-id="7904f-203">DevTools has started to support the [DWARF Debugging Standard][DwarfHome], which means increased support for stepping over code, setting breakpoints, and resolving stack traces in your source languages within DevTools.</span></span>  
+<span data-ttu-id="f0c09-204">DevTools は [DWARF][DwarfHome]デバッグ標準のサポートを開始しました。つまり、コードのステップオーバー、ブレークポイントの設定、DevTools 内のソース言語でのスタック トレースの解決に対するサポートが強化されました。</span><span class="sxs-lookup"><span data-stu-id="f0c09-204">DevTools has started to support the [DWARF Debugging Standard][DwarfHome], which means increased support for stepping over code, setting breakpoints, and resolving stack traces in your source languages within DevTools.</span></span>  
 
 <!-- [TODO: Add this link back] -->  
 <!--Check out [Improved WebAssembly debugging in Microsoft Edge DevTools][201912Webassembly] for the full story.  -->  
@@ -229,108 +230,102 @@ ms.locfileid: "11015469"
 :::image-end:::  
 -->  
 
-### <span data-ttu-id="7904f-204">ネットワークパネルの更新</span><span class="sxs-lookup"><span data-stu-id="7904f-204">Network panel updates</span></span>  
+### <a name="network-panel-updates"></a><span data-ttu-id="f0c09-205">ネットワーク パネルの更新</span><span class="sxs-lookup"><span data-stu-id="f0c09-205">Network panel updates</span></span>  
 
-#### <span data-ttu-id="7904f-205">[イニシエーター] タブでイニシエーターチェーンを要求する</span><span class="sxs-lookup"><span data-stu-id="7904f-205">Request Initiator Chains in the Initiator tab</span></span>  
+#### <a name="request-initiator-chains-in-the-initiator-panel"></a><span data-ttu-id="f0c09-206">イニシエーター パネルでイニシエータ チェーンを要求する</span><span class="sxs-lookup"><span data-stu-id="f0c09-206">Request Initiator Chains in the Initiator panel</span></span>  
 
-<span data-ttu-id="7904f-206">これで、ネットワーク要求のイニシエーターと依存関係を入れ子になったリストとして表示できるようになりました。</span><span class="sxs-lookup"><span data-stu-id="7904f-206">You are now able to view the initiators and dependencies of a network request as a nested list.</span></span>  <span data-ttu-id="7904f-207">これは、リソースが要求された理由や、特定のリソース (たとえば、スクリプト \ など) が原因で発生したネットワークアクティビティを理解するのに役立ちます。</span><span class="sxs-lookup"><span data-stu-id="7904f-207">This may help you understand why a resource was requested, or what network activity a certain resource \(such as a script\) caused.</span></span>  
+<span data-ttu-id="f0c09-207">これで、ネットワーク要求の開始者と依存関係を入れ子になったリストとして表示できます。</span><span class="sxs-lookup"><span data-stu-id="f0c09-207">You are now able to view the initiators and dependencies of a network request as a nested list.</span></span>  <span data-ttu-id="f0c09-208">これは、リソースが要求された理由、または特定のリソース \(script\など) が引き起こしたネットワーク アクティビティを理解するのに役立ちます。</span><span class="sxs-lookup"><span data-stu-id="f0c09-208">This may help you understand why a resource was requested, or what network activity a certain resource \(such as a script\) caused.</span></span>  
 
-:::image type="complex" source="../../images/2019/12/initiators.msft.png" alt-text="[イニシエーター] タブの要求イニシエーターチェーン" lightbox="../../images/2019/12/initiators.msft.png":::
-   <span data-ttu-id="7904f-209">[ **イニシエーター** ] タブの要求イニシエーターチェーン</span><span class="sxs-lookup"><span data-stu-id="7904f-209">A Request Initiator Chain in the **Initiator** tab</span></span>  
+:::image type="complex" source="../../images/2019/12/initiators.msft.png" alt-text="イニシエーター パネルの要求イニシエーター チェーン" lightbox="../../images/2019/12/initiators.msft.png":::
+   <span data-ttu-id="f0c09-210">イニシエーター パネルの要求 **イニシエーター** チェーン</span><span class="sxs-lookup"><span data-stu-id="f0c09-210">A Request Initiator Chain in the **Initiator** panel</span></span>  
 :::image-end:::  
 
-<span data-ttu-id="7904f-210">[ [ネットワーク] パネルでネットワークアクティビティを記録][DevToolsNetworkIndex]したら、リソースをクリックし、[ **イニシエーター** ] タブに移動して **要求イニシエーターチェーン**を表示します。</span><span class="sxs-lookup"><span data-stu-id="7904f-210">After [logging network activity in the Network panel][DevToolsNetworkIndex], click a resource and then go to the **Initiator** tab to view the **Request Initiator Chain**:</span></span>  
+<span data-ttu-id="f0c09-211">[[ネットワーク] パネルでネットワーク アクティビティを][DevToolsNetworkIndex]ログに記録した後、リソース\*\*\*\* を選択し、[イニシエーター] パネルに移動して、要求イニシエータ**ー チェーンを表示します**。</span><span class="sxs-lookup"><span data-stu-id="f0c09-211">After [logging network activity in the Network panel][DevToolsNetworkIndex], choose a resource and then navigate to the **Initiator** panel to view the **Request Initiator Chain**:</span></span>  
 
-*   <span data-ttu-id="7904f-211">検査された **リソース** は太字です。</span><span class="sxs-lookup"><span data-stu-id="7904f-211">The **inspected resource** is bold.</span></span>  <span data-ttu-id="7904f-212">上のスクリーンショットは、 `ai.2.min.js` 検査されたリソースを示しています。</span><span class="sxs-lookup"><span data-stu-id="7904f-212">In the screenshot above, `ai.2.min.js` is the inspected resource.</span></span>  
-*   <span data-ttu-id="7904f-213">検査されたリソースの上にあるリソースが **イニシエーター**になります。</span><span class="sxs-lookup"><span data-stu-id="7904f-213">The resources above the inspected resource are the **initiators**.</span></span>  <span data-ttu-id="7904f-214">上のスクリーンショットは、 `https://www.microsoftedgeinsider.com` のイニシエーターを示して `ai.2.min.js` います。</span><span class="sxs-lookup"><span data-stu-id="7904f-214">In the screenshot above, `https://www.microsoftedgeinsider.com` is the initiator of `ai.2.min.js`.</span></span>  <span data-ttu-id="7904f-215">つまり、という `https://www.microsoftedgeinsider.com` ネットワーク要求が発生しました `ai.2.min.js` 。</span><span class="sxs-lookup"><span data-stu-id="7904f-215">In other words, `https://www.microsoftedgeinsider.com` caused the network request for `ai.2.min.js`.</span></span>  
-*   <span data-ttu-id="7904f-216">検査されたリソースの下にあるリソースは、 **依存関係**です。</span><span class="sxs-lookup"><span data-stu-id="7904f-216">The resources below the inspected resource are the **dependencies**.</span></span>  <span data-ttu-id="7904f-217">上のスクリーンショットは、 `https://dc.services.visualstudio.com/v2/track` の依存関係を示してい `ai.2.min.js` ます。</span><span class="sxs-lookup"><span data-stu-id="7904f-217">In the screenshot above, `https://dc.services.visualstudio.com/v2/track` is a dependency of `ai.2.min.js`.</span></span>  <span data-ttu-id="7904f-218">つまり、という `ai.2.min.js` ネットワーク要求が発生しました `https://dc.services.visualstudio.com/v2/track` 。</span><span class="sxs-lookup"><span data-stu-id="7904f-218">In other words, `ai.2.min.js` caused the network request for `https://dc.services.visualstudio.com/v2/track`.</span></span>  
+*   <span data-ttu-id="f0c09-212">検査 **されたリソースは太字** です。</span><span class="sxs-lookup"><span data-stu-id="f0c09-212">The **inspected resource** is bold.</span></span>  <span data-ttu-id="f0c09-213">上のスクリーンショットでは `ai.2.min.js` 、検査されたリソースです。</span><span class="sxs-lookup"><span data-stu-id="f0c09-213">In the screenshot above, `ai.2.min.js` is the inspected resource.</span></span>  
+*   <span data-ttu-id="f0c09-214">検査されたリソースの上にあるリソースは、イニシエータ **ーです**。</span><span class="sxs-lookup"><span data-stu-id="f0c09-214">The resources above the inspected resource are the **initiators**.</span></span>  <span data-ttu-id="f0c09-215">上のスクリーンショットでは `https://www.microsoftedgeinsider.com` 、 の開始者 `ai.2.min.js` です。</span><span class="sxs-lookup"><span data-stu-id="f0c09-215">In the screenshot above, `https://www.microsoftedgeinsider.com` is the initiator of `ai.2.min.js`.</span></span>  <span data-ttu-id="f0c09-216">つまり、ネットワーク `https://www.microsoftedgeinsider.com` 要求が発生しました `ai.2.min.js` 。</span><span class="sxs-lookup"><span data-stu-id="f0c09-216">In other words, `https://www.microsoftedgeinsider.com` caused the network request for `ai.2.min.js`.</span></span>  
+*   <span data-ttu-id="f0c09-217">検査されたリソースの下のリソースは、依存関係 **です**。</span><span class="sxs-lookup"><span data-stu-id="f0c09-217">The resources below the inspected resource are the **dependencies**.</span></span>  <span data-ttu-id="f0c09-218">上のスクリーンショットでは `https://dc.services.visualstudio.com/v2/track` 、 の依存関係です `ai.2.min.js` 。</span><span class="sxs-lookup"><span data-stu-id="f0c09-218">In the screenshot above, `https://dc.services.visualstudio.com/v2/track` is a dependency of `ai.2.min.js`.</span></span>  <span data-ttu-id="f0c09-219">つまり、ネットワーク `ai.2.min.js` 要求が発生しました `https://dc.services.visualstudio.com/v2/track` 。</span><span class="sxs-lookup"><span data-stu-id="f0c09-219">In other words, `ai.2.min.js` caused the network request for `https://dc.services.visualstudio.com/v2/track`.</span></span>  
 
 > [!NOTE]
-> <span data-ttu-id="7904f-219">また、イニシエーターと依存関係の情報にアクセスするには、ネットワークリソースを保持するか、 `Shift` マウスでポイントします。</span><span class="sxs-lookup"><span data-stu-id="7904f-219">Initiator and dependency information may also be accessed by holding `Shift` and then hovering over network resources.</span></span>  <span data-ttu-id="7904f-220">「 [イニシエーターと依存関係の表示」を][DevToolsNetworkReferenceViewInitiatorsDependencies]ご覧ください。</span><span class="sxs-lookup"><span data-stu-id="7904f-220">See [View initiators and dependencies][DevToolsNetworkReferenceViewInitiatorsDependencies].</span></span>  
+> <span data-ttu-id="f0c09-220">イニシエーターと依存関係の情報にアクセスするには、ネットワーク リソースを保持してから `Shift` ホバリングします。</span><span class="sxs-lookup"><span data-stu-id="f0c09-220">Initiator and dependency information may also be accessed by holding `Shift` and then hovering over network resources.</span></span>  <span data-ttu-id="f0c09-221">[イニシエータと [依存関係の表示] に移動します][DevToolsNetworkReferenceViewInitiatorsDependencies]。</span><span class="sxs-lookup"><span data-stu-id="f0c09-221">Navigate to [View initiators and dependencies][DevToolsNetworkReferenceViewInitiatorsDependencies].</span></span>  
 
-<span data-ttu-id="7904f-221">Chromium の問題 [#842488][CR842488]</span><span class="sxs-lookup"><span data-stu-id="7904f-221">Chromium issue [#842488][CR842488]</span></span>  
+<span data-ttu-id="f0c09-222">クロムの問題 [#842488][CR842488]</span><span class="sxs-lookup"><span data-stu-id="f0c09-222">Chromium issue [#842488][CR842488]</span></span>  
 
-#### <span data-ttu-id="7904f-222">概要で選択されたネットワーク要求を強調表示する</span><span class="sxs-lookup"><span data-stu-id="7904f-222">Highlight the selected network request in the Overview</span></span>  
+#### <a name="highlight-the-selected-network-request-in-the-overview"></a><span data-ttu-id="f0c09-223">[概要] で選択したネットワーク要求を強調表示する</span><span class="sxs-lookup"><span data-stu-id="f0c09-223">Highlight the selected network request in the Overview</span></span>  
 
-<span data-ttu-id="7904f-223">ネットワークリソースを調べるためにクリックした後、[ネットワーク] パネル **では、** そのリソースの周囲に青色の境界線が表示されます。</span><span class="sxs-lookup"><span data-stu-id="7904f-223">After you click a network resource in order to inspect it, the Network panel now puts a blue border around that resource in the **Overview**.</span></span>  <span data-ttu-id="7904f-224">これにより、ネットワーク要求が予期したより前または後に発生しているかどうかを検出することができます。</span><span class="sxs-lookup"><span data-stu-id="7904f-224">This is able to help you detect if the network request is happening earlier or later than expected.</span></span>  
+<span data-ttu-id="f0c09-224">ネットワーク リソースを検査するために選択した後、ネットワーク パネルは、そのリソースの周囲に青い枠線を [概要] に **表示します**。</span><span class="sxs-lookup"><span data-stu-id="f0c09-224">After you choose a network resource in order to inspect it, the Network panel now puts a blue border around that resource in the **Overview**.</span></span>  <span data-ttu-id="f0c09-225">これにより、ネットワーク要求が予想よりも早くまたは後で発生した場合の検出に役立ちます。</span><span class="sxs-lookup"><span data-stu-id="f0c09-225">This is able to help you detect if the network request is happening earlier or later than expected.</span></span>  
 
-:::image type="complex" source="../../images/2019/12/overview.msft.png" alt-text="調査したリソースを強調表示した [概要] ウィンドウ" lightbox="../../images/2019/12/overview.msft.png":::
-   <span data-ttu-id="7904f-226">調査したリソースを強調表示した [ **概要** ] ウィンドウ</span><span class="sxs-lookup"><span data-stu-id="7904f-226">The **Overview** pane highlighting the inspected resource</span></span>  
+:::image type="complex" source="../../images/2019/12/overview.msft.png" alt-text="検査されたリソースを強調表示する [概要] ウィンドウ" lightbox="../../images/2019/12/overview.msft.png":::
+   <span data-ttu-id="f0c09-227">検査 **されたリソース** を強調表示する [概要] ウィンドウ</span><span class="sxs-lookup"><span data-stu-id="f0c09-227">The **Overview** pane highlighting the inspected resource</span></span>  
 :::image-end:::  
 
-<span data-ttu-id="7904f-227">Chromium の問題 [#988253][CR988253]</span><span class="sxs-lookup"><span data-stu-id="7904f-227">Chromium issue [#988253][CR988253]</span></span>  
+<span data-ttu-id="f0c09-228">クロムの問題 [#988253][CR988253]</span><span class="sxs-lookup"><span data-stu-id="f0c09-228">Chromium issue [#988253][CR988253]</span></span>  
 
-#### <span data-ttu-id="7904f-228">[ネットワーク] パネルの [URL] と [path] 列</span><span class="sxs-lookup"><span data-stu-id="7904f-228">URL and path columns in the Network panel</span></span>  
+#### <a name="url-and-path-columns-in-the-network-panel"></a><span data-ttu-id="f0c09-229">[ネットワーク] パネルの URL 列とパス列</span><span class="sxs-lookup"><span data-stu-id="f0c09-229">URL and path columns in the Network panel</span></span>  
 
-<span data-ttu-id="7904f-229">[**ネットワーク**] パネルの [新しい**パス**] 列と [ **url** ] 列を使用して、各ネットワークリソースの絶対パスまたは完全な url を確認します。</span><span class="sxs-lookup"><span data-stu-id="7904f-229">Use the new **Path** and **URL** columns in the **Network** panel to see the absolute path or full URL of each network resource.</span></span>  
+<span data-ttu-id="f0c09-230">ネットワーク ツールの**新しい [パス**] 列と\*\*\*\*\*\*[URL]\*\* 列を使用して、各ネットワーク リソースの絶対パスまたは完全な URL を表示します。</span><span class="sxs-lookup"><span data-stu-id="f0c09-230">Use the new **Path** and **URL** columns in the **Network** tool to display the absolute path or full URL of each network resource.</span></span>  
 
-:::image type="complex" source="../../images/2019/12/columns.msft.png" alt-text="ネットワークパネルの新しいパスと URL 列" lightbox="../../images/2019/12/columns.msft.png":::
-   <span data-ttu-id="7904f-231">**ネットワーク**パネルの新しいパスと URL 列</span><span class="sxs-lookup"><span data-stu-id="7904f-231">The new Path and URL columns in the **Network** panel</span></span>  
+:::image type="complex" source="../../images/2019/12/columns.msft.png" alt-text="[ネットワーク] パネルの新しい [パス] 列と [URL] 列" lightbox="../../images/2019/12/columns.msft.png":::
+   <span data-ttu-id="f0c09-232">ネットワーク ツールの新しい [パス] **列と** [URL] 列</span><span class="sxs-lookup"><span data-stu-id="f0c09-232">The new Path and URL columns in the **Network** tool</span></span>  
 :::image-end:::  
 
-<span data-ttu-id="7904f-232">**ウォーターフォール**テーブルのヘッダーを右クリックし、[**パス**] または [ **URL** ] を選択して新しい列を表示します。</span><span class="sxs-lookup"><span data-stu-id="7904f-232">Right-click the **Waterfall** table header and select **Path** or **URL** to show the new columns.</span></span>  
+<span data-ttu-id="f0c09-233">新しい列を表示するには、**ウォーター**フォール テーブル ヘッダーにマウス ポインターを置き、コンテキスト メニュー \(righ-click\) を開き、[パス] または **[URL]\*\*\*\*を**選択します。</span><span class="sxs-lookup"><span data-stu-id="f0c09-233">To display the new columns, hover on the **Waterfall** table header, open the contextual menu \(righ-click\), and choose **Path** or **URL**.</span></span>  
 
-<span data-ttu-id="7904f-233">Chromium の問題 [#993366][CR993366]</span><span class="sxs-lookup"><span data-stu-id="7904f-233">Chromium issue [#993366][CR993366]</span></span>  
+<span data-ttu-id="f0c09-234">クロムの問題 [#993366][CR993366]</span><span class="sxs-lookup"><span data-stu-id="f0c09-234">Chromium issue [#993366][CR993366]</span></span>  
 
-#### <span data-ttu-id="7904f-234">更新されたユーザーエージェント文字列</span><span class="sxs-lookup"><span data-stu-id="7904f-234">Updated User-Agent strings</span></span>  
+#### <a name="updated-user-agent-strings"></a><span data-ttu-id="f0c09-235">更新されたUser-Agent文字列</span><span class="sxs-lookup"><span data-stu-id="f0c09-235">Updated User-Agent strings</span></span>  
 
-<span data-ttu-id="7904f-235">DevTools は、[ **ネットワークの条件** ] タブを使用したカスタムユーザーエージェント文字列の設定をサポートしています。 ユーザーエージェントの文字列は、 `User-Agent` ネットワークリソースに接続される HTTP ヘッダーと、の値に影響し `navigator.userAgent` ます。</span><span class="sxs-lookup"><span data-stu-id="7904f-235">DevTools supports setting a custom User-Agent string through the **Network Conditions** tab.  The User-Agent string affects the `User-Agent` HTTP header attached to network resources, and also the value of `navigator.userAgent`.</span></span>  
+<span data-ttu-id="f0c09-236">DevTools では、[ネットワーク条件] パネルをUser-Agentカスタム 文字列 **の設定がサポート** されています。</span><span class="sxs-lookup"><span data-stu-id="f0c09-236">DevTools supports setting a custom User-Agent string through the **Network Conditions** panel.</span></span>  <span data-ttu-id="f0c09-237">このUser-Agentは、ネットワーク リソースに接続されている HTTP ヘッダーに影響します。また、 `User-Agent` の値にも影響します `navigator.userAgent` 。</span><span class="sxs-lookup"><span data-stu-id="f0c09-237">The User-Agent string affects the `User-Agent` HTTP header attached to network resources, and also the value of `navigator.userAgent`.</span></span>  
 
-<span data-ttu-id="7904f-236">定義済みのユーザーエージェント文字列は、最新のブラウザーバージョンを反映するように更新されています。</span><span class="sxs-lookup"><span data-stu-id="7904f-236">The predefined User-Agent strings have been updated to reflect modern browser versions.</span></span>  
+<span data-ttu-id="f0c09-238">定義済みのUser-Agentは、最新のブラウザー バージョンを反映するように更新されています。</span><span class="sxs-lookup"><span data-stu-id="f0c09-238">The predefined User-Agent strings have been updated to reflect modern browser versions.</span></span>  
 
-:::image type="complex" source="../../images/2019/12/useragent.msft.png" alt-text="[ネットワークの条件] タブの [ユーザーエージェント] メニュー" lightbox="../../images/2019/12/useragent.msft.png":::
-   <span data-ttu-id="7904f-238">[ **ネットワークの条件** ] タブの [ユーザーエージェント] メニュー</span><span class="sxs-lookup"><span data-stu-id="7904f-238">The User Agent menu in the **Network Conditions** tab</span></span>  
+:::image type="complex" source="../../images/2019/12/useragent.msft.png" alt-text="[ネットワーク条件] パネルの [ユーザー エージェント] メニュー" lightbox="../../images/2019/12/useragent.msft.png":::
+   <span data-ttu-id="f0c09-240">[ネットワーク条件] パネルの **[ユーザー エージェント]** メニュー</span><span class="sxs-lookup"><span data-stu-id="f0c09-240">The User Agent menu in the **Network Conditions** panel</span></span>  
 :::image-end:::  
 
-<span data-ttu-id="7904f-239">ネットワークの **状態**にアクセスするには、 [コマンドメニューを開い][DevToolsCommandMenuIndex] てコマンドを実行し `Show Network Conditions` ます。</span><span class="sxs-lookup"><span data-stu-id="7904f-239">To access **Network Conditions**, [open the Command Menu][DevToolsCommandMenuIndex] and run the `Show Network Conditions` command.</span></span>  
+<span data-ttu-id="f0c09-241">ネットワーク条件**にアクセスするには、**[コマンド メニューを開き][DevToolsCommandMenuIndex]、コマンドを実行 `Show Network Conditions` します。</span><span class="sxs-lookup"><span data-stu-id="f0c09-241">To access **Network Conditions**, [open the Command Menu][DevToolsCommandMenuIndex] and run the `Show Network Conditions` command.</span></span>  
 
 > [!NOTE]
-> <span data-ttu-id="7904f-240">[デバイスモードでは、ユーザーエージェント文字列を設定][DevToolsDeviceModeIndex]することもできます。</span><span class="sxs-lookup"><span data-stu-id="7904f-240">You may also [set User-Agent strings in Device Mode][DevToolsDeviceModeIndex].</span></span>  
+> <span data-ttu-id="f0c09-242">デバイス モードで [文字列User-Agent設定することもできます][DevToolsDeviceModeIndex]。</span><span class="sxs-lookup"><span data-stu-id="f0c09-242">You may also [set User-Agent strings in Device Mode][DevToolsDeviceModeIndex].</span></span>  
 
-<span data-ttu-id="7904f-241">Chromium の問題 [#1029031][CR1029031]</span><span class="sxs-lookup"><span data-stu-id="7904f-241">Chromium issue [#1029031][CR1029031]</span></span>  
+<span data-ttu-id="f0c09-243">クロムの問題 [#1029031][CR1029031]</span><span class="sxs-lookup"><span data-stu-id="f0c09-243">Chromium issue [#1029031][CR1029031]</span></span>  
 
-### <span data-ttu-id="7904f-242">監査パネルの更新</span><span class="sxs-lookup"><span data-stu-id="7904f-242">Audits panel updates</span></span>  
+### <a name="audits-panel-updates"></a><span data-ttu-id="f0c09-244">監査パネルの更新</span><span class="sxs-lookup"><span data-stu-id="f0c09-244">Audits panel updates</span></span>  
 
-#### <span data-ttu-id="7904f-243">新しい構成 UI</span><span class="sxs-lookup"><span data-stu-id="7904f-243">New configuration UI</span></span>  
+#### <a name="new-configuration-ui"></a><span data-ttu-id="f0c09-245">新しい構成 UI</span><span class="sxs-lookup"><span data-stu-id="f0c09-245">New configuration UI</span></span>  
 
-<span data-ttu-id="7904f-244">構成 UI には、応答性の高い新しいデザインがあり、調整構成オプションが簡素化されています。</span><span class="sxs-lookup"><span data-stu-id="7904f-244">The configuration UI has a new, responsive design, and the throttling configuration options have been simplified.</span></span>  <span data-ttu-id="7904f-245">調整 UI の変更について詳しくは、「 [監査パネルの調整][GitHubGoogleChromeDevToolsAuditsPanelThrottling] 」をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="7904f-245">See [Audits Panel Throttling][GitHubGoogleChromeDevToolsAuditsPanelThrottling] for more information on the throttling UI changes.</span></span>  
+<span data-ttu-id="f0c09-246">構成 UI には応答性の高い新しいデザインが追加され、調整の構成オプションが簡略化されました。</span><span class="sxs-lookup"><span data-stu-id="f0c09-246">The configuration UI has a new, responsive design, and the throttling configuration options have been simplified.</span></span>  <span data-ttu-id="f0c09-247">調整 UI の変更の詳細については [、「Audits Panel Throttling」に移動します][GitHubGoogleChromeDevToolsAuditsPanelThrottling]。</span><span class="sxs-lookup"><span data-stu-id="f0c09-247">For more information on the throttling UI changes, navigate to [Audits Panel Throttling][GitHubGoogleChromeDevToolsAuditsPanelThrottling].</span></span>  
 
 :::image type="complex" source="../../images/2019/12/start.msft.png" alt-text="新しい構成 UI" lightbox="../../images/2019/12/start.msft.png":::
-   <span data-ttu-id="7904f-247">新しい構成 UI</span><span class="sxs-lookup"><span data-stu-id="7904f-247">The new configuration UI</span></span>  
+   <span data-ttu-id="f0c09-249">新しい構成 UI</span><span class="sxs-lookup"><span data-stu-id="f0c09-249">The new configuration UI</span></span>  
 :::image-end:::  
 
-### <span data-ttu-id="7904f-248">[カバレッジ] タブの更新</span><span class="sxs-lookup"><span data-stu-id="7904f-248">Coverage tab updates</span></span>  
+### <a name="coverage-tool-updates"></a><span data-ttu-id="f0c09-250">カバレッジ ツールの更新</span><span class="sxs-lookup"><span data-stu-id="f0c09-250">Coverage tool updates</span></span>  
 
-#### <span data-ttu-id="7904f-249">関数単位またはブロック単位のカバレッジモード</span><span class="sxs-lookup"><span data-stu-id="7904f-249">Per-function or per-block coverage modes</span></span>  
+#### <a name="per-function-or-per-block-coverage-modes"></a><span data-ttu-id="f0c09-251">関数単位またはブロック単位のカバレッジ モード</span><span class="sxs-lookup"><span data-stu-id="f0c09-251">Per-function or per-block coverage modes</span></span>  
 
-<span data-ttu-id="7904f-250">[ [カバレッジ] タブ][DevToolsCoverageIndex] には、1つの **関数** または **ブロック**ごとにコードカバレッジデータを収集するかどうかを指定できる新しいドロップダウンメニューがあります。</span><span class="sxs-lookup"><span data-stu-id="7904f-250">The [Coverage tab][DevToolsCoverageIndex] has a new dropdown menu that lets you specify whether code coverage data should be collected **per function** or **per block**.</span></span>  <span data-ttu-id="7904f-251">**ブロック範囲ごと** に、さらに詳しい情報を収集することができます。</span><span class="sxs-lookup"><span data-stu-id="7904f-251">**Per block** coverage is more detailed but also far more expensive to collect.</span></span>  <span data-ttu-id="7904f-252">DevTools では、既定で **機能ごとに機能** を使用します。</span><span class="sxs-lookup"><span data-stu-id="7904f-252">DevTools uses **per function** coverage by default now.</span></span>  
+<span data-ttu-id="f0c09-252">カバレッジ[ツールには][DevToolsCoverageIndex]新しいドロップダウン メニューが追加され、コード カバレッジ データを関数\*\*\*\* ごとに収集するか、ブロックごとに収集するかどうかを**指定できます**。</span><span class="sxs-lookup"><span data-stu-id="f0c09-252">The [Coverage][DevToolsCoverageIndex] tool has a new dropdown menu that lets you specify whether code coverage data should be collected **per function** or **per block**.</span></span>  <span data-ttu-id="f0c09-253">**ブロックごとのカバレッジ** は、より詳細ですが、収集するコストもはるかに高くなります。</span><span class="sxs-lookup"><span data-stu-id="f0c09-253">**Per block** coverage is more detailed but also far more expensive to collect.</span></span>  <span data-ttu-id="f0c09-254">DevTools では、関数 **ごとの範囲が既定** で使用されます。</span><span class="sxs-lookup"><span data-stu-id="f0c09-254">DevTools uses **per function** coverage by default now.</span></span>  
 
 > [!CAUTION]
-> <span data-ttu-id="7904f-253">**各機能**と**ブロック**モードのどちらを使用するかによって、HTML ファイルに大きなコードカバレッジの違いが表示されることがあります。</span><span class="sxs-lookup"><span data-stu-id="7904f-253">You may see large code coverage differences in HTML files depending on whether you use **per function** or **per block** mode.</span></span>  <span data-ttu-id="7904f-254">**関数単位**モードを使う場合、HTML ファイル内のインラインスクリプトは関数として扱われます。</span><span class="sxs-lookup"><span data-stu-id="7904f-254">When using **per function** mode, inline scripts in HTML files are treated as functions.</span></span>  <span data-ttu-id="7904f-255">スクリプトがすべて実行された場合は、DevTools はスクリプト全体を使用コードとしてマークします。</span><span class="sxs-lookup"><span data-stu-id="7904f-255">If the script runs at all then DevTools marks the entire script as used code.</span></span>  <span data-ttu-id="7904f-256">スクリプトがまったく実行されない場合のみ、DevTools はスクリプトを未使用コードとしてマークします。</span><span class="sxs-lookup"><span data-stu-id="7904f-256">Only if the script does not run at all does DevTools mark the script as unused code.</span></span>  
+> <span data-ttu-id="f0c09-255">HTML ファイルのコード範囲の違いは、関数ごとに使用するか、ブロック\*\*\*\* モードごとに使用するかによって**大きく異なる場合**があります。</span><span class="sxs-lookup"><span data-stu-id="f0c09-255">You may notice large code coverage differences in HTML files depending on whether you use **per function** or **per block** mode.</span></span>  <span data-ttu-id="f0c09-256">関数ごとの **モードを使用する** 場合、HTML ファイル内のインライン スクリプトは関数として扱います。</span><span class="sxs-lookup"><span data-stu-id="f0c09-256">When using **per function** mode, inline scripts in HTML files are treated as functions.</span></span>  <span data-ttu-id="f0c09-257">スクリプトが全く実行されている場合、DevTools はスクリプト全体を使用コードとしてマークします。</span><span class="sxs-lookup"><span data-stu-id="f0c09-257">If the script runs at all then DevTools marks the entire script as used code.</span></span>  <span data-ttu-id="f0c09-258">スクリプトが全く実行されない場合にのみ、DevTools はスクリプトを未使用のコードとしてマークします。</span><span class="sxs-lookup"><span data-stu-id="f0c09-258">Only if the script does not run at all does DevTools mark the script as unused code.</span></span>  
 
-:::image type="complex" source="../../images/2019/12/modes.msft.png" alt-text="[カバレッジモード] ドロップダウンメニュー" lightbox="../../images/2019/12/modes.msft.png":::
-   <span data-ttu-id="7904f-258">[カバレッジモード] ドロップダウンメニュー</span><span class="sxs-lookup"><span data-stu-id="7904f-258">The coverage mode dropdown menu</span></span>  
+:::image type="complex" source="../../images/2019/12/modes.msft.png" alt-text="[カバレッジ モード] ドロップダウン メニュー" lightbox="../../images/2019/12/modes.msft.png":::
+   <span data-ttu-id="f0c09-260">[カバレッジ モード] ドロップダウン メニュー</span><span class="sxs-lookup"><span data-stu-id="f0c09-260">The coverage mode dropdown menu</span></span>  
 :::image-end:::  
 
-#### <span data-ttu-id="7904f-259">ページの再読み込みによってカバーが開始されるようになりました</span><span class="sxs-lookup"><span data-stu-id="7904f-259">Coverage must now be initiated by a page reload</span></span>  
+#### <a name="coverage-must-now-be-initiated-by-a-page-refresh"></a><span data-ttu-id="f0c09-261">ページの更新によってカバレッジを開始する必要があります</span><span class="sxs-lookup"><span data-stu-id="f0c09-261">Coverage must now be initiated by a page refresh</span></span>  
 
-<span data-ttu-id="7904f-260">カバレッジデータの信頼性が低いため、ページの再読み込みを行わずにコードカバレッジを切り替えることはできません。</span><span class="sxs-lookup"><span data-stu-id="7904f-260">Toggling code coverage without a page reload has been removed because the coverage data was unreliable.</span></span>  <span data-ttu-id="7904f-261">たとえば、ランタイムが長時間前であり、V8 ガベージコレクターによってクリーンアップされている場合、関数は未使用として報告されることがあります。</span><span class="sxs-lookup"><span data-stu-id="7904f-261">For example, a function may be reported as unused if the runtime was a long time ago and the V8 garbage collector has cleaned it up.</span></span>  
+<span data-ttu-id="f0c09-262">ページの更新を行わずにコード範囲を切り込むのは、カバレッジ データが不当だったため削除されました。</span><span class="sxs-lookup"><span data-stu-id="f0c09-262">Toggling code coverage without a page refresh has been removed because the coverage data was unreliable.</span></span>  <span data-ttu-id="f0c09-263">たとえば、ランタイムが長時間前で、V8 ガベージ コレクターがクリーンアップした場合、関数が使用されていないと報告される場合があります。</span><span class="sxs-lookup"><span data-stu-id="f0c09-263">For example, a function may be reported as unused if the runtime was a long time ago and the V8 garbage collector has cleaned it up.</span></span>  
 
-<span data-ttu-id="7904f-262">Chromium の問題 [#1004203][CR1004203]</span><span class="sxs-lookup"><span data-stu-id="7904f-262">Chromium issue [#1004203][CR1004203]</span></span>  
+<span data-ttu-id="f0c09-264">クロムの問題 [#1004203][CR1004203]</span><span class="sxs-lookup"><span data-stu-id="f0c09-264">Chromium issue [#1004203][CR1004203]</span></span>  
 
-## <span data-ttu-id="7904f-263">Microsoft Edge preview チャネルをダウンロードする</span><span class="sxs-lookup"><span data-stu-id="7904f-263">Download the Microsoft Edge preview channels</span></span>  
+## <a name="download-the-microsoft-edge-preview-channels"></a><span data-ttu-id="f0c09-265">Microsoft Edge プレビュー チャネルをダウンロードする</span><span class="sxs-lookup"><span data-stu-id="f0c09-265">Download the Microsoft Edge preview channels</span></span>  
 
-<span data-ttu-id="7904f-264">Windows または macOS を使用している場合は、 [Microsoft Edge preview チャネル][MicrosoftEdgePreviewChannels] を既定の開発ブラウザーとして使用することを検討してください。</span><span class="sxs-lookup"><span data-stu-id="7904f-264">If you are on Windows or macOS, consider using the [Microsoft Edge preview channels][MicrosoftEdgePreviewChannels] as your default development browser.</span></span>  <span data-ttu-id="7904f-265">プレビューチャネルを使うと、最新の DevTools 機能にアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="7904f-265">The preview channels give you access to the latest DevTools features.</span></span>  
+<span data-ttu-id="f0c09-266">Windows または macOS を使用している場合、[Microsoft Edge プレビュー チャネル][MicrosoftEdgePreviewChannels] を既定の開発ブラウザーとして使用することを検討してください。</span><span class="sxs-lookup"><span data-stu-id="f0c09-266">If you are on Windows or macOS, consider using the [Microsoft Edge preview channels][MicrosoftEdgePreviewChannels] as your default development browser.</span></span>  <span data-ttu-id="f0c09-267">プレビュー チャネルを使用すると、最新の DevTools 機能にアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="f0c09-267">The preview channels give you access to the latest DevTools features.</span></span>  
 
-## <span data-ttu-id="7904f-266">Microsoft Edge DevTools チームに連絡する</span><span class="sxs-lookup"><span data-stu-id="7904f-266">Getting in touch with Microsoft Edge DevTools team</span></span>  
+## <a name="getting-in-touch-with-microsoft-edge-devtools-team"></a><span data-ttu-id="f0c09-268">Microsoft Edge DevTools チームに連絡する</span><span class="sxs-lookup"><span data-stu-id="f0c09-268">Getting in touch with Microsoft Edge DevTools team</span></span>  
 
 [!INCLUDE [contact DevTools team note](../../includes/contact-whats-new-note.md)]  
-
-<!--<<../../_shared/devtools-feedback.md>> -->
-
-<!--<<../../_shared/canary.md>> -->
-
-<!--<<../../_shared/discover.md>> -->
 
 <!-- image links -->  
 
@@ -338,57 +333,57 @@ ms.locfileid: "11015469"
 
 <!-- links -->  
 
-[DevToolsCommandMenuIndex]: /microsoft-edge/devtools-guide-chromium/command-menu/index "Microsoft Edge DevTools コマンドメニューを使用してコマンドを実行する |Microsoft ドキュメント"  
-[DevToolsCoverageIndex]: /microsoft-edge/devtools-guide-chromium/coverage/index "Microsoft Edge DevTools の [カバレッジ] タブを使用して、使用されていない JavaScript と CSS コードを見つけます。Microsoft ドキュメント"  
-[DevToolsDeviceModeIndex]: /microsoft-edge/devtools-guide-chromium/device-mode/index#simulate-a-mobile-viewport "モバイルビューポートをシミュレートする Microsoft Edge DevTools のデバイスモードでモバイルデバイスをシミュレートする |Microsoft ドキュメント"  
-[DevToolsNetworkIndex]: /microsoft-edge/devtools-guide-chromium/network/index "Microsoft Edge DevTools でネットワークアクティビティを検査する |Microsoft ドキュメント"  
-[DevToolsNetworkReferenceViewInitiatorsDependencies]: /microsoft-edge/devtools-guide-chromium/network/reference#view-initiators-and-dependencies "イニシエーターと依存関係の表示-ネットワーク分析リファレンス |Microsoft ドキュメント"  
-[DevGuideEdgeHtmlWhatsNew]: /microsoft-edge/dev-guide/whats-new "EdgeHTML の新機能 |Microsoft ドキュメント"  
-[VisualStudioCodeDebuggerEdgeExtension]: /microsoft-edge/visual-studio-code/debugger-for-edge "Microsoft Edge Visual Studio コード拡張機能のデバッガー |Microsoft ドキュメント"  
-[VisualStudioCodeElementEdgeExtension]: /microsoft-edge/visual-studio-code/elements-for-edge "Microsoft Edge Visual Studio コード拡張の要素 |Microsoft ドキュメント"  
+[DevToolsCommandMenuIndex]: /microsoft-edge/devtools-guide-chromium/command-menu/index "Microsoft Edge DevTools コマンド メニュー を使用してコマンドを実行|Microsoft Docs"  
+[DevToolsCoverageIndex]: /microsoft-edge/devtools-guide-chromium/coverage/index "Microsoft Edge DevTools の [カバレッジ] ツールを使用して、使用されていない JavaScript コードと CSS コードを検索|Microsoft Docs"  
+[DevToolsDeviceModeIndex]: /microsoft-edge/devtools-guide-chromium/device-mode/index#simulate-a-mobile-viewport "モバイル ビューポートのシミュレート - Microsoft Edge DevTools アプリケーションでデバイス モードを使用してモバイル デバイスをシミュレート|Microsoft Docs"  
+[DevToolsNetworkIndex]: /microsoft-edge/devtools-guide-chromium/network/index "Microsoft Edge DevTools サーバーでネットワーク アクティビティを|Microsoft Docs"  
+[DevToolsNetworkReferenceViewInitiatorsDependencies]: /microsoft-edge/devtools-guide-chromium/network/reference#view-initiators-and-dependencies "開始者と依存関係の表示 - ネットワーク分析リファレンス |Microsoft Docs"  
+[DevGuideEdgeHtmlWhatsNew]: /microsoft-edge/dev-guide/whats-new "EdgeHTML の新機能 |Microsoft Docs"  
+[VisualStudioCodeDebuggerEdgeExtension]: /microsoft-edge/visual-studio-code/debugger-for-edge "Microsoft Edge Visual Studio Code 拡張機能のデバッガー |Microsoft Docs"  
+[VisualStudioCodeElementEdgeExtension]: /microsoft-edge/visual-studio-code/elements-for-edge "Microsoft Edge Visual Studio Code 拡張機能の|Microsoft Docs"  
 
 <!--  [201912Webassembly]: webassembly.md "Improved WebAssembly debugging in Microsoft Edge DevTools"  -->  
 
-[CR842488]: https://crbug.com/842488 "[ヘッダー] タブに [イニシエーター] フィールドを追加します。Chromium のバグ"  
-[CR988253]: https://crbug.com/988253 "バグ DevTools-ネットワーク要求とタイムライングラフの間に関連性がありません |Chromium のバグ"  
-[CR993366]: https://crbug.com/993366 "ネットワークパネル要求リストで URL のパス部分を表示してください |Chromium のバグ"  
-[CR1004193]: https://crbug.com/1004193 "V8 の REPL モード |Chromium のバグ"  
-[CR1004203]: https://crbug.com/1004203 "コードカバレッジをすばらしいものにする |Chromium のバグ"  
-[CR1029031]: https://crbug.com/1029031 "UA 文字列が古くなります。 |Chromium のバグ" 
-[CR963183]: https://crbug.com/963183 "DevTools は WCAG に準拠していません |Chromium のバグ"
-[CR941561]: https://crbug.com/941561 "DevTools のローカライズ可能性 |Chromium のバグ"
-[CR987787]: https://crbug.com/987787 "Dom 3D ビュー |Chromium のバグ"
+[CR842488]: https://crbug.com/842488 "[イニシエーター] フィールドを [ヘッダー] タブに追加|クロム バグ"  
+[CR988253]: https://crbug.com/988253 "Bug DevTools - ネットワーク要求とタイムライン グラフ の間に関連付|クロム バグ"  
+[CR993366]: https://crbug.com/993366 "ネットワーク パネル要求リストに URL のパス部分を表示|クロム バグ"  
+[CR1004193]: https://crbug.com/1004193 "V8 の REPL モード|クロム バグ"  
+[CR1004203]: https://crbug.com/1004203 "コード カバレッジをすばらしい|クロム バグ"  
+[CR1029031]: https://crbug.com/1029031 "UA 文字列が古くなっている|クロム バグ" 
+[CR963183]: https://crbug.com/963183 "DevTools は WCAG 準拠の|クロム バグ"
+[CR941561]: https://crbug.com/941561 "DevTools ファイルのローカライズ|クロム バグ"
+[CR987787]: https://crbug.com/987787 "Dom 3D ビュー |クロム バグ"
 
-[AccessibilityInsights]: https://aka.ms/a11yinsights "アクセシビリティの分析"  
+[AccessibilityInsights]: https://aka.ms/a11yinsights "アクセシビリティインサイト"  
 
-[DwarfHome]: https://dwarfstd.org "Dwarf ホーム"  
-[GitHubGoogleChromeDevToolsAuditsPanelThrottling]: https://github.com/GoogleChrome/lighthouse/blob/master/docs/throttling.md#devtools-audits-panel-throttling "DevTools の監査パネルの調整-GoogleChrome/lighthouse |GitHub"  
-[GitHubMicrosoftDocsEdgeDeveloperNewIssue]: https://aka.ms/edgedevtoolsdocs/feedback "新しい問題-Microsoft のドキュメント/エッジ-開発者"  
+[DwarfHome]: https://dwarfstd.org "Dwarf Home"  
+[GitHubGoogleChromeDevToolsAuditsPanelThrottling]: https://github.com/GoogleChrome/lighthouse/blob/master/docs/throttling.md#devtools-audits-panel-throttling "DevTools の監査パネル調整 - GoogleChrome/ライトハウス |GitHub"  
+[GitHubMicrosoftDocsEdgeDeveloperNewIssue]: https://aka.ms/edgedevtoolsdocs/feedback "新しい問題 - MicrosoftDocs/edge-developer"  
 [MicrosoftEdgePreviewChannels]: https://aka.ms/microsoftedge "Microsoft Edge Preview チャネル"  
-[MicrosoftEdgeInsiderAddons]: https://aka.ms/webhint/edge-extension "Microsoft Edge Insider のアドオン"  
+[MicrosoftEdgeInsiderAddons]: https://aka.ms/webhint/edge-extension "Microsoft Edge Insider アドオン"  
 [MicrosoftVisualStudio]: https://aka.ms/vs "Visual Studio"  
-[MicrosoftVisualStudioBlogDebugJavascript]: https://aka.ms/vs/debug-edge "Visual Studio からの Microsoft Edge で JavaScript をデバッグする |Visual Studio ブログ"  
-[MicrosoftVisualStudioDownloads]: https://aka.ms/vs/download "Visual Studio 2019 for Windows & Mac をダウンロードする"  
-[MDNDocumentObjectModel]: https://developer.mozilla.org/docs/Web/API/Document_Object_Model "ドキュメントオブジェクトモデル (DOM) |MDN"  
-[MDNZIndex]: https://developer.mozilla.org/docs/Web/CSS/z-index "z インデックス |MDN"  
-[PostTweetEdgeDevTools]: https://aka.ms/tweet/edgedevtools "@EdgeDevTools |ツイートを投稿する"  
+[MicrosoftVisualStudioBlogDebugJavascript]: https://aka.ms/vs/debug-edge "Microsoft Edge で JavaScript をデバッグする方法をVisual Studio |Visual Studioブログ"  
+[MicrosoftVisualStudioDownloads]: https://aka.ms/vs/download "Windows Visual Studio Mac 用 2019 &ダウンロード"  
+[MDNDocumentObjectModel]: https://developer.mozilla.org/docs/Web/API/Document_Object_Model "ドキュメント オブジェクト モデル (DOM) |MDN"  
+[MDNZIndex]: https://developer.mozilla.org/docs/Web/CSS/z-index "z-index |MDN"  
+[PostTweetEdgeDevTools]: https://aka.ms/tweet/edgedevtools "@EdgeDevTools | ツイートを投稿する"  
 [EdgeDevToolsTwitterAccount]: https://aka.ms/twitter/edgedevtools "@EdgeDevTools Twitter アカウント"
-[VisualStudioCode]: https://aka.ms/vscode "Visual Studio コード"  
-[VisualStudioMarketplaceDebuggerEdge]: https://aka.ms/debugger4code "Microsoft Edge 用デバッガー-Visual Studio Marketplace"  
-[VisualStudioMarketplaceElementsMicrosoftEdgeChromiumExtension]: https://aka.ms/elements4code "Microsoft Edge \ (Chromium) の要素: Visual Studio Marketplace"  
-[VisualStudioMarketplaceWebhintExtension]: https://aka.ms/webhint4code "webhint-Visual Studio Marketplace"
-[Webhint]: https://aka.ms/webhint "web ヒント"  
-[WebhintBrowserExtension]: https://aka.ms/webhint/browser-extension "Webhint ブラウザ拡張 |webhint に関するドキュメント"  
-[WebhintVisualStudioCodeExtension]: https://aka.ms/webhint/code-extension "Webhint Visual Studio のコード拡張 |webhint に関するドキュメント"  
-[TrackingPrevention]: https://aka.ms/microsoftedge/tracking-prevention-blog "Microsoft Edge ブログ投稿の追跡防止の向上"
-[TheWebWeWant]: https://aka.ms/webwewant "必要な Web"
+[VisualStudioCode]: https://aka.ms/vscode "Visual Studioコード"  
+[VisualStudioMarketplaceDebuggerEdge]: https://aka.ms/debugger4code "Microsoft Edge 用デバッガー - Visual Studio Marketplace"  
+[VisualStudioMarketplaceElementsMicrosoftEdgeChromiumExtension]: https://aka.ms/elements4code "Microsoft Edge \(Chromium\) の要素 - Visual Studio Marketplace"  
+[VisualStudioMarketplaceWebhintExtension]: https://aka.ms/webhint4code "webhint - Visual Studio Marketplace"
+[Webhint]: https://aka.ms/webhint "webhint"  
+[WebhintBrowserExtension]: https://aka.ms/webhint/browser-extension "Webhint Browser Extension |webhint のドキュメント"  
+[WebhintVisualStudioCodeExtension]: https://aka.ms/webhint/code-extension "Webhint Visual Studio コード拡張機能 |webhint のドキュメント"  
+[TrackingPrevention]: https://aka.ms/microsoftedge/tracking-prevention-blog "Microsoft Edge ブログ投稿での追跡防止の改善"
+[TheWebWeWant]: https://aka.ms/webwewant "必要とされる Web"
 
 > [!NOTE]
-> <span data-ttu-id="7904f-306">このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。</span><span class="sxs-lookup"><span data-stu-id="7904f-306">Portions of this page are modifications based on work created and [shared by Google][GoogleSitePolicies] and used according to terms described in the [Creative Commons Attribution 4.0 International License][CCA4IL].</span></span>  
-> <span data-ttu-id="7904f-307">元のページは [ここ](https://developers.google.com/web/updates/2019/12/devtools/index) にあり、 [Kayce Basques][KayceBasques] テクニカルライター、Chrome Devtools \ & Lighthouse \) で作成されています。</span><span class="sxs-lookup"><span data-stu-id="7904f-307">The original page is found [here](https://developers.google.com/web/updates/2019/12/devtools/index) and is authored by [Kayce Basques][KayceBasques] \(Technical Writer, Chrome DevTools \& Lighthouse\).</span></span>  
+> <span data-ttu-id="f0c09-308">このページの一部は、[Google によっ て作成および共有された][GoogleSitePolicies]作業に基づく変更であり、「[Creative Commons Attribution 4.0 International License][CCA4IL]」に記載されている条項に従って使用されます。</span><span class="sxs-lookup"><span data-stu-id="f0c09-308">Portions of this page are modifications based on work created and [shared by Google][GoogleSitePolicies] and used according to terms described in the [Creative Commons Attribution 4.0 International License][CCA4IL].</span></span>  
+> <span data-ttu-id="f0c09-309">元のページは [ここ](https://developers.google.com/web/updates/2019/12/devtools/index) にあり、 [Kayce Basques][KayceBasques] \(Chrome DevTools \& Lighthouse\ のテクニカル ライター) が作成しました。</span><span class="sxs-lookup"><span data-stu-id="f0c09-309">The original page is found [here](https://developers.google.com/web/updates/2019/12/devtools/index) and is authored by [Kayce Basques][KayceBasques] \(Technical Writer, Chrome DevTools \& Lighthouse\).</span></span>  
 
-[![クリエイティブコモンズライセンス][CCby4Image]][CCA4IL]  
-<span data-ttu-id="7904f-309">この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。</span><span class="sxs-lookup"><span data-stu-id="7904f-309">This work is licensed under a [Creative Commons Attribution 4.0 International License][CCA4IL].</span></span>  
+[![Creative Commons ライセンス][CCby4Image]][CCA4IL]  
+<span data-ttu-id="f0c09-311">この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。</span><span class="sxs-lookup"><span data-stu-id="f0c09-311">This work is licensed under a [Creative Commons Attribution 4.0 International License][CCA4IL].</span></span>  
 
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  

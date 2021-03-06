@@ -1,818 +1,375 @@
 ---
-description: デバッガー ドメインの DevTools プロトコル バージョン 0.1 (EdgeHTML) リファレンス。 デバッガー ドメインは、JavaScript デバッグ機能を公開します。 ブレークポイントの設定と削除、実行のステップ実行、スタック トレースの探索などを行えます。
+description: デバッガー ドメインの DevTools プロトコル バージョン 0.1 (EdgeHTML) 参照。  デバッガー ドメインは、JavaScript のデバッグ機能を公開します。  ブレークポイントの設定と削除、実行のステップ実行、スタック トレースの探索などを行えます。
 title: デバッガー ドメイン - DevTools プロトコル バージョン 0.1 (EdgeHTML)
 author: MSEdgeTeam
 ms.author: msedgedevrel
+ms.date: 11/03/2020
 ms.topic: reference
 ms.prod: microsoft-edge
 ms.custom: seodec18
-ms.date: 12/16/2020
 ROBOTS: NOINDEX,NOFOLLOW
-ms.openlocfilehash: 5160e6e69ec76f8c584f1bdb969464d805c7afa7
-ms.sourcegitcommit: a35a6b5bbc21b7df61d08cbc6b074b5325ad4fef
+ms.openlocfilehash: d63408e23fd8912cf617bfefae2b991387b45a38
+ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "11234802"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "11397679"
 ---
-# <span data-ttu-id="afdb9-105">デバッガー ドメイン - DevTools プロトコル バージョン 0.1 (EdgeHTML)</span><span class="sxs-lookup"><span data-stu-id="afdb9-105">Debugger Domain - DevTools Protocol Version 0.1 (EdgeHTML)</span></span>  
+# <a name="debugger-domain---devtools-protocol-version-01-edgehtml"></a><span data-ttu-id="f1d3c-105">デバッガー ドメイン - DevTools プロトコル バージョン 0.1 (EdgeHTML)</span><span class="sxs-lookup"><span data-stu-id="f1d3c-105">Debugger Domain - DevTools Protocol Version 0.1 (EdgeHTML)</span></span>  
   
-<span data-ttu-id="afdb9-106">デバッガー ドメインは、JavaScript デバッグ機能を公開します。</span><span class="sxs-lookup"><span data-stu-id="afdb9-106">Debugger domain exposes JavaScript debugging capabilities.</span></span> <span data-ttu-id="afdb9-107">ブレークポイントの設定と削除、実行のステップ実行、スタック トレースの探索などを行えます。</span><span class="sxs-lookup"><span data-stu-id="afdb9-107">It allows setting and removing breakpoints, stepping through execution, exploring stack traces, etc.</span></span>
-
-| | |
-|-|-|
-| [**<span data-ttu-id="afdb9-108">メソッド</span><span class="sxs-lookup"><span data-stu-id="afdb9-108">Methods</span></span>**](#methods) | <span data-ttu-id="afdb9-109">[有効](#enable)、[無効](#disable)、getPossibleBreakpoints、setBreakpointsActive、setBreakpointByUrl、setBreakpoint [、removeBreakpoint](#removebreakpoint) [](#setbreakpointsactive) [](#getpossiblebreakpoints) [](#setbreakpointbyurl) [、stepOver](#stepover) [](#setbreakpoint) [、stepInto](#stepinto) [、stepOut](#stepout) [、pause](#pause) [、resume、getScriptSource](#resume) [、setPauseOnExceptions](#setpauseonexceptions) [、evaluateOnCallFrame](#evaluateoncallframe) [、setVariableValue、setBlackboxPatterns](#setvariablevalue) [、msSetDebuggerPropertyValue](#mssetdebuggerpropertyvalue) [](#getscriptsource) [](#setblackboxpatterns)</span><span class="sxs-lookup"><span data-stu-id="afdb9-109">[enable](#enable), [disable](#disable), [getPossibleBreakpoints](#getpossiblebreakpoints), [setBreakpointsActive](#setbreakpointsactive), [setBreakpointByUrl](#setbreakpointbyurl), [setBreakpoint](#setbreakpoint), [removeBreakpoint](#removebreakpoint), [stepOver](#stepover), [stepInto](#stepinto), [stepOut](#stepout), [pause](#pause), [resume](#resume), [getScriptSource](#getscriptsource), [setPauseOnExceptions](#setpauseonexceptions), [evaluateOnCallFrame](#evaluateoncallframe), [setVariableValue](#setvariablevalue), [setBlackboxPatterns](#setblackboxpatterns), [msSetDebuggerPropertyValue](#mssetdebuggerpropertyvalue)</span></span> |
-| [**<span data-ttu-id="afdb9-110">イベント</span><span class="sxs-lookup"><span data-stu-id="afdb9-110">Events</span></span>**](#events) | <span data-ttu-id="afdb9-111">[scriptParsed](#scriptparsed), [breakpointResolved](#breakpointresolved), [paused](#paused), [resumed](#resumed)</span><span class="sxs-lookup"><span data-stu-id="afdb9-111">[scriptParsed](#scriptparsed), [breakpointResolved](#breakpointresolved), [paused](#paused), [resumed](#resumed)</span></span> |
-| [**<span data-ttu-id="afdb9-112">型</span><span class="sxs-lookup"><span data-stu-id="afdb9-112">Types</span></span>**](#types) | <span data-ttu-id="afdb9-113">[BreakpointId](#breakpointid), [CallFrameId](#callframeid), [Location](#location), [BreakLocation](#breaklocation), [CallFrame](#callframe), [Scope](#scope)</span><span class="sxs-lookup"><span data-stu-id="afdb9-113">[BreakpointId](#breakpointid), [CallFrameId](#callframeid), [Location](#location), [BreakLocation](#breaklocation), [CallFrame](#callframe), [Scope](#scope)</span></span> |
-| [**<span data-ttu-id="afdb9-114">依存関係</span><span class="sxs-lookup"><span data-stu-id="afdb9-114">Dependencies</span></span>**](#dependencies) | [<span data-ttu-id="afdb9-115">ランタイム</span><span class="sxs-lookup"><span data-stu-id="afdb9-115">Runtime</span></span>](runtime.md) |
-## <span data-ttu-id="afdb9-116">メソッド</span><span class="sxs-lookup"><span data-stu-id="afdb9-116">Methods</span></span>
-
-### <span data-ttu-id="afdb9-117">[有効]</span><span class="sxs-lookup"><span data-stu-id="afdb9-117">enable</span></span>
-<span data-ttu-id="afdb9-118">指定したページのデバッガーを有効にします。</span><span class="sxs-lookup"><span data-stu-id="afdb9-118">Enables debugger for the given page.</span></span> <span data-ttu-id="afdb9-119">クライアントは、このコマンドの結果を受け取るまでデバッグが有効になっているとは想定しません。</span><span class="sxs-lookup"><span data-stu-id="afdb9-119">Clients should not assume that the debugging has been enabled until the result for this command is received.</span></span>
-
-
----
-
-### <span data-ttu-id="afdb9-120">[無効]</span><span class="sxs-lookup"><span data-stu-id="afdb9-120">disable</span></span>
-<span data-ttu-id="afdb9-121">特定のページのデバッガーを無効にします。</span><span class="sxs-lookup"><span data-stu-id="afdb9-121">Disables debugger for given page.</span></span>
-
-
----
-
-### <span data-ttu-id="afdb9-122">getPossibleBreakpoints</span><span class="sxs-lookup"><span data-stu-id="afdb9-122">getPossibleBreakpoints</span></span>
-<span data-ttu-id="afdb9-123">ブレークポイントの可能性がある場所を返します。</span><span class="sxs-lookup"><span data-stu-id="afdb9-123">Returns possible locations for breakpoint.</span></span> <span data-ttu-id="afdb9-124">開始範囲と終了範囲の場所の scriptId は同じである必要があります。</span><span class="sxs-lookup"><span data-stu-id="afdb9-124">scriptId in start and end range locations should be the same.</span></span>
-
-<table>
-    <thead>
-        <tr>
-            <th><span data-ttu-id="afdb9-125">パラメーター</span><span class="sxs-lookup"><span data-stu-id="afdb9-125">Parameters</span></span></th>
-            <th></th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><span data-ttu-id="afdb9-126">start</span><span class="sxs-lookup"><span data-stu-id="afdb9-126">start</span></span></td>
-            <td><a href="#location"><code class="flyout">Location</code></a></td>
-            <td><span data-ttu-id="afdb9-127">ブレークポイントの位置を検索する範囲の開始位置。</span><span class="sxs-lookup"><span data-stu-id="afdb9-127">Start of range to search possible breakpoint locations in.</span></span></td>
-        </tr>
-        <tr>
-            <td><span data-ttu-id="afdb9-128">終了</span><span class="sxs-lookup"><span data-stu-id="afdb9-128">end</span></span></td>
-            <td><a href="#location"><code class="flyout">Location</code></a></td>
-            <td><span data-ttu-id="afdb9-129">(除外する) のブレークポイントの位置を検索する範囲の終了。</span><span class="sxs-lookup"><span data-stu-id="afdb9-129">End of range to search possible breakpoint locations in (excluding).</span></span> <span data-ttu-id="afdb9-130">指定しない場合、スクリプトの終了が範囲の終了として使用されます。</span><span class="sxs-lookup"><span data-stu-id="afdb9-130">When not specified, end of scripts is used as end of range.</span></span></td>
-        </tr>
-    </tbody>
-</table>
-<table>
-    <thead>
-        <tr>
-            <th><span data-ttu-id="afdb9-131">戻り値</span><span class="sxs-lookup"><span data-stu-id="afdb9-131">Returns</span></span></th>
-            <th></th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><span data-ttu-id="afdb9-132">locations</span><span class="sxs-lookup"><span data-stu-id="afdb9-132">locations</span></span></td>
-            <td><a href="#breaklocation"><code class="flyout">BreakLocation</code></a></td>
-            <td><span data-ttu-id="afdb9-133">考えられるブレークポイントの場所の一覧。</span><span class="sxs-lookup"><span data-stu-id="afdb9-133">List of the possible breakpoint locations.</span></span></td>
-        </tr>
-    </tbody>
-</table>
-
----
-
-### <span data-ttu-id="afdb9-134">setBreakpointsActive</span><span class="sxs-lookup"><span data-stu-id="afdb9-134">setBreakpointsActive</span></span>
-<span data-ttu-id="afdb9-135">ページ上のすべてのブレークポイントをアクティブ化/非アクティブ化します。</span><span class="sxs-lookup"><span data-stu-id="afdb9-135">Activates / deactivates all breakpoints on the page.</span></span>
-
-<table>
-    <thead>
-        <tr>
-            <th><span data-ttu-id="afdb9-136">パラメーター</span><span class="sxs-lookup"><span data-stu-id="afdb9-136">Parameters</span></span></th>
-            <th></th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><span data-ttu-id="afdb9-137">active</span><span class="sxs-lookup"><span data-stu-id="afdb9-137">active</span></span></td>
-            <td><code class="flyout">boolean</code></td>
-            <td><span data-ttu-id="afdb9-138">アクティブな状態のブレークポイントの新しい値。</span><span class="sxs-lookup"><span data-stu-id="afdb9-138">New value for breakpoints active state.</span></span></td>
-        </tr>
-    </tbody>
-</table>
-
----
-
-### <span data-ttu-id="afdb9-139">setBreakpointByUrl</span><span class="sxs-lookup"><span data-stu-id="afdb9-139">setBreakpointByUrl</span></span>
-<span data-ttu-id="afdb9-140">URL または URL regex で指定された特定の場所に JavaScript ブレークポイントを設定します。</span><span class="sxs-lookup"><span data-stu-id="afdb9-140">Sets JavaScript breakpoint at given location specified either by URL or URL regex.</span></span> <span data-ttu-id="afdb9-141">このコマンドを発行すると、既存の解析済みスクリプトはすべてブレークポイントが解決され、プロパティで返 <code>locations</code> されます。</span><span class="sxs-lookup"><span data-stu-id="afdb9-141">Once this command is issued, all existing parsed scripts will have breakpoints resolved and returned in <code>locations</code> property.</span></span> <span data-ttu-id="afdb9-142">さらに一致するスクリプト解析では、後続の <code>breakpointResolved</code> イベントが発行されます。</span><span class="sxs-lookup"><span data-stu-id="afdb9-142">Further matching script parsing will result in subsequent <code>breakpointResolved</code> events issued.</span></span> <span data-ttu-id="afdb9-143">この論理的なブレークポイントは、ページの再読み込み後に残ります。</span><span class="sxs-lookup"><span data-stu-id="afdb9-143">This logical breakpoint will survive page reloads.</span></span>
-
-<table>
-    <thead>
-        <tr>
-            <th><span data-ttu-id="afdb9-144">パラメーター</span><span class="sxs-lookup"><span data-stu-id="afdb9-144">Parameters</span></span></th>
-            <th></th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><span data-ttu-id="afdb9-145">lineNumber</span><span class="sxs-lookup"><span data-stu-id="afdb9-145">lineNumber</span></span></td>
-            <td><code class="flyout">integer</code></td>
-            <td><span data-ttu-id="afdb9-146">ブレークポイントを設定する行番号です。</span><span class="sxs-lookup"><span data-stu-id="afdb9-146">Line number to set breakpoint at.</span></span></td>
-        </tr>
-        <tr>
-            <td><span data-ttu-id="afdb9-147">url</span><span class="sxs-lookup"><span data-stu-id="afdb9-147">url</span></span> <br/> <i><span data-ttu-id="afdb9-148">オプション</span><span class="sxs-lookup"><span data-stu-id="afdb9-148">optional</span></span></i></td>
-            <td><code class="flyout">string</code></td>
-            <td><span data-ttu-id="afdb9-149">ブレークポイントを設定するリソースの URL。</span><span class="sxs-lookup"><span data-stu-id="afdb9-149">URL of the resources to set breakpoint on.</span></span></td>
-        </tr>
-        <tr>
-            <td><span data-ttu-id="afdb9-150">urlRegex</span><span class="sxs-lookup"><span data-stu-id="afdb9-150">urlRegex</span></span> <br/> <i><span data-ttu-id="afdb9-151">オプション</span><span class="sxs-lookup"><span data-stu-id="afdb9-151">optional</span></span></i></td>
-            <td><code class="flyout">string</code></td>
-            <td><span data-ttu-id="afdb9-152">ブレークポイントを設定するリソースの URL の正規表現パターン。</span><span class="sxs-lookup"><span data-stu-id="afdb9-152">Regex pattern for the URLs of the resources to set breakpoints on.</span></span> <span data-ttu-id="afdb9-153">指定 <code>url</code> するか <code>urlRegex</code> 、指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="afdb9-153">Either <code>url</code> or <code>urlRegex</code> must be specified.</span></span></td>
-        </tr>
-        <tr>
-            <td><span data-ttu-id="afdb9-154">columnNumber</span><span class="sxs-lookup"><span data-stu-id="afdb9-154">columnNumber</span></span> <br/> <i><span data-ttu-id="afdb9-155">オプション</span><span class="sxs-lookup"><span data-stu-id="afdb9-155">optional</span></span></i></td>
-            <td><code class="flyout">integer</code></td>
-            <td><span data-ttu-id="afdb9-156">ブレークポイントを設定する行のオフセット位置を指定します。</span><span class="sxs-lookup"><span data-stu-id="afdb9-156">Offset in the line to set breakpoint at.</span></span></td>
-        </tr>
-        <tr>
-            <td><span data-ttu-id="afdb9-157">condition</span><span class="sxs-lookup"><span data-stu-id="afdb9-157">condition</span></span> <br/> <i><span data-ttu-id="afdb9-158">オプション</span><span class="sxs-lookup"><span data-stu-id="afdb9-158">optional</span></span></i></td>
-            <td><code class="flyout">string</code></td>
-            <td><span data-ttu-id="afdb9-159">ブレークポイント条件として使用する式。</span><span class="sxs-lookup"><span data-stu-id="afdb9-159">Expression to use as a breakpoint condition.</span></span> <span data-ttu-id="afdb9-160">指定した場合、デバッガーは、この式が true と評価された場合にのみブレークポイントで停止します。</span><span class="sxs-lookup"><span data-stu-id="afdb9-160">When specified, debugger will only stop on the breakpoint if this expression evaluates to true.</span></span></td>
-        </tr>
-    </tbody>
-</table>
-<table>
-    <thead>
-        <tr>
-            <th><span data-ttu-id="afdb9-161">戻り値</span><span class="sxs-lookup"><span data-stu-id="afdb9-161">Returns</span></span></th>
-            <th></th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><span data-ttu-id="afdb9-162">breakpointId</span><span class="sxs-lookup"><span data-stu-id="afdb9-162">breakpointId</span></span></td>
-            <td><a href="#breakpointid"><code class="flyout">BreakpointId</code></a></td>
-            <td><span data-ttu-id="afdb9-163">追加の参照用に作成されたブレークポイントの ID。</span><span class="sxs-lookup"><span data-stu-id="afdb9-163">Id of the created breakpoint for further reference.</span></span></td>
-        </tr>
-        <tr>
-            <td><span data-ttu-id="afdb9-164">locations</span><span class="sxs-lookup"><span data-stu-id="afdb9-164">locations</span></span></td>
-            <td><a href="#location"><code class="flyout">Location[]</code></a></td>
-            <td><span data-ttu-id="afdb9-165">このブレークポイントが追加時に解決された場所の一覧。</span><span class="sxs-lookup"><span data-stu-id="afdb9-165">List of the locations this breakpoint resolved into upon addition.</span></span></td>
-        </tr>
-    </tbody>
-</table>
-
----
-
-### <span data-ttu-id="afdb9-166">setBreakpoint</span><span class="sxs-lookup"><span data-stu-id="afdb9-166">setBreakpoint</span></span>
-<span data-ttu-id="afdb9-167">特定の場所に JavaScript のブレークポイントを設定します。</span><span class="sxs-lookup"><span data-stu-id="afdb9-167">Sets JavaScript breakpoint at a given location.</span></span>
-
-<table>
-    <thead>
-        <tr>
-            <th><span data-ttu-id="afdb9-168">パラメーター</span><span class="sxs-lookup"><span data-stu-id="afdb9-168">Parameters</span></span></th>
-            <th></th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><span data-ttu-id="afdb9-169">location</span><span class="sxs-lookup"><span data-stu-id="afdb9-169">location</span></span></td>
-            <td><a href="#location"><code class="flyout">Location</code></a></td>
-            <td><span data-ttu-id="afdb9-170">ブレークポイントを設定する場所。</span><span class="sxs-lookup"><span data-stu-id="afdb9-170">Location to set breakpoint in.</span></span></td>
-        </tr>
-        <tr>
-            <td><span data-ttu-id="afdb9-171">condition</span><span class="sxs-lookup"><span data-stu-id="afdb9-171">condition</span></span> <br/> <i><span data-ttu-id="afdb9-172">オプション</span><span class="sxs-lookup"><span data-stu-id="afdb9-172">optional</span></span></i></td>
-            <td><code class="flyout">string</code></td>
-            <td><span data-ttu-id="afdb9-173">ブレークポイント条件として使用する式。</span><span class="sxs-lookup"><span data-stu-id="afdb9-173">Expression to use as a breakpoint condition.</span></span> <span data-ttu-id="afdb9-174">指定した場合、デバッガーは、この式が true と評価された場合にのみブレークポイントで停止します。</span><span class="sxs-lookup"><span data-stu-id="afdb9-174">When specified, debugger will only stop on the breakpoint if this expression evaluates to true.</span></span></td>
-        </tr>
-    </tbody>
-</table>
-<table>
-    <thead>
-        <tr>
-            <th><span data-ttu-id="afdb9-175">戻り値</span><span class="sxs-lookup"><span data-stu-id="afdb9-175">Returns</span></span></th>
-            <th></th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><span data-ttu-id="afdb9-176">breakpointId</span><span class="sxs-lookup"><span data-stu-id="afdb9-176">breakpointId</span></span></td>
-            <td><a href="#breakpointid"><code class="flyout">BreakpointId</code></a></td>
-            <td><span data-ttu-id="afdb9-177">追加の参照用に作成されたブレークポイントの ID。</span><span class="sxs-lookup"><span data-stu-id="afdb9-177">Id of the created breakpoint for further reference.</span></span></td>
-        </tr>
-        <tr>
-            <td><span data-ttu-id="afdb9-178">actualLocation</span><span class="sxs-lookup"><span data-stu-id="afdb9-178">actualLocation</span></span></td>
-            <td><a href="#location"><code class="flyout">Location</code></a></td>
-            <td><span data-ttu-id="afdb9-179">このブレークポイントが解決された場所。</span><span class="sxs-lookup"><span data-stu-id="afdb9-179">Location this breakpoint resolved into.</span></span></td>
-        </tr>
-    </tbody>
-</table>
-
----
-
-### <span data-ttu-id="afdb9-180">removeBreakpoint</span><span class="sxs-lookup"><span data-stu-id="afdb9-180">removeBreakpoint</span></span>
-<span data-ttu-id="afdb9-181">JavaScript ブレークポイントを削除します。</span><span class="sxs-lookup"><span data-stu-id="afdb9-181">Removes JavaScript breakpoint.</span></span>
-
-<table>
-    <thead>
-        <tr>
-            <th><span data-ttu-id="afdb9-182">パラメーター</span><span class="sxs-lookup"><span data-stu-id="afdb9-182">Parameters</span></span></th>
-            <th></th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><span data-ttu-id="afdb9-183">breakpointId</span><span class="sxs-lookup"><span data-stu-id="afdb9-183">breakpointId</span></span></td>
-            <td><a href="#breakpointid"><code class="flyout">BreakpointId</code></a></td>
-            <td></td>
-        </tr>
-    </tbody>
-</table>
-
----
-
-### <span data-ttu-id="afdb9-184">stepOver</span><span class="sxs-lookup"><span data-stu-id="afdb9-184">stepOver</span></span>
-<span data-ttu-id="afdb9-185">ステートメントをステップオーバーします。</span><span class="sxs-lookup"><span data-stu-id="afdb9-185">Steps over the statement.</span></span>
-
-
----
-
-### <span data-ttu-id="afdb9-186">stepInto</span><span class="sxs-lookup"><span data-stu-id="afdb9-186">stepInto</span></span>
-<span data-ttu-id="afdb9-187">関数呼び出しにステップ します。</span><span class="sxs-lookup"><span data-stu-id="afdb9-187">Steps into the function call.</span></span>
-
-
----
-
-### <span data-ttu-id="afdb9-188">stepOut</span><span class="sxs-lookup"><span data-stu-id="afdb9-188">stepOut</span></span>
-<span data-ttu-id="afdb9-189">関数呼び出しからステップ アウトします。</span><span class="sxs-lookup"><span data-stu-id="afdb9-189">Steps out of the function call.</span></span>
-
-
----
-
-### <span data-ttu-id="afdb9-190">pause</span><span class="sxs-lookup"><span data-stu-id="afdb9-190">pause</span></span>
-<span data-ttu-id="afdb9-191">次の JavaScript ステートメントで停止します。</span><span class="sxs-lookup"><span data-stu-id="afdb9-191">Stops on the next JavaScript statement.</span></span>
-
-
----
-
-### <span data-ttu-id="afdb9-192">resume</span><span class="sxs-lookup"><span data-stu-id="afdb9-192">resume</span></span>
-<span data-ttu-id="afdb9-193">JavaScript の実行を再開します。</span><span class="sxs-lookup"><span data-stu-id="afdb9-193">Resumes JavaScript execution.</span></span>
-
-
----
-
-### <span data-ttu-id="afdb9-194">getScriptSource</span><span class="sxs-lookup"><span data-stu-id="afdb9-194">getScriptSource</span></span>
-<span data-ttu-id="afdb9-195">指定された ID を持つスクリプトのソースを返します。</span><span class="sxs-lookup"><span data-stu-id="afdb9-195">Returns source for the script with given id.</span></span>
-
-<table>
-    <thead>
-        <tr>
-            <th><span data-ttu-id="afdb9-196">パラメーター</span><span class="sxs-lookup"><span data-stu-id="afdb9-196">Parameters</span></span></th>
-            <th></th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><span data-ttu-id="afdb9-197">scriptId</span><span class="sxs-lookup"><span data-stu-id="afdb9-197">scriptId</span></span></td>
-            <td><a href="runtime.md#scriptid"><code class="flyout">Runtime.ScriptId</code></a></td>
-            <td><span data-ttu-id="afdb9-198">ソースを取得するスクリプトの ID。</span><span class="sxs-lookup"><span data-stu-id="afdb9-198">Id of the script to get source for.</span></span></td>
-        </tr>
-    </tbody>
-</table>
-<table>
-    <thead>
-        <tr>
-            <th><span data-ttu-id="afdb9-199">戻り値</span><span class="sxs-lookup"><span data-stu-id="afdb9-199">Returns</span></span></th>
-            <th></th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><span data-ttu-id="afdb9-200">scriptSource</span><span class="sxs-lookup"><span data-stu-id="afdb9-200">scriptSource</span></span></td>
-            <td><code class="flyout">string</code></td>
-            <td><span data-ttu-id="afdb9-201">スクリプト ソース。</span><span class="sxs-lookup"><span data-stu-id="afdb9-201">Script source.</span></span></td>
-        </tr>
-    </tbody>
-</table>
-
----
-
-### <span data-ttu-id="afdb9-202">setPauseOnExceptions</span><span class="sxs-lookup"><span data-stu-id="afdb9-202">setPauseOnExceptions</span></span>
-<span data-ttu-id="afdb9-203">例外状態での一時停止を定義します。</span><span class="sxs-lookup"><span data-stu-id="afdb9-203">Defines pause on exceptions state.</span></span> <span data-ttu-id="afdb9-204">すべての例外、キャッチされていない例外、または例外がない場合に停止を設定できます。</span><span class="sxs-lookup"><span data-stu-id="afdb9-204">Can be set to stop on all exceptions, uncaught exceptions or no exceptions.</span></span> <span data-ttu-id="afdb9-205">例外の状態での最初の一時停止は次です <code>none</code> 。</span><span class="sxs-lookup"><span data-stu-id="afdb9-205">Initial pause on exceptions state is <code>none</code>.</span></span>
-
-<table>
-    <thead>
-        <tr>
-            <th><span data-ttu-id="afdb9-206">パラメーター</span><span class="sxs-lookup"><span data-stu-id="afdb9-206">Parameters</span></span></th>
-            <th></th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><span data-ttu-id="afdb9-207">state</span><span class="sxs-lookup"><span data-stu-id="afdb9-207">state</span></span></td>
-            <td><code class="flyout">string</code> <br/> <i><span data-ttu-id="afdb9-208">使用できる値: none、uncaught、all</span><span class="sxs-lookup"><span data-stu-id="afdb9-208">Allowed values: none, uncaught, all</span></span></i></td>
-            <td><span data-ttu-id="afdb9-209">例外モードで一時停止します。</span><span class="sxs-lookup"><span data-stu-id="afdb9-209">Pause on exceptions mode.</span></span></td>
-        </tr>
-    </tbody>
-</table>
-
----
-
-### <span data-ttu-id="afdb9-210">evaluateOnCallFrame</span><span class="sxs-lookup"><span data-stu-id="afdb9-210">evaluateOnCallFrame</span></span>
-<span data-ttu-id="afdb9-211">特定の呼び出しフレームの式を評価します。</span><span class="sxs-lookup"><span data-stu-id="afdb9-211">Evaluates expression on a given call frame.</span></span>
-
-<table>
-    <thead>
-        <tr>
-            <th><span data-ttu-id="afdb9-212">パラメーター</span><span class="sxs-lookup"><span data-stu-id="afdb9-212">Parameters</span></span></th>
-            <th></th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><span data-ttu-id="afdb9-213">callFrameId</span><span class="sxs-lookup"><span data-stu-id="afdb9-213">callFrameId</span></span></td>
-            <td><a href="#callframeid"><code class="flyout">CallFrameId</code></a></td>
-            <td><span data-ttu-id="afdb9-214">評価するコール フレーム識別子。</span><span class="sxs-lookup"><span data-stu-id="afdb9-214">Call frame identifier to evaluate on.</span></span></td>
-        </tr>
-        <tr>
-            <td><span data-ttu-id="afdb9-215">式</span><span class="sxs-lookup"><span data-stu-id="afdb9-215">expression</span></span></td>
-            <td><code class="flyout">string</code></td>
-            <td><span data-ttu-id="afdb9-216">評価する式。</span><span class="sxs-lookup"><span data-stu-id="afdb9-216">Expression to evaluate.</span></span></td>
-        </tr>
-    </tbody>
-</table>
-<table>
-    <thead>
-        <tr>
-            <th><span data-ttu-id="afdb9-217">戻り値</span><span class="sxs-lookup"><span data-stu-id="afdb9-217">Returns</span></span></th>
-            <th></th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><span data-ttu-id="afdb9-218">result</span><span class="sxs-lookup"><span data-stu-id="afdb9-218">result</span></span></td>
-            <td><a href="runtime.md#remoteobject"><code class="flyout">Runtime.RemoteObject</code></a></td>
-            <td><span data-ttu-id="afdb9-219">評価結果のオブジェクト ラッパー。</span><span class="sxs-lookup"><span data-stu-id="afdb9-219">Object wrapper for the evaluation result.</span></span></td>
-        </tr>
-    </tbody>
-</table>
-
----
-
-### <span data-ttu-id="afdb9-220">setVariableValue</span><span class="sxs-lookup"><span data-stu-id="afdb9-220">setVariableValue</span></span>
-<span data-ttu-id="afdb9-221">呼び出しフレーム内の変数の値を変更します。</span><span class="sxs-lookup"><span data-stu-id="afdb9-221">Changes value of variable in a callframe.</span></span> <span data-ttu-id="afdb9-222">オブジェクト ベースのスコープはサポートされていないので、手動でミュートする必要があります。</span><span class="sxs-lookup"><span data-stu-id="afdb9-222">Object-based scopes are not supported and must be mutated manually.</span></span>
-
-<table>
-    <thead>
-        <tr>
-            <th><span data-ttu-id="afdb9-223">パラメーター</span><span class="sxs-lookup"><span data-stu-id="afdb9-223">Parameters</span></span></th>
-            <th></th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><span data-ttu-id="afdb9-224">scopeNumber</span><span class="sxs-lookup"><span data-stu-id="afdb9-224">scopeNumber</span></span></td>
-            <td><code class="flyout">integer</code></td>
-            <td><span data-ttu-id="afdb9-225">スコープ チェーンにリストされた 0 からスコープの数。</span><span class="sxs-lookup"><span data-stu-id="afdb9-225">0-based number of scope as was listed in scope chain.</span></span> <span data-ttu-id="afdb9-226">スコープの種類は 'local'、'closure' および 'catch' のみです。</span><span class="sxs-lookup"><span data-stu-id="afdb9-226">Only 'local', 'closure' and 'catch' scope types are allowed.</span></span> <span data-ttu-id="afdb9-227">他のスコープは手動で操作できます。</span><span class="sxs-lookup"><span data-stu-id="afdb9-227">Other scopes could be manipulated manually.</span></span></td>
-        </tr>
-        <tr>
-            <td><span data-ttu-id="afdb9-228">variableName</span><span class="sxs-lookup"><span data-stu-id="afdb9-228">variableName</span></span></td>
-            <td><code class="flyout">string</code></td>
-            <td><span data-ttu-id="afdb9-229">変数名。</span><span class="sxs-lookup"><span data-stu-id="afdb9-229">Variable name.</span></span></td>
-        </tr>
-        <tr>
-            <td><span data-ttu-id="afdb9-230">newValue</span><span class="sxs-lookup"><span data-stu-id="afdb9-230">newValue</span></span></td>
-            <td><a href="runtime.md#callargument"><code class="flyout">Runtime.CallArgument</code></a></td>
-            <td><span data-ttu-id="afdb9-231">新しい変数値。</span><span class="sxs-lookup"><span data-stu-id="afdb9-231">New variable value.</span></span></td>
-        </tr>
-        <tr>
-            <td><span data-ttu-id="afdb9-232">callFrameId</span><span class="sxs-lookup"><span data-stu-id="afdb9-232">callFrameId</span></span></td>
-            <td><a href="#callframeid"><code class="flyout">CallFrameId</code></a></td>
-            <td><span data-ttu-id="afdb9-233">変数を保持する呼び出しフレームの ID。</span><span class="sxs-lookup"><span data-stu-id="afdb9-233">Id of callframe that holds variable.</span></span></td>
-        </tr>
-    </tbody>
-</table>
-
----
-
-### <span data-ttu-id="afdb9-234">setBlackboxPatterns</span><span class="sxs-lookup"><span data-stu-id="afdb9-234">setBlackboxPatterns</span></span>
-<span><b><span data-ttu-id="afdb9-235">試験的。</span><span class="sxs-lookup"><span data-stu-id="afdb9-235">Experimental.</span></span> </b></span><span data-ttu-id="afdb9-236">以前のブラックボックス パターンを渡されたパターンに置き換える。</span><span class="sxs-lookup"><span data-stu-id="afdb9-236">Replace previous blackbox patterns with passed ones.</span></span> <span data-ttu-id="afdb9-237">パターンの 1 つと一致する URL を持つスクリプトで、ステップ/一時停止をスキップするバックエンドを強制的に実行します。</span><span class="sxs-lookup"><span data-stu-id="afdb9-237">Forces backend to skip stepping/pausing in scripts with url matching one of the patterns.</span></span> <span data-ttu-id="afdb9-238">デバッガーは、何度か 'ステップ イン' を実行してブラックボックス 化されたスクリプトを残し、失敗した場合は最後に "ステップ アウト" を実行します。</span><span class="sxs-lookup"><span data-stu-id="afdb9-238">The debugger will try to leave blackboxed script by performing 'step in' several times, finally resorting to 'step out' if unsuccessful.</span></span>
-
-<table>
-    <thead>
-        <tr>
-            <th><span data-ttu-id="afdb9-239">パラメーター</span><span class="sxs-lookup"><span data-stu-id="afdb9-239">Parameters</span></span></th>
-            <th></th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><span data-ttu-id="afdb9-240">patterns</span><span class="sxs-lookup"><span data-stu-id="afdb9-240">patterns</span></span></td>
-            <td><code class="flyout">string[]</code></td>
-            <td><span data-ttu-id="afdb9-241">スクリプト URL でブラックボックスの状態を確認するために使用される regexps の配列。</span><span class="sxs-lookup"><span data-stu-id="afdb9-241">Array of regexps that will be used to check script url for blackbox state.</span></span></td>
-        </tr>
-    </tbody>
-</table>
-
----
-
-### <span data-ttu-id="afdb9-242">msSetDebuggerPropertyValue</span><span class="sxs-lookup"><span data-stu-id="afdb9-242">msSetDebuggerPropertyValue</span></span>
-<span><b><span data-ttu-id="afdb9-243">試験的。</span><span class="sxs-lookup"><span data-stu-id="afdb9-243">Experimental.</span></span> </b></span><span data-ttu-id="afdb9-244">Microsoft: 指定されたデバッガー プロパティを指定された値に設定します。</span><span class="sxs-lookup"><span data-stu-id="afdb9-244">Microsoft: Sets the specified debugger property to the specified value.</span></span>
-
-<table>
-    <thead>
-        <tr>
-            <th><span data-ttu-id="afdb9-245">パラメーター</span><span class="sxs-lookup"><span data-stu-id="afdb9-245">Parameters</span></span></th>
-            <th></th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><span data-ttu-id="afdb9-246">debuggerPropertyId</span><span class="sxs-lookup"><span data-stu-id="afdb9-246">debuggerPropertyId</span></span></td>
-            <td><code class="flyout">string</code></td>
-            <td><span data-ttu-id="afdb9-247">Microsoft: 設定するプロパティ ID (つまり、msDebuggerPropertyId)。</span><span class="sxs-lookup"><span data-stu-id="afdb9-247">Microsoft: The property id (i.e. msDebuggerPropertyId) to set.</span></span></td>
-        </tr>
-        <tr>
-            <td><span data-ttu-id="afdb9-248">newValue</span><span class="sxs-lookup"><span data-stu-id="afdb9-248">newValue</span></span></td>
-            <td><code class="flyout">string</code></td>
-            <td></td>
-        </tr>
-    </tbody>
-</table>
-
----
-
-## <span data-ttu-id="afdb9-249">イベント</span><span class="sxs-lookup"><span data-stu-id="afdb9-249">Events</span></span>
-
-### <span data-ttu-id="afdb9-250">scriptParsed</span><span class="sxs-lookup"><span data-stu-id="afdb9-250">scriptParsed</span></span>
-<span data-ttu-id="afdb9-251">スクリプトが解析された場合に発生します。</span><span class="sxs-lookup"><span data-stu-id="afdb9-251">Fired when the script is parsed.</span></span> <span data-ttu-id="afdb9-252">このイベントは、デバッガーを有効にした時点で、既知のすべてのスクリプトと未検出のスクリプトに対して発生します。</span><span class="sxs-lookup"><span data-stu-id="afdb9-252">This event is also fired for all known and uncollected scripts upon enabling debugger.</span></span>
-
-<table>
-    <thead>
-        <tr>
-            <th><span data-ttu-id="afdb9-253">パラメーター</span><span class="sxs-lookup"><span data-stu-id="afdb9-253">Parameters</span></span></th>
-            <th></th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><span data-ttu-id="afdb9-254">scriptId</span><span class="sxs-lookup"><span data-stu-id="afdb9-254">scriptId</span></span></td>
-            <td><a href="runtime.md#scriptid"><code class="flyout">Runtime.ScriptId</code></a></td>
-            <td><span data-ttu-id="afdb9-255">解析されたスクリプトの識別子。</span><span class="sxs-lookup"><span data-stu-id="afdb9-255">Identifier of the script parsed.</span></span></td>
-        </tr>
-        <tr>
-            <td><span data-ttu-id="afdb9-256">url</span><span class="sxs-lookup"><span data-stu-id="afdb9-256">url</span></span></td>
-            <td><code class="flyout">string</code></td>
-            <td><span data-ttu-id="afdb9-257">解析されたスクリプトの URL または名前 (指定されている場合)。</span><span class="sxs-lookup"><span data-stu-id="afdb9-257">URL or name of the script parsed (if any).</span></span></td>
-        </tr>
-        <tr>
-            <td><span data-ttu-id="afdb9-258">startLine</span><span class="sxs-lookup"><span data-stu-id="afdb9-258">startLine</span></span></td>
-            <td><code class="flyout">integer</code></td>
-            <td><span data-ttu-id="afdb9-259">指定された URL を持つリソース内のスクリプトの行オフセット (スクリプト タグの場合)。</span><span class="sxs-lookup"><span data-stu-id="afdb9-259">Line offset of the script within the resource with given URL (for script tags).</span></span></td>
-        </tr>
-        <tr>
-            <td><span data-ttu-id="afdb9-260">startColumn</span><span class="sxs-lookup"><span data-stu-id="afdb9-260">startColumn</span></span></td>
-            <td><code class="flyout">integer</code></td>
-            <td><span data-ttu-id="afdb9-261">指定された URL を持つリソース内のスクリプトの列オフセット。</span><span class="sxs-lookup"><span data-stu-id="afdb9-261">Column offset of the script within the resource with given URL.</span></span></td>
-        </tr>
-        <tr>
-            <td><span data-ttu-id="afdb9-262">endLine</span><span class="sxs-lookup"><span data-stu-id="afdb9-262">endLine</span></span></td>
-            <td><code class="flyout">integer</code></td>
-            <td><span data-ttu-id="afdb9-263">スクリプトの最後の行。</span><span class="sxs-lookup"><span data-stu-id="afdb9-263">Last line of the script.</span></span></td>
-        </tr>
-        <tr>
-            <td><span data-ttu-id="afdb9-264">endColumn</span><span class="sxs-lookup"><span data-stu-id="afdb9-264">endColumn</span></span></td>
-            <td><code class="flyout">integer</code></td>
-            <td><span data-ttu-id="afdb9-265">スクリプトの最後の行の長さ。</span><span class="sxs-lookup"><span data-stu-id="afdb9-265">Length of the last line of the script.</span></span></td>
-        </tr>
-        <tr>
-            <td><span data-ttu-id="afdb9-266">executionContextId</span><span class="sxs-lookup"><span data-stu-id="afdb9-266">executionContextId</span></span></td>
-            <td><a href="runtime.md#executioncontextid"><code class="flyout">Runtime.ExecutionContextId</code></a></td>
-            <td><span data-ttu-id="afdb9-267">スクリプト作成コンテキストを指定します。</span><span class="sxs-lookup"><span data-stu-id="afdb9-267">Specifies script creation context.</span></span></td>
-        </tr>
-        <tr>
-            <td><span data-ttu-id="afdb9-268">sourceMapURL</span><span class="sxs-lookup"><span data-stu-id="afdb9-268">sourceMapURL</span></span> <br/> <i><span data-ttu-id="afdb9-269">オプション</span><span class="sxs-lookup"><span data-stu-id="afdb9-269">optional</span></span></i></td>
-            <td><code class="flyout">string</code></td>
-            <td><span data-ttu-id="afdb9-270">スクリプトに関連付けられているソース マップの URL (指定されている場合)。</span><span class="sxs-lookup"><span data-stu-id="afdb9-270">URL of source map associated with script (if any).</span></span></td>
-        </tr>
-        <tr>
-            <td><span data-ttu-id="afdb9-271">length</span><span class="sxs-lookup"><span data-stu-id="afdb9-271">length</span></span> <br/> <i><span data-ttu-id="afdb9-272">オプション</span><span class="sxs-lookup"><span data-stu-id="afdb9-272">optional</span></span></i></td>
-            <td><code class="flyout">integer</code></td>
-            <td><span><b><span data-ttu-id="afdb9-273">試験的。</span><span class="sxs-lookup"><span data-stu-id="afdb9-273">Experimental.</span></span> </b></span><span data-ttu-id="afdb9-274">このスクリプトの長さ。</span><span class="sxs-lookup"><span data-stu-id="afdb9-274">This script length.</span></span></td>
-        </tr>
-        <tr>
-            <td><span data-ttu-id="afdb9-275">msParentId</span><span class="sxs-lookup"><span data-stu-id="afdb9-275">msParentId</span></span> <br/> <i><span data-ttu-id="afdb9-276">オプション</span><span class="sxs-lookup"><span data-stu-id="afdb9-276">optional</span></span></i></td>
-            <td><code class="flyout">string</code></td>
-            <td><span><b><span data-ttu-id="afdb9-277">試験的。</span><span class="sxs-lookup"><span data-stu-id="afdb9-277">Experimental.</span></span> </b></span><span data-ttu-id="afdb9-278">これは親ドキュメント ID です。</span><span class="sxs-lookup"><span data-stu-id="afdb9-278">This is the parent document ID.</span></span></td>
-        </tr>
-        <tr>
-            <td><span data-ttu-id="afdb9-279">msMimeType</span><span class="sxs-lookup"><span data-stu-id="afdb9-279">msMimeType</span></span> <br/> <i><span data-ttu-id="afdb9-280">オプション</span><span class="sxs-lookup"><span data-stu-id="afdb9-280">optional</span></span></i></td>
-            <td><code class="flyout">string</code></td>
-            <td><span><b><span data-ttu-id="afdb9-281">試験的。</span><span class="sxs-lookup"><span data-stu-id="afdb9-281">Experimental.</span></span> </b></span><span data-ttu-id="afdb9-282">これは MIME タイプです。</span><span class="sxs-lookup"><span data-stu-id="afdb9-282">This is the mime type.</span></span></td>
-        </tr>
-        <tr>
-            <td><span data-ttu-id="afdb9-283">msIsDynamicCode</span><span class="sxs-lookup"><span data-stu-id="afdb9-283">msIsDynamicCode</span></span> <br/> <i><span data-ttu-id="afdb9-284">オプション</span><span class="sxs-lookup"><span data-stu-id="afdb9-284">optional</span></span></i></td>
-            <td><code class="flyout">boolean</code></td>
-            <td><span><b><span data-ttu-id="afdb9-285">試験的。</span><span class="sxs-lookup"><span data-stu-id="afdb9-285">Experimental.</span></span> </b></span><span data-ttu-id="afdb9-286">これは、動的コードかどうかを示します。</span><span class="sxs-lookup"><span data-stu-id="afdb9-286">This indicates whether it is dynamic code.</span></span></td>
-        </tr>
-        <tr>
-            <td><span data-ttu-id="afdb9-287">msLongDocumentId</span><span class="sxs-lookup"><span data-stu-id="afdb9-287">msLongDocumentId</span></span> <br/> <i><span data-ttu-id="afdb9-288">オプション</span><span class="sxs-lookup"><span data-stu-id="afdb9-288">optional</span></span></i></td>
-            <td><code class="flyout">integer</code></td>
-            <td><span><b><span data-ttu-id="afdb9-289">試験的。</span><span class="sxs-lookup"><span data-stu-id="afdb9-289">Experimental.</span></span> </b></span><span data-ttu-id="afdb9-290">これは長いドキュメント ID です。</span><span class="sxs-lookup"><span data-stu-id="afdb9-290">This is the long document ID.</span></span></td>
-        </tr>
-    </tbody>
-</table>
-
----
-
-### <span data-ttu-id="afdb9-291">breakpointResolved</span><span class="sxs-lookup"><span data-stu-id="afdb9-291">breakpointResolved</span></span>
-<span data-ttu-id="afdb9-292">ブレークポイントが実際のスクリプトと場所に解決された場合に発生します。</span><span class="sxs-lookup"><span data-stu-id="afdb9-292">Fired when breakpoint is resolved to an actual script and location.</span></span>
-
-<table>
-    <thead>
-        <tr>
-            <th><span data-ttu-id="afdb9-293">パラメーター</span><span class="sxs-lookup"><span data-stu-id="afdb9-293">Parameters</span></span></th>
-            <th></th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><span data-ttu-id="afdb9-294">breakpointId</span><span class="sxs-lookup"><span data-stu-id="afdb9-294">breakpointId</span></span></td>
-            <td><a href="#breakpointid"><code class="flyout">BreakpointId</code></a></td>
-            <td><span data-ttu-id="afdb9-295">ブレークポイントの一意識別子。</span><span class="sxs-lookup"><span data-stu-id="afdb9-295">Breakpoint unique identifier.</span></span></td>
-        </tr>
-        <tr>
-            <td><span data-ttu-id="afdb9-296">location</span><span class="sxs-lookup"><span data-stu-id="afdb9-296">location</span></span></td>
-            <td><a href="#location"><code class="flyout">Location</code></a></td>
-            <td><span data-ttu-id="afdb9-297">ブレークポイントの実際の位置。</span><span class="sxs-lookup"><span data-stu-id="afdb9-297">Actual breakpoint location.</span></span></td>
-        </tr>
-        <tr>
-            <td><span data-ttu-id="afdb9-298">msLength</span><span class="sxs-lookup"><span data-stu-id="afdb9-298">msLength</span></span> <br/> <i><span data-ttu-id="afdb9-299">オプション</span><span class="sxs-lookup"><span data-stu-id="afdb9-299">optional</span></span></i></td>
-            <td><code class="flyout">integer</code></td>
-            <td><span><b><span data-ttu-id="afdb9-300">試験的。</span><span class="sxs-lookup"><span data-stu-id="afdb9-300">Experimental.</span></span> </b></span><span data-ttu-id="afdb9-301">Microsoft: ブレークポイントの位置にあるコードの長さ (文字数) です。</span><span class="sxs-lookup"><span data-stu-id="afdb9-301">Microsoft: Length of code (i.e. number of characters) at the breakpoint location.</span></span></td>
-        </tr>
-    </tbody>
-</table>
-
----
-
-### <span data-ttu-id="afdb9-302">paused (一時停止)</span><span class="sxs-lookup"><span data-stu-id="afdb9-302">paused</span></span>
-<span data-ttu-id="afdb9-303">ブレークポイントまたは例外のデバッガーが壊れた場合に発生します。</span><span class="sxs-lookup"><span data-stu-id="afdb9-303">Fired when the debuggers breaks for a breakpoint or exception.</span></span>
-
-<table>
-    <thead>
-        <tr>
-            <th><span data-ttu-id="afdb9-304">パラメーター</span><span class="sxs-lookup"><span data-stu-id="afdb9-304">Parameters</span></span></th>
-            <th></th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><span data-ttu-id="afdb9-305">callFrames</span><span class="sxs-lookup"><span data-stu-id="afdb9-305">callFrames</span></span></td>
-            <td><a href="#callframe"><code class="flyout">CallFrame[]</code></a></td>
-            <td><span data-ttu-id="afdb9-306">デバッガーが停止したコール スタック。</span><span class="sxs-lookup"><span data-stu-id="afdb9-306">Call stack the debugger stopped on.</span></span></td>
-        </tr>
-        <tr>
-            <td><span data-ttu-id="afdb9-307">reason</span><span class="sxs-lookup"><span data-stu-id="afdb9-307">reason</span></span></td>
-            <td><code class="flyout">string</code> <br/> <i><span data-ttu-id="afdb9-308">使用できる値: ブレークポイント、ステップ、例外、その他</span><span class="sxs-lookup"><span data-stu-id="afdb9-308">Allowed values: breakpoint, step, exception, other</span></span></i></td>
-            <td><span data-ttu-id="afdb9-309">一時停止の理由。</span><span class="sxs-lookup"><span data-stu-id="afdb9-309">Pause reason.</span></span></td>
-        </tr>
-        <tr>
-            <td><span data-ttu-id="afdb9-310">data</span><span class="sxs-lookup"><span data-stu-id="afdb9-310">data</span></span> <br/> <i><span data-ttu-id="afdb9-311">オプション</span><span class="sxs-lookup"><span data-stu-id="afdb9-311">optional</span></span></i></td>
-            <td><code class="flyout">object</code></td>
-            <td><span data-ttu-id="afdb9-312">ブレーク固有の補助プロパティを含むオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="afdb9-312">Object containing break-specific auxiliary properties.</span></span></td>
-        </tr>
-        <tr>
-            <td><span data-ttu-id="afdb9-313">hitBreakpoints</span><span class="sxs-lookup"><span data-stu-id="afdb9-313">hitBreakpoints</span></span> <br/> <i><span data-ttu-id="afdb9-314">オプション</span><span class="sxs-lookup"><span data-stu-id="afdb9-314">optional</span></span></i></td>
-            <td><code class="flyout">string[]</code></td>
-            <td><span data-ttu-id="afdb9-315">ヒット ブレークポイントの ID</span><span class="sxs-lookup"><span data-stu-id="afdb9-315">Hit breakpoints IDs</span></span></td>
-        </tr>
-    </tbody>
-</table>
-
----
-
-### <span data-ttu-id="afdb9-316">resumed</span><span class="sxs-lookup"><span data-stu-id="afdb9-316">resumed</span></span>
-<span data-ttu-id="afdb9-317">デバッガーが実行を再開するときに発生します。</span><span class="sxs-lookup"><span data-stu-id="afdb9-317">Fired when the debugger resumes execution.</span></span>
-
-
----
-
-## <span data-ttu-id="afdb9-318">型</span><span class="sxs-lookup"><span data-stu-id="afdb9-318">Types</span></span>
-
-### <a name="breakpointid"></a> <span data-ttu-id="afdb9-319">BreakpointId</span><span class="sxs-lookup"><span data-stu-id="afdb9-319">BreakpointId</span></span> `string`
-
-<span data-ttu-id="afdb9-320">ブレークポイント識別子。</span><span class="sxs-lookup"><span data-stu-id="afdb9-320">Breakpoint identifier.</span></span>
-
-
----
-
-### <a name="callframeid"></a> <span data-ttu-id="afdb9-321">CallFrameId</span><span class="sxs-lookup"><span data-stu-id="afdb9-321">CallFrameId</span></span> `string`
-
-<span data-ttu-id="afdb9-322">呼び出しフレーム識別子。</span><span class="sxs-lookup"><span data-stu-id="afdb9-322">Call frame identifier.</span></span>
-
-
----
-
-### <a name="location"></a> <span data-ttu-id="afdb9-323">位置情報</span><span class="sxs-lookup"><span data-stu-id="afdb9-323">Location</span></span> `object`
-
-<span data-ttu-id="afdb9-324">ソース コード内の場所。</span><span class="sxs-lookup"><span data-stu-id="afdb9-324">Location in the source code.</span></span>
-
-<table>
-    <thead>
-        <tr>
-            <th><span data-ttu-id="afdb9-325">プロパティ</span><span class="sxs-lookup"><span data-stu-id="afdb9-325">Properties</span></span></th>
-            <th></th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><span data-ttu-id="afdb9-326">scriptId</span><span class="sxs-lookup"><span data-stu-id="afdb9-326">scriptId</span></span></td>
-            <td><a href="runtime.md#scriptid"><code class="flyout">Runtime.ScriptId</code></a></td>
-            <td><span data-ttu-id="afdb9-327">で報告されるスクリプト識別子 <code>Debugger.scriptParsed</code> 。</span><span class="sxs-lookup"><span data-stu-id="afdb9-327">Script identifier as reported in the <code>Debugger.scriptParsed</code>.</span></span></td>
-        </tr>
-        <tr>
-            <td><span data-ttu-id="afdb9-328">lineNumber</span><span class="sxs-lookup"><span data-stu-id="afdb9-328">lineNumber</span></span></td>
-            <td><code class="flyout">integer</code></td>
-            <td><span data-ttu-id="afdb9-329">スクリプト内の行番号 (0 から開始)。</span><span class="sxs-lookup"><span data-stu-id="afdb9-329">Line number in the script (0-based).</span></span></td>
-        </tr>
-        <tr>
-            <td><span data-ttu-id="afdb9-330">columnNumber</span><span class="sxs-lookup"><span data-stu-id="afdb9-330">columnNumber</span></span> <br/> <i><span data-ttu-id="afdb9-331">オプション</span><span class="sxs-lookup"><span data-stu-id="afdb9-331">optional</span></span></i></td>
-            <td><code class="flyout">integer</code></td>
-            <td><span data-ttu-id="afdb9-332">スクリプト内の列番号 (0 から開始)。</span><span class="sxs-lookup"><span data-stu-id="afdb9-332">Column number in the script (0-based).</span></span></td>
-        </tr>
-        <tr>
-            <td><span data-ttu-id="afdb9-333">msLength</span><span class="sxs-lookup"><span data-stu-id="afdb9-333">msLength</span></span></td>
-            <td><code class="flyout">integer</code></td>
-            <td><span data-ttu-id="afdb9-334">Microsoft: この呼び出しフレームでのコードの長さ (文字数)。</span><span class="sxs-lookup"><span data-stu-id="afdb9-334">Microsoft: Length of code (i.e. number of characters) at this call frame.</span></span></td>
-        </tr>
-    </tbody>
-</table>
-
----
-
-### <a name="breaklocation"></a> <span data-ttu-id="afdb9-335">BreakLocation</span><span class="sxs-lookup"><span data-stu-id="afdb9-335">BreakLocation</span></span> `object`
-
-<span data-ttu-id="afdb9-336">ソース コード内の場所を壊す。</span><span class="sxs-lookup"><span data-stu-id="afdb9-336">Break location in the source code.</span></span>
-
-<table>
-    <thead>
-        <tr>
-            <th><span data-ttu-id="afdb9-337">プロパティ</span><span class="sxs-lookup"><span data-stu-id="afdb9-337">Properties</span></span></th>
-            <th></th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><span data-ttu-id="afdb9-338">scriptId</span><span class="sxs-lookup"><span data-stu-id="afdb9-338">scriptId</span></span></td>
-            <td><a href="runtime.md#scriptid"><code class="flyout">Runtime.ScriptId</code></a></td>
-            <td><span data-ttu-id="afdb9-339">で報告されるスクリプト識別子 <code>Debugger.scriptParsed</code> 。</span><span class="sxs-lookup"><span data-stu-id="afdb9-339">Script identifier as reported in the <code>Debugger.scriptParsed</code>.</span></span></td>
-        </tr>
-        <tr>
-            <td><span data-ttu-id="afdb9-340">lineNumber</span><span class="sxs-lookup"><span data-stu-id="afdb9-340">lineNumber</span></span></td>
-            <td><code class="flyout">integer</code></td>
-            <td><span data-ttu-id="afdb9-341">スクリプト内の行番号 (0 から開始)。</span><span class="sxs-lookup"><span data-stu-id="afdb9-341">Line number in the script (0-based).</span></span></td>
-        </tr>
-        <tr>
-            <td><span data-ttu-id="afdb9-342">columnNumber</span><span class="sxs-lookup"><span data-stu-id="afdb9-342">columnNumber</span></span> <br/> <i><span data-ttu-id="afdb9-343">オプション</span><span class="sxs-lookup"><span data-stu-id="afdb9-343">optional</span></span></i></td>
-            <td><code class="flyout">integer</code></td>
-            <td><span data-ttu-id="afdb9-344">スクリプト内の列番号 (0 から開始)。</span><span class="sxs-lookup"><span data-stu-id="afdb9-344">Column number in the script (0-based).</span></span></td>
-        </tr>
-        <tr>
-            <td><span data-ttu-id="afdb9-345">msLength</span><span class="sxs-lookup"><span data-stu-id="afdb9-345">msLength</span></span></td>
-            <td><code class="flyout">integer</code></td>
-            <td><span data-ttu-id="afdb9-346">Microsoft: この呼び出しフレームでのコードの長さ (文字数)。</span><span class="sxs-lookup"><span data-stu-id="afdb9-346">Microsoft: Length of code (i.e. number of characters) at this call frame.</span></span></td>
-        </tr>
-        <tr>
-            <td><span data-ttu-id="afdb9-347">型</span><span class="sxs-lookup"><span data-stu-id="afdb9-347">type</span></span> <br/> <i><span data-ttu-id="afdb9-348">オプション</span><span class="sxs-lookup"><span data-stu-id="afdb9-348">optional</span></span></i></td>
-            <td><code class="flyout">string</code></td>
-            <td><span data-ttu-id="afdb9-349">使用できる値: debuggerStatement、call、return。</span><span class="sxs-lookup"><span data-stu-id="afdb9-349">Allowed values: debuggerStatement, call, return.</span></span></td>
-        </tr>
-    </tbody>
-</table>
-
----
-
-### <a name="callframe"></a> <span data-ttu-id="afdb9-350">CallFrame</span><span class="sxs-lookup"><span data-stu-id="afdb9-350">CallFrame</span></span> `object`
-
-<span data-ttu-id="afdb9-351">JavaScript 呼び出しフレーム。</span><span class="sxs-lookup"><span data-stu-id="afdb9-351">JavaScript call frame.</span></span> <span data-ttu-id="afdb9-352">呼び出しフレームの配列が呼び出し履歴を形成します。</span><span class="sxs-lookup"><span data-stu-id="afdb9-352">Array of call frames form the call stack.</span></span>
-
-<table>
-    <thead>
-        <tr>
-            <th><span data-ttu-id="afdb9-353">プロパティ</span><span class="sxs-lookup"><span data-stu-id="afdb9-353">Properties</span></span></th>
-            <th></th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><span data-ttu-id="afdb9-354">callFrameId</span><span class="sxs-lookup"><span data-stu-id="afdb9-354">callFrameId</span></span></td>
-            <td><a href="#callframeid"><code class="flyout">CallFrameId</code></a></td>
-            <td><span data-ttu-id="afdb9-355">呼び出しフレーム識別子。</span><span class="sxs-lookup"><span data-stu-id="afdb9-355">Call frame identifier.</span></span> <span data-ttu-id="afdb9-356">この識別子は、デバッガーが一時停止している間のみ有効です。</span><span class="sxs-lookup"><span data-stu-id="afdb9-356">This identifier is only valid while the debugger is paused.</span></span></td>
-        </tr>
-        <tr>
-            <td><span data-ttu-id="afdb9-357">functionName</span><span class="sxs-lookup"><span data-stu-id="afdb9-357">functionName</span></span></td>
-            <td><code class="flyout">string</code></td>
-            <td><span data-ttu-id="afdb9-358">この呼び出しフレームで呼び出される JavaScript 関数の名前。</span><span class="sxs-lookup"><span data-stu-id="afdb9-358">Name of the JavaScript function called on this call frame.</span></span></td>
-        </tr>
-        <tr>
-            <td><span data-ttu-id="afdb9-359">functionLocation</span><span class="sxs-lookup"><span data-stu-id="afdb9-359">functionLocation</span></span> <br/> <i><span data-ttu-id="afdb9-360">オプション</span><span class="sxs-lookup"><span data-stu-id="afdb9-360">optional</span></span></i></td>
-            <td><a href="#location"><code class="flyout">Location</code></a></td>
-            <td><span><b><span data-ttu-id="afdb9-361">試験的。</span><span class="sxs-lookup"><span data-stu-id="afdb9-361">Experimental.</span></span> </b></span><span data-ttu-id="afdb9-362">ソース コード内の場所。</span><span class="sxs-lookup"><span data-stu-id="afdb9-362">Location in the source code.</span></span></td>
-        </tr>
-        <tr>
-            <td><span data-ttu-id="afdb9-363">location</span><span class="sxs-lookup"><span data-stu-id="afdb9-363">location</span></span></td>
-            <td><a href="#location"><code class="flyout">Location</code></a></td>
-            <td><span data-ttu-id="afdb9-364">ソース コード内の場所。</span><span class="sxs-lookup"><span data-stu-id="afdb9-364">Location in the source code.</span></span></td>
-        </tr>
-        <tr>
-            <td><span data-ttu-id="afdb9-365">url</span><span class="sxs-lookup"><span data-stu-id="afdb9-365">url</span></span></td>
-            <td><code class="flyout">string</code></td>
-            <td><span data-ttu-id="afdb9-366">JavaScript スクリプト名または URL。</span><span class="sxs-lookup"><span data-stu-id="afdb9-366">JavaScript script name or url.</span></span></td>
-        </tr>
-        <tr>
-            <td><span data-ttu-id="afdb9-367">scopeChain</span><span class="sxs-lookup"><span data-stu-id="afdb9-367">scopeChain</span></span></td>
-            <td><a href="#scope"><code class="flyout">Scope[]</code></a></td>
-            <td><span data-ttu-id="afdb9-368">この呼び出しフレームのスコープ チェーン。</span><span class="sxs-lookup"><span data-stu-id="afdb9-368">Scope chain for this call frame.</span></span></td>
-        </tr>
-        <tr>
-            <td><span data-ttu-id="afdb9-369">これ</span><span class="sxs-lookup"><span data-stu-id="afdb9-369">this</span></span></td>
-            <td><a href="runtime.md#remoteobject"><code class="flyout">Runtime.RemoteObject</code></a></td>
-            <td><code>this</code> <span data-ttu-id="afdb9-370">オブジェクトを取得します。</span><span class="sxs-lookup"><span data-stu-id="afdb9-370">object for this call frame.</span></span></td>
-        </tr>
-        <tr>
-            <td><span data-ttu-id="afdb9-371">returnValue</span><span class="sxs-lookup"><span data-stu-id="afdb9-371">returnValue</span></span> <br/> <i><span data-ttu-id="afdb9-372">オプション</span><span class="sxs-lookup"><span data-stu-id="afdb9-372">optional</span></span></i></td>
-            <td><a href="runtime.md#remoteobject"><code class="flyout">Runtime.RemoteObject</code></a></td>
-            <td><span data-ttu-id="afdb9-373">関数が戻り値の位置にある場合に返される値。</span><span class="sxs-lookup"><span data-stu-id="afdb9-373">The value being returned, if the function is at return point.</span></span></td>
-        </tr>
-    </tbody>
-</table>
-
----
-
-### <a name="scope"></a> <span data-ttu-id="afdb9-374">適用範囲</span><span class="sxs-lookup"><span data-stu-id="afdb9-374">Scope</span></span> `object`
-
-<span data-ttu-id="afdb9-375">スコープの説明。</span><span class="sxs-lookup"><span data-stu-id="afdb9-375">Scope description.</span></span>
-
-<table>
-    <thead>
-        <tr>
-            <th><span data-ttu-id="afdb9-376">プロパティ</span><span class="sxs-lookup"><span data-stu-id="afdb9-376">Properties</span></span></th>
-            <th></th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><span data-ttu-id="afdb9-377">型</span><span class="sxs-lookup"><span data-stu-id="afdb9-377">type</span></span></td>
-            <td><code class="flyout">string</code> <br/> <i><span data-ttu-id="afdb9-378">使用できる値: global、local、with、closure、catch、block、script、eval、module</span><span class="sxs-lookup"><span data-stu-id="afdb9-378">Allowed values: global, local, with, closure, catch, block, script, eval, module</span></span></i></td>
-            <td><span data-ttu-id="afdb9-379">スコープの種類。</span><span class="sxs-lookup"><span data-stu-id="afdb9-379">Scope type.</span></span></td>
-        </tr>
-        <tr>
-            <td><span data-ttu-id="afdb9-380">object</span><span class="sxs-lookup"><span data-stu-id="afdb9-380">object</span></span></td>
-            <td><a href="runtime.md#remoteobject"><code class="flyout">Runtime.RemoteObject</code></a></td>
-            <td><span data-ttu-id="afdb9-381">範囲を表すオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="afdb9-381">Object representing the scope.</span></span> <span data-ttu-id="afdb9-382">For <code>global</code> および <code>with</code> scopes it represents the actual object; for the rest of the scopes, it is artificial transient object enumerating scope variables as its properties.</span><span class="sxs-lookup"><span data-stu-id="afdb9-382">For <code>global</code> and <code>with</code> scopes it represents the actual object; for the rest of the scopes, it is artificial transient object enumerating scope variables as its properties.</span></span></td>
-        </tr>
-        <tr>
-            <td><span data-ttu-id="afdb9-383">name</span><span class="sxs-lookup"><span data-stu-id="afdb9-383">name</span></span> <br/> <i><span data-ttu-id="afdb9-384">オプション</span><span class="sxs-lookup"><span data-stu-id="afdb9-384">optional</span></span></i></td>
-            <td><code class="flyout">string</code></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td><span data-ttu-id="afdb9-385">startLocation</span><span class="sxs-lookup"><span data-stu-id="afdb9-385">startLocation</span></span> <br/> <i><span data-ttu-id="afdb9-386">オプション</span><span class="sxs-lookup"><span data-stu-id="afdb9-386">optional</span></span></i></td>
-            <td><a href="#location"><code class="flyout">Location</code></a></td>
-            <td><span data-ttu-id="afdb9-387">範囲が開始するソース コード内の場所</span><span class="sxs-lookup"><span data-stu-id="afdb9-387">Location in the source code where scope starts</span></span></td>
-        </tr>
-        <tr>
-            <td><span data-ttu-id="afdb9-388">endLocation</span><span class="sxs-lookup"><span data-stu-id="afdb9-388">endLocation</span></span> <br/> <i><span data-ttu-id="afdb9-389">オプション</span><span class="sxs-lookup"><span data-stu-id="afdb9-389">optional</span></span></i></td>
-            <td><a href="#location"><code class="flyout">Location</code></a></td>
-            <td><span data-ttu-id="afdb9-390">範囲が終了するソース コード内の場所</span><span class="sxs-lookup"><span data-stu-id="afdb9-390">Location in the source code where scope ends</span></span></td>
-        </tr>
-    </tbody>
-</table>
-
----
-
-## <span data-ttu-id="afdb9-391">依存関係</span><span class="sxs-lookup"><span data-stu-id="afdb9-391">Dependencies</span></span>
-
-[<span data-ttu-id="afdb9-392">ランタイム</span><span class="sxs-lookup"><span data-stu-id="afdb9-392">Runtime</span></span>](runtime.md)
+<span data-ttu-id="f1d3c-106">デバッガー ドメインは、JavaScript のデバッグ機能を公開します。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-106">Debugger domain exposes JavaScript debugging capabilities.</span></span>  <span data-ttu-id="f1d3c-107">ブレークポイントの設定と削除、実行のステップ実行、スタック トレースの探索などを行えます。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-107">It allows setting and removing breakpoints, stepping through execution, exploring stack traces, etc.</span></span>
+
+| <span data-ttu-id="f1d3c-108">分類</span><span class="sxs-lookup"><span data-stu-id="f1d3c-108">Classification</span></span> | <span data-ttu-id="f1d3c-109">Members</span><span class="sxs-lookup"><span data-stu-id="f1d3c-109">Members</span></span> |  
+|:--- |:--- |  
+| [<span data-ttu-id="f1d3c-110">メソッド</span><span class="sxs-lookup"><span data-stu-id="f1d3c-110">Methods</span></span>](#methods) | <span data-ttu-id="f1d3c-111">[](#enable)enable [](#disable), disable , [getPossibleBreakpoints](#getpossiblebreakpoints) [](#pause), [setBreakpointByUrl , setBreakpointByUrl](#setbreakpointbyurl) [](#stepover), [setBreakpoint](#setbreakpoint) [](#setbreakpointsactive), [stepOver](#removebreakpoint), [stepInto](#stepout), stepOut , pause , [resume](#resume), [getScriptSource](#getscriptsource), [setPauseOnExceptions](#setpauseonexceptions), [](#stepinto) [evaluateOnCallFrame](#evaluateoncallframe), [setVariableValue](#setvariablevalue), [setBlackboxPatterns](#setblackboxpatterns), [msSetDebuggerPropertyValue](#mssetdebuggerpropertyvalue)</span><span class="sxs-lookup"><span data-stu-id="f1d3c-111">[enable](#enable), [disable](#disable), [getPossibleBreakpoints](#getpossiblebreakpoints), [setBreakpointsActive](#setbreakpointsactive), [setBreakpointByUrl](#setbreakpointbyurl), [setBreakpoint](#setbreakpoint), [removeBreakpoint](#removebreakpoint), [stepOver](#stepover), [stepInto](#stepinto), [stepOut](#stepout), [pause](#pause), [resume](#resume), [getScriptSource](#getscriptsource), [setPauseOnExceptions](#setpauseonexceptions), [evaluateOnCallFrame](#evaluateoncallframe), [setVariableValue](#setvariablevalue), [setBlackboxPatterns](#setblackboxpatterns), [msSetDebuggerPropertyValue](#mssetdebuggerpropertyvalue)</span></span> |  
+| [<span data-ttu-id="f1d3c-112">イベント</span><span class="sxs-lookup"><span data-stu-id="f1d3c-112">Events</span></span>](#events) | <span data-ttu-id="f1d3c-113">[scriptParsed](#scriptparsed), [ブレークポイントResolved](#breakpointresolved), [一時停止](#paused), [再開](#resumed)</span><span class="sxs-lookup"><span data-stu-id="f1d3c-113">[scriptParsed](#scriptparsed), [breakpointResolved](#breakpointresolved), [paused](#paused), [resumed](#resumed)</span></span> |  
+| [<span data-ttu-id="f1d3c-114">型</span><span class="sxs-lookup"><span data-stu-id="f1d3c-114">Types</span></span>](#types) | <span data-ttu-id="f1d3c-115">[ブレークポイント Id](#breakpointid)、 [CallFrameId](#callframeid)、 [Location](#location)、 [BreakLocation](#breaklocation)、 [CallFrame](#callframe)、 [Scope](#scope)</span><span class="sxs-lookup"><span data-stu-id="f1d3c-115">[BreakpointId](#breakpointid), [CallFrameId](#callframeid), [Location](#location), [BreakLocation](#breaklocation), [CallFrame](#callframe), [Scope](#scope)</span></span> |  
+| [<span data-ttu-id="f1d3c-116">依存関係</span><span class="sxs-lookup"><span data-stu-id="f1d3c-116">Dependencies</span></span>](#dependencies) | [<span data-ttu-id="f1d3c-117">ランタイム</span><span class="sxs-lookup"><span data-stu-id="f1d3c-117">Runtime</span></span>](./runtime.md) |  
+
+## <a name="methods"></a><span data-ttu-id="f1d3c-118">メソッド</span><span class="sxs-lookup"><span data-stu-id="f1d3c-118">Methods</span></span>  
+
+### <a name="enable"></a><span data-ttu-id="f1d3c-119">[有効]</span><span class="sxs-lookup"><span data-stu-id="f1d3c-119">enable</span></span>  
+
+<span data-ttu-id="f1d3c-120">指定したページのデバッガーを有効にします。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-120">Enables debugger for the given page.</span></span>  <span data-ttu-id="f1d3c-121">クライアントは、このコマンドの結果を受信するまで、デバッグが有効になっていると見なす必要があります。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-121">Clients should not assume that the debugging has been enabled until the result for this command is received.</span></span>  
+
+&nbsp;  
+
+---  
+
+### <a name="disable"></a><span data-ttu-id="f1d3c-122">[無効]</span><span class="sxs-lookup"><span data-stu-id="f1d3c-122">disable</span></span>  
+
+<span data-ttu-id="f1d3c-123">特定のページのデバッガーを無効にします。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-123">Disables debugger for given page.</span></span>  
+
+&nbsp;  
+
+---  
+
+### <a name="getpossiblebreakpoints"></a><span data-ttu-id="f1d3c-124">getPossibleBreakpoints</span><span class="sxs-lookup"><span data-stu-id="f1d3c-124">getPossibleBreakpoints</span></span>  
+
+<span data-ttu-id="f1d3c-125">ブレークポイントの可能な場所を返します。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-125">Returns possible locations for breakpoint.</span></span>  <span data-ttu-id="f1d3c-126">開始範囲と終了範囲の場所の scriptId は同じである必要があります。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-126">scriptId in start and end range locations should be the same.</span></span>  
+
+| <span data-ttu-id="f1d3c-127">パラメーター</span><span class="sxs-lookup"><span data-stu-id="f1d3c-127">Parameters</span></span> | <span data-ttu-id="f1d3c-128">型</span><span class="sxs-lookup"><span data-stu-id="f1d3c-128">Type</span></span> | <span data-ttu-id="f1d3c-129">詳細</span><span class="sxs-lookup"><span data-stu-id="f1d3c-129">Details</span></span> |  
+|:--- |:--- |:--- |  
+| <span data-ttu-id="f1d3c-130">start</span><span class="sxs-lookup"><span data-stu-id="f1d3c-130">start</span></span> | [<span data-ttu-id="f1d3c-131">Location</span><span class="sxs-lookup"><span data-stu-id="f1d3c-131">Location</span></span>](#location) | <span data-ttu-id="f1d3c-132">範囲の開始位置からブレークポイントの場所を検索します。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-132">Start of range to search possible breakpoint locations in.</span></span> |  
+| <span data-ttu-id="f1d3c-133">終了</span><span class="sxs-lookup"><span data-stu-id="f1d3c-133">end</span></span> | [<span data-ttu-id="f1d3c-134">Location</span><span class="sxs-lookup"><span data-stu-id="f1d3c-134">Location</span></span>](#location) | <span data-ttu-id="f1d3c-135">\(excluding\) でブレークポイントの場所を検索する範囲の末尾。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-135">End of range to search possible breakpoint locations in \(excluding\).</span></span>  <span data-ttu-id="f1d3c-136">指定しない場合は、スクリプトの末尾が範囲の末尾として使用されます。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-136">When not specified, end of scripts is used as end of range.</span></span> |  
+
+| <span data-ttu-id="f1d3c-137">戻り値</span><span class="sxs-lookup"><span data-stu-id="f1d3c-137">Returns</span></span> | <span data-ttu-id="f1d3c-138">型</span><span class="sxs-lookup"><span data-stu-id="f1d3c-138">Type</span></span> | <span data-ttu-id="f1d3c-139">詳細</span><span class="sxs-lookup"><span data-stu-id="f1d3c-139">Details</span></span> |  
+|:--- |:--- |:--- |  
+| <span data-ttu-id="f1d3c-140">場所</span><span class="sxs-lookup"><span data-stu-id="f1d3c-140">locations</span></span> | [<span data-ttu-id="f1d3c-141">BreakLocation</span><span class="sxs-lookup"><span data-stu-id="f1d3c-141">BreakLocation</span></span>](#breaklocation) | <span data-ttu-id="f1d3c-142">考えられるブレークポイントの場所の一覧。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-142">List of the possible breakpoint locations.</span></span> |  
+
+---  
+
+### <a name="setbreakpointsactive"></a><span data-ttu-id="f1d3c-143">setBreakpointsActive</span><span class="sxs-lookup"><span data-stu-id="f1d3c-143">setBreakpointsActive</span></span>  
+
+<span data-ttu-id="f1d3c-144">ページ上のすべてのブレークポイントをアクティブ化/非アクティブ化します。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-144">Activates / deactivates all breakpoints on the page.</span></span>  
+
+| <span data-ttu-id="f1d3c-145">パラメーター</span><span class="sxs-lookup"><span data-stu-id="f1d3c-145">Parameters</span></span> | <span data-ttu-id="f1d3c-146">型</span><span class="sxs-lookup"><span data-stu-id="f1d3c-146">Type</span></span> | <span data-ttu-id="f1d3c-147">詳細</span><span class="sxs-lookup"><span data-stu-id="f1d3c-147">Details</span></span> |  
+|:--- |:--- |:--- |  
+| <span data-ttu-id="f1d3c-148">active</span><span class="sxs-lookup"><span data-stu-id="f1d3c-148">active</span></span> | `boolean` | <span data-ttu-id="f1d3c-149">ブレークポイントのアクティブな状態の新しい値。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-149">New value for breakpoints active state.</span></span> |  
+
+---  
+
+### <a name="setbreakpointbyurl"></a><span data-ttu-id="f1d3c-150">setBreakpointByUrl</span><span class="sxs-lookup"><span data-stu-id="f1d3c-150">setBreakpointByUrl</span></span>  
+
+<span data-ttu-id="f1d3c-151">URL または URL 正規表現で指定された特定の場所に JavaScript ブレークポイントを設定します。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-151">Sets JavaScript breakpoint at given location specified either by URL or URL regex.</span></span>  <span data-ttu-id="f1d3c-152">このコマンドを発行すると、解析済みのすべてのスクリプトにブレークポイントが解決され、プロパティに返 `locations` されます。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-152">Once this command is issued, all existing parsed scripts will have breakpoints resolved and returned in `locations` property.</span></span>  <span data-ttu-id="f1d3c-153">さらに一致するスクリプトの解析により、後続の `breakpointResolved` イベントが発行されます。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-153">Further matching script parsing will result in subsequent `breakpointResolved` events issued.</span></span>  <span data-ttu-id="f1d3c-154">この論理ブレークポイントは、ページの再読み込みから存続します。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-154">This logical breakpoint will survive page reloads.</span></span>  
+
+| <span data-ttu-id="f1d3c-155">パラメーター</span><span class="sxs-lookup"><span data-stu-id="f1d3c-155">Parameters</span></span> | <span data-ttu-id="f1d3c-156">型</span><span class="sxs-lookup"><span data-stu-id="f1d3c-156">Type</span></span> | <span data-ttu-id="f1d3c-157">詳細</span><span class="sxs-lookup"><span data-stu-id="f1d3c-157">Details</span></span> |  
+|:--- |:--- |:--- |  
+| <span data-ttu-id="f1d3c-158">lineNumber</span><span class="sxs-lookup"><span data-stu-id="f1d3c-158">lineNumber</span></span> | `integer` | <span data-ttu-id="f1d3c-159">ブレークポイントを設定する行番号。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-159">Line number to set breakpoint at.</span></span> |  
+| <span data-ttu-id="f1d3c-160">url \(optional\)</span><span class="sxs-lookup"><span data-stu-id="f1d3c-160">url  \(optional\)</span></span> | `string` | <span data-ttu-id="f1d3c-161">ブレークポイントを設定するリソースの URL。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-161">URL of the resources to set breakpoint on.</span></span> |  
+| <span data-ttu-id="f1d3c-162">urlRegex \(optional\)</span><span class="sxs-lookup"><span data-stu-id="f1d3c-162">urlRegex  \(optional\)</span></span> | `string` | <span data-ttu-id="f1d3c-163">ブレークポイントを設定するリソースの URL の正規表現パターン。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-163">Regex pattern for the URLs of the resources to set breakpoints on.</span></span>  <span data-ttu-id="f1d3c-164">指定 `url` するか `urlRegex` 、指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-164">Either `url` or `urlRegex` must be specified.</span></span> |  
+| <span data-ttu-id="f1d3c-165">columnNumber \(optional\)</span><span class="sxs-lookup"><span data-stu-id="f1d3c-165">columnNumber  \(optional\)</span></span> | `integer` | <span data-ttu-id="f1d3c-166">ブレークポイントを設定する行のオフセットです。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-166">Offset in the line to set breakpoint at.</span></span> |  
+| <span data-ttu-id="f1d3c-167">condition \(optional\)</span><span class="sxs-lookup"><span data-stu-id="f1d3c-167">condition  \(optional\)</span></span> | `string` | <span data-ttu-id="f1d3c-168">ブレークポイント条件として使用する式。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-168">Expression to use as a breakpoint condition.</span></span>  <span data-ttu-id="f1d3c-169">指定すると、デバッガーは、この式が true と評価された場合にのみブレークポイントで停止します。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-169">When specified, debugger will only stop on the breakpoint if this expression evaluates to true.</span></span> |  
+
+| <span data-ttu-id="f1d3c-170">戻り値</span><span class="sxs-lookup"><span data-stu-id="f1d3c-170">Returns</span></span> | <span data-ttu-id="f1d3c-171">型</span><span class="sxs-lookup"><span data-stu-id="f1d3c-171">Type</span></span> | <span data-ttu-id="f1d3c-172">詳細</span><span class="sxs-lookup"><span data-stu-id="f1d3c-172">Details</span></span> |  
+|:--- |:--- |:--- |  
+| <span data-ttu-id="f1d3c-173">ブレークポイントId</span><span class="sxs-lookup"><span data-stu-id="f1d3c-173">breakpointId</span></span> | [<span data-ttu-id="f1d3c-174">ブレークポイントId</span><span class="sxs-lookup"><span data-stu-id="f1d3c-174">BreakpointId</span></span>](#breakpointid) | <span data-ttu-id="f1d3c-175">追加の参照用に作成されたブレークポイントの ID。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-175">ID of the created breakpoint for further reference.</span></span> |  
+| <span data-ttu-id="f1d3c-176">場所</span><span class="sxs-lookup"><span data-stu-id="f1d3c-176">locations</span></span> | [<span data-ttu-id="f1d3c-177">Location[]</span><span class="sxs-lookup"><span data-stu-id="f1d3c-177">Location[]</span></span>](#location) | <span data-ttu-id="f1d3c-178">追加時にこのブレークポイントが解決された場所の一覧。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-178">List of the locations this breakpoint resolved into upon addition.</span></span> |  
+
+---  
+
+### <a name="setbreakpoint"></a><span data-ttu-id="f1d3c-179">setBreakpoint</span><span class="sxs-lookup"><span data-stu-id="f1d3c-179">setBreakpoint</span></span>  
+
+<span data-ttu-id="f1d3c-180">特定の場所に JavaScript ブレークポイントを設定します。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-180">Sets JavaScript breakpoint at a given location.</span></span>  
+
+| <span data-ttu-id="f1d3c-181">パラメーター</span><span class="sxs-lookup"><span data-stu-id="f1d3c-181">Parameters</span></span> | <span data-ttu-id="f1d3c-182">型</span><span class="sxs-lookup"><span data-stu-id="f1d3c-182">Type</span></span> | <span data-ttu-id="f1d3c-183">詳細</span><span class="sxs-lookup"><span data-stu-id="f1d3c-183">Details</span></span> |  
+|:--- |:--- |:--- |  
+| <span data-ttu-id="f1d3c-184">場所</span><span class="sxs-lookup"><span data-stu-id="f1d3c-184">location</span></span> | [<span data-ttu-id="f1d3c-185">Location</span><span class="sxs-lookup"><span data-stu-id="f1d3c-185">Location</span></span>](#location) | <span data-ttu-id="f1d3c-186">ブレークポイントを設定する場所。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-186">Location to set breakpoint in.</span></span> |  
+| <span data-ttu-id="f1d3c-187">condition \(optional\)</span><span class="sxs-lookup"><span data-stu-id="f1d3c-187">condition  \(optional\)</span></span> | `string` | <span data-ttu-id="f1d3c-188">ブレークポイント条件として使用する式。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-188">Expression to use as a breakpoint condition.</span></span>  <span data-ttu-id="f1d3c-189">指定すると、デバッガーは、この式が true と評価された場合にのみブレークポイントで停止します。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-189">When specified, debugger will only stop on the breakpoint if this expression evaluates to true.</span></span> |  
+
+| <span data-ttu-id="f1d3c-190">戻り値</span><span class="sxs-lookup"><span data-stu-id="f1d3c-190">Returns</span></span> | <span data-ttu-id="f1d3c-191">型</span><span class="sxs-lookup"><span data-stu-id="f1d3c-191">Type</span></span> | <span data-ttu-id="f1d3c-192">詳細</span><span class="sxs-lookup"><span data-stu-id="f1d3c-192">Details</span></span> |  
+|:--- |:--- |:--- |  
+| <span data-ttu-id="f1d3c-193">ブレークポイントId</span><span class="sxs-lookup"><span data-stu-id="f1d3c-193">breakpointId</span></span> | [<span data-ttu-id="f1d3c-194">ブレークポイントId</span><span class="sxs-lookup"><span data-stu-id="f1d3c-194">BreakpointId</span></span>](#breakpointid) | <span data-ttu-id="f1d3c-195">追加の参照用に作成されたブレークポイントの ID。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-195">ID of the created breakpoint for further reference.</span></span> |  
+| <span data-ttu-id="f1d3c-196">actualLocation</span><span class="sxs-lookup"><span data-stu-id="f1d3c-196">actualLocation</span></span> | [<span data-ttu-id="f1d3c-197">Location</span><span class="sxs-lookup"><span data-stu-id="f1d3c-197">Location</span></span>](#location) | <span data-ttu-id="f1d3c-198">このブレークポイントが解決された場所。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-198">Location this breakpoint resolved into.</span></span> |  
+
+---  
+
+### <a name="removebreakpoint"></a><span data-ttu-id="f1d3c-199">removeBreakpoint</span><span class="sxs-lookup"><span data-stu-id="f1d3c-199">removeBreakpoint</span></span>  
+
+<span data-ttu-id="f1d3c-200">JavaScript ブレークポイントを削除します。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-200">Removes JavaScript breakpoint.</span></span>  
+
+| <span data-ttu-id="f1d3c-201">パラメーター</span><span class="sxs-lookup"><span data-stu-id="f1d3c-201">Parameters</span></span> | <span data-ttu-id="f1d3c-202">型</span><span class="sxs-lookup"><span data-stu-id="f1d3c-202">Type</span></span> | <span data-ttu-id="f1d3c-203">詳細</span><span class="sxs-lookup"><span data-stu-id="f1d3c-203">Details</span></span> |  
+|:--- |:--- |:--- |  
+| <span data-ttu-id="f1d3c-204">ブレークポイントId</span><span class="sxs-lookup"><span data-stu-id="f1d3c-204">breakpointId</span></span> | [<span data-ttu-id="f1d3c-205">ブレークポイントId</span><span class="sxs-lookup"><span data-stu-id="f1d3c-205">BreakpointId</span></span>](#breakpointid) | &nbsp; |  
+
+---  
+
+### <a name="stepover"></a><span data-ttu-id="f1d3c-206">stepOver</span><span class="sxs-lookup"><span data-stu-id="f1d3c-206">stepOver</span></span>  
+
+<span data-ttu-id="f1d3c-207">ステートメントの手順を実行します。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-207">Steps over the statement.</span></span>  
+
+&nbsp;  
+
+---  
+
+### <a name="stepinto"></a><span data-ttu-id="f1d3c-208">stepInto</span><span class="sxs-lookup"><span data-stu-id="f1d3c-208">stepInto</span></span>  
+
+<span data-ttu-id="f1d3c-209">関数呼び出しを実行します。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-209">Steps into the function call.</span></span>  
+
+&nbsp;  
+
+---  
+
+### <a name="stepout"></a><span data-ttu-id="f1d3c-210">stepOut</span><span class="sxs-lookup"><span data-stu-id="f1d3c-210">stepOut</span></span>  
+
+<span data-ttu-id="f1d3c-211">関数呼び出しからステップアウトします。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-211">Steps out of the function call.</span></span>  
+
+&nbsp;  
+
+---  
+
+### <a name="pause"></a><span data-ttu-id="f1d3c-212">pause</span><span class="sxs-lookup"><span data-stu-id="f1d3c-212">pause</span></span>  
+
+<span data-ttu-id="f1d3c-213">次の JavaScript ステートメントで停止します。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-213">Stops on the next JavaScript statement.</span></span>  
+
+&nbsp;  
+
+---  
+
+### <a name="resume"></a><span data-ttu-id="f1d3c-214">resume</span><span class="sxs-lookup"><span data-stu-id="f1d3c-214">resume</span></span>  
+
+<span data-ttu-id="f1d3c-215">JavaScript の実行を再開します。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-215">Resumes JavaScript execution.</span></span>  
+
+&nbsp;  
+
+---  
+
+### <a name="getscriptsource"></a><span data-ttu-id="f1d3c-216">getScriptSource</span><span class="sxs-lookup"><span data-stu-id="f1d3c-216">getScriptSource</span></span>  
+
+<span data-ttu-id="f1d3c-217">指定された ID を持つスクリプトのソースを返します。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-217">Returns source for the script with given ID.</span></span>  
+
+| <span data-ttu-id="f1d3c-218">パラメーター</span><span class="sxs-lookup"><span data-stu-id="f1d3c-218">Parameters</span></span> | <span data-ttu-id="f1d3c-219">型</span><span class="sxs-lookup"><span data-stu-id="f1d3c-219">Type</span></span> | <span data-ttu-id="f1d3c-220">詳細</span><span class="sxs-lookup"><span data-stu-id="f1d3c-220">Details</span></span> |  
+|:--- |:--- |:--- |  
+| <span data-ttu-id="f1d3c-221">scriptId</span><span class="sxs-lookup"><span data-stu-id="f1d3c-221">scriptId</span></span> | [<span data-ttu-id="f1d3c-222">Runtime.ScriptId</span><span class="sxs-lookup"><span data-stu-id="f1d3c-222">Runtime.ScriptId</span></span>](./runtime.md#scriptid) | <span data-ttu-id="f1d3c-223">ソースを取得するスクリプトの ID。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-223">ID of the script to get source for.</span></span> |  
+| <span data-ttu-id="f1d3c-224">戻り値</span><span class="sxs-lookup"><span data-stu-id="f1d3c-224">Returns</span></span> | <span data-ttu-id="f1d3c-225">型</span><span class="sxs-lookup"><span data-stu-id="f1d3c-225">Type</span></span> | <span data-ttu-id="f1d3c-226">詳細</span><span class="sxs-lookup"><span data-stu-id="f1d3c-226">Details</span></span> |  
+|<span data-ttu-id="f1d3c-227">:---</span><span class="sxs-lookup"><span data-stu-id="f1d3c-227">:---</span></span> |<span data-ttu-id="f1d3c-228">:---</span><span class="sxs-lookup"><span data-stu-id="f1d3c-228">:---</span></span> |<span data-ttu-id="f1d3c-229">:---</span><span class="sxs-lookup"><span data-stu-id="f1d3c-229">:---</span></span> |  
+| <span data-ttu-id="f1d3c-230">scriptSource</span><span class="sxs-lookup"><span data-stu-id="f1d3c-230">scriptSource</span></span> | `string` | <span data-ttu-id="f1d3c-231">スクリプト ソース。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-231">Script source.</span></span> |  
+
+---  
+
+### <a name="setpauseonexceptions"></a><span data-ttu-id="f1d3c-232">setPauseOnExceptions</span><span class="sxs-lookup"><span data-stu-id="f1d3c-232">setPauseOnExceptions</span></span>  
+
+<span data-ttu-id="f1d3c-233">例外状態の一時停止を定義します。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-233">Defines pause on exceptions state.</span></span>  <span data-ttu-id="f1d3c-234">すべての例外、キャッチされていない例外、または例外なしで停止する設定が可能です。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-234">Can be set to stop on all exceptions, uncaught exceptions or no exceptions.</span></span>  <span data-ttu-id="f1d3c-235">例外状態の最初の一時停止はです `none` 。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-235">Initial pause on exceptions state is `none`.</span></span>  
+
+| <span data-ttu-id="f1d3c-236">パラメーター</span><span class="sxs-lookup"><span data-stu-id="f1d3c-236">Parameters</span></span> | <span data-ttu-id="f1d3c-237">型</span><span class="sxs-lookup"><span data-stu-id="f1d3c-237">Type</span></span> | <span data-ttu-id="f1d3c-238">詳細</span><span class="sxs-lookup"><span data-stu-id="f1d3c-238">Details</span></span> |  
+|:--- |:--- |:--- |  
+| <span data-ttu-id="f1d3c-239">状態</span><span class="sxs-lookup"><span data-stu-id="f1d3c-239">state</span></span> | `string` | <span data-ttu-id="f1d3c-240">例外モードで一時停止します。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-240">Pause on exceptions mode.</span></span>  <span data-ttu-id="f1d3c-241">使用できる値:  `none` `uncaught` 、、および</span><span class="sxs-lookup"><span data-stu-id="f1d3c-241">Allowed values:  `none`, `uncaught`, and</span></span> `all` |  
+
+---  
+
+### <a name="evaluateoncallframe"></a><span data-ttu-id="f1d3c-242">evaluateOnCallFrame</span><span class="sxs-lookup"><span data-stu-id="f1d3c-242">evaluateOnCallFrame</span></span>  
+
+<span data-ttu-id="f1d3c-243">指定された呼び出しフレームの式を評価します。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-243">Evaluates expression on a given call frame.</span></span>  
+
+| <span data-ttu-id="f1d3c-244">パラメーター</span><span class="sxs-lookup"><span data-stu-id="f1d3c-244">Parameters</span></span> | <span data-ttu-id="f1d3c-245">型</span><span class="sxs-lookup"><span data-stu-id="f1d3c-245">Type</span></span> | <span data-ttu-id="f1d3c-246">詳細</span><span class="sxs-lookup"><span data-stu-id="f1d3c-246">Details</span></span> |  
+|:--- |:--- |:--- |  
+| <span data-ttu-id="f1d3c-247">callFrameId</span><span class="sxs-lookup"><span data-stu-id="f1d3c-247">callFrameId</span></span> | [<span data-ttu-id="f1d3c-248">CallFrameId</span><span class="sxs-lookup"><span data-stu-id="f1d3c-248">CallFrameId</span></span>](#callframeid) | <span data-ttu-id="f1d3c-249">フレーム識別子を呼び出して評価します。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-249">Call frame identifier to evaluate on.</span></span> |  
+| <span data-ttu-id="f1d3c-250">式</span><span class="sxs-lookup"><span data-stu-id="f1d3c-250">expression</span></span> | `string` | <span data-ttu-id="f1d3c-251">評価する式。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-251">Expression to evaluate.</span></span> |  
+| <span data-ttu-id="f1d3c-252">戻り値</span><span class="sxs-lookup"><span data-stu-id="f1d3c-252">Returns</span></span> | <span data-ttu-id="f1d3c-253">型</span><span class="sxs-lookup"><span data-stu-id="f1d3c-253">Type</span></span> | <span data-ttu-id="f1d3c-254">詳細</span><span class="sxs-lookup"><span data-stu-id="f1d3c-254">Details</span></span> |  
+|<span data-ttu-id="f1d3c-255">:---</span><span class="sxs-lookup"><span data-stu-id="f1d3c-255">:---</span></span> |<span data-ttu-id="f1d3c-256">:---</span><span class="sxs-lookup"><span data-stu-id="f1d3c-256">:---</span></span> |<span data-ttu-id="f1d3c-257">:---</span><span class="sxs-lookup"><span data-stu-id="f1d3c-257">:---</span></span> |  
+| <span data-ttu-id="f1d3c-258">result</span><span class="sxs-lookup"><span data-stu-id="f1d3c-258">result</span></span> | [<span data-ttu-id="f1d3c-259">Runtime.RemoteObject</span><span class="sxs-lookup"><span data-stu-id="f1d3c-259">Runtime.RemoteObject</span></span>](./runtime.md#remoteobject) | <span data-ttu-id="f1d3c-260">評価結果のオブジェクト ラッパー。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-260">Object wrapper for the evaluation result.</span></span> |  
+
+---  
+
+### <a name="setvariablevalue"></a><span data-ttu-id="f1d3c-261">setVariableValue</span><span class="sxs-lookup"><span data-stu-id="f1d3c-261">setVariableValue</span></span>  
+
+<span data-ttu-id="f1d3c-262">呼び出しフレーム内の変数の値を変更します。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-262">Changes value of variable in a callframe.</span></span>  <span data-ttu-id="f1d3c-263">オブジェクト ベースのスコープはサポートされていないので、手動で変更する必要があります。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-263">Object-based scopes are not supported and must be mutated manually.</span></span>  
+
+| <span data-ttu-id="f1d3c-264">パラメーター</span><span class="sxs-lookup"><span data-stu-id="f1d3c-264">Parameters</span></span> | <span data-ttu-id="f1d3c-265">型</span><span class="sxs-lookup"><span data-stu-id="f1d3c-265">Type</span></span> | <span data-ttu-id="f1d3c-266">詳細</span><span class="sxs-lookup"><span data-stu-id="f1d3c-266">Details</span></span> |  
+|:--- |:--- |:--- |  
+| <span data-ttu-id="f1d3c-267">scopeNumber</span><span class="sxs-lookup"><span data-stu-id="f1d3c-267">scopeNumber</span></span> | `integer` | <span data-ttu-id="f1d3c-268">スコープ チェーンに記載されている範囲の 0 からベースの数。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-268">0-based number of scope as was listed in scope chain.</span></span>  <span data-ttu-id="f1d3c-269">のみ `local` 、 `closure` および `catch` スコープの種類を使用できます。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-269">Only `local`, `closure`, and `catch` scope types are allowed.</span></span>  <span data-ttu-id="f1d3c-270">他のスコープは手動で操作できます。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-270">Other scopes could be manipulated manually.</span></span> |  
+| <span data-ttu-id="f1d3c-271">variableName</span><span class="sxs-lookup"><span data-stu-id="f1d3c-271">variableName</span></span> | `string` | <span data-ttu-id="f1d3c-272">変数名。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-272">Variable name.</span></span> |  
+| <span data-ttu-id="f1d3c-273">newValue</span><span class="sxs-lookup"><span data-stu-id="f1d3c-273">newValue</span></span> | [<span data-ttu-id="f1d3c-274">Runtime.CallArgument</span><span class="sxs-lookup"><span data-stu-id="f1d3c-274">Runtime.CallArgument</span></span>](./runtime.md#callargument) | <span data-ttu-id="f1d3c-275">新しい変数値。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-275">New variable value.</span></span> |  
+| <span data-ttu-id="f1d3c-276">callFrameId</span><span class="sxs-lookup"><span data-stu-id="f1d3c-276">callFrameId</span></span> | [<span data-ttu-id="f1d3c-277">CallFrameId</span><span class="sxs-lookup"><span data-stu-id="f1d3c-277">CallFrameId</span></span>](#callframeid) | <span data-ttu-id="f1d3c-278">変数を保持する呼び出しフレームの ID。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-278">ID of callframe that holds variable.</span></span> |  
+
+---  
+
+### <a name="setblackboxpatterns"></a><span data-ttu-id="f1d3c-279">setBlackboxPatterns</span><span class="sxs-lookup"><span data-stu-id="f1d3c-279">setBlackboxPatterns</span></span>  
+
+<span data-ttu-id="f1d3c-280">**実験的な**.</span><span class="sxs-lookup"><span data-stu-id="f1d3c-280">**Experimental**.</span></span>  <span data-ttu-id="f1d3c-281">以前のブラックボックス パターンを渡されたパターンに置き換える。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-281">Replace previous blackbox patterns with passed ones.</span></span>  <span data-ttu-id="f1d3c-282">バックエンドは、パターンの 1 つに一致する URL を持つスクリプトのステップ/一時停止を強制的にスキップします。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-282">Forces backend to skip stepping/pausing in scripts with url matching one of the patterns.</span></span>  <span data-ttu-id="f1d3c-283">デバッガーは、何回か実行することで、ブラックボックス化されたスクリプトを残して、失敗した場合に最終的に `step in` `step out` 実行を試みます。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-283">The debugger will try to leave blackboxed script by performing `step in` several times, finally resorting to `step out` if unsuccessful.</span></span>  
+
+| <span data-ttu-id="f1d3c-284">パラメーター</span><span class="sxs-lookup"><span data-stu-id="f1d3c-284">Parameters</span></span> | <span data-ttu-id="f1d3c-285">型</span><span class="sxs-lookup"><span data-stu-id="f1d3c-285">Type</span></span> | <span data-ttu-id="f1d3c-286">詳細</span><span class="sxs-lookup"><span data-stu-id="f1d3c-286">Details</span></span> |  
+|:--- |:--- |:--- |  
+| <span data-ttu-id="f1d3c-287">パターン</span><span class="sxs-lookup"><span data-stu-id="f1d3c-287">patterns</span></span> | `string[]` | <span data-ttu-id="f1d3c-288">スクリプトの URL でブラックボックスの状態を確認するために使用される正規表現の配列。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-288">Array of regexps that will be used to check script url for blackbox state.</span></span> |  
+
+---  
+
+### <a name="mssetdebuggerpropertyvalue"></a><span data-ttu-id="f1d3c-289">msSetDebuggerPropertyValue</span><span class="sxs-lookup"><span data-stu-id="f1d3c-289">msSetDebuggerPropertyValue</span></span>  
+
+<span data-ttu-id="f1d3c-290">**実験的な**.</span><span class="sxs-lookup"><span data-stu-id="f1d3c-290">**Experimental**.</span></span>  <span data-ttu-id="f1d3c-291">Microsoft: 指定したデバッガー プロパティを指定した値に設定します。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-291">Microsoft:  Sets the specified debugger property to the specified value.</span></span>  
+
+| <span data-ttu-id="f1d3c-292">パラメーター</span><span class="sxs-lookup"><span data-stu-id="f1d3c-292">Parameters</span></span> | <span data-ttu-id="f1d3c-293">型</span><span class="sxs-lookup"><span data-stu-id="f1d3c-293">Type</span></span> | <span data-ttu-id="f1d3c-294">詳細</span><span class="sxs-lookup"><span data-stu-id="f1d3c-294">Details</span></span> |  
+|:--- |:--- |:--- |  
+| <span data-ttu-id="f1d3c-295">debuggerPropertyId</span><span class="sxs-lookup"><span data-stu-id="f1d3c-295">debuggerPropertyId</span></span> | `string` | <span data-ttu-id="f1d3c-296">Microsoft: 設定するプロパティ ID \(つまり、msDebuggerPropertyId\) です。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-296">Microsoft: The property ID \(i.e. msDebuggerPropertyId\) to set.</span></span> |  
+| <span data-ttu-id="f1d3c-297">newValue</span><span class="sxs-lookup"><span data-stu-id="f1d3c-297">newValue</span></span> | `string` | &nbsp; |  
+
+---  
+
+## <a name="events"></a><span data-ttu-id="f1d3c-298">イベント</span><span class="sxs-lookup"><span data-stu-id="f1d3c-298">Events</span></span>  
+
+### <a name="scriptparsed"></a><span data-ttu-id="f1d3c-299">scriptParsed</span><span class="sxs-lookup"><span data-stu-id="f1d3c-299">scriptParsed</span></span>  
+
+<span data-ttu-id="f1d3c-300">スクリプトの解析時に発生します。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-300">Fired when the script is parsed.</span></span>  <span data-ttu-id="f1d3c-301">このイベントは、デバッガーを有効にした時点で、既知のスクリプトおよび未記録のスクリプトに対して発生します。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-301">This event is also fired for all known and uncollected scripts upon enabling debugger.</span></span>  
+
+| <span data-ttu-id="f1d3c-302">パラメーター</span><span class="sxs-lookup"><span data-stu-id="f1d3c-302">Parameters</span></span> | <span data-ttu-id="f1d3c-303">型</span><span class="sxs-lookup"><span data-stu-id="f1d3c-303">Type</span></span> | <span data-ttu-id="f1d3c-304">詳細</span><span class="sxs-lookup"><span data-stu-id="f1d3c-304">Details</span></span> |  
+|:--- |:--- |:--- |  
+| <span data-ttu-id="f1d3c-305">scriptId</span><span class="sxs-lookup"><span data-stu-id="f1d3c-305">scriptId</span></span> | [<span data-ttu-id="f1d3c-306">Runtime.ScriptId</span><span class="sxs-lookup"><span data-stu-id="f1d3c-306">Runtime.ScriptId</span></span>](./runtime.md#scriptid) | <span data-ttu-id="f1d3c-307">解析されたスクリプトの識別子。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-307">Identifier of the script parsed.</span></span> |  
+| <span data-ttu-id="f1d3c-308">url</span><span class="sxs-lookup"><span data-stu-id="f1d3c-308">url</span></span> | `string` | <span data-ttu-id="f1d3c-309">解析されたスクリプトの URL または名前 \(if any\)。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-309">URL or name of the script parsed \(if any\).</span></span> |  
+| <span data-ttu-id="f1d3c-310">startLine</span><span class="sxs-lookup"><span data-stu-id="f1d3c-310">startLine</span></span> | `integer` | <span data-ttu-id="f1d3c-311">リソース内のスクリプトの行オフセットで、指定された URL \(スクリプト タグ\の場合)。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-311">Line offset of the script within the resource with given URL \(for script tags\).</span></span> |  
+| <span data-ttu-id="f1d3c-312">startColumn</span><span class="sxs-lookup"><span data-stu-id="f1d3c-312">startColumn</span></span> | `integer` | <span data-ttu-id="f1d3c-313">指定された URL を持つリソース内のスクリプトの列オフセット。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-313">Column offset of the script within the resource with given URL.</span></span> |  
+| <span data-ttu-id="f1d3c-314">endLine</span><span class="sxs-lookup"><span data-stu-id="f1d3c-314">endLine</span></span> | `integer` | <span data-ttu-id="f1d3c-315">スクリプトの最後の行。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-315">Last line of the script.</span></span> |  
+| <span data-ttu-id="f1d3c-316">endColumn</span><span class="sxs-lookup"><span data-stu-id="f1d3c-316">endColumn</span></span> | `integer` | <span data-ttu-id="f1d3c-317">スクリプトの最後の行の長さ。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-317">Length of the last line of the script.</span></span> |  
+| <span data-ttu-id="f1d3c-318">executionContextId</span><span class="sxs-lookup"><span data-stu-id="f1d3c-318">executionContextId</span></span> | [<span data-ttu-id="f1d3c-319">Runtime.ExecutionContextId</span><span class="sxs-lookup"><span data-stu-id="f1d3c-319">Runtime.ExecutionContextId</span></span>](./runtime.md#executioncontextid) | <span data-ttu-id="f1d3c-320">スクリプト作成コンテキストを指定します。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-320">Specifies script creation context.</span></span> |  
+| <span data-ttu-id="f1d3c-321">sourceMapURL \(optional\)</span><span class="sxs-lookup"><span data-stu-id="f1d3c-321">sourceMapURL  \(optional\)</span></span> | `string` | <span data-ttu-id="f1d3c-322">スクリプトに関連付けられたソース マップの URL (指定されている場合)。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-322">URL of source map associated with script (if any).</span></span> |  
+| <span data-ttu-id="f1d3c-323">length \(optional\)</span><span class="sxs-lookup"><span data-stu-id="f1d3c-323">length  \(optional\)</span></span> | `integer` | <span data-ttu-id="f1d3c-324">**実験的な**.</span><span class="sxs-lookup"><span data-stu-id="f1d3c-324">**Experimental**.</span></span>  <span data-ttu-id="f1d3c-325">このスクリプトの長さ。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-325">This script length.</span></span> |  
+| <span data-ttu-id="f1d3c-326">msParentId \(optional\)</span><span class="sxs-lookup"><span data-stu-id="f1d3c-326">msParentId  \(optional\)</span></span> | `string` | <span data-ttu-id="f1d3c-327">**実験的な**.</span><span class="sxs-lookup"><span data-stu-id="f1d3c-327">**Experimental**.</span></span>  <span data-ttu-id="f1d3c-328">これは親ドキュメント ID です。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-328">This is the parent document ID.</span></span> |  
+| <span data-ttu-id="f1d3c-329">msMimeType \(optional\)</span><span class="sxs-lookup"><span data-stu-id="f1d3c-329">msMimeType  \(optional\)</span></span> | `string` | <span data-ttu-id="f1d3c-330">**実験的な**.</span><span class="sxs-lookup"><span data-stu-id="f1d3c-330">**Experimental**.</span></span>  <span data-ttu-id="f1d3c-331">これは MIME の種類です。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-331">This is the mime type.</span></span> |  
+| <span data-ttu-id="f1d3c-332">msIsDynamicCode \(optional\)</span><span class="sxs-lookup"><span data-stu-id="f1d3c-332">msIsDynamicCode  \(optional\)</span></span> | `boolean` | <span data-ttu-id="f1d3c-333">**実験的な**.</span><span class="sxs-lookup"><span data-stu-id="f1d3c-333">**Experimental**.</span></span>  <span data-ttu-id="f1d3c-334">これは、動的コードであるかどうかを示します。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-334">This indicates whether it is dynamic code.</span></span> |  
+| <span data-ttu-id="f1d3c-335">msLongDocumentId \(optional\)</span><span class="sxs-lookup"><span data-stu-id="f1d3c-335">msLongDocumentId  \(optional\)</span></span> | `integer` | <span data-ttu-id="f1d3c-336">**実験的な**.</span><span class="sxs-lookup"><span data-stu-id="f1d3c-336">**Experimental**.</span></span>  <span data-ttu-id="f1d3c-337">これは長いドキュメント ID です。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-337">This is the long document ID.</span></span> |  
+
+---  
+
+### <a name="breakpointresolved"></a><span data-ttu-id="f1d3c-338">ブレークポイントResolved</span><span class="sxs-lookup"><span data-stu-id="f1d3c-338">breakpointResolved</span></span>  
+
+<span data-ttu-id="f1d3c-339">ブレークポイントが実際のスクリプトと場所に解決された場合に発生します。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-339">Fired when breakpoint is resolved to an actual script and location.</span></span>  
+
+| <span data-ttu-id="f1d3c-340">パラメーター</span><span class="sxs-lookup"><span data-stu-id="f1d3c-340">Parameters</span></span> | <span data-ttu-id="f1d3c-341">型</span><span class="sxs-lookup"><span data-stu-id="f1d3c-341">Type</span></span> | <span data-ttu-id="f1d3c-342">詳細</span><span class="sxs-lookup"><span data-stu-id="f1d3c-342">Details</span></span> |  
+|:--- |:--- |:--- |  
+| <span data-ttu-id="f1d3c-343">ブレークポイントId</span><span class="sxs-lookup"><span data-stu-id="f1d3c-343">breakpointId</span></span> | [<span data-ttu-id="f1d3c-344">ブレークポイントId</span><span class="sxs-lookup"><span data-stu-id="f1d3c-344">BreakpointId</span></span>](#breakpointid) | <span data-ttu-id="f1d3c-345">ブレークポイントの一意の識別子。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-345">Breakpoint unique identifier.</span></span> |  
+| <span data-ttu-id="f1d3c-346">場所</span><span class="sxs-lookup"><span data-stu-id="f1d3c-346">location</span></span> | [<span data-ttu-id="f1d3c-347">Location</span><span class="sxs-lookup"><span data-stu-id="f1d3c-347">Location</span></span>](#location) | <span data-ttu-id="f1d3c-348">実際のブレークポイントの場所。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-348">Actual breakpoint location.</span></span> |  
+| <span data-ttu-id="f1d3c-349">msLength \(optional\)</span><span class="sxs-lookup"><span data-stu-id="f1d3c-349">msLength  \(optional\)</span></span> | `integer` | <span data-ttu-id="f1d3c-350">**実験的な**.</span><span class="sxs-lookup"><span data-stu-id="f1d3c-350">**Experimental**.</span></span>  <span data-ttu-id="f1d3c-351">Microsoft: ブレークポイントの場所にあるコードの長さ \(つまり、文字数\) です。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-351">Microsoft:  Length of code \(i.e. number of characters\) at the breakpoint location.</span></span> |  
+
+---  
+
+### <a name="paused"></a><span data-ttu-id="f1d3c-352">paused (一時停止)</span><span class="sxs-lookup"><span data-stu-id="f1d3c-352">paused</span></span>  
+
+<span data-ttu-id="f1d3c-353">ブレークポイントまたは例外のデバッガーが壊れた場合に発生します。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-353">Fired when the debuggers breaks for a breakpoint or exception.</span></span>  
+
+| <span data-ttu-id="f1d3c-354">パラメーター</span><span class="sxs-lookup"><span data-stu-id="f1d3c-354">Parameters</span></span> | <span data-ttu-id="f1d3c-355">型</span><span class="sxs-lookup"><span data-stu-id="f1d3c-355">Type</span></span> | <span data-ttu-id="f1d3c-356">詳細</span><span class="sxs-lookup"><span data-stu-id="f1d3c-356">Details</span></span> |  
+|:--- |:--- |:--- |  
+| <span data-ttu-id="f1d3c-357">callFrames</span><span class="sxs-lookup"><span data-stu-id="f1d3c-357">callFrames</span></span> | [<span data-ttu-id="f1d3c-358">CallFrame[]</span><span class="sxs-lookup"><span data-stu-id="f1d3c-358">CallFrame[]</span></span>](#callframe) | <span data-ttu-id="f1d3c-359">デバッガーが停止したスタックを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-359">Call stack the debugger stopped on.</span></span> |  
+| <span data-ttu-id="f1d3c-360">理由</span><span class="sxs-lookup"><span data-stu-id="f1d3c-360">reason</span></span> | `string` | <span data-ttu-id="f1d3c-361">理由を一時停止します。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-361">Pause reason.</span></span>  <span data-ttu-id="f1d3c-362">使用できる値:  `breakpoint` `step` `exception` 、、、および</span><span class="sxs-lookup"><span data-stu-id="f1d3c-362">Allowed values:  `breakpoint`, `step`, `exception`, and</span></span> `other` |  
+| <span data-ttu-id="f1d3c-363">data \(optional\)</span><span class="sxs-lookup"><span data-stu-id="f1d3c-363">data  \(optional\)</span></span> | `object` | <span data-ttu-id="f1d3c-364">ブレーク固有の補助プロパティを含むオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-364">Object containing break-specific auxiliary properties.</span></span> |  
+| <span data-ttu-id="f1d3c-365">hitBreakpoints \(optional\)</span><span class="sxs-lookup"><span data-stu-id="f1d3c-365">hitBreakpoints  \(optional\)</span></span> | `string[]` | <span data-ttu-id="f1d3c-366">ブレークポイントのヒットの ID</span><span class="sxs-lookup"><span data-stu-id="f1d3c-366">Hit breakpoints IDs</span></span> |  
+
+---  
+
+### <a name="resumed"></a><span data-ttu-id="f1d3c-367">再開</span><span class="sxs-lookup"><span data-stu-id="f1d3c-367">resumed</span></span>  
+
+<span data-ttu-id="f1d3c-368">デバッガーが実行を再開すると発生します。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-368">Fired when the debugger resumes execution.</span></span>  
+
+&nbsp;  
+
+---  
+
+## <a name="types"></a><span data-ttu-id="f1d3c-369">型</span><span class="sxs-lookup"><span data-stu-id="f1d3c-369">Types</span></span>  
+
+### <a name="breakpointid-string"></a><span data-ttu-id="f1d3c-370">ブレークポイントId 文字列</span><span class="sxs-lookup"><span data-stu-id="f1d3c-370">BreakpointId string</span></span>  
+
+<a name="breakpointid"></a>  
+
+<span data-ttu-id="f1d3c-371">ブレークポイント識別子。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-371">Breakpoint identifier.</span></span>  
+
+&nbsp;  
+
+---  
+
+### <a name="callframeid-string"></a><span data-ttu-id="f1d3c-372">CallFrameId 文字列</span><span class="sxs-lookup"><span data-stu-id="f1d3c-372">CallFrameId string</span></span>  
+
+<a name="callframeid"></a>  
+
+<span data-ttu-id="f1d3c-373">呼び出しフレーム識別子。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-373">Call frame identifier.</span></span>  
+
+&nbsp;  
+
+---  
+
+### <a name="location-object"></a><span data-ttu-id="f1d3c-374">Location オブジェクト</span><span class="sxs-lookup"><span data-stu-id="f1d3c-374">Location object</span></span>  
+
+<a name="location"></a>  
+
+<span data-ttu-id="f1d3c-375">ソース コード内の場所。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-375">Location in the source code.</span></span>  
+
+| <span data-ttu-id="f1d3c-376">プロパティ</span><span class="sxs-lookup"><span data-stu-id="f1d3c-376">Properties</span></span> | <span data-ttu-id="f1d3c-377">型</span><span class="sxs-lookup"><span data-stu-id="f1d3c-377">Type</span></span> | <span data-ttu-id="f1d3c-378">詳細</span><span class="sxs-lookup"><span data-stu-id="f1d3c-378">Details</span></span> |  
+|:--- |:--- |:--- |  
+| <span data-ttu-id="f1d3c-379">scriptId</span><span class="sxs-lookup"><span data-stu-id="f1d3c-379">scriptId</span></span> | [<span data-ttu-id="f1d3c-380">Runtime.ScriptId</span><span class="sxs-lookup"><span data-stu-id="f1d3c-380">Runtime.ScriptId</span></span>](./runtime.md#scriptid) | <span data-ttu-id="f1d3c-381">で報告されるスクリプト識別子 `Debugger.scriptParsed` 。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-381">Script identifier as reported in the `Debugger.scriptParsed`.</span></span> |  
+| <span data-ttu-id="f1d3c-382">lineNumber</span><span class="sxs-lookup"><span data-stu-id="f1d3c-382">lineNumber</span></span> | `integer` | <span data-ttu-id="f1d3c-383">スクリプト \(0-based\) の行番号。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-383">Line number in the script \(0-based\).</span></span> |  
+| <span data-ttu-id="f1d3c-384">columnNumber \(optional\)</span><span class="sxs-lookup"><span data-stu-id="f1d3c-384">columnNumber  \(optional\)</span></span> | `integer` | <span data-ttu-id="f1d3c-385">スクリプト \(0-based\) の列番号。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-385">Column number in the script \(0-based\).</span></span> |  
+| <span data-ttu-id="f1d3c-386">msLength</span><span class="sxs-lookup"><span data-stu-id="f1d3c-386">msLength</span></span> | `integer` | <span data-ttu-id="f1d3c-387">Microsoft: この呼び出しフレームでのコードの長さ \(つまり、文字数\) です。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-387">Microsoft: Length of code \(i.e. number of characters\) at this call frame.</span></span> |  
+
+---  
+
+### <a name="breaklocation-object"></a><span data-ttu-id="f1d3c-388">BreakLocation オブジェクト</span><span class="sxs-lookup"><span data-stu-id="f1d3c-388">BreakLocation object</span></span>  
+
+<a name="breaklocation"></a>  
+
+<span data-ttu-id="f1d3c-389">ソース コード内の場所を壊します。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-389">Break location in the source code.</span></span>  
+
+| <span data-ttu-id="f1d3c-390">プロパティ</span><span class="sxs-lookup"><span data-stu-id="f1d3c-390">Properties</span></span> | <span data-ttu-id="f1d3c-391">型</span><span class="sxs-lookup"><span data-stu-id="f1d3c-391">Type</span></span> | <span data-ttu-id="f1d3c-392">詳細</span><span class="sxs-lookup"><span data-stu-id="f1d3c-392">Details</span></span> |  
+|:--- |:--- |:--- |  
+| <span data-ttu-id="f1d3c-393">scriptId</span><span class="sxs-lookup"><span data-stu-id="f1d3c-393">scriptId</span></span> | [<span data-ttu-id="f1d3c-394">Runtime.ScriptId</span><span class="sxs-lookup"><span data-stu-id="f1d3c-394">Runtime.ScriptId</span></span>](./runtime.md#scriptid) | <span data-ttu-id="f1d3c-395">で報告されるスクリプト識別子 `Debugger.scriptParsed` 。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-395">Script identifier as reported in the `Debugger.scriptParsed`.</span></span> |  
+| <span data-ttu-id="f1d3c-396">lineNumber</span><span class="sxs-lookup"><span data-stu-id="f1d3c-396">lineNumber</span></span> | `integer` | <span data-ttu-id="f1d3c-397">スクリプト \(0-based\) の行番号。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-397">Line number in the script \(0-based\).</span></span> |  
+| <span data-ttu-id="f1d3c-398">columnNumber \(optional\)</span><span class="sxs-lookup"><span data-stu-id="f1d3c-398">columnNumber  \(optional\)</span></span> | `integer` | <span data-ttu-id="f1d3c-399">スクリプト \(0-based\) の列番号。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-399">Column number in the script \(0-based\).</span></span> |  
+| <span data-ttu-id="f1d3c-400">msLength</span><span class="sxs-lookup"><span data-stu-id="f1d3c-400">msLength</span></span> | `integer` | <span data-ttu-id="f1d3c-401">Microsoft: この呼び出しフレームでのコードの長さ \(つまり、文字数\) です。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-401">Microsoft:  Length of code \(i.e. number of characters\) at this call frame.</span></span> |  
+| <span data-ttu-id="f1d3c-402">型 \(optional\)</span><span class="sxs-lookup"><span data-stu-id="f1d3c-402">type  \(optional\)</span></span> | `string` | <span data-ttu-id="f1d3c-403">使用できる値:  `debuggerStatement` `call` 、、および</span><span class="sxs-lookup"><span data-stu-id="f1d3c-403">Allowed values:  `debuggerStatement`, `call`, and</span></span> `return` |  
+
+---  
+
+### <a name="callframe-object"></a><span data-ttu-id="f1d3c-404">CallFrame オブジェクト</span><span class="sxs-lookup"><span data-stu-id="f1d3c-404">CallFrame object</span></span>  
+
+<a name="callframe"></a>  
+
+<span data-ttu-id="f1d3c-405">JavaScript 呼び出しフレーム。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-405">JavaScript call frame.</span></span>  <span data-ttu-id="f1d3c-406">呼び出しフレームの配列は、呼び出し履歴を形成します。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-406">Array of call frames form the call stack.</span></span>  
+
+| <span data-ttu-id="f1d3c-407">プロパティ</span><span class="sxs-lookup"><span data-stu-id="f1d3c-407">Properties</span></span> | <span data-ttu-id="f1d3c-408">型</span><span class="sxs-lookup"><span data-stu-id="f1d3c-408">Type</span></span> | <span data-ttu-id="f1d3c-409">詳細</span><span class="sxs-lookup"><span data-stu-id="f1d3c-409">Details</span></span> |  
+|:--- |:--- |:--- |  
+| <span data-ttu-id="f1d3c-410">callFrameId</span><span class="sxs-lookup"><span data-stu-id="f1d3c-410">callFrameId</span></span> | [<span data-ttu-id="f1d3c-411">CallFrameId</span><span class="sxs-lookup"><span data-stu-id="f1d3c-411">CallFrameId</span></span>](#callframeid) | <span data-ttu-id="f1d3c-412">呼び出しフレーム識別子。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-412">Call frame identifier.</span></span>  <span data-ttu-id="f1d3c-413">この識別子は、デバッガーが一時停止している間のみ有効です。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-413">This identifier is only valid while the debugger is paused.</span></span> |  
+| <span data-ttu-id="f1d3c-414">functionName</span><span class="sxs-lookup"><span data-stu-id="f1d3c-414">functionName</span></span> | `string` | <span data-ttu-id="f1d3c-415">この呼び出しフレームで呼び出される JavaScript 関数の名前。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-415">Name of the JavaScript function called on this call frame.</span></span> |  
+| <span data-ttu-id="f1d3c-416">functionLocation \(optional\)</span><span class="sxs-lookup"><span data-stu-id="f1d3c-416">functionLocation  \(optional\)</span></span> | [<span data-ttu-id="f1d3c-417">Location</span><span class="sxs-lookup"><span data-stu-id="f1d3c-417">Location</span></span>](#location) | <span data-ttu-id="f1d3c-418">**実験的な**.</span><span class="sxs-lookup"><span data-stu-id="f1d3c-418">**Experimental**.</span></span>  <span data-ttu-id="f1d3c-419">ソース コード内の場所。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-419">Location in the source code.</span></span> |  
+| <span data-ttu-id="f1d3c-420">場所</span><span class="sxs-lookup"><span data-stu-id="f1d3c-420">location</span></span> | [<span data-ttu-id="f1d3c-421">Location</span><span class="sxs-lookup"><span data-stu-id="f1d3c-421">Location</span></span>](#location) | <span data-ttu-id="f1d3c-422">ソース コード内の場所。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-422">Location in the source code.</span></span> |  
+| <span data-ttu-id="f1d3c-423">url</span><span class="sxs-lookup"><span data-stu-id="f1d3c-423">url</span></span> | `string` | <span data-ttu-id="f1d3c-424">JavaScript スクリプト名または URL。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-424">JavaScript script name or url.</span></span> |  
+| <span data-ttu-id="f1d3c-425">scopeChain</span><span class="sxs-lookup"><span data-stu-id="f1d3c-425">scopeChain</span></span> | [<span data-ttu-id="f1d3c-426">Scope[]</span><span class="sxs-lookup"><span data-stu-id="f1d3c-426">Scope[]</span></span>](#scope) | <span data-ttu-id="f1d3c-427">この呼び出しフレームのスコープ チェーン。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-427">Scope chain for this call frame.</span></span> |  
+| <span data-ttu-id="f1d3c-428">これ</span><span class="sxs-lookup"><span data-stu-id="f1d3c-428">this</span></span> | [<span data-ttu-id="f1d3c-429">Runtime.RemoteObject</span><span class="sxs-lookup"><span data-stu-id="f1d3c-429">Runtime.RemoteObject</span></span>](./runtime.md#remoteobject) | `this` <span data-ttu-id="f1d3c-430">この呼び出しフレームのオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-430">object for this call frame.</span></span> |  
+| <span data-ttu-id="f1d3c-431">returnValue \(optional\)</span><span class="sxs-lookup"><span data-stu-id="f1d3c-431">returnValue  \(optional\)</span></span> | [<span data-ttu-id="f1d3c-432">Runtime.RemoteObject</span><span class="sxs-lookup"><span data-stu-id="f1d3c-432">Runtime.RemoteObject</span></span>](./runtime.md#remoteobject) | <span data-ttu-id="f1d3c-433">関数が戻り値である場合に返される値。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-433">The value being returned, if the function is at return point.</span></span> |  
+
+---  
+
+### <a name="scope-object"></a><span data-ttu-id="f1d3c-434">Scope オブジェクト</span><span class="sxs-lookup"><span data-stu-id="f1d3c-434">Scope object</span></span>  
+
+<a name="scope"></a>  
+
+<span data-ttu-id="f1d3c-435">スコープの説明。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-435">Scope description.</span></span>  
+
+| <span data-ttu-id="f1d3c-436">プロパティ</span><span class="sxs-lookup"><span data-stu-id="f1d3c-436">Properties</span></span> | <span data-ttu-id="f1d3c-437">型</span><span class="sxs-lookup"><span data-stu-id="f1d3c-437">Type</span></span> | <span data-ttu-id="f1d3c-438">詳細</span><span class="sxs-lookup"><span data-stu-id="f1d3c-438">Details</span></span> |  
+|:--- |:--- |:--- |  
+| <span data-ttu-id="f1d3c-439">型</span><span class="sxs-lookup"><span data-stu-id="f1d3c-439">type</span></span> | `string` | <span data-ttu-id="f1d3c-440">スコープの種類。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-440">Scope type.</span></span>  <span data-ttu-id="f1d3c-441">使用できる値: `global` `local` `with` 、、、、、、、 `closure` `catch` `block` `script` `eval`</span><span class="sxs-lookup"><span data-stu-id="f1d3c-441">Allowed values:  `global`, `local`, `with`, `closure`, `catch`, `block`, `script`, `eval`, and</span></span> `module` |  
+| <span data-ttu-id="f1d3c-442">object</span><span class="sxs-lookup"><span data-stu-id="f1d3c-442">object</span></span> | [<span data-ttu-id="f1d3c-443">Runtime.RemoteObject</span><span class="sxs-lookup"><span data-stu-id="f1d3c-443">Runtime.RemoteObject</span></span>](./runtime.md#remoteobject) | <span data-ttu-id="f1d3c-444">スコープを表すオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-444">Object representing the scope.</span></span>  <span data-ttu-id="f1d3c-445">For and scopes it represents the actual object; for the rest of the scopes, it is artificial transient object enumerating scope variables as `global` `with` its properties.</span><span class="sxs-lookup"><span data-stu-id="f1d3c-445">For `global` and `with` scopes it represents the actual object; for the rest of the scopes, it is artificial transient object enumerating scope variables as its properties.</span></span> |  
+| <span data-ttu-id="f1d3c-446">name \(optional\)</span><span class="sxs-lookup"><span data-stu-id="f1d3c-446">name  \(optional\)</span></span> | `string` | &nbsp; |  
+| <span data-ttu-id="f1d3c-447">startLocation \(optional\)</span><span class="sxs-lookup"><span data-stu-id="f1d3c-447">startLocation  \(optional\)</span></span> | [<span data-ttu-id="f1d3c-448">Location</span><span class="sxs-lookup"><span data-stu-id="f1d3c-448">Location</span></span>](#location) | <span data-ttu-id="f1d3c-449">スコープが開始するソース コード内の場所。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-449">Location in the source code where scope starts.</span></span> |  
+| <span data-ttu-id="f1d3c-450">endLocation \(optional\)</span><span class="sxs-lookup"><span data-stu-id="f1d3c-450">endLocation  \(optional\)</span></span> | [<span data-ttu-id="f1d3c-451">Location</span><span class="sxs-lookup"><span data-stu-id="f1d3c-451">Location</span></span>](#location) | <span data-ttu-id="f1d3c-452">スコープが終了するソース コード内の場所。</span><span class="sxs-lookup"><span data-stu-id="f1d3c-452">Location in the source code where scope ends.</span></span> |  
+
+---  
+
+## <a name="dependencies"></a><span data-ttu-id="f1d3c-453">依存関係</span><span class="sxs-lookup"><span data-stu-id="f1d3c-453">Dependencies</span></span>  
+
+[<span data-ttu-id="f1d3c-454">ランタイム</span><span class="sxs-lookup"><span data-stu-id="f1d3c-454">Runtime</span></span>](./runtime.md)  
