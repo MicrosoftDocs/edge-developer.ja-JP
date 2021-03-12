@@ -19,10 +19,10 @@
       items:
         - name: DevTools の概要
           href: devtools-guide-chromium/index.md
-        - name: DevTools を開く
-          href: devtools-guide-chromium/open/index.md
         - name: 新着情報
           items:
+            - name: 試験的機能
+              href: devtools-guide-chromium/experimental-features/index.md
             - name: Microsoft Edge 89
               href: devtools-guide-chromium/whats-new/2021/01/devtools.md
             - name: Microsoft Edge 88
@@ -41,204 +41,216 @@
               href: devtools-guide-chromium/whats-new/2020/01/devtools.md
             - name: Microsoft Edge 80
               href: devtools-guide-chromium/whats-new/2019/12/devtools.md
-        - name: 試験的機能
-          href: devtools-guide-chromium/experimental-features/index.md
-        - name: IE モード
-          href: devtools-guide-chromium/ie-mode/index.md
-        - name: 3D ビュー
-          href: devtools-guide-chromium/3d-view/index.md
-        - name: サービス ワーカー
-          href: devtools-guide-chromium/service-workers/index.md
-        - name: 初心者向け DevTools
+        - name: チュートリアル
           items:
-            - name: HTML および DOM
-              href: devtools-guide-chromium/beginners/html.md
-            - name: CSS
-              href: devtools-guide-chromium/beginners/css.md
-        - name: CSS
-          items:
-            - name: CSS の表示と変更の概要
-              href: devtools-guide-chromium/css/index.md
-            - name: CCS リファレンス
-              href: devtools-guide-chromium/css/reference.md
-            - name: 未使用 CSS の検索
-              href: devtools-guide-chromium/coverage/index.md
-            - name: アニメーションの検査
-              href: devtools-guide-chromium/inspect-styles/animations.md
-            - name: CSS フォントのスタイルと設定の編集
-              href: devtools-guide-chromium/inspect-styles/edit-fonts.md
-            - name: CSS グリッドの検査
-              href: devtools-guide-chromium/css/grid.md
-            - name: DevTools を強制的に印刷プレビュー モードにする
-              href: devtools-guide-chromium/css/print-preview.md
-        - name: コンソール
-          items:
-            - name: コンソールの概要
-              href: devtools-guide-chromium/console/index.md
-            - name: ログ メッセージ
-              href: devtools-guide-chromium/console/log.md
-            - name: JavaScript の実行
-              href: devtools-guide-chromium/console/javascript.md
-            - name: リファレンス
-              href: devtools-guide-chromium/console/reference.md
-            - name: API リファレンス
-              href: devtools-guide-chromium/console/api.md
-            - name: ユーティリティ API リファレンス
-              href: devtools-guide-chromium/console/utilities.md
-            - name: ライブ表現
-              href: devtools-guide-chromium/console/live-expressions.md
-        - name: ネットワーク
-          items:
-            - name: 使ってみる
-              href: devtools-guide-chromium/network/index.md
-            - name: ネットワーク問題ガイド
-              href: devtools-guide-chromium/network/issues.md
-            - name: リファレンス
-              href: devtools-guide-chromium/network/reference.md
-        - name: 記憶域
-          items:
-            - name: Cookie
-              href: devtools-guide-chromium/storage/cookies.md
-            - name: ローカル ストレージ
-              href: devtools-guide-chromium/storage/localstorage.md
-            - name: IndexedDB
-              href: devtools-guide-chromium/storage/indexeddb.md
-            - name: セッション ストレージ
-              href: devtools-guide-chromium/storage/sessionstorage.md
-            - name: アプリケーション キャッシュ
-              href: devtools-guide-chromium/storage/applicationcache.md
-            - name: WebSQL
-              href: devtools-guide-chromium/storage/websql.md
-            - name: キャッシュ
-              href: devtools-guide-chromium/storage/cache.md
-        - name: 問題
-          href: devtools-guide-chromium/issues/index.md
-        - name: コマンド メニュー
-          href: devtools-guide-chromium/command-menu/index.md
-        - name: エミュレーション
-          items:
-            - name: エミュレーションの概要
-              href: devtools-guide-chromium/device-mode/index.md
-            - name: 2 画面表示と折りたたみ式デバイスのエミュレート
-              href: devtools-guide-chromium/device-mode/dual-screen-and-foldables.md
-            - name: 他のブラウザーをエミュレートしてテストする
-              href: devtools-guide-chromium/device-mode/testing-other-browsers.md
-            - name: ガイド
+            - name: 初心者向け
               items:
+                - name: DevTools を開く
+                  href: devtools-guide-chromium/open/index.md
+                - name: HTML と DOM の使用を開始する
+                  href: devtools-guide-chromium/beginners/html.md
+                - name: DOM の表示と変更を開始する
+                  href: devtools-guide-chromium/dom/index.md
+                - name: CSS の使用を開始する
+                  href: devtools-guide-chromium/beginners/css.md
+                - name: CSS の表示と変更の概要
+                  href: devtools-guide-chromium/css/index.md
+                - name: JavaScript のデバッグの開始
+                  href: devtools-guide-chromium/javascript/index.md
+                - name: ランタイム パフォーマンスの分析の開始
+                  href: devtools-guide-chromium/evaluate-performance/index.md
+                - name: ページ リソースの表示
+                  href: devtools-guide-chromium/resources/index.md
+            - name: ワークスペースを使用してファイルを編集する
+              href: devtools-guide-chromium/workspaces/index.md
+            - name: ネットワーク アクティビティの検査
+              href: devtools-guide-chromium/network/index.md
+            - name: Web サイトの速度を最適化する
+              href: devtools-guide-chromium/speed/get-started.md
+            - name: リモート デバッグ
+              items:
+                - name: Android デバイスのリモート デバッグを開始する
+                  href: devtools-guide-chromium/remote-debugging/index.md
+                - name: Surface Duo エミュレーターを使用したリモート デバッグの開始
+                  href: devtools-guide-chromium/remote-debugging/surface-duo-emulator.md
+                - name: Windows 10 デバイスのリモート デバッグの開始
+                  href: devtools-guide-chromium/remote-debugging/windows.md
+        - name: 使い方ガイド
+          items:
+            - name: アクセシビリティ
+              items:
+                - name: アクセシビリティリファレンス
+                  href: devtools-guide-chromium/accessibility/reference.md
+                - name: 支援技術を使用して DevTools に移動する
+                  href: devtools-guide-chromium/accessibility/navigation.md
+                - name: フォーカスされている要素を追跡する
+                  href: devtools-guide-chromium/accessibility/focus.md
+            - name: コマンド メニュー
+              href: devtools-guide-chromium/command-menu/index.md
+            - name: DevTools のカスタマイズ
+              items:
+                - name: 概要
+                  href: devtools-guide-chromium/customize/index.md
+                - name: 濃色テーマ
+                  href: devtools-guide-chromium/customize/dark-theme.md
+                - name: 配置の変更
+                  href: devtools-guide-chromium/customize/placement.md
+                - name: ブラウザーの言語の一致
+                  href: devtools-guide-chromium/customize/localization.md
+                - name: ショートカットのカスタマイズ
+                  href: devtools-guide-chromium/customize/shortcuts.md
+            - name: デバイスのテストとエミュレーション
+              items:
+                - name: エミュレーションの概要
+                  href: devtools-guide-chromium/device-mode/index.md
+                - name: 2 画面表示と折りたたみ式デバイスのエミュレート
+                  href: devtools-guide-chromium/device-mode/dual-screen-and-foldables.md
+                - name: 他のブラウザーをエミュレートしてテストする
+                  href: devtools-guide-chromium/device-mode/testing-other-browsers.md
                 - name: ユーザー エージェント文字列を上書きする
                   href: devtools-guide-chromium/device-mode/override-user-agent.md
                 - name: 位置情報を上書きする
                   href: devtools-guide-chromium/device-mode/geolocation.md
                 - name: デバイスの向きをシミュレーションする
                   href: devtools-guide-chromium/device-mode/orientation.md
-        - name: DOM
-          items:
-            - name: 使ってみる
-              href: devtools-guide-chromium/dom/index.md
-        - name: JavaScript
-          items:
-            - name: 使ってみる
-              href: devtools-guide-chromium/javascript/index.md
-            - name: ブレークポイントを使用してコードを一時停止する
-              href: devtools-guide-chromium/javascript/breakpoints.md
-            - name: 未使用 JavaScript の検索
-              href: devtools-guide-chromium/coverage/index.md
-            - name: ソース コードに前処理コードをマッピングする
-              href: devtools-guide-chromium/javascript/source-maps.md
-            - name: JavaScript デバッグ リファレンス
-              href: devtools-guide-chromium/javascript/reference.md
-            - name: スニペット
-              href: devtools-guide-chromium/javascript/snippets.md
-            - name: '[上書き] をクリックし、'
-              href: devtools-guide-chromium/javascript/overrides.md
-            - name: ソース パネルの概要
-              href: devtools-guide-chromium/sources/index.md
-            - name: デバッグ バックグラウンド サービス
-              href: devtools-guide-chromium/javascript/background-services.md
-            - name: ガイド
+            - name: IE モード
+              href: devtools-guide-chromium/ie-mode/index.md
+            - name: Javascript のトラブルシューティング
               items:
+                - name: JavaScript デバッグ リファレンス
+                  href: devtools-guide-chromium/javascript/reference.md
+                - name: ソース コードに前処理コードをマッピングする
+                  href: devtools-guide-chromium/javascript/source-maps.md
                 - name: コンテンツ スクリプトをライブラリ コードとしてマークする
                   href: devtools-guide-chromium/javascript/guides/mark-content-scripts-library-code.md
-                - name: JavaScript を無効にする
-                  href: devtools-guide-chromium/javascript/disable.md
-        - name: パフォーマンス
-          items:
-            - name: 使ってみる
-              href: devtools-guide-chromium/evaluate-performance/index.md
-            - name: Web サイトの速度を最適化する
-              href: devtools-guide-chromium/speed/get-started.md
-            - name: 概要
-              href: devtools-guide-chromium/rendering-tools/index.md
-            - name: パフォーマンス分析リファレンス
-              href: devtools-guide-chromium/evaluate-performance/reference.md
-            - name: タイムライン イベント リファレンス
-              href: devtools-guide-chromium/evaluate-performance/performance-reference.md
-            - name: JavaScript ランタイムを高速化する
-              href: devtools-guide-chromium/rendering-tools/js-runtime.md
-        - name: アクセシビリティ
-          items:
-            - name: リファレンス
-              href: devtools-guide-chromium/accessibility/reference.md
-            - name: 支援技術を使用して DevTools に移動する
-              href: devtools-guide-chromium/accessibility/navigation.md
-            - name: ガイド
+                - name: ブレークポイントを使用してコードを一時停止する
+                  href: devtools-guide-chromium/javascript/breakpoints.md
+            - name: メモリのトラブルシューティング
               items:
-                - name: フォーカスされている要素を追跡する
-                  href: devtools-guide-chromium/accessibility/focus.md
-                - name: 濃色/淡色のスキーム シミュレーション
+                - name: メモリの関連用語
+                  href: devtools-guide-chromium/memory-problems/memory-101.md
+                - name: メモリの問題を修正する
+                  href: devtools-guide-chromium/memory-problems/index.md
+            - name: パフォーマンスのトラブルシューティング
+              items:
+                - name: パフォーマンス分析リファレンス
+                  href: devtools-guide-chromium/evaluate-performance/reference.md
+                - name: タイムライン イベント リファレンス
+                  href: devtools-guide-chromium/evaluate-performance/performance-reference.md
+            - name: サービス ワーカーのトラブルシューティング
+              href: devtools-guide-chromium/service-workers/index.md
+        - name: 概念
+          items:
+            - name: 3D ビュー
+              href: devtools-guide-chromium/3d-view/index.md
+            - name: アニメーション
+              href: devtools-guide-chromium/inspect-styles/animations.md
+            - name: アプリケーション
+              items:
+                - name: アプリケーション キャッシュ
+                  href: devtools-guide-chromium/storage/applicationcache.md
+                - name: キャッシュ
+                  href: devtools-guide-chromium/storage/cache.md
+                - name: Cookie
+                  href: devtools-guide-chromium/storage/cookies.md
+                - name: バックグラウンド サービスのデバッグ
+                  href: devtools-guide-chromium/javascript/background-services.md
+                - name: PWA のデバッグ
+                  href: devtools-guide-chromium/progressive-web-apps/index.md
+                - name: IndexedDB
+                  href: devtools-guide-chromium/storage/indexeddb.md
+                - name: ローカル ストレージ
+                  href: devtools-guide-chromium/storage/localstorage.md
+                - name: セッション ストレージ
+                  href: devtools-guide-chromium/storage/sessionstorage.md
+                - name: WebSQL
+                  href: devtools-guide-chromium/storage/websql.md
+            - name: コンソール
+              items:
+                - name: コンソールの概要
+                  href: devtools-guide-chromium/console/index.md
+                - name: ログ メッセージ
+                  href: devtools-guide-chromium/console/log.md
+                - name: JavaScript の実行
+                  href: devtools-guide-chromium/console/javascript.md
+                - name: リファレンス
+                  href: devtools-guide-chromium/console/reference.md
+                - name: JavaScript の式をリアルタイムで見る
+                  href: devtools-guide-chromium/console/live-expressions.md
+            - name: 対象範囲
+              href: devtools-guide-chromium/coverage/index.md
+            - name: 要素
+              items:
+                - name: CCS リファレンス
+                  href: devtools-guide-chromium/css/reference.md
+                - name: CSS フォントのスタイルと設定の編集
+                  href: devtools-guide-chromium/inspect-styles/edit-fonts.md
+                - name: CSS グリッドの検査
+                  href: devtools-guide-chromium/css/grid.md
+                - name: DevTools を強制的に印刷プレビュー モードにする
+                  href: devtools-guide-chromium/css/print-preview.md
+            - name: 問題
+              href: devtools-guide-chromium/issues/index.md
+            - name: メディア
+              href: devtools-guide-chromium/media-panel/index.md
+            - name: メモリ
+              items:
+                - name: メモリの概要
+                  href: devtools-guide-chromium/memory-problems/index.md
+                - name: ヒープ スナップショットを記録する
+                  href: devtools-guide-chromium/memory-problems/heap-snapshots.md
+                - name: JavaScript ランタイムを高速化する
+                  href: devtools-guide-chromium/rendering-tools/js-runtime.md
+                - name: タイムラインでアロケーション インストルメンテーションを使用する
+                  href: devtools-guide-chromium/memory-problems/allocation-profiler.md
+            - name: ネットワーク
+              items:
+                - name: 概要
+                  href: devtools-guide-chromium/network/reference.md
+                - name: ネットワーク問題ガイド
+                  href: devtools-guide-chromium/network/issues.md
+            - name: パフォーマンス
+              items:
+                - name: 実行時のパフォーマンスを分析する
+                  href: devtools-guide-chromium/rendering-tools/index.md
+                - name: タイムライン イベント モード
+                  href: devtools-guide-chromium/evaluate-performance/performance-reference.md
+            - name: リモート デバイス
+              href: devtools-guide-chromium/remote-debugging/local-server.md
+            - name: レンダリング
+              items:
+                - name: 視覚欠陥をエミュレートする
+                  href: devtools-guide-chromium/accessibility/emulate-vision-deficiencies.md
+                - name: カラー スキームをシミュレーションする
                   href: devtools-guide-chromium/accessibility/preferred-color-scheme-simulation.md
                 - name: モーション削減をシミュレーションする
                   href: devtools-guide-chromium/accessibility/reduced-motion-simulation.md
-                - name: 視覚欠陥をエミュレートする
-                  href: devtools-guide-chromium/accessibility/emulate-vision-deficiencies.md
-        - name: リモート デバッグ
+            - name: セキュリティ
+              href: devtools-guide-chromium/security/index.md
+            - name: ソース
+              items:
+                - name: ソース パネルの概要
+                  href: devtools-guide-chromium/sources/index.md
+                - name: JavaScript デバッグ リファレンス
+                  href: devtools-guide-chromium/javascript/reference.md
+                - name: JavaScript を無効にする
+                  href: devtools-guide-chromium/javascript/disable.md
+                - name: 上書き
+                  href: devtools-guide-chromium/javascript/overrides.md
+                - name: スニペット
+                  href: devtools-guide-chromium/javascript/snippets.md
+            - name: WebAuthn
+              href: devtools-guide-chromium/webauthn/index.md
+        - name: リファレンス
           items:
-            - name: Android デバイス
-              href: devtools-guide-chromium/remote-debugging/index.md
-            - name: ローカル サーバーにアクセスする
-              href: devtools-guide-chromium/remote-debugging/local-server.md
-            - name: Surface Duo エミュレーター
-              href: devtools-guide-chromium/remote-debugging/surface-duo-emulator.md
-            - name: Windows 10 デバイス
-              href: devtools-guide-chromium/remote-debugging/windows.md
-        - name: メモリ
-          items:
-            - name: メモリの概要
-              href: devtools-guide-chromium/memory-problems/index.md
-            - name: メモリの用語を理解する
-              href: devtools-guide-chromium/memory-problems/memory-101.md
-            - name: ヒープ スナップショットを記録する
-              href: devtools-guide-chromium/memory-problems/heap-snapshots.md
-            - name: タイムラインでアロケーション インストルメンテーションを使用する
-              href: devtools-guide-chromium/memory-problems/allocation-profiler.md
-        - name: Media
-          href: devtools-guide-chromium/media-panel/index.md
-        - name: WebAuthn
-          href: devtools-guide-chromium/webauthn/index.md
-        - name: ワークスペース
-          href: devtools-guide-chromium/workspaces/index.md
-        - name: プログレッシブ Web アプリ
-          href: devtools-guide-chromium/progressive-web-apps/index.md
-        - name: セキュリティ
-          href: devtools-guide-chromium/security/index.md
-        - name: キーボード ショートカット
-          href: devtools-guide-chromium/shortcuts/index.md
-        - name: リソース
-          href: devtools-guide-chromium/resources/index.md
-        - name: カスタマイズ
-          items:
-            - name: カスタマイズの概要
-              href: devtools-guide-chromium/customize/index.md
-            - name: 濃色テーマ
-              href: devtools-guide-chromium/customize/dark-theme.md
-            - name: 配置の変更
-              href: devtools-guide-chromium/customize/placement.md
-            - name: ブラウザー言語の一致
-              href: devtools-guide-chromium/customize/localization.md
-            - name: ショートカット
-              href: devtools-guide-chromium/customize/shortcuts.md
-    - name: DevTools プロトコルの概要
-      href: devtools-protocol-chromium/index.md
+            - name: コンソール API リファレンス
+              href: devtools-guide-chromium/console/api.md
+            - name: コンソール ユーティリティ API リファレンス
+              href: devtools-guide-chromium/console/utilities.md
+            - name: DevTools プロトコルの概要
+              href: devtools-protocol-chromium/index.md
+            - name: キーボード ショートカット
+              href: devtools-guide-chromium/shortcuts/index.md
     - name: 拡張機能
       items:
         - name: 拡張機能の概要
