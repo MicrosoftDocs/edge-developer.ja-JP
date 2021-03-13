@@ -3,17 +3,30 @@ description: 新しい CSS Grid デバッグ ツール、Webauthn ツール、�
 title: DevTools の新機能 (Microsoft Edge 87)
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/12/2021
+ms.date: 03/12/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 621df58042b390897646a359a208ea62d1a6e06c
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: 53aa8f20ba400c7ff95432b1e752f1f008dac919
+ms.sourcegitcommit: e29cd1c393fc1f433dba8c3d8f260b425ade63a9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11398568"
+ms.lasthandoff: 03/13/2021
+ms.locfileid: "11408333"
 ---
+<!-- Copyright Jecelyn Yeen 
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.  -->  
 # <a name="whats-new-in-devtools-microsoft-edge-87"></a><span data-ttu-id="b5b56-104">DevTools の新機能 (Microsoft Edge 87)</span><span class="sxs-lookup"><span data-stu-id="b5b56-104">What's New In DevTools (Microsoft Edge 87)</span></span>  
 
 [!INCLUDE [contact DevTools team note](../../includes/edge-whats-new-note.md)]  

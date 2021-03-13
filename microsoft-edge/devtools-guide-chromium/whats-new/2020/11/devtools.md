@@ -3,17 +3,30 @@ description: Linux 上の Microsoft Edge、問題ツールの Webhint ヒント�
 title: DevTools の新機能 (Microsoft Edge 88)
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/12/2021
+ms.date: 03/12/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 7d24d1ba6fe33a7420ff34376c981d608a4e30af
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: 6a36029aa97604b6aea20f232d329ce3805a3144
+ms.sourcegitcommit: e29cd1c393fc1f433dba8c3d8f260b425ade63a9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11397578"
+ms.lasthandoff: 03/13/2021
+ms.locfileid: "11408368"
 ---
+<!-- Copyright Jecelyn Yeen 
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.  -->  
 # <a name="whats-new-in-devtools-microsoft-edge-88"></a><span data-ttu-id="ac4ab-104">DevTools の新機能 (Microsoft Edge 88)</span><span class="sxs-lookup"><span data-stu-id="ac4ab-104">What's New in DevTools (Microsoft Edge 88)</span></span>  
 
 [!INCLUDE [contact DevTools team note](../../includes/edge-whats-new-note.md)]  

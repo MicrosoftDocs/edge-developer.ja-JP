@@ -3,16 +3,16 @@ description: 色覚の欠陥をエミュレートする、コマンド メニュ
 title: DevTools の新機能 (Microsoft Edge 83)
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/12/2021
+ms.date: 03/12/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 158d91e3d9c925beebe03a1baa8d6308b650262b
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: f97155b12a679f630ce80c007e7f0ca693e19876
+ms.sourcegitcommit: e29cd1c393fc1f433dba8c3d8f260b425ade63a9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11398946"
+ms.lasthandoff: 03/13/2021
+ms.locfileid: "11408354"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -27,7 +27,6 @@ ms.locfileid: "11398946"
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.  -->  
-
 # <a name="whats-new-in-devtools-microsoft-edge-83"></a><span data-ttu-id="1ec7b-104">DevTools の新機能 (Microsoft Edge 83)</span><span class="sxs-lookup"><span data-stu-id="1ec7b-104">What's New In DevTools (Microsoft Edge 83)</span></span>  
 
 <span data-ttu-id="1ec7b-105">更新されたクロム スケジュールに従って、今後の Microsoft Edge リリースのスケジュールを調整し、Microsoft Edge 82 リリースをキャンセルします。</span><span class="sxs-lookup"><span data-stu-id="1ec7b-105">Following the updated Chromium schedule, we are adjusting our schedule for upcoming Microsoft Edge releases and cancelling the Microsoft Edge 82 release.</span></span> <span data-ttu-id="1ec7b-106">詳細については、 [ブログの][WindowsBlogStableRelease] 投稿をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="1ec7b-106">Check out our [blog post][WindowsBlogStableRelease] for more info.</span></span>  

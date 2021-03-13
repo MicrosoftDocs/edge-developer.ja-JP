@@ -3,16 +3,16 @@ description: アクセシビリティの向上、他の言語での DevTools の
 title: DevTools の新機能 (Microsoft Edge 80)
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/12/2021
+ms.date: 03/12/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 80f870d22c81479bff9b9413717ccc7c323d9a05
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: 7758b7f8ed55bb766abc56d6dd29ec124617e7ff
+ms.sourcegitcommit: e29cd1c393fc1f433dba8c3d8f260b425ade63a9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11397560"
+ms.lasthandoff: 03/13/2021
+ms.locfileid: "11408312"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -27,7 +27,6 @@ ms.locfileid: "11397560"
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.  -->  
-
 # <a name="whats-new-in-devtools-microsoft-edge-80"></a><span data-ttu-id="f0c09-104">DevTools の新機能 (Microsoft Edge 80)</span><span class="sxs-lookup"><span data-stu-id="f0c09-104">What's new in DevTools (Microsoft Edge 80)</span></span>  
 
 ## <a name="announcements-from-the-microsoft-edge-devtools-team"></a><span data-ttu-id="f0c09-105">Microsoft Edge DevTools チームからのお知らせ</span><span class="sxs-lookup"><span data-stu-id="f0c09-105">Announcements from the Microsoft Edge DevTools team</span></span>  
