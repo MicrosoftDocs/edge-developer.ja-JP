@@ -3,16 +3,16 @@ description: Microsoft Edge DevTools の最新の実験的機能
 title: 試験的機能
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/12/2021
+ms.date: 03/12/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge, Web 開発, f12 ツール, devtools, 実験
-ms.openlocfilehash: b366cfeccafe874bc9e76d3b66659122c5d07c69
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: 612b3b83aee1ee9035982e58e008395ec3645b2b
+ms.sourcegitcommit: e29cd1c393fc1f433dba8c3d8f260b425ade63a9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11398680"
+ms.lasthandoff: 03/13/2021
+ms.locfileid: "11408305"
 ---
 # <a name="experimental-features"></a>試験的機能  
 
@@ -24,10 +24,10 @@ Microsoft Edge DevTools は、開発中の実験的な機能にアクセスで�
 
 Microsoft Edge で \(or off\) 実験機能を有効にするには、次の手順を実行します。  
 
-1.  [DevTools を開きます][DevtoolsOpenMain]。  
-    *   `Control` + `Shift` + `I` \(Windows, Linux\) または `Command` + `Option` + `I` \(macOS\) を選択します。  詳細については [、「Microsoft Edge DevTools キーボード ショートカット」に移動します][DevToolsShortcuts]。  
+1.  [DevTools を開きます][DevtoolsOpenIndex]。  
+    *   `Control` + `Shift` + `I` \(Windows, Linux\) または `Command` + `Option` + `I` \(macOS\) を選択します。  詳細については [、「Microsoft Edge DevTools キーボード ショートカット」に移動します][DevtoolsShortcutsIndex]。  
 1.  [設定] [ウィンドウを開][DevToolsCustomizeIndexSettings] きます。  
-    *   を選択します `Shift` + `?` 。  詳細については [、「Microsoft Edge DevTools キーボード ショートカット」に移動します][DevToolsShortcuts]。  
+    *   を選択します `Shift` + `?` 。  詳細については [、「Microsoft Edge DevTools キーボード ショートカット」に移動します][DevtoolsShortcutsIndex]。  
 1.  [設定] ウィンドウの左側 **で** 、[実験] **セクションを選択** します。  
     
     :::image type="complex" source="../media/experiments-devtools.msft.png" alt-text="[設定] の [実験] ページ" lightbox="../media/experiments-devtools.msft.png":::
@@ -49,64 +49,11 @@ Microsoft Edge で \(or off\) 実験機能を有効にするには、次の手�
 | [Webhint を有効にする](#enable-webhint) | 85 以降 |  
 | [ネットワーク コンソールの有効化](#enable-network-console) | 85 以降 |  
 | [ソース オーダー ビューアー](#source-order-viewer) | 86 以降 |  
-| [キーボード ショートカット エディターを有効にする](#enable-keyboard-shortcut-editor) | 87 以降 |  
 | [3D ビューで複合レイヤーを有効にする](#enable-composited-layers-in-3d-view) | 87 以降 |  
 | [[スタイル] ウィンドウ内で新しいフォント エディター ツールを有効にする](#enable-new-font-editor-tool-within-the-styles-pane) | 89 以降 |  
 | [CSS Flexbox の新しいデバッグ機能を有効にする](#enable-new-css-flexbox-debugging-features) | 89 以降 |  
 | [[+ ボタン] タブ メニューを有効にして、その他のツールを開く](#enable--button-tab-menus-to-open-more-tools) | 89 以降 |  
 | [[ようこそ] タブを有効にする](#enable-welcome-tool) | 89 以降 |  
-
-### <a name="enable-new-css-grid-debugging-features"></a>新しい CSS グリッド デバッグ機能を有効にする  
-
-この実験的な機能は、CSS グリッド レイアウトのデバッグに役立つ多数の新しい視覚化を提供します。  最新の実験機能をプレビューするには、この [実験を有効にして](#turn-on-experimental-features) DevTools を再読み込みします。  この実験は、Microsoft Edge バージョン 87 以降で既定で有効になっています。  
-
-#### <a name="viewing-on-hover-grid-overlays-with-the-inspect-tool"></a>[検査] ツールを使用してオンホバー グリッド オーバーレイを表示する  
-
-[ **検査** ] ツールを使用すると、Web サイト内の CSS グリッド レイアウトをマウスでホバーして識別し、視覚化できます。  DevTools **の** 左上隅にある ![ [検査 ](../media/inspect-icon.msft.png) \( Inspect \) ] アイコンを選択します。  次に、デバッグする `Grid` Web ページの要素にマウス ポインターを置きます。  アウトラインはグリッドの周囲に表示され、ハッチングはグリッドギャップが存在する場合の位置を示します。  
-
-:::image type="complex" source="../media/grid-inspect.msft.png" alt-text="[検査] ツールを使用してグリッドを表示する" lightbox="../media/grid-inspect.msft.png":::
-   [検査] ツールを使用してグリッド **を表示** する  
-:::image-end:::  
-
-#### <a name="viewing-persistent-grid-overlays"></a>永続的なグリッド オーバーレイの表示  
-
-Microsoft Edge バージョン 86 以降では、実験的な CSS グリッド機能では、永続的なグリッド オーバーレイを有効にするオプションも提供しています。  永続的なオーバーレイには、いくつかの利点があります。  
-
-*   永続的なオーバーレイは、スクロール、マウスの移動、DevTools の他の機能の使用時にページに表示されたままです。  
-*   複数の永続的なオーバーレイを同時にオンにすることで、複数のグリッド レイアウトを一度に確認できます。  
-*   永続的なオーバーレイには、グリッド領域の名前の非表示や表示、グリッドギャップ、トラックサイズなど、多くの構成オプションがあります。  
-    
-永続的なグリッド オーバーレイを切り替える 2 つの方法。  
-
-*   要素ツール **の DOM** ツリーに表示される Grid 要素の横にあるグリッド楕円アイコンを **選択** します。  
-    
-    :::image type="complex" source="../media/grid-adorner.msft.png" alt-text="要素ツールのグリッド楕円アイコン" lightbox="../media/grid-adorner.msft.png":::
-       要素ツールのグリッド **楕円** アイコン  
-    :::image-end:::  
-    
-*   [要素] **ツールにある** 新しいレイアウト パネルを開き、強調表示する各 Grid 要素の横にあるチェック ボックスをオンにします。  
-    
-    :::image type="complex" source="../media/grid-layout-zoom.msft.png" alt-text="DevTools のレイアウト パネル" lightbox="../media/grid-layout-zoom.msft.png":::
-       **** DevTools のレイアウト パネル  
-    :::image-end:::  
-    
-#### <a name="configuring-persistent-overlays"></a>永続的なオーバーレイの構成  
-
-Microsoft Edge バージョン 86 以降では、新しいレイアウト パネルが****[スタイル]**** パネルと [計算] パネルと並んで [要素] ツール**に配置**されます。 ****  レイアウト **パネルは** 、永続的なオーバーレイの構成オプションを表示します。  
-
-:::image type="complex" source="../media/experiments-grid.msft.png" alt-text="CSS グリッドのデバッグ機能" lightbox="../media/experiments-grid.msft.png":::
-   CSS グリッドのデバッグ機能  
-:::image-end:::  
-
-### <a name="enable-support-to-move-tabs-between-panels"></a>パネル間でタブを移動するサポートを有効にする  
-
-通常、Elements や******Network**などのツールは、DevTools の上部にあるメイン パネルでのみ開くことができます。  **3D ビュー**や**Issues**のようなツールで、通常は**** DevTools の下部にあるドロワー パネルでのみ開きます。  実験を選択した後、上部パネルと下部パネルの間でツールを移動できます。  ツールを移動するには、タブにマウス ポインターを置き、コンテキスト メニュー \(右クリック\) を開き、[上へ移動] または [下へ移動]**を選択します**。 ****   この実験では、DevTools レイアウトをカスタマイズできます。  ドロワー パネルを表示または非表示 **にする** 場合は、 を選択します `Escape` 。  
-
-:::image type="complex" source="../media/experiments-move-panels.msft.png" alt-text="パネル間でのツールの移動" lightbox="../media/experiments-move-panels.msft.png":::
-   パネル間でのツールの移動  
-:::image-end:::  
-
-<!--Available in Microsoft Edge version 85 and later.  -->  
 
 ### <a name="enable-webhint"></a>Webhint を有効にする  
 
@@ -119,7 +66,7 @@ Microsoft Edge バージョン 86 以降では、新しいレイアウト パネ
 *   プログレッシブ Web アプリ (PWA)  
 *   その他の一般的な Web 開発の問題  
     
-[webhint 実験では][WebhintMain]、[問題] パネルに webhint フィードバック[が表示][DevtoolsIssues]されます。  問題を選択して、ソリューションドキュメントと影響を受けるリソースの一覧を Web サイトに表示します。  リソース リンクを選択して、DevTools**で関連する** **[ネットワーク**] 、[ソース] 、または **[要素]** ウィンドウを開きます。  
+[webhint 実験では][WebhintMain]、[問題] パネルに webhint フィードバック[が表示][DevtoolsIssuesIndex]されます。  問題を選択して、ソリューションドキュメントと影響を受けるリソースの一覧を Web サイトに表示します。  リソース リンクを選択して、DevTools**で関連する** **[ネットワーク**] 、[ソース] 、または **[要素]** ウィンドウを開きます。  
 
 :::image type="complex" source="../media/experiments-webhint.msft.png" alt-text="[問題] パネル内の webhint のフィードバック" lightbox="../media/experiments-webhint.msft.png":::
    [問題] パネルの**webhint フィードバック**  
@@ -161,44 +108,6 @@ Microsoft Edge バージョン 86 以降では、新しいレイアウト パネ
 :::image-end:::  
 
 <!--Available in Microsoft Edge version 86 and later.  -->  
-
-### <a name="enable-keyboard-shortcut-editor"></a>キーボード ショートカット エディターを有効にする
-
-[キーボード **ショートカット エディターの有効化]** 実験を有効にすると、DevTools 内の任意のアクションに合わせてキーボード ショートカットをカスタマイズできます。  特定のアクションのキーボード ショートカットをカスタマイズするには、次の手順を実行します。  
-
-1.  [DevTools を開きます][DevtoolsOpenMain]。  
-1.  [設定 [] を開きます][DevToolsCustomizeIndexSettings]。  
-    *   を選択します `Shift` + `?` 。  
-1.  [ショートカット] ページ **に移動** します。  
-1.  カスタマイズするアクションを選択します。  
-1.  [編集**** \( ![ EditKeyboardShortcut ](../media/edit-keyboard-shortcut-icon.msft.png) \) ] アイコンを選択します。  
-    
-    :::image type="complex" source="../media/experiments-custom-keyboard-shortcuts-select-action.msft.png" alt-text="[設定] の [ショートカット] ページからカスタマイズするアクションを選択します。" lightbox="../media/experiments-custom-keyboard-shortcuts-select-action.msft.png":::
-       [設定] の [ショートカット] ページ **から** カスタマイズするアクションを選択 [します。][DevToolsCustomizeIndexSettings]  
-    :::image-end:::  
-    
-1.  キーボードで、アクションにバインドするキーを選択します。  
-    
-    :::image type="complex" source="../media/experiments-custom-keyboard-shortcuts-enter-key.msft.png" alt-text="アクションに割り当てるキーを選択する" lightbox="../media/experiments-custom-keyboard-shortcuts-enter-key.msft.png":::
-       アクションに割り当てるキーを選択する  
-    :::image-end:::  
-    
-1.  新しいキーボード ショートカットを保存するには、チェックマーク \(![CheckmarkKeyboardShortcut](../media/checkmark-keyboard-shortcut-icon.msft.png)\) アイコン。  
-    
-    :::image type="complex" source="../media/experiments-custom-keyboard-shortcuts-save-shortcut.msft.png" alt-text="チェックマークアイコンを選択して新しいキーボード ショートカットを保存する" lightbox="../media/experiments-custom-keyboard-shortcuts-enter-key.msft.png":::
-       チェックマークアイコンを選択して新しいキーボード ショートカットを保存する  
-    :::image-end:::  
-    
-1.  新しいキーボード ショートカットを選択して、DevTools でアクションをトリガーします。  
-    
-[ショートカット **] ページで** 、カスタム **キーボード** ショートカット \( ![ CustomKeyboardShortcut \) アイコンに、カスタマイズした ](../media/custom-keyboard-shortcut-icon.msft.png) キーボード ショートカットが表示されます。  すべてのショートカットをリセットするには、[既定のショートカット **を復元する] を選択します**。  
-
-アクションのキーボード ショートカットの編集中に変更を破棄するには、X \( ![ XKeyboardShortcut ](../media/discard-changes-keyboard-shortcut-icon.msft.png) \) アイコンを選択します。  特定のアクションのショートカットを削除するには、[削除] ショートカット **\(** ![ DeleteKeyboardShortcut ](../media/delete-keyboard-shortcut-icon.msft.png) \) アイコンを選択します。  アクションに複数のショートカットを追加するには、[ショートカットの追加 **] を選択します**。  
-
-> [!NOTE]
-> キーボード ショートカットが現在別のアクションに割り当てられている場合は、新しいアクションに保存できない場合があります。  最初に、前の操作のキーボード ショートカットを削除してから、新しいアクションに追加する必要があります。  
-
-<!--Available in Microsoft Edge version 87 and later.  -->  
 
 ### <a name="enable-composited-layers-in-3d-view"></a>3D ビューで複合レイヤーを有効にする  
 
@@ -310,10 +219,12 @@ CSS グリッドまたは Flexbox レイアウトの永続的オーバーレイ�
 ## <a name="previous-experimental-features"></a>以前の実験的な機能  
 
 *   Microsoft Edge バージョン 83 以降では[、3D][Devtools3dViewIndex]ビューが使用可能で、既定で有効になっています。  
-*   [Microsoft][DevtoolsMoveTabs] Edge バージョン 85 以降では、パネル間でタブを移動するサポートを有効にし、既定で有効になっています。  
-*   [Microsoft][DevtoolsCustomKeyboardShortcuts] Edge バージョン 86 以降では、[キーボード ショートカットのカスタマイズ] が使用可能になっていて、既定で有効になっています。  
-*   [エミュレーション: Microsoft][DevtoolsDeviceModeDualScreenAndFoldables] Edge バージョン 89 以降では、デュアル スクリーン モードをサポートし、既定で有効になっています。  
+*   [Microsoft][DevtoolsCustomizeIndex] Edge バージョン 85 以降では、パネル間でタブを移動するサポートを有効にし、既定で有効になっています。  
+*   [DevTools の][DevtoolsCustomizeShortcutsMatchKeyboardShortcutsDevtoolsMicrosoftVisualStudioCode] キーボード ショートカットと Microsoft Visual Studio コードの一致が利用可能で、Microsoft Edge バージョン 86 以降で既定で有効になっています。  
+*   [DevTools で任意の][DevtoolsCustomizeShortcutsEditKeyboardShortcutsForAnyActionDevtools] アクションのキーボード ショートカットを編集する機能が利用可能になったので、Microsoft Edge バージョン 89 以降では既定で有効になっています。  
 *   [新しい CSS グリッド デバッグ機能][DevtoolsCssGrid] を有効にし、Microsoft Edge バージョン 89 以降で既定で有効にしました。  
+*   [エミュレーション: Microsoft][DevtoolsDeviceModeDualScreenAndFoldables] Edge バージョン 90 以降では、デュアル スクリーン モードをサポートし、既定で有効になっています。  
+
     
 ## <a name="providing-feedback-on-experimental-features"></a>実験的な機能に関するフィードバックの提供  
 
@@ -336,33 +247,18 @@ Microsoft Edge DevTools 実験、または DevTools に関連するその他の�
 
 [Devtools3dViewIndex]: ../3d-view/index.md "3D ビュー | Microsoft Docs"  
 [DevtoolsCssGrid]: ../css/grid.md "Microsoft Edge DevTools サーバーで CSS グリッドを検査|Microsoft Docs"  
-[DevtoolsMoveTabs]: ../customize/index.md "Microsoft Edge DevTools のカスタマイズ |Microsoft Docs"  
+[DevtoolsCustomizeIndex]: ../customize/index.md "Microsoft Edge DevTools のカスタマイズ |Microsoft Docs"  
 [DevToolsCustomizeIndexSettings]: ../customize/index.md#settings "設定 - Microsoft Edge DevTools をカスタマイズする | Microsoft Docs"  
+[DevtoolsCustomizeShortcutsEditKeyboardShortcutsForAnyActionDevtools]: ../customize/shortcuts.md#edit-keyboard-shortcuts-for-any-action-in-the-devtools "DevTools コントロール内の任意のアクションのキーボード ショートカットを編集|Microsoft Docs"  
+[DevtoolsCustomizeShortcutsMatchKeyboardShortcutsDevtoolsMicrosoftVisualStudioCode]: ../customize/shortcuts.md#match-keyboard-shortcuts-in-the-devtools-to-microsoft-visual-studio-code "DevTools のキーボード ショートカットと Microsoft コード コードのVisual Studio一致|Microsoft Docs"  
 [DevtoolsDeviceModeIndexSimulateMobileViewport]: ../device-mode/index.md#simulate-a-mobile-viewport "Microsoft Edge DevTools アプリケーションでデバイス モードでモバイル デバイスをシミュレート|Microsoft Edge"  
 [DevtoolsInspectStylesEditFonts]: ../inspect-styles/edit-fonts.md "DevTools の [スタイル] ウィンドウで CSS フォントのスタイルと設定を編集|Microsoft Docs"  
-[DevtoolsIssues]: ../issues/index.md "Microsoft Edge DevTools の問題ツールに関する問題を見つけて修正する | Microsoft Docs"  
-[DevToolsShortcuts]: ../shortcuts/index.md "Microsoft Edge DevTools キーボード ショートカット |Microsoft Docs"  
-[DevtoolsCustomKeyboardShortcuts]: ../customize/shortcuts.md "Microsoft Edge DevTools でキーボード ショートカットをカスタマイズする | Microsoft Docs"  
-[DevtoolsOpenMain]: ../open/index.md "Microsoft Edge DevTools を開く | Microsoft Docs"  
+[DevtoolsIssuesIndex]: ../issues/index.md "Microsoft Edge DevTools の問題ツールに関する問題を見つけて修正する | Microsoft Docs"  
+[DevtoolsOpenIndex]: ../open/index.md "Microsoft Edge DevTools を開く | Microsoft Docs"  
+[DevtoolsShortcutsIndex]: ../shortcuts/index.md "Microsoft Edge DevTools キーボード ショートカット |Microsoft Docs"  
 
-[DualScreenWebIndex]: /dual-screen/web/index "デュアルスクリーン Web エクスペリエンス|Microsoft Docs"  
-[DualScreenAndroidGetDuoSdk]: /dual-screen/android/get-duo-sdk "Surface Duo エミュレーターの|Microsoft Docs"  
-[DualScreenIntroductionHowWorkSeam]: /dual-screen/introduction#how-to-work-with-the-seam "シームを処理する方法 - デュアルスクリーン デバイスの概要 | Microsoft Docs"  
-[DualScreenAndroidUseEmulator]: /dual-screen/android/use-emulator "Surface Duo エミュレーターを使用|Microsoft Docs"  
-[DualScreenDocsCssMedia]: /dual-screen/web/css-media-spanning "デュアルスクリーン検出のための CSS メディアのスクリーンスパニング機能 | Microsoft Docs"  
-[DualScreenDocsJSAPI]: /dual-screen/web/javascript-getwindowsegments "デュアルスクリーン デバイスのための getWindowSegments JavaScript API | Microsoft Docs"  
+[MicrosoftEdgeMain]: https://www.microsoft.com/edge "Microsoft Edge"  
 
-[RemoteDesktopClientDocs]: /windows-server/remote/remote-desktop-services/clients/remote-desktop-clients "リモート デスクトップ クライアントの|Microsoft Docs"
-
-[MicrosoftEdge]: https://www.microsoft.com/edge "Microsoft Edge"  
-
-[SurfaceDevicesDuo]: https://www.microsoft.com/surface/devices/surface-duo "Surface Duo |Microsoft Surface"  
-
-[AndroidDeveloperStudio]: https://developer.android.com/studio/ "Android Studio"  
-
-[GooglePlayMicrosoftEdge]: https://play.google.com/store/apps/details?id=com.microsoft.emmx "Microsoft Edge |Google Play"  
-
-[SamsungMobileGalaxyFold]: https://www.samsung.com/mobile/galaxy-fold/ "Galaxy Fold |Samsung"  
 [DevtoolsDeviceModeDualScreenAndFoldables]: ../device-mode/dual-screen-and-foldables.md "Microsoft Edge DevTools アプリケーションでデュアルスクリーンデバイスと折りたたみ可能なデバイスをエミュレート|Microsoft Docs"
 
 [TwitterEdgedevtools]: https://www.twitter.com/EdgeDevTools "Microsoft Edge DevTools |Twitter"  
