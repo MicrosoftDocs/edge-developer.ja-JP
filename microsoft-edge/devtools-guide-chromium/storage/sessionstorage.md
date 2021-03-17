@@ -3,16 +3,16 @@ description: セッション ストレージ ウィンドウとコンソール�
 title: Microsoft Edge DevTools を使用してセッション ストレージを表示および編集する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/12/2021
+ms.date: 03/08/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: cf00d71302e7a1f16ba1cceaa17c9380245d12f8
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: 0168b01fd01071ebd19bd211c6d947ae006d778c
+ms.sourcegitcommit: 4b9fb5c1176fdaa5e3c60af2b84e38d5bb86cd81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11398008"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "11439662"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -80,12 +80,12 @@ ms.locfileid: "11398008"
 
 1.  [ドメインの `sessionStorage` キーと値のペアを表示します](#view-sessionstorage-keys-and-values)。  
 1.  削除するキーと値のペアを選択します。  DevTools は青色で強調表示され、選択されているかどうかを示します。  
-1.  キーを `Delete` 選択するか、[ **選択した \(** Delete ![ Selected \) を削除する] ][ImageDeleteIcon] を選択します。  
+1.  キーを `Delete` 選択するか、[ **選択した \(** Delete ![ Selected \) を削除する] ](../media/delete-icon.msft.png) を選択します。  
     
 ## <a name="delete-all-sessionstorage-key-value-pairs-for-a-domain"></a>ドメインのすべての sessionStorage キーと値のペアを削除する  
 
 1.  [ドメインの `sessionStorage` キーと値のペアを表示します](#view-sessionstorage-keys-and-values)。  
-1.  [ **すべてクリア]** \( ![ Clear All ][ImageClearIcon] \) を選択します。  
+1.  [ **すべてクリア]** \( ![ Clear All ](../media/clear-icon.msft.png) \) を選択します。  
     
 ## <a name="interact-with-sessionstorage-from-the-console"></a>コンソールから sessionStorage を操作する  
 
@@ -106,11 +106,6 @@ ms.locfileid: "11398008"
 ## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームと連絡を取る  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
-
-<!-- image links -->  
-
-[ImageClearIcon]: ../media/clear-icon.msft.png  
-[ImageDeleteIcon]: ../media/delete-icon.msft.png  
 
 <!-- links -->  
 

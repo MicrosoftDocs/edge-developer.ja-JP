@@ -3,16 +3,16 @@ description: ファイルの表示と編集、スニペットの作成、JavaScr
 title: ソース パネルの概要
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/12/2021
+ms.date: 03/08/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge, web 開発, f12 ツール, devtools
-ms.openlocfilehash: 4677bf82d3506a4b8d6336ded7ab557b794fd3df
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: 7ce7ae32b4bf91419512ec9e387cdf75549552a5
+ms.sourcegitcommit: 4b9fb5c1176fdaa5e3c60af2b84e38d5bb86cd81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11397763"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "11439606"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -101,7 +101,7 @@ document.head.appendChild(script);
 
 **スニペット**を実行するには、次の操作を行います。
 
-*   [スニペット] パネルを使用 **してファイルを開** き、[ **実行** ] \( [実行] ![ ボタン ][ImageRunIcon] \) を選択します。  
+*   [スニペット] パネルを使用 **してファイルを開** き、[ **実行** ] \( [実行] ![ ボタン ](../media/run-snippet-icon.msft.png) \) を選択します。  
 *   コマンド メニュー [を開き、][DevtoolsGuideChromiumCommandMenuIndex]文字を削除 `>` し、タイプし、スニペットの名前を `!` **入力**して、 を選択します `Enter` 。  
     
 詳細については「[任意のページからコードのスニペットを実行][DevtoolsGuideChromiumJavascriptSnippets]」へ移動して参照してください。
@@ -125,10 +125,6 @@ document.head.appendChild(script);
 ## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームと連絡を取る  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
-
-<!-- image links -->  
-
-[ImageRunIcon]: ../media/run-snippet-icon.msft.png  
 
 <!-- links -->  
 

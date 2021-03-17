@@ -3,16 +3,16 @@ description: Microsoft Edge DevTools の [アプリケーション] パネルか
 title: Microsoft Edge DevTools を使用してキャッシュ データを表示する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/12/2021
+ms.date: 03/08/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 7e0523e3293bbdafa9c3575344714da708fffe62
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: 0ce4dbbf2456579abe84fca48bca8106384995dd
+ms.sourcegitcommit: 4b9fb5c1176fdaa5e3c60af2b84e38d5bb86cd81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11397539"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "11439318"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -75,7 +75,7 @@ ms.locfileid: "11397539"
        更新するリソースを選択する  
     :::image-end:::  
     
-1.  [ **更新** \( ![ Refresh ][ImageRefreshIcon] \] を選択します)。  
+1.  [ **更新** \( ![ Refresh ](../media/refresh-icon.msft.png) \] を選択します)。  
     
 ## <a name="filter-resources"></a>リソースをフィルター処理する  
 
@@ -95,7 +95,7 @@ ms.locfileid: "11397539"
        削除するリソースを選択する  
     :::image-end:::  
     
-1.  [ **選択済み \(** Delete ![ Selected ][ImageDeleteIcon] \) を削除する] を選択します。  
+1.  [ **選択済み \(** Delete ![ Selected ](../media/delete-icon.msft.png) \) を削除する] を選択します。  
     
 ## <a name="delete-all-cache-data"></a>すべてのキャッシュ データを削除する  
 
@@ -115,11 +115,6 @@ ms.locfileid: "11397539"
 ## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームと連絡を取る  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
-
-<!-- image links -->  
-
-[ImageDeleteIcon]: ../media/delete-icon.msft.png  
-[ImageRefreshIcon]: ../media/refresh-icon.msft.png  
 
 <!-- links -->  
 

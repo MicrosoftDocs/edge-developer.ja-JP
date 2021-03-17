@@ -3,16 +3,16 @@ description: Microsoft Edge DevTools のコンソール UI に関連するすべ
 title: コンソールリファレンス
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/12/2021
+ms.date: 03/08/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 1aed46486240dea19420e8b7cb52b6758f1f528b
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: d6fed1681e64f8f57c2e577017d623039a7b4152
+ms.sourcegitcommit: 4b9fb5c1176fdaa5e3c60af2b84e38d5bb86cd81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11399163"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "11439368"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -74,7 +74,7 @@ ms.locfileid: "11399163"
 
 ### <a name="open-console-settings"></a>コンソールの設定を開く  
 
-[ **コンソール設定]** \( ![ [コンソール設定] アイコン ][ImageSettingsButtonIcon] \) を選択します。  
+[ **コンソール設定]** \( ![ [コンソール設定] アイコン ](../media/settings-button-icon.msft.png) \) を選択します。  
 
 :::image type="complex" source="../media/console-settings-group-similar-empty.msft.png" alt-text="コンソール設定" lightbox="../media/console-settings-group-similar-empty.msft.png":::
    **コンソール設定**  
@@ -92,7 +92,7 @@ ms.locfileid: "11399163"
     
 ### <a name="open-the-console-sidebar"></a>コンソール サイドバーを開く  
 
-[Show **Console Sidebar** \( Show Console Sidebar \) ] を選択してサイドバーを表示します。これはフィルター処理 ![ ][ImageShowConsoleSidebarIcon] に便利です。  
+[Show **Console Sidebar** \( Show Console Sidebar \) ] を選択してサイドバーを表示します。これはフィルター処理 ![ ](../media/show-console-sidebar-icon.msft.png) に便利です。  
 
 :::image type="complex" source="../media/console-sidebar-drawer-empty.msft.png" alt-text="コンソール サイドバー" lightbox="../media/console-sidebar-drawer-empty.msft.png":::
    **コンソール** サイドバー  
@@ -246,7 +246,7 @@ URL `url:` の後に URL を入力して、その URL から送信されたメ�
 
 コンソールをクリアするには、次のワークフローを使用できます。  
 
-*   [Clear **Console** \( ![ Clear Console ][ImageClearConsoleIcon] \] )を選択します。  
+*   [Clear **Console** \( ![ Clear Console ](../media/clear-console-button-icon.msft.png) \] )を選択します。  
 *   メッセージにカーソルを置き、コンテキスト メニュー \(righ-click\) を開き、[コンソールのクリア] **を選択します**。  
 *   コンソール `clear()` に入力 **し、 を** 選択します `Enter` 。  
 *   Web `console.clear()` ページの JavaScript から実行します。  
@@ -255,12 +255,6 @@ URL `url:` の後に URL を入力して、その URL から送信されたメ�
 ## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームと連絡を取る  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
-
-<!-- image links -->  
-
-[ImageClearConsoleIcon]: ../media/clear-console-button-icon.msft.png  
-[ImageSettingsButtonIcon]: ../media/settings-button-icon.msft.png  
-[ImageShowConsoleSidebarIcon]: ../media/show-console-sidebar-icon.msft.png  
 
 <!-- links -->  
 

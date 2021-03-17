@@ -3,16 +3,16 @@ description: Microsoft Edge DevTools SQLアプリケーション パネルから
 title: Microsoft Edge DevTools SQL Web データを表示する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/12/2021
+ms.date: 03/08/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 326fe492a3436a40d81c8e31db99a26da4ea054f
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: 9f684aabf3592220079e6a8595d91cfea6785769
+ms.sourcegitcommit: 4b9fb5c1176fdaa5e3c60af2b84e38d5bb86cd81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11397553"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "11439599"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -73,7 +73,7 @@ ms.locfileid: "11397553"
 DevTools はリアルタイムでテーブルを更新しない。  テーブル内のデータを更新するには、次のアクションを実行します。  
 
 1.  [Web テーブルでデータを表示SQLします](#view-web-sql-data)。  
-1.  [ **更新** \( ![ Refresh ][ImageRefreshIcon] \] を選択します)。  
+1.  [ **更新** \( ![ Refresh ](../media/refresh-icon.msft.png) \] を選択します)。  
     
 ## <a name="filter-out-columns-in-a-web-sql-table"></a>Web テーブル内の列をSQLする  
 
@@ -102,10 +102,6 @@ DevTools はリアルタイムでテーブルを更新しない。  テーブル
 ## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームと連絡を取る  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
-
-<!-- image links -->  
-
-[ImageRefreshIcon]: ../media/refresh-icon.msft.png  
 
 <!-- links -->  
 

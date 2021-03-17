@@ -3,16 +3,16 @@ description: Microsoft Edge DevTools デバッグ機能の包括的なリファ�
 title: JavaScript デバッグ リファレンス
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/12/2021
+ms.date: 03/08/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 09a2d61269b2fe3a23a57ce58eb1c89b12a7639c
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: 2944e054a08a901d2e1752fa7c4e48ae110f5787
+ms.sourcegitcommit: 4b9fb5c1176fdaa5e3c60af2b84e38d5bb86cd81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11398477"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "11439459"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -46,7 +46,7 @@ Microsoft Edge DevTools デバッグ機能の包括的な参照を使用して�
 
 ### <a name="step-over-line-of-code"></a>一行のコードをステップ オーバーする  
 
-デバッグ中の問題に関係のない関数を含むコード行で一時停止した場合は、[Step **over** \( ![ Step over \) ] ボタンを選択して、ステップ インせずに関数を実行します。 ][ImageStepOverIcon]  
+デバッグ中の問題に関係のない関数を含むコード行で一時停止した場合は、[Step **over** \( ![ Step over \) ] ボタンを選択して、ステップ インせずに関数を実行します。 ](../media/step-over-icon.msft.png)  
 
 :::image type="complex" source="../media/javascript-source-page-debugger-step-over-next-function-call.msft.png" alt-text="[ステップ オーバー] を選択する" lightbox="../media/javascript-source-page-debugger-step-over-next-function-call.msft.png":::
    [ステップ **オーバー] を選択する**  
@@ -70,7 +70,7 @@ function getName() {
 
 ### <a name="step-into-line-of-code"></a>コード行へのステップ  
 
-デバッグ中の問題に関連する関数呼び出しを含むコード行で一時停止した場合は、[\( Step **to** ![ \) ] ボタンを選択して、その関数をさらに調査します ][ImageStepIntoIcon] 。  
+デバッグ中の問題に関連する関数呼び出しを含むコード行で一時停止した場合は、[\( Step **to** ![ \) ] ボタンを選択して、その関数をさらに調査します ](../media/step-into-icon.msft.png) 。  
 
 :::image type="complex" source="../media/javascript-source-page-debugger-step-into-next-function-call.msft.png" alt-text="[ステップ の実行] を選択します。" lightbox="../media/javascript-source-page-debugger-step-into-next-function-call.msft.png":::
    [ステップ **の実行] を選択します。**  
@@ -94,7 +94,7 @@ function getName() {
 
 ### <a name="step-out-of-line-of-code"></a>コード行からステップアウトする  
 
-デバッグ中の問題に関連しない関数の内部で一時停止した場合は、[ステップ アウト] \( Step **out** \) ボタンを選択して、関数の残りのコードを ![ ][ImageStepOutIcon] 実行します。  
+デバッグ中の問題に関連しない関数の内部で一時停止した場合は、[ステップ アウト] \( Step **out** \) ボタンを選択して、関数の残りのコードを ![ ](../media/step-out-icon.msft.png) 実行します。  
 
 :::image type="complex" source="../media/javascript-source-page-debugger-step-out-of-current-function.msft.png" alt-text="[ステップ アウト] を選択する" lightbox="../media/javascript-source-page-debugger-step-out-of-current-function.msft.png":::
    [ステップ **アウト] を選択する**  
@@ -120,7 +120,7 @@ function getName() {
 
 長い関数をデバッグする場合、デバッグ中の問題とは関係ないコードが多い場合があります。  
 
-すべての行をステップスルーすることを選択できますが、これは時間のかかっています。  必要な行にコード行ブレークポイントを設定し、[スクリプト実行の再開 **\(** スクリプト実行の再開 ![ \)] ボタンを選択することもできますが、より高速な方法 ][ImageResumeScriptExecutionIcon] があります。  
+すべての行をステップスルーすることを選択できますが、これは時間のかかっています。  必要な行にコード行ブレークポイントを設定し、[スクリプト実行の再開 **\(** スクリプト実行の再開 ![ \)] ボタンを選択することもできますが、より高速な方法 ](../media/resume-script-run-icon.msft.png) があります。  
 
 目的のコード行にカーソルを合わせると、コンテキスト メニュー \(右クリック\) を開き、[続行] **をクリックします**。  DevTools は、その時点まですべてのコードを実行し、その行で一時停止します。  
 
@@ -152,7 +152,7 @@ function factorial(n) {
 
 ### <a name="resume-script-runtime"></a>スクリプト ランタイムの再開  
 
-スクリプトの一時停止後にランタイムを続行するには、[スクリプトの実行の再開 \( Resume Script **Execution** ![ ][ImageResumeScriptExecutionIcon] \) ] ボタンを選択します。  DevTools は、次のブレークポイントがある場合は、スクリプトを実行します。  
+スクリプトの一時停止後にランタイムを続行するには、[スクリプトの実行の再開 \( Resume Script **Execution** ![ ](../media/resume-script-run-icon.msft.png) \) ] ボタンを選択します。  DevTools は、次のブレークポイントがある場合は、スクリプトを実行します。  
 
 :::image type="complex" source="../media/javascript-sources-get-started-js-resume-script-runtime.msft.png" alt-text="[スクリプトの実行の再開] を選択します。" lightbox="../media/javascript-sources-get-started-js-resume-script-runtime.msft.png":::
    [スクリプト **の実行の再開] を選択します。**  
@@ -160,7 +160,7 @@ function factorial(n) {
 
 #### <a name="force-script-runtime"></a>強制スクリプト ランタイム  
 
-すべてのブレークポイントを無視してスクリプトの実行を強制的に再開するには、[スクリプトの実行を**再開する**]\( スクリプト実行の再開 \) ボタンを選択し、スクリプトの実行を強制する \( 強制スクリプト実行 ![ ][ImageResumeScriptExecutionIcon] **** ![ ][ImageForceScriptExecutionIcon] \) ボタンを選択します。  
+すべてのブレークポイントを無視してスクリプトの実行を強制的に再開するには、[スクリプトの実行を**再開する**]\( スクリプト実行の再開 \) ボタンを選択し、スクリプトの実行を強制する \( 強制スクリプト実行 ![ ](../media/resume-script-run-icon.msft.png) **** ![ ](../media/force-script-run-icon.msft.png) \) ボタンを選択します。  
 
 :::image type="complex" source="../media/javascript-sources-get-started-js-force-script-runtime.msft.png" alt-text="[スクリプトの実行を強制する] を選択する" lightbox="../media/javascript-sources-get-started-js-force-script-runtime.msft.png":::
    [スクリプト **の実行を強制する] を選択する**  
@@ -289,13 +289,13 @@ function animate() {
    [ **ウォッチ]** ウィンドウ  
 :::image-end:::  
 
-*   [式 **の追加** \( Add Expression \) ] ボタンを ![ ][ImageAddExpressionIcon] 選択して、新しいウォッチ式を作成します。  
-*   [\( **Refresh** ![ ][ImageRefreshIcon] \) ] ボタンを選択して、既存のすべての式の値を更新します。  コードをステップ実行すると、値が自動的に更新されます。  
-*   式にカーソルを合わせると、式の **削除** \( ![ 式 ][ImageDeleteExpressionIcon] の削除 \) ボタンを選択して削除します。  
+*   [式 **の追加** \( Add Expression \) ] ボタンを ![ ](../media/add-expression-icon.msft.png) 選択して、新しいウォッチ式を作成します。  
+*   [\( **Refresh** ![ ](../media/refresh-icon.msft.png) \) ] ボタンを選択して、既存のすべての式の値を更新します。  コードをステップ実行すると、値が自動的に更新されます。  
+*   式にカーソルを合わせると、式の **削除** \( ![ 式 ](../media/delete-expression-icon.msft.png) の削除 \) ボタンを選択して削除します。  
 
 ## <a name="make-a-minified-file-readable"></a>ファイルを読み取り可能にする  
 
-[Format **** \( Format \) ] ボタンを選択して、ファイルを人間が読み取り可能 ![ ][ImageFormatIcon] にします。  
+[Format **** \( Format \) ] ボタンを選択して、ファイルを人間が読み取り可能 ![ ](../media/format-icon.msft.png) にします。  
 
 :::image type="complex" source="../media/javascript-sources-html-non-minified.msft.png" alt-text="[書式] ボタン" lightbox="../media/javascript-sources-html-non-minified.msft.png":::
    [ **書式]** ボタン  
@@ -322,18 +322,6 @@ function animate() {
 ## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームと連絡を取る  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
-
-<!-- image links -->  
-
-[ImageStepOverIcon]: ../media/step-over-icon.msft.png  
-[ImageStepIntoIcon]: ../media/step-into-icon.msft.png  
-[ImageStepOutIcon]: ../media/step-out-icon.msft.png  
-[ImageResumeScriptExecutionIcon]: ../media/resume-script-run-icon.msft.png  
-[ImageForceScriptExecutionIcon]: ../media/force-script-run-icon.msft.png  
-[ImageAddExpressionIcon]: ../media/add-expression-icon.msft.png  
-[ImageRefreshIcon]: ../media/refresh-icon.msft.png  
-[ImageDeleteExpressionIcon]: ../media/delete-expression-icon.msft.png  
-[ImageFormatIcon]: ../media/format-icon.msft.png  
 
 <!-- links -->  
 

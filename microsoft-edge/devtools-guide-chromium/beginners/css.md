@@ -3,16 +3,16 @@ description: CSS の使用を開始する
 title: '初級者向け DevTools: CSS の使用を開始する'
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/12/2021
+ms.date: 03/08/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge, Web 開発, f12 ツール, devtools
-ms.openlocfilehash: 7aa33c339a7d130265660e4a4af6f50dde7e3e90
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: 6a7135e144123917535e7c43e6a3cd608ec0c8a7
+ms.sourcegitcommit: 4b9fb5c1176fdaa5e3c60af2b84e38d5bb86cd81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11398400"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "11439438"
 ---
 <!-- Copyright Katherine Jackson 
 
@@ -337,7 +337,7 @@ DevTools で既存の宣言を編集するには、次のアクションを実�
 
 DevTools に新しいルールセットを追加するには、次のアクションを実行します。  
 
-1.  .cls **の横にある** [新しいスタイル ルール \( 新しいスタイル ルール ![ ][ImageNewStyleRuleIcon] **\) を選択します**。  セレクターとして空のルール セット `a` が表示されます。  
+1.  .cls **の横にある** [新しいスタイル ルール \( 新しいスタイル ルール ![ ](../media/new-style-rule-icon.msft.png) **\) を選択します**。  セレクターとして空のルール セット `a` が表示されます。  
     
     :::image type="complex" source="../media/beginners-css-rule1.msft.png" alt-text="新しいルールを追加する" lightbox="../media/beginners-css-rule1.msft.png":::
        新しいルールを追加する  
@@ -605,10 +605,6 @@ DevTools に新しいルールセットを追加するには、次のアクシ�
 ## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームと連絡を取る  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
-
-<!--- image links --->  
-
-[ImageNewStyleRuleIcon]: ../media/new-style-rule-icon.msft.png  
 
 <!--- links  --->  
 

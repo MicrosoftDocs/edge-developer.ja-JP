@@ -3,16 +3,16 @@ description: リモート デバッグ Surface Duo エミュレーターの使�
 title: リモート デバッグ Surface Duo エミュレーターの使用を開始する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/12/2021
+ms.date: 03/08/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge, Web 開発, f12 ツール, devtools, リモート デバッグ, android, surface duo
-ms.openlocfilehash: a9696e63528a674d349b78fbdec2a1b804f61c49
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: 61f903a5b929b7ee7b924938cf6ddc21a9783ca7
+ms.sourcegitcommit: 4b9fb5c1176fdaa5e3c60af2b84e38d5bb86cd81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11398015"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "11439330"
 ---
 # <a name="get-started-with-remote-debugging-surface-duo-emulators"></a>リモート デバッグ Surface Duo エミュレーターの使用を開始する  
 
@@ -22,11 +22,11 @@ ms.locfileid: "11398015"
 
 Surface Duo [エミュレーターを実行する前][MicrosoftDownload100847] に Surface Duo SDK [をインストールします][DualScreenAndroidUseEmulator]。  詳細については [、「Get the Surface Duo SDK」に移動します][DualScreenAndroidGetDuoSdk]。  
 
-## <a name="step-1-navigate-to-edgeinspect"></a>手順 1: [手順 1] に移動edge://inspect  
+## <a name="step-1-navigate-to-edgeinspect"></a>手順 1: [手順 1] に移動 edge://inspect  
 
 Microsoft Edge のデスクトップ インスタンスを [開き][MicrosoftEdge]、に移動します `edge://inspect` 。  
 
-:::image type="complex" source="../media/remote-debugging-surface-duo-inspect-page.msft.png" alt-text="デスクトップedge://inspect Microsoft Edge の [新しいページ] ページ" lightbox="../media/remote-debugging-surface-duo-inspect-page.msft.png":::
+:::image type="complex" source="../media/remote-debugging-surface-duo-inspect-page.msft.png" alt-text="デスクトップ edge://inspect Microsoft Edge の [新しいページ] ページ" lightbox="../media/remote-debugging-surface-duo-inspect-page.msft.png":::
    デスクトップ `edge://inspect` 上の Microsoft Edge のページ  
 :::image-end:::
 
@@ -62,7 +62,7 @@ Microsoft Edge のデスクトップ インスタンスに切り [替えます][
 > [!NOTE]
 > **SurfaceDuoEmulator**がページに表示されない場合は、Surface Duo エミュレーターの Microsoft Edge アプリでタブを開くまたは閉 `edge://inspect` [じ直してみてください][DualScreenAndroidUseEmulator]。 [][GooglePlayStoreAppsComMicrosoftEmmx]  その他のトラブルシューティング手順については [、Android デバイスのトラブルシューティング セクションに移動します][DevtoolsRemoteDebuggingIndexTroubleshootingDevtoolsIsNotDetectingAndroidDevice]。  
 
-エミュレーターで実行されている開いているタブの一覧から、**** デバッグする Web コンテンツを含むタブで [検査] を選択します。  Microsoft [Edge DevTools が][DevtoolsIndex] 新しいウィンドウで開きます。  [ **画面キャストの切り替え** \( 画面キャスト \) の切り替え] を ![ ][ImageToggleScreencastIcon] 選択して [、[DevTools]][DualScreenAndroidUseEmulator] ウィンドウで Surface Duo エミュレーターから Web コンテンツを表示します。  これで、Microsoft Edge DevTools を使用して Surface Duo エミュレーターで Web コンテンツを [デバッグできます][DualScreenAndroidUseEmulator]。  
+エミュレーターで実行されている開いているタブの一覧から、**** デバッグする Web コンテンツを含むタブで [検査] を選択します。  Microsoft [Edge DevTools が][DevtoolsIndex] 新しいウィンドウで開きます。  [ **画面キャストの切り替え** \( 画面キャスト \) の切り替え] を ![ ](../media/toggle-screencast-icon.msft.png) 選択して [、[DevTools]][DualScreenAndroidUseEmulator] ウィンドウで Surface Duo エミュレーターから Web コンテンツを表示します。  これで、Microsoft Edge DevTools を使用して Surface Duo エミュレーターで Web コンテンツを [デバッグできます][DualScreenAndroidUseEmulator]。  
 
 :::image type="complex" source="../media/remote-debugging-surface-duo-devtools.msft.png" alt-text="Surface Duo エミュレーターで Microsoft Edge アプリで Microsoft Edge DevTools を使用して Bing をデバッグする" lightbox="../media/remote-debugging-surface-duo-devtools.msft.png":::
    Surface Duo エミュレーターで Microsoft Edge アプリで Microsoft Edge DevTools を使用して Bing をデバッグする  
@@ -79,9 +79,9 @@ WEB は、HTML、CSS、JavaScript を 1 回書き込み、シングルスクリ�
 *   [折りたたみおよびデュアルスクリーン デバイスで Web エクスペリエンスを構築するための新しい API の Microsoft Edge Web プラットフォームの説明者][GithubMicrosoftedgeMsedgeexplainersFoldablesExplainer]  
 *   [Microsoft 365 Developer Day セッションの記録: Web サイトと Web アプリのデュアルスクリーン エクスペリエンスを構築する方法][YoutubeDxrzwsqxpvc]  
 
-<!-- image links -->  
+## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームと連絡を取る  
 
-[ImageToggleScreencastIcon]: images/toggle-screencast-icon.msft.png  
+[!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
 <!-- links -->  
 

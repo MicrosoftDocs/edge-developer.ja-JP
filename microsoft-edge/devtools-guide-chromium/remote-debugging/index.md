@@ -1,18 +1,18 @@
 ---
 description: Windows または macOS コンピューターから Android デバイス上のライブ コンテンツをリモート デバッグします。
-title: リモート デバッグ Android デバイスの使用を開始する
+title: Android デバイスのリモート デバッグを開始する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/12/2021
+ms.date: 03/08/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 61fad793ca03dbef68a5f769dbfd25e780fd9930
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: 2beab5bf6d4b58dc93d883f5114e168213053e84
+ms.sourcegitcommit: 4b9fb5c1176fdaa5e3c60af2b84e38d5bb86cd81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11398260"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "11439569"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -28,7 +28,7 @@ ms.locfileid: "11398260"
    See the License for the specific language governing permissions and
    limitations under the License.  -->  
 
-# <a name="get-started-with-remote-debugging-android-devices"></a>リモート デバッグ Android デバイスの使用を開始する  
+# <a name="get-started-with-remote-debugging-android-devices"></a>Android デバイスのリモート デバッグを開始する  
 
 Windows または macOS コンピューターから Android デバイス上のライブ コンテンツをリモート デバッグします。  次のチュートリアル ページでは、次のアクションを実行する方法について説明します。  
 
@@ -55,7 +55,7 @@ Windows または macOS コンピューターから Android デバイス上の�
 1.  開発マシンで、Microsoft Edge を開きます。  
 1.  Microsoft Edge の `edge://inspect` ページに移動します。  
     
-    :::image type="complex" source="../media/remote-debugging-edge-inspect-no-targets.msft.png" alt-text="Microsoft Edge edge://inspectページ" lightbox="../media/remote-debugging-edge-inspect-no-targets.msft.png":::
+    :::image type="complex" source="../media/remote-debugging-edge-inspect-no-targets.msft.png" alt-text="Microsoft Edge edge://inspect ページ" lightbox="../media/remote-debugging-edge-inspect-no-targets.msft.png":::
        図 1.   `edge://inspect`Microsoft Edge のページ  
     :::image-end:::  
     
@@ -126,14 +126,14 @@ Windows または macOS コンピューターから Android デバイス上の�
 
 DevTools **インスタンスの Elements** ツールに移動し、要素にカーソルを合わせると、Android デバイスのビューポートで強調表示されます。  
 
-Android デバイス画面で要素を選択して、[要素] **ツールで選択** することもできます。  DevTools **インスタンス** で [Select Element \( Select Element \) ] アイコンを選択し、Android デバイス画面で要素 ![ ][ImageSelectElementIcon] を選択します。  
+Android デバイス画面で要素を選択して、[要素] **ツールで選択** することもできます。  DevTools **インスタンス** で [Select Element \( Select Element \) ] アイコンを選択し、Android デバイス画面で要素 ![ ](../media/select-element-icon.msft.png) を選択します。  
 
 > [!NOTE]
 > **最初の** 選択後に Select Element が無効になっているので、機能を使用する度に再び有効にする必要があります。  
 
 ### <a name="screencast-your-android-screen-to-your-development-machine"></a>開発マシンに Android 画面をスクリーンキャストする  
 
-DevTools **インスタンスで** Android デバイスのコンテンツを表示するには、[画面キャストの切り替え \( 画面キャスト \) の切り替え] アイコン ![ ][ImageToggleScreencastIcon] を選択します。  
+DevTools **インスタンスで** Android デバイスのコンテンツを表示するには、[画面キャストの切り替え \( 画面キャスト \) の切り替え] アイコン ![ ](../media/toggle-screencast-icon.msft.png) を選択します。  
 
 スクリーンキャストを操作するには、次の方法を使用します。  
 
@@ -152,11 +152,6 @@ DevTools **インスタンスで** Android デバイスのコンテンツを表�
 ## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームと連絡を取る  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
-
-<!-- image links -->  
-
-[ImageSelectElementIcon]: /microsoft-edge/devtools-guide-chromium/media/select-element-icon.msft.png  
-[ImageToggleScreencastIcon]: /microsoft-edge/devtools-guide-chromium/media/toggle-screencast-icon.msft.png  
 
 <!-- links -->  
 

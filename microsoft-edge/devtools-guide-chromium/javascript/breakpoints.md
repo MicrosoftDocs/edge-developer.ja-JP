@@ -3,16 +3,16 @@ description: Microsoft Edge DevTools でコードを一時停止できるすべ�
 title: Microsoft Edge DevTools でブレークポイントを使用してコードを一時停止する方法
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/12/2021
+ms.date: 03/08/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 84077503d6c786244fc2ca4d54c349ae9f6d20d8
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: 3d50b7b105aa9a9018ba61e44147f46f3d340079
+ms.sourcegitcommit: 4b9fb5c1176fdaa5e3c60af2b84e38d5bb86cd81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11398596"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "11439515"
 ---
 <!-- Copyright Kayce Basques
 
@@ -36,7 +36,7 @@ ms.locfileid: "11398596"
 
 最もよく知られているブレークポイントの種類は、コード行です。  ただし、コード行のブレークポイントは、特に場所を正確に知らない場合や、大きなコードベースを使用している場合に設定が非効率的な場合があります。  他の種類のブレークポイントを使用する方法と時期を知ることにより、デバッグの時間を節約できます。  
 
-| ブレークポイントの種類 | 一時停止する場合は、これを使用します。  |  
+| ブレークポイントの種類 | 一時停止する場合は、これを使用します。 |  
 |:--- |:--- |  
 | [コード行](#line-of-code-breakpoints) | コードの正確な領域。  |  
 | [条件付きコード行](#conditional-line-of-code-breakpoints) | コードの正確な領域で、他の条件が true の場合のみ。  |  
@@ -165,7 +165,7 @@ XHR ブレークポイントを設定するには、次のコマンドを実行�
 キャッチまたはキャッチされていない例外をスローするコード行で一時停止する場合は、例外ブレークポイントを使用します。  
 
 1.  [ソース] **ツールを選択** します。  
-1.  [ **例外時に一時停止** する] \( ![ [例外の一時停止 ][ImagePauseOnExceptionsIcon] ] \) を選択します。  有効にすると、アイコンが青色に変わります。  
+1.  [ **例外時に一時停止** する] \( ![ [例外の一時停止 ](../media/pause-on-exceptions-icon.msft.png) ] \) を選択します。  有効にすると、アイコンが青色に変わります。  
     
     :::image type="complex" source="../media/javascript-sources-page-js-pause-on-exceptions.msft.png" alt-text="[例外時に一時停止] ボタン" lightbox="../media/javascript-sources-page-js-pause-on-exceptions.msft.png":::
        [ **例外時に一時停止]** ボタン  
@@ -217,10 +217,6 @@ DevTools コンソールからメソッドを実行している場合は、タ�
 ## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームと連絡を取る  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
-
-<!-- image links -->  
-
-[ImagePauseOnExceptionsIcon]: ../media/pause-on-exceptions-icon.msft.png  
 
 <!-- links -->  
 

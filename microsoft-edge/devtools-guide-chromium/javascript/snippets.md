@@ -1,18 +1,18 @@
 ---
-description: スニペットは、Microsoft Edge DevTools の Sources ツール内で作成して実行できる小さなスクリプトです。  任意の Web ページからリソースにアクセスして実行できます。  スニペットを実行すると、現在開いている Web ページのコンテキストから実行されます。
+description: スニペットは、Microsoft Edge DevTools の Sources ツール内で作成して実行できる小さなスクリプトです。  Web ページからリソースにアクセスして実行できます。  スニペットを実行すると、現在開いている Web ページのコンテキストから実行されます。
 title: Microsoft Edge DevTools を使用して、任意のページで JavaScript のスニペットを実行します。
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 12/11/2020
+ms.date: 03/08/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 89b028177016a9194a67bbbe44d08572e5755f95
-ms.sourcegitcommit: a35a6b5bbc21b7df61d08cbc6b074b5325ad4fef
+ms.openlocfilehash: 779c3dcec66b6b5df3e38abe9ee458bca7dc0c45
+ms.sourcegitcommit: 4b9fb5c1176fdaa5e3c60af2b84e38d5bb86cd81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "11230958"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "11439424"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -28,19 +28,19 @@ ms.locfileid: "11230958"
    See the License for the specific language governing permissions and
    limitations under the License.  -->  
 
-# Microsoft Edge DevTools を使用して任意の Web ページで JavaScript のスニペットを実行する  
+# <a name="run-snippets-of-javascript-on-any-webpage-with-microsoft-edge-devtools"></a>Microsoft Edge DevTools を使用して任意の Web ページで JavaScript のスニペットを実行する  
 
-コンソールで同じコードを繰り返 [し実行][DevtoolsConsoleIndex] している場合は、コードをスニペットとして保存してください。  スニペットは、ソース ツールで作成 [するスクリプト][DevToolsSourcesTool] です。  スニペットは Web ページの JavaScript コンテキストにアクセスできます。スニペットは任意の Web ページで実行できます。  ほとんどの Web ページのセキュリティ設定では、スニペット内の他のスクリプトの読み込みがブロックされます。  このため、すべてのコードを 1 つのファイルに含める必要があります。  
+コンソールで同じコードを繰り返[][DevtoolsConsoleIndex]し実行している場合は、コードをスニペットとして保存してください。  スニペットは、ソース ツールで作成する [スクリプト][DevToolsSourcesTool] です。  スニペットは Web ページの JavaScript コンテキストにアクセスし、任意の Web ページでスニペットを実行できます。  ほとんどの Web ページのセキュリティ設定は、スニペットに他のスクリプトを読み込むのをブロックします。  このため、すべてのコードを 1 つのファイルに含める必要があります。  
 
-スニペットは、スニペットが[][WikiBookmarklet]DevTools でのみ実行される点が異なるブックマークレットに代わる方法であり、URL の許容される長さに限定されません。  
+スニペットは、スニペットが[][WikiBookmarklet]DevTools でのみ実行されるという違いを持つブックマークレットの代わりであり、URL の許可される長さに限定されません。  
 
-スニペットの使用は、サード パーティの Web ページでいくつかの変更を行う優れた方法です。  スニペットのコード変更は現在の Web ページに追加され、同じコンテキストで実行されます。  Web ページの既存のコードを変更する方法の詳細については、[上書き] に [移動します][DevtoolsJavascriptOverrides]。  
+スニペットの使用は、サードパーティの Web ページでいくつかの変更を行う優れた方法です。  スニペットのコードの変更は、現在の Web ページに追加され、同じコンテキストで実行されます。  Web ページの既存のコードを変更する方法の詳細については [、「Overrides」に移動します][DevtoolsJavascriptOverrides]。  
 
 :::row:::
    :::column span="":::
-      たとえば、次の図では、左側の DevTools ホームページと、いくつかのスニペット ソース コードを右側に示しています。  
+      たとえば、次の図に、左側の DevTools ホームページと、右側のスニペット ソース コードを示します。  
       
-      :::image type="complex" source="../media/javascript-sources-snippets-split-screen.msft.png" alt-text="スニペットを実行する前" lightbox="../media/javascript-sources-snippets-split-screen.msft.png":::
+      :::image type="complex" source="../media/javascript-sources-snippets-split-screen.msft.png" alt-text="スニペットを実行する前に" lightbox="../media/javascript-sources-snippets-split-screen.msft.png":::
          スニペットを実行する前の Web ページ  
       :::image-end:::  
    :::column-end:::
@@ -57,43 +57,43 @@ ms.locfileid: "11230958"
    :::column-end:::
 :::row-end:::  
 
-次の図では、スニペットの実行後に Web ページが表示されます。  コンソール **ドロワー** が表示され、スニペットによってログに記録されるメッセージが表示され、Web ページの内容が `Hello, Snippets!` 完全に変更されます。  
+次の図では、スニペットの実行後に Web ページが表示されます。  コンソール **ドロワー** がポップアップ表示され、スニペットによってログに記録されるメッセージが表示され、Web ページの内容 `Hello, Snippets!` が完全に変更されます。  
 
 :::image type="complex" source="../media/javascript-sources-snippets-split-screen-after.msft.png" alt-text="スニペットの実行後の Web ページ" lightbox="../media/javascript-sources-snippets-split-screen-after.msft.png":::
    スニペットの実行後の Web ページ  
 :::image-end:::  
 
-## [スニペット] ウィンドウを開く  
+## <a name="open-the-snippets-pane"></a>スニペット ウィンドウを開く  
 
-[ **スニペット] ウィンドウ** には、スニペットが一覧表示されます。  スニペットを編集する場合は、[スニペット] ウィンドウからスニペットを **開く必要** があります。  
+[ **スニペット] ウィンドウ** には、スニペットの一覧が表示されます。  スニペットを編集する場合は、[スニペット] ウィンドウから **スニペットを開く必要** があります。  
 
 :::image type="complex" source="../media/javascript-sources-snippets-pane.msft.png" alt-text="[スニペット] ウィンドウ" lightbox="../media/javascript-sources-snippets-pane.msft.png":::
    [ **スニペット]** ウィンドウ  
 :::image-end:::  
 
-### マウスを使用して [スニペット] ウィンドウを開く  
+### <a name="open-the-snippets-pane-with-a-mouse"></a>マウスでスニペット ウィンドウを開く  
 
-1.  [ソース **] タブを** 選択して、ソース **ツールを開** きます。  通常 **、ページ** ウィンドウは既定で開きます。  
+1.  [ソース] **タブを選択** して 、[ソース] **ツールを開** きます。  通常 **、[ページ]** ウィンドウは既定で開きます。  
     
-    :::image type="complex" source="../media/javascript-sources-page-pane.msft.png" alt-text="左側に [ページ] ウィンドウが開いているソース ツール" lightbox="../media/javascript-sources-page-pane.msft.png":::
-       左側 **にページ** ウィンドウ **が開いている** ソース ツール  
+    :::image type="complex" source="../media/javascript-sources-page-pane.msft.png" alt-text="左側の [ページ] ウィンドウが開いている [ソース] ツール" lightbox="../media/javascript-sources-page-pane.msft.png":::
+       左側 **の [** ページ] ウィンドウ **が開** いている [ソース] ツール  
     :::image-end:::  
     
-1.  [スニペット **] タブを** 選択して 、[スニペット] ウィンドウ **を開** きます。  スニペット オプションにアクセスするには、 **その他の** タブ \( その他のタブ ![ ][ImageMoreTabsIcon] \) を選択 **する必要があります** 。  
+1.  [スニペット **] タブを選択** して 、[スニペット **] ウィンドウを開** きます。  [スニペット] オプションにアクセスするには **、[** その他のタブ] \( ![ More Tabs ](../media/more-tabs-icon.msft.png) \) を選択 **する必要があります** 。  
     
-### コマンド メニューで [スニペット] ウィンドウを開く  
+### <a name="open-the-snippets-pane-with-the-command-menu"></a>コマンド メニューで [スニペット] ウィンドウを開く  
 
 1.  DevTools のどこかにカーソルを移動します。  
 1.  `Control` + `Shift` + `P` \(Windows, Linux\) または `Command` + `Shift` + `P` \(macOS\) を選択してコマンド メニューを開きます。  
-1.  「入力 `Snippets` 」と入力し **、[スニペットの表示**] を選択し、コマンドの `Enter` 実行を選択します。  
+1.  [ `Snippets` スニペットの **表示] を選択**し、コマンドを `Enter` 実行する場合に選択します。  
     
     :::image type="complex" source="../media/javascript-search-show-snippets.msft.png" alt-text="[スニペットの表示] コマンド" lightbox="../media/javascript-search-show-snippets.msft.png":::
        [ **スニペットの表示]** コマンド  
     :::image-end:::  
     
-## スニペットを作成する  
+## <a name="create-snippets"></a>スニペットの作成  
 
-### [ソース] パネルを使用してスニペットを作成する  
+### <a name="create-a-snippet-through-the-sources-panel"></a>[ソース] パネルからスニペットを作成する  
 
 1.  [[スニペット **] ウィンドウを開** きます](#open-the-snippets-pane)。  
 1.  [新 **しいスニペット] を選択します**。  
@@ -103,80 +103,75 @@ ms.locfileid: "11230958"
        スニペットに名前を付け  
     :::image-end:::  
     
-### コマンド メニューを使用してスニペットを作成する  
+### <a name="create-a-snippet-through-the-command-menu"></a>コマンド メニューからスニペットを作成する  
 
 1.  DevTools のどこかにカーソルを移動します。  
 1.  `Control` + `Shift` + `P` \(Windows, Linux\) または `Command` + `Shift` + `P` \(macOS\) を選択してコマンド メニューを開きます。  
-1.  「入力 `Snippet` 」と入力し **、[新しいスニペットの作成]** を選択し、コマンド `Enter` の実行を選択します。  
+1.  [ `Snippet` 新しいスニペットの **作成] を**選択し、コマンド `Enter` を実行する場合に選択します。  
     
     :::image type="complex" source="../media/javascript-search-create-new-snippet.msft.png" alt-text="新しいスニペットを作成するためのコマンド" lightbox="../media/javascript-search-create-new-snippet.msft.png":::
        新しいスニペットを作成するためのコマンド  
     :::image-end:::  
     
-新しいスニペットの名前をカスタム名で変更するには、[スニペットの名前の変更 [] に移動します](#rename-snippets)。  
+カスタム名を使用して新しいスニペットの名前を変更するには、[スニペットの名前の変更 [] に移動します](#rename-snippets)。  
 
-## スニペットの編集  
+## <a name="edit-snippets"></a>スニペットの編集  
 
 1.  [[スニペット **] ウィンドウを開** きます](#open-the-snippets-pane)。  
-1.  [ **スニペット] ウィンドウ** で、編集するスニペットの名前を選択します。  コード エディターで **開きます**。  
+1.  [スニペット **] ウィンドウ** で、編集するスニペットの名前を選択します。  コード エディターで **開きます**。  
     
     :::image type="complex" source="../media/javascript-sources-snippets-editor-saved.msft.png" alt-text="コード エディター" lightbox="../media/javascript-sources-snippets-editor-saved.msft.png":::
        コード **エディター**  
     :::image-end:::  
     
 1.  コード エディター **を使用して** 、スニペットに JavaScript を追加します。  
-1.  スニペットの名前の横にアスタリスクが表示されている場合は、コードが保存されていないことを意味します。  `Control` + `S` \(Windows, Linux\) または `Command` + `S` \(macOS\) を選択して保存します。  
+1.  スニペットの名前の横にアスタリスクが表示される場合は、コードが保存されていないことを意味します。  `Control` + `S` \(Windows, Linux\) または `Command` + `S` \(macOS\) を選択して保存します。  
     
     :::image type="complex" source="../media/javascript-sources-snippets-editor-unsaved.msft.png" alt-text="スニペット名の横にあるアスタリスクは、保存されていないコードを示します" lightbox="../media/javascript-sources-snippets-editor-unsaved.msft.png":::
        スニペット名の横にあるアスタリスクは、保存されていないコードを示します  
     :::image-end:::  
     
-## スニペットを実行する  
+## <a name="run-snippets"></a>スニペットの実行  
 
-### [ソース] パネルからスニペットを実行する  
+### <a name="run-a-snippet-from-the-sources-panel"></a>[ソース] パネルからスニペットを実行する  
 
 1.  [[スニペット **] ウィンドウを開** きます](#open-the-snippets-pane)。  
-1.  実行するスニペットの名前を選択します。  スニペットがコード エディターで **開きます**。  
-1.  [**スニペットの実行**\ ( ![ スニペットの実行 \ ) を ][ImageRunSnippetIcon] 選択するか `Control` + `Enter` 、\(Windows, Linux\) `Command` + `Enter` または \(macOS\) を選択します。  
+1.  実行するスニペットの名前を選択します。  コード エディターでスニペット **が開きます**。  
+1.  [**スニペットの実行**\( ![ Run Snippet ](../media/run-snippet-icon.msft.png) \), or select `Control` + `Enter` \(Windows, Linux\) `Command` + `Enter` or \(macOS\).  
     
-### コマンド メニューを使用してスニペットを実行する  
+### <a name="run-a-snippet-with-the-command-menu"></a>コマンド メニューを使用してスニペットを実行する  
 
 1.  DevTools のどこかにカーソルを移動します。  
 1.  `Control` + `Shift` + `P` \(Windows, Linux\) または `Command` + `Shift` + `P` \(macOS\) を選択してコマンド メニューを開きます。  
-1.  文字を `>` 削除し、その `!` 文字の後に実行するスニペットの名前を入力します。  
+1.  文字を削除し、実行するスニペットの名前の後に文字 `>` `!` を入力します。  
     
-    :::image type="complex" source="../media/javascript-search-run-command.msft.png" alt-text="コマンド メニューからのスニペットの実行" lightbox="../media/javascript-search-run-command.msft.png":::
-       コマンド メニューからのスニペット **の実行**  
+    :::image type="complex" source="../media/javascript-search-run-command.msft.png" alt-text="コマンド メニューからスニペットを実行する" lightbox="../media/javascript-search-run-command.msft.png":::
+       コマンド メニューからスニペット **を実行する**  
     :::image-end:::  
     
 1.  スニペット `Enter` を実行する場合に選択します。  
 
-## スニペットの名前を変更する  
+## <a name="rename-snippets"></a>スニペットの名前を変更する  
 
 1.  [[スニペット **] ウィンドウを開** きます](#open-the-snippets-pane)。  
-1.  スニペット名をポイントし、コンテキスト メニュー \(右クリック\) を開き、[名前の変更] を選択 **します**。  
+1.  スニペット名をポイントし、コンテキスト メニュー \(右クリック\) を開き、[名前の変更] を **選択します**。  
     
-## スニペットを削除する  
+## <a name="delete-snippets"></a>スニペットの削除  
 
 1.  [[スニペット **] ウィンドウを開** きます](#open-the-snippets-pane)。  
-1.  スニペット名をポイントし、コンテキスト メニュー \(右クリック\) を開き、[削除] を選択 **します**。  
+1.  スニペット名をポイントし、コンテキスト メニュー \(右クリック\) を開き、[削除] を **選択します**。  
     
-## Microsoft Edge DevTools チームと連絡を取る  
+## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームと連絡を取る  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
-<!-- image links -->  
-
-[ImageMoreTabsIcon]: ../media/more-tabs-icon.msft.png  
-[ImageRunSnippetIcon]: ../media/run-snippet-icon.msft.png  
-
 <!-- links -->  
 
-[DevtoolsConsoleIndex]: ../console/index.md "コンソールの概要 |Microsoft Docs"  
-[DevToolsSourcesTool]: ../sources/index.md "ソース ツールの概要 |Microsoft Docs"  
-[DevtoolsJavascriptOverrides]: ./overrides.md "Overrides |Microsoft Docs"  
+[DevtoolsConsoleIndex]: ../console/index.md "コンソールの概要|Microsoft Docs"  
+[DevToolsSourcesTool]: ../sources/index.md "ソース ツールの概要|Microsoft Docs"  
+[DevtoolsJavascriptOverrides]: ./overrides.md "オーバーライド|Microsoft Docs"  
 
-[MDNScratchpad]: https://developer.mozilla.org/docs/Tools/Scratchpad "スクラッチパッド |MDN"  
+[MDNScratchpad]: https://developer.mozilla.org/docs/Tools/Scratchpad "Scratchpad |MDN"  
 [WikiBookmarklet]: https://en.wikipedia.org/wiki/Bookmarklet "Bookmarklet |Wikipedia"  
 
 > [!NOTE]

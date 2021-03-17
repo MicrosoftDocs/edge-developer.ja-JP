@@ -3,16 +3,16 @@ description: Microsoft Edge DevTools を使用してバックグラウンド フ
 title: Microsoft Edge DevTools を使用したバックグラウンド サービスのデバッグ
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/12/2021
+ms.date: 03/08/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: cf3459e7b5f80a695a855ffdd0c249c2bc223d31
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: 15023098c547d31bf46bd387f849b365c13b38f6
+ms.sourcegitcommit: 4b9fb5c1176fdaa5e3c60af2b84e38d5bb86cd81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11398638"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "11439529"
 ---
 <!-- Copyright Kayce Basques
 
@@ -60,7 +60,7 @@ Microsoft Edge DevTools は、DevTools が開いていない場合でも、バ�
        [ **バックグラウンド フェッチ]** パネル  
     :::image-end:::  
     
-1.  **[Record** \( Record ![ ][ImageRecordIcon] \] を選択します)。  
+1.  **[Record** \( Record ![ ](../media/record-icon.msft.png) \] を選択します)。  
    バックグラウンド フェッチ アクティビティをトリガーした後、DevTools はイベントをテーブルに記録します。  
     
     :::image type="complex" source="../media/javascript-application-background-services-background-fetch.msft.png" alt-text="バックグラウンド フェッチ パネルのイベントのログ" lightbox="../media/javascript-application-background-services-background-fetch.msft.png":::
@@ -87,7 +87,7 @@ Microsoft Edge DevTools は、DevTools が開いていない場合でも、バ�
        [ **バックグラウンド同期]** ウィンドウ  
     :::image-end:::  
     
-1.  **[Record** \( Record ![ ][ImageRecordIcon] \] を選択します)。  
+1.  **[Record** \( Record ![ ](../media/record-icon.msft.png) \] を選択します)。  
    バックグラウンド同期アクティビティをトリガーした後、DevTools はイベントをテーブルに記録します。  
     
     :::image type="complex" source="../media/javascript-application-background-services-background-sync.msft.png" alt-text="[バックグラウンド同期] ウィンドウのイベントのログ" lightbox="../media/javascript-application-background-services-background-sync.msft.png":::
@@ -112,7 +112,7 @@ Microsoft Edge DevTools は、DevTools が開いていない場合でも、バ�
        [ **通知]** ウィンドウ  
     :::image-end:::  
     
-1.  **[Record** \( Record ![ ][ImageRecordIcon] \] を選択します)。  
+1.  **[Record** \( Record ![ ](../media/record-icon.msft.png) \] を選択します)。  
    通知アクティビティをトリガーした後、DevTools はイベントをテーブルに記録します。  
     
     :::image type="complex" source="../media/javascript-application-background-services-notifications.msft.png" alt-text="[通知] ウィンドウのイベントのログ" lightbox="../media/javascript-application-background-services-notifications.msft.png":::
@@ -137,7 +137,7 @@ Microsoft Edge DevTools は、DevTools が開いていない場合でも、バ�
        [プッシュ **メッセージング] ウィンドウを開** く  
     :::image-end:::  
     
-1.  **[Record** \( Record ![ ][ImageRecordIcon] \] を選択します)。  
+1.  **[Record** \( Record ![ ](../media/record-icon.msft.png) \] を選択します)。  
     一部のプッシュ メッセージ アクティビティをトリガーした後、DevTools はイベントをテーブルに記録します。  
     
     :::image type="complex" source="../media/javascript-application-background-services-push-messaging.msft.png" alt-text="[プッシュ メッセージング] ウィンドウのイベントのログ" lightbox="../media/javascript-application-background-services-push-messaging.msft.png":::
@@ -153,10 +153,6 @@ Microsoft Edge DevTools は、DevTools が開いていない場合でも、バ�
 ## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームと連絡を取る  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
-
-<!-- image links -->  
-
-[ImageRecordIcon]: ../media/record-icon.msft.png  
 
 <!-- links -->  
 

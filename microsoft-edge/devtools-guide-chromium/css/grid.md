@@ -7,12 +7,12 @@ ms.date: 02/12/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 5e4b20690eac3a692f6428f391def102a4f78ecb
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: 034fbdf82ddba39fc0818bc6f3add8824c6bb3ac
+ms.sourcegitcommit: 4b9fb5c1176fdaa5e3c60af2b84e38d5bb86cd81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11398771"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "11439262"
 ---
 # <a name="inspect-css-grid"></a>CSS グリッドの検査  
 
@@ -176,7 +176,7 @@ DevTools は、 `[authored size]` 各 `[computed size]` 行ラベルに表示さ
 
 ### <a name="highlight-the-grid"></a>グリッドを強調表示する  
 
-[要素] ツールで**** HTML 要素を強調表示し、Web ページ上でスクロールするには、[要素] パネル**\(** [要素] パネル アイコン \) の [要素の表示] アイコンで [要素の表示] 要素 ![ ][ImageShowElementInElementsPanelIcon] を選択します。  
+[要素] ツールで**** HTML 要素を強調表示し、Web ページ上でスクロールするには、[要素] パネル**\(** [要素] パネル アイコン \) の [要素の表示] アイコンで [要素の表示] 要素 ![ ](../media/show-element-in-element-panel-icon.msft.png) を選択します。  
 
 :::image type="complex" source="../media/grid-grid-overlays-highlight.msft.png" alt-text="グリッドを強調表示する" lightbox="../media/grid-grid-overlays-highlight.msft.png":::
    グリッドを強調表示する  
@@ -185,10 +185,6 @@ DevTools は、 `[authored size]` 各 `[computed size]` 行ラベルに表示さ
 ## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームと連絡を取る  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
-
-<!-- image links -->  
-
-[ImageShowElementInElementsPanelIcon]: ../media/show-element-in-element-panel-icon.msft.png  
 
 <!-- links -->  
 

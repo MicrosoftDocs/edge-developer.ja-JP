@@ -3,16 +3,16 @@ description: Microsoft Edge DevTools で実行時のパフォーマンスを評�
 title: ランタイム のパフォーマンスの分析の開始
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/12/2021
+ms.date: 03/08/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 074c112b99abb4689cac2274338f2276bc46b4ae
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: 439d6d4331550b7fc92bfc5fef4c3fc88df38872
+ms.sourcegitcommit: 4b9fb5c1176fdaa5e3c60af2b84e38d5bb86cd81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11398722"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "11439613"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -65,8 +65,8 @@ ms.locfileid: "11398722"
 モバイル デバイスの CPU 電力は、デスクトップやラップトップに比してはるかに少ない。  ページをプロファイルするたびに、CPU 調整を使用して、モバイル デバイスでのページのパフォーマンスをシミュレートします。  
 
 1.  DevTools で、[パフォーマンス] ツール **を選択** します。  
-1.  [スクリーンショット] チェック **ボックスが有効** になっていることを確認します。  
-1.  [ **キャプチャ設定]** \(!] を選択します。Capture Settings][ImageCaptureSettingsIcon]\)。  DevTools は、パフォーマンス 指標のキャプチャ方法に関連する設定を表示します。  
+1.  [スクリーンショット] の横にあるチェック ボックスをオン **にします**。  
+1.  [ **キャプチャ設定]\(** ![ キャプチャ設定 ](../media/capture-settings-icon.msft.png) \) を選択します。  DevTools は、パフォーマンス 指標のキャプチャ方法に関連する設定を表示します。  
 1.  **[CPU]** の場合は **、[4 倍の速度低下] を選択します**。  DevTools は CPU を調整して、通常の 4 倍遅くします。  
     
     :::image type="complex" source="../media/evaluate-performance-performance-capture-settings.msft.png" alt-text="CPU スロットル" lightbox="../media/evaluate-performance-performance-capture-settings.msft.png":::
@@ -93,7 +93,7 @@ Web サイトのすべての閲覧者に一貫して動作するランタイム 
 
 最適化されたバージョンのページを実行すると、青いアイコンの移動速度が速くなります。  それはどうしてですか。  どちらのバージョンも、アイコンを同じ時間内に同じ容量の領域に移動する必要があります。  [パフォーマンス] パネルでレコーディングを行い、最適化されていないバージョンでパフォーマンスのボトルネックを検出する方法について説明します。  
 
-1.  DevTools で **、[Record** \(!] を選択します。Record][ImageRecordIcon]\)。  DevTools は、ページの実行時にパフォーマンス 指標をキャプチャします。  
+1.  DevTools で、Record **\(** ![ Record ](../media/record-icon.msft.png) \) を選択します。  DevTools は、ページの実行時にパフォーマンス 指標をキャプチャします。  
     
     :::image type="complex" source="../media/evaluate-performance-performance-profiling.msft.png" alt-text="ページのプロファイル" lightbox="../media/evaluate-performance-performance-profiling.msft.png":::
        ページのプロファイル  
@@ -148,7 +148,7 @@ Web サイトのすべての閲覧者に一貫して動作するランタイム 
 
 1.  `Control`+`Shift`+`P` \(Windows, Linux\) または `Command`+`Shift`+`P` \(macOS\) を選択して、**コマンド メニュー** を開きます。  
 1.  コマンド メニューで `Rendering` 入力を **開始し、[レンダリング** の表示] **を選択します**。  
-1.  レンダリング ツール **で、FPS** メーター **を有効にします**。  新しいオーバーレイがビューポートの右側に表示されます。  
+1.  レンダリング ツール **で、[FPS** メーター] **をオンにします**。  新しいオーバーレイがビューポートの右側に表示されます。  
     
     :::image type="complex" source="../media/evaluate-performance-fps-meter-overlay.msft.png" alt-text="FPS メーター" lightbox="../media/evaluate-performance-fps-meter-overlay.msft.png":::
        **FPS メーター**  
@@ -184,7 +184,7 @@ Web サイトのすべての閲覧者に一貫して動作するランタイム 
     1.  Animation Frame Fired イベントの右の赤い三角形 **にフォーカス** します。  赤い三角形が表示されるたびに、イベントに関連する問題が発生する可能性があるという警告です。  
     
     > [!NOTE]
-    > Animation **Frame Fired イベント**は、コールバックが実行[ `requestAnimationFrame()` されるたびに][MDNWebRequestAnimationFrame]発生します。  
+    > Animation **Frame Fired** イベントは [、requestAnimationFrame()][MDNWebRequestAnimationFrame] コールバックが実行されるたびに発生します。  
     
 1.  [アニメーション フレーム **の発生] イベントを選択** します。  [ **概要] パネル** に、そのイベントに関する情報が表示されます。  [表示] **リンクに注意** してください。  選択した後、DevTools は Animation Frame Fired イベントを開始したイベント **を強調表示** します。  また ** 、app.js:95 リンクにフォーカス** します。  選択すると、ソース コード内の関連する行が表示されます。
     
@@ -213,7 +213,7 @@ Web サイトのすべての閲覧者に一貫して動作するランタイム 
 
 ### <a name="bonus-analyze-the-optimized-version"></a>ボーナス: 最適化されたバージョンを分析する  
 
-学習したワークフローとツールを使用して、デモで [**** 最適化] を選択して、最適化されたコードを有効にし、別のパフォーマンス記録を実行し、結果を分析します。  改善されたフレームレートから、メイン セクションのフレーム グラフ内のイベントの**** 削減まで、アプリの最適化されたバージョンでは作業が大幅に少なく、パフォーマンスが向上します。  
+学習したワークフローとツールを使用して、デモで [**** 最適化] を選択して、最適化されたコードを有効にし、別のパフォーマンス記録を取り、結果を分析します。  改善されたフレームレートから、メイン セクションのフレーム グラフ内のイベントの**** 削減まで、アプリの最適化されたバージョンでは作業が大幅に少なく、パフォーマンスが向上します。  
 
 > [!NOTE]
 > 最適化されたバージョンでさえ、すべてのアイコンのプロパティを操作します `top` 。  より良い方法は、合成にのみ影響を与えるプロパティに固執する方法です。  <!--  > For more information, navigate to [Use transform and opacity changes for animations][RenderingCompositor].  -->  

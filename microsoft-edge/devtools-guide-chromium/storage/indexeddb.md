@@ -3,16 +3,16 @@ description: アプリケーション パネルとスニペットを使用して
 title: Microsoft Edge DevTools を使用して IndexedDB データを表示および変更する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/12/2021
+ms.date: 03/08/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 6062cb6b574b2295441bc98616f600cbf00cee8e
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: 719348067b1343ca3d7781737fa6441f92ad7ba1
+ms.sourcegitcommit: 4b9fb5c1176fdaa5e3c60af2b84e38d5bb86cd81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11398981"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "11439711"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -46,8 +46,8 @@ ms.locfileid: "11398981"
        **IndexedDB**メニュー  
     :::image-end:::  
     
-    *   \( Database icon \) は、データベースの名前であり、データベースにアクセスする元であるデータベース ![ ][ImageDatabaseIcon] `notes - https://mdn.github.io` `notes` `https://mdn.github.io` を表します。  
-    *   \( ![ Object Store icon ][ImageObjectStoreIcon] \) `notes` はオブジェクト ストアです。  
+    *   \( Database icon \) は、データベースの名前であり、データベースにアクセスする元であるデータベース ![ ](../media/database-icon.msft.png) `notes - https://mdn.github.io` `notes` `https://mdn.github.io` を表します。  
+    *   \( ![ Object Store icon ](../media/object-store-icon.msft.png) \) `notes` はオブジェクト ストアです。  
     *   **title**と**body は**[インデックス です][MDNUsingIndexedDBUsingIndex]。  
     
     > [!NOTE]
@@ -85,7 +85,7 @@ ms.locfileid: "11398981"
     
 ## <a name="refresh-indexeddb-data"></a>IndexedDB データの更新  
 
-アプリケーション ツールの IndexedDB **値** はリアルタイムで更新されません。  オブジェクト**ストアを表示**してデータを更新する場合は [Refresh \( Refresh \)] を選択するか、データベースを表示して [データベースの更新] を選択してすべてのデータ ![ ][ImageRefreshIcon] を更新します。 ****  
+アプリケーション ツールの IndexedDB **値** はリアルタイムで更新されません。  オブジェクト**ストアを表示**してデータを更新する場合は [Refresh \( Refresh \)] を選択するか、データベースを表示して [データベースの更新] を選択してすべてのデータ ![ ](../media/reload-icon.msft.png) を更新します。 ****  
 
 :::image type="complex" source="../media/storage-application-storage-indexeddb-notes_db-notes_os-refresh-database.msft.png" alt-text="データベースの表示" lightbox="../media/storage-application-storage-indexeddb-notes_db-notes_os-refresh-database.msft.png":::
    データベースの表示  
@@ -114,7 +114,7 @@ IndexedDB キーと値は、アプリケーション ツールでは **編集** 
        キーと値のペアを選択して削除する  
     :::image-end:::  
     
-1.  キーを `Delete` 選択するか、[ **選択した \(** Delete ![ Selected \) を削除する] ][ImageDeleteIcon] を選択します。  
+1.  キーを `Delete` 選択するか、[ **選択した \(** Delete ![ Selected \) を削除する] ](../media/delete-icon.msft.png) を選択します。  
     
     :::image type="complex" source="../media/storage-application-storage-indexeddb-notes_db-notes_os-delete-selected.msft.png" alt-text="キーと値のペアが削除された後のオブジェクト ストアの外観" lightbox="../media/storage-application-storage-indexeddb-notes_db-notes_os-delete-selected.msft.png":::
        キーと値のペアが削除された後のオブジェクト ストアの外観  
@@ -128,7 +128,7 @@ IndexedDB キーと値は、アプリケーション ツールでは **編集** 
        オブジェクト ストアの表示  
     :::image-end:::  
     
-1.  [ **オブジェクト ストアのクリア** ] \( ![ Clear object store ][ImageClearIcon] \) を選択します。  
+1.  [ **オブジェクト ストアのクリア** ] \( ![ Clear object store ](../media/clear-icon.msft.png) \) を選択します。  
     
 ### <a name="delete-an-indexeddb-database"></a>IndexedDB データベースの削除  
 
@@ -152,14 +152,6 @@ IndexedDB キーと値は、アプリケーション ツールでは **編集** 
 ## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームと連絡を取る  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
-
-<!-- image links -->  
-
-[ImageClearIcon]: ../media/clear-icon.msft.png  
-[ImageDatabaseIcon]: ../media/database-icon.msft.png  
-[ImageDeleteIcon]: ../media/delete-icon.msft.png  
-[ImageObjectStoreIcon]: ../media/object-store-icon.msft.png  
-[ImageRefreshIcon]: ../media/reload-icon.msft.png  
 
 <!-- links -->  
 

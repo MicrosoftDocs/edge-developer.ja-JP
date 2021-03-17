@@ -3,16 +3,16 @@ description: ノードの表示、ノードの検索、ノードの編集、コ�
 title: DOM の表示と変更の開始
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/12/2021
+ms.date: 03/08/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: bb2b733cfa3597c47f0a20de00e9c8b506e7c41c
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: e4c08fb2fd5f360f037502c04edabaabb873ba16
+ms.sourcegitcommit: 4b9fb5c1176fdaa5e3c60af2b84e38d5bb86cd81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11398330"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "11439241"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -61,7 +61,7 @@ Microsoft Edge DevTools を使用してページの DOM を表示および変更
            ノードを強調表示 `Michelangelo` する  
         :::image-end:::  
         
-        1.  DevTools **の** 左上隅にある ![ [検査 ][ImageInspectIcon] \( Inspect \) ] アイコンを選択します。  
+        1.  DevTools **の** 左上隅にある ![ [検査 ](../media/inspect-icon.msft.png) \( Inspect \) ] アイコンを選択します。  
             
             :::image type="complex" source="../media/dom-elements-highlighted-select-element-page-inspect.msft.png" alt-text="[検査] アイコン" lightbox="../media/dom-elements-highlighted-select-element-page-inspect.msft.png":::
                [ **検査]** アイコン  
@@ -285,14 +285,14 @@ DevTools を使用すると、JavaScript が DOM を変更するときにペー�
            **属性の変更時のブレーク**  
         :::image-end:::  
         
-    1.  次の手順では、ページのコードを一時停止するボタンを選択するように指示されます。  ページが一時停止すると、ページをスクロールできなくなりました。  ページを再 **びスクロール可能** にするには、[スクリプトの再開] ![ \( Resume Script ][ImageResumeScriptIcon] \) を選択する必要があります。
+    1.  次の手順では、ページのコードを一時停止するボタンを選択するように指示されます。  ページが一時停止すると、ページをスクロールできなくなりました。  ページを再 **びスクロール可能** にするには、[スクリプトの再開] ![ \( Resume Script ](../media/resume-script-icon.msft.png) \) を選択する必要があります。
         
         :::image type="complex" source="../media/dom-break-attribute-modifications-sources-paused-on.msft.png" alt-text="スクリプトの実行を再開する場所" lightbox="../media/dom-break-attribute-modifications-sources-paused-on.msft.png":::
            スクリプトの実行を再開する場所  
         :::image-end:::  
         
     1.  上の [ **背景の設定]** ボタンを選択します。  これにより、ノード `style` の属性がに設定されます `background-color:thistle` 。  DevTools はページを一時停止し、属性が変更されたコードを強調表示します。  
-    1.  前述 **したように、[スクリプトの再開** ]\( ![ Resume Script ][ImageResumeScriptIcon] \)を選択します。  
+    1.  前述 **したように、[スクリプトの再開** ]\( ![ Resume Script ](../media/resume-script-icon.msft.png) \)を選択します。  
     
 ### <a name="break-on-node-removal"></a>ノードの削除時のブレーク  
 
@@ -302,7 +302,7 @@ DevTools を使用すると、JavaScript が DOM を変更するときにペー�
 1.  [ **ノードの削除時にブレーク]** で、[ニューロマンサー] を **右クリックし、[** 検査] を **選択します**。  
     1.  DOM ツリーで、マウス ポインターを置き、コンテキスト メニュー \(右クリック\) を開き、[ノードの削除] を `<li id="target">Neuromancer</li>` ****  >  **選択します**。  オプションが [表示されない場合は](#appendix-missing-options) 、[付録: 不足しているオプション] に移動します。  
     1.  上の [ **削除]** ボタンを選択します。  DevTools はページを一時停止し、ノードを削除したコードを強調表示します。  
-    1.  [ **スクリプトの再開** \( ![ Resume Script ][ImageResumeScriptIcon] \) ] を選択します。  
+    1.  [ **スクリプトの再開** \( ![ Resume Script ](../media/resume-script-icon.msft.png) \) ] を選択します。  
     
 ### <a name="break-on-subtree-modifications"></a>サブツリーの変更時のブレーク  
 
@@ -312,7 +312,7 @@ DevTools を使用すると、JavaScript が DOM を変更するときにペー�
 1.  [ **サブツリーの変更時にブレーク] で**、[深部の火] を右クリック **し、[** 検査] を **選択します**。  
     1.  DOM ツリーで、上のノードにマウス ポインターを置き、コンテキスト メニュー \(右クリック\) を開き、[サブツリーの変更時にブレーク] `<ul id="target">` `<li>A Fire Upon the Deep</li>` ****  >  **を選択します**。  オプションが表示されない場合は、[付録: 不足 [しているオプション] に移動します](#appendix-missing-options)。  
     1.  [子 **の追加] を選択します**。  ノードがリストに追加された `<li>` ため、コードは一時停止します。  
-    1.  [ **スクリプトの再開** \( ![ Resume Script ][ImageResumeScriptIcon] \) ] を選択します。  
+    1.  [ **スクリプトの再開** \( ![ Resume Script ](../media/resume-script-icon.msft.png) \) ] を選択します。  
     
 ## <a name="next-steps"></a>次の手順  
 
@@ -416,11 +416,6 @@ This is a continuation of the [Scroll into view](#scroll-into-view) section.  Fo
 ## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームと連絡を取る  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
-
-<!-- image links -->  
-
-[ImageInspectIcon]: ../media/inspect-icon.msft.png  
-[ImageResumeScriptIcon]: ../media/resume-script-icon.msft.png  
 
 <!-- links -->  
 

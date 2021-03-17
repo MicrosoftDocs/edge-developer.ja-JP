@@ -3,16 +3,16 @@ description: Microsoft Edge DevTools で CSS を表示および変更するた�
 title: CCS リファレンス
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/12/2021
+ms.date: 03/08/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: a99cf46c4c0a6c6f14892268a30f8aab471e919d
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: 84aacbb3961f6b8f6e9a0bda8823fecbbb26ec25
+ms.sourcegitcommit: 4b9fb5c1176fdaa5e3c60af2b84e38d5bb86cd81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11399142"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "11439304"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -48,7 +48,7 @@ ms.locfileid: "11399142"
 要素を選択するには、次のいずれかのアクションを使用します。  
 
 *   ビューポートで、要素にマウス ポインターを置き、コンテキスト メニュー \(右クリック\) を開き、[検査] を **選択します**。  
-*   DevTools で、[要素を選択] \( Select **an** element \) を選択するか ![ ][ImageSelectAnElementIcon] `Control` + `Shift` + `C` 、\(Windows、Linux\) または `Command` + `Shift` + `C` \(macOS\) を選択し、ビューポートで要素を選択します。  
+*   DevTools で、[要素を選択] \( Select **an** element \) を選択するか ![ ](../media/select-an-element-icon.msft.png) `Control` + `Shift` + `C` 、\(Windows、Linux\) または `Command` + `Shift` + `C` \(macOS\) を選択し、ビューポートで要素を選択します。  
 *   DevTools で、DOM ツリーの要素を **選択します**。  
 *   DevTools で、コンソールのようなクエリを実行し、結果にマウス ポインターを置き、コンテキスト メニュー `document.querySelector('p')` \(右クリック\) を開き、[要素] パネルで [表示] を**選択します**。 ****  
 
@@ -175,7 +175,7 @@ ms.locfileid: "11399142"
        :::column-end:::
     :::row-end:::  
     
-1.  [ **インストルメントカバレッジの開始] を選択し、** ページ \( インストルメントカバレッジの開始とページの更新 ![ \) を更新 ][ImageRefreshIcon] します。  ページが更新され、カバレッジ ツール **は** 、ブラウザーが読み込む各ファイルから使用される CSS \(および JavaScript\) の量の概要を示します。  緑色は、使用されている CSS を表します。  赤は未使用の CSS を表します。  
+1.  [ **インストルメントカバレッジの開始] を選択し、** ページ \( インストルメントカバレッジの開始とページの更新 ![ \) を更新 ](../media/refresh-icon.msft.png) します。  ページが更新され、カバレッジ ツール **は** 、ブラウザーが読み込む各ファイルから使用される CSS \(および JavaScript\) の量の概要を示します。  緑色は、使用されている CSS を表します。  赤は未使用の CSS を表します。  
     
     :::image type="complex" source="../media/css-console-qs-coverage-run.msft.png" alt-text="CSS (および JavaScript) の使用と未使用の量の概要" lightbox="../media/css-console-qs-coverage-run.msft.png":::
        CSS \(and JavaScript\) の使用と使用の概要  
@@ -283,7 +283,7 @@ ms.locfileid: "11399142"
 新しいスタイル ルールを追加するには、次のアクションを実行します。  
 
 1.  [要素を選択します](#choose-an-element)。  
-1.  [ **新しいスタイル ルール** \( ![ 新しいスタイル ルール ][ImageNewStyleRuleIcon] \] を選択します)。  DevTools は、element.style ルールの下に新 **しいルールを挿入** します。  
+1.  [ **新しいスタイル ルール** \( ![ 新しいスタイル ルール ](../media/new-style-rule-icon.msft.png) \] を選択します)。  DevTools は、element.style ルールの下に新 **しいルールを挿入** します。  
 
 > [!NOTE]
 > 次の図では、[新しいスタイル ルール] を選択した後に、 `h1.devsite-page-title` スタイル ルール **が追加されます**。  
@@ -294,7 +294,7 @@ ms.locfileid: "11399142"
 
 #### <a name="choose-which-stylesheet-to-add-a-rule-to"></a>ルールを追加するスタイルシートを選択する  
 
-新 [しいスタイル ルールを追加する場合](#add-a-style-rule)は、新しいスタイル ルール \( New Style **Rule** \) を選択して保持し、スタイル ルールを追加するスタイルシート ![ ][ImageNewStyleRuleIcon] を選択します。  
+新 [しいスタイル ルールを追加する場合](#add-a-style-rule)は、新しいスタイル ルール \( New Style **Rule** \) を選択して保持し、スタイル ルールを追加するスタイルシート ![ ](../media/new-style-rule-icon.msft.png) を選択します。  
 
 :::image type="complex" source="../media/css-elements-styles-style-new-select-existing.msft.png" alt-text="スタイルシートを選択する" lightbox="../media/css-elements-styles-style-new-select-existing.msft.png":::
    スタイルシートを選択する  
@@ -306,7 +306,7 @@ ms.locfileid: "11399142"
 
 1.  新しいスタイル ルールを追加するスタイル ルールの上にマウス ポインターを移動します。  
 1.  [[その他の **操作] ツールバーを表示** します](#reveal-the-more-actions-toolbar)。  
-1.  [下 **にスタイル ルールを挿入]** を選択します。\( [スタイル ルール ![ の下に挿入] アイコン ][ImageNewStyleRuleIcon] \)。  
+1.  [下 **にスタイル ルールを挿入]** を選択します。\( [スタイル ルール ![ の下に挿入] アイコン ](../media/new-style-rule-icon.msft.png) \)。  
 
 :::image type="complex" source="../media/css-elements-styles-insert-style-rule-below.msft.png" alt-text="下のスタイル ルールの挿入" lightbox="../media/css-elements-styles-insert-style-rule-below.msft.png":::
    **下のスタイル ルールの挿入**  
@@ -360,7 +360,7 @@ folllwoing アクションを完了して、\(または off\) の 1 つの宣言
 
 1.  宣言を追加するスタイル ルールにカーソルを `background-color` 合わせる。  
 1.  [[その他の **操作] ツールバーを表示** します](#reveal-the-more-actions-toolbar)。  
-1.  [ **背景色の追加** ]\( ![ [背景色の追加] アイコン ][ImageAddBackgroundColorIcon] \) を選択します。  
+1.  [ **背景色の追加** ]\( ![ [背景色の追加] アイコン ](../media/add-background-color-icon.msft.png) \) を選択します。  
 
 :::image type="complex" source="../media/css-elements-styles-rule-add-background-color.msft.png" alt-text="背景色の追加" lightbox="../media/css-elements-styles-rule-add-background-color.msft.png":::
    **背景色の追加**  
@@ -372,7 +372,7 @@ folllwoing アクションを完了して、\(または off\) の 1 つの宣言
 
 1.  宣言を追加するスタイル ルールにカーソルを `color` 合わせる。  
 1.  [[その他の **操作] ツールバーを表示** します](#reveal-the-more-actions-toolbar)。  
-1.  [ **色の追加** ] \( ![ [色の追加] ][ImageAddColorIcon] アイコン \) を選択します。  
+1.  [ **色の追加** ] \( ![ [色の追加] ](../media/add-color-icon.msft.png) アイコン \) を選択します。  
 
 :::image type="complex" source="../media/css-elements-styles-rule-add-color.msft.png" alt-text="色の追加" lightbox="../media/css-elements-styles-rule-add-color.msft.png":::
    **色の追加**  
@@ -384,7 +384,7 @@ folllwoing アクションを完了して、\(または off\) の 1 つの宣言
 
 1.  宣言を追加するスタイル ルールにカーソルを `box-shadow` 合わせる。  
 1.  [[その他の **操作] ツールバーを表示** します](#reveal-the-more-actions-toolbar)。  
-1.  [Add **Box Shadow** \( ![ Add Box Shadow icon ][ImageAddBoxShadowIcon] \] )を選択します。  
+1.  [Add **Box Shadow** \( ![ Add Box Shadow icon ](../media/add-box-shadow-icon.msft.png) \] )を選択します。  
 
 :::image type="complex" source="../media/css-elements-styles-rule-add-box-shadow.msft.png" alt-text="ボックス シャドウの追加" lightbox="../media/css-elements-styles-rule-add-box-shadow.msft.png":::
    **ボックス シャドウの追加**  
@@ -396,7 +396,7 @@ folllwoing アクションを完了して、\(または off\) の 1 つの宣言
 
 1.  宣言を追加するスタイル ルールにカーソルを `text-shadow` 合わせる。  
 1.  [[その他の **操作] ツールバーを表示** します](#reveal-the-more-actions-toolbar)。  
-1.  [テキスト **シャドウの追加** ]\( ![ [テキスト シャドウの追加] アイコン ][ImageAddTextShadowIcon] \) を選択します。  
+1.  [テキスト **シャドウの追加** ]\( ![ [テキスト シャドウの追加] アイコン ](../media/add-text-shadow-icon.msft.png) \) を選択します。  
 
 :::image type="complex" source="../media/css-elements-styles-rule-add-text-shadow.msft.png" alt-text="テキスト シャドウの追加" lightbox="../media/css-elements-styles-rule-add-text-shadow.msft.png":::
    **テキスト シャドウの追加**  
@@ -532,7 +532,7 @@ Color **Picker は** 、変更と宣言のための GUI `color` `background-colo
 
 #### <a name="sample-a-color-off-the-page-with-the-eyedropper"></a>スポイトを使用してページ外の色をサンプリングする  
 
-カラー ピッカー **を開く場合**、 **既定では** [スポイト]\( ![ ][ImageEyedropperIcon] Eyedropper \) がオンになっています。  次のアクションを実行して、選択した色をページの他の色に変更します。  
+カラー ピッカー **を開く場合**、 **既定では** [スポイト]\( ![ ](../media/eyedropper-icon.msft.png) Eyedropper \) がオンになっています。  次のアクションを実行して、選択した色をページの他の色に変更します。  
 
 1.  ビューポートのターゲットの色にカーソルを合わせる。  
 1.  確認を選択します。  
@@ -549,17 +549,6 @@ Color **Picker は** 、変更と宣言のための GUI `color` `background-colo
 ## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームと連絡を取る  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
-
-<!-- image links -->  
-
-[ImageAddBackgroundColorIcon]: ../media/add-background-color-icon.msft.png  
-[ImageAddBoxShadowIcon]: ../media/add-box-shadow-icon.msft.png  
-[ImageAddColorIcon]: ../media/add-color-icon.msft.png  
-[ImageAddTextShadowIcon]: ../media/add-text-shadow-icon.msft.png  
-[ImageEyedropperIcon]: ../media/eyedropper-icon.msft.png  
-[ImageNewStyleRuleIcon]: ../media/new-style-rule-icon.msft.png  
-[ImageRefreshIcon]: ../media/refresh-icon.msft.png  
-[ImageSelectAnElementIcon]: ../media/select-an-element-icon.msft.png  
 
 <!-- links -->  
 

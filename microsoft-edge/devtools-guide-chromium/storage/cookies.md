@@ -3,16 +3,16 @@ description: Microsoft Edge DevTools を使用してページの HTTP Cookie を
 title: Microsoft Edge DevTools で Cookie を表示、編集、および削除する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/12/2021
+ms.date: 03/08/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 9c040aaa30142c2759c67b2c034d3a9271ca0a64
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: c208ca628fe91ed5922bc36566be2b9bdd20ec0b
+ms.sourcegitcommit: 4b9fb5c1176fdaa5e3c60af2b84e38d5bb86cd81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11397749"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "11439683"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -81,13 +81,13 @@ Cookie **テーブルには** 、次のフィールドが含まれています�
 
 ## <a name="delete-cookies"></a>Cookie を削除する  
 
-Cookie を選択し **、[Delete Selected** \( Delete Selected \) ] を選択して、特定の Cookie ![ ][ImageDeleteIcon] を削除します。  
+Cookie を選択し **、[Delete Selected** \( Delete Selected \) ] を選択して、特定の Cookie ![ ](../media/delete-icon.msft.png) を削除します。  
 
 :::image type="complex" source="../media/storage-application-storage-cookies-delete-selected.msft.png" alt-text="特定の Cookie の削除" lightbox="../media/storage-application-storage-cookies-delete-selected.msft.png":::
    図 5: 特定の Cookie の削除  
 :::image-end:::  
 
-[ **すべてクリア]** \( ![ Clear All ][ImageClearIcon] \) を選択して、すべての Cookie を削除します。  
+[ **すべてクリア]** \( ![ Clear All ](../media/clear-icon.msft.png) \) を選択して、すべての Cookie を削除します。  
 
 :::image type="complex" source="../media/storage-application-storage-cookies-clear-all.msft.png" alt-text="すべての Cookie のクリア" lightbox="../media/storage-application-storage-cookies-clear-all.msft.png":::
    図 6: すべての Cookie をクリアする  
@@ -96,11 +96,6 @@ Cookie を選択し **、[Delete Selected** \( Delete Selected \) ] を選択し
 ## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームと連絡を取る  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
-
-<!-- image links -->  
-
-[ImageClearIcon]: ../media/clear-icon.msft.png  
-[ImageDeleteIcon]: ../media/delete-icon.msft.png  
 
 <!-- links -->  
 

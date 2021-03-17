@@ -3,16 +3,16 @@ description: Microsoft Edge DevTools の最も一般的なネットワーク関�
 title: Microsoft Edge DevTools でネットワーク アクティビティを検査する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/12/2021
+ms.date: 03/08/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 16b60716c91d2f4ce778f1fac37afc0e73e30ab6
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: a4a552fa9a45267a6ffa4a4e83e7ebc4e1817162
+ms.sourcegitcommit: 4b9fb5c1176fdaa5e3c60af2b84e38d5bb86cd81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11398659"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "11439697"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -151,7 +151,7 @@ ms.locfileid: "11398659"
        [低速 3G] を選択する  
     :::image-end:::  
     
-1.  **再読み込み** \(![再読み込み][ImageRefreshIcon]\) を長押しして **キャッシュを空にして再読み込み** を選びます。  
+1.  **再読み込み** \(![再読み込み](../media/refresh-icon.msft.png)\) を長押しして **キャッシュを空にして再読み込み** を選びます。  
     
     :::image type="complex" source="../media/network-glitch-empty-cache-and-hard-reset.msft.png" alt-text="キャッシュを空にして再読み込み" lightbox="../media/network-glitch-empty-cache-and-hard-reset.msft.png":::
        **キャッシュを空にして再読み込み**  
@@ -166,7 +166,7 @@ ms.locfileid: "11398659"
 
 スクリーンショットは、Web ページの読み込み中の時間の表示方法を表示します。  
 
-1.  [\( ![ Network settings ][ImageSettingsIcon] \) を選択し、[スクリーンショットのキャプチャ] **チェック ボックスをオン** にします。
+1.  [\( ![ Network settings ](../media/settings-icon.msft.png) \) を選択し、[スクリーンショットのキャプチャ] **チェック ボックスをオン** にします。
 1.  [空のキャッシュとハードリロード] **ワークフローを使用してページを再び更新** します。  これを行 [う方法に関するリマインダー](#simulate-a-slower-network-connection) が必要な場合は、[低速の接続をシミュレートする] に移動します。  
     [スクリーンショット] パネルには、読み込みプロセス中にページがさまざまなポイントを見た方法のサムネイルが表示されます。  
     
@@ -180,7 +180,7 @@ ms.locfileid: "11398659"
        最初のスクリーンショット中に発生したネットワーク アクティビティ  
     :::image-end:::  
     
-1.  [\( Network settings \) を再度選択し、[スクリーンショットのキャプチャ] チェック ボックスをオフにして [スクリーンショット ![ ][ImageSettingsIcon] ] ウィンドウを閉じます。 ****
+1.  [\( Network settings \) を再度選択し、[スクリーンショットのキャプチャ] チェック ボックスをオフにして [スクリーンショット ![ ](../media/settings-icon.msft.png) ] ウィンドウを閉じます。 ****
 1.  ページを再び更新します。  
     
 ## <a name="inspect-the-details-of-the-resource"></a>リソースの詳細を検査する  
@@ -208,7 +208,7 @@ ms.locfileid: "11398659"
     :::image-end:::  
     
     > [!TIP]
-    > ファイルが minified の場合は、[応答] パネルの下部にある [Format **\(** Format \)] ボタンを選択して、ファイルの内容を読みやすさのために再 ![ ][ImageFormatIcon] フォーマットします。 ****  
+    > ファイルが minified の場合は、[応答] パネルの下部にある [Format **\(** Format \)] ボタンを選択して、ファイルの内容を読みやすさのために再 ![ ](../media/format-icon.msft.png) フォーマットします。 ****  
     
 1.  [タイミング] **パネルを選択** します。  リソースのネットワーク アクティビティの内訳が表示されます。  
     
@@ -216,7 +216,7 @@ ms.locfileid: "11398659"
        [ **タイミング]** パネル  
     :::image-end:::  
     
-1.  **閉じる** \(![閉じる][ImageCloseIcon]\) を選択して、もう一度ネットワーク ログを表示します。  
+1.  **閉じる** \(![閉じる](../media/close-icon.msft.png)\) を選択して、もう一度ネットワーク ログを表示します。  
     
     :::image type="complex" source="../media/network-glitch-network-resources-close-tabs.msft.png" alt-text="[閉じる] ボタン" lightbox="../media/network-glitch-network-resources-close-tabs.msft.png":::
        **閉じる** ボタン  
@@ -230,7 +230,7 @@ ms.locfileid: "11398659"
 
 <!--TODO: add cache policies section when available  -->
 
-1.  **検索** \(![検索][ImageSearchIcon]\) を選びます。  [検索] ウィンドウがネットワーク ログの左側に表示されます。  
+1.  **検索** \(![検索](../media/search-icon.msft.png)\) を選びます。  [検索] ウィンドウがネットワーク ログの左側に表示されます。  
     
     :::image type="complex" source="../media/network-glitch-network-search-empty.msft.png" alt-text="[検索] ウィンドウ" lightbox="../media/network-glitch-network-search-empty.msft.png":::
        **検索** ウィンドウ  
@@ -264,7 +264,7 @@ DevTools には、タスクに直接関連していないリソースをフィ�
 
 既定 **では、[フィルター** ] ツールバーをオンにします。  そうでなければ：  
 
-1.  **フィルター** \(![フィルター][ImageFilterIcon]\) を選んで表示します。  
+1.  **フィルター** \(![フィルター](../media/filter-icon.msft.png)\) を選んで表示します。  
     
 ### <a name="filter-by-string-regular-expression-or-property"></a>文字列、正規表現、またはプロパティによってフィルターする  
 
@@ -334,7 +334,7 @@ DevTools には、タスクに直接関連していないリソースをフィ�
        **リクエストのブロックを表示**  
     :::image-end:::  
     
-1.  **パターンを追加** \(![パターンを追加][ImageAddIcon]\) を選びます。  
+1.  **パターンを追加** \(![パターンを追加](../media/add-icon.msft.png)\) を選びます。  
 1.  「`main.css`」と入力します。  
     
     :::image type="complex" source="../media/network-glitch-network-cli-block-add-pattern.msft.png" alt-text="メインの.css をブロックする" lightbox="../media/network-glitch-network-cli-block-add-pattern.msft.png":::
@@ -362,17 +362,6 @@ DevTools には、タスクに直接関連していないリソースをフィ�
 ## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームに連絡する  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
-
-<!-- image links -->  
-
-[ImageAddIcon]: ../media/add-icon.msft.png  
-[ImageCloseIcon]: ../media/close-icon.msft.png  
-[ImageFilterIcon]: ../media/filter-icon.msft.png  
-[ImageFormatIcon]: ../media/format-icon.msft.png  
-[ImageRefreshIcon]: ../media/refresh-icon.msft.png  
-[ImageScreenshotsIcon]: ../media/screenshots-icon.msft.png  
-[ImageSearchIcon]: ../media/search-icon.msft.png  
-[ImageSettingsIcon]: ../media/settings-icon.msft.png
 
 <!-- links -->  
 

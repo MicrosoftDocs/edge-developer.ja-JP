@@ -7,12 +7,12 @@ ms.date: 02/12/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 092788606347352876483b1a8282fbb75b2bff66
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: 2a2d48bda34daa95b9f500c31a12859a1cb08625
+ms.sourcegitcommit: 4b9fb5c1176fdaa5e3c60af2b84e38d5bb86cd81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11398764"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "11439199"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -72,9 +72,9 @@ Microsoft **Edge DevTools** の [カバレッジ] パネルを使用すると、
 ## <a name="record-code-coverage"></a>レコード コード範囲  
 
 1.  [カバレッジ] パネルで、次のいずれかのボタン **を選択** します。  
-    *   ページ **の読み込みに** 必要なコードを確認する場合は、[インストルメントカバレッジの開始とページの再読み込み]\(インストルメントカバレッジの開始とページの再読み込み ![ ][ImageReloadIcon] \) を選択します。  
-    *   ページ **を操作した** 後に使用するコードを確認する場合は、[Instrument Coverage \( Instrument ![ Coverage ][ImageRecordIcon] \) ] を選択します。  
-1.  コード **カバレッジの記録を停止する場合は、[** インストルメントカバレッジの停止と結果の表示] \( Stop Instrumenting Coverage and Show Results ![ ][ImageStopIcon] \) を選択します。  
+    *   ページ **の読み込みに** 必要なコードを確認する場合は、[インストルメントカバレッジの開始とページの再読み込み]\(インストルメントカバレッジの開始とページの再読み込み ![ ](../media/reload-icon.msft.png) \) を選択します。  
+    *   ページ **を操作した** 後に使用するコードを確認する場合は、[Instrument Coverage \( Instrument ![ Coverage ](../media/record-icon.msft.png) \) ] を選択します。  
+1.  コード **カバレッジの記録を停止する場合は、[** インストルメントカバレッジの停止と結果の表示] \( Stop Instrumenting Coverage and Show Results ![ ](../media/stop-icon.msft.png) \) を選択します。  
     
 ## <a name="analyze-code-coverage"></a>コード範囲の分析  
 
@@ -93,12 +93,6 @@ Microsoft **Edge DevTools** の [カバレッジ] パネルを使用すると、
 ## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームと連絡を取る  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
-
-<!-- image links -->  
-
-[ImageReloadIcon]: ../media/reload-icon.msft.png  
-[ImageRecordIcon]: ../media/record-icon.msft.png  
-[ImageStopIcon]: ../media/stop-icon.msft.png  
 
 <!-- links -->  
 

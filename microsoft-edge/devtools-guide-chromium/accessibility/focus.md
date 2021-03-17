@@ -3,16 +3,16 @@ description: コンソールを開き、Live 式を作成し、式を document.a
 title: フォーカスされている要素を追跡する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/12/2021
+ms.date: 03/08/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 3f3e59c4ee6f10b8e162f30efbff337ca2beec8d
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: 2c2040c690441fb33c802cf454dc7a1e3f33c494
+ms.sourcegitcommit: 4b9fb5c1176fdaa5e3c60af2b84e38d5bb86cd81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11398316"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "11439171"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -35,7 +35,7 @@ ms.locfileid: "11398316"
 DevTools でフォーカスされた要素を追跡するには、次のアクションを実行します。  
 
 1.  コンソールを **開きます**。  
-1.  [Live **Expression \(** Create ![ Live Expression ][ImageCreateIcon] \] を選択します)。  
+1.  [Live **Expression \(** Create ![ Live Expression ](../media/create-live-expression-icon.msft.png) \] を選択します)。  
     
     :::image type="complex" source="../media/accessibility-console-create-live-expression-empty.msft.png" alt-text="Live 式の作成" lightbox="../media/accessibility-console-create-live-expression-empty.msft.png":::
        Live 式の作成  
@@ -55,10 +55,6 @@ DevTools でフォーカスされた要素を追跡するには、次のアク�
 ## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームと連絡を取る  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
-
-<!-- image links -->  
-
-[ImageCreateIcon]: ../media/create-live-expression-icon.msft.png  
 
 <!-- links -->  
 

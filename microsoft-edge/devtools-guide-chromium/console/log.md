@@ -3,16 +3,16 @@ description: コンソールにメッセージを記録する方法について�
 title: コンソールでのメッセージのログ記録の開始
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/12/2021
+ms.date: 03/08/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: e2ea1a8327dd2a591e067b69198c4509b2abcb2d
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: fb428154b00959db1627096819c565dd5dc11346
+ms.sourcegitcommit: 4b9fb5c1176fdaa5e3c60af2b84e38d5bb86cd81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11399170"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "11439290"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -122,7 +122,7 @@ ms.locfileid: "11399170"
     > [!TIP]
     > メッセージが特定の方法でログに記録される原因となったコードを表示する場合は、スクリプト \(\など) を選択して、メッセージが書式設定される原因となったコードを表示します。 `log.js:12`  
 
-1.  の前 **にある** [\( ![ ][ImageExpandIcon] Expand \) ] アイコンを選択します `Abandon Hope All Ye Who Enter` 。  DevTools は、呼 [び出しに至る][WikiStackTrace] スタック トレースを表示します。  
+1.  の前 **にある** [\( ![ ](../media/expand-icon.msft.png) Expand \) ] アイコンを選択します `Abandon Hope All Ye Who Enter` 。  DevTools は、呼 [び出しに至る][WikiStackTrace] スタック トレースを表示します。  
     
     :::image type="complex" source="../media/console-log-warning-expanded.msft.png" alt-text="スタック トレース" lightbox="../media/console-log-warning-expanded.msft.png":::
        スタック トレース  
@@ -236,13 +236,13 @@ ms.locfileid: "11399170"
 
 特定の URL からのメッセージのみを表示する場合は、サイドバー を使用 **します**。  
 
-1.  [ **コンソールサイドバーを表示する** ]を選択します ![ 。[コンソールサイドバーを表示 ][ImageShowConsoleSidebarIcon] する]を選択します。  
+1.  [ **コンソールサイドバーを表示する** ]を選択します ![ 。[コンソールサイドバーを表示 ](../media/show-console-sidebar-icon.msft.png) する]を選択します。  
     
     :::image type="complex" source="../media/console-sidebar-all-messages.msft.png" alt-text="サイドバー" lightbox="../media/console-sidebar-all-messages.msft.png":::
        サイドバー  
     :::image-end:::  
     
-1.  メッセージ数 **の** 横にある ![ ][ImageExpandIcon] [\( Expand \) ] アイコンを選択します。  次の図では、メッセージの数は **13 メッセージとして示されています**。  サイドバー **には** 、メッセージがログに記録される原因となる URL の一覧が表示されます。  たとえば `log.js` 、11 件のメッセージが発生しました。  
+1.  メッセージ数 **の** 横にある ![ ](../media/expand-icon.msft.png) [\( Expand \) ] アイコンを選択します。  次の図では、メッセージの数は **13 メッセージとして示されています**。  サイドバー **には** 、メッセージがログに記録される原因となる URL の一覧が表示されます。  たとえば `log.js` 、11 件のメッセージが発生しました。  
     
     :::image type="complex" source="../media/console-sidebar-expanded-all-messages.msft.png" alt-text="サイドバーでメッセージのソースを表示する" lightbox="../media/console-sidebar-expanded-all-messages.msft.png":::
        サイドバーでメッセージのソースを表示する  
@@ -280,11 +280,6 @@ ms.locfileid: "11399170"
 ## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームと連絡を取る  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
-
-<!-- image links -->  
-
-[ImageExpandIcon]: ../media/expand-icon.msft.png  
-[ImageShowConsoleSidebarIcon]: ../media/show-console-sidebar-icon.msft.png  
 
 <!-- links -->  
 

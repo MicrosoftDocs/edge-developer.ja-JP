@@ -1,27 +1,27 @@
 ---
 title: MSApp API リファレンス
-description: Blob オブジェクトと MSStream オブジェクトを作成できるヘルパー関数を提供します。  MSApp オブジェクトとメンバーは、JavaScript を使用する Windows アプリでサポートされています。
+description: Blob オブジェクトと MSStream オブジェクトを作成できるヘルパー関数を提供します。  JavaScript を使用する Windows アプリでは、MSApp オブジェクトとメンバーがサポートされています。
 author: MSEdgeTeam
 ms.author: msedgedevrel
 ms.topic: reference
 ms.prod: microsoft-edge
-keywords: MSapp、PWA、ファイルのアップロード、ブログ、MSStream、Windows 10 アプリ、UWP、Edge
-ms.date: 12/02/2020
+keywords: MSapp、PWA、ファイルアップロード、ブログ、MSStream、Windows 10 アプリ、UWP、エッジ
+ms.date: 03/16/2021
 ROBOTS: NOINDEX,NOFOLLOW
-ms.openlocfilehash: 9a3ad670f61bfafa4480c538dd8f28c7013b7d7f
-ms.sourcegitcommit: a35a6b5bbc21b7df61d08cbc6b074b5325ad4fef
+ms.openlocfilehash: 0607929971b1dd2956571304230f69f756497e32
+ms.sourcegitcommit: 4b9fb5c1176fdaa5e3c60af2b84e38d5bb86cd81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "11234646"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "11439725"
 ---
-# MSApp  
+# <a name="msapp"></a>MSApp  
 
 [!INCLUDE [deprecation-note](../../includes/legacy-edge-note.md)]  
 
-MSApp オブジェクトとそのメンバーは、JavaScript \(Windows API 機能にアクセスする PAS を含む) を使用する Windows アプリでのみサポートされます。  MSApp オブジェクトは、ms-appx URI スキームによって読み込まれた Windows アプリの HTML ドキュメントのローカル コンテキストにのみ存在します。それ以外の場合、オブジェクトは存在しません (したがって、オブジェクトのメソッドとプロパティはいずれも使用できません)。  
+MSApp オブジェクトとそのメンバーは、JavaScript \(Windows API 機能にアクセスする PWA を含む)を使用する Windows アプリでのみサポートされます。  MSApp オブジェクトは、ms-appx URI スキームを介して読み込まれた Windows アプリ内の HTML ドキュメントのローカル コンテキストにのみ存在します。それ以外の場合、オブジェクトは存在しません (したがって、そのメソッドとプロパティは使用できません)。  
 
-Blob オブジェクトと MSStream オブジェクトを[作成できるヘルパー](https://developer.mozilla.org/docs/Web/API/Blob)[関数を提供](https://msdn.microsoft.com/library/hh772328(v=vs.85).aspx)します。  
+Blob オブジェクトと MSStream オブジェクトを作成できる[ヘルパー](https://developer.mozilla.org/docs/Web/API/Blob)[関数を提供](https://msdn.microsoft.com/library/hh772328(v=vs.85).aspx)します。  
 
 ```javascript
 var result = MSApp.method;
@@ -32,7 +32,7 @@ var result = MSApp.method;
       [メソッド](#msapp-methods)  
    :::column-end:::
    :::column span="2":::
-      [clearTemporaryWebDataAsync](#cleartemporarywebdataasync), [createBlobFromRandomAccessSream](#createblobfromrandomaccessstream), [createDataPackage , createDataPackageFromSelection](#createdatapackage), [createFileFromStorageFile](#createfilefromstoragefile), [](#createdatapackagefromselection) [createStreamFromInputStream](#createstreamfrominputstream), [execAsyncAtPriority](#execasyncatpriority), [execAtPriority](#execatpriority), [getCurrentPriority](#getcurrentpriority), [getHtmlPrintDocumentSource](#gethtmlprintdocumentsource),[getHtmlPrintDocumentSourceAsynce](#gethtmlprintdocumentsourceasync), [getViewId](#getviewid), [isTaskScheduledAtPriorityOrHigher](#istaskscheduledatpriorityorhigher), [pageHandlesAllApplicationActivations](#pagehandlesallapplicationactivations), [suppressSubdownloadCredentialPrompts](#suppresssubdownloadcredentialprompts), [terminateApp](#terminateapp).  
+      [clearTemporaryWebDataAsync](#cleartemporarywebdataasync), [createBlobFromRandomAccessSream](#createblobfromrandomaccessstream), [createDataPackage](#createdatapackage), [createDataPackageFromSelection](#createdatapackagefromselection), [createFileFromStorageFile](#createfilefromstoragefile), [createStreamFromInputStream](#createstreamfrominputstream), [execAsyncAtPriority](#execasyncatpriority), [execAtPriority](#execatpriority), [getCurrentPri](#getcurrentpriority) [getHtmlPrintDocumentSource](#gethtmlprintdocumentsource),[getHtmlPrintDocumentSourceAsynce](#gethtmlprintdocumentsourceasync), [getViewId](#getviewid), [isTaskScheduledAtPriorityOrHigher](#istaskscheduledatpriorityorhigher), [pageHandlesAllApplicationActivations](#pagehandlesallapplicationactivations), [suppressSubdownloadCredentialPrompts](#suppresssubdownloadcredentialprompts), [terminateApp](#terminateapp).  
    :::column-end:::
 :::row-end:::  
 :::row:::
@@ -52,9 +52,9 @@ var result = MSApp.method;
    :::column-end:::
 :::row-end:::  
 
-## MSApp メソッド  
+## <a name="msapp-methods"></a>MSApp メソッド  
 
-### clearTemporaryWebDataAsync  
+### <a name="cleartemporarywebdataasync"></a>clearTemporaryWebDataAsync  
 
 :::row:::
    :::column span="":::
@@ -104,11 +104,11 @@ var result = MSApp.method;
    :::column-end:::
 :::row-end:::  
 
-### createBlobFromRandomAccessStream  
+### <a name="createblobfromrandomaccessstream"></a>createBlobFromRandomAccessStream  
 
 :::row:::
    :::column span="":::
-      [IRandomAccessStream](/uwp/api/Windows.Storage.Streams.IRandomAccessStream)オブジェクトから[BLOB](https://developer.mozilla.org/docs/Web/API/Blob)を作成します。  このメソッドは、ストリームから W3C ベースのオブジェクトを作成するために、アプリでオブジェクトを処理するときに `IRandomAccessStream` 使用する必要があります。  作成された BLOB は [、FileReader、URL](https://developer.mozilla.org/docs/Web/API/FileReader) [API、および](https://developer.mozilla.org/docs/Web/API/URL) [XMLHttpRequest で使用できます](https://developer.mozilla.org/docs/Web/API/XMLHttpRequest)。  
+      [IRandomAccessStream オブジェクトから BLOB を作成](/uwp/api/Windows.Storage.Streams.IRandomAccessStream)します。 [](https://developer.mozilla.org/docs/Web/API/Blob)  このメソッドは、ストリームから W3C ベースのオブジェクトを作成するために、アプリ内のオブジェクトを処理 `IRandomAccessStream` するときに使用する必要があります。  BLOB が作成されると [、FileReader、URL](https://developer.mozilla.org/docs/Web/API/FileReader) [API、および](https://developer.mozilla.org/docs/Web/API/URL) [XMLHttpRequest と一緒に使用できます](https://developer.mozilla.org/docs/Web/API/XMLHttpRequest)。  
    :::column-end:::
    :::column span="":::
       ```javascript
@@ -124,20 +124,20 @@ var result = MSApp.method;
       
       | 型 | 説明 |  
       |:---- |:--- |  
-      | String | データのコンテンツ タイプ。  この文字列は、RFC 2616 のセクション 3.7 で定義されているメディアタイプ トークンで指定された形式である必要があります。  |  
+      | String | データのコンテンツ タイプ。  この文字列は、RFC 2616 のセクション 3.7 で定義されているメディア型トークンで指定された形式である必要があります。  |  
       
       `stream` [in]  
       
       | 型 | 説明 |  
       |:---- |:--- |  
-      | 任意 | [BLOB に格納される IRandomAccessStream。](/uwp/api/Windows.Storage.Streams.IRandomAccessStream)  |  
+      | 任意 | [BLOB に格納する IRandomAccessStream。](/uwp/api/Windows.Storage.Streams.IRandomAccessStream)  |  
    :::column-end:::
    :::column span="":::
       **戻り値**  
       
       | 型 | 説明 |  
       |:---- |:--- |  
-      | Blob | ストリームを含む新しい BLOB オブジェクト。  |  
+      | BLOB | ストリームを含む新しい BLOB オブジェクト。  |  
    :::column-end:::
 :::row-end:::  
 :::row:::
@@ -146,12 +146,12 @@ var result = MSApp.method;
       
       | 例外 | 状況 |  
       |:---- |:--- |  
-      | TypeMismatchError | ノードの種類は、想定されるパラメーターの種類と互換性がありません。  Internet Explorer 10 より前のTYPE_MISMATCH_ERRが返されます。  |  
+      | TypeMismatchError | ノードの種類は、予期されるパラメーターの種類と互換性がありません。  10 より前のInternet Explorerでは、TYPE_MISMATCH_ERRが返されます。  |  
    :::column-end:::
    :::column span="":::
       **注釈**  
       
-      Windows ランタイム型から、ウィンドウ オブジェクトの MSApp 名前空間を介して BLOB を作成します。  このメソッドは、基本的に、提供された [RandomAccessStream](/uwp/api/Windows.Storage.Streams.RandomAccessStreamReference) オブジェクトのライト ラッパーである BLOB を作成します。  BLOB はこのストリームの有効期間を所有し、BLOB が破棄されるとストリームは閉じられます。  
+      Windows ランタイムの型から、ウィンドウ オブジェクトの MSApp 名前空間を介して BLOB を作成します。  このメソッドは、基本的に、提供された [RandomAccessStream](/uwp/api/Windows.Storage.Streams.RandomAccessStreamReference) オブジェクトの光ラッパーである BLOB を作成します。  BLOB はこのストリームの有効期間を所有し、BLOB が破棄されるとストリームは閉じられます。  
    :::column-end:::
 :::row-end:::  
 :::row:::
@@ -171,11 +171,11 @@ var result = MSApp.method;
    :::column-end:::
 :::row-end:::  
 
-### createDataPackage  
+### <a name="createdatapackage"></a>createDataPackage  
 
 :::row:::
    :::column span="":::
-      ユーザーまたはアプリケーションの指定範囲を、共有可能な HTML フラグメントに変換します。  
+      ユーザーまたはアプリケーションの指定した範囲を、共有できる HTML フラグメントに変換します。  
    :::column-end:::
    :::column span="":::
       ```javascript
@@ -191,14 +191,14 @@ var result = MSApp.method;
       
       | 型 | 説明 |  
       |:---- |:--- |  
-      | 任意 | この範囲は、選択オブジェクト (例: または手動) `window.selection.getRangeAt(0)` から作成できます。  |  
+      | 任意 | この範囲は、選択オブジェクト (たとえば、手動) `window.selection.getRangeAt(0)` から作成できます。  |  
    :::column-end:::
    :::column span="":::
       **戻り値**  
       
       | 型 | 説明 |  
       |:---- |:--- |  
-      | 任意 | 指定した範囲の HTML マークアップが含まれます。  |  
+      | 任意 | 指定した範囲の HTML マークアップを格納します。  |  
    :::column-end:::
 :::row-end:::  
 :::row:::
@@ -210,7 +210,7 @@ var result = MSApp.method;
    :::column span="":::
       **注釈**  
       
-      このメソッドは [、TextRange ではなく、ドキュメント オブジェクト モデル (DOM) の](https://developer.mozilla.org/docs/Web/API/Range)範囲のみを [サポートしています](/uwp/api/windows.ui.xaml.documents.textrange)。  指定した範囲に返されるデータ パッケージには、クリップボード形式の HTML マークアップが含まれます。  
+      このメソッドは[、TextRange ではなく、Document オブジェクト モデル (DOM) 範囲](https://developer.mozilla.org/docs/Web/API/Range)[のみをサポートします](/uwp/api/windows.ui.xaml.documents.textrange)。  指定した範囲の返されるデータ パッケージには、クリップボード形式の HTML マークアップが含まれます。  
       
       返されるデータ パッケージに使用可能なプロパティはありません。  
    :::column-end:::
@@ -226,11 +226,11 @@ var result = MSApp.method;
    :::column-end:::
 :::row-end:::  
 
-### createDataPackageFromSelection  
+### <a name="createdatapackagefromselection"></a>createDataPackageFromSelection  
 
 :::row:::
    :::column span="":::
-      ユーザーまたはアプリケーションの選択内容を、共有可能な HTML フラグメントに変換します。  
+      ユーザーまたはアプリケーションの選択を、共有できる HTML フラグメントに変換します。  
    :::column-end:::
    :::column span="":::
       ```javascript
@@ -249,7 +249,7 @@ var result = MSApp.method;
       
       | 型 | 説明 |  
       |:---- |:--- |  
-      | 任意 | 指定した範囲の HTML マークアップが含まれます。  |  
+      | 任意 | 指定した範囲の HTML マークアップを格納します。  |  
    :::column-end:::
 :::row-end:::  
 :::row:::
@@ -261,7 +261,7 @@ var result = MSApp.method;
    :::column span="":::
       **注釈**  
       
-      選択範囲に返されるデータ パッケージには、クリップボード形式の HTML マークアップが含まれます。  アプリケーションの UI 内にユーザーの選択がない場合は、値が `createDataPackageFromSelection` 返されます `null` 。  
+      選択範囲の返されるデータ パッケージには、クリップボード形式の HTML マークアップが含まれます。  アプリケーションの UI 内の任意の場所にユーザーの選択がない場合は、 を `createDataPackageFromSelection` 返します `null` 。  
       
       返されるデータ パッケージに使用可能なプロパティはありません。  
    :::column-end:::
@@ -278,11 +278,11 @@ var result = MSApp.method;
    :::column-end:::
 :::row-end:::  
  
-### createFileFromStorageFile  
+### <a name="createfilefromstoragefile"></a>createFileFromStorageFile  
 
 :::row:::
    :::column span="":::
-      [WinRT StorageFile を標準](/uwp/api/)[の](/uwp/api/windows.storage.storagefile)W3C File オブジェクトに[変換](https://developer.mozilla.org/docs/Web/API/File)します。  
+      [WinRT StorageFile を](/uwp/api/)[標準の](/uwp/api/windows.storage.storagefile)W3C File オブジェクトに[変換](https://developer.mozilla.org/docs/Web/API/File)します。  
    :::column-end:::
    :::column span="":::
       ```javascript
@@ -298,7 +298,7 @@ var result = MSApp.method;
       
       | 型 | 説明 |  
       |:---- |:--- |  
-      | 任意 | ストレージ ファイルが保存されています。  |  
+      | 任意 | ストレージ ファイルが含まれる。  |  
    :::column-end:::
    :::column span="":::
       **戻り値**
@@ -312,7 +312,7 @@ var result = MSApp.method;
       
       | 例外 | 状況 |  
       |:---- |:--- |  
-      | TypeMismatchError | 指定された W3C ファイル参照が無効です。  Internet Explorer 10 より前のバージョン `TYPE_MISMATCH_ERR` の場合は、返されます。  |  
+      | TypeMismatchError | 指定した W3C ファイル参照が無効です。  10 より前のInternet Explorerの場合 `TYPE_MISMATCH_ERR` は、返されます。  |  
    :::column-end:::
    :::column span="":::
       **注釈**  
@@ -332,7 +332,7 @@ var result = MSApp.method;
    :::column-end:::
 :::row-end:::  
 
-### createStreamFromInputStream  
+### <a name="createstreamfrominputstream"></a>createStreamFromInputStream  
 
 :::row:::
    :::column span="":::
@@ -352,7 +352,7 @@ var result = MSApp.method;
       
       | 型 | 説明 |  
       |:---- |:--- |  
-      | DOMString | データのコンテンツ タイプ。  この文字列は、RFC 2616 のセクション 3.7 で定義されているメディアタイプ トークンで指定された形式である必要があります。  \([MIME タイプを参照]]( https://developer.mozilla.org/docs/Web/HTTP/Basics_of_HTTP/MIME_types\) (例: `text/plain` , `text/html` `image/jpeg` `image/png` `audio/mpeg` `audio/ogg` `audio/*` `video/mp4` など\)  
+      | DOMString | データのコンテンツ タイプ。  この文字列は、RFC 2616 のセクション 3.7 で定義されているメディア型トークンで指定された形式である必要があります。  \([MIME の種類を参照してください https://developer.mozilla.org/docs/Web/HTTP/Basics_of_HTTP/MIME_types\) `text/plain` `text/html` `image/jpeg` `image/png` ]、、など `audio/mpeg` `audio/ogg` `audio/*` `video/mp4` \)。  
       
       `inputStream` [in]
       
@@ -375,14 +375,14 @@ var result = MSApp.method;
    :::column span="":::
       **注釈**  
       
-      このメソッドは、コンテンツ タイプと参照を受け取 `IInputStream` います。  メソッドは、渡されたストリーム参照が型のインスタンスであり、ない場合はスロー `IInputStream` を検証します `DOMException TYPE_MISMATCH_ERR` 。  エラーが発生しない場合は `createStreamFromInputStream` `MSStream` 、\(入力\ から) を作成します。  
+      このメソッドは、コンテンツ タイプと参照を受け取 `IInputStream` る。  次に、メソッドは、渡されたストリーム参照が型のインスタンスであり、それではない場合は、 `IInputStream` をスローします `DOMException TYPE_MISMATCH_ERR` 。  エラーが発生しない場合は `createStreamFromInputStream` `MSStream` 、\(その入力\から) を作成します。  
    :::column-end:::
 :::row-end:::  
 :::row:::
    :::column span="":::
       **例**  
       
-      An `IInputStream` を使用して作成できます `MSStream` 。  本質的に 1 回限り使用されるオブジェクトと同様に、イメージ要素によって初めて解決されると、作成された URL はすべて `MSStreams` `URL.createObjectURL` 取り消されます。  さらに、ストリームの使用後にこのオブジェクトの 2 番目の URL を要求すると失敗します。  
+      An `IInputStream` を使用して、 を作成できます `MSStream` 。  本質的に 1 回限り使用されるオブジェクトと同様に、image 要素によって最初に解決されると、作成された URL はすべて `MSStreams` `URL.createObjectURL` 取り消されます。  さらに、ストリームの使用後にこのオブジェクトの 2 番目の URL の要求は失敗します。  
       
       ```javascript
       var inputStream = myInputStream; //get InputStream from socket API, and so on
@@ -395,11 +395,11 @@ var result = MSApp.method;
    :::column-end:::
 :::row-end:::  
 
-### execAsyncAtPriority  
+### <a name="execasyncatpriority"></a>execAsyncAtPriority  
 
 :::row:::
    :::column span="":::
-      指定された優先順位に従って、後で実行されるコールバックをスケジュールします。  
+      指定された優先度に従って、後で実行されるコールバックをスケジュールします。  
    :::column-end:::
    :::column span="":::
       ```javascript
@@ -421,13 +421,13 @@ var result = MSApp.method;
       
       | 型 | 説明 |  
       |:---- |:--- |  
-      | DOMString | asynchronousCallback コールバックが実行されるコンテキスト優先順位の値。  [MSApp 定数を参照してください](#msapp-constants)。  |  
+      | DOMString | 非同期Callback コールバックが実行されるコンテキスト優先度の値。  [「MSApp 定数」を参照してください](#msapp-constants)。  |  
       
       `args` [in]
       
       | 型 | 説明 |  
       |:---- |:--- |   
-      | 任意 | 同期Callback コールバック関数 \(パラメーター 1 など\ として渡される、オプションの一連の引数)。  |  
+      | 任意 | 同期呼び出しコールバック関数 \(パラメーター 1 など on\) に渡される、オプションの一連の引数です。  |  
    :::column-end:::
    :::column span="":::
       **戻り値**  
@@ -444,11 +444,11 @@ var result = MSApp.method;
    :::column span="":::
       **注釈**  
       
-      指定された `asynchronousCallback` コールバック関数は、後で非同期的に実行されます。  `asynchronousCallback` は、指定された優先度に従ってディスパッチされます。  通常の優先度は、既存の [setImmediate メソッドと同](https://developer.mozilla.org/docs/Web/API/Window/setImmediate) じです。  コールバックを実行すると、現在のコンテキストの優先度は、コールバックの実行中に指定された優先度パラメーター値に設定されます。  
+      指定された `asynchronousCallback` コールバック関数は、後で非同期的に実行されます。  `asynchronousCallback` は、指定された優先度に従ってディスパッチされます。  通常の優先度は、既存の [setImmediate メソッドと同](https://developer.mozilla.org/docs/Web/API/Window/setImmediate) じです。  コールバックを実行すると、現在のコンテキスト優先度は、コールバックの実行期間中に指定された優先度パラメーター値に設定されます。  
       
-      コールバック `asynchronousCallback` パラメーターには、任意の関数を指定できます。  パラメーターの後に引数を指定 `priority` すると、引数はすべてコールバック関数に渡されます。  
+      callback `asynchronousCallback` パラメーターには、任意の関数を指定できます。  引数がパラメーターの後に指定 `priority` されている場合、引数はすべてコールバック関数に渡されます。  
       
-      異 `execAtPriority` なり、コールバック関数によって返されるオブジェクト `asynchronousCallback` は無視され\(\経由では返 `execAsyncAtPriority` されません)。  
+      異 `execAtPriority` なり、コールバック関数によって返されるオブジェクト `asynchronousCallback` は無視されます \(and not returned `execAsyncAtPriority` via \).  
    :::column-end:::
 :::row-end:::  
 :::row:::
@@ -463,11 +463,11 @@ var result = MSApp.method;
    :::column-end:::
 :::row-end:::  
 
-### execAtPriority  
+### <a name="execatpriority"></a>execAtPriority  
 
 :::row:::
    :::column span="":::
-      指定されたコンテキスト優先順位で指定されたコールバック関数を実行します。  
+      指定されたコンテキスト優先度で指定されたコールバック関数を実行します。  
    :::column-end:::
    :::column span="":::
       ```javascript
@@ -483,26 +483,26 @@ var result = MSApp.method;
       
       | 型 | 説明 |  
       |:---- |:--- |  
-      | 機能 | 指定された優先順位のコンテキスト優先順位で同期的に実行するコールバック関数。  |  
+      | 機能 | 指定された優先度のコンテキスト優先度で同期的に実行するコールバック関数。  |  
       
       `priority` [in]  
       
       | 型 | 説明 |  
       |:---- |:--- |  
-      | DOMString | コールバック関数の実行中に現在のコンテキスト優先順位の値が設定される、指定された優先度 `synchronousCallback` の値。  [MSApp 定数を参照してください](#msapp-constants)。  |  
+      | DOMString | コールバック関数の実行中に現在のコンテキスト優先度の値が設定される、指定された優先度 `synchronousCallback` の値。  [「MSApp 定数」を参照してください](#msapp-constants)。  |  
       
       `args` [in]  
       
       | 型 | 説明 |  
       |:---- |:--- |  
-      | 任意 | コールバック関数 \(パラメーター 1 など\ として) に渡される、オプションの一連 `synchronousCallback` の引数。  
+      | 任意 | コールバック関数 \(パラメーター 1 などとして on\) に渡される、オプションの一連 `synchronousCallback` の引数です。  
    :::column-end:::
    :::column span="":::
       **戻り値**  
       
       | 型 | 説明 |  
       |:---- |:--- |  
-      | 任意 | コールバック \(該当する場合 `synchronousCallback` \) の戻り値を返します。  |  
+      | 任意 | コールバック `synchronousCallback` \(適用可能な\) の戻り値を返します。  |  
    :::column-end:::
 :::row-end:::  
 :::row:::
@@ -514,9 +514,9 @@ var result = MSApp.method;
    :::column span="":::
       **注釈**  
       
-      指定された `synchronousCallback` コールバック メソッドは同期的に実行されます。  現在のコンテキスト優先度は、指定されたコールバック関数の間、指定された優先度の値 (引数 priority で指定) に変更されます。  コールバック関数の実行が終了すると、呼び出しの前に優先度が以前の値に返 `execAtPriority` されます。  戻り値は `execAtPriority` 、コールバック メソッド \(提供されている\) の戻り値です。  
+      指定された `synchronousCallback` コールバック メソッドは同期的に実行されます。  現在のコンテキスト優先度は、指定されたコールバック関数の期間中、指定された優先度の値 (priority 引数によって指定) に変更されます。  コールバック関数の実行が終了すると、呼び出しの前に前の値に優先度が返 `execAtPriority` されます。  戻り値は `execAtPriority` 、コールバック メソッド \(提供\) の戻り値です。  
       
-      コールバック `synchronousCallback` パラメーターには、任意の関数を指定できます。  priority パラメーターの後に引数が指定されている場合は、指定されたコールバック メソッドに渡されます。  コールバック パラメーターが値を返す場合、この値も戻り `execAtPriority` 値になります。  
+      callback `synchronousCallback` パラメーターには、任意の関数を指定できます。  priority パラメーターの後に引数が指定されている場合は、指定されたコールバック メソッドに渡されます。  callback パラメーターが値を返す場合、この値も戻り値 `execAtPriority` になります。  
    :::column-end:::
 :::row-end:::  
 :::row:::
@@ -540,11 +540,11 @@ var result = MSApp.method;
    :::column-end:::
 :::row-end:::  
 
-### getCurrentPriority  
+### <a name="getcurrentpriority"></a>getCurrentPriority  
 
 :::row:::
    :::column span="":::
-      現在のコンテキストの優先度を返します。  
+      現在のコンテキスト優先度を返します。  
 
    :::column-end:::
    :::column span="":::
@@ -564,7 +564,7 @@ var result = MSApp.method;
       
       | 型 | 説明 |  
       |:---- |:--- |  
-      | DOMString | 戻り値は、文字列 、または `MSApp.HIGH` `MSApp.NORMAL` `MSApp.IDLE` .  |  
+      | DOMString | 戻り値は、文字列 、、または `MSApp.HIGH` `MSApp.NORMAL` の 1 つ `MSApp.IDLE` です。  |  
    :::column-end:::
 :::row-end:::  
 :::row:::
@@ -576,7 +576,7 @@ var result = MSApp.method;
    :::column span="":::
       **注釈**  
       
-      このメソッドは、現在のコンテキスト優先度 [\(MSApp Constants](#msapp-constants)\を参照) を返します。これは、次の方法で変更 `execAtPriority` できます `execAsyncAtPriority` 。  
+      このメソッドは、現在のコンテキスト優先度 [\(MSApp Constants](#msapp-constants)\を参照) を返します。これは、 を使用して変更 `execAtPriority` できます `execAsyncAtPriority` 。  
    :::column-end:::
 :::row-end:::  
 :::row:::
@@ -594,11 +594,11 @@ var result = MSApp.method;
    :::column-end:::
 :::row-end:::  
 
-### getHtmlPrintDocumentSource  
+### <a name="gethtmlprintdocumentsource"></a>getHtmlPrintDocumentSource  
 
-廃止された同期 API。  Windows 10 については、以下を参照してください `getHtmlPrintDocumentSourceAsync` 。  For Windows 8 and 8.1 apps, see the MSDN entry for [getHtmlPrintDocumentSource](https://msdn.microsoft.com/library/hh772325).  
+非推奨になった同期 API。  Windows 10 の場合は、を参照してください `getHtmlPrintDocumentSourceAsync` 。  アプリWindows 8 8.1 アプリについては [、getHtmlPrintDocumentSource](https://msdn.microsoft.com/library/hh772325)の MSDN エントリを参照してください。  
 
-### getHtmlPrintDocumentSourceAsync  
+### <a name="gethtmlprintdocumentsourceasync"></a>getHtmlPrintDocumentSourceAsync  
 
 :::row:::
    :::column span="":::
@@ -618,7 +618,7 @@ var result = MSApp.method;
       
       | 型 | 説明 |  
       |:---- |:--- |  
-      | Document | 印刷する HTML ドキュメントを指定します。  ルート ドキュメント、iframe 内のドキュメント、ドキュメント フラグメント、SVG ドキュメントなどです。  htmlDoc は要素ではなくドキュメントである必要があります。  |  
+      | Document | 印刷する HTML ドキュメント。  ルート ドキュメント、iframe 内のドキュメント、ドキュメント フラグメント、SVG ドキュメントを指定できます。  htmlDoc は、要素ではなくドキュメントである必要があります。  |  
    :::column-end:::
    :::column span="":::
       **戻り値**
@@ -719,19 +719,19 @@ var result = MSApp.method;
    :::column-end:::
 :::row-end:::  
 
-### getViewId  
+### <a name="getviewid"></a>getViewId  
 
 :::row:::
    :::column span="":::
       複数のウィンドウのサポート。  
       
       > [!NOTE] 
-      > Win8.1 の JavaScript UWP アプリでは、MSApp DOM API を使用する複数のウィンドウがサポートされました。この API は、現在は使用されていません。  Windows 10 では、新 `window.open` しい `window` . `MSApp.getViewId`  
+      > Win8.1 では、JavaScript UWP アプリは MSApp DOM API を使用して複数のウィンドウをサポートし、現在は削除されています。  Windows 10 の場合は、 `window.open` を使用 `window` し、新しい `MSApp.getViewId` .  
       
       | 説明 |Windows 10 | Windows 8.1 |  
       |:---- |:---- |:--- |  
-      | 新しいウィンドウを作成する | [window.open](https://developer.mozilla.org/docs/Web/API/Window/open) | [MSApp.createNewView](https://msdn.microsoft.com/library/dn254975(v=vs.85).aspx) |  
-      |新しいウィンドウ オブジェクト | [ウィンドウ](https://developer.mozilla.org/docs/Web/API/Window) |[MSAppView](https://msdn.microsoft.com/library/dn268315(v=vs.85).aspx) |  
+      | 新しいウィンドウの作成 | [window.open](https://developer.mozilla.org/docs/Web/API/Window/open) | [MSApp.createNewView](https://msdn.microsoft.com/library/dn254975(v=vs.85).aspx) |  
+      |新しい window オブジェクト | [ウィンドウ](https://developer.mozilla.org/docs/Web/API/Window) |[MSAppView](https://msdn.microsoft.com/library/dn268315(v=vs.85).aspx) |  
    :::column-end:::
    :::column span="":::
       ```javascript
@@ -768,19 +768,19 @@ var result = MSApp.method;
    :::column span="":::
       **注釈**  
       
-      [window.open と](https://developer.mozilla.org/docs/Web/API/Window/open) [window](https://developer.mozilla.org/docs/Web/API/Window)を使用して新しいウィンドウを作成しますが、WinRT API を操作するには API を追加 `MSApp.getViewId` します。  オブジェクトをパラメーターとして受け取り、 `window` さまざまな `viewId` [Windows.UI.ViewManagement.ApplicationViewSwitcher](/uwp/api/windows.ui.viewmanagement.applicationviewswitcher) API で使用できる数値を返します。  
+      [window.open と window](https://developer.mozilla.org/docs/Web/API/Window/open)[を使用](https://developer.mozilla.org/docs/Web/API/Window)して新しいウィンドウを作成しますが、WinRT API を操作するには、API を追加 `MSApp.getViewId` します。  オブジェクトをパラメーターとして受け取り、 `window` さまざまな `viewId` [Windows.UI.ViewManagement.ApplicationViewSwitcher](/uwp/api/windows.ui.viewmanagement.applicationviewswitcher) API で使用できる数値を返します。  
       
       *   可視性の遅延  
           
-          WinRT のビューは通常非表示で開始され、完全に準備が完了すると、エンド開発者はビューを表示する方法 `TryShowAsStandaloneAsync` を使用します。  Web ワールドでは、ウィンドウがすぐに表示され、エンド ユーザーはコンテンツの読み込みとレンダリング `window.open` を監視できます。  新しいウィンドウが WinRT のビューのように機能し、すぐに表示されない場合は、オプションを追加 `window.open` しました。  次に、例を示します。  
+          WinRT のビューは通常は非表示で開始され、エンド開発者は、完全に準備が整った後にビューを表示する方法 `TryShowAsStandaloneAsync` を使用します。  Web の世界では、ウィンドウがすぐに表示され、コンテンツが読み込まれレンダリングされるのをエンド ユーザー `window.open` が確認できます。  新しいウィンドウが WinRT のビューのように機能し、すぐに表示されない場合は、オプションを追加 `window.open` しました。  次に、例を示します。  
           
           ```javascript
           let newWindow = window.open("https://example.com", null, "msHideView=yes");
           ```  
           
-      *   プライマリ ウィンドウの相違点  
+      *   プライマリ ウィンドウの違い  
           
-          OS によって最初に開いたプライマリ ウィンドウの動作は、開いたセカンダリ ウィンドウとは異なります。  
+          OS によって最初に開いたプライマリ ウィンドウは、開くセカンダリ ウィンドウとは異なる動作をします。  
           
           | 説明 | プライマリ | セカンダリ |  
           |:---- |:--- |:--- |  
@@ -788,11 +788,11 @@ var result = MSApp.method;
           | window.close | アプリを閉じる | ウィンドウを閉じる |  
           | ナビゲーションの制限 | ACUR のみ | 制限なし |  
           
-          セカンダリ ウィンドウを開くことを許可しない制限は、フィードバックに応じて今後変更される可能性 [があります](https://wpdev.uservoice.com/forums/257854-microsoft-edge-developer)。  
+         <!-- The restriction to not allow secondary windows to open could change in the future depending on [feedback](https://wpdev.uservoice.com/forums/257854-microsoft-edge-developer).  -->  
       
-      *   同一発生元の通信制限  
+      *   同じ Origin 通信の制限  
           
-          技術的に困難な問題が発生し、同期呼び出し、同一元呼び出し、クロス ウィンドウ、スクリプト呼び出しの適切なサポートを妨げている。  同じオリジンのウィンドウを開いた場合、あるウィンドウのスクリプトは他のウィンドウの関数を直接呼び出し、一部の呼び出しは失敗します。  `postMessage` 呼び出しは問題ありませんが、可能であれば実行する方法をお勧めします。  この問題の改善作業が進行中です。  
+          同期、同一発生元、クロスウィンドウ、スクリプト呼び出しの適切なサポートを妨げている技術的な問題があります。  同じ原点のウィンドウを開いた場合、あるウィンドウ内のスクリプトは他のウィンドウの関数を直接呼び出すのを許可され、これらの呼び出しの一部は失敗します。  `postMessage` 呼び出しはうまく動作し、可能であれば実行する推奨される方法です。  この問題を改善するための作業が進行中です。  
    :::column-end:::
 :::row-end:::  
 :::row:::
@@ -807,11 +807,11 @@ var result = MSApp.method;
    :::column-end:::
 :::row-end:::  
     
-### isTaskScheduledAtPriorityOrHigher  
+### <a name="istaskscheduledatpriorityorhigher"></a>isTaskScheduledAtPriorityOrHigher  
 
 :::row:::
    :::column span="":::
-      指定された優先度レベル以上の保留中の作業が存在するかどうかを示すブール値を返します。  
+      指定された優先度レベル以上で保留中の作業が存在するかどうかを示すブール型 (Boolean) の値を返します。  
    :::column-end:::
    :::column span="":::
       ```javascript
@@ -827,14 +827,14 @@ var result = MSApp.method;
       
       | 型 | 説明 |  
       |:---- |:--- |  
-      | DOMString | 優先度レベル以上を指定する優先度値 [\(MSApp Constants](#msapp-constants)\を参照) を指定して、キューに入った未処理の作業を照会します。  |  
+      | DOMString | 未処理のキューに入った作業を照会する優先度レベル以上を指定する優先度値 [\(MSApp Constants](#msapp-constants)\を参照)。  |  
    :::column-end:::
    :::column span="":::
       **戻り値**  
       
       | 型 | 説明 |  
       |:---- |:--- |  
-      | ブール値 | 指定した優先度レベル以上のキューに入った作業がある場合は、それ以外の場合 `true` に `false` 返します。  |  
+      | ブール値 | 指定された優先度レベル以上でキューに入った作業がある場合、それ以外の場合 `true` は `false` 返します。  |  
    :::column-end:::
 :::row-end:::  
 :::row:::
@@ -846,7 +846,7 @@ var result = MSApp.method;
    :::column span="":::
       **注釈**  
       
-      このメソッドは、呼び出し元の JavaScript コードが優先度の高い作業を得る目的で、さまざまな優先度レベル \(または上記\) で保留中の作業が見られるかどうかを JavaScript コードが判断する手段を提供します。 `isTaskScheduledAtPriorityOrHigher`  
+      このメソッドは、呼び出し元の JavaScript コードが優先度の高い作業に向かうという意図を持つ、さまざまな優先度レベル \(または上記\) で保留中の作業が実行されるかどうかを判断する JavaScript コードの手段を提供します。 `isTaskScheduledAtPriorityOrHigher`  
    :::column-end:::
 :::row-end:::  
 :::row:::
@@ -878,11 +878,11 @@ var result = MSApp.method;
    :::column-end:::
 :::row-end:::  
 
-### pageHandlesAllApplicationActivations  
+### <a name="pagehandlesallapplicationactivations"></a>pageHandlesAllApplicationActivations  
 
 :::row:::
    :::column span="":::
-      すべてのアクティブ化イベント \(通知やピン留めされたタイルのクリックなど) の前に、開始パスの更新 (ページの再読み込み) を回避するために使用されます。  
+      すべてのアクティブ化イベント \(通知やピン留めされたタイル\のクリックなど) の前に開始パス (ページの再読み込み) が更新されるのを避けるために使用されます。  
    :::column-end:::
    :::column span="":::
       ```javascript
@@ -896,7 +896,7 @@ var result = MSApp.method;
       
       | 型 | 説明 |  
       |:---- |:--- |  
-      | ブール値 | 常に開始パスの更新 (ページの再読み込み) をスキップし、代わりにアクティブ化されたイベントの発生 `MSApp.pageHandlesAllApplicationActivations(true)` に直接 `WebUIApplication` ジャンプするために使用します。  すべてのページでアクティブ化イベントを個別に処理する必要があります。  このメソッドを定義することで、アクティブ化されたイベント `true` \(通知\など) をクリックすると、再読み込みはトリガーされません。これは、ページの再読み込みを回避する単一ページ アプリにとって不可欠です。  |  
+      | ブール値 | スタート パスの更新 (ページの再読み込み) を常にスキップし、代わりにアクティブ化されたイベントの発生 `MSApp.pageHandlesAllApplicationActivations(true)` に直進 `WebUIApplication` するために使用します。  すべてのページでライセンス認証イベントを個別に処理する必要があります。  このメソッドを次のように定義すると、アクティブ化されたイベント `true` \(notification\など) をクリックすると、再読み込みはトリガーされません。ページの再読み込みを回避する単一ページ アプリにとって不可欠です。  |  
    :::column-end:::
    :::column span="":::
       **戻り値**
@@ -939,11 +939,11 @@ var result = MSApp.method;
    :::column-end:::
 :::row-end:::  
 
-### suppressSubdownloadCredentialPrompts  
+### <a name="suppresssubdownloadcredentialprompts"></a>suppressSubdownloadCredentialPrompts  
 
 :::row:::
    :::column span="":::
-      リソースのダウンロード中に、アプリが認証プロンプトを抑制するかどうかを制御します。  
+      リソースのダウンロード中にアプリが認証プロンプトを表示するかどうかを制御します。  
    :::column-end:::
    :::column span="":::
       ```javascript
@@ -959,7 +959,7 @@ var result = MSApp.method;
       
       | 型 | 説明 |  
       |:---- |:--- |  
-      | ブール値 | true に設定すると、認証プロンプトが表示される可能性が抑制されます。  値 false は、ユーザーからの潜在的な認証プロンプトを抑制する必要があります。  |  
+      | ブール値 | true の値を指定すると、潜在的な認証プロンプトが抑制されます。  false の値を指定しても、ユーザーからの潜在的な認証プロンプトは抑制されない。  |  
    :::column-end:::
    :::column span="":::
       **戻り値**  
@@ -976,16 +976,16 @@ var result = MSApp.method;
    :::column span="":::
       **注釈**  
       
-      この `suppressSubdownloadCredentialPrompts` メソッドは、リソースのダウンロード中にアプリが潜在的な認証プロンプトを抑制するかどうかを制御します。  既定の動作では、資格情報の入力を抑制しません。  
+      この `suppressSubdownloadCredentialPrompts` メソッドは、リソースのダウンロード中にアプリが潜在的な認証プロンプトを抑制するかどうかを制御します。  既定の動作では、資格情報のプロンプトを抑制しません。  
       
-      `suppressSubdownloadCredentialPrompts` は、メール アプリ \(各画像が認証を必要とする多数の画像を含むニュースレターを含む可能性がある) など、認証を必要とするリソースが過剰に読み込まれる可能性があるアプリで使用することを目的としています。  
+      `suppressSubdownloadCredentialPrompts` これは、メール アプリ \(各画像が認証を必要とする多数の画像を含むニュースレターを含む可能性がある)など、認証を必要とするリソースが過剰に読み込まれる可能性があるアプリで使用することを目的としています。  
       
-      資格情報の入力を求めるメッセージを表示しない場合、認証を必要とするリソースにアクセスするときにサーバーに認証するためのダイアログは表示されません。また、リソースはダウンロードされません。  プロキシ認証やクライアント認定要求ダイアログなどの他のプロンプトに影響を与えるのではなく `suppressSubdownloadCredentialPrompts` 、XHR にも影響を与える点に注意してください。  
+      資格情報のプロンプトを表示しない場合、認証が必要なリソースにアクセスするときにサーバーに対する認証のダイアログは表示されません。リソースはダウンロードされません。  プロキシ認証やクライアント認定要求ダイアログなどの他の可能なプロンプトには影響を与え `suppressSubdownloadCredentialPrompts` 、XHR には影響を与えもしない点に注意してください。  
       
-      要素でホスト `suppressSubdownloadCredentialPrompts` されているコンテンツを含め、アプリケーションのすべてのコンテンツに影響を与える点に注意 `webview` してください。  
+      要素でホスト `suppressSubdownloadCredentialPrompts` されるコンテンツを含め、アプリケーション内のすべてのコンテンツに影響を与える点に注意 `webview` してください。  
       
       > [!IMPORTANT]
-      > 資格情報プロンプトの決定はキャッシュされます。  したがって、資格情報のプロンプトを抑制するとすぐに有効になりますが、表示を抑制した後で資格情報のプロンプトを有効にする場合は、ドキュメントの再読み込みを有効にする必要があります。  
+      > 資格情報プロンプトの決定はキャッシュされます。  したがって、資格情報のプロンプトを抑制するとすぐに有効になりますが、資格情報を抑制した後に資格情報のプロンプトを有効にするには、ドキュメントの再読み込みが必要な場合があります。  
    :::column-end:::
 :::row-end:::  
 :::row:::
@@ -1003,7 +1003,7 @@ var result = MSApp.method;
    :::column-end:::
 :::row-end:::  
 
-### terminateApp  
+### <a name="terminateapp"></a>terminateApp  
 
 
 :::row:::
@@ -1024,7 +1024,7 @@ var result = MSApp.method;
       
       | 型 | 説明 |  
       |:---- |:--- |  
-      | エラー | 終了 `Error` をトリガーしたエラーを記述するために使用できるオブジェクト。  オブジェクトには、番号、説明、およびスタックプロパティが含まれている必要があります。オブジェクトにこれらのプロパティが含まれている場合、エラー レポート `Error` は生成されません。  |  
+      | エラー | 終了 `Error` をトリガーしたエラーを記述するために使用できるオブジェクト。  オブジェクトには、数値、説明、およびスタック プロパティが含まれている必要があります。オブジェクトにこれらのプロパティが含まれている場合、エラー レポート `Error` は生成されません。  |  
    :::column-end:::
    :::column span="":::
       **戻り値**
@@ -1041,14 +1041,14 @@ var result = MSApp.method;
    :::column span="":::
       **注釈**  
       
-      報告された問題がアプリの上位 5 つの問題の 1 つになると、アプリの [品質] ページ `terminateApp` に表示されます。  
+      報告された問題がアプリの上位 5 つの問題の 1 つになった場合は、アプリの [品質] ページ `terminateApp` に表示されます。  
    :::column-end:::
 :::row-end:::  
 :::row:::
    :::column span="":::
       **例**  
       
-      この例では、 `terminateApp` 例外が発生した場合に呼び出します。  例外をキャッチ `Error` するときに指定されたオブジェクトを使用します。  
+      次の使用例は `terminateApp` 、例外が発生した場合に呼び出します。  例外をキャッチ `Error` するときに指定されたオブジェクトを使用します。  
       
       ```javascript
       try {  
@@ -1065,51 +1065,51 @@ var result = MSApp.method;
    :::column-end:::
 :::row-end:::  
 
-### MSApp 定数  
+### <a name="msapp-constants"></a>MSApp 定数  
 
 :::row:::
    :::column span="":::
-      、、、に関連付けられている許可 `execAsyncAtPriority` `execAtPriority` された優先度 `getCurrentPriority` の値 `isTaskScheduldAtPriorityOrHigher` 。  
+      、、、に関連付けられた許可 `execAsyncAtPriority` `execAtPriority` された優先度 `getCurrentPriority` の値 `isTaskScheduldAtPriorityOrHigher` 。  
    :::column-end:::
    :::column span="":::
-      #### 現在の顧客  
+      #### <a name="current"></a>現在の顧客  
       
       `current`  
       
       | 型 | 説明 |  
       |:---- |:--- |  
-      | DOMString | 適切なメソッド \(See also section\) と一緒に使用すると、メソッドは要求された操作を実行するときに現在のコンテキスト優先順位 `current` を使用します。  |  
+      | DOMString | 適切なメソッド \(see also section\) と一緒に使用すると、要求された操作を実行するときに、メソッドは現在のコンテキスト優先度 `current` を使用します。  |  
    :::column-end:::
 :::row-end:::  
 :::row:::
    :::column span="":::
-      #### 高  
+      #### <a name="high"></a>高  
       
       `high`  
       
       | 型 | 説明 |  
       |:---- |:--- |  
-      | DOMString | 適切 `high` なメソッド \(See also section\) と一緒に使用する場合、メソッドは要求された操作を実行するときに通常より高い優先度を使用し、既存の通常の優先度が動作する前に操作をディスパッチします。  |  
+      | DOMString | `high`適切なメソッド \(See also section\) と一緒に使用すると、要求された操作を実行するときに、メソッドは通常の優先度よりも高い値を使用し、既存の通常の優先度の作業の前に操作をディスパッチします。  |  
    :::column-end:::
    :::column span="":::
-      #### アイドル  
+      #### <a name="idle"></a>アイドル  
       
       `idle`  
       
       | 型 | 説明 |  
       |:---- |:--- |  
-      | DOMString | 適切 `ideal` なメソッド \(See also section\) と一緒に使用する場合、メソッドは要求された操作を実行するときに通常より低い優先度を使用し、既存の通常の優先度の処理の後に操作をディスパッチします。  |  
+      | DOMString | `ideal`適切なメソッド \(See also section\) と一緒に使用すると、要求された操作を実行するときに、メソッドは通常の優先度より低い値を使用し、既存の通常の優先度の作業の後に操作をディスパッチします。  |  
    :::column-end:::
 :::row-end:::  
 :::row:::
    :::column span="":::
-      #### 通常  
+      #### <a name="normal"></a>通常  
       
       `normal`  
       
       | 型 | 説明 |  
       |:---- |:--- |  
-      | DOMString | 適切なメソッド (「関連」セクションを参照) と一緒に使用すると、要求された操作を実行するときに、メソッドは通常の既存の優先度 `normal` を使用します。  |  
+      | DOMString | 適切 `normal` なメソッドと一緒に使用する場合 (「また」セクションを参照)、要求された操作を実行するときに、メソッドは通常の既存の優先度を使用します。  |  
    :::column-end:::
    :::column span="":::
       **例**  
@@ -1134,7 +1134,7 @@ var result = MSApp.method;
    :::column-end:::
 :::row-end:::  
 
-## MSAppAsyncOperation  
+## <a name="msappasyncoperation"></a>MSAppAsyncOperation  
 
 ```javascript
 var asyncOperation = MSApp.clearTemporaryWebDataAsync(); 
@@ -1143,11 +1143,11 @@ asyncOperation.onerror = function() { console.log("Failed to clear temporary web
 asyncOperation.start(); 
 ```  
 
-### start  
+### <a name="start"></a>start  
 
 :::row:::
    :::column span="":::
-      を起動 `MSAppAsyncOperation` します。  
+      を開始 `MSAppAsyncOperation` します。  
    :::column-end:::
    :::column span="":::
       ```javascript
@@ -1172,47 +1172,47 @@ asyncOperation.start();
       
       **プロパティ**  
       
-      `error` property  
+      `error` プロパティ  
       
       | 型 | 説明 |  
       |:---- |:--- |  
-      | DOMError | のエラーを表します `MSAppAsyncOperation` 。  |  
+      | DOMError | でエラーを表します `MSAppAsyncOperation` 。  |  
       
       ```javascript
       p = object.error
       ```  
       
-      `oncomplete` property  
+      `oncomplete` プロパティ  
       
       | 型 | 説明 |  
       |:---- |:--- |  
-      | EventHandler | 完了時にイベント ハンドラーを設定するプロパティ `MSAppAsyncOperation` です。  |  
+      | EventHandler | の完了時にイベント ハンドラーを設定するプロパティ `MSAppAsyncOperation` 。  |  
       
       ```javascript
       p = object.oncomplete
       ```  
       
-      `onerror` property  
+      `onerror` プロパティ  
       
       | 型 | 説明 |  
       |:---- |:--- |  
-      | EventHandler | 中にエラーが発生した場合にイベント ハンドラーを設定するプロパティ `MSAppAsyncOperation` です。  |  
+      | EventHandler | エラー時にイベント ハンドラーを設定するプロパティ `MSAppAsyncOperation` です。  |  
       
       ```javascript
       p = object.onerror
       ```  
       
-      `readyState` property  
+      `readyState` プロパティ  
       
       | 型 | 説明 |  
       |:---- |:--- |  
-      | Number | JavaScript を使用して Windows アプリ内の非同期操作の状態を表します。  値は次のとおりです。 `Started[0]` `Completed[1]` , , `Error[2]` .  |  
+      | Number | JavaScript を使用して Windows アプリ内の非同期操作の状態を表します。  値には `Started[0]` 、、 `Completed[1]` 、 が含 `Error[2]` まれます。  |  
       
       ```javascript
       p = object.readyState
       ```  
       
-      `result` property  
+      `result` プロパティ  
       
       | 型 | 説明 |  
       |:---- |:--- |  

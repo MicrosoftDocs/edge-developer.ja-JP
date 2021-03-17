@@ -3,16 +3,16 @@ description: Microsoft Edge DevTools アニメーション インスペクター
 title: アニメーションの検査
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/12/2021
+ms.date: 03/08/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 742096f13179de2ad1a95dc9fa62d2bbf3d7c226
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: dba948087ca06015f686d17ba48584199373805a
+ms.sourcegitcommit: 4b9fb5c1176fdaa5e3c60af2b84e38d5bb86cd81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11397735"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "11439543"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -103,7 +103,7 @@ Microsoft Edge DevTools アニメーション インスペクターには、主�
 アニメーションをキャプチャした後、再生する方法は次のとおりです。  
 
 *   [概要] ウィンドウのサムネイルに **カーソルを合わせる** と、プレビューが表示されます。  
-*   [概要] ウィンドウ**\([** 詳細] ウィンドウ\に表示される****) から [アニメーション グループ] を選択し、再生**\(** 再生アイコン ![ \) アイコン ][ImageReplayButtonIcon] を選択します。  アニメーションはビューポートで再生されます。  現在選択 **されているアニメーション** グループのプレビュー速度を変更するには、アニメーション速度 \( アニメーション速度アイコン ![ ][ImageAnimationSpeedButtonsIcon] \) アイコンを選択します。  赤い垂直バーを使用して現在の位置を変更できます。  
+*   [概要] ウィンドウ**\([** 詳細] ウィンドウ\に表示される****) から [アニメーション グループ] を選択し、再生**\(** 再生アイコン ![ \) アイコン ](../media/replay-button-icon.msft.png) を選択します。  アニメーションはビューポートで再生されます。  現在選択 **されているアニメーション** グループのプレビュー速度を変更するには、アニメーション速度 \( アニメーション速度アイコン ![ ](../media/animation-speed-buttons-icon.msft.png) \) アイコンを選択します。  赤い垂直バーを使用して現在の位置を変更できます。  
 *   赤い垂直バーを選択してドラッグして、ビューポート アニメーションをスクラブします。  
     
 ### <a name="view-animation-details"></a>アニメーションの詳細を表示する  
@@ -170,8 +170,8 @@ Microsoft Edge DevTools アニメーション インスペクターには、主�
 
 <!-- image links -->  
 
-[ImageAnimationSpeedButtonsIcon]: ../media/animation-speed-buttons-icon.msft.png  
-[ImageReplayButtonIcon]: ../media/replay-button-icon.msft.png  
+(../media/animation-speed-buttons-icon.msft.png): ../media/animation-speed-buttons-icon.msft.png  
+(../media/replay-button-icon.msft.png): ../media/replay-button-icon.msft.png  
 
 <!-- links -->  
 

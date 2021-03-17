@@ -3,16 +3,16 @@ description: Microsoft Edge の仮想デバイスを使用して、モバイル 
 title: Microsoft Edge DevTools でモバイル デバイスをエミュレートする
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/12/2021
+ms.date: 03/08/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge, Web 開発, f12 ツール, devtools, エミュレーション, デバイス, シミュレーション, モバイル
-ms.openlocfilehash: 1a83dece95acba386385bfea035a9e2c91639240
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: bb081ddd5f773e5e9ae6a1b83b5fcb13408df6cb
+ms.sourcegitcommit: 4b9fb5c1176fdaa5e3c60af2b84e38d5bb86cd81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11398785"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "11439452"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -47,7 +47,7 @@ ms.locfileid: "11398785"
 
 ## <a name="simulate-a-mobile-viewport"></a>モバイル ビューポートをシミュレートする  
 
-[**デバイス エミュレーションの**切り替え\( Toggle Device Toolbar \) を選択するか ![ ][ImageDeviceToolbarIcon] **、[DevTools** `...` \( **** \) > デバイス エミュレーションのカスタマイズと制御] を選択して、モバイル ビューポートをシミュレートできる UI を開きます。  
+[**デバイス エミュレーションの**切り替え\( Toggle Device Toolbar \) を選択するか ![ ](../media/toggle-device-toolbar-dark-icon.msft.png) **、[DevTools** `...` \( **** \) > デバイス エミュレーションのカスタマイズと制御] を選択して、モバイル ビューポートをシミュレートできる UI を開きます。  
 
 :::image type="complex" source="../media/device-mode-toggle-device-toolbar-highlighted.msft.png" alt-text="[デバイス] ツールバー" lightbox="../media/device-mode-toggle-device-toolbar-highlighted.msft.png":::
     [デバイス] ツールバー  
@@ -109,7 +109,7 @@ ms.locfileid: "11398785"
 
 横向きに Web ページをテストします。  
 
-*   ビューポートを横向きに回転するには、[ **回転]\(** 回転 ![ ][ImageRotateIcon] \) を選択します。  
+*   ビューポートを横向きに回転するには、[ **回転]\(** 回転 ![ ](../media/rotate-dark-icon.msft.png) \) を選択します。  
     
     :::image type="complex" source="../media/device-mode-toggle-device-toolbar-landscape.msft.png" alt-text="横向きに表示されるページ" lightbox="../media/device-mode-toggle-device-toolbar-landscape.msft.png":::
        横向きに表示されるページ  
@@ -216,7 +216,7 @@ iPhone 6 などの特定のモバイル デバイスの寸法をシミュレー�
 
 ネットワークではなく CPU のみを調整するには、次の手順を実行します。
 
-1.  [パフォーマンス] **パネルを選択** し、[キャプチャ設定\( Capture **Settings** ![ ][ImageCaptureIcon] \] ) を選択します。
+1.  [パフォーマンス] **パネルを選択** し、[キャプチャ設定\( Capture **Settings** ![ ](../media/capture-settings-icon.msft.png) \] ) を選択します。
 1.  **[CPU**  >  **4x スローダウン] または** **[6 倍のスローダウン] を選択します**。
     
     :::image type="complex" source="../media/device-mode-performance-cpu-throttle.msft.png" alt-text="[パフォーマンス] パネルの CPU リスト" lightbox="../media/device-mode-performance-cpu-throttle.msft.png":::
@@ -242,7 +242,7 @@ iPhone 6 などの特定のモバイル デバイスの寸法をシミュレー�
     
 [パフォーマンス] パネルからネットワーク調整を **設定** することもできます。  
 
-1.  [**キャプチャ設定**\( Capture Settings \) を選択し、[ネットワーク] リストを選択し、プリセットを ![ ][ImageCaptureIcon] **[Fast 3G]** または **[低速 3G] に変更します**。 ****  
+1.  [**キャプチャ設定**\( Capture Settings \) を選択し、[ネットワーク] リストを選択し、プリセットを ![ ](../media/capture-settings-icon.msft.png) **[Fast 3G]** または **[低速 3G] に変更します**。 ****  
     
     :::image type="complex" source="../media/device-mode-performance-network-throttle.msft.png" alt-text="[パフォーマンス] パネルからネットワーク調整を設定する" lightbox="../media/device-mode-performance-network-throttle.msft.png":::
        [パフォーマンス] パネルからネットワーク調整 **を設定** する  
@@ -338,12 +338,6 @@ iPhone 6 などの特定のモバイル デバイスの寸法をシミュレー�
 ## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームと連絡を取る  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
-
-<!-- image links -->  
-
-[ImageCaptureIcon]: ../media/capture-settings-icon.msft.png  
-[ImageDeviceToolbarIcon]: ../media/toggle-device-toolbar-dark-icon.msft.png  
-[ImageRotateIcon]: ../media/rotate-dark-icon.msft.png  
 
 <!-- links -->  
 

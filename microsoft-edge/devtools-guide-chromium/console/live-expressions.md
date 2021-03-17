@@ -3,16 +3,16 @@ description: コンソールに同じ JavaScript 式を繰り返し入力する�
 title: Live 式を使用して JavaScript 式の値をリアルタイムで確認する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/12/2021
+ms.date: 03/08/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 5bc49b60cc1c1dfb41c793c3fec7681fb6415e4c
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: af920de1c395489dc09b83f3cc0f24814c4f5cbe
+ms.sourcegitcommit: 4b9fb5c1176fdaa5e3c60af2b84e38d5bb86cd81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11398799"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "11439227"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -35,7 +35,7 @@ ms.locfileid: "11398799"
 ## <a name="create-a-live-expression"></a>Live 式の作成  
 
 1.  [コンソールを開きます][DevToolsConsoleReferenceOpenConsole]。  
-1.  [Live **Expression \(** Create ![ Live Expression ][ImageCreateLiveExpressionIcon] \] を選択します)。  [Live **Expression]** テキスト ボックスが表示されます。  
+1.  [Live **Expression \(** Create ![ Live Expression ](../media/create-live-expression-icon.msft.png) \] を選択します)。  [Live **Expression]** テキスト ボックスが表示されます。  
     
     :::image type="complex" source="../media/console-create-live-expression.msft.png" alt-text="[Live 式] テキスト ボックスに document.activeElement と入力する" lightbox="../media/console-create-live-expression.msft.png":::
        [Live `document.activeElement` 式] **テキスト ボックスに入力** する  
@@ -46,10 +46,6 @@ ms.locfileid: "11398799"
 ## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームと連絡を取る  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
-
-<!-- image links -->  
-
-[ImageCreateLiveExpressionIcon]: ../media/create-live-expression-icon.msft.png  
 
 <!-- links -->  
 

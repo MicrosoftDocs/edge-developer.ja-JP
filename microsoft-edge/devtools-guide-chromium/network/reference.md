@@ -3,16 +3,16 @@ description: Microsoft Edge DevTools ネットワーク パネル機能の包括
 title: ネットワーク分析リファレンス
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/12/2021
+ms.date: 03/08/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: e8e2259e0f95499519c954e2199e191382998649
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: 94a7031763da1e540b4dab802358e5f200e0db4a
+ms.sourcegitcommit: 4b9fb5c1176fdaa5e3c60af2b84e38d5bb86cd81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11398379"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "11439704"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -44,12 +44,12 @@ Microsoft Edge DevTools ネットワーク分析機能の包括的なリファ�
 
 要求の記録を停止するには、次の手順を実行します。  
 
-1.  ネットワーク ツール **で、[** ネットワーク ログの記録 **を停止する** ] \( [ネットワーク ログの記録 ![ を停止する ][ImageRecordOnIcon] ] \) を選択します。  DevTools が要求を記録しなくなった場合は灰色になります。  
+1.  ネットワーク ツール **で、[** ネットワーク ログの記録 **を停止する** ] \( [ネットワーク ログの記録 ![ を停止する ](../media/record-on-icon.msft.png) ] \) を選択します。  DevTools が要求を記録しなくなった場合は灰色になります。  
 1.  ネットワーク `Control` + `E` ツールのフォーカス中に `Command` + `E` [\(Windows,Linux\)**** または \(macOS\) を選択します。  
 
 ### <a name="clear-requests"></a>要求をクリアする  
 
-[**要求]** テーブルからすべての要求をクリアするには、[ネットワーク] ツールで [\( Clear ![ ][ImageClearIcon] \) をクリアする] を選択します。 ****  
+[**要求]** テーブルからすべての要求をクリアするには、[ネットワーク] ツールで [\( Clear ![ ](../media/clear-requests-icon.msft.png) \) をクリアする] を選択します。 ****  
 
 :::image type="complex" source="../media/network-network-clear-button.msft.png" alt-text="[クリア] ボタン" lightbox="../media/network-network-clear-button.msft.png":::
    [ **クリア]** ボタン  
@@ -239,7 +239,7 @@ DevTools はネットワーク ツールの横**** に警告アイコンを表�
 :::row-end:::  
 :::row:::
    :::column span="1":::
-      **Media**  
+      **メディア**  
    :::column-end:::
    :::column span="2":::
       &nbsp;  
@@ -929,7 +929,7 @@ HAR ファイルを保存したら、分析のために DevTools にインポー
 ### <a name="hide-the-filters-pane"></a>[フィルター] ウィンドウを非表示にする  
 
 既定では、DevTools には [フィルター] ウィンドウ **が表示** されます。  
-[ **フィルター** \( ![ Filter ][ImageFilterIcon] \) ] を選択して非表示にします。  
+[ **フィルター** \( ![ Filter ](../media/filter-icon.msft.png) \) ] を選択して非表示にします。  
 
 :::image type="complex" source="../media/network-network-resources-hide-filters-button.msft.png" alt-text="[フィルターの非表示] ボタン" lightbox="../media/network-network-resources-hide-filters-button.msft.png":::
    [フィルターの非表示] ボタン  
@@ -960,15 +960,6 @@ HAR ファイルを保存したら、分析のために DevTools にインポー
 ## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームと連絡を取る  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
-
-<!-- image links -->  
-
-[ImageCaptureScreenshotsIcon]: ../media/capture-screenshots-icon.msft.png  
-[ImageClearIcon]: ../media/clear-requests-icon.msft.png  
-[ImageFilterIcon]: ../media/filter-icon.msft.png  
-[ImageHideIcon]: ../media/hide-overview-icon.msft.png  
-[ImageLargeResourceRowsIcon]: ../media/large-resource-rows-button-icon.msft.png  
-[ImageRecordOnIcon]: ../media/record-on-icon.msft.png  
 
 <!-- links -->  
 

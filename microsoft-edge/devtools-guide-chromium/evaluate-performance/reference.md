@@ -3,16 +3,16 @@ description: Microsoft Edge DevTools でパフォーマンスを記録および�
 title: パフォーマンス分析リファレンス
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/12/2021
+ms.date: 03/08/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 181bc05fffbaef6a06bebcc5cb9ccfcc8e7de498
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: e7774dc0aab647b8cf2bf47699368fafe6c21d70
+ms.sourcegitcommit: 4b9fb5c1176fdaa5e3c60af2b84e38d5bb86cd81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11398806"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "11439690"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -42,7 +42,7 @@ Microsoft [][DevtoolsEvaluatePerformanceGettingStarted] [Edge DevTools][Microsof
 
 1.  分析するページに移動します。  
 1.  DevTools **で** パフォーマンス ツールを開きます。  
-1.  **[Record** \( Record icon ![ ][ImageRecordIcon] \] を選択します)。  
+1.  **[Record** \( Record icon ![ ](../media/record-icon.msft.png) \] を選択します)。  
     
     :::image type="complex" source="../media/evaluate-performance-performance-record-highlight.msft.png" alt-text="Record" lightbox="../media/evaluate-performance-performance-record-highlight.msft.png":::
        **Record**  
@@ -57,7 +57,7 @@ Microsoft [][DevtoolsEvaluatePerformanceGettingStarted] [Edge DevTools][Microsof
 
 1.  分析するページに移動します。  
 1.  DevTools **の** [パフォーマンス] パネルを開きます。  
-1.  [更新 **] ページ** \( Refresh Page ![ ][ImageRefreshPageIcon] \) を選択します。  DevTools は、ページの更新中にパフォーマンス 指標を記録し、読み込み完了から数秒後に自動的に記録を停止します。  
+1.  [更新 **] ページ** \( Refresh Page ![ ](../media/refresh-page-icon.msft.png) \) を選択します。  DevTools は、ページの更新中にパフォーマンス 指標を記録し、読み込み完了から数秒後に自動的に記録を停止します。  
     
     :::image type="complex" source="../media/evaluate-performance-performance-refresh-button.msft.png" alt-text="[更新] ページ" lightbox="../media/evaluate-performance-performance-refresh-button.msft.png":::
        **[更新] ページ**  
@@ -81,7 +81,7 @@ DevTools は、ほとんどのアクティビティが発生した記録部分�
 
 ### <a name="force-garbage-collection-while-recording"></a>記録中にガベージ コレクションを強制する  
 
-ページの記録中に、[ガベージを収集 **する]** \( ガベージ アイコン \) を選択してガベージ コレクション ![ ][ImageCollectGarbageIcon] を強制します。  
+ページの記録中に、[ガベージを収集 **する]** \( ガベージ アイコン \) を選択してガベージ コレクション ![ ](../media/collect-garbage-icon.msft.png) を強制します。  
 
 :::image type="complex" source="../media/evaluate-performance-performance-collect-garbage-button.msft.png" alt-text="ガベージの収集" lightbox="../media/evaluate-performance-performance-collect-garbage-button.msft.png":::
    ガベージの収集  
@@ -89,7 +89,7 @@ DevTools は、ほとんどのアクティビティが発生した記録部分�
 
 ### <a name="show-recording-settings"></a>記録設定を表示する  
 
-DevTools **がパフォーマンス** 記録をキャプチャする方法に関連するその他の設定を公開するには、[ ![ キャプチャ設定 ][ImageCaptureSettingsIcon] \( Capture settings \) を選択します。  
+DevTools **がパフォーマンス** 記録をキャプチャする方法に関連するその他の設定を公開するには、[ ![ キャプチャ設定 ](../media/capture-settings-icon.msft.png) \( Capture settings \) を選択します。  
 
 :::image type="complex" source="../media/evaluate-performance-performance-capture-settings-button-open-drawer.msft.png" alt-text="[キャプチャ設定] セクション" lightbox="../media/evaluate-performance-performance-capture-settings-button-open-drawer.msft.png":::
    [ **キャプチャ設定]** セクション  
@@ -161,7 +161,7 @@ DevTools **がパフォーマンス** 記録をキャプチャする方法に関
 
 ## <a name="clear-the-previous-recording"></a>前の記録をクリアする  
 
-録音を行った後、[記録を **クリアする** ]\( [録音のクリア] アイコン \) を選択して、[パフォーマンス] パネルからその ![ ][ImageClearRecordingIcon] 録音を **クリア** します。  
+録音を行った後、[記録を **クリアする** ]\( [録音のクリア] アイコン \) を選択して、[パフォーマンス] パネルからその ![ ](../media/clear-recording-icon.msft.png) 録音を **クリア** します。  
 
 :::image type="complex" source="../media/evaluate-performance-performance-refreshed-disable-javascript-samples-checkbox-off-clear-button.msft.png" alt-text="録音のクリア" lightbox="../media/evaluate-performance-performance-refreshed-disable-javascript-samples-checkbox-off-clear-button.msft.png":::
    **録音のクリア**  
@@ -201,13 +201,13 @@ DevTools **がパフォーマンス** 記録をキャプチャする方法に関
 
 クエリに一致するアクティビティを移動するには、次の操作を行います。  
 
-*   [前 **の** \( ![ 前 ][ImagePreviousIcon] の \) ] ボタンと [ **次** へ] \( ![ Next ][ImageNextIcon] \) ボタンを使用します。  
+*   [前 **の** \( ![ 前 ](../media/previous-icon.msft.png) の \) ] ボタンと [ **次** へ] \( ![ Next ](../media/next-icon.msft.png) \) ボタンを使用します。  
 *   前 `Shift` + `Enter` の項目を選択するか、次 `Enter` の項目を選択します。  
 
 クエリ設定を変更するには、次のコマンドを実行します。  
 
-*   クエリ **で大文字と** 小文字を区別するには、[大文字と小文字を区別 ![ ][ImageSearchCaseIcon] する]を選択します。  
-*   クエリ **で正規表現** を ![ ][ImageSearchRegexIcon] 使用するには、Regex \( Regex \) を選択します。  
+*   クエリ **で大文字と** 小文字を区別するには、[大文字と小文字を区別 ![ ](../media/search-case-icon.msft.png) する]を選択します。  
+*   クエリ **で正規表現** を ![ ](../media/search-regex-icon.msft.png) 使用するには、Regex \( Regex \) を選択します。  
 
 検索ボックスを非表示にする場合は、[キャンセル] を **選択します**。  
 
@@ -278,7 +278,7 @@ JavaScript [要求の詳細な](#disable-javascript-samples) フレーム グラ
 
 既定では、[ **グループ化] メニュー** は [グループ化なし **] に設定されています**。  [グループ **化] メニューを使用** して、さまざまな条件に基づいてアクティビティ テーブルを並べ替える。  
 
-[ **最も重いスタック** \( 最も重いスタック \を表示する] を選択して、アクティビティ テーブルの右側に別のテーブル ![ ][ImageShowHeaviestStackIcon] を **表示** します。  最も重いスタック テーブルを設定 **するアクティビティを選択** します。  [ **最も重いスタック]** テーブルには、選択したアクティビティの子の実行に最も時間がかかった時間が表示されます。  
+[ **最も重いスタック** \( 最も重いスタック \を表示する] を選択して、アクティビティ テーブルの右側に別のテーブル ![ ](../media/show-heaviest-stack-icon.msft.png) を **表示** します。  最も重いスタック テーブルを設定 **するアクティビティを選択** します。  [ **最も重いスタック]** テーブルには、選択したアクティビティの子の実行に最も時間がかかった時間が表示されます。  
 
 #### <a name="the-bottom-up-panel"></a>[Bottom-Up] パネル  
 
@@ -410,7 +410,7 @@ FPS グラフの上の **赤い** バーは、フレーム レートが低く低
     
 :::row:::
    :::column span="":::
-      :::image type="complex" source="../media/evaluate-performance-bing-performance-network.msft.png" alt-text="要求の行バー www.bing.com表示" lightbox="../media/evaluate-performance-bing-performance-network.msft.png":::
+      :::image type="complex" source="../media/evaluate-performance-bing-performance-network.msft.png" alt-text="要求の行バー www.bing.com 表示" lightbox="../media/evaluate-performance-bing-performance-network.msft.png":::
          要求の行バー `www.bing.com` 表現  
       :::image-end:::  
    :::column-end:::
@@ -489,9 +489,9 @@ Network や**Main****** などのセクションを分析する場合、特定�
 
 図を移動するには、次の方法を実行します。  
 
-*   X **軸と** Y 軸に沿って移動するには、[パン モード\] (パン モード ![ ][ImagePanModeIcon] \) を選択します。  
-*   Z **軸に沿って** 回転するには、[回転 ![ モード ][ImageRotateModeIcon] \] を選択します。  
-*   [Reset **Transform** \( ![ Reset Transform \) ] を ][ImageResetTransformIcon] 選択して、ダイアグラムを元の位置にリセットします。  
+*   X **軸と** Y 軸に沿って移動するには、[パン モード\] (パン モード ![ ](../media/pan-mode-icon.msft.png) \) を選択します。  
+*   Z **軸に沿って** 回転するには、[回転 ![ モード ](../media/rotate-mode-icon.msft.png) \] を選択します。  
+*   [Reset **Transform** \( ![ Reset Transform \) ] を ](../media/reset-transform-icon.msft.png) 選択して、ダイアグラムを元の位置にリセットします。  
     
 ### <a name="view-paint-profiler"></a>ペイント プロファイラーの表示  
 
@@ -573,22 +573,6 @@ DevTools は、teal の潜在的に問題のある要素の概要を示します
 ## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームと連絡を取る  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
-
-<!-- image links -->  
-
-[ImageCaptureSettingsIcon]: ../media/capture-settings-icon.msft.png  
-[ImageClearRecordingIcon]: ../media/clear-recording-icon.msft.png  
-[ImageCollectGarbageIcon]: ../media/collect-garbage-icon.msft.png  
-[ImageNextIcon]: ../media/next-icon.msft.png  
-[ImagePanModeIcon]: ../media/pan-mode-icon.msft.png  
-[ImagePreviousIcon]: ../media/previous-icon.msft.png  
-[ImageRecordIcon]: ../media/record-icon.msft.png
-[ImageRefreshPageIcon]: ../media/refresh-page-icon.msft.png  
-[ImageResetTransformIcon]: ../media/reset-transform-icon.msft.png  
-[ImageRotateModeIcon]: ../media/rotate-mode-icon.msft.png  
-[ImageSearchCaseIcon]: ../media/search-case-icon.msft.png  
-[ImageSearchRegexIcon]: ../media/search-regex-icon.msft.png  
-[ImageShowHeaviestStackIcon]: ../media/show-heaviest-stack-icon.msft.png  
 
 <!-- links -->  
 

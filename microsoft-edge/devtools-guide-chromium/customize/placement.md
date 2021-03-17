@@ -3,16 +3,16 @@ description: Microsoft Edge DevTools をビューポートの下部または左�
 title: Microsoft Edge DevTools の配置を変更する (Undock、Dock to Bottom、Dock to Left)
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/12/2021
+ms.date: 03/08/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: e3160999a1072afffdc5c5d44f8fc60fab65d264
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: 8fabeaf6d972badd08ab85486913ef17f54bcf67
+ms.sourcegitcommit: 4b9fb5c1176fdaa5e3c60af2b84e38d5bb86cd81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11399042"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "11439178"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -59,7 +59,7 @@ ms.locfileid: "11399042"
 
 ## <a name="change-placement-from-the-main-menu"></a>メイン メニューから配置を変更する  
 
-1.  **[DevTools** \( \) をカスタマイズして制御する] を選択し、[別のウィンドウにドッキング解除 `...` \( **** ![ Undock ][ImageUndockIcon] \), Dock to **Bottom** \( Dock ![ to Bottom \), ][ImageBottomIcon] **** ![ または ][ImageLeftIcon] Dock to Left \( Dock to left \) を選択します。  
+1.  **[DevTools** \( \) をカスタマイズして制御する] を選択し、[別のウィンドウにドッキング解除 `...` \( **** ![ Undock ](../media/undock-icon.msft.png) \), Dock to **Bottom** \( Dock ![ to Bottom \), ](../media/bottom-icon.msft.png) **** ![ または ](../media/left-icon.msft.png) Dock to Left \( Dock to left \) を選択します。  
     
     :::image type="complex" source="../media/customize-elements-styles-options-dock-side-highlight.msft.png" alt-text="[別のウィンドウにドッキング解除] を選択する" lightbox="../media/customize-elements-styles-options-dock-side-highlight.msft.png":::
        [別 **のウィンドウにドッキング解除] を選択する**  
@@ -77,12 +77,6 @@ ms.locfileid: "11399042"
 ## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームと連絡を取る  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
-
-<!-- image links -->  
-
-[ImageUndockIcon]: ../media/undock-icon.msft.png  
-[ImageBottomIcon]: ../media/bottom-icon.msft.png  
-[ImageLeftIcon]: ../media/left-icon.msft.png  
 
 <!-- links -->  
 

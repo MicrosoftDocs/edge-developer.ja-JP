@@ -3,16 +3,16 @@ description: Microsoft Edge DevTools を使用して、Web サイトの読み込
 title: Microsoft Edge DevTools を使用して Web サイトの速度を最適化する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/12/2021
+ms.date: 03/08/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 7de97ab27528e89e2373e0a0d1002e8c86e37613
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: 75c9df5d86ce994cebfda882a0adfa2664b6ec30
+ms.sourcegitcommit: 4b9fb5c1176fdaa5e3c60af2b84e38d5bb86cd81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11398113"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "11439445"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -94,7 +94,7 @@ ms.locfileid: "11398113"
 
 ベースラインは、パフォーマンスを向上させる前にサイトがどのように実行されたのかの記録です。  
 
-1.  [監査] **ツールを選択** します。  [その他のパネル] \( **More Panels** \) ボタン ![ の ][ImageMorePanelsIcon] 背後に非表示になる場合があります。  このパネルには、監査パネルの電源を供給するプロジェクトが「ライトハウス」という名前なので、ライトハウス **があります**。  
+1.  [監査] **ツールを選択** します。  [その他のパネル] \( **More Panels** \) ボタン ![ の ](../media/more-panels-icon.msft.png) 背後に非表示になる場合があります。  このパネルには、監査パネルの電源を供給するプロジェクトが「ライトハウス」という名前なので、ライトハウス **があります**。  
     
     [!INCLUDE [audits-panel-note](../includes/audits-panel-note.md)]  
     
@@ -278,7 +278,7 @@ ms.locfileid: "11398113"
 ページを再度監査して、ページの読み込みパフォーマンスに与える影響の種類を測定します。  
 
 1.  [監査] **ツールを選択** します。  
-1.  [ **監査を実行する** ]を選択します ![ ([監査を実行 ][ImagePerformIcon] する]\)。  
+1.  [ **監査を実行する** ]を選択します ![ ([監査を実行 ](../media/perform-icon.msft.png) する]\)。  
 1.  設定は以前と同じままにします。  
 1.  [監査 **の実行] を選択します**。  
     
@@ -353,7 +353,7 @@ ms.locfileid: "11398113"
        カバレッジ**ツール**  
     :::image-end:::  
     
-1.  [ **更新** \( ![ Refresh ][ImageRefreshIcon] \] を選択します)。  [ **カバレッジ** ] ツールは、ページの読み込み中に実行されるコードの量の `bundle.js` `jquery.js` `lodash.js` 概要を示します。  次の図では、jQuery ファイルと Lodash ファイルの約 76% と 30% がそれぞれ使用されません。  
+1.  [ **更新** \( ![ Refresh ](../media/reload-icon.msft.png) \] を選択します)。  [ **カバレッジ** ] ツールは、ページの読み込み中に実行されるコードの量の `bundle.js` `jquery.js` `lodash.js` 概要を示します。  次の図では、jQuery ファイルと Lodash ファイルの約 76% と 30% がそれぞれ使用されません。  
     
     :::image type="complex" source="../media/speed-glitch-tony-remix-updated-audits-performance-oppportunities-expanded-drawer-coverage-reloaded.msft.png" alt-text="カバレッジ レポート" lightbox="../media/speed-glitch-tony-remix-updated-audits-performance-oppportunities-expanded-drawer-coverage-reloaded.msft.png":::
        カバレッジ レポート  
@@ -379,7 +379,7 @@ ms.locfileid: "11398113"
        要求 **ブロック** ツール  
     :::image-end:::  
     
-1.  [ **パターンの追加** \( ![ Add Pattern ][ImageAddPatternIcon] \), `/libs/*` type, and select to `Enter` confirm.  
+1.  [ **パターンの追加** \( ![ Add Pattern ](../media/add-pattern-icon.msft.png) \), `/libs/*` type, and select to `Enter` confirm.  
     
     :::image type="complex" source="../media/speed-glitch-tony-remix-updated-network-drawer-request-blocking-added.msft.png" alt-text="libs ディレクトリへの要求をブロックするパターンを追加する" lightbox="../media/speed-glitch-tony-remix-updated-network-drawer-request-blocking-added.msft.png":::
        ディレクトリへの要求をブロックするパターンを追加 `libs` する  
@@ -391,7 +391,7 @@ ms.locfileid: "11398113"
        ネットワーク **ツール** は、要求がブロックされたと表示されます。  
     :::image-end:::  
     
-1.  [ **すべてのパターンを削除する** ] \( ![ Remove all patterns \) を選択して、ブロック ][ImageRemoveIcon] パターンを `/libs/*` 削除します。  
+1.  [ **すべてのパターンを削除する** ] \( ![ Remove all patterns \) を選択して、ブロック ](../media/remove-icon.msft.png) パターンを `/libs/*` 削除します。  
     
 一般に、[ **要求のブロック** ] ツールは、特定のリソースが使用できない場合のページの動作をシミュレートする場合に役立ちます。  
 
@@ -426,9 +426,9 @@ ms.locfileid: "11398113"
 目標は、[パフォーマンス] パネルを使用して、ページの読み込み中にメイン スレッドが実行している作業を分析し、不要な作業を延期または削除する方法を見つけ出すことです。  
 
 1.  [パフォーマンス] **ツールを選択** します。  
-1.  [ **キャプチャ設定]\(** ![ キャプチャ設定 ][ImageCaptureIcon] \) を選択します。  
+1.  [ **キャプチャ設定]\(** ![ キャプチャ設定 ](../media/capture-icon.msft.png) \) を選択します。  
 1.  [ **ネットワーク] を** **[低速 3G]** に設定し **、CPU** を **6 倍の低速に設定します**。  モバイル デバイスは通常、ラップトップやデスクトップよりもハードウェアの制約が多いので、これらの設定を使用すると、より強力なデバイスを使用している場合と同様に、ページの読み込みも発生します。  
-1.  [ **更新** \( ![ Refresh ][ImageRefreshIcon] \] を選択します)。  DevTools はページを更新し、ページを読み込むのに実行されたすべての作業の視覚化を生成します。  この視覚化は、トレースと呼 **ばれます**。  
+1.  [ **更新** \( ![ Refresh ](../media/reload-icon.msft.png) \] を選択します)。  DevTools はページを更新し、ページを読み込むのに実行されたすべての作業の視覚化を生成します。  この視覚化は、トレースと呼 **ばれます**。  
     
     :::image type="complex" source="../media/speed-glitch-tony-remix-performance-slow-network-slow-cpu.msft.png" alt-text="ページ読み込み時のパフォーマンス ツールのトレース" lightbox="../media/speed-glitch-tony-remix-performance-slow-network-slow-cpu.msft.png":::
        ページ **読み** 込み時のパフォーマンス ツールのトレース  
@@ -523,15 +523,6 @@ ms.locfileid: "11398113"
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
-<!-- image links -->  
-
-[ImageAddPatternIcon]: ../media/add-pattern-icon.msft.png  
-[ImageCaptureIcon]: ../media/capture-icon.msft.png  
-[ImageLargeResourceRowsButtonIcon]: ../media/large-resource-rows-button-icon.msft.png  
-[ImageMorePanelsIcon]: ../media/more-panels-icon.msft.png  
-[ImagePerformIcon]: ../media/perform-icon.msft.png  
-[ImageRefreshIcon]: ../media/reload-icon.msft.png  
-[ImageRemoveIcon]: ../media/remove-icon.msft.png  
 <!-- links -->  
 
 [DevtoolsEvaluatePerformanceReference]: ../evaluate-performance/reference.md "パフォーマンス分析|Microsoft Docs"  

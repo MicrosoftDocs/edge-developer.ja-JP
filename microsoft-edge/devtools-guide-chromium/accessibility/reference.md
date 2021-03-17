@@ -3,16 +3,16 @@ description: Microsoft Edge DevTools のアクセシビリティ機能の包括�
 title: アクセシビリティリファレンス
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/12/2021
+ms.date: 03/08/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: e3fed1c4e53c69b7a6837f71c270c0bf2f65b7e2
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: fce6dec3883cbcc758780a9fedb4c0fb2a8d0a4c
+ms.sourcegitcommit: 4b9fb5c1176fdaa5e3c60af2b84e38d5bb86cd81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11398337"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "11439255"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -72,7 +72,7 @@ ms.locfileid: "11398337"
     :::image-end:::  
     
     > [!NOTE]
-    > このセクションのスクリーンショットは、Microsoft Edge のバージョン 79 で撮影されました。  実行しているバージョンを確認できます `edge://version` 。  監査 **ツール** の UI は、以前のバージョンの Microsoft Edge では異なって見えますが、一般的なワークフローは同じです。  
+    > このセクションのスクリーンショットは、Microsoft Edge バージョン 79 で撮影されました。  実行しているバージョンを確認できます `edge://version` 。  監査 **ツール** の UI は、以前のバージョンの Microsoft Edge では異なって見えますが、一般的なワークフローは同じです。  
     
 1.  [ **デバイス]** で、 **モバイル** デバイスをシミュレートする場合は[モバイル] を選択します。  このオプションは、ユーザー エージェントの文字列を変更し、ビューポートのサイズを変更します。  モバイル バージョンのページがデスクトップ バージョンとは異なる場合、このオプションは監査の結果に大きな影響を与える可能性があります。  
 1.  [監査 **] セクション** で、アクセシビリティが **有効になっているか** 確認します。  レポートから除外する場合は、他のカテゴリを無効にします。  ページの品質を向上させる他の方法を見つけしたい場合は、有効のままにします。  
@@ -114,7 +114,7 @@ aXe 拡張機能が **Audits** ツールを超える利点の 1 つは、障害�
 
 1.  [要素] **ツールを選択** します。  
 1.  DOM ツリー **で、** 検査する要素を選択します。  
-1.  [アクセシビリティ **] パネルを選択** します。  このパネルは、[その他のタブ] \( **More Tabs** \) ボタン ![ の ][ImageMoreTabsIcon] 背後に非表示になる場合があります。  
+1.  [アクセシビリティ **] パネルを選択** します。  このパネルは、[その他のタブ] \( **More Tabs** \) ボタン ![ の ](../media/more-tabs-icon.msft.png) 背後に非表示になる場合があります。  
 
 :::image type="complex" source="../media/accessibility-elements-accessibility.msft.png" alt-text="アクセシビリティ パネルで DevTools ホームページの h1 要素を検査する" lightbox="../media/accessibility-elements-accessibility.msft.png":::
    アクセシビリティ パネル `h1` で DevTools ホームページの **要素を検査** する  
@@ -189,10 +189,6 @@ ARIA 属性を使用すると、ページの内容を適切に表現するため
 ## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームと連絡を取る  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
-
-<!-- image links -->  
-
-[ImageMoreTabsIcon]: ../media/more-tabs-icon.msft.png  
 
 <!-- links -->  
 

@@ -3,16 +3,16 @@ description: Microsoft Edge DevTools メモリ パネルを使用して、高価
 title: JavaScript ランタイムを高速化する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/12/2021
+ms.date: 03/08/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 682001ae8d265b342e5d6e0725f9f8ac4e298cf8
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: 2151777c6a9f94408f48552839531c3534d3de36
+ms.sourcegitcommit: 4b9fb5c1176fdaa5e3c60af2b84e38d5bb86cd81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11397602"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "11439739"
 ---
 <!-- Copyright Kayce Basques and Meggin Kearney
 
@@ -30,7 +30,7 @@ ms.locfileid: "11397602"
 
 # <a name="speed-up-javascript-runtime"></a>JavaScript ランタイムを高速化する  
 
-メモリ パネルを使用して、高価な **関数を識別** します。  
+メモリ ツールを使用して、高価な **関数を識別** します。  
 
 :::image type="complex" source="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-heavy-bottom-up.msft.png" alt-text="サンプル プロファイル" lightbox="../media/rendering-tools-gh-nodejs-benchmarks-run-memory-sampling-profiles-heavy-bottom-up.msft.png":::
    サンプル プロファイル  
@@ -38,14 +38,14 @@ ms.locfileid: "11397602"
 
 ### <a name="summary"></a>要約  
 
-*   [メモリ] パネルの [割り当てサンプリング] を使用して、呼び出された関数と必要なメモリの量を **正確に記録** します。  
+*   メモリ ツールの割り当てサンプリングを使用して、呼び出された関数と、各関数が必要とするメモリの量を **正確に記録** します。  
 *   プロファイルを炎上グラフとして視覚化します。  
     
 ## <a name="record-a-sampling-profile"></a>サンプリング プロファイルの記録  
 
 JavaScript で jank に気付いた場合は、サンプリング プロファイルを収集します。  サンプリング プロファイルは、ページ内の関数に実行時間が費やされる場所を示します。  
 
-1.  DevTools **の [メモリ** ] パネルに移動します。  
+1.  DevTools **のメモリ** ツールに移動します。  
 1.  [割り当 **てサンプリング] ラジオ ボタン** を選択します。  
 1.  [スタート **] を選択します**。  
 1.  分析しようとしている内容に応じて、ページを更新するか、ページを操作するか、ページを実行できます。  
@@ -62,7 +62,7 @@ JavaScript で jank に気付いた場合は、サンプリング プロファ�
 
 ### <a name="change-sort-order"></a>並べ替え順序の変更  
 
-並べ替え順序を変更するには、フォーカス選択関数 **\(** フォーカス選択関数 \) アイコンの横にあるドロップダウン メニューを選択し、次のいずれかのオプション ![ ][ImageFocusIcon] を選択します。
+並べ替え順序を変更するには、フォーカス選択関数 **\(** フォーカス選択関数 \) アイコンの横にあるドロップダウン メニューを選択し、次のいずれかのオプション ![ ](../media/focus-icon.msft.png) を選択します。
 
 **グラフ**.  記録の時系列グラフを表示します。  
 
@@ -84,9 +84,9 @@ JavaScript で jank に気付いた場合は、サンプリング プロファ�
 
 ### <a name="exclude-functions"></a>関数を除外する  
 
-サンプリング プロファイルから関数を除外するには、その関数を選択し、選択した **関数を除外** する \( 選択した関数 \) を ![ 除外するボタン ][ImageExcludeIcon] を選択します。  除外された関数 \(child\) の要求関数 \(parent\) は、除外された関数 \(child\) に割り当てられた割り当てられたメモリで課金されます。  
+サンプリング プロファイルから関数を除外するには、それを選択し、選択した **関数を除外** する \( 選択した関数 ![ \) を除外するボタン ](../media/exclude-icon.msft.png) を選択します。  除外された関数 \(child\) の要求関数 \(parent\) は、除外された関数 \(child\) に割り当てられた割り当てられたメモリで課金されます。  
 
-[すべての **関数を復元する** ] \( [すべての関数を復元する\] ボタンを選択して、除外されているすべての関数を記録 ![ ][ImageRestoreIcon] に戻します。  
+[すべての **関数を復元する** ] \( [すべての関数を復元する\] ボタンを選択して、除外されているすべての関数を記録 ![ ](../media/restore-icon.msft.png) に戻します。  
 
 ## <a name="view-sampling-profile-as-chart"></a>サンプリング プロファイルをグラフとして表示する  
 
@@ -123,7 +123,7 @@ JavaScript で jank に気付いた場合は、サンプリング プロファ�
 
 ### <a name="view-function-details"></a>関数の詳細を表示する  
 
-[ソース] パネルで定義を表示する **関数を選択** します。  
+ソース ツールで定義を表示する関数 **を選択** します。  
 
 関数にカーソルを合わせると、名前とタイミング データが表示されます。  以下の情報が提供されます。  
 
@@ -144,12 +144,6 @@ JavaScript で jank に気付いた場合は、サンプリング プロファ�
 ## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームと連絡を取る  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
-
-<!-- image links -->  
-
-[ImageExcludeIcon]: ../media/exclude-icon.msft.png  
-[ImageFocusIcon]: ../media/focus-icon.msft.png  
-[ImageRestoreIcon]: ../media/restore-icon.msft.png  
 
 <!-- links -->  
 

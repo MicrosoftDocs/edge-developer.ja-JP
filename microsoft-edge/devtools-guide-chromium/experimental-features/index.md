@@ -1,20 +1,35 @@
 ---
 description: Microsoft Edge DevTools の最新の実験的機能
-title: 試験的機能
+title: 試験的な機能
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 03/12/2021
+ms.date: 03/15/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge, Web 開発, f12 ツール, devtools, 実験
-ms.openlocfilehash: 612b3b83aee1ee9035982e58e008395ec3645b2b
-ms.sourcegitcommit: e29cd1c393fc1f433dba8c3d8f260b425ade63a9
+no-loc:
+- Enable webhint
+- Enable Network Console
+- Source Order Viewer
+- Enable Composited Layers in 3D View
+- Enable new Font Editor tool within the Styles pane
+- Enable new CSS Flexbox debugging features
+- Enable + button tab menus to open more tools
+- Enable Welcome tab
+- 3D View
+- Turn on support to move tabs between panels
+- Match keyboard shortcuts in the DevTools to Microsoft Visual Studio Code
+- Edit keyboard shortcuts for any action in the DevTools
+- Turn on new CSS grid debugging features
+- 'Emulation: Support dual screen mode'
+ms.openlocfilehash: c76830cb8bbcc597aa026f58e1926cd2f9bc2d62
+ms.sourcegitcommit: 4b9fb5c1176fdaa5e3c60af2b84e38d5bb86cd81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2021
-ms.locfileid: "11408305"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "11439585"
 ---
-# <a name="experimental-features"></a>試験的機能  
+# <a name="experimental-features"></a>試験的な機能  
 
 Microsoft Edge DevTools は、開発中の実験的な機能にアクセスできます。  各機能がリリースされる [前に、テストして](#providing-feedback-on-experimental-features) フィードバックを提供することができます。  
 
@@ -46,16 +61,16 @@ Microsoft Edge で \(or off\) 実験機能を有効にするには、次の手�
 
 | 試験的機能 | Microsoft Edge バージョン |  
 |:--- |:--- |  
-| [Webhint を有効にする](#enable-webhint) | 85 以降 |  
-| [ネットワーク コンソールの有効化](#enable-network-console) | 85 以降 |  
-| [ソース オーダー ビューアー](#source-order-viewer) | 86 以降 |  
-| [3D ビューで複合レイヤーを有効にする](#enable-composited-layers-in-3d-view) | 87 以降 |  
-| [[スタイル] ウィンドウ内で新しいフォント エディター ツールを有効にする](#enable-new-font-editor-tool-within-the-styles-pane) | 89 以降 |  
-| [CSS Flexbox の新しいデバッグ機能を有効にする](#enable-new-css-flexbox-debugging-features) | 89 以降 |  
-| [[+ ボタン] タブ メニューを有効にして、その他のツールを開く](#enable--button-tab-menus-to-open-more-tools) | 89 以降 |  
-| [[ようこそ] タブを有効にする](#enable-welcome-tool) | 89 以降 |  
+| [Enable webhint](#enable-webhint) | 85 以降 |  
+| [Enable Network Console](#enable-network-console) | 85 以降 |  
+| [Source Order Viewer](#source-order-viewer) | 86 以降 |  
+| [Enable Composited Layers in 3D View](#enable-composited-layers-in-3d-view) | 87 以降 |  
+| [Enable new Font Editor tool within the Styles pane](#enable-new-font-editor-tool-within-the-styles-pane) | 89 以降 |  
+| [Enable new CSS Flexbox debugging features](#enable-new-css-flexbox-debugging-features) | 89 以降 |  
+| [Enable + button tab menus to open more tools](#enable--button-tab-menus-to-open-more-tools) | 89 以降 |  
+| [Enable Welcome tab](#enable-welcome-tab) | 89 以降 |  
 
-### <a name="enable-webhint"></a>Webhint を有効にする  
+### Enable webhint  
 
 [webhint][WebhintMain] は、Web サイトとローカル Web ページにリアルタイムのフィードバックを提供するオープン ソース ツールです。  webhint によって提供される [フィードバックの種類][WebhintMain]。  
 
@@ -74,7 +89,7 @@ Microsoft Edge で \(or off\) 実験機能を有効にするには、次の手�
 
 <!--Available in Microsoft Edge version 85 and later.  -->  
 
-### <a name="enable-network-console"></a>ネットワーク コンソールの有効化  
+### Enable Network Console  
 
 **ネットワーク コンソール** は、HTTP を使用してネットワークの代理要求を行う実験の作業タイトルです。  ネットワーク コンソールの実験 **を使用して** 、Web API 要求を送信できます。  
 
@@ -92,30 +107,29 @@ Microsoft Edge で \(or off\) 実験機能を有効にするには、次の手�
 
 <!--Available in Microsoft Edge version 85 and later.  -->  
 
-### <a name="source-order-viewer"></a>ソース オーダー ビューアー  
+### Source Order Viewer  
 
-**ソース オーダー ビューアー** は、Web ページ ソース内の要素の順序を表示する実験です。  画面の表示順序がソースの順序と異なる場合があります。これはスクリーン リーダーとキーボード のユーザーを混同します。  [ソースオーダー **ビューアー] 実験** を使用して、画面の表示順序とソースの順序の違いを確認します。  
+**Source Order Viewer** は、Web ページ ソース内の要素の順序を表示する実験です。  画面の表示順序がソースの順序と異なる場合があります。これはスクリーン リーダーとキーボード のユーザーを混同します。  実験を使用して、画面の表示順序とソースの順序の違 **Source Order Viewer** いを見つける。  
 
-実験を有効にしたら、DevTools を再起動してください。  ソース オーダー **ビューアーを使用するには、** 次の手順を実行します。  
+実験を有効にしたら、DevTools を再起動してください。  使用するには **Source Order Viewer** 、次の手順を実行します。  
 
 1.  [要素] **ツールを開** きます。  
 1.  引き出し \(bottom\) パネルで [アクセシビリティ] ウィンドウを開きます。 ****  
-1.  [ソース注文 **ビューアー] セクションで** 、[ソースの順序を **表示する] チェック ボックスをオン** にします。  
+1.  セクションの **Source Order Viewer** 下で、[ソースの順序を **表示する] チェック ボックスをオン** にします。  
 1.  任意の HTML 要素を強調表示して、Web ページ ソース内の順序をオーバーレイで表示します。  
     
-:::image type="complex" source="../media/experiments-source-order-viewer.msft.png" alt-text="[アクセシビリティ] ウィンドウの [ソースオーダー ビューアー]" lightbox="../media/experiments-source-order-viewer.msft.png":::
-   **[アクセシビリティ] ウィンドウ** の **[ソースオーダー** ビューアー]  
+:::image type="complex" source="../media/experiments-source-order-viewer.msft.png" alt-text="Source Order Viewer in the アクセシビリティ ペイン" lightbox="../media/experiments-source-order-viewer.msft.png"::: **Source Order Viewer** [**アクセシビリティ] ウィンドウ**  
 :::image-end:::  
 
 <!--Available in Microsoft Edge version 86 and later.  -->  
 
-### <a name="enable-composited-layers-in-3d-view"></a>3D ビューで複合レイヤーを有効にする  
+### Enable Composited Layers in 3D View  
 
-z-indexes と Document Object Model \(DOM\) と並んでレイヤーを視覚化できます。  この機能は、コンテキストを頻繁に切り替えることなくデバッグするのに役立ちます。  コンテキスト切り替えの削減が大きな問題だと特定しました。  作成するコードが Web アプリに与える影響は必ずしも明確ではありません。  視覚的なデバッグを総合的に行う目的で、3D ビューレイヤーと複合レイヤーが結合されました。  
+z-indexes と Document Object Model \(DOM\) と並んでレイヤーを視覚化できます。  この機能は、コンテキストを頻繁に切り替えることなくデバッグするのに役立ちます。  コンテキスト切り替えの削減が大きな問題だと特定しました。  作成するコードが Web アプリに与える影響は必ずしも明確ではありません。  包括的な視覚的なデバッグ エクスペリエンスのために、複合 3D View レイヤーと複合レイヤーが組み合わされました。  
 
 実験を有効にしたら、DevTools を再起動してください。  コンポジット レイヤー **を使用するには、** 次の手順を実行します。  
 
-1.  ドロワーで **、[3D ビュー] ツールを選択** します。  
+1.  ドロワーで、ツールを選択 **3D View** します。  
 1.  [複合 **レイヤー] ウィンドウを開** きます。  
 1.  アプリのすべてのペイントされたレイヤーが表示されます。  独自の Web アプリでこの機能を試してください。  
     
@@ -125,7 +139,7 @@ z-indexes と Document Object Model \(DOM\) と並んでレイヤーを視覚化
 
 <!--Available in Microsoft Edge version 87 and later.  -->  
 
-### <a name="enable-new-font-editor-tool-within-the-styles-pane"></a>[スタイル] ウィンドウ内で新しいフォント エディター ツールを有効にする  
+### Enable new Font Editor tool within the Styles pane  
 
 これで、新しいビジュアル フォント エディターを [使用してフォント][DevtoolsInspectStylesEditFonts] を編集できます。  フォントとフォントの特性を定義する場合に使用します。  ビジュアル フォント エディター **を使用すると** 、次の操作を実行できます。  
 
@@ -148,7 +162,7 @@ z-indexes と Document Object Model \(DOM\) と並んでレイヤーを視覚化
 
 <!--Available in Microsoft Edge version 89 and later.  -->  
 
-### <a name="enable-new-css-flexbox-debugging-features"></a>CSS Flexbox の新しいデバッグ機能を有効にする  
+### Enable new CSS Flexbox debugging features  
 
 この実験的な機能は、CSS Flexbox レイアウトのデバッグに役立つ多くの新しい視覚化を提供します。  最新の実験機能をプレビューするには、 [この実験を有効にし](#turn-on-experimental-features) 、DevTools を再読み込みします。  
 
@@ -187,9 +201,9 @@ CSS グリッドまたは Flexbox レイアウトの永続的オーバーレイ�
 
 <!--Available in Microsoft Edge version 89 and later.  -->  
 
-### <a name="enable--button-tab-menus-to-open-more-tools"></a>[+ ボタン] タブ メニューを有効にして、その他のツールを開く  
+### Enable + button tab menus to open more tools  
 
-新しい [その他のツール] **\(** \) アイコンを使用して、その他のツール `+` を開く場合があります。  [有効にする] **+** [ボタン] タブ メニューをオンにして、さらに多くのツール実験を開き、DevTools を再読み込みすると、DevTools の上部にあるタブ グループの右側にプラス記号 \( \) が表示されます。 `+`  タブ バーに追加できるその他のツールの一覧を表示するには、新しい **[** その他のツール] \( `+` \) アイコンを選択します。  
+新しい [その他のツール] **\(** \) アイコンを使用して、その他のツール `+` を開く場合があります。  実験を有効にし、DevTools を再読み込みすると、DevTools の上部にあるタブ グループの右側にプラス記号 **Enable + button tab menus to open more tools** `+` \( \) が表示されます。  タブ バーに追加できるその他のツールの一覧を表示するには、新しい **[** その他のツール] \( `+` \) アイコンを選択します。  
 
 :::image type="complex" source="../media/experiments-more-tools-button.msft.png" alt-text="上部ウィンドウの [その他のツール]" lightbox="../media/experiments-more-tools-button.msft.png":::
    **上部ウィンドウの** [その他のツール]
@@ -197,7 +211,7 @@ CSS グリッドまたは Flexbox レイアウトの永続的オーバーレイ�
 
 <!--Available in Microsoft Edge version 89 and later.  -->  
 
-### <a name="enable-welcome-tool"></a>ウェルカム ツールを有効にする
+### Enable Welcome tab
 
 この実験では **、What's New ツールを新** しいウェルカム ツール **に置き換** える。  次のコンテンツの更新されたデザインが表示されます。  
 
@@ -208,7 +222,7 @@ CSS グリッドまたは Flexbox レイアウトの永続的オーバーレイ�
     
 ウェルカム **ツールは** 、Microsoft Edge への更新の後に自動的に開きます。  更新後にウェルカム ツール**** が表示されるのを防ぐには、[ようこそ]**** ツールのタイトルの下にある更新の後、[開く] タブの横にあるチェック ボックス**を**オフにします。  
 
-元の [What's **New]** ツールを[][DevtoolsCustomizeIndexSettings]使用する場合は、[設定の実験] に移動し、[ようこそ] タブを有効にするの横にあるチェック  >  ******ボックスをオフにします**。  
+元の [What's **New]** ツールを[][DevtoolsCustomizeIndexSettings]使用する場合は、[設定の実験] に移動し、の横にある  >  **** チェック ボックスをオフにします **Enable Welcome tab** 。  
 
 :::image type="complex" source="../media/experiments-welcome.msft.png" alt-text="ウェルカム ツール" lightbox="../media/experiments-welcome.msft.png":::
    **ウェルカム** ツール  
@@ -218,14 +232,13 @@ CSS グリッドまたは Flexbox レイアウトの永続的オーバーレイ�
 
 ## <a name="previous-experimental-features"></a>以前の実験的な機能  
 
-*   Microsoft Edge バージョン 83 以降では[、3D][Devtools3dViewIndex]ビューが使用可能で、既定で有効になっています。  
-*   [Microsoft][DevtoolsCustomizeIndex] Edge バージョン 85 以降では、パネル間でタブを移動するサポートを有効にし、既定で有効になっています。  
-*   [DevTools の][DevtoolsCustomizeShortcutsMatchKeyboardShortcutsDevtoolsMicrosoftVisualStudioCode] キーボード ショートカットと Microsoft Visual Studio コードの一致が利用可能で、Microsoft Edge バージョン 86 以降で既定で有効になっています。  
-*   [DevTools で任意の][DevtoolsCustomizeShortcutsEditKeyboardShortcutsForAnyActionDevtools] アクションのキーボード ショートカットを編集する機能が利用可能になったので、Microsoft Edge バージョン 89 以降では既定で有効になっています。  
-*   [新しい CSS グリッド デバッグ機能][DevtoolsCssGrid] を有効にし、Microsoft Edge バージョン 89 以降で既定で有効にしました。  
-*   [エミュレーション: Microsoft][DevtoolsDeviceModeDualScreenAndFoldables] Edge バージョン 90 以降では、デュアル スクリーン モードをサポートし、既定で有効になっています。  
+*   [3D View][Devtools3dViewIndex] が使用可能になっていて、Microsoft Edge バージョン 83 以降で既定で有効になっています。  
+*   [Turn on support to move tabs between panels][DevtoolsCustomizeIndex] が使用可能になっていて、Microsoft Edge バージョン 85 以降で既定で有効になっています。  
+*   [Match keyboard shortcuts in the DevTools to Microsoft Visual Studio Code][DevtoolsCustomizeShortcutsMatchKeyboardShortcutsDevtoolsMicrosoftVisualStudioCode] が利用可能で、Microsoft Edge バージョン 86 以降で既定で有効になっています。  
+*   [Edit keyboard shortcuts for any action in the DevTools][DevtoolsCustomizeShortcutsEditKeyboardShortcutsForAnyActionDevtools] が使用可能になっていて、Microsoft Edge バージョン 89 以降で既定で有効になっています。  
+*   [Turn on new CSS grid debugging features][DevtoolsCssGrid] が使用可能になっていて、Microsoft Edge バージョン 89 以降で既定で有効になっています。  
+*   [Emulation: Support dual screen mode][DevtoolsDeviceModeDualScreenAndFoldables] が使用可能になっていて、Microsoft Edge バージョン 90 以降で既定で有効になっています。  
 
-    
 ## <a name="providing-feedback-on-experimental-features"></a>実験的な機能に関するフィードバックの提供  
 
 Microsoft Edge DevTools 実験、または DevTools に関連するその他のフィードバックを提供する。  
@@ -245,12 +258,12 @@ Microsoft Edge DevTools 実験、または DevTools に関連するその他の�
 
 <!-- links -->  
 
-[Devtools3dViewIndex]: ../3d-view/index.md "3D ビュー | Microsoft Docs"  
+[Devtools3dViewIndex]: ../3d-view/index.md "3D View |Microsoft Docs"  
 [DevtoolsCssGrid]: ../css/grid.md "Microsoft Edge DevTools サーバーで CSS グリッドを検査|Microsoft Docs"  
 [DevtoolsCustomizeIndex]: ../customize/index.md "Microsoft Edge DevTools のカスタマイズ |Microsoft Docs"  
 [DevToolsCustomizeIndexSettings]: ../customize/index.md#settings "設定 - Microsoft Edge DevTools をカスタマイズする | Microsoft Docs"  
-[DevtoolsCustomizeShortcutsEditKeyboardShortcutsForAnyActionDevtools]: ../customize/shortcuts.md#edit-keyboard-shortcuts-for-any-action-in-the-devtools "DevTools コントロール内の任意のアクションのキーボード ショートカットを編集|Microsoft Docs"  
-[DevtoolsCustomizeShortcutsMatchKeyboardShortcutsDevtoolsMicrosoftVisualStudioCode]: ../customize/shortcuts.md#match-keyboard-shortcuts-in-the-devtools-to-microsoft-visual-studio-code "DevTools のキーボード ショートカットと Microsoft コード コードのVisual Studio一致|Microsoft Docs"  
+[DevtoolsCustomizeShortcutsEditKeyboardShortcutsForAnyActionDevtools]: ../customize/shortcuts.md#edit-keyboard-shortcuts-for-any-action-in-the-devtools "DevTools 内の任意のアクションのキーボード ショートカットを編集する |Microsoft Docs"  
+[DevtoolsCustomizeShortcutsMatchKeyboardShortcutsDevtoolsMicrosoftVisualStudioCode]: ../customize/shortcuts.md#match-keyboard-shortcuts-in-the-devtools-to-microsoft-visual-studio-code "DevTools のキーボード ショートカットを Microsoft コードに一致Visual Studio |Microsoft Docs"  
 [DevtoolsDeviceModeIndexSimulateMobileViewport]: ../device-mode/index.md#simulate-a-mobile-viewport "Microsoft Edge DevTools アプリケーションでデバイス モードでモバイル デバイスをシミュレート|Microsoft Edge"  
 [DevtoolsInspectStylesEditFonts]: ../inspect-styles/edit-fonts.md "DevTools の [スタイル] ウィンドウで CSS フォントのスタイルと設定を編集|Microsoft Docs"  
 [DevtoolsIssuesIndex]: ../issues/index.md "Microsoft Edge DevTools の問題ツールに関する問題を見つけて修正する | Microsoft Docs"  
