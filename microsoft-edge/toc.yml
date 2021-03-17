@@ -405,6 +405,8 @@
               href: webview2/howto/debug.md
             - name: エッジ ドライバーで自動化
               href: webview2/howto/webdriver.md
+            - name: WebView2 で Chromium DevTools プロトコルを使用する
+              href: webview2/howto/chromium-devtools-protocol.md
         - name: リファレンス
           href: webview2/webview2-api-reference.md
           items:
