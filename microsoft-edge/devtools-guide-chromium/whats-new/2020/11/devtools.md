@@ -3,16 +3,17 @@ description: Linux 上の Microsoft Edge、問題ツールの Webhint ヒント�
 title: DevTools の新機能 (Microsoft Edge 88)
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 03/12/2021
+ms.date: 03/15/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 6a36029aa97604b6aea20f232d329ce3805a3144
-ms.sourcegitcommit: e29cd1c393fc1f433dba8c3d8f260b425ade63a9
-ms.translationtype: MT
+ms.localizationpriority: high
+ms.openlocfilehash: 7f4f9e2602d26b09a8b52a570c4caaaccc4f04f1
+ms.sourcegitcommit: 4b9fb5c1176fdaa5e3c60af2b84e38d5bb86cd81
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2021
-ms.locfileid: "11408368"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "11439276"
 ---
 <!-- Copyright Jecelyn Yeen 
 
@@ -113,7 +114,7 @@ Z インデックス値と ドキュメント オブジェクト モデル \(DOM
 
 [ネットワーク ツール](#network-tool)、[アプリケーション ツール](#application-tool)、および[ソース ツール](#sources-tool)の次の新機能は、[PWA][ProgressiveWebAppsIndex] の構築に役立ちます。  サービス ワーカーのデバッグが困難な場合は、次の機能を使用します。  
 
-要求ルーティングは、サービス ワーカーを経由して実行されるネットワーク要求に基づいて、`startup` と `fetch` イベントを表示します。  タイムラインには、**アプリケーション ツール**または**ネットワーク ツール**からアクセスします。  タイムラインは、サービス ワーカーに問題が発生し、イベントに問題がある場合に表示する場合 `startup` に役立 `fetch` ちます。  
+要求ルーティングは、サービス ワーカーを経由して実行されるネットワーク要求に基づいて、`startup` と `fetch` イベントを表示します。  タイムラインには、**アプリケーション ツール**または**ネットワーク ツール**からアクセスします。  タイムラインは、サービス ワーカーに問題が発生し、`startup` または `fetch` イベントに問題があるかどうかを表示する場合に役立ちます。  
 
 ### <a name="application-tool"></a>アプリケーション ツール  
 
@@ -192,8 +193,8 @@ Z インデックス値と ドキュメント オブジェクト モデル \(DOM
       :::image-end:::  
    :::column-end:::
    :::column span="":::
-      :::image type="complex" source="../../media/2020/11/paste-property-value.msft.png" alt-text="Microsoft Visual Studio コードでプロパティ値を貼り付ける" lightbox="../../media/2020/11/paste-property-value.msft.png":::
-         Microsoft Visual Studio コードでプロパティ値を貼り付ける  
+      :::image type="complex" source="../../media/2020/11/paste-property-value.msft.png" alt-text="Microsoft Visual Studio Codeでプロパティ値を貼り付ける" lightbox="../../media/2020/11/paste-property-value.msft.png":::
+         Microsoft Visual Studio Codeでプロパティ値を貼り付ける  
       :::image-end:::  
    :::column-end:::
 :::row-end:::  
@@ -342,7 +343,7 @@ DevTools は、ファイルとメモリのサイズを表示するために、`k
 
 ## <a name="download-the-microsoft-edge-preview-channels"></a>Microsoft Edge プレビュー チャネルをダウンロードする  
 
-Windows、Linux、または macOS を使用している場合は、 [既定][MicrosoftEdgePreviewChannels] の開発ブラウザーとして Microsoft Edge プレビュー チャネルの使用を検討してください。  プレビュー チャネルを使用すると、最新の DevTools 機能にアクセスできます。  
+Windows、Linux、または macOS を使用している場合は、既定の開発ブラウザーとして [Microsoft Edge プレビュー チャネル][MicrosoftEdgePreviewChannels] の使用を検討してください。  プレビュー チャネルを使用すると、最新の DevTools 機能にアクセスできます。  
 
 ## <a name="getting-in-touch-with-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームに連絡する  
 
