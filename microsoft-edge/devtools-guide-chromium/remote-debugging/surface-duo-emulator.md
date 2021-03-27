@@ -3,22 +3,22 @@ description: リモート デバッグ Surface Duo エミュレーターの使�
 title: リモート デバッグ Surface Duo エミュレーターの使用を開始する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 03/08/2021
+ms.date: 03/25/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge, Web 開発, f12 ツール, devtools, リモート デバッグ, android, surface duo
-ms.openlocfilehash: 61f903a5b929b7ee7b924938cf6ddc21a9783ca7
-ms.sourcegitcommit: 4b9fb5c1176fdaa5e3c60af2b84e38d5bb86cd81
+ms.openlocfilehash: 49b16f3c920735b34d44455bae437442cac3bf6e
+ms.sourcegitcommit: bff24ab1f0a66aaf4c7f5ff81cea3eb28c6d8380
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "11439330"
+ms.lasthandoff: 03/26/2021
+ms.locfileid: "11461242"
 ---
-# <a name="get-started-with-remote-debugging-surface-duo-emulators"></a>リモート デバッグ Surface Duo エミュレーターの使用を開始する  
+# <a name="get-started-with-remote-debugging-surface-duo-emulators"></a>Surface Duo エミュレーターのリモート デバッグの開始  
 
 この記事では [、Microsoft Edge][GooglePlayStoreAppsComMicrosoftEmmx] のデスクトップ インスタンスから Surface Duo エミュレーター上の Microsoft [Edge][MicrosoftSurfaceDevicesSurfaceDuo] アプリで Web コンテンツをリモートでデバッグするプロセスについて [説明します][MicrosoftEdge]。  Surface Duo デバイスでのデバッグの詳細については、Android デバイスのリモート デバッグに関するガイド [に従ってください][DevtoolsRemoteDebuggingMain]。  
 
-## <a name="before-you-begin"></a>開始する前に
+## <a name="before-you-begin"></a>始める前に
 
 Surface Duo [エミュレーターを実行する前][MicrosoftDownload100847] に Surface Duo SDK [をインストールします][DualScreenAndroidUseEmulator]。  詳細については [、「Get the Surface Duo SDK」に移動します][DualScreenAndroidGetDuoSdk]。  
 

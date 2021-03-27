@@ -1,70 +1,70 @@
 ---
-description: Microsoft Edge WebView2 で使用されるバージョン管理モデル
-title: Microsoft Edge WebView2 のバージョン管理
+description: Microsoft Edge WebView2 で使用されるバージョン モデル
+title: WebView2 SDK バージョンの概要
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 11/25/2020
+ms.date: 03/17/2021
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
-keywords: IWebView2、IWebView2WebView、webview2、webview、wpf アプリ、wpf、edge、ICoreWebView2、ICoreWebView2Host、browser control、edge html
-ms.openlocfilehash: 54d62de00a89a3c433fd77e9ec20945adbfc19c3
-ms.sourcegitcommit: 2e14ff82350f700d7eabc8d33b3ec3e5fc8c61fa
+keywords: IWebView2、IWebView2WebView、webview2、webview、wpf アプリ、wpf、edge、ICoreWebView2、ICoreWebView2Host、ブラウザー コントロール、edge html
+ms.openlocfilehash: b292f59e264293a958eb619d04b751203cb517ac
+ms.sourcegitcommit: bff24ab1f0a66aaf4c7f5ff81cea3eb28c6d8380
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "11191611"
+ms.lasthandoff: 03/26/2021
+ms.locfileid: "11461179"
 ---
-# WebView2 SDK のバージョンについて  
+# <a name="understand-webview2-sdk-versions"></a>WebView2 SDK バージョンの概要  
 
-WebView2 SDK の新しいバージョンは、Microsoft Edge \ (Chromium \) ブラウザーと同じ一般的なリズムで出荷されています。これは、約6週間です。  
+WebView2 SDK の新しいバージョンは、Microsoft Edge \(Chromium\) ブラウザーと同じ一般的なケイデンスで出荷されます。これは約 6 週間ごとに行います。  
 
-## Release パッケージとプレリリースパッケージ  
+## <a name="release-and-prerelease-package"></a>リリースおよびプレリリース パッケージ  
 
-WebView2 NuGet パッケージには、リリースとプレリリースの両方のパッケージが含まれています。  
+WebView2 NuGet パッケージには、リリース パッケージとプレリリース パッケージの両方が含まれています。  
 
-**リリースパッケージ**には上位互換性があり、次のコンポーネントが含まれています。  
+リリース **パッケージは前方** 互換性があり、次のコンポーネントが含まれています。  
 
-*   [Win32 C/c + + Api][ReferenceWin32]
-*   .NET Api:  [WPF][DotnetMicrosoftWebWebview2WpfNamespace]、 [WinForms][DotnetMicrosoftWebWebview2WinformsNamespace]、および [Core][DotnetMicrosoftWebWebview2CoreNamespace]。  
+*   [Win32 C/C++ API][ReferenceWin32]
+*   .NET API:  [WPF][DotnetMicrosoftWebWebview2WpfNamespace] [、WinForms、][DotnetMicrosoftWebWebview2WinformsNamespace]および [Core][DotnetMicrosoftWebWebview2CoreNamespace]。  
     
-SDK の Api は完全にサポートされています。  
+SDK の API は完全にサポートされています。  
 
-**プレリリースパッケージ**は、[実験的 api](#experimental-apis)を使用したリリースパッケージのスーパーセットです。  
+プレ **リリース パッケージは、** 実験的 API を使用したリリース パッケージ [のスーパーセットです](#experimental-apis)。  プレリリース SDK を使用して実稼働アプリをビルドしないようにします。  
 
-### ロードマップ  
+### <a name="roadmap"></a>ロードマップ  
 
-リリースパッケージには、サポートされているすべての安定した Win32 C/c + + .NET Api が含まれています。  プレリリースパッケージには、フィードバックに基づいて変更される可能性がある実験的な Api が含まれています。  
+リリース パッケージには、サポートされている安定した Win32 C/C++ および .NET API すべてが含まれています。  prerelease パッケージには、フィードバックに基づいて変更される可能性がある実験的な API が含まれています。  
 
-## 試験的な API  
+## <a name="experimental-apis"></a>試験的な API  
 
-WebView チームは、今後のリリースに含まれる可能性がある実験的な Api についてのフィードバックを求めています。  実験的な Api は、SDK で示されてい `experimental` ます。  実験的な Api を評価してフィードバックを共有できるように、 [WebView フィードバックリポジトリ][GithubMicrosoftedgeWebviewfeedback]に移動します。  
+WebView チームは、将来のリリースに含まれる可能性がある実験的な API に関するフィードバックを求めている。  実験的な API は SDK のように `experimental` マークされます。  実験 API を評価し、フィードバックを共有するには [、WebView フィードバック repo に移動します][GithubMicrosoftedgeWebviewfeedback]。  
 
 > [!CAUTION]
-> 実験的な Api は、SDK から SDK に導入、変更、削除される可能性があります。  プロダクションアプリで実験的な Api を使うことは避けてください。  
+> 実験 API は、SDK から SDK に導入、変更、および削除される場合があります。  実稼働アプリで実験的な API を使用しないようにします。  
 
 > [!NOTE]
-> 実験的な Api は、インストールされているバージョンの WebView2 Runtime では使用できない場合があります。  
+> 実験的な API は、インストールされているバージョンの WebView2 ランタイムでは使用できない場合があります。  
 
-## WebView2 のランタイムバージョンの一致  
-WebView2 アプリでは、ユーザーが [WebView2 ランタイム][MicrosoftDeveloperEdgeWebview2]をインストールする必要があります。  WebView2 ランタイムは、利用可能な最新バージョンに自動的に更新されます。  一部のシナリオでは、ユーザーが自動 WebView2 ランタイム更新を停止する必要があります。これにより、アプリの互換性の問題が発生する可能性があります。  
+## <a name="matching-webview2-runtime-versions"></a>一致する WebView2 ランタイム バージョン  
+WebView2 アプリでは、ユーザーが [WebView2 ランタイムをインストールする必要があります][MicrosoftDeveloperEdgeWebview2]。  WebView2 ランタイムは、利用可能な最新バージョンに自動的に更新されます。  一部のシナリオでは、ユーザーが WebView2 ランタイムの自動更新を停止する必要が生じ、アプリの互換性の問題が発生する可能性があります。  
 
-WebView2 ランタイムの更新プログラムが停止している場合は、アプリで必要な最小バージョンの [WebView2 ランタイム][MicrosoftDeveloperEdgeWebview2] を理解していることを確認してください。  次の2つの項目を検討してください。  
+WebView2 ランタイム更新プログラムが停止している場合は、アプリに必要な [WebView2 ランタイム][MicrosoftDeveloperEdgeWebview2] の最小バージョンを理解してください。  次の 2 つの項目を検討してください。  
 
-1.  SDK の最低限必要なバージョンは、WebView2 の [リリースノート][Webview2Releasenotes] の「 **最小 WebView2 ランタイムバージョン**」に記載されています。  たとえば、SDK バージョン [1.0.622.22][Webview2Releasenotes1062222]の場合は、 [WebView2 ランタイム][MicrosoftDeveloperEdgeWebview2] 、またはビルド番号以降の [非安定した Microsoft Edge チャネル][MicrosoftedgeinsiderDownload] をインストールする必要があり `86.0.616.0` ます。  SDK で必要な最小バージョンは、web プラットフォームで変更が行われない場合にのみ変更されます。  
-1.  アプリで使うインターフェイスと Api をサポートするために必要な、最低限の必須バージョンの NuGet パッケージ。  WebView2 には、新しいインターフェイスと Api が定期的に追加されます。  SDK にバンドルされている Api とインターフェイスは、異なるタイミングで SDK に Api とインターフェイスが追加されるため、異なるバージョンの WebView2 ランタイムを必要とします。  必須の WebView2 ランタイムバージョンは、API が最初に導入された SDK バージョンの3番目の番号のビルド番号と一致します。  たとえば、SDK バージョン [1.0.622.22][Webview2Releasenotes1062222] で追加された新しい api またはインターフェイスには、WebView2 ランタイムバージョンが必要です。この  `86.0.622.0`  ような sdk リリースで追加された api やインターフェイスには、sdk と同じバージョン番号の WebView2 ランタイムが必要です。  WebView2 ランタイムバージョンがインターフェイスまたは API をサポートしているかどうかを判断するには、 [WebView2 ランタイム要件を決定](#determine-webview2-runtime-requirement)するに移動します。  
+1.  Webview2 インスタンスを正常に読み込むのに必要な最小バージョンの SDK は、読[][Webview2Releasenotes]み込む最小 Microsoft Edge バージョンの WebView2 リリース ノート**にあります**。  SDK で必要な読み込み最小バージョンは、Web プラットフォームで変更が発生した場合にのみ変更されます。  たとえば、SDK バージョン [1.0.622.22][Webview2Releasenotes1062222]の場合、ビルド番号が 1 つ以上の [WebView2 ランタイム][MicrosoftDeveloperEdgeWebview2] または安定しない [Microsoft Edge][MicrosoftedgeinsiderDownload] チャネルをインストール `86.0.616.0` する必要があります。   
+1.  アプリ内のインターフェイスと API をサポートするために必要な NuGet パッケージの最小必要バージョンは、WebView2[][Webview2Releasenotes]リリース ノートの「完全な API の互換性」の下に**示されています**。  新しいインターフェイスと API は WebView2 に定期的に追加されます。  SDK にバンドルされている API とインターフェイスでは、API とインターフェイスが SDK に異なる時間に追加されるので、WebView2 ランタイムのバージョンが異なっている必要があります。  必要な WebView2 ランタイム バージョンは、API が最初に導入された SDK バージョンのビルド番号 (3 番目の番号) と一致します。  たとえば、SDK バージョン [1.0.622.22][Webview2Releasenotes1062222] で追加された新しい API またはインターフェイスには、WebView2 ランタイム バージョン以降が `86.0.622.0` 必要です。  後の SDK リリースで追加された API またはインターフェイスには、SDK と同じバージョン番号を持つ WebView2 ランタイムが必要です。  WebView2 ランタイム バージョンがインターフェイスまたは API をサポートしているかどうかを判断するには [、[WebView2](#determine-webview2-runtime-requirement)ランタイム要件の決定] に移動します。  
     
 > [!IMPORTANT]
-> [Evergreen WebView2 アプリ][Webview2ConceptsDistributionEvergreenDistributionMode]を開発する場合は、最新バージョンの WebView2 Runtime と、安定していない Microsoft Edge ブラウザーに対して、アプリを定期的にテストしてください。  Web プラットフォームは絶えず進化しているため、アプリが意図したとおりに動作するための最適な方法は、通常のテストです。  
+> [Evergreen WebView2][Webview2ConceptsDistributionEvergreenDistributionMode]アプリを開発する場合は、WebView2 ランタイムと安定しない Microsoft Edge チャネルの最新バージョンに対してアプリを定期的にテストします。  Web プラットフォームは常に進化し続けるので、アプリが意図した通り動作することを確認するには、定期的なテストが最適な方法です。  
 
-### WebView2 のランタイム要件を決定する  
+### <a name="determine-webview2-runtime-requirement"></a>WebView2 ランタイム要件の決定  
 
-使用する SDK に応じて、次の項目について検討します。  
+使用する SDK に応じて、次の項目を検討してください。  
 
-*   **Win32 C/c + +**。  を使って新しいインターフェイスを取得するときは `QueryInterface` 、の戻り値を確認し `E_NOINTERFACE` ます。  この値は、WebView2 ランタイムが以前のバージョンであり、そのインターフェイスをサポートしていないことを示している可能性があります。  このしくみの例については、「 [行 622-AppWindow .cpp」][GithubMicrosoftedgeWebview2samplesSampleappsWebview2apisampleAppwindowCppL622]を参照してください。  
-*   **.Net と WinUI**。  `No such interface supported`新しい sdk に追加されたメソッド、プロパティ、イベントを使用している場合は、例外を確認します。  この例外は、WebView2 ランタイムが以前のバージョンであり、Api をサポートしていない場合に発生する可能性があります。  
+*   **Win32 C/C++**。  新しいインターフェイス `QueryInterface` を取得するために使用する場合は、 の戻り値を確認します `E_NOINTERFACE` 。  この値は、WebView2 ランタイムが以前のバージョンであり、そのインターフェイスをサポートしない場合があります。  動作の例については [、Line 622 - AppWindow.cpp に移動します][GithubMicrosoftedgeWebview2samplesSampleappsWebview2apisampleAppwindowCppL622]。  
+*   **.NET と WinUI**。  より新しい SDK に追加されたメソッド、プロパティ、およびイベントを使用する場合は、 `No such interface supported` 例外を確認します。  この例外は、WebView2 ランタイムが以前のバージョンであり、API をサポートしていない場合に発生することがあります。  
     
-API が利用できない場合は、関連する機能の削除を検討するか、WebView2 ランタイムの更新が必要であることをユーザーに通知します。  
+API が使用できない場合は、関連付けられた機能の削除を検討するか、WebView2 ランタイムの更新が必要です。  
 
 <!--
 ## Versioning  
@@ -78,20 +78,20 @@ After you have used a particular version of the SDK to build your app, your app 
 
 <!--links -->  
 
-[Webview2ConceptsDistributionEvergreenDistributionMode]: ./distribution.md#evergreen-distribution-mode "Evergreen 配布モード-WebView2 を使用したアプリの配布 |Microsoft ドキュメント"  
-[Webview2Releasenotes]: ../releasenotes.md "WebView2 SDK のリリースノート |Microsoft ドキュメント"  
-[Webview2Releasenotes1062222]: ../releasenotes.md#1062222 "1.0.622.22-WebView2 SDK のリリースノート |Microsoft ドキュメント"   
+[Webview2ConceptsDistributionEvergreenDistributionMode]: ./distribution.md#evergreen-distribution-mode "Evergreen 配布モード - WebView2 アプリケーションを使用したアプリの|Microsoft Docs"  
+[Webview2Releasenotes]: ../releasenotes.md "WebView2 SDK のリリース ノート|Microsoft Docs"  
+[Webview2Releasenotes1062222]: ../releasenotes.md#1062222 "1.0.622.22 - WebView2 SDK のリリース |Microsoft Docs"   
 
-[DeployedgeChannels]: /deployedge/microsoft-edge-channels "Microsoft Edge チャネルの概要 |Microsoft ドキュメント"  
+[DeployedgeChannels]: /deployedge/microsoft-edge-channels "Microsoft Edge チャネルの概要 | Microsoft Docs"  
 
-[DotnetMicrosoftWebWebview2CoreNamespace]: /dotnet/api/microsoft.web.webview2.core "WebView2 の名前空間 |Microsoft ドキュメント"  
-[DotnetMicrosoftWebWebview2WpfNamespace]: /dotnet/api/microsoft.web.webview2.wpf "WebView2 の名前空間 |Microsoft ドキュメント"  
-[DotnetMicrosoftWebWebview2WinformsNamespace]: /dotnet/api/microsoft.web.webview2.winforms "WinForms 名前空間 WebView2 |Microsoft ドキュメント"  
-[ReferenceWin32]: /microsoft-edge/webview2/reference/win32 "WebView2 Win32 C++ リファレンス |Microsoft ドキュメント"  
+[DotnetMicrosoftWebWebview2CoreNamespace]: /dotnet/api/microsoft.web.webview2.core "Microsoft.Web.WebView2.Core 名前空間|Microsoft Docs"  
+[DotnetMicrosoftWebWebview2WpfNamespace]: /dotnet/api/microsoft.web.webview2.wpf "Microsoft.Web.WebView2.Wpf 名前空間 | Microsoft Docs"  
+[DotnetMicrosoftWebWebview2WinformsNamespace]: /dotnet/api/microsoft.web.webview2.winforms "Microsoft.Web.WebView2.WinForms 名前空間|Microsoft Docs"  
+[ReferenceWin32]: /microsoft-edge/webview2/reference/win32 "WebView2 Win32 C++ リファレンス |Microsoft Docs"  
 
 [MicrosoftDeveloperEdgeWebview2]: https://developer.microsoft.com/microsoft-edge/webview2/ "Microsoft Edge WebView2 |Microsoft 開発者"  
 
-[GithubMicrosoftedgeWebviewfeedback]: https://github.com/MicrosoftEdge/WebViewFeedback "WebView フィードバック-MicrosoftEdge/WebViewFeedback |GitHub"  
-[GithubMicrosoftedgeWebview2samplesSampleappsWebview2apisampleAppwindowCppL622]: https://github.com/MicrosoftEdge/WebView2Samples/blob/8ec7de9d3e80a942bc7025cffad98eee75e11e64/SampleApps/WebView2APISample/AppWindow.cpp#L622 "Line 622-AppWindow .cpp-MicrosoftEdge/WebView2Samples |GitHub"  
+[GithubMicrosoftedgeWebviewfeedback]: https://github.com/MicrosoftEdge/WebViewFeedback "WebView フィードバック - MicrosoftEdge/WebViewFeedback |GitHub"  
+[GithubMicrosoftedgeWebview2samplesSampleappsWebview2apisampleAppwindowCppL622]: https://github.com/MicrosoftEdge/WebView2Samples/blob/8ec7de9d3e80a942bc7025cffad98eee75e11e64/SampleApps/WebView2APISample/AppWindow.cpp#L622 "Line 622 - AppWindow.cpp - MicrosoftEdge/WebView2Samples |GitHub"  
 
-[MicrosoftedgeinsiderDownload]: https://www.microsoftedgeinsider.com/download "Microsoft Edge Insider チャネルをダウンロードする"  
+[MicrosoftedgeinsiderDownload]: https://www.microsoftedgeinsider.com/download "Microsoft Edge Insider Channels をダウンロードする"  

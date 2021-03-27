@@ -3,19 +3,19 @@ description: Microsoft Edge WebView2 Chromem DevTools プロトコル NuGet パ�
 title: WebView2 で Chrome DevTools プロトコルを使用する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 03/15/2021
+ms.date: 03/17/2021
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、edge、ICoreWebView2、ICoreWebView2Controller、Chrome DevTools プロトコル
-ms.openlocfilehash: 0f7a2dd4bb3b1621e854cd4c0c5410e64d3c03ff
-ms.sourcegitcommit: 0ef5bb3933cde8a466f2931b824f07b4995cfe5e
+ms.openlocfilehash: 86846ee195406f78d5fd7c369f375ed1e359101a
+ms.sourcegitcommit: bff24ab1f0a66aaf4c7f5ff81cea3eb28c6d8380
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "11409321"
+ms.lasthandoff: 03/26/2021
+ms.locfileid: "11461200"
 ---
-# <a name="use-chromium-devtools-protocol-in-webview2"></a>WebView2 でクロム DevTools プロトコルを使用する  
+# <a name="use-chromium-devtools-protocol-in-webview2"></a>WebView2 で Chromium DevTools プロトコルを使用する  
 
 [Chromium DevTools プロトコルは、][GitHubChromedevtoolsDevtoolsProtocol]クロムベースのブラウザーをインストルメント、検査、デバッグ、プロファイルする API を提供します。  Chromium DevTools プロトコルは、Microsoft Edge \(Chromium\) DevTools の基盤です。  WebView2 プラットフォームに実装されていない機能には、クロム DevTools プロトコルを使用します。  Chromium DevTools プロトコル機能の詳細については [、「Chromium DevTools プロトコル」に移動します][GitHubChromedevtoolsDevtoolsProtocol]。  
 
@@ -26,7 +26,7 @@ ms.locfileid: "11409321"
 
 WebView2 でクロム DevTools プロトコル API を使用するには、次のいずれかのアクションを使用します。  
 
-*   [Microsoft.Web.WebView2.DevToolsProtocolExtension (Preview)][NugettestIntPackagesMicrosoftWebWebView2DevToolsprotocolextension] NuGet パッケージ \(.NET\) をインストールして使用します。  
+*   [Microsoft.Web.WebView2.DevToolsProtocolExtension (Preview)][NugetPackagesMicrosoftWebWebView2DevToolsprotocolextension] NuGet パッケージ \(.NET\) をインストールして使用します。  
 *   次のいずれかの方法を実行します。  
     *   .NET:  [CallDevToolsProtocolAsync][DotnetApiMicrosoftWebWebview2CoreCorewebview2CalldevtoolsprotocolmethodasyncViewWebview2Dotnet1077444MicrosoftWebWebView2CoreCorewebview2CalldevtoolsprotocolmethodsyncSystemStringSystemString], [GetDevToolsProtocolEventReceiver][DotnetApiMicrosoftWebWebview2CoreCorewebview2GetdevtoolsprotocoleventreceiverViewWebview2Dotnet1077444]  
     *   Win32 C/C++:  [CallDevToolsProtocolMethod][Webview2ReferenceWin32Icorewebview2ViewWebview21077444Calldevtoolsprotocolmethod], [ICoreWebView2DevToolsProtocolEventReceiver][Webview2ReferenceWin32Icorewebview2devtoolsprotocoleventreceiverViewWebview21077444]  
@@ -34,9 +34,9 @@ WebView2 でクロム DevTools プロトコル API を使用するには、次�
 ## <a name="use-devtoolsprotocolhelper-preview"></a>Use DevToolsProtocolHelper (Preview)
 
 > [!NOTE]
-> [Microsoft.Web.WebView2.DevToolsProtocolExtension][NugettestIntPackagesMicrosoftWebWebView2DevToolsprotocolextension] NuGet パッケージは現在テクニカル プレビュー中です。  プレビュー中は、実稼働アプリでのパッケージの使用を控える必要があります。
+> [Microsoft.Web.WebView2.DevToolsProtocolExtension][NugetPackagesMicrosoftWebWebView2DevToolsprotocolextension] NuGet パッケージは現在テクニカル プレビュー中です。  プレビュー中は、実稼働アプリでのパッケージの使用を控える必要があります。
 
-[Microsoft.Web.WebView2.DevToolsProtocolExtension (Preview)][NugettestIntPackagesMicrosoftWebWebView2DevToolsprotocolextension] は、クロム DevTools プロトコル機能に簡単にアクセスできる WebView2 チームによって作成された NuGet パッケージです。  次の例では、WebView2 コントロールのクロム DevTools プロトコルで地理位置情報機能を使用する方法について説明します。  同様のパターンに従って、他の Chromium DevTools プロトコル機能を使用できます。  
+[Microsoft.Web.WebView2.DevToolsProtocolExtension (Preview)][NugetPackagesMicrosoftWebWebView2DevToolsprotocolextension] は、クロム DevTools プロトコル機能に簡単にアクセスできる WebView2 チームによって作成された NuGet パッケージです。  次の例では、WebView2 コントロールのクロム DevTools プロトコルで地理位置情報機能を使用する方法について説明します。  同様のパターンに従って、他の Chromium DevTools プロトコル機能を使用できます。  
 
 ## <a name="step-1-create-a-webpage-to-find-your-geolocation"></a>手順 1: Web ページを作成して位置情報を検索する  
 
@@ -200,4 +200,4 @@ Chromium DevTools プロトコルのバグまたは問題をファイルする�
 
 [ChromiumBugsChromiumIssuesEntryComponentsPlatformDevtoolsPlatform]: https://bugs.chromium.org/p/chromium/issues/entry?components=Platform%3EDevTools%3EPlatform "バグ レポート|クロム バグ"  
 
-[NugettestIntPackagesMicrosoftWebWebView2DevToolsprotocolextension]: https://int.nugettest.org/packages/Microsoft.Web.WebView2.DevToolsProtocolExtension "Microsoft.Web.WebView2.DevToolsProtocolExtension |NuGet QA ギャラリー"  
+[NugetPackagesMicrosoftWebWebView2DevToolsprotocolextension]: https://www.nuget.org/packages/Microsoft.Web.WebView2.DevToolsProtocolExtension "Microsoft.Web.WebView2.DevToolsProtocolExtension |NuGet QA ギャラリー"  

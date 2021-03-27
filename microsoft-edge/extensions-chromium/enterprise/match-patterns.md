@@ -1,30 +1,43 @@
 ---
-description: Edge (Chromium) 拡張機能のエンタープライズポリシードキュメント。
+description: エッジ (クロム) 拡張機能のエンタープライズ ポリシードキュメント。
 title: 一致パターン
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 09/15/2020
+ms.date: 03/17/2021
 ms.topic: article
 ms.prod: microsoft-edge
-keywords: edge-chromium、拡張機能の開発、ブラウザーの拡張、アドオン、パートナーセンター、開発者
-ms.openlocfilehash: 59427769a010ca774833a809d3025e7594634202
-ms.sourcegitcommit: d360e419b5f96f4f691cf7330b0d8dff9126f82e
+keywords: edge-chromium, 拡張機能の開発, ブラウザー拡張機能, アドオン, パートナー センター, 開発者
+ms.openlocfilehash: fcb87b62cac063c7663f575fa3d992b187408c28
+ms.sourcegitcommit: bff24ab1f0a66aaf4c7f5ff81cea3eb28c6d8380
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "11015661"
+ms.lasthandoff: 03/26/2021
+ms.locfileid: "11461249"
 ---
-# 一致パターン
+<!-- Copyright A. W. Fuchs
 
-ホストのアクセス許可とコンテンツスクリプトの一致は、一致パターンによって定義された一連の Url に基づいています。  一致パターンは、基本的に、許可されたスキーム (、、、 `http` `https` または) で始まり、 `file` `ftp` "" 文字を含むことができる URL です `*` 。  特殊なパターンは、 `<all_urls>` 許可されたスキームで始まる任意の URL と一致します。  各一致パターンには3つの部分があります。  
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
 
-*   _スキーム_ : `http` or `file` など `*`  
+       https://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.  -->  
+# <a name="match-patterns"></a>一致パターン
+
+ホストのアクセス許可とコンテンツ スクリプトの一致は、一致パターンで定義された一連の URL に基づいて行います。  一致パターンは、基本的には許可されたスキーム ( 、 で始まる URL であり、 ' ' 文字 `http` `https` `file` `ftp` を `*` 含めることができます。  特別なパターンは `<all_urls>` 、許可されたスキームで始まる任意の URL と一致します。  各一致パターンには、次の 3 つの部分があります。  
+
+*   _スキーム_— たとえば、または `http` `file` `*`  
 
 > [!NOTE]
-> Url へのアクセス `file` は、自動的には行われません。  ユーザーは、[拡張機能の管理] ページにアクセスして、 `file` 要求された各拡張機能へのアクセスをオプトインする必要があります。  
+> URL への `file` アクセスは自動ではありません。  ユーザーは、[拡張機能の管理] ページにアクセスし、要求する拡張機能ごとに `file` アクセスをオプトインする必要があります。  
 
-*   `_host_` —たとえば、またはのように `www.google.com` `*.google.com` `*` スキームがファイルの場合は、ホスト部分がありません。  
-*   `_path_` —、、 `/*` `/foo*` またはなど `/foo/bar` 。  パスはホストのアクセス許可に存在する必要がありますが、常にとして扱われ `/*` ます。  
+*   `_host_` — たとえば、 `www.google.com` または `*.google.com` `*` 、 ; スキームがファイルの場合、ホスト パーツはありません。  
+*   `_path_` — 、、 `/*` `/foo*` `/foo/bar` などです。  パスはホストアクセス許可に存在する必要がありますが、常にとして扱います `/*` 。  
 
 基本的な構文:  
 
@@ -35,36 +48,36 @@ ms.locfileid: "11015661"
 <path> := '/' <any chars>
 ```  
 
-の意味は、 `*` スキーム、ホスト、または path 部分のどちらであるかによって異なります。  スキームがの場合は、 `*` またはのどちらかに一致し `http` `https` `file` `ftp` ます。  ホストが単なる場合は `*` 、いずれかのホストと一致します。 ホストがの場合は `*.hostname` 、指定したホストまたは任意のサブドメインと一致します。  [Path] セクションでは、それぞれが `*` 0 以上の文字に一致します。  次の表は、有効なパターンを示しています。  
+意味は、スキーム、ホスト、またはパス パーツの中にあるかどうか `*` によって異なります。  スキームがである場合 `*` 、スキームは 、または 、 または 、 `http` `https` のいずれかと一致します `file` `ftp` 。  ホストが単なる場合 `*` は、任意のホストと一致します。 ホストが指定されている `*.hostname` 場合は、指定したホストまたはサブドメインと一致します。  [パス] セクションでは、それぞれ `*` 0 文字以上に一致します。  次の表に、有効なパターンを示します。  
 
-| 実線 | 機能 | 一致する Url の例 |  
+| パターン | 機能 | 一致する URL の例 |  
 |:--- |:--- |:--- |  
-| `http://*/*` | Http スキームを使用する URL と一致する | `http://www.google.com` `http://example.org/foo/bar.html` |  
-| `http://*/foo*` | パスが指定されている限り、任意のホストで http スキームを使用する URL を検索します。 `/foo` | `http://example.com/foo/bar.html` `http://www.google.com/foo` |  
-| `https://*.google.com/foo*bar` | 指定された URL が https スキームを使っている場合は、 `google.com` (、、、\ などの) ホスト上で、 `www.google.com` `docs.google.com` `google.com` パスの先頭 `/foo` と末尾が `bar` | `https://www.google.com/foo/baz/bar` `https://docs.google.com/foobar` |  
-| `http://example.org/foo/bar.html` | 指定した URL と一致します | `http://example.org/foo/bar.html` |  
-|`file:///foo*` | Path で始まる任意のローカルファイルを検索します。 `/foo` | `file:///foo/bar.html` `file:///foo` |  
-| `http://127.0.0.1/*` | スキームを使って `http` いて、ホスト上にある URL を検索します。 `127.0.0.1` | `http://127.0.0.1` `http://127.0.0.1/foo/bar.html` |  
-| `*://mail.google.com/*` | またはで始まる任意の URL を検索 `http://mail.google.com` `https://mail.google.com` します。 | `http://mail.google.com/foo/baz/bar` `https://mail.google.com/foobar` |  
-| `<all_urls>` | 許可されたスキームを使用する任意の URL を検索します。 \ (許可されているスキームの一覧については、このセクションの先頭を参照してください。 \) | `http://example.org/foo/bar.html` `file:///bar/baz.html` |  
+| `http://*/*` | http スキームを使用する URL と一致する | `http://www.google.com` `http://example.org/foo/bar.html` |  
+| `http://*/foo*` | パスがで始まる限り、任意のホストで http スキームを使用する URL と一致します。 `/foo` | `http://example.com/foo/bar.html` `http://www.google.com/foo` |  
+| `https://*.google.com/foo*bar` | パスがで始まりで終わる限り、https スキームを使用する任意の URL がホスト `google.com` \(、\など) にある場合に `www.google.com` `docs.google.com` `google.com` `/foo` 一致します。 `bar` | `https://www.google.com/foo/baz/bar` `https://docs.google.com/foobar` |  
+| `http://example.org/foo/bar.html` | 指定した URL と一致する | `http://example.org/foo/bar.html` |  
+|`file:///foo*` | パスがで始まるローカル ファイルと一致する `/foo` | `file:///foo/bar.html` `file:///foo` |  
+| `http://127.0.0.1/*` | スキームを使用し、ホスト上にある `http` URL と一致する `127.0.0.1` | `http://127.0.0.1` `http://127.0.0.1/foo/bar.html` |  
+| `*://mail.google.com/*` | で始まる URL または で始まる URL に `http://mail.google.com` 一致 `https://mail.google.com` します。 | `http://mail.google.com/foo/baz/bar` `https://mail.google.com/foobar` |  
+| `<all_urls>` | 許可されたスキームを使用する URL に一致します。 \(許可されるスキームの一覧については、このセクションの先頭を参照してください。\) | `http://example.org/foo/bar.html` `file:///bar/baz.html` |  
 
-パターンマッチの例をいくつか紹介し `_invalid_` ます。
+パターンの一致の例を `_invalid_` 次に示します。
 
-| 不適切なパターン | 問題がある理由 |  
+| パターンが悪い | それが悪い理由 |  
 |:--- |:--- |  
-| `http://www.foo.com` | なし `_path_` |  
-| `http://*foo/bar` | ホストの ' `*` ' は、' `.` ' または `/` ' ' のみにすることができます。 |  
-| `http://foo.*.bar/baz` | ' `*` ' がの場合は `_host_` 、最初の文字である必要があります。 |  
-| `http:/bar` | 区切り文字がありません `_scheme_` \ (' `/` ' が "\" である必要があります `//` ) |  
+| `http://www.foo.com` | × `_path_` |  
+| `http://*foo/bar` | ホスト `*` 内の ' ' は、 ' または `.` ' の後にのみ続 `/` くことができます。 |  
+| `http://foo.*.bar/baz` | ' ' `*` が ' の場合 `_host_` は、最初の文字である必要があります |  
+| `http:/bar` | 区切り `_scheme_` 記号 \(' `/` ' が見つからない場合は" `//` "\) |  
 | `foo://*` | ライセンスが無効 `_scheme_` |  
 
 一部のスキームは、すべてのコンテキストでサポートされていません。
 
 > [!NOTE]
-> このページの一部は、 [Google によっ][GoogleSitePolicies] て作成および共有され、 [クリエイティブコモンズの「4.0 インターナショナルライセンス][CCA4IL]」で説明されている用語に従って使用されます。  
-> 元のページは [ここ](https://developer.chrome.com/extensions/match_patterns/)にあります。  
+> このページの一部の情報は、[Google によって作成および共有][GoogleSitePolicies]されている著作物に基づいており、[Creative Commons Attribution 4.0 International License][CCA4IL] に記載されている条項に従って使用されています。  
+> 元のページは次 [のページに表示されます](https://developer.chrome.com/extensions/match_patterns)。  
 
-[![クリエイティブコモンズライセンス][CCby4Image]][CCA4IL]  
+[![Creative Commons ライセンス][CCby4Image]][CCA4IL]  
 この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。  
 
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
