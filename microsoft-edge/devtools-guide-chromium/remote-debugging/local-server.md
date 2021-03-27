@@ -3,16 +3,16 @@ description: 開発マシン Web サーバーでサイトをホストし、Andro
 title: ローカル サーバーにアクセスする
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/12/2021
+ms.date: 03/25/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 16c9927ce4548d71681d35e643aea0a6c44ec75a
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: 51ef0d951d587d310b6474698924d9f87cf68607
+ms.sourcegitcommit: bff24ab1f0a66aaf4c7f5ff81cea3eb28c6d8380
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11398211"
+ms.lasthandoff: 03/26/2021
+ms.locfileid: "11461263"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -27,7 +27,6 @@ ms.locfileid: "11398211"
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.  -->  
-
 # <a name="access-local-servers"></a><span data-ttu-id="3ee1e-104">ローカル サーバーにアクセスする</span><span class="sxs-lookup"><span data-stu-id="3ee1e-104">Access local servers</span></span>  
 
 <span data-ttu-id="3ee1e-105">開発マシン Web サーバーでサイトをホストし、Android デバイスからコンテンツにアクセスします。</span><span class="sxs-lookup"><span data-stu-id="3ee1e-105">Host a site on a development machine web server, then access the content from an Android device.</span></span>  

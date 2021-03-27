@@ -3,16 +3,16 @@ description: Windows または macOS コンピューターから Android デバ�
 title: Android デバイスのリモート デバッグを開始する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 03/08/2021
+ms.date: 03/25/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 2beab5bf6d4b58dc93d883f5114e168213053e84
-ms.sourcegitcommit: 4b9fb5c1176fdaa5e3c60af2b84e38d5bb86cd81
+ms.openlocfilehash: d69fd4832991826c76f47daea399bdd89e981bb4
+ms.sourcegitcommit: bff24ab1f0a66aaf4c7f5ff81cea3eb28c6d8380
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "11439569"
+ms.lasthandoff: 03/26/2021
+ms.locfileid: "11461214"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -27,7 +27,6 @@ ms.locfileid: "11439569"
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.  -->  
-
 # <a name="get-started-with-remote-debugging-android-devices"></a><span data-ttu-id="d568d-104">Android デバイスのリモート デバッグを開始する</span><span class="sxs-lookup"><span data-stu-id="d568d-104">Get started with remote debugging Android devices</span></span>  
 
 <span data-ttu-id="d568d-105">Windows または macOS コンピューターから Android デバイス上のライブ コンテンツをリモート デバッグします。</span><span class="sxs-lookup"><span data-stu-id="d568d-105">Remote debug live content on an Android device from your Windows or macOS computer.</span></span>  <span data-ttu-id="d568d-106">次のチュートリアル ページでは、次のアクションを実行する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="d568d-106">The following tutorial page teaches you how to complete the following actions.</span></span>  
