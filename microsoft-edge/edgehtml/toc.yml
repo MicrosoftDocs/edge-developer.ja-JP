@@ -1,224 +1,225 @@
-# - name: Legacy Microsoft Edge documentation
-expanded: true
-items:
-  - name: レガシー開発ガイド
-    items:
-      - name: 開発ガイド (EdgeHtml) の概要
-        href: dev-guide/index.md
-      - name: EdgeHTML の新着情報
-        href: dev-guide/whats-new.md
-        items:
-          - name: EdgeHTML 17
-            href: dev-guide/whats-new/edgeHTML-17.md
-          - name: EdgeHTML 16
-            href: dev-guide/whats-new/edgeHTML-16.md
-          - name: EdgeHTML 15
-            href: dev-guide/whats-new/edgeHTML-15.md
-          - name: EdgeHTML 14
-            href: dev-guide/whats-new/edgeHTML-14.md
-          - name: EdgeHTML 13
-            href: dev-guide/whats-new/edgeHTML-13.md
-          - name: EdgeHTML 12
-            href: dev-guide/whats-new/edgeHTML-12.md
-            items:
-              - name: JavaScript のバージョン情報
-                href: dev-guide/whats-new/javascript-version-information.md
-      - name: ブラウザーの機能
-        href: dev-guide/browser-features.md
-        items:
-          - name: 自動再生のポリシー
-            href: dev-guide/browser-features/autoplay-policies.md
-          - name: Flash
-            href: dev-guide/browser-features/flash.md
-          - name: 読み取りビュー
-            href: dev-guide/browser-features/reading-view.md
-          - name: 検索プロバイダーの検出
-            href: dev-guide/browser-features/search-provider-discovery.md
-      - name: Windows 統合機能
-        href: dev-guide/windows-integration.md
-        items:
-          - name: 支払い要求 API
-            href: dev-guide/windows-integration/Payment-Request-API.md
-          - name: Web 認証
-            href: dev-guide/windows-integration/web-authentication.md
-          - name: Web 通知 API
-            href: dev-guide/windows-integration/web-Notifications-API.md
-  - name: レガシー DevTools
-    items:
-      - name: DevTools (EdgeHTML) の概要
-        href: devtools-guide/index.md
-      - name: 新着情報
-        href: devtools-guide/whats-new.md
-        items:
-          - name: EdgeHTML 17
-            href: devtools-guide/whats-new/edgehtml-17.md
-          - name: EdgeHTML 16
-            href: devtools-guide/whats-new/edgehtml-16.md
-      - name: 要素
-        href: devtools-guide/elements.md
-        items:
-          - name: スタイル
-            href: devtools-guide/elements/styles.md
-          - name: 計算済み
-            href: devtools-guide/elements/computed.md
-          - name: イベント
-            href: devtools-guide/elements/events.md
-          - name: DOM ブレークポイント
-            href: devtools-guide/elements/dom-breakpoints.md
-          - name: フォント
-            href: devtools-guide/elements/fonts.md
-          - name: アクセシビリティ
-            href: devtools-guide/elements/accessibility.md
-          - name: 変更
-            href: devtools-guide/elements/changes.md
-      - name: Console
-        href: devtools-guide/console.md
-        items:
-          - name: コンソール API
-            href: devtools-guide/console/console-api.md
-          - name: コマンド ライン
-            href: devtools-guide/console/command-line.md
-          - name: エラーと状態コード
-            href: devtools-guide/console/error-and-status-codes.md
-      - name: デバッガー
-        href: devtools-guide/debugger.md
-      - name: ネットワーク
-        href: devtools-guide/network.md
-      - name: パフォーマンス
-        href: devtools-guide/performance.md
-      - name: メモリ
-        href: devtools-guide/memory.md
-      - name: 記憶域
-        href: devtools-guide/storage.md
-      - name: サービス ワーカー
-        href: devtools-guide/service-workers.md
-      - name: エミュレーション
-        href: devtools-guide/emulation.md
-  - name: レガシー DevTools プロトコル
-    items:
-      - name: DevTools プロトコル (EdgeHTML)
-        href: devtools-protocol/index.md
-      - name: 0.1
-        href: devtools-protocol/0.1/index.md
-        items:
-          - name: クライアント
-            href: devtools-protocol/0.1/clients.md
-          - name: HTTP エンドポイント
-            href: devtools-protocol/0.1/http.md
-          - name: ［ドメイン］
-            href: devtools-protocol/0.1/domains/index.md
-            items:
-              - name: デバッガー
-                href: devtools-protocol/0.1/domains/debugger.md
-              - name: Page
-                href: devtools-protocol/0.1/domains/page.md
-              - name: ランタイム
-                href: devtools-protocol/0.1/domains/runtime.md
-              - name: スキーマ
-                href: devtools-protocol/0.1/domains/schema.md
-      - name: 0.2
-        href: devtools-protocol/0.2/index.md
-        items:
-          - name: クライアント
-            href: devtools-protocol/0.2/clients.md
-          - name: HTTP エンドポイント
-            href: devtools-protocol/0.2/http.md
-          - name: ［ドメイン］
-            href: devtools-protocol/0.2/domains/index.md
-            items:
-              - name: CSS
-                href: devtools-protocol/0.2/domains/css.md
-              - name: DOM
-                href: devtools-protocol/0.2/domains/dom.md
-              - name: DOMDebugger
-                href: devtools-protocol/0.2/domains/domdebugger.md
-              - name: デバッガー
-                href: devtools-protocol/0.2/domains/debugger.md
-              - name: オーバーレイ
-                href: devtools-protocol/0.2/domains/overlay.md
-              - name: Page
-                href: devtools-protocol/0.2/domains/page.md
-              - name: ランタイム
-                href: devtools-protocol/0.2/domains/runtime.md
-              - name: スキーマ
-                href: devtools-protocol/0.2/domains/schema.md
-  - name: レガシー拡張機能
-    items:
-      - name: 拡張機能 (EdgeHTML)
-        href: extensions/index.md
-      - name: API サポート
-        href: extensions/API-support.md
-        items:
-          - name: 拡張 API のロードマップ
-            href: extensions/API-support/extension-API-roadmap.md
-          - name: サポートされる API
-            href: extensions/API-support/supported-APIs.md
-          - name: サポートされるマニフェスト キー
-            href: extensions/API-support/supported-manifest-keys.md
-            items:
-              - name: JSON マニフェストの例
-                href: extensions/API-support/supported-manifest-keys/json-manifest-example.md
-      - name: エンタープライズ向け拡張機能
-        href: extensions/extensions-for-enterprise.md
-      - name: 開始するには
-        href: extensions/getting-started.md
-      - name: ガイド
-        href: extensions/guides.md
-        items:
-          - name: アクセシビリティ
-            href: extensions/guides/accessibility.md
-          - name: 拡張機能の追加と削除
-            href: extensions/guides/adding-and-removing-extensions.md
-          - name: 拡張機能の作成
-            href: extensions/guides/creating-an-extension.md
-          - name: 拡張機能のデバッグ
-            href: extensions/guides/debugging-extensions.md
-          - name: 設計
-            href: extensions/guides/design.md
-          - name: 国際化
-            href: extensions/guides/internationalization.md
-          - name: ネイティブ メッセージング
-            href: extensions/guides/native-messaging.md
-          - name: パッケージ化
-            href: extensions/guides/packaging.md
-            items:
-              - name: 拡張機能パッケージの作成とテスト
-                href: extensions/guides/packaging/creating-and-testing-extension-packages.md
-              - name: Windows デベロッパー センターの拡張機能
-                href: extensions/guides/packaging/extensions-in-the-windows-dev-center.md
-              - name: 拡張機能パッケージのローカライズ
-                href: extensions/guides/packaging/localizing-extension-packages.md
-              - name: 拡張機能をパッケージ化するために ManifoldJS を使用する
-                href: extensions/guides/packaging/using-ManifoldJS-to-package-extensions.md
-              - name: Windows アプリ認定キットの実行
-                href: extensions/guides/packaging/running-the-windows-app-certification-kit.md
-          - name: Chrome 拡張機能の移植
-            href: extensions/guides/porting-Chrome-extensions.md
-      - name: ヒントとテクニック
-        href: extensions/tips-and-tricks.md
-      - name: トラブルシューティング
-        href: extensions/troubleshooting.md
-  - name: レガシー ホスティング
-    href: hosting/toc.md
-  - name: レガシー パフォーマンス分析
-    href: performance-analysis/index.md
-  - name: レガシー プログレッシブ Web アプリ
-    items:
-      - name: プログレッシブ Web アプリ (EdgeHTML)
-        href: progressive-web-apps/index.md
-      - name: PWA の概要 (EdgeHTML)
-        href: progressive-web-apps/get-started.md
-      - name: Windows 用に PWA をカスタマイズ
-        href: progressive-web-apps/windows-features.md
-        items:
-          - name: Xbox 用 PWA
-            href: progressive-web-apps/xbox-considerations.md
-      - name: Microsoft Store のPWA
-        href: progressive-web-apps/microsoft-store.md
-  - name: レガシー WebDriver
-    items:
-      - name: WebDriver (EdgeHTML) の概要
-        href: webdriver/index.md
-  - name: Windows ランタイム (WinRT)
-    href: windows-runtime/toc.yml
-    topicHref: windows-runtime/index.md
+- name: 従来の Microsoft Edge ドキュメント
+  href: index.md
+  expanded: true
+  items:
+    - name: 従来の開発ガイド
+      items:
+        - name: 開発ガイド (EdgeHtml) の概要
+          href: dev-guide/index.md
+        - name: EdgeHTML の新着情報
+          href: dev-guide/whats-new.md
+          items:
+            - name: EdgeHTML 17
+              href: dev-guide/whats-new/edgeHTML-17.md
+            - name: EdgeHTML 16
+              href: dev-guide/whats-new/edgeHTML-16.md
+            - name: EdgeHTML 15
+              href: dev-guide/whats-new/edgeHTML-15.md
+            - name: EdgeHTML 14
+              href: dev-guide/whats-new/edgeHTML-14.md
+            - name: EdgeHTML 13
+              href: dev-guide/whats-new/edgeHTML-13.md
+            - name: EdgeHTML 12
+              href: dev-guide/whats-new/edgeHTML-12.md
+              items:
+                - name: JavaScript のバージョン情報
+                  href: dev-guide/whats-new/javascript-version-information.md
+        - name: ブラウザーの機能
+          href: dev-guide/browser-features.md
+          items:
+            - name: 自動再生のポリシー
+              href: dev-guide/browser-features/autoplay-policies.md
+            - name: Flash
+              href: dev-guide/browser-features/flash.md
+            - name: 読み取りビュー
+              href: dev-guide/browser-features/reading-view.md
+            - name: 検索プロバイダーの検出
+              href: dev-guide/browser-features/search-provider-discovery.md
+        - name: Windows 統合機能
+          href: dev-guide/windows-integration.md
+          items:
+            - name: 支払い要求 API
+              href: dev-guide/windows-integration/Payment-Request-API.md
+            - name: Web 認証
+              href: dev-guide/windows-integration/web-authentication.md
+            - name: Web 通知 API
+              href: dev-guide/windows-integration/web-Notifications-API.md
+    - name: レガシー DevTools
+      items:
+        - name: DevTools (EdgeHTML) の概要
+          href: devtools-guide/index.md
+        - name: 新着情報
+          href: devtools-guide/whats-new.md
+          items:
+            - name: EdgeHTML 17
+              href: devtools-guide/whats-new/edgehtml-17.md
+            - name: EdgeHTML 16
+              href: devtools-guide/whats-new/edgehtml-16.md
+        - name: 要素
+          href: devtools-guide/elements.md
+          items:
+            - name: スタイル
+              href: devtools-guide/elements/styles.md
+            - name: 計算済み
+              href: devtools-guide/elements/computed.md
+            - name: イベント
+              href: devtools-guide/elements/events.md
+            - name: DOM ブレークポイント
+              href: devtools-guide/elements/dom-breakpoints.md
+            - name: フォント
+              href: devtools-guide/elements/fonts.md
+            - name: アクセシビリティ
+              href: devtools-guide/elements/accessibility.md
+            - name: 変更
+              href: devtools-guide/elements/changes.md
+        - name: Console
+          href: devtools-guide/console.md
+          items:
+            - name: コンソール API
+              href: devtools-guide/console/console-api.md
+            - name: コマンド ライン
+              href: devtools-guide/console/command-line.md
+            - name: エラーと状態コード
+              href: devtools-guide/console/error-and-status-codes.md
+        - name: デバッガー
+          href: devtools-guide/debugger.md
+        - name: ネットワーク
+          href: devtools-guide/network.md
+        - name: パフォーマンス
+          href: devtools-guide/performance.md
+        - name: メモリ
+          href: devtools-guide/memory.md
+        - name: 記憶域
+          href: devtools-guide/storage.md
+        - name: サービス ワーカー
+          href: devtools-guide/service-workers.md
+        - name: エミュレーション
+          href: devtools-guide/emulation.md
+    - name: レガシー DevTools プロトコル
+      items:
+        - name: DevTools プロトコル (EdgeHTML)
+          href: devtools-protocol/index.md
+        - name: 0.1
+          href: devtools-protocol/0.1/index.md
+          items:
+            - name: クライアント
+              href: devtools-protocol/0.1/clients.md
+            - name: HTTP エンドポイント
+              href: devtools-protocol/0.1/http.md
+            - name: ［ドメイン］
+              href: devtools-protocol/0.1/domains/index.md
+              items:
+                - name: デバッガー
+                  href: devtools-protocol/0.1/domains/debugger.md
+                - name: Page
+                  href: devtools-protocol/0.1/domains/page.md
+                - name: ランタイム
+                  href: devtools-protocol/0.1/domains/runtime.md
+                - name: スキーマ
+                  href: devtools-protocol/0.1/domains/schema.md
+        - name: 0.2
+          href: devtools-protocol/0.2/index.md
+          items:
+            - name: クライアント
+              href: devtools-protocol/0.2/clients.md
+            - name: HTTP エンドポイント
+              href: devtools-protocol/0.2/http.md
+            - name: ［ドメイン］
+              href: devtools-protocol/0.2/domains/index.md
+              items:
+                - name: CSS
+                  href: devtools-protocol/0.2/domains/css.md
+                - name: DOM
+                  href: devtools-protocol/0.2/domains/dom.md
+                - name: DOMDebugger
+                  href: devtools-protocol/0.2/domains/domdebugger.md
+                - name: デバッガー
+                  href: devtools-protocol/0.2/domains/debugger.md
+                - name: オーバーレイ
+                  href: devtools-protocol/0.2/domains/overlay.md
+                - name: Page
+                  href: devtools-protocol/0.2/domains/page.md
+                - name: ランタイム
+                  href: devtools-protocol/0.2/domains/runtime.md
+                - name: スキーマ
+                  href: devtools-protocol/0.2/domains/schema.md
+    - name: レガシー拡張機能
+      items:
+        - name: 拡張機能 (EdgeHTML)
+          href: extensions/index.md
+        - name: API サポート
+          href: extensions/API-support.md
+          items:
+            - name: 拡張 API のロードマップ
+              href: extensions/API-support/extension-API-roadmap.md
+            - name: サポートされる API
+              href: extensions/API-support/supported-APIs.md
+            - name: サポートされるマニフェスト キー
+              href: extensions/API-support/supported-manifest-keys.md
+              items:
+                - name: JSON マニフェストの例
+                  href: extensions/API-support/supported-manifest-keys/json-manifest-example.md
+        - name: エンタープライズ向け拡張機能
+          href: extensions/extensions-for-enterprise.md
+        - name: 開始するには
+          href: extensions/getting-started.md
+        - name: ガイド
+          href: extensions/guides.md
+          items:
+            - name: アクセシビリティ
+              href: extensions/guides/accessibility.md
+            - name: 拡張機能の追加と削除
+              href: extensions/guides/adding-and-removing-extensions.md
+            - name: 拡張機能の作成
+              href: extensions/guides/creating-an-extension.md
+            - name: 拡張機能のデバッグ
+              href: extensions/guides/debugging-extensions.md
+            - name: 設計
+              href: extensions/guides/design.md
+            - name: 国際化
+              href: extensions/guides/internationalization.md
+            - name: ネイティブ メッセージング
+              href: extensions/guides/native-messaging.md
+            - name: パッケージ化
+              href: extensions/guides/packaging.md
+              items:
+                - name: 拡張機能パッケージの作成とテスト
+                  href: extensions/guides/packaging/creating-and-testing-extension-packages.md
+                - name: Windows デベロッパー センターの拡張機能
+                  href: extensions/guides/packaging/extensions-in-the-windows-dev-center.md
+                - name: 拡張機能パッケージのローカライズ
+                  href: extensions/guides/packaging/localizing-extension-packages.md
+                - name: 拡張機能をパッケージ化するために ManifoldJS を使用する
+                  href: extensions/guides/packaging/using-ManifoldJS-to-package-extensions.md
+                - name: Windows アプリ認定キットの実行
+                  href: extensions/guides/packaging/running-the-windows-app-certification-kit.md
+            - name: Chrome 拡張機能の移植
+              href: extensions/guides/porting-Chrome-extensions.md
+        - name: ヒントとテクニック
+          href: extensions/tips-and-tricks.md
+        - name: トラブルシューティング
+          href: extensions/troubleshooting.md
+    - name: レガシー ホスティング
+      href: hosting/toc.yml
+    - name: レガシー パフォーマンス分析
+      href: performance-analysis/index.md
+    - name: レガシー プログレッシブ Web アプリ
+      items:
+        - name: プログレッシブ Web アプリ (EdgeHTML)
+          href: progressive-web-apps/index.md
+        - name: PWA の概要 (EdgeHTML)
+          href: progressive-web-apps/get-started.md
+        - name: Windows 用に PWA をカスタマイズ
+          href: progressive-web-apps/windows-features.md
+          items:
+            - name: Xbox 用 PWA
+              href: progressive-web-apps/xbox-considerations.md
+        - name: Microsoft Store のPWA
+          href: progressive-web-apps/microsoft-store.md
+    - name: レガシー WebDriver
+      items:
+        - name: WebDriver (EdgeHTML) の概要
+          href: webdriver/index.md
+    - name: Windows ランタイム (WinRT)
+      href: windows-runtime/toc.yml
+      topicHref: windows-runtime/index.md
