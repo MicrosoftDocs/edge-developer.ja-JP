@@ -1,38 +1,91 @@
 ---
 description: スレッド化
-title: スレッド化
+title: スレッド モデル |WebView2
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 07/23/2020
+ms.date: 03/29/2021
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
-keywords: IWebView2、IWebView2WebView、webview2、webview、wpf アプリ、wpf、edge、ICoreWebView2、ICoreWebView2Host、browser control、edge html
-ms.openlocfilehash: 61e3b7fc8d25e2a1ce9c60fb84f5f39ba43f281b
-ms.sourcegitcommit: efdc6369c48942bfa39e45c713300ed70f0e3655
+keywords: IWebView2、IWebView2WebView、webview2、webview、wpf アプリ、wpf、edge、ICoreWebView2、ICoreWebView2Host、ブラウザー コントロール、edge html
+ms.openlocfilehash: 7b447f5cc5fcce3439166638d47a0b87e5536c0a
+ms.sourcegitcommit: 5e218b24fb21fcfa9c82b99f17373fed1ba5a21c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "11013738"
+ms.lasthandoff: 03/29/2021
+ms.locfileid: "11462044"
 ---
-# <span data-ttu-id="5d9d6-104">スレッド化</span><span class="sxs-lookup"><span data-stu-id="5d9d6-104">Threading model</span></span> 
+# <a name="threading-model"></a><span data-ttu-id="7572f-104">スレッド化</span><span class="sxs-lookup"><span data-stu-id="7572f-104">Threading model</span></span> 
 
-<span data-ttu-id="5d9d6-105">WebView2 コントロールは、 [コンポーネントオブジェクトモデル (COM)](https://docs.microsoft.com/windows/win32/com/the-component-object-model) に基づいており、 [シングルスレッドアパートメント (STA)](https://docs.microsoft.com/windows/win32/com/single-threaded-apartments) スレッドで実行する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5d9d6-105">The WebView2 control is based on the [Component Object Model (COM)](https://docs.microsoft.com/windows/win32/com/the-component-object-model) and must run on a [Single Threaded Apartments (STA)](https://docs.microsoft.com/windows/win32/com/single-threaded-apartments) thread.</span></span>
+:::row:::
+   :::column span="1":::
+      <span data-ttu-id="7572f-105">サポートされているプラットフォーム:</span><span class="sxs-lookup"><span data-stu-id="7572f-105">Supported platforms:</span></span>
+   :::column-end:::
+   :::column span="2":::
+      <span data-ttu-id="7572f-106">Win32, Windows Forms, WinUi, WPF</span><span class="sxs-lookup"><span data-stu-id="7572f-106">Win32, Windows Forms, WinUi, WPF</span></span>
+   :::column-end:::
+:::row-end:::  
 
-## <span data-ttu-id="5d9d6-106">スレッド セーフティ</span><span class="sxs-lookup"><span data-stu-id="5d9d6-106">Thread safety</span></span>  
+<span data-ttu-id="7572f-107">WebView2 コントロールはコンポーネント オブジェクト モデル [(COM)][WindowsWin32ComTheComponentObjectModel] に基づいており、単一スレッド アパートメント [(STA) スレッドで実行する必要][WindowsWin32ComSingleThreadedApartments] があります。</span><span class="sxs-lookup"><span data-stu-id="7572f-107">The WebView2 control is based on the [Component Object Model (COM)][WindowsWin32ComTheComponentObjectModel] and must run on a [Single Threaded Apartments (STA)][WindowsWin32ComSingleThreadedApartments] thread.</span></span>  
 
-<span data-ttu-id="5d9d6-107">WebView2 は、UI スレッドで作成する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5d9d6-107">The WebView2 must be created on a UI thread.</span></span>  <span data-ttu-id="5d9d6-108">特にメッセージポンプを持つスレッド。</span><span class="sxs-lookup"><span data-stu-id="5d9d6-108">Specifically a thread with a message pump.</span></span>  <span data-ttu-id="5d9d6-109">このスレッドですべてのコールバックが発生し、WebView2 への要求はそのスレッドで実行する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5d9d6-109">All callbacks occur on that thread and requests into the WebView2 must be done on that thread.</span></span>  <span data-ttu-id="5d9d6-110">別のスレッドから WebView2 を使うことは安全ではありません。</span><span class="sxs-lookup"><span data-stu-id="5d9d6-110">It is not safe to use the WebView2 from another thread.</span></span>  
+## <a name="thread-safety"></a><span data-ttu-id="7572f-108">スレッド セーフティ</span><span class="sxs-lookup"><span data-stu-id="7572f-108">Thread safety</span></span>  
 
-<span data-ttu-id="5d9d6-111">このプロパティの唯一の例外は `Content` `CoreWebView2WebResourceRequest` です。</span><span class="sxs-lookup"><span data-stu-id="5d9d6-111">The only exception is for the `Content` property of `CoreWebView2WebResourceRequest`.</span></span>  <span data-ttu-id="5d9d6-112">`Content`プロパティストリームは、バックグラウンドスレッドから読み取ります。</span><span class="sxs-lookup"><span data-stu-id="5d9d6-112">The `Content` property stream is read from a background thread.</span></span>  <span data-ttu-id="5d9d6-113">UI スレッドへのパフォーマンスへの影響を防ぐために、ストリームは、バックグラウンド STA から作成するか、または作成してください。</span><span class="sxs-lookup"><span data-stu-id="5d9d6-113">The stream should be agile or be created from a background STA to prevent performance impact to the UI thread.</span></span>  
+<span data-ttu-id="7572f-109">WebView2 は UI スレッド上に作成する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7572f-109">The WebView2 must be created on a UI thread.</span></span>  <span data-ttu-id="7572f-110">具体的には、メッセージ ポンプを持つスレッドです。</span><span class="sxs-lookup"><span data-stu-id="7572f-110">Specifically, a thread with a message pump.</span></span>  <span data-ttu-id="7572f-111">そのスレッドですべてのコールバックが発生し、WebView2 への要求は、そのスレッドで実行する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7572f-111">All callbacks occur on that thread and requests into the WebView2 must be done on that thread.</span></span>  <span data-ttu-id="7572f-112">別のスレッドから WebView2 を使用しても安全ではありません。</span><span class="sxs-lookup"><span data-stu-id="7572f-112">It isn't safe to use the WebView2 from another thread.</span></span>  
 
-## <span data-ttu-id="5d9d6-114">再</span><span class="sxs-lookup"><span data-stu-id="5d9d6-114">Reentrancy</span></span>  
+<span data-ttu-id="7572f-113">唯一の例外は、 の `Content` プロパティです `CoreWebView2WebResourceRequest` 。</span><span class="sxs-lookup"><span data-stu-id="7572f-113">The only exception is for the `Content` property of `CoreWebView2WebResourceRequest`.</span></span>  <span data-ttu-id="7572f-114">プロパティ `Content` ストリームは、バックグラウンド スレッドから読み取ります。</span><span class="sxs-lookup"><span data-stu-id="7572f-114">The `Content` property stream is read from a background thread.</span></span>  <span data-ttu-id="7572f-115">UI スレッドのパフォーマンス低下を防ぐために、ストリームはアジャイルまたはバックグラウンド STA から作成する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7572f-115">The stream should be agile or be created from a background STA to prevent performance degradation to the UI thread.</span></span>  
 
-<span data-ttu-id="5d9d6-115">イベントハンドラーと完了ハンドラーを含むコールバックは逐次実行されます。</span><span class="sxs-lookup"><span data-stu-id="5d9d6-115">Callbacks including event handlers and completion handlers run serially.</span></span>  <span data-ttu-id="5d9d6-116">イベントハンドラーを実行していて、メッセージループを開始した場合、他のイベントハンドラーまたは完了コールバックは再入可能な方法で開始できません。</span><span class="sxs-lookup"><span data-stu-id="5d9d6-116">If you have an event handler running and begin a message loop, no other event handlers or completion callbacks are able to begin running in a reentrant manner.</span></span>  
+## <a name="re-entrancy"></a><span data-ttu-id="7572f-116">再エントランシー</span><span class="sxs-lookup"><span data-stu-id="7572f-116">Re-entrancy</span></span>  
 
-## <span data-ttu-id="5d9d6-117">保留</span><span class="sxs-lookup"><span data-stu-id="5d9d6-117">Deferrals</span></span>  
+<span data-ttu-id="7572f-117">イベント ハンドラーや完了ハンドラーを含むコールバックは、シリアルに実行されます。</span><span class="sxs-lookup"><span data-stu-id="7572f-117">Callbacks including event handlers and completion handlers run serially.</span></span>  
+<span data-ttu-id="7572f-118">イベント ハンドラーを実行してメッセージ ループを開始した後、イベント ハンドラーまたは完了コールバックを再入可能な方法で実行できません。</span><span class="sxs-lookup"><span data-stu-id="7572f-118">After you run an event handler and begin a message loop, you're unable to run any event handler or completion callback in a re-entrant manner.</span></span>  
 
-<span data-ttu-id="5d9d6-118">一部の WebView2 イベントは、イベント引数で設定された値を読み取ります。または、イベントハンドラーの完了後に何らかの操作を実行します。</span><span class="sxs-lookup"><span data-stu-id="5d9d6-118">Some WebView2 events read values set on their event args or perform some action after the event handler completes.</span></span>  <span data-ttu-id="5d9d6-119">また、イベントハンドラーなどの非同期操作も実行する必要がある場合は、 `GetDeferral` 関連付けられているイベントのイベント引数でメソッドを使うことができます。</span><span class="sxs-lookup"><span data-stu-id="5d9d6-119">If you also need to run an asynchronous operation such an event handler, you may use the `GetDeferral` method on the event args of the associated events.</span></span>  <span data-ttu-id="5d9d6-120">返された繰延オブジェクトは、のメソッドが要求されるまで、イベントハンドラーが完了したと見なされないようにし `Complete` `Deferral` ます。</span><span class="sxs-lookup"><span data-stu-id="5d9d6-120">The returned Deferral object ensures the event handler is not considered complete until the `Complete` method of the `Deferral` is requested.</span></span>  
+## <a name="deferrals"></a><span data-ttu-id="7572f-119">遅延</span><span class="sxs-lookup"><span data-stu-id="7572f-119">Deferrals</span></span>  
 
-<span data-ttu-id="5d9d6-121">たとえば、イベントを使うと、 `NewWindowRequested` `CoreWebView2` イベントハンドラーが完了したときに、子ウィンドウとして接続することができます。</span><span class="sxs-lookup"><span data-stu-id="5d9d6-121">For instance, you may use the `NewWindowRequested` event to provide a `CoreWebView2` to connect as a child window when the event handler completes.</span></span>  <span data-ttu-id="5d9d6-122">ただし、を非同期的に作成する必要がある場合は、 `CoreWebView2` `GetDeferral` のメソッドをに要求し `NewWindowRequestedEventArgs` ます。</span><span class="sxs-lookup"><span data-stu-id="5d9d6-122">But if you need to asynchronously create the `CoreWebView2`, request the `GetDeferral` method on the `NewWindowRequestedEventArgs`.</span></span>  <span data-ttu-id="5d9d6-123">非同期的にを作成 `CoreWebView2` してプロパティをに設定すると `NewWindow` 、その `NewWindowRequestedEventArgs` `Complete` `Deferral` メソッドを使ってオブジェクトの要求が返され `GetDeferral` ます。</span><span class="sxs-lookup"><span data-stu-id="5d9d6-123">After you have asynchronously created the `CoreWebView2` and set the `NewWindow` property on the `NewWindowRequestedEventArgs`, request `Complete` on the `Deferral` object be returned using the `GetDeferral` method.</span></span>  
+<span data-ttu-id="7572f-120">一部の WebView2 イベントは、関連するイベント引数に設定された値を読み取り、イベント ハンドラーの完了後にいくつかのアクションを開始します。</span><span class="sxs-lookup"><span data-stu-id="7572f-120">Some WebView2 events read values set on the related event arguments or start some action after the event handler completes.</span></span>  <span data-ttu-id="7572f-121">このようなイベント ハンドラーを非同期操作で実行する必要がある場合は、関連付けられたイベントのイベント引数でメソッド `GetDeferral` を使用します。</span><span class="sxs-lookup"><span data-stu-id="7572f-121">If you also need to run an asynchronous operation such an event handler, use the `GetDeferral` method on the event arguments of the associated events.</span></span>  <span data-ttu-id="7572f-122">返されるオブジェクトは、イベント ハンドラーが要求されるまで、イベント ハンドラーが `Deferral` `Complete` 完全と見なされません `Deferral` 。</span><span class="sxs-lookup"><span data-stu-id="7572f-122">The returned `Deferral` object ensures the event handler isn't considered complete until the `Complete` method of the `Deferral` is requested.</span></span>  
+
+<span data-ttu-id="7572f-123">たとえば、イベント ハンドラーが完了すると、子ウィンドウとして接続するイベント `NewWindowRequested` `CoreWebView2` を提供できます。</span><span class="sxs-lookup"><span data-stu-id="7572f-123">For instance, you may use the `NewWindowRequested` event to provide a `CoreWebView2` to connect as a child window when the event handler completes.</span></span>  <span data-ttu-id="7572f-124">ただし、非同期的に作成する必要がある場合 `CoreWebView2` は、 で `GetDeferral` メソッドを要求します `NewWindowRequestedEventArgs` 。</span><span class="sxs-lookup"><span data-stu-id="7572f-124">But if you need to asynchronously create the `CoreWebView2`, request the `GetDeferral` method on the `NewWindowRequestedEventArgs`.</span></span>  <span data-ttu-id="7572f-125">非同期的に作成し、オブジェクトのプロパティを設定した後、メソッドを使用してオブジェクトの要求 `CoreWebView2` `NewWindow` `NewWindowRequestedEventArgs` `Complete` `Deferral` を返 `GetDeferral` します。</span><span class="sxs-lookup"><span data-stu-id="7572f-125">After you've asynchronously created the `CoreWebView2` and set the `NewWindow` property on the `NewWindowRequestedEventArgs`, request `Complete` on the `Deferral` object be returned using the `GetDeferral` method.</span></span>  
+
+## <a name="block-the-ui-thread"></a><span data-ttu-id="7572f-126">UI スレッドをブロックする</span><span class="sxs-lookup"><span data-stu-id="7572f-126">Block the UI thread</span></span>  
+
+<span data-ttu-id="7572f-127">WebView2 は、UI スレッドのメッセージ ポンプに依存して、イベント ハンドラー コールバックと非同期メソッド完了コールバックを実行します。</span><span class="sxs-lookup"><span data-stu-id="7572f-127">The WebView2 relies on the message pump of the UI thread to run event handler callbacks and async method completion callbacks.</span></span>  <span data-ttu-id="7572f-128">メッセージ ポンプをブロックするメソッドを使用する場合は、WebView2 イベント ハンドラーと非同期メソッド完了ハンドラーは `Task.Result` `WaitForSingleObject` 実行されません。</span><span class="sxs-lookup"><span data-stu-id="7572f-128">If you use methods that block the message pump such as `Task.Result` or `WaitForSingleObject`, then your WebView2 event handlers and async method completion handlers don't run.</span></span>  <span data-ttu-id="7572f-129">たとえば、次のコードは完了しないので、完了するまでメッセージ ポンプを `Task.Result` `ExecuteScriptAsync` 停止します。</span><span class="sxs-lookup"><span data-stu-id="7572f-129">For example, the following code doesn't complete, because `Task.Result` stops the message pump while it waits for `ExecuteScriptAsync` to complete.</span></span>  <span data-ttu-id="7572f-130">メッセージ ポンプがブロックされたので、 `ExecuteScriptAsync` 完了できない。</span><span class="sxs-lookup"><span data-stu-id="7572f-130">Since the message pump is blocked, the `ExecuteScriptAsync` isn't able to complete.</span></span>   
+
+```csharp
+private void Button_Click(object sender, EventArgs e)
+{
+    string result = webView2Control.CoreWebView2.ExecuteScriptAsync("'test'").Result;
+    MessageBox.Show(this, result, "Script Result");
+}
+```  
+
+<span data-ttu-id="7572f-131">メッセージ ポンプや UI スレッドをブロックしない `await` `async` and などの非同期 `await` メカニズムを使用します。</span><span class="sxs-lookup"><span data-stu-id="7572f-131">Use an asynchronous `await` mechanism such as `async` and `await`, which doesn't block the message pump or the UI thread.</span></span>  
+
+```csharp
+private async void Button_Click(object sender, EventArgs e)
+{
+    string result = await webView2Control.CoreWebView2.ExecuteScriptAsync("'test'");
+    MessageBox.Show(this, result, "Script Result");
+}
+```  
+
+## <a name="see-also"></a><span data-ttu-id="7572f-132">関連項目</span><span class="sxs-lookup"><span data-stu-id="7572f-132">See also</span></span>  
+
+*   <span data-ttu-id="7572f-133">WebView2 の使用を開始するには [、「WebView2 Getting Started Guides guides」に][Webview2IndexGettingStarted] 移動します。</span><span class="sxs-lookup"><span data-stu-id="7572f-133">To get started using WebView2, navigate to [WebView2 Getting Started Guides][Webview2IndexGettingStarted] guides.</span></span>  
+*   <span data-ttu-id="7572f-134">WebView2 機能の包括的な例については、GitHub の [WebView2Samples リポジトリ][GithubMicrosoftedgeWebview2samples] に移動します。</span><span class="sxs-lookup"><span data-stu-id="7572f-134">For a comprehensive example of WebView2 capabilities, navigate to [WebView2Samples repo][GithubMicrosoftedgeWebview2samples] on GitHub.</span></span>  
+*   <span data-ttu-id="7572f-135">WebView2 API の詳細については、「API リファレンス」 [に移動します][DotnetApiMicrosoftWebWebview2WpfWebview2]。</span><span class="sxs-lookup"><span data-stu-id="7572f-135">For more detailed information about WebView2 APIs, navigate to [API reference][DotnetApiMicrosoftWebWebview2WpfWebview2].</span></span>  
+*   <span data-ttu-id="7572f-136">WebView2 の詳細については [、「WebView2 Resources」に移動します][Webview2IndexNextSteps]。</span><span class="sxs-lookup"><span data-stu-id="7572f-136">For more information about WebView2, navigate to [WebView2 Resources][Webview2IndexNextSteps].</span></span>  
+
+## <a name="getting-in-touch-with-the-microsoft-edge-webview-team"></a><span data-ttu-id="7572f-137">Microsoft Edge WebView チームと連絡を取り合う</span><span class="sxs-lookup"><span data-stu-id="7572f-137">Getting in touch with the Microsoft Edge WebView team</span></span>  
+
+[!INCLUDE [contact WebView team note](../includes/contact-webview-team-note.md)]  
 
 <!-- links -->  
+
+[Webview2IndexGettingStarted]: ../index.md#getting-started "はじめに - Microsoft Edge WebView2 |Microsoft Docs"  
+[Webview2IndexNextSteps]: ../index.md#next-steps "次の手順 - Microsoft Edge WebView2 の概要|Microsoft Docs"  
+
+[DotnetApiMicrosoftWebWebview2WpfWebview2]: /dotnet/api/microsoft.web.webview2.wpf.webview2 "WebView2 クラス | Microsoft Docs"  
+
+[WindowsWin32ComSingleThreadedApartments]: /windows/win32/com/single-threaded-apartments "シングル スレッド アパートメント |Microsoft Docs"  
+[WindowsWin32ComTheComponentObjectModel]: /windows/win32/com/the-component-object-model "Component オブジェクト モデル |Microsoft Docs"  
+
+[GithubMicrosoftedgeWebview2samples]: https://github.com/MicrosoftEdge/WebView2Samples "WebView2 サンプル-MicrosoftEdge/WebView2Samples | GitHub"  
