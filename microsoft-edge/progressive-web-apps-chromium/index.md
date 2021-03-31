@@ -82,7 +82,7 @@ ms.locfileid: "11231217"
     
 <span data-ttu-id="c6b1e-135">デスクトップ PAS は、Microsoft Edge \(Chromium\) が利用可能な任意のプラットフォームでサポートされています。</span><span class="sxs-lookup"><span data-stu-id="c6b1e-135">Desktop PWAs are supported on any of the platforms Microsoft Edge \(Chromium\) is available.</span></span> <span data-ttu-id="c6b1e-136">Microsoft Edge \(Chromium\) は、Windows 7、Windows 10、および macOS で利用できます。</span><span class="sxs-lookup"><span data-stu-id="c6b1e-136">Microsoft Edge \(Chromium\) is available on Windows 7, Windows 10, and macOS.</span></span>  <span data-ttu-id="c6b1e-137">次の利点が含まれています。</span><span class="sxs-lookup"><span data-stu-id="c6b1e-137">The following benefits are included.</span></span>  
 
-*   <span data-ttu-id="c6b1e-138">アプリケーションは、ナビゲーション バーの [インストール]\*\*\*\* アイコンを使用して、ブラウザー内から直接インストールできます。</span><span class="sxs-lookup"><span data-stu-id="c6b1e-138">Applications may be installed directly from within the browser using the **Install** icon in the navigation bar.</span></span>  
+*   <span data-ttu-id="c6b1e-138">アプリケーションは、ナビゲーション バーの [インストール] アイコンを使用して、ブラウザー内から直接インストールできます。</span><span class="sxs-lookup"><span data-stu-id="c6b1e-138">Applications may be installed directly from within the browser using the **Install** icon in the navigation bar.</span></span>  
     
     :::image type="complex" source="./media/install_pwa_icon.png" alt-text="アプリケーション のフライアウトとアイコンのインストール" lightbox="./media/install_pwa_icon.png":::
        <span data-ttu-id="c6b1e-140">アプリケーション のフライアウトとアイコンのインストール</span><span class="sxs-lookup"><span data-stu-id="c6b1e-140">Install application flyout and icon</span></span>  
@@ -96,7 +96,7 @@ ms.locfileid: "11231217"
     
 *   <span data-ttu-id="c6b1e-144">Web 通知は Windows 通知システムに統合されます。</span><span class="sxs-lookup"><span data-stu-id="c6b1e-144">Web Notifications are integrated into the Windows notification system</span></span>  
 *   <span data-ttu-id="c6b1e-145">アプリをインストールしたブラウザー プロファイルを含む共有 Cookie ストア</span><span class="sxs-lookup"><span data-stu-id="c6b1e-145">Shared cookie store with the browser profile that installed the app</span></span>  
-*   <span data-ttu-id="c6b1e-146">証明書の検証、サイトのアクセス\*\*\*\* 許可、追跡保護、ブラウザー拡張機能を含む [設定] メニューなどの \( \) メニューを使用した他のブラウザー機能 `...` へのアクセス</span><span class="sxs-lookup"><span data-stu-id="c6b1e-146">Access to other browser features using the **Setting and more** \(`...`\) menu including certificate validation, site permissions, tracking protection, and browser extensions</span></span>  
+*   <span data-ttu-id="c6b1e-146">証明書の検証、サイトのアクセス 許可、追跡保護、ブラウザー拡張機能を含む [設定] メニューなどの \( \) メニューを使用した他のブラウザー機能 `...` へのアクセス</span><span class="sxs-lookup"><span data-stu-id="c6b1e-146">Access to other browser features using the **Setting and more** \(`...`\) menu including certificate validation, site permissions, tracking protection, and browser extensions</span></span>  
 *   <span data-ttu-id="c6b1e-147">アプリをデバッグ [するために Microsoft Edge DevTools][DevtoolsProgressiveWebApps] へのフル アクセス</span><span class="sxs-lookup"><span data-stu-id="c6b1e-147">Full access to [Microsoft Edge DevTools][DevtoolsProgressiveWebApps] for debugging your app</span></span>  
     
 > [!IMPORTANT]

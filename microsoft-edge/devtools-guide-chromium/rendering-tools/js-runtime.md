@@ -56,7 +56,7 @@ ms.locfileid: "11439739"
 
 ## <a name="view-sampling-profile"></a><span data-ttu-id="c4a07-120">サンプリング プロファイルの表示</span><span class="sxs-lookup"><span data-stu-id="c4a07-120">View Sampling Profile</span></span>  
 
-<span data-ttu-id="c4a07-121">録音が完了すると、DevTools は [\*\*\*\*\*\*サンプリング\*\*プロファイル] の [メモリ] パネルに、レコーディングのデータを自動的に設定します。</span><span class="sxs-lookup"><span data-stu-id="c4a07-121">When you finish recording, DevTools automatically populates the **Memory** panel under **SAMPLING PROFILES** with the data from your recording.</span></span>  
+<span data-ttu-id="c4a07-121">録音が完了すると、DevTools は [サンプリングプロファイル] の [メモリ] パネルに、レコーディングのデータを自動的に設定します。</span><span class="sxs-lookup"><span data-stu-id="c4a07-121">When you finish recording, DevTools automatically populates the **Memory** panel under **SAMPLING PROFILES** with the data from your recording.</span></span>  
 
 <span data-ttu-id="c4a07-122">既定のビューは **Heavy \(Bottom Up\) です**。</span><span class="sxs-lookup"><span data-stu-id="c4a07-122">The default view is **Heavy \(Bottom Up\)**.</span></span>  <span data-ttu-id="c4a07-123">このビューでは、パフォーマンスに最も影響を与えた関数を確認し、各関数の要求パスを確認できます。</span><span class="sxs-lookup"><span data-stu-id="c4a07-123">This view allows you to review which functions had the most impact on performance and examine the requesting path for each function.</span></span>  
 

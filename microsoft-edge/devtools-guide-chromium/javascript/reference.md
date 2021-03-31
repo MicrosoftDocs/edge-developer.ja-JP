@@ -130,7 +130,7 @@ function getName() {
 
 ### <a name="restart-the-top-function-of-the-call-stack"></a><span data-ttu-id="ae3cb-142">呼び出し履歴のトップ関数を再起動する</span><span class="sxs-lookup"><span data-stu-id="ae3cb-142">Restart the top function of the call stack</span></span>  
 
-<span data-ttu-id="ae3cb-143">呼び出し履歴内のトップ関数の最初の行で一時停止し、コード行で一時停止している間は、[通話履歴\*\*\*\*] ウィンドウの任意の場所にマウス ポインターを移動し、コンテキスト\*\*\*\* メニュー \(右クリック\) を開き、[フレームの再起動] を選択します。</span><span class="sxs-lookup"><span data-stu-id="ae3cb-143">To pause on the first line of the top function in your call stack, while paused on a line of code, hover anywhere in the **Call Stack** pane, open the contextual menu \(right-click\), and choose **Restart Frame**.</span></span>  <span data-ttu-id="ae3cb-144">トップ関数は、最後に実行された関数です。</span><span class="sxs-lookup"><span data-stu-id="ae3cb-144">The top function is the last function that was run.</span></span>  
+<span data-ttu-id="ae3cb-143">呼び出し履歴内のトップ関数の最初の行で一時停止し、コード行で一時停止している間は、[通話履歴] ウィンドウの任意の場所にマウス ポインターを移動し、コンテキスト メニュー \(右クリック\) を開き、[フレームの再起動] を選択します。</span><span class="sxs-lookup"><span data-stu-id="ae3cb-143">To pause on the first line of the top function in your call stack, while paused on a line of code, hover anywhere in the **Call Stack** pane, open the contextual menu \(right-click\), and choose **Restart Frame**.</span></span>  <span data-ttu-id="ae3cb-144">トップ関数は、最後に実行された関数です。</span><span class="sxs-lookup"><span data-stu-id="ae3cb-144">The top function is the last function that was run.</span></span>  
 
 <span data-ttu-id="ae3cb-145">次のコード スニペットは、手順を実行する例です。</span><span class="sxs-lookup"><span data-stu-id="ae3cb-145">The following code snippet is an example for you to step-through.</span></span>  
 
@@ -160,7 +160,7 @@ function factorial(n) {
 
 #### <a name="force-script-runtime"></a><span data-ttu-id="ae3cb-155">強制スクリプト ランタイム</span><span class="sxs-lookup"><span data-stu-id="ae3cb-155">Force script runtime</span></span>  
 
-<span data-ttu-id="ae3cb-156">すべてのブレークポイントを無視してスクリプトの実行を強制的に再開するには、[スクリプトの実行を**再開する**]\( スクリプト実行の再開 \) ボタンを選択し、スクリプトの実行を強制する \( 強制スクリプト実行 ![ ](../media/resume-script-run-icon.msft.png) \*\*\*\* ![ ](../media/force-script-run-icon.msft.png) \) ボタンを選択します。</span><span class="sxs-lookup"><span data-stu-id="ae3cb-156">To ignore all breakpoints and force your script to resume running, choose and hold the **Resume Script Execution** \(![Resume Script Execution](../media/resume-script-run-icon.msft.png)\) button and then choose the **Force script execution** \(![Force script execution](../media/force-script-run-icon.msft.png)\) button.</span></span>  
+<span data-ttu-id="ae3cb-156">すべてのブレークポイントを無視してスクリプトの実行を強制的に再開するには、[スクリプトの実行を**再開する**]\( スクリプト実行の再開 \) ボタンを選択し、スクリプトの実行を強制する \( 強制スクリプト実行 ![ ](../media/resume-script-run-icon.msft.png)  ![ ](../media/force-script-run-icon.msft.png) \) ボタンを選択します。</span><span class="sxs-lookup"><span data-stu-id="ae3cb-156">To ignore all breakpoints and force your script to resume running, choose and hold the **Resume Script Execution** \(![Resume Script Execution](../media/resume-script-run-icon.msft.png)\) button and then choose the **Force script execution** \(![Force script execution](../media/force-script-run-icon.msft.png)\) button.</span></span>  
 
 :::image type="complex" source="../media/javascript-sources-get-started-js-force-script-runtime.msft.png" alt-text="[スクリプトの実行を強制する] を選択する" lightbox="../media/javascript-sources-get-started-js-force-script-runtime.msft.png":::
    <span data-ttu-id="ae3cb-158">[スクリプト **の実行を強制する] を選択する**</span><span class="sxs-lookup"><span data-stu-id="ae3cb-158">Choose **Force script execution**</span></span>  
@@ -168,17 +168,17 @@ function factorial(n) {
 
 ### <a name="change-thread-context"></a><span data-ttu-id="ae3cb-159">スレッド コンテキストの変更</span><span class="sxs-lookup"><span data-stu-id="ae3cb-159">Change thread context</span></span>  
 
-<span data-ttu-id="ae3cb-160">Web ワーカーまたはサービス ワーカーを操作する場合は、[スレッド] ウィンドウに表示\*\*\*\* されているコンテキストを選択して、そのコンテキストに切り替えます。</span><span class="sxs-lookup"><span data-stu-id="ae3cb-160">When working with web workers or service workers, choose on a context listed in the **Threads** pane to switch to that context.</span></span>  <span data-ttu-id="ae3cb-161">青い矢印アイコンは、現在選択されているコンテキストを表します。</span><span class="sxs-lookup"><span data-stu-id="ae3cb-161">The blue arrow icon represents which context is currently selected.</span></span>  
+<span data-ttu-id="ae3cb-160">Web ワーカーまたはサービス ワーカーを操作する場合は、[スレッド] ウィンドウに表示 されているコンテキストを選択して、そのコンテキストに切り替えます。</span><span class="sxs-lookup"><span data-stu-id="ae3cb-160">When working with web workers or service workers, choose on a context listed in the **Threads** pane to switch to that context.</span></span>  <span data-ttu-id="ae3cb-161">青い矢印アイコンは、現在選択されているコンテキストを表します。</span><span class="sxs-lookup"><span data-stu-id="ae3cb-161">The blue arrow icon represents which context is currently selected.</span></span>  
 
 :::image type="complex" source="../media/javascript-sources-main-min-js-threads.msft.png" alt-text="[スレッド] ウィンドウ" lightbox="../media/javascript-sources-main-min-js-threads.msft.png":::
    <span data-ttu-id="ae3cb-163">[ **スレッド]** ウィンドウ</span><span class="sxs-lookup"><span data-stu-id="ae3cb-163">The **Threads** pane</span></span>  
 :::image-end:::  
 
-<span data-ttu-id="ae3cb-164">たとえば、メイン スクリプトとサービス ワーカー スクリプトの両方のブレークポイントで一時停止したとします。</span><span class="sxs-lookup"><span data-stu-id="ae3cb-164">For example, suppose that you are paused on a breakpoint in both your main script and your service worker script.</span></span>  <span data-ttu-id="ae3cb-165">サービス ワーカー コンテキストのローカル プロパティとグローバル プロパティを表示する場合\*\*\*\* は、[ソース] パネルにメイン スクリプト コンテキストが表示されます。</span><span class="sxs-lookup"><span data-stu-id="ae3cb-165">You want to view the local and global properties for the service worker context, but the **Sources** panel is showing the main script context.</span></span>  <span data-ttu-id="ae3cb-166">[スレッド] ウィンドウでサービス ワーカー\*\*\*\* エントリを選択すると、そのコンテキストに切り替える必要があります。</span><span class="sxs-lookup"><span data-stu-id="ae3cb-166">By choosing on the service worker entry in the **Threads** pane, you should be able to switch to that context.</span></span>  
+<span data-ttu-id="ae3cb-164">たとえば、メイン スクリプトとサービス ワーカー スクリプトの両方のブレークポイントで一時停止したとします。</span><span class="sxs-lookup"><span data-stu-id="ae3cb-164">For example, suppose that you are paused on a breakpoint in both your main script and your service worker script.</span></span>  <span data-ttu-id="ae3cb-165">サービス ワーカー コンテキストのローカル プロパティとグローバル プロパティを表示する場合 は、[ソース] パネルにメイン スクリプト コンテキストが表示されます。</span><span class="sxs-lookup"><span data-stu-id="ae3cb-165">You want to view the local and global properties for the service worker context, but the **Sources** panel is showing the main script context.</span></span>  <span data-ttu-id="ae3cb-166">[スレッド] ウィンドウでサービス ワーカー エントリを選択すると、そのコンテキストに切り替える必要があります。</span><span class="sxs-lookup"><span data-stu-id="ae3cb-166">By choosing on the service worker entry in the **Threads** pane, you should be able to switch to that context.</span></span>  
 
 ## <a name="view-and-edit-local-closure-and-global-properties"></a><span data-ttu-id="ae3cb-167">ローカル、クロージャ、およびグローバル プロパティの表示と編集</span><span class="sxs-lookup"><span data-stu-id="ae3cb-167">View and edit local, closure, and global properties</span></span>  
 
-<span data-ttu-id="ae3cb-168">コード行で一時停止中に、[スコープ]\*\*\*\* ウィンドウを使用して、ローカル スコープ、クロージャ スコープ、およびグローバル スコープ内のプロパティと変数の値を表示および編集します。</span><span class="sxs-lookup"><span data-stu-id="ae3cb-168">While paused on a line of code, use the **Scope** pane to view and edit the values of properties and variables in the local, closure, and global scopes.</span></span>  
+<span data-ttu-id="ae3cb-168">コード行で一時停止中に、[スコープ] ウィンドウを使用して、ローカル スコープ、クロージャ スコープ、およびグローバル スコープ内のプロパティと変数の値を表示および編集します。</span><span class="sxs-lookup"><span data-stu-id="ae3cb-168">While paused on a line of code, use the **Scope** pane to view and edit the values of properties and variables in the local, closure, and global scopes.</span></span>  
 
 *   <span data-ttu-id="ae3cb-169">プロパティ値をダブルクリックして変更します。</span><span class="sxs-lookup"><span data-stu-id="ae3cb-169">Double-click a property value to change it.</span></span>  
 *   <span data-ttu-id="ae3cb-170">列挙できないプロパティは灰色で表示されます。</span><span class="sxs-lookup"><span data-stu-id="ae3cb-170">Non-enumerable properties are greyed out.</span></span>  
@@ -189,7 +189,7 @@ function factorial(n) {
 
 ## <a name="view-the-current-call-stack"></a><span data-ttu-id="ae3cb-173">現在の呼び出し履歴を表示する</span><span class="sxs-lookup"><span data-stu-id="ae3cb-173">View the current call stack</span></span>  
 
-<span data-ttu-id="ae3cb-174">コード行で一時停止中に、[呼び出\*\*\*\* し履歴] ウィンドウを使用して、この時点に移動した通話履歴を表示します。</span><span class="sxs-lookup"><span data-stu-id="ae3cb-174">While paused on a line of code, use the **Call Stack** pane to view the call stack that got you to this point.</span></span>  
+<span data-ttu-id="ae3cb-174">コード行で一時停止中に、[呼び出 し履歴] ウィンドウを使用して、この時点に移動した通話履歴を表示します。</span><span class="sxs-lookup"><span data-stu-id="ae3cb-174">While paused on a line of code, use the **Call Stack** pane to view the call stack that got you to this point.</span></span>  
 
 <!--If you are working with async code, check the **Async** checkbox to enable async call stacks.  -->  
 
@@ -208,7 +208,7 @@ function factorial(n) {
 This should be moved to an "Export debug data" H2 section when there is enough content for that, but there is not right now, so it is here.
 -->
 
-<span data-ttu-id="ae3cb-181">現在の呼び出し履歴をクリップボードにコピーするには、[通話履歴\*\*\*\*] ウィンドウの任意の場所にマウス ポインターを移動し、コンテキスト メニュー \(右クリック\) を開き、[スタック トレースのコピー] を**選択します**。</span><span class="sxs-lookup"><span data-stu-id="ae3cb-181">to copy the current call stack to the clipboard, hover anywhere in the **Call Stack** pane, open the contextual menu \(right-click\), and choose **Copy stack trace**.</span></span>  
+<span data-ttu-id="ae3cb-181">現在の呼び出し履歴をクリップボードにコピーするには、[通話履歴] ウィンドウの任意の場所にマウス ポインターを移動し、コンテキスト メニュー \(右クリック\) を開き、[スタック トレースのコピー] を**選択します**。</span><span class="sxs-lookup"><span data-stu-id="ae3cb-181">to copy the current call stack to the clipboard, hover anywhere in the **Call Stack** pane, open the contextual menu \(right-click\), and choose **Copy stack trace**.</span></span>  
 
 :::image type="complex" source="../media/javascript-glitch-debug-js-sources-get-started-inputs-are-empty-copy-stack-trace.msft.png" alt-text="[スタック トレースのコピー] を選択する" lightbox="../media/javascript-glitch-debug-js-sources-get-started-inputs-are-empty-copy-stack-trace.msft.png":::
    <span data-ttu-id="ae3cb-183">[スタック **トレースのコピー] を選択する**</span><span class="sxs-lookup"><span data-stu-id="ae3cb-183">Choose **Copy Stack Trace**</span></span>  
@@ -224,7 +224,7 @@ onChoose (get-started.js:15)
 
 ## <a name="ignore-a-script-or-pattern-of-scripts"></a><span data-ttu-id="ae3cb-185">スクリプトまたはスクリプトのパターンを無視する</span><span class="sxs-lookup"><span data-stu-id="ae3cb-185">Ignore a script or pattern of scripts</span></span>  
 
-<span data-ttu-id="ae3cb-186">デバッグ中にスクリプトを無視する場合は、スクリプトをライブラリ コードとしてマークします。</span><span class="sxs-lookup"><span data-stu-id="ae3cb-186">Mark a script as Library code when you want to ignore that script while debugging.</span></span>  <span data-ttu-id="ae3cb-187">ライブラリ コードとしてマークされている場合、スクリプトは [呼び\*\*\*\* 出し履歴] ウィンドウで見えなされ、コードをステップ実行するときにスクリプトの機能にステップ インする必要はありません。</span><span class="sxs-lookup"><span data-stu-id="ae3cb-187">When marked as Library code, a script is obscured in the **Call Stack** pane, and you never step into the functions of the script when you step through your code.</span></span>  
+<span data-ttu-id="ae3cb-186">デバッグ中にスクリプトを無視する場合は、スクリプトをライブラリ コードとしてマークします。</span><span class="sxs-lookup"><span data-stu-id="ae3cb-186">Mark a script as Library code when you want to ignore that script while debugging.</span></span>  <span data-ttu-id="ae3cb-187">ライブラリ コードとしてマークされている場合、スクリプトは [呼び 出し履歴] ウィンドウで見えなされ、コードをステップ実行するときにスクリプトの機能にステップ インする必要はありません。</span><span class="sxs-lookup"><span data-stu-id="ae3cb-187">When marked as Library code, a script is obscured in the **Call Stack** pane, and you never step into the functions of the script when you step through your code.</span></span>  
 
 <span data-ttu-id="ae3cb-188">次のコード スニペットは、手順を実行する例です。</span><span class="sxs-lookup"><span data-stu-id="ae3cb-188">The following code snippet is an example for you to step-through.</span></span>  
 
@@ -295,7 +295,7 @@ function animate() {
 
 ## <a name="make-a-minified-file-readable"></a><span data-ttu-id="ae3cb-226">ファイルを読み取り可能にする</span><span class="sxs-lookup"><span data-stu-id="ae3cb-226">Make a minified file readable</span></span>  
 
-<span data-ttu-id="ae3cb-227">[Format \*\*\*\* \( Format \) ] ボタンを選択して、ファイルを人間が読み取り可能 ![ ](../media/format-icon.msft.png) にします。</span><span class="sxs-lookup"><span data-stu-id="ae3cb-227">Choose the **Format** \(![Format](../media/format-icon.msft.png)\) button to make a minified file human-readable.</span></span>  
+<span data-ttu-id="ae3cb-227">[Format  \( Format \) ] ボタンを選択して、ファイルを人間が読み取り可能 ![ ](../media/format-icon.msft.png) にします。</span><span class="sxs-lookup"><span data-stu-id="ae3cb-227">Choose the **Format** \(![Format](../media/format-icon.msft.png)\) button to make a minified file human-readable.</span></span>  
 
 :::image type="complex" source="../media/javascript-sources-html-non-minified.msft.png" alt-text="[書式] ボタン" lightbox="../media/javascript-sources-html-non-minified.msft.png":::
    <span data-ttu-id="ae3cb-229">[ **書式]** ボタン</span><span class="sxs-lookup"><span data-stu-id="ae3cb-229">The **Format** button</span></span>  

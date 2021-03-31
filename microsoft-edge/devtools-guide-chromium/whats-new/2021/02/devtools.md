@@ -64,7 +64,7 @@ ms.locfileid: "11439746"
 
 <span data-ttu-id="38b77-122">これで、DevTools 内の任意のアクションのキーボード ショートカットをカスタマイズできます。</span><span class="sxs-lookup"><span data-stu-id="38b77-122">You may now customize the keyboard shortcut for any action in the DevTools.</span></span>  <span data-ttu-id="38b77-123">キーボード ショートカットを編集するには、次の操作を実行します。</span><span class="sxs-lookup"><span data-stu-id="38b77-123">To edit a keyboard shortcut, complete the following actions.</span></span>  
 
-1.  <span data-ttu-id="38b77-124">DevTools を開き、**[設定]** > \*\* [ショートカット]\*\* を選択します。</span><span class="sxs-lookup"><span data-stu-id="38b77-124">Open the DevTools, and then choose **Settings** > **Shortcuts**.</span></span>  
+1.  <span data-ttu-id="38b77-124">DevTools を開き、**[設定]** >  [ショートカット] を選択します。</span><span class="sxs-lookup"><span data-stu-id="38b77-124">Open the DevTools, and then choose **Settings** > **Shortcuts**.</span></span>  
 1.  <span data-ttu-id="38b77-125">カスタマイズするアクションを選択します。</span><span class="sxs-lookup"><span data-stu-id="38b77-125">Choose the action you want to customize.</span></span>  
 1.  <span data-ttu-id="38b77-126">[編集] \(</span><span class="sxs-lookup"><span data-stu-id="38b77-126">Choose the Edit \(</span></span>![[キーボード ショートカットの編集] アイコン](../../media/2021/02/edit-keyboard-shortcut-icon.msft.png)<span data-ttu-id="38b77-128">\) アイコン。</span><span class="sxs-lookup"><span data-stu-id="38b77-128">\) icon.</span></span>  
 1.  <span data-ttu-id="38b77-129">アクションにバインドするキーを選択します。</span><span class="sxs-lookup"><span data-stu-id="38b77-129">Select the keys you want to bind to the action.</span></span>  

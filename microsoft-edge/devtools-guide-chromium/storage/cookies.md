@@ -64,7 +64,7 @@ ms.locfileid: "11439683"
 
 ## <a name="filter-cookies"></a><span data-ttu-id="50f1d-145">フィルター Cookie</span><span class="sxs-lookup"><span data-stu-id="50f1d-145">Filter cookies</span></span>  
 
-<span data-ttu-id="50f1d-146">[フィルター]**テキスト ボックス**を使用して、名前または値で**Cookie を\*\*\*\*フィルター処理します**。</span><span class="sxs-lookup"><span data-stu-id="50f1d-146">Use the **Filter** text box to filter cookies by **Name** or **Value**.</span></span>  <span data-ttu-id="50f1d-147">他のフィールドによるフィルター処理はサポートされていません。</span><span class="sxs-lookup"><span data-stu-id="50f1d-147">Filtering by other fields is not supported.</span></span>  
+<span data-ttu-id="50f1d-146">[フィルター]**テキスト ボックス**を使用して、名前または値で**Cookie をフィルター処理します**。</span><span class="sxs-lookup"><span data-stu-id="50f1d-146">Use the **Filter** text box to filter cookies by **Name** or **Value**.</span></span>  <span data-ttu-id="50f1d-147">他のフィールドによるフィルター処理はサポートされていません。</span><span class="sxs-lookup"><span data-stu-id="50f1d-147">Filtering by other fields is not supported.</span></span>  
 
 :::image type="complex" source="../media/storage-application-storage-cookies-filter-id.msft.png" alt-text="テキスト ID を含む Cookie をフィルター処理する" lightbox="../media/storage-application-storage-cookies-filter-id.msft.png":::
    <span data-ttu-id="50f1d-149">図 3: テキストを含む Cookie をフィルター処理する</span><span class="sxs-lookup"><span data-stu-id="50f1d-149">Figure 3:  Filtering out any cookies that do not contain the text</span></span> `ID`  
@@ -72,7 +72,7 @@ ms.locfileid: "11439683"
 
 ## <a name="edit-a-cookie"></a><span data-ttu-id="50f1d-150">Cookie を編集する</span><span class="sxs-lookup"><span data-stu-id="50f1d-150">Edit a cookie</span></span>  
 
-<span data-ttu-id="50f1d-151">[**名前]、[\*\*\*\*値\*\*\*\*]、[ドメイン\*\*\*\*]、[パス**]、および **[有効期限] / [最大年齢**] フィールドは編集可能です。</span><span class="sxs-lookup"><span data-stu-id="50f1d-151">The **Name**, **Value**, **Domain**, **Path**, and **Expires / Max-Age** fields are editable.</span></span>  
+<span data-ttu-id="50f1d-151">[**名前]、[値]、[ドメイン]、[パス**]、および **[有効期限] / [最大年齢**] フィールドは編集可能です。</span><span class="sxs-lookup"><span data-stu-id="50f1d-151">The **Name**, **Value**, **Domain**, **Path**, and **Expires / Max-Age** fields are editable.</span></span>  
 <span data-ttu-id="50f1d-152">フィールドをダブルクリックして編集します。</span><span class="sxs-lookup"><span data-stu-id="50f1d-152">Double-click a field to edit it.</span></span>  
 
 :::image type="complex" source="../media/storage-application-storage-cookies-rename.msft.png" alt-text="Cookie の名前を DEVTOOLS に設定する!" lightbox="../media/storage-application-storage-cookies-rename.msft.png":::

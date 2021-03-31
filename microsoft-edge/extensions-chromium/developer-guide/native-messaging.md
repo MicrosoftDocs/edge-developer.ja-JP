@@ -27,7 +27,7 @@ ms.locfileid: "11343067"
 
 ## <span data-ttu-id="91e3d-114">手順 1 - 拡張機能マニフェストにアクセス許可を追加する</span><span class="sxs-lookup"><span data-stu-id="91e3d-114">Step 1 - Add permissions to the extension manifest</span></span>  
 
-<span data-ttu-id="91e3d-115">拡張子の `nativeMessaging` ファイルのmanifest.js\*\* に\*\* アクセス許可を追加します。</span><span class="sxs-lookup"><span data-stu-id="91e3d-115">Add the `nativeMessaging` permission to the **manifest.json** file of the extension.</span></span>  <span data-ttu-id="91e3d-116">次のコード スニペットは、次に示すmanifest.js\*\* です\*\*。</span><span class="sxs-lookup"><span data-stu-id="91e3d-116">The following code snippet is an example of **manifest.json**.</span></span>  
+<span data-ttu-id="91e3d-115">拡張子の `nativeMessaging` ファイルのmanifest.js に アクセス許可を追加します。</span><span class="sxs-lookup"><span data-stu-id="91e3d-115">Add the `nativeMessaging` permission to the **manifest.json** file of the extension.</span></span>  <span data-ttu-id="91e3d-116">次のコード スニペットは、次に示すmanifest.js です。</span><span class="sxs-lookup"><span data-stu-id="91e3d-116">The following code snippet is an example of **manifest.json**.</span></span>  
 
 ```json
     {

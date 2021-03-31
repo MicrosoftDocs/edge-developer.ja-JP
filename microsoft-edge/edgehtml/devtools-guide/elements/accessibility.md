@@ -22,13 +22,13 @@ ms.locfileid: "11234603"
 
 ![[アクセシビリティ] ウィンドウ](../media/elements_accessibility.png)
 
-<span data-ttu-id="d11a1-109">アクセシビリティ ツリーを開いて、[](#accessibility-tree)スクリーン リーダーと同じ方法でページ内を移動し、[アクセシビリティ] ウィンドウ\*\*\*\* を使用して、関心のあるアクセシビリティ プロパティに関する詳細を確認すると便利です。</span><span class="sxs-lookup"><span data-stu-id="d11a1-109">It's useful to open the [Accessibility tree](#accessibility-tree) to navigate around your page as a screen reader would, and then use the **Accessibility** pane to inspect details about accessibility properties of interest.</span></span>
+<span data-ttu-id="d11a1-109">アクセシビリティ ツリーを開いて、[](#accessibility-tree)スクリーン リーダーと同じ方法でページ内を移動し、[アクセシビリティ] ウィンドウ を使用して、関心のあるアクセシビリティ プロパティに関する詳細を確認すると便利です。</span><span class="sxs-lookup"><span data-stu-id="d11a1-109">It's useful to open the [Accessibility tree](#accessibility-tree) to navigate around your page as a screen reader would, and then use the **Accessibility** pane to inspect details about accessibility properties of interest.</span></span>
 
 ## <span data-ttu-id="d11a1-110">アクセシビリティ ツリー</span><span class="sxs-lookup"><span data-stu-id="d11a1-110">Accessibility tree</span></span>  
 
 <span data-ttu-id="d11a1-111">[ **アクセシビリティ] ツリー** ウィンドウには [、Windows](https://support.microsoft.com/help/22798/windows-10-narrator-get-started) ナレーター スクリーン リーダーなどの支援技術のように表示されるページの構造が表示されます。</span><span class="sxs-lookup"><span data-stu-id="d11a1-111">The **Accessibility tree** pane shows the structure of your page as it would appear to an assistive technology, such as the [Windows Narrator](https://support.microsoft.com/help/22798/windows-10-narrator-get-started) screen reader.</span></span>
 
-<span data-ttu-id="d11a1-112">ツリー ビューでノードをクリックすると [**、HTML**](../elements.md#html-tree-view)ツリーでもノードが選択され、その逆も選択されます。</span><span class="sxs-lookup"><span data-stu-id="d11a1-112">Clicking on a node in the tree view will also select it in the [**HTML tree**](../elements.md#html-tree-view), and vice versa.</span></span> <span data-ttu-id="d11a1-113">*HTML*ビューまたはアクセシビリティ ツリー ビューからアクセシビリティ\*\* 対応の要素を選択すると、アクセシビリティ ツール ウィンドウにアクセシビリティ プロパティの詳細**が**表示されます。</span><span class="sxs-lookup"><span data-stu-id="d11a1-113">Selecting an accessible element from either the *HTML* or *Accessibility* tree views will also populate further accessibility property details in the **Accessibility** tool pane.</span></span> 
+<span data-ttu-id="d11a1-112">ツリー ビューでノードをクリックすると [**、HTML**](../elements.md#html-tree-view)ツリーでもノードが選択され、その逆も選択されます。</span><span class="sxs-lookup"><span data-stu-id="d11a1-112">Clicking on a node in the tree view will also select it in the [**HTML tree**](../elements.md#html-tree-view), and vice versa.</span></span> <span data-ttu-id="d11a1-113">*HTML*ビューまたはアクセシビリティ ツリー ビューからアクセシビリティ 対応の要素を選択すると、アクセシビリティ ツール ウィンドウにアクセシビリティ プロパティの詳細**が**表示されます。</span><span class="sxs-lookup"><span data-stu-id="d11a1-113">Selecting an accessible element from either the *HTML* or *Accessibility* tree views will also populate further accessibility property details in the **Accessibility** tool pane.</span></span> 
 
 ![アクセシビリティ ツリー ビュー](../media/elements_accessibility_tree.png)
 

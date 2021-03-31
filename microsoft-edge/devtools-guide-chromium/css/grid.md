@@ -41,7 +41,7 @@ ms.locfileid: "11439262"
    <span data-ttu-id="aac3e-119">トグル グリッド バッジ</span><span class="sxs-lookup"><span data-stu-id="aac3e-119">Toggle grid badge</span></span>  
 :::image-end:::  
 
-<span data-ttu-id="aac3e-120">[レイアウト] **ウィンドウを開** きます。</span><span class="sxs-lookup"><span data-stu-id="aac3e-120">Open the **Layout** pane.</span></span>  <span data-ttu-id="aac3e-121">グリッドがページに含まれている場合、[レイアウト]\*\*\*\* ウィンドウには、\*\*\*\* グリッドを表示するための多数のオプションを含むグリッド セクションが含まれます。</span><span class="sxs-lookup"><span data-stu-id="aac3e-121">When grids are included on a page, the **Layout** pane includes a **Grid** section containing a number of options for viewing the grids.</span></span>  
+<span data-ttu-id="aac3e-120">[レイアウト] **ウィンドウを開** きます。</span><span class="sxs-lookup"><span data-stu-id="aac3e-120">Open the **Layout** pane.</span></span>  <span data-ttu-id="aac3e-121">グリッドがページに含まれている場合、[レイアウト] ウィンドウには、 グリッドを表示するための多数のオプションを含むグリッド セクションが含まれます。</span><span class="sxs-lookup"><span data-stu-id="aac3e-121">When grids are included on a page, the **Layout** pane includes a **Grid** section containing a number of options for viewing the grids.</span></span>  
 
 :::image type="complex" source="../media/grid-layout-pane.msft.png" alt-text="レイアウト ウィンドウ" lightbox="../media/grid-layout-pane.msft.png":::
    <span data-ttu-id="aac3e-123">**レイアウト** ウィンドウ</span><span class="sxs-lookup"><span data-stu-id="aac3e-123">**Layout** pane</span></span>  
@@ -137,7 +137,7 @@ ms.locfileid: "11439262"
 
 ### <a name="show-area-names"></a><span data-ttu-id="aac3e-194">エリア名の表示</span><span class="sxs-lookup"><span data-stu-id="aac3e-194">Show area names</span></span>  
 
-<span data-ttu-id="aac3e-195">エリア名を表示するには、[エリア名を表示 **] チェック ボックスをオン** にします。</span><span class="sxs-lookup"><span data-stu-id="aac3e-195">To view the area names, enable the **Show area names** checkbox.</span></span>  <span data-ttu-id="aac3e-196">この例では、グリッドには、上、下**1、** 下 2 の 3 つの\*\*\*\*\*\*領域があります\*\*。</span><span class="sxs-lookup"><span data-stu-id="aac3e-196">In the example, there are 3 areas in the grid: **top**, **bottom1** and **bottom2**.</span></span>  
+<span data-ttu-id="aac3e-195">エリア名を表示するには、[エリア名を表示 **] チェック ボックスをオン** にします。</span><span class="sxs-lookup"><span data-stu-id="aac3e-195">To view the area names, enable the **Show area names** checkbox.</span></span>  <span data-ttu-id="aac3e-196">この例では、グリッドには、上、下**1、** 下 2 の 3 つの領域があります。</span><span class="sxs-lookup"><span data-stu-id="aac3e-196">In the example, there are 3 areas in the grid: **top**, **bottom1** and **bottom2**.</span></span>  
 
 :::image type="complex" source="../media/grid-show-area-names.msft.png" alt-text="エリア名の表示" lightbox="../media/grid-show-area-names.msft.png":::
    **<span data-ttu-id="aac3e-198">エリア名の表示</span><span class="sxs-lookup"><span data-stu-id="aac3e-198">Show area names</span></span>**  
@@ -176,7 +176,7 @@ ms.locfileid: "11439262"
 
 ### <a name="highlight-the-grid"></a><span data-ttu-id="aac3e-214">グリッドを強調表示する</span><span class="sxs-lookup"><span data-stu-id="aac3e-214">Highlight the grid</span></span>  
 
-<span data-ttu-id="aac3e-215">[要素] ツールで\*\*\*\* HTML 要素を強調表示し、Web ページ上でスクロールするには、[要素] パネル**\(** [要素] パネル アイコン \) の [要素の表示] アイコンで [要素の表示] 要素 ![ ](../media/show-element-in-element-panel-icon.msft.png) を選択します。</span><span class="sxs-lookup"><span data-stu-id="aac3e-215">To highlight the HTML element in the **Elements** tool and scroll to it on the webpage, choose the **Show element in the Elements panel** \(![Show element in the Elements panel icon](../media/show-element-in-element-panel-icon.msft.png)\) icon.</span></span>  
+<span data-ttu-id="aac3e-215">[要素] ツールで HTML 要素を強調表示し、Web ページ上でスクロールするには、[要素] パネル**\(** [要素] パネル アイコン \) の [要素の表示] アイコンで [要素の表示] 要素 ![ ](../media/show-element-in-element-panel-icon.msft.png) を選択します。</span><span class="sxs-lookup"><span data-stu-id="aac3e-215">To highlight the HTML element in the **Elements** tool and scroll to it on the webpage, choose the **Show element in the Elements panel** \(![Show element in the Elements panel icon](../media/show-element-in-element-panel-icon.msft.png)\) icon.</span></span>  
 
 :::image type="complex" source="../media/grid-grid-overlays-highlight.msft.png" alt-text="グリッドを強調表示する" lightbox="../media/grid-grid-overlays-highlight.msft.png":::
    <span data-ttu-id="aac3e-217">グリッドを強調表示する</span><span class="sxs-lookup"><span data-stu-id="aac3e-217">Highlight the grid</span></span>  

@@ -52,7 +52,7 @@ ms.locfileid: "11234452"
 
 ### <span data-ttu-id="bfc2e-126">Performance.mark()</span><span class="sxs-lookup"><span data-stu-id="bfc2e-126">Performance.mark()</span></span>
 
-<span data-ttu-id="bfc2e-127">コードまたは DevTools コンソールからメソッドを呼び出すことによって、分析セッションの過程で重要なイベントを識別するのに役立つカスタム ユーザー マークをタイムラインに\*\*\*\* [`Performance.mark()`](https://developer.mozilla.org/docs/Web/API/Performance/mark) 追加[**できます**](./console.md)。</span><span class="sxs-lookup"><span data-stu-id="bfc2e-127">You can add custom **User marks** to the timeline to help identify  key events during the course of your analysis session by calling the [`Performance.mark()`](https://developer.mozilla.org/docs/Web/API/Performance/mark) method from within your code or the  DevTools [**Console**](./console.md).</span></span>
+<span data-ttu-id="bfc2e-127">コードまたは DevTools コンソールからメソッドを呼び出すことによって、分析セッションの過程で重要なイベントを識別するのに役立つカスタム ユーザー マークをタイムラインに [`Performance.mark()`](https://developer.mozilla.org/docs/Web/API/Performance/mark) 追加[**できます**](./console.md)。</span><span class="sxs-lookup"><span data-stu-id="bfc2e-127">You can add custom **User marks** to the timeline to help identify  key events during the course of your analysis session by calling the [`Performance.mark()`](https://developer.mozilla.org/docs/Web/API/Performance/mark) method from within your code or the  DevTools [**Console**](./console.md).</span></span>
 
 ### <span data-ttu-id="bfc2e-128">Console.takeheapSnapshot()</span><span class="sxs-lookup"><span data-stu-id="bfc2e-128">Console.takeheapSnapshot()</span></span>
 
@@ -78,7 +78,7 @@ ms.locfileid: "11234452"
 
 <span data-ttu-id="bfc2e-143">ヒープ上のオブジェクトのインスタンス数と合計サイズを、オブジェクトの種類別にグループ化して示します。</span><span class="sxs-lookup"><span data-stu-id="bfc2e-143">Shows the instance count and total size of objects on the heap, grouped by object type.</span></span> <span data-ttu-id="bfc2e-144">既定では、これらはインスタンス数で並べ替えされます。</span><span class="sxs-lookup"><span data-stu-id="bfc2e-144">By default, these are sorted by instance count.</span></span>
 
-<span data-ttu-id="bfc2e-145">上部の [種類] ウィンドウ\*\* でオブジェクトを選択[](#object-references)すると、下枠の [オブジェクト参照] テーブルに、そのオブジェクトをポイントしているすべてのオブジェクトが一覧表示されます。</span><span class="sxs-lookup"><span data-stu-id="bfc2e-145">When you select an object in the upper *Types* pane, the [Object references](#object-references) table in the lower pane will list all the objects that point to that object.</span></span>
+<span data-ttu-id="bfc2e-145">上部の [種類] ウィンドウ でオブジェクトを選択[](#object-references)すると、下枠の [オブジェクト参照] テーブルに、そのオブジェクトをポイントしているすべてのオブジェクトが一覧表示されます。</span><span class="sxs-lookup"><span data-stu-id="bfc2e-145">When you select an object in the upper *Types* pane, the [Object references](#object-references) table in the lower pane will list all the objects that point to that object.</span></span>
 
 #### <span data-ttu-id="bfc2e-146">ルート</span><span class="sxs-lookup"><span data-stu-id="bfc2e-146">Roots</span></span>
 
@@ -90,7 +90,7 @@ ms.locfileid: "11234452"
 
 <span data-ttu-id="bfc2e-150">他のオブジェクトへの排他参照を持つヒープ上のオブジェクトの一覧を表示します。</span><span class="sxs-lookup"><span data-stu-id="bfc2e-150">Shows a list of objects on the heap that have exclusive references to other objects.</span></span> <span data-ttu-id="bfc2e-151">リミネータは保持されたサイズで並べ替え、解放するのが最も簡単な可能性のあるメモリを消費するオブジェクトを示します。</span><span class="sxs-lookup"><span data-stu-id="bfc2e-151">Dominators are sorted by retained size to indicate the objects consuming the most memory that are potentially easiest to free.</span></span>
 
-<span data-ttu-id="bfc2e-152">型、ルート、およびドミネータ ビューの列を*解釈する方法\*\*を次に示*します。</span><span class="sxs-lookup"><span data-stu-id="bfc2e-152">Here's how to interpret the columns in the *Types, Roots* and *Dominators* views:</span></span>
+<span data-ttu-id="bfc2e-152">型、ルート、およびドミネータ ビューの列を*解釈する方法を次に示*します。</span><span class="sxs-lookup"><span data-stu-id="bfc2e-152">Here's how to interpret the columns in the *Types, Roots* and *Dominators* views:</span></span>
 
 <span data-ttu-id="bfc2e-153">列</span><span class="sxs-lookup"><span data-stu-id="bfc2e-153">Column</span></span> | <span data-ttu-id="bfc2e-154">説明</span><span class="sxs-lookup"><span data-stu-id="bfc2e-154">Description</span></span>
 :------------ | :-------------
@@ -100,7 +100,7 @@ ms.locfileid: "11234452"
 <span data-ttu-id="bfc2e-162">保持サイズ</span><span class="sxs-lookup"><span data-stu-id="bfc2e-162">Retained size</span></span> | <span data-ttu-id="bfc2e-163">オブジェクト のサイズと、他の親を持たないすべての子オブジェクトのサイズ。</span><span class="sxs-lookup"><span data-stu-id="bfc2e-163">Object size plus the size of all child objects that have no other parents.</span></span> <span data-ttu-id="bfc2e-164">実際には、これはオブジェクトによって保持されるメモリの量です。したがって、オブジェクトを削除すると、指定したメモリ量を解放します。</span><span class="sxs-lookup"><span data-stu-id="bfc2e-164">For practical purposes, this is the amount of memory retained by the object, so if you delete the object you reclaim the specified amount of memory.</span></span>
 <span data-ttu-id="bfc2e-165">Count</span><span class="sxs-lookup"><span data-stu-id="bfc2e-165">Count</span></span> | <span data-ttu-id="bfc2e-166">オブジェクト インスタンスの数。</span><span class="sxs-lookup"><span data-stu-id="bfc2e-166">Number of object instances.</span></span> <span data-ttu-id="bfc2e-167">この値は、[種類] ビューにのみ表示されます。</span><span class="sxs-lookup"><span data-stu-id="bfc2e-167">This value appears only in the Types view.</span></span>
 
-<span data-ttu-id="bfc2e-168">上部の [主ウィンドウ]\*\* ウィンドウでオブジェクトを選択[](#object-references)すると、下枠の [オブジェクト参照] テーブルに、そのオブジェクトをポイントしているすべてのオブジェクトが一覧表示されます。</span><span class="sxs-lookup"><span data-stu-id="bfc2e-168">When you select an object in the upper *Dominators* pane, the [Object references](#object-references) table in the lower pane will list all the objects that point to that object.</span></span>
+<span data-ttu-id="bfc2e-168">上部の [主ウィンドウ] ウィンドウでオブジェクトを選択[](#object-references)すると、下枠の [オブジェクト参照] テーブルに、そのオブジェクトをポイントしているすべてのオブジェクトが一覧表示されます。</span><span class="sxs-lookup"><span data-stu-id="bfc2e-168">When you select an object in the upper *Dominators* pane, the [Object references](#object-references) table in the lower pane will list all the objects that point to that object.</span></span>
 
 ### <span data-ttu-id="bfc2e-169">フィルター</span><span class="sxs-lookup"><span data-stu-id="bfc2e-169">Filters</span></span>
 
@@ -109,7 +109,7 @@ ms.locfileid: "11234452"
 ![組み込みおよびオブジェクトの ID をフィルター処理する](./media/memory_filter.png)
 
 1. <span data-ttu-id="bfc2e-172">**識別子フィルター**: 特定のオブジェクト識別子を検索してデータをフィルター処理する</span><span class="sxs-lookup"><span data-stu-id="bfc2e-172">**Identifier filter**: Filter out data by searching for a particular object identifier</span></span>
-2. <span data-ttu-id="bfc2e-173">**ドミネー**タによるグループ化\*\*: 他のオブジェクトへの排他的な参照を持つオブジェクトだけが、オブジェクトのトップ レベル ビューに表示されます (これは *[デ*ミネータ] タブの既定のビューです)。</span><span class="sxs-lookup"><span data-stu-id="bfc2e-173">**Group by dominator**: Only objects with *exclusive* references to other objects are shown in the top-level view of objects (this is the default view in the *Dominators* tab).</span></span>
+2. <span data-ttu-id="bfc2e-173">**ドミネー**タによるグループ化: 他のオブジェクトへの排他的な参照を持つオブジェクトだけが、オブジェクトのトップ レベル ビューに表示されます (これは *[デ*ミネータ] タブの既定のビューです)。</span><span class="sxs-lookup"><span data-stu-id="bfc2e-173">**Group by dominator**: Only objects with *exclusive* references to other objects are shown in the top-level view of objects (this is the default view in the *Dominators* tab).</span></span>
 3. <span data-ttu-id="bfc2e-174">**組み込み/ID フィルター**: 既定では [、JavaScript](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects) の組み込みオブジェクトがリストに含まれています。</span><span class="sxs-lookup"><span data-stu-id="bfc2e-174">**Built-ins / IDs filter**: By default, [JavaScript built-in objects](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects) are included in the list.</span></span> <span data-ttu-id="bfc2e-175">オブジェクトの一覧は、区別する必要がある匿名オブジェクトが複数ある場合に便利です。</span><span class="sxs-lookup"><span data-stu-id="bfc2e-175">Listing object IDs can be useful if there are multiple anonymous objects which need to be differentiated.</span></span>
 
 <span data-ttu-id="bfc2e-176">種類 *ビュー、ルート* ビュー、および *ディ* ミネータ ビューにはそれぞれ独自のフィルターが設定されています。したがって、別のビューに切り替えてもフィルターは保持されません。</span><span class="sxs-lookup"><span data-stu-id="bfc2e-176">The *Types, Roots* and *Dominators* views each has its own filter, so the filter isn't preserved when you switch to another view.</span></span>
@@ -124,7 +124,7 @@ ms.locfileid: "11234452"
 
 ### <span data-ttu-id="bfc2e-184">スナップショットの比較</span><span class="sxs-lookup"><span data-stu-id="bfc2e-184">Snapshot comparison</span></span>
 
-<span data-ttu-id="bfc2e-185">[スナップショットの比較[] タブ](#snapshot-details)または [スナップショットの[](#snapshot-summary)概要] タイルの比較リンクをクリックすると、2 つのスナップショット間の情報の違いが表示されます。</span><span class="sxs-lookup"><span data-stu-id="bfc2e-185">Clicking on a [snapshot comparison tab](#snapshot-details) or comparison link on the [snapshot summary tile](#snapshot-summary)  will show a diff of information between the two snapshots.</span></span> <span data-ttu-id="bfc2e-186">比較ウィンドウでは、1 つのスナップショットに対\*\* して表示されるのと[\*\*](#snapshot-details)同じスナップショットの詳細が、*次*の追加の値で提供されます。</span><span class="sxs-lookup"><span data-stu-id="bfc2e-186">In the comparison pane, the *Dominators, Types* and *Roots* views provide the same [*snapshot details*](#snapshot-details) you would see for a single snapshots, with these additional values:</span></span>
+<span data-ttu-id="bfc2e-185">[スナップショットの比較[] タブ](#snapshot-details)または [スナップショットの[](#snapshot-summary)概要] タイルの比較リンクをクリックすると、2 つのスナップショット間の情報の違いが表示されます。</span><span class="sxs-lookup"><span data-stu-id="bfc2e-185">Clicking on a [snapshot comparison tab](#snapshot-details) or comparison link on the [snapshot summary tile](#snapshot-summary)  will show a diff of information between the two snapshots.</span></span> <span data-ttu-id="bfc2e-186">比較ウィンドウでは、1 つのスナップショットに対 して表示されるのと[](#snapshot-details)同じスナップショットの詳細が、*次*の追加の値で提供されます。</span><span class="sxs-lookup"><span data-stu-id="bfc2e-186">In the comparison pane, the *Dominators, Types* and *Roots* views provide the same [*snapshot details*](#snapshot-details) you would see for a single snapshots, with these additional values:</span></span>
 
 <span data-ttu-id="bfc2e-187">列</span><span class="sxs-lookup"><span data-stu-id="bfc2e-187">Column</span></span> | <span data-ttu-id="bfc2e-188">説明</span><span class="sxs-lookup"><span data-stu-id="bfc2e-188">Description</span></span>
 :------------ | :-------------

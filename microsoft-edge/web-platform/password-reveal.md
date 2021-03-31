@@ -16,7 +16,7 @@ ms.locfileid: "11327721"
 ---
 # <span data-ttu-id="637a6-104">パスワード表示ボタンをカスタマイズする</span><span class="sxs-lookup"><span data-stu-id="637a6-104">Customize the password reveal button</span></span>  
 
-<span data-ttu-id="637a6-105">`password`Microsoft Edge の入力の種類には、パスワード表示**コントロールが含**まれています。</span><span class="sxs-lookup"><span data-stu-id="637a6-105">The `password` input type in Microsoft Edge includes a **password reveal** control.</span></span>  <span data-ttu-id="637a6-106">ユーザーは、パスワード入力ボタン **を選択して** パスワード フィールドを **表示** できます。</span><span class="sxs-lookup"><span data-stu-id="637a6-106">A user may choose the **password input** button to reveal the **password** field.</span></span>  <span data-ttu-id="637a6-107">表示されたパスワード **フィールドは** 、ユーザーがパスワードが正しいか確認するのに役立ちます。</span><span class="sxs-lookup"><span data-stu-id="637a6-107">The revealed **password** field helps the user verify if the password is correctly.</span></span>  <span data-ttu-id="637a6-108">ユーザーがパスワード フィールドにテキストを入力\*\*\*\* した後、ユーザーはパスワード表示ボタン\*\*\*\* を選択するか、入力の表示/非表示を切り替 `Alt` + `F8` える選択を行います。</span><span class="sxs-lookup"><span data-stu-id="637a6-108">After a user has entered text in the **password** field, a user may choose the **password reveal** button or select `Alt`+`F8` to toggle visibility of the input.</span></span>  
+<span data-ttu-id="637a6-105">`password`Microsoft Edge の入力の種類には、パスワード表示**コントロールが含**まれています。</span><span class="sxs-lookup"><span data-stu-id="637a6-105">The `password` input type in Microsoft Edge includes a **password reveal** control.</span></span>  <span data-ttu-id="637a6-106">ユーザーは、パスワード入力ボタン **を選択して** パスワード フィールドを **表示** できます。</span><span class="sxs-lookup"><span data-stu-id="637a6-106">A user may choose the **password input** button to reveal the **password** field.</span></span>  <span data-ttu-id="637a6-107">表示されたパスワード **フィールドは** 、ユーザーがパスワードが正しいか確認するのに役立ちます。</span><span class="sxs-lookup"><span data-stu-id="637a6-107">The revealed **password** field helps the user verify if the password is correctly.</span></span>  <span data-ttu-id="637a6-108">ユーザーがパスワード フィールドにテキストを入力 した後、ユーザーはパスワード表示ボタン を選択するか、入力の表示/非表示を切り替 `Alt` + `F8` える選択を行います。</span><span class="sxs-lookup"><span data-stu-id="637a6-108">After a user has entered text in the **password** field, a user may choose the **password reveal** button or select `Alt`+`F8` to toggle visibility of the input.</span></span>  
 
 :::row:::
    :::column span="":::
@@ -50,7 +50,7 @@ ms.locfileid: "11327721"
 
 ## <span data-ttu-id="637a6-123">コントロール スタイルをカスタマイズする</span><span class="sxs-lookup"><span data-stu-id="637a6-123">Customize the control style</span></span>  
 
-<span data-ttu-id="637a6-124">代わりに、コントロールを完全に削除する代わりに、パスワード表示ボタンのスタイルを\*\*\*\* Web サイトの表示言語に合わせて変更できます。</span><span class="sxs-lookup"><span data-stu-id="637a6-124">Instead of fully removing the control, you may instead modify the styling of the **password reveal** button to better match the visual language of the website.</span></span>  <span data-ttu-id="637a6-125">次のスニペットは、このようなスタイルの例を示しています。</span><span class="sxs-lookup"><span data-stu-id="637a6-125">The following snippet provides an example of such styling.</span></span>  
+<span data-ttu-id="637a6-124">代わりに、コントロールを完全に削除する代わりに、パスワード表示ボタンのスタイルを Web サイトの表示言語に合わせて変更できます。</span><span class="sxs-lookup"><span data-stu-id="637a6-124">Instead of fully removing the control, you may instead modify the styling of the **password reveal** button to better match the visual language of the website.</span></span>  <span data-ttu-id="637a6-125">次のスニペットは、このようなスタイルの例を示しています。</span><span class="sxs-lookup"><span data-stu-id="637a6-125">The following snippet provides an example of such styling.</span></span>  
 
 ```css
 ::-ms-reveal {
@@ -62,7 +62,7 @@ ms.locfileid: "11327721"
 
 <span data-ttu-id="637a6-126">パスワード表示ボタンのスタイルを設定する場合は、次の **ことを念頭に置いてお** きます。</span><span class="sxs-lookup"><span data-stu-id="637a6-126">Keep the following things in mind when you style the **password reveal** button.</span></span>  
 
-*   <span data-ttu-id="637a6-127">目のアイコンは背景画像として実装されます。</span><span class="sxs-lookup"><span data-stu-id="637a6-127">The eye icon implements as a background image.</span></span>  <span data-ttu-id="637a6-128">パスワード表示ボタンに背景色を追加\*\*\*\* するには、shorthand プロパティの代わりに CSS `background-color` `background` プロパティを使用します。</span><span class="sxs-lookup"><span data-stu-id="637a6-128">To add a background color to the **password reveal** button, use the CSS `background-color` property instead of the `background` shorthand property.</span></span>  
+*   <span data-ttu-id="637a6-127">目のアイコンは背景画像として実装されます。</span><span class="sxs-lookup"><span data-stu-id="637a6-127">The eye icon implements as a background image.</span></span>  <span data-ttu-id="637a6-128">パスワード表示ボタンに背景色を追加 するには、shorthand プロパティの代わりに CSS `background-color` `background` プロパティを使用します。</span><span class="sxs-lookup"><span data-stu-id="637a6-128">To add a background color to the **password reveal** button, use the CSS `background-color` property instead of the `background` shorthand property.</span></span>  
 *   <span data-ttu-id="637a6-129">パスワード表示ボタンのサイズとスケール **を調整** できます。</span><span class="sxs-lookup"><span data-stu-id="637a6-129">You may adjust the size and scale of the **password reveal** button.</span></span>  
     
     > [!NOTE]
@@ -76,12 +76,12 @@ ms.locfileid: "11327721"
 
 *   <span data-ttu-id="637a6-135">フォーカスがパスワード フィールドから離 **れた場合** 、ブラウザーはパスワード表示ボタン **を削除** します。</span><span class="sxs-lookup"><span data-stu-id="637a6-135">If focus moves away from the **password** field, the browser removes the **password reveal** button.</span></span>  
 *   <span data-ttu-id="637a6-136">スクリプトがパスワード フィールド **を変更すると** 、ブラウザーはパスワード表示ボタン **を削除** します。</span><span class="sxs-lookup"><span data-stu-id="637a6-136">If scripts modify the **password** field, the browser removes the **password reveal** button.</span></span>  
-*   <span data-ttu-id="637a6-137">ユーザーがパスワード表示**ボタンを削除**した場合、パスワード表示ボタンが再び表示される\*\*\*\* 前に、ユーザーはパスワード フィールドの**内容を削除**する必要があります。</span><span class="sxs-lookup"><span data-stu-id="637a6-137">If a user removes the **password reveal** button, the user must delete the contents of the **password** field before the **password reveal** button displays again.</span></span>  
+*   <span data-ttu-id="637a6-137">ユーザーがパスワード表示**ボタンを削除**した場合、パスワード表示ボタンが再び表示される 前に、ユーザーはパスワード フィールドの**内容を削除**する必要があります。</span><span class="sxs-lookup"><span data-stu-id="637a6-137">If a user removes the **password reveal** button, the user must delete the contents of the **password** field before the **password reveal** button displays again.</span></span>  
     
     > [!NOTE]
     > <span data-ttu-id="637a6-138">この機能により、ユーザーがロック解除されたデバイスから離れた場合に、ユーザーがパスワードを表示するために細かい調整を行うのを防ぐことができません。</span><span class="sxs-lookup"><span data-stu-id="637a6-138">This feature prevents someone from making a minor adjustment to view the password, should the user step away from an unlocked device.</span></span>
     
-<span data-ttu-id="637a6-139">パスワード**マネージャーを使用**してパスワード フィールド\*\*\*\* がオートフィルされた場合、パスワード表示ボタンは使用できません。</span><span class="sxs-lookup"><span data-stu-id="637a6-139">The **password reveal** button is unavailable if the **password** field autofills using the password manager.</span></span>  
+<span data-ttu-id="637a6-139">パスワード**マネージャーを使用**してパスワード フィールド がオートフィルされた場合、パスワード表示ボタンは使用できません。</span><span class="sxs-lookup"><span data-stu-id="637a6-139">The **password reveal** button is unavailable if the **password** field autofills using the password manager.</span></span>  
 
 <!-- links -->  
 

@@ -53,7 +53,7 @@ ms.locfileid: "11398456"
 
 ## <a name="launching-microsoft-edge-from-the-extension"></a><span data-ttu-id="42927-130">Microsoft Edge の起動 拡張機能から</span><span class="sxs-lookup"><span data-stu-id="42927-130">Launching Microsoft Edge From the extension</span></span>  
 
-<span data-ttu-id="42927-131">アクティビティ バーの [Microsoft Edge Tools] **に移動します**。</span><span class="sxs-lookup"><span data-stu-id="42927-131">Navigate to Microsoft Edge Tools in the **Activity Bar**.</span></span>  <span data-ttu-id="42927-132">[Microsoft Edge **Tools: Targets]** と表示される場所の横に、アプリのブラウザーを開くプラス記号があります。</span><span class="sxs-lookup"><span data-stu-id="42927-132">Next to where it says **Microsoft Edge Tools: Targets,** there is a plus sign that opens the browser for your app.</span></span>  <span data-ttu-id="42927-133">**about:blank**オプションを選択した場合は、ブラウザーの Web アプリに移動して、ブラウザーの [\*\*\*\* コード] の [要素] パネルに表示Visual Studioがあります。</span><span class="sxs-lookup"><span data-stu-id="42927-133">If you choose the **about:blank** option, you must navigate to your web app in the browser for it to appear in the **Elements** panel in Visual Studio Code.</span></span>  
+<span data-ttu-id="42927-131">アクティビティ バーの [Microsoft Edge Tools] **に移動します**。</span><span class="sxs-lookup"><span data-stu-id="42927-131">Navigate to Microsoft Edge Tools in the **Activity Bar**.</span></span>  <span data-ttu-id="42927-132">[Microsoft Edge **Tools: Targets]** と表示される場所の横に、アプリのブラウザーを開くプラス記号があります。</span><span class="sxs-lookup"><span data-stu-id="42927-132">Next to where it says **Microsoft Edge Tools: Targets,** there is a plus sign that opens the browser for your app.</span></span>  <span data-ttu-id="42927-133">**about:blank**オプションを選択した場合は、ブラウザーの Web アプリに移動して、ブラウザーの [ コード] の [要素] パネルに表示Visual Studioがあります。</span><span class="sxs-lookup"><span data-stu-id="42927-133">If you choose the **about:blank** option, you must navigate to your web app in the browser for it to appear in the **Elements** panel in Visual Studio Code.</span></span>  
 
 ## <a name="launching-microsoft-edge-from-the-debug-view"></a><span data-ttu-id="42927-134">デバッグ ビューからの Microsoft Edge の起動</span><span class="sxs-lookup"><span data-stu-id="42927-134">Launching Microsoft Edge from the Debug view</span></span>  
 
@@ -66,7 +66,7 @@ ms.locfileid: "11398456"
 > [!NOTE]
 > 1.  <span data-ttu-id="42927-138">コードに構成が含Visual Studio、次のいずれかの操作を実行します。</span><span class="sxs-lookup"><span data-stu-id="42927-138">If you do not have any configurations in Visual Studio Code, complete one of the following actions.</span></span>  
 >     *   <span data-ttu-id="42927-139">`F5` を選択します。</span><span class="sxs-lookup"><span data-stu-id="42927-139">Select `F5`.</span></span>  
->     *   <span data-ttu-id="42927-140">[Play \*\*\*\* \(green\)] ボタンを選択します。</span><span class="sxs-lookup"><span data-stu-id="42927-140">Choose the **Play** \(green\) button.</span></span>  
+>     *   <span data-ttu-id="42927-140">[Play  \(green\)] ボタンを選択します。</span><span class="sxs-lookup"><span data-stu-id="42927-140">Choose the **Play** \(green\) button.</span></span>  
 > 1.  <span data-ttu-id="42927-141">ドロップダウンで、ドロップダウンで **[エッジ]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="42927-141">In the dropdown, choose **Edge** in the dropdown.</span></span>  
 > 1.  <span data-ttu-id="42927-142">次 `launch.json` の構成を含むファイルを表示する必要があります。</span><span class="sxs-lookup"><span data-stu-id="42927-142">A `launch.json` file should be displayed that contains the following configuration.</span></span>  
 >     
@@ -88,7 +88,7 @@ ms.locfileid: "11398456"
 
 1.  <span data-ttu-id="42927-144">コードから **要素** ツールを起動Visual Studio、次のいずれかの操作を実行します。</span><span class="sxs-lookup"><span data-stu-id="42927-144">To launch the **Elements** tool from Visual Studio Code, complete one of the following actions.</span></span> 
     *   <span data-ttu-id="42927-145">`F5` を選択します。</span><span class="sxs-lookup"><span data-stu-id="42927-145">Select `F5`.</span></span>  
-    *   <span data-ttu-id="42927-146">[Play \*\*\*\* \(green\)] ボタンを選択します。</span><span class="sxs-lookup"><span data-stu-id="42927-146">Choose the **Play** \(green\) button.</span></span>  
+    *   <span data-ttu-id="42927-146">[Play  \(green\)] ボタンを選択します。</span><span class="sxs-lookup"><span data-stu-id="42927-146">Choose the **Play** \(green\) button.</span></span>  
          
 <span data-ttu-id="42927-147">次に、次の操作を実行できます。</span><span class="sxs-lookup"><span data-stu-id="42927-147">Now, you may do the following actions.</span></span>  
 
@@ -121,7 +121,7 @@ ms.locfileid: "11398456"
 1.  <span data-ttu-id="42927-154">[Visual Studioコード] で、[ **デバッガー** ] ドロップダウン メニューを開き、[Microsoft Edge に接続] を選択し **、開発者ツールを開きます**。</span><span class="sxs-lookup"><span data-stu-id="42927-154">In Visual Studio Code, open the **Debugger** drop-down menu and choose **Attach to Microsoft Edge and open the developer tools**.</span></span>  
 1.  <span data-ttu-id="42927-155">コードから **要素** ツールを起動Visual Studio、次のいずれかの操作を実行します。</span><span class="sxs-lookup"><span data-stu-id="42927-155">To launch the **Elements** tool from Visual Studio Code, complete one of the following actions.</span></span> 
     *   <span data-ttu-id="42927-156">`F5` を選択します。</span><span class="sxs-lookup"><span data-stu-id="42927-156">Select `F5`.</span></span>  
-    *   <span data-ttu-id="42927-157">[Play \*\*\*\* \(green\)] ボタンを選択します。</span><span class="sxs-lookup"><span data-stu-id="42927-157">Choose the **Play** \(green\) button.</span></span>  
+    *   <span data-ttu-id="42927-157">[Play  \(green\)] ボタンを選択します。</span><span class="sxs-lookup"><span data-stu-id="42927-157">Choose the **Play** \(green\) button.</span></span>  
          
 <span data-ttu-id="42927-158">次に、次の操作を実行できます。</span><span class="sxs-lookup"><span data-stu-id="42927-158">Now, you may do the following actions.</span></span>  
 

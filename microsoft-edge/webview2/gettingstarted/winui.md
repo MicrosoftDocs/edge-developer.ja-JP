@@ -34,7 +34,7 @@ ms.locfileid: "11461207"
         *   <span data-ttu-id="1378a-117">ユニバーサル Windows プラットフォームの開発</span><span class="sxs-lookup"><span data-stu-id="1378a-117">Universal Windows Platform development</span></span>  
     *   <span data-ttu-id="1378a-118">C++ アプリをビルドするには、次のワークロードも含める必要があります。</span><span class="sxs-lookup"><span data-stu-id="1378a-118">To build C++ apps, you must also include the following workloads.</span></span>  
         *   <span data-ttu-id="1378a-119">C++ を使用したデスクトップ開発</span><span class="sxs-lookup"><span data-stu-id="1378a-119">Desktop development with C++</span></span>  
-        *   <span data-ttu-id="1378a-120">ユニバーサル Windows プラットフォーム ワークロード用の C++ \(v142\) ユニバーサル Windows プラットフォーム ツールオプション コンポーネント。</span><span class="sxs-lookup"><span data-stu-id="1378a-120">The C++ \(v142\) Universal Windows Platform tools optional component for the Universal Windows Platform workload.</span></span>  <span data-ttu-id="1378a-121">詳細については、右側のウィンドウ**の [\*\*\*\*ユニバーサル Windows プラットフォーム**開発] セクションの [インストールの詳細] に移動します。</span><span class="sxs-lookup"><span data-stu-id="1378a-121">For more information,  navigate to **Installation Details** under the **Universal Windows Platform development** section, on the right pane.</span></span>  
+        *   <span data-ttu-id="1378a-120">ユニバーサル Windows プラットフォーム ワークロード用の C++ \(v142\) ユニバーサル Windows プラットフォーム ツールオプション コンポーネント。</span><span class="sxs-lookup"><span data-stu-id="1378a-120">The C++ \(v142\) Universal Windows Platform tools optional component for the Universal Windows Platform workload.</span></span>  <span data-ttu-id="1378a-121">詳細については、右側のウィンドウ**の [ユニバーサル Windows プラットフォーム**開発] セクションの [インストールの詳細] に移動します。</span><span class="sxs-lookup"><span data-stu-id="1378a-121">For more information,  navigate to **Installation Details** under the **Universal Windows Platform development** section, on the right pane.</span></span>  
         
 ## <a name="step-0---visual-studio-settings"></a><span data-ttu-id="1378a-122">手順 0 - Visual Studio設定</span><span class="sxs-lookup"><span data-stu-id="1378a-122">Step 0 - Visual Studio settings</span></span>  
 
@@ -50,7 +50,7 @@ ms.locfileid: "11461207"
 <span data-ttu-id="1378a-129">1 つのメイン ウィンドウを含む基本的なデスクトップ プロジェクトから開始します。</span><span class="sxs-lookup"><span data-stu-id="1378a-129">Start with a basic desktop project that contains a single main window.</span></span>  
 
 1.  <span data-ttu-id="1378a-130">[新Visual Studio] で、[新 **しいプロジェクトの作成] を選択します**。</span><span class="sxs-lookup"><span data-stu-id="1378a-130">In Visual Studio, choose **Create a new project**.</span></span>  
-1.  <span data-ttu-id="1378a-131">[プロジェクト] ドロップダウンで、[ウィンドウ] **、C#** **WinUI\*\*\*\*をそれぞれ**選択します。</span><span class="sxs-lookup"><span data-stu-id="1378a-131">In the project drop-down, choose **C#**, **Windows**, and **WinUI** respectively.</span></span>  
+1.  <span data-ttu-id="1378a-131">[プロジェクト] ドロップダウンで、[ウィンドウ] **、C#** **WinUIをそれぞれ**選択します。</span><span class="sxs-lookup"><span data-stu-id="1378a-131">In the project drop-down, choose **C#**, **Windows**, and **WinUI** respectively.</span></span>  
     
     :::image type="complex" source="./media/winui-gettingstarted-selections.png" alt-text="プロジェクトを使用して新しい WinUI プロジェクトをVisual Studio" lightbox="./media/winui-gettingstarted-selections.png":::
         <span data-ttu-id="1378a-133">プロジェクトを使用して新しい WinUI プロジェクトをVisual Studio</span><span class="sxs-lookup"><span data-stu-id="1378a-133">Create a new WinUI project using Visual Studio</span></span>

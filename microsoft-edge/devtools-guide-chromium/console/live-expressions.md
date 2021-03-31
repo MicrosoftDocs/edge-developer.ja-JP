@@ -41,7 +41,7 @@ ms.locfileid: "11439227"
        <span data-ttu-id="f72e8-113">[Live `document.activeElement` 式] **テキスト ボックスに入力** する</span><span class="sxs-lookup"><span data-stu-id="f72e8-113">Typing `document.activeElement` into the **Live Expression** text box</span></span>  
     :::image-end:::  
     
-1.  <span data-ttu-id="f72e8-114">`Control` + `Enter` \(Windows,Linux\) または `Command` + `Enter` \(macOS\)\*\*\*\* を選択して式を保存するか、[Live 式] テキスト ボックスの外側を選択します。</span><span class="sxs-lookup"><span data-stu-id="f72e8-114">Select `Control`+`Enter` \(Windows, Linux\) or `Command`+`Enter` \(macOS\) to save the expression, or choose outside of the **Live Expression** textbox.</span></span>  
+1.  <span data-ttu-id="f72e8-114">`Control` + `Enter` \(Windows,Linux\) または `Command` + `Enter` \(macOS\) を選択して式を保存するか、[Live 式] テキスト ボックスの外側を選択します。</span><span class="sxs-lookup"><span data-stu-id="f72e8-114">Select `Control`+`Enter` \(Windows, Linux\) or `Command`+`Enter` \(macOS\) to save the expression, or choose outside of the **Live Expression** textbox.</span></span>  
 
 ## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a><span data-ttu-id="f72e8-115">Microsoft Edge DevTools チームと連絡を取る</span><span class="sxs-lookup"><span data-stu-id="f72e8-115">Getting in touch with the Microsoft Edge DevTools team</span></span>  
 

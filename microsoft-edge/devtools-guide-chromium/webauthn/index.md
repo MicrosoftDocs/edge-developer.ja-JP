@@ -30,7 +30,7 @@ ms.locfileid: "11231182"
     
 1.  <span data-ttu-id="19046-111">Web サイトにサインインします。</span><span class="sxs-lookup"><span data-stu-id="19046-111">Sign into the website.</span></span>  
 1.  <span data-ttu-id="19046-112">[DevTools を開きます][DevtoolsGuideChromiumOpen]。</span><span class="sxs-lookup"><span data-stu-id="19046-112">[Open DevTools][DevtoolsGuideChromiumOpen].</span></span>  
-1.  <span data-ttu-id="19046-113">**WebAuthn ツールを開**するには **、[DevTools**のカスタマイズと制御] アイコン (\) アイコンを選択し、[その他> WebAuthn ] を `...` \*\*\*\*  >  **クリックします**。</span><span class="sxs-lookup"><span data-stu-id="19046-113">To open the **WebAuthn** tool, choose the **Customize and control DevTools** \(`...`\) icon > **More tools** > **WebAuthn**.</span></span>  
+1.  <span data-ttu-id="19046-113">**WebAuthn ツールを開**するには **、[DevTools**のカスタマイズと制御] アイコン (\) アイコンを選択し、[その他> WebAuthn ] を `...`   >  **クリックします**。</span><span class="sxs-lookup"><span data-stu-id="19046-113">To open the **WebAuthn** tool, choose the **Customize and control DevTools** \(`...`\) icon > **More tools** > **WebAuthn**.</span></span>  
     
     :::image type="complex" source="../media/webauthn-webauthn-tab.msft.png" alt-text="WebAuthn ツール" lightbox="../media/webauthn-webauthn-tab.msft.png":::
        <span data-ttu-id="19046-115">**WebAuthn** ツール</span><span class="sxs-lookup"><span data-stu-id="19046-115">**WebAuthn** tool</span></span>  
@@ -59,7 +59,7 @@ ms.locfileid: "11231182"
        <span data-ttu-id="19046-138">Authenticator</span><span class="sxs-lookup"><span data-stu-id="19046-138">Authenticator</span></span>  
     :::image-end:::  
     
-<span data-ttu-id="19046-139">**Authenticator セクションには\*\*\*\*、Credentials テーブルが含**まれています。</span><span class="sxs-lookup"><span data-stu-id="19046-139">The **Authenticator** section includes a **Credentials** table.</span></span>  <span data-ttu-id="19046-140">資格情報が認証システムに登録されるまで、テーブルは空です。</span><span class="sxs-lookup"><span data-stu-id="19046-140">The table is empty until a credential is registered to the authenticator.</span></span>  
+<span data-ttu-id="19046-139">**Authenticator セクションには、Credentials テーブルが含**まれています。</span><span class="sxs-lookup"><span data-stu-id="19046-139">The **Authenticator** section includes a **Credentials** table.</span></span>  <span data-ttu-id="19046-140">資格情報が認証システムに登録されるまで、テーブルは空です。</span><span class="sxs-lookup"><span data-stu-id="19046-140">The table is empty until a credential is registered to the authenticator.</span></span>  
 
 :::image type="complex" source="../media/webauthn-no-cred.msft.png" alt-text="資格情報なし" lightbox="../media/webauthn-no-cred.msft.png":::
    <span data-ttu-id="19046-142">資格情報なし</span><span class="sxs-lookup"><span data-stu-id="19046-142">No credentials</span></span>  
@@ -76,7 +76,7 @@ ms.locfileid: "11231182"
        <span data-ttu-id="19046-149">資格情報を表示する</span><span class="sxs-lookup"><span data-stu-id="19046-149">View credentials</span></span>  
     :::image-end:::  
     
-<span data-ttu-id="19046-150">デモ Web サイトで、[認証] ボタン **を選択** します。</span><span class="sxs-lookup"><span data-stu-id="19046-150">On the demo website, choose the **Authenticate** button.</span></span>  <span data-ttu-id="19046-151">Credentials テーブル内の資格情報の Sign \*\*\*\* [Count][GithubW3cWebauthnSctnSignCounter]が 1 増加し[、authenticatorGetAssertion][GithubW3cWebauthnAuthenticatorgetassertion]操作が成功したとマークされたことを確認します。</span><span class="sxs-lookup"><span data-stu-id="19046-151">Verify that the [Sign Count][GithubW3cWebauthnSctnSignCounter] of the credential in the **Credentials** table increased by 1, which marks a successful [authenticatorGetAssertion][GithubW3cWebauthnAuthenticatorgetassertion] operation.</span></span>  
+<span data-ttu-id="19046-150">デモ Web サイトで、[認証] ボタン **を選択** します。</span><span class="sxs-lookup"><span data-stu-id="19046-150">On the demo website, choose the **Authenticate** button.</span></span>  <span data-ttu-id="19046-151">Credentials テーブル内の資格情報の Sign  [Count][GithubW3cWebauthnSctnSignCounter]が 1 増加し[、authenticatorGetAssertion][GithubW3cWebauthnAuthenticatorgetassertion]操作が成功したとマークされたことを確認します。</span><span class="sxs-lookup"><span data-stu-id="19046-151">Verify that the [Sign Count][GithubW3cWebauthnSctnSignCounter] of the credential in the **Credentials** table increased by 1, which marks a successful [authenticatorGetAssertion][GithubW3cWebauthnAuthenticatorgetassertion] operation.</span></span>  
 
 ## <span data-ttu-id="19046-152">資格情報のエクスポートと削除</span><span class="sxs-lookup"><span data-stu-id="19046-152">Export and remove credentials</span></span>  
 

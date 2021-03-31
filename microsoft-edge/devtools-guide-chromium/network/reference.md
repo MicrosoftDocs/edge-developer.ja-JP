@@ -34,7 +34,7 @@ ms.locfileid: "11439704"
 
 ## <a name="record-network-requests"></a><span data-ttu-id="cc38f-106">ネットワーク要求を記録する</span><span class="sxs-lookup"><span data-stu-id="cc38f-106">Record network requests</span></span>  
 
-<span data-ttu-id="cc38f-107">既定では、DevTools が開いている限り、DevTools はネットワーク ツール内のすべてのネットワーク要求を記録します。 \*\*\*\*</span><span class="sxs-lookup"><span data-stu-id="cc38f-107">By default, DevTools record all network requests in the **Network** tool, so long as DevTools is open.</span></span>  
+<span data-ttu-id="cc38f-107">既定では、DevTools が開いている限り、DevTools はネットワーク ツール内のすべてのネットワーク要求を記録します。 </span><span class="sxs-lookup"><span data-stu-id="cc38f-107">By default, DevTools record all network requests in the **Network** tool, so long as DevTools is open.</span></span>  
 
 :::image type="complex" source="../media/network-network-panel.msft.png" alt-text="[ネットワーク] パネル" lightbox="../media/network-network-panel.msft.png":::
    <span data-ttu-id="cc38f-109">ネットワーク**ツール**</span><span class="sxs-lookup"><span data-stu-id="cc38f-109">The **Network** tool</span></span>  
@@ -45,11 +45,11 @@ ms.locfileid: "11439704"
 <span data-ttu-id="cc38f-111">要求の記録を停止するには、次の手順を実行します。</span><span class="sxs-lookup"><span data-stu-id="cc38f-111">To stop recording requests, complete the following steps.</span></span>  
 
 1.  <span data-ttu-id="cc38f-112">ネットワーク ツール **で、[** ネットワーク ログの記録 **を停止する** ] \( [ネットワーク ログの記録 ![ を停止する ](../media/record-on-icon.msft.png) ] \) を選択します。</span><span class="sxs-lookup"><span data-stu-id="cc38f-112">On the **Network** tool, choose **Stop recording network log** \(![Stop recording network log](../media/record-on-icon.msft.png)\).</span></span>  <span data-ttu-id="cc38f-113">DevTools が要求を記録しなくなった場合は灰色になります。</span><span class="sxs-lookup"><span data-stu-id="cc38f-113">It turns grey to indicate that DevTools is no longer recording requests.</span></span>  
-1.  <span data-ttu-id="cc38f-114">ネットワーク `Control` + `E` ツールのフォーカス中に `Command` + `E` [\(Windows,Linux\)\*\*\*\* または \(macOS\) を選択します。</span><span class="sxs-lookup"><span data-stu-id="cc38f-114">Select `Control`+`E` \(Windows, Linux\) or `Command`+`E` \(macOS\) while the **Network** tool is in focus.</span></span>  
+1.  <span data-ttu-id="cc38f-114">ネットワーク `Control` + `E` ツールのフォーカス中に `Command` + `E` [\(Windows,Linux\) または \(macOS\) を選択します。</span><span class="sxs-lookup"><span data-stu-id="cc38f-114">Select `Control`+`E` \(Windows, Linux\) or `Command`+`E` \(macOS\) while the **Network** tool is in focus.</span></span>  
 
 ### <a name="clear-requests"></a><span data-ttu-id="cc38f-115">要求をクリアする</span><span class="sxs-lookup"><span data-stu-id="cc38f-115">Clear requests</span></span>  
 
-<span data-ttu-id="cc38f-116">[**要求]** テーブルからすべての要求をクリアするには、[ネットワーク] ツールで [\( Clear ![ ](../media/clear-requests-icon.msft.png) \) をクリアする] を選択します。 \*\*\*\*</span><span class="sxs-lookup"><span data-stu-id="cc38f-116">Choose **Clear** \(![Clear](../media/clear-requests-icon.msft.png)\) on the **Network** tool to clear all requests from the Requests table.</span></span>  
+<span data-ttu-id="cc38f-116">[**要求]** テーブルからすべての要求をクリアするには、[ネットワーク] ツールで [\( Clear ![ ](../media/clear-requests-icon.msft.png) \) をクリアする] を選択します。 </span><span class="sxs-lookup"><span data-stu-id="cc38f-116">Choose **Clear** \(![Clear](../media/clear-requests-icon.msft.png)\) on the **Network** tool to clear all requests from the Requests table.</span></span>  
 
 :::image type="complex" source="../media/network-network-clear-button.msft.png" alt-text="[クリア] ボタン" lightbox="../media/network-network-clear-button.msft.png":::
    <span data-ttu-id="cc38f-118">[ **クリア]** ボタン</span><span class="sxs-lookup"><span data-stu-id="cc38f-118">The **Clear** button</span></span>  
@@ -57,7 +57,7 @@ ms.locfileid: "11439704"
 
 ### <a name="save-requests-across-page-loads"></a><span data-ttu-id="cc38f-119">ページの読み込み中に要求を保存する</span><span class="sxs-lookup"><span data-stu-id="cc38f-119">Save requests across page loads</span></span>  
 
-<span data-ttu-id="cc38f-120">ページ読み込み時に要求を保存\*\*\*\* するには、[ネットワーク] ツールで 、[ログの保持] チェック**ボックスをオン**にします。</span><span class="sxs-lookup"><span data-stu-id="cc38f-120">To save requests across page loads, on the **Network** tool, turn on the **Preserve log** checkbox.</span></span>  <span data-ttu-id="cc38f-121">DevTools は、ログの保持を無効にするまで、すべての要求 **を保存します**。</span><span class="sxs-lookup"><span data-stu-id="cc38f-121">DevTools saves all requests until you disable **Preserve log**.</span></span>  
+<span data-ttu-id="cc38f-120">ページ読み込み時に要求を保存 するには、[ネットワーク] ツールで 、[ログの保持] チェック**ボックスをオン**にします。</span><span class="sxs-lookup"><span data-stu-id="cc38f-120">To save requests across page loads, on the **Network** tool, turn on the **Preserve log** checkbox.</span></span>  <span data-ttu-id="cc38f-121">DevTools は、ログの保持を無効にするまで、すべての要求 **を保存します**。</span><span class="sxs-lookup"><span data-stu-id="cc38f-121">DevTools saves all requests until you disable **Preserve log**.</span></span>  
 
 :::image type="complex" source="../media/network-network-preserve-log.msft.png" alt-text="[ログの保持] チェック ボックス" lightbox="../media/network-network-preserve-log.msft.png":::
    <span data-ttu-id="cc38f-123">[ **ログの保持]** チェック ボックス</span><span class="sxs-lookup"><span data-stu-id="cc38f-123">The **Preserve Log** checkbox</span></span>  
@@ -67,7 +67,7 @@ ms.locfileid: "11439704"
 
 <span data-ttu-id="cc38f-125">スクリーンショットをキャプチャして、ページの読み込み待ち中にユーザーの表示を分析します。</span><span class="sxs-lookup"><span data-stu-id="cc38f-125">Capture screenshots to analyze what displays for users while waiting for your page to load.</span></span>  
 
-<span data-ttu-id="cc38f-126">スクリーンショットを有効にするには、[ネットワーク設定]**を**選択し\*\*\*\*、[ネットワーク] ツールで 、[スクリーンショットのキャプチャ]**チェック ボックスをオン**にします。</span><span class="sxs-lookup"><span data-stu-id="cc38f-126">To enable screenshots, choose **Network settings**, and on the **Network** tool, turn on the **Capture screenshots** checkbox.</span></span>  
+<span data-ttu-id="cc38f-126">スクリーンショットを有効にするには、[ネットワーク設定]**を**選択し、[ネットワーク] ツールで 、[スクリーンショットのキャプチャ]**チェック ボックスをオン**にします。</span><span class="sxs-lookup"><span data-stu-id="cc38f-126">To enable screenshots, choose **Network settings**, and on the **Network** tool, turn on the **Capture screenshots** checkbox.</span></span>  
 
 <span data-ttu-id="cc38f-127">ネットワーク ツールがフォーカス **されている間に** ページを更新して、スクリーンショットをキャプチャします。</span><span class="sxs-lookup"><span data-stu-id="cc38f-127">Refresh the page while the **Network** tool is in focus to capture screenshots.</span></span>  
 
@@ -140,7 +140,7 @@ ms.locfileid: "11439704"
 
 <span data-ttu-id="cc38f-160">スロー 3G や Fast 3G など、さまざまなプリセットから選択できます。</span><span class="sxs-lookup"><span data-stu-id="cc38f-160">You may choose from different presets, such as Slow 3G or Fast 3G.</span></span>  <span data-ttu-id="cc38f-161">独自のカスタム プリセットを追加するには、[調整] メニューを開き、[カスタム追加]**を選択**  >  **します**。</span><span class="sxs-lookup"><span data-stu-id="cc38f-161">To add your own custom presets, open the Throttling menu, and choose **Custom** > **Add**.</span></span>  
 
-<span data-ttu-id="cc38f-162">DevTools はネットワーク ツールの横\*\*\*\* に警告アイコンを表示し、調整が有効になっていることを通知します。</span><span class="sxs-lookup"><span data-stu-id="cc38f-162">DevTools displays a warning icon next to the **Network** tool to remind you that throttling is enabled.</span></span>  
+<span data-ttu-id="cc38f-162">DevTools はネットワーク ツールの横 に警告アイコンを表示し、調整が有効になっていることを通知します。</span><span class="sxs-lookup"><span data-stu-id="cc38f-162">DevTools displays a warning icon next to the **Network** tool to remind you that throttling is enabled.</span></span>  
 
 #### <a name="emulate-slow-network-connections-from-the-network-conditions-drawer"></a><span data-ttu-id="cc38f-163">ネットワーク条件ドロワーからの低速ネットワーク接続のエミュレート</span><span class="sxs-lookup"><span data-stu-id="cc38f-163">Emulate slow network connections from the Network Conditions drawer</span></span>  
 
@@ -459,7 +459,7 @@ ms.locfileid: "11439704"
 
 #### <a name="add-custom-columns"></a><span data-ttu-id="cc38f-296">カスタム列の追加</span><span class="sxs-lookup"><span data-stu-id="cc38f-296">Add custom columns</span></span>  
 
-<span data-ttu-id="cc38f-297">カスタム列を Requests テーブルに追加するには、Requests テーブルのヘッダーにマウス ポインターを置き、コンテキスト メニュー \(右クリック\*\*\*\* \) を開き、[応答ヘッダーヘッダーのヘッダー列の管理] を選択  >  **します**。</span><span class="sxs-lookup"><span data-stu-id="cc38f-297">To add a custom column to the Requests table, hover on the header of the Requests table, open the contextual menu \(right-click\), and choose **Response Headers** > **Manage Header Columns**.</span></span>  
+<span data-ttu-id="cc38f-297">カスタム列を Requests テーブルに追加するには、Requests テーブルのヘッダーにマウス ポインターを置き、コンテキスト メニュー \(右クリック \) を開き、[応答ヘッダーヘッダーのヘッダー列の管理] を選択  >  **します**。</span><span class="sxs-lookup"><span data-stu-id="cc38f-297">To add a custom column to the Requests table, hover on the header of the Requests table, open the contextual menu \(right-click\), and choose **Response Headers** > **Manage Header Columns**.</span></span>  
 
 :::image type="complex" source="../media/network-network-requests-add-custom.msft.png" alt-text="要求テーブルにカスタム列を追加する" lightbox="../media/network-network-requests-add-custom.msft.png":::
    <span data-ttu-id="cc38f-299">要求テーブルにカスタム列を追加する</span><span class="sxs-lookup"><span data-stu-id="cc38f-299">Add a custom column to the Requests table</span></span>  
@@ -509,7 +509,7 @@ To refresh the table, re-choose the name of the WebSocket connection under the *
 
 <span data-ttu-id="cc38f-308">応答本文のプレビューを表示するには、次の手順を使用します。</span><span class="sxs-lookup"><span data-stu-id="cc38f-308">To display a preview of a response body, use the following steps.</span></span>  
 
-1.  <span data-ttu-id="cc38f-309">[要求] テーブルの [名前\*\*\*\*] 列で、要求の URL を選択します。</span><span class="sxs-lookup"><span data-stu-id="cc38f-309">Choose the URL of the request, under the **Name** column of the Requests table.</span></span>  
+1.  <span data-ttu-id="cc38f-309">[要求] テーブルの [名前] 列で、要求の URL を選択します。</span><span class="sxs-lookup"><span data-stu-id="cc38f-309">Choose the URL of the request, under the **Name** column of the Requests table.</span></span>  
 1.  <span data-ttu-id="cc38f-310">[プレビュー] **パネルを選択** します。</span><span class="sxs-lookup"><span data-stu-id="cc38f-310">Choose the **Preview** panel.</span></span>  
 
 <span data-ttu-id="cc38f-311">[プレビュー] タブは、主に画像を表示する場合に便利です。</span><span class="sxs-lookup"><span data-stu-id="cc38f-311">The Preview tab is mostly useful to display images.</span></span>  
@@ -522,7 +522,7 @@ To refresh the table, re-choose the name of the WebSocket connection under the *
 
 <span data-ttu-id="cc38f-315">要求に対する応答本文を表示するには、次の手順を使用します。</span><span class="sxs-lookup"><span data-stu-id="cc38f-315">To display the response body to a request, use the following steps.</span></span>  
 
-1.  <span data-ttu-id="cc38f-316">[要求] テーブルの [名前\*\*\*\*] 列で、要求の URL を選択します。</span><span class="sxs-lookup"><span data-stu-id="cc38f-316">Choose the URL of the request, under the **Name** column of the Requests table.</span></span>  
+1.  <span data-ttu-id="cc38f-316">[要求] テーブルの [名前] 列で、要求の URL を選択します。</span><span class="sxs-lookup"><span data-stu-id="cc38f-316">Choose the URL of the request, under the **Name** column of the Requests table.</span></span>  
 1.  <span data-ttu-id="cc38f-317">[応答] **パネルを選択** します。</span><span class="sxs-lookup"><span data-stu-id="cc38f-317">Choose the **Response** panel.</span></span>  
 
 :::image type="complex" source="../media/network-network-resources-response.msft.png" alt-text="[応答] パネル" lightbox="../media/network-network-resources-response.msft.png":::
@@ -533,7 +533,7 @@ To refresh the table, re-choose the name of the WebSocket connection under the *
 
 <span data-ttu-id="cc38f-321">要求に関する HTTP ヘッダー データを表示するには、次の手順を使用します。</span><span class="sxs-lookup"><span data-stu-id="cc38f-321">To display HTTP header data about a request, use the following steps.</span></span>  
 
-1.  <span data-ttu-id="cc38f-322">[要求] テーブルの [名前\*\*\*\*] 列で、要求の URL を選択します。</span><span class="sxs-lookup"><span data-stu-id="cc38f-322">Choose the URL of the request, under the **Name** column of the Requests table.</span></span>  
+1.  <span data-ttu-id="cc38f-322">[要求] テーブルの [名前] 列で、要求の URL を選択します。</span><span class="sxs-lookup"><span data-stu-id="cc38f-322">Choose the URL of the request, under the **Name** column of the Requests table.</span></span>  
 1.  <span data-ttu-id="cc38f-323">[ヘッダー **]** psanel を選択します。</span><span class="sxs-lookup"><span data-stu-id="cc38f-323">Choose the **Headers** psanel.</span></span>  
 
 :::image type="complex" source="../media/network-resources-headers.msft.png" alt-text="[ヘッダー] パネル" lightbox="../media/network-resources-headers.msft.png":::
@@ -576,7 +576,7 @@ To refresh the table, re-choose the name of the WebSocket connection under the *
 
 <span data-ttu-id="cc38f-350">要求の HTTP ヘッダーで送信された Cookie を表示するには、次の手順を実行します。</span><span class="sxs-lookup"><span data-stu-id="cc38f-350">To display the cookies sent in the HTTP header of a request, use the following steps.</span></span>  
 
-1.  <span data-ttu-id="cc38f-351">[要求] テーブルの [名前\*\*\*\*] 列で、要求の URL を選択します。</span><span class="sxs-lookup"><span data-stu-id="cc38f-351">Choose the URL of the request, under the **Name** column of the Requests table.</span></span>  
+1.  <span data-ttu-id="cc38f-351">[要求] テーブルの [名前] 列で、要求の URL を選択します。</span><span class="sxs-lookup"><span data-stu-id="cc38f-351">Choose the URL of the request, under the **Name** column of the Requests table.</span></span>  
 1.  <span data-ttu-id="cc38f-352">[Cookie] **パネルを選択** します。</span><span class="sxs-lookup"><span data-stu-id="cc38f-352">Choose the **Cookies** panel.</span></span>  
 
 <!--For more information about each of the columns, navigate to [Fields][ManageDataCookiesFields].  -->  
@@ -592,12 +592,12 @@ To refresh the table, re-choose the name of the WebSocket connection under the *
 
 <span data-ttu-id="cc38f-356">要求のタイミングの内訳を表示するには、次の手順を使用します。</span><span class="sxs-lookup"><span data-stu-id="cc38f-356">To display the timing breakdown of a request, use the following steps.</span></span>  
 
-1.  <span data-ttu-id="cc38f-357">[要求] テーブルの [名前\*\*\*\*] 列で、要求の URL を選択します。</span><span class="sxs-lookup"><span data-stu-id="cc38f-357">Choose the URL of the request, under the **Name** column of the Requests table.</span></span>  
+1.  <span data-ttu-id="cc38f-357">[要求] テーブルの [名前] 列で、要求の URL を選択します。</span><span class="sxs-lookup"><span data-stu-id="cc38f-357">Choose the URL of the request, under the **Name** column of the Requests table.</span></span>  
 1.  <span data-ttu-id="cc38f-358">[タイミング] **パネルを選択** します。</span><span class="sxs-lookup"><span data-stu-id="cc38f-358">Choose the **Timing** panel.</span></span>  
 
 <span data-ttu-id="cc38f-359">データにアクセスする方法を速くするには、[タイミングの内訳を [プレビューする] に移動します](#preview-a-timing-breakdown)。</span><span class="sxs-lookup"><span data-stu-id="cc38f-359">For a faster way to access the data, navigate to [Preview a timing breakdown](#preview-a-timing-breakdown).</span></span>  
 
-<span data-ttu-id="cc38f-360">[タイミング] パネルに表示される各フェーズの詳細については、「タイミング\*\*\*\* の内訳フェーズ」[を参照してください](#timing-breakdown-phases-explained)。</span><span class="sxs-lookup"><span data-stu-id="cc38f-360">For more information about each of the phases that may be displayed in the **Timing** panel, navigate to [Timing breakdown phases explained](#timing-breakdown-phases-explained).</span></span>  
+<span data-ttu-id="cc38f-360">[タイミング] パネルに表示される各フェーズの詳細については、「タイミング の内訳フェーズ」[を参照してください](#timing-breakdown-phases-explained)。</span><span class="sxs-lookup"><span data-stu-id="cc38f-360">For more information about each of the phases that may be displayed in the **Timing** panel, navigate to [Timing breakdown phases explained](#timing-breakdown-phases-explained).</span></span>  
 
 :::image type="complex" source="../media/network-network-resources-timing.msft.png" alt-text="[タイミング] パネル" lightbox="../media/network-network-resources-timing.msft.png":::
    <span data-ttu-id="cc38f-362">[ **タイミング]** パネル</span><span class="sxs-lookup"><span data-stu-id="cc38f-362">The **Timing** panel</span></span>  
@@ -619,7 +619,7 @@ To refresh the table, re-choose the name of the WebSocket connection under the *
 
 #### <a name="timing-breakdown-phases-explained"></a><span data-ttu-id="cc38f-370">タイミングの内訳フェーズの説明</span><span class="sxs-lookup"><span data-stu-id="cc38f-370">Timing breakdown phases explained</span></span>  
 
-<span data-ttu-id="cc38f-371">タイミング パネルに表示される各フェーズの詳細。 \*\*\*\*</span><span class="sxs-lookup"><span data-stu-id="cc38f-371">More information about each of the phases that may display in the **Timing** panel.</span></span>  
+<span data-ttu-id="cc38f-371">タイミング パネルに表示される各フェーズの詳細。 </span><span class="sxs-lookup"><span data-stu-id="cc38f-371">More information about each of the phases that may display in the **Timing** panel.</span></span>  
 
 :::row:::
    :::column span="1":::
@@ -737,12 +737,12 @@ To refresh the table, re-choose the name of the WebSocket connection under the *
 <span data-ttu-id="cc38f-412">DevTools は、ネットワーク ツール上の複数 `DOMContentLoaded` の場所 `load` でイベントのタイミングを **表示** します。</span><span class="sxs-lookup"><span data-stu-id="cc38f-412">DevTools displays the timing of the `DOMContentLoaded` and `load` events in multiple places on the **Network** tool.</span></span>  <span data-ttu-id="cc38f-413">イベント `DOMContentLoaded` は青で、イベント `load` は赤です。</span><span class="sxs-lookup"><span data-stu-id="cc38f-413">The `DOMContentLoaded` event is colored blue, and the `load` event is red.</span></span>  
 
 :::image type="complex" source="../media/network-network-requests-load-events.msft.png" alt-text="ネットワーク パネルの DOMContentLoaded イベントと読み込みイベントの場所" lightbox="../media/network-network-requests-load-events.msft.png":::
-   <span data-ttu-id="cc38f-415">ネットワーク ツール上の `DOMContentLoaded` イベント `load` の場所\*\*\*\*</span><span class="sxs-lookup"><span data-stu-id="cc38f-415">The locations of the `DOMContentLoaded` and `load` events on the **Network** tool</span></span>  
+   <span data-ttu-id="cc38f-415">ネットワーク ツール上の `DOMContentLoaded` イベント `load` の場所</span><span class="sxs-lookup"><span data-stu-id="cc38f-415">The locations of the `DOMContentLoaded` and `load` events on the **Network** tool</span></span>  
 :::image-end:::  
 
 ### <a name="display-the-total-number-of-requests"></a><span data-ttu-id="cc38f-416">要求の総数を表示する</span><span class="sxs-lookup"><span data-stu-id="cc38f-416">Display the total number of requests</span></span>  
 
-<span data-ttu-id="cc38f-417">要求の総数は、[ネットワーク] ツールの下部\*\*\*\* にある [概要] ウィンドウに**表示**されます。</span><span class="sxs-lookup"><span data-stu-id="cc38f-417">The total number of requests is listed in the **Summary** pane, at the bottom of the **Network** tool.</span></span>  
+<span data-ttu-id="cc38f-417">要求の総数は、[ネットワーク] ツールの下部 にある [概要] ウィンドウに**表示**されます。</span><span class="sxs-lookup"><span data-stu-id="cc38f-417">The total number of requests is listed in the **Summary** pane, at the bottom of the **Network** tool.</span></span>  
 
 > [!CAUTION]
 > <span data-ttu-id="cc38f-418">この番号は、DevTools が開いた後にログに記録された要求のみを追跡します。</span><span class="sxs-lookup"><span data-stu-id="cc38f-418">This number only tracks requests that have been logged since DevTools was opened.</span></span>  <span data-ttu-id="cc38f-419">DevTools が開く前に他の要求が発生した場合、それらの要求はカウントされません。</span><span class="sxs-lookup"><span data-stu-id="cc38f-419">If other requests occurred before DevTools was opened, those requests are not counted.</span></span>  
@@ -753,7 +753,7 @@ To refresh the table, re-choose the name of the WebSocket connection under the *
 
 ### <a name="display-the-total-download-size"></a><span data-ttu-id="cc38f-422">ダウンロード サイズの合計を表示する</span><span class="sxs-lookup"><span data-stu-id="cc38f-422">Display the total download size</span></span>  
 
-<span data-ttu-id="cc38f-423">要求の合計ダウンロード サイズは、[ネットワーク] ツール\*\*\*\* の下部にある [概要] ウィンドウに**表示**されます。</span><span class="sxs-lookup"><span data-stu-id="cc38f-423">The total download size of requests is listed in the **Summary** pane, at the bottom of the **Network** tool.</span></span>  
+<span data-ttu-id="cc38f-423">要求の合計ダウンロード サイズは、[ネットワーク] ツール の下部にある [概要] ウィンドウに**表示**されます。</span><span class="sxs-lookup"><span data-stu-id="cc38f-423">The total download size of requests is listed in the **Summary** pane, at the bottom of the **Network** tool.</span></span>  
 
 > [!CAUTION]
 > <span data-ttu-id="cc38f-424">この番号は、DevTools が開いた後にログに記録された要求のみを追跡します。</span><span class="sxs-lookup"><span data-stu-id="cc38f-424">This number only tracks requests that have been logged since DevTools was opened.</span></span>  <span data-ttu-id="cc38f-425">DevTools が開く前に他の要求が発生した場合、前の要求はカウントされません。</span><span class="sxs-lookup"><span data-stu-id="cc38f-425">If other requests occurred before DevTools was opened, the previous requests are not counted.</span></span>  
@@ -894,7 +894,7 @@ init();
 
 ### <a name="copy-formatted-response-json-to-the-clipboard"></a><span data-ttu-id="cc38f-467">書式設定された応答 JSON をクリップボードにコピーする</span><span class="sxs-lookup"><span data-stu-id="cc38f-467">Copy formatted response JSON to the clipboard</span></span>  
 
-<span data-ttu-id="cc38f-468">ネットワーク要求を選択し、[ヘッダー] ウィンドウ **に移動** します。</span><span class="sxs-lookup"><span data-stu-id="cc38f-468">Choose a network request and navigate to the **Headers** pane.</span></span>  <span data-ttu-id="cc38f-469">応答の JSON 値をコピーするには、[要求\*\*\*\* ペイロード] に移動し、JSON 応答コンテンツにカーソルを置き、コンテキスト メニュー \(右クリック\) を開き、[値のコピー] を**選択します**。</span><span class="sxs-lookup"><span data-stu-id="cc38f-469">To copy the JSON value of a response, navigate to **Request payload**, hover on the JSON response content, open the contextual menu \(right-click\), and choose **Copy Value**.</span></span>  
+<span data-ttu-id="cc38f-468">ネットワーク要求を選択し、[ヘッダー] ウィンドウ **に移動** します。</span><span class="sxs-lookup"><span data-stu-id="cc38f-468">Choose a network request and navigate to the **Headers** pane.</span></span>  <span data-ttu-id="cc38f-469">応答の JSON 値をコピーするには、[要求 ペイロード] に移動し、JSON 応答コンテンツにカーソルを置き、コンテキスト メニュー \(右クリック\) を開き、[値のコピー] を**選択します**。</span><span class="sxs-lookup"><span data-stu-id="cc38f-469">To copy the JSON value of a response, navigate to **Request payload**, hover on the JSON response content, open the contextual menu \(right-click\), and choose **Copy Value**.</span></span>  
 
 :::row:::
    :::column span="":::
@@ -924,7 +924,7 @@ init();
     
 ## <a name="change-the-layout-of-the-network-panel"></a><span data-ttu-id="cc38f-485">[ネットワーク] パネルのレイアウトを変更する</span><span class="sxs-lookup"><span data-stu-id="cc38f-485">Change the layout of the Network panel</span></span>  
 
-<span data-ttu-id="cc38f-486">重要な情報を集中するには、ネットワーク\*\*\*\* ツール UI のセクションを展開または折りたたみできます。</span><span class="sxs-lookup"><span data-stu-id="cc38f-486">You may expand or collapse sections of the **Network** tool UI to focus important information.</span></span>  
+<span data-ttu-id="cc38f-486">重要な情報を集中するには、ネットワーク ツール UI のセクションを展開または折りたたみできます。</span><span class="sxs-lookup"><span data-stu-id="cc38f-486">You may expand or collapse sections of the **Network** tool UI to focus important information.</span></span>  
 
 ### <a name="hide-the-filters-pane"></a><span data-ttu-id="cc38f-487">[フィルター] ウィンドウを非表示にする</span><span class="sxs-lookup"><span data-stu-id="cc38f-487">Hide the Filters pane</span></span>  
 

@@ -82,7 +82,7 @@ ms.locfileid: "11408347"
 > [!NOTE]
 > <span data-ttu-id="a10c3-132">グリッド オーバーレイの詳細については、「CSS グリッド デバッグ [機能」に移動します][DevtoolsWhatsnew200206DevtoolsCssGridDebuggingFeatures]。</span><span class="sxs-lookup"><span data-stu-id="a10c3-132">For more information about grid overlays, navigate to [CSS grid debugging features][DevtoolsWhatsnew200206DevtoolsCssGridDebuggingFeatures].</span></span>  
 
-<span data-ttu-id="a10c3-133">Microsoft Edge DevTools チームと Chrome DevTools チームは、追加機能のための共同作業を行っています。</span><span class="sxs-lookup"><span data-stu-id="a10c3-133">The Microsoft Edge DevTools team and the Chrome DevTools team collaborate on additional features.</span></span>  <span data-ttu-id="a10c3-134">新しい機能には、要素ツールの新しいレイアウト ウィンドウから永続的\*\*\*\* で構成可能な複数のオーバーレイ**が含**まれます。</span><span class="sxs-lookup"><span data-stu-id="a10c3-134">The new features include multiple overlays that are persistent and configurable from a new **Layout** pane on the **Elements** tool.</span></span>  
+<span data-ttu-id="a10c3-133">Microsoft Edge DevTools チームと Chrome DevTools チームは、追加機能のための共同作業を行っています。</span><span class="sxs-lookup"><span data-stu-id="a10c3-133">The Microsoft Edge DevTools team and the Chrome DevTools team collaborate on additional features.</span></span>  <span data-ttu-id="a10c3-134">新しい機能には、要素ツールの新しいレイアウト ウィンドウから永続的 で構成可能な複数のオーバーレイ**が含**まれます。</span><span class="sxs-lookup"><span data-stu-id="a10c3-134">The new features include multiple overlays that are persistent and configurable from a new **Layout** pane on the **Elements** tool.</span></span>  
 
 <span data-ttu-id="a10c3-135">この試験的機能を有効にするには、「[実験的な機能を有効にする][DevtoolsExperimentalFeaturesTurnOnExperimentalFeatures]」に移動し、[**新しい CSS グリッドのデバッグ機能を有効にする (再起動後、[要素] にある [レイアウト] サイド バーウィンドウで構成オプションを利用できます)**] の横にあるチェックボックスをオンにします。</span><span class="sxs-lookup"><span data-stu-id="a10c3-135">To turn on this experimental feature, navigate to [Turn on experimental features][DevtoolsExperimentalFeaturesTurnOnExperimentalFeatures] and choose the checkbox next to **Enable new CSS Grid debugging features (configuration options available in Layout sidebar pane in Elements after restart)**.</span></span>  
 
@@ -222,7 +222,7 @@ The current effort to improve translation quality enables easier support for mor
 
 <!--todo: this figure need to be updated  -->  
 
-:::image type="complex" source="../../media/2020/08/issue-console-msg.msft.png" alt-text=""コンソール内の問題" メッセージ" lightbox="../../media/2020/08/issue-console-msg.msft.png":::
+:::image type="complex" source="../../media/2020/08/issue-console-msg.msft.png" alt-text="コンソール内の問題 メッセージ" lightbox="../../media/2020/08/issue-console-msg.msft.png":::
    <span data-ttu-id="a10c3-193">"コンソール内の問題" メッセージ</span><span class="sxs-lookup"><span data-stu-id="a10c3-193">Issues in console message</span></span>  
 :::image-end:::  
 
@@ -303,9 +303,9 @@ The current effort to improve translation quality enables easier support for mor
 
 ### <a name="deprecation-of-other-origins-listing-in-the-service-workers-pane"></a><span data-ttu-id="a10c3-242">[サービス ワーカー] ウィンドウにおける他のオリジン一覧の廃止</span><span class="sxs-lookup"><span data-stu-id="a10c3-242">Deprecation of other origins listing in the Service Workers pane</span></span>  
 
-<span data-ttu-id="a10c3-243">DevTools は、サービス ワーカー\*\*\*\* ウィンドウ**\(** Application tool > **Service workers** pane\) からのリンクを提供し、他の発生元からのサービス ワーカーの完全な一覧を表示します。</span><span class="sxs-lookup"><span data-stu-id="a10c3-243">DevTools now provides a link from the **Service workers** pane \(**Application** tool > **Service workers** pane\) to view the full list of service workers from other origins.</span></span>  <span data-ttu-id="a10c3-244">DevTools を開かなくてもリストにアクセスするには、に移動します `edge://service-worker-internals/?devtools` 。</span><span class="sxs-lookup"><span data-stu-id="a10c3-244">To access the list without opening the DevTools, navigate to `edge://service-worker-internals/?devtools`.</span></span>  
+<span data-ttu-id="a10c3-243">DevTools は、サービス ワーカー ウィンドウ**\(** Application tool > **Service workers** pane\) からのリンクを提供し、他の発生元からのサービス ワーカーの完全な一覧を表示します。</span><span class="sxs-lookup"><span data-stu-id="a10c3-243">DevTools now provides a link from the **Service workers** pane \(**Application** tool > **Service workers** pane\) to view the full list of service workers from other origins.</span></span>  <span data-ttu-id="a10c3-244">DevTools を開かなくてもリストにアクセスするには、に移動します `edge://service-worker-internals/?devtools` 。</span><span class="sxs-lookup"><span data-stu-id="a10c3-244">To access the list without opening the DevTools, navigate to `edge://service-worker-internals/?devtools`.</span></span>  
 
-<span data-ttu-id="a10c3-245">以前の DevTools には、[サービス\*\*\*\* ワーカー] ウィンドウの [アプリケーション ツール] ウィンドウの下に入>**が表示**されています。</span><span class="sxs-lookup"><span data-stu-id="a10c3-245">Previously DevTools displayed a list nested under the **Application** tool > **Service workers** pane.</span></span>  
+<span data-ttu-id="a10c3-245">以前の DevTools には、[サービス ワーカー] ウィンドウの [アプリケーション ツール] ウィンドウの下に入>**が表示**されています。</span><span class="sxs-lookup"><span data-stu-id="a10c3-245">Previously DevTools displayed a list nested under the **Application** tool > **Service workers** pane.</span></span>  
 
 :::image type="complex" source="../../media/2020/08/sw-other-origins.msft.png" alt-text="他のオリジンへのリンク" lightbox="../../media/2020/08/sw-other-origins.msft.png":::
    <span data-ttu-id="a10c3-247">他のオリジンへのリンク</span><span class="sxs-lookup"><span data-stu-id="a10c3-247">Link to other origins</span></span>  
@@ -432,7 +432,7 @@ Chromium issue: [#1103854][CR1103854]
 
 <span data-ttu-id="a10c3-309">次のテキスト ボックスに、[**クリア**] ボタンが表示されるようになりました。</span><span class="sxs-lookup"><span data-stu-id="a10c3-309">The following text boxes now have **Clear** buttons.</span></span>  
 
-*   <span data-ttu-id="a10c3-310">[スタイル] ウィンドウと [ネットワーク] ツール**の\*\*\*\*フィルター**テキスト ボックス。</span><span class="sxs-lookup"><span data-stu-id="a10c3-310">The filter text boxes in the **Styles** pane and **Network** tool.</span></span>  
+*   <span data-ttu-id="a10c3-310">[スタイル] ウィンドウと [ネットワーク] ツール**のフィルター**テキスト ボックス。</span><span class="sxs-lookup"><span data-stu-id="a10c3-310">The filter text boxes in the **Styles** pane and **Network** tool.</span></span>  
 *   <span data-ttu-id="a10c3-311">要素ツールの DOM 検索テキスト **ボックス** 。</span><span class="sxs-lookup"><span data-stu-id="a10c3-311">The DOM search text box in the **Elements** tool.</span></span>  
 
 <span data-ttu-id="a10c3-312">[**クリア**] ボタンを選択して、入力されたテキストを削除します。</span><span class="sxs-lookup"><span data-stu-id="a10c3-312">Choose the **Clear** button to remove any inputted text.</span></span>  

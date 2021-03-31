@@ -50,7 +50,7 @@ ms.locfileid: "11439304"
 *   <span data-ttu-id="5236d-118">ビューポートで、要素にマウス ポインターを置き、コンテキスト メニュー \(右クリック\) を開き、[検査] を **選択します**。</span><span class="sxs-lookup"><span data-stu-id="5236d-118">In your viewport, hover on the element, open the contextual menu \(right-click\), and choose **Inspect**.</span></span>  
 *   <span data-ttu-id="5236d-119">DevTools で、[要素を選択] \( Select **an** element \) を選択するか ![ ](../media/select-an-element-icon.msft.png) `Control` + `Shift` + `C` 、\(Windows、Linux\) または `Command` + `Shift` + `C` \(macOS\) を選択し、ビューポートで要素を選択します。</span><span class="sxs-lookup"><span data-stu-id="5236d-119">In DevTools, choose **Select an element** \(![Select an element](../media/select-an-element-icon.msft.png)\) or select `Control`+`Shift`+`C` \(Windows, Linux\) or `Command`+`Shift`+`C` \(macOS\), and then choose the element in the viewport.</span></span>  
 *   <span data-ttu-id="5236d-120">DevTools で、DOM ツリーの要素を **選択します**。</span><span class="sxs-lookup"><span data-stu-id="5236d-120">In DevTools, choose the element in the **DOM Tree**.</span></span>  
-*   <span data-ttu-id="5236d-121">DevTools で、コンソールのようなクエリを実行し、結果にマウス ポインターを置き、コンテキスト メニュー `document.querySelector('p')` \(右クリック\) を開き、[要素] パネルで [表示] を**選択します**。 \*\*\*\*</span><span class="sxs-lookup"><span data-stu-id="5236d-121">In DevTools, run a query like `document.querySelector('p')` in the **Console**, hover on the result, open the contextual menu \(right-click\), and choose **Reveal in Elements panel**.</span></span>  
+*   <span data-ttu-id="5236d-121">DevTools で、コンソールのようなクエリを実行し、結果にマウス ポインターを置き、コンテキスト メニュー `document.querySelector('p')` \(右クリック\) を開き、[要素] パネルで [表示] を**選択します**。 </span><span class="sxs-lookup"><span data-stu-id="5236d-121">In DevTools, run a query like `document.querySelector('p')` in the **Console**, hover on the result, open the contextual menu \(right-click\), and choose **Reveal in Elements panel**.</span></span>  
 
 ## <a name="view-css"></a><span data-ttu-id="5236d-122">CSS の表示</span><span class="sxs-lookup"><span data-stu-id="5236d-122">View CSS</span></span>  
 
@@ -71,7 +71,7 @@ ms.locfileid: "11439304"
 
 ### <a name="view-only-the-css-that-is-actually-applied-to-an-element"></a><span data-ttu-id="5236d-129">要素に実際に適用される CSS のみを表示する</span><span class="sxs-lookup"><span data-stu-id="5236d-129">View only the CSS that is actually applied to an element</span></span>  
 
-<span data-ttu-id="5236d-130">[ **スタイル** ] パネルには、オーバーライドされた宣言を含む、要素に適用されるすべてのルールが表示されます。</span><span class="sxs-lookup"><span data-stu-id="5236d-130">The **Styles** panel shows you all of the rules that apply to an element, including declarations that have been overridden.</span></span>  <span data-ttu-id="5236d-131">オーバーライドされた宣言に興味がない場合は、[計算] パネル\*\*\*\* を使用して、要素に実際に適用されている CSS のみを表示します。</span><span class="sxs-lookup"><span data-stu-id="5236d-131">When you are not interested in overridden declarations, use the **Computed** panel to view only the CSS that is actually being applied to an element.</span></span>  
+<span data-ttu-id="5236d-130">[ **スタイル** ] パネルには、オーバーライドされた宣言を含む、要素に適用されるすべてのルールが表示されます。</span><span class="sxs-lookup"><span data-stu-id="5236d-130">The **Styles** panel shows you all of the rules that apply to an element, including declarations that have been overridden.</span></span>  <span data-ttu-id="5236d-131">オーバーライドされた宣言に興味がない場合は、[計算] パネル を使用して、要素に実際に適用されている CSS のみを表示します。</span><span class="sxs-lookup"><span data-stu-id="5236d-131">When you are not interested in overridden declarations, use the **Computed** panel to view only the CSS that is actually being applied to an element.</span></span>  
 
 1.  <span data-ttu-id="5236d-132">[要素を選択します](#choose-an-element)。</span><span class="sxs-lookup"><span data-stu-id="5236d-132">[Select an element](#choose-an-element).</span></span>  
 1.  <span data-ttu-id="5236d-133">[要素] **ツールの [** 計算] パネル **に移動** します。</span><span class="sxs-lookup"><span data-stu-id="5236d-133">Navigate to the **Computed** panel in the **Elements** tool.</span></span>  
@@ -111,7 +111,7 @@ ms.locfileid: "11439304"
 
 ### <a name="search-and-filter-the-css-of-an-element"></a><span data-ttu-id="5236d-154">要素の CSS を検索してフィルター処理する</span><span class="sxs-lookup"><span data-stu-id="5236d-154">Search and filter the CSS of an element</span></span>  
 
-<span data-ttu-id="5236d-155">[スタイル]**パネルと**[計算\*\*\*\*] パネル**の [** フィルター] テキスト ボックスを使用して、特定の CSS プロパティまたは値を検索します。</span><span class="sxs-lookup"><span data-stu-id="5236d-155">Use the **Filter** text box on the **Styles** and **Computed** panels to search for specific CSS properties or values.</span></span>  
+<span data-ttu-id="5236d-155">[スタイル]**パネルと**[計算] パネル**の [** フィルター] テキスト ボックスを使用して、特定の CSS プロパティまたは値を検索します。</span><span class="sxs-lookup"><span data-stu-id="5236d-155">Use the **Filter** text box on the **Styles** and **Computed** panels to search for specific CSS properties or values.</span></span>  
 
 <span data-ttu-id="5236d-156">[計算] パネルで継承されたプロパティも **検索** するには、[すべて表示] **チェック ボックスをオン** にします。</span><span class="sxs-lookup"><span data-stu-id="5236d-156">To also search inherited properties in the **Computed** panel, check the **Show All** checkbox.</span></span>  
 
@@ -324,7 +324,7 @@ ms.locfileid: "11439304"
 1.  <span data-ttu-id="5236d-284">[スタイル **] パネル** で、スタイル ルールをポイントします。</span><span class="sxs-lookup"><span data-stu-id="5236d-284">In the **Styles** panel, hover on a style rule.</span></span>  <span data-ttu-id="5236d-285">**その他の** アクション \( \) は、スタイル ルール セクションの右下 `...` に表示されます。</span><span class="sxs-lookup"><span data-stu-id="5236d-285">**More Actions** \(`...`\) is revealed in the bottom-right of the style rule section.</span></span>  
     
     > [!NOTE]
-    > <span data-ttu-id="5236d-286">次の図では、スタイル ルールにカーソルを合わせると、[その他のアクション] が [スタイル ルール] セクションの右下 `.header-holder.has-default-focus` に表示されます。 \*\*\*\*</span><span class="sxs-lookup"><span data-stu-id="5236d-286">In the following figure, hover on the `.header-holder.has-default-focus` style rule and **More Actions** is revealed in the bottom-right of the style rule section.</span></span>  
+    > <span data-ttu-id="5236d-286">次の図では、スタイル ルールにカーソルを合わせると、[その他のアクション] が [スタイル ルール] セクションの右下 `.header-holder.has-default-focus` に表示されます。 </span><span class="sxs-lookup"><span data-stu-id="5236d-286">In the following figure, hover on the `.header-holder.has-default-focus` style rule and **More Actions** is revealed in the bottom-right of the style rule section.</span></span>  
     
     :::image type="complex" source="../media/css-elements-styles-new-rule-styles.msft.png" alt-text="その他のアクションを表示する" lightbox="../media/css-elements-styles-new-rule-styles.msft.png":::
        <span data-ttu-id="5236d-288">他 **のアクションを表示** する \( `...` \)</span><span class="sxs-lookup"><span data-stu-id="5236d-288">Reveal **More Actions** \(`...`\)</span></span>  

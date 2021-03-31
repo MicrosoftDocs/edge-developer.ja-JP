@@ -46,7 +46,7 @@ ms.locfileid: "11439368"
    <span data-ttu-id="108ca-115">コンソール**ツール**</span><span class="sxs-lookup"><span data-stu-id="108ca-115">The **Console** tool</span></span>  
 :::image-end:::  
 
-<span data-ttu-id="108ca-116">コマンド メニューから**コンソール**ツールを[開][DevToolsCommandMenu]くには、入力を開始し、パネル バッジが横にある [コンソールの表示] `Console` **コマンド**を実行します。 \*\*\*\*</span><span class="sxs-lookup"><span data-stu-id="108ca-116">To open the **Console** tool from the [Command Menu][DevToolsCommandMenu], start typing `Console` and then run the **Show Console** command that has the **Panel** badge next to it.</span></span>  
+<span data-ttu-id="108ca-116">コマンド メニューから**コンソール**ツールを[開][DevToolsCommandMenu]くには、入力を開始し、パネル バッジが横にある [コンソールの表示] `Console` **コマンド**を実行します。 </span><span class="sxs-lookup"><span data-stu-id="108ca-116">To open the **Console** tool from the [Command Menu][DevToolsCommandMenu], start typing `Console` and then run the **Show Console** command that has the **Panel** badge next to it.</span></span>  
 
 :::image type="complex" source="../media/console-command-menu-show-console.msft.png" alt-text="コンソール パネルを表示するコマンド" lightbox="../media/console-command-menu-show-console.msft.png":::
    <span data-ttu-id="108ca-118">コンソール ツールを表示 **する** コマンド</span><span class="sxs-lookup"><span data-stu-id="108ca-118">The command to show the **Console** tool</span></span>  
@@ -66,7 +66,7 @@ ms.locfileid: "11439368"
    <span data-ttu-id="108ca-125">ドロ **ワー** のコンソール **ツール**</span><span class="sxs-lookup"><span data-stu-id="108ca-125">The **Console** tool in the **Drawer**</span></span>  
 :::image-end:::  
 
-<span data-ttu-id="108ca-126">コマンド メニューから**コンソール ツール**を[開][DevToolsCommandMenu]くには、入力を開始し、その横にドロワー バッジがある [コンソールの表示] コマンド `Console` を実行します。 \*\*\*\* \*\*\*\*</span><span class="sxs-lookup"><span data-stu-id="108ca-126">To open the **Console** tool from the [Command Menu][DevToolsCommandMenu], start typing `Console` and then run the **Show Console** command that has the **Drawer** badge next to it.</span></span>  
+<span data-ttu-id="108ca-126">コマンド メニューから**コンソール ツール**を[開][DevToolsCommandMenu]くには、入力を開始し、その横にドロワー バッジがある [コンソールの表示] コマンド `Console` を実行します。  </span><span class="sxs-lookup"><span data-stu-id="108ca-126">To open the **Console** tool from the [Command Menu][DevToolsCommandMenu], start typing `Console` and then run the **Show Console** command that has the **Drawer** badge next to it.</span></span>  
 
 :::image type="complex" source="../media/console-command-menu-show-console.msft.png" alt-text="ドロワーに **Console** ツールを表示するコマンド" lightbox="../media/console-command-menu-show-console.msft.png":::
    <span data-ttu-id="108ca-128">ドロワーにコンソール ツール **を** 表示する **コマンド**</span><span class="sxs-lookup"><span data-stu-id="108ca-128">The command to show the **Console** tool in the **Drawer**</span></span>  
@@ -163,7 +163,7 @@ ms.locfileid: "11439368"
    <span data-ttu-id="108ca-183">[ **ログ レベル]** ドロップダウン</span><span class="sxs-lookup"><span data-stu-id="108ca-183">The **Log Levels** dropdown</span></span>  
 :::image-end:::  
 
-<span data-ttu-id="108ca-184">コンソール サイドバーを開き、エラー、警告、情報、または詳細を選択\*\*\*\* して、\*\*\*\* ログ レベル**でフィルター**処理**することもできます**。 [](#open-the-console-sidebar)</span><span class="sxs-lookup"><span data-stu-id="108ca-184">You may also filter by log level by [opening the Console Sidebar](#open-the-console-sidebar) and thenchoosing **Errors**, **Warnings**, **Info**, or **Verbose**.</span></span>  
+<span data-ttu-id="108ca-184">コンソール サイドバーを開き、エラー、警告、情報、または詳細を選択 して、 ログ レベル**でフィルター**処理**することもできます**。 [](#open-the-console-sidebar)</span><span class="sxs-lookup"><span data-stu-id="108ca-184">You may also filter by log level by [opening the Console Sidebar](#open-the-console-sidebar) and thenchoosing **Errors**, **Warnings**, **Info**, or **Verbose**.</span></span>  
 
 :::image type="complex" source="../media/console-sidebar-warnings.msft.png" alt-text="サイドバーを使用して警告を表示する" lightbox="../media/console-sidebar-warnings.msft.png":::
    <span data-ttu-id="108ca-186">サイドバーを使用して警告を表示する</span><span class="sxs-lookup"><span data-stu-id="108ca-186">Use the Sidebar to view warnings</span></span>  
@@ -183,7 +183,7 @@ ms.locfileid: "11439368"
    <span data-ttu-id="108ca-197">URL に一致するメッセージをすべて非表示にする負の `https://b.wal.co` URL フィルター</span><span class="sxs-lookup"><span data-stu-id="108ca-197">A negative URL filter that hides all messages that match the `https://b.wal.co` URL</span></span>
 :::image-end:::  
 
-<span data-ttu-id="108ca-198">単一の URL からのメッセージを表示[](#open-the-console-sidebar)するには、コンソール サイドバーを開き\*\*\*\*、[ユーザー メッセージ] セクションを展開し、フォーカスするメッセージを含むスクリプトの URL を選択します。</span><span class="sxs-lookup"><span data-stu-id="108ca-198">You may also show messages from a single URL by [opening the Console Sidebar](#open-the-console-sidebar), expanding the **User Messages** section, and thenchoosing the URL of the script containing the messages on which you want to focus.</span></span>  
+<span data-ttu-id="108ca-198">単一の URL からのメッセージを表示[](#open-the-console-sidebar)するには、コンソール サイドバーを開き、[ユーザー メッセージ] セクションを展開し、フォーカスするメッセージを含むスクリプトの URL を選択します。</span><span class="sxs-lookup"><span data-stu-id="108ca-198">You may also show messages from a single URL by [opening the Console Sidebar](#open-the-console-sidebar), expanding the **User Messages** section, and thenchoosing the URL of the script containing the messages on which you want to focus.</span></span>  
 
 :::image type="complex" source="../media/console-filter-text-specified.msft.png" alt-text="ユーザーから送信されたメッセージを表示wp-ad.min.js" lightbox="../media/console-filter-text-specified.msft.png":::
    <span data-ttu-id="108ca-200">から来たメッセージを表示する</span><span class="sxs-lookup"><span data-stu-id="108ca-200">View the messages that came from</span></span> `wp-ad.min.js`  
@@ -195,7 +195,7 @@ ms.locfileid: "11439368"
 
 ### <a name="filter-out-messages-that-do-not-match-a-regular-expression-pattern"></a><span data-ttu-id="108ca-205">正規表現パターンに一致しないメッセージをフィルター処理する</span><span class="sxs-lookup"><span data-stu-id="108ca-205">Filter out messages that do not match a regular expression pattern</span></span>  
 
-<span data-ttu-id="108ca-206">[フィルター] テキスト ボックスに正規表現を入力して、そのパターンに一致しないメッセージ `/[gm][ta][mi]/` をフィルター処理します。 \*\*\*\*</span><span class="sxs-lookup"><span data-stu-id="108ca-206">Type a regular expression such as `/[gm][ta][mi]/` in the **Filter** text box to filter out any messages that do not match that pattern.</span></span>  <span data-ttu-id="108ca-207">DevTools は、メッセージ テキストにパターンが見つかったか、メッセージがログに記録される原因となるスクリプトをチェックします。</span><span class="sxs-lookup"><span data-stu-id="108ca-207">DevTools checks if the pattern is found in the message text or the script that caused the message to be logged.</span></span>  
+<span data-ttu-id="108ca-206">[フィルター] テキスト ボックスに正規表現を入力して、そのパターンに一致しないメッセージ `/[gm][ta][mi]/` をフィルター処理します。 </span><span class="sxs-lookup"><span data-stu-id="108ca-206">Type a regular expression such as `/[gm][ta][mi]/` in the **Filter** text box to filter out any messages that do not match that pattern.</span></span>  <span data-ttu-id="108ca-207">DevTools は、メッセージ テキストにパターンが見つかったか、メッセージがログに記録される原因となるスクリプトをチェックします。</span><span class="sxs-lookup"><span data-stu-id="108ca-207">DevTools checks if the pattern is found in the message text or the script that caused the message to be logged.</span></span>  
 
 :::image type="complex" source="../media/console-filter-regex.msft.png" alt-text="正規表現に一致しないメッセージをフィルター処理する" lightbox="../media/console-filter-regex.msft.png":::
    <span data-ttu-id="108ca-209">正規表現に一致しないメッセージを `/[gm][ta][mi]/` フィルター処理する</span><span class="sxs-lookup"><span data-stu-id="108ca-209">Filter out any messages that do not match the `/[gm][ta][mi]/` regex expression</span></span>  
@@ -230,7 +230,7 @@ ms.locfileid: "11439368"
 
 ### <a name="select-javascript-context"></a><span data-ttu-id="108ca-231">JavaScript コンテキストの選択</span><span class="sxs-lookup"><span data-stu-id="108ca-231">Select JavaScript context</span></span>  
 
-<span data-ttu-id="108ca-232">既定では **、JavaScript Context ドロップダウン**は\*\*\*\* top に設定され[][MDNBrowsingContext]、メイン ドキュメントの参照コンテキストを表します。</span><span class="sxs-lookup"><span data-stu-id="108ca-232">By default the **JavaScript Context** dropdown is set to **top**, which represents the [browsing context][MDNBrowsingContext] of the main document.</span></span>  
+<span data-ttu-id="108ca-232">既定では **、JavaScript Context ドロップダウン**は top に設定され[][MDNBrowsingContext]、メイン ドキュメントの参照コンテキストを表します。</span><span class="sxs-lookup"><span data-stu-id="108ca-232">By default the **JavaScript Context** dropdown is set to **top**, which represents the [browsing context][MDNBrowsingContext] of the main document.</span></span>  
 
 :::image type="complex" source="../media/console-dom-level-top.msft.png" alt-text="[JavaScript コンテキスト] ドロップダウン" lightbox="../media/console-dom-level-top.msft.png":::
    <span data-ttu-id="108ca-234">**[JavaScript コンテキスト] ドロップダウン**</span><span class="sxs-lookup"><span data-stu-id="108ca-234">The **JavaScript Context** dropdown</span></span>  

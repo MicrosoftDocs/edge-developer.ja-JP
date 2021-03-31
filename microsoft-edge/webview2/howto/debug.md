@@ -52,8 +52,8 @@ ms.locfileid: "11399845"
     
     1.  <span data-ttu-id="cbb52-129">Windows エクスプローラー バーに「 」 と入力 `Visual Studio Installer` します。</span><span class="sxs-lookup"><span data-stu-id="cbb52-129">In the Windows Explorer bar, type `Visual Studio Installer`.</span></span>  
     1.  <span data-ttu-id="cbb52-130">[インストーラー **Visual Studio開く** ] を選択します。</span><span class="sxs-lookup"><span data-stu-id="cbb52-130">Choose **Visual Studio Installer** to open it.</span></span>  
-    1.  <span data-ttu-id="cbb52-131">[インストーラー] Visual Studioインストールされているバージョンで、[その他] ボタン\*\*\*\* を選択し、[変更] を**選択します**。</span><span class="sxs-lookup"><span data-stu-id="cbb52-131">In the Visual Studio Installer, on the installed version, choose the **More** button, and then choose **Modify**.</span></span>  
-    1.  <span data-ttu-id="cbb52-132">[Visual Studio] の **[ワークロード] で\*\*\*\*、[C++ のデスクトップ開発] 設定を選択**します。</span><span class="sxs-lookup"><span data-stu-id="cbb52-132">In Visual Studio, under **Workloads**, choose the **Desktop Development in C++** setting.</span></span>  
+    1.  <span data-ttu-id="cbb52-131">[インストーラー] Visual Studioインストールされているバージョンで、[その他] ボタン を選択し、[変更] を**選択します**。</span><span class="sxs-lookup"><span data-stu-id="cbb52-131">In the Visual Studio Installer, on the installed version, choose the **More** button, and then choose **Modify**.</span></span>  
+    1.  <span data-ttu-id="cbb52-132">[Visual Studio] の **[ワークロード] で、[C++ のデスクトップ開発] 設定を選択**します。</span><span class="sxs-lookup"><span data-stu-id="cbb52-132">In Visual Studio, under **Workloads**, choose the **Desktop Development in C++** setting.</span></span>  
         
         :::image type="complex" source="./media/workloads.png" alt-text="Visual Studioワークロードの変更画面" lightbox="./media/workloads.png":::
             <span data-ttu-id="cbb52-134">Visual Studioワークロードの変更画面</span><span class="sxs-lookup"><span data-stu-id="cbb52-134">Visual Studio Modifying Workloads Screen</span></span>
@@ -71,7 +71,7 @@ ms.locfileid: "11399845"
 1.  <span data-ttu-id="cbb52-141">WebView2 アプリのスクリプト デバッグを有効にする。</span><span class="sxs-lookup"><span data-stu-id="cbb52-141">Enable script debugging for WebView2 apps.</span></span>  
     1.  <span data-ttu-id="cbb52-142">WebView2 プロジェクトで、コンテキスト メニュー \(右クリック\) を開き、[プロパティ] を **選択します**。</span><span class="sxs-lookup"><span data-stu-id="cbb52-142">In your WebView2 project, open the context menu \(right-click\), and choose **Properties**.</span></span>  
     1.  <span data-ttu-id="cbb52-143">[構成プロパティ **] で、[** デバッグ] **を選択します**。</span><span class="sxs-lookup"><span data-stu-id="cbb52-143">Under the **Configuration Properties**, choose **Debugging**.</span></span>  
-    1.  <span data-ttu-id="cbb52-144">[デバッガーの**種類] で\*\*\*\*、[JavaScript (WebView2) ] を選択します**。</span><span class="sxs-lookup"><span data-stu-id="cbb52-144">Under the **Debugger Type**, choose **JavaScript (WebView2)**.</span></span>  
+    1.  <span data-ttu-id="cbb52-144">[デバッガーの**種類] で、[JavaScript (WebView2) ] を選択します**。</span><span class="sxs-lookup"><span data-stu-id="cbb52-144">Under the **Debugger Type**, choose **JavaScript (WebView2)**.</span></span>  
         
         :::image type="complex" source="./media/enbjs.png" alt-text="Visual Studioデバッグ構成プロパティ" lightbox="./media/enbjs.png":::
            <span data-ttu-id="cbb52-146">Visual Studio **デバッグ構成** プロパティ</span><span class="sxs-lookup"><span data-stu-id="cbb52-146">Visual Studio **Debugging** Configuration Property</span></span>  

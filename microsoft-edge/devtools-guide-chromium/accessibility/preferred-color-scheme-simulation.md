@@ -25,14 +25,14 @@ ms.locfileid: "11398302"
            <span data-ttu-id="11e12-112">**コマンド メニュー**</span><span class="sxs-lookup"><span data-stu-id="11e12-112">The **Command Menu**</span></span>  
         :::image-end:::  
         
-1.  <span data-ttu-id="11e12-113">[種類] を選択し、[CSS の優先する配色をエミュレートする: 濃い色] または [CSS を優先する配色をエミュレートする: 明るい] を選択し、 を `emulate color` 選択します\*\*\*\*\*\*\*\* `Enter` 。</span><span class="sxs-lookup"><span data-stu-id="11e12-113">Type `emulate color`, choose either **Emulate CSS prefers-color-scheme: dark** or **Emulate CSS prefers-color-scheme: light** and then select `Enter`.</span></span>  
+1.  <span data-ttu-id="11e12-113">[種類] を選択し、[CSS の優先する配色をエミュレートする: 濃い色] または [CSS を優先する配色をエミュレートする: 明るい] を選択し、 を `emulate color` 選択します `Enter` 。</span><span class="sxs-lookup"><span data-stu-id="11e12-113">Type `emulate color`, choose either **Emulate CSS prefers-color-scheme: dark** or **Emulate CSS prefers-color-scheme: light** and then select `Enter`.</span></span>  
     
     :::image type="complex" source="../media/css-elements-styles-qs-select-renderingmode-command-menu.msft.png" alt-text="コマンド メニューの配色オプション" lightbox="../media/css-elements-styles-qs-select-renderingmode-command-menu.msft.png":::
        <span data-ttu-id="11e12-115">コマンド メニューの配 **色** オプション</span><span class="sxs-lookup"><span data-stu-id="11e12-115">Color scheme option from **Command** Menu</span></span>  
     :::image-end:::  
     
     > [!IMPORTANT]
-    > <span data-ttu-id="11e12-116">`dark` `light` [DevTools][DevtoolsCustomizeDarkTheme]のテーマを選択する方法も用意されています。</span><span class="sxs-lookup"><span data-stu-id="11e12-116">Simply typing `dark` or `light` does not reveal the right tool, since there is also a way to [choose a theme for DevTools][DevtoolsCustomizeDarkTheme].</span></span>  <span data-ttu-id="11e12-117">何を選ぶか疑問に思う場合は、外観メニュー項目ではなく、\*\*\*\* レンダリング メニュー項目を**選択してください**。</span><span class="sxs-lookup"><span data-stu-id="11e12-117">If you are wondering what to choose, make sure that you are choosing a **rendering** menu item, not an **appearance** menu item.</span></span>  
+    > <span data-ttu-id="11e12-116">`dark` `light` [DevTools][DevtoolsCustomizeDarkTheme]のテーマを選択する方法も用意されています。</span><span class="sxs-lookup"><span data-stu-id="11e12-116">Simply typing `dark` or `light` does not reveal the right tool, since there is also a way to [choose a theme for DevTools][DevtoolsCustomizeDarkTheme].</span></span>  <span data-ttu-id="11e12-117">何を選ぶか疑問に思う場合は、外観メニュー項目ではなく、 レンダリング メニュー項目を**選択してください**。</span><span class="sxs-lookup"><span data-stu-id="11e12-117">If you are wondering what to choose, make sure that you are choosing a **rendering** menu item, not an **appearance** menu item.</span></span>  
 
 1.  <span data-ttu-id="11e12-118">配色を選択した後、現在のドキュメントを更新してシミュレートモードを表示します。</span><span class="sxs-lookup"><span data-stu-id="11e12-118">After you choose a color scheme, refresh the current document to display the simulated mode.</span></span>  
     

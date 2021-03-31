@@ -52,7 +52,7 @@ ms.locfileid: "11234957"
 }
 ```  
 
-<span data-ttu-id="6746a-122">ブラウザーの操作が拡張機能によって設定されている場合は、[その他 \*\*](...)\*\* を選択した後の [操作] メニューに表示され、アドレス バー\*\*\*\* の横にある [表示] ボタンがユーザーによってオンに切り替えらた場合は、アドレス バーの右側に表示されます。</span><span class="sxs-lookup"><span data-stu-id="6746a-122">If the browser action has been set by the extension, it appears either in the Actions menu after selecting **More(...)**,  or to the right of the address bar if **Show button next to the address bar** has been toggled on by the user.</span></span>  
+<span data-ttu-id="6746a-122">ブラウザーの操作が拡張機能によって設定されている場合は、[その他 ](...) を選択した後の [操作] メニューに表示され、アドレス バー の横にある [表示] ボタンがユーザーによってオンに切り替えらた場合は、アドレス バーの右側に表示されます。</span><span class="sxs-lookup"><span data-stu-id="6746a-122">If the browser action has been set by the extension, it appears either in the Actions menu after selecting **More(...)**,  or to the right of the address bar if **Show button next to the address bar** has been toggled on by the user.</span></span>  
 
 :::row:::
    :::column span="1":::
@@ -83,7 +83,7 @@ ms.locfileid: "11234957"
 
 ##### <span data-ttu-id="6746a-133">管理 UI</span><span class="sxs-lookup"><span data-stu-id="6746a-133">Management UI</span></span>  
 
-<span data-ttu-id="6746a-134">ユーザーが [その他 \*\*](...)\*\* メニューに移動して [拡張機能]\*\*\*\* を選択して拡張機能ウィンドウに移動すると、拡張機能の名前の横にアイコンが表示されます。</span><span class="sxs-lookup"><span data-stu-id="6746a-134">When users navigate to the extensions pane by going to the **More(...)** menu and selecting **Extensions**, an icon is displayed next to the name of the extension.</span></span>  
+<span data-ttu-id="6746a-134">ユーザーが [その他 ](...) メニューに移動して [拡張機能] を選択して拡張機能ウィンドウに移動すると、拡張機能の名前の横にアイコンが表示されます。</span><span class="sxs-lookup"><span data-stu-id="6746a-134">When users navigate to the extensions pane by going to the **More(...)** menu and selecting **Extensions**, an icon is displayed next to the name of the extension.</span></span>  
 
 <span data-ttu-id="6746a-135">次のアイコン サイズを指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="6746a-135">You should specify the following icon sizes.</span></span>  
 

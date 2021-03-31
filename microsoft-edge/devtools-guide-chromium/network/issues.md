@@ -84,7 +84,7 @@ ms.locfileid: "11439620"
 
 <span data-ttu-id="3356d-141">要求のダウンロードには長い時間が必要です。</span><span class="sxs-lookup"><span data-stu-id="3356d-141">A request takes a long time to download.</span></span>  
 
-<span data-ttu-id="3356d-142">次の図では、png の横にあるウォーターフォール\*\*\*\* の長い青いバーは、ダウンロードに長い時間がかかったという意味です。</span><span class="sxs-lookup"><span data-stu-id="3356d-142">In the following figure, the long, blue bar in the **Waterfall** next to the png means it took a long time to download.</span></span>  
+<span data-ttu-id="3356d-142">次の図では、png の横にあるウォーターフォール の長い青いバーは、ダウンロードに長い時間がかかったという意味です。</span><span class="sxs-lookup"><span data-stu-id="3356d-142">In the following figure, the long, blue bar in the **Waterfall** next to the png means it took a long time to download.</span></span>  
 
 :::image type="complex" source="../media/network-network-resources-edge-devtools.msft.png" alt-text="ダウンロードに長い時間がかかる要求の例" lightbox="../media/network-network-resources-edge-devtools.msft.png":::
    <span data-ttu-id="3356d-144">ダウンロードに長い時間がかかる要求の例</span><span class="sxs-lookup"><span data-stu-id="3356d-144">An example of a request that takes a long time to download</span></span>  

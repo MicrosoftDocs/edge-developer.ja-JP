@@ -22,7 +22,7 @@ ms.locfileid: "11234589"
 
 ![[スタイル] ウィンドウ](../media/elements_styles.png)
 
-<span data-ttu-id="8a88f-108">"a: " ボタンをクリックすると、擬似**状態パネルを**表示できます。</span><span class="sxs-lookup"><span data-stu-id="8a88f-108">You can display the pseudo states panel by clicking the "**a:**" button.</span></span> <span data-ttu-id="8a88f-109">新しいスタイル ルールを定義するには、[スタイル] ボタンをクリックするか、[スタイル] ウィンドウの任意の場所を右クリックしてコンテキスト **+** メニューを開きます。 \*\*\*\*</span><span class="sxs-lookup"><span data-stu-id="8a88f-109">Define a new style rule by clicking the "**+**" button or right-clicking anywhere in the **Styles** pane to open the context menu.</span></span>
+<span data-ttu-id="8a88f-108">"a: " ボタンをクリックすると、擬似**状態パネルを**表示できます。</span><span class="sxs-lookup"><span data-stu-id="8a88f-108">You can display the pseudo states panel by clicking the "**a:**" button.</span></span> <span data-ttu-id="8a88f-109">新しいスタイル ルールを定義するには、[スタイル] ボタンをクリックするか、[スタイル] ウィンドウの任意の場所を右クリックしてコンテキスト **+** メニューを開きます。 </span><span class="sxs-lookup"><span data-stu-id="8a88f-109">Define a new style rule by clicking the "**+**" button or right-clicking anywhere in the **Styles** pane to open the context menu.</span></span>
 
 ![スタイル ウィンドウのボタンとコンテキスト メニュー](../media/elements_styles_buttons.png)
 
@@ -32,7 +32,7 @@ ms.locfileid: "11234589"
 
 ![[スタイル] ウィンドウの擬似クラス](../media/elements_styles_pseudo_states.png)
 
-<span data-ttu-id="8a88f-115">擬似要素を追加するには、[(新しいスタイル ルール) ] ボタンをクリックし、通常のスタイルシートと同 **+** じ方法で編集します。\*\*</span><span class="sxs-lookup"><span data-stu-id="8a88f-115">To add a pseudo element, click the **+** (*New style rule*) button and edit as you would a regular stylesheet.</span></span>
+<span data-ttu-id="8a88f-115">擬似要素を追加するには、[(新しいスタイル ルール) ] ボタンをクリックし、通常のスタイルシートと同 **+** じ方法で編集します。</span><span class="sxs-lookup"><span data-stu-id="8a88f-115">To add a pseudo element, click the **+** (*New style rule*) button and edit as you would a regular stylesheet.</span></span>
 
 ![[スタイル] ウィンドウから擬似要素を追加する](../media/elements_styles_pseudo_element.png)
 

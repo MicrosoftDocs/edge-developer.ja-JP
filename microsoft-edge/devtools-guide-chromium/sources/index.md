@@ -83,7 +83,7 @@ ms.locfileid: "11439606"
 
 ## <a name="create-save-and-run-snippets"></a><span data-ttu-id="e1eed-144">スニペットの作成、保存、および実行</span><span class="sxs-lookup"><span data-stu-id="e1eed-144">Create, save, and run Snippets</span></span>  
 
-<span data-ttu-id="e1eed-145">スニペットは、任意のページで実行できるスクリプトです。</span><span class="sxs-lookup"><span data-stu-id="e1eed-145">Snippets are scripts which you may run on any page.</span></span>  <span data-ttu-id="e1eed-146">jQuery ライブラリをページに挿入するために、コンソールで\*\*\*\* 次のコードを繰り返し入力して、コンソールから jQuery コマンドを実行できると**します**。</span><span class="sxs-lookup"><span data-stu-id="e1eed-146">Imagine that you repeatedly type out the following code in the **Console**, in order to insert the jQuery library into a page, so that you may run jQuery commands from the **Console**.</span></span>  
+<span data-ttu-id="e1eed-145">スニペットは、任意のページで実行できるスクリプトです。</span><span class="sxs-lookup"><span data-stu-id="e1eed-145">Snippets are scripts which you may run on any page.</span></span>  <span data-ttu-id="e1eed-146">jQuery ライブラリをページに挿入するために、コンソールで 次のコードを繰り返し入力して、コンソールから jQuery コマンドを実行できると**します**。</span><span class="sxs-lookup"><span data-stu-id="e1eed-146">Imagine that you repeatedly type out the following code in the **Console**, in order to insert the jQuery library into a page, so that you may run jQuery commands from the **Console**.</span></span>  
 
 ```javascript
 let script = document.createElement('script');
@@ -118,7 +118,7 @@ document.head.appendChild(script);
 
 ## <a name="set-up-a-workspace"></a><span data-ttu-id="e1eed-162">ワークスペースを設定する</span><span class="sxs-lookup"><span data-stu-id="e1eed-162">Set up a Workspace</span></span>  
 
-<span data-ttu-id="e1eed-163">既定では、[ソース] ツールでファイルを\*\*\*\* 編集すると、ページを更新するとそれらの変更は失われます。</span><span class="sxs-lookup"><span data-stu-id="e1eed-163">By default, when you edit a file in the **Sources** tool, those changes are lost when you refresh the page.</span></span>  <span data-ttu-id="e1eed-164">**ワークスペース** を使用すると、DevTools で行った変更をファイル システムに保存することができます。</span><span class="sxs-lookup"><span data-stu-id="e1eed-164">**Workspaces** enable you to save the changes that you make in DevTools to your file system.</span></span>  <span data-ttu-id="e1eed-165">基本的に、DevTools はコード エディターとして使うことができます。</span><span class="sxs-lookup"><span data-stu-id="e1eed-165">Essentially, DevTools is able to be used as your code editor.</span></span>
+<span data-ttu-id="e1eed-163">既定では、[ソース] ツールでファイルを 編集すると、ページを更新するとそれらの変更は失われます。</span><span class="sxs-lookup"><span data-stu-id="e1eed-163">By default, when you edit a file in the **Sources** tool, those changes are lost when you refresh the page.</span></span>  <span data-ttu-id="e1eed-164">**ワークスペース** を使用すると、DevTools で行った変更をファイル システムに保存することができます。</span><span class="sxs-lookup"><span data-stu-id="e1eed-164">**Workspaces** enable you to save the changes that you make in DevTools to your file system.</span></span>  <span data-ttu-id="e1eed-165">基本的に、DevTools はコード エディターとして使うことができます。</span><span class="sxs-lookup"><span data-stu-id="e1eed-165">Essentially, DevTools is able to be used as your code editor.</span></span>
 
 <span data-ttu-id="e1eed-166">作業を開始するには、「[ワークスペースでファイルを編集][DevtoolsGuideChromiumWorkspacesIndex]」に移動します。</span><span class="sxs-lookup"><span data-stu-id="e1eed-166">Navigate to [Edit Files With Workspaces][DevtoolsGuideChromiumWorkspacesIndex] to get started.</span></span>
 

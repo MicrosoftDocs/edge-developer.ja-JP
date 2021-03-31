@@ -115,7 +115,7 @@ console.log('c');
 1.  <span data-ttu-id="c77b5-172">[要素] **ツールを選択** します。</span><span class="sxs-lookup"><span data-stu-id="c77b5-172">Choose the **Elements** tool.</span></span>  
 1.  <span data-ttu-id="c77b5-173">ブレークポイントを設定する要素を移動します。</span><span class="sxs-lookup"><span data-stu-id="c77b5-173">Go the element on which you want to set the breakpoint.</span></span>  
 1.  <span data-ttu-id="c77b5-174">要素にカーソルを合わせると、コンテキスト メニュー \(右クリック\) が開きます。</span><span class="sxs-lookup"><span data-stu-id="c77b5-174">Hover on the element and open the contextual menu \(right-click\).</span></span>  
-1.  <span data-ttu-id="c77b5-175">[ブレーク]**をポイントし**、[サブツリーの変更 **] 、[\*\*\*\*属性の変更]**、または [ノードの削除]**を選択します**。</span><span class="sxs-lookup"><span data-stu-id="c77b5-175">Hover on **Break on**, then choose **Subtree modifications**, **Attribute modifications**, or **Node removal**.</span></span>  
+1.  <span data-ttu-id="c77b5-175">[ブレーク]**をポイントし**、[サブツリーの変更 **] 、[属性の変更]**、または [ノードの削除]**を選択します**。</span><span class="sxs-lookup"><span data-stu-id="c77b5-175">Hover on **Break on**, then choose **Subtree modifications**, **Attribute modifications**, or **Node removal**.</span></span>  
     
     :::image type="complex" source="../media/javascript-elements-break-on-subtree-modifications.msft.png" alt-text="DOM 変更ブレークポイントを作成するためのコンテキスト メニュー" lightbox="../media/javascript-elements-break-on-subtree-modifications.msft.png":::
        <span data-ttu-id="c77b5-177">DOM 変更ブレークポイントを作成するためのコンテキスト メニュー</span><span class="sxs-lookup"><span data-stu-id="c77b5-177">The context menu for creating a DOM change breakpoint</span></span>  

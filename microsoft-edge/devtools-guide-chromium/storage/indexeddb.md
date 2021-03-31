@@ -77,7 +77,7 @@ ms.locfileid: "11439711"
        <span data-ttu-id="cd6d8-136">**IndexedDB 値の**表示</span><span class="sxs-lookup"><span data-stu-id="cd6d8-136">View an **IndexedDB** value</span></span>  
     :::image-end:::  
     
-1.  <span data-ttu-id="cd6d8-137">次の図のタイトルや\*\*\*\* 本文などの\*\*\*\* インデックスを選択して、そのインデックスの値に従ってオブジェクト ストアを並べ替える。</span><span class="sxs-lookup"><span data-stu-id="cd6d8-137">Choose an index, such as **title** or **body** in the following figure, to sort the object store according to the values of that index.</span></span>  
+1.  <span data-ttu-id="cd6d8-137">次の図のタイトルや 本文などの インデックスを選択して、そのインデックスの値に従ってオブジェクト ストアを並べ替える。</span><span class="sxs-lookup"><span data-stu-id="cd6d8-137">Choose an index, such as **title** or **body** in the following figure, to sort the object store according to the values of that index.</span></span>  
    
     :::image type="complex" source="../media/storage-application-storage-indexeddb-notes_db-notes_os-title.msft.png" alt-text="インデックスでオブジェクト ストアを並べ替える" lightbox="../media/storage-application-storage-indexeddb-notes_db-notes_os-title.msft.png":::
        <span data-ttu-id="cd6d8-139">インデックスでオブジェクト ストアを並べ替える</span><span class="sxs-lookup"><span data-stu-id="cd6d8-139">Sort an object store by an index</span></span>  
@@ -85,7 +85,7 @@ ms.locfileid: "11439711"
     
 ## <a name="refresh-indexeddb-data"></a><span data-ttu-id="cd6d8-140">IndexedDB データの更新</span><span class="sxs-lookup"><span data-stu-id="cd6d8-140">Refresh IndexedDB data</span></span>  
 
-<span data-ttu-id="cd6d8-141">アプリケーション ツールの IndexedDB **値** はリアルタイムで更新されません。</span><span class="sxs-lookup"><span data-stu-id="cd6d8-141">IndexedDB values in the **Application** tool do not update in real-time.</span></span>  <span data-ttu-id="cd6d8-142">オブジェクト**ストアを表示**してデータを更新する場合は [Refresh \( Refresh \)] を選択するか、データベースを表示して [データベースの更新] を選択してすべてのデータ ![ ](../media/reload-icon.msft.png) を更新します。 \*\*\*\*</span><span class="sxs-lookup"><span data-stu-id="cd6d8-142">Choose **Refresh** \(![Refresh](../media/reload-icon.msft.png)\) when viewing an object store to refresh the data, or view a database and choose **Refresh database** to refresh all data.</span></span>  
+<span data-ttu-id="cd6d8-141">アプリケーション ツールの IndexedDB **値** はリアルタイムで更新されません。</span><span class="sxs-lookup"><span data-stu-id="cd6d8-141">IndexedDB values in the **Application** tool do not update in real-time.</span></span>  <span data-ttu-id="cd6d8-142">オブジェクト**ストアを表示**してデータを更新する場合は [Refresh \( Refresh \)] を選択するか、データベースを表示して [データベースの更新] を選択してすべてのデータ ![ ](../media/reload-icon.msft.png) を更新します。 </span><span class="sxs-lookup"><span data-stu-id="cd6d8-142">Choose **Refresh** \(![Refresh](../media/reload-icon.msft.png)\) when viewing an object store to refresh the data, or view a database and choose **Refresh database** to refresh all data.</span></span>  
 
 :::image type="complex" source="../media/storage-application-storage-indexeddb-notes_db-notes_os-refresh-database.msft.png" alt-text="データベースの表示" lightbox="../media/storage-application-storage-indexeddb-notes_db-notes_os-refresh-database.msft.png":::
    <span data-ttu-id="cd6d8-144">データベースの表示</span><span class="sxs-lookup"><span data-stu-id="cd6d8-144">View a database</span></span>  

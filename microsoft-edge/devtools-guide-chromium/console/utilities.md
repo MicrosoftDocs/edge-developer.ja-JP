@@ -63,7 +63,7 @@ $_
 $0
 ```  
 
-<span data-ttu-id="2303d-120">最近選択した要素または JavaScript オブジェクトを返します。</span><span class="sxs-lookup"><span data-stu-id="2303d-120">Returns the most recently selected element or JavaScript object.</span></span>  `$1` <span data-ttu-id="2303d-121">2 番目に最近選択した 1 つを返します。などです。</span><span class="sxs-lookup"><span data-stu-id="2303d-121">returns the second most recently selected one, and so on.</span></span>  <span data-ttu-id="2303d-122">、 、 、 、およびコマンドは、Elements ツール内で検査された最後の 5 つの DOM 要素、またはメモリ ツールで選択された最後の 5 つの JavaScript ヒープ オブジェクトへの履歴参照として `$0` `$1` `$2` `$3` `$4` **機能**します。 \*\*\*\*</span><span class="sxs-lookup"><span data-stu-id="2303d-122">The `$0`, `$1`, `$2`, `$3`, and `$4` commands work as a historical reference to the last five DOM elements inspected within the **Elements** tool or the last five JavaScript heap objects selected in the **Memory** tool.</span></span>  
+<span data-ttu-id="2303d-120">最近選択した要素または JavaScript オブジェクトを返します。</span><span class="sxs-lookup"><span data-stu-id="2303d-120">Returns the most recently selected element or JavaScript object.</span></span>  `$1` <span data-ttu-id="2303d-121">2 番目に最近選択した 1 つを返します。などです。</span><span class="sxs-lookup"><span data-stu-id="2303d-121">returns the second most recently selected one, and so on.</span></span>  <span data-ttu-id="2303d-122">、 、 、 、およびコマンドは、Elements ツール内で検査された最後の 5 つの DOM 要素、またはメモリ ツールで選択された最後の 5 つの JavaScript ヒープ オブジェクトへの履歴参照として `$0` `$1` `$2` `$3` `$4` **機能**します。 </span><span class="sxs-lookup"><span data-stu-id="2303d-122">The `$0`, `$1`, `$2`, `$3`, and `$4` commands work as a historical reference to the last five DOM elements inspected within the **Elements** tool or the last five JavaScript heap objects selected in the **Memory** tool.</span></span>  
 
 :::row:::
    :::column span="1":::
@@ -123,7 +123,7 @@ $(selector, [startNode])
    <span data-ttu-id="2303d-136">図 5:</span><span class="sxs-lookup"><span data-stu-id="2303d-136">Figure 5:  The</span></span> `$('img')`  
 :::image-end:::  
 
-<span data-ttu-id="2303d-137">返された結果にカーソルを合わせると、コンテキスト メニュー \(右クリック\) を開き、[要素パネルで表示]\*\*\*\*\*\*を選択して\*\*DOM で検索するか、[表示] にスクロールしてページに表示します。</span><span class="sxs-lookup"><span data-stu-id="2303d-137">Hover on the returned result, open the contextual menu \(right-click\), and choose **Reveal in Elements Panel** to find it in the DOM or **Scroll in to View** to show it on the page.</span></span>  
+<span data-ttu-id="2303d-137">返された結果にカーソルを合わせると、コンテキスト メニュー \(右クリック\) を開き、[要素パネルで表示]を選択してDOM で検索するか、[表示] にスクロールしてページに表示します。</span><span class="sxs-lookup"><span data-stu-id="2303d-137">Hover on the returned result, open the contextual menu \(right-click\), and choose **Reveal in Elements Panel** to find it in the DOM or **Scroll in to View** to show it on the page.</span></span>  
 
 <span data-ttu-id="2303d-138">次の図では、現在選択されている要素への参照が返され、src プロパティが表示されます。</span><span class="sxs-lookup"><span data-stu-id="2303d-138">In the following figure, a reference to the currently selected element is returned and the src property is displayed.</span></span>  
 
@@ -248,7 +248,7 @@ debug(method)
 >[!NOTE]
 > <span data-ttu-id="2303d-175">クロム [の問題#1050237][MonorailIssue1050237] 関数のバグを追跡 `debug()` しています。</span><span class="sxs-lookup"><span data-stu-id="2303d-175">The [Chromium issue #1050237][MonorailIssue1050237] is tracking a bug with the `debug()` function.</span></span>  <span data-ttu-id="2303d-176">問題が発生した場合は、代 [わりにブレークポイントを使用][DevtoolsJavascriptBreakpoints] してみてください。</span><span class="sxs-lookup"><span data-stu-id="2303d-176">If you encounter the issue, try [using breakpoints][DevtoolsJavascriptBreakpoints] instead.</span></span>  
 
-<span data-ttu-id="2303d-177">指定したメソッドを要求すると、デバッガーが呼び出され、ソース ツールの\*\*\*\* メソッド内でブレークされ、コードをステップ実行してデバッグできます。</span><span class="sxs-lookup"><span data-stu-id="2303d-177">When you request the specified method, the debugger is invoked and breaks inside the method on the **Sources** tool allowing you to step through the code and debug it.</span></span>  
+<span data-ttu-id="2303d-177">指定したメソッドを要求すると、デバッガーが呼び出され、ソース ツールの メソッド内でブレークされ、コードをステップ実行してデバッグできます。</span><span class="sxs-lookup"><span data-stu-id="2303d-177">When you request the specified method, the debugger is invoked and breaks inside the method on the **Sources** tool allowing you to step through the code and debug it.</span></span>  
 
 ```console
 debug("debug");
@@ -297,7 +297,7 @@ dirxml(object)
 inspect(object/method)
 ```  
 
-<span data-ttu-id="2303d-194">適切なパネルで、指定した要素またはオブジェクト (DOM 要素の\*\*\*\* 要素ツールまたは JavaScript\*\*\*\* ヒープ オブジェクトのメモリ ツール) を開いて選択します。</span><span class="sxs-lookup"><span data-stu-id="2303d-194">Opens and selects the specified element or object in the appropriate panel:  either the **Elements** tool for DOM elements or the **Memory** tool for JavaScript heap objects.</span></span>  
+<span data-ttu-id="2303d-194">適切なパネルで、指定した要素またはオブジェクト (DOM 要素の 要素ツールまたは JavaScript ヒープ オブジェクトのメモリ ツール) を開いて選択します。</span><span class="sxs-lookup"><span data-stu-id="2303d-194">Opens and selects the specified element or object in the appropriate panel:  either the **Elements** tool for DOM elements or the **Memory** tool for JavaScript heap objects.</span></span>  
 
 <span data-ttu-id="2303d-195">次のコード サンプルと図では、要素 `document.body` ツールで **開** きます。</span><span class="sxs-lookup"><span data-stu-id="2303d-195">In the following code sample and figure, the `document.body` opens in the **Elements** tool.</span></span>  
 
@@ -309,7 +309,7 @@ inspect(document.body);
    <span data-ttu-id="2303d-197">図 15: で要素を検査する</span><span class="sxs-lookup"><span data-stu-id="2303d-197">Figure 15:  Inspecting an element with</span></span> `inspect()`  
 :::image-end:::  
 
-<span data-ttu-id="2303d-198">検査するメソッドを渡す場合、メソッドは[ソース]\*\*\*\* ツールでドキュメントを開き、検査を行います。</span><span class="sxs-lookup"><span data-stu-id="2303d-198">When passing a method to inspect, the method opens the document in the **Sources** tool for you to inspect.</span></span>  
+<span data-ttu-id="2303d-198">検査するメソッドを渡す場合、メソッドは[ソース] ツールでドキュメントを開き、検査を行います。</span><span class="sxs-lookup"><span data-stu-id="2303d-198">When passing a method to inspect, the method opens the document in the **Sources** tool for you to inspect.</span></span>  
 
 ## <a name="geteventlisteners"></a><span data-ttu-id="2303d-199">getEventListeners</span><span class="sxs-lookup"><span data-stu-id="2303d-199">getEventListeners</span></span>  
 

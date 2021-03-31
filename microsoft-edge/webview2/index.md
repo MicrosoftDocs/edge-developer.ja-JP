@@ -73,7 +73,7 @@ ms.locfileid: "11182368"
       <span data-ttu-id="a5035-137">最新バージョンの Chromium を使用して、定期的なプラットフォームの更新とセキュリティ更新プログラムを利用します。</span><span class="sxs-lookup"><span data-stu-id="a5035-137">Rely on an up-to-date version of Chromium with regular platform updates and security patches.</span></span>  
    :::column-end:::
    :::column span="1":::
-      <span data-ttu-id="a5035-138">**修正済み** \ (近日公開\)</span><span class="sxs-lookup"><span data-stu-id="a5035-138">**Fixed** \(coming soon\)</span></span>  
+      <span data-ttu-id="a5035-138">**修正済み** \(近日公開\)</span><span class="sxs-lookup"><span data-stu-id="a5035-138">**Fixed** \(coming soon\)</span></span>  
       <span data-ttu-id="a5035-139">アプリケーションに Chromium ビットをパッケージ化することを選択します。</span><span class="sxs-lookup"><span data-stu-id="a5035-139">Choose to package the Chromium bits in your application.</span></span>  
    :::column-end:::
    :::column span="1":::
@@ -95,27 +95,27 @@ ms.locfileid: "11182368"
 
 ## <span data-ttu-id="a5035-151">サポートされているプラットフォーム</span><span class="sxs-lookup"><span data-stu-id="a5035-151">Supported platforms</span></span>  
 
-<span data-ttu-id="a5035-152">一般提供 \ (GA\) またはプレビュー版は、次のプログラミング環境で利用できます。</span><span class="sxs-lookup"><span data-stu-id="a5035-152">A General Availability \(GA\) or Preview version is available on the following programming environments.</span></span>  
+<span data-ttu-id="a5035-152">一般提供 \(GA\) またはプレビュー版は、次のプログラミング環境で利用できます。</span><span class="sxs-lookup"><span data-stu-id="a5035-152">A General Availability \(GA\) or Preview version is available on the following programming environments.</span></span>  
 
-*   <span data-ttu-id="a5035-153">Win32 C/c + + \ (GA \)</span><span class="sxs-lookup"><span data-stu-id="a5035-153">Win32 C/C++ \(GA\)</span></span>
+*   <span data-ttu-id="a5035-153">Win32 C/c + + \(GA \)</span><span class="sxs-lookup"><span data-stu-id="a5035-153">Win32 C/C++ \(GA\)</span></span>
 *   <span data-ttu-id="a5035-154">.NET Framework 4.6.2 以降</span><span class="sxs-lookup"><span data-stu-id="a5035-154">.NET Framework 4.6.2 or later</span></span>
 *   <span data-ttu-id="a5035-155">.NET Core 3.1 以降</span><span class="sxs-lookup"><span data-stu-id="a5035-155">.NET Core 3.1 or later</span></span>
 *   <span data-ttu-id="a5035-156">.NET 5</span><span class="sxs-lookup"><span data-stu-id="a5035-156">.NET 5</span></span>
-*   <span data-ttu-id="a5035-157">[WinUI 3.0][UwpToolkitsWinui3] \ (プレビュー \)</span><span class="sxs-lookup"><span data-stu-id="a5035-157">[WinUI 3.0][UwpToolkitsWinui3] \(Preview\)</span></span>
+*   <span data-ttu-id="a5035-157">[WinUI 3.0][UwpToolkitsWinui3] \(プレビュー \)</span><span class="sxs-lookup"><span data-stu-id="a5035-157">[WinUI 3.0][UwpToolkitsWinui3] \(Preview\)</span></span>
 
 <span data-ttu-id="a5035-158">WebView2 アプリケーションは、次のバージョンの Windows で実行できます。</span><span class="sxs-lookup"><span data-stu-id="a5035-158">You are able to run WebView2 applications on the following versions of Windows.</span></span>  
 
 *   <span data-ttu-id="a5035-159">Windows 10</span><span class="sxs-lookup"><span data-stu-id="a5035-159">Windows 10</span></span>  
 *   <span data-ttu-id="a5035-160">Windows 8.1</span><span class="sxs-lookup"><span data-stu-id="a5035-160">Windows 8.1</span></span>  
-*   <span data-ttu-id="a5035-161">Windows 7 \ \* \ \*</span><span class="sxs-lookup"><span data-stu-id="a5035-161">Windows 7 \*\*</span></span>  
+*   <span data-ttu-id="a5035-161">Windows 7 \ \* \ \*</span><span class="sxs-lookup"><span data-stu-id="a5035-161">Windows 7 </span></span>  
 *   <span data-ttu-id="a5035-162">Windows Server 2019</span><span class="sxs-lookup"><span data-stu-id="a5035-162">Windows Server 2019</span></span>  
 *   <span data-ttu-id="a5035-163">Windows Server 2016</span><span class="sxs-lookup"><span data-stu-id="a5035-163">Windows Server 2016</span></span>  
 *   <span data-ttu-id="a5035-164">Windows Server 2012</span><span class="sxs-lookup"><span data-stu-id="a5035-164">Windows Server 2012</span></span>  
 *   <span data-ttu-id="a5035-165">Windows Server 2012 R2</span><span class="sxs-lookup"><span data-stu-id="a5035-165">Windows Server 2012 R2</span></span>  
-*   <span data-ttu-id="a5035-166">Windows Server 2008 R2 \ \* \ \*</span><span class="sxs-lookup"><span data-stu-id="a5035-166">Windows Server 2008 R2 \*\*</span></span>  
+*   <span data-ttu-id="a5035-166">Windows Server 2008 R2 \ \* \ \*</span><span class="sxs-lookup"><span data-stu-id="a5035-166">Windows Server 2008 R2 </span></span>  
 
 > [!IMPORTANT]
-> <span data-ttu-id="a5035-167">\ \* \ \* WebView2 support for Windows 7 および Windows Server 2008 R2 のサポートサイクルは、Microsoft Edge と同じです。</span><span class="sxs-lookup"><span data-stu-id="a5035-167">\*\* WebView2 support for Windows 7 and Windows Server 2008 R2 has the same support cycle as Microsoft Edge.</span></span>  <span data-ttu-id="a5035-168">詳細については、[Microsoft Edge でサポートされているオペレーティングシステム][DeployedgeMicrosoftEdgeSupportedOS]を参照してください。</span><span class="sxs-lookup"><span data-stu-id="a5035-168">For more information, navigate to [Microsoft Edge supported Operating Systems][DeployedgeMicrosoftEdgeSupportedOS].</span></span>  
+> <span data-ttu-id="a5035-167">\ \* \ \* WebView2 support for Windows 7 および Windows Server 2008 R2 のサポートサイクルは、Microsoft Edge と同じです。</span><span class="sxs-lookup"><span data-stu-id="a5035-167"> WebView2 support for Windows 7 and Windows Server 2008 R2 has the same support cycle as Microsoft Edge.</span></span>  <span data-ttu-id="a5035-168">詳細については、[Microsoft Edge でサポートされているオペレーティングシステム][DeployedgeMicrosoftEdgeSupportedOS]を参照してください。</span><span class="sxs-lookup"><span data-stu-id="a5035-168">For more information, navigate to [Microsoft Edge supported Operating Systems][DeployedgeMicrosoftEdgeSupportedOS].</span></span>  
 
 ## <span data-ttu-id="a5035-169">次のステップ</span><span class="sxs-lookup"><span data-stu-id="a5035-169">Next steps</span></span>  
 

@@ -12,7 +12,7 @@ ms.lasthandoff: 04/09/2020
 ms.locfileid: "10569716"
 ---
 > [!NOTE]
-> <span data-ttu-id="0a26f-101">新しい Microsoft Edge は Chromium を使って構築され、バージョン75から始まります。</span><span class="sxs-lookup"><span data-stu-id="0a26f-101">The new Microsoft Edge is built using Chromium, and starts at version 75.</span></span>  <span data-ttu-id="0a26f-102">詳細については、[新しい Microsoft edge をダウンロード][MicrosoftNewEdge]して、新しい[microsoft Edge \ (Chromium) 開発者ツール][DevtoolsGuideChromium]を試してください。</span><span class="sxs-lookup"><span data-stu-id="0a26f-102">For more information, [download the new Microsoft Edge][MicrosoftNewEdge], and try out the new [Microsoft Edge \(Chromium\) Developer Tools][DevtoolsGuideChromium].</span></span>  
+> <span data-ttu-id="0a26f-101">新しい Microsoft Edge は Chromium を使って構築され、バージョン75から始まります。</span><span class="sxs-lookup"><span data-stu-id="0a26f-101">The new Microsoft Edge is built using Chromium, and starts at version 75.</span></span>  <span data-ttu-id="0a26f-102">詳細については、[新しい Microsoft edge をダウンロード][MicrosoftNewEdge]して、新しい[microsoft Edge \(Chromium) 開発者ツール][DevtoolsGuideChromium]を試してください。</span><span class="sxs-lookup"><span data-stu-id="0a26f-102">For more information, [download the new Microsoft Edge][MicrosoftNewEdge], and try out the new [Microsoft Edge \(Chromium\) Developer Tools][DevtoolsGuideChromium].</span></span>  
 
 <!-- image links -->  
 

@@ -74,7 +74,7 @@ ms.locfileid: "11397777"
    <span data-ttu-id="1ad02-129">混在コンテンツ</span><span class="sxs-lookup"><span data-stu-id="1ad02-129">Mixed content</span></span>  
 :::image-end:::  
 
-<span data-ttu-id="1ad02-130">前の図で、[ネットワーク] パネルで **[1**要求\*\*\*\* の表示] を選択してネットワーク ツールを開き、フィルターを適用して、ネットワーク ログにセキュリティ保護されていないリソースのみを `mixed-content:displayed` \*\*\*\* 表示します。</span><span class="sxs-lookup"><span data-stu-id="1ad02-130">In the previous figure, choose **View 1 request in Network panel** to open the **Network** tool and apply the `mixed-content:displayed` filter so that the **Network Log** only shows non-secure resources.</span></span>  
+<span data-ttu-id="1ad02-130">前の図で、[ネットワーク] パネルで **[1**要求 の表示] を選択してネットワーク ツールを開き、フィルターを適用して、ネットワーク ログにセキュリティ保護されていないリソースのみを `mixed-content:displayed`  表示します。</span><span class="sxs-lookup"><span data-stu-id="1ad02-130">In the previous figure, choose **View 1 request in Network panel** to open the **Network** tool and apply the `mixed-content:displayed` filter so that the **Network Log** only shows non-secure resources.</span></span>  
 
 :::image type="complex" source="../media/security-network-filter.msft.png" alt-text="ネットワーク ログ内の混在リソース" lightbox="../media/security-network-filter.msft.png":::
    <span data-ttu-id="1ad02-132">ネットワーク ログ内の **混在リソース**</span><span class="sxs-lookup"><span data-stu-id="1ad02-132">Mixed resources in the **Network Log**</span></span>  

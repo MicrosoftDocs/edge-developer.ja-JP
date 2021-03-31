@@ -36,7 +36,7 @@ ms.locfileid: "11398225"
 
 ## <a name="open-resources"></a><span data-ttu-id="690e1-109">リソースを開く</span><span class="sxs-lookup"><span data-stu-id="690e1-109">Open resources</span></span>  
 
-<span data-ttu-id="690e1-110">検査するリソースの名前がわかっている場合は、コマンド メニューを\*\*\*\* 使用してリソースを高速に開きます。</span><span class="sxs-lookup"><span data-stu-id="690e1-110">When you know the name of the resource that you want to inspect, the **Command Menu** provides a fast way of opening the resource.</span></span>  
+<span data-ttu-id="690e1-110">検査するリソースの名前がわかっている場合は、コマンド メニューを 使用してリソースを高速に開きます。</span><span class="sxs-lookup"><span data-stu-id="690e1-110">When you know the name of the resource that you want to inspect, the **Command Menu** provides a fast way of opening the resource.</span></span>  
 
 1.  <span data-ttu-id="690e1-111">`Control` + `P` \(Windows, Linux\) または `Command` + `P` \(macOS\) を選択します。</span><span class="sxs-lookup"><span data-stu-id="690e1-111">Select `Control`+`P` \(Windows, Linux\) or `Command`+`P` \(macOS\).</span></span>  <span data-ttu-id="690e1-112">[ **ファイルを開く]** ダイアログボックスが開きます。</span><span class="sxs-lookup"><span data-stu-id="690e1-112">The **Open File** dialog opens.</span></span>  
     
@@ -60,7 +60,7 @@ ms.locfileid: "11398225"
 
 ### <a name="reveal-resources-in-the-network-tool-from-other-panels"></a><span data-ttu-id="690e1-122">他のパネルからネットワーク ツールのリソースを表示する</span><span class="sxs-lookup"><span data-stu-id="690e1-122">Reveal resources in the Network tool from other panels</span></span>  
 
-<span data-ttu-id="690e1-123">下 [の [リソースの](#browse-resources) 参照] セクションでは、DevTools UI のさまざまな部分からリソースを表示する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="690e1-123">The [Browse resources](#browse-resources) section below shows you how to view resources from various parts of the DevTools UI.</span></span>  <span data-ttu-id="690e1-124">ネットワーク ツールでリソースを検査する場合は\*\*\*\*、リソースにカーソルを合わせると、コンテキスト メニュー \(右クリック\) を開き、[ネットワーク] パネルで [表示] を**選択します**。</span><span class="sxs-lookup"><span data-stu-id="690e1-124">If you ever want to inspect a resource in the **Network** tool,  hover on the resource, open the contextual menu \(right-click\), and choose **Reveal in Network panel**.</span></span>  
+<span data-ttu-id="690e1-123">下 [の [リソースの](#browse-resources) 参照] セクションでは、DevTools UI のさまざまな部分からリソースを表示する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="690e1-123">The [Browse resources](#browse-resources) section below shows you how to view resources from various parts of the DevTools UI.</span></span>  <span data-ttu-id="690e1-124">ネットワーク ツールでリソースを検査する場合は、リソースにカーソルを合わせると、コンテキスト メニュー \(右クリック\) を開き、[ネットワーク] パネルで [表示] を**選択します**。</span><span class="sxs-lookup"><span data-stu-id="690e1-124">If you ever want to inspect a resource in the **Network** tool,  hover on the resource, open the contextual menu \(right-click\), and choose **Reveal in Network panel**.</span></span>  
 
 :::image type="complex" source="../media/resources-sources-page-reveal-in-network-panel.msft.png" alt-text="[ネットワーク] パネルで表示する" lightbox="../media/resources-sources-page-reveal-in-network-panel.msft.png":::
    **<span data-ttu-id="690e1-126">[ネットワーク] パネルで表示する</span><span class="sxs-lookup"><span data-stu-id="690e1-126">Reveal in Network panel</span></span>**  

@@ -73,7 +73,7 @@ ms.locfileid: "11234587"
 
 ### <span data-ttu-id="7e3dc-142">Orientation</span><span class="sxs-lookup"><span data-stu-id="7e3dc-142">Orientation</span></span>  
 
-<span data-ttu-id="7e3dc-143">横モードまたは**縦モード\*\*\*\*から選択**します。</span><span class="sxs-lookup"><span data-stu-id="7e3dc-143">Choose from **Landscape** or **Portrait** mode.</span></span>  
+<span data-ttu-id="7e3dc-143">横モードまたは**縦モードから選択**します。</span><span class="sxs-lookup"><span data-stu-id="7e3dc-143">Choose from **Landscape** or **Portrait** mode.</span></span>  
 
 ### <span data-ttu-id="7e3dc-144">解決方法</span><span class="sxs-lookup"><span data-stu-id="7e3dc-144">Resolution</span></span>  
 

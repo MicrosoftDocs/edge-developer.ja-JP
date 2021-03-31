@@ -18,7 +18,7 @@ ms.locfileid: "11234596"
 ---
 # <span data-ttu-id="8bf59-104">フォント</span><span class="sxs-lookup"><span data-stu-id="8bf59-104">Fonts</span></span>
 
-<span data-ttu-id="8bf59-105">CSS ルールに関する情報を表示します。フォントが読み込まれる場所 (ローカルまたはネットワーク) や、ページ上で使用されている文字の `@font-face` 数が含まれます。\*\* \*\*</span><span class="sxs-lookup"><span data-stu-id="8bf59-105">View information about your CSS `@font-face` rules, including where fonts are being loaded (*Local* or *Network*) and how many characters on the page are using them.</span></span>
+<span data-ttu-id="8bf59-105">CSS ルールに関する情報を表示します。フォントが読み込まれる場所 (ローカルまたはネットワーク) や、ページ上で使用されている文字の `@font-face` 数が含まれます。 </span><span class="sxs-lookup"><span data-stu-id="8bf59-105">View information about your CSS `@font-face` rules, including where fonts are being loaded (*Local* or *Network*) and how many characters on the page are using them.</span></span>
 
 <span data-ttu-id="8bf59-106">ネットワークから読み込まれたフォントの場合、DevTools はエイリアスとフォントの種類と共にインポートしたルールを表示します。</span><span class="sxs-lookup"><span data-stu-id="8bf59-106">For fonts loaded from the network, DevTools will display the rule that imported it along with alias and font type.</span></span>
 

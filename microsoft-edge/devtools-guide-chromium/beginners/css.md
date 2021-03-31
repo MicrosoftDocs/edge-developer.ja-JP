@@ -141,7 +141,7 @@ ms.locfileid: "11439438"
 1.  <span data-ttu-id="9f54e-167">変更を表示するには、ライブ タブに **移動します**。 これで、セクションの `<nav>` 背景が青になります。</span><span class="sxs-lookup"><span data-stu-id="9f54e-167">To display the changes, navigate to the **live tab**.  The background of the `<nav>` section is now blue.</span></span>  
     
     :::image type="complex" source="../media/beginners-css-inline2.msft.png" alt-text="[ホーム] リンクと [連絡先] リンクの背景の背景色が青色に変更されました" lightbox="../media/beginners-css-inline2.msft.png":::
-       <span data-ttu-id="9f54e-169">[ホーム] リンクと [連絡先]**リンクの背景\*\*\*\*の背景色**が青色に変更されました</span><span class="sxs-lookup"><span data-stu-id="9f54e-169">The background color behind the **Home** and **Contact** links is now blue</span></span>  
+       <span data-ttu-id="9f54e-169">[ホーム] リンクと [連絡先]**リンクの背景の背景色**が青色に変更されました</span><span class="sxs-lookup"><span data-stu-id="9f54e-169">The background color behind the **Home** and **Contact** links is now blue</span></span>  
     :::image-end:::  
     
 ## <a name="re-use-styles-on-a-single-page-with-internal-stylesheets"></a><span data-ttu-id="9f54e-170">内部スタイルシートを使用して 1 つのページでスタイルを再使用する</span><span class="sxs-lookup"><span data-stu-id="9f54e-170">Re-use styles on a single page with internal stylesheets</span></span>  
@@ -182,10 +182,10 @@ ms.locfileid: "11439438"
     ```  
     
 1.  <span data-ttu-id="9f54e-185">[ライブ] タブに **戻る**。</span><span class="sxs-lookup"><span data-stu-id="9f54e-185">Go back to the **live tab**.</span></span>  
-1.  <span data-ttu-id="9f54e-186">[連絡先 **] を** 選択して、連絡先ページに戻ります。</span><span class="sxs-lookup"><span data-stu-id="9f54e-186">Choose **Contact** to go back to the contact page.</span></span>  <span data-ttu-id="9f54e-187">ホームと連絡先**のフォント\*\*\*\*が**変更されました。</span><span class="sxs-lookup"><span data-stu-id="9f54e-187">The font of **Home** and **Contact** has changed.</span></span>  
+1.  <span data-ttu-id="9f54e-186">[連絡先 **] を** 選択して、連絡先ページに戻ります。</span><span class="sxs-lookup"><span data-stu-id="9f54e-186">Choose **Contact** to go back to the contact page.</span></span>  <span data-ttu-id="9f54e-187">ホームと連絡先**のフォントが**変更されました。</span><span class="sxs-lookup"><span data-stu-id="9f54e-187">The font of **Home** and **Contact** has changed.</span></span>  
     
     :::image type="complex" source="../media/beginners-css-internal2.msft.png" alt-text="ホーム リンクと連絡先リンクのフォントが変更されました" lightbox="../media/beginners-css-internal2.msft.png":::
-       <span data-ttu-id="9f54e-189">ホーム リンクと**連絡先リンクの\*\*\*\*フォント**が変更されました</span><span class="sxs-lookup"><span data-stu-id="9f54e-189">The font of the **Home** and **Contact** links has changed</span></span>  
+       <span data-ttu-id="9f54e-189">ホーム リンクと**連絡先リンクのフォント**が変更されました</span><span class="sxs-lookup"><span data-stu-id="9f54e-189">The font of the **Home** and **Contact** links has changed</span></span>  
     :::image-end:::  
     
 ### <a name="understand-internal-stylesheets"></a><span data-ttu-id="9f54e-190">内部スタイルシートについて</span><span class="sxs-lookup"><span data-stu-id="9f54e-190">Understand internal stylesheets</span></span>  
@@ -200,7 +200,7 @@ ms.locfileid: "11439438"
 </style>
 ```  
 
-`li a` <span data-ttu-id="9f54e-194">は、"要素を含む任意の `<li>` 要素" に変換されるセレクター `<a>` です。</span><span class="sxs-lookup"><span data-stu-id="9f54e-194">is a selector that translates to "any `<li>` element that contains an `<a>` element".</span></span>  <span data-ttu-id="9f54e-195">各タグ グループがパターンと\*\*\*\* 一致\*\*\*\* する場合、ブラウザーはホーム リンクと連絡先リンクのフォントを変更します。</span><span class="sxs-lookup"><span data-stu-id="9f54e-195">The browser changes the font of the **Home** and **Contact** links because each of the tag groups match the pattern.</span></span>  
+`li a` <span data-ttu-id="9f54e-194">は、"要素を含む任意の `<li>` 要素" に変換されるセレクター `<a>` です。</span><span class="sxs-lookup"><span data-stu-id="9f54e-194">is a selector that translates to "any `<li>` element that contains an `<a>` element".</span></span>  <span data-ttu-id="9f54e-195">各タグ グループがパターンと 一致 する場合、ブラウザーはホーム リンクと連絡先リンクのフォントを変更します。</span><span class="sxs-lookup"><span data-stu-id="9f54e-195">The browser changes the font of the **Home** and **Contact** links because each of the tag groups match the pattern.</span></span>  
 
 ```html
 <li><a href="/">Home</a></li>
@@ -284,7 +284,7 @@ li a {
     
     :::row:::
        :::column span="":::
-          <span data-ttu-id="9f54e-231">次の図では、以前に追加した宣言が DOM ツリーの下の [スタイル] タブ `font-family: 'Courier New', Courier, serif` `contact.html` に表示されます。 \*\*\*\*</span><span class="sxs-lookup"><span data-stu-id="9f54e-231">In the following figure, the `font-family: 'Courier New', Courier, serif` declaration that you previously added to `contact.html` is displayed in the **Styles** tab below the DOM Tree.</span></span>  
+          <span data-ttu-id="9f54e-231">次の図では、以前に追加した宣言が DOM ツリーの下の [スタイル] タブ `font-family: 'Courier New', Courier, serif` `contact.html` に表示されます。 </span><span class="sxs-lookup"><span data-stu-id="9f54e-231">In the following figure, the `font-family: 'Courier New', Courier, serif` declaration that you previously added to `contact.html` is displayed in the **Styles** tab below the DOM Tree.</span></span>  
           
           :::image type="complex" source="../media/beginners-css-add2.msft.png" alt-text="[スタイル] タブは DOM ツリーの下にあります" lightbox="../media/beginners-css-add2.msft.png":::
              <span data-ttu-id="9f54e-233">[ **スタイル]** タブは DOM ツリーの下にあります</span><span class="sxs-lookup"><span data-stu-id="9f54e-233">The **Styles** tab is below the DOM Tree</span></span>  

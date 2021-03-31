@@ -13,7 +13,7 @@ ms.locfileid: "11205644"
 ---
 <span data-ttu-id="e0510-101">次のオプションを使用して、投稿の新機能や変更点、または DevTools に関連するその他の機能について説明します。</span><span class="sxs-lookup"><span data-stu-id="e0510-101">Use the following options to discuss the new features and changes in the post, or anything else related to DevTools.</span></span>  
 
-*   <span data-ttu-id="e0510-102">**フィードバックの送信** アイコンを使ってフィードバックを送信するか、 `Alt` + `Shift` + `I` devtools で \(Windows、Linux\) または `Option` + `Shift` + `I` `I` devtools で\ (macOS) を選択します。</span><span class="sxs-lookup"><span data-stu-id="e0510-102">Send your feedback using the **Send Feedback** icon or select `Alt`+`Shift`+`I` \(Windows, Linux\) or `Option`+`Shift`+`I` \(macOS\) in DevTools.</span></span>  
+*   <span data-ttu-id="e0510-102">**フィードバックの送信** アイコンを使ってフィードバックを送信するか、 `Alt` + `Shift` + `I` devtools で \(Windows、Linux\) または `Option` + `Shift` + `I` `I` devtools で\(macOS) を選択します。</span><span class="sxs-lookup"><span data-stu-id="e0510-102">Send your feedback using the **Send Feedback** icon or select `Alt`+`Shift`+`I` \(Windows, Linux\) or `Option`+`Shift`+`I` \(macOS\) in DevTools.</span></span>  
 *   <span data-ttu-id="e0510-103">[@EdgeDevTools][PostTweetEdgeDevTools]でツイートします。</span><span class="sxs-lookup"><span data-stu-id="e0510-103">Tweet at [@EdgeDevTools][PostTweetEdgeDevTools].</span></span>  
 *   <span data-ttu-id="e0510-104">[必要なWeb][TheWebWeWant]に提案を送信します。</span><span class="sxs-lookup"><span data-stu-id="e0510-104">Submit a suggestion to [The Web We Want][TheWebWeWant].</span></span>  
 *   <span data-ttu-id="e0510-105">この記事に関するバグを報告するには、次の **フィードバック** セクションを使用します。</span><span class="sxs-lookup"><span data-stu-id="e0510-105">To file bugs about this article, use the following **Feedback** section.</span></span>  

@@ -44,7 +44,7 @@ ms.locfileid: "11461263"
 
 <span data-ttu-id="3ee1e-114">ポート転送を有効にするには、次の方法を実行します。</span><span class="sxs-lookup"><span data-stu-id="3ee1e-114">To enable port forwarding:</span></span>  
 
-1.  <span data-ttu-id="3ee1e-115">開発マシン [と Android デバイス][RemoteDebuggingGettingStarted] の間でリモート デバッグをセットアップします。</span><span class="sxs-lookup"><span data-stu-id="3ee1e-115">Set up [remote debugging][RemoteDebuggingGettingStarted] between your development machine and your Android device.</span></span>  <span data-ttu-id="3ee1e-116">完了したら、[デバイスの検査] ダイアログボックスの左側のメニューと [接続済み\*\*\*\* 状態] インジケーターに Android デバイス**が**表示されます。</span><span class="sxs-lookup"><span data-stu-id="3ee1e-116">When you are finished, your Android device should be displayed in the left-hand menu of the **Inspect Devices** dialog and a **Connected** status indicator.</span></span>  
+1.  <span data-ttu-id="3ee1e-115">開発マシン [と Android デバイス][RemoteDebuggingGettingStarted] の間でリモート デバッグをセットアップします。</span><span class="sxs-lookup"><span data-stu-id="3ee1e-115">Set up [remote debugging][RemoteDebuggingGettingStarted] between your development machine and your Android device.</span></span>  <span data-ttu-id="3ee1e-116">完了したら、[デバイスの検査] ダイアログボックスの左側のメニューと [接続済み 状態] インジケーターに Android デバイス**が**表示されます。</span><span class="sxs-lookup"><span data-stu-id="3ee1e-116">When you are finished, your Android device should be displayed in the left-hand menu of the **Inspect Devices** dialog and a **Connected** status indicator.</span></span>  
 1.  <span data-ttu-id="3ee1e-117">DevTools **の [デバイスの** 検査] ダイアログで、[ポート転送] **を有効にします**。</span><span class="sxs-lookup"><span data-stu-id="3ee1e-117">In the **Inspect Devices** dialog in DevTools, enable **Port forwarding**.</span></span>  
 1.  <span data-ttu-id="3ee1e-118">[ルール **の追加] を選択します**。</span><span class="sxs-lookup"><span data-stu-id="3ee1e-118">Choose **Add rule**.</span></span>  
     
@@ -87,7 +87,7 @@ ms.locfileid: "11461263"
 
 <span data-ttu-id="3ee1e-148">次に、プロキシ サーバーと通信するために Android デバイスを構成する必要があります。</span><span class="sxs-lookup"><span data-stu-id="3ee1e-148">Next, you need to configure your Android device to communicate with the proxy server.</span></span>  
 
-1.  <span data-ttu-id="3ee1e-149">Android デバイスで、[設定] \*\*\*\*  >  **Wi-Fi に移動します**。</span><span class="sxs-lookup"><span data-stu-id="3ee1e-149">On your Android device, navigate to **Settings** > **Wi-Fi**.</span></span>  
+1.  <span data-ttu-id="3ee1e-149">Android デバイスで、[設定]   >  **Wi-Fi に移動します**。</span><span class="sxs-lookup"><span data-stu-id="3ee1e-149">On your Android device, navigate to **Settings** > **Wi-Fi**.</span></span>  
 1.  <span data-ttu-id="3ee1e-150">現在接続しているネットワークの名前を長押しします。</span><span class="sxs-lookup"><span data-stu-id="3ee1e-150">Long-press the name of the network to which you are currently connected.</span></span>  
     
     > [!NOTE]

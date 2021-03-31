@@ -41,7 +41,7 @@ ms.locfileid: "11398715"
     :::image-end:::  
     
 1.  <span data-ttu-id="3f6af-109">[種類 `sensors` ] を選択 **し、[センサーの表示]** を選択し、[ ] を選択します `Enter` 。</span><span class="sxs-lookup"><span data-stu-id="3f6af-109">Type `sensors`, choose **Show Sensors**, and select `Enter`.</span></span>  <span data-ttu-id="3f6af-110">センサー **ツールが** DevTools ウィンドウの下部に開きます。</span><span class="sxs-lookup"><span data-stu-id="3f6af-110">The **Sensors** tool opens at the bottom of your DevTools window.</span></span>  
-1.  <span data-ttu-id="3f6af-111">[方向 **] ボックスの**一覧から、プリセットの向き (など) のいずれかを選択するか、[カスタムの向き] を選択して、独自の正確な方向 `Portrait upside down` \*\*\*\* を指定します。</span><span class="sxs-lookup"><span data-stu-id="3f6af-111">From the **Orientation** list, select one of the preset orientations, such as `Portrait upside down`, or choose **Custom orientation** to provide your own exact orientation.</span></span>  
+1.  <span data-ttu-id="3f6af-111">[方向 **] ボックスの**一覧から、プリセットの向き (など) のいずれかを選択するか、[カスタムの向き] を選択して、独自の正確な方向 `Portrait upside down`  を指定します。</span><span class="sxs-lookup"><span data-stu-id="3f6af-111">From the **Orientation** list, select one of the preset orientations, such as `Portrait upside down`, or choose **Custom orientation** to provide your own exact orientation.</span></span>  
     
     :::row:::
        :::column span="":::

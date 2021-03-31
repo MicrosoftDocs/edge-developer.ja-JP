@@ -106,4 +106,4 @@ ms.locfileid: "11234900"
 <meta name="IE_RM_OFF" content="true">
 ```  
 
-<span data-ttu-id="6d004-155">このタグを使用すると\*\*\*\*、ユーザーがページを表示するときに[閲覧ビュー] ボタンがアドレス バーに表示されません。</span><span class="sxs-lookup"><span data-stu-id="6d004-155">With this tag, the **Reading view** button will not appear in the address bar when your users view your page.</span></span>  
+<span data-ttu-id="6d004-155">このタグを使用すると、ユーザーがページを表示するときに[閲覧ビュー] ボタンがアドレス バーに表示されません。</span><span class="sxs-lookup"><span data-stu-id="6d004-155">With this tag, the **Reading view** button will not appear in the address bar when your users view your page.</span></span>  

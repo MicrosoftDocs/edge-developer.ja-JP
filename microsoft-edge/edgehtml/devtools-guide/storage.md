@@ -31,7 +31,7 @@ ms.locfileid: "11398897"
 
 <span data-ttu-id="1a98e-112">ローカル ストレージ マネージャーとセッション ストレージ マネージャーを使用して、ページの Web ストレージを検査および管理します。</span><span class="sxs-lookup"><span data-stu-id="1a98e-112">Use the Local Storage manager and Session Storage manager to inspect and manage the web storage for your page.</span></span>  
 
-<span data-ttu-id="1a98e-113">[**記憶域] パネル\*\*\*\*の [リソース] ピ**ッカー内のローカル 記憶域フォルダーとセッション 記憶域[フォルダーには](./debugger.md#resource-picker)、ページの原点の一覧が表示されます。</span><span class="sxs-lookup"><span data-stu-id="1a98e-113">The **Local Storage** and **Session Storage** folders inside the Storage panel's [Resource picker](./debugger.md#resource-picker) display a list of origins for the page.</span></span>  <span data-ttu-id="1a98e-114">これらのフレームのいずれかを選択すると [、Window.localStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage) または [Window.sessionStorage](https://developer.mozilla.org/docs/Web/API/Window/sessionStorage)を介して設定された現在のキー/値ペアの編集可能なテーブルが開きます。\(および/または DevTools [Storage](#storage-list)リスト \から直接設定)。</span><span class="sxs-lookup"><span data-stu-id="1a98e-114">Selecting one of these frames opens up an editable table of the current key/value pairs set via [Window.localStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage) or [Window.sessionStorage](https://developer.mozilla.org/docs/Web/API/Window/sessionStorage), respectively \(and/or set directly from the  DevTools [Storage list](#storage-list)\).</span></span>  
+<span data-ttu-id="1a98e-113">[**記憶域] パネルの [リソース] ピ**ッカー内のローカル 記憶域フォルダーとセッション 記憶域[フォルダーには](./debugger.md#resource-picker)、ページの原点の一覧が表示されます。</span><span class="sxs-lookup"><span data-stu-id="1a98e-113">The **Local Storage** and **Session Storage** folders inside the Storage panel's [Resource picker](./debugger.md#resource-picker) display a list of origins for the page.</span></span>  <span data-ttu-id="1a98e-114">これらのフレームのいずれかを選択すると [、Window.localStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage) または [Window.sessionStorage](https://developer.mozilla.org/docs/Web/API/Window/sessionStorage)を介して設定された現在のキー/値ペアの編集可能なテーブルが開きます。\(および/または DevTools [Storage](#storage-list)リスト \から直接設定)。</span><span class="sxs-lookup"><span data-stu-id="1a98e-114">Selecting one of these frames opens up an editable table of the current key/value pairs set via [Window.localStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage) or [Window.sessionStorage](https://developer.mozilla.org/docs/Web/API/Window/sessionStorage), respectively \(and/or set directly from the  DevTools [Storage list](#storage-list)\).</span></span>  
 
 ![DevTools ストレージ マネージャー](./media/storage_web_storage.png)  
 
@@ -110,7 +110,7 @@ ms.locfileid: "11398897"
 
 ### <a name="context-menu"></a><span data-ttu-id="1a98e-174">ショートカット メニュー</span><span class="sxs-lookup"><span data-stu-id="1a98e-174">Context menu</span></span>  
 
-<span data-ttu-id="1a98e-175">[ *IndexedDB*](#indexeddb-toolbar)ツールバーに加えて、右クリックのコンテキスト メニューやキーボード ショートカットからオブジェクト ストアまたはインデックス内の\*\*\*\* データを[管理することもできます](#shortcuts)。</span><span class="sxs-lookup"><span data-stu-id="1a98e-175">In addition to the [*IndexedDB* toolbar](#indexeddb-toolbar), you can also manage your data in object stores or indices from the right-click **Context menu** and/or the keyboard [shortcuts](#shortcuts).</span></span>  
+<span data-ttu-id="1a98e-175">[ *IndexedDB*](#indexeddb-toolbar)ツールバーに加えて、右クリックのコンテキスト メニューやキーボード ショートカットからオブジェクト ストアまたはインデックス内の データを[管理することもできます](#shortcuts)。</span><span class="sxs-lookup"><span data-stu-id="1a98e-175">In addition to the [*IndexedDB* toolbar](#indexeddb-toolbar), you can also manage your data in object stores or indices from the right-click **Context menu** and/or the keyboard [shortcuts](#shortcuts).</span></span>  
 
 ### <a name="shortcuts"></a><span data-ttu-id="1a98e-176">ショートカット</span><span class="sxs-lookup"><span data-stu-id="1a98e-176">Shortcuts</span></span>
 
@@ -135,7 +135,7 @@ ms.locfileid: "11398897"
 *   <span data-ttu-id="1a98e-192">**現在のページの**パス `Ctrl` + `Shift` + `Del` のすべての Cookie \( \) \(session and permanent\) を削除します。</span><span class="sxs-lookup"><span data-stu-id="1a98e-192">**Delete all cookies** \(`Ctrl`+`Shift`+`Del`\) \(session and permanent\) for the path of the current page.</span></span>  
 *   <span data-ttu-id="1a98e-193">**現在のページのパス**のすべてのセッション `Ctrl` + `Del` Cookie \( \) を削除します。</span><span class="sxs-lookup"><span data-stu-id="1a98e-193">**Delete all session cookies** \(`Ctrl`+`Del`\) for the path of the current page.</span></span>  
 
-<span data-ttu-id="1a98e-194">Cookie リストを完全にクリアするには、[ネットワーク]\*\*\*\* パネル のツール バーからドメインのすべての Cookie をクリア[する必要があります](./network.md#toolbar)。</span><span class="sxs-lookup"><span data-stu-id="1a98e-194">To completely clear your Cookies list, you might need to **Clear all cookies for the domain** from the [Network](./network.md#toolbar) panel toolbar.</span></span>  
+<span data-ttu-id="1a98e-194">Cookie リストを完全にクリアするには、[ネットワーク] パネル のツール バーからドメインのすべての Cookie をクリア[する必要があります](./network.md#toolbar)。</span><span class="sxs-lookup"><span data-stu-id="1a98e-194">To completely clear your Cookies list, you might need to **Clear all cookies for the domain** from the [Network](./network.md#toolbar) panel toolbar.</span></span>  
 
 ### <a name="cookies-list"></a><span data-ttu-id="1a98e-195">Cookie リスト</span><span class="sxs-lookup"><span data-stu-id="1a98e-195">Cookies list</span></span>  
 
@@ -162,7 +162,7 @@ ms.locfileid: "11398897"
 
 ### <a name="context-menu"></a><span data-ttu-id="1a98e-222">ショートカット メニュー</span><span class="sxs-lookup"><span data-stu-id="1a98e-222">Context menu</span></span>  
 
-<span data-ttu-id="1a98e-223">[Cookie] タブ ツールバー[に加えて](#cookies-manager)、右クリックのコンテキスト メニューやキーボード\*\*\*\* ショートカットから Cookie を[管理することもできます](#shortcuts)。</span><span class="sxs-lookup"><span data-stu-id="1a98e-223">In addition to the Cookies tab [toolbar](#cookies-manager), you can also manage your cookies from the right-click **Context menu** and/or the keyboard [shortcuts](#shortcuts).</span></span>  
+<span data-ttu-id="1a98e-223">[Cookie] タブ ツールバー[に加えて](#cookies-manager)、右クリックのコンテキスト メニューやキーボード ショートカットから Cookie を[管理することもできます](#shortcuts)。</span><span class="sxs-lookup"><span data-stu-id="1a98e-223">In addition to the Cookies tab [toolbar](#cookies-manager), you can also manage your cookies from the right-click **Context menu** and/or the keyboard [shortcuts](#shortcuts).</span></span>  
 
 ### <a name="shortcuts"></a><span data-ttu-id="1a98e-224">ショートカット</span><span class="sxs-lookup"><span data-stu-id="1a98e-224">Shortcuts</span></span>  
 
@@ -177,7 +177,7 @@ ms.locfileid: "11398897"
 
 ### <a name="cache-manager"></a><span data-ttu-id="1a98e-233">キャッシュ マネージャー</span><span class="sxs-lookup"><span data-stu-id="1a98e-233">Cache manager</span></span>  
 
-<span data-ttu-id="1a98e-234">特定のキャッシュ エントリをクリックすると、サービス ワーカー\*\*\*\* のキャッシュ マネージャーが開き、キャッシュ エントリ \( とキー/値のペア\) を検査して必要に応じて `Request` `Response` 削除できます。</span><span class="sxs-lookup"><span data-stu-id="1a98e-234">Clicking on a specific cache entry will open up the service worker **Cache** manager, where you can inspect and optionally delete cache entries \(`Request` and `Response` key/value pairs\):</span></span>  
+<span data-ttu-id="1a98e-234">特定のキャッシュ エントリをクリックすると、サービス ワーカー のキャッシュ マネージャーが開き、キャッシュ エントリ \( とキー/値のペア\) を検査して必要に応じて `Request` `Response` 削除できます。</span><span class="sxs-lookup"><span data-stu-id="1a98e-234">Clicking on a specific cache entry will open up the service worker **Cache** manager, where you can inspect and optionally delete cache entries \(`Request` and `Response` key/value pairs\):</span></span>  
 
 ![キャッシュ マネージャー](./media/storage_cache.png)  
 

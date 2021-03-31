@@ -107,7 +107,7 @@ ms.locfileid: "11398976"
 1.  <span data-ttu-id="69d73-147">スクロールして、問題のあるアイテムを表示します。次の例では `ck02` 、Cookie です。</span><span class="sxs-lookup"><span data-stu-id="69d73-147">Scroll to view the item with a problem:  for the following example, the `ck02` cookie.</span></span>  <span data-ttu-id="69d73-148">SameSite 列 **にカーソルを** 合わせると、問題 `None` が検出された値を確認できます。</span><span class="sxs-lookup"><span data-stu-id="69d73-148">Hover on the **SameSite** column to review the `None` value that the issue detected.</span></span>  
     
     :::image type="complex" source="../media/issues-tab-view-issue.msft.png" alt-text="DevTools ネットワーク ツールの ck02 Cookie の SameSite 列の値なし" lightbox="../media/issues-tab-view-issue.msft.png":::
-       `None` <span data-ttu-id="69d73-150">DevTools**ネットワーク**ツールの `ck02` Cookie の SameSite 列の値\*\*\*\*</span><span class="sxs-lookup"><span data-stu-id="69d73-150">value in the **SameSite** column for the `ck02` cookie in the DevTools **Network** tool</span></span>  
+       `None` <span data-ttu-id="69d73-150">DevTools**ネットワーク**ツールの `ck02` Cookie の SameSite 列の値</span><span class="sxs-lookup"><span data-stu-id="69d73-150">value in the **SameSite** column for the `ck02` cookie in the DevTools **Network** tool</span></span>  
     :::image-end:::  
 
 ## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a><span data-ttu-id="69d73-151">Microsoft Edge DevTools チームと連絡を取る</span><span class="sxs-lookup"><span data-stu-id="69d73-151">Getting in touch with the Microsoft Edge DevTools team</span></span>  

@@ -102,7 +102,7 @@ ms.locfileid: "11439585"
 1.  <span data-ttu-id="b0a54-156">[送信 **] を選択します**。</span><span class="sxs-lookup"><span data-stu-id="b0a54-156">Choose **Send**.</span></span>  
     
 :::image type="complex" source="../media/network-network-console.msft.png" alt-text="コンソール ドロワーのネットワーク コンソール" lightbox="../media/network-network-console.msft.png":::
-   <span data-ttu-id="b0a54-158">**コンソール ドロワー\*\*\*\*のネットワーク**コンソール</span><span class="sxs-lookup"><span data-stu-id="b0a54-158">**Network Console** in the **Console** drawer</span></span>  
+   <span data-ttu-id="b0a54-158">**コンソール ドロワーのネットワーク**コンソール</span><span class="sxs-lookup"><span data-stu-id="b0a54-158">**Network Console** in the **Console** drawer</span></span>  
 :::image-end:::  
 
 <!--Available in Microsoft Edge version 85 and later.  -->  
@@ -114,7 +114,7 @@ ms.locfileid: "11439585"
 <span data-ttu-id="b0a54-162">実験を有効にしたら、DevTools を再起動してください。</span><span class="sxs-lookup"><span data-stu-id="b0a54-162">After you turn on the experiment, ensure you restart the DevTools.</span></span>  <span data-ttu-id="b0a54-163">使用するには **Source Order Viewer** 、次の手順を実行します。</span><span class="sxs-lookup"><span data-stu-id="b0a54-163">To use **Source Order Viewer**, complete the following steps.</span></span>  
 
 1.  <span data-ttu-id="b0a54-164">[要素] **ツールを開** きます。</span><span class="sxs-lookup"><span data-stu-id="b0a54-164">Open the **Elements** tool.</span></span>  
-1.  <span data-ttu-id="b0a54-165">引き出し \(bottom\) パネルで [アクセシビリティ] ウィンドウを開きます。 \*\*\*\*</span><span class="sxs-lookup"><span data-stu-id="b0a54-165">Open the **Accessibility** pane in the drawer \(bottom\) panel.</span></span>  
+1.  <span data-ttu-id="b0a54-165">引き出し \(bottom\) パネルで [アクセシビリティ] ウィンドウを開きます。 </span><span class="sxs-lookup"><span data-stu-id="b0a54-165">Open the **Accessibility** pane in the drawer \(bottom\) panel.</span></span>  
 1.  <span data-ttu-id="b0a54-166">セクションの **Source Order Viewer** 下で、[ソースの順序を **表示する] チェック ボックスをオン** にします。</span><span class="sxs-lookup"><span data-stu-id="b0a54-166">Under the **Source Order Viewer** section, choose the **Show Source Order** checkbox.</span></span>  
 1.  <span data-ttu-id="b0a54-167">任意の HTML 要素を強調表示して、Web ページ ソース内の順序をオーバーレイで表示します。</span><span class="sxs-lookup"><span data-stu-id="b0a54-167">Highlight any HTML element to display an overlay that the order in the webpage source.</span></span>  
     
@@ -154,7 +154,7 @@ ms.locfileid: "11439585"
 1.  <span data-ttu-id="b0a54-192">[スタイル] **ウィンドウを開** きます。</span><span class="sxs-lookup"><span data-stu-id="b0a54-192">Open the **Styles** pane.</span></span>  
 1.  <span data-ttu-id="b0a54-193">[フォント エディター **] アイコンを** 選択します。</span><span class="sxs-lookup"><span data-stu-id="b0a54-193">Choose the **Font Editor** icon.</span></span>  
     
-<span data-ttu-id="b0a54-194">新しいビジュアル フォント エディターの詳細については[、DevTools][DevtoolsInspectStylesEditFonts]の [スタイル] ウィンドウの [CSS フォントスタイルと設定の編集] に移動します。 \*\*\*\*</span><span class="sxs-lookup"><span data-stu-id="b0a54-194">For more information about the new visual **Font Editor**, navigate to [Edit CSS font styles and settings in the Styles pane in DevTools][DevtoolsInspectStylesEditFonts].</span></span>  
+<span data-ttu-id="b0a54-194">新しいビジュアル フォント エディターの詳細については[、DevTools][DevtoolsInspectStylesEditFonts]の [スタイル] ウィンドウの [CSS フォントスタイルと設定の編集] に移動します。 </span><span class="sxs-lookup"><span data-stu-id="b0a54-194">For more information about the new visual **Font Editor**, navigate to [Edit CSS font styles and settings in the Styles pane in DevTools][DevtoolsInspectStylesEditFonts].</span></span>  
 
 :::image type="complex" source="../media/font-editor-open.msft.png" alt-text="ビジュアル の [フォント エディター] ウィンドウが強調表示されます" lightbox="../media/font-editor-open.msft.png":::
    <span data-ttu-id="b0a54-196">ビジュアル の [ **フォント エディター]** ウィンドウが強調表示されます</span><span class="sxs-lookup"><span data-stu-id="b0a54-196">The visual **Font Editor** pane is highlighted</span></span>  
@@ -220,9 +220,9 @@ ms.locfileid: "11439585"
 *   <span data-ttu-id="b0a54-230">リリース ノート</span><span class="sxs-lookup"><span data-stu-id="b0a54-230">release notes</span></span>  
 *   <span data-ttu-id="b0a54-231">Microsoft Edge DevTools チームに連絡するオプション</span><span class="sxs-lookup"><span data-stu-id="b0a54-231">Option to contact the Microsoft Edge DevTools team</span></span>  
     
-<span data-ttu-id="b0a54-232">ウェルカム **ツールは** 、Microsoft Edge への更新の後に自動的に開きます。</span><span class="sxs-lookup"><span data-stu-id="b0a54-232">The **Welcome** tool opens automatically after each update to Microsoft Edge.</span></span>  <span data-ttu-id="b0a54-233">更新後にウェルカム ツール\*\*\*\* が表示されるのを防ぐには、[ようこそ]\*\*\*\* ツールのタイトルの下にある更新の後、[開く] タブの横にあるチェック ボックス**を**オフにします。</span><span class="sxs-lookup"><span data-stu-id="b0a54-233">To prevent the display of the **Welcome** tool after each update, clear the checkbox next to **Open tab after each update** under the **Welcome** tool title.</span></span>  
+<span data-ttu-id="b0a54-232">ウェルカム **ツールは** 、Microsoft Edge への更新の後に自動的に開きます。</span><span class="sxs-lookup"><span data-stu-id="b0a54-232">The **Welcome** tool opens automatically after each update to Microsoft Edge.</span></span>  <span data-ttu-id="b0a54-233">更新後にウェルカム ツール が表示されるのを防ぐには、[ようこそ] ツールのタイトルの下にある更新の後、[開く] タブの横にあるチェック ボックス**を**オフにします。</span><span class="sxs-lookup"><span data-stu-id="b0a54-233">To prevent the display of the **Welcome** tool after each update, clear the checkbox next to **Open tab after each update** under the **Welcome** tool title.</span></span>  
 
-<span data-ttu-id="b0a54-234">元の [What's **New]** ツールを[][DevtoolsCustomizeIndexSettings]使用する場合は、[設定の実験] に移動し、の横にある  >  \*\*\*\* チェック ボックスをオフにします **Enable Welcome tab** 。</span><span class="sxs-lookup"><span data-stu-id="b0a54-234">If you prefer the original **What's New** tool, navigate to [Settings][DevtoolsCustomizeIndexSettings] > **Experiments** and remove the checkbox next to **Enable Welcome tab**.</span></span>  
+<span data-ttu-id="b0a54-234">元の [What's **New]** ツールを[][DevtoolsCustomizeIndexSettings]使用する場合は、[設定の実験] に移動し、の横にある  >   チェック ボックスをオフにします **Enable Welcome tab** 。</span><span class="sxs-lookup"><span data-stu-id="b0a54-234">If you prefer the original **What's New** tool, navigate to [Settings][DevtoolsCustomizeIndexSettings] > **Experiments** and remove the checkbox next to **Enable Welcome tab**.</span></span>  
 
 :::image type="complex" source="../media/experiments-welcome.msft.png" alt-text="ウェルカム ツール" lightbox="../media/experiments-welcome.msft.png":::
    <span data-ttu-id="b0a54-236">**ウェルカム** ツール</span><span class="sxs-lookup"><span data-stu-id="b0a54-236">**Welcome** tool</span></span>  

@@ -34,7 +34,7 @@ ms.locfileid: "11327527"
 <span data-ttu-id="d2d61-117">ウィンドウやタブなど、ブラウザーの一部を直接操作するには、API リクエストを送信し、多くの場合、名前でブラウザーを参照する必要があります。</span><span class="sxs-lookup"><span data-stu-id="d2d61-117">To work directly with part of the browser, such as a window or tab, you must send API requests and often reference the browser by name.</span></span>  
 
 :::image type="complex" source="./media/example-extension-screenshot.png" alt-text="Microsoft Edge (Chromium) 拡張機能" lightbox="./media/example-extension-screenshot.png":::
-  <span data-ttu-id="d2d61-119">Microsoft Edge \ (Chromium \) 拡張機能</span><span class="sxs-lookup"><span data-stu-id="d2d61-119">A Microsoft Edge \(Chromium\) extension</span></span>  
+  <span data-ttu-id="d2d61-119">Microsoft Edge \(Chromium \) 拡張機能</span><span class="sxs-lookup"><span data-stu-id="d2d61-119">A Microsoft Edge \(Chromium\) extension</span></span>  
 :::image-end:::  
 
 ## <span data-ttu-id="d2d61-120">基本的なガイダンス</span><span class="sxs-lookup"><span data-stu-id="d2d61-120">Basic guidance</span></span>  

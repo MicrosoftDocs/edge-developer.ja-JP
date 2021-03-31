@@ -81,7 +81,7 @@ ms.locfileid: "11306167"
 1.  <span data-ttu-id="c7a37-139">**ツールボックス**で**WebView2**を検索します。</span><span class="sxs-lookup"><span data-stu-id="c7a37-139">Search for **WebView2** in the **Toolbox**.</span></span>  
     
     > [!NOTE]
-    > <span data-ttu-id="c7a37-140">Visual Studio 2017 を使用している場合、既定では **、WebView2** がツールボックスに表示 **されない可能性があります**。</span><span class="sxs-lookup"><span data-stu-id="c7a37-140">If you are using Visual Studio 2017, by default **WebView2** may not display in the **Toolbox**.</span></span>  <span data-ttu-id="c7a37-141">この動作を有効にするには、[\*\*\*\* ツール オプション全般] を選択し>自動的にツールボックスにデータを設定します  >  \*\*\*\*  >  \*\*\*\*\*\*\*\* `True` 。</span><span class="sxs-lookup"><span data-stu-id="c7a37-141">To enable the behavior, choose **Tools** > **Options** > **General** > set the **Automatically Populate Toolbox** setting to `True`.</span></span>  
+    > <span data-ttu-id="c7a37-140">Visual Studio 2017 を使用している場合、既定では **、WebView2** がツールボックスに表示 **されない可能性があります**。</span><span class="sxs-lookup"><span data-stu-id="c7a37-140">If you are using Visual Studio 2017, by default **WebView2** may not display in the **Toolbox**.</span></span>  <span data-ttu-id="c7a37-141">この動作を有効にするには、[ ツール オプション全般] を選択し>自動的にツールボックスにデータを設定します  >    >   `True` 。</span><span class="sxs-lookup"><span data-stu-id="c7a37-141">To enable the behavior, choose **Tools** > **Options** > **General** > set the **Automatically Populate Toolbox** setting to `True`.</span></span>  
     
     <span data-ttu-id="c7a37-142">**WebView2**コントロールを Windows フォーム アプリにドラッグしてドロップします。</span><span class="sxs-lookup"><span data-stu-id="c7a37-142">Drag and drop the **WebView2** control into the Windows Forms App.</span></span>
     

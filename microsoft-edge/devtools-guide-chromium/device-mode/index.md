@@ -47,7 +47,7 @@ ms.locfileid: "11439452"
 
 ## <a name="simulate-a-mobile-viewport"></a><span data-ttu-id="0807e-124">モバイル ビューポートをシミュレートする</span><span class="sxs-lookup"><span data-stu-id="0807e-124">Simulate a mobile viewport</span></span>  
 
-<span data-ttu-id="0807e-125">[**デバイス エミュレーションの**切り替え\( Toggle Device Toolbar \) を選択するか ![ ](../media/toggle-device-toolbar-dark-icon.msft.png) **、[DevTools** `...` \( \*\*\*\* \) > デバイス エミュレーションのカスタマイズと制御] を選択して、モバイル ビューポートをシミュレートできる UI を開きます。</span><span class="sxs-lookup"><span data-stu-id="0807e-125">Choose **Toggle device emulation**  \(![Toggle Device Toolbar](../media/toggle-device-toolbar-dark-icon.msft.png)\) or choose **Customize and control DevTools** \(`...`\) > **Device emulation** to open the UI that enables you to simulate a mobile viewport.</span></span>  
+<span data-ttu-id="0807e-125">[**デバイス エミュレーションの**切り替え\( Toggle Device Toolbar \) を選択するか ![ ](../media/toggle-device-toolbar-dark-icon.msft.png) **、[DevTools** `...` \(  \) > デバイス エミュレーションのカスタマイズと制御] を選択して、モバイル ビューポートをシミュレートできる UI を開きます。</span><span class="sxs-lookup"><span data-stu-id="0807e-125">Choose **Toggle device emulation**  \(![Toggle Device Toolbar](../media/toggle-device-toolbar-dark-icon.msft.png)\) or choose **Customize and control DevTools** \(`...`\) > **Device emulation** to open the UI that enables you to simulate a mobile viewport.</span></span>  
 
 :::image type="complex" source="../media/device-mode-toggle-device-toolbar-highlighted.msft.png" alt-text="[デバイス] ツールバー" lightbox="../media/device-mode-toggle-device-toolbar-highlighted.msft.png":::
     <span data-ttu-id="0807e-127">[デバイス] ツールバー</span><span class="sxs-lookup"><span data-stu-id="0807e-127">The Device Toolbar</span></span>  
@@ -183,7 +183,7 @@ ms.locfileid: "11439452"
 
 ### <a name="zoom-the-viewport"></a><span data-ttu-id="0807e-213">ビューポートをズームする</span><span class="sxs-lookup"><span data-stu-id="0807e-213">Zoom the viewport</span></span>  
 
-<span data-ttu-id="0807e-214">複数のズーム レベルでページの外観をテストするには、ズーム リスト\*\*\*\* を使用して拡大または縮小します。</span><span class="sxs-lookup"><span data-stu-id="0807e-214">To test the look and feel of your page at multiple zoom levels, use the **Zoom** list to zoom in or out.</span></span>  
+<span data-ttu-id="0807e-214">複数のズーム レベルでページの外観をテストするには、ズーム リスト を使用して拡大または縮小します。</span><span class="sxs-lookup"><span data-stu-id="0807e-214">To test the look and feel of your page at multiple zoom levels, use the **Zoom** list to zoom in or out.</span></span>  
 
 :::image type="complex" source="../media/device-mode-toggle-device-toolbar-zoom.msft.png" alt-text="Zoom" lightbox="../media/device-mode-toggle-device-toolbar-zoom.msft.png":::
    **<span data-ttu-id="0807e-216">Zoom</span><span class="sxs-lookup"><span data-stu-id="0807e-216">Zoom</span></span>**  
@@ -234,7 +234,7 @@ ms.locfileid: "11439452"
        <span data-ttu-id="0807e-244">[ **ネットワーク]** パネルの [スロットル] リスト</span><span class="sxs-lookup"><span data-stu-id="0807e-244">The **Throttle** list in the Network panel</span></span>  
     :::image-end:::  
     
-    <span data-ttu-id="0807e-245">または `Control` + `Shift` + `P` 、[\(Windows, `Command` + `Shift` + `P` Linux\) または \(macOS\)\*\*\*\* `3G` \*\*\*\*\*\*\*\* を選択してコマンド メニューを開き、入力し、[高速 3G 調整を有効にする] または [低速 3G 調整を有効にする] を選択します。</span><span class="sxs-lookup"><span data-stu-id="0807e-245">Or select `Control`+`Shift`+`P` \(Windows, Linux\) or `Command`+`Shift`+`P` \(macOS\) to open the **Command Menu**, type `3G`, and choose **Enable fast 3G throttling** or **Enable slow 3G throttling**.</span></span>  
+    <span data-ttu-id="0807e-245">または `Control` + `Shift` + `P` 、[\(Windows, `Command` + `Shift` + `P` Linux\) または \(macOS\) `3G`  を選択してコマンド メニューを開き、入力し、[高速 3G 調整を有効にする] または [低速 3G 調整を有効にする] を選択します。</span><span class="sxs-lookup"><span data-stu-id="0807e-245">Or select `Control`+`Shift`+`P` \(Windows, Linux\) or `Command`+`Shift`+`P` \(macOS\) to open the **Command Menu**, type `3G`, and choose **Enable fast 3G throttling** or **Enable slow 3G throttling**.</span></span>  
     
     :::image type="complex" source="../media/device-mode-command-menu-throttle.msft.png" alt-text="コマンド メニュー" lightbox="../media/device-mode-command-menu-throttle.msft.png":::
        <span data-ttu-id="0807e-247">**コマンド メニュー**</span><span class="sxs-lookup"><span data-stu-id="0807e-247">The **Command Menu**</span></span>  
@@ -242,7 +242,7 @@ ms.locfileid: "11439452"
     
 <span data-ttu-id="0807e-248">[パフォーマンス] パネルからネットワーク調整を **設定** することもできます。</span><span class="sxs-lookup"><span data-stu-id="0807e-248">You may also set network throttling from the **Performance** panel.</span></span>  
 
-1.  <span data-ttu-id="0807e-249">[**キャプチャ設定**\( Capture Settings \) を選択し、[ネットワーク] リストを選択し、プリセットを ![ ](../media/capture-settings-icon.msft.png) **[Fast 3G]** または **[低速 3G] に変更します**。 \*\*\*\*</span><span class="sxs-lookup"><span data-stu-id="0807e-249">Choose **Capture Settings** \(![Capture Settings](../media/capture-settings-icon.msft.png)\) and choose the **Network** list and change the preset to **Fast 3G** or **Slow 3G**.</span></span>  
+1.  <span data-ttu-id="0807e-249">[**キャプチャ設定**\( Capture Settings \) を選択し、[ネットワーク] リストを選択し、プリセットを ![ ](../media/capture-settings-icon.msft.png) **[Fast 3G]** または **[低速 3G] に変更します**。 </span><span class="sxs-lookup"><span data-stu-id="0807e-249">Choose **Capture Settings** \(![Capture Settings](../media/capture-settings-icon.msft.png)\) and choose the **Network** list and change the preset to **Fast 3G** or **Slow 3G**.</span></span>  
     
     :::image type="complex" source="../media/device-mode-performance-network-throttle.msft.png" alt-text="[パフォーマンス] パネルからネットワーク調整を設定する" lightbox="../media/device-mode-performance-network-throttle.msft.png":::
        <span data-ttu-id="0807e-251">[パフォーマンス] パネルからネットワーク調整 **を設定** する</span><span class="sxs-lookup"><span data-stu-id="0807e-251">Set network throttling from the **Performance** panel</span></span>  
@@ -310,7 +310,7 @@ ms.locfileid: "11439452"
 
 :::row:::
    :::column span="":::
-      <span data-ttu-id="0807e-283">ページがモバイル デバイスのユーザー エージェント文字列に依存して適切にレンダリングされる場合は\*\*\*\*、[ネットワーク条件] パネルを使用して、異なるユーザー エージェント文字列を指定します。</span><span class="sxs-lookup"><span data-stu-id="0807e-283">If your page depends on the user agent string from a mobile device to render properly, use the **Network conditions** panel to provide different user agent strings.</span></span>  
+      <span data-ttu-id="0807e-283">ページがモバイル デバイスのユーザー エージェント文字列に依存して適切にレンダリングされる場合は、[ネットワーク条件] パネルを使用して、異なるユーザー エージェント文字列を指定します。</span><span class="sxs-lookup"><span data-stu-id="0807e-283">If your page depends on the user agent string from a mobile device to render properly, use the **Network conditions** panel to provide different user agent strings.</span></span>  
       
       1.  <span data-ttu-id="0807e-284">**[DevTools \(** \) をカスタマイズして制御 `...` する] を選択>**その他のツール**  >  **ネットワーク条件を選択します**。</span><span class="sxs-lookup"><span data-stu-id="0807e-284">Choose **Customize and control DevTools** \(`...`\) > **More tools** > **Network conditions**.</span></span>  
       

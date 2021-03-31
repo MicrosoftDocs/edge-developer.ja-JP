@@ -123,7 +123,7 @@ ms.locfileid: "11439276"
 
 <span data-ttu-id="41b80-155">新しい **[ネットワーク要求]** リンクを使用して、すべてのサービス ワーカー 要求ルーティング情報を表示 します。</span><span class="sxs-lookup"><span data-stu-id="41b80-155">View all service worker request routing information with the new **Network requests** link.</span></span>  <span data-ttu-id="41b80-156">サービス ワーカーをデバッグするときに追加のコンテキストを表示するには、次のアクションを実行します。</span><span class="sxs-lookup"><span data-stu-id="41b80-156">To display additional context when debugging the service worker, complete the following actions.</span></span>  
 
-1.  <span data-ttu-id="41b80-157">\*\*アプリケーション \*\* > **サービス ワーカー**に移動します。</span><span class="sxs-lookup"><span data-stu-id="41b80-157">Navigate to **Application** > **Service Workers**.</span></span>  
+1.  <span data-ttu-id="41b80-157">アプリケーション  > **サービス ワーカー**に移動します。</span><span class="sxs-lookup"><span data-stu-id="41b80-157">Navigate to **Application** > **Service Workers**.</span></span>  
 1.  <span data-ttu-id="41b80-158">**[ネットワーク 要求]**.を選びます。</span><span class="sxs-lookup"><span data-stu-id="41b80-158">Choose **Network requests**.</span></span>  
     
     :::image type="complex" source="../../media/2020/11/service-worker-application-network-requests.msft.png" alt-text="[サービス ワーカー] ウィンドウから、ネットワーク ツールを開く" lightbox="../../media/2020/11/service-worker-application-network-requests.msft.png":::

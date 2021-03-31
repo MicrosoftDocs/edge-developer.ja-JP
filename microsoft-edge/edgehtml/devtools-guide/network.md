@@ -80,7 +80,7 @@ ms.locfileid: "11234820"
 
 ### <span data-ttu-id="87f81-160">概要バー</span><span class="sxs-lookup"><span data-stu-id="87f81-160">Summary bar</span></span>
 
-<span data-ttu-id="87f81-161">ネットワーク パネルの下部にある\*\*\*\* バーには、ネットワーク プロファイリング セッション中の HTTP ネットワーク エラー、要求、データ転送、および読み込み時間の合計が要約されます (DevTools が開いてネットワーク トラフィックを記録した後)。</span><span class="sxs-lookup"><span data-stu-id="87f81-161">The bar at the bottom of **Network** panel summarizes the total number of HTTP network errors, requests, data transfered, and load times during the network profiling session (i.e., since  DevTools were opened and recording network traffic).</span></span>
+<span data-ttu-id="87f81-161">ネットワーク パネルの下部にある バーには、ネットワーク プロファイリング セッション中の HTTP ネットワーク エラー、要求、データ転送、および読み込み時間の合計が要約されます (DevTools が開いてネットワーク トラフィックを記録した後)。</span><span class="sxs-lookup"><span data-stu-id="87f81-161">The bar at the bottom of **Network** panel summarizes the total number of HTTP network errors, requests, data transfered, and load times during the network profiling session (i.e., since  DevTools were opened and recording network traffic).</span></span>
 
 ![ネットワークの概要バー](./media/network_summary_bar.png)
 
@@ -92,7 +92,7 @@ ms.locfileid: "11234820"
 
 ## <span data-ttu-id="87f81-167">要求の詳細</span><span class="sxs-lookup"><span data-stu-id="87f81-167">Request details</span></span>
 
-<span data-ttu-id="87f81-168">[ネットワークの概要] ボックス[\*\*\*\*](#network-summary)の一覧のエントリをクリック[\*\*\*\*](#request-details)すると、[要求の詳細] ウィンドウが開き、次の各タブに詳細情報が表示されます。</span><span class="sxs-lookup"><span data-stu-id="87f81-168">Clicking on any entry in the [**Network summary**](#network-summary) list will open the [**Request details**](#request-details) pane with further information in each of the following tabs.</span></span>
+<span data-ttu-id="87f81-168">[ネットワークの概要] ボックス[](#network-summary)の一覧のエントリをクリック[](#request-details)すると、[要求の詳細] ウィンドウが開き、次の各タブに詳細情報が表示されます。</span><span class="sxs-lookup"><span data-stu-id="87f81-168">Clicking on any entry in the [**Network summary**](#network-summary) list will open the [**Request details**](#request-details) pane with further information in each of the following tabs.</span></span>
 
 ![ネットワーク要求の詳細ウィンドウ](./media/network_request_details.png)
 
@@ -104,7 +104,7 @@ ms.locfileid: "11234820"
 
 <span data-ttu-id="87f81-176">画像コンテンツは、サイズとサイズのデータと一緒に表示されます。</span><span class="sxs-lookup"><span data-stu-id="87f81-176">Image content is displayed with dimensions and size data.</span></span>
 
-<span data-ttu-id="87f81-177">テキスト コンテンツは (読み取り専用) エディターに表示され、読み\*\*\*\* やすくするために、プレビュー印刷や**Word**の折り返しを使用して、最小化されたコンテンツを書式設定するためのオプションが表示されます。</span><span class="sxs-lookup"><span data-stu-id="87f81-177">Text content appears in a (read-only) editor with options to format minified content with **Pretty print** and/or **Word wrap** for easier readability.</span></span>
+<span data-ttu-id="87f81-177">テキスト コンテンツは (読み取り専用) エディターに表示され、読み やすくするために、プレビュー印刷や**Word**の折り返しを使用して、最小化されたコンテンツを書式設定するためのオプションが表示されます。</span><span class="sxs-lookup"><span data-stu-id="87f81-177">Text content appears in a (read-only) editor with options to format minified content with **Pretty print** and/or **Word wrap** for easier readability.</span></span>
 
 ![[要求の詳細] ウィンドウの [本文] タブ](./media/network_details_body.png)
 
@@ -190,7 +190,7 @@ ms.locfileid: "11234820"
 
 5. <span data-ttu-id="87f81-230">Microsoft Edge 開発者ツールとタブを閉じます。新しいタブを開き、ページに移動して、押します `F12` 。</span><span class="sxs-lookup"><span data-stu-id="87f81-230">Close the Microsoft Edge Developer Tools and the tab. Open a new tab, navigate to your page, and press `F12`.</span></span>
 
-6. <span data-ttu-id="87f81-231">ネットワークと Web ページのネットワーク要求\*\*\*\* の横に再生バッジが表示されます。</span><span class="sxs-lookup"><span data-stu-id="87f81-231">You should now see a Play badge next to **Network** and the network requests for your webpage.</span></span>
+6. <span data-ttu-id="87f81-231">ネットワークと Web ページのネットワーク要求 の横に再生バッジが表示されます。</span><span class="sxs-lookup"><span data-stu-id="87f81-231">You should now see a Play badge next to **Network** and the network requests for your webpage.</span></span>
 ![既知の問題- 4](./media/known_issues_4-network.PNG)
 
 <span data-ttu-id="87f81-233">それでも問題が発生しますか?</span><span class="sxs-lookup"><span data-stu-id="87f81-233">Still running into problems?</span></span> <span data-ttu-id="87f81-234">フィードバックの送信アイコンを使用して、フィードバック **をお送り** ください。</span><span class="sxs-lookup"><span data-stu-id="87f81-234">Please send us your feedback using the **Send feedback** icon!</span></span> 
@@ -214,7 +214,7 @@ ms.locfileid: "11234820"
 
 5. <span data-ttu-id="87f81-245">Microsoft Edge 開発者ツールとタブを閉じます。新しいタブを開き、ページに移動して、押します `F12` 。</span><span class="sxs-lookup"><span data-stu-id="87f81-245">Close the Microsoft Edge Developer Tools and the tab. Open a new tab, navigate to your page, and press `F12`.</span></span>
 
-6. <span data-ttu-id="87f81-246">ネットワークと Web ページのネットワーク要求\*\*\*\* の横に再生バッジが表示されます。</span><span class="sxs-lookup"><span data-stu-id="87f81-246">You should now see a Play badge next to **Network** and the network requests for your webpage.</span></span>
+6. <span data-ttu-id="87f81-246">ネットワークと Web ページのネットワーク要求 の横に再生バッジが表示されます。</span><span class="sxs-lookup"><span data-stu-id="87f81-246">You should now see a Play badge next to **Network** and the network requests for your webpage.</span></span>
 ![既知の問題- 4](./media/known_issues_4-network.PNG)
 
 <span data-ttu-id="87f81-248">それでも問題が発生しますか?</span><span class="sxs-lookup"><span data-stu-id="87f81-248">Still running into problems?</span></span> <span data-ttu-id="87f81-249">フィードバックの送信アイコンを使用して、フィードバック **をお送り** ください。</span><span class="sxs-lookup"><span data-stu-id="87f81-249">Please send us your feedback using the **Send feedback** icon!</span></span> 

@@ -57,7 +57,7 @@ ms.locfileid: "11461137"
    :::column-end:::
 :::row-end:::
 
-<span data-ttu-id="1d60c-136">**[常**に閲覧データと基本設定を Internet Explorer から引き継ぐ] チェック ボックスをオンにしてユーザーが同意しない場合、\*\*\*\* ユーザーは [閲覧の続行] を選択して閲覧セッションを続行できます   。</span><span class="sxs-lookup"><span data-stu-id="1d60c-136">If the user does not consent by choosing the **Always bring over my browsing data and preferences from Internet Explorer** checkbox, the user may choose **Continue browsing** to continue the browsing session.</span></span>  
+<span data-ttu-id="1d60c-136">**[常**に閲覧データと基本設定を Internet Explorer から引き継ぐ] チェック ボックスをオンにしてユーザーが同意しない場合、 ユーザーは [閲覧の続行] を選択して閲覧セッションを続行できます   。</span><span class="sxs-lookup"><span data-stu-id="1d60c-136">If the user does not consent by choosing the **Always bring over my browsing data and preferences from Internet Explorer** checkbox, the user may choose **Continue browsing** to continue the browsing session.</span></span>  
 
 <span data-ttu-id="1d60c-137">最後に、リダイレクトごとにアドレス バーの下に Web サイトの非互換性バナーが表示されます。</span><span class="sxs-lookup"><span data-stu-id="1d60c-137">Finally, a website incompatibility banner is displayed under the address bar for each redirection.</span></span>  <span data-ttu-id="1d60c-138">次の図に、Web サイトの非互換性バナーの例を示します。</span><span class="sxs-lookup"><span data-stu-id="1d60c-138">An example of a website incompatibility banner is displayed in following figure.</span></span>
 

@@ -105,7 +105,7 @@ console.dirxml(document.querySelector('#main'));
 console.select(document.querySelector("body"));
 ```
 
-<span data-ttu-id="e6fe7-163">DevTools は、要素パネル\*\*\*\*(現在のパネルではない場合) に切り替わり[*、HTML*](../elements.md#html-tree-view)ツリー ビューで指定された要素にフォーカスを設定します。</span><span class="sxs-lookup"><span data-stu-id="e6fe7-163">The DevTools will switch to the **Elements** panel (if its not already the current) and set focus in the [*HTML tree view*](../elements.md#html-tree-view) to the specified element.</span></span>
+<span data-ttu-id="e6fe7-163">DevTools は、要素パネル(現在のパネルではない場合) に切り替わり[*、HTML*](../elements.md#html-tree-view)ツリー ビューで指定された要素にフォーカスを設定します。</span><span class="sxs-lookup"><span data-stu-id="e6fe7-163">The DevTools will switch to the **Elements** panel (if its not already the current) and set focus in the [*HTML tree view*](../elements.md#html-tree-view) to the specified element.</span></span>
 
 !['select' メソッドの例](../media/console_api_select.png)
 

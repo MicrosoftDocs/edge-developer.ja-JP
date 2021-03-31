@@ -30,7 +30,7 @@ ms.locfileid: "11439529"
 
 # <a name="debug-background-services-with-microsoft-edge-devtools"></a><span data-ttu-id="96d2a-104">Microsoft Edge DevTools を使用したバックグラウンド サービスのデバッグ</span><span class="sxs-lookup"><span data-stu-id="96d2a-104">Debug Background Services with Microsoft Edge DevTools</span></span>  
 
-<span data-ttu-id="96d2a-105">Microsoft \*\*\*\* Edge DevTools の Background Services セクションは、ユーザーが Web サイトを開いていない場合でも、Web サイトが更新プログラムを送受信できる JavaScript API 用のツールのコレクションです。</span><span class="sxs-lookup"><span data-stu-id="96d2a-105">The **Background Services** section of Microsoft Edge DevTools is a collection of tools for the JavaScript APIs that enables your website to send and receive updates even when a user does not have your website open.</span></span>  
+<span data-ttu-id="96d2a-105">Microsoft  Edge DevTools の Background Services セクションは、ユーザーが Web サイトを開いていない場合でも、Web サイトが更新プログラムを送受信できる JavaScript API 用のツールのコレクションです。</span><span class="sxs-lookup"><span data-stu-id="96d2a-105">The **Background Services** section of Microsoft Edge DevTools is a collection of tools for the JavaScript APIs that enables your website to send and receive updates even when a user does not have your website open.</span></span>  
 <span data-ttu-id="96d2a-106">バックグラウンド サービスは[バックグラウンド プロセス][WikiBackgroundProcess]と機能的に似ています。</span><span class="sxs-lookup"><span data-stu-id="96d2a-106">A background service is functionally similar to a [background process][WikiBackgroundProcess].</span></span>  
 <span data-ttu-id="96d2a-107">Microsoft Edge DevTools では、次の各 API がバックグラウンド サービスと見なされます。</span><span class="sxs-lookup"><span data-stu-id="96d2a-107">Microsoft Edge DevTools considers each of the following APIs to be a background service:</span></span>  
 
@@ -48,7 +48,7 @@ ms.locfileid: "11439529"
 
 ## <a name="background-fetch"></a><span data-ttu-id="96d2a-117">バックグラウンド フェッチ</span><span class="sxs-lookup"><span data-stu-id="96d2a-117">Background Fetch</span></span>  
 
-<span data-ttu-id="96d2a-118">バックグラウンド フェッチ API\*\*\*\*\*\*を使用\*\*すると、サービス ワーカーはバックグラウンド サービスとして、映画やポッドキャストなどの大きなリソースを確実にダウンロードできます。</span><span class="sxs-lookup"><span data-stu-id="96d2a-118">The **Background Fetch API** enables a **service worker** to reliably download large resources, like movies or podcasts, as a background service.</span></span>  <span data-ttu-id="96d2a-119">DevTools が開いていない場合でも、バックグラウンド フェッチ イベントを 3 日間記録するには、次の操作を行います。</span><span class="sxs-lookup"><span data-stu-id="96d2a-119">To log Background Fetch event for 3 days, even when DevTools is not open:</span></span>  
+<span data-ttu-id="96d2a-118">バックグラウンド フェッチ APIを使用すると、サービス ワーカーはバックグラウンド サービスとして、映画やポッドキャストなどの大きなリソースを確実にダウンロードできます。</span><span class="sxs-lookup"><span data-stu-id="96d2a-118">The **Background Fetch API** enables a **service worker** to reliably download large resources, like movies or podcasts, as a background service.</span></span>  <span data-ttu-id="96d2a-119">DevTools が開いていない場合でも、バックグラウンド フェッチ イベントを 3 日間記録するには、次の操作を行います。</span><span class="sxs-lookup"><span data-stu-id="96d2a-119">To log Background Fetch event for 3 days, even when DevTools is not open:</span></span>  
 
 <!--Todo: add background fetch api section when available -->  
 
@@ -75,7 +75,7 @@ ms.locfileid: "11439529"
     
 ## <a name="background-sync"></a><span data-ttu-id="96d2a-132">バックグラウンド同期</span><span class="sxs-lookup"><span data-stu-id="96d2a-132">Background Sync</span></span>  
 
-<span data-ttu-id="96d2a-133">バックグラウンド**同期 API を使用**すると、信頼性の高いインターネット接続が再確立されると、オフライン サービス ワーカーはサーバーにデータを送信できます。 \*\*\*\*</span><span class="sxs-lookup"><span data-stu-id="96d2a-133">The **Background Sync API** enables an offline **service worker** to send data to a server once it has re-established a reliable internet connection.</span></span>  <span data-ttu-id="96d2a-134">DevTools が開いていない場合でも、バックグラウンド同期イベントを 3 日間記録するには、次のコマンドを実行します。</span><span class="sxs-lookup"><span data-stu-id="96d2a-134">To log Background Sync events for 3 days, even when DevTools is not open:</span></span>  
+<span data-ttu-id="96d2a-133">バックグラウンド**同期 API を使用**すると、信頼性の高いインターネット接続が再確立されると、オフライン サービス ワーカーはサーバーにデータを送信できます。 </span><span class="sxs-lookup"><span data-stu-id="96d2a-133">The **Background Sync API** enables an offline **service worker** to send data to a server once it has re-established a reliable internet connection.</span></span>  <span data-ttu-id="96d2a-134">DevTools が開いていない場合でも、バックグラウンド同期イベントを 3 日間記録するには、次のコマンドを実行します。</span><span class="sxs-lookup"><span data-stu-id="96d2a-134">To log Background Sync events for 3 days, even when DevTools is not open:</span></span>  
 
 <!--Todo: add background sync api section when available -->  
 
@@ -127,7 +127,7 @@ ms.locfileid: "11439529"
     
 ## <a name="push-messages"></a><span data-ttu-id="96d2a-162">プッシュ メッセージ</span><span class="sxs-lookup"><span data-stu-id="96d2a-162">Push Messages</span></span>  
 
-<span data-ttu-id="96d2a-163">ユーザーにプッシュ通知を表示するには、サービス\*\*\*\* ワーカーが最初にプッシュ メッセージ[API][MDNPush]を使用してサーバーからデータを受信する必要があります。</span><span class="sxs-lookup"><span data-stu-id="96d2a-163">To display a push notification to a user, a **service worker** must first use the [Push Message API][MDNPush] to receive data from a server.</span></span>  <span data-ttu-id="96d2a-164">サービス ワーカーが通知を表示する準備ができたら、通知 API を [使用します][MDNNotifications]。</span><span class="sxs-lookup"><span data-stu-id="96d2a-164">When the service worker is ready to display the notification, it uses the [Notifications API][MDNNotifications].</span></span>  <span data-ttu-id="96d2a-165">DevTools が開かなくても、プッシュ メッセージを 3 日間記録するには、次のコマンドを実行します。</span><span class="sxs-lookup"><span data-stu-id="96d2a-165">To log Push Messages for 3 days, even when DevTools is not open:</span></span>  
+<span data-ttu-id="96d2a-163">ユーザーにプッシュ通知を表示するには、サービス ワーカーが最初にプッシュ メッセージ[API][MDNPush]を使用してサーバーからデータを受信する必要があります。</span><span class="sxs-lookup"><span data-stu-id="96d2a-163">To display a push notification to a user, a **service worker** must first use the [Push Message API][MDNPush] to receive data from a server.</span></span>  <span data-ttu-id="96d2a-164">サービス ワーカーが通知を表示する準備ができたら、通知 API を [使用します][MDNNotifications]。</span><span class="sxs-lookup"><span data-stu-id="96d2a-164">When the service worker is ready to display the notification, it uses the [Notifications API][MDNNotifications].</span></span>  <span data-ttu-id="96d2a-165">DevTools が開かなくても、プッシュ メッセージを 3 日間記録するには、次のコマンドを実行します。</span><span class="sxs-lookup"><span data-stu-id="96d2a-165">To log Push Messages for 3 days, even when DevTools is not open:</span></span>  
 
 1.  <span data-ttu-id="96d2a-166">[DevTools を開きます][OpenDevTools]。</span><span class="sxs-lookup"><span data-stu-id="96d2a-166">[Open DevTools][OpenDevTools].</span></span>  
 1.  <span data-ttu-id="96d2a-167">アプリケーション ツール **を開** きます。</span><span class="sxs-lookup"><span data-stu-id="96d2a-167">Open the **Application** tool.</span></span>  

@@ -70,7 +70,7 @@ ms.locfileid: "11439662"
 ## <a name="edit-sessionstorage-keys-or-values"></a><span data-ttu-id="fe509-126">sessionStorage キーまたは値の編集</span><span class="sxs-lookup"><span data-stu-id="fe509-126">Edit sessionStorage keys or values</span></span>  
 
 1.  <span data-ttu-id="fe509-127">[ドメインの sessionStorage キーと値のペアを表示します](#view-sessionstorage-keys-and-values)。</span><span class="sxs-lookup"><span data-stu-id="fe509-127">[View the sessionStorage key-value pairs of a domain](#view-sessionstorage-keys-and-values).</span></span>  
-1.  <span data-ttu-id="fe509-128">[キー] 列または [値] 列の**セル\*\*\*\*をダブルクリック**して、そのキーまたは値を編集します。</span><span class="sxs-lookup"><span data-stu-id="fe509-128">Double-click a cell in the **Key** or **Value** column to edit that key or value.</span></span>  
+1.  <span data-ttu-id="fe509-128">[キー] 列または [値] 列の**セルをダブルクリック**して、そのキーまたは値を編集します。</span><span class="sxs-lookup"><span data-stu-id="fe509-128">Double-click a cell in the **Key** or **Value** column to edit that key or value.</span></span>  
     
     :::image type="complex" source="../media/storage-application-storage-session-storage-domain-key-value-edit.msft.png" alt-text="sessionStorage キーの編集" lightbox="../media/storage-application-storage-session-storage-domain-key-value-edit.msft.png":::
        <span data-ttu-id="fe509-130">キーの `sessionStorage` 編集</span><span class="sxs-lookup"><span data-stu-id="fe509-130">Edit a `sessionStorage` key</span></span>  
@@ -89,15 +89,15 @@ ms.locfileid: "11439662"
     
 ## <a name="interact-with-sessionstorage-from-the-console"></a><span data-ttu-id="fe509-139">コンソールから sessionStorage を操作する</span><span class="sxs-lookup"><span data-stu-id="fe509-139">Interact with sessionStorage from the Console</span></span>  
 
-<span data-ttu-id="fe509-140">コンソールで JavaScript を実行\*\*\*\* できます。また、コンソール\*\*\*\* はページの JavaScript コンテキストにアクセスできますので、コンソールから操作 `sessionStorage` **できます**。</span><span class="sxs-lookup"><span data-stu-id="fe509-140">Since you may run JavaScript in the **Console**, and since the **Console** has access to the JavaScript contexts of the page, it is possible to interact with `sessionStorage` from the **Console**.</span></span>  
+<span data-ttu-id="fe509-140">コンソールで JavaScript を実行 できます。また、コンソール はページの JavaScript コンテキストにアクセスできますので、コンソールから操作 `sessionStorage` **できます**。</span><span class="sxs-lookup"><span data-stu-id="fe509-140">Since you may run JavaScript in the **Console**, and since the **Console** has access to the JavaScript contexts of the page, it is possible to interact with `sessionStorage` from the **Console**.</span></span>  
 
-1.  <span data-ttu-id="fe509-141">現在の**ページ以外**のドメインのキーと値のペアにアクセスする\*\*\*\* 場合は、JavaScript コンテキスト メニューを使用してコンソールの JavaScript コンテキスト `sessionStorage` を変更します。</span><span class="sxs-lookup"><span data-stu-id="fe509-141">Use the **JavaScript contexts** menu to change the JavaScript context of the **Console** if you want to access the `sessionStorage` key-value pairs of a domain other than the page you are on.</span></span>  
+1.  <span data-ttu-id="fe509-141">現在の**ページ以外**のドメインのキーと値のペアにアクセスする 場合は、JavaScript コンテキスト メニューを使用してコンソールの JavaScript コンテキスト `sessionStorage` を変更します。</span><span class="sxs-lookup"><span data-stu-id="fe509-141">Use the **JavaScript contexts** menu to change the JavaScript context of the **Console** if you want to access the `sessionStorage` key-value pairs of a domain other than the page you are on.</span></span>  
     
     :::image type="complex" source="../media/storage-console-domain-selection.msft.png" alt-text="コンソールの JavaScript コンテキストを変更する" lightbox="../media/storage-console-domain-selection.msft.png":::
        <span data-ttu-id="fe509-143">コンソールの JavaScript コンテキストを変更 **する**</span><span class="sxs-lookup"><span data-stu-id="fe509-143">Change the JavaScript context of the **Console**</span></span>  
     :::image-end:::  
     
-1.  <span data-ttu-id="fe509-144">JavaScript `sessionStorage` と同\*\*\*\* じ条件式をコンソールで実行します。</span><span class="sxs-lookup"><span data-stu-id="fe509-144">Run your `sessionStorage` expressions in the **Console**, the same as your JavaScript.</span></span>  
+1.  <span data-ttu-id="fe509-144">JavaScript `sessionStorage` と同 じ条件式をコンソールで実行します。</span><span class="sxs-lookup"><span data-stu-id="fe509-144">Run your `sessionStorage` expressions in the **Console**, the same as your JavaScript.</span></span>  
     
     :::image type="complex" source="../media/storage-console-session-storage-keys.msft.png" alt-text="コンソールから sessionStorage を操作する" lightbox="../media/storage-console-session-storage-keys.msft.png":::
        <span data-ttu-id="fe509-146">コンソールからの `sessionStorage` **操作**</span><span class="sxs-lookup"><span data-stu-id="fe509-146">Interact with `sessionStorage` from the **Console**</span></span>  

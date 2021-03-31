@@ -43,7 +43,7 @@ ms.locfileid: "11399296"
 }
 ```  
 
-<span data-ttu-id="15a86-113">Windows または macOS で選択するか、もう一度緑色の [再生] ボタンを選択すると、Visual Studio コードによって `F5` Microsoft Edge \*\*\*\* \(EdgeHTML\) が起動され、Visual Studio Code からポートで実行している Web `8080` プロジェクトを直接デバッグできます。</span><span class="sxs-lookup"><span data-stu-id="15a86-113">If you select `F5` on Windows or macOS or select the green **Play** button again, Visual Studio Code launches Microsoft Edge \(EdgeHTML\) and you are able to debug any web project you have running on port `8080` directly from Visual Studio Code!</span></span>  
+<span data-ttu-id="15a86-113">Windows または macOS で選択するか、もう一度緑色の [再生] ボタンを選択すると、Visual Studio コードによって `F5` Microsoft Edge  \(EdgeHTML\) が起動され、Visual Studio Code からポートで実行している Web `8080` プロジェクトを直接デバッグできます。</span><span class="sxs-lookup"><span data-stu-id="15a86-113">If you select `F5` on Windows or macOS or select the green **Play** button again, Visual Studio Code launches Microsoft Edge \(EdgeHTML\) and you are able to debug any web project you have running on port `8080` directly from Visual Studio Code!</span></span>  
 
 ### <a name="microsoft-edge-chromium"></a><span data-ttu-id="15a86-114">Microsoft Edge (Chromium)</span><span class="sxs-lookup"><span data-stu-id="15a86-114">Microsoft Edge (Chromium)</span></span>  
 

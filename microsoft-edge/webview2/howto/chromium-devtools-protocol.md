@@ -109,7 +109,7 @@ ms.locfileid: "11461200"
 
 <span data-ttu-id="45175-145">NuGet を使用してダウンロードします `Microsoft.Web.WebView2.DevToolsProtocolExtension` 。</span><span class="sxs-lookup"><span data-stu-id="45175-145">Use NuGet to download `Microsoft.Web.WebView2.DevToolsProtocolExtension`.</span></span>  <span data-ttu-id="45175-146">パッケージをインストールするには、次の操作を実行します。</span><span class="sxs-lookup"><span data-stu-id="45175-146">To install the package, complete the following actions.</span></span>  
 
-1.  <span data-ttu-id="45175-147">[Project \*\*\*\*  >  **Manage NuGet Packages Browse] を**  >  **選択します**。</span><span class="sxs-lookup"><span data-stu-id="45175-147">Choose **Project** > **Manage NuGet Packages** > **Browse**.</span></span>  
+1.  <span data-ttu-id="45175-147">[Project   >  **Manage NuGet Packages Browse] を**  >  **選択します**。</span><span class="sxs-lookup"><span data-stu-id="45175-147">Choose **Project** > **Manage NuGet Packages** > **Browse**.</span></span>  
 1.  <span data-ttu-id="45175-148">`Microsoft.Web.WebView2.DevToolsProtocolExtension` **Microsoft.Web.WebView2.DevToolsProtocolExtension Install を入力して選択**  >  **します**。</span><span class="sxs-lookup"><span data-stu-id="45175-148">Type `Microsoft.Web.WebView2.DevToolsProtocolExtension` and choose **Microsoft.Web.WebView2.DevToolsProtocolExtension** > **Install**.</span></span>   
     
 :::image type="complex" source="./media/cdpnuget.png" alt-text="Microsoft.Web.WebView2.DevToolsProtocolExtension が NuGet Visual Studioに表示パッケージ マネージャー" lightbox="./media/cdpnuget.png":::

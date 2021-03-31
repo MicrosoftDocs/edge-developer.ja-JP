@@ -49,7 +49,7 @@ ms.locfileid: "11439697"
 *   <span data-ttu-id="9d1e5-110">リソースが実際にすべてアップロードまたはダウンロードされていることを確認する。</span><span class="sxs-lookup"><span data-stu-id="9d1e5-110">Making sure that resources are actually being uploaded or downloaded at all.</span></span>  
 *   <span data-ttu-id="9d1e5-111">HTTP ヘッダー、コンテンツ、サイズなど、個々のリソースのプロパティを検査する。</span><span class="sxs-lookup"><span data-stu-id="9d1e5-111">Inspecting the properties of an individual resource, such as the HTTP headers, content, size, and so on.</span></span>  
     
-<span data-ttu-id="9d1e5-112">ページ読み込みパフォーマンスを向上させる方法を探している場合は、ネットワーク**ツールを\*\*\*\*使用して開始**してください。</span><span class="sxs-lookup"><span data-stu-id="9d1e5-112">If you are looking for ways to improve page load performance, **do not** start with the **Network** tool.</span></span>  <span data-ttu-id="9d1e5-113">ネットワーク アクティビティに関連しない読み込みパフォーマンスの問題には、さまざまな種類があります。</span><span class="sxs-lookup"><span data-stu-id="9d1e5-113">There are many types of load performance issues that are not related to network activity.</span></span>  <span data-ttu-id="9d1e5-114">ページを改善する方法についての対象候補が表示されるので、監査パネルから開始します。</span><span class="sxs-lookup"><span data-stu-id="9d1e5-114">Start with the Audits panel because it gives you targeted suggestions on how to improve your page.</span></span>  <span data-ttu-id="9d1e5-115">[Web サイト [の速度の最適化] に移動します][DevtoolsSpeedGetStarted]。</span><span class="sxs-lookup"><span data-stu-id="9d1e5-115">Navigate to [Optimize Website Speed][DevtoolsSpeedGetStarted].</span></span>  
+<span data-ttu-id="9d1e5-112">ページ読み込みパフォーマンスを向上させる方法を探している場合は、ネットワーク**ツールを使用して開始**してください。</span><span class="sxs-lookup"><span data-stu-id="9d1e5-112">If you are looking for ways to improve page load performance, **do not** start with the **Network** tool.</span></span>  <span data-ttu-id="9d1e5-113">ネットワーク アクティビティに関連しない読み込みパフォーマンスの問題には、さまざまな種類があります。</span><span class="sxs-lookup"><span data-stu-id="9d1e5-113">There are many types of load performance issues that are not related to network activity.</span></span>  <span data-ttu-id="9d1e5-114">ページを改善する方法についての対象候補が表示されるので、監査パネルから開始します。</span><span class="sxs-lookup"><span data-stu-id="9d1e5-114">Start with the Audits panel because it gives you targeted suggestions on how to improve your page.</span></span>  <span data-ttu-id="9d1e5-115">[Web サイト [の速度の最適化] に移動します][DevtoolsSpeedGetStarted]。</span><span class="sxs-lookup"><span data-stu-id="9d1e5-115">Navigate to [Optimize Website Speed][DevtoolsSpeedGetStarted].</span></span>  
 
 ## <a name="open-the-network-panel"></a><span data-ttu-id="9d1e5-116">ネットワーク パネルを開く</span><span class="sxs-lookup"><span data-stu-id="9d1e5-116">Open the Network panel</span></span>  
 
@@ -180,7 +180,7 @@ ms.locfileid: "11439697"
        <span data-ttu-id="9d1e5-204">最初のスクリーンショット中に発生したネットワーク アクティビティ</span><span class="sxs-lookup"><span data-stu-id="9d1e5-204">The network activity that was happening during the first screenshot</span></span>  
     :::image-end:::  
     
-1.  <span data-ttu-id="9d1e5-205">[\( Network settings \) を再度選択し、[スクリーンショットのキャプチャ] チェック ボックスをオフにして [スクリーンショット ![ ](../media/settings-icon.msft.png) ] ウィンドウを閉じます。 \*\*\*\*</span><span class="sxs-lookup"><span data-stu-id="9d1e5-205">Choose \(![Network settings](../media/settings-icon.msft.png)\) again and turn off the **Capture screenshots** checkbox to close the Screenshots pane.</span></span>
+1.  <span data-ttu-id="9d1e5-205">[\( Network settings \) を再度選択し、[スクリーンショットのキャプチャ] チェック ボックスをオフにして [スクリーンショット ![ ](../media/settings-icon.msft.png) ] ウィンドウを閉じます。 </span><span class="sxs-lookup"><span data-stu-id="9d1e5-205">Choose \(![Network settings](../media/settings-icon.msft.png)\) again and turn off the **Capture screenshots** checkbox to close the Screenshots pane.</span></span>
 1.  <span data-ttu-id="9d1e5-206">ページを再び更新します。</span><span class="sxs-lookup"><span data-stu-id="9d1e5-206">Refresh the page again.</span></span>  
     
 ## <a name="inspect-the-details-of-the-resource"></a><span data-ttu-id="9d1e5-207">リソースの詳細を検査する</span><span class="sxs-lookup"><span data-stu-id="9d1e5-207">Inspect the details of the resource</span></span>  
@@ -208,7 +208,7 @@ ms.locfileid: "11439697"
     :::image-end:::  
     
     > [!TIP]
-    > <span data-ttu-id="9d1e5-225">ファイルが minified の場合は、[応答] パネルの下部にある [Format **\(** Format \)] ボタンを選択して、ファイルの内容を読みやすさのために再 ![ ](../media/format-icon.msft.png) フォーマットします。 \*\*\*\*</span><span class="sxs-lookup"><span data-stu-id="9d1e5-225">When a file is minified, choose the **Format** \(![Format](../media/format-icon.msft.png)\) button at the bottom of the **Response** panel to re-format the contents of the file for readability.</span></span>  
+    > <span data-ttu-id="9d1e5-225">ファイルが minified の場合は、[応答] パネルの下部にある [Format **\(** Format \)] ボタンを選択して、ファイルの内容を読みやすさのために再 ![ ](../media/format-icon.msft.png) フォーマットします。 </span><span class="sxs-lookup"><span data-stu-id="9d1e5-225">When a file is minified, choose the **Format** \(![Format](../media/format-icon.msft.png)\) button at the bottom of the **Response** panel to re-format the contents of the file for readability.</span></span>  
     
 1.  <span data-ttu-id="9d1e5-226">[タイミング] **パネルを選択** します。</span><span class="sxs-lookup"><span data-stu-id="9d1e5-226">Choose the **Timing** panel.</span></span>  <span data-ttu-id="9d1e5-227">リソースのネットワーク アクティビティの内訳が表示されます。</span><span class="sxs-lookup"><span data-stu-id="9d1e5-227">A breakdown of the network activity for the resource is displayed.</span></span>  
     
@@ -355,7 +355,7 @@ ms.locfileid: "11439697"
 
 ## <a name="conclusion"></a><span data-ttu-id="9d1e5-315">まとめ</span><span class="sxs-lookup"><span data-stu-id="9d1e5-315">Conclusion</span></span>  
 
-<span data-ttu-id="9d1e5-316">おめでとうございます。これでチュートリアルは完了です。</span><span class="sxs-lookup"><span data-stu-id="9d1e5-316">Congratulations, you have completed the tutorial.</span></span>  <span data-ttu-id="9d1e5-317">これで、Microsoft Edge DevTools でネットワーク ツールを使用する方法がわかっています。 \*\*\*\*</span><span class="sxs-lookup"><span data-stu-id="9d1e5-317">You now know how to use the **Network** tool in the Microsoft Edge DevTools!</span></span>
+<span data-ttu-id="9d1e5-316">おめでとうございます。これでチュートリアルは完了です。</span><span class="sxs-lookup"><span data-stu-id="9d1e5-316">Congratulations, you have completed the tutorial.</span></span>  <span data-ttu-id="9d1e5-317">これで、Microsoft Edge DevTools でネットワーク ツールを使用する方法がわかっています。 </span><span class="sxs-lookup"><span data-stu-id="9d1e5-317">You now know how to use the **Network** tool in the Microsoft Edge DevTools!</span></span>
 
 <span data-ttu-id="9d1e5-318">[ネットワーク リファレンス][DevtoolsNetworkReference] に移動して、ネットワーク アクティビティの調査に関連するその他の DevTools 機能を見つけます。</span><span class="sxs-lookup"><span data-stu-id="9d1e5-318">Navigate to the [Network Reference][DevtoolsNetworkReference] to discover more DevTools features related to inspecting network activity.</span></span>  
 

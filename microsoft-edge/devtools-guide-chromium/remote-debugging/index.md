@@ -94,7 +94,7 @@ ms.locfileid: "11461214"
 
 *   <span data-ttu-id="d568d-148">Android デバイスと開発マシンの表示設定を更新して、それぞれがスリープ状態になじむのを行います。</span><span class="sxs-lookup"><span data-stu-id="d568d-148">Updating the display settings for your Android device and development machine so that each never goes to sleep.</span></span>  
 *   <span data-ttu-id="d568d-149">Android の USB モードを PTP に設定します。</span><span class="sxs-lookup"><span data-stu-id="d568d-149">Setting the USB mode for Android to PTP.</span></span>  <span data-ttu-id="d568d-150">詳細については、[Usb デバッグの承認] ダイアログ ボックスが表示されない [[Galaxy S4] に移動します][StackexchangeAndroid101933]。</span><span class="sxs-lookup"><span data-stu-id="d568d-150">For more information, navigate to [Galaxy S4 does not show Authorize USB debugging dialog box][StackexchangeAndroid101933].</span></span>  
-*   <span data-ttu-id="d568d-151">Android**デバイスの [開発者オプション]** 画面から [USB デバッグの承認を取り消す] を選択して、新しい状態にリセットします。 \*\*\*\*</span><span class="sxs-lookup"><span data-stu-id="d568d-151">Choose **Revoke USB Debugging Authorizations** from the **Developer Options** screen on your Android device to reset it to a fresh state.</span></span>  
+*   <span data-ttu-id="d568d-151">Android**デバイスの [開発者オプション]** 画面から [USB デバッグの承認を取り消す] を選択して、新しい状態にリセットします。 </span><span class="sxs-lookup"><span data-stu-id="d568d-151">Choose **Revoke USB Debugging Authorizations** from the **Developer Options** screen on your Android device to reset it to a fresh state.</span></span>  
 
 <span data-ttu-id="d568d-152">このページまたは [DevTools デバイス][Stackoverflow21925992] でスタック オーバーフローに接続してもデバイスが検出されないソリューションを見つけた場合は、ソリューションをスタック オーバーフローの質問に追加してください</span><span class="sxs-lookup"><span data-stu-id="d568d-152">If you find a solution that is not mentioned on this page or in [DevTools Devices does not detect device when plugged in][Stackoverflow21925992] on Stack Overflow, please add your solution to the Stack Overflow question</span></span><!--, or [open an issue in the webfundamentals repository][GitHubWebFundamentalsNewIssue]--><span data-ttu-id="d568d-153">.</span><span class="sxs-lookup"><span data-stu-id="d568d-153">.</span></span>  
 
@@ -115,7 +115,7 @@ ms.locfileid: "11461214"
 
 ### <a name="more-actions-focus-refresh-or-close-a-tab"></a><span data-ttu-id="d568d-167">その他のアクション: フォーカス、更新、またはタブを閉じる</span><span class="sxs-lookup"><span data-stu-id="d568d-167">More actions: focus, refresh, or close a tab</span></span>  
 
-<span data-ttu-id="d568d-168">フォーカス **、更新、\*\*\*\*または\*\*\*\*閉じるタブ**の横にある [フォーカス] タブ、再読み込み、または閉じるを選択します。</span><span class="sxs-lookup"><span data-stu-id="d568d-168">Choose **focus tab**, **reload**, or **close** next to the tab that you want to focus, refresh, or close.</span></span>  
+<span data-ttu-id="d568d-168">フォーカス **、更新、または閉じるタブ**の横にある [フォーカス] タブ、再読み込み、または閉じるを選択します。</span><span class="sxs-lookup"><span data-stu-id="d568d-168">Choose **focus tab**, **reload**, or **close** next to the tab that you want to focus, refresh, or close.</span></span>  
 
 :::image type="complex" source="../media/remote-debugging-edge-inspect-with-targets-buttons.msft.png" alt-text="タブのフォーカス、更新、または閉じるボタン" lightbox="../media/remote-debugging-edge-inspect-with-targets-buttons.msft.png":::
    <span data-ttu-id="d568d-170">図 4: </span><span class="sxs-lookup"><span data-stu-id="d568d-170">Figure 4.</span></span>  <span data-ttu-id="d568d-171">タブのフォーカス、更新、または閉じるボタン</span><span class="sxs-lookup"><span data-stu-id="d568d-171">The buttons for focusing, refreshing, or closing a tab</span></span>  
