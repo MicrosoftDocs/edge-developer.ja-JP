@@ -1,49 +1,85 @@
 ---
 description: ナビゲーション
-title: ナビゲーション
+title: ナビゲーション |WebView 2
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/05/2021
+ms.date: 02/24/2021
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、wpf アプリ、wpf、edge、ICoreWebView2、ICoreWebView2Host、ブラウザー コントロール、edge html
-ms.openlocfilehash: ac15b9f32a29c64bbdc2a7886fa654a2d71a5453
-ms.sourcegitcommit: 4cea8cf99b5f12db9d2daba99bbf48f3ccc537fe
+ms.openlocfilehash: e87994d6205f81e01385a131e17091d0c8b001d5
+ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "11314798"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "11470845"
 ---
-# ナビゲーションイベント  
+# <a name="navigation-events"></a>ナビゲーションイベント  
 
-ナビゲーション イベントの通常のシーケンスは `NavigationStarting` 、 , , , , , and then `SourceChanged` `ContentLoading` `HistoryChanged` です `NavigationCompleted` 。  次のイベントは、各ナビゲーション中の WebView2 の状態を示しています。  
+:::row:::
+   :::column span="1":::
+      サポートされているプラットフォーム:
+   :::column-end:::
+   :::column span="2":::
+      Win32, Windows Forms, WinUi, WPF
+   :::column-end:::
+:::row-end:::  
 
-| Sequence | [Event Name] | 詳細 |  
-|:--- |:--- |:--- |  
-| 1 | `NavigationStarting`  |  WebView2 は移動を開始し、ナビゲーションの結果はネットワーク要求になります。  ホストは、イベント中に要求を禁止できます。  |  
-| 2 | `SourceChanged`  |  WebView2 のソースが新しい URL に変更されます。  このイベントは、フラグメント ナビゲーションなどのネットワーク要求を引き起こしていないナビゲーションによって発生する可能性があります。  |  
-| 3 | `HistoryChanged`  |  ナビゲーションの結果として WebView2 の履歴が更新されます。  |  
-| 4 | `ContentLoading`  |  WebView2 は、新しいページのコンテンツの読み込みを開始します。  |  
-| 5 | `NavigationCompleted`  |  WebView2 は、新しいページでのコンテンツの読み込みを完了します。  |  
+ナビゲーション イベントは、WebView2 インスタンスに表示されるコンテンツに対して特定の非同期アクションが発生すると実行されます。  たとえば、WebView2 ユーザーが新しい Web サイトに移動すると、ネイティブ コンテンツはイベントを使用して変更をリッスン `NavigationStarting` します。  ナビゲーション アクションが完了すると、実行 `NavigationCompleted` されます。  ナビゲーション イベントの良い例については [、「WebView2 の開始ガイド」に移動します][Webview2IndexGettingStarted]。  
 
-ナビゲーション ID \( \) を使用して、新しい `navigations` 各ドキュメントに `NavigationId` 追跡します。  新 `NavigationId` しいドキュメントへのナビゲーションが正常に行うたび、WebView の変更点が変わります。
+<!--todo:  Move the relevant information out of the getting started guide to better focus the content and leave the most concise elements in the getting started guide.  -->   
 
-:::image type="complex" source="../media/navigation-graph.png" alt-text="Microsoft Edge WebView2 ナビゲーション イベント" lightbox="../media/navigation-graph.png":::
-   Microsoft Edge WebView2 ナビゲーション イベント  
-:::image-end:::  
+ナビゲーション イベントの通常のシーケンス `NavigationStarting` は `SourceChanged` 、、、、、、 `ContentLoading` `HistoryChanged` です `NavigationCompleted` 。  次のイベントは、各ナビゲーション中の WebView2 の状態について説明します。  
 
-> [!NOTE]
-> 前の図は、それぞれのイベント引数で同じ `NavigationId` プロパティを持つナビゲーション イベントを表しています。  
+:::row:::
+   :::column span="1":::
+      :::image type="complex" source="../media/navigation-graph.png" alt-text="Microsoft Edge WebView2 ナビゲーション イベント" lightbox="../media/navigation-graph.png":::
+         Microsoft Edge WebView2 ナビゲーション イベント  
+      :::image-end:::  
+      
+      > [!NOTE]
+      > 図は、それぞれのイベント引数に同じ `NavigationId` プロパティを持つナビゲーション イベントを表します。  
+   :::column-end:::
+   :::column span="2":::
+      | シーケンス | [Event Name] | 詳細 |  
+      |:--- |:--- |:--- |  
+      | 1 | `NavigationStarting`  |  WebView2 は移動を開始し、ナビゲーションはネットワーク要求になります。  ホストは、イベント中に要求を禁止する場合があります。  |  
+      | 2 | `SourceChanged`  |  WebView2 のソースが新しい URL に変更されます。  このイベントは、フラグメント ナビゲーションなどのネットワーク要求を引き起こしていないナビゲーション アクションによって発生する可能性があります。  |  
+      | 3 | `ContentLoading`  |  WebView は、新しいページのコンテンツの読み込みを開始します。  |  
+      | 4 | `HistoryChanged`  |  ナビゲーションによって、WebView2 の履歴が更新されます。  |  
+      | 5 | `NavigationCompleted`  |  WebView2 は、新しいページでのコンテンツの読み込みを完了します。  |  
+   :::column-end:::
+:::row-end:::
 
- `Navigations` イベントのインスタンスが異なると、 `NavigationId` イベントが重複する可能性があります。  たとえば、ナビゲーションを開始するときに、関連するイベントを待つ必要 `NavigationStarting` があります。  その後、別のナビゲーションを開始すると、最初のナビゲーションのイベントが表示され、次に 2 番目のナビゲーションのイベントが表示され、次に最初のナビゲーションのイベントが表示され、次に 2 番目のナビゲーションに適したナビゲーション イベントの残りのすべてが表示されます。 `NavigationStarting` `NavigationStarting` `NavigationCompleted`  
+ナビゲーション ID \( event\) を使用して、新しい各ドキュメントへのナビゲーション `NavigationId` イベントを追跡します。  WebView `NavigationId` のイベントは、新しいドキュメントへの正常なナビゲーションが完了する度に変更されます。  
+
+ イベントのインスタンスが異なるナビゲーション `NavigationId` イベントが重複する場合があります。  たとえば、ナビゲーション イベントを開始する場合は、関連するイベントを待つ必要 `NavigationStarting` があります。  その後、別のナビゲーションを開始すると、最初のナビゲーションのイベントが表示され、その後に 2 番目のナビゲーションのイベントが表示され、次に最初のナビゲーションのイベントが続き、2 番目のナビゲーションに適したナビゲーション イベントの残りの部分が表示されます。 `NavigationStarting` `NavigationStarting` `NavigationCompleted`  
  
- エラーの場合、ナビゲーションがエラー ページに続くかどうかによって、イベントが発生する場合とない `ContentLoading` 場合があります。  
+ エラーの場合、ナビゲーションがエラー ページに続いているかどうかによって、イベントが発生する場合とできない `ContentLoading` 場合があります。  
  
- HTTP リダイレクトの場合、1 行に複数のイベントがあります。後続のイベント引数にはプロパティが設定されます。ただし、イベントは `NavigationStarting` `IsRedirect` `NavigationId` 同じままです。  
+ HTTP リダイレクトが発生した場合、1 行に複数のイベントが発生し、後でイベントの引数にプロパティが設定されているが、イベント `NavigationStarting` `IsRedirect` は同 `NavigationId` じままです。  
  
- フラグメントへの移動など、同じドキュメントではイベントが発生し、インクリメント `navigations` `NavigationStarting` は行わりません `NavigationId` 。  
+ フラグメントへの移動など、同じドキュメント ナビゲーション イベントはイベントを発生しないし、イベント `NavigationStarting` をインクリメント `NavigationId` しない。  
 
-WebView のサブフレーム内で監視またはキャンセルするには、対応する同等の非フレーム イベントと同様に機能するイベント `navigations` `FrameNavigationStarting` `FrameNavigationCompleted` とイベントを使用します。  
+WebView2 インスタンス内のサブフレーム内のナビゲーション イベントを監視またはキャンセルするには、同等のフレーム以外の対応するイベントと同様に機能するイベント `FrameNavigationStarting` `FrameNavigationCompleted` を使用します。  
+
+## <a name="see-also"></a>関連項目  
+
+*   WebView2 の使用を開始するには [、「WebView2 Getting Started Guides guides」に][Webview2IndexGettingStarted] 移動します。  
+*   WebView2 機能の包括的な例については、GitHub の [WebView2Samples リポジトリ][GithubMicrosoftedgeWebview2samples] に移動します。  
+*   WebView2 API の詳細については、「API リファレンス」 [に移動します][DotnetApiMicrosoftWebWebview2WpfWebview2]。  
+*   WebView2 の詳細については [、「WebView2 Resources」に移動します][Webview2IndexNextSteps]。  
+
+## <a name="getting-in-touch-with-the-microsoft-edge-webview-team"></a>Microsoft Edge WebView チームと連絡を取り合う  
+
+[!INCLUDE [contact WebView team note](../includes/contact-webview-team-note.md)]  
 
 <!-- links -->  
+
+[Webview2IndexGettingStarted]: ../index.md#getting-started "はじめに - Microsoft Edge WebView2 |Microsoft Docs"  
+[Webview2IndexNextSteps]: ../index.md#next-steps "次の手順 - Microsoft Edge WebView2 の概要|Microsoft Docs"  
+
+[DotnetApiMicrosoftWebWebview2WpfWebview2]: /dotnet/api/microsoft.web.webview2.wpf.webview2 "WebView2 クラス | Microsoft Docs"  
+
+[GithubMicrosoftedgeWebview2samples]: https://github.com/MicrosoftEdge/WebView2Samples "WebView2 サンプル-MicrosoftEdge/WebView2Samples | GitHub"  

@@ -5,10 +5,10 @@ ms.prod: microsoft-edge
 ms.topic: include
 ms.date: 12/09/2020
 ms.openlocfilehash: f39e04428daab687c7391be25b5389d658ef4e6e
-ms.sourcegitcommit: ae1e6a7db70b97dc0f7f12feafd3ea88bfdca7ed
+ms.sourcegitcommit: 2ddfd98d1e871be9c61380a8ca57da398d38bd54
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2020
+ms.lasthandoff: 04/02/2021
 ms.locfileid: "11205405"
 ---
 次のオプションを使用して、投稿の新機能や変更点、または DevTools に関連するその他の機能について説明します。  

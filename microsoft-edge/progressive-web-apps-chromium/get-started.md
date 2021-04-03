@@ -3,16 +3,16 @@ description: このガイドでは、Windows でプログレッシブ Web アプ
 title: プログレッシブ Web アプリ (Chromium) の使用を開始する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 01/07/2021
+ms.date: 03/16/2021
 ms.topic: conceptual
 ms.prod: microsoft-edge
 keywords: プログレッシブ Web アプリ、PWA、Edge、Windows、PWABuilder、Web マニフェスト、サービス ワーカー、プッシュ
-ms.openlocfilehash: 6ff24b2e9219b2f3755bb2e8f6db137dc7a721ec
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: 6a40742c1065dbc3b8aaeeeb469ab9154629a47a
+ms.sourcegitcommit: f605e4e27fed88aca286f2ae236e27f9a396b517
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11398134"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "11474917"
 ---
 # <a name="get-started-with-progressive-web-apps-chromium"></a>プログレッシブ Web アプリ (Chromium) の使用を開始する  
 
@@ -52,9 +52,9 @@ npm start
 
 次に、新 `http://localhost:3000` しい Web アプリを参照して表示します。  
 
-:::image type="complex" source="./media/vs-nodejs-express-index.png" alt-text="localhost で新しい PWA を実行する" lightbox="./media/vs-nodejs-express-index.png":::
-   localhost で新しい PWA を実行する
-:::image-end:::
+:::image type="complex" source="./media/visual-studio-nodejs-express-index.png" alt-text="localhost で新しい PWA を実行する" lightbox="./media/visual-studio-nodejs-express-index.png":::
+   localhost で新しい PWA を実行する  
+:::image-end:::  
 
 ## <a name="get-started-building-a-pwa"></a>PWA の構築を開始する  
 
@@ -100,7 +100,7 @@ PWA プラットフォームの主要な部分 [(Service Workers][MDNServiceWork
     ```  
     
 1.  ファイルをとして保存します `/MySamplePwa/public/manifest.json` 。  
-1.  にという名前の 512x512 アプリ アイコン イメージを追加 `icon512.png` します `/MySamplePwa/public/images` 。  サンプル イメージは、 [テストの目的][ImagePwa] で使用できます。  
+1.  にという名前の 512x512 アプリ アイコン イメージを追加 `icon512.png` します `/MySamplePwa/public/images` 。  サンプル イメージは、 [テストの目的](./media/progressive-web-app.png) で使用できます。  
 1.  [コードVisual Studio開き `/public/index.html` 、タグ内に次のコード スニペットを追加 `<head>` します。  
     
     ```html
@@ -148,26 +148,26 @@ PWA プラットフォームの主要な部分 [(Service Workers][MDNServiceWork
 1.  Microsoft Edge で、Microsoft Edge `F12` DevTools を開く場合に選択します。  [ **アプリケーション]** を選択し **、[サービス ワーカー] を選択** してサービス ワーカーを表示します。  サービス ワーカーが表示されない場合は、ページを更新します。  
     
     :::image type="complex" source="./media/devtools-sw-overview.png" alt-text="Microsoft Edge DevTools Service Worker の概要" lightbox="./media/devtools-sw-overview.png":::
-       Microsoft Edge DevTools Service Worker の概要
-    :::image-end:::
+       Microsoft Edge DevTools Service Worker の概要  
+    :::image-end:::  
     
 1.  [キャッシュ ストレージ] を展開してサービス ワーカー キャッシュを **表示** し **、[pwabuilder-precache] を選択します**。  サービス ワーカーによってキャッシュされたリソースはすべて表示されます。  サービス ワーカーによってキャッシュされるリソースには、アプリ アイコン、アプリ マニフェスト、CSS、および JavaScript ファイルが含まれます。  
     
     :::image type="complex" source="./media/devtools-cache.png" alt-text="Microsoft Edge DevTools のサービス ワーカー キャッシュ" lightbox="./media/devtools-cache.png":::
-       Microsoft Edge DevTools のサービス ワーカー キャッシュ (F12)
-    :::image-end:::
+       Microsoft Edge DevTools \(F12\) のサービス ワーカー キャッシュ  
+    :::image-end:::  
     
 1.  オフライン アプリとして PWA を試してみてください。  Microsoft Edge DevTools \( `F12` \) で、[ **ネットワーク** ] を選択し、[オンライン] 状態 **を [オフライン** ] に **変更します**。  
     
     :::image type="complex" source="./media/devtools-offline.png" alt-text="Microsoft Edge DevTools でアプリをオフライン モードに設定する" lightbox="./media/devtools-offline.png":::
-       Microsoft Edge DevTools でアプリをオフライン モードに設定する
-    :::image-end:::
+       Microsoft Edge DevTools でアプリをオフライン モードに設定する  
+    :::image-end:::  
     
 1.  アプリを更新すると、キャッシュからアプリのリソースを提供するためのオフライン メカニズムが表示されます。  
     
-    :::image type="complex" source="./media/vs-nodejs-express-index.png" alt-text="オフラインで実行されている PWA" lightbox="./media/vs-nodejs-express-index.png":::
-       オフラインで実行されている PWA
-    :::image-end:::
+    :::image type="complex" source="./media/visual-studio-nodejs-express-index.png" alt-text="オフラインで実行されている PWA" lightbox="./media/visual-studio-nodejs-express-index.png":::
+       オフラインで実行されている PWA  
+    :::image-end:::  
     
 ## <a name="add-push-notifications-to-your-pwa"></a>PWA にプッシュ通知を追加する  
 
@@ -285,8 +285,8 @@ PWA のプッシュ通知をテストするには、次の手順を実行しま�
 1.  PWA に移動します `http://localhost:3000` 。  サービス ワーカーが PWA をアクティブ化してプッシュ通知にサブスクライブしようとすると、PWA に通知の表示を許可するように求めるメッセージが表示されます。  [許可 **] を選択します**。  
     
     :::image type="complex" source="./media/notification-permission.png" alt-text="通知を有効にするアクセス許可ダイアログ" lightbox="./media/notification-permission.png":::
-       通知を有効にするアクセス許可ダイアログ
-    :::image-end:::
+       通知を有効にするアクセス許可ダイアログ  
+    :::image-end:::  
     
 1.  サーバー側のプッシュ通知をシミュレートします。  ブラウザーで PWA を開 `http://localhost:3000` いた後、選択 `F12` して DevTools を開きます。  [**アプリケーション**  >  **サービス ワーカー プッシュ]**  >  **を選択**して、PWA にテスト プッシュ通知を送信します。  
     
@@ -302,7 +302,8 @@ PWA のプッシュ通知をテストするには、次の手順を実行しま�
           トースト通知を \(または activate\) を選択しない場合、システムは数秒後に自動的に通知を却下し、Windows アクション センターにキューに入れられます。  
           
           :::image type="complex" source="./media/windows-action-center.png" alt-text="Windows アクション センターの通知" lightbox="./media/windows-action-center.png":::
-             Windows アクション センターの通知 :::image-end:::
+             Windows アクション センターの通知  
+          :::image-end:::  
        :::column-end:::
     :::row-end:::  
     
@@ -320,7 +321,7 @@ PWA のプッシュ通知をテストするには、次の手順を実行しま�
 ## <a name="see-also"></a>関連項目  
 
 *   [MDN Web ドキュメントのプログレッシブ Web アプリ][MDNProgressiveWebApps]  
-*   [Web.dev 上のプログレッシブ Web アプリ][WebDevProgressiveWebApps]  
+*   [プログレッシブ Web Apps on web.dev][WebDevProgressiveWebApps]  
 *   [プログレッシブ Web アプリとしてのハッカー][HackerNewsProgressiveWebApps] ニュース リーダー - サンプル \(Hacker News reader\) PWA を実装するためのさまざまなフレームワークとパフォーマンス パターンを比較します。  
 *   [ミス バトリング PWA][Davrous20191018MythBustingPwasNewEdgeEdition]  
 *   [プログレッシブ Web アプリのプログレッシブ ロードマップ][CloudfourThinksProgressiveRoadmapYourWebApp]  
@@ -331,10 +332,6 @@ PWA のプッシュ通知をテストするには、次の手順を実行しま�
 *   [フレームワークを使用しないプログレッシブ Web アプリケーションの設計と構築 (パート 1)][Smashingmagazine201907ProgressiveWebApplicationFrameworkPart1]  
 *   [フレームワークを使用しないプログレッシブ Web アプリケーションの設計と構築 (パート 2)][Smashingmagazine201907ProgressiveWebApplicationFrameworkPart2]  
 *   [フレームワークを使用しないプログレッシブ Web アプリケーションの設計と構築 (パート 3)][Smashingmagazine201907ProgressiveWebApplicationFrameworkPart3]  
-    
-<!-- image links -->  
-
-[ImagePwa]: ./media/pwa.png  
 
 <!-- links -->  
 

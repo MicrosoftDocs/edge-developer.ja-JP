@@ -1,46 +1,86 @@
 ---
-description: プロセスモデル
-title: プロセスモデル
+description: プロセス モデル
+title: プロセス モデル |WebView 2
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 07/23/2020
+ms.date: 02/24/2021
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
-keywords: IWebView2、IWebView2WebView、webview2、webview、wpf アプリ、wpf、edge、ICoreWebView2、ICoreWebView2Host、browser control、edge html
-ms.openlocfilehash: 8548308896815266fbd1e150da979b56cfb268e2
-ms.sourcegitcommit: 553957c101f83681b363103cb6af56bf20173f23
+keywords: IWebView2、IWebView2WebView、webview2、webview、wpf アプリ、wpf、edge、ICoreWebView2、ICoreWebView2Host、ブラウザー コントロール、edge html
+ms.openlocfilehash: 149234fe99485460f9d0c677b176a42d3b1e5050
+ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "10895564"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "11470852"
 ---
-# プロセスモデル  
+# <a name="process-model"></a>プロセス モデル  
 
-WebView2 は、Microsoft Edge ブラウザーと同じプロセスモデルを使用します。  ブラウザープロセスモデルの詳細については、「[最新の web ブラウザーを使用したブラウザーのアーキテクチャ][GoogleDeveloperWebUpdates201809InsideBrowserPart1BrowserArchitecture]」を参照してください。 
+:::row:::
+   :::column span="1":::
+      サポートされているプラットフォーム:
+   :::column-end:::
+   :::column span="2":::
+      Win32, Windows Forms, WinUi, WPF
+   :::column-end:::
+:::row-end:::  
 
-1つのブラウザープロセスは、この記事で説明されているレンダラープロセスおよびその他のユーティリティプロセスと関連付けられています。  さらに、WebView2 の場合、WebView2 を使ってプロセスを要求するホストアプリもあります。  
+WebView2 は、Microsoft Edge ブラウザーと同じプロセス モデルを使用します。  ブラウザー プロセス モデルの詳細については、「Browser Architecture - モダン Web ブラウザーの内部 [を見る」に移動します][GoogleDeveloperWebUpdates201809InsideBrowserPart1BrowserArchitecture]。  
 
-:::image type="complex" source="../media/process-model-1.png" alt-text="プロセス1" lightbox="../media/process-model-1.png":::
-   プロセス1  
+1 つのブラウザー プロセスは、その記事で説明されているレンダラー プロセスと他のユーティリティ プロセスに関連付けられる。  さらに、WebView2 が指定されている場合、ホスト アプリ要求プロセスは WebView2 を使用します。  
+
+:::image type="complex" source="../media/process-model-1.png" alt-text="プロセス 1" lightbox="../media/process-model-1.png":::
+   プロセス 1  
 :::image-end:::  
 
-ユーザーデータフォルダーを指定する WebView2 要求処理を行うユーザーセッションのユーザーデータフォルダーごとに、1つのブラウザープロセスを指定します。  つまり、1つのブラウザープロセスが複数の要求プロセスを処理している可能性があり、1つのプロセスが複数のブラウザープロセスを使用している可能性があります。  
+ブラウザー プロセスは、1 つのユーザー データ フォルダーにのみ関連付けられる。  要求プロセスでは、複数のユーザー データ フォルダーを指定できます。  複数のユーザー データ フォルダーを指定する要求プロセスは、同じ数のブラウザー プロセスに関連付けられる。  
+たとえば、2 つのユーザー データ フォルダーへのアクセスを要求する要求プロセスでは、2 つのブラウザー プロセスが使用されます。  
 
-:::image type="complex" source="../media/process-model-2.png" alt-text="プロセス2" lightbox="../media/process-model-2.png":::
-   プロセス2  
+:::image type="complex" source="../media/process-model-2.png" alt-text="プロセス 2" lightbox="../media/process-model-2.png":::
+   プロセス 2  
 :::image-end:::  
 
-ブラウザープロセスには、いくつかの関連するレンダラープロセスがあります。  WebView2 のさまざまなインスタンスで複数のフレームを処理するために、必要に応じてブラウザープロセスが作成されます。  レンダラープロセスの数は、サイト分離ブラウザー機能と、関連付けられている WebView2 のインスタンスでレンダリングされた個別の切断元の数によって異なります。  サイト分離ブラウザー機能については、前の内容を参照してください。  
+ブラウザー プロセスは、いくつかのレンダラー プロセスに関連付けられる。  WebView 2 インスタンスは、サービス フレームへのブラウザー プロセスを作成します。  ブラウザー プロセスは、複数のフレームに関連付けられている場合があります。  ブラウザー プロセスは、WebView2 の異なるインスタンスに関連付けられている場合があります。  レンダリング プロセスの数は、次の条件によって異なります。  
 
-は、 `CoreWebView2Environment` ユーザーデータフォルダーとブラウザープロセスを表します。  このは、 `CoreWebView2` 前に説明したように、サイトの分離に応じて、WebView2 によって、さまざまなレンダラープロセスが使用されるため、いずれかのプロセスのセットに直接対応することはできません。  
+*   ブラウザーでの Web サイト分離機能の使用。  
+*   関連付けられた WebView2 インスタンスでレンダリングされる、切断された個別の原点の数。  
 
-これらのブラウザーでのクラッシュとハングに対応し、のイベントを使用してレンダラープロセスを処理することができ `ProcessFailed` `CoreWebView2` ます。  
+Web サイトの分離ブラウザー機能については、前のコンテンツで説明しています。 
+<!--todo:  which previous content?  -->  
+ 
 
-のメソッドを使用して、関連するブラウザーとレンダラープロセスを安全にシャットダウンすることができ `Close` `CoreWebView2Controller` ます。  
+ユーザー `CoreWebView2Environment` データ フォルダーとブラウザー プロセスを表します。  前述した Web サイトの分離に応じて WebView2 でさまざまなレンダラー プロセスが使用されるので、このプロセスは 1 つのプロセスセットに直接 `CoreWebView2` 対応しません。  
 
-WebView2 インスタンスの [ **devtools** ] ウィンドウからブラウザータスクマネージャーウィンドウを開くには、 `Shift` + `Escape` devtools ウィンドウのタイトルバーを選択するか、または hover でポイントし、コンテキストメニュー \ (右クリック \) を開いて、を選択し `Browser task manager` ます。  WebView2 のブラウザープロセスに関連付けられたすべてのプロセスが、関連付けられた目的を含めて表示されます。  
+ブラウザーおよびレンダラー プロセスでのクラッシュやハングに対応するには、 `ProcessFailed` のイベントを使用します `CoreWebView2` 。  
+
+関連付けられたブラウザーおよびレンダラー プロセスを安全にシャットダウンするには、 `Close` のメソッドを使用します `CoreWebView2Controller` 。  
+
+WebView2 インスタンスの **DevTools** ウィンドウから [ブラウザー タスク マネージャー] ウィンドウを開く場合は、次の操作を実行します。  
+
+*   を選択します `Shift` + `Escape` 。  
+*   DevTools ウィンドウのタイトル バーにカーソルを合わせると、コンテキスト メニュー \(右クリック\) を開き、 を選択します `Browser task manager` 。  
+
+WebView2 のブラウザー プロセスに関連付けられているすべてのプロセスが、関連する目的を含めて表示されます。  
+
+## <a name="see-also"></a>関連項目  
+
+*   WebView2 の使用を開始するには [、[WebView2 の開始][Webview2IndexGettingStarted] ガイド] ガイドに移動します。  
+*   WebView2 機能の包括的な例については、GitHub の [WebView2Samples リポジトリ][GithubMicrosoftedgeWebview2samples] に移動します。  
+*   WebView2 API の詳細については、「API リファレンス」 [に移動します][DotnetApiMicrosoftWebWebview2WpfWebview2]。  
+*   WebView2 の詳細については [、「WebView2 Resources」に移動します][Webview2IndexNextSteps]。  
+
+## <a name="getting-in-touch-with-the-microsoft-edge-webview-team"></a>Microsoft Edge WebView チームと連絡を取り合う  
+
+[!INCLUDE [contact WebView team note](../includes/contact-webview-team-note.md)]  
 
 <!-- links -->  
 
-[GoogleDeveloperWebUpdates201809InsideBrowserPart1BrowserArchitecture]: https://developers.google.com/web/updates/2018/09/inside-browser-part1#browser-architecture "ブラウザーのアーキテクチャ-最新の web ブラウザーを表示する (パート 1)"  
+[Webview2IndexGettingStarted]: ../index.md#getting-started "はじめに - Microsoft Edge WebView2 |Microsoft Docs"  
+[Webview2IndexNextSteps]: ../index.md#next-steps "次の手順 - Microsoft Edge WebView2 の概要|Microsoft Docs"  
+
+[DotnetApiMicrosoftWebWebview2WpfWebview2]: /dotnet/api/microsoft.web.webview2.wpf.webview2 "WebView2 クラス | Microsoft Docs"  
+
+[GithubMicrosoftedgeWebview2samples]: https://github.com/MicrosoftEdge/WebView2Samples "WebView2 サンプル-MicrosoftEdge/WebView2Samples | GitHub"  
+
+[GoogleDeveloperWebUpdates201809InsideBrowserPart1BrowserArchitecture]: https://developers.google.com/web/updates/2018/09/inside-browser-part1#browser-architecture "ブラウザーのアーキテクチャ - 最新の Web ブラウザーを見る (パート 1)"  

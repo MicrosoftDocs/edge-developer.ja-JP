@@ -1,84 +1,84 @@
 ---
-description: Microsoft Edge ドライバーを使用して WebView2 コントロールを自動化およびテストする
+description: Microsoft Edge Driver を使用して WebView2 コントロールを自動化してテストする
 title: Microsoft Edge ドライバーを使用した WebView2 の自動化とテスト
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 11/25/2020
+ms.date: 01/07/2021
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
-keywords: IWebView2、IWebView2WebView、webview2、webview、edge、ICoreWebView2、ICoreWebView2Controller、Selenium、Microsoft Edge Driver
-ms.openlocfilehash: 2af1ce222abb1dc7a279afc05e87e7e42a45fe9e
-ms.sourcegitcommit: 2e14ff82350f700d7eabc8d33b3ec3e5fc8c61fa
+keywords: IWebView2、IWebView2WebView、Webview2、Webview、edge、ICoreWebView2、ICoreWebView2Controller、Selenium、Microsoft Edge Driver
+ms.openlocfilehash: c23d639582d4ce550406cf955c96171167bde7c8
+ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "11191618"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "11470831"
 ---
-# Microsoft Edge ドライバーを使用した WebView2 の自動化とテスト  
+# <a name="automating-and-testing-webview2-with-microsoft-edge-driver"></a>Microsoft Edge Driverを使用した WebView2 の自動化とテスト  
 
-WebView2 は Microsoft Edge \ (Chromium \) web platform を使っているため、WebView2 の開発者 \ (お客様 \) は、デバッグとオートメーション用の標準的な web ツールを利用することができます。  Selenium は、このようなツールの1つです。  W3C [Webdriver][W3cWebdriver2] API を実装します。  Selenium を使って、自動テストを作成し、ユーザーの操作をシミュレートすることができます。  
+WebView2 は Microsoft Edge \(Chromium\) Web プラットフォームを使用しますので、WebView2 開発者 \(you\) は、デバッグと自動化のための標準的な Web ツールを利用する場合があります。  Selenium はそのようなツールの 1 つです。  W3C [WebDriver][W3cWebdriver2] API を実装します。  Selenium を使用して、ユーザーの操作をシミュレートする自動テストを作成できます。  
 
-次の手順で作業を開始します。  
+次の手順を開始します。  
 
-## 手順 1: WebView2API のサンプルをダウンロードする  
+## <a name="step-1--download-webview2api-sample"></a>手順 1: WebView2API サンプルをダウンロードする  
 
-既存の WebView2 プロジェクトがない場合は、最新の WebView2 SDK の包括的なサンプルである [WebView2API サンプルアプリ][GithubMicrosoftedgewebview2samplesSampleappsWebview2apisample]をダウンロードしてください。  [WebView2API サンプルアプリの前提条件][GithubMicrosoftedgeWebview2samplesSampleappsWebview2apisamplePrerequisites]を満たしていることを確認します。  
+既存の WebView2 プロジェクトをお持ちではない場合は、 [最新の WebView2][GithubMicrosoftedgewebview2samplesSampleappsWebview2apisample]SDK の包括的なサンプルである WebView2API サンプル アプリをダウンロードしてください。  [WebView2API サンプル アプリの前提条件を満たしていることを確認します][GithubMicrosoftedgeWebview2samplesSampleappsWebview2apisamplePrerequisites]。  
 
-リポジトリを複製したら、Visual Studio でプロジェクトをビルドします。  次の図のようになります。  
+リポジトリを複製したら、プロジェクトをビルドして、Visual Studio。  次の図のようになります。  
 
-:::image type="complex" source="../media/webdriver/sample-app.png" alt-text="WebView2API サンプルアプリ" lightbox="../media/webdriver/sample-app.png":::
-   WebView2API サンプルアプリ  
+:::image type="complex" source="../media/webdriver/sample-app.png" alt-text="WebView2API サンプル アプリ" lightbox="../media/webdriver/sample-app.png":::
+   WebView2API サンプル アプリ  
 :::image-end:::  
 
-## 手順 2: Microsoft Edge ドライバーをインストールする  
+## <a name="step-2--install-microsoft-edge-driver"></a>手順 2: Microsoft Edge Driver をインストールする  
 
-指示に従って、 [Microsoft Edge driver][WebdriverChromiumDownloadMicrosoftEdgeDriver] をインストールします。 Selenium では、WebView2 を自動化してテストするために必要なブラウザー固有のドライバーです。  
+手順に従って Microsoft Edge Driver をインストールし [、WebView2][WebdriverChromiumDownloadMicrosoftEdgeDriver] を自動化およびテストするために Selenium で必要なブラウザー固有のドライバーをインストールします。  
 
-Microsoft Edge ドライバーのバージョンが、アプリで使用する WebView2 ランタイムのバージョンと一致していることを確認します。  WebView2API サンプルを動作させるには、WebView2 Runtime のバージョンが、最新の WebView2 SDK リリースのサポートされているバージョン以上であることを確認してください。  最新の WebView2 SDK リリースを見つけるには、 [WebView2 リリースノート][Webview2Releasenotes]に移動します。  現在使用している WebView2 ランタイムのバージョンを確認するには、に移動 `edge://settings/help` します。  
+Microsoft Edge Driver のバージョンが、アプリで使用する WebView2 ランタイムのバージョンと一致する必要があります。  WebView2API サンプルが動作するには、WebView2 ランタイムのバージョンが、サポートされている最新の WebView2 SDK リリースのバージョン以上である必要があります。  最新の WebView2 SDK リリースを見つけるには [、WebView2 リリース ノートに移動します][Webview2Releasenotes]。  現在使用している WebView2 ランタイムのバージョンを確認するには、に移動します `edge://settings/help` 。  
 
-## 手順 3: Selenium を WebView2API サンプルに追加する  
+## <a name="step-3--add-selenium-to-the-webview2api-sample"></a>手順 3: WebView2API サンプルに Selenium を追加する  
 
-この時点で、WebView2 Runtime がインストールされていて、WebView2 プロジェクトと Microsoft Edge ドライバーがインストールされている必要があります。  それでは、Selenium を使い始めましょう。  
+この時点で、WebView2 ランタイムをインストールし、WebView2 プロジェクトをビルドし、Microsoft Edge Driver をインストールする必要があります。  次に、Selenium の使用を開始します。  
 
 > [!NOTE]
-> Selenium は、C \ #、Java、Python、Javascript、ルビをサポートしています。  ただし、次のガイドは C \ # を使って作成されています。  
+> Selenium は C\#、Java、Python、Javascript、および Ruby をサポートします。  ただし、次のガイドは C\#を使用して記述されています。  
 
-1.  まず、 **Visual Studio**で新しい**C# .net Framework**プロジェクトを作成します。  右下隅にある [ **次へ** ] を選んで続行します。  
+1.  まず、新しいプロジェクト**をC# .NET Framework****を作成**Visual Studio。  次に **進** むには、右下隅の [次へ] を選択します。  
     
     :::image type="complex" source="../media/webdriver/new-project.png" alt-text="新しいプロジェクトの作成" lightbox="../media/webdriver/new-project.png":::
        新しいプロジェクトの作成  
     :::image-end:::  
     
-1.  プロジェクトに **名前**を付け、希望の **場所**に保存して、[ **作成**] を選びます。  
+1.  プロジェクトに名前を付 **け**、好みの場所に **保存し**、[作成] を **選択します**。  
     
     :::image type="complex" source="../media/webdriver/app-create.png" alt-text="新しいプロジェクトを構成する" lightbox="../media/webdriver/app-create.png":::
        新しいプロジェクトを構成する  
     :::image-end:::  
     
-1.  新しいプロジェクトが作成されます。  このガイドでは、すべてのコードがファイルに書き込まれ `Program.cs` ます。  
+1.  新しいプロジェクトが作成されます。  このガイドでは、すべてのコードがファイルに書き込 `Program.cs` まれます。  
     
     :::image type="complex" source="../media/webdriver/start-app.png" alt-text="新しいプロジェクト" lightbox="../media/webdriver/start-app.png":::
        新しいプロジェクト  
     :::image-end:::  
     
-1.  次に、プロジェクトに **Selenium** を追加します。  **Selenium**をインストールするには、Selenium を使用します。  
+1.  次に **、Selenium を** プロジェクトに追加します。  **Selenium.WebDriver NuGet パッケージを使用して Selenium をインストールします**。  
     
-    **Selenium ドライバーの nuget パッケージ**をダウンロードするには、 **Visual Studio**で**プロジェクト**をポイントして、[ **NuGet パッケージの管理**] を選びます。  次の画面が表示されます。  
+    **Selenium.WebDriver NuGet**パッケージをダウンロードするには****、Visual Studio で Project**** をポイントし、[NuGet パッケージの管理]**を選択します**。  次の画面が表示されます。  
     
-    :::image type="complex" source="../media/webdriver/download-nuget.png" alt-text="NuGet パッケージをダウンロードする" lightbox="../media/webdriver/download-nuget.png":::
-       NuGet パッケージをダウンロードする  
+    :::image type="complex" source="../media/webdriver/download-nuget.png" alt-text="NuGet パッケージのダウンロード" lightbox="../media/webdriver/download-nuget.png":::
+       NuGet パッケージのダウンロード  
     :::image-end:::  
     
-1.  `Selenium.WebDriver`検索バーに入力し、結果から [ **Selenium ドライバー** ] を選び、[**プレリリースを含める**] の横にあるチェックボックスをオンにします。  右側のウィンドウで、 **バージョン** が **4.0.0 をインストール** するように設定されていることを確認し、[ **インストール**] を選択します。  NuGet をコンピューターにダウンロード Selenium します。  
+1.  検索 `Selenium.WebDriver` バーに入力し、結果から **[Selenium.WebDriver]** を選択し、[プレリリースを含める] の横にあるチェック ボックスをオン **にします**。  右側のウィンドウで、バージョンが**4.0.0-alpha04**以降のインストールに設定されているのを確認し、[インストール] を選択**します**。 ****  NuGet は、Selenium をコンピューターにダウンロードします。  
     
-    Selenium ドライバーの NuGet パッケージの詳細については、 [Selenium][NugetSeleniumWebdriver400Alpha04]にアクセスしてください。  
+    Selenium.WebDriver NuGet パッケージの詳細については [、「Selenium.WebDriver 4.0.0-alpha04」に移動します][NugetSeleniumWebdriver400Alpha04]。  
     
     :::image type="complex" source="../media/webdriver/nuget.png" alt-text="NuGet パッケージの管理" lightbox="../media/webdriver/nuget.png":::
        NuGet パッケージの管理  
     :::image-end:::  
     
-1.  `OpenQA.Selenium.Edge` `using OpenQA.Selenium.Edge;` ファイルの先頭に次のステートメントを追加して使用し `Program.cs` ます。  
+1.  ファイル `OpenQA.Selenium.Edge` の先頭に次のステートメント  `using OpenQA.Selenium.Edge;` を追加して使用 `Program.cs` します。  
     
     ```csharp
     using OpenQA.Selenium.Edge;
@@ -90,9 +90,9 @@ Microsoft Edge ドライバーのバージョンが、アプリで使用する W
     using System.Threading.Tasks;
     ```  
     
-## 手順 4: Selenium と Microsoft Edge ドライバーを使用して WebView2 ドライブを使用する  
+## <a name="step-4-drive-webview2-with-selenium-and-microsoft-edge-driver"></a>手順 4: Selenium と Microsoft Edge ドライバーを使用して WebView2 を駆動する  
 
-1.  まず、 `EdgeOptions` 次のコードスニペットをコピーして、オブジェクトを作成します。  
+1.  まず、次の `EdgeOptions` コード スニペットをコピーして、オブジェクトを作成します。  
     
     ```csharp
     static void Main(string[] args)
@@ -102,16 +102,16 @@ Microsoft Edge ドライバーのバージョンが、アプリで使用する W
         EdgeOptions edgeOptions = new EdgeOptions(false, "webview2");
     ```  
     
-    このオブジェクトには、 `EdgeOptions` 次の2つのパラメーターがあります。  
+    オブジェクト `EdgeOptions` は、次の 2 つのパラメーターを受け取ります。  
     
     | パラメーター | 詳細 |    
     |:--- |:--- |  
-    | `is_legacy` | Selenium を設定すると `false` 、新しい Chromium ベースの Microsoft Edge ブラウザーを運転していることが通知されます。 |  
-    | `"webview2"` | WebView2 を運転している Selenium を示す文字列。 |  
+    | `is_legacy` | に設定 `false` します。これは、新しいクロムベースの Microsoft Edge ブラウザーを駆動している Selenium に指示します。 |  
+    | `"webview2"` | WebView2 を駆動している Selenium を示す文字列。 |  
     
-1.  次に、 `edgeOptions.BinaryLocation` WebView2 project ランタイムのファイルパスを設定し、 `msedgedriverDir` [microsoft edge ドライバー][MicrosoftDeveloperMicrosoftEdgeWebDriverDownloads]をインストールした場所へのファイルパスを提供するという名前の文字列を作成して、 `msedgedriverExe` microsoft edge ドライバーランタイムの名前を格納するための名前の付いた文字列を作成します。  既定では、ランタイムにはという名前が付けられ `msedgedriver.exe` ます。 次に示すように、これら2つの文字列を使っ `EdgeDriverService` てオブジェクトを作成します。  最後に、and を使用してオブジェクトを作成し `EdgeDriver` `EdgeDriverService` `EdgeOptions` ます。  
+1.  次に、WebView2 プロジェクト ランタイムのファイル パスに設定し、Microsoft Edge Driver をインストールした場所へのファイル パスを指定する名前の文字列を作成し `edgeOptions.BinaryLocation` `msedgedriverDir` [、Microsoft][MicrosoftDeveloperMicrosoftEdgeWebDriverDownloads] `msedgedriverExe` Edge Driver ランタイムの名前を格納する名前の文字列を作成します。  既定では、ランタイムの名前は `msedgedriver.exe` . 次に示すように、これらの 2 つの文字列 `EdgeDriverService` を使用してオブジェクトを作成します。  最後に、 を使用して `EdgeDriver` オブジェクトを `EdgeDriverService` 作成します `EdgeOptions` 。  
     
-    以下のコードをコピーして貼り付けることができ `edgeOptions` ます。  コンピューターのプロジェクトランタイムと Microsoft Edge ドライバーランタイムへの適切なファイルパスを指定していることを確認します。  
+    下に次のコードをコピーして貼り付けます `edgeOptions` 。  プロジェクト ランタイムへの正しいファイル パスと、コンピューター上の Microsoft Edge Driver ランタイムを指定してください。  
     
     ```csharp
     //Set the BinaryLocation to the filepath of the WebView2API Sample runtime
@@ -129,7 +129,7 @@ Microsoft Edge ドライバーのバージョンが、アプリで使用する W
     EdgeDriver e = new EdgeDriver(service, edgeOptions);
     ```
     
-3.  これで、 `EdgeDriver` プロジェクトで WebView2 を実行するように構成されました。  たとえば、 **WebView2API サンプル**を使っている場合は、コマンドを実行して移動することができ `https://microsoft.com` `e.Url = @"https://www.microsoft.com";` ます。  行にブレークポイントを設定し、プロジェクトを実行して、Selenium drive WebView2 を確認します。  
+3.  これで、 `EdgeDriver` プロジェクトで WebView2 を駆動するように構成されています。  たとえば **、WebView2API**サンプルを使用している場合は、コマンドを実行 `https://microsoft.com` して移動 `e.Url = @"https://www.microsoft.com";` できます。  行にブレークポイントを設定し、プロジェクトを実行して、Selenium ドライブ WebView2 を確認します。  
     
     ```csharp
         //The following navigates the WebView2API Sample from bing.com to microsoft.com
@@ -140,36 +140,36 @@ Microsoft Edge ドライバーのバージョンが、アプリで使用する W
     }
     ```  
     
-    :::image type="complex" source="../media/webdriver/microsoft.png" alt-text="Selenium WebView2" lightbox="../media/webdriver/microsoft.png":::
-       Selenium WebView2  
+    :::image type="complex" source="../media/webdriver/microsoft.png" alt-text="WebView2 を実行するセレン" lightbox="../media/webdriver/microsoft.png":::
+       WebView2 を実行するセレン  
     :::image-end:::
 
-お疲れさまでした。  Selenium および Microsoft Edge ドライバーを使用して、WebView2 プロジェクトとドリブン WebView2 を正常に自動化しました。  
+お疲れさまでした。  Selenium と Microsoft Edge Driver を使用して WebView2 プロジェクトと駆動型 WebView2 を正常に自動化しました。  
 
-## 関連項目  
+## <a name="see-also"></a>関連項目  
 
-*   Api Selenium が WebView2 または Microsoft Edge \ (Chromium \) を操作する方法の概要については、 [Selenium のドキュメントの Webdriver][SeleniumWebdriver]に移動してください。   
-*   WebView2 control の詳細と、ネイティブアプリに web コンテンツを埋め込むときの使用方法については、「 [Microsoft Edge WebView2 の概要][WebViewIndex]」を参照してください。  
-*   Microsoft Edge \ (Chromium) の自動化の詳細については、「 [WebDriver (Chromium) を使ってテストオートメーションを使用][WebdriverChromium]する」を参照してください。   
+*   API Selenium が WebView2 または Microsoft Edge \(Chromium\) を駆動する方法の詳細については、Selenium のドキュメントの [WebDriver に移動します。][SeleniumWebdriver]   
+*   WebView2 コントロールの詳細と、ネイティブ アプリに Web コンテンツを埋め込む際に使用する方法については [、「Microsoft Edge WebView2][WebViewIndex]の概要」に移動します。  
+*   Microsoft Edge \(Chromium\) の自動化の詳細については、「テストオートメーションに[WebDriver (Chromium)][WebdriverChromium]を使用する」に移動します。   
     
-## Microsoft Edge WebView チームと連絡を取り合う  
+## <a name="getting-in-touch-with-the-microsoft-edge-webview-team"></a>Microsoft Edge WebView チームと連絡を取り合う  
 
 [!INCLUDE [contact WebView team note](../includes/contact-webview-team-note.md)]  
 
 <!-- links -->  
 
-[WebdriverChromium]: ../../webdriver-chromium/index.md "テストオートメーションに WebDriver (Chromium) を使います。Microsoft ドキュメント"  
-[WebdriverChromiumDownloadMicrosoftEdgeDriver]: ../../webdriver-chromium/index.md#download-microsoft-edge-driver "Microsoft Edge ドライバーをダウンロードする-テストオートメーション用に WebDriver (Chromium) を使います。Microsoft ドキュメント"  
-[WebViewIndex]: ../index.md "Microsoft Edge WebView2 の概要-Microsoft ドキュメント"  
-[Webview2Releasenotes]: ../releasenotes.md "WebView2 SDK のリリースノート |Microsoft ドキュメント"  
+[WebdriverChromium]: ../../webdriver-chromium/index.md "WebDriver (Chromium) を使用してテストオートメーションを|Microsoft Docs"  
+[WebdriverChromiumDownloadMicrosoftEdgeDriver]: ../../webdriver-chromium/index.md#download-microsoft-edge-driver "Microsoft Edge Driver をダウンロードする - テストオートメーションに WebDriver (Chromium) を使用|Microsoft Docs"  
+[WebViewIndex]: ../index.md "Microsoft Edge WebView2 の概要 - Microsoft Docs"  
+[Webview2Releasenotes]: ../releasenotes.md "WebView2 SDK のリリースノート |Microsoft Docs"  
 
-[MicrosoftDeveloperMicrosoftEdgeWebDriverDownloads]: https://developer.microsoft.com/microsoft-edge/tools/webdriver#downloads "WebDriver をダウンロード |Microsoft Edge 開発者"  
+[MicrosoftDeveloperMicrosoftEdgeWebDriverDownloads]: https://developer.microsoft.com/microsoft-edge/tools/webdriver#downloads "WebDriver ファイルをダウンロード|Microsoft Edge 開発者"  
 
-[GithubMicrosoftedgewebview2samplesSampleappsWebview2apisample]: https://github.com/MicrosoftEdge/WebView2Samples/tree/master/SampleApps/WebView2APISample "WebView2 API のサンプル-MicrosoftEdge/WebView2Samples |GitHub"  
-[GithubMicrosoftedgeWebview2samplesSampleappsWebview2apisamplePrerequisites]: https://github.com/MicrosoftEdge/WebView2Samples/tree/master/SampleApps/WebView2APISample#prerequisites "前提条件-WebView2 API のサンプル |GitHub"  
+[GithubMicrosoftedgewebview2samplesSampleappsWebview2apisample]: https://github.com/MicrosoftEdge/WebView2Samples/tree/master/SampleApps/WebView2APISample "WebView2 API サンプル - MicrosoftEdge/WebView2Samples |GitHub"  
+[GithubMicrosoftedgeWebview2samplesSampleappsWebview2apisamplePrerequisites]: https://github.com/MicrosoftEdge/WebView2Samples/tree/master/SampleApps/WebView2APISample#prerequisites "前提条件 - WebView2 API のサンプル |GitHub"  
 
-[NugetSeleniumWebdriver400Alpha04]: https://www.nuget.org/packages/Selenium.WebDriver/4.0.0-alpha04 "Selenium ドライバー 4.0.0-alpha04 |NuGet ギャラリー"  
+[NugetSeleniumWebdriver400Alpha04]: https://www.nuget.org/packages/Selenium.WebDriver/4.0.0-alpha04 "Selenium.WebDriver 4.0.0-alpha04 |NuGet ギャラリー"  
 
 [SeleniumWebdriver]: https://www.selenium.dev/documentation/en/webdriver "WebDriver |Selenium"  
 
-[W3cWebdriver2]: https://www.w3.org/TR/webdriver2 "WebDriver |勧告"  
+[W3cWebdriver2]: https://www.w3.org/TR/webdriver2 "WebDriver |W3C"  

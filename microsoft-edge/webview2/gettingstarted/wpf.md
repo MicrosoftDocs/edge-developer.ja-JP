@@ -8,25 +8,25 @@ ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: WebView2, webview2, WebView, webview, wpf アプリ, wpf, edge, CoreWebView2, ブラウザー コントロール, edge html, 概要, 概要, .NET
-ms.openlocfilehash: de67b8a2da8cda0339b5e8d0b96cf4c3df260ec6
-ms.sourcegitcommit: d89f77d4667dfbc44ed35f2ec7e3ae64ab98bf1a
-ms.translationtype: HT
+ms.openlocfilehash: 14e6b64e36f6354554957d2c7953f789024d23c9
+ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2021
-ms.locfileid: "11306146"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "11470838"
 ---
-# WPF での WebView2 の使用を開始する
+# <a name="getting-started-with-webview2-in-wpf"></a>WPF での WebView2 の使用を開始する
 
 この記事では、[WebView2][MicrosoftDeveloperMicrosoftEdgeWebview2]の主な機能について説明して、初めて WebView2 アプリの作成を開始します。  個々の API の詳細については、[API リファレンス][DotnetApiMicrosoftWebWebview2Wpf] に移動してください。  
 
-## 前提条件  
+## <a name="prerequisites"></a>前提条件  
 
 先に進む前に、次の前提条件の一覧をインストールしてください。  
 
 *   サポートされている OS \(現在は Windows 10、Windows 8.1、および Windows 7\ にインストールされている、[WebView2 ランタイム][Webview2Installer]または [Microsoft Edge (Chromium) 非安定チャネル][MicrosoftedgeinsiderDownload]。  
 *   [Visual Studio][MicrosoftVisualstudioMain] 2017 以降。  
     
-## 手順 1 - シングル ウィンドウ アプリを作成する  
+## <a name="step-1---create-a-single-window-app"></a>手順 1 - シングル ウィンドウ アプリを作成する  
 
 1 つのメイン ウィンドウを含む基本的なデスクトップ プロジェクトから開始します。  
 
@@ -58,7 +58,7 @@ ms.locfileid: "11306146"
     
 1.  プロジェクトを作成するには、**[作成]** を 選択します。  
     
-## 手順 2-WebView2 SDK をインストールする  
+## <a name="step-2---install-webview2-sdk"></a>手順 2-WebView2 SDK をインストールする  
 
 NuGet を使用して、WebView2 SDK をプロジェクトに追加します。  
 
@@ -76,11 +76,11 @@ NuGet を使用して、WebView2 SDK をプロジェクトに追加します。
     
     WebView2 API を使用してアプリの開発を開始する準備ができました。  プロジェクトをビルドして実行するには、`F5`を選択します。  実行中のプロジェクトに空のウィンドウが表示されます。  
     
-    :::image type="complex" source="./media/wpf-gettingstarted-blank.png" alt-text="空のアプリ":::
-       空のアプリ
+    :::image type="complex" source="./media/winforms-emptyapp.png" alt-text="空のアプリ" lightbox="./media/winforms-emptyapp.png":::
+       空のアプリ  
     :::image-end:::  
     
-## 手順 3 - MainWindow.xaml で単一の WebView を作成する  
+## <a name="step-3---create-a-single-webview"></a>手順 3-1 つの WebView を作成する 
 
 次に、WebView をアプリに追加します。  
 
@@ -127,7 +127,7 @@ NuGet を使用して、WebView2 SDK をプロジェクトに追加します。
        Microsoft.com
     :::image-end:::  
     
-## 手順 4 - ナビゲーション  
+## <a name="step-4---navigation"></a>手順 4 - ナビゲーション  
 
 WebView2 コントロールに表示される URL をユーザーが変更できるようにする機能を追加するには、アドレス バーをアプリに追加します。
 
@@ -185,7 +185,7 @@ WebView2 コントロールに表示される URL をユーザーが変更でき
        bing.com
     :::image-end:::
     
-## 手順 5 - ナビゲーション イベント  
+## <a name="step-5---navigation-events"></a>手順 5 - ナビゲーション イベント  
 
 Web ページのナビゲーション中に、WebView2 コントロールはイベントを発生させます。  WebView2 コントロールをホストするアプリは、次のイベントをリッスンします。  
 
@@ -231,11 +231,11 @@ void EnsureHttps(object sender, CoreWebView2NavigationStartingEventArgs args)
 }
 ```  
 
-コンストラクターでは、EnsureHttps が、WebView2 コントロールの`NavigationStarting` イベントのイベント ハンドラーとして登録されています。  
+コンストラクターでは `EnsureHttps` 、WebView2 コントロール上のイベントの `NavigationStarting` イベント ハンドラーとして登録されます。  
 
 プロジェクトをビルドして実行するには、`F5`を選択します。  HTTP サイトに移動する場合、WebView は変更されません。  ただし、WebView は HTTPS サイトに移動します。  
 
-## 手順 6 - スクリプト  
+## <a name="step-6---scripting"></a>手順 6 - スクリプト  
 
 ホスト アプリを使用して、実行時に JavaScript コードを WebView2 コントロールに挿入できます。  任意の JavaScript を実行したり、初期化スクリプトを追加したりするために、WebView をタスクすることができます。  挿入された JavaScript は、JavaScript が削除されるまで、すべての新しいトップ レベル ドキュメントとすべての子フレームに適用されます。  挿入された JavaScript は、特定のタイミングで実行されます。  
 
@@ -262,12 +262,12 @@ void EnsureHttps(object sender, CoreWebView2NavigationStartingEventArgs args)
    HTTPS
 :::image-end:::  
 
-## 手順 7 - ホストコンテンツと Web コンテンツ間の通信  
+## <a name="step-7---communication-between-host-and-web-content"></a>手順 7 - ホストコンテンツと Web コンテンツ間の通信  
 
-ホストと Web コンテンツは、`postMessage` を使用して次の方法で相互に通信でき ます。  
+ホストと Web コンテンツは、 を使用して次の方法で通信できます `postMessage` 。  
 
 *   WebView2 コントロールの Web コンテンツは、`window.chrome.webview.postMessage` を使ってホストにメッセージを投稿できます。  ホストは、ホストに登録されている `WebMessageReceived` のいずれかを使ってメッセージを処理します。  
-*   ホストは`CoreWebView2.PostWebMessageAsString` または `CoreWebView2.PostWebMessageAsJSON` を使用して WebView2 コントロールの Web コンテンツにメッセージを投稿します。  これらのメッセージは、`window.chrome.webview.addEventListener` に追加されているハンドラーによって検出されます。  
+*   ホストは`CoreWebView2.PostWebMessageAsString` または `CoreWebView2.PostWebMessageAsJSON` を使用して WebView2 コントロールの Web コンテンツにメッセージを投稿します。  メッセージはに追加されたハンドラーによってキャッチされます `window.chrome.webview.addEventListener` 。  
 
 通信メカニズムは、ネイティブ機能を使用して、Web コンテンツからホストにメッセージを渡します。  
 
@@ -331,17 +331,17 @@ void EnsureHttps(object sender, CoreWebView2NavigationStartingEventArgs args)
 
 これで、最初の WebView2 アプリがビルドされました。  
 
-## 次の手順  
+## <a name="next-steps"></a>次の手順  
 
 WebView2 の詳細については、次のリソースを参照してください。  
 
-### 関連項目  
+### <a name="see-also"></a>関連項目  
 
 *   WebView2 機能の包括的な例については、GitHub の [WebView2Samples リポジトリ][GithubMicrosoftedgeWebview2samplesMain] に移動します。  
 *   WebView2 API の詳細については、[API リファレンス](/dotnet/api/microsoft.web.webview2.wpf.webview2) に移動してください。  
 *   WebView2 の詳細については、[WebView2 リソース](../index.md#next-steps) に移動してください。  
 
-## Microsoft Edge WebView チームと連絡を取り合う  
+## <a name="getting-in-touch-with-the-microsoft-edge-webview-team"></a>Microsoft Edge WebView チームと連絡を取り合う  
 
 [!INCLUDE [contact WebView team note](../includes/contact-webview-team-note.md)]  
 
