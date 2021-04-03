@@ -5,21 +5,21 @@ ms.prod: microsoft-edge
 ms.topic: include
 ms.date: 12/09/2020
 ms.openlocfilehash: f39e04428daab687c7391be25b5389d658ef4e6e
-ms.sourcegitcommit: ae1e6a7db70b97dc0f7f12feafd3ea88bfdca7ed
+ms.sourcegitcommit: 2ddfd98d1e871be9c61380a8ca57da398d38bd54
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2020
+ms.lasthandoff: 04/02/2021
 ms.locfileid: "11205405"
 ---
-<span data-ttu-id="8105d-101">次のオプションを使用して、投稿の新機能や変更点、または DevTools に関連するその他の機能について説明します。</span><span class="sxs-lookup"><span data-stu-id="8105d-101">Use the following options to discuss the new features and changes in the post, or anything else related to DevTools.</span></span>  
+<span data-ttu-id="c8452-101">次のオプションを使用して、投稿の新機能や変更点、または DevTools に関連するその他の機能について説明します。</span><span class="sxs-lookup"><span data-stu-id="c8452-101">Use the following options to discuss the new features and changes in the post, or anything else related to DevTools.</span></span>  
 
-*   <span data-ttu-id="8105d-102">DevTools の **[フィードバックの送信]** アイコンを使ってフィードバックを送信してください。</span><span class="sxs-lookup"><span data-stu-id="8105d-102">Send your feedback using the **Send Feedback** icon in DevTools.</span></span>  
-*   <span data-ttu-id="8105d-103">[@EdgeDevTools][PostTweetEdgeDevTools] でツイートします。</span><span class="sxs-lookup"><span data-stu-id="8105d-103">Tweet at [@EdgeDevTools][PostTweetEdgeDevTools].</span></span>  
-*   <span data-ttu-id="8105d-104">[必要な Web][TheWebWeWant] に提案を送信します。</span><span class="sxs-lookup"><span data-stu-id="8105d-104">Submit a suggestion to [The Web We Want][TheWebWeWant].</span></span>  
-*   <span data-ttu-id="8105d-105">この記事に関するバグを報告するには、次の **フィードバック** セクションを使用します。</span><span class="sxs-lookup"><span data-stu-id="8105d-105">To file bugs about this article, use the following **Feedback** section.</span></span>  
+*   <span data-ttu-id="c8452-102">DevTools の **[フィードバックの送信]** アイコンを使ってフィードバックを送信してください。</span><span class="sxs-lookup"><span data-stu-id="c8452-102">Send your feedback using the **Send Feedback** icon in DevTools.</span></span>  
+*   <span data-ttu-id="c8452-103">[@EdgeDevTools][PostTweetEdgeDevTools] でツイートします。</span><span class="sxs-lookup"><span data-stu-id="c8452-103">Tweet at [@EdgeDevTools][PostTweetEdgeDevTools].</span></span>  
+*   <span data-ttu-id="c8452-104">[必要な Web][TheWebWeWant] に提案を送信します。</span><span class="sxs-lookup"><span data-stu-id="c8452-104">Submit a suggestion to [The Web We Want][TheWebWeWant].</span></span>  
+*   <span data-ttu-id="c8452-105">この記事に関するバグを報告するには、次の **フィードバック** セクションを使用します。</span><span class="sxs-lookup"><span data-stu-id="c8452-105">To file bugs about this article, use the following **Feedback** section.</span></span>  
 
 :::image type="complex" source="../media/bing-devtools-send-feedback.msft.png" alt-text="Microsoft Edge DevTools の [フィードバックの送信] アイコン" lightbox="../media/bing-devtools-send-feedback.msft.png":::
-   <span data-ttu-id="8105d-107">Microsoft Edge DevTools の **[フィードバックの送信]** アイコン</span><span class="sxs-lookup"><span data-stu-id="8105d-107">The **Send Feedback** icon in Microsoft Edge DevTools</span></span>  
+   <span data-ttu-id="c8452-107">Microsoft Edge DevTools の **[フィードバックの送信]** アイコン</span><span class="sxs-lookup"><span data-stu-id="c8452-107">The **Send Feedback** icon in Microsoft Edge DevTools</span></span>  
 :::image-end:::  
 
 <!-- links -->  

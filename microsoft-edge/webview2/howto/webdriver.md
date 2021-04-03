@@ -1,84 +1,84 @@
 ---
-description: Microsoft Edge ドライバーを使用して WebView2 コントロールを自動化およびテストする
+description: Microsoft Edge Driver を使用して WebView2 コントロールを自動化してテストする
 title: Microsoft Edge ドライバーを使用した WebView2 の自動化とテスト
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 11/25/2020
+ms.date: 01/07/2021
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
-keywords: IWebView2、IWebView2WebView、webview2、webview、edge、ICoreWebView2、ICoreWebView2Controller、Selenium、Microsoft Edge Driver
-ms.openlocfilehash: 2af1ce222abb1dc7a279afc05e87e7e42a45fe9e
-ms.sourcegitcommit: 2e14ff82350f700d7eabc8d33b3ec3e5fc8c61fa
+keywords: IWebView2、IWebView2WebView、Webview2、Webview、edge、ICoreWebView2、ICoreWebView2Controller、Selenium、Microsoft Edge Driver
+ms.openlocfilehash: c23d639582d4ce550406cf955c96171167bde7c8
+ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "11191618"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "11470831"
 ---
-# <span data-ttu-id="8cb5d-104">Microsoft Edge ドライバーを使用した WebView2 の自動化とテスト</span><span class="sxs-lookup"><span data-stu-id="8cb5d-104">Automating and testing WebView2 with Microsoft Edge Driver</span></span>  
+# <a name="automating-and-testing-webview2-with-microsoft-edge-driver"></a><span data-ttu-id="da093-104">Microsoft Edge Driverを使用した WebView2 の自動化とテスト</span><span class="sxs-lookup"><span data-stu-id="da093-104">Automating and testing WebView2 with Microsoft Edge Driver</span></span>  
 
-<span data-ttu-id="8cb5d-105">WebView2 は Microsoft Edge \(Chromium \) web platform を使っているため、WebView2 の開発者 \(お客様 \) は、デバッグとオートメーション用の標準的な web ツールを利用することができます。</span><span class="sxs-lookup"><span data-stu-id="8cb5d-105">Because WebView2 uses the Microsoft Edge \(Chromium\) web platform, WebView2 developers \(you\) may take advantage of standard web tooling for debugging and automation.</span></span>  <span data-ttu-id="8cb5d-106">Selenium は、このようなツールの1つです。</span><span class="sxs-lookup"><span data-stu-id="8cb5d-106">Selenium is one such tool.</span></span>  <span data-ttu-id="8cb5d-107">W3C [Webdriver][W3cWebdriver2] API を実装します。</span><span class="sxs-lookup"><span data-stu-id="8cb5d-107">It implements the W3C [WebDriver][W3cWebdriver2] API.</span></span>  <span data-ttu-id="8cb5d-108">Selenium を使って、自動テストを作成し、ユーザーの操作をシミュレートすることができます。</span><span class="sxs-lookup"><span data-stu-id="8cb5d-108">You may use Selenium to create automated tests to simulate user interactions.</span></span>  
+<span data-ttu-id="da093-105">WebView2 は Microsoft Edge \(Chromium\) Web プラットフォームを使用しますので、WebView2 開発者 \(you\) は、デバッグと自動化のための標準的な Web ツールを利用する場合があります。</span><span class="sxs-lookup"><span data-stu-id="da093-105">Because WebView2 uses the Microsoft Edge \(Chromium\) web platform, WebView2 developers \(you\) may take advantage of standard web tooling for debugging and automation.</span></span>  <span data-ttu-id="da093-106">Selenium はそのようなツールの 1 つです。</span><span class="sxs-lookup"><span data-stu-id="da093-106">Selenium is one such tool.</span></span>  <span data-ttu-id="da093-107">W3C [WebDriver][W3cWebdriver2] API を実装します。</span><span class="sxs-lookup"><span data-stu-id="da093-107">It implements the W3C [WebDriver][W3cWebdriver2] API.</span></span>  <span data-ttu-id="da093-108">Selenium を使用して、ユーザーの操作をシミュレートする自動テストを作成できます。</span><span class="sxs-lookup"><span data-stu-id="da093-108">You may use Selenium to create automated tests to simulate user interactions.</span></span>  
 
-<span data-ttu-id="8cb5d-109">次の手順で作業を開始します。</span><span class="sxs-lookup"><span data-stu-id="8cb5d-109">Get started with the following steps.</span></span>  
+<span data-ttu-id="da093-109">次の手順を開始します。</span><span class="sxs-lookup"><span data-stu-id="da093-109">Get started with the following steps.</span></span>  
 
-## <span data-ttu-id="8cb5d-110">手順 1: WebView2API のサンプルをダウンロードする</span><span class="sxs-lookup"><span data-stu-id="8cb5d-110">Step 1:  Download WebView2API Sample</span></span>  
+## <a name="step-1--download-webview2api-sample"></a><span data-ttu-id="da093-110">手順 1: WebView2API サンプルをダウンロードする</span><span class="sxs-lookup"><span data-stu-id="da093-110">Step 1:  Download WebView2API Sample</span></span>  
 
-<span data-ttu-id="8cb5d-111">既存の WebView2 プロジェクトがない場合は、最新の WebView2 SDK の包括的なサンプルである [WebView2API サンプルアプリ][GithubMicrosoftedgewebview2samplesSampleappsWebview2apisample]をダウンロードしてください。</span><span class="sxs-lookup"><span data-stu-id="8cb5d-111">If you do not have an existing WebView2 project, download the [WebView2API Sample app][GithubMicrosoftedgewebview2samplesSampleappsWebview2apisample], a comprehensive sample of the latest WebView2 SDK.</span></span>  <span data-ttu-id="8cb5d-112">[WebView2API サンプルアプリの前提条件][GithubMicrosoftedgeWebview2samplesSampleappsWebview2apisamplePrerequisites]を満たしていることを確認します。</span><span class="sxs-lookup"><span data-stu-id="8cb5d-112">Ensure you have satisfied the [prerequisites for the WebView2API Sample app][GithubMicrosoftedgeWebview2samplesSampleappsWebview2apisamplePrerequisites].</span></span>  
+<span data-ttu-id="da093-111">既存の WebView2 プロジェクトをお持ちではない場合は、 [最新の WebView2][GithubMicrosoftedgewebview2samplesSampleappsWebview2apisample]SDK の包括的なサンプルである WebView2API サンプル アプリをダウンロードしてください。</span><span class="sxs-lookup"><span data-stu-id="da093-111">If you do not have an existing WebView2 project, download the [WebView2API Sample app][GithubMicrosoftedgewebview2samplesSampleappsWebview2apisample], a comprehensive sample of the latest WebView2 SDK.</span></span>  <span data-ttu-id="da093-112">[WebView2API サンプル アプリの前提条件を満たしていることを確認します][GithubMicrosoftedgeWebview2samplesSampleappsWebview2apisamplePrerequisites]。</span><span class="sxs-lookup"><span data-stu-id="da093-112">Ensure you have satisfied the [prerequisites for the WebView2API Sample app][GithubMicrosoftedgeWebview2samplesSampleappsWebview2apisamplePrerequisites].</span></span>  
 
-<span data-ttu-id="8cb5d-113">リポジトリを複製したら、Visual Studio でプロジェクトをビルドします。</span><span class="sxs-lookup"><span data-stu-id="8cb5d-113">Once you have cloned the repo, build the project in Visual Studio.</span></span>  <span data-ttu-id="8cb5d-114">次の図のようになります。</span><span class="sxs-lookup"><span data-stu-id="8cb5d-114">It should look like the following figure.</span></span>  
+<span data-ttu-id="da093-113">リポジトリを複製したら、プロジェクトをビルドして、Visual Studio。</span><span class="sxs-lookup"><span data-stu-id="da093-113">Once you have cloned the repo, build the project in Visual Studio.</span></span>  <span data-ttu-id="da093-114">次の図のようになります。</span><span class="sxs-lookup"><span data-stu-id="da093-114">It should look like the following figure.</span></span>  
 
-:::image type="complex" source="../media/webdriver/sample-app.png" alt-text="WebView2API サンプルアプリ" lightbox="../media/webdriver/sample-app.png":::
-   <span data-ttu-id="8cb5d-116">WebView2API サンプルアプリ</span><span class="sxs-lookup"><span data-stu-id="8cb5d-116">WebView2API Sample app</span></span>  
+:::image type="complex" source="../media/webdriver/sample-app.png" alt-text="WebView2API サンプル アプリ" lightbox="../media/webdriver/sample-app.png":::
+   <span data-ttu-id="da093-116">WebView2API サンプル アプリ</span><span class="sxs-lookup"><span data-stu-id="da093-116">WebView2API Sample app</span></span>  
 :::image-end:::  
 
-## <span data-ttu-id="8cb5d-117">手順 2: Microsoft Edge ドライバーをインストールする</span><span class="sxs-lookup"><span data-stu-id="8cb5d-117">Step 2:  Install Microsoft Edge Driver</span></span>  
+## <a name="step-2--install-microsoft-edge-driver"></a><span data-ttu-id="da093-117">手順 2: Microsoft Edge Driver をインストールする</span><span class="sxs-lookup"><span data-stu-id="da093-117">Step 2:  Install Microsoft Edge Driver</span></span>  
 
-<span data-ttu-id="8cb5d-118">指示に従って、 [Microsoft Edge driver][WebdriverChromiumDownloadMicrosoftEdgeDriver] をインストールします。 Selenium では、WebView2 を自動化してテストするために必要なブラウザー固有のドライバーです。</span><span class="sxs-lookup"><span data-stu-id="8cb5d-118">Follow the instructions to install [Microsoft Edge Driver][WebdriverChromiumDownloadMicrosoftEdgeDriver] the browser-specific driver required by Selenium to automate and test WebView2.</span></span>  
+<span data-ttu-id="da093-118">手順に従って Microsoft Edge Driver をインストールし [、WebView2][WebdriverChromiumDownloadMicrosoftEdgeDriver] を自動化およびテストするために Selenium で必要なブラウザー固有のドライバーをインストールします。</span><span class="sxs-lookup"><span data-stu-id="da093-118">Follow the instructions to install [Microsoft Edge Driver][WebdriverChromiumDownloadMicrosoftEdgeDriver] the browser-specific driver required by Selenium to automate and test WebView2.</span></span>  
 
-<span data-ttu-id="8cb5d-119">Microsoft Edge ドライバーのバージョンが、アプリで使用する WebView2 ランタイムのバージョンと一致していることを確認します。</span><span class="sxs-lookup"><span data-stu-id="8cb5d-119">Ensure that the version of Microsoft Edge Driver matches the version of WebView2 Runtime that you app uses.</span></span>  <span data-ttu-id="8cb5d-120">WebView2API サンプルを動作させるには、WebView2 Runtime のバージョンが、最新の WebView2 SDK リリースのサポートされているバージョン以上であることを確認してください。</span><span class="sxs-lookup"><span data-stu-id="8cb5d-120">For the WebView2API Sample to work, make sure that your version of WebView2 Runtime is greater than or equal than the supported version of the latest WebView2 SDK release.</span></span>  <span data-ttu-id="8cb5d-121">最新の WebView2 SDK リリースを見つけるには、 [WebView2 リリースノート][Webview2Releasenotes]に移動します。</span><span class="sxs-lookup"><span data-stu-id="8cb5d-121">To locate the latest WebView2 SDK release, navigate to [WebView2 release notes][Webview2Releasenotes].</span></span>  <span data-ttu-id="8cb5d-122">現在使用している WebView2 ランタイムのバージョンを確認するには、に移動 `edge://settings/help` します。</span><span class="sxs-lookup"><span data-stu-id="8cb5d-122">To find out what version of WebView2 Runtime you currently have, navigate to `edge://settings/help`.</span></span>  
+<span data-ttu-id="da093-119">Microsoft Edge Driver のバージョンが、アプリで使用する WebView2 ランタイムのバージョンと一致する必要があります。</span><span class="sxs-lookup"><span data-stu-id="da093-119">Ensure that the version of Microsoft Edge Driver matches the version of WebView2 Runtime that you app uses.</span></span>  <span data-ttu-id="da093-120">WebView2API サンプルが動作するには、WebView2 ランタイムのバージョンが、サポートされている最新の WebView2 SDK リリースのバージョン以上である必要があります。</span><span class="sxs-lookup"><span data-stu-id="da093-120">For the WebView2API Sample to work, make sure that your version of WebView2 Runtime is greater than or equal than the supported version of the latest WebView2 SDK release.</span></span>  <span data-ttu-id="da093-121">最新の WebView2 SDK リリースを見つけるには [、WebView2 リリース ノートに移動します][Webview2Releasenotes]。</span><span class="sxs-lookup"><span data-stu-id="da093-121">To locate the latest WebView2 SDK release, navigate to [WebView2 release notes][Webview2Releasenotes].</span></span>  <span data-ttu-id="da093-122">現在使用している WebView2 ランタイムのバージョンを確認するには、に移動します `edge://settings/help` 。</span><span class="sxs-lookup"><span data-stu-id="da093-122">To find out what version of WebView2 Runtime you currently have, navigate to `edge://settings/help`.</span></span>  
 
-## <span data-ttu-id="8cb5d-123">手順 3: Selenium を WebView2API サンプルに追加する</span><span class="sxs-lookup"><span data-stu-id="8cb5d-123">Step 3:  Add Selenium to the WebView2API Sample</span></span>  
+## <a name="step-3--add-selenium-to-the-webview2api-sample"></a><span data-ttu-id="da093-123">手順 3: WebView2API サンプルに Selenium を追加する</span><span class="sxs-lookup"><span data-stu-id="da093-123">Step 3:  Add Selenium to the WebView2API Sample</span></span>  
 
-<span data-ttu-id="8cb5d-124">この時点で、WebView2 Runtime がインストールされていて、WebView2 プロジェクトと Microsoft Edge ドライバーがインストールされている必要があります。</span><span class="sxs-lookup"><span data-stu-id="8cb5d-124">At this point you should have WebView2 Runtime installed, built a WebView2 project, and installed Microsoft Edge Driver.</span></span>  <span data-ttu-id="8cb5d-125">それでは、Selenium を使い始めましょう。</span><span class="sxs-lookup"><span data-stu-id="8cb5d-125">Now, get started using Selenium.</span></span>  
+<span data-ttu-id="da093-124">この時点で、WebView2 ランタイムをインストールし、WebView2 プロジェクトをビルドし、Microsoft Edge Driver をインストールする必要があります。</span><span class="sxs-lookup"><span data-stu-id="da093-124">At this point you should have WebView2 Runtime installed, built a WebView2 project, and installed Microsoft Edge Driver.</span></span>  <span data-ttu-id="da093-125">次に、Selenium の使用を開始します。</span><span class="sxs-lookup"><span data-stu-id="da093-125">Now, get started using Selenium.</span></span>  
 
 > [!NOTE]
-> <span data-ttu-id="8cb5d-126">Selenium は、C \ #、Java、Python、Javascript、ルビをサポートしています。</span><span class="sxs-lookup"><span data-stu-id="8cb5d-126">Selenium supports C\#, Java, Python, Javascript, and Ruby.</span></span>  <span data-ttu-id="8cb5d-127">ただし、次のガイドは C \ # を使って作成されています。</span><span class="sxs-lookup"><span data-stu-id="8cb5d-127">However, the following guide is written using C\#.</span></span>  
+> <span data-ttu-id="da093-126">Selenium は C\#、Java、Python、Javascript、および Ruby をサポートします。</span><span class="sxs-lookup"><span data-stu-id="da093-126">Selenium supports C\#, Java, Python, Javascript, and Ruby.</span></span>  <span data-ttu-id="da093-127">ただし、次のガイドは C\#を使用して記述されています。</span><span class="sxs-lookup"><span data-stu-id="da093-127">However, the following guide is written using C\#.</span></span>  
 
-1.  <span data-ttu-id="8cb5d-128">まず、 **Visual Studio**で新しい**C# .net Framework**プロジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="8cb5d-128">Start by creating a new **C# .NET Framework** project in **Visual Studio**.</span></span>  <span data-ttu-id="8cb5d-129">右下隅にある [ **次へ** ] を選んで続行します。</span><span class="sxs-lookup"><span data-stu-id="8cb5d-129">Choose **Next** on the bottom right-hand corner to continue.</span></span>  
+1.  <span data-ttu-id="da093-128">まず、新しいプロジェクト**をC# .NET Framework\*\*\*\*を作成**Visual Studio。</span><span class="sxs-lookup"><span data-stu-id="da093-128">Start by creating a new **C# .NET Framework** project in **Visual Studio**.</span></span>  <span data-ttu-id="da093-129">次に **進** むには、右下隅の [次へ] を選択します。</span><span class="sxs-lookup"><span data-stu-id="da093-129">Choose **Next** on the bottom right-hand corner to continue.</span></span>  
     
     :::image type="complex" source="../media/webdriver/new-project.png" alt-text="新しいプロジェクトの作成" lightbox="../media/webdriver/new-project.png":::
-       <span data-ttu-id="8cb5d-131">新しいプロジェクトの作成</span><span class="sxs-lookup"><span data-stu-id="8cb5d-131">Create a new project</span></span>  
+       <span data-ttu-id="da093-131">新しいプロジェクトの作成</span><span class="sxs-lookup"><span data-stu-id="da093-131">Create a new project</span></span>  
     :::image-end:::  
     
-1.  <span data-ttu-id="8cb5d-132">プロジェクトに **名前**を付け、希望の **場所**に保存して、[ **作成**] を選びます。</span><span class="sxs-lookup"><span data-stu-id="8cb5d-132">Give your project a **name**, save it to your preferred **location**, and choose **Create**.</span></span>  
+1.  <span data-ttu-id="da093-132">プロジェクトに名前を付 **け**、好みの場所に **保存し**、[作成] を **選択します**。</span><span class="sxs-lookup"><span data-stu-id="da093-132">Give your project a **name**, save it to your preferred **location**, and choose **Create**.</span></span>  
     
     :::image type="complex" source="../media/webdriver/app-create.png" alt-text="新しいプロジェクトを構成する" lightbox="../media/webdriver/app-create.png":::
-       <span data-ttu-id="8cb5d-134">新しいプロジェクトを構成する</span><span class="sxs-lookup"><span data-stu-id="8cb5d-134">Configure your new project</span></span>  
+       <span data-ttu-id="da093-134">新しいプロジェクトを構成する</span><span class="sxs-lookup"><span data-stu-id="da093-134">Configure your new project</span></span>  
     :::image-end:::  
     
-1.  <span data-ttu-id="8cb5d-135">新しいプロジェクトが作成されます。</span><span class="sxs-lookup"><span data-stu-id="8cb5d-135">A new project is created.</span></span>  <span data-ttu-id="8cb5d-136">このガイドでは、すべてのコードがファイルに書き込まれ `Program.cs` ます。</span><span class="sxs-lookup"><span data-stu-id="8cb5d-136">In this guide, all code is written to the `Program.cs` file.</span></span>  
+1.  <span data-ttu-id="da093-135">新しいプロジェクトが作成されます。</span><span class="sxs-lookup"><span data-stu-id="da093-135">A new project is created.</span></span>  <span data-ttu-id="da093-136">このガイドでは、すべてのコードがファイルに書き込 `Program.cs` まれます。</span><span class="sxs-lookup"><span data-stu-id="da093-136">In this guide, all code is written to the `Program.cs` file.</span></span>  
     
     :::image type="complex" source="../media/webdriver/start-app.png" alt-text="新しいプロジェクト" lightbox="../media/webdriver/start-app.png":::
-       <span data-ttu-id="8cb5d-138">新しいプロジェクト</span><span class="sxs-lookup"><span data-stu-id="8cb5d-138">New project</span></span>  
+       <span data-ttu-id="da093-138">新しいプロジェクト</span><span class="sxs-lookup"><span data-stu-id="da093-138">New project</span></span>  
     :::image-end:::  
     
-1.  <span data-ttu-id="8cb5d-139">次に、プロジェクトに **Selenium** を追加します。</span><span class="sxs-lookup"><span data-stu-id="8cb5d-139">Now add **Selenium** to the project.</span></span>  <span data-ttu-id="8cb5d-140">**Selenium**をインストールするには、Selenium を使用します。</span><span class="sxs-lookup"><span data-stu-id="8cb5d-140">Install Selenium using the **Selenium.WebDriver NuGet package**.</span></span>  
+1.  <span data-ttu-id="da093-139">次に **、Selenium を** プロジェクトに追加します。</span><span class="sxs-lookup"><span data-stu-id="da093-139">Now add **Selenium** to the project.</span></span>  <span data-ttu-id="da093-140">**Selenium.WebDriver NuGet パッケージを使用して Selenium をインストールします**。</span><span class="sxs-lookup"><span data-stu-id="da093-140">Install Selenium using the **Selenium.WebDriver NuGet package**.</span></span>  
     
-    <span data-ttu-id="8cb5d-141">**Selenium ドライバーの nuget パッケージ**をダウンロードするには、 **Visual Studio**で**プロジェクト**をポイントして、[ **NuGet パッケージの管理**] を選びます。</span><span class="sxs-lookup"><span data-stu-id="8cb5d-141">To download the **Selenium.WebDriver NuGet package**, in **Visual Studio**, hover over **Project**, and choose **Manage NuGet Package**.</span></span>  <span data-ttu-id="8cb5d-142">次の画面が表示されます。</span><span class="sxs-lookup"><span data-stu-id="8cb5d-142">The following screen should appear.</span></span>  
+    <span data-ttu-id="da093-141">**Selenium.WebDriver NuGet**パッケージをダウンロードするには\*\*\*\*、Visual Studio で Project\*\*\*\* をポイントし、[NuGet パッケージの管理]**を選択します**。</span><span class="sxs-lookup"><span data-stu-id="da093-141">To download the **Selenium.WebDriver NuGet package**, in **Visual Studio**, hover on **Project**, and choose **Manage NuGet Package**.</span></span>  <span data-ttu-id="da093-142">次の画面が表示されます。</span><span class="sxs-lookup"><span data-stu-id="da093-142">The following screen should appear.</span></span>  
     
-    :::image type="complex" source="../media/webdriver/download-nuget.png" alt-text="NuGet パッケージをダウンロードする" lightbox="../media/webdriver/download-nuget.png":::
-       <span data-ttu-id="8cb5d-144">NuGet パッケージをダウンロードする</span><span class="sxs-lookup"><span data-stu-id="8cb5d-144">Download NuGet package</span></span>  
+    :::image type="complex" source="../media/webdriver/download-nuget.png" alt-text="NuGet パッケージのダウンロード" lightbox="../media/webdriver/download-nuget.png":::
+       <span data-ttu-id="da093-144">NuGet パッケージのダウンロード</span><span class="sxs-lookup"><span data-stu-id="da093-144">Download NuGet package</span></span>  
     :::image-end:::  
     
-1.  <span data-ttu-id="8cb5d-145">`Selenium.WebDriver`検索バーに入力し、結果から [ **Selenium ドライバー** ] を選び、[**プレリリースを含める**] の横にあるチェックボックスをオンにします。</span><span class="sxs-lookup"><span data-stu-id="8cb5d-145">Enter `Selenium.WebDriver` in the search bar, choose **Selenium.WebDriver** from the results, and make sure to checkmark the box next to **include pre-release**.</span></span>  <span data-ttu-id="8cb5d-146">右側のウィンドウで、 **バージョン** が **4.0.0 をインストール** するように設定されていることを確認し、[ **インストール**] を選択します。</span><span class="sxs-lookup"><span data-stu-id="8cb5d-146">On the right-hand side window, ensure the **Version** is set to **install 4.0.0-alpha04** or later and choose **Install**.</span></span>  <span data-ttu-id="8cb5d-147">NuGet をコンピューターにダウンロード Selenium します。</span><span class="sxs-lookup"><span data-stu-id="8cb5d-147">NuGet downloads Selenium to your machine.</span></span>  
+1.  <span data-ttu-id="da093-145">検索 `Selenium.WebDriver` バーに入力し、結果から **[Selenium.WebDriver]** を選択し、[プレリリースを含める] の横にあるチェック ボックスをオン **にします**。</span><span class="sxs-lookup"><span data-stu-id="da093-145">Enter `Selenium.WebDriver` in the search bar, choose **Selenium.WebDriver** from the results, and make sure to checkmark the box next to **include pre-release**.</span></span>  <span data-ttu-id="da093-146">右側のウィンドウで、バージョンが**4.0.0-alpha04**以降のインストールに設定されているのを確認し、[インストール] を選択**します**。 \*\*\*\*</span><span class="sxs-lookup"><span data-stu-id="da093-146">On the right-hand side window, ensure the **Version** is set to **install 4.0.0-alpha04** or later and choose **Install**.</span></span>  <span data-ttu-id="da093-147">NuGet は、Selenium をコンピューターにダウンロードします。</span><span class="sxs-lookup"><span data-stu-id="da093-147">NuGet downloads Selenium to your machine.</span></span>  
     
-    <span data-ttu-id="8cb5d-148">Selenium ドライバーの NuGet パッケージの詳細については、 [Selenium][NugetSeleniumWebdriver400Alpha04]にアクセスしてください。</span><span class="sxs-lookup"><span data-stu-id="8cb5d-148">To learn more about the Selenium.WebDriver NuGet package, navigate to [Selenium.WebDriver 4.0.0-alpha04][NugetSeleniumWebdriver400Alpha04].</span></span>  
+    <span data-ttu-id="da093-148">Selenium.WebDriver NuGet パッケージの詳細については [、「Selenium.WebDriver 4.0.0-alpha04」に移動します][NugetSeleniumWebdriver400Alpha04]。</span><span class="sxs-lookup"><span data-stu-id="da093-148">To learn more about the Selenium.WebDriver NuGet package, navigate to [Selenium.WebDriver 4.0.0-alpha04][NugetSeleniumWebdriver400Alpha04].</span></span>  
     
     :::image type="complex" source="../media/webdriver/nuget.png" alt-text="NuGet パッケージの管理" lightbox="../media/webdriver/nuget.png":::
-       <span data-ttu-id="8cb5d-150">NuGet パッケージの管理</span><span class="sxs-lookup"><span data-stu-id="8cb5d-150">Manage NuGet package</span></span>  
+       <span data-ttu-id="da093-150">NuGet パッケージの管理</span><span class="sxs-lookup"><span data-stu-id="da093-150">Manage NuGet package</span></span>  
     :::image-end:::  
     
-1.  <span data-ttu-id="8cb5d-151">`OpenQA.Selenium.Edge` `using OpenQA.Selenium.Edge;` ファイルの先頭に次のステートメントを追加して使用し `Program.cs` ます。</span><span class="sxs-lookup"><span data-stu-id="8cb5d-151">Use `OpenQA.Selenium.Edge` by adding the following statement:  `using OpenQA.Selenium.Edge;` at the beginning of `Program.cs` file.</span></span>  
+1.  <span data-ttu-id="da093-151">ファイル `OpenQA.Selenium.Edge` の先頭に次のステートメント  `using OpenQA.Selenium.Edge;` を追加して使用 `Program.cs` します。</span><span class="sxs-lookup"><span data-stu-id="da093-151">Use `OpenQA.Selenium.Edge` by adding the following statement:  `using OpenQA.Selenium.Edge;` at the beginning of `Program.cs` file.</span></span>  
     
     ```csharp
     using OpenQA.Selenium.Edge;
@@ -90,9 +90,9 @@ ms.locfileid: "11191618"
     using System.Threading.Tasks;
     ```  
     
-## <span data-ttu-id="8cb5d-152">手順 4: Selenium と Microsoft Edge ドライバーを使用して WebView2 ドライブを使用する</span><span class="sxs-lookup"><span data-stu-id="8cb5d-152">Step 4: Drive WebView2 with Selenium and Microsoft Edge Driver</span></span>  
+## <a name="step-4-drive-webview2-with-selenium-and-microsoft-edge-driver"></a><span data-ttu-id="da093-152">手順 4: Selenium と Microsoft Edge ドライバーを使用して WebView2 を駆動する</span><span class="sxs-lookup"><span data-stu-id="da093-152">Step 4: Drive WebView2 with Selenium and Microsoft Edge Driver</span></span>  
 
-1.  <span data-ttu-id="8cb5d-153">まず、 `EdgeOptions` 次のコードスニペットをコピーして、オブジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="8cb5d-153">First, create the `EdgeOptions` object, by copying the following code snippet.</span></span>  
+1.  <span data-ttu-id="da093-153">まず、次の `EdgeOptions` コード スニペットをコピーして、オブジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="da093-153">First, create the `EdgeOptions` object, by copying the following code snippet.</span></span>  
     
     ```csharp
     static void Main(string[] args)
@@ -102,16 +102,16 @@ ms.locfileid: "11191618"
         EdgeOptions edgeOptions = new EdgeOptions(false, "webview2");
     ```  
     
-    <span data-ttu-id="8cb5d-154">このオブジェクトには、 `EdgeOptions` 次の2つのパラメーターがあります。</span><span class="sxs-lookup"><span data-stu-id="8cb5d-154">The `EdgeOptions` object takes in the following two parameters.</span></span>  
+    <span data-ttu-id="da093-154">オブジェクト `EdgeOptions` は、次の 2 つのパラメーターを受け取ります。</span><span class="sxs-lookup"><span data-stu-id="da093-154">The `EdgeOptions` object takes in the following two parameters.</span></span>  
     
-    | <span data-ttu-id="8cb5d-155">パラメーター</span><span class="sxs-lookup"><span data-stu-id="8cb5d-155">Parameter</span></span> | <span data-ttu-id="8cb5d-156">詳細</span><span class="sxs-lookup"><span data-stu-id="8cb5d-156">Details</span></span> |    
+    | <span data-ttu-id="da093-155">パラメーター</span><span class="sxs-lookup"><span data-stu-id="da093-155">Parameter</span></span> | <span data-ttu-id="da093-156">詳細</span><span class="sxs-lookup"><span data-stu-id="da093-156">Details</span></span> |    
     |:--- |:--- |  
-    | `is_legacy` | <span data-ttu-id="8cb5d-157">Selenium を設定すると `false` 、新しい Chromium ベースの Microsoft Edge ブラウザーを運転していることが通知されます。</span><span class="sxs-lookup"><span data-stu-id="8cb5d-157">Set to `false`, which tells Selenium that you are driving the new Chromium-based Microsoft Edge browser.</span></span> |  
-    | `"webview2"` | <span data-ttu-id="8cb5d-158">WebView2 を運転している Selenium を示す文字列。</span><span class="sxs-lookup"><span data-stu-id="8cb5d-158">A string that tells Selenium you are driving WebView2.</span></span> |  
+    | `is_legacy` | <span data-ttu-id="da093-157">に設定 `false` します。これは、新しいクロムベースの Microsoft Edge ブラウザーを駆動している Selenium に指示します。</span><span class="sxs-lookup"><span data-stu-id="da093-157">Set to `false`, which tells Selenium that you are driving the new Chromium-based Microsoft Edge browser.</span></span> |  
+    | `"webview2"` | <span data-ttu-id="da093-158">WebView2 を駆動している Selenium を示す文字列。</span><span class="sxs-lookup"><span data-stu-id="da093-158">A string that tells Selenium you are driving WebView2.</span></span> |  
     
-1.  <span data-ttu-id="8cb5d-159">次に、 `edgeOptions.BinaryLocation` WebView2 project ランタイムのファイルパスを設定し、 `msedgedriverDir` [microsoft edge ドライバー][MicrosoftDeveloperMicrosoftEdgeWebDriverDownloads]をインストールした場所へのファイルパスを提供するという名前の文字列を作成して、 `msedgedriverExe` microsoft edge ドライバーランタイムの名前を格納するための名前の付いた文字列を作成します。</span><span class="sxs-lookup"><span data-stu-id="8cb5d-159">Next, set `edgeOptions.BinaryLocation` to the file path of your WebView2 project runtime, create a string named `msedgedriverDir` that provides the file path to where you installed [Microsoft Edge Driver][MicrosoftDeveloperMicrosoftEdgeWebDriverDownloads], and create a string named `msedgedriverExe` to store the name of the Microsoft Edge Driver runtime.</span></span>  <span data-ttu-id="8cb5d-160">既定では、ランタイムにはという名前が付けられ `msedgedriver.exe` ます。</span><span class="sxs-lookup"><span data-stu-id="8cb5d-160">By default, the runtime is named `msedgedriver.exe`.</span></span> <span data-ttu-id="8cb5d-161">次に示すように、これら2つの文字列を使っ `EdgeDriverService` てオブジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="8cb5d-161">Use these two strings to construct the `EdgeDriverService` object as shown below.</span></span>  <span data-ttu-id="8cb5d-162">最後に、and を使用してオブジェクトを作成し `EdgeDriver` `EdgeDriverService` `EdgeOptions` ます。</span><span class="sxs-lookup"><span data-stu-id="8cb5d-162">Finally, create the `EdgeDriver` object using `EdgeDriverService` and `EdgeOptions`.</span></span>  
+1.  <span data-ttu-id="da093-159">次に、WebView2 プロジェクト ランタイムのファイル パスに設定し、Microsoft Edge Driver をインストールした場所へのファイル パスを指定する名前の文字列を作成し `edgeOptions.BinaryLocation` `msedgedriverDir` [、Microsoft][MicrosoftDeveloperMicrosoftEdgeWebDriverDownloads] `msedgedriverExe` Edge Driver ランタイムの名前を格納する名前の文字列を作成します。</span><span class="sxs-lookup"><span data-stu-id="da093-159">Next, set `edgeOptions.BinaryLocation` to the file path of your WebView2 project runtime, create a string named `msedgedriverDir` that provides the file path to where you installed [Microsoft Edge Driver][MicrosoftDeveloperMicrosoftEdgeWebDriverDownloads], and create a string named `msedgedriverExe` to store the name of the Microsoft Edge Driver runtime.</span></span>  <span data-ttu-id="da093-160">既定では、ランタイムの名前は `msedgedriver.exe` .</span><span class="sxs-lookup"><span data-stu-id="da093-160">By default, the runtime is named `msedgedriver.exe`.</span></span> <span data-ttu-id="da093-161">次に示すように、これらの 2 つの文字列 `EdgeDriverService` を使用してオブジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="da093-161">Use these two strings to construct the `EdgeDriverService` object as shown below.</span></span>  <span data-ttu-id="da093-162">最後に、 を使用して `EdgeDriver` オブジェクトを `EdgeDriverService` 作成します `EdgeOptions` 。</span><span class="sxs-lookup"><span data-stu-id="da093-162">Finally, create the `EdgeDriver` object using `EdgeDriverService` and `EdgeOptions`.</span></span>  
     
-    <span data-ttu-id="8cb5d-163">以下のコードをコピーして貼り付けることができ `edgeOptions` ます。</span><span class="sxs-lookup"><span data-stu-id="8cb5d-163">You may copy and paste the following code underneath `edgeOptions`.</span></span>  <span data-ttu-id="8cb5d-164">コンピューターのプロジェクトランタイムと Microsoft Edge ドライバーランタイムへの適切なファイルパスを指定していることを確認します。</span><span class="sxs-lookup"><span data-stu-id="8cb5d-164">Ensure you specify the correct file paths to your project runtime and the Microsoft Edge Driver runtime on your machine.</span></span>  
+    <span data-ttu-id="da093-163">下に次のコードをコピーして貼り付けます `edgeOptions` 。</span><span class="sxs-lookup"><span data-stu-id="da093-163">You may copy and paste the following code underneath `edgeOptions`.</span></span>  <span data-ttu-id="da093-164">プロジェクト ランタイムへの正しいファイル パスと、コンピューター上の Microsoft Edge Driver ランタイムを指定してください。</span><span class="sxs-lookup"><span data-stu-id="da093-164">Ensure you specify the correct file paths to your project runtime and the Microsoft Edge Driver runtime on your machine.</span></span>  
     
     ```csharp
     //Set the BinaryLocation to the filepath of the WebView2API Sample runtime
@@ -129,7 +129,7 @@ ms.locfileid: "11191618"
     EdgeDriver e = new EdgeDriver(service, edgeOptions);
     ```
     
-3.  <span data-ttu-id="8cb5d-165">これで、 `EdgeDriver` プロジェクトで WebView2 を実行するように構成されました。</span><span class="sxs-lookup"><span data-stu-id="8cb5d-165">Now, `EdgeDriver` is configured to drive the WebView2 in your project.</span></span>  <span data-ttu-id="8cb5d-166">たとえば、 **WebView2API サンプル**を使っている場合は、コマンドを実行して移動することができ `https://microsoft.com` `e.Url = @"https://www.microsoft.com";` ます。</span><span class="sxs-lookup"><span data-stu-id="8cb5d-166">For example, if you are using the **WebView2API Sample**, you may navigate to `https://microsoft.com` by running the `e.Url = @"https://www.microsoft.com";` command.</span></span>  <span data-ttu-id="8cb5d-167">行にブレークポイントを設定し、プロジェクトを実行して、Selenium drive WebView2 を確認します。</span><span class="sxs-lookup"><span data-stu-id="8cb5d-167">Verify the Selenium drive WebView2 by setting a breakpoint on the line and running the project.</span></span>  
+3.  <span data-ttu-id="da093-165">これで、 `EdgeDriver` プロジェクトで WebView2 を駆動するように構成されています。</span><span class="sxs-lookup"><span data-stu-id="da093-165">Now, `EdgeDriver` is configured to drive the WebView2 in your project.</span></span>  <span data-ttu-id="da093-166">たとえば **、WebView2API**サンプルを使用している場合は、コマンドを実行 `https://microsoft.com` して移動 `e.Url = @"https://www.microsoft.com";` できます。</span><span class="sxs-lookup"><span data-stu-id="da093-166">For example, if you are using the **WebView2API Sample**, you may navigate to `https://microsoft.com` by running the `e.Url = @"https://www.microsoft.com";` command.</span></span>  <span data-ttu-id="da093-167">行にブレークポイントを設定し、プロジェクトを実行して、Selenium ドライブ WebView2 を確認します。</span><span class="sxs-lookup"><span data-stu-id="da093-167">Verify the Selenium drive WebView2 by setting a breakpoint on the line and running the project.</span></span>  
     
     ```csharp
         //The following navigates the WebView2API Sample from bing.com to microsoft.com
@@ -140,36 +140,36 @@ ms.locfileid: "11191618"
     }
     ```  
     
-    :::image type="complex" source="../media/webdriver/microsoft.png" alt-text="Selenium WebView2" lightbox="../media/webdriver/microsoft.png":::
-       <span data-ttu-id="8cb5d-169">Selenium WebView2</span><span class="sxs-lookup"><span data-stu-id="8cb5d-169">Selenium running WebView2</span></span>  
+    :::image type="complex" source="../media/webdriver/microsoft.png" alt-text="WebView2 を実行するセレン" lightbox="../media/webdriver/microsoft.png":::
+       <span data-ttu-id="da093-169">WebView2 を実行するセレン</span><span class="sxs-lookup"><span data-stu-id="da093-169">Selenium running WebView2</span></span>  
     :::image-end:::
 
-<span data-ttu-id="8cb5d-170">お疲れさまでした。</span><span class="sxs-lookup"><span data-stu-id="8cb5d-170">Congratulations.</span></span>  <span data-ttu-id="8cb5d-171">Selenium および Microsoft Edge ドライバーを使用して、WebView2 プロジェクトとドリブン WebView2 を正常に自動化しました。</span><span class="sxs-lookup"><span data-stu-id="8cb5d-171">You have successfully automated a WebView2 project and driven WebView2 using Selenium and Microsoft Edge Driver.</span></span>  
+<span data-ttu-id="da093-170">お疲れさまでした。</span><span class="sxs-lookup"><span data-stu-id="da093-170">Congratulations.</span></span>  <span data-ttu-id="da093-171">Selenium と Microsoft Edge Driver を使用して WebView2 プロジェクトと駆動型 WebView2 を正常に自動化しました。</span><span class="sxs-lookup"><span data-stu-id="da093-171">You have successfully automated a WebView2 project and driven WebView2 using Selenium and Microsoft Edge Driver.</span></span>  
 
-## <span data-ttu-id="8cb5d-172">関連項目</span><span class="sxs-lookup"><span data-stu-id="8cb5d-172">See also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="da093-172">関連項目</span><span class="sxs-lookup"><span data-stu-id="da093-172">See also</span></span>  
 
-*   <span data-ttu-id="8cb5d-173">Api Selenium が WebView2 または Microsoft Edge \(Chromium \) を操作する方法の概要については、 [Selenium のドキュメントの Webdriver][SeleniumWebdriver]に移動してください。</span><span class="sxs-lookup"><span data-stu-id="8cb5d-173">For a comprehensive look at how the APIs Selenium drives WebView2 or Microsoft Edge \(Chromium\), navigate to [WebDriver on Selenium documentation][SeleniumWebdriver]</span></span>   
-*   <span data-ttu-id="8cb5d-174">WebView2 control の詳細と、ネイティブアプリに web コンテンツを埋め込むときの使用方法については、「 [Microsoft Edge WebView2 の概要][WebViewIndex]」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="8cb5d-174">To learn more about WebView2 control and how to use it when embedding web content in your native app, navigate to [Introduction to Microsoft Edge WebView2][WebViewIndex].</span></span>  
-*   <span data-ttu-id="8cb5d-175">Microsoft Edge \(Chromium) の自動化の詳細については、「 [WebDriver (Chromium) を使ってテストオートメーションを使用][WebdriverChromium]する」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="8cb5d-175">To learn more about automating Microsoft Edge \(Chromium\), navigate to [Use WebDriver (Chromium) for test automation][WebdriverChromium]</span></span>   
+*   <span data-ttu-id="da093-173">API Selenium が WebView2 または Microsoft Edge \(Chromium\) を駆動する方法の詳細については、Selenium のドキュメントの [WebDriver に移動します。][SeleniumWebdriver]</span><span class="sxs-lookup"><span data-stu-id="da093-173">For a comprehensive look at how the APIs Selenium drives WebView2 or Microsoft Edge \(Chromium\), navigate to [WebDriver on Selenium documentation][SeleniumWebdriver]</span></span>   
+*   <span data-ttu-id="da093-174">WebView2 コントロールの詳細と、ネイティブ アプリに Web コンテンツを埋め込む際に使用する方法については [、「Microsoft Edge WebView2][WebViewIndex]の概要」に移動します。</span><span class="sxs-lookup"><span data-stu-id="da093-174">To learn more about WebView2 control and how to use it when embedding web content in your native app, navigate to [Introduction to Microsoft Edge WebView2][WebViewIndex].</span></span>  
+*   <span data-ttu-id="da093-175">Microsoft Edge \(Chromium\) の自動化の詳細については、「テストオートメーションに[WebDriver (Chromium)][WebdriverChromium]を使用する」に移動します。</span><span class="sxs-lookup"><span data-stu-id="da093-175">To learn more about automating Microsoft Edge \(Chromium\), navigate to [Use WebDriver (Chromium) for test automation][WebdriverChromium]</span></span>   
     
-## <span data-ttu-id="8cb5d-176">Microsoft Edge WebView チームと連絡を取り合う</span><span class="sxs-lookup"><span data-stu-id="8cb5d-176">Getting in touch with the Microsoft Edge WebView team</span></span>  
+## <a name="getting-in-touch-with-the-microsoft-edge-webview-team"></a><span data-ttu-id="da093-176">Microsoft Edge WebView チームと連絡を取り合う</span><span class="sxs-lookup"><span data-stu-id="da093-176">Getting in touch with the Microsoft Edge WebView team</span></span>  
 
 [!INCLUDE [contact WebView team note](../includes/contact-webview-team-note.md)]  
 
 <!-- links -->  
 
-[WebdriverChromium]: ../../webdriver-chromium/index.md "テストオートメーションに WebDriver (Chromium) を使います。Microsoft ドキュメント"  
-[WebdriverChromiumDownloadMicrosoftEdgeDriver]: ../../webdriver-chromium/index.md#download-microsoft-edge-driver "Microsoft Edge ドライバーをダウンロードする-テストオートメーション用に WebDriver (Chromium) を使います。Microsoft ドキュメント"  
-[WebViewIndex]: ../index.md "Microsoft Edge WebView2 の概要-Microsoft ドキュメント"  
-[Webview2Releasenotes]: ../releasenotes.md "WebView2 SDK のリリースノート |Microsoft ドキュメント"  
+[WebdriverChromium]: ../../webdriver-chromium/index.md "WebDriver (Chromium) を使用してテストオートメーションを|Microsoft Docs"  
+[WebdriverChromiumDownloadMicrosoftEdgeDriver]: ../../webdriver-chromium/index.md#download-microsoft-edge-driver "Microsoft Edge Driver をダウンロードする - テストオートメーションに WebDriver (Chromium) を使用|Microsoft Docs"  
+[WebViewIndex]: ../index.md "Microsoft Edge WebView2 の概要 - Microsoft Docs"  
+[Webview2Releasenotes]: ../releasenotes.md "WebView2 SDK のリリースノート |Microsoft Docs"  
 
-[MicrosoftDeveloperMicrosoftEdgeWebDriverDownloads]: https://developer.microsoft.com/microsoft-edge/tools/webdriver#downloads "WebDriver をダウンロード |Microsoft Edge 開発者"  
+[MicrosoftDeveloperMicrosoftEdgeWebDriverDownloads]: https://developer.microsoft.com/microsoft-edge/tools/webdriver#downloads "WebDriver ファイルをダウンロード|Microsoft Edge 開発者"  
 
-[GithubMicrosoftedgewebview2samplesSampleappsWebview2apisample]: https://github.com/MicrosoftEdge/WebView2Samples/tree/master/SampleApps/WebView2APISample "WebView2 API のサンプル-MicrosoftEdge/WebView2Samples |GitHub"  
-[GithubMicrosoftedgeWebview2samplesSampleappsWebview2apisamplePrerequisites]: https://github.com/MicrosoftEdge/WebView2Samples/tree/master/SampleApps/WebView2APISample#prerequisites "前提条件-WebView2 API のサンプル |GitHub"  
+[GithubMicrosoftedgewebview2samplesSampleappsWebview2apisample]: https://github.com/MicrosoftEdge/WebView2Samples/tree/master/SampleApps/WebView2APISample "WebView2 API サンプル - MicrosoftEdge/WebView2Samples |GitHub"  
+[GithubMicrosoftedgeWebview2samplesSampleappsWebview2apisamplePrerequisites]: https://github.com/MicrosoftEdge/WebView2Samples/tree/master/SampleApps/WebView2APISample#prerequisites "前提条件 - WebView2 API のサンプル |GitHub"  
 
-[NugetSeleniumWebdriver400Alpha04]: https://www.nuget.org/packages/Selenium.WebDriver/4.0.0-alpha04 "Selenium ドライバー 4.0.0-alpha04 |NuGet ギャラリー"  
+[NugetSeleniumWebdriver400Alpha04]: https://www.nuget.org/packages/Selenium.WebDriver/4.0.0-alpha04 "Selenium.WebDriver 4.0.0-alpha04 |NuGet ギャラリー"  
 
 [SeleniumWebdriver]: https://www.selenium.dev/documentation/en/webdriver "WebDriver |Selenium"  
 
-[W3cWebdriver2]: https://www.w3.org/TR/webdriver2 "WebDriver |勧告"  
+[W3cWebdriver2]: https://www.w3.org/TR/webdriver2 "WebDriver |W3C"  
