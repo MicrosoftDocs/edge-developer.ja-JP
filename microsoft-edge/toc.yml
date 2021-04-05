@@ -383,6 +383,8 @@
               href: webview2/gettingstarted/winui.md
         - name: 概念
           items:
+            - name: Microsoft Edge と WebView2 の違い
+              href: webview2/concepts/browserfeatures.md
             - name: アプリの配布
               href: webview2/concepts/distribution.md
             - name: ユーザーデータフォルダーの管理
