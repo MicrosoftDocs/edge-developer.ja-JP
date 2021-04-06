@@ -118,7 +118,8 @@ ms.locfileid: "11439585"
 1.  <span data-ttu-id="19df6-166">セクションの **Source Order Viewer** 下で、[ソースの順序を **表示する] チェック ボックスをオン** にします。</span><span class="sxs-lookup"><span data-stu-id="19df6-166">Under the **Source Order Viewer** section, choose the **Show Source Order** checkbox.</span></span>  
 1.  <span data-ttu-id="19df6-167">任意の HTML 要素を強調表示して、Web ページ ソース内の順序をオーバーレイで表示します。</span><span class="sxs-lookup"><span data-stu-id="19df6-167">Highlight any HTML element to display an overlay that the order in the webpage source.</span></span>  
     
-:::image type="complex" source="../media/experiments-source-order-viewer.msft.png" alt-text=":::<span data-ttu-id="19df6-168">no-loc(Source Order Viewer)::: in the アクセシビリティ ペイン" lightbox="../media/experiments-source-order-viewer.msft.png"::: **Source Order Viewer** [**アクセシビリティ] ウィンドウ**</span><span class="sxs-lookup"><span data-stu-id="19df6-168">no-loc(Source Order Viewer)::: in the Accessibility pane" lightbox="../media/experiments-source-order-viewer.msft.png"::: **Source Order Viewer** in the **Accessibility** pane</span></span>  
+:::image type="complex" source="../media/experiments-source-order-viewer.msft.png" alt-text="Source Order Viewer in the Accessibility pane" lightbox="../media/experiments-source-order-viewer.msft.png":::
+   **Source Order Viewer** in the **Accessibility** pane  
 :::image-end:::  
 
 <!--Available in Microsoft Edge version 86 and later.  -->  
