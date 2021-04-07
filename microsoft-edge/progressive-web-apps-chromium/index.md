@@ -3,17 +3,17 @@ description: プログレッシブ Web アプリ (クロム) は、Windows 10 �
 title: Windows 上のプログレッシブ Web アプリ
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 04/02/2021
+ms.date: 04/06/2021
 ms.topic: article
 ms.prod: microsoft-edge
 ms.technology: pwa
 keywords: プログレッシブ Web アプリ、PWA、Edge、JavaScript、Windows、UWP、Microsoft Store
-ms.openlocfilehash: 2850c983c1dae34362a43be9cd33abbfd0df77cf
-ms.sourcegitcommit: f605e4e27fed88aca286f2ae236e27f9a396b517
+ms.openlocfilehash: be832ee5c0ad395dae7b4946c41da157ab5cd9ba
+ms.sourcegitcommit: 146072bf606b84e5145a48333abf9c6b892a12d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "11474896"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "11480189"
 ---
 # <a name="progressive-web-apps-on-windows-overview"></a>Windows 上のプログレッシブ Web アプリの概要  
 
@@ -183,7 +183,7 @@ PWA を高くするには、アプリが次の要件も満たしている必要�
 :::row-end:::  
 
 > [!NOTE]
-> PWA を Microsoft [Store][MicrosoftDeveloperStore] アプリに変換するには、Microsoft Store の [プログレッシブ Web アプリ (EdgeHTML)][PwaEdgehtmlMicrosoftStore]に移動します。  
+> PWA を Microsoft Store アプリに変更するには [、Microsoft][MicrosoftDeveloperStore] [ストアのプログレッシブ Web アプリに移動します][PwaChromiumMicrosoftStore]。  
   
 ## <a name="see-also"></a>関連項目  
 
@@ -204,6 +204,8 @@ PWA を高くするには、アプリが次の要件も満たしている必要�
 [DevToolsGuideDeviceModeTestingOtherBrowsers]: ../devtools-guide-chromium/device-mode/testing-other-browsers.md "他のブラウザーをエミュレートしてテスト|Microsoft Docs"  
 [DevtoolsProgressiveWebApps]: ../devtools-guide-chromium/progressive-web-apps/index.md "プログレッシブ Web アプリのデバッグ |Microsoft Docs"  
 [PwaChromiumMicrosoftStore]: ./microsoft-store.md "プログレッシブ Web アプリを Microsoft Store アプリに発行|Microsoft Docs"
+
+
 
 [WindowsUWPControlsPatternTilesNotificationsWns]: /windows/uwp/controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview.md "Windows プッシュ Notification Services (WNS) の概要|Microsoft Docs"  
 [WindowsUWPDesignDevicesDesigningTv]: /windows/uwp/design/devices/designing-for-tv.md "Xbox とテレビのデザイン|Microsoft Docs"  

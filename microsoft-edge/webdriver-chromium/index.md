@@ -3,17 +3,17 @@ description: Microsoft Edge で Web サイトまたはアプリをテストす�
 title: テスト オートメーションに WebDriver (Chromium) を使用する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/10/2021
+ms.date: 04/06/2021
 ms.topic: article
 ms.prod: microsoft-edge
 ms.technology: devtools
 keywords: microsoft edge, web 開発, html, css, javascript, 開発者, webdriver, selenium,テストする, ツール, 自動化, テスト
-ms.openlocfilehash: 87855fad02243a9d86053e43b5523013644f7e35
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: ad7a7f276dbf71d25be03d041161ead599b82f04
+ms.sourcegitcommit: 146072bf606b84e5145a48333abf9c6b892a12d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11398834"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "11480182"
 ---
 # <a name="use-webdriver-chromium-for-test-automation"></a>テスト オートメーションに WebDriver (Chromium) を使用する  
 
@@ -48,7 +48,7 @@ WebDriver を使用すると、開発者はユーザーの操作をシミュレ�
     
     <!--  
     > [!NOTE] 
-    > For more information about test automation using Microsoft Edge \(EdgeHTML\), navigate to [Microsoft Edge Driver for Microsoft Edge \(EdgeHTML\)][Webdriver].  
+    > For more information about test automation using Microsoft Edge \(EdgeHTML\), navigate to [Microsoft Edge Driver for Microsoft Edge (EdgeHTML)][Webdriver].  
     -->  
     
 ## <a name="choose-a-webdriver-language-binding"></a>WebDriver 言語バインドの選択  
@@ -372,7 +372,8 @@ Microsoft Edge チームは、WebDriver、Selenium、Microsoft Edge の使用に
 
 [DevtoolsIndex]: ../devtools-guide-chromium/index.md "Microsoft Edge (Chromium) 開発者ツール | Microsoft Docs"  
 [WebdriverCapabilitiesEdgeOptions]: ./capabilities-edge-options.md "機能と EdgeOptions |Microsoft Docs"  
-<!--[Webdriver]: ../edgehtml/webdriver/index.md "WebDriver (EdgeHTML) | Microsoft Docs"  -->  
+
+<!--[Webdriver]: /archive/microsoft-edge/legacy/developer/webdriver/index "WebDriver (EdgeHTML) | Microsoft Docs"  -->  
 
 [DeployedgeMicrosoftEdgePoliciesDevelopertoolsavailability]: /deployedge/microsoft-edge-policies#developertoolsavailability "DeveloperToolsAvailability-Microsoft Edge-ポリシー |Microsoft ドキュメント"  
 

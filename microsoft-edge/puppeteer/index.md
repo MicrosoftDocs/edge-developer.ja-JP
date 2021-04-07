@@ -3,17 +3,17 @@ description: Puppeteer を使用して Microsoft Edge で自動化とテスト�
 title: Puppeteer
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 01/07/2021
+ms.date: 04/06/2021
 ms.topic: article
 ms.prod: microsoft-edge
 ms.technology: devtools
 keywords: microsoft edge, Web 開発, 開発者, ツール, オートメーション, テスト
-ms.openlocfilehash: 068a2289b0e3bf8fffb49c771b83337abb79ea83
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: 89a4dad3319f8e61f27487973509a8ee5ac23b6a
+ms.sourcegitcommit: 146072bf606b84e5145a48333abf9c6b892a12d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11398470"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "11480168"
 ---
 # <a name="puppeteer-overview"></a>Puppeteer の概要  
 
@@ -105,7 +105,7 @@ Microsoft Edge Developer チームは、Puppeteer、および Microsoft Edge の
 <!--## See also  
 
 *   [WebDriver (Chromium)][WebdriverChromiumMain]  
-*   [WebDriver (EdgeHTML)][WebdriverEdgehtmlMain]  
+*   [WebDriver (EdgeHTML)][ArchiveMicrosoftEdgeLegacyDeveloperWebdriverIndex]  
 *   [Chrome DevTools Protocol Viewer on GitHub][GithubChromedevtoolsProtocol]  
 *   [Microsoft Edge:  Making the web better through more open source collaboration on Microsoft Experience Blog][MicrosoftBlogsWindowsExperience20181206]  
 *   [Download Microsoft Edge Insider Channels][MicrosoftedgeinsiderDownload]  
@@ -119,7 +119,8 @@ Microsoft Edge Developer チームは、Puppeteer、および Microsoft Edge の
 <!-- links -->  
 
 [WebdriverChromiumMain]: ../webdriver-chromium/index.md "WebDriver (クロム) |Microsoft Docs"  
-<!--  [WebdriverEdgehtmlMain]: ../edgehtml/webdriver/index.md "WebDriver (EdgeHTML) | Microsoft Docs"  -->  
+
+<!--  [ArchiveMicrosoftEdgeLegacyDeveloperWebdriverIndex]: /archive/microsoft-edge/legacy/developer/webdriver/index "WebDriver (EdgeHTML) | Microsoft Docs"  -->  
 
 [GithubChromedevtoolsProtocol]: https://chromedevtools.github.io/devtools-protocol "Chrome DevTools プロトコル ビューアー |GitHub"  
 

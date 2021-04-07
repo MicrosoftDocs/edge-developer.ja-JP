@@ -4,17 +4,17 @@ description: ベスト プラクティスと Accessible Rich Internet Applicatio
 title: ビルド |アクセシビリティ
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 01/07/2021
+ms.date: 04/06/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: アクセシビリティ、開発者向けのアクセシビリティ、アクセス可能な Web サイト、エッジ、Web 開発、ARIA、開発者、UIA、UI オートメーション
 ms.custom: seodec18
-ms.openlocfilehash: 69f0576b39815708d01477972abad1f8bdc9486e
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: 3bc16450a3a64c06d290d1d3e112a9b2faecbe14
+ms.sourcegitcommit: 146072bf606b84e5145a48333abf9c6b892a12d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11397889"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "11480154"
 ---
 # <a name="building-accessible-websites"></a>アクセス可能な Web サイトの構築
 
@@ -144,7 +144,7 @@ OpenAjax Alliance Web サイトは、WAI-ARIA のルールを検証する優れ�
 
 ### <a name="accessibility-techniques--tools"></a>アクセシビリティの手法&ツール
 
-#### [<a name="accessibility-creating-accessible-extension-icons-for-microsoft-edge"></a>アクセシビリティ: Microsoft Edge のアクセシビリティ対応の拡張機能アイコンを作成する](../../edgehtml/extensions/guides/accessibility.md)
+#### [<a name="accessibility-creating-accessible-extension-icons-for-microsoft-edge"></a>アクセシビリティ: Microsoft Edge のアクセシビリティ対応の拡張機能アイコンを作成する](/archive/microsoft-edge/legacy/developer/extensions/guides/accessibility)
 
 Microsoft Edge のアクセス可能な拡張機能アイコンの作成に関するガイダンスを参照してください。
 
