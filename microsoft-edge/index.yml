@@ -8,215 +8,209 @@ metadata:
   ms.topic: hub-page
   author: MSEdgeTeam
   ms.author: msedgedevrel
-  ms.date: 02/17/2021
+  ms.date: 04/06/2021
   ms.localizationpriority: high
-  ms.openlocfilehash: 873c85a7c8ac7c3c561bc1bee11348562173093d
-  ms.sourcegitcommit: 916b4daa26c2c78611f7d837bd6ecf009f0082df
-  ms.translationtype: MT
-  ms.contentlocale: ja-JP
-  ms.lasthandoff: 02/17/2021
-  ms.locfileid: "11343074"
 highlightedContent:
   items:
-  - title: Microsoft Edge (公式 Stable チャネル)
-    itemType: download
-    url: https://www.microsoft.com/edge
-  - title: Microsoft Edge Insider Channels
-    itemType: download
-    url: https://www.microsoft.com/edge/business/download
-  - title: 新機能に関する情報の確認
-    itemType: learn
-    url: https://www.microsoftedgeinsider.com/whats-new
-  - title: サポートを受ける
-    itemType: reference
-    url: /microsoft-edge/index#help-and-support
-  - title: Microsoft Edge の使用方法
-    itemType: learn
-    url: https://support.microsoft.com/microsoft-edge?ocid=DMC-End-User-Support
-  - title: エンタープライズで Microsoft Edge を管理する
-    itemType: learn
-    url: /deployedge/index
-  - title: Web 開発者向け機能を理解する
-    itemType: learn
-    url: /microsoft-edge/index#microsoft-edge-for-developers
+    - title: Microsoft Edge (公式 Stable チャネル)
+      itemType: download
+      url: 'https://www.microsoft.com/edge'
+    - title: Microsoft Edge Insider Channels
+      itemType: download
+      url: 'https://www.microsoft.com/edge/business/download'
+    - title: 新機能に関する情報の確認
+      itemType: learn
+      url: 'https://www.microsoftedgeinsider.com/whats-new'
+    - title: サポートを受ける
+      itemType: reference
+      url: /microsoft-edge/index#help-and-support
+    - title: Microsoft Edge の使用方法
+      itemType: learn
+      url: 'https://support.microsoft.com/microsoft-edge?ocid=DMC-End-User-Support'
+    - title: エンタープライズで Microsoft Edge を管理する
+      itemType: learn
+      url: /deployedge/index
+    - title: Web 開発者向け機能を理解する
+      itemType: learn
+      url: /microsoft-edge/index#microsoft-edge-for-developers
 conceptualContent:
   title: エンタープライズ向け Microsoft Edge
   items:
-  - title: エンタープライズでの Microsoft Edge に関する詳細情報
-    links:
-    - url: /deployedge/microsoft-edge-channels
-      itemType: overview
-      text: Microsoft Edge チャネル概要
-    - url: /deployedge/edge-ie-mode
-      itemType: reference
-      text: エンタープライズ機能を使用する
-  - title: Microsoft Edge を展開および更新する
-    links:
-    - itemType: reference
-      text: ビデオ - Microsoft Edge の展開
-      url: /deployedge/microsoft-edge-video-deploy
-    - itemType: reference
-      text: Windows に展開する
-      url: /configmgr/apps/deploy-use/deploy-edge
-    - itemType: reference
-      text: macOS に展開する
-      url: /intune/apps/apps-edge-macos
-  - title: Microsoft Edge を構成する
-    links:
-    - itemType: reference
-      text: Windows と macOS で Microsoft Edge を構成する
-      url: /deployedge/configure-microsoft-edge
-    - itemType: reference
-      text: Microsoft Edge を既定のブラウザーとして設定する
-      url: /deployedge/edge-default-browser
-  - title: セキュリティとプライバシーを管理する
-    links:
-    - itemType: reference
-      text: セキュリティ
-      url: /deployedge/ms-edge-security-for-business
-    - itemType: reference
-      text: プライバシー
-      url: /deployedge/microsoft-edge-enterprise-privacy-settings
-  - title: ポリシー リファレンス
-    links:
-    - itemType: reference
-      text: ブラウザー ポリシー リファレンス
-      url: /deployedge/microsoft-edge-policies
-    - itemType: reference
-      text: 更新ポリシー リファレンス
-      url: /deployedge/microsoft-edge-update-policies
-  - title: エンタープライズ コミュニティに参加する
-    links:
-    - itemType: reference
-      text: エンタープライズ技術コミュニティ (Insider 優先)
-      url: https://techcommunity.microsoft.com/t5/Enterprise/bd-p/EdgeInsiderEnterprise
-  - title: エンタープライズ向け拡張機能
-    links:
-    - itemType: reference
-      text: 一致パターン
-      url: /microsoft-edge/extensions-chromium/enterprise/match-patterns
-    - itemType: reference
-      text: ホスティングと更新
-      url: /microsoft-edge/extensions-chromium/enterprise/hosting-and-updating
+    - title: エンタープライズでの Microsoft Edge に関する詳細情報
+      links:
+        - url: /deployedge/microsoft-edge-channels
+          itemType: overview
+          text: Microsoft Edge チャネル概要
+        - url: /deployedge/edge-ie-mode
+          itemType: reference
+          text: エンタープライズ機能を使用する
+    - title: Microsoft Edge を展開および更新する
+      links:
+        - itemType: reference
+          text: ビデオ - Microsoft Edge の展開
+          url: /deployedge/microsoft-edge-video-deploy
+        - itemType: reference
+          text: Windows に展開する
+          url: /configmgr/apps/deploy-use/deploy-edge
+        - itemType: reference
+          text: macOS に展開する
+          url: /intune/apps/apps-edge-macos
+    - title: Microsoft Edge を構成する
+      links:
+        - itemType: reference
+          text: Windows と macOS で Microsoft Edge を構成する
+          url: /deployedge/configure-microsoft-edge
+        - itemType: reference
+          text: Microsoft Edge を既定のブラウザーとして設定する
+          url: /deployedge/edge-default-browser
+    - title: セキュリティとプライバシーを管理する
+      links:
+        - itemType: reference
+          text: セキュリティ
+          url: /deployedge/ms-edge-security-for-business
+        - itemType: reference
+          text: プライバシー
+          url: /deployedge/microsoft-edge-enterprise-privacy-settings
+    - title: ポリシー リファレンス
+      links:
+        - itemType: reference
+          text: ブラウザー ポリシー リファレンス
+          url: /deployedge/microsoft-edge-policies
+        - itemType: reference
+          text: 更新ポリシー リファレンス
+          url: /deployedge/microsoft-edge-update-policies
+    - title: エンタープライズ コミュニティに参加する
+      links:
+        - itemType: reference
+          text: エンタープライズ技術コミュニティ (Insider 優先)
+          url: 'https://techcommunity.microsoft.com/t5/Enterprise/bd-p/EdgeInsiderEnterprise'
+    - title: エンタープライズ向け拡張機能
+      links:
+        - itemType: reference
+          text: 一致パターン
+          url: /microsoft-edge/extensions-chromium/enterprise/match-patterns
+        - itemType: reference
+          text: ホスティングと更新
+          url: /microsoft-edge/extensions-chromium/enterprise/hosting-and-updating
 additionalContent:
   sections:
-  - title: 開発者向け Microsoft Edge
-    items:
-    - title: DevTools
-      links:
-      - text: DevTools の概要
-        url: /microsoft-edge/devtools-guide-chromium
-      - text: 初心者向け DevTools
-        url: /microsoft-edge/devtools-guide-chromium/beginners/html
-      - text: キーボード ショートカット
-        url: /microsoft-edge/devtools-guide-chromium/shortcuts
-      - text: コマンド メニュー
-        url: /microsoft-edge/devtools-guide-chromium/command-menu/index
-      - text: DevTools を開く
-        url: /microsoft-edge/devtools-guide-chromium/open
-      - text: CSS
-        url: /microsoft-edge/devtools-guide-chromium/css/index
-    - title: テストと自動化
-      links:
-      - text: アクセシビリティ
-        url: /microsoft-edge/accessibility
-      - text: DevTools プロトコル (Chromium)
-        url: /microsoft-edge/devtools-protocol-chromium
-      - text: WebDriver (Chromium)
-        url: /microsoft-edge/webdriver-chromium
-      - text: Puppeteer
-        url: /microsoft-edge/puppeteer
-      - text: サイトの互換性
-        url: /microsoft-edge/web-platform/site-impacting-changes
-      - text: webhint
-        url: https://webhint.io/docs/user-guide
-      - text: パフォーマンス分析
-        url: /microsoft-edge/performance-analysis
-    - title: 拡張機能の使用を開始する
-      links:
-      - text: 拡張機能の概要
-        url: /microsoft-edge/extensions-chromium/index
-      - text: はじめに参照するチュートリアル
-        url: /microsoft-edge/extensions-chromium/getting-started/index
-      - text: 簡単な拡張機能を作成する
-        url: /microsoft-edge/extensions-chromium/getting-started/part1-simple-extension
-    - title: '拡張機能: 開発者向けガイド'
-      links:
-      - text: Microsoft Edge の ポート Chromium 拡張機能
-        url: /microsoft-edge/extensions-chromium/developer-guide/port-chrome-extension
-      - text: 拡張機能を配布するための代替方法
-        url: /microsoft-edge/extensions-chromium/developer-guide/alternate-distribution-options
-      - text: ネイティブ メッセージング
-        url: /microsoft-edge/extensions-chromium/developer-guide/native-messaging
-    - title: '拡張機能: Microsoft Store に公開する'
-      links:
-      - text: 段階的な公開プロセス
-        url: /microsoft-edge/extensions-chromium/publish/publish-extension
-      - text: 開発者アカウントを開く
-        url: /microsoft-edge/extensions-chromium/publish/create-dev-account
-      - text: 拡張機能の一覧を更新する
-        url: /microsoft-edge/extensions-chromium/publish/update
-      - text: アカウント設定を管理する
-        url: /microsoft-edge/extensions-chromium/publish/manage-settings
-    - title: '拡張機能: Microsoft Edge アドオン ポリシー'
-      links:
-      - text: コンテンツ セキュリティ ポリシー
-        url: /microsoft-edge/extensions-chromium/store-policies/csp
-      - text: Microsoft Edge アドオンストアの開発者ポリシー
-        url: /microsoft-edge/extensions-chromium/store-policies/developer-policies
-    - title: プログレッシブ Web アプリ
-      links:
-      - text: 概要 (Chromium)
-        url: /microsoft-edge/progressive-web-apps-chromium/index
-      - text: プログレッシブ Web アプリ (Chromium) の使用を開始する
-        url: /microsoft-edge/progressive-web-apps-chromium/get-started
-      - text: プログレッシブ Web アプリでの DevTools の使用
-        url: /microsoft-edge/devtools-guide-chromium/progressive-web-apps
-      - text: オフライン シナリオ
-        url: /microsoft-edge/progressive-web-apps-chromium/offline
-      - text: サービス ワーカー
-        url: /microsoft-edge/progressive-web-apps-chromium/serviceworker
-      - text: Web アプリ マニフェスト
-        url: /microsoft-edge/progressive-web-apps-chromium/webappmanifests
-    - title: WebView2
-      links:
-      - text: 概要
-        url: /microsoft-edge/webview2/index
-      - text: WebView2 の使用を開始する
-        url: /microsoft-edge/webview2/gettingstarted/win32
-      - text: WPF での WebView2 の使用を開始する
-        url: /microsoft-edge/webview2/gettingstarted/wpf
-      - text: Windows フォーム アプリでの WebView2 の使用を開始する
-        url: /microsoft-edge/webview2/gettingstarted/winforms
-      - text: リファレンス
-        url: /microsoft-edge/webview2/webview2-api-reference
-  - title: ヘルプとサポート
-    items:
-    - summary: Microsoft Q&A コミュニティの専門家からアドバイスや回答を得る
-      title: Microsoft Q&A コミュニティのサポート
-      url: /answers/topics/ms-edge.html
-    - summary: Microsoft は、ご利用のアプリケーションが Microsoft Edge で動作することをお約束します。  最新バージョンの Microsoft Edge でビジネス アプリや Web サイトに問題が発生した場合、Microsoft は追加費用なしでアプリや Web サイトの修正をサポートします。  特典の詳細については、資格要件をご覧ください。
-      title: App Assure を利用して無料のヘルプを取得する
-      url: https://fasttrack.microsoft.com/portal
-    - summary: ビジネスにおいて Microsoft Edge のテクニカル サポートがすぐに必要な場合、さまざまなプランを利用して Microsoft の 1:1 サポートを受けて、必要なレベルのサポートを得ることができます。
-      title: ビジネス向け Microsoft サポート
-      url: https://support.microsoft.com/supportforbusiness/productselection?sapId=a77ee9b7-b6b6-aa08-d7b9-887ebe228207
-    - summary: ユーザーの役に立つサポート リソースが利用可能です。
-      title: ユーザー サポート
-      url: https://support.microsoft.com/microsoft-edge
-  - title: リファレンスとレガシー ドキュメント
-    items:
-    - title: リファレンス
-      links:
-      - text: Microsoft Edge ユーザー エージェント文字列
-        url: /microsoft-edge/web-platform/user-agent-string
-      - text: プラットフォームの状態
-        url: https://developer.microsoft.com/microsoft-edge/platform/status
-      - text: Visual Studio Code
-        url: /microsoft-edge/visual-studio-code/index
-      - text: プライバシーに関するホワイトペーパー
-        url: /microsoft-edge/privacy-whitepaper
-    - title: Microsoft Edge レガシドキュメント
-      links:
-      - text: Microsoft Edge レガシドキュメント
-        url: /microsoft-edge/edgehtml/index
+    - title: 開発者向け Microsoft Edge
+      items:
+        - title: DevTools
+          links:
+            - text: DevTools の概要
+              url: /microsoft-edge/devtools-guide-chromium
+            - text: 初心者向け DevTools
+              url: /microsoft-edge/devtools-guide-chromium/beginners/html
+            - text: キーボード ショートカット
+              url: /microsoft-edge/devtools-guide-chromium/shortcuts
+            - text: コマンド メニュー
+              url: /microsoft-edge/devtools-guide-chromium/command-menu/index
+            - text: DevTools を開く
+              url: /microsoft-edge/devtools-guide-chromium/open
+            - text: CSS
+              url: /microsoft-edge/devtools-guide-chromium/css/index
+        - title: テストと自動化
+          links:
+            - text: アクセシビリティ
+              url: /microsoft-edge/accessibility
+            - text: DevTools プロトコル (Chromium)
+              url: /microsoft-edge/devtools-protocol-chromium
+            - text: WebDriver (Chromium)
+              url: /microsoft-edge/webdriver-chromium
+            - text: Puppeteer
+              url: /microsoft-edge/puppeteer
+            - text: サイトの互換性
+              url: /microsoft-edge/web-platform/site-impacting-changes
+            - text: webhint
+              url: 'https://webhint.io/docs/user-guide'
+            - text: パフォーマンス分析
+              url: /microsoft-edge/performance-analysis
+        - title: 拡張機能の使用を開始する
+          links:
+            - text: 拡張機能の概要
+              url: /microsoft-edge/extensions-chromium/index
+            - text: はじめに参照するチュートリアル
+              url: /microsoft-edge/extensions-chromium/getting-started/index
+            - text: 簡単な拡張機能を作成する
+              url: /microsoft-edge/extensions-chromium/getting-started/part1-simple-extension
+        - title: '拡張機能: 開発者向けガイド'
+          links:
+            - text: Microsoft Edge の ポート Chromium 拡張機能
+              url: /microsoft-edge/extensions-chromium/developer-guide/port-chrome-extension
+            - text: 拡張機能を配布するための代替方法
+              url: /microsoft-edge/extensions-chromium/developer-guide/alternate-distribution-options
+            - text: ネイティブ メッセージング
+              url: /microsoft-edge/extensions-chromium/developer-guide/native-messaging
+        - title: '拡張機能: Microsoft Store に公開する'
+          links:
+            - text: 段階的な公開プロセス
+              url: /microsoft-edge/extensions-chromium/publish/publish-extension
+            - text: 開発者アカウントを開く
+              url: /microsoft-edge/extensions-chromium/publish/create-dev-account
+            - text: 拡張機能の一覧を更新する
+              url: /microsoft-edge/extensions-chromium/publish/update
+            - text: アカウント設定を管理する
+              url: /microsoft-edge/extensions-chromium/publish/manage-settings
+        - title: '拡張機能: Microsoft Edge アドオン ポリシー'
+          links:
+            - text: コンテンツ セキュリティ ポリシー
+              url: /microsoft-edge/extensions-chromium/store-policies/csp
+            - text: Microsoft Edge アドオンストアの開発者ポリシー
+              url: /microsoft-edge/extensions-chromium/store-policies/developer-policies
+        - title: プログレッシブ Web アプリ
+          links:
+            - text: 概要 (Chromium)
+              url: /microsoft-edge/progressive-web-apps-chromium/index
+            - text: プログレッシブ Web アプリ (Chromium) の使用を開始する
+              url: /microsoft-edge/progressive-web-apps-chromium/get-started
+            - text: プログレッシブ Web アプリでの DevTools の使用
+              url: /microsoft-edge/devtools-guide-chromium/progressive-web-apps
+            - text: オフライン シナリオ
+              url: /microsoft-edge/progressive-web-apps-chromium/offline
+            - text: サービス ワーカー
+              url: /microsoft-edge/progressive-web-apps-chromium/serviceworker
+            - text: Web アプリ マニフェスト
+              url: /microsoft-edge/progressive-web-apps-chromium/webappmanifests
+        - title: WebView2
+          links:
+            - text: 概要
+              url: /microsoft-edge/webview2/index
+            - text: WebView2 の使用を開始する
+              url: /microsoft-edge/webview2/gettingstarted/win32
+            - text: WPF での WebView2 の使用を開始する
+              url: /microsoft-edge/webview2/gettingstarted/wpf
+            - text: Windows フォーム アプリでの WebView2 の使用を開始する
+              url: /microsoft-edge/webview2/gettingstarted/winforms
+            - text: リファレンス
+              url: /microsoft-edge/webview2/webview2-api-reference
+    - title: ヘルプとサポート
+      items:
+        - summary: Microsoft Q&A コミュニティの専門家からアドバイスや回答を得る
+          title: Microsoft Q&A コミュニティのサポート
+          url: /answers/topics/ms-edge.html
+        - summary: Microsoft は、ご利用のアプリケーションが Microsoft Edge で動作することをお約束します。  最新バージョンの Microsoft Edge でビジネス アプリや Web サイトに問題が発生した場合、Microsoft は追加費用なしでアプリや Web サイトの修正をサポートします。  特典の詳細については、資格要件をご覧ください。
+          title: App Assure を利用して無料のヘルプを取得する
+          url: 'https://fasttrack.microsoft.com/portal'
+        - summary: 'ビジネスにおいて Microsoft Edge のテクニカル サポートがすぐに必要な場合、さまざまなプランを利用して Microsoft の 1:1 サポートを受けて、必要なレベルのサポートを得ることができます。'
+          title: ビジネス向け Microsoft サポート
+          url: 'https://support.microsoft.com/supportforbusiness/productselection?sapId=a77ee9b7-b6b6-aa08-d7b9-887ebe228207'
+        - summary: ユーザーの役に立つサポート リソースが利用可能です。
+          title: ユーザー サポート
+          url: 'https://support.microsoft.com/microsoft-edge'
+    - title: リファレンスとレガシー ドキュメント
+      items:
+        - title: リファレンス
+          links:
+            - text: Microsoft Edge ユーザー エージェント文字列
+              url: /microsoft-edge/web-platform/user-agent-string
+            - text: プラットフォームの状態
+              url: 'https://developer.microsoft.com/microsoft-edge/platform/status'
+            - text: Visual Studio Code
+              url: /microsoft-edge/visual-studio-code/index
+            - text: プライバシーに関するホワイトペーパー
+              url: /microsoft-edge/privacy-whitepaper
+        - title: Microsoft Edge Legacy のドキュメント
+          links:
+            - text: Microsoft Edge Legacy のドキュメント
+              url: /archive/microsoft-edge/legacy/developer/

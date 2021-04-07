@@ -7,12 +7,12 @@ ms.date: 03/16/2021
 ms.topic: conceptual
 ms.prod: microsoft-edge
 keywords: プログレッシブ Web アプリ、PWA、Edge、Windows、PWABuilder、Web マニフェスト、サービス ワーカー、プッシュ
-ms.openlocfilehash: 6a40742c1065dbc3b8aaeeeb469ab9154629a47a
-ms.sourcegitcommit: f605e4e27fed88aca286f2ae236e27f9a396b517
+ms.openlocfilehash: 3023c38790185ca6989f4a487928abc79b1d5a2c
+ms.sourcegitcommit: 146072bf606b84e5145a48333abf9c6b892a12d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "11474917"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "11480196"
 ---
 # <a name="get-started-with-progressive-web-apps-chromium"></a><span data-ttu-id="06726-104">プログレッシブ Web アプリ (Chromium) の使用を開始する</span><span class="sxs-lookup"><span data-stu-id="06726-104">Get started with Progressive Web Apps (Chromium)</span></span>  
 
@@ -58,7 +58,7 @@ npm start
 
 ## <a name="get-started-building-a-pwa"></a><span data-ttu-id="06726-125">PWA の構築を開始する</span><span class="sxs-lookup"><span data-stu-id="06726-125">Get started building a PWA</span></span>  
 
-<span data-ttu-id="06726-126">簡単な Web アプリが作成されたので、PWA として拡張するには、PWA の 3 つの要件を追加します。</span><span class="sxs-lookup"><span data-stu-id="06726-126">Now that you have a simple web app, extend it as a PWA by adding the three requirements for PWAs</span></span><!--[3 requirements for PWAs][PwaEdgehtmlIndexRequirements]--><span data-ttu-id="06726-127">: [HTTPS](#step-1---use-https) [、Web アプリ マニフェスト、](#step-2---create-a-web-app-manifest)および [サービス ワーカー](#step-3---add-a-service-worker)。</span><span class="sxs-lookup"><span data-stu-id="06726-127">: [HTTPS](#step-1---use-https), a [Web App Manifest](#step-2---create-a-web-app-manifest), and a [Service Worker](#step-3---add-a-service-worker).</span></span>  
+<span data-ttu-id="06726-126">簡単な Web アプリが作成されたので、PWA として拡張するには、PWA の 3 つの要件を追加します。</span><span class="sxs-lookup"><span data-stu-id="06726-126">Now that you have a simple web app, extend it as a PWA by adding the three requirements for PWAs</span></span><!--[3 requirements for PWAs][ArchiveMicrosoftEdgeLegacyDeveloperPWAsIndexRequirements]--><span data-ttu-id="06726-127">: [HTTPS](#step-1---use-https) [、Web アプリ マニフェスト、](#step-2---create-a-web-app-manifest)および [サービス ワーカー](#step-3---add-a-service-worker)。</span><span class="sxs-lookup"><span data-stu-id="06726-127">: [HTTPS](#step-1---use-https), a [Web App Manifest](#step-2---create-a-web-app-manifest), and a [Service Worker](#step-3---add-a-service-worker).</span></span>  
 
 ### <a name="step-1---use-https"></a><span data-ttu-id="06726-128">手順 1 - HTTPS を使用する</span><span class="sxs-lookup"><span data-stu-id="06726-128">Step 1 - Use HTTPS</span></span>  
 
@@ -335,7 +335,7 @@ self.addEventListener('notificationclick', function (event) {
 
 <!-- links -->  
 
-<!--[PwaEdgehtmlIndexRequirements]: ../progressive-web-apps/index.md#requirements "Requirements - Progressive Web Apps \(EdgeHTML\) on Windows | Microsoft Docs"  -->  
+<!--[ArchiveMicrosoftEdgeLegacyDeveloperPWAsIndexRequirements]: /archive/microsoft-edge/legacy/developer/progressive-web-apps/index#requirements "Requirements - Progressive Web Apps \(EdgeHTML\) on Windows | Microsoft Docs"  -->  
 
 [VisualStudioNodejsTutorialPublishAzureAppService]: /azure/javascript/tutorial-vscode-azure-app-service-node-03 "コード コード Node.jsを使用して Azure にアプリをVisual Studioする|Microsoft Docs"  
 

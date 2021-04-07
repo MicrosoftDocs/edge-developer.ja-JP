@@ -4,17 +4,17 @@ description: ベスト プラクティスと Accessible Rich Internet Applicatio
 title: ビルド |アクセシビリティ
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 01/07/2021
+ms.date: 04/06/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: アクセシビリティ、開発者向けのアクセシビリティ、アクセス可能な Web サイト、エッジ、Web 開発、ARIA、開発者、UIA、UI オートメーション
 ms.custom: seodec18
-ms.openlocfilehash: 69f0576b39815708d01477972abad1f8bdc9486e
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: 3bc16450a3a64c06d290d1d3e112a9b2faecbe14
+ms.sourcegitcommit: 146072bf606b84e5145a48333abf9c6b892a12d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11397889"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "11480154"
 ---
 # <a name="building-accessible-websites"></a><span data-ttu-id="a86c3-104">アクセス可能な Web サイトの構築</span><span class="sxs-lookup"><span data-stu-id="a86c3-104">Building Accessible Websites</span></span>
 
@@ -144,7 +144,7 @@ ms.locfileid: "11397889"
 
 ### <a name="accessibility-techniques--tools"></a><span data-ttu-id="a86c3-198">アクセシビリティの手法&ツール</span><span class="sxs-lookup"><span data-stu-id="a86c3-198">Accessibility Techniques & Tools</span></span>
 
-#### [<a name="accessibility-creating-accessible-extension-icons-for-microsoft-edge"></a><span data-ttu-id="a86c3-199">アクセシビリティ: Microsoft Edge のアクセシビリティ対応の拡張機能アイコンを作成する</span><span class="sxs-lookup"><span data-stu-id="a86c3-199">Accessibility: Creating accessible extension icons for Microsoft Edge</span></span>](../../edgehtml/extensions/guides/accessibility.md)
+#### [<a name="accessibility-creating-accessible-extension-icons-for-microsoft-edge"></a><span data-ttu-id="a86c3-199">アクセシビリティ: Microsoft Edge のアクセシビリティ対応の拡張機能アイコンを作成する</span><span class="sxs-lookup"><span data-stu-id="a86c3-199">Accessibility: Creating accessible extension icons for Microsoft Edge</span></span>](/archive/microsoft-edge/legacy/developer/extensions/guides/accessibility)
 
 <span data-ttu-id="a86c3-200">Microsoft Edge のアクセス可能な拡張機能アイコンの作成に関するガイダンスを参照してください。</span><span class="sxs-lookup"><span data-stu-id="a86c3-200">Get guidance on creating accessible extensions icons for Microsoft Edge.</span></span>
 
