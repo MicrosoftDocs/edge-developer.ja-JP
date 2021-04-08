@@ -3,16 +3,16 @@ description: Microsoft Edge と Android 全体でサイトのパフォーマン�
 title: 他のブラウザーをエミュレートしてテストする
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/12/2021
+ms.date: 04/06/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 6b1239db373bd13d798ac90ac47a10878d07cdcb
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: 22153a54df7c5b92236a745be8e3bbac9a52d247
+ms.sourcegitcommit: fa8bedfc83fbd1c4ce7bda8c69586c4f24007beb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11398687"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "11481367"
 ---
 <!-- Copyright Meggin Kearney and Paul Bakaus
 
@@ -27,7 +27,6 @@ ms.locfileid: "11398687"
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.  -->
-
 # <a name="emulate-and-test-other-browsers"></a>他のブラウザーをエミュレートしてテストする  
 
 Microsoft Edge と Android 全体でサイトのパフォーマンスが高いという点で、仕事は終わるものではありません。  デバイス モードでは、iPhone などの他のデバイスの範囲をシミュレートすることができますが、他のブラウザーが提供するエミュレーションのソリューションを確認してください。  
@@ -48,7 +47,7 @@ Firefox には[][MDNResponsiveDesignMode]応答性の高いデザイン ビュ�
 
 ### <a name="edgehtml-emulation"></a>EdgeHTML エミュレーション  
 
-Windows Phone をエミュレートするには、Microsoft Edge \(EdgeHTML\) 組み込 [みエミュレーションを使用します][DevToolsEdgeHtmlEmulation]。  
+Windows Phone をエミュレートするには、Microsoft Edge \(EdgeHTML\) 組み込 [みエミュレーションを使用します][ArchiveMicrosoftEdgeDevtoolsEmulation]。  
 
 [IE 11 エミュレーションを使用][Ie11DevToolsEmulation]して、以前のバージョンのページでのページの外観をシミュレートInternet Explorer。  
 
@@ -136,7 +135,7 @@ Microsoft Edge \(EdgeHTML\) 仮想マシン \(VM\) を使用すると、VirtualB
 
 <!-- links -->  
 
-[DevToolsEdgeHtmlEmulation]: /microsoft-edge/devtools-guide/emulation "DevTools (EdgeHTML) - エミュレーション |Microsoft Docs"  
+[ArchiveMicrosoftEdgeDevtoolsEmulation]: /archive/microsoft-edge/legacy/developer/devtools-guide/emulation "エミュレーション |Microsoft Docs"  
 
 [Ie11DevToolsEmulation]: /previous-versions/windows/internet-explorer/ie-developer/samples/dn255001(v=vs.85) "ブラウザー、画面サイズ、および GPS の場所をエミュレート|Microsoft Docs"  
 

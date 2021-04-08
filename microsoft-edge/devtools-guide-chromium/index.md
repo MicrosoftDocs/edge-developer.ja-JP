@@ -1,147 +1,238 @@
 ---
 description: Microsoft Edge (Chromium) 開発者ツールについて
-title: Microsoft Edge (Chromium) 開発者ツール
+title: Microsoft Edge (クロム) 開発者ツールの概要
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 03/12/2021
-ms.topic: article
+ms.date: 04/07/2021
+ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: devtools
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 29ded7376ab1788998acf059c6677916a52d5d15
-ms.sourcegitcommit: e29cd1c393fc1f433dba8c3d8f260b425ade63a9
+ms.openlocfilehash: 3d91b0754f84579d770940503cf4a252e3926416
+ms.sourcegitcommit: fa8bedfc83fbd1c4ce7bda8c69586c4f24007beb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2021
-ms.locfileid: "11408277"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "11481441"
 ---
 # <a name="microsoft-edge-chromium-developer-tools-overview"></a>Microsoft Edge (クロム) 開発者ツールの概要  
 
-Microsoft Edge は、クロム オープンソース プロジェクトを採用しています。  新しい Microsoft Edge ブラウザーを使用すると、Web の互換性が向上し、さまざまな Web プラットフォームの断片化が軽減されます。  この変更により、Microsoft Edge で Web ページのビルドとテストが容易になります。  新しい Microsoft Edge は、他のクロム ベースのブラウザーで開いた場合、Web ページが期待通り動作するのに役立ちます。  クロムベースのブラウザーには、Google Chrome、Vivaldi、Opera、Brave、新しい Microsoft Edge が含まれます。  
+Microsoft Edge をインストールすると、ブラウザーが表示されます。 また、Web プロジェクトを検査、デバッグ、作成する強力な方法も提供します。  ブラウザーに同梱されている開発者ツールは、Chromium オープン ソース プロジェクトのツールに基づいているので、ツールについて既に理解している可能性があります。  この記事では、説明を短くするために、 と `Microsoft Edge Developer Tools` 呼ばれます `DevTools` 。  
 
-Web は、デバイスの種類が増え続け、さまざまな種類のデバイスで使い方が増え続け始めていました。  Web ページのテストに伴う複雑性とオーバーヘッドは急速に増加しています。  このような Web 開発者は、さまざまなシステムに対してテストする必要があります。  すべてのデバイスの種類とブラウザーで Web ページが適切に機能するために、特に小規模な会社で働く場合は、ほとんど不可能な場合があります。  新しい Microsoft Edge は、クロムに基づくものに変更しました。  Microsoft Edge チームは、Microsoft Edge Web プラットフォームを他のクロム ベースのブラウザーに合わせて配置することで、マトリックスを簡略化しました。  新しい Microsoft Edge は、クラス最高の開発エクスペリエンスを提供します。  このエクスペリエンスは、ブラウザー内や、日常使用する他の開発者ツール (コードなど) とVisual Studioされます。  
+DevTools を使用して、次の開発タスクについて確認し、詳細を確認します。  
 
-クロムベースのブラウザー開発者として、新しい Microsoft Edge ブラウザーに快適に対応する必要があります。  Microsoft Edge \(Chromium\) DevTools は、既に知っている開発者ツールと同様に機能します。  Microsoft Edge \(Chromium\) 開発者ツールは、Microsoft Edge \(Chromium\) DevTools または DevTools と呼ばれることが多い。  詳細については、「Microsoft Edge [(クロム) DevTools の新機能」に移動します][DevtoolsGuideChromiumWhatsNewIndex]。  
+*   [ブラウザーで現在の Web ページのライブを][DevtoolsGuideDomIndex] 検査および変更します。  
+*   [製品が異なるデバイスでどのように動作するのかをエミュレートし、][DevtoolsGuideDeviceModeIndex] 異なるネットワーク条件を満たしたモバイル環境をシミュレートします。  
+*   [ビジュアル インターフェイスを備えるライブ ツール][DevtoolsGuideInspectStylesEditFonts] を使用して、Web ページ内の要素のスタイルを検査、調整、および変更します。  
+*   [ブレークポイントのデバッグとライブ][DevtoolsGuideJavascriptIndex] コンソールを使用して JavaScript [をデバッグします][DevtoolsGuideConsoleIndex]。  
+*   製品 [のアクセシビリティ、パフォーマンス、互換性][DevtoolsGuideIssuesIndex] 、セキュリティの問題を確認し、DevTools を使用してそれぞれの問題を解決する方法について説明します。  
+*   [ネットワーク トラフィックを検査し][DevtoolsGuideNetworkIndex] 、問題の場所を確認します。  
+*   [ブラウザーがコンテンツをさまざまな形式で保存][DevtoolsGuideStorageSessionstorage] した場所を調します。  
+*   [製品のパフォーマンスを][DevtoolsGuideEvaluatePerformanceIndex] 評価して、メモリの問題 [とレンダリングの][DevtoolsGuideMemoryProblemsIndex] 問題 [を見つける][DevtoolsGuideRenderingToolsIndex]。  
+*   [開発環境を使用して][DevtoolsGuideSourcesIndex][、DevTools][DevtoolsGuideWorkspacesIndex]の変更をファイル システムと同期し、Web[からファイル][DevtoolsGuideJavascriptOverrides]を上書きします。  
+    
+<!-- Is the link meant to be local or session storage for "inspect where the browser stored content"? -->  
 
-:::image type="complex" source="./media/devtools.png" alt-text="Microsoft Edge (Chromium) DevTools" lightbox="./media/devtools.png":::
-   Microsoft Edge (Chromium) DevTools  
-:::image-end:::  
-
-以前に Microsoft Edge \(EdgeHTML\) 用に開発し、新しい Microsoft Edge を評価している場合は、Web ページをより簡単かつ迅速に構築およびテストするための優れた新しいツールが提供されます。  
+そして、より多くの。  すべては、DevTools を開き、各ツールをニーズに合わせてカスタマイズするときに開始されます。  
 
 ## <a name="open-the-devtools"></a>DevTools を開く  
 
-Microsoft Edge DevTools は、Microsoft Edge ブラウザーに直接組み込む一連のツールです。  DevTools を使用すると、ブラウザー内で以下のタスクを直接実行できます。  
+DevTools を開いて探索するには、次のいずれかのアクションを使用します。  
 
-*   HTML Web ページの検査と変更  
-*   CSS を編集し、Web ページのレンダリング方法をプレビューする  
-*   フロントエンド `console.log()` JavaScript コードのすべてのステートメントを確認する  
-*   スクリプトをデバッグし、ブレークポイントを設定し、コードを 1 行に 1 行にステップ実行する  
+*   Web ページ上の任意の要素にカーソルを合わせると、コンテキスト メニュー \(右クリック\) を開き、[検査] を **選択します**。  このアクションを実行すると、[要素] **ツールが開** きます。  
+*   `F12` を選択します。  
+*   `Ctrl` + `Shift` + `I` Windows/Linux または `Command` + `Option` + `I` macOS で選択します。  
     
-DevTools が提供する機能のその他の例を使用すると、Microsoft Edge で Web ページを簡単かつ迅速に構築およびテストできます。  
+:::row:::  
+   :::column span="":::  
+      :::image type="complex" source="./media/devtools-intro-inspect.msft.png" alt-text="任意の要素のコンテキスト メニューから [検査] を選択する" lightbox="./media/devtools-intro-inspect.msft.png":::  
+         任意 **の要素の** コンテキスト メニューから [検査] を選択する  
+      :::image-end:::  
+   :::column-end:::  
+   :::column span="":::  
+      :::image type="complex" source="./media/devtools-intro-inspect-devtools-open.png" alt-text="選択した要素が強調表示された DevTools が開きます" lightbox="./media/devtools-intro-inspect-devtools-open.png":::  
+         選択した要素が強調表示された DevTools が開きます  
+      :::image-end:::  
+   :::column-end:::  
+:::row-end:::  
 
-DevTools を開く方法  
+DevTools を操作するには、主に 2 つの方法があります。
+*   マウスを使用する  
+*   [キーボード ショートカット][DevtoolsGuideShortcutsIndex]。  キーボード ショートカットは、機能にすばやくアクセスする方法を提供し、アクセシビリティのために必要です。  Microsoft Edge DevTools チームは、キーボードやスクリーン リーダーなどの支援テクノロジを使用して、すべてのツールを利用するために一生懸命働きます。  DevTools でさまざまな機能を開く方法の詳細については [、「Microsoft Edge DevTools][DevtoolsGuideOpenIndex]キーボード ショートカット」に移動します。  
 
-*   選択する `F12` 
-*   `Ctrl` + `Shift` + `I` [\(Windows/Linux\) または `Command` + `Option` + `I` \(macOS\) を選択します。  
+## <a name="dock-the-devtools-in-your-browser"></a>ブラウザーに DevTools をドッキングする  
+
+DevTools を開いた場合、ブラウザーの左側にドッキングされます。  DevTools のドッキング位置を変更するには、次のアクションを実行します。  
+
+1.  **[DevTools のカスタマイズと制御]** \( `...` \) ボタンを選択します。  
+1.  ページ**\(** ドック側 \) を基準に**した DevTools**の配置の右側で、[ドック側] オプション**を選択**します。  
     
-サイト上の要素の HTML または CSS を表示する場合は、要素を右クリックし****、[検査] を選択して [要素] ツールに**移動**します。  要素の検査モードで DevTools を開く**場合**は `Ctrl` + `Shift` + `C` 、[\(Windows/Linux\) または `Command` + `Option` + `C` \(macOS\) を選択します。 要素 **の検査モードを** 使用すると、Web ページで要素を選択し、[要素] ツールに HTML と CSS を **表示** できます。  
+詳細については [、「Change Microsoft Edge DevTools placement (Undock、Dock to Bottom、Dock to Left)」に移動します][DevtoolsGuideCustomizePlacement]。  
 
-フロントエンド JavaScript コードからログを確認する場合や、スクリプトをすばやく実行する場合は、コンソール を開 **きます**。   DevTools で**コンソール**ツールを起動するには `Ctrl` + `Shift` + `J` 、[\(Windows/Linux\) または `Command` + `Option` + `J` \(macOS\) を選択します。  
+:::image type="complex" source="./media/devtools-intro-docking-menu.msft.png" alt-text="DevTools のドック側メニューのスクリーンショット" lightbox="./media/devtools-intro-docking-menu.msft.png":::  
+   DevTools のドック側メニューのスクリーンショット  
+:::image-end:::  
 
-## <a name="core-tools"></a>コア ツール  
+[ **ドック側] で**、次のレイアウト オプションを選択します。  
 
-:::image type="complex" source="./media/devtools-core-tools.png" alt-text="Microsoft Edge (Chromium) DevTools コア ツール" lightbox="./media/devtools-core-tools.png":::
-   Microsoft Edge (Chromium) DevTools コア ツール  
-:::image-end::: 
+*   **別のウィンドウにドッキングを解除します**。   複数のモニターを使用したり、フルスクリーン アプリで作業する必要がある場合に役立ちます。  
+*   **左にドッキングするか** 、 **右にドッキングします**。  DevTools を Web 製品と並べて維持するのに役立ち、モバイル デバイスをエミュレートすると優れています。  [ **左へドック] オプションと** **[右へドッキング** ] オプションは、高解像度ディスプレイで最適に機能します。  エミュレーション デバイスの詳細については [、「Microsoft Edge DevTools で][DevtoolsGuideDeviceModeIndex]モバイル デバイスをエミュレートする」に移動します。  
+*   **下にドッキングします**。  水平表示領域が足りない場合や、DOM またはコンソールで長いテキストをデバッグする場合に役立 **ちます**。  
+    
+:::row:::  
+   :::column span="":::  
+      :::image type="complex" source="./media/devtools-intro-docking-left.msft.png" alt-text="[左にドッキング] を選択する" lightbox="./media/devtools-intro-docking-left.msft.png":::  
+         [左 **にドッキング] を選択する**  
+      :::image-end:::  
+   :::column-end:::  
+   :::column span="":::  
+      :::image type="complex" source="media/devtools-intro-docking-bottom.msft.png" alt-text="[下へドッキング] を選択する" lightbox="media/devtools-intro-docking-bottom.msft.png":::  
+         [下 **へドッキング] を選択する**  
+      :::image-end:::  
+   :::column-end:::  
+:::row-end:::  
+:::row:::  
+   :::column span="":::  
+      :::image type="complex" source="media/devtools-intro-docking-right.msft.png" alt-text="[右へドッキング] を選択する" lightbox="media/devtools-intro-docking-right.msft.png":::  
+         [右 **へドッキング] を選択する**  
+      :::image-end:::  
+   :::column-end:::  
+   :::column span="":::  
+      :::image type="complex" source="media/devtools-intro-docking-own-window.msft.png" alt-text="[別のウィンドウにドッキングを解除する] を選択する" lightbox="media/devtools-intro-docking-own-window.msft.png":::  
+         [別 **のウィンドウにドッキングを解除する] を選択する**  
+      :::image-end:::  
+   :::column-end:::  
+:::row-end:::  
 
-Microsoft Edge \(Chromium\) DevTools には、次のツールが含まれています。  
+## <a name="learn-about-the-core-tools"></a>コア ツールの詳細  
 
-*   HTML **と** CSS の編集、アクセシビリティ プロパティの検査、イベント リスナーの表示、DOM ミューテーション ブレークポイントの設定を行う要素ツール  
-*   ログ **メッセージの** 確認とフィルター処理、JavaScript オブジェクトと DOM ノードの検査、および選択したウィンドウまたはフレームのコンテキストでの JavaScript の実行を行うコンソール  
-*   コード **を開** いて編集し、ブレークポイントを設定し、コードをステップ実行し、Web ページの状態を表示するソース ツール
-*   ネットワーク **キャッシュ** とブラウザー キャッシュからの要求と応答を監視および検査するネットワーク ツール   
-*   サイト **で** 必要な時間とシステム リソースをプロファイルするパフォーマンス ツール  
-*   メモリ **リソース** の使用を測定し、異なる状態のコード ランタイムでヒープ スナップショットを比較するメモリ ツール  
-*   Web **アプリ** マニフェスト、サービス ワーカー、およびサービス ワーカー キャッシュを検査、変更、およびデバッグするアプリケーション ツール。  また、アプリケーション ツールからストレージ、データベース、キャッシュを検査および **管理** することもできます。  
-*   セキュリティ **の** 問題をデバッグし、Web ページに HTTPS が適切に実装されていることを確認するためのセキュリティ ツール。  HTTPS は、サイトとサイト上に個人情報を入力するユーザーの両方に対して、重要なセキュリティとデータの整合性を提供します。  
-*   Web **ページの監査** を実行する監査ツール \( **名前が変更**されました。  監査の結果は、次の方法でサイトの品質を向上させるのに役立ちます。  
-    *   Web ページへのアクセス、セキュリティ保護、パフォーマンスに関する一般的なエラーをキャッチします。  
-    *   各エラーを修正します。  
-    *   PWA を構築します。  
+DevTools を使用すると、ブラウザーに現在表示されている Web 製品を検査、デバッグ、および変更する機能が提供されます。  ほとんどのツールは、変更をライブで表示します。  ライブ更新プログラムを使用すると、Web プロジェクトを更新またはビルドすることなく、Web プロジェクトの外観とナビゲーションや機能を絞り込むツールが非常に便利です。  DevTools を使用すると、コンピューター上の Web ベースのサード パーティ製品を変更することもできます。  
+
+DevTools は数年間にわたり成長しました。  DevTools は、最初にツールを開く際に学習するのが難しいと考える場合があります。  次のテキストでは、さまざまな部分をすばやく紹介します。  メイン ツールバーにはいくつかのセクションが用意され、セクションは左から右に並べ替えます。  
+
+:::image type="complex" source="./media/devtools-intro-menu-bar.msft.png" alt-text="さまざまなセクションを説明するラベル付き DevTools のメニュー バーのスクリーンショット。  順序: ツール、デバイス エミュレーション ツール、ツール タブ グループ、JavaScript エラー、問題、設定、フィードバック、カスタマイズ、および閉じるを検査します。" lightbox="./media/devtools-intro-menu-bar.msft.png":::  
+   さまざまなセクションを説明するラベル付き DevTools のメニュー バーのスクリーンショット。  順序: 検査ツール、デバイス エミュレーション ツール、ツール タブ グループ、JavaScript エラー、問題、設定、フィードバック、カスタマイズ、閉じる。  
+:::image-end:::  
+
+*   検査ツールを使用すると、現在の Web ページで要素を選択できます。  アクティブ化した後、Web ページの別の部分にマウスを移動して、要素に関する詳細情報と、サイズ、パディング、余白を表示するカラー オーバーレイを取得できます。  
+    
+    :::image type="complex" source="./media/devtools-intro-inspect-tool.msft.png" alt-text="この記事の最初の見出しが選択された検査ツールのスクリーンショット" lightbox="./media/devtools-intro-inspect-tool.msft.png":::  
+       この記事の最初の見出しが選択された検査ツールのスクリーンショット  
+    :::image-end:::  
+    
+*   デバイス [エミュレーション ツールは][DevtoolsGuideDeviceModeIndex] 、エミュレートされたデバイス モードで現在の Web 製品を表示します。  デバイス **エミュレーション ツールを** 使用すると、ブラウザーのサイズを変更するときに製品の反応を実行してテストできます。  また、モバイル デバイス上のレイアウトと動作を推定することもできます。  
+    
+    :::image type="complex" source="./media/devtools-intro-device-emulation.msft.png" alt-text="エミュレートされた携帯電話でのこの記事の DevTools 表示のスクリーンショット" lightbox="./media/devtools-intro-device-emulation.msft.png":::  
+       エミュレートされた携帯電話でのこの記事の DevTools 表示のスクリーンショット  
+    :::image-end:::  
+    
+*   [ツール] タブ グループは、さまざまなシナリオで使用されるさまざまなツールを表すタブのグループです。  各ツールをカスタマイズして、コンテキストに基づいて各ツールが変更される場合があります。  その他のツールのドロップダウン メニューを開く場合は、[ **その他]** タブ \( `>>` \) ボタンを選択します。  各ツールは、後で次のセクションで紹介します。  
+*   [ツール] タブ グループの横にはオプションのエラーと問題のショートカットがあります。  現在の Web ページで JavaScript のエラーや問題が発生すると、ショートカットが表示されます。  Open **Console to view # errors, # warnings** \(**JavaScript Errors**\) ボタンは、赤い円を表示し、その後に JavaScript エラーの `X` 数を表示します。  コンソールを開き [、][DevtoolsGuideConsoleIndex] エラーの詳細を確認するには **、[JavaScript Errors] ボタンを選択** します。  [ **表示する問題を開く] #issues** \(**Issues**\) ボタンは、青いメッセージ アイコンの後に問題の数が続きます。  [問題] ツール [を開く][DevtoolsGuideIssuesIndex] 場合は、[問題] **ボタンを選択** します。  
+*   [ **設定]** ボタンには、歯車アイコンが表示されます。  DevTools の設定 Web ページ **を開** く場合は、[設定] ボタン **を選択** します。  [ **設定]** Web ページには、 **基本設定の**変更、 **実験のオン**、その他の多くのメニューが表示されます。  
+*   [ **フィードバックの送信]** ボタンは、その横にチャット バブルが表示された torso を表示します。  [フィードバックの送信 **] ダイアログを開** くには、[フィードバックの送信 **] ボタンを選択** します。  [ **フィードバックの送信** ] ダイアログでは、何が起こったのかを説明する情報を入力し、スクリーンショットを自動的に含めることができます。  DevTools チームと接続して、問題、問題、またはアイデアを提案するために使用します。  
+*   **[Devtools \(** \) のカスタマイズと制御] ボタン `...` をクリックすると、ドロップダウン メニューが開きます。  DevTools をドッキングする場所、検索場所、さまざまなツールを開く場所を定義できます。  
+    
+[ツール] タブ グループで、DevTools で使用できるさまざまなツールを開く場合があります。  次の一覧では、DevTools で最も一般的に使用されるツールについて説明します。  
+
+*   **ようこそ**。  DevTools の新機能、チームに連絡する方法、および特定の機能に関する情報が含まれています。  
+*   **要素**.  HTML と CSS を編集または検査できます。  ツールの両方を編集し、ブラウザーに変更内容を表示できます。  
+*   [コンソール][DevtoolsGuideConsoleIndex].  ログ メッセージを表示およびフィルター処理できます。  ログ メッセージは、ネットワーク要求や開発者が生成したログなど、ブラウザーの自動ログです。  現在のウィンドウまたはフレームのコンテキストで **、コンソール** で JavaScript を直接実行することもできます。  
+*   [Sources][DevtoolsGuideSourcesIndex].  コード エディターと JavaScript デバッガー。  プロジェクトの編集、スニペットの管理、現在のプロジェクトのデバッグを行えます。  
+*   [ネットワーク][DevtoolsGuideNetworkIndex].  ネットワークキャッシュとブラウザー キャッシュからの要求または応答を監視および検査できます。  ニーズに合わせて要求と応答をフィルター処理し、さまざまなネットワーク条件をシミュレートできます。  パフォーマンス、メモリ、アプリケーション、セキュリティ、監査など****、その**** 他の**** 特殊**な**ツールも**利用できます**。  
+
+## <a name="power-tip-use-the-command-menu"></a>電源ヒント: コマンド メニューを使用する  
+
+DevTools には、Web 製品で使用する多くの機能と機能が提供されています。  さまざまな方法で DevTools の各部分にアクセスしますが、必要な機能に最も速くアクセスするには、コマンド メニューを使用します。  詳細については、[Microsoft Edge DevTools コマンド] メニューの [ [コマンドの実行] に移動します][DevtoolsGuideCommandMenuIndex]。  コマンド メニューを開く場合は、次のいずれかの操作を実行します。  
+
+*   `Control` + `Shift` + `P` \(Windows, Linux\) または `Command` + `Shift` + `P` \(macOS\) を選択します。  
+*   **[DevTools \(** \) のカスタマイズと制御 `...` ] を選択し、[コマンドの実行]**を選択します**。  
+
+:::image type="complex" source="./media/devtools-intro-command-menu.msft.png" alt-text="DevTools のコマンド メニューのスクリーンショット" lightbox="./media/devtools-intro-command-menu.msft.png":::  
+DevTools のコマンド メニューのスクリーンショット  
+:::image-end:::  
+
+コマンド メニューでは、DevTools の機能を表示、非表示、または実行するコマンドを入力できます。  コマンド メニューを開いて、変更という単語を入力 **し、[ドロ**ワーの変更の表示] **を選択します**。  変更 **ツール** が開き、CSS を編集するときに便利ですが、DevTools UI で見つけるのは困難です。  
+
+:::row:::  
+   :::column span="":::  
+      :::image type="complex" source="./media/devtools-intro-command-menu-show-changes.msft.png" alt-text="コマンド メニューは、変更を入力した後にオプションを表示します。" lightbox="./media/devtools-intro-command-menu-show-changes.msft.png":::  
+         コマンド メニューは、入力後にオプションを表示します。 `changes`  
+      :::image-end:::  
+   :::column-end:::  
+   :::column span="":::  
+      :::image type="complex" source="./media/devtools-intro-showing-changes.msft.png" alt-text="変更ツールを開いた DevTools" lightbox="./media/devtools-intro-showing-changes.msft.png":::  
+         変更ツールを開いた**DevTools**  
+      :::image-end:::  
+   :::column-end:::  
+:::row-end:::  
+
+## <a name="customize-the-devtools"></a>DevTools をカスタマイズする  
+
+DevTools は、ニーズや作業方法に合わせてカスタマイズできます。  設定を変更するには、次のいずれかの操作を実行します。  
+
+*   [ **設定]** \(右上の歯車アイコン\) を選択します。  
+*   を `F1` 選択するか `?` 、 を選択します。  
+    
+[基本設定 **] セクション** では、DevTools のいくつかの部分を変更できます。  たとえば、[ブラウザー言語の一致 **]** 設定を使用して、ブラウザーで使用する DevTools で同じ言語を使用できます。  別の例として、 **テーマ設定を** 使用して DevTools のテーマを変更します。  
+
+:::image type="complex" source="media/devtools-intro-all-settings.msft.png" alt-text="DevTools のすべての設定のスクリーンショット" lightbox="./media/devtools-intro-all-settings.msft.png":::  
+   DevTools のすべての設定のスクリーンショット  
+:::image-end:::  
+
+また、次の機能を含む高度な機能の設定を変更することもできます。    
+
+*   [Workspaces][DevtoolsGuideWorkspacesIndex].  
+*   [リストを無視] を使用して **ライブラリ コードをフィルター処理します**。  
+*   デバイス シミュレーション **とテスト** モードに含めるデバイスを定義します。  詳細については [、「Microsoft Edge DevTools でモバイル デバイスをエミュレートする」に移動します][DevtoolsGuideDeviceModeIndex]。  
+*   ネットワーク調整プロファイル **を選択** します。  
+*   シミュレートされた場所 **を定義します**。  
+*   キーボード ショートカットをカスタマイズします。  DevTools でコードと同じショートカットVisual Studioするには、次の操作を実行します。  
+    1.  プリセットから **[ショートカットの一致] を選択します**。  
+    1.  [コード **Visual Studio選択します**。  
         
-[!INCLUDE [audits-panel-note](./includes/audits-panel-note.md)]  
-
-フィードバックと [機能要求を送信します](#getting-in-touch-with-the-microsoft-edge-devtools-team)。  
-
-## <a name="extensions"></a>拡張機能  
-
-Web ページ \(または apps\) の構築中に問題を診断してデバッグすると、拡張機能を使用して DevTools にアクセスした可能性があります。 Microsoft Edge 拡張機能は [、Microsoft Edge アドオンから取得されます][MicrosoftEdgeAddonsExtensions]。  [Microsoft Edge アドオンで][MicrosoftEdgeAddonsExtensions]、[開発者ツール] カテゴリから DevTools 拡張機能を参照するか、特定の拡張機能を検索します。 ****  
-
-[Chrome Web ストア][GoogleChromeWebstoreExtensions]から拡張機能を追加することもできます。  
-
-:::image type="complex" source="./media/allow-extensions-from-stores.png" alt-text="Microsoft Edge の Chrome Web ストア" lightbox="./media/allow-extensions-from-stores.png":::
-   Microsoft Edge の Chrome Web ストア  
-:::image-end:::  
-
-上部の [他のストアからの拡張機能を許可する] を **選択** し、表示されるダイアログで [ **許可** ] を選択します。  
-
-> [!NOTE]
-> Microsoft Store 以外のソースからインストールされた拡張機能は未確認であり、ブラウザーのパフォーマンスに影響を与える可能性があります。  
-
-[Chrome **に追加] を** 選択して、DevTools 拡張機能を Microsoft Edge に追加します。  
-
-:::image type="complex" source="./media/install-extension-from-chrome-store.png" alt-text="Chrome Web ストアから Microsoft Edge に拡張機能を追加する" lightbox="./media/install-extension-from-chrome-store.png":::
-   Chrome Web ストアから Microsoft Edge に拡張機能を追加する  
-:::image-end:::  
-
-## <a name="shortcuts"></a>ショートカット  
-
-次のショートカットは、メインの DevTools ウィンドウを制御します。すべてのツール間で動作するか、または両方を実行します。  
-
-| Action | Windows/Linux | macOS |  
-|:--- |:--- | :--- |  
-| DevTools \(開いて最後に表示されたツール\) を表示/非表示にする | `F12` または `Ctrl`+`Shift`+`I` | `Command`+`Option`+`I` |  
-| コンソールの表示 | `Ctrl`+`Shift`+`J` | `Command`+`Option`+`J` |  
-| 要素を選択して **要素ツールに** HTML と CSS を表示できる要素の検査モードで DevTools を **表示** する | `Ctrl`+`Shift`+`C` | `Command`+`Option`+`C` |  
-| 設定の表示 | `?` または `Fn`+`F1` | `?` または `Fn`+`F1` |  
-| 次のパネルを表示する | `Ctrl`+`]` | `Command`+`]` |  
-| 前のパネルを表示する | `Ctrl`+`[` | `Command`+`[` |  
-| DevTools を最後に使用した位置にドッキングします。  DevTools がセッション全体の既定の位置に残っている場合、ショートカットは DevTools を別のウィンドウにドッキング解除します。 | `Ctrl`+`Shift`+`D` | `Command`+`Shift`+`D` |  
-| **デバイス モード**の切り替え | `Ctrl`+`Shift`+`M` | `Command`+`Shift`+`M` |  
-| 要素 **を選択し** 、[要素] ツールで HTML と CSS を表示できる要素の検査モードの切り **替** え | `Ctrl`+`Shift`+`C` | `Command`+`Shift`+`C` |  
-| コマンド メニューを表示する | `Ctrl`+`Shift`+`P` | `Command`+`Shift`+`P` |  
-| ドロワーの表示/非表示 | `Esc` | `Esc` |  
-| 更新。  キャッシュを使用して Web ページを更新します。  | `F5` または `Ctrl`+`R` | `Command`+`R` |  
-| ハードの更新。  Microsoft Edge にリソースの再ダウンロードと再読み込みを強制的に行います。  使用されるリソースは、キャッシュされたバージョンから取得される可能性があります。 | `Ctrl`+`F5` または `Ctrl`+`Shift`+`R` | `Command`+`Shift`+`R` |  
-| 現在のパネル内のテキストを検索します。  監査、アプリケーション、およびセキュリティ ツールではサポートされていません | `Ctrl`+`F` | `Command`+`F` |  
-| ドロワーに検索ツールを表示し、読み込まれたすべてのリソースでテキストを検索できます | `Ctrl`+`Shift`+`F` | `Command`+`Option`+`F` |  
-| ソース パネルでファイルを開く | `Ctrl`+`O` または `Ctrl`+`P` | `Command`+`O` または `Command`+`P` |  
-| 拡大する | `Ctrl`+`Shift`+`+` | `Command`+`Shift`+`+` |  
-| 縮小 | `Ctrl`+`-` | `Command`+`-` |  
-| 既定のズーム レベルを復元する | `Ctrl`+`0` | `Command`+`0` |  
-| スニペットを実行する | `Ctrl`+`O``Ctrl` + `P` または、次 `!` にスクリプトの名前を入力してから、 `Enter` | を `Command` + `O` 選択 `Command` + `P` するか、 `!` スクリプトの名前を入力してから、 `Enter` |  
-| 編集できない HTML ソース コードを新しいタブに表示する | `Ctrl`+`U` | 該当せず |  
-
-> [!NOTE]
-> デバッグ中にブレークポイントで一時停止している場合は、最初に**更新**ショートカットがランタイムを再開します。  
-
-## <a name="see-also"></a>関連項目  
-
-*   [初級向け DevTools: HTML と DOM の使用を開始する][DevtoolsGuideChromiumBeginnersHtml]  
-*   [Microsoft Edge (Chromium) DevTools プロトコル][DevtoolsProtocolChromiumIndex]  
+    :::image type="complex" source="./media/devtools-intro-match-keys.msft.png" alt-text="すべてのキーボード ショートカットとメニューのスクリーンショットを、コード内のショートカットに一致Visual Studioします。" lightbox="./media/devtools-intro-match-keys.msft.png":::  
+       すべてのキーボード ショートカットとメニューのスクリーンショットを、コード内のショートカットに一致Visual Studioします。  
+    :::image-end:::  
     
+## <a name="try-experimental-features"></a>実験的な機能を試す  
+
+DevTools チームは、DevTools の実験として新機能を提供します。  実験の完全な一覧を取得するには、DevTools **の**設定に移動し、[実験] **を選択します**。  各実験をオンまたはオフにできます。  どの実験が有益かを判断するのに役立ちます。  実験の詳細については、「実験機能」 [に移動します][DevtoolsGuideExperimentalFeaturesIndex]。  
+
 ## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームと連絡を取る  
 
 [!INCLUDE [contact DevTools team note](./includes/contact-devtools-team-note.md)]  
 
-近々ある [DevTools][DevtoolsGuideChromiumWhatsNewIndex] の最新の機能をプレビューする場合は、毎晩ビルドされる [Microsoft Edge Canary][MicrosoftedgeinsiderDownload] をダウンロードします。  
+近々ある [DevTools][DevtoolsGuideWhatsNew202102Devtools] の最新の機能をプレビューする場合は、毎晩ビルドされる [Microsoft Edge Canary][MicrosoftedgeinsiderDownload] をダウンロードします。  
 
+## <a name="see-also"></a>関連項目  
+
+*   [DevtoolsGuide for Beginners: HTML と DOM の使用を開始する][DevtoolsGuideBeginnersHtml]  
+*   [Microsoft Edge (Chromium) DevTools プロトコル][DevtoolsProtocolIndex]  
+    
 <!-- links -->  
 
-[DevtoolsGuideChromiumBeginnersHtml]: /microsoft-edge/devtools-guide-chromium/beginners/html "初級向け DevTools: HTML と DOM の使用を開始する | Microsoft Docs"  
-[DevtoolsGuideChromiumWhatsNewIndex]: /microsoft-edge/devtools-guide-chromium/whats-new/2021/02/devtools "Microsoft Edge (Chromium) DevTools の新機能 | Microsoft Docs"  
-[DevtoolsProtocolChromiumIndex]: /microsoft-edge/devtools-protocol-chromium "Microsoft Edge (Chromium) DevTools プロトコル | Microsoft Docs"  
+[DevtoolsGuideBeginnersHtml]: ./beginners/html.md "初級者向け DevTools: HTML と DOM の使用を|Microsoft Docs"  
+[DevtoolsGuideCommandMenuIndex]: ./command-menu/index.md "[Microsoft Edge DevTools コマンド] メニューメニューを使用してコマンドを実行|Microsoft Docs"  
+[DevtoolsGuideConsoleIndex]: ./console/index.md "コンソールの概要|Microsoft Docs"  
+[DevtoolsGuideCustomizePlacement]: ./customize/placement.md "Microsoft Edge DevTools の配置を変更する (Undock、Dock to Bottom、Dock to Left) |Microsoft Docs"  
+[DevtoolsGuideDeviceModeIndex]: ./device-mode/index.md "Microsoft Edge DevTools でモバイル デバイスをエミュレートする | Microsoft Docs"  
+[DevtoolsGuideDomIndex]: ./dom/index.md "DOM ファイルの表示と変更を開始|Microsoft Docs"  
+[DevtoolsGuideEvaluatePerformanceIndex]: ./evaluate-performance/index.md "ランタイム パフォーマンス の分析の開始|Microsoft Docs"  
+[DevtoolsGuideExperimentalFeaturesIndex]: ./experimental-features/index.md "実験的な機能|Microsoft Docs"  
+[DevtoolsGuideMemoryProblemsIndex]: ./memory-problems/index.md "メモリの問題を修正|Microsoft Docs"  
+[DevtoolsGuideInspectStylesEditFonts]: ./inspect-styles/edit-fonts.md "[スタイル] ウィンドウの [CSS フォントのスタイルと設定を編集|Microsoft Docs"  
+[DevtoolsGuideIssuesIndex]: ./issues/index.md "Microsoft Edge DevTools の問題ツールに関する問題を見つけて修正する | Microsoft Docs"  
+[DevtoolsGuideJavascriptIndex]: ./javascript/index.md "Microsoft Edge DevTools の JavaScript のデバッグの|Microsoft Docs"  
+[DevtoolsGuideJavascriptOverrides]: ./javascript/overrides.md "Microsoft Edge DevTools を使用して Web ページ リソースをローカル コピーでオーバーライド|Microsoft Docs"  
+[DevtoolsGuideNetworkIndex]: ./network/index.md "Microsoft Edge DevTools サーバーでネットワーク アクティビティを|Microsoft Docs"  
+[DevtoolsGuideOpenIndex]: ./open/index.md "Microsoft Edge DevTools を開く | Microsoft Docs"  
+[DevtoolsGuideRenderingToolsIndex]: ./rendering-tools/index.md "ランタイム パフォーマンス の分析|Microsoft Docs"  
+[DevtoolsGuideShortcutsIndex]: ./shortcuts/index.md "Microsoft Edge DevTools キーボード ショートカット |Microsoft Docs"  
+[DevtoolsGuideSourcesIndex]: ./sources/index.md "ソース ツールの概要|Microsoft Docs"  
+[DevtoolsGuideStorageSessionstorage]: ./storage/sessionstorage.md "Microsoft Edge DevTools を使用してセッション ストレージを表示および編集|Microsoft Docs"  
+[DevtoolsGuideWhatsNew202102Devtools]: ./whats-new/2021/02/devtools.md "DevTools (Microsoft Edge 90) の新機能 |Microsoft Docs"  
+[DevtoolsGuideWorkspacesIndex]: ./workspaces/index.md "Workspaces を使用してファイルを編集|Microsoft Docs"  
+[DevtoolsProtocolIndex]: ../devtools-protocol-chromium/index.md "Microsoft Edge (Chromium) DevTools プロトコルの概要 | Microsoft Docs"  
 
 [MicrosoftEdgeAddonsExtensions]: https://microsoftedge.microsoft.com/addons/category/Edge-Extensions "Microsoft Edge アドオン"  
 
