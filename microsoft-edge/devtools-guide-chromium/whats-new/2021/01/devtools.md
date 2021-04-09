@@ -3,17 +3,17 @@ description: 新機能ツールが Welcome になりました。[スタイル] �
 title: DevTools の新機能 (Microsoft Edge 89)
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 03/15/2021
+ms.date: 03/19/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
 ms.localizationpriority: high
-ms.openlocfilehash: f04884c4022394ad96f1bd47236047d16ae5ccb9
-ms.sourcegitcommit: 4b9fb5c1176fdaa5e3c60af2b84e38d5bb86cd81
+ms.openlocfilehash: d823408b40644585b885ad52201f7080bd542549
+ms.sourcegitcommit: fa8bedfc83fbd1c4ce7bda8c69586c4f24007beb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "11439648"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "11481360"
 ---
 <!-- Copyright Jecelyn Yeen 
 
@@ -98,9 +98,9 @@ Flexbox のデバッグ機能は、開発途中です。  次の 2 つの機能�
    :::column-end:::
 :::row-end:::  
 
-### <a name="display-alignment-icons-and-gridlines-when-flexbox-layouts-change-using-css-properties"></a>CSS プロパティを使用して Flexbox レイアウトが変更された場合に配置アイコンとグリッド線を表示  
+### <a name="display-alignment-icons-and-visual-guides-when-flexbox-layouts-change-using-css-properties"></a>CSS プロパティを使用して Flexbox レイアウトが変更された場合に配置アイコンとビジュアル ガイドを表示する  
 
-<!--  Title: Display alignment icons and gridlines for changes to Flexbox layouts from CSS properties  -->  
+<!--  Title: Display alignment icons and visual guides for changes to Flexbox layouts from CSS properties  -->  
 <!--  Subtitle:  CSS autocomplete in the Styles tool now displays icons next to Flexbox properties to help you review the effect a property has on your Flexbox layout -->  
 
 :::image type="icon" source="../../media/2020/06/experimental-tag-14px.msft.png":::  
@@ -416,7 +416,7 @@ DevTools では、親フレームで専用のサービス ワーカーが一覧�
 
 ## <a name="download-the-microsoft-edge-preview-channels"></a>Microsoft Edge プレビュー チャネルをダウンロード  
 
-Windows、Linux、または macOS を使用している場合は、既定の開発ブラウザーとして [Microsoft Edge プレビュー チャネル][MicrosoftEdgePreviewChannels] の使用を検討してください。  プレビュー チャネルを使用すると、最新の DevTools 機能にアクセスできます。  
+Windows、Linux、または macOS を使用している場合は、 既定の開発ブラウザーとして [Microsoft Edge プレビュー チャネル][MicrosoftEdgePreviewChannels]の使用を検討してください。  プレビュー チャネルを使用すると、最新の DevTools 機能にアクセスできます。  
 
 ## <a name="getting-in-touch-with-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームに連絡  
 
