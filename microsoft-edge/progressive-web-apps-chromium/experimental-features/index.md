@@ -3,16 +3,16 @@ description: Microsoft Edge for Web Apps の最新の実験的機能
 title: 実験的な機能|プログレッシブ Web アプリ
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 04/02/2021
+ms.date: 04/09/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge, 実験, プログレッシブ Web アプリ, Web アプリ, PWA, PWA
-ms.openlocfilehash: 587797bc8577f1c1aaca42394eecb997d21e9955
-ms.sourcegitcommit: f605e4e27fed88aca286f2ae236e27f9a396b517
+ms.openlocfilehash: 5ab2ab0a727d1eb52f61a01ea64b52bc1c09abce
+ms.sourcegitcommit: f6a3ab7b13adf05dbe7a4bf65ee67c9b0f6fab95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "11474975"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "11482158"
 ---
 # <a name="experimental-features-in-progressive-web-apps-pwas"></a>プログレッシブ Web アプリ (PWA) の実験的な機能  
 
@@ -62,7 +62,8 @@ Origin Trials の詳細については [、「Microsoft Edge Origin Trials Devel
 | 機能 | Microsoft Edge バージョン | プラットフォーム |  
 |:--- |:--- |:--- |  
 | [URI プロトコルの処理](#uri-protocol-handling) | 91 以降 | Windows |    
-| [URL リンクの処理](#url-link-handling) | 91 以降 | Windows|  
+| [URL リンクの処理](#url-link-handling) | 91 以降 | Windows|
+| [デスクトップ アプリのウィンドウ コントロール オーバーレイ](#window-controls-overlay-for-installed-desktop-web-apps) | 91 以降 | Windows 10|   
 | [OS ログインで実行する](#run-on-os-login) | 88 以降 | すべて |  
 | [ショートカット](#shortcuts) | 87 以降 | すべて |  
 | [ファイル処理](#file-handling) | 83 以降 | すべてのデスクトップ |  
@@ -171,7 +172,7 @@ Windows の Microsoft Edge で URL リンク[](#turn-on-experimental-features)�
 
 PWA は、URI が元の文字列の 1 つと一致する場合に URL 処理の URI と一致し、ブラウザーは、このアプリがそのような URI を処理することに基が同意したと検証します `url_handlers` 。  
 
-メンバーには、要求する PWA の範囲と他の無関係な起点を含むオ `url_handlers` リジンが含まれる。  URI を要求する PWA と同じスコープまたはドメインに制限しない場合、同じコンテンツに異なるドメイン名を使用できますが、同じ PWA で処理できます。  
+メンバーには、要求元 PWA の範囲と他の無関係な起点を含むオ `url_handlers` リジンが含まれる。  URI を要求する PWA と同じスコープまたはドメインに制限しない場合、同じコンテンツに異なるドメイン名を使用できますが、同じ PWA で処理できます。  
 
 #### <a name="wildcard-matching"></a>ワイルドカードの一致  
 
@@ -181,107 +182,105 @@ PWA は、URI が元の文字列の 1 つと一致する場合に URL 処理の 
 
 たとえば、メンバーの `url_handlers` 値は一致する値に `*.contoso.com` 設定 `tenant.contoso.com` されますが、 `www.tenant.contoso.com` 一致しません `contoso.com` 。  
 
-<!-- Hold for future release -->  
-<!--  ## Window Controls Overlay for installed desktop web apps  
+## <a name="window-controls-overlay-for-installed-desktop-web-apps"></a>インストールされているデスクトップ Web アプリのウィンドウ コントロール オーバーレイ  
 
-To create an immersive title bar similar to a native app for your desktop installed web app.  The **Window Controls Overlay** feature  completes the following actions.  
+デスクトップにインストールされた Web アプリ用のネイティブ アプリのようなイマーシブ タイトル バーを作成するには **、Window Controls Overlay** 機能によって次のアクションが完了します。  
     
-1.  Removes the system reserved title bar.  It usually spans the width of the client frame.  
-1.  Replaces it with an overlay.  It contains just the critical system required window controls necessary for a user to control the window itself.  
+1.  システム予約のタイトル バーを削除します。  通常、クライアント フレームの幅にまたがっています。  
+1.  オーバーレイに置き換える。  このコントロールには、ユーザーがウィンドウ自体を制御するために必要な重要なシステムに必要なウィンドウ コントロールが含まれています。  
     
-After it provides an overlay, the entire web client area is available for you to use.  This feature includes a manifest update.  It provides ways for you to determine the size and position of the overlay to help you arrange content.  
-    
-### Examples of title bar area customization  
+オーバーレイを提供すると、Web クライアント領域全体を使用できます。  この機能には、マニフェスト更新プログラムが含まれています。  コンテンツの配置に役立つオーバーレイのサイズと位置を決定する方法を提供します。  
 
-This feature is based on the ability in native apps to customize the title bar.  You may customize a title bar for important app actions or notifications.  Review the following examples for Microsoft Visual Studio Code and Microsoft Teams.  
+Microsoft Edge for Windows 10 のウィンドウ コントロール オーバーレイ[](#turn-on-experimental-features)をプレビューするには、[実験機能を有効にする] に移動し、[デスクトップ PWA ウィンドウ コントロール オーバーレイ]**に移動します**。   
 
-#### Visual Studio Code  
+### <a name="examples-of-title-bar-area-customization"></a>タイトル バー領域のカスタマイズの例  
 
-Microsoft Visual Studio Code is a popular editor built on Electron that ships on multiple desktop platforms.  
+この機能は、ネイティブ アプリでタイトル バーをカスタマイズする機能に基づいて行います。  重要なアプリのアクションや通知用にタイトル バーをカスタマイズできます。  Microsoft Visual Studioおよび Microsoft Teams の次の例を確認します。  
 
-The following example displays how Visual Studio Code uses the title bar to maximize available screen real estate to include the current file name and top-level menu structure in the title bar.  
+#### <a name="visual-studio-code"></a>Visual Studio Code  
 
-:::image type="complex" source="../media/visual-studio-code-title-customization.png" alt-text="An example of the title bar in Visual Studio Code" lightbox="../media/visual-studio-code-title-customization.png":::
-   An example of the title bar in Visual Studio Code  
+Microsoft Visual Studio コードは、複数のデスクトップ プラットフォームに組み込む、電子で構築された一般的なエディターです。  
+
+次の使用例は、Visual Studio コードがタイトル バーを使用して使用可能な画面の不動産を最大化して、現在のファイル名とトップ レベルのメニュー構造をタイトル バーに含める方法を表示します。  
+
+:::image type="complex" source="../media/visual-studio-code-title-customization.png" alt-text="コード内のタイトル バー Visual Studio例" lightbox="../media/visual-studio-code-title-customization.png":::
+   コード内のタイトル バー Visual Studio例  
 :::image-end:::  
 
-#### Microsoft Teams  
+#### <a name="microsoft-teams"></a>Microsoft Teams  
 
-Workplace collaboration and communication tool Microsoft Teams is also built with Electron and available on multiple desktop platforms.  In the following example, Microsoft Teams displays `back` and `forward` navigation buttons, a search box, and user profile controls.  
+Workplace のコラボレーションとコミュニケーション ツール Microsoft Teams も、電子を使用して構築され、複数のデスクトップ プラットフォームで利用できます。  次の例では、Microsoft Teams が表示 `back` `forward` され、ナビゲーション ボタン、検索ボックス、およびユーザー プロファイル コントロールが表示されます。  
 
-:::image type="complex" source="../media/teams-title-customization.png" alt-text="An example of the title bar in Microsoft Teams" lightbox="../media/teams-title-customization.png":::
-   An example of the title bar in Microsoft Teams  
+:::image type="complex" source="../media/teams-title-customization.png" alt-text="Microsoft Teams のタイトル バーの例" lightbox="../media/teams-title-customization.png":::
+   Microsoft Teams のタイトル バーの例  
 :::image-end:::  
 
-### Overlay Window Controls on a Frameless Window  
+### <a name="overlay-window-controls-on-a-frameless-window"></a>フレームレス ウィンドウのオーバーレイ ウィンドウ コントロール  
 
-To provide the maximum addressable area for web content, the browser creates a frameless window, removing all browser UI except for the window controls provided as an overlay.  
-The window controls overlay ensures users still minimize, maximize, restore, and close the app.  It also provides access to relevant browser controls using the web app menu.  For Chromium-based browsers, the controls in the overlay.
+Web コンテンツのアドレス指定可能領域を最大化するために、ブラウザーはフレームレス ウィンドウを作成します。  フレームレス ウィンドウは、オーバーレイとして提供されるウィンドウ コントロールを除き、すべてのブラウザー UI を削除します。  ウィンドウ コントロールのオーバーレイを使用すると、ユーザーはアプリを最小化、最大化、復元、閉じ続けます。  また、Web アプリ メニューを使用して関連するブラウザー コントロールにアクセスすることもできます。  クロム ベースのブラウザーの場合、オーバーレイには次のコントロールが含まれます。  
 
-*   A draggable region the same width and height of each of the window control buttons  
-*   The **Settings and more** \(...\) button  
-*   The window control buttons minimize, maximize, restore, and close  
+*   ドラッグ可能な領域の各ウィンドウ コントロール ボタンの幅と高さが同じ  
+*   [ **設定] および [その他** ] \(...\) ボタン  
+*   ウィンドウ コントロール ボタンを最小化、最大化、復元、閉じる  
     
-The following scenarios include when browser displays other content in the controls overlay.  
+前に示したコントロールに加え、オーバーレイに表示される UI は、次のシナリオで動的にサイズ変更されます。  
 
-*   When an installed web app is launched, the origin of the webpage displays to the left of the **Settings and more** \(...\) menu for a few seconds and then disappears.  
-*   If a user interacts with an extension using the **Settings and more** \(...\) menu, the icon of the extension displays in the overlay to the left of the three-dot menu.  After you exit any extension dialog, the icon is removed from the overlay.  
+*   インストールされている Web アプリが起動すると、Web ページの原点が [設定]**** メニューの左側に表示され、さらに \(...\) メニューが数秒表示され、その後消えます。  
+*   ユーザーが [設定] メニューおよび **[その** 他の \(...\)] メニューを使用して拡張機能を操作すると、拡張機能のアイコンが 3 ドット メニューの左側のオーバーレイに表示されます。  拡張機能ダイアログを終了すると、アイコンはオーバーレイから削除されます。  
     
-| Language direction | Overlay location | Details |  
+| 言語の方向 | オーバーレイの場所 | 詳細 |  
 |:--- |:--- |:--- |  
-| Left-to-right \(LTR\) | Upper left of the client area | The controls are flipped |  
-| Right-to-left \(RTL\) | Upper right corner of the client area |  |  
+| 左から右 \(LTR\) | クライアント領域の左上 | コントロールが反転する |  
+| 右から左 \(RTL\) | クライアント領域の右上隅 |  |  
 
->[!IMPORTANT]
-> The overlay is always on top of the Z-index of the web content and accepts all user input without flowing it through to the web content.  
+> [!IMPORTANT]
+> オーバーレイは常に Web コンテンツの Z インデックスの上に表示され、Web コンテンツにフローせずにすべてのユーザー入力を受け入れる。  
 
-### Working around the Window Controls Overlay  
+### <a name="working-around-the-window-controls-overlay"></a>ウィンドウ コントロール オーバーレイの操作  
 
-Your web content must be aware of the reserved area for the controls overlay.  Ensure the reserved area doesn't expect user interaction.  Query the browser for the bounding rectangle and visibility of the controls overlay.  The information is provided to you through JavaScript APIs and CSS environment variables.  
+Web コンテンツは、コントロール オーバーレイの予約領域を認識している必要があります。  予約領域がユーザーの操作を期待しないことを確認します。  境界を設定する四角形とコントロール オーバーレイの表示をブラウザーに照会します。  この情報は、JavaScript API と CSS 環境変数を使用して提供されます。  
 
-#### JavaScript APIs  
+#### <a name="javascript-apis"></a>JavaScript API  
 
-A new `windowControlsOverlay` object on the `window.navigator` property allows you to query the bounding rectangle of the controls overlay.  
+プロパティの `windowControlsOverlay` 新しいオブジェクト `window.navigator` を使用すると、コントロール オーバーレイの境界の四角形に対してクエリを実行できます。  
 
-The `windowControlsOverlay` object has the following two objects.  
+オブジェクト `windowControlsOverlay` には、次の 2 つのオブジェクトがあります。  
 
-*   `getBoundingClientRect()` returns a `DOMRect` object.  The `DOMRect` object represents the area under the window controls overlay.  
-*   `visible` is a boolean that indicates that the controls overlay is rendered and displayed.  
+*   `getBoundingClientRect()` オブジェクトを返 `DOMRect` します。  オブジェクト `DOMRect` は、ウィンドウ コントロールオーバーレイの下の領域を表します。  
+*   `visible` は、コントロールのオーバーレイがレンダリングおよび表示されるブール値です。  
     
 > [!IMPORTANT]
-> For privacy reasons, the `windowControlsOverlay` isn't accessible to `iframe` elements in the web content.  
+> プライバシー上の理由から `windowControlsOverlay` 、Web コンテンツ内の `iframe` 要素にアクセスできない。  
 
-Whenever the overlay is resized, a `geometrychange` event runs on the `navigator.windowControlsOverlay` object to notify the client to recalculate the content layout.  The recalculated content layout is based on the new bounding rectangle of the overlay.  
+オーバーレイのサイズが変更されるたびに、オブジェクト上でイベントが実行され、コンテンツ レイアウトの再計算をクライアント `geometrychange` `navigator.windowControlsOverlay` に通知します。  再計算されたコンテンツ レイアウトは、オーバーレイの新しい境界四角形に基づいて作成されます。  
 
-#### CSS Environment Variables  
+#### <a name="css-environment-variables"></a>CSS 環境変数  
 
-Besides the JavaScript API, you may use CSS to query the bounding rectangle of the controls overlay.  Use the following four new CSS environment variables to accomplish to query.  
+JavaScript API の他に、CSS を使用してコントロール オーバーレイの外接する四角形にクエリを実行することもできます。  クエリを実行するには、次の 4 つの新しい CSS 環境変数を使用します。  
 
 *   `titlebar-area-x`  
 *   `titlebar-area-y`  
 *   `titlebar-area-width`  
 *   `titlebar-area-height`  
     
-### Define Draggable Regions in Web Content  
+### <a name="define-draggable-regions-in-web-content"></a>Web コンテンツでドラッグ可能な領域を定義する  
 
-Users expect to grab and drag the upper region of a window.  To accommodate the expectation, declare specific parts of the web content as draggable.  
-To specify an element is draggable, use the webkit proprietary `-webkit-app-region` CSS property.  The CSS working group continues efforts to standardize the `app-region` property.  
+ユーザーは、ウィンドウの上部領域をつかんでドラッグする必要があります。  期待に合わせて、Web コンテンツの特定の部分をドラッグ可能として宣言します。  
+要素をドラッグ可能に指定するには、WebKit 独自の `-webkit-app-region` CSS プロパティを使用します。  CSS 作業グループは、プロパティの標準化に取り組 `app-region` み続けます。  
 
-To preview this feature in Microsoft Edge for desktop OSs, navigate to [Turn on experimental features](#turn-on-experimental-features) and navigate to **Desktop PWA Window Controls Overlay**.   
+### <a name="custom-title-bar-example"></a>カスタム タイトル バーの例  
 
-### Custom title bar example  
+次の使用例は、新しい機能がカスタム タイトル バーを持つ Web アプリを作成する方法を表示します。  
 
-The following example displays how the new features create a web app with a custom title bar.  
-
-:::image type="complex" source="../media/teams-title-customization-example.png" alt-text="Example of a custom title bar in Microsoft Teams" lightbox="../media/teams-title-customization-example.png":::
-   Example of a custom title bar in Microsoft Teams  
+:::image type="complex" source="../media/teams-title-customization-example.png" alt-text="Microsoft Teams のカスタム タイトル バーの例" lightbox="../media/teams-title-customization-example.png":::
+   Microsoft Teams のカスタム タイトル バーの例  
 :::image-end:::  
 
-#### manifest.webmanifest  
+#### <a name="manifestwebmanifest"></a>manifest.webmanifest  
 
-In the manifest, set `display_override` array to  `window-controls-overlay`.  Set the `theme_color` to your choice of color for the title bar.  Set the display mode to an appropriate fallback for when either `display_override` or `window-controls-overlay` isn't supported.  
+マニフェストで、配列を `display_override` に設定します  `window-controls-overlay` 。  タイトル バー `theme_color` の色の選択に設定します。  サポートされていない場合に、表示モードを適切なフォールバック `display_override` `window-controls-overlay` に設定します。  
 
-The following code snippet includes the recommended manifest updates.  
+次のコード スニペットには、推奨されるマニフェスト更新プログラムが含まれています。  
 
 ```json
 {
@@ -294,14 +293,14 @@ The following code snippet includes the recommended manifest updates.
 }
 ```  
 
-### index.html  
+### <a name="indexhtml"></a>index.html  
 
-The following IDs represent the two main regions of the webpage.  
+次の ID は、Web ページの 2 つの主要な領域を表します。  
 
 *   `titleBarContainer`  
 *   `mainContent`  
     
-The `div` element with the `titleBar` ID is set to `draggable` and the search box `input` child element is set to `nonDraggable`.  
+`div`ID を持つ `titleBar` 要素がに設定され `draggable` 、検索ボックス `input` の子要素がに設定されます `nonDraggable` 。  
 
 ```html
 <div id="titleBar" class=" draggable">
@@ -310,7 +309,7 @@ The `div` element with the `titleBar` ID is set to `draggable` and the search bo
 </div>
 ```
 
-In the `div` element with the `titleBarContainer` ID, the `div` with the `titleBar` ID represents the visible portion of the title bar area.  
+ID を `div` 持つ `titleBarContainer` 要素では `div` 、ID を持 `titleBar` つ要素はタイトル バー領域の表示部分を表します。  
 
 ```html
 <!DOCTYPE html>
@@ -329,14 +328,14 @@ In the `div` element with the `titleBarContainer` ID, the `div` with the `titleB
         <input class="nonDraggable" type="text" placeholder="Search"></input>
       </div>
     </div>
-    <div id="mainContent">The rest of the webpage</div>
+    <div id="mainContent"><!-- The rest of the webpage --></div>
   </body>
 </html>
 ```  
 
-### style.css  
+### <a name="stylecss"></a>style.css  
 
-The draggable and non-draggable regions are set using `-webkit-app-region: drag` and `-webkit-app-region: no-drag`.  
+ドラッグ可能領域とドラッグ不可領域は、 を使用して `-webkit-app-region: drag` 設定されます `-webkit-app-region: no-drag` 。  
 
 ```css
 .draggable {
@@ -352,7 +351,7 @@ The draggable and non-draggable regions are set using `-webkit-app-region: drag`
 }
 ```  
 
-For the `body` element, margins are set to `0` to ensure the title bar reaches to the edges of the window.  
+要素の場合、タイトル バーがウィンドウの端に達するまで余白 `body` `0` が設定されます。  
 
 ```css
 body {
@@ -361,7 +360,7 @@ body {
 }
 ```  
 
-The `titleBarContainer` ID uses `position: absolute` and sets the `top` to `titlebar-area-inset-top`, which attaches the container to the top of the webpage.  The `bottom` is set to `titlebar-area-inset-bottom` and falls back to `100% - var(--fallback-title-bar-height)` if the window controls overlay isn't visible.  The background color of the `titleBarContainer` ID is the same as the `theme_color`.  The width is set to `100%`, so that the `div` element fills the width of the webpage and flows under the overlay when it's visible for a contiguous appearance.  
+ID は、コンテナーを Web ページの上部に接続する 、 `titleBarContainer` `position: absolute` `top` `titlebar-area-inset-top` を使用して設定します。  ウィンドウ `bottom` コントロールのオーバーレイが表示されない場合は、に設定され、戻 `titlebar-area-inset-bottom` `100% - var(--fallback-title-bar-height)` ります。  ID の背景色は `titleBarContainer` 、 と同じです `theme_color` 。  幅は 、要素が Web ページの幅を塗りつぶし、隣接する外観で表示されているときにオーバーレイの下 `100%` `div` を流れるので、に設定されます。  
 
 ```css
 #titleBarContainer {
@@ -373,7 +372,7 @@ The `titleBarContainer` ID uses `position: absolute` and sets the `top` to `titl
 }
 ```  
 
-The `titleBar` ID also uses `position: absolute` and `top: titlebar-area-inset-top` to attaches it to the top of the window.  By default, it consumes the full width of the window.  The `left` and `right` edges are set to `titlebar-area-inset-left` and `titlebar-area-inset-right` respectively, both fall back to `0` when the values aren't set.  It also sets `user-select: none` to prevent any attempts to drag the window consumed instead it highlights text in the `div` element.  
+ID `titleBar` も使用 `position: absolute` し `top: titlebar-area-inset-top` 、ウィンドウの上部に添付します。  既定では、ウィンドウの全幅が使用されます。  エッジ `left` と `right` エッジはそれぞれに設定され、両方とも値が設定されていない `titlebar-area-inset-left` `titlebar-area-inset-right` `0` 場合に戻されます。  また、代わりに使用されるウィンドウをドラッグしようとして、要素内のテキストが強調表示 `user-select: none` されるのを防ぐ設定 `div` も行います。  
 
 ```css
 #titleBar {
@@ -403,7 +402,7 @@ The `titleBar` ID also uses `position: absolute` and `top: titlebar-area-inset-t
 }
 ```
 
-The container for the `mainContent` ID is also fixed in place with `position: absolute` and is attached to the bottom of the webpage.  The `height` is set to `titlebar-area-inset-bottom` and falls back to `100% - var(--fallback-titlebar-height)` to fill the remaining space below the title bar.  It sets `overflow-y: scroll` to allow the contents to scroll vertically in the container.  
+ID のコンテナーも固定され、Web ページの下部 `mainContent` `position: absolute` に添付されます。  に `height` 設定され、タイトル バーの下の残りの領域を埋めるに `titlebar-area-inset-bottom` `100% - var(--fallback-titlebar-height)` 戻ります。  コンテナー内 `overflow-y: scroll` でコンテンツを垂直方向にスクロールできる設定です。  
 
 ```css
 #mainContent {
@@ -416,9 +415,9 @@ The container for the `mainContent` ID is also fixed in place with `position: ab
 }
 ```
 
-For cases where the browser doesn't support the window controls overlay, a CSS variable is added to set a default height for the title bar.  The bounds of the `titleBarContainer` and `mainContent` IDs are initially set to fill the entire client area, and you don't need to change it if the overlay isn't supported.  
+ブラウザーがウィンドウ コントロールオーバーレイをサポートしない場合は、タイトル バーの既定の高さを設定するために CSS 変数が追加されます。  最初は、クライアント領域全体を埋める境界と ID が設定され、オーバーレイがサポートされていない場合は変更 `titleBarContainer` `mainContent` する必要があります。  
 
-The following code snippet includes all of the recommended css updates.
+次のコード スニペットには、すべての推奨される CSS 更新プログラムが含まれています。
 
 ```css
 :root {
@@ -485,7 +484,6 @@ body {
   overflow-y: scroll;
 }
 ```  
--->  
 
 ## <a name="run-on-os-login"></a>[OS ログイン時に実行]  
 
@@ -496,7 +494,7 @@ body {
 
 ### <a name="turn-on-run-on-os-login"></a>[OS ログイン時に実行] をオンにする  
 
-PWA の**Run On OS Login 機能**を有効[](#turn-on-experimental-features)にする場合は、[実験的な機能を有効にする] に移動し、OS ログイン時にデスクトップ**PWA を実行します**。  
+PWA の**Run On OS Login**機能をプレビュー[](#turn-on-experimental-features)するには、[実験的な機能を有効にする] に移動し、OS ログインでデスクトップ**PWA を実行します**。  
 
 :::image type="complex" source="../media/desktop-pwas-run-on-os-login-flag.png" alt-text="OS Login 実験で実行するデスクトップ PWA を有効にする" lightbox="../media/desktop-pwas-run-on-os-login-flag.png":::
    OS ログイン実験 **でデスクトップ PWA の実行を有効** にする  
@@ -566,7 +564,7 @@ PWA の**Run On OS Login 機能**を有効[](#turn-on-experimental-features)に�
 
 クロム ベースのブラウザーでは、この機能のテストと整形を行っています。  コード例を含む詳細については、「Web アプリケーションをファイル ハンドラー [に設定する」に移動します][WebDevFileHandling]。  
 
-デスクトップ OS 用 Microsoft Edge でファイル処理を[](#turn-on-experimental-features)プレビューするには、[実験機能を有効にする] に移動し、[ファイル処理**API] をオンにします**。  
+Microsoft Edge for Windows 10 でファイル処理[](#turn-on-experimental-features)をプレビューするには、[実験的な機能を有効にする] に移動し、[ファイル処理**API] をオンにします**。  
     
 ## <a name="providing-feedback-on-experimental-features"></a>実験的な機能に関するフィードバックの提供  
 
