@@ -7,12 +7,12 @@ ms.date: 04/09/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge, 実験, プログレッシブ Web アプリ, Web アプリ, PWA, PWA
-ms.openlocfilehash: 5ab2ab0a727d1eb52f61a01ea64b52bc1c09abce
-ms.sourcegitcommit: f6a3ab7b13adf05dbe7a4bf65ee67c9b0f6fab95
+ms.openlocfilehash: 20bc4c90c1fe30be360b44294966415823f9b3a6
+ms.sourcegitcommit: 4c6b74b9cdfca73c410d9eba9b42d229b695ee4a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/13/2021
-ms.locfileid: "11482158"
+ms.locfileid: "11482444"
 ---
 # <a name="experimental-features-in-progressive-web-apps-pwas"></a>プログレッシブ Web アプリ (PWA) の実験的な機能  
 
@@ -94,7 +94,7 @@ HTTP または FTP プロトコルを使用して Web ページや Web コンテ
     
 複数のアプリがプロトコルを登録すると、ユーザーにプロンプトが表示されます。  ユーザーは、OS またはブラウザーによって表示されるリストから適切なアプリを選択します。  
 
-Windows の Microsoft Edge でプロトコル処理を[](#turn-on-experimental-features)プレビューするには、[実験的な機能を有効にする] に移動し、[デスクトップ Web アプリのプロトコル ハンドラーのサポート **] をオンにします**。  
+Windows の Microsoft Edge でのプロトコル処理を[](#turn-on-experimental-features)プレビューするには、[実験的な機能を有効にする] に移動し、[**デスクトップ PWA プロトコルの処理] をオンにします**。  
 
 プロトコル ハンドラーでオリジン試用版が実行されている場合の詳細については [、「Register for Web App Protocol Handler Registration」に移動します][MicrosoftDeveloperMicrosoftEdgeOriginTrialsWebAppProtocolHandlerRegistrationRegistration]。  
 

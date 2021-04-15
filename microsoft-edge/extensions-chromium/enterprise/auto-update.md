@@ -1,18 +1,18 @@
 ---
 description: Microsoft Edge の拡張機能に対する自動更新について説明します。
-title: Microsoft Edge の拡張機能を自動更新する
+title: Microsoft Edge の拡張機能を自動的に更新する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 03/17/2021
+ms.date: 04/13/2021
 ms.topic: conceptual
 ms.prod: microsoft-edge
 keywords: edge-chromium, 拡張機能の開発, ブラウザー拡張機能, アドオン, パートナー センター, 開発者
-ms.openlocfilehash: 0f3f140cd3a2a079cd09f4d61e46a420342e15e0
-ms.sourcegitcommit: bff24ab1f0a66aaf4c7f5ff81cea3eb28c6d8380
+ms.openlocfilehash: 74d7b61c8eca1155b545b7e81627a652bf336e66
+ms.sourcegitcommit: 2e516a92272e38d8073603f860ae49f944718670
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2021
-ms.locfileid: "11461543"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "11483073"
 ---
 <!-- Copyright A. W. Fuchs
 
@@ -27,22 +27,24 @@ ms.locfileid: "11461543"
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.  -->  
-# <a name="auto-update-extensions-in-microsoft-edge"></a>Microsoft Edge の拡張機能を自動更新する  
+# <a name="automatically-update-extensions-in-microsoft-edge"></a>Microsoft Edge の拡張機能を自動的に更新する  
 
-拡張機能を自動的に更新すると、Microsoft Edge を自動的に更新するのと同じ利点がいくつか共有されます。   
+拡張機能を自動的に更新するように設定すると、自動的に更新するように設定されている場合、拡張機能は Microsoft Edge と次の利点を共有します。  
 
 *   バグとセキュリティの修正プログラムを組み込む。  
 *   新しい機能やパフォーマンスの強化を追加します。  
 *   ユーザー インターフェイスを改善します。  
 
-以前は、ストアベース以外の拡張機能がサポートされている場合、ネイティブ バイナリと拡張機能を同時に更新する可能性がありました。  これで、これらの拡張機能は Microsoft Edge アドオン ストアでホストされ、Microsoft Edge が使用するのと同じメカニズムを使用して更新が行われた。これは制御できない。  ネイティブ バイナリに依存する拡張機能を更新する場合は注意が必要です。  
+以前は、ストアベース以外の拡張機能がサポートされました。  また、ネイティブ バイナリと拡張機能を同時に更新しました。  
+
+これで、Microsoft Edge アドオン ストアが拡張機能をホストし、Microsoft Edge と同じメカニズムを使用して拡張機能を更新します。  更新メカニズムは制御しない。  ネイティブ バイナリに依存する拡張機能を更新する場合は注意してください。  
 
 > [!NOTE]
-> このトピックは、パートナー センター ダッシュボードを使用して発行された拡張機能 [には適用][MicrosoftPartnerCenter] されません。  ダッシュボードを使用して、更新されたバージョンをユーザーと Microsoft Edge アドオン ストアにリリースできます。
+> この記事は、パートナー センター ダッシュボードを使用して発行する拡張機能 [には適用][MicrosoftPartnerDashboardMicrosoftedgePublicLoginRefDd] されません。  ダッシュボードを使用して、更新されたバージョンをユーザーと Microsoft Edge アドオン ストアにリリースできます。  詳細については、「拡張機能を更新 [または削除する」に移動します][ExtensionsPublishUpdateExtension]。  
 
 ## <a name="overview"></a>概要  
 
-数時間ごとに、インストールされている各拡張機能またはアプリに更新 URL が含されているかどうかを Microsoft Edge がチェックします。  拡張機能では、マニフェストのフィールドを使用して更新 URL を指定できます。これは、更新チェックを実行する場所 `update_url` を示します。  それぞれについて `update_url` 、更新されたマニフェスト XML ファイルの要求を送信します。  更新マニフェスト XML ファイルにインストールされているバージョンよりも新しいバージョンが一覧表示されている場合、Microsoft Edge は新しいバージョンをダウンロードしてインストールします。  手動更新でも同じプロセスが機能します。新しいファイルには、現在インストールされているバージョンと同じプライベート キー `.crx` で署名する必要があります。  
+数時間ごとに、インストールされている各拡張機能またはアプリに更新 URL が含されているかどうかを Microsoft Edge がチェックします。  拡張機能の更新 URL を指定するには、マニフェスト `update_url` のフィールドを使用します。  マニフェスト `update_url` 内のフィールドは、更新チェックを完了する場所をポイントします。  それぞれについて `update_url` 、更新されたマニフェスト XML ファイルの要求を送信します。  更新マニフェスト XML ファイルにインストールされているバージョンよりも新しいバージョンが一覧表示されている場合、Microsoft Edge は新しいバージョンをダウンロードしてインストールします。  手動更新でも同じプロセスが機能します。新しいファイルには、現在インストールされているバージョンと同じプライベート キー `.crx` で署名する必要があります。  
 
 > [!NOTE]
 > ユーザーのプライバシーを維持するために、Microsoft Edge はマニフェスト要求を自動更新するヘッダーを送信しません。また、それらの要求に対する応答のヘッダー `Cookie` `Set-Cookie` は無視されます。  
@@ -89,18 +91,35 @@ ms.locfileid: "11461543"
 
 ## <a name="advanced-usage-request-parameters"></a>高度な使用法: 要求パラメーター  
 
-基本的な自動更新メカニズムは、静的 XML ファイルを Apache などの任意の Web サーバーにドロップし、拡張機能の新しいバージョンをリリースする場合と同じ方法で XML ファイルを更新するのと同じほど簡単です。  
+基本的なメカニズムは簡単です。  拡張機能を自動的に更新するには、次の操作を実行します。  
 
-拡張 ID とバージョンを示す更新マニフェスト要求にパラメーターが追加されるという事実を利用できます。 静的 XML ファイルの代わりに、すべての拡張機能に同じ更新 URL を使用できます。  すべての拡張機能に同じ更新 URL を使用するには、動的サーバー側コードを実行する URL をポイントして、これらのパラメーターをテストします。  
+1.  Apache などの静的 XML ファイルを Web サーバーにアップロードします。  
+1.  拡張機能の新しいバージョンをリリースする場合は、XML ファイルを更新します。  
+    
+更新マニフェスト要求に追加された一部のパラメーターが拡張機能とを示しているという事実を利用 `ID` します `version` 。  静的 XML ファイルの `update URL` 代わりに、すべての拡張機能で同じ機能を使用できます。  すべての拡張機能で同じ機能を使用するには、動的サーバー側コードを実行する URL をポイントしてパラメーター `update URL` をテストします。  
 
-次の例は、更新 URL の要求パラメーターの形式を示しています `?x={extension_data}` 。
+次の例は、更新 URL の要求パラメーターの形式を示しています。  
 
-この例では `{extension_data}` 、次の形式を使用する URL エンコードされた文字列です `id={id}&v={version}` 。
+```url
+?x={extension_data}
+```  
+
+この例では `{extension_data}` 、次の形式を使用する URL エンコード文字列を指定します。  
+
+```url
+id={id}&v={version}
+```  
 
 たとえば、次の 2 つの拡張機能は両方とも同じ更新 URL を指しています `http://contoso.com/extension_updates.php` 。  
 
-*  内線番号 1 - ID: "aaaaaaaaaa" バージョン: "1.1"
-*  拡張 2 - ID: "bbbbbbbb" バージョン: "0.4"
+*   拡張機能 1  
+    *   ID: `aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa`  
+    *   更新 URL: `http://contoso.com/extension_updates.php`
+    *   バージョン: `1.1`  
+*   拡張機能 2  
+    *   ID: `bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb`  
+    *   更新 URL: `http://contoso.com/extension_updates.php`
+    *   バージョン: `0.4`  
 
 
 各拡張機能を更新する要求を次に示します。  
@@ -126,7 +145,7 @@ http://contoso.com/extension_updates.php?x=id%3Daaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 
 ## <a name="advanced-usage-minimum-browser-version"></a>高度な使用法: 最小ブラウザー バージョン  
 
-Microsoft Edge 拡張機能システムの新しい API リリースとして、新しい Microsoft Edge バージョンでのみ動作する拡張機能またはアプリの更新バージョンをリリースできます。  Microsoft Edge が自動更新される場合、ほとんどのユーザーが新しいリリースに更新されるまで数日かかる場合があります。  特定の更新プログラムが特定のバージョンより最新または新しい Microsoft Edge バージョンにのみ適用される場合は、更新マニフェストに属性 `prodversionmin` を追加します。  次のコード スニペットでは、属性の値は、ユーザーが Microsoft Edge 以降を実行している場合にのみ、アプリがバージョンに `prodversionmin` `3.0.193.0` 自動更新するように `2.0` `3.0.193.0` 指定します。  
+Microsoft Edge 拡張機能システムの新しい API リリースとして、新しい Microsoft Edge バージョンでのみ動作する拡張機能またはアプリの更新バージョンをリリースできます。  Microsoft Edge が自動的に更新される場合、ほとんどのユーザーが新しいリリースに更新されるまでに数日かかる場合があります。  特定の更新プログラムが特定のバージョンより最新または新しい Microsoft Edge バージョンにのみ適用される場合は、更新マニフェストに属性 `prodversionmin` を追加します。  次のコード スニペットでは、属性の値は、ユーザーが Microsoft Edge 以降を実行している場合にのみ、アプリが自動的にバージョンに `prodversionmin` `3.0.193.0` 更新するように `2.0` `3.0.193.0` 指定します。  
 
 ```xml
 <?xml version='1.0' encoding='UTF-8'?>
@@ -139,11 +158,13 @@ Microsoft Edge 拡張機能システムの新しい API リリースとして、
 
 <!-- links -->  
 
-[MicrosoftPartnerCenter]: https://partner.microsoft.com/dashboard/microsoftedge/public/login?ref=dd "パートナー センター"  
+[ExtensionsPublishUpdateExtension]: ../publish/update-extension.md "拡張機能の更新または削除|Microsoft Docs"  
+
+[MicrosoftPartnerDashboardMicrosoftedgePublicLoginRefDd]: https://partner.microsoft.com/dashboard/microsoftedge/public/login?ref=dd "パートナー センター"  
 
 > [!NOTE]
 > このページの一部の情報は、[Google によって作成および共有][GoogleSitePolicies]されている著作物に基づいており、[Creative Commons Attribution 4.0 International License][CCA4IL] に記載されている条項に従って使用されています。  
-> 元のページは次 [のページに表示されます](https://developer.chrome.com/docs/apps/autoupdate/)。  
+> 元のページは次 [のページに表示されます](https://developer.chrome.com/docs/apps/autoupdate)。  
 
 [![Creative Commons ライセンス][CCby4Image]][CCA4IL]  
 この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。  
