@@ -174,13 +174,19 @@
                 - name: コンソールの概要
                   href: devtools-guide-chromium/console/index.md
                 - name: ログ メッセージ
-                  href: devtools-guide-chromium/console/log.md
+                  href: devtools-guide-chromium/console/console-log.md
                 - name: JavaScript の実行
-                  href: devtools-guide-chromium/console/javascript.md
+                  href: devtools-guide-chromium/console/console-javascript.md
                 - name: リファレンス
                   href: devtools-guide-chromium/console/reference.md
                 - name: JavaScript の式をリアルタイムで見る
                   href: devtools-guide-chromium/console/live-expressions.md
+                - name: デバッグ コンソール エラー
+                  href: devtools-guide-chromium/console/console-debug-javascript.md
+                - name: DOM と対話する
+                  href: devtools-guide-chromium/console/console-dom-interaction.md
+                - name: コンソール メッセージをフィルターする
+                  href: devtools-guide-chromium/console/console-filters.md
             - name: 対象範囲
               href: devtools-guide-chromium/coverage/index.md
             - name: 要素
