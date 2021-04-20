@@ -3,16 +3,16 @@ description: Microsoft Edge for Web Apps の最新の実験的機能
 title: 実験的な機能|プログレッシブ Web アプリ
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 04/09/2021
+ms.date: 04/19/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge, 実験, プログレッシブ Web アプリ, Web アプリ, PWA, PWA
-ms.openlocfilehash: 20bc4c90c1fe30be360b44294966415823f9b3a6
-ms.sourcegitcommit: 4c6b74b9cdfca73c410d9eba9b42d229b695ee4a
+ms.openlocfilehash: 641b6fd5185e7f96289c1de6482764979ee0981d
+ms.sourcegitcommit: 9cc54ba3e731ecc8b713c3cf215018848f7405b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "11482444"
+ms.lasthandoff: 04/19/2021
+ms.locfileid: "11496754"
 ---
 # <a name="experimental-features-in-progressive-web-apps-pwas"></a>プログレッシブ Web アプリ (PWA) の実験的な機能  
 
@@ -61,7 +61,7 @@ Origin Trials の詳細については [、「Microsoft Edge Origin Trials Devel
 
 | 機能 | Microsoft Edge バージョン | プラットフォーム |  
 |:--- |:--- |:--- |  
-| [URI プロトコルの処理](#uri-protocol-handling) | 91 以降 | Windows |    
+| [URI プロトコルの処理](#uri-protocol-handling) | 91 以降 | Windows と Linux |    
 | [URL リンクの処理](#url-link-handling) | 91 以降 | Windows|
 | [デスクトップ アプリのウィンドウ コントロール オーバーレイ](#window-controls-overlay-for-installed-desktop-web-apps) | 91 以降 | Windows 10|   
 | [OS ログインで実行する](#run-on-os-login) | 88 以降 | すべて |  

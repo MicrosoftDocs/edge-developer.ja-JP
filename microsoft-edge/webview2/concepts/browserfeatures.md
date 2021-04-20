@@ -1,5 +1,5 @@
 ---
-説明: Microsoft Edge と WebView2 タイトルの機能の違い: Microsoft Edge と WebView2 作成者の機能の違い: MSEdgeTeam ms.author: msedgedevrel ms.date: 03/31/2021 ms.topic: conceptual ms.prod: microsoft-edge ms.technology: webview キーワード: IWebView2, IWebView2WebView、WebView2、Webview、wpf アプリ、wpf、edge、ICoreWebView2、ICoreWebView2Host、ブラウザー コントロール、エッジ html no-loc:
+説明: Microsoft Edge と WebView2 タイトルの機能の違い: Microsoft Edge と WebView2 作成者の機能の違い: MSEdgeTeam ms.author: msedgedevrel ms.date: 04/19/2021 ms.topic: conceptual ms.prod: microsoft-edge ms.technology: webview キーワード: IWebView2, IWebView2WebView、WebView2、Webview、wpf アプリ、wpf、edge、ICoreWebView2、ICoreWebView2Host、ブラウザー コントロール、エッジ html no-loc:
 - "Autofill for Addresses"
 - "Autofill for Passwords"
 - "Autofill for Payments""
@@ -27,7 +27,7 @@
 ---
 # <a name="browser-feature-differences-between-microsoft-edge-and-webview2"></a>Microsoft Edge と WebView2 のブラウザー機能の違い  
 
-WebView2 は、新しい Microsoft Edge ブラウザーに基づいて作成されます。  ブラウザーから WebView2 ベースのアプリに機能を拡張する機会があります。これは便利です。  ただし、WebView2 はブラウザーのようなアプリに限定されないので、変更または削除する必要があるブラウザー機能があります。   この記事では、次の情報を提供します。  
+WebView2 は、新しい Microsoft Edge ブラウザーに基づいて作成されます。  ブラウザーから WebView2 ベースのアプリに機能を拡張する機会があります。これは便利です。  ただし、WebView2 はブラウザーのようなアプリに限定されないので、変更または削除する必要があるブラウザー機能があります。  この記事では、次の情報を提供します。  
 
 *   変更されたブラウザー機能とサポート情報。   
 *   機能のオンとオフを切り替える機能。  
@@ -52,29 +52,30 @@ WebView2 のコンテキストでは、ブラウザー機能は次の設計ガ�
     
 | 機能 | 既定の状態 | 構成可能 | 詳細 |  
 |:--- |:--- |:--- | :--- |  
-| Autofill for Addresses | オン | あり | この機能は既定でオンになっています。WebView2 オートフィル API を使用してオンまたはオフにできます。  |  
-| Autofill for Passwords | オン | あり | この機能は既定でオンになっています。WebView2 オートフィル API を使用してオンまたはオフにできます。  |  
-| 支払いの自動入力 | オフ | × | この機能はオフです。  |  
-| ブラウザー拡張機能 | オフ | × | この機能はオフです。  |  
-| Browser Task Manager | オフ | × | この機能はオフです。  |  
-| Collections | オフ | × | この機能はオフです。  |  
-| Continue-where-I-left-off prompt | オフ | × | この機能はオフです。  |  
-| Downloads | オン | あり | WebView2 には、ダウンロード UI をカスタマイズしてダウンロードを操作できる API が提供されています。 たとえば、ブロック、リダイレクト、保存、一時停止などです。  <!--For more information, navigate to [download API][Webview2ReferenceDownloadApi].--> |  
-| Edge Shopping | オフ | × | この機能はオフです。  |  
-| Family Safety | オフ | × | この機能はオフです。  |  
-| Favorites | オフ | × | この機能はオフです。  |  
-| IE Mode | オフ | × | この機能はオフです。  |  
-| Immersive Reader | オフ | × | この機能は、操作のブラウザー UI によって異なります。  この機能はオフです。  |  
-| Intrusive Ads | オフ | × | この機能はオフです。  |  
+| Autofill for Addresses | オン | はい | この機能は既定でオンになっています。WebView2 オートフィル API を使用してオンまたはオフにできます。  |  
+| Autofill for Passwords | オン | はい | この機能は既定でオンになっています。WebView2 オートフィル API を使用してオンまたはオフにできます。  |  
+| 支払いの自動入力 | オフ | なし | この機能はオフです。  |  
+| ブラウザー拡張機能 | オフ | なし | この機能はオフです。  |  
+| Browser Task Manager | オフ | なし | この機能はオフです。  |  
+| Collections | オフ | なし | この機能はオフです。  |  
+| Continue-where-I-left-off prompt | オフ | なし | この機能はオフです。  |  
+| Downloads | オン | はい | WebView2 には、ダウンロード UI をカスタマイズしてダウンロードを操作できる API が提供されています。 たとえば、ブロック、リダイレクト、保存、一時停止などです。  <!--For more information, navigate to [download API][Webview2ReferenceDownloadApi].--> |  
+| Edge Shopping | オフ | なし | この機能はオフです。  |  
+| Family Safety | オフ | なし | この機能はオフです。  |  
+| Favorites | オフ | なし | この機能はオフです。  |  
+| IE Mode | オフ | なし | この機能はオフです。  |  
+| Immersive Reader | オフ | なし | この機能は、操作のブラウザー UI によって異なります。  この機能はオフです。  |  
+| Intrusive Ads | オフ | なし | この機能はオフです。  |  
 | キーボード ショートカット | レビューの詳細 | レビューの詳細 | 既定でオフになっているキーボード ショートカットは、意味をなさないか、WebView2 で問題を引き起こします。  これらのショートカットを有効またはオフにしない場合があります。  代わりに、イベントを使用してキーの組み合わせをリッスンし、必要に応じてカスタム `AcceleratorKeyPressed` 応答を作成できます。  詳細については、「その他のキーボード [ショートカット情報」に移動します](#additional-keyboard-shortcuts-information)。 |  
-| Read Aloud | オフ | × | この機能はオフです。  |  
-| Smart Screen | オン`*` | × | `*` この機能の UI は削除されましたが、基になる機能は引き続き使用できます。  また、コマンド ライン スイッチを Smart Screen 使用してオフにすることもできます。  |  
-| Translate | オフ | × | この機能はオフです。  |  
-| Tracking Prevention | オン`*` | × | `*` この機能の UI は削除されましたが、基になる機能は引き続き使用できます。  追跡防止は常にバランスに設定されます。|  
-| Profile and Identity | オフ | × | お気に入り、Cookie などと同期する機能はオフになります。  |  
-| Web Payment API | オフ | × | この機能はオフです。  | 
-| Windows Defender Application Guard | オフ | × | この機能はオフです。  |  
-| edge:// URLs | レビューの詳細 | × | Microsoft Edge ブラウザーの設定は `edge://` URL にあります。  これらの Web ページのほとんどが Microsoft Edge のブランド化を持つか、WebView2 のコンテキスト内で意味をなさないので、これらの URL の一部は無効になります。  詳細については、「ブロックされた内部 [URL」に移動します](#blocked-internal-urls)。  |  
+| プッシュ通知 | オフ | なし | この機能は WebView2 では実装されていません。  詳細については [、「HTML5 通知 API のサポートの追加 (#308) 」を参照してください][GithubMicrosoftedgeWebview2feedbackIssues308]。 |  
+| Read Aloud | オフ | なし | この機能はオフです。  |  
+| Smart Screen | オン`*` | なし | `*` この機能の UI は削除されましたが、基になる機能は引き続き使用できます。  また、コマンド ライン スイッチを Smart Screen 使用してオフにすることもできます。  |  
+| Translate | オフ | なし | この機能はオフです。  |  
+| Tracking Prevention | オン`*` | なし | `*` この機能の UI は削除されましたが、基になる機能は引き続き使用できます。  追跡防止は常にバランスに設定されます。|  
+| Profile and Identity | オフ | なし | お気に入り、Cookie などと同期する機能はオフになります。  |  
+| Web Payment API | オフ | なし | この機能はオフです。  | 
+| Windows Defender Application Guard | オフ | なし | この機能はオフです。  |  
+| edge:// URLs | レビューの詳細 | なし | Microsoft Edge ブラウザーの設定は `edge://` URL にあります。  これらの Web ページのほとんどが Microsoft Edge のブランド化を持つか、WebView2 のコンテキスト内で意味をなさないので、これらの URL の一部は無効になります。  詳細については、「ブロックされた内部 [URL」に移動します](#blocked-internal-urls)。  |  
 
 ## <a name="blocked-internal-urls"></a>ブロックされた内部 URL  
 
@@ -178,8 +179,7 @@ Microsoft Edge と WebView2 では、キーボード ショートカットまた
 
 > [!Note] 
 > キーを個別にカスタマイズするには [、AcceleratorKeyPressed イベントを使用][DotnetApiMicrosoftWebWebview2CoreCorewebview2controllerAcceleratorkeypressedViewWebview2Dotnet1077444] します。  
-  
-  
+
 ## <a name="getting-in-touch-with-the-microsoft-edge-webview2-team"></a>Microsoft Edge WebView2 チームと連絡を取る  
 
 [!INCLUDE [contact WebView2 team note](../includes/contact-webview-team-note.md)]  
@@ -191,5 +191,7 @@ Microsoft Edge と WebView2 では、キーボード ショートカットまた
 [DotnetApiMicrosoftWebWebview2CoreCorewebview2controllerAcceleratorkeypressedViewWebview2Dotnet1077444]: /dotnet/api/microsoft.web.webview2.core.corewebview2controller.acceleratorkeypressed?view=webview2-dotnet-1.0.774.44&preserve-view=true "CoreWebView2Controller.AcceleratorKeyPressed イベント |Microsoft Docs"  
 
 [DevtoolsShortcutsIndex]: ../../devtools-guide-chromium/shortcuts/index.md "Microsoft Edge DevTools キーボード ショートカット |Microsoft Docs"  
+
+[GithubMicrosoftedgeWebview2feedbackIssues308]: https://github.com/MicrosoftEdge/WebView2Feedback/issues/308 "HTML5 通知 API (#308) |GitHub"  
 
 [PeterExperimentsChromiumCommandLineSwitches]: https://peter.sh/experiments/chromium-command-line-switches "クロム コマンド ライン スイッチの一覧|Peter Beverloo"  
