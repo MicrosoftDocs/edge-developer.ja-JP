@@ -3,17 +3,17 @@ description: Microsoft Edge で Web サイトまたはアプリをテストす�
 title: テスト オートメーションに WebDriver (Chromium) を使用する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 04/06/2021
+ms.date: 04/20/2021
 ms.topic: article
 ms.prod: microsoft-edge
 ms.technology: devtools
 keywords: microsoft edge, web 開発, html, css, javascript, 開発者, webdriver, selenium,テストする, ツール, 自動化, テスト
-ms.openlocfilehash: ad7a7f276dbf71d25be03d041161ead599b82f04
-ms.sourcegitcommit: 146072bf606b84e5145a48333abf9c6b892a12d8
+ms.openlocfilehash: 0a5a6cde75621f0dda1e98b0c7b471b1456bf430
+ms.sourcegitcommit: 518c1116dc5e6968edf92730906aa0e72dbf945d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/07/2021
-ms.locfileid: "11480182"
+ms.lasthandoff: 04/20/2021
+ms.locfileid: "11496963"
 ---
 # <a name="use-webdriver-chromium-for-test-automation"></a>テスト オートメーションに WebDriver (Chromium) を使用する  
 
@@ -34,16 +34,19 @@ WebDriver を使用すると、開発者はユーザーの操作をシミュレ�
 
 テストの自動化を開始するには、次の手順を使用して、インストールする WebDriver のバージョンがお使いのブラウザーのバージョンと一致していることを確認します。  
 
-1.  Microsoft Edge のバージョンを表示するには、に移動します `edge://settings/help` 。  
+1.  Microsoft Edge のバージョンを検索します。  
+    1.  に移動します `edge://settings/help` 。  
+        
+        :::image type="complex" source="./media/microsoft-edge-version.msft.png" alt-text="2021 年 4 月 15 日の Microsoft Edge のビルド番号" lightbox="./media/microsoft-edge-version.msft.png":::
+           2021 年 4 月 15 日の Microsoft Edge のビルド番号  
+        :::image-end:::  
+        
+1.  [[Microsoft Edge Driver] に移動します][MicrosoftDeveloperMicrosoftEdgeToolsWebdriver]。  
+1.  [最新バージョン **を取得する] に移動します**。  
+1.  Microsoft Edge のバージョン番号に一致するチャネルのビルドを選択します。  
     
-    :::image type="complex" source="./media/microsoft-edge-version.msft.png" alt-text="2021 年 2 月 10 日の Microsoft Edge Canary のビルド番号" lightbox="./media/microsoft-edge-version.msft.png":::
-       2021 年 2 月 10 日の Microsoft Edge Canary のビルド番号  
-    :::image-end:::  
-    
-1.  [ダウンロード[] セクションの [Microsoft Edge Driver]][MicrosoftDeveloperMicrosoftEdgeToolsWebdriver]に移動し、Microsoft Edge のバージョン番号に一致する WebDriver をダウンロードします。 ****  
-    
-    :::image type="complex" source="./media/microsoft-edge-driver-install.msft.png" alt-text="Microsoft Edge Driver の [ダウンロード] セクション" lightbox="./media/microsoft-edge-driver-install.msft.png":::
-       Microsoft Edge Driver**の** [[ダウンロード][MicrosoftDeveloperMicrosoftEdgeToolsWebdriver]] セクション  
+    :::image type="complex" source="./media/microsoft-edge-driver-install.msft.png" alt-text="Microsoft Edge Driver Web ページの [最新バージョンの取得] セクション" lightbox="./media/microsoft-edge-driver-install.msft.png":::
+       Microsoft **Edge Driver Web ページの**[最新バージョンの取得[] セクション][MicrosoftDeveloperMicrosoftEdgeToolsWebdriver]  
     :::image-end:::  
     
     <!--  
@@ -391,7 +394,7 @@ Microsoft Edge チームは、WebDriver、Selenium、Microsoft Edge の使用に
 [JavaScriptSeleniumTools]: https://www.npmjs.com/package/@microsoft/edge-selenium-tools "@microsoft/edge-selenium-tools |npm"  
 [JavaScriptSelenium]: https://www.npmjs.com/package/selenium-webdriver "selenium-webdriver |npm"  
 
-[MicrosoftDeveloperMicrosoftEdgeToolsWebdriver]: https://developer.microsoft.com/microsoft-edge/tools/webdriver "WebDriver |Microsoft 開発者"  
+[MicrosoftDeveloperMicrosoftEdgeToolsWebdriver]: https://developer.microsoft.com/microsoft-edge/tools/webdriver "Microsoft Edge Driver |Microsoft Edge 開発者"  
 
 [MicrosoftEdge]: https://www.microsoft.com/edge "新しい Microsoft Edge ブラウザーをダウンロードする"  
 
