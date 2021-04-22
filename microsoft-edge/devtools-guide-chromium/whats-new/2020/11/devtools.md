@@ -3,17 +3,17 @@ description: Linux 上の Microsoft Edge、問題ツールの Webhint ヒント�
 title: DevTools の新機能 (Microsoft Edge 88)
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 03/15/2021
+ms.date: 04/08/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
 ms.localizationpriority: high
-ms.openlocfilehash: 7f4f9e2602d26b09a8b52a570c4caaaccc4f04f1
-ms.sourcegitcommit: 4b9fb5c1176fdaa5e3c60af2b84e38d5bb86cd81
+ms.openlocfilehash: a63515060d989a84838e4a9ba7f803184a3fc91f
+ms.sourcegitcommit: de75fda30bb8964e9a184228d068b4402ec59c3e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "11439276"
+ms.lasthandoff: 04/22/2021
+ms.locfileid: "11514376"
 ---
 <!-- Copyright Jecelyn Yeen 
 
@@ -343,7 +343,7 @@ DevTools は、ファイルとメモリのサイズを表示するために、`k
 
 ## <a name="download-the-microsoft-edge-preview-channels"></a>Microsoft Edge プレビュー チャネルをダウンロードする  
 
-Windows、Linux、または macOS を使用している場合は、既定の開発ブラウザーとして [Microsoft Edge プレビュー チャネル][MicrosoftEdgePreviewChannels] の使用を検討してください。  プレビュー チャネルを使用すると、最新の DevTools 機能にアクセスできます。  
+Windows、Linux、または macOS を使用している場合は、 既定の開発ブラウザーとして [Microsoft Edge プレビュー チャネル][MicrosoftEdgePreviewChannels]の使用を検討してください。  プレビュー チャネルを使用すると、最新の DevTools 機能にアクセスできます。  
 
 ## <a name="getting-in-touch-with-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームに連絡する  
 
@@ -419,7 +419,7 @@ Windows、Linux、または macOS を使用している場合は、既定の開�
 
 > [!NOTE]
 > このページの一部の情報は、[Google によって作成および共有][GoogleSitePolicies]されている著作物に基づいており、[Creative Commons Attribution 4.0 International License][CCA4IL] に記載されている条項に従って使用されています。  
-> [Jecelyn Yeen][JecelynYeen] \(デベロッパー アドボケイト、Chrome DevTools\) によって作成された元のページは[こちら](https://developers.google.com/web/updates/2020/11/devtools/index)にあります。  
+> [Jecelyn Yeen][JecelynYeen] \(デベロッパー アドボケイト、Chrome DevTools\) によって作成された元のページは[こちら](https://developer.chrome.com/blog/new-in-devtools-88)にあります。  
 
 [![Creative Commons ライセンス][CCby4Image]][CCA4IL]  
 この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。  

@@ -3,17 +3,17 @@ description: CSS Flexbox のデバッグサポート、Web ページのパフォ
 title: DevTools の新機能 (Microsoft Edge 90)
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 03/15/2021
+ms.date: 04/08/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
 ms.localizationpriority: high
-ms.openlocfilehash: e220bbbe0a545b7cc539d0c77deb2ecb070decc0
-ms.sourcegitcommit: 4b9fb5c1176fdaa5e3c60af2b84e38d5bb86cd81
+ms.openlocfilehash: 3653bd2293f96a6ddfb84d8e1c7492bea78c15c1
+ms.sourcegitcommit: de75fda30bb8964e9a184228d068b4402ec59c3e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "11439746"
+ms.lasthandoff: 04/22/2021
+ms.locfileid: "11514404"
 ---
 <!-- Copyright Jecelyn Yeen 
 
@@ -360,7 +360,7 @@ Windows、Linux、または macOS を使用している場合は、 既定の開
 
 > [!NOTE]
 > このページの一部の情報は、[Google によって作成および共有][GoogleSitePolicies]されている著作物に基づいており、[Creative Commons Attribution 4.0 International License][CCA4IL] に記載されている条項に従って使用されています。  
-> [Jecelyn Yeen][JecelynYeen] \(デベロッパー アドボケイト、Chrome DevTools\) によって作成された元のページは[こちら](https://developers.google.com/web/updates/2021/02/devtools/index)にあります。  
+> [Jecelyn Yeen][JecelynYeen] \(デベロッパー アドボケイト、Chrome DevTools\) によって作成された元のページは[こちら](https://developer.chrome.com/blog/new-in-devtools-90)にあります。  
 
 [![Creative Commons ライセンス][CCby4Image]][CCA4IL]  
 この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。  
