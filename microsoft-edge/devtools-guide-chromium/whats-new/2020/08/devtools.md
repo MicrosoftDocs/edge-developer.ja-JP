@@ -3,16 +3,16 @@ description: キーボード ショートカットを Visual Studio Code と一�
 title: DevTools の新機能 (Microsoft Edge 86)
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 03/12/2021
+ms.date: 04/08/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: a981c8b1a2658ba8cf771096e63001f7d6f69616
-ms.sourcegitcommit: e29cd1c393fc1f433dba8c3d8f260b425ade63a9
+ms.openlocfilehash: f1227f0869aa753c2d05980c712ca3453adfd041
+ms.sourcegitcommit: de75fda30bb8964e9a184228d068b4402ec59c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2021
-ms.locfileid: "11408347"
+ms.lasthandoff: 04/22/2021
+ms.locfileid: "11514383"
 ---
 <!-- Copyright Jecelyn Yeen 
 
@@ -502,7 +502,7 @@ Windows または macOS を使用している場合、[Microsoft Edge プレビ�
 [CR384968]: https://crbug.com/384968 "local () フォントを無視するオプション | Chromium bugs"  
 [CR772558]: https://crbug.com/772558 "DevTools: Lighthouse の最新バージョンに更新する | Chromium bugs"  
 [CR807440]: https://crbug.com/807440 "SW の数が多いと Chrome がロックされる | Chromium bugs"  
-[CR997694]: https://crbug.com/997694 "[ネットワーク] パネルの "xhr" フィルターの下に 302 状態の XHR 要求が表示されない | Chromium bugs"  
+[CR997694]: https://crbug.com/997694 "[ネットワーク] パネルの &quot;xhr&quot; フィルターの下に 302 状態の XHR 要求が表示されない | Chromium bugs"  
 [CR1047356]: https://crbug.com/1047356 "CSS グリッド/Flexbox/Table ツーリング | Chromium bugs"  
 [CR1051466]: https://crbug.com/1051466 "DevTools での COOP/COEP デバッグのサポート | Chromium bugs"  
 [CR1054281]: https://crbug.com/1054281 "機能に関する要望: DevTools で折りたたみ式デバイスとデュアルスクリーン デバイスをエミュレートできるようにしてほしい | Chromium bugs"  
@@ -543,7 +543,7 @@ Windows または macOS を使用している場合、[Microsoft Edge プレビ�
 
 > [!NOTE]
 > このページの一部の情報は、[Google によって作成および共有][GoogleSitePolicies]されている著作物に基づいており、[Creative Commons Attribution 4.0 International License][CCA4IL] に記載されている条項に従って使用されています。  
-> [Jecelyn Yeen][JecelynYeen] \(デベロッパー アドボケイト、Chrome DevTools\) によって作成された元のページは[こちら](https://developers.google.com/web/updates/2020/08/devtools/index)にあります。  
+> [Jecelyn Yeen][JecelynYeen] \(デベロッパー アドボケイト、Chrome DevTools\) によって作成された元のページは[こちら](https://developer.chrome.com/blog/new-in-devtools-86)にあります。  
 
 [![Creative Commons ライセンス][CCby4Image]][CCA4IL]  
 この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。  
