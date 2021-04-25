@@ -7,12 +7,12 @@ ms.date: 02/12/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: ffc27cdd04ce28df888507fb2e1dc460d5bb4f21
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: c1571ab909aac09e4593413e96f7d4b7723c7759
+ms.sourcegitcommit: 16e2f7232196a57a70b979bbf8b663774b7ddc20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11398953"
+ms.lasthandoff: 04/25/2021
+ms.locfileid: "11519346"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -30,11 +30,10 @@ ms.locfileid: "11398953"
 
 # <a name="mark-content-scripts-as-library-code"></a>コンテンツ スクリプトをライブラリ コードとしてマークする  
 
-Microsoft Edge **** DevTools の [ソース][][DevToolsJavascriptStepThroughCode]パネルを使用してコードをステップ実行する場合は、認識できないコードを一時停止する場合があります。  おそらく、インストールした Microsoft Edge 拡張機能のコードを一時停止した可能性があります。  拡張機能コードを一時停止しない場合は、次の手順を実行します。  
+ソース ツールを使用**して**コードを[][DevToolsJavascriptStepThroughCode]ステップ実行すると、認識できないコードを一時停止する場合があります。  おそらく、インストールした Microsoft Edge 拡張機能のコードを一時停止した可能性があります。  拡張機能コードを一時停止しない場合は、次の操作を実行します。  
 
-1.  DevTools を開き **、[DevTools** \( \) をカスタマイズして制御 `...` する] を選択し、[設定] > **します**。  [設定] を **選択して開** く場合があります `F1` 。  
-
-1.  [設定] **の [フレームワーク** ライブラリ コード] **セクションを開く [ライブラリ** コード] パネルを **選択します**。  
+1.  DevTools の右上にある歯車アイコン (設定) を選択**します**。  **[設定]** ページが表示されます。  
+1.  [設定 **] の下の**[リストの **無視] を選択します**。  [**設定] の [フレームワーク ライブラリ コード****] セクションが**表示されます。  
 1.  [コンテンツ スクリプトを **ライブラリ コードとしてマークする] チェック ボックスをオン** にします。  
     
     :::image type="complex" source="../../media/javascript-settings-library-code-mark-content-scripts-library-code.msft.png" alt-text="[コンテンツ スクリプトをライブラリ コードとしてマークする] チェック ボックスをオンにする" lightbox="../../media/javascript-settings-library-code-mark-content-scripts-library-code.msft.png":::

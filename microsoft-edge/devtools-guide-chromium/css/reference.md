@@ -7,12 +7,12 @@ ms.date: 03/08/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 84aacbb3961f6b8f6e9a0bda8823fecbbb26ec25
-ms.sourcegitcommit: 4b9fb5c1176fdaa5e3c60af2b84e38d5bb86cd81
+ms.openlocfilehash: bddbf14e73f5c29bfd4757c9cd6d255f419c331f
+ms.sourcegitcommit: 16e2f7232196a57a70b979bbf8b663774b7ddc20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "11439304"
+ms.lasthandoff: 04/25/2021
+ms.locfileid: "11519332"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -56,9 +56,9 @@ ms.locfileid: "11439304"
 
 ### <a name="view-the-external-stylesheet-where-a-rule-is-defined"></a>ルールが定義されている外部スタイルシートを表示する  
 
-[スタイル **] ウィンドウ** で、CSS ルールの横にあるリンクを選択して、ルールを定義する外部スタイルシートを開きます。  
+[スタイル **] ウィンドウ** で、CSS ルールの横にあるリンクを選択して、ルールを定義する外部スタイルシートを開きます。  スタイルシートは、[ソース] ツール **の [エディター** ] ウィンドウ **で開** きます。  
 
-スタイルシートが minified の場合は、[ファイルを読み取り可能にする] [に移動します][DevToolsJavascriptReferenceFormat]。  
+スタイルシートが minified の場合は、[エディター] ウィンドウの下部にある [ **書式]** ![ ](../media/format-icon.msft.png) \( Format \) ボタン **を選択** します。  詳細については、「ミニマリストの JavaScript ファイルをプリティプリントで再フォーマット [する」に移動します][DevToolsJavascriptReferenceFormat]。  
 
 > [!NOTE]
 > 次の図では、選択した後、CSS ルールが定義されている `https://docs.microsoft.com/_themes/docs.theme/master/en-us/_themes/styles/b66bc881.site-ltr.css:2` 行 2 `https://docs.microsoft.com/_themes/docs.theme/master/en-us/_themes/styles/b66bc881.site-ltr.css` `.content h1:first-of-type` に移動します。  
@@ -557,7 +557,7 @@ Color **Picker は** 、変更と宣言のための GUI `color` `background-colo
 [DevToolsCSSGetStartedAddPseudoState]: ../css/index.md#add-a-pseudostate-to-a-class "クラスに擬似状態を追加する - CSS の表示と変更の開始|Microsoft Docs"  
 [DevToolsCSSGetStartedTutorial]: ../css/index.md#view-the-css-for-an-element "要素の CSS を表示する - CSS の表示と変更の開始|Microsoft Docs"  
 [DevToolsCssPrintPreview]: ../css/print-preview.md "Microsoft Edge DevTools を印刷プレビュー モード (CSS 印刷メディアの種類) に強制|Microsoft Docs"  
-[DevToolsJavascriptReferenceFormat]: ../javascript/reference.md#make-a-minified-file-readable "ファイルを読み取り可能にする - JavaScript デバッグ リファレンス |Microsoft Docs"  
+[DevToolsJavascriptReferenceFormat]: ../javascript/reference.md#reformat-a-minified-javascript-file-with-pretty-print "ミニマ化された JavaScript ファイルをプリティプリントで再フォーマットする - デバッガー ファイルを使用|Microsoft Docs"  
 
 [MaterialDesignColorSystem]: https://material.io/guidelines/style/color.html#color-color-palette "カラー システム - マテリアル デザイン"  
 [MDNBoxModel]: https://developer.mozilla.org/docs/Learn/CSS/Introduction_to_CSS/Box_model "ボックス モデルの|MDN"  

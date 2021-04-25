@@ -7,12 +7,12 @@ ms.date: 02/12/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 75063b23f23c25ff4fe2e7f6e044a2de9a7b1ccd
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: 818b93c1c07a93baa8972a530871d20446fd687f
+ms.sourcegitcommit: 16e2f7232196a57a70b979bbf8b663774b7ddc20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11398225"
+ms.lasthandoff: 04/25/2021
+ms.locfileid: "11519444"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -78,13 +78,14 @@ ms.locfileid: "11398225"
 
 ### <a name="browse-by-directory"></a>ディレクトリで参照する  
 
-ディレクトリ別に整理されたページのリソースを表示するには、次の方法を実行します。  
+ディレクトリ別に整理された Web ページのリソースを表示するには、次の方法を実行します。  
 
-1.  [ソース] **ツールを選択** して 、[ソース] **パネルを開** きます。  
-1.  [ページ **] パネルを** 選択して、ページのリソースを表示します。  [ **ページ] ウィンドウが** 開きます。  
+1.  DevTools を開きます。
+1.  [ソース **] ツールを** 選択し、左上の **[ナビゲーター** ] ウィンドウで [ページ] タブ **を選択** します。
+1.  [ページ]**タブの**右側にある [その他のオプション****(....)] ボタンを選択し、[フォルダー別にグループ化]**を選択します**。
     
-    :::image type="complex" source="../media/resources-sources-page-empty.msft.png" alt-text="ページウィンドウ" lightbox="../media/resources-sources-page-empty.msft.png":::
-       [ **ページ]** パネル  
+    :::image type="complex" source="../media/resources-sources-page-empty.msft.png" alt-text="[ソース] ツールの [ナビゲーター] ウィンドウの [ページ] タブ" lightbox="../media/resources-sources-page-empty.msft.png":::
+       [**ソース]** ツールの **[ナビゲーター** ] ウィンドウの **[ページ] タブ**  
     :::image-end:::  
     
     前の図の非明白な項目の内訳を次に示します。  
@@ -105,19 +106,20 @@ ms.locfileid: "11398225"
     
 ### <a name="browse-by-filename"></a>ファイル名で参照する  
 
-既定では **、Page パネルはリソース** をディレクトリ別にグループ化します。  このグループ化を無効にして、各ドメインのリソースをフラット リストとして表示するには、次のコマンドを実行します。  
+既定では、[ページ] **タブは** ディレクトリ別にリソースをグループ化します。  ディレクトリ別にグループ化するのではなく、各ドメインのリソースをフラット リストとして表示するには、次の方法を実行します。
 
-1.  [ページ] **パネルを開** きます。  [ディレクトリで [参照] に移動します](#browse-by-directory)。  
-1.  [その **他のオプション]** `...` を選択し、[ **フォルダー別グループ化] を無効にします**。  
+1.  [ソース] **ツールに移動** します。  
+1.  左側の **[ナビゲーター]** ウィンドウで、[ページ] タブ **を選択** します。  
+1.  [その **他のオプション]** `...` を選択し、[フォルダー別にグループ化] の横にあるチェック **マークをオフにします**。  
     
     :::image type="complex" source="../media/resources-sources-page-resource-group-by-folder.msft.png" alt-text="[フォルダー別にグループ化] オプション" lightbox="../media/resources-sources-page-resource-group-by-folder.msft.png":::
        [ **フォルダー別にグループ化]** オプション  
     :::image-end:::  
     
     リソースはファイルの種類別に整理されます。  各ファイルの種類では、リソースはアルファベット順に整理されます。  
-    
-    :::image type="complex" source="../media/resources-sources-page-resources-empty-not-grouped-by-folder.msft.png" alt-text="Group By Folder を無効にした後のページ パネル" lightbox="../media/resources-sources-page-resources-empty-not-grouped-by-folder.msft.png":::
-       Group **By** Folder を無効にした **後のページ パネル**  
+
+    :::image type="complex" source="../media/resources-sources-page-resources-empty-not-grouped-by-folder.msft.png" alt-text="[フォルダー別グループ] チェック マークをオフにした後の [ページ] タブ" lightbox="../media/resources-sources-page-resources-empty-not-grouped-by-folder.msft.png":::
+       [ **フォルダー別グループ** ] チェック マークを **オフにした後の [ページ]** タブ  
     :::image-end:::  
     
 ### <a name="browse-by-file-type"></a>ファイルの種類別に参照する  

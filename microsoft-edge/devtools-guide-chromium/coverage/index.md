@@ -7,12 +7,12 @@ ms.date: 02/12/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 2a2d48bda34daa95b9f500c31a12859a1cb08625
-ms.sourcegitcommit: 4b9fb5c1176fdaa5e3c60af2b84e38d5bb86cd81
+ms.openlocfilehash: a8fccdcabf03f3894a9a11246b90db4686fd953e
+ms.sourcegitcommit: 16e2f7232196a57a70b979bbf8b663774b7ddc20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "11439199"
+ms.lasthandoff: 04/25/2021
+ms.locfileid: "11519318"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -78,7 +78,7 @@ Microsoft **Edge DevTools** の [カバレッジ] パネルを使用すると、
     
 ## <a name="analyze-code-coverage"></a>コード範囲の分析  
 
-[カバレッジ] パネル **の表** には、分析されたリソースと、各リソース内で使用されるコードの量が表示されます。  行を選択して[ソース] パネル**** でリソースを開き、使用されているコードと未使用のコードの 1 行の内訳を確認します。  
+[カバレッジ] パネル **の表** には、分析されたリソースと、各リソース内で使用されるコードの量が表示されます。  [ソース] ツールでリソースを開**** く行を選択し、使用されているコードと未使用のコードの 1 行に 1 行の内訳を確認します。  
 
 :::image type="complex" source="../media/coverage-sources-resource-drawer-coverage-selected.msft.png" alt-text="コード カバレッジ レポート" lightbox="../media/coverage-sources-resource-drawer-coverage-selected.msft.png":::
    コード カバレッジ レポート  

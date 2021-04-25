@@ -1,18 +1,18 @@
 ---
 description: Microsoft Edge DevTools デバッグ機能の包括的なリファレンスで、新しいデバッグ ワークフローについて説明します。
-title: JavaScript デバッグ リファレンス
+title: デバッガー機能の使用
 author: MSEdgeTeam
 ms.author: msedgedevrel
 ms.date: 03/08/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 2944e054a08a901d2e1752fa7c4e48ae110f5787
-ms.sourcegitcommit: 4b9fb5c1176fdaa5e3c60af2b84e38d5bb86cd81
+ms.openlocfilehash: 6fb90a70e0aac9f556fa9f5f02afee1fd5b4962e
+ms.sourcegitcommit: 16e2f7232196a57a70b979bbf8b663774b7ddc20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "11439459"
+ms.lasthandoff: 04/25/2021
+ms.locfileid: "11519605"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -28,25 +28,60 @@ ms.locfileid: "11439459"
    See the License for the specific language governing permissions and
    limitations under the License.  -->
 
-# <a name="javascript-debugging-reference"></a>JavaScript デバッグ リファレンス  
+# <a name="use-the-debugger-features"></a>デバッガー機能の使用
 
-Microsoft Edge DevTools デバッグ機能の包括的な参照を使用して、新しいデバッグ ワークフローを確認します。  
+この記事では、コード行ブレークポイントを設定する方法など、Microsoft Edge DevTools でデバッガーを使用する方法について説明します。  他の種類のブレークポイントを設定するには、「ブレークポイントでコードを一 [時停止する」を参照してください][DevToolsJavascriptBreakpoints]。  
 
-デバッグの基本については [、「Microsoft Edge DevTools][DevToolsJavascriptGetStarted]での JavaScript のデバッグの開始」に移動します。  
+デバッグの基本については [、「Microsoft Edge DevTools][DevToolsJavascriptGetStarted]での JavaScript のデバッグの開始」に移動します。これは、既存のフォーム ベースの Web ページを使用するチュートリアルです。  チュートリアルには画面キャプチャが含め、ススキミングできます。  デモ Web ページを使用すると、デバッガー機能を簡単に試してみます。
 
-## <a name="pause-code-with-breakpoints"></a>ブレークポイントを使用してコードを一時停止する  
+## <a name="view-and-edit-javascript-code"></a>JavaScript コードの表示と編集
 
-ブレークポイントを設定して、ランタイムの途中でコードを一時停止できます。  
+バグを修正する場合は、JavaScript コードに対する変更を試してみる必要があります。  外部エディターまたは IDE で変更を加え、ファイルをサーバーに再アップロードしてから、ページを更新する必要があります。代わりに、変更をテストするために、DevTools で JavaScript コードを直接編集し、結果をすぐに確認できます。  
 
-ブレークポイントを設定する方法については、「ブレークポイントを使用してコード [を一時停止する」に移動します][DevToolsJavascriptBreakpoints]。  
+JavaScript ファイルを表示および編集するには、次の方法を実行します。  
+
+1.  [ソース] **ツールに移動** します。  
+1.  [ナビゲーター **] ウィンドウ** でファイルを選択し、[エディター] ウィンドウで **開** きます。
+1.  [エディター **] ウィンドウ** で、ファイルを編集します。  
+1.  `Ctrl` + `S` \(Windows, Linux\) または `Command` + `S` \(macOS\) を選択して保存します。  DevTools は、JavaScript ファイルを Microsoft Edge の JavaScript エンジンに読み込む。  
+    
+    :::image type="complex" source="../media/javascript-sources-html-minified.msft.png" alt-text="[エディター] ウィンドウ" lightbox="../media/javascript-sources-html-minified.msft.png":::
+       [ **エディター]** ウィンドウ  
+    :::image-end:::  
+     
+## <a name="reformat-a-minified-javascript-file-with-pretty-print"></a>美しい印刷で、ミニマ化された JavaScript ファイルを再フォーマットする
+
+ファイルを人間が読み取り可能にするには、[エディター] ウィンドウの下部にある [ **書式]** ![ ](../media/format-icon.msft.png) \( Format \) ボタンを **選択** します。
+
+:::image type="complex" source="../media/javascript-sources-html-non-minified.msft.png" alt-text="[書式] ボタン" lightbox="../media/javascript-sources-html-non-minified.msft.png":::
+   [ **書式]** ボタン  
+:::image-end:::  
+
+## <a name="set-a-breakpoint-to-pause-code"></a>ブレークポイントを設定し、コードを一時停止する
+
+ランタイムの途中でコードを一時停止するには、ブレークポイントを設定します。  最も基本的で既知の種類のブレークポイントは、コード行ブレークポイントです。
+
+調査する必要があるコードの正確な領域を知っている場合は、コード行ブレークポイントを使用します。  DevTools は、指定したコード行で実行する前に常に一時停止します。
+
+コード行ブレークポイントを設定するには、次のコマンドを実行します。  
+
+1.  [ソース] **ツールに移動** します。  
+1.  コード行を含むファイルを開きます。  
+1.  コード行の行番号の左側にある領域を選択します。  または、行番号を右クリックし、[ブレークポイントの追加] **を選択します**。  次に、行番号の横に赤い円が表示され、ブレークポイントが示されます。  
+    
+    :::image type="complex" source="../media/javascript-sources-page-js-breakpoint-30.msft.png" alt-text="コード行ブレークポイント" lightbox="../media/javascript-sources-page-js-breakpoint-30.msft.png":::
+       コード行ブレークポイント  
+    :::image-end:::  
+
+コード行のブレークポイントは、特に場所が正確に分からない場合や、コードベースが大きい場合は、設定が非効率的な場合があります。  デバッグの時間を節約するには、他の種類のブレークポイントを使用する方法と使用時期について説明します。  詳細については、「ブレークポイントを使用してコード [を一時停止する」に移動します][DevToolsJavascriptBreakpoints]。
 
 ## <a name="step-through-code"></a>コードのステップスルー  
 
-コードを一時停止したら、一度に 1 行に 1 行の手順を実行し、その途中で制御フローとプロパティ値を調査します。  
+ブレークポイントでコードを一時停止した後、一度に 1 行のコードをステップ実行し、その途中で制御フローとプロパティ値を調査します。  
 
 ### <a name="step-over-line-of-code"></a>一行のコードをステップ オーバーする  
 
-デバッグ中の問題に関係のない関数を含むコード行で一時停止した場合は、[Step **over** \( ![ Step over \) ] ボタンを選択して、ステップ インせずに関数を実行します。 ](../media/step-over-icon.msft.png)  
+デバッグ中の問題に関係のない関数を含むコード行で一時停止した場合は、[ステップ オーバー ] \( Step **over** ![ \) ボタンを選択して、ステップ インせずに関数を実行します。 ](../media/step-over-icon.msft.png)  
 
 :::image type="complex" source="../media/javascript-source-page-debugger-step-over-next-function-call.msft.png" alt-text="[ステップ オーバー] を選択する" lightbox="../media/javascript-source-page-debugger-step-over-next-function-call.msft.png":::
    [ステップ **オーバー] を選択する**  
@@ -94,7 +129,7 @@ function getName() {
 
 ### <a name="step-out-of-line-of-code"></a>コード行からステップアウトする  
 
-デバッグ中の問題に関連しない関数の内部で一時停止した場合は、[ステップ アウト] \( Step **out** \) ボタンを選択して、関数の残りのコードを ![ ](../media/step-out-icon.msft.png) 実行します。  
+デバッグ中の問題に関連しない関数の内部で一時停止した場合は、[ステップ アウト\( Step **out** \) ] ボタンを選択して、関数の残りのコードを ![ ](../media/step-out-icon.msft.png) 実行します。  
 
 :::image type="complex" source="../media/javascript-source-page-debugger-step-out-of-current-function.msft.png" alt-text="[ステップ アウト] を選択する" lightbox="../media/javascript-source-page-debugger-step-out-of-current-function.msft.png":::
    [ステップ **アウト] を選択する**  
@@ -118,9 +153,9 @@ function getName() {
 
 ### <a name="run-all-code-up-to-a-specific-line"></a>特定の行まですべてのコードを実行する  
 
-長い関数をデバッグする場合、デバッグ中の問題とは関係ないコードが多い場合があります。  
+長い関数をデバッグする場合、デバッグ中の問題に関連しないコードが多い場合があります。  
 
-すべての行をステップスルーすることを選択できますが、これは時間のかかっています。  必要な行にコード行ブレークポイントを設定し、[スクリプト実行の再開 **\(** スクリプト実行の再開 ![ \)] ボタンを選択することもできますが、より高速な方法 ](../media/resume-script-run-icon.msft.png) があります。  
+すべての行をステップスルーすることを選択できますが、これは時間のかかっています。  必要な行にコード行ブレークポイントを設定し、[スクリプトの実行を再開する]\( スクリプト実行の**** 再開 \) ボタンを選択することもできますが、より高速な方法 ![ ](../media/resume-script-run-icon.msft.png) があります。  
 
 目的のコード行にカーソルを合わせると、コンテキスト メニュー \(右クリック\) を開き、[続行] **をクリックします**。  DevTools は、その時点まですべてのコードを実行し、その行で一時停止します。  
 
@@ -130,7 +165,7 @@ function getName() {
 
 ### <a name="restart-the-top-function-of-the-call-stack"></a>呼び出し履歴のトップ関数を再起動する  
 
-呼び出し履歴内のトップ関数の最初の行で一時停止し、コード行で一時停止している間は、[通話履歴****] ウィンドウの任意の場所にマウス ポインターを移動し、コンテキスト**** メニュー \(右クリック\) を開き、[フレームの再起動] を選択します。  トップ関数は、最後に実行された関数です。  
+呼び出し履歴のトップ関数の最初の行で一時停止し、コード行で一時停止している間は、[通話履歴]**** ウィンドウの任意の場所にマウス ポインターを移動し、コンテキスト メニュー **** \(右クリック\) を開き、[フレームの再起動] を選択します。  トップ関数は、最後に実行された関数です。  
 
 次のコード スニペットは、手順を実行する例です。  
 
@@ -144,7 +179,7 @@ function factorial(n) {
 }
 ```  
 
-一時停止中です `A` 。  [フレームの **再起動]** を選択した後は、ブレークポイントを設定したり、[スクリプトの実行の再開] を選択したりせずに、一 `B` **時停止する必要があります**。  
+一時停止中です `A` 。  [フレームの **再起動] を**選択した後は、ブレークポイントを設定したり、[スクリプトの実行の再開] を選択したりせずに、一 `B` **時停止する必要があります**。  
 
 :::image type="complex" source="../media/javascript-source-page-debugger-restart-frame.msft.png" alt-text="[フレームの再起動] を選択する" lightbox="../media/javascript-source-page-debugger-restart-frame.msft.png":::
    [フレーム **の再起動] を選択する**  
@@ -152,7 +187,7 @@ function factorial(n) {
 
 ### <a name="resume-script-runtime"></a>スクリプト ランタイムの再開  
 
-スクリプトの一時停止後にランタイムを続行するには、[スクリプトの実行の再開 \( Resume Script **Execution** ![ ](../media/resume-script-run-icon.msft.png) \) ] ボタンを選択します。  DevTools は、次のブレークポイントがある場合は、スクリプトを実行します。  
+スクリプトの一時停止後にランタイムを続行するには、[スクリプトの実行を **再開する** ]\( Resume script ![ execution ](../media/resume-script-run-icon.msft.png) \) ボタンを選択します。  DevTools は、次のブレークポイントがある場合は、スクリプトを実行します。  
 
 :::image type="complex" source="../media/javascript-sources-get-started-js-resume-script-runtime.msft.png" alt-text="[スクリプトの実行の再開] を選択します。" lightbox="../media/javascript-sources-get-started-js-resume-script-runtime.msft.png":::
    [スクリプト **の実行の再開] を選択します。**  
@@ -160,7 +195,7 @@ function factorial(n) {
 
 #### <a name="force-script-runtime"></a>強制スクリプト ランタイム  
 
-すべてのブレークポイントを無視してスクリプトの実行を強制的に再開するには、[スクリプトの実行を**再開する**]\( スクリプト実行の再開 \) ボタンを選択し、スクリプトの実行を強制する \( 強制スクリプト実行 ![ ](../media/resume-script-run-icon.msft.png) **** ![ ](../media/force-script-run-icon.msft.png) \) ボタンを選択します。  
+すべてのブレークポイントを無視し、スクリプトを強制的に実行し続けるには、[スクリプトの**** 実行を再開する]\( スクリプト実行の再開 \) ボタンを選択し、次に [スクリプト実行の強制] \( 強制スクリプト実行 ![ ](../media/resume-script-run-icon.msft.png) **** ![ ](../media/force-script-run-icon.msft.png) \) ボタンを選択します。  
 
 :::image type="complex" source="../media/javascript-sources-get-started-js-force-script-runtime.msft.png" alt-text="[スクリプトの実行を強制する] を選択する" lightbox="../media/javascript-sources-get-started-js-force-script-runtime.msft.png":::
    [スクリプト **の実行を強制する] を選択する**  
@@ -174,9 +209,9 @@ Web ワーカーまたはサービス ワーカーを操作する場合は、[�
    [ **スレッド]** ウィンドウ  
 :::image-end:::  
 
-たとえば、メイン スクリプトとサービス ワーカー スクリプトの両方のブレークポイントで一時停止したとします。  サービス ワーカー コンテキストのローカル プロパティとグローバル プロパティを表示する場合**** は、[ソース] パネルにメイン スクリプト コンテキストが表示されます。  [スレッド] ウィンドウでサービス ワーカー**** エントリを選択すると、そのコンテキストに切り替える必要があります。  
+たとえば、メイン スクリプトとサービス ワーカー スクリプトの両方のブレークポイントで一時停止したとします。  サービス ワーカー コンテキストのローカル プロパティとグローバル プロパティを表示する場合**** は、ソース ツールにメイン スクリプト コンテキストが表示されます。  サービス ワーカー コンテキストに切り替える場合は、[ **スレッド** ] ウィンドウでサービス ワーカー エントリを選択します。  
 
-## <a name="view-and-edit-local-closure-and-global-properties"></a>ローカル、クロージャ、およびグローバル プロパティの表示と編集  
+## <a name="view-and-edit-properties-and-variables"></a>プロパティと変数の表示と編集
 
 コード行で一時停止中に、[スコープ]**** ウィンドウを使用して、ローカル スコープ、クロージャ スコープ、およびグローバル スコープ内のプロパティと変数の値を表示および編集します。  
 
@@ -187,7 +222,19 @@ Web ワーカーまたはサービス ワーカーを操作する場合は、[�
    [ **スコープ]** ウィンドウ  
 :::image-end:::  
 
-## <a name="view-the-current-call-stack"></a>現在の呼び出し履歴を表示する  
+## <a name="watch-the-values-of-javascript-expressions"></a>JavaScript 式の値を確認する  
+
+[ウォッチ **] ウィンドウを** 使用して、カスタム式の値を確認します。  有効な JavaScript 式を確認できます。  
+
+:::image type="complex" source="../media/javascript-sources-get-started-js-watch.msft.png" alt-text="[ウォッチ] ウィンドウ" lightbox="../media/javascript-sources-get-started-js-watch.msft.png":::
+   [ **ウォッチ]** ウィンドウ  
+:::image-end:::  
+
+*   新しいウォッチ式を作成するには、ウォッチ **式の** 追加 \( ![ Add watch expression ](../media/add-expression-icon.msft.png) \) ボタンを選択します。  
+*   すべての既存の式の値を更新するには、[\( **Refresh** ![ \) ] ](../media/refresh-icon.msft.png) ボタンを選択します。  コードをステップ実行すると、値が自動的に更新されます。  
+*   ウォッチ式を削除するには、式を右クリックし、[ウォッチ式の **削除]** \( [ウォッチ式の削除] ![ \) を ](../media/delete-expression-icon.msft.png) 選択します。  
+
+## <a name="view-the-call-stack"></a>呼び出し履歴の表示  
 
 コード行で一時停止中に、[呼び出**** し履歴] ウィンドウを使用して、この時点に移動した通話履歴を表示します。  
 
@@ -208,7 +255,7 @@ Web ワーカーまたはサービス ワーカーを操作する場合は、[�
 This should be moved to an "Export debug data" H2 section when there is enough content for that, but there is not right now, so it is here.
 -->
 
-現在の呼び出し履歴をクリップボードにコピーするには、[通話履歴****] ウィンドウの任意の場所にマウス ポインターを移動し、コンテキスト メニュー \(右クリック\) を開き、[スタック トレースのコピー] を**選択します**。  
+現在の通話履歴をクリップボードにコピーするには、[通話履歴] ウィンドウ**** の任意の場所にマウス ポインターを移動し、コンテキスト メニュー \(右クリック\) を開き、[スタック トレースのコピー] を**選択します**。  
 
 :::image type="complex" source="../media/javascript-glitch-debug-js-sources-get-started-inputs-are-empty-copy-stack-trace.msft.png" alt-text="[スタック トレースのコピー] を選択する" lightbox="../media/javascript-glitch-debug-js-sources-get-started-inputs-are-empty-copy-stack-trace.msft.png":::
    [スタック **トレースのコピー] を選択する**  
@@ -226,7 +273,7 @@ onChoose (get-started.js:15)
 
 デバッグ中にスクリプトを無視する場合は、スクリプトをライブラリ コードとしてマークします。  ライブラリ コードとしてマークされている場合、スクリプトは [呼び**** 出し履歴] ウィンドウで見えなされ、コードをステップ実行するときにスクリプトの機能にステップ インする必要はありません。  
 
-次のコード スニペットは、手順を実行する例です。  
+たとえば、次のコード スニペットでは、サードパーティ ライブラリ `A` `lib` である行が使用されます。  デバッグ中の問題がサード パーティ製ライブラリに関連していないと確信している場合は、スクリプトをライブラリ コードとしてマークする方 **が理にかなっています**。  
 
 ```javascript
 function animate() {
@@ -236,15 +283,13 @@ function animate() {
 }
 ```  
 
-`A` は、信頼できるサード パーティ製のライブラリです。  デバッグ中の問題がサード パーティ製ライブラリに関連していないと確信している場合は、スクリプトをライブラリ コードとしてマークする方 **が理にかなっています**。  
-
 ### <a name="mark-a-script-as-library-code-from-the-editor-pane"></a>エディター ウィンドウからスクリプトをライブラリ コードとしてマークする  
 
-次のアクションを実行して、[エディター] ウィンドウから **スクリプトをライブラリ コード** として **マーク** します。  
+エディター ウィンドウからスクリプトを **ライブラリ コード** としてマークするには、 **次の操作を行** います。  
 
 1.  ファイルを開きます。  
 1.  任意の場所にマウス ポインターを移動し、コンテキスト メニュー \(右クリック\) を開きます。  
-1.  [ **ライブラリ コードとしてマーク] を選択します**。  
+1.  [ **スクリプトの追加] を選択してリスト** を無視します (以前は [ライブラリ コードとして **マーク] と表示されています**)。  
     
     :::image type="complex" source="../media/javascript-glitch-debug-js-sources-get-started-inputs-are-empty-editor-mark-as-library-code.msft.png" alt-text="エディター ウィンドウからスクリプトをライブラリ コードとしてマークする" lightbox="../media/javascript-glitch-debug-js-sources-get-started-inputs-are-empty-editor-mark-as-library-code.msft.png":::
        エディター ウィンドウからスクリプト **をライブラリ コード** として **マーク** する  
@@ -252,10 +297,10 @@ function animate() {
     
 ### <a name="mark-a-script-as-library-code-from-the-call-stack-pane"></a>[呼び出し履歴] ウィンドウからスクリプトをライブラリ コードとしてマークする  
 
-次のアクションを実行して、[呼び出し履歴] ウィンドウから **スクリプトをライブラリ** コード **としてマーク** します。  
+[呼び出し履歴] **ウィンドウからスクリプトをライブラリ** コード **としてマークするには、次の操作を行** います。  
 
 1.  スクリプトから関数にカーソルを移動し、コンテキスト メニュー \(右クリック\) を開きます。  
-1.  [ **ライブラリ コードとしてマーク] を選択します**。  
+1.  [ **スクリプトの追加] を選択してリスト** を無視します (以前は [ライブラリ コードとして **マーク] と表示されています**)。  
     
     :::image type="complex" source="../media/javascript-glitch-debug-js-sources-get-started-inputs-are-empty-call-stack-mark-as-library-code.msft.png" alt-text="[呼び出し履歴] ウィンドウからスクリプトをライブラリ コードとしてマークする" lightbox="../media/javascript-glitch-debug-js-sources-get-started-inputs-are-empty-call-stack-mark-as-library-code.msft.png":::
        [呼び出し履歴] **ウィンドウからスクリプトを** ライブラリ **コードとしてマーク** する  
@@ -263,7 +308,7 @@ function animate() {
     
 ### <a name="mark-a-script-as-library-code-from-settings"></a>設定からスクリプトをライブラリ コードとしてマークする  
 
-設定からスクリプトの 1 つのスクリプトまたはパターンをマークするには、次のアクションを **実行します**。  
+設定からスクリプトの 1 つのスクリプトまたはパターンをマークするには、次のコマンドを **実行します**。  
 
 1.  [設定 [] を開きます][DevToolsCustomize]。  
 1.  [ライブラリ コード **] 設定に移動** します。  
@@ -279,45 +324,13 @@ function animate() {
 
 コンソールで同じデバッグ コードを実行している場合は、スニペットを検討してください。  スニペットは、DevTools 内で作成、保存、および実行するランタイム スクリプトです。  
 
-詳細については、「任意のページから [コードのスニペットを実行する」に移動します][DevToolsJavascriptSnippets]。  
+「 [任意の Web ページで JavaScript のスニペットを実行する」を参照してください][DevToolsJavascriptSnippets]。  
 
-## <a name="watch-the-values-of-custom-javascript-expressions"></a>カスタム JavaScript 式の値を確認する  
+## <a name="see-also"></a>関連項目  
 
-[ウォッチ **] ウィンドウを** 使用して、カスタム式の値を確認します。  有効な JavaScript 式を確認できます。  
-
-:::image type="complex" source="../media/javascript-sources-get-started-js-watch.msft.png" alt-text="[ウォッチ] ウィンドウ" lightbox="../media/javascript-sources-get-started-js-watch.msft.png":::
-   [ **ウォッチ]** ウィンドウ  
-:::image-end:::  
-
-*   [式 **の追加** \( Add Expression \) ] ボタンを ![ ](../media/add-expression-icon.msft.png) 選択して、新しいウォッチ式を作成します。  
-*   [\( **Refresh** ![ ](../media/refresh-icon.msft.png) \) ] ボタンを選択して、既存のすべての式の値を更新します。  コードをステップ実行すると、値が自動的に更新されます。  
-*   式にカーソルを合わせると、式の **削除** \( ![ 式 ](../media/delete-expression-icon.msft.png) の削除 \) ボタンを選択して削除します。  
-
-## <a name="make-a-minified-file-readable"></a>ファイルを読み取り可能にする  
-
-[Format **** \( Format \) ] ボタンを選択して、ファイルを人間が読み取り可能 ![ ](../media/format-icon.msft.png) にします。  
-
-:::image type="complex" source="../media/javascript-sources-html-non-minified.msft.png" alt-text="[書式] ボタン" lightbox="../media/javascript-sources-html-non-minified.msft.png":::
-   [ **書式]** ボタン  
-:::image-end:::  
-
-## <a name="edit-a-script"></a>スクリプトの編集  
-
-バグを修正する場合は、JavaScript コードに対する変更をテストする必要が生じがちです。  外部エディターまたは IDE で変更を加え、ページを更新する必要はない。  DevTools でスクリプトを編集できます。  
-
-スクリプトを編集するには、次のアクションを実行します。  
-
-1.  [ソース] パネルの **[エディター** ] ウィンドウで **ファイルを開** きます。  
-1.  [エディター] ウィンドウで変更 **を行** います。  
-1.  `Ctrl` + `S` \(Windows, Linux\) または `Command` + `S` \(macOS\) を選択して保存します。  DevTools は、JS ファイル全体を Microsoft Edge の JavaScript エンジンにパッチを適用します。  
-    
-    :::image type="complex" source="../media/javascript-sources-html-minified.msft.png" alt-text="[エディター] ウィンドウ" lightbox="../media/javascript-sources-html-minified.msft.png":::
-       [ **エディター]** ウィンドウ  
-    :::image-end:::  
-     
-## <a name="disable-javascript"></a>JavaScript を無効にする  
-
-[Microsoft Edge [DevTools を使用して JavaScript を無効にする] に移動します][DevToolsJavascriptDisable]。  
+*   [Microsoft Edge DevTools][DevToolsJavascriptGetStarted] での JavaScript のデバッグの開始 - 画面キャプチャを使用して、既存のコードを使用した簡単で短いチュートリアルです。
+*   [ソース ツールの概要][DevToolsSourcesIndex] - ソース **ツールには** JavaScript デバッガーとエディターが含まれています。
+*   [Microsoft Edge DevTools を使用して JavaScript を無効にします][DevToolsJavascriptDisable]。
 
 ## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームと連絡を取る  
 
@@ -329,6 +342,7 @@ function animate() {
 [DevToolsJavascriptDisable]: ./disable.md "Microsoft Edge DevTools を使用して JavaScript を無効|Microsoft Docs"  
 [DevToolsJavascriptGetStarted]: ./index.md "Microsoft Edge DevTools の JavaScript のデバッグの|Microsoft Docs"  
 [DevToolsJavascriptSnippets]: ./snippets.md "Microsoft Edge DevTools を使用して任意のページで JavaScript のスニペットを実行|Microsoft Docs"  
+[DevToolsSourcesIndex]: ../sources/index.md "ソース ツールの概要|Microsoft Docs"  
 [DevToolsCustomize]: ../customize/index.md "Microsoft Edge DevTools のカスタマイズ |Microsoft Docs"  
 
 > [!NOTE]

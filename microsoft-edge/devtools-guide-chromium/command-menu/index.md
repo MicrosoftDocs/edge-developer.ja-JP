@@ -1,18 +1,18 @@
 ---
 description: コマンド メニューを開く方法、コマンドを実行する方法、その他のアクションを確認する方法などのガイド。
-title: '[Microsoft Edge DevTools コマンド] メニューでコマンドを実行する'
+title: Microsoft Edge DevTools コマンド メニューを使用してコマンドを実行する
 author: MSEdgeTeam
 ms.author: msedgedevrel
 ms.date: 02/12/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: a9e67815f69a44d3bd2a741738b04c7170f6ac15
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: b815934da73f9f023629564da7bea14da166ff9b
+ms.sourcegitcommit: 16e2f7232196a57a70b979bbf8b663774b7ddc20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11398029"
+ms.lasthandoff: 04/25/2021
+ms.locfileid: "11519192"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -28,7 +28,7 @@ ms.locfileid: "11398029"
    See the License for the specific language governing permissions and
    limitations under the License.  -->  
 
-# <a name="run-commands-with-the-microsoft-edge-devtools-command-menu"></a>[Microsoft Edge DevTools コマンド] メニューでコマンドを実行する  
+# <a name="run-commands-with-the-microsoft-edge-devtools-command-menu"></a>Microsoft Edge DevTools コマンド メニューを使用してコマンドを実行する  
 
 コマンド メニューを使用すると、Microsoft Edge DevTools UI を迅速に移動し、JavaScript の無効化などの一般的なタスク [を実行できます][JavascriptDisable]。  コマンド メニューの元のインスピレーションVisual Studioと呼ばれる Microsoft Visual Studio コードの[][VisualStudioCodeUICommandPalette]同様の機能についてよく知っているかもしれません。  
 

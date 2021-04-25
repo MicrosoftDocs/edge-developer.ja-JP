@@ -7,12 +7,12 @@ ms.date: 03/08/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 8197157c3024374e11db71f919cc937fed2e6b1b
-ms.sourcegitcommit: 4b9fb5c1176fdaa5e3c60af2b84e38d5bb86cd81
+ms.openlocfilehash: c622d529a8008248d57a6b1b0656636a982054c1
+ms.sourcegitcommit: 16e2f7232196a57a70b979bbf8b663774b7ddc20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "11439592"
+ms.lasthandoff: 04/25/2021
+ms.locfileid: "11519409"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -62,7 +62,7 @@ DevTools を開く場合は、カーソルがブラウザー ビューポート�
 | ハード 更新 | `Control`+`F5` または `Control`+`Shift`+`R` | `Command`+`Shift`+`R` |  
 | 現在のパネル内のテキストを検索します。  監査、アプリケーション、**および**セキュリティ ツール******ではサポート**されていません | `Control`+`F` | `Command`+`F` |  
 | ドロワー **で [検索** ] [タブを][DevtoolsCustomizeIndexDrawer]開き、読み込まれたすべてのリソースでテキストを検索できます。 | `Control`+`Shift`+`F` | `Command`+`Option`+`F` |  
-| [ソース] パネルで **ファイルを開** く | `Control`+`O` または `Control`+`P` | `Command`+`O` または `Command`+`P` |  
+| ソース ツールでファイル **を開** く | `Control`+`O` または `Control`+`P` | `Command`+`O` または `Command`+`P` |  
 | 拡大する | `Control`+`Shift`+`+` | `Command`+`Shift`+`+` |  
 | 縮小 | `Control`+`-` | `Command`+`-` |  
 | 既定のズーム レベルを復元する | `Control`+`0` | `Command`+`0` |  
@@ -160,7 +160,7 @@ DevTools を開く場合は、カーソルがブラウザー ビューポート�
 
 <!-- links -->  
 
-[DevtoolsCommandMenuIndex]: ../command-menu/index.md "Microsoft Edge DevTools コマンド メニュー を使用してコマンドを実行|Microsoft Docs"  
+[DevtoolsCommandMenuIndex]: ../command-menu/index.md "Microsoft Edge DevTools コマンド メニュー を使用してコマンドを実行する | Microsoft Docs"  
 [DevtoolsCustomizeIndexDrawer]: ../customize/index.md#drawer "ドロワー - Microsoft Edge DevTools をカスタマイズする | Microsoft Docs"  
 [DevtoolsCustomizeIndexPlacement]: ../customize/index.md#change-devtools-placement "DevTools の配置を変更する - Microsoft Edge DevTools の配置を|Microsoft Docs"  
 [DevtoolsDeviceModeIndex]: ../device-mode/index.md "Microsoft Edge DevTools でモバイル デバイスをエミュレートする | Microsoft Docs"  

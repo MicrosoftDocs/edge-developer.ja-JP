@@ -7,24 +7,23 @@ ms.date: 12/11/2020
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 7f273f89708e0948e68cd2c7ba79cefb6d7e167c
-ms.sourcegitcommit: 2ddfd98d1e871be9c61380a8ca57da398d38bd54
+ms.openlocfilehash: 66c0686c166163f1640384d096288af0b530f135
+ms.sourcegitcommit: 16e2f7232196a57a70b979bbf8b663774b7ddc20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "11230965"
+ms.lasthandoff: 04/25/2021
+ms.locfileid: "11519437"
 ---
 # <a name="override-webpage-resources-with-local-copies-using-microsoft-edge-devtools"></a>Microsoft Edge DevTools を使用して Web ページ リソースをローカル コピーで上書きする  
 
-アクセスできない Web ページや修正プログラムで問題を修正する必要がある場合は、ビルド プロセスが遅く複雑な場合があります。  DevTools のすべての種類の問題をデバッグして修正できます。 しかし、問題は変更が持続しない点です。  ファイルを更新すると、すべての作業が完了します。  
-
-ソース ツールのオーバーライド機能 [を使用すると][DevToolsSourcesTool] 、この問題を解決できます。  
+場合によっては、Web ページの修正プログラムを試す必要がありますが、ソース ファイルにアクセスできない場合や、ページを変更するには、低速で複雑なビルド プロセスが必要な場合があります。  DevTools のすべての種類の問題をデバッグして修正できます。  ただし、変更は保持されません。ローカル ファイルを更新すると、すべての作業が完了します。  ソース ツールのオーバーライド機能 [を使用すると][DevToolsSourcesTool] 、この問題を解決できます。  
 
 現在の Web ページのリソースを取得し、ローカルに保存できます。  Web ページを更新しても、ブラウザーはサーバーからリソースを読み込む必要があります。  代わりに、ブラウザーは、リソースのローカル コピーに置き換える。  
 
 ## <a name="setting-up-your-local-folder-to-store-overrides"></a>上書きを保存するローカル フォルダーを設定する  
 
-1.  [ソース **] ツール** で、左側に複数のセクションを検索します。  [ **上書き] オプション** が表示されない場合は、 <code>&#x0226B;</code><!--`≫`--> アイコンをクリックしてそこにアクセスします。  
+1.  [ソース] **ツールに移動** します。  
+1.  左側の **[ナビゲーター]** ウィンドウで、[上書き] **タブを選択** します。 [上書 **き] タブが** 表示されない場合は、 <code>&#x0226B;</code><!--`≫`-->  アイコンを選びます。  
     
     :::row:::
        :::column span="":::
@@ -39,7 +38,8 @@ ms.locfileid: "11230965"
        :::column-end:::
     :::row-end:::  
     
-1.  [上書き] オプション **を** 選択した後、ローカル コンピューター上のフォルダーを選択して、置き換えるリソース ファイルを保存する必要があります。  フォルダーを **検索するには、上書きする +** 選択フォルダーを選択します。  
+1.  置き換えるリソース ファイルを保存するフォルダーをローカル コンピューター上で選択します。  
+     *   フォルダーを検索するには、[+ 上書き **フォルダーの選択] を選択します**。  
     
     :::image type="complex" source="../media/javascript-overrides-select-folder.msft.png" alt-text="上書きに使用するフォルダーを選択する" lightbox="../media/javascript-overrides-select-folder.msft.png":::
        上書きに使用するフォルダーを選択する  
@@ -51,7 +51,7 @@ ms.locfileid: "11230965"
        DevTools にフォルダーへのアクセス権を付与する  
     :::image-end:::  
     
-1.  [上書 **き]** ウィンドウの横にチェック ボックスが表示され、 `Enable Local Overrides` 上書きフォルダーが表示されます。  アイコンが横に表示され、ローカルの上書き設定を削除できます。  これで、フォルダーのセットアップが完了し、ライブ リソースをローカル リソースに置き換える準備ができました。
+1.  [上書 **き] タブ** で、[ローカルオーバーライドを有効にする] の横 **にチェック ボックスが表示されます**。  [ローカル上書き**を有効にする]** の**** 右側には、ローカルの上書き設定を削除できる [構成のクリア] アイコンがあります。  これで、フォルダーのセットアップが完了し、ライブ リソースをローカル リソースに置き換える準備が整いました。
     
     :::image type="complex" source="../media/javascript-overrides-folder-setup-complete.msft.png" alt-text="上書きフォルダーの正常なセットアップ" lightbox="../media/javascript-overrides-folder-setup-complete.msft.png":::
        上書きフォルダーの正常なセットアップ  

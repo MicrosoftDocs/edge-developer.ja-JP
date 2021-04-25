@@ -1,18 +1,18 @@
 ---
 description: DevTools 内で行われた変更をディスクに保存する方法について学習します。
-title: Workspaces を使用してファイルを編集する
+title: ワークスペースを使用してファイルを編集する
 author: MSEdgeTeam
 ms.author: msedgedevrel
 ms.date: 02/12/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 17f9ced15dbacd62c9ffe40e4af889925a8155fb
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: f00e2e42f73f7d03c858deaf020db683391ff1f2
+ms.sourcegitcommit: 16e2f7232196a57a70b979bbf8b663774b7ddc20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11399247"
+ms.lasthandoff: 04/25/2021
+ms.locfileid: "11519423"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -28,10 +28,9 @@ ms.locfileid: "11399247"
    See the License for the specific language governing permissions and
    limitations under the License.  -->  
 
-# <a name="edit-files-with-workspaces"></a>Workspaces を使用してファイルを編集する  
+# <a name="edit-files-with-workspaces"></a>ワークスペースを使用してファイルを編集する  
 
-> [!NOTE]
-> このチュートリアルの目的は、ワークスペースをセットアップして使用する実践的な方法を提供し、独自のプロジェクトで Workspaces を使用する方法を提供します。  Workspaces を有効にした後、DevTools 内で行ったソース コードへの変更をローカル コンピューターに保存できます。  
+このチュートリアルでは、Workspace のセットアップと使用に関する実践的な方法を説明します。  ワークスペースにファイルを追加すると、DevTools 内のソース コードで行った変更はローカル コンピューターに保存され、Web ページを更新した後も保持されます。  
 
 > [!IMPORTANT]
 > **前提条件**: このチュートリアルを開始する前に、次の操作を実行する方法を知っている必要があります。  
@@ -54,7 +53,7 @@ Workspaces を有効にすると、DevTools 内で行った CSS の変更がデ�
 
 モダン フレームワークを使用している場合は、ソース コードを保守しやすい形式から、可能な限り迅速に実行するために最適化された形式に変換される可能性があります。  
 
-ワークスペースは、通常、ソース マップの助けを借りて、最適化されたコードを元のソース コードに [マップすることができます][TreehouseBlogSourceMaps]。  ただし、各ソース マップの使い方に関して、フレームワーク間には多くのバリエーションがあります。  Devtools は単にすべてのバリエーションをサポートします。  
+ワークスペースは、通常、ソース マップの助けを借りて、最適化されたコードを元のソース コードに [マップすることができます][TreehouseBlogSourceMaps]。  ただし、各フレームワークがソース マップを使用する方法に関して、フレームワーク間には多くのバリエーションがあります。  Devtools は、すべてのバリエーションをサポートしているのではない。  
 
 ワークスペースは、次のフレームワークでは動作しません。  
 
@@ -123,20 +122,20 @@ Workspaces で実践的なエクスペリエンスを得るには、次のアク
        [ **コンソール]** パネル  
     :::image-end:::  
     
-1.  [ソース] **ツールを選択** します。  
-1.  [ファイルシステム] **パネルを選択** します。  
+1.  [ソース] **ツールに移動** します。  
+1.  左側の **[ナビゲーター]** ウィンドウで、[ファイルシステム] タブ **を選択** します。  
     
-    :::image type="complex" source="../media/workspaces-workspaces-demo-sources-filesystem.msft.png" alt-text="[ファイルシステム] パネル" lightbox="../media/workspaces-workspaces-demo-sources-filesystem.msft.png":::
-       [ **ファイルシステム]** パネル  
+    :::image type="complex" source="../media/workspaces-workspaces-demo-sources-filesystem.msft.png" alt-text="[ファイルシステム] タブ" lightbox="../media/workspaces-workspaces-demo-sources-filesystem.msft.png":::
+       [ **ファイルシステム]** タブ  
     :::image-end:::  
     
 1.  [ワークスペース **にフォルダーを追加] を選択します**。  
 1.  「`~/Desktop/app`」と入力します。  
 1.  [ **許可] を** 選択して、ディレクトリへの読み取りおよび書き込みのアクセス許可を DevTools に付与します。  
-    [ファイルシステム **] パネル** で、 、 と の横に緑 `index.html` の `script.js` ドットが表示されます `styles.css` 。  これらの緑色の点は、DevTools がページのネットワーク リソースと内のファイルとの間にマッピングを確立したという意味です `~/Desktop/app` 。  
+    [ファイルシステム **] タブ** で、緑のドットが 、 `index.html` 、 と の横 `script.js` に表示されます `styles.css` 。  緑色のドットは、DevTools がページのネットワーク リソースと内のファイルとの間にマッピングを確立したと示します `~/Desktop/app` 。  
     
-    :::image type="complex" source="../media/workspaces-workspaces-demo-sources-filesystem-folder.msft.png" alt-text="[ファイルシステム] パネルに、ローカル ファイルとネットワーク ファイルのマッピングが表示されます。" lightbox="../media/workspaces-workspaces-demo-sources-filesystem-folder.msft.png":::
-       [ **ファイルシステム]** パネルに、ローカル ファイルとネットワーク ファイルのマッピングが表示されます。  
+    :::image type="complex" source="../media/workspaces-workspaces-demo-sources-filesystem-folder.msft.png" alt-text="[ファイルシステム] タブは、ローカル ファイルとネットワーク ファイル間のマッピングを示します。" lightbox="../media/workspaces-workspaces-demo-sources-filesystem-folder.msft.png":::
+       [ **ファイルシステム]** タブは、ローカル ファイルとネットワーク ファイル間のマッピングを示します。  
     :::image-end:::  
     
 ## <a name="step-2-save-a-css-change-to-disk"></a>手順 2: CSS の変更をディスクに保存する  
@@ -199,33 +198,35 @@ DOM ツリーは html ではありません。
 In short, the **DOM Tree** `!==` HTML.  
 -->  
 
-### <a name="change-html-from-the-sources-panel"></a>[ソース] パネルから HTML を変更する  
+### <a name="change-html-from-the-sources-tool"></a>ソース ツールから HTML を変更する  
 
-ページの html に対する変更を保存する場合は、[ソース] パネルを **使用して変更を行** います。  
+Web ページの HTML への変更を保存する場合は、[ソース] ツール **を使用** します。  
 
-1.  [ソース] **ツールを選択** します。  
-1.  [ページ] **パネルを選択** します。  
+1.  [ソース] **ツールに移動** します。  
+1.  左側の **[ナビゲーター]** ウィンドウで、[ページ] タブ **を選択** します。  
 1.  ( **インデックス) を選択します**。  ページの HTML が開きます。  
 1.  に `<h1>Workspaces Demo</h1>` 置き換える `<h1>I ❤️  Cake</h1>` 。  次の図を確認します。  
 1.  `Control` + `S` \(Windows, Linux\) または `Command` + `S` \(macOS\) を選択して変更を保存します。  
-1.  ページを最新の情報に更新してください。  要素 `<h1>` は引き続き新しいテキストを表示しています。  
+1.  ページを最新の情報に更新してください。  ページ `<h1>` が更新された後も、要素は新しいテキストを表示し続ける。  
     
-    :::image type="complex" source="../media/workspaces-workspaces-demo-sources-page-h1.msft.png" alt-text="[ソース] パネルから HTML を変更する" lightbox="../media/workspaces-workspaces-demo-sources-page-h1.msft.png":::
-       [ソース] パネルから HTML **を変更** する  
+    :::image type="complex" source="../media/workspaces-workspaces-demo-sources-page-h1.msft.png" alt-text="ソース ツールから HTML を変更する" lightbox="../media/workspaces-workspaces-demo-sources-page-h1.msft.png":::
+       ソース ツールから HTML **を変更** する  
     :::image-end:::  
     
 1.  を `~/Desktop/app/index.html` 開きます。  要素 `<h1>` には、新しいテキストが含まれる。  
     
 ## <a name="step-4-save-a-javascript-change-to-disk"></a>手順 4: JavaScript の変更をディスクに保存する  
 
-[ **ソース]** パネルは、JavaScript に変更を加える場所にもなっています。  ただし、サイトに変更を加えたときに、[**要素**] ツールや****[コンソール] パネルなどの他のパネルにアクセスする必要がある場合があります。  ソース パネルを他のパネル **と** 一緒に開く方法があります。  
+DevTools のコード エディターを使用する主な場所は、 **ソース ツール** です。  ただし、ファイルの編集中に、[要素] ツール**** や [コンソール****] パネルなどの他のツールにアクセスする必要がある場合があります。  クイック**ソース ツール**を使用すると、ソース ツールのエディターが提供されます。どのツールも開いている間です。 ****  
 
-1.  [要素] **ツールを選択** します。  
+DevTools コード エディターを他のツールと共に開くには、次の操作を行います。  
+
+1.  [要素] ツール **に移動** します。  
 1.  `Control` + `Shift` + `P` \(Windows, Linux\) または `Command` + `Shift` + `P` \(macOS\) を選択します。  [ **コマンド] メニューが** 開きます。  
-1.  [入力 `QS` ] をクリックし、[ **クイック ソースの表示] を選択します**。  DevTools ウィンドウの下部にクイック ソース **パネルが表示** されます。  パネルには、ソース パネルで編集した最後のファイルであるコンテンツ `index.html` **が表示** されます。  [**クイック ソース]** パネルには、[ソース****] パネルからエディターが表示されます。これにより、他のパネルを開いている間にファイルを編集できます。  
+1.  を `Quick Source` 入力し、[クイック ソース **の表示] を選択します**。  [DevTools] ウィンドウの下部にクイック**** ソース ツールが表示され、ソース ツールで編集した最後のファイルであるコンテンツ `index.html` **が表示**されます。    
     
-    :::image type="complex" source="../media/workspaces-workspaces-demo-search-show-quick-source.msft.png" alt-text="コマンド メニューを使用してクイック ソース パネルを開く" lightbox="../media/workspaces-workspaces-demo-search-show-quick-source.msft.png":::
-       コマンド メニュー **を使用してクイック ソース** パネル **を開く**  
+    :::image type="complex" source="../media/workspaces-workspaces-demo-search-show-quick-source.msft.png" alt-text="コマンド メニューを使用してクイック ソース ツールを開く" lightbox="../media/workspaces-workspaces-demo-search-show-quick-source.msft.png":::
+       コマンド メニュー **を使用して** クイック ソース ツール **を開く**  
     :::image-end:::  
     
 1.  `Control` + `P` \(Windows, Linux\) または `Command` + `P` \(macOS\) を選択して、[ファイルを開く]**ダイアログを開**きます。  次の図を確認します。  
@@ -238,7 +239,7 @@ In short, the **DOM Tree** `!==` HTML.
     > [!NOTE]
     > デモ `Save Changes To Disk With Workspaces` のリンクは、定期的にスタイル設定されます。  
     
-1.  [クイック ソース] パネルを**** 使用して、script.jsコード**を下部に追加**します。  
+1.  クイック ソース ツールを使用して **、script.jsコード****を下部に追加**します。  
     
     ```javascript
     console.log('greetings from script.js');

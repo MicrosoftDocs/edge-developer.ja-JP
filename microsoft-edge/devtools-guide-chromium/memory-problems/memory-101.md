@@ -1,18 +1,18 @@
 ---
 description: このセクションでは、メモリ分析で使用される一般的な用語について説明し、さまざまな言語のさまざまなメモリ プロファイリング ツールに適用できます。
-title: メモリの用語
+title: メモリの関連用語
 author: MSEdgeTeam
 ms.author: msedgedevrel
 ms.date: 02/12/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 1579374be29f0f419ded3bf88f5dea284f0bbb1a
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: c9659255e2bf0082cd1be3e6615c9d54c293b967
+ms.sourcegitcommit: 16e2f7232196a57a70b979bbf8b663774b7ddc20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11397791"
+ms.lasthandoff: 04/25/2021
+ms.locfileid: "11519311"
 ---
 <!-- Copyright Meggin Kearney 
 
@@ -28,7 +28,7 @@ ms.locfileid: "11397791"
    See the License for the specific language governing permissions and
    limitations under the License. -->
 
-# <a name="memory-terminology"></a>メモリの用語  
+# <a name="memory-terminology"></a>メモリの関連用語  
 
 この記事では、メモリ分析で使用される一般的な用語について説明し、さまざまな言語のさまざまなメモリ プロファイリング ツールに適用できます。  
 
@@ -69,14 +69,14 @@ DevTools [][DevtoolsMemoryProblemsHeapSnapshots] \(Memory **\で**見つかっ�
 
 ガベージ コレクターの内部ルートは多数あるが、そのほとんどはユーザーにとって興味深くない。  アプリケーションの観点から、次の種類のルートがあります。  
 
-*   Window グローバル オブジェクト \(各 iframe\内)。  ヒープ スナップショットには、ウィンドウからの最短保持パス上のプロパティ参照の数である距離フィールドがあります。  
-*   ドキュメントを走査することで到達可能なすべてのネイティブ DOM ノードで構成されるドキュメント DOM ツリー。  すべてのノードに JS ラッパーが含まれますが、ノードにラッパーがある場合は、ドキュメントが生きている間、そのノードは生きています。  
-*   ソース パネルとコンソール**\(** たとえば、コンソール評価**** \の後) のデバッガー コンテキストによってオブジェクトが保持される場合があります。  [ソース] パネルのデバッガーで、クリアされた **コンソール** パネルとアクティブなブレークポイントを使用してヒープ スナップショット **を作成** します。
+*   Window グローバル オブジェクト \(各 iframe\内)。  ヒープ スナップショットでは、フィールドはウィンドウからの最短保持パス上のプロパティ参照の数 `distance` を示します。  
+*   ドキュメント DOM ツリーは、ドキュメントを通過して到達可能なすべてのネイティブ DOM ノードで構成されます。  すべてのノードに JavaScript ラッパーが含まれますが、ノードにラッパーがある場合は、ドキュメントが有効な間、ノードは有効です。  
+*   場合によっては、ソース ツールとコンソールのデバッグ**** コンテキスト (コンソール評価**** 後など) でオブジェクトが保持される場合があります。  ソース ツールのデバッガーで、クリアされた **コンソール** ツールとアクティブなブレークポイントを使用してヒープ スナップショット **を作成** します。
 
 >[!TIP]
-> [メモリ]**パネルで**ヒープ スナップショットを取得する前に、[ソース] パネルでブレークポイントを実行して非アクティブ化して、コンソール パネル `clear()` を****[クリアします][DevtoolsMemoryProblemsHeapSnapshots]。
+> メモリ ツールでヒープ スナップショットを取得する[前][DevtoolsMemoryProblemsHeapSnapshots]に****、コンソール ツールをクリアし、[ソース] ツールでブレークポイント**を非アクティブ**化します。  コンソール ツールを **クリアするには** 、メソッドを実行 `clear()` します。  
 
-メモリ グラフはルートから始まり、ブラウザーのオブジェクト、またはモジュールのオブジェクトNode.js `window` `Global` されます。  このルート オブジェクトのガベージ コレクション方法は制御されません。  
+メモリ グラフはルートから始まり、ブラウザーのオブジェクト、またはモジュールのオブジェクトNode.js `window` `Global` されます。  ルート オブジェクトのガベージ コレクション方法は制御されません。  
 
 :::image type="complex" source="../media/memory-problems-dontcontrol.msft.png" alt-text="ルート オブジェクトのガベージ コレクション方法を制御できない。" lightbox="../media/memory-problems-dontcontrol.msft.png":::
    ルート オブジェクトのガベージ コレクション方法を制御できない。  

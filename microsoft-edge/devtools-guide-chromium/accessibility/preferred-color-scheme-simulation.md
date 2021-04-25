@@ -7,19 +7,19 @@ ms.date: 02/12/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 84f482605acd6edab6829e00d5fa31f927ebc032
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: 1cdc9601e9e6fea1f6921c6cc40a1ed8232a0da8
+ms.sourcegitcommit: 16e2f7232196a57a70b979bbf8b663774b7ddc20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11398302"
+ms.lasthandoff: 04/25/2021
+ms.locfileid: "11519150"
 ---
 # <a name="dark-or-light-color-scheme-simulation"></a>濃色または明るい配色のシミュレーション  
 
 オペレーティング システムでは、アプリケーションを暗い色または明るい色で表示できます。  暗いモードのオペレーティング システムで明るいテーマを持つ Web 製品はグレーティングであり、一部のユーザーにとってアクセシビリティの問題になる可能性があります。  Web では [、prefers-color-scheme][MDNPrefersColorScheme] CSS Media Query を使用して、ユーザーが製品を暗色または明るい配色で表示することを好む場合を検出できます。  [Microsoft Edge DevTools を使用][DevtoolsIndex]すると、オペレーティング システム全体を変更することなく、暗いモードから明るいモードへの変更をシミュレートできます。  
 
-1.  コマンド メニュー **を開きます**。  
-    1.  `Control` + `Shift` + `P` \(Windows/Linux\) または `Command` + `Shift` + `P` \(macOS\) を選択します。  
+1.  **コマンド メニュー** を開きます。  
+    1.  `Ctrl` + `Shift` + `P` \(Windows/Linux\) または `Command` + `Shift` + `P` \(macOS\) を選択します。  
         
         :::image type="complex" source="../media/css-console-command-menu-rendering.msft.png" alt-text="コマンド メニュー" lightbox="../media/css-console-command-menu-rendering.msft.png":::
            **コマンド メニュー**  

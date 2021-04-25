@@ -7,12 +7,12 @@ ms.date: 03/08/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 75c9df5d86ce994cebfda882a0adfa2664b6ec30
-ms.sourcegitcommit: 4b9fb5c1176fdaa5e3c60af2b84e38d5bb86cd81
+ms.openlocfilehash: e3ddadcf37303a476f3a656696b00f121f079b69
+ms.sourcegitcommit: 16e2f7232196a57a70b979bbf8b663774b7ddc20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "11439445"
+ms.lasthandoff: 04/25/2021
+ms.locfileid: "11519612"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -359,13 +359,13 @@ ms.locfileid: "11439445"
        カバレッジ レポート  
     :::image-end:::  
     
-1.  [選択] ** 行jquery.js** 選択します。  DevTools は、[ソース] パネルでファイルを開きます。  コード行の横に青いバーがある場合は、コード行が実行されます。  赤いバーは、実行されていないという意味で、ページの読み込み時には必ず必要とされません。  
+1.  行を選択 `jquery.js` します。  DevTools は、[ソース] ツールで **ファイルを開** きます。  コード行が実行された場合、その横に青いバーが表示されます。  赤いバーは、コード行が実行されていないという意味で、Web ページの読み込み時には必ず必要とされません。  
     
-    :::image type="complex" source="../media/speed-glitch-tony-remix-updated-sources-drawer-coverage-reloaded-jquery-js.msft.png" alt-text="[ソース] パネルで jQuery ファイルを表示する" lightbox="../media/speed-glitch-tony-remix-updated-sources-drawer-coverage-reloaded-jquery-js.msft.png":::
-       [ソース] パネルで jQuery ファイル **を表示** する  
+    :::image type="complex" source="../media/speed-glitch-tony-remix-updated-sources-drawer-coverage-reloaded-jquery-js.msft.png" alt-text="ソース ツールでの jQuery ファイルの表示" lightbox="../media/speed-glitch-tony-remix-updated-sources-drawer-coverage-reloaded-jquery-js.msft.png":::
+       ソース ツールでの jQuery ファイル **の** 表示  
     :::image-end:::  
     
-1.  jQuery コードを少しスクロールします。  "run" を取得する行の中には、実際にはコメントにすすむものがあります。  コメントを削除するミニフィアを使用してこのコードを実行する方法は、このファイルのサイズを小さくするもう 1 つの方法です。  
+1.  jQuery コードをスクロールします。  実行される行の一部は、実際にはコメントにすら見当たらされません。  コメントを削除し、ファイルのサイズを小さくするには、ミニフィアー アプリまたはスクリプトを使用してコードを実行します。  
 
 つまり、独自のコードを操作する場合、カバレッジ ツール**** を使用すると、コードを 1 行 1 行で分析し、ページ読み込みに必要なコードのみを出荷できます。  
 

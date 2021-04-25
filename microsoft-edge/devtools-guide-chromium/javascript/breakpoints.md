@@ -7,12 +7,12 @@ ms.date: 03/08/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 3d50b7b105aa9a9018ba61e44147f46f3d340079
-ms.sourcegitcommit: 4b9fb5c1176fdaa5e3c60af2b84e38d5bb86cd81
+ms.openlocfilehash: dd865f346046cb6706e71fdb3cc869950b2b4352
+ms.sourcegitcommit: 16e2f7232196a57a70b979bbf8b663774b7ddc20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "11439515"
+ms.lasthandoff: 04/25/2021
+ms.locfileid: "11519360"
 ---
 <!-- Copyright Kayce Basques
 
@@ -30,7 +30,9 @@ ms.locfileid: "11439515"
 
 # <a name="how-to-pause-your-code-with-breakpoints-in-microsoft-edge-devtools"></a>Microsoft Edge DevTools でブレークポイントを使用してコードを一時停止する方法  
 
-ブレークポイントを使用して JavaScript コードを一時停止します。  このガイドでは、DevTools で使用できるブレークポイントの種類と、使用する時間と各種類の設定方法について説明します。  デバッグ プロセスの実践的なチュートリアルについては [、「Microsoft Edge DevTools][DevtoolsJavascriptIndex]での JavaScript のデバッグの開始」に移動します。  
+ブレークポイントを使用して JavaScript コードを一時停止します。  この記事では、DevTools で使用できるブレークポイントの各種類と、使用する場合と、各種類の設定方法について説明します。
+
+既存の Web ページを使用した入門チュートリアルについては [、「Microsoft Edge DevTools][DevtoolsJavascriptIndex]での JavaScript のデバッグの開始」に移動します。
 
 ## <a name="overview-of-when-to-use-each-breakpoint-type"></a>各ブレークポイントの種類を使用する場合の概要  
 
@@ -214,13 +216,23 @@ DevTools コンソールからメソッドを実行している場合は、タ�
 1.  ブレークポイントをトリガーします。  
 1.  コードがコード行ブレークポイントで一時停止されている間 `debug()` 、DevTools コンソールでメソッドを実行します。  
     
+## <a name="related-articles"></a>関連記事
+
+*   [デバッガー機能を使用する][DevtoolsJavascriptReference] - ソース ツールでデバッガーの UI **を使用** します。
+*   [Microsoft Edge DevTools][DevtoolsJavascriptIndex] での JavaScript のデバッグの開始 - 既存の Web ページを使用した入門チュートリアル。
+*   [ソース ツールの概要][DevtoolsSourcesIndex] - デバッガーは、JavaScript エディターを含む **Sources** ツールの一部です。
+
 ## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームと連絡を取る  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
 <!-- links -->  
 
+[DevtoolsJavascriptReference]: ./reference.md "デバッガー機能を使用|Microsoft Docs"  
+
 [DevtoolsJavascriptIndex]: index.md "Microsoft Edge DevTools の JavaScript のデバッグの|Microsoft Docs"  
+
+[DevtoolsSourcesIndex]: ../sources/index.md "ソース ツールの概要|Microsoft Docs"  
 
 [MDNFetchApi]: https://developer.mozilla.org/docs/Web/API/Fetch_API "FETCH API |MDN"  
 

@@ -7,12 +7,12 @@ ms.date: 02/12/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: debea327be41ab8aa2da19aa8cc128a1897e51e5
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: c04d1ec02b188cc7ec8ab2598b395dbeb4431c46
+ms.sourcegitcommit: 16e2f7232196a57a70b979bbf8b663774b7ddc20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11398393"
+ms.lasthandoff: 04/25/2021
+ms.locfileid: "11519416"
 ---
 <!-- Copyright Meggin Kearney and Paul Bakaus
 
@@ -43,7 +43,7 @@ ms.locfileid: "11398393"
 
 ## <a name="get-started-with-preprocessors"></a>プリプロセッサの使用を開始する  
 
-この記事では、DevTools ソース パネルで JavaScript ソース マップを操作する方法について説明します。  <!--For a first overview of what preprocessors are, how each may help, and how Source Maps work; navigate to Set Up CSS & JS Preprocessors.  -->  
+この記事では、DevTools Sources ツールで JavaScript ソース マップを操作する方法について説明します。  <!--For a first overview of what preprocessors are, how each may help, and how Source Maps work; navigate to Set Up CSS & JS Preprocessors.  -->  
 
 <!--todo: add link to Set Up CSS & JS Preprocessors when section is available -->  
 <!--[]: /web/tools/setup/setup-preprocessors#debugging-and-editing-preprocessed-content ""  -->  
@@ -61,7 +61,7 @@ ms.locfileid: "11398393"
 *   Compilers \([Closure Compiler][GitHubGoogleClosureCompiler], [TypeScript][|::ref1::|Main], [CoffeeScript][|::ref2::|Main], [Dart][DartMain]\)  
 *   Minifiers \([UglifyJS][GitHubMishooUglifyJS]\)  
     
-## <a name="source-maps-in-devtools-sources-panel"></a>[DevTools ソース] パネルの [ソース マップ]  
+## <a name="source-maps-in-devtools-sources-tool"></a>DevTools ソース ツールのソース マップ  
 
 プリプロセッサからのソース マップを使用すると、DevTools は、マイニングされたファイルに加えて元のファイルを読み込む原因です。  次に、元のオブジェクトを使用してブレークポイントを設定し、コードをステップ実行します。  一方、Microsoft Edge は実際にマイニング コードを実行しています。  コードを実行すると、実稼働環境で開発サイトを実行しているような錯覚が生じ得る。  
 
@@ -101,10 +101,10 @@ DevTools でソース マップを実行する場合は、JavaScript がコン�
 
 次のアクションを実行します。  
 
-1.  DevTools を開き、[ソース] パネル **に移動** します。  
+1.  DevTools を開き、[ソース] **ツールに移動** します。  
 1.  [コード名: 入力] フィールド **にファイル名を** 入力します。  
 1.  コンパイル ボタン **を選択** します。  
-1.  CoffeeScript ソースから評価された合計でアラートが表示されます。  
+1.  CoffeeScript ソースから評価された合計を示すアラートが表示されます。  
     
 [ソース] サブパネル **を** 展開すると、前に入力したカスタム ファイル名を含む新しいファイルが表示されます。  ダブルクリックしてこのファイルを表示すると、元のソース用にコンパイルされた JavaScript が含まれる。  ただし、最後の行には、元 `// @sourceURL` のソース ファイルを示すコメントがあります。  これは、言語の抽象化を操作する場合にデバッグに役立つ場合があります。  
 

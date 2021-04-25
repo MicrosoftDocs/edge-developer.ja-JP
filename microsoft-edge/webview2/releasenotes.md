@@ -3,40 +3,97 @@ description: Microsoft Edge WebView2 SDK のリリース ノート
 title: Microsoft Edge WebView2 for Win32、WPF、および WinForms のリリース ノート
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 03/17/2021
+ms.date: 04/23/2021
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、Webview2、Webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Controller、ブラウザー コントロール、エッジ html
-ms.openlocfilehash: b31a8b7a6dee56dd92d416fcf001f6d92d615395
-ms.sourcegitcommit: bff24ab1f0a66aaf4c7f5ff81cea3eb28c6d8380
+ms.openlocfilehash: 913aa7f6a646964aae6aa36665395f64c3b65b36
+ms.sourcegitcommit: 16e2f7232196a57a70b979bbf8b663774b7ddc20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2021
-ms.locfileid: "11461186"
+ms.lasthandoff: 04/25/2021
+ms.locfileid: "11519402"
 ---
 # <a name="release-notes-for-webview2-sdk"></a>WebView2 SDK のリリース ノート  
 
 WebView2 チームは、6 週間のケイデンスで [WebView2 SDK][NuGetGallery] を更新します。  製品のお知らせ、追加、変更、API の変更点に関する最新の情報については、次のコンテンツを確認してください。  
 
 > [!NOTE]
-> NuGet パッケージを更新した後、アプリを再コンパイルしてください。  WebView チームでは、プレリリース パッケージを使用して開発するときに Canary チャネルを使用し、リリース パッケージを使用する場合は Evergreen WebView2 ランタイムを使用してください。  詳細については、「バージョン管理」 [に移動します][Webview2ConceptsVersioningMatchingWebview2RuntimeVersions]。  
- 
+> NuGet パッケージを更新した後、アプリを再コンパイルしてください。  WebView チームでは、プレリリース パッケージを使用して開発するときに Canary チャネルを使用し、リリース パッケージを使用する場合は Evergreen WebView2 ランタイムを使用してください。  詳細については、「一致する [WebView2 ランタイム バージョン」に移動します][Webview2ConceptsVersioningMatchingWebview2RuntimeVersions]。  
+
+> [!NOTE]
+> WebView2 のバグ修正プログラムは、ランタイムまたは SDK に固有です。  
+<!-- 
+## 1.0.865-prerelease  
+
+Release Date: April 19, 2021  
+
+[NuGet package][NuGetGallery1.0.865-prerelease] \| Minimum Microsoft Edge version to load: 86.0.616.0 or newer \| Full API Compatibility: 91.0.865.0 or newer  
+
+### General  
+
+#### Experimental Features  
+
+*   Added [IsPinchZoomEnabled][Webview2ReferenceWin32Icorewebview2experimentalsettings4ViewWebview210865PrereleaseIspinchzoomenabled] setting. It allows you to turn on or off page scale zoom control in a setting.  
+*   Added Custom [add_DownloadStarting][Webview2ReferenceWin32Icorewebview2experimental2ViewWebview210865PrereleaseAddDownloadstarting] API.  It allows you to block downloads, save to a different path, and access the required metadata to build custom download UI.  
+*   Added `iframe` element support from [AddHostObjectToScriptWithOrigins][Webview2ReferenceWin32Icorewebview2experimentalframeViewWebview210865PrereleaseAddhostobjecttoscriptwithorigins].  
+*   Added sample code for [WPF sample app][GithubMicrosoftedgeWebview2samplesWebview2wpfbrowser] to use the API to turn off browser function keys.  
+*   Added the [UpdateRuntime][Webview2ReferenceWin32Icorewebview2experimentalenvironment3ViewWebview210865PrereleaseUpdateruntime] API, to easily update the WebView2 Runtime.  
+    
+#### Bug fixes  
+
+*   Fixed handler for a `Chromium DevTools Protocol` message with `POST` binary data in WebView2.  
+*   Turned off the `OpenSaveAsAwareness` download UI, because it included links to `edge://settings`.  \([\#1120][GithubMicrosoftedgeWebviewfeedbackIssue1120]\).  
+*   Removed branding from screen share dialog.  \([\#940][GithubMicrosoftedgeWebviewfeedbackIssue940]\).  
+*   Fixed bug where the [SetWindowDisplayAffinity][WindowsWin32ApiWinuserSetWindowDisplayAffinity] function broke WebView2 when it stopped screen capture in an WebView2 app.  \([\#841][GithubMicrosoftedgeWebviewfeedbackIssue841]\).
+*   Fixed bug for composition hosting where mouse input stopped working if any pen input was sent to WebView2.  
+*   Fixed bug that broke mouse input after any pen input.  This change is Runtime-specific.  
+    
+### .NET  
+
+#### Experimental Features  
+
+*   Added WebView2 designer tool to WPF Toolbox.  \([\#210][GithubMicrosoftedgeWebviewfeedbackIssue210]\).  
+*   Added WebView2 UI element in .NET Designer Mode.  
+    
+#### Bug fixes  
+
+*   Improved COM Exception descriptions by wrapping each in a more detailed .NET exception.  \([\#338][GithubMicrosoftedgeWebviewfeedbackIssue338]\).  This change is Runtime-specific.  
+*   Fixed bug caused when you select `tab` to shift focus caused WebView2 control to crash in Microsoft Visual Studio Tools for Office.  \([\#589][GithubMicrosoftedgeWebviewfeedbackIssue589] and [\#933][GithubMicrosoftedgeWebviewfeedbackIssue933]\).  This change is Runtime-specific.  
+*   Improved .NET framework loader down level to be more robust.  \([\#946][GithubMicrosoftedgeWebviewfeedbackIssue946]\).
+*   Fixed bug that caused crash when you try to refresh before first navigation completed.  \([\#1011][GithubMicrosoftedgeWebviewfeedbackIssue1011]\).
+*   Fixed initialization so navigation occurs during `CoreWebView2InitializationCompleted`.  \([\#1050][GithubMicrosoftedgeWebviewfeedbackIssue1050]\).
+*   Improved .NET browser process crash error handling.  You may now recreate controls after you handle a `ProcessFailed` event without a crash.  \([\#996][GithubMicrosoftedgeWebviewfeedbackIssue996]\).  
+     -->
+## <a name="1081841"></a>1.0.818.41  
+
+リリース日: 2021 年 4 月 21 日  
+
+[NuGet パッケージ][NuGetGallery1.0.818.41] \|読み込む最小ランタイム バージョン: 86.0.616.0 以降 \|完全な API 互換性: 90.0.818.41 以降  
+
+### <a name="general"></a>全般  
+
+#### <a name="features"></a>機能  
+
+*   WebView2 コードが、形式が正しく設定されていないバージョン情報を持つアプリケーション ファイルに対する復元 `.exe` 性が向上しました。  \([\#850][GithubMicrosoftedgeWebviewfeedbackIssue850]\)。  
+*   `--winhttp-proxy-resolver`WebView ブラウザー プロセスのコマンド ラインから削除され、WebView2 の他のプロキシ コマンド ライン オプションが有効になります。  
+  
 ## <a name="10824-prerelease"></a>1.0.824-prerelease  
 
 リリース日: 2021 年 3 月 8 日  
 
 [NuGet パッケージ][NuGetGallery1.0.824-prerelease] \|読み込む最小 Microsoft Edge バージョン: 86.0.616.0 以降 \|完全な API 互換性: 91.0.824.0 以降  
 
-### <a name="general"></a>全般的な情報  
+### <a name="general"></a>全般  
 
 #### <a name="features"></a>機能  
 
-*   レンダラー以外 `ProcessFailed` の子プロセスとフレーム レンダラーで発生する拡張イベント。  
-*   実験的な [AreBrowserAcceleratorKeysEnabled 設定を追加][Webview2ReferenceWin32Icorewebview2experimentalsettingsViewWebview210824GetArebrowseracceleratorkeysenabled] しました。  ナビゲーション、印刷、保存、その他のブラウザー固有の機能に関連するアクセラレータ キーにブラウザーが応答しない場合があります。  
-*   iframe のサポートが追加されました `AddScriptToExecuteOnDocumentCreated` 。  
+*   イベントを拡張 `ProcessFailed` しました。  これで、レンダラー以外の子プロセスとフレーム レンダラーが発生します。  
+*   実験的な [AreBrowserAcceleratorKeysEnabled 設定を追加][Webview2ReferenceWin32Icorewebview2experimentalsettingsViewWebview210824GetArebrowseracceleratorkeysenabled] しました。  ナビゲーション、印刷、保存、その他のブラウザー固有の機能に関連するキーボード ショートカットにブラウザーが応答しない場合があります。  
+*   に対 `iframe` する要素のサポートが追加されました `AddScriptToExecuteOnDocumentCreated` 。  
     
-#### <a name="promotion"></a>プロモーション
+#### <a name="promotion"></a>プロモーション  
 
 *   [UserAgent][Webview2ReferenceWin32Icorewebview22ViewWebview210721PrereleaseAddWebresourceresponsereceived] API が Stable に昇格しました。  
 *   Rasterization Scale API \([RasterizationScale][Webview2ReferenceWin32Icorewebview2experimentalcontrollerViewWebview210721PrereleaseGetRasterizationscale] プロパティ  [、RasterizationScaleChanged][Webview2ReferenceWin32Icorewebview2experimentalcontrollerViewWebview210721PrereleaseAddRasterizationscalechanged] イベント [、BoundsMode][Webview2ReferenceWin32Icorewebview2experimentalcontrollerViewWebview210721PrereleaseGetBoundsmode]プロパティ [、ShouldDetectMonitorScaleChanges][Webview2ReferenceWin32Icorewebview2experimentalcontrollerViewWebview210721PrereleaseGetShoulddetectmonitorscalechanges] プロパティ\) が Stable に昇格しました。  
@@ -47,7 +104,7 @@ WebView2 チームは、6 週間のケイデンスで [WebView2 SDK][NuGetGaller
 *   Evergreen WebView2 ランタイムが受信ファイアウォールエントリをリークするバグを修正しました。  
 *   イベント中の応答の設定を `WebResourceRequested` 修正しました。  \([\#568][GithubMicrosoftedgeWebviewfeedbackIssue568]\)。  
 *   ブラウザー プロセスが終了する原因 `edge://` となるナビゲーションのバグを修正しました。  \([\#604][GithubMicrosoftedgeWebviewfeedbackIssue604]\)。  
-*   Visual Hosting モードで WebView2 の境界を画面のサイズに制限するバグを修正しました。 
+*   Visual Hosting モードで WebView2 の境界を画面のサイズに制限するバグを修正しました。  
 
 ## <a name="1077444"></a>1.0.774.44  
 
@@ -55,7 +112,7 @@ WebView2 チームは、6 週間のケイデンスで [WebView2 SDK][NuGetGaller
 
 [NuGet パッケージ][NuGetGallery1.0.774.44] \|読み込む最小ランタイム バージョン: 86.0.616.0 以降 \|完全な API 互換性: 89.0.774.44 以降  
 
-### <a name="general"></a>全般的な情報  
+### <a name="general"></a>全般  
 
 #### <a name="features"></a>機能  
 
@@ -81,13 +138,13 @@ WebView2 チームは、6 週間のケイデンスで [WebView2 SDK][NuGetGaller
 
 [NuGet パッケージ][NuGetGallery1.0.790-prerelease] \|Microsoft Edge バージョン 86.0.616.0 以降  
 
-### <a name="general"></a>全般的な情報  
+### <a name="general"></a>全般  
 
 > [!IMPORTANT]
 > **Breaking Change**: WebView2 プレリリース パッケージ 1.0.781 は非推奨です。  パッケージ 1.0.781 での開発を中止します。  
 
 > [!IMPORTANT]
-> WebView2 プレリリース パッケージ 0.9.430 は廃止され、次のリリースでは削除されます。  WebView アプリでパッケージを使用する場合は、WebView チームが新しいパッケージを使用するようにお勧めします。  
+> WebView2 プレリリース パッケージ 0.9.430 は廃止され、次のリリースでは削除されます。  WebView アプリでパッケージを使用する場合、WebView チームは新しいパッケージに移動するようにお勧めします。  
 
 #### <a name="features"></a>機能  
 
@@ -108,10 +165,10 @@ WebView2 チームは、6 週間のケイデンスで [WebView2 SDK][NuGetGaller
 *   異なるモニター間でアプリを移動する際の動的 DPI の問題を修正しました。  \([\#58][GithubMicrosoftedgeWebviewfeedbackIssue58]\)  
 *   `HRESULT` [ICoreWebView2WebResourceResponseViewGetContentCompletedHandler::Invoke][Webview2ReferenceWin32Icorewebview2webresourceresponseviewgetcontentcompletedhandlerViewWebview210790PrereleaseInvoke]によって渡されるインスタンスが改善されました。  
 *   [自動入力管理] ボタンをオフにします。  \([\#585][GithubMicrosoftedgeWebviewfeedbackIssue585]\)。  
-*   複数のVisual Studioでホストされている場合、実行中 `WebView2.Dispose` にクラッシュする問題を修正しました。  \([\#816][GithubMicrosoftedgeWebviewfeedbackIssue816]\ と [\#442][GithubMicrosoftedgeWebviewfeedbackIssue442]\)。  
+*   複数Visual Studioホストされている場合に実行中にクラッシュ `WebView2.Dispose` する問題を修正しました。  \([\#816][GithubMicrosoftedgeWebviewfeedbackIssue816]\) と [\#442][GithubMicrosoftedgeWebviewfeedbackIssue442]\)。  
 *   WebView2 コントロールをツールボックスに表示Visual Studioしました。  \([\#210][GithubMicrosoftedgeWebviewfeedbackIssue210]\)。  
 *   CPU 使用率の高い問題を減らしました。  \([\#878][GithubMicrosoftedgeWebviewfeedbackIssue878]\)。  
-*   非推奨の 1.0.781-prerelease パッケージの問題を修正しました。 [][GithubMicrosoftedgeWebviewfeedbackIssue875] \#875\#878\)。 [][GithubMicrosoftedgeWebviewfeedbackIssue878]  
+*   非推奨の 1.0.781-prerelease パッケージの問題を修正しました。  \([\#875][GithubMicrosoftedgeWebviewfeedbackIssue875] および [\#878][GithubMicrosoftedgeWebviewfeedbackIssue878]\)。  
     
 #### <a name="promotions"></a>プロモーション  
 
@@ -123,7 +180,7 @@ WebView2 チームは、6 週間のケイデンスで [WebView2 SDK][NuGetGaller
 
 #### <a name="bug-fixes"></a>バグ修正  
 
-*   WPF SDK を使用する WebView アプリがクラッシュするバグを修正しました。  キーを使用してウィンドウを閉じたときにクラッシュ `F4` が発生しました。  \([\#399][GithubMicrosoftedgeWebviewfeedbackIssue399]\)。  
+*   WPF SDK を使用する WebView アプリがクラッシュするバグを修正しました。  ウィンドウを閉じるを選択すると `F4` 、クラッシュが発生しました。  \([\#399][GithubMicrosoftedgeWebviewfeedbackIssue399]\)。  
 *   WebView2 の初期化画面が灰色ではなく透明になります。  \([\#196][GithubMicrosoftedgeWebviewfeedbackIssue196]\)。  
     
 ## <a name="1070550"></a>1.0.705.50  
@@ -132,7 +189,7 @@ WebView2 チームは、6 週間のケイデンスで [WebView2 SDK][NuGetGaller
 
 [NuGet パッケージ][NuGetGallery1.0.705.50] \|WebView2 ランタイム バージョン 86.0.616.0 以降  
 
-### <a name="general"></a>全般的な情報  
+### <a name="general"></a>全般  
 
 #### <a name="promotions"></a>プロモーション  
 
@@ -149,7 +206,7 @@ WebView2 チームは、6 週間のケイデンスで [WebView2 SDK][NuGetGaller
 
 [NuGet パッケージ][NuGetGallery1.0.721-prerelease] \|Microsoft Edge バージョン 86.0.616.0 以降  
 
-### <a name="general"></a>全般的な情報  
+### <a name="general"></a>全般  
 
 > [!IMPORTANT]
 > **Breaking Change**: WebView2 プレリリース パッケージ 1.0.707 およびパッケージ 0.9.628 は非推奨です。  パッケージ 1.0.707 および package0.9.628 での開発を中止します。  
@@ -197,7 +254,7 @@ WebView2 チームは、6 週間のケイデンスで [WebView2 SDK][NuGetGaller
 
 [NuGet パッケージ][NuGetGallery1.0.664.37] \|WebView2 ランタイム バージョン 86.0.616.0 以降  
 
-### <a name="general"></a>全般的な情報  
+### <a name="general"></a>全般  
 
 > [!IMPORTANT]
 > **お**知らせ : .NET WPF/WinForms WebView2 SDK が一般公開 \(GA\)されました。  このリリースから、リリース SDK は転送互換性があります。  詳細については、GA アナウンス [ブログの投稿に移動します][MicrosoftDevblogDotnetAnnouncingGeneralAvailabilityForMicrosoftEdgeWebview2ForNetFixedDistributionMethod]。  
@@ -219,7 +276,7 @@ WebView2 チームは、6 週間のケイデンスで [WebView2 SDK][NuGetGaller
 
 [NuGet パッケージ][NuGetGallery1.0.674-prerelease] \|WebView2 ランタイム バージョン 86.0.616.0 以降  
 
-### <a name="general"></a>全般的な情報  
+### <a name="general"></a>全般  
 
 *   ナビゲーション中に投稿データや他の要求ヘッダーを提供する [NavigateWithWebResourceRequest][Webview2ReferenceWin32Icorewebview2experimentalViewWebview210674PrereleaseNavigatewithwebresourcerequest] メソッドを追加しました。  
 *   最初の HTML ドキュメントが読み込まれ、解析されると実行される [DOMContentLoaded][Webview2ReferenceWin32Icorewebview2experimentalViewWebview210674PrereleaseAddDomcontentloaded] イベントが追加されました。  
@@ -241,7 +298,7 @@ WebView2 チームは、6 週間のケイデンスで [WebView2 SDK][NuGetGaller
 *   100% 未満の DPI WebView2.Iniサポートするために、t() の WebView2 境界を更新しました。  \([\#432][GithubMicrosoftedgeWebviewfeedbackIssue432]\)。  
 *   [BuildWindowCore と][DotnetApiMicrosoftWebWebview2WpfWebview2Buildwindowcore] [DestroyWindowCore][DotnetApiMicrosoftWebWebview2WpfWebview2Destroywindowcore]を更新し、堅牢性を向上しました。  \([\#382][GithubMicrosoftedgeWebviewfeedbackIssue382]\)。  
 *   オペレーティング システム アーキテクチャではなく、プロセス ビットを読み込む .NET Loader ベースを更新しました。  \([\#431][GithubMicrosoftedgeWebviewfeedbackIssue431]\)。  
-*   `EdgeNotFoundExpection` [WebView2RuntimeNotFoundException に名前を変更しました][DotnetApiMicrosoftWebWebview2CoreWebview2runtimenotfoundexception]。  
+*   `EdgeNotFoundException` [WebView2RuntimeNotFoundException に名前を変更しました][DotnetApiMicrosoftWebWebview2CoreWebview2runtimenotfoundexception]。  
     
 ## <a name="1062222"></a>1.0.622.22  
 
@@ -249,7 +306,7 @@ WebView2 チームは、6 週間のケイデンスで [WebView2 SDK][NuGetGaller
 
 [NuGet パッケージ][NuGetGallery1.0.622.22] \|WebView2 ランタイム バージョン 86.0.616.0 以降  
 
-### <a name="general"></a>全般的な情報  
+### <a name="general"></a>全般  
 
 > [!IMPORTANT]
 > **お**知らせ : Win32 C/C++ WebView2 が一般公開 \(GA\)されました。  このリリースを開始すると、リリース SDK は転送互換性があります。  詳細については、「GA アナウンス ブログ [の投稿」に移動します][WindowsBlogsMsedgedevEdgeWebview2GeneralAvailability]。  
@@ -263,7 +320,7 @@ WebView2 チームは、6 週間のケイデンスで [WebView2 SDK][NuGetGaller
 
 [NuGet パッケージ][NuGetGallery0.9.622.11] \|WebView2 ランタイム バージョン 86.0.616.0 以降  
 
-### <a name="general"></a>全般的な情報  
+### <a name="general"></a>全般  
 
 *   > [!IMPORTANT]
     > **お**知らせ : この SDK は、WebView2 Win32 C/C++ GA のリリース候補です。  GA バージョンでは、同じ API インターフェイスと機能を使用する必要があります。  
@@ -281,7 +338,7 @@ WebView2 チームは、6 週間のケイデンスで [WebView2 SDK][NuGetGaller
 
 [NuGet パッケージ][NuGetGallery0.9.579] \|Microsoft Edge バージョン 86.0.579.0。  
 
-### <a name="general"></a>全般的な情報  
+### <a name="general"></a>全般  
 
 *   > [!IMPORTANT]
     > **お**知らせ : Evergreen WebView2 ランタイムとインストーラーがプレビュー用にリリースされました。  詳細については [、「WebView2 の配布」に移動します][Webview2ConceptsDistributionUnderstandRuntimeInstaller]。  
@@ -299,7 +356,7 @@ WebView2 チームは、6 週間のケイデンスで [WebView2 SDK][NuGetGaller
     
 *   WebView ワーカー スレッドの機能強化が追加されました。  \([\#318][GithubMicrosoftedgeWebviewfeedbackIssue318]\)。  
 *   WebView でポップアップ ブロッカーをオフにしました。  詳細については、イベントの [IsUserInitiated プロパティ][Webview2ReferenceWin32Icorewebview2newwindowrequestedeventargsViewWebview209538GetIsuserinitiated] に移動 `NewWindowRequested` します。  
-*   確実な WebView ナビゲーション開始イベントが実行されます `about:blank` 。  これで、すべてのナビゲーションに対してイベントが実行されますが、iframe または iframe の取り消しは `NavigationStarting` `about:blank` サポートされ `srcdoc` 、無視されません。  
+*   確実な WebView ナビゲーション開始イベントが実行されます `about:blank` 。  これで、すべてのナビゲーションに対してイベントが実行されますが、要素または要素の取り消しは `NavigationStarting` `about:blank` サポートされ `srcdoc` `iframe` 、無視されません。  
 *   `edge://`WebView で一部の URI スキームをブロックしました。  
 *   WebView2 環境オプション [に実験的な IsSingleSignOnUsingOSPrimaryAccountEnabled][Webview2ReferenceWin32Icorewebview2experimentalenvironmentoptionsViewWebview209538PrereleaseGetIssinglesignonusingosprimaryaccountenabled] プロパティを追加し、WebView の条件付きアクセスを有効にします。  
 *   WebResource 要求からの応答を WebView が受信して処理した後に実行される実験的な [WebResourceResponseReceived][Webview2ReferenceWin32Icorewebview2experimentalViewWebview209538PrereleaseAddWebresourceresponsereceived] イベントが追加されました。  認証ヘッダーがある場合は、応答オブジェクトに含まれます。  
@@ -313,7 +370,7 @@ WebView2 チームは、6 週間のケイデンスで [WebView2 SDK][NuGetGaller
 
 [NuGet パッケージ][NuGetGallery0.9.538] \|Microsoft Edge バージョン 85.0.538.0。  
 
-### <a name="general"></a>全般的な情報  
+### <a name="general"></a>全般  
 
 *   WebView2 SDK バージョン [0.8.149 のサポートを削除します](#08149)。  WebView2 では、最新バージョンの WebView2 を使用して最新の情報を取得する必要があります。  
 *   Microsoft Edge ブラウザーのプロファイル パスが変更された場合を考慮するグループ[ポリシー][GithubMicrosoftedgeWebviewfeedbackIssue179]を更新しました \( #179\)。  
@@ -388,7 +445,7 @@ WebView2 チームは、6 週間のケイデンスで [WebView2 SDK][NuGetGaller
 *   > [!IMPORTANT]
     > **Breaking Change**: [非推奨の CreateCoreWebView2EnvironmentWithDetails を][Webview2ReferenceWin32Webview2IdlViewWebview209488Createcorewebview2environmentwithdetails] [CreateCoreWebView2EnvironmentWithOptions][Webview2ReferenceWin32Webview2IdlViewWebview209488Createcorewebview2environmentwithoptions]に置き換えました。  
     
-*   [FrameNavigationCompleted イベントを追加][Webview2ReferenceWin32Icorewebview2ViewWebview209488AddFramenavigationcompleted]しました。  これで、iframe がナビゲーションを完了すると、イベントが実行され、ナビゲーションとナビゲーション ID の成功が返されます。  
+*   [FrameNavigationCompleted イベントを追加][Webview2ReferenceWin32Icorewebview2ViewWebview209488AddFramenavigationcompleted]しました。  これで、要素がナビゲーションを完了すると、イベントが実行され、ナビゲーションとナビゲーション ID の成功 `iframe` が返されます。  
 *   [ICoreWebView2EnvironmentOptions][Webview2ReferenceWin32Icorewebview2environmentoptionsViewWebview209488]インターフェイスが追加されました。これは、アプリが対象とする Evergreen WebView2 ランタイムのバージョンを決定するために使用できます。  
 *   [IsBuiltInErrorPageEnabled 設定を追加][Webview2ReferenceWin32Icorewebview2settingsViewWebview209488GetIsbuiltinerrorpageenabled]しました。  これで、ナビゲーションエラーとレンダリング プロセスの失敗のために、組み込みのエラー Web ページのオンとオフを切り替えます。  
 *   .NET 実装 \( #113 `IDispatch` \)[をサポートするために、リモート オブジェクトの挿入を更新][GithubMicrosoftedgeWebviewfeedbackIssue113]しました。  
@@ -510,6 +567,11 @@ WebView2 SDK は公式の Win32 C++ Beta バージョンで、フィードバッ
 [Webview2GettingstartedWinforms]: ./gettingstarted/winforms.md "Windows フォーム アプリの WebView2 の使用を開始|Microsoft Docs"  
 [Webview2GettingstartedWpf]: ./gettingstarted/wpf.md "WPF の WebView2 の概要|Microsoft Docs"  
 [Webview2HowtoDebug]: ./howto/debug.md "WebView2 コントロールを使用して開発するときにデバッグする|Microsoft Docs"  
+
+[Webview2ReferenceWin32Icorewebview2experimental2ViewWebview210865PrereleaseAddDownloadstarting]: /microsoft-edge/webview2/reference/win32/icorewebview2experimental2?view=webview2-1.0.865-prerelease&preserve-view=true#add_downloadstarting  "add_DownloadStarting - インターフェイス ICoreWebView2Experimental2 |Microsoft Docs" 
+[Webview2ReferenceWin32Icorewebview2experimentalenvironment3ViewWebview210865PrereleaseUpdateruntime]: /microsoft-edge/webview2/reference/win32/icorewebview2experimentalenvironment3?view=webview2-1.0.865-prerelease&preserve-view=true#updateruntime  "UpdateRuntime - インターフェイス ICoreWebView2ExperimentalEnvironment3 |Microsoft Docs" 
+[Webview2ReferenceWin32Icorewebview2experimentalframeViewWebview210865PrereleaseAddhostobjecttoscriptwithorigins]: /microsoft-edge/webview2/reference/win32/icorewebview2experimentalframe?view=webview2-1.0.865-prerelease&preserve-view=true#addhostobjecttoscriptwithorigins  "AddHostObjectToScriptWithOrigins - interface ICoreWebView2ExperimentalFrame |Microsoft Docs" 
+[Webview2ReferenceWin32Icorewebview2experimentalsettings4ViewWebview210865PrereleaseIspinchzoomenabled]: /microsoft-edge/webview2/reference/win32/icorewebview2experimentalsettings4?view=webview2-1.0.865-prerelease&preserve-view=true#ispinchzoomenabled  "IsPinchZoomEnabled - インターフェイス ICoreWebView2ExperimentalSettings4 |Microsoft Docs" 
 
 [Webview2ReferenceWin32Icorewebview2experimentalsettingsViewWebview210824GetArebrowseracceleratorkeysenabled]: /microsoft-edge/webview2/reference/win32/icorewebview2experimentalsettings2?view=webview2-1.0.824&preserve-view=true#get_arebrowseracceleratorkeysenabled "get_AreBrowserAcceleratorKeyPressed - インターフェイス ICoreWebView2ExperimentalSettings |Microsoft Docs" 
 
@@ -633,11 +695,13 @@ WebView2 SDK は公式の Win32 C++ Beta バージョンで、フィードバッ
 [DotnetStandardAssemblyStrongNamed]: /dotnet/standard/assembly/strong-named "名前の強いアセンブリ |Microsoft Docs"  
 
 [WindowsSecurityThreatProtectionMicrosoftDefenderApplicationGuardWindows10]: /windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview "Microsoft Defender Application Guard (Windows 10) - Windows セキュリティ |Microsoft Docs"  
+[WindowsWin32ApiWinuserSetWindowDisplayAffinity]: /windows/win32/api/winuser/nf-winuser-setwindowdisplayaffinity "SetWindowDisplayAffinity 関数 (winuser.h) - Win32 アプリの|Microsoft Docs"  
 
 [GithubMicrosoftedgeWebview2AnnouncementIssue2]: https://github.com/MicrosoftEdge/WebView2Announcement/issues/2 "MicrosoftEdge/WebViewAnnouncement の問題 2 のアナウンス レポ"  
 
 [GithubMicrosoftedgeWebview2samplesApisample]: https://github.com/MicrosoftEdge/WebView2Samples/tree/master/SampleApps/WebView2APISample "WebView2 API サンプル - MicrosoftEdge/WebView2Samples |GitHub"  
 [GithubMicrosoftedgeWebview2samplesMain]: https://github.com/MicrosoftEdge/WebView2Samples "WebView2 サンプル-MicrosoftEdge/WebView2Samples | GitHub"  
+[GithubMicrosoftedgeWebview2samplesWebview2wpfbrowser]: https://github.com/MicrosoftEdge/WebView2Samples/tree/master/SampleApps/WebView2WpfBrowser "WebView2WpfBrowser - MicrosoftEdge/WebView2Samples |GitHub"  
 [GithubMicrosoftedgeWebview2samplesPr17]: https://github.com/MicrosoftEdge/WebView2Samples/pull/17 "プロジェクトを移動して最新の WebView2 SDK 0.9.430 を使用する - MicrosoftEdge/WebView2Samples |GitHub"  
 
 [GithubMicrosoftedgeWebviewfeedbackIssue1]: https://github.com/MicrosoftEdge/WebViewFeedback/issues/1 "MicrosoftEdge/WebViewFeedback のフィードバック repo 問題 1"  
@@ -712,6 +776,18 @@ WebView2 SDK は公式の Win32 C++ Beta バージョンで、フィードバッ
 [GithubMicrosoftedgeWebviewfeedbackIssue851]: https://github.com/MicrosoftEdge/WebViewFeedback/issues/851 "MicrosoftEdge/WebViewFeedback 問題 851 のフィードバック repo"  
 [GithubMicrosoftedgeWebviewfeedbackIssue875]: https://github.com/MicrosoftEdge/WebViewFeedback/issues/875 "MicrosoftEdge/WebViewFeedback のフィードバック repo 問題 875"  
 [GithubMicrosoftedgeWebviewfeedbackIssue878]: https://github.com/MicrosoftEdge/WebViewFeedback/issues/878 "MicrosoftEdge/WebViewFeedback のフィードバック repo 問題 878"  
+[GithubMicrosoftedgeWebviewfeedbackIssue1120]: https://github.com/MicrosoftEdge/WebViewFeedback/issues/1120 "MicrosoftEdge/WebViewFeedback 問題 1120 のフィードバック repo"
+[GithubMicrosoftedgeWebviewfeedbackIssue940]: https://github.com/MicrosoftEdge/WebViewFeedback/issues/940 "MicrosoftEdge/WebViewFeedback のフィードバック repo 問題 940"
+[GithubMicrosoftedgeWebviewfeedbackIssue841]: https://github.com/MicrosoftEdge/WebViewFeedback/issues/841 "MicrosoftEdge/WebViewFeedback 問題 841 のフィードバック レポ"
+[GithubMicrosoftedgeWebviewfeedbackIssue210]: https://github.com/MicrosoftEdge/WebViewFeedback/issues/210 "MicrosoftEdge/WebViewFeedback 問題 210 のフィードバック repo"
+[GithubMicrosoftedgeWebviewfeedbackIssue338]: https://github.com/MicrosoftEdge/WebViewFeedback/issues/338 "MicrosoftEdge/WebViewFeedback のフィードバック repo 問題 338"
+[GithubMicrosoftedgeWebviewfeedbackIssue589]: https://github.com/MicrosoftEdge/WebViewFeedback/issues/589 "MicrosoftEdge/WebViewFeedback のフィードバック repo 問題 589"
+[GithubMicrosoftedgeWebviewfeedbackIssue933]: https://github.com/MicrosoftEdge/WebViewFeedback/issues/933 "MicrosoftEdge/WebViewFeedback 問題 933 のフィードバック repo"
+[GithubMicrosoftedgeWebviewfeedbackIssue946]: https://github.com/MicrosoftEdge/WebViewFeedback/issues/946 "MicrosoftEdge/WebViewFeedback のフィードバック repo 問題 946"
+[GithubMicrosoftedgeWebviewfeedbackIssue1011]: https://github.com/MicrosoftEdge/WebViewFeedback/issues/1011 "MicrosoftEdge/WebViewFeedback 問題 1011 のフィードバック レポ"
+[GithubMicrosoftedgeWebviewfeedbackIssue1050]: https://github.com/MicrosoftEdge/WebViewFeedback/issues/1050 "MicrosoftEdge/WebViewFeedback 問題 1050 のフィードバック レポ"
+[GithubMicrosoftedgeWebviewfeedbackIssue996]: https://github.com/MicrosoftEdge/WebViewFeedback/issues/996 "MicrosoftEdge/WebViewFeedback のフィードバック repo 問題 996"
+[GithubMicrosoftedgeWebviewfeedbackIssue850]: https://github.com/MicrosoftEdge/WebViewFeedback/issues/850 "MicrosoftEdge/WebViewFeedback のフィードバック repo 問題 850"
 
 [MicrosoftDevblogDotnetAnnouncingGeneralAvailabilityForMicrosoftEdgeWebview2ForNetFixedDistributionMethod]: https://devblogs.microsoft.com/dotnet/announcing-general-availability-for-microsoft-edge-webview2-for-net-and-fixed-distribution-method "Microsoft Edge WebView2 for .NET および固定配布メソッドの一般提供を発表| .NET ブログ"  
 
@@ -739,6 +815,8 @@ WebView2 SDK は公式の Win32 C++ Beta バージョンで、フィードバッ
 [NuGetGallery1.0.721-prerelease]: https://www.nuget.org/packages/Microsoft.Web.WebView2/1.0.721-prerelease "NuGet ギャラリー |Microsoft.Web.WebView2 v1.0.721 プレリリース"  
 [NuGetGallery1.0.774.44]: https://www.nuget.org/packages/Microsoft.Web.WebView2/1.0.774.44 "NuGet ギャラリー |Microsoft.Web.WebView2 v1.0.774.44"  
 [NuGetGallery1.0.790-prerelease]: https://www.nuget.org/packages/Microsoft.Web.WebView2/1.0.790-prerelease "NuGet ギャラリー |Microsoft.Web.WebView2 v1.0.790 プレリリース"  
+[NuGetGallery1.0.818.41]: https://www.nuget.org/packages/Microsoft.Web.WebView2/1.0.818.41 "NuGet ギャラリー |Microsoft.Web.WebView2 v1.0.818.41"  
 [NuGetGallery1.0.824-prerelease]: https://www.nuget.org/packages/Microsoft.Web.WebView2/1.0.824-prerelease "NuGet ギャラリー |Microsoft.Web.WebView2 v1.0.824 プレリリース"  
+[NuGetGallery1.0.865-prerelease]: https://www.nuget.org/packages/Microsoft.Web.WebView2/1.0.865-prerelease "NuGet ギャラリー |Microsoft.Web.WebView2 v1.0.865 プレリリース"  
 
 [WindowsBlogsMsedgedevEdgeWebview2GeneralAvailability]: https://blogs.windows.com/msedgedev/edge-webview2-general-availability "Microsoft Edge WebView2 の一般的な可用性に関する|Microsoft Edge Blog"  

@@ -7,12 +7,12 @@ ms.date: 02/12/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 2067944fa17c332dd15ffb3ef97afe02d35685ed
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: 665181b14e6fa5e86950a27822d52395f49f5b92
+ms.sourcegitcommit: 16e2f7232196a57a70b979bbf8b663774b7ddc20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11398561"
+ms.lasthandoff: 04/25/2021
+ms.locfileid: "11519353"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -30,7 +30,9 @@ ms.locfileid: "11398561"
 
 # <a name="disable-javascript-with-microsoft-edge-devtools"></a>Microsoft Edge DevTools で JavaScript を無効にする  
 
-JavaScript が無効になっている場合の Web ページの外観と動作を表示するには、次のアクションを実行します。  
+ブラウザーで JavaScript がサポートされていない場合の Web ページの表示方法を確認するには、JavaScript を一時的にオフにします。
+
+JavaScript をオフにした場合の Web ページの表示方法と動作を調べるには、次のアクションを実行します。  
 
 1.  [Microsoft Edge DevTools を開きます][DevToolsOpen]。  
 1.  `Control`+`Shift`+`P` \(Windows, Linux\) または `Command`+`Shift`+`P` \(macOS\) を選択して、**コマンド メニュー** を開きます。  

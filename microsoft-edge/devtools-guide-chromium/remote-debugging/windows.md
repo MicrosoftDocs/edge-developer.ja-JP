@@ -1,161 +1,184 @@
 ---
-title: Windows 10 デバイスのリモートデバッグの概要
-author: zoherghadyali
-ms.author: zoghadya
-ms.date: 03/11/2020
+description: リモート デバッグ Windows 10 デバイスの使用を開始する
+title: Windows 10 デバイスのリモート デバッグの開始
+author: MSEdgeTeam
+ms.author: msedgedevrel
+ms.date: 04/23/2021
 ms.topic: article
 ms.prod: microsoft-edge
-keywords: microsoft edge、web 開発、f12 ツール、devtools、リモート、デバッグ、windows 10、windows、device portal
-ms.openlocfilehash: b944e1f16d4c26f4db83e3eb131f1da8ea938c97
-ms.sourcegitcommit: 6860234c25a8be863b7f29a54838e78e120dbb62
+keywords: microsoft edge, Web 開発, f12 ツール, devtools, リモート, デバッグ, Windows 10, windows, device portal
+ms.openlocfilehash: e3f60f07ba96aaed8cd9d7348eee1b0a846faecf
+ms.sourcegitcommit: 16e2f7232196a57a70b979bbf8b663774b7ddc20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "10569763"
+ms.lasthandoff: 04/25/2021
+ms.locfileid: "11519265"
 ---
-# Windows 10 デバイスのリモートデバッグの概要  
+# <a name="get-started-with-remote-debugging-windows-10-devices"></a>Windows 10 デバイスのリモート デバッグの開始  
 
-Windows または macOS コンピューターから Windows 10 デバイスのリモートデバッグライブコンテンツ。  このチュートリアルでは、次の方法について説明します。  
+Windows または macOS コンピューターから Windows 10 デバイスでライブ コンテンツをリモート デバッグします。  このチュートリアルでは、次のタスクについて説明します。  
 
-*   リモートデバッグ用に Windows 10 デバイスをセットアップし、開発用コンピューターから接続します。  
-*   開発用コンピューターから Windows 10 デバイス上のライブコンテンツを検査およびデバッグします。  
-*   Windows 10 デバイスのコンテンツを開発用コンピューターの DevTools インスタンスに Screencast します。  
+*   リモート デバッグ用に Windows 10 デバイスをセットアップし、開発マシンから Windows 10 デバイスに接続します。  
+*   開発マシンから Windows 10 デバイスのライブ コンテンツを検査およびデバッグします。  
+*   Windows 10 デバイスから開発マシン上の DevTools インスタンスにコンテンツをスクリーンキャストします。  
+    
+## <a name="step-1-set-up-the-host-debuggee-machine"></a>手順 1: ホストをセットアップする (デバッグ先コンピューター)  
 
-## 手順 1: ホスト (デバッグ用コンピューター) をセットアップする  
+ホストまたはデバッグ先のコンピューターは、デバッグする Windows 10 デバイスです。  物理的にアクセスするのが困難なリモート デバイスや、キーボードとマウスの周辺機器がインストールされていない場合、そのデバイスで Microsoft Edge DevTools とやり取りするのが難しい場合があります。  ホスト \(debuggee\) コンピューターをセットアップするには、次のアクションを実行する必要があります。  
 
-ホストまたはデバッガーマシンは、デバッグする Windows 10 デバイスです。  物理的にアクセスするのが難しいリモートデバイスの場合もあれば、キーボードとマウスの周辺機器を持っていない場合は、そのデバイスで Microsoft Edge の DevTools を操作することも困難です。  ホスト (デバッグ対象) コンピューターをセットアップするには、次のことを行う必要があります。  
+*   Microsoft Edge ( [クロム) のインストールと構成][MicrosoftEdgeMain]  
+*   Microsoft Store から Microsoft Edge 用リモート ツール [(ベータ)][MicrosoftStoreApps9p6cmfv44zlt] を [インストールする][MicrosoftStoreAppsWindows]  
+*   開発者 [モードをアクティブ化][WindowsAppsGetStartedEnableYourDeviceForDevelopment] し、 [デバイス ポータルを有効にする][WindowsUwpDebugTestPerfDevicePortal]  
+    
+### <a name="install-and-configure-microsoft-edge-chromium"></a>Microsoft Edge (クロム) のインストールと構成  
 
-*   Microsoft Edge をインストールして構成する[(Chromium)](https://www.microsoft.com/edge)  
-*   Microsoft [Store](https://www.microsoft.com/store/apps/windows)から[Microsoft Edge 用リモートツール (ベータ版)](https://www.microsoft.com/store/apps/9P6CMFV44ZLT)をインストールする  
-*   [開発者モード](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development)をアクティブ化し、 [Device Portal](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal)を有効にする  
+まだインストールしていない場合は、このページから Microsoft Edge \(Chromium\) を [インストールします][MicrosoftEdgeMain]。  ホスト \(debuggee\) コンピューターでプレインストールバージョンの Microsoft Edge を使用している場合は、Microsoft Edge \(Chromium\) ではなく Microsoft Edge \(EdgeHTML\) がインストールされていることを確認します。  簡単に確認するには、ブラウザーに読み込み、バージョン番号が 75 以上である必要 `edge://settings/help` があります。  
 
-### Microsoft Edge をインストールして構成する (Chromium)  
+次に `edge://flags` 、Microsoft Edge \(Chromium\) に移動します。  [ **検索フラグ]** に **、「Windows デバイス ポータルでリモート デバッグを有効にする」と入力します**。  このフラグを [有効] **に設定します**。  次に、[再起動] **ボタンを** クリックして Microsoft Edge \(Chromium\) を再起動します。  
 
-まだインストールしていない場合は、[このページ](https://www.microsoft.com/edge)から Microsoft Edge (Chromium) をインストールしてください。  ホスト (デバッグ対象) コンピューターでプレインストールされているバージョンの Microsoft Edge を使用している場合は、microsoft edge (Chromium) がインストールされていて、Microsoft Edge (EdgeHTML) を使用していることを確認してください。  簡単に確認するには、 `edge://settings/help` ブラウザーに読み込み、バージョン番号が75以上であることを確認します。  
+:::image type="complex" source="../media/remote-debugging-windows-media-edge-flags-on-host.msft.png" alt-text="[Windows デバイス ポータル経由でリモート デバッグを有効にする] フラグを [有効] に設定する" lightbox="../media/remote-debugging-windows-media-edge-flags-on-host.msft.png":::
+   **[Windows デバイス ポータル経由でリモート デバッグを有効にする**] フラグを [有効] に**設定する**  
+:::image-end:::  
 
-次に、 `edge://flags` [Microsoft Edge (Chromium)] に移動します。  [**検索フラグ**] に「 **Windows Device Portal 経由のリモートデバッグを有効にする**」を入力します。  フラグを**Enabled**に設定します。  次に、[**再起動**] ボタンをクリックして、Microsoft Edge (Chromium) を再起動します。  
+### <a name="install-the-remote-tools-for-microsoft-edge-beta"></a>Microsoft Edge 用リモート ツールのインストール (ベータ)  
 
-> ##### 図 1  
-> [ **Windows Device Portal でリモートデバッグを有効**にする] フラグを [**有効**] に設定する  
-> ![[Windows Device Portal でリモートデバッグを有効にする] フラグを [有効] に設定する](./windows-media/edge-flags-on-host.png)  
-
-### Microsoft Edge 用リモートツールをインストールする (ベータ版)  
-
-[Microsoft Store](https://www.microsoft.com/store/apps/windows)から[Microsoft Edge 用リモートツール (ベータ版)](https://www.microsoft.com/store/apps/9P6CMFV44ZLT)をインストールします。  
-
-> [!NOTE]
-> Windows 10 バージョン1809またはそれ以前のバージョンを使用している場合、 [Microsoft Edge 用リモートツール (ベータ版)](https://www.microsoft.com/store/apps/9P6CMFV44ZLT)の [ **Get** ] ボタンが無効になることがあります。  ホスト (デバッグ対象) コンピューターをセットアップするには、Windows 10 バージョン1903以降を実行している必要があります。  ホスト (デバッグ対象) コンピューターを更新して、 [Microsoft Edge (ベータ版) のリモートツール](https://www.microsoft.com/store/apps/9P6CMFV44ZLT)を取得します。  
-
-> ##### 図 2  
-> [Microsoft Store](https://www.microsoft.com/store/apps/windows)の[Microsoft Edge (ベータ版) のリモートツール](https://www.microsoft.com/store/apps/9P6CMFV44ZLT)  
-> ![Microsoft Store の Microsoft Edge (ベータ版) のリモートツール](./windows-media/remote-tools-in-store.png)  
-
-[Microsoft Edge 用リモートツール](https://www.microsoft.com/store/apps/9P6CMFV44ZLT)を起動し、メッセージが表示されたら、アプリの [アクセス許可] ダイアログボックスを承諾します。 これで、 [Microsoft Edge 用リモートツール (ベータ版)](https://www.microsoft.com/store/apps/9P6CMFV44ZLT)を閉じることができるようになりました。今後のリモートデバッグセッションでは、それを開く必要はありません。
-
-### 開発者モードをアクティブ化し、Device Portal を有効にする  
-
-WiFi ネットワークを使用している場合は、ネットワークが [**ドメイン**] または [**プライベート**] に設定されていることを確認します。  これを確認するには、 **Windows セキュリティ**アプリを開き、[**ファイアウォール & ネットワーク保護**] をクリックして、使用しているネットワークが**ドメイン**ネットワークと**プライベート**ネットワークのどちらであるかを確認します。  
-
-**パブリック**として表示される場合は、[**設定**  >  **ネットワーク & インターネット**  >  **wi-fi**] に移動し、使用しているネットワークをクリックして、[**ネットワークプロファイル**] ボタンを [**プライベート**] に切り替えます。  
-
-次に、**設定**アプリを開きます。  [**設定の検索**] で、[**開発者向け設定**] を入力して選択します。  **開発者モード**で切り替えます。  [**ローカルエリアネットワーク接続でのリモート診断**を有効にする] を **[** オン] に設定して、 **Device Portal**を有効にできるようになりました。  必要に**応じて、** クライアント (デバッガー) デバイスがこのデバイスに接続するための正しい資格情報を提供する必要があります。  
+Microsoft Store [から Microsoft Edge 用リモート ツール (ベータ)][MicrosoftStoreApps9p6cmfv44zlt] を [インストールします][MicrosoftStoreAppsWindows]。  
 
 > [!NOTE]
-> 「**ローカルエリアネットワーク接続を介してリモート診断を有効にする」をオンにします。** は以前有効になっていました。これを無効にして、 **Device Portal**が[Microsoft Edge 用リモートツール (ベータ版)](https://www.microsoft.com/store/apps/9P6CMFV44ZLT)で動作するようにする必要があります。 [**設定**] に [**開発者向け**] セクションが表示されない場合は、 **device Portal**が既に有効になっている可能性があります。代わりに、Windows 10 デバイスを再起動してみてください。
+> Windows **** 10 バージョン 1809 以前の場合、リモート ツール for Microsoft Edge (ベータ) の[[Get]][MicrosoftStoreApps9p6cmfv44zlt]ボタンが無効になる場合があります。  ホスト \(debuggee\) コンピューターをセットアップするには、Windows 10 バージョン 1903 以降を実行している必要があります。  ホスト \(debuggee\) コンピューターを更新して、Microsoft Edge 用リモート ツール [(Beta) を取得します][MicrosoftStoreApps9p6cmfv44zlt]。  
 
-> ##### 図 3  
-> **開発者モード**と**Device Portal**が構成された**設定**アプリ  
-> ![開発者モードと Device Portal が構成された設定アプリ](./windows-media/host-settings.png)  
+:::image type="complex" source="../media/remote-debugging-windows-media-remote-tools-in-store.msft.png" alt-text="Microsoft Store の Microsoft Edge 用リモート ツール \(Beta\)" lightbox="../media/remote-debugging-windows-media-remote-tools-in-store.msft.png":::
+   Microsoft Store[の Microsoft Edge 用リモート ツール (][MicrosoftStoreApps9p6cmfv44zlt][ベータ][MicrosoftStoreAppsWindows])  
+:::image-end:::  
 
-[**接続の方法:**] の下に、コンピューターの IP アドレスと接続ポートが表示されていることを確認します。  以下の画像の IP アドレス `192.168.86.78` と接続ポートは、 `50080` です。  
+Microsoft [Edge のリモート ツール (Beta)][MicrosoftStoreApps9p6cmfv44zlt] を起動し、メッセージが表示されたら、アプリの [アクセス許可] ダイアログを受け入れる。  これで、Microsoft Edge 用のリモート ツール [(Beta)][MicrosoftStoreApps9p6cmfv44zlt] を閉じ、将来のリモート デバッグ セッション用に開く必要がなくなっています。
 
-> ##### 図 4  
-> [**設定**] の IP アドレスと接続ポートを確認します。  
-> ![[設定] の IP アドレスと接続ポートを確認します。](./windows-media/host-settings-ip-address.png)  
+### <a name="activate-developer-mode-and-enable-device-portal"></a>開発者モードをアクティブ化し、デバイス ポータルを有効にする  
 
-この情報は、[次のセクション](#step-2-set-up-the-client-debugger-machine)でクライアント (デバッガー) デバイスに入力します。  クライアント (デバッガー) コンピューターからデバッグするホスト (デバッグ対象) コンピューター上で、Microsoft Edge および[プログレッシブ Web アプリ (PWAs)](../progressive-web-apps.md)でタブを開きます。  
+WiFi ネットワークを使用している場合は、ネットワークが [ドメイン] または [プライベート] のいずれかとして**マークされている必要****があります**。  Windows セキュリティ アプリを開き、**ファイアウォール** **&** ネットワーク保護を選択し、ネットワークがドメイン ネットワークまたはプライベート ネットワークとして一覧表示される**** のを確認することで、状態を**確認**できます。  
 
-## 手順 2: クライアントをセットアップする (デバッガーコンピューター)  
+[パブリック] と表示**** されている場合は、[**** 設定] ネットワーク & [インターネット Wi-Fi] に移動し、ネットワーク上で選択し、[ネットワーク プロファイル] ボタンを [プライベート]  >  ****  >  **** に切り替**わります**。 ****  
 
-クライアントまたはデバッガーマシンが、デバッグ元のデバイスです。  このデバイスは、日常の開発マシンである場合や、自宅で作業しているときに PC または MacBook である場合があります。  
-
-クライアント (デバッガー) コンピューターをセットアップするには、[このページ](https://www.microsoft.com/edge)から Microsoft Edge (Chromium) をインストールしてください (まだインストールしていない場合)。  ホスト (デバッグ対象) コンピューターでプレインストールされているバージョンの Microsoft Edge を使用している場合は、microsoft edge (Chromium) がインストールされていて、Microsoft Edge (EdgeHTML) を使用していることを確認してください。  簡単に確認するには、 `edge://settings/help` ブラウザーに読み込み、バージョン番号が75以上であることを確認します。  
-
-次に、 `edge://flags` [Microsoft Edge (Chromium)] に移動します。  [**検索フラグ**] に「 **edge://inspect でのリモート Windows デバイスのデバッグを有効にする**」と入力します。  フラグを**Enabled**に設定します。  次に、[**再起動**] ボタンをクリックして、Microsoft Edge (Chromium) を再起動します。  
-
-> ##### 図 5  
-> Edge://inspect フラグを**有効**にして、[**リモート Windows デバイスのデバッグを有効**にする] を設定する  
-> ![Edge://inspect フラグを有効にして、[リモート Windows デバイスのデバッグを有効にする] を設定する](./windows-media/edge-flags-on-client.png)  
-
-次に、 `edge://inspect` Microsoft Edge (Chromium) のページに移動します。  既定では、[**デバイス**] セクションに表示されます。  [**リモート Windows デバイスに接続する**] の下で、[http://:] のようなボックスに、ホスト (デバッグ対象) マシンの IP アドレスと接続ポートを入力します。 `IP address` `connection port`  次**に、[デバイスに接続] を**クリックします。  
-
-> ##### 図 6  
-> `edge://inspect`クライアントのページ  
-> ![クライアントの edge://inspect ページ](./windows-media/edge-inspect.png)  
-
-ホスト (デバッグ対象) マシンの認証を設定すると、クライアント (デバッガー) マシンの**ユーザー名**と**パスワード**を入力するように求めるメッセージが表示され、正常に接続されます。  
-
-### Http ではなく https を使用する  
-
-代わりに、の代わりにホスト (デバッグ対象) コンピューターに接続する場合は `https` `http` 、 `http://IP address:50080/config/rootcertificate` クライアント (デバッガー) コンピューターで Microsoft Edge に、[] を選択する必要があります。 これにより、という名前のセキュリティ証明書が自動的にダウンロードされ `rootcertificate.cer` ます。
-
-[オン] をクリックし `rootcertificate.cer` ます。 [Windows 証明書マネージャーツール](https://docs.microsoft.com/dotnet/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in#view-certificates-with-the-certificate-manager-tool)が開きます。
-
-[**証明書のインストール**] をクリックし、[**現在のユーザー** ] が選択されていることを確認して、[**次へ**] をクリックします。 **次に、[証明書をすべて次のストアに配置する**] を選択し、[**参照.**..] をクリックします。[**信頼されたルート証明機関**] ストアを選択し、[ **OK]** をクリックします。 **[次へ]**、**[完了]** の順にクリックします。 メッセージが表示されたら、**信頼されたルート証明機関**ストアにこの証明書をインストールすることを確認します。
-
-これで、ページを使用してクライアント (デバッガー) コンピューターからホスト (デバッグ対象) コンピューターに接続するときに、 `edge://inspect` 別の値を使用する必要があり `connection port` ます。  既定では、デスクトップウィンドウについて、Device Portal は `50080` for のとして使用され `connection port` `http` ます。  の場合 `https` 、Device Portal では、 `50043` `IP address` `50043` ページ上の https://: というパターンに従い `edge://inspect` ます。  [詳細については、Device Portal で使用される既定のポートに関する情報を参照](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal#setup)してください。  
+次に、設定アプリ **を開** きます。  [ **設定の検索]** で、設定 `Developer settings` を入力して選択します。  開発者モードを **切り替えます**。  [ローカル エリア ネットワーク**** 接続でリモート診断を有効にする] を [オン] に設定して、デバイス ポータル**を**有効**にできます**。  オプションで認証を有効に**** し、クライアント \(debugger\) デバイスがこのデバイスに接続するための正しい資格情報を提供する必要があります。  
 
 > [!NOTE]
-> の既定のポートはですが、の既定のポートはですが、 `http` `50080` `https` `50043` デバイス上の既存のポート要求との競合を防ぐために、デスクトップのデバイスポータル (>5万) では常に、このようなことはありません。  詳細については、「Windows デスクトップの Device Portal の[ポートの設定](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-desktop#registry-based-configuration-for-device-portal)」セクションを参照してください。  
+> ローカル **エリア ネットワーク接続でリモート診断を有効にする場合。** 以前に有効にした場合は、デバイス ポータルで Microsoft Edge**** 用リモート ツール (Beta) を操作するには、無効にし、もう一度オン[にする必要があります][MicrosoftStoreApps9p6cmfv44zlt]。  [設定]**に [** 開発者向け****]**** セクションが表示されない場合は、デバイス ポータルが既に有効になっている可能性があります。代わりに Windows 10 デバイスを再起動してみてください。
 
-## 手順 3: クライアントからホストのコンテンツをデバッグする  
+:::image type="complex" source="../media/remote-debugging-windows-media-host-settings.msft.png" alt-text="開発者モードとデバイス ポータルが構成された設定アプリ" lightbox="../media/remote-debugging-windows-media-host-settings.msft.png":::
+   開発者**モードと**デバイス**ポータルが**構成**された設定アプリ**  
+:::image-end:::  
 
-クライアント (デバッガー) のコンピューターがホスト (デバッグ対象) コンピューターに正常に接続された場合、 `edge://inspect` クライアントのページには Microsoft Edge のタブの一覧と、開いている PWAs がホストに表示されます。  
+[接続] の下に表示されるコンピューターの IP アドレスと接続**ポートに注意してください。**  次の図の IP アドレスは、 `192.168.86.78` 接続ポートです `50080` 。  
 
-> ##### 図 7  
-> `edge://inspect`クライアントのページに Microsoft Edge のタブと PWAs がホストされている  
-> ![クライアントの edge://inspect ページには、Microsoft Edge のタブと PWAs がホストに表示されています。](./windows-media/edge-inspect-connected.png)  
+:::image type="complex" source="../media/remote-debugging-windows-media-host-settings-ip-address.msft.png" alt-text="[設定] で IP アドレスと接続ポートをメモする" lightbox="../media/remote-debugging-windows-media-host-settings-ip-address.msft.png":::
+   [設定] で IP アドレスと接続ポートをメモ **する**  
+:::image-end:::  
 
-デバッグするコンテンツを決定し、[**検査**] をクリックします。  Microsoft Edge DevTools が新しいタブで開き、ホスト (デバッグ対象) マシンからクライアント (デバッガー) コンピューターにコンテンツが screencast されます。  これで、クライアントで Microsoft Edge DevTools の全機能を使用して、ホストで実行されているコンテンツを使用できるようになりました。  Microsoft Edge DevTools の使い方については、[こちら](../../devtools-guide-chromium.md)を参照してください。  
+クライアント \(debugger\) デバイスの情報を次のセクションに [入力します](#step-2-set-up-the-client-debugger-machine)。  クライアント \(debugger\) コンピューターからデバッグするホスト \(debugee\) コンピューターの Microsoft Edge とプログレッシブ Web アプリ [(PWA)][DevtoolsProgressiveWebApps] でタブを開きます。  
 
-> ##### 図 8  
-> ホスト上の Microsoft Edge のタブをデバッグしているクライアントの[Microsoft Edge DevTools](../../devtools-guide-chromium.md)  
-> ![ホスト上の Microsoft Edge のタブをデバッグしているクライアントの Microsoft Edge DevTools](./windows-media/devtools-client.png)  
+## <a name="step-2-set-up-the-client-debugger-machine"></a>手順 2: クライアントをセットアップする (デバッガー コンピューター)  
 
-### 要素を検査する  
+クライアントまたはデバッガー コンピューターは、デバッグするデバイスです。  このデバイスは、毎日の開発マシンか、自宅で作業するときに PC または MacBook にすることもできます。  
 
-たとえば、要素を調べてみます。  クライアント上の DevTools インスタンスの**要素**パネルに移動し、要素の上にマウスポインターを置いて、ホストデバイスのビューポートでその要素を強調表示します。  
+クライアント \(debugger\) マシンをセットアップするには、まだインストールしていない場合は、このページから[][MicrosoftEdgeMain]Microsoft Edge \(Chromium\) をインストールします。  ホスト \(debuggee\) コンピューターでプレインストールバージョンの Microsoft Edge を使用している場合は、Microsoft Edge \(Chromium\) ではなく Microsoft Edge \(EdgeHTML\) がインストールされていることを確認します。  簡単に確認するには、ブラウザーに読み込み、バージョン番号が 75 以上である必要 `edge://settings/help` があります。  
 
-また、ホストデバイスの画面で要素をタップして、[**要素**] パネルで選ぶこともできます。  クライアント上の DevTools インスタンスで [**要素の選択**] をクリックし、ホストデバイス画面で要素をタップします。  **[要素の選択]** は、最初のタッチの後に無効になっているため、この機能を使うたびに有効にする必要があります。  
+次に `edge://flags` 、Microsoft Edge \(Chromium\) に移動します。  [**検索フラグ]** に、「リモート Windows デバイスのデバッグを有効にする」と入力**edge://inspect。**  このフラグを [有効] **に設定します**。  次に、[再起動] **ボタンを** クリックして Microsoft Edge \(Chromium\) を再起動します。  
+
+:::image type="complex" source="../media/remote-debugging-windows-media-edge-flags-on-client.msft.png" alt-text="[リモート Windows デバイスのデバッグを有効にする] フラグを [有効 edge://inspect する] に設定する" lightbox="../media/remote-debugging-windows-media-edge-flags-on-client.msft.png":::
+   [リモート **Windows デバイスのデバッグを有効にする** ] フラグを [有効 edge://inspect する] に **設定する**  
+:::image-end:::  
+
+次に `edge://inspect` 、Microsoft Edge \(Chromium\) のページに移動します。  既定では、[デバイス] セクションに **アクセスする必要** があります。  [ **リモート Windows デバイスへの**接続] で、次のパターンに従って、ホスト \(debuggee\) コンピューターの IP アドレスと接続ポートをテキスト ボックスに入力します。http:// `IP address` : `connection port` 。  [デバイスに **接続] を選択します**。  
+
+:::image type="complex" source="../media/remote-debugging-windows-media-edge-inspect.msft.png" alt-text="クライアント edge://inspect ページ" lightbox="../media/remote-debugging-windows-media-edge-inspect.msft.png":::
+   クライアント `edge://inspect` のページ  
+:::image-end:::  
+
+ホスト \(debuggee\) コンピューターの認証を設定すると、クライアント \(debugger\)**** コンピューター**** のユーザー名とパスワードを入力して正常に接続するように求められます。  
+
+### <a name="using-https-instead-of-http"></a>http の代わりに https を使用する  
+
+代わりに使用してホスト \(debuggee\) コンピューターに接続する場合は、クライアント `https` `http` \(debugger\) コンピューターの Microsoft Edge に移動する `http://IP address:50080/config/rootcertificate` 必要があります。  これにより、という名前のセキュリティ証明書が自動的にダウンロードされます `rootcertificate.cer` 。
+
+を選択します `rootcertificate.cer` 。  これにより [、Windows 証明書マネージャー ツールが開きます][DotnetFrameworkWcfFeatureDetailsHowToViewCertificatesWithMmcSnapInViewCertificatesWithCertificateManagerTool]。
+
+[ **証明書のインストール...] を選択し**、[現在の **ユーザー** ] がオンになっていることを確認し、[次へ] を **選択します**。  次に、[**すべての証明書を次のストアに配置する] を選択し、[****参照]を選択します**。 [信頼された**ルート証明機関] ストアを選択し****、[OK] を選択します**。  [次 **へ] を** 選択し、[完了] **を選択します**。  メッセージが表示されたら、この証明書を信頼されたルート証明機関ストア **にインストールする必要があります** 。
+
+ここで、ページを使用してクライアント \(debugger\) コンピューターからホスト \(debuggee\) コンピューターに接続する場合は、別の値 `edge://inspect` を使用する必要 `connection port` があります。  既定では、デスクトップ Windows の場合、デバイス ポータルは `50080` for として使用 `connection port` されます `http` 。  [ `https` デバイス ポータル] では、次 `50043` のパターンに従って使用します。https://: `IP address` `50043` をページに表示 `edge://inspect` します。  [デバイス ポータルで使用される既定のポートの詳細については、以下を参照してください][WindowsUwpDebugTestPerfDevicePortalSetup]。  
+
+> [!NOTE]
+> 既定のポートは is および default port is ですが、デバイス上の既存のポート クレームとの競合を防止するために、一時的な範囲 `http` `50080` `https` `50043` \(\>50,000\) のデスクトップ クレーム ポートの Device Portal と必ずしも同じではありません。  詳細については、Windows デスクトップの  [デバイス ポータルの][WindowsUwpDebugTestPerfDevicePortalDesktopRegistryBasedConfigurationForDevicePortal] [ポート設定] セクションに移動します。  
+
+## <a name="step-3-debug-content-on-the-host-from-the-client"></a>手順 3: クライアントからホスト上のコンテンツをデバッグする  
+
+クライアント \(debugger\) コンピューターがホスト \(debuggee\) コンピューターに正常に接続すると、クライアントのページに Microsoft Edge のタブの一覧とホスト上の開いている PWA が表示されます。 `edge://inspect`  
+
+:::image type="complex" source="../media/remote-debugging-windows-media-edge-inspect-connected.msft.png" alt-text="クライアント edge://inspect ページには、ホスト上の Microsoft Edge と PWA のタブが表示されます。" lightbox="../media/remote-debugging-windows-media-edge-inspect-connected.msft.png":::
+   クライアント `edge://inspect` のページには、ホスト上の Microsoft Edge と PWA のタブが表示されます。  
+:::image-end:::  
+
+デバッグするコンテンツを決定し、[検査] を **選択します**。  Microsoft Edge DevTools は新しいタブで開き、ホスト \(debuggee\) コンピューターからクライアント \(debugger\) コンピューターにコンテンツをスクリーンキャストします。  これで、ホスト上で実行されているコンテンツに対して、クライアントで Microsoft Edge DevTools のフル パワーを使用できます。  Microsoft Edge DevTools の使い方の詳細については、こちらを参照 [してください][DevtoolsIndex]。  
+
+:::image type="complex" source="../media/remote-debugging-windows-media-devtools-client.msft.png" alt-text="ホスト上の Microsoft Edge のタブをデバッグするクライアントの Microsoft Edge DevTools" lightbox="../media/remote-debugging-windows-media-devtools-client.msft.png":::
+   ホスト [上の Microsoft Edge][DevtoolsIndex] のタブをデバッグするクライアントの Microsoft Edge DevTools  
+:::image-end:::  
+
+### <a name="inspect-elements"></a>要素を検査する  
+
+たとえば、要素の検査を試してみてください。  クライアント上の **DevTools** インスタンスの Elements ツールに移動し、要素をホバーしてホスト デバイスのビューポートで強調表示します。  
+
+ホスト デバイス画面で要素をタップして、[要素] **ツールで選択** することもできます。  クライアント **の DevTools** インスタンスで [要素の選択] を選択し、ホスト デバイス画面で要素をタップします。  
+
+> [!NOTE]
+> **[要素の** 選択] は最初のタッチ後に無効になっているので、この機能を使用する度にもう一度有効にする必要があります。  
 
 > [!IMPORTANT]
-> Windows 10 バージョン1903では、[**要素**] パネルの [**イベントリスナー** ] ウィンドウが空白になっています。  これは既知の問題であり、Windows 10 バージョン1903へのサービス更新プログラムの [**イベントリスナー** ] ウィンドウを修正します。  
+> Windows 10**バージョン**1903 では、[要素] ツールの [イベント リスナー] ウィンドウが空白になります。 ****  これは既知の問題であり、チームはサービス更新プログラムの****[イベント リスナー] ウィンドウを Windows 10 バージョン 1903 に修正する予定です。  
 
-## 手順 4: ホスト画面をクライアントデバイスに Screencast する  
+## <a name="step-4-screencast-your-host-screen-to-your-client-device"></a>手順 4: ホスト画面をクライアント デバイスにスクリーンキャストする  
 
-既定では、クライアント上の DevTools インスタンスは screencasting に切り替えられます。これにより、クライアントデバイス上の DevTools インスタンスのホストデバイスでコンテンツを表示できます。  [ **Screencast の切り替え**] をクリックしてオフにするか、この機能をオンにします。  
+既定では、クライアントの DevTools インスタンスにスクリーンキャストが有効になっているので、クライアント デバイスの DevTools インスタンスのホスト デバイス上のコンテンツを表示できます。  [ **画面キャストの切り替え** ] を選択して、この機能をオフまたはオンにします。  
 
-> ##### 図 9  
-> クライアント上の Microsoft Edge DevTools の [ **Screencast の切り替え**] ボタン  
-> ![クライアント上の Microsoft Edge DevTools の [Screencast の切り替え] ボタン](./windows-media/toggle-screencast.png)  
+:::image type="complex" source="../media/remote-debugging-windows-media-toggle-screencast.msft.png" alt-text="クライアントの Microsoft Edge DevTools の [画面キャストの切り替え] ボタン" lightbox="../media/remote-debugging-windows-media-toggle-screencast.msft.png":::
+   クライアント **の Microsoft Edge** DevTools の [画面キャストの切り替え] ボタン  
+:::image-end:::  
 
-Screencast はさまざまな方法で操作できます。  
-*   クリックは、デバイスで適切なタッチイベントを発生させるために、タップに変換されます。  
-*   コンピューターのキーボード操作がデバイスに送信されます。  
-*   ピンチジェスチャをシミュレートするには、 `Shift` ドラッグ中にホールドします。  
-*   スクロールするには、トラックパッドまたはマウスホイール、またはマウスポインターでフリックを使用します。  
+スクリーンキャストを複数の方法で操作できます。  
+*   選択はタップに変換され、デバイスで適切なタッチ イベントが発生します。  
+*   コンピューター上のキーストロークがデバイスに送信されます。  
+*   ピンチ ジェスチャをシミュレートするには、ドラッグ中 `Shift` に保持します。  
+*   スクロールするには、トラックパッドまたはマウス ホイールを使用するか、マウス ポインターを使用します。  
 
 スクリーンキャストに関する注意事項:  
-*   スクリーンキャストは、ページコンテンツを表示します。  Screencast の透明部分は、Microsoft Edge のアドレスバー、Windows 10 タスクバー、Windows 10 キーボードなどのデバイスインターフェイスを表します。  
-*   スクリーンキャストはフレームレートに悪影響を与えます。  スクロールまたはアニメーションの計測中に screencasting を無効にすると、ページのパフォーマンスがより正確に表示されます。  
-*   ホストデバイスの画面がロックされている場合、screencast のコンテンツは表示されなくなります。  [ホストデバイス] 画面のロックを解除して、screencast を自動的に再開します。  
+*   スクリーンキャストは、ページコンテンツのみを表示します。  スクリーン キャストの透明な部分は、Microsoft Edge アドレス バー、Windows 10 タスク バー、Windows 10 キーボードなどのデバイス インターフェイスを表します。  
+*   スクリーンキャストはフレーム レートに悪影響を及ぼします。  スクロールやアニメーションの測定中にスクリーンキャストを無効にして、ページのパフォーマンスをより正確に把握します。  
+*   ホスト デバイスの画面がロックされている場合、スクリーン キャストのコンテンツは消えます。  ホスト デバイスの画面のロックを解除して、スクリーンキャストを自動的に再開します。  
 
-## 既知の問題  
+## <a name="known-issues"></a>既知の問題  
 
-Windows 10 バージョン1903では、[**要素**] パネルの [**イベントリスナー** ] ウィンドウが空白になっています。  Windows 10 バージョン1903へのサービス更新プログラムで、[**イベントリスナー** ] ウィンドウを修正します。  
+Windows 10**バージョン**1903 では、[要素] ツールの [イベント リスナー] ウィンドウが空白になります。 ****  チームは、サービス更新プログラムの **[イベント** リスナー] ウィンドウを Windows 10 バージョン 1903 に修正する予定です。  
 
-Windows 10 バージョン1903では、**アプリケーション**パネルの [ **cookie** ] ウィンドウが空白になっています。  Windows 10 バージョン1903へのサービス更新プログラムでは、[ **cookie** ] ウィンドウが修正されます。  
+Windows **** 10**** バージョン 1903 の [アプリケーション] パネルの [Cookie] ウィンドウは空白です。  チームは、サービス更新プログラム **の Cookie** ウィンドウを Windows 10 バージョン 1903 に修正する予定です。  
 
-[**監査**] パネル、[ **3d ビュー** ] パネル、[**設定**] のエミュレートされた**デバイス**セクション、[**要素**] パネルの [**アクセシビリティツリー** ] ウィンドウは、現時点では期待どおりに動作していません。  これらのツールは、Microsoft Edge の今後の更新プログラムで修正されます。  
+[**監査]** ツール **、3D ビュー**ツール、設定の [**** エミュレートされたデバイス]**** セクション、および [**** 要素] ツールの [アクセシビリティ] ツリー ウィンドウは、現在期待通り動作していません。 ****  チームは、Microsoft Edge の今後の更新プログラムで、リストされているツールを修正する予定です。  
 
-リモートデバッグの場合、ファイルエクスプローラーは、[**ソース**] パネルまたは [**セキュリティ**] パネルの devtools から起動されません。  これらのツールは、Microsoft Edge の今後の更新プログラムで修正されます。  
+リモート デバッグ時に、エクスプローラーは Sources ツール**** の DevTools から、または**セキュリティ**パネルでは起動されません。  チームは、Microsoft Edge の今後の更新プログラムでツールを修正する予定です。  
+
+<!-- links -->
+
+[DevtoolsIndex]: ../index.md "Microsoft Edge (Chromium) 開発者ツールの概要 | Microsoft Docs"  
+[DevtoolsProgressiveWebApps]: ../progressive-web-apps/index.md "プログレッシブ Web アプリのデバッグ |Microsoft Docs"  
+
+[DotnetFrameworkWcfFeatureDetailsHowToViewCertificatesWithMmcSnapInViewCertificatesWithCertificateManagerTool]: /dotnet/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in#view-certificates-with-the-certificate-manager-tool "[証明書マネージャー] ツールを使用して証明書を表示する - [方法] MMC スナップイン ツールを使用して証明書を表示|Microsoft Docs"  
+
+[WindowsAppsGetStartedEnableYourDeviceForDevelopment]: /windows/apps/get-started/enable-your-device-for-development "デバイスを開発用に有効|Microsoft Docs"  
+
+[WindowsUwpDebugTestPerfDevicePortal]: /windows/uwp/debug-test-perf/device-portal "Windows デバイス ポータルの概要|Microsoft Docs"  
+[WindowsUwpDebugTestPerfDevicePortalSetup]: /windows/uwp/debug-test-perf/device-portal#setup "セットアップ - Windows デバイス ポータルの概要|Microsoft Docs"  
+[WindowsUwpDebugTestPerfDevicePortalDesktopRegistryBasedConfigurationForDevicePortal]: /windows/uwp/debug-test-perf/device-portal-desktop#registry-based-configuration-for-device-portal "デバイス ポータルのレジストリ ベースの構成 - Windows デスクトップ アプリケーションのデバイス ポータル|Microsoft Docs"  
+
+[MicrosoftEdgeMain]: https://www.microsoft.com/edge "新しい Microsoft Edge ブラウザーをダウンロードする"  
+
+[MicrosoftStoreAppsWindows]: https://www.microsoft.com/store/apps/windows "Windows Apps |Microsoft Store"  
+
+[MicrosoftStoreApps9p6cmfv44zlt]: https://www.microsoft.com/store/apps/9P6CMFV44ZLT "Microsoft Edge のリモート ツール (ベータ) |Microsoft Store"  
