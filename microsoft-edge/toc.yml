@@ -121,16 +121,16 @@
                   href: devtools-guide-chromium/device-mode/orientation.md
             - name: IE モード
               href: devtools-guide-chromium/ie-mode/index.md
-            - name: Javascript のトラブルシューティング
+            - name: JavaScript のトラブルシューティング
               items:
-                - name: JavaScript デバッグ リファレンス
+                - name: デバッガー機能の使用
                   href: devtools-guide-chromium/javascript/reference.md
-                - name: ソース コードに前処理コードをマッピングする
+                - name: ブレークポイントを使用してコードを一時停止する
+                  href: devtools-guide-chromium/javascript/breakpoints.md
+                - name: ソース コードに事前処理されたコードをマッピングする
                   href: devtools-guide-chromium/javascript/source-maps.md
                 - name: コンテンツ スクリプトをライブラリ コードとしてマークする
                   href: devtools-guide-chromium/javascript/guides/mark-content-scripts-library-code.md
-                - name: ブレークポイントを使用してコードを一時停止する
-                  href: devtools-guide-chromium/javascript/breakpoints.md
             - name: メモリのトラブルシューティング
               items:
                 - name: メモリの関連用語
@@ -241,16 +241,14 @@
               href: devtools-guide-chromium/security/index.md
             - name: ソース
               items:
-                - name: ソース パネルの概要
+                - name: ソース ツールの概要
                   href: devtools-guide-chromium/sources/index.md
-                - name: JavaScript デバッグ リファレンス
-                  href: devtools-guide-chromium/javascript/reference.md
-                - name: JavaScript を無効にする
-                  href: devtools-guide-chromium/javascript/disable.md
                 - name: 上書き
                   href: devtools-guide-chromium/javascript/overrides.md
                 - name: スニペット
                   href: devtools-guide-chromium/javascript/snippets.md
+                - name: JavaScript を無効にする
+                  href: devtools-guide-chromium/javascript/disable.md
             - name: WebAuthn
               href: devtools-guide-chromium/webauthn/index.md
         - name: リファレンス
