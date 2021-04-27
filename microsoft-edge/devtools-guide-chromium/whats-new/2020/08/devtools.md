@@ -222,7 +222,7 @@ The current effort to improve translation quality enables easier support for mor
 
 <!--todo: this figure need to be updated  -->  
 
-:::image type="complex" source="../../media/2020/08/issue-console-msg.msft.png" alt-text="コンソール内の問題 メッセージ" lightbox="../../media/2020/08/issue-console-msg.msft.png":::
+:::image type="complex" source="../../media/2020/08/issue-console-msg.msft.png" alt-text=""コンソール内の問題" メッセージ" lightbox="../../media/2020/08/issue-console-msg.msft.png":::
    <span data-ttu-id="2eeb0-193">"コンソール内の問題" メッセージ</span><span class="sxs-lookup"><span data-stu-id="2eeb0-193">Issues in console message</span></span>  
 :::image-end:::  
 
