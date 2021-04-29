@@ -409,6 +409,8 @@
               href: webview2/concepts/versioning.md
             - name: スレッド化
               href: webview2/concepts/threading-model.md
+            - name: WebView2 開発のベスト プラクティス
+              href: webview2/concepts/developer-guide.md
             - name: Win32 API の規則
               href: webview2/concepts/win32-api-conventions.md
         - name: リリース ノート
