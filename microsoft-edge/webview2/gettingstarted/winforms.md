@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: WebView2, webview2, WebView, webview, winforms アプリ, winforms, edge, CoreWebView2, ブラウザー管理, edge html, getting started, Getting Started, .NET, windows フォーム
-ms.openlocfilehash: 9d797e87ff8b5f11d957442c2cea08ae2f8c66a7
-ms.sourcegitcommit: 2ddfd98d1e871be9c61380a8ca57da398d38bd54
+ms.openlocfilehash: 408d225c6c0abe54483226e7004a386d367d65ab
+ms.sourcegitcommit: b51df5036642060525e03cd744b7d35726326abe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "11470866"
+ms.lasthandoff: 04/29/2021
+ms.locfileid: "11526088"
 ---
 # <a name="getting-started-with-webview2-in-windows-forms"></a>Windows フォームでの WebView2 の概要
 
@@ -340,8 +340,7 @@ async void InitializeAsync()
 
 WebView2 の詳細については、次のリソースを参照してください。  
 
-### <a name="see-also"></a>関連項目  
-
+*   WebView2 アプリケーションの構築の詳細については [、「WebView2 開発のベスト プラクティス」に移動します][WV2BestPractices]。  
 *   WebView2 機能の包括的な例については [、WebView2Samples に移動します][GithubMicrosoftedgeWebview2samplesMain]。  
 *   WebView2 の詳細については [、「WebView2 Resources」に移動します][Webview2IndexNextSteps]。  
 *   WebView2 API の詳細については、「API リファレンス」 [に移動します][DotnetApiMicrosoftWebWebview2WinformsWebview2]。  
@@ -352,6 +351,7 @@ WebView2 の詳細については、次のリソースを参照してくださ�
 
 <!-- links -->  
 
+[WV2BestPractices]: ../concepts/developer-guide.md "WebView2 の開発のベスト プラクティス|Microsoft Docs"  
 [Webview2IndexNextSteps]: ../index.md#next-steps "次の手順 - Microsoft Edge WebView2 (プレビュー) の概要|Microsoft Docs"  
 [Webview2ConceptsNavigationEvents]: ../concepts/navigation-events.md "ナビゲーション イベント | Microsoft Docs"  
 

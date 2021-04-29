@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、Webview2、Webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Controller、ブラウザー コントロール、エッジ html
-ms.openlocfilehash: 19bc0c5600ebd072ad9a6aa61d2a965e999865ce
-ms.sourcegitcommit: 2ddfd98d1e871be9c61380a8ca57da398d38bd54
+ms.openlocfilehash: 47f24b160797ce0ab7a7cb6a656c4f6b4e5696ac
+ms.sourcegitcommit: b51df5036642060525e03cd744b7d35726326abe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "11306160"
+ms.lasthandoff: 04/29/2021
+ms.locfileid: "11526067"
 ---
 # <a name="getting-started-with-webview2"></a>WebView2 の使用を開始する  
 
@@ -287,10 +287,9 @@ nullptr);
 
 ## <a name="next-steps"></a>次の手順  
 
-WebView2 の機能の多くは、この記事では説明していないので、次のセクションでは、より多くのリソースを提供します。  
+この記事で説明されていない追加の WebView2 機能については、次のリソースを確認してください。  
 
-### <a name="see-also"></a>関連項目  
-
+*   WebView2 アプリケーションの構築の詳細については [、「WebView2 開発のベスト プラクティス」に移動します][WV2BestPractices]。  
 *   WebView2 機能の包括的な例については [、「WebView2 API サンプル」に移動します][GithubMicrosoftedgeWebview2samplesApisample]。  
 *   WebView2 を使用してビルドされたサンプル アプリの場合は [、WebView2Browser に移動します][GithubMicrosoftedgeWebview2browser]。  
 *   WebView2 API の詳細については、「API リファレンス」 [に移動します][Webview2ReferenceWin32]。  
@@ -301,6 +300,7 @@ WebView2 の機能の多くは、この記事では説明していないので�
 
 <!-- links -->  
 
+[WV2BestPractices]: ../concepts/developer-guide.md "WebView2 の開発のベスト プラクティス|Microsoft Docs"  
 [MicrosoftDeveloperMicrosoftEdgeWebview2]: https://developer.microsoft.com/microsoft-edge/webview2 " WebView2 | Microsoft Edge 開発者"  
 
 [Webview2ReferenceWin32]: /microsoft-edge/webview2/reference/win32 "WebView2 Win32 C++ リファレンス |Microsoft Docs"  

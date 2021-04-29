@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、CoreWebView2、ICoreWebView2Host、ブラウザー コントロール、edge html、Windows フォーム、WinForms、WPF、.NET、WinUI、Project Reunion
-ms.openlocfilehash: 501b6ed3694c66e4c0882550003e636d3b390108
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: ec22edbc838f57c2f9c591a0f48298d61dce484c
+ms.sourcegitcommit: b51df5036642060525e03cd744b7d35726326abe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11470797"
+ms.lasthandoff: 04/29/2021
+ms.locfileid: "11526074"
 ---
 # <a name="introduction-to-microsoft-edge-webview2"></a>Microsoft Edge WebView2 の概要  
 
@@ -112,7 +112,7 @@ WebView2 コントロールを使用してアプリをビルドしてテスト�
 一般提供 \ (GA\) またはプレビュー版は、次のプログラミング環境で利用できます。  
 
 *   Win32 C/c + + \ (GA \)  
-*   .NET Framework 4.6.2 以降  
+*   .NET Framework 4.5 以降  
 *   .NET Core 3.1 以降  
 *   .NET 5  
 *   [WinUI 3.0][UwpToolkitsWinui3] \ (プレビュー \)  

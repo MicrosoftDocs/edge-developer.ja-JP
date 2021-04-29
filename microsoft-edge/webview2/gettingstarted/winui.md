@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: WebView2、Webview2、WebView、Webview、winui アプリ、winui、edge、CoreWebView2、ブラウザー コントロール、エッジ html、開始方法、開始方法、.NET
-ms.openlocfilehash: 52d84afb6f9fe1e120f75525b2669a797309fdfe
-ms.sourcegitcommit: bff24ab1f0a66aaf4c7f5ff81cea3eb28c6d8380
+ms.openlocfilehash: 8ecc40a1940bfb656e2dfdc7ab6f57effa90717d
+ms.sourcegitcommit: b51df5036642060525e03cd744b7d35726326abe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2021
-ms.locfileid: "11461207"
+ms.lasthandoff: 04/29/2021
+ms.locfileid: "11526060"
 ---
 # <a name="getting-started-with-webview2-in-winui-3-preview"></a>WinUI 3 の WebView2 の使用を開始する (プレビュー)  
 
@@ -279,8 +279,7 @@ private void EnsureHttps(WebView2 sender, WebView2NavigationStartingEventArgs ar
 
 WebView2 の詳細については、次のリソースを参照してください。  
 
-### <a name="see-also"></a>関連項目  
-
+*   WebView2 アプリケーションの構築の詳細については [、「WebView2 開発のベスト プラクティス」に移動します][WV2BestPractices]。  
 *   WebView2 機能の包括的な例については [、WebView2Samples に移動します][GithubMicrosoftedgeWebview2samplesMain]。  
 *   WebView2 の詳細については [、「WebView2 Resources」に移動します][Webview2IndexNextSteps]。  
     
@@ -296,6 +295,7 @@ WebView2 の詳細については、次のリソースを参照してくださ�
 WinUI 固有の機能要求またはバグを送信するには、[問題 [- microsoft/microsoft-ui-xaml]][GithubMicrosoftMicrosoftUiXamlIssues] に移動し、[新しい問題] **を選択します**。  
 
 <!-- links -->  
+[WV2BestPractices]: ../concepts/developer-guide.md "WebView2 の開発のベスト プラクティス|Microsoft Docs"  
 
 [MicrosoftDeveloperMicrosoftEdgeWebview2]: ../index.md "Microsoft Edge WebView2 (プレビュー) の概要|Microsoft Docs"  
 [Webview2IndexNextSteps]: ../index.md#next-steps "次の手順 - Microsoft Edge WebView2 (プレビュー) の概要|Microsoft Docs"  

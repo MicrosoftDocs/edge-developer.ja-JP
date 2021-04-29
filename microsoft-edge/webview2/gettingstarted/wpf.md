@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: WebView2, webview2, WebView, webview, wpf アプリ, wpf, edge, CoreWebView2, ブラウザー コントロール, edge html, 概要, 概要, .NET
-ms.openlocfilehash: 14e6b64e36f6354554957d2c7953f789024d23c9
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: 1ced88ebd80d663ac2bd25840174d8505729bf32
+ms.sourcegitcommit: b51df5036642060525e03cd744b7d35726326abe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11470838"
+ms.lasthandoff: 04/29/2021
+ms.locfileid: "11526081"
 ---
 # <a name="getting-started-with-webview2-in-wpf"></a>WPF での WebView2 の使用を開始する
 
@@ -335,8 +335,7 @@ void EnsureHttps(object sender, CoreWebView2NavigationStartingEventArgs args)
 
 WebView2 の詳細については、次のリソースを参照してください。  
 
-### <a name="see-also"></a>関連項目  
-
+*   WebView2 アプリケーションの構築の詳細については [、「WebView2 開発のベスト プラクティス」に移動します][WV2BestPractices]。  
 *   WebView2 機能の包括的な例については、GitHub の [WebView2Samples リポジトリ][GithubMicrosoftedgeWebview2samplesMain] に移動します。  
 *   WebView2 API の詳細については、[API リファレンス](/dotnet/api/microsoft.web.webview2.wpf.webview2) に移動してください。  
 *   WebView2 の詳細については、[WebView2 リソース](../index.md#next-steps) に移動してください。  
@@ -347,6 +346,7 @@ WebView2 の詳細については、次のリソースを参照してくださ�
 
 <!-- links -->  
  
+[WV2BestPractices]: ../concepts/developer-guide.md "WebView2 の開発のベスト プラクティス|Microsoft Docs"  
 [Webview2ConceptsNavigationEvents]: ../concepts/navigation-events.md "ナビゲーション イベント | Microsoft Docs"  
 
 [DotnetApiMicrosoftWebWebview2Wpf]: /dotnet/api/microsoft.web.webview2.wpf "Microsoft.Web.WebView2.Wpf 名前空間 | Microsoft Docs"  
