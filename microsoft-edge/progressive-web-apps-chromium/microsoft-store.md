@@ -3,16 +3,16 @@ description: Microsoft Store で発行することで PWA の発見を可能に�
 title: プログレッシブ Web アプリを Microsoft Store に発行する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 03/18/2021
+ms.date: 04/28/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: プログレッシブ Web アプリ、PWA、Edge、Windows、Microsoft Store
-ms.openlocfilehash: 68471535446a2270a23b32205717da225fd9e4bf
-ms.sourcegitcommit: bff24ab1f0a66aaf4c7f5ff81cea3eb28c6d8380
+ms.openlocfilehash: 5e78e909187408566219ffe80779bb9221b585fa
+ms.sourcegitcommit: e3cd336c9448277e0dde3b9da1521b5cbc7c44d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2021
-ms.locfileid: "11461536"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "11527073"
 ---
 # <a name="publish-your-progressive-web-app-to-the-microsoft-store"></a>プログレッシブ Web アプリを Microsoft Store に発行する  
 
@@ -23,7 +23,7 @@ ms.locfileid: "11461536"
       **見つけやすさ**  
    :::column-end:::
    :::column span="2":::
-      ユーザーは当然、アプリ ストアでアプリを探します。  Microsoft Store に発行すると、何百万人もの Windows ユーザーが他の Windows アプリと共に PWA を検出する可能性があります。  ストアでは、カテゴリ、キュアされたコレクションなど、アプリを紹介します。  アプリ検出ポータルは、アプリの潜在的なユーザーに対して簡単な閲覧とショッピング エクスペリエンスを提供します。  スクリーンショット、 [ヒーロー画像、][WindowsUwpPublishAppScreenshotsImages] ビデオトレーラーを使用してストアの登録情報を強化することもできます。  
+      ユーザーは当然、アプリ ストアでアプリを探します。  Microsoft Store に発行すると、何百万人もの Windows ユーザーが他の Windows アプリと共に PWA を検出する場合があります。  ストアでは、カテゴリ、キュアされたコレクションなど、アプリを紹介します。  アプリ検出ポータルは、アプリの潜在的なユーザーに対して簡単な閲覧とショッピング エクスペリエンスを提供します。  スクリーンショット、 [ヒーロー画像、][WindowsUwpPublishAppScreenshotsImages] ビデオトレーラーを使用してストアの登録情報を強化することもできます。  
    :::column-end:::
 :::row-end:::  
 :::row:::
@@ -73,32 +73,30 @@ PWA を Microsoft Store に発行するには、コードの変更は必要あ�
     1.  Xbox の **Windows &移動します**。  
     1.  [スタート **] を選択します**。  
     1.  画面に表示される指示に従います。  
-1.  これで、アプリはアプリ開発者プログラムに登録されます。 アプリの予約を作成するには、次の操作を実行します。  
+1.  これで、アカウントがアプリ開発者プログラムに登録されます。 アプリの予約を作成するには、次の操作を実行します。  
     1.  Xbox の **Windows &移動します**。  
     1.  [概要 **]**  >  **[新しいアプリの作成] を選択します**。  
-    1.  プロンプトに PWA 名を入力します。  
+    1.  プロンプトにアプリの名前を入力します。  
     1.  を選択します `Reserve product name` 。  
-    
+        
     :::image type="complex" source="./media/windows-partner-center-create-app.msft.png" alt-text="Windows パートナー センターでアプリの予約を作成する" lightbox="./media/windows-partner-center-create-app.msft.png":::
        Windows パートナー センターでアプリの予約を作成する  
     :::image-end:::  
-
-1.  [[PWA](#package-your-pwa)のパッケージ化] セクションで使用する発行元の詳細を表示するには、[製品管理**製品 ID]**  >  **を選択します**。  
+    
+1.  [[PWA](#package-your-pwa-for-the-store)のパッケージ化] セクションで使用する発行元の詳細を表示するには、[製品管理**製品 ID]**  >  **を選択します**。  
     
     :::image type="complex" source="./media/windows-partner-center-publisher-info.msft.png" alt-text="発行元情報を Windows パートナー センターからコピーする" lightbox="./media/windows-partner-center-publisher-info.msft.png":::
        発行元情報を Windows パートナー センターからコピーする  
     :::image-end:::  
-
+    
 1.  次の値をコピーして保存します。  
     *   **パッケージ ID**  
     *   **Publisher ID**  
     *   **Publisher の表示名**  
         
-## <a name="package-your-pwa"></a>PWA のパッケージ化  
+## <a name="package-your-pwa-for-the-store"></a>PWA をストア用にパッケージ化する 
 
-PWA 用の Windows アプリ パッケージを生成します。  
-
-アプリ パッケージは、名前、説明、アイコンなど、アプリのメタデータを含む `.msixbundle` ファイルです。  ホスト型アプリ [モデルを使用し][WindowsBlogWindowsdeveloperHostedAppModel]、Microsoft Edge が PWA に電力を供給します。  このモデルでは、PWA は Windows アプリとして機能しながら、最新の Web 機能を使用します。  最新の Web 機能には、サービス ワーカー、オフライン、プッシュ通知、バッドなどがあります。  
+アプリの発行情報が得たので、PWA 用の Windows アプリ パッケージを生成します。
 
 アプリ パッケージを生成するには、次のアクションを実行します。  
 
@@ -115,11 +113,13 @@ PWA 用の Windows アプリ パッケージを生成します。
     :::image-end:::  
     
 1.  [完了 **] を選択します**。  
-1.  Windows アプリ パッケージをダウンロードするには、[ダウンロード] を **選択します**。  ダウンロードは、ファイル `.zip` を含むアーカイブ `.msixbundle` です。  [アプリ `.msixbundle` パッケージを [ストアに送信する] セクションのファイルを使用](#submit-your-app-package-to-the-store) します。  
+1.  Windows アプリ パッケージをダウンロードするには、[ダウンロード] を **選択します**。
+
+ダウンロードは、ファイル `.zip` とファイルを含 `.msixbundle` むアーカイブ `.classic.appxbundle` です。  2 つのアプリ パッケージを使用すると、PWA をさまざまな Windows バージョンで実行できます。  詳細については、「クラシック パッケージ [とは」に移動します][GithubPwaBuilderPwabuilderWindowsChromiumDocsClassicPackageMd]。  
 
 ### <a name="submit-your-app-package-to-the-store"></a>アプリ パッケージをストアに提出する  
 
-これで、アプリ パッケージ `.msixbundle` が作成されます。  アプリ パッケージをストアに送信するには、次のアクションを実行します。  
+アプリをストアに送信するには、次のアクションを実行します。  
 
 1.  Windows パートナー [センターに移動する][MicrosoftPartnerDashboardWindowsOverview] 
 1.  アプリを選択します。  
@@ -134,9 +134,19 @@ PWA 用の Windows アプリ パッケージを生成します。
     *   年齢の評価  
     *   およびその他  
         
-1.  [パッケージ **] プロンプト** で、[PWA のパッケージ化] セクション `.msixbundle` で生成 [したファイルを選択](#package-your-pwa) します。  
-
+1.  [パッケージ **] プロンプト** で、[PWA のパッケージ化] セクションで生成した `.msixbundle` `.classic.appxbundle` ファイル [とファイルを選択](#package-your-pwa-for-the-store) します。  
+    
 申請が完了すると、アプリは通常 24 ~ 48 時間以内に確認されます。  承認を受け取った後、PWA は Microsoft Store で利用できます。  
+
+## <a name="see-also"></a>関連項目  
+
+PWABuilder には、Microsoft Store で PWA を取得するのに役立つその他のドキュメントが含まれています。  
+
+*   [PWA アプリ パッケージをテストして提出する][GithubPwaBuilderPwabuilderWindowsChromiumDocsNextStepsMd]  
+*   [新しい PWA をストアに発行する][GithubPwaBuilderPwabuilderWindowsChromiumDocsPublishNewAppMd]  
+*   [既存のストア アプリを PWA に更新する][GithubPwaBuilderPwabuilderWindowsChromiumDocsUpdateExistingAppMd]  
+*   [ストア内の PWA のイメージの推奨事項][GithubPwaBuilderPwabuilderWindowsChromiumDocsImageRecommendationsMd]  
+*   [アプリパッケージの説明者][GithubPwaBuilderPwabuilderWindowsChromiumDocsClassicPackageMd]  
 
 <!-- links -->  
 
@@ -153,5 +163,10 @@ PWA 用の Windows アプリ パッケージを生成します。
 
 [WindowsBlogWindowsdeveloperHostedAppModel]: https://blogs.windows.com/windowsdeveloper/hosted-app-model "ホスト型アプリ モデル |Windows 開発者ブログ"  
 
-[PwabuilderMain]: https://www.pwabuilder.com "PWABuilder"  
+[GithubPwaBuilderPwabuilderWindowsChromiumDocsClassicPackageMd]: https://github.com/pwa-builder/pwabuilder-windows-chromium-docs/blob/master/classic-package.md "クラシック パッケージとは何|GitHub"  
+[GithubPwaBuilderPwabuilderWindowsChromiumDocsImageRecommendationsMd]: https://github.com/pwa-builder/pwabuilder-windows-chromium-docs/blob/master/image-recommendations.md "Windows PWA パッケージのイメージ|GitHub"  
+[GithubPwaBuilderPwabuilderWindowsChromiumDocsNextStepsMd]: https://github.com/pwa-builder/pwabuilder-windows-chromium-docs/blob/master/next-steps.md "Microsoft Store サーバーに PWA を取得するための次の|GitHub"  
+[GithubPwaBuilderPwabuilderWindowsChromiumDocsPublishNewAppMd]: https://github.com/pwa-builder/pwabuilder-windows-chromium-docs/blob/master/publish-new-app.md "ストア アプリに新しいアプリを発行|GitHub"  
+[GithubPwaBuilderPwabuilderWindowsChromiumDocsUpdateExistingAppMd]: https://github.com/pwa-builder/pwabuilder-windows-chromium-docs/blob/master/update-existing-app.md "ストア アプリで既存のアプリを更新|GitHub"  
 
+[PwabuilderMain]: https://www.pwabuilder.com "PWABuilder"  
