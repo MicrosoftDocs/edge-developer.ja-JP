@@ -31,7 +31,7 @@ ms.locfileid: "11514362"
 
 ## <a name="announcements-from-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームからのお知らせ  
 
-以下のセクションでは、Microsoft Edge DevTools チームからのもので、見落としがあった可能性のあるお知らせの一覧を示します。  DevTools、Microsoft コード拡張機能、その他の新機能を試Visual Studioお知らせをご覧ください。  開発者ツールの最新で最良の機能について最新情報を入手するには、[Microsoft Edge プレビュー チャネル][MicrosoftEdgePreviewChannels]をダウンロードして、[Twitter で Microsoft Edge DevTools チームをフォローしますます][EdgeDevToolsTwitterAccount]。  
+以下のセクションでは、Microsoft Edge DevTools チームからのもので、見落としがあった可能性のあるお知らせの一覧を示します。  DevTools、コード拡張機能、その他の新機能を試Microsoft Visual Studioお知らせをご覧ください。  開発者ツールの最新で最良の機能について最新情報を入手するには、[Microsoft Edge プレビュー チャネル][MicrosoftEdgePreviewChannels]をダウンロードして、[Twitter で Microsoft Edge DevTools チームをフォローしますます][EdgeDevToolsTwitterAccount]。  
 
 ### <a name="css-grid-debugging-features"></a>CSS グリッドのデバッグ機能  
 
@@ -142,7 +142,7 @@ Microsoft Edge 83 および 84 では、[イニシエーター] 列にヒント�
    Microsoft Edge 84 のイニシエーターのヒント  
 :::image-end:::  
 
-Microsoft Edge 85 から、水平方向にスクロールすることなく、イニシエーター呼び出し履歴をツールヒントに表示できます。  
+85 Microsoft Edgeから、水平方向にスクロールせずに、イニシエーター呼び出し履歴をツールヒントに表示できます。  
 
 :::image type="complex" source="../../media/2020/06/initiator-tooltip-85.msft.png" alt-text="Microsoft Edge 85 のイニシエーターのヒント" lightbox="../../media/2020/06/initiator-tooltip-85.msft.png":::
    Microsoft Edge 85 のイニシエーターのヒント

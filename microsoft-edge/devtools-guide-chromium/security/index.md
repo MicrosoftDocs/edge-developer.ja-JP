@@ -1,6 +1,6 @@
 ---
 description: ページが HTTPS で完全に保護されている場合は、セキュリティ パネルを使用します。
-title: Microsoft Edge DevTools のセキュリティの問題を理解する
+title: DevTools のセキュリティMicrosoft Edge理解する
 author: MSEdgeTeam
 ms.author: msedgedevrel
 ms.date: 02/12/2021
@@ -28,7 +28,7 @@ ms.locfileid: "11397777"
    See the License for the specific language governing permissions and
    limitations under the License.  -->  
 
-# <a name="understand-security-issues-with-microsoft-edge-devtools"></a>Microsoft Edge DevTools のセキュリティの問題を理解する  
+# <a name="understand-security-issues-with-microsoft-edge-devtools"></a>DevTools のセキュリティMicrosoft Edge理解する  
 
   
 
@@ -61,7 +61,7 @@ ms.locfileid: "11397777"
 
 サーバーで HTTPS を既にセットアップしている場合は、この問題を解決するために必要なのは、すべての HTTP 要求を HTTPS にリダイレクトするようにサーバーを構成することです。  
 
-サーバーで HTTPS を設定していない場合は [、Let's Encrypt][LetsEncrypt] を使用すると、プロセスを開始するための無料で比較的簡単な方法が提供されます。  または、CDN でのサイトのホストを検討する場合もあります。  現在、ほとんどの主要な CDN は HTTPS 上のサイトを既定でホストしています。  
+サーバーで HTTPS を設定していない場合は [、Let's Encrypt][LetsEncrypt] を使用すると、プロセスを開始するための無料で比較的簡単な方法が提供されます。  または、サイトをサイトにホストする方法を検討CDN。  現在、ほとんどの主要な CDN は HTTPS 上のサイトを既定でホストしています。  
 
 > [!TIP]
 > [Webhint で HTTPS][WebhintUseHttps]ヒント[を使用すると][Webhint]、すべての HTTP 要求が HTTPS に送信されるプロセスを自動化できます。  
@@ -104,7 +104,7 @@ ms.locfileid: "11397777"
 
 <!-- links -->  
 
-[MicrosoftEdgeDevTools]: ../../devtools-guide-chromium/index.md "Microsoft Edge (クロム) 開発者向け|Microsoft Docs"  
+[MicrosoftEdgeDevTools]: ../../devtools-guide-chromium/index.md "Microsoft Edge (Chromium) 開発者ツール |Microsoft Docs"  
 [DevToolsOpen]: ../open/index.md "Microsoft Edge DevTools を開く | Microsoft Docs"  
 
 [LetsEncrypt]: https://letsencrypt.org "Let's Encrypt - 無料の SSL/TLS 証明書"  

@@ -29,7 +29,7 @@ Web 製品のアニメーションはアクセシビリティの問題である�
 
 Microsoft [Edge DevTools を使用][DevtoolsIndex]すると、オペレーティング システムを変更することなく、この縮小モーション設定をシミュレートできます。  
 
-1.  コマンド メニュー **を開きます**。  
+1.  **コマンド メニュー** を開きます。  
     1.  `Control` + `Shift` + `P` Windows/Linux または `Command` + `Shift` + `P` macOS で選択します。  
         
         :::image type="complex" source="../media/css-console-command-menu-rendering.msft.png" alt-text="コマンド メニュー" lightbox="../media/css-console-command-menu-rendering.msft.png":::

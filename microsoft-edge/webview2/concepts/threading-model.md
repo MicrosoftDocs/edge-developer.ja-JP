@@ -3,17 +3,17 @@ description: スレッド化
 title: スレッド モデル |WebView2
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 03/29/2021
+ms.date: 05/06/2021
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、wpf アプリ、wpf、edge、ICoreWebView2、ICoreWebView2Host、ブラウザー コントロール、edge html
-ms.openlocfilehash: 7b447f5cc5fcce3439166638d47a0b87e5536c0a
-ms.sourcegitcommit: 5e218b24fb21fcfa9c82b99f17373fed1ba5a21c
+ms.openlocfilehash: 9a7ce3d66e53b832d4430afb153e6539d97e5db7
+ms.sourcegitcommit: 777b16ef10363f2dfd755f115ee2d4c81a8de46f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2021
-ms.locfileid: "11462044"
+ms.lasthandoff: 05/07/2021
+ms.locfileid: "11535609"
 ---
 # <a name="threading-model"></a>スレッド化 
 
@@ -69,7 +69,7 @@ private async void Button_Click(object sender, EventArgs e)
 
 ## <a name="see-also"></a>関連項目  
 
-*   WebView2 の使用を開始するには [、「WebView2 Getting Started Guides guides」に][Webview2IndexGettingStarted] 移動します。  
+*   WebView2 の使用を開始するには [、「WebView2 Get Started Guides guides」に][Webview2IndexGetStarted] 移動します。  
 *   WebView2 機能の包括的な例については、GitHub の [WebView2Samples リポジトリ][GithubMicrosoftedgeWebview2samples] に移動します。  
 *   WebView2 API の詳細については、「API リファレンス」 [に移動します][DotnetApiMicrosoftWebWebview2WpfWebview2]。  
 *   WebView2 の詳細については [、「WebView2 Resources」に移動します][Webview2IndexNextSteps]。  
@@ -80,7 +80,7 @@ private async void Button_Click(object sender, EventArgs e)
 
 <!-- links -->  
 
-[Webview2IndexGettingStarted]: ../index.md#getting-started "はじめに - Microsoft Edge WebView2 |Microsoft Docs"  
+[Webview2IndexGetStarted]: ../index.md#get-started "はじめに - Microsoft Edge WebView2 |Microsoft Docs"  
 [Webview2IndexNextSteps]: ../index.md#next-steps "次の手順 - Microsoft Edge WebView2 の概要|Microsoft Docs"  
 
 [DotnetApiMicrosoftWebWebview2WpfWebview2]: /dotnet/api/microsoft.web.webview2.wpf.webview2 "WebView2 クラス | Microsoft Docs"  

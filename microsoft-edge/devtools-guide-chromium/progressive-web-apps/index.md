@@ -42,11 +42,11 @@ ms.locfileid: "11398540"
 
 <!--TODO:  Link to sections when available. -->
 
-### <a name="summary"></a>要約  
+### <a name="summary"></a>まとめ  
 
 *   [マニフェスト] **ウィンドウを** 使用して Web アプリ マニフェストを検査し、[ホーム画面に追加] イベントをトリガーします。  
 *   サービスの **登録** 解除や更新、プッシュ イベントの表示、オフライン化、サービス ワーカーの停止など、サービス ワーカー関連のタスクの範囲全体に対して、[サービス ワーカー] ウィンドウを使用します。  
-*   [キャッシュ ストレージ] ウィンドウからサービス ワーカー **キャッシュを表示** します。  
+*   [キャッシュ] ウィンドウからサービス ワーカー**キャッシュStorage**します。  
 *   サービス ワーカーの登録を解除し、[ストレージのクリア] ウィンドウから選択した 1 つのボタンですべての記憶域と **キャッシュをクリア** します。  
     
 ## <a name="web-app-manifest"></a>Web アプリ マニフェスト  
@@ -123,7 +123,7 @@ The **Add to homescreen** button on the **App Manifest** pane lets you simulate 
 *   [ **登録解除** ] ボタンは、指定したサービス ワーカーの登録を解除します。  サービス ワーカー [の登録を](#clear-storage) 解除し、1 つのボタンでストレージとキャッシュをワイプする方法については、「ストレージをクリアする」を参照してください。  
 *   [ **ソース]** 行は、現在実行中のサービス ワーカーがインストールされた時間を示します。  リンクは、サービス ワーカーのソース ファイルの名前です。  リンクを選択すると、サービス ワーカーのソースに送信されます。  
 *   [ **状態]** 行には、サービス ワーカーの状態が表示されます。  緑の状態インジケーター \( 前の図\) の横にある ID 番号は、現在アクティブ `#36` なサービス ワーカー用です。  状態の横には、開始**** ボタン \(サービス ワーカーが停止している場合\) または**** 停止ボタン \(サービス ワーカーが実行されている場合\) が表示されます。  サービス ワーカーは、いつでもブラウザーによって停止および開始するように設計されています。  停止ボタンを使用してサービス ワーカーを明示的に **停止** すると、その操作をシミュレートできます。  サービス ワーカーを停止すると、サービス ワーカーが再びバックアップを開始するときにコードがどのように動作するのかをテストできます。  これは、永続的なグローバル状態に関する誤った仮定によるバグを頻繁に明らかにします。  
-*   [ **クライアント]** 行には、サービス ワーカーのスコープが設定されている起点が示されます。  フォーカス **ボタンは** 、[すべて表示] チェック ボックスを有効にした場合 **に主に便利** です。  このチェック ボックスを有効にすると、登録されているサービス ワーカーすべてが一覧表示されます。  別のタブで実行 **されている** サービス ワーカーの横にあるフォーカス ボタンを選択した場合、Microsoft Edge ではそのタブに重点を置きます。  
+*   [ **クライアント]** 行には、サービス ワーカーのスコープが設定されている起点が示されます。  フォーカス **ボタンは** 、[すべて表示] チェック ボックスを有効にした場合 **に主に便利** です。  このチェック ボックスを有効にすると、登録されているサービス ワーカーすべてが一覧表示されます。  別のタブで実行**されている**サービス ワーカーの横にあるフォーカス ボタンを選択した場合は、そのMicrosoft Edgeにフォーカスを当てる必要があります。  
     
 サービス ワーカーがエラーを発生すると、Errors という名前の新しいラベル **が** 表示されます。  
 
@@ -138,24 +138,24 @@ The **Add to homescreen** button on the **App Manifest** pane lets you simulate 
 
 ## <a name="service-worker-caches"></a>サービス ワーカー キャッシュ  
 
-[ **キャッシュ ストレージ]** ウィンドウには、\(service worker\) キャッシュ API を使用してキャッシュされたリソースの読み取り専用 [リストが表示されます][MDNWebCacheAPI]。  
+[**キャッシュ Storage]** ウィンドウには、\(service worker\) キャッシュ API を使用してキャッシュされたリソースの読み取り専用[リストが表示されます][MDNWebCacheAPI]。  
 
-:::image type="complex" source="../media/cache-pane-cache-storage-resources.msft.png" alt-text="キャッシュ ストレージ ウィンドウ" lightbox="../media/cache-pane-cache-storage-resources.msft.png":::
-   キャッシュ**ストレージ ウィンドウ**  
+:::image type="complex" source="../media/cache-pane-cache-storage-resources.msft.png" alt-text="[キャッシュ] ウィンドウStorageウィンドウ" lightbox="../media/cache-pane-cache-storage-resources.msft.png":::
+   [**キャッシュ] ウィンドウStorage**ウィンドウ  
 :::image-end:::  
 
 > [!NOTE]
 > キャッシュを初めて開いてリソースを追加すると、DevTools によって変更が検出されない場合があります。  ページを更新し、キャッシュを表示します。  
 
-2 つ以上のキャッシュを開いている場合、キャッシュは次の [キャッシュ ストレージ] ドロップダウンの下 **に表示** されます。  
+2 つ以上のキャッシュを開いている場合は、次の [キャッシュ] ドロップダウンの下**Storage**表示されます。  
 
-:::image type="complex" source="../media/cache-pane-cache-storage.msft.png" alt-text="[キャッシュ ストレージ] ドロップダウン" lightbox="../media/cache-pane-cache-storage.msft.png":::
-   [**キャッシュ ストレージ] ドロップダウン**  
+:::image type="complex" source="../media/cache-pane-cache-storage.msft.png" alt-text="[キャッシュ] Storageドロップダウン" lightbox="../media/cache-pane-cache-storage.msft.png":::
+   [**キャッシュ] Storage**ドロップダウン  
 :::image-end:::  
 
 ## <a name="quota-usage"></a>クォータ使用量  
 
-[キャッシュ ストレージ] ウィンドウ **内の一部の** 応答には、"不透明" というフラグが設定されている場合があります。  これは[、CORS][FetchHttpCorsProtocol]が有効になっていない場合に **、CDN**やリモート API など、別の配信元から取得された応答を指します。  
+[キャッシュ] ウィンドウ内の**一部Storage**が "不透明" としてフラグ付けされる場合があります。  これは[、CORS][FetchHttpCorsProtocol]が有効になっていない場合に、別のオリジン **(CDN** API やリモート API など) から取得された応答を指します。  
 
 <!--TODO:  Link Web "CDN" section when available. -->  
 <!--TODO:  Link Web "opaque" section when available. -->
@@ -164,7 +164,7 @@ The **Add to homescreen** button on the **App Manifest** pane lets you simulate 
 
 <!--TODO:  Link Estimating "`navigator.storage` API" sections when available. -->
 
-このパディングの詳細はブラウザーによって異なりますが、Microsoft Edge の場合、キャッシュ**** された 1 回の不透明な応答がストレージ全体の使用量に与える最小サイズは約[7 メガバイト][ChromiumIssues796060#c17]です。  キャッシュする不透明な応答の数を決定する場合は、不透明なリソースの実際のサイズに基づいて、ストレージ クォータの制限をはるかに早く超える可能性があります。  
+このパディングの詳細はブラウザーによって異なりますが、Microsoft Edge の場合、キャッシュされた 1**** 回の不透明応答がストレージ全体の使用量に与える最小サイズは約[7 メガバイト][ChromiumIssues796060#c17]です。  キャッシュする不透明な応答の数を決定する場合は、不透明なリソースの実際のサイズに基づいて、ストレージ クォータの制限をはるかに早く超える可能性があります。  
 
 関連ガイド:  
 
@@ -175,7 +175,7 @@ The **Add to homescreen** button on the **App Manifest** pane lets you simulate 
 
 ## <a name="clear-storage"></a>ストレージのクリア  
 
-[ **ストレージのクリア]** ウィンドウは、プログレッシブ Web アプリを開発するときに非常に便利な機能です。  このウィンドウでは、サービス ワーカーの登録を解除し、1 つのボタンですべてのキャッシュとストレージをクリアできます。  <!--Check out the section below to learn more.  -->
+[Clear **Storage]** ウィンドウは、プログレッシブ Web アプリを開発するときに非常に便利な機能です。  このウィンドウでは、サービス ワーカーの登録を解除し、1 つのボタンですべてのキャッシュとストレージをクリアできます。  <!--Check out the section below to learn more.  -->
 
 <!--Related Guides:  
 
@@ -198,9 +198,9 @@ Related Guides:
 
 <!-- links -->  
 
-[DevtoolsCommandMenuIndex]: ../command-menu/index.md "Microsoft Edge DevTools コマンド メニュー を使用してコマンドを実行|Microsoft Docs"  
+[DevtoolsCommandMenuIndex]: ../command-menu/index.md "Microsoft Edge DevTools コマンド メニュー を使用してコマンドを実行する | Microsoft Docs"  
 
-[ChromiumIssues796060#c17]: https://bugs.chromium.org/p/chromium/issues/detail?id=796060#c17 "クロムの問題 796060: Analytics コードが html 内にあるとき、キャッシュ ストレージの値が更新ごとに上昇する"  
+[ChromiumIssues796060#c17]: https://bugs.chromium.org/p/chromium/issues/detail?id=796060#c17 "Chromium問題 796060: Analytics コードが html 内にあるStorage更新ごとにキャッシュの値が上昇する"  
 
 [FetchHttpCorsProtocol]: https://fetch.spec.whatwg.org/#http-cors-protocol  
 

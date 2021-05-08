@@ -1,5 +1,5 @@
 ---
-description: Microsoft Edge DevTools コンソールで使用できる便利なコマンドの参照。
+description: DevTools コンソールで使用できる便利なコマンドMicrosoft Edge参照します。
 title: コンソール ユーティリティ API リファレンス
 author: MSEdgeTeam
 ms.author: msedgedevrel
@@ -37,7 +37,7 @@ ms.locfileid: "11483283"
 *   DOM イベントの監視  
     
 > [!WARNING]
-> 次のコマンドは、Microsoft Edge DevTools コンソールでのみ機能 **します**。  スクリプトから実行すると、コマンドは機能しません。  
+> 次のコマンドは、DevTools コンソールMicrosoft Edgeでのみ機能**します**。  スクリプトから実行すると、コマンドは機能しません。  
 
 and メソッドと他のメソッドの詳細については、「コンソール API リファレンス」 `console.log()` `console.error()` `console.*` [に移動します][DevToolsConsoleApi]。  
 
@@ -297,7 +297,7 @@ debug(method)
 ```  
 
 >[!NOTE]
-> クロム [の問題#1050237][CR1050237] 関数のバグを追跡 `debug()` しています。  問題が発生した場合は、代わりに [ブレークポイントを使用][DevtoolsJavascriptBreakpoints] してみてください。  
+> この[Chromium問題#1050237、][CR1050237]関数のバグを追跡 `debug()` しています。  問題が発生した場合は、代わりに [ブレークポイントを使用][DevtoolsJavascriptBreakpoints] してみてください。  
 
 指定したメソッドを要求すると、デバッガーは **Sources** ツールでメソッド内を呼び出し、ブレークします。  これにより、コードをステップ実行してデバッグできます。  
 
@@ -313,7 +313,7 @@ debug("debug");
 
 メソッド `undebug(method)` のブレークを停止したり、UI を使用してすべてのブレークポイントをオフにしたりするために使用します。  
 
-ブレークポイントの詳細については [、「Microsoft Edge DevTools][DevtoolsJavascriptBreakpoints]でブレークポイントを使用してコードを一時停止する方法」を参照してください。  
+ブレークポイントの詳細については[、「DevTools][DevtoolsJavascriptBreakpoints]でブレークポイントを使用してコードを一時停止する方法Microsoft Edgeします。  
 
 ---  
 
@@ -769,11 +769,11 @@ values(object);
 [DevtoolsConsoleApi]: ./api.md "コンソール API リファレンス |Microsoft Docs"  
 [DevToolsConsoleApiConsoleDirObject]: ./api.md#dir "dir - コンソール API リファレンス |Microsoft Docs"  
 
-[DevtoolsJavascriptBreakpoints]: ../javascript/breakpoints.md "Microsoft Edge DevTools アプリケーションでブレークポイントを使用してコードを一時停止する|Microsoft Docs"  
+[DevtoolsJavascriptBreakpoints]: ../javascript/breakpoints.md "DevTools アプリケーションでブレークポイントを使用してコードMicrosoft Edgeする|Microsoft Docs"  
 
 [DevtoolsRenderingToolsJsRuntime]: ../rendering-tools/js-runtime.md "JavaScript ランタイム の高速化|Microsoft Docs"  
 
-[CR1050237]: https://crbug.com/1050237 "問題 1050237: debug(function) が動作|クロムのバグ"  
+[CR1050237]: https://crbug.com/1050237 "問題 1050237: debug(function) が動作|Chromiumバグ"  
 
 [MdnDocsWebApiConsoleDir]: https://developer.mozilla.org/docs/Web/API/Console/dir "Console.dir() |MDN"  
 [MdnDocsWebApiConsoleDirxml]: https://developer.mozilla.org/docs/Web/API/Console/dirxml "Console.dirxml() |MDN"  

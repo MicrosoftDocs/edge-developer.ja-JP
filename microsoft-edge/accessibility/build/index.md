@@ -20,13 +20,13 @@ ms.locfileid: "11480154"
 
 Web には、HTML、CSS、JavaScript の組み合わせを使用して構築された動的で複雑な Web サイト、アプリケーション、およびユーザー インターフェイスが埋め込みされています。  ただし、アクセシビリティを念頭に置いて設計および構築した場合、これらの複雑な Web サイトは、支援[](https://webaim.org/articles/motor/assistive)テクノロジを使用して Web を閲覧するユーザーが使用することは困難です。 障がい者がアクセスできる Web サイトを構築するには、ユーザー インターフェイスに関するセマンティックな情報が必要です。 これにより、スクリーン リーダーなどの支援テクノロジは、さまざまな機能を持つユーザーが Web サイトを使用するのに役立つ必要な情報を伝えます。
 
-Microsoft Edge でサポートされている新しい HTML5 機能の詳細については [、「HTML5Accessibility」](https://html5accessibility.com) を参照してください。
+[HTML5Accessibility に](https://html5accessibility.com)アクセスして、ユーザーがサポートする新しい HTML5 機能に関する情報Microsoft Edge。
 
 ## <a name="how-accessibility-works"></a>アクセシビリティのしくみ
 
-支援テクノロジは、通常はコンピューターにはない機能を追加します。 たとえば、視覚障害のあるユーザーは、マウスと画面でブラウザーを直接使用するのではなく、スクリーン リーダーなどの支援テクノロジと組み合わせてキーボードを使用できます。 Microsoft プラットフォーム上および Web 上のアプリケーションの場合、支援テクノロジは Microsoft [UI オートメーション](https://msdn.microsoft.com/library/windows/desktop/bb892135.aspx)、Microsoft Edge のドキュメント オブジェクト モデル (DOM) などのアプリケーション固有のオブジェクト モデル、またはこれらの組み合わせと対話します。
+支援テクノロジは、通常はコンピューターにはない機能を追加します。 たとえば、視覚障害のあるユーザーは、マウスと画面でブラウザーを直接使用するのではなく、スクリーン リーダーなどの支援テクノロジと組み合わせてキーボードを使用できます。 Microsoft プラットフォームおよび Web 上のアプリケーションの場合、支援テクノロジは Microsoft [UI オートメーション](https://msdn.microsoft.com/library/windows/desktop/bb892135.aspx)、Microsoft Edge のドキュメント オブジェクト モデル (DOM) などのアプリケーション固有のオブジェクト モデル、またはこれらの組み合わせと対話します。
 
-Web 開発者の場合、特定の HTML 要素は UI オートメーション オブジェクトにマップされます。そのため、これらの HTML 要素を選択する場合、開発者はそれらの要素に組み込みのアクセシビリティ プロパティとイベントを使用できます。 Web サイトを開発する場合、アプリケーションにアクセスするには、通常、API が正しく書き込まれる (または適切な要素が指定されていることを) 確認する必要があります。 詳細については [、Microsoft Edge の ARIA と UI オートメーション](./ARIA-and-UI-Automation.md) を参照してください。  アクセス可能なユニバーサル Windows プラットフォーム (UWP) アプリの詳細[](https://msdn.microsoft.com/windows/uwp/accessibility/accessibility)については、Windows デベロッパー センターの 「アクセシビリティ」トピックに移動します。
+Web 開発者の場合、特定の HTML 要素は UI オートメーション オブジェクトにマップされます。そのため、これらの HTML 要素を選択する場合、開発者はそれらの要素に組み込みのアクセシビリティ プロパティとイベントを使用できます。 Web サイトを開発する場合、アプリケーションにアクセスするには、通常、API が正しく書き込まれる (または適切な要素が指定されていることを) 確認する必要があります。 詳細については[、「ARIA と UI オートメーション」Microsoft Edge](./ARIA-and-UI-Automation.md)を参照してください。  アクセス可能なユニバーサル Windows プラットフォーム (UWP) アプリの詳細については、「[](https://msdn.microsoft.com/windows/uwp/accessibility/accessibility)アクセシビリティ」のトピックWindows デベロッパー センター。
 
 動的コンテンツに関する多くの一般的なアクセシビリティの問題は、適切なコーディング方法によって解決できます。 [また、WCAG 2.0](https://go.microsoft.com/fwlink/p/?LinkID=24629) のドキュメントには、よりアクセスしやすい動的 Web アプリケーションを作成するための多くの手法とベスト プラクティスが含まれています。 ただし、適切にコード化された場合でも、動的コンテンツにアクセスできるとは限りません。 [アクセス可能なリッチ インターネット アプリケーション (ARIA) は、この](#aria) 問題を解決するのに役立ちます。  
 
@@ -62,14 +62,14 @@ ARIA の詳細については、「リソース」セクションの「ARIA」 [
 
 ## <a name="assistive-technology-compatibility-testing"></a>支援テクノロジの互換性テスト  
 
-作成する Web サイトが実際の支援テクノロジで動作することの確認は、障害を持つユーザーに優れたエクスペリエンスを提供するための最良の方法です。  多くの支援テクノロジがキーボードを利用していますので、Web サイトのキーボード アクセシビリティのテストを開始する際に便利です。  [キーボード互換性テストでは、][W3cPerspectiveVideosKeyboard] マウスを必要とせずにすべての対話型コントロールにアクセスできるユーザーを検証します。  Microsoft [Accessibility Insights for Web は、Microsoft][AccessibilityinsightsWebOverview] Edge と Chrome のブラウザー拡張機能であり、いくつかの一般的な問題について説明します。  
+作成する Web サイトが実際の支援テクノロジで動作することの確認は、障害を持つユーザーに優れたエクスペリエンスを提供するための最良の方法です。  多くの支援テクノロジがキーボードを利用していますので、Web サイトのキーボード アクセシビリティのテストを開始する際に便利です。  [キーボード互換性テストでは、][W3cPerspectiveVideosKeyboard] マウスを必要とせずにすべての対話型コントロールにアクセスできるユーザーを検証します。  Microsoft [Accessibility Insights for Web][AccessibilityinsightsWebOverview]は、Microsoft Edgeおよび Chrome のブラウザー拡張機能であり、いくつかの一般的な問題を説明します。  
 
 Web サイトがキーボードとうまく機能すると確信したら、スクリーン リーダーなどの他の支援テクノロジで試してみてください。  次の問題を明らかにします。
 
 *   HTML、ARIA、CSS。  
 *   機能または技術に対する支援技術のサポートレベル。  
     
-異なるブラウザーでは、Microsoft Edge とは異なる方法で要素をプラットフォームアクセシビリティ API にマップする場合があります。  インターフェイスを構築する際には、それぞれの違いを考慮することが重要です。  
+異なるブラウザーでは、プラットフォームアクセシビリティ API に要素をマップする方法が、ユーザー設定と異Microsoft Edge。  インターフェイスを構築する際には、それぞれの違いを考慮することが重要です。  
 
 WebAIM では、スクリーン[][WebaimProjectsScreenreadersurvey8]リーダーと[][WebaimProjectsLowvisionsurvey2]低ビジョン ユーザーによるアンケートを実施し、テストする支援テクノロジとブラウザーを決定するのに役立ちます。  
 
@@ -81,11 +81,11 @@ WebAIM では、スクリーン[][WebaimProjectsScreenreadersurvey8]リーダー
 
 ### <a name="testing-locally"></a>ローカルでのテスト  
 
-ほとんどのデバイスには、OS に組み込まれる支援テクノロジが含まれます。  Microsoft Windows には [、Windows ナレータースクリーン リーダー][MicrosoftSupport22798] と Windows [拡大鏡が含まれています][MicrosoftSupportWindows414948ba8b1cD3bd86150e5e32204198]。  [NVDA、FreedomscientificSoftwareJaws、ZoomText]などのサードパーティの支援テクノロジを[][FreedomscientificSoftwareZoomtext]ダウンロードできます。 [][NvaccessAboutNvda]  Apple macOS には [VoiceOver スクリーン リーダーが][AppleAccessibilityMacVision] 含まれています。  iOS、Android、Linux はすべて、さまざまな支援テクノロジをサポートしています。  
+ほとんどのデバイスには、OS に組み込まれる支援テクノロジが含まれます。  Microsoft Windowsには、スクリーン リーダー [Windows ナレーター][MicrosoftSupport22798]拡大鏡Windows[があります][MicrosoftSupportWindows414948ba8b1cD3bd86150e5e32204198]。  [NVDA、FreedomscientificSoftwareJaws、ZoomText]などのサードパーティの支援テクノロジを[][FreedomscientificSoftwareZoomtext]ダウンロードできます。 [][NvaccessAboutNvda]  Apple macOS には [VoiceOver スクリーン リーダーが][AppleAccessibilityMacVision] 含まれています。  iOS、Android、Linux はすべて、さまざまな支援テクノロジをサポートしています。  
 
 ### <a name="testing-in-virtual-machines-and-emulators"></a>仮想マシンとエミュレーターでのテスト  
 
-macOS では、Windows ナレーターや NVDA など、Windows でのみ使用できる支援テクノロジでテストする場合は、Windows 仮想マシンを作成します。  Microsoft Edge \(EdgeHTML\) と IE を持つ仮想マシンは、[仮想マシン] ダウンロード ページの VirtualBox および VMWare [で使用できます][MicrosoftDeveloperEdgeVms]。  
+macOS では、Windows や NVDA など、Windows Windows ナレーター でのみ使用できる支援テクノロジでテストする場合は、Windows 仮想マシンを作成します。  \(EdgeHTML\) Microsoft Edge IE を持つ仮想マシンは、[仮想マシン] ダウンロード ページの VirtualBox および VMWare[で使用できます][MicrosoftDeveloperEdgeVms]。  
 
 [Android Studio][AndroidDeveloperSdkInstallingStudioHtml] には、Android アクセシビリティ スイートで支援テクノロジをテストする [エミュレーターが含まれています][GooglePlayStoreAndroidAccessibilitySuite]。  手順に従って仮想デバイスを[セットアップ][AndroidDeveloperDevicesManagingAvdsHtml]し、エミュレーター[][AndroidDeveloperDevicesEmulatorHtml]を起動し、GooglePlay ストアから[Android アクセシビリティ][GooglePlayStoreAndroidAccessibilitySuite]スイートをインストールします。  
 
@@ -102,9 +102,9 @@ macOS では、Windows ナレーターや NVDA など、Windows でのみ使用�
 
 ### <a name="accessibility-basics"></a>アクセシビリティの基本
 
-#### [<a name="the-a11y-project"></a>A11Y プロジェクト](http://a11yproject.com/)
+#### [<a name="the-a11y-project"></a>A11Y Project](http://a11yproject.com/)
 
-A11Y プロジェクトは、Web アクセシビリティを容易にするためのコミュニティ駆動型の取り組みです。 [A11Y Project](https://a11yproject.com/)サイトを参照して、アクセシビリティの基本原則、アクセシビリティ のパターンとウィジェット[](https://a11yproject.com/patterns)ライブラリ、アクセシビリティ[](http://a11yproject.com/resources.html)ソフトウェア、ブログ、書籍、ツールに関するリソースについて説明します。
+A11Y Projectは、Web アクセシビリティを容易にするためのコミュニティ駆動型の取り組みです。 [A11Y Project](https://a11yproject.com/)サイトを参照して、アクセシビリティの基本的な原則、アクセシビリティ のパターンとウィジェット ライブラリ[](https://a11yproject.com/patterns)、アクセシビリティ ソフトウェア[](http://a11yproject.com/resources.html)、ブログ、書籍、ツールに関するリソースについて説明します。
 
 #### [<a name="web-accessibility-initiative-wai"></a>Web アクセシビリティ イニシアチブ (WAI)](https://w3.org/WAI/)
 
@@ -140,13 +140,13 @@ OpenAjax Alliance Web サイトは、WAI-ARIA のルールを検証する優れ�
 
 #### [<a name="patterns"></a>パターン](http://a11yproject.com/patterns.html)
 
-[A11Y Project には](http://a11yproject.com/) 、メニュー、ボタン、ツールヒントなど、アクセス可能なウィジェットやパターンのライブラリが用意されています。
+[A11Y Project](http://a11yproject.com/)には、メニュー、ボタン、ツールヒントなど、アクセス可能なウィジェットやパターンのライブラリが用意されています。
 
 ### <a name="accessibility-techniques--tools"></a>アクセシビリティの手法&ツール
 
-#### [<a name="accessibility-creating-accessible-extension-icons-for-microsoft-edge"></a>アクセシビリティ: Microsoft Edge のアクセシビリティ対応の拡張機能アイコンを作成する](/archive/microsoft-edge/legacy/developer/extensions/guides/accessibility)
+#### [<a name="accessibility-creating-accessible-extension-icons-for-microsoft-edge"></a>アクセシビリティ: ユーザー補助機能用のアクセス可能な拡張機能Microsoft Edge](/archive/microsoft-edge/legacy/developer/extensions/guides/accessibility)
 
-Microsoft Edge のアクセス可能な拡張機能アイコンの作成に関するガイダンスを参照してください。
+アクセス可能な拡張機能のアイコンを作成する方法については、Microsoft Edge。
 
 #### [<a name="accessible-name-and-description-computation-and-mappings-11"></a>アクセス可能な名前と説明: 計算とマッピング 1.1](https://www.w3.org/TR/accname-1.1/)
 
@@ -182,19 +182,19 @@ Web コンテンツ アクセシビリティ ガイドライン (WCAG) 2.0 の�
 
 #### [<a name="quick-tips"></a>クイック ヒント](http://a11yproject.com/#Quick-tips)
 
-[A11Y](http://a11yproject.com/)Project によるアクセシビリティに関するクイック Web 開発のヒントの一覧です。
+[A11Y](http://a11yproject.com/)のアクセシビリティに関するクイック Web 開発のヒントのProject。
 
 #### [<a name="site-scan"></a>サイト スキャン](https://developer.microsoft.com/microsoft-edge/tools/staticscan/)
 
-Microsoft Edge デベロッパー センターのサイト スキャン ツールは、古いライブラリ、レイアウトの問題、アクセシビリティの問題をチェックします。
+サイト センターのサイト Microsoft Edge Dev ツールは、古いライブラリ、レイアウトの問題、アクセシビリティの問題をチェックします。
 
 #### [<a name="techniques-for-wcag-20"></a>WCAG 2.0 の手法](https://www.w3.org/TR/WCAG20-TECHS/Overview.html)
 
 Web コンテンツ アクセシビリティ ガイドライン [(WCAG) 2.0](https://w3.org/TR/WCAG20/) の成功基準を満たす Web 開発者向けのガイダンスを提供する W3C の手法。
 
-#### [<a name="tips-on-developing-for-web-accessibility"></a>Web アクセシビリティの開発に関するヒント](https://w3.org/WAI/gettingstarted/tips/developing.html)
+#### [<a name="tips-on-developing-for-web-accessibility"></a>ヒントアクセシビリティの開発に関するページ](https://w3.org/WAI/gettingstarted/tips/developing.html)
 
-障がい者がアクセスしやすい Web コンテンツの開発に関する W3C のヒント。
+ヒント障がい者がアクセスしやすい Web コンテンツの開発について W3C から説明します。
 
 #### [<a name="wai-aria-authoring-practices-11"></a>WAI-ARIA オーサリング プラクティス 1.1](http://w3c.github.io/aria-practices/)
 
@@ -216,9 +216,9 @@ Web サイトがアクセシビリティ ガイドラインを満たしている
 
 <!--todo: link updates and acrolinx  -->  
 
-[MicrosoftDeveloperEdgeVms]: https://developer.microsoft.com/microsoft-edge/tools/vms "仮想マシン |Microsoft Edge 開発者"  
+[MicrosoftDeveloperEdgeVms]: https://developer.microsoft.com/microsoft-edge/tools/vms "仮想マシン |Microsoft Edge開発者"  
 
-[MicrosoftSupport22798]: https://support.microsoft.com/help/22798 "ナレーター の完全なガイド|Microsoft サポート"  
+[MicrosoftSupport22798]: https://support.microsoft.com/help/22798 "ガイドの完全なナレーター |Microsoft サポート"  
 [MicrosoftSupportWindows414948ba8b1cD3bd86150e5e32204198]: https://support.microsoft.com/windows/414948ba-8b1c-d3bd-8615-0e5e32204198 "拡大鏡を使用して、画面の表示を簡単に行|Microsoft サポート"  
 
 [AccessibilityinsightsWebOverview]: https://accessibilityinsights.io/docs/web/overview "Web サービスのアクセシビリティ|アクセシビリティインサイト"  

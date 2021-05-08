@@ -1,5 +1,5 @@
 ---
-description: Windows または macOS コンピューターから Android デバイス上のライブ コンテンツをリモート デバッグします。
+description: Android デバイス上のリモート デバッグライブ コンテンツは、Windows macOS コンピューターから行います。
 title: Android デバイスのリモート デバッグを開始する
 author: MSEdgeTeam
 ms.author: msedgedevrel
@@ -29,7 +29,7 @@ ms.locfileid: "11461214"
    limitations under the License.  -->  
 # <a name="get-started-with-remote-debugging-android-devices"></a>Android デバイスのリモート デバッグを開始する  
 
-Windows または macOS コンピューターから Android デバイス上のライブ コンテンツをリモート デバッグします。  次のチュートリアル ページでは、次のアクションを実行する方法について説明します。  
+Android デバイス上のリモート デバッグライブ コンテンツは、Windows macOS コンピューターから行います。  次のチュートリアル ページでは、次のアクションを実行する方法について説明します。  
 
 *   リモート デバッグ用に Android デバイスをセットアップし、開発マシンから検出します。  
 *   開発マシンから Android デバイス上のライブ コンテンツを検査およびデバッグします。  
@@ -42,8 +42,8 @@ Windows または macOS コンピューターから Android デバイス上の�
 -->  
 
 > [!NOTE]
-> iOS デバイスでの Microsoft Edge アプリのリモート デバッグは現在サポートされていません。  次のガイドは、Android デバイスでの Microsoft Edge のリモート デバッグに特に重点を置きます。
-> macOS デバイスがある場合は [、Brightcove Debuging][BrightcoveSupportDebuggingMobileDevices] ガイドに従って、Safari を使用して iOS デバイスで Microsoft Edge をリモートでデバッグします。  Safari の Web インスペクター ツールの詳細については [、「Safari Web 開発ツール」に移動します][AppleDeveloperSafariTools]。  
+> iOS デバイスMicrosoft Edgeアプリのリモート デバッグは現在サポートされていません。  次のガイドでは、Android デバイスでのリモート デバッグMicrosoft Edge特に重点を置きます。
+> macOS デバイスをお持ちの場合は[、Brightcove Debuging][BrightcoveSupportDebuggingMobileDevices]ガイドに従って、Safari を使用して iOS デバイスMicrosoft Edgeリモート デバッグを行います。  Safari の Web インスペクター ツールの詳細については [、「Safari Web 開発ツール」に移動します][AppleDeveloperSafariTools]。  
 
 ## <a name="step-1-discover-your-android-device"></a>手順 1: Android デバイスを検出する  
 
@@ -51,20 +51,20 @@ Windows または macOS コンピューターから Android デバイス上の�
 
 1.  Android の **[開発者オプション]** 画面を開きます。  詳細については、「Configure [On-Device Developer Options」に移動します][AndroidDeveloperStudioDevOptions]。  
 1.  [USB **デバッグを有効にする] を選択します**。  
-1.  開発マシンで、Microsoft Edge を開きます。  
-1.  Microsoft Edge の `edge://inspect` ページに移動します。  
+1.  開発マシンで、コンピューターを開Microsoft Edge。  
+1.  ページ内の `edge://inspect` ページに移動Microsoft Edge。  
     
-    :::image type="complex" source="../media/remote-debugging-edge-inspect-no-targets.msft.png" alt-text="Microsoft Edge edge://inspect ページ" lightbox="../media/remote-debugging-edge-inspect-no-targets.msft.png":::
-       図 1.   `edge://inspect`Microsoft Edge のページ  
+    :::image type="complex" source="../media/remote-debugging-edge-inspect-no-targets.msft.png" alt-text="[edge://inspect] ページMicrosoft Edge" lightbox="../media/remote-debugging-edge-inspect-no-targets.msft.png":::
+       図 1.  [ `edge://inspect` ページ] のMicrosoft Edge  
     :::image-end:::  
     
-1.  USB ケーブルを使用して、Android デバイスを開発マシンに直接接続します。  初めて接続を試みた場合は、不明なデバイスを検出する DevTools に関するプロンプトが表示されます。  Android デバイスで **[USB デバッグを許可する** ] アクセス許可のプロンプトに同意します。  
+1.  Connect USB ケーブルを使用して、Android デバイスを開発マシンに直接接続します。  初めて接続を試みた場合は、不明なデバイスを検出する DevTools に関するプロンプトが表示されます。  Android デバイスで **[USB デバッグを許可する** ] アクセス許可のプロンプトに同意します。  
     
     :::image type="complex" source="../media/remote-debugging-android-permissions-prompt.msft.png" alt-text="Android デバイスで [USB デバッグを許可する] アクセス許可のプロンプト" lightbox="../media/remote-debugging-android-permissions-prompt.msft.png":::
-       図 2.   Android **デバイスで [USB デバッグを** 許可する] アクセス許可のプロンプト  
+       図 2.  Android **デバイスで [USB デバッグを** 許可する] アクセス許可のプロンプト  
     :::image-end:::  
     
-1.  Android デバイスのモデル名が表示されている場合、Microsoft Edge はデバイスへの接続を正常に確立しました。  [手順 [2] セクションに進](#step-2-debug-content-on-your-android-device-from-your-development-machine) みます。  
+1.  Android デバイスのモデル名が表示されている場合はMicrosoft Edgeデバイスへの接続が正常に確立されています。  [手順 [2] セクションに進](#step-2-debug-content-on-your-android-device-from-your-development-machine) みます。  
     
     <!--  
     :::image type="complex" source="../media/remote-debugging--unknown-device.msft.png" alt-text="The Remote Devices tab has successfully detected an unknown device that is pending authorization" lightbox="../media/remote-debugging--unknown-device.msft.png":::
@@ -82,8 +82,8 @@ Windows または macOS コンピューターから Android デバイス上の�
 
 ソフトウェアが正しくセットアップされていることを確認するには、次のヒントを使用します。  
 
-*   開発マシンで Windows が実行されている場合は、Android デバイス用の USB ドライバーを手動でインストールしてみてください。  詳細については [、「OEM USB ドライバーのインストール」に移動します][AndroidDeveloperToolsOemUsb]。  
-*   Windows デバイスと Android デバイスの一部の組み合わせ \(特に Samsung\) では、追加の設定が必要です。  詳細については、「DevTools Devices に移動しても、接続時 [にデバイスが検出されない」に移動します][Stackoverflow21925992]。  
+*   開発マシンが実行中の場合Windows、Android デバイスの USB ドライバーを手動でインストールしてみてください。  詳細については [、「OEM USB ドライバーのインストール」に移動します][AndroidDeveloperToolsOemUsb]。  
+*   一部の組みWindows Android デバイス \(特に Samsung\) では、追加の設定が必要です。  詳細については、「DevTools Devices に移動しても、接続時 [にデバイスが検出されない」に移動します][Stackoverflow21925992]。  
 
 次のヒントを使用して、Android デバイスに **[USB** デバッグを許可する] プロンプトが表示されない場合のトラブルシューティングに役立ちます。  
 
@@ -100,8 +100,8 @@ Windows または macOS コンピューターから Android デバイス上の�
 
 ## <a name="step-2-debug-content-on-your-android-device-from-your-development-machine"></a>手順 2: 開発マシンから Android デバイスのコンテンツをデバッグする  
 
-1.  Android デバイスで Microsoft Edge を開きます。  
-1.  に移動 `edge://inspect` すると、Android デバイスのモデル名が表示され、その後にデバイスのシリアル番号が表示されます。  その下に、デバイスで実行されている Microsoft Edge のバージョンが表示され、バージョン番号がかっこで囲まれている必要があります。  開いている Microsoft Edge タブごとに、一意のセクションが表示されます。  セクションからそのタブを操作できます。  <!--If there are any apps using WebView, a section for each of those apps should be displayed, too.  --><!--In [**Figure 5**](#figure-5) there are no tabs or WebViews open.  -->  
+1.  Android Microsoft Edgeを開きます。  
+1.  に移動 `edge://inspect` すると、Android デバイスのモデル名が表示され、その後にデバイスのシリアル番号が表示されます。  その下に、デバイスで実行Microsoft Edgeバージョン番号をかっこで囲んで表示する必要があります。  開いている各Microsoft Edgeタブは、一意のセクションを取得します。  セクションからそのタブを操作できます。  <!--If there are any apps using WebView, a section for each of those apps should be displayed, too.  --><!--In [**Figure 5**](#figure-5) there are no tabs or WebViews open.  -->  
     
     :::image type="complex" source="../media/remote-debugging-edge-inspect-with-targets.msft.png" alt-text="接続されたリモート デバイス" lightbox="../media/remote-debugging-edge-inspect-with-targets.msft.png":::
        図 3.   接続されたリモート デバイス  
@@ -144,7 +144,7 @@ DevTools **インスタンスで** Android デバイスのコンテンツを表�
 > [!NOTE]
 > スクリーンキャストに役立つヒントを次に示します。  
 > 
-> *   スクリーンキャストは、ページコンテンツのみを表示します。  スクリーンキャストの透明な部分は、Microsoft Edge アドレス バー、Android ステータス バー、Android キーボードなどのデバイス インターフェイスを表します。  
+> *   スクリーンキャストは、ページコンテンツのみを表示します。  スクリーン キャストの透明な部分は、Microsoft Edge アドレス バー、Android ステータス バー、Android キーボードなどのデバイス インターフェイスを表します。  
 > *   スクリーンキャストはフレーム レートに悪影響を及ぼします。  スクロールやアニメーションの測定中にスクリーンキャストを無効にして、ページのパフォーマンスをより正確に把握します。  
 > *   Android デバイスの画面がロックされている場合、スクリーンキャストのコンテンツは消えます。  Android デバイス画面のロックを解除して、スクリーンキャストを自動的に再開します。  
 
@@ -163,7 +163,7 @@ DevTools **インスタンスで** Android デバイスのコンテンツを表�
 
 <!-- [GitHubWebFundamentalsNewIssue]: https://github.com/Alphabet/webfundamentals/issues/new?title=[Remote%20Debugging] "GitHub - Web Fundamentals - New Issue"  -->  
 
-[StackexchangeAndroid101933]: https://android.stackexchange.com/questions/101933 "adb - Android の熱狂スタック Exchange"  
+[StackexchangeAndroid101933]: https://android.stackexchange.com/questions/101933 "adb - Android の熱狂的なスタック Exchange"  
 
 [Stackoverflow21925992]: https://stackoverflow.com/questions/21925992 "DevTools デバイスは、接続時にデバイスを検出しません - スタック オーバーフロー"  
 

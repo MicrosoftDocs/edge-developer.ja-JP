@@ -36,7 +36,7 @@ ms.locfileid: "11514467"
 <!--  Title: Get code hints in Elements tool  -->  
 <!--  Subtitle: Wavy underlines like the ones you see in Visual Studio Code now display in the Elements tool.  Underlines alert you to code issues related to accessibility, compatibility, security, performance, and  so on.  -->  
 
-最新のほとんどの ID では、テキストの下線が波線で構文エラーを示しています。   Microsoft Edge バージョン 91 以降では、要素ツールの **DOM** ビューで HTML の下に波線が **表示** されます。  波の下線は、アクセシビリティ、互換性、パフォーマンスに関連するコードの問題と提案を示します。  問題を確認および編集する方法の詳細については [、「Microsoft Edge DevTools Issues][DevtoolsIssuesIndex]ツールの問題を検索して修正する」に移動します。  
+最新のほとんどの ID では、テキストの下線が波線で構文エラーを示しています。   バージョン Microsoft Edge 91 以降では、要素ツールの**DOM**ビューで HTML の下に波線が**表示**されます。  波の下線は、アクセシビリティ、互換性、パフォーマンスに関連するコードの問題と提案を示します。  問題を確認および編集する方法の詳細については[、「DevTools][DevtoolsIssuesIndex]の問題の検索と修正」ツールMicrosoft Edgeを参照してください。  
 
 [問題] ツール **を開** き、問題の詳細と修正方法を確認するには、次のいずれかの操作を実行します。  
 
@@ -87,7 +87,7 @@ DevTools の使い方の詳細を表示するには、[ツールヒント] を�
 <!--  Title: The tasks associated with your Service Worker  -->  
 <!--  Subtitle: Debug with Service Worker Update Cycle  -->  
 
-Microsoft Edge バージョン 91 以降では、プログレッシブ Web アプリまたは Service Worker 開発者の場合、アプリケーション ツールでサービス ワーカーの更新ライフサイクルをタイムラインとして **表示** できます。  この機能は、サービス ワーカーが次の各段階で費やした時間を理解するのに役立ちます。  
+バージョン 91 以降Microsoft Edge、プログレッシブ Web アプリまたは Service Worker 開発者の場合は、アプリケーション ツールでサービス ワーカーの更新ライフサイクルをタイムラインとして**表示**できます。  この機能は、サービス ワーカーが次の各段階で費やした時間を理解するのに役立ちます。  
 
 *   **Install**  
 *   **待機**  
@@ -97,14 +97,14 @@ Microsoft Edge バージョン 91 以降では、プログレッシブ Web ア�
    Service Worker **の更新** サイクル **で** タイムラインを確認する  
 :::image-end:::  
 
-サービス ワーカーのライフサイクルの詳細については、「Service Worker ライフサイクル [」に移動します][ProgressiveWebAppsServiceworkerServiceWorkerLifecycle]。  DevTools のプログレッシブ Web アプリとサービス ワーカーのデバッグ ツールの詳細については、「Service Worker の機能強化 [」に移動します][DevtoolsServiceWorkerIndex]。  Chromium オープン ソース プロジェクトでこの機能に関するリアルタイムの更新プログラムを確認するには、Issue [1066604 に移動します][CR1066604]。  
+サービス ワーカーのライフサイクルの詳細については、「Service Worker ライフサイクル [」に移動します][ProgressiveWebAppsServiceworkerServiceWorkerLifecycle]。  DevTools のプログレッシブ Web アプリとサービス ワーカーのデバッグ ツールの詳細については、「Service Worker の機能強化 [」に移動します][DevtoolsServiceWorkerIndex]。  オープンソース プロジェクトでこの機能に関するリアルタイムの更新Chromium、Issue [1066604 に移動します][CR1066604]。  
 
 ## <a name="progressive-web-apps-no-longer-display-warnings-for-non-square-icons"></a>プログレッシブ Web アプリで四角形以外のアイコンに対する警告が表示されなくなりました  
 
 <!--  Title: Non-square icons in app manifest no longer produce warnings  -->  
 <!--  Subtitle: As long as square icons are included in the app manifest, non-square icons no longer produce warnings  -->  
 
-Microsoft Edge バージョン[90][DevtoolsWhatsNew202102Devtools]以前では、PWA の Web アプリ マニフェストに四角形以外のアイコンを含める場合****、アプリケーション ツールの****[マニフェスト] セクションに、四角形以外のアイコンごとに [エラーと警告] の下に警告が表示されました。 ****  Microsoft Edge バージョン 91 以降**** では、少なくとも**** 1 つの正方形のアイコンを指定した場合、アプリケーション ツールの [マニフェスト] セクションに警告は表示されます。  四角形のアイコンを指定しない場合は、次のメッセージが表示されます。  
+Microsoft Edge[バージョン 90][DevtoolsWhatsNew202102Devtools]以前では、PWA の Web アプリ マニフェストに四角形以外のアイコンを含める場合、**** アプリケーション ツールの [マニフェスト] セクション**** に、四角形以外のアイコンごとに [エラーと警告] の下に警告が表示されました。 ****  バージョン Microsoft Edge 91 以降では、少**** なくとも 1**** つの正方形のアイコンを指定した場合、アプリケーション ツールの [マニフェスト] セクションに警告は表示されます。  四角形のアイコンを指定しない場合は、次のメッセージが表示されます。  
 
 ```output
 Most operating systems require square icons.  Please include at least one square icon in the array.  
@@ -112,28 +112,28 @@ Most operating systems require square icons.  Please include at least one square
 
 :::row:::
    :::column span="":::
-      :::image type="complex" source="../../media/2021/04/edge89-application-manifest-errors-and-warnings.msft.png" alt-text="Microsoft Edge バージョン 90 以前では、正方形以外のアイコンごとにエラーが表示されます。" lightbox="../../media/2021/04/edge89-application-manifest-errors-and-warnings.msft.png":::
-         Microsoft Edge バージョン 90 以前では、正方形以外のアイコンごとにエラーが表示されます。  
+      :::image type="complex" source="../../media/2021/04/edge89-application-manifest-errors-and-warnings.msft.png" alt-text="バージョン 90 Microsoft Edgeでは、正方形以外のアイコンごとにエラーが表示されます。" lightbox="../../media/2021/04/edge89-application-manifest-errors-and-warnings.msft.png":::
+         バージョン 90 Microsoft Edgeでは、正方形以外のアイコンごとにエラーが表示されます。  
       :::image-end:::  
    :::column-end:::
    :::column span="":::
-      :::image type="complex" source="../../media/2021/04/edge91-application-manifest-errors-and-warnings.msft.png" alt-text="Microsoft Edge バージョン 91 以降では、少なくとも 1 つの正方形のアイコンを指定するとエラーが表示されな" lightbox="../../media/2021/04/edge91-application-manifest-errors-and-warnings.msft.png":::
-         Microsoft Edge バージョン 91 以降では、少なくとも 1 つの正方形のアイコンを指定するとエラーが表示されな  
+      :::image type="complex" source="../../media/2021/04/edge91-application-manifest-errors-and-warnings.msft.png" alt-text="バージョン Microsoft Edge 91 以降では、少なくとも 1 つの正方形のアイコンを指定するとエラーが表示されな" lightbox="../../media/2021/04/edge91-application-manifest-errors-and-warnings.msft.png":::
+         バージョン Microsoft Edge 91 以降では、少なくとも 1 つの正方形のアイコンを指定するとエラーが表示されな  
       :::image-end:::  
    :::column-end:::
 :::row-end:::  
 
-Web アプリ マニフェストでエラーと警告を確認するには、アプリケーション**** ツールに移動し、[マニフェスト] セクション**を選択**します。  エラーと警告は、[エラーと警告] の **見出しの下に一覧表示** されます。  Web アプリ マニフェストの詳細については、「Web アプリ マニフェストを使用してプログレッシブ Web アプリをオペレーティング システムに統合する」 [に移動します][ProgressiveWebAppsWebappmanifests]。  Web アプリ マニフェストに含めるアイコンを作成するには [、PWABuilder イメージ ジェネレーターに移動します][PwabuilderImagegenerator]。  Chromium オープン ソース プロジェクトでこの機能に関するリアルタイムの更新プログラムを確認するには、Issue [1185945 に移動します][CR1185945]。  
+Web アプリ マニフェストでエラーと警告を確認するには、アプリケーション**** ツールに移動し、[マニフェスト] セクション**を選択**します。  エラーと警告は、[エラーと警告] の **見出しの下に一覧表示** されます。  Web アプリ マニフェストの詳細については、「Web アプリ マニフェストを使用してプログレッシブ Web アプリをオペレーティング システムに統合する」 [に移動します][ProgressiveWebAppsWebappmanifests]。  Web アプリ マニフェストに含めるアイコンを作成するには [、PWABuilder イメージ ジェネレーターに移動します][PwabuilderImagegenerator]。  オープンソース プロジェクトでこの機能に関するリアルタイムの更新Chromium、Issue [1185945 に移動します][CR1185945]。  
 
-## <a name="localized-devtools-now-supported-in-chromium-based-browsers"></a>クロム ベースのブラウザーでローカライズされた DevTools がサポートされる  
+## <a name="localized-devtools-now-supported-in-chromium-based-browsers"></a>ローカライズされた DevTools が、Chromiumベースのブラウザーでサポートされる  
 
 <!--  Title: Localization for all  -->  
 <!--  Subtitle: Match browser language enabled to all Chromium-based browsers  -->  
 
-[Microsoft Edge バージョン 81 から][DevtoolsWhatsNew202001DevtoolsUsingDevtoolsInOtherLanguages]、Microsoft Edge DevTools は独自の言語で表示されます。  多くの開発者は、英語ではなく、StackOverflow や Visual Studio コードなどの他の開発者ツールを母国語で使用しています。  Microsoft Edge DevTools チーム、Chrome DevTools チーム、Google ライトハウス チームが協力して、すべてのクロム ベースのブラウザーで同じエクスペリエンスを提供しました。  言語で DevTools を使用する方法の詳細については、「DevTools 言語設定の変更 [」に移動します][DevtoolsCustomizeLocalization]。  Chromium オープン ソース プロジェクトのこの機能に関するコラボレーションの詳細については [、1136655 に移動します][CR1136655]。  
+バージョン[81 Microsoft Edgeから][DevtoolsWhatsNew202001DevtoolsUsingDevtoolsInOtherLanguages]、DevTools Microsoft Edge独自の言語で表示されます。  多くの開発者は、英語ではなく、StackOverflow や Visual Studio Codeなどの他の開発者ツールを母国語で使用しています。  DevTools Microsoft Edge、Chrome DevTools チーム、Google ライトハウス チームが協力して、すべてのユーザー ベースのブラウザーで同じChromium提供しました。  言語で DevTools を使用する方法の詳細については、「DevTools 言語設定の変更 [」に移動します][DevtoolsCustomizeLocalization]。  この機能に関するこの機能の詳細については、Chromium [1136655 に移動します][CR1136655]。  
 
-:::image type="complex" source="../../media/2021/04/japanese-browser-japanese-navigation-elements-3d-view.msft.png" alt-text="Microsoft Edge ブラウザーと DevTools が日本語に設定されている" lightbox="../../media/2021/04/japanese-browser-japanese-navigation-elements-3d-view.msft.png":::
-   Microsoft Edge ブラウザーと DevTools が日本語に設定されている  
+:::image type="complex" source="../../media/2021/04/japanese-browser-japanese-navigation-elements-3d-view.msft.png" alt-text="Microsoft Edgeと DevTools が日本語に設定されている" lightbox="../../media/2021/04/japanese-browser-japanese-navigation-elements-3d-view.msft.png":::
+   Microsoft Edgeと DevTools が日本語に設定されている  
 :::image-end:::  
 
 ## <a name="use-the-keyboard-to-navigate-to-css-variables"></a>キーボードを使用して CSS 変数に移動する  
@@ -141,7 +141,7 @@ Web アプリ マニフェストでエラーと警告を確認するには、ア
 <!--  Title: Navigate to CSS variables with the arrow keys  -->  
 <!--  Subtitle: In the Styles pane, use the arrow keys to choose CSS variables.  Select `Enter` to see the variable definition.  -->  
 
-[Microsoft Edge バージョン 88][DevtoolsWhatsNew202011DevtoolsCssVariableDefinitionsInStylesPane]から****、スタイル ウィンドウには CSS 変数が表示され、各変数の定義へのリンクが直接提供されます。  Microsoft Edge バージョン 91 以降では、矢印キーを使用して CSS 変数に簡単に移動できます。  [スタイル] ウィンドウで定義 **を開** く場合は、変数にカーソルを合わせると、 を選択します `Enter` 。  CSS 変数の詳細については、「USING CSS カスタム プロパティ [(変数)」を参照してください][MdnDocsWebCssUsingCssCustomProperties]。  Chromium オープン ソース プロジェクトでこの機能に関するリアルタイムの更新プログラムを確認するには、Issue [1187735 に移動します][CR1187735]。  
+バージョン[88 Microsoft Edgeから][DevtoolsWhatsNew202011DevtoolsCssVariableDefinitionsInStylesPane]、[スタイル] ウィンドウ**** に CSS 変数が表示され、各変数の定義へのリンクが直接提供されます。  Microsoft Edge バージョン 91 以降では、矢印キーを使用して CSS 変数に簡単に移動できます。  [スタイル] ウィンドウで定義 **を開** く場合は、変数にカーソルを合わせると、 を選択します `Enter` 。  CSS 変数の詳細については、「USING CSS カスタム プロパティ [(変数)」を参照してください][MdnDocsWebCssUsingCssCustomProperties]。  この機能に関するリアルタイム更新プログラムをオープン ソース プロジェクトChromium確認するには、Issue [1187735 に移動します][CR1187735]。  
 
 :::image type="complex" source="../../media/2021/04/elements-styles-body-background-color-theme-body-background.msft.png" alt-text="スタイル ウィンドウで強調表示されている --theme-body-background CSS 変数" lightbox="../../media/2021/04/elements-styles-body-background-color-theme-body-background.msft.png":::
    [ `--theme-body-background` スタイル] ウィンドウで強調表示されている CSS**変数**  
@@ -152,18 +152,18 @@ Web アプリ マニフェストでエラーと警告を確認するには、ア
 <!-- Title: Display Issues in severity order  -->  
 <!-- Subtitle: Entries in the Issues tool now display in severity order and allow you to focus your updates on the most important issues. -->  
 
-[ **問題] ツール** には、アクセシビリティ、パフォーマンス、セキュリティなど、Web サイトを改善するための推奨事項が表示されます。 フィードバックに基づいて、問題は重大度別に自動的に並べ替えされます。  各フィードバック カテゴリでは、エラーとしてマークされた**** 各問題が最初に表示され、警告としてマークされた**** 各問題の後に、ヒントとしてマークされた各問題が続**きます**。  問題を絞り込むのに役立つ、追加のフィルター オプションが今後の更新に向け計画されています。  問題を確認する方法の詳細については [、「Microsoft Edge DevTools Issues][DevtoolsIssuesIndex]ツールの問題を検索して修正する」に移動します。  
+[ **問題] ツール** には、アクセシビリティ、パフォーマンス、セキュリティなど、Web サイトを改善するための推奨事項が表示されます。 フィードバックに基づいて、問題は重大度別に自動的に並べ替えされます。  各フィードバック カテゴリでは、エラーとしてマークされた**** 各問題が最初に表示され、警告としてマークされた**** 各問題の後に、ヒントとしてマークされた各問題が続**きます**。  問題を絞り込むのに役立つ、追加のフィルター オプションが今後の更新に向け計画されています。  問題を確認する方法の詳細については、「DevTools の問題の検索と修正」Microsoft Edge[に移動します][DevtoolsIssuesIndex]。  
 
 :::image type="complex" source="../../media/2021/04/elements-issues-ordered-issues.msft.png" alt-text="[問題] ツールは、重大度別に並べ替えた問題を表示します。" lightbox="../../media/2021/04/elements-issues-ordered-issues.msft.png":::
    [ **問題] ツールは** 、重大度別に並べ替えた問題を表示します。  
 :::image-end:::  
 
-## <a name="microsoft-edge-developer-tools-for-visual-studio-code-version-117"></a>Microsoft Edge Developer Tools for Visual Studio コード バージョン 1.1.7  
+## <a name="microsoft-edge-developer-tools-for-visual-studio-code-version-117"></a>Microsoft Edgeバージョン 1.1.7 Visual Studio Code開発者向けツール  
 
 <!-- Title: Microsoft Edge DevTools for Visual Studio version 1.1.7  -->  
 <!-- Subtitle: Increased target closure reliability, automatically update the side panel, new contextual menu for settings and Changelog, and more. -->  
 
-Microsoft [Edge Tools for Visual Studio コード][VisualstudioMarketplaceMsEdgedevtoolsVscodeEdgeDevtools] 拡張バージョン 1.1.7 には、Microsoft Edge バージョン 88 の DevTools [が提供されています][DevtoolsWhatsNew202011Devtools]。  この拡張機能は現在、ARMデバイスをサポートし、Microsoft Edge 拡張機能の [デバッガーに依存][VisualstudioMarketplaceMsjsdiagDebuggerForEdge] しなくなりました。  バージョン 1.1.7 には、次のバグ修正と改善が含まれています。  
+拡張[Microsoft Edge][VisualstudioMarketplaceMsEdgedevtoolsVscodeEdgeDevtools]バージョン 1.1.7 Visual Studio Codeツールには、バージョン[88][DevtoolsWhatsNew202011Devtools]の DevTools Microsoft Edgeがあります。  この拡張機能では、ARMがサポートされ、拡張機能の[デバッガーに依存Microsoft Edge][VisualstudioMarketplaceMsjsdiagDebuggerForEdge]なくなりました。  バージョン 1.1.7 には、次のバグ修正と改善が含まれています。  
 
 *   ターゲットクロージャの信頼性を更新しました。  
 *   作成または破棄されたターゲットをデバッグすると、サイド パネルが自動的に更新される更新を行いました。  
@@ -184,23 +184,23 @@ Lorem al lorem et Chromium  To review the history of this feature in the Chromiu
    Ipsum et Chromium  
 :::image-end:::  -->  
 
-## <a name="download-the-microsoft-edge-preview-channels"></a>Microsoft Edge プレビュー チャネルをダウンロード  
+## <a name="download-the-microsoft-edge-preview-channels"></a>Microsoft Edge プレビュー チャネルをダウンロードする  
 
 Windows、Linux、または macOS を使用している場合は、 既定の開発ブラウザーとして [Microsoft Edge プレビュー チャネル][MicrosoftEdgePreviewChannels]の使用を検討してください。  プレビュー チャネルを使用すると、最新の DevTools 機能にアクセスできます。  
 
-## <a name="getting-in-touch-with-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームに連絡  
+## <a name="getting-in-touch-with-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームに連絡する  
 
 [!INCLUDE [contact DevTools team note](../../includes/contact-whats-new-note.md)]
 
 <!-- links -->  
 
-[DevtoolsWhatsNew202001DevtoolsUsingDevtoolsInOtherLanguages]: ../../2020/01/devtools.md#using-the-devtools-in-other-languages "他の言語で DevTools を使用する - 新しい DevTools (Microsoft Edge 81) |Microsoft Docs"  
-[DevtoolsWhatsNew202011Devtools]: ../../2020/11/devtools.md "DevTools (Microsoft Edge 88) の新機能|Microsoft Docs"  
+[DevtoolsWhatsNew202001DevtoolsUsingDevtoolsInOtherLanguages]: ../../2020/01/devtools.md#using-the-devtools-in-other-languages "他の言語で DevTools を使用する - What's New In DevTools (Microsoft Edge 81) |Microsoft Docs"  
+[DevtoolsWhatsNew202011Devtools]: ../../2020/11/devtools.md "DevTools (Microsoft Edge 88) |Microsoft Docs"  
 [DevtoolsWhatsNew202011DevtoolsCssVariableDefinitionsInStylesPane]: /microsoft-edge/devtools-guide-chromium/whats-new/2020/11/devtools#css-variable-definitions-in-styles-pane "[スタイル] ウィンドウの CSS 変数定義 - DevTools の新機能 (Microsoft Edge 88) |Microsoft Docs"  
-[DevtoolsWhatsNew202102Devtools]: ../02/devtools.md "DevTools (Microsoft Edge 90) の新機能 |Microsoft Docs"  
+[DevtoolsWhatsNew202102Devtools]: ../02/devtools.md "DevTools の新機能 (Microsoft Edge 90) |Microsoft Docs"  
 [DevtoolsWhatsNew202102DevtoolsGroupToolsTogetherInFocusMode]: ../02/devtools.md#group-tools-together-in-focus-mode "フォーカス モードでツールをグループ化する - DevTools の新機能 (Microsoft Edge 90) |Microsoft Docs"  
 
-[DevtoolsCommandMenuIndexOpenCommandMenu]: /microsoft-edge/devtools-guide-chromium/command-menu/index#open-the-command-menu "コマンド メニューを開く - Microsoft Edge DevTools コマンド メニューを使用してコマンドを実行|Microsoft Docs"  
+[DevtoolsCommandMenuIndexOpenCommandMenu]: /microsoft-edge/devtools-guide-chromium/command-menu/index#open-the-command-menu "[コマンド] メニューを開く - [DevTools コマンド] メニューの [Microsoft Edgeを使用してコマンドを実行|Microsoft Docs"  
 [DevtoolsCustomizeLocalization]: /microsoft-edge/devtools-guide-chromium/customize/localization "DevTools の言語設定を変更する | Microsoft Docs"  
 [DevtoolsIssuesIndex]: /microsoft-edge/devtools-guide-chromium/issues/index "Microsoft Edge DevTools の問題ツールに関する問題を見つけて修正する | Microsoft Docs"  
 [DevtoolsServiceWorkerIndex]: /microsoft-edge/devtools-guide-chromium/service-workers/index "Service Worker の機能強化|Microsoft Docs"  
@@ -219,10 +219,10 @@ Windows、Linux、または macOS を使用している場合は、 既定の開
 [VisualstudioMarketplaceMsjsdiagDebuggerForEdge]: https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-edge "Microsoft Edge 用デバッガー |Visual Studio Marketplace"  
 
 [CRIssuesList]: https://bugs.chromium.org/p/chromium/issues/list "Chromium のバグ"  
-[CR1066604]: https://crbug.com/1066604 "問題 1066604: DevTools: ServiceWorker のインストールとアクティブ化イベントの詳細を参照|クロムのバグ"  
-[CR1136655]: https://crbug.com/1136655 "問題 1136655: Devtools: ローカライズ V2 |クロムのバグ"  
-[CR1185945]: https://crbug.com/1185945 "問題 1185945: マニフェストの警告は、すべてのアイコンが正方形である必要|クロムのバグ"  
-[CR1187735]: https://crbug.com/1187735 "問題 1187735: アクセシビリティ: MAS2.1.1: キーボード: キーボードを使用して 'Var(...)' 関数を呼び出|クロムのバグ"  
+[CR1066604]: https://crbug.com/1066604 "問題 1066604: DevTools: ServiceWorker のインストールとアクティブ化イベントの詳細を参照|Chromiumバグ"  
+[CR1136655]: https://crbug.com/1136655 "問題 1136655: Devtools: ローカライズ V2 |Chromiumバグ"  
+[CR1185945]: https://crbug.com/1185945 "問題 1185945: マニフェストの警告は、すべてのアイコンが正方形である必要|Chromiumバグ"  
+[CR1187735]: https://crbug.com/1187735 "問題 1187735: アクセシビリティ: MAS2.1.1: キーボード: キーボードを使用して 'Var(...)' 関数を呼び出|Chromiumバグ"  
 
 [MdnDocsWebCssUsingCssCustomProperties]: https://developer.mozilla.org/docs/Web/CSS/Using_CSS_custom_properties "CSS カスタム プロパティ (変数) を使用する |MDN"  
 

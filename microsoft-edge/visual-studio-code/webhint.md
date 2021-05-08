@@ -1,6 +1,6 @@
 ---
-description: コードで webhint をVisual Studioする方法
-title: webhint Visual Studio コード拡張機能
+description: webhint を使用するVisual Studio Code
+title: webhint Visual Studio Code拡張子
 author: MSEdgeTeam
 ms.author: msedgedevrel
 ms.date: 01/07/2021
@@ -16,15 +16,15 @@ ms.locfileid: "11399275"
 ---
 # <a name="webhint-vs-code-extension"></a>Webhint Vs Code Extension  
 
-カスタマイズ可能なリント ツールである [webhint][WebhintMain]を使用して、サイトのアクセシビリティ、パフォーマンス、ブラウザー間の互換性、PWA の互換性、およびセキュリティを向上させます。  コードでベスト プラクティスと一般的なエラーをチェックします。 このオープン ソース プロジェクトは、Microsoft Edge チームによって最初に開発されましたが、 [現在は OpenJS Foundation の一部です][OpenjsFoundation]。  Microsoft Edge チームは、コミュニティの Web 開発者と共に Webhint に引き続き貢献しています。  
+カスタマイズ可能なリント ツールである[webhint][WebhintMain]を使用して、サイトのアクセシビリティ、パフォーマンス、ブラウザー間の互換性、PWA互換性、およびセキュリティを向上させます。  コードでベスト プラクティスと一般的なエラーをチェックします。 このオープンソース プロジェクトは、最初はチームによって開発Microsoft Edge [OpenJS Foundation の一部です][OpenjsFoundation]。  チームMicrosoft Edgeコミュニティの Web 開発者と共に webhint に貢献し続ける。  
 
-:::image type="complex" source="./media/webhint-extension.png" alt-text="Webhint Visual Studio Code 拡張機能のスクリーンショット":::
-   Webhint Visual Studio Code 拡張機能のスクリーンショット  
+:::image type="complex" source="./media/webhint-extension.png" alt-text="webhint ファイル拡張子Visual Studio Codeスクリーンショット":::
+   webhint ファイル拡張子Visual Studio Codeスクリーンショット  
 :::image-end:::
 
 <!--![Screenshot of webhint Visual Studio Code extension][ImageWebhintExtension]  -->  
 
-HTML、CSS、JavaScript、TypeScript など、コードの [webhint][VisualstudioMarketplaceWebhint]拡張機能を追加して、問題を特定Visual Studioします。  ヒントはインラインの下線として表示され、[問題] ウィンドウ **に要約** されます。  
+HTML、CSS、JavaScript、TypeScript など、HTML、CSS、TypeScript の問題を特定して[修正するには、webhint][VisualstudioMarketplaceWebhint]拡張機能を追加Visual Studio Code。  ヒントはインラインの下線として表示され、[問題] ウィンドウ **に要約** されます。  
 
 ## <a name="configuration"></a>構成  
 
@@ -84,9 +84,9 @@ HTML、CSS、JavaScript、TypeScript など、コードの [webhint][Visualstudi
 
 ## <a name="getting-in-touch-with-the-webhint-team"></a>webhint チームと連絡を取る  
 
-[webhint GitHub][GithubWebhintio]リポジトリに問題を提出してフィードバックを送信します。 [][GithubWebhintioIssuesNew]  
+[webhint][GithubWebhintio]ファイルに[問題を提出][GithubWebhintioIssuesNew]してフィードバックを送信GitHubします。  
 
-拡張機能に貢献するには [、webhint Visual Studio コード拡張機能の投稿ガイド に移動します][GithubWebhintioExtensionVscodeContributing]。  
+拡張機能に貢献するには[、webhint Visual Studio Codeに移動します][GithubWebhintioExtensionVscodeContributing]。  
 
 ## <a name="see-also"></a>関連項目  
 
@@ -101,14 +101,14 @@ HTML、CSS、JavaScript、TypeScript など、コードの [webhint][Visualstudi
 
 [AccessibilityIndex]: /microsoft-edge/accessibility "アクセシビリティ |Microsoft Docs"  
 
-[VisualstudiocodeIndex]: /microsoft-edge/visual-studio-code/index "Visual Studio コード |Microsoft Docs"  
+[VisualstudiocodeIndex]: /microsoft-edge/visual-studio-code/index "Visual Studio Code |Microsoft Docs"  
 
 [GithubWebhintio]: https://github.com/webhintio/hint "webhint |GitHub"  
 [GithubWebhintioExtensionVscodeContributing]: https://github.com/webhintio/hint/blob/master/packages/extension-vscode/CONTRIBUTING.md "寄稿 - webhint |GitHub"  
 [GithubWebhintioIndexjson]: https://github.com/webhintio/hint/blob/master/packages/configuration-development/index.json "index.js- webhintio/hint |GitHub"
 [GithubWebhintioIssuesNew]: https://github.com/webhintio/hint/issues/new "新しい問題 - webhintio/hint |GitHub"  
 
-[VisualstudioMarketplaceWebhint]: https://marketplace.visualstudio.com/items?itemName=webhint.vscode-webhint "webhint |Visual Studio Marketplace"  
+[VisualstudioMarketplaceWebhint]: https://marketplace.visualstudio.com/items?itemName=webhint.vscode-webhint "webhint |Visual StudioMarketplace"  
 
 [OpenjsFoundation]:  https://openjsf.org "OpenJS Foundation"  
 

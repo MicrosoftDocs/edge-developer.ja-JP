@@ -16,7 +16,7 @@ ms.locfileid: "11526159"
 ---
 # <a name="customize-the-password-reveal-button"></a>[パスワードの表示] ボタンをカスタマイズする  
 
-`password`Microsoft Edge の入力の種類には、パスワード表示**コントロールが含**まれています。  ユーザーは、パスワード入力ボタン **を選択して** パスワード フィールドを **表示** できます。  表示されたパスワード **フィールドは** 、ユーザーがパスワードが正しいか確認するのに役立ちます。  ユーザーがパスワード フィールドにテキストを入力**** した後、ユーザーはパスワード表示ボタン**** を選択するか、入力の表示を切り替 `Alt` + `F8` える場合に選択できます。  
+パスワード `password` 表示コントロールMicrosoft Edge入力**の種類を指定**します。  ユーザーは、パスワード入力ボタン **を選択して** パスワード フィールドを **表示** できます。  表示されたパスワード **フィールドは** 、ユーザーがパスワードが正しいか確認するのに役立ちます。  ユーザーがパスワード フィールドにテキストを入力**** した後、ユーザーはパスワード表示ボタン**** を選択するか、入力の表示を切り替 `Alt` + `F8` える場合に選択できます。  
 
 :::row:::
    :::column span="":::
@@ -34,7 +34,7 @@ ms.locfileid: "11526159"
    :::column-end:::
 :::row-end:::  
 
-既定では、パスワード **表示ボタン** がに設定されているすべての HTML 要素のシャドウ DOM `input` `type` に挿入されます `"password"` 。  Microsoft Edge バージョン 87 より、 [ユーザーまたは企業][DeployedgeMicrosoftEdgePoliciesPasswordrevealenabled] は、この機能をグローバルに無効にできます。  Web デザイナーと開発者は、ほとんどの Microsoft Edge ユーザーが既定のエクスペリエンスを持つ必要があります。  
+既定では、パスワード **表示ボタン** がに設定されているすべての HTML 要素のシャドウ DOM `input` `type` に挿入されます `"password"` 。  バージョン 87 Microsoft Edge、[ユーザーまたは企業][DeployedgeMicrosoftEdgePoliciesPasswordrevealenabled]は、この機能をグローバルに無効にできます。  Web デザイナーと開発者は、ほとんどのユーザーが既定Microsoft Edgeエクスペリエンスを持つ必要があります。  
 
 ## <a name="remove-the-password-reveal-control"></a>パスワード表示コントロールを削除する  
 

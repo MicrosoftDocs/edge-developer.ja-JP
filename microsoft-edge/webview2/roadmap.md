@@ -85,6 +85,6 @@ Win32 C/C++ SDK が GA に達しました。
 
 [UwpToolkitsWinui3Index]: /uwp/toolkits/winui3/index "Windows UI ライブラリ 3.0 プレビュー 1 (2020 年 5 月) |Microsoft Docs"  
 
-[GithubMicrosoftedgeWebviewfeedbackMain]: https://github.com/MicrosoftEdge/WebViewFeedback "WebView フィードバック-MicrosoftEdge/WebViewFeedback | GitHub"  
+[GithubMicrosoftedgeWebviewfeedbackMain]: https://github.com/MicrosoftEdge/WebViewFeedback "WebView フィードバック - MicrosoftEdge/WebViewFeedback | GitHub"  
 
 [GithubMicrosoftUiXamlRoadmap]: https://github.com/microsoft/microsoft-ui-xaml/blob/master/docs/roadmap.md "Windows UI ライブラリのロードマップ - microsoft/microsoft-ui-xaml |GitHub"  

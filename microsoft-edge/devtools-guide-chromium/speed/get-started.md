@@ -324,7 +324,7 @@ ms.locfileid: "11519612"
     
 <!--[relative]: /web/fundamentals/design-and-ux/responsive/images#relative_sized_images  -->  
 
-*   イメージ CDN を使用すると、要求時にイメージのサイズを動的に変更できます。  
+*   要求時にCDNサイズを動的に変更できるイメージ コントロールを使用します。  
 *   少なくとも、各画像を最適化します。  これにより、大きな節約が生まれる可能性があります。  
   最適化は、イメージ ファイルのサイズを小さくする特別なプログラムを使用してイメージを実行する場合です。  その他のヒントについては、「Essential [Image Optimization」に移動します][EssentialImageOptimization]。  
     
@@ -343,7 +343,7 @@ ms.locfileid: "11519612"
        レンダリングブロックリソースの**排除機会の詳細**  
     :::image-end:::  
     
-1.  `Control` + `Shift` + `P` \(Windows, Linux\) または `Command` + `Shift` + `P` \(macOS\) `Coverage` **** を選択してコマンド メニューを開き、入力を開始し、[カバレッジの表示] を選択します。  
+1.  `Control` + `Shift` + `P` \(Windows、Linux\) または `Command` + `Shift` + `P` \(macOS\) `Coverage` **** を選択してコマンド メニューを開き、入力を開始し、[カバレッジの表示] を選択します。  
     
     :::image type="complex" source="../media/speed-glitch-tony-remix-updated-audits-performance-oppportunities-expanded-command-coverage.msft.png" alt-text="[監査] パネルから [コマンド メニュー] を開きます。" lightbox="../media/speed-glitch-tony-remix-updated-audits-performance-oppportunities-expanded-command-coverage.msft.png":::
        [監査] パネルから [コマンド メニュー **] を開** きます。  
@@ -372,7 +372,7 @@ ms.locfileid: "11519612"
 ページを `jquery.js` 読 `lodash.js` み込むにはファイルも必要ですか?  要求 **ブロック ツールは** 、リソースが利用できない場合の動作を表示します。  
 
 1.  [ネットワーク] **ツールを選択** します。  
-1.  `Control` + `Shift` + `P` \(Windows, Linux\) または `Command` + `Shift` + `P` \(macOS\) を選択して、コマンド メニューを再度開きます。  
+1.  `Control` + `Shift` + `P` \(Windows Linux\) または \(macOS\) を選択して、コマンド `Command` + `Shift` + `P` メニューを再度開きます。  
 1.  入力を開始し `blocking` 、[要求ブロック **の表示] を選択します**。  
     
     :::image type="complex" source="../media/speed-glitch-tony-remix-updated-network-drawer-request-blocking-empty.msft.png" alt-text="要求ブロック ツール" lightbox="../media/speed-glitch-tony-remix-updated-network-drawer-request-blocking-empty.msft.png":::
@@ -426,7 +426,7 @@ ms.locfileid: "11519612"
 目標は、[パフォーマンス] パネルを使用して、ページの読み込み中にメイン スレッドが実行している作業を分析し、不要な作業を延期または削除する方法を見つけ出すことです。  
 
 1.  [パフォーマンス] **ツールを選択** します。  
-1.  [ **キャプチャ設定]\(** ![ キャプチャ設定 ](../media/capture-icon.msft.png) \) を選択します。  
+1.  [**キャプチャ] 設定**\( ![ Capture 設定 ](../media/capture-icon.msft.png) \) を選択します。  
 1.  [ **ネットワーク] を** **[低速 3G]** に設定し **、CPU** を **6 倍の低速に設定します**。  モバイル デバイスは通常、ラップトップやデスクトップよりもハードウェアの制約が多いので、これらの設定を使用すると、より強力なデバイスを使用している場合と同様に、ページの読み込みも発生します。  
 1.  [ **更新** \( ![ Refresh ](../media/reload-icon.msft.png) \] を選択します)。  DevTools はページを更新し、ページを読み込むのに実行されたすべての作業の視覚化を生成します。  この視覚化は、トレースと呼 **ばれます**。  
     
@@ -442,7 +442,7 @@ ms.locfileid: "11519612"
 
 トレースを調査して、JavaScript の作業を少なくする方法を探します。  
 
-1.  [タイミング **] セクションを選択** して展開します。  React のタイミング対策が豊富にある可能性があるという[][MDNUserTimingApi]事実に基づいて、Tony のアプリは React の開発モードを使用しているようです。  React の実稼働モードに切り替えると、パフォーマンスが向上する可能性があります。  
+1.  [タイミング **] セクションを選択** して展開します。  React から多くのタイミング対策がある可能性があるという[][MDNUserTimingApi]事実に基づいて、Tony のアプリが React の開発モードを使用しているようです。  アプリケーションの実稼働モードに切り替Reactパフォーマンスが低下する可能性があります。  
     
     :::image type="complex" source="../media/speed-glitch-tony-remix-performance-slow-network-slow-cpu-timings.msft.png" alt-text="[タイミング] セクション" lightbox="../media/speed-glitch-tony-remix-performance-slow-network-slow-cpu-timings.msft.png":::
        [ **タイミング]** セクション  
@@ -507,7 +507,7 @@ ms.locfileid: "11519612"
 
 ユーザー タイミング API を使用すると、各フェーズにかかる時間を追跡するために、アプリのライフサイクルの特定のフェーズを任意にマークできます `console.log()` 。 [][MDNUserTimingApi]  
 
-## <a name="summary"></a>要約  
+## <a name="summary"></a>まとめ  
 
 *   サイトの読み込みパフォーマンスを最適化するために設定するたびに、常に監査を開始します。  監査はベースラインを確立し、改善方法に関するヒントを提供します。  
 *   一度に 1 つの変更を行い、変更後に Web ページを監査して、分離された変更がパフォーマンスに与える影響を表示します。  

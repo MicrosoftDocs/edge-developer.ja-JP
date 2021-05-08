@@ -1,5 +1,5 @@
 ---
-description: Microsoft Edge DevTools で CSS を表示および変更するための新しいワークフローについて説明します。
+description: DevTools で CSS を表示および変更するための新しいワークフロー Microsoft Edge確認します。
 title: CCS リファレンス
 author: MSEdgeTeam
 ms.author: msedgedevrel
@@ -30,9 +30,9 @@ ms.locfileid: "11519332"
 
 # <a name="css-reference"></a>CCS リファレンス  
 
-新しいワークフローについては、CSS の表示と変更に関連する Microsoft Edge DevTools 機能の包括的なリファレンスを参照してください。  
+CSS の表示と変更に関連する DevTools Microsoft Edgeの包括的な参照で、新しいワークフローを確認します。  
 
-基本については、「CSS の表示と変更 [を開始する」に移動します][DevToolsCSSGetStarted]。  
+基本を学習するには、[CSS の表示と変更[はじめにに移動します][DevToolsCSSGetStarted]。  
 
 ## <a name="choose-an-element"></a>要素を選択する  
 
@@ -48,7 +48,7 @@ ms.locfileid: "11519332"
 要素を選択するには、次のいずれかのアクションを使用します。  
 
 *   ビューポートで、要素にマウス ポインターを置き、コンテキスト メニュー \(右クリック\) を開き、[検査] を **選択します**。  
-*   DevTools で、[要素を選択] \( Select **an** element \) を選択するか ![ ](../media/select-an-element-icon.msft.png) `Control` + `Shift` + `C` 、\(Windows、Linux\) または `Command` + `Shift` + `C` \(macOS\) を選択し、ビューポートで要素を選択します。  
+*   DevTools で、[要素を選択] \( Select **an** element \) を選択するか ![ ](../media/select-an-element-icon.msft.png) `Control` + `Shift` + `C` 、\(Windows、 Linux\) または `Command` + `Shift` + `C` \(macOS\) を選択し、ビューポートで要素を選択します。  
 *   DevTools で、DOM ツリーの要素を **選択します**。  
 *   DevTools で、コンソールのようなクエリを実行し、結果にマウス ポインターを置き、コンテキスト メニュー `document.querySelector('p')` \(右クリック\) を開き、[要素] パネルで [表示] を**選択します**。 ****  
 
@@ -159,7 +159,7 @@ ms.locfileid: "11519332"
 
 [ **カバレッジ]** ツールには、ページが実際に使用する CSS が表示されます。  
 
-1.  `Control` + `Shift` + `P` DevTools がフォーカスされている間 `Command` + `Shift` + `P` に \(Windows、Linux\) または \(macOS\) を選択してコマンド[メニューを開きます][DevToolsCommandMenu]。  
+1.  `Control` + `Shift` + `P` DevTools のフォーカス中に \(Windows、Linux\) または `Command` + `Shift` + `P` \(macOS\)[][DevToolsCommandMenu]を選択してコマンド メニューを開きます。  
 1.  入力を開始し `coverage` 、[カバレッジの **表示] を選択します**。  [ **カバレッジ]** ツールが表示されます。  
     
     :::row:::
@@ -250,10 +250,10 @@ ms.locfileid: "11519332"
 
 宣言の値を編集する場合は、次のキーボード ショートカットを使用して、値を特定の量ずつ増やします。  
 
-*   `Alt` + `Up` \(Windows,Linux\) または `Option` + `Up` \(macOS\) を選択して増分します `0.1` 。  
+*   `Alt` + `Up` \(Windows、Linux\) または `Option` + `Up` \(macOS\) を選択して増分します `0.1` 。  
 *   現在 `Up` の値がとの `1` 間の場合、またはによって値を `0.1` 変更する場合に `-1` 選択します `1` 。  
 *   によって `Shift` + `Up` 増分する場合に選択します `10` 。  
-*   `Shift` + `Page Up` \(Windows,Linux\) または `Shift` + `Command` + `Up` \(macOS\) を選択して値をインクリメントします `100` 。  
+*   `Shift` + `Page Up` \(Windows、Linux\) または `Shift` + `Command` + `Up` \(macOS\) を選択して値をインクリメントします `100` 。  
 
 デクレメントも機能します。  上記の各インスタンスを `Up` . `Down`  
 
@@ -552,11 +552,11 @@ Color **Picker は** 、変更と宣言のための GUI `color` `background-colo
 
 <!-- links -->  
 
-[DevToolsCommandMenu]: ../command-menu/index.md "Microsoft Edge DevTools コマンド メニュー を使用してコマンドを実行|Microsoft Docs"  
-[DevToolsCSSGetStarted]: ../css/index.md "CSS の表示と変更の開始|Microsoft Docs"  
-[DevToolsCSSGetStartedAddPseudoState]: ../css/index.md#add-a-pseudostate-to-a-class "クラスに擬似状態を追加する - CSS の表示と変更の開始|Microsoft Docs"  
-[DevToolsCSSGetStartedTutorial]: ../css/index.md#view-the-css-for-an-element "要素の CSS を表示する - CSS の表示と変更の開始|Microsoft Docs"  
-[DevToolsCssPrintPreview]: ../css/print-preview.md "Microsoft Edge DevTools を印刷プレビュー モード (CSS 印刷メディアの種類) に強制|Microsoft Docs"  
+[DevToolsCommandMenu]: ../command-menu/index.md "[DevTools コマンド メニュー] Microsoft Edgeを使用してコマンドを実行|Microsoft Docs"  
+[DevToolsCSSGetStarted]: ../css/index.md "はじめにCSS の表示と変更を使用|Microsoft Docs"  
+[DevToolsCSSGetStartedAddPseudoState]: ../css/index.md#add-a-pseudostate-to-a-class "クラスに擬似状態を追加する - CSS はじめにを表示して変更する|Microsoft Docs"  
+[DevToolsCSSGetStartedTutorial]: ../css/index.md#view-the-css-for-an-element "要素の CSS を表示する - CSS はじめにを表示して変更|Microsoft Docs"  
+[DevToolsCssPrintPreview]: ../css/print-preview.md "DevTools Microsoft Edge印刷プレビュー モード (CSS 印刷メディアの種類) を強制的に|Microsoft Docs"  
 [DevToolsJavascriptReferenceFormat]: ../javascript/reference.md#reformat-a-minified-javascript-file-with-pretty-print "ミニマ化された JavaScript ファイルをプリティプリントで再フォーマットする - デバッガー ファイルを使用|Microsoft Docs"  
 
 [MaterialDesignColorSystem]: https://material.io/guidelines/style/color.html#color-color-palette "カラー システム - マテリアル デザイン"  

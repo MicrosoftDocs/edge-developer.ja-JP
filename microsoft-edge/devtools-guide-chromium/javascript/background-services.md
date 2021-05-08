@@ -36,7 +36,7 @@ Microsoft Edge DevTools では、次の各 API がバックグラウンド サ�
 
 *   [バックグラウンド フェッチ](#background-fetch)  
 *   [バックグラウンド同期](#background-sync)  
-*   [Notifications](#notifications)  
+*   [通知](#notifications)  
 *   [プッシュ メッセージ](#push-messages)  
     
 Microsoft Edge DevTools は、DevTools が開いていない場合でも、バックグラウンド サービス イベントを 3 日間ログに記録できます。  
@@ -100,7 +100,7 @@ Microsoft Edge DevTools は、DevTools が開いていない場合でも、バ�
        [バックグラウンド同期] ウィンドウでイベントの **詳細を表示** する  
     :::image-end:::  
     
-## <a name="notifications"></a>Notifications  
+## <a name="notifications"></a>通知  
 
 サービス ワーカー**がサーバーから**プッシュ[][MDNPush]メッセージを受信した後、サービス ワーカーは[通知 API][MDNNotifications]を使用してデータをユーザーに表示します。  DevTools が開いていない場合でも、通知を 3 日間記録するには、次のコマンドを実行します。  
 

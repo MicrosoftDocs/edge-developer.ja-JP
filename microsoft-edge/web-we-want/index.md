@@ -1,6 +1,6 @@
 ---
 description: Web プラットフォームの不足している機能を Web 標準またはブラウザー機能として開発するためのクロスブラウザー イニシアチブ。
-title: Web We Want overview
+title: Web We Want の概要
 author: MSEdgeTeam
 ms.author: msedgedevrel
 ms.date: 03/15/2021
@@ -30,7 +30,7 @@ Web We Want イニシアチブは、ブラウザー ベンダーと標準グル�
 
 *   [Twitter][TwitterWebWeWant]または[LinkedIn][LinkedInWebWeWant]のイニシアチブに従って、開発中の情報を最新の状態に保つ、または送信された Wants の優先順位付けを支援するアンケートに参加することで、連絡を取り合います。
 
-Firefox DevTools と同様に、ソース オーダー ビューアー[\(][WebWeWantWants64]Want , [Docs][DevtoolsExperimentalFeaturesIndexSourceOrderViewer]\) や [3D ビュー][Devtools3DViewIndex]など、いくつかの Wants をクロム DevTools に正常に出荷しました。 標準グループに以前の提案がある他の Wants も少なからずある。 Web We Want を使用して、Web の未来を前進する方法に参加してください。
+ソース オーダー ビューアー[\(][WebWeWantWants64]Want , [Docs][DevtoolsExperimentalFeaturesIndexSourceOrderViewer]\) や[3D ビュー][Devtools3DViewIndex]など、いくつかの Wants を Chromium DevTools に正常に出荷しました。Firefox DevTools の場合と同様です。 標準グループに以前の提案がある他の Wants も少なからずある。 Web We Want を使用して、Web の未来を前進する方法に参加してください。
 
 <!-- links -->  
 

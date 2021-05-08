@@ -1,6 +1,6 @@
 ---
-description: スニペットは、Microsoft Edge DevTools の Sources ツール内で作成して実行できる小さなスクリプトです。  Web ページからリソースにアクセスして実行できます。  スニペットを実行すると、現在開いている Web ページのコンテキストから実行されます。
-title: Microsoft Edge DevTools を使用して任意の Web ページで JavaScript のスニペットを実行する
+description: スニペットは、DevTools の Sources ツール内で作成および実行できる小Microsoft Edgeです。  Web ページからリソースにアクセスして実行できます。  スニペットを実行すると、現在開いている Web ページのコンテキストから実行されます。
+title: DevTools を使用して任意の Web ページで JavaScript のスニペットMicrosoft Edge実行する
 author: MSEdgeTeam
 ms.author: msedgedevrel
 ms.date: 03/08/2021
@@ -28,7 +28,7 @@ ms.locfileid: "11519430"
    See the License for the specific language governing permissions and
    limitations under the License.  -->  
 
-# <a name="run-snippets-of-javascript-on-any-webpage-with-microsoft-edge-devtools"></a>Microsoft Edge DevTools を使用して任意の Web ページで JavaScript のスニペットを実行する  
+# <a name="run-snippets-of-javascript-on-any-webpage-with-microsoft-edge-devtools"></a>DevTools を使用して任意の Web ページで JavaScript のスニペットMicrosoft Edge実行する  
 
 コンソールで同じコードを繰り返[][DevtoolsConsoleIndex]し実行している場合は、コードをスニペットとして保存してください。  スニペットは、ソース ツールで作成する [スクリプト][DevToolsSourcesTool] です。  スニペットは Web ページの JavaScript コンテキストにアクセスし、任意の Web ページでスニペットを実行できます。  ほとんどの Web ページのセキュリティ設定は、スニペットに他のスクリプトを読み込むのをブロックします。  このため、すべてのコードを 1 つのファイルに含める必要があります。  
 
@@ -84,7 +84,7 @@ ms.locfileid: "11519430"
 ### <a name="open-the-snippets-tab-with-the-command-menu"></a>コマンド メニューで [スニペット] タブを開く  
 
 1.  DevTools で何かを選択して、DevTools にフォーカスを設定します。  
-1.  `Control` + `Shift` + `P` \(Windows, Linux\) または `Command` + `Shift` + `P` \(macOS\) を選択してコマンド メニューを開きます。  
+1.  `Control` + `Shift` + `P` コマンド メニューを開Windows \(Windows Linux\) または `Command` + `Shift` + `P` \(macOS\) を選択します。  
 1.  [ `Snippets` スニペットの **表示] を選択**し、コマンドを `Enter` 実行する場合に選択します。  
     
     :::image type="complex" source="../media/javascript-search-show-snippets.msft.png" alt-text="[スニペットの表示] コマンド" lightbox="../media/javascript-search-show-snippets.msft.png":::
@@ -106,7 +106,7 @@ ms.locfileid: "11519430"
 ### <a name="create-a-snippet-through-the-command-menu"></a>コマンド メニューからスニペットを作成する  
 
 1.  DevTools のどこかにカーソルを移動します。  
-1.  `Control` + `Shift` + `P` \(Windows, Linux\) または `Command` + `Shift` + `P` \(macOS\) を選択してコマンド メニューを開きます。  
+1.  `Control` + `Shift` + `P` コマンド メニューを開Windows \(Windows Linux\) または `Command` + `Shift` + `P` \(macOS\) を選択します。  
 1.  [ `Snippet` 新しいスニペットの **作成] を**選択し、コマンド `Enter` を実行する場合に選択します。  
     
     :::image type="complex" source="../media/javascript-search-create-new-snippet.msft.png" alt-text="新しいスニペットを作成するためのコマンド" lightbox="../media/javascript-search-create-new-snippet.msft.png":::
@@ -125,7 +125,7 @@ ms.locfileid: "11519430"
     :::image-end:::  
     
 1.  コード エディター **を使用して** 、スニペットに JavaScript を追加します。  
-1.  スニペットの名前の横にアスタリスクが表示される場合は、コードが保存されていないことを意味します。  `Control` + `S` \(Windows, Linux\) または `Command` + `S` \(macOS\) を選択して保存します。  
+1.  スニペットの名前の横にアスタリスクが表示される場合は、コードが保存されていないことを意味します。  `Control` + `S` \(Windows Linux\) または `Command` + `S` \(macOS\) を選択して保存します。  
     
     :::image type="complex" source="../media/javascript-sources-snippets-editor-unsaved.msft.png" alt-text="スニペット名の横にあるアスタリスクは、保存されていないコードを示します" lightbox="../media/javascript-sources-snippets-editor-unsaved.msft.png":::
        スニペット名の横にあるアスタリスクは、保存されていないコードを示します  
@@ -142,7 +142,7 @@ ms.locfileid: "11519430"
 ### <a name="run-a-snippet-with-the-command-menu"></a>コマンド メニューを使用してスニペットを実行する  
 
 1.  DevTools のどこかにカーソルを移動します。  
-1.  `Control` + `Shift` + `P` \(Windows, Linux\) または `Command` + `Shift` + `P` \(macOS\) を選択してコマンド メニューを開きます。  
+1.  `Control` + `Shift` + `P` コマンド メニューを開Windows \(Windows Linux\) または `Command` + `Shift` + `P` \(macOS\) を選択します。  
 1.  文字を削除し、実行するスニペットの名前の後に文字 `>` `!` を入力します。  
     
     :::image type="complex" source="../media/javascript-search-run-command.msft.png" alt-text="コマンド メニューからスニペットを実行する" lightbox="../media/javascript-search-run-command.msft.png":::

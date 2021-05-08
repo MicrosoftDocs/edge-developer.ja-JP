@@ -1,5 +1,5 @@
 ---
-description: JavaScript 環境として Microsoft Edge Developer Tools 内でコンソール ツールを使用する方法について説明します。
+description: 開発者ツールを JavaScript 環境としてMicrosoft Edgeコンソール ツールを使用する方法について説明します。
 title: JavaScript 環境としてのコンソール
 author: MSEdgeTeam
 ms.author: msedgedevrel
@@ -21,7 +21,7 @@ ms.locfileid: "11483536"
 これを試す場合は、次のアクションを実行します。  
 
 1.  コンソールを **開きます**。  
-    *   `Control` + `Shift` + `J` \(Windows, Linux\) または `Command` + `Option` + `J` \(macOS\) を選択します。  
+    *   `Control` + `Shift` + `J` \(Windows Linux\) または `Command` + `Option` + `J` \(macOS\) を選択します。  
 1.  「`2 + 2`」と入力します。  コンソール **では、** 入力中に次 `4` の行に結果が既に表示されます。  この `Eager evaluation` 機能は、有効な JavaScript を記述するのに役立ちます。  間違っているかどうか、または有効な結果が存在するかどうかを入力すると、結果が表示されます。  
 
 :::image type="complex" source="../media/console-javascript-eager-evaluation.msft.png" alt-text="コンソールは、入力時に 2 + 2 ライブの結果を表示します。" lightbox="../media/console-javascript-eager-evaluation.msft.png":::
@@ -79,7 +79,7 @@ ms.locfileid: "11483536"
 
 独自のスクリプト以外に、**コンソール**は任意[][GithubTc39ProposalTopLevelAwait]の非同期 JavaScript を実行するためのトップ レベルの await をサポートしています。  たとえば、非同期関数で `fetch` ステートメントをラップ `await` せずに API を使用します。  
 
-Microsoft Edge Developer Tools for microsoft Edge Developer Tools for Visual Studio [GitHub][GithubMicrosoftVscodeEdgeDevtools] リポジトリで最後の 50 の問題を取得するには、次のアクションを実行します。  
+Microsoft Edge 開発者ツール for Microsoft Edge Visual Studio Code GitHubを[][GithubMicrosoftVscodeEdgeDevtools]取得するには、次のアクションを実行します。  
 
 1.  コンソールを **開きます**。  
 1.  次のコード スニペットをコピーして貼り付け、10 エントリを含むオブジェクトを取得します。  

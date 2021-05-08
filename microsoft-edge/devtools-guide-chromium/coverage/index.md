@@ -1,6 +1,6 @@
 ---
-description: Microsoft Edge DevTools で使用されていない JavaScript コードと CSS コードを見つけて分析する方法。
-title: Microsoft Edge DevTools の [カバレッジ] パネルで未使用の JavaScript と CSS コードを検索する
+description: DevTools で使用されていない JavaScript コードと CSS コードをMicrosoft Edgeする方法。
+title: DevTools の [カバレッジ] パネルで未使用の JavaScript および CSS コードMicrosoft Edge検索する
 author: MSEdgeTeam
 ms.author: msedgedevrel
 ms.date: 02/12/2021
@@ -28,9 +28,9 @@ ms.locfileid: "11519318"
    See the License for the specific language governing permissions and
    limitations under the License.  -->
 
-# <a name="find-unused-javascript-and-css-code-with-the-coverage-panel-in-microsoft-edge-devtools"></a>Microsoft Edge DevTools の [カバレッジ] パネルで未使用の JavaScript コードと CSS コードを検索する  
+# <a name="find-unused-javascript-and-css-code-with-the-coverage-panel-in-microsoft-edge-devtools"></a>DevTools の [カバレッジ] パネルで未使用の JavaScript コードと CSS コードMicrosoft Edge検索する  
 
-Microsoft **Edge DevTools** の [カバレッジ] パネルを使用すると、使用されていない JavaScript コードと CSS コードを見つけるのに役立ちます。  未使用のコードを削除すると、ページの読み込み速度が上がり、モバイル ユーザーの携帯電話データが保存される場合があります。  
+**DevTools**の [Microsoft Edge] パネルを使用すると、使用されていない JavaScript コードと CSS コードを見つけるのに役立ちます。  未使用のコードを削除すると、ページの読み込み速度が上がり、モバイル ユーザーの携帯電話データが保存される場合があります。  
 
 :::image type="complex" source="../media/coverage-sources-resource-drawer-coverage.msft.png" alt-text="コード 範囲の分析" lightbox="../media/coverage-sources-resource-drawer-coverage.msft.png":::
    コード 範囲の分析  
@@ -96,7 +96,7 @@ Microsoft **Edge DevTools** の [カバレッジ] パネルを使用すると、
 
 <!-- links -->  
 
-[DevToolsCommandMenu]: ../command-menu/index.md "[Microsoft Edge DevTools コマンド] メニューメニューを使用してコマンドを実行|Microsoft Docs"  
+[DevToolsCommandMenu]: ../command-menu/index.md "[DevTools コマンド] メニューの [Microsoft Edgeを使用してコマンドを実行|Microsoft Docs"  
 
 [BootstrapButtons]: https://getbootstrap.com/docs/4.3/components/buttons "ボタン - ブートストラップ"  
 

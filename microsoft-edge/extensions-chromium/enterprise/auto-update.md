@@ -1,6 +1,6 @@
 ---
-description: Microsoft Edge の拡張機能に対する自動更新について説明します。
-title: Microsoft Edge の拡張機能を自動的に更新する
+description: 拡張機能の自動更新について詳しくは、Microsoft Edge
+title: 拡張機能を自動的に更新Microsoft Edge
 author: MSEdgeTeam
 ms.author: msedgedevrel
 ms.date: 04/13/2021
@@ -27,9 +27,9 @@ ms.locfileid: "11483073"
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.  -->  
-# <a name="automatically-update-extensions-in-microsoft-edge"></a>Microsoft Edge の拡張機能を自動的に更新する  
+# <a name="automatically-update-extensions-in-microsoft-edge"></a>拡張機能を自動的に更新Microsoft Edge  
 
-拡張機能を自動的に更新するように設定すると、自動的に更新するように設定されている場合、拡張機能は Microsoft Edge と次の利点を共有します。  
+拡張機能を自動的に更新するように設定すると、拡張機能は自動的に更新するように設定されている場合Microsoft Edgeと次の利点を共有します。  
 
 *   バグとセキュリティの修正プログラムを組み込む。  
 *   新しい機能やパフォーマンスの強化を追加します。  
@@ -37,17 +37,17 @@ ms.locfileid: "11483073"
 
 以前は、ストアベース以外の拡張機能がサポートされました。  また、ネイティブ バイナリと拡張機能を同時に更新しました。  
 
-これで、Microsoft Edge アドオン ストアが拡張機能をホストし、Microsoft Edge と同じメカニズムを使用して拡張機能を更新します。  更新メカニズムは制御しない。  ネイティブ バイナリに依存する拡張機能を更新する場合は注意してください。  
+これで、Microsoft Edgeアドオン ストアが拡張機能をホストし、拡張機能を更新するには、拡張機能と同じメカニズムをMicrosoft Edge。  更新メカニズムは制御しない。  ネイティブ バイナリに依存する拡張機能を更新する場合は注意してください。  
 
 > [!NOTE]
-> この記事は、パートナー センター ダッシュボードを使用して発行する拡張機能 [には適用][MicrosoftPartnerDashboardMicrosoftedgePublicLoginRefDd] されません。  ダッシュボードを使用して、更新されたバージョンをユーザーと Microsoft Edge アドオン ストアにリリースできます。  詳細については、「拡張機能を更新 [または削除する」に移動します][ExtensionsPublishUpdateExtension]。  
+> この記事は、パートナー センター ダッシュボードを使用して発行する拡張機能 [には適用][MicrosoftPartnerDashboardMicrosoftedgePublicLoginRefDd] されません。  ダッシュボードを使用して、更新されたバージョンをユーザーとアドオン ストアMicrosoft Edgeリリースできます。  詳細については、「拡張機能を更新 [または削除する」に移動します][ExtensionsPublishUpdateExtension]。  
 
 ## <a name="overview"></a>概要  
 
-数時間ごとに、インストールされている各拡張機能またはアプリに更新 URL が含されているかどうかを Microsoft Edge がチェックします。  拡張機能の更新 URL を指定するには、マニフェスト `update_url` のフィールドを使用します。  マニフェスト `update_url` 内のフィールドは、更新チェックを完了する場所をポイントします。  それぞれについて `update_url` 、更新されたマニフェスト XML ファイルの要求を送信します。  更新マニフェスト XML ファイルにインストールされているバージョンよりも新しいバージョンが一覧表示されている場合、Microsoft Edge は新しいバージョンをダウンロードしてインストールします。  手動更新でも同じプロセスが機能します。新しいファイルには、現在インストールされているバージョンと同じプライベート キー `.crx` で署名する必要があります。  
+数時間ごとに、インストールMicrosoft Edgeアプリに更新 URL が含されているかどうかを確認できます。  拡張機能の更新 URL を指定するには、マニフェスト `update_url` のフィールドを使用します。  マニフェスト `update_url` 内のフィールドは、更新チェックを完了する場所をポイントします。  それぞれについて `update_url` 、更新されたマニフェスト XML ファイルの要求を送信します。  更新マニフェスト XML ファイルにインストールされているバージョンより新しいバージョンが一覧表示されている場合は、Microsoft Edgeバージョンをダウンロードしてインストールします。  手動更新でも同じプロセスが機能します。新しいファイルには、現在インストールされているバージョンと同じプライベート キー `.crx` で署名する必要があります。  
 
 > [!NOTE]
-> ユーザーのプライバシーを維持するために、Microsoft Edge はマニフェスト要求を自動更新するヘッダーを送信しません。また、それらの要求に対する応答のヘッダー `Cookie` `Set-Cookie` は無視されます。  
+> ユーザーのプライバシーを維持するために、Microsoft Edge はマニフェストの自動更新要求を含むヘッダーを送信しません。また、これらの要求に対する応答のヘッダーは `Cookie` `Set-Cookie` 無視されます。  
 
 ## <a name="update-url"></a>URL の更新  
 
@@ -79,9 +79,9 @@ ms.locfileid: "11483073"
 
 | 属性 | 詳細 | 
 |:--- |:--- |  
-| `appid` | 拡張 ID は、公開キーのハッシュに基づいて生成されます。  拡張機能の ID を見つけるには、Microsoft Edge を開き、 に移動します `edge://extensions` 。 |  
+| `appid` | 拡張 ID は、公開キーのハッシュに基づいて生成されます。  拡張機能の ID を見つけるには、拡張機能を開Microsoft Edgeに移動します `edge://extensions` 。 |  
 | `codebase` | ファイルの `.crx` URL。 |  
-| `version` | この属性値は、Microsoft Edge によって指定されたファイルをダウンロードするかどうかを `.crx` 決定するために使用されます `codebase` 。  ファイルのファイルの値 `version` と `manifest.json` 一致する必要 `.crx` があります。 |  
+| `version` | この属性値は、Microsoft Edgeファイルをダウンロードするかどうかを決定するために `.crx` 使用されます `codebase` 。  ファイルのファイルの値 `version` と `manifest.json` 一致する必要 `.crx` があります。 |  
 
 更新マニフェスト XML ファイルには、複数の要素を含めて複数の拡張子に関する情報が含まれている場合があります。  
 
@@ -93,7 +93,7 @@ ms.locfileid: "11483073"
 
 基本的なメカニズムは簡単です。  拡張機能を自動的に更新するには、次の操作を実行します。  
 
-1.  Apache などの静的 XML ファイルを Web サーバーにアップロードします。  
+1.  アップロードなどの静的 XML ファイルを Web サーバー上に保存します。  
 1.  拡張機能の新しいバージョンをリリースする場合は、XML ファイルを更新します。  
     
 更新マニフェスト要求に追加された一部のパラメーターが拡張機能とを示しているという事実を利用 `ID` します `version` 。  静的 XML ファイルの `update URL` 代わりに、すべての拡張機能で同じ機能を使用できます。  すべての拡張機能で同じ機能を使用するには、動的サーバー側コードを実行する URL をポイントしてパラメーター `update URL` をテストします。  
@@ -145,7 +145,7 @@ http://contoso.com/extension_updates.php?x=id%3Daaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 
 ## <a name="advanced-usage-minimum-browser-version"></a>高度な使用法: 最小ブラウザー バージョン  
 
-Microsoft Edge 拡張機能システムの新しい API リリースとして、新しい Microsoft Edge バージョンでのみ動作する拡張機能またはアプリの更新バージョンをリリースできます。  Microsoft Edge が自動的に更新される場合、ほとんどのユーザーが新しいリリースに更新されるまでに数日かかる場合があります。  特定の更新プログラムが特定のバージョンより最新または新しい Microsoft Edge バージョンにのみ適用される場合は、更新マニフェストに属性 `prodversionmin` を追加します。  次のコード スニペットでは、属性の値は、ユーザーが Microsoft Edge 以降を実行している場合にのみ、アプリが自動的にバージョンに `prodversionmin` `3.0.193.0` 更新するように `2.0` `3.0.193.0` 指定します。  
+Microsoft Edge 拡張機能システムの新しい API リリースとして、新しい拡張機能または新しいバージョンでのみ動作する拡張機能またはアプリの更新Microsoft Edgeがあります。  ユーザー Microsoft Edge自動的に更新される場合、ほとんどのユーザーが新しいリリースに更新されるまで数日かかる場合があります。  特定の更新プログラムが特定のバージョンMicrosoft Edgeバージョンよりも新しいバージョンにのみ適用するようにするには、更新マニフェストに属性 `prodversionmin` を追加します。  次のコード スニペットでは、属性の値は、ユーザーが新しいアプリを実行している場合にのみ、アプリが自動的にバージョン `prodversionmin` `3.0.193.0` `2.0` Microsoft Edge `3.0.193.0` 指定します。  
 
 ```xml
 <?xml version='1.0' encoding='UTF-8'?>

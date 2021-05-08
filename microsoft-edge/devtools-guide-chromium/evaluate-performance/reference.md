@@ -1,5 +1,5 @@
 ---
-description: Microsoft Edge DevTools でパフォーマンスを記録および分析するためのすべての方法に関するリファレンス。
+description: DevTools でパフォーマンスを記録および分析するためのすべての方法Microsoft Edge参照。
 title: パフォーマンス分析リファレンス
 author: MSEdgeTeam
 ms.author: msedgedevrel
@@ -30,9 +30,9 @@ ms.locfileid: "11439690"
 
 # <a name="performance-analysis-reference"></a>パフォーマンス分析リファレンス  
 
-このページは、パフォーマンスの分析に関連する Microsoft Edge DevTools 機能の包括的なリファレンスです。  
+このページは、パフォーマンスの分析に関連Microsoft Edge DevTools 機能の包括的なリファレンスです。  
 
-Microsoft [][DevtoolsEvaluatePerformanceGettingStarted] [Edge DevTools][MicrosoftEdgeDevTools]を使用してページのパフォーマンスを分析する方法に関するガイド付きチュートリアルについては、「ランタイム パフォーマンスの分析の開始」に移動します。  
+[DevTools][MicrosoftEdgeDevTools][はじめに][DevtoolsEvaluatePerformanceGettingStarted]を使用してページのパフォーマンスを分析する方法に関するガイド付きチュートリアルについては、「ランタイム パフォーマンスの分析」に移動Microsoft Edgeします。  
 
 ## <a name="record-performance"></a>レコードのパフォーマンス  
 
@@ -92,7 +92,7 @@ DevTools は、ほとんどのアクティビティが発生した記録部分�
 DevTools **がパフォーマンス** 記録をキャプチャする方法に関連するその他の設定を公開するには、[ ![ キャプチャ設定 ](../media/capture-settings-icon.msft.png) \( Capture settings \) を選択します。  
 
 :::image type="complex" source="../media/evaluate-performance-performance-capture-settings-button-open-drawer.msft.png" alt-text="[キャプチャ設定] セクション" lightbox="../media/evaluate-performance-performance-capture-settings-button-open-drawer.msft.png":::
-   [ **キャプチャ設定]** セクション  
+   [**キャプチャ設定]** セクション  
 :::image-end:::  
 
 ### <a name="disable-javascript-samples"></a>JavaScript サンプルを無効にする  
@@ -498,10 +498,10 @@ Network や**Main****** などのセクションを分析する場合、特定�
 ペイント イベントに関する詳細な情報を表示するには、次の方法を実行します。  
 
 1.  [をオンにする](#turn-on-advanced-paint-instrumentation)。  
-1.  メイン セクション **で Paint** イベント **を選択** します。  
+1.  [メイン]**セクションペイント**イベントを**選択**します。  
     
-    :::image type="complex" source="../media/evaluate-performance-paint-profiler.msft.png" alt-text="[ペイント プロファイラー] パネル" lightbox="../media/evaluate-performance-paint-profiler.msft.png":::
-       [ **ペイント プロファイラー]** パネル  
+    :::image type="complex" source="../media/evaluate-performance-paint-profiler.msft.png" alt-text="[ペイントプロファイル] パネル" lightbox="../media/evaluate-performance-paint-profiler.msft.png":::
+       [**プロファイルペイント]** パネル  
     :::image-end:::  
     
 ## <a name="analyze-rendering-performance-with-the-rendering-tool"></a>レンダリング ツールを使用してレンダリングパフォーマンスを分析する  
@@ -528,17 +528,17 @@ Network や**Main****** などのセクションを分析する場合、特定�
        **FPS メーター**  
     :::image-end:::  
     
-### <a name="view-painting-events-in-realtime-with-paint-flashing"></a>ペイント フラッシュを使用してリアルタイムでペイント イベントを表示する  
+### <a name="view-painting-events-in-realtime-with-paint-flashing"></a>フラッシュを使用してリアルタイムでペイント イベントをペイントする  
 
-ページ上のすべてのペイント イベントのリアルタイム ビューを取得するには、ペイント フラッシュを使用します。  ページの一部が再描画されるたびに、DevTools は、そのセクションのアウトラインを緑色で示します。  
+ページペイントすべてのペイント イベントのリアルタイム ビューを取得するには、[フラッシュ] を使用します。  ページの一部が再描画されるたびに、DevTools は、そのセクションのアウトラインを緑色で示します。  
 
-ペイント フラッシュを有効にするには、次のアクションを実行します。  
+フラッシュを有効ペイント、次のアクションを実行します。  
 
 1.  レンダリング ツール **を開** きます。  [レンダリング ツール [を使用してレンダリングパフォーマンスを分析する] に移動します](#analyze-rendering-performance-with-the-rendering-tool)。  
-1.  [フラッシュのペイント **] チェック ボックスをオン** にします。  
+1.  [フラッシュ] チェック**ボックスペイントオン**にします。  
     
-    :::image type="complex" source="../media/evaluate-performance-jank-console-rendering-paint-flashing.msft.png" alt-text="ペイントの点滅" lightbox="../media/evaluate-performance-jank-console-rendering-paint-flashing.msft.png":::
-       **ペイントの点滅**  
+    :::image type="complex" source="../media/evaluate-performance-jank-console-rendering-paint-flashing.msft.png" alt-text="ペイント点滅" lightbox="../media/evaluate-performance-jank-console-rendering-paint-flashing.msft.png":::
+       **ペイント点滅**  
     :::image-end:::  
     
 ### <a name="view-an-overlay-of-layers-with-layer-borders"></a>[レイヤーの罫線] を使用してレイヤーのオーバーレイを表示する  
@@ -576,8 +576,8 @@ DevTools は、teal の潜在的に問題のある要素の概要を示します
 
 <!-- links -->  
 
-[MicrosoftEdgeDevTools]: ../../devtools-guide-chromium/index.md "Microsoft Edge (クロム) 開発者向け|Microsoft Docs"  
-[DevToolsCommandMenu]: ../command-menu/index.md#open-the-command-menu "コマンド メニューを開く - Microsoft Edge DevTools コマンド メニュー を使用してコマンドを実行|Microsoft Docs"  
+[MicrosoftEdgeDevTools]: ../../devtools-guide-chromium/index.md "Microsoft Edge (Chromium) 開発者ツール |Microsoft Docs"  
+[DevToolsCommandMenu]: ../command-menu/index.md#open-the-command-menu "コマンド メニューを開く - DevTools コマンド Microsoft Edgeコマンド メニューを使用してコマンドを実行|Microsoft Docs"  
 [DevtoolsEvaluatePerformanceGettingStarted]: ./index.md "ランタイム パフォーマンス の分析の開始|Microsoft Docs"  
 
 [ActivityTabsDemo]: https://microsoft-edge-chromium-devtools.glitch.me/perf/activitytabs.html "アクティビティ タブのデモ |グリッチ"  

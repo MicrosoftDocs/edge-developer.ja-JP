@@ -1,5 +1,5 @@
 ---
-description: '[設定] から [コンテンツ スクリプトをライブラリ コードとしてマークする] を有効>フレームワーク ライブラリ コードを使用します。'
+description: フレームワーク ライブラリ コードから [コンテンツ スクリプトをライブラリ コードとして設定 >する] を有効にする。
 title: コンテンツ スクリプトをライブラリ コードとしてマークする
 author: MSEdgeTeam
 ms.author: msedgedevrel
@@ -30,10 +30,10 @@ ms.locfileid: "11519346"
 
 # <a name="mark-content-scripts-as-library-code"></a>コンテンツ スクリプトをライブラリ コードとしてマークする  
 
-ソース ツールを使用**して**コードを[][DevToolsJavascriptStepThroughCode]ステップ実行すると、認識できないコードを一時停止する場合があります。  おそらく、インストールした Microsoft Edge 拡張機能のコードを一時停止した可能性があります。  拡張機能コードを一時停止しない場合は、次の操作を実行します。  
+ソース ツールを使用**して**コードを[][DevToolsJavascriptStepThroughCode]ステップ実行すると、認識できないコードを一時停止する場合があります。  おそらく、インストールした拡張機能のいずれかのコードMicrosoft Edge一時停止している可能性があります。  拡張機能コードを一時停止しない場合は、次の操作を実行します。  
 
-1.  DevTools の右上にある歯車アイコン (設定) を選択**します**。  **[設定]** ページが表示されます。  
-1.  [設定 **] の下の**[リストの **無視] を選択します**。  [**設定] の [フレームワーク ライブラリ コード****] セクションが**表示されます。  
+1.  DevTools の右上で、歯車アイコン (設定)**を選択します**。  **[設定]** ページが表示されます。  
+1.  [リスト**設定] の下の**[リストの**無視] を選択します**。  [**フレームワーク ライブラリ コード]** セクション**が設定**されます。  
 1.  [コンテンツ スクリプトを **ライブラリ コードとしてマークする] チェック ボックスをオン** にします。  
     
     :::image type="complex" source="../../media/javascript-settings-library-code-mark-content-scripts-library-code.msft.png" alt-text="[コンテンツ スクリプトをライブラリ コードとしてマークする] チェック ボックスをオンにする" lightbox="../../media/javascript-settings-library-code-mark-content-scripts-library-code.msft.png":::
@@ -46,7 +46,7 @@ ms.locfileid: "11519346"
 
 <!-- links -->  
 
-[DevToolsJavascriptStepThroughCode]: ../index.md#step-4-step-through-the-code "手順 4: コードをステップ実行する - Microsoft Edge DevTools の JavaScript のデバッグの|Microsoft Docs"  
+[DevToolsJavascriptStepThroughCode]: ../index.md#step-4-step-through-the-code "手順 4: コードをステップ実行する - DevTools アプリケーションの JavaScript のデバッグMicrosoft Edge開始|Microsoft Docs"  
 
 > [!NOTE]
 > このページの一部は、 [Google によっ て作成および共有された][GoogleSitePolicies]作業に基づく変更で、「[Creative Commons Attribution 4.0 International License][CCA4IL]」で記載されている条項に従って使用されます。  

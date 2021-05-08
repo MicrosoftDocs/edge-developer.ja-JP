@@ -1,13 +1,13 @@
 ---
 description: WebView2 アプリケーションを管理する方法を理解する
-title: WebView2 アプリケーションを管理する
+title: WebView2 アプリケーションの管理
 author: MSEdgeTeam
 ms.author: msedgedevrel
 ms.date: 09/21/2020
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
-keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Host、browser control、edge html、enterprise、グループポリシー、管理性
+keywords: IWebView2、IWebView2WebView、Webview2、Webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Host、ブラウザー コントロール、エッジ HTML、エンタープライズ、グループ ポリシー、管理性
 ms.openlocfilehash: 1eb8b9dc1637daa8d10004ab8c340fe9ae33e38b
 ms.sourcegitcommit: 24151cc65bad92d751a8e7a868c102e1121456e3
 ms.translationtype: MT
@@ -15,27 +15,27 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 09/22/2020
 ms.locfileid: "11057864"
 ---
-# WebView2 アプリケーションを管理する  
+# WebView2 アプリケーションの管理  
 
-[WebView2][WebView2Landing] は、開発者がアプリケーションを構築するために使用するコンポーネントであり、開発者は、ユーザーデバイスで [自己更新 Evergreen WebView2 ランタイム][Webview2ConceptsDistributionUnderstandRuntimeInstallerPreview] を展開して、アプリの電源を入れている可能性があります。  このドキュメントでは、IT 管理者が WebView2 アプリケーションとランタイムを管理する方法について説明します。  IT の管理者と開発者の両方からのフィードバックは、 [WebView2 フィードバックリポジトリ][GithubMicrosoftedgeWebviewfeddback]で歓迎されます。  
+[WebView2][WebView2Landing] は、開発者がアプリケーションのビルドに使用するコンポーネントであり、開発者はアプリケーションに電力を供給するために、ユーザー デバイスに自己更新 [の Evergreen WebView2 ランタイム][Webview2ConceptsDistributionUnderstandRuntimeInstallerPreview] を展開できます。  このドキュメントでは、IT 管理者が WebView2 アプリケーションとランタイムを管理する方法について説明します。  WEBView2 Feedback repo では、IT 管理者と開発者 [の両方からのフィードバックを歓迎します][GithubMicrosoftedgeWebviewfeddback]。  
 
-## WebView2 のグループポリシー  
+## WebView2 のグループ ポリシー  
 
-IT 管理者は、グループポリシーオブジェクト \ (GPO \) を使って、WebView2 のポリシー設定を構成することができます。  次のポリシーセットは、WebView2 には適用されません。  
+IT 管理者は、グループ ポリシー オブジェクト \(GPO\) を使用して WebView2 のポリシー設定を構成できます。  次の一連のポリシーは、WebView2 には適用できません。  
 
-*   [Microsoft Edge-更新ポリシー][EdgeUpdatePolicies] は、IT 管理者が WebView2 ランタイムのインストールと更新の側面を管理するために使用できます。  Microsoft Edge ブラウザーと WebView2 ランタイムは、同じ更新メカニズムを使用して更新されます。  などのポリシーがチャネル固有のものである場合 `Update` を除き、ブラウザーと WebView2 の両方のランタイムに適用されます。  たとえば、 `UpdateSuppressed` IT 管理者は、ブラウザーと WebView2 の両方のランタイムの自動更新を非表示にするように、その日の間に時間を設定することができます。  これにより、IT 管理者は、ブラウザーと WebView2 ランタイムの両方に対して1回設定とプロキシを構成し、ネットワーク帯域幅やトラフィックを制御することができます。  IT 管理者は [microsoft edge のガイド][ConfigureMicrosoftEdge] に従って Microsoft edge 更新ポリシーを構成することができます。  
-*   [Microsoft Edge-ブラウザーのポリシーは、][EdgeBrowserPolicies] WebView2 アプリケーションには適用されません。  これは、アプリとブラウザーがさまざまなユースケースを持つため、IT 管理者が WebView2 を使用するアプリケーションを認識しない場合があるためです。  WebView2 にブラウザーポリシーを適用すると、意図しない結果が生じることがあります。  たとえば、IT 管理者がブラウザーで JavaScript をブロックし、JavaScript を使っているすべての WebView2 アプリが壊れていることがあります。  
-*   \ (近日中に) WebView2 固有のポリシー– WebView2 では、WebView2 の直接管理が適切である場合に、グループポリシーの小さな追加セットが公開されます。  アプリの開発者は、WebView2 の使用を管理するために、独自のグループポリシーを実装することをお勧めします。 IT 管理者は、WebView2 ではなく、アプリを直接管理できます。  
+*   [Microsoft Edge -][EdgeUpdatePolicies]更新ポリシーは、IT 管理者が WebView2 ランタイムのインストールおよび更新の側面を管理するために使用できます。  ブラウザー Microsoft Edge WebView2 ランタイムは、同じ更新メカニズムを使用して更新されます。  チャネル固有のポリシーがない限り、ブラウザーと `Update` WebView2 ランタイムの両方に適用されます。  たとえば、IT 管理者は、ブラウザーと WebView2 ランタイムの両方の自動更新を抑制するために、毎日の時間を `UpdateSuppressed` 設定できます。  これにより、IT 管理者は、ブラウザーと WebView2 ランタイムの両方の設定とプロキシを 1 回構成して、ネットワーク帯域幅/トラフィックを制御したり、その他の目的で構成することができます。  IT 管理者は、Microsoft Edge[の][ConfigureMicrosoftEdge]ガイドに従って、Microsoft Edgeポリシーを構成できます。  
+*   [Microsoft Edge - ブラウザー ポリシー][EdgeBrowserPolicies]は WebView2 アプリケーションには適用されません。  これは、アプリとブラウザーの使用例が異なって、IT 管理者が WebView2 を使用するアプリケーションを認識していない可能性があるからです。  WebView2 にブラウザー ポリシーを適用すると、意図しない結果が生じ得る可能性があります。  たとえば、IT 管理者はブラウザーで JavaScript をブロックし、JavaScript を使用しているすべての WebView2 アプリが壊れている可能性があります。  
+*   \(Soon\) WebView2 固有のポリシー – WebView2 は、WebView2 の管理が直接理にかなっている場合に、グループ ポリシーの小さな追加セットを公開します。  It 管理者が WebView2 ではなくアプリを直接管理する方が簡単なので、WebView2 の使用を管理するために、アプリ開発者は独自のグループ ポリシーを実装することをお勧めします。  
 
 <!-- Links -->  
 
-[Webview2ConceptsDistributionUnderstandRuntimeInstallerPreview]: ./distribution.md#understanding-the-webview2-runtime "WebView2 Runtime と installer (Preview) を使ったアプリケーションの配布について WebView2 |Microsoft ドキュメント"  
+[Webview2ConceptsDistributionUnderstandRuntimeInstallerPreview]: ./distribution.md#understanding-the-webview2-runtime "WebView2 ランタイムとインストーラー (プレビュー) - WebView2 を使用したアプリケーションの配布について|Microsoft Docs"  
 
-[WebView2Landing]: ../index.md "Microsoft Edge WebView2 の概要 (プレビュー) |Microsoft ドキュメント"  
+[WebView2Landing]: ../index.md "WebView2 Microsoft Edge (プレビュー) の概要|Microsoft Docs"  
 
-[EdgeUpdatePolicies]: /deployedge/microsoft-edge-update-policies "Microsoft Edge-更新プログラムのポリシー |Microsoft ドキュメント"  
-[EdgeBrowserPolicies]: /deployedge/microsoft-edge-policies "Microsoft Edge-ブラウザーのポリシー |Microsoft ドキュメント"  
-[ConfigureMicrosoftEdge]: /deployedge/configure-microsoft-edge "Windows で Microsoft Edge のポリシー設定を構成するMicrosoft ドキュメント"  
+[EdgeUpdatePolicies]: /deployedge/microsoft-edge-update-policies "Microsoft Edge - ポリシーの更新|Microsoft Docs"  
+[EdgeBrowserPolicies]: /deployedge/microsoft-edge-policies "Microsoft Edge - ブラウザー ポリシー|Microsoft Docs"  
+[ConfigureMicrosoftEdge]: /deployedge/configure-microsoft-edge "サーバー Microsoft Edgeポリシー設定を構成Windows |Microsoft Docs"  
 
 
-[GithubMicrosoftedgeWebviewfeddback]: https://github.com/MicrosoftEdge/WebViewFeedback "WebView フィードバック-MicrosoftEdge/WebViewFeedback |GitHub"  
+[GithubMicrosoftedgeWebviewfeddback]: https://github.com/MicrosoftEdge/WebViewFeedback "WebView フィードバック - MicrosoftEdge/WebViewFeedback | GitHub"  

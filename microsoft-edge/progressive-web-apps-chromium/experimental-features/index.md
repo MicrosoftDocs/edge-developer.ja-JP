@@ -1,5 +1,5 @@
 ---
-description: Microsoft Edge for Web Apps の最新の実験的機能
+description: Web Apps の最新のMicrosoft Edge機能
 title: 実験的な機能|プログレッシブ Web アプリ
 author: MSEdgeTeam
 ms.author: msedgedevrel
@@ -16,20 +16,20 @@ ms.locfileid: "11496754"
 ---
 # <a name="experimental-features-in-progressive-web-apps-pwas"></a>プログレッシブ Web アプリ (PWA) の実験的な機能  
 
-Microsoft Edge では、開発中の実験的な機能にアクセスできます。  各機能が準備完了かどうかを確認し、各機能をリリースする場合は、フィードバックを [テストして提供します](#providing-feedback-on-experimental-features)。  
+Microsoft Edge開発中の実験的な機能にアクセスできます。  各機能が準備完了かどうかを確認し、各機能をリリースする場合は、フィードバックを [テストして提供します](#providing-feedback-on-experimental-features)。  
 
-実験的な機能は、Microsoft Edge のすべてのチャネルで利用できますが、最新の実験的機能は Microsoft Edge Canary チャネルでのみ利用できます。  
+実験的な機能は、Microsoft Edgeのすべてのチャネルで使用できますが、最新の実験機能は、Microsoft Edge Canary チャネル でしか使用できません。  
 
 ## <a name="turn-on-experimental-features"></a>実験的な機能を有効にする  
 
-Microsoft Edge で \(or off\) 実験機能を有効にするには、次の手順を実行します。  
+\(or off\) の実験機能をオンにMicrosoft Edge手順を実行します。  
   
 1.  Microsoft Edge を開きます。   
     
     > [!NOTE]
-    > この記事に記載されている実験を含む Microsoft Edge バージョンを使用してください。  [実験機能 [] に移動します](#features-that-are-available-to-test)。  
+    > この記事に記載されている実験Microsoft Edgeバージョンを使用してください。  [実験機能 [] に移動します](#features-that-are-available-to-test)。  
     
-1.  に移動します `edge://flags` 。  
+1.  `edge://flags` に移動します。  
 1.  関連する実験に移動します。  
 1.  実験の説明の横にあるドロップダウン メニューを選択し、[. `Enabled`  
     
@@ -38,7 +38,7 @@ Microsoft Edge で \(or off\) 実験機能を有効にするには、次の手�
     :::image-end:::  
     
     > [!NOTE]
-    > 各実験には、通常、次の値を選択するドロップダウン メニューがあります。  実験機能に実験用のエントリが含めなかった**** 場合は、コマンド ラインを使用してその機能を使用して Microsoft Edge を起動する手順が提供されます。
+    > 各実験には、通常、次の値を選択するドロップダウン メニューがあります。  実験機能に Experiments のエントリが含**** めMicrosoft Edgeコマンド ラインを使用して開始する手順が提供されます。
     > 
     > *   `Default`  
     > *   `Disabled`  
@@ -48,20 +48,20 @@ Microsoft Edge で \(or off\) 実験機能を有効にするには、次の手�
     
 ### <a name="origin-trials"></a>元の試用版  
 
-Microsoft Edge では、特定のドメインまたは Web サイトの機能をテストするためにオリジン試用版を使用する場合があります。  特定の機能を適用するには、Web サイトにオリジン試用版を使用できます。  Web サイトの所有者の場合は、オリジン試用版に登録できます。  オリジン試用版は、Web サイトにアクセスする Microsoft Edge ユーザーの割合に機能を提供します。
+Microsoft Edge、特定のドメインまたは Web サイトの機能をテストするためにオリジン試用版を使用する場合があります。  特定の機能を適用するには、Web サイトにオリジン試用版を使用できます。  Web サイトの所有者の場合は、オリジン試用版に登録できます。  オリジン試用版は、Web サイトにアクセスするユーザー Microsoft Edgeに機能を提供します。
 
-Origin Trials の詳細については [、「Microsoft Edge Origin Trials Developer Console」に移動します][MicrosoftDeveloperMicrosoftEdgeOriginTrials]。  
+Origin Trials の詳細については、「Origin Trials [Developer Console Microsoft Edge」に移動します][MicrosoftDeveloperMicrosoftEdgeOriginTrials]。  
     
 > [!NOTE]
 > 実験的な機能は常に更新され、パフォーマンスの問題を引き起こす可能性があります。  実験機能をオフにする場合は、[実験[](#turn-on-experimental-features)機能を有効にする] に移動し、実験に移動し、[] を選択します `Disabled` 。  
 
 ## <a name="features-that-are-available-to-test"></a>テストに使用できる機能  
 
-次の一覧では、Microsoft Edge でテストおよび検証できる新しい実験的な Web アプリ機能について説明します。  
+次の一覧では、テストおよび検証に使用できる新しい実験的な Web アプリ機能について説明Microsoft Edge。  
 
-| 機能 | Microsoft Edge バージョン | プラットフォーム |  
+| 機能 | Microsoft Edgeバージョン | プラットフォーム |  
 |:--- |:--- |:--- |  
-| [URI プロトコルの処理](#uri-protocol-handling) | 91 以降 | Windows と Linux |    
+| [URI プロトコルの処理](#uri-protocol-handling) | 91 以降 | Windows Linux |    
 | [URL リンクの処理](#url-link-handling) | 91 以降 | Windows|
 | [デスクトップ アプリのウィンドウ コントロール オーバーレイ](#window-controls-overlay-for-installed-desktop-web-apps) | 91 以降 | Windows 10|   
 | [OS ログインで実行する](#run-on-os-login) | 88 以降 | すべて |  
@@ -77,24 +77,24 @@ HTTP または FTP プロトコルを使用して Web ページや Web コンテ
 
 この機能を使用すると、次のアクションを実行できます。  
 
-*   Web アプリのマニフェストを使用して PWA をホスト OS に登録する
-*   PWA が特定の URI プロトコルを処理すると宣言する  
+*   Web アプリPWAを使用してホスト OS に登録する
+*   特定の URI プロトコルPWA処理する方法を宣言する  
      
-プロトコル ハンドラーとして PWA を登録した後、ブラウザーやネイティブ アプリなどの特定のスキームを使用してハイパーリンクを選択すると、登録済みの PWA は OS によってアクティブ化され `mailto://` 、URI を受信します。 `web+music://`  
+PWA をプロトコル ハンドラーとして登録した後、ユーザーがブラウザーやネイティブ アプリなどの特定のスキームを使用してハイパーリンクを選択すると、登録された PWA が OS によってアクティブ化され `mailto://` 、URI を受信します。 `web+music://`  
 
 この機能では、2 つのフィールドを指定する必要がある配列に配列を含める Web アプリ マニフェスト `protocol_handlers` を更新する必要があります。  
 
 *   `protocol`: 要求を処理するプロトコル (たとえば `mailto` `web+jngl` 、または.  
 *   `url`: プロトコルを処理するアプリ スコープ内の HTTPS URI。  今後、プロトコル ハンドラー スキームで始まる URI は、トークンを置き換える予定 `%s` です。  
     
-登録するプロトコルをサポートするためにマニフェストを更新します。  この機能を有効にした後、Microsoft Edge は次のアクションを完了します。  
+登録するプロトコルをサポートするためにマニフェストを更新します。  この機能を有効にした後、Microsoft Edgeを完了します。  
 
 1.  マニフェストの変更を検出する  
 1.  プロトコルのアプリを登録します。  
     
 複数のアプリがプロトコルを登録すると、ユーザーにプロンプトが表示されます。  ユーザーは、OS またはブラウザーによって表示されるリストから適切なアプリを選択します。  
 
-Windows の Microsoft Edge でのプロトコル処理を[](#turn-on-experimental-features)プレビューするには、[実験的な機能を有効にする] に移動し、[**デスクトップ PWA プロトコルの処理] をオンにします**。  
+Microsoft Edge on Windows でプロトコル処理をプレビューするには、[実験的な機能を[](#turn-on-experimental-features)有効にする] に移動し、[デスクトップ PWA**プロトコルの処理] をオンにします**。  
 
 プロトコル ハンドラーでオリジン試用版が実行されている場合の詳細については [、「Register for Web App Protocol Handler Registration」に移動します][MicrosoftDeveloperMicrosoftEdgeOriginTrialsWebAppProtocolHandlerRegistrationRegistration]。  
 
@@ -132,13 +132,13 @@ Windows の Microsoft Edge でのプロトコル処理を[](#turn-on-experimenta
  
 ## <a name="url-link-handling"></a>URL リンクの処理  
 
-統一リソース ロケーター \(URL\) は URI の種類です。  プログレッシブ Web Apps \(PWAs\) が https URI のハンドラーとして登録するときに、より魅力的なエクスペリエンスを作成します。  関連付けられた URI がアクティブ化されると、PWA が起動を要求する場合があります。  たとえば、ユーザーが電子メール メッセージからニュース ストーリーへのリンクを選択した場合です。  リンクのアクティブ化を処理するために、ニュース 記事を表示する関連付けられた PWA が自動的に起動されます。  
+統一リソース ロケーター \(URL\) は URI の種類です。  プログレッシブ Web Apps \(PWAs\) が https URI のハンドラーとして登録するときに、より魅力的なエクスペリエンスを作成します。  関連付けられた URI がアクティブ化されると、PWA が起動を要求する場合があります。  たとえば、ユーザーが電子メール メッセージからニュース ストーリーへのリンクを選択した場合です。  リンクのアクティブPWA処理するために、ニュース 記事を表示する関連付けられたサイトが自動的に起動されます。  
 
-この機能を使用すると、Web アプリ マニフェストを使用してブラウザーに PWA を登録し、ブラウザーが特定のリンクを処理すると宣言できます。  ブラウザーに PWA を登録するには、省略可能なメンバーを `url_handlers` マニフェスト ファイルに追加します。  メンバー `url_handlers` は、アプリが処理する `object[]` URI の原点をグループ分けするメンバーです。  
+この機能を使用すると、web アプリ マニフェストPWAを使用してブラウザーにアプリを登録し、ブラウザーが特定のリンクを処理すると宣言できます。  ブラウザーにPWAを登録するには、省略可能なメンバーをマニフェスト `url_handlers` ファイルに追加します。  メンバー `url_handlers` は、アプリが処理する `object[]` URI の原点をグループ分けするメンバーです。  
 
 リンク処理は、原点にある JSON ファイルを使用してブラウザー `web-app-origin-association` によって検証されます。  オリジン ファイルは、オリジンの含まれるパスまたは除外されたパスをさらに微調整します。  URL ハンドラーのテストに関する詳細な手順については、URL [ハンドラーとして PWA に移動します][GithubWicgPwaUrlHandlerBlobMainExplainerMd]。  
 
-Windows の Microsoft Edge で URL リンク[](#turn-on-experimental-features)処理をプレビューするには、[実験的な機能を有効にする] に移動し、[デスクトップ PWA URL の処理 **] をオンにします**。  
+URL リンクの処理を Microsoft EdgeオンWindowsプレビューするには、[実験的な機能[](#turn-on-experimental-features)を有効にする] に移動し、[デスクトップ の URL 処理] **PWAします**。  
 
 ### <a name="example-of-the-url_handlers-in-the-manifest"></a>マニフェスト内のurl_handlersの例  
 
@@ -170,9 +170,9 @@ Windows の Microsoft Edge で URL リンク[](#turn-on-experimental-features)�
 }
 ```  
 
-PWA は、URI が元の文字列の 1 つと一致する場合に URL 処理の URI と一致し、ブラウザーは、このアプリがそのような URI を処理することに基が同意したと検証します `url_handlers` 。  
+URI PWAが元の文字列の 1 つと一致し、ブラウザーが、このアプリがこのような URI を処理することに同意した場合、URL 処理の URI と一致します。 `url_handlers`  
 
-メンバーには、要求元 PWA の範囲と他の無関係な起点を含むオ `url_handlers` リジンが含まれる。  URI を要求する PWA と同じスコープまたはドメインに制限しない場合、同じコンテンツに異なるドメイン名を使用できますが、同じ PWA で処理できます。  
+メンバーには、要求元のスコープと他の無関係な起点を含むオリジンが含 `url_handlers` PWA。  URI を要求する PWA と同じスコープまたはドメインに制限しない場合、同じコンテンツに異なるドメイン名を使用できますが、同じドメイン名で処理PWA。  
 
 #### <a name="wildcard-matching"></a>ワイルドカードの一致  
 
@@ -191,42 +191,42 @@ PWA は、URI が元の文字列の 1 つと一致する場合に URL 処理の 
     
 オーバーレイを提供すると、Web クライアント領域全体を使用できます。  この機能には、マニフェスト更新プログラムが含まれています。  コンテンツの配置に役立つオーバーレイのサイズと位置を決定する方法を提供します。  
 
-Microsoft Edge for Windows 10 のウィンドウ コントロール オーバーレイ[](#turn-on-experimental-features)をプレビューするには、[実験機能を有効にする] に移動し、[デスクトップ PWA ウィンドウ コントロール オーバーレイ]**に移動します**。   
+ウィンドウ コントロール オーバーレイを Microsoft Edge Windows 10プレビューするには、[実験機能を有効にする][](#turn-on-experimental-features)に移動し、[デスクトップ コントロール] ウィンドウ PWA オーバーレイ]**に移動します**。   
 
 ### <a name="examples-of-title-bar-area-customization"></a>タイトル バー領域のカスタマイズの例  
 
-この機能は、ネイティブ アプリでタイトル バーをカスタマイズする機能に基づいて行います。  重要なアプリのアクションや通知用にタイトル バーをカスタマイズできます。  Microsoft Visual Studioおよび Microsoft Teams の次の例を確認します。  
+この機能は、ネイティブ アプリでタイトル バーをカスタマイズする機能に基づいて行います。  重要なアプリのアクションや通知用にタイトル バーをカスタマイズできます。  コードとコードの次の例Microsoft Visual Studio確認Microsoft Teams。  
 
 #### <a name="visual-studio-code"></a>Visual Studio Code  
 
-Microsoft Visual Studio コードは、複数のデスクトップ プラットフォームに組み込む、電子で構築された一般的なエディターです。  
+Microsoft Visual StudioCode は、複数のデスクトップ プラットフォームに組み込む、電子を基に構築された一般的なエディターです。  
 
-次の使用例は、Visual Studio コードがタイトル バーを使用して使用可能な画面の不動産を最大化して、現在のファイル名とトップ レベルのメニュー構造をタイトル バーに含める方法を表示します。  
+次の使用例は、Visual Studio Codeバーを使用して使用可能な画面の不動産を最大化して、現在のファイル名とトップ レベルのメニュー構造をタイトル バーに含める方法を表示します。  
 
-:::image type="complex" source="../media/visual-studio-code-title-customization.png" alt-text="コード内のタイトル バー Visual Studio例" lightbox="../media/visual-studio-code-title-customization.png":::
-   コード内のタイトル バー Visual Studio例  
+:::image type="complex" source="../media/visual-studio-code-title-customization.png" alt-text="グラフ内のタイトル バーのVisual Studio Code" lightbox="../media/visual-studio-code-title-customization.png":::
+   グラフ内のタイトル バーのVisual Studio Code  
 :::image-end:::  
 
 #### <a name="microsoft-teams"></a>Microsoft Teams  
 
-Workplace のコラボレーションとコミュニケーション ツール Microsoft Teams も、電子を使用して構築され、複数のデスクトップ プラットフォームで利用できます。  次の例では、Microsoft Teams が表示 `back` `forward` され、ナビゲーション ボタン、検索ボックス、およびユーザー プロファイル コントロールが表示されます。  
+また、職場での共同作業とコミュニケーション ツールMicrosoft Teams、電子を使用して構築され、複数のデスクトップ プラットフォームで利用できます。  次の例では、Microsoft Teamsナビゲーション ボタン、検索ボックス、および `back` `forward` ユーザー プロファイル コントロールを表示します。  
 
-:::image type="complex" source="../media/teams-title-customization.png" alt-text="Microsoft Teams のタイトル バーの例" lightbox="../media/teams-title-customization.png":::
-   Microsoft Teams のタイトル バーの例  
+:::image type="complex" source="../media/teams-title-customization.png" alt-text="グラフ内のタイトル バーのMicrosoft Teams" lightbox="../media/teams-title-customization.png":::
+   グラフ内のタイトル バーのMicrosoft Teams  
 :::image-end:::  
 
 ### <a name="overlay-window-controls-on-a-frameless-window"></a>フレームレス ウィンドウのオーバーレイ ウィンドウ コントロール  
 
-Web コンテンツのアドレス指定可能領域を最大化するために、ブラウザーはフレームレス ウィンドウを作成します。  フレームレス ウィンドウは、オーバーレイとして提供されるウィンドウ コントロールを除き、すべてのブラウザー UI を削除します。  ウィンドウ コントロールのオーバーレイを使用すると、ユーザーはアプリを最小化、最大化、復元、閉じ続けます。  また、Web アプリ メニューを使用して関連するブラウザー コントロールにアクセスすることもできます。  クロム ベースのブラウザーの場合、オーバーレイには次のコントロールが含まれます。  
+Web コンテンツのアドレス指定可能領域を最大化するために、ブラウザーはフレームレス ウィンドウを作成します。  フレームレス ウィンドウは、オーバーレイとして提供されるウィンドウ コントロールを除き、すべてのブラウザー UI を削除します。  ウィンドウ コントロールのオーバーレイを使用すると、ユーザーはアプリを最小化、最大化、復元、閉じ続けます。  また、Web アプリ メニューを使用して関連するブラウザー コントロールにアクセスすることもできます。  このChromiumブラウザーの場合、オーバーレイには次のコントロールが含まれます。  
 
 *   ドラッグ可能な領域の各ウィンドウ コントロール ボタンの幅と高さが同じ  
-*   [ **設定] および [その他** ] \(...\) ボタン  
+*   **[設定**\(...\) ボタン  
 *   ウィンドウ コントロール ボタンを最小化、最大化、復元、閉じる  
     
 前に示したコントロールに加え、オーバーレイに表示される UI は、次のシナリオで動的にサイズ変更されます。  
 
-*   インストールされている Web アプリが起動すると、Web ページの原点が [設定]**** メニューの左側に表示され、さらに \(...\) メニューが数秒表示され、その後消えます。  
-*   ユーザーが [設定] メニューおよび **[その** 他の \(...\)] メニューを使用して拡張機能を操作すると、拡張機能のアイコンが 3 ドット メニューの左側のオーバーレイに表示されます。  拡張機能ダイアログを終了すると、アイコンはオーバーレイから削除されます。  
+*   インストールされている Web アプリが起動すると **、web**ページの原点が 設定 以降の \(...\) メニューの左側に数秒間表示され、その後消えます。  
+*   ユーザーが 設定 以上の \(...\) メニューを使用して拡張機能を操作すると、拡張機能のアイコンが 3 ドット メニューの左側のオーバーレイに表示されます。 ****  拡張機能ダイアログを終了すると、アイコンはオーバーレイから削除されます。  
     
 | 言語の方向 | オーバーレイの場所 | 詳細 |  
 |:--- |:--- |:--- |  
@@ -272,8 +272,8 @@ JavaScript API の他に、CSS を使用してコントロール オーバーレ
 
 次の使用例は、新しい機能がカスタム タイトル バーを持つ Web アプリを作成する方法を表示します。  
 
-:::image type="complex" source="../media/teams-title-customization-example.png" alt-text="Microsoft Teams のカスタム タイトル バーの例" lightbox="../media/teams-title-customization-example.png":::
-   Microsoft Teams のカスタム タイトル バーの例  
+:::image type="complex" source="../media/teams-title-customization-example.png" alt-text="ユーザー設定のタイトル バーのMicrosoft Teams" lightbox="../media/teams-title-customization-example.png":::
+   ユーザー設定のタイトル バーのMicrosoft Teams  
 :::image-end:::  
 
 #### <a name="manifestwebmanifest"></a>manifest.webmanifest  
@@ -487,14 +487,14 @@ body {
 
 ## <a name="run-on-os-login"></a>[OS ログイン時に実行]  
 
-この機能を使用すると、ユーザーが Microsoft Windows にログインするときに自動的に起動するアプリを構成できます。  いくつかのクラスのアプリは、この機能を利用します。  アプリのクラスには、メール、チャット、監視ダッシュボード、リアルタイムデータ表示アプリが含まれます。  この機能を使用すると、ユーザーが OS にログインするとすぐにアプリに参加できます。  この機能は、手動で起動するのと同じ方法で PWA を自動的に開始します。  
+この機能を使用すると、ユーザーが Microsoft にログインすると自動的に起動Windows。  いくつかのクラスのアプリは、この機能を利用します。  アプリのクラスには、メール、チャット、監視ダッシュボード、リアルタイムデータ表示アプリが含まれます。  この機能を使用すると、ユーザーが OS にログインするとすぐにアプリに参加できます。  この機能は、手動でPWA同じ方法で自動的に起動します。  
 
 > [!IMPORTANT]
 > **[OS ログインで実行] は** 強力 [な機能です][GithubW3cPermissionsPowerfulFeature]。  ユーザーは、インストールされている Web アプリの機能を有効にするかどうかを決定する必要があります。  
 
 ### <a name="turn-on-run-on-os-login"></a>[OS ログイン時に実行] をオンにする  
 
-PWA の**Run On OS Login**機能をプレビュー[](#turn-on-experimental-features)するには、[実験的な機能を有効にする] に移動し、OS ログインでデスクトップ**PWA を実行します**。  
+コンピューターの**Run On OS Login**機能をプレビューするにはPWAに移動[](#turn-on-experimental-features)して、実験的な機能を有効にし、OS ログイン時に実行するデスクトップ**PWA を有効にしてください**。  
 
 :::image type="complex" source="../media/desktop-pwas-run-on-os-login-flag.png" alt-text="OS Login 実験で実行するデスクトップ PWA を有効にする" lightbox="../media/desktop-pwas-run-on-os-login-flag.png":::
    OS ログイン実験 **でデスクトップ PWA の実行を有効** にする  
@@ -502,28 +502,28 @@ PWA の**Run On OS Login**機能をプレビュー[](#turn-on-experimental-featu
 
 ### <a name="turn-on-the-feature-for-the-installed-web-app"></a>インストールされている Web アプリの機能を有効にする  
 
-インストールされている `Start app when you sign in` PWA の機能を有効にするには、 
+インストールされているデバイスの `Start app when you sign in` 機能を有効PWA 
 
 1.  Microsoft Edge を開きます。   
-1.  に移動します `edge://apps` 。  
+1.  `edge://apps` に移動します。  
 1.  アプリにカーソルを合わせる。  
 1.  コンテキスト メニュー \(右クリック\) を開き、サインイン時に [アプリの起動 **] を選択します**。  
     
-    :::image type="complex" source="../media/turn-on-run-on-os-login-flag.png" alt-text="Microsoft Edge の機能にサインインするときに、コンテキスト メニューを使用してスタート アプリを有効にする" lightbox="../media/turn-on-run-on-os-login-flag.png":::
-       Microsoft Edge の機能にサインインするときに、コンテキスト メニューを使用してスタート **アプリを** 有効にする  
+    :::image type="complex" source="../media/turn-on-run-on-os-login-flag.png" alt-text="コンテキスト メニューを使用して、アプリにサインインするときにスタート アプリを有効Microsoft Edge" lightbox="../media/turn-on-run-on-os-login-flag.png":::
+       コンテキスト メニューを使用して、アプリにサインインするときにスタート アプリを**有効Microsoft Edge**  
     :::image-end:::  
     
 ## <a name="shortcuts"></a>ショートカット  
 
-`Shortcuts` はマニフェスト ファイルの新しいメンバーです。  これにより、Web アプリ内のパーツ、キー Web ページ、またはアクションへのリンクを定義できます。  Microsoft Windows は、ジャンプリスト **として統合します**。  **ジャンプリストは、** 次のいずれかの UI 要素で表示されるポップアップ メニューを定義し、コンテキスト メニュー \(右クリック\) を開きます。  
+`Shortcuts` はマニフェスト ファイルの新しいメンバーです。  これにより、Web アプリ内のパーツ、キー Web ページ、またはアクションへのリンクを定義できます。  Microsoft Windows **Jumplists として統合します**。  **ジャンプリストは、** 次のいずれかの UI 要素で表示されるポップアップ メニューを定義し、コンテキスト メニュー \(右クリック\) を開きます。  
 
 *   スタート メニューのタイル  
 *   タスク バーのアイコン  
     
 ユーザーがショートカットを呼び出すと、ユーザーはショートカットのメンバーによって指定された `url` アドレスに移動します。  
   
-:::image type="complex" source="../media/jumplists-on-windows-10.png" alt-text="Windows 10 のジャンプリストの例" lightbox="../media/jumplists-on-windows-10.png":::
-   Windows 10 **のジャンプリスト** の例  
+:::image type="complex" source="../media/jumplists-on-windows-10.png" alt-text="ユーザーのジャンプリストのWindows 10" lightbox="../media/jumplists-on-windows-10.png":::
+   ユーザーの**ジャンプリスト**のWindows 10  
 :::image-end:::  
 
 ### <a name="shortcuts-in-the-manifest-file"></a>マニフェスト ファイルのショートカット  
@@ -562,26 +562,26 @@ PWA の**Run On OS Login**機能をプレビュー[](#turn-on-experimental-featu
 
 ファイルの種類ハンドラーとして登録する機能は、実験段階です。  マニフェスト エントリでアプリが処理するファイルの種類を指定できます。  インストール中に、ユーザーのホスト OS は、アプリをリストされたファイルの種類のファイル ハンドラーとして登録します。  アプリのスタートアップ コードに機能が存在し、その機能が `launchQueue` ファイルを処理する必要があります。  
 
-クロム ベースのブラウザーでは、この機能のテストと整形を行っています。  コード例を含む詳細については、「Web アプリケーションをファイル ハンドラー [に設定する」に移動します][WebDevFileHandling]。  
+Chromiumベースのブラウザーでは、この機能のテストと整形を行っています。  コード例を含む詳細については、「Web アプリケーションをファイル ハンドラー [に設定する」に移動します][WebDevFileHandling]。  
 
-Microsoft Edge for Windows 10 でファイル処理[](#turn-on-experimental-features)をプレビューするには、[実験的な機能を有効にする] に移動し、[ファイル処理**API] をオンにします**。  
+ファイル処理をプレビューするには、[Microsoft Edge] Windows 10[実験機能を有効にする[](#turn-on-experimental-features)] に移動し、[ファイル処理**API] をオンにします**。  
     
 ## <a name="providing-feedback-on-experimental-features"></a>実験的な機能に関するフィードバックの提供  
 
-Microsoft Edge Web アプリの実験に関するフィードバックを提供する。  
+Web アプリの実験に関Microsoft Edgeフィードバックを提供する。  
 
-*   [設定] および [ **その他]** \( \) を使用してフィードバックを送信 `...` >フィードバックを **Microsoft に送信します**。  
+*   Microsoft にフィードバック**を送信設定**\( \) を使用> `...` **フィードバックを送信します**。  
 *   を選択します `Alt` + `Shift` + `I` 。  
     
-:::image type="complex" source="../media/send-feedback-from-progressive-web-app.png" alt-text="PWA からフィードバックを送信する" lightbox="../media/send-feedback-from-progressive-web-app.png":::
-   PWA からフィードバックを送信する  
+:::image type="complex" source="../media/send-feedback-from-progressive-web-app.png" alt-text="[フィードバックを送信する] PWA" lightbox="../media/send-feedback-from-progressive-web-app.png":::
+   [フィードバックを送信する] PWA  
 :::image-end:::  
 
 <!-- links -->  
 
 [MicrosoftEdgeMain]: https://www.microsoft.com/edge "Microsoft Edge"  
 
-[MicrosoftDeveloperMicrosoftEdgeOriginTrials]: https://developer.microsoft.com/microsoft-edge/origin-trials "Origin Trials |Microsoft Edge 開発者"  
+[MicrosoftDeveloperMicrosoftEdgeOriginTrials]: https://developer.microsoft.com/microsoft-edge/origin-trials "Origin Trials |Microsoft Edge開発者"  
 [MicrosoftDeveloperMicrosoftEdgeOriginTrialsWebAppProtocolHandlerRegistrationRegistration]: https://developer.microsoft.com/microsoft-edge/origin-trials/web-app-protocol-handler-registration/registration "Web アプリ プロトコル ハンドラー登録の登録|Microsoft 開発者"  
 
 [MdnDocsWebApiNavigatorRegisterprotocolhandlerWebBasedProtocolHandlers]: https://developer.mozilla.org/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers "Web ベースのプロトコル ハンドラー|MDN"  

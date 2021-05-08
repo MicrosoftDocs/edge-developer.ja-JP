@@ -1,5 +1,5 @@
 ---
-description: エッジ (クロム) 拡張機能のエンタープライズ ポリシードキュメント。
+description: Enterprise (Chromium) 拡張機能のポリシー ドキュメントを参照してください。
 title: 一致パターン
 author: MSEdgeTeam
 ms.author: msedgedevrel
@@ -65,7 +65,7 @@ ms.locfileid: "11461249"
 
 | パターンが悪い | それが悪い理由 |  
 |:--- |:--- |  
-| `http://www.foo.com` | × `_path_` |  
+| `http://www.foo.com` | なし `_path_` |  
 | `http://*foo/bar` | ホスト `*` 内の ' ' は、 ' または `.` ' の後にのみ続 `/` くことができます。 |  
 | `http://foo.*.bar/baz` | ' ' `*` が ' の場合 `_host_` は、最初の文字である必要があります |  
 | `http:/bar` | 区切り `_scheme_` 記号 \(' `/` ' が見つからない場合は" `//` "\) |  

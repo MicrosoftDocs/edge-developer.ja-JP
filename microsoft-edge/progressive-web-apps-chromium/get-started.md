@@ -1,5 +1,5 @@
 ---
-description: このガイドでは、Windows でプログレッシブ Web アプリ (Chromium) を構築するための PWA の基本とツールの概要を説明します。
+description: このガイドでは、PWAにプログレッシブ Web アプリ (Chromium) をWindows。
 title: プログレッシブ Web アプリ (Chromium) の使用を開始する
 author: MSEdgeTeam
 ms.author: msedgedevrel
@@ -16,16 +16,16 @@ ms.locfileid: "11480196"
 ---
 # <a name="get-started-with-progressive-web-apps-chromium"></a>プログレッシブ Web アプリ (Chromium) の使用を開始する  
 
-プログレッシブ Web アプリ \(PWAs\) は、段階的に拡張される [Web アプリです][WikiProgressiveEnhancement]。  プログレッシブ機能拡張には、インストール、オフライン サポート、プッシュ通知などのアプリのような機能が含まれます。  PWA をアプリ ストア用にパッケージ化することもできます。  可能なアプリ ストアには、Microsoft Store、Google Play、Mac App Store などがあります。  Microsoft Store は、Windows 10 に組み込みの商用アプリ ストアです。  
+プログレッシブ Web アプリ \(PWAs\) は、段階的に拡張される [Web アプリです][WikiProgressiveEnhancement]。  プログレッシブ機能拡張には、インストール、オフライン サポート、プッシュ通知などのアプリのような機能が含まれます。  アプリ ストア用にPWAパッケージ化することもできます。  可能なアプリ ストアには、Microsoft Store、Google Play、Mac App Store などです。  このMicrosoft Storeは、アプリに組み込Windows 10。  
 
-次のガイドでは、簡単な Web アプリを作成し、PWA として拡張することで、PWA の基本の概要を説明します。  完成したプロジェクトは、最新のブラウザーで動作します。  
+次のガイドでは、簡単な web アプリPWAを作成し、アプリとして拡張することで、基本の概要をPWA。  完成したプロジェクトは、最新のブラウザーで動作します。  
 
 > [!TIP]
-> [PWABuilder を使用して][PwaBuilder]、新しい PWA の作成、既存の PWA の強化、またはアプリ ストア用の PWA のパッケージ化を行います。  
+> [PWABuilder を][PwaBuilder]使用して、新しいPWAを作成したり、既存のPWAを強化したり、アプリ ストアPWAパッケージ化することができます。  
 
 ## <a name="prerequisites"></a>前提条件  
 
-*   PWA [Visual Studioコード][VisualstudioCodeMain] を編集するには、[コード] を使用します。  
+*   ソース[Visual Studio Code][VisualstudioCodeMain]を編集するには、PWAを使用します。  
 *   ローカル [Node.js][NodejsMain] サーバーとして使用します。  
     
 ## <a name="create-a-basic-web-app"></a>基本的な Web アプリを作成する  
@@ -52,23 +52,23 @@ npm start
 
 次に、新 `http://localhost:3000` しい Web アプリを参照して表示します。  
 
-:::image type="complex" source="./media/visual-studio-nodejs-express-index.png" alt-text="localhost で新しい PWA を実行する" lightbox="./media/visual-studio-nodejs-express-index.png":::
-   localhost で新しい PWA を実行する  
+:::image type="complex" source="./media/visual-studio-nodejs-express-index.png" alt-text="localhost で新PWAを実行する" lightbox="./media/visual-studio-nodejs-express-index.png":::
+   localhost で新PWAを実行する  
 :::image-end:::  
 
-## <a name="get-started-building-a-pwa"></a>PWA の構築を開始する  
+## <a name="get-started-building-a-pwa"></a>新しいファイルの作成をPWA  
 
-簡単な Web アプリが作成されたので、PWA として拡張するには、PWA の 3 つの要件を追加します。<!--[3 requirements for PWAs][ArchiveMicrosoftEdgeLegacyDeveloperPWAsIndexRequirements]-->: [HTTPS](#step-1---use-https) [、Web アプリ マニフェスト、](#step-2---create-a-web-app-manifest)および [サービス ワーカー](#step-3---add-a-service-worker)。  
+簡単な Web アプリが作成されたので、PWA の 3 つの要件PWAを追加して、アプリを拡張します。<!--[3 requirements for PWAs][ArchiveMicrosoftEdgeLegacyDeveloperPWAsIndexRequirements]-->: [HTTPS](#step-1---use-https) [、Web アプリ マニフェスト、](#step-2---create-a-web-app-manifest)および [サービス ワーカー](#step-3---add-a-service-worker)。  
 
 ### <a name="step-1---use-https"></a>手順 1 - HTTPS を使用する  
 
-PWA プラットフォームの主要な部分 [(Service Workers][MDNServiceWorkerApi]など) では、HTTPS の使用が必要です。  PWA が公開された場合は、HTTPS URL に発行する必要があります。  
+サービス ワーカーなどのPWAプラットフォームの主要な部分では、HTTPS の使用が必要です。 [][MDNServiceWorkerApi]  サーバーがPWA、HTTPS URL に発行する必要があります。  
 
-デバッグの目的で、Microsoft Edge では `http://localhost` PWA API の使用も許可されています。  
+デバッグの目的で、Microsoft Edge API を `http://localhost` 使用PWAできます。  
 
-[Web アプリをライブ サイトとして公開します][VisualStudioNodejsTutorialPublishAzureAppService]が、サーバーが HTTPS 用に構成されていることを確認します。  たとえば、Azure 無料アカウント [を作成できます][AzureCreateFreeAccount]。  Microsoft Azure App Service で [サイトをホスト][AzureWebApps] すると、既定で HTTPS 経由で提供されます。  
+[Web アプリをライブ サイトとして公開します][VisualStudioNodejsTutorialPublishAzureAppService]が、サーバーが HTTPS 用に構成されていることを確認します。  たとえば、Azure 無料アカウント [を作成できます][AzureCreateFreeAccount]。  サイトをアプリ サービスMicrosoft Azure[ホスト][AzureWebApps]し、既定では HTTPS 経由で提供されます。  
 
-次のガイドでは `http://localhost` 、PWA をビルドするために使用します。  
+次のガイドでは、アプリケーション `http://localhost` のビルドに使用PWA。  
 
 ### <a name="step-2---create-a-web-app-manifest"></a>手順 2 - Web アプリ マニフェストを作成する  
 
@@ -76,7 +76,7 @@ PWA プラットフォームの主要な部分 [(Service Workers][MDNServiceWork
 
 アプリ マニフェストを Web アプリに追加するには、次の方法を実行します。  
 
-1.  [Visual Studio] で、[**ファイル**を開くフォルダー]  >  **を**選択し、前に作成 `MySamplePwa` したディレクトリを選択します。  
+1.  [Visual Studio Code] で、[**ファイル**を開くフォルダー]  >  **を**選択し、前に作成 `MySamplePwa` したディレクトリを選択します。  
 1.  選択 `Ctrl` + `N` して新しいファイルを作成し、次のコード スニペットに貼り付けます。  
     
     ```json
@@ -101,7 +101,7 @@ PWA プラットフォームの主要な部分 [(Service Workers][MDNServiceWork
     
 1.  ファイルをとして保存します `/MySamplePwa/public/manifest.json` 。  
 1.  にという名前の 512x512 アプリ アイコン イメージを追加 `icon512.png` します `/MySamplePwa/public/images` 。  サンプル イメージは、 [テストの目的](./media/progressive-web-app.png) で使用できます。  
-1.  [コードVisual Studio開き `/public/index.html` 、タグ内に次のコード スニペットを追加 `<head>` します。  
+1.  [Visual Studio Code] を開 `/public/index.html` き、タグ内に次のコード スニペットを追加 `<head>` します。  
     
     ```html
     <link rel="manifest" href="/manifest.json">
@@ -111,7 +111,7 @@ PWA プラットフォームの主要な部分 [(Service Workers][MDNServiceWork
 
 サービス ワーカーは、PWA の主要なテクノロジであり、オフライン サポート、高度なキャッシュ、以前はネイティブ アプリに限定されたバックグラウンド タスクの実行など、シナリオを可能にします。  
 
-サービス ワーカーは、Web アプリからネットワーク要求を傍受するバックグラウンド タスクです。  サービス ワーカーは、PWA が実行されていない場合でもタスクを完了します。  タスクには、次のアクションが含まれます。  
+サービス ワーカーは、Web アプリからネットワーク要求を傍受するバックグラウンド タスクです。  サービス ワーカーは、タスクが実行されていない場合でもPWAを実行します。  タスクには、次のアクションが含まれます。  
 
 *   キャッシュから要求されたリソースを提供する  
 *   プッシュ通知の送信  
@@ -121,7 +121,7 @@ PWA プラットフォームの主要な部分 [(Service Workers][MDNServiceWork
     
 サービス ワーカーは特別な JavaScript ファイルで定義されます。  詳細については、「サービス ワーカーとサービス ワーカー API[の使用][MDNUsingServiceWorkers][」に移動します][MDNServiceWorkerApi]。  
 
-プロジェクトでサービス ワーカーを構築するには、PWA Builder の **キャッシュファースト ネットワーク** サービス ワーカー レシピ [を使用します][PwaBuilderServiceWorker]。  
+プロジェクトでサービス ワーカーを作成するには、キャッシュ**** 先のネットワーク サービス ワーカー[レシピ][PwaBuilderServiceWorker]を使用します。このPWAします。  
 
 1.  [キャッシュ] [pwabuilder.com/serviceworker、][PwaBuilderServiceWorker]キャッシュ ファースト ネットワーク サービス ワーカーを **選択** し、[ダウンロード] ボタン **を選択** します。  ダウンロードしたファイルには、次のファイルが含まれます。
     
@@ -129,7 +129,7 @@ PWA プラットフォームの主要な部分 [(Service Workers][MDNServiceWork
     *   `pwabuilder-sw.js`  
         
 1.  ダウンロードしたファイルを Web アプリ `public` プロジェクトのフォルダーにコピーします。  
-1.  [Visual Studioコード] で、次のコード スニペットを開 `/public/index.html` いてタグ内に追加 `<head>` します。  
+1.  このVisual Studio Code、タグ `/public/index.html` 内で次のコード スニペットを開いて追加 `<head>` します。  
     
     ```html
     <script type="module" src="/pwabuilder-sw-register.js"></script>
@@ -145,31 +145,31 @@ PWA プラットフォームの主要な部分 [(Service Workers][MDNServiceWork
     npm start
     ```
     
-1.  Microsoft Edge で、Microsoft Edge `F12` DevTools を開く場合に選択します。  [ **アプリケーション]** を選択し **、[サービス ワーカー] を選択** してサービス ワーカーを表示します。  サービス ワーカーが表示されない場合は、ページを更新します。  
+1.  [Microsoft Edge] で `F12` 、[DevTools] をMicrosoft Edgeします。  [ **アプリケーション]** を選択し **、[サービス ワーカー] を選択** してサービス ワーカーを表示します。  サービス ワーカーが表示されない場合は、ページを更新します。  
     
-    :::image type="complex" source="./media/devtools-sw-overview.png" alt-text="Microsoft Edge DevTools Service Worker の概要" lightbox="./media/devtools-sw-overview.png":::
-       Microsoft Edge DevTools Service Worker の概要  
+    :::image type="complex" source="./media/devtools-sw-overview.png" alt-text="Microsoft EdgeDevTools サービス ワーカーの概要" lightbox="./media/devtools-sw-overview.png":::
+       Microsoft EdgeDevTools サービス ワーカーの概要  
     :::image-end:::  
     
-1.  [キャッシュ ストレージ] を展開してサービス ワーカー キャッシュを **表示** し **、[pwabuilder-precache] を選択します**。  サービス ワーカーによってキャッシュされたリソースはすべて表示されます。  サービス ワーカーによってキャッシュされるリソースには、アプリ アイコン、アプリ マニフェスト、CSS、および JavaScript ファイルが含まれます。  
+1.  [キャッシュ] を展開してサービス ワーカー キャッシュを表示**Storage** **pwabuilder-precache を選択します**。  サービス ワーカーによってキャッシュされたリソースはすべて表示されます。  サービス ワーカーによってキャッシュされるリソースには、アプリ アイコン、アプリ マニフェスト、CSS、および JavaScript ファイルが含まれます。  
     
-    :::image type="complex" source="./media/devtools-cache.png" alt-text="Microsoft Edge DevTools のサービス ワーカー キャッシュ" lightbox="./media/devtools-cache.png":::
-       Microsoft Edge DevTools \(F12\) のサービス ワーカー キャッシュ  
+    :::image type="complex" source="./media/devtools-cache.png" alt-text="DevTools のサービス ワーカー キャッシュMicrosoft Edgeキャッシュ" lightbox="./media/devtools-cache.png":::
+       DevTools \(F12\) のサービス ワーカー キャッシュMicrosoft Edge DevTools \(F12\)  
     :::image-end:::  
     
-1.  オフライン アプリとして PWA を試してみてください。  Microsoft Edge DevTools \( `F12` \) で、[ **ネットワーク** ] を選択し、[オンライン] 状態 **を [オフライン** ] に **変更します**。  
+1.  オフライン アプリPWAを試してみてください。  Microsoft Edge DevTools \( \( \) で、[ネットワーク] を選択し、[オンライン] の状態 `F12` **を [オフライン**] に**変更します**。 ****  
     
-    :::image type="complex" source="./media/devtools-offline.png" alt-text="Microsoft Edge DevTools でアプリをオフライン モードに設定する" lightbox="./media/devtools-offline.png":::
-       Microsoft Edge DevTools でアプリをオフライン モードに設定する  
+    :::image type="complex" source="./media/devtools-offline.png" alt-text="DevTools でアプリをオフライン モードMicrosoft Edgeする" lightbox="./media/devtools-offline.png":::
+       DevTools でアプリをオフライン モードMicrosoft Edgeする  
     :::image-end:::  
     
 1.  アプリを更新すると、キャッシュからアプリのリソースを提供するためのオフライン メカニズムが表示されます。  
     
-    :::image type="complex" source="./media/visual-studio-nodejs-express-index.png" alt-text="オフラインで実行されている PWA" lightbox="./media/visual-studio-nodejs-express-index.png":::
-       オフラインで実行されている PWA  
+    :::image type="complex" source="./media/visual-studio-nodejs-express-index.png" alt-text="PWAを実行する方法" lightbox="./media/visual-studio-nodejs-express-index.png":::
+       PWAを実行する方法  
     :::image-end:::  
     
-## <a name="add-push-notifications-to-your-pwa"></a>PWA にプッシュ通知を追加する  
+## <a name="add-push-notifications-to-your-pwa"></a>プッシュ通知をアプリに追加PWA  
 
 プッシュ通知をサポートする PWA を作成するには、次のタスクを実行します。  
 
@@ -182,11 +182,11 @@ Service Workers と同様に、プッシュ通知 API は標準ベースの API 
 
 ### <a name="step-1---generate-vapid-keys"></a>手順 1 - VAPID キーを生成する  
 
-PWA クライアントにプッシュ メッセージを送信するには、プッシュ通知に VAPID \(Voluntary Application Server IDENTIFICATION\) キーが必要です。  オンラインで使用可能な VAPID キー ジェネレーターは複数あります[][VapidkeysMain](たとえば、\vapidkeys.com)。  生成後、公開キーとプライベート キーを含む JSON オブジェクトを取得する必要があります。  次のチュートリアルの後の手順のキーを保存します。  VAPID と WebPush の詳細については、Mozilla Push Service を使用して識別された [WebPush 通知の送信に移動します][MozillaServicesSendingVapidWebPushNotificationsPush]。  
+プッシュ通知では、クライアントにプッシュ メッセージを送信するには、VAPID \(Voluntary Application Server IDENTIFICATION\) キーがPWAされます。  オンラインで使用可能な VAPID キー ジェネレーターは複数あります[][VapidkeysMain](たとえば、\vapidkeys.com)。  生成後、公開キーとプライベート キーを含む JSON オブジェクトを取得する必要があります。  次のチュートリアルの後の手順のキーを保存します。  VAPID と WebPush の詳細については、Mozilla Push Service を使用して識別された [WebPush 通知の送信に移動します][MozillaServicesSendingVapidWebPushNotificationsPush]。  
 
 ### <a name="step-2---subscribe-to-push-notifications"></a>手順 2 - プッシュ通知をサブスクライブする  
 
-サービス ワーカーは、PWA でプッシュ イベントとトースト通知のやり取りを処理します。  PWA をサーバープッシュ通知にサブスクライブするには、次の条件を満たしてください。  
+サービス ワーカーは、プッシュ イベントとトースト通知のやり取りを、PWA。  PWA をサーバープッシュ通知にサブスクライブするには、次の条件を満たしてください。  
 
 *   PWA がインストール、アクティブ、および登録されている  
 *   サブスクリプション タスクを完了するコードは、PWA のメイン UI スレッド上にある  

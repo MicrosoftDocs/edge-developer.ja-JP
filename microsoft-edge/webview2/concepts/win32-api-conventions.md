@@ -3,17 +3,17 @@ description: Win32 C++ WebView2 API の規則
 title: Win32 C++ WebView2 API の規則
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/24/2021
+ms.date: 05/06/2021
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、wpf アプリ、wpf、edge、ICoreWebView2、ICoreWebView2Host、ブラウザー コントロール、edge html
-ms.openlocfilehash: b47e53a4846d4bb662ae108c6445a6c2a615722a
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: b5a86751bfe3386058812ca166fa7cf9e0e201dc
+ms.sourcegitcommit: 777b16ef10363f2dfd755f115ee2d4c81a8de46f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11470859"
+ms.lasthandoff: 05/07/2021
+ms.locfileid: "11535644"
 ---
 # <a name="win32-c-webview2-api-conventions"></a>Win32 C++ WebView2 API の規則  
 
@@ -141,7 +141,7 @@ Uri_CREATE_ALLOW_IMPLICIT_FILE_SCHEME | Uri_CREATE_NO_DECODE_EXTRA_INFO
 
 ## <a name="see-also"></a>関連項目  
 
-*   WebView2 Win32 C/C++ の使用を開始するには、[WebView2 の使用を開始する][Webview2IndexGettingStarted] ガイドに移動します。  
+*   WebView2 Win32 C/C++ の使用を開始するには、[WebView2 の使用を開始する][Webview2IndexGetStarted] ガイドに移動します。  
 *   WebView2 API の詳細については、「API リファレンス」 [に移動します][DotnetApiMicrosoftWebWebview2WpfWebview2]。  
 
 ## <a name="getting-in-touch-with-the-microsoft-edge-webview-team"></a>Microsoft Edge WebView チームと連絡を取り合う  
@@ -150,7 +150,7 @@ Uri_CREATE_ALLOW_IMPLICIT_FILE_SCHEME | Uri_CREATE_NO_DECODE_EXTRA_INFO
 
 <!-- links -->  
 
-[Webview2GettingstartedWin32]: ../gettingstarted/win32.md "WebView2 の概要 |Microsoft Docs"  
+[Webview2GetStartedWin32]: ../get-started/win32.md "WebView2 の使用を|Microsoft Docs"  
 
 [Webview2ReferenceWin32Icorewebview2CapturePreview]: /microsoft-edge/webview2/reference/win32/icorewebview2#capturepreview "CapturePreview - インターフェイス ICoreWebView2 |Microsoft Docs"  
 

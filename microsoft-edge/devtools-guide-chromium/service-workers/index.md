@@ -54,7 +54,7 @@ ms.locfileid: "11387278"
 
 フェッチ イベントの詳細 `respondWith` については、左側のドロップダウン矢印を選択します `respondWith` 。  元の要求と **受信した応答** の詳細については **、対応する**ドロップダウン矢印を使用します。  
 
-## <a name="application"></a>Application  
+## <a name="application"></a>アプリケーション  
 
 :::image type="complex" source="../media/sw-application-timeline.msft.png" alt-text="アプリケーション ビュー" lightbox="../media/sw-application-timeline.msft.png":::
    アプリケーション ビュー  
@@ -74,7 +74,7 @@ Microsoft Edge DevTools チームは、サービス**** ワーカーの更新ラ
 
 ネットワーク **ツール** には、デバッグ中のサービス ワーカーを経由したネットワーク要求が表示されます。  自動フィルターは、探索を絞り込む方法です。
 
-## <a name="sources"></a>Sources  
+## <a name="sources"></a>ソース  
 
 :::image type="complex" source="../media/sw-sources.msft.png" alt-text="DOM ビュー" lightbox="../media/sw-sources.msft.png":::
    DOM ビュー  

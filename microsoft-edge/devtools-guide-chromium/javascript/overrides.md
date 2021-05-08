@@ -1,6 +1,6 @@
 ---
-description: オーバーライド機能は、Microsoft Edge DevTools の Sources ツール内の機能で、Web ページ リソースをハード ドライブにコピーできます。  Web ページを更新すると、DevTools はリソースを読み込むのではなく、ローカル コピーに置き換える必要があります。
-title: Microsoft Edge DevTools を使用して Web ページ リソースをローカル コピーで上書きする
+description: オーバーライド機能は、Web ページ リソースをハード ドライブにコピー Microsoft Edge DevTools の Sources ツール内の機能です。  Web ページを更新すると、DevTools はリソースを読み込むのではなく、ローカル コピーに置き換える必要があります。
+title: DevTools を使用して Web ページ リソースをローカル コピー Microsoft Edgeオーバーライドする
 author: MSEdgeTeam
 ms.author: msedgedevrel
 ms.date: 12/11/2020
@@ -14,7 +14,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/25/2021
 ms.locfileid: "11519437"
 ---
-# <a name="override-webpage-resources-with-local-copies-using-microsoft-edge-devtools"></a>Microsoft Edge DevTools を使用して Web ページ リソースをローカル コピーで上書きする  
+# <a name="override-webpage-resources-with-local-copies-using-microsoft-edge-devtools"></a>DevTools を使用して Web ページ リソースをローカル コピー Microsoft Edgeオーバーライドする  
 
 場合によっては、Web ページの修正プログラムを試す必要がありますが、ソース ファイルにアクセスできない場合や、ページを変更するには、低速で複雑なビルド プロセスが必要な場合があります。  DevTools のすべての種類の問題をデバッグして修正できます。  ただし、変更は保持されません。ローカル ファイルを更新すると、すべての作業が完了します。  ソース ツールのオーバーライド機能 [を使用すると][DevToolsSourcesTool] 、この問題を解決できます。  
 

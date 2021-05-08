@@ -1,5 +1,5 @@
 ---
-description: メッセージをログに記録し、Microsoft Edge DevTools コンソールで JavaScript を実行する方法。
+description: メッセージをログに記録し、DevTools コンソールで JavaScript をMicrosoft Edgeする方法。
 title: コンソール ツールでメッセージをログに記録する
 author: MSEdgeTeam
 ms.author: msedgedevrel
@@ -186,7 +186,7 @@ console.table(bodyDimensions);
    データを表示 `console.table` して読みやすくする
 :::image-end:::  
 
-の出力 `console.table` は、コンソールに表示される場合だけでなく、テーブル形式 **を持ちます**。    たとえば、テーブルをコピーして Excel、Word、または表形式データをサポートする他の製品に貼り付ける場合、構造はそのまま残ります。  
+の出力 `console.table` は、コンソールに表示される場合だけでなく、テーブル形式 **を持ちます**。    たとえば、表形式データをサポートする Excel、Word、または他の製品にテーブルをコピーして貼り付ける場合、構造はそのまま残ります。  
 
 <!--  The output of `console.table` has a table format not only when it displays in the **Console**.  For example, copy and paste a table in Excel, Word, or any other products that support tabular data.  -->  
 
@@ -217,7 +217,7 @@ console.table(contentElements,['nodeName', 'innerText', 'offsetHeight'])
 [DevtoolsConsoleConsoleFilters]: ./console-filters.md "Filter Console メッセージ |Microsoft Docs"  
 [DevtoolsConsoleLiveExpressions]: ./live-expressions.md "Live 式を使用して JavaScript の変更を監視|Microsoft Docs"  
 
-[DevtoolsJavascriptBreakpoints]: ../javascript/breakpoints.md "Microsoft Edge DevTools アプリケーションでブレークポイントを使用してコードを一時停止する|Microsoft Docs"  
+[DevtoolsJavascriptBreakpoints]: ../javascript/breakpoints.md "DevTools アプリケーションでブレークポイントを使用してコードMicrosoft Edgeする|Microsoft Docs"  
 
 [GithubMicrosoftedgeDevtoolssamplesConsoleLoggingExamplesHtml]: https://microsoftedge.github.io/DevToolsSamples/console/logging-examples.html "コンソール メッセージの例: ログ、情報、エラー、警告の|GitHub"  
 [GithubMicrosoftedgeDevtoolssamplesConsoleLoggingTypesHtml]: https://microsoftedge.github.io/DevToolsSamples/console/logging-types.html "コンソール メッセージの例: さまざまな種類のログ|GitHub"  

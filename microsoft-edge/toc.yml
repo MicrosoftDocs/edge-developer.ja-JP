@@ -382,21 +382,21 @@
         - name: 開始するには
           items:
             - name: Win32
-              href: webview2/gettingstarted/win32.md
+              href: webview2/get-started/win32.md
             - name: WPF
-              href: webview2/gettingstarted/wpf.md
+              href: webview2/get-started/wpf.md
             - name: Windows フォーム
-              href: webview2/gettingstarted/winforms.md
+              href: webview2/get-started/winforms.md
             - name: WinUI 3.0
-              href: webview2/gettingstarted/winui.md
+              href: webview2/get-started/winui.md
         - name: 概念
           items:
             - name: Microsoft Edge と WebView2 の違い
-              href: webview2/concepts/browserfeatures.md
+              href: webview2/concepts/browser-features.md
             - name: アプリの配布
               href: webview2/concepts/distribution.md
             - name: ユーザーデータフォルダーの管理
-              href: webview2/concepts/userdatafolder.md
+              href: webview2/concepts/user-data-folder.md
             - name: WebView2 アプリケーションの管理
               href: webview2/concepts/enterprise.md
             - name: ナビゲーションイベント
@@ -414,21 +414,21 @@
             - name: Win32 API の規則
               href: webview2/concepts/win32-api-conventions.md
         - name: リリース ノート
-          href: webview2/releasenotes.md
+          href: webview2/release-notes.md
         - name: ロードマップ
           href: webview2/roadmap.md
         - name: 方法
           items:
             - name: WebView2 の拡張 JavaScript シナリオ
-              href: webview2/howto/js.md
+              href: webview2/how-to/javascript.md
             - name: 静的リンク ローダー
-              href: webview2/howto/static.md
+              href: webview2/how-to/static.md
             - name: Debug WebView2
-              href: webview2/howto/debug.md
+              href: webview2/how-to/debug.md
             - name: エッジ ドライバーで自動化
-              href: webview2/howto/webdriver.md
+              href: webview2/how-to/webdriver.md
             - name: WebView2 で Chromium DevTools プロトコルを使用する
-              href: webview2/howto/chromium-devtools-protocol.md
+              href: webview2/how-to/chromium-devtools-protocol.md
         - name: リファレンス
           href: webview2/webview2-api-reference.md
           items:

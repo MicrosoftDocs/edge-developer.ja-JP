@@ -38,7 +38,7 @@ DevTools のアクセシビリティは、進行中の作業です。  一部の
 
 開始する前に、DevTools UI の構造化方法のメンタル モデルを作成するのに役立ちます。  DevTools は、ARIA タブリストに編成された一連の [パネルに分かれています][W3CWaiAriaTablist]。  
 
-次に、例を示します。  
+以下に例を示します。  
 
 *   要素 **ツール** を使用すると、[DOM ノードの表示と変更][DevtoolsDomIndexNavigateDomTreeKeyboard] または CSS を使用 [できます][DevtoolsCssIndex]。  
 *   コンソール [パネルでは、JavaScript][DevtoolsConsoleIndex] ログとライブ編集オブジェクトを読み取りできます。  
@@ -78,7 +78,7 @@ DevTools のアクセシビリティは、進行中の作業です。  一部の
 
 次のアクションを実行して、[要素] ツール **を開** きます。  
 
-1.  コマンド メニュー **を開きます**。  
+1.  **コマンド メニュー** を開きます。  
 1.  次に `E` 入力 `L` します。  [ **パネル] >要素の表示** ] オプションが選択されています。  
 1.  パネル `Enter` を開くコマンドを実行する場合に選択します。  
 
@@ -211,7 +211,7 @@ DevTools のアクセシビリティは、進行中の作業です。  一部の
 
 **既知の問題**  
 
-*   アクセシビリティ ウィンドウ[で使用される ARIA][W3CWaiAriaTree]ツリーの種類は、VoiceOver のような macOS スクリーン リーダー用の Microsoft Edge で適切に公開されない場合があります。 ****  クロムの [問題を購読#868480、][ChromiumIssues868480] この問題の進捗状況を知らせる必要があります。  
+*   アクセシビリティ ウィンドウ[で使用される ARIA][W3CWaiAriaTree]ツリーの種類は、VoiceOver のような macOS スクリーン リーダー Microsoft Edgeで適切に公開されない場合があります。 ****  この問題[Chromium進捗#868480][ChromiumIssues868480]通知を受け取る場合は、この問題を購読してください。  
 *   **[ARIA 属性**]**** セクションと [計算されたプロパティ] セクションのそれぞれは[ARIA][W3CWaiAriaTree]ツリーとしてマークされますが、それぞれが現在フォーカス管理を行っているのではなく、キーボード操作可能ではありません。  
 
 ## <a name="audits-panel"></a>[監査] パネル  
@@ -245,9 +245,9 @@ DevTools のアクセシビリティは、進行中の作業です。  一部の
 [DevtoolsAccessibilityReference]: ./reference.md "アクセシビリティ|Microsoft Docs"  
 [DevtoolsAccessibilityReferencePane]: reference.md#the-accessibility-pane "[アクセシビリティ] ウィンドウ - [アクセシビリティ リファレンス] |Microsoft Docs"  
 [MicrosoftEdgeDevtoolsMain]: ../../devtools-guide-chromium/index.md "Microsoft Edge (Chromium) 開発者ツール | Microsoft Docs"  
-[DevtoolsCommandMenuIndex]: ../command-menu/index.md "Microsoft Edge DevTools コマンド メニュー を使用してコマンドを実行|Microsoft Docs"  
+[DevtoolsCommandMenuIndex]: ../command-menu/index.md "[DevTools コマンド メニュー] Microsoft Edgeを使用してコマンドを実行|Microsoft Docs"  
 [DevtoolsConsoleIndex]: ../console/index.md "コンソールの概要 | Microsoft Docs"  
-[DevtoolsCssIndex]: ../css/index.md "CSS の表示と変更の開始|Microsoft Docs"  
+[DevtoolsCssIndex]: ../css/index.md "はじめにCSS の表示と変更を使用|Microsoft Docs"  
 <!--[DevtoolsCssReferenceViewAppliedElement]: ../css/reference.md#view-only-the-css-that-is-actually-applied-to-an-element "CSS Reference - View only the CSS that is actually applied to an element | Microsoft Docs"  -->  
 <!--[DevtoolsDomIndex]: ../dom/index.md "Get started with viewing and changing the DOM | Microsoft Docs"  -->  
 [DevtoolsDomIndexViewDomNodes]: ../dom/index.md#view-dom-nodes "View DOM ノード - DOM ノードの表示と変更の|Microsoft Docs"  

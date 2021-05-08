@@ -1,6 +1,6 @@
 ---
-description: ユーザーを Microsoft Edge から Microsoft Edge に移動Internet Explorer
-title: ユーザーを Microsoft Edge から Microsoft Edge に移動Internet Explorer
+description: ユーザーをユーザーからMicrosoft EdgeにInternet Explorer
+title: ユーザーをユーザーからMicrosoft EdgeにInternet Explorer
 author: MSEdgeTeam
 ms.date: 11/13/2020
 ms.author: msedgedevrel
@@ -13,9 +13,9 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 03/26/2021
 ms.locfileid: "11461137"
 ---
-# <a name="moving-users-to-microsoft-edge-from-internet-explorer"></a>ユーザーを Microsoft Edge から Microsoft Edge に移動Internet Explorer  
+# <a name="moving-users-to-microsoft-edge-from-internet-explorer"></a>ユーザーをユーザーからMicrosoft EdgeにInternet Explorer  
 
-多くの最新の Web サイトには、\(IE\) Internet Explorer互換性のないデザインがあります。  IE ユーザーが互換性のないパブリック Web サイトにアクセスすると、ユーザーがメッセージを受け取る可能性があります。  このメッセージには、Web サイトがブラウザーと互換性がないというメッセージが表示されます。  メッセージが表示された後、ユーザーは最新のブラウザーに手動で切り替える必要があります。  Microsoft Edge は、バージョン 84 から中断を最小限に抑えるために、ユーザーを自動的にリダイレクトする新しい機能をサポートしています。  IE ユーザーが IE と互換性のない Web サイトに移動すると、Windows は自動的にユーザーを Microsoft Edge にリダイレクトします。  リストの Web サイトを確認するには、[Microsoft Edge リストを必要とする [] に移動します][MicrosoftEdgeNeededgeV1]。
+多くの最新の Web サイトには、\(IE\) Internet Explorer互換性のないデザインがあります。  IE ユーザーが互換性のないパブリック Web サイトにアクセスすると、ユーザーがメッセージを受け取る可能性があります。  このメッセージには、Web サイトがブラウザーと互換性がないというメッセージが表示されます。  メッセージが表示された後、ユーザーは最新のブラウザーに手動で切り替える必要があります。  中断を最小限に抑えるために、バージョン 84 から、Microsoft Edgeユーザーを自動的にリダイレクトする新しい機能がサポートされています。  IE ユーザーが IE と互換性のない Web サイトに移動すると、ユーザー Windowsに自動的にリダイレクトMicrosoft Edge。  リストの Web サイトを確認するには、[必要な情報] リスト[Microsoft Edgeします][MicrosoftEdgeNeededgeV1]。
 
 この記事では、次の概念について説明します。  
 
@@ -32,10 +32,10 @@ IE 互換性リストは、次のアクションが発生した場合にのみ W
 
 ## <a name="redirection-experience"></a>リダイレクト エクスペリエンス
 
-Microsoft Edge へのリダイレクト時に、ユーザーは次のスクリーンショットで 1 回のダイアログを表示します。  ダイアログは、ユーザーに次の情報を提供します。  
+ユーザーにリダイレクトMicrosoft Edge、ユーザーは次のスクリーンショットで 1 回のダイアログを表示します。  ダイアログは、ユーザーに次の情報を提供します。  
 
 *   Web サイトがリダイレクトされる理由について説明します。  
-*   閲覧データと設定を IE から Microsoft Edge にコピーする同意を求めるメッセージがユーザーに表示されます。  
+*   ユーザーに対して、閲覧データと基本設定を IE から別のユーザーにコピー Microsoft Edge。  
 
 :::row:::
    :::column span="":::
@@ -61,15 +61,15 @@ Microsoft Edge へのリダイレクト時に、ユーザーは次のスクリ�
 
 最後に、リダイレクトごとにアドレス バーの下に Web サイトの非互換性バナーが表示されます。  次の図に、Web サイトの非互換性バナーの例を示します。
 
-:::image type="complex" source="../media/neededge-banner.msft.png" alt-text="最新のサイトに関する通知と、既定のブラウザーとして Microsoft Edge を設定するか、Microsoft Edge を探索するように求めるメッセージ" lightbox="../media/neededge-banner.msft.png":::
-   最新のサイトに関する通知と、既定のブラウザーとして Microsoft Edge を設定するか、Microsoft Edge を探索するように求めるメッセージ  
+:::image type="complex" source="../media/neededge-banner.msft.png" alt-text="最新のサイトに関する通知と、既定のブラウザー Microsoft Edgeを設定するか、既定のサイトをMicrosoft Edge" lightbox="../media/neededge-banner.msft.png":::
+   最新のサイトに関する通知と、既定のブラウザー Microsoft Edgeを設定するか、既定のサイトをMicrosoft Edge  
 :::image-end:::
 
 Web サイトの非互換性バナーは、ユーザーに次の詳細を提供します。  
 
-*   ユーザーが Microsoft Edge に切り替える必要があります。  
-*   既定のブラウザーとして Microsoft Edge を設定する機能を提供します。  
-*   Microsoft Edge を探索するオプションをユーザーに提供します。    
+*   ユーザーがサーバーに切り替Microsoft Edge。  
+*   既定のブラウザー Microsoft Edge設定する機能を提供します。  
+*   ユーザーに、ユーザーに対してユーザーのMicrosoft Edge。    
     
 Web サイトが Microsoft Edge にリダイレクトInternet Explorer、次のいずれかのアクションが実行されます。
 
@@ -103,6 +103,6 @@ IE 互換性リストは 1 週間以内に更新されます。
 
 [MicrosoftOfficialHome]: https://www.microsoft.com "Microsoft Official Home"  
 
-[MicrosoftEdgeNeededgeV1]:  https://edge.microsoft.com/neededge/v1 "Microsoft Edge リスト v1 xml が必要|Microsoft Edge"  
+[MicrosoftEdgeNeededgeV1]:  https://edge.microsoft.com/neededge/v1 "リスト v1 Microsoft Edge xml ファイルが必要|Microsoft Edge"  
 
 [MicrosoftSupportOfficeTheWebsiteYouWereTryingToReachDoesntWorkWithInternetExplorer]: https://support.microsoft.com/office/the-website-you-were-trying-to-reach-doesn-t-work-with-internet-explorer-8f5fc675-cd47-414c-9535-12821ddfc554 "アクセスしようとしていた Web サイトは、ユーザーがアクセスInternet Explorer |Microsoft Officeサポート"  

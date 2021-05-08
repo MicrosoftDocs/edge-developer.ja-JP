@@ -210,7 +210,7 @@ additionalContent:
               url: /microsoft-edge/visual-studio-code/index
             - text: プライバシーに関するホワイトペーパー
               url: /microsoft-edge/privacy-whitepaper
-        - title: Microsoft Edge Legacy のドキュメント
+        - title: Microsoft Edge 従来版ドキュメント
           links:
-            - text: Microsoft Edge Legacy のドキュメント
+            - text: Microsoft Edge 従来版ドキュメント
               url: /archive/microsoft-edge/legacy/developer/

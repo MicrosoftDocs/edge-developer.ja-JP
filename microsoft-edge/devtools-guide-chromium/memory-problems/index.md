@@ -1,5 +1,5 @@
 ---
-description: Microsoft Edge と DevTools を使用して、メモリ リーク、メモリの大きさ、頻繁なガベージ コレクションなど、ページのパフォーマンスに影響するメモリの問題を見つける方法について説明します。
+description: Microsoft Edgeと DevTools を使用して、メモリ リーク、メモリの大きさ、頻繁なガベージ コレクションなど、ページのパフォーマンスに影響するメモリの問題を見つける方法について説明します。
 title: メモリの問題を修正する
 author: MSEdgeTeam
 ms.author: msedgedevrel
@@ -30,11 +30,11 @@ ms.locfileid: "11397833"
 
 # <a name="fix-memory-problems"></a>メモリの問題を修正する  
 
-Microsoft Edge と DevTools を使用して、メモリ リーク、メモリの大きさ、頻繁なガベージ コレクションなど、ページのパフォーマンスに影響するメモリの問題を見つける方法について説明します。  
+Microsoft Edgeと DevTools を使用して、メモリ リーク、メモリの大きさ、頻繁なガベージ コレクションなど、ページのパフォーマンスに影響するメモリの問題を見つける方法について説明します。  
 
-### <a name="summary"></a>要約  
+### <a name="summary"></a>まとめ  
 
-*   Microsoft Edge Browser タスク マネージャーでページが現在使用しているメモリの量を確認します。  
+*   ブラウザー タスク マネージャーでページが現在使用しているメモリMicrosoft Edge確認します。  
 *   [メモリ] パネルを使用して、時間の間にメモリ使用量 **を視覚化** します。  
 *   ヒープ スナップショットを使用して、デタッチされた DOM ツリー \(メモリ リークの一般的な原因\) **を特定します**。  
 *   タイムライン上の Allocation インストルメンテーションを使用して、JavaScript ヒープ \(JS ヒープ\) で新しいメモリが割り当てられている **場合を確認します**。  
@@ -59,17 +59,17 @@ Microsoft Edge と DevTools を使用して、メモリ リーク、メモリの
 
 ここで重要なのは、RAIL モデルを使用してユーザーに焦点を当てる方法です。  ユーザーに人気のあるデバイスを確認し、それらのデバイスでページをテストします。  エクスペリエンスが一貫して悪い場合、ページがそれらのデバイスのメモリ機能を超える可能性があります。  
 
-## <a name="monitor-memory-use-in-realtime-with-the-microsoft-edge-browser-task-manager"></a>Microsoft Edge Browser タスク マネージャーを使用してメモリ使用量をリアルタイムで監視する  
+## <a name="monitor-memory-use-in-realtime-with-the-microsoft-edge-browser-task-manager"></a>ブラウザー タスク マネージャーでメモリ使用量をリアルタイムMicrosoft Edge監視する  
 
-メモリの問題調査の開始点として、Microsoft Edge Browser タスク マネージャーを使用します。  Microsoft Edge Browser タスク マネージャーは、ページが現在使用しているメモリの量を示すリアルタイム モニターです。  
+メモリの問題Microsoft Edge調査の開始点として、[ブラウザー タスク マネージャー] を使用します。  ブラウザー Microsoft Edgeマネージャーは、ページが現在使用しているメモリの量を示すリアルタイム モニターです。  
 
-1.  [Microsoft Edge] メイン メニューを選択または移動し、[その他のツール] [ブラウザー タスク マネージャー] を選択して Microsoft Edge Browser タスク マネージャー `Shift` + `Esc` ****  >  **** を開きます。  
+1.  メイン `Shift` + `Esc` メニューを選択または移動Microsoft Edge[**** その他のツール] [ブラウザー タスク マネージャー] を選択して、[ブラウザー タスク マネージャー] Microsoft Edge  >  **** 開きます。  
     
-    :::image type="complex" source="../media/memory-problems-bing-settings-more-tools-browser-task-manager.msft.png" alt-text="Microsoft Edge Browser タスク マネージャーを開く" lightbox="../media/memory-problems-bing-settings-more-tools-browser-task-manager.msft.png":::
-       図 1: Microsoft Edge Browser タスク マネージャーを開く  
+    :::image type="complex" source="../media/memory-problems-bing-settings-more-tools-browser-task-manager.msft.png" alt-text="ブラウザー タスク Microsoft Edgeを開く" lightbox="../media/memory-problems-bing-settings-more-tools-browser-task-manager.msft.png":::
+       図 1: ブラウザー タスク マネージャー Microsoft Edge開く  
     :::image-end:::  
     
-1.  Microsoft Edge Browser タスク マネージャーのテーブル ヘッダーにカーソルを合わせると、コンテキスト メニュー \(右クリック\) を開き **、JavaScript メモリを有効にします**。  
+1.  ブラウザー タスク マネージャーのテーブル ヘッダー Microsoft Edgeし、コンテキスト メニュー \(右クリック\) を開き **、JavaScript メモリを有効にします**。  
     
     :::image type="complex" source="../media/memory-problems-bing-browser-task-manager-javascript-memory.msft.png" alt-text="JavaScript メモリを有効にする" lightbox="../media/memory-problems-bing-browser-task-manager-javascript-memory.msft.png":::
        図 2: JavaScript メモリを有効にする  
@@ -231,7 +231,7 @@ DevTools は、関数別のメモリ割り当ての内訳を示します。  既
 
 ページが頻繁に一時停止する場合は、ガベージ コレクションの問題が発生する可能性があります。  
 
-Microsoft Edge Browser タスク マネージャーまたは Performance メモリレコーディングのいずれかを使用して、頻繁なガベージ コレクションを見つけるのに使用できます。  Microsoft Edge Browser タスク マネージャーでは、頻繁に**** メモリ値または**JavaScript**メモリ値が上昇および低下すると、ガベージ コレクションが頻繁に発生します。  パフォーマンスの記録では、JS ヒープまたはノード 数グラフへの頻繁な変更 \(立ち上がりおよび立ち下がり\) は、頻繁なガベージ コレクションを示します。  
+ブラウザー タスク マネージャーまたはパフォーマンス メモリMicrosoft Edgeを使用して、頻繁なガベージ コレクションを見つける方法があります。  ブラウザー タスク Microsoft Edgeでは、頻繁にメモリまたは**JavaScript** **** メモリの値が上昇および低下し、ガベージ コレクションが頻繁に発生します。  パフォーマンスの記録では、JS ヒープまたはノード 数グラフへの頻繁な変更 \(立ち上がりおよび立ち下がり\) は、頻繁なガベージ コレクションを示します。  
 
 問題を特定した後、タイムラインの記録で Allocation イン**** ストルメンテーションを使用して、メモリが割り当てられている場所と割り当てを引き起こしている関数を確認できます。  
 

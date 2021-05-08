@@ -1,5 +1,5 @@
 ---
-description: Puppeteer を使用して Microsoft Edge で自動化とテストを行う
+description: Puppeteer を使用して、システムの自動化とテストをMicrosoft Edge
 title: Puppeteer
 author: MSEdgeTeam
 ms.author: msedgedevrel
@@ -17,9 +17,9 @@ ms.locfileid: "11480168"
 ---
 # <a name="puppeteer-overview"></a>Puppeteer の概要  
 
-[Puppeteer][|::ref1::|Main]は[][NodejsMain][、DevTools][GithubChromedevtoolsProtocol]プロトコルを使用して Microsoft Edge \(Chromium\) を制御する高レベル API を提供するノード ライブラリです。  Puppeteer は、既定 [でヘッドレス ブラウザーを][WikiHeadlessBrowser] 起動します。  ヘッドレス ブラウザーは UI を表示しないので、代わりにコマンド ラインを使用する必要があります。  また、完全な \(non-headless\) Microsoft Edge を実行するために、Puppeteer を構成することもできます。  
+[Puppeteer は][|::ref1::|Main][、DevTools プロトコル][GithubChromedevtoolsProtocol]を使用して \(Chromium\) を制御するMicrosoft Edge API を提供するノード ライブラリです。 [][NodejsMain]  Puppeteer は、既定 [でヘッドレス ブラウザーを][WikiHeadlessBrowser] 起動します。  ヘッドレス ブラウザーは UI を表示しないので、代わりにコマンド ラインを使用する必要があります。  また、完全な \(non-headless\) を実行する Puppeteer を構成Microsoft Edgeすることもできます。  
 
-既定では、Puppeteer をインストールすると、インストーラーは最近のバージョンの [Chromium][ChromiumHome] [、Microsoft Edge][MicrosoftBlogsWindowsExperience20181206]も基に構築されているオープン ソース ブラウザーをダウンロードします。  Microsoft Edge \(Chromium\) がインストールされている場合は [、puppeteer-core を使用できます][PuppeteerApivscore]。  `puppeteer-core` は、Microsoft Edge \(Chromium\) のような既存のブラウザー インストールを起動する、軽量バージョンの Puppeteer です。  Microsoft Edge \(Chromium\) をダウンロードするには、[Microsoft Edge Insider チャネルのダウンロード [] に移動します][MicrosoftedgeinsiderDownload]。  
+既定では、Puppeteer をインストールすると、インストーラーによって最新バージョンの[Chromium][ChromiumHome]がダウンロードされ、Microsoft Edge ブラウザーもビルド[されます][MicrosoftBlogsWindowsExperience20181206]。  \(Microsoft Edge\) がChromiumされている場合は[、puppeteer-core を使用できます][PuppeteerApivscore]。  `puppeteer-core` は、\(Chromium\) のように、既存のブラウザー インストールを起動する軽量バージョンの Puppete Microsoft Edge er です。  \(Microsoft Edge Chromium\) をダウンロードするには、[Insider チャネルのダウンロード[Microsoft Edge] に移動します][MicrosoftedgeinsiderDownload]。  
 
 ## <a name="installing-puppeteer-core"></a>puppeteer-core のインストール  
 
@@ -33,12 +33,12 @@ npm i puppeteer-core
 yarn add puppeteer-core
 ```  
 
-## <a name="launch-microsoft-edge-with-puppeteer-core"></a>パペットコアを使用して Microsoft Edge を起動する  
+## <a name="launch-microsoft-edge-with-puppeteer-core"></a>パMicrosoft Edgeコアを使用してアプリを起動する  
 
 > [!NOTE]
 > `puppeteer-core` ノード v8.9.0 以降に依存します。  次の例では `async` / `await` 、ノード v7.6.0 以降でのみサポートされているを使用します。  コマンド `node -v` ラインから実行して、互換性のあるバージョンのファイルを使用Node.js。  
 
-`puppeteer-core` WebDriver などの他のブラウザー テスト フレームワークのユーザーに [慣れ親しむ必要があります][WebdriverChromiumMain]。  ブラウザーのインスタンスを作成し、ページを開き、そのインスタンスを Puppeteer API で操作します。  次のコード サンプルでは、Microsoft Edge \(Chromium\) を起動し、に移動し、スクリーンショット `puppeteer-core` `https://www.microsoftedgeinsider.com` をとして保存します `example.png` 。  
+`puppeteer-core` WebDriver などの他のブラウザー テスト フレームワークのユーザーに [慣れ親しむ必要があります][WebdriverChromiumMain]。  ブラウザーのインスタンスを作成し、ページを開き、そのインスタンスを Puppeteer API で操作します。  次のコード サンプルでは、\(Chromium Microsoft Edge\) のMicrosoft Edgeを起動し、に移動し、スクリーンショットを `puppeteer-core` `https://www.microsoftedgeinsider.com` として保存します `example.png` 。  
 
 次のコード スニペットをコピーし、として保存します `example.js` 。  
 
@@ -57,7 +57,7 @@ const puppeteer = require('puppeteer-core');
 })();
 ```  
 
-`executablePath`Microsoft Edge \(Chromium\) のインストールをポイントする変更。  たとえば、macOS では `executablePath` 、For Microsoft Edge Canary をに設定する必要があります `/Applications/Microsoft\ Edge\ Canary.app/` 。  を見つけるには、そのページの実行可能パスに移動してコピーするか、次のいずれかのコマンドを使用してエッジ パス パッケージ `executablePath` `edge://version` をインストールします。 **** [][npmEdgePaths]  
+`executablePath`\(Chromium\) のインストールをポイントMicrosoft Edge変更します。  たとえば、macOS では `executablePath` 、Canary の for Microsoft Edgeに設定する必要があります `/Applications/Microsoft\ Edge\ Canary.app/` 。  を見つけるには、そのページの実行可能パスに移動してコピーするか、次のいずれかのコマンドを使用してエッジ パス パッケージ `executablePath` `edge://version` をインストールします。 **** [][npmEdgePaths]  
 
 ```shell
 npm i edge-paths
@@ -67,7 +67,7 @@ npm i edge-paths
 yarn add edge-paths
 ```  
  
-次のコード サンプルでは [、edge-paths][npmEdgePaths] パッケージを使用して、OS 上の Microsoft Edge \(Chromium\) のインストールへのパスをプログラムで検索します。
+以下のコード サンプルでは[、edge-paths][npmEdgePaths]パッケージを使用して、OS 上の Microsoft Edge \(Chromium\) のインストールへのパスをプログラムで検索します。
 
 ```javascript
 const edgePaths = require("edge-paths");
@@ -78,7 +78,7 @@ const EDGE_PATH = edgePaths.getEdgePath();
 最後に、 に `executablePath: EDGE_PATH` 設定 `example.js` します。  変更内容を保存するには、[保存] をクリックします。  
 
 > [!NOTE]
-> Microsoft Edge \(EdgeHTML\) は使用しません `puppeteer-core` 。  この例に従って [続行するには、Microsoft Edge Insider][MicrosoftedgeinsiderDownload] チャネルをインストールする必要があります。  
+> Microsoft Edge \(EdgeHTML\) は機能しません `puppeteer-core` 。  この例に従って続行[するにはMicrosoft Edge Insider][MicrosoftedgeinsiderDownload]チャネルをインストールする必要があります。  
 
 次に、コマンド `example.js` ラインから実行します。  
 
@@ -86,7 +86,7 @@ const EDGE_PATH = edgePaths.getEdgePath();
 node example.js
 ```  
 
-`puppeteer-core` Microsoft Edge を起動し、Web ページの `https://www.microsoftedgeinsider.com` スクリーンショットに移動し、保存します。  [page.setViewport() を使用してスクリーンショットのサイズをカスタマイズします][PuppeteerApipagesetviewport]。  
+`puppeteer-core` web ページMicrosoft Edgeを起動し、ページに移動 `https://www.microsoftedgeinsider.com` し、スクリーンショットを保存します。  [page.setViewport() を使用してスクリーンショットのサイズをカスタマイズします][PuppeteerApipagesetviewport]。  
 
 :::image type="complex" source="./media/puppeteer-example.png" alt-text="example.pngによって生成されたファイルexample.js" lightbox="./media/puppeteer-example.png":::
    によって `example.png` 生成されるファイル `example.js`  
@@ -96,7 +96,7 @@ node example.js
 
 ## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームと連絡を取る  
 
-Microsoft Edge Developer チームは、Puppeteer、および Microsoft Edge の使用に関するフィードバック `puppeteer-core` を熱心に聞きたいと考えています。  Microsoft Edge **DevTools**の [フィードバックの送信[][TwitterIntentTweetEdgedevtools]] アイコンまたはツイート @EdgeDevToolsを使用して、Microsoft Edge チームに自分の考えをお知らせします。  
+開発者Microsoft Edgeチームは、Puppeteer、およびアプリの使用に関するフィードバックを熱心 `puppeteer-core` にMicrosoft Edge。  開発者チーム**に自分の考**えMicrosoft Edge知らせ@EdgeDevTools DevTools[][TwitterIntentTweetEdgedevtools]またはMicrosoft Edgeの [フィードバックの送信] アイコンを使用します。  
 
 :::image type="complex" source="../devtools-guide-chromium/media/bing-devtools-send-feedback.msft.png" alt-text="Microsoft Edge DevTools の [フィードバックの送信] アイコン" lightbox="../devtools-guide-chromium/media/bing-devtools-send-feedback.msft.png":::
    Microsoft Edge DevTools の [ **フィードバックの送信** ] アイコン  
@@ -118,17 +118,17 @@ Microsoft Edge Developer チームは、Puppeteer、および Microsoft Edge の
 
 <!-- links -->  
 
-[WebdriverChromiumMain]: ../webdriver-chromium/index.md "WebDriver (クロム) |Microsoft Docs"  
+[WebdriverChromiumMain]: ../webdriver-chromium/index.md "WebDriver (Chromium) |Microsoft Docs"  
 
 <!--  [ArchiveMicrosoftEdgeLegacyDeveloperWebdriverIndex]: /archive/microsoft-edge/legacy/developer/webdriver/index "WebDriver (EdgeHTML) | Microsoft Docs"  -->  
 
 [GithubChromedevtoolsProtocol]: https://chromedevtools.github.io/devtools-protocol "Chrome DevTools プロトコル ビューアー |GitHub"  
 
-[MicrosoftBlogsWindowsExperience20181206]: https://blogs.windows.com/windowsexperience/2018/12/06/microsoft-edge-making-the-web-better-through-more-open-source-collaboration "Microsoft Edge: より多くのオープン ソースの共同作業を通じて、web をより良く|Microsoft Experience Blog"  
+[MicrosoftBlogsWindowsExperience20181206]: https://blogs.windows.com/windowsexperience/2018/12/06/microsoft-edge-making-the-web-better-through-more-open-source-collaboration "Microsoft Edge: より多くのオープンソースのコラボレーション を通じて Web をより良く|Microsoft Experience Blog"  
 
 [MicrosoftedgeinsiderDownload]: https://www.microsoftedgeinsider.com/download "Microsoft Edge Insider Channels をダウンロードする"  
 
-[ChromiumHome]: https://www.chromium.org/Home "クロム|クロム プロジェクト"  
+[ChromiumHome]: https://www.chromium.org/Home "Chromium |The Chromium プロジェクト"  
 
 [NodejsMain]: https://nodejs.org "Node.js"  
 

@@ -1,5 +1,5 @@
 ---
-description: Microsoft Edge DevTools の [スタイル] ウィンドウを使用して CSS フォントのスタイルと設定を変更する方法について説明します。
+description: DevTools の [スタイル] ウィンドウを使用して CSS フォントのスタイルと設定をMicrosoft Edgeします。
 title: DevTools の [スタイル] ウィンドウで CSS フォントのスタイルと設定を編集する
 author: MSEdgeTeam
 ms.author: msedgedevrel
@@ -26,7 +26,7 @@ CSS では、近年のタイポグラフィのサポートが向上していま�
 
 タイポグラフィの操作を簡単にするために、Visual **Font Editor** が [スタイル] ウィンドウ **に表示** されます。  フォント設定を変更すると、変更はブラウザーですぐにレンダリングされます。  CSS に関する詳細な知識がないすべて。  
 
-現在、 **Enable new font editor tool within the Styles pane** この機能は実験的であり [、Microsoft Edge Developer Tools で有効にする必要があります][DevtoolsExperimentalFeaturesIndexTurnOnExperimentalFeatures]。  
+現在、 **Enable new font editor tool within the Styles pane** この機能は実験的であり、開発者向けツールで有効[にするMicrosoft Edge必要があります][DevtoolsExperimentalFeaturesIndexTurnOnExperimentalFeatures]。  
 
 [スタイル] ウィンドウ **の CSS** (フォント定義またはインライン スタイル) には、ビジュアル フォント エディターを開くアイコンが自動的に **表示されます**。  ビジュアル フォント エディターを **開くには、[** フォント エディター] **アイコンを選択** します。  
 

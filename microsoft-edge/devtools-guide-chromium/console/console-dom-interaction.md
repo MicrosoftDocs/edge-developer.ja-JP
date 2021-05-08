@@ -23,7 +23,7 @@ ms.locfileid: "11483540"
 Web ページのヘッダーを参照するには、次のアクションを実行します。  
 
 1.  コンソールを **開きます**。
-    *   `Control` + `Shift` + `J` \(Windows, Linux\) または `Command` + `Option` + `J` \(macOS\) を選択します。  
+    *   `Control` + `Shift` + `J` \(Windows Linux\) または `Command` + `Option` + `J` \(macOS\) を選択します。  
 1.  コンソールに次のコード スニペットを入力またはコピーして貼り **付けます**。  
     
     ```javascript
@@ -102,7 +102,7 @@ Web ページの複雑さによっては、操作する適切な要素を見つ�
 *   `$x()` を使用すると、XPATH を使用して DOM 要素を選択できます。
 *   `$()` と `$$()` の短いバージョン `document.querySelector()` です `document.querySelectorAll()` 。  
     
-たとえば、次のコード スニペットは、Web ページ内のすべてのリンクを取得し(\の短い場合)、リンクを並べ替え可能なテーブルとして表示して、たとえば Excel にコピーして貼り付けます `$$('a')` `document.querySelectorAll('a')` 。
+たとえば、次のコード スニペットは、web ページ内のすべてのリンクを取得し(\の短い場合)、リンクを並べ替え可能なテーブルとして表示して、たとえば、Excel にコピーして貼 `$$('a')` `document.querySelectorAll('a')` り付けます。
 
 ```javascript
 console.table($$('a'),['href','text']);
@@ -271,5 +271,5 @@ unmonitorEvents($0, 'key');
 [DevtoolsConsoleConsoleLog]: ./console-log.md "コンソール ツール にログイン|Microsoft Docs"  
 [DevtoolsConsoleUtilities]: ./utilities.md "コンソール ユーティリティ API リファレンス |Microsoft Docs"  
 
-[DevToolsJavascriptSnippets]: ../javascript/snippets.md "Microsoft Edge DevTools を使用して任意のページで JavaScript のスニペットを実行|Microsoft Docs"  
+[DevToolsJavascriptSnippets]: ../javascript/snippets.md "DevTools を使用して任意のページで JavaScript のスニペットMicrosoft Edge実行|Microsoft Docs"  
 [DevtoolsSourcesIndex]: ../sources/index.md "ソース ツールの概要|Microsoft Docs"  

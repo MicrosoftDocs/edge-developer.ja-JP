@@ -139,7 +139,7 @@ ms.locfileid: "11398456"
 [VisualstudioCode]: https://code.visualstudio.com "Visual Studioコード"  
 [VisualStudioCodeDocs]: https://code.visualstudio.com/Docs "ドキュメント |Visual Studioコード"   
 
-[GithubMicrosoftVscodeEdgeDevtools]: https://github.com/Microsoft/vscode-edge-devtools "microsoft/vscode-edge-devtools |GitHub"  
+[GithubMicrosoftVscodeEdgeDevtools]: https://github.com/Microsoft/vscode-edge-devtools "microsoft/vscode-edge-devtools | GitHub"  
 [GithubMicrosoftVscodeEdgeDevtoolsNewIssue]: https://github.com/Microsoft/vscode-edge-devtools/issues/new "新しい問題 - microsoft/vscode-edge-devtools |GitHub"
 
 [VisualstudioMarketplaceElementsMicrosoftEdgeChromium]: https://marketplace.visualstudio.com/items?itemName=ms-edgedevtools.vscode-edge-devtools "Microsoft Edge Tools for Visual Studio コード"  

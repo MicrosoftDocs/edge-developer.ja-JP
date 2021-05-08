@@ -31,25 +31,25 @@ ms.locfileid: "11514397"
 
 ## <a name="announcements-from-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームからのお知らせ  
 
-以下のセクションでは、Microsoft Edge DevTools チームからのもので、見落としがあった可能性のあるお知らせの一覧を示します。  DevTools、Microsoft コード拡張機能、その他の新機能を試Visual Studioお知らせをご覧ください。  開発者ツールのすべての最新および最大の機能を最新の情報に更新するには [、Microsoft Edge][MicrosoftEdgePreviewChannels] プレビュー チャネルをダウンロードし [、Twitter][EdgeDevToolsTwitterAccount]でフォローしてください。  
+以下のセクションでは、Microsoft Edge DevTools チームからのもので、見落としがあった可能性のあるお知らせの一覧を示します。  DevTools、コード拡張機能、その他の新機能を試Microsoft Visual Studioお知らせをご覧ください。  開発者ツールのすべての最新および最大の機能を最新の情報に更新するには、プレビュー チャネルMicrosoft Edge[][MicrosoftEdgePreviewChannels]ダウンロードし[、Twitter][EdgeDevToolsTwitterAccount]でフォローしてください。  
 
 ### <a name="accessibility-improvements-to-the-devtools"></a>DevTools のアクセシビリティの向上  
 
-DevTools チームは、DevTools で影響の大きなカラー コントラスト、キーボード、スクリーン リーダーの問題に対処するために、クロムに対して 170 の変更を提供しました。  Web を構築する開発者は、すべての開発者が DevTools を使用できる必要があります。  
+DevTools チームは、devTools で影響の大きなカラー コントラスト、キーボード、スクリーン リーダーの問題に対処するために、Chromium に 170 の変更を提供しました。  Web を構築する開発者は、すべての開発者が DevTools を使用できる必要があります。  
 
 :::image type="complex" source="../../images/2019/12/a11y-performance-tool.msft.gif" alt-text="キーボード ナビゲーションとスクリーン リーダーの機能強化を備え、DevTools のパフォーマンス ツール" lightbox="../../images/2019/12/a11y-performance-tool.msft.gif":::
    キーボード **ナビゲーション** とスクリーン リーダーの機能強化を備え、DevTools のパフォーマンス ツール  
 :::image-end:::  
 
-すべてのユーザーが Web ページにアクセス可能にする方法について説明します。  Microsoft Edge [のアクセシビリティインサイト][AccessibilityInsights] と [webhint][WebhintBrowserExtension] 拡張機能をダウンロードして、開始します。  
+すべてのユーザーが Web ページにアクセス可能にする方法について説明します。  アクセシビリティインサイト[と][AccessibilityInsights] [webhint][WebhintBrowserExtension]拡張機能をダウンロードして、Microsoft Edgeを開始します。  
 
 スクリーン リーダーまたはキーボードを使用して DevTools の周りを移動する場合[][PostTweetEdgeDevTools]は、フィードバックの送信アイコンをツイートするか、フィードバックの送信アイコン[を選択してフィードバックを送信](#getting-in-touch-with-microsoft-edge-devtools-team)してください。  
 
-クロムの問題 [#963183][CR963183]  
+Chromium[の問題][CR963183]#963183  
 
 ### <a name="using-the-devtools-in-other-languages"></a>DevTools を他の言語で使用する  
 
-多くの開発者は、英語ではなく、母国語で StackOverflow や Visual Studio コードなどの他の開発者ツールを使用します。  英語以外の 10 か国語で使用できる DevTools のローカライズをお知らせします。  
+多くの開発者は、英語ではなく、母国語で StackOverflow や Visual Studio Codeなどの他の開発者ツールを使用しています。  英語以外の 10 か国語で使用できる DevTools のローカライズをお知らせします。  
 
 :::row:::
    :::column span="":::
@@ -102,7 +102,7 @@ DevTools チームは、DevTools で影響の大きなカラー コントラス�
 | Russian – русский | Spanish - español |  
 -->  
 
-[ローカライズされた `edge://flags` 開発者ツールを有効 **にする] フラグに移動し、[** 有効] に **設定します**。  また、[開発者ツールの **実験] フラグを [** 有効] に **設定します**。  Microsoft Edge を再起動し、DevTools を開きます。  <!-- Select `F1` in the DevTools or navigate to Settings > Experiments and check the **Match browser language** checkbox.  -->  DevTools は、Microsoft Edge で使用する言語と一致します `edge://settings/languages` 。  
+[ローカライズされた `edge://flags` 開発者ツールを有効 **にする] フラグに移動し、[** 有効] に **設定します**。  また、[開発者ツールの **実験] フラグを [** 有効] に **設定します**。  再起動Microsoft Edge DevTools を開きます。  <!-- Select `F1` in the DevTools or navigate to Settings > Experiments and check the **Match browser language** checkbox.  -->  DevTools は、 で使用する言語とMicrosoft Edge一致します `edge://settings/languages` 。  
 
 :::image type="complex" source="../../images/2019/12/localized-devtools.msft.png" alt-text="ドイツ語の DevTools" lightbox="../../images/2019/12/localized-devtools.msft.png":::
    ドイツ語の DevTools  
@@ -110,17 +110,17 @@ DevTools チームは、DevTools で影響の大きなカラー コントラス�
 
 DevTools を使用可能な言語とは異なる言語で使用する場合は、ツイートするか、[[][PostTweetEdgeDevTools]フィードバックの送信][アイコンを選択](#getting-in-touch-with-microsoft-edge-devtools-team)します。  
 
-クロムの問題 [#941561][CR941561]  
+Chromium[の問題][CR941561]#941561  
 
-### <a name="webhint-microsoft-edge-extension"></a>webhint Microsoft Edge 拡張機能  
+### <a name="webhint-microsoft-edge-extension"></a>webhint Microsoft Edge拡張子  
 
-Webhint Microsoft Edge 拡張機能を使用すると、Web ページを簡単にスキャンし、DevTools 内のアクセシビリティ、ブラウザーの互換性、セキュリティ、パフォーマンスなどについてフィードバックを得ることができます。  詳細については、 を参照してください [https://webhint.io][Webhint] 。  
+webhint Microsoft Edge拡張機能を使用すると、Web ページを簡単にスキャンし、DevTools 内のアクセシビリティ、ブラウザーの互換性、セキュリティ、パフォーマンスなどについてフィードバックを得ることができます。  詳細については、 を参照してください [https://webhint.io][Webhint] 。  
 
 :::image type="complex" source="../../images/2019/12/webhint-browser-extension.msft.png" alt-text="Webhint ブラウザー拡張機能がインストールされている場合の DevTools のヒント ツール" lightbox="../../images/2019/12/webhint-browser-extension.msft.png":::
    **Webhint**ブラウザー拡張機能がインストールされている場合の DevTools のヒント ツール  
 :::image-end:::  
 
-[Microsoft Edge で webhint ブラウザー拡張機能を試してみてください][MicrosoftEdgeInsiderAddons]。  拡張機能をインストールしたら、DevTools を開き、ヒント ツール **を選択** します。  ここから、カスタマイズ可能なサイト スキャンを実行します。  詳細 [については、webhint.io][WebhintBrowserExtension] を参照してください。
+[webhint ブラウザー拡張機能を試Microsoft Edge。][MicrosoftEdgeInsiderAddons]  拡張機能をインストールしたら、DevTools を開き、ヒント ツール **を選択** します。  ここから、カスタマイズ可能なサイト スキャンを実行します。  詳細 [については、webhint.io][WebhintBrowserExtension] を参照してください。
 
 ### <a name="3d-view"></a>3D View (3D ビュー)  
 
@@ -130,59 +130,59 @@ Webhint Microsoft Edge 拡張機能を使用すると、Web ページを簡単�
    DevTools **の 3D** ビュー  
 :::image-end:::  
 
-3D ビューにアクセスするには、[開発者ツールの実験] フラグが [有効] に設定されています `edge://flags` 。 **** ****  Microsoft Edge を再起動し、DevTools を開きます。  `F1`DevTools で選択するか、[設定**** の実験] セクションを開き、[3D ビューを有効にする  >  ****] チェック**ボックスをオン**にします。  次に `Ctrl`  +  `Shift`  +  `P` **、[3D**ビュー] と入力し **、[3D ビューの表示] を選択します**。  
+3D ビューにアクセスするには、[開発者ツールの実験] フラグが [有効] に設定されています `edge://flags` 。 **** ****  再起動Microsoft Edge DevTools を開きます。  `F1`[DevTools] で選択するか、[テスト設定]**セクション**を開き、[3D ビューを有効にする  >  ****]**チェック ボックスをオン**にします。  次に `Ctrl`  +  `Shift`  +  `P` **、[3D**ビュー] と入力し **、[3D ビューの表示] を選択します**。  
 
 UI に取り組み、3D ビューに機能を追加していますので、フィードバックをお寄 [せください](#getting-in-touch-with-microsoft-edge-devtools-team)。  
 
-クロムの問題 [#987787][CR987787]
+Chromium[問題#987787][CR987787]
 
-### <a name="visual-studio-code-extensions"></a>Visual Studio コード拡張機能  
+### <a name="visual-studio-code-extensions"></a>Visual Studio Code拡張機能  
 
-DevTools チームは、テキスト エディターから [直接 devTools][VisualStudioCode] の機能を使用Visual Studioコードの拡張機能もいくつかリリースしました。 次の拡張機能を確認してください。  
+DevTools チームは、テキスト エディター Visual Studio Code [][VisualStudioCode] DevTools の機能を直接使用できる拡張機能をリリースしました。 次の拡張機能を確認してください。  
 
-#### <a name="elements-for-microsoft-edge"></a>Microsoft Edge の要素  
+#### <a name="elements-for-microsoft-edge"></a>ユーザーの要素Microsoft Edge  
 
-Microsoft Edge の要素 [(クロム)][VisualStudioMarketplaceElementsMicrosoftEdgeChromiumExtension] Visual Studioコード拡張機能を追加して、コード内の要素ツールVisual Studio使用します。  
+拡張機能 (Visual Studio Code) の要素を追加して、Microsoft Edge[内ChromiumツールVisual Studio Code][VisualStudioMarketplaceElementsMicrosoftEdgeChromiumExtension]します。  
 
-:::image type="complex" source="../../images/2019/12/elements-for-edge.msft.png" alt-text="Microsoft Edge 拡張機能の要素Visual Studioコードの要素ツール" lightbox="../../images/2019/12/elements-for-edge.msft.png":::
-   Microsoft **** Edge 拡張機能の要素Visual Studioコードの要素ツール  
+:::image type="complex" source="../../images/2019/12/elements-for-edge.msft.png" alt-text="拡張機能の要素を使用Visual Studio Code内の Elements ツールMicrosoft Edgeします。" lightbox="../../images/2019/12/elements-for-edge.msft.png":::
+   拡張機能**の要素**を使用Visual Studio Code内の Elements ツールMicrosoft Edgeします。  
 :::image-end:::  
 
-詳細については [、「Elements for Microsoft Edge Visual Studio コード拡張機能」を参照してください][VisualStudioCodeElementEdgeExtension]。  
+詳細については、「Elements for [Microsoft Edge Visual Studio Code」を参照してください][VisualStudioCodeElementEdgeExtension]。  
 
-#### <a name="debugger-for-microsoft-edge"></a>Microsoft Edge のデバッガー  
+#### <a name="debugger-for-microsoft-edge"></a>デバッガーのMicrosoft Edge  
 
-デバッガー for [Microsoft Edge Visual Studio][VisualStudioMarketplaceDebuggerEdge] コード拡張機能を使用して、Microsoft Edge で実行されている JavaScript をコードから直接Visual Studioします。  
+デバッガーを[使用して、Microsoft Edge Visual Studio Code][VisualStudioMarketplaceDebuggerEdge]で実行されている JavaScript をデバッグし、Microsoft Edgeから直接実行Visual Studio Code。  
 
-:::image type="complex" source="../../images/2019/12/vscode-debugger.msft.png" alt-text="コード内の Microsoft Edge 拡張機能のデバッガー Visual Studioします。" lightbox="../../images/2019/12/vscode-debugger.msft.png":::
-   コード内の Microsoft Edge 拡張機能のデバッガー Visual Studioします。  
+:::image type="complex" source="../../images/2019/12/vscode-debugger.msft.png" alt-text="デバッガー内の Microsoft Edge拡張機能Visual Studio Code" lightbox="../../images/2019/12/vscode-debugger.msft.png":::
+   デバッガー内の Microsoft Edge拡張機能Visual Studio Code  
 :::image-end:::  
 
-詳細については、「Microsoft Edge をコードからデバッグする方法」 [をVisual Studioしてください][VisualStudioCodeDebuggerEdgeExtension]。  
+詳細については、「デバッグ方法」を[参照Microsoft Edgeを参照Visual Studio Code。][VisualStudioCodeDebuggerEdgeExtension]  
 
 #### <a name="webhint"></a>Webhint  
 
-[Webhint Visual Studio][VisualStudioMarketplaceWebhintExtension]コード拡張機能は、Web ページの作成中に Web ページを `webhint` 改善するために使用します。 この拡張機能は、分析に基づいてワークスペース ファイルで診断を実行してレポート `webhint` します。  
+[webhint Visual Studio Code][VisualStudioMarketplaceWebhintExtension]は、Web ページの作成中に Web ページを改善 `webhint` するために使用します。 この拡張機能は、分析に基づいてワークスペース ファイルで診断を実行してレポート `webhint` します。  
 
-:::image type="complex" source="../../images/2019/12/webhint-vscode-extension.msft.png" alt-text="webhint Visual Studioコード内の .tsx ファイルを分析する Code Visual Studio拡張機能" lightbox="../../images/2019/12/webhint-vscode-extension.msft.png":::
-   webhint Visual Studio コード拡張機能でファイルを分析する Visual Studio `.tsx` Code  
+:::image type="complex" source="../../images/2019/12/webhint-vscode-extension.msft.png" alt-text="webhint Visual Studio Codeで .tsx ファイルを分析する拡張機能Visual Studio Code" lightbox="../../images/2019/12/webhint-vscode-extension.msft.png":::
+   webhint Visual Studio Codeファイルを分析する拡張機能 `.tsx` Visual Studio Code  
 :::image-end:::  
 
-[コード webhint 拡張機能Visual Studio詳細については、以下を参照してください][WebhintVisualStudioCodeExtension]。  
+[webhint 拡張機能のVisual Studio Code詳細を参照してください][WebhintVisualStudioCodeExtension]。  
 
 ### <a name="visual-studio-integration"></a>Visual Studio統合  
 
-2019 Visual Studio 16.2 以降では、Microsoft Edge で実行されている JavaScript をデバッグVisual Studioデバッガーを使用します。  [2019 Visual Studioダウンロードして][MicrosoftVisualStudioDownloads] 、この機能を試してください。  
+2019 Visual Studio 16.2 以降では、Visual Studio デバッガーを使用して、Microsoft Edge で実行されている JavaScript をデバッグします。  [2019 Visual Studioダウンロード][MicrosoftVisualStudioDownloads]して、この機能を試してください。  
 
-:::image type="complex" source="../../images/2019/12/vs.msft.png" alt-text="Visual Studio Microsoft Edge Canary、Dev、または Beta で Web アプリを起動するオプションを使用します。" lightbox="../../images/2019/12/vs.msft.png":::
-   Visual Studio Microsoft Edge Canary、Dev、または Beta で Web アプリを起動するオプションを使用します。  
+:::image type="complex" source="../../images/2019/12/vs.msft.png" alt-text="Visual Studio、開発、またはベータ版で Web アプリを起動するMicrosoft Edgeオプションを使用します。" lightbox="../../images/2019/12/vs.msft.png":::
+   Visual Studio、開発、またはベータ版で Web アプリを起動するMicrosoft Edgeオプションを使用します。  
 :::image-end:::  
 
-[Microsoft Edge をデバッグする方法については][MicrosoftVisualStudioBlogDebugJavascript]、ブログ記事を参照Visual Studio。  
+[ブログの投稿を読んで、ブログ記事からMicrosoft EdgeをVisual Studio。][MicrosoftVisualStudioBlogDebugJavascript]  
 
 ### <a name="tracking-prevention-console-messages"></a>追跡防止コンソール メッセージ  
 
-追跡防止は、Web サイトにアクセスする前に Web サイトで追跡されるのをブロックする Microsoft Edge の一意の機能です。  既定の追跡防止設定はバランス モードで、プライバシーと Web の互換性のバランスを取るエクスペリエンスのために、サードパーティのトラッカーと既知の悪意のあるトラッカーをブロックします。  特定のトラッカーがブロックされている場合の Web ページの互換性に関する詳細な分析情報を提供するために、Microsoft Edge チームは****、トラッカーがブロックされているときに警告メッセージをコンソールに追加しました。  
+追跡防止は、Web サイトをMicrosoft Edgeする前に Web サイトで追跡されるのをブロックする、サイト内の一意の機能です。  既定の追跡防止設定はバランス モードで、プライバシーと Web の互換性のバランスを取るエクスペリエンスのために、サードパーティのトラッカーと既知の悪意のあるトラッカーをブロックします。  特定のトラッカーがブロックされている場合の Web ページの互換性に関する詳細な分析情報を提供するために、Microsoft Edge チームはトラッカーがブロックされている**** ときに警告メッセージをコンソールに追加しました。  
 
 :::image type="complex" source="../../images/2019/12/tracking-prevention.msft.png" alt-text="追跡防止がトラッカーのストレージへのアクセスをブロックする場合のコンソール内のメッセージ" lightbox="../../images/2019/12/tracking-prevention.msft.png":::
    追跡防止が **トラッカーのストレージ** へのアクセスをブロックする場合のコンソール内のメッセージ  
@@ -192,7 +192,7 @@ Microsoft Edge の要素 [(クロム)][VisualStudioMarketplaceElementsMicrosoftE
 
 ## <a name="announcements-from-the-chromium-project"></a>Chromium プロジェクトからのお知らせ  
 
-次のセクションでは、オープンソースのクロム プロジェクトに貢献した Microsoft Edge 80 で利用できる追加機能について説明します。  
+次のセクションでは、80 で利用可能Microsoft Edge、プロジェクトのオープン ソースにChromiumします。  
 
 ### <a name="support-for-let-and-class-redeclarations-in-the-console"></a>コンソールでの let および class redeclarations のサポート  
 
@@ -203,17 +203,17 @@ Microsoft Edge の要素 [(クロム)][VisualStudioMarketplaceElementsMicrosoftE
 
 たとえば、以前は、ローカル変数を使用して再宣言すると、 `let` コンソールはエラーを発生しました。  
 
-:::image type="complex" source="../../images/2019/12/letbefore.msft.png" alt-text="再宣言が失敗した Microsoft Edge 79 のコンソール" lightbox="../../images/2019/12/letbefore.msft.png":::
-   再 **宣言** が失敗した Microsoft Edge 79 のコンソール  
+:::image type="complex" source="../../images/2019/12/letbefore.msft.png" alt-text="79 のコンソールMicrosoft Edge再宣言が失敗した場合" lightbox="../../images/2019/12/letbefore.msft.png":::
+   **79**のコンソールMicrosoft Edge再宣言が失敗した場合  
 :::image-end:::  
 
 次に、コンソールで再宣言を許可します。  
 
-:::image type="complex" source="../../images/2019/12/letafter.msft.png" alt-text="再宣言が成功した Microsoft Edge 80 のコンソール" lightbox="../../images/2019/12/letafter.msft.png":::
-   再 **宣言** が成功した Microsoft Edge 80 のコンソール  
+:::image type="complex" source="../../images/2019/12/letafter.msft.png" alt-text="let 再宣言Microsoft Edge成功を示す 80 のコンソール" lightbox="../../images/2019/12/letafter.msft.png":::
+   let **** 再宣言Microsoft Edge成功を示すコンソール (80)  
 :::image-end:::  
 
-クロムの問題 [#1004193][CR1004193]  
+Chromiumの問題[#1004193][CR1004193]  
 
 ### <a name="improved-webassembly-debugging"></a>WebAssembly デバッグの改善  
 
@@ -248,7 +248,7 @@ DevTools は [DWARF][DwarfHome]デバッグ標準のサポートを開始しま�
 > [!NOTE]
 > イニシエーターと依存関係の情報にアクセスするには、ネットワーク リソースを保持してから `Shift` ホバリングします。  [イニシエータと [依存関係の表示] に移動します][DevToolsNetworkReferenceViewInitiatorsDependencies]。  
 
-クロムの問題 [#842488][CR842488]  
+Chromium[問題#842488][CR842488]  
 
 #### <a name="highlight-the-selected-network-request-in-the-overview"></a>[概要] で選択したネットワーク要求を強調表示する  
 
@@ -258,7 +258,7 @@ DevTools は [DWARF][DwarfHome]デバッグ標準のサポートを開始しま�
    検査 **されたリソース** を強調表示する [概要] ウィンドウ  
 :::image-end:::  
 
-クロムの問題 [#988253][CR988253]  
+Chromium[の問題][CR988253]#988253  
 
 #### <a name="url-and-path-columns-in-the-network-panel"></a>[ネットワーク] パネルの URL 列とパス列  
 
@@ -270,7 +270,7 @@ DevTools は [DWARF][DwarfHome]デバッグ標準のサポートを開始しま�
 
 新しい列を表示するには、**ウォーター**フォール テーブル ヘッダーにマウス ポインターを置き、コンテキスト メニュー \(righ-click\) を開き、[パス] または **[URL]****を**選択します。  
 
-クロムの問題 [#993366][CR993366]  
+Chromium[問題#993366][CR993366]  
 
 #### <a name="updated-user-agent-strings"></a>更新されたUser-Agent文字列  
 
@@ -287,7 +287,7 @@ DevTools では、[ネットワーク条件] パネルをUser-Agentカスタム 
 > [!NOTE]
 > デバイス モードで [文字列User-Agent設定することもできます][DevToolsDeviceModeIndex]。  
 
-クロムの問題 [#1029031][CR1029031]  
+Chromiumの問題[#1029031][CR1029031]  
 
 ### <a name="audits-panel-updates"></a>監査パネルの更新  
 
@@ -316,60 +316,60 @@ DevTools では、[ネットワーク条件] パネルをUser-Agentカスタム 
 
 ページの更新を行わずにコード範囲を切り込むのは、カバレッジ データが不当だったため削除されました。  たとえば、ランタイムが長時間前で、V8 ガベージ コレクターがクリーンアップした場合、関数が使用されていないと報告される場合があります。  
 
-クロムの問題 [#1004203][CR1004203]  
+Chromiumの問題[#1004203][CR1004203]  
 
 ## <a name="download-the-microsoft-edge-preview-channels"></a>Microsoft Edge プレビュー チャネルをダウンロードする  
 
 Windows または macOS を使用している場合、[Microsoft Edge プレビュー チャネル][MicrosoftEdgePreviewChannels] を既定の開発ブラウザーとして使用することを検討してください。  プレビュー チャネルを使用すると、最新の DevTools 機能にアクセスできます。  
 
-## <a name="getting-in-touch-with-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームに連絡  
+## <a name="getting-in-touch-with-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームに連絡する  
 
 [!INCLUDE [contact DevTools team note](../../includes/contact-whats-new-note.md)]  
 
 <!-- links -->  
 
 [DevToolsCommandMenuIndex]: /microsoft-edge/devtools-guide-chromium/command-menu/index "Microsoft Edge DevTools コマンド メニュー を使用してコマンドを実行する | Microsoft Docs"  
-[DevToolsCoverageIndex]: /microsoft-edge/devtools-guide-chromium/coverage/index "Microsoft Edge DevTools の [カバレッジ] ツールを使用して、使用されていない JavaScript コードと CSS コードを検索|Microsoft Docs"  
-[DevToolsDeviceModeIndex]: /microsoft-edge/devtools-guide-chromium/device-mode/index#simulate-a-mobile-viewport "モバイル ビューポートのシミュレート - Microsoft Edge DevTools アプリケーションでデバイス モードを使用してモバイル デバイスをシミュレート|Microsoft Docs"  
-[DevToolsNetworkIndex]: /microsoft-edge/devtools-guide-chromium/network/index "Microsoft Edge DevTools サーバーでネットワーク アクティビティを|Microsoft Docs"  
+[DevToolsCoverageIndex]: /microsoft-edge/devtools-guide-chromium/coverage/index "DevTools ページの [カバレッジ] ツールを使用して、使用されていない JavaScript および CSS Microsoft Edgeを|Microsoft Docs"  
+[DevToolsDeviceModeIndex]: /microsoft-edge/devtools-guide-chromium/device-mode/index#simulate-a-mobile-viewport "モバイル ビューポートをシミュレートする - デバイス モードでモバイル デバイスをシミュレートする (DevTools Microsoft Edge) |Microsoft Docs"  
+[DevToolsNetworkIndex]: /microsoft-edge/devtools-guide-chromium/network/index "DevTools サーバーでネットワークMicrosoft Edgeを調|Microsoft Docs"  
 [DevToolsNetworkReferenceViewInitiatorsDependencies]: /microsoft-edge/devtools-guide-chromium/network/reference#view-initiators-and-dependencies "開始者と依存関係の表示 - ネットワーク分析リファレンス |Microsoft Docs"  
-[VisualStudioCodeDebuggerEdgeExtension]: /microsoft-edge/visual-studio-code/debugger-for-edge "Microsoft Edge Visual Studio Code 拡張機能のデバッガー |Microsoft Docs"  
-[VisualStudioCodeElementEdgeExtension]: /microsoft-edge/visual-studio-code/elements-for-edge "Microsoft Edge Visual Studio Code 拡張機能の|Microsoft Docs"  
+[VisualStudioCodeDebuggerEdgeExtension]: /microsoft-edge/visual-studio-code/debugger-for-edge "デバッガーの拡張機能Microsoft Edge Visual Studio Codeの|Microsoft Docs"  
+[VisualStudioCodeElementEdgeExtension]: /microsoft-edge/visual-studio-code/elements-for-edge "拡張機能のMicrosoft Edge Visual Studio Code要素|Microsoft Docs"  
 
 <!--  [201912Webassembly]: webassembly.md "Improved WebAssembly debugging in Microsoft Edge DevTools"  -->  
 
-[CR842488]: https://crbug.com/842488 "[イニシエーター] フィールドを [ヘッダー] タブに追加|クロム バグ"  
-[CR988253]: https://crbug.com/988253 "Bug DevTools - ネットワーク要求とタイムライン グラフ の間に関連付|クロム バグ"  
-[CR993366]: https://crbug.com/993366 "ネットワーク パネル要求リストに URL のパス部分を表示|クロム バグ"  
-[CR1004193]: https://crbug.com/1004193 "V8 の REPL モード|クロム バグ"  
-[CR1004203]: https://crbug.com/1004203 "コード カバレッジをすばらしい|クロム バグ"  
-[CR1029031]: https://crbug.com/1029031 "UA 文字列が古くなっている|クロム バグ" 
-[CR963183]: https://crbug.com/963183 "DevTools は WCAG 準拠の|クロム バグ"
-[CR941561]: https://crbug.com/941561 "DevTools ファイルのローカライズ|クロム バグ"
-[CR987787]: https://crbug.com/987787 "Dom 3D ビュー |クロム バグ"
+[CR842488]: https://crbug.com/842488 "[イニシエーター] フィールドを [ヘッダー] タブに追加|Chromiumバグ"  
+[CR988253]: https://crbug.com/988253 "Bug DevTools - ネットワーク要求とタイムライン の間に関連付Graph |Chromiumバグ"  
+[CR993366]: https://crbug.com/993366 "ネットワーク パネル要求リストに URL のパス部分を表示|Chromiumバグ"  
+[CR1004193]: https://crbug.com/1004193 "V8 の REPL モード|Chromiumバグ"  
+[CR1004203]: https://crbug.com/1004203 "コード カバレッジをすばらしい|Chromiumバグ"  
+[CR1029031]: https://crbug.com/1029031 "UA 文字列が古くなっている|Chromiumバグ" 
+[CR963183]: https://crbug.com/963183 "DevTools は WCAG 準拠の|Chromiumバグ"
+[CR941561]: https://crbug.com/941561 "DevTools ファイルのローカライズ|Chromiumバグ"
+[CR987787]: https://crbug.com/987787 "Dom 3D ビュー |Chromiumバグ"
 
 [AccessibilityInsights]: https://aka.ms/a11yinsights "アクセシビリティインサイト"  
 
 [DwarfHome]: https://dwarfstd.org "Dwarf Home"  
 [GitHubGoogleChromeDevToolsAuditsPanelThrottling]: https://github.com/GoogleChrome/lighthouse/blob/master/docs/throttling.md#devtools-audits-panel-throttling "DevTools の監査パネル調整 - GoogleChrome/ライトハウス |GitHub"  
 [GitHubMicrosoftDocsEdgeDeveloperNewIssue]: https://aka.ms/edgedevtoolsdocs/feedback "新しい問題 - MicrosoftDocs/edge-developer"  
-[MicrosoftEdgePreviewChannels]: https://aka.ms/microsoftedge "Microsoft Edge Preview チャネル"  
-[MicrosoftEdgeInsiderAddons]: https://aka.ms/webhint/edge-extension "Microsoft Edge Insider アドオン"  
+[MicrosoftEdgePreviewChannels]: https://aka.ms/microsoftedge "Microsoft Edgeプレビュー チャネル"  
+[MicrosoftEdgeInsiderAddons]: https://aka.ms/webhint/edge-extension "Microsoft EdgeInsider アドオン"  
 [MicrosoftVisualStudio]: https://aka.ms/vs "Visual Studio"  
-[MicrosoftVisualStudioBlogDebugJavascript]: https://aka.ms/vs/debug-edge "Microsoft Edge で JavaScript をデバッグする方法をVisual Studio |Visual Studioブログ"  
-[MicrosoftVisualStudioDownloads]: https://aka.ms/vs/download "Windows Visual Studio Mac 用 2019 &ダウンロード"  
+[MicrosoftVisualStudioBlogDebugJavascript]: https://aka.ms/vs/debug-edge "JavaScript を Microsoft EdgeからデバッグVisual Studio |Visual Studioブログ"  
+[MicrosoftVisualStudioDownloads]: https://aka.ms/vs/download "ダウンロード Visual Studio 2019 for Windows \& Mac"  
 [MDNDocumentObjectModel]: https://developer.mozilla.org/docs/Web/API/Document_Object_Model "ドキュメント オブジェクト モデル (DOM) |MDN"  
 [MDNZIndex]: https://developer.mozilla.org/docs/Web/CSS/z-index "z-index |MDN"  
 [PostTweetEdgeDevTools]: https://aka.ms/tweet/edgedevtools "@EdgeDevTools | ツイートを投稿する"  
 [EdgeDevToolsTwitterAccount]: https://aka.ms/twitter/edgedevtools "@EdgeDevTools Twitter アカウント"
-[VisualStudioCode]: https://aka.ms/vscode "Visual Studioコード"  
-[VisualStudioMarketplaceDebuggerEdge]: https://aka.ms/debugger4code "Microsoft Edge 用デバッガー - Visual Studio Marketplace"  
-[VisualStudioMarketplaceElementsMicrosoftEdgeChromiumExtension]: https://aka.ms/elements4code "Microsoft Edge \(Chromium\) の要素 - Visual Studio Marketplace"  
+[VisualStudioCode]: https://aka.ms/vscode "Visual Studio Code"  
+[VisualStudioMarketplaceDebuggerEdge]: https://aka.ms/debugger4code "デバッガー for Microsoft Edge - Visual Studio Marketplace"  
+[VisualStudioMarketplaceElementsMicrosoftEdgeChromiumExtension]: https://aka.ms/elements4code "\Chromium(Microsoft Edge\) の要素 - Visual Studio Marketplace"  
 [VisualStudioMarketplaceWebhintExtension]: https://aka.ms/webhint4code "webhint - Visual Studio Marketplace"
 [Webhint]: https://aka.ms/webhint "webhint"  
 [WebhintBrowserExtension]: https://aka.ms/webhint/browser-extension "Webhint Browser Extension |webhint のドキュメント"  
-[WebhintVisualStudioCodeExtension]: https://aka.ms/webhint/code-extension "Webhint Visual Studio コード拡張機能 |webhint のドキュメント"  
-[TrackingPrevention]: https://aka.ms/microsoftedge/tracking-prevention-blog "Microsoft Edge ブログ投稿での追跡防止の改善"
+[WebhintVisualStudioCodeExtension]: https://aka.ms/webhint/code-extension "Webhint Visual Studio Code 拡張機能 |webhint のドキュメント"  
+[TrackingPrevention]: https://aka.ms/microsoftedge/tracking-prevention-blog "ブログ投稿での追跡防止Microsoft Edge改善"
 [TheWebWeWant]: https://aka.ms/webwewant "必要とされる Web"
 
 > [!NOTE]

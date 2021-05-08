@@ -289,7 +289,7 @@ DevTools はネットワーク ツールの横**** に警告アイコンを表�
 ボタンが表示されない場合は、[フィルター] **ウィンドウ** が非表示になる場合があります。  
 詳細については、「フィルター ウィンドウを非表示 [にする」に移動します](#hide-the-filters-pane)。  
 
-複数の種類のフィルターを同時に有効にするには `Control` 、\(Windows、Linux\) または `Command` \(macOS\) を保持してから選択します。  
+複数の種類のフィルターを同時に有効 `Control` にするには、\(Windows、Linux\) または `Command` \(macOS\) を押したまま選択します。  
 
 :::image type="complex" source="../media/network-network-type-filters.msft.png" alt-text="Type フィルターを使用して JS、CSS、および Document リソースを表示する" lightbox="../media/network-network-type-filters.msft.png":::
    Type フィルターを使用して JS、CSS、および Document リソースを表示する  
@@ -418,7 +418,7 @@ DevTools が開いている間に行われたすべての要求のログを表�
    :::column span="2":::
       次のオブジェクトまたはプロセスが要求を開始します。  
       
-      *   **パーサー**  Microsoft Edge の HTML パーサー。  
+      *   **パーサー** ユーザーの HTML パーサー Microsoft Edge。  
       *   **リダイレクト**  HTTP リダイレクト。  
       *   **スクリプト**  JavaScript 関数。  
       *   **その他**  リンクを使用してページに移動したり、アドレス バーに URL を入力したりなど、他のプロセスやアクションもあります。  
@@ -434,7 +434,7 @@ DevTools が開いている間に行われたすべての要求のログを表�
 :::row-end:::  
 :::row:::
    :::column span="1":::
-      **時間**  
+      **Time**  
    :::column-end:::
    :::column span="2":::
       要求の開始から応答の最終バイトの受信まで、合計期間。  

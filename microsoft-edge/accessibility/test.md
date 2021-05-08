@@ -47,7 +47,7 @@ Web コンテンツ アクセシビリティ ガイドライン \(WCAG\) 2.0 の
 
 #### [<a name="web-accessibility-checker"></a>Web アクセシビリティ チェッカー](https://visualstudiogallery.msdn.microsoft.com/3aabefab-1681-4fea-8f95-6a62e2f0f1ec)  
 
-任意Visual Studio Web アプリでアクセシビリティ チェックを実行するASP.NET拡張機能。
+任意Visual Studio Web アプリでアクセシビリティ チェックを実行する ASP.NET 拡張機能。
 
 #### [<a name="web-accessibility-evaluation-tools-list"></a>Web アクセシビリティ評価ツールの一覧](https://www.w3.org/WAI/ER/tools/index.html)  
 

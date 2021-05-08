@@ -1,5 +1,5 @@
 ---
-description: Microsoft Edge と Android 全体でサイトのパフォーマンスが高いという点で、仕事は終わるものではありません。  デバイス モードでは、iPhone などの他のデバイスの範囲をシミュレートすることができますが、他のブラウザーが提供するエミュレーションのソリューションを確認してください。
+description: 仕事は、サイトのパフォーマンスがユーザーと Android の間でMicrosoft Edge終わるものではありません。  デバイス モードでは、iPhone などの他のデバイスの範囲をシミュレートすることができますが、他のブラウザーが提供するエミュレーションのソリューションを確認してください。
 title: 他のブラウザーをエミュレートしてテストする
 author: MSEdgeTeam
 ms.author: msedgedevrel
@@ -29,9 +29,9 @@ ms.locfileid: "11481367"
    limitations under the License.  -->
 # <a name="emulate-and-test-other-browsers"></a>他のブラウザーをエミュレートしてテストする  
 
-Microsoft Edge と Android 全体でサイトのパフォーマンスが高いという点で、仕事は終わるものではありません。  デバイス モードでは、iPhone などの他のデバイスの範囲をシミュレートすることができますが、他のブラウザーが提供するエミュレーションのソリューションを確認してください。  
+仕事は、サイトのパフォーマンスがユーザーと Android の間でMicrosoft Edge終わるものではありません。  デバイス モードでは、iPhone などの他のデバイスの範囲をシミュレートすることができますが、他のブラウザーが提供するエミュレーションのソリューションを確認してください。  
 
-### <a name="summary"></a>要約  
+### <a name="summary"></a>まとめ  
 
 *   特定のデバイスがない場合や、何かのスポット チェックを行う場合は、ブラウザーの内部でデバイスをエミュレートする方法が最適です。  
 *   デバイス エミュレーターとシミュレーターを使用すると、ワークステーションからさまざまなデバイスで開発サイトを模倣できます。  
@@ -47,7 +47,7 @@ Firefox には[][MDNResponsiveDesignMode]応答性の高いデザイン ビュ�
 
 ### <a name="edgehtml-emulation"></a>EdgeHTML エミュレーション  
 
-Windows Phone をエミュレートするには、Microsoft Edge \(EdgeHTML\) 組み込 [みエミュレーションを使用します][ArchiveMicrosoftEdgeDevtoolsEmulation]。  
+電話をWindowsするには、\(EdgeHTML\) 組み込Microsoft Edgeエミュレーションを[使用します][ArchiveMicrosoftEdgeDevtoolsEmulation]。  
 
 [IE 11 エミュレーションを使用][Ie11DevToolsEmulation]して、以前のバージョンのページでのページの外観をシミュレートInternet Explorer。  
 
@@ -63,12 +63,12 @@ Windows Phone をエミュレートするには、Microsoft Edge \(EdgeHTML\) �
 :::image-end:::  
 -->  
 
-現時点では、Android エミュレーターに Microsoft Edge をインストールする方法はありません。  ただし、このガイドで後で確認する Android ブラウザー、クロム コンテンツ シェル、および Firefox for Android を使用できます。  クロム コンテンツ シェルは、Microsoft Edge と同じクロム レンダリング エンジンを実行しますが、ブラウザー固有の機能は提供されません。  
+現時点では、Android エミュレーターにMicrosoft Edgeをインストールする方法はありません。  ただし、このガイドで後で確認する Android ブラウザー、Chromiumコンテンツ シェル、および Firefox for Android を使用できます。  Chromiumコンテンツ シェルは、Chromiumレンダリング エンジンMicrosoft Edge実行しますが、ブラウザー固有の機能は提供されません。  
 
 Android エミュレーターには、Android Studio の一部としてダウンロードする必要がある [Android SDK が付属しています][AndroidStudioDownload]。  次に、指示に従って [仮想デバイスをセットアップし][AndroidStudioCreateManageVirtualDevices] 、エミュレーター [を起動します][AndroidStudioRunAppsAndroidEmulator]。  
 エミュレーターが起動したら、[ブラウザー] アイコンを選択し、Android 用の古いストック ブラウザーでサイトをテストします。  
 
-#### <a name="chromium-content-shell-on-android"></a>Android 上のクロム コンテンツ シェル  
+#### <a name="chromium-content-shell-on-android"></a>Chromium Android のコンテンツ シェル  
 
 <!--  
 :::image type="complex" source="../media/device-mode-android-avd-contentshell.msft.png" alt-text="Android Emulator Content Shell" lightbox="../media/device-mode-android-avd-contentshell.msft.png":::
@@ -76,7 +76,7 @@ Android エミュレーターには、Android Studio の一部としてダウン
 :::image-end:::  
 -->  
 
-Android 用クロム コンテンツ シェルをインストールするには、エミュレーターを実行したままにし、次のコマンドを実行します。  
+Android 用コンテンツ Chromiumをインストールするには、エミュレーターを実行したままにし、次のコマンドを実行します。  
 
 ```shell
 git clone https://github.com/PaulKinlan/chromium-android-installer.git
@@ -84,7 +84,7 @@ chmod u+x ./chromium-android-installer/*.sh
 ./chromium-android-installer/install-chromeandroid.sh
 ```  
 
-これで、クロム コンテンツ シェルを使用してサイトをテストできます。  
+これで、コンテンツ シェルを使用してサイトChromiumできます。  
 
 #### <a name="firefox-on-android"></a>Android の Firefox  
 
@@ -94,7 +94,7 @@ chmod u+x ./chromium-android-installer/*.sh
 :::image-end:::  
 -->  
 
-クロム コンテンツ シェルと同様に、APK を取得して Firefox をエミュレーターにインストールできます。  
+コンテンツ シェルChromium同様に、APK を取得して Firefox をエミュレーターにインストールできます。  
 
 [正しい .apk ファイルをダウンロードします][MozillaFirefoxDownload]。  
 
@@ -119,7 +119,7 @@ Mac OS X 用の iOS シミュレーターには、アプリ ストアからイ�
    最新の IE VM  
 :::image-end:::  
 
-Microsoft Edge \(EdgeHTML\) 仮想マシン \(VM\) を使用すると、VirtualBox \(または VMWare\) を介してコンピューター上のさまざまなバージョンの EdgeHTML と IE にアクセスできます。  ダウンロード ページ [で仮想マシンを選択します][MicrosoftDeveloperEdgeVms]。  
+Microsoft Edge \(EdgeHTML\) 仮想マシン \(VM\) を使用すると、VirtualBox \(または VMWare\) を介して、コンピューター上のさまざまなバージョンの EdgeHTML と IE にアクセスできます。  ダウンロード ページ [で仮想マシンを選択します][MicrosoftDeveloperEdgeVms]。  
 
 ## <a name="cloud-based-emulators-and-simulators"></a>クラウドベースのエミュレーターとシミュレーター  
 

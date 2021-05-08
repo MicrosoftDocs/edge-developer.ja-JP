@@ -1,6 +1,6 @@
 ---
-description: Microsoft Edge DevTools プロトコルへの更新
-title: Microsoft Edge DevTools プロトコル更新プログラム
+description: DevTools プロトコルMicrosoft Edge更新
+title: Microsoft EdgeDevTools プロトコルの更新
 author: MSEdgeTeam
 ms.author: msedgedevrel
 ms.date: 04/06/2021
@@ -13,9 +13,9 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/07/2021
 ms.locfileid: "11480161"
 ---
-# <a name="microsoft-edge-chromium-devtools-protocol-overview"></a>Microsoft Edge (クロム) DevTools プロトコルの概要  
+# <a name="microsoft-edge-chromium-devtools-protocol-overview"></a>Microsoft Edge (Chromium) DevTools プロトコルの概要  
 
-Microsoft Edge の基になる Web プラットフォームがクロムに移行すると [、Microsoft Edge (EdgeHTML) DevTools プロトコル](/archive/microsoft-edge/legacy/developer/devtools-protocol/index) はそれ以上の更新プログラムを受け取る必要があります。  Microsoft Edge \(Chromium\) DevTools プロトコルは、今後 Chrome DevTools プロトコルの API と一致します。  
+Microsoft Edge の基になる Web プラットフォームが Chromium に移行すると[、Microsoft Edge (EdgeHTML) DevTools プロトコル](/archive/microsoft-edge/legacy/developer/devtools-protocol/index)はそれ以上の更新プログラムを受け取る必要があります。  Microsoft Edge \(Chromium\) DevTools プロトコルは、今後の Chrome DevTools プロトコルの API と一致します。  
 
 これらのドメインとメソッドについては [、Chrome DevTools](https://chromedevtools.github.io/devtools-protocol/tot)プロトコル ビューアーを参照してください。  
 
@@ -24,10 +24,10 @@ Microsoft Edge の基になる Web プラットフォームがクロムに移行
 
 ## <a name="using-the-devtools-protocol"></a>DevTools プロトコルの使用  
 
-Microsoft Edge \(Chromium\) の DevTools Server にカスタム ツール クライアントを接続する方法を次に示します。  
+\(Chromium\) の DevTools Server にカスタム ツール クライアントを接続するMicrosoft Edge次に示します。  
 
-1.  Microsoft Edge \(Chromium\) のすべてのインスタンスが閉じられます。  
-1.  リモート デバッグ ポートで Microsoft Edge \(Chromium\) を起動します。 
+1.  \(Microsoft Edge\) のすべてのインスタンスがChromium閉じられます。  
+1.  リモート デバッグ Microsoft Edge \(Chromium\) を起動します。 
     
     ```shell
     msedge.exe --remote-debugging-port=9222
@@ -49,7 +49,7 @@ Microsoft Edge \(Chromium\) の DevTools Server にカスタム ツール クラ
 
 ## <a name="devtools-protocol-http-endpoints"></a>DevTools プロトコル HTTP エンドポイント  
 
-Microsoft Edge \(Chromium\) DevTools プロトコルは、次の HTTP エンドポイントをサポートしています。  
+Microsoft Edge \(Chromium\) DevTools プロトコルは、次の HTTP エンドポイントをサポートします。  
 
 ## <a name="jsonversion"></a>/json/version  
 
@@ -108,7 +108,7 @@ JSON としてシリアル化されたプロトコル API サーフェス全体�
 
 ## <a name="jsonclose"></a>/json/close  
 
-ターゲット プロセス \(たとえば、Microsoft Edge \(Chromium\) を閉じ、ページ タブ\を閉じます。  
+ターゲット プロセス \(たとえば、\(Microsoft Edge Chromium\) を閉じて、ページ タブ\を閉じます。  
 
 **パラメーター**  
 
@@ -120,17 +120,17 @@ JSON としてシリアル化されたプロトコル API サーフェス全体�
 String(“Target is closing”)
 ```  
 
-## <a name="remote-tools-for-microsoft-edge-beta"></a>Microsoft Edge のリモート ツール (ベータ)  
+## <a name="remote-tools-for-microsoft-edge-beta"></a>リモート ツール for Microsoft Edge (Beta)  
 
-これで[、Microsoft Store](https://www.microsoft.com/store/apps/windows)から Microsoft Edge 用リモート ツール[(Beta)](https://www.microsoft.com/store/apps/9P6CMFV44ZLT)をインストールできます。  このアプリを使用すると、開発マシンから Windows 10 デバイスで実行されている Microsoft Edge (Chromium) をリモートでデバッグできます。  
+これで、リモート ツール[(Beta)](https://www.microsoft.com/store/apps/9P6CMFV44ZLT) Microsoft Edgeからインストール[Microsoft Store。](https://www.microsoft.com/store/apps/windows)  このアプリを使用すると、開発Microsoft EdgeデバイスChromium (Chromium Windows 10) をリモートでデバッグできます。  
 
-開発マシンから Windows 10 デバイスをセットアップして接続する方法については、「リモート デバッグ [Windows 10](../devtools-guide-chromium/remote-debugging/windows.md)デバイスの使用を開始する」に移動します。  
+開発マシンから Windows 10 デバイスをセットアップして接続する方法については、「リモート デバッグ はじめに デバイス」にWindows 10[します](../devtools-guide-chromium/remote-debugging/windows.md)。  
 
-[Microsoft Edge 用](https://www.microsoft.com/store/apps/9P6CMFV44ZLT)リモート ツール (ベータ) は、デバッグする Windows 10 デバイスで実行されている Microsoft Edge と通信するために、DevTools と同じ Microsoft Edge (クロム) DevTools プロトコルを使用します。 [](../devtools-guide-chromium/index.md)  このアプリは、プロトコルへの各呼び出しの前に、先頭とプロセス `/msedge/` ID ( `pid` ) を追加します。  次の HTTP エンドポイントがサポートされています。  
+[Microsoft Edge (Beta)](https://www.microsoft.com/store/apps/9P6CMFV44ZLT)のリモート ツールは、デバッグする Windows 10 デバイスで実行されている Microsoft Edge と通信するために、DevTools と同じ Microsoft Edge (Chromium) DevTools プロトコルを使用します。 [](../devtools-guide-chromium/index.md)  このアプリは、プロトコルへの各呼び出しの前に、先頭とプロセス `/msedge/` ID ( `pid` ) を追加します。  次の HTTP エンドポイントがサポートされています。  
 
 ### <a name="msedgejsonlist"></a>/msedge/json/list  
 
-デバッグ用の Windows 10 デバイス上のすべてのプロセス \(PWA と Microsoft Edge\のすべてのインスタンスのすべてのタブを含む) の候補リストを `msedge.exe` 提供します。 [](../progressive-web-apps-chromium/index.md)  
+デバッグ用のデバイス上のすべてのプロセス `msedge.exe` [\(PWA](../progressive-web-apps-chromium/index.md)と Microsoft Edge\のすべてのインスタンスのすべてのタブを含む) の候補リストをWindows 10します。  
 
 **パラメーター**  
 
@@ -158,7 +158,7 @@ String(“Target is closing”)
 
 ### <a name="msedgepidjsonlist"></a>/msedge/[pid]/json/list  
 
-指定されたデバッグ対象と一致する Microsoft Edge インスタンスのページ ターゲットの候補リスト `[pid]` を提供します。  
+デバッグ用に指定されたインスタンスと一致するMicrosoft Edgeページ ターゲットの候補リスト `[pid]` を提供します。  
 
 **パラメーター**  
 
@@ -181,7 +181,7 @@ String(“Target is closing”)
 
 ### <a name="msedgepidjsonversion"></a>/msedge/[pid]/json/version  
 
-指定されたバージョンと一致する Microsoft Edge インスタンスと、サポートする DevTools プロトコルのバージョンに関する `[pid]` 情報を提供します。  
+指定されたバージョンと一Microsoft Edge、サポートする DevTools プロトコルのバージョンに一致するインスタンスに関する情報 `[pid]` を提供します。  
 
 **パラメーター**  
 
@@ -202,7 +202,7 @@ String(“Target is closing”)
 
 ### <a name="msedgepidjsonprotocol"></a>/msedge/[pid]/json/protocol/  
 
-指定されたインスタンスに一致する Microsoft Edge インスタンスの JSON としてシリアル化されたプロトコル API サーフェス全体を提供します `[pid]` 。  
+指定されたインスタンスと一致するインスタンスの JSON としてシリアル化Microsoft Edgeプロトコル API サーフェス全体を提供します `[pid]` 。  
 
 **パラメーター**  
 
@@ -210,4 +210,4 @@ String(“Target is closing”)
 
 **Return オブジェクト**  
 
-指定されたバージョンと一致する Microsoft Edge インスタンスが使用しているプロトコルのバージョンで使用可能な API サーフェスを表す JSON `[pid]` オブジェクト。  
+指定されたインスタンスに一致するプロトコルのバージョンで使用可能な API サーフェスを表Microsoft Edge JSON `[pid]` オブジェクト。  

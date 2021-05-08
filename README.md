@@ -3,7 +3,7 @@
 ## <a name="microsoft-open-source-code-of-conduct"></a>Microsoft Open Source Code of Conduct  
 
 このプロジェクトでは [、Microsoft Open Source Code of Conduct を採用しています](https://opensource.microsoft.com/codeofconduct)。  
-詳細については、「 [行動規範](https://opensource.microsoft.com/codeofconduct/faq) に関するよく寄せられる質問」または [「opencode@microsoft.comに](mailto:opencode@microsoft.com) 関する質問やコメント」を参照してください。  
+詳細については、「 [行動規範](https://opensource.microsoft.com/codeofconduct/faq) に関するよく寄せられる質問」または [「opencode@microsoft.com](mailto:opencode@microsoft.com) に関する質問やコメント」を参照してください。  
 
 ## <a name="legal-notices"></a>法的通知  
 
@@ -27,7 +27,7 @@ Microsoft およびすべての投稿者は、黙示、禁反言、またはそ�
 
 ### <a name="conventions"></a>規則  
 
-*   ページを追加する場合は、ページが表示される [toc.mdエントリを](./microsoft-edge/toc.yml) 追加する必要があります。
+*   ページを追加する場合は、ページが表示される toc.md [エントリを](./microsoft-edge/toc.yml) 追加する必要があります。
 *   ディレクトリには、より多くのディレクトリまたは複数のディレクトリが含 `readme.md` まれている場合があります。
 *   フォルダー/ディレクトリ名は、ダッシュ区切り \(\ `f12-tools` など) と小文字です。  ディレクトリは、サイトの URL で使用 `docs.microsoft.com` されます。  アンダースコア、PascalCase、camelCase は使用しないようにします。  
 
@@ -69,7 +69,7 @@ body {
 | 左揃え | ない限り、# | 456 |  
 | テキスト値 | その他のテキスト | $0.00 |  
 
-### <a name="notes"></a>備考  
+### <a name="notes"></a>注  
 
 メモは注意して使用してください。  ブロックは、"見逃すな" 情報を強調表示するように設計されています。  
 

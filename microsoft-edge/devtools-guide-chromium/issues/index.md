@@ -42,7 +42,7 @@ Microsoft **Edge** DevTools の Issues ツールを使用すると、コンソ�
 
 ## <a name="open-the-issues-tool-in-the-devtools-drawer"></a>DevTools ドロワーで [問題] ツールを開く  
 
-1.  修正する問題を含む web [ページ][GlitchSamesiteSandbox](samesite-sandbox.glitch.meなど) に移動します。  
+1.  修正する問題を含む web [ページ][GlitchSamesiteSandbox](samesite-sandbox.glitch.me など) に移動します。  
 1.  [DevTools を開きます][DevtoolsOpen]。  
 1.  :::row:::
        :::column span="":::

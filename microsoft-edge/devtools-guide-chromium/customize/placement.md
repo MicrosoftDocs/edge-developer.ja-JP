@@ -1,6 +1,6 @@
 ---
-description: Microsoft Edge DevTools をビューポートの下部または左側、または別のウィンドウに移動する方法。
-title: Microsoft Edge DevTools の配置を変更する (Undock、Dock to bottom、Dock to left)
+description: DevTools Microsoft Edgeビューポートの下部または左側、または別のウィンドウに移動する方法。
+title: DevTools Microsoft Edgeを変更する (Undock、Dock to bottom、Dock to left)
 author: MSEdgeTeam
 ms.author: msedgedevrel
 ms.date: 03/08/2021
@@ -28,7 +28,7 @@ ms.locfileid: "11519157"
    See the License for the specific language governing permissions and
    limitations under the License.  -->
 
-# <a name="change-microsoft-edge-devtools-placement-undock-dock-to-bottom-dock-to-left"></a>Microsoft Edge DevTools の配置を変更する (Undock、Dock to bottom、Dock to left)  
+# <a name="change-microsoft-edge-devtools-placement-undock-dock-to-bottom-dock-to-left"></a>DevTools Microsoft Edgeを変更する (Undock、Dock to bottom、Dock to left)  
 
 既定では、DevTools はビューポート (ウィンドウ) の右側にドッキングされます。  また、DevTools をウィンドウの下部または左側にドッキングしたり、DevTools を別のウィンドウにドッキング解除したりすることもできます。
 
@@ -86,7 +86,7 @@ DevTools は別のウィンドウにドッキング解除され、別のモニ�
     
 ## <a name="change-placement-from-the-command-menu"></a>コマンド メニューから配置を変更する  
 
-1.  [Windows/Linux または][DevtoolsCommandMenu]macOS で選択して、 `Shift` + `Ctrl` + `P` コマンド `Command` + `Shift` + `P` メニューを開きます。  
+1.  [コマンド メニューを開き][DevtoolsCommandMenu] `Shift` + `Ctrl` + `P` 、Windows/Linux または `Command` + `Shift` + `P` macOS で選択します。  
 1.  文字の `>` 後に、 `dock` と入力し、次のいずれかのコマンドを選択します。  
     
     *  **下にドッキングする**
@@ -107,7 +107,7 @@ DevTools は別のウィンドウにドッキング解除され、別のモニ�
 
 <!-- links -->  
 
-[DevtoolsCommandMenu]: ../command-menu/index.md "[Microsoft Edge DevTools コマンド] メニューメニューを使用してコマンドを実行|Microsoft Docs"  
+[DevtoolsCommandMenu]: ../command-menu/index.md "[DevTools コマンド] メニューの [Microsoft Edgeを使用してコマンドを実行|Microsoft Docs"  
 
 > [!NOTE]
 > このページの一部は、 [Google によっ て作成および共有された][GoogleSitePolicies]作業に基づく変更で、「[Creative Commons Attribution 4.0 International License][CCA4IL]」で記載されている条項に従って使用されます。  

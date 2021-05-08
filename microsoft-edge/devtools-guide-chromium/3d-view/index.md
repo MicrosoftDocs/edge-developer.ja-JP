@@ -127,15 +127,15 @@ z-index エクスペリエンスではなく、より多くの一般的なデバ
    **[コンポジット レイヤー]** ウィンドウ
 :::image-end:::  
 
-[ **複合レイヤー] ウィンドウは** 、コンテキストを変更せずにレイヤー ツール **の** 要素を開きます。  引き続き各レイヤーの詳細にアクセスし、スロー スクロールを下げ、ペイント******することができます**。
+[ **複合レイヤー] ウィンドウは** 、コンテキストを変更せずにレイヤー ツール **の** 要素を開きます。  引き続き各レイヤーの詳細にアクセスし、低速スクロールが**** 下がり、ペイント。 ****
 
 ## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームと連絡を取る  
 
-Microsoft Edge Devtools チームは、UI に取り組み、フィードバックに基づいて 3D ビューにさらに機能を追加しています。  フィードバックを送信して、Microsoft Edge DevTools の改善に役立ちます。  DevTools**で [** フィードバックの送信] アイコンを選択するか、Windows/Linux または macOS で選択し `Alt` + `Shift` + `I` `Option` + `Shift` + `I` 、DevTools に対するフィードバックまたは機能要求を入力します。  
+Devtools Microsoft Edgeチームは UI に取り組み、フィードバックに基づいて 3D ビューにさらに機能を追加しています。  DevTools の改善に役立つフィードバックMicrosoft Edge送信します。  DevTools**で [** フィードバックの送信] アイコンを選択するか、Windows/Linux または macOS 上で選択し `Alt` + `Shift` + `I` `Option` + `Shift` + `I` 、DevTools に対するフィードバックまたは機能要求を入力します。  
 
 <!-- links -->  
 
-[GithubMicrosoftedgeDevtoolssamples3dview]: https://github.com/MicrosoftEdge/DevToolsSamples/tree/master/3DView "Microsoft Edge DevTools 3D ビュー - MicrosoftEdge/DevToolsSamples |GitHub"  
+[GithubMicrosoftedgeDevtoolssamples3dview]: https://github.com/MicrosoftEdge/DevToolsSamples/tree/master/3DView "Microsoft EdgeDevTools 3D ビュー - MicrosoftEdge/DevToolsSamples |GitHub"  
 
 [MDNDocumentObjectModel]: https://developer.mozilla.org/docs/Web/API/Document_Object_Model "ドキュメント オブジェクト モデル (DOM) |MDN"  
 [MDNZIndex]: https://developer.mozilla.org/docs/Web/CSS/z-index "z-index |MDN"  

@@ -179,7 +179,7 @@ document.head.appendChild(script);
 *   DevTools の任意の場所から `Ctrl` + `P` 、Windows/Linux または `Command` + `P` macOS で選択します。  [コマンド] メニューが表示され、[ソース] ツールの [ナビゲーター]**** ウィンドウのタブにあるすべてのリソース**が一覧表示**されます。  
 *   または、[ソース] ツールの****[ナビゲーター]**** ウィンドウのタブの横にある **[..]** **(**[その他のオプション] ) ボタンを選択し、[ファイルを開く]**を選択します**。  
 
-すべての .js ファイルの一覧を表示して選択するには、と入力します `.js` 。
+すべてのファイルの一覧を表示して選択するには.jsを入力します `.js` 。
 
 :::image type="complex" source="../media/sources-command-menu-to-open-file.msft.png" alt-text="コマンド メニューを使用してファイルを開く" lightbox="../media/sources-command-menu-to-open-file.msft.png":::
    コマンド メニューを使用してファイルを開く

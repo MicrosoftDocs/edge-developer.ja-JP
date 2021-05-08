@@ -1,6 +1,6 @@
 ---
-description: Microsoft Edge DevTools のビジョンの欠陥をエミュレートします。
-title: Microsoft Edge DevTools のビジョンの欠陥をエミュレートする (色覚不備)
+description: DevTools のビジョンのMicrosoft Edgeエミュレートします。
+title: DevTools の視覚Microsoft Edgeをエミュレートする (色覚不備)
 author: MSEdgeTeam
 ms.author: msedgedevrel
 ms.date: 02/09/2021
@@ -16,7 +16,7 @@ ms.locfileid: "11519171"
 ---
 # <a name="emulate-vision-deficiencies"></a>視覚欠陥をエミュレートする
 
-色覚障害 [\(color][ColorblindawarenessMain] blindness\) を持つユーザーのニーズをよりよく満たすために [、Microsoft Edge DevTools][DevtoolsIndex] を使用すると、特定のカラー ビジョンの欠陥をシミュレートできます。  [ **ビジョンの不備のエミュレート]** ツールは、次のカテゴリをシミュレートします。  
+色覚障害[\(color][ColorblindawarenessMain] blindness\) を持つユーザーのニーズをよりよく満たすために[、Microsoft Edge DevTools][DevtoolsIndex]を使用すると、特定の色覚障害をシミュレートできます。  [ **ビジョンの不備のエミュレート]** ツールは、次のカテゴリをシミュレートします。  
 
 | 色覚の不足 | 詳細 |  
 |:--- |:--- |  
@@ -70,7 +70,7 @@ Web 製品に適用されているビジョン不足をシミュレートする�
 
 コマンド メニューを使用 **して、** さまざまなシミュレーションにアクセスすることもできます。  
 
-1.  `Ctrl` + `Shift` + `P` \(Windows/Linux\) または `Command` + `Shift` + `P` \(macOS\) を選択してコマンド メニューを**開きます**。  
+1.  `Ctrl` + `Shift` + `P` コマンド メニューを開Windows `Command` + `Shift` + `P` \(Windows/Linux\) または \(macOS\)**を選択します**。  
     
     :::image type="complex" source="../media/css-console-command-menu-rendering.msft.png" alt-text="コマンド メニュー" lightbox="../media/css-console-command-menu-rendering.msft.png":::
        **コマンド メニュー**  

@@ -45,7 +45,7 @@ ms.locfileid: "11519423"
 
 *   デスクトップ上にサイトのソース コードがあります。  
 *   ソース コード ディレクトリからローカル Web サーバーを実行して、サイトにアクセスできます `localhost:8080` 。  
-*   Microsoft `localhost:8080` Edge で開き、DevTools を使用してサイトの CSS を変更しています。  
+*   このページ `localhost:8080` でMicrosoft Edge、DevTools を使用してサイトの CSS を変更しています。  
 
 Workspaces を有効にすると、DevTools 内で行った CSS の変更がデスクトップのソース コードに保存されます。  
 
@@ -57,7 +57,7 @@ Workspaces を有効にすると、DevTools 内で行った CSS の変更がデ�
 
 ワークスペースは、次のフレームワークでは動作しません。  
 
-*   React アプリの作成  
+*   アプリReact作成  
 
     <!-- If you run into issues while using Workspaces with your framework of choice, or you get it working after some custom configuration, please [start a thread in the mailing list][AlphabetGroupsAlphabetBrowserDevTools] or [ask a question on Stack Overflow][StackOverflowAlphabetBrowserDevTools] to share your knowledge with the rest of the DevTools community.  -->  
     
@@ -108,7 +108,7 @@ Workspaces で実践的なエクスペリエンスを得るには、次のアク
        :::column-end:::
     :::row-end:::  
     
-1.  Microsoft Edge でタブを開き、ローカルでホストされているバージョンのサイトに移動します。  URL を使用してアクセスできる必要 `localhost:8080` があります `http://0.0.0.0:8080` 。  正確な [ポート番号は][WikiPortURLs] 異なる場合があります。  
+1.  サイトでタブを開Microsoft Edge、ローカルでホストされているバージョンのサイトに移動します。  URL を使用してアクセスできる必要 `localhost:8080` があります `http://0.0.0.0:8080` 。  正確な [ポート番号は][WikiPortURLs] 異なる場合があります。  
     
     :::image type="complex" source="../media/workspaces-workspaces-demo.msft.png" alt-text="デモ" lightbox="../media/workspaces-workspaces-demo.msft.png":::
        デモ  
@@ -116,7 +116,7 @@ Workspaces で実践的なエクスペリエンスを得るには、次のアク
     
 ### <a name="set-up-devtools"></a>DevTools のセットアップ  
 
-1.  `Control` + `Shift` + `J` \(Windows, Linux\) または `Command` + `Option` + `J` \(macOS\) を選択して、DevTools の**コンソール**パネルを開きます。  
+1.  `Control` + `Shift` + `J` \(Windows Linux\) または `Command` + `Option` + `J` \(macOS\) を選択して、DevTools の**コンソール**パネルを開きます。  
     
     :::image type="complex" source="../media/workspaces-workspaces-demo-console.msft.png" alt-text="[コンソール] パネル" lightbox="../media/workspaces-workspaces-demo-console.msft.png":::
        [ **コンソール]** パネル  
@@ -206,7 +206,7 @@ Web ページの HTML への変更を保存する場合は、[ソース] ツー�
 1.  左側の **[ナビゲーター]** ウィンドウで、[ページ] タブ **を選択** します。  
 1.  ( **インデックス) を選択します**。  ページの HTML が開きます。  
 1.  に `<h1>Workspaces Demo</h1>` 置き換える `<h1>I ❤️  Cake</h1>` 。  次の図を確認します。  
-1.  `Control` + `S` \(Windows, Linux\) または `Command` + `S` \(macOS\) を選択して変更を保存します。  
+1.  `Control` + `S` \(Windows Linux\) または `Command` + `S` \(macOS\) を選択して変更を保存します。  
 1.  ページを最新の情報に更新してください。  ページ `<h1>` が更新された後も、要素は新しいテキストを表示し続ける。  
     
     :::image type="complex" source="../media/workspaces-workspaces-demo-sources-page-h1.msft.png" alt-text="ソース ツールから HTML を変更する" lightbox="../media/workspaces-workspaces-demo-sources-page-h1.msft.png":::
@@ -222,14 +222,14 @@ DevTools のコード エディターを使用する主な場所は、 **ソー�
 DevTools コード エディターを他のツールと共に開くには、次の操作を行います。  
 
 1.  [要素] ツール **に移動** します。  
-1.  `Control` + `Shift` + `P` \(Windows, Linux\) または `Command` + `Shift` + `P` \(macOS\) を選択します。  [ **コマンド] メニューが** 開きます。  
+1.  `Control` + `Shift` + `P` \(Windows Linux\) または `Command` + `Shift` + `P` \(macOS\) を選択します。  [ **コマンド] メニューが** 開きます。  
 1.  を `Quick Source` 入力し、[クイック ソース **の表示] を選択します**。  [DevTools] ウィンドウの下部にクイック**** ソース ツールが表示され、ソース ツールで編集した最後のファイルであるコンテンツ `index.html` **が表示**されます。    
     
     :::image type="complex" source="../media/workspaces-workspaces-demo-search-show-quick-source.msft.png" alt-text="コマンド メニューを使用してクイック ソース ツールを開く" lightbox="../media/workspaces-workspaces-demo-search-show-quick-source.msft.png":::
        コマンド メニュー **を使用して** クイック ソース ツール **を開く**  
     :::image-end:::  
     
-1.  `Control` + `P` \(Windows, Linux\) または `Command` + `P` \(macOS\) を選択して、[ファイルを開く]**ダイアログを開**きます。  次の図を確認します。  
+1.  `Control` + `P` \(Windows Linux\) または \(macOS\) を選択して、[ファイルを開く `Command` + `P` ]**ダイアログを開**きます。  次の図を確認します。  
 1.  [入力 `script` ] をクリックし、[**アプリ/script.js] をscript.js。 **  
     
     :::image type="complex" source="../media/workspaces-workspaces-demo-search-script.msft.png" alt-text="[ファイルscript.jsダイアログを使用してファイルを開く" lightbox="../media/workspaces-workspaces-demo-search-script.msft.png":::
@@ -246,7 +246,7 @@ DevTools コード エディターを他のツールと共に開くには、次�
     document.querySelector('a').style = 'font-style:italic';
     ```  
     
-1.  `Control` + `S` \(Windows, Linux\) または `Command` + `S` \(macOS\) を選択して変更を保存します。  
+1.  `Control` + `S` \(Windows Linux\) または `Command` + `S` \(macOS\) を選択して変更を保存します。  
 1.  ページを最新の情報に更新してください。  
     
     > [!NOTE]
@@ -287,7 +287,7 @@ If you have more feedback on the topics or anything else, please use any of the 
 
 <!--[StackOverflowAlphabetBrowserDevTools]: https://stackoverflow.com/questions/ask?tags=alphabet-browser-devtools "Alphabet Browser DevTools - Stack Overflow"  -->
 
-[TreehouseBlogSourceMaps]: https://blog.teamtreehouse.com/introduction-source-maps "ソース マップの概要|Treehouse ブログ"  
+[TreehouseBlogSourceMaps]: https://blog.teamtreehouse.com/introduction-source-maps "ソース ソースの概要マップ |Treehouse ブログ"  
 
 <!-- [TwitterAlphabetBrowserDevTools]: https://twitter.com/alphabetbrowserdevtools "Alphabet Browser DevTools \(@AlphabetBrowserDevTools\) | Twitter"  -->
 

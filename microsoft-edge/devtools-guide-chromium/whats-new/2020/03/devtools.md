@@ -29,77 +29,77 @@ ms.locfileid: "11514418"
    limitations under the License.  -->  
 # <a name="whats-new-in-devtools-microsoft-edge-83"></a>DevTools の新機能 (Microsoft Edge 83)  
 
-更新されたクロム スケジュールに従って、今後の Microsoft Edge リリースのスケジュールを調整し、Microsoft Edge 82 リリースをキャンセルします。 詳細については、 [ブログの][WindowsBlogStableRelease] 投稿をご覧ください。  
+更新されたスケジュールにChromium、今後のリリースのスケジュールを調整し、Microsoft Edge 82 リリースMicrosoft Edgeキャンセルします。 詳細については、 [ブログの][WindowsBlogStableRelease] 投稿をご覧ください。  
 
-Microsoft Edge 83 の DevTools で利用できる新機能を次に示します。  
+83 の DevTools で利用できる新機能を次にMicrosoft Edgeします。  
 
 ## <a name="announcements-from-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームからのお知らせ  
 
-以下のセクションでは、Microsoft Edge DevTools チームからのもので、見落としがあった可能性のあるお知らせの一覧を示します。  DevTools、Microsoft コード拡張機能、その他の新機能を試Visual Studioお知らせをご覧ください。  開発者ツールのすべての最新および最大の機能を最新の情報に更新するには [、Microsoft Edge][MicrosoftEdgePreviewChannels] プレビュー チャネルをダウンロードし [、Twitter][EdgeDevToolsTwitterAccount]でフォローしてください。  
+以下のセクションでは、Microsoft Edge DevTools チームからのもので、見落としがあった可能性のあるお知らせの一覧を示します。  DevTools、コード拡張機能、その他の新機能を試Microsoft Visual Studioお知らせをご覧ください。  開発者ツールのすべての最新および最大の機能を最新の情報に更新するには、プレビュー チャネルMicrosoft Edge[][MicrosoftEdgePreviewChannels]ダウンロードし[、Twitter][EdgeDevToolsTwitterAccount]でフォローしてください。  
 
-### <a name="remotely-debug-microsoft-edge-on-windows-10-devices"></a>Windows 10 デバイスで Microsoft Edge をリモートでデバッグする  
+### <a name="remotely-debug-microsoft-edge-on-windows-10-devices"></a>デバイスでリモートMicrosoft EdgeデバッグWindows 10する  
 
-[Microsoft Edge 用リモート ツール \(Beta\)][RemoteTools]アプリが Microsoft Store で[利用できます][MicrosoftStore]。  [Windows デバイス][WindowsUwpDebugTestPerfDevicePortal]ポータルを拡張するこのアプリを使用すると、開発マシンで実行されている Microsoft Edge のインスタンスからリモート Windows 10 デバイスに接続し、ターゲット \(Windows 10 デバイスで開いている Microsoft Edge と[PWAs][ProgressiveWebAppsChromiumIndex]のすべてのタブ)の一覧を表示し、リモート Windows 10 デバイスで実行されているターゲットに対して開発マシンの DevTools を使用できます。  
+[\(Beta\)][RemoteTools]アプリMicrosoft Edgeリモート ツールは、このアプリで使用[Microsoft Store。][MicrosoftStore]  Windows デバイス ポータルを拡張するこのアプリを使用すると、開発マシンで実行されている[Microsoft Edge][WindowsUwpDebugTestPerfDevicePortal]のインスタンスからリモート Windows 10 デバイスに接続し、ターゲット \(Microsoft Edge のすべてのタブと Windows 10 デバイスで開いている[PWAs][ProgressiveWebAppsChromiumIndex]の一覧を表示し、リモート Windows 10 デバイスで実行されているターゲットに対して開発マシンで DevTools を使用できます。  
 
-:::image type="complex" source="../../media/2020/03/remote-tools.msft.png" alt-text="Microsoft Store で利用できる Microsoft Edge (ベータ) アプリのリモート ツール" lightbox="../../media/2020/03/remote-tools.msft.png":::
-   Microsoft Store [で利用できる Microsoft Edge (ベータ)][RemoteTools] アプリのリモート [ツール][MicrosoftStore]  
+:::image type="complex" source="../../media/2020/03/remote-tools.msft.png" alt-text="アプリで使用Microsoft Edge (Beta) アプリのリモート Microsoft Store" lightbox="../../media/2020/03/remote-tools.msft.png":::
+   アプリ[で使用Microsoft Edge (Beta)][RemoteTools]アプリのリモート[Microsoft Store][MicrosoftStore]  
 :::image-end:::  
 
-[リモート デバッグ用の Windows 10 デバイス][DevtoolsRemoteDebuggingWindows]と開発マシンのセットアップに関するガイドをお読みください。  フィードバックの送信アイコンをツイートまたは選択して、[][PostTweetEdgeDevTools]リモート デバッグ エクスペリエンスについて[お知](#getting-in-touch-with-microsoft-edge-devtools-team)らせします。  
+[リモート デバッグ用にデバイス][DevtoolsRemoteDebuggingWindows]とWindows 10コンピューターをセットアップする方法については、このガイドをご覧ください。  フィードバックの送信アイコンをツイートまたは選択して、[][PostTweetEdgeDevTools]リモート デバッグ エクスペリエンスについて[お知](#getting-in-touch-with-microsoft-edge-devtools-team)らせします。  
 
-### <a name="new-ways-to-access-settings"></a>設定にアクセスする新しい方法  
+### <a name="new-ways-to-access-settings"></a>新しいアクセス方法設定  
 
-DevTools には、DevTools の外観、使い方、作業を必要な方法でカスタマイズできる数多くの設定があります。 Microsoft Edge 83 では[][DevtoolsCustomizeIndexSettings]、DevTools の [設定] へのアクセスがはるかに簡単になりました。  [コンソール通知] と [メイン メニュー] の横にある歯車アイコンで [設定] を開きます。  
+DevTools には、DevTools の外観、使い方、作業を必要な方法でカスタマイズできる数多くの設定があります。 83 Microsoft Edgeでは、DevTools[設定にアクセス][DevtoolsCustomizeIndexSettings]する方がずっと簡単になりました。  [コンソール設定メイン メニュー] の横にある歯車アイコンを使用して、このアイコンを開きます。  
 
-:::image type="complex" source="../../media/2020/03/settings.msft.png" alt-text="歯車アイコンが DevTools の [設定] を開きます" lightbox="../../media/2020/03/settings.msft.png":::
-   歯車アイコンが **DevTools** の [設定] を開きます  
+:::image type="complex" source="../../media/2020/03/settings.msft.png" alt-text="歯車アイコンが DevTools 設定開きます" lightbox="../../media/2020/03/settings.msft.png":::
+   歯車アイコンが DevTools**設定**開きます  
 :::image-end:::  
 
-[その他のツール] の[[メイン][DevtoolsCustomizeIndexSettings]**メニュー]** から [設定]**を開くすることもできます**。
+[その他のツール] の[設定][DevtoolsCustomizeIndexSettings]メニューからファイル**を****開くすることもできます**。
 
-:::image type="complex" source="../../media/2020/03/settings2.msft.png" alt-text="[メイン メニュー] > [設定] >ツール" lightbox="../../media/2020/03/settings2.msft.png":::
+:::image type="complex" source="../../media/2020/03/settings2.msft.png" alt-text="メイン メニュー > その他の> 設定" lightbox="../../media/2020/03/settings2.msft.png":::
    **メイン メニュー**  > **その他のツール**  > **設定**  
 :::image-end:::  
 
-クロムの問題 [#1050855][CR1050855]
+Chromium[問題#1050855][CR1050855]
 
 ### <a name="new-and-improved-infobars"></a>新しい情報バーと改善された情報バー
 
-DevTools の情報通知バー \(infobars\) の外観が改善され、機能が強化されました。 Microsoft Edge 83 では、infobars の方が読みやすく、ボタンを提供し、関連するアクションを簡単に実行できます。  
+DevTools の情報通知バー \(infobars\) の外観が改善され、機能が強化されました。 83 Microsoft Edgeでは、infobars の方が読みやすく、ボタンを提供し、関連するアクションを簡単に実行できます。  
 
-:::image type="complex" source="../../media/2020/03/infobar.msft.png" alt-text="Microsoft Edge 83 でファイルを美しい印刷用の Infobar" lightbox="../../media/2020/03/infobar.msft.png":::
-   Microsoft Edge バージョン 83 でファイルを美しい印刷用の Infobar  
+:::image type="complex" source="../../media/2020/03/infobar.msft.png" alt-text="83 でファイルを美しい印刷用の infobar Microsoft Edge 83" lightbox="../../media/2020/03/infobar.msft.png":::
+   バージョン 83 でファイルをかなり印刷Microsoft Edge Infobar  
 :::image-end:::  
 
-クロムの問題 [#1056348][CR1056348]
+Chromium[問題#1056348][CR1056348]
 
 ### <a name="navigate-the-color-picker-with-your-keyboard"></a>キーボードでカラー ピッカーを移動する  
 
-Color [Picker は][DevtoolsCssReferenceColorPicker] 、変更と宣言を [行う要素パネル][DevtoolsCssIndex] `color` の GUI `background-color` です。  以前のバージョンの Microsoft Edge では、キーボードを使用して**** カラー ピッカーの [網掛け][セクションを移動][DevtoolsCssReferenceColorPicker]する必要が生じていました。  
+Color [Picker は][DevtoolsCssReferenceColorPicker] 、変更と宣言を [行う要素パネル][DevtoolsCssIndex] `color` の GUI `background-color` です。  以前のバージョンの Microsoft Edgeでは、キーボードを使用してカラー ピッカーの****[網掛け][セクションを][DevtoolsCssReferenceColorPicker]移動する必要が生じていました。  
 
 :::image type="complex" source="../../media/2020/03/color-picker.msft.png" alt-text="これで、キーボードを使用して、カラー ピッカーの [網掛け] セクションでセレクターを移動できます。" lightbox="../../media/2020/03/color-picker.msft.png":::
    これで、キーボードを使用して、カラー ピッカーの [ **網** 掛け] セクションでセレクターを [移動できます。][DevtoolsCssReferenceColorPicker]  
 :::image-end:::  
 
-Microsoft Edge 83 では、キーボードを使用して、カラー ピッカーの****[網掛け] セクションでセレクターを移動できます。  
+83 Microsoft Edgeでは、キーボードを使用して、カラー ピッカーの [網掛け]**** セクションでセレクターを移動できます。  
 
-クロムの問題 [#963183][CR963183]  
+Chromium[の問題][CR963183]#963183  
 
 ### <a name="properties-tab-now-populates-after-a-page-refresh"></a>ページの更新後に [プロパティ] タブが設定される  
 
-Microsoft Edge 81 以前では****、[要素] パネルの [プロパティ] タブ[が][DevtoolsCssIndex]ページ更新によって壊れました。  ページを更新すると、[プロパティ] **タブに** 現在選択されている要素のプロパティが設定されません。  
+81 Microsoft Edge以前のバージョンでは、[要素****] パネルの[][DevtoolsCssIndex][プロパティ] タブがページ更新によって壊れています。  ページを更新すると、[プロパティ] **タブに** 現在選択されている要素のプロパティが設定されません。  
 
-:::image type="complex" source="../../media/2020/03/properties-in-81.msft.png" alt-text="Microsoft Edge 81 以前では、ページの更新後に [プロパティ] タブが空白でした" lightbox="../../media/2020/03/properties-in-81.msft.png":::
-   Microsoft Edge 81 以前では、ページの更新 **後に [プロパティ]** タブが空白でした  
+:::image type="complex" source="../../media/2020/03/properties-in-81.msft.png" alt-text="81 Microsoft Edge以前のバージョンでは、ページの更新後に [プロパティ] タブが空白でした" lightbox="../../media/2020/03/properties-in-81.msft.png":::
+   81 Microsoft Edge以前のバージョンでは、ページの更新**後**に [プロパティ] タブが空白でした  
 :::image-end:::  
 
-Microsoft Edge 83 では、[プロパティ] タブでページ更新後に現在選択されている要素のプロパティを **表示できます**。  
+83 Microsoft Edgeページ更新後に、現在選択されている要素のプロパティを [プロパティ] タブに**表示できます**。  
 
-:::image type="complex" source="../../media/2020/03/properties-in-82.msft.png" alt-text="Microsoft Edge 83 では、[プロパティ] タブに、ページ更新後に現在選択されている要素のプロパティが表示されます。" lightbox="../../media/2020/03/properties-in-82.msft.png":::
-   Microsoft Edge 83 では、[プロパティ] タブ **に** 、ページ更新後に現在選択されている要素のプロパティが表示されます。  
+:::image type="complex" source="../../media/2020/03/properties-in-82.msft.png" alt-text="83 Microsoft Edge、[プロパティ] タブには、ページ更新後に現在選択されている要素のプロパティが表示されます。" lightbox="../../media/2020/03/properties-in-82.msft.png":::
+   83 Microsoft Edge、[プロパティ] タブ**** には、ページ更新後に現在選択されている要素のプロパティが表示されます。  
 :::image-end:::  
 
-クロムの問題 [#1050999][CR1050999]  
+Chromium[問題#1050999][CR1050999]  
 
 ### <a name="use-the-arrow-keys-to-scroll-in-the-changes-tool"></a>[変更] ツールで矢印キーを使用してスクロールする  
 
@@ -107,19 +107,19 @@ Microsoft Edge 83 では、[プロパティ] タブでページ更新後に現�
 
 [変更] ツール**を開く**には `Ctrl` + `Shift` + `P` 、DevTools で選択してコマンド メニュー[を開き、と][DevToolsCommandMenuIndex]入力します `changes` 。  [変更の表示]**コマンドを**選択して**** 実行して、DevTools ドロワーで [変更] ツールを開きます。  
 
-ファイルを変更すると、[変更] ツールを使用すると、**** 水平方向にスクロールして、すべてのコードを表示できます。  Microsoft Edge 83 から、キーボードの矢印キーを使用して水平方向にスクロールできます。  
+ファイルを変更すると、[変更] ツールを使用すると、**** 水平方向にスクロールして、すべてのコードを表示できます。  83 Microsoft Edgeから、キーボードの矢印キーを使用して水平方向にスクロールできます。  
 
-:::image type="complex" source="../../media/2020/03/changes.msft.png" alt-text="Microsoft Edge 83 では、矢印キーを使用して水平方向にスクロールして、変更ツールにコードを表示できます。" lightbox="../../media/2020/03/changes.msft.png":::
-   Microsoft Edge 83 では、矢印キーを使用して水平方向にスクロールして、変更ツールでコードを変更した変更を**表示できます**。  
+:::image type="complex" source="../../media/2020/03/changes.msft.png" alt-text="83 Microsoft Edgeでは、矢印キーを使用して水平方向にスクロールして、変更ツールにコードを表示できます。" lightbox="../../media/2020/03/changes.msft.png":::
+   83 Microsoft Edgeでは、矢印キーを使用して水平方向にスクロールして、変更ツールでコードの変更を表示**できます**。  
 :::image-end:::  
 
 スクリーン リーダーまたはキーボードを使用して DevTools の周りを移動する場合は[][PostTweetEdgeDevTools]、フィードバックの送信アイコンをツイートするか、フィードバックの送信アイコンを選択してフィードバック[を送信](#getting-in-touch-with-microsoft-edge-devtools-team)してください。  
 
-クロムの問題 [#963183][CR963183]  
+Chromium[の問題][CR963183]#963183  
 
 ## <a name="announcements-from-the-chromium-project"></a>Chromium プロジェクトからのお知らせ  
 
-次のセクションでは、オープンソースのクロム プロジェクトに貢献した Microsoft Edge 83 で利用できる追加機能について説明します。  
+次のセクションでは、Microsoft Edge 83 で利用可能な追加の機能についてChromiumします。  
 
 ### <a name="emulate-vision-deficiencies"></a>視覚欠陥をエミュレートする  
 
@@ -145,7 +145,7 @@ DevTools のより極端なシミュレーションを設計することで、We
 
 [フィードバックの送信] [アイコンをツイート][PostTweetEdgeDevTools] または選択してフィードバック [を送信](#getting-in-touch-with-microsoft-edge-devtools-team) します。  
 
-クロムの問題 [#1003700][CR1003700]  
+Chromium[の問題][CR1003700]#1003700  
 
 ### <a name="emulate-locales"></a>ローカルをエミュレートする  
 
@@ -165,7 +165,7 @@ Sensors Location で場所を設定して、**ローカルをエミュレート*
 
 デモを試す場合は、[ロケールに依存 [するコード例] に移動します][MathiasByensLocaleDemo]。
 
-クロム [の問題#1051822][CR1051822]
+Chromium[問題#1051822][CR1051822]
 
 ### <a name="cross-origin-embedder-policy-coep-debugging"></a>クロスオリジン エンベダー ポリシー (COEP) のデバッグ  
 
@@ -185,7 +185,7 @@ Sensors Location で場所を設定して、**ローカルをエミュレート*
 
 [フィードバックの送信] [アイコンをツイート][PostTweetEdgeDevTools] または選択してフィードバック [を送信](#getting-in-touch-with-microsoft-edge-devtools-team) します。  
 
-クロムの問題 [#1051466][CR1051466]  
+Chromium[問題#1051466][CR1051466]  
 
 ### <a name="new-icons-for-breakpoints-conditional-breakpoints-and-logpoints"></a>ブレークポイント、条件付きブレークポイント、およびログポイントの新しいアイコン  
 
@@ -214,11 +214,11 @@ Chromium の問題 [#1041830][CR1041830]
 :::image-end:::  
 
 > [!NOTE]
-> 左 **へのドック** 機能は Microsoft Edge 75 以降使用できますが、以前はメイン メニューから [しかアクセスできません][DevtoolsCustomizePlacementsChangeMainMenu]。  Microsoft Edge 83 の新機能は、コマンド メニューからこの機能にアクセスできる点です。  
+> 左側**のドック機能**は 75 以降Microsoft Edge使用できますが、以前はメイン メニューから[しかアクセスできません][DevtoolsCustomizePlacementsChangeMainMenu]。  83 の新機能Microsoft Edgeコマンド メニューからこの機能にアクセスできる点です。  
 
 [フィードバックの送信] [アイコンをツイート][PostTweetEdgeDevTools] または選択してフィードバック [を送信](#getting-in-touch-with-microsoft-edge-devtools-team) します。  
 
-クロム [の問題#1011679][CR1011679]  
+Chromium[問題#1011679][CR1011679]  
 
 ### <a name="the-audits-panel-is-now-the-lighthouse-panel"></a>[監査] パネルが [ライトハウス] パネル  
 
@@ -241,13 +241,13 @@ DevTools チームは、多くの場合、Web 開発者から、DevTools から[
 
 [フィードバックの送信] [アイコンをツイート][PostTweetEdgeDevTools] または選択してフィードバック [を送信](#getting-in-touch-with-microsoft-edge-devtools-team) します。  
 
-クロムの問題 [#1016501][CR1016501]  
+Chromiumの問題[#1016501][CR1016501]  
 
 ### <a name="updated-long-tasks-ui"></a>更新された長いタスクの UI  
 
 Long **Task は** JavaScript コードで、メイン スレッドを長時間独占し、Web ページがフリーズします。  
 
-長いタスクを[][DevtoolsEvaluatePerformanceReferenceViewMainThreadActivity][パフォーマンス] パネルでしばらく視覚化できますが、Microsoft Edge 83 では 、[パフォーマンス] パネルの [長いタスク] 可視化 UI が更新されました。  タスクの長いタスク部分が、ストライプの赤い背景で色付けされました。  
+しばらくの間、[パフォーマンス[][DevtoolsEvaluatePerformanceReferenceViewMainThreadActivity]] パネルで長いタスクを視覚化できますが、Microsoft Edge 83 では、[パフォーマンス] パネルの [長いタスク] の視覚化 UI が更新されました。  タスクの長いタスク部分が、ストライプの赤い背景で色付けされました。  
 
 :::image type="complex" source="../../media/2020/03/long-task.msft.png" alt-text="新しい長いタスク UI" lightbox="../../media/2020/03/long-task.msft.png":::
    新しい長いタスク UI  
@@ -255,11 +255,11 @@ Long **Task は** JavaScript コードで、メイン スレッドを長時間�
 
 [フィードバックの送信] [アイコンをツイート][PostTweetEdgeDevTools] または選択してフィードバック [を送信](#getting-in-touch-with-microsoft-edge-devtools-team) します。  
 
-クロムの問題 [#1054447][CR1054447]  
+Chromiumの問題[#1054447][CR1054447]  
 
 ### <a name="maskable-icon-support-in-the-manifest-pane"></a>マニフェスト ウィンドウでのマスク可能なアイコンのサポート  
 
-Android Oreo では、さまざまなデバイス モデルのさまざまな図形にアプリ アイコンを表示するアダプティブ アイコンが導入されました。  **マスク可能なアイコン** は、アダプティブ アイコンをサポートする新しいアイコン形式で、マスク可能なアイコン標準をサポートするデバイスで [PWA][ProgressiveWebAppsChromiumIndex] アイコンが適切に表示されます。  
+Android Oreo では、さまざまなデバイス モデルのさまざまな図形にアプリ アイコンを表示するアダプティブ アイコンが導入されました。  **マスク可能なアイコン**は、アダプティブ アイコンをサポートする新しいアイコン形式で、マスク可能なアイコンの標準をサポートするデバイスで PWA アイコン[が][ProgressiveWebAppsChromiumIndex]適切に表示されます。  
 
 [マニフェスト]**ウィンドウの**[マスク可能なアイコンの最小セーフ**** 領域のみを表示する] チェック ボックスをオンにして、Android Oreo デバイスでマスク可能なアイコンが良好に表示されるのを確認します。  
 
@@ -270,40 +270,40 @@ Android Oreo では、さまざまなデバイス モデルのさまざまな図
 :::image-end:::  
 
 > [!NOTE]
-> Microsoft Edge 81 で起動されたこの機能。  Microsoft Edge 83 で説明されている更新プログラムについては [、「What's New In DevTools (Microsoft Edge 81) 」で説明されていない][WhatsNew81]。  
+> この機能は、Microsoft Edge 81 で起動しました。  この 83 のMicrosoft Edgeについては[、「What's New In DevTools (Microsoft Edge 81) 」で説明されていない][WhatsNew81]。  
 
 ## <a name="download-the-microsoft-edge-preview-channels"></a>Microsoft Edge プレビュー チャネルをダウンロードする  
 
 Windows または macOS を使用している場合、[Microsoft Edge プレビュー チャネル][MicrosoftEdgePreviewChannels] を既定の開発ブラウザーとして使用することを検討してください。  プレビュー チャネルを使用すると、最新の DevTools 機能にアクセスできます。  
 
-## <a name="getting-in-touch-with-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームに連絡  
+## <a name="getting-in-touch-with-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームに連絡する  
 
 [!INCLUDE [contact DevTools team note](../../includes/contact-whats-new-note.md)]  
 
 <!-- links -->  
 
-[WhatsNew81]: ../01/devtools.md "DevTools (Microsoft Edge 81) の新機能 |Microsoft Docs"  
+[WhatsNew81]: ../01/devtools.md "DevTools の新機能 (Microsoft Edge 81) |Microsoft Docs"  
 
-[DevToolsCommandMenuIndex]: /microsoft-edge/devtools-guide-chromium/command-menu/index "Microsoft Edge DevTools コマンド メニュー を使用してコマンドを実行|Microsoft Docs"  
+[DevToolsCommandMenuIndex]: /microsoft-edge/devtools-guide-chromium/command-menu/index "[DevTools コマンド メニュー] Microsoft Edgeを使用してコマンドを実行|Microsoft Docs"  
 [DevtoolsCssReferenceColorPicker]: /microsoft-edge/devtools-guide-chromium/css/reference#change-colors-with-the-color-picker "[カラー ピッカー] を使用して色を|Microsoft Docs"  
-[DevtoolsCssIndex]: /microsoft-edge/devtools-guide-chromium/css/index "CSS の表示と変更の開始|Microsoft Docs"  
+[DevtoolsCssIndex]: /microsoft-edge/devtools-guide-chromium/css/index "はじめにCSS の表示と変更を使用|Microsoft Docs"  
 [DevtoolsCustomizePlacementsChangeMainMenu]: /microsoft-edge/devtools-guide-chromium/customize/placement#change-placement-from-the-main-menu "メイン メニューから配置を変更|Microsoft Docs"  
 [DevtoolsEvaluatePerformanceReferenceViewMainThreadActivity]: /microsoft-edge/devtools-guide-chromium/evaluate-performance/reference#view-main-thread-activity "メイン スレッドアクティビティの|Microsoft Docs"  
 [DevtoolsEvaluatePreformanceReferenceAnalyzeRenderingTab]: /microsoft-edge/devtools-guide-chromium/evaluate-performance/reference#analyze-rendering-performance-with-the-rendering-tab "[レンダリング] タブを使用してレンダリングパフォーマンスを|Microsoft Docs"  
-[ProgressiveWebAppsChromiumIndex]: /microsoft-edge/progressive-web-apps-chromium/index "Windows 上のプログレッシブ Web アプリ |Microsoft Docs"  
+[ProgressiveWebAppsChromiumIndex]: /microsoft-edge/progressive-web-apps-chromium/index "プログレッシブ Web Apps on Windows |Microsoft Docs"  
 [DevtoolsRemoteDebuggingWindows]: /microsoft-edge/devtools-guide-chromium/remote-debugging/windows "Windows 10 デバイスのリモート デバッグの概要 | Microsoft Docs"  
-[DevtoolsJavascriptBreakpointsLineCode]: /microsoft-edge/devtools-guide-chromium/javascript/breakpoints#line-of-code-breakpoints "コード行ブレークポイント - Microsoft Edge DevTools アプリケーションでブレークポイントを使用してコードを一時停止する|Microsoft Docs"
+[DevtoolsJavascriptBreakpointsLineCode]: /microsoft-edge/devtools-guide-chromium/javascript/breakpoints#line-of-code-breakpoints "コード行ブレークポイント - DevTools アプリケーションでブレークポイントを使用してコードMicrosoft Edgeする|Microsoft Docs"
 [DevtoolsNetworkReferenceFilterRequestsProperties]: /microsoft-edge/devtools-guide-chromium/network/reference#filter-requests-by-properties "プロパティ別に要求をフィルター処理する - ネットワーク分析|Microsoft Docs"  
-[DevtoolsCustomizeIndexSettings]: /microsoft-edge/devtools-guide-chromium/customize/index#settings "設定 - Microsoft Edge DevTools の設定を|Microsoft Docs"  
+[DevtoolsCustomizeIndexSettings]: /microsoft-edge/devtools-guide-chromium/customize/index#settings "設定 - DevTools Microsoft Edgeをカスタマイズ|Microsoft Docs"  
 
-[WindowsUwpDebugTestPerfDevicePortal]: /windows/uwp/debug-test-perf/device-portal "Windows デバイス ポータルの概要"  
+[WindowsUwpDebugTestPerfDevicePortal]: /windows/uwp/debug-test-perf/device-portal "Windowsデバイス ポータルの概要"  
 
-[RemoteTools]: https://www.microsoft.com/store/apps/9P6CMFV44ZLT "Microsoft Edge のリモート ツール (ベータ)"  
+[RemoteTools]: https://www.microsoft.com/store/apps/9P6CMFV44ZLT "リモート ツール for Microsoft Edge (Beta)"  
 [MicrosoftStore]: https://www.microsoft.com/store/apps/windows "Microsoft Store"  
 
 [MicrosoftEdgePreviewChannels]: https://www.microsoftedgeinsider.com/download "Microsoft Edge プレビュー チャネル"  
 
-[WindowsBlogStableRelease]: https://blogs.windows.com/msedgedev/2020/03/20 "Microsoft Edge の安定したチャネル リリースの更新"  
+[WindowsBlogStableRelease]: https://blogs.windows.com/msedgedev/2020/03/20 "システムの安定したチャネル リリースMicrosoft Edge"  
 
 [GitHubMicrosoftDocsEdgeDeveloperNewIssue]: https://github.com/MicrosoftDocs/edge-developer/issues/new?title=[DevTools%20Docs%20Feedback] "新しい問題 - MicrosoftDocs/edge-developer - GitHub"  
 
@@ -331,7 +331,7 @@ Windows または macOS を使用している場合、[Microsoft Edge プレビ�
 [CR1054447]: https://crbug.com/1054447 "問題 1054447: DevTools タイムラインでパフォーマンス 指標を更新する"  
 [CR1051822]: https://crbug.com/1051822 "問題 1051822: DevTools: ロケールをエミュレートするための UI の追加"
 [CR1041830]: https://crbug.com/1041830 "問題 1041830: ブレークポイントの色を改善する"
-[CR1050855]: https://crbug.com/1050855 "問題 1050855: 設定ビューの検出が困難"
+[CR1050855]: https://crbug.com/1050855 "問題 1050855: 設定が検出しにくい"
 [CR1056348]: https://crbug.com/1056348 "問題 1056348: Infobar コンポーネントの更新"
 
 [COOP]: https://docs.google.com/document/d/1zDlfvfTJ_9e8Jdc8ehuV4zMEu9ySMCiTGMS9y0GU92k/edit#bookmark=id.tu4hyy6v12wn "COOP と COEP の説明 - クロスオリジン の Opener ポリシー"  

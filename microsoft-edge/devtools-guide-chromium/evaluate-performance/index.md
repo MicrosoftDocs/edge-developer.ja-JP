@@ -37,7 +37,7 @@ ms.locfileid: "11439613"
 
 <!--todo: add rail link when section is ready -->  
 
-## <a name="get-started"></a>概要  
+## <a name="get-started"></a>使ってみる  
 
 次のチュートリアルでは、ライブ ページで DevTools を開き****、[パフォーマンス] パネルを使用してページのパフォーマンスのボトルネックを見つける。  
 

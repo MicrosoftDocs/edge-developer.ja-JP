@@ -219,7 +219,7 @@ DevTools コンソールからメソッドを実行している場合は、タ�
 ## <a name="related-articles"></a>関連記事
 
 *   [デバッガー機能を使用する][DevtoolsJavascriptReference] - ソース ツールでデバッガーの UI **を使用** します。
-*   [Microsoft Edge DevTools][DevtoolsJavascriptIndex] での JavaScript のデバッグの開始 - 既存の Web ページを使用した入門チュートリアル。
+*   [DevTools での JavaScript][DevtoolsJavascriptIndex]のデバッグMicrosoft Edge始める - 既存の Web ページを使用した入門チュートリアル。
 *   [ソース ツールの概要][DevtoolsSourcesIndex] - デバッガーは、JavaScript エディターを含む **Sources** ツールの一部です。
 
 ## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームと連絡を取る  
@@ -230,7 +230,7 @@ DevTools コンソールからメソッドを実行している場合は、タ�
 
 [DevtoolsJavascriptReference]: ./reference.md "デバッガー機能を使用|Microsoft Docs"  
 
-[DevtoolsJavascriptIndex]: index.md "Microsoft Edge DevTools の JavaScript のデバッグの|Microsoft Docs"  
+[DevtoolsJavascriptIndex]: index.md "DevTools アプリケーションの JavaScript のデバッグMicrosoft Edge開始|Microsoft Docs"  
 
 [DevtoolsSourcesIndex]: ../sources/index.md "ソース ツールの概要|Microsoft Docs"  
 

@@ -25,28 +25,28 @@ Microsoft [Visual Studio][MicrosoftVisualstudioVs] は、統合された開発�
     
 ファイルをまだ使用していない場合はVisual Studioに移動 [し][MicrosoftVisualstudioDownloads] 、Visual Studioダウンロードします。  
 
-現在、Visual Studio 2019 では、Microsoft Edge での JavaScript のデバッグがサポートされ、ASP.NET Core アプリASP.NETサポートされています。  Microsoft Edge のデバッグに使用するVisual Studio手順を実行します。  
+現在、Visual Studio 2019 では、Microsoft Edge での JavaScript のデバッグがサポートされ、ASP.NET Core アプリ ASP.NET サポートされています。  Microsoft Edge のデバッグに使用するVisual Studio手順を実行します。  
 
 ## <a name="launch-microsoft-edge"></a>Microsoft Edge の起動  
 
 Visual Studioボタンを使用して次のワークフローを完了します。  
 
-1.  コア アプリASP.NETとASP.NET作成します。  
+1.  コア アプリ ASP.NET と ASP.NET 作成します。  
 1.  Web サーバーを起動します。  
 1.  Microsoft Edge を起動します。  
 1.  デバッガーをVisual Studioします。  
     
 簡略化されたワークフローを使用すると、MICROSOFT Edge で実行される JavaScript を IDE から直接デバッグできます。  
 
-### <a name="create-a-new-aspnet-core-web-app"></a>コア Web アプリASP.NET作成する  
+### <a name="create-a-new-aspnet-core-web-app"></a>コア Web アプリ ASP.NET 作成する  
 
 2019 Visual Studio開き、[新しいプロジェクトの作成 **] を選択します**。  次の画面で、[コア Web アプリ**ASP.NET] を**  >  **選択します**。  
 
-:::image type="complex" source="./media/create-new-project.png" alt-text="コア Web アプリASP.NET作成する" lightbox="./media/create-new-project.png":::
-   コア Web アプリASP.NET作成する  
+:::image type="complex" source="./media/create-new-project.png" alt-text="コア Web アプリ ASP.NET 作成する" lightbox="./media/create-new-project.png":::
+   コア Web アプリ ASP.NET 作成する  
 :::image-end:::  
 
-新しいプロジェクト **のプロジェクト名を** 指定し、[作成] を **選択します**。  この例では、テンプレートとして ** [React.js] ** を選択し、[作成] を **選択します**。  この **React.js** テンプレートは、コア アプリにReact.jsをASP.NETします。  
+新しいプロジェクト **のプロジェクト名を** 指定し、[作成] を **選択します**。  この例では、テンプレートとして ** [React.js] ** を選択し、[作成] を **選択します**。  この **React.js** テンプレートは、コア アプリにReact.jsを ASP.NET します。  
 
 ### <a name="launch-microsoft-edge-from-visual-studio"></a>Microsoft Edge をアプリから起動Visual Studio  
 

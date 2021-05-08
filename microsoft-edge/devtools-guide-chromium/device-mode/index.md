@@ -261,7 +261,7 @@ iPhone 6 などの特定のモバイル デバイスの寸法をシミュレー�
       :::image-end:::  
    :::column-end:::
    :::column span="":::
-      1.  コマンド メニューを開きます。  
+      1.  コマンド メニュー を開きます。  
           *   `Control` + `Shift` + `P` \(Windows, Linux\) または `Command` + `Shift` + `P` \(macOS\) を選択します。  
       1. を `Sensors` 入力し、[センサー **の表示] を選択します**。  
       
@@ -290,7 +290,7 @@ iPhone 6 などの特定のモバイル デバイスの寸法をシミュレー�
       :::image-end:::  
    :::column-end:::
    :::column span="":::
-      1.  コマンド メニューを開きます。  
+      1.  コマンド メニュー を開きます。  
           *   `Control` + `Shift` + `P` \(Windows, Linux\) または `Command` + `Shift` + `P` \(macOS\) を選択します。  
       1. を `Sensors` 入力し、[センサー **の表示] を選択します**。  
       
@@ -319,7 +319,7 @@ iPhone 6 などの特定のモバイル デバイスの寸法をシミュレー�
       :::image-end:::  
    :::column-end:::
    :::column span="":::
-      1.  コマンド メニューを開きます。  
+      1.  コマンド メニュー を開きます。  
           *   `Control` + `Shift` + `P` \(Windows, Linux\) または `Command` + `Shift` + `P` \(macOS\) を選択します。  
       1. を `Network conditions` 入力し、[ネットワーク条件 **の表示] を選択します**。  
       

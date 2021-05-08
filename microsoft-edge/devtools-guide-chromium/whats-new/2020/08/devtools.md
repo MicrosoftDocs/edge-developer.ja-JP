@@ -35,7 +35,7 @@ ms.locfileid: "11514383"
 
 ### <a name="match-keyboard-shortcuts-in-devtools-to-visual-studio-code"></a>DevTools のキーボード ショートカットを Visual Studio Code と一致させる  
 
-Microsoft Edge 86 では、DevTools のキーボード ショートカットを Microsoft コードのショートカットと一致Visual Studio [があります][VisualStudioCode]。  
+86 Microsoft Edgeでは、DevTools のキーボード ショートカットとコードコードのショートカットを一[致Microsoft Visual Studioがあります][VisualStudioCode]。  
 
 :::image type="complex" source="../../media/2020/08/keyboard-shortcut.msft.png" alt-text="DevTools のキーボード ショートカットを Visual Studio Code と一致させる" lightbox="../../media/2020/08/keyboard-shortcut.msft.png":::
    DevTools のキーボード ショートカットを Visual Studio Code と一致させる  
@@ -169,12 +169,12 @@ The current effort to improve translation quality enables easier support for mor
 
 ### <a name="highlight-all-search-results-in-elements-tool"></a>[要素] ツールですべての検索結果を強調表示する  
 
-Microsoft Edge 84 および 85 では、要素ツールの最初 **の検索結果が** 強調表示されない。  残りの検索結果だけが正しく強調表示されました。  
+84 Microsoft Edge 85 では、要素ツールの最初**の検索結果が**強調表示されない。  残りの検索結果だけが正しく強調表示されました。  
 
 フィードバックにより Chromium の改善にご協力いただき、ありがとうございました。  フィードバックにより、オープン ソースの Chromium プロジェクトの問題 [#1103316][CR1103316] が発見されました。  
 
 :::image type="complex" source="../../media/2020/08/elements- search-highlight-fixed.msft.png" alt-text="Microsoft Edge 84 以降のバージョンで [要素] パネルで最初の検索結果が強調表示されている" lightbox="../../media/2020/08/elements- search-highlight-fixed.msft.png":::
-   Microsoft Edge 84 以降の **要素** ツールで最初の検索結果を強調表示  
+   84 以降の**要素ツールで**最初Microsoft Edge強調表示  
 :::image-end:::  
 
 この問題は、Microsoft Edge のすべてのバージョンで修正されました。  
@@ -272,7 +272,7 @@ Chromium の問題: [#1090802][CR1090802]
 ### <a name="emulate-prefers-reduced-data"></a>prefers-reduced-data のエミュレート  
 
 > [!NOTE]
-> Microsoft Edge 86 で、この機能を有効にするには、[実験用 Web プラットフォームの機能] フラグに移動して `edge://flags#enable-experimental-web-platform-features` **オン** にします。  エミュレーション オプションは、フラグが有効になっている場合にのみ表示されます。  
+> 86 Microsoft Edgeでは、この機能を有効にするには、[実験 Web プラットフォームの機能] フラグに移動して `edge://flags#enable-experimental-web-platform-features` **オン**にします。  エミュレーション オプションは、フラグが有効になっている場合にのみ表示されます。  
 
 [prefers-reduced-data][CsswgDraftsMediaqueries5DescdefMediaPrefersReducedData] メディア クエリは、データを最少化するユーザーのコンテンツ設定を検出します。  これが選択されている場合、ユーザーはより少ないデータを使用する代替のページ コンテンツを受け取ります。  
 
@@ -408,7 +408,7 @@ Chromium issue: [#1103854][CR1103854]
 
 [**スタイル**] ウィンドウで `font-family` プロパティを編集するときの CSS のオートコンプリート一覧に、インポートされたフォント フェイスが追加されるようになりました。  
 
-たとえば、ローカル コンピューターにインストールされているカスタム フォントの場合は `monospace` 、CSS 完了リストに表示されます。  以前のバージョンの Microsoft Edge では、フォントは表示されません。
+たとえば、ローカル コンピューターにインストールされているカスタム フォントの場合は `monospace` 、CSS 完了リストに表示されます。  以前のバージョンのMicrosoft Edgeフォントは表示されません。
 
 :::image type="complex" source="../../media/2020/08/font-auto-complete.msft.png" alt-text="カスタム フォントのオートコンプリート" lightbox="../../media/2020/08/font-auto-complete.msft.png":::
    カスタム フォントのオートコンプリート  

@@ -1,5 +1,5 @@
 ---
-description: Microsoft Edge DevTools のコンソール UI のすべての機能と動作に関する包括的なリファレンス。
+description: DevTools のコンソール UI のすべての機能と動作に関するMicrosoft Edge参照。
 title: コンソールリファレンス
 author: MSEdgeTeam
 ms.author: msedgedevrel
@@ -29,7 +29,7 @@ ms.locfileid: "11483272"
    limitations under the License.  -->
 # <a name="console-reference"></a>コンソールリファレンス  
 
-この記事は、Microsoft Edge DevTools コンソールに関連する機能のリファレンスです。  コンソールを使用してログに記録されたメッセージを表示し、JavaScript を実行する方法について既に理解している必要があります。  表示されない場合は、[コンソールで [JavaScript][DevtoolsConsoleConsoleJavascript] を実行する方法を開始する] および [コンソールでのメッセージのログ記録の [開始] に移動します][DevtoolsConsoleConsoleLog]。  
+この記事は、DevTools コンソールに関連する機能Microsoft Edgeです。  コンソールを使用してログに記録されたメッセージを表示し、JavaScript を実行する方法について既に理解している必要があります。  表示されない場合は、[コンソールで [JavaScript][DevtoolsConsoleConsoleJavascript] を実行する方法を開始する] および [コンソールでのメッセージのログ記録の [開始] に移動します][DevtoolsConsoleConsoleLog]。  
 
 関数の API 参照を探している場合は、[コンソール API リファレンス] `console.log()` [に移動します][DevToolsConsoleApi]。  次のような関数の参照については、「 `monitorEvents()` コンソール ユーティリティ API [リファレンス」に移動します][DevToolsConsoleUtilities]。  
 
@@ -39,7 +39,7 @@ ms.locfileid: "11483272"
 
 ### <a name="open-the-console-tool"></a>コンソール ツールを開く  
 
-`Control` + `Shift` + `J` \(Windows, Linux\) または `Command` + `Option` + `J` \(macOS\) を選択します。  
+`Control` + `Shift` + `J` \(Windows Linux\) または `Command` + `Option` + `J` \(macOS\) を選択します。  
 
 :::image type="complex" source="../media/console-hello-console.msft.png" alt-text="コンソール ツール" lightbox="../media/console-hello-console.msft.png":::
    コンソール**ツール**  
@@ -71,12 +71,12 @@ ms.locfileid: "11483272"
    コマンドを実行して、ドロワー **にコンソール** ツールを表示 **する**  
 :::image-end:::  
 
-### <a name="open-console-settings"></a>コンソールの設定を開く  
+### <a name="open-console-settings"></a>Open Console 設定  
 
-[コンソール **設定]** \( ![ [コンソール設定] アイコン ](../media/settings-button-icon.msft.png) \) ボタンを選択します。  
+[**コンソール] メニュー設定**\( ![ [コンソール] 設定 ](../media/settings-button-icon.msft.png) \) ボタンを選択します。  
 
-:::image type="complex" source="../media/console-settings-group-similar-empty.msft.png" alt-text="コンソール設定" lightbox="../media/console-settings-group-similar-empty.msft.png":::
-   **コンソール設定**  
+:::image type="complex" source="../media/console-settings-group-similar-empty.msft.png" alt-text="コンソール 設定" lightbox="../media/console-settings-group-similar-empty.msft.png":::
+   **コンソール 設定**  
 :::image-end:::  
 
 次のリンクでは、各設定について説明します。  
@@ -104,11 +104,11 @@ ms.locfileid: "11483272"
 
 ### <a name="turn-off-message-grouping"></a>メッセージのグループ化をオフにする  
 
-コンソールの既定のメッセージ グループ化動作をオフ**** にする場合[](#open-console-settings)は、[コンソール設定] を開き、[類似グループ] の横にあるチェック ボックス**をオンにします**。  たとえば、[ [ログ XHR] と [フェッチ要求] に移動します](#log-xhr-and-fetch-requests)。  
+コンソールの既定のメッセージ グループ化動作をオフ**** にするには[](#open-console-settings)、[コンソール] ウィンドウを開設定[類似グループ] の横にあるチェック ボックスを**オンにします**。  たとえば、[ [ログ XHR] と [フェッチ要求] に移動します](#log-xhr-and-fetch-requests)。  
 
 ### <a name="log-xhr-and-fetch-requests"></a>ログ XHR 要求とフェッチ要求  
 
-すべての要求と要求をコンソールに記録するには、[コンソール設定] を開き `XMLHttpRequest` `Fetch` **、[Log XMLHttpRequests]******[](#open-console-settings)の横にあるチェック ボックスをオンにします。  
+すべての要求と要求をコンソールに記録するには、[コンソール] ウィンドウを開き設定 `XMLHttpRequest` `Fetch` **[ログ XMLHttpRequests]** の[横](#open-console-settings)**** にあるチェック ボックスをオンにします。  
 
 :::image type="complex" source="../media/console-xhr-fetch.msft.png" alt-text="ログ XMLHttpRequest および Fetch 要求" lightbox="../media/console-xhr-fetch.msft.png":::
    ログ `XMLHttpRequest` と `Fetch` 要求  
@@ -128,11 +128,11 @@ ms.locfileid: "11483272"
 
 ### <a name="persist-messages-across-page-loads"></a>ページの読み込み中にメッセージを保持する  
 
-新しい Web ページを読み込むと、既定のアクションによってコンソールがクリア **されます**。  ページ読み込み時にメッセージを保持するには、[ [コンソール設定] を開](#open-console-settings) き、[ログの保持] の横にあるチェック ボックス **をオンにします**。  
+新しい Web ページを読み込むと、既定のアクションによってコンソールがクリア **されます**。  ページの読み込み時にメッセージを保持するには、[コンソール] 設定を開き、[ログの保持] の[横](#open-console-settings)にあるチェック ボックス**をオンにします**。  
 
 ### <a name="hide-network-messages"></a>ネットワーク メッセージを非表示にする  
 
-Microsoft Edge の既定のアクションは、ネットワーク メッセージをコンソールにログに記録 **します**。  次の図では、選択したメッセージはの HTTP 状態コードを表します `429` 。  
+既定のアクションは、Microsoft Edgeメッセージをコンソールにログに記録**します**。  次の図では、選択したメッセージはの HTTP 状態コードを表します `429` 。  
 
 :::image type="complex" source="../media/console-show-network.msft.png" alt-text="コンソールの 429 メッセージ" lightbox="../media/console-show-network.msft.png":::
    コンソール `429` 内の **メッセージ**  
@@ -140,7 +140,7 @@ Microsoft Edge の既定のアクションは、ネットワーク メッセー�
 
 ネットワーク メッセージを非表示にするには、次の操作を実行します。  
 
-1.  [[コンソール設定] を開きます](#open-console-settings)。  
+1.  [コンソール を開設定。](#open-console-settings)  
 1.  [ネットワークの非表示] の横にある **チェック ボックスをオンにします**。  
     
 ## <a name="filter-messages"></a>フィルター メッセージ  
@@ -204,7 +204,7 @@ URL からメッセージを非表示にする場合は `-url:` 、「.  これ�
 
 ### <a name="filter-out-messages-from-different-contexts"></a>さまざまなコンテキストからのメッセージをフィルター処理する  
 
-Web ページに広告 \(ad\) が含まれるとします。  広告はコンソールに埋め込まれている `<iframe>` ので、コンソールに多数のメッセージが生成 **されます**。  広告は別の[JavaScript](#choose-javascript-context)コンテキストで実行されていますので、メッセージを非表示にする方法の[](#open-console-settings)1 つは、[コンソール設定] を開き、[選択されたコンテキストのみ] の横にあるチェック ボックス**をオンにします**。  
+Web ページに広告 \(ad\) が含まれるとします。  広告はコンソールに埋め込まれている `<iframe>` ので、コンソールに多数のメッセージが生成 **されます**。  広告が別の[JavaScript](#choose-javascript-context)コンテキストで実行されている場合、メッセージを非表示にする[1](#open-console-settings)つの方法として、[コンソール 設定] を開き、[選択されたコンテキストのみ] の横にあるチェック ボックスを**オンにします**。  
 
 ### <a name="filter-out-messages-that-dont-match-a-regular-expression-pattern"></a>正規表現パターンに一致しないメッセージをフィルター処理する  
 
@@ -230,12 +230,12 @@ Web ページに広告 \(ad\) が含まれるとします。  広告はコンソ
 
 **熱心な評価** では、コンソールに JavaScript 式を入力すると、戻り値のプレビューが表示 **されます**。  戻り値のプレビューをオフにするには、次のアクションを実行します。  
 
-1.  [[コンソール設定] を開きます](#open-console-settings)。  
+1.  [コンソール を開設定。](#open-console-settings)  
 1.  [熱心な評価] の横にある **チェック ボックスをオフにします**。  
     
 ### <a name="turn-off-autocomplete-from-history"></a>履歴からオートコンプリートをオフにする  
 
-式を入力すると、コンソールのオートコンプリート ポップアップ ウィンドウに、前**** に実行した式が表示されます。  式には、文字があらかじめ付 `>` けされています。  履歴からの式の表示を停止するには[](#open-console-settings)、[コンソール設定] を開き、[履歴からオートコンプリート] チェック ボックスの横にある**チェック ボックスをオフ**にします。  
+式を入力すると、コンソールのオートコンプリート ポップアップ ウィンドウに、前**** に実行した式が表示されます。  式には、文字があらかじめ付 `>` けされています。  履歴からの式の表示を停止するには[](#open-console-settings)、[コンソール] 設定を開き、[履歴からオートコンプリート] チェック ボックスの横にあるチェック ボックス**をオフ**にします。  
 
 > [!NOTE]
 > 次の図では、 `document.querySelector('a')` `document.querySelector('img')` 前に評価された式を示します。  
@@ -282,7 +282,7 @@ Web ページに広告が埋め込まれているとします `<iframe>` 。  Ja
 [DevtoolsConsoleLiveExpressions]: ./live-expressions.md "Live 式を使用して JavaScript の変更を監視|Microsoft Docs"  
 [DevtoolsConsoleUtilities]: ./utilities.md "コンソール ユーティリティ API リファレンス |Microsoft Docs"  
 
-[DevtoolsCommandMenuIndex]: ../command-menu/index.md "[Microsoft Edge DevTools コマンド] メニューメニューを使用してコマンドを実行|Microsoft Docs"  
+[DevtoolsCommandMenuIndex]: ../command-menu/index.md "[DevTools コマンド] メニューの [Microsoft Edgeを使用してコマンドを実行|Microsoft Docs"  
 
 [MdnDocsGlossaryBrowsingContext]: https://developer.mozilla.org/docs/Glossary/Browsing_context "参照コンテキスト |MDN"  
 

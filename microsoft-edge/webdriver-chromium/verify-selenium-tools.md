@@ -1,6 +1,6 @@
 ---
-description: Selenium Tools for Microsoft Edge リリースの GPG 署名の検証に関する情報。
-title: Microsoft Edge 用 Selenium Tools のダウンロードの確認
+description: Microsoft Edge 向け Selenium Tools リリースの GPG 署名の確認に関する情報。
+title: Microsoft Edge 用 Selenium Tools のダウンロードを確認する
 author: MSEdgeTeam
 ms.author: msedgedevrel
 ms.date: 01/29/2021
@@ -17,16 +17,16 @@ ms.locfileid: "11306274"
 ---
 # Microsoft Edge 用 Selenium Tools のダウンロードを確認する  
 
-この記事では [、Selenium Tools for Microsoft Edge][GithubMicrosoftEdgeSeleniumToolsReleases]のリリースの署名を確認するときに使用する公開キーを示します。  
+この記事では [、Selenium Tools for Microsoft Edge][GithubMicrosoftEdgeSeleniumToolsReleases]のリリースの署名を確認するときに使用する公開キーを提供します。  
 
-The [Java releases][MavernSearchArtifactComMicrosoftEdgeMsedgeSeleniumToolsJava] of [Selenium Tools for Microsoft Edge][GithubMicrosoftEdgeSeleniumToolsReleases] are signed using [GPG][Gnupg].  
+Microsoft [Edge Java][MavernSearchArtifactComMicrosoftEdgeMsedgeSeleniumToolsJava] セレン ツールのリリースは [GPG][GithubMicrosoftEdgeSeleniumToolsReleases] を使用して [署名されています][Gnupg]。  
 
 Microsoft Edge Developer Tools チームが提供するパッケージの署名を確認するには、次の [キーを使用します][TwitterEdgeDevTools]。  
 
-## Microsoft Edge 用 Selenium ツールを検証するための公開キー  
+## Microsoft Edge の Selenium Tools を確認するための公開キー  
 
 *   **公開キー ID**: Microsoft Edge Developer Tools チーム [EdgeDevToolsOSS@microsoft.com](mailto:edgedevtoolsoss@microsoft.com)  
-*   **公開キーの指紋**: `46EE EB3F 4028 B5CE A4E8  E6F5 A6DC D211 6D3A 3A7A`  
+*   **公開キーフィンガープリント**: `46EE EB3F 4028 B5CE A4E8  E6F5 A6DC D211 6D3A 3A7A`  
 
 ```output
 -----BEGIN PGP PUBLIC KEY BLOCK-----
@@ -54,7 +54,7 @@ ptJfPKT84TtqmRoJApBgxAsnD4t4JiuvnHkYHgzAzwcXFiofj2cCeJZf1tzIk6+Z
 
 [GithubMicrosoftEdgeSeleniumToolsReleases]: https://github.com/microsoft/edge-selenium-tools/releases "microsoft/edge-selenium-tools |GitHub"  
 
-[Gnupg]: https://gnupg.org "THE GUARD Privacy Guard |数日"  
+[Gnupg]: https://gnupg.org "GNU Privacy Guard |GnuPG"  
 
 [MavernSearchArtifactComMicrosoftEdgeMsedgeSeleniumToolsJava]:https://search.maven.org/artifact/com.microsoft.edge/msedge-selenium-tools-java "com.microsoft.edge:msedge-selenium-tools-java |sonatype Maven Central Repository Search"  
 

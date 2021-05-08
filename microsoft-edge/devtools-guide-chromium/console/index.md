@@ -1,5 +1,5 @@
 ---
-description: Microsoft Edge 開発者ツール内のコンソール ツールの概要。
+description: 開発者ツール内のコンソール ツールMicrosoft Edge紹介します。
 title: コンソールの使用
 author: MSEdgeTeam
 ms.author: msedgedevrel
@@ -39,11 +39,11 @@ ms.locfileid: "11483219"
    :::column-end:::
 :::row-end:::  
 
-コンソールを直接開く最も**速い**方法は `Control` + `Shift` + `J` 、\(Windows,Linux\) または `Command` + `Option` + `J` \(macOS\) を選択することです。  
+コンソールを直接開く最も速**い方法**は `Control` + `Shift` + `J` 、\(Windows Linux\) または `Command` + `Option` + `J` \(macOS\) を選択する方法です。  
 
 ## <a name="error-reports-and-console"></a>エラー レポートとコンソール  
 
-**コンソール** は、JavaScript と接続エラーが報告される既定の場所です。  エラーが発生した場合は、DevTools の **[** 設定] アイコンの横にボタンが表示され、エラーと警告の数が表示されます。  コンソールを開き、問題 **を表示するには** 、それを選択します。  詳細については、「コンソールで報告された [デバッグ エラー」に移動します][DevtoolsConsoleConsoleDebugJavascript]。  
+**コンソール** は、JavaScript と接続エラーが報告される既定の場所です。  エラーが発生した場合は、DevTools**** の [設定] アイコンの横にボタンが表示され、エラーと警告の数が表示されます。  コンソールを開き、問題 **を表示するには** 、それを選択します。  詳細については、「コンソールで報告された [デバッグ エラー」に移動します][DevtoolsConsoleConsoleDebugJavascript]。  
 
 :::image type="complex" source="../media/console-debug-displays-error.msft.png" alt-text="DevTools は、コンソールでエラーに関する詳細情報を提供します。" lightbox="../media/console-debug-displays-error.msft.png":::
    DevTools は、コンソールでエラーに関する詳細情報を提供 **します。**  
@@ -61,7 +61,7 @@ Web ページで DevTools を開いた場合、コンソールにログに記録
 
 コンソールの最も一般的な **使用例は** 、メソッドまたは他の同様の方法を使用してスクリプトから情報 `console.log()` をログに記録します。  これを試す場合は、次のアクションを実行します。  
 
-1.  コンソールを**開く**場合は `Control` + `Shift` + `J` 、[\(Windows, Linux\) または `Command` + `Option` + `J` \(macOS\) を選択します。  
+1.  コンソールを**開く**場合は `Control` + `Shift` + `J` 、\(Windows Linux\) または `Command` + `Option` + `J` \(macOS\) を選択します。  
 1.  [コンソール メッセージ [の例: ログ、情報][GithubMicrosoftedgeDevtoolssamplesConsoleLoggingDemoHtml]、エラー、警告] に移動するか、コンソールで次のコード スニペットをコピーして実行 **します**。  
     
     ```javascript

@@ -92,8 +92,8 @@ ms.locfileid: "11483534"
 
 コンソールでエラーを確認するには、[ **コンソール**] で報告 [された固定ネットワーク エラーに移動します][GithubMicrosoftedgeDevtoolssamplesConsoleNetworkErrorFixedHtml]。  
 
-:::image type="complex" source="../media/console-debug-network-error-fixed.msft.png" alt-text="エラーのない例は、GitHub から情報を読み込み、表示します" lightbox="../media/console-debug-network-error-fixed.msft.png":::
-   エラーのない例は、GitHub から情報を読み込み、表示します  
+:::image type="complex" source="../media/console-debug-network-error-fixed.msft.png" alt-text="エラーのない例では、エラーから情報が読み込GitHub表示されます。" lightbox="../media/console-debug-network-error-fixed.msft.png":::
+   エラーのない例では、エラーから情報が読み込GitHub表示されます。  
 :::image-end:::  
 
 以前のユーザー エクスペリエンスを回避するために、防御的なコーディング手法を提供してください。  また、コードがエラーをキャッチし、コンソールに **それぞれ表示します**。  [コンソールと [UI] で [ネットワーク エラー報告] に移動し][GithubMicrosoftedgeDevtoolssamplesConsoleNetworkErrorReportedHtml] 、次の項目を確認します。  

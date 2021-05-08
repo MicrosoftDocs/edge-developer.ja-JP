@@ -107,7 +107,7 @@ ms.locfileid: "11399041"
 
 DevTools 実験を有効にするには、次のアクションを実行します。  
 
-1.  に移動します `edge://flags/#enable-devtools-experiments` 。  
+1.  `edge://flags/#enable-devtools-experiments` に移動します。  
 1.  [有効 **にする] を選択します**。  
 1.  ページ **の下部にある [今すぐ**再起動] を選択します。  
 

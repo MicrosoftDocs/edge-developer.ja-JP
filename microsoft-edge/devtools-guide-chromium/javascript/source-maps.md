@@ -32,18 +32,18 @@ ms.locfileid: "11519416"
 
 結合、ミニファイ、またはコンパイルした後でも、クライアント側のコードを読み取り可能でデバッグ可能な状態に保つ。  ソース マップを使用して、ソース コードをコンパイル済みコードにマップします。  
 
-### <a name="summary"></a>要約  
+### <a name="summary"></a>まとめ  
 
-*   ソース マップを使用して、マイニングコードをソース コードにマップします。  その後、元のソースでコンパイルされたコードを読み取り、デバッグできます。  
-*   ソース マップを生成できるプリプロセッサのみを使用します。  
-*   Web サーバーがソース マップを提供できると確認します。  
+*   ソース コードをマップソース コードにマップするには、ソース コードを使用します。  その後、元のソースでコンパイルされたコードを読み取り、デバッグできます。  
+*   ソース データを生成できるプリプロセッサのみを使用マップ。  
+*   Web サーバーがソース サーバーにサービスを提供マップ。  
     
 <!--todo: add link to preprocessors capable of producing Source Maps when section is available -->  
 <!--[]: /web/tools/setup/setup-preprocessors?#supported_preprocessors ""  -->  
 
 ## <a name="get-started-with-preprocessors"></a>プリプロセッサの使用を開始する  
 
-この記事では、DevTools Sources ツールで JavaScript ソース マップを操作する方法について説明します。  <!--For a first overview of what preprocessors are, how each may help, and how Source Maps work; navigate to Set Up CSS & JS Preprocessors.  -->  
+この記事では、DevTools Sources ツールで JavaScript Source マップ操作する方法について説明します。  <!--For a first overview of what preprocessors are, how each may help, and how Source Maps work; navigate to Set Up CSS & JS Preprocessors.  -->  
 
 <!--todo: add link to Set Up CSS & JS Preprocessors when section is available -->  
 <!--[]: /web/tools/setup/setup-preprocessors#debugging-and-editing-preprocessed-content ""  -->  
@@ -55,29 +55,29 @@ ms.locfileid: "11519416"
 <!--todo: add link to display the preprocessor support section when section is available -->  
 <!--[]: /web/tools/setup/setup-preprocessors?#supported_preprocessors ""  -->  
 
-次の種類のプリプロセッサは、一般的にソース マップと組み合わせて使用されます。  
+次の種類のプリプロセッサは、一般的に Source ファイルと組み合わせてマップ。  
 
 *   Transpilers \([Babel][BabelJS], [Traceur][GitHubWikiGoogleTraceurCompiler]\)  
 *   Compilers \([Closure Compiler][GitHubGoogleClosureCompiler], [TypeScript][|::ref1::|Main], [CoffeeScript][|::ref2::|Main], [Dart][DartMain]\)  
 *   Minifiers \([UglifyJS][GitHubMishooUglifyJS]\)  
     
-## <a name="source-maps-in-devtools-sources-tool"></a>DevTools ソース ツールのソース マップ  
+## <a name="source-maps-in-devtools-sources-tool"></a>DevTools マップツールのソース ソース  
 
-プリプロセッサからのソース マップを使用すると、DevTools は、マイニングされたファイルに加えて元のファイルを読み込む原因です。  次に、元のオブジェクトを使用してブレークポイントを設定し、コードをステップ実行します。  一方、Microsoft Edge は実際にマイニング コードを実行しています。  コードを実行すると、実稼働環境で開発サイトを実行しているような錯覚が生じ得る。  
+プリプロセッサマップソース を使用すると、DevTools は、マイニングされたファイルに加えて元のファイルを読み込む原因です。  次に、元のオブジェクトを使用してブレークポイントを設定し、コードをステップ実行します。  一方、Microsoft Edgeコードが実際に実行されています。  コードを実行すると、実稼働環境で開発サイトを実行しているような錯覚が生じ得る。  
 
-DevTools でソース マップを実行する場合は、JavaScript がコンパイルされていないと、参照する個々の JavaScript ファイルすべてが表示されます。  DevTools のソース マップはソース マッピングを使用していますが、基になる機能は実際にコンパイルされたコードを実行します。  エラー、ログ、およびブレークポイントは、すばらしいデバッグのために開発コードにマップされます。  したがって、実際には、実稼働環境で開発サイトを実行しているという錯覚が生じられます。  
+DevTools で Source マップを実行する場合、JavaScript がコンパイルされていないと、参照する個々の JavaScript ファイルすべてが表示されます。  DevTools マップソース マッピングを使用していますが、基になる機能は実際にコンパイルされたコードを実行します。  エラー、ログ、およびブレークポイントは、すばらしいデバッグのために開発コードにマップされます。  したがって、実際には、実稼働環境で開発サイトを実行しているという錯覚が生じられます。  
 
 ### <a name="enable-source-maps-in-settings"></a>設定でソース マップを有効にする  
 
-ソース マップは既定で有効になっています<!-- \(as of Microsoft Edge 39\)-->を選択しますが、それらをダブル チェックまたは有効にする場合。最初に DevTools を開き **、[DevTools** \( \) をカスタマイズして制御 `...` する] を選択し、[設定] > **します**。  [基本設定 **] ウィンドウの** [ソース] **で**、[JavaScript ソース マップを有効 **にする] をオンにします**。  [CSS ソース マップを有効 **にする] をオンにすることもできます**。  
+ソース マップは既定で有効になっています<!-- \(as of Microsoft Edge 39\)-->を選択しますが、それらをダブル チェックまたは有効にする場合。最初に DevTools を開き **、[DevTools** \( \) をカスタマイズして `...` 制御する] を **>設定。**  [基本設定 **] ウィンドウの**[ソース]**で****、[JavaScript**ソース の有効化] をオンマップ。  [CSS ソースを有効にする **] をオンにマップ。**  
 
-:::image type="complex" source="../media/javascript-settings-preferences-sources-enable-javascript-source-maps.msft.png" alt-text="ソース マップを有効にする" lightbox="../media/javascript-settings-preferences-sources-enable-javascript-source-maps.msft.png":::
-   **JavaScript ソース マップを有効にする**  
+:::image type="complex" source="../media/javascript-settings-preferences-sources-enable-javascript-source-maps.msft.png" alt-text="ソース の有効化マップ" lightbox="../media/javascript-settings-preferences-sources-enable-javascript-source-maps.msft.png":::
+   **JavaScript ソース の有効化マップ**  
 :::image-end:::  
 
-### <a name="debugging-with-source-maps"></a>ソース マップを使用したデバッグ  
+### <a name="debugging-with-source-maps"></a>ソース ファイルを使用したデバッグマップ  
 
-コードとソース マップを有効にデバッグすると、ソース マップは次の 2 つの場所に表示されます。  
+コードとソース ファイルをデバッグマップ、ソース マップ 2 つの場所で表示されます。  
 
 1.  コンソール \(source へのリンクは、生成されたファイルではなく、元のファイルである必要があります\)  
 1.  コード \(呼び出し履歴内のリンクをステップ実行すると、元のソース ファイル\) が開きます。  
@@ -130,9 +130,9 @@ DevTools でソース マップを実行する場合は、JavaScript がコン�
 
 [GitHubMishooUglifyJS]: https://github.com/mishoo/UglifyJS "mishoo/UglifyJS |GitHub"  
 
-[GitHubWikiSourceMapsLanguagesTools]: https://github.com/ryanseddon/source-map/wiki/Source-maps:-languages,-tools-and-other-info "ソース マップ: 言語、ツール、その他の情報|GitHub wiki"  
+[GitHubWikiSourceMapsLanguagesTools]: https://github.com/ryanseddon/source-map/wiki/Source-maps:-languages,-tools-and-other-info "ソース マップ: 言語、ツール、その他の情報|GitHub Wiki"  
 
-[GitHubWikiGoogleTraceurCompiler]: https://github.com/google/traceur-compiler/wiki/Getting-Started "Getting Started - google/traceur-compiler |GitHub wiki"  
+[GitHubWikiGoogleTraceurCompiler]: https://github.com/google/traceur-compiler/wiki/Getting-Started "Getting Started - google/traceur-compiler |GitHub Wiki"  
 
 [TypeScriptMain]: https://www.typescriptlang.org "TypeScript"  
 

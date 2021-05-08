@@ -1,6 +1,6 @@
 ---
-description: Microsoft Edge DevTools を使用してページ CSS の CSS を表示および変更する方法について説明します。
-title: Microsoft Edge DevTools で CSS グリッドを検査する
+description: DevTools の Microsoft Edgeを使用して、ページ CSS の CSS を表示および変更する方法について説明します。
+title: DevTools で CSS グリッドMicrosoft Edgeする
 author: MSEdgeTeam
 ms.author: msedgedevrel
 ms.date: 02/12/2021

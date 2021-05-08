@@ -1,6 +1,6 @@
 ---
 description: コマンド メニューを開く方法、コマンドを実行する方法、その他のアクションを確認する方法などのガイド。
-title: Microsoft Edge DevTools コマンド メニューを使用してコマンドを実行する
+title: DevTools コマンド メニューでコマンドMicrosoft Edge実行する
 author: MSEdgeTeam
 ms.author: msedgedevrel
 ms.date: 02/12/2021
@@ -28,9 +28,9 @@ ms.locfileid: "11519192"
    See the License for the specific language governing permissions and
    limitations under the License.  -->  
 
-# <a name="run-commands-with-the-microsoft-edge-devtools-command-menu"></a>Microsoft Edge DevTools コマンド メニューを使用してコマンドを実行する  
+# <a name="run-commands-with-the-microsoft-edge-devtools-command-menu"></a>DevTools コマンド メニューでコマンドMicrosoft Edge実行する  
 
-コマンド メニューを使用すると、Microsoft Edge DevTools UI を迅速に移動し、JavaScript の無効化などの一般的なタスク [を実行できます][JavascriptDisable]。  コマンド メニューの元のインスピレーションVisual Studioと呼ばれる Microsoft Visual Studio コードの[][VisualStudioCodeUICommandPalette]同様の機能についてよく知っているかもしれません。  
+コマンド メニューを使用すると、DevTools UI をMicrosoft Edge、JavaScript の無効化などの一般的なタスクを実行[できます][JavascriptDisable]。  コマンド メニューの元のインスピレーションMicrosoft Visual Studioコマンド パレットと呼ばれるコードの[][VisualStudioCodeUICommandPalette]同様の機能についてよく知っているかもしれません。  
 
 :::image type="complex" source="../media/command-menu-run-command-java.msft.png" alt-text="コマンド メニューを使用して JavaScript を無効にする" lightbox="../media/command-menu-run-command-java.msft.png":::
    コマンド メニューを使用して JavaScript を無効にする  
@@ -38,7 +38,7 @@ ms.locfileid: "11519192"
 
 ## <a name="open-the-command-menu"></a>コマンド メニューを開く  
 
-`Control` + `Shift` + `P` \(Windows, Linux\) または `Command` + `Shift` + `P` \(macOS\) を選択します。 または、[ **コマンドの実行] で [DevTools** `...` \( \) のカスタマイズと制御> **選択します**。  
+`Control` + `Shift` + `P` \(Windows Linux\) または `Command` + `Shift` + `P` \(macOS\) を選択します。 または、[ **コマンドの実行] で [DevTools** `...` \( \) のカスタマイズと制御> **選択します**。  
 
 :::image type="complex" source="../media/command-menu-options-run-command.msft.png" alt-text="コマンドの実行" lightbox="../media/command-menu-options-run-command.msft.png":::
    コマンドの実行  
@@ -64,9 +64,9 @@ ms.locfileid: "11519192"
 
 <!-- links -->  
 
-[JavascriptDisable]: ../javascript/disable.md "Microsoft Edge DevTools を使用して JavaScript を無効|Microsoft Docs"  
+[JavascriptDisable]: ../javascript/disable.md "DevTools ファイルを使用Microsoft Edge JavaScript を無効|Microsoft Docs"  
 
-[VisualStudioCodeUICommandPalette]: https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette "コマンド パレット - Visual Studio コード UI"  
+[VisualStudioCodeUICommandPalette]: https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette "コマンド パレット - Visual Studio Code UI"  
 
 > [!NOTE]
 > このページの一部は、 [Google によっ て作成および共有された][GoogleSitePolicies]作業に基づく変更で、「[Creative Commons Attribution 4.0 International License][CCA4IL]」で記載されている条項に従って使用されます。  

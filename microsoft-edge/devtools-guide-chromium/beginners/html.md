@@ -1,5 +1,5 @@
 ---
-description: HTML と DOM の使用を開始する
+description: はじめに DOM の使用
 title: '初級者向け DevTools: HTML と DOM の使用を開始する'
 author: MSEdgeTeam
 ms.author: msedgedevrel
@@ -30,7 +30,7 @@ ms.locfileid: "11397931"
 
 # <a name="devtools-for-beginners-get-started-with-html-and-the-dom"></a>初級者向け DevTools: HTML と DOM の使用を開始する  
 
-これは、Web 開発の基本を教える一連のチュートリアルの最初の例です。  生産性を向上させる可能性がある、Microsoft Edge DevTools という名前の一連の Web 開発者ツールについて説明します。  
+これは、Web 開発の基本を教える一連のチュートリアルの最初の例です。  生産性を向上させる可能性がある、DevTools という名前Microsoft Edge一連の Web 開発者ツールについて説明します。  
 
 この特定のチュートリアルでは、HTML と DOM について学習します。  HTML は、Web 開発のコア テクノロジの 1 つです。  Web ページの構造とコンテンツを制御する言語です。  DOM は Web ページの構造とコンテンツにも関連しています。詳細については、後で説明します。  
 
@@ -45,7 +45,7 @@ ms.locfileid: "11397931"
 このチュートリアルの最後には、次のトピックを理解する必要があります。  
 
 *   HTML と DOM が Web ページに表示されるコンテンツを作成する方法。  
-*   Microsoft Edge DevTools が HTML と DOM の変更を試すのに役立つ方法。  
+*   DevTools Microsoft Edge HTML と DOM の変更を試す方法。  
 *   HTML と DOM の違い。  
 
 また、実際の Web サイトがあります。  サイトを使用して履歴書やブログをホストできます。  
@@ -55,7 +55,7 @@ ms.locfileid: "11397931"
 このチュートリアルを試す前に、次の前提条件を満たしてください。  
 
 *   HTML に慣れていない場合は、「HTML の使用を [開始する」を参照してください][MDNGettingStartedHtml]。  
-*   Microsoft [Edge Web ブラウザーを][MicrosoftEdgeInsider] ダウンロードします。  このチュートリアルでは、Microsoft Edge に組み込まれる Microsoft Edge DevTools と呼ばれる一連の Web 開発ツールを使用します。  
+*   Web ブラウザー [Microsoft Edge][MicrosoftEdgeInsider]ダウンロードします。  このチュートリアルでは、開発ツールに組み込Microsoft Edge DevTools と呼ばれる一連の web 開発Microsoft Edge。  
 
 ## <a name="set-up-your-code"></a>コードを設定する  
 
@@ -67,10 +67,10 @@ Glitch というオンライン コード エディターでサイトを構築�
        [エディター] タブ  
     :::image-end:::  
     
-1.  **Alluring-shock を選択します**。  左上隅に [プロジェクト オプション] メニューが開きます。  
+1.  **Alluring-shock を選択します**。  [Projectオプション] メニューが左上隅に表示されます。  
     
-    :::image type="complex" source="../media/beginners-html-setup2.msft.png" alt-text="[プロジェクト オプション] メニュー" lightbox="../media/beginners-html-setup2.msft.png":::
-       [プロジェクト オプション] メニュー  
+    :::image type="complex" source="../media/beginners-html-setup2.msft.png" alt-text="[Project オプション] メニュー" lightbox="../media/beginners-html-setup2.msft.png":::
+       [Project オプション] メニュー  
     :::image-end:::  
     
 1.  **[Remix Project] を選択します**。  Glitch は、編集できるプロジェクトのコピーを作成し、プロジェクトの新しい名前をランダムに生成します。  コンテンツは以前と同じです。  
@@ -79,7 +79,7 @@ Glitch というオンライン コード エディターでサイトを構築�
        リミックスされたプロジェクト  
     :::image-end:::  
     
-1.  このシリーズの次のチュートリアルを完了する予定の場合は、[**** サインイン] を選択し、GitHub または Facebook アカウントでグリッチにサインインします。  アカウントにサインインしない場合は、編集タブを閉じてからプロジェクトを編集できません。  
+1.  このシリーズの次のチュートリアルを完了する予定の場合は、[**** サインイン] を選択し、自分のアカウントまたは Facebook アカウントで Glitch GitHubサインインします。  アカウントにサインインしない場合は、編集タブを閉じてからプロジェクトを編集できません。  
 1.  [表示 **] を** 選択し、[ **新しいウィンドウ] を選択します**。  新しいタブが開き、ライブ ページが表示されます。  このタブは、このチュートリアル全体で **ライブ タブ** と呼ばれる。  
     
     :::image type="complex" source="../media/beginners-html-setup4.msft.png" alt-text="[ライブ] タブ" lightbox="../media/beginners-html-setup4.msft.png":::
@@ -179,13 +179,13 @@ Glitch というオンライン コード エディターでサイトを構築�
        新しいリストがライブ タブに表示される  
     :::image-end:::  
     
-## <a name="experiment-with-content-changes-in-microsoft-edge-devtools"></a>Microsoft Edge DevTools でコンテンツの変更を試す  
+## <a name="experiment-with-content-changes-in-microsoft-edge-devtools"></a>DevTools でコンテンツの変更Microsoft Edgeする  
 
-多くの HTML を含む大きなページを開発している場合は、変更を表示するために、エディター タブとライブ タブの間を何百回も行き来する必要があります。特に、ページに正確に何を置く必要があるのか分からない場合は、何百回も行き来する必要があります。  Microsoft Edge DevTools は、ライブ タブを離れることなくコンテンツの変更を **試すのに役立ちます**。  
+多くの HTML を含む大きなページを開発している場合は、変更を表示するために、エディター タブとライブ タブの間を何百回も行き来する必要があります。特に、ページに正確に何を置く必要があるのか分からない場合は、何百回も行き来する必要があります。  Microsoft EdgeDevTools は、ライブ タブを離れることなくコンテンツの変更を**試すのに役立ちます**。  
 
 ### <a name="learn-the-difference-between-html-and-the-dom"></a>HTML と DOM の違いを学ぶ  
 
-Microsoft Edge DevTools からコンテンツの編集を開始する前に、HTML と DOM の違いを理解する必要があります。  最適な学習方法は、次の例です。  
+DevTools からコンテンツの編集をMicrosoft Edge前に、HTML と DOM の違いを理解する必要があります。  最適な学習方法は、次の例です。  
 
 1.  [ライブ] タブ **に移動します**。 ページの下部にテキストが `A new element!?!` 表示されます。  
     
@@ -247,7 +247,7 @@ Microsoft Edge DevTools からコンテンツの編集を開始する前に、HT
        :::column-end:::
     :::row-end:::  
     
-1.  `Control` + `Enter` \(Windows, Linux\) または `Command` + \(macOS\) を選択して変更を保存するか、ボックスの外側 `Enter` を選択します。  変更がページのライブ ビューに自動的に表示されます。  テキストが `Your site!` 新しいコンテンツに置き換えられた。  
+1.  `Control` + `Enter` \(Windows、Linux\) または `Command` + \(macOS\) を選択して変更を保存するか、ボックスの外側 `Enter` を選択します。  変更がページのライブ ビューに自動的に表示されます。  テキストが `Your site!` 新しいコンテンツに置き換えられた。  
     
     :::image type="complex" source="../media/beginners-html-edit3.msft.png" alt-text="新しいコンテンツがページにすぐに表示される" lightbox="../media/beginners-html-edit3.msft.png":::
        新しいコンテンツがページにすぐに表示される  
@@ -350,7 +350,7 @@ DOM ツリーからノードを削除することもできます。
     
 ## <a name="next-steps"></a>次の手順  
 
-*   このシリーズの次のチュートリアル [「CSS][DevToolsBeginnersCss]の使用を開始する」を実行して、ページのスタイルを設定し、Microsoft Edge DevTools でスタイルの変更を試す方法について説明します。  
+*   このシリーズの次のチュートリアルはじめに[CSS][DevToolsBeginnersCss]を使用して、ページのスタイルを設定し、DevTools でスタイルの変更を試Microsoft Edgeします。  
 *   DOM [の詳細については、「DOM の][MDNIntroductionDom] 概要」を参照してください。  
 *   Web 開発の概要 [のようなコースをチェック][CourseraIntroductionToWebDevelopment] して、より実践的な Web 開発エクスペリエンスを得る。  
 
@@ -360,7 +360,7 @@ DOM ツリーからノードを削除することもできます。
 
 <!--- links --->  
 
-[DevToolsBeginnersCss]: ./css.md "初級者向け DevTools: CSS の使用を開始|Microsoft Docs"  
+[DevToolsBeginnersCss]: ./css.md "初級者向け DevTools: CSS はじめにを使用|Microsoft Docs"  
 
 [MicrosoftEdgeInsider]: https://www.microsoftedgeinsider.com "Microsoft Edge Insider"  
 

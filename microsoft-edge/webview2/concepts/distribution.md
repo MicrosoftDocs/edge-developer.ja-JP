@@ -3,23 +3,23 @@ description: Microsoft Edge WebView2 を使用してアプリをリリースす�
 title: Microsoft Edge WebView2 アプリの配布
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 11/23/2020
+ms.date: 05/06/2021
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、wpf アプリ、wpf、edge、ICoreWebView2、ICoreWebView2Host、ブラウザー コントロール、edge html
-ms.openlocfilehash: 14f252b0155beb6bfce0b01dc080900f2d3e57ee
-ms.sourcegitcommit: e79503c6c53ea9b7de58f8cf1532b5c82116a6eb
-ms.translationtype: HT
+ms.openlocfilehash: 97ede968e066c572bb1b22e10ed7e758e38e3ca4
+ms.sourcegitcommit: 777b16ef10363f2dfd755f115ee2d4c81a8de46f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "11195167"
+ms.lasthandoff: 05/07/2021
+ms.locfileid: "11535700"
 ---
-# WebView2 を使用したアプリの配布  
+# <a name="distribution-of-apps-using-webview2"></a>WebView2 を使用したアプリの配布  
 
 WebView2 アプリを配布する場合は、アプリを起動する前に、バッキング Web プラットフォームである [WebView2 ランタイム][Webview2Installer]が存在することを確認してください。  この記事では、ユーザー \(開発者\) が WebView2 ランタイムをインストールし、WebView2 アプリの 2 つの配布モードである[エバーグリーン](#evergreen-distribution-mode)と[固定バージョン](#fixed-version-distribution-mode)を使用する方法について説明します。  
 
-## エバーグリーンの配布モード  
+## <a name="evergreen-distribution-mode"></a>エバーグリーンの配布モード  
 
 > [!NOTE]
 > ほとんどの開発者には、エバーグリーンの配布モードをお勧めします。  
@@ -29,7 +29,7 @@ WebView2 アプリを配布する場合は、アプリを起動する前に、�
 *   基礎となる Web プラットフォーム \(WebView2 Runtime\) は、追加の作業を行わずに自動的に更新されます。  
 *   エバーグリーン配布モードを使用するすべてのアプリは、ディスク領域を節約するエバーグリーン WebView2 ランタイムの共有コピーを使用します。  
     
-### WebView2 ランタイムについて  
+### <a name="understanding-the-webview2-runtime"></a>WebView2 ランタイムについて  
 
 WebView2 ランタイムは再頒布可能なランタイムであり、WebView2 アプリのバッキング Web プラットフォームとして機能します。  概念は、Visual C++ または C++/.NET アプリ用の .NET ランタイムに似ています。  ランタイムには、アプリ用に微調整されテストされた、変更された Microsoft Edge \(Chromium\) バイナリが含まれています。  ランタイムは、インストール時にユーザーに表示されるブラウザーとして表示されません。  たとえば、ユーザーにはブラウザーのデスクトップ ショートカットやスタート メニューのエントリがありません。  
 
@@ -48,7 +48,7 @@ WebView2 ランタイムは再頒布可能なランタイムであり、WebView2
     
 今後、エバーグリーン WebView2 ランタイムは Windows の将来のリリースとともに配付される予定です。  ランタイムがより一般に利用可能になるまで、運用アプリでランタイムを展開します。  
 
-### エバーグリーン WebView2 ランタイムの展開  
+### <a name="deploying-the-evergreen-webview2-runtime"></a>エバーグリーン WebView2 ランタイムの展開  
 
 デバイス上のすべてのエバーグリーン アプリに必要なエバーグリーン WebView2 ランタイムのインストールは 1 つだけです。  [ WebView2 ランタイムのダウンロード ページ][Webview2Installer]には、多数のツールが用意されています。  次のツールは、エバーグリーン ランタイムの展開に役立ちます。  
 
@@ -60,7 +60,7 @@ WebView2 ランタイムは再頒布可能なランタイムであり、WebView2
 
 アプリを起動する前にランタイムが既にインストールされていることを確認するには、次のワークフローを使用します。  自分のシナリオに応じてワークフローを調整できます。  サンプル コードは、[サンプルのリポジトリ][GitHubMicrosoftedgeWebView2samplesWebview2Deployment]で利用可能です。  
 
-#### オンラインのみの展開  
+#### <a name="online-only-deployment"></a>オンラインのみの展開  
 
 ユーザーがインターネットにアクセスできると想定されるオンラインのみの展開シナリオがある場合は、次の手順を実行します。  
 
@@ -91,7 +91,7 @@ WebView2 ランタイムは再頒布可能なランタイムであり、WebView2
     
 プログラムでオンデマンドでダウンロードする代わりに、ブートストラップをアプリにパッケージ化することもできます。  
 
-#### オフラインの展開  
+#### <a name="offline-deployment"></a>オフラインの展開  
 
 アプリの展開を完全にオフラインで行う必要があるオフライン展開シナリオがある場合は、次の手順を実行します。  
 
@@ -119,13 +119,13 @@ WebView2 ランタイムは再頒布可能なランタイムであり、WebView2
     MicrosoftEdgeWebView2RuntimeInstaller{X64/X86/ARM64}.exe /silent /install
     ```  
     
-### エバーグリーン モードで互換性を保つ  
+### <a name="stay-compatible-in-evergreen-mode"></a>エバーグリーン モードで互換性を保つ  
 
 Web は常に進化しています。  エバーグリーン WebView2 ランタイムは最新の状態に保たれ、最新の機能とセキュリティ修正プログラムが提供されます。  アプリが Web との互換性を維持できるようにするには、テスト インフラストラクチャを設定する必要があります。  
 
-不安定な Microsoft Edge チャネル \(Beta/Dev/Canary\) では、WebView2 ランタイムで次に予定されている機能のヒントを確認できます。  Microsoft Edge 用の Web サイトを開発する場合と同様に、WebView2 アプリを定期的にテストする必要があります。  不安定なチャネルの 1 つに対して WebView2 アプリをテストし、問題が発生した場合はアプリを更新するか、[問題を報告します][GithubMicrosoftedgeWebviewfeedback]。 通常、推奨されるチャネルは Dev と Beta です。  適切なチャネルを判断するには、「[Microsoft Edge チャネルの概要][DeployEdgeMicrosoftEdgeChannels]」を参照してください。  安定していない [Microsoft Edge チャネル][DownloadNonstableEdge]をテスト環境にダウンロードし、`regkey` または環境変数を使用してテスト アプリのチャネルの設定を指定することができます。  詳細については、「[CreateCoreWebView2EnvironmentWithOptions][ReferenceWin32Webview2IdlCreatecorewebview2environmentwithoptions]」を参照してください。  [WebDriver ][HowtoWebdriver] を使用して WebView2 のテストを自動化することもできます。
+不安定な Microsoft Edge チャネル \(Beta/Dev/Canary\) では、WebView2 ランタイムで次に予定されている機能のヒントを確認できます。  Microsoft Edge 用の Web サイトを開発する場合と同様に、WebView2 アプリを定期的にテストする必要があります。  不安定なチャネルの 1 つに対して WebView2 アプリをテストし、問題が発生した場合はアプリを更新するか、[問題を報告します][GithubMicrosoftedgeWebviewfeedback]。 通常、推奨されるチャネルは Dev と Beta です。  適切なチャネルを判断するには、「[Microsoft Edge チャネルの概要][DeployEdgeMicrosoftEdgeChannels]」を参照してください。  安定していない [Microsoft Edge チャネル][DownloadNonstableEdge]をテスト環境にダウンロードし、`regkey` または環境変数を使用してテスト アプリのチャネルの設定を指定することができます。  詳細については、「[CreateCoreWebView2EnvironmentWithOptions][ReferenceWin32Webview2IdlCreatecorewebview2environmentwithoptions]」を参照してください。  [WebDriver ][HowToWebdriver] を使用して WebView2 のテストを自動化することもできます。
 
-## 固定バージョンの配布モード   
+## <a name="fixed-version-distribution-mode"></a>固定バージョンの配布モード   
 
 厳密な互換性要件がある制約のある環境では、固定バージョンの配布モードの使用を検討してください。  固定バージョンの配布モードを使用して、特定のバージョンの WebView2 ランタイムを選択してパッケージ化します。  アプリのランタイム更新のタイミングを指定できます。  固定バージョンの配布モードは自動更新を受け取りません。 アプリとランタイムの更新を計画します。  
 
@@ -148,7 +148,7 @@ Web は常に進化しています。  エバーグリーン WebView2 ランタ�
         *   `EnsureCoreWebView2Async` \([WPF][ReferenceWpfMicrosoftWebWebview2WpfWebview2Ensurecorewebview2async]/[WinForms][ReferenceWinformsMicrosoftWebWebview2WinformsWebview2Ensurecorewebview2async]\) を使用して環境を指定します。  [CoreWebView2Environment.CreateAsync][ReferenceDotnetMicrosoftWebWebview2CoreCorewebview2environmentCreateasync] の `browserExecutableFolder` パラメーターを使用して、固定バージョンのバイナリへのパスを指定します。  
 1.  固定バージョンのバイナリをアプリにパッケージ化して配付します。  必要に応じてバイナリを更新します。  
     
-### 固定バージョンの既知の問題  
+### <a name="known-issues-for-fixed-version"></a>固定バージョンの既知の問題  
 
 エバーグリーン ランタイムと比較すると、固定バージョンにはインストール プロセスが含まれていないため、[Microsoft PlayReady][MicrosoftPlayReady] は変更をしないと動作しません。  以下の操作を実行すると、問題を軽減できる可能性があります。  
 
@@ -174,7 +174,7 @@ Web は常に進化しています。  エバーグリーン WebView2 ランタ�
 <!-- links -->  
 
 [ConceptsVersioning]: ./versioning.md "ブラウザーのバージョンと WebView2 について | Microsoft Docs"  
-[HowtoWebdriver]: ../howto/webdriver.md "Microsoft Edge Driver での WebView2 の自動化とテスト | Microsoft Docs"  
+[HowToWebdriver]: ../how-to/webdriver.md "Microsoft Edge Driver での WebView2 の自動化とテスト | Microsoft Docs"  
 
 [ReferenceWin32Webview2IdlCreatecorewebview2environmentwithoptions]: /microsoft-edge/webview2/reference/win32/webview2-idl#createcorewebview2environmentwithoptions "CreateCoreWebView2EnvironmentWithOptions - Globals | Microsoft Docs"  
 [ReferenceWin32Webview2IdlGetavailablecorewebview2browserversionstring]: /microsoft-edge/webview2/reference/win32/webview2-idl#getavailablecorewebview2browserversionstring "GetAvailableCoreWebView2BrowserVersionString - グローバル | Microsoft Docs"  

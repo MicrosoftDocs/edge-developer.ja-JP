@@ -1,12 +1,12 @@
 ---
-description: このページでは、Microsoft Edge ユーザーエージェント文字列に関するドキュメントを提供します。
-title: Microsoft Edge ユーザーエージェント文字列
+description: このページでは、ユーザー エージェント文字列Microsoft Edgeドキュメントを提供します。
+title: Microsoft Edgeユーザー エージェント文字列
 author: MSEdgeTeam
 ms.author: msedgedevrel
 ms.date: 12/16/2019
 ms.topic: article
 ms.prod: microsoft-edge
-keywords: microsoft edge、互換性、web プラットフォーム、ユーザーエージェント文字列、ua 文字列、ua の上書き
+keywords: microsoft edge, compatibility, Web プラットフォーム, ユーザー エージェント文字列, ua string, ua overrides
 ms.openlocfilehash: 73401219b7708a739292a46b6131fe40765e9c8c
 ms.sourcegitcommit: 6860234c25a8be863b7f29a54838e78e120dbb62
 ms.translationtype: MT
@@ -14,38 +14,38 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/09/2020
 ms.locfileid: "10570800"
 ---
-# Microsoft Edge ユーザーエージェント文字列 (デスクトップ)  
+# Microsoft Edgeユーザー エージェント文字列 (デスクトップ)  
 
-ユーザーエージェント \ (UA \) 文字列は、特定のオペレーティングシステムで使用されている特定のブラウザーのバージョンを検出するために使用できます。  他のブラウザーと同じように、Microsoft Edge で `User-Agent` は、サイトへの要求を行うたびに、HTTP ヘッダーにこの情報が記載されています。  また、の値を照会して、JavaScript を使ってアクセスすることもでき `navigator.userAgent` ます。  
+ユーザー エージェント \(UA\) 文字列を使用して、特定のオペレーティング システムで使用されている特定のブラウザーのバージョンを検出できます。  他のブラウザーと同様Microsoft Edgeサイトへの要求を行うたびに、HTTP ヘッダーにこの情報 `User-Agent` が含まれます。  また、 の値を照会して JavaScript を介してアクセスすることもできます `navigator.userAgent` 。  
 
-Microsoft は、web 開発者が可能な限り[機能検出](https://developer.mozilla.org/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)を利用して、コードの保守性を向上させ、コードの fragility を減らし、将来の UA 文字列更新が発生した場合に、コード売り上げ高からのリスクを排除することをお勧めします。  
+Microsoft では、Web 開発者が可能[](https://developer.mozilla.org/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)な限り機能検出を利用して、コードの保守性を向上し、コードのフラグビリティを低下し、将来の UA 文字列更新が発生した場合にコードが壊れるリスクを排除します。  
 
-機能の検出が適用されず、UA 検出を使う必要がある場合は、デスクトップの Microsoft Edge UA の形式は次のようになります。
+機能検出が適用できない場合と UA 検出を使用する必要がある場合、デスクトップ上の UA のMicrosoft Edge形式は次のとおりです。
 
-`User-Agent`要求ヘッダーは、次の形式になっています。
+要求 `User-Agent` ヘッダーの形式は次のとおりです。
 
 ```http
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.74 Safari/537.36 Edg/79.0.309.43
 ``` 
 
-戻り値は、 `navigator.userAgent` 次の形式になります。
+戻り値の `navigator.userAgent` 取得元は次の形式です。
 
 ```javascript
 "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.74 Safari/537.36 Edg/79.0.309.43"
 ```  
 
-プラットフォーム識別子は、使用されているオペレーティングシステムに基づいて変更されます。また、バージョン番号は、時間の経過に応じて増加します。  この形式は、最後に新しいトークンが追加された Chromium UA と同じです `Edg` 。  Microsoft は、 `Edg` `Edge` EdgeHTML に基づく Microsoft Edge のバージョンによって使用される文字列を使用して発生する可能性のある互換性の問題を回避するために、トークンを選択しました。  `Edg`トークンは、iOS および Android で使用される[既存のトークン](https://blogs.windows.com/msedgedev/2017/10/05/microsoft-edge-ios-android-developer/)とも整合性があります。
+プラットフォーム識別子は、使用されているオペレーティング システムに基づいて変更され、バージョン番号も時間が経過すると増加します。  この形式は、最後に新Chromium追加した UA の形式 `Edg` と同じです。  Microsoft は、EdgeHTML に基づくバージョンのコードで使用される文字列の使用によって引き起こされる可能性がある互換性の問題を回避Microsoft Edge `Edg` `Edge` トークンを選択しました。  トークン `Edg` は、iOS および Android で [使用される](https://blogs.windows.com/msedgedev/2017/10/05/microsoft-edge-ios-android-developer/) 既存のトークンと一致しています。
 
-## ブラウザー名への UA 文字列のマッピング
-コードで使うために、よりわかりやすいブラウザー名に UA 文字列トークンをマッピングすることは、今日の web 上の一般的なパターンです。 新しい `Edg` トークンをブラウザー名にマッピングする場合、Chromium ベースのブラウザーに適用されない従来の回避策が誤って適用されないように、旧バージョンの Microsoft Edge に使用されている開発者とは異なる名前を使用することをお勧めします。
+## UA 文字列をブラウザー名にマッピングする
+コードで使用するために、UA 文字列トークンを人間が読み取り可能なブラウザー名にマッピングする方法は、今日の Web 上で一般的なパターンです。 新しいトークンをブラウザー名にマッピングする場合、従来のバージョンの Microsoft Edge で使用されている開発者とは異なる名前を使用して、Chromium ベースのブラウザーに適用できない従来の回避策を誤って適用しないようにお勧めします。 `Edg`
 
-## ユーザーエージェントの上書き  
+## ユーザー エージェントのオーバーライド  
 
-場合によっては、更新された Microsoft Edge UA のバージョンが web サイトで認識されないことがあります。  その結果、その web サイトの一連の機能が正しく動作しないことがあります。  Microsoft がこのような種類の問題について通知を受けると、web サイトの所有者に連絡し、更新された UA について通知されます。  
+Web サイトが UA の更新されたバージョンを認識Microsoft Edge場合があります。  その結果、その Web サイトの機能のセットが正しく動作しない可能性があります。  Microsoft がこれらの種類の問題について通知を受け取った場合、Web サイトの所有者に連絡し、更新された UA について通知されます。  
 
-多くの場合、このサイトでは、UA 検出ロジックの更新とテストを行って、Microsoft からサイト所有者に報告される問題に対処する必要があります。  このような場合、Microsoft はベータおよび安定したチャネルでの UA の上書きの一覧を使って、これらのサイトにアクセスするユーザーに対して互換性を最大限に高めています。  この上書きによって、特定のサイトの既定の UA の代わりに Microsoft Edge が送信する新しい UA 値が指定されます。  `edge://compat/useragent`Microsoft Edge のベータ版と安定したチャネルに移動して、現在適用されている UA の上書きの一覧を表示することができます。 
+多くの場合、サイトでは、Microsoft がサイト所有者に報告する問題に対処するために、UA 検出ロジックを更新してテストする時間が必要です。  このような場合、Microsoft は、これらのサイトにアクセスするユーザーの互換性を最大化するために、ベータ版と安定版のチャネルで UA オーバーライドの一覧を使用します。  オーバーライドでは、特定のサイトの既定の UA Microsoft Edge送信する必要がある新しい UA 値を指定します。  現在適用されている UA オーバーライドの一覧を表示するには、アプリの Beta チャネルと Stable チャネルに `edge://compat/useragent` 移動Microsoft Edge。 
 
-現時点では、Microsoft Edge の既定の UA によって発生した問題について、web 開発者が自分のサイトで問題を簡単に再現できる環境を提供しています。  何らかの理由で Microsoft Edge のベータまたは安定したチャネルでの UA の上書きを無効にする必要がある場合は、次のコマンドライン引数を使用して Microsoft Edge 実行可能ファイルを実行できます。  
+現在、Canary チャネルと Dev チャネルは UA オーバーライドを受け取りないので、Web 開発者は、既定の UA によって発生するサイト上の問題を簡単に再現できる環境Microsoft Edgeしています。  何らかの理由で Microsoft Edge の Beta チャネルまたは Stable チャネルで UA オーバーライドを無効にする機能が必要な場合は、次のコマンド ライン引数を使用して Microsoft Edge 実行可能ファイルを実行できます。  
 
 ```shell
 --disable-domain-action-user-agent-override

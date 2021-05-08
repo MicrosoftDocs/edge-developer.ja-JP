@@ -179,4 +179,4 @@ Microsoft Edge アドオン ストアで拡張機能が検出可能な場合は�
 [GoogleYoutubeAnswer132596]: https://support.google.com/youtube/answer/132596 "埋め込みビデオの広告|YouTube ヘルプ"  
 [GoogleYoutubeAnswer171780]: https://support.google.com/youtube/answer/171780 "再生リスト&埋め込み|YouTube ヘルプ"  
 
-[MailtoExtDevSupportMicrosoftCom]: mailto:ext_dev_support@microsoft.com "メールをメールにext_dev_support@microsoft.com" 
+[MailtoExtDevSupportMicrosoftCom]: mailto:ext_dev_support@microsoft.com "メールをメールに ext_dev_support@microsoft.com" 

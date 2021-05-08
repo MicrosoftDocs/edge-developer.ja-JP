@@ -1,5 +1,5 @@
 ---
-description: Microsoft Edge Developer Tools を使用して、ネイティブ Android アプリのリモート デバッグ WebViews の使用を開始します。
+description: 開発者向けツールを使用して、ネイティブ Android アプリのリモート デバッグ WebViews Microsoft Edge開始します。
 title: Android WebViews のリモート デバッグの開始
 author: MSEdgeTeam
 ms.author: msedgedevrel
@@ -29,13 +29,13 @@ ms.locfileid: "11461537"
    limitations under the License.  -->  
 # <a name="get-started-with-remote-debugging-android-webviews"></a>Android WebViews のリモート デバッグの開始  
 
-Microsoft Edge Developer Tools を使用して、ネイティブ Android アプリで Android WebViews をデバッグします。  
+開発者ツールを使用して、ネイティブ Android アプリで Android WebViews Microsoft Edgeデバッグします。  
 
 Android 4.4 \(KitKat\) 以降では、DevTools を使用してネイティブ Android アプリの WebView コンテンツをデバッグします。  
 
-### <a name="summary"></a>要約  
+### <a name="summary"></a>まとめ  
 
-*   ネイティブ Android アプリで Android WebView デバッグを有効にする。Microsoft Edge DevTools で Android WebViews をデバッグします。  
+*   ネイティブ Android アプリで Android WebView デバッグを有効にする。DevTools で Android WebViews Microsoft Edgeデバッグします。  
 *   デバッグを有効にした Android WebViews の一覧を表示するには、に移動します `edge://inspect` 。  
 *   リモート デバッグを使用して Web ページをデバッグするのと同じ方法で、Android WebViews [をデバッグします][RemoteDebuggingGettingStarted]。  
 
@@ -88,7 +88,7 @@ Android WebViews がページに表示 `edge://inspect` されない場合
 
 <!-- links -->  
 
-[RemoteDebuggingGettingStarted]: ./index.md "Android デバイスのリモート デバッグの|Microsoft Docs"  
+[RemoteDebuggingGettingStarted]: ./index.md "はじめに リモート デバッグ Android デバイスの使用|Microsoft Docs"  
 
 [AndroidDeveloperWebViewsSetWebContentsDebuggingEnabled]: https://developer.android.com/reference/android/webkit/WebView.html#setWebContentsDebuggingEnabled(boolean) "setWebContentsDebuggingEnabled - WebView |Android 開発者"  
 
