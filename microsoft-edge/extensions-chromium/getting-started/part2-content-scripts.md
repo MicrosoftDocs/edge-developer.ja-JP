@@ -217,7 +217,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 
 8. <span data-ttu-id="f4175-172">選択した場合に表示される画像を削除する機能を追加する</span><span class="sxs-lookup"><span data-stu-id="f4175-172">Add functionality to remove the displayed image when selected</span></span>  
 
-<span data-ttu-id="f4175-173">これで、任意のページを参照して [拡張機能] アイコンを選択すると、ポップアップ メニューが次のように表示されます。</span><span class="sxs-lookup"><span data-stu-id="f4175-173">Now, when you browse to any page and select your **Extension** icon, the pop-up menu is displayed as follows.</span></span>  
+<span data-ttu-id="f4175-173">これで、任意のページを参照して [拡張機能\*\*\*\*] アイコンを選択すると、ポップアップ メニューが次のように表示されます。</span><span class="sxs-lookup"><span data-stu-id="f4175-173">Now, when you browse to any page and select your **Extension** icon, the pop-up menu is displayed as follows.</span></span>  
 
 :::image type="complex" source="./media/part2-popupdialog.png" alt-text="popup.htmのアイコンを選択した後に l が表示される":::
    <span data-ttu-id="f4175-175">popup.htmのアイコンを選択した後に l が表示される</span><span class="sxs-lookup"><span data-stu-id="f4175-175">popup.html display after selecting the Extension icon</span></span>

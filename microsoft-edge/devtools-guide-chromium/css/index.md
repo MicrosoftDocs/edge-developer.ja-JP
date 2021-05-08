@@ -52,7 +52,7 @@ ms.locfileid: "11399093"
         :::image-end:::  
         
     1.  <span data-ttu-id="3b0e0-117">要素で `Inspect Me!` 、属性の値を見つけて `data-message` コピーします。</span><span class="sxs-lookup"><span data-stu-id="3b0e0-117">In the `Inspect Me!` element, find the value of the `data-message` attribute and copy it.</span></span>  
-1.  <span data-ttu-id="3b0e0-118">ページの [値:] テキスト `data-message`  ボックスに値を入力します。</span><span class="sxs-lookup"><span data-stu-id="3b0e0-118">On the page, in the **Value of `data-message`:** textbox, enter the value.</span></span>  
+1.  <span data-ttu-id="3b0e0-118">ページの [値:] \*\*テキスト `data-message` \*\* ボックスに値を入力します。</span><span class="sxs-lookup"><span data-stu-id="3b0e0-118">On the page, in the **Value of `data-message`:** textbox, enter the value.</span></span>  
 1.  <span data-ttu-id="3b0e0-119">テキストにカーソルを `Inspect Me!` 合わせると、コンテキスト メニュー \(右クリック\) を開き、[検査] を **選択します**。</span><span class="sxs-lookup"><span data-stu-id="3b0e0-119">Hover on the `Inspect Me!` text, open the contextual menu \(right-click\), and choose **Inspect**.</span></span>  
     1.  <span data-ttu-id="3b0e0-120">DevTools の [要素] **ツールで** 、[スタイル] パネル **を選択** します。</span><span class="sxs-lookup"><span data-stu-id="3b0e0-120">In DevTools, on the **Elements** tool, select the **Styles** panel.</span></span>  
     1.  <span data-ttu-id="3b0e0-121">[スタイル **] パネル** で、 `Inspect Me!` 要素が強調表示されます。</span><span class="sxs-lookup"><span data-stu-id="3b0e0-121">In the **Styles** panel, the `Inspect Me!` element is highlighted.</span></span>  
@@ -67,7 +67,7 @@ ms.locfileid: "11399093"
            <span data-ttu-id="3b0e0-126">CSS クラスは、[スタイル] パネルに表示されるなど、選択 `aloha` した要素に **適用** されます。</span><span class="sxs-lookup"><span data-stu-id="3b0e0-126">CSS classes is applied to the selected element, such as `aloha`, are displayed in the **Styles** panel</span></span>  
         :::image-end:::  
         
-1.  <span data-ttu-id="3b0e0-127">ページの [値:] テキスト `padding`  ボックスに値を入力します。</span><span class="sxs-lookup"><span data-stu-id="3b0e0-127">On the page, in the **Value of `padding`:** textbox, enter the value.</span></span>  
+1.  <span data-ttu-id="3b0e0-127">ページの [値:] \*\*テキスト `padding` \*\* ボックスに値を入力します。</span><span class="sxs-lookup"><span data-stu-id="3b0e0-127">On the page, in the **Value of `padding`:** textbox, enter the value.</span></span>  
 
 ## <a name="add-a-css-declaration-to-an-element"></a><span data-ttu-id="3b0e0-128">要素に CSS 宣言を追加する</span><span class="sxs-lookup"><span data-stu-id="3b0e0-128">Add a CSS declaration to an element</span></span>  
 
@@ -112,7 +112,7 @@ ms.locfileid: "11399093"
 1.  <span data-ttu-id="3b0e0-155">[CSS の例を開きます](#open-css-examples)。</span><span class="sxs-lookup"><span data-stu-id="3b0e0-155">[Open CSS Examples](#open-css-examples).</span></span>  
 1.  <span data-ttu-id="3b0e0-156">テキストにカーソルを `Hover Over Me!` 合わせる。</span><span class="sxs-lookup"><span data-stu-id="3b0e0-156">Hover on the `Hover Over Me!` text.</span></span>  <span data-ttu-id="3b0e0-157">背景色が変更されます。</span><span class="sxs-lookup"><span data-stu-id="3b0e0-157">The background color changes.</span></span>  
 1.  <span data-ttu-id="3b0e0-158">テキストにカーソルを `Hover Over Me!` 合わせると、コンテキスト メニュー \(右クリック\) を開き、[検査] を **選択します**。</span><span class="sxs-lookup"><span data-stu-id="3b0e0-158">Hover on the `Hover Over Me!` text, open the contextual menu \(right-click\), and choose **Inspect**.</span></span>  
-1.  <span data-ttu-id="3b0e0-159">[スタイル]**パネルで、[:hov] を選択します**。</span><span class="sxs-lookup"><span data-stu-id="3b0e0-159">In the **Styles** panel, choose **:hov**.</span></span>  
+1.  <span data-ttu-id="3b0e0-159">[スタイル]**パネルで\*\*\*\*、[:hov] を選択します**。</span><span class="sxs-lookup"><span data-stu-id="3b0e0-159">In the **Styles** panel, choose **:hov**.</span></span>  
 1.  <span data-ttu-id="3b0e0-160">**[:hover] チェック ボックスを**オンにします。</span><span class="sxs-lookup"><span data-stu-id="3b0e0-160">Check the **:hover** checkbox.</span></span>  <span data-ttu-id="3b0e0-161">要素の上に実際にカーソルを置かなくても、背景色は以前と同様に変化します。</span><span class="sxs-lookup"><span data-stu-id="3b0e0-161">The background color changes like before, even though you are not actually hovering over the element.</span></span>  
     
     :::image type="complex" source="../media/css-elements-hover-over-me-styles-hov-hover.msft.png" alt-text="要素のホバー擬似状態を切り替える" lightbox="../media/css-elements-hover-over-me-styles-hov-hover.msft.png":::
@@ -121,7 +121,7 @@ ms.locfileid: "11399093"
     
 ## <a name="change-the-dimensions-of-an-element"></a><span data-ttu-id="3b0e0-164">要素の寸法を変更する</span><span class="sxs-lookup"><span data-stu-id="3b0e0-164">Change the dimensions of an element</span></span>  
 
-<span data-ttu-id="3b0e0-165">要素の**幅、高**さ、余白、余白、または罫線の長さを変更するには、[スタイル] パネルの [ボックス モデル] 対話型図を使用します。</span><span class="sxs-lookup"><span data-stu-id="3b0e0-165">Use the **Box Model** interactive diagram in the **Styles** panel to change the width, height, padding, margin, or border length of an element.</span></span>  
+<span data-ttu-id="3b0e0-165">要素の**幅、高**さ、余白\*\*\*\*、余白、または罫線の長さを変更するには、[スタイル] パネルの [ボックス モデル] 対話型図を使用します。</span><span class="sxs-lookup"><span data-stu-id="3b0e0-165">Use the **Box Model** interactive diagram in the **Styles** panel to change the width, height, padding, margin, or border length of an element.</span></span>  
 
 > [!NOTE]
 > <span data-ttu-id="3b0e0-166">この手順を [実行する前に、「要素の CSS を表示する](#view-the-css-for-an-element) 」チュートリアルを完了します。</span><span class="sxs-lookup"><span data-stu-id="3b0e0-166">Complete the [View the CSS for an element](#view-the-css-for-an-element) tutorial before doing this one.</span></span>  
@@ -131,7 +131,7 @@ ms.locfileid: "11399093"
 1.  <span data-ttu-id="3b0e0-169">[スタイル **] パネルのボックス** モデル図 **で** 、パディングをポイント **します**。</span><span class="sxs-lookup"><span data-stu-id="3b0e0-169">In the **Box Model** diagram in the **Styles** panel, hover on **padding**.</span></span>  <span data-ttu-id="3b0e0-170">要素のパディングがビューポートで強調表示されます。</span><span class="sxs-lookup"><span data-stu-id="3b0e0-170">The padding of an element is highlighted in the viewport.</span></span>  
 
     > [!NOTE]
-    > <span data-ttu-id="3b0e0-171">DevTools ウィンドウのサイズによっては、[スタイル] パネルの下部までスクロールしてボックス モデルを表示する必要があります。</span><span class="sxs-lookup"><span data-stu-id="3b0e0-171">Depending on the size of your DevTools window, you may need to scroll to the bottom of the **Styles** panel to display the **Box Model**.</span></span>  
+    > <span data-ttu-id="3b0e0-171">DevTools ウィンドウのサイズによっては、[スタイル] パネルの下部までスクロールしてボックス モデルを\*\*\*\*\*\*表示する必要があります\*\*。</span><span class="sxs-lookup"><span data-stu-id="3b0e0-171">Depending on the size of your DevTools window, you may need to scroll to the bottom of the **Styles** panel to display the **Box Model**.</span></span>  
 
 1.  <span data-ttu-id="3b0e0-172">現在、要素に左余白がないという意味の値を持つ Box **Model**の左余白を `-` ダブルクリックします。</span><span class="sxs-lookup"><span data-stu-id="3b0e0-172">Double-click the left margin in the **Box Model**, which currently has a value of `-` meaning that the element does not have a left-margin.</span></span>  
 1.  <span data-ttu-id="3b0e0-173">`100px` を入力して、`Enter` を選択します。</span><span class="sxs-lookup"><span data-stu-id="3b0e0-173">Type `100px` and select `Enter`.</span></span>  <span data-ttu-id="3b0e0-174">Box **Model の** 既定値はピクセルですが、その他の値 (例: 、 、 `25%` など) も受け入れ可能です `10vw` 。</span><span class="sxs-lookup"><span data-stu-id="3b0e0-174">The **Box Model** defaults to pixels, but it also accepts other values, such as `25%`, or `10vw`.</span></span>  

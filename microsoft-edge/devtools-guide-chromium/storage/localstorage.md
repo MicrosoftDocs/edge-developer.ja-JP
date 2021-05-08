@@ -70,7 +70,7 @@ ms.locfileid: "11439676"
 ## <a name="edit-localstorage-keys-or-values"></a><span data-ttu-id="8dd51-126">localStorage キーまたは値の編集</span><span class="sxs-lookup"><span data-stu-id="8dd51-126">Edit localStorage keys or values</span></span>  
 
 1.  <span data-ttu-id="8dd51-127">[ドメインの localStorage キーと値のペアを表示します](#view-localstorage-keys-and-values)。</span><span class="sxs-lookup"><span data-stu-id="8dd51-127">[View the localStorage key-value pairs of a domain](#view-localstorage-keys-and-values).</span></span>  
-1.  <span data-ttu-id="8dd51-128">[キー] 列または [値] 列の**セルをダブルクリック**して、そのキーまたは値を編集します。</span><span class="sxs-lookup"><span data-stu-id="8dd51-128">Double-click a cell in the **Key** or **Value** column to edit that key or value.</span></span>  
+1.  <span data-ttu-id="8dd51-128">[キー] 列または [値] 列の**セル\*\*\*\*をダブルクリック**して、そのキーまたは値を編集します。</span><span class="sxs-lookup"><span data-stu-id="8dd51-128">Double-click a cell in the **Key** or **Value** column to edit that key or value.</span></span>  
     
     :::image type="complex" source="../media/storage-application-local-storage-edit-key-value.msft.png" alt-text="localStorage キーの編集" lightbox="../media/storage-application-local-storage-edit-key-value.msft.png":::
        <span data-ttu-id="8dd51-130">キーの `localStorage` 編集</span><span class="sxs-lookup"><span data-stu-id="8dd51-130">Edit a `localStorage` key</span></span>  
@@ -89,9 +89,9 @@ ms.locfileid: "11439676"
     
 ## <a name="interact-with-localstorage-from-the-console"></a><span data-ttu-id="8dd51-139">コンソールから localStorage を操作する</span><span class="sxs-lookup"><span data-stu-id="8dd51-139">Interact with localStorage from the Console</span></span>  
 
-<span data-ttu-id="8dd51-140">コンソールで JavaScript を実行できます。 また、コンソールはページ の JavaScript コンテキストにアクセスできますので、コンソールから操作 `localStorage` **できます**。</span><span class="sxs-lookup"><span data-stu-id="8dd51-140">Since you are able to run JavaScript in the **Console**, and since the **Console** has access to the JavaScript contexts of the page, it is possible to interact with `localStorage` from the **Console**.</span></span>  
+<span data-ttu-id="8dd51-140">コンソールで JavaScript を実行できます。\*\*\*\* また、コンソールはページ\*\*\*\* の JavaScript コンテキストにアクセスできますので、コンソールから操作 `localStorage` **できます**。</span><span class="sxs-lookup"><span data-stu-id="8dd51-140">Since you are able to run JavaScript in the **Console**, and since the **Console** has access to the JavaScript contexts of the page, it is possible to interact with `localStorage` from the **Console**.</span></span>  
 
-1.  <span data-ttu-id="8dd51-141">表示される**ページ以外の**ドメインのキーと値のペアにアクセスする 場合は、JavaScript コンテキスト メニューを使用してコンソールの JavaScript コンテキストを `localStorage` 変更します。</span><span class="sxs-lookup"><span data-stu-id="8dd51-141">Use the **JavaScript contexts** menu to change the JavaScript context of the **Console** if you want to access the `localStorage` key-value pairs of a domain other than the page that is displayed.</span></span>  
+1.  <span data-ttu-id="8dd51-141">表示される**ページ以外の**ドメインのキーと値のペアにアクセスする\*\*\*\* 場合は、JavaScript コンテキスト メニューを使用してコンソールの JavaScript コンテキストを `localStorage` 変更します。</span><span class="sxs-lookup"><span data-stu-id="8dd51-141">Use the **JavaScript contexts** menu to change the JavaScript context of the **Console** if you want to access the `localStorage` key-value pairs of a domain other than the page that is displayed.</span></span>  
     
     :::image type="complex" source="../media/storage-console-local-storage.msft.png" alt-text="コンソールの JavaScript コンテキストを変更する" lightbox="../media/storage-console-local-storage.msft.png":::
        <span data-ttu-id="8dd51-143">コンソールの JavaScript コンテキストを変更する</span><span class="sxs-lookup"><span data-stu-id="8dd51-143">Change the JavaScript context of the Console</span></span>  
