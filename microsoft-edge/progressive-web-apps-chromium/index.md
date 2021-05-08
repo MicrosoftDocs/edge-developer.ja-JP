@@ -3,17 +3,17 @@ description: プログレッシブ Web アプリ (Chromium) は、アプリで�
 title: プログレッシブ Web Apps on Windows
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 04/06/2021
+ms.date: 05/06/2021
 ms.topic: article
 ms.prod: microsoft-edge
 ms.technology: pwa
 keywords: プログレッシブ Web アプリ、PWA、Edge、JavaScript、Windows、UWP、Microsoft Store
-ms.openlocfilehash: be832ee5c0ad395dae7b4946c41da157ab5cd9ba
-ms.sourcegitcommit: 146072bf606b84e5145a48333abf9c6b892a12d8
+ms.openlocfilehash: f1f5370af0710927f66c8231274fe307cb3ee2a4
+ms.sourcegitcommit: 7f7922dbb6af87ecac1378d18359125770c5b8e5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/07/2021
-ms.locfileid: "11480189"
+ms.lasthandoff: 05/07/2021
+ms.locfileid: "11536810"
 ---
 # <a name="progressive-web-apps-on-windows-overview"></a>プログレッシブ Web Apps on Windows概要  
 
@@ -21,54 +21,103 @@ ms.locfileid: "11480189"
 
 :::row:::
     :::column:::
-        :::image type="icon" source="./media/i_search-small.png":::
-        ### <a name="discoverablemdnpwaadvantagesdiscoverable"></a>[検出可能][MDNPwaAdvantagesDiscoverable]
-        Web 検索結果とサポート アプリ ストアから
+        :::image type="icon" source="./media/i_search-small.png":::  
     :::column-end:::
     :::column:::
-        :::image type="icon" source="./media/i_package-small.png":::
-        ### <a name="installablemdnpwaadvantagesinstallable"></a>[Installable][MDNPwaAdvantagesInstallable]
-        ホーム画面、スタート メニュー、タスク バーなどからピン留めして起動する
+        :::image type="icon" source="./media/i_package-small.png":::  
     :::column-end:::
     :::column:::
-        :::image type="icon" source="./media/i_push-notification-small.png":::
-        ### <a name="re-engageablemdnpwaadvantagesreengageable"></a>[再エンゲージ可能][MDNPwaAdvantagesReEngageable]
-        アプリがアクティブではない場合でも、プッシュ通知を送信する
+        :::image type="icon" source="./media/i_push-notification-small.png":::  
     :::column-end:::
 :::row-end:::  
 :::row:::
     :::column:::
-        :::image type="icon" source="./media/i_offline-small.png":::
-        ### <a name="network-independentmdnpwaadvantagesnetworkindependent"></a>[ネットワークに依存しない][MDNPwaAdvantagesNetworkIndependent]
-        オフラインおよびネットワークの低い状態で動作する
+        ### <a name="discoverablemdnpwaadvantagesdiscoverable"></a>[検出可能][MDNPwaAdvantagesDiscoverable]  
     :::column-end:::
     :::column:::
-        :::image type="icon" source="./media/i_progressive-small.png":::
-        ### <a name="progressivemdnpwaadvantagesprogressive"></a>[プログレッシブ][MDNPwaAdvantagesProgressive]
-        デバイス機能を使用してエクスペリエンスをスケールアップ (または縮小) する
+        ### <a name="installablemdnpwaadvantagesinstallable"></a>[Installable][MDNPwaAdvantagesInstallable]  
     :::column-end:::
     :::column:::
-        :::image type="icon" source="./media/i_security-small.png":::
-        ### <a name="safemdnpwaadvantagessafe"></a>[セーフ][MDNPwaAdvantagesSafe]
-        セキュリティで保護された HTTPS エンドポイントと他のユーザーセーフガードを提供する
+        ### <a name="re-engageablemdnpwaadvantagesreengageable"></a>[再エンゲージ可能][MDNPwaAdvantagesReEngageable]  
     :::column-end:::
 :::row-end:::  
 :::row:::
     :::column:::
-        :::image type="icon" source="./media/i_responsive-small.png":::
-        ### <a name="responsivemdnpwaadvantagesresponsive"></a>[応答中][MDNPwaAdvantagesResponsive]
-        ユーザーの画面サイズまたは向きと入力方法に合わせて調整します。
+        Web 検索結果とサポート アプリ ストアから  
     :::column-end:::
     :::column:::
-        :::image type="icon" source="./media/i_link-small.png":::
-        ### <a name="linkablemdnpwaadvantageslinkable"></a>[Linkable][MDNPwaAdvantagesLinkable]
-        標準ハイパーリンクからの共有と起動
+        ホーム画面、スタート メニュー、タスク バーなどからピン留めして起動する  
+    :::column-end:::
+    :::column:::
+        アプリがアクティブではない場合でも、プッシュ通知を送信する  
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        :::image type="icon" source="./media/i_offline-small.png":::  
+    :::column-end:::
+    :::column:::
+        :::image type="icon" source="./media/i_progressive-small.png":::  
+    :::column-end:::
+    :::column:::
+        :::image type="icon" source="./media/i_security-small.png":::  
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        ### <a name="network-independentmdnpwaadvantagesnetworkindependent"></a>[ネットワークに依存しない][MDNPwaAdvantagesNetworkIndependent]  
+    :::column-end:::
+    :::column:::
+        ### <a name="progressivemdnpwaadvantagesprogressive"></a>[プログレッシブ][MDNPwaAdvantagesProgressive]  
+    :::column-end:::
+    :::column:::
+        ### <a name="safemdnpwaadvantagessafe"></a>[セーフ][MDNPwaAdvantagesSafe]  
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        オフラインおよびネットワークの低い状態で動作する  
+    :::column-end:::
+    :::column:::
+        デバイス機能を使用してエクスペリエンスをスケールアップ (または縮小) する  
+    :::column-end:::
+    :::column:::
+        セキュリティで保護された HTTPS エンドポイントと他のユーザーセーフガードを提供する  
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        :::image type="icon" source="./media/i_responsive-small.png":::  
+    :::column-end:::
+    :::column:::
+        :::image type="icon" source="./media/i_link-small.png":::  
     :::column-end:::
     :::column:::
         &nbsp;  
     :::column-end:::
 :::row-end:::  
-
+:::row:::
+    :::column:::
+        ### <a name="responsivemdnpwaadvantagesresponsive"></a>[応答中][MDNPwaAdvantagesResponsive]  
+    :::column-end:::
+    :::column:::
+        ### <a name="linkablemdnpwaadvantageslinkable"></a>[Linkable][MDNPwaAdvantagesLinkable]  
+    :::column-end:::
+    :::column:::
+        &nbsp;  
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        ユーザーの画面サイズまたは向きと入力方法に合わせて調整します。  
+    :::column-end:::
+    :::column:::
+        標準ハイパーリンクからの共有と起動  
+    :::column-end:::
+    :::column:::
+        &nbsp;  
+    :::column-end:::
+:::row-end:::  
 
 既存の Web サイトを既存の web サイトに構築し、PWAを強化します。  機能拡張には、プッシュ通知、アプリのような統合、オフラインサポートが含まれます。  引き続き、ユーザーが検索とリンク共有を通じてPWAを検出するために、オープン Web 上で対象ユーザーを構築します。  何より、アプリは Web サーバー コードを使用して更新されます。  
 
@@ -153,7 +202,7 @@ Web 標準 API を対象とするプログレッシブ Web アプリを構築す
       *   CSS [グリッドと][MDNCssGridLayout] [flexbox][MDNCssFlexibleBoxLayout]  
       *   [メディア クエリ][MDNMediaQueries]  
       *   [レスポンシブ イメージ][MDNResponsiveImages]  
-      
+          
       ブラウザー[のデバイス エミュレーション][DevToolsGuideDeviceModeTestingOtherBrowsers]ツールを使用してローカルでテストするか、Windows または[Android][DevtoolsRemoteDebuggingIndex]でリモート デバッグ セッション[を][DevtoolsRemoteDebuggingWindows]作成して、ターゲット デバイスで直接テストします。
    :::column-end:::
 :::row-end:::  
@@ -204,8 +253,6 @@ Web 標準 API を対象とするプログレッシブ Web アプリを構築す
 [DevToolsGuideDeviceModeTestingOtherBrowsers]: ../devtools-guide-chromium/device-mode/testing-other-browsers.md "他のブラウザーをエミュレートしてテスト|Microsoft Docs"  
 [DevtoolsProgressiveWebApps]: ../devtools-guide-chromium/progressive-web-apps/index.md "プログレッシブ Web アプリのデバッグ |Microsoft Docs"  
 [PwaChromiumMicrosoftStore]: ./microsoft-store.md "プログレッシブ Web アプリをアプリに発行Microsoft Store |Microsoft Docs"
-
-
 
 [WindowsUWPControlsPatternTilesNotificationsWns]: /windows/uwp/controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview.md "Windowsプッシュ Notification Services (WNS) の概要|Microsoft Docs"  
 [WindowsUWPDesignDevicesDesigningTv]: /windows/uwp/design/devices/designing-for-tv.md "Xbox とテレビのデザイン|Microsoft Docs"  
