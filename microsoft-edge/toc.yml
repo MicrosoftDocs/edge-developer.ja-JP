@@ -379,7 +379,7 @@
       items:
         - name: WebView2 の概要
           href: webview2/index.md
-        - name: 開始するには
+        - name: 作業の開始
           items:
             - name: Win32
               href: webview2/get-started/win32.md
