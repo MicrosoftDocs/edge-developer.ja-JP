@@ -365,6 +365,8 @@
           href: web-platform/tracking-prevention.md
         - name: Microsoft Edge ユーザー エージェント文字列
           href: web-platform/user-agent-string.md
+        - name: '[パスワードの表示] ボタンをカスタマイズする'
+          href: web-platform/password-reveal.md
     - name: Web We Want の概要
       href: web-we-want/index.md
     - name: WebDriver
