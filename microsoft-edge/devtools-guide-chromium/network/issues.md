@@ -1,18 +1,18 @@
 ---
-description: Microsoft Edge DevTools の [ネットワーク] パネルでネットワークの問題を検出する方法について説明します。
+description: DevTools の [ネットワーク] パネルでネットワークの問題を検出するMicrosoft Edge説明します。
 title: ネットワーク問題ガイド
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 03/08/2021
+ms.date: 05/04/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 9b92ca7b759fab80d7d829b31f605ccb8062a816
-ms.sourcegitcommit: 4b9fb5c1176fdaa5e3c60af2b84e38d5bb86cd81
+ms.openlocfilehash: c99f43872abe04800880c63ee4126bfcdd633edb
+ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "11439620"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "11564981"
 ---
 <!-- Copyright Kayce Basques and Jonathan Garbee
 
@@ -27,12 +27,11 @@ ms.locfileid: "11439620"
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.  -->
-
 # <a name="network-issues-guide"></a>ネットワーク問題ガイド  
 
-このガイドでは、Microsoft Edge DevTools の [ネットワーク] パネルでネットワークの問題や最適化の機会を検出する方法について説明します。  
+このガイドでは、DevTools の [ネットワーク] パネルでネットワークの問題や最適化の機会Microsoft Edge示します。  
 
-ネットワーク ツールの基本を確認 **するには、[スタート** ] に [移動します][NetworkPerformance]。  
+ネットワーク ツールの基本**を確認するには**、[ネットワーク] ツールに移動[はじめに。][NetworkPerformance]  
 
 ## <a name="queued-or-stalled-requests"></a>キューに入れまたは停止している要求  
 
@@ -48,7 +47,7 @@ ms.locfileid: "11439620"
 
 **原因**  
 
-1 つのドメインで要求が多すぎます。  HTTP/1.0 または HTTP/1.1 接続では、Microsoft Edge はホストごとに最大 6 つの同時 TCP 接続を許可します。  
+1 つのドメインで要求が多すぎます。  HTTP/1.0 または HTTP/1.1 接続では、Microsoft Edgeホストごとに最大 6 つの同時 TCP 接続を許可します。  
 
 **修正プログラム**  
 
@@ -75,7 +74,7 @@ ms.locfileid: "11439620"
     
 **修正プログラム**  
 
-*   接続が遅い場合は、CDN でのコンテンツのホストやホスティング プロバイダーの変更を検討してください。  
+*   接続が遅い場合は、コンテンツをホストする方法やホスティング プロバイダー CDN変更する方法を検討してください。  
 *   サーバーの速度が遅い場合は、データベース クエリの最適化、キャッシュの実装、またはサーバー構成の変更を検討してください。  
     
 ## <a name="slow-content-download"></a>コンテンツのダウンロードが遅い  
@@ -97,7 +96,7 @@ ms.locfileid: "11439620"
     
 **修正プログラム**  
 
-*   CDN でのコンテンツのホストやホスティング プロバイダーの変更を検討してください。  
+*   コンテンツをホストする場合は、CDNホスティング プロバイダーを変更する方法を検討してください。  
 *   要求を最適化して送信するバイト数を少なくします。  
     
 <!--   ## Contribute knowledge  
@@ -114,7 +113,7 @@ Do you have a network issue that should be added to this guide?
 
 <!-- links -->  
 
-[NetworkPerformance]: ./index.md "Microsoft Edge DevTools サーバーでネットワーク アクティビティを|Microsoft Docs"  
+[NetworkPerformance]: ./index.md "DevTools サーバーでネットワークMicrosoft Edgeを調|Microsoft Docs"  
 
 [MicrosoftEdgeTweet]: https://twitter.com/intent/tweet?text=@EdgeDevTools%20[Network%20Issues%20Guide%20Suggestion]  
 
@@ -130,5 +129,5 @@ Do you have a network issue that should be added to this guide?
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
 [GoogleSitePolicies]: https://developers.google.com/terms/site-policies  
-[KayceBasques]: https://developers.google.com/web/resources/contributors/kaycebasques  
-[JonathanGarbee]: https://developers.google.com/web/resources/contributors/jonathangarbee
+[KayceBasques]: https://developers.google.com/web/resources/contributors#kayce-basques  
+[JonathanGarbee]: https://developers.google.com/web/resources/contributors#jonathan-garbee

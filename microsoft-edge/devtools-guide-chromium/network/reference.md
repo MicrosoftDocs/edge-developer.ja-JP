@@ -1,18 +1,18 @@
 ---
-description: Microsoft Edge DevTools ネットワーク パネル機能の包括的な参照。
+description: DevTools ネットワーク パネルMicrosoft Edgeの包括的な参照。
 title: ネットワーク分析リファレンス
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 03/08/2021
+ms.date: 05/04/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 94a7031763da1e540b4dab802358e5f200e0db4a
-ms.sourcegitcommit: 4b9fb5c1176fdaa5e3c60af2b84e38d5bb86cd81
+ms.openlocfilehash: bdb1145e7ee8ed7865b68f9fd632c4b1a30007e9
+ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "11439704"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "11564834"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -27,10 +27,9 @@ ms.locfileid: "11439704"
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.  -->  
-
 # <a name="network-analysis-reference"></a>ネットワーク分析リファレンス  
 
-Microsoft Edge DevTools ネットワーク分析機能の包括的なリファレンスで、ページの読み込み方法を分析する新しい方法について説明します。  
+DevTools ネットワーク分析機能に関するこの包括的な参照で、ページの読み込みMicrosoft Edge新しい方法について説明します。  
 
 ## <a name="record-network-requests"></a>ネットワーク要求を記録する  
 
@@ -45,7 +44,7 @@ Microsoft Edge DevTools ネットワーク分析機能の包括的なリファ�
 要求の記録を停止するには、次の手順を実行します。  
 
 1.  ネットワーク ツール **で、[** ネットワーク ログの記録 **を停止する** ] \( [ネットワーク ログの記録 ![ を停止する ](../media/record-on-icon.msft.png) ] \) を選択します。  DevTools が要求を記録しなくなった場合は灰色になります。  
-1.  ネットワーク `Control` + `E` ツールのフォーカス中に `Command` + `E` [\(Windows,Linux\)**** または \(macOS\) を選択します。  
+1.  `Control` + `E` ネットワーク ツールのフォーカスWindows\(Windows、Linux\) または `Command` + `E` **** \(macOS\) を選択します。  
 
 ### <a name="clear-requests"></a>要求をクリアする  
 
@@ -903,8 +902,8 @@ HAR ファイルを保存したら、分析のために DevTools にインポー
         :::image-end:::  
    :::column-end:::
    :::column span="":::
-        :::image type="complex" source="../media/network-header-paste-property-value.msft.png" alt-text="Microsoft Visual Studio形式の応答 JSON を含むコード" lightbox="../media/network-header-paste-property-value.msft.png":::
-          Microsoft Visual Studio コードでの書式設定された応答 JSON の貼りVisual Studioする  
+        :::image type="complex" source="../media/network-header-paste-property-value.msft.png" alt-text="Microsoft Visual Studio書式設定された応答 JSON を持つコード" lightbox="../media/network-header-paste-property-value.msft.png":::
+          コードで書式設定された応答 JSON をMicrosoft Visual Studioする  
         :::image-end:::  
    :::column-end:::
 :::row-end:::  
@@ -981,4 +980,4 @@ HAR ファイルを保存したら、分析のために DevTools にインポー
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
 [GoogleSitePolicies]: https://developers.google.com/terms/site-policies  
-[KayceBasques]: https://developers.google.com/web/resources/contributors/kaycebasques  
+[KayceBasques]: https://developers.google.com/web/resources/contributors#kayce-basques  

@@ -3,16 +3,16 @@ description: はじめに DOM の使用
 title: '初級者向け DevTools: HTML と DOM の使用を開始する'
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/12/2021
+ms.date: 05/12/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge, Web 開発, f12 ツール, devtools
-ms.openlocfilehash: 6ca27b720a17928545712666e43495c4da2fb880
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: d2893021f5e19ffb714215b27edadba08c8d6f71
+ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11397931"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "11564568"
 ---
 <!-- Copyright Katherine Jackson 
 
@@ -27,7 +27,6 @@ ms.locfileid: "11397931"
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.  -->
-
 # <a name="devtools-for-beginners-get-started-with-html-and-the-dom"></a>初級者向け DevTools: HTML と DOM の使用を開始する  
 
 これは、Web 開発の基本を教える一連のチュートリアルの最初の例です。  生産性を向上させる可能性がある、DevTools という名前Microsoft Edge一連の Web 開発者ツールについて説明します。  
@@ -269,18 +268,24 @@ DOM ノードの順序を変更することもできます。  たとえば、We
     
     :::row:::
        :::column span="":::
+          &nbsp;  
+       :::column-end:::
+       :::column span="":::
+          これで `<nav>` 、ページの上部にノードが表示されます。  
+       :::column-end:::
+    :::row-end:::  
+    :::row:::
+       :::column span="":::
           :::image type="complex" source="../media/beginners-html-reorder2.msft.png" alt-text="ナビゲーション ノードを上にドラッグする" lightbox="../media/beginners-html-reorder2.msft.png":::
              ナビゲーション ノードを上にドラッグする  
           :::image-end:::  
        :::column-end:::
        :::column span="":::
-          これで `<nav>` 、ページの上部にノードが表示されます。  
-          
           :::image type="complex" source="../media/beginners-html-reorder3.msft.png" alt-text="ナビゲーション ノードがページの上部にある" lightbox="../media/beginners-html-reorder3.msft.png":::
              ナビゲーション ノードがページの上部にある  
           :::image-end:::  
        :::column-end:::
-   :::row-end:::  
+    :::row-end:::  
     
 ### <a name="delete-a-node"></a>ノードの削除  
 
@@ -373,7 +378,7 @@ DOM ツリーからノードを削除することもできます。
 
 > [!NOTE]
 > このページの一部の情報は、[Google によって作成および共有][GoogleSitePolicies]されている著作物に基づいており、[Creative Commons Attribution 4.0 International License][CCA4IL] に記載されている条項に従って使用されています。  
-> 元のページ [はここで見](https://developers.google.com/web/tools/chrome-devtools/beginners/html) つかり、キャ [サ][KatherineJackson] リン・ジャクソン \(Technical Writer Intern, Chrome DevTools\) によって作成されています。  
+> 元のページはここで [見](https://developers.google.com/web/tools/chrome-devtools/beginners/html) つかり、キャ [サ][KatherineJackson] リン・ジャクソン \(Technical Writer Intern, Chrome DevTools\) によって作成されました。  
 
 [![Creative Commons ライセンス][CCby4Image]][CCA4IL]  
 この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。  
@@ -381,5 +386,5 @@ DOM ツリーからノードを削除することもできます。
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
 [GoogleSitePolicies]: https://developers.google.com/terms/site-policies  
-[KayceBasques]: https://developers.google.com/web/resources/contributors/kaycebasques  
-[KatherineJackson]: https://developers.google.com/web/resources/contributors/katjackson  
+[KayceBasques]: https://developers.google.com/web/resources/contributors#kayce-basques  
+[KatherineJackson]: https://developers.google.com/web/resources/contributors  

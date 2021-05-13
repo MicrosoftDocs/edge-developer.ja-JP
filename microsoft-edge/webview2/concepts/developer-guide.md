@@ -3,22 +3,21 @@ description: WebView2 アプリケーションを開発するときに使用す�
 title: WebView2 開発のベスト プラクティス
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 05/06/2021
+ms.date: 05/11/2021
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: WebView2、Webview2、WebView、Webview、エッジ、ベスト プラクティス
-ms.openlocfilehash: 3982f47e0fe58287582915673d4ba0de0365a55d
-ms.sourcegitcommit: 777b16ef10363f2dfd755f115ee2d4c81a8de46f
+ms.openlocfilehash: 5a11f01ec07aea12599c8bdb8428d451ad7bd013
+ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2021
-ms.locfileid: "11535658"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "11564750"
 ---
 # <a name="webview2-development-best-practices"></a>WebView2 開発のベスト プラクティス  
 
 すべての開発チームは、アプリケーションを構築する際にさまざまなプラクティスに従います。 WebView2 アプリケーションをビルドする場合は、以下の方法をお勧めします。 この記事では、運用ベースの WebView2 アプリケーションを構築する際の推奨事項とベスト プラクティスについて説明します。
-
 
 ## <a name="use-evergreen-webview2-runtime-recommended"></a>Evergreen WebView2 ランタイムの使用 (推奨)  
 
@@ -36,9 +35,10 @@ WebView2 アプリケーションの実行には、Webview2 SDK と、コンピ�
 
 Evergreen WebView2 ランタイムを使用する場合、ランタイムが最新バージョンを使用するために更新されない場合があります。 たとえば、ユーザーがインターネットにアクセスできない場合、ランタイムは、その環境では自動的に更新されません。 さらに、一部のグループ ポリシーを使用すると、WebView2 の更新が一時停止されます。 WebView2 アプリケーションに更新プログラムをプッシュすると、インストールされているランタイムで使用できない新しい API が使用され、アプリケーションが壊れる可能性があります。   
  
-この状況を解決するには、コードが API を呼び出す前に、インストールされているランタイムで API の可用性をテストできます。 この新しい機能のテストは、新しい Web API を使用する前にサポートされている機能を検出する他の Web 開発のベスト プラクティスと似ています。 インストールされているランタイムで API の可用性をテストするには、次の値を使用します。
-* `queryinterface`C/C++ の場合。 
-* .NET または WinUI の try/catch ブロック。 
+この状況を解決するには、コードが API を呼び出す前に、インストールされているランタイムで API の可用性をテストできます。 この新しい機能のテストは、新しい Web API を使用する前にサポートされている機能を検出する他の Web 開発のベスト プラクティスと似ています。 インストールされているランタイムで API の可用性をテストするには、次の値を使用します。  
+
+*   `queryinterface`C/C++ の場合。 
+*   .NET または WinUI の try/catch ブロック。 
     
 詳細については [、「Determine WebView2 ランタイム要件」に移動します][Webview2ConceptsVersioningDetermineWebview2RuntimeRequirement]。  
 
@@ -58,7 +58,6 @@ WebView2 アプリは、Cookie、資格情報、アクセス許可などのデ�
 ## <a name="follow-recommended-webview2-security-best-practices"></a>推奨される WebView2 セキュリティのベスト プラクティスに従う 
 WebView2 アプリケーションの場合は、推奨される WebView2 セキュリティのベスト プラクティスに従ってください。  詳細については、「セキュリティで保護された [WebView2 アプリケーションを開発するためのベスト プラクティス」に移動します][Webview2ConceptsSecurity]。  
 
-
 <!-- links -->  
 
 [Webview2ConceptsDistributionDeployingEvergreenWebview2Runtime]: ../concepts/distribution.md#deploying-the-evergreen-webview2-runtime "Evergreen WebView2 ランタイムの展開 - WebView2 ランタイムを使用したアプリ|Microsoft Docs"  
@@ -71,5 +70,7 @@ WebView2 アプリケーションの場合は、推奨される WebView2 セキ�
 [Webview2GetStartedWinforms]: ../get-started/winforms.md "WebView2 の使用を開始するには、Windowsフォーム|Microsoft Docs"  
 [Webview2GetStartedWinui]: ../get-started/winui.md "WinUI 3 (プレビュー) の WebView2 の使用を開始|Microsoft Docs"  
 [Webview2GetStartedWpf]: ../get-started/wpf.md "WPF サーバーでの WebView2 の|Microsoft Docs"  
-[Webview2ReferenceaddNewBrowserVersionAvailable]: https://docs.microsoft.com/microsoft-edge/webview2/reference/win32/icorewebview2environment#add_newbrowserversionavailable "add_NewBrowserVersionAvailable |Microsoft Docs"  
-[Webview2ReferenceNewBrowserVersionAvailable]: https://docs.microsoft.com/dotnet/api/microsoft.web.webview2.core.corewebview2environment.newbrowserversionavailable "CoreWebView2Environment.NewBrowserVersionAvailable イベント |Microsoft Docs"  
+
+[Webview2ReferenceaddNewBrowserVersionAvailable]: /microsoft-edge/webview2/reference/win32/icorewebview2environment#add_newbrowserversionavailable "add_NewBrowserVersionAvailable |Microsoft Docs"  
+
+[Webview2ReferenceNewBrowserVersionAvailable]: /dotnet/api/microsoft.web.webview2.core.corewebview2environment.newbrowserversionavailable "CoreWebView2Environment.NewBrowserVersionAvailable イベント |Microsoft Docs"  

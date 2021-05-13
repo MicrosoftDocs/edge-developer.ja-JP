@@ -1,18 +1,18 @@
 ---
-description: Microsoft Edge DevTools を使用してページの HTTP Cookie を表示、編集、および削除する方法について説明します。
-title: Microsoft Edge DevTools で Cookie を表示、編集、および削除する
+description: DevTools を使用してページの HTTP Cookie を表示、編集、およびMicrosoft Edgeします。
+title: DevTools を使用して Cookie を表示、編集Microsoft Edge削除する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 03/08/2021
+ms.date: 05/04/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: c208ca628fe91ed5922bc36566be2b9bdd20ec0b
-ms.sourcegitcommit: 4b9fb5c1176fdaa5e3c60af2b84e38d5bb86cd81
+ms.openlocfilehash: 4f5a352445bd13b82ada82df3a528a1e80aa144e
+ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "11439683"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "11565058"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -27,10 +27,9 @@ ms.locfileid: "11439683"
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.  -->
+# <a name="view-edit-and-delete-cookies-with-microsoft-edge-devtools"></a>DevTools を使用して Cookie を表示、編集Microsoft Edge削除する  
 
-# <a name="view-edit-and-delete-cookies-with-microsoft-edge-devtools"></a>Microsoft Edge DevTools で Cookie を表示、編集、および削除する  
-
-[HTTP Cookie は][MDNHTTPCookies] 、主にユーザー セッションの管理、ユーザーの個人用設定の保存、ユーザーの動作の追跡に使用されます。  Cookie は、このページが Web 全体で見つかった **Cookie** 同意フォームを使用しているすべての迷惑な原因です。  次のガイドでは [、Microsoft Edge DevTools][MicrosoftEdgeDevTools]を使用して Web ページの HTTP Cookie を表示、編集、および削除する方法について説明します。  
+[HTTP Cookie は][MDNHTTPCookies] 、主にユーザー セッションの管理、ユーザーの個人用設定の保存、ユーザーの動作の追跡に使用されます。  Cookie は、このページが Web 全体で見つかった **Cookie** 同意フォームを使用しているすべての迷惑な原因です。  次のガイドでは、DevTools を使用して Web ページの HTTP cookie を表示、編集[、およびMicrosoft Edgeします][MicrosoftEdgeDevTools]。  
 
 ## <a name="open-the-cookies-pane"></a>Cookie ウィンドウを開く  
 
@@ -41,7 +40,7 @@ ms.locfileid: "11439683"
        図 1: マニフェスト ウィンドウ  
     :::image-end:::  
 
-1.  [記憶域 **] で** **[Cookie] を展開**し、原点を選択します。  
+1.  [Cookie **Storage]** **を展開**し、原点を選択します。  
     
     :::image type="complex" source="../media/storage-application-storage-cookies-selected.msft.png" alt-text="[Cookie] ウィンドウ" lightbox="../media/storage-application-storage-cookies-selected.msft.png":::
        図 2: Cookie ウィンドウ  
@@ -99,10 +98,10 @@ Cookie を選択し **、[Delete Selected** \( Delete Selected \) ] を選択し
 
 <!-- links -->  
 
-[MicrosoftEdgeDevTools]: /microsoft-edge/devtools-guide-chromium "Microsoft Edge (クロム) 開発者ツール"  
-[DevToolsOpen]: /microsoft-edge/devtools-guide-chromium/open "Microsoft Edge DevTools を開く"  
+[MicrosoftEdgeDevTools]: /microsoft-edge/devtools-guide-chromium "Microsoft Edge (Chromium) 開発者ツール"  
+[DevToolsOpen]: /microsoft-edge/devtools-guide-chromium/open "DevTools Microsoft Edge開く"  
 
-[ChromiumIssue232693]: https://bugs.chromium.org/p/chromium/issues/detail?id=232693 "クロムの問題 232693: Cookie の優先度フィールドの実装|クロム バグ"  
+[ChromiumIssue232693]: https://bugs.chromium.org/p/chromium/issues/detail?id=232693 "Chromium問題 232693: Cookie の優先度フィールドの実装|Chromiumバグ"  
 
 [MDNHTTPCookies]: https://developer.mozilla.org/docs/Web/HTTP/Cookies "HTTP cookie |MDN"  
 [MDNHTTPCookiesPermanent]: https://developer.mozilla.org/docs/Web/HTTP/Cookies#Permanent_cookies "HTTP Cookie - 永続的な cookie |MDN"  
@@ -121,4 +120,4 @@ Cookie を選択し **、[Delete Selected** \( Delete Selected \) ] を選択し
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
 [GoogleSitePolicies]: https://developers.google.com/terms/site-policies  
-[KayceBasques]: https://developers.google.com/web/resources/contributors/kaycebasques  
+[KayceBasques]: https://developers.google.com/web/resources/contributors#kayce-basques  

@@ -3,16 +3,16 @@ description: DevTools でパフォーマンスを記録および分析するた�
 title: パフォーマンス分析リファレンス
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 03/08/2021
+ms.date: 05/04/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: e7774dc0aab647b8cf2bf47699368fafe6c21d70
-ms.sourcegitcommit: 4b9fb5c1176fdaa5e3c60af2b84e38d5bb86cd81
+ms.openlocfilehash: 5cd7c4aee6eb5f0c48f783e250efa1ef69010fc4
+ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "11439690"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "11564351"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -27,7 +27,6 @@ ms.locfileid: "11439690"
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.  -->  
-
 # <a name="performance-analysis-reference"></a>パフォーマンス分析リファレンス  
 
 このページは、パフォーマンスの分析に関連Microsoft Edge DevTools 機能の包括的なリファレンスです。  
@@ -193,7 +192,7 @@ DevTools **がパフォーマンス** 記録をキャプチャする方法に関
 
 ### <a name="search-activities"></a>検索アクティビティ  
 
-`Control` + `F` \(Windows,Linux\) または `Command` + `F` \(macOS\) を**選択**して、[パフォーマンス] パネルの下部にある検索ボックスを開きます。  
+`Control` + `F` \(Windows、Linux\) または `Command` + `F` \(macOS\)**** を選択して、[パフォーマンス] パネルの下部にある検索ボックスを開きます。  
 
 :::image type="complex" source="../media/evaluate-performance-performance-search-regex.msft.png" alt-text="検索ボックス" lightbox="../media/evaluate-performance-performance-search-regex.msft.png":::
    検索ボックス  
@@ -594,4 +593,4 @@ DevTools は、teal の潜在的に問題のある要素の概要を示します
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
 [GoogleSitePolicies]: https://developers.google.com/terms/site-policies  
-[KayceBasques]: https://developers.google.com/web/resources/contributors/kaycebasques  
+[KayceBasques]: https://developers.google.com/web/resources/contributors#kayce-basques  

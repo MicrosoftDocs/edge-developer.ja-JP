@@ -1,18 +1,18 @@
 ---
-description: ローカル ストレージ ウィンドウとコンソールを使用して localStorage を表示および編集する方法。
-title: Microsoft Edge DevTools を使用してローカル ストレージを表示および編集する
+description: '[ローカル] ウィンドウと [コンソール] を使用して localStorage Storage編集する方法。'
+title: DevTools を使用してローカル Storageを表示Microsoft Edge編集する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 03/08/2021
+ms.date: 05/04/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 4eebf3108e7b1c6ecaecbfed445e8f3fe26215c4
-ms.sourcegitcommit: 4b9fb5c1176fdaa5e3c60af2b84e38d5bb86cd81
+ms.openlocfilehash: 5088a1b9d7ab2b92051d099e76b8b07bbd5db5f8
+ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "11439676"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "11565051"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -27,10 +27,9 @@ ms.locfileid: "11439676"
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.  -->  
+# <a name="view-and-edit-local-storage-with-microsoft-edge-devtools"></a>DevTools を使用してローカル ストレージを表示Microsoft Edge編集する  
 
-# <a name="view-and-edit-local-storage-with-microsoft-edge-devtools"></a>Microsoft Edge DevTools を使用してローカル ストレージを表示および編集する  
-
-このガイドでは [、Microsoft Edge DevTools][MicrosoftEdgeDevTools] を使用して [localStorage][MDNWindowsLocalStorage] のキーと値のペアを表示、編集、および削除する方法を示します。  
+このガイドでは[、devTools][MicrosoftEdgeDevTools]のMicrosoft Edgeを使用して[localStorage][MDNWindowsLocalStorage]のキーと値のペアを表示、編集、および削除する方法を示します。  
 
 ## <a name="view-localstorage-keys-and-values"></a>localStorage キーと値の表示  
 
@@ -40,10 +39,10 @@ ms.locfileid: "11439676"
        [ **マニフェスト]** ウィンドウ  
     :::image-end:::  
     
-1.  [ローカル ストレージ **] メニューを展開** します。  
+1.  [ローカル]**メニュー Storage**展開します。  
     
-    :::image type="complex" source="../media/storage-application-local-storage.msft.png" alt-text="[ローカル ストレージ] メニュー" lightbox="../media/storage-application-local-storage.msft.png":::
-       [**ローカル ストレージ] メニュー**  
+    :::image type="complex" source="../media/storage-application-local-storage.msft.png" alt-text="[ローカル] Storageメニュー" lightbox="../media/storage-application-local-storage.msft.png":::
+       [**ローカル] Storage**メニュー  
     :::image-end:::  
     
 1.  キーと値のペアを表示するドメインを選択します。  
@@ -109,7 +108,7 @@ ms.locfileid: "11439676"
 
 <!-- links -->  
 
-[MicrosoftEdgeDevTools]: ../../devtools-guide-chromium/index.md "Microsoft Edge (クロム) 開発者向け|Microsoft Docs"  
+[MicrosoftEdgeDevTools]: ../../devtools-guide-chromium/index.md "Microsoft Edge (Chromium) 開発者ツール |Microsoft Docs"  
 
 [MDNWindowsLocalStorage]: https://developer.mozilla.org/docs/Web/API/Window/localStorage "Window.localStorage |MDN"  
 
@@ -123,4 +122,4 @@ ms.locfileid: "11439676"
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
 [GoogleSitePolicies]: https://developers.google.com/terms/site-policies  
-[KayceBasques]: https://developers.google.com/web/resources/contributors/kaycebasques  
+[KayceBasques]: https://developers.google.com/web/resources/contributors#kayce-basques  

@@ -1,18 +1,18 @@
 ---
-description: Microsoft Edge DevTools キーボード ショートカットの標準ドキュメント。
-title: Microsoft Edge DevTools キーボード ショートカット
+description: DevTools キーボード ショートカットMicrosoft Edge標準ドキュメント。
+title: Microsoft EdgeDevTools キーボード ショートカット
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 03/08/2021
+ms.date: 05/04/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: c622d529a8008248d57a6b1b0656636a982054c1
-ms.sourcegitcommit: 16e2f7232196a57a70b979bbf8b663774b7ddc20
+ms.openlocfilehash: f2b10bc763073632975248cd5a9caa523702e869
+ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2021
-ms.locfileid: "11519409"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "11565100"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -27,10 +27,9 @@ ms.locfileid: "11519409"
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.  -->
+# <a name="microsoft-edge-devtools-keyboard-shortcuts"></a>Microsoft EdgeDevTools キーボード ショートカット  
 
-# <a name="microsoft-edge-devtools-keyboard-shortcuts"></a>Microsoft Edge DevTools キーボード ショートカット  
-
-この記事は、Microsoft Edge DevTools のキーボード ショートカットのリファレンスです。
+この記事は、DevTools のキーボード ショートカットMicrosoft Edgeです。
 
 ヒントにショートカットが表示される場合があります。  DevTools の UI 要素にカーソルを合わせると、ツールヒントが表示されます。  要素にショートカットがある場合は、ツールヒントにショートカットが含まれます。
 
@@ -50,7 +49,7 @@ DevTools を開く場合は、カーソルがブラウザー ビューポート�
 
 | 操作 | Windows\/Linux | macOS |  
 |:--- |:--- |:--- |  
-| 設定の **表示** | `?` or `F1` | `?` または `Function`+`F1` |  
+| [表示**設定** | `?` or `F1` | `?` または `Function`+`F1` |  
 | 次のパネルをフォーカスする | `Control`+`]` | `Command`+`]` |  
 | 前のパネルをフォーカスする | `Control`+`[` | `Command`+`[` |  
 | 最後に使用した [ドッキング位置に][DevtoolsCustomizeIndexPlacement] 戻ります。  DevTools がセッション全体の既定の位置にある場合、このショートカットは DevTools を別のウィンドウにドッキング解除します。 | `Control`+`Shift`+`D` | `Command`+`Shift`+`D` |  
@@ -162,9 +161,9 @@ DevTools を開く場合は、カーソルがブラウザー ビューポート�
 
 [DevtoolsCommandMenuIndex]: ../command-menu/index.md "Microsoft Edge DevTools コマンド メニュー を使用してコマンドを実行する | Microsoft Docs"  
 [DevtoolsCustomizeIndexDrawer]: ../customize/index.md#drawer "ドロワー - Microsoft Edge DevTools をカスタマイズする | Microsoft Docs"  
-[DevtoolsCustomizeIndexPlacement]: ../customize/index.md#change-devtools-placement "DevTools の配置を変更する - Microsoft Edge DevTools の配置を|Microsoft Docs"  
+[DevtoolsCustomizeIndexPlacement]: ../customize/index.md#change-devtools-placement "DevTools の配置を変更する - DevTools Microsoft Edgeをカスタマイズ|Microsoft Docs"  
 [DevtoolsDeviceModeIndex]: ../device-mode/index.md "Microsoft Edge DevTools でモバイル デバイスをエミュレートする | Microsoft Docs"  
-[DevtoolsJavascriptBreakpointsLOC]: ../javascript/breakpoints.md#line-of-code-breakpoints "コード行ブレークポイント - Microsoft Edge DevTools アプリケーションでブレークポイントを使用してコードを一時停止する|Microsoft Docs"  
+[DevtoolsJavascriptBreakpointsLOC]: ../javascript/breakpoints.md#line-of-code-breakpoints "コード行ブレークポイント - DevTools アプリケーションでブレークポイントを使用してコードMicrosoft Edgeする|Microsoft Docs"  
 
 <!--[201705ReleaseNotesContinue]: whats-new/2017/05/devtools-release-notes#continue  -->  
 
@@ -178,4 +177,4 @@ DevTools を開く場合は、カーソルがブラウザー ビューポート�
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
 [GoogleSitePolicies]: https://developers.google.com/terms/site-policies  
-[KayceBasques]: https://developers.google.com/web/resources/contributors/kaycebasques  
+[KayceBasques]: https://developers.google.com/web/resources/contributors#kayce-basques  

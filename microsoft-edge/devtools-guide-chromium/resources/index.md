@@ -1,18 +1,18 @@
 ---
 description: フレーム、ドメイン、種類、その他の条件でリソースを整理します。
-title: Microsoft Edge DevTools を使用してページ リソースを表示する
+title: DevTools でページ リソースMicrosoft Edge表示する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/12/2021
+ms.date: 05/04/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 818b93c1c07a93baa8972a530871d20446fd687f
-ms.sourcegitcommit: 16e2f7232196a57a70b979bbf8b663774b7ddc20
+ms.openlocfilehash: 415ed45bf650aa6800ab674cce74179f783a82c7
+ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2021
-ms.locfileid: "11519444"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "11565072"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -27,18 +27,17 @@ ms.locfileid: "11519444"
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.  -->  
+# <a name="view-page-resources-with-microsoft-edge-devtools"></a>DevTools でページ リソースMicrosoft Edge表示する  
 
-# <a name="view-page-resources-with-microsoft-edge-devtools"></a>Microsoft Edge DevTools を使用してページ リソースを表示する  
+このガイドでは、DevTools Microsoft Edgeを使用して Web ページのリソースを表示する方法について説明します。  リソースは、ページが正しく表示するために必要なファイルです。  リソースの例としては、CSS、JavaScript、HTML ファイル、および画像が含まれます。  
 
-このガイドでは、Microsoft Edge DevTools を使用して Web ページのリソースを表示する方法について説明します。  リソースは、ページが正しく表示するために必要なファイルです。  リソースの例としては、CSS、JavaScript、HTML ファイル、および画像が含まれます。  
-
-このガイドでは、Web 開発の基本と Microsoft [][MDNLearnWebDevelopment] [Edge DevTools][MicrosoftEdgeDevTools]に精通している必要があります。  
+このガイドでは、Web 開発の基本と[DevTools のMicrosoft Edge前提とします][MicrosoftEdgeDevTools]。 [][MDNLearnWebDevelopment]  
 
 ## <a name="open-resources"></a>リソースを開く  
 
 検査するリソースの名前がわかっている場合は、コマンド メニューを**** 使用してリソースを高速に開きます。  
 
-1.  `Control` + `P` \(Windows, Linux\) または `Command` + `P` \(macOS\) を選択します。  [ **ファイルを開く]** ダイアログボックスが開きます。  
+1.  `Control` + `P` \(Windows Linux\) または `Command` + `P` \(macOS\) を選択します。  [ **ファイルを開く]** ダイアログボックスが開きます。  
     
     :::image type="complex" source="../media/resources-command-menu-empty.msft.png" alt-text="[ファイルを開く] ダイアログ" lightbox="../media/resources-command-menu-empty.msft.png":::
        [ **ファイルを開く]** ダイアログ  
@@ -159,10 +158,10 @@ ms.locfileid: "11519444"
 
 <!-- links -->  
 
-[MicrosoftEdgeDevTools]: ../../devtools-guide-chromium/index.md "Microsoft Edge (クロム) 開発者向け|Microsoft Docs"  
-[DevtoolsNetworkFilterByResourceType]: ../network/index.md#filter-by-resource-type "リソースの種類によるフィルター - Microsoft Edge DevTools のネットワーク アクティビティを調|Microsoft Docs"  
-[DevtoolsNetworkInspectDetailsResource]: ../network/index.md#inspect-the-details-of-the-resource "リソースの詳細を調す - Microsoft Edge DevTools サーバーでネットワーク アクティビティを|Microsoft Docs"  
-[DevtoolsNetworkLogActivity]: ../network/index.md#log-network-activity "ネットワーク アクティビティのログ - Microsoft Edge DevTools サーバーでネットワーク アクティビティを|Microsoft Docs"  
+[MicrosoftEdgeDevTools]: ../../devtools-guide-chromium/index.md "Microsoft Edge (Chromium) 開発者ツール |Microsoft Docs"  
+[DevtoolsNetworkFilterByResourceType]: ../network/index.md#filter-by-resource-type "リソースの種類によるフィルター - DevTools サーバーのネットワーク アクティビティMicrosoft Edge調|Microsoft Docs"  
+[DevtoolsNetworkInspectDetailsResource]: ../network/index.md#inspect-the-details-of-the-resource "リソースの詳細を調す - DevTools サーバーでネットワークMicrosoft Edgeを|Microsoft Docs"  
+[DevtoolsNetworkLogActivity]: ../network/index.md#log-network-activity "ネットワーク アクティビティをログに記録する - DevTools Microsoft Edgeネットワーク アクティビティを|Microsoft Docs"  
 
 [MDNInlineFrame]: https://developer.mozilla.org/docs/Web/HTML/Element/iframe "<iframe>: Inline Frame 要素|MDN"  
 [MDNLearnWebDevelopment]: https://developer.mozilla.org/docs/Learn "Web 開発の詳細|MDN"  
@@ -177,4 +176,4 @@ ms.locfileid: "11519444"
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
 [GoogleSitePolicies]: https://developers.google.com/terms/site-policies  
-[KayceBasques]: https://developers.google.com/web/resources/contributors/kaycebasques  
+[KayceBasques]: https://developers.google.com/web/resources/contributors#kayce-basques  

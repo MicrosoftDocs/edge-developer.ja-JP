@@ -1,18 +1,18 @@
 ---
-description: Microsoft Edge DevTools でコードを一時停止できるすべての方法について説明します。
-title: Microsoft Edge DevTools でブレークポイントを使用してコードを一時停止する方法
+description: DevTools でコードを一時停止できるすべての方法Microsoft Edgeします。
+title: DevTools でブレークポイントを使用してコードMicrosoft Edgeする方法
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 03/08/2021
+ms.date: 05/04/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: dd865f346046cb6706e71fdb3cc869950b2b4352
-ms.sourcegitcommit: 16e2f7232196a57a70b979bbf8b663774b7ddc20
+ms.openlocfilehash: fda536deb7177b933013120fc11b0896acfbbe5c
+ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2021
-ms.locfileid: "11519360"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "11564176"
 ---
 <!-- Copyright Kayce Basques
 
@@ -27,12 +27,11 @@ ms.locfileid: "11519360"
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.  -->  
-
-# <a name="how-to-pause-your-code-with-breakpoints-in-microsoft-edge-devtools"></a>Microsoft Edge DevTools でブレークポイントを使用してコードを一時停止する方法  
+# <a name="how-to-pause-your-code-with-breakpoints-in-microsoft-edge-devtools"></a>DevTools でブレークポイントを使用してコードMicrosoft Edgeする方法  
 
 ブレークポイントを使用して JavaScript コードを一時停止します。  この記事では、DevTools で使用できるブレークポイントの各種類と、使用する場合と、各種類の設定方法について説明します。
 
-既存の Web ページを使用した入門チュートリアルについては [、「Microsoft Edge DevTools][DevtoolsJavascriptIndex]での JavaScript のデバッグの開始」に移動します。
+既存の Web ページを使用した入門チュートリアルについては[、「DevTools][DevtoolsJavascriptIndex]での JavaScript のデバッグの開始Microsoft Edge移動します。
 
 ## <a name="overview-of-when-to-use-each-breakpoint-type"></a>各ブレークポイントの種類を使用する場合の概要  
 
@@ -246,4 +245,4 @@ DevTools コンソールからメソッドを実行している場合は、タ�
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
 [GoogleSitePolicies]: https://developers.google.com/terms/site-policies  
-[KayceBasques]: https://developers.google.com/web/resources/contributors/kaycebasques  
+[KayceBasques]: https://developers.google.com/web/resources/contributors#kayce-basques  

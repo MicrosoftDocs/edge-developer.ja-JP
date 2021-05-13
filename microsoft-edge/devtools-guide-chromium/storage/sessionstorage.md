@@ -1,18 +1,18 @@
 ---
-description: セッション ストレージ ウィンドウとコンソールを使用して sessionStorage を表示および編集する方法。
-title: Microsoft Edge DevTools を使用してセッション ストレージを表示および編集する
+description: セッション ウィンドウとコンソールを使用して sessionStorage Storage編集する方法。
+title: DevTools を使用してセッション Storageを表示Microsoft Edge編集する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 03/08/2021
+ms.date: 05/04/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 0168b01fd01071ebd19bd211c6d947ae006d778c
-ms.sourcegitcommit: 4b9fb5c1176fdaa5e3c60af2b84e38d5bb86cd81
+ms.openlocfilehash: 6d686a6eb7bc6fca46d65c46fa9c5aee044ec052
+ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "11439662"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "11565065"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -27,10 +27,9 @@ ms.locfileid: "11439662"
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.  -->
+# <a name="view-and-edit-session-storage-with-microsoft-edge-devtools"></a>DevTools を使用してセッション Storageを表示Microsoft Edge編集する  
 
-# <a name="view-and-edit-session-storage-with-microsoft-edge-devtools"></a>Microsoft Edge DevTools を使用してセッション ストレージを表示および編集する  
-
-このガイドでは [、Microsoft Edge DevTools][MicrosoftEdgeDevTools] を使用して [sessionStorage][MDNSessionStorage] キーと値のペアを表示、編集、および削除する方法について説明します。  
+このガイドでは[、DevTools][MicrosoftEdgeDevTools] Microsoft Edgeを使用して[sessionStorage][MDNSessionStorage]キーと値のペアを表示、編集、および削除する方法を示します。  
 
 ## <a name="view-sessionstorage-keys-and-values"></a>sessionStorage キーと値の表示  
 
@@ -40,10 +39,10 @@ ms.locfileid: "11439662"
        [ **マニフェスト]** ウィンドウ  
     :::image-end:::  
     
-1.  [セッション ストレージ **] メニューを展開** します。  
+1.  [セッションの**設定] メニュー Storage**展開します。  
     
-    :::image type="complex" source="../media/storage-application-storage-session-storage.msft.png" alt-text="[セッション ストレージ] メニュー" lightbox="../media/storage-application-storage-session-storage.msft.png":::
-       [ **セッション ストレージ]** メニュー  
+    :::image type="complex" source="../media/storage-application-storage-session-storage.msft.png" alt-text="[セッション] Storageメニュー" lightbox="../media/storage-application-storage-session-storage.msft.png":::
+       [**セッション] Storage**メニュー  
     :::image-end:::  
     
 1.  キーと値のペアを表示するドメインを選択します。  
@@ -109,7 +108,7 @@ ms.locfileid: "11439662"
 
 <!-- links -->  
 
-[MicrosoftEdgeDevTools]: ../../devtools-guide-chromium/index.md "Microsoft Edge (クロム) 開発者向け|Microsoft Docs"  
+[MicrosoftEdgeDevTools]: ../../devtools-guide-chromium/index.md "Microsoft Edge (Chromium) 開発者ツール |Microsoft Docs"  
 
 [MDNSessionStorage]: https://developer.mozilla.org/docs/Web/API/Window/sessionStorage "Window.sessionStorage |MDN"  
 
@@ -123,4 +122,4 @@ ms.locfileid: "11439662"
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
 [GoogleSitePolicies]: https://developers.google.com/terms/site-policies  
-[KayceBasques]: https://developers.google.com/web/resources/contributors/kaycebasques  
+[KayceBasques]: https://developers.google.com/web/resources/contributors#kayce-basques  

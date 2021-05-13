@@ -3,16 +3,16 @@ description: 開発者向けツールを使用して、ネイティブ Android �
 title: Android WebViews のリモート デバッグの開始
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 03/25/2021
+ms.date: 05/04/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 4d389473673791d91c38e252c919378c4725db6b
-ms.sourcegitcommit: bff24ab1f0a66aaf4c7f5ff81cea3eb28c6d8380
+ms.openlocfilehash: 75d948465c62c63c9ccbe0fcd46616819a04e79d
+ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2021
-ms.locfileid: "11461537"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "11565079"
 ---
 <!-- Copyright Meggin Kearney 
 
@@ -33,7 +33,7 @@ ms.locfileid: "11461537"
 
 Android 4.4 \(KitKat\) 以降では、DevTools を使用してネイティブ Android アプリの WebView コンテンツをデバッグします。  
 
-### <a name="summary"></a>まとめ  
+### <a name="summary"></a>要約  
 
 *   ネイティブ Android アプリで Android WebView デバッグを有効にする。DevTools で Android WebViews Microsoft Edgeデバッグします。  
 *   デバッグを有効にした Android WebViews の一覧を表示するには、に移動します `edge://inspect` 。  
@@ -102,5 +102,5 @@ Android WebViews がページに表示 `edge://inspect` されない場合
 [CCA4IL]: http://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
 [GoogleSitePolicies]: https://developers.google.com/terms/site-policies  
-[KayceBasques]: https://developers.google.com/web/resources/contributors/kaycebasques  
-[MegginKearney]: https://developers.google.com/web/resources/contributors/megginkearney  
+[KayceBasques]: https://developers.google.com/web/resources/contributors#kayce-basques  
+[MegginKearney]: https://developers.google.com/web/resources/contributors#meggin-kearney  

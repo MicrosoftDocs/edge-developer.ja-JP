@@ -3,16 +3,16 @@ description: CSS グリッドのデバッグ機能、ネットワーク コン�
 title: DevTools の新機能 (Microsoft Edge 85)
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 04/08/2021
+ms.date: 05/04/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 5bd013fae617e9759aa91949acccf936d85f7160
-ms.sourcegitcommit: de75fda30bb8964e9a184228d068b4402ec59c3e
+ms.openlocfilehash: 75642a7f0fa8d6fae2f4daead84e2fc77df21e29
+ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2021
-ms.locfileid: "11514362"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "11564931"
 ---
 <!-- Copyright Jecelyn Yeen 
 
@@ -256,7 +256,7 @@ Chromium の問題 [#1071432][CR1071432]
 
 ### <a name="line-wise-copy-and-cut-in-sources-panel"></a>[ソース] パネルでの行ごとのコピーと切り取り  
 
-[ソース パネル エディター][DevtoolsSourcesEditCssJavascript]で選択なしでコピーまたは切り取りを実行すると、現在のコンテンツの行がコピーまたは切り取りられます。  
+[ソース パネル エディター][DevtoolsSourcesIndexUsingEditorPaneToViewEditFiles]で選択なしでコピーまたは切り取りを実行すると、現在のコンテンツの行がコピーまたは切り取りられます。  
 
 :::image type="complex" source="../../media/2020/06/line-wise-cut.msft.png" alt-text="カーソルが 5 行目の最後にある状態で、DevTools の pen.js から行全体をコピーして、Visual Studio Code に貼り付けます。" lightbox="../../media/2020/06/line-wise-cut.msft.png":::
    カーソルが 5 行目の最後にある状態で、DevTools の **pen.js** から行全体をコピーして、[Visual Studio Code][VisualStudioCode] に貼り付けます。
@@ -334,13 +334,13 @@ Windows または macOS を使用している場合、[Microsoft Edge プレビ�
 
 <!-- links -->  
 
-[DevtoolsMain]: /microsoft-edge/devtools-guide-chromium "Microsoft Edge (Chromium) 開発者ツール | Microsoft Docs"  
-[DevtoolsCommandMenu]: /microsoft-edge/devtools-guide-chromium/command-menu "Microsoft Edge DevTools コマンドメニューを使用してコマンドを実行する | Microsoft Docs"
-[DevtoolsCustomizeIndexDrawer]: /microsoft-edge/devtools-guide-chromium/customize/index#drawer "ドロワー - Microsoft Edge DevTools のカスタマイズ | Microsoft Docs"
-[DevtoolsExperimentalFeaturesTurnOn]: /microsoft-edge/devtools-guide-chromium/experimental-features#turn-on-experimental-features "試験的な機能を有効にする - 試験的な機能 | Microsoft Docs"  
-[DevtoolsIssues]: /microsoft-edge/devtools-guide-chromium/issues "Microsoft Edge DevTools の問題を見つけて解決するツール | Microsoft Docs"
-[DevtoolsSourcesEditCssJavascript]: /microsoft-edge/devtools-guide-chromium/sources#edit-css-and-javascript "CSS と JavaScript を編集する - [ソース] パネルの概要 | Microsoft Docs"  
-[DevtoolsNetworkIndexLogActivity]: /microsoft-edge/devtools-guide-chromium/network/index#log-network-activity "ネットワーク アクティビティをログに記録する - Microsoft Edge DevTools でネットワーク アクティビティを検査する | Microsoft Docs"
+[DevtoolsIndex]: ../../../index.md "Microsoft Edge (Chromium) 開発者ツール | Microsoft Docs"  
+[DevtoolsCommandMenu]: ../../../command-menu.md "Microsoft Edge DevTools コマンドメニューを使用してコマンドを実行する | Microsoft Docs"
+[DevtoolsCustomizeIndexDrawer]: ../../../customize/index.md#drawer "ドロワー - Microsoft Edge DevTools のカスタマイズ | Microsoft Docs"
+[DevtoolsExperimentalFeaturesTurnOn]: ../../../experimental-features/index.md#turn-on-experimental-features "試験的な機能を有効にする - 試験的な機能 | Microsoft Docs"  
+[DevtoolsIssues]: ../../../issues/index.md "Microsoft Edge DevTools の問題を見つけて解決するツール | Microsoft Docs"
+[DevtoolsSourcesIndexUsingEditorPaneToViewEditFiles]: ../../../sources/index.md#using-the-editor-pane-to-view-or-edit-files "[エディター] ウィンドウを使用してファイルを表示または編集する - [ソース] パネルの|Microsoft Docs"  
+[DevtoolsNetworkIndexLogActivity]: ../../../network/index.md#log-network-activity "ネットワーク アクティビティをログに記録する - Microsoft Edge DevTools でネットワーク アクティビティを検査する | Microsoft Docs"
 
 [CodepenZoherghadyaliAbdgrpz]: https://codepen.io/zoherghadyali/full/abdGrPZ "CSS-in-JS フレームワークのスタイルの編集 | CodePen"
 [CodepenZoherghadyaliZyrjgdJ]: https://codepen.io/zoherghadyali/full/zYrjgdJ "重複メッセージをコンソールに送信する | CodePen"
@@ -420,5 +420,5 @@ Windows または macOS を使用している場合、[Microsoft Edge プレビ�
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
 [GoogleSitePolicies]: https://developers.google.com/terms/site-policies  
-[JecelynYeen]: https://developers.google.com/web/resources/contributors/jecelynyeen  
-[KayceBasques]: https://developers.google.com/web/resources/contributors/kaycebasques  
+[JecelynYeen]: https://developers.google.com/web/resources/contributors#jecelyn-yeen  
+[KayceBasques]: https://developers.google.com/web/resources/contributors#kayce-basques  

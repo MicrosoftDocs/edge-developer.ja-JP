@@ -3,16 +3,16 @@ description: ハイ コントラスト モードで DevTools をWindows、DevToo
 title: DevTools の新機能 (Microsoft Edge 84)
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 04/08/2021
+ms.date: 05/04/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 01d41fe5400dde427a0ac73870ace0e1211f429a
-ms.sourcegitcommit: de75fda30bb8964e9a184228d068b4402ec59c3e
+ms.openlocfilehash: 2537495ad14462aac70bfb1b5873aaa0b6e21cdf
+ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2021
-ms.locfileid: "11514390"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "11564673"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -50,13 +50,13 @@ Chromium[問題#1048378][CR1048378]
 
 ### <a name="match-keyboard-shortcuts-in-the-devtools-to-visual-studio-code"></a>DevTools のキーボード ショートカットを Visual Studio Code と一致させる  
 
-フィードバックと[パブリック](#getting-in-touch-with-microsoft-edge-devtools-team)Chromiumトラッカー[][CRIssuesList]から、Microsoft Edge DevTools チームは、DevTools でキーボード ショートカットをカスタマイズする機能が必要なことを学習しました。  このMicrosoft Edge 84 では[、DevTools][VisualStudioCode]のキーボード ショートカットを Visual Studio Code に一致できます。これは、チームがショートカットのカスタマイズに取り組む機能の 1 つにすすむ機能の 1 つです。  
+フィードバックと[パブリック](#getting-in-touch-with-microsoft-edge-devtools-team)Chromiumトラッカー[][CRIssuesList]から、Microsoft Edge DevTools チームは、DevTools でキーボード ショートカットをカスタマイズする機能が必要なことを学習しました。  このMicrosoft Edge 84 では[、DevTools][VisualStudioCodeMain]のキーボード ショートカットを Visual Studio Code に一致できます。これは、チームがショートカットのカスタマイズに取り組む機能の 1 つにすすむ機能の 1 つです。  
 
 :::image type="complex" source="../../media/2020/05/keyboard-shortcut.msft.png" alt-text="DevTools のキーボード ショートカットを Visual Studio Code と一致させる" lightbox="../../media/2020/05/keyboard-shortcut.msft.png":::
    ハイ コントラスト Microsoft Edge DevTools の機能  
 :::image-end:::  
 
-実験を試す場合は、DevTools 設定 の右上隅にある DevTools 設定 アイコンアイコンを選択または選択して `?` ![ 、DevTools 設定 を開 ][ImageSettingsIcon] きます。  [実験] セクション **に移動し、[** カスタム キーボード ショートカット設定を有効にする] タブ (再読み込 **みが必要) をオンにします**。  DevTools を再読み込みし、設定開き、[ショートカット]**セクションに移動**します。  
+実験を試す場合は、DevTools 設定 の右上隅にある Devtools 設定 アイコンアイコンを選択または選択して `?` ![ 、DevTools 設定 を開 ](../../../media/settings-icon.msft.png) きます。  [実験] セクション **に移動し、[** カスタム キーボード ショートカット設定を有効にする] タブ (再読み込 **みが必要) をオンにします**。  DevTools を再読み込みし、設定開き、[ショートカット]**セクションに移動**します。  
 
 [**プリセットからショートカットを一致する] ドロップダウンで [DevTools( Default)** ] を選択し、[既定] Visual Studio Code を**選択します**。 ****  DevTools のキーボード ショートカットが、同じ操作のショートカットと一致Visual Studio Code。  
 
@@ -68,9 +68,9 @@ Chromium の問題 [#174309][CR174309]
 
 ### <a name="remote-debug-surface-duo-emulators"></a>リモート デバッグ Surface Duo エミュレーター  
 
-これで、Surface Duo エミュレーターで実行されている Web コンテンツを[、DevTools][DualScreensAndroidEmulator]のフル パワーを使用してリモート[でデバッグMicrosoft Edgeできます][DevToolsChromiumGuide]。  
+これで、Surface Duo エミュレーターで実行されている Web コンテンツを[、DevTools][DualScreensAndroidEmulator]のフル パワーを使用してリモート[でデバッグMicrosoft Edgeできます][DevtoolsIndex]。  
 
-Surface [Duo エミュレーターを使用][DualScreensAndroidEmulator]すると、折りたたみ可能なデュアルスクリーン デバイスの新しいクラスで Web コンテンツがどのようにレンダリングされるのかテストできます。  エミュレーターは Android オペレーティング システムを実行し、Android アプリMicrosoft Edge[提供します][AndroidEdge]。  Web コンテンツをアプリに読みMicrosoft Edge [DevTools][DevToolsChromiumGuide]でデバッグMicrosoft Edgeします。 [][AndroidEdge]  
+Surface [Duo エミュレーターを使用][DualScreensAndroidEmulator]すると、折りたたみ可能なデュアルスクリーン デバイスの新しいクラスで Web コンテンツがどのようにレンダリングされるのかテストできます。  エミュレーターは Android オペレーティング システムを実行し、Android アプリMicrosoft Edge[提供します][AndroidEdge]。  Web コンテンツをアプリに読みMicrosoft Edge [DevTools][DevtoolsIndex]でデバッグMicrosoft Edgeします。 [][AndroidEdge]  
 
 :::image type="complex" source="../../media/2020/05/surface-duo-emulator.msft.png" alt-text="Surface Duo Microsoft Edgeで実行されているアプリの一部" lightbox="../../media/2020/05/surface-duo-emulator.msft.png":::
    Surface Duo Microsoft Edgeのアプリ  
@@ -82,11 +82,11 @@ Surface Duo エミュレーターで実行Microsoft Edge開いているタブま
    この `edge://inspect` ページには、エミュレーターで実行されているアプリMicrosoft Edgeタブの一覧が表示されます。
 :::image-end:::  
 
-デバッグ**する**タブまたはデバッグするPWAを調Microsoft Edge[選択します][DevToolsChromiumGuide]。  Surface Duo エミュレーターで Web コンテンツをリモートでデバッグするには、ステップ[バイ ステップ ガイドに従います][DevToolsRemoteDebugDuoEmulator]。  
+デバッグ**する**タブまたはデバッグするPWAを調Microsoft Edge[選択します][DevtoolsIndex]。  Surface Duo エミュレーターで Web コンテンツをリモートでデバッグするには、ステップ[バイ ステップ ガイドに従います][DevtoolsRemoteDebugDuoEmulator]。  
 
 ### <a name="resize-the-devtools-drawer-more-easily"></a>DevTools ドロワーのサイズを簡単に変更する  
 
-83 Microsoft Edge以前のバージョンでは、ドロワーのツールバー内をホバリングして[DevTools ドロ][DevToolsDrawer]ワーのサイズを変更するのみ可能でした。  ドロワーの動作は、DevTools 内のペインの他のサイズ変更コントロールとは異なって動作し、ウィンドウの枠線にマウス ポインターを移動してサイズを変更しました。  次の画像を選択すると、ドロワーのサイズ変更がバージョン 83 以前のバージョンでどのように機能Microsoft Edge。  
+83 Microsoft Edge以前のバージョンでは、ドロワーのツールバー内をホバリングして[Devtools ドロ][DevtoolsDrawer]ワーのサイズを変更するのみ可能でした。  ドロワーの動作は、DevTools 内のペインの他のサイズ変更コントロールとは異なって動作し、ウィンドウの枠線にマウス ポインターを移動してサイズを変更しました。  次の画像を選択すると、ドロワーのサイズ変更がバージョン 83 以前のバージョンでどのように機能Microsoft Edge。  
 
 :::image type="complex" source="../../media/2020/05/drawer-83.msft.png" alt-text="DevTools ドロワーのサイズ変更 (Microsoft Edge 83)" lightbox="../../media/2020/05/drawer-83.msft.gif":::
    DevTools ドロワーのサイズ変更 (Microsoft Edge 83)
@@ -106,7 +106,7 @@ Chromium[問題#1076112][CR1076112]
 
 ### <a name="screencasting-navigation-buttons-display-focus"></a>スクリーン キャスト ナビゲーション ボタンにフォーカスが表示される  
 
-[Android][DevToolsRemoteDebugAndroid]デバイス[、Windows 10][DevToolsRemoteDebugWindows]デバイス、[または Surface Duo][DevToolsRemoteDebugDuoEmulator]エミュレーターをリモート デバッグする場合は ![ 、DevTools の左上隅にある [画面キャストの切り替え] アイコンを使用してスクリーン キャストを切り替えられます。 ][ImageScreencastingIcon]  スクリーンキャストが有効になっている場合は、リモート デバイスMicrosoft Edge DevTools ウィンドウからタブを移動できます。  84 Microsoft Edge、これらのナビゲーション ボタンはキーボードでもアクセス可能です。  
+[Android][DevtoolsRemoteDebugAndroid]デバイス[、Windows 10][DevtoolsRemoteDebugWindows]デバイス、[または Surface Duo][DevtoolsRemoteDebugDuoEmulator]エミュレーターをリモート デバッグする場合は ![ 、DevTools の左上隅にある [画面キャストの切り替え] アイコンを使用してスクリーン キャストを切り替えられます。 ](../../../media/toggle-screencast-icon.msft.png)  スクリーンキャストが有効になっている場合は、リモート デバイスMicrosoft Edge DevTools ウィンドウからタブを移動できます。  84 Microsoft Edge、これらのナビゲーション ボタンはキーボードでもアクセス可能です。  
 
 :::image type="complex" source="../../media/2020/05/screencasting-nav.msft.png" alt-text="スクリーン キャストされた URL バーから [Shift+ Tab] を選択すると、[更新] ボタンにフォーカスが表示されます" lightbox="../../media/2020/05/screencasting-nav.msft.png":::
    スクリーン `Shift` + `Tab` キャストされた URL バーから選択すると、[更新] ボタンにフォーカスが**表示**されます
@@ -116,7 +116,7 @@ Chromium[問題#1081486][CR1081486]
 
 ### <a name="network-panel-details-pane-is-now-accessible"></a>ネットワーク パネルの [詳細] ウィンドウにアクセス可能  
 
-84 Microsoft Edgeでは、ネットワーク ログ[][DevToolsNetworkDetails]でリソースを開**** く際に、[ネットワーク] ツールの [詳細] ウィンドウにフォーカス[が集中します][DevToolsNetworkLog]。  この変更により、スクリーン リーダーは詳細ウィンドウのコンテンツを読み取り、 **操作** できます。  
+84 Microsoft Edgeでは、ネットワーク ログ[][DevtoolsNetworkDetails]でリソースを開**** く際に、[ネットワーク] ツールの [詳細] ウィンドウにフォーカス[が集中します][DevtoolsNetworkLog]。  この変更により、スクリーン リーダーは詳細ウィンドウのコンテンツを読み取り、 **操作** できます。  
 
 :::image type="complex" source="../../media/2020/05/network-details.msft.png" alt-text="[ネットワーク] パネルの [詳細] ウィンドウが開いたときにフォーカスを受け取る" lightbox="../../media/2020/05/network-details.msft.png":::
    ネットワーク **ツールの** [詳細] **ウィンドウが** 開いたときにフォーカスを受け取る
@@ -164,9 +164,9 @@ Chromium[問題#1040025][CR1040025]
 <!--todo:  add link lab metric (WebdevMeasureSpeedLabField) when section is live  -->  
 <!--todo:  add link Core Web Vitals (WebdevCoreWebVitals) when section is live  -->  
 
-[合計ブロック時間] 情報を取得するには、**** ページ読み込みパフォーマンスを記録するために [ページの更新] ページの更新アイコン ![ ][ImageRefreshPageIcon] ワークフローを使用しない必要があります。  
+[合計ブロック時間] 情報を取得するには、**** ページ読み込みパフォーマンスを記録するために [ページの更新] ページの更新アイコン ![ ](../../../media/refresh-page-icon.msft.png) ワークフローを使用しない必要があります。  
 
-代わりに、[ **レコード] アイコンを**選択し、ページを手動で再読み込みし、ページが読み込むのを待ち、記録 ![ ][ImageRecordIcon] を停止します。  
+代わりに、[ **レコード] アイコンを**選択し、ページを手動で再読み込みし、ページが読み込むのを待ち、記録 ![ ](../../../media/record-icon.msft.png) を停止します。  
 
 表示 `Total Blocking Time: Unavailable` されている場合はMicrosoft Edge DevTools で内部プロファイル データから必要な情報を取得Microsoft Edge。  
 
@@ -256,7 +256,7 @@ Chromium[問題#1072952][CR1072952]
 #### <a name="references"></a>参考資料  
 
 *   [console.dir()][DevtoolsConsoleApiDir]  
-*   [$0][DevtoolsConsoleUtilitiesDom]  
+*   [$0][DevtoolsConsoleUtilitiesRecentlyChosenElementJavascriptObject]  
 
 ### <a name="app-shortcuts-support-in-the-manifest-pane"></a>マニフェスト ウィンドウでのアプリ ショートカットのサポート  
 
@@ -278,30 +278,25 @@ Windows または macOS を使用している場合、[Microsoft Edge プレビ�
 
 [!INCLUDE [contact DevTools team note](../../includes/contact-whats-new-note.md)]  
 
-<!-- image links -->  
-
-[ImageSettingsIcon]: /microsoft-edge/devtools-guide-chromium/remote-debugging/media/settings-icon.msft.png  
-[ImageScreencastingIcon]: /microsoft-edge/devtools-guide-chromium/remote-debugging/media/toggle-screencast-icon.msft.png  
-[ImageRefreshPageIcon]: /microsoft-edge/devtools-guide-chromium/remote-debugging/media/refresh-page-icon.msft.png  
-[ImageRecordIcon]: /microsoft-edge/devtools-guide-chromium/remote-debugging/media/record-icon.msft.png  
-
 <!-- links -->  
 
-[DualScreensAndroidEmulator]: /dual-screen/android/use-emulator "Surface Duo エミュレーターを使用|Microsoft Docs"
+<!--[DevtoolsWhatsNew201901Inspect]: ../../../whats-new/2019/01/devtools.md#inspect "Detailed tooltips in Inspect Mode - What's New In DevTools (Edge 73) | Microsoft Docs"  -->  
 
-[DevtoolsConsoleApiDir]: /microsoft-edge/devtools-guide-chromium/console/api#dir "dir - コンソール API リファレンス |Microsoft Docs"  
-[DevtoolsConsoleUtilitiesDom]: /microsoft-edge/devtools-guide-chromium/console/utilities#recently-selected-element-or-javascript-object "最近選択した要素または JavaScript オブジェクト - コンソール ユーティリティ API リファレンス |Microsoft Docs"  
-[DevtoolsCssReferenceColorPicker]: /microsoft-edge/devtools-guide-chromium/css/reference#change-colors-with-the-color-picker "カラー ピッカー - CSS リファレンス を使用して色を変更|Microsoft Docs"  
-[DevToolsDrawer]: /microsoft-edge/devtools-guide-chromium/customize/index#drawer "ドロワー - カスタマイズの概要|Microsoft Docs"  
-[DevToolsChromiumGuide]: /microsoft-edge/devtools-guide-chromium "Microsoft Edge (Chromium) 開発者ツール | Microsoft Docs"  
-[DevtoolsIssuesIndex]: /microsoft-edge/devtools-guide-chromium/issues/index "DevTools の [問題] タブの [Microsoft Edgeを検索して修正|Microsoft Docs"  
-[DevToolsRemoteDebugAndroid]: /microsoft-edge/devtools-guide-chromium/remote-debugging/index "はじめに リモート デバッグ Android デバイスの使用|Microsoft Docs"  
-[DevToolsRemoteDebugDuoEmulator]: /microsoft-edge/devtools-guide-chromium/remote-debugging/surface-duo-emulator "はじめに Surface Duo エミュレーターの使用|Microsoft Docs"  
-[DevToolsRemoteDebugWindows]: /microsoft-edge/devtools-guide-chromium/remote-debugging/windows "Windows 10 デバイスのリモート デバッグの概要 | Microsoft Docs"  
-[DevToolsNetworkDetails]: /microsoft-edge/devtools-guide-chromium/network/index#inspect-the-details-of-the-resource "リソース リソースの詳細を調|Microsoft Docs"  
-[DevToolsNetworkLog]: /microsoft-edge/devtools-guide-chromium/network/index#log-network-activity "ネットワーク アクティビティのログ |Microsoft Docs"  
-[PwaIndex]: /microsoft-edge/progressive-web-apps-chromium/index "プログレッシブ Web Apps on Windows |Microsoft Docs"  
-<!--[DevtoolsWhatsNew201901Inspect]: /microsoft-edge/devtools-guide-chromium/whats-new/2019/01/devtools#inspect "Detailed tooltips in Inspect Mode - What's New In DevTools (Edge 73) | Microsoft Docs"  -->  
+[DevtoolsConsoleApiDir]: ../../../console/api.md#dir "dir - コンソール API リファレンス |Microsoft Docs"  
+[DevtoolsConsoleUtilitiesRecentlyChosenElementJavascriptObject]: ../../../console/utilities.md#recently-chosen-element-or-javascript-object "最近選択した要素または JavaScript オブジェクト - コンソール ユーティリティ API リファレンス |Microsoft Docs"  
+[DevtoolsCssReferenceColorPicker]: ../../../css/reference.md#change-colors-with-the-color-picker "カラー ピッカー - CSS リファレンス を使用して色を変更|Microsoft Docs"  
+[DevtoolsDrawer]: ../../../customize/index.md#drawer "ドロワー - カスタマイズの概要|Microsoft Docs"  
+[DevtoolsIndex]: ../../../index.md "Microsoft Edge (Chromium) 開発者ツール | Microsoft Docs"  
+[DevtoolsIssuesIndex]: ../../../issues/index.md "DevTools の [問題] タブの [Microsoft Edgeを検索して修正|Microsoft Docs"  
+[DevtoolsNetworkDetails]: ../../../network/index.md#inspect-the-details-of-the-resource "リソース リソースの詳細を調|Microsoft Docs"  
+[DevtoolsNetworkLog]: ../../../network/index.md#log-network-activity "ネットワーク アクティビティのログ |Microsoft Docs"  
+[DevtoolsRemoteDebugAndroid]: ../../../remote-debugging/index.md "はじめに リモート デバッグ Android デバイスの使用|Microsoft Docs"  
+[DevtoolsRemoteDebugDuoEmulator]: ../../../remote-debugging/surface-duo-emulator.md "はじめに Surface Duo エミュレーターの使用|Microsoft Docs"  
+[DevtoolsRemoteDebugWindows]: ../../../remote-debugging/windows.md "Windows 10 デバイスのリモート デバッグの概要 | Microsoft Docs"  
+
+[PwaIndex]: ../../../../progressive-web-apps-chromium/index.md "Windows 上のプログレッシブ Web アプリ | Microsoft Docs"  
+
+[DualScreensAndroidEmulator]: /dual-screen/android/use-emulator "Surface Duo エミュレーターを使用|Microsoft Docs"
 
 [AndroidEdge]: https://play.google.com/store/apps/details?id=com.microsoft.emmx "Microsoft EdgeAndroid アプリ"
 
@@ -332,7 +327,7 @@ Windows または macOS を使用している場合、[Microsoft Edge プレビ�
 [MDNRevert]: https://developer.mozilla.org/docs/Web/CSS/revert "元に戻す|MDN"  
 [MDNRevertBrowserCompatibility]: https://developer.mozilla.org/docs/Web/CSS/revert#Browser_compatibility "ブラウザーの互換性|MDN"  
 
-[VisualStudioCode]: https://code.visualstudio.com/ "Visual Studio Code"  
+[VisualStudioCodeMain]: https://code.visualstudio.com/ "Visual Studio Code"  
 [VisualStudioCodeShortcuts]: https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf "Visual Studio Code の Windows 用キーボード ショートカット"  
 
 [WebhintHintsAxeKeyboard]: https://webhint.io/docs/user-guide/hints/hint-axe/keyboard/ "Axe: キーボード |WebHint"  
@@ -344,7 +339,7 @@ Windows または macOS を使用している場合、[Microsoft Edge プレビ�
 [EdgeDevToolsTwitterAccount]: https://aka.ms/twitter/edgedevtools "@EdgeDevTools Twitter アカウント"  
 [GitHubMicrosoftDocsEdgeDeveloperNewIssue]: https://aka.ms/edgedevtoolsdocs/feedback "新しい問題 - MicrosoftDocs/edge-developer"  
 [MicrosoftEdgePreviewChannels]: https://aka.ms/microsoftedge "Microsoft Edgeプレビュー チャネル"  
-[TheWebWeWant]: https://aka.ms/webwewant "必要とされる Web"  
+[TheWebWeWantMain]: https://aka.ms/webwewant "必要とされる Web"  
 
 <!--[WebdevAppShortcuts]: https://alphabet-dev/app-shortcuts "Get things done quickly with app shortcuts | alphabet-dev"  -->  
 <!--[WebdevCls]: https://alphabet-dev/cls "Cumulative Layout Shift (CLS) | alphabet-dev"  -->  
@@ -364,4 +359,4 @@ Windows または macOS を使用している場合、[Microsoft Edge プレビ�
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
 [GoogleSitePolicies]: https://developers.google.com/terms/site-policies  
-[KayceBasques]: https://developers.google.com/web/resources/contributors/kaycebasques  
+[KayceBasques]: https://developers.google.com/web/resources/contributors#kayce-basques  

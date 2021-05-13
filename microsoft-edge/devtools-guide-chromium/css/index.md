@@ -1,18 +1,18 @@
 ---
-description: Microsoft Edge DevTools を使用してページの CSS を表示および変更する方法について説明します。
+description: DevTools を使用Microsoft Edgeページの CSS を表示および変更する方法について説明します。
 title: CSS の表示と変更の概要
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/12/2021
+ms.date: 05/04/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: b3d19d34f329fec7a3903fb37e8be3558ba4d31d
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: bc629286530e709bef0e04a671f1a0e56eee48ea
+ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11399093"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "11564449"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -27,14 +27,13 @@ ms.locfileid: "11399093"
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.  -->  
-
 # <a name="get-started-with-viewing-and-changing-css"></a>CSS の表示と変更の概要  
 
-Microsoft Edge DevTools を使用してページの CSS を表示および変更する基本を学習するには、次の対話型チュートリアルを実行します。  
+これらの対話型チュートリアルを完了して、DevTools を使用してページの CSS を表示および変更するMicrosoft Edgeします。  
 
 ## <a name="open-css-examples"></a>オープン CSS の例  
 
-1.  `Control`\(Windows,Linux\) または `Command` \(macOS\) を保持し **、[CSS の例**] を選択して新しいウィンドウを開きます。  
+1.  `Control`\(Windows、Linux\) または `Command` \(macOS\) を保持し **、[CSS の**例] を選択して新しいウィンドウを開きます。  
     
     [CSS の例][GlitchDevToolsCssExamples]  
     
@@ -185,9 +184,9 @@ CSS で定義したメディア クエリをデバッグまたはテストする
 
 <!-- links -->  
 
-[DevToolsCustomizePlacement]: /microsoft-edge/devtools-guide-chromium/customize/placement "Microsoft Edge DevTools の配置を変更する (Undock、Dock to Bottom、Dock to Left)"  
+[DevToolsCustomizePlacement]: /microsoft-edge/devtools-guide-chromium/customize/placement "DevTools Microsoft Edgeの配置を変更する (Undock、Dock to Bottom、Dock to Left)"  
 
-[GlitchDevToolsCssExamples]: https://microsoft-edge-chromium-devtools.glitch.me/static/css/examples/ecma.html "CSS の例 - Microsoft Edge (クロム) DevTools |Glitch"  
+[GlitchDevToolsCssExamples]: https://microsoft-edge-chromium-devtools.glitch.me/static/css/examples/ecma.html "CSS の例 - Microsoft Edge (Chromium) DevTools |Glitch"  
 
 [MDNUsingMediaGueries]: https://developer.mozilla.org/docs/Web/CSS/Media_Queries/Using_media_queries "メディア クエリの使用|MDN"  
 
@@ -201,4 +200,4 @@ CSS で定義したメディア クエリをデバッグまたはテストする
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
 [GoogleSitePolicies]: https://developers.google.com/terms/site-policies  
-[KayceBasques]: https://developers.google.com/web/resources/contributors/kaycebasques  
+[KayceBasques]: https://developers.google.com/web/resources/contributors#kayce-basques  

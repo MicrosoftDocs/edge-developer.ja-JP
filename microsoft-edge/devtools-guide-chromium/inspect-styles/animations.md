@@ -1,18 +1,18 @@
 ---
-description: Microsoft Edge DevTools アニメーション インスペクターを使用してアニメーションの検査と変更を行います。
+description: DevTools アニメーション インスペクターでアニメーションMicrosoft Edge変更します。
 title: アニメーションの検査
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 03/08/2021
+ms.date: 05/11/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: dba948087ca06015f686d17ba48584199373805a
-ms.sourcegitcommit: 4b9fb5c1176fdaa5e3c60af2b84e38d5bb86cd81
+ms.openlocfilehash: a695517cb56da057e62293b5ca92b22058602f44
+ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "11439543"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "11564218"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -27,16 +27,15 @@ ms.locfileid: "11439543"
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.  -->  
-
 # <a name="inspect-animations"></a>アニメーションの検査  
 
-Microsoft Edge DevTools アニメーション インスペクターを使用してアニメーションの検査と変更を行います。  
+DevTools アニメーション インスペクターでアニメーションMicrosoft Edge変更します。  
 
 :::image type="complex" source="../media/inspect-styles-elements-styles-drawer-animations-completed.msft.png" alt-text="アニメーション インスペクター" lightbox="../media/inspect-styles-elements-styles-drawer-animations-completed.msft.png":::
    アニメーション インスペクター  
 :::image-end:::  
 
-### <a name="summary"></a>まとめ  
+### <a name="summary"></a>要約  
 
 *   アニメーション インスペクターを開いてアニメーションをキャプチャします。  アニメーション インスペクターは、アニメーションを自動的に検出し、グループに並べ替える。  
 *   アニメーションを検査するには、各アニメーションの速度を低下したり、各アニメーションを再生したり、ソース コードを表示したりします。  
@@ -44,7 +43,7 @@ Microsoft Edge DevTools アニメーション インスペクターを使用し�
 
 ## <a name="overview"></a>概要  
 
-Microsoft Edge DevTools アニメーション インスペクターには、主に 2 つの目的があります。  
+DevTools Microsoft Edgeインスペクターには、主に 2 つの目的があります。  
 
 *   アニメーションの検査。  アニメーション グループのソース コードの速度を低下、再生、または検査する場合。  
 *   アニメーションの変更。  アニメーション グループのタイミング、遅延、期間、またはキーフレーム のオフセットを変更する場合。  ベジエ編集とキーフレーム編集は現在サポートされていません。  
@@ -56,7 +55,7 @@ Microsoft Edge DevTools アニメーション インスペクターには、主�
 アニメーション グループは、互いに関連付け合う可能性があるアニメーションのグループです。  現時点では、Web にはグループ アニメーションの実際の概念はないので、モーション デザイナーと開発者は、アニメーションが 1 つの一貫性のある視覚効果としてレンダリングするために、個々のアニメーションを作成して時間を取る必要があります。  アニメーション インスペクターは、開始時刻 \(遅延を除く、および on\) に基づいて関連するアニメーションを予測します。  アニメーション インスペクターは、アニメーションを並べてグループ化します。  
 つまり、同じスクリプト ブロックでトリガーされるアニメーションのセットがグループ化されます。  アニメーションが非同期の場合は、別のグループに配置されます。  
 
-## <a name="get-started"></a>使ってみる  
+## <a name="get-started"></a>作業の開始  
 
 アニメーション インスペクターを開く方法は 2 通りあります。  
 
@@ -66,11 +65,11 @@ Microsoft Edge DevTools アニメーション インスペクターには、主�
         
         :::image type="complex" source="../media/inspect-styles-elements-styles-more-tools-animations.msft.png" alt-text="メイン メニューを使用したアニメーション" lightbox="../media/inspect-styles-elements-styles-more-tools-animations.msft.png":::
            **メイン メニュー** を使用したアニメーション  
-    :::image-end:::  
+        :::image-end:::  
         
 *   コマンド メニュー **を開く**  
     1.  「`Drawer: Show Animations`」と入力します。  
-
+        
 [アニメーション インスペクタ] が [コンソール] ツールの横 **に開** きます。  アニメーション インスペクターはドロワー ツールですから、任意の DevTools パネルからアニメーション インスペクターを使用できます。  
 
 :::image type="complex" source="../media/inspect-styles-elements-styles-drawer-animations.msft.png" alt-text="空のアニメーションインスペクター" lightbox="../media/inspect-styles-elements-styles-drawer-animations.msft.png":::
@@ -168,11 +167,6 @@ Microsoft Edge DevTools アニメーション インスペクターには、主�
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
-<!-- image links -->  
-
-(../media/animation-speed-buttons-icon.msft.png): ../media/animation-speed-buttons-icon.msft.png  
-(../media/replay-button-icon.msft.png): ../media/replay-button-icon.msft.png  
-
 <!-- links -->  
 
 > [!NOTE]
@@ -185,4 +179,4 @@ Microsoft Edge DevTools アニメーション インスペクターには、主�
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
 [GoogleSitePolicies]: https://developers.google.com/terms/site-policies  
-[KayceBasques]: https://developers.google.com/web/resources/contributors/kaycebasques  
+[KayceBasques]: https://developers.google.com/web/resources/contributors#kayce-basques  

@@ -1,18 +1,18 @@
 ---
-description: Microsoft Edge DevTools を使用して、Web サイトの読み込み速度を向上させる方法を見つける方法について説明します。
-title: Microsoft Edge DevTools を使用して Web サイトの速度を最適化する
+description: DevTools で web サイトMicrosoft Edge読み込む方法を見つける方法について学習します。
+title: DevTools を使用して web サイトMicrosoft Edge最適化する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 03/08/2021
+ms.date: 05/04/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: e3ddadcf37303a476f3a656696b00f121f079b69
-ms.sourcegitcommit: 16e2f7232196a57a70b979bbf8b663774b7ddc20
+ms.openlocfilehash: 304cf9e36260b8637af38ed0dfe1ba91f3a56504
+ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2021
-ms.locfileid: "11519612"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "11564883"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -27,12 +27,11 @@ ms.locfileid: "11519612"
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  
    See the License for the specific language governing permissions and
    limitations under the License.  -->  
-
-# <a name="optimize-website-speed-with-microsoft-edge-devtools"></a>Microsoft Edge DevTools を使用して Web サイトの速度を最適化する  
+# <a name="optimize-website-speed-with-microsoft-edge-devtools"></a>DevTools を使用して web サイトMicrosoft Edge最適化する  
 
 ## <a name="goal-of-tutorial"></a>チュートリアルの目標  
 
-このチュートリアルでは、Microsoft Edge DevTools を使用して Web サイトの読み込み速度を向上させる方法について説明します。  
+このチュートリアルでは、DevTools Microsoft Edgeを使用して、Web サイトの読み込み速度を向上させる方法について説明します。  
 
 ## <a name="prerequisites"></a>前提条件  
 
@@ -78,13 +77,13 @@ ms.locfileid: "11519612"
        [デモ] タブ  
     :::image-end:::  
     
-1.  `Control` + `Shift` + `J` \(Windows, Linux\) または `Command` + `Option` + `J` \(macOS\) を選択します。  Microsoft Edge DevTools がデモと共に開きます。  
+1.  `Control` + `Shift` + `J` \(Windows Linux\) または `Command` + `Option` + `J` \(macOS\) を選択します。  Microsoft EdgeDevTools はデモと一緒に開きます。  
     
     :::image type="complex" source="../media/speed-glitch-tony-show-live-console.msft.png" alt-text="DevTools とデモ" lightbox="../media/speed-glitch-tony-show-live-console.msft.png":::
        DevTools とデモ  
     :::image-end:::  
     
-このチュートリアルの残りのスクリーンショットについては、DevTools が別のウィンドウに表示されます。  `Control` + `Shift` + `P` \(Windows, Linux\) または `Command` + `Shift` + `P` \(macOS\) `Undock` **** を選択してコマンド メニューを開き、入力し、[別のウィンドウにドッキング解除] を選択します。  
+このチュートリアルの残りのスクリーンショットについては、DevTools が別のウィンドウに表示されます。  `Control` + `Shift` + `P` \(Windows、Linux\) または `Command` + `Shift` + `P` \(macOS\) `Undock` **** を選択してコマンド メニューを開き、入力し、[別のウィンドウにドッキング解除] を選択します。  
 
 :::image type="complex" source="../media/speed-console.msft.png" alt-text="ドッキングされていない DevTools" lightbox="../media/speed-console.msft.png":::
    ドッキングされていない DevTools  
@@ -110,7 +109,7 @@ ms.locfileid: "11519612"
     *   **デバイス .**  [モバイル] **に設定** すると、ユーザー エージェント文字列が変更され、モバイル ビューポートがシミュレートされます。  デスクトップに **設定すると** 、モバイルの変更が **オフ** になります。  
     *   **監査**。  カテゴリをオフにし、[監査] パネル **で** これらの監査を実行し、それらの監査をレポートから除外します。  提供される推奨事項の種類を表示する場合は、他のカテゴリをオンのままにします。  カテゴリをオフにし、監査プロセスを少し高速化します。  
     *   **調整 .**  [ **シミュレートされた低速 4G] に設定すると、4 倍の CPU** スローダウンによって、モバイル デバイスでの一般的なブラウズ条件がシミュレートされます。  監査プロセス中に監査パネルが実際に調整されないので、"シミュレート" という名前が付きます。  代わりに、モバイル条件下でページの読み込みにかかる時間を余分に表示します。  一 **方、Applied...** の設定は、より長い監査プロセスのトレードオフを使用して、CPU とネットワークを実際に調整します。  
-    *   **ストレージをクリアします**。  チェック ボックスをオンにすると、すべての監査の前にページに関連付けられているすべての記憶域がクリアされます。  初めての訪問者がサイトを体験する方法を監査する場合は、この設定をオンのままにします。  繰り返し訪問エクスペリエンスが必要な場合は、この設定をオフにします。  
+    *   **[Storage] をStorage**します。  チェック ボックスをオンにすると、すべての監査の前にページに関連付けられているすべての記憶域がクリアされます。  初めての訪問者がサイトを体験する方法を監査する場合は、この設定をオンのままにします。  繰り返し訪問エクスペリエンスが必要な場合は、この設定をオフにします。  
     
 1.  [ **監査の実行] を選択します**。  10 ~ 30 秒後に、[ **監査** ] パネルにサイトのパフォーマンスのレポートが表示されます。  
     
@@ -120,7 +119,7 @@ ms.locfileid: "11519612"
     
 #### <a name="handling-report-errors"></a>レポート エラーの処理  
 
-監査パネル レポートでエラーが発生した場合は、他のタブが開いていない **InPrivate** ウィンドウからデモ タブを実行してみてください。  これにより、クリーンな状態から Microsoft Edge を実行できます。  特に Microsoft Edge Extensions は、多くの場合、監査プロセスに干渉します。  
+監査パネル レポートでエラーが発生した場合は、他のタブが開いていない **InPrivate** ウィンドウからデモ タブを実行してみてください。  これにより、クリーンな状態からMicrosoft Edge実行できます。  Microsoft Edge特に拡張機能は、多くの場合、監査プロセスに干渉します。  
 
 <!--todo: add screen capture for error in audit -->  
 <!--
@@ -137,7 +136,7 @@ ms.locfileid: "11519612"
    全体的なパフォーマンス スコア  
 :::image-end:::  
 
-[ **メトリック] セクション** には、サイトのパフォーマンスの定量測定値が表示されます。  各メトリックは、パフォーマンスの異なる側面に関する分析情報を提供します。  たとえば、First **Contentful Paint** は、コンテンツが最初に画面にペイントされる時期を示します。これは、ページの読み込みに対するユーザーの認識における重要なマイルストーンですが **、Time To Interactive** は、ページがユーザーの操作を処理するのに十分な準備ができている状態で表示されるポイントをマークします。  
+[ **メトリック] セクション** には、サイトのパフォーマンスの定量測定値が表示されます。  各メトリックは、パフォーマンスの異なる側面に関する分析情報を提供します。  たとえば **、First Contentful ペイント**は、コンテンツが最初に画面にペイントされる時期を示します。これは、ページの読み込みに対するユーザーの認識における重要なマイルストーンですが、Time **To Interactive**は、ページがユーザーの操作を処理するのに十分な準備ができていると表示されるポイントをマークします。  
 
 :::image type="complex" source="../media/speed-glitch-tony-remix-audits-performance-metrics-collapsed-highlighted.msft.png" alt-text="[メトリック] セクション" lightbox="../media/speed-glitch-tony-remix-audits-performance-metrics-collapsed-highlighted.msft.png":::
    [ **メトリック]** セクション  
@@ -507,7 +506,7 @@ ms.locfileid: "11519612"
 
 ユーザー タイミング API を使用すると、各フェーズにかかる時間を追跡するために、アプリのライフサイクルの特定のフェーズを任意にマークできます `console.log()` 。 [][MDNUserTimingApi]  
 
-## <a name="summary"></a>まとめ  
+## <a name="summary"></a>要約  
 
 *   サイトの読み込みパフォーマンスを最適化するために設定するたびに、常に監査を開始します。  監査はベースラインを確立し、改善方法に関するヒントを提供します。  
 *   一度に 1 つの変更を行い、変更後に Web ページを監査して、分離された変更がパフォーマンスに与える影響を表示します。  
@@ -546,4 +545,4 @@ ms.locfileid: "11519612"
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
 [GoogleSitePolicies]: https://developers.google.com/terms/site-policies  
-[KayceBasques]: https://developers.google.com/web/resources/contributors/kaycebasques  
+[KayceBasques]: https://developers.google.com/web/resources/contributors#kayce-basques  

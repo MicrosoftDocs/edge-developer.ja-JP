@@ -3,7 +3,7 @@ description: Microsoft Edge プライバシー ホワイトペーパー
 title: Microsoft Edge プライバシー ホワイトペーパー
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 04/20/2021
+ms.date: 05/11/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: Microsoft Edge、プライバシー、ホワイトペーパー、信頼
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 no-loc:
 - Cast
 - Google Cast
-ms.openlocfilehash: 52eb4e47ae70a222b24a70d5903f84e20058685b
-ms.sourcegitcommit: 1b1f099d9b0a8310784ccc8afd641e0708609602
+ms.openlocfilehash: ac07c968bbbf7f995018aa326a3f8781bda11e74
+ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2021
-ms.locfileid: "11496936"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "11564862"
 ---
 # <a name="microsoft-edge-privacy-whitepaper"></a>Microsoft Edge プライバシー ホワイトペーパー  
 
@@ -104,7 +104,7 @@ Microsoft Edge 開発者ツールは、Web サイトのデバッグとテスト�
 
 Microsoft は、診断データを使用して、製品とサービスを改善し、製品を安全で最新の状態に保ち、期待どおりのパフォーマンスを維持します。 私たちがデータを収集するときはいつでも、それがあなたにとって正しい選択であることを確認したいと思います。 Microsoft では情報コレクションの最小化が妥当であると考えて実施してます。 必要な情報のみを収集し、製品やサービスの改善に必要な期間のみ保存するよう努めています。 
 
-Microsoft Edge は、製品を安全に、最新の状態に保ち、適切に実行するために必要な一連の必須診断データを収集します。 必須診断データには、デバイス接続、構成情報、ソフトウェア セットアップ、インベントリ データなどのデータが含まれます。 Microsoft は、この必須診断データを使用して問題のトラブルシューティングを行い、Microsoft の製品とサービスの信頼性、安全性、および正常な動作を維持します。 管理対象デバイスの診断データの詳細については、「[組織内の Windows 診断データの構成][WindowsPrivacyConfigureDiagnosticDataOrganization]」および「[Microsoft Edge 診断データ グループ ポリシー](https://docs.microsoft.com/deployedge/microsoft-edge-enterprise-privacy-settings)」をご覧ください。 
+Microsoft Edge は、製品を安全に、最新の状態に保ち、適切に実行するために必要な一連の必須診断データを収集します。 必須診断データには、デバイス接続、構成情報、ソフトウェア セットアップ、インベントリ データなどのデータが含まれます。 Microsoft は、この必須診断データを使用して問題のトラブルシューティングを行い、Microsoft の製品とサービスの信頼性、安全性、および正常な動作を維持します。 管理対象デバイスの診断データの詳細については、「[組織内の Windows 診断データの構成][WindowsPrivacyConfigureDiagnosticDataOrganization]」および「[Microsoft Edge 診断データ グループ ポリシー](/deployedge/microsoft-edge-enterprise-privacy-settings)」をご覧ください。  
 
 :::image type="complex" source="./media/diagnostic-data2.png" alt-text="診断データ" lightbox="./media/diagnostic-data2.png":::
    診断データ  

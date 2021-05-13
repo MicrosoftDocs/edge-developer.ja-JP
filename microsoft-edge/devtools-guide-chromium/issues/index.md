@@ -1,18 +1,18 @@
 ---
 description: '[問題] ツールを使用して、Web サイトの問題を見つけて修正します。'
-title: Microsoft Edge DevTools の問題ツールの検索と修正
+title: DevTools の問題ツールの問題Microsoft Edge見つけて修正する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/12/2021
+ms.date: 05/04/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: e16bd926ea5bae35ad82f54ac5d1ae2028e3c59d
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: 64954d632416f7d1353269d04c1550ca7a0652b7
+ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11398976"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "11564183"
 ---
 <!-- Copyright Sam Dutton 
 
@@ -27,18 +27,17 @@ ms.locfileid: "11398976"
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.  -->  
+# <a name="find-and-fix-problems-with-the-microsoft-edge-devtools-issues-tool"></a>DevTools の問題ツールの問題Microsoft Edge見つけて修正する  
 
-# <a name="find-and-fix-problems-with-the-microsoft-edge-devtools-issues-tool"></a>Microsoft Edge DevTools の問題ツールの検索と修正  
-
-Microsoft **Edge** DevTools の Issues ツールを使用すると、コンソールの通知の疲労と煩雑さが軽減 **されます**。  Cookie の問題や混在コンテンツなど、ブラウザーによって検出された問題に対する解決策を見つける場合に使用します。  
+**DevTools の**問題ツールMicrosoft Edgeコンソールの通知の疲労と混乱を軽減**します**。  Cookie の問題や混在コンテンツなど、ブラウザーによって検出された問題に対する解決策を見つける場合に使用します。  
 
 > [!NOTE]
-> Microsoft Edge 84 では **、Issues** ツールは次の 3 種類の問題をサポートしています。  
+> 84 Microsoft Edgeでは **、Issues ツールは**次の 3 種類の問題をサポートしています。  
 > *   [Cookie の問題][MDNSameSiteCookies]  
 > *   [混在コンテンツ][MDNMixedContent]  
 > *   [COEP の問題][W3CCOEPSpec]
 > 
-> Microsoft Edge DevTools チームは、今後のバージョンの Microsoft Edge で、より多くの問題の種類をサポートする予定です。  
+> DevTools Microsoft Edgeでは、今後のバージョンの問題の種類をサポートする予定Microsoft Edge。  
 
 ## <a name="open-the-issues-tool-in-the-devtools-drawer"></a>DevTools ドロワーで [問題] ツールを開く  
 
@@ -123,7 +122,7 @@ Microsoft **Edge** DevTools の Issues ツールを使用すると、コンソ�
 [MDNSameSiteCookies]: https://developer.mozilla.org/docs/Web/HTTP/Headers/Set-Cookie/SameSite "SameSite cookie |MDN"  
 [MDNMixedContent]: https://developer.mozilla.org/docs/Web/Security/Mixed_content "混在コンテンツ |MDN"  
 
-[W3CCOEPSpec]: https://wicg.github.io/cross-origin-embedder-policy "クロスオリジン エンベダー ポリシー |Web インキュベーター コミュニティ グループ"  
+[W3CCOEPSpec]: https://wicg.github.io/cross-origin-embedder-policy "クロスオリジン エンベダー ポリシー |Web インキュベーター Community グループ"  
 
 > [!NOTE]
 > このページの一部の情報は、[Google によって作成および共有][GoogleSitePolicies]されている著作物に基づいており、[Creative Commons Attribution 4.0 International License][CCA4IL] に記載されている条項に従って使用されています。  
@@ -134,5 +133,5 @@ Microsoft **Edge** DevTools の Issues ツールを使用すると、コンソ�
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
 [GoogleSitePolicies]: https://developers.google.com/terms/site-policies  
-[KayceBasques]: https://developers.google.com/web/resources/contributors/kaycebasques  
-[SamDutton]: https://developers.google.com/web/resources/contributors/samdutton  
+[KayceBasques]: https://developers.google.com/web/resources/contributors#kayce-basques  
+[SamDutton]: https://developers.google.com/web/resources/contributors#sam-dutton  

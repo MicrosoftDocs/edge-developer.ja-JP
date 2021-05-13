@@ -1,18 +1,18 @@
 ---
 description: '[レンダリング] ツールを開き、[印刷時に CSS メディアをエミュレート>選択します。'
-title: Microsoft Edge DevTools を印刷プレビュー モードに強制する (CSS 印刷メディアの種類)
+title: DevTools Microsoft Edge印刷プレビュー モードに切り替えます (CSS 印刷メディアの種類)
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/12/2021
+ms.date: 05/04/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 0123b7abf475212304f654c04bc232e3e96f0bda
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: 6c49d956a9a7185b162ca8e2996e7b3e715b40ab
+ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11399079"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "11564428"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -27,8 +27,7 @@ ms.locfileid: "11399079"
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.  -->
-
-# <a name="force-microsoft-edge-devtools-into-print-preview-mode"></a>Microsoft Edge DevTools を印刷プレビュー モードに強制する  
+# <a name="force-microsoft-edge-devtools-into-print-preview-mode"></a>DevTools Microsoft Edge印刷プレビュー モードに切り替えます  
 
 印刷 [メディア クエリは、][MDNUsingMediaQueries] 印刷時のページの外観を制御します。  ページを印刷プレビュー モードに設定するには、次の方法を実行します。  
 
@@ -45,7 +44,7 @@ ms.locfileid: "11399079"
        印刷プレビュー モード  
     :::image-end:::  
     
-ここから、他の Web ページと同様に CSS を表示および変更できます。  [CSS の [表示と変更の開始] に移動します][DevToolsCSSGetStarted]。  
+ここから、他の Web ページと同様に CSS を表示および変更できます。  CSS の表示[とはじめにを使用して、ユーザー設定に移動します][DevToolsCSSGetStarted]。  
 
 ## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームと連絡を取る  
 
@@ -53,7 +52,7 @@ ms.locfileid: "11399079"
 
 <!-- links -->  
 
-[MicrosoftEdgeDevTools]: ../../devtools-guide-chromium/index.md "Microsoft Edge (クロム) 開発者向け|Microsoft Docs"  
+[MicrosoftEdgeDevTools]: ../../devtools-guide-chromium/index.md "Microsoft Edge (Chromium) 開発者ツール |Microsoft Docs"  
 [DevToolsCSSGetStarted]: ./index.md "CSS ファイルの表示と変更の|Microsoft Docs"  
 
 [MDNUsingMediaQueries]: https://developer.mozilla.org/docs/Web/CSS/Media_Queries/Using_media_queries "メディア クエリの使用|MDN"  
@@ -68,4 +67,4 @@ ms.locfileid: "11399079"
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
 [GoogleSitePolicies]: https://developers.google.com/terms/site-policies  
-[KayceBasques]: https://developers.google.com/web/resources/contributors/kaycebasques  
+[KayceBasques]: https://developers.google.com/web/resources/contributors#kayce-basques  

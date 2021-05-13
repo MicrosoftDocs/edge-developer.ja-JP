@@ -1,18 +1,18 @@
 ---
 description: '[ネットワーク条件] ツールを開き、[自動的に選択] を無効にし、リストから選択するか、カスタム文字列を入力します。'
-title: Microsoft Edge DevTools からユーザー エージェント文字列を上書きする
+title: DevTools からユーザー エージェント文字列をMicrosoft Edgeする
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/12/2021
+ms.date: 05/04/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: a0ba10b551b4853cf204656ca7a9fb014323986b
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: 50d831847342c749cd36f203998351d53325a6f8
+ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11398694"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "11564295"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -27,10 +27,9 @@ ms.locfileid: "11398694"
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.  -->
+# <a name="override-the-user-agent-string-from-microsoft-edge-devtools"></a>DevTools からユーザー エージェント文字列をMicrosoft Edgeする  
 
-# <a name="override-the-user-agent-string-from-microsoft-edge-devtools"></a>Microsoft Edge DevTools からユーザー エージェント文字列を上書きする  
-
-Microsoft Edge DevTools [から][MDNUserAgent] ユーザー エージェント文字列を上書きするには、次のコマンドを実行します。  
+DevTools[からユーザー エージェント][MDNUserAgent]文字列をMicrosoft Edgeするには、次のコマンドを実行します。  
 
 1.  `Control`+`Shift`+`P` \(Windows, Linux\) または `Command`+`Shift`+`P` \(macOS\) を選択して、**コマンド メニュー** を開きます。  
     
@@ -65,4 +64,4 @@ Microsoft Edge DevTools [から][MDNUserAgent] ユーザー エージェント�
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
 [GoogleSitePolicies]: https://developers.google.com/terms/site-policies  
-[KayceBasques]: https://developers.google.com/web/resources/contributors/kaycebasques  
+[KayceBasques]: https://developers.google.com/web/resources/contributors#kayce-basques  

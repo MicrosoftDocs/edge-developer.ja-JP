@@ -3,16 +3,16 @@ description: コンソールを開き、Live 式を作成し、式を document.a
 title: フォーカスされている要素を追跡する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 03/08/2021
+ms.date: 05/04/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 2c2040c690441fb33c802cf454dc7a1e3f33c494
-ms.sourcegitcommit: 4b9fb5c1176fdaa5e3c60af2b84e38d5bb86cd81
+ms.openlocfilehash: e7d7bc9ebf8dd891bf7531d8dd283801a01fc3c1
+ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "11439171"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "11564596"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -27,7 +27,6 @@ ms.locfileid: "11439171"
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.  -->  
-
 # <a name="track-which-element-has-focus"></a>フォーカスされている要素を追跡する  
 
 ページのキーボード ナビゲーションアクセシビリティをテストするとします。  キーを使用してページを移動すると、フォーカスのある要素が非表示のため、フォーカス リング `Tab` が表示されなくなる場合があります。  
@@ -68,4 +67,4 @@ DevTools でフォーカスされた要素を追跡するには、次のアク�
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
 [GoogleSitePolicies]: https://developers.google.com/terms/site-policies  
-[KayceBasques]: https://developers.google.com/web/resources/contributors/kaycebasques  
+[KayceBasques]: https://developers.google.com/web/resources/contributors#kayce-basques  

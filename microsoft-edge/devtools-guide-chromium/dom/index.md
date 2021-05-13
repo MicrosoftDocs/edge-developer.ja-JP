@@ -3,16 +3,16 @@ description: ノードの表示、ノードの検索、ノードの編集、コ�
 title: DOM の表示と変更の開始
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 03/08/2021
+ms.date: 05/04/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: e4c08fb2fd5f360f037502c04edabaabb873ba16
-ms.sourcegitcommit: 4b9fb5c1176fdaa5e3c60af2b84e38d5bb86cd81
+ms.openlocfilehash: 66078844730ebb22664c9ce89517511d7eb99ee7
+ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "11439241"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "11564288"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -27,16 +27,15 @@ ms.locfileid: "11439241"
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.  -->  
-
 # <a name="get-started-with-viewing-and-changing-the-dom"></a>DOM の表示と変更の開始  
 
-Microsoft Edge DevTools を使用してページの DOM を表示および変更する基本を学習するには、次の対話型チュートリアルを実行します。  
+これらの対話型チュートリアルを完了して、DevTools を使用してページの DOM を表示および変更するMicrosoft Edgeします。  
 
 このチュートリアルでは、DOM と HTML の違いを知っている必要があります。  説明については [、「付録: HTML と DOM」](#appendix-html-versus-the-dom) に移動します。  
 
 ## <a name="open-dom-examples"></a>オープン DOM の例  
 
-1.  `Control`\(Windows,Linux\) または `Command` \(macOS\) を保持し **、[DOM の例**] を選択して新しいタブを開きます。  
+1.  `Control`\(Windows、Linux\) または `Command` \(macOS\) を保持し **、[DOM の例**] を選択して新しいタブを開きます。  
     
     [DOM の例][GlitchDomExamples]  
     
@@ -69,7 +68,7 @@ Microsoft Edge DevTools を使用してページの DOM を表示および変更
             
 1.  [ **ノードの検査] で**、[東京] テキスト **を選択** します。  これで `<li>Tokyo</li>` 、DOM ツリーで強調表示されます。  
 
-ノードの検査は、ノードのスタイルを表示および変更する最初の手順です。  [CSS の [表示と変更の開始] に移動します][DevToolsCssGetStarted]。  
+ノードの検査は、ノードのスタイルを表示および変更する最初の手順です。  CSS の表示[とはじめにを使用して、ユーザー設定に移動します][DevToolsCssGetStarted]。  
 
 ### <a name="navigate-the-dom-tree-with-a-keyboard"></a>キーボードを使用して DOM ツリーを移動する  
 
@@ -112,7 +111,7 @@ DOM ツリーを表示すると、現在ビューポートに表示されてい�
 DOM ツリーは、文字列、CSS セレクター、または XPath セレクターで検索できます。  
 
 1.  [要素] ツールにカーソル **を移動** します。  
-1.  `Control` + `F` \(Windows, Linux\) または `Command` + `F` \(macOS\) を選択します。  DOM ツリーの下部に検索バーが開きます。  
+1.  `Control` + `F` \(Windows Linux\) または `Command` + `F` \(macOS\) を選択します。  DOM ツリーの下部に検索バーが開きます。  
 1.  「`The Moon is a Harsh Mistress`」と入力します。  最後の文は DOM ツリーで強調表示されます。  
     
     :::image type="complex" source="../media/dom-elements-highlighted-search-nodes-highlight.msft.png" alt-text="検索バーでクエリを強調表示する" lightbox="../media/dom-elements-highlighted-search-nodes-highlight.msft.png":::
@@ -216,7 +215,7 @@ DOM ツリーは、文字列、CSS セレクター、または XPath セレク�
 1.  [DOM の例を開きます](#open-dom-examples)。  
 1.  [ **ノードの削除] で、[Foundation]** を右クリック **し、[検査** ] を **選択します**。  
     1.  キーを選択 `Delete` します。  ノードが削除されます。  
-    1.  `Control` + `Z` \(Windows, Linux\) または `Command` + `Z` \(macOS\) を選択します。  最後のアクションは元に戻され、ノードが再び表示されます。  
+    1.  `Control` + `Z` \(Windows Linux\) または `Command` + `Z` \(macOS\) を選択します。  最後のアクションは元に戻され、ノードが再び表示されます。  
 
 ## <a name="access-nodes-in-the-console"></a>コンソールのノードにアクセスする  
 
@@ -262,7 +261,7 @@ DevTools には、コンソールから DOM ノードにアクセスしたり、
 1.  [DOM の例を開きます](#open-dom-examples)。  
 1.  [JS **パスのコピー]** で、兄弟 **Karamazov**にマウス ポインターを置き、コンテキスト メニュー \(右クリック\) を開き、[検査] を **選択します**。  
     1.  DOM ツリー `<li>The Brothers Karamazov</li>` でマウス ポインターを置き、コンテキスト メニュー \(右クリック\) を開き、[コピー JS パス]****  >  **を選択します**。  ノード `document.querySelector()` に解決される式がクリップボードにコピーされています。  
-    1.  `Control` + `V` \(Windows,Linux\) または \(macOS\) を選択して、式をコンソール `Command` + `V` に貼り付けます。  
+    1.  `Control` + `V` \(Windows、Linux\) または \(macOS\) を選択して、式をコンソール `Command` + `V` に貼り付けます。  
     1.  式 `Enter` を評価する場合に選択します。
         
         :::image type="complex" source="../media/dom-elements-highlighted-copy-js-path-console-query-selector.msft.png" alt-text="Copy JS Path 式の結果" lightbox="../media/dom-elements-highlighted-copy-js-path-console-query-selector.msft.png":::
@@ -318,7 +317,7 @@ DevTools を使用すると、JavaScript が DOM を変更するときにペー�
 
 これは、DevTools の DOM 関連の機能のほとんどをカバーしています。  他の機能を見つけるには、DOM ツリーのノードをホバーし、コンテキスト メニュー \(右クリック\) を開き、このチュートリアルで説明していない他のオプションを試します。  [要素] [パネルのキーボード ショートカットに移動します][DevToolsShortcutsElements]。  
 
-[Microsoft Edge DevTools][MicrosoftEdgeDevTools]のホームページを参照して、DevTools で実行できるその他の操作について説明します。  
+DevTools の[Microsoft Edgeをチェックして、DevTools][MicrosoftEdgeDevTools]で行えるその他のすべてを見つめ出してください。  
 
 <!--Navigate to [Community](../index#community) if you want to contact the DevTools team or get help from the DevTools community.  -->  
 
@@ -420,10 +419,10 @@ This is a continuation of the [Scroll into view](#scroll-into-view) section.  Fo
 <!-- links -->  
 
 [MicrosoftEdgeDevTools]: ../../devtools-guide-chromium/index.md "Microsoft Edge \(Chromium\) Developer Tools |Microsoft Docs"  
-[DevToolsCssGetStarted]: ../css/index.md "CSS の表示と変更の開始|Microsoft Docs"  
-[DevToolsShortcutsElements]: ../shortcuts/index.md#elements-tool-keyboard-shortcuts "要素ツールのキーボード ショートカット - Microsoft Edge DevTools キーボード ショートカット |Microsoft Docs"  
+[DevToolsCssGetStarted]: ../css/index.md "はじめにCSS の表示と変更を使用|Microsoft Docs"  
+[DevToolsShortcutsElements]: ../shortcuts/index.md#elements-tool-keyboard-shortcuts "要素ツールのキーボード ショートカット - DevTools Microsoft Edge キーボード ショートカット |Microsoft Docs"  
 
-[GlitchDomExamples]: https://microsoft-edge-chromium-devtools.glitch.me/static/dom "Microsoft Edge (クロム) DevTools DOM の例 |Glitch"
+[GlitchDomExamples]: https://microsoft-edge-chromium-devtools.glitch.me/static/dom "Microsoft Edge (Chromium) DevTools DOM の例 |Glitch"
 
 [MDNIntroductionToDOM]: https://developer.mozilla.org/docs/Web/API/Document_Object_Model/Introduction "DOM の概要|MDN"  
 
@@ -437,4 +436,4 @@ This is a continuation of the [Scroll into view](#scroll-into-view) section.  Fo
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
 [GoogleSitePolicies]: https://developers.google.com/terms/site-policies  
-[KayceBasques]: https://developers.google.com/web/resources/contributors/kaycebasques  
+[KayceBasques]: https://developers.google.com/web/resources/contributors#kayce-basques  

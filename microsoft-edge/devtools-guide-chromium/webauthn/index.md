@@ -3,26 +3,26 @@ description: DevTools で認証機能をエミュレートし、WebAuthn をMicr
 title: DevTools でオーセンティケーターをエミュレートし、webAuthn をMicrosoft Edgeする
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 12/11/2020
+ms.date: 05/04/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 3200f22485bfd642a37a7d34ac727b8da4500d06
-ms.sourcegitcommit: a35a6b5bbc21b7df61d08cbc6b074b5325ad4fef
+ms.openlocfilehash: d5eeedfaa98e56bbba81634685a223844803a1ad
+ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "11231182"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "11564036"
 ---
-# DevTools でオーセンティケーターをエミュレートし、webAuthn をMicrosoft Edgeする  
+# <a name="emulate-authenticators-and-debug-webauthn-in-microsoft-edge-devtools"></a>DevTools でオーセンティケーターをエミュレートし、webAuthn をMicrosoft Edgeする  
 
 Web サイトまたはアプリで物理認証機能を使用して Web 認証をデバッグする代わりに、Microsoft Edge DevTools の**WebAuthn**ツールを使用して、ソフトウェア ベースの仮想オーセンティケーターを作成して操作します。  
 
-## 始める前に  
+## <a name="before-you-begin"></a>始める前に  
 
 Web 認証を始めるのに最適な場所は [、Web 認証 API 仕様です][GithubW3cWebauthn]。  
 
-## WebAuthn ツールのセットアップ  
+## <a name="set-up-the-webauthn-tool"></a>WebAuthn ツールのセットアップ  
 
 1.  次のデモ Web サイトなど、WebAuthn を使用する Web ページに移動します。  
     
@@ -65,7 +65,7 @@ Web 認証を始めるのに最適な場所は [、Web 認証 API 仕様です][
    資格情報なし  
 :::image-end:::  
 
-## 新しい資格情報を登録する  
+## <a name="register-a-new-credential"></a>新しい資格情報を登録する  
 
 新しい資格情報を登録するには、次の手順を実行します。  新しい資格情報を登録するときに [Web 認証 API][GithubW3cWebauthn] が実行する操作の詳細については、「新しい資格情報の作成 [」に移動します][GithubW3cWebauthnSctnCreatecredential]。  
 
@@ -78,7 +78,7 @@ Web 認証を始めるのに最適な場所は [、Web 認証 API 仕様です][
     
 デモ Web サイトで、[認証] ボタン **を選択** します。  Credentials テーブル[内の資格情報の][GithubW3cWebauthnSctnSignCounter]Sign **** Count が 1 増加し、正常な[authenticatorGetAssertion][GithubW3cWebauthnAuthenticatorgetassertion]操作がマークされたことを確認します。  
 
-## 資格情報のエクスポートと削除  
+## <a name="export-and-remove-credentials"></a>資格情報のエクスポートと削除  
 
 資格情報をエクスポートまたは削除するには、[エクスポート] または [削除 **] ボタンを****選択**します。  
 
@@ -86,7 +86,7 @@ Web 認証を始めるのに最適な場所は [、Web 認証 API 仕様です][
    資格情報のエクスポートまたは削除  
 :::image-end:::  
 
-## オーセンティケーターの名前を変更する  
+## <a name="rename-an-authenticator"></a>オーセンティケーターの名前を変更する  
 
 オーセンティケーターの名前を変更するには、次の手順を実行します。  
 
@@ -97,7 +97,7 @@ Web 認証を始めるのに最適な場所は [、Web 認証 API 仕様です][
    オーセンティケーターの名前を変更する  
 :::image-end:::  
 
-## アクティブなオーセンティケーターを設定する  
+## <a name="set-the-active-authenticator"></a>アクティブなオーセンティケーターを設定する  
 
 新しく作成されたオーセンティケーターが自動的にアクティブ化されます。  別の仮想オーセンティケーターを使用するには、オーセン **ティケータの横にある [Active]** ラジオ ボタンを選択します。  
 
@@ -108,7 +108,7 @@ Web 認証を始めるのに最適な場所は [、Web 認証 API 仕様です][
    アクティブなオーセンティケーターを設定する  
 :::image-end:::  
 
-## 仮想オーセンティケーターを削除する  
+## <a name="remove-a-virtual-authenticator"></a>仮想オーセンティケーターを削除する  
 
 仮想オーセンティケータを削除するには、オーセンティケータの横にある [削除] ボタン **を選択** します。  
 
@@ -116,7 +116,7 @@ Web 認証を始めるのに最適な場所は [、Web 認証 API 仕様です][
    オーセンティケーターの削除  
 :::image-end:::  
 
-## Microsoft Edge DevTools チームと連絡を取る  
+## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームと連絡を取る  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
@@ -147,4 +147,4 @@ Web 認証を始めるのに最適な場所は [、Web 認証 API 仕様です][
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
 [GoogleSitePolicies]: https://developers.google.com/terms/site-policies  
-[JecelynYeen]: https://developers.google.com/web/resources/contributors/jecelynyeen  
+[JecelynYeen]: https://developers.google.com/web/resources/contributors#jecelyn-yeen  

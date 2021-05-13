@@ -3,16 +3,16 @@ description: このセクションでは、メモリ分析で使用される一�
 title: メモリの関連用語
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/12/2021
+ms.date: 05/04/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: c9659255e2bf0082cd1be3e6615c9d54c293b967
-ms.sourcegitcommit: 16e2f7232196a57a70b979bbf8b663774b7ddc20
+ms.openlocfilehash: 58b3ecde157b1c551b6c0cd435049ce221555519
+ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2021
-ms.locfileid: "11519311"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "11564771"
 ---
 <!-- Copyright Meggin Kearney 
 
@@ -27,7 +27,6 @@ ms.locfileid: "11519311"
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License. -->
-
 # <a name="memory-terminology"></a>メモリの関連用語  
 
 この記事では、メモリ分析で使用される一般的な用語について説明し、さまざまな言語のさまざまなメモリ プロファイリング ツールに適用できます。  
@@ -194,5 +193,5 @@ JavaScript ヒープ内に含めなかったものはネイティブ オブジ�
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
 [GoogleSitePolicies]: https://developers.google.com/terms/site-policies  
-[KayceBasques]: https://developers.google.com/web/resources/contributors/kaycebasques  
-[MegginKearney]: https://developers.google.com/web/resources/contributors/megginkearney
+[KayceBasques]: https://developers.google.com/web/resources/contributors#kayce-basques  
+[MegginKearney]: https://developers.google.com/web/resources/contributors#meggin-kearney

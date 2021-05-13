@@ -3,16 +3,16 @@ description: ユーザーは、対話的でスムーズなページを期待し�
 title: 実行時のパフォーマンスを分析する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/12/2021
+ms.date: 05/04/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 646db5b2e88e33b109e5eb3ae01a296bf3a4fb46
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: d5c37c188ae9038a7baafc936d2a02299def6366
+ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11398001"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "11564708"
 ---
 <!-- Copyright Kayce Basques and Meggin Kearney
 
@@ -27,12 +27,11 @@ ms.locfileid: "11398001"
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.  -->
-
 # <a name="analyze-runtime-performance"></a>実行時のパフォーマンスを分析する  
 
 ユーザーは、対話的でスムーズなページを期待しています。  ピクセル パイプラインの各ステージは、jank を導入する機会を表します。  ランタイムのパフォーマンスを低下させる一般的な問題を特定して修正するためのツールと戦略について説明します。  
 
-### <a name="summary"></a>まとめ  
+### <a name="summary"></a>要約  
 
 *   ブラウザーにレイアウトの再計算を強制的に適用する JavaScript を記述しない。  読み取り関数と書き込み関数を分離し、最初に読み取りを実行します。  
 *   CSS を複雑にし過ぎない。  CSS を少なくし、CSS セレクターをシンプルに保つ。  
@@ -148,15 +147,15 @@ JavaScript でかなりのジャンクに気が付く場合は、分析を次の
 
 <!--todo: add Avoid CSS that triggers layouts (Avoid large, complex layouts and layout thrashing) section when available -->  
 
-## <a name="paint-and-composite"></a>ペイントとコンポジット  
+## <a name="paint-and-composite"></a>ペイントコンポジット  
 
-ペイントは、ピクセル単位で塗り分けするプロセスです。  多くの場合、レンダリング プロセスの最もコストの高い部分です。  ページがデザイン通り動作していない場合は、ペイントの問題が発生している可能性があります。  
+ペイントは、ピクセル単位で入力するプロセスです。  多くの場合、レンダリング プロセスの最もコストの高い部分です。  ページがデザイン通り動作していない場合は、ペイントの問題が発生している可能性があります。  
 
 合成とは、ページの塗られた部分を画面に表示するための組み合わせて作成する場所です。  ほとんどの場合、コンポジター専用のプロパティに固執し、ペイントを完全に避ける場合は、パフォーマンスが大幅に向上しますが、過剰なレイヤー数に注意する必要があります。  <!--Navigate to [Stick to compositor-only properties and manage layer count][WebFundamentalsPerformanceRenderingCompositorOnlyProperties].  -->  
 
 <!--todo: add Stick to compositor-only properties and manage layer count section when available  -->  
 
-### <a name="paint-and-composite-tools"></a>ペイントとコンポジット: ツール  
+### <a name="paint-and-composite-tools"></a>ペイント合成: ツール  
 
 ペイントにかかる時間や、ペイントが発生する頻度を知りたがっていますか?  [パフォーマンス] [パネルの [高度なペイントインス][DevtoolsChromiumEvaluatePerformanceReferenceEnableadvancedpaintinstrumentation] トルメンテーションを有効にする] **設定を確認** し、録音を行います。  ほとんどのレンダリング時間がペイントに費やされている場合は、ペイントに問題があります。  
 
@@ -171,13 +170,13 @@ Check out the **Rendering** panel for further configurations that are able to he
 
 <!--todo: link Rendering panel in ../evaluate-performance/timeline-tool  sub-section when live  -->  
 
-### <a name="paint-and-composite-problems"></a>ペイントとコンポジット: 問題  
+### <a name="paint-and-composite-problems"></a>ペイント複合: 問題  
 
 次の表では、一般的なペイントとコンポジットの問題と潜在的な解決策について説明します。  
 
 | 問題 | 例 | ソリューション |  
 |:--- |:--- |:--- |  
-| 応答またはアニメーションに影響を与えるストームをペイントします。  | 応答やアニメーションに影響を与える大きなペイント領域または高価なペイント。  | ペイントを避け、独自のレイヤーに移動する要素を昇格し、変換と不透明度を使用します。  <!--Navigate to [Simplify paint complexity and reduce paint areas][WebFundamentalsPerformanceRenderingSimplifyPaintComplexity].  -->  |  
+| ペイントまたはアニメーションに影響を与える嵐。  | 応答やアニメーションに影響を与える大きなペイント領域または高価なペイント。  | ペイントを避け、独自のレイヤーに移動する要素を昇格し、変換と不透明度を使用します。  <!--Navigate to [Simplify paint complexity and reduce paint areas][WebFundamentalsPerformanceRenderingSimplifyPaintComplexity].  -->  |  
 | アニメーションに影響を与えるレイヤーの爆発。  | アニメーションのパフォーマンスに大きな影響を与える要素が多すぎます `translateZ(0)` 。  | レイヤーへの昇格は、重要な改善点を提供する場合にのみ行います。  <!--Navigate to [Stick to composite-only properties and manage layer count][WebFundamentalsPerformanceRenderingCompositorOnlyProperties].  -->  |  
 
 <!--todo: add Simplify paint complexity and reduce paint areas section when available  -->  
@@ -224,5 +223,5 @@ Check out the **Rendering** panel for further configurations that are able to he
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
 [GoogleSitePolicies]: https://developers.google.com/terms/site-policies  
-[KayceBasques]: https://developers.google.com/web/resources/contributors/kaycebasques  
-[MegginKearney]: https://developers.google.com/web/resources/contributors/megginkearney  
+[KayceBasques]: https://developers.google.com/web/resources/contributors#kayce-basques  
+[MegginKearney]: https://developers.google.com/web/resources/contributors#meggin-kearney  

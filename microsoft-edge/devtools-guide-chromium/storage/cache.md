@@ -1,18 +1,18 @@
 ---
-description: Microsoft Edge DevTools の [アプリケーション] パネルからキャッシュ データを表示する方法。
-title: Microsoft Edge DevTools を使用してキャッシュ データを表示する
+description: DevTools の [アプリケーション] パネルからキャッシュ データMicrosoft Edgeする方法。
+title: DevTools でキャッシュ データMicrosoft Edge表示する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 03/08/2021
+ms.date: 05/04/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 0ce4dbbf2456579abe84fca48bca8106384995dd
-ms.sourcegitcommit: 4b9fb5c1176fdaa5e3c60af2b84e38d5bb86cd81
+ms.openlocfilehash: 1f66419014682a316fa565c5ef2ab704f652637f
+ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "11439318"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "11564687"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -27,10 +27,9 @@ ms.locfileid: "11439318"
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.  -->
+# <a name="view-cache-data-with-microsoft-edge-devtools"></a>DevTools でキャッシュ データMicrosoft Edge表示する  
 
-# <a name="view-cache-data-with-microsoft-edge-devtools"></a>Microsoft Edge DevTools を使用してキャッシュ データを表示する  
-
-このガイドでは [、Microsoft Edge DevTools][MicrosoftEdgeDevTools] を使用してキャッシュ データを検査する方法 [について説明][MDNCache] します。  
+このガイドでは、DevTools でキャッシュ[データMicrosoft Edgeを][MicrosoftEdgeDevTools]調Microsoft Edge方法[を示][MDNCache]します。  
 
 [HTTP][MDNHTTPCaching]キャッシュ データを検査しようとしている場合、これは必要なガイドではありません。  ネットワーク ログの [ **サイズ** ] 列の情報を **探します**。  [ネットワーク アクティビティ [のログ記録] に移動します][DevtoolsNetworkLogActivity]。  
 
@@ -42,7 +41,7 @@ ms.locfileid: "11439318"
        [ **マニフェスト]** ウィンドウ  
     :::image-end:::  
     
-1.  [キャッシュ ストレージ **] セクションを展開** して、使用可能なキャッシュを表示します。  
+1.  [キャッシュ]**セクションStorage**を展開して、使用可能なキャッシュを表示します。  
     
     :::image type="complex" source="../media/storage-application-cache-storage.msft.png" alt-text="使用可能なキャッシュ" lightbox="../media/storage-application-cache-storage.msft.png":::
        使用可能なキャッシュ  
@@ -99,11 +98,11 @@ ms.locfileid: "11439318"
     
 ## <a name="delete-all-cache-data"></a>すべてのキャッシュ データを削除する  
 
-1.  [アプリケーション**クリア**  >  **ストレージ] を開きます**。  
-1.  [キャッシュ ストレージ] **チェック ボックスが有効** になっていることを確認します。  
+1.  [**アプリケーションの**  >  **クリア] Storage を開きます**。  
+1.  [キャッシュ の設定]**チェック Storage**が有効になっていることを確認します。  
     
-    :::image type="complex" source="../media/storage-application-clear-storage-cache-storage-checkbox.msft.png" alt-text="[キャッシュ ストレージ] チェック ボックス" lightbox="../media/storage-application-clear-storage-cache-storage-checkbox.msft.png":::
-       [ **キャッシュ ストレージ]** チェック ボックス  
+    :::image type="complex" source="../media/storage-application-clear-storage-cache-storage-checkbox.msft.png" alt-text="[キャッシュのStorage] チェック ボックス" lightbox="../media/storage-application-clear-storage-cache-storage-checkbox.msft.png":::
+       [**キャッシュのStorage]** チェック ボックス  
     :::image-end:::  
     
 1.  [サイト **データのクリア] を選択します**。  
@@ -118,7 +117,7 @@ ms.locfileid: "11439318"
 
 <!-- links -->  
 
-[MicrosoftEdgeDevTools]: ../../devtools-guide-chromium/index.md "Microsoft Edge (クロム) 開発者向け|Microsoft Docs"  
+[MicrosoftEdgeDevTools]: ../../devtools-guide-chromium/index.md "Microsoft Edge (Chromium) 開発者ツール |Microsoft Docs"  
 [DevtoolsNetworkLogActivity]: ../network/index.md#log-network-activity  "ネットワーク アクティビティのログ |Microsoft Docs"  
 
 [MDNCache]: https://developer.mozilla.org/docs/Web/API/Cache "キャッシュ |MDN"  
@@ -134,4 +133,4 @@ ms.locfileid: "11439318"
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
 [GoogleSitePolicies]: https://developers.google.com/terms/site-policies  
-[KayceBasques]: https://developers.google.com/web/resources/contributors/kaycebasques  
+[KayceBasques]: https://developers.google.com/web/resources/contributors#kayce-basques  

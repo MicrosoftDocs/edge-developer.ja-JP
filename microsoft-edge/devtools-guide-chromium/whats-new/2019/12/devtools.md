@@ -3,16 +3,16 @@ description: アクセシビリティの向上、他の言語での DevTools の
 title: DevTools の新機能 (Microsoft Edge 80)
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 04/08/2021
+ms.date: 05/11/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 1388cbf62bd341837d92c51ad137f3909e60e476
-ms.sourcegitcommit: de75fda30bb8964e9a184228d068b4402ec59c3e
+ms.openlocfilehash: 58e5bf43720c7ba94a721804eb44d82ba657b599
+ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2021
-ms.locfileid: "11514397"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "11564995"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -217,7 +217,7 @@ Chromiumの問題[#1004193][CR1004193]
 
 ### <a name="improved-webassembly-debugging"></a>WebAssembly デバッグの改善  
 
-DevTools は [DWARF][DwarfHome]デバッグ標準のサポートを開始しました。つまり、コードのステップオーバー、ブレークポイントの設定、DevTools 内のソース言語でのスタック トレースの解決に対するサポートが強化されました。  
+DevTools は DWARF デバッグ標準のサポートを開始しました。つまり、コードのステップオーバー、ブレークポイントの設定、DevTools 内のソース言語でのスタック トレースの解決に対するサポートが強化されました。  
 
 <!-- [TODO: Add this link back] -->  
 <!--Check out [Improved WebAssembly debugging in Microsoft Edge DevTools][201912Webassembly] for the full story.  -->  
@@ -246,7 +246,7 @@ DevTools は [DWARF][DwarfHome]デバッグ標準のサポートを開始しま�
 *   検査されたリソースの下のリソースは、依存関係 **です**。  上のスクリーンショットでは `https://dc.services.visualstudio.com/v2/track` 、 の依存関係です `ai.2.min.js` 。  つまり、ネットワーク `ai.2.min.js` 要求が発生しました `https://dc.services.visualstudio.com/v2/track` 。  
 
 > [!NOTE]
-> イニシエーターと依存関係の情報にアクセスするには、ネットワーク リソースを保持してから `Shift` ホバリングします。  [イニシエータと [依存関係の表示] に移動します][DevToolsNetworkReferenceViewInitiatorsDependencies]。  
+> イニシエーターと依存関係の情報にアクセスするには、ネットワーク リソースを保持してから `Shift` ホバリングします。  [イニシエータと [依存関係の表示] に移動します][DevToolsNetworkReferenceDisplayInitiatorsDependencies]。  
 
 Chromium[問題#842488][CR842488]  
 
@@ -328,13 +328,13 @@ Windows または macOS を使用している場合、[Microsoft Edge プレビ�
 
 <!-- links -->  
 
-[DevToolsCommandMenuIndex]: /microsoft-edge/devtools-guide-chromium/command-menu/index "Microsoft Edge DevTools コマンド メニュー を使用してコマンドを実行する | Microsoft Docs"  
-[DevToolsCoverageIndex]: /microsoft-edge/devtools-guide-chromium/coverage/index "DevTools ページの [カバレッジ] ツールを使用して、使用されていない JavaScript および CSS Microsoft Edgeを|Microsoft Docs"  
-[DevToolsDeviceModeIndex]: /microsoft-edge/devtools-guide-chromium/device-mode/index#simulate-a-mobile-viewport "モバイル ビューポートをシミュレートする - デバイス モードでモバイル デバイスをシミュレートする (DevTools Microsoft Edge) |Microsoft Docs"  
-[DevToolsNetworkIndex]: /microsoft-edge/devtools-guide-chromium/network/index "DevTools サーバーでネットワークMicrosoft Edgeを調|Microsoft Docs"  
-[DevToolsNetworkReferenceViewInitiatorsDependencies]: /microsoft-edge/devtools-guide-chromium/network/reference#view-initiators-and-dependencies "開始者と依存関係の表示 - ネットワーク分析リファレンス |Microsoft Docs"  
-[VisualStudioCodeDebuggerEdgeExtension]: /microsoft-edge/visual-studio-code/debugger-for-edge "デバッガーの拡張機能Microsoft Edge Visual Studio Codeの|Microsoft Docs"  
-[VisualStudioCodeElementEdgeExtension]: /microsoft-edge/visual-studio-code/elements-for-edge "拡張機能のMicrosoft Edge Visual Studio Code要素|Microsoft Docs"  
+[DevToolsCommandMenuIndex]: ../../../command-menu/index.md "Microsoft Edge DevTools コマンド メニュー を使用してコマンドを実行する | Microsoft Docs"  
+[DevToolsCoverageIndex]: ../../../coverage/index.md "DevTools ページの [カバレッジ] ツールを使用して、使用されていない JavaScript および CSS Microsoft Edgeを|Microsoft Docs"  
+[DevToolsDeviceModeIndex]: ../../../device-mode/index.md#simulate-a-mobile-viewport "モバイル ビューポートをシミュレートする - デバイス モードでモバイル デバイスをシミュレートする (DevTools Microsoft Edge) |Microsoft Docs"  
+[DevToolsNetworkIndex]: ../../../network/index.md "DevTools サーバーでネットワークMicrosoft Edgeを調|Microsoft Docs"  
+[DevToolsNetworkReferenceDisplayInitiatorsDependencies]: ../../../network/reference.md#display-initiators-and-dependencies "開始者と依存関係の表示 - ネットワーク分析リファレンス |Microsoft Docs"  
+[VisualStudioCodeDebuggerEdgeExtension]: ../../../../visual-studio-code/debugger-for-edge.md "デバッガーの拡張機能Microsoft Edge Visual Studio Codeの|Microsoft Docs"  
+[VisualStudioCodeElementEdgeExtension]: ../../../../visual-studio-code/elements-for-edge.md "拡張機能のMicrosoft Edge Visual Studio Code要素|Microsoft Docs"  
 
 <!--  [201912Webassembly]: webassembly.md "Improved WebAssembly debugging in Microsoft Edge DevTools"  -->  
 
@@ -350,7 +350,6 @@ Windows または macOS を使用している場合、[Microsoft Edge プレビ�
 
 [AccessibilityInsights]: https://aka.ms/a11yinsights "アクセシビリティインサイト"  
 
-[DwarfHome]: https://dwarfstd.org "Dwarf Home"  
 [GitHubGoogleChromeDevToolsAuditsPanelThrottling]: https://github.com/GoogleChrome/lighthouse/blob/master/docs/throttling.md#devtools-audits-panel-throttling "DevTools の監査パネル調整 - GoogleChrome/ライトハウス |GitHub"  
 [GitHubMicrosoftDocsEdgeDeveloperNewIssue]: https://aka.ms/edgedevtoolsdocs/feedback "新しい問題 - MicrosoftDocs/edge-developer"  
 [MicrosoftEdgePreviewChannels]: https://aka.ms/microsoftedge "Microsoft Edgeプレビュー チャネル"  
@@ -382,4 +381,4 @@ Windows または macOS を使用している場合、[Microsoft Edge プレビ�
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
 [GoogleSitePolicies]: https://developers.google.com/terms/site-policies  
-[KayceBasques]: https://developers.google.com/web/resources/contributors/kaycebasques  
+[KayceBasques]: https://developers.google.com/web/resources/contributors#kayce-basques  

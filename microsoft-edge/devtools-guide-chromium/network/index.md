@@ -3,16 +3,16 @@ description: Microsoft Edge DevTools の最も一般的なネットワーク関�
 title: Microsoft Edge DevTools でネットワーク アクティビティを検査する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 03/08/2021
+ms.date: 05/04/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: a4a552fa9a45267a6ffa4a4e83e7ebc4e1817162
-ms.sourcegitcommit: 4b9fb5c1176fdaa5e3c60af2b84e38d5bb86cd81
+ms.openlocfilehash: 63a0c8dc1d481ee3fba93146c2e2925bbdd07203
+ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "11439697"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "11565044"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -27,7 +27,6 @@ ms.locfileid: "11439697"
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  
    See the License for the specific language governing permissions and
    limitations under the License.  -->  
-
 # <a name="inspect-network-activity-in-microsoft-edge-devtools"></a>Microsoft Edge DevTools でネットワーク アクティビティを検査する  
 
 これは、最も一般的な DevTools 機能のいくつかの実践的なチュートリアルで、ページのネットワーク アクティビティの検査に関連しています。  
@@ -69,7 +68,7 @@ ms.locfileid: "11439697"
     :::image-end:::  
     -->
     
-1.  [DevTools を開く][DevToolsOpen]には `Control` + `Shift` + `J` 、[\(Windows, Linux\) または `Command` + `Option` + `J` \(macOS\) を選択します。  コンソール **ツールが** 開きます。  
+1.  [DevTools を開く][DevToolsOpen]には `Control` + `Shift` + `J` 、\(Windows Linux\) または `Command` + `Option` + `J` \(macOS\) を選択します。  コンソール **ツールが** 開きます。  
     
     :::image type="complex" source="../media/network-glitch-console.msft.png" alt-text="コンソール" lightbox="../media/network-glitch-console.msft.png":::
        **コンソール**  
@@ -308,7 +307,7 @@ DevTools には、タスクに直接関連していないリソースをフィ�
        CSS ファイルのみを表示する  
     :::image-end:::  
     
-1.  スクリプトも表示するには `Control` 、\(Windows、Linux\) または `Command` \(macOS\) を選択して保持し **、[JS] を選択します**。  
+1.  スクリプトも表示するには `Control` 、\(Windows、Linux\) または `Command` \(macOS\) を選択し **、JS**を選択します。  
     
     :::image type="complex" source="../media/network-glitch-network-filter-file-type-css-js.msft.png" alt-text="CSS と JS ファイルのみを表示する" lightbox="../media/network-glitch-network-filter-file-type-css-js.msft.png":::
        CSS と JS ファイルのみを表示する  
@@ -389,4 +388,4 @@ DevTools には、タスクに直接関連していないリソースをフィ�
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
 [GoogleSitePolicies]: https://developers.google.com/terms/site-policies  
-[KayceBasques]: https://developers.google.com/web/resources/contributors/kaycebasques  
+[KayceBasques]: https://developers.google.com/web/resources/contributors#kayce-basques  

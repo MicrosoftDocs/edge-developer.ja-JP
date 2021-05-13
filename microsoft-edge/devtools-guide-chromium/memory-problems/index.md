@@ -3,16 +3,16 @@ description: Microsoft Edgeと DevTools を使用して、メモリ リーク、
 title: メモリの問題を修正する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/12/2021
+ms.date: 05/04/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: afaea8ca561bd975490d9153cda40877786a0f08
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: 3b2405d23dd6ee349484c9ba66d195e3ed12144b
+ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11397833"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "11565030"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -27,12 +27,11 @@ ms.locfileid: "11397833"
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.  -->
-
 # <a name="fix-memory-problems"></a>メモリの問題を修正する  
 
 Microsoft Edgeと DevTools を使用して、メモリ リーク、メモリの大きさ、頻繁なガベージ コレクションなど、ページのパフォーマンスに影響するメモリの問題を見つける方法について説明します。  
 
-### <a name="summary"></a>まとめ  
+### <a name="summary"></a>要約  
 
 *   ブラウザー タスク マネージャーでページが現在使用しているメモリMicrosoft Edge確認します。  
 *   [メモリ] パネルを使用して、時間の間にメモリ使用量 **を視覚化** します。  
@@ -263,4 +262,4 @@ DevTools は、関数別のメモリ割り当ての内訳を示します。  既
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
 [GoogleSitePolicies]: https://developers.google.com/terms/site-policies  
-[KayceBasques]: https://developers.google.com/web/resources/contributors/kaycebasques  
+[KayceBasques]: https://developers.google.com/web/resources/contributors#kayce-basques  

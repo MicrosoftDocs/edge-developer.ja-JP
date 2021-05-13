@@ -3,16 +3,16 @@ description: 3D ビュー、Visual Studio、Microsoft Edgeとの統合など。
 title: DevTools の新機能 (Microsoft Edge 81)
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 04/08/2021
+ms.date: 05/04/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: ddd48b78c59e26edc9bca159f5ddf684015ae980
-ms.sourcegitcommit: de75fda30bb8964e9a184228d068b4402ec59c3e
+ms.openlocfilehash: 03b17f524e9be55e1ed37147ce46b7a15fc3a17d
+ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2021
-ms.locfileid: "11514411"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "11564960"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -104,7 +104,7 @@ Chromium[の問題][CR963183]#963183
 
 DevTools は、 で使用する言語と自動的にMicrosoft Edge一致します `edge://settings/languages` 。  
 
-1 つの言語Microsoft Edge DevTools を英語で残す場合は、DevTools で [英語] を選択して、設定 を開き、ブラウザー言語の一致を `F1` **無効にします**。 [][Settings]  
+1 つの言語Microsoft Edge DevTools を英語で残す場合は、DevTools で [英語] を選択して、設定 を開き、ブラウザー言語の一致を `F1` **無効にします**。 [][DevtoolsCustomizeIndexSettings]  
 
 :::image type="complex" source="../../images/2020/01/localized-devtools.msft.png" alt-text="ドイツ語の DevTools" lightbox="../../images/2020/01/localized-devtools.msft.png":::
    ドイツ語の DevTools  
@@ -182,7 +182,7 @@ DevTools チームは、テキスト エディター Visual Studio Code [][Visua
    Visual Studio、開発、またはベータ版で Web アプリを起動するMicrosoft Edgeオプションを使用します。  
 :::image-end:::  
 
-[デバッグの詳細については、「Microsoft Edge」をVisual Studio。][MicrosoftVisualStudio]  
+[デバッグの詳細については、「Microsoft Edge」をVisual Studio。][VisualStudioIndex]  
 
 ### <a name="tracking-prevention-console-messages"></a>追跡防止コンソール メッセージ  
 
@@ -200,13 +200,13 @@ DevTools チームは、テキスト エディター Visual Studio Code [][Visua
 
 ### <a name="moto-g4-support-in-device-mode"></a>デバイス モードでの Moto G4 のサポート  
 
-デバイス [ツールバーを有効にした][DeviceToolbar]後、デバイス リストから Moto G4 ビューポートの寸法を **シミュレート** します。  
+デバイス [ツールバーを有効にした][DevtoolsDeviceModeIndexSimulateMobileViewport]後、デバイス リストから Moto G4 ビューポートの寸法を **シミュレート** します。  
 
 :::image type="complex" source="../../images/2020/01/motog4.msft.png" alt-text="Moto G4 ビューポートのシミュレーション" lightbox="../../images/2020/01/motog4.msft.png":::
    Moto G4 ビューポートのシミュレーション  
 :::image-end:::  
 
-[ [デバイス フレームの表示] を][DeviceFrame] 選択して、ビューポートの周囲に Moto G4 ハードウェアを表示します。  
+[ [デバイス フレームの表示] を][DevtoolsDeviceModeIndexShowDeviceFrame] 選択して、ビューポートの周囲に Moto G4 ハードウェアを表示します。  
 
 :::image type="complex" source="../../images/2020/01/motog4frame.msft.png" alt-text="Moto G4 ハードウェアの表示" lightbox="../../images/2020/01/motog4frame.msft.png":::
    Moto G4 ハードウェアの表示  
@@ -214,8 +214,8 @@ DevTools チームは、テキスト エディター Visual Studio Code [][Visua
 
 関連する機能:  
 
-*   コマンド メニュー [を開き][CommandMenu] 、コマンドを実行 `Capture screenshot` して、Moto G4 ハードウェアを含むビューポートのスクリーンショットを撮ります (デバイス フレームの表示を **有効**にした後)。  
-*   [ネットワークと CPU を調整して][ThrottleNetworkAndCpu] 、モバイル ユーザーの Web ブラウズ条件をより正確にシミュレートします。  
+*   コマンド メニュー [を開き][DevtoolsCommandMenuIndex] 、コマンドを実行 `Capture screenshot` して、Moto G4 ハードウェアを含むビューポートのスクリーンショットを撮ります (デバイス フレームの表示を **有効**にした後)。  
+*   [ネットワークと CPU を調整して][DevtoolsDeviceModeIndexThrottleNetworkCpu] 、モバイル ユーザーの Web ブラウズ条件をより正確にシミュレートします。  
 
 Chromium[の問題][CR924693]#924693  
 
@@ -242,7 +242,7 @@ Chromiumの問題[#1026879][CR1026879]
 
 #### <a name="edit-all-cookie-values"></a>すべての Cookie 値を編集する  
 
-Cookie テーブル内のすべてのセルは、サイズ列のセルを除いて**** 編集可能になります。この列は Cookie のネットワーク サイズをバイト単位で表します。  各列の説明については、[フィールド] に [移動します][CookiesFields]。  
+Cookie テーブル内のすべてのセルは、サイズ列のセルを除いて**** 編集可能になります。この列は Cookie のネットワーク サイズをバイト単位で表します。  各列の説明については、[フィールド] に [移動します][DevtoolsStorageCookiesFields]。  
 
 :::image type="complex" source="../../images/2020/01/editcookie.msft.png" alt-text="Cookie 値の編集" lightbox="../../images/2020/01/editcookie.msft.png":::
    Cookie 値の編集  
@@ -294,7 +294,7 @@ Chromium[問題#985402][CR985402]
 
 ### <a name="setting-for-disabling-scrolling-past-the-end-of-a-file"></a>ファイルの末尾を過ぎたスクロールを無効にする設定  
 
-[[設定]][Settings]を開き、[**** 基本設定のソース] を無効にします ファイルの末尾をスクロールし、[ソース] パネルでファイルの最後までスクロールできる既定の  >  ****  >  **** UI**** 動作を無効にします。  
+[[設定]][DevtoolsCustomizeIndexSettings]を開き、[**** 基本設定のソース] を無効にします ファイルの末尾をスクロールし、[ソース] パネルでファイルの最後までスクロールできる既定の  >  ****  >  **** UI**** 動作を無効にします。  
 
 :::image type="complex" source="../../images/2020/01/settings.msft.png" alt-text="[ファイルの最後までスクロールを許可する] を無効にする" lightbox="../../images/2020/01/settings.msft.png":::
    [ファイル**の末尾をスクロールする]** を無効設定  
@@ -314,30 +314,31 @@ Windows または macOS を使用している場合、[Microsoft Edge プレビ�
 
 <!-- links -->  
 
-[DeviceToolbar]: /microsoft-edge/devtools-guide-chromium/device-mode/index#simulate-a-mobile-viewport "モバイル ビューポートをシミュレートする - デバイス モードでモバイル デバイスをシミュレートする (DevTools Microsoft Edge) |Microsoft Docs"
-[DeviceFrame]: /microsoft-edge/devtools-guide-chromium/device-mode/index#show-device-frame "デバイス フレームの表示 - デバイス モードでモバイル デバイスをシミュレートする (DevTools Microsoft Edge) |Microsoft Docs"
-[CommandMenu]: /microsoft-edge/devtools-guide-chromium/command-menu/index "Microsoft Edge DevTools コマンド メニュー を使用してコマンドを実行する | Microsoft Docs"  
-[ThrottleNetworkAndCpu]: /microsoft-edge/devtools-guide-chromium/device-mode/index#throttle-the-network-and-cpu "ネットワークと CPU の調整 - デバイス モードでモバイル デバイスをシミュレートする (DevTools Microsoft Edge) |Microsoft Docs"
-[Settings]: /microsoft-edge/devtools-guide-chromium/customize/index#settings "設定 - Microsoft Edge DevTools をカスタマイズする | Microsoft Docs"
-[MicrosoftVisualStudio]: /microsoft-edge/visual-studio/index "Visual Studio |Microsoft Docs"  
-[CookiesFields]: /microsoft-edge/devtools-guide-chromium/storage/cookies#fields "Fields - DevTools を使用して Cookie を表示Microsoft Edge削除|Microsoft Docs"  
+[DevtoolsDeviceModeIndexSimulateMobileViewport]: ../../../device-mode/index.md#simulate-a-mobile-viewport "モバイル ビューポートをシミュレートする - デバイス モードでモバイル デバイスをシミュレートする (DevTools Microsoft Edge) |Microsoft Docs"
+[DevtoolsDeviceModeIndexShowDeviceFrame]: ../../../device-mode/index.md#show-device-frame "デバイス フレームの表示 - デバイス モードでモバイル デバイスをシミュレートする (DevTools Microsoft Edge) |Microsoft Docs"
+[DevtoolsCommandMenuIndex]: ../../../command-menu/index.md "Microsoft Edge DevTools コマンド メニュー を使用してコマンドを実行する | Microsoft Docs"  
+[DevtoolsDeviceModeIndexThrottleNetworkCpu]: ../../../device-mode/index.md#throttle-the-network-and-cpu "ネットワークと CPU の調整 - デバイス モードでモバイル デバイスをシミュレートする (DevTools Microsoft Edge) |Microsoft Docs"
+[DevtoolsCustomizeIndexSettings]: ../../../customize/index.md#settings "設定 - Microsoft Edge DevTools をカスタマイズする | Microsoft Docs"
+[DevtoolsStorageCookiesFields]: ../../../storage/cookies.md#fields "Fields - DevTools を使用して Cookie を表示Microsoft Edge削除|Microsoft Docs"  
 
-[VisualStudioCodeDebuggerEdgeExtension]: /microsoft-edge/visual-studio-code/debugger-for-edge "デバッガーの拡張機能Microsoft Edge Visual Studio Codeする"  
-[VisualStudioCodeElementEdgeExtension]: /microsoft-edge/visual-studio-code/elements-for-edge "拡張機能のMicrosoft Edge Visual Studio Code"  
+[VisualStudioIndex]: ../../../../visual-studio/index.md "Visual Studio |Microsoft Docs"  
 
-[MicrosoftEdgePreviewChannels]: https://aka.ms/microsoftedge "Microsoft Edge プレビュー チャネル"  
+[VisualStudioCodeDebuggerEdgeExtension]: ../../../../visual-studio-code/debugger-for-edge.md "デバッガーの拡張機能Microsoft Edge Visual Studio Codeの|Microsoft Docs"  
+[VisualStudioCodeElementEdgeExtension]: ../../../../visual-studio-code/elements-for-edge.md "拡張機能のMicrosoft Edge Visual Studio Code要素|Microsoft Docs"  
 
-[VisualStudioCode]: https://aka.ms/vscode "Visual Studio Code"  
-[VisualStudioMarketplaceDebuggerEdge]: https://aka.ms/debugger4code "デバッガー for Microsoft Edge - Visual Studio Marketplace"  
-[VisualStudioMarketplaceElementsMicrosoftEdgeChromiumExtension]: https://aka.ms/elements4code "\Chromium(Microsoft Edge\) の要素 - Visual Studio Marketplace"  
-[VisualStudioMarketplaceWebhintExtension]: https://aka.ms/webhint4code "webhint - Visual Studio Marketplace"
+[MicrosoftEdgePreviewChannels]: https://www.microsoftedgeinsider.com/download "Microsoft Edge プレビュー チャネル"  
 
-[TrackingPrevention]: https://aka.ms/microsoftedge/tracking-prevention-blog "ブログ投稿での追跡防止Microsoft Edge改善"
+[VisualStudioCode]: https://code.visualstudio.com "Visual Studio Code"  
+[VisualStudioMarketplaceDebuggerEdge]: https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-edge "デバッガーのMicrosoft Edge |Visual StudioMarketplace"  
+[VisualStudioMarketplaceElementsMicrosoftEdgeChromiumExtension]: https://marketplace.visualstudio.com/items?itemName=ms-edgedevtools.vscode-edge-devtools "\(Microsoft Edge\) の要素Chromium\) |Visual StudioMarketplace"  
+[VisualStudioMarketplaceWebhintExtension]: https://marketplace.visualstudio.com/items?itemName=webhint.vscode-webhint "webhint |Visual StudioMarketplace"
 
-[MicrosoftEdgeInsiderAddons]: https://aka.ms/webhint/edge-extension "Microsoft EdgeInsider アドオン"  
-[MicrosoftVisualStudioDownloads]: https://aka.ms/vs/download "2019 Visual Studio 2019 for Windows & Mac をダウンロードする"  
+[TrackingPrevention]: https://blogs.windows.com/msedgedev/2019/12/03/improving-tracking-prevention-microsoft-edge-79 "ブログ投稿での追跡防止Microsoft Edge改善"
 
-[PostTweetEdgeDevTools]: https://aka.ms/tweet/edgedevtools "@EdgeDevTools | ツイートを投稿する"  
+[MicrosoftEdgeInsiderAddons]: https://microsoftedge.microsoft.com/addons/detail/webhint/mlgfbihcfnkaenjpdcngdnhcpkdmcdee "Microsoft EdgeInsider アドオン"  
+[MicrosoftVisualStudioDownloads]: https://visualstudio.microsoft.com/downloads "2019 Visual Studio 2019 for Windows & Mac をダウンロードする"  
+
+[PostTweetEdgeDevTools]: https://twitter.com/intent/tweet?text=@EdgeDevTools "@EdgeDevTools | ツイートを投稿する"  
 
 [CR924693]: https://crbug.com/924693 "機能要求: デバイス モード リストに Moto G4 を追加|Chromiumバグ"  
 [CR1030258]: https://crbug.com/1030258 "CR 1030258 |Chromiumバグ"  
@@ -350,18 +351,18 @@ Windows または macOS を使用している場合、[Microsoft Edge プレビ�
 
 [CSSContentDemo]: https://mathiasbynens.github.io/css-dbg-stories/css-escapes.html "エスケープされていない CSS コンテンツのデモ"  
 
-[GitHubMicrosoftDocsEdgeDeveloperNewIssue]: https://aka.ms/edgedevtoolsdocs/feedback "新しい問題 - Microsoft Docs/Edge Developer"  
+[GitHubMicrosoftDocsEdgeDeveloperNewIssue]: https://github.com/MicrosoftDocs/edge-developer/issues/new?title=[DevTools%20Docs%20Feedback] "新しい問題 - Microsoft Docs/Edge Developer"  
 
-[TheWebWeWant]: https://aka.ms/webwewant "必要な Web"  
-[AccessibilityInsights]: https://aka.ms/a11yinsights "アクセシビリティインサイト"  
+[TheWebWeWant]: https://webwewant.fyi "必要な Web"  
+[AccessibilityInsights]: https://accessibilityinsights.io "アクセシビリティインサイト"  
 [MDNDocumentObjectModel]: https://developer.mozilla.org/docs/Web/API/Document_Object_Model "ドキュメント オブジェクト モデル (DOM) |MDN"  
 [MDNZIndex]: https://developer.mozilla.org/docs/Web/CSS/z-index "z-index |MDN"  
-[EdgeDevToolsTwitterAccount]: https://aka.ms/twitter/edgedevtools "@EdgeDevTools Twitter アカウント"  
+[EdgeDevToolsTwitterAccount]: https://twitter.com/EdgeDevTools "@EdgeDevTools Twitter アカウント"  
 
-[Webhint]: https://aka.ms/webhint "webhint"  
+[Webhint]: https://webhint.io "webhint"  
 
-[WebhintBrowserExtension]: https://aka.ms/webhint/browser-extension "Webhint Browser Extension |webhint のドキュメント"  
-[WebhintVisualStudioCodeExtension]: https://aka.ms/webhint/code-extension "Webhint Visual Studio Code 拡張機能 |webhint のドキュメント"  
+[WebhintBrowserExtension]: https://webhint.io/docs/user-guide/extensions/extension-browser "Webhint Browser Extension |webhint のドキュメント"  
+[WebhintVisualStudioCodeExtension]: https://webhint.io/docs/user-guide/extensions/vscode-webhint "Webhint Visual Studio Code 拡張機能 |webhint のドキュメント"  
 
 > [!NOTE]
 > このページの一部は、 [Google によっ て作成および共有された][GoogleSitePolicies]作業に基づく変更で、「[Creative Commons Attribution 4.0 International License][CCA4IL]」で記載されている条項に従って使用されます。  
@@ -373,4 +374,4 @@ Windows または macOS を使用している場合、[Microsoft Edge プレビ�
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
 [GoogleSitePolicies]: https://developers.google.com/terms/site-policies  
-[KayceBasques]: https://developers.google.com/web/resources/contributors/kaycebasques  
+[KayceBasques]: https://developers.google.com/web/resources/contributors#kayce-basques  

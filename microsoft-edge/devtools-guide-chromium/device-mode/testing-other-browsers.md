@@ -3,16 +3,16 @@ description: 仕事は、サイトのパフォーマンスがユーザーと And
 title: 他のブラウザーをエミュレートしてテストする
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 04/06/2021
+ms.date: 05/04/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 22153a54df7c5b92236a745be8e3bbac9a52d247
-ms.sourcegitcommit: fa8bedfc83fbd1c4ce7bda8c69586c4f24007beb
+ms.openlocfilehash: f2ca56c2e15f578a970e6ceb84b1554bfda53862
+ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/07/2021
-ms.locfileid: "11481367"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "11564281"
 ---
 <!-- Copyright Meggin Kearney and Paul Bakaus
 
@@ -31,7 +31,7 @@ ms.locfileid: "11481367"
 
 仕事は、サイトのパフォーマンスがユーザーと Android の間でMicrosoft Edge終わるものではありません。  デバイス モードでは、iPhone などの他のデバイスの範囲をシミュレートすることができますが、他のブラウザーが提供するエミュレーションのソリューションを確認してください。  
 
-### <a name="summary"></a>まとめ  
+### <a name="summary"></a>要約  
 
 *   特定のデバイスがない場合や、何かのスポット チェックを行う場合は、ブラウザーの内部でデバイスをエミュレートする方法が最適です。  
 *   デバイス エミュレーターとシミュレーターを使用すると、ワークステーションからさまざまなデバイスで開発サイトを模倣できます。  
@@ -163,6 +163,6 @@ Microsoft Edge \(EdgeHTML\) 仮想マシン \(VM\) を使用すると、VirtualB
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
 [GoogleSitePolicies]: https://developers.google.com/terms/site-policies  
-[KayceBasques]: https://developers.google.com/web/resources/contributors/kaycebasques  
-[MegginKearney]: https://developers.google.com/web/resources/contributors/megginkearney  
-[PaulBakaus]: https://developers.google.com/web/resources/contributors/pbakaus  
+[KayceBasques]: https://developers.google.com/web/resources/contributors#kayce-basques  
+[MegginKearney]: https://developers.google.com/web/resources/contributors#meggin-kearney  
+[PaulBakaus]: https://developers.google.com/web/resources/contributors#paul-bakaus  

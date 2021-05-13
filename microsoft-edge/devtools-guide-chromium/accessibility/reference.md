@@ -1,18 +1,18 @@
 ---
-description: Microsoft Edge DevTools のアクセシビリティ機能の包括的な参照。
+description: DevTools のアクセシビリティ機能のMicrosoft Edge参照。
 title: アクセシビリティリファレンス
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 03/08/2021
+ms.date: 05/04/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: fce6dec3883cbcc758780a9fedb4c0fb2a8d0a4c
-ms.sourcegitcommit: 4b9fb5c1176fdaa5e3c60af2b84e38d5bb86cd81
+ms.openlocfilehash: a82dec6ffd7e3fb44143ea103fc9756afcd1a161
+ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "11439255"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "11564575"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -27,19 +27,18 @@ ms.locfileid: "11439255"
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.  -->  
-
 # <a name="accessibility-reference"></a>アクセシビリティリファレンス  
 
-このページは、Microsoft Edge DevTools のアクセシビリティ機能の包括的な参照です。  これは、次の Web 開発者を対象とします。  
+このページは、DevTools のアクセシビリティ機能のMicrosoft Edgeです。  これは、次の Web 開発者を対象とします。  
 
 *   DevTools を開く方法など、基本的な理解を深める必要があります。  
 *   アクセシビリティの原則 [とベスト プラクティスに精通しています][MDNAccessibility]。  
     
 この参照の目的は、ページのアクセシビリティを調べるのに役立つ DevTools で利用可能なすべてのツールを見つけるために役立ちます。  
 
-スクリーン リーダーのような支援テクノロジを使用して DevTools をナビゲートする際のヘルプを探している場合は [、「Navigateing Microsoft Edge DevTools With Assistive Technology」に移動します][DevtoolsAccessibilityNavigation]。  
+スクリーン リーダーのような支援テクノロジを使用して DevTools をナビゲートする際のヘルプを探している場合は、「Navigateing Microsoft Edge [DevTools][DevtoolsAccessibilityNavigation]with Assistive Technology 」に移動します。  
 
-## <a name="overview-of-accessibility-features-in-microsoft-edge-devtools"></a>Microsoft Edge DevTools のアクセシビリティ機能の概要  
+## <a name="overview-of-accessibility-features-in-microsoft-edge-devtools"></a>DevTools のアクセシビリティ機能Microsoft Edge概要  
 
 このセクションでは、DevTools がアクセシビリティ ツールキット全体に適合する方法について説明します。  
 
@@ -72,12 +71,12 @@ ms.locfileid: "11439255"
     :::image-end:::  
     
     > [!NOTE]
-    > このセクションのスクリーンショットは、Microsoft Edge バージョン 79 で撮影されました。  実行しているバージョンを確認できます `edge://version` 。  監査 **ツール** の UI は、以前のバージョンの Microsoft Edge では異なって見えますが、一般的なワークフローは同じです。  
+    > このセクションのスクリーンショットは、バージョン 79 でMicrosoft Edgeされました。  実行しているバージョンを確認できます `edge://version` 。  監査**ツール**の UI は、以前のバージョンのワークフローではMicrosoft Edge異なって見えますが、一般的なワークフローは同じです。  
     
 1.  [ **デバイス]** で、 **モバイル** デバイスをシミュレートする場合は[モバイル] を選択します。  このオプションは、ユーザー エージェントの文字列を変更し、ビューポートのサイズを変更します。  モバイル バージョンのページがデスクトップ バージョンとは異なる場合、このオプションは監査の結果に大きな影響を与える可能性があります。  
 1.  [監査 **] セクション** で、アクセシビリティが **有効になっているか** 確認します。  レポートから除外する場合は、他のカテゴリを無効にします。  ページの品質を向上させる他の方法を見つけしたい場合は、有効のままにします。  
 1.  [ **調整] セクション** では、負荷のパフォーマンスを分析するときに役立つネットワークと CPU を調整できます。  このオプションはアクセシビリティ スコアとは無関係である必要があります。そのため、必要に応じて使用できます。  
-1.  [ **ストレージのクリア]** チェック ボックスをオンにすると、ページを読み込む前にすべての記憶域をクリアしたり、ページ読み込みの間にストレージを保持することができます。  このオプションは、アクセシビリティ スコアとは無関係な場合も考え、必要に応じて使用できます。  
+1.  [**ページのStorage]** チェック ボックスをオンにすると、ページを読み込む前にすべての記憶域をクリアしたり、ページ読み込みの間にストレージを保持することができます。  このオプションは、アクセシビリティ スコアとは無関係な場合も考え、必要に応じて使用できます。  
 1.  [ **監査の実行] を選択します**。 10 ~ 30 秒後、DevTools はレポートを提供します。  レポートには、ページのアクセシビリティを向上させる方法に関するさまざまなヒントが示されています。  
     
     :::image type="complex" source="../media/accessibility-audits-run-audits-result.msft.png" alt-text="レポート" lightbox="../media/accessibility-audits-run-audits-result.msft.png":::
@@ -192,10 +191,10 @@ ARIA 属性を使用すると、ページの内容を適切に表現するため
 
 <!-- links -->  
 
-[DevtoolsAccessibilityNavigation]: ./navigation.md "支援テクノロジを使用して Microsoft Edge DevTools をナビゲート|Microsoft Docs"  
+[DevtoolsAccessibilityNavigation]: ./navigation.md "支援Microsoft Edgeを使用して DevTools を操作|Microsoft Docs"  
 [DevtoolsCssReferenceViewActuallyAppliedElements]: ../css/reference.md#view-only-the-css-that-is-actually-applied-to-an-element "要素に実際に適用される CSS のみを表示する - CSS リファレンス |Microsoft Docs"  
 
-[ChromeWebStoreAxe]: https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd?hl=en-US "axe - Web アクセシビリティ テスト - Chrome Web Store"  
+[ChromeWebStoreAxe]: https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd?hl=en-US "axe - Web アクセシビリティ テスト - Chrome ウェブストア"  
 
 [MDNAccessibilityTree]: https://developer.mozilla.org/docs/Glossary/AOM "アクセシビリティ ツリー (AOM) |MDN"  
 [MDNAccessibility]: https://developer.mozilla.org/docs/Web/Accessibility "アクセシビリティ |MDN"  
@@ -214,4 +213,4 @@ ARIA 属性を使用すると、ページの内容を適切に表現するため
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
 [GoogleSitePolicies]: https://developers.google.com/terms/site-policies  
-[KayceBasques]: https://developers.google.com/web/resources/contributors/kaycebasques  
+[KayceBasques]: https://developers.google.com/web/resources/contributors#kayce-basques  

@@ -3,16 +3,16 @@ description: DevTools Microsoft Edgeビューポートの下部または左側�
 title: DevTools Microsoft Edgeを変更する (Undock、Dock to bottom、Dock to left)
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 03/08/2021
+ms.date: 05/04/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: c4aca068c159f03b60bbf6d7643bb334a5b5a7f2
-ms.sourcegitcommit: 16e2f7232196a57a70b979bbf8b663774b7ddc20
+ms.openlocfilehash: 3c6dbf3e4a72b793997fcbe0970c88e4bee07caf
+ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2021
-ms.locfileid: "11519157"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "11564365"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -27,7 +27,6 @@ ms.locfileid: "11519157"
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.  -->
-
 # <a name="change-microsoft-edge-devtools-placement-undock-dock-to-bottom-dock-to-left"></a>DevTools Microsoft Edgeを変更する (Undock、Dock to bottom、Dock to left)  
 
 既定では、DevTools はビューポート (ウィンドウ) の右側にドッキングされます。  また、DevTools をウィンドウの下部または左側にドッキングしたり、DevTools を別のウィンドウにドッキング解除したりすることもできます。
@@ -119,4 +118,4 @@ DevTools は別のウィンドウにドッキング解除され、別のモニ�
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
 [GoogleSitePolicies]: https://developers.google.com/terms/site-policies  
-[KayceBasques]: https://developers.google.com/web/resources/contributors/kaycebasques  
+[KayceBasques]: https://developers.google.com/web/resources/contributors#kayce-basques  

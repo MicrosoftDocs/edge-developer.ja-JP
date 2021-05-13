@@ -1,18 +1,18 @@
 ---
 description: センサー ツールを開き、[位置情報] リストから座標を選択します。
-title: Microsoft Edge DevTools を使用して地理位置情報をオーバーライドする
+title: DevTools で地理Microsoft Edgeオーバーライドする
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/12/2021
+ms.date: 05/04/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 8f6ad09b2f8db110f6743aae32e16cc9b1185400
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: 5e162d5591dec4013a899a16b0c56fd09d58610f
+ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11399002"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "11564330"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -27,14 +27,13 @@ ms.locfileid: "11399002"
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.  -->
-
-# <a name="override-geolocation-with-microsoft-edge-devtools"></a>Microsoft Edge DevTools を使用して地理位置情報をオーバーライドする  
+# <a name="override-geolocation-with-microsoft-edge-devtools"></a>DevTools で地理Microsoft Edgeオーバーライドする  
 
 多くの Web サイトは、ユーザーに関連性の高いエクスペリエンスを提供するために、ユーザーの場所を利用します。  たとえば、天気予報 Web サイトでは、ユーザーが現在のユーザーの場所にアクセスするためのアクセス許可を Web サイトに付与した後、ユーザーの地域にローカル予測を表示できます。  
 
 <!--todo: add link to user location section when available -->  
 
-ユーザーの場所に応じて変更される UI を構築する場合は、サイトが世界中の異なる場所で正しく動作することを確認する必要があります。  Microsoft Edge DevTools で位置情報を上書きするには、次のアクションを実行します。  
+ユーザーの場所に応じて変更される UI を構築する場合は、サイトが世界中の異なる場所で正しく動作することを確認する必要があります。  DevTools で位置情報をMicrosoft Edgeするには、次の操作を実行します。  
 
 1.  `Control`+`Shift`+`P` \(Windows, Linux\) または `Command`+`Shift`+`P` \(macOS\) を選択して、**コマンド メニュー** を開きます。  
     
@@ -67,4 +66,4 @@ ms.locfileid: "11399002"
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
 [GoogleSitePolicies]: https://developers.google.com/terms/site-policies  
-[KayceBasques]: https://developers.google.com/web/resources/contributors/kaycebasques  
+[KayceBasques]: https://developers.google.com/web/resources/contributors#kayce-basques  

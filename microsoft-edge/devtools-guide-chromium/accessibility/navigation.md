@@ -1,18 +1,18 @@
 ---
-description: スクリーン リーダーのような支援テクノロジを使用して Microsoft Edge DevTools をナビゲートするガイド。
-title: 支援テクノロジを使用して Microsoft Edge DevTools を移動する
+description: スクリーン リーダーのような支援テクノロジMicrosoft Edge DevTools のナビゲーションに関するガイド。
+title: 支援Microsoft Edge DevTools のナビゲーション
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/12/2021
+ms.date: 05/04/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 343ce99188234b40dd8554e3db8bf303876e7b2f
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: cf2742dfb08ee482b26fe43417b7454e5b6ff809
+ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11398435"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "11564582"
 ---
 <!-- Copyright Rob Dodson 
 
@@ -27,10 +27,9 @@ ms.locfileid: "11398435"
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.  -->
+# <a name="navigate-microsoft-edge-devtools-with-assistive-technology"></a>支援Microsoft Edge DevTools のナビゲーション  
 
-# <a name="navigate-microsoft-edge-devtools-with-assistive-technology"></a>支援テクノロジを使用して Microsoft Edge DevTools を移動する  
-
-次の記事は、主にスクリーン リーダーのような支援テクノロジに依存しているユーザーが [Microsoft Edge DevTools][MicrosoftEdgeDevtoolsMain]にアクセスして使用するのに役立ちます。  [Microsoft Edge DevTools は][MicrosoftEdgeDevtoolsMain] 、Microsoft Edge ブラウザーに組み込まれています。Web 開発者向けツールのスイートです。  Web ページのアクセシビリティの向上に関連する DevTools 機能を探している場合は、[アクセシビリティ リファレンス] [に移動します][DevtoolsAccessibilityReference]。  
+次の記事は、主にスクリーン リーダーのような支援テクノロジに依存しているユーザーが DevTools にアクセスして使用Microsoft Edge[を目的とします][MicrosoftEdgeDevtoolsMain]。  [Microsoft Edge DevTools は][MicrosoftEdgeDevtoolsMain]、ブラウザーに組み込Microsoft Edgeです。  Web ページのアクセシビリティの向上に関連する DevTools 機能を探している場合は、[アクセシビリティ リファレンス] [に移動します][DevtoolsAccessibilityReference]。  
 
 DevTools のアクセシビリティは、進行中の作業です。  一部のパネルとタブは、他のパネルよりも支援技術に優れた機能を備えます。  このガイドでは、最もアクセスしやすいパネルについて説明し、途中で発生する可能性のある特定の問題について説明します。  
 
@@ -52,14 +51,14 @@ DevTools のアクセシビリティは、進行中の作業です。  一部の
 
 ## <a name="open-devtools"></a>DevTools を開く  
 
-開始するには、[Open Microsoft Edge DevTools][DevtoolsOpen]に移動します。  キーボード ショートカットまたはメニュー項目を使用して DevTools を開く方法は多数あります。  
+開始するには、[Open Microsoft Edge DevTools][DevtoolsOpen] に移動します。  キーボード ショートカットまたはメニュー項目を使用して DevTools を開く方法は多数あります。  
 
 ## <a name="navigate-between-panels"></a>パネル間を移動する  
 
 ### <a name="navigate-by-keyboard"></a>キーボードによる移動  
 
-*   DevTools を開いた後 `Control` + `]` 、\(Windows,Linux\) または `Command` + \(macOS\) を選択して、次のパネル `]` をフォーカスします。  
-*   `Control` + `[` \(Windows, Linux\) または `Command` + `[` \(macOS\) を選択して、前のパネルをフォーカスします。  
+*   DevTools を開いた後 `Control` + `]` 、\(Windows、Linux\) または \(macOS\) を選択して、次のパネル `Command` + `]` にフォーカスを設定します。  
+*   `Control` + `[` 前のパネルにフォーカスWindows \(Windows Linux\) または `Command` + `[` \(macOS\) を選択します。  
 *   パネルの `Shift` + `Tab` [ARIA][W3CWaiAriaTablist]タブリストにフォーカスを移動し、矢印キーを使用してパネルを変更することもできますが、前述のショートカットを使用する方が速い場合があります。  
 
 **既知の問題**  
@@ -71,7 +70,7 @@ DevTools のアクセシビリティは、進行中の作業です。  一部の
 
 特定のパネルをフォーカスするには、コマンド メニュー [を使用します][DevtoolsCommandMenuIndex]。  
 
-1.  DevTools を開いた後 `Control` + `Shift` + `P` 、\(Windows,Linux\) または `Command` + `Shift` + `P` \(macOS\) を選択してコマンド メニューを**開きます**。  
+1.  DevTools を開いた後 `Control` + `Shift` + `P` 、\(Windows、Linux\) または `Command` + `Shift` + `P` \(macOS\) を選択してコマンド メニューを**開きます**。  
     コマンド **メニューは** 、あいまい検索オートコンプリート コンボ ボックスです。  
 1.  開くパネルの名前を入力し、キーボードで正しいオプション `Down Arrow` に移動します。  
 1.  コマンド `Enter` を実行する場合に選択します。  
@@ -108,7 +107,7 @@ DevTools のアクセシビリティは、進行中の作業です。  一部の
 
 *   **DOM**ツリーのノードにフォーカスを置き、編集 `Enter` 可能にする場合に選択します。  
 *   属性値 `Tab` 間を移動する場合に選択します。  "スペース" と聞くと、空のテキスト入力の内側に新しい属性値を入力できます。  
-*   `Control` + `Enter` \(Windows, Linux\) または `Command` + \(macOS\) を選択して変更を受け入れ、要素の内容 `Enter` 全体を聞く。  
+*   `Control` + `Enter` \(Windows、Linux\) または `Command` + \(macOS\) を選択して変更を受け入れ、要素の内容 `Enter` 全体を確認します。  
 
 **既知の問題**  
 
@@ -118,7 +117,7 @@ DevTools のアクセシビリティは、進行中の作業です。  一部の
 
 *   **DOM**ツリーのノードにフォーカスを置き、編集 `Enter` 可能にする場合に選択します。  
 *   属性値 `Tab` 間を移動する場合に選択します。  たとえば、要素の名前が聞こえると、テキスト入力の内部にいて、要素の種類 `h2` が変更される可能性があります。  
-*   `Control` + `Enter` 変更を受け入れるには、\(Windows、Linux\) `Command` + `Enter` または \(macOS\) を選択します。  
+*   `Control` + `Enter` \(Windows Linux\) または `Command` + `Enter` \(macOS\) を選択して変更を受け入れる。  
 
 たとえば `h3` `Control` + `Enter` 、\(Windows、Linux\) または `Command` + `Enter` \(macOS\) を入力して選択すると、要素の開始タグと終了タグが `h3` 変更されます。  
 
@@ -278,5 +277,5 @@ DevTools のアクセシビリティは、進行中の作業です。  一部の
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
 [GoogleSitePolicies]: https://developers.google.com/terms/site-policies  
-[KayceBasques]: https://developers.google.com/web/resources/contributors/kaycebasques  
-[RobDodson]: https://developers.google.com/web/resources/contributors/robdodson  
+[KayceBasques]: https://developers.google.com/web/resources/contributors#kayce-basques  
+[RobDodson]: https://developers.google.com/web/resources/contributors#rob-dodson  

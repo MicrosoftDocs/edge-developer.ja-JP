@@ -1,18 +1,18 @@
 ---
-description: Microsoft Edge DevTools を開くすべての方法。
-title: Microsoft Edge DevTools を開く
+description: DevTools を開くすべてのMicrosoft Edgeします。
+title: DevTools Microsoft Edge開く
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/12/2021
+ms.date: 05/04/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 770a9d3e7a0eaaecf322d2ca847d971d1ad11b9a
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: f5e011edd9889f226d705e51838e5d73c2a3b98d
+ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11398267"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "11564736"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -27,17 +27,16 @@ ms.locfileid: "11398267"
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License. -->
+# <a name="open-microsoft-edge-devtools"></a>DevTools Microsoft Edge開く  
 
-# <a name="open-microsoft-edge-devtools"></a>Microsoft Edge DevTools を開く  
-
-さまざまなユーザーが DevTools UI の異なる部分に高速にアクセスする必要があるため、Microsoft Edge DevTools を開く方法は多数あります。  
+さまざまなユーザーが DevTools UI の異なる部分に高速にアクセスする必要がある場合Microsoft Edge DevTools を開く方法は多数あります。  
 
 ## <a name="open-the-elements-panel-to-inspect-the-dom-or-css"></a>要素パネルを開き、DOM または CSS を検査する  
 
 次の各タスクを使用すると、DOM ノードのスタイルまたは属性を調うことができます。
 
 *   要素にマウス ポインターを置き、コンテキスト メニュー \(右クリック\) を開き、[検査] を **選択します**。  
-*   `Control` + `Shift` + `C` \(Windows, Linux\) または `Command` + `Option` + `C` \(macOS\) を選択します。  詳細については [、「Microsoft Edge DevTools キーボード ショートカット」に移動します][DevtoolsShortcutsIndex]。  
+*   `Control` + `Shift` + `C` \(Windows Linux\) または `Command` + `Option` + `C` \(macOS\) を選択します。  詳細については、「DevTools キーボード[ショートカットMicrosoft Edgeに移動します][DevtoolsShortcutsIndex]。  
 
 :::image type="complex" source="../media/bing-right-click-inspect.msft.png" alt-text="[検査] オプション" lightbox="../media/bing-right-click-inspect.msft.png":::
    [ **検査]** オプション  
@@ -54,34 +53,34 @@ ms.locfileid: "11398267"
     1.  [DevTools を開きます](#open-microsoft-edge-devtools)。  
     1.  [コンソール] [ウィンドウを選択][DevtoolsConsoleIndex] します。  
 
-*   コンソール ウィンドウに直接移動[するには][DevtoolsConsoleIndex] `Control` + `Shift` + `J` 、[\(Windows,Linux\) または `Command` + `Option` + `J` \(macOS\) を選択します。  詳細については [、「Microsoft Edge DevTools キーボード ショートカット」に移動します][DevtoolsShortcutsIndex]。  
+*   コンソール ウィンドウに直接移動[するには][DevtoolsConsoleIndex] `Control` + `Shift` + `J` 、\(Windows Linux\) または `Command` + `Option` + `J` \(macOS\) を選択します。  詳細については、「DevTools キーボード[ショートカットMicrosoft Edgeに移動します][DevtoolsShortcutsIndex]。  
 
 <!--Navigate to [Get Started With The Console][ConsoleGetStarted].  -->
 
 ## <a name="open-the-previous-panel"></a>前のパネルを開く  
 
-開いた前のパネルに移動するには `Control` + `Shift` + `I` 、[\(Windows, Linux\) または `Command` + `Option` + `I` \(macOS\) を選択します。  詳細については [、「Microsoft Edge DevTools キーボード ショートカット」に移動します][DevtoolsShortcutsIndex]。  
+開いた前のパネルにジャンプするには `Control` + `Shift` + `I` 、\(Windows Linux\) または `Command` + `Option` + `I` \(macOS\) を選択します。  詳細については、「DevTools キーボード[ショートカットMicrosoft Edgeに移動します][DevtoolsShortcutsIndex]。  
 
-## <a name="open-microsoft-edge-devtools"></a>Microsoft Edge DevTools を開く  
+## <a name="open-microsoft-edge-devtools"></a>DevTools Microsoft Edge開く  
 
 DevTools を開く場合は、次のいずれかのオプションを使用します。  
 
-*   Microsoft Edge UI を使用します。  
+*   UI のMicrosoft Edge使用します。  
     
-    1.  [その他**のツール開発者ツール**] の [設定] > `...` \( \)**アイコン**  >   **を選択します**。  
+    1.  [その他**設定ツール開発者ツール**] から [\( `...` \) >**アイコンを**  >   **選択します**。  
     
 *   キーボードを使用します。  
-    *   または `F12` `Control` + `Shift` + `I` \(Windows,Linux\) `Command` + `Option` + `I` または \(macOS\) を選択します。  
+    *   または `F12` `Control` + `Shift` + `I` \(Windows Linux\) または `Command` + `Option` + `I` \(macOS\) を選択します。  
 
-詳細については [、「Microsoft Edge DevTools キーボード ショートカット」に移動します][DevtoolsShortcutsIndex]。  
+詳細については、「DevTools キーボード[ショートカットMicrosoft Edgeに移動します][DevtoolsShortcutsIndex]。  
 
-:::image type="complex" source="../media/bing-customize-more-tools-developer-tools-transparent.msft.png" alt-text="Microsoft Edge メイン メニューから DevTools を開く" lightbox="../media/bing-customize-more-tools-developer-tools-transparent.msft.png":::
-   Microsoft Edge メイン メニューから DevTools を開く  
+:::image type="complex" source="../media/bing-customize-more-tools-developer-tools-transparent.msft.png" alt-text="メイン メニューから DevTools Microsoft Edge開く" lightbox="../media/bing-customize-more-tools-developer-tools-transparent.msft.png":::
+   メイン メニューから DevTools Microsoft Edge開く  
 :::image-end:::  
 
 ## <a name="auto-open-devtools-on-every-new-tab"></a>新しいタブごとに DevTools を自動開く  
 
-新しいタブごとに DevTools を自動的に開くには、コマンド ラインから Microsoft Edge を開き、フラグを渡 `--auto-open-devtools-for-tabs` します。  
+新しいタブごとに DevTools を自動的に開Microsoft Edgeコマンド ラインから開き、フラグを渡 `--auto-open-devtools-for-tabs` します。  
 
 ### [<a name="cmd-windows"></a>CMD (Windows)](#tab/cmd-Windows/)  
 
@@ -121,7 +120,7 @@ microsoft-edge-dev --auto-open-devtools-for-tabs
 
 `F12`DevTools を開くキーボード ショートカット設定を変更するには、次の操作を実行します。  
 
-1.  [設定] のアイコン **を選択し、[設定]** の `...` [\( \) > **選択します**。  
+1.  アイコンを**選択し**、設定 \( `...` \) アイコンを選択 **>設定。**  
 1.  [ **検索の設定] に**「 」 と入力します `Developer Tools` 。  
     
     :::image type="complex" source="../media/settings-developer-tools-f12-on.msft.png" alt-text="[F12 キーが押された場合に DevTools を開く] 設定" lightbox="../media/settings-developer-tools-f12-on.msft.png":::
@@ -149,7 +148,7 @@ microsoft-edge-dev --auto-open-devtools-for-tabs
 <!-- links -->  
 
 [DevtoolsConsoleIndex]: ../console/index.md "コンソールの概要 | Microsoft Docs"  
-[DevtoolsShortcutsIndex]: ../shortcuts/index.md "Microsoft Edge DevTools キーボード ショートカット |Microsoft Docs"  
+[DevtoolsShortcutsIndex]: ../shortcuts/index.md "Microsoft EdgeDevTools キーボード ショートカット |Microsoft Docs"  
 
 <!--[ConsoleGetStarted]: /microsoft-edge/devtools-guide-chromium/console/get-started ""  -->  
 <!--[GetStartedCSS]: /microsoft-edge/devtools-guide-chromium/css "CSS"  -->
@@ -164,4 +163,4 @@ microsoft-edge-dev --auto-open-devtools-for-tabs
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
 [GoogleSitePolicies]: https://developers.google.com/terms/site-policies  
-[KayceBasques]: https://developers.google.com/web/resources/contributors/kaycebasques  
+[KayceBasques]: https://developers.google.com/web/resources/contributors#kayce-basques  

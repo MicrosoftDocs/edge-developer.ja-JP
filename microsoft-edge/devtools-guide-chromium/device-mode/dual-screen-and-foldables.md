@@ -1,22 +1,22 @@
 ---
-description: Microsoft Edge の仮想デバイスを使用して、デュアルスクリーンおよび折りたたみ可能なデバイス用の Web サイトを強化します。
-title: Microsoft Edge DevTools でデュアルスクリーンデバイスと折りたたみデバイスをエミュレートする
+description: デュアルスクリーンおよび折りたたみMicrosoft Edgeの Web サイトを強化するには、仮想デバイスを使用します。
+title: DevTools でデュアルスクリーンデバイスと折りたたみMicrosoft Edgeエミュレートする
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/02/2021
+ms.date: 05/04/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge, Web 開発, f12 ツール, devtools, エミュレーション, デバイス, シミュレーション, モバイル, デュアルスクリーン, 折りたたみ式, Surface Duo, Samsung Galaxy Fold
-ms.openlocfilehash: bc91c0b7c917d82f169dc7d47e047a587d505353
-ms.sourcegitcommit: 12c30ad4ab2664d17c9b7e9d59d7a3cda60ff65c
+ms.openlocfilehash: c3bd3296afa86d9d2c90c164bc3e9088bc043c3c
+ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "11313282"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "11564344"
 ---
-# Microsoft Edge DevTools でデュアルスクリーンデバイスと折りたたみデバイスをエミュレートする  
+# <a name="emulate-dual-screen-and-foldable-devices-in-microsoft-edge-devtools"></a>DevTools でデュアルスクリーンデバイスと折りたたみMicrosoft Edgeエミュレートする  
 
-Microsoft Edge バージョン 89 以降では、次のデュアルスクリーンデバイスと折りたたみ可能なデバイスをエミュレートできます。  
+バージョン Microsoft Edge 89 以降では、次のデュアルスクリーンデバイスと折りたたみ可能なデバイスをエミュレートできます。  
 
 *   [Surface Duo][SurfaceDevicesDuo]  
 *   [Samsung Galaxy Fold][SamsungMobileGalaxyFold]  
@@ -28,13 +28,13 @@ Microsoft Edge バージョン 89 以降では、次のデュアルスクリー�
     
 実験的な[Web プラットフォーム API](#turn-on-experimental-apis)を有効にし[、CSS][DualScreenDocsCssMedia]メディア画面にまたがる機能と[JavaScript getWindowSegments API][DualScreenDocsJSAPI]を使用して、デュアルスクリーンおよび折りたたみ可能なデバイス用の Web サイト \(または app\) を強化します。  
 
-:::image type="complex" source="../media/experiments-surface-duo-emulation.msft.png" alt-text="Microsoft Edge で Surface Duo をエミュレートする" lightbox="../media/experiments-surface-duo-emulation.msft.png":::  
-   Microsoft Edge で Surface Duo をエミュレートする  
+:::image type="complex" source="../media/experiments-surface-duo-emulation.msft.png" alt-text="[Surface Duo のエミュレート] Microsoft Edge" lightbox="../media/experiments-surface-duo-emulation.msft.png":::  
+   [Surface Duo のエミュレート] Microsoft Edge  
 :::image-end:::  
 
-## 実験的な API を有効にする  
+## <a name="turn-on-experimental-apis"></a>実験的な API を有効にする  
 
-CSS メディア画面 [スパン機能][DualScreenDocsCssMedia] と [JavaScript getWindowSegments API][DualScreenDocsJSAPI]を使用するには、Microsoft Edge で `Experimental Web Platform features` フラグをオンにします。  次の手順を実行します。  
+[CSS][DualScreenDocsCssMedia]メディア画面スパン機能と[JavaScript getWindowSegments API][DualScreenDocsJSAPI]を使用するには、次のページでフラグ `Experimental Web Platform features` をMicrosoft Edge。  次の手順を実行します。  
 
 1.  `edge://flags` に移動します。  
 1.  [検索フラグ **] テキスト**ボックスに「実験 Web プラットフォーム機能フラグ」と入力し、[無効] を [有効] `Experimental Web Platform features` **に****変更します**。 ****  
@@ -45,15 +45,15 @@ CSS メディア画面 [スパン機能][DualScreenDocsCssMedia] と [JavaScript
 :::image-end:::  
 
 > [!NOTE]
-> [CSS][DualScreenDocsCssMedia]メディア クエリまたは[JavaScript Windows セグメント][DualScreenDocsJSAPI]列挙 API を使用して Surface [Duo][SurfaceDevicesDuo]の Web サイトまたはアプリを**** 強化する場合は、Surface [Duo][SurfaceDevicesDuo]デバイスの Android [Microsoft Edge][GooglePlayMicrosoftEdge]アプリの [実験用 Web プラットフォーム機能] フラグもオンにする必要があります。  
+> [CSS][DualScreenDocsCssMedia]メディア クエリまたは[JavaScript Windows][DualScreenDocsJSAPI]セグメント列挙 API を使用して[Surface Duo][SurfaceDevicesDuo]の Web サイトまたはアプリを強化する場合**** は、Surface [Duo][SurfaceDevicesDuo]デバイスの[Android Microsoft Edge][GooglePlayMicrosoftEdge]アプリの [実験用 Web プラットフォーム機能] フラグもオンにする必要があります。  
 > 
-> [][SurfaceDevicesDuo]デスクトップ Microsoft [Edge][MicrosoftEdge]で [実験用**Web**プラットフォームの機能] フラグがオンになっていて[、Android][GooglePlayMicrosoftEdge]Microsoft Edge アプリでオフになっている場合、デスクトップ Microsoft Edge の Surface Duo エミュレーターでの Web サイトまたはアプリの動作が Surface Duo の Android Microsoft [Edge][GooglePlayMicrosoftEdge]アプリと一致しません。  フラグが Android とデスクトップの Microsoft Edge で一致し、デスクトップ Microsoft Edge で Surface Duo エミュレーターが正常に使用 [されたことを確認します][MicrosoftEdge]。  
+> デスクトップ****[Microsoft Edge][MicrosoftEdge]で実験的 Web プラットフォーム機能フラグがオンになっていて[、Android Microsoft Edge][GooglePlayMicrosoftEdge]アプリでオフになっている場合、デスクトップ Microsoft Edge の Surface Duo エミュレーターでの Web サイトまたはアプリの動作が Surface [Duo][SurfaceDevicesDuo]の[Android Microsoft Edge][GooglePlayMicrosoftEdge]アプリと一致しません。  フラグが Android とデスクトップ の間で一致Microsoft Edgeデスクトップ アプリで Surface Duo エミュレーターを正常に使用[Microsoft Edge。][MicrosoftEdge]  
 
-## 折りたたみおよびデュアルスクリーン デバイスでのテスト  
+## <a name="test-on-foldable-and-dual-screen-devices"></a>折りたたみおよびデュアルスクリーン デバイスでのテスト  
 
-Microsoft Edge のデュアルスクリーンの姿勢で [Surface Duo][SurfaceDevicesDuo] をエミュレートすると、シーム \(2 つの画面の間のスペース\) が Web サイトまたはアプリの上に描画されます。  
+Microsoft Edge のデュアルスクリーンの姿勢で[Surface Duo][SurfaceDevicesDuo]をエミュレートすると、web サイトまたはアプリの上にシーム \(2 つの画面の間のスペース\) が描画されます。  
 
-エミュレートされた表示は [、Surface][GooglePlayMicrosoftEdge] Duo での実行中に Web サイト \(または app\) が Microsoft Edge Android アプリでレンダリングする方法と [一致します][SurfaceDevicesDuo]。  縫い目に沿って表示するには、Web サイト \(または app\) を更新する必要があります。  Web サイト \(または app\) を継ぎ目に合わせる方法の詳細については、「縫い目を操作する方法」 [を参照してください][DualScreenIntroductionHowWorkSeam]。  
+エミュレートされた表示は、Surface Duo での実行中に web サイト \(または app\) が Microsoft Edge [Android][GooglePlayMicrosoftEdge]アプリでレンダリングする方法と[一致します][SurfaceDevicesDuo]。  縫い目に沿って表示するには、Web サイト \(または app\) を更新する必要があります。  Web サイト \(または app\) を継ぎ目に合わせる方法の詳細については、「縫い目を操作する方法」 [を参照してください][DualScreenIntroductionHowWorkSeam]。  
 
 デバイス [ツールバーには、][DevtoolsDeviceModeIndexSimulateMobileViewport] 複数の姿勢と向きで Web サイトやアプリをテストするのに役立つ追加機能があります。  ビューポート **を横向** き ![ に回転 ](../media/rotate-dark-icon.msft.png) するには、[回転]\(回転\) を選択します。 機能を Span \( **Span** \) と組み合わせて、単一画面または折りたたまれた姿勢とデュアルスクリーンまたは展開された姿勢を ![ ](../media/span-dark-icon.msft.png) 切り替えてください。  この機能を組み合わせて、4 つの可能なすべての姿勢と向きで Web サイトまたはアプリをテストできます。  
 
@@ -66,22 +66,22 @@ Microsoft Edge のデュアルスクリーンの姿勢で [Surface Duo][SurfaceD
 > [!NOTE]
 > 現在の既知の問題の一覧を次に示します。  
 > 
-> *   [Microsoft][RemoteDesktopClientDocs]リモート デスクトップ クライアントを使用してリモート PC に接続し[、Surface Duo][SurfaceDevicesDuo]または Samsung [Galaxy Fold][SamsungMobileGalaxyFold]をエミュレートすると、ポインターが揺れや吃音を発生する可能性があります。  問題が発生した場合は、フィードバック [を送信します](#getting-in-touch-with-the-microsoft-edge-devtools-team)。  
+> *   リモート PC に接続[Microsoft リモート デスクトップ][RemoteDesktopClientDocs]クライアントを使用して Surface Duo または[Samsung Galaxy][SurfaceDevicesDuo] [Fold][SamsungMobileGalaxyFold]をエミュレートすると、ポインターが揺れや吃音を発生する可能性があります。  問題が発生した場合は、フィードバック [を送信します](#getting-in-touch-with-the-microsoft-edge-devtools-team)。  
 
-## その他のリソース  
+## <a name="additional-resources"></a>その他のリソース  
 
 デュアルスクリーン デバイスの Web サイト \(または app\) の強化に役立つその他のリソースを次に示します。  
 
 *   デュアルスクリーン デバイスでの Web 開発の詳細については、「デュアルスクリーン Web エクスペリエンス [」に移動します][DualScreenWebIndex]。  
-*   Surface [Duo エミュレーターをインストールします][DualScreenAndroidUseEmulator]。  Surface Duo エミュレーターは、Microsoft Edge のエミュレーターとは異なります。Android を実行し [、Android Studio と統合します][AndroidDeveloperStudio]。  詳細については [、「Get the Surface Duo SDK」に移動します][DualScreenAndroidGetDuoSdk]。  
+*   Surface [Duo エミュレーターをインストールします][DualScreenAndroidUseEmulator]。  Surface Duo エミュレーターは、Microsoft Edgeのエミュレーターとは異なって、Android を実行し[、Android Studio と統合します][AndroidDeveloperStudio]。  詳細については [、「Get the Surface Duo SDK」に移動します][DualScreenAndroidGetDuoSdk]。  
 
-## Microsoft Edge DevTools チームと連絡を取る  
+## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームと連絡を取る  
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
 <!-- links -->  
 
-[DevtoolsDeviceModeIndexSimulateMobileViewport]: ../device-mode/index.md#simulate-a-mobile-viewport "Microsoft Edge DevTools アプリケーションでデバイス モードでモバイル デバイスをシミュレート|Microsoft Edge"  
+[DevtoolsDeviceModeIndexSimulateMobileViewport]: ../device-mode/index.md#simulate-a-mobile-viewport "DevTools アプリケーションでデバイス モードでモバイル Microsoft Edgeをシミュレート|Microsoft Edge"  
 
 [DualScreenWebIndex]: /dual-screen/web/index "デュアルスクリーン Web エクスペリエンス|Microsoft Docs"  
 [DualScreenAndroidGetDuoSdk]: /dual-screen/android/get-duo-sdk "Surface Duo エミュレーターの|Microsoft Docs"  
@@ -100,4 +100,4 @@ Microsoft Edge のデュアルスクリーンの姿勢で [Surface Duo][SurfaceD
 
 [GooglePlayMicrosoftEdge]: https://play.google.com/store/apps/details?id=com.microsoft.emmx "Microsoft Edge |Google Play"  
 
-[SamsungMobileGalaxyFold]: https://www.samsung.com/mobile/galaxy-fold/ "Galaxy Fold |Samsung"  
+[SamsungMobileGalaxyFold]: https://www.samsung.com/global/galaxy/galaxy-fold "Galaxy Fold |Samsung"  

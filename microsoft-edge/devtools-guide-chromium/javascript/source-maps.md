@@ -3,16 +3,16 @@ description: 結合、ミニファイ、またはコンパイルした後でも�
 title: 前処理されたコードをソース コードにマップする
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/12/2021
+ms.date: 05/04/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: c04d1ec02b188cc7ec8ab2598b395dbeb4431c46
-ms.sourcegitcommit: 16e2f7232196a57a70b979bbf8b663774b7ddc20
+ms.openlocfilehash: 3240e437a917dd7074a0584b91dcc6c34576ca24
+ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2021
-ms.locfileid: "11519416"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "11564050"
 ---
 <!-- Copyright Meggin Kearney and Paul Bakaus
 
@@ -27,12 +27,11 @@ ms.locfileid: "11519416"
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.  -->  
-
 # <a name="map-preprocessed-code-to-source-code"></a>前処理されたコードをソース コードにマップする  
 
 結合、ミニファイ、またはコンパイルした後でも、クライアント側のコードを読み取り可能でデバッグ可能な状態に保つ。  ソース マップを使用して、ソース コードをコンパイル済みコードにマップします。  
 
-### <a name="summary"></a>まとめ  
+### <a name="summary"></a>要約  
 
 *   ソース コードをマップソース コードにマップするには、ソース コードを使用します。  その後、元のソースでコンパイルされたコードを読み取り、デバッグできます。  
 *   ソース データを生成できるプリプロセッサのみを使用マップ。  
@@ -146,6 +145,6 @@ DevTools で Source マップを実行する場合、JavaScript がコンパイ�
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
 [GoogleSitePolicies]: https://developers.google.com/terms/site-policies  
-[KayceBasques]: https://developers.google.com/web/resources/contributors/kaycebasques  
-[MegginKearney]: https://developers.google.com/web/resources/contributors/megginkearney  
-[PaulBakaus]: https://developers.google.com/web/resources/contributors/pbakaus  
+[KayceBasques]: https://developers.google.com/web/resources/contributors#kayce-basques  
+[MegginKearney]: https://developers.google.com/web/resources/contributors#meggin-kearney  
+[PaulBakaus]: https://developers.google.com/web/resources/contributors#paul-bakaus  

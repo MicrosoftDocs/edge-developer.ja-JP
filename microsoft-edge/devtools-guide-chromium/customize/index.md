@@ -1,18 +1,18 @@
 ---
-description: Microsoft Edge DevTools をカスタマイズする方法の一覧
-title: Microsoft Edge DevTools のカスタマイズ
+description: DevTools をカスタマイズする方法Microsoft Edgeリスト
+title: DevTools Microsoft Edgeカスタマイズする
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/12/2021
+ms.date: 05/04/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 2b242fcb74b7c8cdbca2d523c55ab4e5eed56b45
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: 0be3219579794dca28f71e336da1154f31f2d2be
+ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11399041"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "11564386"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -27,19 +27,18 @@ ms.locfileid: "11399041"
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.  -->
+# <a name="customize-microsoft-edge-devtools"></a>DevTools Microsoft Edgeカスタマイズする  
 
-# <a name="customize-microsoft-edge-devtools"></a>Microsoft Edge DevTools のカスタマイズ  
-
-このページでは、Microsoft Edge DevTools をカスタマイズする方法を示します。  
+このページでは、DevTools をカスタマイズするMicrosoft Edge示します。  
 
 ## <a name="settings"></a>設定  
 
 **設定**  > **基本設定には**、DevTools をカスタマイズするための多くのオプションが含まれている。  
 
-[設定] を開く場合は、次のいずれかの操作を実行します。  
+ファイルを開設定、次のいずれかの操作を実行します。  
 
 *   `F1`DevTools がフォーカスされている間に選択します。  
-*   メイン メニューを **開き、[** 設定] を **選択します**。  
+*   [メイン メニュー **] を開**き、[メニュー]**を設定。**  
     
 :::image type="complex" source="../media/customize-settings-preferences.msft.png" alt-text="設定" lightbox="../media/customize-settings-preferences.msft.png":::
    **設定**  
@@ -89,7 +88,7 @@ ms.locfileid: "11399041"
 
 ## <a name="change-devtools-placement"></a>DevTools の配置を変更する  
 
-[[Microsoft Edge DevTools 配置] に移動します][DevToolsPlacement]。  
+[[DevTools Microsoft Edge] に移動します][DevToolsPlacement]。  
 
 :::image type="complex" source="../media/customize-dev-tools-dock-side.msft.png" alt-text="ドッキングされていない DevTools" lightbox="../media/customize-dev-tools-dock-side.msft.png":::
    ドッキングされていない DevTools  
@@ -111,7 +110,7 @@ DevTools 実験を有効にするには、次のアクションを実行しま�
 1.  [有効 **にする] を選択します**。  
 1.  ページ **の下部にある [今すぐ**再起動] を選択します。  
 
-次回 DevTools を開く場合は、[設定] に [実験] という名前 **の新しい** ページが表示 [されます](#settings)。  
+次回 DevTools を開く場合は、[**実験**] という名前の新しい[ページ](#settings)が [テスト] 設定。  
 
 ## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームに連絡する  
 
@@ -124,7 +123,7 @@ DevTools 実験を有効にするには、次のアクションを実行しま�
 <!-- links -->  
 
 [DevToolsPlacement]: ./placement.md "Microsoft Edge DevTools の配置を変更 | Microsoft Docs"  
-[DarkTheme]: ./dark-theme.md "Microsoft Edge DevTools サーバーで暗いテーマを有効|Microsoft Docs"  
+[DarkTheme]: ./dark-theme.md "DevTools サーバーで暗いMicrosoft Edgeを有効|Microsoft Docs"  
 
 > [!NOTE]
 > このページの一部は、 [Google によっ て作成および共有された][GoogleSitePolicies]作業に基づく変更で、「[Creative Commons Attribution 4.0 International License][CCA4IL]」で記載されている条項に従って使用されます。  
@@ -136,4 +135,4 @@ DevTools 実験を有効にするには、次のアクションを実行しま�
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
 [GoogleSitePolicies]: https://developers.google.com/terms/site-policies  
-[KayceBasques]: https://developers.google.com/web/resources/contributors/kaycebasques  
+[KayceBasques]: https://developers.google.com/web/resources/contributors#kayce-basques  

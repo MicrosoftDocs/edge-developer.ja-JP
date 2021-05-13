@@ -1,18 +1,18 @@
 ---
 description: コマンド メニューを開き、[JavaScript を無効にする] コマンドを実行します。
-title: Microsoft Edge DevTools で JavaScript を無効にする
+title: DevTools で JavaScript をMicrosoft Edgeする
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/12/2021
+ms.date: 05/04/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 665181b14e6fa5e86950a27822d52395f49f5b92
-ms.sourcegitcommit: 16e2f7232196a57a70b979bbf8b663774b7ddc20
+ms.openlocfilehash: c9b5605aff5680ff0f44386c4a69e4c9f7c08cc8
+ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2021
-ms.locfileid: "11519353"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "11564162"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -27,14 +27,13 @@ ms.locfileid: "11519353"
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.  -->
-
-# <a name="disable-javascript-with-microsoft-edge-devtools"></a>Microsoft Edge DevTools で JavaScript を無効にする  
+# <a name="disable-javascript-with-microsoft-edge-devtools"></a>DevTools で JavaScript をMicrosoft Edgeする  
 
 ブラウザーで JavaScript がサポートされていない場合の Web ページの表示方法を確認するには、JavaScript を一時的にオフにします。
 
 JavaScript をオフにした場合の Web ページの表示方法と動作を調べるには、次のアクションを実行します。  
 
-1.  [Microsoft Edge DevTools を開きます][DevToolsOpen]。  
+1.  [DevTools Microsoft Edge開きます][DevToolsOpen]。  
 1.  `Control`+`Shift`+`P` \(Windows, Linux\) または `Command`+`Shift`+`P` \(macOS\) を選択して、**コマンド メニュー** を開きます。  
     
     :::image type="complex" source="../media/javascript-console-command.msft.png" alt-text="コマンド メニュー" lightbox="../media/javascript-console-command.msft.png":::
@@ -80,4 +79,4 @@ JavaScript を再び有効にするには、次のアクションを実行しま
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
 [GoogleSitePolicies]: https://developers.google.com/terms/site-policies  
-[KayceBasques]: https://developers.google.com/web/resources/contributors/kaycebasques  
+[KayceBasques]: https://developers.google.com/web/resources/contributors#kayce-basques  

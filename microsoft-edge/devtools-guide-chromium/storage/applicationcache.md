@@ -1,18 +1,18 @@
 ---
-description: Microsoft Edge DevTools の [アプリケーション] パネルからアプリケーション キャッシュ データを表示する方法。
-title: Microsoft Edge DevTools を使用してアプリケーション キャッシュ データを表示する
+description: DevTools の [アプリケーション] パネルからアプリケーション キャッシュ データMicrosoft Edgeする方法。
+title: DevTools を使用してアプリケーション キャッシュ データMicrosoft Edge表示する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 12/11/2020
+ms.date: 05/04/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: cbe6623aa3132db4d01cd6b440702eb157525eed
-ms.sourcegitcommit: 16e2f7232196a57a70b979bbf8b663774b7ddc20
+ms.openlocfilehash: ec0d1a003e621ecc2220c3eb0d03992bcd8fffa1
+ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2021
-ms.locfileid: "11519143"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "11565023"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -27,13 +27,14 @@ ms.locfileid: "11519143"
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.  -->  
-
-# <a name="view-application-cache-data-with-microsoft-edge-devtools"></a>Microsoft Edge DevTools を使用してアプリケーション キャッシュ データを表示する  
+# <a name="view-application-cache-data-with-microsoft-edge-devtools"></a>DevTools を使用してアプリケーション キャッシュ データMicrosoft Edge表示する  
 
 > [!WARNING]
 > アプリケーション キャッシュ API が [Web プラットフォームから削除されています][HTMLStandardOfflineWebApplications]。  
 
-このガイドでは [、Microsoft Edge DevTools][MicrosoftEdgeDevTools] を使用してアプリケーション キャッシュ リソース [を検査する方法を示][MDNWebAPIsWindowApplicationCache] します。  
+<!--todo: Replace [HTMLStandardOfflineWebApplications] with [WebDevAppcacheRemoval].  -->  
+
+このガイドでは、アプリケーション キャッシュ リソースを調[Microsoft Edge DevTools][MicrosoftEdgeDevTools]を使用[する方法を示][MDNWebAPIsWindowApplicationCache]します。  
 
 ## <a name="view-application-cache-data"></a>アプリケーション キャッシュ データの表示  
 
@@ -81,6 +82,8 @@ ms.locfileid: "11519143"
 [MDNHTMLResourcesInAnApplicationCache]: https://developer.mozilla.org/docs/Web/HTML/Using_the_application_cache#Resources_in_an_application_cache "アプリケーション キャッシュ 内のリソース|MDN"  
 [MDNWebAPIsWindowApplicationCache]: https://developer.mozilla.org/docs/Web/API/Window/applicationCache "Window.applicationCache - Web API |MDN"  
 
+[WebDevAppcacheRemoval]: https://web.dev/appcache-removal "AppCache の削除の準備|web.dev"  
+
 > [!NOTE]
 > このページの一部は、 [Google によっ て作成および共有された][GoogleSitePolicies]作業に基づく変更で、「[Creative Commons Attribution 4.0 International License][CCA4IL]」で記載されている条項に従って使用されます。  
 > 元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/storage/applicationcache) にあり、 [Kayce Basques][KayceBasques] \(Chrome DevTools \& Lighthouse\ のテクニカル ライター) が作成しました。  
@@ -91,4 +94,4 @@ ms.locfileid: "11519143"
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
 [GoogleSitePolicies]: https://developers.google.com/terms/site-policies  
-[KayceBasques]: https://developers.google.com/web/resources/contributors/kaycebasques  
+[KayceBasques]: https://developers.google.com/web/resources/contributors#kayce-basques  

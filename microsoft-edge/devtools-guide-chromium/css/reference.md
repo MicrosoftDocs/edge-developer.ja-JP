@@ -3,16 +3,16 @@ description: DevTools で CSS を表示および変更するための新しい�
 title: CCS リファレンス
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 03/08/2021
+ms.date: 05/04/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: bddbf14e73f5c29bfd4757c9cd6d255f419c331f
-ms.sourcegitcommit: 16e2f7232196a57a70b979bbf8b663774b7ddc20
+ms.openlocfilehash: 0680b08c9809698c1db6c186a7be76a93c31df4b
+ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2021
-ms.locfileid: "11519332"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "11564477"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -27,7 +27,6 @@ ms.locfileid: "11519332"
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.  -->  
-
 # <a name="css-reference"></a>CCS リファレンス  
 
 CSS の表示と変更に関連する DevTools Microsoft Edgeの包括的な参照で、新しいワークフローを確認します。  
@@ -573,4 +572,4 @@ Color **Picker は** 、変更と宣言のための GUI `color` `background-colo
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
 [GoogleSitePolicies]: https://developers.google.com/terms/site-policies  
-[KayceBasques]: https://developers.google.com/web/resources/contributors/kaycebasques  
+[KayceBasques]: https://developers.google.com/web/resources/contributors#kayce-basques  

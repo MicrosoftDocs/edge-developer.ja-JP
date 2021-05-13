@@ -1,18 +1,18 @@
 ---
-description: Microsoft Edge DevTools デバッグ機能の包括的なリファレンスで、新しいデバッグ ワークフローについて説明します。
+description: DevTools デバッグ機能のこの包括的な参照で、新Microsoft Edgeワークフローを確認します。
 title: デバッガー機能の使用
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 03/08/2021
+ms.date: 05/04/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 6fb90a70e0aac9f556fa9f5f02afee1fd5b4962e
-ms.sourcegitcommit: 16e2f7232196a57a70b979bbf8b663774b7ddc20
+ms.openlocfilehash: 6b15d317d4c720ab5ad76b7047532df101f69376
+ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2021
-ms.locfileid: "11519605"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "11564127"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -27,12 +27,11 @@ ms.locfileid: "11519605"
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.  -->
-
 # <a name="use-the-debugger-features"></a>デバッガー機能の使用
 
-この記事では、コード行ブレークポイントを設定する方法など、Microsoft Edge DevTools でデバッガーを使用する方法について説明します。  他の種類のブレークポイントを設定するには、「ブレークポイントでコードを一 [時停止する」を参照してください][DevToolsJavascriptBreakpoints]。  
+この記事では、コード行ブレークポイントを設定する方法Microsoft Edge DevTools でデバッガーを使用する方法について説明します。  他の種類のブレークポイントを設定するには、「ブレークポイントでコードを一 [時停止する」を参照してください][DevToolsJavascriptBreakpoints]。  
 
-デバッグの基本については [、「Microsoft Edge DevTools][DevToolsJavascriptGetStarted]での JavaScript のデバッグの開始」に移動します。これは、既存のフォーム ベースの Web ページを使用するチュートリアルです。  チュートリアルには画面キャプチャが含め、ススキミングできます。  デモ Web ページを使用すると、デバッガー機能を簡単に試してみます。
+デバッグの基本については[、「Microsoft Edge DevTools][DevToolsJavascriptGetStarted]での JavaScript のデバッグの開始」に移動します。これは、既存のフォーム ベースの Web ページを使用するチュートリアルです。  チュートリアルには画面キャプチャが含め、ススキミングできます。  デモ Web ページを使用すると、デバッガー機能を簡単に試してみます。
 
 ## <a name="view-and-edit-javascript-code"></a>JavaScript コードの表示と編集
 
@@ -43,7 +42,7 @@ JavaScript ファイルを表示および編集するには、次の方法を実
 1.  [ソース] **ツールに移動** します。  
 1.  [ナビゲーター **] ウィンドウ** でファイルを選択し、[エディター] ウィンドウで **開** きます。
 1.  [エディター **] ウィンドウ** で、ファイルを編集します。  
-1.  `Ctrl` + `S` \(Windows, Linux\) または `Command` + `S` \(macOS\) を選択して保存します。  DevTools は、JavaScript ファイルを Microsoft Edge の JavaScript エンジンに読み込む。  
+1.  `Ctrl` + `S` \(Windows Linux\) または `Command` + `S` \(macOS\) を選択して保存します。  その後、DevTools は JavaScript ファイルを JavaScript ファイルの JavaScript エンジンに読み込Microsoft Edge。  
     
     :::image type="complex" source="../media/javascript-sources-html-minified.msft.png" alt-text="[エディター] ウィンドウ" lightbox="../media/javascript-sources-html-minified.msft.png":::
        [ **エディター]** ウィンドウ  
@@ -306,18 +305,18 @@ function animate() {
        [呼び出し履歴] **ウィンドウからスクリプトを** ライブラリ **コードとしてマーク** する  
     :::image-end:::  
     
-### <a name="mark-a-script-as-library-code-from-settings"></a>設定からスクリプトをライブラリ コードとしてマークする  
+### <a name="mark-a-script-as-library-code-from-settings"></a>スクリプトをライブラリ コードとしてマーク設定  
 
-設定からスクリプトの 1 つのスクリプトまたはパターンをマークするには、次のコマンドを **実行します**。  
+スクリプトの 1 つのスクリプトまたはパターンを次のコマンドからマーク**設定。**  
 
-1.  [設定 [] を開きます][DevToolsCustomize]。  
+1.  [ファイル[設定] を開きます][DevToolsCustomize]。  
 1.  [ライブラリ コード **] 設定に移動** します。  
 1.  [パターン **の追加] を選択します**。  
 1.  ライブラリ コードとしてマークするスクリプト名またはスクリプト名の正規表現パターンを **入力します**。  
 1.  **追加** を選びます。  
     
-    :::image type="complex" source="../media/javascript-framework-library-code.msft.png" alt-text="設定からスクリプトをライブラリ コードとしてマークする" lightbox="../media/javascript-framework-library-code.msft.png":::
-       設定からスクリプトを **ライブラリ コードとして** マーク **する**  
+    :::image type="complex" source="../media/javascript-framework-library-code.msft.png" alt-text="スクリプトをライブラリ コードとしてマーク設定" lightbox="../media/javascript-framework-library-code.msft.png":::
+       スクリプトをライブラリ コード**としてマーク設定******  
     :::image-end:::  
     
 ## <a name="run-snippets-of-debug-code-from-any-page"></a>任意のページからデバッグ コードのスニペットを実行する  
@@ -328,9 +327,9 @@ function animate() {
 
 ## <a name="see-also"></a>関連項目  
 
-*   [Microsoft Edge DevTools][DevToolsJavascriptGetStarted] での JavaScript のデバッグの開始 - 画面キャプチャを使用して、既存のコードを使用した簡単で短いチュートリアルです。
+*   [はじめにデバッグ JavaScript In Microsoft Edge DevTools][DevToolsJavascriptGetStarted] - 画面キャプチャを使用して、既存のコードを使用した簡単で短いチュートリアルです。
 *   [ソース ツールの概要][DevToolsSourcesIndex] - ソース **ツールには** JavaScript デバッガーとエディターが含まれています。
-*   [Microsoft Edge DevTools を使用して JavaScript を無効にします][DevToolsJavascriptDisable]。
+*   [DevTools を使用して JavaScript Microsoft Edge無効にします][DevToolsJavascriptDisable]。
 
 ## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームと連絡を取る  
 
@@ -338,12 +337,12 @@ function animate() {
 
 <!-- links -->  
 
-[DevToolsJavascriptBreakpoints]: ./breakpoints.md "Microsoft Edge DevTools アプリケーションでブレークポイントを使用してコードを一時停止する|Microsoft Docs"  
-[DevToolsJavascriptDisable]: ./disable.md "Microsoft Edge DevTools を使用して JavaScript を無効|Microsoft Docs"  
-[DevToolsJavascriptGetStarted]: ./index.md "Microsoft Edge DevTools の JavaScript のデバッグの|Microsoft Docs"  
-[DevToolsJavascriptSnippets]: ./snippets.md "Microsoft Edge DevTools を使用して任意のページで JavaScript のスニペットを実行|Microsoft Docs"  
+[DevToolsJavascriptBreakpoints]: ./breakpoints.md "DevTools アプリケーションでブレークポイントを使用してコードMicrosoft Edgeする|Microsoft Docs"  
+[DevToolsJavascriptDisable]: ./disable.md "DevTools サーバーを使用Microsoft Edge JavaScript を|Microsoft Docs"  
+[DevToolsJavascriptGetStarted]: ./index.md "DevTools アプリケーションの JavaScript のデバッグMicrosoft Edge開始|Microsoft Docs"  
+[DevToolsJavascriptSnippets]: ./snippets.md "DevTools を使用して任意のページで JavaScript のスニペットMicrosoft Edge実行|Microsoft Docs"  
 [DevToolsSourcesIndex]: ../sources/index.md "ソース ツールの概要|Microsoft Docs"  
-[DevToolsCustomize]: ../customize/index.md "Microsoft Edge DevTools のカスタマイズ |Microsoft Docs"  
+[DevToolsCustomize]: ../customize/index.md "DevTools Microsoft Edgeのカスタマイズ|Microsoft Docs"  
 
 > [!NOTE]
 > このページの一部は、 [Google によっ て作成および共有された][GoogleSitePolicies]作業に基づく変更で、「[Creative Commons Attribution 4.0 International License][CCA4IL]」で記載されている条項に従って使用されます。  
@@ -355,4 +354,4 @@ function animate() {
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
 [GoogleSitePolicies]: https://developers.google.com/terms/site-policies  
-[KayceBasques]: https://developers.google.com/web/resources/contributors/kaycebasques  
+[KayceBasques]: https://developers.google.com/web/resources/contributors#kayce-basques  

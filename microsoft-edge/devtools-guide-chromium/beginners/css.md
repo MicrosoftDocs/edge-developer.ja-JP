@@ -1,18 +1,18 @@
 ---
-description: CSS の使用を開始する
+description: はじめに CSS の使用
 title: '初級者向け DevTools: CSS の使用を開始する'
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 03/08/2021
+ms.date: 05/04/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge, Web 開発, f12 ツール, devtools
-ms.openlocfilehash: 6a7135e144123917535e7c43e6a3cd608ec0c8a7
-ms.sourcegitcommit: 4b9fb5c1176fdaa5e3c60af2b84e38d5bb86cd81
+ms.openlocfilehash: 6f34cfa8610848505c8aa795c4fab16e5d2a98ed
+ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "11439438"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "11564645"
 ---
 <!-- Copyright Katherine Jackson 
 
@@ -30,12 +30,12 @@ ms.locfileid: "11439438"
 
 # <a name="devtools-for-beginners-get-started-with-css"></a>初級者向け DevTools: CSS の使用を開始する  
 
-このチュートリアルでは、CSS を使用して Web ページのスタイルを設定する方法について説明します。  また、Microsoft Edge DevTools を使用して CSS の変更を試す方法も説明します。  
+このチュートリアルでは、CSS を使用して Web ページのスタイルを設定する方法について説明します。  また、DevTools を使用して CSS Microsoft Edgeを試す方法も説明します。  
 
-次の記事は、Web 開発と Microsoft Edge DevTools の基本を説明する一連のチュートリアルの 2 番目のチュートリアルです。  実際に独自の Web サイトを構築することで、実践的なエクスペリエンスを得る。  2 番目のチュートリアルに従う前に、最初のチュートリアルを完了する必要はもうない。  [コードを設定すると、](#set-up-your-code) セットアップ方法が示されます。  
+次の記事は、Web 開発と DevTools の基本を説明する一連のチュートリアルの 2 番目Microsoft Edgeです。  実際に独自の Web サイトを構築することで、実践的なエクスペリエンスを得る。  2 番目のチュートリアルに従う前に、最初のチュートリアルを完了する必要はもうない。  [コードを設定すると、](#set-up-your-code) セットアップ方法が示されます。  
 
 > [!NOTE]
-> このチュートリアルは、完全な初心者向けの設計で **、Web** 開発の基本と DevTools を使用して CSS を実験する基本の両方に焦点を当てしています。  DevTools にのみ焦点を当てたチュートリアルが必要な場合は、[CSS の表示と変更を開始する] [に移動します][DevtoolsCssIndex]。  
+> このチュートリアルは、完全な初心者向けの設計で **、Web** 開発の基本と DevTools を使用して CSS を実験する基本の両方に焦点を当てしています。  DevTools にのみ焦点を当てたチュートリアルが必要な場合は、[CSS の表示と変更はじめに[に移動します][DevtoolsCssIndex]。  
 
 チュートリアルの冒頭で、サイトは次の図のようになります。  
 
@@ -54,7 +54,7 @@ ms.locfileid: "11439438"
 このチュートリアルに従って、以下の概念とタスクについて理解してください。  
 
 *   CSS を使用して Web ページのスタイルを設定する方法。  
-*   Microsoft Edge DevTools を使用して CSS を試す方法。  
+*   DevTools をMicrosoft Edge CSS を試す方法。  
 *   CSS フレームワークと CSS フレームワークの違い。  
 
 実際の Web サイトを作成しています。  
@@ -63,15 +63,15 @@ ms.locfileid: "11439438"
 
 このチュートリアルを試す前に、次の前提条件を満たしてください。  
 
-*   [HTML [と DOM の][DevtoolsBeginnersHtml] 使用を開始する] を完了するか、HTML と DOM について理解し、そのチュートリアルで教えられたものに似たものにしてください。  
-*   Microsoft [Edge Web ブラウザーを][MicrosoftEdgeInsider] ダウンロードします。  次のチュートリアルでは、Microsoft Edge に組み込む Microsoft Edge DevTools と呼ばれる一連の Web 開発ツールを使用します。  
+*   [HTML はじめに DOM][DevtoolsBeginnersHtml]を使用して説明を完了するか、HTML と DOM について理解し、そのチュートリアルで教えられたものに似たものにしてください。  
+*   Web ブラウザー [Microsoft Edge][MicrosoftEdgeInsider]ダウンロードします。  次のチュートリアルでは、開発ツールに組み込Microsoft Edge DevTools と呼ばれる一連の web 開発ツールをMicrosoft Edge。  
 
 ## <a name="set-up-your-code"></a>コードを設定する  
 
 サイトを作成するには、まず次のアクションを実行してコードを設定する必要があります。  
 
 > [!NOTE]
-> シリーズの最初のチュートリアルを既に完了している場合は、次のセクションに進んでください。  最後のチュートリアル「HTML と DOM の使用を開始する」のコード [を引き続き使用します][DevtoolsBeginnersHtml]。  
+> シリーズの最初のチュートリアルを既に完了している場合は、次のセクションに進んでください。  最後のチュートリアルのコードを引き続き使用して[、HTML はじめに DOM を使用します][DevtoolsBeginnersHtml]。  
 
 1.  ソース コード [を開きます][GlitchCookedAmphibianIndex]。  ブラウザーのフォーカス内タブは、編集タブとして **参照されます**。  
     
@@ -81,8 +81,8 @@ ms.locfileid: "11439438"
     
 1.  調理 **された両生類を選択します**。  メニューがポップアップします。  
     
-    :::image type="complex" source="../media/beginners-css-setup2.msft.png" alt-text="[プロジェクト オプション] メニュー" lightbox="../media/beginners-css-setup2.msft.png":::
-       [プロジェクト オプション] メニュー  
+    :::image type="complex" source="../media/beginners-css-setup2.msft.png" alt-text="[Project オプション] メニュー" lightbox="../media/beginners-css-setup2.msft.png":::
+       [Project オプション] メニュー  
     :::image-end:::  
 
 1.  **[Remix Project] を選択します**。  Glitch は、編集できるプロジェクトのコピーを作成します。  
@@ -112,7 +112,7 @@ ms.locfileid: "11439438"
 </p>
 ```  
 
-`style="border: 1px dashed red; padding: 5px;"` おそらく、新しく見えます。  残りの部分は見慣れたものに見える必要があります。  完了していない場合は [、HTML と DOM の][DevtoolsBeginnersHtml] 使用を開始してから、次のセクションを試してください。  
+`style="border: 1px dashed red; padding: 5px;"` おそらく、新しく見えます。  残りの部分は見慣れたものに見える必要があります。  指定しない場合は、はじめに[を実行][DevtoolsBeginnersHtml]する前に HTML と DOM を使用して設定を完了してください。  
 
 ## <a name="add-inline-styles"></a>インライン スタイルの追加  
 
@@ -268,7 +268,7 @@ li a {
     
 ## <a name="experiment-with-devtools"></a>DevTools の実験  
 
-Web 開発の専門家になるための旅を続ける中で、CSS は難しいと思うかもしれません。  一部の CSS を記述し、1 つの方法で表示すると予想できますが、ブラウザーは完全に異なる動作をします。  Microsoft Edge DevTools を使用すると、変更を簡単に試し、変更がページに与える影響をすぐに表示できます。  
+Web 開発の専門家になるための旅を続ける中で、CSS は難しいと思うかもしれません。  一部の CSS を記述し、1 つの方法で表示すると予想できますが、ブラウザーは完全に異なる動作をします。  Microsoft EdgeDevTools を使用すると、変更を簡単に試し、変更がページに与える影響をすぐに表示できます。  
 
 ### <a name="add-a-declaration-to-an-existing-rulest-in-devtools"></a>DevTools の既存のルールに宣言を追加する  
 
@@ -280,7 +280,7 @@ Web 開発の専門家になるための旅を続ける中で、CSS は難しい
        [ホーム] リンクの検査  
     :::image-end:::  
     
-    DevTools がページと一緒に開きます。  [ホーム] リンクを表すコードは `<a href="/">Home</a>` 、DOM ツリーで青色で強調表示されます。  コード スニペットとプレビューは、HTML と DOM の使い始 [めからよく知っている必要があります][DevtoolsBeginnersHtml]。  
+    DevTools がページと一緒に開きます。  [ホーム] リンクを表すコードは `<a href="/">Home</a>` 、DOM ツリーで青色で強調表示されます。  コード スニペットとプレビューは、HTML と DOM はじめに[からよく知られている必要があります][DevtoolsBeginnersHtml]。  
     
     :::row:::
        :::column span="":::
@@ -600,7 +600,7 @@ DevTools に新しいルールセットを追加するには、次のアクシ�
 
 *   Web 開発を向上する最善の方法は、より多くのサイトを構築する方法です。  壊れる心配はありません。  ただ、楽しみを持って、道に沿って可能な限り多くを学ぶ。  
 *   Web ページのスタイル設定の詳細については、「CSS の概要 [」に移動します][MDNCssFirstSteps]。  
-*   DevTools を使用してページの CSS を試す方法の詳細については、「CSS の表示と変更を開始する」に [移動します][DevtoolsCssIndex]。  
+*   DevTools を使用してページの CSS を試す方法の詳細については、「CSS の表示と変更」はじめにに[移動します][DevtoolsCssIndex]。  
 
 ## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームと連絡を取る  
 
@@ -609,7 +609,7 @@ DevTools に新しいルールセットを追加するには、次のアクシ�
 <!--- links  --->  
 
 [DevtoolsBeginnersHtml]: ./html.md "初級向け DevTools: HTML と DOM の使用を開始する | Microsoft Docs"  
-[DevtoolsCssIndex]: ../css/index.md "CSS の表示と変更の開始|Microsoft Docs"  
+[DevtoolsCssIndex]: ../css/index.md "はじめにCSS の表示と変更を使用|Microsoft Docs"  
 
 [MicrosoftEdgeInsider]: https://www.microsoftedgeinsider.com "Microsoft Edge Insider"  
 
@@ -619,7 +619,7 @@ DevTools に新しいルールセットを追加するには、次のアクシ�
 
 > [!NOTE]
 > このページの一部の情報は、[Google によって作成および共有][GoogleSitePolicies]されている著作物に基づいており、[Creative Commons Attribution 4.0 International License][CCA4IL] に記載されている条項に従って使用されています。  
-> 元のページ [はここで見](https://developers.google.com/web/tools/chrome-devtools/beginners/css) つかり、キャ [サ][KatherineJackson] リン・ジャクソン \(Technical Writer Intern, Chrome DevTools\) によって作成されています。  
+> 元のページはここで [見](https://developers.google.com/web/tools/chrome-devtools/beginners/css) つかり、キャ [サ][KatherineJackson] リン・ジャクソン \(Technical Writer Intern, Chrome DevTools\) によって作成されました。  
 
 [![Creative Commons ライセンス][CCby4Image]][CCA4IL]  
 この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。  
@@ -627,5 +627,5 @@ DevTools に新しいルールセットを追加するには、次のアクシ�
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
 [GoogleSitePolicies]: https://developers.google.com/terms/site-policies  
-[KayceBasques]: https://developers.google.com/web/resources/contributors/kaycebasques  
-[KatherineJackson]: https://developers.google.com/web/resources/contributors/katjackson  
+[KayceBasques]: https://developers.google.com/web/resources/contributors#kayce-basques  
+[KatherineJackson]: https://developers.google.com/web/resources/contributors  

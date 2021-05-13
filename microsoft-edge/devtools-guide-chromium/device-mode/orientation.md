@@ -1,18 +1,18 @@
 ---
 description: センサー ツールを開き、[方向] セクションに移動します。
-title: Microsoft Edge DevTools を使用してデバイスの向きをシミュレートする
+title: DevTools を使用してデバイスMicrosoft Edgeシミュレートする
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/12/2021
+ms.date: 05/04/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 754df3b271b44f986802c2847862624f6a8b5bd9
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: 71527d8dce0d7a0563feef0081ce12d40eeb5e1a
+ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11398715"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "11564309"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -27,10 +27,9 @@ ms.locfileid: "11398715"
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.  -->
+# <a name="simulate-device-orientation-with-microsoft-edge-devtools"></a>DevTools を使用してデバイスMicrosoft Edgeシミュレートする  
 
-# <a name="simulate-device-orientation-with-microsoft-edge-devtools"></a>Microsoft Edge DevTools を使用してデバイスの向きをシミュレートする  
-
-Microsoft Edge DevTools からさまざまなデバイスの向きをシミュレートするには、次のアクションを実行します。  
+DevTools からさまざまなデバイスの向きをシミュレートするには、次Microsoft Edge実行します。  
 
 <!--todo: update device orientation section when available -->  
 
@@ -82,4 +81,4 @@ Microsoft Edge DevTools からさまざまなデバイスの向きをシミュ�
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
 [GoogleSitePolicies]: https://developers.google.com/terms/site-policies  
-[KayceBasques]: https://developers.google.com/web/resources/contributors/kaycebasques  
+[KayceBasques]: https://developers.google.com/web/resources/contributors#kayce-basques  

@@ -1,18 +1,18 @@
 ---
-description: Microsoft Edge DevTools を使用して JavaScript のバグを見つけて修正する方法について説明します。
-title: Microsoft Edge DevTools での JavaScript のデバッグの開始
+description: JavaScript のバグを見つけてMicrosoft Edge DevTools を使用する方法について説明します。
+title: DevTools での JavaScript のデバッグMicrosoft Edgeする
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 03/08/2021
+ms.date: 05/04/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: a60bd0c734df18ba7424cde6a828abbd9e7135a9
-ms.sourcegitcommit: 16e2f7232196a57a70b979bbf8b663774b7ddc20
+ms.openlocfilehash: 90a979cebcb74a118cb1d8ce88d48c7ac64c7a6d
+ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2021
-ms.locfileid: "11519374"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "11564092"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -27,7 +27,7 @@ ms.locfileid: "11519374"
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.  -->  
-# <a name="get-started-with-debugging-javascript-in-microsoft-edge-devtools"></a>Microsoft Edge DevTools での JavaScript のデバッグの開始  
+# <a name="get-started-with-debugging-javascript-in-microsoft-edge-devtools"></a>DevTools での JavaScript のデバッグMicrosoft Edgeする  
 
 この記事では、DevTools で JavaScript の問題をデバッグする基本的なワークフローについて説明します。  
 
@@ -35,7 +35,7 @@ ms.locfileid: "11519374"
 
 一貫してバグを再現する一連のアクションを見つけることは、常にデバッグの最初のステップです。  
 
-1.  次の [ **デモを開く** ] リンクを選択し、新しいタブで Web ページを開きます。 新しいタブでデモを開く場合は `Ctrl` 、\(Windows,Linux\) または \(macOS\) を選択して保持し、[デモを開く] `Command` **を選択します**。  
+1.  次の [**デモを開く**] リンクを選択し、新しいタブで Web ページを開きます。 新しいタブでデモを開く場合は `Ctrl` 、\(Windows、 Linux\) または `Command` \(macOS\) を選択し、[デモを開く] を**選択します**。  
     
     [Open Demo][OpenDebugJSDemo]  
     
@@ -51,7 +51,7 @@ ms.locfileid: "11519374"
 
 DevTools には、タスクごとにさまざまなツールが提供されています。  さまざまなタスクには、CSS の変更、ページ読み込みパフォーマンスのプロファイリング、ネットワーク要求の監視が含まれます。  ソース **ツールは** 、JavaScript をデバッグする場所です。  
 
-1.  DevTools**でコンソール**ツールを開く場合は `Control` + `Shift` + `J` 、[\(Windows,Linux\) または `Command` + `Option` + `J` \(macOS\) を選択します。  
+1.  DevTools で**コンソール**ツールを開く場合は `Control` + `Shift` + `J` 、\(Windows Linux\) または `Command` + `Option` + `J` \(macOS\) を選択します。  
     
     :::image type="complex" source="../media/javascript-console-empty.msft.png" alt-text="コンソール ツール" lightbox="../media/javascript-console-empty.msft.png":::
        コンソール**ツール**  
@@ -203,7 +203,7 @@ function updateLabel() {
 
 1.  [スクリプト **実行の再開** \( ![ スクリプト実行の再開 ](../media/resume-script-run-icon.msft.png) \) を選択します。  
 1.  [エディター **] ウィンドウで** 、行をに置き換 `var sum = addend1 + addend2` えます `var sum = parseInt(addend1) + parseInt(addend2)` 。  
-1.  `Control` + `S` 変更を保存するには、\(Windows、Linux\) `Command` + `S` または \(macOS\) を選択します。  
+1.  `Control` + `S` \(Windows Linux\) または `Command` + `S` \(macOS\) を選択して変更を保存します。  
 1.  [ **ブレークポイントを非アクティブ化** する]\( ![ [ブレークポイントを非アクティブ化 ](../media/deactivate-breakpoints-button-icon.msft.png) する]\) を選択します。  オプションがアクティブな状態を示すために青に変更されます。  [ **ブレークポイントの非アクティブ化** ] が設定されている間、DevTools は設定したブレークポイントを無視します。  
 1.  異なる値でデモを試してみてください。  デモで正しく計算されるようになりました。  
     
@@ -212,7 +212,7 @@ function updateLabel() {
 
 ## <a name="next-steps"></a>次のステップ  
 
-お疲れさまでした。  JavaScript のデバッグ時に Microsoft Edge DevTools を利用する方法がわかっています。  この記事で学んだツールとメソッドは、数え切れないほどの時間を節約できます。  
+お疲れさまでした。  JavaScript のデバッグ時に DevTools をMicrosoft Edgeする方法がわかっています。  この記事で学んだツールとメソッドは、数え切れないほどの時間を節約できます。  
 
 この記事では、ブレークポイントを設定する 2 つの方法を示しました。  DevTools には、次のような特定の条件が満たされた場合にコードを一時停止するブレークポイントを設定する方法も用意されています。
 
@@ -237,7 +237,7 @@ function updateLabel() {
 
 [DevToolsJavascriptReference]: ./reference.md "デバッガー機能を使用|Microsoft Docs"  
 [DevToolsSourcesIndex]: ../sources/index.md "ソース ツールの概要|Microsoft Docs"  
-[DevToolsJavscriptBreakpoints]: ./breakpoints.md "Microsoft Edge DevTools アプリケーションでブレークポイントを使用してコードを一時停止する|Microsoft Docs"
+[DevToolsJavscriptBreakpoints]: ./breakpoints.md "DevTools アプリケーションでブレークポイントを使用してコードMicrosoft Edgeする|Microsoft Docs"
 [DevToolsJavascriptReferenceStepThroughCode]: ./reference.md#step-through-code "コードのステップスルー - デバッガー機能を使用|Microsoft Docs"
 
 <!--[inPrivate]: https://support.alphabet.com/alphabet-browser/answer/95464  -->  
@@ -254,4 +254,4 @@ function updateLabel() {
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
 [GoogleSitePolicies]: https://developers.google.com/terms/site-policies  
-[KayceBasques]: https://developers.google.com/web/resources/contributors/kaycebasques  
+[KayceBasques]: https://developers.google.com/web/resources/contributors#kayce-basques  

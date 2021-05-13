@@ -3,16 +3,16 @@ description: 色覚の欠陥をエミュレートする、コマンド メニュ
 title: DevTools の新機能 (Microsoft Edge 83)
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 04/08/2021
+ms.date: 05/04/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: c329dfba980b882b6e538447e52902e4d0cc985b
-ms.sourcegitcommit: de75fda30bb8964e9a184228d068b4402ec59c3e
+ms.openlocfilehash: e5fa4b066e47b0779fcdf2b3e814c598e9615ccf
+ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2021
-ms.locfileid: "11514418"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "11564953"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -105,7 +105,7 @@ Chromium[問題#1050999][CR1050999]
 
 [ **変更] ツール** は、DevTools で CSS または JavaScript に加えた変更を追跡します。  [変更] ツールを **使用すると** 、すべての変更をすばやく表示し、エディター/IDE に戻します。  
 
-[変更] ツール**を開く**には `Ctrl` + `Shift` + `P` 、DevTools で選択してコマンド メニュー[を開き、と][DevToolsCommandMenuIndex]入力します `changes` 。  [変更の表示]**コマンドを**選択して**** 実行して、DevTools ドロワーで [変更] ツールを開きます。  
+[変更] ツール**を開く**には `Ctrl` + `Shift` + `P` 、DevTools で選択してコマンド メニュー[を開き、と][DevtoolsCommandMenuIndex]入力します `changes` 。  [変更の表示]**コマンドを**選択して**** 実行して、DevTools ドロワーで [変更] ツールを開きます。  
 
 ファイルを変更すると、[変更] ツールを使用すると、**** 水平方向にスクロールして、すべてのコードを表示できます。  83 Microsoft Edgeから、キーボードの矢印キーを使用して水平方向にスクロールできます。  
 
@@ -123,7 +123,7 @@ Chromium[の問題][CR963183]#963183
 
 ### <a name="emulate-vision-deficiencies"></a>視覚欠陥をエミュレートする  
 
-[レンダリング [] タブを][DevtoolsEvaluatePreformanceReferenceAnalyzeRenderingTab] 開き、新しい **エミュレート** ビジョンの欠陥機能を使用して、さまざまな種類のビジョンの欠陥を持つユーザーがサイトをどのように経験するのかについて、より良いアイデアを得る。  
+[レンダリング [] タブを][DevtoolsEvaluatePreformanceReferenceAnalyzeRenderingTool] 開き、新しい **エミュレート** ビジョンの欠陥機能を使用して、さまざまな種類のビジョンの欠陥を持つユーザーがサイトをどのように経験するのかについて、より良いアイデアを得る。  
 
 :::image type="complex" source="../../media/2020/03/vision.msft.png" alt-text="ぼやけたビジョンの画像を表示する" lightbox="../../media/2020/03/vision.msft.png":::
    ぼやけたビジョンの画像を表示する  
@@ -149,7 +149,7 @@ Chromium[の問題][CR1003700]#1003700
 
 ### <a name="emulate-locales"></a>ローカルをエミュレートする  
 
-Sensors Location で場所を設定して、**ローカルをエミュレート**  >  **します**。 [コマンド メニュー **を開き、**][DevToolsCommandMenuIndex] センサー `Sensors` タブに **アクセスします** 。 これらのアクションを実行した後、DevTools は現在の既定のロケールを変更し、次のコードに影響を与えます。  
+Sensors Location で場所を設定して、**ローカルをエミュレート**  >  **します**。 [コマンド メニュー **を開き、**][DevtoolsCommandMenuIndex] センサー `Sensors` タブに **アクセスします** 。 これらのアクションを実行した後、DevTools は現在の既定のロケールを変更し、次のコードに影響を与えます。  
 
 *   `Intl.*` API の例: `new Intl.NumberFormat().resolvedOptions().locale`  
 *   その他のロケール対応 JavaScript API (たとえば、次のように `String.prototype.localeCompare` `*.prototype.toLocaleString` ) `123_456..toLocaleString()`  
@@ -207,7 +207,7 @@ Chromium の問題 [#1041830][CR1041830]
 
 ### <a name="dock-to-left-from-the-command-menu"></a>コマンド メニューから左にドッキングする  
 
-コマンド メニュー [を開き][DevToolsCommandMenuIndex] 、コマンド `Dock to left` を実行して DevTools をビューポートの左側に移動します。  
+コマンド メニュー [を開き][DevtoolsCommandMenuIndex] 、コマンド `Dock to left` を実行して DevTools をビューポートの左側に移動します。  
 
 :::image type="complex" source="../../media/2020/03/dock-to-left.msft.png" alt-text="ビューポートの左側にドッキングされた DevTools" lightbox="../../media/2020/03/dock-to-left.msft.png":::
    ビューポートの左側にドッキングされた DevTools  
@@ -284,17 +284,18 @@ Windows または macOS を使用している場合、[Microsoft Edge プレビ�
 
 [WhatsNew81]: ../01/devtools.md "DevTools の新機能 (Microsoft Edge 81) |Microsoft Docs"  
 
-[DevToolsCommandMenuIndex]: /microsoft-edge/devtools-guide-chromium/command-menu/index "[DevTools コマンド メニュー] Microsoft Edgeを使用してコマンドを実行|Microsoft Docs"  
-[DevtoolsCssReferenceColorPicker]: /microsoft-edge/devtools-guide-chromium/css/reference#change-colors-with-the-color-picker "[カラー ピッカー] を使用して色を|Microsoft Docs"  
-[DevtoolsCssIndex]: /microsoft-edge/devtools-guide-chromium/css/index "はじめにCSS の表示と変更を使用|Microsoft Docs"  
-[DevtoolsCustomizePlacementsChangeMainMenu]: /microsoft-edge/devtools-guide-chromium/customize/placement#change-placement-from-the-main-menu "メイン メニューから配置を変更|Microsoft Docs"  
-[DevtoolsEvaluatePerformanceReferenceViewMainThreadActivity]: /microsoft-edge/devtools-guide-chromium/evaluate-performance/reference#view-main-thread-activity "メイン スレッドアクティビティの|Microsoft Docs"  
-[DevtoolsEvaluatePreformanceReferenceAnalyzeRenderingTab]: /microsoft-edge/devtools-guide-chromium/evaluate-performance/reference#analyze-rendering-performance-with-the-rendering-tab "[レンダリング] タブを使用してレンダリングパフォーマンスを|Microsoft Docs"  
-[ProgressiveWebAppsChromiumIndex]: /microsoft-edge/progressive-web-apps-chromium/index "プログレッシブ Web Apps on Windows |Microsoft Docs"  
-[DevtoolsRemoteDebuggingWindows]: /microsoft-edge/devtools-guide-chromium/remote-debugging/windows "Windows 10 デバイスのリモート デバッグの概要 | Microsoft Docs"  
-[DevtoolsJavascriptBreakpointsLineCode]: /microsoft-edge/devtools-guide-chromium/javascript/breakpoints#line-of-code-breakpoints "コード行ブレークポイント - DevTools アプリケーションでブレークポイントを使用してコードMicrosoft Edgeする|Microsoft Docs"
-[DevtoolsNetworkReferenceFilterRequestsProperties]: /microsoft-edge/devtools-guide-chromium/network/reference#filter-requests-by-properties "プロパティ別に要求をフィルター処理する - ネットワーク分析|Microsoft Docs"  
-[DevtoolsCustomizeIndexSettings]: /microsoft-edge/devtools-guide-chromium/customize/index#settings "設定 - DevTools Microsoft Edgeをカスタマイズ|Microsoft Docs"  
+[DevtoolsCommandMenuIndex]: ../../../command-menu/index.md "[DevTools コマンド メニュー] Microsoft Edgeを使用してコマンドを実行|Microsoft Docs"  
+[DevtoolsCssIndex]: ../../../css/index.md "はじめにCSS の表示と変更を使用|Microsoft Docs"  
+[DevtoolsCssReferenceColorPicker]: ../../../css/reference.md#change-colors-with-the-color-picker "[カラー ピッカー] を使用して色を|Microsoft Docs"  
+[DevtoolsCustomizeIndexSettings]: ../../../customize/index.md#settings "設定 - DevTools Microsoft Edgeをカスタマイズ|Microsoft Docs"  
+[DevtoolsCustomizePlacementsChangeMainMenu]: ../../../customize/placement.md#change-placement-from-the-main-menu "メイン メニューから配置を変更|Microsoft Docs"  
+[DevtoolsEvaluatePreformanceReferenceAnalyzeRenderingTool]: ../../../evaluate-performance/reference.md#analyze-rendering-performance-with-the-rendering-tool "レンダリング ツール を使用してレンダリングパフォーマンスを分析|Microsoft Docs"  
+[DevtoolsEvaluatePerformanceReferenceViewMainThreadActivity]: ../../../evaluate-performance/reference.md#view-main-thread-activity "メイン スレッドアクティビティの|Microsoft Docs"  
+[DevtoolsJavascriptBreakpointsLineCode]: ../../../javascript/breakpoints.md#line-of-code-breakpoints "コード行ブレークポイント - DevTools アプリケーションでブレークポイントを使用してコードMicrosoft Edgeする|Microsoft Docs"  
+[DevtoolsNetworkReferenceFilterRequestsProperties]: ../../../network/reference.md#filter-requests-by-properties "プロパティ別に要求をフィルター処理する - ネットワーク分析|Microsoft Docs"  
+[DevtoolsRemoteDebuggingWindows]: ../../../remote-debugging/windows.md "Windows 10 デバイスのリモート デバッグの概要 | Microsoft Docs"  
+
+[ProgressiveWebAppsChromiumIndex]: ../../../../progressive-web-apps-chromium/index.md "Windows 上のプログレッシブ Web アプリ | Microsoft Docs"  
 
 [WindowsUwpDebugTestPerfDevicePortal]: /windows/uwp/debug-test-perf/device-portal "Windowsデバイス ポータルの概要"  
 
@@ -305,17 +306,18 @@ Windows または macOS を使用している場合、[Microsoft Edge プレビ�
 
 [WindowsBlogStableRelease]: https://blogs.windows.com/msedgedev/2020/03/20 "システムの安定したチャネル リリースMicrosoft Edge"  
 
-[GitHubMicrosoftDocsEdgeDeveloperNewIssue]: https://github.com/MicrosoftDocs/edge-developer/issues/new?title=[DevTools%20Docs%20Feedback] "新しい問題 - MicrosoftDocs/edge-developer - GitHub"  
+[GitHubMicrosoftDocsEdgeDeveloperNewIssue]: https://github.com/MicrosoftDocs/edge-developer/issues/new?title=[Devtools%20Docs%20Feedback] "新しい問題 - MicrosoftDocs/edge-developer - GitHub"  
 
-[MicrosoftVisualstudio]: https://visualstudio.microsoft.com "Visual Studio"  
+[MicrosoftVisualstudioMain]: https://visualstudio.microsoft.com "Visual Studio"  
 
-[VisualstudioCode]: https://code.visualstudio.com "Visual Studio Code"  
+[VisualstudioCodeMain]: https://code.visualstudio.com "Visual Studio Code"  
 
 [PostTweetEdgeDevTools]: https://twitter.com/intent/tweet?text=@EdgeDevTools "@EdgeDevTools | ツイートを投稿する"  
 [EdgeDevToolsTwitterAccount]: https://twitter.com/EdgeDevTools "@EdgeDevTools Twitter アカウント"  
-[TheWebWeWant]: https://webwewant.fyi "必要な Web"  
+[TheWebWeWantMain]: https://webwewant.fyi "必要な Web"  
 
 [ColorBlindnessTypes]: http://www.colourblindawareness.org/colour-blindness/types-of-colour-blindness "色覚の種類"  
+<!-- this link must be http, not https -->  
 
 [MDNAcceptLanguage]: https://developer.mozilla.org/docs/Web/HTTP/Headers/Accept-Language "Accept-Language |MDN"  
 [MDNCookiePath]: https://developer.mozilla.org/docs/Web/HTTP/Headers/Set-Cookie#Directives "Set-Cookie |MDN"  
@@ -349,4 +351,4 @@ Windows または macOS を使用している場合、[Microsoft Edge プレビ�
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
 [GoogleSitePolicies]: https://developers.google.com/terms/site-policies  
-[KayceBasques]: https://developers.google.com/web/resources/contributors/kaycebasques  
+[KayceBasques]: https://developers.google.com/web/resources/contributors#kayce-basques  

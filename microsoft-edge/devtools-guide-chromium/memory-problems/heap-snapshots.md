@@ -1,18 +1,18 @@
 ---
-description: Microsoft Edge DevTools ヒープ プロファイラーを使用してヒープ スナップショットを記録し、メモリ リークを見つける方法について説明します。
+description: DevTools ヒープ プロファイラーを使用してヒープ スナップショットMicrosoft Edgeを記録し、メモリ リークを見つける方法について学習します。
 title: ヒープ スナップショットを記録する方法
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/12/2021
+ms.date: 05/04/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: ce7a6f972bed386f96312808428bd74f1241668f
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: 5f097cc45facc7f366a99a9564cf6f3d443f2058
+ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11397805"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "11565016"
 ---
 <!-- Copyright Meggin Kearney 
 
@@ -27,16 +27,15 @@ ms.locfileid: "11397805"
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.  -->
-
 # <a name="how-to-record-heap-snapshots"></a>ヒープ スナップショットを記録する方法  
 
-Microsoft Edge DevTools ヒープ プロファイラーを使用してヒープ スナップショットを記録し、メモリ リークを見つける方法について説明します。  
+DevTools ヒープ プロファイラーを使用してヒープ スナップショットMicrosoft Edgeを記録し、メモリ リークを見つける方法について学習します。  
 
-Microsoft Edge DevTools ヒープ プロファイラーは、ページの JavaScript オブジェクトと関連する DOM ノードによるメモリの分布を表示します。  JavaScript ヒープ \(JS heap\) スナップショットの取得、メモリ グラフの分析、スナップショットの比較、メモリ リークの検出に使用します。  [オブジェクト保持 [ツリー] に移動します][DevtoolsMemoryProblems101ObjectsRetainingTree]。  
+DevTools Microsoft Edgeプロファイルには、ページの JavaScript オブジェクトと関連する DOM ノードによるメモリの分布が表示されます。  JavaScript ヒープ \(JS heap\) スナップショットの取得、メモリ グラフの分析、スナップショットの比較、メモリ リークの検出に使用します。  [オブジェクト保持 [ツリー] に移動します][DevtoolsMemoryProblems101ObjectsRetainingTree]。  
 
 ## <a name="take-a-snapshot"></a>スナップショットを作成する  
 
-[メモリ] **パネルで** 、[スナップショットの取得] **を選択し**、[スタート] を **選択します**。  `Ctrl` + `E` \(Windows, Linux\) または `Cmd` + `E` \(macOS\) を選択できます。  
+[メモリ] **パネルで** 、[スナップショットの取得] **を選択し**、[スタート] を **選択します**。  \(Windows `Ctrl` + `E` Linux\) または `Cmd` + `E` \(macOS\) を選択できます。  
 
 :::image type="complex" source="../media/memory-problems-gh-nodejs-benchmarks-run-memory-heap-snapshots.msft.png" alt-text="プロファイルの種類を選択する" lightbox="../media/memory-problems-gh-nodejs-benchmarks-run-memory-heap-snapshots.msft.png":::
    プロファイルの種類を選択する  
@@ -242,7 +241,7 @@ leafRef = null;
 > [!NOTE]
 > 例: リークしている [DOM][GlitchDevtoolsMemoryExample06] ノードのこの例を試して、リークする可能性のある場所と、それを検出する方法を理解します。  また、DOM リークが予想以上に大きいという [この例を見る場合があります][GlitchDevtoolsMemoryExample09]。  
 
-DOM リークとメモリ分析の基本について詳しくは [、Gonzalo Ruiz][GonzaloRuizdeVillaMemory] de Villa の Microsoft Edge DevTools を使用してメモリ リークの検索とデバッグを行います。  
+DOM リークとメモリ分析の基本のチェックアウトの詳細については、gonzalo Ruiz de Villa の Microsoft Edge [DevTools][GonzaloRuizdeVillaMemory]を使用してメモリ リークの検索とデバッグを行います。  
 
 <!--  
 > [!NOTE]
@@ -266,12 +265,12 @@ DOM リークとメモリ分析の基本について詳しくは [、Gonzalo Rui
 <!--[DevToolsHeapProfilingSummary]: https://developer.alphabet.com/devtools/docs/heap-profiling-summary ""  -->  
 <!--[DevtoolsProfileMemoryProblemsDiagnosisCausesMemoryLeaks]: ../profile/memory-problems/memory-diagnosis#narrow-down-causes-of-memory-leaks ""  -->  
 
-[GlitchDevtoolsMemoryExample03]: https://microsoft-edge-chromium-devtools.glitch.me/static/memory/example-03.html "example-03.html - Microsoft Edge (クロム) DevTools |Glitch"  
-[GlitchDevtoolsMemoryExample06]: https://microsoft-edge-chromium-devtools.glitch.me/static/memory/example-06.html "example-06.html - Microsoft Edge (クロム) DevTools |Glitch"  
-[GlitchDevtoolsMemoryExample07]: https://microsoft-edge-chromium-devtools.glitch.me/static/memory/example-07.html "example-07.html - Microsoft Edge (クロム) DevTools |Glitch"  
-[GlitchDevtoolsMemoryExample08]: https://microsoft-edge-chromium-devtools.glitch.me/static/memory/example-08.html "example-08.html - Microsoft Edge (クロム) DevTools |Glitch"  
-[GlitchDevtoolsMemoryExample09]: https://microsoft-edge-chromium-devtools.glitch.me/static/memory/example-09.html "example-09.html - Microsoft Edge (クロム) DevTools |Glitch"  
-[GlitchDevtoolsMemoryExample10]: https://microsoft-edge-chromium-devtools.glitch.me/static/memory/example-10.html "example-10.html - Microsoft Edge (クロム) DevTools |Glitch"  
+[GlitchDevtoolsMemoryExample03]: https://microsoft-edge-chromium-devtools.glitch.me/static/memory/example-03.html "example-03.html - Microsoft Edge (Chromium) DevTools |Glitch"  
+[GlitchDevtoolsMemoryExample06]: https://microsoft-edge-chromium-devtools.glitch.me/static/memory/example-06.html "example-06.html - Microsoft Edge (Chromium) DevTools |Glitch"  
+[GlitchDevtoolsMemoryExample07]: https://microsoft-edge-chromium-devtools.glitch.me/static/memory/example-07.html "example-07.html - Microsoft Edge (Chromium) DevTools |Glitch"  
+[GlitchDevtoolsMemoryExample08]: https://microsoft-edge-chromium-devtools.glitch.me/static/memory/example-08.html "example-08.html - Microsoft Edge (Chromium) DevTools |Glitch"  
+[GlitchDevtoolsMemoryExample09]: https://microsoft-edge-chromium-devtools.glitch.me/static/memory/example-09.html "example-09.html - Microsoft Edge (Chromium) DevTools |Glitch"  
+[GlitchDevtoolsMemoryExample10]: https://microsoft-edge-chromium-devtools.glitch.me/static/memory/example-10.html "example-10.html - Microsoft Edge (Chromium) DevTools |Glitch"  
 
 [GonzaloRuizdeVillaMemory]: https://slid.es/gruizdevilla/memory "メモリ |スライド"  
 
@@ -285,5 +284,5 @@ DOM リークとメモリ分析の基本について詳しくは [、Gonzalo Rui
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
 [GoogleSitePolicies]: https://developers.google.com/terms/site-policies  
-[KayceBasques]: https://developers.google.com/web/resources/contributors/kaycebasques  
-[MegginKearney]: https://developers.google.com/web/resources/contributors/megginkearney  
+[KayceBasques]: https://developers.google.com/web/resources/contributors#kayce-basques  
+[MegginKearney]: https://developers.google.com/web/resources/contributors#meggin-kearney  

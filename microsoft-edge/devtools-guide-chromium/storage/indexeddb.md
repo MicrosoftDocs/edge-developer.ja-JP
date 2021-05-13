@@ -1,18 +1,18 @@
 ---
 description: アプリケーション パネルとスニペットを使用して IndexedDB データを表示および変更する方法。
-title: Microsoft Edge DevTools を使用して IndexedDB データを表示および変更する
+title: DevTools を使用して IndexedDB データを表示Microsoft Edge変更する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 03/08/2021
+ms.date: 05/04/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 719348067b1343ca3d7781737fa6441f92ad7ba1
-ms.sourcegitcommit: 4b9fb5c1176fdaa5e3c60af2b84e38d5bb86cd81
+ms.openlocfilehash: b0927ab436d1278f50b0dee099ba3526e5506762
+ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "11439711"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "11564806"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -27,10 +27,9 @@ ms.locfileid: "11439711"
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.  -->  
+# <a name="view-and-change-indexeddb-data-with-microsoft-edge-devtools"></a>DevTools を使用して IndexedDB データを表示Microsoft Edge変更する  
 
-# <a name="view-and-change-indexeddb-data-with-microsoft-edge-devtools"></a>Microsoft Edge DevTools を使用して IndexedDB データを表示および変更する  
-
-このガイドでは [、Microsoft Edge DevTools][MicrosoftEdgeDevTools] を使用して IndexedDB データを表示および変更 [する方法を示][MDNIndexedDBAPI] します。  DevTools に精通している必要があります。  また、IndexedDB に精通している必要があります。  使用しない場合は [、[IndexedDB の使用] に移動します][MDNUsingIndexedDB]。  
+このガイドでは、DevTools を使用して[IndexedDB Microsoft Edgeを][MicrosoftEdgeDevTools]表示および変更する方法[を示][MDNIndexedDBAPI]します。  DevTools に精通している必要があります。  また、IndexedDB に精通している必要があります。  使用しない場合は [、[IndexedDB の使用] に移動します][MDNUsingIndexedDB]。  
 
 ## <a name="view-indexeddb-data"></a>IndexedDB データの表示  
 
@@ -155,8 +154,8 @@ IndexedDB キーと値は、アプリケーション ツールでは **編集** 
 
 <!-- links -->  
 
-[MicrosoftEdgeDevTools]: ../../devtools-guide-chromium/index.md "Microsoft Edge (クロム) 開発者向け|Microsoft Docs"  
-[DevtoolsJavascriptSnippets]: ../javascript/snippets.md "Microsoft Edge DevTools を使用して任意のページで JavaScript のスニペットを実行|Microsoft Docs"  
+[MicrosoftEdgeDevTools]: ../../devtools-guide-chromium/index.md "Microsoft Edge (Chromium) 開発者ツール |Microsoft Docs"  
+[DevtoolsJavascriptSnippets]: ../javascript/snippets.md "DevTools を使用して任意のページで JavaScript のスニペットMicrosoft Edge実行|Microsoft Docs"  
 
 [ChromiumIssue943770]: https://crbug.com/943770 "943770 - DevTools: show iframe IndexedDB データベース - クロム - Monorail"  
 
@@ -175,4 +174,4 @@ IndexedDB キーと値は、アプリケーション ツールでは **編集** 
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
 [GoogleSitePolicies]: https://developers.google.com/terms/site-policies  
-[KayceBasques]: https://developers.google.com/web/resources/contributors/kaycebasques  
+[KayceBasques]: https://developers.google.com/web/resources/contributors#kayce-basques  

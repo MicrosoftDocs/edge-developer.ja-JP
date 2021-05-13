@@ -3,16 +3,16 @@ description: タイムラインで Allocation インストルメンテーショ�
 title: タイムラインで割り当てインストルメンテーションを使用する方法
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/12/2021
+ms.date: 05/04/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 374b7f0ad80b8975319b2b0ec5cecf42ce4bde82
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: a02249840256b1e5a2469a253d765eb888527662
+ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11397819"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "11564085"
 ---
 <!-- Copyright Meggin Kearney 
 
@@ -27,7 +27,6 @@ ms.locfileid: "11397819"
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License. -->
-
 # <a name="how-to-use-allocation-instrumentation-on-timeline"></a>タイムラインで割り当てインストルメンテーションを使用する方法  
 
 タイムライン **で Allocation インストルメンテーション** を使用して、適切にガベージ コレクションされていないオブジェクトを検索し、メモリを保持し続ける。  
@@ -91,13 +90,13 @@ JavaScript 関数によってメモリ割り当てを表示できます。  詳�
 
 <!-- links -->  
 
-[DevToolsOpenIndex]: ../open/index.md "Microsoft Edge (クロム) DevTools ファイルを開|Microsoft Docs"
+[DevToolsOpenIndex]: ../open/index.md "Open Microsoft Edge (Chromium) DevTools |Microsoft Docs"
 [DevtoolsMemoryProblemsIndexInvestigateMemoryAllocationFunction]: ./index.md#investigate-memory-allocation-by-function "関数別にメモリ割り当てを調査する - Fix Memory problems |Microsoft Docs"  
 
 <!--[HeapProfiler]: ./heap-snapshots.md "How to Record Heap Snapshots"  -->  
 <!--[PerformancePanel]: ../profile/evaluate-performance/timeline-tool ""  -->  
 
-[MicrosoftEdgeChannel]: https://www.microsoftedgeinsider.com/download "Microsoft Edge チャネルのダウンロード"  
+[MicrosoftEdgeChannel]: https://www.microsoftedgeinsider.com/download "アプリ チャネルMicrosoft Edgeする"  
 
 > [!NOTE]
 > このページの一部の情報は、[Google によって作成および共有][GoogleSitePolicies]されている著作物に基づいており、[Creative Commons Attribution 4.0 International License][CCA4IL] に記載されている条項に従って使用されています。  
@@ -109,5 +108,5 @@ JavaScript 関数によってメモリ割り当てを表示できます。  詳�
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
 [GoogleSitePolicies]: https://developers.google.com/terms/site-policies  
-[KayceBasques]: https://developers.google.com/web/resources/contributors/kaycebasques  
-[MegginKearney]: https://developers.google.com/web/resources/contributors/megginkearney  
+[KayceBasques]: https://developers.google.com/web/resources/contributors#kayce-basques  
+[MegginKearney]: https://developers.google.com/web/resources/contributors#meggin-kearney  

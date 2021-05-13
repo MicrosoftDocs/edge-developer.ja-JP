@@ -1,18 +1,18 @@
 ---
-description: Microsoft Edge DevTools で実行時のパフォーマンスを評価する方法について説明します。
+description: DevTools で実行時のパフォーマンスを評価するMicrosoft Edgeします。
 title: ランタイム のパフォーマンスの分析の開始
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 03/08/2021
+ms.date: 05/04/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 439d6d4331550b7fc92bfc5fef4c3fc88df38872
-ms.sourcegitcommit: 4b9fb5c1176fdaa5e3c60af2b84e38d5bb86cd81
+ms.openlocfilehash: f40f23c4ac9fcc0bb0186ddb96956f691890c0c0
+ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "11439613"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "11564274"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -27,21 +27,20 @@ ms.locfileid: "11439613"
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.  -->
-
 # <a name="get-started-with-analyzing-runtime-performance"></a>ランタイム のパフォーマンスの分析の開始  
 
 > [!NOTE]
 > ページの読み込み速度を速くする方法については、「オプティマイズ Web サイトの [速度」に移動します][DevtoolsSpeedGetStarted]。  
 
-実行時のパフォーマンスは、読み込みとは対照的に、ページの実行時のパフォーマンスです。  次のチュートリアル記事では、Microsoft Edge DevTools Performance パネルを使用して実行時のパフォーマンスを分析する方法について説明します。  **RAIL**モデルに関して、このチュートリアルで学習するスキルは、ページの応答、アニメーション、アイドル状態のフェーズを分析する場合に役立ちます。  
+実行時のパフォーマンスは、読み込みとは対照的に、ページの実行時のパフォーマンスです。  次のチュートリアル記事では、[DevTools Performance] パネルを使用してMicrosoft Edgeパフォーマンスを分析する方法について説明します。  **RAIL**モデルに関して、このチュートリアルで学習するスキルは、ページの応答、アニメーション、アイドル状態のフェーズを分析する場合に役立ちます。  
 
 <!--todo: add rail link when section is ready -->  
 
-## <a name="get-started"></a>使ってみる  
+## <a name="get-started"></a>作業の開始  
 
 次のチュートリアルでは、ライブ ページで DevTools を開き****、[パフォーマンス] パネルを使用してページのパフォーマンスのボトルネックを見つける。  
 
-1.  **InPrivate モードで Microsoft Edge を開きます**。  InPrivate モードでは、Microsoft Edge がクリーンな状態で実行されます。  たとえば、多くの拡張機能がインストールされている場合、拡張機能によってパフォーマンス測定値にノイズが発生する可能性があります。  
+1.  **InPrivate Microsoft Edgeでファイルを開きます**。  InPrivate モードを使用すると、Microsoft Edgeクリーンな状態で実行されます。  たとえば、多くの拡張機能がインストールされている場合、拡張機能によってパフォーマンス測定値にノイズが発生する可能性があります。  
     
     <!--TODO: replace section when updated for new Edge  -->
     
@@ -51,7 +50,7 @@ ms.locfileid: "11439613"
     https://microsoft-edge-chromium-devtools.glitch.me/sluggish/
     ```  
     
-1.  `Control` + `Shift` + `I` \(Windows, Linux\) または `Command` + `Option` + `I` \(macOS\) を選択して DevTools を開きます。  
+1.  `Control` + `Shift` + `I` \(Windows、Linux\) または `Command` + `Option` + `I` \(macOS\) を選択して DevTools を開きます。  
     
     :::image type="complex" source="../media/evaluate-performance-get-started-side-by-side.msft.png" alt-text="左側のデモと右側の DevTools" lightbox="../media/evaluate-performance-get-started-side-by-side.msft.png":::
        左側のデモと右側の DevTools  
@@ -66,7 +65,7 @@ ms.locfileid: "11439613"
 
 1.  DevTools で、[パフォーマンス] ツール **を選択** します。  
 1.  [スクリーンショット] の横にあるチェック ボックスをオン **にします**。  
-1.  [ **キャプチャ設定]\(** ![ キャプチャ設定 ](../media/capture-settings-icon.msft.png) \) を選択します。  DevTools は、パフォーマンス 指標のキャプチャ方法に関連する設定を表示します。  
+1.  [**キャプチャ] 設定**\( ![ Capture 設定 ](../media/capture-settings-icon.msft.png) \) を選択します。  DevTools は、パフォーマンス 指標のキャプチャ方法に関連する設定を表示します。  
 1.  **[CPU]** の場合は **、[4 倍の速度低下] を選択します**。  DevTools は CPU を調整して、通常の 4 倍遅くします。  
     
     :::image type="complex" source="../media/evaluate-performance-performance-capture-settings.msft.png" alt-text="CPU スロットル" lightbox="../media/evaluate-performance-performance-capture-settings.msft.png":::
@@ -225,9 +224,9 @@ Web サイトのすべての閲覧者に一貫して動作するランタイム 
 <!--The foundation for understanding performance is the RAIL model.  The RAIL model teaches you the performance metrics that are most important to your users.  
 To learn more, navigate to [Measure Performance With The RAIL Model][RAIL].  -->  
 
-パフォーマンス ツールの使い心地を **向上するために** 、プラクティスは完璧です。  ページのプロファイリングと結果の分析を試してみてください。  結果について質問がある場合は、[フィードバックの送信]**** アイコンを使用し `Alt` + `Shift` + `I` 、[\(Windows, Linux\] を選択 `Option` + `Shift` + `I` )、\(macOS\)を選択するか[、DevTools][TwitterEdgeDevtools]チームをつぶやきます。  可能であれば、再現可能なページへのスクリーンショットまたはリンクを含める。  
+パフォーマンス ツールの使い心地を **向上するために** 、プラクティスは完璧です。  ページのプロファイリングと結果の分析を試してみてください。  結果について質問がある場合は、[フィードバックの送信]**** アイコンを使用し `Alt` + `Shift` + `I` 、[\(Windows, Linux\] を選択し `Option` + `Shift` + `I` 、\(macOS\) を選択するか[、DevTools][TwitterEdgeDevtools]チームをつぶやきます。  可能であれば、再現可能なページへのスクリーンショットまたはリンクを含める。  
 
-:::image type="complex" source="../media/evaluate-performance-feedback-icon.msft.png" alt-text="Microsoft Edge DevTools の **Feedback** アイコン" lightbox="../media/evaluate-performance-feedback-icon.msft.png":::
+:::image type="complex" source="../media/evaluate-performance-feedback-icon.msft.png" alt-text="DevTools の **Feedback** Microsoft Edgeアイコン" lightbox="../media/evaluate-performance-feedback-icon.msft.png":::
    Microsoft Edge DevTools の [ **フィードバックの送信** ] アイコン  
 :::image-end:::  
 
@@ -250,8 +249,8 @@ To learn more, navigate to [Measure Performance With The RAIL Model][RAIL].  -->
 
 <!-- links -->
 
-[DevtoolsCustomizePlacement]: ../customize/placement.md "Microsoft Edge DevTools の配置を変更する (Undock、Dock to Bottom、Dock to Left)"  
-[DevtoolsSpeedGetStarted]: ../speed/get-started.md "Microsoft Edge DevTools を使用して Web サイトの速度を最適化する"  
+[DevtoolsCustomizePlacement]: ../customize/placement.md "DevTools Microsoft Edgeの配置を変更する (Undock、Dock to Bottom、Dock to Left)"  
+[DevtoolsSpeedGetStarted]: ../speed/get-started.md "DevTools を使用して web サイトMicrosoft Edge最適化する"  
 
 [TwitterEdgeDevtools]: https://twitter.com/intent/tweet?text=@EdgeDevTools "EdgeDevTools - ツイートを投稿|Twitter"  
 
@@ -284,4 +283,4 @@ To learn more, navigate to [Measure Performance With The RAIL Model][RAIL].  -->
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
 [GoogleSitePolicies]: https://developers.google.com/terms/site-policies  
-[KayceBasques]: https://developers.google.com/web/resources/contributors/kaycebasques  
+[KayceBasques]: https://developers.google.com/web/resources/contributors#kayce-basques  

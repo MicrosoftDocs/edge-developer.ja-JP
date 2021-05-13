@@ -1,5 +1,5 @@
 ---
-description: Microsoft Edge DevTools の最新の実験的機能
+description: DevTools の最新のMicrosoft Edge機能
 title: 試験的な機能
 author: MSEdgeTeam
 ms.author: msedgedevrel
@@ -22,44 +22,44 @@ no-loc:
 - Edit keyboard shortcuts for any action in the DevTools
 - Turn on new CSS grid debugging features
 - 'Emulation: Support dual screen mode'
-ms.openlocfilehash: c76830cb8bbcc597aa026f58e1926cd2f9bc2d62
-ms.sourcegitcommit: 2ddfd98d1e871be9c61380a8ca57da398d38bd54
+ms.openlocfilehash: 8f85bab4b1229a13f3b0185c65da900573380811
+ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "11439585"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "11564239"
 ---
 # <a name="experimental-features"></a>試験的な機能  
 
-Microsoft Edge DevTools は、開発中の実験的な機能にアクセスできます。  各機能がリリースされる [前に、テストして](#providing-feedback-on-experimental-features) フィードバックを提供することができます。  
+Microsoft EdgeDevTools は、開発中の実験的な機能にアクセスできます。  各機能がリリースされる [前に、テストして](#providing-feedback-on-experimental-features) フィードバックを提供することができます。  
 
-実験機能は Microsoft Edge のすべてのチャネルで利用できます。Microsoft Edge Canary チャネルを使用すると、最新の実験機能を利用できます。  
+試験的な機能は、Microsoft Edgeのすべてのチャネルで利用できる一方で、Microsoft Edge Canary チャネル を使用して最新の実験機能を取得できます。  
 
 ## <a name="turn-on-experimental-features"></a>実験的な機能を有効にする  
 
-Microsoft Edge で \(or off\) 実験機能を有効にするには、次の手順を実行します。  
+\(or off\) の実験機能をオンにMicrosoft Edge手順を実行します。  
 
 1.  [DevTools を開きます][DevtoolsOpenIndex]。  
-    *   `Control` + `Shift` + `I` \(Windows, Linux\) または `Command` + `Option` + `I` \(macOS\) を選択します。  詳細については [、「Microsoft Edge DevTools キーボード ショートカット」に移動します][DevtoolsShortcutsIndex]。  
-1.  [設定] [ウィンドウを開][DevToolsCustomizeIndexSettings] きます。  
-    *   を選択します `Shift` + `?` 。  詳細については [、「Microsoft Edge DevTools キーボード ショートカット」に移動します][DevtoolsShortcutsIndex]。  
-1.  [設定] ウィンドウの左側 **で** 、[実験] **セクションを選択** します。  
+    *   `Control` + `Shift` + `I` \(Windows Linux\) または `Command` + `Option` + `I` \(macOS\) を選択します。  詳細については、「DevTools キーボード[ショートカットMicrosoft Edgeに移動します][DevtoolsShortcutsIndex]。  
+1.  [ウィンドウ][ウィンドウ設定][DevToolsCustomizeIndexSettings]開きます。  
+    *   を選択します `Shift` + `?` 。  詳細については、「DevTools キーボード[ショートカットMicrosoft Edgeに移動します][DevtoolsShortcutsIndex]。  
+1.  [テスト] ウィンドウの**左側設定[** 実験]**セクションを選択**します。  
     
-    :::image type="complex" source="../media/experiments-devtools.msft.png" alt-text="[設定] の [実験] ページ" lightbox="../media/experiments-devtools.msft.png":::
-       [ **設定] の** [実験] **ページ**  
+    :::image type="complex" source="../media/experiments-devtools.msft.png" alt-text="[テスト] ページ (設定" lightbox="../media/experiments-devtools.msft.png":::
+       [**テスト]** ページ **(設定**  
     :::image-end:::  
     
 1.  [実験 **] ページで** 、利用可能なすべての実験機能の一覧をスクロールし、テストする各機能の横にあるチェック ボックスをオンにします。  
-1.  Microsoft Edge DevTools を閉じて再度開きます。  
+1.  DevTools を閉じてMicrosoft Edge開きます。  
     
 > [!NOTE]
 > 実験的な機能は常に更新され、パフォーマンスの問題を引き起こす可能性があります。  実験機能をオフにするには、[実験] ページ **を** 開き、無効にする実験機能のチェック ボックスをオフにします。  
 
 ## <a name="highlighted-experimental-features"></a>強調表示された実験的な機能  
 
-次のセクションでは、Microsoft Edge で使用できる新しい実験的機能について説明します。  
+次のセクションでは、新しい実験機能について説明します。この機能は、Microsoft Edge。  
 
-| 試験的機能 | Microsoft Edge バージョン |  
+| 試験的機能 | Microsoft Edgeバージョン |  
 |:--- |:--- |  
 | [Enable webhint](#enable-webhint) | 85 以降 |  
 | [Enable Network Console](#enable-network-console) | 85 以降 |  
@@ -176,7 +176,7 @@ z-indexes と Document Object Model \(DOM\) と並んでレイヤーを視覚化
 
 #### <a name="display-persistent-overlays-on-flexbox-layouts"></a>Flexbox レイアウトに永続的なオーバーレイを表示する  
 
-Microsoft Edge バージョン 89 以降では、実験的な CSS Flexbox 機能では、Flexbox レイアウトで永続的なオーバーレイを有効にするオプションも提供しています。  永続的なオーバーレイには、次の利点があります。  
+バージョン 89 以降Microsoft Edge、実験的な CSS Flexbox 機能では、Flexbox レイアウトで永続的なオーバーレイを有効にするオプションも提供しています。  永続的なオーバーレイには、次の利点があります。  
 
 *   永続的なオーバーレイは、スクロール、マウスの移動、DevTools の他の機能の使用時に Web ページに表示されたままです。
 *   複数の永続的なオーバーレイを同時に使用して、複数の Flexbox レイアウトを一度に確認できます。  
@@ -218,11 +218,11 @@ CSS グリッドまたは Flexbox レイアウトの永続的オーバーレイ�
 *   開発者向けドキュメントへのリンク  
 *   最新の機能  
 *   リリース ノート  
-*   Microsoft Edge DevTools チームに連絡するオプション  
+*   DevTools チームにMicrosoft Edgeするオプション  
     
-ウェルカム **ツールは** 、Microsoft Edge への更新の後に自動的に開きます。  更新後にウェルカム ツール**** が表示されるのを防ぐには、[ようこそ]**** ツールのタイトルの下にある更新の後、[開く] タブの横にあるチェック ボックス**を**オフにします。  
+ウェルカム**ツールは**、更新後に自動的に開Microsoft Edge。  更新後にウェルカム ツール**** が表示されるのを防ぐには、[ようこそ]**** ツールのタイトルの下にある更新の後、[開く] タブの横にあるチェック ボックス**を**オフにします。  
 
-元の [What's **New]** ツールを[][DevtoolsCustomizeIndexSettings]使用する場合は、[設定の実験] に移動し、の横にある  >  **** チェック ボックスをオフにします **Enable Welcome tab** 。  
+元の **[What's New]** ツールを使用する場合は、[テスト] 設定に移動し、[テスト][の横にある][DevtoolsCustomizeIndexSettings]チェック  >  **** ボックスをオフにします **Enable Welcome tab** 。  
 
 :::image type="complex" source="../media/experiments-welcome.msft.png" alt-text="ウェルカム ツール" lightbox="../media/experiments-welcome.msft.png":::
    **ウェルカム** ツール  
@@ -232,16 +232,16 @@ CSS グリッドまたは Flexbox レイアウトの永続的オーバーレイ�
 
 ## <a name="previous-experimental-features"></a>以前の実験的な機能  
 
-*   [3D View][Devtools3dViewIndex] が使用可能になっていて、Microsoft Edge バージョン 83 以降で既定で有効になっています。  
-*   [Turn on support to move tabs between panels][DevtoolsCustomizeIndex] が使用可能になっていて、Microsoft Edge バージョン 85 以降で既定で有効になっています。  
-*   [Match keyboard shortcuts in the DevTools to Microsoft Visual Studio Code][DevtoolsCustomizeShortcutsMatchKeyboardShortcutsDevtoolsMicrosoftVisualStudioCode] が利用可能で、Microsoft Edge バージョン 86 以降で既定で有効になっています。  
-*   [Edit keyboard shortcuts for any action in the DevTools][DevtoolsCustomizeShortcutsEditKeyboardShortcutsForAnyActionDevtools] が使用可能になっていて、Microsoft Edge バージョン 89 以降で既定で有効になっています。  
-*   [Turn on new CSS grid debugging features][DevtoolsCssGrid] が使用可能になっていて、Microsoft Edge バージョン 89 以降で既定で有効になっています。  
-*   [Emulation: Support dual screen mode][DevtoolsDeviceModeDualScreenAndFoldables] が使用可能になっていて、Microsoft Edge バージョン 90 以降で既定で有効になっています。  
+*   [3D View][Devtools3dViewIndex]バージョン 83 以降で既定Microsoft Edge有効になっています。  
+*   [Turn on support to move tabs between panels][DevtoolsCustomizeIndex]バージョン 85 以降で既定Microsoft Edge有効になっています。  
+*   [Match keyboard shortcuts in the DevTools to Microsoft Visual Studio Code][DevtoolsCustomizeShortcutsMatchKeyboardShortcutsDevtoolsMicrosoftVisualStudioCode]バージョン 86 以降で既定Microsoft Edge有効になっています。  
+*   [Edit keyboard shortcuts for any action in the DevTools][DevtoolsCustomizeShortcutsEditKeyboardShortcutsForAnyActionDevtools]バージョン 89 以降で既定Microsoft Edge有効になっています。  
+*   [Turn on new CSS grid debugging features][DevtoolsCssGrid]バージョン 89 以降で既定Microsoft Edge有効になっています。  
+*   [Emulation: Support dual screen mode][DevtoolsDeviceModeDualScreenAndFoldables]バージョン 90 以降で既定Microsoft Edge有効になっています。  
 
 ## <a name="providing-feedback-on-experimental-features"></a>実験的な機能に関するフィードバックの提供  
 
-Microsoft Edge DevTools 実験、または DevTools に関連するその他のフィードバックを提供する。  
+DevTools 実験に関Microsoft Edgeフィードバックを提供する場合、または DevTools に関連するその他の情報を提供する。  
 
 *   DevTools の [フィードバック **の送信** ] アイコンを使用してフィードバックを送信する  
 *   ツイートの [@EdgeDevTools][TwitterEdgedevtools]  
@@ -259,21 +259,20 @@ Microsoft Edge DevTools 実験、または DevTools に関連するその他の�
 <!-- links -->  
 
 [Devtools3dViewIndex]: ../3d-view/index.md "3D View |Microsoft Docs"  
-[DevtoolsCssGrid]: ../css/grid.md "Microsoft Edge DevTools サーバーで CSS グリッドを検査|Microsoft Docs"  
-[DevtoolsCustomizeIndex]: ../customize/index.md "Microsoft Edge DevTools のカスタマイズ |Microsoft Docs"  
+[DevtoolsCssGrid]: ../css/grid.md "DevTools ページで CSS グリッドMicrosoft Edgeを調|Microsoft Docs"  
+[DevtoolsCustomizeIndex]: ../customize/index.md "DevTools Microsoft Edgeのカスタマイズ|Microsoft Docs"  
 [DevToolsCustomizeIndexSettings]: ../customize/index.md#settings "設定 - Microsoft Edge DevTools をカスタマイズする | Microsoft Docs"  
 [DevtoolsCustomizeShortcutsEditKeyboardShortcutsForAnyActionDevtools]: ../customize/shortcuts.md#edit-keyboard-shortcuts-for-any-action-in-the-devtools "DevTools 内の任意のアクションのキーボード ショートカットを編集する |Microsoft Docs"  
-[DevtoolsCustomizeShortcutsMatchKeyboardShortcutsDevtoolsMicrosoftVisualStudioCode]: ../customize/shortcuts.md#match-keyboard-shortcuts-in-the-devtools-to-microsoft-visual-studio-code "DevTools のキーボード ショートカットを Microsoft コードに一致Visual Studio |Microsoft Docs"  
-[DevtoolsDeviceModeIndexSimulateMobileViewport]: ../device-mode/index.md#simulate-a-mobile-viewport "Microsoft Edge DevTools アプリケーションでデバイス モードでモバイル デバイスをシミュレート|Microsoft Edge"  
+[DevtoolsCustomizeShortcutsMatchKeyboardShortcutsDevtoolsMicrosoftVisualStudioCode]: ../customize/shortcuts.md#match-keyboard-shortcuts-in-the-devtools-to-microsoft-visual-studio-code "DevTools のキーボード ショートカットをコードMicrosoft Visual Studio一致 |Microsoft Docs"  
+[DevtoolsDeviceModeDualScreenAndFoldables]: ../device-mode/dual-screen-and-foldables.md "DevTools アプリケーションでデュアルスクリーンデバイスと折りたたみMicrosoft Edgeエミュレート|Microsoft Docs"  
+[DevtoolsDeviceModeIndexSimulateMobileViewport]: ../device-mode/index.md#simulate-a-mobile-viewport "DevTools アプリケーションでデバイス モードでモバイル Microsoft Edgeをシミュレート|Microsoft Edge"  
 [DevtoolsInspectStylesEditFonts]: ../inspect-styles/edit-fonts.md "DevTools の [スタイル] ウィンドウで CSS フォントのスタイルと設定を編集 | Microsoft Docs"  
 [DevtoolsIssuesIndex]: ../issues/index.md "Microsoft Edge DevTools の問題ツールに関する問題を見つけて修正する | Microsoft Docs"  
 [DevtoolsOpenIndex]: ../open/index.md "Microsoft Edge DevTools を開く | Microsoft Docs"  
-[DevtoolsShortcutsIndex]: ../shortcuts/index.md "Microsoft Edge DevTools キーボード ショートカット |Microsoft Docs"  
+[DevtoolsShortcutsIndex]: ../shortcuts/index.md "Microsoft EdgeDevTools キーボード ショートカット |Microsoft Docs"  
 
 [MicrosoftEdgeMain]: https://www.microsoft.com/edge "Microsoft Edge"  
 
-[DevtoolsDeviceModeDualScreenAndFoldables]: ../device-mode/dual-screen-and-foldables.md "Microsoft Edge DevTools アプリケーションでデュアルスクリーンデバイスと折りたたみ可能なデバイスをエミュレート|Microsoft Docs"
-
-[TwitterEdgedevtools]: https://www.twitter.com/EdgeDevTools "Microsoft Edge DevTools |Twitter"  
+[TwitterEdgedevtools]: https://www.twitter.com/EdgeDevTools "Microsoft EdgeDevTools |Twitter"  
 
 [WebhintMain]: https://webhint.io "webhint"  

@@ -1,18 +1,18 @@
 ---
-description: Microsoft Edge DevTools で暗いテーマを有効にする方法。
-title: Microsoft Edge DevTools で暗いテーマを有効にする
+description: DevTools で暗いテーマを有効Microsoft Edge方法。
+title: DevTools で暗いMicrosoft Edgeを有効にする
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/12/2021
+ms.date: 05/04/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: dc857a65deef9b62614da79d2648c8b92ac9db07
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: 2ba44f03cabe215a6eb524f34921671919bde421
+ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11399023"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "11564379"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -27,21 +27,20 @@ ms.locfileid: "11399023"
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.  -->
+# <a name="enable-dark-theme-in-microsoft-edge-devtools"></a>DevTools で暗いMicrosoft Edgeを有効にする  
 
-# <a name="enable-dark-theme-in-microsoft-edge-devtools"></a>Microsoft Edge DevTools で暗いテーマを有効にする  
-
-[設定] または [コマンド メニュー [] で暗い](#set-up-dark-theme-from-settings) テーマ [を有効にできます](#set-up-dark-theme-from-the-command-menu)。  
+[コマンド] または [コマンド[メニュー]](#set-up-dark-theme-from-settings)で設定テーマ[を有効にできます](#set-up-dark-theme-from-the-command-menu)。  
 
 :::image type="complex" source="../media/customize-elements-styles-console-dark-theme.msft.png" alt-text="暗いテーマ" lightbox="../media/customize-elements-styles-console-dark-theme.msft.png":::
    暗いテーマ  
 :::image-end:::  
 
-## <a name="set-up-dark-theme-from-settings"></a>設定から暗いテーマを設定する  
+## <a name="set-up-dark-theme-from-settings"></a>[暗いテーマを設定する] 設定  
 
-1.  **[DevTools のカスタマイズと制御]** \( `...` \) [設定] >**選択します**。  [設定] を **選択して開** く場合があります `F1` 。  
+1.  **[DevTools \(** \) のカスタマイズと `...` 制御] を選択 **>設定。**  を選択して **、設定**を開く場合があります `F1` 。  
     
     :::image type="complex" source="../media/customize-options-settings.msft.png" alt-text="[設定] を開く" lightbox="../media/customize-options-settings.msft.png":::
-       設定を **開く**  
+       開**く設定**  
     :::image-end:::  
 
 1.  [基本設定 **] ウィンドウの**[外観]**で、[** テーマの濃い色]**を**  >  **選択します**。  
@@ -77,4 +76,4 @@ ms.locfileid: "11399023"
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
 [GoogleSitePolicies]: https://developers.google.com/terms/site-policies  
-[KayceBasques]: https://developers.google.com/web/resources/contributors/kaycebasques  
+[KayceBasques]: https://developers.google.com/web/resources/contributors#kayce-basques  

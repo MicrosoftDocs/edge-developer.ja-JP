@@ -3,16 +3,16 @@ description: Android デバイス上のリモート デバッグライブ コン
 title: Android デバイスのリモート デバッグを開始する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 03/25/2021
+ms.date: 05/04/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: d69fd4832991826c76f47daea399bdd89e981bb4
-ms.sourcegitcommit: bff24ab1f0a66aaf4c7f5ff81cea3eb28c6d8380
+ms.openlocfilehash: d5a5ea8faef40925fb0fb986eb984ac9ae4f051b
+ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2021
-ms.locfileid: "11461214"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "11565107"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -159,7 +159,7 @@ DevTools **インスタンスで** Android デバイスのコンテンツを表�
 
 [AppleDeveloperSafariTools]: https://developer.apple.com/safari/tools "Safari Web 開発ツール |Apple Developer"  
 
-[BrightcoveSupportDebuggingMobileDevices]: https://support.brightcove.com/debugging-mobile-devices "モバイル デバイス のデバッグ |Brightcove サポート"  
+[BrightcoveSupportDebuggingMobileDevices]: https://general.support.brightcove.com/developer/debugging-mobile-devices.html "モバイル デバイス のデバッグ |Brightcove サポート"  
 
 <!-- [GitHubWebFundamentalsNewIssue]: https://github.com/Alphabet/webfundamentals/issues/new?title=[Remote%20Debugging] "GitHub - Web Fundamentals - New Issue"  -->  
 
@@ -177,4 +177,4 @@ DevTools **インスタンスで** Android デバイスのコンテンツを表�
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
 [GoogleSitePolicies]: https://developers.google.com/terms/site-policies  
-[KayceBasques]: https://developers.google.com/web/resources/contributors/kaycebasques  
+[KayceBasques]: https://developers.google.com/web/resources/contributors#kayce-basques  

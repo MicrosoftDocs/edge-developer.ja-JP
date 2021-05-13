@@ -3,18 +3,18 @@ description: DevTools のビジョンのMicrosoft Edgeエミュレートしま�
 title: DevTools の視覚Microsoft Edgeをエミュレートする (色覚不備)
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/09/2021
+ms.date: 05/11/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 8c3f3a34c441692117906f51c3d8430e79fd72b1
-ms.sourcegitcommit: 16e2f7232196a57a70b979bbf8b663774b7ddc20
+ms.openlocfilehash: 1ab224f1dc70618dbef77ec6e6dbc22a0d1f47fb
+ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2021
-ms.locfileid: "11519171"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "11564603"
 ---
-# <a name="emulate-vision-deficiencies"></a>視覚欠陥をエミュレートする
+# <a name="emulate-vision-deficiencies"></a>視覚欠陥をエミュレートする  
 
 色覚障害[\(color][ColorblindawarenessMain] blindness\) を持つユーザーのニーズをよりよく満たすために[、Microsoft Edge DevTools][DevtoolsIndex]を使用すると、特定の色覚障害をシミュレートできます。  [ **ビジョンの不備のエミュレート]** ツールは、次のカテゴリをシミュレートします。  
 
@@ -37,7 +37,7 @@ Web 製品に適用されているビジョン不足をシミュレートする�
     :::image type="complex" source="../media/getting-to-the-rendering-tools.msft.png" alt-text="レンダリング ツールを開く" lightbox="../media/getting-to-the-rendering-tools.msft.png":::
        レンダリング ツール **を開く**  
     :::image-end:::  
-
+    
 [ **レンダリング]** メニューがドロワーに表示されます。  
 
 1.  メニュー項目まで下 `Emulate vision deficiencies` にスクロールし、ドロップダウン メニューを選択してオプションを表示します。  
@@ -90,6 +90,6 @@ Web 製品に適用されているビジョン不足をシミュレートする�
 [DevToolsIndex]: ../index.md "Microsoft Edge (Chromium) 開発者ツール | Microsoft Docs"  
 [DevtoolsRenderingToolsIndex]: ../rendering-tools/index.md "ランタイム パフォーマンス の分析|Microsoft Docs"  
 
-[ColorblindawarenessMain]: http://www.colourblindawareness.org "カラー ブラインドの認識組織"  
+[ColorblindawarenessMain]: https://www.colourblindawareness.org "カラー ブラインドの認識組織"  
 
 [AmfcbMain]: https://www.amfcb.org "カラー ブラインド (AFCB) のアメリカンファンデーション"  

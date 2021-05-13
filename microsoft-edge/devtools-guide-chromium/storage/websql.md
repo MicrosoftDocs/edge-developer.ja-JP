@@ -1,18 +1,18 @@
 ---
-description: Microsoft Edge DevTools SQLアプリケーション パネルから Web データを表示する方法。
-title: Microsoft Edge DevTools SQL Web データを表示する
+description: DevTools の [アプリケーション] SQLから Web データを表示するMicrosoft Edge方法。
+title: DevTools で web SQLデータをMicrosoft Edgeする
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 03/08/2021
+ms.date: 05/04/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 9f684aabf3592220079e6a8595d91cfea6785769
-ms.sourcegitcommit: 4b9fb5c1176fdaa5e3c60af2b84e38d5bb86cd81
+ms.openlocfilehash: bc25f7422be19bec99bde1cd7764f08aad8e6668
+ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "11439599"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "11564701"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -27,15 +27,14 @@ ms.locfileid: "11439599"
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.  -->
-
-# <a name="view-web-sql-data-with-microsoft-edge-devtools"></a>Microsoft Edge DevTools SQL Web データを表示する  
+# <a name="view-web-sql-data-with-microsoft-edge-devtools"></a>DevTools で web SQLデータをMicrosoft Edgeする  
 
 > [!WARNING]
-> Web SQL仕様 [は維持されません][W3CWebSQLStatus]。  
+> Web SQL仕様[は維持されません][W3CWebSQLStatus]。  
 
-このガイドでは [、Microsoft Edge DevTools][MicrosoftEdgeDevTools] を使用して Web データを調SQLします。  
+このガイドでは、DevTools を使用して[Web Microsoft Edgeデータ][MicrosoftEdgeDevTools]を調SQLします。  
 
-## <a name="view-web-sql-data"></a>Web データの表示SQLする  
+## <a name="view-web-sql-data"></a>Web SQLデータの表示  
 
 1.  [ソース **] ツールを** 選択して [ソース] **ツールを開** きます。  通常 **、マニフェスト ウィンドウ** は既定で開きます。  
     
@@ -43,7 +42,7 @@ ms.locfileid: "11439599"
        [ **マニフェスト]** ウィンドウ  
     :::image-end:::  
     
-1.  [Web ページ **] セクションSQL** データベースとテーブルを表示します。  次の図では、 **以下の html5meetup は** データベースであり、 **会議室は** 表です。  
+1.  [Web ファイル **] セクションSQL**データベースとテーブルを表示します。  次の図では、 **以下の html5meetup は** データベースであり、 **会議室は** 表です。  
     
     :::image type="complex" source="../media/storage-application-storage-web-sql.msft.png" alt-text="[Web SQL] ウィンドウ" lightbox="../media/storage-application-storage-web-sql.msft.png":::
        [Web **SQL]** ウィンドウ  
@@ -57,9 +56,9 @@ ms.locfileid: "11439599"
     
 ## <a name="edit-web-sql-data"></a>Web データのSQL編集  
 
-前の例のように、Web SQLテーブルを表示SQL Web データを編集できない。  ただし、テーブルを編集または削除する web SQLコンソールからステートメントを実行できます。  [Web クエリの [実行] SQL移動します](#run-web-sql-queries)。  
+前の例のように、Web SQLテーブルを表示SQL Web データを編集できない。  ただし、テーブルを編集または削除する web SQLコンソールからステートメントを実行できます。  [Web クエリの[実行] SQL移動します](#run-web-sql-queries)。  
 
-## <a name="run-web-sql-queries"></a>Web クエリSQL実行する  
+## <a name="run-web-sql-queries"></a>Web クエリのSQL実行  
 
 1.  データベースを選択して、そのデータベースのコンソールを開きます。  
 1.  [Web ファイル] SQLを入力し、実行 `Enter` を選択します。  
@@ -75,7 +74,7 @@ DevTools はリアルタイムでテーブルを更新しない。  テーブル
 1.  [Web テーブルでデータを表示SQLします](#view-web-sql-data)。  
 1.  [ **更新** \( ![ Refresh ](../media/refresh-icon.msft.png) \] を選択します)。  
     
-## <a name="filter-out-columns-in-a-web-sql-table"></a>Web テーブル内の列をSQLする  
+## <a name="filter-out-columns-in-a-web-sql-table"></a>Web テーブル内の列をフィルター SQLする  
 
 1.  [Web テーブルでデータを表示SQLします](#view-web-sql-data)。  
 1.  表示する **列を** 指定するには、[表示列] テキスト ボックスを使用します。  列名を CSV リストとして指定します。  
@@ -86,8 +85,8 @@ DevTools はリアルタイムでテーブルを更新しない。  テーブル
     
 ## <a name="delete-all-web-sql-data"></a>すべての Web データをSQLする  
 
-1.  [ストレージの **クリア] ウィンドウを開** きます。  
-1.  [Web ファイル] チェック **ボックスSQL** オンになっていることを確認します。  
+1.  [クリア]**ウィンドウStorage**開きます。  
+1.  [Web] チェック**ボックスSQL**オンになっていることを確認します。  
     
     :::image type="complex" source="../media/storage-application-clear-storage-web-sql.msft.png" alt-text="[Web SQL] チェック ボックス" lightbox="../media/storage-application-clear-storage-web-sql.msft.png":::
        **[Web SQL]** チェック ボックス  
@@ -119,4 +118,4 @@ DevTools はリアルタイムでテーブルを更新しない。  テーブル
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
 [GoogleSitePolicies]: https://developers.google.com/terms/site-policies  
-[KayceBasques]: https://developers.google.com/web/resources/contributors/kaycebasques  
+[KayceBasques]: https://developers.google.com/web/resources/contributors#kayce-basques  

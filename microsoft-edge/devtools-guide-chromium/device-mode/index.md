@@ -1,18 +1,18 @@
 ---
-description: Microsoft Edge の仮想デバイスを使用して、モバイル ファースト Web サイトを構築します。
-title: Microsoft Edge DevTools でモバイル デバイスをエミュレートする
+description: モバイル ファースト web サイトMicrosoft Edge仮想デバイスを使用します。
+title: DevTools でモバイル デバイスMicrosoft Edgeエミュレートする
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 03/08/2021
+ms.date: 05/04/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge, Web 開発, f12 ツール, devtools, エミュレーション, デバイス, シミュレーション, モバイル
-ms.openlocfilehash: bb081ddd5f773e5e9ae6a1b83b5fcb13408df6cb
-ms.sourcegitcommit: 4b9fb5c1176fdaa5e3c60af2b84e38d5bb86cd81
+ms.openlocfilehash: b62a1799b1707fc4c6890bb7ad9ad4aa9afab113
+ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "11439452"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "11564407"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -27,10 +27,9 @@ ms.locfileid: "11439452"
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.  -->
+# <a name="emulate-mobile-devices-in-microsoft-edge-devtools"></a>DevTools でモバイル デバイスMicrosoft Edgeエミュレートする  
 
-# <a name="emulate-mobile-devices-in-microsoft-edge-devtools"></a>Microsoft Edge DevTools でモバイル デバイスをエミュレートする  
-
-デバイス **エミュレーションを使用** して、モバイル デバイスでのページの外観と応答を概算します。  Microsoft Edge DevTools には、モバイル デバイスのエミュレートに役立つ機能のコレクションが提供されています。  コレクションには、次の機能が含まれています。  
+デバイス **エミュレーションを使用** して、モバイル デバイスでのページの外観と応答を概算します。  DevTools Microsoft Edgeには、モバイル デバイスのエミュレートに役立つ機能のコレクションが提供されています。  コレクションには、次の機能が含まれています。  
 
 *   [モバイル ビューポートをシミュレートする](#simulate-a-mobile-viewport)  
 *   [ネットワークの調整](#throttle-the-network-only)  
@@ -85,7 +84,7 @@ ms.locfileid: "11439452"
    [**デバイスの種類] リスト**  
 :::image-end:::  
 
-次の表に、使用可能なデバイスの種類のオプションの違いを示します。  [レンダリング] メソッド列は、Microsoft Edge がページをモバイル ビューポートまたはデスクトップ ビューポートとしてレンダリングするかどうかを示します。  [カーソル] アイコン列は、ページにマウス ポインターを置くと表示されるカーソルの種類を表します。  [イベントがトリガーされた] 列は、ページを操作するときに、ページがトリガーするか `touch` `click` 、イベントをトリガーするかを示します。  
+次の表に、使用可能なデバイスの種類のオプションの違いを示します。  [レンダリング] メソッド列は、Microsoft Edgeをモバイル ビューポートまたはデスクトップ ビューポートとしてレンダリングするかどうかを示します。  [カーソル] アイコン列は、ページにマウス ポインターを置くと表示されるカーソルの種類を表します。  [イベントがトリガーされた] 列は、ページを操作するときに、ページがトリガーするか `touch` `click` 、イベントをトリガーするかを示します。  
 
 | オプション | レンダリング メソッド | カーソル アイコン | トリガーされるイベント |  
 |:--- |:--- |:--- |:--- |  
@@ -126,7 +125,7 @@ ms.locfileid: "11439452"
 
 #### <a name="show-device-frame"></a>デバイス フレームの表示  
 
-iPhone 6 などの特定のモバイル デバイスの寸法をシミュレートするときに、ビューポートの周囲に物理デバイス フレームを表示します。  
+6 などの特定のモバイル デバイスの寸法をシミュレートするときに、ビューポートの周囲に物理デバイス フレームiPhoneします。  
 
 1.  [その **他のオプション] を開きます**。  
 1.  [デバイス **フレームの表示] を選択します**。  
@@ -141,8 +140,8 @@ iPhone 6 などの特定のモバイル デバイスの寸法をシミュレー�
       :::image-end:::  
    :::column-end:::
    :::column span="":::
-      :::image type="complex" source="../media/device-mode-toggle-device-toolbar-options-device-frame-iphone-6.msft.png" alt-text="iPhone 6 のデバイス フレーム" lightbox="../media/device-mode-toggle-device-toolbar-options-device-frame-iphone-6.msft.png":::
-         iPhone 6 のデバイス フレーム  
+      :::image type="complex" source="../media/device-mode-toggle-device-toolbar-options-device-frame-iphone-6.msft.png" alt-text="デバイス 6 のiPhoneフレーム" lightbox="../media/device-mode-toggle-device-toolbar-options-device-frame-iphone-6.msft.png":::
+         デバイス 6 のiPhoneフレーム  
       :::image-end:::  
    :::column-end:::
 :::row-end:::  
@@ -216,7 +215,7 @@ iPhone 6 などの特定のモバイル デバイスの寸法をシミュレー�
 
 ネットワークではなく CPU のみを調整するには、次の手順を実行します。
 
-1.  [パフォーマンス] **パネルを選択** し、[キャプチャ設定\( Capture **Settings** ![ ](../media/capture-settings-icon.msft.png) \] ) を選択します。
+1.  [パフォーマンス]**パネルを**選択し、[**キャプチャ**] 設定 \( ![ Capture 設定 ](../media/capture-settings-icon.msft.png) \) を選択します。
 1.  **[CPU**  >  **4x スローダウン] または** **[6 倍のスローダウン] を選択します**。
     
     :::image type="complex" source="../media/device-mode-performance-cpu-throttle.msft.png" alt-text="[パフォーマンス] パネルの CPU リスト" lightbox="../media/device-mode-performance-cpu-throttle.msft.png":::
@@ -234,7 +233,7 @@ iPhone 6 などの特定のモバイル デバイスの寸法をシミュレー�
        [ **ネットワーク]** パネルの [スロットル] リスト  
     :::image-end:::  
     
-    または `Control` + `Shift` + `P` 、[\(Windows, `Command` + `Shift` + `P` Linux\) または \(macOS\)**** `3G` ******** を選択してコマンド メニューを開き、入力し、[高速 3G 調整を有効にする] または [低速 3G 調整を有効にする] を選択します。  
+    または `Control` + `Shift` + `P` 、\(Windows、Linux\) または `Command` + `Shift` + `P` \(macOS\)**** `3G` ******** を選択してコマンド メニューを開き、入力し、[高速 3G 調整を有効にする] または [低速 3G 調整を有効にする] を選択します。  
     
     :::image type="complex" source="../media/device-mode-command-menu-throttle.msft.png" alt-text="コマンド メニュー" lightbox="../media/device-mode-command-menu-throttle.msft.png":::
        **コマンド メニュー**  
@@ -242,7 +241,7 @@ iPhone 6 などの特定のモバイル デバイスの寸法をシミュレー�
     
 [パフォーマンス] パネルからネットワーク調整を **設定** することもできます。  
 
-1.  [**キャプチャ設定**\( Capture Settings \) を選択し、[ネットワーク] リストを選択し、プリセットを ![ ](../media/capture-settings-icon.msft.png) **[Fast 3G]** または **[低速 3G] に変更します**。 ****  
+1.  [**キャプチャ] 設定**\( Capture 設定 \) を選択し、[ネットワーク] リストを選択し、プリセットを ![ ](../media/capture-settings-icon.msft.png) **[Fast 3G]** または [**低速 3G] に変更します**。 ****  
     
     :::image type="complex" source="../media/device-mode-performance-network-throttle.msft.png" alt-text="[パフォーマンス] パネルからネットワーク調整を設定する" lightbox="../media/device-mode-performance-network-throttle.msft.png":::
        [パフォーマンス] パネルからネットワーク調整 **を設定** する  
@@ -262,7 +261,7 @@ iPhone 6 などの特定のモバイル デバイスの寸法をシミュレー�
    :::column-end:::
    :::column span="":::
       1.  コマンド メニュー を開きます。  
-          *   `Control` + `Shift` + `P` \(Windows, Linux\) または `Command` + `Shift` + `P` \(macOS\) を選択します。  
+          *   `Control` + `Shift` + `P` \(Windows Linux\) または `Command` + `Shift` + `P` \(macOS\) を選択します。  
       1. を `Sensors` 入力し、[センサー **の表示] を選択します**。  
       
       :::image type="complex" source="../media/device-mode-toggle-device-toolbar-command-menu-sensors.msft.png" alt-text="地理位置情報のセンサーを表示する" lightbox="../media/device-mode-toggle-device-toolbar-command-menu-sensors.msft.png":::
@@ -291,7 +290,7 @@ iPhone 6 などの特定のモバイル デバイスの寸法をシミュレー�
    :::column-end:::
    :::column span="":::
       1.  コマンド メニュー を開きます。  
-          *   `Control` + `Shift` + `P` \(Windows, Linux\) または `Command` + `Shift` + `P` \(macOS\) を選択します。  
+          *   `Control` + `Shift` + `P` \(Windows Linux\) または `Command` + `Shift` + `P` \(macOS\) を選択します。  
       1. を `Sensors` 入力し、[センサー **の表示] を選択します**。  
       
       :::image type="complex" source="../media/device-mode-toggle-device-toolbar-command-menu-sensors.msft.png" alt-text="方向のセンサーを表示する" lightbox="../media/device-mode-toggle-device-toolbar-command-menu-sensors.msft.png":::
@@ -320,7 +319,7 @@ iPhone 6 などの特定のモバイル デバイスの寸法をシミュレー�
    :::column-end:::
    :::column span="":::
       1.  コマンド メニュー を開きます。  
-          *   `Control` + `Shift` + `P` \(Windows, Linux\) または `Command` + `Shift` + `P` \(macOS\) を選択します。  
+          *   `Control` + `Shift` + `P` \(Windows Linux\) または `Command` + `Shift` + `P` \(macOS\) を選択します。  
       1. を `Network conditions` 入力し、[ネットワーク条件 **の表示] を選択します**。  
       
       :::image type="complex" source="../media/device-mode-toggle-device-toolbar-command-menu-network-conditions.msft.png" alt-text="ネットワーク条件の表示" lightbox="../media/device-mode-toggle-device-toolbar-command-menu-network-conditions.msft.png":::
@@ -331,8 +330,8 @@ iPhone 6 などの特定のモバイル デバイスの寸法をシミュレー�
 
 [ユーザー エージェント **] の横にある**[自動的に選択 **する] チェック ボックスを** オフにします。  次に **、[Custom...] を選択** して、定義済みのユーザー エージェント文字列の一覧から選択します。  独自のユーザー エージェント文字列を入力するには、[カスタム ユーザー エージェントの入力 **] に文字列を入力します**。  
 
-:::image type="complex" source="../media/device-mode-toggle-device-toolbar-network-conditions-macos.msft.png" alt-text="macOS でユーザー エージェント文字列を Microsoft Edge に設定する" lightbox="../media/device-mode-toggle-device-toolbar-network-conditions-macos.msft.png":::
-    macOS でユーザー エージェント文字列を Microsoft Edge に設定する  
+:::image type="complex" source="../media/device-mode-toggle-device-toolbar-network-conditions-macos.msft.png" alt-text="macOS でユーザー エージェント文字列をMicrosoft Edgeする" lightbox="../media/device-mode-toggle-device-toolbar-network-conditions-macos.msft.png":::
+    macOS でユーザー エージェント文字列をMicrosoft Edgeする  
 :::image-end:::  
 
 ## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームと連絡を取る  
@@ -362,4 +361,4 @@ iPhone 6 などの特定のモバイル デバイスの寸法をシミュレー�
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
 [GoogleSitePolicies]: https://developers.google.com/terms/site-policies  
-[KayceBasques]: https://developers.google.com/web/resources/contributors/kaycebasques  
+[KayceBasques]: https://developers.google.com/web/resources/contributors#kayce-basques  

@@ -3,16 +3,16 @@ description: キーボード ショートカットを Visual Studio Code と一�
 title: DevTools の新機能 (Microsoft Edge 86)
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 04/08/2021
+ms.date: 05/04/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: f1227f0869aa753c2d05980c712ca3453adfd041
-ms.sourcegitcommit: de75fda30bb8964e9a184228d068b4402ec59c3e
+ms.openlocfilehash: ec2219e9ebdd5d79c61bcaa813f7784246b1f5d0
+ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2021
-ms.locfileid: "11514383"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "11564946"
 ---
 <!-- Copyright Jecelyn Yeen 
 
@@ -35,7 +35,7 @@ ms.locfileid: "11514383"
 
 ### <a name="match-keyboard-shortcuts-in-devtools-to-visual-studio-code"></a>DevTools のキーボード ショートカットを Visual Studio Code と一致させる  
 
-86 Microsoft Edgeでは、DevTools のキーボード ショートカットとコードコードのショートカットを一[致Microsoft Visual Studioがあります][VisualStudioCode]。  
+86 Microsoft Edgeでは、DevTools のキーボード ショートカットとコードコードのショートカットを一[致Microsoft Visual Studioがあります][VisualStudioCodeMain]。  
 
 :::image type="complex" source="../../media/2020/08/keyboard-shortcut.msft.png" alt-text="DevTools のキーボード ショートカットを Visual Studio Code と一致させる" lightbox="../../media/2020/08/keyboard-shortcut.msft.png":::
    DevTools のキーボード ショートカットを Visual Studio Code と一致させる  
@@ -57,17 +57,17 @@ Microsoft Edge を使用して、[Surface Duo][MicrosoftSurfaceDevicesDuo] と [
 
 デュアルスクリーン デバイスと折りたたみ式デバイスのために Web サイトやアプリを強化するには、[デバイスをエミュレート][DevtoolsDeviceModeIndex]するときに次の機能を使用します。  
 
-*   [スパニング][DevtoolsExperimentalFeaturesTestingOnFoldableDualScreenDevices]: Web サイト (またはアプリ) が両方の画面に表示されます。
+*   [スパニング][DevtoolsDeviceModeDualScreenAndFoldables]: Web サイト (またはアプリ) が両方の画面に表示されます。
 *   [シームのレンダリング][DualScreenIntroductionHowWorkSeam]: シームとは、2 つの画面の間の領域のことです。
-*   [試験的な Web プラットフォーム API を有効にして][DevtoolsExperimentalFeaturesEnableExperimentalApis]、新しい [CSS メディア画面スパニング機能][DualScreenWebCssMediaSpanning]と [JavaScript getWindowSegments API][DualScreenWebJavascriptGetwindowsegments] にアクセスします。  
+*   試験的な Web プラットフォーム API を有効にして、新しい [CSS メディア画面スパニング機能][DualScreenWebCssMediaSpanning]と [JavaScript getWindowSegments API][DualScreenWebJavascriptGetwindowsegments] にアクセスします。  
 
 :::image type="complex" source="../../media/2020/08/surface-duo-device-emulation.msft.png" alt-text="Surface Duo のデバイス エミュレーション" lightbox="../../media/2020/08/surface-duo-device-emulation.msft.png":::
    Surface Duo のデバイス エミュレーション  
 :::image-end:::  
 
-この試験的機能を有効にするには、「[実験的な機能を有効にする][DevtoolsExperimentalFeaturesTurnOnExperimentalFeatures]」に移動し、[**エミュレーション: デュアル スクリーン モードのサポート**] の横にあるチェックボックスをオンにします。  
+この実験的な機能を有効にする場合は、[実験機能を有効にする][DevtoolsExperimentalFeaturesTurnOnExperimentalFeatures] に移動し、[エミュレーション **:** サポート デュアル スクリーン モード] の横にあるチェック ボックスをオンにします。  
 
-この実験の詳細については、「[エミュレーション: デュアル スクリーン モードのサポート][DevtoolsExperimentalFeaturesEmulationSupportDualScreenMode]」を参照してください。  
+この機能の詳細については[、「DevTools][DevtoolsDeviceModeDualScreenAndFoldables]でデュアルスクリーンデバイスと折りたたみデバイスをエミュレートするMicrosoft Edgeします。  
 
 Chromium の問題: [#1054281][CR1054281]  
 
@@ -84,9 +84,9 @@ CSS グリッドのオーバーレイの機能強化について、積極的な�
 
 Microsoft Edge DevTools チームと Chrome DevTools チームは、追加機能のための共同作業を行っています。  新しい機能には、要素ツールの新しいレイアウト ウィンドウから永続的**** で構成可能な複数のオーバーレイ**が含**まれます。  
 
-この試験的機能を有効にするには、「[実験的な機能を有効にする][DevtoolsExperimentalFeaturesTurnOnExperimentalFeatures]」に移動し、[**新しい CSS グリッドのデバッグ機能を有効にする (再起動後、[要素] にある [レイアウト] サイド バーウィンドウで構成オプションを利用できます)**] の横にあるチェックボックスをオンにします。  
+この実験的な機能を有効にするには、[実験機能を有効にする][DevtoolsExperimentalFeaturesTurnOnExperimentalFeatures] に移動し、[新しい CSS グリッド デバッグ機能を有効にする] の横にあるチェック ボックス **をオンにします (** 再起動後の要素のレイアウト サイドバー ウィンドウで使用可能な構成オプション)。  
 
-この実験の詳細については、「[新しい CSS グリッドのデバッグ機能を有効にする][DevtoolsExperimentalFeaturesEnableNewCssGridDebuggingFeatures]」を参照してください。  
+この機能の詳細については、DevTools の[[CSS グリッドの検査] Microsoft Edge移動します][DevtoolsCssGrid]。  
 
 Chromium の問題: [#1047356][CR1047356]  
 
@@ -138,9 +138,9 @@ Chromium の問題: [#1115011][CR1115011]
 
 この機能により、スクリーン リーダーとキーボード ユーザーの Web サイトまたはアプリ エクスペリエンスをより簡単にテストできます。  スクリーン リーダーとキーボード ナビゲーションは、コンテンツが Web サイトまたはアプリのソース コードと同じ順序で配置され、レンダリングするページと一致しているかどうかに依存しています。  ソース オーダー ビューアーは、レンダリングされたページとソース コードの順序の潜在的な相違点を表示します。  
 
-この試験的機能を有効にするには、「[試験的機能を有効にする][DevtoolsExperimentalFeaturesTurnOnExperimentalFeatures]」に移動し、[**ソース オーダー ビューアーを有効にする**] の横にあるチェックボックスをオンにします。  
+この実験的な機能を有効にするには、[実験機能を有効にする][DevtoolsExperimentalFeaturesTurnOnExperimentalFeatures] に移動し、[ソースオーダー**** ビューアーを有効にする] の横にあるチェック ボックスをオンにします。  
 
-この実験の詳細については、「[ソース オーダー ビューアーを有効にする][DevtoolsExperimentalFeaturesEnableSourceOrderViewer]」を参照してください。  
+この実験の詳細については、[Source Order Viewer][DevtoolsExperimentalFeaturesSourceOrderViewer]に移動します。  
 
 Chromium の問題: [#1094406][CR1094406]  
 
@@ -187,7 +187,7 @@ Chromium の問題: [#1103316][CR1103316]
 
 ### <a name="new-media-tool"></a>新しいメディア ツール  
 
-DevTools は、メディア ツールにメディア プレイヤーの情報を [表示][DevtoolsMediaPanelIndex] します。  
+DevTools が [Media][DevtoolsMediaPanelIndex] ツールにメディア プレイヤー情報を表示する。  
 
 新しいメディア ツールを **開く** 場合は、次の手順を実行します。  
 
@@ -460,28 +460,25 @@ Windows または macOS を使用している場合、[Microsoft Edge プレビ�
 
 [!INCLUDE [contact DevTools team note](../../includes/contact-whats-new-note.md)]  
 
-<!-- image links -->  
-
-[ImageSettingsIcon]: /microsoft-edge/devtools-guide-chromium/media/settings-icon.msft.png "DevTools の設定アイコン"  
-
 <!-- links -->  
 
 [DevtoolsWhatsnew200205DevtoolsDeprecationPropertiesPaneElementsPanel]: ../05/devtools.md#deprecation-of-the-properties-pane-in-the-elements-panel "[要素] パネルの [プロパティ] ウィンドウの廃止 - DevTools の新機能 (Microsoft Edge 84) | Microsoft Docs"  
 [DevtoolsWhatsnew200206DevtoolsCssGridDebuggingFeatures]: ../06/devtools.md#css-grid-debugging-features "CSS グリッドのデバッグ機能 - DevTools の新機能 (Microsoft Edge 85) | Microsoft Docs"  
 
-[DevtoolsDeviceModeIndex]: /microsoft-edge/devtools-guide-chromium/device-mode/index "Microsoft Edge DevTools でモバイル デバイスをエミュレートする | Microsoft Docs"  
-[DevtoolsCustomizeShortcuts]: /microsoft-edge/devtools-guide-chromium/customize/shortcuts "Microsoft Edge DevTools でキーボード ショートカットをカスタマイズする | Microsoft Docs"  
-[DevtoolsExperimentalFeaturesEnableExperimentalApis]: /microsoft-edge/devtools-guide-chromium/experimental-features#enable-experimental-apis "試験的な API を有効にする - 試験的機能 | Microsoft Docs"  
-[DevtoolsExperimentalFeaturesEnableNewCssGridDebuggingFeatures]: /microsoft-edge/devtools-guide-chromium/experimental-features#enable-new-css-grid-debugging-features "エミュレーション: デュアル スクリーン モードのサポート - 試験的機能 | Microsoft Docs"  
-[DevtoolsExperimentalFeaturesEnableSourceOrderViewer]: /microsoft-edge/devtools-guide-chromium/experimental-features#enable-source-order-viewer "ソース オーダー ビューアーを有効にする - 試験的機能 | Microsoft Docs"
-[DevtoolsExperimentalFeaturesEmulationSupportDualScreenMode]: https://review.docs.microsoft.com/microsoft-edge/devtools-guide-chromium/experimental-features?branch=user/zoghadya/dual-screen-experiment#emulation-support-dual-screen-mode "エミュレーション: デュアル スクリーン モードのサポート - 試験的機能 | Microsoft Docs"  
-[DevtoolsExperimentalFeaturesTestingOnFoldableDualScreenDevices]: /microsoft-edge/devtools-guide-chromium/experimental-features#testing-on-foldable-and-dual-screen-devices "折りたたみ式デバイスとデュアルスクリーン デバイスのテスト - 試験的機能 | Microsoft Docs"  
-[DevtoolsExperimentalFeaturesTurnOnExperimentalFeatures]: /microsoft-edge/devtools-guide-chromium/experimental-features#turn-on-experimental-features "試験的機能を有効にする - 試験的機能 | Microsoft Docs"  
-[DevtoolsConsoleApiTable]: /microsoft-edge/devtools-guide-chromium/console/api#table "table - コンソール API リファレンス | Microsoft Docs"  
-[DevtoolsCoverageIndex]: /microsoft-edge/devtools-guide-chromium/coverage/index "Microsoft Edge DevTools の [カバレッジ] タブで使用されていない JavaScript と CSS コードを見つける | Microsoft Docs"  
-[DevtoolsCustomizeIndexDrawer]: /microsoft-edge/devtools-guide-chromium/customize/index#drawer "ドロワー - Microsoft Edge DevTools をカスタマイズする | Microsoft Docs"  
-[DevtoolsEvaluatePerformanceReferenceAnalyzeRenderingPerformance]: /microsoft-edge/devtools-guide-chromium/evaluate-performance/reference#analyze-rendering-performance-with-the-rendering-tab "[レンダリング] タブでレンダリング パフォーマンスを分析する - パフォーマンス分析リファレンス | Microsoft Docs"  
-[DevtoolsMediaPanelIndex]: /microsoft-edge/devtools-guide-chromium/media-panel/index "メディアプレーヤー情報を表示してデバッグする | Microsoft Docs"  
+[DevtoolsConsoleApiTable]: ../../../console/api.md#table "table - コンソール API リファレンス | Microsoft Docs"  
+[DevtoolsCoverageIndex]: ../../../coverage/index.md "Microsoft Edge DevTools の [カバレッジ] タブで使用されていない JavaScript と CSS コードを見つける | Microsoft Docs"  
+[DevtoolsCssGrid]: ../../../css/grid.md "DevTools ページで CSS グリッドMicrosoft Edgeを調|Microsoft Docs"  
+[DevtoolsCustomizeIndexDrawer]: ../../../customize/index.md#drawer "ドロワー - Microsoft Edge DevTools をカスタマイズする | Microsoft Docs"  
+[DevtoolsCustomizeShortcuts]: ../../../customize/shortcuts.md "Microsoft Edge DevTools でキーボード ショートカットをカスタマイズする | Microsoft Docs"  
+[DevtoolsDeviceModeIndex]: ../../../device-mode/index.md "Microsoft Edge DevTools でモバイル デバイスをエミュレートする | Microsoft Docs"  
+[DevtoolsDeviceModeDualScreenAndFoldables]: ../../../device-mode/dual-screen-and-foldables.md "DevTools アプリケーションでデュアルスクリーンデバイスと折りたたみMicrosoft Edgeエミュレート|Microsoft Docs"  
+[DevtoolsEvaluatePerformanceReferenceAnalyzeRenderingPerformance]: ../../../evaluate-performance/reference.md#analyze-rendering-performance-with-the-rendering-tool "レンダリング ツールを使用してレンダリングパフォーマンスを分析する - パフォーマンス分析リファレンス |Microsoft Docs"  
+<!--  [DevtoolsExperimentalFeaturesEnableExperimentalApis]: ../../../experimental-features/index.md#enable-experimental-apis "Enable experimental APIs - Experimental features | Microsoft Docs"  -->  
+[DevtoolsExperimentalFeaturesEmulationSupportDualScreenMode]: ../../../experimental-features/index.md#エミュレーション-support-dual-screen-mode "エミュレーション: サポート デュアル スクリーン モード - 実験的|Microsoft Docs"  
+[DevtoolsExperimentalFeaturesSourceOrderViewer]: ../../../experimental-features/index.md#source-order-viewer "Source Order Viewer - 実験的な|Microsoft Docs"
+<!--  [DevtoolsExperimentalFeaturesTestOnFoldableDualScreenDevices]: ../../../experimental-features/index.md#test-on-foldable-and-dual-screen-devices "Test on foldable and dual-screen devices - Experimental features | Microsoft Docs"  -->  
+[DevtoolsExperimentalFeaturesTurnOnExperimentalFeatures]: ../../../experimental-features/index.md#turn-on-experimental-features "実験機能を有効にする - 実験的な機能|Microsoft Docs"  
+[DevtoolsMediaPanelIndex]: ../../../media-panel/index.md "メディア プレイヤー情報の表示とデバッグ|Microsoft Docs"  
 
 [DualScreenIntroductionHowWorkSeam]:  /dual-screen/introduction#how-to-work-with-the-seam "シームを処理する方法 - デュアルスクリーン デバイスの概要 | Microsoft Docs"  
 [DualScreenWebCssMediaSpanning]: /dual-screen/web/css-media-spanning "デュアルスクリーン検出のための CSS メディアのスクリーンスパニング機能 | Microsoft Docs"  
@@ -489,7 +486,7 @@ Windows または macOS を使用している場合、[Microsoft Edge プレビ�
 
 [MicrosoftEdgePreviewChannels]: https://www.microsoftedgeinsider.com/download "Microsoft Edge プレビュー チャネル"  
 
-[VisualStudioCode]: https://code.visualstudio.com "Visual Studio Code "  
+[VisualStudioCodeMain]: https://code.visualstudio.com "Visual Studio Code"  
 [VisualStudioCodeShortcutsKeyboardWindows]: https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf "Visual Studio Code の Windows 用キーボード ショートカット"  
 
 [MicrosoftSurfaceDevicesDuo]: https://www.microsoft.com/surface/devices/surface-duo "新しい Surface Duo"  
@@ -551,4 +548,4 @@ Windows または macOS を使用している場合、[Microsoft Edge プレビ�
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
 [GoogleSitePolicies]: https://developers.google.com/terms/site-policies  
-[JecelynYeen]: https://developers.google.com/web/resources/contributors/jecelynyeen  
+[JecelynYeen]: https://developers.google.com/web/resources/contributors#jecelyn-yeen  

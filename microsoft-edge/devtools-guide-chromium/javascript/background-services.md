@@ -1,18 +1,18 @@
 ---
-description: Microsoft Edge DevTools を使用してバックグラウンド フェッチ、バックグラウンド同期、通知、およびプッシュ メッセージをデバッグする方法。
-title: Microsoft Edge DevTools を使用したバックグラウンド サービスのデバッグ
+description: バックグラウンド フェッチ、バックグラウンド同期、通知、およびプッシュ メッセージを DevTools でデバッグMicrosoft Edge方法。
+title: DevTools を使用してバックグラウンド Microsoft Edgeをデバッグする
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 03/08/2021
+ms.date: 05/04/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 15023098c547d31bf46bd387f849b365c13b38f6
-ms.sourcegitcommit: 4b9fb5c1176fdaa5e3c60af2b84e38d5bb86cd81
+ms.openlocfilehash: 4f5f52bcde976cea8432e3160a792438e5603e21
+ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "11439529"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "11564197"
 ---
 <!-- Copyright Kayce Basques
 
@@ -27,19 +27,18 @@ ms.locfileid: "11439529"
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.  -->  
+# <a name="debug-background-services-with-microsoft-edge-devtools"></a>DevTools を使用してバックグラウンド Microsoft Edgeをデバッグする  
 
-# <a name="debug-background-services-with-microsoft-edge-devtools"></a>Microsoft Edge DevTools を使用したバックグラウンド サービスのデバッグ  
-
-Microsoft **** Edge DevTools の Background Services セクションは、ユーザーが Web サイトを開いていない場合でも、Web サイトが更新プログラムを送受信できる JavaScript API 用のツールのコレクションです。  
+Microsoft Edge **** DevTools の Background Services セクションは、ユーザーが Web サイトを開いていない場合でも、Web サイトが更新プログラムを送受信できる JavaScript API 用のツールのコレクションです。  
 バックグラウンド サービスは[バックグラウンド プロセス][WikiBackgroundProcess]と機能的に似ています。  
-Microsoft Edge DevTools では、次の各 API がバックグラウンド サービスと見なされます。  
+Microsoft EdgeDevTools は、次の各 API をバックグラウンド サービスと見なします。  
 
 *   [バックグラウンド フェッチ](#background-fetch)  
 *   [バックグラウンド同期](#background-sync)  
 *   [通知](#notifications)  
 *   [プッシュ メッセージ](#push-messages)  
     
-Microsoft Edge DevTools は、DevTools が開いていない場合でも、バックグラウンド サービス イベントを 3 日間ログに記録できます。  
+Microsoft EdgeDevTools は、DevTools が開かなくても、バックグラウンド サービス イベントを 3 日間ログに記録できます。  
 バックグラウンド サービス イベント ログは、イベントが期待通り送信および受信されるのを確認するのに役立ちます。  また、各イベントの詳細を確認できます。  
 
 :::image type="complex" source="../media/javascript-application-background-services-push-messaging.msft.png" alt-text="[プッシュ メッセージング] ウィンドウ" lightbox="../media/javascript-application-background-services-push-messaging.msft.png":::
@@ -159,7 +158,7 @@ Microsoft Edge DevTools は、DevTools が開いていない場合でも、バ�
 <!--[BackgroundFetchAPI]: ../../../microsoft-edge/devtools-guide-chromium/whats-new/2018/12/background-fetch.md "Background Fetch API"  -->  
 <!--[BackgroundSyncAPI]: ../../../microsoft-edge/devtools-guide-chromium/whats-new/2015/12/background-sync.md  "Background Sync API"  -->
 
-[OpenDevTools]: ../open/index.md "Open Microsoft Edge (Chromium) Developer Tools |Microsoft Docs"  
+[OpenDevTools]: ../open/index.md "開発者Microsoft Edge (Chromium) 開発者向けツール を開|Microsoft Docs"  
 
 [MDNNotifications]: https://developer.mozilla.org/docs/Web/API/Notifications_API "通知 API |MDN"  
 [MDNPush]: https://developer.mozilla.org/docs/Web/API/Push_API "プッシュ API |MDN"  
@@ -175,4 +174,4 @@ Microsoft Edge DevTools は、DevTools が開いていない場合でも、バ�
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
 [GoogleSitePolicies]: https://developers.google.com/terms/site-policies  
-[KayceBasques]: https://developers.google.com/web/resources/contributors/kaycebasques  
+[KayceBasques]: https://developers.google.com/web/resources/contributors#kayce-basques  

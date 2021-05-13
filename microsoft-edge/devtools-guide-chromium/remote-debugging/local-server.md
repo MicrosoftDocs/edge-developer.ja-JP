@@ -3,16 +3,16 @@ description: 開発マシン Web サーバーでサイトをホストし、Andro
 title: ローカル サーバーにアクセスする
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 03/25/2021
+ms.date: 05/11/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 51ef0d951d587d310b6474698924d9f87cf68607
-ms.sourcegitcommit: bff24ab1f0a66aaf4c7f5ff81cea3eb28c6d8380
+ms.openlocfilehash: 2d721a0ccd27befc7a59726f4c5ef9227042b30b
+ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2021
-ms.locfileid: "11461263"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "11565093"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -33,7 +33,7 @@ ms.locfileid: "11461263"
 
 USB ケーブルとデバイスを使用Microsoft Edge DevTools を使用して、開発マシンからサイトを実行し、Android デバイスでサイトを表示します。  
 
-### <a name="summary"></a>まとめ  
+### <a name="summary"></a>要約  
 
 *   ポート転送を使用すると、Android デバイス上の開発マシンで実行されている Web サーバーによってホストされるコンテンツを表示できます。  
 *   Web サーバーがカスタム ドメインを使用している場合は、カスタム ドメイン マッピングを使用してそのドメインのコンテンツにアクセスする Android デバイスをセットアップします。  
@@ -72,7 +72,7 @@ USB ケーブルとデバイスを使用Microsoft Edge DevTools を使用して�
 
 ### <a name="set-up-port-forwarding-to-proxy-server"></a>プロキシ サーバーへのポート転送のセットアップ  
 
-カスタム ドメインをマップするには、開発マシンでプロキシ サーバーを実行する必要があります。  プロキシ サーバーの例は[、Charles、Squid、][CharlesWebDebuggingProxy][および Fiddler です][FiddlerWebDebuggingProxy]。 [][SquidOptimisingWebDelivery]  
+カスタム ドメインをマップするには、開発マシンでプロキシ サーバーを実行する必要があります。  プロキシ サーバーの例は[、Charles、Squid、][CharlesWebDebuggingProxy][および Fiddler です][TelerikFiddler]。 [][SquidCacheWiki]  
 
 プロキシへのポート転送を設定するには、次の方法を実行します。  
 
@@ -119,9 +119,9 @@ Web サーバーが標準以外のポートから実行されている場合は�
 
 [CharlesWebDebuggingProxy]: https://www.charlesproxy.com "Charles Web デバッグ プロキシ"  
 
-[SquidOptimisingWebDelivery]: https://www.squid-cache.org "squid : Web 配信の最適化"  
+[SquidCacheWiki]: https://wiki.squid-cache.org "Squid Wiki プロキシ Wiki"  
 
-[FiddlerWebDebuggingProxy]: https://www.telerik.com/fiddler "Fiddler - 無料の Web デバッグ プロキシ"  
+[TelerikFiddler]: https://www.telerik.com/fiddler "Fiddler - 無料の Web デバッグ プロキシ"  
 
 > [!NOTE]
 > このページの一部の情報は、[Google によって作成および共有][GoogleSitePolicies]されている著作物に基づいており、[Creative Commons Attribution 4.0 International License][CCA4IL] に記載されている条項に従って使用されています。  
@@ -133,5 +133,5 @@ Web サーバーが標準以外のポートから実行されている場合は�
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
 [GoogleSitePolicies]: https://developers.google.com/terms/site-policies  
-[KayceBasques]: https://developers.google.com/web/resources/contributors/kaycebasques  
-[MegginKearney]: https://developers.google.com/web/resources/contributors/megginkearney  
+[KayceBasques]: https://developers.google.com/web/resources/contributors#kayce-basques  
+[MegginKearney]: https://developers.google.com/web/resources/contributors#meggin-kearney  
