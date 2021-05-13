@@ -3,16 +3,16 @@ description: コマンド メニューを開く方法、コマンドを実行す
 title: DevTools コマンド メニューでコマンドMicrosoft Edge実行する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/12/2021
+ms.date: 05/04/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: b815934da73f9f023629564da7bea14da166ff9b
-ms.sourcegitcommit: 16e2f7232196a57a70b979bbf8b663774b7ddc20
+ms.openlocfilehash: 973b440a27b0c4c06ba118fc09e4162a8fa346e8
+ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2021
-ms.locfileid: "11519192"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "11564491"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -27,7 +27,6 @@ ms.locfileid: "11519192"
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.  -->  
-
 # <a name="run-commands-with-the-microsoft-edge-devtools-command-menu"></a><span data-ttu-id="d9a8b-104">DevTools コマンド メニューでコマンドMicrosoft Edge実行する</span><span class="sxs-lookup"><span data-stu-id="d9a8b-104">Run commands with the Microsoft Edge DevTools Command Menu</span></span>  
 
 <span data-ttu-id="d9a8b-105">コマンド メニューを使用すると、DevTools UI をMicrosoft Edge、JavaScript の無効化などの一般的なタスクを実行[できます][JavascriptDisable]。</span><span class="sxs-lookup"><span data-stu-id="d9a8b-105">The Command Menu provides a fast way to navigate the Microsoft Edge DevTools UI and accomplish common tasks, such as [disabling JavaScript][JavascriptDisable].</span></span>  <span data-ttu-id="d9a8b-106">コマンド メニューの元のインスピレーションMicrosoft Visual Studioコマンド パレットと呼ばれるコードの[][VisualStudioCodeUICommandPalette]同様の機能についてよく知っているかもしれません。</span><span class="sxs-lookup"><span data-stu-id="d9a8b-106">You may be familiar with a similar feature in Microsoft Visual Studio Code called the [Command Palette][VisualStudioCodeUICommandPalette], which was the original inspiration for the Command Menu.</span></span>  
@@ -78,4 +77,4 @@ ms.locfileid: "11519192"
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
 [GoogleSitePolicies]: https://developers.google.com/terms/site-policies  
-[KayceBasques]: https://developers.google.com/web/resources/contributors/kaycebasques  
+[KayceBasques]: https://developers.google.com/web/resources/contributors#kayce-basques  

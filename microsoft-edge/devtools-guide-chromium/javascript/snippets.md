@@ -3,16 +3,16 @@ description: スニペットは、DevTools の Sources ツール内で作成お�
 title: DevTools を使用して任意の Web ページで JavaScript のスニペットMicrosoft Edge実行する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 03/08/2021
+ms.date: 05/04/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 00c612a1573c7446711a2dc9d22985c83140eecd
-ms.sourcegitcommit: 16e2f7232196a57a70b979bbf8b663774b7ddc20
+ms.openlocfilehash: 4a84e959f652320f40a501a26e9ba763c7348b33
+ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2021
-ms.locfileid: "11519430"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "11564113"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -27,7 +27,6 @@ ms.locfileid: "11519430"
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.  -->  
-
 # <a name="run-snippets-of-javascript-on-any-webpage-with-microsoft-edge-devtools"></a><span data-ttu-id="9025c-106">DevTools を使用して任意の Web ページで JavaScript のスニペットMicrosoft Edge実行する</span><span class="sxs-lookup"><span data-stu-id="9025c-106">Run snippets of JavaScript on any webpage with Microsoft Edge DevTools</span></span>  
 
 <span data-ttu-id="9025c-107">コンソールで同じコードを繰り返[][DevtoolsConsoleIndex]し実行している場合は、コードをスニペットとして保存してください。</span><span class="sxs-lookup"><span data-stu-id="9025c-107">If you are running the same code in the [Console][DevtoolsConsoleIndex] repeatedly, consider saving the code as a Snippet instead.</span></span>  <span data-ttu-id="9025c-108">スニペットは、ソース ツールで作成する [スクリプト][DevToolsSourcesTool] です。</span><span class="sxs-lookup"><span data-stu-id="9025c-108">Snippets are scripts that you author in the [Sources][DevToolsSourcesTool] tool.</span></span>  <span data-ttu-id="9025c-109">スニペットは Web ページの JavaScript コンテキストにアクセスし、任意の Web ページでスニペットを実行できます。</span><span class="sxs-lookup"><span data-stu-id="9025c-109">Snippets have access to the JavaScript context of the webpage, and you may run snippets on any webpage.</span></span>  <span data-ttu-id="9025c-110">ほとんどの Web ページのセキュリティ設定は、スニペットに他のスクリプトを読み込むのをブロックします。</span><span class="sxs-lookup"><span data-stu-id="9025c-110">The security settings of most webpages block from loading other scripts in Snippets.</span></span>  <span data-ttu-id="9025c-111">このため、すべてのコードを 1 つのファイルに含める必要があります。</span><span class="sxs-lookup"><span data-stu-id="9025c-111">For that reason, you must include all your code in one file.</span></span>  
@@ -184,4 +183,4 @@ ms.locfileid: "11519430"
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
 [GoogleSitePolicies]: https://developers.google.com/terms/site-policies  
-[KayceBasques]: https://developers.google.com/web/resources/contributors/kaycebasques  
+[KayceBasques]: https://developers.google.com/web/resources/contributors#kayce-basques  

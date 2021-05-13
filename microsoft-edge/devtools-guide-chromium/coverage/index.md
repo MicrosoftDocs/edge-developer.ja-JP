@@ -3,16 +3,16 @@ description: DevTools で使用されていない JavaScript コードと CSS �
 title: DevTools の [カバレッジ] パネルで未使用の JavaScript および CSS コードMicrosoft Edge検索する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/12/2021
+ms.date: 05/04/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: a8fccdcabf03f3894a9a11246b90db4686fd953e
-ms.sourcegitcommit: 16e2f7232196a57a70b979bbf8b663774b7ddc20
+ms.openlocfilehash: b31d14feac13a907ca0c5ce7ef702bcdef375ad5
+ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2021
-ms.locfileid: "11519318"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "11564463"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -27,7 +27,6 @@ ms.locfileid: "11519318"
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.  -->
-
 # <a name="find-unused-javascript-and-css-code-with-the-coverage-panel-in-microsoft-edge-devtools"></a><span data-ttu-id="6423c-104">DevTools の [カバレッジ] パネルで未使用の JavaScript コードと CSS コードMicrosoft Edge検索する</span><span class="sxs-lookup"><span data-stu-id="6423c-104">Find unused JavaScript and CSS code with the Coverage panel in Microsoft Edge DevTools</span></span>  
 
 <span data-ttu-id="6423c-105">**DevTools**の [Microsoft Edge] パネルを使用すると、使用されていない JavaScript コードと CSS コードを見つけるのに役立ちます。</span><span class="sxs-lookup"><span data-stu-id="6423c-105">The **Coverage** panel in Microsoft Edge DevTools helps you find unused JavaScript and CSS code.</span></span>  <span data-ttu-id="6423c-106">未使用のコードを削除すると、ページの読み込み速度が上がり、モバイル ユーザーの携帯電話データが保存される場合があります。</span><span class="sxs-lookup"><span data-stu-id="6423c-106">Removing unused code may speed up your page load and save your mobile users cellular data.</span></span>  
@@ -110,4 +109,4 @@ ms.locfileid: "11519318"
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
 [GoogleSitePolicies]: https://developers.google.com/terms/site-policies  
-[KayceBasques]: https://developers.google.com/web/resources/contributors/kaycebasques  
+[KayceBasques]: https://developers.google.com/web/resources/contributors#kayce-basques  

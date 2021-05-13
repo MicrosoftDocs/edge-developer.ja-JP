@@ -3,16 +3,16 @@ description: DevTools の Microsoft Edgeを使用して、ページ CSS の CSS 
 title: DevTools で CSS グリッドMicrosoft Edgeする
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/12/2021
+ms.date: 05/04/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 034fbdf82ddba39fc0818bc6f3add8824c6bb3ac
-ms.sourcegitcommit: 4b9fb5c1176fdaa5e3c60af2b84e38d5bb86cd81
+ms.openlocfilehash: 68493fae5e96ef1b2c7ed1205d67fd2b4cf67df5
+ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "11439262"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "11564456"
 ---
 # <a name="inspect-css-grid"></a><span data-ttu-id="a0307-104">CSS グリッドの検査</span><span class="sxs-lookup"><span data-stu-id="a0307-104">Inspect CSS Grid</span></span>  
 
@@ -207,4 +207,4 @@ ms.locfileid: "11439262"
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
 [GoogleSitePolicies]: https://developers.google.com/terms/site-policies  
-[JecelynYeen]: https://developers.google.com/web/resources/contributors/jecelynyeen  
+[JecelynYeen]: https://developers.google.com/web/resources/contributors#jecelyn-yeen  
