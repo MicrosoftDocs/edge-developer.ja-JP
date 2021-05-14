@@ -3,17 +3,17 @@ description: CSS Flexbox のデバッグサポート、Web ページのパフォ
 title: DevTools の新機能 (Microsoft Edge 90)
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 04/08/2021
+ms.date: 05/04/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
 ms.localizationpriority: high
-ms.openlocfilehash: 3653bd2293f96a6ddfb84d8e1c7492bea78c15c1
-ms.sourcegitcommit: de75fda30bb8964e9a184228d068b4402ec59c3e
+ms.openlocfilehash: a6682043166909bf75a875b72058cc9839c5b43b
+ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2021
-ms.locfileid: "11514404"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "11564848"
 ---
 <!-- Copyright Jecelyn Yeen 
 
@@ -274,7 +274,7 @@ Requests テーブルに、**[リモート アドレス空間]** という名前
 
 :::image type="icon" source="../../media/2020/06/experimental-tag-14px.msft.png":::  
 
-この実験では、**要素** ツールで**アクセシビリティ ツリー ビュー全体**を提供します。  [[アクセシビリティ]][DevtoolsAccessibilityReferenceTheAccessibilityPane] ウィンドウ には部分的なアクセシビリティ ツリー ビューが表示され、ルート ノードから検査されたノードへの直接の祖先チェーンが表示されます。  
+この実験では、**要素** ツールで**アクセシビリティ ツリー ビュー全体**を提供します。  [[アクセシビリティ]][DevtoolsAccessibilityReferenceAccessibilityPanel] ウィンドウ には部分的なアクセシビリティ ツリー ビューが表示され、ルート ノードから検査されたノードへの直接の祖先チェーンが表示されます。  
 この実験を有効にし、DevTools を再読み込みした後、次のいずれかのボタンを選択して、Web ページ上のすべての要素の [要素] ツールの表示を切り替えます。  
 
 *   完全なアクセシビリティ ツリー ビューを表示するには、**[アクセシビリティ ツリーに切り替える]** ビューを選択します。  
@@ -305,19 +305,19 @@ Windows、Linux、または macOS を使用している場合は、 既定の開
 
 <!-- links -->  
 
-[DevtoolsAccessibilityReferenceTheAccessibilityPane]: /microsoft-edge/devtools-guide-chromium/accessibility/reference#the-accessibility-pane "アクセシビリティ ウィンドウ - アクセシビリティ リファレンス | Microsoft Docs"  
-[DevtoolsCommandMenuIndex]: /microsoft-edge/devtools-guide-chromium/command-menu/index "Microsoft Edge DevTools コマンド メニュー を使用してコマンドを実行する | Microsoft Docs"  
-[DevtoolsConsoleReferenceFilterByLogLevel]: /microsoft-edge/devtools-guide-chromium/console/reference#filter-by-log-level "ログ レベルによるフィルター - コンソール リファレンス | Microsoft Docs"  
-[DevtoolsConsoleReferenceFilterMessages]: /microsoft-edge/devtools-guide-chromium/console/reference#filter-messages "フィルター メッセージ - コンソール リファレンス | Microsoft Docs"  
-[DevtoolsConsoleReferenceOpenConsoleSidebar]: /microsoft-edge/devtools-guide-chromium/console/reference#open-the-console-sidebar "コンソール サイドバーを開く - コンソール リファレンス | Microsoft Docs"  
-[DevtoolsCustomizeIndexSettings]: /microsoft-edge/devtools-guide-chromium/customize/index#settings "設定 - Microsoft Edge DevTools をカスタマイズする | Microsoft Docs"  
-[DevtoolsCustomizeShortcuts]: /microsoft-edge/devtools-guide-chromium/customize/shortcuts "Microsoft Edge DevTools でキーボード ショートカットをカスタマイズする | Microsoft Docs"  
-[DevtoolsExperimentalFeaturesIndexEnablePlusButtonTabMenusToOpenMoreTools]: /microsoft-edge/devtools-guide-chromium/experimental-features/index#enable--button-tab-menus-to-open-more-tools "[+] ボタン タブ メニューを有効にして、その他のツールを開く - 試験的な| Microsoft Docs"  
-[DevtoolsExperimentalFeaturesIndexTurnOnExperimentalFeatures]: /microsoft-edge/devtools-guide-chromium/experimental-features/index#turn-on-experimental-features "試験的機能を有効にする - 試験的機能 | Microsoft Docs"  
-[DevtoolsNetworkReferenceAddRemoveColumns]: /microsoft-edge/devtools-guide-chromium/network/reference#add-or-remove-columns "列の追加または削除 - ネットワーク分析リファレンス | Microsoft Docs"  
-[DevtoolsNetworkReferenceDisplayInitiatorsDependencies]: /microsoft-edge/devtools-guide-chromium/network/reference#display-initiators-and-dependencies "イニシエーターと依存関係の表示 - ネットワーク分析リファレンス | Microsoft Docs"  
+[DevtoolsAccessibilityReferenceAccessibilityPanel]: ../../../accessibility/reference.md#the-accessibility-panel "アクセシビリティ ウィンドウ - アクセシビリティ リファレンス | Microsoft Docs"  
+[DevtoolsCommandMenuIndex]: ../../../command-menu/index.md "Microsoft Edge DevTools コマンド メニュー を使用してコマンドを実行する | Microsoft Docs"  
+[DevtoolsConsoleReferenceFilterByLogLevel]: ../../../console/reference.md#filter-by-log-level "ログ レベルによるフィルター - コンソール リファレンス | Microsoft Docs"  
+[DevtoolsConsoleReferenceFilterMessages]: ../../../console/reference.md#filter-messages "フィルター メッセージ - コンソール リファレンス | Microsoft Docs"  
+[DevtoolsConsoleReferenceOpenConsoleSidebar]: ../../../console/reference.md#open-the-console-sidebar "コンソール サイドバーを開く - コンソール リファレンス | Microsoft Docs"  
+[DevtoolsCustomizeIndexSettings]: ../../../customize/index.md#settings "設定 - Microsoft Edge DevTools をカスタマイズする | Microsoft Docs"  
+[DevtoolsCustomizeShortcuts]: ../../../customize/shortcuts.md "Microsoft Edge DevTools でキーボード ショートカットをカスタマイズする | Microsoft Docs"  
+[DevtoolsExperimentalFeaturesIndexEnablePlusButtonTabMenusToOpenMoreTools]: ../../../experimental-features/index.md#enable--button-tab-menus-to-open-more-tools "[+] ボタン タブ メニューを有効にして、その他のツールを開く - 試験的な| Microsoft Docs"  
+[DevtoolsExperimentalFeaturesIndexTurnOnExperimentalFeatures]: ../../../experimental-features/index.md#turn-on-experimental-features "試験的機能を有効にする - 試験的機能 | Microsoft Docs"  
+[DevtoolsNetworkReferenceAddRemoveColumns]: ../../../network/reference.md#add-or-remove-columns "列の追加または削除 - ネットワーク分析リファレンス | Microsoft Docs"  
+[DevtoolsNetworkReferenceDisplayInitiatorsDependencies]: ../../../network/reference.md#display-initiators-and-dependencies "イニシエーターと依存関係の表示 - ネットワーク分析リファレンス | Microsoft Docs"  
 
-[ProgressiveWebAppsIndex]: /microsoft-edge/progressive-web-apps-chromium/index "Windows 上のプログレッシブ Web アプリの概要 | Microsoft Docs"  
+[ProgressiveWebAppsIndex]: ../../../../progressive-web-apps-chromium/index.md "Windows 上のプログレッシブ Web アプリの概要 | Microsoft Docs"  
 
 [MicrosoftEdgePreviewChannels]: https://www.microsoftedgeinsider.com/download "Microsoft Edge プレビュー チャネル"  
 
@@ -368,4 +368,4 @@ Windows、Linux、または macOS を使用している場合は、 既定の開
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
 [GoogleSitePolicies]: https://developers.google.com/terms/site-policies  
-[JecelynYeen]: https://developers.google.com/web/resources/contributors/jecelynyeen  
+[JecelynYeen]: https://developers.google.com/web/resources/contributors#jecelyn-yeen  
