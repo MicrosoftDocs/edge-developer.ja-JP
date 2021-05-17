@@ -3,17 +3,17 @@ description: Linux 上の Microsoft Edge、問題ツールの Webhint ヒント�
 title: DevTools の新機能 (Microsoft Edge 88)
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 04/08/2021
+ms.date: 05/04/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
 ms.localizationpriority: high
-ms.openlocfilehash: a63515060d989a84838e4a9ba7f803184a3fc91f
-ms.sourcegitcommit: de75fda30bb8964e9a184228d068b4402ec59c3e
+ms.openlocfilehash: 6fd9f9ca2c19c8db74036fb54efadb7be8566fd7
+ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2021
-ms.locfileid: "11514376"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "11564120"
 ---
 <!-- Copyright Jecelyn Yeen 
 
@@ -39,7 +39,7 @@ ms.locfileid: "11514376"
 
 Microsoft Edge Dev は、Ubuntu、Debian、Fedora、openSUSE の配布でサポートされます。  Microsoft Edge Dev `.deb`または`.rpm`パッケージを [Microsoft Edge Insider サイト][MicrosoftinsiderDownloadPlatformLinux]から直接ダウンロードしてインストールするか、お使いの Linux 配布の標準パッケージ管理ツールを使用します。   
 
-継続的インテグレーションおよび配信 \(CI/CD\) ソリューションで Linux 環境を使用している場合は、Linux でも Microsoft Edge ドライバーを利用できます。  Microsoft Edge ドライバーを使用した Microsoft Edge Dev の自動化を開始する方法については、[Microsoft Edge ドライバーのダウンロードページに移動します][MicrosoftDeveloperMicrosoftEdgeToolsWebdriverDownloads]。  Microsoft Edge ドライバーと共に Microsoft Edge Dev を自動化する方法については、[「テスト オートメーションに WebDriver (Chromium) を使用する」][WebDriverChromiumMain]に移動してください。  
+継続的インテグレーションおよび配信 \(CI/CD\) ソリューションで Linux 環境を使用している場合は、Linux でも Microsoft Edge ドライバーを利用できます。  Microsoft Edge ドライバーを使用した Microsoft Edge Dev の自動化を開始する方法については、[Microsoft Edge ドライバーのダウンロードページに移動します][MicrosoftDeveloperMicrosoftEdgeToolsWebdriverDownloads]。  Microsoft Edge ドライバーと共に Microsoft Edge Dev を自動化する方法については、[「テスト オートメーションに WebDriver (Chromium) を使用する」][WebdriverChromiumMain]に移動してください。  
 
 :::image type="complex" source="../../media/2020/11/edge-on-linux.msft.png" alt-text="Linux 上の Microsoft Edge の DevTools" lightbox="../../media/2020/11/edge-on-linux.msft.png":::
    Linux 上の Microsoft Edge の DevTools  
@@ -50,7 +50,7 @@ Microsoft Edge Dev は、Ubuntu、Debian、Fedora、openSUSE の配布でサポ�
 <!-- Title: Improvements to Issues tool and webhint integration  -->  
 <!-- Subtitle: Categories and third-party filtering make it easier to survey issues in the Issues tool.  Issues surfaced by webhint now have improved code snippets and documentation links to help you fix problems in your website.  -->  
 
-オープン ソース ツールである [webhint][WebhintMain]は、Web サイトとローカル Web ページに対してリアルタイムでのフィードバックを提供します。  [Microsoft Edge バージョン 85][WhatsNew202006DevtoolsWebhintFeedbackInTheIssuesPanel] から、[問題][DevtoolsIssuesIndex]ツールで webhint フィードバックを確認できます。  **問題**ツールに表示される問題は、次のカテゴリを追加することで簡単に確認できます。  
+オープン ソース ツールである [webhint][WebhintMain] は、Web サイトとローカル Web ページに対してリアルタイムでのフィードバックを提供します。  [Microsoft Edge バージョン 85][WhatsNew202006DevtoolsWebhintFeedbackInTheIssuesPanel] から、[Issues][DevtoolsIssuesIndex] ツールで webhint フィードバックを確認できます。  **問題**ツールに表示される問題は、次のカテゴリを追加することで簡単に確認できます。  
 
 *   [アクセシビリティ][WebhintUserGuideHintsAccessibility]  
 *   [互換性][WebhintUserGuideHintsCompatibility]  
@@ -78,7 +78,7 @@ Microsoft Edge Dev は、Ubuntu、Debian、Fedora、openSUSE の配布でサポ�
 
 :::image type="icon" source="../../media/2020/06/experimental-tag-14px.msft.png":::  
 
-Z インデックス値と ドキュメント オブジェクト モデル \(DOM\) と共に、**レイヤー** コンテンツを視覚化できるようになりました。  この機能は、[3D ビュー][Devtools3dViewIndex]と**レイヤー** ツールを頻繁に切り替えることなくデバッグするのに役立ちます。  視覚的なデバッグを総合的に行う目的で、[3D ビューレイヤーと複合レイヤーが結合されました][DevtoolsExperimentalFeaturesTurnOnCompositedLayers3dView]。  
+Z インデックス値と ドキュメント オブジェクト モデル \(DOM\) と共に、**レイヤー** コンテンツを視覚化できるようになりました。  この機能は、[3D ビュー][Devtools3dViewIndex]と**レイヤー** ツールを頻繁に切り替えることなくデバッグするのに役立ちます。  視覚的なデバッグを総合的に行う目的で、[3D ビューレイヤーと複合レイヤーが結合されました][Devtools3dViewIndex]。  
 
 :::image type="complex" source="../../media/2020/11/experiments-layers.msft.png" alt-text="[コンポジット レイヤー] ウィンドウ" lightbox="../../media/2020/11/experiments-layers.msft.png":::
    **[コンポジット レイヤー]** ウィンドウ  
@@ -144,7 +144,7 @@ Z インデックス値と ドキュメント オブジェクト モデル \(DOM
     
 ### <a name="network-tool"></a>ネットワーク ツール  
 
-サービス ワーカーを介して実行されるネットワーク要求をデバッグします。  **アプリケーション** ツールからネットワーク要求を開く場合があります。  要求ごとに、DevTools はタイミング ウィンドウに次の情報を[[タイミング]][DevtoolsNetworkReferenceViewTimingBreakdownRequest] ウインドウに表示 します。  
+サービス ワーカーを介して実行されるネットワーク要求をデバッグします。  **アプリケーション** ツールからネットワーク要求を開く場合があります。  各要求について、DevTools は [Timing][DevtoolsNetworkReferenceDisplayTimingBreakdownRequest] ウィンドウに次の情報を表示します。  
 
 *   ブートストラップの要求の開始と期間。  
 *   サービス ワーカーの登録に対する変更。  
@@ -184,7 +184,7 @@ Z インデックス値と ドキュメント オブジェクト モデル \(DOM
 *   テキスト全体を強調表示してコピーします。  
 *   必要に応じ、値をグローバル変数として格納し、DevTools [コンソール][DevtoolsConsoleIndex]からコピー します。  
     
-プロパティ値をクリップボードにコピーするには、[[書式設定された応答 JSON をクリップボードにコピーする]][DevtoolsNetworkReferenceCopyFormattedResponseJsonClipboard] に移動します。  Chromium オープン ソース プロジェクトでこの機能の履歴を確認するには、問題 [1132084][CR1132084] に移動します。  
+プロパティ値をクリップボードにコピーするには、[書式設定された応答 JSON をクリップボードにコピーする][DevtoolsNetworkReferenceCopyFormattedResponseJsonClipboard] に移動します。  Chromium オープン ソース プロジェクトでこの機能の履歴を確認するには、問題 [1132084][CR1132084] に移動します。  
 
 :::row:::
    :::column span="":::
@@ -206,9 +206,9 @@ Z インデックス値と ドキュメント オブジェクト モデル \(DOM
 
 :::image type="icon" source="../../media/2020/06/experimental-tag-14px.msft.png":::
 
-[Microsoft Edge バージョン 87 以降][WhatsNew202010DevtoolsCustomizeKeyboardShortcutsSettings]では、DevTools でいずれのアクションのキーボード ショートカットもカスタマイズできます。  Microsoft Edge バージョン 88 では、複数押しのキーボード ショートカットを作成できます。  DevTools でアクションのショートカットを設定するには、[[設定][DevtoolsCustomizeIndexSettings] > **の実験**] に移動し、[**キーボード ショートカット エディターを有効にする**] の横にあるチェックボックスをオンにします。  ショートカットのカスタマイズと編集の詳細については、「[キーボード ショートカット エディターの試験的機能を有効にする][DevtoolsExperimentalFeaturesEnableKeyboardShortcutEditor]」に移動します。  
+[Microsoft Edge バージョン 87 以降][WhatsNew202010DevtoolsCustomizeKeyboardShortcutsSettings]では、DevTools でいずれのアクションのキーボード ショートカットもカスタマイズできます。  Microsoft Edge バージョン 88 では、複数押しのキーボード ショートカットを作成できます。  DevTools でアクションのショートカットを設定するには、[[設定][DevtoolsCustomizeIndexSettings] > **の実験**] に移動し、[**キーボード ショートカット エディターを有効にする**] の横にあるチェックボックスをオンにします。  ショートカットのカスタマイズと編集の詳細については、[[DevTools で任意の操作を行うキーボード ショートカットの編集][DevtoolsCustomizeShortcutsEditKeyboardShortcutsForAnyActionDevtools]] に移動します。  
 
-たとえば、赤い強調表示は、[**イベントの記録の開始**] アクション用にカスタマイズされた複数押しの キーボード ショートカットが表示 されます。  Chromium オープン ソース プロジェクトで、この機能に関するリアルタイムの更新を確認するについては、[問題 #174309][CR174309] に移動します。  
+たとえば、赤い強調表示は、[**イベントの記録の開始**] アクション用にカスタマイズされた複数押しのキーボード ショートカットを表示します。  Chromium オープン ソース プロジェクトで、この機能に関するリアルタイムの更新を確認するについては、[問題 #174309][CR174309] に移動します。  
 
 :::image type="complex" source="../../media/2020/11/multi-press-keyboard-shortcuts.msft.png" alt-text="コード キーボード ショートカット" lightbox="../../media/2020/11/multi-press-keyboard-shortcuts.msft.png":::
    複数押しキーボード ショートカット  
@@ -351,32 +351,34 @@ Windows、Linux、または macOS を使用している場合は、 既定の開
 
 <!-- links -->  
 
-[Devtools3dViewIndex]: /microsoft-edge/devtools-guide-chromium/3d-view/index "3D ビュー | Microsoft Docs"  
-[DevtoolsConsoleIndex]: /microsoft-edge/devtools-guide-chromium/console/index "コンソールの概要 | Microsoft Docs"  
-[DevtoolsCustomizeIndexSettings]: /microsoft-edge/devtools-guide-chromium/customize/index#settings "設定 - Microsoft Edge DevTools をカスタマイズする | Microsoft Docs"  
-[DevtoolsCustomizeLocalization]: /microsoft-edge/devtools-guide-chromium/customize/localization "DevTools の言語設定を変更する | Microsoft Docs"  
-[DevtoolsDeviceModeIndex]: /microsoft-edge/devtools-guide-chromium/device-mode/index "Microsoft Edge DevTools でモバイル デバイスをエミュレートする | Microsoft Docs"  
-[DevtoolsExperimentalFeaturesEnableKeyboardShortcutEditor]: /microsoft-edge/devtools-guide-chromium/experimental-features#enable-keyboard-shortcut-editor "キーボード ショートカット エディターを有効にする - 試験的な機能 | microsoft Docs"  
-[DevtoolsExperimentalFeaturesTurnOnCompositedLayers3dView]: /microsoft-edge/devtools-guide-chromium/experimental-features#turn-on-composited-layers-in-3d-view "3D ビューで複合レイヤーを有効にする - 試験的機能 | Microsoft Docs"  
-[DevtoolsIssuesIndex]: /microsoft-edge/devtools-guide-chromium/issues/index "Microsoft Edge DevTools の問題ツールに関する問題を見つけて修正する | Microsoft Docs"  
-[DevtoolsNetworkReferenceCopyFormattedResponseJsonClipboard]: /microsoft-edge/devtools-guide-chromium/network/reference#copy-formatted-response-json-to-the-clipboard "書式設定された応答 JSON をクリップボードにコピーする - ネットワーク分析リファレンス | Microsoft Docs"  
-[DevtoolsNetworkReferenceViewTimingBreakdownRequest]: /microsoft-edge/devtools-guide-chromium/network/reference#view-the-timing-breakdown-of-a-request "要求のタイミング ブレークダウンを表示する - ネットワーク分析リファレンス | Microsoft Docs"  
-[WebDriverChromiumMain]: /microsoft-edge/webdriver-chromium "テスト自動化に WebDriver (Chromium) を使用する | Microsoft Docs"  
-
-<!--  [DevtoolsCssReferenceChangeAngleValueWithAngleClock]: /microsoft-edge/devtools-guide-chromium/css/reference#change-angle-value-with-the-angle-clock "Change angle value with the Angle Clock - CSS reference | Microsoft Docs"  -->  
-
-[ProgressiveWebAppsIndex]: /microsoft-edge/progressive-web-apps-chromium/index "Windows 上のプログレッシブ Web アプリ | Microsoft Docs"  
-
 [WhatsNew202010DevtoolsCustomizeKeyboardShortcutsSettings]: ../10/devtools.md#customize-keyboard-shortcuts-in-settings "[設定] でキーボード ショートカットをカスタマイズする - DevTools の新機能 (Microsoft Edge 87) | Microsoft Docs"  
 [WhatsNew202006DevtoolsWebhintFeedbackInTheIssuesPanel]: ../06/devtools.md#webhint-feedback-in-the-issues-panel "[問題] パネルの webhint フィードバック - DevTools の新機能 (Microsoft Edge 85) | Microsoft Docs"  
 
-[MicrosoftDeveloperMicrosoftEdgeToolsWebdriverDownloads]: https://developer.microsoft.com/microsoft-edge/tools/webdriver#downloads "WebDriver のダウンロード | Microsoft 開発者"  
+[Devtools3dViewIndex]: ../../../3d-view/index.md "3D ビュー | Microsoft Docs"  
+[DevtoolsConsoleIndex]: ../../../console/index.md "コンソールの概要 | Microsoft Docs"  
+[DevtoolsCustomizeIndexSettings]: ../../../customize/index.md#settings "設定 - Microsoft Edge DevTools をカスタマイズする | Microsoft Docs"  
+[DevtoolsCustomizeLocalization]: ../../../customize/localization.md "DevTools の言語設定を変更する | Microsoft Docs"  
+[DevtoolsCustomizeShortcutsEditKeyboardShortcutsForAnyActionDevtools]: ../../../customize/shortcuts.md#edit-keyboard-shortcuts-for-any-action-in-the-devtools "DevTools の任意のアクションのキーボード ショートカットを編集する | Microsoft Docs"  
+[DevtoolsDeviceModeIndex]: ../../../device-mode/index.md "Microsoft Edge DevTools でモバイル デバイスをエミュレートする | Microsoft Docs"  
+<!--  [DevtoolsExperimentalFeaturesEnableKeyboardShortcutEditor]: ../../../experimental-features/index.md#enable-keyboard-shortcut-editor "Enable keyboard shortcut editor - Experimental features | microsoft Docs"  -->  
+<!--  [DevtoolsExperimentalFeaturesTurnOnCompositedLayers3dView]: ../../../experimental-features/index.md#turn-on-composited-layers-in-3d-view "Turn on Composited Layers in 3D View - Experimental features | Microsoft Docs"  -->  
+[DevtoolsIssuesIndex]: ../../../issues/index.md "Microsoft Edge DevTools Issues ツールの問題を検索して修正する | Microsoft Docs"  
+[DevtoolsNetworkReferenceCopyFormattedResponseJsonClipboard]: ../../../network/reference.md#copy-formatted-response-json-to-the-clipboard "クリップボードにフォーマットされた応答 JSON をコピーする - ネットワーク分析リファレンス | Microsoft Docs"  
+[DevtoolsNetworkReferenceDisplayTimingBreakdownRequest]: ../../../network/reference.md#display-the-timing-breakdown-of-a-request "要求のタイミングの内訳を表示する - ネットワーク分析リファレンス | Microsoft Docs"  
+
+<!--  [DevtoolsCssReferenceChangeAngleValueWithAngleClock]: ../../../css/reference.md#change-angle-value-with-the-angle-clock "Change angle value with the Angle Clock - CSS reference | Microsoft Docs"  -->  
+
+[ProgressiveWebAppsIndex]: ../../../../progressive-web-apps-chromium/index.md "Windows 上のプログレッシブ Web アプリ | Microsoft Docs"  
+
+[WebdriverChromiumMain]: ../../../../webdriver-chromium/index.md "テスト自動化に WebDriver (Chromium) を使用する | Microsoft Docs"  
+
+[MicrosoftDeveloperMicrosoftEdgeToolsWebdriverDownloads]: https://developer.microsoft.com/microsoft-edge/tools/webdriver#downloads "WebDriver のダウンロード | Microsoft デベロッパー"  
 
 [MicrosoftinsiderDownloadPlatformLinux]: https://www.microsoftedgeinsider.com/download?platform=linux "Microsoft Edge Insider Channels をダウンロードする"  
 
 [MicrosoftEdgePreviewChannels]: https://www.microsoftedgeinsider.com/download "Microsoft Edge プレビュー チャネル"  
 
-[VisualStudioCode]: https://code.visualstudio.com "Visual Studio Code"  
+[VisualStudioCodeMain]: https://code.visualstudio.com "Visual Studio Code"  
 
 [CRIssuesList]: https://bugs.chromium.org/p/chromium/issues/list "Chromium bugs"  
 
@@ -427,4 +429,4 @@ Windows、Linux、または macOS を使用している場合は、 既定の開
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
 [GoogleSitePolicies]: https://developers.google.com/terms/site-policies  
-[JecelynYeen]: https://developers.google.com/web/resources/contributors/jecelynyeen  
+[JecelynYeen]: https://developers.google.com/web/resources/contributors#jecelyn-yeen  
