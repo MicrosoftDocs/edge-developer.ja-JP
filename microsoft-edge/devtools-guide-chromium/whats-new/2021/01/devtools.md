@@ -3,17 +3,17 @@ description: 新機能ツールが Welcome になりました。[スタイル] �
 title: DevTools の新機能 (Microsoft Edge 89)
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 04/08/2021
+ms.date: 05/04/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
 ms.localizationpriority: high
-ms.openlocfilehash: ec14d802af52c0bb2e658549f48764279c787f47
-ms.sourcegitcommit: de75fda30bb8964e9a184228d068b4402ec59c3e
+ms.openlocfilehash: 6d1952832c84dc159222a8aa16aa0ffe11edff34
+ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2021
-ms.locfileid: "11514369"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "11564928"
 ---
 <!-- Copyright Jecelyn Yeen 
 
@@ -166,7 +166,7 @@ Microsoft Edge の次のデバイスで、Web サイトの外観やアプリの�
     
 **実験用 Web プラットフォーム機能をオン** にし、新しい [CSS メディアの画面スパン機能][DualScreenWebCssMediaSpanning] と [getWindowSegments JavaScript API][DualScreenWebJavascriptGetwindowsegments] にアクセスします。  `edge://flags` まで移動し、**実験用 Web プラットフォーム機能** 横にあるフラグの設定を切り替えます。  デュアルスクリーン デバイスと折りたたみ式デバイスのために Web サイトやアプリを強化するには、[デバイスをエミュレート][DevtoolsDeviceModeIndex]するときに次の機能を使用します。  
 
-*   [スパニング][DevtoolsDeviceModeDualScreenFoldablesTestingFoldableDualScreenDevices]: Web サイト (またはアプリ) が両方の画面に表示されます。  
+*   [スパニング][DevtoolsDeviceModeDualScreenFoldablesTestFoldableDualScreenDevices]: Web サイト (またはアプリ) が両方の画面に表示されます。  
 *   [シームのレンダリング][DualScreenIntroductionHowToWorkWithSeam]: シームとは、2 つの画面の間の領域のことです。  
     
 Chromium オープンソース プロジェクトでこの機能の履歴を確認するには、問題 [1054281][CR1054281] に移動します。  
@@ -180,7 +180,7 @@ Chromium オープンソース プロジェクトでこの機能の履歴を確�
 [Visual Studio Code 用 Microsoft Edge 開発者ツール][VisualstudioMarketplaceMsEdgedevtoolsVscodeEdgeDevtools]拡張バージョン 1.1.2。前回リリース以降に Microsoft Visual Studio コードで次の変更がありました。  Microsoft Visual Studio Code では拡張機能を自動的に更新しています。  バージョン 1.1.2 に手動で更新するには、[拡張機能を手動で更新][VisualstudioCodeDocsEditorExtensionGalleryUpdateExtensionManually] に移動します。  
 
 *   ターゲット リストの各アイテムに **インスタンスを閉じる** ボタンを追加しました \([#248][GithubMicrosoftVscodeEdgeDevtoolsPull248]\)  
-*   84.0.522.63 から [85.0.564.40][DevtoolsWhatsNew85] に[Microsoft Edge DevTools][DevtoolsMain] バージョンを更新しました \([#235][GithubMicrosoftVscodeEdgeDevtoolsPull235]\)  
+*   84.0.522.63 から [85.0.564.40][DevtoolsWhatsNew85] に[Microsoft Edge DevTools][DevtoolsIndex] バージョンを更新しました \([#235][GithubMicrosoftVscodeEdgeDevtoolsPull235]\)  
 *   依存関係として [Microsoft Edge 用デバッガー][VisualstudioMarketplaceMsjsdiagDebuggerMicrosoftEdge] が含まれました  \([#233][GithubMicrosoftVscodeEdgeDevtoolsPull233]\)  
 *   設定オプションを実装して、拡張テーマを変更しました \([#229][GithubMicrosoftVscodeEdgeDevtoolsPull229]\)  
     
@@ -426,16 +426,16 @@ Windows、Linux、または macOS を使用している場合は、 既定の開
 
 [DevtoolsWhatsNew85]: ../../2020/06/devtools.md "DevTools (Microsoft Edge 85) の新機能 | Microsoft Docs"  
 
-[DevtoolsAccessibilityReferenceViewContrastRatioTextElementColorPicker]: /microsoft-edge/devtools-guide-chromium/accessibility/reference#view-the-contrast-ratio-of-a-text-element-in-the-color-picker "カラー ピッカー - アクセシビリティ リファレンス ページでテキスト要素のコントラスト比を表示 | Microsoft Docs"  
-[DevtoolsCssReferenceChangeCss]: /microsoft-edge/devtools-guide-chromium/css/reference#change-css "CSS の変更 - CSS 参照|Microsoft Docs"  
-[DevtoolsCustomizeIndexSettings]: /microsoft-edge/devtools-guide-chromium/customize/index#settings "設定 - Microsoft Edge DevTools をカスタマイズする | Microsoft Docs"  
-[DevtoolsCustomizeShortcuts]: microsoft-edge/devtools-guide-chromium/customize/shortcuts "Microsoft Edge DevTools でキーボード ショートカットをカスタマイズする | Microsoft Docs"  
-[DevtoolsDeviceModeDualScreenFoldablesTestingFoldableDualScreenDevices]: /microsoft-edge/devtools-guide-chromium/device-mode/dual-screen-and-foldables#testing-on-foldable-and-dual-screen-devices "折りたたみ可能なデバイスとデュアルスクリーン デバイスでのテスト - Microsoft Edge DevTools でデュアルスクリーン デバイスと折りたたみ可能なデバイスをエミュレート | Microsoft Docs"  
-[DevtoolsDeviceModeIndex]: /microsoft-edge/devtools-guide-chromium/device-mode/index "Microsoft Edge DevTools でモバイル デバイスをエミュレートする | Microsoft Docs"  
-[DevtoolsDeviceModeIndexSimulateMobileViewport]: /microsoft-edge/devtools-guide-chromium/device-mode/index#simulate-a-mobile-viewport "モバイル ビューポートのシミュレート - Microsoft Edge DevTools でモバイル デバイスをエミュレート | Microsoft Docs"  
-[DevtoolsEvaluatePerformanceReferenceRecordLoadPerformance]: /microsoft-edge/devtools-guide-chromium/evaluate-performance/reference#record-load-performance "レコードの読み込みパフォーマンス - パフォーマンス分析リファレンス | Microsoft Docs"  
-[DevtoolsInspectStylesEditFonts]: /microsoft-edge/devtools-guide-chromium/inspect-styles/edit-fonts "DevTools の [スタイル] ウィンドウで CSS フォントのスタイルと設定を編集 | Microsoft Docs"  
-[DevtoolsMain]: /microsoft-edge/devtools-guide-chromium/index "Microsoft Edge (Chromium) 開発者ツールの概要 |Microsoft Docs"  
+[DevtoolsAccessibilityReferenceViewContrastRatioTextElementColorPicker]: ../../../accessibility/reference.md#view-the-contrast-ratio-of-a-text-element-in-the-color-picker "カラー ピッカー - アクセシビリティ リファレンス ページでテキスト要素のコントラスト比を表示 | Microsoft Docs"  
+[DevtoolsCssReferenceChangeCss]: ../../../css/reference.md#change-css "CSS の変更 - CSS 参照|Microsoft Docs"  
+[DevtoolsCustomizeIndexSettings]: ../../../customize/index.md#settings "設定 - Microsoft Edge DevTools をカスタマイズする | Microsoft Docs"  
+[DevtoolsCustomizeShortcuts]: ../../../customize/shortcuts.md "Microsoft Edge DevTools でキーボード ショートカットをカスタマイズする | Microsoft Docs"  
+[DevtoolsDeviceModeDualScreenFoldablesTestFoldableDualScreenDevices]: ../../../device-mode/dual-screen-and-foldables.md#test-on-foldable-and-dual-screen-devices "折りたたみ可能なデバイスとデュアルスクリーン デバイスでのテスト - Microsoft Edge DevTools でデュアルスクリーン デバイスと折りたたみ可能なデバイスをエミュレート | Microsoft Docs"  
+[DevtoolsDeviceModeIndex]: ../../../device-mode/index.md "Microsoft Edge DevTools でモバイル デバイスをエミュレートする | Microsoft Docs"  
+[DevtoolsDeviceModeIndexSimulateMobileViewport]: ../../../device-mode/index.md#simulate-a-mobile-viewport "モバイル ビューポートのシミュレート - Microsoft Edge DevTools でモバイル デバイスをエミュレート | Microsoft Docs"  
+[DevtoolsEvaluatePerformanceReferenceRecordLoadPerformance]: ../../../evaluate-performance/reference.md#record-load-performance "レコードの読み込みパフォーマンス - パフォーマンス分析リファレンス | Microsoft Docs"  
+[DevtoolsIndex]: ../../../index.md "Microsoft Edge (Chromium) 開発者ツールの概要 | Microsoft Docs"  
+[DevtoolsInspectStylesEditFonts]: ../../../inspect-styles/edit-fonts.md "DevTools の [スタイル] ウィンドウで CSS フォントのスタイルと設定を編集 | Microsoft Docs"  
 
 [DualScreenIntroductionHowToWorkWithSeam]: /dual-screen/introduction#how-to-work-with-the-seam "シームを処理する方法 - デュアルスクリーン デバイスの概要 | Microsoft Docs"  
 [DualScreenWebCssMediaSpanning]: /dual-screen/web/css-media-spanning "デュアルスクリーン検出のための CSS メディアのスクリーンスパニング機能 | Microsoft Docs"  
@@ -500,6 +500,6 @@ Windows、Linux、または macOS を使用している場合は、 既定の開
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
 [GoogleSitePolicies]: https://developers.google.com/terms/site-policies  
-[JecelynYeen]: https://developers.google.com/web/resources/contributors/jecelynyeen
+[JecelynYeen]: https://developers.google.com/web/resources/contributors#jecelyn-yeen
 
 [SpanningPlaceholder]: link-t-b-d "スパニング プレースホルダー"  
