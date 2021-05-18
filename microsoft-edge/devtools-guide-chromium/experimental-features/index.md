@@ -118,7 +118,8 @@ ms.locfileid: "11564239"
 1.  <span data-ttu-id="6b348-166">セクションの **Source Order Viewer** 下で、[ソースの順序を **表示する] チェック ボックスをオン** にします。</span><span class="sxs-lookup"><span data-stu-id="6b348-166">Under the **Source Order Viewer** section, choose the **Show Source Order** checkbox.</span></span>  
 1.  <span data-ttu-id="6b348-167">任意の HTML 要素を強調表示して、Web ページ ソース内の順序をオーバーレイで表示します。</span><span class="sxs-lookup"><span data-stu-id="6b348-167">Highlight any HTML element to display an overlay that the order in the webpage source.</span></span>  
     
-:::image type="complex" source="../media/experiments-source-order-viewer.msft.png" alt-text=":::<span data-ttu-id="6b348-168">no-loc(Source Order Viewer)::: in the アクセシビリティ ペイン" lightbox="../media/experiments-source-order-viewer.msft.png"::: **Source Order Viewer** [**アクセシビリティ] ウィンドウ**</span><span class="sxs-lookup"><span data-stu-id="6b348-168">no-loc(Source Order Viewer)::: in the Accessibility pane" lightbox="../media/experiments-source-order-viewer.msft.png"::: **Source Order Viewer** in the **Accessibility** pane</span></span>  
+:::image type="complex" source="../media/experiments-source-order-viewer.msft.png" alt-text="Source Order Viewer in the Accessibility pane" lightbox="../media/experiments-source-order-viewer.msft.png":::
+   **Source Order Viewer** in the **Accessibility** pane  
 :::image-end:::  
 
 <!--Available in Microsoft Edge version 86 and later.  -->  
@@ -222,7 +223,7 @@ ms.locfileid: "11564239"
     
 <span data-ttu-id="6b348-232">ウェルカム**ツールは**、更新後に自動的に開Microsoft Edge。</span><span class="sxs-lookup"><span data-stu-id="6b348-232">The **Welcome** tool opens automatically after each update to Microsoft Edge.</span></span>  <span data-ttu-id="6b348-233">更新後にウェルカム ツール\*\*\*\* が表示されるのを防ぐには、[ようこそ]\*\*\*\* ツールのタイトルの下にある更新の後、[開く] タブの横にあるチェック ボックス**を**オフにします。</span><span class="sxs-lookup"><span data-stu-id="6b348-233">To prevent the display of the **Welcome** tool after each update, clear the checkbox next to **Open tab after each update** under the **Welcome** tool title.</span></span>  
 
-<span data-ttu-id="6b348-234">元の **[What's New]** ツールを使用する場合は、[テスト] 設定に移動し、[テスト][の横にある][DevtoolsCustomizeIndexSettings]チェック  >  \*\*\*\* ボックスをオフにします **Enable Welcome tab** 。</span><span class="sxs-lookup"><span data-stu-id="6b348-234">If you prefer the original **What's New** tool, navigate to [Settings][DevtoolsCustomizeIndexSettings] > **Experiments** and remove the checkbox next to **Enable Welcome tab**.</span></span>  
+<span data-ttu-id="6b348-234">元の **[What's New]** ツールを使用する場合は、[テスト] 設定に移動し、[テスト][の横にある][DevtoolsCustomizeIndexSettings]チェック  > ボックスをオフにします **Enable Welcome tab** 。</span><span class="sxs-lookup"><span data-stu-id="6b348-234">If you prefer the original **What's New** tool, navigate to [Settings][DevtoolsCustomizeIndexSettings] > **Experiments** and remove the checkbox next to **Enable Welcome tab**.</span></span>  
 
 :::image type="complex" source="../media/experiments-welcome.msft.png" alt-text="ウェルカム ツール" lightbox="../media/experiments-welcome.msft.png":::
    <span data-ttu-id="6b348-236">**ウェルカム** ツール</span><span class="sxs-lookup"><span data-stu-id="6b348-236">**Welcome** tool</span></span>  
