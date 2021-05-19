@@ -3,17 +3,17 @@ description: WPF アプリ向け WebView2 の使い始めガイド
 title: WPF アプリ用 WebView2 の概要
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 05/06/2021
+ms.date: 05/13/2021
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
-keywords: WebView2、Webview2、WebView、Webview、wpf アプリ、wpf、edge、CoreWebView2、ブラウザー コントロール、エッジ html、開始、.NET
-ms.openlocfilehash: e7ddb3977d34e8150a10354e638226bcf96d610d
-ms.sourcegitcommit: 777b16ef10363f2dfd755f115ee2d4c81a8de46f
+keywords: WebView2、Webview2、WebView、Webview、wpf アプリ、wpf、edge、CoreWebView2、ブラウザー コントロール、エッジ html、get started、はじめに、.NET
+ms.openlocfilehash: 9808c6f801e3f7a5052186bb3088621758c41762
+ms.sourcegitcommit: bbbf722067f1d255f59ab384e66798f8b77ef609
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2021
-ms.locfileid: "11536070"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "11574597"
 ---
 # <a name="get-started-with-webview2-in-wpf"></a>WPF での WebView2 の使用を開始する
 
@@ -62,7 +62,7 @@ ms.locfileid: "11536070"
 
 NuGet を使用して、WebView2 SDK をプロジェクトに追加します。  
 
-1.  プロジェクトにマウス ポインターを移動し、コンテキスト メニュー \(右クリック\) を開き、**[NuGet パッケージの管理...]** を選択します。  
+1.  プロジェクトにマウス ポインターを置き、コンテキスト メニュー \(右クリック\) を開き、[パッケージの管理] をNuGet**します。。**  
     
     :::image type="complex" source="./media/wpf-getting-started-mng-nuget.png" alt-text="NuGet パッケージの管理" lightbox="./media/wpf-getting-started-mng-nuget.png":::
        NuGet パッケージの管理

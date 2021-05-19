@@ -2,8 +2,7 @@
 
 ## <a name="microsoft-open-source-code-of-conduct"></a>Microsoft Open Source Code of Conduct  
 
-このプロジェクトでは [、Microsoft Open Source Code of Conduct を採用しています](https://opensource.microsoft.com/codeofconduct)。  
-詳細については、「 [行動規範](https://opensource.microsoft.com/codeofconduct/faq) に関するよく寄せられる質問」または [「opencode@microsoft.com](mailto:opencode@microsoft.com) に関する質問やコメント」を参照してください。  
+Microsoft Open Source Code of Conduct の詳細については、「Microsoft Open Source Code [of Conduct」を参照してください](CODE_OF_CONDUCT.md)。  
 
 ## <a name="legal-notices"></a>法的通知  
 
@@ -19,15 +18,15 @@ Microsoft およびすべての投稿者は、黙示、禁反言、またはそ�
 
 ## <a name="contributing"></a>寄稿  
 
-これは、でホストされている Microsoft Edge **ドキュメントの** リポジトリです [https://docs.microsoft.com/microsoft-edge/](https://docs.microsoft.com/microsoft-edge/index) 。  
+これは、ホストされているドキュメントMicrosoft Edge**リポジトリ**です [https://docs.microsoft.com/microsoft-edge](https://docs.microsoft.com/microsoft-edge/index) 。  
 
-新しいカバレッジを含めるか、フィードバックを得る場合は、貢献を [検討してください](./CONTRIBUTING.md)。  既存のコンテンツを編集したり、新しいコンテンツを追加したり、新しい問題を [作成したりすることができます](https://github.com/MicrosoftDocs/edge-developer/issues)。  Microsoft Edge チームは、提案を確認し、提案をドキュメントに組み込むのに役立っています。  
+新しいカバレッジを含めるか、フィードバックを得る場合は、貢献を [検討してください](./CONTRIBUTING.md)。  既存のコンテンツを編集したり、新しいコンテンツを追加したり、新しい問題を [作成したりすることができます](https://github.com/MicrosoftDocs/edge-developer/issues)。  このMicrosoft Edgeチームは、提案を確認し、提案をドキュメントに組み込むのに役立っています。  
 
-[状態] ページのデータ [を次](https://developer.microsoft.com/microsoft-edge/status) の場所で検索します  [https://github.com/MicrosoftEdge/Status](https://github.com/MicrosoftEdge/Status) 。  このページには、Microsoft Edge の Web プラットフォーム機能に関する最新の実装状態と `Status` 今後の計画が示されています。
+[状態] Web ページの [データを次](https://developer.microsoft.com/microsoft-edge/status) の場所で検索します  [https://github.com/MicrosoftEdge/Status](https://github.com/MicrosoftEdge/Status) 。  Web `Status` ページには、Web プラットフォーム機能の最新の実装状態と今後の計画Microsoft Edge。
 
 ### <a name="conventions"></a>規則  
 
-*   ページを追加する場合は、ページが表示される toc.md [エントリを](./microsoft-edge/toc.yml) 追加する必要があります。
+*   Web ページを追加する場合は、Web ページにエントリを追加 toc.md [追加する](./microsoft-edge/toc.yml) 必要があります。
 *   ディレクトリには、より多くのディレクトリまたは複数のディレクトリが含 `readme.md` まれている場合があります。
 *   フォルダー/ディレクトリ名は、ダッシュ区切り \(\ `f12-tools` など) と小文字です。  ディレクトリは、サイトの URL で使用 `docs.microsoft.com` されます。  アンダースコア、PascalCase、camelCase は使用しないようにします。  
 
@@ -40,11 +39,11 @@ Microsoft およびすべての投稿者は、黙示、禁反言、またはそ�
     *   箇条書きを入れ子にできます。  
     *   箇条書きリストには、複数のエントリが必要です。  
 *   標準の配置 
-
+    
 1.  順序付きリスト。  
 1.  通常の洋式の番号を使用します。  
 1.  リストが本当に注文を持つ場合にのみ使用する必要があります。  
-
+    
 ---  
 
 水平方向のルールを使用できます。  水平ルールを使用して、煩雑な問題を軽減します。  
@@ -52,7 +51,7 @@ Microsoft およびすべての投稿者は、黙示、禁反言、またはそ�
 
 ### <a name="displaying-code"></a>コードの表示  
 
-インライン `code` Markdown 構文 \(backticks\) を使用できます。  
+インライン マークダウン構文 `code` \(backticks\) を使用できます。  
 
 または、コードのブロックを表示する場合があります。  次のコード スニペットは css の例です。  
 
@@ -79,7 +78,7 @@ body {
 *   警告  
 *   ヒント  
 *   重要  
-
+    
 それぞれ、メモは次のコード スニペットのようになります。  
 
 ```md
@@ -108,9 +107,9 @@ body {
 
 ```md
 > This is a line in a blockquote.  
-> My text may wrap to more than one line when the Markdown is parsed, but I must include all my information within a single \(sometimes very long line\) in the Markdown.  
+> My text may wrap to more than one line when the markdown is parsed, but I must include all my information within a single \(sometimes very long line\) in the markdown.  
 > This is another line in a blockquote.  
-```
+```  
 
 ### <a name="images"></a>画像  
 

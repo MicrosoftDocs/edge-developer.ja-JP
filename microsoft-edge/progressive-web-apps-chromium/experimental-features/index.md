@@ -3,16 +3,16 @@ description: Web Apps の最新のMicrosoft Edge機能
 title: 実験的な機能|プログレッシブ Web アプリ
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 04/19/2021
+ms.date: 05/13/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge, 実験, プログレッシブ Web アプリ, Web アプリ, PWA, PWA
-ms.openlocfilehash: 641b6fd5185e7f96289c1de6482764979ee0981d
-ms.sourcegitcommit: 9cc54ba3e731ecc8b713c3cf215018848f7405b9
+ms.openlocfilehash: 4a50b925e002746357b2b770b199d84772b456f5
+ms.sourcegitcommit: bbbf722067f1d255f59ab384e66798f8b77ef609
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2021
-ms.locfileid: "11496754"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "11574590"
 ---
 # <a name="experimental-features-in-progressive-web-apps-pwas"></a>プログレッシブ Web アプリ (PWA) の実験的な機能  
 
@@ -68,7 +68,6 @@ Origin Trials の詳細については、「Origin Trials [Developer Console Mic
 | [ショートカット](#shortcuts) | 87 以降 | すべて |  
 | [ファイル処理](#file-handling) | 83 以降 | すべてのデスクトップ |  
 
-
 ## <a name="uri-protocol-handling"></a>URI プロトコルの処理  
 
 HTTP または FTP プロトコルを使用して Web ページや Web コンテンツへのリンクを定義するために、統一されたリソース識別子 \(URI\) を使用できます。  URI を使用して、スキーマにコード化するリンクを記述できます。  たとえば、プロトコルを使用して電子メール リンクを記述し、オペレーティング システム \(OS\) またはブラウザーが、そのプロトコルを処理する Web ページまたはアプリ `mailto://` を決定します。  
@@ -79,7 +78,7 @@ HTTP または FTP プロトコルを使用して Web ページや Web コンテ
 
 *   Web アプリPWAを使用してホスト OS に登録する
 *   特定の URI プロトコルPWA処理する方法を宣言する  
-     
+    
 PWA をプロトコル ハンドラーとして登録した後、ユーザーがブラウザーやネイティブ アプリなどの特定のスキームを使用してハイパーリンクを選択すると、登録された PWA が OS によってアクティブ化され `mailto://` 、URI を受信します。 `web+music://`  
 
 この機能では、2 つのフィールドを指定する必要がある配列に配列を含める Web アプリ マニフェスト `protocol_handlers` を更新する必要があります。  
@@ -485,6 +484,8 @@ body {
 }
 ```  
 
+Chromiumベースのブラウザーでは、この機能のテストと整形を行っています。  コード例を含む詳細については、「ユーザーのタイトル バーのウィンドウ コントロールオーバーレイをカスタマイズPWA[を参照してください][WebDevWindowControlsOverlay]。  
+
 ## <a name="run-on-os-login"></a>[OS ログイン時に実行]  
 
 この機能を使用すると、ユーザーが Microsoft にログインすると自動的に起動Windows。  いくつかのクラスのアプリは、この機能を利用します。  アプリのクラスには、メール、チャット、監視ダッシュボード、リアルタイムデータ表示アプリが含まれます。  この機能を使用すると、ユーザーが OS にログインするとすぐにアプリに参加できます。  この機能は、手動でPWA同じ方法で自動的に起動します。  
@@ -591,3 +592,4 @@ Web アプリの実験に関Microsoft Edgeフィードバックを提供する�
 [GithubWicgPwaUrlHandlerBlobMainExplainerMd]: https://github.com/WICG/pwa-url-handler/blob/main/explainer.md "URL ハンドラーとしての PWA |GitHub"  
 
 [WebDevFileHandling]: https://web.dev/file-handling "Web アプリケーションをファイル ハンドラーに|web.dev"  
+[WebDevWindowControlsOverlay]: https://web.dev/window-controls-overlay "ユーザーのタイトル バーのウィンドウ コントロールPWAオーバーレイをカスタマイズ|web.dev"  

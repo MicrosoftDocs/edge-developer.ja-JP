@@ -3,17 +3,17 @@ description: WinUI アプリ向け WebView2 の使い始めガイド
 title: WinUI アプリ用 WebView2 の使用を開始する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 05/06/2021
+ms.date: 05/17/2021
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: WebView2、Webview2、WebView、Webview、winui アプリ、winui、edge、CoreWebView2、ブラウザー コントロール、エッジ html、開始、はじめに、.NET
-ms.openlocfilehash: ad78c5e65af507031ddd510f4b21782fe00ae465
-ms.sourcegitcommit: 777b16ef10363f2dfd755f115ee2d4c81a8de46f
+ms.openlocfilehash: e334e8e7aec5fff4c57700a99de5cde906242e4f
+ms.sourcegitcommit: bbbf722067f1d255f59ab384e66798f8b77ef609
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2021
-ms.locfileid: "11536062"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "11574583"
 ---
 # <a name="get-started-with-webview2-in-winui-3-preview"></a>WinUI 3 での WebView2 の使用を開始する (プレビュー)  
 
@@ -39,7 +39,7 @@ ms.locfileid: "11536062"
 ## <a name="step-0---visual-studio-settings"></a>手順 0 - Visual Studio設定  
 
 1.  システムのパッケージ ソースがNuGet有効になっている[nuget.org。][NugetHome] 詳細については、「Common NuGet[構成」][NugetConsumePackagesConfiguringNugetBehavior]および「Windows Community Toolkit」[に移動します][WindowsCommunitytoolkit]。  
-1.  [WinUI 3 Preview 3 VSIX パッケージをダウンロードしてインストールします][VisualstudioMarketplaceMicrosoftWinuiWinuiprojecttemplates]。  インストーラーは、WinUI 3 プロジェクト テンプレートと、WinUI 3 ライブラリを含む NuGet パッケージの両方を 2019 年Visual Studioします。  
+1.  レユニオン VSIX パッケージProject[インストールします][VisualstudioMarketplaceProjectreunionMicrosoftprojectreunion]。  インストーラーは、WinUI 3 プロジェクト テンプレートと、WinUI 3 ライブラリを含む NuGet パッケージの両方を 2019 年Visual Studioします。  
     
     パッケージをパッケージに追加する方法については、「Visual Studio拡張機能の検索と使用」 `VSIX` [にVisual Studioします][VisualstudioIdeFindingUsingVisualStudioExtensionsInstallWithoutUsing-ManageExtensionsDialogBox]。
     
@@ -296,20 +296,20 @@ WinUI 固有の機能要求またはバグを送信するには、[問題 [- mic
 
 <!-- links -->  
 [WV2BestPractices]: ../concepts/developer-guide.md "WebView2 の開発のベスト プラクティス|Microsoft Docs"  
-
-[MicrosoftDeveloperMicrosoftEdgeWebview2]: ../index.md "Microsoft Edge WebView2 (プレビュー) の概要|Microsoft Docs"  
-[Webview2IndexNextSteps]: ../index.md#next-steps "次の手順 - Microsoft Edge WebView2 (プレビュー) の概要|Microsoft Docs"  
 [Webviews2ConceptsNavigationEvents]: ../concepts/navigation-events.md "ナビゲーション イベント|Microsoft Docs"  
+[MicrosoftDeveloperMicrosoftEdgeWebview2]: ../index.md "WebView2 Microsoft Edge (プレビュー) の概要|Microsoft Docs"  
+[Webview2IndexNextSteps]: ../index.md#next-steps "次の手順 - WebView2 (プレビュー) Microsoft Edgeの概要|Microsoft Docs"  
+
 [Webviews2ReferenceWpfMicrosoftWebExecutescriptasync]: /dotnet/api/microsoft.web.webview2.wpf.webview2.executescriptasync "WebView2.ExescriptAsync(String) メソッド (Microsoft.Web.WebView2.Wpf) |Microsoft Docs"  
 
-[NugetConsumePackagesConfiguringNugetBehavior]: /nuget/consume-packages/configuring-nuget-behavior "NuGet の一般的な構成|Microsoft Docs"  
+[NugetConsumePackagesConfiguringNugetBehavior]: /nuget/consume-packages/configuring-nuget-behavior "一般的NuGet構成|Microsoft Docs"  
 
-[UwpSchemasAppxpackageUapmanifestRoot]: /uwp/schemas/appxpackage/uapmanifestschema/schema-root "Windows 10 のパッケージ マニフェスト スキーマ参照|Microsoft Docs"  
+[UwpSchemasAppxpackageUapmanifestRoot]: /uwp/schemas/appxpackage/uapmanifestschema/schema-root "パッケージ マニフェスト スキーマ参照 (Windows 10 |Microsoft Docs"  
 
 [VisualstudioIdeFindingUsingVisualStudioExtensionsInstallWithoutUsing-ManageExtensionsDialogBox]: /visualstudio/ide/finding-and-using-visual-studio-extensions#install-without-using-the-manage-extensions-dialog-box "[拡張機能の管理] ダイアログ ボックスを使用せずにインストールする - 拡張機能の管理 Visual Studio |Microsoft Docs"  
 
-[WindowsAppsWinui3ConfigureYourDevEnvironment]: /windows/apps/winui/winui3#configure-your-dev-environment "開発環境を構成する - Windows UI ライブラリ 3.0 プレビュー 1 (2020 年 5 月) |Microsoft Docs"  
-[WindowsCommunitytoolkit]: /windows/communitytoolkit "Windows コミュニティ Toolkit ドキュメント |Microsoft Docs"  
+[WindowsAppsWinui3ConfigureYourDevEnvironment]: /windows/apps/winui/winui3#configure-your-dev-environment "開発環境を構成する - WINDOWS UI ライブラリ 3.0 プレビュー 1 (2020 年 5 月) |Microsoft Docs"  
+[WindowsCommunitytoolkit]: /windows/communitytoolkit "Windows Community Toolkit ドキュメント |Microsoft Docs"  
 [WindowsMsixDesktopToUwpPackagingDotNet]: /windows/msix/desktop/desktop-to-uwp-packaging-dot-net "MSIX パッケージ用にデスクトップ アプリケーションをセットアップVisual Studio |Microsoft Docs"  
 [WindowsUwpGetStartedEnableYourDeviceForDevelopment]: /windows/uwp/get-started/enable-your-device-for-development "デバイスを開発用に有効|Microsoft Docs"  
 
@@ -321,17 +321,17 @@ WinUI 固有の機能要求またはバグを送信するには、[問題 [- mic
 
 [MicrosoftMain]: https://www.microsoft.com "Microsoft"  
 
-[MicrosoftSupport12373]: https://support.microsoft.com/help/12373 "Windows Update: FAQ"  
+[MicrosoftSupport12373]: https://support.microsoft.com/help/12373 "Windows更新プログラム: FAQ"  
 
 [MicrosoftedgeinsiderDownload]: https://www.microsoftedgeinsider.com/download "Microsoft Edge Insider Channels をダウンロードする"  
 
-[NugetHome]: https://nuget.org "ホーム |NuGet ギャラリー"  
+[NugetHome]: https://nuget.org "ホーム |NuGetギャラリー"  
 
 [WindowsDotnetcliBlobCoreSdk50100Preview4202681X86]: https://dotnetcli.blob.core.windows.net/dotnet/Sdk/5.0.100-preview.4.20268.1/dotnet-sdk-5.0.100-preview.4.20268.1-win-x86.exe "ダウンロード dotnet-sdk-5.0.100-preview.4.20268.1-win-x86.exe"  
 
 [WindowsDotnetcliBlobCoreSdk50100Preview4202681X64]: https://dotnetcli.blob.core.windows.net/dotnet/Sdk/5.0.100-preview.4.20268.1/dotnet-sdk-5.0.100-preview.4.20268.1-win-x64.exe " dotnet-sdk-5.0.100-preview.4.20268.1-win-x64.exe"  
 
-[VisualstudioMarketplaceMicrosoftWinuiWinuiprojecttemplates]: https://marketplace.visualstudio.com/items?itemName=Microsoft-WinUI.WinUIProjectTemplates "WinUI 3 Project Templates |Visual Studio Marketplace"  
+[VisualstudioMarketplaceProjectreunionMicrosoftprojectreunion]: https://marketplace.visualstudio.com/items?itemName=ProjectReunion.MicrosoftProjectReunion "Projectレユニオン |Visual StudioMarketplace"  
 
 [MicrosoftVisualstudioMain]: https://visualstudio.microsoft.com "Visual Studio"  
 
