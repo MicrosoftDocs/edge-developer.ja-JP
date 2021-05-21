@@ -108,7 +108,7 @@ ms.locfileid: "11327527"
 
 <span data-ttu-id="d2d61-196">拡張機能を正常に提出した後、拡張機能にはレビュー プロセスが適用され、認定プロセスに合格または不合格になります。</span><span class="sxs-lookup"><span data-stu-id="d2d61-196">After you've successfully submitted your extension, your extension undergoes a review process and either passes or fails the certification process.</span></span>  <span data-ttu-id="d2d61-197">所有者には、結果が通知され、必要に応じて次の手順が示されます。</span><span class="sxs-lookup"><span data-stu-id="d2d61-197">Owners are notified of the outcome and given next steps as required.</span></span>  <span data-ttu-id="d2d61-198">拡張機能の更新プログラムをストアに提出すると、新しいレビュー プロセスが開始されます。</span><span class="sxs-lookup"><span data-stu-id="d2d61-198">If you submit an extension update to the store, a new review process is started.</span></span>  
 
-## <span data-ttu-id="d2d61-199">関連項目</span><span class="sxs-lookup"><span data-stu-id="d2d61-199">See also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="d2d61-199">関連項目</span><span class="sxs-lookup"><span data-stu-id="d2d61-199">See also</span></span>  
 
 *   [<span data-ttu-id="d2d61-200">Google Chrome 拡張機能を移植する</span><span class="sxs-lookup"><span data-stu-id="d2d61-200">Port a Google Chrome extension</span></span>][ExtensionworkshopPorting]  
 *   [<span data-ttu-id="d2d61-201">Safari アプリの拡張機能を構築する</span><span class="sxs-lookup"><span data-stu-id="d2d61-201">Build a Safari App extension</span></span>][AppleDeveloperSafariservicesAppExtensionsBuilding]  

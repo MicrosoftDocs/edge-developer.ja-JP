@@ -51,7 +51,7 @@ ms.locfileid: "11230692"
    :::column-end:::
 :::row-end:::  
 
-## <span data-ttu-id="dac22-123">デバッガーのMicrosoft Edge</span><span class="sxs-lookup"><span data-stu-id="dac22-123">Debugger for Microsoft Edge</span></span>  
+## <a name="debugger-for-microsoft-edge"></a><span data-ttu-id="dac22-123">デバッガーのMicrosoft Edge</span><span class="sxs-lookup"><span data-stu-id="dac22-123">Debugger for Microsoft Edge</span></span>  
 
 <span data-ttu-id="dac22-124">デバッガーの[拡張機能Microsoft Edge Visual Studio Code、][VisualstudioMarketplaceDebuggerMicrosoftEdge]フロントエンド JavaScript コードを 1 行に 1 行でデバッグし、そのコードから直接ステートメント `console.log()` [を参照][VisualstudioCode]Visual Studio Code。</span><span class="sxs-lookup"><span data-stu-id="dac22-124">With the [Debugger for Microsoft Edge][VisualstudioMarketplaceDebuggerMicrosoftEdge] Visual Studio Code extension, debug your front-end JavaScript code line-by-line and see `console.log()` statements directly from [Visual Studio Code][VisualstudioCode].</span></span>  
       
@@ -61,7 +61,7 @@ ms.locfileid: "11230692"
    <span data-ttu-id="dac22-129">**アクション内Microsoft Edge Visual Studio Code**デバッガー</span><span class="sxs-lookup"><span data-stu-id="dac22-129">**Debugger for Microsoft Edge** Visual Studio Code extension in action</span></span>  
 :::image-end:::  
 
-## <span data-ttu-id="dac22-130">Microsoft EdgeツールのVisual Studio Code</span><span class="sxs-lookup"><span data-stu-id="dac22-130">Microsoft Edge Tools for Visual Studio Code</span></span>
+## <a name="microsoft-edge-tools-for-visual-studio-code"></a><span data-ttu-id="dac22-130">Microsoft EdgeツールのVisual Studio Code</span><span class="sxs-lookup"><span data-stu-id="dac22-130">Microsoft Edge Tools for Visual Studio Code</span></span>
 
 <span data-ttu-id="dac22-131">拡張機能Microsoft Edge[ツールVisual Studio Code Visual Studio Code、Microsoft Edge][VisualstudioMarketplaceMicrosoftEdgeToolsVisualStudioCode]ブラウザーの Elements ツールを使用Visual Studio Code。 \*\*\*\*</span><span class="sxs-lookup"><span data-stu-id="dac22-131">With the [Microsoft Edge Tools for Visual Studio Code][VisualstudioMarketplaceMicrosoftEdgeToolsVisualStudioCode] Visual Studio Code extension, use the **Elements** tool of the Microsoft Edge browser within Visual Studio Code.</span></span>  <span data-ttu-id="dac22-132">次のアクションに使用します。</span><span class="sxs-lookup"><span data-stu-id="dac22-132">Use it for the following actions.</span></span>  
 
@@ -76,7 +76,7 @@ ms.locfileid: "11230692"
    <span data-ttu-id="dac22-139">**Microsoft Edge内線Visual Studio Code Visual Studio Code**ツール</span><span class="sxs-lookup"><span data-stu-id="dac22-139">**Microsoft Edge Tools for Visual Studio Code** Visual Studio Code extension in action</span></span>  
 :::image-end:::  
 
-## <span data-ttu-id="dac22-140">Webhint</span><span class="sxs-lookup"><span data-stu-id="dac22-140">webhint</span></span>  
+## <a name="webhint"></a><span data-ttu-id="dac22-140">Webhint</span><span class="sxs-lookup"><span data-stu-id="dac22-140">webhint</span></span>  
       
 <span data-ttu-id="dac22-141">[Webhint (][WebhintMain]カスタマイズ可能なリント ツール) を使用して、サイトの次の機能を改善します。</span><span class="sxs-lookup"><span data-stu-id="dac22-141">Use [webhint][WebhintMain], a customizable linting tool, to improve the following functionality of your site.</span></span>  
 
