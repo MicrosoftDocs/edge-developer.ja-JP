@@ -363,8 +363,8 @@
           href: web-platform/ie-to-microsoft-edge-redirection.md
         - name: Microsoft Edge でのトラッキング防止
           href: web-platform/tracking-prevention.md
-        - name: Microsoft Edge ユーザー エージェント文字列
-          href: web-platform/user-agent-string.md
+        - name: Web サイトで Microsoft Edge を検出する方法
+          href: web-platform/user-agent-guidance.md
         - name: '[パスワードの表示] ボタンをカスタマイズする'
           href: web-platform/password-reveal.md
     - name: Web We Want の概要
