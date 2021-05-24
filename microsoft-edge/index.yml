@@ -202,8 +202,8 @@ additionalContent:
       items:
         - title: リファレンス
           links:
-            - text: Microsoft Edge ユーザー エージェント文字列
-              url: /microsoft-edge/web-platform/user-agent-string
+            - text: Web サイトのMicrosoft Edge検出する方法
+              url: /microsoft-edge/web-platform/user-agent-guidance
             - text: プラットフォームの状態
               url: 'https://developer.microsoft.com/microsoft-edge/platform/status'
             - text: Visual Studio Code
