@@ -8,12 +8,12 @@ ms.topic: article
 ms.prod: microsoft-edge
 ms.technology: devtools
 keywords: microsoft edge, web 開発, html, css, javascript, 開発者, webdriver, selenium,テストする, ツール, 自動化, テスト
-ms.openlocfilehash: 0a5a6cde75621f0dda1e98b0c7b471b1456bf430
-ms.sourcegitcommit: 518c1116dc5e6968edf92730906aa0e72dbf945d
+ms.openlocfilehash: 5d30fe14051ac8857c6ea4d64b8c8f1f8e8049ac
+ms.sourcegitcommit: a7609b75a94755ed983111af7083a0d3bf64eeac
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2021
-ms.locfileid: "11496963"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "11583588"
 ---
 # <a name="use-webdriver-chromium-for-test-automation"></a>テスト オートメーションに WebDriver (Chromium) を使用する  
 
@@ -58,12 +58,20 @@ WebDriver を使用すると、開発者はユーザーの操作をシミュレ�
 
 ダウンロードする必要がある最後のコンポーネントは、コード \(Python、 Java、 C\#, Ruby、 JavaScript\) を、Microsoft Edge \(Chromium\)でMicrosoft Edge ドライバーが実行するコマンドに変換するための言語固有のクライアント ドライバーです。  
 
-[選択した WebDriver 言語バインドをダウンロードします][SeleniumDownloads]。  このMicrosoft Edgeチームは[、Selenium 4.00-alpha07][NugetPackagesSeleniumWebdriver400alpha07]以降を推奨しています。これは\(Chromium\) をサポートMicrosoft Edgeです。  ただし、現在の安定した Selenium 3 リリースを含む、Selenium のすべての旧バージョンで Microsoft Edge \ (Chromium \) を制御することができます。  
+[選択した WebDriver 言語バインドをダウンロードします][SeleniumDownloads]。  このMicrosoft Edgeチームは[、Selenium 4.0.0-beta2][NugetPackagesSeleniumWebdriver400beta02]以降を推奨します。これは、Microsoft Edge \(Chromium\) をサポートしています。  ただし、現在の安定した Selenium 3 リリースMicrosoft Edge含め、以前のすべてのバージョンの Selenium で \(Chromium\) を制御できます。  
 
 > [!IMPORTANT]
 > 以前に Microsoft Edge \(Chromium\) を使用しておよびクラスを自動化またはテストした場合 `ChromeDriver` `ChromeOptions` 、WebDriver コードは Microsoft Edge バージョン 80 以降では実行されません。  この問題を解決するには、テストを更新してクラスを使用し、Driver `EdgeOptions` [Microsoft Edgeダウンロードします][MicrosoftDeveloperMicrosoftEdgeToolsWebdriver]。  
 
-### <a name="use-selenium-3"></a>Selenium 3 を使用する  
+### <a name="using-selenium-4"></a>Selenium 4 の使用
+
+Selenium 4 には、Microsoft Edge (Chromium) が組み込Chromium。  Selenium 4 をインストールするには [、[Selenium ライブラリのインストール] に移動します][SeleniumInstallingLibraries]。
+
+Selenium 4 を使用する場合は、Selenium Tools を使用する必要Microsoft Edge。  Selenium Tools for Microsoft Edgeセレン 3 のみ。  Selenium Tools で Selenium 4 を使用して、Microsoft Edgeインスタンスを作成しようとする場合は、次のエラー `EdgeDriver` メッセージが表示されます `System.MissingMethodException: 'Method not found: 'OpenQA.Selenium.Remote.DesiredCapabilities OpenQA.Selenium.DriverOptions.GenerateDesiredCapabilities(Boolean)'` 。  
+
+Selenium 4 を使用してこのエラーが発生する場合は、プロジェクトから削除し、名前空間の公式クラスとクラスを `Microsoft.Edge.SeleniumTools` `EdgeOptions` `EdgeDriver` 使用 `OpenQA.Selenium.Edge` してください。
+
+### <a name="using-selenium-3"></a>Selenium 3 の使用  
 
 既に [Selenium 3][|::ref1::|] を使用している場合は、既存のブラウザーのテストがあり、Selenium のバージョンを変更せずに Microsoft Edge \ (Chromium \) のカバレッジを追加することを希望するかもしれません。  [Selenium 3][|::ref2::|] を使用して Microsoft Edge  \ (EdgeHTML \) と Microsoft Edge \ (Chromium \) の自動テストを作成するには更新されたドライバーを使用するために、[Microsoft Edge 用 Selenium ツール][GithubMicrosoftEdgeSeleniumTools] のパッケージをインストールします。  ツールに含まれている`EdgeDriver` と `EdgeDriverService` のクラスは、Selenium 4 の組み込みの対応物と完全互な換性があります。  
 
@@ -117,7 +125,7 @@ npm install @microsoft/edge-selenium-tools selenium-webdriver
 
 WebDriver を使用してブラウザーを自動化するには、まず優先 WebDriver 言語バインドを使用して WebDriver セッションを開始する必要があります。  セッションは、WebDriver コマンドを使用して制御されるブラウザーの 1 つの実行中のインスタンスです。  WebDriver セッションを開始して、新しいブラウザー インスタンスを起動します。  WebDriver セッションを閉じるまで、起動されたブラウザー インスタンスは開いたままです。  
 
-次のコンテンツでは、Selenium を使用して WebDriver セッションを開始し、\(Microsoft Edge\) Chromiumします。  この例は、Selenium 3 または 4 のいずれかを使用して実行できます。  Selenium 3 で使用するには、[Microsoft Edge用 Selenium Tools][GithubMicrosoftEdgeSeleniumTools] をインストールする必要があります。  
+次のコンテンツでは、Selenium を使用して WebDriver セッションを開始し、\(Microsoft Edge\) Chromiumします。  この例は、Selenium 3 または 4 を使用して実行できます。  Selenium 3 で使用するには、[Microsoft Edge用 Selenium Tools][GithubMicrosoftEdgeSeleniumTools] をインストールする必要があります。  
 
 ### <a name="automate-microsoft-edge-chromium"></a>自動Microsoft Edge (Chromium)  
 
@@ -149,7 +157,7 @@ driver = Edge(options = options)
 
 <a id="drive-microsoft-edge-chromium-code"></a>  
 
-この `EdgeDriver` クラスは Microsoft Edge\(Chromium\) のみをサポートし、\(EdgeHTML\) のMicrosoft Edgeサポートされていません。  基本的な使い方については、 を指定せずに `EdgeDriver` 作成できます `EdgeOptions` 。  
+この `EdgeDriver` クラスは Microsoft Edge\(Chromium\) のみをサポートし、\(EdgeHTML\) のMicrosoft Edgeサポートされていません。  基本的な使用方法については、指定せずに作成 `EdgeDriver` できます `EdgeOptions` 。  
 
 ```java
 EdgeDriver driver = new EdgeDriver();
@@ -173,7 +181,7 @@ let driver = edge.Driver.createSession(options);
 
 ### <a name="choose-specific-browser-binaries-chromium-only"></a>特定のブラウザー バイナリを選択する (Chromiumのみ)  
 
-\(Chromium\) バイナリの特定のMicrosoft Edge WebDriver セッションを開始できます。  たとえば、Microsoft Edge ベータ版などの [Microsoft Edge preview チャネル][MicrosoftedgeinsiderDownload] を使用してテストを実行できます。  
+\(Chromium\) バイナリの特定のMicrosoft Edge WebDriver セッションを開始できます。  たとえば、テストを実行するには、Microsoft Edge[などの][MicrosoftedgeinsiderDownload]プレビュー チャネルをMicrosoft Edge Beta。  
 
 #### [<a name="c"></a>C#](#tab/c-sharp/)  
 
@@ -275,7 +283,7 @@ EdgeDriver driver = new EdgeDriver(service, options);
 
 <a id="customize-microsoft-edge-driver-services-code"></a>  
 
-JavaScript を使用する場合は、クラスを使用して a `Service` を作成して構成 `ServiceBuilder` します。  任意で、`Service` オブジェクトを`Driver` オブジェクトに渡すことができます。それによって、サービスが開始\(および 停止\) します。  
+JavaScript を使用する場合は、クラスを使用して a `Service` を作成して構成 `ServiceBuilder` します。  必要に応じて、オブジェクトを `Service` オブジェクトに渡して、 `Driver` サービスを \(and stops\) で開始できます。  
 を構成するには `Service` 、メソッドを使用する前にクラス `ServiceBuilder` で別のメソッドを実行 `build()` します。  次に、`Driver.createSession()` メソッドのパラメーターとして`service` を渡し ます。  
 
 ```javascript
@@ -287,7 +295,7 @@ let driver = edge.Driver.createSession(options, service);
 
 ### <a name="use-chromium-specific-options"></a>Chromium-固有 のオプションを使用する  
 
-プロパティをに設定した場合は、クラスを使用して、他のブラウザーを自動化するときに使用される Chromium 固有のプロパティとメソッドにアクセスChromium `UseChromium` `true` `EdgeOptions` があります。 [][WebdriverCapabilitiesEdgeOptions]  
+プロパティをに設定した場合は、クラスを使用して、他のブラウザーを自動化するときに使用される Chromium 固有のプロパティとメソッドにアクセスChromium `UseChromium` `true` `EdgeOptions` できます。 [][WebdriverCapabilitiesEdgeOptions]  
 
 #### [<a name="c"></a>C#](#tab/c-sharp/)  
 
@@ -339,16 +347,6 @@ options.addArguments("disable-gpu");
 
 ## <a name="other-webdriver-installation-options"></a>その他の WebDriver インストール オプション  
 
-### <a name="chocolatey"></a>Chocolatey  
-
-パッケージ マネージャーとして[Chocolatey][Chocolatey]を使用する場合は、次のコマンドを実行してドライバーをインストールMicrosoft Edgeします。  
-
-```console
-choco install selenium-chromium-edge-driver
-```  
-
-詳細については、「チョコレートの[Selenium Chromium エッジ ドライバー」に移動します][ChocolateyPackagesSeleniumChromiumEdgeDriver]。  
-
 ### <a name="docker"></a>Docker  
 
 Docker を使用[する場合][DockerHub]は、次のコマンドを実行して、Microsoft Edge \(Chromium\) および Microsoft Edge [Driver][MicrosoftDeveloperMicrosoftEdgeToolsWebdriver]がプリインストールされた構成済みのイメージをダウンロードします。  
@@ -380,9 +378,6 @@ Microsoft Edge チームは、WebDriver、Selenium、Microsoft Edge の使用に
 
 [DeployedgeMicrosoftEdgePoliciesDevelopertoolsavailability]: /deployedge/microsoft-edge-policies#developertoolsavailability "DeveloperToolsAvailability-Microsoft Edge-ポリシー |Microsoft ドキュメント"  
 
-[Chocolatey]: https://chocolatey.org "Chocolatey |Chocolatey ソフトウェア"  
-[ChocolateyPackagesSeleniumChromiumEdgeDriver]: https://chocolatey.org/packages/selenium-chromium-edge-driver "Selenium Chromium Edge ドライバー |Chocolatey"  
-
 [DockerHub]: https://hub.docker.com "Docker Hub"  
 [DockerHubMsedgedriver]: https://hub.docker.com/_/microsoft-msedge-msedgedriver?tab=description "msedgedriver |Docker hub"  
 
@@ -403,7 +398,7 @@ Microsoft Edge チームは、WebDriver、Selenium、Microsoft Edge の使用に
 [NugetCLI]:https://www.nuget.org/packages/NuGet.CommandLine/ "NuGet.CommandLine |NuGet ギャラリー"  
 [NugetPackagesMicrosoftEdgeSeleniumtools]: https://www.nuget.org/packages/Microsoft.Edge.SeleniumTools "Microsoft.Edge.SeleniumTools |NuGet ギャラリー"  
 [NugetPackagesSeleniumWebdriver31410]: https://www.nuget.org/packages/Selenium.WebDriver/3.141.0 "Selenium.WebDriver 3.141.0 |NuGet ギャラリー"  
-[NugetPackagesSeleniumWebdriver400alpha07]: https://www.nuget.org/packages/Selenium.WebDriver/4.0.0-alpha07 "Selenium.WebDriver 4.0.0-alpha07 |NuGetギャラリー"  
+[NugetPackagesSeleniumWebdriver400beta02]: https://www.nuget.org/packages/Selenium.WebDriver/4.0.0-beta2 "Selenium.WebDriver 4.0.0-beta2 |NuGetギャラリー"  
 
 [PythonPip]: https://pypi.org/project/pip/ "pip |PyPI"  
 [PythonSeleniumTools]: https://pypi.org/project/msedge-selenium-tools/ "msedge-selenium-tools |PyPI"  
@@ -412,6 +407,7 @@ Microsoft Edge チームは、WebDriver、Selenium、Microsoft Edge の使用に
 [SeleniumHQ]: https://www.selenium.dev "SeleniumHQ"  
 [SeleniumDocumentation]: https://www.selenium.dev/documentation "Selenium Browser Automation Project |Selenium のドキュメント"  
 [SeleniumDownloads]: https://selenium.dev/downloads "ダウンロード |Selenium"  
+[SeleniumInstallingLibraries]: https://www.selenium.dev/documentation/en/selenium_installation/installing_selenium_libraries "Selenium ライブラリのインストール|Selenium"
 
 [SonatypeMavenRepositorySearch]: https://search.maven.org/artifact/com.microsoft.edge/msedge-selenium-tools-java/3.141.0/jar "sonatype Maven Central Repository Search |com.microsoft.edge:msedge-selenium-tools-java"
 

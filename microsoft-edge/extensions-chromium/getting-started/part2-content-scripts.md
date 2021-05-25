@@ -7,12 +7,12 @@ ms.date: 01/07/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: edge-chromium, Web 開発, html, css, javascript, developer, extensions
-ms.openlocfilehash: 48af14c33a368a3449acb88b4dfb875ad5398e7a
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: c5a17cbc55c6ccb42e06369474cd274d70742494
+ms.sourcegitcommit: 31741a0c331816642ceafd20680bd3206c87c7bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11397917"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "11579730"
 ---
 # <a name="create-an-extension-tutorial-part-2"></a>拡張機能のチュートリアルを作成する パート 2  
   
@@ -26,7 +26,7 @@ ms.locfileid: "11397917"
 *   既存のブラウザー タブにコンテンツ ページを含む  
 *   コンテンツ ページでポップアップからのメッセージをリッスンして応答する  
 
-ポップアップ メニューを更新して、静的開始イメージをタイトルと標準の HTML ボタンに置き換える方法について説明します。  このボタンを選択すると、拡張機能に埋め込まれている星の画像がコンテンツ ページに渡されます。  そのイメージは、アクティブなブラウザー タブに挿入されます。詳細については、以下の手順に従います。
+ポップアップ メニューを更新して、静的星の画像をタイトルと標準の HTML ボタンに置き換える方法について説明します。  このボタンを選択すると、拡張機能に埋め込まれている星の画像がコンテンツ ページに渡されます。  そのイメージは、アクティブなブラウザー タブに挿入されます。詳細については、以下の手順に従います。
 
 1.  ポップアップから画像を削除し、ボタンに置き換える  
 
