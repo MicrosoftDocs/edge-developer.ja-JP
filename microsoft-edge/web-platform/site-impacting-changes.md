@@ -3,16 +3,16 @@ description: サイトの互換性に影響を与える可能性がある影響�
 title: Microsoft Edge 向けのサイトの互換性に影響する変更点
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 05/13/2021
+ms.date: 05/27/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge, 互換性, Web プラットフォーム
-ms.openlocfilehash: 810c4e0a3e4c719987fbc374330599a58f055166
-ms.sourcegitcommit: bbbf722067f1d255f59ab384e66798f8b77ef609
+ms.openlocfilehash: 7db00ced1db767d3ec092c33369cbed1845ac65e
+ms.sourcegitcommit: dfc6bc1bad5fc9d38b6eb3bcacf9ebb317b3bdf2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "11574576"
+ms.lasthandoff: 05/28/2021
+ms.locfileid: "11586205"
 ---
 # <a name="site-compatibility-impacting-changes-coming-to-microsoft-edge"></a>Microsoft Edge 向けのサイトの互換性に影響する変更点  
 
@@ -34,7 +34,8 @@ Microsoft Edgeプロジェクトから Web プラットフォームに対する�
 | Adobe Flash の削除 | エッジ v88  |  | この変更は、プロジェクトのChromiumプロジェクトでMicrosoft Edge発生します。  詳細については[、「Adobe Flash Chromiumロードマップ」に移動します][ChromiumFlashRoadmapSupportRemoved]。  | 
 | FTP をオフにし、削除する | エッジ v88  | Edge Beta v87 | Edge Beta v87 では、FTP サポートは既定でオフになっています。In Edge Stable v87 それは有効なままです。  Edge v88 では、FTP サポートは完全に削除されます。  この変更は、プロジェクトのChromiumプロジェクトでMicrosoft Edge発生します。  詳細については、「Chrome プラットフォームの状態エントリ [」に移動します][ChromestatusFeature6246151319715840]。  FTP サポートが必要なサイトがある企業は、IE モードを使用するサイトを構成することで、FTP を引き続 [き使用できます][DeployedgeEdgeIeMode]。  | 
 | 混在コンテンツ イメージの自動アップグレード | エッジ v88  |  | イメージへのセキュリティ保護されていない \(HTTP\) 参照は、HTTPS に自動的にアップグレードされます。イメージが HTTPS 経由で使用できない場合、イメージのダウンロードは失敗します。 この [機能を制御][DeployedgeMicrosoftEdgePoliciesInsecurecontentallowedforurls] するには、グループ ポリシーを使用できます。 この変更は、プロジェクトのChromiumプロジェクトでMicrosoft Edge発生します。 詳細については、「Chrome プラットフォームの状態」 [エントリに移動します][ChromestatusFeature4926989725073408]。  | 
-| サードパーティの Cookie がブロックされている場合、HTTP 認証は許可されません  | Edge v87  |  | Edge v87 から[、BlockThirdPartyCookies][DeployedgeMicrosoftEdgePoliciesBlockthirdpartycookies]ポリシーを使用するか、エッジ 設定 ページを介してサードパーティの要求に対して Cookie がブロックされている場合、HTTP 認証も許可されません。 この変更は、Enterpriseをホストするエンドポイント[][DeployedgeEdgeIeModePoliciesConfigureUsingUseEnterpriseModeIeWebsiteListPolicy]が HTTP 認証を使用する必要がある場合Internet Explorerモードのサイト 一覧のダウンロードに影響を与える可能性があります。  Cookie と HTTP 認証の両方を Enterpriseモード サイト 一覧のダウンロードに使用するには[、CookieAllowedForURLs][DeployedgeMicrosoftEdgePoliciesCookiesallowedforurls]ポリシーに一致する URL パターンを追加します。  |   
+| サードパーティの Cookie がブロックされている場合、HTTP 認証は許可されません  | Edge v87  |  | Edge v87 から、サードパーティの要求に対して Cookie がブロックされている場合[、BlockThirdPartyCookies][DeployedgeMicrosoftEdgePoliciesBlockthirdpartycookies]ポリシーまたはトグルインを使用すると、HTTP 認証も許可されません。 `edge://settings` この変更は、Enterpriseをホストするエンドポイント[][DeployedgeEdgeIeModePoliciesConfigureUsingUseEnterpriseModeIeWebsiteListPolicy]が HTTP 認証を使用する必要がある場合Internet Explorerモードのサイト 一覧のダウンロードに影響を与える可能性があります。  Cookie と HTTP 認証の両方を Enterpriseモード サイト 一覧のダウンロードに使用するには[、CookieAllowedForURLs][DeployedgeMicrosoftEdgePoliciesCookiesallowedforurls]ポリシーに一致する URL パターンを追加します。  |
+| TLS での 3DES の削除  | Edge v93  |  | Edge v93 から、暗号化スイートTLS_RSA_WITH_3DES_EDE_CBC_SHAサポートが削除されます。 この変更は、プロジェクトのChromiumプロジェクトでMicrosoft Edge発生します。 詳細については、「Chrome プラットフォームの状態」 [エントリに移動します][ChromestatusFeature6678134168485888]。 さらに、Edge v93 では、古いサーバーとの互換性を維持する必要があるシナリオをサポートするために互換性ポリシーを使用できます。 この互換性ポリシーは廃止され、Edge v95 での動作が停止します。 その前に、影響を受け取ったサーバーを更新してください。 |
 
 ##### <a name="release-comments"></a>コメントのリリース  
 
@@ -70,6 +71,7 @@ Microsoft Edgeプロジェクトから Web プラットフォームに対する�
 [ChromestatusFeature5088147346030592]: https://chromestatus.com/feature/5088147346030592 "Cookie の既定値は SameSite=Lax |Chrome プラットフォームの状態"  
 [ChromestatusFeature6246151319715840]: https://chromestatus.com/feature/6246151319715840 "FTP サポートの廃止|Chrome プラットフォームの状態"  
 [ChromestatusFeature6251880185331712]: https://chromestatus.com/feature/6251880185331712 "参照元ポリシー: 既定で strict-origin-when-cross-origin |Chrome プラットフォームの状態"  
+[ChromestatusFeature6678134168485888]: https://chromestatus.com/feature/6678134168485888 "TLS サーバーで 3DES を削除|Chrome プラットフォームの状態"
 
 [ChromiumFlashRoadmapSupportRemoved]: https://www.chromium.org/flash-roadmap#TOC-Flash-Support-Removed-from-Chromium-Target:-Chrome-88---Jan-2021- "Flash のサポート Chromium (ターゲット: Chrome 88+ - 2021 年 1 月) - Flash ロードマップ |Chromiumプロジェクト"  
 
