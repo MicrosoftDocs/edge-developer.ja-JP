@@ -21,7 +21,7 @@ Capabilities は、`EdgeDriver` セッションをカスタマイズして構成
 
 機能は、JSON マップとして WebDriver セッションに渡されます。  WebDriver 言語バインドは、通常、タイプ セーフな便利なメソッドを提供します。そのため、JSON マップを自分で構成する必要はありません。  WebDriver 言語のバインドによって、機能を構成するために異なるメカニズムが使用されます。  機能を構成する方法の詳細 [については][WebdriverIndexChooseWebdriverLanguageBinding] 、優先言語バインドのドキュメントに移動します。  [Selenium は][SeleniumMain] 、クラスを通じて機能を構成 `EdgeOptions` します。  
 
-## EdgeOptions クラスの使用  
+##  <a name="using-the-edgeoptions-class"></a>EdgeOptions クラスの使用  
 
 Microsoft Edge 固有の機能を設定する便利なメソッドを提供するインスタンス `EdgeOptions` を作成します。  オブジェクトを構成した `EdgeOptions` 後、コンストラクター `EdgeOptions` に渡 `EdgeDriver` します。  
 
@@ -38,7 +38,7 @@ var driver = new EdgeDriver(options);
 options.AddAdditionalCapability("wdpAddress", "remotehost:50080");
 ```  
 
-## 認識される Capabilities  
+##  <a name="recognized-capabilities"></a>認識される Capabilities  
 
 `EdgeDriver` が受け入れる標準の Capabilities については、「[Selenium ドキュメント][SharedCapabilitiesSeleniumDocumentation]」と「[W3C WebDriver 標準][CapabilitiesW3cWebdriver]」を参照してください。  この記事では、Microsoft Edge 固有の Capabilities のみを示します。  
 
@@ -76,7 +76,7 @@ Microsoft Edge 固有の Capabilities は、ほとんどが `EdgeOptions` オブ
 | enablePage | ブール値 | true | ページ ドメインからイベントを収集します (または収集しません)。 |  
 | traceCategories | 文字列 | (空) | トレース イベントを収集する Microsoft Edge トレース カテゴリのコンマ区切り文字列。  未指定または空の文字列は、トレースを無効にします。 |  
 
-## 返される機能  
+##  <a name="returned-capabilities"></a>返される機能  
 
 次の一覧には、新しいセッションを作成するときに `EdgeDriver` によって返される Microsoft Edge 固有のすべての Capabilities が含まれています。  
 

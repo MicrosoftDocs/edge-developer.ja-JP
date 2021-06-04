@@ -16,7 +16,7 @@ ms.locfileid: "11343088"
 ---
 # 開発者向けアプリ開発者契約の追加Microsoft Edgeユーザー向け  
 
-## 関連資料 G: 拡張機能に関するMicrosoft Edge条件  
+##  <a name="exhibit-g:-terms-and-conditions-for-microsoft-edge-extensions"></a>関連資料 G: 拡張機能に関するMicrosoft Edge条件  
 
 Microsoft Edge Extensions \(the "Extensions Addendum"\) に関するこれらの利用規約は、App Developer Agreement の利用規約の補足であり、現在のバージョンはで見 [https://go.microsoft.com/fwlink/p/?LinkID=221922][ExtensionsMicrosoftEdgeAddonsCatalogDeveloperPolicies] つけることができます。  この Addendum は、Microsoft Edge 拡張機能 \(各、"Extension"\) を、Microsoft Edge アドオンから送信または利用可能にしている場合に適用されます。  この Extensions Addendum によって明示的に変更された場合を除き、ここに参照によって組み込まれるアプリ開発者契約のすべての条項は、Microsoft Edge Extensions の提供と配布に適用されます。  この Addendum によって明示的に変更された場合を除き、アプリ開発者契約の下の "アプリケーション" または "App" に適用される利用規約は、このアドオンで定義されている拡張機能に適用され、アプリ開発者契約に基く "Store" または "Microsoft Store" へのすべての参照は、このアドオンで定義されている Microsoft Edge アドオンに適用されます。  
 

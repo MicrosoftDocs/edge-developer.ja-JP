@@ -37,7 +37,7 @@ ms.locfileid: "11327527"
   Microsoft Edge \(Chromium \) 拡張機能  
 :::image-end:::  
 
-## 基本的なガイダンス  
+##  <a name="basic-guidance"></a>基本的なガイダンス  
 
 拡張機能の構築のための最も一般的なブラウザーの一部には、Safari、Firefox、Chrome、Opera、Brave、Microsoft Edge などがあります。  拡張機能の開発に関するチュートリアルとドキュメントの調査を始めるのに最適な場所は、ブラウザー組織によってホストされているサイトです。  次の表は最終的なものではなく、開始点として使用できます。  
 
@@ -53,7 +53,7 @@ ms.locfileid: "11327527"
 > [!IMPORTANT]
 > サイトの多くのチュートリアルでは、開発しているブラウザーと一致しない可能性のあるブラウザー固有の API を使用しています。  ほとんどの場合、Chromium 拡張機能は、異なる Chromium ブラウザーで動作しており、API は期待どおりに動作します。  一般的ではない一部の API は、厳密にはブラウザー固有のものである場合があります。  チュートリアルへのリンクについては、[関連項目](#see-also) に移動します。  
 
-## Chromium を使用する理由  
+##  <a name="why-chromium"></a>Chromium を使用する理由  
 
 拡張機能を拡張ストアで公開することを目標としている場合は、それぞれ別のブラウザー環境でターゲットを指定して実行できるようにするために、複数のバージョンを変更する必要があります。  たとえば、[Safari extensions][AppleDeveloperSafariservicesAppExtensions] は、Web とネイティブ コードの両方を活用して、もう一方のネイティブ アプリケーションとの通信に使用できます。  前の表の最後の 4 つのブラウザーは同じコード パッケージを使用し、並列バージョンを維持するための要件を最小限に抑えます。  これは、ブラウザーが [Chromium のオープンソース プロジェクト][|::ref1::|Home]に基づいています。  
 
@@ -61,7 +61,7 @@ Chromium の拡張機能を作成して、最小量のコードを記述しま�
 
 次のコンテンツでは、Chromium の拡張機能に焦点を当てています。  
 
-## ブラウザーの互換性と拡張テスト  
+##  <a name="browser-compatibility-and-extension-testing"></a>ブラウザーの互換性と拡張テスト  
 
 場合によっては、Chromium ブラウザーの間に API パリティが存在しないことがあります。  たとえば、ID と API 支払いには違いがあります。  拡張機能が顧客の期待を満たするようにするには、次の公式ブラウザー ドキュメントを通して API の状態を確認します。  
 
@@ -73,7 +73,7 @@ Chromium の拡張機能を作成して、最小量のコードを記述しま�
 
 ブラウザー ストアに提出する前に、さまざまな環境で拡張機能をテストするには、開発中にブラウザーにサイドロードします。  
 
-## 拡張機能をブラウザー ストアに公開する  
+##  <a name="publish-your-extension-to-browser-stores"></a>拡張機能をブラウザー ストアに公開する  
 
 次のブラウザー ストアで、ブラウザーの拡張機能の提出、検索を行うことができます。  
 
@@ -86,13 +86,13 @@ Chromium の拡張機能を作成して、最小量のコードを記述しま�
 
 ユーザーが異なるブラウザーに拡張機能をインストールすることが必要な場合があります。 このシナリオでは、あるブラウザーから別のブラウザーに既存の Chromium 拡張機能を移行できます。  
 
-### 既存の拡張機能を Microsoft Edge に移行する  
+###  <a name="migrate-an-existing-extension-to-microsoft-edge"></a>既存の拡張機能を Microsoft Edge に移行する  
 
 既に別の Chromium ブラウザー用の拡張機能を開発している場合は、Microsoft Edge アドオン ストアに提出できます。 拡張機能を書き換える必要はなく、Microsoft Edge で動作することを確認する必要があります。  既存の Chromium 拡張機能を他の Chromium ブラウザーに移行する場合は、ターゲット ブラウザーで同じ API または代替手段を使用できます。  
 
 Chrome 拡張機能を Microsoft Edge に移植する方法の詳細については、[Microsoft Edge (Chromium) の Chrome 拡張機能移植][ExtensionsChromiumDeveloperGuidePortChrome]」を参照してください。 ターゲット ブラウザーに拡張機能を移植したら、次の手順で公開することができます。  
 
-### Microsoft Edge のアドオン web サイトに公開  
+###  <a name="publish-to-the-microsoft-edge-add-ons-website"></a>Microsoft Edge のアドオン web サイトに公開  
 
 Microsoft Edge への拡張機能の公開を開始するには、MSA メールアカウントを持つ [開発者アカウントに登録][MicrosoftDeveloperRegistration] して、拡張機能のリストをストアに提出する必要があります。  MSAのメールアカウントには、`@outlook.com`、`@live.com` などが含まれます。  登録するメールアドレスを選択する場合は、組織内の他のユーザーと拡張機能の所有権を移転または共有する必要があるかどうかを検討してください。  登録が完了したら、ストアに新しい拡張機能の申請を作成することができます。  
 
@@ -108,7 +108,7 @@ Microsoft Edge への拡張機能の公開を開始するには、MSA メール�
 
 拡張機能を正常に提出した後、拡張機能にはレビュー プロセスが適用され、認定プロセスに合格または不合格になります。  所有者には、結果が通知され、必要に応じて次の手順が示されます。  拡張機能の更新プログラムをストアに提出すると、新しいレビュー プロセスが開始されます。  
 
-## 関連項目  
+##  <a name="see-also"></a>関連項目  
 
 *   [Google Chrome 拡張機能を移植する][ExtensionworkshopPorting]  
 *   [Safari アプリの拡張機能を構築する][AppleDeveloperSafariservicesAppExtensionsBuilding]  

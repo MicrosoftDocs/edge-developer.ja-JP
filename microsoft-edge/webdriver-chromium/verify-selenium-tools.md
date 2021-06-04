@@ -23,7 +23,7 @@ Microsoft [Edge Java][MavernSearchArtifactComMicrosoftEdgeMsedgeSeleniumToolsJav
 
 Microsoft Edge Developer Tools チームが提供するパッケージの署名を確認するには、次の [キーを使用します][TwitterEdgeDevTools]。  
 
-## Microsoft Edge の Selenium Tools を確認するための公開キー  
+##  <a name="public-key-for-verifying-selenium-tools-for-microsoft-edge"></a>Microsoft Edge の Selenium Tools を確認するための公開キー  
 
 *   **公開キー ID**: Microsoft Edge Developer Tools チーム [EdgeDevToolsOSS@microsoft.com](mailto:edgedevtoolsoss@microsoft.com)  
 *   **公開キーフィンガープリント**: `46EE EB3F 4028 B5CE A4E8  E6F5 A6DC D211 6D3A 3A7A`  

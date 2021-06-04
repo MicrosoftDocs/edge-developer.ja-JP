@@ -25,7 +25,7 @@ Web サイトや他のテクノロジを組み込むデザインは、すべて�
 
 設計、構築、およびテストのアクセス可能な Web サイトの詳細については、ベスト プラクティス[][AccessibilityBuild]、コード[][AccessibilityTest]サンプル、その他のリソースをMicrosoft Edge。 [][AccessibilityDesign]  
 
-## ユーザー補助Microsoft Edge  
+##  <a name="accessibility-in-microsoft-edge"></a>ユーザー補助Microsoft Edge  
 
 このMicrosoft Edge、モダン[UI オートメーション API][WindowsWin32AutoEntryui] \(UIA API\) を導入しました。  UIA への変更は、ブラウザーアクセシビリティへの大きな投資であり、Windows 10 で支援技術に依存しているユーザーにとって、より包括的な Web エクスペリエンスの基盤を築きます。  また、ユーザーは、エンジンの常緑Chromiumします。  
 
@@ -39,7 +39,7 @@ Web サイトや他のテクノロジを組み込むデザインは、すべて�
 
 ユーザーがサポートする新しい HTML5 機能の[Microsoft Edge、HTML5Accessibility に移動します][HTML5Accessibility]。  
 
-## リソース  
+##  <a name="resources"></a>リソース  
 
 #### Microsoft Windows UI オートメーション ブログ  
 

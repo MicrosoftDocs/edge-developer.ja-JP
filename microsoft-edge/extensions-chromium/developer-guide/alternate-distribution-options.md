@@ -26,7 +26,7 @@ ms.locfileid: "11343151"
 *   Windows レジストリを使用します (Windows のみ)。  
 *   基本設定 JSON ファイル (macOS と Linux) を使用します。  
     
-## 始める前に  
+##  <a name="before-you-begin"></a>始める前に  
 
 Microsoft Edge アドオン ストアで拡張機能を発行するか、ファイルをパッケージ化し、コンピューターに正常にインストール `.crx` されたことを確認します。  ファイルをインストールする `.crx` 場合は、その URL で拡張子に移動 `update_URL` できます。  
 
@@ -39,7 +39,7 @@ Microsoft Edge アドオン ストアで拡張機能を発行するか、ファ�
 > [!NOTE] 
 > 次の例では、 `1.0` バージョンと ID `aaaaaaaaaabbbbbbbbbbcccccccccc` を使用します。  
 
-## Windows レジストリを使用する (Windows のみ)  
+##  <a name="use-the-windows-registry-(windows-only)"></a>Windows レジストリを使用する (Windows のみ)  
 
 Windows レジストリを使用して拡張機能を配布するには、次の手順を実行します。
 
@@ -60,7 +60,7 @@ Windows レジストリを使用して拡張機能を配布するには、次の
   
 1.  に移動して、拡張機能が Microsoft Edge に表示されるのを確認します `edge://extensions` 。  
 
-## 基本設定 JSON ファイルを使用する (macOS と Linux)  
+##  <a name="use-a-preferences-json-file-(macos-and-linux)"></a>基本設定 JSON ファイルを使用する (macOS と Linux)  
 
 基本設定 JSON ファイルを使用して拡張機能を配布するには、次の手順を実行します。
 
@@ -120,7 +120,7 @@ Windows レジストリを使用して拡張機能を配布するには、次の
 
 1.  に移動して、拡張機能が Microsoft Edge にインストールされていることを確認します `edge://extensions` 。  
 
-## 外部にインストールされている拡張機能の更新とアンインストール
+##  <a name="update-and-uninstall-externally-installed-extensions"></a>外部にインストールされている拡張機能の更新とアンインストール
 
 Microsoft Edge は、ブラウザーが起動する度にレジストリ内のメタデータ エントリをスキャンし、外部にインストールされている拡張機能に変更を加えます。  
 

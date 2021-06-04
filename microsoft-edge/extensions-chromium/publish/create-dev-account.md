@@ -21,7 +21,7 @@ ms.locfileid: "11343060"
 > [!IMPORTANT]
 > Microsoft Edge プログラムに拡張機能を提出する際には、登録料はかかりません。  
 
-## 始める前に  
+##  <a name="before-you-begin"></a>始める前に  
 
 アカウントがない場合、またはパートナー センターに既存の商用アカウントがある場合は、Microsoft Edge プログラムに登録する新しい Microsoft アカウント [(MSA)][WindowsCommunityEverythingAboutMicrosoftAccounts] を作成します。  Microsoft アカウント \(Outlook/live/Hotmail\) を作成するには、次のアクションを実行します。  
 
@@ -33,7 +33,7 @@ ms.locfileid: "11343060"
 > [!NOTE]
 > 現在、Microsoft Edge 拡張機能は、仕事用アカウントまたは学校アカウントへのサインアップをサポートしません。  今後、Microsoft Edge 拡張機能チームは、拡張管理用の AZURE AD MSA アカウントへのリンクをサポートする予定です。  
 
-## パートナー センターの Microsoft Edge プログラムに登録する  
+##  <a name="enroll-in-the-microsoft-edge-program-on-partner-center"></a>パートナー センターの Microsoft Edge プログラムに登録する  
 
 1.  開発者ページに移動 [し、[ダッシュボードに][MicrosoftPartnerCenter] 移動 **] を選択します**。  
 1.  Microsoft アカウントをお持ちの場合は、今すぐサインインしてください。  設定されていない場合は、新しい Microsoft アカウントを作成します。  開発者アカウントへのサインインに使用するのと同じ Microsoft アカウントを使用します。  サインインすると、登録フォームが表示されます。 次の表に、登録フォームのフィールドについて説明します。  
@@ -102,7 +102,7 @@ ms.locfileid: "11343060"
 1.  登録フォームを提出する前に [、Microsoft Edge Developer Agreement][MicrosoftAppDeveloperAgreement]の利用規約を読んで同意してください。  
 1.  登録を完了するには、[完了] を **選択します**。  
     
-## 次の手順  
+##  <a name="next-steps"></a>次の手順  
 
 確認の状態を表示するには、[パートナー センター] の [アカウントの> **に移動します**。  検証プロセスが完了するのを待っている間、引き続き申請のビルド、テスト、準備を行います。  
 

@@ -29,7 +29,7 @@ ms.locfileid: "11230818"
 
 Web 上の多くの一般的なアクセシビリティの問題は、コーディングの優れた方法で解決できます。  [Web コンテンツ アクセシビリティ ガイドライン (WCAG) 2.0](https://www.w3.org/TR/WCAG20)のドキュメントには、よりアクセスしやすい動的 Web アプリケーションの設計に役立つ手法とベスト プラクティスが用意されています。  アクセス可能な Web サイトの構築の詳細については、「Building [Accessible Websites」を参照してください](./build/index.md) 。
 
-## リソース  
+##  <a name="resources"></a>リソース  
 
 #### [組み込み用の設計](https://w3.org/WAI/users/Overview.html)  
 

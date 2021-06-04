@@ -34,7 +34,7 @@ Chrome 拡張機能を移植するには、次の手順を実行します。
     > [!NOTE]
     > 拡張機能が使用しているネイティブ アプリとメッセージを交換する場合は、ネイティブ メッセージング ホスト マニフェスト ファイルに設定 `chrome.runtime.connectNative` `allowed_origins` `extension://[Microsoft-Catalog-extensionID]` してください。  この設定により、アプリは拡張機能を識別できます。  
     
-## 次の手順  
+##  <a name="next-steps"></a>次の手順  
 
 拡張機能パッケージをアドイン ストアで発行する準備がMicrosoft Edge、開発者アカウントを作成し、拡張機能[][ExtensionsPublishCreateDevAccount][を発行します][ExtensionsPublishPublishExtension]。  
 

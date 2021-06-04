@@ -23,7 +23,7 @@ Playwright は、既定 [でヘッドレス ブラウザーを][WikiHeadlessBrow
 
 既定では、Playwright をインストールすると、インストーラーは[][ChromiumHome]Chromium [Firefox、][FirefoxMain][および WebKit をダウンロードします][|::ref3::|Main]。  Microsoft Edge \(Chromium\) もインストールされている場合、Playwright は web サイトまたはアプリをテストするために 1 行のコード変更が必要Microsoft Edge。  \(Microsoft Edge\Chromium) をダウンロードするには、[ダウンロード] Microsoft Edge に[移動します][MicrosoftEdgeDownload]。  
 
-## Playwright のインストール  
+##  <a name="installing-playwright--"></a>Playwright のインストール  
 
 [Playwright をインストールして][|::ref4::|Main]、次のコマンドを使用して Web サイトまたはアプリをテストします。  
 
@@ -31,7 +31,7 @@ Playwright は、既定 [でヘッドレス ブラウザーを][WikiHeadlessBrow
 npm i playwright
 ```  
 
-## Playwright Microsoft Edgeを起動する  
+##  <a name="launch-microsoft-edge-with-playwright--"></a>Playwright Microsoft Edgeを起動する  
 
 > [!NOTE]
 > [Playwright には][|::ref5::|Main] 、Node.jsバージョン 10.17 以上が必要です。 コマンド `node -v` ラインから実行して、互換性のあるバージョンのファイルを使用Node.js。  WebKit、Firefox、WebKit Chromiumのブラウザー バイナリは、Windows macOS、Linux 全体で動作します。 詳細については [、「Playwright System Requirements」に移動します][PlaywrightSystemRequirements]。  
@@ -94,7 +94,7 @@ Playwright は、Microsoft Edgeを起動し、ページに移動 `https://www.mi
 
 Playwright の詳細については [、Playwright Web サイトに移動します][|::ref6::|Main]。  詳細は[、「Playwright repo on the playwright repo」][PlaywrightRepo]をGitHub。  Playwright で Web サイトまたはアプリの自動化とテストに関するフィードバックを共有するには、 [問題をファイルします][PlaywrightRepoNewIssue]。  
 
-## Microsoft Edge DevTools チームと連絡を取る  
+##  <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームと連絡を取る  
 
 [!INCLUDE [contact DevTools team note](../devtools-guide-chromium/includes/contact-devtools-team-note.md)]  
 

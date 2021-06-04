@@ -18,12 +18,12 @@ ms.locfileid: "11343170"
 
 提出された拡張機能を更新したり、公開された拡張機能の一覧をMicrosoft Edgeアドオン ストアからいつでも削除できます。  
 
-## アドオン ストアの拡張機能Microsoft Edge更新する  
+##  <a name="update-your-extension-on-the-microsoft-edge-add-ons-store"></a>アドオン ストアの拡張機能Microsoft Edge更新する  
 
 > [!NOTE]
 > 拡張機能に対する更新プログラムの認定プロセスの期間には、数時間から数日かかる場合があります。  
 
-### アドイン ストアの既存の拡張機能Microsoft Edge更新する  
+###  <a name="update-an-existing-extension-in-the-microsoft-edge-add-ons-store"></a>アドイン ストアの既存の拡張機能Microsoft Edge更新する  
 
 ストアで拡張機能を更新するには、次の手順を実行します。  
 
@@ -32,7 +32,7 @@ ms.locfileid: "11343170"
 1.  変更を行った後、[発行の保存]**を**  >  **** 選択して拡張機能の一覧を更新し、認定プロセスを開始します。  
 1.  列が `Status` 表示された `In the store` 後、拡張機能の更新プログラムは、Microsoft Edgeストアで使用できます。  
     
-### 認定手順中に拡張機能を更新する  
+###  <a name="update-your-extension-during-the-certification-step"></a>認定手順中に拡張機能を更新する  
 
 拡張機能がまだ認定段階にある間、および拡張機能が Microsoft Edgeアドオン ストアに公開される前に、更新することができます。 拡張機能が認定プロセスに失敗した場合は、拡張機能を更新する必要がある場合があります。    
 
@@ -48,7 +48,7 @@ ms.locfileid: "11343170"
 > [!IMPORTANT]
 > プロセスは、現在の申請を停止し、Microsoft Edge拡張機能認定パイプラインから削除し、新しいレビューは最新の申請から始まります。  
 
-### 認定に失敗した拡張機能を更新する  
+###  <a name="update-your-extension-after-it-failed-the-certification"></a>認定に失敗した拡張機能を更新する  
 
 拡張機能が認定プロセスに失敗した後、拡張機能を更新し、フィードバックを組み込んだ拡張機能を再提出する必要があります。  
 
@@ -58,7 +58,7 @@ ms.locfileid: "11343170"
 1.  認定プロセスから受け取ったフィードバックを組み込んだ拡張機能パッケージまたはメタデータを更新します。  拡張機能パッケージを更新する場合は、マニフェスト ファイルのバージョンを増やしてください。  
 1.  変更後、[発行の保存]**を**  >  **選択します**。  
     
-## アドオン ストアから拡張機能Microsoft Edge削除する  
+##  <a name="remove-extensions-from-the-microsoft-edge-add-ons-store"></a>アドオン ストアから拡張機能Microsoft Edge削除する  
 
 アドオン ストアから拡張機能をMicrosoft Edgeするには、次の手順を実行します。  
 

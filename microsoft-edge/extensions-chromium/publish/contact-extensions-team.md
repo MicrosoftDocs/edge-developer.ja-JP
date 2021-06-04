@@ -16,14 +16,14 @@ ms.locfileid: "11343172"
 ---
 # Microsoft Edge 拡張機能のサポートに問い合わせ  
 
-## 問題に関するヘルプを要求するか、フィードバックを送信する  
+##  <a name="request-help-for-any-issues-or-submit-feedback"></a>問題に関するヘルプを要求するか、フィードバックを送信する  
 
 1.  パートナー センターを使用して拡張機能を提出し、そのレビューまたは認定の状態に関する質問がある場合は[][MicrosoftSupportSupportrequestformE7a381be9c9aFafbEd76262bc93fd9e4]、[新しいサポート要求] に移動し、フォームに入力します。  
 1.  拡張機能が期待通り Microsoft Edge で動作しない場合、または拡張機能の開発方法に関する質問がある場合は [、Microsoft Edge][ExtensionsDeveloperGuideApiSupport] 拡張機能のサポートされている API と Microsoft [Edge][ExtensionsDeveloperGuidePortChromeExtension]のポート クロム拡張機能に移動します。  その他の質問については、メールをメール [で送信][MailtoExtDevSupportMicrosoft]ext_dev_support@microsoft.com。  
 1.  拡張機能をパートナー センターに提出する際に問題が発生した場合は、[拡張機能の発行] [に移動します][ExtensionsPublishPublishExtension]。  その他の質問がある場合や、発行エクスペリエンスに関するフィードバックを送信する場合は、メールをメールで送信[ext_dev_support@microsoft.com。][MailtoExtDevSupportMicrosoft]  
 1.  Microsoft Edge アドオン ストアのコレクションで拡張機能を機能するには、[要求の送信] に移動して [、Microsoft Edge][OfficeFormsPagesResponsepageAspxV4j5cvggr0grqy180bhbrw01uwybfaxnna1zkp3x2vun0ibsu1ymeu3vfy0vurrodewsjgwu00yry4u] アドオンのホーム ページのコレクションに拡張機能を追加し、フォームに入力します。   
     
-## 著作権または商標侵害を報告する  
+##  <a name="report-copyright-or-trademark-infringement"></a>著作権または商標侵害を報告する  
 
 Microsoft Edge アドオン ストアのアイテムが著作権または商標に違反していると思う場合は、[侵害に[][MicrosoftInfoMarketplaceHtml]関する通知] に移動し、フォームに入力します。  Microsoft Edge 拡張機能チームがレポートを確認し、必要なアクションを実行します。  
 

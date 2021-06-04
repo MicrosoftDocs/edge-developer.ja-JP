@@ -18,7 +18,7 @@ ms.locfileid: "11230692"
 
 [Visual Studio Code][VisualStudioCodeDocs]軽量で強力なソース コード エディターです。  [Visual Studio Code、Linux、][VisualStudioCodeDocs]および macOS でWindows使用できます。  JavaScript、TypeScript、および Node.jsの組み込みサポートが含まれるので、カスタマイズする前に Web 開発者に最適なツールです。  まだ使用していない場合は[、次の][VisualstudioCode]Visual Studio Code。  
 
-## 拡張機能  
+##  <a name="extensions"></a>拡張機能  
 
 <!--todo: We want to put something like the tiles for extensions Visual Studio Code uses on this page https://code.visualstudio.com/Docs#top-extensions but I don't think this is a markdown page.  I think it's a web page.  I couldn't find anything in https://github.com/Microsoft/vscode-docs that looks like this page. In the meantime, here's what I've come up with: -->  
 
@@ -61,7 +61,7 @@ Marketplace で特定の拡張機能を検索し、[インストール] を **�
    **アクション内Microsoft Edge Visual Studio Code**デバッガー  
 :::image-end:::  
 
-## Microsoft EdgeツールのVisual Studio Code
+##  <a name="accessibility-in-microsoft-edge"></a>Microsoft EdgeツールのVisual Studio Code
 
 拡張機能Microsoft Edge[ツールVisual Studio Code Visual Studio Code、Microsoft Edge][VisualstudioMarketplaceMicrosoftEdgeToolsVisualStudioCode]ブラウザーの Elements ツールを使用Visual Studio Code。 ****  次のアクションに使用します。  
 
@@ -76,7 +76,7 @@ Marketplace で特定の拡張機能を検索し、[インストール] を **�
    **Microsoft Edge内線Visual Studio Code Visual Studio Code**ツール  
 :::image-end:::  
 
-## Webhint  
+##  <a name="webhint--"></a>webhint  
       
 [Webhint (][WebhintMain]カスタマイズ可能なリント ツール) を使用して、サイトの次の機能を改善します。  
 
