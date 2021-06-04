@@ -151,13 +151,13 @@ WebView2 コントロールを使用してアプリをビルドしてテスト�
 
 ## <a name="supported-platforms"></a>サポートされているプラットフォーム  
 
-一般提供 \ (GA\) またはプレビュー版は、次のプログラミング環境で利用できます。  
+一般提供 \(GA\) またはプレビュー版は、次のプログラミング環境で利用できます。  
 
-*   Win32 C/c + + \ (GA \)  
+*   Win32 C/c + + \(GA \)  
 *   .NET Framework 4.5 以降  
 *   .NET Core 3.1 以降  
 *   .NET 5  
-*   [WinUI 3.0][UwpToolkitsWinui3] \ (プレビュー \)  
+*   [WinUI 3.0][UwpToolkitsWinui3] \(プレビュー \)  
     
 WebView2 アプリは、次のバージョンのアプリで実行Windows。  
 

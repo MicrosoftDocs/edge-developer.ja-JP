@@ -222,7 +222,7 @@ Chromium の問題: [#1100253][CR1100253]
 
 <!--todo: this figure need to be updated  -->  
 
-:::image type="complex" source="../../media/2020/08/issue-console-msg.msft.png" alt-text=""コンソール内の問題" メッセージ" lightbox="../../media/2020/08/issue-console-msg.msft.png":::
+:::image type="complex" source="../../media/2020/08/issue-console-msg.msft.png" alt-text="コンソール内の問題 メッセージ" lightbox="../../media/2020/08/issue-console-msg.msft.png":::
    "コンソール内の問題" メッセージ  
 :::image-end:::  
 

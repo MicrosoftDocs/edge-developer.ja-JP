@@ -12,7 +12,7 @@ ms.lasthandoff: 04/09/2020
 ms.locfileid: "10569716"
 ---
 > [!NOTE]
-> 新しい Microsoft Edge は Chromium を使って構築され、バージョン75から始まります。  詳細については、[新しい Microsoft edge をダウンロード][MicrosoftNewEdge]して、新しい[microsoft Edge \ (Chromium) 開発者ツール][DevtoolsGuideChromium]を試してください。  
+> 新しい Microsoft Edge は Chromium を使って構築され、バージョン75から始まります。  詳細については、[新しい Microsoft edge をダウンロード][MicrosoftNewEdge]して、新しい[microsoft Edge \(Chromium) 開発者ツール][DevtoolsGuideChromium]を試してください。  
 
 <!-- image links -->  
 

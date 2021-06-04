@@ -34,7 +34,7 @@ ms.locfileid: "11327527"
 ウィンドウやタブなど、ブラウザーの一部を直接操作するには、API リクエストを送信し、多くの場合、名前でブラウザーを参照する必要があります。  
 
 :::image type="complex" source="./media/example-extension-screenshot.png" alt-text="Microsoft Edge (Chromium) 拡張機能" lightbox="./media/example-extension-screenshot.png":::
-  Microsoft Edge \ (Chromium \) 拡張機能  
+  Microsoft Edge \(Chromium \) 拡張機能  
 :::image-end:::  
 
 ## 基本的なガイダンス  

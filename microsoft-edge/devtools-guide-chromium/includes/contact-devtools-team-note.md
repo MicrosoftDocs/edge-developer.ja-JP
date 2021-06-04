@@ -13,7 +13,7 @@ ms.locfileid: "11205644"
 ---
 次のオプションを使用して、投稿の新機能や変更点、または DevTools に関連するその他の機能について説明します。  
 
-*   **フィードバックの送信** アイコンを使ってフィードバックを送信するか、 `Alt` + `Shift` + `I` devtools で \(Windows、Linux\) または `Option` + `Shift` + `I` `I` devtools で\ (macOS) を選択します。  
+*   **フィードバックの送信** アイコンを使ってフィードバックを送信するか、 `Alt` + `Shift` + `I` devtools で \(Windows、Linux\) または `Option` + `Shift` + `I` `I` devtools で\(macOS) を選択します。  
 *   [@EdgeDevTools][PostTweetEdgeDevTools]でツイートします。  
 *   [必要な Web][TheWebWeWant] に提案を送信します。  
 *   この記事に関するバグを報告するには、次の **フィードバック** セクションを使用します。  

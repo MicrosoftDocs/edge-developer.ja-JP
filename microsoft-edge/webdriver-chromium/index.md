@@ -24,7 +24,7 @@ WebDriver を使用すると、開発者はユーザーの操作をシミュレ�
 *   1 回のテスト セッションで、複数のウィンドウ、タブ、Web ページを管理します。  
 *   特定のコンピューターで Microsoft Edge の複数のセッションを実行します。  
     
-次のセクションでは、Microsoft Edge \ (Chromium \) の WebDriver の使用を開始する方法について説明します。  
+次のセクションでは、Microsoft Edge \(Chromium \) の WebDriver の使用を開始する方法について説明します。  
 
 ## <a name="install-microsoft-edge-chromium"></a>Microsoft Edge (Chromium) をインストールする  
 
@@ -73,7 +73,7 @@ Selenium 4 を使用してこのエラーが発生する場合は、プロジェ
 
 ### <a name="using-selenium-3"></a>Selenium 3 の使用  
 
-既に [Selenium 3][|::ref1::|] を使用している場合は、既存のブラウザーのテストがあり、Selenium のバージョンを変更せずに Microsoft Edge \ (Chromium \) のカバレッジを追加することを希望するかもしれません。  [Selenium 3][|::ref2::|] を使用して Microsoft Edge  \ (EdgeHTML \) と Microsoft Edge \ (Chromium \) の自動テストを作成するには更新されたドライバーを使用するために、[Microsoft Edge 用 Selenium ツール][GithubMicrosoftEdgeSeleniumTools] のパッケージをインストールします。  ツールに含まれている`EdgeDriver` と `EdgeDriverService` のクラスは、Selenium 4 の組み込みの対応物と完全互な換性があります。  
+既に [Selenium 3][|::ref1::|] を使用している場合は、既存のブラウザーのテストがあり、Selenium のバージョンを変更せずに Microsoft Edge \(Chromium \) のカバレッジを追加することを希望するかもしれません。  [Selenium 3][|::ref2::|] を使用して Microsoft Edge  \(EdgeHTML \) と Microsoft Edge \(Chromium \) の自動テストを作成するには更新されたドライバーを使用するために、[Microsoft Edge 用 Selenium ツール][GithubMicrosoftEdgeSeleniumTools] のパッケージをインストールします。  ツールに含まれている`EdgeDriver` と `EdgeDriverService` のクラスは、Selenium 4 の組み込みの対応物と完全互な換性があります。  
 
 次の手順を使用して、[Microsoft Edge 用Selenium ツール][GithubMicrosoftEdgeSeleniumTools] と [Selenium 3][|::ref3::|] をプロジェクトに追加します。  
 
@@ -343,7 +343,7 @@ options.addArguments("disable-gpu");
 * * *  
 
 > [!NOTE]
-> `UseChromium`プロパティが`true` に設定されている場合は、Microsoft Edge \ (EdgeHTML \) のプロパティとメソッドは使用できません。  
+> `UseChromium`プロパティが`true` に設定されている場合は、Microsoft Edge \(EdgeHTML \) のプロパティとメソッドは使用できません。  
 
 ## <a name="other-webdriver-installation-options"></a>その他の WebDriver インストール オプション  
 
