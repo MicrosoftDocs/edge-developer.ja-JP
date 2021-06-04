@@ -19,7 +19,7 @@ ms.locfileid: "11057864"
 
 [WebView2][WebView2Landing] は、開発者がアプリケーションのビルドに使用するコンポーネントであり、開発者はアプリケーションに電力を供給するために、ユーザー デバイスに自己更新 [の Evergreen WebView2 ランタイム][Webview2ConceptsDistributionUnderstandRuntimeInstallerPreview] を展開できます。  このドキュメントでは、IT 管理者が WebView2 アプリケーションとランタイムを管理する方法について説明します。  WEBView2 Feedback repo では、IT 管理者と開発者 [の両方からのフィードバックを歓迎します][GithubMicrosoftedgeWebviewfeddback]。  
 
-## WebView2 のグループ ポリシー  
+## <a name="group-policies-for-webview2"></a>WebView2 のグループ ポリシー  
 
 IT 管理者は、グループ ポリシー オブジェクト \(GPO\) を使用して WebView2 のポリシー設定を構成できます。  次の一連のポリシーは、WebView2 には適用できません。  
 

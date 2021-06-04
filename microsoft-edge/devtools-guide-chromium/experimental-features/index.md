@@ -118,7 +118,8 @@ Microsoft EdgeDevTools は、開発中の実験的な機能にアクセスでき
 1.  セクションの **Source Order Viewer** 下で、[ソースの順序を **表示する] チェック ボックスをオン** にします。  
 1.  任意の HTML 要素を強調表示して、Web ページ ソース内の順序をオーバーレイで表示します。  
     
-:::image type="complex" source="../media/experiments-source-order-viewer.msft.png" alt-text="Source Order Viewer in the アクセシビリティ ペイン" lightbox="../media/experiments-source-order-viewer.msft.png"::: **Source Order Viewer** [**アクセシビリティ] ウィンドウ**  
+:::image type="complex" source="../media/experiments-source-order-viewer.msft.png" alt-text="Source Order Viewer in the アクセシビリティ ペイン" lightbox="../media/experiments-source-order-viewer.msft.png":::
+   **Source Order Viewer** [**アクセシビリティ] ウィンドウ**  
 :::image-end:::  
 
 <!--Available in Microsoft Edge version 86 and later.  -->  

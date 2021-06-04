@@ -51,7 +51,7 @@ Marketplace で特定の拡張機能を検索し、[インストール] を **�
    :::column-end:::
 :::row-end:::  
 
-## デバッガーのMicrosoft Edge  
+## <a name="debugger-for-microsoft-edge"></a>デバッガーのMicrosoft Edge  
 
 デバッガーの[拡張機能Microsoft Edge Visual Studio Code、][VisualstudioMarketplaceDebuggerMicrosoftEdge]フロントエンド JavaScript コードを 1 行に 1 行でデバッグし、そのコードから直接ステートメント `console.log()` [を参照][VisualstudioCode]Visual Studio Code。  
       
@@ -61,9 +61,9 @@ Marketplace で特定の拡張機能を検索し、[インストール] を **�
    **アクション内Microsoft Edge Visual Studio Code**デバッガー  
 :::image-end:::  
 
-##  <a name="accessibility-in-microsoft-edge"></a>Microsoft EdgeツールのVisual Studio Code
+##  <a name="microsoft-edge-tools-for-visual-studio-code"></a>Microsoft EdgeツールのVisual Studio Code
 
-拡張機能Microsoft Edge[ツールVisual Studio Code Visual Studio Code、Microsoft Edge][VisualstudioMarketplaceMicrosoftEdgeToolsVisualStudioCode]ブラウザーの Elements ツールを使用Visual Studio Code。 ****  次のアクションに使用します。  
+拡張機能Microsoft Edge[ツールVisual Studio Code Visual Studio Code、Microsoft Edge][VisualstudioMarketplaceMicrosoftEdgeToolsVisualStudioCode]ブラウザーの Elements ツールを使用Visual Studio Code。 次のアクションに使用します。  
 
 *   インスタンスに接続するか、インスタンスのインスタンスを起動Microsoft Edge。  
 *   ランタイム HTML 構造を表示します。  
@@ -76,7 +76,7 @@ Marketplace で特定の拡張機能を検索し、[インストール] を **�
    **Microsoft Edge内線Visual Studio Code Visual Studio Code**ツール  
 :::image-end:::  
 
-##  <a name="webhint--"></a>webhint  
+##  <a name="webhint"></a>webhint  
       
 [Webhint (][WebhintMain]カスタマイズ可能なリント ツール) を使用して、サイトの次の機能を改善します。  
 

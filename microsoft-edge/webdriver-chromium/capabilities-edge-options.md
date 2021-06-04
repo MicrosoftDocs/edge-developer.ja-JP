@@ -42,7 +42,7 @@ options.AddAdditionalCapability("wdpAddress", "remotehost:50080");
 
 `EdgeDriver` が受け入れる標準の Capabilities については、「[Selenium ドキュメント][SharedCapabilitiesSeleniumDocumentation]」と「[W3C WebDriver 標準][CapabilitiesW3cWebdriver]」を参照してください。  この記事では、Microsoft Edge 固有の Capabilities のみを示します。  
 
-## EdgeOptions オブジェクト  
+## <a name="edgeoptions-object"></a>EdgeOptions オブジェクト  
 
 Microsoft Edge 固有の Capabilities は、ほとんどが `EdgeOptions` オブジェクトを通じて発行され ます。  一部の言語では、Capabilities は `EdgeOptions` クラスによって実装され ます。  他の言語では、Capabilities は `DesiredCapabilities` の `ms:edgeOptions` ディクショナリの下に保存され ます。  
 
@@ -65,7 +65,7 @@ Microsoft Edge 固有の Capabilities は、ほとんどが `EdgeOptions` オブ
 | windowsApp | 文字列 |  | 起動する Microsoft Edge アプリ パッケージのアプリケーション ユーザー モデル ID。例: `Microsoft.MicrosoftEdge.Stable_8wekyb3d8bbwe!MSEDGE`。  Windows デバイス ポータルを使って Windows 10X デバイスまたはエミュレーターに接続する場合は、`binary` の代わりに `windowsApp` を使います。 |  
 | windowTypes | 文字列のリスト |  | ウィンドウ ハンドルの一覧に表示されるウィンドウの型の一覧。  Android webview 要素にアクセスするには、一覧に `webview` を含めます。 |  
 
-## perfLoggingPrefs オブジェクト  
+## <a name="perfloggingprefs-object"></a>perfLoggingPrefs オブジェクト  
 
 `perfLoggingPrefs` ディクショナリの形式は次のとおりです (すべてのキーは省略可能です)。  
 
