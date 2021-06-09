@@ -1,22 +1,26 @@
 ---
-description: Microsoft Edge DevTools を配色プレビュー モードに強制します。
-title: Microsoft Edge DevTools を配色プレビュー モードに強制する (CSS 優先配色)
+description: DevTools Microsoft Edge配色プレビュー モードに切り替えます。
+title: DevTools Microsoft Edgeを配色プレビュー モードに強制する (CSS 優先配色)
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/12/2021
+ms.date: 06/07/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 1cdc9601e9e6fea1f6921c6cc40a1ed8232a0da8
-ms.sourcegitcommit: 16e2f7232196a57a70b979bbf8b663774b7ddc20
+ms.openlocfilehash: dc2911ce7a7fcbeef7763099541822b5cd6cf053
+ms.sourcegitcommit: 34feec6ae6241c598911dac7b63c28d655691233
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2021
-ms.locfileid: "11519150"
+ms.lasthandoff: 06/08/2021
+ms.locfileid: "11597063"
 ---
-# <a name="dark-or-light-color-scheme-simulation"></a>濃色または明るい配色のシミュレーション  
+# <a name="dark-or-light-color-scheme-simulation"></a>暗いまたは明るい配色のシミュレーション  
 
-オペレーティング システムでは、アプリケーションを暗い色または明るい色で表示できます。  暗いモードのオペレーティング システムで明るいテーマを持つ Web 製品はグレーティングであり、一部のユーザーにとってアクセシビリティの問題になる可能性があります。  Web では [、prefers-color-scheme][MDNPrefersColorScheme] CSS Media Query を使用して、ユーザーが製品を暗色または明るい配色で表示することを好む場合を検出できます。  [Microsoft Edge DevTools を使用][DevtoolsIndex]すると、オペレーティング システム全体を変更することなく、暗いモードから明るいモードへの変更をシミュレートできます。  
+多くのオペレーティング システムでは、アプリケーションを暗い色または明るい色で表示できます。  暗いモードのオペレーティング システムで明るいテーマを持つ Web 製品はグレーティングであり、一部のユーザーにとってアクセシビリティの問題になる可能性があります。  
+
+Web ページでは [、prefers-color-scheme][MDNPrefersColorScheme] CSS Media Query を使用して、ユーザーが製品を暗色または明るい配色で表示することを好むかどうかを検出できます。  次に、結果をテストするには、Microsoft Edge [DevTools][DevtoolsIndex]を使用して、オペレーティング システム全体の設定を変更することなく、暗いモードから明るいモードへの変更をシミュレートします。  
+
+**暗いテーマまたは明るいテーマをエミュレートするには、次の方法を使用します。**
 
 1.  **コマンド メニュー** を開きます。  
     1.  `Ctrl` + `Shift` + `P` \(Windows/Linux\) または `Command` + `Shift` + `P` \(macOS\) を選択します。  
@@ -36,16 +40,21 @@ ms.locfileid: "11519150"
 
 1.  配色を選択した後、現在のドキュメントを更新してシミュレートモードを表示します。  
     
-    :::image type="complex" source="../media/css-elements-styles-qs-simulated-light-mode.msft.png" alt-text="Microsoft Edge DevTools 内のシミュレートされたライト モード" lightbox="../media/css-elements-styles-qs-simulated-light-mode.msft.png":::
-       Microsoft Edge DevTools 内のシミュレートされたライト モード  
+    :::image type="complex" source="../media/css-elements-styles-qs-simulated-light-mode.msft.png" alt-text="DevTools 内のシミュレートされたMicrosoft Edgeモード" lightbox="../media/css-elements-styles-qs-simulated-light-mode.msft.png":::
+       DevTools 内のシミュレートされたMicrosoft Edgeモード  
     :::image-end:::  
     
     他の Web ページと同様に CSS を表示および変更します。  詳細については、「CSS の表示と変更 [を開始する」に移動します][DevtoolsCssIndex]。  
 
+
+## <a name="see-also"></a>関連項目
+
+* [暗いテーマと明るいテーマのコントラストの問題を確認する](test-dark-mode.md)
+
+
 <!-- links -->  
-
 [DevtoolsIndex]: ../index.md "Microsoft Edge (Chromium) 開発者ツール | Microsoft Docs"  
-[DevtoolsCustomizeDarkTheme]: ../customize/dark-theme.md "Microsoft Edge DevTools サーバーで暗いテーマを有効|Microsoft Docs"
-[DevtoolsCssIndex]: ../css/index.md "CSS の表示と変更の開始|Microsoft Docs"  
-
+[DevtoolsCustomizeDarkTheme]: ../customize/dark-theme.md "DevTools サーバーで暗いMicrosoft Edgeを有効|Microsoft Docs"
+[DevtoolsCssIndex]: ../css/index.md "CSS ファイルの表示と変更の|Microsoft Docs"  
+<!-- external links -->
 [MDNPrefersColorScheme]: https://developer.mozilla.org/docs/Web/CSS/@media/prefers-color-scheme "prefers-color-scheme |MDN"  

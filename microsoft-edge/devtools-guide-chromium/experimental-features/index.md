@@ -22,12 +22,12 @@ no-loc:
 - Edit keyboard shortcuts for any action in the DevTools
 - Turn on new CSS grid debugging features
 - 'Emulation: Support dual screen mode'
-ms.openlocfilehash: 8f85bab4b1229a13f3b0185c65da900573380811
-ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
+ms.openlocfilehash: 82d547c8c1ed0606bda9ade27d0dbddbfa2ca800
+ms.sourcegitcommit: 34feec6ae6241c598911dac7b63c28d655691233
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2021
-ms.locfileid: "11564239"
+ms.lasthandoff: 06/08/2021
+ms.locfileid: "11596996"
 ---
 # <a name="experimental-features"></a>試験的な機能  
 
@@ -114,12 +114,11 @@ Microsoft EdgeDevTools は、開発中の実験的な機能にアクセスでき
 実験を有効にしたら、DevTools を再起動してください。  使用するには **Source Order Viewer** 、次の手順を実行します。  
 
 1.  [要素] **ツールを開** きます。  
-1.  引き出し \(bottom\) パネルで [アクセシビリティ] ウィンドウを開きます。 ****  
+1.  [スタイル] タブの **右側にある** [アクセシビリティ] **タブを選択** します。  
 1.  セクションの **Source Order Viewer** 下で、[ソースの順序を **表示する] チェック ボックスをオン** にします。  
 1.  任意の HTML 要素を強調表示して、Web ページ ソース内の順序をオーバーレイで表示します。  
     
-:::image type="complex" source="../media/experiments-source-order-viewer.msft.png" alt-text="Source Order Viewer in the アクセシビリティ ペイン" lightbox="../media/experiments-source-order-viewer.msft.png":::
-   **Source Order Viewer** [**アクセシビリティ] ウィンドウ**  
+:::image type="complex" source="../media/experiments-source-order-viewer.msft.png" alt-text="Source Order Viewer in the アクセシビリティ ペイン" lightbox="../media/experiments-source-order-viewer.msft.png"::: **Source Order Viewer** [**アクセシビリティ] ウィンドウ**  
 :::image-end:::  
 
 <!--Available in Microsoft Edge version 86 and later.  -->  

@@ -3,16 +3,16 @@ description: コンソールを開き、Live 式を作成し、式を document.a
 title: フォーカスされている要素を追跡する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 05/04/2021
+ms.date: 06/07/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: e7d7bc9ebf8dd891bf7531d8dd283801a01fc3c1
-ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
+ms.openlocfilehash: 2fd53caccefefb0b0bce4b5c82f30632e11a3cb6
+ms.sourcegitcommit: 34feec6ae6241c598911dac7b63c28d655691233
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2021
-ms.locfileid: "11564596"
+ms.lasthandoff: 06/08/2021
+ms.locfileid: "11597104"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -31,17 +31,17 @@ ms.locfileid: "11564596"
 
 ページのキーボード ナビゲーションアクセシビリティをテストするとします。  キーを使用してページを移動すると、フォーカスのある要素が非表示のため、フォーカス リング `Tab` が表示されなくなる場合があります。  
 
-DevTools でフォーカスされた要素を追跡するには、次のアクションを実行します。  
+DevTools でフォーカスされた要素を追跡するには、次のコマンドを実行します。
 
 1.  コンソールを **開きます**。  
-1.  [Live **Expression \(** Create ![ Live Expression ](../media/create-live-expression-icon.msft.png) \] を選択します)。  
+1.  [ライブ **式の作成** ] \( ![ Create live expression ](../media/create-live-expression-icon.msft.png) \) を選択します。  
     
     :::image type="complex" source="../media/accessibility-console-create-live-expression-empty.msft.png" alt-text="Live 式の作成" lightbox="../media/accessibility-console-create-live-expression-empty.msft.png":::
        Live 式の作成  
     :::image-end:::  
     
 1.  「`document.activeElement`」と入力します。  
-1.  保存する Live 式 UI **の外部を** 選択します。  
+1.  式を保存するには、ライブ式の外側を選択します。
     
 次に示す値 `document.activeElement` は、式の結果です。  
 
@@ -51,12 +51,18 @@ DevTools でフォーカスされた要素を追跡するには、次のアク�
 *   結果にカーソルを合わせると、コンテキスト メニュー \(右クリック\)**** を開き、[要素] パネルで [表示] を選択して、要素ツールの DOM ツリーに要素を**表示**します。  
 *   結果にカーソルを置き、コンテキスト メニュー \(右クリック\)**** を開き、[グローバル変数として格納] を選択して、コンソールで使用できるノードへの変数参照を作成**します**。  
 
-## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームと連絡を取る  
+
+## <a name="see-also"></a>関連項目
+
+*  [サイドバー メニューのキーボード フォーカスの表示不足を分析する](test-analyze-no-focus-indicator.md)
+
+
+## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームと連絡を取る
 
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
-<!-- links -->  
 
+<!-- links -->  
 > [!NOTE]
 > このページの一部は、 [Google によっ て作成および共有された][GoogleSitePolicies]作業に基づく変更で、「[Creative Commons Attribution 4.0 International License][CCA4IL]」で記載されている条項に従って使用されます。  
 > 元のページは [ここ](https://developers.google.com/web/tools/chrome-devtools/accessibility/focus) にあり、 [Kayce Basques][KayceBasques] \(Chrome DevTools \& Lighthouse\ のテクニカル ライター) が作成しました。  

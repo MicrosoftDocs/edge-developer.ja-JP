@@ -3,20 +3,22 @@ description: 開発者ツールを使用して、縮小されたモーション�
 title: 開発者ツールを使用して縮小モーションをシミュレートする (CSS Prefers Reduced Motion)
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 02/12/2021
+ms.date: 06/07/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 29cdbd7492665e819315910b3f743d444470cc12
-ms.sourcegitcommit: 6cf12643e9959873f8b5d785fd6158eeab74f424
+ms.openlocfilehash: 7244c2e80bbf9070214b6abd02583792c785953c
+ms.sourcegitcommit: 34feec6ae6241c598911dac7b63c28d655691233
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11397868"
+ms.lasthandoff: 06/08/2021
+ms.locfileid: "11597058"
 ---
 # <a name="reduced-motion-simulation"></a>モーション シミュレーションの削減  
 
-Web 製品のアニメーションはアクセシビリティの問題である可能性があります。  オペレーティング システムは、ユーザーの混乱や、発作のトリガーなどの潜在的な正常性関連の問題を回避するためにアニメーションをオフにするオプションを含めて、この問題に対処します。  Web では、ユーザーがアニメーションを実行したり表示したりすることを好むのを検出するために、優先的に縮小 [されたモーション][MDNPrefersReducedMotion] CSS メディア クエリを使用できます。  製品では、影響を受けるユーザーにアニメーションが表示されるのを避けるために、テストでアニメーション コードをラップできます。  
+Web 製品のアニメーションはアクセシビリティの問題である可能性があります。  オペレーティング システムは、ユーザーの混乱や、発作のトリガーなど、潜在的な健康関連の問題を回避するためにアニメーションをオフにするオプションを含めて、この問題に対処します。  
+
+Web ページでは、優先的に縮小された [CSS][MDNPrefersReducedMotion] メディア クエリを使用して、ユーザーがアニメーションを表示することを好むかどうかを検出できます。  次に、テストでアニメーション コードをラップし、条件付きでアニメーションを実行します。  
 
 ```css
 @media (prefers-reduced-motion: reduce) {
@@ -27,10 +29,12 @@ Web 製品のアニメーションはアクセシビリティの問題である�
 }
 ```  
 
-Microsoft [Edge DevTools を使用][DevtoolsIndex]すると、オペレーティング システムを変更することなく、この縮小モーション設定をシミュレートできます。  
+次に、次のようにコードをテストします。
+
+オペレーティング システムの設定を変更せずに、オペレーティング システムの縮小モーション設定をシミュレートするには、次の操作を行います。
 
 1.  **コマンド メニュー** を開きます。  
-    1.  `Control` + `Shift` + `P` Windows/Linux または `Command` + `Shift` + `P` macOS で選択します。  
+    1.  `Control` + `Shift` + `P` [Windows/Linux または `Command` + `Shift` + `P` macOS で選択します。  
         
         :::image type="complex" source="../media/css-console-command-menu-rendering.msft.png" alt-text="コマンド メニュー" lightbox="../media/css-console-command-menu-rendering.msft.png":::
            **コマンド メニュー**  
@@ -42,10 +46,14 @@ Microsoft [Edge DevTools を使用][DevtoolsIndex]すると、オペレーティ
        [コマンド メニュー] から低い **モーション設定をオン** または **オフにする**  
     :::image-end:::  
     
-1.  現在のページを更新して、アニメーションがオフになっているか表示されているかどうかをテストします。  
+1.  Web ページを更新し、アニメーションが実行されているかどうかを確認します。
+
+
+## <a name="see-also"></a>関連項目
+
+* [UI アニメーションをオフに](test-reduced-ui-motion.md) した状態でページが使用可能になっていることを確認する - 説明付きデモ ページを使用したチュートリアル。
+
     
 <!-- links -->  
-
-[DevtoolsIndex]: ../index.md "Microsoft Edge (Chromium) 開発者ツール |Microsoft ドキュメント"  
-
+[DevtoolsIndex]: ../index.md "Microsoft Edge (Chromium) 開発者ツール | Microsoft Docs"  
 [MDNPrefersReducedMotion]: https://developer.mozilla.org/docs/Web/CSS/@media/prefers-reduced-motion "縮小モーション を優先|MDN"  

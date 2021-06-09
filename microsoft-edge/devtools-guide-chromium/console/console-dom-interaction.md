@@ -7,12 +7,12 @@ ms.date: 04/13/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 80b0e4368b1c8feaf28a58ac2e3bd9c1ea2f1f92
-ms.sourcegitcommit: 2e516a92272e38d8073603f860ae49f944718670
+ms.openlocfilehash: 56ce6b1d8f1ad98eeb9c141c2e9b002e7679d7de
+ms.sourcegitcommit: 34feec6ae6241c598911dac7b63c28d655691233
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "11483540"
+ms.lasthandoff: 06/08/2021
+ms.locfileid: "11597016"
 ---
 # <a name="use-the-console-to-interact-with-the-dom"></a>コンソールを使用して DOM を操作する
 
@@ -62,12 +62,12 @@ Web ページの複雑さによっては、操作する適切な要素を見つ�
 
 1.  要素を **選択するには、[検査** ] ツールを使用します。  
 
-    :::image type="complex" source="../media/console-dom-use-inspector-to-get-element.msft.png" alt-text="要素を選択するには、インスペクター ツールを使用します。" lightbox="../media/console-dom-use-inspector-to-get-element.msft.png":::
-        要素を選択するには、インスペクター ツール **を使用** します。  
+    :::image type="complex" source="../media/console-dom-use-inspector-to-get-element.msft.png" alt-text="要素を選択するには、[検査] ツールを使用します。" lightbox="../media/console-dom-use-inspector-to-get-element.msft.png":::
+        要素を選択するには、[検査] ツール **を使用** します。  
     :::image-end:::  
     
 1.  選択すると、DevTools が要素ツールに **ジャンプ** します。  
-1.  DOM ビュー `...` の要素の横にあるメニューを選択します。  
+1.  DOM ツリー `...` の要素の横にあるメニューを選択します。  
     
     :::image type="complex" source="../media/console-dom-overflow-menu-in-elements.msft.png" alt-text="選択した要素が Elements ツールの DOM ツリーに表示され、オーバーフロー メニューを選択してより多くの機能を取得します" lightbox="../media/console-dom-overflow-menu-in-elements.msft.png":::
         選択した要素が Elements ツールの DOM ツリーに **表示され、** オーバーフロー メニューを選択してより多くの機能を取得します  
@@ -75,8 +75,8 @@ Web ページの複雑さによっては、操作する適切な要素を見つ�
     
 1.  コンテキスト メニューを開き、[. `Copy`  >  `Copy JS Path`  
     
-    :::image type="complex" source="../media/console-dom-copy-JS-path.msft.png" alt-text="要素ツールの DOM ビューの要素から JavaScript パスをコピーする" lightbox="../media/console-dom-copy-JS-path.msft.png":::
-        要素ツールの DOM ビューの要素から JavaScript パスを **コピー** する  
+    :::image type="complex" source="../media/console-dom-copy-JS-path.msft.png" alt-text="要素ツールの DOM ツリー内の要素から JavaScript パスをコピーする" lightbox="../media/console-dom-copy-JS-path.msft.png":::
+        要素ツールの DOM ツリー内の要素から JavaScript パスを **コピー** する  
     :::image-end:::  
     
 1.  コンソールに戻り **、** コマンドを貼り付けます。  
@@ -98,7 +98,7 @@ Web ページの複雑さによっては、操作する適切な要素を見つ�
 コンソール `$` には特別な機能があります****。jQueryから覚えている可能性があります。
 
 *   `$_` 最後のコマンドの結果を格納します。  したがって、入力して選択 `2 + 2` し `Enter` 、次に入力 `$_` すると、 **コンソールに表示** されます `4` 。
-*   `$0` to `$4` は、最後に検査された要素のスタックが `$0` 常に最新の要素です。  したがって、前の例では、インスペクター ツールで要素**** を選択し、同じ効果を得 `$0.textContent = "My Playground"` るという入力を行いました。
+*   `$0` to `$4` は、最後に検査された要素のスタックが `$0` 常に最新の要素です。  したがって、前の例では、同じ効果を得る**** 検査ツールと入力で要素 `$0.textContent = "My Playground"` を選択しました。
 *   `$x()` を使用すると、XPATH を使用して DOM 要素を選択できます。
 *   `$()` と `$$()` の短いバージョン `document.querySelector()` です `document.querySelectorAll()` 。  
     

@@ -7,12 +7,12 @@ ms.date: 05/04/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 64954d632416f7d1353269d04c1550ca7a0652b7
-ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
+ms.openlocfilehash: 17c1162bdec21ccc4abe1d3d34ce7c766aeb1009
+ms.sourcegitcommit: 34feec6ae6241c598911dac7b63c28d655691233
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2021
-ms.locfileid: "11564183"
+ms.lasthandoff: 06/08/2021
+ms.locfileid: "11596988"
 ---
 <!-- Copyright Sam Dutton 
 
@@ -108,6 +108,12 @@ ms.locfileid: "11564183"
     :::image type="complex" source="../media/issues-tab-view-issue.msft.png" alt-text="DevTools ネットワーク ツールの ck02 Cookie の SameSite 列の値なし" lightbox="../media/issues-tab-view-issue.msft.png":::
        `None` DevTools**ネットワーク**ツールの `ck02` Cookie の SameSite 列の値****  
     :::image-end:::  
+
+
+## <a name="see-also"></a>関連項目
+
+* [アクセシビリティの問題について Web ページを自動的にテストする](../accessibility/test-issues-tool.md)
+
 
 ## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームと連絡を取る  
 

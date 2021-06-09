@@ -7,12 +7,12 @@ ms.date: 02/19/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge, Web 開発, f12 ツール, devtools, service worker, PWA
-ms.openlocfilehash: 2f32155d1d28d1e65ad29abfe58a414f3e3c6ed7
-ms.sourcegitcommit: 661e8def3f27cea381c59ac38954789e736c18f4
+ms.openlocfilehash: c00b7c7fd18d4bb3d413369ec1464c0cb0255311
+ms.sourcegitcommit: 34feec6ae6241c598911dac7b63c28d655691233
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "11387278"
+ms.lasthandoff: 06/08/2021
+ms.locfileid: "11597143"
 ---
 # <a name="service-worker-improvements"></a>サービス ワーカーの機能強化  
 
@@ -62,7 +62,7 @@ ms.locfileid: "11387278"
 
 ### <a name="service-worker-update-timeline"></a>サービス ワーカーの更新タイムライン  
 
-Microsoft Edge DevTools チームは、サービス**** ワーカーの更新ライフサイクルを反映するために、アプリケーション ツールにタイムラインを追加しました。  インストールイベントとライセンス認証イベントが表示されます。  各イベントには、詳細を示す対応するドロップダウン矢印があります。  
+DevTools チームMicrosoft Edge、サービス ワーカーの更新ライフサイクルを反映**** するタイムラインをアプリケーション ツールに追加しました。  インストールイベントとライセンス認証イベントが表示されます。  各イベントには、詳細を示す対応するドロップダウン矢印があります。  
 
 ### <a name="request-routing-and-fetch-events"></a>ルーティングイベントとフェッチ イベントの要求  
 
@@ -76,15 +76,15 @@ Microsoft Edge DevTools チームは、サービス**** ワーカーの更新ラ
 
 ## <a name="sources"></a>ソース  
 
-:::image type="complex" source="../media/sw-sources.msft.png" alt-text="DOM ビュー" lightbox="../media/sw-sources.msft.png":::
-   DOM ビュー  
+:::image type="complex" source="../media/sw-sources.msft.png" alt-text="DOM ツリー" lightbox="../media/sw-sources.msft.png":::
+   DOM ツリー  
 :::image-end:::  
 
 スタック情報の詳細を見つけるには、フェッチ ハンドラーでブレーク ポイントを設定します。  詳細は、ページ スクリプトでリソースが要求される場所につながる。  デバッガーがフェッチ ハンドラー内で一時停止すると、結合されたスタック情報が右側のパネルに表示されます。  その後、スタック フレーム内を移動できます。  
 
 ### <a name="future-work"></a>今後の作業  
 
-Microsoft Edge DevTools チームは、キャッシュの詳細をさらに開発し、 [プログレッシブ Web][MdnProgressiveWebApps] アプリケーション開発者向けのサービス ワーカー デバッグ エクスペリエンスを向上させる方法を検討しています。  
+DevTools Microsoft Edgeでは、キャッシュの詳細をさらに開発し、[プログレッシブ Web][MdnProgressiveWebApps]アプリケーション開発者向けのサービス ワーカー デバッグ エクスペリエンスを向上させる方法を検討しています。  
 
 ## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームと連絡を取る  
 
