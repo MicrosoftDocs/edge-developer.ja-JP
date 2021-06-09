@@ -87,8 +87,50 @@
           items:
             - name: アクセシビリティ
               items:
-                - name: アクセシビリティリファレンス
+                - name: DevTools のアクセシビリティ テスト機能
                   href: devtools-guide-chromium/accessibility/reference.md
+                - name: DevTools を使用したアクセシビリティ テストの概要
+                  href: devtools-guide-chromium/accessibility/accessibility-testing-in-devtools.md
+                - name: 問題ツール
+                  items:
+                    - name: アクセシビリティの問題のための Web ページを自動的にテストする
+                      href: devtools-guide-chromium/accessibility/test-issues-tool.md
+                - name: 検査ツール
+                  items:
+                    - name: 検査ツールを使用して、Web ページの上にカーソルを移動させながらアクセシビリティの問題を検出する
+                      href: devtools-guide-chromium/accessibility/test-inspect-tool.md
+                    - name: Tab キーと Enter キーを使用してキーボードのサポートを確認する
+                      href: devtools-guide-chromium/accessibility/test-tab-enter-keys.md
+                    - name: サイドバー メニューにあるキーボード フォーカスの表示不足を分析する
+                      href: devtools-guide-chromium/accessibility/test-analyze-no-focus-indicator.md
+                    - name: フォームでのキーボード サポートの不足を分析する
+                      href: devtools-guide-chromium/accessibility/test-analyze-no-keyboard-support.md
+                - name: アクセシビリティ タブ
+                  items:
+                    - name: キーボードとスクリーン リーダーのサポートに関してアクセシビリティ ツリーを確認する
+                      href: devtools-guide-chromium/accessibility/test-accessibility-tree.md
+                    - name: ソース オーダー ビューアーを使用してキーボードのサポートをテストする
+                      href: devtools-guide-chromium/accessibility/test-tab-key-source-order-viewer.md
+                    - name: '[アクセシビリティ] タブを使用してアクセシビリティをテストする'
+                      href: devtools-guide-chromium/accessibility/accessibility-tab.md
+                - name: スタイル タブ
+                  items:
+                    - name: 要素のすべての状態のアクセシビリティを確認する
+                      href: devtools-guide-chromium/accessibility/test-inspect-states.md
+                    - name: カラー ピッカーを使用してテキストの色のコントラストをテストする
+                      href: devtools-guide-chromium/accessibility/color-picker.md
+                - name: レンダリング ツール
+                  items:
+                    - name: 黒いテーマと白いテーマでのコントラストの問題を確認する
+                      href: devtools-guide-chromium/accessibility/test-dark-mode.md
+                    - name: 色覚異常があるユーザーがページを使用できるかどうかを確認する
+                      href: devtools-guide-chromium/accessibility/test-color-blindness.md
+                    - name: ぼやけて見えてもページが使用できるかどうかを確認する
+                      href: devtools-guide-chromium/accessibility/test-blurred-vision.md
+                    - name: UI アニメーションをオフにしてもページが使用できるかどうかを確認する
+                      href: devtools-guide-chromium/accessibility/test-reduced-ui-motion.md
+                - name: Lighthouse を使用してアクセシビリティをテストする
+                  href: devtools-guide-chromium/accessibility/lighthouse.md
                 - name: 支援技術を使用して DevTools に移動する
                   href: devtools-guide-chromium/accessibility/navigation.md
                 - name: フォーカスされている要素を追跡する
