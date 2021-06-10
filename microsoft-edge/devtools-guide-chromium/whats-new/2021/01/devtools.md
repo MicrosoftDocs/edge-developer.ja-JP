@@ -8,12 +8,12 @@ ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
 ms.localizationpriority: high
-ms.openlocfilehash: 6d1952832c84dc159222a8aa16aa0ffe11edff34
-ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
+ms.openlocfilehash: 9eb9f35427829dbe262b4c71d8ff5474b28eae77
+ms.sourcegitcommit: 34feec6ae6241c598911dac7b63c28d655691233
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2021
-ms.locfileid: "11564928"
+ms.lasthandoff: 06/08/2021
+ms.locfileid: "11597154"
 ---
 <!-- Copyright Jecelyn Yeen 
 
@@ -426,8 +426,8 @@ Windows、Linux、または macOS を使用している場合は、 既定の開
 
 [DevtoolsWhatsNew85]: ../../2020/06/devtools.md "DevTools (Microsoft Edge 85) の新機能 | Microsoft Docs"  
 
-[DevtoolsAccessibilityReferenceViewContrastRatioTextElementColorPicker]: ../../../accessibility/reference.md#view-the-contrast-ratio-of-a-text-element-in-the-color-picker "カラー ピッカー - アクセシビリティ リファレンス ページでテキスト要素のコントラスト比を表示 | Microsoft Docs"  
-[DevtoolsCssReferenceChangeCss]: ../../../css/reference.md#change-css "CSS の変更 - CSS 参照|Microsoft Docs"  
+[DevtoolsAccessibilityReferenceViewContrastRatioTextElementColorPicker]: ../../../accessibility/color-picker.md "Color Picker コントロールを使用してテキストと色のコントラストをテスト | Microsoft Docs"  
+[DevtoolsCssReferenceChangeCss]: ../../../css/reference.md#change-css "CSS の変更 - CSS 参照 | Microsoft Docs"  
 [DevtoolsCustomizeIndexSettings]: ../../../customize/index.md#settings "設定 - Microsoft Edge DevTools をカスタマイズする | Microsoft Docs"  
 [DevtoolsCustomizeShortcuts]: ../../../customize/shortcuts.md "Microsoft Edge DevTools でキーボード ショートカットをカスタマイズする | Microsoft Docs"  
 [DevtoolsDeviceModeDualScreenFoldablesTestFoldableDualScreenDevices]: ../../../device-mode/dual-screen-and-foldables.md#test-on-foldable-and-dual-screen-devices "折りたたみ可能なデバイスとデュアルスクリーン デバイスでのテスト - Microsoft Edge DevTools でデュアルスクリーン デバイスと折りたたみ可能なデバイスをエミュレート | Microsoft Docs"  

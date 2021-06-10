@@ -8,12 +8,12 @@ ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
 ms.localizationpriority: high
-ms.openlocfilehash: a6682043166909bf75a875b72058cc9839c5b43b
-ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
+ms.openlocfilehash: a13c344bb31cdfb7d0402132e3be82e4c330c612
+ms.sourcegitcommit: 34feec6ae6241c598911dac7b63c28d655691233
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2021
-ms.locfileid: "11564848"
+ms.lasthandoff: 06/08/2021
+ms.locfileid: "11597164"
 ---
 <!-- Copyright Jecelyn Yeen 
 
@@ -274,7 +274,7 @@ Requests テーブルに、**[リモート アドレス空間]** という名前
 
 :::image type="icon" source="../../media/2020/06/experimental-tag-14px.msft.png":::  
 
-この実験では、**要素** ツールで**アクセシビリティ ツリー ビュー全体**を提供します。  [[アクセシビリティ]][DevtoolsAccessibilityReferenceAccessibilityPanel] ウィンドウ には部分的なアクセシビリティ ツリー ビューが表示され、ルート ノードから検査されたノードへの直接の祖先チェーンが表示されます。  
+この実験では、**要素** ツールで**アクセシビリティ ツリー ビュー全体**を提供します。  [[アクセシビリティ]][DevtoolsAccessibilityTab] ウィンドウ には部分的なアクセシビリティ ツリー ビューが表示され、ルート ノードから検査されたノードへの直接の祖先チェーンが表示されます。  
 この実験を有効にし、DevTools を再読み込みした後、次のいずれかのボタンを選択して、Web ページ上のすべての要素の [要素] ツールの表示を切り替えます。  
 
 *   完全なアクセシビリティ ツリー ビューを表示するには、**[アクセシビリティ ツリーに切り替える]** ビューを選択します。  
@@ -285,7 +285,7 @@ Requests テーブルに、**[リモート アドレス空間]** という名前
 :::row:::
    :::column span="":::
       :::image type="complex" source="../../media/2021/02/elements-switch-to-accessibility-tree-view.msft.png" alt-text="DOM ツリー ビューを表示する" lightbox="../../media/2021/02/elements-switch-to-accessibility-tree-view.msft.png":::
-         **DOM ビュー** を表示する  
+         **DOM ツリー ビュー**を表示する  
       :::image-end:::  
    :::column-end:::
    :::column span="":::
@@ -305,7 +305,7 @@ Windows、Linux、または macOS を使用している場合は、 既定の開
 
 <!-- links -->  
 
-[DevtoolsAccessibilityReferenceAccessibilityPanel]: ../../../accessibility/reference.md#the-accessibility-panel "アクセシビリティ ウィンドウ - アクセシビリティ リファレンス | Microsoft Docs"  
+[DevtoolsAccessibilityTab]: ../../../accessibility/accessibility-tab.md "[アクセシビリティ] タブを使用してアクセシビリティをテスト | Microsoft Docs"  
 [DevtoolsCommandMenuIndex]: ../../../command-menu/index.md "Microsoft Edge DevTools コマンド メニュー を使用してコマンドを実行する | Microsoft Docs"  
 [DevtoolsConsoleReferenceFilterByLogLevel]: ../../../console/reference.md#filter-by-log-level "ログ レベルによるフィルター - コンソール リファレンス | Microsoft Docs"  
 [DevtoolsConsoleReferenceFilterMessages]: ../../../console/reference.md#filter-messages "フィルター メッセージ - コンソール リファレンス | Microsoft Docs"  

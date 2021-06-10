@@ -8,12 +8,12 @@ ms.topic: article
 ms.prod: microsoft-edge
 ms.technology: devtools
 keywords: microsoft edge, web 開発, html, css, javascript, 開発者, webdriver, selenium,テストする, ツール, 自動化, テスト
-ms.openlocfilehash: 5d30fe14051ac8857c6ea4d64b8c8f1f8e8049ac
-ms.sourcegitcommit: a7609b75a94755ed983111af7083a0d3bf64eeac
+ms.openlocfilehash: 3865162b8227db2f0cfa051801a5de28ecf4b9d1
+ms.sourcegitcommit: 3094c972532bc89dcb429d26880c873809fd1ab8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "11583588"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "11599458"
 ---
 # <a name="use-webdriver-chromium-for-test-automation"></a>テスト オートメーションに WebDriver (Chromium) を使用する  
 
@@ -23,8 +23,25 @@ WebDriver を使用すると、開発者はユーザーの操作をシミュレ�
 *   ユーザー イベントや OS レベルのイベントをより正確にシミュレートします。  
 *   1 回のテスト セッションで、複数のウィンドウ、タブ、Web ページを管理します。  
 *   特定のコンピューターで Microsoft Edge の複数のセッションを実行します。  
-    
-次のセクションでは、Microsoft Edge \(Chromium \) の WebDriver の使用を開始する方法について説明します。  
+
+## <a name="relationship-between-webdriver-and-other-software"></a>WebDriver と他のソフトウェアの関係
+
+WebDriver Microsoft Edgeを自動化してユーザーの操作をシミュレートするには、次の 3 つのコンポーネントが必要です。
+
+*  Microsoft Edge
+*  Microsoft Edge ドライバー
+*  WebDriver テスト フレームワーク (Selenium など)
+
+WebDriver、Microsoft Edge Driver、Selenium、および Internet Explorerドライバーの機能関係は次のとおりです。
+
+| テクノロジ | ロール |
+|---|---|
+| WebDriver | プラットフォームおよび言語に依存しないワイヤー プロトコルの W3C 標準。  このプロトコルにより、アウトプロセス プログラムは Web ブラウザーの動作をリモートで指示できます。 |
+| Microsoft Edge ドライバー | Microsoft が WebDriver プロトコルを実装する場合は、このプロトコルを使用Microsoft Edge。 テスト作成者は、ドライバーが受け取る WebDriver コマンドを使用Microsoft Edge記述します。 Microsoft Edgeドライバーは、そのコマンドをブラウザーに通信する責任があります。 |
+| Selenium | テスト作成者がエンドツーエンドのテストを記述し、ブラウザーを自動化するために使用する一般的な WebDriver テスト フレームワーク。 Selenium は任意のプラットフォームで使用できます。また、Java Python、C# Ruby、JavaScript で使用できます。 |
+| Internet Explorer ドライバー | WebDriver プロトコルの実装は、webDriver プロトコルのInternet Explorer。 この製品は、Selenium プロジェクトによって維持されます。 従来のエンド to エンド テストを実行するには、Internet Explorerドライバーを使用Internet Explorer勧めします。 |
+
+次のセクションでは、WebDriver for Microsoft Edge \(Chromium\) について説明します。  
 
 ## <a name="install-microsoft-edge-chromium"></a>Microsoft Edge (Chromium) をインストールする  
 
@@ -67,13 +84,13 @@ WebDriver を使用すると、開発者はユーザーの操作をシミュレ�
 
 Selenium 4 には、Microsoft Edge (Chromium) が組み込Chromium。  Selenium 4 をインストールするには [、[Selenium ライブラリのインストール] に移動します][SeleniumInstallingLibraries]。
 
-Selenium 4 を使用する場合は、Selenium Tools を使用する必要Microsoft Edge。  Selenium Tools for Microsoft Edgeセレン 3 のみ。  Selenium Tools で Selenium 4 を使用して、Microsoft Edgeインスタンスを作成しようとする場合は、次のエラー `EdgeDriver` メッセージが表示されます `System.MissingMethodException: 'Method not found: 'OpenQA.Selenium.Remote.DesiredCapabilities OpenQA.Selenium.DriverOptions.GenerateDesiredCapabilities(Boolean)'` 。  
+Selenium 4 を使用する場合は、Selenium Tools を使用する必要Microsoft Edge。  Selenium Tools for Microsoft Edgeセレン 3 のみ。  Selenium 4 を Selenium Tools for Microsoft Edge で使用し、新しいインスタンスを作成しようとする場合は、次のエラー `EdgeDriver` メッセージが表示されます `System.MissingMethodException: 'Method not found: 'OpenQA.Selenium.Remote.DesiredCapabilities OpenQA.Selenium.DriverOptions.GenerateDesiredCapabilities(Boolean)'` 。  
 
 Selenium 4 を使用してこのエラーが発生する場合は、プロジェクトから削除し、名前空間の公式クラスとクラスを `Microsoft.Edge.SeleniumTools` `EdgeOptions` `EdgeDriver` 使用 `OpenQA.Selenium.Edge` してください。
 
 ### <a name="using-selenium-3"></a>Selenium 3 の使用  
 
-既に [Selenium 3][|::ref1::|] を使用している場合は、既存のブラウザーのテストがあり、Selenium のバージョンを変更せずに Microsoft Edge \(Chromium \) のカバレッジを追加することを希望するかもしれません。  [Selenium 3][|::ref2::|] を使用して Microsoft Edge  \(EdgeHTML \) と Microsoft Edge \(Chromium \) の自動テストを作成するには更新されたドライバーを使用するために、[Microsoft Edge 用 Selenium ツール][GithubMicrosoftEdgeSeleniumTools] のパッケージをインストールします。  ツールに含まれている`EdgeDriver` と `EdgeDriverService` のクラスは、Selenium 4 の組み込みの対応物と完全互な換性があります。  
+既に [Selenium 3][|::ref1::|] を使用している場合は、既存のブラウザーのテストがあり、Selenium のバージョンを変更せずに Microsoft Edge \ (Chromium \) のカバレッジを追加することを希望するかもしれません。  [Selenium 3][|::ref2::|] を使用して Microsoft Edge  \ (EdgeHTML \) と Microsoft Edge \ (Chromium \) の自動テストを作成するには更新されたドライバーを使用するために、[Microsoft Edge 用 Selenium ツール][GithubMicrosoftEdgeSeleniumTools] のパッケージをインストールします。  ツールに含まれている`EdgeDriver` と `EdgeDriverService` のクラスは、Selenium 4 の組み込みの対応物と完全互な換性があります。  
 
 次の手順を使用して、[Microsoft Edge 用Selenium ツール][GithubMicrosoftEdgeSeleniumTools] と [Selenium 3][|::ref3::|] をプロジェクトに追加します。  
 
@@ -343,7 +360,7 @@ options.addArguments("disable-gpu");
 * * *  
 
 > [!NOTE]
-> `UseChromium`プロパティが`true` に設定されている場合は、Microsoft Edge \(EdgeHTML \) のプロパティとメソッドは使用できません。  
+> `UseChromium`プロパティが`true` に設定されている場合は、Microsoft Edge \ (EdgeHTML \) のプロパティとメソッドは使用できません。  
 
 ## <a name="other-webdriver-installation-options"></a>その他の WebDriver インストール オプション  
 
@@ -356,6 +373,10 @@ docker run -d -p 9515:9515 mcr.microsoft.com/msedge/msedgedriver
 ```  
 
 詳細については、Docker Hub の [msedgedriver コンテナーに移動します][DockerHubMsedgedriver]。  
+
+## <a name="testing-internet-explorer"></a>テストInternet Explorer
+
+IE モードMicrosoft Edgeサポートされている場合でも、IE モードでサイトMicrosoft EdgeテストMicrosoft Edgeドライバーを使用することはできません。  必要なサイトをテストするには、Internet Explorerドライバー Internet Explorer [を使用][GithubSeleniumHqWikiIEDriver] Internet Explorer。
 
 ## <a name="next-steps"></a>次の手順  
 
@@ -384,6 +405,7 @@ Microsoft Edge チームは、WebDriver、Selenium、Microsoft Edge の使用に
 [GithubMicrosoftEdgeSeleniumTools]: https://github.com/microsoft/edge-selenium-tools "microsoft/edge-selenium-tools |GitHub"  
 [GithubMicrosoftEdgeSeleniumToolsReleases]: https://github.com/microsoft/edge-selenium-tools/releases "microsoft/edge-selenium-tools |GitHub"  
 [GithubSeleniumHq]: https://github.com/SeleniumHQ/selenium "SeleniumHQ/selenium |GitHub"  
+[GithubSeleniumHqWikiIEDriver]: https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver "Internet Explorer ドライバー - Selenium |GitHub"
 
 [JavaScriptnpm]: https://www.npmjs.com/ "npm"  
 [JavaScriptSeleniumTools]: https://www.npmjs.com/package/@microsoft/edge-selenium-tools "@microsoft/edge-selenium-tools |npm"  
@@ -409,7 +431,7 @@ Microsoft Edge チームは、WebDriver、Selenium、Microsoft Edge の使用に
 [SeleniumDownloads]: https://selenium.dev/downloads "ダウンロード |Selenium"  
 [SeleniumInstallingLibraries]: https://www.selenium.dev/documentation/en/selenium_installation/installing_selenium_libraries "Selenium ライブラリのインストール|Selenium"
 
-[SonatypeMavenRepositorySearch]: https://search.maven.org/artifact/com.microsoft.edge/msedge-selenium-tools-java/3.141.0/jar "sonatype Maven Central Repository Search |com.microsoft.edge:msedge-selenium-tools-java"
+[SonatypeMavenRepositorySearch]: https://search.maven.org/artifact/com.microsoft.edge/msedge-selenium-tools-java/3.141.0/jar "Sonatype Maven Central Repository Search |com.microsoft.edge:msedge-selenium-tools-java"
 
 [TwitterTweetEdgeDevTools]: https://twitter.com/intent/tweet?text=@EdgeDevTools "@EdgeDevTools |ツイートを投稿する"  
 
