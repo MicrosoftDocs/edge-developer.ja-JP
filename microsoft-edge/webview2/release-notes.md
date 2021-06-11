@@ -527,7 +527,7 @@ WebView2 チームは、6 週間のケイデンスで [WebView2 SDK][NuGetGaller
 *   [ICoreWebView2EnvironmentOptions][Webview2ReferenceWin32Icorewebview2environmentoptionsViewWebview209488]インターフェイスが追加されました。これは、アプリが対象とする Evergreen WebView2 ランタイムのバージョンを決定するために使用できます。  
 *   [IsBuiltInErrorPageEnabled 設定を追加][Webview2ReferenceWin32Icorewebview2settingsViewWebview209488GetIsbuiltinerrorpageenabled]しました。  これで、ナビゲーションエラーとレンダリング プロセスの失敗のために、組み込みのエラー Web ページのオンとオフを切り替えます。  
 *   .NET 実装 \( #113 `IDispatch` \)[をサポートするために、リモート オブジェクトの挿入を更新][GithubMicrosoftedgeWebviewfeedbackIssue113]しました。  
-*   コンテキスト メニュー \( \ ( \ ) からの要求を処理する [NewWindowRequested][Webview2ReferenceWin32Icorewebview2ViewWebview209488AddNewwindowrequested] [イベント#108][GithubMicrosoftedgeWebviewfeedbackIssue108]しました。  
+*   コンテキスト メニュー \( \( \ ) からの要求を処理する [NewWindowRequested][Webview2ReferenceWin32Icorewebview2ViewWebview209488AddNewwindowrequested] [イベント#108][GithubMicrosoftedgeWebviewfeedbackIssue108]しました。  
 *   ビジュアル ホスティング API にアクセスできる最初の独立した WebView2 プレリリース パッケージをリリースしました。  WebView チームは [APISample を更新して][GithubMicrosoftedgeWebview2samplesMain] 、新しい実験的 API を含む。  
     *   コンポジション ツリーに接続し、WebView に入力を提供する [ICoreWebView2ExperimentalCompositionController][Webview2ReferenceWin32Icorewebview2experimentalcompositioncontrollerViewWebview209488Prerelease] インターフェイスを追加しました。  
     *   [ICoreWebView2ExperimentalPointerInfo][Webview2ReferenceWin32Icorewebview2experimentalpointerinfoViewWebview209488Prerelease]を追加しました `POINTER_INFO` 。  このオブジェクトは SendPointerInput に渡され、ポインター入力を WebView に挿入します。  
