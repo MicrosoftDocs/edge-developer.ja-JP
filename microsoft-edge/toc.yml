@@ -317,6 +317,8 @@
               href: extensions-chromium/getting-started/part1-simple-extension.md
             - name: 拡張機能のチュートリアルを作成する (パート 2)
               href: extensions-chromium/getting-started/part2-content-scripts.md
+            - name: マニフェスト ファイル形式
+              href: extensions-chromium/getting-started/manifest-format.md
             - name: 拡張機能をサイドロードする
               href: extensions-chromium/getting-started/extension-sideloading.md
         - name: 開発者向けガイド
