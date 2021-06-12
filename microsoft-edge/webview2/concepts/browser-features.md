@@ -1,14 +1,29 @@
 ---
-description: Feature differences between Microsoft Edge and WebView2
-title: Feature differences between Microsoft Edge and WebView2
-author: MSEdgeTeam
-ms.author: msedgedevrel
-ms.date: 05/06/2021
-ms.topic: conceptual
-ms.prod: microsoft-edge
-ms.technology: webview
-keywords: IWebView2, IWebView2WebView, WebView2, webview, wpf apps, wpf, edge, ICoreWebView2, ICoreWebView2Host, browser control, edge html
-no-loc: ["Autofill for Addresses", "Autofill for Passwords", Autofill for Payments", Browser Extensions", "Browser Task Manager", "Collections", "Continue-where-I-left-off prompt", "Downloads", "Edge Shopping", "Family Safety", "Favorites", "Hotkeys", "IE Mode" ,"Immersive Reader", "Intrusive Ads", "Read Aloud", "Smart Screen", "Translate", "Tracking Prevention", "Profile and Identity", "Web Payment API", "Windows Defender Application Guard","edge:// URLs"]  
+説明: Microsoft Edge タイトルと WebView2 タイトルの機能の違い: Microsoft Edge と WebView2 作成者の機能の違い: MSEdgeTeam ms.author: msedgedevrel ms.date: 05/06/2021 ms.topic: 概念 ms.prod: microsoft-edge ms.technology: webview キーワード: IWebView2, IWebView2WebView、WebView2、Webview、wpf アプリ、wpf、edge、ICoreWebView2、ICoreWebView2Host、ブラウザー コントロール、エッジ html no-loc:
+- "Autofill for Addresses"
+- "Autofill for Passwords"
+- "Autofill for Payments""
+- "Browser Extensions""
+- "Browser Task Manager"
+- "Collections"
+- "Continue-where-I-left-off prompt"
+- "Downloads"
+- "Edge Shopping"
+- "Family Safety"
+- "Favorites"
+- "Hotkeys"
+- "IE Mode"
+- "Immersive Reader"
+- "Intrusive Ads"
+- "Read Aloud"
+- "Smart Screen"
+- "Translate"
+- "Tracking Prevention"
+- "Profile and Identity"
+- "Web Payment API"
+- "Windows Defender Application Guard"
+- "edge:// URLs"
+
 ---
 # <a name="browser-feature-differences-between-microsoft-edge-and-webview2"></a>ブラウザーの機能の違いMicrosoft Edge WebView2  
 
@@ -48,7 +63,7 @@ WebView2 のコンテキストでは、ブラウザー機能は次の設計ガ�
 | Edge Shopping | オフ | なし | この機能はオフです。  |  
 | Family Safety | オフ | なし | この機能はオフです。  |  
 | Favorites | オフ | なし | この機能はオフです。  |  
-| IE Mode | オフ | なし | この機能はオフです。 WebView2 は IE モードをサポートし、IE と比較して動作の違いがあります (MHT サポートなど)。 |  
+| IE Mode | オフ | なし | この機能はオフです。 WebView2 は IE モードをサポートしません。IE と比較して動作が異なる (MHT や BIN のサポートなど)。 |  
 | Immersive Reader | オフ | なし | この機能は、操作のブラウザー UI によって異なります。  この機能はオフです。  |  
 | Intrusive Ads | オフ | なし | この機能はオフです。  |  
 | キーボード ショートカット | レビューの詳細 | レビューの詳細 | 既定でオフになっているキーボード ショートカットは、意味をなさないか、WebView2 で問題を引き起こします。  これらのショートカットを有効またはオフにしない場合があります。  代わりに、イベントを使用してキーの組み合わせをリッスンし、必要に応じてカスタム `AcceleratorKeyPressed` 応答を作成できます。  詳細については、「その他のキーボード [ショートカット情報」に移動します](#additional-keyboard-shortcuts-information)。 |  
