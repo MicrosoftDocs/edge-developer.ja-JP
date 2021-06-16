@@ -7,12 +7,12 @@ ms.date: 05/04/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: f5e011edd9889f226d705e51838e5d73c2a3b98d
-ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
+ms.openlocfilehash: 00bb5a2c11fcadd4a0eba22c29ac5a2652b9edb6
+ms.sourcegitcommit: 2b225426e90b017f9766ea8568713b95d267cd6f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2021
-ms.locfileid: "11564736"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "11607316"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -120,23 +120,12 @@ microsoft-edge-dev --auto-open-devtools-for-tabs
 
 `F12`DevTools を開くキーボード ショートカット設定を変更するには、次の操作を実行します。  
 
-1.  アイコンを**選択し**、設定 \( `...` \) アイコンを選択 **>設定。**  
-1.  [ **検索の設定] に**「 」 と入力します `Developer Tools` 。  
-    
-    :::image type="complex" source="../media/settings-developer-tools-f12-on.msft.png" alt-text="[F12 キーが押された場合に DevTools を開く] 設定" lightbox="../media/settings-developer-tools-f12-on.msft.png":::
-       **[F12 キーが押された場合に DevTools を開く] 設定**  
-    :::image-end:::  
-    
-1.  **F12 キーが押されているときに [DevTools**を開く] を選択して、設定を \(または on\) に切り替えます。  キーボード ショートカットが DevTools を開くのを止めるには、設定を `F12` オフに切り替えます。  
-    
-    :::image type="complex" source="../media/settings-developer-tools-f12-off.msft.png" alt-text="[F12 キーを押した場合に DevTools を開く] 設定がオフになっている" lightbox="../media/settings-developer-tools-f12-off.msft.png":::
-       **[F12 キーを押した場合に DevTools**を開く] 設定がオフになっている  
-    :::image-end:::  
-    
+1.  `edge://settings/system` に移動します。  
+1.  で `Developer Tools` **、F12 キーが押されているときに [DevTools** を開く] を選択して、設定をオフまたはオンに切り替えます。  キーボード ショートカットが DevTools を開くのを止めるには、設定を `F12` オフに切り替えます。  
 1.  トグルをオフに設定した後 `F12` 、DevTools が開かなくなったか確認します。  
     
     > [!NOTE]
-    > **[F12**キーが押されているときに DevTools を開く] 設定をオフにした後、DevTools を開き、次のいずれかの操作を実行します。  
+    > **[F12] キーが押されているときに DevTools**を開くをオフにした後、次のいずれかの操作を実行して DevTools を開きます。  
     > 
     > *   を選択します `Ctrl` + `Shift` + `I` 。  
     > *   コンテキスト メニュー \(右クリック\) を開き、[検査] > **します**。  
