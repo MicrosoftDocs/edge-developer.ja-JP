@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、Webview2、Webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Controller、ブラウザー コントロール、エッジ html
-ms.openlocfilehash: 0ba9e2b26e5ff5046b9d00d365b0052d42e5a9b1
-ms.sourcegitcommit: afeeeea9fccc3c4c096d7d44c401f4fe87ea2cd7
+ms.openlocfilehash: 2c07430668b269dcada16c96045022fd68398508
+ms.sourcegitcommit: 0e67a56b9dc1f7a86924d142db0efd36fd99d38b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "11599415"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "11608682"
 ---
 # <a name="release-notes-for-webview2-sdk"></a>WebView2 SDK のリリース ノート  
 
@@ -32,14 +32,13 @@ WebView2 チームは、6 週間のケイデンスで [WebView2 SDK][NuGetGaller
 [NuGet \|][NuGetGallery1.0.902-prerelease]読Microsoft Edge最小バージョン: 86.0.616.0 以降 \|完全な API 互換性: 92.0.902.0 以降  
 
 ### <a name="general"></a>全般  
+*   WebView2 の起動パフォーマンスとディスクのフットプリントが向上しました。
 
 #### <a name="experimental-features"></a>実験的な機能  
 
 *   [IsSwipeNavigationEnabled][Webview2ReferenceWin32Icorewebview2experimentalsettings5ViewWebview210902PrereleaseGetIsswipenavigationenabled]プロパティを追加し、エンド ユーザーがタッチ入力が有効なデバイスでスワイプ ジェスチャを使用して WebView2 内を移動する機能を有効または無効にします。
 *   [BrowserProcessExited イベントを追加][Webview2ReferenceWin32Icorewebview2experimentalenvironment4ViewWebview210902PrereleaseAddBrowserprocessexited]しました。
 *   API add_ClientCertificateRequested [追加しました][Webview2ReferenceWin32Icorewebview2experimental3ViewWebview210902PrereleaseAddClientcertificaterequested]。 必要に応じてクライアント証明書ダイアログ プロンプトを表示し、既定のクライアント証明書ダイアログ プロンプトを置き換える必要なメタデータへのアクセスを有効にできます。
-*   AddHostObjectToScriptWithOrigins の iframe 要素のサポートが追加されました。
-*   WebView2 の起動パフォーマンスとディスクのフットプリントが向上しました。
 
 #### <a name="bug-fixes"></a>バグ修正  
 
@@ -63,6 +62,7 @@ WebView2 チームは、6 週間のケイデンスで [WebView2 SDK][NuGetGaller
 *   [ダウンロード API][Webview2ReferenceWin32Icorewebview24ViewWebview210902PrereleaseAddDownloadstarting] が安定版に昇格しました。
 *   [ピンチズーム API][Webview2ReferenceWin32Icorewebview2setting5ViewWebview210902PrereleaseGetIspinchzoomenabled] が安定版に昇格しました。
 *   [AddFrameCreated][Webview2ReferenceWin32Icorewebview24ViewWebview210902PrereleaseAddFramecreated] が stable に昇格しました。
+*   [AddHostObjectToScriptWithOrigins][AddHostObjectToScriptWithOriginsAPI] API は、iFrame 要素のサポートで安定するために昇格しました。
 *   [自動入力 API][Webview2ReferenceWin32Icorewebview2setting4ViewWebview210902PrereleaseGetIsgeneralautofillenabled] が安定した状態に昇格しました。
     > [!NOTE]
     > ローカルに保存されている一般的なオートフィルとパスワードの自動保存情報を削除する現在の API はありません。  ユーザー データ フォルダー全体を削除するデータを削除するコントロールを指定してください。 
@@ -482,8 +482,8 @@ WebView2 チームは、6 週間のケイデンスで [WebView2 SDK][NuGetGaller
 *   > [!IMPORTANT]
     > **お**知らせ : WebView2 は .NET Framework 4.6.2 以降の Windows フォームと WPF、プレリリース パッケージでは .NET Core 3.0 以降を**サポートしています**。  
     
-*   WPF アプリの構築の詳細については[、「WPF はじめにガイド」および「WebView2][Webview2GetStartedWpf] [WPF Reference][DotnetApiMicrosoftWebWebview2Wpf] for WPF 固有の API」に移動します。  
-*   Windows フォーム アプリの構築の詳細については[、「Windows フォーム はじめに ガイド][Webview2GetStartedWinforms]」および「webView2 Windows フォーム リファレンス[][DotnetApiMicrosoftWebWebview2Winforms]」に移動して、Windows フォーム固有の API を参照してください。  
+*   WPF アプリの作成の詳細については[、「WPF][Webview2GetStartedWpf]開始するガイド」および「WebView2 WPF [Reference][DotnetApiMicrosoftWebWebview2Wpf] for WPF 固有の API」に移動します。  
+*   Windows フォーム アプリの構築の詳細については[、「Windows フォーム 開始する ガイド][Webview2GetStartedWinforms]」および「WebView2 Windows フォーム[][DotnetApiMicrosoftWebWebview2Winforms]リファレンス」に移動して、Windows フォーム固有の API を参照してください。  
 *   CoreWebView2 API の詳細については [、「.NET リファレンス」に移動します][DotnetApiMicrosoftWebWebview2Core]。  
 *   > [!CAUTION]
     > **既知の問題**: WebView チームは、今後のリリースで解決されるプレリリースのいくつかの問題を認識しています。  
@@ -527,7 +527,7 @@ WebView2 チームは、6 週間のケイデンスで [WebView2 SDK][NuGetGaller
 *   [ICoreWebView2EnvironmentOptions][Webview2ReferenceWin32Icorewebview2environmentoptionsViewWebview209488]インターフェイスが追加されました。これは、アプリが対象とする Evergreen WebView2 ランタイムのバージョンを決定するために使用できます。  
 *   [IsBuiltInErrorPageEnabled 設定を追加][Webview2ReferenceWin32Icorewebview2settingsViewWebview209488GetIsbuiltinerrorpageenabled]しました。  これで、ナビゲーションエラーとレンダリング プロセスの失敗のために、組み込みのエラー Web ページのオンとオフを切り替えます。  
 *   .NET 実装 \( #113 `IDispatch` \)[をサポートするために、リモート オブジェクトの挿入を更新][GithubMicrosoftedgeWebviewfeedbackIssue113]しました。  
-*   コンテキスト メニュー \( \( \ ) からの要求を処理する [NewWindowRequested][Webview2ReferenceWin32Icorewebview2ViewWebview209488AddNewwindowrequested] [イベント#108][GithubMicrosoftedgeWebviewfeedbackIssue108]しました。  
+*   コンテキスト メニュー \( \ ( \ ) からの要求を処理する [NewWindowRequested][Webview2ReferenceWin32Icorewebview2ViewWebview209488AddNewwindowrequested] [イベント#108][GithubMicrosoftedgeWebviewfeedbackIssue108]しました。  
 *   ビジュアル ホスティング API にアクセスできる最初の独立した WebView2 プレリリース パッケージをリリースしました。  WebView チームは [APISample を更新して][GithubMicrosoftedgeWebview2samplesMain] 、新しい実験的 API を含む。  
     *   コンポジション ツリーに接続し、WebView に入力を提供する [ICoreWebView2ExperimentalCompositionController][Webview2ReferenceWin32Icorewebview2experimentalcompositioncontrollerViewWebview209488Prerelease] インターフェイスを追加しました。  
     *   [ICoreWebView2ExperimentalPointerInfo][Webview2ReferenceWin32Icorewebview2experimentalpointerinfoViewWebview209488Prerelease]を追加しました `POINTER_INFO` 。  このオブジェクトは SendPointerInput に渡され、ポインター入力を WebView に挿入します。  
@@ -922,6 +922,9 @@ WebView2 SDK は公式の Win32 C++ Beta バージョンで、フィードバッ
 [Webview2ReferenceWin32Icorewebview24ViewWebview210902PrereleaseAddDownloadstarting]: /microsoft-edge/webview2/reference/win32/icorewebview2_4?view=webview2-1.0.902-prerelease&preserve-view=true#add_downloadstarting "add_DownloadStarting - インターフェイス ICoreWebView2_4 |Microsoft Docs"
 [Webview2ReferenceWin32Icorewebview24ViewWebview210902PrereleaseAddFramecreated]: /microsoft-edge/webview2/reference/win32/icorewebview2_4?view=webview2-1.0.902-prerelease&preserve-view=true#add_framecreated "add_FrameCreated - インターフェイス ICoreWebView2_4 |Microsoft Docs"
 [Webview2ReferenceWin32Icorewebview2setting4ViewWebview210902PrereleaseGetIsgeneralautofillenabled]: /microsoft-edge/webview2/reference/win32/icorewebview2settings4?view=webview2-1.0.902-prerelease&preserve-view=true#get_isgeneralautofillenabled "get_IsGeneralAutofillEnabled - インターフェイス ICoreWebView2Settings4 |Microsoft Docs"
+
+[AddHostObjectToScriptWithOriginsAPI]: /microsoft-edge/webview2/reference/win32/icorewebview2frame?view=webview2-1.0.902-prerelease&preserve-view=true#addhostobjecttoscriptwithorigins "AddHostObjectToScriptWithOrigins |Microsoft Docs"
+
 [Webview2ReferenceWin32Icorewebview2setting5ViewWebview210902PrereleaseGetIspinchzoomenabled]: /microsoft-edge/webview2/reference/win32/icorewebview2settings5?view=webview2-1.0.902-prerelease&preserve-view=true#get_ispinchzoomenabled "get_IsPinchZoomEnabled - インターフェイス ICoreWebView2Settings5 |Microsoft Docs"
 
 [Webview2ReferenceWin32Icorewebview2environmentoptionsGetAllowsinglesignonusingosprimaryaccount]: /microsoft-edge/webview2/reference/win32/icorewebview2environmentoptions#get_allowsinglesignonusingosprimaryaccount "get_AllowSingleSignOnUsingOSPrimaryAccount - インターフェイス ICoreWebView2EnvironmentOptions |Microsoft Docs"
