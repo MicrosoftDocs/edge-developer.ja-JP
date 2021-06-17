@@ -4,14 +4,15 @@ title: Internet Explorer から Microsoft Edge にユーザーを移動させる
 author: MSEdgeTeam
 ms.date: 11/13/2020
 ms.author: msedgedevrel
+ms.topic: conceptual
 ms.prod: microsoft-edge
 keywords: microsoft edge, 互換性, Web プラットフォーム, internet explorer
-ms.openlocfilehash: c2106955ed79bd28dc1f847dee220944bb014689
-ms.sourcegitcommit: bff24ab1f0a66aaf4c7f5ff81cea3eb28c6d8380
+ms.openlocfilehash: dd8db64311b60ff0c740776de94def88f22c2e96
+ms.sourcegitcommit: 0e67a56b9dc1f7a86924d142db0efd36fd99d38b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2021
-ms.locfileid: "11461137"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "11608668"
 ---
 # <a name="moving-users-to-microsoft-edge-from-internet-explorer"></a><span data-ttu-id="c4f56-104">Internet Explorer から Microsoft Edge にユーザーを移動させる</span><span class="sxs-lookup"><span data-stu-id="c4f56-104">Moving users to Microsoft Edge from Internet Explorer</span></span>  
 
