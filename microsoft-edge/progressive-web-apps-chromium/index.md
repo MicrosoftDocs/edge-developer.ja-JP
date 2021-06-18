@@ -1,6 +1,6 @@
 ---
-description: プログレッシブ Web アプリ (Chromium) は、アプリでネイティブWindows 10。  ここでは、Web 開発者として知る必要があるすべてについて説明します。
-title: プログレッシブ Web Apps on Windows
+description: プログレッシブ Web アプリ (クロム) は、Windows 10 でネイティブに実行されます。  ここでは、Web 開発者として知る必要があるすべてについて説明します。
+title: Windows 上のプログレッシブ Web アプリ
 author: MSEdgeTeam
 ms.author: msedgedevrel
 ms.date: 05/06/2021
@@ -8,16 +8,16 @@ ms.topic: article
 ms.prod: microsoft-edge
 ms.technology: pwa
 keywords: プログレッシブ Web アプリ、PWA、Edge、JavaScript、Windows、UWP、Microsoft Store
-ms.openlocfilehash: f1f5370af0710927f66c8231274fe307cb3ee2a4
-ms.sourcegitcommit: 7f7922dbb6af87ecac1378d18359125770c5b8e5
+ms.openlocfilehash: 47c6f98329a1da67e0f2c1a8e6243250992fb599
+ms.sourcegitcommit: f4488cf2dfef0aeec04712b2ed933d68b8e93a94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2021
-ms.locfileid: "11536810"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "11608838"
 ---
-# <a name="progressive-web-apps-on-windows-overview"></a>プログレッシブ Web Apps on Windows概要  
+# <a name="progressive-web-apps-on-windows-overview"></a>Windows 上のプログレッシブ Web アプリの概要  
 
-[プログレッシブ Web Apps][MDNApps] \(PWAs\) は、プラットフォーム間の相互運用性を実現するオープン Web テクノロジへのアクセスを提供し、デバイス用にカスタマイズされたネイティブのアプリのようなエクスペリエンスをユーザーに提供します。  PWA は、サポート[][AListApartUnderstandingProgressiveEnhancement]プラットフォーム上のネイティブ アプリのように機能するために段階的に拡張される Web サイトです。  PWA では、Web アプリとネイティブ アプリの良いところが組み合わされています。  
+[プログレッシブ Web Apps][MDNApps] \(PWAs\) は、プラットフォーム間の相互運用性を実現するオープン Web テクノロジへのアクセスを提供し、デバイス用にカスタマイズされたネイティブのアプリのようなエクスペリエンスをユーザーに提供します。 PWA は、サポート[][AListApartUnderstandingProgressiveEnhancement]プラットフォーム上のネイティブ アプリのように機能するために段階的に拡張される Web サイトです。 PWA では、Web アプリとネイティブ アプリの良いところが組み合わされています。  
 
 :::row:::
     :::column:::
@@ -119,17 +119,17 @@ ms.locfileid: "11536810"
     :::column-end:::
 :::row-end:::  
 
-既存の Web サイトを既存の web サイトに構築し、PWAを強化します。  機能拡張には、プッシュ通知、アプリのような統合、オフラインサポートが含まれます。  引き続き、ユーザーが検索とリンク共有を通じてPWAを検出するために、オープン Web 上で対象ユーザーを構築します。  何より、アプリは Web サーバー コードを使用して更新されます。  
+既存の Web サイトを PWA に \(または convert\) ビルドして、ユーザーとのエンゲージメントを強化します。 機能拡張には、プッシュ通知、アプリのような統合、オフラインサポートが含まれます。 引き続き、ユーザーが検索とリンク共有を通じて PWA を検出するためのオープン Web 上で対象ユーザーを構築します。 何より、アプリは Web サーバー コードを使用して更新されます。  
 
-## <a name="pwas-on-microsoft-edge-chromium"></a>PWA on Microsoft Edge (Chromium)  
+## <a name="pwas-on-microsoft-edge-chromium"></a>Microsoft Edge の PWA (クロム)  
 
-Web 標準 API を対象とするプログレッシブ Web アプリを構築する場合、アプリはプラットフォームやデバイス間で展開され、利用可能なデバイス固有の機能を利用できます。  \(Microsoft Edge Chromium\) の PWA は、Web サイトに次の利点を追加します。  
+Web 標準 API を対象とするプログレッシブ Web アプリを構築する場合、アプリはプラットフォームやデバイス間で展開され、利用可能なデバイス固有の機能を利用できます。 Microsoft Edge \(Chromium\) の PWA は、Web サイトに次の利点を追加します。  
 
 *   アプリは標準ベースの Web プラットフォーム上に構築されています。  
 *   ユーザーがブラウザーから直接アプリをインストールできます。  
 *   ユーザーがストア ベースの展開または登録なしでアプリをインストールできます。  
     
-デスクトップ PWA は、\(Chromium\) を使用Microsoft Edgeプラットフォームでサポートされます。 Microsoft Edge \(Chromium\) は、Windows 7、Windows 10、および macOS で使用できます。  以下の利点が含まれています。  
+デスクトップ PWA は、Microsoft Edge \(Chromium\) が利用可能なプラットフォームでサポート [されています](https://www.microsoft.com/edge)。 以下の利点が含まれています。
 
 *   ナビゲーション バーの [インストール] アイコンを使用して、ブラウザー **内からアプリ** を直接インストールできます。  
     
@@ -137,30 +137,30 @@ Web 標準 API を対象とするプログレッシブ Web アプリを構築す
        アプリのフライアウトとアイコンのインストール  
     :::image-end:::  
     
-*   [アプリ] メニューからアプリをインストール、実行 **、設定**  >  **することもできます**。  
+*   [設定アプリ] メニューからアプリをインストール、実行、**** および  >  **管理**することもできます。  
     
     :::image type="complex" source="./media/app-menus.png" alt-text="[設定] の下のアプリ メニュー項目" lightbox="./media/app-menus.png":::
        [設定] の下のアプリ メニュー項目  
     :::image-end:::  
     
-*   Web 通知は、ユーザー通知システムWindows統合されます。  
+*   Web 通知は Windows 通知システムに統合されています  
 *   アプリをインストールしたブラウザー プロファイルを持つ共有 Cookie ストア  
 *   証明書の検証、サイトのアクセス許可、追跡保護、ブラウザー拡張機能を含む **[設定** ] および [\] メニューを使用して他のブラウザー機能 `...` にアクセスする  
-*   アプリのデバッグ[Microsoft Edge DevTools][DevtoolsProgressiveWebApps]へのフル アクセス  
+*   アプリをデバッグ [する Microsoft Edge DevTools][DevtoolsProgressiveWebApps] へのフル アクセス  
     
 > [!NOTE]
-> 利点、今後の機能PWA短いデモの詳細については、「[ビルド 2020 PWA セッション」を参照してください][BuildVideo]。 
+> PWA の利点、今後の機能、および短いデモの詳細については、「ビルド [2020 PWA セッション」に移動します][BuildVideo]。 
 
 ## <a name="requirements"></a>要件  
 
-サーバーホスト型 web アプリPWA実行するには、次の最小要件を含める必要があります。  
+PWA として実行するには、サーバーホスト型 Web アプリに以下の最小要件を含める必要があります。  
 
 :::row:::
    :::column span="1":::
       [HTTPS][WikiHttps]  
    :::column-end:::
    :::column span="2":::
-      サーバーまたはアプリの通信にセキュリティで保護された接続を提供することで、ユーザーを保護します。  Service Workers および他PWAテクノロジは、セキュリティで保護された接続 \(またはデバッグ目的\から) で提供される Web リソース `localhost` でのみ動作します。  
+      サーバーまたはアプリの通信にセキュリティで保護された接続を提供することで、ユーザーを保護します。  Service Workers および他の PWA テクノロジは、セキュリティで保護された接続 \(またはデバッグ目的\) を使用して提供される Web リソースでのみ `localhost` 動作します。  
    :::column-end:::
 :::row-end:::  
 :::row:::
@@ -176,18 +176,18 @@ Web 標準 API を対象とするプログレッシブ Web アプリを構築す
       [Web アプリ マニフェスト][MDNWebAppManifest]  
    :::column-end:::
    :::column span="2":::
-      web アプリに関する重要な情報を説明する JSON ベースのメタデータ ファイルを提供し、Windows 10 や他のホスト プラットフォームが PWA ユーザーにインストール可能なネイティブ アプリのようなエクスペリエンスを提供します。  主要な情報には、アイコン、言語、URL エントリ ポイントが含まれます。 
+      Web アプリに関する重要な情報を説明する JSON ベースのメタデータ ファイルを提供し、Windows 10 や他のホスト プラットフォームが PWA ユーザーにインストール可能なネイティブ アプリのようなエクスペリエンスを提供します。  主要な情報には、アイコン、言語、URL エントリ ポイントが含まれます。 
    :::column-end:::
 :::row-end:::  
 
-最適な機能をPWA、アプリは次の要件も満たしている必要があります。  
+PWA を高くするには、アプリが次の要件も満たしている必要があります。  
 
 :::row:::
    :::column span="1":::
       [ブラウザー間の互換性][MDNCrossBrowserTesting]  
    :::column-end:::
    :::column span="2":::
-      さまざまなブラウザー PWA環境で[テストを行って、][MicrosoftDeveloperEdgeToolsRemote]アプリケーションが動作します。  
+      異なるブラウザーと環境でテスト [を行って][MicrosoftDeveloperEdgeToolsRemote] 、PWA が動作を確認します。  
    :::column-end:::
 :::row-end:::  
 :::row:::
@@ -203,7 +203,7 @@ Web 標準 API を対象とするプログレッシブ Web アプリを構築す
       *   [メディア クエリ][MDNMediaQueries]  
       *   [レスポンシブ イメージ][MDNResponsiveImages]  
           
-      ブラウザー[のデバイス エミュレーション][DevToolsGuideDeviceModeTestingOtherBrowsers]ツールを使用してローカルでテストするか、Windows または[Android][DevtoolsRemoteDebuggingIndex]でリモート デバッグ セッション[を][DevtoolsRemoteDebuggingWindows]作成して、ターゲット デバイスで直接テストします。
+      ブラウザー [のデバイス エミュレーション][DevToolsGuideDeviceModeTestingOtherBrowsers] ツールを使用してローカルでテストするか [、Windows][DevtoolsRemoteDebuggingWindows] または [Android][DevtoolsRemoteDebuggingIndex] でリモート デバッグ セッションを作成して、ターゲット デバイスで直接テストします。
    :::column-end:::
 :::row-end:::  
 :::row:::
@@ -224,22 +224,22 @@ Web 標準 API を対象とするプログレッシブ Web アプリを構築す
 :::row-end:::  
 :::row:::
    :::column span="1":::
-      [Chromium PWAチェックリスト][WebDevGoodPwaChecklist]  
+      [クロム PWA チェックリスト][WebDevGoodPwaChecklist]  
    :::column-end:::
    :::column span="2":::
-      Google 基準計画PWAチェックリストと比較して、PWA確認します。  
+      Google ベースライン PWA チェックリストに対して PWA を確認します。  
    :::column-end:::
 :::row-end:::  
 
 > [!NOTE]
-> アプリにPWAするにはMicrosoft Storeのプログレッシブ Web [][MicrosoftDeveloperStore] [アプリに移動][PwaChromiumMicrosoftStore]Microsoft Store。  
+> PWA を Microsoft Store アプリに変更するには [、Microsoft][MicrosoftDeveloperStore] [ストアのプログレッシブ Web アプリに移動します][PwaChromiumMicrosoftStore]。  
   
 ## <a name="see-also"></a>関連項目  
 
 *   [ミス バトリング PWA][Davrous20191018MythBustingPwasNewEdgeEdition]  
 *   [プログレッシブ Web アプリのプログレッシブ ロードマップ][CloudfourThinksProgressiveRoadmapYourWebApp]  
 *   [プログレッシブ Web アプリを使用したオフライン POST][MediumWebEdgeOfflinePostsProgressiveWebApps]  
-*   [PWAQ&A][AaronGustafsonNotebookPwaQa]  
+*   [PWA Q&A][AaronGustafsonNotebookPwaQa]  
 *   [Web でのベット][JoretegBlogBettingWeb]  
 *   [プログレッシブ Web アプリの名前付け][Fberriman20170626NamingProgressiveWebApps]  
 *   [フレームワークを使用しないプログレッシブ Web アプリの設計と構築 (パート 1)][Smashingmagazine201907ProgressiveWebAppFrameworkPart1]  
@@ -252,28 +252,28 @@ Web 標準 API を対象とするプログレッシブ Web アプリを構築す
 [DevtoolsRemoteDebuggingWindows]: ../devtools-guide-chromium/remote-debugging/windows.md "Windows 10 デバイスのリモート デバッグの概要 | Microsoft Docs"  
 [DevToolsGuideDeviceModeTestingOtherBrowsers]: ../devtools-guide-chromium/device-mode/testing-other-browsers.md "他のブラウザーをエミュレートしてテスト|Microsoft Docs"  
 [DevtoolsProgressiveWebApps]: ../devtools-guide-chromium/progressive-web-apps/index.md "プログレッシブ Web アプリのデバッグ |Microsoft Docs"  
-[PwaChromiumMicrosoftStore]: ./microsoft-store.md "プログレッシブ Web アプリをアプリに発行Microsoft Store |Microsoft Docs"
+[PwaChromiumMicrosoftStore]: ./microsoft-store.md "プログレッシブ Web アプリを Microsoft Store アプリに発行|Microsoft Docs"
 
-[WindowsUWPControlsPatternTilesNotificationsWns]: /windows/uwp/controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview.md "Windowsプッシュ Notification Services (WNS) の概要|Microsoft Docs"  
+[WindowsUWPControlsPatternTilesNotificationsWns]: /windows/uwp/controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview.md "Windows プッシュ Notification Services (WNS) の概要|Microsoft Docs"  
 [WindowsUWPDesignDevicesDesigningTv]: /windows/uwp/design/devices/designing-for-tv.md "Xbox とテレビのデザイン|Microsoft Docs"  
 [WindowsUWPDesignDevicesIndex]: /windows/uwp/design/devices/index.md "UWP デバイスの UI に関する考慮事項|Microsoft Docs"  
-[WindowsUWPGetStartedGuide]: /windows/uwp/get-started/universal-application-platform-guide.md "ユニバーサル Windows プラットフォーム (UWP) アプリ|Microsoft Docs"  
+[WindowsUWPGetStartedGuide]: /windows/uwp/get-started/universal-application-platform-guide.md "ユニバーサル Windows プラットフォーム (UWP) アプリとは何|Microsoft Docs"  
 [WindowsUWPLaunchResumeBackgroundTasks]: /windows/uwp/launch-resume/support-your-app-with-background-tasks.md "バックグラウンド タスクを使用してアプリをサポート|Microsoft Docs"  
-[WindowsUWPPublishIndex]: /windows/uwp/publish/index.md "アプリWindowsゲームを公開|Microsoft Docs"  
+[WindowsUWPPublishIndex]: /windows/uwp/publish/index.md "Windows アプリとゲーム を公開|Microsoft Docs"  
 [WindowsUWPPublishDeveloperAccount]: /windows/uwp/publish/opening-a-developer-account.md "開発者アカウントを開|Microsoft Docs"  
 
-[WindowsBlogsWelcomingPWAsEdgeWindows]: https://blogs.windows.com/msedgedev/2018/02/06/welcoming-progressive-web-apps-edge-windows-10/#56z7mJwKsykfbR4I.97 "プログレッシブ Web アプリを使ったMicrosoft EdgeとWindows 10 - Windows ブログ"  
-[MicrosoftDeveloperEdgePlatformStatusBackgroundSync]: https://developer.microsoft.com/microsoft-edge/platform/status/backgroundsyncapi "バックグラウンド同期 API - Microsoft Edgeの状態"  
-[MicrosoftDeveloperEdgePlatformStatusWebAppManifest]: https://developer.microsoft.com/microsoft-edge/platform/status/webapplicationmanifest "Web アプリ マニフェスト - Microsoft Edgeの状態"  
+[WindowsBlogsWelcomingPWAsEdgeWindows]: https://blogs.windows.com/msedgedev/2018/02/06/welcoming-progressive-web-apps-edge-windows-10/#56z7mJwKsykfbR4I.97 "プログレッシブ Web アプリを Microsoft Edge と Windows 10 に歓迎する - Windows ブログ"  
+[MicrosoftDeveloperEdgePlatformStatusBackgroundSync]: https://developer.microsoft.com/microsoft-edge/platform/status/backgroundsyncapi "バックグラウンド同期 API - Microsoft Edge プラットフォームの状態"  
+[MicrosoftDeveloperEdgePlatformStatusWebAppManifest]: https://developer.microsoft.com/microsoft-edge/platform/status/webapplicationmanifest "Web アプリ マニフェスト - Microsoft Edge プラットフォームの状態"  
 [MicrosoftDeveloperEdgeToolsRemote]: https://developer.microsoft.com/microsoft-edge/tools/remote "インスタント テスト"  
 [MicrosoftDeveloperWindowsMixedReality]: https://developer.microsoft.com/windows/mixed-reality "開発者向け Mixed Reality"  
 [MicrosoftDeveloperWindowsSurfaceHub]: https://developer.microsoft.com/windows/surfacehub "Microsoft Surface Hub"  
 [MicrosoftDeveloperStore]: https://developer.microsoft.com/store "Microsoft Developer Store"  
-[MicrosoftEdge]: https://www.microsoft.com/edge "新しいブラウザー Microsoft Edgeダウンロード"  
-[MicrosoftSupportWindowsFocusAssist]: https://support.microsoft.com/help/4026996/windows-10-turn-focus-assist-on-or-off "[フォーカス アシスト] をオンまたはオフにするWindows 10"  
-[MicrosoftSupportWindowsNotificationSettings]: https://support.microsoft.com/help/4028678/windows-10-change-notification-settings "[通知の設定を変更する] Windows 10"  
+[MicrosoftEdge]: https://www.microsoft.com/edge "新しい Microsoft Edge ブラウザーをダウンロードする"  
+[MicrosoftSupportWindowsFocusAssist]: https://support.microsoft.com/help/4026996/windows-10-turn-focus-assist-on-or-off "Windows 10 でフォーカス アシストのオンとオフを切り替える"  
+[MicrosoftSupportWindowsNotificationSettings]: https://support.microsoft.com/help/4028678/windows-10-change-notification-settings "Windows 10 で通知設定を変更する"  
 
-[AaronGustafsonNotebookPwaQa]: https://www.aaron-gustafson.com/notebook/pwa-qa "PWAQ&A"  
+[AaronGustafsonNotebookPwaQa]: https://www.aaron-gustafson.com/notebook/pwa-qa "PWA Q&A"  
 
 [AListApartUnderstandingProgressiveEnhancement]: https://alistapart.com/article/understandingprogressiveenhancement "プログレッシブエンハンスメントについて - リストを離れて"  
 
@@ -299,7 +299,7 @@ Web 標準 API を対象とするプログレッシブ Web アプリを構築す
 [MDNSyncManager]: https://developer.mozilla.org/docs/Web/API/SyncManager "SyncManager |MDN"  
 [MDNWebAppManifest]: https://developer.mozilla.org/docs/Web/Manifest "Web アプリ マニフェスト |MDN"  
 
-[BuildVideo]: https://www.youtube.com/watch?v=y4p_QHZtMKM "PWAビデオ"  
+[BuildVideo]: https://www.youtube.com/watch?v=y4p_QHZtMKM "PWA ビデオ"  
 
 [CloudfourThinksProgressiveRoadmapYourWebApp]: https://cloudfour.com/thinks/a-progressive-roadmap-for-your-progressive-web-app "プログレッシブ Web アプリのプログレッシブ ロードマップ"  
 

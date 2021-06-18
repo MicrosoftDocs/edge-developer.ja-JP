@@ -1,6 +1,6 @@
 ---
-description: WebView2 コントロールを使用して Win32、.NET、UWP アプリで web Microsoft Edgeをホストする
-title: Microsoft Edge WebView2 control
+description: Microsoft Edge WebView2 コントロールを使用して Win32、.NET、UWP アプリで Web コンテンツをホストする
+title: Microsoft Edge WebView2 コントロール
 author: MSEdgeTeam
 ms.author: msedgedevrel
 ms.date: 05/06/2021
@@ -10,31 +10,31 @@ ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、CoreWebView2、ICoreWebView2Host、ブラウザー コントロール、edge html、Windows フォーム、WinForms、WPF、.NET、WinUI、Project Reunion
 ms.openlocfilehash: 9c1aa073294fc649223da19c44850dc4335f6c00
 ms.sourcegitcommit: 7f7922dbb6af87ecac1378d18359125770c5b8e5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2021
 ms.locfileid: "11536853"
 ---
 # <a name="introduction-to-microsoft-edge-webview2"></a>Microsoft Edge WebView2 の概要  
 
-WebView2 Microsoft Edgeを使用すると、Web テクノロジ \(HTML、CSS、JavaScript\) をネイティブ アプリに埋め込みできます。  WebView2 コントロールは、Microsoft Edge [(Chromium)][MicrosoftedgeinsiderMain]をレンダリング エンジンとして使用して、ネイティブ アプリに Web コンテンツを表示します。  WebView2 を使用すると、ネイティブ アプリの異なる部分に Web コードを埋め込む可能性があります。  1 つの WebView インスタンス内ですべてのネイティブ アプリをビルドします。  WebView2 アプリの構築を開始する方法の詳細については、「WebView2 アプリの作成」に[はじめに。](#get-started)  
+Microsoft Edge WebView2 を使用すると、Web テクノロジ \(HTML、CSS、JavaScript\) をユーザーのネイティブ アプリに埋め込みできます。  WebView2 コントロールは、[Microsoft Edge (Chromium)][MicrosoftedgeinsiderMain]をレンダリング エンジンとして使用して、ネイティブ アプリに Web コンテンツを表示します。  WebView2 を使用すると、ネイティブ アプリの異なる部分に Web コードを埋め込むことが可能になります。  1 つの WebView インスタンスを使用して、すべてのネイティブ アプリをビルドします。  WebView2 アプリの構築を開始する方法の詳細については、「[開始する方法](#get-started)」をご覧ください。  
 
-:::image type="complex" source="./media/WebView2/what-webview.png" alt-text="WebView とは" lightbox="./media/WebView2/what-webview.png":::
-   WebView とは  
+:::image type="complex" source="./media/WebView2/what-webview.png" alt-text="WebView とは?" lightbox="./media/WebView2/what-webview.png":::
+   WebView とは?  
 :::image-end:::    
 
 ## <a name="hybrid-app-approach"></a>ハイブリッド アプリのアプローチ  
 
-開発者は、多くの場合、Web アプリまたはネイティブ アプリの作成を決定する必要があります。  意思決定は、リーチとパワーの間のトレードオフにかかっています。  Web アプリを使用すると、広範囲にアクセスできます。  Web 開発者は、さまざまなプラットフォームでほとんどのコードを再利用できます。  ネイティブ プラットフォームのすべての機能にアクセスするには、ネイティブ アプリを使用します。  
+開発者はひんぱんに、Web アプリを使用するか、またはネイティブ アプリを作成するかの選択をすることが必要になります。  意思決定は、リーチとパワーの間のトレードオフにかかっています。  Web アプリを使用すると、広範囲にアクセスできます。  Web 開発者は、さまざまなプラットフォームでほとんどのコードを再利用する可能性があります。  ネイティブ プラットフォームのすべての機能にアクセスするには、ネイティブ アプリを使用します。  
 
-:::image type="complex" source="./media/WebView2/web-native.png" alt-text="Web native" lightbox="./media/WebView2/web-native.png":::
-   Web native  
+:::image type="complex" source="./media/WebView2/web-native.png" alt-text="Web ネイティブ" lightbox="./media/WebView2/web-native.png":::
+   Web ネイティブ  
 :::image-end:::    
 
-ハイブリッド アプリを使用すると、開発者は両方の世界で最高の機能を利用できます。  ハイブリッド アプリ開発者は、次の利点を利用できます。  
+ハイブリッド アプリを使用すると、開発者は Webアプリとネイティブ アプリの両方の最高の機能を利用できます。  ハイブリッド アプリ開発者は、次の利点からの恩恵を受けることができます。  
 
 *   Web プラットフォームのユビキタスと強さ。  
-*   ネイティブ プラットフォームの機能とフル機能。  
+*   ネイティブ プラットフォームのパワーとフル機能。  
     
 ## <a name="webview2-benefits"></a>WebView2 の利点   
 
@@ -51,7 +51,7 @@ WebView2 Microsoft Edgeを使用すると、Web テクノロジ \(HTML、CSS、J
 :::row-end:::  
 :::row:::
    :::column span="1":::
-      ### <a name="web-ecosystem--skillset"></a>Web エコシステム&スキルセット  
+      ### <a name="web-ecosystem--skillset"></a>Web エコシステム & スキルセット  
    :::column-end:::
    :::column span="1":::
       ### <a name="rapid-innovation"></a>急速な革新  
@@ -62,13 +62,13 @@ WebView2 Microsoft Edgeを使用すると、Web テクノロジ \(HTML、CSS、J
 :::row-end:::  
 :::row:::
    :::column span="1":::
-      Web エコシステム内に存在する web プラットフォーム、ライブラリ、ツール、人材をすべて活用できます。  
+      Web エコシステム内に存在する Web プラットフォーム、ライブラリ、ツール、人材をすべて活用できます。  
    :::column-end:::
    :::column span="1":::
       Web 開発により、迅速な展開とイテレーションが可能になります。  
    :::column-end:::
    :::column span="1":::
-      7、7、Windows、およびWindows 8ユーザー エクスペリエンスWindows 10。  
+      Windows 7、Windows 8、および Windows 10 全体での一貫したユーザー エクスペリエンへのサポート。  
    :::column-end:::
 :::row-end:::  
 :::row:::
@@ -95,7 +95,7 @@ WebView2 Microsoft Edgeを使用すると、Web テクノロジ \(HTML、CSS、J
 :::row-end:::  
 :::row:::
    :::column span="1":::
-      ネイティブ APIs のフル セットにアクセスします。  
+      ネイティブ API のフル セットにアクセスします。  
    :::column-end:::
    :::column span="1":::
       コードベースに Web コードを追加すると、複数のプラットフォームで再利用が増えます。  
@@ -120,7 +120,7 @@ WebView2 Microsoft Edgeを使用すると、Web テクノロジ \(HTML、CSS、J
       ### <a name="evergreen-distribution"></a>Evergreen 分布  
    :::column-end:::
    :::column span="1":::
-      ### <a name="fixed"></a>fixed  
+      ### <a name="fixed"></a>固定  
    :::column-end:::
    :::column span="1":::
       ### <a name="incremental-adoption"></a>段階的導入  
@@ -131,35 +131,35 @@ WebView2 Microsoft Edgeを使用すると、Web テクノロジ \(HTML、CSS、J
       最新バージョンの Chromium を使用して、定期的なプラットフォームの更新とセキュリティ更新プログラムを利用します。  
    :::column-end:::
    :::column span="1":::
-      \(soon\) アプリ内のChromiumパッケージ化を選択します。  
+      \( 近日公開 \) アプリ内の Chromium ビットをパッケージ化することを選択します。  
    :::column-end:::
    :::column span="1":::
-      Web コンポーネントをアプリに 1 つ 1 つ追加します。  
+      Web コンポーネントをアプリに 1 つずつ追加します。  
    :::column-end:::
 :::row-end:::  
 
 ## <a name="get-started"></a>作業の開始  
 
-WebView2 コントロールを使用してアプリをビルドしてテストするには、 <!--both [Microsoft Edge (Chromium)][MicrosoftedgeinsiderDownload] and  -->[WebView2 SDK がインストール][NugetPackagesMicrosoftWebWebView2]されています。  開始するには、次のいずれかのオプションから一つ選択します。  
+WebView2 コントロールを使用してアプリをビルドしてテストするには、以下が必要です <!--both [Microsoft Edge (Chromium)][MicrosoftedgeinsiderDownload] and  -->[WebView2 SDK][NugetPackagesMicrosoftWebWebView2] がインストールされていること。  開始するには、次のいずれかのオプションから １つ選択します。  
 
 *   [はじめに Win32 C/C++ を使用する][Webview2GetStartedWin32]  
-*   [はじめに WPF の使用][Webview2GetStartedWpf]  
-*   [はじめに WinForms の使用][Webview2GetStartedWinforms]  
-*   [はじめに WinUI3 の使用][Webview2GetStartedWinui]  
+*   [WPF の使用を開始する][Webview2GetStartedWpf]  
+*   [WinForms の使用を開始する][Webview2GetStartedWinforms]  
+*   [WinUI3 の使用を開始する][Webview2GetStartedWinui]  
     
 [WebView2 サンプル][GithubMicrosoftedgeWebview2samples]リポジトリには、すべての WebView2 SDK 機能と API の使用パターンを示すサンプルが含まれています。  WebView2 SDK に追加される機能が多い場合、サンプル アプリは更新されます。  
 
 ## <a name="supported-platforms"></a>サポートされているプラットフォーム  
 
-一般提供 \(GA\) またはプレビュー版は、次のプログラミング環境で利用できます。  
+一般提供 \ (GA\) またはプレビュー版は、次のプログラミング環境で利用できます。  
 
-*   Win32 C/c + + \(GA \)  
+*   Win32 C/c + + \ (GA \)  
 *   .NET Framework 4.5 以降  
 *   .NET Core 3.1 以降  
 *   .NET 5  
-*   [WinUI 3.0][UwpToolkitsWinui3] \(プレビュー \)  
+*   [WinUI 3.0][UwpToolkitsWinui3] \ (プレビュー \)  
     
-WebView2 アプリは、次のバージョンのアプリで実行Windows。  
+WebView2 アプリは、次のバージョンの Windowsで実行可能です。。  
 
 *   Windows 10  
 *   Windows 8.1  
@@ -173,7 +173,7 @@ WebView2 アプリは、次のバージョンのアプリで実行Windows。
 > [!IMPORTANT]
 > \ * \ * WebView2 support for Windows 7 および Windows Server 2008 R2 のサポートサイクルは、Microsoft Edge と同じです。  詳細については、[Microsoft Edge でサポートされているオペレーティングシステム][DeployedgeMicrosoftEdgeSupportedOS]を参照してください。  
 
-## <a name="next-steps"></a>次のステップ  
+## <a name="next-steps"></a>次の手順  
 
 WebView2 アプリをビルドおよび展開する方法の詳細については、概念ドキュメントと方法ガイドを参照してください。  
 
@@ -189,18 +189,18 @@ WebView2 アプリをビルドおよび展開する方法の詳細について�
 *   [WebView2 を使用してデバッグする方法][Webview2HowToDebug]  
 *   [Microsoft Edge Driverを使用した WebView2 の自動化とテスト][Webview2HowToWebdriver]  
 
-## <a name="getting-in-touch-with-the-microsoft-edge-webview-team"></a>Microsoft Edge WebView チームと連絡を取る  
+## <a name="getting-in-touch-with-the-microsoft-edge-webview-team"></a>Microsoft Edge WebView チームと連絡を取り合う  
 
 [!INCLUDE [contact WebView team note](./includes/contact-webview-team-note.md)]  
 
 <!-- links -->  
 
-[Webview2ConceptsDistribution]: ./concepts/distribution.md "WebView2 アプリケーションを使用したアプリ|Microsoft Docs"  
-[Webview2ConceptsSecurity]: ./concepts/security.md "セキュリティで保護された WebView2 アプリを開発するためのベスト |Microsoft Docs"  
-[Webview2ConceptsUserDataFolder]: ./concepts/user-data-folder.md "[ユーザー データ フォルダーの管理] |Microsoft Docs"  
+[Webview2ConceptsDistribution]: ./concepts/distribution.md "WebView2 を使用したアプリの配布|Microsoft Docs"  
+[Webview2ConceptsSecurity]: ./concepts/security.md "セキュリティで保護された WebView2 アプリを開発するためのベスト プラクティス |Microsoft Docs"  
+[Webview2ConceptsUserDataFolder]: ./concepts/user-data-folder.md "ユーザー データ フォルダーの管理 |Microsoft Docs"  
 [Webview2ConceptsVersioning]: ./concepts/versioning.md "WebView2 SDK のバージョンについて理解する |Microsoft Docs"  
-[Webview2GetStartedWin32]: ./get-started/win32.md "WebView2 の使用を|Microsoft Docs"  
-[Webview2GetStartedWinforms]: ./get-started/winforms.md "フォーム アプリ (プレビュー) Windows WebView2 の使用|Microsoft Docs"  
+[Webview2GetStartedWin32]: ./get-started/win32.md "WebView2 の使用を開始する|Microsoft Docs"  
+[Webview2GetStartedWinforms]: ./get-started/winforms.md "Windows フォーム アプリ (プレビュー) でのWebView2 の使用を開始する|Microsoft Docs"  
 [Webview2GetStartedWinui]: ./get-started/winui.md "WinUI3 の WebView2 の使用を開始する (プレビュー) |Microsoft Docs"  
 [Webview2GetStartedWpf]: ./get-started/wpf.md "WPF (プレビュー) の WebView2 の概要|Microsoft Docs"  
 [Webview2HowToDebug]: ./how-to/debug.md "WebView2 を使用してデバッグする方法 |Microsoft Docs"  
