@@ -1,16 +1,31 @@
 ---
-description: ブラウザーの機能の違いMicrosoft Edge WebView2
-title: ブラウザーの機能の違いMicrosoft Edge WebView2
-author: MSEdgeTeam
-ms.author: msedgedevrel
-ms.date: 05/06/2021
-ms.topic: conceptual
-ms.prod: microsoft-edge
-ms.technology: webview
-keywords: IWebView2, IWebView2WebView, WebView2, webview, wpf apps, wpf, edge, ICoreWebView2, ICoreWebView2Host, browser control, edge html
-no-loc: ["Autofill for Addresses", "Autofill for Passwords", Autofill for Payments", Browser Extensions", "Browser Task Manager", "Collections", "Continue-where-I-left-off prompt", "Downloads", "Edge Shopping", "Family Safety", "Favorites", "Hotkeys", "IE Mode" ,"Immersive Reader", "Intrusive Ads", "Read Aloud", "Smart Screen", "Translate", "Tracking Prevention", "Profile and Identity", "Web Payment API", "Windows Defender Application Guard","edge:// URLs"]  
+説明: Microsoft Edge タイトルと WebView2 タイトルの機能の違い: Microsoft Edge と WebView2 作成者の機能の違い: MSEdgeTeam ms.author: msedgedevrel ms.date: 06/23/2021 ms.topic: conceptual ms.prod: microsoft-edge ms.technology: webview キーワード: IWebView2, IWebView2WebView、WebView2、Webview、wpf アプリ、wpf、edge、ICoreWebView2、ICoreWebView2Host、ブラウザー コントロール、エッジ html no-loc:
+- "Autofill for Addresses"
+- "Autofill for Passwords"
+- "Autofill for Payments""
+- "Browser Extensions""
+- "Browser Task Manager"
+- "Collections"
+- "Continue-where-I-left-off prompt"
+- "Downloads"
+- "Edge Shopping"
+- "Family Safety"
+- "Favorites"
+- "Hotkeys"
+- "IE Mode"
+- "Immersive Reader"
+- "Intrusive Ads"
+- "Read Aloud"
+- "Smart Screen"
+- "Translate"
+- "Tracking Prevention"
+- "Profile and Identity"
+- "Web Payment API"
+- "Windows Defender Application Guard"
+- "edge:// URLs"
+
 ---
-# <a name="browser-feature-differences-between-microsoft-edge-and-webview2"></a>ブラウザーの機能の違いMicrosoft Edge WebView2  
+# <a name="feature-differences-between-microsoft-edge-and-webview2"></a>WebView2 と Microsoft Edge機能の違い  
 
 WebView2 は、新しいブラウザー Microsoft Edgeです。  ブラウザーから WebView2 ベースのアプリに機能を拡張する機会があります。これは便利です。  ただし、WebView2 はブラウザーのようなアプリに限定されないので、変更または削除する必要があるブラウザー機能があります。  この記事では、次の情報を提供します。  
 
@@ -25,7 +40,7 @@ WebView2 のコンテキストでは、ブラウザー機能は次の設計ガ�
 *   ほとんどの機能は、WebView2 および WebView2 および webView2 Microsoft Edge。  WebView2 のコンテキストや他の理由で機能が意味をなさない場合、機能は変更または無効になります。 
 *   WebView2 の機能には、ブランド化Microsoft Edge含まれます。  
     
-## <a name="features"></a>機能  
+## <a name="browser-features"></a>ブラウザーの機能  
 
 次の表に、ブラウザーとは異なる WebView2 Microsoft Edgeします。   
 
@@ -51,16 +66,23 @@ WebView2 のコンテキストでは、ブラウザー機能は次の設計ガ�
 | IE Mode | オフ | なし | この機能はオフです。 WebView2 は IE モードをサポートしません。IE と比較して動作が異なる (MHT や BIN のサポートなど)。 |  
 | Immersive Reader | オフ | なし | この機能は、操作のブラウザー UI によって異なります。  この機能はオフです。  |  
 | Intrusive Ads | オフ | なし | この機能はオフです。  |  
-| キーボード ショートカット | レビューの詳細 | レビューの詳細 | 既定でオフになっているキーボード ショートカットは、意味をなさないか、WebView2 で問題を引き起こします。  これらのショートカットを有効またはオフにしない場合があります。  代わりに、イベントを使用してキーの組み合わせをリッスンし、必要に応じてカスタム `AcceleratorKeyPressed` 応答を作成できます。  詳細については、「その他のキーボード [ショートカット情報」に移動します](#additional-keyboard-shortcuts-information)。 |  
-| プッシュ通知 | オフ | なし | この機能は WebView2 では実装されていません。  詳細については [、「HTML5 通知 API のサポートの追加 (#308) 」を参照してください][GithubMicrosoftedgeWebview2feedbackIssues308]。 |  
+| キーボード ショートカット | レビューの詳細 | レビューの詳細 | 既定でオフになっているキーボード ショートカットは、意味をなさないか、WebView2 で問題を引き起こします。  これらのショートカットを有効またはオフにしない場合があります。  代わりに、イベントを使用してキーの組み合わせをリッスンし、必要に応じてカスタム `AcceleratorKeyPressed` 応答を作成できます。  詳細については、「その他のキーボード [ショートカット情報」に移動します](#additional-keyboard-shortcuts-information)。 | 
 | Read Aloud | オフ | なし | この機能はオフです。  |  
 | Smart Screen | オン`*` | なし | `*` この機能の UI は削除されましたが、基になる機能は引き続き使用できます。  また、コマンド ライン スイッチを Smart Screen 使用してオフにすることもできます。  |  
 | Translate | オフ | なし | この機能はオフです。  |  
 | Tracking Prevention | オン`*` | なし | `*` この機能の UI は削除されましたが、基になる機能は引き続き使用できます。  追跡防止は常にバランスに設定されます。|  
-| Profile and Identity | オフ | なし | お気に入り、Cookie などと同期する機能はオフになります。  |  
-| Web Payment API | オフ | なし | この機能はオフです。  | 
+| Profile and Identity | オフ | なし | お気に入り、Cookie などと同期する機能はオフになります。  | 
 | Windows Defender Application Guard | オフ | なし | この機能はオフです。  |  
 | edge:// URLs | レビューの詳細 | なし | 設定ブラウザーのMicrosoft Edge URL です `edge://` 。  これらの Web ページの多Microsoft Edge、WebView2 のコンテキスト内では意味をなさないので、これらの URL の一部は無効になります。  詳細については、「ブロックされた内部 [URL」に移動します](#blocked-internal-urls)。  |  
+
+## <a name="web-platform-features"></a>Web プラットフォームの機能
+
+次の表に、現在使用できない WebView2 プラットフォーム機能を示します。
+
+| 機能 | 詳細 |  
+|:--- | :--- |  
+| プッシュ通知 | この機能は WebView2 では実装されていません。 |  
+| Web Payment API | この機能はオフです。 | 
 
 ## <a name="blocked-internal-urls"></a>ブロックされた内部 URL  
 
@@ -84,7 +106,7 @@ WebView2 のコンテキストでは、ブラウザー機能は次の設計ガ�
     
 ## <a name="additional-keyboard-shortcuts-information"></a>その他のキーボード ショートカット情報  
 
-キーボード ショートカットまたはキー バインドは、WebView2 Microsoft Edgeサポートされています。  更新Microsoft Edge、既定のキー バインドが変更される場合があります。  さらに、WebView2 で機能がサポートされている場合は、既定で無効になっているキーボード ショートカットが有効になります。  キーボード ショートカットの変更を避けるため、ブラウザー機能にアクセスするキーはすべて無効にし、基本的なテキスト編集ショートカットと移動ショートカットはすべてオンに維持します `AreBrowserAcceleratorKeysEnabled` `FALSE` 。  
+キーボード ショートカットまたはキー バインドは、WebView2 Microsoft Edgeサポートされています。 更新Microsoft Edge、既定のキー バインドが変更される場合があります。  さらに、WebView2 で機能がサポートされている場合は、既定で無効になっているキーボード ショートカットが有効になります。 キーボード ショートカットの変更を避けるため、ブラウザー機能にアクセスするキーはすべて無効にし、基本的なテキスト編集ショートカットと移動ショートカットはすべてオンに維持します `AreBrowserAcceleratorKeysEnabled` `FALSE` 。  
 
 次の表に、WebView2 で常に無効になっているショートカットの一覧を示します。  アスタリスク \( \) 文字は、ショートカットがオフではないが、アクセスする機能がオフになっているか、WebView2 に適用されません。 `*`  
 
