@@ -1,29 +1,14 @@
 ---
-説明: Microsoft Edge タイトルと WebView2 タイトルの機能の違い: Microsoft Edge と WebView2 作成者の機能の違い: MSEdgeTeam ms.author: msedgedevrel ms.date: 06/23/2021 ms.topic: conceptual ms.prod: microsoft-edge ms.technology: webview キーワード: IWebView2, IWebView2WebView、WebView2、Webview、wpf アプリ、wpf、edge、ICoreWebView2、ICoreWebView2Host、ブラウザー コントロール、エッジ html no-loc:
-- "Autofill for Addresses"
-- "Autofill for Passwords"
-- "Autofill for Payments""
-- "Browser Extensions""
-- "Browser Task Manager"
-- "Collections"
-- "Continue-where-I-left-off prompt"
-- "Downloads"
-- "Edge Shopping"
-- "Family Safety"
-- "Favorites"
-- "Hotkeys"
-- "IE Mode"
-- "Immersive Reader"
-- "Intrusive Ads"
-- "Read Aloud"
-- "Smart Screen"
-- "Translate"
-- "Tracking Prevention"
-- "Profile and Identity"
-- "Web Payment API"
-- "Windows Defender Application Guard"
-- "edge:// URLs"
-
+description: WebView2 と Microsoft Edge機能の違い
+title: WebView2 と Microsoft Edge機能の違い
+author: MSEdgeTeam
+ms.author: msedgedevrel
+ms.date: 06/23/2021
+ms.topic: conceptual
+ms.prod: microsoft-edge
+ms.technology: webview
+keywords: IWebView2, IWebView2WebView, WebView2, webview, wpf apps, wpf, edge, ICoreWebView2, ICoreWebView2Host, browser control, edge html
+no-loc: ["Autofill for Addresses", "Autofill for Passwords", Autofill for Payments", Browser Extensions", "Browser Task Manager", "Collections", "Continue-where-I-left-off prompt", "Downloads", "Edge Shopping", "Family Safety", "Favorites", "Hotkeys", "IE Mode" ,"Immersive Reader", "Intrusive Ads", "Read Aloud", "Smart Screen", "Translate", "Tracking Prevention", "Profile and Identity", "Web Payment API", "Windows Defender Application Guard","edge:// URLs"]  
 ---
 # <a name="feature-differences-between-microsoft-edge-and-webview2"></a>WebView2 と Microsoft Edge機能の違い  
 
