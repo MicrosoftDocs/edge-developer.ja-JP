@@ -7,12 +7,12 @@ ms.date: 05/04/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: ec0d1a003e621ecc2220c3eb0d03992bcd8fffa1
-ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
+ms.openlocfilehash: 71e71555940d74f2071178be2e6daf0ec2f49dfd
+ms.sourcegitcommit: d0a6959c5338cf1927093b4a9ed29a0bc0390b43
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2021
-ms.locfileid: "11565023"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "11615422"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -30,9 +30,7 @@ ms.locfileid: "11565023"
 # <a name="view-application-cache-data-with-microsoft-edge-devtools"></a>DevTools を使用してアプリケーション キャッシュ データMicrosoft Edge表示する  
 
 > [!WARNING]
-> アプリケーション キャッシュ API が [Web プラットフォームから削除されています][HTMLStandardOfflineWebApplications]。  
-
-<!--todo: Replace [HTMLStandardOfflineWebApplications] with [WebDevAppcacheRemoval].  -->  
+> アプリケーション キャッシュは非推奨であり、使用を避ける必要があります。  アプリケーション キャッシュ API が Web プラットフォームから削除されています。  詳細については [、「Preparing for AppCache の削除」に移動します][WebDevAppcacheRemoval]。
 
 このガイドでは、アプリケーション キャッシュ リソースを調[Microsoft Edge DevTools][MicrosoftEdgeDevTools]を使用[する方法を示][MDNWebAPIsWindowApplicationCache]します。  
 
@@ -74,11 +72,8 @@ ms.locfileid: "11565023"
 | `UPDATEREADY` |  新しいバージョンのキャッシュを使用できます。 |  
 
 <!-- links -->  
-
-[MicrosoftEdgeDevTools]: ../../devtools-guide-chromium/index.md "Microsoft Edge (Chromium) 開発者ツール |Microsoft ドキュメント"  
-
-[HTMLStandardOfflineWebApplications]: https://html.spec.whatwg.org/multipage/offline.html#offline "オフライン Web アプリケーション - HTML Standard"  
-
+[MicrosoftEdgeDevTools]: ../../devtools-guide-chromium/index.md "Microsoft Edge (Chromium) 開発者ツール | Microsoft Docs"  
+<!-- external links: -->
 [MDNHTMLResourcesInAnApplicationCache]: https://developer.mozilla.org/docs/Web/HTML/Using_the_application_cache#Resources_in_an_application_cache "アプリケーション キャッシュ 内のリソース|MDN"  
 [MDNWebAPIsWindowApplicationCache]: https://developer.mozilla.org/docs/Web/API/Window/applicationCache "Window.applicationCache - Web API |MDN"  
 

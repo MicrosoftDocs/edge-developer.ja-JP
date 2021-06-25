@@ -3,17 +3,17 @@ description: WebDriver で Web サイトまたはアプリをテストMicrosoft 
 title: テスト オートメーションに WebDriver (Chromium) を使用する
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 04/20/2021
+ms.date: 06/24/2021
 ms.topic: article
 ms.prod: microsoft-edge
 ms.technology: devtools
 keywords: microsoft edge, web 開発, html, css, javascript, 開発者, webdriver, selenium,テストする, ツール, 自動化, テスト
-ms.openlocfilehash: 3865162b8227db2f0cfa051801a5de28ecf4b9d1
-ms.sourcegitcommit: 3094c972532bc89dcb429d26880c873809fd1ab8
+ms.openlocfilehash: c68a16aebcfdc6ade8838145368d32ad84a82209
+ms.sourcegitcommit: d0a6959c5338cf1927093b4a9ed29a0bc0390b43
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "11599458"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "11615429"
 ---
 # <a name="use-webdriver-chromium-for-test-automation"></a>テスト オートメーションに WebDriver (Chromium) を使用する  
 
@@ -30,7 +30,7 @@ WebDriver Microsoft Edgeを自動化してユーザーの操作をシミュレ�
 
 *  Microsoft Edge
 *  Microsoft Edge ドライバー
-*  WebDriver テスト フレームワーク (Selenium など)
+*  WebDriver テスト フレームワーク
 
 WebDriver、Microsoft Edge Driver、Selenium、および Internet Explorerドライバーの機能関係は次のとおりです。
 
@@ -90,7 +90,7 @@ Selenium 4 を使用してこのエラーが発生する場合は、プロジェ
 
 ### <a name="using-selenium-3"></a>Selenium 3 の使用  
 
-既に [Selenium 3][|::ref1::|] を使用している場合は、既存のブラウザーのテストがあり、Selenium のバージョンを変更せずに Microsoft Edge \(Chromium \) のカバレッジを追加することを希望するかもしれません。  [Selenium 3][|::ref2::|] を使用して Microsoft Edge  \(EdgeHTML \) と Microsoft Edge \(Chromium \) の自動テストを作成するには更新されたドライバーを使用するために、[Microsoft Edge 用 Selenium ツール][GithubMicrosoftEdgeSeleniumTools] のパッケージをインストールします。  ツールに含まれている`EdgeDriver` と `EdgeDriverService` のクラスは、Selenium 4 の組み込みの対応物と完全互な換性があります。  
+既に [Selenium 3][|::ref1::|] を使用している場合は、既存のブラウザーのテストがあり、Selenium のバージョンを変更せずに Microsoft Edge \ (Chromium \) のカバレッジを追加することを希望するかもしれません。  [Selenium 3][|::ref2::|] を使用して Microsoft Edge  \ (EdgeHTML \) と Microsoft Edge \ (Chromium \) の自動テストを作成するには更新されたドライバーを使用するために、[Microsoft Edge 用 Selenium ツール][GithubMicrosoftEdgeSeleniumTools] のパッケージをインストールします。  ツールに含まれている`EdgeDriver` と `EdgeDriverService` のクラスは、Selenium 4 の組み込みの対応物と完全互な換性があります。  
 
 次の手順を使用して、[Microsoft Edge 用Selenium ツール][GithubMicrosoftEdgeSeleniumTools] と [Selenium 3][|::ref3::|] をプロジェクトに追加します。  
 
@@ -360,7 +360,7 @@ options.addArguments("disable-gpu");
 * * *  
 
 > [!NOTE]
-> `UseChromium`プロパティが`true` に設定されている場合は、Microsoft Edge \(EdgeHTML \) のプロパティとメソッドは使用できません。  
+> `UseChromium`プロパティが`true` に設定されている場合は、Microsoft Edge \ (EdgeHTML \) のプロパティとメソッドは使用できません。  
 
 ## <a name="other-webdriver-installation-options"></a>その他の WebDriver インストール オプション  
 
@@ -377,6 +377,19 @@ docker run -d -p 9515:9515 mcr.microsoft.com/msedge/msedgedriver
 ## <a name="testing-internet-explorer"></a>テストInternet Explorer
 
 IE モードMicrosoft Edgeサポートされている場合でも、IE モードでサイトMicrosoft EdgeテストMicrosoft Edgeドライバーを使用することはできません。  必要なサイトをテストするには、Internet Explorerドライバー Internet Explorer [を使用][GithubSeleniumHqWikiIEDriver] Internet Explorer。
+
+## <a name="application-guard"></a>Application Guard
+
+アプリケーション (Application Guard) をMicrosoft Defender Application Guard信頼できるサイトは、ドライバーを使用Microsoft Edgeできます。
+
+Application Guard を使用する信頼されていないサイトは、ドライバーを使用して自動化またはMicrosoft Edgeできません。  Application Guard はコンテナー内の信頼されていないサイトを起動します。このコンテナーは、ドライバーがサイトと通信するために必要Microsoft Edgeリモート デバッグ ポートを公開します。
+
+エンタープライズ管理者は、クラウド リソースや内部ネットワークなど、信頼できるサイトを定義します。  信頼できるサイトの一覧に含されていないサイトは、信頼されていないと見なされます。  Microsoft Edgeドライバーは、InPrivate ウィンドウと信頼できるサイトリスト内のサイトの両方を自動化できます。
+
+Application Guard の詳細については、次の場所に移動します。 
+
+*  [Microsoft Edge での Microsoft Defender Application Guard のサポート](/deployedge/microsoft-edge-security-windows-defender-application-guard)
+*  [Microsoft Defender Application Guard概要][WindowsSecurityThreatProtectionMicrosoftDefenderApplicationGuardWindows10]
 
 ## <a name="next-steps"></a>次の手順  
 
@@ -397,7 +410,9 @@ Microsoft Edge チームは、WebDriver、Selenium、Microsoft Edge の使用に
 
 <!--[Webdriver]: /archive/microsoft-edge/legacy/developer/webdriver/index "WebDriver (EdgeHTML) | Microsoft Docs"  -->  
 
-[DeployedgeMicrosoftEdgePoliciesDevelopertoolsavailability]: /deployedge/microsoft-edge-policies#developertoolsavailability "DeveloperToolsAvailability-Microsoft Edge-ポリシー |Microsoft ドキュメント"  
+[DeployedgeMicrosoftEdgePoliciesDevelopertoolsavailability]: /deployedge/microsoft-edge-policies#developertoolsavailability "DeveloperToolsAvailability - Microsoft Edge - ポリシー |Microsoft Docs"  
+[WindowsSecurityThreatProtectionMicrosoftDefenderApplicationGuardWindows10]: /windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview "Microsoft Defender Application Guard (Windows 10) - Windows セキュリティ |Microsoft Docs"  
+[DeployedgeMicrosoftEdgeSecurityWindowsDefenderApplicationGuard]: /deployedge/microsoft-edge-security-windows-defender-application-guard "Microsoft EdgeのサポートMicrosoft Defender Application Guard |Microsoft Docs"
 
 [DockerHub]: https://hub.docker.com "Docker Hub"  
 [DockerHubMsedgedriver]: https://hub.docker.com/_/microsoft-msedge-msedgedriver?tab=description "msedgedriver |Docker hub"  
