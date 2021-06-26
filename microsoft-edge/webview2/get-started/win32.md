@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、Webview2、Webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Controller、ブラウザー コントロール、エッジ html
-ms.openlocfilehash: 073a92bf10a7ead85ac91bff54b5fc405c7d577c
-ms.sourcegitcommit: 777b16ef10363f2dfd755f115ee2d4c81a8de46f
+ms.openlocfilehash: 2714f9a6cffea3cb7d53f9a4128d64920fd02dce
+ms.sourcegitcommit: 7713eec634264b0c44b1bb426f5b466c44b4e005
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2021
-ms.locfileid: "11536068"
+ms.lasthandoff: 06/26/2021
+ms.locfileid: "11618387"
 ---
 # <a name="get-started-with-webview2"></a>WebView2 の使用を開始する  
 
@@ -25,9 +25,6 @@ ms.locfileid: "11536068"
 
 *   サポートされている OS \(現在は Windows 10、Windows 8.1、および Windows 7\ にインストールされている、[WebView2 ランタイム][Webview2Installer]または [Microsoft Edge (Chromium) 非安定チャネル][MicrosoftedgeinsiderDownload]。  
     
-    > [!NOTE]
-    > WebView チームは Canary チャネルの使用を推奨し、最小必須バージョンは 82.0.488.0 です。  
-    
 *   [Visual Studio][MicrosoftVisualstudioMain] C++ サポートがインストールされている 2015 以降。  
     
 ## <a name="step-1---create-a-single-window-app"></a>手順 1 - シングル ウィンドウ アプリを作成する  
@@ -35,10 +32,10 @@ ms.locfileid: "11536068"
 1 つのメイン ウィンドウを含む基本的なデスクトップ プロジェクトから開始します。  
 
 > [!IMPORTANT]
-> チュートリアルに焦点を当てるには、「ウォークスルー: 従来の Windows デスクトップ アプリケーション [(C++)][CppWindowsWalkthroughCreatingDesktopApplication] を作成する」の変更されたサンプル コードを使用します。  変更したサンプルをダウンロードして開始するには [、[WebView2 サンプル] に移動します][GithubMicrosoftedgeWebview2samplesGettingStartedGuide]。  
+> チュートリアルのフォーカスを向上するには、「チュートリアル Windows: 従来のデスクトップ アプリケーション[(C++)][CppWindowsWalkthroughCreatingDesktopApplication]を作成する」の変更されたサンプル コードを使用します。  変更したサンプルをダウンロードして開始するには [、[WebView2 サンプル] に移動します][GithubMicrosoftedgeWebview2samplesGettingStartedGuide]。  
 
 1.  [Visual Studio] を開きます `WebView2GettingStarted.sln` 。  
-    以前のバージョンの Visual Studio を使用する場合は **、WebView2GettingStarted** プロジェクトにマウス ポインターを置き、コンテキスト メニュー \(右クリック\) を開き、[プロパティ] を選択 **します**。  [**構成プロパティ全般**  >  **] で****、Windows** **** SDK バージョンとプラットフォーム ツールセットを変更して、Win10 SDK を使用し、使用可能Visual Studioツールセットを使用します。  
+    以前のバージョンの Visual Studio を使用する場合は **、WebView2GettingStarted**プロジェクトにマウス ポインターを置き、コンテキスト メニュー \(右クリック\) を開き、[プロパティ] を選択**します**。  [**構成プロパティ全般**  >  **]** で **、Windows SDK** **** バージョンとプラットフォーム ツールセットを変更して、使用できる Win10 SDK Visual Studioツールセットを使用します。  
     
 :::image type="complex" source="../media/tool-version.png" alt-text="ツールのバージョン" lightbox="../media/tool-version.png":::
    ツールのバージョン  
@@ -48,28 +45,28 @@ Visual Studio WebView2 ヘッダー ファイルが存在しないので、エ�
 
 ## <a name="step-2---install-webview2-sdk"></a>手順 2-WebView2 SDK をインストールする  
 
-WebView2 SDK をプロジェクトに追加します。  NuGet を使用して Win32 SDK をインストールします。  
+WebView2 SDK をプロジェクトに追加します。  Win32 SDK NuGetインストールするには、次のコマンドを使用します。  
 
-1.  プロジェクトにマウス ポインターを置き、コンテキスト メニュー \(右クリック\) を開き **、[NuGet パッケージの管理] を選択します**。  
+1.  プロジェクトにマウス ポインターを置き、コンテキスト メニュー \(右クリック\) を開き、[パッケージの管理] NuGet**します**。  
     
     :::image type="complex" source="../media/manage-nuget-packages.png" alt-text="NuGet パッケージの管理" lightbox="../media/manage-nuget-packages.png":::
        NuGet パッケージの管理  
     :::image-end:::  
     
-1.  Windows 実装ライブラリをインストールします。  
-    1.  検索バーに `Microsoft.Windows.ImplementationLibrary` **「Microsoft.Windows.implementationLibrary >」と入力します**。  
-    1.  右側のウィンドウで、[インストール] を **選択します**。  NuGet は、ライブラリをコンピューターにダウンロードします。  
+1.  実装ライブラリWindowsインストールします。  
+    1.  検索バーに `Microsoft.Windows.ImplementationLibrary` 「Microsoft.>」と入力**Windows。ImplementationLibrary**.  
+    1.  右側のウィンドウで、[インストール] を **選択します**。  NuGetコンピューターにライブラリをダウンロードします。  
         
         > [!NOTE]
-        > [Windows 実装ライブラリと][GithubMicrosoftWilMain] [Windows ランタイム C++ テンプレート ライブラリ][CppCxWrlTemplateLibraryVS2019]はオプションであり、例では COM の操作を容易にします。  
+        > この[Windows実装ライブラリ][GithubMicrosoftWilMain]Windowsランタイム[C++ テンプレート][CppCxWrlTemplateLibraryVS2019]ライブラリはオプションであり、例では COM の操作を容易にします。  
         
-        :::image type="complex" source="../media/wil.png" alt-text="Windows 実装ライブラリ" lightbox="../media/wil.png":::
-           Windows 実装ライブラリ  
+        :::image type="complex" source="../media/wil.png" alt-text="Windows実装ライブラリ" lightbox="../media/wil.png":::
+           Windows実装ライブラリ  
         :::image-end:::  
         
 1.  WebView2 SDK をインストールします。  
     1.  検索バーに `Microsoft.Web.WebView2` と入力し、**[microsoft.Web.WebView2]** を選択します。  
-    1.  右側のウィンドウで、[インストール] を **選択します**。  NuGet は SDK をコンピューターにダウンロードします。  
+    1.  右側のウィンドウで、[インストール] を **選択します**。  NuGet SDK をコンピューターにダウンロードします。  
         
         :::image type="complex" source="../media/nuget.png" alt-text="NuGet パッケージ マネージャー" lightbox="../media/nuget.png":::
            NuGet パッケージ マネージャー
@@ -113,9 +110,9 @@ WebView2 API に対して使用してビルドする準備ができました。
 
 メイン ウィンドウに WebView を追加します。  
 
-このメソッド `CreateCoreWebView2Environment` を使用して、環境をセットアップし、コントロールに電力を供給する Microsoft Edge \(Chromium\) ブラウザーを探します。  既定の設定を使用する代わりに、ブラウザーの場所、ユーザー フォルダー、ブラウザー フラグを指定する場合にも、このメソッド `CreateCoreWebView2EnvironmentWithOptions` を使用できます。  メソッドが完了すると、コールバック内でメソッドを実行し、関連付けられた WebView を取得する `CreateCoreWebView2Environment` `ICoreWebView2Environment::CreateCoreWebView2Controller` `ICoreWebView2CreateCoreWebView2EnvironmentCompletedHandler` `ICoreWebView2Controller::get_CoreWebView2` メソッドを実行します。  
+このメソッド `CreateCoreWebView2Environment` を使用して、環境をセットアップし、コントロールMicrosoft Edge \(Chromium\) ブラウザーを探します。  既定の設定を使用する代わりに、ブラウザーの場所、ユーザー フォルダー、ブラウザー フラグを指定する場合にも、このメソッド `CreateCoreWebView2EnvironmentWithOptions` を使用できます。  メソッドが完了すると、コールバック内でメソッドを実行し、関連付けられた WebView を取得する `CreateCoreWebView2Environment` `ICoreWebView2Environment::CreateCoreWebView2Controller` `ICoreWebView2CreateCoreWebView2EnvironmentCompletedHandler` `ICoreWebView2Controller::get_CoreWebView2` メソッドを実行します。  
 
-コールバックで、もう少し設定を設定し、WebView のサイズを変更して親ウィンドウの 100% を占め、Bing に移動します。  
+コールバックで、もう少し設定を設定し、WebView のサイズを変更して親ウィンドウの 100% を占め、次のウィンドウBing。  
 
 次のコード スニペットをコピーし、コメント `HelloWebView.cpp` の後とコメントの前 `// <-- WebView2 sample code starts here -->` に貼り付 `// <-- WebView2 sample code ends here -->` けます。  
 
@@ -162,9 +159,9 @@ CreateCoreWebView2EnvironmentWithOptions(nullptr, nullptr, nullptr,
     }).Get());
 ```  
 
-### <a name="build-your-bing-sample-app"></a>Bing サンプル アプリをビルドする  
+### <a name="build-your-bing-sample-app"></a>サンプル アプリBing作成する  
 
-アプリをビルドして実行するには、`F5` を選択します。  これで、WebView ウィンドウに Bing ページが表示されます。  
+アプリをビルドして実行するには、`F5` を選択します。  これで、WebView ウィンドウにページを表示Bingしました。  
 
 :::image type="complex" source="../media/bing-window.png" alt-text="Bing ウィンドウ" lightbox="../media/bing-window.png":::
    Bing ウィンドウ  
@@ -307,19 +304,19 @@ nullptr);
 [Webview2ReferenceWin32]: /microsoft-edge/webview2/reference/win32 "WebView2 Win32 C++ リファレンス |Microsoft Docs"  
 [Webview2ConceptsNavigationEvents]: ../concepts/navigation-events.md "ナビゲーション イベント | Microsoft Docs"  
 
-[CppCxWrlTemplateLibraryVS2019]: /cpp/cppcx/wrl/windows-runtime-cpp-template-library-wrl?view=vs-2019&preserve-view=true "Windows ランタイム C++ テンプレート ライブラリ (WRL) |Microsoft Docs"  
-[CppWindowsWalkthroughCreatingDesktopApplication]: /cpp/windows/walkthrough-creating-windows-desktop-applications-cpp?view=vs-2019&preserve-view=true "チュートリアル: 従来の Windows デスクトップ アプリケーション (C++) アプリケーションを作成|Microsoft Docs"  
+[CppCxWrlTemplateLibraryVS2019]: /cpp/cppcx/wrl/windows-runtime-cpp-template-library-wrl?view=vs-2019&preserve-view=true "Windowsランタイム C++ テンプレート ライブラリ (WRL) |Microsoft Docs"  
+[CppWindowsWalkthroughCreatingDesktopApplication]: /cpp/windows/walkthrough-creating-windows-desktop-applications-cpp?view=vs-2019&preserve-view=true "チュートリアル: 従来のデスクトップ Windows (C++) アプリケーションを作成|Microsoft Docs"  
 
 [GithubMicrosoftedgeWebview2browser]: https://github.com/MicrosoftEdge/WebView2Browser "WebView2Browser - MicrosoftEdge/WebView2Browser |GitHub"  
 
-[GithubMicrosoftedgeWebviewfeedback]: https://github.com/MicrosoftEdge/WebViewFeedback "WebView フィードバック - MicrosoftEdge/WebViewFeedback | GitHub"  
+[GithubMicrosoftedgeWebviewfeedback]: https://github.com/MicrosoftEdge/WebViewFeedback "WebView フィードバック-MicrosoftEdge/WebViewFeedback | GitHub"  
 
 [GithubMicrosoftedgeWebview2samplesMain]: https://github.com/MicrosoftEdge/WebView2Samples "WebView2 サンプル-MicrosoftEdge/WebView2Samples | GitHub"  
 
 [GithubMicrosoftedgeWebview2samplesApisample]: https://github.com/MicrosoftEdge/WebView2Samples/blob/master/SampleApps/WebView2APISample/README.md "WebView2 API サンプル - MicrosoftEdge/WebView2Samples |GitHub"  
 [GithubMicrosoftedgeWebview2samplesGettingStartedGuide]: https://github.com/MicrosoftEdge/WebView2Samples#1-getting-started-guide "WebView2 サンプル-MicrosoftEdge/WebView2Samples | GitHub"  
 
-[GithubMicrosoftWilMain]: https://github.com/Microsoft/wil "Windows 実装ライブラリ (WIL) - microsoft/wil |GitHub"  
+[GithubMicrosoftWilMain]: https://github.com/Microsoft/wil "Windows実装ライブラリ (WIL) - microsoft/wil |GitHub"  
 
 [MicrosoftedgeinsiderDownload]: https://www.microsoftedgeinsider.com/download "Microsoft Edge Insider Channels をダウンロードする"  
 
