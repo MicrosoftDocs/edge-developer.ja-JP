@@ -8,12 +8,12 @@ ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
 ms.localizationpriority: high
-ms.openlocfilehash: 6fd9f9ca2c19c8db74036fb54efadb7be8566fd7
-ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
+ms.openlocfilehash: e5706de4c7938a3cb2246aa34de07c73dafe5776
+ms.sourcegitcommit: e150d798161277fd3fc610838ef2611dc08f5cf6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2021
-ms.locfileid: "11564120"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "11624774"
 ---
 <!-- Copyright Jecelyn Yeen 
 
@@ -362,7 +362,7 @@ Windows、Linux、または macOS を使用している場合は、 既定の開
 [DevtoolsDeviceModeIndex]: ../../../device-mode/index.md "Microsoft Edge DevTools でモバイル デバイスをエミュレートする | Microsoft Docs"  
 <!--  [DevtoolsExperimentalFeaturesEnableKeyboardShortcutEditor]: ../../../experimental-features/index.md#enable-keyboard-shortcut-editor "Enable keyboard shortcut editor - Experimental features | microsoft Docs"  -->  
 <!--  [DevtoolsExperimentalFeaturesTurnOnCompositedLayers3dView]: ../../../experimental-features/index.md#turn-on-composited-layers-in-3d-view "Turn on Composited Layers in 3D View - Experimental features | Microsoft Docs"  -->  
-[DevtoolsIssuesIndex]: ../../../issues/index.md "Microsoft Edge DevTools Issues ツールの問題を検索して修正する | Microsoft Docs"  
+[DevtoolsIssuesIndex]: ../../../issues/index.md "問題ツールを使用して問題を検索して修正 | Microsoft Docs"  
 [DevtoolsNetworkReferenceCopyFormattedResponseJsonClipboard]: ../../../network/reference.md#copy-formatted-response-json-to-the-clipboard "クリップボードにフォーマットされた応答 JSON をコピーする - ネットワーク分析リファレンス | Microsoft Docs"  
 [DevtoolsNetworkReferenceDisplayTimingBreakdownRequest]: ../../../network/reference.md#display-the-timing-breakdown-of-a-request "要求のタイミングの内訳を表示する - ネットワーク分析リファレンス | Microsoft Docs"  
 
