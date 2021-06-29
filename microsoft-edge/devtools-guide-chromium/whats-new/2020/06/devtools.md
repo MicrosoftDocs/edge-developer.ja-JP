@@ -7,12 +7,12 @@ ms.date: 05/04/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 75642a7f0fa8d6fae2f4daead84e2fc77df21e29
-ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
+ms.openlocfilehash: 65a3fb4da235d2330bf9205b7a4a79a999559ca4
+ms.sourcegitcommit: e150d798161277fd3fc610838ef2611dc08f5cf6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2021
-ms.locfileid: "11564931"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "11624802"
 ---
 <!-- Copyright Jecelyn Yeen 
 
@@ -27,308 +27,308 @@ ms.locfileid: "11564931"
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.  -->  
-# <a name="whats-new-in-devtools-microsoft-edge-85"></a><span data-ttu-id="a5745-104">DevTools の新機能 (Microsoft Edge 85)</span><span class="sxs-lookup"><span data-stu-id="a5745-104">What's New In DevTools (Microsoft Edge 85)</span></span>  
+# <a name="whats-new-in-devtools-microsoft-edge-85"></a><span data-ttu-id="fabd5-104">DevTools の新機能 (Microsoft Edge 85)</span><span class="sxs-lookup"><span data-stu-id="fabd5-104">What's New In DevTools (Microsoft Edge 85)</span></span>  
 
-## <a name="announcements-from-the-microsoft-edge-devtools-team"></a><span data-ttu-id="a5745-105">Microsoft Edge DevTools チームからのお知らせ</span><span class="sxs-lookup"><span data-stu-id="a5745-105">Announcements from the Microsoft Edge DevTools team</span></span>  
+## <a name="announcements-from-the-microsoft-edge-devtools-team"></a><span data-ttu-id="fabd5-105">Microsoft Edge DevTools チームからのお知らせ</span><span class="sxs-lookup"><span data-stu-id="fabd5-105">Announcements from the Microsoft Edge DevTools team</span></span>  
 
-<span data-ttu-id="a5745-106">以下のセクションでは、Microsoft Edge DevTools チームからのもので、見落としがあった可能性のあるお知らせの一覧を示します。</span><span class="sxs-lookup"><span data-stu-id="a5745-106">The following sections are a list of announcements you may have missed from the Microsoft Edge DevTools team.</span></span>  <span data-ttu-id="a5745-107">DevTools、コード拡張機能、その他の新機能を試Microsoft Visual Studioお知らせをご覧ください。</span><span class="sxs-lookup"><span data-stu-id="a5745-107">Check out the announcements to try new features in the DevTools, Microsoft Visual Studio Code extensions, and more.</span></span>  <span data-ttu-id="a5745-108">開発者ツールの最新で最良の機能について最新情報を入手するには、[Microsoft Edge プレビュー チャネル][MicrosoftEdgePreviewChannels]をダウンロードして、[Twitter で Microsoft Edge DevTools チームをフォローしますます][EdgeDevToolsTwitterAccount]。</span><span class="sxs-lookup"><span data-stu-id="a5745-108">To stay up to date on all the latest and greatest features in your developer tools, download the [Microsoft Edge preview channels][MicrosoftEdgePreviewChannels] and [follow the Microsoft Edge DevTools team on Twitter][EdgeDevToolsTwitterAccount].</span></span>  
+<span data-ttu-id="fabd5-106">以下のセクションでは、Microsoft Edge DevTools チームからのもので、見落としがあった可能性のあるお知らせの一覧を示します。</span><span class="sxs-lookup"><span data-stu-id="fabd5-106">The following sections are a list of announcements you may have missed from the Microsoft Edge DevTools team.</span></span>  <span data-ttu-id="fabd5-107">DevTools、コード拡張機能、その他の新機能を試Microsoft Visual Studioお知らせをご覧ください。</span><span class="sxs-lookup"><span data-stu-id="fabd5-107">Check out the announcements to try new features in the DevTools, Microsoft Visual Studio Code extensions, and more.</span></span>  <span data-ttu-id="fabd5-108">開発者ツールの最新で最良の機能について最新情報を入手するには、[Microsoft Edge プレビュー チャネル][MicrosoftEdgePreviewChannels]をダウンロードして、[Twitter で Microsoft Edge DevTools チームをフォローしますます][EdgeDevToolsTwitterAccount]。</span><span class="sxs-lookup"><span data-stu-id="fabd5-108">To stay up to date on all the latest and greatest features in your developer tools, download the [Microsoft Edge preview channels][MicrosoftEdgePreviewChannels] and [follow the Microsoft Edge DevTools team on Twitter][EdgeDevToolsTwitterAccount].</span></span>  
 
-### <a name="css-grid-debugging-features"></a><span data-ttu-id="a5745-109">CSS グリッドのデバッグ機能</span><span class="sxs-lookup"><span data-stu-id="a5745-109">CSS grid debugging features</span></span>  
+### <a name="css-grid-debugging-features"></a><span data-ttu-id="fabd5-109">CSS グリッドのデバッグ機能</span><span class="sxs-lookup"><span data-stu-id="fabd5-109">CSS grid debugging features</span></span>  
 
 :::image type="complex" source="../../media/2020/06/experimental-tag-14px.msft.png" alt-text="試験的な機能":::
-   <span data-ttu-id="a5745-111">試験的な機能</span><span class="sxs-lookup"><span data-stu-id="a5745-111">Experimental feature</span></span>  
+   <span data-ttu-id="fabd5-111">試験的な機能</span><span class="sxs-lookup"><span data-stu-id="fabd5-111">Experimental feature</span></span>  
 :::image-end:::  
 
-<span data-ttu-id="a5745-112">Microsoft Edge DevTools チームは、Chrome DevTools チームと Chromium コミュニティと連携して、新しい CSS グリッドのデバッグ機能を DevTools に追加しています。</span><span class="sxs-lookup"><span data-stu-id="a5745-112">The Microsoft Edge DevTools team is collaborating with the Chrome DevTools team and Chromium community to add new CSS grid debugging features to DevTools.</span></span>  <span data-ttu-id="a5745-113">現在、グリッド線の番号、グリッドのギャップ、拡張グリッド線をページ上にオーバーレイとして表示できるようになりました。</span><span class="sxs-lookup"><span data-stu-id="a5745-113">You are now able to display grid line numbers, grid gaps, and extended grid lines as an on-page overlay.</span></span>  <span data-ttu-id="a5745-114">さらに、グリッド ツールのさらなる改善が間もなく提供されます。</span><span class="sxs-lookup"><span data-stu-id="a5745-114">Plus, more improvements to the grid tools are coming soon.</span></span>  
+<span data-ttu-id="fabd5-112">Microsoft Edge DevTools チームは、Chrome DevTools チームと Chromium コミュニティと連携して、新しい CSS グリッドのデバッグ機能を DevTools に追加しています。</span><span class="sxs-lookup"><span data-stu-id="fabd5-112">The Microsoft Edge DevTools team is collaborating with the Chrome DevTools team and Chromium community to add new CSS grid debugging features to DevTools.</span></span>  <span data-ttu-id="fabd5-113">現在、グリッド線の番号、グリッドのギャップ、拡張グリッド線をページ上にオーバーレイとして表示できるようになりました。</span><span class="sxs-lookup"><span data-stu-id="fabd5-113">You are now able to display grid line numbers, grid gaps, and extended grid lines as an on-page overlay.</span></span>  <span data-ttu-id="fabd5-114">さらに、グリッド ツールのさらなる改善が間もなく提供されます。</span><span class="sxs-lookup"><span data-stu-id="fabd5-114">Plus, more improvements to the grid tools are coming soon.</span></span>  
 
 :::image type="complex" source="../../media/2020/06/experiments-grid.msft.png" alt-text="CSS グリッドのデバッグ機能" lightbox="../../media/2020/06/experiments-grid.msft.png":::
-   <span data-ttu-id="a5745-116">CSS グリッドのデバッグ機能</span><span class="sxs-lookup"><span data-stu-id="a5745-116">CSS grid debugging features</span></span>
+   <span data-ttu-id="fabd5-116">CSS グリッドのデバッグ機能</span><span class="sxs-lookup"><span data-stu-id="fabd5-116">CSS grid debugging features</span></span>
 :::image-end:::  
 
 > [!NOTE]
-> <span data-ttu-id="a5745-117">実験を有効にするには、[実験機能[][DevtoolsExperimentalFeaturesTurnOn]を有効にする] に移動し、[新しい CSS グリッド デバッグ機能を有効にする] の横にある**チェック ボックスをオンにします**。</span><span class="sxs-lookup"><span data-stu-id="a5745-117">To enable the experiment, navigate to [Turn on experimental features][DevtoolsExperimentalFeaturesTurnOn] and select the checkbox next to **Enable new CSS Grid debugging features**.</span></span>  
+> <span data-ttu-id="fabd5-117">実験を有効にするには、[実験機能[][DevtoolsExperimentalFeaturesTurnOn]を有効にする] に移動し、[新しい CSS グリッド デバッグ機能を有効にする] の横にある**チェック ボックスをオンにします**。</span><span class="sxs-lookup"><span data-stu-id="fabd5-117">To enable the experiment, navigate to [Turn on experimental features][DevtoolsExperimentalFeaturesTurnOn] and select the checkbox next to **Enable new CSS Grid debugging features**.</span></span>  
 > 
-> <span data-ttu-id="a5745-118">サンプルを使用して実験を試す場合は [、CSS グリッド プランナーの例に移動します][CodepenRachelweilYzwBzKM]。</span><span class="sxs-lookup"><span data-stu-id="a5745-118">To try out the experiment with a sample, navigate to [CSS Grid planner example][CodepenRachelweilYzwBzKM].</span></span>  
+> <span data-ttu-id="fabd5-118">サンプルを使用して実験を試す場合は [、CSS グリッド プランナーの例に移動します][CodepenRachelweilYzwBzKM]。</span><span class="sxs-lookup"><span data-stu-id="fabd5-118">To try out the experiment with a sample, navigate to [CSS Grid planner example][CodepenRachelweilYzwBzKM].</span></span>  
 
-<span data-ttu-id="a5745-119">Chromium の問題 [#1047356][CR1047356]</span><span class="sxs-lookup"><span data-stu-id="a5745-119">Chromium issue [#1047356][CR1047356]</span></span>  
+<span data-ttu-id="fabd5-119">Chromium の問題 [#1047356][CR1047356]</span><span class="sxs-lookup"><span data-stu-id="fabd5-119">Chromium issue [#1047356][CR1047356]</span></span>  
 
-### <a name="edit-and-replay-requests-with-the-network-console"></a><span data-ttu-id="a5745-120">ネットワーク コンソールを使用して要求を編集および再生する</span><span class="sxs-lookup"><span data-stu-id="a5745-120">Edit and Replay requests with the Network Console</span></span>  
+### <a name="edit-and-replay-requests-with-the-network-console"></a><span data-ttu-id="fabd5-120">ネットワーク コンソールを使用して要求を編集および再生する</span><span class="sxs-lookup"><span data-stu-id="fabd5-120">Edit and Replay requests with the Network Console</span></span>  
 
 :::image type="complex" source="../../media/2020/06/experimental-tag-14px.msft.png" alt-text="試験的な機能":::
-   <span data-ttu-id="a5745-122">試験的な機能</span><span class="sxs-lookup"><span data-stu-id="a5745-122">Experimental feature</span></span>  
+   <span data-ttu-id="fabd5-122">試験的な機能</span><span class="sxs-lookup"><span data-stu-id="fabd5-122">Experimental feature</span></span>  
 :::image-end:::  
 
-<span data-ttu-id="a5745-123">**ネットワーク コンソール**を使用して、[ネットワーク ログ][DevtoolsNetworkIndexLogActivity]の要求に対して**編集と再生**を使用できるようになりました。</span><span class="sxs-lookup"><span data-stu-id="a5745-123">You are now able to use **Edit and Replay** on requests in the [Network Log][DevtoolsNetworkIndexLogActivity] using the **Network Console**.</span></span>  
+<span data-ttu-id="fabd5-123">**ネットワーク コンソール**を使用して、[ネットワーク ログ][DevtoolsNetworkIndexLogActivity]の要求に対して**編集と再生**を使用できるようになりました。</span><span class="sxs-lookup"><span data-stu-id="fabd5-123">You are now able to use **Edit and Replay** on requests in the [Network Log][DevtoolsNetworkIndexLogActivity] using the **Network Console**.</span></span>  
 
 :::image type="complex" source="../../media/2020/06/experiments-network-console-edit-and-replay.msft.png" alt-text="ネットワーク コンソールを使用して NetworkLog で要求を編集して再生する" lightbox="../../media/2020/06/experiments-network-console-edit-and-replay.msft.png":::
-   <span data-ttu-id="a5745-125">**ネットワーク コンソール**を使用して[NetworkLog][DevtoolsNetworkIndexLogActivity]で要求を編集して再生する</span><span class="sxs-lookup"><span data-stu-id="a5745-125">Edit and Replay a request in the [NetworkLog][DevtoolsNetworkIndexLogActivity] with the **Network Console**</span></span>  
+   <span data-ttu-id="fabd5-125">**ネットワーク コンソール**を使用して[NetworkLog][DevtoolsNetworkIndexLogActivity]で要求を編集して再生する</span><span class="sxs-lookup"><span data-stu-id="fabd5-125">Edit and Replay a request in the [NetworkLog][DevtoolsNetworkIndexLogActivity] with the **Network Console**</span></span>  
 :::image-end:::  
 
-<span data-ttu-id="a5745-126">新しいパネルとして、[DevTools のドロワー][DevtoolsCustomizeIndexDrawer]に **[ネットワーク コンソール]** が開き、HTTP 要求の情報が自動的に入力されます。</span><span class="sxs-lookup"><span data-stu-id="a5745-126">A new panel, the **Network Console** opens in the [DevTools Drawer][DevtoolsCustomizeIndexDrawer] and automatically populates with information for the HTTP request.</span></span>  <span data-ttu-id="a5745-127">サーバーから返される応答を表示するには、要求 \(必要な場合は\) を編集し、[送信] を **選択します**。</span><span class="sxs-lookup"><span data-stu-id="a5745-127">To display the response returned from the server, edit the request \(if needed\) and select **Send**.</span></span>  
+<span data-ttu-id="fabd5-126">新しいパネルとして、[DevTools のドロワー][DevtoolsCustomizeIndexDrawer]に **[ネットワーク コンソール]** が開き、HTTP 要求の情報が自動的に入力されます。</span><span class="sxs-lookup"><span data-stu-id="fabd5-126">A new panel, the **Network Console** opens in the [DevTools Drawer][DevtoolsCustomizeIndexDrawer] and automatically populates with information for the HTTP request.</span></span>  <span data-ttu-id="fabd5-127">サーバーから返される応答を表示するには、要求 \(必要な場合は\) を編集し、[送信] を **選択します**。</span><span class="sxs-lookup"><span data-stu-id="fabd5-127">To display the response returned from the server, edit the request \(if needed\) and select **Send**.</span></span>  
 
-<span data-ttu-id="a5745-128">また、**[ネットワーク コンソール]** を使用して、DevTools から直接 HTTP 要求を作成して送信することもできます。</span><span class="sxs-lookup"><span data-stu-id="a5745-128">You may also use the **Network Console** to create and send HTTP requests directly from the DevTools.</span></span>  
+<span data-ttu-id="fabd5-128">また、**[ネットワーク コンソール]** を使用して、DevTools から直接 HTTP 要求を作成して送信することもできます。</span><span class="sxs-lookup"><span data-stu-id="fabd5-128">You may also use the **Network Console** to create and send HTTP requests directly from the DevTools.</span></span>  
 
 :::image type="complex" source="../../media/2020/06/experiments-network-console.msft.png" alt-text="[ネットワーク コンソール] パネル" lightbox="../../media/2020/06/experiments-network-console.msft.png":::
-   <span data-ttu-id="a5745-130">**[ネットワーク コンソール]** パネル</span><span class="sxs-lookup"><span data-stu-id="a5745-130">The **Network Console** panel</span></span>  
+   <span data-ttu-id="fabd5-130">**[ネットワーク コンソール]** パネル</span><span class="sxs-lookup"><span data-stu-id="fabd5-130">The **Network Console** panel</span></span>  
 :::image-end:::  
 
 > [!TIP]
-> <span data-ttu-id="a5745-131">[DevTools][DevtoolsCustomizeIndexDrawer]**ドロ**ワーの代わりにメインの \(top\) パネルにネットワーク コンソールを表示するには、パネル間で[ツールを移動するに移動します](#move-tools-between-panels)。</span><span class="sxs-lookup"><span data-stu-id="a5745-131">To display **Network Console** in the main \(top\) panel instead of the [DevTools Drawer][DevtoolsCustomizeIndexDrawer], navigate to [moving tools between panels](#move-tools-between-panels).</span></span>  
+> <span data-ttu-id="fabd5-131">[DevTools][DevtoolsCustomizeIndexDrawer]**ドロ**ワーの代わりにメインの \(top\) パネルにネットワーク コンソールを表示するには、パネル間で[ツールを移動するに移動します](#move-tools-between-panels)。</span><span class="sxs-lookup"><span data-stu-id="fabd5-131">To display **Network Console** in the main \(top\) panel instead of the [DevTools Drawer][DevtoolsCustomizeIndexDrawer], navigate to [moving tools between panels](#move-tools-between-panels).</span></span>  
 
 > [!NOTE]
-> <span data-ttu-id="a5745-132">実験を有効にするには、[実験機能[][DevtoolsExperimentalFeaturesTurnOn]を有効にする] に移動し、[ネットワーク コンソールを有効にする] の横にある**チェック ボックスをオンにします**。</span><span class="sxs-lookup"><span data-stu-id="a5745-132">To enable the experiment, navigate to [Turn on experimental features][DevtoolsExperimentalFeaturesTurnOn] and choose the checkbox next to **Enable Network Console**.</span></span>  
+> <span data-ttu-id="fabd5-132">実験を有効にするには、[実験機能[][DevtoolsExperimentalFeaturesTurnOn]を有効にする] に移動し、[ネットワーク コンソールを有効にする] の横にある**チェック ボックスをオンにします**。</span><span class="sxs-lookup"><span data-stu-id="fabd5-132">To enable the experiment, navigate to [Turn on experimental features][DevtoolsExperimentalFeaturesTurnOn] and choose the checkbox next to **Enable Network Console**.</span></span>  
 > 
-> <span data-ttu-id="a5745-133">ネットワーク ログ [を開き、][DevtoolsNetworkIndexLogActivity]コンテキスト メニュー \(右クリック\) を開き、[編集] と [再生] **を選択します**。</span><span class="sxs-lookup"><span data-stu-id="a5745-133">Open the [Network Log][DevtoolsNetworkIndexLogActivity], open the contextual menu \(right-click\), and choose **Edit and Replay**.</span></span>  
+> <span data-ttu-id="fabd5-133">ネットワーク ログ [を開き、][DevtoolsNetworkIndexLogActivity]コンテキスト メニュー \(右クリック\) を開き、[編集] と [再生] **を選択します**。</span><span class="sxs-lookup"><span data-stu-id="fabd5-133">Open the [Network Log][DevtoolsNetworkIndexLogActivity], open the contextual menu \(right-click\), and choose **Edit and Replay**.</span></span>  
 
-<span data-ttu-id="a5745-134">Chromium の問題 [#1093687][CR1093687]</span><span class="sxs-lookup"><span data-stu-id="a5745-134">Chromium issue [#1093687][CR1093687]</span></span>  
+<span data-ttu-id="fabd5-134">Chromium の問題 [#1093687][CR1093687]</span><span class="sxs-lookup"><span data-stu-id="fabd5-134">Chromium issue [#1093687][CR1093687]</span></span>  
 
-### <a name="service-worker-respondwith-events-in-the-timing-tab"></a><span data-ttu-id="a5745-135">[タイミング] タブのサービス ワーカーのrespondWith イベント</span><span class="sxs-lookup"><span data-stu-id="a5745-135">Service worker respondWith events in the Timing tab</span></span>  
+### <a name="service-worker-respondwith-events-in-the-timing-tab"></a><span data-ttu-id="fabd5-135">[タイミング] タブのサービス ワーカーのrespondWith イベント</span><span class="sxs-lookup"><span data-stu-id="fabd5-135">Service worker respondWith events in the Timing tab</span></span>  
 
-<span data-ttu-id="a5745-136">ネットワーク **ツールの [** タイミング] **タブに** サービス ワーカー `respondWith` イベントが含まれる。</span><span class="sxs-lookup"><span data-stu-id="a5745-136">The **Timing** tab of the **Network** tool now includes `respondWith` service worker events.</span></span>  <span data-ttu-id="a5745-137">`respondWith`サービス ワーカー イベントは、サービス ワーカー `fetch` イベント ハンドラーの実行が開始される直前から、`respondWith` ハンドラーの `fetch` Promise が解決されるまでの期間を示します。</span><span class="sxs-lookup"><span data-stu-id="a5745-137">The `respondWith` service worker event shows the duration from the time immediately before the service worker `fetch` event handler starts running to the time when the `respondWith` promise of the `fetch` handler is settled.</span></span>  
+<span data-ttu-id="fabd5-136">ネットワーク **ツールの [** タイミング] **タブに** サービス ワーカー `respondWith` イベントが含まれる。</span><span class="sxs-lookup"><span data-stu-id="fabd5-136">The **Timing** tab of the **Network** tool now includes `respondWith` service worker events.</span></span>  <span data-ttu-id="fabd5-137">`respondWith`サービス ワーカー イベントは、サービス ワーカー `fetch` イベント ハンドラーの実行が開始される直前から、`respondWith` ハンドラーの `fetch` Promise が解決されるまでの期間を示します。</span><span class="sxs-lookup"><span data-stu-id="fabd5-137">The `respondWith` service worker event shows the duration from the time immediately before the service worker `fetch` event handler starts running to the time when the `respondWith` promise of the `fetch` handler is settled.</span></span>  
 
 :::image type="complex" source="../../media/2020/06/timing-tab.msft.png" alt-text="[ネットワーク] パネルの [タイミング] タブ内の respondWith サービス ワーカー イベント" lightbox="../../media/2020/06/timing-tab.msft.png":::
-   <span data-ttu-id="a5745-139">ネットワーク `respondWith` ツールの [タイミング]**タブ**のサービス ワーカー イベント\*\*\*\*</span><span class="sxs-lookup"><span data-stu-id="a5745-139">The `respondWith` service worker event in the **Timing** tab of the **Network** tool</span></span>  
+   <span data-ttu-id="fabd5-139">ネットワーク `respondWith` ツールの [タイミング]**タブ**のサービス ワーカー イベント\*\*\*\*</span><span class="sxs-lookup"><span data-stu-id="fabd5-139">The `respondWith` service worker event in the **Timing** tab of the **Network** tool</span></span>  
 :::image-end:::  
 
-<span data-ttu-id="a5745-140">[受信 **した応答] を** 展開して、応答からの追加情報 `fetch` `CacheStorageCacheName` を表示 `serviceWorkerResponseSource` します `ResponseTime` 。</span><span class="sxs-lookup"><span data-stu-id="a5745-140">Expand **Response received** to display additional information from the `fetch` response like `CacheStorageCacheName`, `serviceWorkerResponseSource`, and `ResponseTime`.</span></span>  
+<span data-ttu-id="fabd5-140">[受信 **した応答] を** 展開して、応答からの追加情報 `fetch` `CacheStorageCacheName` を表示 `serviceWorkerResponseSource` します `ResponseTime` 。</span><span class="sxs-lookup"><span data-stu-id="fabd5-140">Expand **Response received** to display additional information from the `fetch` response like `CacheStorageCacheName`, `serviceWorkerResponseSource`, and `ResponseTime`.</span></span>  
 
 :::image type="complex" source="../../media/2020/06/timing-tab2.msft.png" alt-text="受信した応答を展開して、フェッチ応答からの追加情報を表示する" lightbox="../../media/2020/06/timing-tab2.msft.png":::
-   <span data-ttu-id="a5745-142">[受信 **した応答] を** 展開して、応答からの追加情報を表示 `fetch` する</span><span class="sxs-lookup"><span data-stu-id="a5745-142">Expand **Response received** to display additional information from the `fetch` response</span></span>  
+   <span data-ttu-id="fabd5-142">[受信 **した応答] を** 展開して、応答からの追加情報を表示 `fetch` する</span><span class="sxs-lookup"><span data-stu-id="fabd5-142">Expand **Response received** to display additional information from the `fetch` response</span></span>  
 :::image-end:::  
 
-<span data-ttu-id="a5745-143">Chromium の問題 [#1066579][CR1066579]</span><span class="sxs-lookup"><span data-stu-id="a5745-143">Chromium issue [#1066579][CR1066579]</span></span>  
+<span data-ttu-id="fabd5-143">Chromium の問題 [#1066579][CR1066579]</span><span class="sxs-lookup"><span data-stu-id="fabd5-143">Chromium issue [#1066579][CR1066579]</span></span>  
 
-### <a name="webhint-feedback-in-the-issues-panel"></a><span data-ttu-id="a5745-144">[問題] パネル内の webhint のフィードバック</span><span class="sxs-lookup"><span data-stu-id="a5745-144">webhint feedback in the Issues panel</span></span>  
+### <a name="webhint-feedback-in-the-issues-panel"></a><span data-ttu-id="fabd5-144">[問題] パネル内の webhint のフィードバック</span><span class="sxs-lookup"><span data-stu-id="fabd5-144">webhint feedback in the Issues panel</span></span>  
 
 :::image type="complex" source="../../media/2020/06/experimental-tag-14px.msft.png" alt-text="試験的な機能":::
-   <span data-ttu-id="a5745-146">試験的な機能</span><span class="sxs-lookup"><span data-stu-id="a5745-146">Experimental feature</span></span>  
+   <span data-ttu-id="fabd5-146">試験的な機能</span><span class="sxs-lookup"><span data-stu-id="fabd5-146">Experimental feature</span></span>  
 :::image-end:::  
 
-<span data-ttu-id="a5745-147">[webhint][WebhintMain] は、アクセシビリティ、ブラウザ間の互換性、セキュリティ、パフォーマンス、PWA、および Web サイトの他の一般的な Web 開発の問題に関するリアルタイムのフィードバックを提供するオープン ソース ツールです。</span><span class="sxs-lookup"><span data-stu-id="a5745-147">[webhint][WebhintMain] is an open-source tool that provides real-time feedback on the accessibility, cross-browser compatibility, security, performance, PWAs, and other common web development issues of websites.</span></span>  <span data-ttu-id="a5745-148">[問題] パネルで webhint フィードバック [を確認][DevtoolsIssues] するには。</span><span class="sxs-lookup"><span data-stu-id="a5745-148">To review webhint feedback in the [Issues][DevtoolsIssues] panel.</span></span>  
+<span data-ttu-id="fabd5-147">[webhint][WebhintMain] は、アクセシビリティ、ブラウザ間の互換性、セキュリティ、パフォーマンス、PWA、および Web サイトの他の一般的な Web 開発の問題に関するリアルタイムのフィードバックを提供するオープン ソース ツールです。</span><span class="sxs-lookup"><span data-stu-id="fabd5-147">[webhint][WebhintMain] is an open-source tool that provides real-time feedback on the accessibility, cross-browser compatibility, security, performance, PWAs, and other common web development issues of websites.</span></span>  <span data-ttu-id="fabd5-148">[問題] パネルで webhint フィードバック [を確認][DevtoolsIssues] するには。</span><span class="sxs-lookup"><span data-stu-id="fabd5-148">To review webhint feedback in the [Issues][DevtoolsIssues] panel.</span></span>  
 
 :::image type="complex" source="../../media/2020/06/experiments-webhint.msft.png" alt-text="[問題] パネル内の webhint のフィードバック" lightbox="../../media/2020/06/experiments-webhint.msft.png":::
-   <span data-ttu-id="a5745-150">[問題] パネル内の webhint のフィードバック</span><span class="sxs-lookup"><span data-stu-id="a5745-150">webhint feedback in the Issues panel</span></span>  
+   <span data-ttu-id="fabd5-150">[問題] パネル内の webhint のフィードバック</span><span class="sxs-lookup"><span data-stu-id="fabd5-150">webhint feedback in the Issues panel</span></span>  
 :::image-end:::  
 
 > [!NOTE]
-> <span data-ttu-id="a5745-151">実験を有効にするには、[実験機能[][DevtoolsExperimentalFeaturesTurnOn]を有効にする] に移動し、[Webhint を有効にする] の横にあるチェック ボックス**をオンにします**。</span><span class="sxs-lookup"><span data-stu-id="a5745-151">To enable the experiment, navigate to [Turn on experimental features][DevtoolsExperimentalFeaturesTurnOn] and choose the checkbox next to **Enable webhint**.</span></span>  
+> <span data-ttu-id="fabd5-151">実験を有効にするには、[実験機能[][DevtoolsExperimentalFeaturesTurnOn]を有効にする] に移動し、[Webhint を有効にする] の横にあるチェック ボックス**をオンにします**。</span><span class="sxs-lookup"><span data-stu-id="fabd5-151">To enable the experiment, navigate to [Turn on experimental features][DevtoolsExperimentalFeaturesTurnOn] and choose the checkbox next to **Enable webhint**.</span></span>  
 > 
-> <span data-ttu-id="a5745-152">[問題 [] パネルを開][DevtoolsIssues] き、webhint からのフィードバックを表示します。</span><span class="sxs-lookup"><span data-stu-id="a5745-152">Open the [Issues][DevtoolsIssues] panel to display feedback from webhint.</span></span>  
+> <span data-ttu-id="fabd5-152">[問題 [] パネルを開][DevtoolsIssues] き、webhint からのフィードバックを表示します。</span><span class="sxs-lookup"><span data-stu-id="fabd5-152">Open the [Issues][DevtoolsIssues] panel to display feedback from webhint.</span></span>  
 
-<span data-ttu-id="a5745-153">Chromium の問題 [#1070378][CR1070378]</span><span class="sxs-lookup"><span data-stu-id="a5745-153">Chromium issue [#1070378][CR1070378]</span></span>  
+<span data-ttu-id="fabd5-153">Chromium の問題 [#1070378][CR1070378]</span><span class="sxs-lookup"><span data-stu-id="fabd5-153">Chromium issue [#1070378][CR1070378]</span></span>  
 
-### <a name="move-tools-between-panels"></a><span data-ttu-id="a5745-154">パネル間でツールを移動する</span><span class="sxs-lookup"><span data-stu-id="a5745-154">Move tools between panels</span></span>  
+### <a name="move-tools-between-panels"></a><span data-ttu-id="fabd5-154">パネル間でツールを移動する</span><span class="sxs-lookup"><span data-stu-id="fabd5-154">Move tools between panels</span></span>  
 
 :::image type="complex" source="../../media/2020/06/experimental-tag-14px.msft.png" alt-text="試験的な機能":::
-   <span data-ttu-id="a5745-156">試験的な機能</span><span class="sxs-lookup"><span data-stu-id="a5745-156">Experimental feature</span></span>  
+   <span data-ttu-id="fabd5-156">試験的な機能</span><span class="sxs-lookup"><span data-stu-id="fabd5-156">Experimental feature</span></span>  
 :::image-end:::  
 
-<span data-ttu-id="a5745-157">通常、**要素**や**ネットワーク**などのツールは、DevTools のメイン (上部) パネルでのみ開くことができます。</span><span class="sxs-lookup"><span data-stu-id="a5745-157">Normally, tools such as **Elements** and **Network** may only be opened in the main \(top\) panel of DevTools.</span></span>  <span data-ttu-id="a5745-158">同様に、**3D ビュー**や**問題**などのツールは、DevTools のドロワー (下部) パネルでのみ開くことができます。</span><span class="sxs-lookup"><span data-stu-id="a5745-158">Similarly, tools such as **3D View** and **Issues** may only be opened in the drawer \(bottom\) panel of DevTools.</span></span>  <span data-ttu-id="a5745-159">現在、上と下のパネル間でツールを移動して、DevTools のレイアウトをカスタマイズできるようになりました。</span><span class="sxs-lookup"><span data-stu-id="a5745-159">You are now able to customize your DevTools layout by moving tools between the top and bottom panels.</span></span>  
+<span data-ttu-id="fabd5-157">通常、**要素**や**ネットワーク**などのツールは、DevTools のメイン (上部) パネルでのみ開くことができます。</span><span class="sxs-lookup"><span data-stu-id="fabd5-157">Normally, tools such as **Elements** and **Network** may only be opened in the main \(top\) panel of DevTools.</span></span>  <span data-ttu-id="fabd5-158">同様に、**3D ビュー**や**問題**などのツールは、DevTools のドロワー (下部) パネルでのみ開くことができます。</span><span class="sxs-lookup"><span data-stu-id="fabd5-158">Similarly, tools such as **3D View** and **Issues** may only be opened in the drawer \(bottom\) panel of DevTools.</span></span>  <span data-ttu-id="fabd5-159">現在、上と下のパネル間でツールを移動して、DevTools のレイアウトをカスタマイズできるようになりました。</span><span class="sxs-lookup"><span data-stu-id="fabd5-159">You are now able to customize your DevTools layout by moving tools between the top and bottom panels.</span></span>  
 
 :::image type="complex" source="../../media/2020/06/experiments-move-panels.msft.png" alt-text="パネル間でツールを移動する" lightbox="../../media/2020/06/experiments-move-panels.msft.png":::
-   <span data-ttu-id="a5745-161">パネル間でツールを移動する</span><span class="sxs-lookup"><span data-stu-id="a5745-161">Move tools between panels</span></span>  
+   <span data-ttu-id="fabd5-161">パネル間でツールを移動する</span><span class="sxs-lookup"><span data-stu-id="fabd5-161">Move tools between panels</span></span>  
 :::image-end:::  
 
 > [!NOTE]
-> <span data-ttu-id="a5745-162">実験を有効にするには、[実験機能[][DevtoolsExperimentalFeaturesTurnOn]を有効にする] に移動し、[パネル間でタブを移動するサポートを有効にする] の横にある**チェック ボックスをオンにします**。</span><span class="sxs-lookup"><span data-stu-id="a5745-162">To enable the experiment, navigate to [Turn on experimental features][DevtoolsExperimentalFeaturesTurnOn] and choose the checkbox next to **Enable support to move tabs between panels**.</span></span>  
+> <span data-ttu-id="fabd5-162">実験を有効にするには、[実験機能[][DevtoolsExperimentalFeaturesTurnOn]を有効にする] に移動し、[パネル間でタブを移動するサポートを有効にする] の横にある**チェック ボックスをオンにします**。</span><span class="sxs-lookup"><span data-stu-id="fabd5-162">To enable the experiment, navigate to [Turn on experimental features][DevtoolsExperimentalFeaturesTurnOn] and choose the checkbox next to **Enable support to move tabs between panels**.</span></span>  
 
-<span data-ttu-id="a5745-163">Chromium の問題 [#897944][CR897944]</span><span class="sxs-lookup"><span data-stu-id="a5745-163">Chromium issue [#897944][CR897944]</span></span>  
+<span data-ttu-id="fabd5-163">Chromium の問題 [#897944][CR897944]</span><span class="sxs-lookup"><span data-stu-id="fabd5-163">Chromium issue [#897944][CR897944]</span></span>  
 
-### <a name="improved-initiator-tooltip-in-the-network-panel"></a><span data-ttu-id="a5745-164">[ネットワーク] パネルでのイニシエーターのヒントの改善</span><span class="sxs-lookup"><span data-stu-id="a5745-164">Improved Initiator tooltip in the Network panel</span></span>  
+### <a name="improved-initiator-tooltip-in-the-network-panel"></a><span data-ttu-id="fabd5-164">[ネットワーク] パネルでのイニシエーターのヒントの改善</span><span class="sxs-lookup"><span data-stu-id="fabd5-164">Improved Initiator tooltip in the Network panel</span></span>  
 
-<span data-ttu-id="a5745-165">Microsoft Edge 83 および 84 では、[イニシエーター] 列にヒントが表示されます。これにより、[ネットワーク ログ][DevtoolsNetworkIndexLogActivity]には、水平スクロールバーが表示されます。</span><span class="sxs-lookup"><span data-stu-id="a5745-165">In Microsoft Edge 83 and 84, tooltips for the Initiator column, which shows the cause of the resource request, in the [Network Log][DevtoolsNetworkIndexLogActivity] displayed with a horizontal scrollbar.</span></span>  <span data-ttu-id="a5745-166">ツールヒントで水平方向にスクロールすることで、要求を開始した呼び出し履歴のみを表示できたのです。</span><span class="sxs-lookup"><span data-stu-id="a5745-166">You were only able to display the call stack that initiated the request by scrolling horizontally in the tooltip.</span></span>  
+<span data-ttu-id="fabd5-165">Microsoft Edge 83 および 84 では、[イニシエーター] 列にヒントが表示されます。これにより、[ネットワーク ログ][DevtoolsNetworkIndexLogActivity]には、水平スクロールバーが表示されます。</span><span class="sxs-lookup"><span data-stu-id="fabd5-165">In Microsoft Edge 83 and 84, tooltips for the Initiator column, which shows the cause of the resource request, in the [Network Log][DevtoolsNetworkIndexLogActivity] displayed with a horizontal scrollbar.</span></span>  <span data-ttu-id="fabd5-166">ツールヒントで水平方向にスクロールすることで、要求を開始した呼び出し履歴のみを表示できたのです。</span><span class="sxs-lookup"><span data-stu-id="fabd5-166">You were only able to display the call stack that initiated the request by scrolling horizontally in the tooltip.</span></span>  
 
 :::image type="complex" source="../../media/2020/06/initiator-tooltip-84.msft.png" alt-text="Microsoft Edge 84 のイニシエーターのヒント" lightbox="../../media/2020/06/initiator-tooltip-84.msft.png":::
-   <span data-ttu-id="a5745-168">Microsoft Edge 84 のイニシエーターのヒント</span><span class="sxs-lookup"><span data-stu-id="a5745-168">The Initiator tooltip in Microsoft Edge 84</span></span>  
+   <span data-ttu-id="fabd5-168">Microsoft Edge 84 のイニシエーターのヒント</span><span class="sxs-lookup"><span data-stu-id="fabd5-168">The Initiator tooltip in Microsoft Edge 84</span></span>  
 :::image-end:::  
 
-<span data-ttu-id="a5745-169">85 Microsoft Edgeから、水平方向にスクロールせずに、イニシエーター呼び出し履歴をツールヒントに表示できます。</span><span class="sxs-lookup"><span data-stu-id="a5745-169">Starting with Microsoft Edge 85, you are now able to display the Initiator call stack in the tooltip without scrolling horizontally.</span></span>  
+<span data-ttu-id="fabd5-169">85 Microsoft Edgeから、水平方向にスクロールせずに、イニシエーター呼び出し履歴をツールヒントに表示できます。</span><span class="sxs-lookup"><span data-stu-id="fabd5-169">Starting with Microsoft Edge 85, you are now able to display the Initiator call stack in the tooltip without scrolling horizontally.</span></span>  
 
 :::image type="complex" source="../../media/2020/06/initiator-tooltip-85.msft.png" alt-text="Microsoft Edge 85 のイニシエーターのヒント" lightbox="../../media/2020/06/initiator-tooltip-85.msft.png":::
-   <span data-ttu-id="a5745-171">Microsoft Edge 85 のイニシエーターのヒント</span><span class="sxs-lookup"><span data-stu-id="a5745-171">The Initiator tooltip in Microsoft Edge 85</span></span>
+   <span data-ttu-id="fabd5-171">Microsoft Edge 85 のイニシエーターのヒント</span><span class="sxs-lookup"><span data-stu-id="fabd5-171">The Initiator tooltip in Microsoft Edge 85</span></span>
 :::image-end:::  
 
-<span data-ttu-id="a5745-172">Chromium の問題 [#1069404][CR1069404]</span><span class="sxs-lookup"><span data-stu-id="a5745-172">Chromium issue [#1069404][CR1069404]</span></span>  
+<span data-ttu-id="fabd5-172">Chromium の問題 [#1069404][CR1069404]</span><span class="sxs-lookup"><span data-stu-id="fabd5-172">Chromium issue [#1069404][CR1069404]</span></span>  
 
-## <a name="announcements-from-the-chromium-project"></a><span data-ttu-id="a5745-173">Chromium プロジェクトからのお知らせ</span><span class="sxs-lookup"><span data-stu-id="a5745-173">Announcements from the Chromium project</span></span>  
+## <a name="announcements-from-the-chromium-project"></a><span data-ttu-id="fabd5-173">Chromium プロジェクトからのお知らせ</span><span class="sxs-lookup"><span data-stu-id="fabd5-173">Announcements from the Chromium project</span></span>  
 
-<span data-ttu-id="a5745-174">次のセクションでは、オープン ソースの Chromium プロジェクトに寄与した Microsoft Edge 85 で利用できるその他の機能について説明します。</span><span class="sxs-lookup"><span data-stu-id="a5745-174">The following sections announce additional features available in Microsoft Edge 85 that were contributed to the open source Chromium project.</span></span>  
+<span data-ttu-id="fabd5-174">次のセクションでは、オープン ソースの Chromium プロジェクトに寄与した Microsoft Edge 85 で利用できるその他の機能について説明します。</span><span class="sxs-lookup"><span data-stu-id="fabd5-174">The following sections announce additional features available in Microsoft Edge 85 that were contributed to the open source Chromium project.</span></span>  
 
-### <a name="style-editing-for-css-in-js-frameworks"></a><span data-ttu-id="a5745-175">CSS-in-JS フレームワークのスタイルの編集</span><span class="sxs-lookup"><span data-stu-id="a5745-175">Style editing for CSS-in-JS frameworks</span></span>  
+### <a name="style-editing-for-css-in-js-frameworks"></a><span data-ttu-id="fabd5-175">CSS-in-JS フレームワークのスタイルの編集</span><span class="sxs-lookup"><span data-stu-id="fabd5-175">Style editing for CSS-in-JS frameworks</span></span>  
 
-<span data-ttu-id="a5745-176">**[スタイル]** ウィンドウで、[CSS オブジェクトモデル (CSSOM)][CsswgDraftsCssom] API を使って作成されたスタイルの編集がより適切にサポートされるようになりました。</span><span class="sxs-lookup"><span data-stu-id="a5745-176">The **Styles** pane now has better support for editing styles that were created with the [CSS Object Model (CSSOM)][CsswgDraftsCssom] APIs.</span></span>  <span data-ttu-id="a5745-177">多くの CSS-in-JS フレームワークとライブラリは、内部で CSSOM API を使ってスタイルを構築します。</span><span class="sxs-lookup"><span data-stu-id="a5745-177">Many CSS-in-JS frameworks and libraries use the CSSOM APIs under the hood to construct styles.</span></span>  
+<span data-ttu-id="fabd5-176">**[スタイル]** ウィンドウで、[CSS オブジェクトモデル (CSSOM)][CsswgDraftsCssom] API を使って作成されたスタイルの編集がより適切にサポートされるようになりました。</span><span class="sxs-lookup"><span data-stu-id="fabd5-176">The **Styles** pane now has better support for editing styles that were created with the [CSS Object Model (CSSOM)][CsswgDraftsCssom] APIs.</span></span>  <span data-ttu-id="fabd5-177">多くの CSS-in-JS フレームワークとライブラリは、内部で CSSOM API を使ってスタイルを構築します。</span><span class="sxs-lookup"><span data-stu-id="fabd5-177">Many CSS-in-JS frameworks and libraries use the CSSOM APIs under the hood to construct styles.</span></span>  
 
-<span data-ttu-id="a5745-178">現在、[Constructable Stylesheets][WicgConstructStylesheet] を使って、JavaScript で追加されたスタイルを編集できるようになりました。</span><span class="sxs-lookup"><span data-stu-id="a5745-178">You are now able to edit styles added in JavaScript using [Constructable Stylesheets][WicgConstructStylesheet].</span></span>  <span data-ttu-id="a5745-179">Constructable Stylesheets は、[Shadow DOM][MdnShadowDom]を使用するときに、再利用可能なスタイルを作成して配布するための新しい方法です。</span><span class="sxs-lookup"><span data-stu-id="a5745-179">Constructable Stylesheets are a new way to create and distribute reusable styles when using [Shadow DOM][MdnShadowDom].</span></span>  
+<span data-ttu-id="fabd5-178">現在、[Constructable Stylesheets][WicgConstructStylesheet] を使って、JavaScript で追加されたスタイルを編集できるようになりました。</span><span class="sxs-lookup"><span data-stu-id="fabd5-178">You are now able to edit styles added in JavaScript using [Constructable Stylesheets][WicgConstructStylesheet].</span></span>  <span data-ttu-id="fabd5-179">Constructable Stylesheets は、[Shadow DOM][MdnShadowDom]を使用するときに、再利用可能なスタイルを作成して配布するための新しい方法です。</span><span class="sxs-lookup"><span data-stu-id="fabd5-179">Constructable Stylesheets are a new way to create and distribute reusable styles when using [Shadow DOM][MdnShadowDom].</span></span>  
 
-<span data-ttu-id="a5745-180">たとえば、`CSSStyleSheet` (CSSOM API) で追加された `h1` スタイルは、以前は編集できませんでした。</span><span class="sxs-lookup"><span data-stu-id="a5745-180">For example, the `h1` styles added with `CSSStyleSheet` \(CSSOM APIs\) were not editable previously.</span></span>  <span data-ttu-id="a5745-181">スタイルは、[スタイル] パネルで **編集可能** になります。</span><span class="sxs-lookup"><span data-stu-id="a5745-181">The styles are editable now in the **Styles** panel.</span></span>  
+<span data-ttu-id="fabd5-180">たとえば、`CSSStyleSheet` (CSSOM API) で追加された `h1` スタイルは、以前は編集できませんでした。</span><span class="sxs-lookup"><span data-stu-id="fabd5-180">For example, the `h1` styles added with `CSSStyleSheet` \(CSSOM APIs\) were not editable previously.</span></span>  <span data-ttu-id="fabd5-181">スタイルは、[スタイル] パネルで **編集可能** になります。</span><span class="sxs-lookup"><span data-stu-id="fabd5-181">The styles are editable now in the **Styles** panel.</span></span>  
 
 :::image type="complex" source="../../media/2020/06/css-in-js.msft.png" alt-text="CSSStyleSheet で追加された h1 スタイルの background プロパティをピンクからライトブルーに変更する" lightbox="../../media/2020/06/css-in-js.msft.png":::
-   <span data-ttu-id="a5745-183">`CSSStyleSheet` で追加された `h1` スタイルの `background` プロパティを `pink` から `lightblue` に変更します。</span><span class="sxs-lookup"><span data-stu-id="a5745-183">Changing the `background` property of the `h1` styles added with `CSSStyleSheet` from `pink` to `lightblue`.</span></span>
+   <span data-ttu-id="fabd5-183">`CSSStyleSheet` で追加された `h1` スタイルの `background` プロパティを `pink` から `lightblue` に変更します。</span><span class="sxs-lookup"><span data-stu-id="fabd5-183">Changing the `background` property of the `h1` styles added with `CSSStyleSheet` from `pink` to `lightblue`.</span></span>
 :::image-end:::  
 
-<span data-ttu-id="a5745-184">この機能は、[CSS-in-JS を使用するサンプル][CodepenZoherghadyaliAbdgrpz]で試すことができます。</span><span class="sxs-lookup"><span data-stu-id="a5745-184">Give this feature a try with a [sample that uses CSS-in-JS][CodepenZoherghadyaliAbdgrpz].</span></span>
+<span data-ttu-id="fabd5-184">この機能は、[CSS-in-JS を使用するサンプル][CodepenZoherghadyaliAbdgrpz]で試すことができます。</span><span class="sxs-lookup"><span data-stu-id="fabd5-184">Give this feature a try with a [sample that uses CSS-in-JS][CodepenZoherghadyaliAbdgrpz].</span></span>
 
-<span data-ttu-id="a5745-185">Chromium の問題 [#946975][CR946975]</span><span class="sxs-lookup"><span data-stu-id="a5745-185">Chromium issue [#946975][CR946975]</span></span>  
+<span data-ttu-id="fabd5-185">Chromium の問題 [#946975][CR946975]</span><span class="sxs-lookup"><span data-stu-id="fabd5-185">Chromium issue [#946975][CR946975]</span></span>  
 
-### <a name="lighthouse-6-in-the-lighthouse-panel"></a><span data-ttu-id="a5745-186">[Lighthouse] パネルの Lighthouse 6</span><span class="sxs-lookup"><span data-stu-id="a5745-186">Lighthouse 6 in the Lighthouse panel</span></span>  
+### <a name="lighthouse-6-in-the-lighthouse-panel"></a><span data-ttu-id="fabd5-186">[Lighthouse] パネルの Lighthouse 6</span><span class="sxs-lookup"><span data-stu-id="fabd5-186">Lighthouse 6 in the Lighthouse panel</span></span>  
 
-<span data-ttu-id="a5745-187">**[Lighthouse]** パネルは、現在 Lighthouse 6 を実行しています。</span><span class="sxs-lookup"><span data-stu-id="a5745-187">The **Lighthouse** panel is now running Lighthouse 6.</span></span>  <span data-ttu-id="a5745-188">すべての変更の完全な一覧については [、v6.0.0][GithubGoogleChromeLighthouse600]リリース ノートに移動します。</span><span class="sxs-lookup"><span data-stu-id="a5745-188">For a full list of all changes, navigate to [v6.0.0 release notes][GithubGoogleChromeLighthouse600].</span></span>  
+<span data-ttu-id="fabd5-187">**[Lighthouse]** パネルは、現在 Lighthouse 6 を実行しています。</span><span class="sxs-lookup"><span data-stu-id="fabd5-187">The **Lighthouse** panel is now running Lighthouse 6.</span></span>  <span data-ttu-id="fabd5-188">すべての変更の完全な一覧については [、v6.0.0][GithubGoogleChromeLighthouse600]リリース ノートに移動します。</span><span class="sxs-lookup"><span data-stu-id="fabd5-188">For a full list of all changes, navigate to [v6.0.0 release notes][GithubGoogleChromeLighthouse600].</span></span>  
 
-<span data-ttu-id="a5745-189">Lighthouse 6.0 では、レポートに 3 つの新しい指標が導入されています。最大コンテンツのペイント (LCP)、累積レイアウト シフト (CLS)、および合計ブロッキング時間 (TBT) です。</span><span class="sxs-lookup"><span data-stu-id="a5745-189">Lighthouse 6.0 introduces three new metrics to the report:  Largest Contentful Paint \(LCP\), Cumulative Layout Shift \(CLS\), and Total Blocking Time \(TBT\).</span></span>  
+<span data-ttu-id="fabd5-189">Lighthouse 6.0 では、レポートに 3 つの新しい指標が導入されています。最大コンテンツのペイント (LCP)、累積レイアウト シフト (CLS)、および合計ブロッキング時間 (TBT) です。</span><span class="sxs-lookup"><span data-stu-id="fabd5-189">Lighthouse 6.0 introduces three new metrics to the report:  Largest Contentful Paint \(LCP\), Cumulative Layout Shift \(CLS\), and Total Blocking Time \(TBT\).</span></span>  
 
-<span data-ttu-id="a5745-190">また、パフォーマンス スコアの計算式も再重み付けされ、ユーザーの読み込み操作がより適切に反映されるようになりました。</span><span class="sxs-lookup"><span data-stu-id="a5745-190">The performance score formula has also been reweighted to better reflect the loading experience of the user.</span></span>  
+<span data-ttu-id="fabd5-190">また、パフォーマンス スコアの計算式も再重み付けされ、ユーザーの読み込み操作がより適切に反映されるようになりました。</span><span class="sxs-lookup"><span data-stu-id="fabd5-190">The performance score formula has also been reweighted to better reflect the loading experience of the user.</span></span>  
 
-<span data-ttu-id="a5745-191">Chromium の問題 [#772558][CR772558]</span><span class="sxs-lookup"><span data-stu-id="a5745-191">Chromium issue [#772558][CR772558]</span></span>  
+<span data-ttu-id="fabd5-191">Chromium の問題 [#772558][CR772558]</span><span class="sxs-lookup"><span data-stu-id="fabd5-191">Chromium issue [#772558][CR772558]</span></span>  
 
-#### <a name="first-meaningful-paint-deprecation"></a><span data-ttu-id="a5745-192">First Meaningful Paint の廃止</span><span class="sxs-lookup"><span data-stu-id="a5745-192">First Meaningful Paint deprecation</span></span>  
+#### <a name="first-meaningful-paint-deprecation"></a><span data-ttu-id="fabd5-192">First Meaningful Paint の廃止</span><span class="sxs-lookup"><span data-stu-id="fabd5-192">First Meaningful Paint deprecation</span></span>  
 
-<span data-ttu-id="a5745-193">Lighthouse 6.0 では、最初の意味のあるペイント (FMP) が廃止されました。</span><span class="sxs-lookup"><span data-stu-id="a5745-193">First Meaningful Paint \(FMP\) is deprecated in Lighthouse 6.0.</span></span>  <span data-ttu-id="a5745-194">FMP は、**[パフォーマンス]** パネルからも削除されています。</span><span class="sxs-lookup"><span data-stu-id="a5745-194">FMP has also been removed from the **Performance** panel.</span></span>  <span data-ttu-id="a5745-195">**最大コンテンツのペイント**が、推奨される FMP の代替機能です。</span><span class="sxs-lookup"><span data-stu-id="a5745-195">**Largest Contentful Paint** is the recommended replacement for FMP.</span></span>  <!--For an explanation of why it was deprecated, navigate to [First Meaningful Paint][WebDevFirstMeaningfulPaint].  -->  
+<span data-ttu-id="fabd5-193">Lighthouse 6.0 では、最初の意味のあるペイント (FMP) が廃止されました。</span><span class="sxs-lookup"><span data-stu-id="fabd5-193">First Meaningful Paint \(FMP\) is deprecated in Lighthouse 6.0.</span></span>  <span data-ttu-id="fabd5-194">FMP は、**[パフォーマンス]** パネルからも削除されています。</span><span class="sxs-lookup"><span data-stu-id="fabd5-194">FMP has also been removed from the **Performance** panel.</span></span>  <span data-ttu-id="fabd5-195">**最大コンテンツのペイント**が、推奨される FMP の代替機能です。</span><span class="sxs-lookup"><span data-stu-id="fabd5-195">**Largest Contentful Paint** is the recommended replacement for FMP.</span></span>  <!--For an explanation of why it was deprecated, navigate to [First Meaningful Paint][WebDevFirstMeaningfulPaint].  -->  
 
 <!--todo: add Largest Contentful Paint when section available  -->  
 <!--todo: add First Meaningful Paint link and note when available  -->  
 
-<span data-ttu-id="a5745-196">Chromium の問題 [#1096008][CR1096008]</span><span class="sxs-lookup"><span data-stu-id="a5745-196">Chromium issue [#1096008][CR1096008]</span></span>  
+<span data-ttu-id="fabd5-196">Chromium の問題 [#1096008][CR1096008]</span><span class="sxs-lookup"><span data-stu-id="fabd5-196">Chromium issue [#1096008][CR1096008]</span></span>  
 
-### <a name="support-for-new-javascript-features"></a><span data-ttu-id="a5745-197">新しい JavaScript 機能のサポート</span><span class="sxs-lookup"><span data-stu-id="a5745-197">Support for new JavaScript features</span></span>  
+### <a name="support-for-new-javascript-features"></a><span data-ttu-id="fabd5-197">新しい JavaScript 機能のサポート</span><span class="sxs-lookup"><span data-stu-id="fabd5-197">Support for new JavaScript features</span></span>  
 
-<span data-ttu-id="a5745-198">DevTools では、最新の JavaScript 言語機能の一部がより適切にサポートされるようになりました。</span><span class="sxs-lookup"><span data-stu-id="a5745-198">DevTools now has better support for some of the latest JavaScript language features.</span></span>  
+<span data-ttu-id="fabd5-198">DevTools では、最新の JavaScript 言語機能の一部がより適切にサポートされるようになりました。</span><span class="sxs-lookup"><span data-stu-id="fabd5-198">DevTools now has better support for some of the latest JavaScript language features.</span></span>  
 
 :::row:::
    :::column span="1":::
-      <span data-ttu-id="a5745-199">[optional chaining][V8DevOptionalChaining] 構文のオートコンプリート</span><span class="sxs-lookup"><span data-stu-id="a5745-199">[Optional chaining][V8DevOptionalChaining] syntax autocompletion</span></span>  
+      <span data-ttu-id="fabd5-199">[optional chaining][V8DevOptionalChaining] 構文のオートコンプリート</span><span class="sxs-lookup"><span data-stu-id="fabd5-199">[Optional chaining][V8DevOptionalChaining] syntax autocompletion</span></span>  
    :::column-end:::
    :::column span="2":::
-      <span data-ttu-id="a5745-200">**コンソール**内のプロパティのオートコンプリート機能により、optional chaining 構文がサポートされるようになりました。たとえば、`name.` と `name[` に加えて、`name?.` も使えます。</span><span class="sxs-lookup"><span data-stu-id="a5745-200">Property auto-completion in the **Console** now supports optional chaining syntax, for example,  `name?.` now works in addition to `name.` and `name[`.</span></span>  
+      <span data-ttu-id="fabd5-200">**コンソール**内のプロパティのオートコンプリート機能により、optional chaining 構文がサポートされるようになりました。たとえば、`name.` と `name[` に加えて、`name?.` も使えます。</span><span class="sxs-lookup"><span data-stu-id="fabd5-200">Property auto-completion in the **Console** now supports optional chaining syntax, for example,  `name?.` now works in addition to `name.` and `name[`.</span></span>  
    :::column-end:::
 :::row-end:::
 :::row:::
    :::column span="1":::
-      <span data-ttu-id="a5745-201">[プライベート フィールド][V8DevClassFieldsPrivate]の構文の強調表示</span><span class="sxs-lookup"><span data-stu-id="a5745-201">Syntax highlighting for [private fields][V8DevClassFieldsPrivate]</span></span>  
+      <span data-ttu-id="fabd5-201">[プライベート フィールド][V8DevClassFieldsPrivate]の構文の強調表示</span><span class="sxs-lookup"><span data-stu-id="fabd5-201">Syntax highlighting for [private fields][V8DevClassFieldsPrivate]</span></span>  
    :::column-end:::
    :::column span="2":::
-      <span data-ttu-id="a5745-202">プライベート クラスのフィールドが、**[ソース]** パネルで適切に強調表示され、整形出力されるようになりました。</span><span class="sxs-lookup"><span data-stu-id="a5745-202">private class fields are now properly syntax-highlighted and pretty-printed in the **Sources** panel.</span></span>  
+      <span data-ttu-id="fabd5-202">プライベート クラスのフィールドが、**[ソース]** パネルで適切に強調表示され、整形出力されるようになりました。</span><span class="sxs-lookup"><span data-stu-id="fabd5-202">private class fields are now properly syntax-highlighted and pretty-printed in the **Sources** panel.</span></span>  
    :::column-end:::
 :::row-end:::
 :::row:::
    :::column span="1":::
-      <span data-ttu-id="a5745-203">[Nullish 合体演算子][V8DevNullishCoalescing]の構文の強調表示</span><span class="sxs-lookup"><span data-stu-id="a5745-203">Syntax highlighting for [Nullish coalescing operator][V8DevNullishCoalescing]</span></span>
+      <span data-ttu-id="fabd5-203">[Nullish 合体演算子][V8DevNullishCoalescing]の構文の強調表示</span><span class="sxs-lookup"><span data-stu-id="fabd5-203">Syntax highlighting for [Nullish coalescing operator][V8DevNullishCoalescing]</span></span>
    :::column-end:::
    :::column span="2":::
-      <span data-ttu-id="a5745-204">**[ソース]** パネルで nullish 合体演算子が整形出力されるようになりました。</span><span class="sxs-lookup"><span data-stu-id="a5745-204">DevTools now properly pretty-prints the nullish coalescing operator in the **Sources** panel.</span></span>  
+      <span data-ttu-id="fabd5-204">**[ソース]** パネルで nullish 合体演算子が整形出力されるようになりました。</span><span class="sxs-lookup"><span data-stu-id="fabd5-204">DevTools now properly pretty-prints the nullish coalescing operator in the **Sources** panel.</span></span>  
    :::column-end:::
 :::row-end:::  
 
-<span data-ttu-id="a5745-205">Chromium の問題 [#1073903][CR1073903]、 [#1083214][CR1083214]、 [#1083797][CR1083797]</span><span class="sxs-lookup"><span data-stu-id="a5745-205">Chromium issues [#1073903][CR1073903], [#1083214][CR1083214], [#1083797][CR1083797]</span></span>  
+<span data-ttu-id="fabd5-205">Chromium の問題 [#1073903][CR1073903]、 [#1083214][CR1083214]、 [#1083797][CR1083797]</span><span class="sxs-lookup"><span data-stu-id="fabd5-205">Chromium issues [#1073903][CR1073903], [#1083214][CR1083214], [#1083797][CR1083797]</span></span>  
 
-### <a name="new-app-shortcut-warnings-in-the-manifest-pane"></a><span data-ttu-id="a5745-206">[マニフェスト] ウィンドウでの新しいアプリのショートカットの警告</span><span class="sxs-lookup"><span data-stu-id="a5745-206">New app shortcut warnings in the Manifest pane</span></span>  
+### <a name="new-app-shortcut-warnings-in-the-manifest-pane"></a><span data-ttu-id="fabd5-206">[マニフェスト] ウィンドウでの新しいアプリのショートカットの警告</span><span class="sxs-lookup"><span data-stu-id="fabd5-206">New app shortcut warnings in the Manifest pane</span></span>  
 
-<span data-ttu-id="a5745-207">**アプリのショートカット** を使用すると、Web アプリ内で一般的または推奨されるタスクをすばやく開始できます。</span><span class="sxs-lookup"><span data-stu-id="a5745-207">**App shortcuts** help users quickly start common or recommended tasks within a web app.</span></span>  
+<span data-ttu-id="fabd5-207">**アプリのショートカット** を使用すると、Web アプリ内で一般的または推奨されるタスクをすばやく開始できます。</span><span class="sxs-lookup"><span data-stu-id="fabd5-207">**App shortcuts** help users quickly start common or recommended tasks within a web app.</span></span>  
 
 <!--todo: add App shortcuts when section is live  -->  
 
-<span data-ttu-id="a5745-208">**[マニフェスト]** ウィンドウには、次の条件の警告が表示されるようになりました。</span><span class="sxs-lookup"><span data-stu-id="a5745-208">The **Manifest** pane now shows warnings for the following conditions.</span></span>  
+<span data-ttu-id="fabd5-208">**[マニフェスト]** ウィンドウには、次の条件の警告が表示されるようになりました。</span><span class="sxs-lookup"><span data-stu-id="fabd5-208">The **Manifest** pane now shows warnings for the following conditions.</span></span>  
 
-* <span data-ttu-id="a5745-209">アプリのショートカット アイコンが 96 x 96 ピクセルより小さい</span><span class="sxs-lookup"><span data-stu-id="a5745-209">The app shortcut icons are smaller than 96x96 pixels</span></span>  
-* <span data-ttu-id="a5745-210">アプリのショートカット アイコンとマニフェスト アイコンが四角形でない (アイコンが無視されているため)</span><span class="sxs-lookup"><span data-stu-id="a5745-210">The app shortcut icons and manifest icons are not square \(since the icons are ignored\)</span></span>  
+* <span data-ttu-id="fabd5-209">アプリのショートカット アイコンが 96 x 96 ピクセルより小さい</span><span class="sxs-lookup"><span data-stu-id="fabd5-209">The app shortcut icons are smaller than 96x96 pixels</span></span>  
+* <span data-ttu-id="fabd5-210">アプリのショートカット アイコンとマニフェスト アイコンが四角形でない (アイコンが無視されているため)</span><span class="sxs-lookup"><span data-stu-id="fabd5-210">The app shortcut icons and manifest icons are not square \(since the icons are ignored\)</span></span>  
 
 :::image type="complex" source="../../media/2020/06/app-shortcut-warnings.msft.png" alt-text="アプリのショートカットの警告" lightbox="../../media/2020/06/app-shortcut-warnings.msft.png":::
-   <span data-ttu-id="a5745-212">アプリのショートカットの警告</span><span class="sxs-lookup"><span data-stu-id="a5745-212">App shortcut warnings</span></span>  
+   <span data-ttu-id="fabd5-212">アプリのショートカットの警告</span><span class="sxs-lookup"><span data-stu-id="fabd5-212">App shortcut warnings</span></span>  
 :::image-end:::  
 
-<span data-ttu-id="a5745-213">Chromium の問題 [#955497][CR955497]</span><span class="sxs-lookup"><span data-stu-id="a5745-213">Chromium issue [#955497][CR955497]</span></span>  
+<span data-ttu-id="fabd5-213">Chromium の問題 [#955497][CR955497]</span><span class="sxs-lookup"><span data-stu-id="fabd5-213">Chromium issue [#955497][CR955497]</span></span>  
 
-### <a name="consistent-display-of-the-computed-pane"></a><span data-ttu-id="a5745-214">[計算済み] ウィンドウの一貫性のある表示</span><span class="sxs-lookup"><span data-stu-id="a5745-214">Consistent display of the Computed pane</span></span>  
+### <a name="consistent-display-of-the-computed-pane"></a><span data-ttu-id="fabd5-214">[計算済み] ウィンドウの一貫性のある表示</span><span class="sxs-lookup"><span data-stu-id="fabd5-214">Consistent display of the Computed pane</span></span>  
 
-<span data-ttu-id="a5745-215">[ **要素] ツールの** [計算] **ウィンドウ** が、すべてのビューポート サイズにわたって一貫してウィンドウとして表示されます。</span><span class="sxs-lookup"><span data-stu-id="a5745-215">The **Computed** pane in the **Elements** tool now displays consistently as a pane across all viewport sizes.</span></span>  <span data-ttu-id="a5745-216">以前は、DevTools ビューポートの幅が狭い場合、**[計算済み]** ウィンドウは、**[スタイル]** ウィンドウ内にマージされました。</span><span class="sxs-lookup"><span data-stu-id="a5745-216">Previously the **Computed** pane merged inside the **Styles** pane when the width of the DevTools viewport was narrow.</span></span>  
+<span data-ttu-id="fabd5-215">[ **要素] ツールの** [計算] **ウィンドウ** が、すべてのビューポート サイズにわたって一貫してウィンドウとして表示されます。</span><span class="sxs-lookup"><span data-stu-id="fabd5-215">The **Computed** pane in the **Elements** tool now displays consistently as a pane across all viewport sizes.</span></span>  <span data-ttu-id="fabd5-216">以前は、DevTools ビューポートの幅が狭い場合、**[計算済み]** ウィンドウは、**[スタイル]** ウィンドウ内にマージされました。</span><span class="sxs-lookup"><span data-stu-id="fabd5-216">Previously the **Computed** pane merged inside the **Styles** pane when the width of the DevTools viewport was narrow.</span></span>  
 
 :::image type="complex" source="../../media/2020/06/computed-pane.msft.png" alt-text="DevTools の幅が狭い場合でも、[計算済み] ウィンドウは個別のウィンドウとして表示されます" lightbox="../../media/2020/06/computed-pane.msft.png":::
-   <span data-ttu-id="a5745-218">DevTools の幅が狭い場合でも、**[計算済み]** ウィンドウは個別のウィンドウとして常に表示されます。</span><span class="sxs-lookup"><span data-stu-id="a5745-218">The **Computed** pane consistently displays as a separate pane even when the DevTools are narrow.</span></span>
+   <span data-ttu-id="fabd5-218">DevTools の幅が狭い場合でも、**[計算済み]** ウィンドウは個別のウィンドウとして常に表示されます。</span><span class="sxs-lookup"><span data-stu-id="fabd5-218">The **Computed** pane consistently displays as a separate pane even when the DevTools are narrow.</span></span>
 :::image-end:::  
 
-<span data-ttu-id="a5745-219">Chromium の問題 [#1073899][CR1073899]</span><span class="sxs-lookup"><span data-stu-id="a5745-219">Chromium issue [#1073899][CR1073899]</span></span>  
+<span data-ttu-id="fabd5-219">Chromium の問題 [#1073899][CR1073899]</span><span class="sxs-lookup"><span data-stu-id="fabd5-219">Chromium issue [#1073899][CR1073899]</span></span>  
 
-### <a name="bytecode-offsets-for-webassembly-files"></a><span data-ttu-id="a5745-220">WebAssembly ファイルのバイトコード オフセット</span><span class="sxs-lookup"><span data-stu-id="a5745-220">Bytecode offsets for WebAssembly files</span></span>  
+### <a name="bytecode-offsets-for-webassembly-files"></a><span data-ttu-id="fabd5-220">WebAssembly ファイルのバイトコード オフセット</span><span class="sxs-lookup"><span data-stu-id="fabd5-220">Bytecode offsets for WebAssembly files</span></span>  
 
-<span data-ttu-id="a5745-221">DevTools は、Wasm 逆アセンブルの行番号を表示するためにバイトコード オフセットを使用するようになりました。</span><span class="sxs-lookup"><span data-stu-id="a5745-221">DevTools now uses bytecode offsets for displaying line numbers of Wasm disassembly.</span></span>  
-<span data-ttu-id="a5745-222">行番号によって、バイナリデータを見ていることが明確になり、Wasm ランタイムが場所を参照する方法に一貫性が保たれます。</span><span class="sxs-lookup"><span data-stu-id="a5745-222">The line numbers make it clearer that you are looking at binary data, and is more consistent with how the Wasm runtime references locations.</span></span>  
+<span data-ttu-id="fabd5-221">DevTools は、Wasm 逆アセンブルの行番号を表示するためにバイトコード オフセットを使用するようになりました。</span><span class="sxs-lookup"><span data-stu-id="fabd5-221">DevTools now uses bytecode offsets for displaying line numbers of Wasm disassembly.</span></span>  
+<span data-ttu-id="fabd5-222">行番号によって、バイナリデータを見ていることが明確になり、Wasm ランタイムが場所を参照する方法に一貫性が保たれます。</span><span class="sxs-lookup"><span data-stu-id="fabd5-222">The line numbers make it clearer that you are looking at binary data, and is more consistent with how the Wasm runtime references locations.</span></span>  
 
-<span data-ttu-id="a5745-223">Chromium の問題 [#1071432][CR1071432]</span><span class="sxs-lookup"><span data-stu-id="a5745-223">Chromium issue [#1071432][CR1071432]</span></span>  
+<span data-ttu-id="fabd5-223">Chromium の問題 [#1071432][CR1071432]</span><span class="sxs-lookup"><span data-stu-id="fabd5-223">Chromium issue [#1071432][CR1071432]</span></span>  
 
-### <a name="line-wise-copy-and-cut-in-sources-panel"></a><span data-ttu-id="a5745-224">[ソース] パネルでの行ごとのコピーと切り取り</span><span class="sxs-lookup"><span data-stu-id="a5745-224">Line-wise copy and cut in Sources Panel</span></span>  
+### <a name="line-wise-copy-and-cut-in-sources-panel"></a><span data-ttu-id="fabd5-224">[ソース] パネルでの行ごとのコピーと切り取り</span><span class="sxs-lookup"><span data-stu-id="fabd5-224">Line-wise copy and cut in Sources Panel</span></span>  
 
-<span data-ttu-id="a5745-225">[ソース パネル エディター][DevtoolsSourcesIndexUsingEditorPaneToViewEditFiles]で選択なしでコピーまたは切り取りを実行すると、現在のコンテンツの行がコピーまたは切り取りられます。</span><span class="sxs-lookup"><span data-stu-id="a5745-225">When performing copy or cut with no selection in the [Sources panel editor][DevtoolsSourcesIndexUsingEditorPaneToViewEditFiles], DevTools copies or cuts the current line of content.</span></span>  
+<span data-ttu-id="fabd5-225">[ソース パネル エディター][DevtoolsSourcesIndexUsingEditorPaneToViewEditFiles]で選択なしでコピーまたは切り取りを実行すると、現在のコンテンツの行がコピーまたは切り取りられます。</span><span class="sxs-lookup"><span data-stu-id="fabd5-225">When performing copy or cut with no selection in the [Sources panel editor][DevtoolsSourcesIndexUsingEditorPaneToViewEditFiles], DevTools copies or cuts the current line of content.</span></span>  
 
 :::image type="complex" source="../../media/2020/06/line-wise-cut.msft.png" alt-text="カーソルが 5 行目の最後にある状態で、DevTools の pen.js から行全体をコピーして、Visual Studio Code に貼り付けます。" lightbox="../../media/2020/06/line-wise-cut.msft.png":::
-   <span data-ttu-id="a5745-227">カーソルが 5 行目の最後にある状態で、DevTools の **pen.js** から行全体をコピーして、[Visual Studio Code][VisualStudioCode] に貼り付けます。</span><span class="sxs-lookup"><span data-stu-id="a5745-227">With the cursor at the end of Line 5, copying the whole line from **pen.js** in the DevTools and pasting in [Visual Studio Code][VisualStudioCode].</span></span>
+   <span data-ttu-id="fabd5-227">カーソルが 5 行目の最後にある状態で、DevTools の **pen.js** から行全体をコピーして、[Visual Studio Code][VisualStudioCode] に貼り付けます。</span><span class="sxs-lookup"><span data-stu-id="fabd5-227">With the cursor at the end of Line 5, copying the whole line from **pen.js** in the DevTools and pasting in [Visual Studio Code][VisualStudioCode].</span></span>
 :::image-end:::  
 
-<span data-ttu-id="a5745-228">Chromium の問題 [#800028][CR800028]</span><span class="sxs-lookup"><span data-stu-id="a5745-228">Chromium issue [#800028][CR800028]</span></span>
+<span data-ttu-id="fabd5-228">Chromium の問題 [#800028][CR800028]</span><span class="sxs-lookup"><span data-stu-id="fabd5-228">Chromium issue [#800028][CR800028]</span></span>
 
-### <a name="console-settings-updates"></a><span data-ttu-id="a5745-229">コンソールの設定の更新</span><span class="sxs-lookup"><span data-stu-id="a5745-229">Console Settings updates</span></span>  
+### <a name="console-settings-updates"></a><span data-ttu-id="fabd5-229">コンソールの設定の更新</span><span class="sxs-lookup"><span data-stu-id="fabd5-229">Console Settings updates</span></span>  
 
-#### <a name="ungroup-same-console-messages"></a><span data-ttu-id="a5745-230">同じコンソールのメッセージをグループ解除する</span><span class="sxs-lookup"><span data-stu-id="a5745-230">Ungroup same console messages</span></span>  
+#### <a name="ungroup-same-console-messages"></a><span data-ttu-id="fabd5-230">同じコンソールのメッセージをグループ解除する</span><span class="sxs-lookup"><span data-stu-id="fabd5-230">Ungroup same console messages</span></span>  
 
-<span data-ttu-id="a5745-231">コンソールの設定の **[類似のグループ化]** 切り替えが、重複するメッセージに適用されるようになりました。</span><span class="sxs-lookup"><span data-stu-id="a5745-231">The **Group similar** toggle in Console Settings now applies to duplicate messages.</span></span>  <span data-ttu-id="a5745-232">以前は単に類似のメッセージに適用されていました。</span><span class="sxs-lookup"><span data-stu-id="a5745-232">Previously it just applied to similar messages.</span></span>  
+<span data-ttu-id="fabd5-231">コンソールの設定の **[類似のグループ化]** 切り替えが、重複するメッセージに適用されるようになりました。</span><span class="sxs-lookup"><span data-stu-id="fabd5-231">The **Group similar** toggle in Console Settings now applies to duplicate messages.</span></span>  <span data-ttu-id="fabd5-232">以前は単に類似のメッセージに適用されていました。</span><span class="sxs-lookup"><span data-stu-id="fabd5-232">Previously it just applied to similar messages.</span></span>  
 
-<span data-ttu-id="a5745-233">たとえば、以前は、**[類似のグループ化]** がオフになっている場合でも、`hello` メッセージはグループ解除されませんでした。</span><span class="sxs-lookup"><span data-stu-id="a5745-233">For example, previously, DevTools did not ungroup the `hello` messages even though **Group similar** is unchecked.</span></span>  <span data-ttu-id="a5745-234">現在、`hello` メッセージはグループ解除されます。</span><span class="sxs-lookup"><span data-stu-id="a5745-234">Now, the `hello` messages are ungrouped.</span></span>  
+<span data-ttu-id="fabd5-233">たとえば、以前は、**[類似のグループ化]** がオフになっている場合でも、`hello` メッセージはグループ解除されませんでした。</span><span class="sxs-lookup"><span data-stu-id="fabd5-233">For example, previously, DevTools did not ungroup the `hello` messages even though **Group similar** is unchecked.</span></span>  <span data-ttu-id="fabd5-234">現在、`hello` メッセージはグループ解除されます。</span><span class="sxs-lookup"><span data-stu-id="fabd5-234">Now, the `hello` messages are ungrouped.</span></span>  
 
 :::image type="complex" source="../../media/2020/06/ungroup-similar.msft.png" alt-text="[類似のグループ化] がオフの場合、hello メッセージはグループ解除されます。" lightbox="../../media/2020/06/ungroup-similar.msft.png":::
-   <span data-ttu-id="a5745-236">**[類似のグループ化]** がオフの場合、`hello` メッセージはグループ解除されます。</span><span class="sxs-lookup"><span data-stu-id="a5745-236">When **Group similar** is unchecked, the `hello` messages are ungrouped</span></span>
+   <span data-ttu-id="fabd5-236">**[類似のグループ化]** がオフの場合、`hello` メッセージはグループ解除されます。</span><span class="sxs-lookup"><span data-stu-id="fabd5-236">When **Group similar** is unchecked, the `hello` messages are ungrouped</span></span>
 :::image-end:::  
 
-<span data-ttu-id="a5745-237">この機能は、[コンソールに重複したメッセージを送信するサンプル][CodepenZoherghadyaliZyrjgdJ]で試すことができます。</span><span class="sxs-lookup"><span data-stu-id="a5745-237">Give this feature a try with a [sample that sends duplicate messages to the Console][CodepenZoherghadyaliZyrjgdJ].</span></span>  
+<span data-ttu-id="fabd5-237">この機能は、[コンソールに重複したメッセージを送信するサンプル][CodepenZoherghadyaliZyrjgdJ]で試すことができます。</span><span class="sxs-lookup"><span data-stu-id="fabd5-237">Give this feature a try with a [sample that sends duplicate messages to the Console][CodepenZoherghadyaliZyrjgdJ].</span></span>  
 
-<span data-ttu-id="a5745-238">Chromium の問題 [#1082963][CR1082963]</span><span class="sxs-lookup"><span data-stu-id="a5745-238">Chromium issue [#1082963][CR1082963]</span></span>  
+<span data-ttu-id="fabd5-238">Chromium の問題 [#1082963][CR1082963]</span><span class="sxs-lookup"><span data-stu-id="fabd5-238">Chromium issue [#1082963][CR1082963]</span></span>  
 
-### <a name="persisting-selected-context-only-settings"></a><span data-ttu-id="a5745-239">選択されたコンテキストのみの設定を保持する</span><span class="sxs-lookup"><span data-stu-id="a5745-239">Persisting Selected context only settings</span></span>  
+### <a name="persisting-selected-context-only-settings"></a><span data-ttu-id="fabd5-239">選択されたコンテキストのみの設定を保持する</span><span class="sxs-lookup"><span data-stu-id="fabd5-239">Persisting Selected context only settings</span></span>  
 
-<span data-ttu-id="a5745-240">コンソールの設定で **[選択されたコンテキストのみ]** の設定が保持されるようになりました。</span><span class="sxs-lookup"><span data-stu-id="a5745-240">The **Selected context only** settings in Console Settings is now persisted.</span></span>  <span data-ttu-id="a5745-241">以前は、DevTools を閉じてもう一度開くたびに、設定はリセットされました。</span><span class="sxs-lookup"><span data-stu-id="a5745-241">Previously the settings were reset every time you closed and reopened DevTools.</span></span>  <span data-ttu-id="a5745-242">この変更により、設定の動作が他のコンソールの設定オプションと一致するようになります。</span><span class="sxs-lookup"><span data-stu-id="a5745-242">The change makes the setting behavior consistent with other Console Settings options.</span></span>  
+<span data-ttu-id="fabd5-240">コンソールの設定で **[選択されたコンテキストのみ]** の設定が保持されるようになりました。</span><span class="sxs-lookup"><span data-stu-id="fabd5-240">The **Selected context only** settings in Console Settings is now persisted.</span></span>  <span data-ttu-id="fabd5-241">以前は、DevTools を閉じてもう一度開くたびに、設定はリセットされました。</span><span class="sxs-lookup"><span data-stu-id="fabd5-241">Previously the settings were reset every time you closed and reopened DevTools.</span></span>  <span data-ttu-id="fabd5-242">この変更により、設定の動作が他のコンソールの設定オプションと一致するようになります。</span><span class="sxs-lookup"><span data-stu-id="fabd5-242">The change makes the setting behavior consistent with other Console Settings options.</span></span>  
 
 :::image type="complex" source="../../media/2020/06/selected-context.msft.png" alt-text="[選択されたコンテキストのみ] の設定" lightbox="../../media/2020/06/selected-context.msft.png":::
-   <span data-ttu-id="a5745-244">**[選択されたコンテキストのみ]** の設定</span><span class="sxs-lookup"><span data-stu-id="a5745-244">**Selected context only** setting</span></span>  
+   <span data-ttu-id="fabd5-244">**[選択されたコンテキストのみ]** の設定</span><span class="sxs-lookup"><span data-stu-id="fabd5-244">**Selected context only** setting</span></span>  
 :::image-end:::  
 
-<span data-ttu-id="a5745-245">Chromium の問題 [#1055875][CR1055875]</span><span class="sxs-lookup"><span data-stu-id="a5745-245">Chromium issue [#1055875][CR1055875]</span></span>  
+<span data-ttu-id="fabd5-245">Chromium の問題 [#1055875][CR1055875]</span><span class="sxs-lookup"><span data-stu-id="fabd5-245">Chromium issue [#1055875][CR1055875]</span></span>  
 
-### <a name="performance-panel-updates"></a><span data-ttu-id="a5745-246">[パフォーマンス] パネルの更新</span><span class="sxs-lookup"><span data-stu-id="a5745-246">Performance panel updates</span></span>  
+### <a name="performance-panel-updates"></a><span data-ttu-id="fabd5-246">[パフォーマンス] パネルの更新</span><span class="sxs-lookup"><span data-stu-id="fabd5-246">Performance panel updates</span></span>  
 
-#### <a name="javascript-compilation-cache-information-in-performance-tool"></a><span data-ttu-id="a5745-247">パフォーマンス ツールの JavaScript コンパイル**キャッシュ情報**</span><span class="sxs-lookup"><span data-stu-id="a5745-247">JavaScript compilation cache information in **Performance** tool</span></span>  
+#### <a name="javascript-compilation-cache-information-in-performance-tool"></a><span data-ttu-id="fabd5-247">パフォーマンス ツールの JavaScript コンパイル**キャッシュ情報**</span><span class="sxs-lookup"><span data-stu-id="fabd5-247">JavaScript compilation cache information in **Performance** tool</span></span>  
 
-<span data-ttu-id="a5745-248">[JavaScript のコンパイル キャッシュ情報][V8DevCodeCaching] は、パフォーマンス ツールの **[概要** ] パネルに常に **表示** されます。</span><span class="sxs-lookup"><span data-stu-id="a5745-248">[JavaScript compilation cache information][V8DevCodeCaching] is now always displayed in the **Summary** panel of the **Performance** tool.</span></span>  <span data-ttu-id="a5745-249">以前は、コード キャッシュが行われなかった場合、DevTools でコード キャッシュに関連するものは表示されませんでした。</span><span class="sxs-lookup"><span data-stu-id="a5745-249">Previously, DevTools did not show anything related to code caching if code caching did not happen.</span></span>  
+<span data-ttu-id="fabd5-248">[JavaScript のコンパイル キャッシュ情報][V8DevCodeCaching] は、パフォーマンス ツールの **[概要** ] パネルに常に **表示** されます。</span><span class="sxs-lookup"><span data-stu-id="fabd5-248">[JavaScript compilation cache information][V8DevCodeCaching] is now always displayed in the **Summary** panel of the **Performance** tool.</span></span>  <span data-ttu-id="fabd5-249">以前は、コード キャッシュが行われなかった場合、DevTools でコード キャッシュに関連するものは表示されませんでした。</span><span class="sxs-lookup"><span data-stu-id="fabd5-249">Previously, DevTools did not show anything related to code caching if code caching did not happen.</span></span>  
 
 :::image type="complex" source="../../media/2020/06/js-compilation-cache.msft.png" alt-text="JavaScript コンパイルキャッシュ情報" lightbox="../../media/2020/06/js-compilation-cache.msft.png":::
-   <span data-ttu-id="a5745-251">JavaScript コンパイルキャッシュ情報</span><span class="sxs-lookup"><span data-stu-id="a5745-251">JavaScript compilation cache information</span></span>  
+   <span data-ttu-id="fabd5-251">JavaScript コンパイルキャッシュ情報</span><span class="sxs-lookup"><span data-stu-id="fabd5-251">JavaScript compilation cache information</span></span>  
 :::image-end:::  
 
-<span data-ttu-id="a5745-252">Chromium の問題 [#912581][CR912581]</span><span class="sxs-lookup"><span data-stu-id="a5745-252">Chromium issue [#912581][CR912581]</span></span>  
+<span data-ttu-id="fabd5-252">Chromium の問題 [#912581][CR912581]</span><span class="sxs-lookup"><span data-stu-id="fabd5-252">Chromium issue [#912581][CR912581]</span></span>  
 
-#### <a name="navigation-timing-alignment-in-the-performance-panel"></a><span data-ttu-id="a5745-253">[パフォーマンス] パネルでの移動のタイミングの調整</span><span class="sxs-lookup"><span data-stu-id="a5745-253">Navigation timing alignment in the Performance panel</span></span>  
+#### <a name="navigation-timing-alignment-in-the-performance-panel"></a><span data-ttu-id="fabd5-253">[パフォーマンス] パネルでの移動のタイミングの調整</span><span class="sxs-lookup"><span data-stu-id="fabd5-253">Navigation timing alignment in the Performance panel</span></span>  
 
-<span data-ttu-id="a5745-254">**[パフォーマンス]** パネルでは、記録が開始された時間に基づいてルーラーに時間が表示されていました。</span><span class="sxs-lookup"><span data-stu-id="a5745-254">The **Performance** panel used to show times in the rulers based on when the recording started.</span></span>  <span data-ttu-id="a5745-255">現在、タイミングはユーザーが移動する記録に変更され、移動に関連するルーラー時間が表示されるようになりました。</span><span class="sxs-lookup"><span data-stu-id="a5745-255">The timing has now changed for recordings where the user navigates, where DevTools now shows ruler times relative to the navigation instead.</span></span>  
+<span data-ttu-id="fabd5-254">**[パフォーマンス]** パネルでは、記録が開始された時間に基づいてルーラーに時間が表示されていました。</span><span class="sxs-lookup"><span data-stu-id="fabd5-254">The **Performance** panel used to show times in the rulers based on when the recording started.</span></span>  <span data-ttu-id="fabd5-255">現在、タイミングはユーザーが移動する記録に変更され、移動に関連するルーラー時間が表示されるようになりました。</span><span class="sxs-lookup"><span data-stu-id="fabd5-255">The timing has now changed for recordings where the user navigates, where DevTools now shows ruler times relative to the navigation instead.</span></span>  
 
 :::image type="complex" source="../../media/2020/06/nav-timing.msft.png" alt-text="パフォーマンス ツールでナビゲーションのタイミングを調整する" lightbox="../../media/2020/06/nav-timing.msft.png":::
-   <span data-ttu-id="a5745-257">パフォーマンス ツールでナビゲーションのタイミング **を調整** する</span><span class="sxs-lookup"><span data-stu-id="a5745-257">Align navigation timing in **Performance** tool</span></span>  
+   <span data-ttu-id="fabd5-257">パフォーマンス ツールでナビゲーションのタイミング **を調整** する</span><span class="sxs-lookup"><span data-stu-id="fabd5-257">Align navigation timing in **Performance** tool</span></span>  
 :::image-end:::  
 
-<span data-ttu-id="a5745-258">`DOMContentLoaded`、First Paint (最初のペイント)、First Contentful Paint (最初のコンテンツのペイント)、最大コンテンツのペイント (Largest Contentful Paint) の各イベントの時間は、移動の開始からの相対的な時間に更新されます。つまり、タイミングは、`PerformanceObserver` によって報告されるタイミングと一致します。</span><span class="sxs-lookup"><span data-stu-id="a5745-258">The times for `DOMContentLoaded`, First Paint, First Contentful Paint, and Largest Contentful Paint events are updated to be relative to the start of the navigation, which means the timing matches the timings reported by `PerformanceObserver`.</span></span>  
+<span data-ttu-id="fabd5-258">`DOMContentLoaded`、First Paint (最初のペイント)、First Contentful Paint (最初のコンテンツのペイント)、最大コンテンツのペイント (Largest Contentful Paint) の各イベントの時間は、移動の開始からの相対的な時間に更新されます。つまり、タイミングは、`PerformanceObserver` によって報告されるタイミングと一致します。</span><span class="sxs-lookup"><span data-stu-id="fabd5-258">The times for `DOMContentLoaded`, First Paint, First Contentful Paint, and Largest Contentful Paint events are updated to be relative to the start of the navigation, which means the timing matches the timings reported by `PerformanceObserver`.</span></span>  
 
-<span data-ttu-id="a5745-259">Chromium の問題 [#974550][CR974550]</span><span class="sxs-lookup"><span data-stu-id="a5745-259">Chromium issue [#974550][CR974550]</span></span>  
+<span data-ttu-id="fabd5-259">Chromium の問題 [#974550][CR974550]</span><span class="sxs-lookup"><span data-stu-id="fabd5-259">Chromium issue [#974550][CR974550]</span></span>  
 
-### <a name="new-icons-for-breakpoints-conditional-breakpoints-and-logpoints"></a><span data-ttu-id="a5745-260">ブレークポイント、条件付きブレークポイント、およびログポイントの新しいアイコン</span><span class="sxs-lookup"><span data-stu-id="a5745-260">New icons for breakpoints, conditional breakpoints, and logpoints</span></span>  
+### <a name="new-icons-for-breakpoints-conditional-breakpoints-and-logpoints"></a><span data-ttu-id="fabd5-260">ブレークポイント、条件付きブレークポイント、およびログポイントの新しいアイコン</span><span class="sxs-lookup"><span data-stu-id="fabd5-260">New icons for breakpoints, conditional breakpoints, and logpoints</span></span>  
 
-<span data-ttu-id="a5745-261">**[ソース]** パネルには、ブレークポイント、条件付きブレークポイント、およびログポイントの新しいデザインが用意されています。</span><span class="sxs-lookup"><span data-stu-id="a5745-261">The **Sources** panel has new designs for breakpoints, conditional breakpoints, and logpoints.</span></span>  <span data-ttu-id="a5745-262">ブレークポイントは、[Visual Studio Code][VisualStudioCode] と [Visual Studio][VisualStudio]と同様に、赤い円で表されます。</span><span class="sxs-lookup"><span data-stu-id="a5745-262">Breakpoints are represented by a red circle, just like [Visual Studio Code][VisualStudioCode] and [Visual Studio][VisualStudio].</span></span>  <span data-ttu-id="a5745-263">条件付きブレークポイントとログポイントを区別するためにアイコンが追加されています。</span><span class="sxs-lookup"><span data-stu-id="a5745-263">Icons are added to differentiate conditional breakpoints and logpoints.</span></span>  
+<span data-ttu-id="fabd5-261">**[ソース]** パネルには、ブレークポイント、条件付きブレークポイント、およびログポイントの新しいデザインが用意されています。</span><span class="sxs-lookup"><span data-stu-id="fabd5-261">The **Sources** panel has new designs for breakpoints, conditional breakpoints, and logpoints.</span></span>  <span data-ttu-id="fabd5-262">ブレークポイントは、[Visual Studio Code][VisualStudioCode] と [Visual Studio][VisualStudio]と同様に、赤い円で表されます。</span><span class="sxs-lookup"><span data-stu-id="fabd5-262">Breakpoints are represented by a red circle, just like [Visual Studio Code][VisualStudioCode] and [Visual Studio][VisualStudio].</span></span>  <span data-ttu-id="fabd5-263">条件付きブレークポイントとログポイントを区別するためにアイコンが追加されています。</span><span class="sxs-lookup"><span data-stu-id="fabd5-263">Icons are added to differentiate conditional breakpoints and logpoints.</span></span>  
 
 :::image type="complex" source="../../media/2020/06/breakpoints.msft.png" alt-text="ブレークポイント" lightbox="../../media/2020/06/breakpoints.msft.png":::
-   <span data-ttu-id="a5745-265">ブレークポイント</span><span class="sxs-lookup"><span data-stu-id="a5745-265">Breakpoints</span></span>  
+   <span data-ttu-id="fabd5-265">ブレークポイント</span><span class="sxs-lookup"><span data-stu-id="fabd5-265">Breakpoints</span></span>  
 :::image-end:::  
 
-<span data-ttu-id="a5745-266">Chromium の問題 [#1041830][CR1041830]</span><span class="sxs-lookup"><span data-stu-id="a5745-266">Chromium issue [#1041830][CR1041830]</span></span>  
+<span data-ttu-id="fabd5-266">Chromium の問題 [#1041830][CR1041830]</span><span class="sxs-lookup"><span data-stu-id="fabd5-266">Chromium issue [#1041830][CR1041830]</span></span>  
 
-## <a name="download-the-microsoft-edge-preview-channels"></a><span data-ttu-id="a5745-267">Microsoft Edge プレビュー チャネルをダウンロードする</span><span class="sxs-lookup"><span data-stu-id="a5745-267">Download the Microsoft Edge preview channels</span></span>  
+## <a name="download-the-microsoft-edge-preview-channels"></a><span data-ttu-id="fabd5-267">Microsoft Edge プレビュー チャネルをダウンロードする</span><span class="sxs-lookup"><span data-stu-id="fabd5-267">Download the Microsoft Edge preview channels</span></span>  
 
-<span data-ttu-id="a5745-268">Windows または macOS を使用している場合、[Microsoft Edge プレビュー チャネル][MicrosoftEdgePreviewChannels] を既定の開発ブラウザーとして使用することを検討してください。</span><span class="sxs-lookup"><span data-stu-id="a5745-268">If you are on Windows or macOS, consider using the [Microsoft Edge preview channels][MicrosoftEdgePreviewChannels] as your default development browser.</span></span>  <span data-ttu-id="a5745-269">プレビュー チャネルを使用すると、最新の DevTools 機能にアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="a5745-269">The preview channels give you access to the latest DevTools features.</span></span>  
+<span data-ttu-id="fabd5-268">Windows または macOS を使用している場合、[Microsoft Edge プレビュー チャネル][MicrosoftEdgePreviewChannels] を既定の開発ブラウザーとして使用することを検討してください。</span><span class="sxs-lookup"><span data-stu-id="fabd5-268">If you are on Windows or macOS, consider using the [Microsoft Edge preview channels][MicrosoftEdgePreviewChannels] as your default development browser.</span></span>  <span data-ttu-id="fabd5-269">プレビュー チャネルを使用すると、最新の DevTools 機能にアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="fabd5-269">The preview channels give you access to the latest DevTools features.</span></span>  
 
-## <a name="getting-in-touch-with-microsoft-edge-devtools-team"></a><span data-ttu-id="a5745-270">Microsoft Edge DevTools チームに連絡する</span><span class="sxs-lookup"><span data-stu-id="a5745-270">Getting in touch with Microsoft Edge DevTools team</span></span>  
+## <a name="getting-in-touch-with-microsoft-edge-devtools-team"></a><span data-ttu-id="fabd5-270">Microsoft Edge DevTools チームに連絡する</span><span class="sxs-lookup"><span data-stu-id="fabd5-270">Getting in touch with Microsoft Edge DevTools team</span></span>  
 
 [!INCLUDE [contact DevTools team note](../../includes/contact-whats-new-note.md)]  
 
@@ -338,7 +338,7 @@ ms.locfileid: "11564931"
 [DevtoolsCommandMenu]: ../../../command-menu.md "Microsoft Edge DevTools コマンドメニューを使用してコマンドを実行する | Microsoft Docs"
 [DevtoolsCustomizeIndexDrawer]: ../../../customize/index.md#drawer "ドロワー - Microsoft Edge DevTools のカスタマイズ | Microsoft Docs"
 [DevtoolsExperimentalFeaturesTurnOn]: ../../../experimental-features/index.md#turn-on-experimental-features "試験的な機能を有効にする - 試験的な機能 | Microsoft Docs"  
-[DevtoolsIssues]: ../../../issues/index.md "Microsoft Edge DevTools の問題を見つけて解決するツール | Microsoft Docs"
+[DevtoolsIssues]: ../../../issues/index.md "[問題] ツール を使用して問題を見つけて修正|Microsoft Docs"
 [DevtoolsSourcesIndexUsingEditorPaneToViewEditFiles]: ../../../sources/index.md#using-the-editor-pane-to-view-or-edit-files "[エディター] ウィンドウを使用してファイルを表示または編集する - [ソース] パネルの|Microsoft Docs"  
 [DevtoolsNetworkIndexLogActivity]: ../../../network/index.md#log-network-activity "ネットワーク アクティビティをログに記録する - Microsoft Edge DevTools でネットワーク アクティビティを検査する | Microsoft Docs"
 
@@ -411,11 +411,11 @@ ms.locfileid: "11564931"
 [TheWebWeWant]: https://webwewant.fyi/ "必要とされる Web"  
 
 > [!NOTE]
-> <span data-ttu-id="a5745-319">このページの一部は、[Google によっ て作成および共有された][GoogleSitePolicies]作業に基づく変更であり、「[Creative Commons Attribution 4.0 International License][CCA4IL]」に記載されている条項に従って使用されます。</span><span class="sxs-lookup"><span data-stu-id="a5745-319">Portions of this page are modifications based on work created and [shared by Google][GoogleSitePolicies] and used according to terms described in the [Creative Commons Attribution 4.0 International License][CCA4IL].</span></span>  
-> <span data-ttu-id="a5745-320">[Jecelyn Yeen][JecelynYeen] \(デベロッパー アドボケイト、Chrome DevTools\) によって作成された元のページは[こちら](https://developer.chrome.com/blog/new-in-devtools-85)にあります。</span><span class="sxs-lookup"><span data-stu-id="a5745-320">The original page is found [here](https://developer.chrome.com/blog/new-in-devtools-85) and is authored by [Jecelyn Yeen][JecelynYeen] \(Developer advocate, Chrome DevTools\).</span></span>  
+> <span data-ttu-id="fabd5-319">このページの一部は、[Google によっ て作成および共有された][GoogleSitePolicies]作業に基づく変更であり、「[Creative Commons Attribution 4.0 International License][CCA4IL]」に記載されている条項に従って使用されます。</span><span class="sxs-lookup"><span data-stu-id="fabd5-319">Portions of this page are modifications based on work created and [shared by Google][GoogleSitePolicies] and used according to terms described in the [Creative Commons Attribution 4.0 International License][CCA4IL].</span></span>  
+> <span data-ttu-id="fabd5-320">[Jecelyn Yeen][JecelynYeen] \(デベロッパー アドボケイト、Chrome DevTools\) によって作成された元のページは[こちら](https://developer.chrome.com/blog/new-in-devtools-85)にあります。</span><span class="sxs-lookup"><span data-stu-id="fabd5-320">The original page is found [here](https://developer.chrome.com/blog/new-in-devtools-85) and is authored by [Jecelyn Yeen][JecelynYeen] \(Developer advocate, Chrome DevTools\).</span></span>  
 
 [![Creative Commons ライセンス][CCby4Image]][CCA4IL]  
-<span data-ttu-id="a5745-322">この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。</span><span class="sxs-lookup"><span data-stu-id="a5745-322">This work is licensed under a [Creative Commons Attribution 4.0 International License][CCA4IL].</span></span>  
+<span data-ttu-id="fabd5-322">この著作物は、[Creative Commons Attribution 4.0 International License][CCA4IL] に従って使用許諾されています。</span><span class="sxs-lookup"><span data-stu-id="fabd5-322">This work is licensed under a [Creative Commons Attribution 4.0 International License][CCA4IL].</span></span>  
 
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
