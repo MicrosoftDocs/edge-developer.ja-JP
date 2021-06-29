@@ -7,12 +7,12 @@ ms.date: 04/13/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 3f2f8c01a9bc9c4f40158f0959ba5b60e03bfb80
-ms.sourcegitcommit: 2e516a92272e38d8073603f860ae49f944718670
+ms.openlocfilehash: badcaae0ad637fe7a027f78d00daf9133789693e
+ms.sourcegitcommit: e150d798161277fd3fc610838ef2611dc08f5cf6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "11483219"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "11624746"
 ---
 # <a name="use-the-console"></a>コンソールの使用  
 
@@ -43,7 +43,7 @@ ms.locfileid: "11483219"
 
 ## <a name="error-reports-and-console"></a>エラー レポートとコンソール  
 
-**コンソール** は、JavaScript と接続エラーが報告される既定の場所です。  エラーが発生した場合は、DevTools**** の [設定] アイコンの横にボタンが表示され、エラーと警告の数が表示されます。  コンソールを開き、問題 **を表示するには** 、それを選択します。  詳細については、「コンソールで報告された [デバッグ エラー」に移動します][DevtoolsConsoleConsoleDebugJavascript]。  
+**コンソール** は、JavaScript と接続エラーが報告される既定の場所です。  エラーが発生した場合は、**エラー**と警告の数を提供**** する DevTools 設定アイコンの横に [問題] カウンターが表示されます。  [問題 **] カウンターを選択** して [問題] ツール **を開** き、問題を表示します。  詳細については、「コンソールで報告された [デバッグ エラー」に移動します][DevtoolsConsoleConsoleDebugJavascript]。
 
 :::image type="complex" source="../media/console-debug-displays-error.msft.png" alt-text="DevTools は、コンソールでエラーに関する詳細情報を提供します。" lightbox="../media/console-debug-displays-error.msft.png":::
    DevTools は、コンソールでエラーに関する詳細情報を提供 **します。**  
@@ -51,7 +51,9 @@ ms.locfileid: "11483219"
 
 ## <a name="inspect-and-filter-information-on-the-current-webpage"></a>現在の Web ページの情報を検査してフィルター処理する  
 
-Web ページで DevTools を開いた場合、コンソールにログに記録された情報が表示される可能性 **があります**。  重要な情報を特定する必要がある場合、情報の量が問題になります。  アクションが必要な重要な情報を表示するには、DevTools [の Issues][DevtoolsIssuesIndex] ツールを使用します。  ノイズの多くが残っているので、コンソールの自動ログとフィルターのオプションについて知[][DevtoolsConsoleConsoleFilters]ってよい考え**です**。  
+Web ページで DevTools を開いた場合、コンソールに膨大な量の情報が表示される可能性 **があります**。  重要な情報を特定する必要がある場合、情報の量が問題になります。  アクションが必要な重要な情報を表示するには、DevTools [の Issues][DevtoolsIssuesIndex] ツールを使用します。
+
+問題は、コンソールから [問題****] ツールに徐**々に移動**されています。  ただし、コンソールには多くの情報がまだ残っています。**** コンソールの自動ログオプションとフィルター オプションについて知るのが良い理由**です**。  詳細については、「Filter Console メッセージ [」に移動します][DevtoolsConsoleConsoleFilters]。
 
 :::image type="complex" source="../media/console-intro-noise.msft.png" alt-text="メッセージの完全なコンソールを持つ DevTools" lightbox="../media/console-intro-noise.msft.png":::
    メッセージの完全な **コンソールを持つ** DevTools  
@@ -122,7 +124,7 @@ Web ページで DevTools を開いた場合、コンソールにログに記録
 
 ## <a name="interact-with-the-current-webpage-in-the-browser"></a>ブラウザーで現在の Web ページを操作する  
 
-コンソール **は** 、ブラウザーの [Window][MdnDocsWebApiWindow] オブジェクトにアクセスできます。  現在の Web ページを操作するスクリプトを作成できます。  これを試す場合は、次のアクションを実行します。  
+コンソール **は** 、ブラウザーの [Window][MdnDocsWebApiWindow] オブジェクトにアクセスできます。  現在の Web ページを操作するスクリプトを記述できます。  これを試す場合は、次のアクションを実行します。  
 
 1.  コンソールを **開きます**。  
 1.  次のコード スニペットをコピーして貼り付けます。  
@@ -135,7 +137,7 @@ Web ページで DevTools を開いた場合、コンソールにログに記録
    DOM からトップ 見出し \( \) コンテンツをコピーし `h1` 、コンソールに表示 **する**  
 :::image-end:::  
 
-Web ページからの読み取りだけでなく、変更することもできます。  これを試す場合は、次のアクションを実行します。  
+Web ページからの読み取りだけでなく、変更することもできます。  Web ページを変更するには、次の操作を実行します。  
 
 1.  コンソールを **開きます**。  
 1.  次のコード スニペットをコピーして貼り付けます。  
@@ -157,7 +159,6 @@ Web ページのメイン見出しを [コンソールの **ロック] に変更
     $$('a').forEach(a => a.style.border='1px solid lime');
     ```  
     
-
 :::image type="complex" source="../media/console-intro-changing-styles.msft.png" alt-text="コンソールを使用して要素の選択を操作する" lightbox="../media/console-intro-changing-styles.msft.png":::
     コンソールを使用して要素の選択を操作 **する**  
 :::image-end:::  
@@ -173,7 +174,6 @@ DOM の操作の詳細については、「コンソールを使用して DOM �
 [!INCLUDE [contact DevTools team note](../includes/contact-devtools-team-note.md)]  
 
 <!-- links -->  
-
 [DevtoolsConsoleApi]: ./api.md "コンソール API リファレンス |Microsoft Docs"  
 [DevtoolsConsoleConsoleDebugJavascript]: ./console-debug-javascript.md "コンソール ウィンドウで報告されたデバッグ エラー|Microsoft Docs"  
 [DevtoolsConsoleConsoleDomInteraction]: ./console-dom-interaction.md "コンソールを使用して DOM ファイルを操作|Microsoft Docs" 
@@ -182,11 +182,8 @@ DOM の操作の詳細については、「コンソールを使用して DOM �
 [DevtoolsConsoleConsoleLog]: ./console-log.md "コンソール ツール でメッセージをログに記録|Microsoft Docs"  
 [DevtoolsConsoleReference]: ./reference.md "コンソール参照|Microsoft Docs"  
 [DevtoolsConsoleUtilities]: ./utilities.md "コンソール ユーティリティ API リファレンス |Microsoft Docs"  
-
-[DevtoolsIssuesIndex]: ../issues/index.md "Microsoft Edge DevTools の問題を見つけて解決するツール | Microsoft Docs"  
-
+[DevtoolsIssuesIndex]: ../issues/index.md "[問題] ツール を使用して問題を見つけて修正|Microsoft Docs"  
+<!-- external links -->
 [GithubMicrosoftedgeDevtoolssamplesConsoleLoggingDemoHtml]: https://microsoftedge.github.io/DevToolsSamples/console/logging-demo.html "コンソール メッセージの例: ログ、情報、エラー、警告の|GitHub"  
-
 [MdnDocsWebApiWindow]: https://developer.mozilla.org/docs/Web/API/Window "ウィンドウ |MDN"  
-
 [WikiReadEvalPrintLoop]: https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop "Read-eval-print ループ |Wikipedia"  

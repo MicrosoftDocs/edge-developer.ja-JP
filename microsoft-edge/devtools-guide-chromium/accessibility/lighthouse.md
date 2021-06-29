@@ -1,18 +1,18 @@
 ---
 description: DevTools 内からライトハウスを使用してアクセシビリティをテストします。
-title: ライトハウスを使用してアクセシビリティをテストする
+title: Lighthouse を使用してアクセシビリティをテストする
 author: MSEdgeTeam
 ms.author: msedgedevrel
 ms.date: 06/07/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: bb158085eb516c8d4ce37a22f6b612784db51461
-ms.sourcegitcommit: 34feec6ae6241c598911dac7b63c28d655691233
+ms.openlocfilehash: 822c25240ba30df31416ca783bf48d6d9ba52ed2
+ms.sourcegitcommit: e150d798161277fd3fc610838ef2611dc08f5cf6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2021
-ms.locfileid: "11597558"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "11624634"
 ---
 <!-- this article was created on 05/11/2021 by moving a section out from the "Accessibility reference" article (reference.md) -->
 <!-- Copyright Kayce Basques 
@@ -29,7 +29,7 @@ ms.locfileid: "11597558"
    See the License for the specific language governing permissions and
    limitations under the License.  -->  
 
-# <a name="test-accessibility-using-lighthouse"></a>ライトハウスを使用してアクセシビリティをテストする
+# <a name="test-accessibility-using-lighthouse"></a>Lighthouse を使用してアクセシビリティをテストする
 
 DevTools 内のライトハウスを使用して、ページのアクセシビリティを監査し、レポートを生成できます。 ライトハウス ツールを使用して、次の情報を確認できます。
 
@@ -85,7 +85,7 @@ DevTools 内のライトハウスを使用して、ページのアクセシビ�
 
 
 <!-- links -->  
-[ChromeWebStoreAxe]: https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd?hl=en-US "axe - Web アクセシビリティ テスト - Chrome ウェブストア"  
+[ChromeWebStoreAxe]: https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd "axe - Web アクセシビリティ テスト - Chrome ウェブストア"  
 [CCA4IL]: https://creativecommons.org/licenses/by/4.0  
 [CCby4Image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
 [GoogleSitePolicies]: https://developers.google.com/terms/site-policies  

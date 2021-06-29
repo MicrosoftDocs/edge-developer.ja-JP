@@ -1,20 +1,20 @@
 ---
 description: '[問題] ツールの [アクセシビリティ] セクションを使用して、アクセシビリティの問題について Web ページを自動的にテストします。'
-title: アクセシビリティの問題について Web ページを自動的にテストする
+title: アクセシビリティの問題のための Web ページを自動的にテストする
 author: MSEdgeTeam
 ms.author: msedgedevrel
 ms.date: 06/07/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 986a021d2fd390cd45bd53dcfc37a83d58ed2338
-ms.sourcegitcommit: 34feec6ae6241c598911dac7b63c28d655691233
+ms.openlocfilehash: 1cba9db1744235dfbfd2a007e33d1101452aab31
+ms.sourcegitcommit: e150d798161277fd3fc610838ef2611dc08f5cf6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2021
-ms.locfileid: "11597496"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "11624739"
 ---
-# <a name="automatically-test-a-webpage-for-accessibility-issues"></a>アクセシビリティの問題について Web ページを自動的にテストする
+# <a name="automatically-test-a-webpage-for-accessibility-issues"></a>アクセシビリティの問題のための Web ページを自動的にテストする
 
 [**問題]** ツールには****、[アクセシビリティ] セクションが含まれています。画像に代替テキストが見つからない、フォーム フィールドのラベルが見つからない、テキストの色のコントラストが不十分ななどの問題を自動的に報告します。  Issues **ツール** は **、DevTools** の下部にあるドロワー内にあります。  この記事では、アクセシビリティ テストのデモ Web ページを使用して、問題ツールの **[アクセシビリティ** ] セクションを **使用** します。
 
@@ -135,7 +135,7 @@ Issues ツールを開く方法は **次** のとおりです。
 
 ## <a name="see-also"></a>関連項目
 
-*  [DevTools の問題ツールの問題Microsoft Edge見つけて修正する][DevToolsIssuesTool]
+*  [問題ツールを使用して問題を見つけて修正する][DevToolsIssuesTool]
 *  [DevTools を使用したアクセシビリティ テストの概要](accessibility-testing-in-devtools.md)
 
 
@@ -145,5 +145,5 @@ Issues ツールを開く方法は **次** のとおりです。
 
 
 <!-- links -->
-[DevToolsIssuesTool]: ../issues/index.md "Microsoft Edge DevTools の問題を見つけて解決するツール | Microsoft Docs"
+[DevToolsIssuesTool]: ../issues/index.md "[問題] ツール を使用して問題を見つけて修正|Microsoft Docs"
 [DevToolsA11yErrorsDemopage]: https://microsoftedge.github.io/DevToolsSamples/a11y-testing/page-with-errors.html "アクセシビリティテストのデモ web ページ |GitHub"

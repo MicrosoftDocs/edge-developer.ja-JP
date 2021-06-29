@@ -7,12 +7,12 @@ ms.date: 05/04/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 2537495ad14462aac70bfb1b5873aaa0b6e21cdf
-ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
+ms.openlocfilehash: fabfa21abedb02bc83ec2bedbe3662f0d81c1bf9
+ms.sourcegitcommit: e150d798161277fd3fc610838ef2611dc08f5cf6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2021
-ms.locfileid: "11564673"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "11624809"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -132,7 +132,7 @@ Chromium[の問題][CR963183]#963183
 
 **DevTools ドロワー**の新しい問題ツールは、コンソールの通知の疲労と混乱を軽減するために構築**されました**。  現在、**コンソールは、Web**サイトの開発者、ライブラリ、フレームワーク、およびユーザーがメッセージ、警告、エラー Microsoft Edgeを記録する中心的な場所です。  Issues ツールは、構造化された、集約された、操作可能な方法でブラウザーからの警告を集約し、Microsoft Edge DevTools 内の影響を受けるリソースへのリンク、および問題の修正方法に関するガイダンスを提供します。 ****  時間がたつ間に、コンソールではなく問題ツールの Microsoft Edge で多**** くの警告が表示され、コンソール**** の混乱を減らすのに役立**ちます**。  
 
-開始するには、[DevTools の問題の検索と修正] ツールMicrosoft Edge[に移動します][DevtoolsIssuesIndex]。  
+開始するには、[問題] ツールを [使用して問題を検索して修正します][DevtoolsIssuesIndex]。  
 
 :::image type="complex" source="../../media/2020/05/issues.msft.png" alt-text="DevTools ドロワーの問題ツール" lightbox="../../media/2020/05/issues.msft.png":::
    **DevTools**ドロワーの問題ツール  

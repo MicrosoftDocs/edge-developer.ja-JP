@@ -7,12 +7,12 @@ ms.date: 05/04/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 75642a7f0fa8d6fae2f4daead84e2fc77df21e29
-ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
+ms.openlocfilehash: 65a3fb4da235d2330bf9205b7a4a79a999559ca4
+ms.sourcegitcommit: e150d798161277fd3fc610838ef2611dc08f5cf6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2021
-ms.locfileid: "11564931"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "11624802"
 ---
 <!-- Copyright Jecelyn Yeen 
 
@@ -338,7 +338,7 @@ Windows または macOS を使用している場合、[Microsoft Edge プレビ�
 [DevtoolsCommandMenu]: ../../../command-menu.md "Microsoft Edge DevTools コマンドメニューを使用してコマンドを実行する | Microsoft Docs"
 [DevtoolsCustomizeIndexDrawer]: ../../../customize/index.md#drawer "ドロワー - Microsoft Edge DevTools のカスタマイズ | Microsoft Docs"
 [DevtoolsExperimentalFeaturesTurnOn]: ../../../experimental-features/index.md#turn-on-experimental-features "試験的な機能を有効にする - 試験的な機能 | Microsoft Docs"  
-[DevtoolsIssues]: ../../../issues/index.md "Microsoft Edge DevTools の問題を見つけて解決するツール | Microsoft Docs"
+[DevtoolsIssues]: ../../../issues/index.md "[問題] ツール を使用して問題を見つけて修正|Microsoft Docs"
 [DevtoolsSourcesIndexUsingEditorPaneToViewEditFiles]: ../../../sources/index.md#using-the-editor-pane-to-view-or-edit-files "[エディター] ウィンドウを使用してファイルを表示または編集する - [ソース] パネルの|Microsoft Docs"  
 [DevtoolsNetworkIndexLogActivity]: ../../../network/index.md#log-network-activity "ネットワーク アクティビティをログに記録する - Microsoft Edge DevTools でネットワーク アクティビティを検査する | Microsoft Docs"
 

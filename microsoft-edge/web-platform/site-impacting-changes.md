@@ -7,12 +7,12 @@ ms.date: 05/27/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge, 互換性, Web プラットフォーム
-ms.openlocfilehash: 7db00ced1db767d3ec092c33369cbed1845ac65e
-ms.sourcegitcommit: dfc6bc1bad5fc9d38b6eb3bcacf9ebb317b3bdf2
+ms.openlocfilehash: 194e612c008016299b234de816114d24e5569aef
+ms.sourcegitcommit: e150d798161277fd3fc610838ef2611dc08f5cf6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/28/2021
-ms.locfileid: "11586205"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "11624788"
 ---
 # <a name="site-compatibility-impacting-changes-coming-to-microsoft-edge"></a>Microsoft Edge 向けのサイトの互換性に影響する変更点  
 
@@ -28,14 +28,15 @@ Microsoft Edgeプロジェクトから Web プラットフォームに対する�
 | 参照元ポリシー: 既定値から `strict-origin-when-cross-origin` | [Chrome+1](#release-comments) \(Edge v86\)  | Canary v79, Dev v79 | この変更は、プロジェクトのChromiumプロジェクトでMicrosoft Edge発生します。  この変更の予定タイムラインを含む詳細については、[Chrome プラットフォームの状態] エントリ [に移動します][ChromestatusFeature6251880185331712]。  |  
 | ページの閉じ込 `XmlHttpRequest` めで同期を禁止する | [Chrome+1](#release-comments) \(Edge v83\) |  | この変更は、プロジェクトのChromiumプロジェクトでMicrosoft Edge発生します。  Chrome に一致Microsoft Edge、Edge v88 までこの変更をオフにするグループ ポリシーが提供されます。  この変更の予定タイムラインを含む詳細については、[Chrome プラットフォームの状態] エントリ [に移動します][ChromestatusFeature4664843055398912]。  |  
 | 通知のアクセス許可要求の微妙なプロンプトを表示する | エッジ v84 |  | 通知要求を静かにすると、アドレス バーに、または API を使用して要求されたサイト通知のアクセス許可の微妙な要求アイコンが表示されます。完全または標準のアクセス許可のフライアウト プロンプト UI が `Notifications` `Push` 置き換わります。  この機能は現在、すべてのユーザーに対して有効になっています。  通知の静かな要求をオプトアウトするには、に移動します `edge://settings/content/notifications` 。  今後、一部のシナリオMicrosoft Edge、完全なフライアウト通知プロンプトの再有効化についてチームが確認する場合があります。  |  
-| 既定で TLS/1.0 と TLS/1.1 をオフにする | エッジ v84 |  | [SSLMinVersion グループ][DeployedgeMicrosoftEdgePoliciesSslversionmin]ポリシーでは、TLS/1.0 および TLS/1.1 の再有効化が許可されます。ポリシーは Edge v90 まで使用可能なままです。  |  
+| TLS/1.0 と TLS/1.1 をオフにする | エッジ v84 |  |  |  
 | 混在コンテンツのダウンロードをブロックする | [Chrome+1](#release-comments) \(Edge v86\)  |  | この変更は、プロジェクトのChromiumプロジェクトでMicrosoft Edge発生します。  この変更の予定タイムラインを含む詳細については、Google のセキュリティ ブログ エントリ [に移動します][GoogleBlogSecurity20200206]。  警告またはブロックするファイルの種類に関する Microsoft ロールアウトスケジュールは、Chrome の後の 1 つのリリースで計画されています。  |  
 | AppCache の非推奨 | [Chrome+1](#release-comments) \(Edge v86\)  |  | この変更は、プロジェクトのChromiumプロジェクトでMicrosoft Edge発生します。  詳細については [、WebDev のドキュメントに移動します][WebDevAppCacheRemoval]。  廃止の Microsoft ロールアウト スケジュールは、Chrome の後の 1 つのリリースで計画されています。  [AppCache OriginTrial トークンを要求][ChromeDevelopersOrigintrialsAppCacheOriginTrial]すると、サイトは Edge v90 まで廃止された API を引き続き使用できます。  |  
 | Adobe Flash の削除 | エッジ v88  |  | この変更は、プロジェクトのChromiumプロジェクトでMicrosoft Edge発生します。  詳細については[、「Adobe Flash Chromiumロードマップ」に移動します][ChromiumFlashRoadmapSupportRemoved]。  | 
-| FTP をオフにし、削除する | エッジ v88  | Edge Beta v87 | Edge Beta v87 では、FTP サポートは既定でオフになっています。In Edge Stable v87 それは有効なままです。  Edge v88 では、FTP サポートは完全に削除されます。  この変更は、プロジェクトのChromiumプロジェクトでMicrosoft Edge発生します。  詳細については、「Chrome プラットフォームの状態エントリ [」に移動します][ChromestatusFeature6246151319715840]。  FTP サポートが必要なサイトがある企業は、IE モードを使用するサイトを構成することで、FTP を引き続 [き使用できます][DeployedgeEdgeIeMode]。  | 
+| FTP サポートの削除 | エッジ v88  | Edge Beta v87 | Edge v88 では、FTP サポートは完全に削除されます。  この変更は、プロジェクトのChromiumプロジェクトでMicrosoft Edge発生します。  詳細については、「Chrome プラットフォームの状態エントリ [」に移動します][ChromestatusFeature6246151319715840]。  FTP サポートが必要なサイトがある企業は、IE モードを使用するサイトを構成することで、FTP を引き続 [き使用できます][DeployedgeEdgeIeMode]。  | 
 | 混在コンテンツ イメージの自動アップグレード | エッジ v88  |  | イメージへのセキュリティ保護されていない \(HTTP\) 参照は、HTTPS に自動的にアップグレードされます。イメージが HTTPS 経由で使用できない場合、イメージのダウンロードは失敗します。 この [機能を制御][DeployedgeMicrosoftEdgePoliciesInsecurecontentallowedforurls] するには、グループ ポリシーを使用できます。 この変更は、プロジェクトのChromiumプロジェクトでMicrosoft Edge発生します。 詳細については、「Chrome プラットフォームの状態」 [エントリに移動します][ChromestatusFeature4926989725073408]。  | 
 | サードパーティの Cookie がブロックされている場合、HTTP 認証は許可されません  | Edge v87  |  | Edge v87 から、サードパーティの要求に対して Cookie がブロックされている場合[、BlockThirdPartyCookies][DeployedgeMicrosoftEdgePoliciesBlockthirdpartycookies]ポリシーまたはトグルインを使用すると、HTTP 認証も許可されません。 `edge://settings` この変更は、Enterpriseをホストするエンドポイント[][DeployedgeEdgeIeModePoliciesConfigureUsingUseEnterpriseModeIeWebsiteListPolicy]が HTTP 認証を使用する必要がある場合Internet Explorerモードのサイト 一覧のダウンロードに影響を与える可能性があります。  Cookie と HTTP 認証の両方を Enterpriseモード サイト 一覧のダウンロードに使用するには[、CookieAllowedForURLs][DeployedgeMicrosoftEdgePoliciesCookiesallowedforurls]ポリシーに一致する URL パターンを追加します。  |
 | TLS での 3DES の削除  | Edge v93  |  | Edge v93 から、暗号化スイートTLS_RSA_WITH_3DES_EDE_CBC_SHAサポートが削除されます。 この変更は、プロジェクトのChromiumプロジェクトでMicrosoft Edge発生します。 詳細については、「Chrome プラットフォームの状態」 [エントリに移動します][ChromestatusFeature6678134168485888]。 さらに、Edge v93 では、古いサーバーとの互換性を維持する必要があるシナリオをサポートするために互換性ポリシーを使用できます。 この互換性ポリシーは廃止され、Edge v95 での動作が停止します。 その前に、影響を受け取ったサーバーを更新してください。 |
+| プライベート ネットワーク要求をセキュリティで保護されたコンテキストに制限する  | Edge v93  |  | エッジ v93 から、インターネット上のページからローカル (イントラネット) ネットワーク上のリソースにアクセスするには、それらのページを HTTPS 経由で配信する必要があります。 この変更は、プロジェクトのChromiumプロジェクトでMicrosoft Edge発生します。 詳細については、「Chrome プラットフォームの状態」 [エントリに移動します][ChromestatusFeature5436853517811712]。 セキュリティ保護されていないページとの互換性を維持する必要があるシナリオをサポートするには [、InsecurePrivateNetworkRequestAllowed][DeployEdgeMicrosoftEdgePoliciesInsecurePrivateNetworkRequestAllowed] と [InsecurePrivateNetworkRequestAllowedForUrls][DeployEdgeMicrosoftEdgePoliciesInsecurePrivateNetworkRequestAllowedForUrls]の 2 つの互換性ポリシーを使用できます。 |
 
 ##### <a name="release-comments"></a>コメントのリリース  
 
@@ -64,6 +65,8 @@ Microsoft Edgeプロジェクトから Web プラットフォームに対する�
 [DeployedgeMicrosoftEdgePoliciesCookiesallowedforurls]: /deployedge/microsoft-edge-policies#cookiesallowedforurls "CookieAllowedForUrls - Microsoft Edge - ポリシー |Microsoft Docs"  
 [DeployedgeMicrosoftEdgePoliciesInsecurecontentallowedforurls]:  /deployedge/microsoft-edge-policies#insecurecontentallowedforurls "InsecureContentAllowedForUrls - Microsoft Edge - ポリシー |Microsoft Docs"  
 [DeployedgeMicrosoftEdgePoliciesSslversionmin]: /deployedge/microsoft-edge-policies#sslversionmin "SSLVersionMin - Microsoft Edge - ポリシー |Microsoft Docs"  
+[DeployEdgeMicrosoftEdgePoliciesInsecurePrivateNetworkRequestAllowed]: /deployedge/microsoft-edge-policies#insecureprivatenetworkrequestsallowed "InsecurePrivateNetworkRequestsAllowed - Microsoft Edge - ポリシー |Microsoft Docs"
+[DeployEdgeMicrosoftEdgePoliciesInsecurePrivateNetworkRequestAllowedForUrls]: /deployedge/microsoft-edge-policies#insecureprivatenetworkrequestsallowedforurls "InsecurePrivateNetworkRequestsAllowedForUrls - Microsoft Edge - ポリシー |Microsoft Docs"
 
 [ChromestatusFeaturesSchedule]: https://www.chromestatus.com/features/schedule "タイムライン のリリース|Chrome プラットフォームの状態"  
 [ChromestatusFeature4664843055398912]: https://chromestatus.com/feature/4664843055398912 "ページの却下 JavaScript サーバーで同期 XHR を許可|Chrome プラットフォームの状態"  
@@ -72,7 +75,7 @@ Microsoft Edgeプロジェクトから Web プラットフォームに対する�
 [ChromestatusFeature6246151319715840]: https://chromestatus.com/feature/6246151319715840 "FTP サポートの廃止|Chrome プラットフォームの状態"  
 [ChromestatusFeature6251880185331712]: https://chromestatus.com/feature/6251880185331712 "参照元ポリシー: 既定で strict-origin-when-cross-origin |Chrome プラットフォームの状態"  
 [ChromestatusFeature6678134168485888]: https://chromestatus.com/feature/6678134168485888 "TLS サーバーで 3DES を削除|Chrome プラットフォームの状態"
-
+[ChromestatusFeature5436853517811712]: https://chromestatus.com/feature/5436853517811712 "サブリソースのプライベート ネットワーク要求を制限して、コンテキストをセキュリティで保護|Chrome プラットフォームの状態"
 [ChromiumFlashRoadmapSupportRemoved]: https://www.chromium.org/flash-roadmap#TOC-Flash-Support-Removed-from-Chromium-Target:-Chrome-88---Jan-2021- "Flash のサポート Chromium (ターゲット: Chrome 88+ - 2021 年 1 月) - Flash ロードマップ |Chromiumプロジェクト"  
 
 [ChromeDevelopersOrigintrialsAppCacheOriginTrial]: https://developers.chrome.com/origintrials/#/view_trial/1776670052997660673 "AppCache OriginTrial トークン |Chrome 開発者"  

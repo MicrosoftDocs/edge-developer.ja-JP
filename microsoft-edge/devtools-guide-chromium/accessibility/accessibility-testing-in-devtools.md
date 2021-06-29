@@ -7,12 +7,12 @@ ms.date: 06/07/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 50661f68c7b3269d003bdc25f6a8098ae0e3ec89
-ms.sourcegitcommit: 34feec6ae6241c598911dac7b63c28d655691233
+ms.openlocfilehash: f6ec0652bbbb7d7e60a69877a9d44a7a2fd636a5
+ms.sourcegitcommit: e150d798161277fd3fc610838ef2611dc08f5cf6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2021
-ms.locfileid: "11597562"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "11624795"
 ---
 # <a name="overview-of-accessibility-testing-using-devtools"></a>DevTools を使用したアクセシビリティ テストの概要
 
@@ -128,7 +128,7 @@ Issues ツールで見つかったこれらの**** 問題は、回避できる�
 
 ## <a name="limits-of-automated-testing"></a>自動テストの制限
 
-Issues[ツール、][DevToolsIssuesTool][アクセシビリティ インサイト][AccessibilityInsights]、[およびライト][Lighthouse]ハウスは、Web ページのアクセシビリティ レポートを自動的に生成するツールです。  このようなツールから自動レポートを取得できるのは、アクセシビリティ テストの開始にすぎない。
+Issues[ツール、][DevToolsIssuesTool][アクセシビリティ][AccessibilityInsights]インサイト、[およびライト][Lighthouse]ハウスは、Web ページのアクセシビリティ レポートを自動的に生成するツールです。  このようなツールから自動レポートを取得できるのは、アクセシビリティ テストの開始にすぎない。
 
 アクセシビリティとは、さまざまな技術的な環境で製品を使用するさまざまなニーズを持つユーザーとの対話に関する情報です。  このテストは完全に自動化できないが、製品をナビゲートする人間による検証が必要です。  最適なシナリオでは、アクセシビリティのニーズが異なるテスターや、さまざまな環境を使用するテスターにアクセスできます。  しかし、キーボードを使用してナビゲーションを行い、ページの異なる部分を検査することで、自分で多くのことを行う必要があります。
 
@@ -494,7 +494,7 @@ DevTools を使用する場合は、検査ツールがすべての状態の情�
 
 製品のアクセシビリティの問題を確実にキャッチするために使用できるツールは、かなり多く取り上がっています。  このようなツールは、自動チェックや手動による詳細チェックから、さまざまな状態や環境のシミュレーションにまで及びます。  これらのツールは [、DevTools のアクセシビリティテスト機能に要約されています](reference.md)。  ユーザー補助の障壁の多くは対話型の使用中にのみ表示されるので、自動化されたツールは製品内のすべての問題を見つけ出すことはありません。
 
-これらのツールはいずれも、製品の適切なテストラウンドを支援技術を使用するユーザーに置き換え、必要なすべてのテストを確認する計画に従う必要はありません。 アクセシビリティインサイトの [評価][AccessibilityInsightsAssessment] 機能 [も使用できます][AccessibilityInsights]。  次のような追加のチェックを実行する必要がある場合があります。
+これらのツールはいずれも、製品の適切なテストラウンドを支援技術を使用するユーザーに置き換え、必要なすべてのテストを確認する計画に従う必要はありません。 アクセシビリティ 機能の評価機能を[使用][AccessibilityInsightsAssessment][インサイト。][AccessibilityInsights]  次のような追加のチェックを実行する必要がある場合があります。
 
 * ズームイン時のテスト。
 * スクリーン リーダーによるテスト。
@@ -520,7 +520,7 @@ DevTools の新しいアクセシビリティ機能に常に取り組み続け�
 [DevToolsDeviceModeIndex]: ../device-mode/index.md "Microsoft Edge DevTools でモバイル デバイスをエミュレートする | Microsoft Docs"
 [DevtoolsAccessibilityReference]: reference.md "DevTools |Microsoft Docs"
 [DevToolsColorSchemeSimulation]: ./preferred-color-scheme-simulation.md "暗いまたは明るい配色のシミュレーション |Microsoft Docs"
-[DevToolsIssuesTool]: ../issues/index.md "Microsoft Edge DevTools の問題を見つけて解決するツール | Microsoft Docs"
+[DevToolsIssuesTool]: ../issues/index.md "[問題] ツール を使用して問題を見つけて修正|Microsoft Docs"
 [DevToolsReducedMotion]: ./reduced-motion-simulation.md "モーション シミュレーションの|Microsoft Docs"
 [DevToolsVisionDeficiencies]: ./emulate-vision-deficiencies.md "ビジョンの欠陥をエミュレート|Microsoft Docs"
 <!-- links into test-issues-tool.md -->
@@ -536,7 +536,7 @@ DevTools の新しいアクセシビリティ機能に常に取り組み続け�
 [DevToolsA11yErrorsDemopage]: https://microsoftedge.github.io/DevToolsSamples/a11y-testing/page-with-errors.html "アクセシビリティテストのデモ web ページ |GitHub"
 [W3CContrastRatio]: https://www.w3.org/TR/WCAG21/#dfn-contrast-ratio "コントラスト比|W3C"
 [WCAG]: https://www.w3.org/TR/WCAG21/ "Web コンテンツ アクセシビリティ ガイドライン |W3C"
-[AccessibilityInsightsAssessment]: https://accessibilityinsights.io/docs/en/web/getstarted/assessment/ "Web サービスのアクセシビリティインサイトの評価|アクセシビリティインサイト"
-[AccessibilityInsights]: https://accessibilityinsights.io "アクセシビリティインサイト"
+[AccessibilityInsightsAssessment]: https://accessibilityinsights.io/docs/en/web/getstarted/assessment/ "Web サービスのアクセシビリティ インサイト評価|アクセシビリティ インサイト"
+[AccessibilityInsights]: https://accessibilityinsights.io "アクセシビリティ インサイト"
 [Lighthouse]: https://developers.google.com/web/tools/lighthouse/ "ライトハウス |Google"
 [WebhintForCode]:https://aka.ms/webhint4code "webhint |Visual StudioMarketplace"

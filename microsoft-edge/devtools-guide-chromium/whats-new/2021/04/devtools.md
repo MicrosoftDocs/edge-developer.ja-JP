@@ -7,12 +7,12 @@ ms.date: 05/06/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 5f499a6c9f1109f80a9d459edf94ed2226734f19
-ms.sourcegitcommit: 87ba918b0910373bb645615377709bf140dc9b19
+ms.openlocfilehash: 69fcd29f9b4cae9ec290798b767fbe54793cb2fd
+ms.sourcegitcommit: e150d798161277fd3fc610838ef2611dc08f5cf6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "11583460"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "11624781"
 ---
 <!-- Copyright Jecelyn Yeen 
 
@@ -36,7 +36,7 @@ ms.locfileid: "11583460"
 <!--  Title: Get code hints in Elements tool  -->  
 <!--  Subtitle: Wavy underlines like the ones you see in Visual Studio Code now display in the Elements tool.  Underlines alert you to code issues related to accessibility, compatibility, security, performance, and  so on.  -->  
 
-最新のほとんどの ID では、テキストの下線が波線で構文エラーを示しています。   バージョン Microsoft Edge 91 以降では、要素ツールの**DOM**ビューで HTML の下に波線が**表示**されます。  波の下線は、アクセシビリティ、互換性、パフォーマンスに関連するコードの問題と提案を示します。  問題を確認および編集する方法の詳細については[、「DevTools][DevtoolsIssuesIndex]の問題の検索と修正」ツールMicrosoft Edgeを参照してください。  
+最新のほとんどの ID では、テキストの下線が波線で構文エラーを示しています。   バージョン Microsoft Edge 91 以降では、要素ツールの**DOM**ビューで HTML の下に波線が**表示**されます。  波の下線は、アクセシビリティ、互換性、パフォーマンスに関連するコードの問題と提案を示します。  問題を確認および編集する方法の詳細については、「問題ツールを使用して問題を検索して修正する」 [に移動します][DevtoolsIssuesIndex]。  
 
 [問題] ツール **を開** き、問題の詳細と修正方法を確認するには、次のいずれかの操作を実行します。  
 
@@ -152,7 +152,7 @@ Web アプリ マニフェストでエラーと警告を確認するには、ア
 <!-- Title: Display Issues in severity order  -->  
 <!-- Subtitle: Entries in the Issues tool now display in severity order and allow you to focus your updates on the most important issues. -->  
 
-[ **問題] ツール** には、アクセシビリティ、パフォーマンス、セキュリティなど、Web サイトを改善するための推奨事項が表示されます。 フィードバックに基づいて、問題は重大度別に自動的に並べ替えされます。  各フィードバック カテゴリでは、エラーとしてマークされた**** 各問題が最初に表示され、警告としてマークされた**** 各問題の後に、ヒントとしてマークされた各問題が続**きます**。  問題を絞り込むのに役立つ、追加のフィルター オプションが今後の更新に向け計画されています。  問題を確認する方法の詳細については、「DevTools の問題の検索と修正」Microsoft Edge[に移動します][DevtoolsIssuesIndex]。  
+[ **問題] ツール** には、アクセシビリティ、パフォーマンス、セキュリティなど、Web サイトを改善するための推奨事項が表示されます。 フィードバックに基づいて、問題は重大度別に自動的に並べ替えされます。  各フィードバック カテゴリでは、エラーとしてマークされた**** 各問題が最初に表示され、警告としてマークされた**** 各問題の後に、ヒントとしてマークされた各問題が続**きます**。  問題を絞り込むのに役立つ、追加のフィルター オプションが今後の更新に向け計画されています。  問題を確認する方法の詳細については、「問題ツールを使用して問題を検索して修正する [」に移動します][DevtoolsIssuesIndex]。  
 
 :::image type="complex" source="../../media/2021/04/elements-issues-ordered-issues.msft.png" alt-text="[問題] ツールは、重大度別に並べ替えた問題を表示します。" lightbox="../../media/2021/04/elements-issues-ordered-issues.msft.png":::
    [ **問題] ツールは** 、重大度別に並べ替えた問題を表示します。  
@@ -178,7 +178,7 @@ Web アプリ マニフェストでエラーと警告を確認するには、ア
 
 ### <a name="visualize-css-scroll-snap"></a>CSS のスクロール スナップを表示する  
 
-これで、要素ツールの `scroll-snap` バッジを切り **替** え、CSS のスクロール スナップの配置を検査できます。  Web ページの HTML 要素が適用されると、その横に [要素] ツール `scroll-snap-type` `scroll-snap` にバッジが **表示** されます。  Web ページ上のスクロール スナップ オーバーレイの表示を \(または off\) オンにするバッジを選択します。  Web ページの例を確認するには、[デモのスクロール][スナップ移動します][GlitchMicrosoftEdgeChromiumDevtoolsCssDbgStoriesCssScrollSnapHtml]。  この例では、スナップエッジにドットが表示されます。  スクロール ポートのアウトラインは、スナップ項目にダッシュアウトラインがある場合は、アウトラインが点灯します。  スクロールの余白がオレンジ色で塗りつぶされている間、スクロールの余白は緑で塗りつぶされます。  この機能の履歴をオープンソース プロジェクトで確認するにはChromium Issue [862450 に移動します][CR862450]。  
+これで、要素ツールの `scroll-snap` バッジを切り **替** え、CSS のスクロール スナップの配置を検査できます。  Web ページの HTML 要素が適用されると、その横に [要素] ツール `scroll-snap-type` `scroll-snap` にバッジが **表示** されます。  Web ページ上のスクロール スナップ オーバーレイの表示を \(または off\) オンにするバッジを選択します。  Web ページの例を確認するには、[スクロール スナップデモ [] に移動します][GlitchMicrosoftEdgeChromiumDevtoolsCssDbgStoriesCssScrollSnapHtml]。  この例では、スナップエッジにドットが表示されます。  スクロール ポートのアウトラインは、スナップ項目にダッシュアウトラインがある場合は、アウトラインが点灯します。  スクロールの余白がオレンジ色で塗りつぶされている間、スクロールの余白は緑で塗りつぶされます。  この機能の履歴をオープンソース プロジェクトで確認するにはChromium Issue [862450 に移動します][CR862450]。  
 
 :::image type="complex" source="../../media/2021/04/elements-scroll-snap-highlight.msft.png" alt-text="CSS のスクロール スナップ" lightbox="../../media/2021/04/elements-scroll-snap-highlight.msft.png":::
    CSS のスクロール スナップ  
@@ -386,11 +386,11 @@ DevTools では、ファイルのアウトラインサポートが向上 `.html`
 
 Chromium オープンソース プロジェクトでこの機能の履歴を確認するには、[Issue [1189161][CR1189161] に移動します。  
 
-## <a name="download-the-microsoft-edge-preview-channels"></a>Microsoft Edge プレビュー チャネルをダウンロードする  
+## <a name="download-the-microsoft-edge-preview-channels"></a>Microsoft Edge プレビュー チャネルをダウンロード  
 
 Windows、Linux、または macOS を使用している場合は、 既定の開発ブラウザーとして [Microsoft Edge プレビュー チャネル][MicrosoftEdgePreviewChannels]の使用を検討してください。  プレビュー チャネルを使用すると、最新の DevTools 機能にアクセスできます。  
 
-## <a name="getting-in-touch-with-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームに連絡する  
+## <a name="getting-in-touch-with-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームに連絡  
 
 [!INCLUDE [contact DevTools team note](../../includes/contact-whats-new-note.md)]
 
@@ -405,7 +405,7 @@ Windows、Linux、または macOS を使用している場合は、 既定の開
 [DevtoolsCommandMenuIndexOpenCommandMenu]: ../../../command-menu/index.md#open-the-command-menu "[コマンド] メニューを開く - [DevTools コマンド] メニューの [Microsoft Edgeを使用してコマンドを実行|Microsoft Docs"  
 [DevtoolsConsoleApiError]: ../../../console/api.md#error "error - コンソール API リファレンス |Microsoft Docs"  
 [DevtoolsCustomizeLocalization]: ../../../customize/localization.md "DevTools の言語設定を変更する | Microsoft Docs"  
-[DevtoolsIssuesIndex]: ../../../issues/index.md "Microsoft Edge DevTools の問題ツールに関する問題を見つけて修正する | Microsoft Docs"  
+[DevtoolsIssuesIndex]: ../../../issues/index.md "[問題] ツール を使用して問題を見つけて修正|Microsoft Docs"  
 [DevtoolsServiceWorkerIndex]: ../../../service-workers/index.md "Service Worker の機能強化|Microsoft Docs"  
 [DevtoolsSourcesUsingDebuggerPaneToDebugJavascriptCode]: ../../../sources/index.md#using-the-debugger-pane-to-debug-javascript-code "デバッガー ウィンドウを使用して JavaScript コードをデバッグする - ソース ツールの概要|Microsoft Docs"  
 
@@ -457,7 +457,7 @@ https://crbug.com/1187735[CR1187735]: "Issue 1187735: アクセシビリティ: 
 [GlitchMemoryInspectorDemoJsHtml]: https://memory-inspector.glitch.me/demo-js.html "JS ファイルのメモリ|Glitch"  
 [GlitchMemoryInspectorDemoWasmHtml]: https://memory-inspector.glitch.me/demo-wasm.html "Wasm |Glitch"  
 
-[GlitchMicrosoftEdgeChromiumDevtoolsCssDbgStoriesCssScrollSnapHtml]: https://microsoft-edge-chromium-devtools.glitch.me/css-dbg-stories/css-scroll-snap.html "[デモスナップスクロール|Glitch"  
+[GlitchMicrosoftEdgeChromiumDevtoolsCssDbgStoriesCssScrollSnapHtml]: https://microsoft-edge-chromium-devtools.glitch.me/css-dbg-stories/css-scroll-snap.html "スクロール スナップのデモ |Glitch"  
 
 [GlitchPermissionPolicyDemoMain]: http://permission-policy-demo.glitch.me "OOPIF アクセス許可ポリシー |Glitch"  
 

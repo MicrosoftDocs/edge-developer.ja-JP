@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: devtools
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 7f9a4288980dd938a43b229e1d5396adc7937c67
-ms.sourcegitcommit: 34feec6ae6241c598911dac7b63c28d655691233
+ms.openlocfilehash: 78603c51dab5a61f8d6b43e60a3f252eac665d99
+ms.sourcegitcommit: e150d798161277fd3fc610838ef2611dc08f5cf6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2021
-ms.locfileid: "11597011"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "11624760"
 ---
 # <a name="microsoft-edge-chromium-developer-tools-overview"></a>Microsoft Edge (Chromium) 開発者ツールの概要  
 
@@ -221,7 +221,7 @@ DevTools チームは、DevTools の実験として新機能を提供します�
 [DevtoolsGuideExperimentalFeaturesIndex]: ./experimental-features/index.md "実験的な機能|Microsoft Docs"  
 [DevtoolsGuideMemoryProblemsIndex]: ./memory-problems/index.md "メモリの問題を修正|Microsoft Docs"  
 [DevtoolsGuideInspectStylesEditFonts]: ./inspect-styles/edit-fonts.md "[スタイル] ウィンドウの [CSS フォントのスタイルと設定を編集|Microsoft Docs"  
-[DevtoolsGuideIssuesIndex]: ./issues/index.md "Microsoft Edge DevTools の問題ツールに関する問題を見つけて修正する | Microsoft Docs"  
+[DevtoolsGuideIssuesIndex]: ./issues/index.md "[問題] ツール を使用して問題を見つけて修正|Microsoft Docs"  
 [DevtoolsGuideJavascriptIndex]: ./javascript/index.md "DevTools アプリケーションの JavaScript のデバッグMicrosoft Edge開始|Microsoft Docs"  
 [DevtoolsGuideJavascriptOverrides]: ./javascript/overrides.md "DevTools を使用して Web ページ リソースをローカル コピー Microsoft Edgeオーバーライド|Microsoft Docs"  
 [DevtoolsGuideNetworkIndex]: ./network/index.md "DevTools サーバーでネットワークMicrosoft Edgeを調|Microsoft Docs"  

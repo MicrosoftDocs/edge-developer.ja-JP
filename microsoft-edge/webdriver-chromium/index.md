@@ -8,12 +8,12 @@ ms.topic: article
 ms.prod: microsoft-edge
 ms.technology: devtools
 keywords: microsoft edge, web 開発, html, css, javascript, 開発者, webdriver, selenium,テストする, ツール, 自動化, テスト
-ms.openlocfilehash: c68a16aebcfdc6ade8838145368d32ad84a82209
-ms.sourcegitcommit: d0a6959c5338cf1927093b4a9ed29a0bc0390b43
+ms.openlocfilehash: a1ec308fc1412ead27c4776ce0ccc2e873376652
+ms.sourcegitcommit: e150d798161277fd3fc610838ef2611dc08f5cf6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "11615429"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "11624676"
 ---
 # <a name="use-webdriver-chromium-for-test-automation"></a>テスト オートメーションに WebDriver (Chromium) を使用する  
 
@@ -24,6 +24,7 @@ WebDriver を使用すると、開発者はユーザーの操作をシミュレ�
 *   1 回のテスト セッションで、複数のウィンドウ、タブ、Web ページを管理します。  
 *   特定のコンピューターで Microsoft Edge の複数のセッションを実行します。  
 
+
 ## <a name="relationship-between-webdriver-and-other-software"></a>WebDriver と他のソフトウェアの関係
 
 WebDriver Microsoft Edgeを自動化してユーザーの操作をシミュレートするには、次の 3 つのコンポーネントが必要です。
@@ -32,22 +33,24 @@ WebDriver Microsoft Edgeを自動化してユーザーの操作をシミュレ�
 *  Microsoft Edge ドライバー
 *  WebDriver テスト フレームワーク
 
-WebDriver、Microsoft Edge Driver、Selenium、および Internet Explorerドライバーの機能関係は次のとおりです。
+これらのコンポーネント間の機能関係は次のとおりです。
 
 | テクノロジ | ロール |
 |---|---|
 | WebDriver | プラットフォームおよび言語に依存しないワイヤー プロトコルの W3C 標準。  このプロトコルにより、アウトプロセス プログラムは Web ブラウザーの動作をリモートで指示できます。 |
-| Microsoft Edge ドライバー | Microsoft が WebDriver プロトコルを実装する場合は、このプロトコルを使用Microsoft Edge。 テスト作成者は、ドライバーが受け取る WebDriver コマンドを使用Microsoft Edge記述します。 Microsoft Edgeドライバーは、そのコマンドをブラウザーに通信する責任があります。 |
-| Selenium | テスト作成者がエンドツーエンドのテストを記述し、ブラウザーを自動化するために使用する一般的な WebDriver テスト フレームワーク。 Selenium は任意のプラットフォームで使用できます。また、Java Python、C# Ruby、JavaScript で使用できます。 |
-| Internet Explorer ドライバー | WebDriver プロトコルの実装は、webDriver プロトコルのInternet Explorer。 この製品は、Selenium プロジェクトによって維持されます。 従来のエンド to エンド テストを実行するには、Internet Explorerドライバーを使用Internet Explorer勧めします。 |
+| Microsoft Edge ドライバー | Microsoft が WebDriver プロトコルを実装する場合は、このプロトコルを使用Microsoft Edge。  テスト作成者は、ドライバーが受け取る WebDriver コマンドを使用Microsoft Edge記述します。  Microsoft Edgeドライバーは、そのコマンドをブラウザーに通信する責任があります。 |
+| WebDriver テスト フレームワーク | テスト作成者は、テスト フレームワークを使用してエンドツーエンドのテストを記述し、ブラウザーを自動化します。  言語固有のインターフェイスを提供し、コードをコマンドに変換し、ドライバー Microsoft Edge \(Chromium\) でMicrosoft Edge実行します。  WebDriver テスト フレームワークは、すべての主要なプラットフォームと言語に対して存在します。  そのようなフレームワークの 1 つは Selenium です。 |
+| Internet Explorer ドライバー | WebDriver プロトコルの実装は、webDriver プロトコルのInternet Explorer。  従来のエンド to エンド テストを実行するには、Internet Explorerドライバーを使用Internet Explorer勧めします。 |
 
 次のセクションでは、WebDriver for Microsoft Edge \(Chromium\) について説明します。  
 
+
 ## <a name="install-microsoft-edge-chromium"></a>Microsoft Edge (Chromium) をインストールする  
 
-[Microsoft Edge (Chromium)][MicrosoftEdge] を確実にインストールしてください。  \(Chromium\) がインストールされていることをMicrosoft Edge、に移動し、バージョン番号が `edge://settings/help` バージョン 75 以降である必要があります。  
+[Microsoft Edge (Chromium)][MicrosoftEdge] を確実にインストールしてください。  \(Chromium\) がインストールされていることをMicrosoft Edge、に移動し、バージョン番号が `edge://settings/help` 75 以降である必要があります。
 
-## <a name="download-microsoft-edge-driver"></a>Microsoft Edge ドライバーをダウンロードする  
+
+## <a name="download-microsoft-edge-driver"></a>Microsoft Edge ドライバーをダウンロードする
 
 テストの自動化を開始するには、次の手順を使用して、インストールする WebDriver のバージョンがお使いのブラウザーのバージョンと一致していることを確認します。  
 
@@ -65,22 +68,23 @@ WebDriver、Microsoft Edge Driver、Selenium、および Internet Explorerドラ
     :::image type="complex" source="./media/microsoft-edge-driver-install.msft.png" alt-text="[ドライバー] Web ページの [最新バージョンを取得Microsoft Edge] セクション" lightbox="./media/microsoft-edge-driver-install.msft.png":::
        [**ドライバー] Web ページの**[最新バージョンを取得[Microsoft Edge] セクション][MicrosoftDeveloperMicrosoftEdgeToolsWebdriver]  
     :::image-end:::  
+   
     
-    <!--  
-    > [!NOTE] 
-    > For more information about test automation using Microsoft Edge \(EdgeHTML\), navigate to [Microsoft Edge Driver for Microsoft Edge (EdgeHTML)][Webdriver].  
-    -->  
-    
-## <a name="choose-a-webdriver-language-binding"></a>WebDriver 言語バインドの選択  
+## <a name="choose-a-webdriver-testing-framework"></a>WebDriver テスト フレームワークの選択
 
-ダウンロードする必要がある最後のコンポーネントは、コード \(Python、 Java、 C\#, Ruby、 JavaScript\) を、Microsoft Edge \(Chromium\)でMicrosoft Edge ドライバーが実行するコマンドに変換するための言語固有のクライアント ドライバーです。  
+ドライバーをダウンロードMicrosoft Edge、最後にダウンロードする必要があるコンポーネントは、WebDriver テスト フレームワークです。 テスト作成者は、WebDriver テスト フレームワークを使用して、エンドツーエンドのテストを記述し、ブラウザーを自動化します。 フレームワークは、コード (Python、Java、C#、Ruby、JavaScript など) を Microsoft Edge Driver が Microsoft Edge \(Chromium\) で実行するコマンドに変換する言語固有のインターフェイスを提供します。 WebDriver テスト フレームワークは、すべての主要なプラットフォームと言語に対して存在します。
 
-[選択した WebDriver 言語バインドをダウンロードします][SeleniumDownloads]。  このMicrosoft Edgeチームは[、Selenium 4.0.0-beta2][NugetPackagesSeleniumWebdriver400beta02]以降を推奨します。これは、Microsoft Edge \(Chromium\) をサポートしています。  ただし、現在の安定した Selenium 3 リリースMicrosoft Edge含め、以前のすべてのバージョンの Selenium で \(Chromium\) を制御できます。  
+
+この記事では、Selenium フレームワークを使用する手順を説明しますが、WebDriver をサポートする任意のライブラリ、フレームワーク、プログラミング言語を使用できます。  Selenium 以外の WebDriver テスト フレームワークを使用して同じタスクを実行するには、選択したフレームワークの公式ドキュメントを参照してください。
+
+Selenium を使用している場合、Microsoft Edge チームは、そのバージョンの Selenium が Microsoft Edge \(Chromium\) をサポートしていますので[、Selenium 4.0.0-beta2][NugetPackagesSeleniumWebdriver400beta02]以降をお勧めします。  ただし、現在の安定した Selenium 3 リリースMicrosoft Edge含め、以前のすべてのバージョンの Selenium で \(Chromium\) を制御できます。  
 
 > [!IMPORTANT]
 > 以前に Microsoft Edge \(Chromium\) を使用しておよびクラスを自動化またはテストした場合 `ChromeDriver` `ChromeOptions` 、WebDriver コードは Microsoft Edge バージョン 80 以降では実行されません。  この問題を解決するには、テストを更新してクラスを使用し、Driver `EdgeOptions` [Microsoft Edgeダウンロードします][MicrosoftDeveloperMicrosoftEdgeToolsWebdriver]。  
 
 ### <a name="using-selenium-4"></a>Selenium 4 の使用
+
+Selenium WebDriver テスト フレームワークは、任意のプラットフォームで使用できます。Java、Python、C#、Ruby、JavaScript で使用できます。
 
 Selenium 4 には、Microsoft Edge (Chromium) が組み込Chromium。  Selenium 4 をインストールするには [、[Selenium ライブラリのインストール] に移動します][SeleniumInstallingLibraries]。
 
@@ -92,7 +96,7 @@ Selenium 4 を使用してこのエラーが発生する場合は、プロジェ
 
 既に [Selenium 3][|::ref1::|] を使用している場合は、既存のブラウザーのテストがあり、Selenium のバージョンを変更せずに Microsoft Edge \ (Chromium \) のカバレッジを追加することを希望するかもしれません。  [Selenium 3][|::ref2::|] を使用して Microsoft Edge  \ (EdgeHTML \) と Microsoft Edge \ (Chromium \) の自動テストを作成するには更新されたドライバーを使用するために、[Microsoft Edge 用 Selenium ツール][GithubMicrosoftEdgeSeleniumTools] のパッケージをインストールします。  ツールに含まれている`EdgeDriver` と `EdgeDriverService` のクラスは、Selenium 4 の組み込みの対応物と完全互な換性があります。  
 
-次の手順を使用して、[Microsoft Edge 用Selenium ツール][GithubMicrosoftEdgeSeleniumTools] と [Selenium 3][|::ref3::|] をプロジェクトに追加します。  
+Selenium 3 を使用している場合は、次の手順を使用して、プロジェクトに Microsoft Edge および[Selenium 3 の Selenium][|::ref3::|] [Tools を][GithubMicrosoftEdgeSeleniumTools]追加します。
 
 #### [<a name="c"></a>C#](#tab/c-sharp/)  
 
@@ -138,11 +142,15 @@ npm install @microsoft/edge-selenium-tools selenium-webdriver
 
 * * *  
 
+
 ## <a name="automate-microsoft-edge-chromium-with-webdriver"></a>WebDriver Microsoft Edge (Chromium) を自動化する  
 
-WebDriver を使用してブラウザーを自動化するには、まず優先 WebDriver 言語バインドを使用して WebDriver セッションを開始する必要があります。  セッションは、WebDriver コマンドを使用して制御されるブラウザーの 1 つの実行中のインスタンスです。  WebDriver セッションを開始して、新しいブラウザー インスタンスを起動します。  WebDriver セッションを閉じるまで、起動されたブラウザー インスタンスは開いたままです。  
+WebDriver を使用してブラウザーを自動化するには、まず優先 WebDriver テスト フレームワークを使用して WebDriver セッションを開始する必要があります。  セッションは、WebDriver コマンドを使用して制御されるブラウザーの 1 つの実行中のインスタンスです。  WebDriver セッションを開始して、新しいブラウザー インスタンスを起動します。  WebDriver セッションを閉じるまで、起動されたブラウザー インスタンスは開いたままです。  
 
-次のコンテンツでは、Selenium を使用して WebDriver セッションを開始し、\(Microsoft Edge\) Chromiumします。  この例は、Selenium 3 または 4 を使用して実行できます。  Selenium 3 で使用するには、[Microsoft Edge用 Selenium Tools][GithubMicrosoftEdgeSeleniumTools] をインストールする必要があります。  
+次のコンテンツでは、Selenium を使用して WebDriver セッションを開始し、\(Microsoft Edge\) Chromiumします。  これらの例は、Selenium 3 または 4 を使用して実行できます。  WebDriver を Selenium 3 で使用するには[、Selenium Tools for Microsoft Edge][GithubMicrosoftEdgeSeleniumTools]インストールする必要があります。  
+
+> [!NOTE]
+> この記事では、Selenium フレームワークを使用する手順を説明しますが、WebDriver をサポートする任意のライブラリ、フレームワーク、プログラミング言語を使用できます。  別のフレームワークを使用して同じタスクを実行するには、選択したフレームワークの公式ドキュメントを参照してください。
 
 ### <a name="automate-microsoft-edge-chromium"></a>自動Microsoft Edge (Chromium)  
 
@@ -362,6 +370,7 @@ options.addArguments("disable-gpu");
 > [!NOTE]
 > `UseChromium`プロパティが`true` に設定されている場合は、Microsoft Edge \ (EdgeHTML \) のプロパティとメソッドは使用できません。  
 
+
 ## <a name="other-webdriver-installation-options"></a>その他の WebDriver インストール オプション  
 
 ### <a name="docker"></a>Docker  
@@ -374,9 +383,11 @@ docker run -d -p 9515:9515 mcr.microsoft.com/msedge/msedgedriver
 
 詳細については、Docker Hub の [msedgedriver コンテナーに移動します][DockerHubMsedgedriver]。  
 
+
 ## <a name="testing-internet-explorer"></a>テストInternet Explorer
 
-IE モードMicrosoft Edgeサポートされている場合でも、IE モードでサイトMicrosoft EdgeテストMicrosoft Edgeドライバーを使用することはできません。  必要なサイトをテストするには、Internet Explorerドライバー Internet Explorer [を使用][GithubSeleniumHqWikiIEDriver] Internet Explorer。
+必要なサイトをテストするには、Internet Explorerドライバー Internet Explorer [を使用][GithubSeleniumHqWikiIEDriver] Internet Explorer。  Internet Explorerドライバーは、Selenium プロジェクトによって維持されます。  IE モードMicrosoft Edgeサポートされている場合でも、IE モードでサイトMicrosoft EdgeテストMicrosoft Edgeドライバーを使用することはできません。
+
 
 ## <a name="application-guard"></a>Application Guard
 
@@ -388,31 +399,32 @@ Application Guard を使用する信頼されていないサイトは、ドラ�
 
 Application Guard の詳細については、次の場所に移動します。 
 
-*  [Microsoft Edge での Microsoft Defender Application Guard のサポート](/deployedge/microsoft-edge-security-windows-defender-application-guard)
+*  [Microsoft Edge での Microsoft Defender Application Guard のサポート][DeployedgeMicrosoftEdgeSecurityWindowsDefenderApplicationGuard]
 *  [Microsoft Defender Application Guard概要][WindowsSecurityThreatProtectionMicrosoftDefenderApplicationGuardWindows10]
 
-## <a name="next-steps"></a>次の手順  
 
-WebDriver の詳細と、Selenium を使用して自動 WebDriver テストを記述する方法については [、Selenium のドキュメントに移動します][SeleniumDocumentation]。  
+## <a name="see-also"></a>関連項目
+
+*  [Selenium のドキュメント][SeleniumDocumentation] - Selenium のコンテキストでの WebDriver に関する情報と、Selenium を使用して自動 WebDriver テストを記述する方法について説明します。
+
 
 ## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームと連絡を取る  
 
-Microsoft Edge チームは、WebDriver、Selenium、Microsoft Edge の使用に関するフィードバックをお待ちしております。  チームに質問とコメントを送信するには、DevTools の [フィードバックの送信] Microsoft Edgeを選択するか、ツイートを送信[@EdgeDevTools。][TwitterTweetEdgeDevTools] ****  
+このMicrosoft Edgeチームは、WebDriver、WebDriver テスト フレームワーク (Selenium など)、およびテスト フレームワークの使用に関するフィードバックを熱心にMicrosoft Edge。  チームに質問とコメントを送信するには、DevTools の [フィードバックの送信] Microsoft Edgeを選択するか、ツイートを送信[@EdgeDevTools。][TwitterTweetEdgeDevTools] ****  
 
 :::image type="complex" source="../devtools-guide-chromium/media/bing-devtools-send-feedback.msft.png" alt-text="Microsoft Edge DevTools の [フィードバックの送信] アイコン" lightbox="../devtools-guide-chromium/media/bing-devtools-send-feedback.msft.png":::
    Microsoft Edge DevTools の [ **フィードバックの送信** ] アイコン  
 :::image-end:::  
 
-<!-- links -->  
 
+<!-- links -->  
 [DevtoolsIndex]: ../devtools-guide-chromium/index.md "Microsoft Edge (Chromium) 開発者ツール | Microsoft Docs"  
 [WebdriverCapabilitiesEdgeOptions]: ./capabilities-edge-options.md "機能と EdgeOptions |Microsoft Docs"  
-
-<!--[Webdriver]: /archive/microsoft-edge/legacy/developer/webdriver/index "WebDriver (EdgeHTML) | Microsoft Docs"  -->  
-
+<!-- external links -->
 [DeployedgeMicrosoftEdgePoliciesDevelopertoolsavailability]: /deployedge/microsoft-edge-policies#developertoolsavailability "DeveloperToolsAvailability - Microsoft Edge - ポリシー |Microsoft Docs"  
-[WindowsSecurityThreatProtectionMicrosoftDefenderApplicationGuardWindows10]: /windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview "Microsoft Defender Application Guard (Windows 10) - Windows セキュリティ |Microsoft Docs"  
 [DeployedgeMicrosoftEdgeSecurityWindowsDefenderApplicationGuard]: /deployedge/microsoft-edge-security-windows-defender-application-guard "Microsoft EdgeのサポートMicrosoft Defender Application Guard |Microsoft Docs"
+
+[WindowsSecurityThreatProtectionMicrosoftDefenderApplicationGuardWindows10]: /windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview "Microsoft Defender Application Guard (Windows 10) - Windows セキュリティ |Microsoft Docs"  
 
 [DockerHub]: https://hub.docker.com "Docker Hub"  
 [DockerHubMsedgedriver]: https://hub.docker.com/_/microsoft-msedge-msedgedriver?tab=description "msedgedriver |Docker hub"  
@@ -443,7 +455,6 @@ Microsoft Edge チームは、WebDriver、Selenium、Microsoft Edge の使用に
 
 [SeleniumHQ]: https://www.selenium.dev "SeleniumHQ"  
 [SeleniumDocumentation]: https://www.selenium.dev/documentation "Selenium Browser Automation Project |Selenium のドキュメント"  
-[SeleniumDownloads]: https://selenium.dev/downloads "ダウンロード |Selenium"  
 [SeleniumInstallingLibraries]: https://www.selenium.dev/documentation/en/selenium_installation/installing_selenium_libraries "Selenium ライブラリのインストール|Selenium"
 
 [SonatypeMavenRepositorySearch]: https://search.maven.org/artifact/com.microsoft.edge/msedge-selenium-tools-java/3.141.0/jar "Sonatype Maven Central Repository Search |com.microsoft.edge:msedge-selenium-tools-java"

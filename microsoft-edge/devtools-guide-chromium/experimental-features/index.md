@@ -22,12 +22,12 @@ no-loc:
 - Edit keyboard shortcuts for any action in the DevTools
 - Turn on new CSS grid debugging features
 - 'Emulation: Support dual screen mode'
-ms.openlocfilehash: 82d547c8c1ed0606bda9ade27d0dbddbfa2ca800
-ms.sourcegitcommit: 34feec6ae6241c598911dac7b63c28d655691233
+ms.openlocfilehash: dec4b4d111c0eb8dc9cc3963bac7339df1d9b6f6
+ms.sourcegitcommit: e150d798161277fd3fc610838ef2611dc08f5cf6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2021
-ms.locfileid: "11596996"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "11624753"
 ---
 # <a name="experimental-features"></a>試験的な機能  
 
@@ -118,8 +118,7 @@ Microsoft EdgeDevTools は、開発中の実験的な機能にアクセスでき
 1.  セクションの **Source Order Viewer** 下で、[ソースの順序を **表示する] チェック ボックスをオン** にします。  
 1.  任意の HTML 要素を強調表示して、Web ページ ソース内の順序をオーバーレイで表示します。  
     
-:::image type="complex" source="../media/experiments-source-order-viewer.msft.png" alt-text="Source Order Viewer in the Accessibility pane" lightbox="../media/experiments-source-order-viewer.msft.png":::
-   **Source Order Viewer** in the **Accessibility** pane  
+:::image type="complex" source="../media/experiments-source-order-viewer.msft.png" alt-text="Source Order Viewer in the アクセシビリティ ペイン" lightbox="../media/experiments-source-order-viewer.msft.png"::: **Source Order Viewer** [**アクセシビリティ] ウィンドウ**  
 :::image-end:::  
 
 <!--Available in Microsoft Edge version 86 and later.  -->  
@@ -258,7 +257,6 @@ DevTools 実験に関Microsoft Edgeフィードバックを提供する場合、
 -->  
 
 <!-- links -->  
-
 [Devtools3dViewIndex]: ../3d-view/index.md "3D View |Microsoft Docs"  
 [DevtoolsCssGrid]: ../css/grid.md "DevTools ページで CSS グリッドMicrosoft Edgeを調|Microsoft Docs"  
 [DevtoolsCustomizeIndex]: ../customize/index.md "DevTools Microsoft Edgeのカスタマイズ|Microsoft Docs"  
@@ -268,12 +266,10 @@ DevTools 実験に関Microsoft Edgeフィードバックを提供する場合、
 [DevtoolsDeviceModeDualScreenAndFoldables]: ../device-mode/dual-screen-and-foldables.md "DevTools アプリケーションでデュアルスクリーンデバイスと折りたたみMicrosoft Edgeエミュレート|Microsoft Docs"  
 [DevtoolsDeviceModeIndexSimulateMobileViewport]: ../device-mode/index.md#simulate-a-mobile-viewport "DevTools アプリケーションでデバイス モードでモバイル Microsoft Edgeをシミュレート|Microsoft Edge"  
 [DevtoolsInspectStylesEditFonts]: ../inspect-styles/edit-fonts.md "DevTools の [スタイル] ウィンドウで CSS フォントのスタイルと設定を編集 | Microsoft Docs"  
-[DevtoolsIssuesIndex]: ../issues/index.md "Microsoft Edge DevTools の問題ツールに関する問題を見つけて修正する | Microsoft Docs"  
+[DevtoolsIssuesIndex]: ../issues/index.md "[問題] ツール を使用して問題を見つけて修正|Microsoft Docs"  
 [DevtoolsOpenIndex]: ../open/index.md "Microsoft Edge DevTools を開く | Microsoft Docs"  
 [DevtoolsShortcutsIndex]: ../shortcuts/index.md "Microsoft EdgeDevTools キーボード ショートカット |Microsoft Docs"  
-
+<!-- external links: -->
 [MicrosoftEdgeMain]: https://www.microsoft.com/edge "Microsoft Edge"  
-
 [TwitterEdgedevtools]: https://www.twitter.com/EdgeDevTools "Microsoft EdgeDevTools |Twitter"  
-
 [WebhintMain]: https://webhint.io "webhint"  
