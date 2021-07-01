@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: WebView2、Webview2、WebView、Webview、エッジ、ベスト プラクティス
-ms.openlocfilehash: 5a11f01ec07aea12599c8bdb8428d451ad7bd013
-ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
+ms.openlocfilehash: 7e8c6746e864b474c2987817c521224499a95e1f
+ms.sourcegitcommit: 5ae09b1ad6cd576c9fec12538b23cd849861f2b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2021
-ms.locfileid: "11564750"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "11627979"
 ---
 # <a name="webview2-development-best-practices"></a>WebView2 開発のベスト プラクティス  
 
@@ -27,11 +27,13 @@ WebView2 アプリケーションを使用する前に、Evergreen WebView2 ラ�
 
 ## <a name="run-compatibility-tests-regularly-when-using-the-evergreen-webview2-runtime"></a>Evergreen WebView2 ランタイムを使用する場合は、互換性テストを定期的に実行する
 
-Evergreen WebView2 ランタイムを使用する場合は、定期的な互換性テストを実行してください。 ランタイムは自動的に更新されますので、WebView2 コントロールの Web コンテンツを、安定しないバージョンの Microsoft Edge に対してテストして、WebView2 アプリケーションが期待した通り実行されます。 このガイダンスは、Web 開発者に提供するガイダンスに似ています。 詳細については、「Evergreen モードで [互換性を持ち続け」に移動します][Webview2ConceptsDistributionStayCompatibleEvergreenMode]。
+Evergreen WebView2 ランタイムを使用する場合、ランタイムは自動的に更新されます。そのため、互換性テストを定期的に実行する必要があります。 WebView2 コントロールの Web コンテンツを、安定しないバージョンの Microsoft Edge に対してテストし、WebView2 アプリケーションが期待通り動作します。
+
+このガイダンスは、Web 開発者に提供するガイダンスに似ています。 詳細については、「Evergreen モードで [互換性を持ち続け」に移動します][Webview2ConceptsDistributionStayCompatibleEvergreenMode]。
 
 ## <a name="ensure-apis-are-supported-by-the-installed-webview2-runtime"></a>インストールされている WebView2 ランタイムで API がサポートされていることを確認する
 
-WebView2 アプリケーションの実行には、Webview2 SDK と、コンピューターにインストールされている WebView2 ランタイムの両方が必要です。 SDK とランタイムの両方がバージョン管理されています。 API は WebView2 に継続的に追加され続けるので、新しい API をサポートするために、ランタイムの新しいバージョンもリリースされます。 WebView2 アプリケーションで使用される API が、コンピューターにインストールされている WebView2 ランタイムでサポートされていることを確認する必要があります。 
+WebView2 アプリケーションの実行には、Webview2 SDK と、コンピューターにインストールされている WebView2 ランタイムの両方が必要です。 SDK とランタイムの両方がバージョン管理されています。 API は WebView2 に継続的に追加され続けるので、新しい API をサポートするために、ランタイムの新しいバージョンもリリースされます。 WebView2 アプリケーションで使用される API が、コンピューターにインストールされている WebView2 ランタイムによってサポートされていることを確認します。 
 
 Evergreen WebView2 ランタイムを使用する場合、ランタイムが最新バージョンを使用するために更新されない場合があります。 たとえば、ユーザーがインターネットにアクセスできない場合、ランタイムは、その環境では自動的に更新されません。 さらに、一部のグループ ポリシーを使用すると、WebView2 の更新が一時停止されます。 WebView2 アプリケーションに更新プログラムをプッシュすると、インストールされているランタイムで使用できない新しい API が使用され、アプリケーションが壊れる可能性があります。   
  
@@ -48,12 +50,17 @@ Evergreen WebView2 ランタイムを使用する場合、ランタイムが最�
 
 ## <a name="manage-new-versions-of-the-runtime"></a>ランタイムの新しいバージョンを管理する  
 
-Evergreen WebView2 ランタイムの新しいバージョンがデバイスにダウンロードされるたびに、WebView2 アプリケーションを実行すると、ブラウザー プロセスがリリースされるまで、以前のランタイムを使用し続ける必要があります。 この動作により、アプリケーションは継続的に実行され、以前のランタイムが削除されません。 新しいバージョンのランタイムを使用するには、以前の WebView2 環境オブジェクトへのすべての参照を解放するか、アプリケーションを再起動する必要があります。 次に新しい WebView2 環境を作成すると、新しいバージョンが使用されます。
+Evergreen WebView2 ランタイムの新しいバージョンがデバイスにダウンロードされると、実行中の WebView2 アプリケーションは、ブラウザー プロセスがリリースされるまで、前のランタイムを引き続き使用します。  この動作により、アプリケーションは継続的に実行され、以前のランタイムが削除されません。  新しいバージョンのランタイムを使用するには、以前の WebView2 環境オブジェクトへのすべての参照を解放するか、アプリケーションを再起動する必要があります。  次に新しい WebView2 環境を作成すると、新しいバージョンが使用されます。
 
-アプリケーションの再起動をユーザーに通知するなどの新しいバージョンが利用可能な場合にアクションを実行するには、コードで [add_NewBrowserVersionAvailable(Win32)][Webview2ReferenceaddNewBrowserVersionAvailable] イベントまたは [CoreWebView2Environment.NewBrowserVersionAvailable(.NET)][Webview2ReferenceNewBrowserVersionAvailable] イベントを使用できます。 コードがアプリケーションの再起動を処理する場合は、WebView2 アプリケーションが終了する前にユーザー状態を保存してください。  
+新しいバージョンが使用可能な場合は、アプリケーションを再起動するユーザーに通知するなどのアクションを自動的に実行できます。  新しいバージョンが使用可能な状態を検出するには、コードで [add_NewBrowserVersionAvailable(Win32)][Webview2ReferenceaddNewBrowserVersionAvailable] イベントまたは [CoreWebView2Environment.NewBrowserVersionAvailable(.NET)][Webview2ReferenceNewBrowserVersionAvailable] イベントを使用できます。 コードがアプリケーションの再起動を処理する場合は、WebView2 アプリケーションが終了する前にユーザー状態を保存してください。  
 
 ## <a name="manage-the-lifetime-of-the-user-data-folder"></a>ユーザー データ フォルダーの有効期間を管理する 
-WebView2 アプリは、Cookie、資格情報、アクセス許可などのデータを格納するユーザー データ フォルダーを作成します。 フォルダーを作成した後、アプリは、アプリのアンインストール時のクリーンアップなど、ユーザー データ フォルダーの有効期間を管理します。  詳細については、「ユーザー データ フォルダー [の管理」に移動します][Webview2ConceptsUserDataFolder]。  
+WebView2 アプリは、Cookie、資格情報、アクセス許可などのデータを格納するユーザー データ フォルダーを作成します。  フォルダーを作成した後、アプリはユーザー データ フォルダーの有効期間を管理します。  たとえば、アプリがアンインストールされた場合、アプリはクリーンアップを実行する必要があります。  詳細については、「ユーザー データ フォルダー [の管理」に移動します][Webview2ConceptsUserDataFolder]。  
+
+## <a name="handle-runtime-process-failures"></a>ランタイム プロセスのエラーを処理する
+WebView2 アプリはイベントをリッスンして処理する必要があります。そのため、WebView2 アプリ プロセスをサポートするランタイム プロセスのエラーからアプリを `ProcessFailed` 回復できます。
+
+WebView2 アプリは、アプリ プロセスと共に実行されるランタイム プロセスのコレクションによってサポートされます。 これらのサポートランタイム プロセスは、メモリの使い切れやユーザーによる終了など、さまざまな理由で失敗する可能性があります。 サポートするランタイム プロセスが失敗すると、WebView2 は [ProcessFailed][WebView2ProcessFailedEvent]イベントを発生してアプリケーションに通知します。
 
 ## <a name="follow-recommended-webview2-security-best-practices"></a>推奨される WebView2 セキュリティのベスト プラクティスに従う 
 WebView2 アプリケーションの場合は、推奨される WebView2 セキュリティのベスト プラクティスに従ってください。  詳細については、「セキュリティで保護された [WebView2 アプリケーションを開発するためのベスト プラクティス」に移動します][Webview2ConceptsSecurity]。  
@@ -64,9 +71,9 @@ WebView2 アプリケーションの場合は、推奨される WebView2 セキ�
 [Webview2ConceptsDistributionFixedVersionDistributionMode]: ../concepts/distribution.md#fixed-version-distribution-mode "固定バージョン配布モード - WebView2 アプリケーションを使用したアプリ|Microsoft Docs"  
 [Webview2ConceptsDistributionStayCompatibleEvergreenMode]: ../concepts/distribution.md#stay-compatible-in-evergreen-mode "Evergreen モードで互換性を持つ - WebView2 を使用したアプリの配布 |Microsoft Docs"  
 [Webview2ConceptsSecurity]: ../concepts/security.md "セキュリティで保護された WebView2 アプリケーションを開発するためのベストプラクティス |Microsoft Docs"  
-[Webview2ConceptsUserDataFolder]: ../concepts/user-data-folder.md "[ユーザー データ フォルダーの管理] |Microsoft Docs"  
+[Webview2ConceptsUserDataFolder]: ../concepts/user-data-folder.md "ユーザー データ フォルダーの管理|Microsoft Docs"  
 [Webview2ConceptsVersioningDetermineWebview2RuntimeRequirement]: ../concepts/versioning.md#determine-webview2-runtime-requirement "WebView2 ランタイム要件の決定 - WebView2 SDK のバージョンの|Microsoft Docs"  
-[Webview2GetStartedWin32]: ../get-started/win32.md "WebView2 の使用を|Microsoft Docs"  
+[Webview2GetStartedWin32]: ../get-started/win32.md "WebView2 の使用を開始する|Microsoft Docs"  
 [Webview2GetStartedWinforms]: ../get-started/winforms.md "WebView2 の使用を開始するには、Windowsフォーム|Microsoft Docs"  
 [Webview2GetStartedWinui]: ../get-started/winui.md "WinUI 3 (プレビュー) の WebView2 の使用を開始|Microsoft Docs"  
 [Webview2GetStartedWpf]: ../get-started/wpf.md "WPF サーバーでの WebView2 の|Microsoft Docs"  
@@ -74,3 +81,5 @@ WebView2 アプリケーションの場合は、推奨される WebView2 セキ�
 [Webview2ReferenceaddNewBrowserVersionAvailable]: /microsoft-edge/webview2/reference/win32/icorewebview2environment#add_newbrowserversionavailable "add_NewBrowserVersionAvailable |Microsoft Docs"  
 
 [Webview2ReferenceNewBrowserVersionAvailable]: /dotnet/api/microsoft.web.webview2.core.corewebview2environment.newbrowserversionavailable "CoreWebView2Environment.NewBrowserVersionAvailable イベント |Microsoft Docs"  
+[WebView2ProcessFailedEvent]: /microsoft-edge/webview2/reference/win32/icorewebview2processfailedeventargs "ICoreWebView2ProcessFailedEventArgs |Microsoft Docs"  
+

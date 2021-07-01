@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、Webview2、Webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Host、ブラウザー コントロール、エッジ html、ユーザー データ フォルダー
-ms.openlocfilehash: a6399e59f153d4446946937461e61667f325f4ae
-ms.sourcegitcommit: 777b16ef10363f2dfd755f115ee2d4c81a8de46f
+ms.openlocfilehash: d3b3e8d81ddffec043f0988385a433eb7c817de7
+ms.sourcegitcommit: 5ae09b1ad6cd576c9fec12538b23cd849861f2b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2021
-ms.locfileid: "11536033"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "11627958"
 ---
 # <a name="manage-the-user-data-folder"></a>ユーザー データ フォルダーの管理  
 

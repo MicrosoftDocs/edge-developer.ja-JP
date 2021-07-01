@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、webview2、webview、win32 アプリ、win32、edge、ICoreWebView2、CoreWebView2、ICoreWebView2Host、ブラウザー コントロール、edge html、Windows フォーム、WinForms、WPF、.NET、WinUI、Project Reunion
-ms.openlocfilehash: 9c1aa073294fc649223da19c44850dc4335f6c00
-ms.sourcegitcommit: 7f7922dbb6af87ecac1378d18359125770c5b8e5
-ms.translationtype: HT
+ms.openlocfilehash: 64c835d0122a1c72e610efed2c060f7921a8e2b5
+ms.sourcegitcommit: 5ae09b1ad6cd576c9fec12538b23cd849861f2b2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2021
-ms.locfileid: "11536853"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "11627986"
 ---
 # <a name="introduction-to-microsoft-edge-webview2"></a>Microsoft Edge WebView2 の概要  
 
@@ -197,7 +197,7 @@ WebView2 アプリをビルドおよび展開する方法の詳細について�
 
 [Webview2ConceptsDistribution]: ./concepts/distribution.md "WebView2 を使用したアプリの配布|Microsoft Docs"  
 [Webview2ConceptsSecurity]: ./concepts/security.md "セキュリティで保護された WebView2 アプリを開発するためのベスト プラクティス |Microsoft Docs"  
-[Webview2ConceptsUserDataFolder]: ./concepts/user-data-folder.md "ユーザー データ フォルダーの管理 |Microsoft Docs"  
+[Webview2ConceptsUserDataFolder]: ./concepts/user-data-folder.md "ユーザー データ フォルダーの管理|Microsoft Docs"  
 [Webview2ConceptsVersioning]: ./concepts/versioning.md "WebView2 SDK のバージョンについて理解する |Microsoft Docs"  
 [Webview2GetStartedWin32]: ./get-started/win32.md "WebView2 の使用を開始する|Microsoft Docs"  
 [Webview2GetStartedWinforms]: ./get-started/winforms.md "Windows フォーム アプリ (プレビュー) でのWebView2 の使用を開始する|Microsoft Docs"  
