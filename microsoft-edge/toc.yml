@@ -443,7 +443,7 @@
               href: webview2/concepts/browser-features.md
             - name: アプリの配布
               href: webview2/concepts/distribution.md
-            - name: ユーザーデータフォルダーの管理
+            - name: ユーザー データ フォルダーの管理
               href: webview2/concepts/user-data-folder.md
             - name: WebView2 アプリケーションの管理
               href: webview2/concepts/enterprise.md
