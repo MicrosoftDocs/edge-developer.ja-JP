@@ -7,12 +7,12 @@ ms.date: 05/27/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge, 互換性, Web プラットフォーム
-ms.openlocfilehash: 194e612c008016299b234de816114d24e5569aef
-ms.sourcegitcommit: e150d798161277fd3fc610838ef2611dc08f5cf6
+ms.openlocfilehash: 815a350dc82d02e77354f3079880df9ce81750b7
+ms.sourcegitcommit: 412ec98cd9f57f74af69acad0a317d1dffa3b323
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "11624788"
+ms.lasthandoff: 07/08/2021
+ms.locfileid: "11640605"
 ---
 # <a name="site-compatibility-impacting-changes-coming-to-microsoft-edge"></a>Microsoft Edge 向けのサイトの互換性に影響する変更点  
 
@@ -24,6 +24,7 @@ Microsoft Edgeプロジェクトから Web プラットフォームに対する�
 
 | 変更点 | Stable チャネル | Experimentation | 追加情報 |  
 |:--- |:--- |:--- |:--- |
+| WebRTC のプラン B SDP セマンティクスの廃止 | [Chrome+1](#release-comments) \(Edge v94\)  |  | この変更は、プロジェクトのChromiumプロジェクトでMicrosoft Edge発生します。 この変更は、プラン B と呼ばれる従来のセッション記述プロトコル (SDP) の方言を廃止します。仕様に準拠したブラウザー間互換性のある SDP 形式の統合プランに置き換えられる予定です。 詳細については [、「Chrome Platform Status entry][ChromestatusFeature5823036655665152] and [PSA: Timeline for Plan B SDP Deprecation][PSADeprecateWebRTCPlanB]and Removal - Please Migrate to Unified Plan 」に移動してください。 廃止の Microsoft ロールアウト スケジュールは、Chrome の後の 1 つのリリースで計画されています。 [WebRTC プラン B リバース オ][ChromeDevelopersOrigintrialsWebRTCPlanBOriginTrial]リジン試用版トークンを要求すると、サイトは Edge v96 まで廃止された API を引き続き使用できます。 |
 | Cookie の既定 `SameSite=Lax` の設定および設定 `SameSite=None-requires-Secure` | [Chrome+1](#release-comments) \(Edge v86\)  | Canary v82, Dev v82 | この変更は、プロジェクトのChromiumプロジェクトでMicrosoft Edge発生します。  この変更の予定タイムラインを含む詳細については、[Chrome プラットフォームの状態] エントリ [に移動します][ChromestatusFeature5088147346030592]。  |  
 | 参照元ポリシー: 既定値から `strict-origin-when-cross-origin` | [Chrome+1](#release-comments) \(Edge v86\)  | Canary v79, Dev v79 | この変更は、プロジェクトのChromiumプロジェクトでMicrosoft Edge発生します。  この変更の予定タイムラインを含む詳細については、[Chrome プラットフォームの状態] エントリ [に移動します][ChromestatusFeature6251880185331712]。  |  
 | ページの閉じ込 `XmlHttpRequest` めで同期を禁止する | [Chrome+1](#release-comments) \(Edge v83\) |  | この変更は、プロジェクトのChromiumプロジェクトでMicrosoft Edge発生します。  Chrome に一致Microsoft Edge、Edge v88 までこの変更をオフにするグループ ポリシーが提供されます。  この変更の予定タイムラインを含む詳細については、[Chrome プラットフォームの状態] エントリ [に移動します][ChromestatusFeature4664843055398912]。  |  
@@ -76,12 +77,16 @@ Microsoft Edgeプロジェクトから Web プラットフォームに対する�
 [ChromestatusFeature6251880185331712]: https://chromestatus.com/feature/6251880185331712 "参照元ポリシー: 既定で strict-origin-when-cross-origin |Chrome プラットフォームの状態"  
 [ChromestatusFeature6678134168485888]: https://chromestatus.com/feature/6678134168485888 "TLS サーバーで 3DES を削除|Chrome プラットフォームの状態"
 [ChromestatusFeature5436853517811712]: https://chromestatus.com/feature/5436853517811712 "サブリソースのプライベート ネットワーク要求を制限して、コンテキストをセキュリティで保護|Chrome プラットフォームの状態"
+[ChromestatusFeature5823036655665152]: https://www.chromestatus.com/feature/5823036655665152 "[WebRTC]プラン B の非推奨と削除 (非推奨) |Chrome プラットフォームの状態"
 [ChromiumFlashRoadmapSupportRemoved]: https://www.chromium.org/flash-roadmap#TOC-Flash-Support-Removed-from-Chromium-Target:-Chrome-88---Jan-2021- "Flash のサポート Chromium (ターゲット: Chrome 88+ - 2021 年 1 月) - Flash ロードマップ |Chromiumプロジェクト"  
 
 [ChromeDevelopersOrigintrialsAppCacheOriginTrial]: https://developers.chrome.com/origintrials/#/view_trial/1776670052997660673 "AppCache OriginTrial トークン |Chrome 開発者"  
+[ChromeDevelopersOrigintrialsWebRTCPlanBOriginTrial]: https://developer.chrome.com/origintrials/#/view_trial/3892235977954951169 "WebRTC プラン B リバース オリジン試用版トークン |Chrome 開発者"
 
 [GoogleBlogSecurity20200206]: https://security.googleblog.com/2020/02/protecting-users-from-insecure_6.html "Google Chrome の安全でないダウンロードからユーザーを保護する - Google Online セキュリティ ブログ" 
 
 [WebDevAppCacheRemoval]: https://web.dev/appcache-removal "AppCache の削除の準備|web.dev"  
+
+[PSADeprecateWebRTCPlanB]: https://groups.google.com/g/discuss-webrtc/c/UBtZfawdIAA/m/-UVQQcubBQAJ "PSA: 計画 B SDP 非推奨と削除のタイムライン - 統合プランに移行してください"
 
 <!--todo:  cleanup links  -->  
