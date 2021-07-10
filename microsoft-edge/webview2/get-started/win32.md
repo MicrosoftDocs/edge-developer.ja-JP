@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.technology: webview
 keywords: IWebView2、IWebView2WebView、Webview2、Webview、win32 アプリ、win32、edge、ICoreWebView2、ICoreWebView2Controller、ブラウザー コントロール、エッジ html
-ms.openlocfilehash: 2714f9a6cffea3cb7d53f9a4128d64920fd02dce
-ms.sourcegitcommit: 7713eec634264b0c44b1bb426f5b466c44b4e005
+ms.openlocfilehash: 6eae00a0fddb75782be5a3e94efaa5a8965674a0
+ms.sourcegitcommit: 8f37c931ecde4d58223113f7e3b42d37cc3df97f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2021
-ms.locfileid: "11618387"
+ms.lasthandoff: 07/10/2021
+ms.locfileid: "11643449"
 ---
 # <a name="get-started-with-webview2"></a>WebView2 の使用を開始する  
 
@@ -183,7 +183,7 @@ WebView チームは、最後の手順でメソッドを使用して URL への�
    ナビゲーション イベント  
 :::image-end:::    
 
-エラーの場合、ナビゲーションがエラー Web ページに続いているかどうかに応じて、次の 1 つ以上のイベントが発生することがあります。  
+エラーの場合、ナビゲーションがエラー Web ページに続いたかどうかに応じて、次の 1 つ以上のイベントが発生することがあります。  
 
 *   `SourceChanged`  
 *   `ContentLoading`  

@@ -7,12 +7,12 @@ ms.date: 05/06/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: edge-chromium, 拡張機能の開発, ブラウザー拡張機能, アドオン, パートナー センター, 開発者
-ms.openlocfilehash: c7d44a8c02a030cc11c763c35efb7111fff76665
-ms.sourcegitcommit: 7f7922dbb6af87ecac1378d18359125770c5b8e5
+ms.openlocfilehash: aadb3470eb295934cde4ad26b089ac0c83898e5c
+ms.sourcegitcommit: 7cba715ef71cbac4ee0ebe8f07c0c0e4a2c64221
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2021
-ms.locfileid: "11536803"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11643243"
 ---
 # <a name="publish-your-extension"></a>拡張機能の公開  
 
@@ -97,7 +97,7 @@ ms.locfileid: "11536803"
 
 次のセクションで提供される情報は、アドオン ストアのリストを確認するユーザー Microsoft Edge表示されます。  一部のフィールドはオプションですが、可能な限り多くの情報を提供する必要があります。  ストアに拡張機能を一覧表示するには、次の詳細が必要です。  
 
-*   **拡張** パッケージ内の各言語の説明。  
+*   **拡張** パッケージ内の各言語の説明。 複数の言語をサポートするには、国際化 API ([chrome.i18n) を使用できます](https://go.microsoft.com/fwlink/?linkid=2167478)。  
 *   **拡張機能パッケージ内の** 各言語の拡張ストア のロゴ。  
     
 > [!NOTE]
@@ -179,3 +179,4 @@ ms.locfileid: "11536803"
 [GoogleYoutubeAnswer171780]: https://support.google.com/youtube/answer/171780 "再生リスト&埋め込み|YouTube ヘルプ"  
 
 [MailtoExtDevSupportMicrosoftCom]: mailto:ext_dev_support@microsoft.com "メールをメールに ext_dev_support@microsoft.com" 
+

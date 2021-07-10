@@ -3,16 +3,16 @@ description: はじめに DOM の使用
 title: '初級者向け DevTools: HTML と DOM の使用を開始する'
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 05/12/2021
+ms.date: 07/01/2021
 ms.topic: article
 ms.prod: microsoft-edge
-keywords: microsoft edge, Web 開発, f12 ツール, devtools
-ms.openlocfilehash: d2893021f5e19ffb714215b27edadba08c8d6f71
-ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
+keywords: microsoft edge, Web 開発, f12 ツール, devtools, devtools for beginners, devtools HTML for beginners, devtools DOM for beginners, devtools html tutorial, devtools DOM tutorial, devtools DOM tutorial, devtools document object model tutorial
+ms.openlocfilehash: a049ec500e22f89db3ab1e966b55d89c2ad682fe
+ms.sourcegitcommit: 8f37c931ecde4d58223113f7e3b42d37cc3df97f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2021
-ms.locfileid: "11564568"
+ms.lasthandoff: 07/10/2021
+ms.locfileid: "11643532"
 ---
 <!-- Copyright Katherine Jackson 
 
@@ -29,25 +29,25 @@ ms.locfileid: "11564568"
    limitations under the License.  -->
 # <a name="devtools-for-beginners-get-started-with-html-and-the-dom"></a>初級者向け DevTools: HTML と DOM の使用を開始する  
 
-これは、Web 開発の基本を教える一連のチュートリアルの最初の例です。  生産性を向上させる可能性がある、DevTools という名前Microsoft Edge一連の Web 開発者ツールについて説明します。  
+これは、Web 開発の基本を教える一連のチュートリアルの最初の例です。 生産性を向上させる可能性がある、DevTools という名前Microsoft Edge一連の Web 開発者ツールについて説明します。  
 
-この特定のチュートリアルでは、HTML と DOM について学習します。  HTML は、Web 開発のコア テクノロジの 1 つです。  Web ページの構造とコンテンツを制御する言語です。  DOM は Web ページの構造とコンテンツにも関連しています。詳細については、後で説明します。  
+このチュートリアルでは、HTML と [Document Object Model](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model) \(DOM\) について説明します。 HTML は、Web 開発のコア テクノロジの 1 つです。 Web ページの構造とコンテンツを制御する言語です。 DOM は、Web ページの構造とコンテンツにも関連しています。詳細については、後で説明します。
 
 ## <a name="goals"></a>目標  
 
-実際に独自の Web サイトを構築して Web 開発を学ぶつもりです。  **DevTools for Beginners**シリーズのすべてのチュートリアルを完了すると、完成したサイトは次の図のようになります。  
+Web サイトを構築して Web 開発を学ぶつもりです。  **DevTools for Beginners**シリーズのすべてのチュートリアルを完了すると、完成したサイトは次の図のようになります。  
 
-:::image type="complex" source="../media/beginners-html-finished.msft.png" alt-text="完成したサイト" lightbox="../media/beginners-html-finished.msft.png":::
+:::image type="complex" source="media/beginners-html-finished.msft.png" alt-text="完成したサイト" lightbox="media/beginners-html-finished.msft.png":::
    完成したサイト  
 :::image-end:::  
 
-このチュートリアルの最後には、次のトピックを理解する必要があります。  
+このチュートリアルの最後には、次の概念を理解する必要があります。  
 
 *   HTML と DOM が Web ページに表示されるコンテンツを作成する方法。  
 *   DevTools Microsoft Edge HTML と DOM の変更を試す方法。  
 *   HTML と DOM の違い。  
 
-また、実際の Web サイトがあります。  サイトを使用して履歴書やブログをホストできます。  
+また、作業用の Web サイトも用意されています。 サイトを使用して履歴書やブログをホストできます。  
 
 ## <a name="prerequisites"></a>前提条件  
 
@@ -58,262 +58,213 @@ ms.locfileid: "11564568"
 
 ## <a name="set-up-your-code"></a>コードを設定する  
 
-Glitch というオンライン コード エディターでサイトを構築します。  
+Glitch オンライン コード エディターでサイトを作成します。  
 
-1.  ソース コード [を開きます][GlitchAlluringShockIndex]。  このタブは、このチュートリアル全体 **で [エディター] タブ** と呼ばれる。  
+1.  ソース コード [を開きます][GlitchAlluringShockIndex]。 このタブは、このチュートリアル全体 **で [エディター] タブ** と呼ばれる。  
     
-    :::image type="complex" source="../media/beginners-html-setup1.msft.png" alt-text="[エディター] タブ" lightbox="../media/beginners-html-setup1.msft.png":::
+    :::image type="complex" source="media/beginners-html-setup1.msft.png" alt-text="[エディター] タブ" lightbox="media/beginners-html-setup1.msft.png":::
        [エディター] タブ  
     :::image-end:::  
     
-1.  **Alluring-shock を選択します**。  [Projectオプション] メニューが左上隅に表示されます。  
+1.  **Alluring-shock を選択します**。 **[Project] メニューが**開きます。  
     
-    :::image type="complex" source="../media/beginners-html-setup2.msft.png" alt-text="[Project オプション] メニュー" lightbox="../media/beginners-html-setup2.msft.png":::
+    :::image type="complex" source="media/beginners-html-setup2.msft.png" alt-text="[Project オプション] メニュー" lightbox="media/beginners-html-setup2.msft.png":::
        [Project オプション] メニュー  
     :::image-end:::  
     
-1.  **[Remix Project] を選択します**。  Glitch は、編集できるプロジェクトのコピーを作成し、プロジェクトの新しい名前をランダムに生成します。  コンテンツは以前と同じです。  
+1.  **[Remix Project] を選択します**。 Glitch は、編集できるプロジェクトのコピーを作成し、プロジェクトの新しい名前をランダムに生成します。 コンテンツは以前と同じです。  
     
-    :::image type="complex" source="../media/beginners-html-setup3.msft.png" alt-text="リミックスされたプロジェクト" lightbox="../media/beginners-html-setup3.msft.png":::
+    :::image type="complex" source="media/beginners-html-setup3.msft.png" alt-text="リミックスされたプロジェクト" lightbox="media/beginners-html-setup3.msft.png":::
        リミックスされたプロジェクト  
     :::image-end:::  
     
-1.  このシリーズの次のチュートリアルを完了する予定の場合は、[**** サインイン] を選択し、自分のアカウントまたは Facebook アカウントで Glitch GitHubサインインします。  アカウントにサインインしない場合は、編集タブを閉じてからプロジェクトを編集できません。  
-1.  [表示 **] を** 選択し、[ **新しいウィンドウ] を選択します**。  新しいタブが開き、ライブ ページが表示されます。  このタブは、このチュートリアル全体で **ライブ タブ** と呼ばれる。  
+1.  このシリーズの次のチュートリアルを完了する予定の場合は****、[サインインして Glitch にサインインする] を選択して、Facebook、GitHub、または Google アカウントを使用します。またはマジック リンクを自分にメールで送信します。 アカウントにサインインしない場合は、[エディター] タブを閉じるとプロジェクトを編集できません。
+
+1.  [新**しい**  \>  **ウィンドウに表示] を選択します**。  新しいタブが開き、ライブ ページが表示されます。 このタブは、このチュートリアル全体で **ライブ タブ** と呼ばれる。  
     
-    :::image type="complex" source="../media/beginners-html-setup4.msft.png" alt-text="[ライブ] タブ" lightbox="../media/beginners-html-setup4.msft.png":::
+    :::image type="complex" source="media/beginners-html-setup4.msft.png" alt-text="[ライブ] タブ" lightbox="media/beginners-html-setup4.msft.png":::
        [ライブ] タブ  
     :::image-end:::  
     
 ## <a name="add-content"></a>コンテンツの追加  
 
-サイトがかなり空です。  以下の手順に従って、コンテンツを追加します。  
+サイトには、より多くの情報が必要です。 コンテンツを追加するには、次の手順を実行します。  
 
-1.  [エディター **] タブで、** に置き `<!-- You're "About Me" will go here.  -->` 換えます `<h1>About Me</h1>` 。  
+1. [エディター **] タブで、** に置き `<!-- You're "About Me" will go here.  -->` 換えます `<h1>About Me</h1>` 。  
     
-    :::row:::
-       :::column span="":::
-          ```html
-          ...
-              ...
-              <body>
-                  <p> Your site!</p>
-                  <main>
-                      <h1>About Me</h1>
-                  </main>
-                  ...
-              ...
-          ...
-          ```  
-       :::column-end:::
-       :::column span="":::
-          :::image type="complex" source="../media/beginners-html-add1.msft.png" alt-text="新しいコードが [エディター] タブで強調表示されます。" lightbox="../media/beginners-html-add1.msft.png":::
-             新しいコードが [エディター] タブで強調表示されます。  
-          :::image-end:::  
-       :::column-end:::
-    :::row-end:::
+    ```html
+        ...
+        <body>
+            <p> Your site!</p>
+                <main>
+                    <h1>About Me</h1>
+                </main>
+        ...
+    ```  
     
-1.  [ライブ] タブで変更 **を表示します**。 テキストは `About Me` ページに表示されます。  要素はセクション見出しを表すので、周囲のテキストよりも `<h1>` 大きいテキスト。  Web ブラウザーは、大きなフォント サイズで見出しのスタイルを自動的に設定します。  
+    :::image type="complex" source="media/beginners-html-add1.msft.png" alt-text="新しいコードが [エディター] タブで強調表示されます。" lightbox="media/beginners-html-add1.msft.png":::
+        新しいコードが [エディター] タブで強調表示されます。  
+    :::image-end:::  
     
-    :::image type="complex" source="../media/beginners-html-add2.msft.png" alt-text="新しい見出しがライブ タブに表示される" lightbox="../media/beginners-html-add2.msft.png":::
+1. [ライブ] タブで変更 **を表示します**。テキストは `About Me` ページに表示されます。 要素は見出し 1 を表すので、テキストは周囲 `<h1>` のテキストよりも大きくなります。  Web ブラウザーは、大きなフォント サイズで見出しのスタイルを自動的に設定します。  
+    
+    :::image type="complex" source="media/beginners-html-add2.msft.png" alt-text="新しい見出しがライブ タブに表示される" lightbox="media/beginners-html-add2.msft.png":::
        新しい見出しがライブ タブに表示される  
     :::image-end:::  
     
-1.  [エディター] タブ **に戻り**、下の行に `<p>I am learning HTML.  Recent accomplishments:</p>` 挿入します `<h1>About Me</h1>` 。  
+1. [エディター] タブ **に戻り、** 下 `<p>I am learning web development. Recent accomplishments:</p>` の行に挿入します  `<h1>About Me</h1>` 。  
     
-    :::row:::
-       :::column span="":::
-          ```html
-          ...
-              ...
-              <body>
-                  <p> Your site!</p>
-                  <main>
-                      <h1>About Me</h1>
-                      <p>I am learning web development.  Recent accomplishments:</p>
-                  </main>
-                  ...
-              ...
-          ...
-          ```  
-       :::column-end:::
-       :::column span="":::
-          :::image type="complex" source="../media/beginners-html-add3.msft.png" alt-text="更新されたコードが [エディター] タブで強調表示されます。" lightbox="../media/beginners-html-add3.msft.png":::
-             更新されたコードが [エディター] タブで強調表示されます。  
-          :::image-end:::  
-       :::column-end:::
-    :::row-end:::
+    ```html
+    ...
+        <body>
+            <p> Your site!</p>
+                <main>
+                    <h1>About Me</h1>
+                    <p>I am learning web development. Recent accomplishments:</p>
+                </main>
+    ...
+    ```  
+
+    :::image type="complex" source="media/beginners-html-add3.msft.png" alt-text="更新されたコードが [エディター] タブで強調表示されます。" lightbox="media/beginners-html-add3.msft.png":::
+        更新されたコードが [エディター] タブで強調表示されます。  
+    :::image-end:::  
     
-1.  [ライブ] タブで変更 **を表示します**。  
-1.  [エディター] タブ **に戻り**、業績の一覧を追加します。  
+1. [ライブ] タブで変更 **を表示します**。
+
+1. [エディター] タブ **に戻り**、次のコードを使用して業績の一覧を追加します。
     
-    :::row:::
-       :::column span="":::
-          ```html
-          ...
-              ...
-                  ...
-                  <p>I am learning web development.  Recent accomplishments:</p>
-                  <ul>
-                      <li>Learned how to set up my code in Glitch.</li>
-                      <li>Added content to my HTML.</li>
-                      <li>TODO: Learn how to use Microsoft Edge DevTools to experiment with content changes.</li>
-                      <li>TODO: Learn the difference between HTML and the DOM.</li>
-                  </ul>
-                  ...
-              ...
-          ...
-          ```  
-       :::column-end:::
-       :::column span="":::
-          :::image type="complex" source="../media/beginners-html-add4.msft.png" alt-text="更新されたコードは、エディター タブでも強調表示されます。" lightbox="../media/beginners-html-add4.msft.png":::
-             更新されたコードは、エディター タブでも強調表示されます。  
-          :::image-end:::  
-       :::column-end:::
-    :::row-end:::  
+    ```html
+    ...
+    <p>I am learning web development.  Recent accomplishments:</p>
+        <ul>
+            <li>Learned how to set up my code in Glitch.</li>
+            <li>Added content to my HTML.</li>
+            <li>TODO: Learn how to use Microsoft Edge DevTools to experiment with content changes.</li>
+            <li>TODO: Learn the difference between HTML and the DOM.</li>
+        </ul>
+    ...
+    ```  
+
+    :::image type="complex" source="media/beginners-html-add4.msft.png" alt-text="更新されたコードは、エディター タブでも強調表示されます。" lightbox="media/beginners-html-add4.msft.png":::
+        更新されたコードは、エディター タブでも強調表示されます。  
+    :::image-end:::  
+
+1. [ライブ] **タブを表示** して、新しいコンテンツが正しく表示されるようにします。  
     
-1.  再度、ライブ タブに **戻** り、新しいコンテンツが正しく表示されていることを確認します。  
-    
-    :::image type="complex" source="../media/beginners-html-add5.msft.png" alt-text="新しいリストがライブ タブに表示される" lightbox="../media/beginners-html-add5.msft.png":::
+    :::image type="complex" source="media/beginners-html-add5.msft.png" alt-text="新しいリストがライブ タブに表示される" lightbox="media/beginners-html-add5.msft.png":::
        新しいリストがライブ タブに表示される  
     :::image-end:::  
     
 ## <a name="experiment-with-content-changes-in-microsoft-edge-devtools"></a>DevTools でコンテンツの変更Microsoft Edgeする  
 
-多くの HTML を含む大きなページを開発している場合は、変更を表示するために、エディター タブとライブ タブの間を何百回も行き来する必要があります。特に、ページに正確に何を置く必要があるのか分からない場合は、何百回も行き来する必要があります。  Microsoft EdgeDevTools は、ライブ タブを離れることなくコンテンツの変更を**試すのに役立ちます**。  
+HTML の多いページを開発している場合は、エディター タブとライブ タブの間を行き来して変更を確認する必要があります。 Microsoft EdgeDevTools は、ライブ タブを離れることなくコンテンツの変更を**試すのに役立ちます**。  
 
 ### <a name="learn-the-difference-between-html-and-the-dom"></a>HTML と DOM の違いを学ぶ  
 
-DevTools からコンテンツの編集をMicrosoft Edge前に、HTML と DOM の違いを理解する必要があります。  最適な学習方法は、次の例です。  
+DevTools Microsoft Edge編集する前に、HTML と DOM の違いを理解しましょう。 次の手順に進み、例について説明します。
 
-1.  [ライブ] タブ **に移動します**。 ページの下部にテキストが `A new element!?!` 表示されます。  
+1. [ライブ] タブ **に移動します**。ページの下部にテキストが表示 `A new element!?!` されます。  
+
+    <!--
+        :::image type="complex" source="media/beginners-html-dom1.msft.png" alt-text="At the bottom of the page the text A new element!?! displays" lightbox="media/beginners-html-dom1.msft.png":::
+        At the bottom of the page the text `A new element!?!` is displays  
+        :::image-end:::
+    -->
     
-    :::image type="complex" source="../media/beginners-html-dom1.msft.png" alt-text="ページの下部にあるテキスト A 新しい要素!?! が表示されます" lightbox="../media/beginners-html-dom1.msft.png":::
-       ページの下部にテキストが `A new element!?!` 表示されます  
-    :::image-end:::  
+1. [エディター] **タブを開** き、テキストを探します `index.html` 。 テキストは、このビューには表示されません。  
+
+    <!--
+        :::image type="complex" source="media/beginners-html-dom2.msft.png" alt-text="The mystery text A new element!?! is not found in index.html" lightbox="media/beginners-html-dom2.msft.png":::
+        The mystery text `A new element!?!` is not found in `index.html`  
+        :::image-end:::
+    -->
+
+1. ライブ タブを **開き、** マウス ポインター `A new element!?!` を置き、コンテキスト メニュー (右クリック) を開き、[検査] を **選択します**。  
     
-1.  [エディター] タブに **戻り、** テキストを探します `index.html` 。  テキストがそこには表示されない。  
-    
-    :::image type="complex" source="../media/beginners-html-dom2.msft.png" alt-text="謎のテキスト 新しい要素!?! は l のどこにもindex.htmはありません。" lightbox="../media/beginners-html-dom2.msft.png":::
-       謎のテキスト `A new element!?!` はどこにも見つかりません `index.html`  
-    :::image-end:::  
-    
-1.  ライブ タブに **戻り**、マウス ポインターを置き、コンテキスト メニュー \(右クリック\) を開き `A new element!?!` 、[検査] を選択 **します**。  
-    
-    :::image type="complex" source="../media/beginners-html-dom3.msft.png" alt-text="テキストの検査" lightbox="../media/beginners-html-dom3.msft.png":::
+    :::image type="complex" source="media/beginners-html-dom3.msft.png" alt-text="テキストの検査" lightbox="media/beginners-html-dom3.msft.png":::
        テキストの検査  
     :::image-end:::  
     
-    DevTools がページと一緒に開きます。  `<div>A new element!?!</div>` は青色で強調表示されます。  DevTools のこの構造は HTML のように見えますが、実際には **DOM ツリーです**。  
+    DevTools がページと一緒に開きます。 `<div>A new element!?!</div>` が強調表示されます。 DevTools のこの構造は HTML のように見えますが **、DOM ツリーです**。  
     
-    :::image type="complex" source="../media/beginners-html-dom4.msft.png" alt-text="DevTools がページと一緒に開いている" lightbox="../media/beginners-html-dom4.msft.png":::
+    :::image type="complex" source="media/beginners-html-dom4.msft.png" alt-text="DevTools がページと一緒に開いている" lightbox="media/beginners-html-dom4.msft.png":::
        DevTools がページと一緒に開いている  
     :::image-end:::  
     
-ページが読み込まれると、ブラウザーは HTML を使用してページ *の初期コンテンツ* を作成します。  DOM はページの現在 *の* コンテンツを表します。時間の流中に変化する可能性があります。  HTML の下部にあるタグのために、ページに不思議なコンテンツ `<div>A new element!?!</div>` `<script src="new.js"></script>` が追加されます。  このタグを使用すると、一部の JavaScript コードが実行されます。  JavaScript の詳細については、後のチュートリアルで説明しますが、今のところは、ページの内容を変更するプログラミング言語と考えておきます。  この特定のケースでは、JavaScript コードがページ `<div>A new element!?!</div>` に追加されます。  この謎のテキストはライブ ページに表示されますが、HTML には表示されません。  
+ページが読み込まれると、ブラウザーは HTML を使用してページの初期コンテンツを作成します。 DOM はページの現在のコンテンツを表します。時間の流中に変化する可能性があります。 
+
+HTML の下部にタグが付けられているため、コンテンツがページ `<div>A new element!?!</div>` `<script src="new.js"></script>` に追加されます。 このタグを使用すると、一部の JavaScript コードが実行されます。 JavaScript の詳細については、後のチュートリアル [を参照してください](../javascript/index.md)。
+
+今のところは、ページの内容を変更するスクリプト言語と考えておきます。 この場合、JavaScript コードがページ `<div>A new element!?!</div>` に追加されます。 このテキストはライブ タブに **表示されますが** 、HTML には表示されません。  
 
 ### <a name="edit-the-dom"></a>DOM の編集  
 
 ライブ タブを離れることなくコンテンツの変更をすばやく試す場合は、DevTools を試してみてください。  
 
-1.  DevTools で、マウス ポインターを置き、コンテキスト メニュー `Your site!` \(右クリック\) を開き **、[HTML として編集] を選択します**。  
+1.  DevTools で、マウス ポインターを置き、コンテキスト メニュー (右クリック) を開き `Your site!` **、[HTML として編集] を選択します**。  
     
-    :::image type="complex" source="../media/beginners-html-edit1.msft.png" alt-text="HTML としてノードを編集する" lightbox="../media/beginners-html-edit1.msft.png":::
-       HTML としてノードを編集する  
-    :::image-end:::  
+1.  次のコードで `<p>Your site!</p>` を置き換えます。  
+
+```html
+    ...
+    <header>
+        <p><b>Welcome to my site!</b></p>
+        <button>Download my resume</button>
+    </header>
+    ...
+```  
+
+:::image type="complex" source="media/beginners-html-edit2.msft.png" alt-text="HTML としてノードを更新する" lightbox="media/beginners-html-edit2.msft.png":::
+    HTML としてノードを更新する  
+::image-end:::  
+
+1.  `Control` + `Enter` \(Windows、Linux\) または `Command` + \(macOS\) を選択して変更を保存するか、ボックスの外側 `Enter` を選択します。 変更がページのライブ ビューに自動的に表示されます。 テキストが `Your site!` 新しいコンテンツに置き換えられた。  
     
-1.  以下 `<p>Your site!</p>` のコードに置き換えます。  
-    
-    :::row:::
-       :::column span="":::
-          ```html
-          ...
-              ...
-                  ...
-                  <header>
-                      <p><b>Welcome to my site!</b></p>
-                      <button>Download my resume</button>
-                  </header>
-                  ...
-              ...
-          ...
-          ```  
-       :::column-end:::
-       :::column span="":::
-          :::image type="complex" source="../media/beginners-html-edit2.msft.png" alt-text="HTML としてノードを更新する" lightbox="../media/beginners-html-edit2.msft.png":::
-             HTML としてノードを更新する  
-          :::image-end:::  
-       :::column-end:::
-    :::row-end:::  
-    
-1.  `Control` + `Enter` \(Windows、Linux\) または `Command` + \(macOS\) を選択して変更を保存するか、ボックスの外側 `Enter` を選択します。  変更がページのライブ ビューに自動的に表示されます。  テキストが `Your site!` 新しいコンテンツに置き換えられた。  
-    
-    :::image type="complex" source="../media/beginners-html-edit3.msft.png" alt-text="新しいコンテンツがページにすぐに表示される" lightbox="../media/beginners-html-edit3.msft.png":::
+    :::image type="complex" source="media/beginners-html-edit3.msft.png" alt-text="新しいコンテンツがページにすぐに表示される" lightbox="media/beginners-html-edit3.msft.png":::
        新しいコンテンツがページにすぐに表示される  
     :::image-end:::  
     
-このワークフローは、コンテンツの変更を試す場合にのみ使用できます。  ページを更新するか、タブを閉じると、変更は永遠に消えてしまいます。  このワークフローを使用して変更を保存する場合は、それらの変更を手動で HTML にコピーする必要があります。  次のセクションでは、DOM ツリーからコンテンツを変更する方法について説明します。  
+このワークフローは、コンテンツの変更を試す場合にのみ適しています。 ページを更新するか、タブを閉じると、変更は失われます。 変更を保存する場合は、コードを HTML ファイルに手動でコピーします。 次の 2 つのセクションでは、DOM ツリーからコンテンツを変更する方法について説明します。  
 
-## <a name="reorder-nodes"></a>ノードの並べ替え  
+## <a name="reorder-nodes"></a>ノードの並べ替え
 
-DOM ノードの順序を変更することもできます。  たとえば、Web ページでは、ナビゲーション メニューが下部の近くに表示されます。  上部に移動するには、次の方法を実行します。  
+DOM ノードの順序を変更することもできます。 たとえば、Web ページでは、ナビゲーション メニューが下部の近くに表示されます。 上部に移動するには、次の手順を実行します。  
 
 1.  `<nav>`DevTools の**DOM ツリーで**ノードを検索します。  
     
-    :::image type="complex" source="../media/beginners-html-reorder1.msft.png" alt-text="ナビゲーション ノードが DevTools で青色で強調表示されている" lightbox="../media/beginners-html-reorder1.msft.png":::
-       ナビゲーション ノードが DevTools で青色で強調表示されている  
+    :::image type="complex" source="media/beginners-html-reorder1.msft.png" alt-text="ナビゲーション ノードが DevTools で強調表示されている" lightbox="media/beginners-html-reorder1.msft.png":::
+       ナビゲーション ノードが DevTools で強調表示されている  
     :::image-end:::  
     
-1.  ノードを `<nav>` 上にドラッグして、ノードがノードの最初の子 `<body>` になります。  
+1.  ノードを `<nav>` 上にドラッグして、ノードがノードの後ろの最初の子 `<body>` になります。  
     
-    :::row:::
-       :::column span="":::
-          &nbsp;  
-       :::column-end:::
-       :::column span="":::
-          これで `<nav>` 、ページの上部にノードが表示されます。  
-       :::column-end:::
-    :::row-end:::  
-    :::row:::
-       :::column span="":::
-          :::image type="complex" source="../media/beginners-html-reorder2.msft.png" alt-text="ナビゲーション ノードを上にドラッグする" lightbox="../media/beginners-html-reorder2.msft.png":::
-             ナビゲーション ノードを上にドラッグする  
-          :::image-end:::  
-       :::column-end:::
-       :::column span="":::
-          :::image type="complex" source="../media/beginners-html-reorder3.msft.png" alt-text="ナビゲーション ノードがページの上部にある" lightbox="../media/beginners-html-reorder3.msft.png":::
-             ナビゲーション ノードがページの上部にある  
-          :::image-end:::  
-       :::column-end:::
-    :::row-end:::  
-    
-### <a name="delete-a-node"></a>ノードの削除  
-
-DOM ツリーからノードを削除することもできます。  
-
-1.  DOM ツリー **で、** を選択します `<div>A new element!?!</div>` 。  DevTools はノードを青色で強調表示します。  
-    
-    :::image type="complex" source="../media/beginners-html-delete1.msft.png" alt-text="削除するノードを選択する" lightbox="../media/beginners-html-delete1.msft.png":::
-       削除するノードを選択する  
+    :::image type="complex" source="media/beginners-html-reorder3.msft.png" alt-text="ナビゲーション ノードがページの上部にある" lightbox="media/beginners-html-reorder3.msft.png":::
+        ナビゲーション ノードがページの上部にある  
     :::image-end:::  
+    
+### <a name="delete-a-node"></a>ノードの削除
+
+DOM ツリーからノードを削除することもできます。 次の手順を実行します。
+
+1.  DOM ツリー **で、** を選択します `<div>A new element!?!</div>` 。 DevTools はノードを強調表示します。 
     
 1.  キーボードの `Delete` キーを選択します。  ノード `<div>A new element!?!</div>` は DOM ツリーから削除されます。  
     
-    :::image type="complex" source="../media/beginners-html-delete2.msft.png" alt-text="ノードが削除されました" lightbox="../media/beginners-html-delete2.msft.png":::
+    :::image type="complex" source="media/beginners-html-delete2.msft.png" alt-text="ノードが削除されました" lightbox="media/beginners-html-delete2.msft.png":::
        ノードが削除されました  
     :::image-end:::  
     
 ## <a name="copy-your-changes"></a>変更をコピーする  
 
-もう少しで完了です。  DevTools でページにいくつかの変更を加えたが、まだソース コードに保存されていない。  
+もう少しで完了です。 DevTools でページにいくつかの変更を加えたが、ソース コードには保存されません。  
 
-1.  ライブ タブ **を更新します**。 DOM ツリーで行った変更は消えます。  特に、テキスト `Your site!` はページの上部に戻り、テキストは `A new element!?!` 下部に戻ります。  
+1.  [ライブ] **タブを更新します**。DOM ツリーで行った変更は消えます。 特に、テキスト `Your site!` はページの上部に戻り、テキストは `A new element!?!` 下部に戻ります。  
     
-    :::image type="complex" source="../media/beginners-html-copy1.msft.png" alt-text="行った変更は消えました" lightbox="../media/beginners-html-copy1.msft.png":::
-       行った変更は消えました  
+    :::image type="complex" source="media/beginners-html-copy1.msft.png" alt-text="行った変更はなくなりました" lightbox="media/beginners-html-copy1.msft.png":::
+       行った変更はなくなりました  
     :::image-end:::  
     
-1.  以下のコードをコピーします。  
+1.  次のコードをコピーします。  
     
     ```html
     <!DOCTYPE html>
@@ -347,17 +298,17 @@ DOM ツリーからノードを削除することもできます。
     </html>
     ```  
     
-1.  [エディター] タブ **に戻り** 、ファイルの内容をコピーしたコード `index.html` に置き換えます。  
+1.  [エディター] タブ **に戻り** 、ファイルの内容をコピー `index.html` したコードに置き換えます。  
     
-    :::image type="complex" source="../media/beginners-html-copy2.msft.png" alt-text="l ファイルindex.htmの外観" lightbox="../media/beginners-html-copy2.msft.png":::
+    :::image type="complex" source="media/beginners-html-copy2.msft.png" alt-text="l ファイルindex.htmの外観" lightbox="media/beginners-html-copy2.msft.png":::
        ファイルの `index.html` 外観  
     :::image-end:::  
     
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>次のステップ  
 
 *   このシリーズの次のチュートリアルはじめに[CSS][DevToolsBeginnersCss]を使用して、ページのスタイルを設定し、DevTools でスタイルの変更を試Microsoft Edgeします。  
 *   DOM [の詳細については、「DOM の][MDNIntroductionDom] 概要」を参照してください。  
-*   Web 開発の概要 [のようなコースをチェック][CourseraIntroductionToWebDevelopment] して、より実践的な Web 開発エクスペリエンスを得る。  
+*   詳細な実践的な Web 開発 [エクスペリエンスについては、「Web 開発の][CourseraIntroductionToWebDevelopment] 概要」のようなコースをご覧ください。  
 
 ## <a name="getting-in-touch-with-the-microsoft-edge-devtools-team"></a>Microsoft Edge DevTools チームと連絡を取る  
 

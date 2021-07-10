@@ -7,12 +7,12 @@ ms.date: 04/28/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: プログレッシブ Web アプリ、PWA、Edge、Windows、Microsoft Store
-ms.openlocfilehash: 5e78e909187408566219ffe80779bb9221b585fa
-ms.sourcegitcommit: e3cd336c9448277e0dde3b9da1521b5cbc7c44d2
+ms.openlocfilehash: 40a6b94412a0788c87f7231025809098c98f18e9
+ms.sourcegitcommit: 7cba715ef71cbac4ee0ebe8f07c0c0e4a2c64221
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "11527073"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11643250"
 ---
 # <a name="publish-your-progressive-web-app-to-the-microsoft-store"></a>プログレッシブ Web アプリをアプリに発行Microsoft Store  
 
@@ -137,6 +137,18 @@ ms.locfileid: "11527073"
 1.  [パッケージ **] プロンプト**で、[パッケージを作成する] セクションで生成したファイル `.msixbundle` `.classic.appxbundle` [PWA](#package-your-pwa-for-the-store)します。  
     
 申請が完了すると、アプリは通常 24 ~ 48 時間以内に確認されます。  承認を受け取った後、PWAのサイトでMicrosoft Store。  
+
+### <a name="measure-usage-of-your-store-installed-pwa"></a>ストアにインストールされたユーザーの使用状況を測定PWA
+
+PWAが最初に起動された場合、PWA が Microsoft Store からインストールされている場合、Microsoft Edge には次のヘッダーと Web アプリの最初のナビゲーションの要求が含 `Referer` まれます。
+
+```
+Referer: app-info://platform/microsoft-store
+```
+
+この機能を使用して、ストアにインストールされているユーザーからの個別のトラフィックをPWA。  トラフィックに基づいて、アプリのコンテンツを調整してユーザー エクスペリエンスを向上できます。  この機能は、クライアント コードとサーバー コードの両方からアクセスできます。
+
+この機能は、バージョン 91 Microsoft Edgeで導入されました。
 
 ## <a name="see-also"></a>関連項目  
 

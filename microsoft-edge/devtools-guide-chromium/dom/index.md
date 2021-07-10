@@ -3,16 +3,16 @@ description: ノードの表示、ノードの検索、ノードの編集、コ�
 title: DOM の表示と変更の開始
 author: MSEdgeTeam
 ms.author: msedgedevrel
-ms.date: 05/04/2021
+ms.date: 06/29/2021
 ms.topic: article
 ms.prod: microsoft-edge
 keywords: microsoft edge、web 開発、f12 ツール、devtools
-ms.openlocfilehash: 66078844730ebb22664c9ce89517511d7eb99ee7
-ms.sourcegitcommit: 7945939c29dfdd414020f8b05936f605fa2b640e
+ms.openlocfilehash: 8340c4d4d7eacdb6ad4155c1c9699db150522f16
+ms.sourcegitcommit: 8f37c931ecde4d58223113f7e3b42d37cc3df97f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2021
-ms.locfileid: "11564288"
+ms.lasthandoff: 07/10/2021
+ms.locfileid: "11643435"
 ---
 <!-- Copyright Kayce Basques 
 
@@ -29,9 +29,9 @@ ms.locfileid: "11564288"
    limitations under the License.  -->  
 # <a name="get-started-with-viewing-and-changing-the-dom"></a>DOM の表示と変更の開始  
 
-これらの対話型チュートリアルを完了して、DevTools を使用してページの DOM を表示および変更するMicrosoft Edgeします。  
+これらの対話型チュートリアルを完了して、DevTools を使用してページの Document [Object Model](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model) \(DOM\) を表示および変更するMicrosoft Edgeします。  
 
-このチュートリアルでは、DOM と HTML の違いを知っている必要があります。  説明については [、「付録: HTML と DOM」](#appendix-html-versus-the-dom) に移動します。  
+このチュートリアルでは、DOM と HTML の違いを知っている必要があります。 説明については [、「付録: HTML と DOM」](#appendix-html-versus-the-dom) に移動します。  
 
 ## <a name="open-dom-examples"></a>オープン DOM の例  
 
@@ -313,7 +313,7 @@ DevTools を使用すると、JavaScript が DOM を変更するときにペー�
     1.  [子 **の追加] を選択します**。  ノードがリストに追加された `<li>` ため、コードは一時停止します。  
     1.  [ **スクリプトの再開** \( ![ Resume Script ](../media/resume-script-icon.msft.png) \) ] を選択します。  
     
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>次のステップ  
 
 これは、DevTools の DOM 関連の機能のほとんどをカバーしています。  他の機能を見つけるには、DOM ツリーのノードをホバーし、コンテキスト メニュー \(右クリック\) を開き、このチュートリアルで説明していない他のオプションを試します。  [要素] [パネルのキーボード ショートカットに移動します][DevToolsShortcutsElements]。  
 
